@@ -1,2 +1,20 @@
 {
+  "addCSSButton": "Tambahkan CSS",
+  "addHTMLButton": "Tambahkan HTML",
+  "addImageButton": "Tambahkan Gambar",
+  "closeFullscreenPreview": "Tutup pratinjau fullscreen",
+  "currentProjectCapacity": "{currentMegabytes}MB dari {totalMegabytes}MB digunakan",
+  "errorSavingProject": "Sesuatu tidak berhasil saat menyimpan proyek Anda secara otomatis. Periksa koneksi internet Anda dan coba simpan secara manual. Jika masalah ini terus berlanjut, coba muat ulang halaman untuk memulai kembali.",
+  "fatalError": "Kesalahan Fatal: {message}. Jika Anda berada dalam mode Penjelajahan Pribadi, data tidak dapat ditulis.",
+  "loadFailure": "Maaf, Web Lab gagal memuat untuk beberapa alasan. Kesalahan: {message}",
+  "openFullscreenPreview": "Buka pratinjau fullscreen",
+  "refreshPreview": "Segarkan dan Simpan",
+  "reloading": "Memuat ulang...",
+  "reset": "Setel ulang Lab Web",
+  "resetComplete": "Web Lab Reset Selesai",
+  "resetFailure": "Gagal mereset Web Lab: {message}.",
+  "toggleInspectorOff": "Inspektur: Pada",
+  "toggleInspectorOn": "Inspektur: Off",
+  "troubleshootingSupport": "Silakan lihat artikel dukungan kami [\"Pemecahan masalah Web Lab\"]({url}) untuk informasi lebih lanjut.",
+  "uploadError": "Galat Unggah"
 }

@@ -1,6 +1,8 @@
 import {BlocklyVersion} from '@cdo/apps/blockly/constants';
-import {CLAMPED_NUMBER_REGEX} from './constants';
+import {CLAMPED_NUMBER_REGEX, stringIsXml} from './constants';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
+import customBlocks from './customBlocks/cdoBlockly/index.js';
+import {parseElement as parseXmlElement} from '../xml';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -243,6 +245,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.Block.prototype.getTitleValue;
 
   blocklyWrapper.cdoUtils = {
+    loadBlocksToWorkspace(blockSpace, source) {
+      const isXml = stringIsXml(source);
+      if (!isXml) {
+        console.warn(
+          `Source string was JSON. Use Version History to recover a working version of this project.`,
+          `This likely occurred by opening a project that was last saved with Google Blockly.`
+        );
+        source = '';
+      }
+      Blockly.Xml.domToBlockSpace(blockSpace, parseXmlElement(source));
+    },
     blockLimitExceeded: function (blockType) {
       const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
       return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
@@ -308,7 +321,27 @@ function initializeBlocklyWrapper(blocklyInstance) {
         transformTextSetLabel
       );
     },
+    injectCss(document) {
+      return Blockly.Css.inject(document);
+    },
+    resizeSvg(blockSpace) {
+      return blockSpace.blockSpaceEditor.svgResize();
+    },
+    registerCustomProcedureBlocks() {
+      // Google Blockly only. Registers custom blocks for modal function editor.
+    },
+    partitionBlocksByType() {
+      // Google Blockly only. Used to load/render certain block types before others.
+    },
   };
+  blocklyWrapper.customBlocks = customBlocks;
+
+  // Pointer block behavior is handled in the cdo blockly repo,
+  // so we can safely return an empty string here.
+  blocklyWrapper.getPointerBlockImageUrl = () => {
+    return '';
+  };
+
   return blocklyWrapper;
 }
 

@@ -14,6 +14,9 @@
         "csd-2022/board-events": {
           "display_name": "Sự kiện bảng mạch"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "Tổng quan về Sân chơi Circuit"
+        },
         "csd-2022/collision-detection": {
           "display_name": "Phát hiện va chạm"
         },
@@ -41,6 +44,9 @@
         "csd-2022/images-in-html": {
           "display_name": "Hình ảnh trong HTML"
         },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Giới thiệu về AI Lab"
+        },
         "csd-2022/javascript": {
           "display_name": "JavaScript"
         },
@@ -55,6 +61,9 @@
         },
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Tổng quan"
+        },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Thẻ mẫu trong AI Lab"
         },
         "csd-2022/multi-screen-apps": {
           "display_name": "Ứng dụng đa màn hình"
@@ -86,6 +95,9 @@
         "csd-2022/variables": {
           "display_name": "Các biến"
         },
+        "csd-2022/velocity": {
+          "display_name": "Vận tốc"
+        },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "Vận tốc và mẫu bộ đếm"
         },
@@ -93,7 +105,7 @@
           "display_name": "Kho Web"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+          "content": "[][0]"
         }
       }
     }

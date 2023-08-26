@@ -575,6 +575,8 @@ eu:
       robotics:
         kodable: 'Kodable'
         other: "Beste bat"
+      workshop_course:
+        other: 'Beste bat'
       email_opt_in:
         opt_in_yes: 'Bai'
         opt_in_no: 'Ez'
@@ -586,3 +588,4 @@ eu:
   copy: 'Kopiatu'
   pixelation:
     binary: "Bitarra"
+

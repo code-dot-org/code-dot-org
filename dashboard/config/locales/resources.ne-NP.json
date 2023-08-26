@@ -2,265 +2,55 @@
   "ne-NP": {
     "data": {
       "resources": {
-        "implementation_guide/coursed/2022": {
-          "name": "Implementation Guide"
+        "lesson_plans/csd/2017": {
+          "name": "Lesson Plans"
         },
-        "graph_paper_programming/coursed/2022": {
-          "name": "Graph Paper Programming"
+        "lesson_plans_1/csd/2017": {
+          "name": "Lesson Plans"
         },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "Graph Paper Programming"
+        "lesson_plans_2/csd/2017": {
+          "name": "Lesson Plans"
         },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "Graph Paper Programming"
+        "lesson_plans_3/csd/2017": {
+          "name": "Lesson Plans"
         },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "Graph Paper Programming"
+        "lesson_plans_4/csd/2017": {
+          "name": "Lesson Plans"
         },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "Graph Paper Programming"
+        "lesson_plans_5/csd/2017": {
+          "name": "Lesson Plans"
         },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "Graph Paper Programming"
+        "lesson_plans/csd/2018": {
+          "name": "Lesson Plans"
         },
-        "pair_programming/coursed/2022": {
-          "name": "Pair Programming"
+        "lesson_plans_1/csd/2018": {
+          "name": "Lesson Plans"
         },
-        "relay_programming/coursed/2022": {
-          "name": "Relay programming"
+        "lesson_plans_2/csd/2018": {
+          "name": "Lesson Plans"
         },
-        "relay_programming_1/coursed/2022": {
-          "name": "Relay programming"
+        "lesson_plans_3/csd/2018": {
+          "name": "Lesson Plans"
         },
-        "relay_programming_2/coursed/2022": {
-          "name": "Relay programming"
+        "lesson_plans_4/csd/2018": {
+          "name": "Lesson Plans"
         },
-        "relay_programming_3/coursed/2022": {
-          "name": "Relay programming"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "Relay programming"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "Relay programming"
-        },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "Conditionals with Cards"
-        },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "Conditionals with Cards"
-        },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "Conditionals with Cards"
-        },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "Conditionals with Cards"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "Conditionals with Cards"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "Implementation Guide"
-        },
-        "internet/coursef/2022": {
-          "name": "Internet"
-        },
-        "internet_1/coursef/2022": {
-          "name": "Internet"
-        },
-        "the_internet/coursef/2022": {
-          "name": "The Internet"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "Implementation Guide"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "Implementation Guide"
-        },
-        "move_it_move_it/courseb/2022": {
-          "name": "Move It, Move It"
-        },
-        "move_it_move_it_1/courseb/2022": {
-          "name": "Move It, Move It"
-        },
-        "move_it_move_it_2/courseb/2022": {
-          "name": "Move It, Move It"
-        },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "Move it, Move it"
-        },
-        "pair_programming/courseb/2022": {
-          "name": "Pair Programming"
-        },
-        "getting_loopy/courseb/2022": {
-          "name": "Getting Loopy"
-        },
-        "getting_loopy_1/courseb/2022": {
-          "name": "Getting Loopy"
-        },
-        "getting_loopy_2/courseb/2022": {
-          "name": "Getting Loopy"
-        },
-        "getting_loopy_3/courseb/2022": {
-          "name": "Getting Loopy"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "The Big Event"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "The Big Event"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "The Big Event"
-        },
-        "pair_programming/express/2022": {
-          "name": "Pair Programming"
-        },
-        "variables/express/2022": {
-          "name": "Variables"
-        },
-        "pair_programming/pre-express/2022": {
-          "name": "Pair Programming"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "Implementation Guide"
-        },
-        "pair_programming/coursea/2022": {
-          "name": "Pair Programming"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "Happy Maps"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "The Big Event"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "The Big Event"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "The Big Event"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "Implementation Guide"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "My Robotic Friends"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "My Robotic Friends"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "My Robotic Friends"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "My Robotic Friends"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "My Robotic Friends"
-        },
-        "pair_programming/coursec/2022": {
-          "name": "Pair Programming"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "The Big Event"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "The Big Event"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "The Big Event"
-        },
-        "binary_bracelets/coursec/2022": {
-          "name": "Binary Bracelets"
-        },
-        "binary_bracelets_1/coursec/2022": {
-          "name": "Binary Bracelets"
-        },
-        "binary_bracelets_2/coursec/2022": {
-          "name": "Binary Bracelets"
-        },
-        "binary_bracelets_3/coursec/2022": {
-          "name": "Binary Bracelets"
-        },
-        "binary_bracelets_4/coursec/2022": {
-          "name": "Binary Bracelets"
-        },
-        "video_machine_learning/csd/2022": {
-          "name": "भिडियोः Machine Learning"
-        },
-        "make_a_recommendation/csd/2022": {
-          "type": "Peer Review"
-        },
-        "apps_and_problem_solving_1/csd/2022": {
-          "type": "Peer Review"
-        },
-        "variables/csd/2022": {
-          "name": "Variables"
-        },
-        "variables_3/csd/2022": {
-          "name": "Variables"
-        },
-        "text/csd/2022": {
-          "name": "Text"
-        },
-        "conditionals/csd/2022": {
-          "name": "Conditionals"
-        },
-        "interactive_card_2/csd/2022": {
-          "type": "Peer Review"
-        },
-        "functions/csd/2022": {
-          "name": "Functions"
-        },
-        "functions_1/csd/2022": {
-          "name": "Functions"
-        },
-        "functions_4/csd/2022": {
-          "name": "Functions"
-        },
-        "make_your_own_game_2/csd/2022": {
-          "type": "Peer Review"
-        },
-        "html_web_page_2/csd/2022": {
-          "type": "Peer Review"
-        },
-        "lists/csd/2022": {
-          "name": "Lists"
-        },
-        "your_personal_style_1/csd/2022": {
-          "type": "Peer Review"
-        },
-        "personal_web_page/csd/2022": {
-          "type": "Peer Review"
-        },
-        "website_for_a_purpose_1/csd/2022": {
-          "type": "Peer Review"
-        },
-        "variables_1/csd/2022": {
-          "name": "Variables"
-        },
-        "variables_2/csd/2022": {
-          "name": "Variables"
-        },
-        "functions_2/csd/2022": {
-          "name": "Functions"
-        },
-        "functions_3/csd/2022": {
-          "name": "Functions"
-        },
-        "functions_with_parameters/csd/2022": {
-          "name": "Functions with Parameters"
-        },
-        "functions_5/csd/2022": {
-          "name": "Functions"
-        },
-        "lesson_plans/courseb/2018": {
+        "lesson_plans_5/csd/2018": {
           "name": "Lesson Plans"
         },
         "lesson_plans/coursea/2018": {
           "name": "Lesson Plans"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Lesson Plans"
+        },
         "lesson_plans/coursed/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursee/2018": {
           "name": "Lesson Plans"
         },
         "lesson_plans/coursef/2018": {
@@ -269,55 +59,13 @@
         "lesson_plans/express/2018": {
           "name": "Lesson Plans"
         },
-        "lesson_plans/coursee/2018": {
+        "lesson_plans/csd/2019": {
           "name": "Lesson Plans"
         },
-        "lesson_plans/coursec/2018": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans/express/2019": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans/coursec/2019": {
+        "lesson_plans_1/csd/2019": {
           "name": "Lesson Plans"
         },
         "lesson_plans_2/csd/2019": {
-          "name": "Lesson Plans"
-        },
-        "lesson_plans_5/csd/2019": {
           "name": "Lesson Plans"
         },
         "lesson_plans_3/csd/2019": {
@@ -326,61 +74,119 @@
         "lesson_plans_4/csd/2019": {
           "name": "Lesson Plans"
         },
-        "lesson_plans/csd/2019": {
+        "lesson_plans_5/csd/2019": {
           "name": "Lesson Plans"
         },
-        "lesson_plans_1/csd/2019": {
+        "lesson_plans/coursea/2019": {
           "name": "Lesson Plans"
         },
-        "lesson_plans_2/csd/2017": {
+        "lesson_plans/courseb/2019": {
           "name": "Lesson Plans"
         },
-        "lesson_plans_5/csd/2017": {
+        "lesson_plans/coursec/2019": {
           "name": "Lesson Plans"
         },
-        "lesson_plans_1/csd/2017": {
+        "lesson_plans/coursed/2019": {
           "name": "Lesson Plans"
         },
-        "lesson_plans/csd/2017": {
+        "lesson_plans/coursee/2019": {
           "name": "Lesson Plans"
         },
-        "lesson_plans_4/csd/2017": {
+        "lesson_plans/coursef/2019": {
           "name": "Lesson Plans"
         },
-        "lesson_plans_3/csd/2017": {
+        "lesson_plans/express/2019": {
           "name": "Lesson Plans"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "lesson_plans/coursea/2020": {
+          "name": "Lesson Plans"
         },
-        "implementation_guide/coursef/2021": {
+        "lesson_plans/courseb/2020": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Lesson Plans"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "Peer Review"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Peer Review"
+        },
+        "lists/csd/2021": {
+          "name": "Lists"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Peer Review"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Peer Review"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Peer Review"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variables"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Peer Review"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Functions"
+        },
+        "functions_1/csd/2021": {
+          "name": "Functions"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Peer Review"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "भिडियोः Machine Learning"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Peer Review"
+        },
+        "functions_2/csd/2021": {
+          "name": "Functions"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For Loops"
+        },
+        "for_loops/csd/2021": {
+          "name": "For Loops"
+        },
+        "implementation_guide/coursea/2021": {
           "name": "Implementation Guide"
         },
-        "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "For Loop Fun"
+        "pair-programming-vid/coursea/2021": {
+          "name": "Pair Programming"
         },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "For Loop Fun"
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Happy Maps"
         },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "For Loop Fun"
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "The Big Event"
         },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "For Loop Fun"
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "The Big Event"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "For Loop Fun"
-        },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Internet"
-        },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "Internet"
-        },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "The Internet"
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "The Big Event"
         },
         "implementation_guide/courseb/2021": {
           "name": "Implementation Guide"
@@ -419,24 +225,6 @@
           "name": "The Big Event"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "The Big Event"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "Implementation Guide"
-        },
-        "pair-programming-vid/coursea/2021": {
-          "name": "Pair Programming"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Happy Maps"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "The Big Event"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "The Big Event"
-        },
-        "unplugged-video-big-event/coursea/2021": {
           "name": "The Big Event"
         },
         "implementation_guide/coursec/2021": {
@@ -541,6 +329,36 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Conditionals with Cards"
         },
+        "implementation_guide/coursee/2021": {
+          "name": "Implementation Guide"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Implementation Guide"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "For Loop Fun"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "For Loop Fun"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "For Loop Fun"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "For Loop Fun"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "For Loop Fun"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "The Internet"
+        },
         "pair_programming/express/2021": {
           "name": "Pair Programming"
         },
@@ -550,80 +368,262 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Pair Programming"
         },
-        "implementation_guide/coursee/2021": {
-          "name": "Implementation Guide"
-        },
-        "functions_2/csd/2021": {
-          "name": "Functions"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "For Loops"
-        },
-        "for_loops/csd/2021": {
-          "name": "For Loops"
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "भिडियोः Machine Learning"
-        },
-        "make-a-recommendation-peer-review-2019/csd/2021": {
+        "apps_and_problem_solving_1/csd/2022": {
           "type": "Peer Review"
         },
-        "variables_1/csd/2021": {
-          "name": "Variables"
-        },
-        "interactive-card-1-2-3-4/csd/2021": {
+        "html_web_page_2/csd/2022": {
           "type": "Peer Review"
         },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Functions"
-        },
-        "functions_1/csd/2021": {
-          "name": "Functions"
-        },
-        "make-your-own-game-1-2-3/csd/2021": {
-          "type": "Peer Review"
-        },
-        "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "type": "Peer Review"
-        },
-        "html-web-page/csd/2021": {
-          "type": "Peer Review"
-        },
-        "lists/csd/2021": {
+        "lists/csd/2022": {
           "name": "Lists"
         },
-        "your-personal-style-1/csd/2021": {
+        "your_personal_style_1/csd/2022": {
           "type": "Peer Review"
         },
-        "personal-web-page-1/csd/2021": {
+        "personal_web_page/csd/2022": {
           "type": "Peer Review"
         },
-        "website-for-a-purpose/csd/2021": {
+        "website_for_a_purpose_1/csd/2022": {
           "type": "Peer Review"
         },
-        "lesson_plans/pre-express/2020": {
-          "name": "Lesson Plans"
+        "variables/csd/2022": {
+          "name": "Variables"
         },
-        "lesson_plans/express/2020": {
-          "name": "Lesson Plans"
+        "variables_3/csd/2022": {
+          "name": "Variables"
         },
-        "lesson_plans/courseb/2020": {
-          "name": "Lesson Plans"
+        "text/csd/2022": {
+          "name": "Text"
         },
-        "lesson_plans/coursed/2020": {
-          "name": "Lesson Plans"
+        "conditionals/csd/2022": {
+          "name": "Conditionals"
         },
-        "lesson_plans/coursec/2020": {
-          "name": "Lesson Plans"
+        "interactive_card_2/csd/2022": {
+          "type": "Peer Review"
         },
-        "lesson_plans/coursee/2020": {
-          "name": "Lesson Plans"
+        "functions/csd/2022": {
+          "name": "Functions"
         },
-        "lesson_plans/coursea/2020": {
-          "name": "Lesson Plans"
+        "functions_1/csd/2022": {
+          "name": "Functions"
         },
-        "lesson_plans/coursef/2020": {
-          "name": "Lesson Plans"
+        "functions_4/csd/2022": {
+          "name": "Functions"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Peer Review"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "भिडियोः Machine Learning"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Peer Review"
+        },
+        "variables_1/csd/2022": {
+          "name": "Variables"
+        },
+        "variables_2/csd/2022": {
+          "name": "Variables"
+        },
+        "functions_2/csd/2022": {
+          "name": "Functions"
+        },
+        "functions_3/csd/2022": {
+          "name": "Functions"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Functions with Parameters"
+        },
+        "functions_5/csd/2022": {
+          "name": "Functions"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Implementation Guide"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Pair Programming"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Happy Maps"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "The Big Event"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "The Big Event"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "The Big Event"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Implementation Guide"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Move It, Move It"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Move It, Move It"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Move It, Move It"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Move it, Move it"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Pair Programming"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Getting Loopy"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Getting Loopy"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Getting Loopy"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Getting Loopy"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "The Big Event"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "The Big Event"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "The Big Event"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Implementation Guide"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Pair Programming"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "The Big Event"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "The Big Event"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "The Big Event"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binary Bracelets"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binary Bracelets"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binary Bracelets"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binary Bracelets"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binary Bracelets"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Implementation Guide"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Graph Paper Programming"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Pair Programming"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Relay programming"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Relay programming"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Relay programming"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Relay programming"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Relay programming"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Relay programming"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Conditionals with Cards"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Conditionals with Cards"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Conditionals with Cards"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Conditionals with Cards"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Conditionals with Cards"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Implementation Guide"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Implementation Guide"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "The Internet"
+        },
+        "pair_programming/express/2022": {
+          "name": "Pair Programming"
+        },
+        "variables/express/2022": {
+          "name": "Variables"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Pair Programming"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }

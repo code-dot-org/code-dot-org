@@ -5,11 +5,16 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
-  "marketing_initiative": null,
+  "marketing_initiative": "CSA",
   "grade_levels": "9,10,11,12",
   "header": "csa_labs",
   "image": "https://images.code.org/42075dad0776adcecd074f3e6514cafc-High School Image 3.png",
   "cs_topic": "data,programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": "Practice for the big exam with this lab, which focuses on calling methods and building strings in an interesting and engaging way.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": "2022-08-01 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": null
 }

@@ -59,6 +59,7 @@ ga:
         reset_password_token: "Tá an nasc a chliceáil tú chun d'fhocal faire a athshocrú"
         error:
           future: earráid - dáta sa todhchaí
+        us_state: 'Stát'
   beta: "béite"
   hello: "Dia dhuit a dhomhain"
   welcome_back: "Fáilte ar ais a %{name}"
@@ -185,6 +186,7 @@ ga:
     parent_account_checkbox: "Is tuismitheoir/caomhnóir mé agus tá mé ag clárú ar son mo pháiste"
     parent_account_email_progress_permission: "An bhfuil cead againn ríomhphost a sheoladh chugat anois is arís le heolas faoi dhul chun cinn do pháiste, faoin chúrsa, agus faoin ríomheolaíocht go ginearálta? [(Féach ár bpolasaí príobháideachais)](%{privacy_policy_url})"
     parent_account_email_label: "Seoladh R-Phoist Tuismitheora/Caomhnóra"
+    us_state: 'Stát'
   school_info:
     title: 'Eolas faoin scoil (roghnach)'
     school_country: 'Tír na Scoile'
@@ -1040,6 +1042,7 @@ ga:
         csf_express: 'Buntús na Ríomheolaíochta (Réamh-luathchúrsa nó luathchúrsa)'
         csd: 'Fionnachtana sa Ríomheolaíocht'
         csp: 'Foras Feasa ar an Ríomheolaíocht'
+        other: 'Eile'
       email_opt_in:
         opt_in_yes: 'Tá'
         opt_in_no: 'Níl'
@@ -1087,3 +1090,4 @@ ga:
   teacher_feedback: "Aiseolas ó Mhúinteoirí"
   pixelation:
     binary: "Dénártha"
+

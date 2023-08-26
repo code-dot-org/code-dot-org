@@ -45,6 +45,7 @@ ja:
         personal_email_markdown: "個人のEメールアドレス [(メール アドレスを持っていない場合はここをクリック)](%{url})"
         username: 'ユーザー名'
         password: 'パスワード'
+        verified_teacher: '認定教師'
         password_confirmation: 'パスワードの確認'
         current_password: '現在のパスワード'
         locale: '言語'
@@ -59,6 +60,7 @@ ja:
         reset_password_token: "あなたがフォローしたパスワードのリセットリンク"
         error:
           future: 現在までの日付にする
+        us_state: '都道府県'
   beta: "ベータ版"
   hello: "Hello world"
   welcome_back: "Welcome Back, %{name}"
@@ -68,6 +70,7 @@ ja:
   unsubmit: 取り消す
   previous_page: 前のページ
   next_page: 次のページ
+  next_level: 次のレベル
   next_resource: 次のリソース
   done_with_module: この学習モジュールで完了
   cancel: "キャンセル"
@@ -198,6 +201,9 @@ ja:
     parent_account_checkbox: "私は子供の代わりに登録する親/保護者です。"
     parent_account_email_progress_permission: "お子様の進捗状況やプロジェクトに関する最新情報、およびコースとコンピューターサイエンスに関する最新情報をメールでお送りしてもよろしいですか？[(当社のプライバシーポリシーをご覧ください)] (%{privacy_policy_url})"
     parent_account_email_label: "親/保護者のメール"
+    us_state: '都道府県'
+    us_state_dropdown_options:
+      other: "ここに記載されていない場所に住んでいます"
   school_info:
     title: '学校名(任意)'
     school_country: '学校のある国'
@@ -266,9 +272,13 @@ ja:
   parent_mailer:
     student_associated_subject: 'Code.org のログイン情報'
     parent_email_added_subject: 'Code.org へようこそ!'
+    parent_permission_request_subject: "Code.orgへのアクセスには保護者の同意が必要です。"
+    parent_permission_reminder_subject: "注意：お子様のCode.orgへのアクセスには保護者の同意が必要です。"
+    parent_permission_confirmation_subject: "お子様のCode.orgへのアクセスを承認していただき、ありがとうございます！"
   teacher_mailer:
     new_teacher_subject: 'Code.org へようこそ!'
     delete_teacher_subject: 'Code.org通知: アカウントが削除されました'
+    verified_teacher_subject: 'Code.org 教師検証-成功'
   section:
     your_section:
       one: 'あなたのセクション:'
@@ -376,6 +386,7 @@ ja:
       help_us: "手を貸して下さい"
       teach: "教える"
       about: "概要"
+      incubator: "インキュベーター"
       legal: "プライバシーと法的事項"
       legal_privacy: "プライバシー ポリシー"
       legal_cookie_notice: "クッキーについての通知"
@@ -606,6 +617,8 @@ ja:
     try_hour_of_code: 'アワーオブコードを試してみよう！'
     store: 'ストア'
     cookie_notice: 'クッキーについての通知'
+    view_code: 'コードを表示'
+    locale_select: "言語を選択する"
   reference_area:
     title: '助けが必要ですか？'
     subtitle: 'ビデオやヒントを見る'
@@ -630,6 +643,8 @@ ja:
       applab_unsupported_tablet: "App Labはマウスとキーボードが使える、デスクトップPCやノートPCで正しく動作します。あなたがお使いのタブレット機器では、正しく動作しない場合があります。"
       gamelab_unsupported_tablet: "Game Labはマウスとキーボードが使える、デスクトップPCやノートPCで正しく動作します。あなたがお使いのタブレット機器では、正しく動作しない場合があります。"
       weblab_unsupported_locale_storage: "Web Labは、ブラウザのプライベートモードでは正しくお使いいただけません。通常モードで読み込み直してください。ご不便をおかけして申し訳ありません。"
+  deprecation:
+    algebra_lab: "CS in Algebra のカリキュラムとコンテンツは廃止されました。今後数か月以内に、このラボは利用できなくなります。代わりに [ブートストラップ:代数] (%{bootstrap_algebra_url}) をチェックしてください。[もっと詳しく] (%{cs_algebra_url})."
   slow_loading: '通常よりも長くかかっている...'
   try_reloading: 'ページを再読み込みする'
   next_stage: '完成 ！次のステージへ'
@@ -668,65 +683,139 @@ ja:
       body_short: "アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。"
       audience: '13才以上'
       cta: 'もっと知る'
+      image_alt: 'ロケットを動力源とするバックパックを身に着けている紫色のウサギ。'
+    applab-intro:
+      image_alt: 'スマートフォン画面の中央を手でタップしています。画面から光と輝きが出ています。'
     aquatic:
       title: "マインクラフト"
+      image_alt: 'マインクラフトのスティーブとアレックスがあなたを見ています。'
+    artist:
+      image_alt: '巨大な鉛筆を持って三角形を描いている漫画風の人。'
+    conditionals:
+      image_alt: 'トランプデッキをシャッフルする両手。'
+    course1:
+      image_alt: 'Code.orgのマルハナバチとオレンジの魚がコードの前に立っています。'
+    course2:
+      image_alt: '緑の魔法使い、アーティスト、オレンジの魚が描かれた Code.org パズルのコラージュ。'
+    course3:
+      image_alt: 'ゲーム、ゾンビ、忍者を描いたCode.orgパズルのコラージュ。'
+    course4:
+      image_alt: 'サッカー、ペット、アーティストを描いたCode.orgパズルのコラージュです。'
+    coursea:
+      image_alt: '象とリスを描いたCode.orgパズルのコラージュ。'
+    courseb:
+      image_alt: '探検家、宝石、花が描かれたCode.orgパズルのコラージュ。'
+    coursec:
+      image_alt: 'ゲーム「アングリーバード」のリス、2進数、赤い鳥が描かれたCode.orgパズルのコラージュです。'
+    coursed:
+      image_alt: 'ゲーム「アングリーバード」に登場するハチ、花、ハチミツ、緑のブタが描かれたCode.orgパズルのコラージュです。'
+    coursee:
+      image_alt: 'Code.orgのパズルのコラージュで、シャベル、カボチャ、果樹園、牛を持った人が描かれています。'
+    coursef:
+      image_alt: 'カラフルな幾何学図形、赤い海賊、アーティストが描かれたCode.orgパズルのコラージュ。'
     dance-2019:
       title: 'ダンスパーティー'
+      image_alt: '楽しそうな猫、ナマケモノ、サメが踊っています。'
+    dance-2022:
+      image_alt: '土星を背景に踊る緑のエイリアンとロボット。'
     dance:
       title: 'ダンスパーティー'
+      image_alt: 'パーティーで踊るクールな猫と幸せなサメ。'
+    donate:
+      image_alt: 'Code.orgのパズルを見せているノートパソコンの画面を指さす子供。'
+    elementary:
+      image_alt: '虹の前の野原に立っているマルハナバチとリス。'
+    express:
+      image_alt: '植物対ゾンビ、そしてフラッピーバードの隣に立っている植物。'
     flappy:
       title: 'フラッピー コード'
       body: '10分以内で自分だけのゲームを作ってみませんか？Flappy Codeを試す'
+      image_alt: '緑のパイプの間を飛んでいる黄色い鳥。'
     frozen:
       title: "アナと雪の女王"
+      image_alt: '映画「アナと雪の女王」のアンナとエルザ。その間には、アンナがアイススケートを使って氷の上でかわいい形を描いている画像があります。'
     gallery:
       title: "ギャラリー"
       body: "ユーザーが作成したアプリやアーティストの画像のギャラリーを見る"
+      image_alt: '冬の休日の土地にたくさんの円と猫、コウモリ、幽霊が立っている絵師。'
     gamelab:
       title: "ゲーム ラボ"
       body: "ゲーム ラボは、簡単なアニメーションや、オブジェクトとキャラクターがやり取りするゲームを作ることができるプログラミング環境です。"
       audience: "13才以上"
       cta: "もっと知る"
+      image_alt: '歩道に立って笑っている漫画の人や動物がたくさんいます。'
+    hello-world-food:
+      image_alt: '地球を周回する多くの動物、エイリアン、絵文字。'
     hello-world:
       title: 'ハローワールド'
       body: '楽しい4テーマから選択して作成した世界のインタラクティブなキャラクターをコーディングしましょう。'
     hero:
       title: "マインクラフト"
       body: "Hour of Code向けに、マインクラフトの最新アクティビティができ上がりました。プログラミングを使ってマインクラフトの旅へ"
+      image_alt: 'マインクラフトのアイアンゴーレムが、頭上からアンナがパズルを解いている様子を目の前に立っています。'
     hoc-encryption:
       title: "単純な暗号化"
       body: "生徒は、暗号化されたメッセージを作成して解読する方法を学びます。"
+      image_alt: '英語の文字の出現頻度の棒グラフ。'
     hoc:
       title: '古典的な迷路'
       body: 'コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます'
+      image_alt: 'コード、マーク・ザッカーバーグ、アングリーバードを描いた画像のコラージュ。'
+    hourofcode:
+      image_alt: 'コード、マーク・ザッカーバーグ、アングリーバードを描いた画像のコラージュ。'
     hoc2014:
       try_new_tutorial: 'ベータ版の新しいHour of Codeのチュートリアルを試す'
       try_frozen: '「アナと雪の女王」から、アナとエルサと一緒のアーティスト'
     infinity:
       title: "インフィニティ プレイ ラボ"
       body: "プレイラボで、ディズニー インフィニティ キャラクターが登場するストーリーやゲームを作成しましょう。"
+      image_alt: 'フリーズ、タングルド、ビッグヒーロー6の5人のキャラクターが一緒に立っています。'
+    map:
+      image_alt: '米国の灰色の画像で、約20の州が紫色で強調表示されています。'
+    mc_escape:
+      image_alt: 'シルクハットとモノクルをかぶったマインクラフトのキャラクターが、エメラルドがいっぱい入った宝箱を開けます。'
+    mc:
+      image_alt: 'Code.orgのマインクラフトパズルの前に立っているマインクラフトのアンナとスティーブ。'
     minecraft:
       title: "マインクラフト"
       body: "プログラムを通して、Minecraftの世界を探検しましょう。"
+      image_alt: 'Code.orgのマインクラフトパズルの前に立っているマインクラフトのアンナとスティーブ。'
     minecraft2016:
       title: "マインクラフト"
       body: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
+    oceans:
+      image_alt: '海でさまざまな海の生き物をスキャンするロボット。'
+    playlab:
+      image_alt: '青い猫、間抜けな犬、先史時代のイタチを描いたイメージコラージュ。'
     poem-art:
       title: '詩のアート'
       body: 'あなた自身を表現しましょう！コードを使って詩をアニメ化します。'
+      image_alt: 'ステージでパフォーマンスをする流行に敏感なイカ。'
+    pre-express-2017:
+      image_alt: 'パズルのピースでできた木の前に立っている犬とユニコーン。'
+    pre-express-2018:
+      image_alt: 'パズルのピースでできた木の前に立っている犬とユニコーン。'
+    pre-express-2019:
+      image_alt: 'パズルのピースでできた木の前に立っている犬とユニコーン。'
+    pre-express:
+      image_alt: 'パズルのピースでできた木の前に立っている犬とユニコーン。'
     sports:
       title: "スポーツ"
       body: "バスケットボールゲームや、様々なスポーツの混合競技をつくろう！"
+      image_alt: 'フットボール、サッカーボール、ホッケーパック、バスケットボールの横には NBA と WNBA のロゴが表示されています。'
     starwars:
       title: "スター・ウォーズ"
+      image_alt: '砂漠に立つR2-D2、レイア、レイ、BB-8。'
     text-compression:
       title: "テキスト圧縮"
       body: "このレッスンで生徒はテキスト圧縮ウィジェットを使って、パターンを記号に置換してテキストを圧縮します。"
+      image_alt: 'テキストは、単語全体を単一の記号に置き換えることによって圧縮されます。'
     weblab:
       title: "Web ラボ (ベータ版)"
       body: "Webラボは、HTMLとCSSを使って、シンプルなWebページを作ることができるプログラミング環境です。Webページをデザインして、すぐにあなたのサイトを共有しよう。"
       audience: "13才以上"
       cta: "もっと知る"
+      image_alt: 'HTML コードを表示するコンピューター画面。'
     widgets:
       title: "ウィジェット"
       body: "これらのデジタル ツールを使用して、学生は実践的なコンピューターサイエンス入門コースを学ぶことができます。ウィジェットを自分で使うか、クラス向けの共通レッスンを作成します。"
@@ -782,6 +871,8 @@ ja:
     submit-incomplete-body: "いくつかの質問が回答されてないままになっています。このままでよろしいですか?\n※投稿したあとで評価の再編集はできません。"
     submit-complete-title: "評価を提出します。"
     submit-complete-body: "評価の提出後は編集はできません。良いですか?"
+  level_summary:
+    correct_answer: "正解"
   match:
     wrong_title: "うまく解決できていません。"
     wrong_body: "うまく解決できていません。もう一度やってみてください。"
@@ -907,6 +998,7 @@ ja:
           age: '年齢を指定してください'
           abuse_type: 'このコンテンツがどのように利用規約に違反しているか回答してください'
           abuse_detail: '報告している内容について詳しく説明してください'
+          captcha: 'このコンテンツを報告するには、CAPTCHA に記入してください。'
         abusive_url: '報告されたコンテンツのURL'
         abuse_type:
           question: 'このコンテンツは、%{link_start}利用規約%{link_end}に対し、どのように違反していますか？'
@@ -1042,14 +1134,33 @@ ja:
         not_listed: '希望の用語がリストにありません'
         none: '答えたくない'
       school_country:
+        australia: 'オーストラリア'
+        barbados: 'バルバドス'
+        belize: 'ベリーズ'
+        brazil: 'ブラジル'
         canada: 'カナダ'
         chile: 'チリ'
         colombia: 'コロンビア'
+        dominican_republic: 'ドミニカ共和国'
+        india: 'インド'
+        indonesia: 'インドネシア'
         israel: 'イスラエル'
+        jamaica: 'ジャマイカ'
+        kenya: 'ケニア'
         malaysia: 'マレーシア'
+        maldives: 'モルディブ'
         mexico: 'メキシコ'
+        mongolia: 'モンゴル'
+        new_zealand: 'ニュージーランド'
+        paraguay: 'パラグアイ'
+        portugal: 'ポルトガル'
+        slovakia: 'スロバキア'
+        south_korea: '韓国'
+        spain: 'スペイン'
         thailand: 'タイ'
+        trinidad_and_tobago: 'トリニダード・トバゴ'
         uzbekistan: 'ウズベキスタン'
+        vietnam: 'ベトナム'
       ages:
         ages_under_6: '6歳未満'
         ages_7_8: '7-8歳'
@@ -1098,6 +1209,7 @@ ja:
         csf_express: 'コンピュータサイエンス（CS）入門 (プレエクスプレスまたはエクスプレス)'
         csd: 'コンピューターサイエンス 発展'
         csp: 'コンピューターサイエンス 入門'
+        other: 'その他'
         not_applicable: "該当なし"
       email_opt_in:
         opt_in_yes: 'はい'
@@ -1121,11 +1233,23 @@ ja:
   courses_category: 'すべてのコース'
   course_offering:
     headers:
+      favorites: 'お気に入り'
+      labs_and_skills: 'ラボとスキル'
       minecraft: 'マインクラフト'
       hello_world: 'ハローワールド'
+      popular_media: '人気メディア'
       sports: 'スポーツ'
+      express: 'エクスプレス'
       csf: 'コンピューター・サイエンスの基礎'
       csc: 'CSコネクション'
+      year_long: '1年間'
+      csa_labs: 'CSA ラボ'
+      self_paced: 'セルフペース'
+      teacher_led: '教師主導'
+      collections: 'コレクション'
+      workshops_k5: 'K-5 ワークショップ'
+      summer_workshops_612: '6-12 サマーワークショップ'
+      virtual_academic_year_workshops_612: '6—12 年度のバーチャル学年度ワークショップ'
   cookie_banner:
     message: 'このサイトの閲覧を継続するか「同意する」をクリックすることで、クッキーがあなたのコンピューターやデバイスに保存されることに同意することになります。'
     more_information: "Code.orgのプライバシーポリシーを見る。"
@@ -1163,4 +1287,22 @@ ja:
       forbidden: "ユーザーは生徒のロック可能ステータスを更新できません"
   reset_predict_progress_button: "回答を削除"
   pixelation:
+    raw_format: "未フォーマットフォーマット"
+    raw_format_alt: "書式設定なしでビットを表示"
+    readable_format: "読み取り可能な形式"
+    readable_format_alt: "ピクセルで区切られたビットを表示"
+    save_image: "[イメージを保存]"
+    actual_size: "実際のサイズ"
+    image_file_format_header: "画像ファイル形式"
+    image_file_format_width: "幅:1 バイト"
+    image_file_format_height: "高さ:1 バイト"
+    image_file_format_bits_per_pixel: "ピクセルあたりのビット数:1 バイト"
+    image_file_format_data_a: "n ビットのピクセルデータ"
+    image_file_format_data_b: "n = 幅 x 高さ x ピクセルあたりのビット数"
+    image_width: "画像幅"
+    image_height: "画像の高さ"
+    bits_per_pixel_header: "ピクセルあたりのビット数"
     binary: "２しんすう"
+    hexadecimal: "16 進数"
+    pixel_format_header: "ピクセルフォーマット"
+

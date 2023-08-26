@@ -438,12 +438,17 @@ describe('Artist', () => {
           blockSpaceToDom() {
             return parseElement(oldXml);
           },
-          domToBlockSpace(blockspace, dom) {
-            newDom = dom;
+          domToText(dom) {
+            return new XMLSerializer().serializeToString(dom);
           },
         },
         mainBlockSpace: {
           clear() {},
+        },
+        cdoUtils: {
+          loadBlocksToWorkspace(blockspace, str) {
+            newDom = parseElement(str);
+          },
         },
       };
     });
@@ -452,7 +457,7 @@ describe('Artist', () => {
       artist.level = {};
       artist.prepareForRemix();
 
-      // domToBlockSpace should not have been called
+      // loadBlocksToWorkspace should not have been called
       expect(newDom).to.be.undefined;
     });
 

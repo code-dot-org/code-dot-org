@@ -2,7 +2,7 @@
 uk:
   data:
     parameter_names:
-      actor: персонаж
+      actor: виконавець
       color: колір
       counter: лічильник
       height: висота

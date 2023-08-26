@@ -2,50 +2,78 @@
   "tr-TR": {
     "data": {
       "start_html": {
+        "AppLab Intro 7 - Change Text 2": {
+          "Make me bigger and blue!": "Beni daha büyük ve mavi yap!"
+        },
+        "AppLab Intro 7 - Full Text": {
+          "Make me blue!": "Beni mavi yap!",
+          "Make me red!": "Beni kırmızı yap!",
+          "Write code to change my text!": "Metnimi değiştirmek için kod yaz!"
+        },
+        "AppLab Intro 7 - onEvent intro": {
+          "Green-ify!": "Yeşil-lendir!"
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "Flashlight App": "El Feneri Uygulaması"
+        },
+        "AppLab Intro 7 - playSound": {
+          "Animal Sound Board!!!": "Hayvan Ses Kurulu!!!",
+          "Horse!": "At!",
+          "Monkey!": "Maymun!",
+          "Tiger!": "Kaplan!",
+          "You Choose!": "Sen seç!"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "This or That?!": "Bu mu, bu mu?",
+          "This!": "Bu!",
+          "You clicked this!": "Bunu tıkladın!"
+        },
+        "AppLab Intro 7 - thisOrThatPersonalize": {
+          "This or That?!": "Bu mu, bu mu?",
+          "This!": "Bu!",
+          "You clicked this!": "Bunu tıkladın!"
+        },
+        "AppLab Intro 7 - thisOrThatSetScreen": {
+          "This or That?!": "Bu mu, bu mu?",
+          "This!": "Bu!",
+          "You clicked this!": "Bunu tıkladın!"
+        },
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Evet",
           "No": "Hayır",
+          "Yes": "Evet",
           "cute": "şirin"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Evet",
           "No": "Hayır",
+          "Yes": "Evet",
           "cute": "şirin"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Evet",
           "No": "Hayır",
+          "Yes": "Evet",
           "cute": "şirin"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Evet",
           "No": "Hayır",
+          "Yes": "Evet",
           "cute": "şirin"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "İsim",
+          "City": "Şehir",
           "Color": "Renk",
           "Food": "Yiyecek",
-          "City": "Şehir",
+          "Name": "İsim",
           "text": "metin yazısı"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "İsim",
+          "City": "Şehir",
           "Color": "Renk",
           "Food": "Yiyecek",
-          "City": "Şehir",
+          "Name": "İsim",
           "text": "metin yazısı"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -56,6 +84,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -66,19 +95,18 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31\n"
+          "31": "31\n",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -89,6 +117,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -99,8 +128,15 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31\n"
+          "31": "31\n",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing countries_2021": {
           "32": "32"
@@ -109,26 +145,17 @@
           "32": "32"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -139,6 +166,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -149,6 +177,7 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
           "31": "31\n",
           "32": "32",
@@ -159,20 +188,18 @@
           "37": "37",
           "38": "38",
           "39": "39",
+          "4": "4",
           "40": "40",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "metin yazısı"
         },
         "CSD U1 processing guess_2022": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -183,6 +210,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -193,6 +221,7 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
           "31": "31\n",
           "32": "32",
@@ -203,18 +232,25 @@
           "37": "37",
           "38": "38",
           "39": "39",
+          "4": "4",
           "40": "40",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "metin yazısı"
         },
         "CSD U1 processing live_2021": {
-          "walking": "yürüyüş",
           "bear": "Ayı",
-          "rat": "sıçan"
+          "rat": "sıçan",
+          "walking": "yürüyüş"
         },
         "CSD U1 processing live_2022": {
-          "walking": "yürüyüş",
           "bear": "Ayı",
-          "rat": "sıçan"
+          "rat": "sıçan",
+          "walking": "yürüyüş"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "Doğru!",
@@ -226,14 +262,6 @@
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -244,6 +272,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -254,19 +283,18 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31\n"
+          "31": "31\n",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -277,6 +305,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -287,8 +316,15 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31\n"
+          "31": "31\n",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Geri"
@@ -297,32 +333,32 @@
           "Back": "Geri"
         },
         "CSD U1 storage movies_2021": {
+          "No": "Hayır",
           "Star Wars": "Star Wars",
           "Yes": "Evet",
-          "No": "Hayır",
           "text": "metin yazısı"
         },
         "CSD U1 storage movies_2022": {
+          "No": "Hayır",
           "Star Wars": "Star Wars",
           "Yes": "Evet",
-          "No": "Hayır",
           "text": "metin yazısı"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "Temizle",
-          "white": "beyaz",
-          "pink": "pembe",
-          "green": "yeşil",
           "black": "siyah",
-          "purple": "mor"
+          "green": "yeşil",
+          "pink": "pembe",
+          "purple": "mor",
+          "white": "beyaz"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Temizle",
-          "white": "beyaz",
-          "pink": "pembe",
-          "green": "yeşil",
           "black": "siyah",
-          "purple": "mor"
+          "green": "yeşil",
+          "pink": "pembe",
+          "purple": "mor",
+          "white": "beyaz"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -377,6 +413,9 @@
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "Başarılı!"
         },
+        "CSD U6 - Board Outputs - A_2222": {
+          "Happy": "Mutlu"
+        },
         "CSD U6 - Board Outputs - P_2222": {
           "Success!": "Başarılı!"
         },
@@ -386,13 +425,16 @@
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "Başarılı!"
         },
+        "CSD U6 - Board Outputs - SB4_2222": {
+          "Fish": "Balık"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "Başarılı!"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "Doğu",
           "North": "Kuzey",
           "South": "Güney",
-          "East": "Doğu",
           "West": "Batı"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
@@ -408,26 +450,26 @@
           "Medium": "Orta"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "sol",
-          "right": "sağ",
-          "red": "kırmızı",
-          "yellow": "sarı",
           "green": "yeşil",
-          "purple": "mor"
+          "left": "sol",
+          "purple": "mor",
+          "red": "kırmızı",
+          "right": "sağ",
+          "yellow": "sarı"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "Açık",
           "fast": "hızlı",
-          "slow": "yavaş",
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "on": "Açık",
+          "short": "kısa",
+          "slow": "yavaş"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "Kırmızı",
+          "Blue": "Mavi",
           "Green": "Yeşil",
-          "Blue": "Mavi"
+          "Red": "Kırmızı"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "sol",
@@ -437,32 +479,32 @@
           "bright": "parlak"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "sarı",
-          "green": "yeşil",
           "blue": "mavi",
-          "orange": "portakal"
+          "green": "yeşil",
+          "orange": "portakal",
+          "yellow": "sarı"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "quiet": "sessiz",
-          "Test": "Test"
+          "Test": "Test",
+          "quiet": "sessiz"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "short": "kısa"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "Kırmızı",
-          "Blue": "Mavi"
+          "Blue": "Mavi",
+          "Red": "Kırmızı"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -471,15 +513,18 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "İsim"
         },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
+        },
+        "CSD U6 - Music - A_2222": {
+          "Happy": "Mutlu"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "A",
@@ -491,41 +536,41 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
           "G": "G",
-          "A": "A",
-          "B": "B",
           "Note:": "Not:"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Başarılı!"
@@ -544,8 +589,8 @@
           "Success!": "Başarılı!"
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "Puan",
-          "0": "0"
+          "0": "0",
+          "Score": "Puan"
         },
         "CSD U6 - Physical Input - PC_2222": {
           "Success!": "Başarılı!"
@@ -587,15 +632,15 @@
           "Name:": "İsim:"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "Kırmızı",
+          "Blue": "Mavi",
           "Green": "Yeşil",
-          "Blue": "Mavi"
+          "Red": "Kırmızı"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "Mavi",
+          "Green": "Yeşil",
           "Name:": "İsim:",
           "Red": "Kırmızı",
-          "Green": "Yeşil",
-          "Blue": "Mavi",
           "Save": "Kaydet"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
@@ -620,16 +665,16 @@
           "title": "başlık"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "Beyaz",
-          "Red": "Kırmızı",
+          "Blue": "Mavi",
           "Green": "Yeşil",
-          "Blue": "Mavi"
+          "Red": "Kırmızı",
+          "White": "Beyaz"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "yukarı",
           "down": "aşağı",
           "left": "sol",
-          "right": "sağ"
+          "right": "sağ",
+          "up": "yukarı"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "adı"
@@ -642,12 +687,24 @@
           "on": "Açık"
         },
         "CSD U6 - Sensors - P_2222": {
-          "text": "metin yazısı",
           "high": "yüksek",
-          "low": "düşük"
+          "low": "düşük",
+          "text": "metin yazısı"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "değer"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "Güncelle",
+          "value": "değer"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "değer"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "değer"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
           "value": "değer"
         },
         "CSD U6 Driver pt 2": {
@@ -722,6 +779,30 @@
         "CSD U6 add LED button_2021": {
           "Success!": "Başarılı!"
         },
+        "CSD U6 analog change": {
+          "value": "değer"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "değer"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "değer"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "değer"
+        },
+        "CSD U6 analog data": {
+          "value": "değer"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "değer"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "değer"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "değer"
+        },
         "CSD U6 analog light": {
           "Update": "Güncelle",
           "value": "değer"
@@ -738,41 +819,53 @@
           "Update": "Güncelle",
           "value": "değer"
         },
+        "CSD U6 analog sound": {
+          "value": "değer"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "değer"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "değer"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "değer"
+        },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "ilk"
@@ -787,20 +880,20 @@
           "first": "ilk"
         },
         "CSD U6 change": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 change_2018": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 change_2019": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 change_2021": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Orta"
@@ -831,79 +924,79 @@
           "Happy": "Mutlu"
         },
         "CSD U6 frequency": {
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "short": "kısa"
         },
         "CSD U6 frequency_2018": {
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "short": "kısa"
         },
         "CSD U6 frequency_2019": {
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "short": "kısa"
         },
         "CSD U6 frequency_2021": {
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "short": "kısa"
         },
         "CSD U6 get toggle": {
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "short": "kısa"
         },
         "CSD U6 get toggle_2018": {
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "short": "kısa"
         },
         "CSD U6 get toggle_2019": {
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "short": "kısa"
         },
         "CSD U6 get toggle_2021": {
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "short": "kısa"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "Mavi",
+          "Green": "Yeşil",
           "Name:": "İsim:",
           "Red": "Kırmızı",
-          "Green": "Yeşil",
-          "Blue": "Mavi",
           "Save": "Kaydet"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "Mavi",
+          "Green": "Yeşil",
           "Name:": "İsim:",
           "Red": "Kırmızı",
-          "Green": "Yeşil",
-          "Blue": "Mavi",
           "Save": "Kaydet"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "Mavi",
+          "Green": "Yeşil",
           "Name:": "İsim:",
           "Red": "Kırmızı",
-          "Green": "Yeşil",
-          "Blue": "Mavi",
           "Save": "Kaydet"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "Mavi",
+          "Green": "Yeşil",
           "Name:": "İsim:",
           "Red": "Kırmızı",
-          "Green": "Yeşil",
-          "Blue": "Mavi",
           "Save": "Kaydet"
         },
         "CSD U6 getProperty input": {
@@ -919,84 +1012,84 @@
           "Submit": "Gönder"
         },
         "CSD U6 getters debug": {
-          "slow": "yavaş",
           "fast": "hızlı",
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "short": "kısa",
+          "slow": "yavaş"
         },
         "CSD U6 getters debug_2018": {
           "fast": "hızlı",
-          "slow": "yavaş",
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "short": "kısa",
+          "slow": "yavaş"
         },
         "CSD U6 getters debug_2019": {
           "fast": "hızlı",
-          "slow": "yavaş",
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "short": "kısa",
+          "slow": "yavaş"
         },
         "CSD U6 getters debug_2021": {
           "fast": "hızlı",
-          "slow": "yavaş",
-          "short": "kısa",
+          "high": "yüksek",
           "long": "uzun",
           "low": "düşük",
-          "high": "yüksek"
+          "short": "kısa",
+          "slow": "yavaş"
         },
         "CSD U6 interval": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 interval_2018": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 interval_2019": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 interval_2021": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 light show": {
-          "on": "Açık",
-          "off": "kapalı"
+          "off": "kapalı",
+          "on": "Açık"
         },
         "CSD U6 light show_2018": {
-          "on": "Açık",
-          "off": "kapalı"
+          "off": "kapalı",
+          "on": "Açık"
         },
         "CSD U6 light show_2019": {
-          "on": "Açık",
-          "off": "kapalı"
+          "off": "kapalı",
+          "on": "Açık"
         },
         "CSD U6 light show_2021": {
-          "on": "Açık",
-          "off": "kapalı"
+          "off": "kapalı",
+          "on": "Açık"
         },
         "CSD U6 params create colors": {
-          "Red": "Kırmızı",
-          "Blue": "Mavi"
+          "Blue": "Mavi",
+          "Red": "Kırmızı"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "Kırmızı",
-          "Blue": "Mavi"
+          "Blue": "Mavi",
+          "Red": "Kırmızı"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "Kırmızı",
-          "Blue": "Mavi"
+          "Blue": "Mavi",
+          "Red": "Kırmızı"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "Kırmızı",
-          "Blue": "Mavi"
+          "Blue": "Mavi",
+          "Red": "Kırmızı"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -1023,24 +1116,24 @@
           "Success!": "Başarılı!"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "metin yazısı",
           "high": "yüksek",
-          "low": "düşük"
+          "low": "düşük",
+          "text": "metin yazısı"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "metin yazısı",
           "high": "yüksek",
-          "low": "düşük"
+          "low": "düşük",
+          "text": "metin yazısı"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "metin yazısı",
           "high": "yüksek",
-          "low": "düşük"
+          "low": "düşük",
+          "text": "metin yazısı"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "metin yazısı",
           "high": "yüksek",
-          "low": "düşük"
+          "low": "düşük",
+          "text": "metin yazısı"
         },
         "CSD U6 setProperty predict app": {
           "title": "başlık"
@@ -1055,20 +1148,20 @@
           "title": "başlık"
         },
         "CSD U6 slider intro": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 slider intro_2018": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 slider intro_2019": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 slider intro_2021": {
-          "short": "kısa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "kısa"
         },
         "CSD U6 test LED": {
           "Success!": "Başarılı!"
@@ -1083,74 +1176,74 @@
           "Success!": "Başarılı!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "Kırmızı",
+          "Blue": "Mavi",
           "Green": "Yeşil",
-          "Blue": "Mavi"
+          "Red": "Kırmızı"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "Kırmızı",
+          "Blue": "Mavi",
           "Green": "Yeşil",
-          "Blue": "Mavi"
+          "Red": "Kırmızı"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "Hakkında",
           "About Us": "Hakkımızda",
-          "User": "Kullanıcı",
-          "Cancel": "İptal",
-          "Name:": "İsim:",
-          "Red": "Kırmızı",
-          "Green": "Yeşil",
           "Blue": "Mavi",
-          "Yes": "Evet",
+          "Cancel": "İptal",
+          "Green": "Yeşil",
+          "Name:": "İsim:",
           "No": "Hayır",
-          "Save": "Kaydet"
+          "Red": "Kırmızı",
+          "Save": "Kaydet",
+          "User": "Kullanıcı",
+          "Yes": "Evet"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Hakkında",
           "About Us": "Hakkımızda",
-          "User": "Kullanıcı",
-          "Cancel": "İptal",
-          "Name:": "İsim:",
-          "Red": "Kırmızı",
-          "Green": "Yeşil",
           "Blue": "Mavi",
-          "Yes": "Evet",
+          "Cancel": "İptal",
+          "Green": "Yeşil",
+          "Name:": "İsim:",
           "No": "Hayır",
-          "Save": "Kaydet"
+          "Red": "Kırmızı",
+          "Save": "Kaydet",
+          "User": "Kullanıcı",
+          "Yes": "Evet"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Hakkında",
           "About Us": "Hakkımızda",
-          "User": "Kullanıcı",
-          "Cancel": "İptal",
-          "Name:": "İsim:",
-          "Red": "Kırmızı",
-          "Green": "Yeşil",
           "Blue": "Mavi",
-          "Yes": "Evet",
+          "Cancel": "İptal",
+          "Green": "Yeşil",
+          "Name:": "İsim:",
           "No": "Hayır",
-          "Save": "Kaydet"
+          "Red": "Kırmızı",
+          "Save": "Kaydet",
+          "User": "Kullanıcı",
+          "Yes": "Evet"
         },
         "CSDU4 Decision App Demo": {
           "About": "Hakkında",
-          "Why?": "Neden?",
+          "About Us": "Hakkımızda",
           "I don't know": "Bilmiyorum",
           "When?": "Ne zaman?",
-          "About Us": "Hakkımızda"
+          "Why?": "Neden?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Hakkında",
-          "Why?": "Neden?",
+          "About Us": "Hakkımızda",
           "I don't know": "Bilmiyorum",
           "When?": "Ne zaman?",
-          "About Us": "Hakkımızda"
+          "Why?": "Neden?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Hakkında",
-          "Why?": "Neden?",
+          "About Us": "Hakkımızda",
           "I don't know": "Bilmiyorum",
           "When?": "Ne zaman?",
-          "About Us": "Hakkımızda"
+          "Why?": "Neden?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Gizle",
@@ -1159,49 +1252,49 @@
         "CSDU4 List App Demo": {
           "About": "Hakkında",
           "About Us": "Hakkımızda",
-          "Done": "Bitti",
-          "Cancel": "İptal"
+          "Cancel": "İptal",
+          "Done": "Bitti"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Hakkında",
           "About Us": "Hakkımızda",
-          "Done": "Bitti",
-          "Cancel": "İptal"
+          "Cancel": "İptal",
+          "Done": "Bitti"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Hakkında",
           "About Us": "Hakkımızda",
-          "Done": "Bitti",
-          "Cancel": "İptal"
+          "Cancel": "İptal",
+          "Done": "Bitti"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Hakkında",
-          "Submit": "Gönder",
-          "Why?": "Neden?",
-          "When?": "Ne zaman?",
           "About Us": "Hakkımızda",
-          "Correct!": "Doğru!"
+          "Correct!": "Doğru!",
+          "Submit": "Gönder",
+          "When?": "Ne zaman?",
+          "Why?": "Neden?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Hakkında",
-          "Submit": "Gönder",
-          "Why?": "Neden?",
-          "When?": "Ne zaman?",
           "About Us": "Hakkımızda",
-          "Correct!": "Doğru!"
+          "Correct!": "Doğru!",
+          "Submit": "Gönder",
+          "When?": "Ne zaman?",
+          "Why?": "Neden?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Hakkında",
-          "Submit": "Gönder",
-          "Why?": "Neden?",
-          "When?": "Ne zaman?",
           "About Us": "Hakkımızda",
-          "Correct!": "Doğru!"
+          "Correct!": "Doğru!",
+          "Submit": "Gönder",
+          "When?": "Ne zaman?",
+          "Why?": "Neden?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
-          "???": "???",
-          "=": "="
+          "=": "=",
+          "???": "???"
         },
         "CSDU6 - UI and Inputs - setScreen": {
           "Back": "Geri"
@@ -1222,83 +1315,83 @@
           "Success!": "Başarılı!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "D",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "metin yazısı"
         },
         "csa widget test2": {
-          "8": "8",
-          "32": "32"
+          "32": "32",
+          "8": "8"
         },
         "csd u5 recommender sample": {
           "Start": "Başlayın",
@@ -1317,12 +1410,12 @@
           "flying": "uçma"
         },
         "csd-apps for good-2": {
-          "Next": "Sonraki",
-          "Home": "Ana Sayfa"
+          "Home": "Ana Sayfa",
+          "Next": "Sonraki"
         },
         "csd-apps for good-2_2022": {
-          "Next": "Sonraki",
-          "Home": "Ana Sayfa"
+          "Home": "Ana Sayfa",
+          "Next": "Sonraki"
         },
         "csd-apps for good-3": {
           "1": "1",
@@ -1339,23 +1432,15 @@
           "???": "???"
         },
         "csd-explore ui-2": {
-          "Next": "Sonraki",
-          "Home": "Ana Sayfa"
+          "Home": "Ana Sayfa",
+          "Next": "Sonraki"
         },
         "csd-explore ui-2_2022": {
-          "Next": "Sonraki",
-          "Home": "Ana Sayfa"
+          "Home": "Ana Sayfa",
+          "Next": "Sonraki"
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1366,6 +1451,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -1376,19 +1462,18 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31\n"
+          "31": "31\n",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1399,6 +1484,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -1409,8 +1495,15 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31\n"
+          "31": "31\n",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Correct!": "Doğru!",
@@ -1422,14 +1515,6 @@
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1440,6 +1525,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -1450,19 +1536,18 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31\n"
+          "31": "31\n",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1473,6 +1558,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -1483,8 +1569,15 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31\n"
+          "31": "31\n",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "Sonraki"
@@ -1493,13 +1586,13 @@
           "Next": "Sonraki"
         },
         "ml-L2 supervised - green glass door-2021": {
-          "Green Glass Door": "Yeşil Cam Kapı",
           "Accepted": "Kabul edildi",
+          "Green Glass Door": "Yeşil Cam Kapı",
           "Rejected": "Reddedildi"
         },
         "ml-L2 supervised - green glass door_2022": {
-          "Green Glass Door": "Yeşil Cam Kapı",
           "Accepted": "Kabul edildi",
+          "Green Glass Door": "Yeşil Cam Kapı",
           "Rejected": "Reddedildi"
         },
         "ml-L2 unsupervised - 1-2021": {
@@ -1509,16 +1602,16 @@
           "Next": "Sonraki"
         },
         "ml-customize-raspado-2021": {
-          "yes": "evet",
-          "no": "hayır",
+          "Predict": "Tahmin Et",
           "Raspado Recommender": "Raspado Önerici",
-          "Predict": "Tahmin Et"
+          "no": "hayır",
+          "yes": "evet"
         },
         "ml-customize-raspado_2022": {
-          "yes": "evet",
-          "no": "hayır",
+          "Predict": "Tahmin Et",
           "Raspado Recommender": "Raspado Önerici",
-          "Predict": "Tahmin Et"
+          "no": "hayır",
+          "yes": "evet"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Devam",
@@ -1537,18 +1630,18 @@
           "Silly": "Saçma"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "B",
           "A": "A",
-          "yes": "evet",
+          "W": "B",
+          "head": "baş",
           "no": "hayır",
-          "head": "baş"
+          "yes": "evet"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "B",
           "A": "A",
-          "yes": "evet",
+          "W": "B",
+          "head": "baş",
           "no": "hayır",
-          "head": "baş"
+          "yes": "evet"
         },
         "ml-model cards-book recommender model card": {
           "Predict": "Tahmin Et",
@@ -1559,76 +1652,76 @@
           "Silly": "Saçma"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Tahmin Et"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Tahmin Et"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Tahmin Et"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Tahmin Et"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "Tahmin Et",
-          "Back": "Geri"
+          "2": "2",
+          "3": "3",
+          "Back": "Geri",
+          "Predict": "Tahmin Et"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "Tahmin Et",
-          "Back": "Geri"
+          "2": "2",
+          "3": "3",
+          "Back": "Geri",
+          "Predict": "Tahmin Et"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Tahmin Et"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Tahmin Et"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Evet",
-          "No": "Hayır",
           "B": "B",
-          "Predict": "Tahmin Et"
+          "No": "Hayır",
+          "Predict": "Tahmin Et",
+          "Yes": "Evet"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Evet",
-          "No": "Hayır",
           "B": "B",
-          "Predict": "Tahmin Et"
+          "No": "Hayır",
+          "Predict": "Tahmin Et",
+          "Yes": "Evet"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Evet",
           "No": "Hayır",
-          "Predict": "Tahmin Et"
+          "Predict": "Tahmin Et",
+          "Yes": "Evet"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Evet",
           "No": "Hayır",
-          "Predict": "Tahmin Et"
+          "Predict": "Tahmin Et",
+          "Yes": "Evet"
         },
         "ml-models-shoes decision tree-2021": {
           "Improved Shoe Recommender": "İyileştirilmiş Ayakkabı Önerici",
@@ -1652,114 +1745,21 @@
         },
         "ml-use model card-example3A-2021": {
           "Driver Alert System": "Sürücü Uyarı Sistemi",
-          "rain": "yağmur",
-          "snow": "kar",
+          "Predict": "Tahmin Et",
           "cloudy": "bulutlu",
-          "night": "gece",
           "dusk": "Alacakaranlık",
-          "Predict": "Tahmin Et"
+          "night": "gece",
+          "rain": "yağmur",
+          "snow": "kar"
         },
         "ml-use model card-example3A_2022": {
           "Driver Alert System": "Sürücü Uyarı Sistemi",
-          "rain": "yağmur",
-          "snow": "kar",
+          "Predict": "Tahmin Et",
           "cloudy": "bulutlu",
-          "night": "gece",
           "dusk": "Alacakaranlık",
-          "Predict": "Tahmin Et"
-        },
-        "AppLab Intro 7 - Change Text 2": {
-          "Make me bigger and blue!": "Beni daha büyük ve mavi yap!"
-        },
-        "AppLab Intro 7 - Full Text": {
-          "Make me red!": "Beni kırmızı yap!",
-          "Make me blue!": "Beni mavi yap!",
-          "Write code to change my text!": "Metnimi değiştirmek için kod yaz!"
-        },
-        "AppLab Intro 7 - onEvent intro": {
-          "Green-ify!": "Yeşil-lendir!"
-        },
-        "AppLab Intro 7 - onEvent twoButtons": {
-          "Flashlight App": "El Feneri Uygulaması"
-        },
-        "AppLab Intro 7 - playSound": {
-          "Horse!": "At!",
-          "You Choose!": "Sen seç!",
-          "Animal Sound Board!!!": "Hayvan Ses Kurulu!!!",
-          "Monkey!": "Maymun!",
-          "Tiger!": "Kaplan!"
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-          "This!": "Bu!",
-          "This or That?!": "Bu mu, bu mu?",
-          "You clicked this!": "Bunu tıkladın!"
-        },
-        "AppLab Intro 7 - thisOrThatPersonalize": {
-          "This!": "Bu!",
-          "This or That?!": "Bu mu, bu mu?",
-          "You clicked this!": "Bunu tıkladın!"
-        },
-        "AppLab Intro 7 - thisOrThatSetScreen": {
-          "This!": "Bu!",
-          "This or That?!": "Bu mu, bu mu?",
-          "You clicked this!": "Bunu tıkladın!"
-        },
-        "CSD U6 - Board Outputs - A_2222": {
-          "Happy": "Mutlu"
-        },
-        "CSD U6 - Board Outputs - SB4_2222": {
-          "Fish": "Balık"
-        },
-        "CSD U6 - Music - A_2222": {
-          "Happy": "Mutlu"
-        },
-        "CSD U6 - Sensors - SB1_2222": {
-          "value": "değer"
-        },
-        "CSD U6 - Sensors - SB3_2222": {
-          "value": "değer"
-        },
-        "CSD U6 - Sensors - SB4.1_2222": {
-          "value": "değer"
-        },
-        "CSD U6 - Sensors - SB4_2222": {
-          "value": "değer"
-        },
-        "CSD U6 analog change": {
-          "value": "değer"
-        },
-        "CSD U6 analog change_2018": {
-          "value": "değer"
-        },
-        "CSD U6 analog change_2019": {
-          "value": "değer"
-        },
-        "CSD U6 analog change_2021": {
-          "value": "değer"
-        },
-        "CSD U6 analog data": {
-          "value": "değer"
-        },
-        "CSD U6 analog data_2018": {
-          "value": "değer"
-        },
-        "CSD U6 analog data_2019": {
-          "value": "değer"
-        },
-        "CSD U6 analog data_2021": {
-          "value": "değer"
-        },
-        "CSD U6 analog sound": {
-          "value": "değer"
-        },
-        "CSD U6 analog sound_2018": {
-          "value": "değer"
-        },
-        "CSD U6 analog sound_2019": {
-          "value": "değer"
-        },
-        "CSD U6 analog sound_2021": {
-          "value": "değer"
+          "night": "gece",
+          "rain": "yağmur",
+          "snow": "kar"
         }
       }
     }

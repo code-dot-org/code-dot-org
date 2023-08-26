@@ -45,6 +45,7 @@ uz:
         personal_email_markdown: "Shaxsiy elektron pochta manzili [(elektron pochta manzilingiz bo‘lmasa, shu yerni bosing)](%{url}) "
         username: 'Foydalanuvchi ismi'
         password: 'Kalit so‘z'
+        verified_teacher: 'Tasdiqlangan o''qituvchi'
         password_confirmation: 'Kalitni so‘zni tasdiqlash'
         current_password: 'Joriy kalit so‘z'
         locale: 'Til'
@@ -59,6 +60,7 @@ uz:
         reset_password_token: "Siz kirib o'tgan parolni qayta tiklash uchun havola"
         error:
           future: yaqin orada bo`la olmaydi
+        us_state: 'Davlat'
   beta: "beta"
   hello: "Salom Dunyo"
   welcome_back: "Qayta tashrifingiz bilan, %{name}"
@@ -68,7 +70,9 @@ uz:
   unsubmit: Bekor qilish
   previous_page: Oldingi sahifa
   next_page: Keyingi sahifa
+  next_level: Keyingi daraja
   next_resource: Keyingi resurs
+  done_with_module: Ushbu o'quv moduli bilan bajarildi
   cancel: "Bekor qilish"
   okay: "Yaxshi"
   or: "yoki"
@@ -173,7 +177,15 @@ uz:
     user_type_button: "Hisob turini yangilash"
     user_type_label: "Hisob (Akkaunt) Turi"
     user_type_student: "O‘quvchi"
+    user_type_student_desc: "Bizning barcha kurslarimiz va tadbirlarimizni o'rganing, shuningdek:"
+    user_type_student_ability_1: "O'zingizning yutuqlaringiz va loyihalaringizni saqlang"
+    user_type_student_ability_2: "O'qituvchingizning sinf bo'limiga qo'shiling"
     user_type_teacher: "O'qituvchi"
+    user_type_teacher_desc: "Talabalar kirish huquqiga ega bo'lgan barcha narsalar, shuningdek:"
+    user_type_teacher_ability_1: "Sinf bo'limlarini yarating"
+    user_type_teacher_ability_2: "Talaba ishini tayinlash va kuzatib borish"
+    user_type_teacher_ability_3: "Kasbiy ta'limga yozilish"
+    user_type_teacher_ability_4: "O'qituvchilar forumida o'zaro aloqada bo'ling"
     field_is_required: "talab etiladi"
     accept_terms: "Hisob qaydnomasini yaratishga rozilik bildirishingiz kerak."
     error: "Xatolik yuz berdi."
@@ -182,12 +194,14 @@ uz:
     email_preference_yes: "Ha"
     email_preference_no: "yo‘q"
     email_preference_required: "Siz elektron pochta parametrlarini belgilashingiz kerak."
+    share_teacher_email_reg_partner_question: "Mahalliy kasbiy rivojlanish, resurslar va tadbirlar to'g'risida sizni xabardor qilishlari uchun sizning davlatingizdagi [Code.org mintaqaviy hamkori] (%{cdo_regional_partner_desc}) bilan aloqa ma'lumotlaringizni baham ko'rishimizni xohlaysizmi?"
     share_teacher_email_reg_partner_preference_yes: "Ha"
     share_teacher_email_reg_partner_preference_no: "yo‘q"
     share_teacher_email_reg_partner_preference_required: "Siz elektron pochta parametrlarini belgilashingiz kerak."
     parent_account_checkbox: "Men farzandim nomidan ro'yxatdan o'tgan ota-ona/vasiyiman"
     parent_account_email_progress_permission: "Biz sizga elektron pochta orqali bolangizning taraqqiyoti va loyihalari to‘g‘risida, ularning kursi va kompyuter fanlari haqidagi yangiliklarni vaqti-vaqti bilan yuborib tursak bo‘ladimi?  [(Maxfiylik siyosatimizga qarang)](%{privacy_policy_url})"
     parent_account_email_label: "Ota-ona/Vasiy emaili"
+    us_state: 'Davlat'
   school_info:
     title: 'Maktab haqida ma''lumot (ixtiyoriy)'
     school_country: 'Maktab davlati'
@@ -259,6 +273,7 @@ uz:
   teacher_mailer:
     new_teacher_subject: '"Code.org"ga xush kelibsiz!'
     delete_teacher_subject: 'Code.org xabarnomasi: Sizning hisob qaydnomangiz o''chirildi'
+    verified_teacher_subject: 'Code.org O''qituvchilarni tekshirish - Muvaffaqiyat'
   section:
     your_section:
       one: 'Bo‘limingiz:'
@@ -278,6 +293,7 @@ uz:
     invite_sent: 'Taklif yuborildi'
     added_teacher: '%{name} o''qituvchingiz sifatida qo''shildi'
     registered: "Siz %{section_name} uchun ro'yxatdan o'tdingiz."
+    captcha_required: 'Iltimos, ushbu bo''limga qo''shilish uchun CAPTCHA-ni to''ldiring.'
     already_exists: 'Siz allaqachon %{section_name} bo‘limiga qo‘shildingiz.'
     error:
       signed_in: 'Davom etishdan oldin, iltimos, tizimdan chiqing'
@@ -288,6 +304,7 @@ uz:
       blank_code: "Iltimos, bo'lim kodini kiriting"
       cant_join_own_section: "Kechirasiz, siz o'z bo'limingizga qo'shila olmaysiz."
       provider_managed_section: "Ushbu bo'lim boshqa provayder tomonidan boshqariladi va unga qo'shilish mumkin emas. Iltimos, o'qituvchingizdan sizni %{provider} orqali qo'shishini va ularning bo'limini qayta sinxronlashtirishini so'rang."
+      not_participant_type: "Sizni %{section_code} bo'limiga qo'sha olmadik, chunki siz bo'lim uchun ishtirokchi turini uchratmaysiz."
     mail:
       student_disassociated:
         subject: "Code.org xabarnomasi: %{student_name} endi sizning talabangiz sifatida bog'lanmagan."
@@ -361,6 +378,7 @@ uz:
       help_us: "Bizga yordam bering"
       teach: "O'qiting"
       about: "Biz haqimizda"
+      incubator: "Inkubator"
       legal: "Privacy & Legal"
       legal_privacy: "Maxfiylik siyosati"
       legal_tos: "Xizmat shartlari"
@@ -404,12 +422,15 @@ uz:
       minecraft_hero: 'Minecraft qahramoni'
       playlab: 'Play Lab - O‘yin laboratoriyasi'
       playlab_k1: 'Play Lab (Maktabgacha)'
+      poetry: 'She''riyat'
+      poetry_hoc: 'She''r San''ati'
       scratch: 'Scratch'
       sports: 'Sport'
       spritelab: 'Sprite Lab'
       starwars: 'Yulduzlar urushi'
       starwarsblocks: 'Star Wars (Blocks)'
       starwarsblocks_hour: 'Star Wars (Blocks)'
+      thebadguys: 'Bad Guys'
       loading: 'Yuklanyapti...'
       weblab: 'Web Lab'
       view_all: 'Barcha loyihalarni ko‘rish...'
@@ -545,6 +566,7 @@ uz:
     all_students_must_be_in_current_section: "Hozirda barcha talabalar sizning bo'limingizga yozilishlari shart."
     already_enrolled_in_new_section: "Siz ushbu o'quvchilarni ko'chira olmaysiz, chunki ular allaqachon yangi bo'limda."
     third_party_login: "Siz talabalarni uchinchi tomon vositasi bilan sinxronlashtirilgan bo'limga ko'chira olmaysiz."
+    not_correct_participant_type: "Siz ushbu foydalanuvchilarni ko'chira olmaysiz, chunki ular yangi bo'limda ishtirok etish uchun ruxsatlarga ega emaslar."
   share:
     title: "Code Studioda o'rganish"
     description: "Har bir inson kompyuter fanini o'rganishi mumkin. Kod bilan o'yinlar, ilovalar va san'at asari yarating."
@@ -583,6 +605,8 @@ uz:
     make_my_own_app: 'O''z dasturimni yaratish'
     how_it_works: 'Bu qanday ishlaydi (Kodni ko''rish)'
     try_hour_of_code: 'Dasturlash soatini sinab ko‘ring!'
+    view_code: 'Kodni ko''rish'
+    locale_select: "Tilni tanlang"
   reference_area:
     title: 'Yordam kerakmi?'
     subtitle: 'Ushbu video va ko''rsatmalarni ko''ring'
@@ -607,6 +631,8 @@ uz:
       applab_unsupported_tablet: "App Lab sichqoncha va klaviatura yordamida ish stoli yoki noutbukda yaxshi ishlaydi. Joriy qurilmangizda ushbu vositadan foydalanishda muammolarga duch kelishingiz mumkin."
       gamelab_unsupported_tablet: "Game Lab sichqoncha va klaviatura yordamida ish stoli yoki noutbukda yaxshi ishlaydi. Joriy qurilmangizda ushbu vositadan foydalanishda muammolarga duch kelishingiz mumkin."
       weblab_unsupported_locale_storage: "Shaxsiy ko'rib chiqish rejimida Web Lab bilan bog'liq muammolarga duch kelishingiz mumkin. Iltimos, loyihangizni normal rejimda qayta yuklang. Noqulaylik uchun uzr."
+  deprecation:
+    algebra_lab: "Algebra o'quv dasturi va mazmuni bo'yicha CS eskirgan. Keyingi bir necha oy ichida bu laboratoriya endi mavjud bo'lmaydi. Buning o'rniga [Bootstrap: Algebra] (%{bootstrap_algebra_url}) ni tekshiring. [Batafsil ma'lumot] (%{cs_algebra_url})."
   slow_loading: 'Bu odatdagidan ko''proq vaqt talab qilmoqda ...'
   try_reloading: 'Sahifani qayta yuklashga harakat qilib ko''ring'
   next_stage: 'Tamom! Keyingi bosqichga o‘tish'
@@ -645,61 +671,138 @@ uz:
       body_short: "Ilovani ishlab chiqing, uni bloklar yoki JavaScript kodini ishlab chiqing, keyin uni bir necha soniya ichida ulashing."
       audience: '13+ yosh'
       cta: 'Qanday qilishni o‘rganing'
+      image_alt: 'Raketa bilan ishlaydigan xalta kiygan binafsha quyon.'
+    applab-intro:
+      image_alt: 'Qo''l smartfon ekranining o''rtasiga tegmoqda. Ekrandan yorug''lik va uchqunlar chiqmoqda.'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Minecraft-dan Stiv va Aleks sizga qarashmoqda.'
+    artist:
+      image_alt: 'Ulkan qalamni ushlab, uchburchak chizayotgan karikaturali odam.'
+    conditionals:
+      image_alt: 'Ikki qo''l o''yin kartalarining pastki qismini aralashtirib.'
+    course1:
+      image_alt: 'Code.org ari va apelsin baliqlari ba''zi kodlar oldida turibdi.'
+    course2:
+      image_alt: 'Yashil sehrgar, rassom va apelsin baliqlarini ko''rsatadigan Code.org jumboqlari kollaji.'
+    course3:
+      image_alt: 'O''yin, zombi va ninjani ko''rsatadigan Code.org jumboqlari kollaji.'
+    course4:
+      image_alt: 'Code.org jumboqlari kollaji futbol, uy hayvonlari va rassomni aks ettiradi.'
+    coursea:
+      image_alt: 'Code.org jumboqlari kollaji fil va sincap tasvirlangan.'
+    courseb:
+      image_alt: 'Code.org jumboqlari kollaji tadqiqotchi, qimmatbaho toshlar va gullarni aks ettiradi.'
+    coursec:
+      image_alt: 'Angry Birds o''yinidan sincap, ikkilik raqamlar va qizil qushni ko''rsatadigan Code.org jumboqlari kollaji.'
+    coursed:
+      image_alt: 'Angry Birds o''yinidan ari, gullar, asal va yashil cho''chqani ko''rsatadigan Code.org jumboqlari kollaji.'
+    coursee:
+      image_alt: 'Code.org jumboqlari kollaji belkurak, qovoq, bog'' va sigirni ushlab turgan odamni ko''rsatadi.'
+    coursef:
+      image_alt: 'Rangli geometrik shakllar, qizil qaroqchi va rassomni aks ettiruvchi Code.org jumboqlari kollaji.'
     dance-2019:
       title: 'Dance Party'
+      image_alt: 'Baxtli mushuk, yalqov va akula raqsi.'
+    dance-2022:
+      image_alt: 'Orqa fonda Saturn bilan raqsga tushayotgan yashil musofir va robot.'
     dance:
       title: 'Dance Party'
+      image_alt: 'Bir ziyofatda raqsga tushayotgan salqin mushuk va baxtli akula.'
+    donate:
+      image_alt: 'Code.org jumboqini ko''rsatadigan noutbuk ekraniga ishora qilayotgan bola.'
+    elementary:
+      image_alt: 'Kamalak oldidagi dalada turgan ari va sincap.'
+    express:
+      image_alt: 'Plants vs Zombies zombi va Flappy Bird yonida turgan o''simlik.'
     flappy:
-      title: 'Flappy o‘yinini yarating'
+      title: 'Flappy o‘yinini dasturlash'
       body: 'O‘z o‘yiningizni 10 daqiqa ichida yaratishni xohlaysizmi? Flappy Code darsimizni sinab ko‘ring!'
+      image_alt: 'Yashil quvurlar orasida uchayotgan sariq qush.'
     frozen:
       title: "Muzlagan (Frozen)"
+      image_alt: 'Anna va Elza “Muzlatilgan” filmidan. Ularning orasida Annaning muzli konkida yordamida muzda chiroyli shakl chizgan tasviri bor.'
     gallery:
       title: "Galereya"
       body: "Foydalanuvchilarimiz tomonidan yaratilgan dastur va rasmlar galereyasini ko'ring"
+      image_alt: 'Ko''plab doiralarni chizgan rassom va qishki ta''til erida turgan mushuk, ko''rshapalak va arvoh.'
     gamelab:
       title: "O‘yin laboratoriyasi"
       body: "O'yin laboratoriyasi - bu bir-biri bilan o‘zaro bog‘liq bo'lgan obyektlar va qahramonlar bilan oddiy animatsiyalar va o‘yinlar qilishingiz mumkin bo‘lgan dasturiy muhit."
       audience: "13+ yosh"
       cta: "Qanday qilishni o‘rganing"
+      image_alt: 'Ko''plab multfilm odamlar va hayvonlar piyodalar yo''lakchasida turib, jilmayib turishadi.'
+    hello-world-food:
+      image_alt: 'Yer atrofida aylanib yuradigan ko''plab hayvonlar, musofirlar va emojilar.'
     hello-world:
       body: 'Siz yaratgan dunyoda interaktiv belgilarni dasturlash uchun to‘rtta qiziqarli mavzularni tanlang.'
     hero:
       title: "Minecraft"
       body: "Minecraft Dasturlash soatiga yangi mashg‘ulotlar bilan qaytdi! Minecraft bo‘yicha kod bilan sayohat."
+      image_alt: 'Minecraft-dan temir golem Annaning jumboqni echayotgan ko''rinishi oldida turibdi.'
     hoc-encryption:
       title: "Oddiy Shifrlash"
       body: "O‘rganuvchilar shifrlangan xabarlarni yaratish va ularni krek qilish usullarini o‘rganadilar."
+      image_alt: 'Ingliz tilidagi harf chastotalarining chiziqli grafigi.'
     hoc:
       title: 'Klassik labirint'
       body: 'Informatika asoslari bilan tanishib ko‘ring. Millionlar buni uddalashdi.'
+      image_alt: 'Mark Tsukerberg va Angry Birds kodini ko''rsatadigan rasmlar kollaji.'
+    hourofcode:
+      image_alt: 'Mark Tsukerberg va Angry Birds kodini ko''rsatadigan rasmlar kollaji.'
     hoc2014:
       try_new_tutorial: 'Beta-versiyadagi yangi "Daturlash soati" o''quv qo''llanmamizni sinab ko''ring'
       try_frozen: 'Muzlagan Anna va Elza bilan Rassom'
     infinity:
       title: "Cheksiz O‘yin laboratoriyasi"
       body: "Disney Infinity qahramonlari ishtirokidagi hikoya yoki o‘yin yaratish uchun Play Lab-dan foydalaning."
+      image_alt: 'Muzlatilgan, Tangled va Big Hero 6 ning beshta qahramoni birga turibdi.'
+    map:
+      image_alt: 'Binafsha rang bilan ta''kidlangan 20 ga yaqin shtat bilan Qo''shma Shtatlarning kulrang tasviri.'
+    mc_escape:
+      image_alt: 'Zumradga to''la xazina sandig''ini ochayotganda shlyapa va monokl kiygan Minecraft qahramoni.'
+    mc:
+      image_alt: 'Minecraft-dan Anna va Stiv Code.org Minecraft jumboqining oldida turishadi.'
     minecraft:
       title: "Minecraft"
       body: "Minecraft dunyosini kod orqali o'rganing."
+      image_alt: 'Minecraft-dan Anna va Stiv Code.org Minecraft jumboqining oldida turishadi.'
     minecraft2016:
       title: "Minecraft"
       body: "Minecraft-ning o'z versiyangizda hayvonlarni va boshqa Minecraft jonzotlarini dasturlab yarating."
+    oceans:
+      image_alt: 'Okeandagi robot turli xil dengiz jonzotlarini skanerlaydi.'
+    playlab:
+      image_alt: 'Moviy mushuk, bema''ni it va tarixdan oldingi weasel tasvirlangan rasm kollaji.'
+    poem-art:
+      title: 'She''r San''ati'
+      body: 'O''zingizni ifoda eting! Animatsion she''rlar yaratish uchun koddan foydalaning.'
+      image_alt: 'Sahnada ijro etayotgan hipster kalamar.'
+    pre-express-2017:
+      image_alt: 'Jumboq bo''laklaridan yasalgan daraxt oldida turgan it va unicorn.'
+    pre-express-2018:
+      image_alt: 'Jumboq bo''laklaridan yasalgan daraxt oldida turgan it va unicorn.'
+    pre-express-2019:
+      image_alt: 'Jumboq bo''laklaridan yasalgan daraxt oldida turgan it va unicorn.'
+    pre-express:
+      image_alt: 'Jumboq bo''laklaridan yasalgan daraxt oldida turgan it va unicorn.'
     sports:
       title: "Sport"
       body: "Basketbol o‘yini yarating yoki sport turlarini aralashtiring va moslashtiring."
+      image_alt: 'NBA va WNBA logotiplari futbol, futbol to''pi, xokkey va basketbol yonida namoyish etilgan.'
     starwars:
       title: "Yulduzlar urushi"
+      image_alt: 'R2-D2, Leia, Rey va BB-8 cho''lda turibdi.'
     text-compression:
       title: "Matnni Zichlash"
       body: "Ushbu darsda talabalar Matnni zichlashtirish vidjetidan foydalanib, patternlarni belgilar bilan almashtirish orqali matnni zichlashtiradilar."
+      image_alt: 'Matn butun so''zlarni bitta belgi bilan almashtirish orqali siqiladi.'
     weblab:
       title: "Veb-laboratoriya (beta)"
       body: "Web Lab - bu HTML va CSS-dan foydalangan holda oddiy veb-sahifalarni yaratishingiz mumkin bo‘lgan dasturiy muhit. Bir necha soniya ichida veb-sahifalaringizni yarating va saytingiz bilan o‘rtoqlashing."
       audience: "13+ yosh"
       cta: "Qanday qilishni o‘rganing"
+      image_alt: 'HTML kodini aks ettiruvchi kompyuter ekrani.'
     widgets:
       title: "Vidjetlar"
       body: "Talabalar ushbu raqamli vositalardan foydalangan holda bizning CS tamoyillari kursidan tushunchalarni o‘rganishi mumkin. Vidjetlardan mustaqil ravishda foydalaning yoki o‘zingizning sinfingiz uchun bitta konsept darsini yarating."
@@ -880,6 +983,7 @@ uz:
           age: 'Iltimos, yoshni kiriting'
           abuse_type: 'Iltimos, ushbu tarkib Xizmat shartlarini qanday buzayotganiga javob bering'
           abuse_detail: 'Iltimos, xabar berayotgan tarkib haqida batafsil ma''lumot bering'
+          captcha: 'Iltimos, ushbu tarkib haqida xabar berish uchun CAPTCHA-ni to''ldiring.'
         abusive_url: 'Xabar berilayotgan tarkibning URL manzili'
         abuse_type:
           question: 'Ushbu tarkib %{link_start}Xizmat ko‘rsatish shartlarini%{link_end} qanday buzadi?'
@@ -968,6 +1072,11 @@ uz:
   no_course_access_teacher: "Siz ushbu kursga kirish huquqiga ega emassiz. Agar siz ushbu kursga kirishingiz kerak deb hisoblasangiz, iltimos, vaziyatni to'g'rilashimiz uchun support@code.org elektron manziliga yozing."
   no_script_access_student: "Siz ushbu bo'limga kirish huquqiga ega emassiz. Iltimos, o'qituvchingizdan qaysi bo'limga borishingizni so'rang."
   no_script_access_teacher: "Siz ushbu bo'limga kirish huquqiga ega emassiz. Agar siz ushbu bo'limga kirishingiz kerak deb hisoblasangiz, iltimos, vaziyatni to'g'rilashimiz uchun support@code.org elektron manziliga yozing."
+  no_level_access_student: "Sizda bu darajaga kirish imkoni yo'q. Iltimos, o'qituvchingizdan qaysi darajada bo'lishingiz kerakligini so'rang."
+  no_level_access_teacher: "Sizda bu darajaga kirish imkoni yo'q. Agar siz ushbu darajaga kirishingiz kerak deb hisoblasangiz, iltimos, support@code.org manziliga yozing, shunda biz vaziyatni to'g'irlashimiz mumkin."
+  no_exemplar: "Bu daraja uchun hech qanday namuna yo'q."
+  no_exemplar_access_student: "Talabalar namunaviy kodga kira olmaydilar. Iltimos, o'qituvchingizdan qaysi darajada bo'lishingiz kerakligini so'rang."
+  no_exemplar_access_teacher: "Namunaviy kodga faqat tasdiqlangan o'qituvchilar kirishlari mumkin. Agar siz tasdiqlangan o'qituvchi bo'lishni istasangiz, iltimos, support@code.org manziliga yozing."
   return_unit_overview: 'Bolim haqida umumiy ma''lumotga o''tish'
   return_course_overview: 'Kurs haqida umumiy ma''lumotga o''tish'
   view_all_units: 'Barcha bolimlarni ko''rish'
@@ -983,10 +1092,14 @@ uz:
       school: 'Maktab'
       school_name: 'Maktab nomi'
       school_city: 'Maktab shahri'
+      school_city_district: 'Maktab shahar/tuman'
       school_country: 'Maktab davlati'
+      school_department_region: 'Maktab bo''limi/Viloyat'
       colombian_school_city: 'Maktab shahri'
+      colombian_chilean_school_department: 'Maktab bo''limi/Viloyat'
       colombian_school_municipality: 'Maktab munitsipaliteti'
       colombian_chilean_school_name: 'Maktab nomi'
+      chilean_school_commune: 'Kommuna'
       chilean_school_id: 'Maktab ID'
       ages: 'Bu yil qaysi yosh(lar) ni o''qitasiz?'
       subjects: 'Bu yil qaysi fan(lar)ni o''qitasiz?'
@@ -1005,13 +1118,17 @@ uz:
         not_listed: 'Afzal bo''lgan muddat ro''yxatda yo''q'
         none: 'Javob bermaslikni ma’qul ko‘raman'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Beliz'
         canada: 'Kanada'
         chile: 'Chili'
         colombia: 'Kolumbiya'
         israel: 'Isroil'
         malaysia: 'Malayziya'
         mexico: 'Meksika'
+        paraguay: 'Paragvay'
         thailand: 'Tailand'
+        uzbekistan: 'O''zbekiston'
       ages:
         ages_under_6: '< 6 yosh'
         ages_7_8: '7-8 yosh'
@@ -1059,6 +1176,7 @@ uz:
         csf_express: 'CS Fundamentals  - Informatika asoslari (Pre-Express yoki Express)'
         csd: 'Kompyuter fanlari kashfiyotlari'
         csp: 'CS Principles -Informatika tamoyillari'
+        other: 'Boshqa'
         not_applicable: "Mavjud emas"
       email_opt_in:
         opt_in_yes: 'Ha'
@@ -1082,9 +1200,22 @@ uz:
   courses_category: 'To''liq kurslar'
   course_offering:
     headers:
+      favorites: 'Sevimlilar'
+      labs_and_skills: 'Laboratoriyalar va ko''nikmalar'
       minecraft: 'Minecraft'
+      popular_media: 'Ommaviy axborot vositalari'
       sports: 'Sport'
+      express: 'Ekspress'
       csf: 'CS asoslari'
+      csc: 'CS ulanishlar'
+      year_long: 'Yil Long'
+      csa_labs: 'CSA laboratoriyalari'
+      self_paced: 'O''z-o''zidan yurish'
+      teacher_led: 'O''qituvchi boshchiligidagi'
+      collections: 'To''plamlar'
+      workshops_k5: 'K-5 ustaxonalari'
+      summer_workshops_612: '6-12 yozgi seminarlar'
+      virtual_academic_year_workshops_612: '6-12 Virtual o''quv yili seminarlari'
   cookie_banner:
     message: 'Bizning saytni ko''rib chiqishni davom ettirish yoki "Men roziman" tugmasini bosish orqali siz cookie-fayllarni kompyuteringizda yoki qurilmangizda saqlashga rozilik bildirasiz.'
     more_information: "Code.org Maxfiylik siyosati bilan tanishing"
@@ -1094,6 +1225,7 @@ uz:
   page_not_found_description: "Siz izlayotgan sahifa ushbu manzilda mavjud emas. Veb-manzilni tekshiring va qayta yuboring. Yoki, bizning bosh sahifamizga qayting."
   page_not_found_button: "Bosh sahifaga qaytish"
   copy: 'Nusxalash'
+  confirm: 'Tasdiqlang'
   maker:
     google_oauth:
       login_with_google: 'Maker ilovasiga Google bilan kirish'
@@ -1103,6 +1235,7 @@ uz:
       error_wrong_provider: 'Noto''g''ri provayder. Google bilan tizimga kirganingizga ishonch hosil qiling.'
       error_invalid_user: 'Foydalanuvchi identifikatori yaroqsiz. Qaytadan kirishga urinib ko''ring.'
       error_no_code: 'Iltimos, login kodini shu yerga kiriting.'
+      confirm_login: 'Google hisobingiz bilan tizimga kirish uchun “Tasdiqlash” -ni tanlang.'
   parent_email_banner:
     text: "** Siz ota-ona yoki homiymisiz? ** Farzandingiz taraqqiyoti va loyihalari to'g'risida xabardor bo'lib turish uchun elektron pochtangizni ushbu hisobga bog'lang!"
     link_your_email: "Elektron pochtangizni bog'lang"
@@ -1110,6 +1243,7 @@ uz:
   behaviors:
     this_sprite: "bu sprayt"
   unit_prefix: "Bo'lim %{n}"
+  code_org_logo_alt: "Code.org Bosh sahifa"
   teacher_feedback: "O‘qituvchilarning fikri"
   lesson_lock:
     error:
@@ -1117,5 +1251,24 @@ uz:
       missing_params: "Foydalanuvchi, darajasi va birlik idlarini taqdim etishi kerak"
       cannot_view_locked_answers: "Qulflangan paytda javoblarni ko'rib bo'lmaydi"
       forbidden: "Foydalanuvchi talabaning qulflanadigan holatini yangilay olmaydi"
+  reset_predict_progress_button: "Javobni o'chirish"
   pixelation:
+    raw_format: "Xom format"
+    raw_format_alt: "Hech qanday formatlashsiz bitlarni ko'rish"
+    readable_format: "O'qiladigan format"
+    readable_format_alt: "Piksel bilan ajratilgan bitlarni ko'rish"
+    save_image: "Rasmni saqlash"
+    actual_size: "Haqiqiy o'lcham"
+    image_file_format_header: "Rasm fayl formati"
+    image_file_format_width: "Kengligi: 1 bayt"
+    image_file_format_height: "Balandligi: 1 bayt"
+    image_file_format_bits_per_pixel: "Piksel uchun bit: 1 bayt"
+    image_file_format_data_a: "n piksel ma'lumotlarining bitlari"
+    image_file_format_data_b: "n = Kenglik* Balandlik* Piksel uchun bitlar"
+    image_width: "Rasm kengligi"
+    image_height: "Rasm balandligi"
+    bits_per_pixel_header: "Piksel uchun bitlar"
     binary: "Binarli"
+    hexadecimal: "O'n oltilik"
+    pixel_format_header: "Piksel formati"
+

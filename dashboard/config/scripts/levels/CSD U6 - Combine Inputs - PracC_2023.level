@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:15:09.000Z",
   "level_num": "custom",
@@ -28,11 +29,11 @@
       "lessThanOrEqualOperator": null,
       "randomNumber_min_max": null,
       "setScreen": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "color": null,
       "intensity": null,
       "buzzer.frequency": null,
@@ -76,7 +77,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/2e8f440a22789518e827252217248758-image-1650057783402.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# LED Color Dropdown\r\n\r\nCreate an app that lets the user select the color of the LEDs using a dropdown menu.\r\n\r\n## Do This\r\n\r\n1) ::: details [Get the value from the dropdown and store it in a variable]\r\n\t- Use a [`var x =`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the value from the dropdown menu\r\n    :::\r\n2) ::: details [Update the color of each LED]\r\n\t- You will need 10 [`color(color)`(#f78183)](/docs/applab/color/) blocks for each LED\r\n\t- Note: When using a variable in a block, you do _not_ need to include quotes\r\n    :::",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -95,7 +96,8 @@
       "/courses/csd-2022/guides/circuit-playground",
       "/courses/csd-2022/guides/color-lights",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "display_name": "LED Color Dropdown",
     "thumbnail_url": "https://images.code.org/8e05ffd4bb4e9961a7275c2a005dd2a4-image-1649457435863.png",
@@ -105,9 +107,8 @@
     "encrypted_examples": "/2WvaIyzonDwx4LIlnrzFfolsC9ET7J4l7tC3hMwHO1CchGcpGa/IqXL+kHT\nYLbEZDcU7lrowwAt33HZGX44bA==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:09.875+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - PracC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - PracC_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:09.875+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - PracC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - PracC_2222\"},{\"changed_at\":\"2023-08-15 16:54:32 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 18:54:50 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

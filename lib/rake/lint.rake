@@ -27,7 +27,7 @@ namespace :lint do
       # as apps dependencies by yarn.  Ensure they are up-to-date before
       # linting.
       ChatClient.log 'Installing <b>apps</b> dependencies...'
-      RakeUtils.npm_install
+      RakeUtils.yarn_install
 
       ChatClient.log 'Linting <b>apps</b> JavaScript...'
       RakeUtils.system 'npm run lint'

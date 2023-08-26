@@ -1,0 +1,245 @@
+---
+title: Online Self-Paced Professional Learning for Teachers
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/professional-development-online.css", rel: "stylesheet"}
+
+-# FontAwesome icons
+- icon_calendar_clock = "fa-solid fa-calendar-clock"
+- icon_person_rays = "fa-solid fa-person-rays"
+- icon_star = "fa-solid fa-star"
+
+%section.hero-banner-basic.bg-neutral-dark
+  .wrapper.flex-container.align-items-center
+    .text-wrapper
+      %h1{style: "color: white"}=hoc_s(:self_paced_pl_hero_heading)
+      %p.body-one{style: "color: white"}=hoc_s(:self_paced_pl_hero_desc)
+    %img{src: "../shared/images/banners/self-paced-pl-hero.png", alt: ""}
+
+%section
+  .wrapper
+    %h2=hoc_s(:self_paced_pl_intro_heading)
+    %p=hoc_s(:self_paced_pl_intro_desc)
+    %div.flex-container.justify-space-between.align-items-start.wrap
+      %div.col-45
+        %ul.icon-bullet-list.full-width
+          %li
+            %div
+              %i{class: "#{icon_calendar_clock}"}
+            .text-wrapper
+              %h3=hoc_s(:self_paced_pl_intro_list_title_01)
+              %p.no-margin-bottom=hoc_s(:self_paced_pl_intro_list_desc_01)
+          %li
+            %div
+              %i{class: "#{icon_person_rays}"}
+            .text-wrapper
+              %h3=hoc_s(:self_paced_pl_intro_list_title_02)
+              %p.no-margin-bottom=hoc_s(:self_paced_pl_intro_list_desc_02)
+          %li.no-margin-bottom
+            %div
+              %i{class: "#{icon_star}"}
+            .text-wrapper
+              %h3=hoc_s(:self_paced_pl_intro_list_title_03)
+              %p=hoc_s(:self_paced_pl_intro_list_desc_03)
+        %a.link-button{href: "#modules"} Explore modules
+      %figure.col-50
+        %img{src: "/images/self-paced-pl-teacher-student-top.png", alt: "", style: "width: 100%; margin-top: 2.5rem;"}
+    .clear
+
+%section.bg-primary-light
+  .wrapper
+    %p.heading-xs.no-margin-bottom
+      =hoc_s(:self_paced_pl_callout)
+      %a{href: "/professional-learning"}=hoc_s(:self_paced_pl_callout_link)
+
+%section{id: "modules"}
+  .wrapper
+    %h2=hoc_s(:self_paced_pl_modules_heading)
+    %p=hoc_s(:self_paced_pl_modules_desc)
+    %p
+      %strong=hoc_s(:self_paced_pl_modules_list_heading)
+    %ul
+      %li=hoc_s(:self_paced_pl_modules_list_01)
+      %li=hoc_s(:self_paced_pl_modules_list_02)
+      %li=hoc_s(:self_paced_pl_modules_list_03)
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_grade_k_5_teachers)
+          %h3=hoc_s(:module_label_teaching_csf)
+          %img{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%"}
+          %p
+            %strong=hoc_s(:module_label_curriculum)
+            =hoc_s(:curriculum_name_csf_02)
+          %p
+            %strong=hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_8_hrs)
+          %p
+            %strong=hoc_s(:module_label_prerequisites)
+            =hoc_s(:module_prerequisites_none)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/s/k5-onlinepd-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csf)}}
+            =hoc_s(:call_to_action_start_pl)
+          %a.link-button.secondary{href: "/csf", aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csf)}}
+            =hoc_s(:call_to_action_explore_curriculum)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_grade_k_5_teachers)
+          %h3=hoc_s(:module_label_teaching_csc)
+          %img{src: "/images/self-paced-pl-tile-csc.png", alt: "", style: "width: 100%"}
+          %p
+            %strong=hoc_s(:module_label_curriculum)
+            =hoc_s(:curriculum_name_csc_02)
+          %p
+            %strong=hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_2_hrs)
+          %p
+            %strong=hoc_s(:module_label_prerequisites)
+            =hoc_s(:module_prerequisites_none)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/s/self-paced-pl-csc-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csc)}}
+            =hoc_s(:call_to_action_start_pl)
+          %a.link-button.secondary{href: "/educate/csc", aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csc)}}
+            =hoc_s(:call_to_action_explore_curriculum)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_grade_6_10_teachers)
+          %h3=hoc_s(:module_label_teaching_csd)
+          %img{src: "/images/self-paced-pl-tile-csd.png", alt: "", style: "width: 100%"}
+          %p
+            %strong=hoc_s(:module_label_curriculum)
+            =hoc_s(:curriculum_name_csd)
+          %p
+            %strong=hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_3_hrs)
+          %p
+            %strong=hoc_s(:module_label_prerequisites)
+            =hoc_s(:module_prerequisites_none)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csd-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csd)}}
+            =hoc_s(:call_to_action_start_pl)
+          %a.link-button.secondary{href: CDO.studio_url("/courses/csd-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csd)}}
+            =hoc_s(:call_to_action_explore_curriculum)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_grade_6_10_teachers)
+          %h3=hoc_s(:module_label_teaching_ai)
+          %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: "", style: "width: 100%"}
+          %p
+            %strong=hoc_s(:module_label_curriculum)
+            =hoc_s(:curriculum_name_ai)
+          %p
+            %strong=hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_2_hrs)
+          %p
+            %strong=hoc_s(:module_label_prerequisites)
+            =hoc_s(:module_prerequisites_none)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-aiml"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_ai)}}
+            =hoc_s(:call_to_action_start_pl)
+          %a.link-button.secondary{href: CDO.studio_url("/s/aiml-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_ai)}}
+            =hoc_s(:call_to_action_explore_curriculum)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_grade_6_10_teachers)
+          %h3=hoc_s(:module_label_teaching_maker_cp)
+          %img{src: "/images/self-paced-pl-tile-maker-cp.png", alt: "", style: "width: 100%"}
+          %p
+            %strong=hoc_s(:module_label_curriculum)
+            =hoc_s(:curriculum_name_maker_cp)
+          %p
+            %strong=hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_3_hrs)
+          %p
+            %strong=hoc_s(:module_label_prerequisites)
+            =hoc_s(:module_prerequisites_maker_cp)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-physical-computing"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_maker_cp)}}
+            =hoc_s(:call_to_action_start_pl)
+          %a.link-button.secondary{href: CDO.studio_url("/s/devices-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_maker_cp)}}
+            =hoc_s(:call_to_action_explore_curriculum)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_grade_6_10_teachers)
+          %h3=hoc_s(:module_label_teaching_maker_microbit)
+          %img{src: "/images/maker/maker-curriculum-microbit.png", alt: "", style: "width: 100%"}
+          %p
+            %strong=hoc_s(:module_label_curriculum)
+            =hoc_s(:curriculum_name_maker_microbit)
+          %p
+            %strong=hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_3_hrs)
+          %p
+            %strong=hoc_s(:module_label_prerequisites)
+            =hoc_s(:module_prerequisites_maker_microbit)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-microbit"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_maker_microbit)}}
+            =hoc_s(:call_to_action_start_pl)
+          %a.link-button.secondary{href: CDO.studio_url("/s/microbit-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_maker_microbit)}}
+            =hoc_s(:call_to_action_explore_curriculum)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_grade_9_12_teachers)
+          %h3=hoc_s(:module_label_teaching_csp)
+          %img{src: "/images/self-paced-pl-tile-csp.png", alt: "", style: "width: 100%"}
+          %p
+            %strong=hoc_s(:module_label_curriculum)
+            =hoc_s(:curriculum_name_csp)
+          %p
+            %strong=hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_3_hrs)
+          %p
+            %strong=hoc_s(:module_label_prerequisites)
+            =hoc_s(:module_prerequisites_none)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csp-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csp)}}
+            =hoc_s(:call_to_action_start_pl)
+          %a.link-button.secondary{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csp)}}
+            =hoc_s(:call_to_action_explore_curriculum)
+
+%section.bg-neutral-light
+  .wrapper
+    %div.col-50{style: "margin-bottom: 1rem;"}
+      %h2=hoc_s(:self_paced_pl_facilitator_heading)
+      %h3.heading-sm=hoc_s(:self_paced_pl_facilitator_subheading)
+      %p.body-three
+        =hoc_s(:self_paced_pl_facilitator_desc)
+      %a.link-button{href: "/professional-learning"}=hoc_s(:self_paced_pl_facilitator_call_to_action)
+    %div.col-45{style: "float:right; margin-top: 0.5em"}
+      %figure.video-responsive{style: "max-width: unset"}
+        %div
+          %iframe{src: "https://www.youtube-nocookie.com/embed/dScOdk0yY38", allowFullScreen: 'true', frameborder: '0', title: hoc_s(:video_title_professional_learning_program)}
+    .clear
+
+%section
+  .wrapper
+    %h2=hoc_s(:self_paced_pl_resources_heading)
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:self_paced_pl_resources_title_01)
+          %img{src: "/images/regional-partner-action-block-tile.png", alt: "", style: "width: 100%"}
+          %p=hoc_s(:self_paced_pl_resources_desc_01)
+        .content-footer
+          %a.link-button{href: "/educate/professional-learning/contact-regional-partner"}
+            =hoc_s(:call_to_action_contact_regional_partner)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:self_paced_pl_resources_title_02)
+          %img{src: "/images/csta-action-block-tile.png", alt: "", style: "width: 100%"}
+          %p=hoc_s(:self_paced_pl_resources_desc_02)
+        .content-footer
+          %a.link-button{href: "https://www.csteachers.org/page/individual-membership", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:call_to_action_join_csta)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:self_paced_pl_resources_title_03)
+          %img{src: "/images/afe-action-block-tile-small.png", alt: "", style: "width: 100%"}
+          %p=hoc_s(:self_paced_pl_resources_desc_03)
+        .content-footer
+          %a.link-button{href: "/afe", aria:{label: hoc_s(:aria_label_call_to_action_afe)}}
+            =hoc_s(:call_to_action_learn_more)
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::SELF_PACED_PL_PAGE_VISITED_EVENT

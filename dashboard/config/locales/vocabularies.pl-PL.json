@@ -2,1059 +2,137 @@
   "pl-PL": {
     "data": {
       "vocabularies": {
-        "code/dance-extras/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        "computer/csd/2021": {
+          "word": "Komputer"
         },
-        "event/dance-extras/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "program/dance-extras/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/minecraft/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/minecraft/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "event/minecraft/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "loop/minecraft/unversioned": {
-          "word": "Pętla",
-          "definition": "Czynność wykonywania czegoś w nieskończoność."
-        },
-        "program/minecraft/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/hero/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "function/hero/unversioned": {
-          "word": "Funkcja",
-          "definition": "Część kodu, który można łatwo przywoływać bez końca."
-        },
-        "program/hero/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/poem-art/2021": {
-          "word": "Kod",
-          "definition": "(v) pisać instrukcje dla komputera."
-        },
-        "event/poem-art/2021": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "line/poem-art/2021": {
-          "word": "Wiersz",
-          "definition": "(poezja) - podział wiersza ułożonego w wierszu, który kończy się na prawym marginesie."
-        },
-        "mood/poem-art/2021": {
-          "word": "Nastrój",
-          "definition": "wyrażanie uczucia, atmosfery lub emocji w sztuce lub piśmie."
-        },
-        "program/poem-art/2021": {
-          "word": "Program",
-          "definition": "Seria kroków, które zostały zakodowane w coś, co może być uruchamiane przez maszynę."
-        },
-        "code/flappy/unversioned": {
-          "word": "koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/flappy/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/hourofcode/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/frozen/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/frozen/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/iceage/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/iceage/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/artist/unversioned": {
-          "word": "Kod",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/artist/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/artist/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/gumball/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/gumball/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/dance/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "event/dance/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "program/dance/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/aquatic/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "condition/aquatic/unversioned": {
-          "word": "Warunek",
-          "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "Zdania z warunkami",
-          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "loops/aquatic/unversioned": {
-          "word": "Pętle",
-          "definition": "Czynność wykonywania czegoś w nieskończoność."
-        },
-        "program/aquatic/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "Szyfr Cezara",
-          "definition": "technika szyfrowania, która przesuwa alfabet o pewną liczby znaków"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "Szyfrowanie",
-          "definition": "termin ogólny dla techniki (lub algorytmu), wykonującej szyfrowanie"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "Łamanie szyfru",
-          "definition": "Kiedy próbuje się odkodować tajną wiadomość nie znając wszystkich tajników szyfru, próbuje się \"złamać\" szyfr."
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "Odszyfrowywanie",
-          "definition": "proces, który odwraca szyfrowanie, poprzez przyjęcie tajnej wiadomości oraz odtworzenie oryginalnego, czytelnego tekstu"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "Szyfrowanie",
-          "definition": "proces kodowania wiadomości, aby utrzymać je w tajemnicy tak, aby mogły ją odczytać tylko \"uprawnione\" strony."
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "Szyfr zastępowania losowego",
-          "definition": "technika szyfrowania, która odwzorowuje każdą literę alfabetu na losowo wybrane inne litery alfabetu."
-        },
-        "code/starwars/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/starwars/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/mc/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/mc/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/mc/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/playlab/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/playlab/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "Kompresja bezstratna",
-          "definition": "algorytm kompresji danych, który pozwala na perfekcyjne odtworzenie oryginalnych danych ze skompresowanych danych. Najczęściej używany na potrzeby kompresji tekstu (np. kompresja zip)"
-        },
-        "event/outbreak/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Modele i symulacje",
-          "definition": "program, który replikuje lub naśladuje kluczowe cechy wydarzenia ze świata rzeczywistego w celu zbadania jego zachowania bez kosztów, czasu lub niebezpieczeństwa przeprowadzenia eksperymentu w prawdziwym życiu."
-        },
-        "code/sports/unversioned": {
-          "word": "Kod",
-          "definition": "(v) napisać kod lub instrukcje dla komputera."
-        },
-        "debugging/sports/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "event/sports/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "program/sports/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/infinity/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/infinity/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/basketball/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/basketball/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "event/basketball/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "program/basketball/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/dance-2019/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "Uczenie maszynowe",
-          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
-        },
-        "algorithm/coursed/2022": {
-          "word": "Algorytm",
-          "definition": "Lista działań pozwalających wykonać zadanie."
-        },
-        "program/coursed/2022": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "bug/coursed/2022": {
-          "word": "Błąd",
-          "definition": "Część programu, która nie działa poprawnie."
-        },
-        "debugging/coursed/2022": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "loop/coursed/2022": {
-          "word": "Pętla",
-          "definition": "Czynność wykonywania czegoś w nieskończoność."
-        },
-        "programming/coursed/2022": {
-          "word": "Programowanie",
-          "definition": "Sztuka tworzenia programu."
-        },
-        "frustrated/coursed/2022": {
-          "word": "Sfrustrowany",
-          "definition": "Poczucie irytacji lub złości spowodowane tym, że coś idzie nie tak, jak chcemy."
-        },
-        "persistence/coursed/2022": {
-          "word": "Wytrwałość",
-          "definition": "Ciągłe podejmowanie prób nawet wówczas, gdy coś jest bardzo trudne."
-        },
-        "event/coursed/2022": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "code/coursed/2022": {
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "repeat/coursed/2022": {
-          "word": "Powtórz",
-          "definition": "Aby zrobić coś znowu."
-        },
-        "command/coursed/2022": {
-          "word": "Komenda",
-          "definition": "Polecenie dla komputera. Wiele komend złożonych razem tworzy algorytmy i programy komputerowe."
-        },
-        "conditionals/coursed/2022": {
-          "word": "Zdania z warunkami",
-          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
-        },
-        "pseudocode/coursed/2022": {
-          "word": "pseudokod",
-          "definition": "Zwykły opis języka kroków w algorytmie"
-        },
-        "condition/coursed/2022": {
-          "word": "Warunek",
-          "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
-        },
-        "while_loop/coursed/2022": {
-          "word": "Pętla \"dopóki\"",
-          "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
-        },
-        "until/coursed/2022": {
-          "word": "Aż do",
-          "definition": "Komenda, która nakazuje Ci coś zrobić tylko do momentu, w którym coś staje się prawdą."
-        },
-        "sprite/coursef/2022": {
-          "word": "Duszek",
-          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
-        },
-        "user/coursef/2022": {
-          "word": "Użytkownik",
-          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
-        },
-        "algorithm/coursef/2022": {
-          "word": "Algorytm",
-          "definition": "Lista kroków do ukończenia zadania. "
-        },
-        "behavior/coursef/2022": {
-          "word": "Zachowanie"
-        },
-        "program/coursef/2022": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "event/coursef/2022": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "variable/coursef/2022": {
-          "word": "Zmienna",
-          "definition": "Etykieta informacji użyta w programie."
-        },
-        "prompt/coursef/2022": {
-          "word": "Podpowiedź",
-          "definition": "Komunikat na ekranie komputera, który czeka na wejście od użytkownika."
-        },
-        "input/coursef/2022": {
-          "word": "Wejście",
-          "definition": "Informacje, które komputery otrzymują od użytkowników."
-        },
-        "models_and_simulations/coursef/2022": {
-          "word": "Modele i symulacje",
-          "definition": "program, który replikuje lub naśladuje kluczowe cechy wydarzenia ze świata rzeczywistego w celu zbadania jego zachowania bez kosztów, czasu lub niebezpieczeństwa przeprowadzenia eksperymentu w prawdziwym życiu."
-        },
-        "machine_learning/coursef/2022": {
-          "word": "Uczenie maszynowe",
-          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
-        },
-        "dns/coursef/2022": {
-          "word": "DNS",
-          "definition": "skrót dla \"Systemu nazwy domen\" [Domain Name System], system przekłada na nazwy domen (na przykład example.com) na adresy OP (np. 93.184.216.34)"
-        },
-        "dsl_cable/coursef/2022": {
-          "word": "DSL/Kabel",
-          "definition": "Metoda wysyłania informacji z użyciem kabli telefonicznych lub telewizyjnych."
-        },
-        "fiber_optic_cable/coursef/2022": {
-          "word": "Światłowód",
-          "definition": "Połączenie, w którym używa się światła do przesyłu informacji"
-        },
-        "internet/coursef/2022": {
-          "word": "Internet",
-          "definition": "Grupa komputerów i serwerów, które są ze sobą połączone."
-        },
-        "ip_address/coursef/2022": {
-          "word": "Adres IP",
-          "definition": "Liczba przypisana do dowolnej pozycji, która jest połączona z Internetem."
-        },
-        "packets/coursef/2022": {
-          "word": "Pakiety",
-          "definition": "Niewielkie fragmenty informacji, które zostały starannie utworzone z większych części informacji."
-        },
-        "servers/coursef/2022": {
-          "word": "Serwery",
-          "definition": "Komputery, które istnieją tylko po to, by przekazywać rzeczy innym."
-        },
-        "url/coursef/2022": {
-          "word": "URL",
-          "definition": "Zapadający w pamięć adres do wywołania strony internetowej (np. www.code.org)."
-        },
-        "wi_fi/coursef/2022": {
-          "word": "Wi-Fi",
-          "definition": "Bezprzewodowa metoda wysyłania informacji korzystająca z fal radiowych."
-        },
-        "define/coursef/2022": {
-          "word": "Zdefiniuj",
-          "definition": "Rozpracowywanie szczegółów problemów które próbuje się rozwiązać"
-        },
-        "prepare/coursef/2022": {
-          "word": "Przygotuj",
-          "definition": "Badanie, plan oraz nabywanie materiałów z zajęć, które masz wykonać"
-        },
-        "reflect/coursef/2022": {
-          "word": "Przemyśl",
-          "definition": "Uważnie zastanów się nad czymś w przeszłości z intencją udoskonalenia wyniku w przyszłości"
-        },
-        "try/coursef/2022": {
-          "word": "Spróbuj",
-          "definition": "Próba zrobienia czegoś"
-        },
-        "behavior/coursee/2022": {
-          "word": "Zachowanie",
-          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
-        },
-        "sprite/coursee/2022": {
-          "word": "Duszek",
-          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
-        },
-        "loop/coursee/2022": {
-          "word": "Pętla",
-          "definition": "Czynność wykonywania czegoś w nieskończoność."
-        },
-        "repeat/coursee/2022": {
-          "word": "Powtórz",
-          "definition": "Aby zrobić coś znowu."
-        },
-        "function/coursee/2022": {
-          "word": "Funkcja"
-        },
-        "call_a_function/coursee/2022": {
-          "word": "Wywołaj funkcję"
-        },
-        "condition/coursee/2022": {
-          "word": "Warunek"
-        },
-        "conditionals/coursee/2022": {
-          "word": "Zdania z warunkami",
-          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
-        },
-        "while_loop/coursee/2022": {
-          "word": "Pętla \"dopóki\"",
-          "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
-        },
-        "copyright/coursee/2022": {
-          "word": "Prawa autorskie",
-          "definition": "wyłączne prawo do drukowania, publikowania, wykonywania, filmowania lub zapisywania materiału literackiego, artystycznego lub muzycznego oraz do nadawania innym uprawnień, by też mogli to robić"
-        },
-        "define/coursee/2022": {
-          "word": "Zdefiniuj",
-          "definition": "Rozpracowywanie szczegółów problemów które próbuje się rozwiązać"
-        },
-        "prepare/coursee/2022": {
-          "word": "Przygotuj",
-          "definition": "Badanie, plan oraz nabywanie materiałów z zajęć, które masz wykonać"
-        },
-        "reflect/coursee/2022": {
-          "word": "Przemyśl",
-          "definition": "Uważnie zastanów się nad czymś w przeszłości z intencją udoskonalenia wyniku w przyszłości"
-        },
-        "try/coursee/2022": {
-          "word": "Spróbuj",
-          "definition": "Próba zrobienia czegoś"
-        },
-        "algorithm/courseb/2022": {
-          "word": "Algorytm",
-          "definition": "Lista działań pozwalających wykonać zadanie."
-        },
-        "bug/courseb/2022": {
-          "word": "Błąd",
-          "definition": "Część programu, która nie działa poprawnie."
-        },
-        "debugging/courseb/2022": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "click/courseb/2022": {
-          "word": "Kliknij",
-          "definition": "Wciśnij przycisk myszy"
-        },
-        "double_click/courseb/2022": {
-          "word": "Kliknij dwukrotnie",
-          "definition": "Naciśnij przycisk myszy bardzo szybko"
-        },
-        "drag/courseb/2022": {
-          "word": "Przeciągnij",
-          "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
-        },
-        "drop/courseb/2022": {
-          "word": "Drop",
-          "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
-        },
-        "program/courseb/2022": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "programming/courseb/2022": {
-          "word": "Programowanie",
-          "definition": "Sztuka tworzenia programu."
-        },
-        "persistence/courseb/2022": {
-          "word": "Wytrwałość",
-          "definition": "Ciągłe podejmowanie prób nawet wówczas, gdy coś jest bardzo trudne."
-        },
-        "loop/courseb/2022": {
-          "word": "Pętla",
-          "definition": "Czynność wykonywania czegoś w nieskończoność."
-        },
-        "repeat/courseb/2022": {
-          "word": "Powtórz",
-          "definition": "Aby zrobić coś znowu."
-        },
-        "event/courseb/2022": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "algorithm/express/2022": {
-          "word": "Algorytm",
-          "definition": "Lista działań pozwalających wykonać zadanie."
-        },
-        "bug/express/2022": {
-          "word": "Błąd",
-          "definition": "Część programu, która nie działa poprawnie."
-        },
-        "debugging/express/2022": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "sequencing/express/2022": {
-          "word": "Sekwencjonowanie",
-          "definition": "Porządkowanie komend w poprawnym porządku tak, aby komputery były w stanie odczytać komendy."
-        },
-        "program/express/2022": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "programming/express/2022": {
-          "word": "Programowanie",
-          "definition": "Sztuka tworzenia programu."
-        },
-        "behavior/express/2022": {
-          "word": "Zachowanie",
-          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
-        },
-        "sprite/express/2022": {
-          "word": "Duszek",
-          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
-        },
-        "event/express/2022": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "code/express/2022": {
-          "definition": "napisać kod lub napisać instrukcje dla komputera."
-        },
-        "loop/express/2022": {
-          "word": "Pętla",
-          "definition": "Czynność wykonywania czegoś w nieskończoność."
-        },
-        "repeat/express/2022": {
-          "word": "Powtórz",
-          "definition": "Aby zrobić coś znowu."
-        },
-        "command/express/2022": {
-          "word": "Komenda",
-          "definition": "Polecenie dla komputera. Wiele komend złożonych razem tworzy algorytmy i programy komputerowe."
-        },
-        "condition/express/2022": {
-          "word": "Warunek",
-          "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
-        },
-        "conditionals/express/2022": {
-          "word": "Zdania z warunkami",
-          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
-        },
-        "while_loop/express/2022": {
-          "word": "Pętla \"dopóki\"",
-          "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
-        },
-        "until/express/2022": {
-          "word": "Aż do",
-          "definition": "Komenda, która nakazuje Ci coś zrobić tylko do momentu, w którym coś staje się prawdą."
-        },
-        "function/express/2022": {
-          "word": "Funkcja",
-          "definition": "Część kodu, który można łatwo przywoływać bez końca."
-        },
-        "prompt/express/2022": {
-          "word": "szybka",
-          "definition": "Komunikat na ekranie komputera, który czeka na wejście od użytkownika."
-        },
-        "variable/express/2022": {
-          "word": "Zmienna",
-          "definition": "Etykieta informacji użyta w programie."
-        },
-        "for_loop/express/2022": {
-          "word": "Pętla \"dla\"",
-          "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
-        },
-        "define/express/2022": {
-          "word": "Zdefiniuj",
-          "definition": "Rozpracowywanie szczegółów problemów które próbuje się rozwiązać"
-        },
-        "prepare/express/2022": {
-          "word": "Przygotuj",
-          "definition": "Badanie, plan oraz nabywanie materiałów z zajęć, które masz wykonać"
-        },
-        "reflect/express/2022": {
-          "word": "Przemyśl",
-          "definition": "Uważnie zastanów się nad czymś w przeszłości z intencją udoskonalenia wyniku w przyszłości"
-        },
-        "try/express/2022": {
-          "word": "Spróbuj",
-          "definition": "Próba zrobienia czegoś"
-        },
-        "click/pre-express/2022": {
-          "word": "Kliknij",
-          "definition": "Wciśnij przycisk myszy"
-        },
-        "double_click/pre-express/2022": {
-          "word": "Kliknij dwukrotnie",
-          "definition": "Naciśnij przycisk myszy bardzo szybko"
-        },
-        "drag/pre-express/2022": {
-          "word": "Przeciągnij",
-          "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
-        },
-        "drop/pre-express/2022": {
-          "word": "Drop",
-          "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
-        },
-        "algorithm/pre-express/2022": {
-          "word": "Algorytm",
-          "definition": "Lista działań pozwalających wykonać zadanie."
-        },
-        "bug/pre-express/2022": {
-          "word": "Błąd",
-          "definition": "Część programu, która nie działa poprawnie."
-        },
-        "debugging/pre-express/2022": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/pre-express/2022": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "programming/pre-express/2022": {
-          "word": "Programowanie",
-          "definition": "Sztuka tworzenia programu."
-        },
-        "persistence/pre-express/2022": {
-          "word": "Wytrwałość",
-          "definition": "Ciągłe podejmowanie prób nawet wówczas, gdy coś jest bardzo trudne."
-        },
-        "loop/pre-express/2022": {
-          "word": "Pętla",
-          "definition": "Czynność wykonywania czegoś w nieskończoność."
-        },
-        "repeat/pre-express/2022": {
-          "word": "Powtórz",
-          "definition": "Aby zrobić coś znowu."
-        },
-        "event/pre-express/2022": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "algorithm/coursea/2022": {
-          "word": "Algorytm",
-          "definition": "Lista działań pozwalających wykonać zadanie."
-        },
-        "debugging/coursea/2022": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/coursea/2022": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "click/coursea/2022": {
-          "word": "Kliknij",
-          "definition": "Wciśnij przycisk myszy"
-        },
-        "double_click/coursea/2022": {
-          "word": "Kliknij dwukrotnie",
-          "definition": "Naciśnij przycisk myszy bardzo szybko"
-        },
-        "drag/coursea/2022": {
-          "word": "Przeciągnij",
-          "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
-        },
-        "drop/coursea/2022": {
-          "word": "Drop",
-          "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
-        },
-        "bug/coursea/2022": {
-          "word": "Błąd",
-          "definition": "Część programu, która nie działa poprawnie."
-        },
-        "programming/coursea/2022": {
-          "word": "Programowanie",
-          "definition": "Sztuka tworzenia programu."
-        },
-        "loop/coursea/2022": {
-          "word": "Pętla",
-          "definition": "Czynność wykonywania czegoś w nieskończoność."
-        },
-        "repeat/coursea/2022": {
-          "word": "Powtórz",
-          "definition": "Aby zrobić coś znowu."
-        },
-        "event/coursea/2022": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "algorithm/coursec/2022": {
-          "word": "Algorytm",
-          "definition": "Lista działań pozwalających wykonać zadanie."
-        },
-        "bug/coursec/2022": {
-          "word": "Błąd",
-          "definition": "Część programu, która nie działa poprawnie."
-        },
-        "debugging/coursec/2022": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/coursec/2022": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "sequencing/coursec/2022": {
-          "word": "Sekwencjonowanie",
-          "definition": "Porządkowanie komend w poprawnym porządku tak, aby komputery były w stanie odczytać komendy."
-        },
-        "persistence/coursec/2022": {
-          "word": "Wytrwałość"
-        },
-        "programming/coursec/2022": {
-          "word": "Programowanie",
-          "definition": "Sztuka tworzenia programu."
-        },
-        "angle/coursec/2022": {
-          "word": "Kąt"
-        },
-        "loop/coursec/2022": {
-          "word": "Pętla",
-          "definition": "Czynność wykonywania czegoś w nieskończoność."
-        },
-        "repeat/coursec/2022": {
-          "word": "Powtórz",
-          "definition": "Aby zrobić coś znowu."
-        },
-        "event/coursec/2022": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "data/coursec/2022": {
-          "word": "Dane"
-        },
-        "graph/coursec/2022": {
-          "word": "Wykres"
-        },
-        "binary/coursec/2022": {
-          "word": "Binarny",
-          "definition": "Sposób przedstawiania informacji z użyciem tylko dwóch opcji."
-        },
-        "input/csd/2022": {
+        "input/csd/2021": {
           "word": "Wejście"
         },
-        "processing/csd/2022": {
+        "processing/csd/2021": {
           "word": "Przetwarzanie"
         },
-        "bug/csd/2022": {
-          "word": "Błąd",
-          "definition": "Część programu, która nie działa poprawnie."
-        },
-        "debugging/csd/2022": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/csd/2022": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "parameter/csd/2022": {
-          "word": "Parametr"
-        },
-        "variable/csd/2022": {
-          "word": "Zmienna",
-          "definition": "Etykieta informacji użyta w programie."
-        },
-        "property/csd/2022": {
-          "word": "Właściwość"
-        },
-        "sprite/csd/2022": {
-          "word": "Duszek"
-        },
-        "condition/csd/2022": {
-          "word": "Warunek"
-        },
-        "conditionals/csd/2022": {
-          "word": "Zdania z warunkami"
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstrakcja"
-        },
-        "function/csd/2022": {
-          "word": "Funkcja"
-        },
-        "html/csd/2022": {
+        "html/csd/2021": {
           "word": "HTML"
         },
-        "digital_footprint/csd/2022": {
+        "digital_footprint/csd/2021": {
           "word": "Cyfrowy ślad"
         },
-        "css/csd/2022": {
+        "css/csd/2021": {
           "word": "CSS"
         },
-        "copyright/csd/2022": {
+        "copyright/csd/2021": {
           "word": "Prawa autorskie",
           "definition": "wyłączne prawo do drukowania, publikowania, wykonywania, filmowania lub zapisywania materiału literackiego, artystycznego lub muzycznego oraz do nadawania innym uprawnień, by też mogli to robić"
         },
-        "empathy/csd/2022": {
-          "word": "Empatia"
+        "bug/csd/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
         },
-        "user/csd/2022": {
-          "word": "Użytkownik",
-          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
+        "debugging/csd/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
         },
-        "user_interface/csd/2022": {
-          "word": "Interfejs użytkownika"
-        },
-        "innovation/csd/2022": {
-          "word": "Innowacja"
-        },
-        "machine_learning/csd/2022": {
-          "word": "Uczenie maszynowe",
-          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
-        },
-        "ethics/csd/2022": {
-          "word": "Etyka"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Kod",
-          "definition": "(v) pisać instrukcje dla komputera."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Program",
-          "definition": "Seria kroków, które zostały zakodowane w coś, co może być uruchamiane przez maszynę."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Nastrój",
-          "definition": "wyrażanie uczucia, atmosfery lub emocji w sztuce lub piśmie."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Wiersz",
-          "definition": "(poezja) - podział wiersza ułożonego w wierszu, który kończy się na prawym marginesie."
-        },
-        "sprite/coursef/2021": {
-          "word": "Duszek",
-          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
-        },
-        "user/coursef/2021": {
-          "word": "Użytkownik",
-          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
-        },
-        "algorithm/coursef/2021": {
-          "word": "Algorytm",
-          "definition": "Lista kroków do ukończenia zadania. "
-        },
-        "behavior/coursef/2021": {
-          "word": "Zachowanie",
-          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
-        },
-        "program/coursef/2021": {
+        "program/csd/2021": {
           "word": "Program",
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
-        "event/coursef/2021": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
+        "parameter/csd/2021": {
+          "word": "Parametr",
+          "definition": "Dodatkowa informacja podana do funkcji, aby dostosować ją do konkretnej potrzeby"
         },
-        "variable/coursef/2021": {
+        "variable/csd/2021": {
           "word": "Zmienna",
           "definition": "Etykieta informacji użyta w programie."
         },
-        "prompt/coursef/2021": {
-          "word": "Podpowiedź",
-          "definition": "Komunikat na ekranie komputera, który czeka na wejście od użytkownika."
+        "property/csd/2021": {
+          "word": "Właściwość"
         },
-        "input/coursef/2021": {
-          "word": "Wejście",
-          "definition": "Informacje, które komputery otrzymują od użytkowników."
+        "sprite/csd/2021": {
+          "word": "Duszek"
         },
-        "loop/coursef/2021": {
-          "word": "Pętla",
-          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        "condition/csd/2021": {
+          "word": "Warunek"
         },
-        "repeat/coursef/2021": {
-          "word": "Powtórz",
-          "definition": "Aby zrobić coś znowu."
+        "conditionals/csd/2021": {
+          "word": "Zdania z warunkami"
         },
-        "for_loop/coursef/2021": {
+        "abstraction/csd/2021": {
+          "word": "Abstrakcja"
+        },
+        "function/csd/2021": {
+          "word": "Funkcja"
+        },
+        "empathy/csd/2021": {
+          "word": "Empatia"
+        },
+        "user/csd/2021": {
+          "word": "Użytkownik",
+          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
+        },
+        "user_interface/csd/2021": {
+          "word": "Interfejs użytkownika"
+        },
+        "innovation/csd/2021": {
+          "word": "Innowacja"
+        },
+        "for_loop/csd/2021": {
           "word": "Pętla \"dla\"",
           "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
         },
-        "models_and_simulations/coursef/2021": {
-          "word": "Modele i symulacje",
-          "definition": "program, który replikuje lub naśladuje kluczowe cechy wydarzenia ze świata rzeczywistego w celu zbadania jego zachowania bez kosztów, czasu lub niebezpieczeństwa przeprowadzenia eksperymentu w prawdziwym życiu."
-        },
-        "machine_learning/coursef/2021": {
+        "machine_learning/csd/2021": {
           "word": "Uczenie maszynowe",
           "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
         },
-        "dns/coursef/2021": {
-          "word": "DNS",
-          "definition": "skrót dla \"Systemu nazwy domen\" [Domain Name System], system przekłada na nazwy domen (na przykład example.com) na adresy OP (np. 93.184.216.34)"
+        "ethics/csd/2021": {
+          "word": "Etyka"
         },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/Kabel",
-          "definition": "Metoda wysyłania informacji z użyciem kabli telefonicznych lub telewizyjnych."
+        "algorithm/coursea/2021": {
+          "word": "Algorytm",
+          "definition": "Lista działań pozwalających wykonać zadanie."
         },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Światłowód",
-          "definition": "Połączenie, w którym używa się światła do przesyłu informacji"
+        "debugging/coursea/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
         },
-        "internet/coursef/2021": {
-          "word": "Internet",
-          "definition": "Grupa komputerów i serwerów, które są ze sobą połączone."
+        "program/coursea/2021": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
-        "ip_address/coursef/2021": {
-          "word": "Adres IP",
-          "definition": "Liczba przypisana do dowolnej pozycji, która jest połączona z Internetem."
+        "click/coursea/2021": {
+          "word": "Kliknij",
+          "definition": "Wciśnij przycisk myszy"
         },
-        "packets/coursef/2021": {
-          "word": "Pakiety",
-          "definition": "Niewielkie fragmenty informacji, które zostały starannie utworzone z większych części informacji."
+        "double_click/coursea/2021": {
+          "word": "Kliknij dwukrotnie",
+          "definition": "Naciśnij przycisk myszy bardzo szybko"
         },
-        "servers/coursef/2021": {
-          "word": "Serwery",
-          "definition": "Komputery, które istnieją tylko po to, by przekazywać rzeczy innym."
+        "drag/coursea/2021": {
+          "word": "Przeciągnij",
+          "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
         },
-        "url/coursef/2021": {
-          "word": "URL",
-          "definition": "Zapadający w pamięć adres do wywołania strony internetowej (np. www.code.org)."
+        "drop/coursea/2021": {
+          "word": "Drop",
+          "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
         },
-        "wi_fi/coursef/2021": {
-          "word": "Wi-Fi",
-          "definition": "Bezprzewodowa metoda wysyłania informacji korzystająca z fal radiowych."
+        "bug/coursea/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
         },
-        "define/coursef/2021": {
-          "word": "Zdefiniuj",
-          "definition": "Rozpracowywanie szczegółów problemów które próbuje się rozwiązać"
+        "programming/coursea/2021": {
+          "word": "Programowanie",
+          "definition": "Sztuka tworzenia programu."
         },
-        "prepare/coursef/2021": {
-          "word": "Przygotuj",
-          "definition": "Badanie, plan oraz nabywanie materiałów z zajęć, które masz wykonać"
+        "loop/coursea/2021": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
         },
-        "reflect/coursef/2021": {
-          "word": "Przemyśl",
-          "definition": "Uważnie zastanów się nad czymś w przeszłości z intencją udoskonalenia wyniku w przyszłości"
+        "repeat/coursea/2021": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
         },
-        "try/coursef/2021": {
-          "word": "Spróbuj",
-          "definition": "Próba zrobienia czegoś"
+        "event/coursea/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "algorithm/courseb/2021": {
           "word": "Algorytm",
@@ -1105,54 +183,6 @@
           "definition": "Aby zrobić coś znowu."
         },
         "event/courseb/2021": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "algorithm/coursea/2021": {
-          "word": "Algorytm",
-          "definition": "Lista działań pozwalających wykonać zadanie."
-        },
-        "debugging/coursea/2021": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/coursea/2021": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "click/coursea/2021": {
-          "word": "Kliknij",
-          "definition": "Wciśnij przycisk myszy"
-        },
-        "double_click/coursea/2021": {
-          "word": "Kliknij dwukrotnie",
-          "definition": "Naciśnij przycisk myszy bardzo szybko"
-        },
-        "drag/coursea/2021": {
-          "word": "Przeciągnij",
-          "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
-        },
-        "drop/coursea/2021": {
-          "word": "Drop",
-          "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
-        },
-        "bug/coursea/2021": {
-          "word": "Błąd",
-          "definition": "Część programu, która nie działa poprawnie."
-        },
-        "programming/coursea/2021": {
-          "word": "Programowanie",
-          "definition": "Sztuka tworzenia programu."
-        },
-        "loop/coursea/2021": {
-          "word": "Pętla",
-          "definition": "Czynność wykonywania czegoś w nieskończoność."
-        },
-        "repeat/coursea/2021": {
-          "word": "Powtórz",
-          "definition": "Aby zrobić coś znowu."
-        },
-        "event/coursea/2021": {
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
@@ -1262,6 +292,174 @@
         "until/coursed/2021": {
           "word": "Aż do",
           "definition": "Komenda, która nakazuje Ci coś zrobić tylko do momentu, w którym coś staje się prawdą."
+        },
+        "algorithm/coursee/2021": {
+          "word": "algorytm",
+          "definition": "Lista kroków, aby ukończyć zadanie."
+        },
+        "behavior/coursee/2021": {
+          "word": "Zachowanie",
+          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
+        },
+        "sprite/coursee/2021": {
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
+        },
+        "event/coursee/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "copyright/coursee/2021": {
+          "word": "Prawa autorskie",
+          "definition": "wyłączne prawo do drukowania, publikowania, wykonywania, filmowania lub zapisywania materiału literackiego, artystycznego lub muzycznego oraz do nadawania innym uprawnień, by też mogli to robić"
+        },
+        "loop/coursee/2021": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/coursee/2021": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "function/coursee/2021": {
+          "word": "Funkcja",
+          "definition": "Część kodu, który można łatwo przywoływać bez końca."
+        },
+        "condition/coursee/2021": {
+          "word": "Warunek",
+          "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
+        },
+        "conditionals/coursee/2021": {
+          "word": "Zdania z warunkami",
+          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
+        },
+        "while_loop/coursee/2021": {
+          "word": "Pętla \"dopóki\"",
+          "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
+        },
+        "define/coursee/2021": {
+          "word": "Zdefiniuj",
+          "definition": "Rozpracowywanie szczegółów problemów które próbuje się rozwiązać"
+        },
+        "prepare/coursee/2021": {
+          "word": "Przygotuj",
+          "definition": "Badanie, plan oraz nabywanie materiałów z zajęć, które masz wykonać"
+        },
+        "reflect/coursee/2021": {
+          "word": "Przemyśl",
+          "definition": "Uważnie zastanów się nad czymś w przeszłości z intencją udoskonalenia wyniku w przyszłości"
+        },
+        "try/coursee/2021": {
+          "word": "Spróbuj",
+          "definition": "Próba zrobienia czegoś"
+        },
+        "sprite/coursef/2021": {
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
+        },
+        "user/coursef/2021": {
+          "word": "Użytkownik",
+          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algorytm",
+          "definition": "Lista kroków do ukończenia zadania. "
+        },
+        "behavior/coursef/2021": {
+          "word": "Zachowanie",
+          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
+        },
+        "program/coursef/2021": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "event/coursef/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "variable/coursef/2021": {
+          "word": "Zmienna",
+          "definition": "Etykieta informacji użyta w programie."
+        },
+        "prompt/coursef/2021": {
+          "word": "Podpowiedź",
+          "definition": "Komunikat na ekranie komputera, który czeka na wejście od użytkownika."
+        },
+        "input/coursef/2021": {
+          "word": "Wejście",
+          "definition": "Informacje, które komputery otrzymują od użytkowników."
+        },
+        "loop/coursef/2021": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/coursef/2021": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "for_loop/coursef/2021": {
+          "word": "Pętla \"dla\"",
+          "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modele i symulacje",
+          "definition": "program, który replikuje lub naśladuje kluczowe cechy wydarzenia ze świata rzeczywistego w celu zbadania jego zachowania bez kosztów, czasu lub niebezpieczeństwa przeprowadzenia eksperymentu w prawdziwym życiu."
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Uczenie maszynowe",
+          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
+        },
+        "dns/coursef/2021": {
+          "word": "DNS",
+          "definition": "skrót dla \"Systemu nazwy domen\" [Domain Name System], system przekłada na nazwy domen (na przykład example.com) na adresy OP (np. 93.184.216.34)"
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/Kabel",
+          "definition": "Metoda wysyłania informacji z użyciem kabli telefonicznych lub telewizyjnych."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Światłowód",
+          "definition": "Połączenie, w którym używa się światła do przesyłu informacji"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet",
+          "definition": "Grupa komputerów i serwerów, które są ze sobą połączone."
+        },
+        "ip_address/coursef/2021": {
+          "word": "Adres IP",
+          "definition": "Liczba przypisana do dowolnej pozycji, która jest połączona z Internetem."
+        },
+        "packets/coursef/2021": {
+          "word": "Pakiety",
+          "definition": "Niewielkie fragmenty informacji, które zostały starannie utworzone z większych części informacji."
+        },
+        "servers/coursef/2021": {
+          "word": "Serwery",
+          "definition": "Komputery, które istnieją tylko po to, by przekazywać rzeczy innym."
+        },
+        "url/coursef/2021": {
+          "word": "URL",
+          "definition": "Zapadający w pamięć adres do wywołania strony internetowej (np. www.code.org)."
+        },
+        "wi_fi/coursef/2021": {
+          "word": "Wi-Fi",
+          "definition": "Bezprzewodowa metoda wysyłania informacji korzystająca z fal radiowych."
+        },
+        "define/coursef/2021": {
+          "word": "Zdefiniuj",
+          "definition": "Rozpracowywanie szczegółów problemów które próbuje się rozwiązać"
+        },
+        "prepare/coursef/2021": {
+          "word": "Przygotuj",
+          "definition": "Badanie, plan oraz nabywanie materiałów z zajęć, które masz wykonać"
+        },
+        "reflect/coursef/2021": {
+          "word": "Przemyśl",
+          "definition": "Uważnie zastanów się nad czymś w przeszłości z intencją udoskonalenia wyniku w przyszłości"
+        },
+        "try/coursef/2021": {
+          "word": "Spróbuj",
+          "definition": "Próba zrobienia czegoś"
         },
         "algorithm/express/2021": {
           "word": "Algorytm",
@@ -1414,146 +612,954 @@
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
-        "algorithm/coursee/2021": {
-          "word": "algorytm",
-          "definition": "Lista kroków, aby ukończyć zadanie."
+        "computer/csd/2022": {
+          "word": "Komputer"
         },
-        "behavior/coursee/2021": {
-          "word": "Zachowanie",
-          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
+        "input/csd/2022": {
+          "word": "Wejście"
         },
-        "sprite/coursee/2021": {
-          "word": "Duszek",
-          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
+        "processing/csd/2022": {
+          "word": "Przetwarzanie"
         },
-        "event/coursee/2021": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
+        "html/csd/2022": {
+          "word": "HTML"
         },
-        "copyright/coursee/2021": {
+        "digital_footprint/csd/2022": {
+          "word": "Cyfrowy ślad"
+        },
+        "css/csd/2022": {
+          "word": "CSS"
+        },
+        "copyright/csd/2022": {
           "word": "Prawa autorskie",
           "definition": "wyłączne prawo do drukowania, publikowania, wykonywania, filmowania lub zapisywania materiału literackiego, artystycznego lub muzycznego oraz do nadawania innym uprawnień, by też mogli to robić"
         },
-        "loop/coursee/2021": {
-          "word": "Pętla",
-          "definition": "Czynność wykonywania czegoś w nieskończoność."
-        },
-        "repeat/coursee/2021": {
-          "word": "Powtórz",
-          "definition": "Aby zrobić coś znowu."
-        },
-        "function/coursee/2021": {
-          "word": "Funkcja",
-          "definition": "Część kodu, który można łatwo przywoływać bez końca."
-        },
-        "condition/coursee/2021": {
-          "word": "Warunek",
-          "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
-        },
-        "conditionals/coursee/2021": {
-          "word": "Zdania z warunkami",
-          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
-        },
-        "while_loop/coursee/2021": {
-          "word": "Pętla \"dopóki\"",
-          "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
-        },
-        "define/coursee/2021": {
-          "word": "Zdefiniuj",
-          "definition": "Rozpracowywanie szczegółów problemów które próbuje się rozwiązać"
-        },
-        "prepare/coursee/2021": {
-          "word": "Przygotuj",
-          "definition": "Badanie, plan oraz nabywanie materiałów z zajęć, które masz wykonać"
-        },
-        "reflect/coursee/2021": {
-          "word": "Przemyśl",
-          "definition": "Uważnie zastanów się nad czymś w przeszłości z intencją udoskonalenia wyniku w przyszłości"
-        },
-        "try/coursee/2021": {
-          "word": "Spróbuj",
-          "definition": "Próba zrobienia czegoś"
-        },
-        "machine_learning/csd/2021": {
-          "word": "Uczenie maszynowe",
-          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
-        },
-        "ethics/csd/2021": {
-          "word": "Etyka"
-        },
-        "empathy/csd/2021": {
-          "word": "Empatia"
-        },
-        "user/csd/2021": {
-          "word": "Użytkownik",
-          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
-        },
-        "user_interface/csd/2021": {
-          "word": "Interfejs użytkownika"
-        },
-        "bug/csd/2021": {
+        "bug/csd/2022": {
           "word": "Błąd",
           "definition": "Część programu, która nie działa poprawnie."
         },
-        "innovation/csd/2021": {
-          "word": "Innowacja"
-        },
-        "for_loop/csd/2021": {
-          "word": "Pętla \"dla\"",
-          "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
-        },
-        "parameter/csd/2021": {
-          "word": "Parametr",
-          "definition": "Dodatkowa informacja podana do funkcji, aby dostosować ją do konkretnej potrzeby"
-        },
-        "debugging/csd/2021": {
+        "debugging/csd/2022": {
           "word": "Debugowanie",
           "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
         },
-        "program/csd/2021": {
+        "program/csd/2022": {
           "word": "Program",
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
-        "variable/csd/2021": {
+        "parameter/csd/2022": {
+          "word": "Parametr"
+        },
+        "variable/csd/2022": {
           "word": "Zmienna",
           "definition": "Etykieta informacji użyta w programie."
         },
-        "property/csd/2021": {
+        "property/csd/2022": {
           "word": "Właściwość"
         },
-        "sprite/csd/2021": {
+        "sprite/csd/2022": {
           "word": "Duszek"
         },
-        "condition/csd/2021": {
+        "condition/csd/2022": {
           "word": "Warunek"
         },
-        "conditionals/csd/2021": {
+        "conditionals/csd/2022": {
           "word": "Zdania z warunkami"
         },
-        "abstraction/csd/2021": {
+        "abstraction/csd/2022": {
           "word": "Abstrakcja"
         },
-        "function/csd/2021": {
+        "function/csd/2022": {
           "word": "Funkcja"
         },
-        "input/csd/2021": {
-          "word": "Wejście"
+        "empathy/csd/2022": {
+          "word": "Empatia"
         },
-        "processing/csd/2021": {
-          "word": "Przetwarzanie"
+        "user/csd/2022": {
+          "word": "Użytkownik",
+          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
         },
-        "html/csd/2021": {
-          "word": "HTML"
+        "user_interface/csd/2022": {
+          "word": "Interfejs użytkownika"
         },
-        "digital_footprint/csd/2021": {
-          "word": "Cyfrowy ślad"
+        "innovation/csd/2022": {
+          "word": "Innowacja"
         },
-        "css/csd/2021": {
-          "word": "CSS"
+        "machine_learning/csd/2022": {
+          "word": "Uczenie maszynowe",
+          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
         },
-        "copyright/csd/2021": {
+        "ethics/csd/2022": {
+          "word": "Etyka"
+        },
+        "algorithm/coursea/2022": {
+          "word": "Algorytm",
+          "definition": "Lista działań pozwalających wykonać zadanie."
+        },
+        "debugging/coursea/2022": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/coursea/2022": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "click/coursea/2022": {
+          "word": "Kliknij",
+          "definition": "Wciśnij przycisk myszy"
+        },
+        "double_click/coursea/2022": {
+          "word": "Kliknij dwukrotnie",
+          "definition": "Naciśnij przycisk myszy bardzo szybko"
+        },
+        "drag/coursea/2022": {
+          "word": "Przeciągnij",
+          "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
+        },
+        "drop/coursea/2022": {
+          "word": "Drop",
+          "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
+        },
+        "bug/coursea/2022": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "programming/coursea/2022": {
+          "word": "Programowanie",
+          "definition": "Sztuka tworzenia programu."
+        },
+        "loop/coursea/2022": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/coursea/2022": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "event/coursea/2022": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "algorithm/courseb/2022": {
+          "word": "Algorytm",
+          "definition": "Lista działań pozwalających wykonać zadanie."
+        },
+        "bug/courseb/2022": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/courseb/2022": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "click/courseb/2022": {
+          "word": "Kliknij",
+          "definition": "Wciśnij przycisk myszy"
+        },
+        "double_click/courseb/2022": {
+          "word": "Kliknij dwukrotnie",
+          "definition": "Naciśnij przycisk myszy bardzo szybko"
+        },
+        "drag/courseb/2022": {
+          "word": "Przeciągnij",
+          "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
+        },
+        "drop/courseb/2022": {
+          "word": "Drop",
+          "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
+        },
+        "program/courseb/2022": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "programming/courseb/2022": {
+          "word": "Programowanie",
+          "definition": "Sztuka tworzenia programu."
+        },
+        "persistence/courseb/2022": {
+          "word": "Wytrwałość",
+          "definition": "Ciągłe podejmowanie prób nawet wówczas, gdy coś jest bardzo trudne."
+        },
+        "loop/courseb/2022": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/courseb/2022": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "event/courseb/2022": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "algorithm/coursec/2022": {
+          "word": "Algorytm",
+          "definition": "Lista działań pozwalających wykonać zadanie."
+        },
+        "bug/coursec/2022": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/coursec/2022": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/coursec/2022": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "sequencing/coursec/2022": {
+          "word": "Sekwencjonowanie",
+          "definition": "Porządkowanie komend w poprawnym porządku tak, aby komputery były w stanie odczytać komendy."
+        },
+        "persistence/coursec/2022": {
+          "word": "Wytrwałość"
+        },
+        "programming/coursec/2022": {
+          "word": "Programowanie",
+          "definition": "Sztuka tworzenia programu."
+        },
+        "angle/coursec/2022": {
+          "word": "Kąt"
+        },
+        "loop/coursec/2022": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/coursec/2022": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "event/coursec/2022": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "data/coursec/2022": {
+          "word": "Dane"
+        },
+        "graph/coursec/2022": {
+          "word": "Wykres"
+        },
+        "binary/coursec/2022": {
+          "word": "Binarny",
+          "definition": "Sposób przedstawiania informacji z użyciem tylko dwóch opcji."
+        },
+        "algorithm/coursed/2022": {
+          "word": "Algorytm",
+          "definition": "Lista działań pozwalających wykonać zadanie."
+        },
+        "program/coursed/2022": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "bug/coursed/2022": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/coursed/2022": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "loop/coursed/2022": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "programming/coursed/2022": {
+          "word": "Programowanie",
+          "definition": "Sztuka tworzenia programu."
+        },
+        "frustrated/coursed/2022": {
+          "word": "Sfrustrowany",
+          "definition": "Poczucie irytacji lub złości spowodowane tym, że coś idzie nie tak, jak chcemy."
+        },
+        "persistence/coursed/2022": {
+          "word": "Wytrwałość",
+          "definition": "Ciągłe podejmowanie prób nawet wówczas, gdy coś jest bardzo trudne."
+        },
+        "event/coursed/2022": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "code/coursed/2022": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "repeat/coursed/2022": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "command/coursed/2022": {
+          "word": "Komenda",
+          "definition": "Polecenie dla komputera. Wiele komend złożonych razem tworzy algorytmy i programy komputerowe."
+        },
+        "conditionals/coursed/2022": {
+          "word": "Zdania z warunkami",
+          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
+        },
+        "pseudocode/coursed/2022": {
+          "word": "pseudokod",
+          "definition": "Zwykły opis języka kroków w algorytmie"
+        },
+        "condition/coursed/2022": {
+          "word": "Warunek",
+          "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
+        },
+        "while_loop/coursed/2022": {
+          "word": "Pętla \"dopóki\"",
+          "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
+        },
+        "until/coursed/2022": {
+          "word": "Aż do",
+          "definition": "Komenda, która nakazuje Ci coś zrobić tylko do momentu, w którym coś staje się prawdą."
+        },
+        "behavior/coursee/2022": {
+          "word": "Zachowanie",
+          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
+        },
+        "sprite/coursee/2022": {
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
+        },
+        "loop/coursee/2022": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/coursee/2022": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "function/coursee/2022": {
+          "word": "Funkcja"
+        },
+        "call_a_function/coursee/2022": {
+          "word": "Wywołaj funkcję"
+        },
+        "condition/coursee/2022": {
+          "word": "Warunek"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Zdania z warunkami",
+          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
+        },
+        "while_loop/coursee/2022": {
+          "word": "Pętla \"dopóki\"",
+          "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
+        },
+        "copyright/coursee/2022": {
           "word": "Prawa autorskie",
           "definition": "wyłączne prawo do drukowania, publikowania, wykonywania, filmowania lub zapisywania materiału literackiego, artystycznego lub muzycznego oraz do nadawania innym uprawnień, by też mogli to robić"
+        },
+        "define/coursee/2022": {
+          "word": "Zdefiniuj",
+          "definition": "Rozpracowywanie szczegółów problemów które próbuje się rozwiązać"
+        },
+        "prepare/coursee/2022": {
+          "word": "Przygotuj",
+          "definition": "Badanie, plan oraz nabywanie materiałów z zajęć, które masz wykonać"
+        },
+        "reflect/coursee/2022": {
+          "word": "Przemyśl",
+          "definition": "Uważnie zastanów się nad czymś w przeszłości z intencją udoskonalenia wyniku w przyszłości"
+        },
+        "try/coursee/2022": {
+          "word": "Spróbuj",
+          "definition": "Próba zrobienia czegoś"
+        },
+        "sprite/coursef/2022": {
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
+        },
+        "user/coursef/2022": {
+          "word": "Użytkownik",
+          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
+        },
+        "algorithm/coursef/2022": {
+          "word": "Algorytm",
+          "definition": "Lista kroków do ukończenia zadania. "
+        },
+        "behavior/coursef/2022": {
+          "word": "Zachowanie"
+        },
+        "program/coursef/2022": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "event/coursef/2022": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "variable/coursef/2022": {
+          "word": "Zmienna",
+          "definition": "Etykieta informacji użyta w programie."
+        },
+        "prompt/coursef/2022": {
+          "word": "Podpowiedź",
+          "definition": "Komunikat na ekranie komputera, który czeka na wejście od użytkownika."
+        },
+        "input/coursef/2022": {
+          "word": "Wejście",
+          "definition": "Informacje, które komputery otrzymują od użytkowników."
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "Modele i symulacje",
+          "definition": "program, który replikuje lub naśladuje kluczowe cechy wydarzenia ze świata rzeczywistego w celu zbadania jego zachowania bez kosztów, czasu lub niebezpieczeństwa przeprowadzenia eksperymentu w prawdziwym życiu."
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Uczenie maszynowe",
+          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
+        },
+        "dns/coursef/2022": {
+          "word": "DNS",
+          "definition": "skrót dla \"Systemu nazwy domen\" [Domain Name System], system przekłada na nazwy domen (na przykład example.com) na adresy OP (np. 93.184.216.34)"
+        },
+        "dsl_cable/coursef/2022": {
+          "word": "DSL/Kabel",
+          "definition": "Metoda wysyłania informacji z użyciem kabli telefonicznych lub telewizyjnych."
+        },
+        "fiber_optic_cable/coursef/2022": {
+          "word": "Światłowód",
+          "definition": "Połączenie, w którym używa się światła do przesyłu informacji"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet",
+          "definition": "Grupa komputerów i serwerów, które są ze sobą połączone."
+        },
+        "ip_address/coursef/2022": {
+          "word": "Adres IP",
+          "definition": "Liczba przypisana do dowolnej pozycji, która jest połączona z Internetem."
+        },
+        "packets/coursef/2022": {
+          "word": "Pakiety",
+          "definition": "Niewielkie fragmenty informacji, które zostały starannie utworzone z większych części informacji."
+        },
+        "servers/coursef/2022": {
+          "word": "Serwery",
+          "definition": "Komputery, które istnieją tylko po to, by przekazywać rzeczy innym."
+        },
+        "url/coursef/2022": {
+          "word": "URL",
+          "definition": "Zapadający w pamięć adres do wywołania strony internetowej (np. www.code.org)."
+        },
+        "wi_fi/coursef/2022": {
+          "word": "Wi-Fi",
+          "definition": "Bezprzewodowa metoda wysyłania informacji korzystająca z fal radiowych."
+        },
+        "define/coursef/2022": {
+          "word": "Zdefiniuj",
+          "definition": "Rozpracowywanie szczegółów problemów które próbuje się rozwiązać"
+        },
+        "prepare/coursef/2022": {
+          "word": "Przygotuj",
+          "definition": "Badanie, plan oraz nabywanie materiałów z zajęć, które masz wykonać"
+        },
+        "reflect/coursef/2022": {
+          "word": "Przemyśl",
+          "definition": "Uważnie zastanów się nad czymś w przeszłości z intencją udoskonalenia wyniku w przyszłości"
+        },
+        "try/coursef/2022": {
+          "word": "Spróbuj",
+          "definition": "Próba zrobienia czegoś"
+        },
+        "algorithm/express/2022": {
+          "word": "Algorytm",
+          "definition": "Lista działań pozwalających wykonać zadanie."
+        },
+        "bug/express/2022": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/express/2022": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "sequencing/express/2022": {
+          "word": "Sekwencjonowanie",
+          "definition": "Porządkowanie komend w poprawnym porządku tak, aby komputery były w stanie odczytać komendy."
+        },
+        "program/express/2022": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "programming/express/2022": {
+          "word": "Programowanie",
+          "definition": "Sztuka tworzenia programu."
+        },
+        "behavior/express/2022": {
+          "word": "Zachowanie",
+          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
+        },
+        "sprite/express/2022": {
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
+        },
+        "event/express/2022": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "code/express/2022": {
+          "definition": "napisać kod lub napisać instrukcje dla komputera."
+        },
+        "loop/express/2022": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/express/2022": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "command/express/2022": {
+          "word": "Komenda",
+          "definition": "Polecenie dla komputera. Wiele komend złożonych razem tworzy algorytmy i programy komputerowe."
+        },
+        "condition/express/2022": {
+          "word": "Warunek",
+          "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
+        },
+        "conditionals/express/2022": {
+          "word": "Zdania z warunkami",
+          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
+        },
+        "while_loop/express/2022": {
+          "word": "Pętla \"dopóki\"",
+          "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
+        },
+        "until/express/2022": {
+          "word": "Aż do",
+          "definition": "Komenda, która nakazuje Ci coś zrobić tylko do momentu, w którym coś staje się prawdą."
+        },
+        "function/express/2022": {
+          "word": "Funkcja",
+          "definition": "Część kodu, który można łatwo przywoływać bez końca."
+        },
+        "prompt/express/2022": {
+          "word": "szybka",
+          "definition": "Komunikat na ekranie komputera, który czeka na wejście od użytkownika."
+        },
+        "variable/express/2022": {
+          "word": "Zmienna",
+          "definition": "Etykieta informacji użyta w programie."
+        },
+        "for_loop/express/2022": {
+          "word": "Pętla \"dla\"",
+          "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
+        },
+        "define/express/2022": {
+          "word": "Zdefiniuj",
+          "definition": "Rozpracowywanie szczegółów problemów które próbuje się rozwiązać"
+        },
+        "prepare/express/2022": {
+          "word": "Przygotuj",
+          "definition": "Badanie, plan oraz nabywanie materiałów z zajęć, które masz wykonać"
+        },
+        "reflect/express/2022": {
+          "word": "Przemyśl",
+          "definition": "Uważnie zastanów się nad czymś w przeszłości z intencją udoskonalenia wyniku w przyszłości"
+        },
+        "try/express/2022": {
+          "word": "Spróbuj",
+          "definition": "Próba zrobienia czegoś"
+        },
+        "click/pre-express/2022": {
+          "word": "Kliknij",
+          "definition": "Wciśnij przycisk myszy"
+        },
+        "double_click/pre-express/2022": {
+          "word": "Kliknij dwukrotnie",
+          "definition": "Naciśnij przycisk myszy bardzo szybko"
+        },
+        "drag/pre-express/2022": {
+          "word": "Przeciągnij",
+          "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
+        },
+        "drop/pre-express/2022": {
+          "word": "Drop",
+          "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
+        },
+        "algorithm/pre-express/2022": {
+          "word": "Algorytm",
+          "definition": "Lista działań pozwalających wykonać zadanie."
+        },
+        "bug/pre-express/2022": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/pre-express/2022": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/pre-express/2022": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "programming/pre-express/2022": {
+          "word": "Programowanie",
+          "definition": "Sztuka tworzenia programu."
+        },
+        "persistence/pre-express/2022": {
+          "word": "Wytrwałość",
+          "definition": "Ciągłe podejmowanie prób nawet wówczas, gdy coś jest bardzo trudne."
+        },
+        "loop/pre-express/2022": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "repeat/pre-express/2022": {
+          "word": "Powtórz",
+          "definition": "Aby zrobić coś znowu."
+        },
+        "event/pre-express/2022": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "code/aquatic/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Warunek",
+          "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Zdania z warunkami",
+          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Pętle",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/artist/unversioned": {
+          "word": "Kod",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/artist/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/artist/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/basketball/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "event/basketball/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "program/basketball/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/dance-2019/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/dance-extras/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/dance/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "event/dance/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "program/dance/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/flappy/unversioned": {
+          "word": "koduj",
+          "definition": "(v) napisać kod lub instrukcje dla komputera."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/flappy/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/frozen/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/frozen/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/gumball/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/gumball/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/hero/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/hero/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "function/hero/unversioned": {
+          "word": "Funkcja",
+          "definition": "Część kodu, który można łatwo przywoływać bez końca."
+        },
+        "program/hero/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Szyfr Cezara",
+          "definition": "technika szyfrowania, która przesuwa alfabet o pewną liczby znaków"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Szyfrowanie",
+          "definition": "termin ogólny dla techniki (lub algorytmu), wykonującej szyfrowanie"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Łamanie szyfru",
+          "definition": "Kiedy próbuje się odkodować tajną wiadomość nie znając wszystkich tajników szyfru, próbuje się \"złamać\" szyfr."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Odszyfrowywanie",
+          "definition": "proces, który odwraca szyfrowanie, poprzez przyjęcie tajnej wiadomości oraz odtworzenie oryginalnego, czytelnego tekstu"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Szyfrowanie",
+          "definition": "proces kodowania wiadomości, aby utrzymać je w tajemnicy tak, aby mogły ją odczytać tylko \"uprawnione\" strony."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Szyfr zastępowania losowego",
+          "definition": "technika szyfrowania, która odwzorowuje każdą literę alfabetu na losowo wybrane inne litery alfabetu."
+        },
+        "code/hourofcode/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/iceage/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/iceage/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/infinity/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/infinity/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/mc/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/mc/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/mc/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/minecraft/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Uczenie maszynowe",
+          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modele i symulacje",
+          "definition": "program, który replikuje lub naśladuje kluczowe cechy wydarzenia ze świata rzeczywistego w celu zbadania jego zachowania bez kosztów, czasu lub niebezpieczeństwa przeprowadzenia eksperymentu w prawdziwym życiu."
+        },
+        "code/playlab/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/playlab/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/poem-art/2021": {
+          "word": "Kod",
+          "definition": "(v) pisać instrukcje dla komputera."
+        },
+        "event/poem-art/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "line/poem-art/2021": {
+          "word": "Wiersz",
+          "definition": "(poezja) - podział wiersza ułożonego w wierszu, który kończy się na prawym marginesie."
+        },
+        "mood/poem-art/2021": {
+          "word": "Nastrój",
+          "definition": "wyrażanie uczucia, atmosfery lub emocji w sztuce lub piśmie."
+        },
+        "program/poem-art/2021": {
+          "word": "Program",
+          "definition": "Seria kroków, które zostały zakodowane w coś, co może być uruchamiane przez maszynę."
+        },
+        "code/sports/unversioned": {
+          "word": "Kod",
+          "definition": "(v) napisać kod lub instrukcje dla komputera."
+        },
+        "debugging/sports/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "event/sports/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "program/sports/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/starwars/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/starwars/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/starwarsblocks/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Kompresja bezstratna",
+          "definition": "algorytm kompresji danych, który pozwala na perfekcyjne odtworzenie oryginalnych danych ze skompresowanych danych. Najczęściej używany na potrzeby kompresji tekstu (np. kompresja zip)"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kod",
+          "definition": "(v) pisać instrukcje dla komputera."
+        },
+        "event/poem-art/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Program",
+          "definition": "Seria kroków, które zostały zakodowane w coś, co może być uruchamiane przez maszynę."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Nastrój",
+          "definition": "wyrażanie uczucia, atmosfery lub emocji w sztuce lub piśmie."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Wiersz",
+          "definition": "(poezja) - podział wiersza ułożonego w wierszu, który kończy się na prawym marginesie."
         }
       }
     }

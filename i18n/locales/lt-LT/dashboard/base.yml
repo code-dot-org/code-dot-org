@@ -42,6 +42,7 @@ lt:
         edit_header: 'Keisti paskyros duomenis'
         error:
           future: negali būti ateitis
+        us_state: 'Valstija'
   beta: "beta"
   hello: "Sveikas, pasauli"
   welcome_back: "Sveiki sugrįžę, %{name}"
@@ -132,6 +133,7 @@ lt:
     email_preference_no: "Ne"
     share_teacher_email_reg_partner_preference_yes: "Taip"
     share_teacher_email_reg_partner_preference_no: "Ne"
+    us_state: 'Valstija'
   school_info:
     title: 'Mokyklos informacija (neprivaloma)'
     select_school_type: 'Mokyklos tipas'
@@ -682,6 +684,8 @@ lt:
         other: "Kita"
       robotics:
         other: "Kita"
+      workshop_course:
+        other: 'Kita'
       email_opt_in:
         opt_in_yes: 'Taip'
         opt_in_no: 'Ne'
@@ -695,3 +699,4 @@ lt:
   copy: 'Kopijuoti'
   pixelation:
     binary: "Dvejetainis"
+

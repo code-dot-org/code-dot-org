@@ -5,6 +5,7 @@
   "catMath": "Mathematics",
   "catText": "Text",
   "catVariables": "Variables",
+  "designElementProperty_text": "text",
   "designWorkspaceHeader": "Workspace: ",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param4": "height",

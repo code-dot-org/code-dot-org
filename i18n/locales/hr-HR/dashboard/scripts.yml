@@ -1134,3 +1134,67 @@ hr:
           lessons:
             lesson-3:
               name: Uvod
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Uvod
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-3:
+              display_name: Likovi
+            lessonGroup-4:
+              display_name: Varijable
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+            lessonGroup-6:
+              display_name: Događaji
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+            lessonGroup-5:
+              display_name: Događaji
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-6:
+              display_name: Petlje
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ugniježđene petlje
+            lessonGroup-4:
+              display_name: Funkcije
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Likovi
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Likovi
+            lessonGroup-3:
+              display_name: Uvjeti
+            lessonGroup-5:
+              display_name: Varijable

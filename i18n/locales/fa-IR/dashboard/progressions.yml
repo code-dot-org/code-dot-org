@@ -45,7 +45,7 @@ fa:
       Artist Intro with JR Hildebrande: معرفی Artist با JR Hildebrande
       Artist Project: پروژه Artist
       'Artist: Variables': 'هنرمند: متغیرها'
-      Assessment: ارزشیابی
+      Assessment: ارزیابی
       Attribution: نسبت دادن
       Back and Forth: عقب و جلو
       Basic Conditionals: شرطی های پایه
@@ -121,7 +121,7 @@ fa:
       Dance Crews: گروه رقص
       Data Visualization: به تصویر در آوردن داده ها
       De-bugging with the Step Button: اشکال زدایی با دکمه Step
-      Debugging: اشکال‌زدایی
+      Debugging: رفع اشکال
       Debugging with the Step Button: اشکال زدایی با دکمه Step
       'Demo App: Interactive Card': 'نمونه نمایشی برنامه: کارت تعاملی'
       Demo Apps: نمونه نمایشی برنامه ها
@@ -229,7 +229,7 @@ fa:
       Layout with CSS: طرح بندی با CSS
       Learning from Simulations: یادگیری از طریق شبیه سازی
       Lesson Extra: موارد اضافه درسی
-      Lesson Extras: موارد اضافه درسی
+      Lesson Extras: مطالعه مباحث بیشتر
       Level Overview: نمای کلی مرحله
       Levels: مراحل
       Light Show: نمایش نور
@@ -270,7 +270,7 @@ fa:
       'Mini-project: Chase Game': 'پروژه کوچک: بازی تعقیب و گریزی'
       'Mini-project: Flappy Game': 'پروژه کوچک: بازی فلاپی'
       'Mini-project: Interactive Poster': 'پروژه کوچک: پوستر تعاملی'
-      'Mini-project: Jorge the Dog': 'پروژه کوچک: جرج و سگ'
+      'Mini-project: Jorge the Dog': 'پروژه کوچک: خورخه سگه'
       'Mini-project: Sticker Art': 'پروژه کوچک: هنر برچسب'
       'Mini-project: Sticker Design': 'پروژه کوچک: طراحی برچسب'
       Modify simulation variables: اصلاح متغیرهای شبیه سازی
@@ -289,20 +289,20 @@ fa:
       New Challenge Introduction: معرفی چالش جدید
       New Shapes: شکلهای جدید
       Orientation: جهت گیری
-      Overview: بررسی اجمالی
+      Overview: مرور کلی
       'Overview: Design Mode': 'نمای کلی: حالت طراحی'
       'Overview: If Statements': 'نمای کلی: گزاره اگر'
       'Overview: Images': 'نمای کلی: تصاویر'
       'Overview: onEvent': 'نمای کلی: onEvent'
       'Overview: setPosition': 'نمای کلی: setPosition'
-      Pair Programming: برنامه نویسی دوتایی
+      Pair Programming: برنامه نویسی اشتراکی
       Pet Recommender: توصیه حیوان خانگی
       Picturing Data: تصویرسازی داده‌ها
       Pizza Party Data: داده های Pizza Party
       Pizza Recommendations: پیتزاهای توصیه شده
       Plan Your Project: طرح ریزی پروژه خود
       Plan Your Scene: طرح ریزی صحنه خود
-      Planning: طرح ریزی
+      Planning: برنامه ریزی
       Platform Jumper - Background and Variables: اتصال دهنده بستر - پس زمینه و متغیرها
       Platform Jumper - Items: اتصال دهنده بستر - موارد
       Platform Jumper - Platforms: اتصال دهنده بستر - بسترها
@@ -319,7 +319,7 @@ fa:
       Prepare for your presentation_2018: آمادگی برای ارائه-2018 خود
       Problem Solving: حل مسأله
       Problem Solving Process for Programming: فرایند حل مسئله برای برنامه نویسی
-      Programming with Rey and BB-8: برنامه نویسی با Rey و BB-8
+      Programming with Rey and BB-8: برنامه نویسی با رِی و بی‌بی-8
       Programs that Repeat: برنامه هایی که تکرار می شود
       Project: پروژه
       Project - Background and Variables: پروژه - پس زمینه و متغیرها
@@ -337,7 +337,7 @@ fa:
       Recognizing Fish: ماهی شناسایی
       Recognizing Fish Features: ویژگیهای ماهی شناسایی
       Recognizing Shapes: اشکال شناسایی
-      Reflection: بازاندیشی
+      Reflection: بازتاب
       Relay Programming - Unplugged Activity: برنامه نویسی بازپخش - فعالیت بدون کار با رایانه
       Repeat Blocks: بلوک های تکرار شونده
       Repeat Blocks with BB-8: بلوک های تکرار شونده با BB-8
@@ -398,6 +398,7 @@ fa:
       Teach AI a New Word: آموختن واژه جدید به هوش مصنوعی
       'Technique: Frequency Analysis': 'تکنیک: تحلیل بسامد'
       Terminology Recap: ضبط اصطلاحات
+      Text Compression: فشرده‌سازی متن
       The Animation Tab: زبانه انیمیشن
       The Artist in Code Studio: Artist در استودیو کدنویسی
       The Big Event - Unplugged Activity: رویداد بزرگ - فعالیت بدون کار با رایانه
@@ -427,7 +428,7 @@ fa:
       Variables: متغیرها
       Velocity: سرعت
       Velocity and the Counter Pattern: الگوی شمارشگر و سرعت
-      Video: ویدیو
+      Video: ویدئو
       Video - Encryption and Public Keys: فیلم - کلیدهای عمومی و رمزنگاری
       Video - Functions: فیلم - توابع
       Video - If Statements: فیلم - گزاره های شرطی
@@ -456,7 +457,7 @@ fa:
       'Video: De-bugging with the Step Button': 'فیلم: اشکال زدایی با دکمه Step'
       'Video: Debugging': 'فیلم: اشکال زدایی'
       'Video: Debugging with Scrat ': 'فیلم: اشکال زدایی با Scrat '
-      'Video: Debugging with the Step Button': 'فیلم: اشکال زدایی با دکمه Step'
+      'Video: Debugging with the Step Button': 'ویدئو: اشکال زدایی با دکمه استپ (Step)'
       'Video: Events': 'فیلم: رویدادها'
       'Video: Events in App Lab': 'فیلم: رویدادها در App Lab'
       'Video: Follow The Digital Trail': 'فیلم: پیروی از رد دیجیتال'
@@ -471,7 +472,7 @@ fa:
       'Video: How to Create a Simple Function': 'فیلم: شیوه ایجاد تابع ساده'
       'Video: How to Make a Sprite': 'فیلم: شیوه ساخت اسپرایت'
       'Video: IOSP Model': 'فیلم: نمونه IOSP'
-      'Video: Ice Age Loops': 'فیلم: حلقه های Ice Age'
+      'Video: Ice Age Loops': 'فیلم: حلقه‌های عصر یخبندان'
       'Video: Impact on Society': 'فیلم: تأثیر در جامعه'
       'Video: Impacts on Society': 'فیلم: اثرات بر جامعه'
       'Video: Intro to CSS - Part 1': 'فیلم: معرفی css - قسمت 1'
@@ -480,7 +481,7 @@ fa:
       'Video: Introducing Sprite Lab': 'فیلم: معرفی آزمایشگاه اسپرایت'
       'Video: Introduction to Play Lab': 'فیلم: معرفی آزمایشگاه بازی'
       'Video: Introduction to Variables': 'فیلم: معرفی و متغیرها'
-      'Video: Loops in Artist': 'فیلم: حلقه ها در Artist'
+      'Video: Loops in Artist': 'ویدئو: حلقه ها در هنرمند'
       'Video: Loops with the Artist': 'فیلم: حلقه ها با Artist'
       'Video: Lots of Sprites': 'فیلم: تعداد زیادی اسپرایت'
       'Video: Managing Disagreement': 'فیلم: اختلاف مدیریت'
@@ -511,28 +512,28 @@ fa:
       'Video: Publishing Your Website': 'فیلم: انتشار وبسایت خود'
       'Video: Repeat Blocks': 'فیلم: بلوک های تکرار شونده'
       'Video: Repeat Blocks with BB-8': 'فیلم: بلوک های تکرار شونده با BB-8'
-      'Video: Repeat Blocks with the Artist': 'فیلم: بلوک های تکرار شونده با Artist'
+      'Video: Repeat Blocks with the Artist': 'ویدئو: بلوک های تکرار شونده با هنرمند'
       'Video: Repeat Until Blocks': 'فیلم: بلوک های تا وقتی که تکرار شونده'
       'Video: Repeat Until Statements': 'فیلم: گزاره های تکرار شونده تا وقتی که'
       'Video: Sprites in Action': 'فیلم: اسپرایت ها در حین عمل'
       'Video: Star Wars Project': 'فیلم: پروژه Star Wars'
       'Video: Teamwork': 'فیلم: کار گروهی'
       'Video: Text and Prompts': 'فیلم: متن و پیامواره ها'
-      'Video: The Artist in Code Studio': 'فیلم: Artist در استودیو کدنویسی'
+      'Video: The Artist in Code Studio': 'ویدئو: هنرمند در استودیوی کدنویسی'
       'Video: The Big Event - Unplugged Activity': 'فیلم: رویداد بزرگ - فعالیت بدون کار با رایانه'
-      'Video: The Collector': 'فیلم: جمع آور'
-      'Video: The Harvester': 'فیلم: برداشت کننده'
+      'Video: The Collector': 'فیلم: گردآورنده'
+      'Video: The Harvester': 'فیلم: هاروستر'
       'Video: Training Data & Bias': 'فیلم: داده های آموزشی و سوگیری'
       'Video: Training Data and Bias': 'فیلم: داده های آموزشی و سوگیری'
       'Video: Unplugged Variables in Envelopes': 'فیلم: متغیرهای بدون کار با رایانه در پاکت بسته'
-      'Video: Using the Repeat Block': 'فیلم: استفاده از بلوک های تکرار شونده'
+      'Video: Using the Repeat Block': 'ویدئو: استفاده از بلوک تکرار'
       'Video: Variables in Artist': 'فیلم: متغیرها در Artist'
       'Video: Warm Up': 'فیلم: آمادگی'
       'Video: Waze and Data': 'فیلم: Waze و داده ها'
       'Video: What is Machine Learning?': 'فیلم: یادگیری ماشینی چیست؟'
       'Video: While Loops with the Farmer': 'فیلم: حلقه های درحالیکه با Farmer'
       'Video: Wrap-up': 'فیلم: جمعبندی'
-      Warm Up: آمادگی
+      Warm Up: آماده شوید
       Website Project: پروژه وبسایتی
       Welcome to Monster Town: به شهر هیولاها خوش آمدید
       Where'd They Go?: کجا رفتند؟

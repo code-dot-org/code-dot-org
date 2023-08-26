@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
+class Api::V1::MlModelsControllerTest < ActionController::TestCase
   def stub_firehose
     FirehoseClient.instance.stubs(:put_record).with do |stream, args|
       @firehose_record = args

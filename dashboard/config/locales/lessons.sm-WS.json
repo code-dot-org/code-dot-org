@@ -2,26 +2,29 @@
   "sm-WS": {
     "data": {
       "lessons": {
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd2-2017/Lists": {
+          "name": "Lisi"
         },
-        "k5-onlinepd-2019/Loops": {
-          "name": "taamiloga"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "events"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "Fuainumera lasi "
         },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "vaega tauamata a le komepiuta faasaienisi"
+        "csd2-2018/Lists": {
+          "name": "Lisi"
         },
-        "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "vaega tauamata a le komepiuta faasaienisi"
+        "csd3-2018/Variables": {
+          "name": "Fuainumera lasi "
+        },
+        "csd2-2019/Lists": {
+          "name": "Lisi"
+        },
+        "csd3-2019/Variables": {
+          "name": "Fuainumera lasi "
+        },
+        "csd3-2021/Variables": {
+          "name": "Fuainumera lasi "
+        },
+        "csd3-2021/Text": {
+          "name": "upu"
         },
         "csd3-2022/Variables": {
           "name": "Fuainumera lasi "
@@ -29,26 +32,11 @@
         "csd3-2022/Text": {
           "name": "upu"
         },
-        "csd3-2018/Variables": {
-          "name": "Fuainumera lasi "
-        },
-        "csd2-2018/Lists": {
-          "name": "Lisi"
-        },
-        "csd3-2019/Variables": {
-          "name": "Fuainumera lasi "
-        },
-        "csd2-2019/Lists": {
-          "name": "Lisi"
-        },
-        "csd3-2017/Variables": {
-          "name": "Fuainumera lasi "
-        },
-        "csd2-2017/Lists": {
-          "name": "Lisi"
-        },
-        "course2/Flappy": {
-          "name": "Flappy"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "allthethings/Flappy": {
           "name": "Flappy"
@@ -62,11 +50,8 @@
         "allthethings/lesson-48": {
           "name": "Solo"
         },
-        "csd3-2021/Variables": {
-          "name": "Fuainumera lasi "
-        },
-        "csd3-2021/Text": {
-          "name": "upu"
+        "course2/Flappy": {
+          "name": "Flappy"
         }
       }
     }

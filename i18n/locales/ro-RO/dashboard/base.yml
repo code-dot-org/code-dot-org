@@ -45,6 +45,7 @@ ro:
         personal_email_markdown: "Adresă de e-mail personală [(apasă aici dacă nu ai o adresă de e-mail)](%{url})"
         username: 'nume de utilizator'
         password: 'Parolă'
+        verified_teacher: 'Profesor Verificat'
         password_confirmation: 'Confirmarea parolei'
         current_password: 'Parolă curentă'
         locale: 'Limbă'
@@ -59,6 +60,7 @@ ro:
         reset_password_token: "Linkul pentru resetarea parolei pe care l-ai folosit"
         error:
           future: nu poate fi în viitor
+        us_state: 'Județ'
   beta: "beta"
   hello: "Salutare lume"
   welcome_back: "Bine ai revenit, %{name}"
@@ -68,7 +70,9 @@ ro:
   unsubmit: Retrage
   previous_page: Pagina anterioară
   next_page: Pagina următoare
+  next_level: Nivelul următor
   next_resource: Următoarea resursă
+  done_with_module: Încheiat cu acest modul de învățare
   cancel: "Revocare"
   okay: "Bine"
   or: "sau"
@@ -197,6 +201,7 @@ ro:
     parent_account_checkbox: "Sunt un părinte/tutore care se înscrie în numele copilului meu"
     parent_account_email_progress_permission: "Putem să vă trimitem un email cu actualizări ocazionale privind progresul și proiectele copilului dv., precum și actualizări despre cursul lui și despre informatică? [(Vedeți politica noastră de confidențialitate)](%{privacy_policy_url})"
     parent_account_email_label: "Email-ul Părintelui/Tutorelui"
+    us_state: 'Județ'
   school_info:
     title: 'Informații școală (opțional)'
     school_country: 'Țara școlii'
@@ -268,6 +273,7 @@ ro:
   teacher_mailer:
     new_teacher_subject: 'Bine ați venit la Code.org!'
     delete_teacher_subject: 'Notificare Code.org: Contul dvs. a fost șters'
+    verified_teacher_subject: 'Code.org Verificarea profesorului - Succes'
   section:
     your_section:
       one: 'Secţiunea dvs.:'
@@ -287,6 +293,7 @@ ro:
     invite_sent: 'Invitație trimisă'
     added_teacher: '%{name} adăugat(ă) ca și profesorul tău'
     registered: "Te-ai înregistrat pentru %{section_name}."
+    captcha_required: 'Vă rugăm să completați CAPTCHA pentru a vă alătura acestei secțiuni.'
     already_exists: 'Deja te-ai alăturat secțiunii %{section_name}.'
     error:
       signed_in: 'Te rugăm să te deloghezi înainte de a continua'
@@ -297,6 +304,9 @@ ro:
       blank_code: "Te rugăm să introduci un cod de secţiune"
       cant_join_own_section: "Ne pare rău, dar nu poţi intra în propria secţiune."
       provider_managed_section: "Această secţiune este gestionată de un alt furnizor si nu poate fi intergrată. Vă rugăm solicitaţi profesorului dvs. să vă adăuge prin %{provider} şi sincronizeze din nou secţiunea lor."
+      restricted_section: "Nu v-am putut adăuga la secțiunea %{section_code} , deoarece este blocată. Vă rugăm să contactați profesorul pentru ajutor."
+      full_section: "Nu v-am putut adăuga la secțiunea %{section_code} , deoarece există deja %{section_capacity} studenți în ea. Vă rugăm să contactați profesorul pentru ajutor."
+      not_participant_type: "Nu v-am putut adăuga la secțiunea %{section_code} , deoarece nu îndepliniți tipul de participant pentru secțiune."
     mail:
       student_disassociated:
         subject: "Notificare Code.org: %{student_name} nu mai este asociat ca student al tău."
@@ -371,6 +381,7 @@ ro:
       help_us: "Ajutați-ne"
       teach: "Predați"
       about: "Despre"
+      incubator: "Incubator"
       legal: "Confidențialitate&Legalitate"
       legal_privacy: "Politică de confidențialitate"
       legal_tos: "Termeni şi condiţii de utilizare"
@@ -422,6 +433,7 @@ ro:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blocuri)'
       starwarsblocks_hour: 'Star Wars (blocuri)'
+      thebadguys: 'Băieții răi'
       loading: 'Se încarcă...'
       weblab: 'Laboratorul de web'
       view_all: 'Vezi toate proiectele...'
@@ -557,6 +569,7 @@ ro:
     all_students_must_be_in_current_section: "Toţi studenţii trebuie să fie înscrişi în prezent în secţiune."
     already_enrolled_in_new_section: "Nu puteţi muta aceşti studenţi deoarece acest profesor ii are deja în altă secţiune."
     third_party_login: "Nu puteți muta elevii într-o secțiune care este sincronizată cu un instrument terț."
+    not_correct_participant_type: "Nu puteți muta acești utilizatori deoarece nu au permisiuni de a fi participanți la noua secțiune."
   share:
     title: "Învață in Atelierul de programare"
     description: "Oricine poate învăţa programare. Face jocuri, aplicaţii şi artă cu programare."
@@ -595,6 +608,8 @@ ro:
     make_my_own_app: 'Realizeaza propria mea aplicatie'
     how_it_works: 'Cum funcționează'
     try_hour_of_code: 'Încearcă Ora de Programare!'
+    view_code: 'Vezi codul'
+    locale_select: "Selectează limba"
   reference_area:
     title: 'Ai nevoie de ajutor?'
     subtitle: 'Vezi aceste clipuri video şi sugestii'
@@ -619,6 +634,8 @@ ro:
       applab_unsupported_tablet: "Laboratorul de aplicații funcționează cel mai bine pe un calculator de birou sau laptop cu mouse și tastatură. Este posibil să întâmpinați probleme folosind acest instrument pe dispozitivul dvs. curent."
       gamelab_unsupported_tablet: "Laboratorul de jocuri funcționează cel mai bine pe un calculator de birou sau laptop cu mouse și tastatură. Este posibil să întâmpinați probleme folosind acest instrument pe dispozitivul dvs. curent."
       weblab_unsupported_locale_storage: "S-ar putea să întâmpinați probleme la utilizarea Laboratorului de web în modul de navigare privată. Vă rugăm, reîncărcați proiectul în modul normal. Ne pare rău pentru inconveniență."
+  deprecation:
+    algebra_lab: "CS în curriculum Algebra și conținutul este depreciat. În următoarele câteva luni, acest laborator nu va mai fi disponibil. Vă rugăm să verificați [Bootstrap: Algebra] (%{bootstrap_algebra_url}) în loc. [Află mai multe] (%{cs_algebra_url})."
   slow_loading: 'Aceasta durează mai mult decât de obicei...'
   try_reloading: 'Încearcă să reîncarci pagina'
   next_stage: 'Ai terminat! Continuă cu următoarea etapă'
@@ -657,64 +674,139 @@ ro:
       body_short: "Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde."
       audience: 'Vârste 13 +'
       cta: 'Află cum'
+      image_alt: 'Un iepuraș purpuriu purtând un rucsac alimentat cu rachetă.'
+    applab-intro:
+      image_alt: 'O mână atinge centrul ecranului unui smartphone. Lumina și paietele ies din ecran.'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Steve și Alex de la Minecraft se uită la tine.'
+    artist:
+      image_alt: 'O persoană de desene animate care deține un creion imens și desenează un triunghi.'
+    conditionals:
+      image_alt: 'Două mâini amestecând un pachet de cărți de joc.'
+    course1:
+      image_alt: 'Albina Code.org și peștele portocaliu stând în fața unui cod.'
+    course2:
+      image_alt: 'Un colaj de puzzle-uri Code.org care arată un vrăjitor verde, artist și pește portocaliu.'
+    course3:
+      image_alt: 'Un colaj de puzzle-uri Code.org care arată un joc, zombie și ninja.'
+    course4:
+      image_alt: 'Un colaj de puzzle-uri Code.org care arată fotbal, animale de companie și un artist.'
+    coursea:
+      image_alt: 'Un colaj de puzzle-uri Code.org care arată un elefant și o veveriță.'
+    courseb:
+      image_alt: 'Un colaj de puzzle-uri Code.org care arată un explorator, pietre prețioase și o floare.'
+    coursec:
+      image_alt: 'Un colaj de puzzle-uri Code.org care arată o veveriță, numere binare și o pasăre roșie din jocul Angry Birds.'
+    coursed:
+      image_alt: 'Un colaj de puzzle-uri Code.org care arată o albină, flori, miere și un porc verde din jocul Angry Birds.'
+    coursee:
+      image_alt: 'Un colaj de puzzle-uri Code.org care arată o persoană care deține o lopată, dovleac, livadă și vacă.'
+    coursef:
+      image_alt: 'Un colaj de puzzle-uri Code.org care prezintă forme geometrice colorate, un pirat roșu și un artist.'
     dance-2019:
       title: 'Petrecere dansantă'
+      image_alt: 'O pisică fericită, leneș și dans de rechin.'
+    dance-2022:
+      image_alt: 'Un extraterestru verde și robot dansând cu Saturn în fundal.'
     dance:
       title: 'Petrecere dansantă'
+      image_alt: 'O pisică rece și un rechin fericit dansând la o petrecere.'
+    donate:
+      image_alt: 'Un copil îndreptat spre un ecran de laptop care arată un puzzle Code.org.'
+    elementary:
+      image_alt: 'O albină și o veveriță stând într-un câmp în fața unui curcubeu.'
+    express:
+      image_alt: 'Plante vs Zombies zombie și plante în picioare lângă Flappy Bird.'
     flappy:
       title: 'Codul Flappy'
       body: 'Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția noastră Codul Flappy!'
+      image_alt: 'O pasăre galbenă care zboară între țevi verzi.'
     frozen:
       title: "Frozen"
+      image_alt: 'Anna și Elsa din filmul Frozen. Între ele este o imagine a Anna desen o formă destul de în gheață folosind patine ei de gheață.'
     gallery:
       title: "Galerie"
       body: "Vizualizează o galerie de imagini pentru aplicații și artiști, create de utilizatorii noștri"
+      image_alt: 'Un artist desen o mulțime de cercuri și o pisică, liliac, și fantomă în picioare într-un teren de vacanță de iarnă.'
     gamelab:
       title: "Game Lab"
       body: "Laboratorul de jocuri este un mediu de programare în care puteți crea animații simple și jocuri cu obiecte și personaje care interacționează unul cu celălalt."
       audience: "Vârste 13 +"
       cta: "Află cum"
+      image_alt: 'Mulți oameni de desene animate și animale în picioare pe un trotuar și zâmbind.'
+    hello-world-food:
+      image_alt: 'Multe animale, extratereștri și emoji care orbitează Pământul.'
     hello-world:
       title: 'Bună Lume'
       body: 'Alege din patru teme distractive pentru a codifica personaje interactive într-o lume pe care o creezi tu.'
     hero:
       title: "Minecraft"
       body: "Minecraft s-a întors pentru Ora de Codare cu o activitate nou-nouță! Călătorie prin Minecraft cu cod."
+      image_alt: 'Un Golem de Fier de la Minecraft stând în fața unei vederi aeriene a lui Anna rezolvând un puzzle.'
     hoc-encryption:
       title: "Criptare simplă"
       body: "Elevii vor învăţa tehnici pentru a crea şi a sparge mesaje criptate."
+      image_alt: 'Un grafic cu bare a frecvențelor literelor în limba engleză.'
     hoc:
       title: 'Labirint Clasic'
       body: 'Încearcă bazele programarii. Milioane de oameni au încercat.'
+      image_alt: 'Un colaj de imagini care arată codul, Mark Zuckerberg, și Angry Birds.'
+    hourofcode:
+      image_alt: 'Un colaj de imagini care arată codul, Mark Zuckerberg, și Angry Birds.'
     hoc2014:
       try_new_tutorial: 'Încearcă noul nostru tutorial Hour of Code în versiune beta'
       try_frozen: 'Artist cu Anna și Elsa din Frozen'
     infinity:
       title: "Laborator de joc Infinity"
       body: "Folosește Laboratorul de Joacă pentru a crea o poveste sau un joc cu personaje Disney Infinity."
+      image_alt: 'Cinci personaje din Froze, Tangled și Big Hero 6 stând împreună.'
+    map:
+      image_alt: 'O imagine gri a Statelor Unite cu aproximativ 20 de state evidențiate în violet.'
+    mc_escape:
+      image_alt: 'Un personaj Minecraft purtând o pălărie de top și un monoclu în timp ce deschide un piept de comori plin de smaralde.'
+    mc:
+      image_alt: 'Anna și Steve de la Minecraft stând în fața unui puzzle Minecraft Code.org.'
     minecraft:
       title: "Minecraft"
       body: "Exploreaza o lume Minecraft prin cod."
+      image_alt: 'Anna și Steve de la Minecraft stând în fața unui puzzle Minecraft Code.org.'
     minecraft2016:
       title: "Minecraft"
       body: "Programeaza animale şi alte creaturi Minecraft în propria ta versiune a jocului."
+    oceans:
+      image_alt: 'Un robot în ocean de scanare diverse creaturi marine.'
+    playlab:
+      image_alt: 'Un colaj de imagini care arată o pisică albastră, un câine goofy și o nevăstuică preistorică.'
     poem-art:
       title: 'Arta Poeziei'
+      body: 'Exprimați-vă! Utilizați codul pentru a crea poezii animate.'
+      image_alt: 'Un calmar hipster care se desfășoară pe o scenă.'
+    pre-express-2017:
+      image_alt: 'Un câine și unicorn stând în fața unui copac din piese de puzzle.'
+    pre-express-2018:
+      image_alt: 'Un câine și unicorn stând în fața unui copac din piese de puzzle.'
+    pre-express-2019:
+      image_alt: 'Un câine și unicorn stând în fața unui copac din piese de puzzle.'
+    pre-express:
+      image_alt: 'Un câine și unicorn stând în fața unui copac din piese de puzzle.'
     sports:
       title: "Sporturi (Sports)"
       body: "Creați un joc de basketball sau un \"mix and match\" din toate sporturile."
+      image_alt: 'Logo-urile NBA și WNBA afișate lângă un fotbal, minge de fotbal, puc de hochei și baschet.'
     starwars:
       title: "Star Wars"
+      image_alt: 'R2-D2, Leia, Rey și BB-8 în picioare într-un deșert.'
     text-compression:
       title: "Comprimare de text"
       body: "În această lecție, elevii vor folosi Widget-ul de comprimare de text pentru a comprima textul prin înlocuirea modelelor cu simboluri."
+      image_alt: 'Textul este comprimat prin înlocuirea cuvintelor întregi cu un singur simbol.'
     weblab:
       title: "Laborator Web (beta)"
       body: "Laboratorul de web este un mediu de programare în care puteți crea pagini de web simple folosind HTML și CSS. Proiectați paginile dvs. de web și distribuiți site-ul dvs în câteva secunde."
       audience: "Vârste 13 +"
       cta: "Află cum"
+      image_alt: 'Un ecran de computer care afișează codul HTML.'
     widgets:
       title: "Widget-uri"
       body: "Elevii pot explora concepte la cursul nostru de Principii în Informatică, cu ajutorul acestor instrumente digitale. Utilizați widget-urile pe cont propriu sau creați o lecție cu un singur concept pentru clasa dvs."
@@ -896,6 +988,7 @@ ro:
           age: 'Vă rugăm să specificaţi o vârstă'
           abuse_type: 'Vă rugăm să răspundeţi cum acest conţinut încalcă termenii serviciului'
           abuse_detail: 'Vă rugăm să oferiți detalii cu privire la conţinutul pe care îl raportați'
+          captcha: 'Vă rugăm să completați CAPTCHA pentru a raporta acest conținut.'
         abusive_url: 'URL-ul conţinutului care este raportat'
         abuse_type:
           question: 'Cum încalcă %{link_start}Termenii serviciului%{link_end} acest conținut?'
@@ -918,6 +1011,7 @@ ro:
     instructor_feedback: 'Instructor de Feedback'
     peer_feedback: 'Trimiteţi o recenzie'
     outdated: 'Acest feedback a fost adaugat pentru o versiune anterior prezentata'
+    review_count: 'Trebuie să completați %{review_count} recenzii pentru această unitate'
     peer_review: 'Împerecheaţi dispozitivele'
   external_links:
     disclaimer: Act de renuntare
@@ -984,6 +1078,11 @@ ro:
   no_course_access_teacher: "Nu ai acces la acest curs. Dacă crezi că ar trebui să ai acces la acest curs, te rugăm să scrii la support@code.org, pentru a putea rezolva această situație."
   no_script_access_student: "Nu ai acces în această unitate. Întreabă-ți profesorul în ce unitate ar trebui să fii."
   no_script_access_teacher: "Nu ai acces în ceastă unitate. Dacă crezi că ar trebui să ai acces în această unitate, te rugăm să scrii la support@code.org ca să putem rezolva situația."
+  no_level_access_student: "Nu aveți acces la acest nivel. Vă rugăm să întrebați profesorul dvs. la ce nivel ar trebui să fiți."
+  no_level_access_teacher: "Nu aveți acces la acest nivel. Dacă credeți că ar trebui să aveți acces la acest nivel, vă rugăm să scrieți la support@code.org pentru a putea remedia situația."
+  no_exemplar: "Nu există nici un model pentru acest nivel."
+  no_exemplar_access_student: "Elevii nu pot accesa codul exemplar. Vă rugăm să întrebați profesorul dvs. la ce nivel ar trebui să fiți."
+  no_exemplar_access_teacher: "Doar profesorii verificați pot accesa codul exemplar. Dacă doriți să deveniți profesor verificat, vă rugăm să scrieți la support@code.org."
   return_unit_overview: 'Mergi la unitatea de ansamblu'
   return_course_overview: 'Mergi la unitatea de ansamblu'
   view_all_units: 'Vizualizează toate unitățile'
@@ -1000,9 +1099,13 @@ ro:
       school_city: 'Orașul în care se află școala'
       school_city_district: 'Orașul/Sectorul Școlii'
       school_country: 'Țara școlii'
+      school_department_region: 'Departamentul Şcolar/Regiune'
       colombian_school_city: 'Orașul în care se află școala'
+      colombian_chilean_school_department: 'Departamentul Şcolar/Regiune'
       colombian_school_municipality: 'Municipiul Școlar'
       colombian_chilean_school_name: 'Numele școlii'
+      chilean_school_commune: 'Comună'
+      chilean_school_id: 'ID-ul școlii'
       ages: 'Care este/sunt vârsta/vârstele pentru care predai acest an?'
       subjects: 'Ce materii predai acest an?'
       resources: 'Care dintre următoarele resurse de educație cibernetică folosești?'
@@ -1020,13 +1123,17 @@ ro:
         not_listed: 'Termen preferat nelistat'
         none: 'Prefer să nu răspund'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belize'
         canada: 'Canada'
         chile: 'Chile'
         colombia: 'Columbia'
         israel: 'Israel'
         malaysia: 'Malaezia'
         mexico: 'Mexic'
+        paraguay: 'Paraguay'
         thailand: 'Tailanda'
+        uzbekistan: 'Uzbekistan'
       ages:
         ages_under_6: '< 6 ani'
         ages_7_8: '7-8 ani'
@@ -1074,6 +1181,7 @@ ro:
         csf_express: 'Fundamentele informaticii (pre-Express sau Express)'
         csd: 'Descoperiri informatice'
         csp: 'Principle Informaticii'
+        other: 'Alte'
         not_applicable: "Nu se aplică"
       email_opt_in:
         opt_in_yes: 'Da'
@@ -1097,11 +1205,23 @@ ro:
   courses_category: 'Toate cursurile'
   course_offering:
     headers:
+      favorites: 'Favorite'
+      labs_and_skills: 'Laboratoare și abilități'
       minecraft: 'Minecraft'
       hello_world: 'Bună Lume'
+      popular_media: 'Mass-media populare'
       sports: 'Sporturi (Sports)'
+      express: 'Expres'
       csf: 'Fundamentele CS'
       csc: 'Conexiuni CS'
+      year_long: 'Anul lung'
+      csa_labs: 'Laboratoare CSA'
+      self_paced: 'Ritm de sine'
+      teacher_led: 'Profesor condus'
+      collections: 'Colecții'
+      workshops_k5: 'Ateliere K-5'
+      summer_workshops_612: '6-12 Ateliere de vară'
+      virtual_academic_year_workshops_612: '6-12 ateliere virtuale pentru anul academic'
   cookie_banner:
     message: 'Dacă continuați să navigați site-ul nostru sau faceți clic pe " Sunt de acord", sunteți de acord cu stocarea cookie-urilor pe computerul sau pe dispozitivul dumneavoastră.'
     more_information: "Consultaţi Politica de confidenţialitate a Code.org."
@@ -1126,6 +1246,7 @@ ro:
   behaviors:
     this_sprite: "acest spirit"
   unit_prefix: "Unitate %{n}"
+  code_org_logo_alt: "Code.org Acasă"
   teacher_feedback: "Punctele de vedere ale profesorului"
   lesson_lock:
     error:
@@ -1135,4 +1256,22 @@ ro:
       forbidden: "Utilizatorul nu poate actualiza starea de blocare a elevului."
   reset_predict_progress_button: "Șterge Răspunsul"
   pixelation:
+    raw_format: "Formatul brut"
+    raw_format_alt: "Vizualizați biți fără nici o formatare"
+    readable_format: "Format lizibil"
+    readable_format_alt: "Vizualizați biți separați prin pixel"
+    save_image: "Salvează imaginea"
+    actual_size: "Dimensiunea reală"
+    image_file_format_header: "Formatul fișierului imagine"
+    image_file_format_width: "Lățime: 1 octet"
+    image_file_format_height: "Înălțime: 1 octet"
+    image_file_format_bits_per_pixel: "Biți per pixel: 1 octet"
+    image_file_format_data_a: "n biți de date pixel"
+    image_file_format_data_b: "n = Lățime* Înălțime* Biți per Pixel"
+    image_width: "Lățimea imaginii"
+    image_height: "Înălțime imagine"
+    bits_per_pixel_header: "Biți per Pixel"
     binary: "Binar"
+    hexadecimal: "Hexazecimal"
+    pixel_format_header: "Format Pixel"
+

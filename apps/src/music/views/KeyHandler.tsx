@@ -4,9 +4,12 @@ import {Triggers} from '../constants';
 import {AnalyticsContext} from '../context';
 import {
   advanceInstructionsPosition,
+  toggleHeaders,
   toggleBeatPad,
   toggleInstructions,
   toggleTimelinePosition,
+  moveStartPlayheadPositionBackward,
+  moveStartPlayheadPositionForward,
 } from '../redux/musicRedux';
 
 interface KeyHandlerProps {
@@ -63,9 +66,19 @@ const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
         reportKeyPress('advance-instructions-position');
         dispatch(advanceInstructionsPosition());
       }
+      if (event.key === 'h') {
+        reportKeyPress('toggle-headers');
+        dispatch(toggleHeaders());
+      }
       if (event.key === 'b') {
         reportKeyPress('toggle-beat-pad');
         dispatch(toggleBeatPad());
+      }
+      if (event.key === ',') {
+        dispatch(moveStartPlayheadPositionBackward());
+      }
+      if (event.key === '.') {
+        dispatch(moveStartPlayheadPositionForward());
       }
       Triggers.map(trigger => {
         if (event.key === trigger.keyboardKey) {

@@ -101,7 +101,7 @@ sq:
         title: 'Algoritmet e Jetës-Reale: Planet në Letër'
         desc: Ky mësim tregon mënyra se si ne të përdorim algoritmat në jetën e përditshme, në mënyrë specifike të të bërit aeroplanë letre. Ky mësim gjithashtu fokusohet në figura më të mëdha të shkencës kompjuterike dhe se si algoritmet luajnë një rol të rëndësishëm.
       BinaryBracelets:
-        title: Byzylykët Binarë
+        title: Zinxhirët binarë
         desc: Studentët krijojnë byzylykë si një përfaqësim binar të shkronjës së parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen dhe të ruhen në më shumë se një mënyrë.
       DigitalFootprint:
         title: Gjurmët e Tua Dixhitale
@@ -198,7 +198,7 @@ sq:
         title: Duke u Çmëndur
         desc: Ky mësim ju prezanton me konceptin e programimit të cikleve (instruksione të përsëritshme) ndërmjet një aktiviteti kërcimi. Studentët do të mësojnë koreografi të thjeshta, më pas do të udhëzohen ta përsërisin atë.
       courseC_unplugged_binaryBracelets:
-        title: Byzylykët Binarë
+        title: Zinxhirët binarë
         desc: Studentët krijojnë byzylykë si një përfaqësim binar të shkronjës së parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen dhe të ruhen në më shumë se një mënyrë.
       courseD_unplugged_graphPaperProgramming:
         title: Programimi Grafik me Letër
@@ -239,7 +239,7 @@ sq:
         title: Të shkruarit këngë me Parametra
         desc: 'Një nga strukturat më madhështore në botën e shkencës kompjuterike është funksioni. Funksionet (ndonjëhere quhen proçedura) janë programe të vola që ti mund ti përdorësh herë pas here brenda programit më të madh. Ky mësim do të ndihmojë studentët në mënyrë logjike të kuptojnë pse duke kombinuar pjesët e kodit në funksione, është një praktikë kaq ndihmuese.  '
       courseB_unplugged_MRF_2018:
-        title: Miqtë e mi Robotikë
+        title: Shokët e mi robotik
       PlantASeed_2018:
         title: 'Algoritmet e jetës-Reale: Mbill një Farë'
         desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
@@ -275,14 +275,14 @@ sq:
         title: Duke u Çmëndur
         desc: Ky mësim ju prezanton me konceptin e programimit të cikleve (instruksione të përsëritshme) ndërmjet një aktiviteti kërcimi. Studentët do të mësojnë koreografi të thjeshta, më pas do të udhëzohen ta përsërisin atë.
       BinaryBracelets_2018:
-        title: Byzylykët Binarë
+        title: Zinxhirët binarë
         desc: Studentët krijojnë byzylykë si një përfaqësim binar të shkronjës së parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen dhe të ruhen në më shumë se një mënyrë.
       MoveItMoveIt_2018:
         title: Lëvize atë, lëvize atë
       RelayProgramming_2018:
         title: Programimi i Besuar
       courseB_unplugged_MRF_2019:
-        title: Miqtë e mi Robotikë
+        title: Shokët e mi robotik
       Conditionals_2019:
         title: Kushtet
         desc: Për të mësuar rreth përcaktimeve të kushtoreve, studentët luajnë një lojë me karta dhe krijojnë rregulla si "Nëse vizatoj një kartë të kuqe, unë marr një pikë" dhe "Nëse unë vizatoj një kartë të zezë, ti merr një pikë."
@@ -305,7 +305,7 @@ sq:
         title: Eventi i Madh
         desc: Studentët janë prezantuar me konceptet e programimit të "eventeve", të cilat janë veprime që monitoron një kompjuter në mënyrë të vazhdueshme. Mësuesi do të shtypë butona në një letër të veçuar dhe studentët do të reagojnë në varësi të butonit që është shtypur.
       BinaryBracelets_2019:
-        title: Byzylykët Binarë
+        title: Zinxhirët binarë
         desc: Studentët krijojnë byzylykë si një përfaqësim binar të shkronjës së parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen dhe të ruhen në më shumë se një mënyrë.
       PaperPlanes_2019:
         title: 'Algoritmet e Jetës-Reale: Planet në Letër'
@@ -324,6 +324,8 @@ sq:
       DigitalFootprint_2019:
         title: Gjurmët e Tua Dixhitale
         desc: Mësuesit i prezantojnë studentëve idenë që futja e informacionit online rreth vetes krijon një gjurmë dixhitale ose "shteg" që ka pasoja.
+      GraphingData_2019:
+        title: Vizualizimi i të dhënave
       timeforcs_demo_crowdsourcing:
         title: Crowdsourcing
       timeforcs_demo_conditionals:

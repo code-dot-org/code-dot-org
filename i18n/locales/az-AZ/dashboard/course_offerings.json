@@ -1,12 +1,4 @@
 {
-  "coursea": "A Kursu",
-  "courseb": "B Kursu",
-  "coursec": "C Kursu",
-  "coursed": "D Kursu",
-  "coursee": "E Kursu",
-  "coursef": "F Kursu",
-  "express": "Ekspress Kursu",
-  "pre-express": "Öncədən Oxucu Ekspres Kursu",
   "csd": "İnformatika Kəşfləri",
   "csp": "İnformatikanın Əsasları",
   "csa": "Kompüter Elmləri A",
@@ -20,7 +12,6 @@
   "applab-intro": "Proqram laboratoriyasına giriş",
   "aquatic": "Minecraft: Voyage Aquatic",
   "artist": "Rəssam",
-  "basketball": "Komandanızı seçin və basketbol oynamağa başlayın",
   "course1": "Kurs 1",
   "course2": "Kurs 2",
   "course3": "Kurs 3",
@@ -282,5 +273,10 @@
   "csd4": "csd4",
   "hello-world-space": "salam-dünya-sahəsi",
   "playground": "oyun meydançası",
-  "self-paced-pl-csc": "1 -ci hissənin tədrisinə hazırlıq"
+  "self-paced-pl-csc": "1 -ci hissənin tədrisinə hazırlıq",
+  "design-process": "Dizayn Prosesi",
+  "vpl-csd-summer-ci": "CS Discoveries Kurikulum Araşdırması",
+  "self-paced-pl-csd": "öz templi-pl-csd-2021",
+  "self-paced-pl-aiml": "AI və Maşın Öyrənməsinin tədrisi",
+  "how-ai-works": "Süni İntelekt (Sİ) necə işləyir? "
 }

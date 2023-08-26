@@ -104,7 +104,7 @@ es-MX:
           description_teacher: "## Bienvenido\n\nBienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n-   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**\n\n-   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar."
           version_title: 21 - 22
         self-paced-pl-csp-2021:
-          title: autodidáctico-pl-csp-2021
+          title: Enseñanza de los Principios de las Ciencias de la Computación
           description_student: "## Bienvenido\n\n##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar."
           description_teacher: "## Bienvenido\n\n##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar."
           version_title: "'21-'22"
@@ -145,10 +145,10 @@ es-MX:
         csa-async-2022:
           version_title: '22'
         vpl-csd-summer-pilot-ci-2022:
-          title: vpl-csd-verano-piloto-ci
+          title: CS Discoveries Investigación de Curriculum
           version_title: "'21-'22"
         self-paced-pl-csa-2022:
-          title: autodidáctico-pl-csa
+          title: Módulos de inicio CSA
           version_title: 22-23
         csd-2022:
           title: Descubrimientos de Ciencias de la Computación ('22-'23)
@@ -174,7 +174,7 @@ es-MX:
           description_teacher: "## Bienvenido\n\nBienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n-   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**\n\n-   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar."
           version_title: 22-23
         self-paced-pl-csp-2022:
-          title: autodidáctico-pl-csp-2021
+          title: Enseñanza de los Principios de las Ciencias de la Computación
           description_student: "## Bienvenido\n\n##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar."
           description_teacher: "## Bienvenido\n\n##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar."
           version_title: 22-23
@@ -199,7 +199,7 @@ es-MX:
             -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_, y otros recursos que te ayudarán a implementar este plan de estudios en el menú de Recursos para el Profesor que aparece más abajo.
           version_title: 23-24
         self-paced-pl-physical-computing-2022:
-          title: 'Enseñar a crear aplicaciones con dispositivos '
+          title: Enseñar a crear aplicaciones con dispositivos
           description_student: "## Bienvenido\n\n¡Bienvenido al taller virtual de aprendizaje autodidáctico de Code.org! Después de completar este curso en línea, **estará listo para enseñar Descubrimientos de Ciencias de la Computación de Code.org** a sus alumnos.\n\n### Encuentre el aprendizaje que funcione para usted\n\n-   **Vaya a su propio ritmo:** este curso autodidáctico está diseñado para ponerte en el asiento de conductor y tomar control de su aprendizaje. Ofrecemos cronogramas de cada módulo y lección. Sin embargo, lo alentamos a **aprender el contenido a su propio ritmo.**\n\n-   **Elija su contenido:** El contenido de este curso de aprendizaje profesional está organizado en base a la progresión sugerida para profesores nuevos en Code.org y Descubrimientos CS. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a su horario.** Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para obtener más información sobre el curso antes de comenzar."
           description_teacher: "## Bienvenido\n\n¡Bienvenido al taller virtual de aprendizaje autodidáctico de Code.org! Después de completar este curso en línea, **estará listo para enseñar Descubrimientos de Ciencias de la Computación de Code.org** a sus alumnos.\n\n### Encuentre el aprendizaje que funcione para usted\n\n-   **Vaya a su propio ritmo:** este curso autodidáctico está diseñado para ponerte en el asiento de conductor y tomar control de su aprendizaje. Ofrecemos cronogramas de cada módulo y lección. Sin embargo, lo alentamos a **aprender el contenido a su propio ritmo.**\n\n-   **Elija su contenido:** El contenido de este curso de aprendizaje profesional está organizado en base a la progresión sugerida para profesores nuevos en Code.org y Descubrimientos CS. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a su horario.** Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para obtener más información sobre el curso antes de comenzar."
           version_title: 22 - 23
@@ -217,7 +217,7 @@ es-MX:
             -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_ y otros recursos que te ayudarán a poner en práctica este plan de estudios en el menú de Recursos para el Profesor que aparece a continuación
           version_title: 23-24
         self-paced-pl-csa-2023:
-          title: autodidáctico-pl-csa
+          title: Módulos de inicio CSA
           version_title: '2023'
         csd-2023:
           title: Descubrimientos de Ciencias de la Computación
@@ -241,27 +241,80 @@ es-MX:
         focus-on-impact-in-society-2023:
           title: Centrarse en el Impacto Social
         vpl-csd-summer-ci-2023:
-          title: vpl-csd-verano-piloto-ci
+          title: CS Discoveries Investigación de Curriculum
           version_title: 23-24
         self-paced-pl-physical-computing-2023:
+          title: Enseñando a crear aplicaciones con dispositivos (Circuit Playground)
           description_student: "## Bienvenido\n\n¡Bienvenido al taller virtual de aprendizaje autodidáctico de Code.org! Después de completar este curso en línea, **estará listo para enseñar Descubrimientos de Ciencias de la Computación de Code.org** a sus alumnos.\n\n### Encuentre el aprendizaje que funcione para usted\n\n-   **Vaya a su propio ritmo:** este curso autodidáctico está diseñado para ponerte en el asiento de conductor y tomar control de su aprendizaje. Ofrecemos cronogramas de cada módulo y lección. Sin embargo, lo alentamos a **aprender el contenido a su propio ritmo.**\n\n-   **Elija su contenido:** El contenido de este curso de aprendizaje profesional está organizado en base a la progresión sugerida para profesores nuevos en Code.org y Descubrimientos CS. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a su horario.** Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para obtener más información sobre el curso antes de comenzar."
           description_teacher: "## Bienvenido\n\n¡Bienvenido al taller virtual de aprendizaje autodidáctico de Code.org! Después de completar este curso en línea, **estará listo para enseñar Descubrimientos de Ciencias de la Computación de Code.org** a sus alumnos.\n\n### Encuentre el aprendizaje que funcione para usted\n\n-   **Vaya a su propio ritmo:** este curso autodidáctico está diseñado para ponerte en el asiento de conductor y tomar control de su aprendizaje. Ofrecemos cronogramas de cada módulo y lección. Sin embargo, lo alentamos a **aprender el contenido a su propio ritmo.**\n\n-   **Elija su contenido:** El contenido de este curso de aprendizaje profesional está organizado en base a la progresión sugerida para profesores nuevos en Code.org y Descubrimientos CS. Sin embargo, puede **interactuar con el contenido en el orden que mejor se adapte a su horario.** Recomendamos a todos los profesores **comenzar con la breve unidad de bienvenida** para obtener más información sobre el curso antes de comenzar."
+          version_title: 23 - 24
         self-paced-pl-csd-2023:
           title: autodidáctico-pl-csd-2021
           description_student: "## Bienvenido\n\nBienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n-   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**\n\n-   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar."
           description_teacher: "## Bienvenido\n\nBienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n-   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**\n\n-   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar."
           version_title: 23-24
+        self-paced-pl-microbit-2023:
+          title: Enseñando a crear aplicaciones con dispositivos (micro:bit)
         pl-csd-summer-2023:
+          title: Taller de verano - Descubrimientos de Informática
+          description_student: "\\*\\*Podrás: \\*\\*\n\n-   Prepararte para enseñar CS Descubrimientos.\n-   Practicar conceptos clave en el plan de estudios de CS Discoveries.\n-   Crecer en su comprensión de la educación equitativa CS. \n-   Desarrollar empatía por la experiencia del alumno. \n-   Formar parte de una red de profesores que están realizando trabajos similares."
           description_teacher: "\\*\\*Los participantes podrán: \\*\\*\n\n-   Prepararse para enseñar CS Descubrimientos.\n-   Practicar conceptos clave en el plan de estudios de CS Discoveries.\n-   Crecer en su comprensión de la educación equitativa CS. \n-   Desarrollar empatía por la experiencia del alumno. \n-   Formar parte de una red de profesores que están realizando trabajos similares."
+        virtual-pl-csd-summer-2023:
+          title: virtual-pl-csd-verano-2023
+          description_student: "\\*\\*Podrás: \\*\\*\n\n-   Prepararte para enseñar CS Descubrimientos.\n-   Practicar conceptos clave en el plan de estudios de CS Discoveries.\n-   Crecer en su comprensión de la educación equitativa CS. \n-   Desarrollar empatía por la experiencia del alumno. \n-   Formar parte de una red de profesores que están realizando trabajos similares."
+          description_teacher: "\\*\\*Los participantes podrán: \\*\\*\n\n-   Prepararse para enseñar CS Descubrimientos.\n-   Practicar conceptos clave en el plan de estudios de CS Discoveries.\n-   Crecer en su comprensión de la educación equitativa CS. \n-   Desarrollar empatía por la experiencia del alumno. \n-   Formar parte de una red de profesores que están realizando trabajos similares."
+        self-paced-pl-csp-2023:
+          title: Enseñanza de los Principios de las Ciencias de la Computación
+          description_student: "## Bienvenido\n\n##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar."
+          description_teacher: "## Bienvenido\n\n##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar."
+        vpl-csa-2023:
+          title: Aprendizaje Profesional Virtual de CSA
     resources:
-      curriculum/csd/2020:
-        name: Plan de estudios
-      teacher_forum/csd/2020:
-        name: Foro de profesores
       curriculum/csd/2017:
         name: Plan de estudios
       teacher_forum_6/csd/2017:
         name: Foro de profesores
+      curriculum/csd/2018:
+        name: Plan de estudios
+      teacher_forum_6/csd/2018:
+        name: Foro de profesores
+      curriculum/csd/2019:
+        name: Plan de estudios
+      teacher_forum/csd/2019:
+        name: Foro de profesores
+      curriculum/csd/2020:
+        name: Plan de estudios
+      teacher_forum/csd/2020:
+        name: Foro de profesores
+      all_code/csd/2021:
+        name: Todo el Código
+      all_resources_1/csd/2021:
+        name: Todos los Recursos
+      all_standards_1/csd/2021:
+        name: Todos los Estándares
+      all_vocabulary_1/csd/2021:
+        name: Todo el Vocabulario
+      csd_curriculum_guide/csd/2021:
+        name: CSD Guía Curricular
+        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
+      csd_guide_to_assessment/csd/2021:
+        name: CSD Guía de Evaluacíon
+        url: https://docs.google.com/document/d/10OAqq0ecEAHsSy37l_h7-H3EGh5LE_gi/view
+      csd_guide_to_debugging/csd/2021:
+        name: CSD Guía para la Depuración
+        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
+      csd_guide_to_differentiation/csd/2021:
+        name: CSD Guía para la Diferenciación
+        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
+      csd_guide_to_using_resources/csd/2021:
+        name: Guía para el uso de recursos de Descubrimientos de las Ciencias de la Computación
+        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
+      csd_implementation_guide/csd/2021:
+        name: CSD Guía de Implementación
+        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
+      getting_started_with_csd/csd/2021:
+        name: Primeros pasos con CSD
+        url: https://docs.google.com/document/d/1jwPgmlorztdxnVUChhNjE32V651ZWFDs/view
       all_code_5/csd/2022:
         name: Todo el Código
       all_resources_7/csd/2022:
@@ -297,10 +350,6 @@ es-MX:
       csd_programming_levels_guide/csd/2022:
         name: CSD Guía de Niveles de Programación
         url: https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview
-      curriculum/csd/2019:
-        name: Plan de estudios
-      teacher_forum/csd/2019:
-        name: Foro de profesores
       all_code_2/csd/2023:
         name: Todo el Código
         url: "/cursos/csd-2023/código"
@@ -313,6 +362,8 @@ es-MX:
       all_vocabulary_2/csd/2023:
         name: Todo el Vocabulario
         url: "/cursos/csd-2023/vocabulario"
+      csd_changelog_23-_24/csd/2023:
+        name: CSD Registro de Cambios '23-'24
       csd_guide_to_assessment/csd/2023:
         name: CSD Guía de Evaluacíon
       csd_guide_to_differentiation_1/csd/2023:
@@ -323,36 +374,3 @@ es-MX:
         name: CSD Guía de Implementación
       csd_learning_frameworks_1/csd/2023:
         name: CSD Entorno de Aprendizaje
-      all_code/csd/2021:
-        name: Todo el Código
-      all_resources_1/csd/2021:
-        name: Todos los Recursos
-      all_standards_1/csd/2021:
-        name: Todos los Estándares
-      all_vocabulary_1/csd/2021:
-        name: Todo el Vocabulario
-      csd_curriculum_guide/csd/2021:
-        name: CSD Guía Curricular
-        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
-      csd_guide_to_assessment/csd/2021:
-        name: CSD Guía de Evaluacíon
-        url: https://docs.google.com/document/d/10OAqq0ecEAHsSy37l_h7-H3EGh5LE_gi/view
-      csd_guide_to_debugging/csd/2021:
-        name: CSD Guía para la Depuración
-        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
-      csd_guide_to_differentiation/csd/2021:
-        name: CSD Guía para la Diferenciación
-        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
-      csd_guide_to_using_resources/csd/2021:
-        name: Guía para el uso de recursos de Descubrimientos de las Ciencias de la Computación
-        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
-      csd_implementation_guide/csd/2021:
-        name: CSD Guía de Implementación
-        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
-      getting_started_with_csd/csd/2021:
-        name: Primeros pasos con CSD
-        url: https://docs.google.com/document/d/1jwPgmlorztdxnVUChhNjE32V651ZWFDs/view
-      curriculum/csd/2018:
-        name: Plan de estudios
-      teacher_forum_6/csd/2018:
-        name: Foro de profesores

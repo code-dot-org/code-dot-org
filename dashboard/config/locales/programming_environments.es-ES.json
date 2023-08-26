@@ -2,33 +2,1401 @@
   "es-ES": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab",
-          "description": "Editor web de HTML/CSS",
+        "applab": {
           "categories": {
-            "html_tags": {
-              "name": "Etiquetas HTML",
+            "advanced": {
               "expressions": {
-                "comment": {
+                "setStyle": {
+                  "palette_params": {
+                    "css": {
+                      "type": "Cadena"
+                    },
+                    "id": {
+                      "type": "Cadena"
+                    }
+                  }
+                }
+              },
+              "name": "Avanzado"
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "El radio del círculo, en píxeles.",
+                      "type": "número"
+                    },
+                    "x": {
+                      "type": "número"
+                    },
+                    "y": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "createCanvas": {
+                  "palette_params": {
+                    "[height]": {
+                      "type": "número"
+                    },
+                    "[width]": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "[height]": {
+                      "type": "número"
+                    },
+                    "[width]": {
+                      "type": "número"
+                    },
+                    "id": {
+                      "description": "La posición `x` en píxeles de la esquina superior izquierda de la imagen a dibujar."
+                    },
+                    "x": {
+                      "description": "La posición `x` en píxeles de la esquina superior izquierda de la imagen a dibujar.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "La posición `y` en píxeles de la esquina superior izquierda de la imagen a dibujar.",
+                      "type": "número"
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Devuelve la cantidad de alfa (opacidad) (que va de 0 a 255) en el color del píxel situado en la posición `x` e `y` dadas en los datos de la imagen."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "La altura del rectángulo delimitador para capturar los datos de la imagen.",
+                      "type": "número"
+                    },
+                    "width": {
+                      "description": "La anchura del rectángulo delimitador para capturar los datos de la imagen.",
+                      "type": "número"
+                    },
+                    "x": {
+                      "description": "La posición `x` en píxeles para iniciar la captura.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "The `y` position in pixels to start the capture.",
+                      "type": "número"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "número"
+                    },
+                    "x2": {
+                      "type": "número"
+                    },
+                    "y1": {
+                      "type": "número"
+                    },
+                    "y2": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen para colocar los datos en el lienzo.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen para colocar los datos en el lienzo.",
+                      "type": "número"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "La altura vertical en píxeles del rectángulo.",
+                      "type": "número"
+                    },
+                    "width": {
+                      "description": "La anchura horizontal en píxeles del rectángulo.",
+                      "type": "número"
+                    },
+                    "x": {
+                      "description": "La posición `x` en píxeles de la esquina superior izquierda del rectángulo.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "La posición `y` en píxeles de la esquina superior izquierda del rectángulo.",
+                      "type": "número"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "La cantidad de alfa (opacidad) (de 0 a 255) a definir en el píxel.",
+                      "type": "número"
+                    },
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Configura la cantidad de alfa (opacidad) (entre 0 y 255) en el color del píxel situado en la posición `x` e `y` indicada en los datos de la imagen."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "La cantidad de azul (de 0 a 255) para configurar en el píxel.",
+                      "type": "número"
+                    },
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Configura la cantidad de azul (de 0 a 255) en el color del píxel situado en la posición `x` e `y` de los datos de la imagen, según el valor introducido en valorAzul."
+                },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "La cantidad de verde (de 0 a 255) a configurar en el píxel.",
+                      "type": "número"
+                    },
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Configura la cantidad de verde (de 0 a 255) en el color del píxel situado en la posición `x` e `y` de los datos de la imagen a la cantidad de entrada greenValue."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "Opcional. El grado de opacidad (de 0 a 255) para configurar el píxel. El valor predeterminado es 255 (opacidad total).",
+                      "type": "número"
+                    },
+                    "blue": {
+                      "description": "La cantidad de azul (de 0 a 255) para configurar en el píxel.",
+                      "type": "número"
+                    },
+                    "green": {
+                      "description": "La cantidad de verde (de 0 a 255) a configurar en el píxel.",
+                      "type": "número"
+                    },
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "red": {
+                      "description": "La cantidad de rojo (de 0 a 255) para configurar en el píxel.",
+                      "type": "número"
+                    },
+                    "x": {
+                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "redValue": {
+                      "description": "La cantidad de rojo (de 0 a 255) para configurar en el píxel.",
+                      "type": "número"
+                    },
+                    "x": {
+                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen.",
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Configura la cantidad de rojo (que va de 0 a 255) en el color del píxel situado en la posición `x` e `y` indicada en los datos de la imagen según la cantidad introducida en `redValue`."
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "setStrokeWidth": {
+                  "palette_params": {
+                    "width": {
+                      "type": "número"
+                    }
+                  }
+                }
+              },
+              "name": "Lienzo"
+            },
+            "circuit": {
+              "expressions": {
+                "blink": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "buzzer.frequency": {
+                  "palette_params": {
+                    "duration": {
+                      "type": "número"
+                    },
+                    "frequency": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "buzzer.note": {
+                  "palette_params": {
+                    "duration": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "color": {
+                  "palette_params": {
+                    "blue": {
+                      "type": "número"
+                    },
+                    "green": {
+                      "type": "número"
+                    },
+                    "red": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "intensity": {
+                  "palette_params": {
+                    "brightness": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "isPressed": {
+                  "return_value": "Booleano"
+                },
+                "led.blink": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "led.pulse": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "pulse": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Booleano"
+                }
+              },
+              "name": "Circuito"
+            },
+            "control": {
+              "expressions": {
+                "clearInterval": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "El valor devuelto por la función `setTimeout` para cancelar.",
+                      "type": "número"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "El número de milisegundos entre cada ejecución de la función.",
+                      "type": "número"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "El número de milisegundos de espera antes de ejecutar la función.",
+                      "type": "número"
+                    }
+                  }
+                },
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Función"
+                    },
+                    "ms": {
+                      "type": "Número"
+                    }
+                  }
+                }
+              },
+              "name": "Control"
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objeto"
+                    }
+                  }
+                },
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objeto"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objeto"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objeto"
+                    },
+                    "tableName": {
+                      "description": "El nombre de la tabla de la que se van a recuperar los registros."
+                    }
+                  }
+                },
+                "getColumn": {
+                  "palette_params": {
+                    "column": {
+                      "type": "Cadena"
+                    },
+                    "table": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "El nombre de la clave que se va a recuperar."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Función"
+                    },
+                    "id": {
+                      "type": "Cadena"
+                    },
+                    "name": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Obtiene un identificador único para el usuario actual de esta aplicación."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "El nombre de la tabla a la que se aplica este manejador de eventos."
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "objeto"
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "El nombre de la clave que se va a almacenar."
+                    },
+                    "value": {
+                      "description": "Los datos que se almacenarán."
+                    }
+                  },
+                  "short_description": "Almacena un par clave/valor en el almacenamiento de datos clave/valor del Laboratorio de Aplicaciones y llama a la función de devolución de llamada cuando finaliza la acción."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "La dirección web de un servicio que devuelve datos."
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objeto"
+                    }
+                  }
+                }
+              },
+              "name": "Datos"
+            },
+            "functions": {
+              "name": "Funciones"
+            },
+            "maker": {
+              "expressions": {
+                "createButton": {
+                  "palette_params": {
+                    "Pin": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "createLed": {
+                  "palette_params": {
+                    "Pin": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "pinMode": {
+                  "palette_params": {
+                    "mode": {
+                      "type": "Cadena"
+                    },
+                    "pin": {
+                      "type": "Número"
+                    }
+                  }
+                }
+              },
+              "name": "Creador"
+            },
+            "math": {
+              "expressions": {
+                "mathAbs": {
+                  "palette_params": {
+                    "x": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "mathMax": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "mathMin": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "mathRound": {
+                  "palette_params": {
+                    "x": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "El número máximo devuelto",
+                      "type": "número"
+                    },
+                    "min": {
+                      "description": "El mínimo número devuelto",
+                      "type": "número"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "El número máximo devuelto",
+                      "type": "número"
+                    },
+                    "min": {
+                      "description": "El mínimo número devuelto",
+                      "type": "número"
+                    }
+                  }
+                }
+              },
+              "name": "Matemáticas"
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "ledScreen.on": {
                   "examples": {
-                    "": {
-                      "description": "Usando comentarios como recordatorios3"
+                    "Four Corners": {
+                      "name": "Cuatro Esquinas"
+                    }
+                  },
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
                     }
                   }
                 }
               }
             },
-            "css_properties": {
-              "name": "Propiedad CSS"
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "número"
+                    },
+                    "radius": {
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Mueve la tortuga hacia delante y hacia la izquierda en un arco circular suave."
+                },
+                "arcRight": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "número"
+                    },
+                    "radius": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "dot": {
+                  "palette_params": {
+                    "radius": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "getX": {
+                  "short_description": "Obtiene la coordenada `x` actual en píxeles de la tortuga."
+                },
+                "getY": {
+                  "short_description": "Obtiene la coordenada `y` actual en píxeles de la tortuga."
+                },
+                "hide": {
+                  "short_description": "Hace que la tortuga sea invisible en su ubicación actual."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "El número de píxeles para mover la tortuga a la derecha.",
+                      "type": "número"
+                    },
+                    "y": {
+                      "description": "El número de píxeles para mover la tortuga hacia abajo.",
+                      "type": "número"
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Mueve la tortuga hacia atrás un número determinado de píxeles desde la dirección actual."
+                },
+                "moveForward": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Mueve la tortuga hacia adelante un número determinado de píxeles en la dirección actual."
+                },
+                "moveTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "número"
+                    },
+                    "y": {
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Mueve la tortuga a una posición específica (x,y) en la pantalla."
+                },
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cadena"
+                    }
+                  },
+                  "short_description": "Configura el color de la pluma que utiliza la tortuga para dibujar líneas y puntos."
+                },
+                "penDown": {
+                  "short_description": "Baja la pluma para que la tortuga dibuje una línea detrás de él mientras se mueve."
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "a": {
+                      "type": "número"
+                    },
+                    "b": {
+                      "type": "número"
+                    },
+                    "g": {
+                      "type": "número"
+                    },
+                    "r": {
+                      "type": "Número"
+                    }
+                  },
+                  "short_description": "Configura el color de la pluma que utiliza la tortuga para dibujar líneas y puntos."
+                },
+                "penUp": {
+                  "short_description": "Levanta la pluma para que la tortuga no dibuje una línea mientras se mueve."
+                },
+                "penWidth": {
+                  "palette_params": {
+                    "width": {
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Configura el ancho de la línea en píxeles que la tortuga dibuja detrás de ella cuando se mueve."
+                },
+                "show": {
+                  "short_description": "Hace visible a la tortuga en su ubicación actual."
+                },
+                "speed": {
+                  "palette_params": {
+                    "value": {
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Configura la velocidad de ejecución de la aplicación, que incluye la velocidad de la tortuga."
+                },
+                "turnLeft": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Gira la tortuga hacia la izquierda el ángulo especificado. La posición de la tortuga sigue siendo la misma."
+                },
+                "turnRight": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Gira la tortuga hacia la derecha el ángulo especificado. La posición de la tortuga sigue siendo la misma."
+                },
+                "turnTo": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "número"
+                    }
+                  },
+                  "short_description": "Cambia la dirección de la tortuga a un ángulo específico. 0 es arriba, 90 es derecha, 180 es abajo y 270 es izquierda."
+                }
+              },
+              "name": "Tortuga"
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "Crea un botón en la pantalla mostrando el texto proporcionado y referenciado por el id dado en la ubicación por defecto (0,0)."
+                },
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Cadena"
+                    },
+                    "property": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Encoger y Crecer"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Función"
+                    },
+                    "id": {
+                      "type": "Cadena"
+                    },
+                    "type": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Crear música"
+                    }
+                  },
+                  "palette_params": {
+                    "loop": {
+                      "type": "Booleano"
+                    }
+                  },
+                  "short_description": "Reproduce el archivo de sonido tipo MP3 desde la URL que se especifica."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "Cadena"
+                    },
+                    "language": {
+                      "type": "Cadena"
+                    },
+                    "text": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Número"
+                    },
+                    "b": {
+                      "type": "Número"
+                    },
+                    "g": {
+                      "type": "Número"
+                    },
+                    "r": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "setPosition": {
+                  "palette_params": {
+                    "height": {
+                      "type": "número"
+                    },
+                    "width": {
+                      "type": "número"
+                    },
+                    "x": {
+                      "type": "número"
+                    },
+                    "y": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Cadena"
+                    },
+                    "property": {
+                      "description": "La propiedad que se va a cambiar.",
+                      "type": "Cadena"
+                    }
+                  },
+                  "short_description": "Configura una propiedad con un nuevo valor para el elemento especificado."
+                },
+                "setScreen": {
+                  "short_description": "Configura la pantalla con el screenID indicado."
+                },
+                "setSize": {
+                  "palette_params": {
+                    "height": {
+                      "type": "número"
+                    },
+                    "width": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "showElement": {
+                  "short_description": "Muestra el elemento con el id proporcionado."
+                },
+                "textLabel": {
+                  "short_description": "Crea una etiqueta de texto en la pantalla mostrando el texto proporcionado y referenciado por el id indicado en la ubicación por defecto (0,0)."
+                }
+              },
+              "name": "Controles de IU"
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Cadena"
+                    }
+                  },
+                  "return_value": "Ninguna"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "Declara y asigna un array a una variable"
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Elige tu Propia Aventura"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "Declara una variable con el nombre dado después de 'var', y le asigna el valor en el lado derecho de la expresión"
+                },
+                "declareNoAssign_x": {
+                  "short_description": "Declara una variable con ese nombre."
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "La cadena que se va a buscar."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "La cadena que se va a buscar."
+                    }
+                  }
+                },
+                "insertItem": {
+                  "palette_params": {
+                    "index": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "La longitud de la cadena"
+                },
+                "removeItem": {
+                  "palette_params": {
+                    "index": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "substring": {
+                  "palette_params": {
+                    "end": {
+                      "type": "número"
+                    },
+                    "start": {
+                      "type": "número"
+                    }
+                  }
+                }
+              },
+              "name": "Variables"
             }
-          }
+          },
+          "description": "El Laboratorio de aplicaciones es un entorno de programación donde puedes crear aplicaciones sencillas. Diseña una aplicación, programa con bloques o JavaScript para que funcione, y luego comparte tu aplicación en cuestión de segundos.",
+          "name": "Laboratorio de Aplicaciones"
         },
         "gamelab": {
-          "name": "Laboratorio de Juegos",
-          "description": "El Laboratorio de Juegos es un entorno de programación donde puedes crear emocionantes juegos y animaciones. Dibuja tus propios personajes, programa con bloques o JavaScript para que funcione, y luego comparte tu juego en cuestión de segundos.",
           "categories": {
+            "control": {
+              "expressions": {
+                "clearInterval": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "type": "número"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "El número de milisegundos entre cada ejecución de la función.",
+                      "type": "número"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "El número de milisegundos de espera antes de ejecutar la función.",
+                      "type": "número"
+                    }
+                  }
+                }
+              },
+              "name": "Control"
+            },
+            "drawing": {
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Número"
+                    },
+                    "start": {
+                      "type": "Número"
+                    },
+                    "stop": {
+                      "type": "Número"
+                    },
+                    "w": {
+                      "type": "Número"
+                    },
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "background": {
+                  "examples": {
+                    "RGB Colors": {
+                      "name": "Colores RGB"
+                    }
+                  },
+                  "palette_params": {
+                    "color": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Número"
+                    },
+                    "w": {
+                      "type": "Número"
+                    },
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Número"
+                    },
+                    "x2": {
+                      "type": "Número"
+                    },
+                    "y1": {
+                      "type": "Número"
+                    },
+                    "y2": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Número"
+                    },
+                    "w": {
+                      "type": "Número"
+                    },
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "sides": {
+                      "type": "Número"
+                    },
+                    "size": {
+                      "type": "Número"
+                    },
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Número"
+                    },
+                    "b": {
+                      "type": "Número"
+                    },
+                    "g": {
+                      "type": "Número"
+                    },
+                    "r": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Estrella"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "Número"
+                    },
+                    "x2": {
+                      "type": "Número"
+                    },
+                    "y1": {
+                      "type": "Número"
+                    },
+                    "y2": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Número"
+                    },
+                    "str": {
+                      "type": "Cadena"
+                    },
+                    "width": {
+                      "type": "Número"
+                    },
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "Cadena"
+                    },
+                    "vert": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Número"
+                    }
+                  }
+                }
+              },
+              "name": "Dibujo"
+            },
+            "functions": {
+              "name": "Funciones"
+            },
             "game_lab": {
-              "name": "Laboratorio de Juegos",
               "expressions": {
                 "keyDown": {
                   "palette_params": {
@@ -98,24 +1466,24 @@
                     }
                   },
                   "palette_params": {
-                    "url": {
-                      "type": "Cadena"
-                    },
                     "loop": {
                       "type": "Booleano"
+                    },
+                    "url": {
+                      "type": "Cadena"
                     }
                   },
                   "short_description": "Reproduce el archivo de sonido tipo MP3 desde la URL que se especifica."
                 },
                 "playSpeech": {
                   "palette_params": {
-                    "text": {
-                      "type": "Cadena"
-                    },
                     "gender": {
                       "type": "Cadena"
                     },
                     "language": {
+                      "type": "Cadena"
+                    },
+                    "text": {
                       "type": "Cadena"
                     }
                   }
@@ -123,16 +1491,16 @@
                 "showMobileControls": {
                   "content": "Cambia los controles móviles visibles bajo el espacio de juego.",
                   "palette_params": {
-                    "spaceButtonVisible": {
+                    "dpadFourWay": {
                       "type": "Booleano"
                     },
                     "dpadVisible": {
                       "type": "Booleano"
                     },
-                    "dpadFourWay": {
+                    "mobileOnly": {
                       "type": "Booleano"
                     },
-                    "mobileOnly": {
+                    "spaceButtonVisible": {
                       "type": "Booleano"
                     }
                   },
@@ -145,124 +1513,10 @@
                     }
                   }
                 }
-              }
-            },
-            "sprites": {
-              "name": "Sprites",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Espiral"
-                    }
-                  }
-                },
-                "sprite.height": {
-                  "return_value": "La altura del sprite."
-                },
-                "mirrorX": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "mirrorY": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "pointTo": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "setAnimation": {
-                  "palette_params": {
-                    "label": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "setCollider": {
-                  "palette_params": {
-                    "type": {
-                      "type": "Cadena"
-                    },
-                    "xOffset": {
-                      "type": "Número"
-                    },
-                    "yOffset": {
-                      "type": "Número"
-                    },
-                    "width/radius": {
-                      "type": "Número"
-                    },
-                    "height": {
-                      "type": "Número"
-                    },
-                    "rotationOffset": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "setFrame": {
-                  "palette_params": {
-                    "frame": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "setSpeedAndDirection": {
-                  "palette_params": {
-                    "speed": {
-                      "type": "Número"
-                    },
-                    "angle": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "setVelocity": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "sprite.width": {
-                  "return_value": "La anchura del sprite."
-                },
-                "createSprite": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    },
-                    "width": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    },
-                    "height": {
-                      "type": "Número"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Laboratorio de Juegos"
             },
             "groups": {
-              "name": "Grupos",
               "expressions": {
                 "add": {
                   "palette_params": {
@@ -311,19 +1565,19 @@
                 },
                 "setColliderEach": {
                   "palette_params": {
-                    "type": {
-                      "type": "Cadena"
-                    },
-                    "yOffset": {
-                      "type": "Número"
-                    },
-                    "width/radius": {
-                      "type": "Número"
-                    },
                     "height": {
                       "type": "Número"
                     },
                     "rotationOffset": {
+                      "type": "Número"
+                    },
+                    "type": {
+                      "type": "Cadena"
+                    },
+                    "width/radius": {
+                      "type": "Número"
+                    },
+                    "yOffset": {
                       "type": "Número"
                     }
                   }
@@ -393,10 +1647,10 @@
                 },
                 "setSpeedAndDirectionEach": {
                   "palette_params": {
-                    "speed": {
+                    "angle": {
                       "type": "Número"
                     },
-                    "angle": {
+                    "speed": {
                       "type": "Número"
                     }
                   }
@@ -446,259 +1700,10 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "Dibujo",
-              "expressions": {
-                "arc": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    },
-                    "w": {
-                      "type": "Número"
-                    },
-                    "h": {
-                      "type": "Número"
-                    },
-                    "start": {
-                      "type": "Número"
-                    },
-                    "stop": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "background": {
-                  "examples": {
-                    "RGB Colors": {
-                      "name": "Colores RGB"
-                    }
-                  },
-                  "palette_params": {
-                    "color": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "ellipse": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    },
-                    "w": {
-                      "type": "Número"
-                    },
-                    "h": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "fill": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "line": {
-                  "palette_params": {
-                    "x1": {
-                      "type": "Número"
-                    },
-                    "y1": {
-                      "type": "Número"
-                    },
-                    "x2": {
-                      "type": "Número"
-                    },
-                    "y2": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "point": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "rect": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    },
-                    "w": {
-                      "type": "Número"
-                    },
-                    "h": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "regularPolygon": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    },
-                    "sides": {
-                      "type": "Número"
-                    },
-                    "size": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "rgb": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Número"
-                    },
-                    "g": {
-                      "type": "Número"
-                    },
-                    "b": {
-                      "type": "Número"
-                    },
-                    "a": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Estrella"
-                    }
-                  },
-                  "palette_params": {
-                    "x1": {
-                      "type": "Número"
-                    },
-                    "y1": {
-                      "type": "Número"
-                    },
-                    "x2": {
-                      "type": "Número"
-                    },
-                    "y2": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "stroke": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "strokeWeight": {
-                  "palette_params": {
-                    "size": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "text": {
-                  "palette_params": {
-                    "str": {
-                      "type": "Cadena"
-                    },
-                    "x": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    },
-                    "width": {
-                      "type": "Número"
-                    },
-                    "height": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "textAlign": {
-                  "palette_params": {
-                    "horiz": {
-                      "type": "Cadena"
-                    },
-                    "vert": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "textFont": {
-                  "palette_params": {
-                    "font": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "textSize": {
-                  "palette_params": {
-                    "pixels": {
-                      "type": "Número"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "name": "Control",
-              "expressions": {
-                "clearInterval": {
-                  "palette_params": {
-                    "interval": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "type": "número",
-                      "description": "El número de milisegundos entre cada ejecución de la función."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "type": "número",
-                      "description": "El número de milisegundos de espera antes de ejecutar la función."
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Grupos"
             },
             "math": {
-              "name": "Matemáticas",
               "expressions": {
                 "mathAbs": {
                   "palette_params": {
@@ -747,41 +1752,155 @@
                 },
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "type": "número",
-                      "description": "El mínimo número devuelto"
-                    },
                     "max": {
-                      "type": "número",
-                      "description": "El número máximo devuelto"
+                      "description": "El número máximo devuelto",
+                      "type": "número"
+                    },
+                    "min": {
+                      "description": "El mínimo número devuelto",
+                      "type": "número"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "type": "número",
-                      "description": "El mínimo número devuelto"
-                    },
                     "max": {
-                      "type": "número",
-                      "description": "El número máximo devuelto"
+                      "description": "El número máximo devuelto",
+                      "type": "número"
+                    },
+                    "min": {
+                      "description": "El mínimo número devuelto",
+                      "type": "número"
                     }
                   }
                 }
-              }
+              },
+              "name": "Matemáticas"
+            },
+            "sprites": {
+              "expressions": {
+                "createSprite": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Número"
+                    },
+                    "width": {
+                      "type": "Número"
+                    },
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Espiral"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Cadena"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Número"
+                    },
+                    "rotationOffset": {
+                      "type": "Número"
+                    },
+                    "type": {
+                      "type": "Cadena"
+                    },
+                    "width/radius": {
+                      "type": "Número"
+                    },
+                    "xOffset": {
+                      "type": "Número"
+                    },
+                    "yOffset": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Número"
+                    },
+                    "speed": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "La altura del sprite."
+                },
+                "sprite.width": {
+                  "return_value": "La anchura del sprite."
+                }
+              },
+              "name": "Sprites"
             },
             "variables": {
-              "name": "Variables",
               "expressions": {
                 "assign_x": {
                   "short_description": "Asigna un valor a una variable existente. Por ejemplo, x = 0;"
                 },
-                "declareNoAssign_x": {
-                  "short_description": "Declara una variable con ese nombre."
-                },
                 "declareAssign_x": {
                   "short_description": "Declara una variable con el nombre dado después de 'var', y le asigna el valor en el lado derecho de la expresión"
+                },
+                "declareNoAssign_x": {
+                  "short_description": "Declara una variable con ese nombre."
                 },
                 "includes": {
                   "palette_params": {
@@ -802,1217 +1921,43 @@
                 },
                 "substring": {
                   "palette_params": {
-                    "start": {
-                      "type": "número"
-                    },
                     "end": {
                       "type": "número"
-                    }
-                  }
-                }
-              }
-            },
-            "functions": {
-              "name": "Funciones"
-            }
-          }
-        },
-        "applab": {
-          "name": "Laboratorio de Aplicaciones",
-          "description": "El Laboratorio de aplicaciones es un entorno de programación donde puedes crear aplicaciones sencillas. Diseña una aplicación, programa con bloques o JavaScript para que funcione, y luego comparte tu aplicación en cuestión de segundos.",
-          "categories": {
-            "ui_controls": {
-              "name": "Controles de IU",
-              "expressions": {
-                "button": {
-                  "short_description": "Crea un botón en la pantalla mostrando el texto proporcionado y referenciado por el id dado en la ubicación por defecto (0,0)."
-                },
-                "getProperty": {
-                  "palette_params": {
-                    "id": {
-                      "type": "Cadena"
                     },
-                    "property": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "Encoger y Crecer"
-                    }
-                  },
-                  "palette_params": {
-                    "type": {
-                      "type": "Cadena"
-                    },
-                    "id": {
-                      "type": "Cadena"
-                    },
-                    "callback": {
-                      "type": "Función"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Crear música"
-                    }
-                  },
-                  "palette_params": {
-                    "loop": {
-                      "type": "Booleano"
-                    }
-                  },
-                  "short_description": "Reproduce el archivo de sonido tipo MP3 desde la URL que se especifica."
-                },
-                "playSpeech": {
-                  "palette_params": {
-                    "text": {
-                      "type": "Cadena"
-                    },
-                    "gender": {
-                      "type": "Cadena"
-                    },
-                    "language": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "rgb": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Número"
-                    },
-                    "g": {
-                      "type": "Número"
-                    },
-                    "b": {
-                      "type": "Número"
-                    },
-                    "a": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "setNumber": {
-                  "palette_params": {
-                    "number": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "setPosition": {
-                  "palette_params": {
-                    "x": {
-                      "type": "número"
-                    },
-                    "y": {
-                      "type": "número"
-                    },
-                    "width": {
-                      "type": "número"
-                    },
-                    "height": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "id": {
-                      "type": "Cadena"
-                    },
-                    "property": {
-                      "type": "Cadena",
-                      "description": "La propiedad que se va a cambiar."
-                    }
-                  },
-                  "short_description": "Configura una propiedad con un nuevo valor para el elemento especificado."
-                },
-                "setScreen": {
-                  "short_description": "Configura la pantalla con el screenID indicado."
-                },
-                "setSize": {
-                  "palette_params": {
-                    "height": {
-                      "type": "número"
-                    },
-                    "width": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "showElement": {
-                  "short_description": "Muestra el elemento con el id proporcionado."
-                },
-                "textLabel": {
-                  "short_description": "Crea una etiqueta de texto en la pantalla mostrando el texto proporcionado y referenciado por el id indicado en la ubicación por defecto (0,0)."
-                }
-              }
-            },
-            "canvas": {
-              "name": "Lienzo",
-              "expressions": {
-                "circle": {
-                  "palette_params": {
-                    "x": {
-                      "type": "número"
-                    },
-                    "y": {
-                      "type": "número"
-                    },
-                    "radius": {
-                      "type": "número",
-                      "description": "El radio del círculo, en píxeles."
-                    }
-                  }
-                },
-                "createCanvas": {
-                  "palette_params": {
-                    "[width]": {
-                      "type": "número"
-                    },
-                    "[height]": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "drawImage": {
-                  "palette_params": {
-                    "id": {
-                      "description": "La posición `x` en píxeles de la esquina superior izquierda de la imagen a dibujar."
-                    },
-                    "x": {
-                      "type": "número",
-                      "description": "La posición `x` en píxeles de la esquina superior izquierda de la imagen a dibujar."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "La posición `y` en píxeles de la esquina superior izquierda de la imagen a dibujar."
-                    },
-                    "[width]": {
-                      "type": "número"
-                    },
-                    "[height]": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "getAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    },
-                    "x": {
-                      "type": "número",
-                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    }
-                  },
-                  "short_description": "Devuelve la cantidad de alfa (opacidad) (que va de 0 a 255) en el color del píxel situado en la posición `x` e `y` dadas en los datos de la imagen."
-                },
-                "getBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    },
-                    "x": {
-                      "type": "número",
-                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    }
-                  }
-                },
-                "getGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    },
-                    "x": {
-                      "type": "número",
-                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    }
-                  }
-                },
-                "getImageData": {
-                  "palette_params": {
-                    "x": {
-                      "type": "número",
-                      "description": "La posición `x` en píxeles para iniciar la captura."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "The `y` position in pixels to start the capture."
-                    },
-                    "width": {
-                      "type": "número",
-                      "description": "La anchura del rectángulo delimitador para capturar los datos de la imagen."
-                    },
-                    "height": {
-                      "type": "número",
-                      "description": "La altura del rectángulo delimitador para capturar los datos de la imagen."
-                    }
-                  }
-                },
-                "getRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    },
-                    "x": {
-                      "type": "número",
-                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    }
-                  }
-                },
-                "line": {
-                  "palette_params": {
-                    "x1": {
-                      "type": "número"
-                    },
-                    "y1": {
-                      "type": "número"
-                    },
-                    "x2": {
-                      "type": "número"
-                    },
-                    "y2": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "putImageData": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    },
-                    "x": {
-                      "type": "número",
-                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen para colocar los datos en el lienzo."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen para colocar los datos en el lienzo."
-                    }
-                  }
-                },
-                "rect": {
-                  "palette_params": {
-                    "x": {
-                      "type": "número",
-                      "description": "La posición `x` en píxeles de la esquina superior izquierda del rectángulo."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "La posición `y` en píxeles de la esquina superior izquierda del rectángulo."
-                    },
-                    "width": {
-                      "type": "número",
-                      "description": "La anchura horizontal en píxeles del rectángulo."
-                    },
-                    "height": {
-                      "type": "número",
-                      "description": "La altura vertical en píxeles del rectángulo."
-                    }
-                  }
-                },
-                "setAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    },
-                    "x": {
-                      "type": "número",
-                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "alphaValue": {
-                      "type": "número",
-                      "description": "La cantidad de alfa (opacidad) (de 0 a 255) a definir en el píxel."
-                    }
-                  },
-                  "short_description": "Configura la cantidad de alfa (opacidad) (entre 0 y 255) en el color del píxel situado en la posición `x` e `y` indicada en los datos de la imagen."
-                },
-                "setBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    },
-                    "x": {
-                      "type": "número",
-                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "blueValue": {
-                      "type": "número",
-                      "description": "La cantidad de azul (de 0 a 255) para configurar en el píxel."
-                    }
-                  },
-                  "short_description": "Configura la cantidad de azul (de 0 a 255) en el color del píxel situado en la posición `x` e `y` de los datos de la imagen, según el valor introducido en valorAzul."
-                },
-                "setFillColor": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "setGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    },
-                    "x": {
-                      "type": "número",
-                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "greenValue": {
-                      "type": "número",
-                      "description": "La cantidad de verde (de 0 a 255) a configurar en el píxel."
-                    }
-                  },
-                  "short_description": "Configura la cantidad de verde (de 0 a 255) en el color del píxel situado en la posición `x` e `y` de los datos de la imagen a la cantidad de entrada greenValue."
-                },
-                "setRGB": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    },
-                    "x": {
-                      "type": "número",
-                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "red": {
-                      "type": "número",
-                      "description": "La cantidad de rojo (de 0 a 255) para configurar en el píxel."
-                    },
-                    "green": {
-                      "type": "número",
-                      "description": "La cantidad de verde (de 0 a 255) a configurar en el píxel."
-                    },
-                    "blue": {
-                      "type": "número",
-                      "description": "La cantidad de azul (de 0 a 255) para configurar en el píxel."
-                    },
-                    "alpha": {
-                      "type": "número",
-                      "description": "Opcional. El grado de opacidad (de 0 a 255) para configurar el píxel. El valor predeterminado es 255 (opacidad total)."
-                    }
-                  }
-                },
-                "setRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    },
-                    "x": {
-                      "type": "número",
-                      "description": "La posición `x` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "La posición `y` en píxeles a partir de la esquina superior izquierda de la imagen."
-                    },
-                    "redValue": {
-                      "type": "número",
-                      "description": "La cantidad de rojo (de 0 a 255) para configurar en el píxel."
-                    }
-                  },
-                  "short_description": "Configura la cantidad de rojo (que va de 0 a 255) en el color del píxel situado en la posición `x` e `y` indicada en los datos de la imagen según la cantidad introducida en `redValue`."
-                },
-                "setStrokeColor": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "setStrokeWidth": {
-                  "palette_params": {
-                    "width": {
-                      "type": "número"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "name": "Datos",
-              "expressions": {
-                "createRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "createRecordSync": {
-                  "palette_params": {
-                    "table": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "deleteRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "drawChart": {
-                  "palette_params": {
-                    "options": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "drawChartFromRecords": {
-                  "palette_params": {
-                    "tableName": {
-                      "description": "El nombre de la tabla de la que se van a recuperar los registros."
-                    },
-                    "options": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "getColumn": {
-                  "palette_params": {
-                    "table": {
-                      "type": "Cadena"
-                    },
-                    "column": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "getKeyValue": {
-                  "palette_params": {
-                    "key": {
-                      "description": "El nombre de la clave que se va a recuperar."
-                    }
-                  }
-                },
-                "getPrediction": {
-                  "palette_params": {
-                    "name": {
-                      "type": "Cadena"
-                    },
-                    "id": {
-                      "type": "Cadena"
-                    },
-                    "callback": {
-                      "type": "Función"
-                    }
-                  }
-                },
-                "getUserId": {
-                  "short_description": "Obtiene un identificador único para el usuario actual de esta aplicación."
-                },
-                "onRecordEvent": {
-                  "palette_params": {
-                    "table": {
-                      "description": "El nombre de la tabla a la que se aplica este manejador de eventos."
-                    }
-                  }
-                },
-                "readRecords": {
-                  "palette_params": {
-                    "terms": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "readRecordsSync": {
-                  "palette_params": {
-                    "table": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "setKeyValue": {
-                  "palette_params": {
-                    "key": {
-                      "description": "El nombre de la clave que se va a almacenar."
-                    },
-                    "value": {
-                      "description": "Los datos que se almacenarán."
-                    }
-                  },
-                  "short_description": "Almacena un par clave/valor en el almacenamiento de datos clave/valor del Laboratorio de Aplicaciones y llama a la función de devolución de llamada cuando finaliza la acción."
-                },
-                "startWebRequest": {
-                  "palette_params": {
-                    "url": {
-                      "description": "La dirección web de un servicio que devuelve datos."
-                    }
-                  }
-                },
-                "updateRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "objeto"
-                    }
-                  }
-                }
-              }
-            },
-            "turtle": {
-              "name": "Tortuga",
-              "expressions": {
-                "arcLeft": {
-                  "palette_params": {
-                    "angle": {
-                      "type": "número"
-                    },
-                    "radius": {
-                      "type": "número"
-                    }
-                  },
-                  "short_description": "Mueve la tortuga hacia delante y hacia la izquierda en un arco circular suave."
-                },
-                "arcRight": {
-                  "palette_params": {
-                    "angle": {
-                      "type": "número"
-                    },
-                    "radius": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "dot": {
-                  "palette_params": {
-                    "radius": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "getX": {
-                  "short_description": "Obtiene la coordenada `x` actual en píxeles de la tortuga."
-                },
-                "getY": {
-                  "short_description": "Obtiene la coordenada `y` actual en píxeles de la tortuga."
-                },
-                "hide": {
-                  "short_description": "Hace que la tortuga sea invisible en su ubicación actual."
-                },
-                "move": {
-                  "palette_params": {
-                    "x": {
-                      "type": "número",
-                      "description": "El número de píxeles para mover la tortuga a la derecha."
-                    },
-                    "y": {
-                      "type": "número",
-                      "description": "El número de píxeles para mover la tortuga hacia abajo."
-                    }
-                  }
-                },
-                "moveBackward": {
-                  "palette_params": {
-                    "pixels": {
-                      "type": "número"
-                    }
-                  },
-                  "short_description": "Mueve la tortuga hacia atrás un número determinado de píxeles desde la dirección actual."
-                },
-                "moveForward": {
-                  "palette_params": {
-                    "pixels": {
-                      "type": "número"
-                    }
-                  },
-                  "short_description": "Mueve la tortuga hacia adelante un número determinado de píxeles en la dirección actual."
-                },
-                "moveTo": {
-                  "palette_params": {
-                    "x": {
-                      "type": "número"
-                    },
-                    "y": {
-                      "type": "número"
-                    }
-                  },
-                  "short_description": "Mueve la tortuga a una posición específica (x,y) en la pantalla."
-                },
-                "penColor": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Cadena"
-                    }
-                  },
-                  "short_description": "Configura el color de la pluma que utiliza la tortuga para dibujar líneas y puntos."
-                },
-                "penDown": {
-                  "short_description": "Baja la pluma para que la tortuga dibuje una línea detrás de él mientras se mueve."
-                },
-                "penRGB": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Número"
-                    },
-                    "g": {
-                      "type": "número"
-                    },
-                    "b": {
-                      "type": "número"
-                    },
-                    "a": {
-                      "type": "número"
-                    }
-                  },
-                  "short_description": "Configura el color de la pluma que utiliza la tortuga para dibujar líneas y puntos."
-                },
-                "penUp": {
-                  "short_description": "Levanta la pluma para que la tortuga no dibuje una línea mientras se mueve."
-                },
-                "penWidth": {
-                  "palette_params": {
-                    "width": {
-                      "type": "número"
-                    }
-                  },
-                  "short_description": "Configura el ancho de la línea en píxeles que la tortuga dibuja detrás de ella cuando se mueve."
-                },
-                "show": {
-                  "short_description": "Hace visible a la tortuga en su ubicación actual."
-                },
-                "speed": {
-                  "palette_params": {
-                    "value": {
-                      "type": "número"
-                    }
-                  },
-                  "short_description": "Configura la velocidad de ejecución de la aplicación, que incluye la velocidad de la tortuga."
-                },
-                "turnLeft": {
-                  "palette_params": {
-                    "angle": {
-                      "type": "número"
-                    }
-                  },
-                  "short_description": "Gira la tortuga hacia la izquierda el ángulo especificado. La posición de la tortuga sigue siendo la misma."
-                },
-                "turnRight": {
-                  "palette_params": {
-                    "angle": {
-                      "type": "número"
-                    }
-                  },
-                  "short_description": "Gira la tortuga hacia la derecha el ángulo especificado. La posición de la tortuga sigue siendo la misma."
-                },
-                "turnTo": {
-                  "palette_params": {
-                    "angle": {
-                      "type": "número"
-                    }
-                  },
-                  "short_description": "Cambia la dirección de la tortuga a un ángulo específico. 0 es arriba, 90 es derecha, 180 es abajo y 270 es izquierda."
-                }
-              }
-            },
-            "control": {
-              "name": "Control",
-              "expressions": {
-                "clearInterval": {
-                  "palette_params": {
-                    "interval": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "type": "número",
-                      "description": "El valor devuelto por la función `setTimeout` para cancelar."
-                    }
-                  }
-                },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "type": "número",
-                      "description": "El número de milisegundos entre cada ejecución de la función."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "type": "número",
-                      "description": "El número de milisegundos de espera antes de ejecutar la función."
-                    }
-                  }
-                },
-                "stopTimedLoop": {
-                  "palette_params": {
-                    "loop": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "timedLoop": {
-                  "palette_params": {
-                    "ms": {
-                      "type": "Número"
-                    },
-                    "callback": {
-                      "type": "Función"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matemáticas",
-              "expressions": {
-                "mathAbs": {
-                  "palette_params": {
-                    "x": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "mathMax": {
-                  "palette_params": {
-                    "n1, n2,..., nX": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "mathMin": {
-                  "palette_params": {
-                    "n1, n2,..., nX": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "mathPow": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "mathRound": {
-                  "palette_params": {
-                    "x": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "mathSqrt": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "moduloOperator": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "type": "número",
-                      "description": "El mínimo número devuelto"
-                    },
-                    "max": {
-                      "type": "número",
-                      "description": "El número máximo devuelto"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "type": "número",
-                      "description": "El mínimo número devuelto"
-                    },
-                    "max": {
-                      "type": "número",
-                      "description": "El número máximo devuelto"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Variables",
-              "expressions": {
-                "declareNoAssign_x": {
-                  "short_description": "Declara una variable con ese nombre."
-                },
-                "declareAssign_object": {
-                  "examples": {
-                    "Choose Your Own Adventure": {
-                      "name": "Elige tu Propia Aventura"
-                    }
-                  }
-                },
-                "declareAssign_x": {
-                  "short_description": "Declara una variable con el nombre dado después de 'var', y le asigna el valor en el lado derecho de la expresión"
-                },
-                "declareAssign_list_123": {
-                  "short_description": "Declara y asigna un array a una variable"
-                },
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "La cadena que se va a buscar."
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "La cadena que se va a buscar."
-                    }
-                  }
-                },
-                "substring": {
-                  "palette_params": {
                     "start": {
                       "type": "número"
-                    },
-                    "end": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "addPair": {
-                  "palette_params": {
-                    "key": {
-                      "type": "Cadena"
-                    }
-                  },
-                  "return_value": "Ninguna"
-                },
-                "getValue": {
-                  "palette_params": {
-                    "key": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "insertItem": {
-                  "palette_params": {
-                    "index": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "La longitud de la cadena"
-                },
-                "removeItem": {
-                  "palette_params": {
-                    "index": {
-                      "type": "número"
                     }
                   }
                 }
-              }
-            },
-            "functions": {
-              "name": "Funciones"
-            },
-            "advanced": {
-              "name": "Avanzado",
-              "expressions": {
-                "setStyle": {
-                  "palette_params": {
-                    "id": {
-                      "type": "Cadena"
-                    },
-                    "css": {
-                      "type": "Cadena"
-                    }
-                  }
-                }
-              }
-            },
-            "maker": {
-              "name": "Creador",
-              "expressions": {
-                "createButton": {
-                  "palette_params": {
-                    "Pin": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "createLed": {
-                  "palette_params": {
-                    "Pin": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "pinMode": {
-                  "palette_params": {
-                    "pin": {
-                      "type": "Número"
-                    },
-                    "mode": {
-                      "type": "Cadena"
-                    }
-                  }
-                }
-              }
-            },
-            "circuit": {
-              "name": "Circuito",
-              "expressions": {
-                "isPressed": {
-                  "return_value": "Booleano"
-                },
-                "buzzer.frequency": {
-                  "palette_params": {
-                    "frequency": {
-                      "type": "número"
-                    },
-                    "duration": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "buzzer.note": {
-                  "palette_params": {
-                    "duration": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "buzzer.play": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "buzzer.playNotes": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "buzzer.playSong": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "blink": {
-                  "palette_params": {
-                    "interval": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "color": {
-                  "palette_params": {
-                    "red": {
-                      "type": "número"
-                    },
-                    "green": {
-                      "type": "número"
-                    },
-                    "blue": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "intensity": {
-                  "palette_params": {
-                    "brightness": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "pulse": {
-                  "palette_params": {
-                    "interval": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "led.blink": {
-                  "palette_params": {
-                    "interval": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "led.pulse": {
-                  "palette_params": {
-                    "interval": {
-                      "type": "número"
-                    }
-                  }
-                },
-                "toggleSwitch.isOpen": {
-                  "return_value": "Booleano"
-                }
-              }
-            },
-            "micro_bit": {
-              "expressions": {
-                "ledScreen.off": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "ledScreen.on": {
-                  "examples": {
-                    "Four Corners": {
-                      "name": "Cuatro Esquinas"
-                    }
-                  },
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "ledScreen.scrollNumber": {
-                  "palette_params": {
-                    "number": {
-                      "type": "Número"
-                    }
-                  }
-                },
-                "ledScreen.scrollString": {
-                  "palette_params": {
-                    "String": {
-                      "type": "Cadena"
-                    }
-                  }
-                },
-                "ledScreen.toggle": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Número"
-                    },
-                    "y": {
-                      "type": "Número"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "spritelab": {
-          "name": "Laboratorio de Sprites",
-          "description": "El Laboratorio de Sprite es un entorno de programación basado en Blockly en el que se pueden crear proyectos interactivos.",
-          "categories": {
-            "sprites": {
-              "name": "Sprites"
-            },
-            "world": {
-              "name": "Mundo"
-            },
-            "location": {
-              "name": "Ubicaciones"
-            },
-            "actions": {
-              "name": "Acciones"
-            },
-            "events": {
-              "name": "Eventos"
-            },
-            "behaviors": {
-              "name": "Comportamientos"
-            },
-            "loops": {
-              "name": "Bucles"
-            },
-            "variables": {
+              },
               "name": "Variables"
-            },
-            "math": {
-              "name": "Matemáticas"
-            },
-            "logic": {
-              "name": "Lógica"
-            },
-            "functions": {
-              "name": "Funciones"
-            },
-            "text": {
-              "name": "Texto"
-            },
-            "comments": {
-              "name": "Comentario"
             }
-          }
+          },
+          "description": "El Laboratorio de Juegos es un entorno de programación donde puedes crear emocionantes juegos y animaciones. Dibuja tus propios personajes, programa con bloques o JavaScript para que funcione, y luego comparte tu juego en cuestión de segundos.",
+          "name": "Laboratorio de Juegos"
         },
         "javalab": {
-          "name": "Laboratorio Java",
           "categories": {
-            "java_lab_shortcuts": {
-              "name": "Atajos del Laboratorio Java"
+            "control_structures": {
+              "name": "Estructuras de Control"
+            },
+            "data_structures": {
+              "name": "Estructuras de datos"
             },
             "general": {
               "name": "Fundamentos de Java"
             },
-            "org_code_theater": {
-              "name": "org.code.theater"
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_lab_shortcuts": {
+              "name": "Atajos del Laboratorio Java"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "java_util": {
+              "name": "java.util"
             },
             "org_code_media": {
               "name": "org.code.media"
@@ -2020,22 +1965,77 @@
             "org_code_neighborhood": {
               "name": "org.code.neighborhood"
             },
-            "java_io": {
-              "name": "java.io"
-            },
-            "java_util": {
-              "name": "java.util"
-            },
-            "java_lang": {
-              "name": "java.lang"
-            },
-            "control_structures": {
-              "name": "Estructuras de Control"
-            },
-            "data_structures": {
-              "name": "Estructuras de datos"
+            "org_code_theater": {
+              "name": "org.code.theater"
             }
-          }
+          },
+          "name": "Laboratorio Java"
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "Acciones"
+            },
+            "behaviors": {
+              "name": "Comportamientos"
+            },
+            "comments": {
+              "name": "Comentario"
+            },
+            "events": {
+              "name": "Eventos"
+            },
+            "functions": {
+              "name": "Funciones"
+            },
+            "location": {
+              "name": "Ubicaciones"
+            },
+            "logic": {
+              "name": "Lógica"
+            },
+            "loops": {
+              "name": "Bucles"
+            },
+            "math": {
+              "name": "Matemáticas"
+            },
+            "sprites": {
+              "name": "Sprites"
+            },
+            "text": {
+              "name": "Texto"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "world": {
+              "name": "Mundo"
+            }
+          },
+          "description": "El Laboratorio de Sprite es un entorno de programación basado en Blockly en el que se pueden crear proyectos interactivos.",
+          "name": "Laboratorio de Sprites"
+        },
+        "weblab": {
+          "categories": {
+            "css_properties": {
+              "name": "Propiedad CSS"
+            },
+            "html_tags": {
+              "expressions": {
+                "comment": {
+                  "examples": {
+                    "": {
+                      "description": "Usando comentarios como recordatorios3"
+                    }
+                  }
+                }
+              },
+              "name": "Etiquetas HTML"
+            }
+          },
+          "description": "Editor web de HTML/CSS",
+          "name": "Web Lab"
         }
       }
     }

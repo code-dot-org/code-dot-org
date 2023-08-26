@@ -2,35 +2,34 @@
   "et-EE": {
     "data": {
       "course_offerings": {
-        "csp": "Arvutiteaduse põhiprintsiibid",
-        "csa": "Arvutiteadus A",
         "20-hour": "Kiire sissejuhatus CS kursusele",
-        "flappy": "Flappy kood",
-        "jigsaw": "Pusle",
         "algebra": "Arvutiteadus algebras",
         "aquatic": "Minecraft: Voyage Aquatic",
         "artist": "Kunstnik",
-        "basketball": "Vali meeskond ja tee korvpallimäng",
         "course1": "Kursus 1",
         "course2": "Kursus 2",
         "course3": "Kursus 3",
         "course4": "Kursus 4",
+        "csa": "Arvutiteadus A",
+        "csp": "Arvutiteaduse põhiprintsiibid",
         "dance-2019": "Tantsupidu (2019)",
         "dance-extras-2019": "Tantsi edasi (2019)",
+        "edit-code": "Muuda koodi",
+        "flappy": "Flappy kood",
         "frozen": "Kirjuta koodi Anna ja Elsa'ga",
         "gumball": "Gumballi Play Lab",
         "hero": "Minecraft: Kangelase teekond",
         "hourofcode": "Klassikaline labürint",
         "iceage": "Jääaja Play Lab",
         "infinity": "Disney Infinity Play Lab",
+        "jigsaw": "Pusle",
+        "k5-onlinepd": "Arvutiteaduse aluste õpetamine",
         "mc": "Minecrafti KoodiTund",
         "minecraft": "KoodiTund Minecraft Designer",
         "playlab": "Play Lab",
-        "sports": "Tee oma spordimäng",
-        "k5-onlinepd": "Arvutiteaduse aluste õpetamine",
-        "edit-code": "Muuda koodi",
-        "step": "samm",
-        "soccer": "jalgpall"
+        "soccer": "jalgpall",
+        "starwars": "Star Wars: galaktika loomine koodiga – (JavaScript)",
+        "step": "samm"
       }
     }
   }

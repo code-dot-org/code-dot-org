@@ -1,9 +1,9 @@
 {
   "absolute": "giá trị tuyệt đối",
+  "agentDiamondPathCongrats": "Xin chúc mừng, bạn tìm thấy đường dẫn kim cương! Đến thời điểm hiện tại bạn đã được thu thập {count, plural,one {1 kim cương}other {# kim cương}}!",
   "agentGenericFailureMessage": "Hãy tiếp tục lập trình! Nhớ hãy sử dụng Đặc vụ để được trợ giúp.",
   "agentTooFewBlocksFailureMessage": "Hãy thử thêm chỉ 1 khối lệnh vào thời điểm Đặc vụ tới được đúng chỗ.",
   "at": "vào",
-  "agentDiamondPathCongrats": "Xin chúc mừng, bạn tìm thấy đường dẫn kim cương! Đến thời điểm hiện tại bạn đã được thu thập {count, plural,one {1 kim cương}other {# kim cương}}!",
   "blockActionAdd": "thêm",
   "blockActionAttack": "tấn công",
   "blockActionClone": "nhân bản các khối lệnh",

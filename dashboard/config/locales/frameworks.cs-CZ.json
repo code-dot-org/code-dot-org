@@ -2,14 +2,11 @@
   "cs-CZ": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "Standardy informatiky CSTA K-12 (2017)"
+        "ai4k12-2021": {
+          "name": "AI4K12 Vnitrostátní pokyny 2021"
         },
-        "csp2021": {
-          "name": "Principy informatiky Konceptuální framework"
-        },
-        "csta2011": {
-          "name": "Normy počítačových věd CSTA K-12 (2011)"
+        "c3ss": {
+          "name": "C3 Standardy sociálních studií"
         },
         "ccela": {
           "name": "Obecné základní normy umění v anglickém jazyce"
@@ -17,8 +14,23 @@
         "ccmath": {
           "name": "Obecné základní normy matematiky"
         },
+        "csa": {
+          "name": "Koncepční rámec ČSA"
+        },
+        "csp2021": {
+          "name": "Principy informatiky Konceptuální framework"
+        },
+        "csta": {
+          "name": "Standardy informatiky CSTA K-12 (2017)"
+        },
+        "csta2011": {
+          "name": "Normy počítačových věd CSTA K-12 (2011)"
+        },
         "iste": {
           "name": "Normy ISTE pro studenty"
+        },
+        "ngss": {
+          "name": "Vědecké standardy nové generace"
         }
       }
     }

@@ -53,6 +53,7 @@ gl:
         finish_sign_up_subheader_provider_markdown: 'Completa a seguinte información para acabar de crear unha conta de Code.org con **%{provider}** para **%{email}**.'
         error:
           future: non pode estar no futuro
+        us_state: 'Estado'
   beta: "beta"
   hello: "Ola, mundo"
   welcome_back: "Ola outra vez, %{name}"
@@ -159,6 +160,7 @@ gl:
     share_teacher_email_reg_partner_preference_yes: "Si"
     share_teacher_email_reg_partner_preference_no: "Non"
     share_teacher_email_reg_partner_preference_required: "Tes que especificar un e-mail de preferencia."
+    us_state: 'Estado'
   school_info:
     title: 'Información da escola (opcional)'
     school_country: 'País da escola'
@@ -707,6 +709,8 @@ gl:
       robotics:
         kodable: 'Kodable'
         other: "Outros"
+      workshop_course:
+        other: 'Outros'
       email_opt_in:
         opt_in_yes: 'Si'
         opt_in_no: 'Non'
@@ -719,3 +723,4 @@ gl:
   copy: 'Copiar'
   pixelation:
     binary: "Binario"
+

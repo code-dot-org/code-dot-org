@@ -12,7 +12,7 @@ title: Cómo organizar una Hora del Código - Empresas
 ## Conéctate con aulas y voluntarios locales para la Hora del Código
 Con Code.org, tus empleados pueden [conectarse]({{ urls/volunteer }}) con las aulas locales que imparten la Hora del Código, compartir su experiencia profesional en tecnología e inspirar a los estudiantes a aprender ciencias de la computación.
 
-[<button>Regístrate para ser voluntario</button>]({{ urls/volunteer }})
+[<button>Regístrate para ser voluntario!</button>]({{ urls/volunteer }})
 <br>
 <br>
 
@@ -47,7 +47,7 @@ Para tener una mejor experiencia con la Hora del Código, se recomienda contar c
 
 **¡Planifica con anticipación!** Haz lo siguiente antes de que comience tu evento:
 
-- Prueba actividades en computadoras o dispositivos. Asegúrate de que funcionen bien en los navegadores.
+- Prueba actividades en computadoras o dispositivos. Asegúrate de que funcionen bien en los navegadores con sonido y vídeo.
 - Entrega auriculares, o pide a los participantes que traigan los suyos, si es mejor que la actividad tenga sonido.
 - **¿No cuentas con suficientes dispositivos?** Utiliza [programación en pareja](https://www.youtube.com/watch?v=vgkahOzFH2Q). Al formar equipos, los participantes se ayudan entre sí y dependen menos del organizador. Además verán que las ciencias de la computación son una actividad social y colaborativa.
 - **¿El ancho de banda es bajo?** Planifica mostrar videos en el frente de la clase, para que el alumno no tenga que descargarlos individualmente. O pruebe las actividades desconectadas/sin conexión.
@@ -73,7 +73,7 @@ Para dar inicio a la Hora del Código, inspira a los participantes y habla acerc
 ## 6. ¡A programar!
 **Involucra a los participantes en la actividad**
 
-- Escribe el enlace al tutorial en el pizarrón. Busca el enlace que aparece en la [información de la actividad seleccionada]({{ urls/learn }}) debajo del número de participantes.
+- Escribe el enlace al tutorial en la pizarra blanca. Busca el enlace que aparece en la [información de la actividad seleccionada]({{ urls/learn }}) debajo del número de participantes.
 - Para los estudiantes mas jóvenes, carga la página de la actividad con antelación o guárdala como favorita.
 
 **Si los participantes encuentran dificultades, está bien responder:**

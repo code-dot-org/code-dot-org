@@ -64,9 +64,9 @@ export default function QuickAssignTableHocPl({
 
   /*
   Takes in an tableIndex (0, 1, 2) and returns the corresponding reconstructed object
-  of that slice of course offerings.
+  of that collection of course offerings.
   For example: if HOC has 6 headers, calling this with tableIndex 1 (the middle table)
-  will return an object containing courseOfferings for header indexes 2-3.
+  will return an object containing courseOfferings for header indexes 1 and 4.
   If called with 8 headers, the first two tables will be given one additional header.
   */
   const retrieveTableSplit = tableIndex => {

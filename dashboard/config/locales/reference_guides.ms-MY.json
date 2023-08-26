@@ -5,11 +5,17 @@
         "csd-2022/accelerometer-events": {
           "display_name": "Peristiwa Accelerometer"
         },
+        "csd-2022/app-lab": {
+          "display_name": "Makmal Aplikasi"
+        },
         "csd-2022/applab-overview": {
           "display_name": "Gambaran Keseluruhan"
         },
         "csd-2022/board-events": {
           "display_name": "Acara Papan"
+        },
+        "csd-2022/circuit-playground": {
+          "display_name": "Gambaran Keseluruhan Circuit Playground"
         },
         "csd-2022/css-overview": {
           "display_name": "Gambaran Keseluruhan"
@@ -17,14 +23,23 @@
         "csd-2022/design-mode": {
           "display_name": "Mod Reka Bentuk"
         },
+        "csd-2022/for-loops": {
+          "display_name": "Untuk Gelung"
+        },
         "csd-2022/functions": {
           "display_name": "Fungsi"
+        },
+        "csd-2022/game-lab": {
+          "display_name": "Makmal Permainan"
         },
         "csd-2022/game-lab-overview": {
           "display_name": "Gambaran Keseluruhan"
         },
         "csd-2022/html-overview": {
           "display_name": "Gambaran Keseluruhan"
+        },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Pengenalan kepada Makmal AI"
         },
         "csd-2022/javascript": {
           "display_name": "JavaScript"
@@ -41,6 +56,9 @@
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Gambaran Keseluruhan"
         },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Kad Model di Makmal AI"
+        },
         "csd-2022/other": {
           "display_name": "Lain-lain"
         },
@@ -53,6 +71,12 @@
         "csd-2022/playing-notes": {
           "display_name": "Bermain Nota"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Proses Penyelesaian Masalah"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Proses Penyelesaian Masalah"
+        },
         "csd-2022/sprite-properties": {
           "display_name": "Sifat Peperi"
         },
@@ -62,6 +86,9 @@
         "csd-2022/variables": {
           "display_name": "Pemboleh ubah"
         },
+        "csd-2022/velocity": {
+          "display_name": "Halaju"
+        },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "Halaju dan Corak Kaunter"
         },
@@ -69,7 +96,7 @@
           "display_name": "Makmal Web"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+          "content": "[][0]"
         }
       }
     }

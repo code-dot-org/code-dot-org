@@ -641,6 +641,8 @@ bs:
       robotics:
         kodable: 'Kodable'
         other: "Ostalo"
+      workshop_course:
+        other: 'Ostalo'
       email_opt_in:
         opt_in_yes: 'Da'
         opt_in_no: 'Ne'
@@ -649,3 +651,4 @@ bs:
   copy: 'Kopiraj'
   pixelation:
     binary: "Binarno"
+

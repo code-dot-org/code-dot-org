@@ -2,6 +2,9 @@
   "km-KH": {
     "data": {
       "reference_guides": {
+        "csd-2022/app-lab": {
+          "display_name": "មន្ទីរពិសោធន៍កម្មវិធី​"
+        },
         "csd-2022/applab-overview": {
           "display_name": "ទិដ្ឋភាពទូទៅ "
         },
@@ -19,6 +22,9 @@
         },
         "csd-2022/functions": {
           "display_name": "អនុ​គមន៍"
+        },
+        "csd-2022/game-lab": {
+          "display_name": "មន្ទីរពិសោធន៍ហ្គេម"
         },
         "csd-2022/game-lab-overview": {
           "display_name": "ទិដ្ឋភាពទូទៅ "
@@ -62,6 +68,9 @@
         "csd-2022/sprite-properties": {
           "display_name": "លក្ខណៈសម្បត្តិនៃ sprite"
         },
+        "csd-2022/sprites": {
+          "display_name": "Sprites"
+        },
         "csd-2022/the-draw-loop": {
           "display_name": "ការគូររង្វិលជុំដដែលៗ"
         },
@@ -75,7 +84,7 @@
           "display_name": "បន្ទប់វេប"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+          "content": "[][0]"
         }
       }
     }

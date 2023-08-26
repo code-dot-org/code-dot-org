@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:57:34.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -31,7 +36,7 @@
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "code_functions": {
       "draw": null,
@@ -106,20 +111,15 @@
     "contained_level_names": [
       "CSD web conditionals predict contained_2023"
     ],
-    "start_blocks": "var finishLine = createSprite(40, 200);\r\nfinishLine.setAnimation(\"finish_line\");\r\n\r\nvar raceCar = createSprite(400, 200);\r\nraceCar.setAnimation(\"race_car\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update\r\n  raceCar.x = raceCar.x - 2;\r\n  if (raceCar.x < 100) {\r\n    text(\"THE ORANGE CAR IS THE WINNER!\",100,100);\r\n  }\r\n  // Draw Animations\r\n  drawSprites();\r\n}",
+    "start_blocks": "var finishLine = createSprite(40, 200);\r\nfinishLine.setAnimation(\"finish_line\");\r\n\r\nvar raceCar = createSprite(400, 200);\r\nraceCar.setAnimation(\"race_car\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update\r\n  raceCar.x = raceCar.x - 2;\r\n  if (raceCar.x < finishLine.x) {\r\n    text(\"THE ORANGE CAR IS THE WINNER!\",100,100);\r\n  }\r\n  // Draw Animations\r\n  drawSprites();\r\n}",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"finish_line\",\r\n    \"6adbac7a-0e3f-4640-ae37-54a94a97d542\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"finish_line\": {\r\n      \"name\": \"finish_line\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/hUob3tuGZ6sV-ny5a5kcQw/finish_line.png?version=AaWAlmNEIOliNXVQqza3.zjoW1WEgILe\",\r\n      \"frameSize\": {\r\n        \"x\": 81,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"AaWAlmNEIOliNXVQqza3.zjoW1WEgILe\"\r\n    },\r\n    \"6adbac7a-0e3f-4640-ae37-54a94a97d542\": {\r\n      \"name\": \"race_car\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/hUob3tuGZ6sV-ny5a5kcQw/6adbac7a-0e3f-4640-ae37-54a94a97d542.png?version=e3pbmOdctna0bVL0xyJ58727_PqYN_EI\",\r\n      \"frameSize\": {\r\n        \"x\": 131,\r\n        \"y\": 71\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"e3pbmOdctna0bVL0xyJ58727_PqYN_EI\"\r\n    }\r\n  }\r\n}",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:57:34.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:34.783+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - conditionals - first conditional_2022\\\"\"],\"cloned_from\":\"CSD U3 - conditionals - first conditional_2022\"},{\"changed_at\":\"2023-01-13 19:21:17 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-13 19:24:10 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-13 19:24:45 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-14 23:44:31 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:34.783+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - conditionals - first conditional_2022\\\"\"],\"cloned_from\":\"CSD U3 - conditionals - first conditional_2022\"},{\"changed_at\":\"2023-01-13 19:21:17 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-13 19:24:10 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-13 19:24:45 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-14 23:44:31 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 22:30:46 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:32:05 +0000\",\"changed\":[\"all_animations_single_frame\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

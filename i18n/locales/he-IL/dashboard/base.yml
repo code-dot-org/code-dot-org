@@ -60,6 +60,7 @@ he:
         reset_password_token: "הקישור לאיפוס הסיסמה שעקבת אחריו"
         error:
           future: לא יכול להיות בעתיד
+        us_state: 'איזורי'
   beta: "בטא"
   hello: "הי עולם"
   welcome_back: "ברוך שובך, %{name}"
@@ -69,6 +70,7 @@ he:
   unsubmit: בטל הגשה
   previous_page: דף קודם
   next_page: הדף הבא
+  next_level: לשלב הבא
   next_resource: המשאב הבא
   cancel: "בטל"
   okay: "בסדר"
@@ -169,6 +171,7 @@ he:
     share_teacher_email_reg_partner_preference_yes: "כן"
     share_teacher_email_reg_partner_preference_no: "לא"
     share_teacher_email_reg_partner_preference_required: "עליך לציין העדפה של דואר אלקטרוני."
+    us_state: 'איזורי'
   school_info:
     title: 'מידע על בית הספר (רשות)'
     school_country: 'ארץ בית הספר'
@@ -358,7 +361,9 @@ he:
       artist_k1: 'האמן (טרום-קריאה)'
       basketball: 'כדורסל'
       bounce: 'להקפיץ'
+      calc: 'Calc'
       dance: 'מסיבת ריקודים'
+      eval: 'הערכה'
       flappy: 'פלאפי'
       frozen: 'לשבור את הקרח'
       gamelab: 'מעבדת המשחקים'
@@ -373,8 +378,10 @@ he:
       minecraft_hero: 'גיבור מיינקראפט'
       playlab: 'מעבדת הצעצועים'
       playlab_k1: 'מעבדת הצעצועים (טרום-קריאה)'
+      poetry: 'שירה'
       poetry_hoc: 'אומנות השירה'
       scratch: 'סקראצ'''
+      sports: 'ספורט'
       starwars: 'מלחמת הכוכבים'
       loading: 'טוען...'
       weblab: 'מעבדת האתרים'
@@ -638,6 +645,8 @@ he:
       body: "תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך."
     poem-art:
       title: 'אומנות השירה'
+    sports:
+      title: "ספורט"
     starwars:
       title: "מלחמת הכוכבים"
     text-compression:
@@ -974,6 +983,8 @@ he:
         microbit: 'מיקרוביט'
         raspberry: 'Raspberry Pi'
         other: "אחר"
+      workshop_course:
+        other: 'אחר'
       email_opt_in:
         opt_in_yes: 'כן'
         opt_in_no: 'לא'
@@ -981,7 +992,9 @@ he:
   course_offering:
     headers:
       minecraft: 'מיינקראפט'
+      sports: 'ספורט'
       csf: 'יסודות מדעי המחשב'
+      csc: 'חיבורי CS'
   cookie_banner:
     more_information: "הצג את מדיניות הפרטיות של Code.org."
     accept: 'מסכים'
@@ -1006,3 +1019,4 @@ he:
     image_height: "גובה תמונה"
     binary: "בינארי"
     hexadecimal: "בסיס 16"
+

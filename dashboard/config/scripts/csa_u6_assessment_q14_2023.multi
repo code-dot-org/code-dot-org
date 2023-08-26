@@ -24,3 +24,8 @@ What is printed as a result of executing the code segment?
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The code segment iterates over the elements in `wordList` and counts the number of words that contain the letter `"a"`.
+
+The elements `"apple"`, `"banana"`, `"orange"`, and `"pear"` all contain the letter `"a"`, so `count` will be `4`.
+MARKDOWN

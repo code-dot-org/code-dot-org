@@ -2,28 +2,56 @@
   "mk-MK": {
     "data": {
       "vocabularies": {
-        "function/hero/unversioned": {
+        "input/csd/2021": {
+          "word": "Влез"
+        },
+        "variable/csd/2021": {
+          "word": "Променлива"
+        },
+        "function/csd/2021": {
           "word": "Функција"
         },
-        "code/poem-art/2021": {
-          "word": "Код"
+        "function/coursee/2021": {
+          "word": "Функција"
         },
-        "code/artist/unversioned": {
-          "word": "Код"
+        "define/coursee/2021": {
+          "word": "Дефинирајте"
         },
-        "loops/aquatic/unversioned": {
-          "word": "Лупови"
+        "variable/coursef/2021": {
+          "word": "Променлива"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "input/coursef/2021": {
+          "word": "Влез"
         },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "define/coursef/2021": {
+          "word": "Дефинирајте"
         },
-        "code/sports/unversioned": {
-          "word": "Код"
+        "function/express/2021": {
+          "word": "Функција"
+        },
+        "variable/express/2021": {
+          "word": "Променлива"
+        },
+        "define/express/2021": {
+          "word": "Дефинирајте"
+        },
+        "input/csd/2022": {
+          "word": "Влез"
+        },
+        "variable/csd/2022": {
+          "word": "Променлива"
+        },
+        "function/csd/2022": {
+          "word": "Функција"
+        },
+        "data/coursec/2022": {
+          "word": "Податоци"
+        },
+        "function/coursee/2022": {
+          "word": "Функција"
+        },
+        "define/coursee/2022": {
+          "word": "Дефинирајте"
         },
         "variable/coursef/2022": {
           "word": "Променлива"
@@ -32,12 +60,6 @@
           "word": "Влез"
         },
         "define/coursef/2022": {
-          "word": "Дефинирајте"
-        },
-        "function/coursee/2022": {
-          "word": "Функција"
-        },
-        "define/coursee/2022": {
           "word": "Дефинирајте"
         },
         "function/express/2022": {
@@ -49,17 +71,28 @@
         "define/express/2022": {
           "word": "Дефинирајте"
         },
-        "data/coursec/2022": {
-          "word": "Податоци"
+        "loops/aquatic/unversioned": {
+          "word": "Лупови"
         },
-        "input/csd/2022": {
-          "word": "Влез"
+        "code/artist/unversioned": {
+          "word": "Код"
         },
-        "variable/csd/2022": {
-          "word": "Променлива"
-        },
-        "function/csd/2022": {
+        "function/hero/unversioned": {
           "word": "Функција"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/poem-art/2021": {
+          "word": "Код"
+        },
+        "code/sports/unversioned": {
+          "word": "Код"
         },
         "code/poem-art/unversioned": {
           "word": "Код",
@@ -80,39 +113,6 @@
         "line/poem-art/unversioned": {
           "word": "",
           "definition": ""
-        },
-        "variable/coursef/2021": {
-          "word": "Променлива"
-        },
-        "input/coursef/2021": {
-          "word": "Влез"
-        },
-        "define/coursef/2021": {
-          "word": "Дефинирајте"
-        },
-        "function/express/2021": {
-          "word": "Функција"
-        },
-        "variable/express/2021": {
-          "word": "Променлива"
-        },
-        "define/express/2021": {
-          "word": "Дефинирајте"
-        },
-        "function/coursee/2021": {
-          "word": "Функција"
-        },
-        "define/coursee/2021": {
-          "word": "Дефинирајте"
-        },
-        "variable/csd/2021": {
-          "word": "Променлива"
-        },
-        "function/csd/2021": {
-          "word": "Функција"
-        },
-        "input/csd/2021": {
-          "word": "Влез"
         }
       }
     }

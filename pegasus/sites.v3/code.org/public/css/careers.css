@@ -13,6 +13,7 @@
   display: flex;
   margin-bottom: 32px;
   padding: 18px 24px;
+  gap: 1em;
 }
 
 .careers__banner h1,
@@ -32,7 +33,6 @@
 .careers__banner--faq i {
   color: #ffffff;
   font-size: 72px;
-  padding-right: 24px;
 }
 
 .careers-video {

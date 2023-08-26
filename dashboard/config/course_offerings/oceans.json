@@ -11,5 +11,10 @@
   "image": "https://images.code.org/58cc5271d85e017cf5030ea510ae2715-AI for Oceans.png",
   "cs_topic": "artificial_intelligence,data",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"ideal\",\"no_device\":\"incompatible\"}",
+  "description": "In this fun introduction to artificial intelligence, you train a real machine learning model to identify sea creatures and trash in the ocean. ",
+  "professional_learning_program": null,
+  "video": "https://www.youtube-nocookie.com/embed/KHbwOetbmbs/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=KHbwOetbmbs&wmode=transparent",
+  "published_date": "2019-12-01 05:00:00 UTC",
+  "self_paced_pl_course_offering_id": null
 }

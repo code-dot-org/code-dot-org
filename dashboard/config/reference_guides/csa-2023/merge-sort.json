@@ -4,6 +4,6 @@
   "course_offering_key": "csa",
   "parent_reference_guide_key": "Algorithms",
   "display_name": "Merge Sort",
-  "content": null,
+  "content": "A **merge sort** algorithm repeatedly breaks down a list into sublists until each sublist consists of a single element and merges those sorted sublists until it results into a sorted list.\n\n\n## Example\n\n```\n\npublic static void mergeSort(int[] elements) {\n  int n = elements.length;\n  int[] temp = new int[n];\n  mergeSortHelper(elements, 0, n − 1, temp);\n}\n\nprivate static void mergeSortHelper(int[] elements, int from, int to, int[] temp) {\n  if (from < to) {\n    int middle = (from + to) / 2;\n    mergeSortHelper(elements, from, middle, temp);\n    mergeSortHelper(elements, middle + 1, to, temp);\n    merge(elements, from, middle, to, temp);\n  }\n}\n```\n",
   "position": 4
 }

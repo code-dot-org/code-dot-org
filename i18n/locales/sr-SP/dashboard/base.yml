@@ -493,6 +493,8 @@ sr:
         other: "Други"
       robotics:
         other: "Други"
+      workshop_course:
+        other: 'Други'
       email_opt_in:
         opt_in_yes: 'Да'
         opt_in_no: 'не'
@@ -500,3 +502,4 @@ sr:
     accept: 'Слажем се'
   copy: 'Копирај'
   confirm: 'Потврди'
+

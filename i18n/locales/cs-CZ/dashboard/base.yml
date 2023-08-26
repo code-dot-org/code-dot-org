@@ -60,6 +60,7 @@ cs:
         reset_password_token: "Odkaz na obnovení hesla, který jsi použil/a."
         error:
           future: nemůže být v budoucnosti
+        us_state: 'Stát (USA)'
   beta: "beta"
   hello: "Ahoj světe"
   welcome_back: "Vítej zpět, %{name}"
@@ -69,6 +70,7 @@ cs:
   unsubmit: Neodesláno
   previous_page: Předchozí stránka
   next_page: Další strana
+  next_level: Další úroveň
   next_resource: Další zdroj
   done_with_module: Tenhle výukový modul mám splněný
   cancel: "Zrušit"
@@ -199,6 +201,7 @@ cs:
     parent_account_checkbox: "Jsem rodič nebo zákonný zástupce přihlašující se jménem svého dítěte."
     parent_account_email_progress_permission: "Smíme Vám příležitostně poslat e-mail s novinkami o pokroku a projektech Vašeho dítěte a s novinkami o jeho výuce a počítačové vědě? [(Viz naše zásady ochrany osobních údajů)](%{privacy_policy_url})"
     parent_account_email_label: "E-mail rodiče nebo zákonného zástupce"
+    us_state: 'Stát (USA)'
   school_info:
     title: 'Název školy (nepovinné)'
     school_country: 'Země školy'
@@ -270,6 +273,7 @@ cs:
   teacher_mailer:
     new_teacher_subject: 'Vítejte na Code.org!'
     delete_teacher_subject: 'Oznámení od Code.org: Váš účet byl odstraněn'
+    verified_teacher_subject: 'Code.org Ověření učitele - Úspěch'
   section:
     your_section:
       one: 'Tvá sekce:'
@@ -377,6 +381,7 @@ cs:
       help_us: "Pomozte nám"
       teach: "Učit"
       about: "O nás"
+      incubator: "Inkubátor"
       legal: "Ochrana osobních údajů a právní"
       legal_privacy: "Zásady ochrany osobních údajů"
       legal_cookie_notice: "Oznámení o souborech cookie"
@@ -454,7 +459,7 @@ cs:
     confirm:
       remove: 'Jsi si jist/á, že chceš odstranit tohoto učitele?'
     students:
-      dashboard: 'Přejít na přehled učitele'
+      dashboard: 'Přejít na učitelský ovládací panel'
     user_not_found: 'Učitel nebyl nalezen.'
     student_teacher_disassociated: 'Opustili jste sekci %{section_code} učitele %{teacher_name}.'
     panel:
@@ -609,6 +614,7 @@ cs:
     store: 'Obchod'
     cookie_notice: 'Oznámení o souborech cookie'
     view_code: 'Zobrazit kód'
+    locale_select: "Zvolte jazyk"
   reference_area:
     title: 'Potřebuješ pomoc?'
     subtitle: 'Podívej se na tato videa a tipy'
@@ -633,6 +639,8 @@ cs:
       applab_unsupported_tablet: "App Lab funguje nejlépe na stolním počítači nebo laptopu s klávesnicí a myší. Při používání tohoto nástroje na svém aktuálním zařízení můžete zaznamenat problémy."
       gamelab_unsupported_tablet: "Game Lab funguje nejlépe na stolním počítači nebo laptopu s myší a klávesnicí. Při používání tohoto nástroje na svém aktuálním zařízení můžete zaznamenat problémy."
       weblab_unsupported_locale_storage: "Při používání Web Lab v režimu soukromého prohlížení možná zaznamenáte problémy. Načtěte prosím svůj projekt znovu v normálním režimu. Omlouváme se za nepříjemnosti."
+  deprecation:
+    algebra_lab: "CS v osnovách a obsahu algebry je zastaralý. Během několika příštích měsíců, tato laboratoř už nebude k dispozici. Prosím, podívejte se na [Bootstrap: Algebra] (%{bootstrap_algebra_url}) namísto. [Zjistit více] (%{cs_algebra_url})."
   slow_loading: 'Trvá to déle než obvykle...'
   try_reloading: 'Zkus znovu načíst stránku'
   next_stage: 'Hotovo! Pokračuj do další fáze'
@@ -671,65 +679,139 @@ cs:
       body_short: "Navrhujte aplikace, tvořte funkční kód jako skládačku nebo pomocí JavaScriptu a sdílejte své aplikace během několika sekund."
       audience: 'Věk 13 +'
       cta: 'Jak na to'
+      image_alt: 'jeden, nach, králíček, nosení, jeden, raketa poháněný, backpack.'
+    applab-intro:
+      image_alt: 'Ruka klepá na střed obrazovky smartphonu. Světlo a jiskry vycházejí z obrazovky.'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Steve a Alex z Minecraftu se na tebe dívají.'
+    artist:
+      image_alt: 'jeden, cartoonish, osoba, majetek, jeden, obrovský, tužka, a, kreslení, jeden, triangle.'
+    conditionals:
+      image_alt: 'Dvě ruce míchání paluby hracích karet.'
+    course1:
+      image_alt: 'Code.org čmelák a oranžová ryba stojící před nějakým kódem.'
+    course2:
+      image_alt: 'jeden, koláž, o, code.org, hádanky, showing, jeden, nezkušený, průvodce, umělec, a, pomeranč, fish.'
+    course3:
+      image_alt: 'jeden, koláž, o, code.org, hádanky, showing, jeden, hra, zombie, a, ninja.'
+    course4:
+      image_alt: 'jeden, koláž, o, code.org, hádanky, showing, fotbal, mazlíčci, a, neurč. člen, artist.'
+    coursea:
+      image_alt: 'jeden, koláž, o, code.org, hádanky, showing, neurč. člen, slon, a, jeden, squirrel.'
+    courseb:
+      image_alt: 'jeden, koláž, o, code.org, hádanky, showing, neurč. člen, průzkumník, drahokamy, a, jeden, flower.'
+    coursec:
+      image_alt: 'Koláž hádanek Code.org ukazující veverku, binární čísla a červený pták ze hry Angry Birds.'
+    coursed:
+      image_alt: 'Koláž hádanek Code.org ukazující včela, květiny, med a zelené prase ze hry Angry Birds.'
+    coursee:
+      image_alt: 'jeden, koláž, o, code.org, hádanka, showing, jeden, osoba, majetek, jeden, lopata, dýně, sad, a, cow.'
+    coursef:
+      image_alt: 'jeden, koláž, o, code.org, hádanky, showing, barvitý, geometrický tvořit, jeden, červeň, pirát, a, neurč. člen, artist.'
     dance-2019:
       title: 'Taneční večírek'
+      image_alt: 'Šťastná kočka, lenost, a tanec žraloků.'
+    dance-2022:
+      image_alt: 'Zelený mimozemšťan a robot tančí se Saturnem v pozadí.'
     dance:
       title: 'Taneční večírek'
+      image_alt: 'Chladná kočka a šťastný žralok tančí na večírku.'
+    donate:
+      image_alt: 'jeden, dítě, pointing at, jeden, počítač na klín, chránit, showing, jeden, code.org, puzzle.'
+    elementary:
+      image_alt: 'jeden, čmelák, a, veverka, stálý, do, jeden, bojiště, před, jeden, rainbow.'
+    express:
+      image_alt: 'Rostliny vs zombie zombie a rostlina stojící vedle Flappy Bird.'
     flappy:
       title: 'Flappy'
       body: 'Chcete napsat vlastní hru za méně než 10 minut? Vyzkoušejte náš návod na hru Flappy Bird!'
+      image_alt: 'Žlutý pták létající mezi zelenými trubkami.'
     frozen:
       title: "Frozen"
+      image_alt: 'Anna a Elsa z filmu Frozen. Mezi nimi je obraz Anny, která kreslí hezký tvar v ledu pomocí svých bruslí.'
     gallery:
       title: "Galerie"
       body: "Zobrazit galerii app a uměleckých obrázků vytvořené našimi uživateli"
+      image_alt: 'Umělec kreslí spoustu kruhů a kočku, netopýr, a duch stojící v zemi zimní dovolené.'
     gamelab:
       title: "Game Lab"
       body: "Game Lab je programovací prostředí, kde můžete tvořit jednoduché animace a hry - s objekty a postavami, které interagují navzájem."
       audience: "Věk 13 +"
       cta: "Jak na to"
+      image_alt: 'mnoho, karikatura, národ i kdy živočichy, stálý, dále, jeden, chodník, a, úsměv.'
+    hello-world-food:
+      image_alt: 'Mnoho zvířat, mimozemšťanů a emodži obíhajících kolem Země.'
     hello-world:
       title: 'Ahoj, světe'
       body: 'Vyberte si jeden ze čtyř zábavných motivů a naprogramujte interaktivní postavičky ve světě, co si sami vytvoříte.'
     hero:
       title: "Minecraft"
       body: "Minecraft je zpět v Hodině kódu se zcela novou aktivitou! Procestuj Minecraft s kódem."
+      image_alt: 'Neurč. člen, železný golem, od, minecraft, stojící, před, neurč. člen, režijní pohled, o, anna, řešení, jeden, puzzle.'
     hoc-encryption:
       title: "Jednoduché šifrování"
       body: "Studenti se budou učit způsoby vytváření šifrovaných zpráv a prolamování šifer."
+      image_alt: 'Sloupcový graf frekvencí písmen v anglickém jazyce.'
     hoc:
       title: 'Klasické bludiště'
       body: 'Vyzkoušejte si základy informatiky. Miliony lidí to už zkusily.'
+      image_alt: 'jeden, koláž, o, podobenství, showing, kód, mark, zuckerberg, a, rozzlobený, birds.'
+    hourofcode:
+      image_alt: 'jeden, koláž, o, podobenství, showing, kód, mark, zuckerberg, a, rozzlobený, birds.'
     hoc2014:
       try_new_tutorial: 'Vyzkoušejte náš nový kurz Hodina kódu v beta verzi'
       try_frozen: 'Umělec s Annou a Elsa, od zmrazené'
     infinity:
       title: "Infinity Play Lab"
       body: "Použij Play Lab k vytvoření příběhu nebo hry s Disney Infinity postavami."
+      image_alt: 'Pět postav z Froze, Tangled, a Big Hero 6 stojící spolu.'
+    map:
+      image_alt: 'Šedý obraz Spojených států s asi 20 státy zvýrazněné fialovou barvou.'
+    mc_escape:
+      image_alt: 'Postava Minecraftu na sobě cylindr a monokl a otevírá truhlu s pokladem plnou smaragdů.'
+    mc:
+      image_alt: 'Anna a Steve z Minecraftu stojící před Code.org Minecraft puzzle.'
     minecraft:
       title: "Minecraft"
       body: "Prozkoumej svět Minecraftu pomocí kódu"
+      image_alt: 'Anna a Steve z Minecraftu stojící před Code.org Minecraft puzzle.'
     minecraft2016:
       title: "Minecraft"
       body: "Naprogramuj zvířata a další postavy, vytvoř si svojí vlastní verzi Minecraftu."
+    oceans:
+      image_alt: 'Robot v oceánu skenování různých mořských tvorů.'
+    playlab:
+      image_alt: 'neurč. člen, podoba, koláž, showing, jeden, konzervativní, kočka, praštěný, pes, a, prehistorický, lasička.'
     poem-art:
       title: 'Básnické umění'
       body: 'Vyjádřete se napsáním kódu animovaných básní.'
+      image_alt: 'jeden, bederní chobotnice, performing, dále, jeden, stage.'
+    pre-express-2017:
+      image_alt: 'jeden, pes, a, jednorožec, stálý, před, jeden, strom, udělal, o, hádanka, pieces.'
+    pre-express-2018:
+      image_alt: 'jeden, pes, a, jednorožec, stálý, před, jeden, strom, udělal, o, hádanka, pieces.'
+    pre-express-2019:
+      image_alt: 'jeden, pes, a, jednorožec, stálý, před, jeden, strom, udělal, o, hádanka, pieces.'
+    pre-express:
+      image_alt: 'jeden, pes, a, jednorožec, stálý, před, jeden, strom, udělal, o, hádanka, pieces.'
     sports:
       title: "Sporty"
       body: "Vytvoř basketbalovou hru, nebo ji propojte s jinými sporty."
+      image_alt: 'Logo NBA a WNBA se zobrazí vedle fotbalu, fotbalový míč, hokejový puk, a basketbal.'
     starwars:
       title: "Hvězdné války"
+      image_alt: 'R2-D2, Leia, Rey a BB-8 stojící v poušti.'
     text-compression:
       title: "Komprese textu"
       body: "V této lekce studenti využijí pomůcku pro kompresi textu, aby stěstnali text pomocí nahrazení vzorů za symboly."
+      image_alt: 'Komprimovaný text nahrazením celých slov jediným symbolem.'
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab je programovací prostředí, kde můžete vytvářej jednoduché webové stránky pomocí HTML a CSS. Navrhněte své webové stránky a sdílejte je ve vteřině dál."
       audience: "Věk 13 +"
       cta: "Jak na to"
+      image_alt: 'Obrazovka počítače zobrazující kód HTML.'
     widgets:
       title: "Widgety"
       body: "Studenti mohou pomocí těchto digitálních nástrojů sami probádat různé koncepce z našich Principů počítačových vědy. Tyto widgety můžete užívat samostatně nebo vytvořit jednokoncepční lekci pro svou třídu."
@@ -773,7 +855,7 @@ cs:
     wrong_body: "Děkujeme vám za odeslání odpovědí."
     correct_title: "Děkuji"
     correct_body: "Děkujeme vám za odeslání odpovědí."
-    hide_survey_last_answer: "Tento průzkum je anonymní. Pro souhrné informace o výsledcích navštiv prosím nástěnku tvého učitele. Výsledky budou zobrazené pouze při účasti pěti žáků."
+    hide_survey_last_answer: "Tento průzkum je anonymní. Pro souhrné informace o výsledcích navštivte prosím učitelský ovládací panel. Výsledky budou zobrazeny pouze při účasti alespoň pěti žáků."
     survey_submission_thankyou: "Děkujeme Vám za podání tohoto průzkumu! Průzkum byl vyprázdněn tak, aby Vaše odpovědi byly anonymní. Pamatujte, že Váš učitel i tak uvidí odpovědi celé Vaší třídy, ale bez uvedení jmen."
   level_group-submittable:
     wrong_title: "Děkuji"
@@ -911,6 +993,7 @@ cs:
           age: 'Uveďte prosím věk'
           abuse_type: 'Odpovězte, prosím, jak tento obsah porušuje podmínky služby'
           abuse_detail: 'Uveďte podrobnosti o obsahu, který chcete ohlásit'
+          captcha: 'Chcete-li nahlásit tento obsah, vyplňte CAPTCHA.'
         abusive_url: 'Adresa URL hlášeného obsahu'
         abuse_type:
           question: 'Jak tento obsah porušujeje %{link_start}podmínky služeb%{link_end}?'
@@ -1046,6 +1129,8 @@ cs:
         not_listed: 'Preferovaný termín není uveden'
         none: 'Raději bych neodpovídal/a'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belize'
         canada: 'Kanada'
         chile: 'Chile'
         colombia: 'Kolumbie'
@@ -1102,6 +1187,7 @@ cs:
         csf_express: 'Základy informatiky (Zrychlené kurzy)'
         csd: 'Objevujeme informatiku'
         csp: 'Principy informatiky 2016-2017'
+        other: 'Ostatní'
         not_applicable: "Nemá význam"
       email_opt_in:
         opt_in_yes: 'Ano'
@@ -1125,11 +1211,23 @@ cs:
   courses_category: 'Kompletní kurzy'
   course_offering:
     headers:
+      favorites: 'Oblíbené'
+      labs_and_skills: 'Laboratoře a dovednosti'
       minecraft: 'Minecraft'
       hello_world: 'Ahoj, světe'
+      popular_media: 'Populární média'
       sports: 'Sporty'
+      express: 'Expresní'
       csf: 'Základy informatiky'
       csc: 'Napojení na počítačovou vědu'
+      year_long: 'Rok dlouhý'
+      csa_labs: 'Laboratoře ČSA'
+      self_paced: 'Vlastní tempo'
+      teacher_led: 'Vedený učitelem'
+      collections: 'Sbírky'
+      workshops_k5: 'K-5 Workshopy'
+      summer_workshops_612: '6-12 Letní workshopy'
+      virtual_academic_year_workshops_612: '6—12 Virtuálních seminářů akademického roku'
   cookie_banner:
     message: 'Pokud budete pokračovat v prohlížení naší stránky nebo kliknete na "Souhlasím", souhlasíte s uložením cookies na svém počítači nebo přístroji.'
     more_information: "Zobrazte si zásady ochrany soukromí pro Code.org."
@@ -1167,4 +1265,22 @@ cs:
       forbidden: "Uživatel nemůže aktualizovat stav uzamykatelnosti studenta"
   reset_predict_progress_button: "Vymazat odpověď"
   pixelation:
+    raw_format: "Raw Formát"
+    raw_format_alt: "Zobrazení bitů bez formátování"
+    readable_format: "Čitelný formát"
+    readable_format_alt: "Zobrazení bitů oddělených pixelem"
+    save_image: "Uložit obrázek"
+    actual_size: "Skutečná velikost"
+    image_file_format_header: "Formát souboru obrázku"
+    image_file_format_width: "Šířka: 1 byte"
+    image_file_format_height: "Výška: 1 byte"
+    image_file_format_bits_per_pixel: "Bity na pixel: 1 byte"
+    image_file_format_data_a: "n bitů dat pixelů"
+    image_file_format_data_b: "n = Šířka* Výška * Bity na pixel"
+    image_width: "Šířka obrázku"
+    image_height: "Výška obrázku"
+    bits_per_pixel_header: "Bity na pixel"
     binary: "Binární"
+    hexadecimal: "Hexadecimální"
+    pixel_format_header: "Formát pixelů"
+

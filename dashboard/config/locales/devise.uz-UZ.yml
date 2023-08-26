@@ -59,6 +59,28 @@ uz:
       unlocked: Hisobingiz muvaffaqiyatli qulfdan ochildi. Iltimos, davom etish uchun
         tizimga kiring.
   errors:
+    invitations:
+      edit:
+        header: Parolingizni o‘rnating
+        submit_button: Mening parolimni o‘rnat
+      invitation_removed: Taklifnomangiz o‘chirilgan.
+      invitation_token_invalid: Taqdim etilgan taklifnoma tokeni mavjud emas!
+      new:
+        header: Taklifnoma jo‘nating
+        submit_button: Taklifnoma jo‘natish
+      no_invitations_remaining: Hech qanday taklifnoma qolmadi
+      send_instructions: Taklifnoma %{email} ga jo‘natildi.
+      updated: Parolingiz muvaffaqiyatli o‘rnatildi. Endi tizimga kirishingiz mumkin.
+    mailer:
+      invitation_instructions:
+        accept: Taklifnomani qabul qilish
+        hello: Salom %{email}
+        ignore: Agar siz taklifnomani qabul qilishni istamasangiz, bu xabarni e’tiborsiz
+          qoldirishingiz mumkin.<br />Hisobingiz yuqoridagi link bo‘yicha kirib tasdiqlanmaguncha
+          faollashmaydi.
+        someone_invited_you: Kimdir sizni %{url}ga taklif qildi, siz quyidagi link
+          bo‘yicha taklifni qabul qilishingiz mumkin.
+        subject: Taklifnoma yuborish yo‘riqnomasi
     messages:
       already_confirmed: allaqachon tasdiqlangan, iltimos, tizimga qaytadan kirib
         ko‘ring
@@ -67,25 +89,3 @@ uz:
       expired: muddati tugagan, iltimos yangisini so‘rang
       not_found: topilmadi
       not_locked: qulflanmagan
-    invitations:
-      send_instructions: Taklifnoma %{email} ga jo‘natildi.
-      invitation_token_invalid: Taqdim etilgan taklifnoma tokeni mavjud emas!
-      updated: Parolingiz muvaffaqiyatli o‘rnatildi. Endi tizimga kirishingiz mumkin.
-      no_invitations_remaining: Hech qanday taklifnoma qolmadi
-      invitation_removed: Taklifnomangiz o‘chirilgan.
-      new:
-        header: Taklifnoma jo‘nating
-        submit_button: Taklifnoma jo‘natish
-      edit:
-        header: Parolingizni o‘rnating
-        submit_button: Mening parolimni o‘rnat
-    mailer:
-      invitation_instructions:
-        subject: Taklifnoma yuborish yo‘riqnomasi
-        hello: Salom %{email}
-        someone_invited_you: Kimdir sizni %{url}ga taklif qildi, siz quyidagi link
-          bo‘yicha taklifni qabul qilishingiz mumkin.
-        accept: Taklifnomani qabul qilish
-        ignore: Agar siz taklifnomani qabul qilishni istamasangiz, bu xabarni e’tiborsiz
-          qoldirishingiz mumkin.<br />Hisobingiz yuqoridagi link bo‘yicha kirib tasdiqlanmaguncha
-          faollashmaydi.

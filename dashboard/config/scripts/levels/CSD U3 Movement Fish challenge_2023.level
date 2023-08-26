@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:56:22.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -95,7 +100,7 @@
     "video_key": "csd_gamelab_sprites_2",
     "show_type_hints": "false",
     "thumbnail_url": "https://images.code.org/b806defa241eb5025cb39f99f3b2d306-image-1592496039159.2020-06-18 11_59_09.gif",
-    "long_instructions": "<img src=\"https://images.code.org/b806defa241eb5025cb39f99f3b2d306-image-1592496039159.2020-06-18 11_59_09.gif\" style=\"width:200px; float:right;\">\r\n\r\n# More fish!\r\n\r\nBefore you learned the counter pattern, you learned to set sprite properties, such as rotation, to random values to animate them. By setting the rotation of the fish to a random number, you can make them appear to wiggle slightly. This will make their movement animation more lifelike!\r\n\r\n# Do this:\r\n1) For each fish, randomly set its rotation inside the draw loop.\r\n\r\n**Hint:** To make it look as realistic as possible, choose a small range of negative and positive values.",
+    "long_instructions": "<img src=\"https://images.code.org/b806defa241eb5025cb39f99f3b2d306-image-1592496039159.2020-06-18 11_59_09.gif\" style=\"width:200px; float:right;\">\r\n\r\n# More fish!\r\n\r\nBefore you learned the counter pattern, you learned to set sprite properties, such as rotation, to random values to animate them. By setting the rotation of the fish to a random number, you can make them appear to wiggle slightly. This will make their movement animation more lifelike!\r\n\r\n# Do this:\r\n1) For each fish, use the counter pattern to move it across the screen similar to the example. \r\n2) For each fish, randomly set its rotation inside the draw loop.\r\n   - **Hint:** To make it look as realistic as possible, choose a small range of negative and positive values.",
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
@@ -105,13 +110,8 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:56:22.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:56:22.289+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Movement Fish challenge_2022\\\"\"],\"cloned_from\":\"CSD U3 Movement Fish challenge_2022\"},{\"changed_at\":\"2022-09-22 18:50:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-11 20:14:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-11 20:27:02 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:56:22.289+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Movement Fish challenge_2022\\\"\"],\"cloned_from\":\"CSD U3 Movement Fish challenge_2022\"},{\"changed_at\":\"2022-09-22 18:50:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-11 20:14:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-11 20:27:02 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 23:23:21 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

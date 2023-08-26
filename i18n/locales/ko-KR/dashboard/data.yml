@@ -27,17 +27,17 @@ ko:
         MazeEC: 미로 퍼즐
         Bounce: 바운스
         Flappy: 플래피 버드
-        Jigsaw: 직소퍼즐
+        Jigsaw: 직소 퍼즐
         MazeStep: 미로 단계별 모드
         Wordsearch: 단어 탐색
         Webapp: 앱 연구실
         ArtistEC: 화가
         TextMatch: 글자 맞추기
-        StudioEC: Play Lab
+        StudioEC: 플레이 랩
         Applab: 앱 연구실
         NetSim: 인터넷 시뮬레이터
         Custom: 예술가
-        CustomStudio: Play Lab
+        CustomStudio: 플레이 랩
         Gamelab: 게임 랩
         Spritelab: 스프라이트 연구소
     trophy:
@@ -353,11 +353,11 @@ ko:
         C4_unplugged_forloops: 반복을 위한
         C4_unplugged_parameters: 매개변수를 사용하는 음악 작곡
         C4_unplugged_binary: 2진
-        CSF_a_b_artist_loops: 아티스트 내 루프
+        CSF_a_b_artist_loops: 아티스트의 반복
         CSF_artist_angles: 아티스트 내 각도
-        CSF_collector_k1_blocks: 'CS 기초: 모으는 이'
-        CSF_collector_repeat_loops: 모으는 이 반복 루프
-        CSF_collector_text_blocks: 'CS 기초: 모으는 이'
+        CSF_collector_k1_blocks: 'CS 기초: 수집가'
+        CSF_collector_repeat_loops: 수집가와 반복 학습하기
+        CSF_collector_text_blocks: 'CS 기초: 수집가'
         CSF_create_functions: 함수 만들기
         CSF_debugging_k1_blocks: 디버깅
         CSF_debugging_text_blocks: 디버깅
@@ -454,14 +454,14 @@ ko:
         applab_hoc_onevent: 앱 랩 아워오브코드 - onEvent
         applab_hoc_designmode: 앱 랩 아워오브코드 - 디자인 모드
         applab_hoc_share: 앱 랩 아워오브코드 - 공유
-        mc_2017_agent_intro: 마인크래프트 아워오브코드 - 에이전트
-        mc_2017_repeat: 마인크래프트 아워오브코드- 반복 루프
-        mc_2017_functions: 마인크래프트 아워오브코드 - 함수
-        mc_2017_congratulations: 마인크래프트 Hour of Code - 축하합니다
-        mc_2017_puzzle_1: 마인크래프트 아워오브코드 - 에이전트
-        mc_2017_puzzle_3: 마인크래프트 아워오브코드- 반복 루프
-        mc_2017_puzzle_8: 마인크래프트 아워오브코드 - 함수
-        mc_2017_puzzle_12: 마인크래프트 아워오브코드 - 프리플레이
+        mc_2017_agent_intro: 마인크래프트 아워 오브 코드 - 에이전트
+        mc_2017_repeat: 마인크래프트 아워 오브 코드 - 반복 루프
+        mc_2017_functions: 마인크래프트 아워 오브 코드 - 함수
+        mc_2017_congratulations: 마인크래프트 아워 오브 코드 - 축하 인사
+        mc_2017_puzzle_1: 마인크래프트 아워 오브 코드 - 에이전트
+        mc_2017_puzzle_3: 마인크래프트 아워 오브 코드 - 반복 루프
+        mc_2017_puzzle_8: 마인크래프트 아워 오브 코드 - 함수
+        mc_2017_puzzle_12: 마인크래프트 아워 오브 코드 - 프리 플레이
         hint_videos_d_11_3_first: '힌트 비디오: D.11.3 퍼스트'
         hint_videos_d_11_3_last: '힌트 비디오: D.11.3 라스트'
         hint_videos_d_11_4_first: '힌트 비디오: D.11.4 퍼스트'
@@ -488,8 +488,8 @@ ko:
         CSF_bb8_loops_C-F: BB-8을 사용한 루프
         CSF_harvester_skinOverview_K-1: 수확인
         CSF_harvester_loops_K1: 수확인 내 루프
-        CSF_scrat_loops_K1: 아이스 에이지 내 루프
-        CSF_scrat_loops_CF: 아이스 에이지 내 루프
+        CSF_scrat_loops_K1: 아이스 에이지 속 반복
+        CSF_scrat_loops_CF: 아이스 에이지 속 반복
         CSF_if_allskins: If 블록
         CSF_ifelse_allskins: If/Else 블록 사용
         CSF_ifelseifelse_allskins: If/ElseIf/Else 블록 사용
@@ -502,10 +502,10 @@ ko:
         CDEF_Video_SpritesInAction: 스프라이트 인 액션
         CSF_SpriteLab_SpritesInAction_CDEF: 스프라이트 인 액션
         CSF_StarWars_ProjectIntro: 스타 워즈 프로젝트 소개
-        mc_2018_intro: '마인크래프트: 보야지 아쿠아틱 소개'
-        MC_2018_loops: '마인크래프트: 보야지 아쿠아틱 까지 반복'
-        mc_2018_conditionals: '마인크래프트: 보야지 아쿠아틱 조건문'
-        mc_2018_closing: '마인크래프트: 보야지 아쿠아틱 축하'
+        mc_2018_intro: '마인크래프트: 수중 항해 - 소개'
+        MC_2018_loops: '마인크래프트: 수중 항해 - ~까지 반복'
+        mc_2018_conditionals: '마인크래프트: 수중 항해 - 조건문'
+        mc_2018_closing: '마인크래프트: 수중 항해 - 축하 인사'
         hoc_dance_warmup: 댄스 파티 - 워밍 업
         hoc_dance_events: 댄스 파티 - 이벤트
         hoc_dance_properties: 댄스 파티 - 속성
@@ -625,7 +625,7 @@ ko:
         outbreak_outro: '발생 시뮬레이터: 프리플레이'
         CSA-PL-debugging-temp: 자바 연구소에서의 디버깅 소개 - 임시
         csd_app_lab_events: CSD 앱 연구소 이벤트
-        csd_u6_circuit_playground: 물리적 컴퓨팅
+        csd_u6_circuit_playground: 물리 컴퓨팅
         csd_u6_input_output: 인풋 및 아웃풋
         CSA-PL-for-loops: 자바 내 루프를 위하여
         CSA-PL-variables: 자바로 변수 만들기
@@ -646,7 +646,10 @@ ko:
         CSA-PL-Printing-in-Java: 자바로 인쇄
         CSA-PL-multi-selection-statements: 복수 선택 문
         CS_Changing_Everything: 컴퓨터 과학은 모든 것을 바꾸고 있습니다.  
+        csc_timecapsule_intro: 타임캡슐 코딩
         csd_sprite_properties: 스프라이트 속성
+        csc-starquilts-intro: 기하학적 별무늬 퀼트 코딩
+        csc-ecosystems-intro: 해양생태계 시뮬레이션
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'
@@ -720,8 +723,8 @@ ko:
         Infinity_repeat_callout: 여기로 '이동 블록'을 이동 시키세요
         craft_run_button_callout: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
         craft_drag_block_callout: '"앞으로 이동" 블록을 드래그해서 다른 블록 아래에 끼우세요'
-        craft_callout_preplaced: 여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요
-        craft_inside_repeat: 블록들을 이곳에 놓아서 행동을 반복하세요
-        craft_callout_preplaced_house: 이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?
+        craft_callout_preplaced: 여러분이 시작할 수 있도록 여기에 블록을 몇 개 놓아두었어요
+        craft_inside_repeat: 블록들을 이곳에 놓아서 작업을 반복하세요
+        craft_callout_preplaced_house: 이 코드는 집 짓기를 시작합니다. 끝낼 수 있나요?
         craft_what_is_iron: 이 철을 채굴하세요!
         craft_callout_moveforward: 이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?

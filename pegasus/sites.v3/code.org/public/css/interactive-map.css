@@ -14,8 +14,7 @@
 #infobox {
   text-align: center;
   float: right;
-  background-color: rgb(231,232,234);
-  color: dimgrey;
+  background-color: var(--neutral_dark10);
   padding: 20px;
   text-align: center;
   overflow: hidden;
@@ -51,7 +50,7 @@
 }
 
 .info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
-  color: white;
+  color: var(--neutral_white);
   cursor: pointer;
   text-decoration: underline;
 }
@@ -71,18 +70,16 @@
 }
 
 .icon-fact .fa-times-circle {
-  color: lightgray;
+  color: var(--neutral_dark20);
   font-size: 48px;
 }
 
 .fa-circle {
-  color: dimgray;
   font-size: 44px;
   padding-top: 2px;
 }
 
 .icon-fact .fa-check-circle {
-  color: dimgray;
   display: inline-block;
   font-size: 48px;
   vertical-align: middle;
@@ -102,17 +99,9 @@
   width: 80%;
 }
 
-.fact.subfact {
-  color: dimgrey;
-}
-
-.fact > a {
-  color: dimgrey;
-}
-
 #state-title {
   font-family: 'Gotham 7r', sans-serif;
-  color: #0094a3;
+  color: var(--brand_primary_dark);
   font-size: 38px;
   line-height: 44px;
 }
@@ -125,13 +114,7 @@
   clear: both;
   float: right;
   font-size: 12px;
-  line-height: 12px;
   text-align: center;
-  color: dimgrey;
-  opacity: 0.8;
+  color: var(--neutral_dark60);
   padding-top: 10px;
-}
-
-#sources a {
-  color: #7665a0;
 }

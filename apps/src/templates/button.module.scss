@@ -320,4 +320,19 @@ a:visited,
       background-color: unset;
     }
   }
+
+  &.rebrandedTextButton {
+    color: $brand_secondary_default;
+    font-size: 16px;
+    padding: 12px 16px;
+
+    &:hover {
+      color: $brand_secondary_dark;
+    }
+
+    &:focus {
+      @include focus-outline;
+      outline-offset: unset;
+    }
+  }
 }

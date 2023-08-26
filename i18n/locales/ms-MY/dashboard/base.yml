@@ -60,6 +60,7 @@ ms:
         reset_password_token: "Pautan tetapan semula kata laluan yang telah anda ikuti"
         error:
           future: tidak boleh ada di masa depan
+        us_state: 'Negeri'
   beta: "beta"
   hello: "Helo dunia"
   welcome_back: "Selamat datang kembali, % {nama}"
@@ -69,6 +70,7 @@ ms:
   unsubmit: Tidak diserahkan
   previous_page: Halaman sebelumnya
   next_page: Halaman seterusnya
+  next_level: Tahap seterusnya
   next_resource: Sumber seterusnya
   done_with_module: Selesai dengan Modul Pembelajaran ini
   cancel: "Batal"
@@ -199,6 +201,9 @@ ms:
     parent_account_checkbox: "Saya ibubapa/penjaga yang daftar bagi pihak anak saya"
     parent_account_email_progress_permission: "Bolehkah kami sekali-sekala e-mel anda kemaskini kemajuan dan projek anak anda, serta kemaskini kursus dan sains komputer mereka? [(Lihat polisi privasi kami)](%{privacy_policy_url})"
     parent_account_email_label: "E-mel Ibubapa/Penjaga"
+    us_state: 'Negeri'
+    us_state_dropdown_options:
+      other: "Saya tinggal di tempat yang tidak disenaraikan di sini"
   school_info:
     title: 'Maklumat Sekolah (pilihan)'
     school_country: 'Negara Sekolah'
@@ -261,6 +266,9 @@ ms:
   parent_mailer:
     student_associated_subject: 'Maklumat log masuk untuk Code.org'
     parent_email_added_subject: 'Selamat datang ke Code.org!'
+    parent_permission_request_subject: "Persetujuan ibu bapa diperlukan untuk anak anda mengakses ke Code.org"
+    parent_permission_reminder_subject: "Peringatan, persetujuan ibu bapa diperlukan untuk anak anda dapat mengakses ke Code.org"
+    parent_permission_confirmation_subject: "Terima kasih kerana meluluskan akses anak anda ke Code.org!"
   teacher_mailer:
     new_teacher_subject: 'Selamat datang ke Code.org!'
     delete_teacher_subject: 'Pemberitahuan Code.org: Akaun anda telah dipadamkan'
@@ -346,6 +354,7 @@ ms:
       sprite_lab_documentation: "Dokumentasi Lab Sprite"
       sprite_lab_tutorials: "Tutorial Sprite Lab"
       web_lab_documentation: "Dokumentasi Makmal Web"
+      project_beats_documentation: "Projek Beats Documentation"
       educate_overview: "Gambaran Keseluruhan Pendidik"
       educate_elementary: "Sekolah Rendah"
       educate_middle: "Sekolah Menengah Rendah"
@@ -372,6 +381,7 @@ ms:
       help_us: "Bantu Kami"
       teach: "Mengajar"
       about: "Tentang"
+      incubator: "Inkubator"
       legal: "Privasi & Undang-undang"
       legal_privacy: "Dasar Privasi"
       legal_cookie_notice: "Notis Kuki"
@@ -393,6 +403,7 @@ ms:
       navigator: 'Rakan kongsi'
       create: 'Buat'
       algebra_game: 'Algebra'
+      applab: 'Makmal Aplikasi'
       artist: 'Artis'
       artist_k1: 'Artis (Prapembaca)'
       basketball: 'Bola keranjang'
@@ -402,6 +413,7 @@ ms:
       eval: 'Eval'
       flappy: 'Flappy'
       frozen: 'Frozen'
+      gamelab: 'Makmal Permainan'
       gamelab_jr: 'Game Lab (beta)'
       gumball: 'The Amazing World of Gumball'
       iceage: 'Ice Age'
@@ -412,6 +424,7 @@ ms:
       minecraft_codebuilder: 'Minecraft: Sambungan Kod'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Wira Minecraft'
+      playlab: 'Main Makmal'
       playlab_k1: 'Play Lab (Pra-pembaca)'
       poetry: 'Puisi'
       poetry_hoc: 'Seni Puisi'
@@ -600,6 +613,7 @@ ms:
     store: 'Kedai'
     cookie_notice: 'Notis Kuki'
     view_code: 'Lihat Kod'
+    locale_select: "Pilih bahasa"
   reference_area:
     title: 'Perlu bantuan?'
     subtitle: 'Lihat video dan petunjuk ini'
@@ -624,6 +638,8 @@ ms:
       applab_unsupported_tablet: "App Lab berfungsi paling baik pada komputer meja atau komputer riba dengan tetikus dan papan kekunci. Anda mungkin mengalami masalah menggunakan alat ini pada peranti semasa anda."
       gamelab_unsupported_tablet: "Game Lab berfungsi paling baik pada komputer meja atau komputer riba dengan tetikus dan papan kekunci. Anda mungkin mengalami masalah menggunakan alat ini pada peranti semasa anda."
       weblab_unsupported_locale_storage: "Anda mungkin mengalami masalah menggunakan Web Lab dalam mod Pelayar Peribadi. Sila muat semula projek anda dalam mod biasa. Maaf atas kesulitan ini."
+  deprecation:
+    algebra_lab: "CS dalam kurikulum dan kandungan Algebra sedang ditamatkan. Dalam beberapa bulan akan datang, makmal ini tidak akan tersedia lagi. Sila lihat [Bootstrap: Algebra](%{bootstrap_algebra_url}) sebaliknya. [Ketahui Lebih Lanjut](%{cs_algebra_url})."
   slow_loading: 'Ini memakan masa lebih lama daripada biasa...'
   try_reloading: 'Cuba memuat semula halaman'
   next_stage: 'Selesai! Teruskan ke tahap seterusnya'
@@ -657,68 +673,144 @@ ms:
       unused: "Tahap yang tidak digunakan"
   upsell:
     applab:
+      title: 'Makmal Aplikasi'
       body: "App Lab ialah persekitaran pengaturcaraan di mana anda boleh membuat aplikasi mudah. Reka apl, kod dengan blok atau JavaScript untuk menjadikannya berfungsi, kemudian kongsi apl anda dalam beberapa saat."
       body_short: "Mereka bentuk aplikasi, kod dengan blok atau JavaScript untuk membuatkannya berfungsi, kemudian kongsi aplikasi anda dalam beberapa saat."
       audience: 'Umur 13+'
       cta: 'Ketahui lebih lanjut'
+      image_alt: 'Kelinci ungu memakai ransel berkuasa roket.'
+    applab-intro:
+      image_alt: 'Tangan mengetuk pusat skrin telefon pintar. Cahaya dan berkilau keluar dari skrin.'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Steve dan Alex dari Minecraft sedang melihat anda.'
+    artist:
+      image_alt: 'Orang kartun memegang pensil besar dan melukis segitiga.'
+    conditionals:
+      image_alt: 'Dua tangan shuffling dek bermain kad.'
+    course1:
+      image_alt: 'The Code.org bumble lebah dan ikan oren berdiri di hadapan beberapa kod.'
+    course2:
+      image_alt: 'Kolaj teka-teki Code.org menunjukkan wizard hijau, artis, dan ikan oren.'
+    course3:
+      image_alt: 'Kolaj teka-teki Code.org yang menunjukkan permainan, zombie, dan ninja.'
+    course4:
+      image_alt: 'Kolaj teka-teki Code.org yang menunjukkan bola sepak, haiwan peliharaan, dan artis.'
+    coursea:
+      image_alt: 'Kolaj teka-teki Code.org menunjukkan gajah dan tupai.'
+    courseb:
+      image_alt: 'Kolaj teka-teki Code.org yang menunjukkan penjelajah, permata, dan bunga.'
+    coursec:
+      image_alt: 'Kolaj teka-teki Code.org menunjukkan tupai, nombor binari, dan burung merah dari permainan Angry Birds.'
+    coursed:
+      image_alt: 'Kolaj teka-teki Code.org yang menunjukkan lebah, bunga, madu, dan seekor khinzir hijau dari permainan Angry Birds.'
+    coursee:
+      image_alt: 'Kolaj teka-teki Code.org menunjukkan seseorang yang memegang sekop, labu, kebun, dan lembu.'
+    coursef:
+      image_alt: 'Kolaj teka-teki Code.org yang menunjukkan bentuk geometri berwarna-warni, lanun merah, dan artis.'
     dance-2019:
       title: 'Majlis Tari-Menari'
+      image_alt: 'Kucing gembira, kemalasan, dan menari jerung.'
+    dance-2022:
+      image_alt: 'Seorang alien hijau dan robot menari dengan Saturnus di latar belakang.'
     dance:
       title: 'Majlis Tari-Menari'
+      image_alt: 'Kucing sejuk dan jerung gembira menari di pesta.'
+    donate:
+      image_alt: 'Seorang kanak-kanak menunjuk skrin komputer riba yang menunjukkan teka-teki Code.org.'
+    elementary:
+      image_alt: 'Lebah lebah dan tupai berdiri di padang di hadapan pelangi.'
+    express:
+      image_alt: 'Tumbuhan vs zombi zombie dan tumbuhan berdiri di sebelah Flappy Bird.'
     flappy:
       title: 'Kod Flappy'
       body: 'Anda mahu menulis permainan anda sendiri dalam masa kurang daripada 10 minit? Cuba tutorial Kod Flappy kami!'
+      image_alt: 'Burung kuning terbang di antara paip hijau.'
     frozen:
       title: "Frozen"
+      image_alt: 'Anna dan Elsa dari filem Frozen. Di antara mereka adalah imej Anna melukis bentuk yang cantik di dalam ais menggunakan skate ais beliau.'
     gallery:
       title: "Galeri"
       body: "Lihat galeri apl dan imej artis yang dibuat oleh pengguna kami"
+      image_alt: 'Seorang artis melukis banyak bulatan dan kucing, kelawar, dan hantu berdiri di tanah percutian musim sejuk.'
     gamelab:
+      title: "Makmal Permainan"
       body: "Game Lab ialah persekitaran pengaturcaraan yang anda boleh membuat animasi dan permainan mudah dengan menggunakan objek dan watak yang saling berinteraksi antara satu sama lain."
       audience: "Umur 13+"
       cta: "Ketahui lebih lanjut"
+      image_alt: 'Ramai orang kartun dan haiwan berdiri di kaki lima dan tersenyum.'
+    hello-world-food:
+      image_alt: 'Banyak haiwan, makhluk asing dan emoji yang mengorbit Bumi.'
     hello-world:
       title: 'Helo Dunia'
       body: 'Pilih daripada empat tema yang menyeronokkan untuk mengekodkan aksara interaktif dalam dunia yang anda cipta.'
     hero:
       title: "Minecraft"
       body: "Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi Minecraft dengan kod."
+      image_alt: 'Golem Besi dari Minecraft berdiri di hadapan pandangan overhead Anna menyelesaikan teka-teki.'
     hoc-encryption:
       title: "Penyulitan Mudah"
       body: "Pelajar akan mempelajari teknik mencipta dan merengkah mesej yang disulitkan."
+      image_alt: 'A graf bar frekuensi surat dalam bahasa Inggeris.'
     hoc:
       title: 'Pagar Sesat Klasik'
       body: 'Cuba asas sains komputer. Jutaan individu telah mencubanya.'
+      image_alt: 'Kolaj imej yang menunjukkan kod, Mark Zuckerberg, dan Angry Birds.'
+    hourofcode:
+      image_alt: 'Kolaj imej yang menunjukkan kod, Mark Zuckerberg, dan Angry Birds.'
     hoc2014:
       try_new_tutorial: 'Cuba tutorial Hour of Code baharu kami dalam versi beta'
       try_frozen: 'Artis bersama Anna dan Elsa, daripada Frozen'
     infinity:
       title: "Makmal Mainan Infiniti"
       body: "Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity."
+      image_alt: 'Lima watak dari Froze, Tangled, dan Big Hero 6 berdiri bersama.'
+    map:
+      image_alt: 'Imej kelabu Amerika Syarikat dengan kira-kira 20 negeri yang diserlahkan dengan warna ungu.'
+    mc_escape:
+      image_alt: 'Watak Minecraft memakai topi atas dan monocle sambil membuka peti harta karun yang penuh dengan zamrud.'
+    mc:
+      image_alt: 'Anna dan Steve dari Minecraft berdiri di hadapan teka-teki Minecraft Code.org.'
     minecraft:
       title: "Minecraft"
       body: "Terokai dunia Minecraft melalui pengekodan."
+      image_alt: 'Anna dan Steve dari Minecraft berdiri di hadapan teka-teki Minecraft Code.org.'
     minecraft2016:
       title: "Minecraft"
       body: "Program haiwan dan makhluk Minecraft lain dalam versi Minecraft anda sendiri."
+    oceans:
+      image_alt: 'Robot di lautan mengimbas pelbagai makhluk laut.'
+    playlab:
+      image_alt: 'Kolaj imej yang menunjukkan kucing biru, anjing bodoh, dan musang prasejarah.'
     poem-art:
       title: 'Seni Puisi'
       body: 'Ekspresikan diri anda! Gunakan kod untuk mencipta puisi animasi.'
+      image_alt: 'Sotong hipster tampil di atas pentas.'
+    pre-express-2017:
+      image_alt: 'Seekor anjing dan unicorn berdiri di hadapan pokok yang diperbuat daripada kepingan teka-teki.'
+    pre-express-2018:
+      image_alt: 'Seekor anjing dan unicorn berdiri di hadapan pokok yang diperbuat daripada kepingan teka-teki.'
+    pre-express-2019:
+      image_alt: 'Seekor anjing dan unicorn berdiri di hadapan pokok yang diperbuat daripada kepingan teka-teki.'
+    pre-express:
+      image_alt: 'Seekor anjing dan unicorn berdiri di hadapan pokok yang diperbuat daripada kepingan teka-teki.'
     sports:
       title: "Sukan"
       body: "Membuat permainan bola keranjang atau mencampur dan memadankan merentasi sukan."
+      image_alt: 'Logo NBA dan WNBA dipaparkan di sebelah bola sepak, bola sepak, keping hoki, dan bola keranjang.'
     starwars:
       title: "Star Wars"
+      image_alt: 'R2-D2, Leia, Rey, dan BB-8 berdiri di padang pasir.'
     text-compression:
       title: "Pemampatan Teks"
       body: "Dalam pelajaran ini, pelajar akan menggunakan Widget Pemampatan Teks untuk memampatkan teks dengan menggantikan corak dengan simbol."
+      image_alt: 'Teks yang dimampatkan dengan menggantikan keseluruhan perkataan dengan satu simbol.'
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab ialah persekitaran pengaturcaraan di mana anda boleh membuat halaman web mudah menggunakan HTML dan CSS. Reka halaman web anda dan kongsi tapak anda dalam beberapa saat."
       audience: "Umur 13+"
       cta: "Ketahui lebih lanjut"
+      image_alt: 'Skrin komputer memaparkan kod HTML.'
     widgets:
       title: "Widget"
       body: "Pelajar boleh meneroka konsep dari kursus Prinsip Sains Komputer kami secara langsung menggunakan alat digital ini. Gunakan widget sendiri, atau buat pelajaran konsep tunggal untuk kelas anda."
@@ -774,6 +866,8 @@ ms:
     submit-incomplete-body: "Anda meninggalkan beberapa pertanyaan tidak lengkap.  Anda tidak boleh mengedit penilaian anda selepas menyerahkannya.  Adakah anda pasti?"
     submit-complete-title: "Hantar penilaian anda"
     submit-complete-body: "Anda tidak boleh mengedit penilaian anda selepas menyerahkannya.  Adakah awak pasti?"
+  level_summary:
+    correct_answer: "Jawapan yang Betul"
   match:
     wrong_title: "Penyelesaian salah"
     wrong_body: "Penyelesaian yang anda masukkan tidak betul.  Sila cuba lagi!"
@@ -899,6 +993,7 @@ ms:
           age: 'Sila nyatakan umur'
           abuse_type: 'Sila jawab cara kandungan ini melanggar Syarat Perkhidmatan'
           abuse_detail: 'Sila berikan butiran mengenai kandungan yang anda laporkan'
+          captcha: 'Sila isi CAPTCHA untuk melaporkan kandungan ini.'
         abusive_url: 'URL kandungan yang dilaporkan'
         abuse_type:
           question: 'Bagaimanakah kandungan ini melanggar %{link_start}Syarat Perkhidmatan%{link_end}?'
@@ -1034,15 +1129,33 @@ ms:
         not_listed: 'Istilah pilihan tidak disenaraikan'
         none: 'Memilih untuk tidak menjawab'
       school_country:
+        australia: 'Australia'
+        barbados: 'Barbados'
+        belize: 'Belize'
+        brazil: 'Brazil'
         canada: 'Kanada'
         chile: 'Chile'
         colombia: 'Colombia'
+        dominican_republic: 'Republik Dominika'
+        india: 'India'
+        indonesia: 'Indonesia'
         israel: 'Israel'
+        jamaica: 'Jamaica'
+        kenya: 'Kenya'
         malaysia: 'Malaysia'
+        maldives: 'Maldives'
         mexico: 'Mexico'
+        mongolia: 'Mongolia'
+        new_zealand: 'New Zealand'
         paraguay: 'Paraguay'
+        portugal: 'Portugal'
+        slovakia: 'Slovakia'
+        south_korea: 'Korea Selatan'
+        spain: 'Sepanyol'
         thailand: 'Thailand'
+        trinidad_and_tobago: 'Trinidad dan Tobago'
         uzbekistan: 'Uzbekistan'
+        vietnam: 'Vietnam'
       ages:
         ages_under_6: '< 6 tahun'
         ages_7_8: '7-8 tahun'
@@ -1090,6 +1203,7 @@ ms:
         csf_express: 'Asas CS (Praekspres atau Ekspres)'
         csd: 'Penemuan CS'
         csp: 'Prinsip CS'
+        other: 'Lain-lain'
         not_applicable: "Tidak berkaitan"
       email_opt_in:
         opt_in_yes: 'Ya'
@@ -1113,11 +1227,23 @@ ms:
   courses_category: 'Semua Kursus'
   course_offering:
     headers:
+      favorites: 'Kegemaran'
+      labs_and_skills: 'Makmal dan Kemahiran'
       minecraft: 'Minecraft'
       hello_world: 'Helo Dunia'
+      popular_media: 'Media Popular'
       sports: 'Sukan'
+      express: 'Ekspres'
       csf: 'Asas CS'
       csc: 'Sambungan CS'
+      year_long: 'Tahun Panjang'
+      csa_labs: 'Makmal CSA'
+      self_paced: 'Sendiri'
+      teacher_led: 'Dipimpin Guru'
+      collections: 'Koleksi'
+      workshops_k5: 'Bengkel K-5'
+      summer_workshops_612: '6-12 Bengkel Musim Panas'
+      virtual_academic_year_workshops_612: '6—12 Bengkel Tahun Akademik Maya'
   cookie_banner:
     message: 'Dengan meneruskan menyemak imbas tapak kami atau mengklik "Saya setuju", anda bersetuju untuk menyimpan kuki pada komputer atau peranti anda.'
     more_information: "Sila lihat Dasar Privasi Code.org."
@@ -1154,3 +1280,23 @@ ms:
       cannot_view_locked_answers: "Tidak dapat melihat jawapan semasa dikunci"
       forbidden: "Pengguna tidak boleh mengemas kini keadaan pelajar yang dikunci"
   reset_predict_progress_button: "Padamkan Jawapan"
+  pixelation:
+    raw_format: "Format Mentah"
+    raw_format_alt: "Lihat bit tanpa sebarang pemformatan"
+    readable_format: "Format Boleh Dibaca"
+    readable_format_alt: "Lihat bit dipisahkan oleh piksel"
+    save_image: "Simpan Imej"
+    actual_size: "Saiz sebenar"
+    image_file_format_header: "Format Fail Imej"
+    image_file_format_width: "Lebar: 1 bait"
+    image_file_format_height: "Ketinggian: 1 bait"
+    image_file_format_bits_per_pixel: "Bit per Piksel: 1 bait"
+    image_file_format_data_a: "n bit data piksel"
+    image_file_format_data_b: "n = Lebar* Tinggi* Bit per Piksel"
+    image_width: "Lebar Imej"
+    image_height: "Ketinggian Imej"
+    bits_per_pixel_header: "Bit Per Piksel"
+    binary: "Perduaan"
+    hexadecimal: "Perenambelasan"
+    pixel_format_header: "Format Piksel"
+

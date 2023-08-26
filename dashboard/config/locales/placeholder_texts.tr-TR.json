@@ -2,79 +2,19 @@
   "tr-TR": {
     "data": {
       "placeholder_texts": {
-        "CourseE_hoops": {
-          "498cd895eb5a102c5aeb977e2b928dee": "Teşekkür ederiz!"
-        },
-        "courseE_Dogger_2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!",
-          "8437002ea42b64a5fd68abfb2ab8dae0": "Oyun bitti."
-        },
-        "courseE_aboutme_3": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
-        },
-        "courseE_aboutme_3_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
-        },
-        "courseE_aboutme_4": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
-        },
-        "courseE_aboutme_4_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
-        },
-        "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
-        },
-        "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
-        },
-        "courseF_playlab_variables2b": {
-          "48d6215903dff56238e52e8891380c8f": "mavi",
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "kırmızı",
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "courseF_project_1": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!",
-          "498cd895eb5a102c5aeb977e2b928dee": "Teşekkür ederiz!"
-        },
-        "courseE_aboutme_1": {
-          "b63151482630edd1589a9ac24d107c49": "Bu benim! Rikki! Kodlama yapmayı, Thuy ile takılmayı ve dondurmayı yemeyi severim!",
-          "810896b14fc6615f0c76628b9b6a727e": "Bu, benim en iyi arkadaşım Thuy! Sporda gerçekten de çok iyi!",
-          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Dondurma, en sevdiğim ikram! Ama muhtemelen bunu koltukta yememeliyim...",
-          "a50ec512bdd98483a7cdcd88cbe11933": "Bu, evcil hayvanım tavşan, Bayan Lolipop! Ona neden bu ismi verdiğimi bilmiyorum!",
-          "6f97975a0bda0c9219915161149cbb26": "Bu, benim bilgisayarım! HER zaman onda kodlama yaparım!",
-          "1c6636ce086fef9305c6e3d25e37d5b2": "İşte size bir sır: Thuy çok gıdıklanıyor!",
-          "fce3b93eaa64a8869c47ba25daa8887f": "Harika!",
-          "41a18649f969a00ec0b2feba20db997f": "Bence bu renk sende daha iyi duruyor, Bayan Lolipop!",
-          "756afb811df2eb3ec88a9e98f3dcaa8d": "Bu bilgisayar, delice kodlama becerilerimin altından kalkamıyor!"
-        },
-        "courseE_aboutme_1_2020": {
-          "b63151482630edd1589a9ac24d107c49": "Bu benim! Rikki! Kodlama yapmayı, Thuy ile takılmayı ve dondurmayı yemeyi severim!",
-          "810896b14fc6615f0c76628b9b6a727e": "Bu, benim en iyi arkadaşım Thuy! Sporda gerçekten de çok iyi!",
-          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Dondurma, en sevdiğim ikram! Ama muhtemelen bunu koltukta yememeliyim...",
-          "a50ec512bdd98483a7cdcd88cbe11933": "Bu, evcil hayvanım tavşan, Bayan Lolipop! Ona neden bu ismi verdiğimi bilmiyorum!",
-          "6f97975a0bda0c9219915161149cbb26": "Bu, benim bilgisayarım! HER zaman onda kodlama yaparım!",
-          "1c6636ce086fef9305c6e3d25e37d5b2": "İşte size bir sır: Thuy çok gıdıklanıyor!",
-          "fce3b93eaa64a8869c47ba25daa8887f": "Harika!",
-          "41a18649f969a00ec0b2feba20db997f": "Bence bu renk sende daha iyi duruyor, Bayan Lolipop!",
-          "756afb811df2eb3ec88a9e98f3dcaa8d": "Bu bilgisayar, delice kodlama becerilerimin altından kalkamıyor!"
-        },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın",
-          "66ca156974a9909af6aea88ad5cb915b": "Zombileri uzaylıdan uzak tutun, onu üzüyorlar!",
+          "3b3d1f8225a16aac3f372c3062d8b194": "Eğer üzülürse, daha fazla puan için onu tekrar mutlu edin!",
           "66363f1551b4fdb85c85222c629013b2": "Uzaylıyı savunun!",
-          "3b3d1f8225a16aac3f372c3062d8b194": "Eğer üzülürse, daha fazla puan için onu tekrar mutlu edin!"
+          "66ca156974a9909af6aea88ad5cb915b": "Zombileri uzaylıdan uzak tutun, onu üzüyorlar!"
         },
         "Choose Your Own Adventure": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "Course 4 Play Lab Params 10": {
+          "46e888cc716ac8ec6fad01e85eb7c37c": "Seviye: "
         },
         "Course 4 Playlab For Loop Freeplay": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
@@ -84,17 +24,60 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Teşekkür ederiz!"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3"
+        },
+        "CourseF_Project_SpriteLab_chatbot_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3"
+        },
+        "CourseF_Project_SpriteLab_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
+          "78d989e01047ba7043a38650d695abaa": "Oyuncu Seç",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "Gökyüzü Dansçısı",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3"
+        },
+        "CourseF_outbreak8": {
+          "968c8b54671ab303d48320f86937c40b": "Maskeler, virüslerin yayılmasını yavaşlatır!",
+          "fac94901e68fc1dea6e749c012e3efc0": "Hareketli nesnelere maske takmak için onlara tıklayın."
+        },
+        "CourseF_outbreak8_-2022-2": {
+          "968c8b54671ab303d48320f86937c40b": "Maskeler, virüslerin yayılmasını yavaşlatır!",
+          "fac94901e68fc1dea6e749c012e3efc0": "Hareketli nesnelere maske takmak için onlara tıklayın."
+        },
         "Find the Wizard": {
-          "22b45b2cf2d4a2a3d7b3faa522013b26": "Üçe kadar say ve kaybolacağım! Beni bulmak için aklından1 ile 400 arasında bir sayı tut!",
-          "0b895ef4c917e50663bc2a7327cbee3d": "Beni buldun!",
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın",
-          "74e3efe12b17fe00c01147733fad486d": "Beni bulmak için bir numara tahmin edin!",
-          "3c5a6a6bfff469fd4c779912331f1049": "Bah!",
           "0464d226582401370945003bc8850990": "Huehuehuehe!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "0b895ef4c917e50663bc2a7327cbee3d": "Beni buldun!",
+          "0ceb38a3de45bf070e96e6657474f47d": "Fazla düşük!",
+          "22b45b2cf2d4a2a3d7b3faa522013b26": "Üçe kadar say ve kaybolacağım! Beni bulmak için aklından1 ile 400 arasında bir sayı tut!",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın",
+          "3c5a6a6bfff469fd4c779912331f1049": "Bah!",
+          "74e3efe12b17fe00c01147733fad486d": "Beni bulmak için bir numara tahmin edin!",
           "765366ef0f68387ed2a6ca3a8d24182d": "Fazla yüksek!",
-          "cd4c7f8fdf063e832de1604e34dd4531": "Tee Hee!",
-          "0ceb38a3de45bf070e96e6657474f47d": "Fazla düşük!"
+          "cd4c7f8fdf063e832de1604e34dd4531": "Tee Hee!"
         },
         "FoodFight": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
@@ -109,6 +92,16 @@
         "NEW Course 4 Play Lab Params 11": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "New Sprite Lab Project": {
+          "6cd3556deb0da54bca060b4c39479839": "Merhaba, dünya!",
+          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3"
         },
         "OPD-K5-projects-2": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
@@ -126,6 +119,18 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
+        "OPD-K5-projects-6": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
+        "OPD-K5-projects-7": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
+        "course3_playLab_challenge1": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
         "course4_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
@@ -134,7 +139,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
+        "courseC19_playLab_EOC12022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
         "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC19_playLab_EOC1_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
@@ -142,7 +155,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
+        "courseC19_playLab_EOC22022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
         "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC19_playLab_EOC2_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
@@ -150,7 +171,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
+        "courseC19_playLab_EOC32022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
         "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC19_playLab_EOC3_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
@@ -158,11 +187,83 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
+        "courseC19_playLab_EOC42022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
         "courseC19_playLab_EOC4_2020": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC19_playLab_EOC5": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
+        "courseC19_playLab_EOC52022": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
+        "courseC19_playLab_EOC5_2020": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
+        "courseC19_playLab_EOC6": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
+        "courseC19_playLab_EOC62022": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
+        "courseC19_playLab_EOC6_2020": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
+        "courseC19_playLab_sample12022": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
+        "courseC19_playLab_sample1_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
+        "courseC19_playLab_sample22022": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila evini uzay robotundan korumaya çalışıyor.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Diğer yaratıklar artık korkmuyor!",
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
+          "83db90f8846d091d3532256816f105d9": "Bu, Neila.",
+          "b2f02bf648ce32c4362afe1578d41f70": "İşe yaradı! Neila, uzay robotuna iyiliğin gücünü gösterdi.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila, uzay robotuna iyi olmayı öğretmede yardımcı olmak istiyor.",
+          "df8312187449c70820d7c58229a6b17e": "Uzay robotu diğer yaratıkları korkutuyor."
+        },
+        "courseC19_playLab_sample2_2021": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila evini uzay robotundan korumaya çalışıyor.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Diğer yaratıklar artık korkmuyor!",
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
+          "83db90f8846d091d3532256816f105d9": "Bu, Neila.",
+          "b2f02bf648ce32c4362afe1578d41f70": "İşe yaradı! Neila, uzay robotuna iyiliğin gücünü gösterdi.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila, uzay robotuna iyi olmayı öğretmede yardımcı olmak istiyor.",
+          "df8312187449c70820d7c58229a6b17e": "Uzay robotu diğer yaratıkları korkutuyor."
+        },
         "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC_PlayLab_eventsFP2022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
@@ -178,9 +279,142 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC_data wizard": {
+          "1c64ef29c853587fbe94f69f05272b79": "Bir kuş!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " kediler!",
+          "27944770529dd15319a983bee8951560": "Bir kedi!",
+          "336ad881e37e713ba0325500a8fa1f00": " köpekler!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Bir ejderha!",
+          "5b402e6ea05e847a076e03ad74420c45": " kuşlar!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Tüm hayvanları say!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " ejderhalar!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Evcil Hayvanları Say",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Bir köpek!",
+          "f62038e77820419cd978f7b722da560a": "Kaç tane görünecek?"
+        },
+        "courseC_data wizard2022": {
+          "1c64ef29c853587fbe94f69f05272b79": "Bir kuş!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " kediler!",
+          "27944770529dd15319a983bee8951560": "Bir kedi!",
+          "336ad881e37e713ba0325500a8fa1f00": " köpekler!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Bir ejderha!",
+          "5b402e6ea05e847a076e03ad74420c45": " kuşlar!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Tüm hayvanları say!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " ejderhalar!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Evcil Hayvanları Say",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Bir köpek!",
+          "f62038e77820419cd978f7b722da560a": "Kaç tane görünecek?"
+        },
+        "courseC_data wizard_2020": {
+          "1c64ef29c853587fbe94f69f05272b79": "Bir kuş!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " kediler!",
+          "27944770529dd15319a983bee8951560": "Bir kedi!",
+          "336ad881e37e713ba0325500a8fa1f00": " köpekler!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Bir ejderha!",
+          "5b402e6ea05e847a076e03ad74420c45": " kuşlar!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Tüm hayvanları say!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " ejderhalar!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Evcil Hayvanları Say",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Bir köpek!",
+          "f62038e77820419cd978f7b722da560a": "Kaç tane görünecek?"
+        },
+        "courseC_data wizard_2021": {
+          "1c64ef29c853587fbe94f69f05272b79": "Bir kuş!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " kediler!",
+          "27944770529dd15319a983bee8951560": "Bir kedi!",
+          "336ad881e37e713ba0325500a8fa1f00": " köpekler!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Bir ejderha!",
+          "5b402e6ea05e847a076e03ad74420c45": " kuşlar!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Tüm hayvanları say!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " ejderhalar!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Evcil Hayvanları Say",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Bir köpek!",
+          "f62038e77820419cd978f7b722da560a": "Kaç tane görünecek?"
+        },
         "courseD_playLab_condFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseE_Dogger_2": {
+          "8437002ea42b64a5fd68abfb2ab8dae0": "Oyun bitti.",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!"
+        },
+        "courseE_aboutme_1": {
+          "1c6636ce086fef9305c6e3d25e37d5b2": "İşte size bir sır: Thuy çok gıdıklanıyor!",
+          "41a18649f969a00ec0b2feba20db997f": "Bence bu renk sende daha iyi duruyor, Bayan Lolipop!",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Dondurma, en sevdiğim ikram! Ama muhtemelen bunu koltukta yememeliyim...",
+          "6f97975a0bda0c9219915161149cbb26": "Bu, benim bilgisayarım! HER zaman onda kodlama yaparım!",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "Bu bilgisayar, delice kodlama becerilerimin altından kalkamıyor!",
+          "810896b14fc6615f0c76628b9b6a727e": "Bu, benim en iyi arkadaşım Thuy! Sporda gerçekten de çok iyi!",
+          "a50ec512bdd98483a7cdcd88cbe11933": "Bu, evcil hayvanım tavşan, Bayan Lolipop! Ona neden bu ismi verdiğimi bilmiyorum!",
+          "b63151482630edd1589a9ac24d107c49": "Bu benim! Rikki! Kodlama yapmayı, Thuy ile takılmayı ve dondurmayı yemeyi severim!",
+          "fce3b93eaa64a8869c47ba25daa8887f": "Harika!"
+        },
+        "courseE_aboutme_1_2020": {
+          "1c6636ce086fef9305c6e3d25e37d5b2": "İşte size bir sır: Thuy çok gıdıklanıyor!",
+          "41a18649f969a00ec0b2feba20db997f": "Bence bu renk sende daha iyi duruyor, Bayan Lolipop!",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Dondurma, en sevdiğim ikram! Ama muhtemelen bunu koltukta yememeliyim...",
+          "6f97975a0bda0c9219915161149cbb26": "Bu, benim bilgisayarım! HER zaman onda kodlama yaparım!",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "Bu bilgisayar, delice kodlama becerilerimin altından kalkamıyor!",
+          "810896b14fc6615f0c76628b9b6a727e": "Bu, benim en iyi arkadaşım Thuy! Sporda gerçekten de çok iyi!",
+          "a50ec512bdd98483a7cdcd88cbe11933": "Bu, evcil hayvanım tavşan, Bayan Lolipop! Ona neden bu ismi verdiğimi bilmiyorum!",
+          "b63151482630edd1589a9ac24d107c49": "Bu benim! Rikki! Kodlama yapmayı, Thuy ile takılmayı ve dondurmayı yemeyi severim!",
+          "fce3b93eaa64a8869c47ba25daa8887f": "Harika!"
+        },
+        "courseE_aboutme_1_2021": {
+          "31ba97bb501bb1f5b448221be09bad32": "Bu benim corgi cinsi köpeğim, Lollipop! Ona kodlamayı öğretmeliyim!",
+          "6f97975a0bda0c9219915161149cbb26": "Bu, benim bilgisayarım! HER zaman onda kodlama yaparım!",
+          "810896b14fc6615f0c76628b9b6a727e": "Bu, benim en iyi arkadaşım Thuy! Sporda gerçekten de çok iyi!",
+          "8e985f60f328934accd78e7649584840": "Dondurma benim en sevdiğim ikramdır!",
+          "b63151482630edd1589a9ac24d107c49": "Bu benim! Rikki! Kodlama yapmayı, Thuy ile takılmayı ve dondurmayı yemeyi severim!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_5": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!",
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_52022": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!",
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_5_2020": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!",
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_5_2021": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!",
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_playLab_challenge1": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
         },
         "courseE_playLab_scaffold1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
@@ -198,9 +432,215 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
+        "courseE_playLab_scaffold5": {
+          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya",
+          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz."
+        },
+        "courseE_playLab_scaffold6": {
+          "2d3cdcfdd4061212e4d4930a183dad2d": "Lütfen yeniden dene.",
+          "af142a90df4becc2aa7ae0d3acb3cc90": "Oyun bitti!"
+        },
+        "courseF_apps_aquarium": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Hangi balık?",
+          "78574118d153534fd0925a2f5ca25e79": "Hangi şey?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "diğer",
+          "83e4a96aed96436c621b9809e258b309": "balık",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "yaratık",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Ne ekleyeceksiniz?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Hangi yaratık?",
+          "f655df68ec33643278de7e69794e8d76": "Sanal Akvaryum"
+        },
+        "courseF_apps_aquarium2022": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Hangi balık?",
+          "78574118d153534fd0925a2f5ca25e79": "Hangi şey?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "diğer",
+          "83e4a96aed96436c621b9809e258b309": "balık",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "yaratık",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Ne ekleyeceksiniz?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Hangi yaratık?",
+          "f655df68ec33643278de7e69794e8d76": "Sanal Akvaryum"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Hangi balık?",
+          "78574118d153534fd0925a2f5ca25e79": "Hangi şey?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "diğer",
+          "83e4a96aed96436c621b9809e258b309": "balık",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "yaratık",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Ne ekleyeceksiniz?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Hangi yaratık?",
+          "f655df68ec33643278de7e69794e8d76": "Sanal Akvaryum"
+        },
+        "courseF_apps_card": {
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?"
+        },
+        "courseF_apps_card2022": {
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?"
+        },
+        "courseF_apps_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?"
+        },
+        "courseF_apps_chatbot": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşını buraya gir:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Kaç yaşındasın?",
+          "1f258d88a70309efc1435ef5daa277a0": "Bugün benimle sohbet ettiğin için teşekkürler!",
+          "605f302ebc9f7fbacba60b15f551a633": "En sevdiğin renk hangisi?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " yaşındayım ben de!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "En sevdiğin rengi buraya gir:",
+          "a72e7c5c68af0546e963e510297f5233": "Merhaba, ben X-9! Senin adın ne?",
+          "ae096fbf24d913754b01a1601672bf62": " ben de!",
+          "f0e5da70d264f312a1658d51c130b101": "Adını buraya gir:"
+        },
+        "courseF_apps_chatbot2022": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşını buraya gir:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Kaç yaşındasın?",
+          "1f258d88a70309efc1435ef5daa277a0": "Bugün benimle sohbet ettiğin için teşekkürler!",
+          "605f302ebc9f7fbacba60b15f551a633": "En sevdiğin renk hangisi?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " yaşındayım ben de!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "En sevdiğin rengi buraya gir:",
+          "a72e7c5c68af0546e963e510297f5233": "Merhaba, ben X-9! Senin adın ne?",
+          "ae096fbf24d913754b01a1601672bf62": " ben de!",
+          "f0e5da70d264f312a1658d51c130b101": "Adını buraya gir:"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşını buraya gir:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Kaç yaşındasın?",
+          "1f258d88a70309efc1435ef5daa277a0": "Bugün benimle sohbet ettiğin için teşekkürler!",
+          "605f302ebc9f7fbacba60b15f551a633": "En sevdiğin renk hangisi?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " yaşındayım ben de!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "En sevdiğin rengi buraya gir:",
+          "a72e7c5c68af0546e963e510297f5233": "Merhaba, ben X-9! Senin adın ne?",
+          "ae096fbf24d913754b01a1601672bf62": " ben de!",
+          "f0e5da70d264f312a1658d51c130b101": "Adını buraya gir:"
+        },
+        "courseF_apps_collector": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " saniyeler",
+          "41f2b2212de0105c2a942ebb4a44e449": "Büyük Toplayıcı Oyunu!",
+          "490082498449bd20ff0199737dfa4916": "Oyun türünü seçin:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!"
+        },
+        "courseF_apps_collector2022": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " saniyeler",
+          "41f2b2212de0105c2a942ebb4a44e449": "Büyük Toplayıcı Oyunu!",
+          "490082498449bd20ff0199737dfa4916": "Oyun türünü seçin:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " saniyeler",
+          "41f2b2212de0105c2a942ebb4a44e449": "Büyük Toplayıcı Oyunu!",
+          "490082498449bd20ff0199737dfa4916": "Oyun türünü seçin:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!"
+        },
+        "courseF_apps_madlib": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
+          "514b8d5320196898a9ced3efe0d4c802": "Bir sıfat yaz:",
+          "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Bir Boş Alan Hikayesi",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları"
+        },
+        "courseF_apps_madlib2022": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
+          "514b8d5320196898a9ced3efe0d4c802": "Bir sıfat yaz:",
+          "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Bir Boş Alan Hikayesi",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları"
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
+          "514b8d5320196898a9ced3efe0d4c802": "Bir sıfat yaz:",
+          "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Bir Boş Alan Hikayesi",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları"
+        },
+        "courseF_editable_card": {
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?"
+        },
+        "courseF_editable_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?"
+        },
+        "courseF_editable_chatbot": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşını buraya gir:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Kaç yaşındasın?",
+          "1f258d88a70309efc1435ef5daa277a0": "Bugün benimle sohbet ettiğin için teşekkürler!",
+          "605f302ebc9f7fbacba60b15f551a633": "En sevdiğin renk hangisi?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " yaşındayım ben de!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "En sevdiğin rengi buraya gir:",
+          "a72e7c5c68af0546e963e510297f5233": "Merhaba, ben X-9! Senin adın ne?",
+          "ae096fbf24d913754b01a1601672bf62": " ben de!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "f0e5da70d264f312a1658d51c130b101": "Adını buraya gir:"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşını buraya gir:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Kaç yaşındasın?",
+          "1f258d88a70309efc1435ef5daa277a0": "Bugün benimle sohbet ettiğin için teşekkürler!",
+          "605f302ebc9f7fbacba60b15f551a633": "En sevdiğin renk hangisi?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " yaşındayım ben de!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "En sevdiğin rengi buraya gir:",
+          "a72e7c5c68af0546e963e510297f5233": "Merhaba, ben X-9! Senin adın ne?",
+          "ae096fbf24d913754b01a1601672bf62": " ben de!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "f0e5da70d264f312a1658d51c130b101": "Adını buraya gir:"
+        },
+        "courseF_editable_madlib": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
+          "514b8d5320196898a9ced3efe0d4c802": "Bir sıfat yaz:",
+          "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Bir Boş Alan Hikayesi",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları"
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
+          "514b8d5320196898a9ced3efe0d4c802": "Bir sıfat yaz:",
+          "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Bir Boş Alan Hikayesi",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları"
+        },
+        "courseF_label_predict": {
+          "937dc37c06cc5d89a7096eb048b73590": " hemen geliyor!",
+          "f15045cb7e57652546d4a0b2c695356f": "Ne yersiniz?"
+        },
+        "courseF_label_predict_-2022-2": {
+          "937dc37c06cc5d89a7096eb048b73590": " hemen geliyor!",
+          "f15045cb7e57652546d4a0b2c695356f": "Ne yersiniz?"
+        },
         "courseF_playlab_variables1a": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseF_playlab_variables2b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın",
+          "48d6215903dff56238e52e8891380c8f": "mavi"
         },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
@@ -209,13 +649,18 @@
         },
         "courseF_playlab_variables4b": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Kaç yaşındasın?"
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Kaç yaşındasın?",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
         "courseF_playlab_variables4c_predictive1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın",
           "f6429fe0f1a76611670df7e1234af936": "Adın ne?"
+        },
+        "courseF_playlab_variables5c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın",
+          "bda9643ac6601722a28f238714274da4": "kırmızı"
         },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
@@ -237,147 +682,71 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
         },
-        "iceage_free_play": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "courseC19_playLab_EOC1_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "courseC19_playLab_EOC2_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "courseC19_playLab_EOC4_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "courseC_PlayLab_eventsFP_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "courseE_aboutme_1_2021": {
-          "b63151482630edd1589a9ac24d107c49": "Bu benim! Rikki! Kodlama yapmayı, Thuy ile takılmayı ve dondurmayı yemeyi severim!",
-          "810896b14fc6615f0c76628b9b6a727e": "Bu, benim en iyi arkadaşım Thuy! Sporda gerçekten de çok iyi!",
-          "6f97975a0bda0c9219915161149cbb26": "Bu, benim bilgisayarım! HER zaman onda kodlama yaparım!",
-          "8e985f60f328934accd78e7649584840": "Dondurma benim en sevdiğim ikramdır!",
-          "31ba97bb501bb1f5b448221be09bad32": "Bu benim corgi cinsi köpeğim, Lollipop! Ona kodlamayı öğretmeliyim!"
-        },
-        "courseE_aboutme_3_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
-        },
-        "courseE_aboutme_4_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
-        },
-        "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
-        },
-        "courseF_apps_aquarium": {
-          "83e4a96aed96436c621b9809e258b309": "balık",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "yaratık",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "diğer",
-          "f655df68ec33643278de7e69794e8d76": "Sanal Akvaryum",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Ne ekleyeceksiniz?",
-          "0d3e73168beb875063ea0f0302fe32bd": "Hangi balık?",
-          "caaf8264ca397dba2d35ef902bbbd953": "Hangi yaratık?",
-          "78574118d153534fd0925a2f5ca25e79": "Hangi şey?"
-        },
-        "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " saniyeler",
-          "490082498449bd20ff0199737dfa4916": "Oyun türünü seçin:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Büyük Toplayıcı Oyunu!"
-        },
-        "courseF_apps_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_apps_chatbot": {
-          "a72e7c5c68af0546e963e510297f5233": "Merhaba, ben X-9! Senin adın ne?",
-          "f0e5da70d264f312a1658d51c130b101": "Adını buraya gir:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Kaç yaşındasın?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşını buraya gir:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " yaşındayım ben de!",
-          "605f302ebc9f7fbacba60b15f551a633": "En sevdiğin renk hangisi?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "En sevdiğin rengi buraya gir:",
-          "ae096fbf24d913754b01a1601672bf62": " ben de!",
-          "1f258d88a70309efc1435ef5daa277a0": "Bugün benimle sohbet ettiğin için teşekkürler!"
-        },
-        "courseF_apps_madlib": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları",
-          "bf08dd3d1961874f13e77c936aad27e5": "Bir Boş Alan Hikayesi",
-          "514b8d5320196898a9ced3efe0d4c802": "Bir sıfat yaz:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
-          "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
-          "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_editable_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_editable_chatbot": {
-          "a72e7c5c68af0546e963e510297f5233": "Merhaba, ben X-9! Senin adın ne?",
-          "f0e5da70d264f312a1658d51c130b101": "Adını buraya gir:",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşını buraya gir:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " yaşındayım ben de!",
-          "605f302ebc9f7fbacba60b15f551a633": "En sevdiğin renk hangisi?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "En sevdiğin rengi buraya gir:",
-          "1f258d88a70309efc1435ef5daa277a0": "Bugün benimle sohbet ettiğin için teşekkürler!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Kaç yaşındasın?",
-          "ae096fbf24d913754b01a1601672bf62": " ben de!"
-        },
-        "courseF_editable_madlib": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları",
-          "bf08dd3d1961874f13e77c936aad27e5": "Bir Boş Alan Hikayesi",
-          "514b8d5320196898a9ced3efe0d4c802": "Bir sıfat yaz:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
-          "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
-          "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+        "courseF_project_1": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Teşekkür ederiz!",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!"
         },
         "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+        },
+        "courseF_text_answer_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_text_choice_color": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
+        "courseF_text_choice_color_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+        },
         "courseF_text_choice_conversation": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
+        "courseF_text_choice_conversation_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+        },
         "courseF_text_choice_events": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "44506356d48394cd903b579df9de9117": ", dünyalı!",
           "c529a06c3f8518b63ff6dfac482b335c": "Bu gezegene ad ver:",
-          "44506356d48394cd903b579df9de9117": ", dünyalı!"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+        },
+        "courseF_text_choice_events_-2022-2": {
+          "44506356d48394cd903b579df9de9117": ", dünyalı!",
+          "c529a06c3f8518b63ff6dfac482b335c": "Bu gezegene ad ver:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
+        "courseF_text_choice_freeplay_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+        },
         "courseF_text_choice_interview": {
-          "5bd698afd23bccde289bb0b4aa72a518": "Robota ad ver.",
-          "34088af1fb721900963462375b3bbe23": "robot!"
+          "34088af1fb721900963462375b3bbe23": "robot!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Robota ad ver."
+        },
+        "courseF_text_choice_interview_-2022-2": {
+          "34088af1fb721900963462375b3bbe23": "robot!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Robota ad ver."
         },
         "courseF_text_choice_multiprompt": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?"
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?"
+        },
+        "courseF_text_choice_multiprompt_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?"
         },
         "courseF_text_choice_title": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
+        "courseF_text_choice_title_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+        },
         "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "f6429fe0f1a76611670df7e1234af936": "Adın ne?"
+        },
+        "courseF_text_concat_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
           "f6429fe0f1a76611670df7e1234af936": "Adın ne?"
         },
@@ -385,86 +754,62 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
           "f6429fe0f1a76611670df7e1234af936": "Adın ne?"
         },
+        "courseF_text_prompts_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
+          "f6429fe0f1a76611670df7e1234af936": "Adın ne?"
+        },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
+        "courseF_variables_card_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+        },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
-          "464a456e0747ec9b09fc9afc6fbd13ed": "doğum günün için ne istiyorsun?"
+          "464a456e0747ec9b09fc9afc6fbd13ed": "doğum günün için ne istiyorsun?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+        },
+        "courseF_variables_card_finish_-2022-2": {
+          "464a456e0747ec9b09fc9afc6fbd13ed": "doğum günün için ne istiyorsun?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
+        "courseF_variables_chatbot_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+        },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
           "46463b2e9f71f2f15b7238f56f09ba30": "Son",
-          "c757766b0a7e2017c79e1c94f60e44f7": "Sohbet ettiğiniz için teşekkürler!"
+          "c757766b0a7e2017c79e1c94f60e44f7": "Sohbet ettiğiniz için teşekkürler!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+        },
+        "courseF_variables_chatbot_finish_-2022-2": {
+          "46463b2e9f71f2f15b7238f56f09ba30": "Son",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Sohbet ettiğiniz için teşekkürler!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
+        "courseF_variables_madlib_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
+        },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
-          "50d489a15105b987ec6d4410900c95dd": "Bir eylem sözcüğü girin:"
+          "50d489a15105b987ec6d4410900c95dd": "Bir eylem sözcüğü girin:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
-        "CourseF_Project_SpriteLab_2021": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3"
-        },
-        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3"
-        },
-        "CourseF_Project_SpriteLab_examples_2021": {
-          "8e7d34ed67fe4ec0910cefee2f5059cd": "Gökyüzü Dansçısı",
-          "78d989e01047ba7043a38650d695abaa": "Oyuncu Seç",
-          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3"
-        },
-        "courseC19_playLab_EOC5_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseC19_playLab_EOC6_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseC19_playLab_sample1_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseC19_playLab_sample2_2021": {
-          "83db90f8846d091d3532256816f105d9": "Bu, Neila.",
-          "0192cdc04916ec27aa11738bb6e48d6e": "Neila evini uzay robotundan korumaya çalışıyor.",
-          "df8312187449c70820d7c58229a6b17e": "Uzay robotu diğer yaratıkları korkutuyor.",
-          "c084e152431f9116b9fdb3f7d465f13d": "Neila, uzay robotuna iyi olmayı öğretmede yardımcı olmak istiyor.",
-          "b2f02bf648ce32c4362afe1578d41f70": "İşe yaradı! Neila, uzay robotuna iyiliğin gücünü gösterdi.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "Diğer yaratıklar artık korkmuyor!",
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseC_data wizard_2021": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Bir köpek!",
-          "336ad881e37e713ba0325500a8fa1f00": " köpekler!",
-          "27944770529dd15319a983bee8951560": "Bir kedi!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " kediler!",
-          "1c64ef29c853587fbe94f69f05272b79": "Bir kuş!",
-          "5b402e6ea05e847a076e03ad74420c45": " kuşlar!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Bir ejderha!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " ejderhalar!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Tüm hayvanları say!",
-          "f62038e77820419cd978f7b722da560a": "Kaç tane görünecek?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Evcil Hayvanları Say"
-        },
-        "courseF_label_predict": {
-          "f15045cb7e57652546d4a0b2c695356f": "Ne yersiniz?",
-          "937dc37c06cc5d89a7096eb048b73590": " hemen geliyor!"
+        "courseF_variables_madlib_finish_-2022-2": {
+          "50d489a15105b987ec6d4410900c95dd": "Bir eylem sözcüğü girin:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Adın ne?"
+        },
+        "courseF_variables_predict_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "Adın ne?"
+        },
+        "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Merhaba, dünya!"
         },
         "helloworld_animals_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Merhaba, dünya!"
@@ -478,354 +823,9 @@
         "helloworld_retro_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Merhaba, dünya!"
         },
-        "New Play Lab Project": {
+        "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
           "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "New Sprite Lab Project": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3",
-          "6cd3556deb0da54bca060b4c39479839": "Merhaba, dünya!"
-        },
-        "Course 4 Play Lab Params 10": {
-          "46e888cc716ac8ec6fad01e85eb7c37c": "Seviye: "
-        },
-        "OPD-K5-projects-6": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "OPD-K5-projects-7": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "course3_playLab_challenge1": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseC19_playLab_EOC5": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseC19_playLab_EOC5_2020": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseC19_playLab_EOC6": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseC19_playLab_EOC6_2020": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseC_data wizard": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Bir köpek!",
-          "336ad881e37e713ba0325500a8fa1f00": " köpekler!",
-          "27944770529dd15319a983bee8951560": "Bir kedi!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " kediler!",
-          "1c64ef29c853587fbe94f69f05272b79": "Bir kuş!",
-          "5b402e6ea05e847a076e03ad74420c45": " kuşlar!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Bir ejderha!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " ejderhalar!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Tüm hayvanları say!",
-          "f62038e77820419cd978f7b722da560a": "Kaç tane görünecek?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Evcil Hayvanları Say"
-        },
-        "courseC_data wizard_2020": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Bir köpek!",
-          "336ad881e37e713ba0325500a8fa1f00": " köpekler!",
-          "27944770529dd15319a983bee8951560": "Bir kedi!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " kediler!",
-          "1c64ef29c853587fbe94f69f05272b79": "Bir kuş!",
-          "5b402e6ea05e847a076e03ad74420c45": " kuşlar!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Bir ejderha!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " ejderhalar!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Tüm hayvanları say!",
-          "f62038e77820419cd978f7b722da560a": "Kaç tane görünecek?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Evcil Hayvanları Say"
-        },
-        "courseE_playLab_challenge1": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseE_playLab_scaffold5": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseE_playLab_scaffold6": {
-          "2d3cdcfdd4061212e4d4930a183dad2d": "Lütfen yeniden dene.",
-          "af142a90df4becc2aa7ae0d3acb3cc90": "Oyun bitti!"
-        },
-        "CourseF_outbreak8": {
-          "fac94901e68fc1dea6e749c012e3efc0": "Hareketli nesnelere maske takmak için onlara tıklayın.",
-          "968c8b54671ab303d48320f86937c40b": "Maskeler, virüslerin yayılmasını yavaşlatır!"
-        },
-        "CourseF_Project_SpriteLab_chatbot_examples_-2022-2": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3"
-        },
-        "CourseF_Project_SpriteLab_cupcake_examples_-2022-2": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3"
-        },
-        "CourseF_Project_SpriteLab_examples_-2022-2": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "tercih 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "tercih 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "tercih 3"
-        },
-        "CourseF_outbreak8_-2022-2": {
-          "fac94901e68fc1dea6e749c012e3efc0": "Hareketli nesnelere maske takmak için onlara tıklayın.",
-          "968c8b54671ab303d48320f86937c40b": "Maskeler, virüslerin yayılmasını yavaşlatır!"
-        },
-        "courseC19_playLab_EOC12022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "courseC19_playLab_EOC22022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "courseC19_playLab_EOC32022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "courseC19_playLab_EOC42022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "courseC19_playLab_EOC52022": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseC19_playLab_EOC62022": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseC19_playLab_sample12022": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseC19_playLab_sample22022": {
-          "83db90f8846d091d3532256816f105d9": "Bu, Neila.",
-          "0192cdc04916ec27aa11738bb6e48d6e": "Neila evini uzay robotundan korumaya çalışıyor.",
-          "df8312187449c70820d7c58229a6b17e": "Uzay robotu diğer yaratıkları korkutuyor.",
-          "c084e152431f9116b9fdb3f7d465f13d": "Neila, uzay robotuna iyi olmayı öğretmede yardımcı olmak istiyor.",
-          "b2f02bf648ce32c4362afe1578d41f70": "İşe yaradı! Neila, uzay robotuna iyiliğin gücünü gösterdi.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "Diğer yaratıklar artık korkmuyor!",
-          "5cec903c4d41c49412a70a94d54999ee": "Bir şeyler yazabilirsiniz.",
-          "3e11a2dc6edb909c47778bed75a81769": "Metin buraya"
-        },
-        "courseC_PlayLab_eventsFP2022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
-          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
-        },
-        "courseC_data wizard2022": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Bir köpek!",
-          "336ad881e37e713ba0325500a8fa1f00": " köpekler!",
-          "27944770529dd15319a983bee8951560": "Bir kedi!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " kediler!",
-          "1c64ef29c853587fbe94f69f05272b79": "Bir kuş!",
-          "5b402e6ea05e847a076e03ad74420c45": " kuşlar!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Bir ejderha!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " ejderhalar!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Tüm hayvanları say!",
-          "f62038e77820419cd978f7b722da560a": "Kaç tane görünecek?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Evcil Hayvanları Say"
-        },
-        "courseE_aboutme_32022": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
-        },
-        "courseE_aboutme_42022": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
-        },
-        "courseE_aboutme_52022": {
-          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
-        },
-        "courseF_apps_aquarium2022": {
-          "f655df68ec33643278de7e69794e8d76": "Sanal Akvaryum",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Ne ekleyeceksiniz?",
-          "83e4a96aed96436c621b9809e258b309": "balık",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "yaratık",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "diğer",
-          "0d3e73168beb875063ea0f0302fe32bd": "Hangi balık?",
-          "caaf8264ca397dba2d35ef902bbbd953": "Hangi yaratık?",
-          "78574118d153534fd0925a2f5ca25e79": "Hangi şey?"
-        },
-        "courseF_apps_aquarium_-2022-2": {
-          "f655df68ec33643278de7e69794e8d76": "Sanal Akvaryum",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Ne ekleyeceksiniz?",
-          "83e4a96aed96436c621b9809e258b309": "balık",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "yaratık",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "diğer",
-          "0d3e73168beb875063ea0f0302fe32bd": "Hangi balık?",
-          "caaf8264ca397dba2d35ef902bbbd953": "Hangi yaratık?",
-          "78574118d153534fd0925a2f5ca25e79": "Hangi şey?"
-        },
-        "courseF_apps_card2022": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_apps_card_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_apps_chatbot2022": {
-          "a72e7c5c68af0546e963e510297f5233": "Merhaba, ben X-9! Senin adın ne?",
-          "f0e5da70d264f312a1658d51c130b101": "Adını buraya gir:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Kaç yaşındasın?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşını buraya gir:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " yaşındayım ben de!",
-          "605f302ebc9f7fbacba60b15f551a633": "En sevdiğin renk hangisi?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "En sevdiğin rengi buraya gir:",
-          "ae096fbf24d913754b01a1601672bf62": " ben de!",
-          "1f258d88a70309efc1435ef5daa277a0": "Bugün benimle sohbet ettiğin için teşekkürler!"
-        },
-        "courseF_apps_chatbot_-2022-2": {
-          "a72e7c5c68af0546e963e510297f5233": "Merhaba, ben X-9! Senin adın ne?",
-          "f0e5da70d264f312a1658d51c130b101": "Adını buraya gir:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Kaç yaşındasın?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşını buraya gir:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " yaşındayım ben de!",
-          "605f302ebc9f7fbacba60b15f551a633": "En sevdiğin renk hangisi?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "En sevdiğin rengi buraya gir:",
-          "ae096fbf24d913754b01a1601672bf62": " ben de!",
-          "1f258d88a70309efc1435ef5daa277a0": "Bugün benimle sohbet ettiğin için teşekkürler!"
-        },
-        "courseF_apps_collector2022": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " saniyeler",
-          "490082498449bd20ff0199737dfa4916": "Oyun türünü seçin:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Büyük Toplayıcı Oyunu!"
-        },
-        "courseF_apps_collector_-2022-2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " saniyeler",
-          "490082498449bd20ff0199737dfa4916": "Oyun türünü seçin:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Büyük Toplayıcı Oyunu!"
-        },
-        "courseF_apps_madlib2022": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları",
-          "bf08dd3d1961874f13e77c936aad27e5": "Bir Boş Alan Hikayesi",
-          "514b8d5320196898a9ced3efe0d4c802": "Bir sıfat yaz:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
-          "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
-          "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_apps_madlib_-2022-2": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları",
-          "bf08dd3d1961874f13e77c936aad27e5": "Bir Boş Alan Hikayesi",
-          "514b8d5320196898a9ced3efe0d4c802": "Bir sıfat yaz:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
-          "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
-          "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_editable_card_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_editable_chatbot_-2022-2": {
-          "a72e7c5c68af0546e963e510297f5233": "Merhaba, ben X-9! Senin adın ne?",
-          "f0e5da70d264f312a1658d51c130b101": "Adını buraya gir:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Kaç yaşındasın?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşını buraya gir:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " yaşındayım ben de!",
-          "605f302ebc9f7fbacba60b15f551a633": "En sevdiğin renk hangisi?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "En sevdiğin rengi buraya gir:",
-          "ae096fbf24d913754b01a1601672bf62": " ben de!",
-          "1f258d88a70309efc1435ef5daa277a0": "Bugün benimle sohbet ettiğin için teşekkürler!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_editable_madlib_-2022-2": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları",
-          "bf08dd3d1961874f13e77c936aad27e5": "Bir Boş Alan Hikayesi",
-          "514b8d5320196898a9ced3efe0d4c802": "Bir sıfat yaz:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Bir cismin adını yaz:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bir vücut bölümü yaz:",
-          "e522ee28f39133b45497637539ff429b": "Bir sayı yaz:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
-          "5306eed2fd2c43fe033efd6016c0c38b": " ayaklı yarış!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_label_predict_-2022-2": {
-          "f15045cb7e57652546d4a0b2c695356f": "Ne yersiniz?",
-          "937dc37c06cc5d89a7096eb048b73590": " hemen geliyor!"
-        },
-        "courseF_text_answer_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_text_choice_color_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_text_choice_conversation_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_text_choice_events_-2022-2": {
-          "c529a06c3f8518b63ff6dfac482b335c": "Bu gezegene ad ver:",
-          "44506356d48394cd903b579df9de9117": ", dünyalı!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_text_choice_freeplay_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_text_choice_interview_-2022-2": {
-          "34088af1fb721900963462375b3bbe23": "robot!",
-          "5bd698afd23bccde289bb0b4aa72a518": "Robota ad ver."
-        },
-        "courseF_text_choice_multiprompt_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin doğum günü?",
-          "d1210f945885351b13feb9bbb868aeef": "Kaç yaşında olacaklar?"
-        },
-        "courseF_text_choice_title_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_text_concat_-2022-2": {
-          "f6429fe0f1a76611670df7e1234af936": "Adın ne?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_text_prompts_-2022-2": {
-          "f6429fe0f1a76611670df7e1234af936": "Adın ne?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_variables_card_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_variables_card_finish_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
-          "464a456e0747ec9b09fc9afc6fbd13ed": "doğum günün için ne istiyorsun?"
-        },
-        "courseF_variables_chatbot_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_variables_chatbot_finish_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
-          "46463b2e9f71f2f15b7238f56f09ba30": "Son",
-          "c757766b0a7e2017c79e1c94f60e44f7": "Sohbet ettiğiniz için teşekkürler!"
-        },
-        "courseF_variables_madlib_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum"
-        },
-        "courseF_variables_madlib_finish_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "benim sorum",
-          "50d489a15105b987ec6d4410900c95dd": "Bir eylem sözcüğü girin:"
-        },
-        "courseF_variables_predict_-2022-2": {
-          "f6429fe0f1a76611670df7e1234af936": "Adın ne?"
-        },
-        "coursee_helloworld_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "Merhaba, dünya!"
         }
       }
     }

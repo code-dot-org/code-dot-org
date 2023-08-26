@@ -8,5 +8,7 @@
   "blockly_toolboxCategoryMath": "Mathematics",
   "blockly_toolboxCategoryVariables": "Variables",
   "share": "Share",
-  "startOver": "Start Over"
+  "startOver": "Start Over",
+  "panelHeaderWorkspace": "Workspace: ",
+  "continue": "Continue"
 }

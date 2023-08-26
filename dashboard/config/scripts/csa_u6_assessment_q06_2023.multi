@@ -26,3 +26,6 @@ What is printed as a result of executing this code segment?
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+![](https://images.code.org/55fc6ca75929754c3c05e4a2933569d6-image-1683926822017.png)
+MARKDOWN

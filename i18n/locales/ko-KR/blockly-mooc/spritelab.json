@@ -65,6 +65,7 @@
   "createDraggableSprite": "반려동물 사료 스프라이트는 `끌려갈 수 있는` 행동을 시작해야 합니다. \n <xml><block type=\"gamelab_addBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"face_carrot_1\"</title></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_draggable\"></block></value></block></xml>",
   "createNotDraggableSPrite": "사료 스프라이트만 끌려갈 수 있어야 합니다. 반려동물에서 행동을 제거하세요.",
   "createTwoDraggableSprites": "반료동물의 사료와 친구 스프라이트는 `끌려갈 수 있는 `행동을 시작해야 합니다.",
+  "cscAdaptationsRightArrowKey": "*\"실행\"*을 누른 후 화살표 키를 반드시 누르세요. 플레이 영역 아래 주황색 버튼을 클릭하거나 또는 키보드에서 키를 누를 수 있습니다.",
   "debugBehaviors": "행동과 관련된 실수를 했습니다.",
   "debugEvents": "이벤트와 관련된 실수를 했습니다.",
   "debugGroups": "스프라이트 그룹과 관련된 실수를 했습니다.",

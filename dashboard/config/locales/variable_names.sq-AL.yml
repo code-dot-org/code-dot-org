@@ -15,11 +15,13 @@ sq:
       length: gjatesi
       name: emri
       nectar: nektar
+      planet: planet
       points: pikët
       random: zakonshëm
       repeat: përsërit
       right: djathtas
       score: rezultati
+      shout: bërtas
       size: madhësia
       speed: shpejtësia
       type: lloj

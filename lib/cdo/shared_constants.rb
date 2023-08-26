@@ -597,4 +597,23 @@ module SharedConstants
     # An unhandleable error that results in a program crash.
     FATAL: 4
   }.freeze
+
+  RUBRIC_UNDERSTANDING_LEVELS = OpenStruct.new(
+    {
+      EXTENSIVE: 3,
+      CONVINCING: 2,
+      LIMITED: 1,
+      NONE: 0
+    }
+  ).freeze
+
+  EMAIL_LINKS = OpenStruct.new(
+    {
+      PRIVACY_POLICY_URL: "https://code.org/privacy",
+      TOS_URL: "https://code.org/tos",
+      STUDENT_PRIVACY_PLEDGE_URL: "https://studentprivacypledge.org/signatories/",
+      COMMON_SENSE_MEDIA_URL: "https://privacy.commonsense.org/evaluation/code.org",
+      CDO_SUPPORT_MAILTO: "mailto:support@code.org"
+    }
+  ).freeze
 end

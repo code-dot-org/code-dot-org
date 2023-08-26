@@ -3,968 +3,732 @@ si:
   data:
     script:
       name:
-        course1:
-          title: පාඨමාලා අංක 1
-          description: මුල් පාඨකයන් සඳහා පාඨමාලා 1 ආරම්භ කරන්න
-          description_short: මුල් පාඨකයන් පාඨමාලා අංක 1 ආරම්භ කරන්න.
-          description_audience: වයස් 4-6
-          student_description: මුල් පාඨකයන් සඳහා පාඨමාලා 1 ආරම්භ කරන්න
-        course2:
-          title: පාඨමාලාව 2
-          description: කියවීමට හැකි ක්‍රමලේඛනය පිලිබඳ පෙර දැනුමක් නැති සිසුන් සඳහා
-            පාඨමාලා අංක 2න් පටන් ගත හැකිය. මෙහිදී සිසුන් විසින් ගැටලු විසඳීමට වැඩසටහන්
-            නිර්මාණය කල යුතුයි. නැතහොත් ක්‍රීඩා හෝ කතන්දර සෑදිය හැක. මේවා බෙදා ගත
-            හැක. වයස අවුරුදු 2 සිට 5 දක්වා ළමුන් සඳහා නිර්දේශිතයි.
-          description_short: කියවීම ට හැකි සිසුන් පාඨමාලා අංක 2 ආරම්භ කරන්න.
-          description_audience: වයස අවුරුදු 6+ (කියවීම අවශ්‍යයි)
-          student_description: කියවීමට හැකි ක්‍රමලේඛනය පිලිබඳ පෙර දැනුමක් නැති සිසුන්
-            සඳහා පාඨමාලා අංක 2න් පටන් ගත හැකිය. මෙහිදී සිසුන් විසින් ගැටලු විසඳීමට
-            වැඩසටහන් නිර්මාණය කල යුතුයි. නැතහොත් ක්‍රීඩා හෝ කතන්දර සෑදිය හැක. මේවා
-            බෙදා ගත හැක. වයස අවුරුදු 2 සිට 5 දක්වා ළමුන් සඳහා නිර්දේශිතයි.
-        course3:
-          title: පාඨමාලාව 3
-          description: පාඨමාලා අංක 3, පාඨමාල අංක 2 සම්පූර්ණ කල සිසුන් වෙනුවෙනි. සිසුන්
-            ට කලින් පාඨමාලා වල ඉගෙනගත් දෑ තවත් ගැඹුරට හැදෑරිය හැකි අතර තවත් සංකීර්ණ
-            ගැටලු සඳහා වැඩසටහන් නිර්මාණය කල යුතුයි. මෙය අවසානයේදි කතන්දර හෝ ක්‍රීඩා
-            නිර්මාණය කර අනිත් අය සමග බෙදා ගත හැකිය. වයස අවුරුදු 4 සිට 5 දක්වා ළමුන්
-            සඳහා නිර්දේශිතයි.
-          description_short: පාඨමාලා 3 , පාඨමාලා 2 හි පසු විපරමකි
+        20-hour:
+          description: මෙම පැය 20 පාඨමාලා මගින් පරිගණක විද්‍යාවේ හර සංකල්ප ආවරණය වන
+            අතර 2 සිට 4 දක්වා ඇති පාඨමාලා වලින් ක්‍රමලේඛන මූලිකාංග ආවරණය වේ. අවුරුදු
+            10-18 අතර සිසුන් සඳහා මෙය නිර්මාණය කර ඇත. පරිපූර්ණ අත්දැකීමක් සඳහා 2 සිට
+            4 දක්වා ඇති පාඨමාලාවන් බලන්න!
+          description_audience: වයස අවුරුදු 10-18
+          description_short: මෙම පැය 20 පාඨමාලා මගින් පරිගණක විද්‍යාවේ හර සංකල්ප ආවරණය
+            වන අතර 2 සිට 4 දක්වා ඇති පාඨමාලා වලින් ක්‍රමලේඛන මූලිකාංග ආවරණය වේ.
+          student_description: මෙම පැය 20 පාඨමාලා මගින් පරිගණක විද්‍යාවේ හර සංකල්ප
+            ආවරණය වන අතර 2 සිට 4 දක්වා ඇති පාඨමාලා වලින් ක්‍රමලේඛන මූලිකාංග ආවරණය
+            වේ. අවුරුදු 10-18 අතර සිසුන් සඳහා මෙය නිර්මාණය කර ඇත. පරිපූර්ණ අත්දැකීමක්
+            සඳහා 2 සිට 4 දක්වා ඇති පාඨමාලාවන් බලන්න!
+          title: CS පාඨමාලාව වෙත වේගවත් හැඳින්වීමක්
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: හැදින්වීම
+            lessonGroup-3:
+              display_name: විචල්‍යන්
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hour of Code
+        CSDU3-Draft:
+          description_short: ක්‍රමලේඛනය
+        CSDU5-Draft:
+          description_short: දත්ත
+        CSF_Secret_Sample:
           description_audience: වයස අවුරුදු 8-18
-          student_description: පාඨමාලා අංක 3, පාඨමාල අංක 2 සම්පූර්ණ කල සිසුන් වෙනුවෙනි.
-            සිසුන් ට කලින් පාඨමාලා වල ඉගෙනගත් දෑ තවත් ගැඹුරට හැදෑරිය හැකි අතර තවත්
-            සංකීර්ණ ගැටලු සඳහා වැඩසටහන් නිර්මාණය කල යුතුයි. මෙය අවසානයේදි කතන්දර හෝ
-            ක්‍රීඩා නිර්මාණය කර අනිත් අය සමග බෙදා ගත හැකිය. වයස අවුරුදු 4 සිට 5 දක්වා
-            ළමුන් සඳහා නිර්දේශිතයි.
-        playlab:
-          title: ක්‍රීඩා පරීක්ෂණාගාරය
-          description: ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක් හදන්න!
-          description_short: ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක් හදන්න!
-          student_description: ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක්
-            හදන්න!
-        artist:
-          title: කලාකරු
-          description: චිත්‍රශිල්පියා එක්ක මරු මරු චිත්‍ර සහ රූප රටා අඳින්න!
-          description_short: චිත්‍රශිල්පියා එක්ක මරු මරු චිත්‍ර සහ රූප රටා අඳින්න!
-          student_description: චිත්‍රශිල්පියා එක්ක මරු මරු චිත්‍ර සහ රූප රටා අඳින්න!
-        hourofcode:
-          title: සම්භාව්‍ය අවුල් ජාලය
-          description: Angry Birds, Plants vs. Zombies, Ice Age වල චරිත ඇසුරෙන් පරිගණක
-            විද්‍යාවේ මූලික කරුණු ඉගෙනගන්න!
-          description_short: පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ
-            කරන්න!
-          student_description: Angry Birds, Plants vs. Zombies, Ice Age වල චරිත ඇසුරෙන්
-            පරිගණක විද්‍යාවේ මූලික කරුණු ඉගෙනගන්න!
-        frozen:
-          title: ඇනා සහ එල්සා සමඟ කේතනය කරන්න
-          description: ඇනා සහ එලිසා අයිස් වල ලස්සන බලන අතරතුරු ඔවුන්ට එකතු වීමට අපිත්
-            කෝඩ් කරමු. ඔබ හිම පදින අතරතුරු හිම බිඳිති සහ රටා වලින් නව හිම ලන්තයක්
-            නිර්මාණය කර ඔබේ මිතුරන් සමග බෙදා ගත හැකියි!
-          description_short: ඇනා සහ එලිසා අයිස් වල ලස්සන බලන අතරතුරු ඔවුන්ට එකතු වීමට
-            අපිත් කෝඩ් කරමු.
-          student_description: ඇනා සහ එලිසා අයිස් වල ලස්සන බලන අතරතුරු ඔවුන්ට එකතු
-            වීමට අපිත් කෝඩ් කරමු. ඔබ හිම පදින අතරතුරු හිම බිඳිති සහ රටා වලින් නව හිම
-            ලන්තයක් නිර්මාණය කර ඔබේ මිතුරන් සමග බෙදා ගත හැකියි!
-        course4:
-          title: පාඨමාලාව 4
-          description: පාඨමාලා අංක 4, 2 සහ 3 පාඨමාලා නිම කල සිසුන්ටයි. සංකල්ප කිහිපයක්
-            භාවිතයෙන් සංකීර්ණ ප්‍රහේලිකා විසඳීම මෙහිදී සිදු කෙරේ. පාඨමාලාව අවසන් කරන
-            විට ලූප්ස් සහ ශ්‍රිත ඇතුලත් වැඩසටහන් නිර්මාණය කරමින් තම හැකියාවන් ඉදිරිපත්
-            කිරීමට සිසුනට හැකිය. වයස අවුරුදු 4 සිට 8 දක්වා ළමුන් සඳහා නිර්දේශිතයි.
-          description_short: පාඨමාලා අංක 4 තෝරාගන්නා සිසු 2වන සහ 3වන පාඨමාලා නිඅ කර
-            තිබිය යුතුයි.
-          description_audience: වයස අවුරුදු 9-18
-          student_description: පාඨමාලා අංක 4, 2 සහ 3 පාඨමාලා නිම කල සිසුන්ටයි. සංකල්ප
-            කිහිපයක් භාවිතයෙන් සංකීර්ණ ප්‍රහේලිකා විසඳීම මෙහිදී සිදු කෙරේ. පාඨමාලාව
-            අවසන් කරන විට ලූප්ස් සහ ශ්‍රිත ඇතුලත් වැඩසටහන් නිර්මාණය කරමින් තම හැකියාවන්
-            ඉදිරිපත් කිරීමට සිසුනට හැකිය. වයස අවුරුදු 4 සිට 8 දක්වා ළමුන් සඳහා නිර්දේශිතයි.
+        CSF_Secret_Sample_Story:
+          description_audience: වයස අවුරුදු 8-18+
         Course4pre:
-          title: පාඨමාලා අංක 4 සඳහා පෙර අවශ්‍යතාවයකි
           description: පාඨමාලා 1 සහ 2 සම්පූර්ණ නොකරන ලද සිසුන් සඳහා කෙටි වැඩි කිරීමක්.
           description_short: පාඨමාලා 1 සහ 2 සම්පූර්ණ නොකරන ලද සිසුන් සඳහා කෙටි වැඩි
             කිරීමක්.
           student_description: පාඨමාලා 1 සහ 2 සම්පූර්ණ නොකරන ලද සිසුන් සඳහා කෙටි වැඩි
             කිරීමක්.
-        algebra:
-          title: වීජ ගණිතය තුළින් පරිගණක විද්‍යාව
-        infinity:
-          title: ඩිස්නි අසීමිත ක්‍රීඩා විද්‍යාගාරය
-          description: ක්‍රීඩා පරීක්ෂණාගාරය භාවිතයෙන් ඩිස්නි ඉන්ෆිනිටි චරිත ඇති කතාවක්
-            හෝ ක්‍රීඩාවක් සාදන්න.
-          description_short: ක්‍රීඩා පරීක්ෂණාගාරය භාවිතයෙන් ඩිස්නි ඉන්ෆිනිටි චරිත
-            ඇති කතාවක් හෝ ක්‍රීඩාවක් සාදන්න.
-          student_description: ක්‍රීඩා පරීක්ෂණාගාරය භාවිතයෙන් ඩිස්නි ඉන්ෆිනිටි චරිත
-            ඇති කතාවක් හෝ ක්‍රීඩාවක් සාදන්න.
-        netsim:
-          title: අන්තර්ජාල සමාකෘතිය
-          description: අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න.
-          description_short: අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න.
-          student_description: අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න.
-        20-hour:
-          title: CS පාඨමාලාව වෙත වේගවත් හැඳින්වීමක්
-          description: මෙම පැය 20 පාඨමාලා මගින් පරිගණක විද්‍යාවේ හර සංකල්ප ආවරණය වන
-            අතර 2 සිට 4 දක්වා ඇති පාඨමාලා වලින් ක්‍රමලේඛන මූලිකාංග ආවරණය වේ. අවුරුදු
-            10-18 අතර සිසුන් සඳහා මෙය නිර්මාණය කර ඇත. පරිපූර්ණ අත්දැකීමක් සඳහා 2 සිට
-            4 දක්වා ඇති පාඨමාලාවන් බලන්න!
-          description_short: මෙම පැය 20 පාඨමාලා මගින් පරිගණක විද්‍යාවේ හර සංකල්ප ආවරණය
-            වන අතර 2 සිට 4 දක්වා ඇති පාඨමාලා වලින් ක්‍රමලේඛන මූලිකාංග ආවරණය වේ.
-          description_audience: වයස අවුරුදු 10-18
-          student_description: මෙම පැය 20 පාඨමාලා මගින් පරිගණක විද්‍යාවේ හර සංකල්ප
-            ආවරණය වන අතර 2 සිට 4 දක්වා ඇති පාඨමාලා වලින් ක්‍රමලේඛන මූලිකාංග ආවරණය
-            වේ. අවුරුදු 10-18 අතර සිසුන් සඳහා මෙය නිර්මාණය කර ඇත. පරිපූර්ණ අත්දැකීමක්
-            සඳහා 2 සිට 4 දක්වා ඇති පාඨමාලාවන් බලන්න!
-        edit-code:
-          title: කේතය සකසන්න
-          description: කේතය සකසන්න
-          description_short: කේතය සකසන්න
-          student_description: කේතය සකසන්න
-        events:
-          title: වැඩසටහන්
-          description: වැඩසටහන්
-          description_short: වැඩසටහන්
-          student_description: වැඩසටහන්
-        flappy:
-          title: ෆ්ලැපි කේතය
-          description: විනාඩි 10 කට වඩා අඩු කාලයක් තුළ ඔබේම ක්‍රීඩාව ලියන්න අවශ්‍යද?
-            අපගේ Flappy Code නිබන්දනය කියවන්න!
-          description_short: ඔබේම ෆ්ලැපී බර්ඩ් ගේම් එකක් විනාඩි 10කින් හදන්න!
-          student_description: විනාඩි 10 කට වඩා අඩු කාලයක් තුළ ඔබේම ක්‍රීඩාව ලියන්න
-            අවශ්‍යද? අපගේ Flappy Code නිබන්දනය කියවන්න!
-        jigsaw:
-          title: පින්තූර ප්‍රෙහේලිකාව
-          description: අපේ ජිග්සෝ පාඩම උත්සාහ කර බලන්න.
-          description_short: අපේ ජිග්සෝ පාඩම උත්සාහ කර බලන්න.
-          student_description: අපේ ජිග්සෝ පාඩම උත්සාහ කර බලන්න.
-        step:
-          title: පියවර
-          description: පියවර නිබන්ධනය
-          description_short: පියවර නිබන්ධනය
-          student_description: පියවර නිබන්ධනය
+          title: පාඨමාලා අංක 4 සඳහා පෙර අවශ්‍යතාවයකි
         Hour of Code:
-          title: පැයේ කේතය 2013
           description: ඇන්ග්‍රි බර්ඩ්ස් සහ ගස් යක්කු වල චරිත වලින් පරිගණක විද්‍යාවේ
             මූලිකාංග ඉගෙනගන්න!
           description_short: පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ
             කරන්න!
           student_description: ඇන්ග්‍රි බර්ඩ්ස් සහ ගස් යක්කු වල චරිත වලින් පරිගණක
             විද්‍යාවේ මූලිකාංග ඉගෙනගන්න!
-        asUnplugged:
-          description_audience: වයස අවුරුදු 6-13
-        afterschool1:
-          description_audience: වයස අවුරුදු 7-13
-        cspunit4draft:
-          description_short: දත්ත
+          title: පැයේ කේතය 2013
+        MikeTest:
+          description_audience: වයස අවුරුදු 8-98
         Special Fun:
           description_audience: වයස අවුරුදු 10-18
         SpecialSeries:
           description_audience: වයස අවුරුදු 10-18
-        iceage:
-          title: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
-          description: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක්
-            හදන්න!
-          description_short: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම්
-            එකක් හදන්න!
-          student_description: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය සමඟ කථාවක් සාදන්න හෝ
-            ගේම් එකක් හදන්න!
-        gumball:
-          title: ගම්බෝල් ක්‍රීඩා විද්‍යාගාරය
-          description: ගම්බෝල් ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක්
-            හදන්න!
-          description_short: ගම්බෝල් ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම්
-            එකක් හදන්න!
-          student_description: ගම්බෝල් ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම්
-            එකක් හදන්න!
-        starwars:
-          description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක
-            ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
-          description_short: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට
-            මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
-          student_description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත
-            එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
-        starwarsblocks:
-          description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක
-            ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
-          description_short: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට
-            මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
-          student_description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත
-            එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
-        mc:
-          title: Minecraft Hour of Code
-          description: කේත කොටස් භාවිතා කරමින්, ස්ටීව් හෝ ඇලෙක්ස් ව මෙම Minecraft
-            ලෝකය හරහා වික්‍රමාන්විත ගමන් මගක රැගෙන යන්න.
-          description_short: Minecraft ලෝකය කේතය මගින් ගවේශණය කරන්න
-          student_description: කේත කොටස් භාවිතා කරමින්, ස්ටීව් හෝ ඇලෙක්ස් ව මෙම Minecraft
-            ලෝකය හරහා වික්‍රමාන්විත ගමන් මගක රැගෙන යන්න.
-          name: mc
-        CSDU3-Draft:
-          description_short: ක්‍රමලේඛනය
         TEMP CSD Unit 3:
           description_short: ක්‍රමලේඛනය
-        CSF_Secret_Sample:
-          description_audience: වයස අවුරුදු 8-18
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-            practice:
-              display_name: ඉගැන්වීමේ පිළිවෙත්
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-            practice:
-              display_name: ඉගැන්වීමේ පිළිවෙත්
-        CSDU5-Draft:
-          description_short: දත්ත
-        CSF_Secret_Sample_Story:
-          description_audience: වයස අවුරුදු 8-18+
-        MikeTest:
-          description_audience: වයස අවුරුදු 8-98
-        artistExemplar:
-          description_audience: වයස අවුරුදු 8-18
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-            practice:
-              display_name: ඉගැන්වීමේ පිළිවෙත්
-        gradeKinder:
-          description_audience: අවුරුදු 5 සිට 18 දක්වා
-        grade4:
-          description_audience: වයස 9-99
-        grade1:
-          description_audience: අවුරුදු 5 සිට 18 දක්වා
-        grade5:
-          description_audience: වයස 10-110
-        ecs-unit4:
-          description: "(පැරණි) 4 වන ඒකකය: ක්‍රමලේඛනය"
-          description_short: "(පැරණි) 4 වන ඒකකය: ක්‍රමලේඛනය"
-          student_description: "(පැරණි) 4 වන ඒකකය: ක්‍රමලේඛනය"
-        grade3:
-          description_audience: අවුරුදු 5 සිට 18 දක්වා
+        afterschool1:
+          description_audience: වයස අවුරුදු 7-13
+        algebra:
+          title: වීජ ගණිතය තුළින් පරිගණක විද්‍යාව
         alltheplcthings:
           lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
             content:
               display_name: අන්තර්ගතය
             practice:
               display_name: ඉගැන්වීමේ පිළිවෙත්
-        grade2:
-          description_audience: අවුරුදු 5 සිට 18 දක්වා
-        csp-online-test:
+            required:
+              display_name: දළ විශ්ලේෂණය
+        andrea-test:
           lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
             content:
               display_name: අන්තර්ගතය
-            practice:
-              display_name: ඉගැන්වීමේ පිළිවෙත්
-        csp1-support:
-          lesson_groups:
             required:
               display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-            practice:
-              display_name: ඉගැන්වීමේ පිළිවෙත්
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: ඇගයීම්
+        aquatic:
+          name: ජලජ
+        artist:
+          description: චිත්‍රශිල්පියා එක්ක මරු මරු චිත්‍ර සහ රූප රටා අඳින්න!
+          description_short: චිත්‍රශිල්පියා එක්ක මරු මරු චිත්‍ර සහ රූප රටා අඳින්න!
+          student_description: චිත්‍රශිල්පියා එක්ක මරු මරු චිත්‍ර සහ රූප රටා අඳින්න!
+          title: කලාකරු
+        artistExemplar:
+          description_audience: වයස අවුරුදු 8-18
+        asUnplugged:
+          description_audience: වයස අවුරුදු 6-13
         basketball:
           name: පැසිපන්දු
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-            practice:
-              display_name: ඉගැන්වීමේ පිළිවෙත්
-        coursee-draft:
-          lesson_groups:
-            content:
-              display_name: අන්තර්ගතය
-        coursef-draft:
-          lesson_groups:
-            content:
-              display_name: අන්තර්ගතය
         classic-hoc-impact-study:
           description_short: පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ
             කරන්න!
-        hoc-impact-study:
-          description_short: පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ
-            කරන්න!
-        csp3-support:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-            practice:
-              display_name: ඉගැන්වීමේ පිළිවෙත්
-        csp4-support:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-            practice:
-              display_name: ඉගැන්වීමේ පිළිවෙත්
-        csf2harvey:
-          lesson_groups:
-            content:
-              display_name: අන්තර්ගතය
-        csp5-support:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-            practice:
-              display_name: ඉගැන්වීමේ පිළිවෙත්
-        csppostap-2017:
-          lesson_groups:
-            content:
-              display_name: අන්තර්ගතය
-        cspnovice:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp1-dlp:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp2-dlp:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp3-dlp:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp4-dlp:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp5-dlp:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csd1-dlp:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csd6-dlp:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csd5-dlp:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csd4-dlp:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csd3-dlp:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csd2-dlp:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        express-2017:
-          lesson_groups:
-            content:
-              display_name: අන්තර්ගතය
-        new-express:
-          lesson_groups:
-            content:
-              display_name: අන්තර්ගතය
-        csp2-2018:
-          lesson_groups:
-            csp2_1_2018:
-              display_name: '2වන ඒකකය: අංකිත තොරතුරු'
-        csp4-2018:
-          lesson_groups:
-            csp4_1_2018:
-              display_name: 'ඒකකය 4: විශාල දත්ත සහ රහස්‍යතාවය'
-        csd1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csd2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csd3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csd4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csd5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csd6-dlp-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp-explore-dlp-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp-create-dlp-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csd-novice-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csd-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp-novice-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        fit-test:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        aquatic:
-          name: ජලජ
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: විචල්‍යන්
-            csf_data:
-              display_name: දත්ත
-            csf_for_loops:
-              display_name: ලූපයන් සඳහා
-            csf_internet:
-              display_name: අන්තර්ජාලය
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: වැඩසටහන්
-            csf_loops:
-              display_name: ලූපයන්
-            csf_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csf_binary:
-              display_name: ද්විමය
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-        coursee-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_nested_loops:
-              display_name: නැවත නැවත සිදුවන ලුප
-            csf_functions:
-              display_name: ශ්‍රිතයන්
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: ලූපයන්
-            csf_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csf_functions:
-              display_name: ශ්‍රිතයන්
-            csf_variables:
-              display_name: විචල්‍යන්
-            csf_for_loops:
-              display_name: ලූපයන් සඳහා
-        andrea-test:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_binary:
-              display_name: ද්විමය
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-            csf_data:
-              display_name: දත්ත
+        course1:
+          description: මුල් පාඨකයන් සඳහා පාඨමාලා 1 ආරම්භ කරන්න
+          description_audience: වයස් 4-6
+          description_short: මුල් පාඨකයන් පාඨමාලා අංක 1 ආරම්භ කරන්න.
+          student_description: මුල් පාඨකයන් සඳහා පාඨමාලා 1 ආරම්භ කරන්න
+          title: පාඨමාලා අංක 1
+        course2:
+          description: කියවීමට හැකි ක්‍රමලේඛනය පිලිබඳ පෙර දැනුමක් නැති සිසුන් සඳහා
+            පාඨමාලා අංක 2න් පටන් ගත හැකිය. මෙහිදී සිසුන් විසින් ගැටලු විසඳීමට වැඩසටහන්
+            නිර්මාණය කල යුතුයි. නැතහොත් ක්‍රීඩා හෝ කතන්දර සෑදිය හැක. මේවා බෙදා ගත
+            හැක. වයස අවුරුදු 2 සිට 5 දක්වා ළමුන් සඳහා නිර්දේශිතයි.
+          description_audience: වයස අවුරුදු 6+ (කියවීම අවශ්‍යයි)
+          description_short: කියවීම ට හැකි සිසුන් පාඨමාලා අංක 2 ආරම්භ කරන්න.
+          student_description: කියවීමට හැකි ක්‍රමලේඛනය පිලිබඳ පෙර දැනුමක් නැති සිසුන්
+            සඳහා පාඨමාලා අංක 2න් පටන් ගත හැකිය. මෙහිදී සිසුන් විසින් ගැටලු විසඳීමට
+            වැඩසටහන් නිර්මාණය කල යුතුයි. නැතහොත් ක්‍රීඩා හෝ කතන්දර සෑදිය හැක. මේවා
+            බෙදා ගත හැක. වයස අවුරුදු 2 සිට 5 දක්වා ළමුන් සඳහා නිර්දේශිතයි.
+          title: පාඨමාලාව 2
+        course3:
+          description: පාඨමාලා අංක 3, පාඨමාල අංක 2 සම්පූර්ණ කල සිසුන් වෙනුවෙනි. සිසුන්
+            ට කලින් පාඨමාලා වල ඉගෙනගත් දෑ තවත් ගැඹුරට හැදෑරිය හැකි අතර තවත් සංකීර්ණ
+            ගැටලු සඳහා වැඩසටහන් නිර්මාණය කල යුතුයි. මෙය අවසානයේදි කතන්දර හෝ ක්‍රීඩා
+            නිර්මාණය කර අනිත් අය සමග බෙදා ගත හැකිය. වයස අවුරුදු 4 සිට 5 දක්වා ළමුන්
+            සඳහා නිර්දේශිතයි.
+          description_audience: වයස අවුරුදු 8-18
+          description_short: පාඨමාලා 3 , පාඨමාලා 2 හි පසු විපරමකි
+          student_description: පාඨමාලා අංක 3, පාඨමාල අංක 2 සම්පූර්ණ කල සිසුන් වෙනුවෙනි.
+            සිසුන් ට කලින් පාඨමාලා වල ඉගෙනගත් දෑ තවත් ගැඹුරට හැදෑරිය හැකි අතර තවත්
+            සංකීර්ණ ගැටලු සඳහා වැඩසටහන් නිර්මාණය කල යුතුයි. මෙය අවසානයේදි කතන්දර හෝ
+            ක්‍රීඩා නිර්මාණය කර අනිත් අය සමග බෙදා ගත හැකිය. වයස අවුරුදු 4 සිට 5 දක්වා
+            ළමුන් සඳහා නිර්දේශිතයි.
+          title: පාඨමාලාව 3
+        course4:
+          description: පාඨමාලා අංක 4, 2 සහ 3 පාඨමාලා නිම කල සිසුන්ටයි. සංකල්ප කිහිපයක්
+            භාවිතයෙන් සංකීර්ණ ප්‍රහේලිකා විසඳීම මෙහිදී සිදු කෙරේ. පාඨමාලාව අවසන් කරන
+            විට ලූප්ස් සහ ශ්‍රිත ඇතුලත් වැඩසටහන් නිර්මාණය කරමින් තම හැකියාවන් ඉදිරිපත්
+            කිරීමට සිසුනට හැකිය. වයස අවුරුදු 4 සිට 8 දක්වා ළමුන් සඳහා නිර්දේශිතයි.
+          description_audience: වයස අවුරුදු 9-18
+          description_short: පාඨමාලා අංක 4 තෝරාගන්නා සිසු 2වන සහ 3වන පාඨමාලා නිඅ කර
+            තිබිය යුතුයි.
+          student_description: පාඨමාලා අංක 4, 2 සහ 3 පාඨමාලා නිම කල සිසුන්ටයි. සංකල්ප
+            කිහිපයක් භාවිතයෙන් සංකීර්ණ ප්‍රහේලිකා විසඳීම මෙහිදී සිදු කෙරේ. පාඨමාලාව
+            අවසන් කරන විට ලූප්ස් සහ ශ්‍රිත ඇතුලත් වැඩසටහන් නිර්මාණය කරමින් තම හැකියාවන්
+            ඉදිරිපත් කිරීමට සිසුනට හැකිය. වයස අවුරුදු 4 සිට 8 දක්වා ළමුන් සඳහා නිර්දේශිතයි.
+          title: පාඨමාලාව 4
         coursea-2019:
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
-            csf_loops:
-              display_name: ලූපයන්
             csf_events:
               display_name: වැඩසටහන්
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
             csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-            required:
-              display_name: දළ විශ්ලේෂණය
-        csp2-2019:
-          lesson_groups:
-            csp2_1_2018:
-              display_name: '2වන ඒකකය: අංකිත තොරතුරු'
-        csp4-2019:
-          lesson_groups:
-            csp4_1_2018:
-              display_name: 'ඒකකය 4: විශාල දත්ත සහ රහස්‍යතාවය'
-        csp1-pilot:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-        csp1-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-        csp2-pilot-staging:
-          title: 'පාඩම් අංක 2: අන්තර්ජාලය'
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-        csp4-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-        csp5-pilot-staging:
-          lesson_groups:
-            csp_lists:
-              display_name: ලැයිස්තු
-            csp_loops:
-              display_name: ලූපයන්
-        csp6-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-        csp8-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-        csp9-pilot-staging:
-          title: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-        csp10-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-        csp5-pilot:
-          lesson_groups:
-            csp_lists:
-              display_name: ලැයිස්තු
-            csp_loops:
-              display_name: ලූපයන්
-            required:
-              display_name: දළ විශ්ලේෂණය
-        fit2019-novice:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp3-pilot:
-          lesson_groups:
-            content:
-              display_name: අන්තර්ගතය
-            required:
-              display_name: දළ විශ්ලේෂණය
-        csl-vn:
-          lesson_groups:
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-        dlp19-csd-mod-fit:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        dlp19-csp-mod-fit:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        dlp19-csd-mod-w1:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        dlp19-csd-mod-w2:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        dlp19-csd-mod-w3:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        dlp19-csd-mod-w4:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        dlp19-csp-mod-w1:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        dlp19-csp-mod-w2:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        dlp19-csp-mod-w3:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        dlp19-csp-mod-w4:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-            content:
-              display_name: අන්තර්ගතය
-        csp2-pilot:
-          lesson_groups:
-            content:
-              display_name: අන්තර්ගතය
-            required:
-              display_name: දළ විශ්ලේෂණය
-        csp6-pilot:
-          lesson_groups:
-            content:
-              display_name: අන්තර්ගතය
-            required:
-              display_name: දළ විශ්ලේෂණය
-        k5-onlinepd-2019:
-          lesson_groups:
-            k5_next_steps:
-              display_name: ඉදිරි පියවර
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csf_nested_loops:
-              display_name: නැවත නැවත සිදුවන ලුප
-            csf_functions:
-              display_name: ශ්‍රිතයන්
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: ලූපයන්
-            csf_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csf_events:
-              display_name: වැඩසටහන්
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: ලූපයන්
-            csf_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csf_events:
-              display_name: වැඩසටහන්
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: දළ විශ්ලේෂණය
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: ලැයිස්තු
-            csp_loops:
               display_name: ලූපයන්
         coursea-2020:
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
-            csf_loops:
-              display_name: ලූපයන්
             csf_events:
               display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        coursea-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        coursea-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        courseb-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
         courseb-2020:
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
-            csf_loops:
-              display_name: ලූපයන්
             csf_events:
               display_name: වැඩසටහන්
-        coursec-2020:
+            csf_loops:
+              display_name: ලූපයන්
+        courseb-2021:
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
-            csf_binary:
-              display_name: ද්විමය
-            csf_loops:
-              display_name: ලූපයන්
             csf_events:
               display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        courseb-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        coursec-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: ද්විමය
             csf_data:
               display_name: දත්ත
-        coursed-2020:
-          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
             csf_events:
               display_name: වැඩසටහන්
             csf_loops:
               display_name: ලූපයන්
-            csf_conditionals:
-              display_name: කන්ඩිෂනලස්
+        coursec-2020:
+          lesson_groups:
             csf_binary:
               display_name: ද්විමය
+            csf_data:
+              display_name: දත්ත
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        coursec-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: ද්විමය
+            csf_data:
+              display_name: දත්ත
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        coursec-2022:
+          lesson_groups:
+            csf_data:
+              display_name: දත්ත
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        coursec-2023:
+          lesson_groups:
+            csf_data:
+              display_name: දත්ත
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        coursed-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: ද්විමය
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        coursed-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: ද්විමය
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        coursed-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: ද්විමය
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+            lessonGroup-6:
+              display_name: ඩිජිටල් පුරවැසිකම
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+            lessonGroup-6:
+              display_name: ඩිජිටල් පුරවැසිකම
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+            lessonGroup-6:
+              display_name: ඩිජිටල් පුරවැසිකම
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_nested_loops:
+              display_name: නැවත නැවත සිදුවන ලුප
         coursee-2020:
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
-            csf_nested_loops:
-              display_name: නැවත නැවත සිදුවන ලුප
             csf_functions:
               display_name: ශ්‍රිතයන්
-        coursef-2020:
+            csf_nested_loops:
+              display_name: නැවත නැවත සිදුවන ලුප
+        coursee-2021:
           lesson_groups:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
-            csf_variables:
-              display_name: විචල්‍යන්
-            csf_data:
-              display_name: දත්ත
-            csf_for_loops:
-              display_name: ලූපයන් සඳහා
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: ලූපයන්
-            csf_conditionals:
-              display_name: කන්ඩිෂනලස්
             csf_functions:
               display_name: ශ්‍රිතයන්
-            csf_variables:
-              display_name: විචල්‍යන්
-            csf_for_loops:
-              display_name: ලූපයන් සඳහා
-        pre-express-2020:
+            csf_nested_loops:
+              display_name: කන්ඩිෂනලස්
+            ramp_up:
+              display_name: නැවත නැවත සිදුවන ලුප
+        coursee-2022:
           lesson_groups:
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-        csp1-2020:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_nested_loops:
+              display_name: කන්ඩිෂනලස්
+            ramp_up:
+              display_name: නැවත නැවත සිදුවන ලුප
+        coursee-2023:
           lesson_groups:
-            csp_unit1_2020:
-              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
-        csp2-2020:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
-        csp9-2020:
-          lesson_groups:
-            csp_unit9_2020:
-              display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
-        virtual-holding-place:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_nested_loops:
+              display_name: කන්ඩිෂනලස්
+            ramp_up:
+              display_name: නැවත නැවත සිදුවන ලුප
+        coursee-draft:
           lesson_groups:
             content:
               display_name: අන්තර්ගතය
-        k5-onlinepd-2020:
+        coursef-2019:
           lesson_groups:
-            k5_next_steps_1:
-              display_name: ඉදිරි පියවර
+            csf_data:
+              display_name: දත්ත
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+            csf_internet:
+              display_name: අන්තර්ජාලය
+            csf_variables:
+              display_name: විචල්‍යන්
+        coursef-2020:
+          lesson_groups:
+            csf_data:
+              display_name: දත්ත
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+            csf_variables:
+              display_name: විචල්‍යන්
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+            csf_variables:
+              display_name: ලූපයන් සඳහා
+            lessonGroup-7:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-8:
+              display_name: විචල්‍යන්
+            lessonGroup-9:
+              display_name: ඉවත් කරන්න
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-8:
+              display_name: විචල්‍යන්
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-8:
+              display_name: විචල්‍යන්
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-4:
+              display_name: විචල්‍යන්
+        coursef-draft:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: දත්ත
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ඒකකය 1
+            lessonGroup-4:
+              display_name: ඒකකය 2
+            lessonGroup-5:
+              display_name: ඒකකය 3
+            lessonGroup-6:
+              display_name: ඒකකය 4
+            lessonGroup-7:
+              display_name: ඒකකය 5
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa1-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa1-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: අන්තර්ගතය
+          lessons:
+            lesson-6:
+              name: ලූපයන්
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa2-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+          lessons:
+            lesson-4:
+              name: විචල්‍යන්
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: අන්තර්ගතය
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: අන්තර්ගතය
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+          lessons:
+            lesson-3:
+              name: ලූපයන් සඳහා
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa4-exemplars:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            lesson group:
+              display_name: අන්තර්ගතය
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+            lesson_group:
+              display_name: අන්තර්ගතය
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csd-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csd-novice-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csd1-dlp:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csd1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csd2-dlp:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csd2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csd3-dlp:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csd3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
         csd3-virtual:
           lesson_groups:
             csd3_1:
@@ -973,6 +737,912 @@ si:
               display_name: අන්තර්ගතය
             cspSurvey:
               display_name: අන්තර්ගතය
+        csd4-dlp:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csd4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csd5-dlp:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csd5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csd6-dlp:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csd6-dlp-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: විචල්‍යන්
+            ramp_up:
+              display_name: හැදින්වීම
+            variables:
+              display_name: විචල්‍යන්
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: විචල්‍යන්
+        csf2harvey:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        csp-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp-create-dlp-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp-explore-dlp-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp-novice-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp-online-test:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp1-2020:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
+        csp1-2021:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
+        csp1-2022:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
+        csp1-2023:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
+        csp1-dlp:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+        csp1-support:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+        csp2-2018:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '2වන ඒකකය: අංකිත තොරතුරු'
+        csp2-2019:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '2වන ඒකකය: අංකිත තොරතුරු'
+        csp2-2020:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
+        csp2-2021:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
+        csp2-dlp:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+          title: 'පාඩම් අංක 2: අන්තර්ජාලය'
+        csp2-support:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp3-dlp:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp3-support:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp4-2018:
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'ඒකකය 4: විශාල දත්ත සහ රහස්‍යතාවය'
+        csp4-2019:
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'ඒකකය 4: විශාල දත්ත සහ රහස්‍යතාවය'
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+        csp4-dlp:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+        csp4-support:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: ලැයිස්තු
+            csp_loops:
+              display_name: ලූපයන්
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: ලැයිස්තු
+            csp_loops:
+              display_name: ලූපයන්
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: ලැයිස්තු
+            csp_loops:
+              display_name: ලූපයන්
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: දත්ත
+            csp_loops:
+              display_name: ලූපයන්
+        csp5-dlp:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: ලැයිස්තු
+            csp_loops:
+              display_name: ලූපයන්
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: ලැයිස්තු
+            csp_loops:
+              display_name: ලූපයන්
+        csp5-support:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ඇල්ගොරිතම්
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ලැයිස්තු
+            lessonGroup-3:
+              display_name: ලූපයන්
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+        csp9-2020:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
+        csp9-2021:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
+        csp9-2022:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+          title: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
+        cspnovice:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            csp_variables:
+              display_name: විචල්‍යන්
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+        cspunit1-support:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
+            required:
+              display_name: දළ විශ්ලේෂණය
+        cspunit4draft:
+          description_short: දත්ත
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: පරික්ෂාව
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අදියර 1
+            lessonGroup-3:
+              display_name: අදියර 2
+        ecs-unit4:
+          description: "(පැරණි) 4 වන ඒකකය: ක්‍රමලේඛනය"
+          description_short: "(පැරණි) 4 වන ඒකකය: ක්‍රමලේඛනය"
+          student_description: "(පැරණි) 4 වන ඒකකය: ක්‍රමලේඛනය"
+        edit-code:
+          description: කේතය සකසන්න
+          description_short: කේතය සකසන්න
+          student_description: කේතය සකසන්න
+          title: කේතය සකසන්න
+        events:
+          description: වැඩසටහන්
+          description_short: වැඩසටහන්
+          student_description: වැඩසටහන්
+          title: වැඩසටහන්
+        express-2017:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+        express-2019:
+          lesson_groups:
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_loops:
+              display_name: ලූපයන්
+            csf_variables:
+              display_name: විචල්‍යන්
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_loops:
+              display_name: ලූපයන්
+            csf_variables:
+              display_name: විචල්‍යන්
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_loops:
+              display_name: ලූපයන්
+            csf_variables:
+              display_name: විචල්‍යන්
+            lessonGroup-9:
+              display_name: වැඩසටහන්
+        express-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_loops:
+              display_name: ලූපයන්
+            csf_variables:
+              display_name: විචල්‍යන්
+            lessonGroup-9:
+              display_name: වැඩසටහන්
+        express-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_loops:
+              display_name: ලූපයන්
+            csf_variables:
+              display_name: විචල්‍යන්
+            lessonGroup-9:
+              display_name: වැඩසටහන්
+        fit-test:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        fit2019-apprentice:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        fit2019-novice:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        flappy:
+          description: විනාඩි 10 කට වඩා අඩු කාලයක් තුළ ඔබේම ක්‍රීඩාව ලියන්න අවශ්‍යද?
+            අපගේ Flappy Code නිබන්දනය කියවන්න!
+          description_short: ඔබේම ෆ්ලැපී බර්ඩ් ගේම් එකක් විනාඩි 10කින් හදන්න!
+          student_description: විනාඩි 10 කට වඩා අඩු කාලයක් තුළ ඔබේම ක්‍රීඩාව ලියන්න
+            අවශ්‍යද? අපගේ Flappy Code නිබන්දනය කියවන්න!
+          title: ෆ්ලැපි කේතය
+        frozen:
+          description: ඇනා සහ එලිසා අයිස් වල ලස්සන බලන අතරතුරු ඔවුන්ට එකතු වීමට අපිත්
+            කෝඩ් කරමු. ඔබ හිම පදින අතරතුරු හිම බිඳිති සහ රටා වලින් නව හිම ලන්තයක්
+            නිර්මාණය කර ඔබේ මිතුරන් සමග බෙදා ගත හැකියි!
+          description_short: ඇනා සහ එලිසා අයිස් වල ලස්සන බලන අතරතුරු ඔවුන්ට එකතු වීමට
+            අපිත් කෝඩ් කරමු.
+          student_description: ඇනා සහ එලිසා අයිස් වල ලස්සන බලන අතරතුරු ඔවුන්ට එකතු
+            වීමට අපිත් කෝඩ් කරමු. ඔබ හිම පදින අතරතුරු හිම බිඳිති සහ රටා වලින් නව හිම
+            ලන්තයක් නිර්මාණය කර ඔබේ මිතුරන් සමග බෙදා ගත හැකියි!
+          title: ඇනා සහ එල්සා සමඟ කේතනය කරන්න
+        grade1:
+          description_audience: අවුරුදු 5 සිට 18 දක්වා
+        grade2:
+          description_audience: අවුරුදු 5 සිට 18 දක්වා
+        grade3:
+          description_audience: අවුරුදු 5 සිට 18 දක්වා
+        grade4:
+          description_audience: වයස 9-99
+        grade5:
+          description_audience: වයස 10-110
+        gradeKinder:
+          description_audience: අවුරුදු 5 සිට 18 දක්වා
+        gumball:
+          description: ගම්බෝල් ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක්
+            හදන්න!
+          description_short: ගම්බෝල් ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම්
+            එකක් හදන්න!
+          student_description: ගම්බෝල් ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම්
+            එකක් හදන්න!
+          title: ගම්බෝල් ක්‍රීඩා විද්‍යාගාරය
+        hoc-impact-study:
+          description_short: පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ
+            කරන්න!
+        hourofcode:
+          description: Angry Birds, Plants vs. Zombies, Ice Age වල චරිත ඇසුරෙන් පරිගණක
+            විද්‍යාවේ මූලික කරුණු ඉගෙනගන්න!
+          description_short: පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ
+            කරන්න!
+          student_description: Angry Birds, Plants vs. Zombies, Ice Age වල චරිත ඇසුරෙන්
+            පරිගණක විද්‍යාවේ මූලික කරුණු ඉගෙනගන්න!
+          title: සම්භාව්‍ය අවුල් ජාලය
+        iceage:
+          description: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක්
+            හදන්න!
+          description_short: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම්
+            එකක් හදන්න!
+          student_description: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය සමඟ කථාවක් සාදන්න හෝ
+            ගේම් එකක් හදන්න!
+          title: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
+        infinity:
+          description: ක්‍රීඩා පරීක්ෂණාගාරය භාවිතයෙන් ඩිස්නි ඉන්ෆිනිටි චරිත ඇති කතාවක්
+            හෝ ක්‍රීඩාවක් සාදන්න.
+          description_short: ක්‍රීඩා පරීක්ෂණාගාරය භාවිතයෙන් ඩිස්නි ඉන්ෆිනිටි චරිත
+            ඇති කතාවක් හෝ ක්‍රීඩාවක් සාදන්න.
+          student_description: ක්‍රීඩා පරීක්ෂණාගාරය භාවිතයෙන් ඩිස්නි ඉන්ෆිනිටි චරිත
+            ඇති කතාවක් හෝ ක්‍රීඩාවක් සාදන්න.
+          title: ඩිස්නි අසීමිත ක්‍රීඩා විද්‍යාගාරය
+        jigsaw:
+          description: අපේ ජිග්සෝ පාඩම උත්සාහ කර බලන්න.
+          description_short: අපේ ජිග්සෝ පාඩම උත්සාහ කර බලන්න.
+          student_description: අපේ ජිග්සෝ පාඩම උත්සාහ කර බලන්න.
+          title: පින්තූර ප්‍රෙහේලිකාව
+        k5-onlinepd-2019:
+          lesson_groups:
+            k5_next_steps:
+              display_name: ඉදිරි පියවර
+        k5-onlinepd-2020:
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: ඉදිරි පියවර
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: හැදින්වීම
+            k5_getting_started_1:
+              display_name: හැදින්වීම
+        mc:
+          description: කේත කොටස් භාවිතා කරමින්, ස්ටීව් හෝ ඇලෙක්ස් ව මෙම Minecraft
+            ලෝකය හරහා වික්‍රමාන්විත ගමන් මගක රැගෙන යන්න.
+          description_short: Minecraft ලෝකය කේතය මගින් ගවේශණය කරන්න
+          name: mc
+          student_description: කේත කොටස් භාවිතා කරමින්, ස්ටීව් හෝ ඇලෙක්ස් ව මෙම Minecraft
+            ලෝකය හරහා වික්‍රමාන්විත ගමන් මගක රැගෙන යන්න.
+          title: Minecraft Hour of Code
+        netsim:
+          description: අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න.
+          description_short: අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න.
+          student_description: අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න.
+          title: අන්තර්ජාල සමාකෘතිය
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: කන්ඩිෂනලස්
+            lessonGroup-5:
+              display_name: විචල්‍යන්
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-4:
+              display_name: ලූපයන්
+            lessonGroup-6:
+              display_name: වැඩසටහන්
+            lessonGroup-8:
+              display_name: දත්ත
+          lessons:
+            lesson-1:
+              name: දත්ත
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: නැවත නැවත සිදුවන ලුප
+            lessonGroup-4:
+              display_name: ශ්‍රිතයන්
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-4:
+              display_name: ලූපයන්
+            lessonGroup-6:
+              display_name: දත්ත
+          lessons:
+            lesson-1:
+              name: දත්ත
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-4:
+              display_name: ලූපයන්
+            lessonGroup-5:
+              display_name: වැඩසටහන්
+            lessonGroup-6:
+              display_name: දත්ත
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-6:
+              display_name: ලූපයන්
+            lessonGroup-7:
+              display_name: දත්ත
+        new-express:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: හැදින්වීම
+        playlab:
+          description: ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක් හදන්න!
+          description_short: ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක් හදන්න!
+          student_description: ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක්
+            හදන්න!
+          title: ක්‍රීඩා පරීක්ෂණාගාරය
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        soccer:
+          name: පාපන්දු
+        spelling-bee:
+          title: අක්ෂර වින්‍යාස බඹරා
+        starwars:
+          description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක
+            ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
+          description_short: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට
+            මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
+          student_description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත
+            එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
+          title: 'Star Wars: කේත හරහා මන්දාකිනිය ගොඩනගන්න (JavaScript)'
+        starwarsblocks:
+          description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක
+            ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
+          description_short: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට
+            මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
+          student_description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත
+            එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
+        step:
+          description: පියවර නිබන්ධනය
+          description_short: පියවර නිබන්ධනය
+          student_description: පියවර නිබන්ධනය
+          title: පියවර
+        teachercon:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
+            required:
+              display_name: දළ විශ්ලේෂණය
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-4:
+              display_name: ලූපයන්
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
+            required:
+              display_name: දළ විශ්ලේෂණය
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_nested_loops:
+              display_name: නැවත නැවත සිදුවන ලුප
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -989,606 +1659,11 @@ si:
           lesson_groups:
             lg_1:
               display_name: අන්තර්ගතය
-        2021drafting:
+        virtual-holding-place:
           lesson_groups:
-            introduction:
-              display_name: හැදින්වීම
-            lessonGroup-3:
-              display_name: විචල්‍යන්
-        csp1-2021:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
-        csp2-2021:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: ලැයිස්තු
-            csp_loops:
-              display_name: ලූපයන්
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: ඇල්ගොරිතම්
-        csp9-2021:
-          lesson_groups:
-            csp_unit9_2020:
-              display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_binary:
-              display_name: ද්විමය
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-            csf_data:
-              display_name: දත්ත
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: වැඩසටහන්
-            csf_loops:
-              display_name: ලූපයන්
-            csf_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csf_binary:
-              display_name: ද්විමය
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            lessonGroup-6:
-              display_name: ඩිජිටල් පුරවැසිකම
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: නැවත නැවත සිදුවන ලුප
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_nested_loops:
-              display_name: කන්ඩිෂනලස්
-            csf_functions:
-              display_name: ශ්‍රිතයන්
-        coursef-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_variables:
-              display_name: ලූපයන් සඳහා
-            csf_for_loops:
-              display_name: ලූපයන් සඳහා
-            lessonGroup-8:
-              display_name: විචල්‍යන්
-            lessonGroup-9:
-              display_name: ඉවත් කරන්න
-            lessonGroup-7:
-              display_name: ඩිජිටල් පුරවැසිකම
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: ලූපයන්
-            csf_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csf_functions:
-              display_name: ශ්‍රිතයන්
-            csf_variables:
-              display_name: විචල්‍යන්
-            csf_for_loops:
-              display_name: ලූපයන් සඳහා
-            lessonGroup-9:
-              display_name: වැඩසටහන්
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: හැදින්වීම
-            lessonGroup-3:
-              display_name: විචල්‍යන්
-            variables:
-              display_name: විචල්‍යන්
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa2-pilot:
-          lesson_groups:
-            lesson group:
-              display_name: අන්තර්ගතය
-        csa3-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa4-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa5-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa6-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa8-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: හැදින්වීම
-            Introduction:
-              display_name: හැදින්වීම
-        csa1-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa2-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa-videos:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: ඒකකය 1
-            lessonGroup-4:
-              display_name: ඒකකය 2
-            lessonGroup-5:
-              display_name: ඒකකය 3
-            lessonGroup-6:
-              display_name: ඒකකය 4
-            lessonGroup-7:
-              display_name: ඒකකය 5
-        csa3-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        dlp21-csp-mod4:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අදියර 1
-            lessonGroup-3:
-              display_name: අදියර 2
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              description: පරික්ෂාව
-        csa1-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa2-pilot-facilitator:
-          lesson_groups:
-            lesson group:
-              display_name: අන්තර්ගතය
-        csa3-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa4-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa5-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa4-exemplars:
-          lesson_groups:
-            lesson group:
-              display_name: අන්තර්ගතය
             content:
               display_name: අන්තර්ගතය
-            lesson_group:
-              display_name: අන්තර්ගතය
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        spelling-bee:
-          title: අක්ෂර වින්‍යාස බඹරා
-        csa5-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa6-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa6-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Hour of Code
-        csa7-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: විචල්‍යන්
-        csa8-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa7-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa8-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-        express-2022:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: වැඩසටහන්
-            csf_loops:
-              display_name: ලූපයන්
-            csf_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csf_functions:
-              display_name: ශ්‍රිතයන්
-            csf_variables:
-              display_name: විචල්‍යන්
-            csf_for_loops:
-              display_name: ලූපයන් සඳහා
-        csp1-2022:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
-        csp2-2022:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: ලැයිස්තු
-            csp_loops:
-              display_name: ලූපයන්
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-            csf_data:
-              display_name: දත්ත
-        csp9-2022:
-          lesson_groups:
-            csp_unit9_2020:
-              display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_events:
-              display_name: වැඩසටහන්
-            csf_loops:
-              display_name: ලූපයන්
-            csf_conditionals:
-              display_name: කන්ඩිෂනලස්
-        coursee-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            ramp_up:
-              display_name: නැවත නැවත සිදුවන ලුප
-            csf_functions:
-              display_name: ශ්‍රිතයන්
-            csf_nested_loops:
-              display_name: කන්ඩිෂනලස්
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: ඩිජිටල් පුරවැසිකම
-            lessonGroup-8:
-              display_name: විචල්‍යන්
-        csa1-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-        csa2-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa3-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa4-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa5-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa1-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa7-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa8-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: ඩිජිටල් පුරවැසිකම
-            lessonGroup-8:
-              display_name: විචල්‍යන්
-        csa6-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa7-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa8-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa2-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        soccer:
-          name: පාපන්දු
-        csa1-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa2-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa3-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa4-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa5-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa6-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa7-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa8-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa1-2023:
+        virtual-pl-csd-summer-day1:
           lessons:
-            lesson-6:
-              name: ලූපයන්
-          lesson_groups:
-            lessonGroup-3:
-              display_name: අන්තර්ගතය
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: විචල්‍යන්
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: ලූපයන් සඳහා
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csa8-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: අන්තර්ගතය
-        csp1-2023:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
-        csp2-2023:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: විචල්‍යන්
-            csp_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csp_functions:
-              display_name: ශ්‍රිතයන්
-        csp5-2023:
-          lesson_groups:
-            csp_lists:
-              display_name: දත්ත
-            csp_loops:
-              display_name: ලූපයන්
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: ලැයිස්තු
-            lessonGroup-3:
-              display_name: ලූපයන්
-        csp9-2023:
-          lesson_groups:
-            csp_unit9_2020:
-              display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
-        angelina-playground:
-          lessons:
-            lesson-5:
-              name: ඇගයීම්
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-        express-2023:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: වැඩසටහන්
-            csf_loops:
-              display_name: ලූපයන්
-            csf_conditionals:
-              display_name: කන්ඩිෂනලස්
-            csf_functions:
-              display_name: ශ්‍රිතයන්
-            csf_variables:
-              display_name: විචල්‍යන්
-            csf_for_loops:
-              display_name: ලූපයන් සඳහා
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_loops:
-              display_name: ලූපයන්
-            csf_events:
-              display_name: වැඩසටහන්
-            csf_data:
-              display_name: දත්ත
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: ඩිජිටල් පුරවැසිකම
-            csf_events:
-              display_name: වැඩසටහන්
-            csf_loops:
-              display_name: ලූපයන්
-            csf_conditionals:
-              display_name: කන්ඩිෂනලස්
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: ඩිජිටල් පුරවැසිකම
-            ramp_up:
-              display_name: නැවත නැවත සිදුවන ලුප
-            csf_functions:
-              display_name: ශ්‍රිතයන්
-            csf_nested_loops:
-              display_name: කන්ඩිෂනලස්
-        pl-csd-summer-day1:
-          lessons:
-            lesson-3:
+            lesson-1:
               name: හැදින්වීම

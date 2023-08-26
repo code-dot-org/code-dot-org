@@ -6,10 +6,10 @@ theme: responsive
 
 # CS Fundamentals Unplugged
 
-We've compiled a list of all of our unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not!
+Έχουμε συντάξει μια λίστα με όλα τα unplugged μαθήματα μας για να χρησιμοποιήσετε στην τάξη σας. Τώρα μπορείτε να διδάξετε τις βασικές αρχές της επιστήμης των υπολογιστών, είτε έχετε υπολογιστές στην τάξη σας είτε όχι!
 <br>
 <div class="col-50">
-We refer to lessons in which students are not working on a computer as “unplugged.” Students will often work with pencil and paper or physical manipulatives.  These are intentionally placed kinesthetic opportunities that help students digest complicated concepts in ways that relate to their own lives. <br><br>
+Αναφερόμαστε σε μαθήματα στα οποία οι μαθητές δεν εργάζονται σε υπολογιστή ως «unplugged» Students will often work with pencil and paper or physical manipulatives.  These are intentionally placed kinesthetic opportunities that help students digest complicated concepts in ways that relate to their own lives. <br><br>
 Unplugged lessons are particularly useful for building and maintaining a collaborative classroom environment, and they are useful touchstone experiences you can refer to when introducing more abstract concepts. Each of these activities can either be used alone or with other computer science lessons on related concepts.
 </div>
 
@@ -233,3 +233,4 @@ th, td {
 
 <p style="clear:both"></p>
 
+{{ visit_partial_event_logger }}

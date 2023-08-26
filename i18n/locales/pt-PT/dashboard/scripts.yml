@@ -92,6 +92,7 @@ pt:
           description_short: Este curso de 20 horas aborda os conceitos fundamentais de ciência da computação e programação nos cursos de 2 a 4.
           description_audience: Dos 10 aos 18 anos
           student_description: Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.
+          name: 20 horas
         edit-code:
           title: Edite o código
           description: Edite o código
@@ -322,6 +323,7 @@ pt:
           description_short: Crie uma história ou faça um jogo com o Laboratório do Gumball!
           student_description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
         starwars:
+          title: 'Star Wars: Construa uma galáxia com a programação (JavaScript)'
           description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           description_short: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           student_description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
@@ -4061,6 +4063,8 @@ pt:
               display_name: Questionário
         csa1-2023:
           lessons:
+            lesson-2:
+              name: Laboratório Java
             lesson-6:
               name: Ciclos
           lesson_groups:
@@ -4118,6 +4122,8 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+            lessonGroup-5:
+              display_name: Questionário
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4422,6 +4428,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4440,6 +4448,8 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+            lessonGroup-5:
+              display_name: Questionário
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4457,6 +4467,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4483,6 +4495,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4499,6 +4513,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4515,6 +4531,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4707,6 +4725,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Bem-vindo
+        self-paced-pl-csd5-2023:
+          title: 'Módulo 7: Preparação para ensinar IA e Aprendizagem Mecânica'
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -4736,6 +4756,32 @@ pt:
             lessonGroup-2:
               display_name: Dia 4
           title: Dia 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introdução
+            lesson-12:
+              name: Resumo
+          title: Dia 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Resumo
+          title: Dia 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Resumo
+          title: Dia 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Resumo
+          title: Dia 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Avaliação
         csd-post-survey-2023:
           title: Pesquisa Pós-Curso
         focus-on-data-post-survey-2023:
@@ -4750,3 +4796,203 @@ pt:
           title: Pesquisa Pós-Curso
         focus-on-creativity-post-survey-2023:
           title: Pesquisa Pós-Curso
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sprite
+            lessonGroup-4:
+              display_name: Variáveis
+          description_audience: 'Idades: 9-13'
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Dados
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sequenciamento
+            lessonGroup-4:
+              display_name: Ciclos
+            lessonGroup-5:
+              display_name: Impacto da computação
+          description_audience: 'Idade: de 4 a 7 anos'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Dados
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sequenciamento
+            lessonGroup-4:
+              display_name: Ciclos
+            lessonGroup-5:
+              display_name: Impacto da computação
+            lessonGroup-6:
+              display_name: Dados
+          description_audience: 'Idade: de 4 a 7 anos'
+          description_short: Uma introdução à ciência da computação para pré-leitores.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Dados
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sequenciamento
+            lessonGroup-4:
+              display_name: Ciclos
+            lessonGroup-5:
+              display_name: Impacto da computação
+            lessonGroup-6:
+              display_name: Eventos
+            lessonGroup-8:
+              display_name: Dados
+          description_audience: 'Idades: 5-8'
+          description_short: Uma introdução à ciência da computação na alfabetização Semelhante ao curso A, mas com conceitos mais aprofundados.
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Sistemas de computação
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sequenciamento
+            lessonGroup-4:
+              display_name: Ciclos
+            lessonGroup-5:
+              display_name: Eventos
+            lessonGroup-6:
+              display_name: Dados
+            lessonGroup-8:
+              display_name: Sistemas de computação
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sequenciamento
+            lessonGroup-4:
+              display_name: Impacto da computação
+            lessonGroup-6:
+              display_name: Ciclos
+            lessonGroup-7:
+              display_name: Dados
+          description_audience: 'Idades: 7-11'
+          description_short: Aprenda sobre declarações condicionais. Crie sua própria arte, jogos e até uma festa de dança.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Laços aninhados
+            lessonGroup-4:
+              display_name: Funções
+          description_audience: De 8 a 12 anos
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite
+          description_audience: 'Idades: 9-13'
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite
+            lessonGroup-3:
+              display_name: Condicionais
+            lessonGroup-5:
+              display_name: Variáveis
+            lessonGroup-6:
+              display_name: Impacto da computação
+          description_audience: 'Idades: 9-13'
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
+        vpl-csp-2023-m1:
+          title: Módulo 1
+        vpl-csp-2023-m2:
+          title: Módulo 2
+        vpl-csp-2023-m3:
+          title: Módulo 3
+        vpl-csp-2023-m4:
+          title: Módulo 4
+        vpl-csp-2023-m5:
+          title: Módulo 5
+        vpl-csp-2023-m6:
+          title: Módulo 6
+        vpl-csp-2023-m7:
+          title: Módulo 7
+        vpl-csp-2023-m8:
+          title: Módulo 8
+        vpl-csa-2023-m1:
+          title: Módulo 1
+        vpl-csa-2023-m2:
+          title: Módulo 2
+        vpl-csa-2023-m3:
+          title: Módulo 3
+        vpl-csa-2023-m4:
+          title: Módulo 4
+        vpl-csa-2023-m5:
+          title: Módulo 5
+        vpl-csa-2023-m6:
+          title: Módulo 6
+        vpl-csa-2023-m7:
+          title: Módulo 7
+        vpl-csa-2023-m8:
+          title: Módulo 8
+        vpl-csd-2023-m1:
+          title: Módulo 1
+        vpl-csd-2023-m2:
+          title: Módulo 2
+        vpl-csd-2023-m3:
+          title: Módulo 3
+        vpl-csd-2023-m4:
+          title: Módulo 4
+        vpl-csd-2023-m5:
+          title: Módulo 5
+        vpl-csd-2023-m6:
+          title: Módulo 6
+        vpl-csd-2023-m7:
+          title: Módulo 7
+        vpl-csd-2023-m8:
+          title: Módulo 8

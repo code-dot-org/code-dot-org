@@ -30,10 +30,11 @@ def git_generate_changelog
     merge_commit_pattern.match(change) || squash_merge_pattern.match(change)
   end
 
+  # ignore merges from staging and test, which represent standard
+  # deploy operations
+  standard_deploy_branches = ['staging', 'test']
   relevant_matches = matches.select do |match|
-    # ignore merges from staging and test, which represent standard
-    # deploy operations
-    !match.nil? && (!match.names.include?('branch') || !['staging', 'test'].include?(match['branch']))
+    !match.nil? && (!match.names.include?('branch') || !standard_deploy_branches.include?(match['branch']))
   end
 
   items = relevant_matches.map do |match|

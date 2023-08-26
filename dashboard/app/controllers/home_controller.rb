@@ -112,6 +112,7 @@ class HomeController < ApplicationController
 
     current_user_permissions = UserPermission.where(user_id: current_user.id).pluck(:permission)
     @homepage_data[:showStudentAsVerifiedTeacherWarning] = current_user.student? && current_user_permissions.include?(UserPermission::AUTHORIZED_TEACHER)
+    @homepage_data[:showDeprecatedCalcAndEvalWarning] = ProjectsList.user_has_project_type(current_user.id, ['algebra_game', 'calc', 'eval'])
 
     # DCDO Flag - show/hide Lock Section field - Can/Will be overwritten by DCDO.
     @homepage_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)

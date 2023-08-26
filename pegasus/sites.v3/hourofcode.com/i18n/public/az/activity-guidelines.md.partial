@@ -9,271 +9,271 @@ layout: wide
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Kod Saatı™ və Kompüter Elmləri Təhsil Həftəsi üçün dərsliklər və dərslər yaratmaq və təqdim etmək üçün təlimatlar
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org, Code.org və Hour of Code veb saytlarında müxtəlif Hour of Code™ fəaliyyətlərinə, dərslərinə və videolarına ev sahibliyi edir. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+Kompüter elmləri prinsipini izah edən öz təlimatınızı, müəllimin rəhbərlik etdiyi dərsinizi və ya robot/istehsalçı fəaliyyətinizi təqdim etmək istəyirsiniz? Bu qlobal hərəkata qoşulun və dünyanın hər yerindəki iştirakçılara bir saatlıq kodla başlamağa və ya çox dərsli, gün boyu və ya bir həftə davam edən fəaliyyətlərlə daha da irəliləməyə kömək edin.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2022, will not be listed for 2022's Hour of Code.)** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**Təlimatları oxuduqdan sonra fəaliyyətinizi [Saat Kod™ Fəaliyyət Təqdimatı səhifəmiz](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform)vasitəsilə təqdim edə bilərsiniz. İstədiyiniz vaxt bir fəaliyyət təqdim edə bilərsiniz, lakin hər hansı bir təqvim ilinə daxil olmaq üçün son tarix oktyabrın 1-dir. (Məsələn, 1 oktyabr 2023-cü ildən sonra alınan hər hansı bir fəaliyyət 2023-cü ilin Kod Saatı üçün siyahıya alınmayacaq.)** Fəaliyyət təqdimatınızla bağlı hər hansı bir sualınız varsa, support@code.org ünvanından bizimlə əlaqə saxlayın.
 
-A few tips:
+Bir neçə ipucu:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **Birdən çox fəaliyyət təqdim edin**: Fərqli səviyyələr, fərqli yaşlar və ya digər kateqoriyalar üçün fəaliyyətlər qurmusunuzsa, hər bir müəllimin sinif otağı üçün doğru şeyi tapa bilməsi üçün fəaliyyətlərinizi ayrıca sadalayırıq. Hər bir təlimatı və ya fəaliyyəti fərdi olaraq təqdim edin. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. Bundan sonra, Kod Saatı başlamazdan əvvəl mümkün qədər çoxunu nəzərdən keçirmək üçün əlimizdən gələni edəcəyik.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **Başlanğıc dərslərindən başqa**: İlk dəfə kompüter elmlərini öyrənən müəllimlər və tələbələr üçün dərslərə əlavə olaraq, bir az da irəli getmək istəyən kompüter elmlərini bilən sinif otaqları üçün öyrənmə təcrübələrini sadalayırıq! Artıq əsaslarla rahat olan dərslər üçün dərslər təqdim etməklə bizə kömək edin.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Mövzu sahələri**: Kompüter Elmlərini Riyaziyyata inteqrasiya edən böyük bir dərs fikriniz varmı? Tarix? Dil sənəti? Elm? Sənət? Yoxsa başqa bir mövzu? Kod Saatını mövzu sahəsinə bağlamaq istəyən müəllimlərdən çoxsaylı istəklərimiz oldu. Müəllimlər sinif tiplərini (sinif qrupu və ya mövzu sahəsi) üçün süzgəcdən keçirə bilərlər, buna görə sinif fəaliyyətləri və ya CS -ni fərqli sinif qrupları üçün hər bir əsas mövzu sahəsi ilə əlaqəli dərs planları təklif etmək üçün boşluqları doldurmaq üçün köməyinizə ehtiyacımız var. Ümumi CS fəaliyyətləri axtaran müəllimlər üçün “Kompüter Elmləri” kateqoriyasına sahib olmağa davam edirik.
 
 <a id="top"></a>
 
-## Index:
+## İndeks:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Nə təqdim etməli](#whatsubmit)
+- [Hour of Code™ fəaliyyətinin yaradılması üçün ümumi qaydalar](#guidelines)
+- [Necə təqdim etməli](#submit)
+- [Fəaliyyətlər necə qiymətləndiriləcək](#inclusion)
+- [Fəaliyyətinizi tərtib etmək üçün təkliflər](#design)
+- [Ticarət markası qaydaları](#tm)
+- [İzləmə Pixel](#pixel)
+- [Fəaliyyətinizi təşviq etmək, CSEDWeek və Kod Saatı](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## Nə təqdim etməli
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Özünü idarə edən tapmaca və ya oyun ([nümunə](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+Bu fəaliyyətlər tələbələrin dərs vəsaiti vasitəsilə özünü idarə etmələri üçün nəzərdə tutulmuşdur. Müəllimdən və ya müəllim hazırlıq işindən çox təlimat tələb etmirlər.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Müəllim asanlaşdırılan dərs ([nümunə](https://studio.code.org/s/course1/lessons/2/levels/1), [şablon](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+İndi yüz minlərlə müəllim Kod Saatını sınadıqdan sonra, bir çox sinif otağı kompüter elminin əsaslarını öyrədən daha yaradıcı fəaliyyətlərə hazırdır. Daha qabaqcıl müəllimlərə ilham tapmaqda kömək etmək üçün biz Kod Saatı veteranları üçün “müəllimin rəhbərlik etdiyi” dərsləri və fəaliyyət planlarını toplayır və hazırlayırıq.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+Təcrübəli müəllimlər üçün təqdim edəcəyimiz bir fəaliyyət növü “açıq sandbox” yaradılması layihələridir. Tələbələri öz tətbiqlərini, oyunlarını, veb saytlarını və ya digər layihələrini qurmağa təşviq edən fəaliyyətlər. Düzgün asanlaşdırılarsa, daha açıq fəaliyyətlər kompüter elminin yaradıcı təbiətini daha yaxşı nümayiş etdirə bilər.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+Bəzi müəllimlər, idarə olunan tapmaca/oyun təcrübəsindən daha çox ənənəvi dərs formatını izləyən Hour of Code fəaliyyətlərinə ev sahibliyi etməyi də üstün tuta bilərlər.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+Dərs planınız üçün bu [şablon](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) ilə başlaya bilərsiniz.
 
-**Activities for teachers in other subjects/fields**
+**Digər fənlər/sahələr üzrə müəllimlər üçün fəaliyyət**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+Biz həmçinin müxtəlif fənn sahələri üçün nəzərdə tutulmuş dərs planlarını təqdim edirik. Məsələn, həndəsə sinifində kod öyrətmək üçün bir saatlıq dərs planı. Və ya İngilis dili sinfi üçün bir mad-lib məşqi. Və ya tarix dərsi üçün yaradıcı bir viktorina yaratma fəaliyyəti. Bunlar CS-nin bir çox müxtəlif fənn sahələrinə necə təsir göstərə biləcəyini və inkişaf etdirə biləcəyini nümayiş etdirərkən, öz sahələrinə xas olan Kod Saatı fəaliyyətinə rəhbərlik etmək üçün digər fənlər üzrə müəllimləri işə götürməyə kömək edə bilər.
 
-Examples:
+Nümunələr:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
+- Güzgü Şəkilləri (sənət müəllimi üçün bir fəaliyyət)
+- Fizika müəllimi üçün arduino fəaliyyəti
+- Tarix müəllimi üçün texnologiya fəaliyyətinin tarixi
 - And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
 
-**For students with special needs**
+**Xüsusi ehtiyacı olan tələbələr üçün**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+Xüsusi ehtiyaclı tələbələr üçün nəzərdə tutulmuş bir fəaliyyət və ya dərslik yaratsanız, lütfən, təsvirdə buna zəng edin. Xüsusilə, görmə qabiliyyətli olanlar üçün çox az variant var. Fəaliyyətiniz bu auditoriya üçün nəzərdə tutulmuşdursa, bizə bildirin.
 
-[**Back to the top**](#top)
+[**Yuxarıya qayıt**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Kod Saatı fəaliyyətinin yaradılması üçün ümumi qaydalar
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+Bir Saat Kodunun məqsədi yeni başlayanlara kompüter elmləri və ya proqramlaşdırmanın əlçatan ilk dadını verməkdir. Ton belə olmalıdır:
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability. 
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online. 
+- Hər kəs kompüter elmlərini öyrənə bilər - yaşından, cinsindən, irqindən və bacarığından/əlilliyindən asılı olmayaraq.
+- Kompüter elmləri müxtəlif sahələrə və maraqlara bağlıdır. Hər kəs bunu öyrənməlidir!
+- Tələbələri valideynlər/dostlarla və ya onlayn olaraq paylaşıla bilən unikal bir şey yaratmağa təşviq edin.
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+Fəaliyyətlər döngələr, şərtlər, şifrələmə və ya İnternetin necə işlədiyi kimi bir kompüter elmləri konsepsiyasını öyrətməlidir. Bir fəaliyyət, kompüter elminin real dünya peşələri, hadisələri və ya tarixi ilə necə əlaqəli olduğunu da öyrədə bilər. Məsələn, tamaşaçı və ya səbəb üçün mənalı olan tətbiqlər hazırlamaq üçün UX dizaynını öyrətmək. Konsepsiyalara deyil, proqramlaşdırma sintaksisinə yönəlmiş fəaliyyətləri maneə törədirik. Məsələn, HTML-ni öyrədən fəaliyyətləri sadalayırıq, lakin vurğulamayacağıq. Eynilə, bir alqoritm və ya prosesi necə modelləşdirməyi öyrənməkdənsə, konfiqurasiya seçimlərinin qurulması/dəyişdirilməsinə yönəlmiş blok proqramlaşdırma dərslərini çəkindiririk.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Tətbiq quraşdırma, masa üstü tətbiqi və ya oyun konsolu təcrübəsi tələb edən fəaliyyətlər yaxşıdır, lakin ideal deyil. Qeydiyyat və ya ödəniş tələb edən fəaliyyətləri sadalamayacağıq. (Robototexnika fəaliyyəti robot texnikasının satın alınmasını tələb edə bilər.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*Tələbə rəhbərliyindəki (Özünü idarə edən) Format:* Orijinal Kod Saatı əsasən müəllim tərəfindən isteğe bağlı olaraq asanlaşdırılan özünü idarə edən dərslərin və ya dərslərin müvəffəqiyyəti üzərində qurulmuşdur. Mövcud seçimlər çoxdur, ancaq yenisini yaratmaq istəyirsinizsə, bu fəaliyyətlər tək işləyən bir tələbə üçün və ya müəllimi minimal hazırlıq və ya CS keçmişi olan bir sinifdə əyləncəli ola bilməsi üçün tərtib edilməlidir. Açıq bir saat davam edən bir çağırışdan fərqli olaraq tələbələr üçün istiqamətlər verməlidirlər. İdeal olaraq, təlimat və dərsliklər təlimat və proqramlaşdırma platforması arasında nişanlar və ya pəncərələrin keçməməsi üçün birbaşa proqramlaşdırma platformasına inteqrasiya olunur.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+Yarada biləcəyiniz müxtəlif dərsliklər və dərs planları haqqında məlumat əldə etmək üçün [Saat Kod Fəaliyyətləri səhifəsinə daxil olun](https://hourofcode.com/us/learn).
 
-[**Back to the top**](#top)
+[**Yuxarıya qayıt**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## Necə təqdim etməli
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+[Saat Kod™ Fəaliyyət Təqdimatı səhifəsinə](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) daxil olun və fəaliyyətinizi təqdim etmək üçün sualları tamamlayın.
 
-What you’ll need:
+Nə lazımdır:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* Təqdim olunan fəaliyyəti təmsil edən əsas əlaqənin adı və e-poçtu
+* Fəaliyyət Adı (adına “Kod Saatı” daxil edilə bilməz)
+* Fəaliyyətə URL bağlantısı
+* Fəaliyyət təsviri (maksimum xarakter sayı: 400) 
+    * Zəhmət olmasa təsvirə əsasən tələbə rəhbərliyi və ya müəllimi asanlaşdırdığını daxil edin. Əlavə olaraq, bəzi məktəblər Kod Saatı fəaliyyətlərinin Ümumi Core və ya Növbəti Nəsil Elm Standartlarına uyğun olub olmadığını bilməkdə maraqlıdırlar. Fəaliyyət xüsusi standartlara cavab verərsə, bu məlumatları daxil etməyi düşünün.
+* Nəzərdə tutulan istifadəçilər üçün tövsiyə olunan sinif səviyyələri. Sinifə uyğun kompüter elmləri anlayışları üçün \[Kompüter Elmləri Müəllimləri Dərnəyinin K-12 Standartlarına\] (https://k12cs.org/framework-statements-by-grade-band/) müraciət edə bilərsiniz. Nümunə sinif səviyyələrinə aşağıdakılar daxildir: 
+    * Uşaq bağçası - 1-ci sinif (4-6 yaş)
+    * 2-5-ci siniflər (7-10 yaş)
+    * 6-8-ci siniflər (11-13 yaş)
+    * 9+ siniflər (14+ yaş)
+* Fəaliyyətinizin əhatə etdiyi mövzu sahələrinin siyahısı (Kompüter Elminə əlavə olaraq). Məsələn, bir riyaziyyat müəllimi fəaliyyətinizdən bucaqlar və ya parabolalar haqqında öyrətmək üçün istifadə edə bilərsə, riyaziyyat kimi siyahıya salın. Fellər/isimlər/və s. Öyrədən dəli libs fəaliyyətiniz varsa. dil sənətini seçin.
+* Fəaliyyətinizin öyrətdiyi proqramlaşdırma dillərinin siyahısı. Yəni C/C ++, Java, JavaScript və s. və ya dildən asılı olmayaraq (birdən çox dildə tədris oluna bilən dərs planları üçün)
+* Dəstəklənən təbii dillərin siyahısı. Qeyd: Dil aşkarlama fəaliyyət təminatçısının məsuliyyətidir; bütün istifadəçiləri təqdim olunan tək URL-ə yönləndirəcəyik.
+* Bir pedaqoq fəaliyyətinizdən istifadə etmək üçün hansı səviyyədə təcrübəyə sahib olmalıdır? (məsələn, Başlanğıc və ya Rahat.) Və tələbələr hansı səviyyədə təcrübəyə sahib olmalıdırlar? Daha qabaqcıl Kod Saatı™ Fəaliyyətləri hazırlamaq istəyirsinizsə, zəhmət olmasa fəaliyyətinizin təsvirinə lazım olan əvvəlki bilikləri daxil edin.
+* Fəaliyyətinizin uzunluğu 
+    * Yalnız 1 saat
+    * İzləmə kursu ilə 1 saat
+    * 2-6 saat (birdən çox dərs ola bilər)
+* Fəaliyyətiniz varsa, əlçatanlıq yerlərinin siyahısı. Bunlara ekran oxucu uyğunluğu, mətndən nitqə imkanları, yüksək kontrastlı rənglərin istifadəsi və ya əlilliyi olan şagirdlər üçün hazırlanmış hər hansı digər yaşayış yerləri daxildir.
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### Dərs Planlarını təqdim edərkən sizə lazım olacaq əlavə şeylər
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* Dərs planınıza keçid. Bu veb səhifə, dropbox bağlantısı, google drive və ya oxşar xidmət ola bilər.
+* Dərs planınızı yerinə keçirmək üçün müəllimə hansı proqram və/və ya aparat lazımdır (Çizilmə? Robotlar? Heç bir şey?)
 
-#### Additional things you’ll need when submitting Online Activities
+#### Onlayn Fəaliyyətlər təqdim edərkən sizə lazım olacaq əlavə şeylər
 
-* Name and logo of your organization
-* Whether it is COPPA compliant or not
-* A URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
+* Təşkilatınızın adı və loqosu
+* COPPA uyğun olsun və ya olmasın
+* Müəllim qeydlərinə URL bağlantısı (isteğe bağlı)
+* Test/uyğun platformaların siyahısı: 
+    * Veb əsaslı: Hansı platformaları sınaqdan keçirdiniz? 
+        * OS - Mac, Win və digər versiyalar
+        * Brauzerlər - IE11, Edge, Firefox, Chrome, Safari
+        * iOS mobil Safari (mobil optimallaşdırılmış)
+        * Android Chrome (mobil optimallaşdırılmış)
+    * Qeyri-web-based: doğma kodu üçün platforma müəyyən (Mac, Win, iOS, Android, XBox, digər)
+    * Ayrılmış
+* Kod Saatı fəaliyyətinin ekran görüntüsü və ya marketinq görüntüsü. Zəhmət olmasa 4:3 ölçülü ən azı bir şəkil göndərin. Ən azı 520px 390px olmalıdır. İngilis dilində danışmayanlar üçün daha əlçatan olması üçün bu görüntünün üzərində heç bir mətn (loqotipinizdən başqa) olmamalıdır. Müvafiq bir şəkil təqdim edilmirsə, təlimatınızın öz ekran görüntüsünü çəkə bilərik və ya siyahıya salmamağı seçə bilərik. Bütün şəkillər bir .jpg, .jpeg və ya.png ünvanına URL bağlantısı olaraq təqdim edilməlidir.
+* İştirakçılığı daha dəqiq izləmək üçün üçüncü tərəf dərslik tərəfdaşları Kod Saatı dərsliklərinin ilk səhifəsinə 1 piksel izləmə şəkillərini daxil etməlidirlər. Daha ətraflı məlumat üçün aşağıdakı [İzləmə Pixel](#pixel) bölməsinə baxın.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+    * Kod Saatını tamamladıqlarını sosial mediada paylaşın
+    * Kod Saatını tamamladıqları barədə bir sertifikat alın
+    * Kod Saatı fəaliyyətlərində hansı ölkələrin/şəhərlərin ən yüksək iştirak nisbətinə sahib olduğu barədə lider lövhələrinə baxın
     * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* (İsteğe bağlı) Aşağıdakı fəaliyyət göstəricilərinin hesabatını tələb edən bir onlayn sorğu/forma bağlantısı ilə təqib edə bilərik: 
+    * Onlayn fəaliyyətlər üçün (xüsusilə smartfon/tablet tətbiqləri): 
+        * İstifadəçilərin sayı
+        * Tapşırığı neçə başa çatdırdı
+        * Tapşırıq üzrə orta vaxt
+        * Bütün istifadəçilər üzərində yazılmış kod sətirlərinin sayı
+        * Neçə daha çox öyrənməyə davam etdi (tapşırığı bitirən və saytınızdakı əlavə tapşırıqlara gedən hər hansı bir istifadəçi kimi ölçülür)
+    * Oflayn fəaliyyətlər üçün 
+        * Fəaliyyətin kağız versiyasının yükləmələrinin sayı (əgər varsa)
 
-#### Additional things you’ll need when submitting Robotics
+#### Robototexnika təqdim edərkən sizə lazım olacaq əlavə şeylər
 
-* If you submit a robotics activity, we need to know the cost per student for robotics.
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* Bir robototexnika fəaliyyəti təqdim etsəniz, robototexnika üçün tələbə başına düşən xərcləri bilməliyik.
+* Veb saytına daxil olmaq üçün robototexnika fəaliyyətlərini qiymətləndirmək üçün rəyçilərə nümunə dəstləri göndərməyiniz lazımdır.
 
-[**Back to the top**](#top)
+[**Yuxarıya qayıt**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## Fəaliyyətlər necə qiymətləndiriləcək
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+Kompüter elmləri müəllimlərindən ibarət müxtəlif komitə təqdimatları keyfiyyət və kəmiyyət meyarlarına əsasən sıralaya bilər. Əsas meyarlara uyğun olan bütün fəaliyyətlər sadalanacaqdır. Müəllimlər sinifləri üçün ən yaxşı fəaliyyətləri tapmaq üçün süzgəcdən keçirə və çeşidləyə biləcəklər.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+Fəaliyyətlərin və dərs planlarının qiymətləndirilməsi üçün rubrik bütün fəaliyyətlər üzrə aşağıdakı meyarları axtaracaq və onları müvafiq olaraq sıralaya bilər:
 
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+- Yüksək istehsal keyfiyyəti
+- Bütün demoqrafik qruplar tərəfindən öyrənməni təşviq edin (esp. gənc qadınlar, marjinal irqi və etnik qruplardan olan tələbələr və əlilliyi olan tələbələr kimi CS -də az təmsil olunan tələbələr)
+- Təhsil (kompüter elmləri anlayışlarını yaxşı öyrədir)
+- Əyləncəli və cəlbedici
+- Şagirdləri paylaşa biləcəkləri bənzərsiz bir şey yaratmağa təşviq edir (Gənc tələbələr üçün: valideynlər və sinif yoldaşları ilə. Köhnə tələbələr üçün: İnternetdə)
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+Baxış komitəsi fəaliyyəti istehsal keyfiyyətində sıfır qiymətləndirirsə (pis səhvlər və ya istifadəni çox çətinləşdirən təlimatlar səbəbindən), az təmsil olunan qruplarda öyrənməni təşviq etməkdə (irqçi/cinsiyyətçi material səbəbiylə), təhsil dəyərində (CS anlayışlarını öyrətmir) və ya əyləncəli/cəlbedici (şagirdlərin işləməsi çətin/ruhdan düşməsi səbəbindən), fəaliyyət siyahıya alınmayacaq.
 
-In addition, in order to be listed, all activities must:
+Bundan əlavə, siyahıya alınmaq üçün bütün fəaliyyətlər:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up 
-- Require no payment (exception for robotics activities these can require robot/kit purchase)
+- Dövlət məktəbi sinifinə uyğun olun (silah, açıq/yetkin məzmun, dini məzmun və s.)
+- Qeydiyyatdan keçməyin
+- Ödəniş tələb olunmur (robototexnika fəaliyyəti istisna olmaqla, bunlar robot/dəst almağı tələb edə bilər)
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+Yeni müəllimlər və tələbələr üçün özünü idarə edən fəaliyyətlər üçün araşdırma komitəsi aşağıdakıları axtaracaq:
 
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+- Müəllimlər dərslikdən və ya fəaliyyətdən kompüter elmində heç bir məlumatı olmayan istifadə edə bilərlər
+- Tələbələr kompüter elmləri sahəsində heç bir məlumat olmadan uğur qazana bilərlər
+- Şagirdlər valideyn və ya müəllim rəhbərliyi olmadan özlərini dərslik vasitəsi ilə yönəldə bilərlər
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+Müəllimlər və tələbələr sinif, təcrübə səviyyəsi, fənn, aparat və s. kimi filtrlər əsasında fəaliyyət siyahımızı axtarıb süzgəcdən keçirə biləcəklər. Varsayılan olaraq əvvəlcə dərs planlarını və fəaliyyətlərini göstərəcəyik:
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+- Baxış komitəsindən ən yüksək reytinqləri əldə edin
+- Başlayanlar (tələbələr və müəllimlər) üçün nəzərdə tutulmuş bir saatlıq özünü idarə edən fəaliyyətlərdir
+- Geniş istifadəçilərə müraciət edin (platformalar, dillər və yaşlar üzrə)
+- Quraşdırma tələb olunmur
+- Bu il yenidir
 
-[**Back to the top**](#top)
+[**Yuxarıya qayıt**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## Bir saatlıq özünü idarə edən dərsliklər hazırlamaq üçün təkliflər
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Dərsliyinizə [Saat Kod loqosu](https://hourofcode.com/us/promote/resources#logo) daxil edə bilərsiniz, lakin bu tələb olunmur. Kod Saatı loqotipindən istifadə edirsinizsə, aşağıdakı ticarət nişanı təlimatlarına baxın. <u>Heç bir halda Code.org loqosu və adı istifadə edilə bilməz.</u> Hər ikisi ticarət nişanıdır və açıq yazılı icazə olmadan 3-cü tərəf markası ilə qarışdırıla bilməz.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Orta tələbənin bir saat ərzində rahat bitirə biləcəyinə əmin olun.** Dərsdə daha sürətli hərəkət edən tələbələr üçün sonunda açıq bir fəaliyyət əlavə etməyi düşünün. Unutmayın ki, əksər uşaqlar kompüter elmləri və kodlaşdırmağa mütləq yeni başlayanlar olacaqlar.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Müəllim qeydlərini daxil edin.** Əksər fəaliyyətlər tələbə yönümlü olmalıdır, lakin bir fəaliyyət müəllim tərəfindən asanlaşdırılırsa və ya idarə olunarsa, xahiş edirəm fəaliyyətinizlə birlikdə təqdim olunan ayrı bir URL-də müəllim qeydləri şəklində müəllim üçün aydın və sadə istiqamətləri daxil edin. Tələbələr nəinki təcrübəsizdirlər, bəzi müəllimlər də var. Kimi məlumatları daxil edin:
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming? 
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+- Dərslik hansı platformalarda və brauzerlərdə daha yaxşı işləyir?
+- Smartfonlarda işləyirmi? Planşetlər?
+- Cüt proqramlaşdırma tövsiyə edirsiniz?
+- Sinifdə istifadə üçün mülahizələr? Məsələn, videolar varsa, müəllimlərə videoları bütün sinif otağının birlikdə keçirməsi üçün proqnozlaşdırılan ekranda göstərmələrini tövsiyə edin
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+**Fəaliyyətin sonunda rəy daxil edin.** (Məsələn, “10 səviyyəni bitirdiniz və döngələr haqqında öyrəndiniz! Əla iş!”)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Tələbələri bitirdikdən sonra sosial mediaya göndərməyə təşviq edin (lazım olduqda).** Məsələn, “ ________ ilə bir saat Kod etdim varmı? #HourOfCode” və ya “#CSEdWeek hissəsinin bir hissəsi olaraq #HourOfCode etdim. Sən var? @Scratch.” **#HourOfCode** hashtagından istifadə edin (böyük hərflərlə H, O, C)
 
-**Create your activity in Spanish or in other languages besides English.**
+**Fəaliyyətinizi ispan dilində və ya ingilis dilindən başqa digər dillərdə yaradın.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Fəaliyyəti sosial cəhətdən əhəmiyyətli bir kontekstə izah edin və ya əlaqələndirin.** Kompüter proqramlaşdırma tələbələr dünyanı yaxşılığa doğru necə dəyişə biləcəyini görəndə super gücə çevrilir!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**Dərsliyinizin [Cüt Proqramlaşdırma](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradiqmasında istifadə oluna biləcəyinə əmin olun.** Bu, Kod Saatı üçün xüsusilə faydalıdır, çünki bir çox sinifdə bütün tələbələr üçün 1:1 avadanlıq yoxdur.
 
-[**Back to the top**](#top)
+[**Yuxarıya qayıt**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Ticarət markası qaydaları
 
-Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+Hour of Code® və Hora del Código® Code.org şirkətinin qeydiyyatdan keçmiş ticarət nişanlarıdır. Dərslik tərəfdaşlarımızın bir çoxu, Kod Saatı fəaliyyətləri ilə əlaqədar olaraq veb saytlarında “Kod Saatı” ticarət nişanlarımızı istifadə etdilər. Bu istifadənin qarşısını almaq istəmirik, amma istifadənin bir neçə məhdudiyyətə düşdüyünə əmin olmaq istəyirik:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. “Kod Saatı” ndan yalnız Kod Saatı kampaniyası kontekstində qeyri-kommersiya CS Təhsil fəaliyyəti ilə əlaqədar olaraq və başqa məqsədlər üçün istifadə edin.
+2. “Kod Saatı” na hər hansı bir istinad, öz marka adınız olduğunu düşünməyən, əksinə Kod Saatına bir xalq hərəkəti olaraq istinad edən bir şəkildə istifadə edilməlidir. Yaxşı nümunə: “AcmeCorp.com saytında Kod Saatı® -da iştirak edin”. Pis nümunə: “ACME Corp tərəfindən Kod Saatını sınayın”.
+3. Həm veb saytınızda, həm də tətbiq təsvirlərində “Kod Saatı” nı qeyd etdiyiniz ən görkəmli yerlərdə “®” üst skriptdən istifadə edin.
+4. Aşağıdakıları açıqlayan Kod Saatı, CSEDWeek və Code.org veb saytlarına bağlantılar daxil olmaqla səhifəyə (və ya altbilgiyə) dili daxil edin: a. Hour of Code® və Hora del Código® Code.org şirkətinin qeydiyyatdan keçmiş ticarət nişanlarıdır; və b. “[Hour of Code](http://hourofcode.com/) ®, [Code.org](http://code.org/) tərəfindən milyonlarla tələbəni bir saatlıq kompüter elmləri və kompüter proqramlaşdırması ilə tanış etmək üçün ümummilli bir təşəbbüsdür.”
+5. Tətbiq adlarında “Kod Saatı” nı istifadə etməyin.
+6. Hər hansı bir kommersiya istifadəsi və ya məqsədi ilə əlaqədar olaraq “Kod Saatı” ndan istifadə etməyin (məsələn, Kod Saatı fəaliyyətinizi ödəniş divarının arxasında yerləşdirmək; Kod Saatı fəaliyyətinizin bir hissəsi kimi başqa bir ödənişli xidmətin təşviqi; Kod Saatı malının satışı).
+7. Giriş və ya hesab yaratmağı tələb edən hər hansı bir fəaliyyətlə əlaqədar olaraq “Kod Saatı” ndan istifadə etməyin.
 
-[**Back to the top**](#top)
+[**Yuxarıya qayıt**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## İzləmə Pixel
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+İştirakçılığı daha dəqiq izləmək üçün hər bir dərslik ortağından Kod Saatı dərsliklərinin ilk səhifəsinə 1 piksellik izləmə şəkli daxil etmələrini xahiş edirik. Piksel şəkli yalnız başlanğıc səhifəsində olmalıdır. Dərsliyinizin heç bir aralıq səhifəsinə daxil etməyin.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+Bu, Kod Saatı təlimatınızı edən istifadəçiləri saymağa imkan verəcək. Bu, təlimatınız üçün daha dəqiq iştirak sayına səbəb olacaqdır.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Dərsliyiniz təsdiqlənərsə və son dərs səhifəsinə daxil edilərsə, Code.org sizə təlimatınıza inteqrasiya etməyiniz üçün unikal izləmə pikseli təqdim edəcəkdir. Aşağıdakı nümunəyə baxın.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+QEYD: quraşdırıla bilən tətbiqlər (iOS/Android tətbiqləri və ya masa üstü quraşdırma tətbiqləri) üçün bunu etmək vacib deyil
 
-Example tracking pixels for Dance Party:
+Dance Party üçün nümunə izləmə pikselləri:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**Yuxarıya qayıt**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## Fəaliyyətlərinizi təşviq etmək, CSEDWeek və Kod Saatı
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+Zəhmət olmasa fəaliyyətinizi şəbəkənizə təbliğ edin! Onları Kod Saatı səhifənizə yönləndirin. İstifadəçilərinizin fəaliyyətinizlə bağlı sizdən göndərdiyi bir poçtla reaksiya vermə ehtimalı daha yüksəkdir. İstifadəçiləri başqalarını qoşulmağa dəvət etməyə təşviq etmək və daha çox tələbə əldə etməyimizə kömək etmək üçün Kompüter Elmləri Təhsil Həftəsi zamanı beynəlxalq Kod Saatı kampaniyasından istifadə edin!
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
+- Veb saytınızda Kod Saatı və CSEDWeek xüsusiyyəti. Məsələn: <http://www.tynker.com/hour-of-code>
+- #HourOfCode hashtag istifadə edərək sosial media, ənənəvi media, poçt siyahıları və s. İstifadə edərək Kod Saatını təşviq edin (böyük hərflərlə H, O, C)
+- Yerli bir tədbirə ev sahibliyi edin və ya işçilərinizdən yerli məktəblərdə və ya icma qruplarında bir tədbir keçirmələrini xahiş edin.
 - See our [resource kit](https://hourofcode.com/us/promote) for further information.
 
-[**Back to the top**](#top)
+[**Yuxarıya qayıt**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+{{ signup_button }}

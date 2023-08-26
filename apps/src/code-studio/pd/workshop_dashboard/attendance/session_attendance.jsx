@@ -9,7 +9,7 @@ import _ from 'lodash';
 import SessionAttendanceRow from './session_attendance_row';
 import VisibilitySensor from '../components/visibility_sensor';
 import Spinner from '../../components/spinner';
-import {Table} from 'react-bootstrap';
+import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import IdleTimer from 'react-idle-timer';
 import {COURSE_CSF} from '../workshopConstants';
 import {PermissionPropType, WorkshopAdmin, ProgramManager} from '../permission';

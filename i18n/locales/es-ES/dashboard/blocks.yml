@@ -1006,8 +1006,6 @@ es:
         options:
           INPUT1:
             '1': jugo de limón
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: hacer efecto de {EFFECT}
         options:
@@ -1024,8 +1022,6 @@ es:
         options:
           INPUT1:
             '1': jugo de limón
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Comunicarse {VAR1} con {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -2074,14 +2070,10 @@ es:
         options:
           INPUT1:
             '1': jugo de limón
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': jugo de limón
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2616,6 +2608,22 @@ es:
           DIR:
             right: derecha ↻
             left: izquierda ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: imprimir {TEXT}
       storylab_setForegroundEffect2:
         text: hacer efecto de {EFFECT}
         options:

@@ -445,6 +445,7 @@ P5Wrapper.prototype.getCustomMarshalBlockedProperties = function () {
     'parent',
     'p5',
     'downloadFile',
+    'createWriter',
     'writeFile',
     'httpGet',
     'httpPost',

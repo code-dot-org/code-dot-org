@@ -10,11 +10,11 @@
     },
     "new_name": null,
     "family_name": "deepdive-debugging",
-    "serialized_at": "2023-04-28 19:15:38 UTC",
+    "serialized_at": "2023-06-30 16:48:02 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": "facilitator",
+    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "deepdive-debugging"
     }

@@ -365,10 +365,8 @@ def update_database
           )
             db_proficiency.basic_proficiency_at = proficiency[52]
           end
-          unless db_proficiency.basic_proficiency_at
-            if db_proficiency.proficient?
-              db_proficiency.basic_proficiency_at = db_proficiency.last_progress_at
-            end
+          if !db_proficiency.basic_proficiency_at && db_proficiency.proficient?
+            db_proficiency.basic_proficiency_at = db_proficiency.last_progress_at
           end
 
           db_proficiency.save!

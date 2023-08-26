@@ -1,5 +1,5 @@
 import React from 'react';
-import {Table} from 'react-bootstrap';
+import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import {COURSE_CSF} from '../../workshopConstants';

@@ -11,7 +11,7 @@ export function boardSetupAndStub(board) {
 }
 
 export function stubOpenSerialPort(board) {
-  sinon.stub(board, 'openSerialPort').callsFake(() => {
+  sinon.stub(board, 'openWebSerial').callsFake(() => {
     return Promise.resolve();
   });
 }

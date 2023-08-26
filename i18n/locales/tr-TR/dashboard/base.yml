@@ -60,6 +60,7 @@ tr:
         reset_password_token: "Takip ettiğiniz şifre sıfırlama bağlantısı"
         error:
           future: gelecekte olması mümkün değil
+        us_state: 'Eyalet'
   beta: "beta"
   hello: "Merhaba dünya"
   welcome_back: "Hoş geldiniz %{name}"
@@ -69,6 +70,7 @@ tr:
   unsubmit: Gönderini gerial
   previous_page: Önceki Sayfa
   next_page: Sonraki Sayfa
+  next_level: Sonraki Seviye
   next_resource: Sonraki Kaynak
   done_with_module: Bu Öğrenme Modülü tamamlandı
   cancel: "İptal"
@@ -199,6 +201,7 @@ tr:
     parent_account_checkbox: "Çocuğum adına kayıt olan bir ebeveyn/veliyim"
     parent_account_email_progress_permission: "Size ara sıra çocuğunuzun gelişimi ve projeleriyle ilgili güncellemeler ve kursu ve bilgisayar bilimi hakkında güncellemeler gönderebilir miyiz? [(Gizlilik politikamıza bakın)](%{privacy_policy_url})"
     parent_account_email_label: "Ebeveyn/Veli E-postası"
+    us_state: 'Eyalet'
   school_info:
     title: 'Okul bilgileri (isteğe bağlı)'
     school_country: 'Okulun bulunduğu ülke'
@@ -1186,6 +1189,7 @@ tr:
         csf_express: 'Bilgisayar Bilimleri Temelleri (Hızlandırma Öncesi veya Hızlandırılmış)'
         csd: 'Bilgisayar Bilimi Keşifleri'
         csp: 'BB (Bilgisayar Bilimleri) İlkeleri'
+        other: 'Diğer'
         not_applicable: "Uygulanamaz"
       email_opt_in:
         opt_in_yes: 'Evet'
@@ -1281,3 +1285,4 @@ tr:
     binary: "İkili"
     hexadecimal: "Onaltılık"
     pixel_format_header: "Piksel Biçimi"
+

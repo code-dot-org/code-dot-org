@@ -8,271 +8,271 @@ title: Pokyny k výukovým programům
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Pokyny pro vytváření a odesílání výukových programů a lekcí pro Hour of Code™ a Týden výuky informatiky
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org hostí různé aktivity, lekce a videa Hour of Code™ na webových stránkách Code.org a Hodina kódu. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Zapojte se do tohoto globálního hnutí a pomozte účastníkům a účastnicím na celém světě začít s hodinou programování, případně zajít ještě dále s celodenními nebo celotýdenními aktivitami o více lekcích.
+Chcete odeslat svůj vlastní výukový program, lekci vedenou učiteli nebo aktivitu robotiky/výrobce, která vysvětluje princip informatiky? Zapojte se do tohoto globálního hnutí a pomozte účastníkům a účastnicím na celém světě začít s hodinou programování, případně zajít ještě dále s celodenními nebo celotýdenními aktivitami o více lekcích.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2022, will not be listed for 2022's Hour of Code.)** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**Po přečtení pokynů můžete svou aktivitu odeslat prostřednictvím naší stránky [Hodina kódu™ Odeslání aktivity](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Aktivitu můžete odeslat kdykoli, ale termín pro zařazení do daného kalendářního roku je říjen 1. (Například jakékoli aktivity přijaté po 1. říjnu 2023 nebudou uvedeny pro Hodinu kódu roku 2023.)** Máte-li jakékoli dotazy týkající se vaší aktivity, obraťte se na nás na support@code.org.
 
-A few tips:
+Několik tipů:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **Odeslat více než jednu aktivitu**: Pokud jste vytvořili aktivity pro různé úrovně, různé věkové kategorie, nebo jiné kategorie, uvedeme vaše aktivity samostatně, aby každý učitel mohl najít to správné pro svou třídu. Odešlete každý výukový program nebo aktivitu jednotlivě. Vzhledem k počtu příspěvků, které jsme viděli v posledních letech, budeme mít čas na přezkoumání **až 5 aktivit** na partnera. Potom, vynaložíme maximální úsilí, abychom zkontrolovali co nejvíce, než začne Hodina kódu.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **Kromě lekcí pro začátečníky**: Kromě lekcí pro učitele a studenty, kteří se poprvé učí informatiku, uvádíme výukové zkušenosti pro učebny důvtipné počítačové vědy, které chtějí jít trochu dále! Pomozte nám odesláním lekcí pro třídy, které jsou již se základy spokojené.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Předmětové oblasti**: Máte skvělý nápad na lekci, který integruje informatiku do matematiky? Dějiny? Jazykové umění? Věda? Umění? Nebo jiný předmět? Měli jsme řadu žádostí od učitelů, kteří chtějí propojit Hodinu kódu s jejich předmětem. Učitelé mohou filtrovat svůj typ třídy (třídní pásmo nebo předmět), takže potřebujeme vaši pomoc s vyplněním mezer, abychom mohli nabídnout aktivity ve třídě nebo plány lekcí, které se vztahují CS ke každé hlavní oblasti předmětu pro různé třídy. Nadále máme také kategorii „Počítačová věda“ pro učitele, kteří hledají obecné aktivity CS.
 
 <a id="top"></a>
 
 ## Index:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Co předložit](#whatsubmit)
+- [Všeobecné pokyny pro vytvoření aktivity pro Hodinu kódu](#guidelines)
+- [Jak odeslat](#submit)
+- [Jak budou aktivity hodnoceny](#inclusion)
+- [Rady pro návrh vaší aktivity](#design)
+- [Pokyny k ochranným známkám](#tm)
+- [Sledovací obrázek](#pixel)
+- [Propagace vaší aktivity, CsedWeek, a Hodina kódu](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## Co předložit
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Puzzle nebo hra s vlastním vedením ([příklad](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+Tyto aktivity jsou určeny pro studenty, aby se sami řídili prostřednictvím výukového programu. Nevyžadují mnoho instrukcí od přípravné práce učitele nebo učitele.
 
 **Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Nyní, když stovky tisíc pedagogů vyzkoušely Hodinu kódu, je mnoho učeben připraveno na kreativnější činnosti, které učí základy informatiky. Abychom pomohli pokročilejším učitelům najít inspiraci, shromažďujeme a kurátorujeme lekce a plány aktivit „vedené učiteli“ pro veterány Hodiny kódu.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+Jedním typem aktivity, kterou představíme zkušeným učitelům, jsou projekty vytváření „otevřeného pískoviště“. Aktivity, které povzbuzují studenty k vytvoření vlastní aplikace, hry, webové stránky nebo jiného projektu. Pokuď správně založeny, více otevřené aktivity mohou lépe představovat kreativní podstatu informatiky.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+Někteří pedagogové mohou také upřednostňovat hostování aktivit Hodiny kódu, které se řídí tradičním formátem lekce, spíše než průvodcovou hádanku/herní zážitek.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+Můžete začít s touto šablonou [](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) pro váš plán lekce.
 
-**Activities for teachers in other subjects/fields**
+**Aktivity pro učitele v jiných předmětech/oborech**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+Uvádíme také plány lekcí určené pro různé oblasti. Například, Jednohodinový plán pro učení kódu v geometrii. Nebo "mad-lib" cvičení pro Anglické hodiny. Nebo kreativní quiz aktivitu pro hodinu historie. Ty mohou pomoci najmout učitele v jiných oborech, aby vedli aktivitu Hodiny kódu, která je jedinečná pro jejich obor, a zároveň demonstrují, jak může CS ovlivnit a vylepšit mnoho různých oborových oblastí.
 
-Examples:
+Příklady:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- Zrcadlový obraz (aktivita pro učitele umění)
+- Arduion aktivita pro učitele fyziky
+- Historie technologie pro učitele dějepisu
+- A podívejte se na [tento seznam](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) pro další nápady od pedagogů (nebo přidejte své vlastní do seznamu, abyste inspirovali ostatní)
 
-**For students with special needs**
+**Pro studenty se speciálními potřebami**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+Pokud vytvoříte aktivitu nebo výukový program, který je určen pro studenty se speciálními potřebami, zavolejte to prosím v popisu. Zejména existuje jen velmi málo možností pro zrakově postižené. Pokud je vaše aktivita určena pro toto publikum, dejte nám prosím vědět.
 
-[**Back to the top**](#top)
+[**Zpět nahoru**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Všeobecné pokyny pro vytvoření aktivity pro Hodinu kódu
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+Cílem Hodiny kódu je poskytnout začátečníkům přístupnou první ochutnávku informatiky nebo programování. Tón by měl být takový:
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability. 
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online. 
+- Počítačovou vědu se může naučit kdokoli - bez ohledu na věk, pohlaví, rasu nebo schopnost/postižení.
+- Počítačová věda je spojena s celou řadou oborů a zájmů. Každý by se to měl naučit!
+- Povzbuďte studenty, aby vytvořili něco jedinečného, co lze sdílet s rodiči/přáteli nebo online.
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+Činnosti by měly učit koncept informatiky, jako jsou smyčky, podmínky, šifrování nebo jak funguje internet. Aktivita může také učit o tom, jak se počítačová věda spojuje s povoláními, událostmi nebo historií v reálném světě. Například výuka designu UX k vytváření aplikací, které jsou smysluplné pro publikum nebo věc. Odrazujeme od činností, které se zaměřují spíše na syntaxi programování než na koncepty. Například uvedeme, ale ne zvýrazníme, aktivity, které učí HTML. Podobně odrazujeme od lekcí blokového programování, které se zaměřují spíše na nastavení/změnu možností konfigurace, než na učení, jak modelovat algoritmus nebo proces.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Činnosti, které vyžadují instalaci aplikace, desktopovou aplikaci nebo herní konzoli, jsou v pořádku, ale nejsou ideální. Nebudeme uvádět aktivity, které vyžadují registraci nebo platbu. (Robotické činnosti mohou vyžadovat nákup robotiky.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*Student-led (Self-Guided) Formát:* Původní Hodina kódu byla postavena převážně na úspěchu výukových programů nebo lekcí s vlastním vedením, volitelně usnadňovaných učitelem. Je zde mnoho již existujících možností, ale jestli chcete vytvořit nové, tyto aktivity by měli být navrženy tak, že mohou být zábavné pro studenty pracující sámi, nebo ve třídě, kde učitěl má minimální přípravu v informatice. Měli by spíše studenty nasměrovat, nežli je nutit do otevřené hodinové výzvy. Ideální je, aby instrukce a návody byly zabudované přímo do programovací platformy, aby se zabránilo přepínání karet nebo oken mezi výukovým programem a programovací platformou.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+Chcete-li získat představu o široké škále typů výukových programů a plánů lekcí, které můžete vytvořit, navštivte stránku [Hodinové aktivity kódu](https://hourofcode.com/us/learn).
 
-[**Back to the top**](#top)
+[**Zpět nahoru**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## Jak odeslat
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+Navštivte stránku [Hodina kódu™ Odeslání aktivity](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) a vyplňte otázky a odešlete svou aktivitu.
 
-What you’ll need:
+Co budete potřebovat:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* Jméno a e-mail primárního kontaktu představujícího odeslanou aktivitu
+* Název aktivity (v názvu nelze uvést „Hodinu kódu“)
+* URL odkaz na aktivitu
+* Popis aktivity (maximální počet znaků: 400) 
+    * Uveďte prosím v popisu, zda se jedná především o práci studenta nebo je nutná asistence učitele. Kromě toho některé školy mají zájem vědět, zda činnosti Hodina kódu řeší společný základ nebo další generaci vědeckých standardů. Když činnost řeší specifické standardy, zvažte zahrnutí této informace.
+* Doporučená úroveň (úrovně) pro zamýšlené uživatele. Můžete se obrátit na \[Standardy K-12 Asociace učitelů informatiky\] (https://k12cs.org/framework-statements-by-grade-band/) pro koncepty informatiky vhodné pro ročníky. Příklady úrovní stupně zahrnují: 
+    * Mateřská škola - 1. stupeň (ve věku 4-6 let)
+    * Stupně 2-5 (ve věku 7-10 let)
+    * Stupně 6-8 (ve věku 11-13 let)
+    * Stupně 9+ (věk 14+)
+* Seznam oblastí, které vaše aktivita pokrývá (kromě informatiky). Pokud například učitel matematiky může použít vaši aktivitu k výuce úhlů nebo parabol, uveďte seznam jako matematiku. Pokud máte aktivitu šílených libs, která učí slovesa/podstatná jména/atd. zvolte jazykové umění.
+* Seznam programovacích jazyků, které vaše aktivita učí. Tj. C/C++, Java, JavaScript atd. nebo jazykově nezávislý (pro plány lekcí, které lze vyučovat ve více jazycích)
+* Seznam podporovaných přirozených jazyků. Poznámka: Za detekci jazyka odpovídá poskytovatel aktivity; všechny uživatele přesměrujeme na uvedenou jedinou adresu URL.
+* Jakou úroveň zkušeností by měl mít pedagog, aby využil vaši činnost? (např. Začátečník nebo Pohodlný.) A jakou úroveň zkušeností by měli mít studenti? Pokud si chcete připravit pokročilejší aktivity Hour of Code™, uveďte prosím předchozí znalosti potřebné do popisu vaší činnosti.
+* Délka vaší aktivity 
+    * Pouze 1 hodina
+    * 1 hodina s navazujícím kurzem
+    * 2-6 hodin (může být více lekcí)
+* Seznam přístupných ubytování, pokud je vaše aktivita má. Patří mezi ně kompatibilita čtečky obrazovky, funkce převodu textu na řeč, použití barev s vysokým kontrastem nebo jakákoli jiná ubytování vytvořená pro studenty se zdravotním postižením.
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### Další věci, které budete potřebovat při odesílání plánů lekcí
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* Odkaz na plán lekce. Může to být webová stránka, odkaz na dropbox, disk Google nebo podobná služba.
+* Jaký software a/nebo hardware bude učitel potřebovat k vytvoření plánu lekce (Scratch? Roboti? Nic?)
 
-#### Additional things you’ll need when submitting Online Activities
+#### Další věci, které budete potřebovat při odesílání online aktivit
 
-* Name and logo of your organization
-* Whether it is COPPA compliant or not
-* A URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
+* Název a logo vaší organizace
+* Ať už je kompatibilní s COPPA nebo ne
+* URL odkaz na poznámky učitele (volitelné)
+* Seznam testovaných/kompatibilních platforem: 
+    * Webové: Které platformy jste testovali? 
+        * OS - Mac, Win a další verze
+        * Prohlížeče - IE11, Edge, Firefox, Chrome, Safari
+        * iOS mobilní Safari (optimalizované na mobil)
+        * Android Chrome (optimalizované na mobil)
+    * Mimo web: Specifikujte platformu pro nativní kód (Mac, Win, iOS, Android, xBox, další)
+    * Nepřipojený
+* Snímek obrazovky nebo marketingový obrázek aktivity Hodina kódu. Zašlete prosím alespoň jeden obrázek o rozměrech 4:3. Mělo by to být alespoň 520px x 390px. Tento obrázek by neměl obsahovat ŽÁDNÝ text (kromě vašeho loga), aby byl přístupnější pro neanglicky mluvící. Není-li odpovídající obrázek zadán, můžeme udělat náš vlastní snímek vašeho kurzu nebo se rozhodneme obrázek nezařadit. Všechny obrázky musí být odeslány jako odkaz URL na.jpg, .jpeg nebo .png.
+* Aby bylo možné přesněji sledovat účast, partneři výukových programů třetích stran musí na první stránku svých výukových programů Hodina kódu zahrnout sledovací obrázky o 1 pixelu. Další podrobnosti najdete v části [Tracking Pixel](#pixel) níže.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+    * Sdílet na sociálních sítích, že dokončili aktivitu Hodiny kódu
+    * Získat certifikát o dokončení aktivity Hodiny kódu
+    * Podívat se na žebříčky o tom, které země/města mají nejvyšší míru účasti v aktivitách Hodiny kódu
     * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* (Volitelné) Můžeme navázat na odkaz na online průzkum/formulář s žádostí o zprávu o následujících metrikách aktivity: 
+    * Pro online aktivity (zejména smartphonové/tabletové aplikace): 
+        * Počet uživatelů
+        * Kolik úkol dokončilo
+        * Průměrná doba zpracování úkolu
+        * Celkový počet řádků kódu zapsaný všemi uživateli
+        * Kolik pokračovalo v dalším vzdělávání (měřeno jako každý uživatel, který dokončí úkol a přejde na další úkoly na vaší stránce)
+    * Pro offline aktivity 
+        * Počet stažení papírové verze aktivity (je-li k dispozici)
 
-#### Additional things you’ll need when submitting Robotics
+#### Další věci, které budete potřebovat při odesílání Robotics
 
-* If you submit a robotics activity, we need to know the cost per student for robotics.
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* Pokud odešlete robotickou činnost, potřebujeme znát náklady na studenta za robotiku.
+* Abychom mohli vyhodnotit robotické aktivity pro zařazení na web, budeme potřebovat, abyste recenzentům zaslali ukázkové sady.
 
-[**Back to the top**](#top)
+[**Zpět nahoru**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## Jak budou aktivity hodnoceny
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+Různorodý výbor pedagogů informatiky bude hodnotit příspěvky na základě kvalitativních a kvantitativních kritérií. Budou uvedeny všechny činnosti, které odpovídají základním kritériím. Učitelé budou moci filtrovat a třídit, aby našli nejlepší aktivity pro svou třídu.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+Rubrika pro hodnocení činností a plánů lekcí bude hledat následující kritéria pro všechny činnosti a podle toho je hodnotit:
 
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+- Vysoká kvalita výroby
+- Podporovat učení všemi demografickými skupinami (např. studenti nedostatečně zastoupeni v CS, jako jsou mladé ženy, studenti z marginalizovaných rasových a etnických skupin a studenti se zdravotním postižením)
+- Vzdělávací (dobře učí koncepty informatiky)
+- Zábavné a poutavé
+- Povzbuzuje studenty, aby vytvořili něco jedinečného, co mohou sdílet (Pro mladší studenty: s rodiči a spolužáky. Pro starší studenty: na internetu)
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+Pokud hodnotící komise hodnotí aktivitu na nulovou kvalitu produkce (kvůli špatným chybám nebo pokynům, které ji velmi ztěžují), při podpoře učení v nedostatečně zastoupených skupinách (kvůli rasistickým/sexistickým materiálům), ve vzdělávací hodnotě (neučí CS koncepty) nebo zábavné/poutavé (kvůli obtížnému/odrazování pro studenty od práce), aktivita nebude uvedena.
 
-In addition, in order to be listed, all activities must:
+Kromě toho, aby byly uvedeny, musí všechny činnosti:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up 
-- Require no payment (exception for robotics activities these can require robot/kit purchase)
+- Být vhodný pro veřejnou školní učebnu (žádné zbraně, žádný explicitní/dospělý obsah, žádný náboženský obsah atd.)
+- Nevyžadovat žádné přihlášení
+- Nevyžadují žádnou platbu (výjimka pro robotické činnosti mohou vyžadovat nákup robotu/soupravy)
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+Pro samostatně řízené aktivity pro nové učitele a studenty bude hodnotící komise hledat, zda:
 
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+- Učitelé mohou používat výukový program nebo aktivitu bez zázemí v informatice
+- Studenti mohou být úspěšní bez znalosti informatiky
+- Studenti se mohou prostřednictvím výukového programu řídit bez vedení rodičů nebo učitelů
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+Učitelé a studenti budou moci prohledávat a filtrovat náš seznam aktivit na základě filtrů, jako je známka, úroveň zkušeností, předmět, hardware atd. Ve výchozím nastavení nejprve ukážeme plány a aktivity lekcí, které:
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+- Získejte nejvyšší hodnocení od hodnotící komise
+- Jsou hodinové samořízené aktivity určené pro začátečníky (studenty a učitele)
+- Apelovat na širokou škálu uživatelů (napříč platformami, jazyky a věky)
+- Nevyžadují žádnou instalaci
+- Jsou letos nové
 
-[**Back to the top**](#top)
+[**Zpět nahoru**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## Návrhy pro navrhování hodinových výukových programů s vlastním průvodcem
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Do výukového programu můžete zahrnout logo [Hodina kódu](https://hourofcode.com/us/promote/resources#logo) , ale to není nutné. Pokud použijete logo Hodiny kódu, podívejte se na pokyny ohledně ochranné známky níže. <u>Za žádných okolností nelze použít logo a název Code.org.</u> Oba jsou ochrannou známkou a nelze je smísit se značkou třetí strany bez výslovného písemného souhlasu.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Ujistěte se, že průměrný student může pohodlně dokončit hodinu.** Zvažte zařazení otevřené aktivity na konec pro studenty, kteří rychleji zvládnou lekci. Nezapomeňte, že většina dětí budou absolutní začátečníci v informatice a programování.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Přiložte poznámky pro učitele.** Většinu aktivit by měl zvládat student samostatně, ale pokud je některá aktivita je podporována nebo řízená učitelem, uveďte jasné a jednoduché pokyny pro učitele ve formě učitelské poznámky na samostatnou URL adresu s vaší činností. Nejenže jsou studenti začátečníci, někteří učitelé také. Vložte informace jako např:
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming? 
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+- Na jakých platformách a prohlížečích funguje výukový program nejlépe?
+- Funguje to na smartphonech? Tablety?
+- Doporučuje se programování ve dvojici ?
+- Úvahy o použití ve třídě? Např. pokud existují videa, doporučte učitelům, aby videa zobrazovali na promítaném plátně pro celou třídu, aby si je mohli prohlédnout společně
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+**Začlenit zpětnou vazbu na konci aktivity.** (Např. „Dokončili jste 10 úrovní a dozvěděli jste se o smyčkách! Skvělá práce!“)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Přesvědčte studenty, aby sdíleli příspěvky v sociálních médiích (tam, kde je to vhodné), až budou hotoví.** Například “Mám za sebou hodinu kódu s ________ Co ty? #HourOfCode „nebo „Udělal jsem #HourOfCode jako součást #CSEdWeek. A ty? @Scratch." Použijte hashtag **#HourOfCode** (s velkými písmeny H, O, C)
 
-**Create your activity in Spanish or in other languages besides English.**
+**Vytvořte svou aktivitu ve španělštině nebo v jiných jazycích kromě angličtiny.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Vysvětlete nebo spojte aktivitu se sociálně významným kontextem.** Programování se stává super-silou, vidí-li studenti, jak může svět změnit k lepšímu!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**Ujistěte se, že váš tutoriál lze použít v paradigmatu [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) .** To je zvláště užitečné pro Hodinu kódu, protože mnoho učeben nemá hardware 1:1 pro všechny studenty.
 
-[**Back to the top**](#top)
+[**Zpět nahoru**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Pokyny k ochranným známkám
 
-Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+Hour of Code® a Hora del Código® jsou registrované ochranné známky společnosti Code.org. Mnoho našich partnerů pro výukový program použilo naše ochranné známky „Hodina kódu“ na svých webových stránkách v souvislosti s jejich aktivitami Hodina kódu. Nechceme tomuto použití zabránit, ale chceme se ujistit, že použití spadá do několika limitů:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. Používejte „Hodinu kódu“ pouze v souvislosti s nekomerčními aktivitami CS Education v rámci kampaně Hodina kódu, a to pro žádný jiný účel.
+2. Jakýkoli odkaz na „Hodinu kódu“ by měl být používán způsobem, který nenaznačuje, že je to vaše vlastní značka, ale že spíše odkazuje na Hodinu kódu jako hnutí místních občanů. Dobrý příklad: „Zúčastněte se Hodiny kódu® na Acmecorp.com“. Špatný příklad: " Vyzkoušejte Hodina Kódu od ACME korporace".
+3. Použijte horní index „®“ na nejvýznamnějších místech, která zmiňujete „Hodina kódu“, a to jak na vašem webu, tak v popisech aplikací.
+4. Zahrňte jazyk na stránku (nebo do zápatí), včetně odkazů na webové stránky Hodina kódu, CsedWeek a Code.org, který zveřejňuje obě následující: a. Hour of Code® a Hora del Código® jsou registrované ochranné známky společnosti Code.org; a b. „[Hour of Code](http://hourofcode.com/) ® je celostátní iniciativa [Code.org](http://code.org/) , která má milionům studentů představit jednu hodinu informatiky a počítačového programování.“
+5. V názvech aplikací nepoužívejte „Hodinu kódu“.
+6. Nepoužívejte „Hodinu kódu“ v souvislosti s jakýmkoli komerčním využitím nebo účelem (např. umístění vaší aktivity Hodiny kódu za paywall; propagace jiné placené služby v rámci vaší aktivity Hodiny kódu; prodej zboží Hodina kódu).
+7. Nepoužívejte „Hodinu kódu“ v souvislosti s jakoukoli aktivitou, která vyžaduje přihlášení nebo vytvoření účtu.
 
-[**Back to the top**](#top)
+[**Zpět nahoru**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Sledovací obrázek
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+Abychom mohli přesněji sledovat účast, žádáme každého partnera výukového programu, aby na první stránku svých výukových programů Hodina kódu zahrnul 1pixelový sledovací obrázek. Obraz pixelu musí být pouze na úvodní stránce. Nezahrnujte na žádné prozatímní stránky výukového programu.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+To nám umožní počítat uživatele, kteří dělají výukový program Hodina kódu. To povede k přesnějším počtům účasti pro váš tutoriál.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Pokud je váš výukový program schválen a zahrnut na závěrečné stránce výukového programu, Code.org vám poskytne jedinečný sledovací pixel, který můžete integrovat do svého výukového programu. Viz příklad níže.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+Poznámka: Toto není důležité udělat pro instalovatelné aplikace (iOS/Android aplikace, nebo aplikace pro deskto)
 
-Example tracking pixels for Dance Party:
+Příklad sledovacích pixelů pro Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**Zpět nahoru**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## Propagace vašich aktivit, CsedWeek, a Hodina kódu
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+Propagujte svou aktivitu ve své síti! Nasměrujte je na stránku Hodina kódu. Vaši uživatelé mnohem častěji reagují na vaši poštu o vaší aktivitě. Využijte mezinárodní kampaň Hodina kódu během Týdne vzdělávání v oblasti informatiky jako výmluvu k povzbuzení uživatelů, aby pozvali ostatní, aby se připojili, a pomozte nám oslovit více studentů!
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- Funkce Hodina kódu a CsedWeek na vašem webu. Příklad: <http://www.tynker.com/hour-of-code>
+- Propagujte Hodinu kódu pomocí sociálních médií, tradičních médií, e-mailových seznamů atd. pomocí hashtagu #HourOfCode (velkými písmeny H, O, C)
+- Hostujte ji jako místní událost nebo požádejte vaše zaměstnance, aby hostili akci v místních školách nebo komunitních skupinách.
+- Další informace najdete v naší [zdrojové sadě](https://hourofcode.com/us/promote) .
 
-[**Back to the top**](#top)
+[**Zpět nahoru**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+{{ signup_button }}

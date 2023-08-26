@@ -24,7 +24,7 @@ This is because translation strings come from unstruted sources and our Markdown
 renderer will remove any potentially-dangerous HTML.
 You can render a string as Markdown by passing `markdown: true` or `markdown: :inline`
 to the `I18n.t` method. With `markdown: true` option, Markdown will handle its own
-block-level elements like paragraphs and lists, while the `markdown: inline` option
+block-level elements like paragraphs and lists, while the `markdown: :inline` option
 will produce content suitable for embedding inside an existing block-level element.
 
 ### Pegasus

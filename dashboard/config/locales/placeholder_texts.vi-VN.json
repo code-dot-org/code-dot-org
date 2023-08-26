@@ -2,42 +2,6 @@
   "vi-VN": {
     "data": {
       "placeholder_texts": {
-        "CourseE_hoops": {
-          "498cd895eb5a102c5aeb977e2b928dee": "Cảm ơn bạn!"
-        },
-        "courseE_aboutme_3": {
-          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
-        },
-        "courseE_aboutme_3_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
-        },
-        "courseE_aboutme_4": {
-          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
-        },
-        "courseE_aboutme_4_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
-        },
-        "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Này!"
-        },
-        "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Này!"
-        },
-        "courseF_playlab_variables2b": {
-          "48d6215903dff56238e52e8891380c8f": "màu xanh dương",
-          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "màu đỏ",
-          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "courseF_project_1": {
-          "498cd895eb5a102c5aeb977e2b928dee": "Cảm ơn bạn!"
-        },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
@@ -45,6 +9,20 @@
         "Choose Your Own Adventure": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "c469f9393f38213de6fcffa9fe48008d": "-điểm số-"
+        },
+        "Course 4 Play Lab Vars 2": {
+          "c469f9393f38213de6fcffa9fe48008d": "-điểm số-"
+        },
+        "Course 4 Play Lab Vars 6": {
+          "38ef4db866aae5cb50ce847a505b95d1": "Cuộc chiến đồ ăn!",
+          "f2906a454b9ee96245db295d124807f9": "Nhấn mũi tên phải để ném cái bánh"
+        },
+        "Course 4 Play Lab Vars 7": {
+          "38ef4db866aae5cb50ce847a505b95d1": "Cuộc chiến đồ ăn!",
+          "f2906a454b9ee96245db295d124807f9": "Nhấn mũi tên phải để ném cái bánh"
         },
         "Course 4 Playlab For Loop Freeplay": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
@@ -54,9 +32,52 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Cảm ơn bạn!"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3"
+        },
+        "CourseF_Project_SpriteLab_chatbot_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3"
+        },
+        "CourseF_Project_SpriteLab_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
+          "78d989e01047ba7043a38650d695abaa": "Chọn người chơi",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "Vũ công bầu trời",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3"
+        },
+        "CourseF_outbreak8": {
+          "968c8b54671ab303d48320f86937c40b": "Khẩu trang giúp làm chậm quá trình lây lan vi rút!",
+          "fac94901e68fc1dea6e749c012e3efc0": "Nhấn vào nhân vật để đưa cho họ khẩu trang."
+        },
+        "CourseF_outbreak8_-2022-2": {
+          "968c8b54671ab303d48320f86937c40b": "Khẩu trang giúp làm chậm quá trình lây lan vi rút!",
+          "fac94901e68fc1dea6e749c012e3efc0": "Nhấn vào nhân vật để đưa cho họ khẩu trang."
+        },
         "Find the Wizard": {
-          "0b895ef4c917e50663bc2a7327cbee3d": "Bạn tìm thấy tôi rồi!",
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "0b895ef4c917e50663bc2a7327cbee3d": "Bạn tìm thấy tôi rồi!",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
         "FoodFight": {
@@ -71,6 +92,16 @@
         "NEW Course 4 Play Lab Params 11": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
+        "New Sprite Lab Project": {
+          "6cd3556deb0da54bca060b4c39479839": "Xin chào thế giới!",
+          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3"
         },
         "OPD-K5-projects-2": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
@@ -88,15 +119,31 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
+        "OPD-K5-projects-6": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
+        "OPD-K5-projects-7": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
+        "course3_playLab_challenge1": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
         "course4_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây",
-          "40f4f24106dde9234f43bf30465647e0": "\"Cốc cốc\"",
-          "8292c7cbebf598e875ccd0c008958922": "Ai?",
           "3986de660e6560710c546cb2f22c12f3": "Ai đó?",
-          "812febf38bfe564d348136e1b9e71bcd": "Megabytes!"
+          "40f4f24106dde9234f43bf30465647e0": "\"Cốc cốc\"",
+          "812febf38bfe564d348136e1b9e71bcd": "Megabytes!",
+          "8292c7cbebf598e875ccd0c008958922": "Ai?"
         },
         "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
+        "courseC19_playLab_EOC12022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
@@ -104,7 +151,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
         "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
+        "courseC19_playLab_EOC22022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
@@ -112,7 +167,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
         "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
+        "courseC19_playLab_EOC32022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
@@ -120,7 +183,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
         "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
+        "courseC19_playLab_EOC42022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
@@ -128,7 +199,75 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
+        "courseC19_playLab_EOC5": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
+        "courseC19_playLab_EOC52022": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
+        "courseC19_playLab_EOC5_2020": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
+        "courseC19_playLab_EOC6": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
+        "courseC19_playLab_EOC62022": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
+        "courseC19_playLab_EOC6_2020": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
+        "courseC19_playLab_sample12022": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
+        "courseC19_playLab_sample1_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
+        "courseC19_playLab_sample22022": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila đang cố gắng bảo vệ ngôi nhà của mình khỏi tụi robot vũ trụ.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Các sinh vật khác không còn sợ hãi nữa!",
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
+          "83db90f8846d091d3532256816f105d9": "Đây là Neila.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Hiệu quả rồi! Neila đã cho robot vũ trụ thấy sức mạnh của lòng tốt.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila muốn giúp robot vũ trụ học cách cư xử tử tế.",
+          "df8312187449c70820d7c58229a6b17e": "Robot vũ trụ đang hù dọa những sinh vật khác."
+        },
+        "courseC19_playLab_sample2_2021": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila đang cố gắng bảo vệ ngôi nhà của mình khỏi tụi robot vũ trụ.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Các sinh vật khác không còn sợ hãi nữa!",
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
+          "83db90f8846d091d3532256816f105d9": "Đây là Neila.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Hiệu quả rồi! Neila đã cho robot vũ trụ thấy sức mạnh của lòng tốt.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila muốn giúp robot vũ trụ học cách cư xử tử tế.",
+          "df8312187449c70820d7c58229a6b17e": "Robot vũ trụ đang hù dọa những sinh vật khác."
+        },
         "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
+        "courseC_PlayLab_eventsFP2022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
@@ -144,9 +283,130 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
+        "courseC_data wizard": {
+          "1c64ef29c853587fbe94f69f05272b79": "Một con chim!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " con mèo!",
+          "27944770529dd15319a983bee8951560": "Một con mèo!",
+          "336ad881e37e713ba0325500a8fa1f00": " con chó!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Một con rồng!",
+          "5b402e6ea05e847a076e03ad74420c45": " con chim!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Hãy đếm tất cả các loài động vật!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " con rồng!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Đếm thú cưng",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Một con chó!",
+          "f62038e77820419cd978f7b722da560a": "Có bao nhiêu con vật sẽ xuất hiện?"
+        },
+        "courseC_data wizard2022": {
+          "1c64ef29c853587fbe94f69f05272b79": "Một con chim!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " con mèo!",
+          "27944770529dd15319a983bee8951560": "Một con mèo!",
+          "336ad881e37e713ba0325500a8fa1f00": " con chó!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Một con rồng!",
+          "5b402e6ea05e847a076e03ad74420c45": " con chim!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Hãy đếm tất cả các loài động vật!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " con rồng!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Đếm thú cưng",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Một con chó!",
+          "f62038e77820419cd978f7b722da560a": "Có bao nhiêu con vật sẽ xuất hiện?"
+        },
+        "courseC_data wizard_2020": {
+          "1c64ef29c853587fbe94f69f05272b79": "Một con chim!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " con mèo!",
+          "27944770529dd15319a983bee8951560": "Một con mèo!",
+          "336ad881e37e713ba0325500a8fa1f00": " con chó!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Một con rồng!",
+          "5b402e6ea05e847a076e03ad74420c45": " con chim!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Hãy đếm tất cả các loài động vật!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " con rồng!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Đếm thú cưng",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Một con chó!",
+          "f62038e77820419cd978f7b722da560a": "Có bao nhiêu con vật sẽ xuất hiện?"
+        },
+        "courseC_data wizard_2021": {
+          "1c64ef29c853587fbe94f69f05272b79": "Một con chim!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " con mèo!",
+          "27944770529dd15319a983bee8951560": "Một con mèo!",
+          "336ad881e37e713ba0325500a8fa1f00": " con chó!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Một con rồng!",
+          "5b402e6ea05e847a076e03ad74420c45": " con chim!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Hãy đếm tất cả các loài động vật!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " con rồng!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Đếm thú cưng",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Một con chó!",
+          "f62038e77820419cd978f7b722da560a": "Có bao nhiêu con vật sẽ xuất hiện?"
+        },
         "courseD_playLab_condFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
+        "courseE_Dogger_2": {
+          "8437002ea42b64a5fd68abfb2ab8dae0": "Kết thúc trò chơi.",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Anh thắng!"
+        },
+        "courseE_aboutme_1": {
+          "6f97975a0bda0c9219915161149cbb26": "Đây là máy tính của tôi! Tôi lập trình trên đó SUỐT cả ngày!",
+          "810896b14fc6615f0c76628b9b6a727e": "Thủy là cô bạn thân nhất của tôi đó! Cô ấy rất giỏi chơi thể thao!",
+          "b63151482630edd1589a9ac24d107c49": "Chính là tôi! Rikki nè! Tôi thích lập trình, đi chơi với Thủy và ăn kem!"
+        },
+        "courseE_aboutme_1_2020": {
+          "6f97975a0bda0c9219915161149cbb26": "Đây là máy tính của tôi! Tôi lập trình trên đó SUỐT cả ngày!",
+          "810896b14fc6615f0c76628b9b6a727e": "Thủy là cô bạn thân nhất của tôi đó! Cô ấy rất giỏi chơi thể thao!",
+          "b63151482630edd1589a9ac24d107c49": "Chính là tôi! Rikki nè! Tôi thích lập trình, đi chơi với Thủy và ăn kem!"
+        },
+        "courseE_aboutme_1_2021": {
+          "31ba97bb501bb1f5b448221be09bad32": "Đây là chú chó corgi của mình, Lollipop! Mình phải dạy cậu ấy cách viết mã lệnh mới được!",
+          "6f97975a0bda0c9219915161149cbb26": "Đây là máy tính của tôi! Tôi lập trình trên đó SUỐT cả ngày!",
+          "810896b14fc6615f0c76628b9b6a727e": "Thủy là cô bạn thân nhất của tôi đó! Cô ấy rất giỏi chơi thể thao!",
+          "8e985f60f328934accd78e7649584840": "Kem là món ăn yêu thích của mình đó!",
+          "b63151482630edd1589a9ac24d107c49": "Chính là tôi! Rikki nè! Tôi thích lập trình, đi chơi với Thủy và ăn kem!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
+        },
+        "courseE_aboutme_5": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Này!",
+          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
+        },
+        "courseE_aboutme_52022": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Này!",
+          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
+        },
+        "courseE_aboutme_5_2020": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Này!",
+          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
+        },
+        "courseE_aboutme_5_2021": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Này!",
+          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
+        },
+        "courseE_playLab_challenge1": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
         },
         "courseE_playLab_scaffold1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
@@ -164,9 +424,215 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
+        "courseE_playLab_scaffold5": {
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn."
+        },
+        "courseE_playLab_scaffold6": {
+          "2d3cdcfdd4061212e4d4930a183dad2d": "Vui lòng thử lại.",
+          "af142a90df4becc2aa7ae0d3acb3cc90": "Kết thúc trò chơi!"
+        },
+        "courseF_apps_aquarium": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Loài cá nào?",
+          "78574118d153534fd0925a2f5ca25e79": "Đồ vật nào?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "khác",
+          "83e4a96aed96436c621b9809e258b309": "cá",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "sinh vật",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Bạn sẽ thêm gì vào bể cá?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Sinh vật nào?",
+          "f655df68ec33643278de7e69794e8d76": "Bể cá ảo"
+        },
+        "courseF_apps_aquarium2022": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Loài cá nào?",
+          "78574118d153534fd0925a2f5ca25e79": "Đồ vật nào?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "khác",
+          "83e4a96aed96436c621b9809e258b309": "cá",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "sinh vật",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Bạn sẽ thêm gì vào bể cá?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Sinh vật nào?",
+          "f655df68ec33643278de7e69794e8d76": "Bể cá ảo"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Loài cá nào?",
+          "78574118d153534fd0925a2f5ca25e79": "Đồ vật nào?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "khác",
+          "83e4a96aed96436c621b9809e258b309": "cá",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "sinh vật",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Bạn sẽ thêm gì vào bể cá?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Sinh vật nào?",
+          "f655df68ec33643278de7e69794e8d76": "Bể cá ảo"
+        },
+        "courseF_apps_card": {
+          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?"
+        },
+        "courseF_apps_card2022": {
+          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?"
+        },
+        "courseF_apps_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?"
+        },
+        "courseF_apps_chatbot": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Nhập tuổi của bạn:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
+          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!",
+          "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " tuổi giống mình nè!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
+          "a72e7c5c68af0546e963e510297f5233": "Chào bạn, mình là X-9! Bạn tên là gì?",
+          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!",
+          "f0e5da70d264f312a1658d51c130b101": "Nhập tên của bạn:"
+        },
+        "courseF_apps_chatbot2022": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Nhập tuổi của bạn:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
+          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!",
+          "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " tuổi giống mình nè!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
+          "a72e7c5c68af0546e963e510297f5233": "Chào bạn, mình là X-9! Bạn tên là gì?",
+          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!",
+          "f0e5da70d264f312a1658d51c130b101": "Nhập tên của bạn:"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Nhập tuổi của bạn:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
+          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!",
+          "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " tuổi giống mình nè!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
+          "a72e7c5c68af0546e963e510297f5233": "Chào bạn, mình là X-9! Bạn tên là gì?",
+          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!",
+          "f0e5da70d264f312a1658d51c130b101": "Nhập tên của bạn:"
+        },
+        "courseF_apps_collector": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " giây",
+          "41f2b2212de0105c2a942ebb4a44e449": "Trò chơi nhà sưu tầm vĩ đại!",
+          "490082498449bd20ff0199737dfa4916": "Chọn loại trò chơi:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Bạn thắng rồi!"
+        },
+        "courseF_apps_collector2022": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " giây",
+          "41f2b2212de0105c2a942ebb4a44e449": "Trò chơi nhà sưu tầm vĩ đại!",
+          "490082498449bd20ff0199737dfa4916": "Chọn loại trò chơi:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Anh thắng!"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " giây",
+          "41f2b2212de0105c2a942ebb4a44e449": "Trò chơi nhà sưu tầm vĩ đại!",
+          "490082498449bd20ff0199737dfa4916": "Chọn loại trò chơi:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Anh thắng!"
+        },
+        "courseF_apps_madlib": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Nhập phần nội dung chính:",
+          "514b8d5320196898a9ced3efe0d4c802": "Nhập một tính từ:",
+          "5306eed2fd2c43fe033efd6016c0c38b": " chân chạy đua nào!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " trò chơi.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Nhập một đối tượng:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Một câu chuyện khoảng trống",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "e522ee28f39133b45497637539ff429b": "Nhập một con số:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng"
+        },
+        "courseF_apps_madlib2022": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Nhập phần nội dung chính:",
+          "514b8d5320196898a9ced3efe0d4c802": "Nhập một tính từ:",
+          "5306eed2fd2c43fe033efd6016c0c38b": " chân chạy đua nào!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " trò chơi.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Nhập một đối tượng:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Một câu chuyện khoảng trống",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "e522ee28f39133b45497637539ff429b": "Nhập một con số:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng"
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Nhập phần nội dung chính:",
+          "514b8d5320196898a9ced3efe0d4c802": "Nhập một tính từ:",
+          "5306eed2fd2c43fe033efd6016c0c38b": " chân chạy đua nào!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " trò chơi.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Nhập một đối tượng:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Một câu chuyện khoảng trống",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "e522ee28f39133b45497637539ff429b": "Nhập một con số:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng"
+        },
+        "courseF_editable_card": {
+          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?"
+        },
+        "courseF_editable_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?"
+        },
+        "courseF_editable_chatbot": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Nhập tuổi của bạn:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
+          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!",
+          "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " tuổi giống mình nè!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
+          "a72e7c5c68af0546e963e510297f5233": "Chào bạn, mình là X-9! Bạn tên là gì?",
+          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "f0e5da70d264f312a1658d51c130b101": "Nhập tên của bạn:"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Nhập tuổi của bạn:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
+          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!",
+          "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " tuổi giống mình nè!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
+          "a72e7c5c68af0546e963e510297f5233": "Chào bạn, mình là X-9! Bạn tên là gì?",
+          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "f0e5da70d264f312a1658d51c130b101": "Nhập tên của bạn:"
+        },
+        "courseF_editable_madlib": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Nhập phần nội dung chính:",
+          "514b8d5320196898a9ced3efe0d4c802": "Nhập một tính từ:",
+          "5306eed2fd2c43fe033efd6016c0c38b": " chân chạy đua nào!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " trò chơi.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Nhập một đối tượng:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Một câu chuyện khoảng trống",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "e522ee28f39133b45497637539ff429b": "Nhập một con số:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng"
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Nhập phần nội dung chính:",
+          "514b8d5320196898a9ced3efe0d4c802": "Nhập một tính từ:",
+          "5306eed2fd2c43fe033efd6016c0c38b": " chân chạy đua nào!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " trò chơi.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Nhập một đối tượng:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Một câu chuyện khoảng trống",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "e522ee28f39133b45497637539ff429b": "Nhập một con số:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng"
+        },
+        "courseF_label_predict": {
+          "937dc37c06cc5d89a7096eb048b73590": " sắp ra ngay đây!",
+          "f15045cb7e57652546d4a0b2c695356f": "Bạn sẽ ăn gì?"
+        },
+        "courseF_label_predict_-2022-2": {
+          "937dc37c06cc5d89a7096eb048b73590": " sắp ra ngay đây!",
+          "f15045cb7e57652546d4a0b2c695356f": "Bạn sẽ ăn gì?"
+        },
         "courseF_playlab_variables1a": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
+        },
+        "courseF_playlab_variables2b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây",
+          "48d6215903dff56238e52e8891380c8f": "màu xanh dương"
         },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
@@ -175,13 +641,18 @@
         },
         "courseF_playlab_variables4b": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?"
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
         },
         "courseF_playlab_variables4c_predictive1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây",
           "f6429fe0f1a76611670df7e1234af936": "Tên bạn là gì?"
+        },
+        "courseF_playlab_variables5c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
+          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây",
+          "bda9643ac6601722a28f238714274da4": "màu đỏ"
         },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
@@ -202,183 +673,76 @@
         "courseF_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây",
-          "40f4f24106dde9234f43bf30465647e0": "\"Cốc cốc\"",
-          "8292c7cbebf598e875ccd0c008958922": "Ai?",
           "3986de660e6560710c546cb2f22c12f3": "Ai đó?",
-          "812febf38bfe564d348136e1b9e71bcd": "Megabytes!"
+          "40f4f24106dde9234f43bf30465647e0": "\"Cốc cốc\"",
+          "812febf38bfe564d348136e1b9e71bcd": "Megabytes!",
+          "8292c7cbebf598e875ccd0c008958922": "Ai?"
         },
-        "iceage_free_play": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "CourseF_Project_SpriteLab_2021": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3"
-        },
-        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3"
-        },
-        "CourseF_Project_SpriteLab_examples_2021": {
-          "8e7d34ed67fe4ec0910cefee2f5059cd": "Vũ công bầu trời",
-          "78d989e01047ba7043a38650d695abaa": "Chọn người chơi",
-          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3"
-        },
-        "courseC19_playLab_EOC1_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "courseC19_playLab_EOC2_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "courseC19_playLab_EOC4_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "courseC19_playLab_sample2_2021": {
-          "83db90f8846d091d3532256816f105d9": "Đây là Neila.",
-          "0192cdc04916ec27aa11738bb6e48d6e": "Neila đang cố gắng bảo vệ ngôi nhà của mình khỏi tụi robot vũ trụ.",
-          "df8312187449c70820d7c58229a6b17e": "Robot vũ trụ đang hù dọa những sinh vật khác.",
-          "c084e152431f9116b9fdb3f7d465f13d": "Neila muốn giúp robot vũ trụ học cách cư xử tử tế.",
-          "b2f02bf648ce32c4362afe1578d41f70": "Hiệu quả rồi! Neila đã cho robot vũ trụ thấy sức mạnh của lòng tốt.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "Các sinh vật khác không còn sợ hãi nữa!",
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseC_PlayLab_eventsFP_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "courseE_aboutme_1_2021": {
-          "8e985f60f328934accd78e7649584840": "Kem là món ăn yêu thích của mình đó!",
-          "31ba97bb501bb1f5b448221be09bad32": "Đây là chú chó corgi của mình, Lollipop! Mình phải dạy cậu ấy cách viết mã lệnh mới được!",
-          "b63151482630edd1589a9ac24d107c49": "Chính là tôi! Rikki nè! Tôi thích lập trình, đi chơi với Thủy và ăn kem!",
-          "810896b14fc6615f0c76628b9b6a727e": "Thủy là cô bạn thân nhất của tôi đó! Cô ấy rất giỏi chơi thể thao!",
-          "6f97975a0bda0c9219915161149cbb26": "Đây là máy tính của tôi! Tôi lập trình trên đó SUỐT cả ngày!"
-        },
-        "courseE_aboutme_3_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
-        },
-        "courseE_aboutme_4_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
-        },
-        "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Này!"
-        },
-        "courseF_apps_aquarium": {
-          "f655df68ec33643278de7e69794e8d76": "Bể cá ảo",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Bạn sẽ thêm gì vào bể cá?",
-          "83e4a96aed96436c621b9809e258b309": "cá",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "khác",
-          "0d3e73168beb875063ea0f0302fe32bd": "Loài cá nào?",
-          "caaf8264ca397dba2d35ef902bbbd953": "Sinh vật nào?",
-          "78574118d153534fd0925a2f5ca25e79": "Đồ vật nào?",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "sinh vật"
-        },
-        "courseF_apps_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?",
-          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_apps_chatbot": {
-          "a72e7c5c68af0546e963e510297f5233": "Chào bạn, mình là X-9! Bạn tên là gì?",
-          "f0e5da70d264f312a1658d51c130b101": "Nhập tên của bạn:",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Nhập tuổi của bạn:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " tuổi giống mình nè!",
-          "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
-          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
-          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!"
-        },
-        "courseF_apps_collector": {
-          "077449fb290b51b9d70c9f2f3d3213bc": " giây",
-          "490082498449bd20ff0199737dfa4916": "Chọn loại trò chơi:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Trò chơi nhà sưu tầm vĩ đại!",
-          "e8a10c04d72b2f135dabe360c4bdd534": "Bạn thắng rồi!"
-        },
-        "courseF_apps_madlib": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng",
-          "bf08dd3d1961874f13e77c936aad27e5": "Một câu chuyện khoảng trống",
-          "514b8d5320196898a9ced3efe0d4c802": "Nhập một tính từ:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Nhập một đối tượng:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Nhập phần nội dung chính:",
-          "e522ee28f39133b45497637539ff429b": "Nhập một con số:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " trò chơi.",
-          "5306eed2fd2c43fe033efd6016c0c38b": " chân chạy đua nào!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_editable_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?",
-          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_editable_chatbot": {
-          "a72e7c5c68af0546e963e510297f5233": "Chào bạn, mình là X-9! Bạn tên là gì?",
-          "f0e5da70d264f312a1658d51c130b101": "Nhập tên của bạn:",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Nhập tuổi của bạn:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " tuổi giống mình nè!",
-          "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
-          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
-          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!"
-        },
-        "courseF_editable_madlib": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng",
-          "bf08dd3d1961874f13e77c936aad27e5": "Một câu chuyện khoảng trống",
-          "514b8d5320196898a9ced3efe0d4c802": "Nhập một tính từ:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Nhập một đối tượng:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Nhập phần nội dung chính:",
-          "e522ee28f39133b45497637539ff429b": "Nhập một con số:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " trò chơi.",
-          "5306eed2fd2c43fe033efd6016c0c38b": " chân chạy đua nào!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_label_predict": {
-          "f15045cb7e57652546d4a0b2c695356f": "Bạn sẽ ăn gì?",
-          "937dc37c06cc5d89a7096eb048b73590": " sắp ra ngay đây!"
+        "courseF_project_1": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Cảm ơn bạn!",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Anh thắng!"
         },
         "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+        },
+        "courseF_text_answer_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
         },
         "courseF_text_choice_color": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
         },
+        "courseF_text_choice_color_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+        },
         "courseF_text_choice_conversation": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
         },
+        "courseF_text_choice_conversation_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+        },
         "courseF_text_choice_events": {
-          "c529a06c3f8518b63ff6dfac482b335c": "Đặt tên cho hành tinh này:",
           "44506356d48394cd903b579df9de9117": ", người trái đất!",
+          "c529a06c3f8518b63ff6dfac482b335c": "Đặt tên cho hành tinh này:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+        },
+        "courseF_text_choice_events_-2022-2": {
+          "44506356d48394cd903b579df9de9117": ", người trái đất!",
+          "c529a06c3f8518b63ff6dfac482b335c": "Đặt tên cho hành tinh này:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
         },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
         },
+        "courseF_text_choice_freeplay_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+        },
         "courseF_text_choice_interview": {
-          "5bd698afd23bccde289bb0b4aa72a518": "Hãy đặt tên cho robot.",
-          "34088af1fb721900963462375b3bbe23": "robot!"
+          "34088af1fb721900963462375b3bbe23": "robot!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Hãy đặt tên cho robot."
+        },
+        "courseF_text_choice_interview_-2022-2": {
+          "34088af1fb721900963462375b3bbe23": "robot!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Hãy đặt tên cho robot."
         },
         "courseF_text_choice_multiprompt": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?",
-          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?"
+          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?"
+        },
+        "courseF_text_choice_multiprompt_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?"
         },
         "courseF_text_choice_title": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
         },
+        "courseF_text_choice_title_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+        },
         "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "f6429fe0f1a76611670df7e1234af936": "Tên bạn là gì?"
+        },
+        "courseF_text_concat_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
           "f6429fe0f1a76611670df7e1234af936": "Tên bạn là gì?"
         },
@@ -386,55 +750,62 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
           "f6429fe0f1a76611670df7e1234af936": "Tên bạn là gì?"
         },
+        "courseF_text_prompts_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "f6429fe0f1a76611670df7e1234af936": "Tên bạn là gì?"
+        },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
         },
+        "courseF_variables_card_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+        },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
-          "464a456e0747ec9b09fc9afc6fbd13ed": "bạn muốn quà gì vào ngày sinh nhật?"
+          "464a456e0747ec9b09fc9afc6fbd13ed": "bạn muốn quà gì vào ngày sinh nhật?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+        },
+        "courseF_variables_card_finish_-2022-2": {
+          "464a456e0747ec9b09fc9afc6fbd13ed": "bạn muốn quà gì vào ngày sinh nhật?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
         },
+        "courseF_variables_chatbot_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+        },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
           "46463b2e9f71f2f15b7238f56f09ba30": "Hết",
-          "c757766b0a7e2017c79e1c94f60e44f7": "Cảm ơn bạn đã trò chuyện!"
+          "c757766b0a7e2017c79e1c94f60e44f7": "Cảm ơn bạn đã trò chuyện!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+        },
+        "courseF_variables_chatbot_finish_-2022-2": {
+          "46463b2e9f71f2f15b7238f56f09ba30": "Hết",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Cảm ơn bạn đã trò chuyện!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
         },
+        "courseF_variables_madlib_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+        },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
-          "50d489a15105b987ec6d4410900c95dd": "Nhập một động từ:"
+          "50d489a15105b987ec6d4410900c95dd": "Nhập một động từ:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
         },
-        "courseC19_playLab_EOC5_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseC19_playLab_EOC6_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseC19_playLab_sample1_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseC_data wizard_2021": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Một con chó!",
-          "336ad881e37e713ba0325500a8fa1f00": " con chó!",
-          "27944770529dd15319a983bee8951560": "Một con mèo!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " con mèo!",
-          "1c64ef29c853587fbe94f69f05272b79": "Một con chim!",
-          "5b402e6ea05e847a076e03ad74420c45": " con chim!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Một con rồng!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " con rồng!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Hãy đếm tất cả các loài động vật!",
-          "f62038e77820419cd978f7b722da560a": "Có bao nhiêu con vật sẽ xuất hiện?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Đếm thú cưng"
+        "courseF_variables_madlib_finish_-2022-2": {
+          "50d489a15105b987ec6d4410900c95dd": "Nhập một động từ:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Tên bạn là gì?"
+        },
+        "courseF_variables_predict_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "Tên bạn là gì?"
+        },
+        "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Xin chào thế giới!"
         },
         "helloworld_animals_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Xin chào thế giới!"
@@ -448,374 +819,9 @@
         "helloworld_retro_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Xin chào thế giới!"
         },
-        "New Play Lab Project": {
+        "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
           "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "New Sprite Lab Project": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3",
-          "6cd3556deb0da54bca060b4c39479839": "Xin chào thế giới!"
-        },
-        "courseE_aboutme_1": {
-          "b63151482630edd1589a9ac24d107c49": "Chính là tôi! Rikki nè! Tôi thích lập trình, đi chơi với Thủy và ăn kem!",
-          "810896b14fc6615f0c76628b9b6a727e": "Thủy là cô bạn thân nhất của tôi đó! Cô ấy rất giỏi chơi thể thao!",
-          "6f97975a0bda0c9219915161149cbb26": "Đây là máy tính của tôi! Tôi lập trình trên đó SUỐT cả ngày!"
-        },
-        "courseE_aboutme_1_2020": {
-          "b63151482630edd1589a9ac24d107c49": "Chính là tôi! Rikki nè! Tôi thích lập trình, đi chơi với Thủy và ăn kem!",
-          "810896b14fc6615f0c76628b9b6a727e": "Thủy là cô bạn thân nhất của tôi đó! Cô ấy rất giỏi chơi thể thao!",
-          "6f97975a0bda0c9219915161149cbb26": "Đây là máy tính của tôi! Tôi lập trình trên đó SUỐT cả ngày!"
-        },
-        "Course 4 Play Lab Vars 1": {
-          "c469f9393f38213de6fcffa9fe48008d": "-điểm số-"
-        },
-        "Course 4 Play Lab Vars 2": {
-          "c469f9393f38213de6fcffa9fe48008d": "-điểm số-"
-        },
-        "Course 4 Play Lab Vars 6": {
-          "f2906a454b9ee96245db295d124807f9": "Nhấn mũi tên phải để ném cái bánh",
-          "38ef4db866aae5cb50ce847a505b95d1": "Cuộc chiến đồ ăn!"
-        },
-        "Course 4 Play Lab Vars 7": {
-          "f2906a454b9ee96245db295d124807f9": "Nhấn mũi tên phải để ném cái bánh",
-          "38ef4db866aae5cb50ce847a505b95d1": "Cuộc chiến đồ ăn!"
-        },
-        "OPD-K5-projects-6": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "OPD-K5-projects-7": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "course3_playLab_challenge1": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseC19_playLab_EOC5": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseC19_playLab_EOC5_2020": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseC19_playLab_EOC6": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseC19_playLab_EOC6_2020": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseC_data wizard": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Một con chó!",
-          "336ad881e37e713ba0325500a8fa1f00": " con chó!",
-          "27944770529dd15319a983bee8951560": "Một con mèo!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " con mèo!",
-          "1c64ef29c853587fbe94f69f05272b79": "Một con chim!",
-          "5b402e6ea05e847a076e03ad74420c45": " con chim!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Một con rồng!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " con rồng!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Hãy đếm tất cả các loài động vật!",
-          "f62038e77820419cd978f7b722da560a": "Có bao nhiêu con vật sẽ xuất hiện?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Đếm thú cưng"
-        },
-        "courseC_data wizard_2020": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Một con chó!",
-          "336ad881e37e713ba0325500a8fa1f00": " con chó!",
-          "27944770529dd15319a983bee8951560": "Một con mèo!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " con mèo!",
-          "1c64ef29c853587fbe94f69f05272b79": "Một con chim!",
-          "5b402e6ea05e847a076e03ad74420c45": " con chim!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Một con rồng!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " con rồng!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Hãy đếm tất cả các loài động vật!",
-          "f62038e77820419cd978f7b722da560a": "Có bao nhiêu con vật sẽ xuất hiện?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Đếm thú cưng"
-        },
-        "courseE_Dogger_2": {
-          "8437002ea42b64a5fd68abfb2ab8dae0": "Kết thúc trò chơi."
-        },
-        "courseE_playLab_challenge1": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseE_playLab_scaffold5": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseE_playLab_scaffold6": {
-          "2d3cdcfdd4061212e4d4930a183dad2d": "Vui lòng thử lại.",
-          "af142a90df4becc2aa7ae0d3acb3cc90": "Kết thúc trò chơi!"
-        },
-        "CourseF_outbreak8": {
-          "fac94901e68fc1dea6e749c012e3efc0": "Nhấn vào nhân vật để đưa cho họ khẩu trang.",
-          "968c8b54671ab303d48320f86937c40b": "Khẩu trang giúp làm chậm quá trình lây lan vi rút!"
-        },
-        "CourseF_Project_SpriteLab_chatbot_examples_-2022-2": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3"
-        },
-        "CourseF_Project_SpriteLab_cupcake_examples_-2022-2": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3"
-        },
-        "CourseF_Project_SpriteLab_examples_-2022-2": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "lựa chọn 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "lựa chọn 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "lựa chọn 3"
-        },
-        "CourseF_outbreak8_-2022-2": {
-          "fac94901e68fc1dea6e749c012e3efc0": "Nhấn vào nhân vật để đưa cho họ khẩu trang.",
-          "968c8b54671ab303d48320f86937c40b": "Khẩu trang giúp làm chậm quá trình lây lan vi rút!"
-        },
-        "courseC19_playLab_EOC12022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "courseC19_playLab_EOC22022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "courseC19_playLab_EOC32022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "courseC19_playLab_EOC42022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "courseC19_playLab_EOC52022": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseC19_playLab_EOC62022": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseC19_playLab_sample12022": {
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseC19_playLab_sample22022": {
-          "83db90f8846d091d3532256816f105d9": "Đây là Neila.",
-          "0192cdc04916ec27aa11738bb6e48d6e": "Neila đang cố gắng bảo vệ ngôi nhà của mình khỏi tụi robot vũ trụ.",
-          "df8312187449c70820d7c58229a6b17e": "Robot vũ trụ đang hù dọa những sinh vật khác.",
-          "c084e152431f9116b9fdb3f7d465f13d": "Neila muốn giúp robot vũ trụ học cách cư xử tử tế.",
-          "b2f02bf648ce32c4362afe1578d41f70": "Hiệu quả rồi! Neila đã cho robot vũ trụ thấy sức mạnh của lòng tốt.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "Các sinh vật khác không còn sợ hãi nữa!",
-          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
-          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
-        },
-        "courseC_PlayLab_eventsFP2022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
-          "30fcc1693fa8402931d13ac3a5f396fd": "gõ tiêu đề vào đây"
-        },
-        "courseC_data wizard2022": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Một con chó!",
-          "336ad881e37e713ba0325500a8fa1f00": " con chó!",
-          "27944770529dd15319a983bee8951560": "Một con mèo!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " con mèo!",
-          "1c64ef29c853587fbe94f69f05272b79": "Một con chim!",
-          "5b402e6ea05e847a076e03ad74420c45": " con chim!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Một con rồng!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " con rồng!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Hãy đếm tất cả các loài động vật!",
-          "f62038e77820419cd978f7b722da560a": "Có bao nhiêu con vật sẽ xuất hiện?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Đếm thú cưng"
-        },
-        "courseE_aboutme_32022": {
-          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
-        },
-        "courseE_aboutme_42022": {
-          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!"
-        },
-        "courseE_aboutme_52022": {
-          "ed076287532e86365e841e92bfc50d8c": "Xin chào thế giới!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Này!"
-        },
-        "courseF_apps_aquarium2022": {
-          "f655df68ec33643278de7e69794e8d76": "Bể cá ảo",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Bạn sẽ thêm gì vào bể cá?",
-          "83e4a96aed96436c621b9809e258b309": "cá",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "khác",
-          "0d3e73168beb875063ea0f0302fe32bd": "Loài cá nào?",
-          "caaf8264ca397dba2d35ef902bbbd953": "Sinh vật nào?",
-          "78574118d153534fd0925a2f5ca25e79": "Đồ vật nào?"
-        },
-        "courseF_apps_aquarium_-2022-2": {
-          "f655df68ec33643278de7e69794e8d76": "Bể cá ảo",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Bạn sẽ thêm gì vào bể cá?",
-          "83e4a96aed96436c621b9809e258b309": "cá",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "khác",
-          "0d3e73168beb875063ea0f0302fe32bd": "Loài cá nào?",
-          "caaf8264ca397dba2d35ef902bbbd953": "Sinh vật nào?",
-          "78574118d153534fd0925a2f5ca25e79": "Đồ vật nào?"
-        },
-        "courseF_apps_card2022": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?",
-          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_apps_card_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?",
-          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_apps_chatbot2022": {
-          "a72e7c5c68af0546e963e510297f5233": "Chào bạn, mình là X-9! Bạn tên là gì?",
-          "f0e5da70d264f312a1658d51c130b101": "Nhập tên của bạn:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Nhập tuổi của bạn:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " tuổi giống mình nè!",
-          "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
-          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!",
-          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!"
-        },
-        "courseF_apps_chatbot_-2022-2": {
-          "a72e7c5c68af0546e963e510297f5233": "Chào bạn, mình là X-9! Bạn tên là gì?",
-          "f0e5da70d264f312a1658d51c130b101": "Nhập tên của bạn:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Nhập tuổi của bạn:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " tuổi giống mình nè!",
-          "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
-          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!",
-          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!"
-        },
-        "courseF_apps_collector2022": {
-          "077449fb290b51b9d70c9f2f3d3213bc": " giây",
-          "490082498449bd20ff0199737dfa4916": "Chọn loại trò chơi:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Trò chơi nhà sưu tầm vĩ đại!"
-        },
-        "courseF_apps_collector_-2022-2": {
-          "077449fb290b51b9d70c9f2f3d3213bc": " giây",
-          "490082498449bd20ff0199737dfa4916": "Chọn loại trò chơi:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Trò chơi nhà sưu tầm vĩ đại!"
-        },
-        "courseF_apps_madlib2022": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng",
-          "bf08dd3d1961874f13e77c936aad27e5": "Một câu chuyện khoảng trống",
-          "514b8d5320196898a9ced3efe0d4c802": "Nhập một tính từ:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Nhập một đối tượng:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Nhập phần nội dung chính:",
-          "e522ee28f39133b45497637539ff429b": "Nhập một con số:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " trò chơi.",
-          "5306eed2fd2c43fe033efd6016c0c38b": " chân chạy đua nào!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_apps_madlib_-2022-2": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng",
-          "bf08dd3d1961874f13e77c936aad27e5": "Một câu chuyện khoảng trống",
-          "514b8d5320196898a9ced3efe0d4c802": "Nhập một tính từ:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Nhập một đối tượng:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Nhập phần nội dung chính:",
-          "e522ee28f39133b45497637539ff429b": "Nhập một con số:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " trò chơi.",
-          "5306eed2fd2c43fe033efd6016c0c38b": " chân chạy đua nào!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_editable_card_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?",
-          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_editable_chatbot_-2022-2": {
-          "a72e7c5c68af0546e963e510297f5233": "Chào bạn, mình là X-9! Bạn tên là gì?",
-          "f0e5da70d264f312a1658d51c130b101": "Nhập tên của bạn:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Nhập tuổi của bạn:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " tuổi giống mình nè!",
-          "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
-          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!",
-          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_editable_madlib_-2022-2": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng",
-          "bf08dd3d1961874f13e77c936aad27e5": "Một câu chuyện khoảng trống",
-          "514b8d5320196898a9ced3efe0d4c802": "Nhập một tính từ:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Nhập một đối tượng:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Nhập phần nội dung chính:",
-          "e522ee28f39133b45497637539ff429b": "Nhập một con số:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " trò chơi.",
-          "5306eed2fd2c43fe033efd6016c0c38b": " chân chạy đua nào!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_label_predict_-2022-2": {
-          "f15045cb7e57652546d4a0b2c695356f": "Bạn sẽ ăn gì?",
-          "937dc37c06cc5d89a7096eb048b73590": " sắp ra ngay đây!"
-        },
-        "courseF_text_answer_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_text_choice_color_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_text_choice_conversation_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_text_choice_events_-2022-2": {
-          "c529a06c3f8518b63ff6dfac482b335c": "Đặt tên cho hành tinh này:",
-          "44506356d48394cd903b579df9de9117": ", người trái đất!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_text_choice_freeplay_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_text_choice_interview_-2022-2": {
-          "34088af1fb721900963462375b3bbe23": "robot!",
-          "5bd698afd23bccde289bb0b4aa72a518": "Hãy đặt tên cho robot."
-        },
-        "courseF_text_choice_multiprompt_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?",
-          "d1210f945885351b13feb9bbb868aeef": "Người này sẽ bao nhiêu tuổi?"
-        },
-        "courseF_text_choice_title_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_text_concat_-2022-2": {
-          "f6429fe0f1a76611670df7e1234af936": "Tên bạn là gì?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_text_prompts_-2022-2": {
-          "f6429fe0f1a76611670df7e1234af936": "Tên bạn là gì?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_variables_card_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_variables_card_finish_-2022-2": {
-          "464a456e0747ec9b09fc9afc6fbd13ed": "bạn muốn quà gì vào ngày sinh nhật?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_variables_chatbot_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_variables_chatbot_finish_-2022-2": {
-          "46463b2e9f71f2f15b7238f56f09ba30": "Hết",
-          "c757766b0a7e2017c79e1c94f60e44f7": "Cảm ơn bạn đã trò chuyện!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_variables_madlib_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_variables_madlib_finish_-2022-2": {
-          "50d489a15105b987ec6d4410900c95dd": "Nhập một động từ:",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
-        },
-        "courseF_variables_predict_-2022-2": {
-          "f6429fe0f1a76611670df7e1234af936": "Tên bạn là gì?"
-        },
-        "coursee_helloworld_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "Xin chào thế giới!"
         }
       }
     }

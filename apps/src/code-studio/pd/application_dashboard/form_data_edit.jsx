@@ -5,6 +5,7 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+/* eslint-disable no-restricted-imports */
 import {
   FormGroup,
   ControlLabel,
@@ -14,6 +15,7 @@ import {
   Panel,
   Table,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import parseJson from 'json-parse-better-errors';
 import color from '@cdo/apps/util/color';
 

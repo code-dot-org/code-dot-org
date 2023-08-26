@@ -9,7 +9,12 @@
   "grade_levels": "2,3,4,5,6,7,8",
   "header": null,
   "image": "https://images.code.org/69acbeda01df34c1380817e338765cf9-Dance Party Unplugged.png",
-  "cs_topic": "data,programming",
+  "cs_topic": "programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"incompatible\",\"chromebook\":\"incompatible\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"ideal\"}"
+  "device_compatibility": "{\"computer\":\"incompatible\",\"chromebook\":\"incompatible\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"ideal\"}",
+  "description": "Get your groove on—offline! Learn how to jazz up your program with events. Events can control actions and even make multiple things act in sync.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": "2019-12-01 05:00:00 UTC",
+  "self_paced_pl_course_offering_id": null
 }

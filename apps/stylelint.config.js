@@ -1,7 +1,8 @@
 module.exports = {
-  ignoreFiles: ['./build/**/*.scss'],
+  ignoreFiles: ['./build/**/*.scss', './storybook-deploy/*'],
   extends: ['stylelint-config-standard', 'stylelint-config-standard-scss'],
   rules: {
+    'media-feature-range-notation': 'prefix',
     'no-descending-specificity': null,
     'rule-empty-line-before': null,
     'selector-class-pattern': null,
@@ -22,20 +23,20 @@ module.exports = {
     'selector-pseudo-class-no-unknown': [
       true,
       {
-        ignorePseudoClasses: ['export']
-      }
+        ignorePseudoClasses: ['export'],
+      },
     ],
     'property-no-unknown': [
       true,
       {
-        ignoreSelectors: [':export']
-      }
+        ignoreSelectors: [':export'],
+      },
     ],
     'property-case': [
       'lower',
       {
-        ignoreSelectors: [':export']
-      }
-    ]
-  }
+        ignoreSelectors: [':export'],
+      },
+    ],
+  },
 };

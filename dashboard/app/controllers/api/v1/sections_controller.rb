@@ -67,7 +67,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section]
       }
     )
-    render head :bad_request unless section
+    return head :bad_request unless section.persisted?
 
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
     current_user.assign_script @unit if @unit

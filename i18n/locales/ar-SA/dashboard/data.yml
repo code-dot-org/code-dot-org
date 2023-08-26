@@ -574,8 +574,28 @@ ar:
         codebreak_e10: 'Code Break 10.0: الذكاء الاصطناعي مع كات جراهام وكيت بارك'
         codebreak_e11: 'Code Break 11.0: التجريد مع سوزان وجسيكي وتشاينا آن ماكلين'
         codebreak_e12: 'Code Break 12.0: أجهزة مزودة بـ Aloe Blacc و Bret Taylor و Paula Mejia'
+        csf21pilot_events: 'سبرايت لاب: العفاريت في العمل'
+        csf21pilot_prompts: 'مختبر Sprite: النص والمطالبات'
+        csd_ml_intro_to_ai_lab: مقدمة لمختبر الذكاء الاصطناعي
+        csd_ml_import_model: استيراد نموذج AI
+        csf_lots_of_sprites: 'سبرايت لاب: الكثير من العفاريت'
         playlab_2021: مقدمة لمختبر اللعب
         playlab_2021_reader: مقدمة لمختبر اللعب
+        csp_defining_calling_functions: تحديد الوظائف واستدعائها
+        csp_tutorial_datatab: علامة تبويب البيانات في مختبر التطبيقات
+        csp_tutorial_libraries: المكتبات في مختبر التطبيقات
+        PL-Video-21: مرحبًا بكم في التعلم الاحترافي لـ Code.org!
+        csp_tutorial_datavis1: مصور البيانات في مختبر التطبيقات - الجزء 1
+        csp_tutorial_datavis2: مصور البيانات في مختبر التطبيقات - الجزء 2
+        csd_ml_intro_ai_lab_july2021: مقدمة لمختبر الذكاء الاصطناعي
+        csd_ml_training_testing_ai_lan: التدريب والاختبار في مختبر الذكاء الاصطناعي
+        csd_ml_model_cards_july2021: بطاقات نموذجية في مختبر الذكاء الاصطناعي
+        csd_ml_numerical_ai_lab: البيانات العددية في مختبر الذكاء الاصطناعي
+        Gettting_Started_Progress: التقدم والتعليقات والتقييم
+        Gettting_Started_ClassSection: إنشاء قسم الفصل
+        Gettting_Started_StudentExperience: تجربة الطالب
+        Getting_Started_BasicFeatures: الميزات الأساسية لموقع Code.org
+        PL_overview_CSD: ما هي اكتشافات علوم الكمبيوتر؟
         PL_CSD_TeacherTips_Advise: نصائح للمعلمين - نصيحة للمعلمين الجدد
         PL_CSD_TeacherTips_IntroToCSD: نصائح للمعلمين - مقدمة لاكتشافات علوم الكمبيوتر
         PL_CSD_TeacherTips_ProblemSolvingProcess: نصائح للمعلمين - عملية حل المشكلة
@@ -588,6 +608,7 @@ ar:
         hello_world_intro: مرحبًا أيها العالم - مرحبًا بكم في Sprite Lab
         hello_world_events: مرحبًا أيها العالم - البرمجة عبر الأحداث والفعاليات
         hello_world_congrats: مرحبًا أيها العالم - افعل ما تريد
+        csp_global_vs_local: تصحيح الأخطاء العالمية مقابل المتغيرات المحلية
         rough_poemart_intro: الإصدار 1 مقدمة فن القصيدة
         rough_poemart_events: الإصدار 1 أحداث فن القصيدة
         rough_poemart_imagery: الإصدار 1 مجاز فن القصيدة
@@ -601,14 +622,131 @@ ar:
         poemart_events: ' أحداث فن القصيدة'
         poemart_imagery: ' مجاز فن القصيدة'
         poemart_celebration: ' 1 تهاني فن القصيدة'
+        csd_u6_variables_part2: المتغيرات - نمط العداد
+        csd_ml_ethics_ai: 'الأخلاق والذكاء الاصطناعي '
+        outbreak_intro: 'محاكاة التفشي: مقدمة'
+        outbreak_events: 'محاكي التفشي: الأحداث'
+        outbreak_scientist: 'محاكي التفشي: التفكير كعالم'
+        outbreak_outro: 'محاكي التفشي: اللعب المجاني'
+        PL_overview_CSP: ما هي مبادئ علوم الكمبيوتر؟
+        PL_CSP_EIPMOverview: دليل لدروس EIPM
         CSA-PL-debugging-temp: مقدمة عن إصلاح الأخطاء في Java Lab - مؤقت
+        csd_app_lab_design_mode: وضع تصميم مختبر تطبيق CSD
+        csd_app_lab_events: أحداث مختبر تطبيقات CSD
+        PL_CSD_Unit4_AppTesting: اختبار النموذج الأولي للورق
         csd_u6_circuit_playground: الحوسبة المادية
         csd_u6_input_output: الإدخال والإخراج
+        CSA-PL-for-loops: للحلقات في Java
+        CSA-PL-variables: إنشاء متغيرات في Java
         PL_CS_Journeys_Overview: رحلات علوم الكمبيوتر
+        CSA-PL-intro-to-java-lab: أساسيات جافا لاب
+        CSA-PL-first-program: كتابة برنامج في Java
+        CSD_u6_variables_part1: 'CSD: المتغيرات'
+        csd_u6_if_statements: 'CSD: بيانات تكنولوجيا المعلومات'
+        csc-poem-art-intro: فيديو مقدمة
+        csc-poem-art-outro: فيديو آخر
+        csd_u6_call_define_functions: 'CSD: الاتصال وتحديد الوظائف'
         csp_applab_parameters: الدوال والمعاملات
+        starquilts_intro_artist: مقدمة إلى ستار كويلتس
         CSA-PL-intro-to-arrays: مصفوفات أحادية البعد (1D)
+        CSA-PL-1d-arrays-new-values: إدخال القيم في صفائف 1D
+        CSA-PL-conditionals: عبارات شرطية في Java
+        CSA-PL-two-way-selection: اختيار ثنائي الاتجاه
+        CSA-PL-Printing-in-Java: الطباعة في جافا
+        CSA-PL-multi-selection-statements: بيانات الاختيار المتعدد
+        PL_CSP_TeacherTips_Advice: 'نصائح للمعلمين: نصيحة لمعلمي علوم الكمبيوتر الجدد'
+        PL_CSP_TeacherTips_IntroToCSP: 'نصائح المعلم: مقدمة لمبادئ علوم الكمبيوتر'
+        PL_CSP_TeacherTips_Debugging: 'نصائح المعلم: المساعدة في تصحيح الأخطاء'
+        PL_CSP_TeacherTips_LeadLearner: 'نصائح للمعلم: كيف تكون متعلمًا رائدًا'
+        PL_CSP_TeacherTips_APExam: 'نصائح المعلم: التحضير لامتحان AP'
+        PL_CSP_TeacherTips_EIPM: 'نصائح المعلم: عملية EIPM'
+        PL_CSD_CircuitPlayground_Overview: نظرة عامة على ملعب الدائرة
+        CSA-PL-debugging-22: تصحيح الأخطاء في مختبر جافا
+        CSD_Unit6_InteractiveArtExemplar: نموذج فني تفاعلي
         CS_Changing_Everything: علم الحاسوب غيّر كل شيء
+        csa-alias-video: المساواة والأسماء المستعارة
+        csa-equals-video: طريقة equals ()
+        csa-user-stories: قصص المستخدم في هندسة البرمجيات
+        csa-pl-vpl-m1-unit-3: هندسة البرمجيات في الوحدة 3
+        csa-pl-intro-to-equality: مقدمة للمساواة
+        csa-pl-intro-to-equals-method: مقدمة لطريقة .equals ()
+        csa-pl-equals-book: كتابة طريقة equals () لفئة الكتاب
+        csa-multi-select-pl: عبارات متعددة التحديد في Java
+        csc_timecapsule_intro: مقدمة كبسولة الوقت
+        PL_Equity_in_CS_Education: الإنصاف في تعليم علوم الكمبيوتر
+        csc_fm_pilot: آلات الوظائف (التجريبية)
+        csc_fm_pilot_v2: 'مقدمة آلات الوظائف '
+        csc-sprite-lab-pixel-editor: ارسم العفريت الخاص بك
+        csa-pl-intro-to-strings: مقدمة إلى السلاسل في Java
+        csa-pl-compareTo: طريقة المقارنة بـ ()
+        csc-event-short-intro: مقدمة قصيرة للأحداث
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: نظرة عامة على وحدة ملعب الدائرة
+        csa-day-in-pm-pl: ماذا يفعل مدير المشروع؟
+        csa-pl-intro-to-pm: مقدمة لإدارة المشاريع
+        PL_CSD_CircuitPlayground_Setup: إعداد ملعب الدائرة
+        csa_object_oriented_programming: 'CSA: البرمجة الشيئية'
+        csa_creating_objects: 'CSA: إنشاء كائنات'
+        csa_calling_methods: 'CSA: طرق الاتصال'
+        csa_while_loops: 'CSA: حلقات طويلة'
+        csa_inheritance: 'CSA: الميراث'
+        csa_writing_a_method: 'CSA: كتابة طريقة'
+        csa_software_engineering_code_reviews: 'CSA: هندسة البرمجيات - مراجعات الكود'
+        csa_conditional_statements: 'CSA: البيانات الشرطية'
+        csa_printing_in_java: 'CSA: الطباعة في جافا'
+        csa_two_way_selection_and_not: 'CSA: الاختيار ثنائي الاتجاه وليس'
+        csa-pl-intro-to-oop: مقدمة إلى البرمجة الشيئية
+        csa-pl-welcome-to-Neighborhood: مرحبًا بكم في الجوار
+        csa-pl-calling-methods: طرق الاتصال في Java
+        csa-pl-creating-objects: إنشاء كائنات
+        csa_accessor_methods: 'CSA: طرق الملحقات'
+        csa_constructors: 'CSA: المنشئون'
+        csa_creating_a_scanner_object: 'CSA: إنشاء كائن ماسح ضوئي'
+        csa_creating_variables: 'CSA: إنشاء المتغيرات'
+        csa_instance_variables_and_attributes: 'CSA: متغيرات الحالة والسمات'
+        csa_mutator_methods: 'CSA: طرق الطفرة'
+        csa_overloaded_constructors: 'CSA: المنشئات المحملة بشكل زائد'
+        csa_the_tostring_method: 'CSA: طريقة toString ()'
+        csa_scanner_class_methods: 'CSA: طرق فئة الماسح الضوئي'
+        csa_for_loops: 'CSA: للحلقات'
+        csa_enhanced_for_loops: 'CSA: مُحسَّن للحلقات'
+        csa_modifying_values_in_a_1d_array: 'CSA: تعديل القيم في مصفوفة 1D'
+        csa_nested_loops: 'CSA: الحلقات المتداخلة'
+        csa_one_dimensional_arrays: 'CSA: مصفوفات أحادية البعد (1D)'
+        csa_polymorphism: 'CSA: تعدد الأشكال'
+        csa_casting: 'CSA: الصب'
+        csa_equals_and_aliases: 'CSA: المساواة والأسماء المستعارة'
+        csa_multi-selection_statements: 'CSA: بيانات الاختيار المتعدد'
+        csa_random_numbers: 'CSA: أرقام عشوائية'
+        csa_static_methods: 'CSA: الطرق الثابتة'
+        csa_static_variables: 'CSA: المتغيرات الثابتة'
+        csa_the_equals_method: 'CSA: طريقة equals ()'
+        csa_welcome_to_the_theater: 'CSA: مرحبًا بكم في المسرح'
+        enter_your_own_poem: أدخل قصيدتك الخاصة
+        csa-example-solution-1: 'الترميز المباشر: مثال للحل '
         csd_sprite_properties: خصائص الكائنات
+        csa-pl-documentation: التوثيق في مختبر جافا
+        csc-starquilts-intro: 'CSC: ستار كويلتس'
+        csa-pl-vocab-pm: مفردات إدارة المشاريع
+        csc-ecosystems-intro: مقدمة النظم البيئية
+        PL_CSD_MicroBit_Intro: مقدمة إلى المايكروبيت
+        csc_animal_adaptations_intro: مقدمة التكيفات الحيوانية
+        csa_two_dimensional_arrays: 'CSA: المصفوفات ثنائية الأبعاد (2D)'
+        csa_working_with_2d_array_elements: 'CSA: العمل مع عناصر المصفوفة ثنائية الأبعاد'
+        csa_row_major_traversal: 'CSA: اجتياز الصف الرئيسي'
+        csa_column_major_traversal: 'CSA: اجتياز العمود الرئيسي'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: مُحسَّن للحلقات والمصفوفات ثنائية الأبعاد'
+        csa_images_and_pixels: 'CSA: الصور والبكسل'
+        csa_wrapper_classes_part_1: 'CSA: فصول التغليف الجزء 1'
+        csa_wrapper_classes_part_2: 'CSA: فصول التغليف الجزء 2'
+        csa_the_arraylist_class: 'CSA: فئة ArrayList'
+        csa_working_with_arraylist_data: 'CSA: العمل مع بيانات ArrayList'
+        csa_remving_data_from_an_arraylist: 'CSA: إزالة البيانات من ArrayList'
+        csa_private_methods: 'CSA: الأساليب الخاصة'
+        csa_recursion: 'CSA: التكرار'
+        csa_searching_algorithms: 'CSA: خوارزميات البحث'
+        csa_sorting_algorithms: 'CSA: خوارزميات الفرز'
+        star_quilts_intro_to_artist: 'ستار كويلتس: مقدمة للفنان'
+        upload_sprites_backgrounds: تحميل العفاريت والخلفيات المخصصة
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر

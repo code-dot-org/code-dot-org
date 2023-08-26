@@ -5,6 +5,9 @@
         "csd-2022/accelerometer-events": {
           "display_name": "Esdeveniments d'acceleròmetre"
         },
+        "csd-2022/ai-lab": {
+          "display_name": "Laboratori d'AI"
+        },
         "csd-2022/app-lab": {
           "display_name": "Laboratori d'aplicacions"
         },
@@ -13,6 +16,9 @@
         },
         "csd-2022/board-events": {
           "display_name": "Esdeveniments amb placa"
+        },
+        "csd-2022/circuit-playground": {
+          "display_name": "Visió general del circuit de jocs"
         },
         "csd-2022/css-overview": {
           "display_name": "Resum"
@@ -35,6 +41,9 @@
         "csd-2022/html-overview": {
           "display_name": "Resum"
         },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Introducció a AI Lab"
+        },
         "csd-2022/javascript": {
           "display_name": "JavaScript"
         },
@@ -50,6 +59,9 @@
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Resum"
         },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Targetes de model en AI Lab"
+        },
         "csd-2022/other": {
           "display_name": "Altres"
         },
@@ -62,6 +74,12 @@
         "csd-2022/playing-notes": {
           "display_name": "Reproduir notes"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "El procés de resolució de problemes"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "El procés de resolució de problemes"
+        },
         "csd-2022/sprite-properties": {
           "display_name": "Propietats de l'sprite"
         },
@@ -71,6 +89,9 @@
         "csd-2022/variables": {
           "display_name": "Variables"
         },
+        "csd-2022/velocity": {
+          "display_name": "Velocitat"
+        },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "La velocitat i el patró de comptador"
         },
@@ -78,7 +99,7 @@
           "display_name": "Laboratori Web"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+          "content": "[][0]"
         }
       }
     }

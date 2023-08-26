@@ -6,12 +6,14 @@
     "properties": {
       "curriculum_umbrella": "CSP",
       "hideable_lessons": true,
-      "is_migrated": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "2023"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2023-04-28 20:46:33 UTC",
-    "published_state": "in_development",
+    "family_name": "bingo",
+    "serialized_at": "2023-06-20 18:47:22 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -180,6 +182,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP_Bingo 2023_Unit 1"
+        ],
         "progression": "Unit One - Digital Information"
       },
       "bonus": false,
@@ -202,6 +207,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP_Bingo 2023_Unit 2"
+        ],
         "progression": "Unit Two - The Internet"
       },
       "bonus": false,
@@ -224,6 +232,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP_Bingo 2023_Unit 3"
+        ],
         "progression": "Unit Three - Intro to App Design"
       },
       "bonus": false,
@@ -246,6 +257,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP_Bingo 2023_Unit 4"
+        ],
         "progression": "Unit Four - Variables, Conditionals, and Functions"
       },
       "bonus": false,
@@ -268,6 +282,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP_Bingo 2023_Unit 5"
+        ],
         "progression": "Unit Five - Data"
       },
       "bonus": false,
@@ -290,6 +307,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP_Bingo 2023_Unit 6"
+        ],
         "progression": "Unit Six - Lists, Loops, Traversals"
       },
       "bonus": false,
@@ -312,6 +332,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP_Bingo 2023_Unit 7"
+        ],
         "progression": "Unit Seven- Parameters, Return, Libraries"
       },
       "bonus": false,
@@ -334,6 +357,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP_Bingo 2023_Unit 8"
+        ],
         "progression": "Unit Eight - Cybersecurity"
       },
       "bonus": false,
@@ -356,6 +382,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP_Bingo 2023_Unit 10"
+        ],
         "progression": "Unit Ten - Algorithms"
       },
       "bonus": false,

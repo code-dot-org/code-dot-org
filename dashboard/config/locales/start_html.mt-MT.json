@@ -15,12 +15,12 @@
           "green": "aħdar"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "red": "aħmar",
-          "green": "aħdar"
+          "green": "aħdar",
+          "red": "aħmar"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "aħdar",
-          "blue": "Ikħal"
+          "blue": "Ikħal",
+          "green": "aħdar"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",

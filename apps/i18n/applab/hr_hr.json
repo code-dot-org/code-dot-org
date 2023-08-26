@@ -7,6 +7,14 @@
   "catProcedures": "Funkcije",
   "catText": "tekst",
   "catVariables": "Varijable",
+  "designElementEvent_input": "Ulaz",
+  "designElementProperty_image": "slika",
+  "designElementProperty_index": "indeks",
+  "designElementProperty_text": "tekst",
+  "designElementProperty_textAlignment_left": "lijevo",
+  "designElementProperty_textAlignment_right": "desno",
+  "designElementProperty_zOrder": "dubina",
+  "designElementTheme_default": "Zadano",
   "designWorkspaceHeader": "Radna površina: ",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param3": "širina",
@@ -20,7 +28,7 @@
   "nextLevel": "Čestitamo! Ovaj zadatak je riješen.",
   "no": "Ne",
   "numBlocksNeeded": "Ovaj zadatak se može riješiti s %1 blokova.",
-  "repeatForever": "ponavljaj zauvijek",
   "repeatDo": "napravi",
+  "repeatForever": "ponavljaj zauvijek",
   "yes": "Da"
 }

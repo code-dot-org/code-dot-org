@@ -38,107 +38,68 @@ sublevels.forEach((sub, index) => {
 const levelWithSublevels = fakeLevels(1)[0];
 levelWithSublevels.sublevels = sublevels;
 
-/**
- * This wrapper places the component in the same table structure that will be
- * rendered by the component's parents, to ensure that the same layout styles
- * are applied.
- */
-function wrapped(component) {
-  return (
-    <div className="progress-table">
-      <div className="content-view">
-        <table className="detail-view">
-          <tbody>
-            <tr>
-              <td>{component}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-}
+export default {
+  title: 'ProgressTableDetailCell',
+  component: ProgressTableDetailCell,
+};
 
-export default storybook => {
-  storybook
-    .storiesOf('SectionProgress/ProgressTableDetailCell', module)
-    .addStoryTable([
-      {
-        name: 'level with sublevels',
-        description: 'Should show small dots for sublevels',
-        story: () =>
-          wrapped(
-            <ProgressTableDetailCell
-              studentId={1}
-              sectionId={1}
-              levels={[levelWithSublevels]}
-              studentProgress={studentProgress}
-            />
-          ),
-      },
-      {
-        name: 'basic bubbles',
-        story: () =>
-          wrapped(
-            <ProgressTableDetailCell
-              studentId={1}
-              sectionId={1}
-              levels={levels}
-              studentProgress={studentProgress}
-            />
-          ),
-      },
-      {
-        name: 'diamond bubbles only',
-        description: 'diamonds should be aligned',
-        story: () =>
-          wrapped(
-            <ProgressTableDetailCell
-              studentId={1}
-              sectionId={1}
-              levels={diamondLevels}
-              studentProgress={studentProgress}
-            />
-          ),
-      },
-      {
-        name: 'includes a paired level',
-        description: 'Should show the pair programming icon',
-        story: () =>
-          wrapped(
-            <ProgressTableDetailCell
-              studentId={1}
-              sectionId={1}
-              levels={levels}
-              studentProgress={pairedProgress}
-            />
-          ),
-      },
-      {
-        name: 'first level is unplugged',
-        description: 'Should get a pill for unplugged',
-        story: () =>
-          wrapped(
-            <ProgressTableDetailCell
-              studentId={1}
-              sectionId={1}
-              levels={[unpluggedLevel, ...levels]}
-              studentProgress={studentProgress}
-            />
-          ),
-      },
-      {
-        name: 'only level is unplugged',
-        description: 'Should get a pill for unplugged',
-        story: () =>
-          wrapped(
-            <ProgressTableDetailCell
-              studentId={1}
-              sectionId={1}
-              levels={[unpluggedLevel]}
-              studentProgress={studentProgress}
-            />
-          ),
-      },
-    ]);
+const DEFAULT_PROPS = {
+  studentId: 1,
+  sectionId: 1,
+};
+
+/**
+ * This places the component in the same table structure that will be rendered
+ * by the component's parents, to ensure that the same layout styles are applied.
+ */
+const Template = args => (
+  <div className="progress-table">
+    <div className="content-view">
+      <table className="detail-view">
+        <tbody>
+          <tr>
+            <td>
+              <ProgressTableDetailCell {...DEFAULT_PROPS} {...args} />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+);
+
+export const LevelWithSublevels = Template.bind({});
+LevelWithSublevels.args = {
+  levels: [levelWithSublevels],
+  studentProgress: studentProgress,
+};
+
+export const BasicBubbles = Template.bind({});
+BasicBubbles.args = {
+  levels: levels,
+  studentProgress: studentProgress,
+};
+
+export const DiamondBubbles = Template.bind({});
+DiamondBubbles.args = {
+  levels: diamondLevels,
+  studentProgress: studentProgress,
+};
+
+export const IncludesPairedLevel = Template.bind({});
+IncludesPairedLevel.args = {
+  levels: levels,
+  studentProgress: pairedProgress,
+};
+
+export const FirstLevelUnplugged = Template.bind({});
+FirstLevelUnplugged.args = {
+  levels: [unpluggedLevel, ...levels],
+  studentProgress: studentProgress,
+};
+
+export const OnlyLevelUnplugged = Template.bind({});
+OnlyLevelUnplugged.args = {
+  levels: [unpluggedLevel],
+  studentProgress: studentProgress,
 };

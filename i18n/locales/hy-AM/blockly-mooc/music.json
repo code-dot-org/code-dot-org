@@ -8,5 +8,8 @@
   "blockly_toolboxCategoryMath": "Մաթեմատիկա",
   "blockly_toolboxCategoryVariables": "փոփոխականների",
   "share": "Տարածել",
-  "startOver": "Վերսկսել"
+  "startOver": "Վերսկսել",
+  "panelHeaderInstructions": "Հրահանգներ",
+  "panelHeaderWorkspace": "խաղային տարածք",
+  "continue": "Շարունակել"
 }

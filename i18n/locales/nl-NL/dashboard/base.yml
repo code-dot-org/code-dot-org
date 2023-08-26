@@ -59,6 +59,7 @@ nl:
         reset_password_token: "De link die u heeft gevolgd om uw wachtwoord te herstellen"
         error:
           future: kan niet in de toekomst
+        us_state: 'Provincie'
   beta: "beta"
   hello: "Hallo wereld"
   welcome_back: "Welkom terug, %{name}"
@@ -186,6 +187,7 @@ nl:
     parent_account_checkbox: "Ik ben een ouder/voogd die zich aanmeld namens mijn kind."
     parent_account_email_progress_permission: "Kunnen wij u af en toe e-mailen over de voortgang van uw kind en de projecten, en u op de hoogte houden van hun cursus en informatica?  [(Zie ons privacybeleid)](%{privacy_policy_url})"
     parent_account_email_label: "E-mail ouder/voog"
+    us_state: 'Provincie'
   school_info:
     title: 'Schoolinformatie (optioneel)'
     school_country: 'Land van de school'
@@ -933,6 +935,7 @@ nl:
         other: "Anders"
       workshop_course:
         csp: 'CW Principes'
+        other: 'Anders'
       email_opt_in:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nee'
@@ -960,3 +963,4 @@ nl:
   teacher_feedback: "Docenten feedback"
   pixelation:
     binary: "Binaire"
+

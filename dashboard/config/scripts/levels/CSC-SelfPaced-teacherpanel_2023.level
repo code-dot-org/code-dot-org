@@ -1,5 +1,10 @@
 <Poetry>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 69,
+  "created_at": "2023-04-14T18:45:00.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -18,7 +23,7 @@
     "embed": "false",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"There is no wrong answer. Find something that looks right to you!\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f9c19485bc901d0977214e2e69e6abf0/csc_timecapsule_background_2023.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Click the `Finish`(#FFBD46) button when you are done. \",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fe505c2e0ba9be6ce0df293173029a8d/csc_timecapsule_background_2023.mp3\"}]",
     "instructions_important": "false",
-    "long_instructions": "**Use the teacher panel**\r\n\r\nTry it!  Click on the \"<\" symbol on the right hand side.\r\n\r\nUse the hints to help you finish this level and use blocks to set a mood and imagery for the poem.\r\n",
+    "long_instructions": "**Use the teacher panel**\r\n\r\nTry it!  Click on the \"<\" symbol on the right hand side.\r\n\r\n- Click on the light bulb to use hints to finish this level and use blocks to set a mood and imagery for the poem.\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "validation_enabled": "false",
@@ -40,12 +45,7 @@
     "validation_code": "var validationInfo = getValidationInfo();\r\nvar isFontSet = validationInfo.font.font != 'Arial';\r\nvar isColorSet = validationInfo.font.fill != 'black';\r\nvar hasTextEffect = validationInfo.textEffects.length > 0;\r\nvar hasBackgroundEffect = validationInfo.backgroundEffect;\r\n\r\nconsole.log(validationInfo);\r\n\r\nif (World.frameCount == 1) {\r\n\taddCriteria(function() {\r\n    \treturn isColorSet;\r\n    }, \"noTextEffect\");\r\n\r\n  \taddCriteria(function() {\r\n    \treturn hasBackgroundEffect;\r\n    }, \"noBackground\");\r\n}\r\n\r\ncheck();",
     "preload_asset_list": null
   },
-  "game_id": 69,
-  "published": true,
-  "created_at": "2023-04-14T18:45:00.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2023-04-14T18:45:00.552+00:00\",\"changed\":[\"cloned from \\\"csc_timecapsule_background_2023\\\"\"],\"cloned_from\":\"csc_timecapsule_background_2023\"},{\"changed_at\":\"2023-04-14 18:45:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-14 18:47:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-14 18:49:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-14 18:50:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-14 19:09:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-19 19:03:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\",\"available_poems\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-19 19:05:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-04-14T18:45:00.552+00:00\",\"changed\":[\"cloned from \\\"csc_timecapsule_background_2023\\\"\"],\"cloned_from\":\"csc_timecapsule_background_2023\"},{\"changed_at\":\"2023-04-14 18:45:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-14 18:47:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-14 18:49:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-14 18:50:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-14 19:09:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-19 19:03:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\",\"available_poems\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-19 19:05:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-05-18 22:03:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\",\"available_poems\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

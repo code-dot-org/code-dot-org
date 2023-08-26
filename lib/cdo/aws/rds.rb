@@ -141,8 +141,8 @@ module Cdo
       end
 
       unless cluster_state == 'deleted'
-        raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for cluster" \
-        " #{db_cluster_id} deletion to complete.  Current cluster status - #{cluster_state}"
+        raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for cluster " \
+        "#{db_cluster_id} deletion to complete.  Current cluster status - #{cluster_state}"
         )
       end
     end

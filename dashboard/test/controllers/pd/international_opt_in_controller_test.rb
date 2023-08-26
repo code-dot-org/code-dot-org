@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Pd::InternationalOptInControllerTest < ::ActionController::TestCase
+class Pd::InternationalOptInControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   test 'signed in teacher' do

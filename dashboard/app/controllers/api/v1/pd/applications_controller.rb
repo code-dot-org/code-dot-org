@@ -131,8 +131,8 @@ module Api::V1::Pd
         application_data[interview_field] = application_data[interview_field].strip_utf8mb4 if application_data[interview_field]
       end
 
-      if current_user.workshop_admin?
-        @application.form_data_hash = application_admin_params[:form_data] if application_admin_params.key?(:form_data)
+      if current_user.workshop_admin? && application_admin_params.key?(:form_data)
+        @application.form_data_hash = application_admin_params[:form_data]
       end
 
       unless @application.update(application_data)

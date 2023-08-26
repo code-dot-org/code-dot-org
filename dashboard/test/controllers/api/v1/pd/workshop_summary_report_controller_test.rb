@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestCase
   freeze_time
 
   EXPECTED_COMMON_FIELDS = %w(
@@ -150,7 +150,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
   end
 
   test 'filter by schedule' do
-    start_date = Date.today - 6.months
+    start_date = Time.zone.today - 6.months
     end_date = start_date + 1.month
 
     workshop_in_range = create :workshop, :ended, sessions_from: start_date + 2.weeks
@@ -169,7 +169,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
   end
 
   test 'filter by end date' do
-    start_date = Date.today - 6.months
+    start_date = Time.zone.today - 6.months
     end_date = start_date + 1.month
 
     workshop_in_range = create :workshop, :ended, ended_at: start_date + 2.weeks

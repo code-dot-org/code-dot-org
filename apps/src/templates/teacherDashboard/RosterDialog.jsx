@@ -151,7 +151,6 @@ class RosterDialog extends React.Component {
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
     rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
-    userId: PropTypes.number,
   };
 
   state = {selectedId: null};
@@ -241,8 +240,6 @@ class RosterDialog extends React.Component {
         break;
     }
 
-    const testingUserId = -1;
-
     return (
       <BaseDialog
         useUpdatedStyles
@@ -278,36 +275,19 @@ class RosterDialog extends React.Component {
           >
             {locale.dialogCancel()}
           </button>
-          {this.props.userId % 10 === testingUserId && (
-            <button
-              id="import-button"
-              type="button"
-              onClick={this.handleRedirect}
-              style={Object.assign(
-                {},
-                styles.buttonPrimary,
-                !this.state.selectedId && {opacity: 0.5}
-              )}
-              disabled={!this.state.selectedId}
-            >
-              {locale.chooseSection()}
-            </button>
-          )}
-          {this.props.userId % 10 !== testingUserId && (
-            <button
-              id="import-button"
-              type="button"
-              onClick={this.importClassroom}
-              style={Object.assign(
-                {},
-                styles.buttonPrimary,
-                !this.state.selectedId && {opacity: 0.5}
-              )}
-              disabled={!this.state.selectedId}
-            >
-              {locale.chooseSection()}
-            </button>
-          )}
+          <button
+            id="import-button-and-redirect"
+            type="button"
+            onClick={this.handleRedirect}
+            style={Object.assign(
+              {},
+              styles.buttonPrimary,
+              !this.state.selectedId && {opacity: 0.5}
+            )}
+            disabled={!this.state.selectedId}
+          >
+            {locale.chooseSection()}
+          </button>
         </div>
       </BaseDialog>
     );

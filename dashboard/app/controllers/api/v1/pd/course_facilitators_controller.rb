@@ -8,7 +8,7 @@ class Api::V1::Pd::CourseFacilitatorsController < ApplicationController
         Pd::CourseFacilitator.facilitators_for_course(params.require(:course))
       else
         Pd::CourseFacilitator.all.map(&:facilitator)
-      end
+      end.uniq.sort_by(&:name)
 
     render json: facilitators, each_serializer: Api::V1::Pd::CourseFacilitatorSerializer
   end

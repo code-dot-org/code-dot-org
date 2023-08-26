@@ -2,46 +2,104 @@
   "mi-NZ": {
     "data": {
       "vocabularies": {
-        "function/hero/unversioned": {
-          "word": "Taumahi"
+        "input/csd/2021": {
+          "word": "Tāuru"
         },
-        "code/poem-art/2021": {
-          "word": "Waehere"
+        "copyright/csd/2021": {
+          "word": "Manatārua"
         },
-        "code/artist/unversioned": {
-          "word": "Waehere"
+        "variable/csd/2021": {
+          "word": "Taurangi"
         },
-        "conditionals/aquatic/unversioned": {
+        "conditionals/csd/2021": {
           "word": "Ngā Here"
         },
-        "loops/aquatic/unversioned": {
-          "word": "Ngā Koromeke"
+        "abstraction/csd/2021": {
+          "word": "Te Whakawaitara"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "function/csd/2021": {
+          "word": "Taumahi"
         },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "drop/coursea/2021": {
+          "word": "Taka Iho"
         },
-        "code/sports/unversioned": {
-          "word": "Waehere"
+        "drop/courseb/2021": {
+          "word": "Taka Iho"
+        },
+        "binary/coursec/2021": {
+          "word": "Tāhūrua"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Ngā Here"
+        },
+        "copyright/coursee/2021": {
+          "word": "Manatārua"
+        },
+        "function/coursee/2021": {
+          "word": "Taumahi"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Ngā Here"
+        },
+        "define/coursee/2021": {
+          "word": "Whakamahukitia"
+        },
+        "variable/coursef/2021": {
+          "word": "Taurangi"
+        },
+        "input/coursef/2021": {
+          "word": "Tāuru"
+        },
+        "internet/coursef/2021": {
+          "word": "Te Ipurangi"
+        },
+        "define/coursef/2021": {
+          "word": "Whakamahukitia"
+        },
+        "conditionals/express/2021": {
+          "word": "Ngā Here"
+        },
+        "function/express/2021": {
+          "word": "Taumahi"
+        },
+        "variable/express/2021": {
+          "word": "Taurangi"
+        },
+        "define/express/2021": {
+          "word": "Whakamahukitia"
+        },
+        "drop/pre-express/2021": {
+          "word": "Taka Iho"
+        },
+        "input/csd/2022": {
+          "word": "Tāuru"
+        },
+        "copyright/csd/2022": {
+          "word": "Manatārua"
+        },
+        "variable/csd/2022": {
+          "word": "Taurangi"
+        },
+        "conditionals/csd/2022": {
+          "word": "Ngā Here"
+        },
+        "abstraction/csd/2022": {
+          "word": "Te Whakawaitara"
+        },
+        "function/csd/2022": {
+          "word": "Taumahi"
+        },
+        "drop/coursea/2022": {
+          "word": "Taka Iho"
+        },
+        "drop/courseb/2022": {
+          "word": "Taka Iho"
+        },
+        "binary/coursec/2022": {
+          "word": "Tāhūrua"
         },
         "conditionals/coursed/2022": {
           "word": "Ngā Here"
-        },
-        "variable/coursef/2022": {
-          "word": "Taurangi"
-        },
-        "input/coursef/2022": {
-          "word": "Tāuru"
-        },
-        "internet/coursef/2022": {
-          "word": "Te Ipurangi"
-        },
-        "define/coursef/2022": {
-          "word": "Whakamahukitia"
         },
         "function/coursee/2022": {
           "word": "Taumahi"
@@ -55,8 +113,17 @@
         "define/coursee/2022": {
           "word": "Whakamahukitia"
         },
-        "drop/courseb/2022": {
-          "word": "Taka Iho"
+        "variable/coursef/2022": {
+          "word": "Taurangi"
+        },
+        "input/coursef/2022": {
+          "word": "Tāuru"
+        },
+        "internet/coursef/2022": {
+          "word": "Te Ipurangi"
+        },
+        "define/coursef/2022": {
+          "word": "Whakamahukitia"
         },
         "conditionals/express/2022": {
           "word": "Ngā Here"
@@ -73,29 +140,31 @@
         "drop/pre-express/2022": {
           "word": "Taka Iho"
         },
-        "drop/coursea/2022": {
-          "word": "Taka Iho"
-        },
-        "binary/coursec/2022": {
-          "word": "Tāhūrua"
-        },
-        "input/csd/2022": {
-          "word": "Tāuru"
-        },
-        "variable/csd/2022": {
-          "word": "Taurangi"
-        },
-        "conditionals/csd/2022": {
+        "conditionals/aquatic/unversioned": {
           "word": "Ngā Here"
         },
-        "abstraction/csd/2022": {
-          "word": "Te Whakawaitara"
+        "loops/aquatic/unversioned": {
+          "word": "Ngā Koromeke"
         },
-        "function/csd/2022": {
+        "code/artist/unversioned": {
+          "word": "Waehere"
+        },
+        "function/hero/unversioned": {
           "word": "Taumahi"
         },
-        "copyright/csd/2022": {
-          "word": "Manatārua"
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/poem-art/2021": {
+          "word": "Waehere"
+        },
+        "code/sports/unversioned": {
+          "word": "Waehere"
         },
         "code/poem-art/unversioned": {
           "word": "Waehere",
@@ -116,75 +185,6 @@
         "line/poem-art/unversioned": {
           "word": "",
           "definition": ""
-        },
-        "variable/coursef/2021": {
-          "word": "Taurangi"
-        },
-        "input/coursef/2021": {
-          "word": "Tāuru"
-        },
-        "internet/coursef/2021": {
-          "word": "Te Ipurangi"
-        },
-        "define/coursef/2021": {
-          "word": "Whakamahukitia"
-        },
-        "drop/courseb/2021": {
-          "word": "Taka Iho"
-        },
-        "drop/coursea/2021": {
-          "word": "Taka Iho"
-        },
-        "binary/coursec/2021": {
-          "word": "Tāhūrua"
-        },
-        "conditionals/coursed/2021": {
-          "word": "Ngā Here"
-        },
-        "conditionals/express/2021": {
-          "word": "Ngā Here"
-        },
-        "function/express/2021": {
-          "word": "Taumahi"
-        },
-        "variable/express/2021": {
-          "word": "Taurangi"
-        },
-        "define/express/2021": {
-          "word": "Whakamahukitia"
-        },
-        "drop/pre-express/2021": {
-          "word": "Taka Iho"
-        },
-        "copyright/coursee/2021": {
-          "word": "Manatārua"
-        },
-        "function/coursee/2021": {
-          "word": "Taumahi"
-        },
-        "conditionals/coursee/2021": {
-          "word": "Ngā Here"
-        },
-        "define/coursee/2021": {
-          "word": "Whakamahukitia"
-        },
-        "variable/csd/2021": {
-          "word": "Taurangi"
-        },
-        "conditionals/csd/2021": {
-          "word": "Ngā Here"
-        },
-        "abstraction/csd/2021": {
-          "word": "Te Whakawaitara"
-        },
-        "function/csd/2021": {
-          "word": "Taumahi"
-        },
-        "input/csd/2021": {
-          "word": "Tāuru"
-        },
-        "copyright/csd/2021": {
-          "word": "Manatārua"
         }
       }
     }

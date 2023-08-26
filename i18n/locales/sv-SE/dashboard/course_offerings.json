@@ -1,10 +1,4 @@
 {
-  "coursea": "Kurs A",
-  "courseb": "Kurs B",
-  "coursec": "Kurs C",
-  "coursed": "Kurs D",
-  "coursee": "Kurs E",
-  "coursef": "Kurs F",
   "csp": "AP ® Computer Science principer",
   "csa": "Datavetenskap A",
   "20-hour": "20 timmars Intro kurs",
@@ -13,7 +7,6 @@
   "algebra": "Datavetenskap i Algebra",
   "aquatic": "Minecraft: Resande vattenlevande",
   "artist": "Konstnären",
-  "basketball": "Göra en basketmatch",
   "course1": "Kurs 1",
   "course2": "Kurs 2",
   "course3": "Kurs 3",
@@ -32,7 +25,7 @@
   "pixelation": "Pixelering",
   "playlab": "Spel-labb",
   "sb-pt-exp": "sb-pt-exp",
-  "sports": "Sport",
+  "starwars": "Star Wars: Bygg en galax med kod i JavaScript",
   "text-compression": "Text komprimering",
   "outbreak-csc": "Utbrott",
   "peru": "peru",
@@ -41,5 +34,6 @@
   "edit-code": "Redigera kod",
   "halloween": "halloween",
   "step": "steg",
-  "soccer": "fotboll"
+  "soccer": "fotboll",
+  "how-ai-works": "Hur AI fungerar"
 }

@@ -1138,7 +1138,6 @@ az:
         text: dəyər 0
         options:
           VALUE:
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2206,7 +2205,6 @@ az:
         options:
           'N':
             '0': "???"
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2445,8 +2443,23 @@ az:
           DIR:
             right: sağa
             left: sola
+      ecosystems_int10:
+        text: dəyər 0
+        options:
+          VALUE:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: başlıqları təmizlə
+      storylab_printText:
+        text: çap et
       storylab_setForegroundEffect2:
         text: "{EFFECT} effekti elə"
         options:

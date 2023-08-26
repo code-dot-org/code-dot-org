@@ -59,6 +59,7 @@ se:
         reset_password_token: "Dat ruovttoluotta bidjat čoavddasáni liŋka maid leat čuvvon"
         error:
           future: ii sáhte nie boahtteáiggis
+        us_state: 'Fylka'
   hello: "Bures máilbmi"
   welcome_back: "Bures boahtin ruovttoluotta, %{name}"
   your_professional_learning_plan: "Du oahppanplána"
@@ -169,6 +170,7 @@ se:
     parent_account_checkbox: "Mun lean váhnen/oapmehaš ráhkadeamen konto mu máná ovddas"
     parent_account_email_progress_permission: "Sáhttit go epoastta sáddet dutnje mas leat bieđggus ođasmahttimat du máná ovdáneami ja prošeavttaid ektui, ja ođasmahttimat sin kurssa ja dihtordiehtaga birra. [(Geahča min persovdnasuodjalus njuolggadusaid)](%{privacy_policy_url})"
     parent_account_email_label: "Váhnema/Oapmehačča Epoasta"
+    us_state: 'Fylka'
   school_info:
     title: 'Skuvlla Dieđut (válljenfriddjavuohta)'
     school_country: 'Skuvlla Riika'
@@ -943,6 +945,7 @@ se:
         csf_express: 'CS Vuođut (Pre-Ekspreassa or Ekspreassa)'
         csd: 'CS Fuomášumit'
         csp: 'CS Prinsihpat'
+        other: 'Eará'
         not_applicable: "Ii leat guoskevaš"
     international_opt_in:
       title: 'Bargobaji Oassalasttit'
@@ -983,3 +986,4 @@ se:
   behaviors:
     this_sprite: "dát sprite"
   unit_prefix: "Unit %{n}"
+

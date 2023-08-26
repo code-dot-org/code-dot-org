@@ -2,43 +2,80 @@
   "lt-LT": {
     "data": {
       "vocabularies": {
-        "function/hero/unversioned": {
-          "word": "Komanda"
+        "copyright/csd/2021": {
+          "word": "Autorinės teisės"
         },
-        "code/poem-art/2021": {
-          "word": "Kodavimas"
+        "variable/csd/2021": {
+          "word": "Kintamasis"
         },
-        "code/artist/unversioned": {
-          "word": "Kodavimas"
-        },
-        "conditionals/aquatic/unversioned": {
+        "conditionals/csd/2021": {
           "word": "Sąlyginiai sakiniai"
         },
-        "loops/aquatic/unversioned": {
-          "word": "Kartojimas"
+        "abstraction/csd/2021": {
+          "word": "Komandos su parametrais"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "function/csd/2021": {
+          "word": "Komanda"
         },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "binary/coursec/2021": {
+          "word": "Dvejetainis"
         },
-        "code/sports/unversioned": {
-          "word": "Kodavimas"
+        "conditionals/coursed/2021": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "copyright/coursee/2021": {
+          "word": "Autorinės teisės"
+        },
+        "function/coursee/2021": {
+          "word": "Komanda"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "define/coursee/2021": {
+          "word": "Apibrėžti"
+        },
+        "variable/coursef/2021": {
+          "word": "Kintamasis"
+        },
+        "internet/coursef/2021": {
+          "word": "Internetas"
+        },
+        "define/coursef/2021": {
+          "word": "Apibrėžti"
+        },
+        "conditionals/express/2021": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "function/express/2021": {
+          "word": "Komanda"
+        },
+        "variable/express/2021": {
+          "word": "Kintamasis"
+        },
+        "define/express/2021": {
+          "word": "Apibrėžti"
+        },
+        "copyright/csd/2022": {
+          "word": "Autorinės teisės"
+        },
+        "variable/csd/2022": {
+          "word": "Kintamasis"
+        },
+        "conditionals/csd/2022": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "abstraction/csd/2022": {
+          "word": "Komandos su parametrais"
+        },
+        "function/csd/2022": {
+          "word": "Komanda"
+        },
+        "binary/coursec/2022": {
+          "word": "Dvejetainis"
         },
         "conditionals/coursed/2022": {
           "word": "Sąlyginiai sakiniai"
-        },
-        "variable/coursef/2022": {
-          "word": "Kintamasis"
-        },
-        "internet/coursef/2022": {
-          "word": "Internetas"
-        },
-        "define/coursef/2022": {
-          "word": "Apibrėžti"
         },
         "function/coursee/2022": {
           "word": "Komanda"
@@ -50,6 +87,15 @@
           "word": "Autorinės teisės"
         },
         "define/coursee/2022": {
+          "word": "Apibrėžti"
+        },
+        "variable/coursef/2022": {
+          "word": "Kintamasis"
+        },
+        "internet/coursef/2022": {
+          "word": "Internetas"
+        },
+        "define/coursef/2022": {
           "word": "Apibrėžti"
         },
         "conditionals/express/2022": {
@@ -64,23 +110,31 @@
         "define/express/2022": {
           "word": "Apibrėžti"
         },
-        "binary/coursec/2022": {
-          "word": "Dvejetainis"
-        },
-        "variable/csd/2022": {
-          "word": "Kintamasis"
-        },
-        "conditionals/csd/2022": {
+        "conditionals/aquatic/unversioned": {
           "word": "Sąlyginiai sakiniai"
         },
-        "abstraction/csd/2022": {
-          "word": "Komandos su parametrais"
+        "loops/aquatic/unversioned": {
+          "word": "Kartojimas"
         },
-        "function/csd/2022": {
+        "code/artist/unversioned": {
+          "word": "Kodavimas"
+        },
+        "function/hero/unversioned": {
           "word": "Komanda"
         },
-        "copyright/csd/2022": {
-          "word": "Autorinės teisės"
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/poem-art/2021": {
+          "word": "Kodavimas"
+        },
+        "code/sports/unversioned": {
+          "word": "Kodavimas"
         },
         "code/poem-art/unversioned": {
           "word": "Kodavimas",
@@ -101,60 +155,6 @@
         "line/poem-art/unversioned": {
           "word": "",
           "definition": ""
-        },
-        "variable/coursef/2021": {
-          "word": "Kintamasis"
-        },
-        "internet/coursef/2021": {
-          "word": "Internetas"
-        },
-        "define/coursef/2021": {
-          "word": "Apibrėžti"
-        },
-        "binary/coursec/2021": {
-          "word": "Dvejetainis"
-        },
-        "conditionals/coursed/2021": {
-          "word": "Sąlyginiai sakiniai"
-        },
-        "conditionals/express/2021": {
-          "word": "Sąlyginiai sakiniai"
-        },
-        "function/express/2021": {
-          "word": "Komanda"
-        },
-        "variable/express/2021": {
-          "word": "Kintamasis"
-        },
-        "define/express/2021": {
-          "word": "Apibrėžti"
-        },
-        "copyright/coursee/2021": {
-          "word": "Autorinės teisės"
-        },
-        "function/coursee/2021": {
-          "word": "Komanda"
-        },
-        "conditionals/coursee/2021": {
-          "word": "Sąlyginiai sakiniai"
-        },
-        "define/coursee/2021": {
-          "word": "Apibrėžti"
-        },
-        "variable/csd/2021": {
-          "word": "Kintamasis"
-        },
-        "conditionals/csd/2021": {
-          "word": "Sąlyginiai sakiniai"
-        },
-        "abstraction/csd/2021": {
-          "word": "Komandos su parametrais"
-        },
-        "function/csd/2021": {
-          "word": "Komanda"
-        },
-        "copyright/csd/2021": {
-          "word": "Autorinės teisės"
         }
       }
     }

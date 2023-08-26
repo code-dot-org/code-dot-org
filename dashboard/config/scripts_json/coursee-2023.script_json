@@ -15,12 +15,13 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2023-03-14 20:51:46 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-08-08 17:54:31 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -3722,6 +3723,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_be_a_super_digital_citizen2022_2023"
+        ],
         "progression": "Be a Super Digital Citizen"
       },
       "bonus": false,
@@ -3744,6 +3748,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PrivatePersonalInformation-Unplugged2022_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3765,6 +3772,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseEF_video_IntroSpriteLab_2023"
+        ],
         "progression": "Video: Introducing Sprite Lab"
       },
       "bonus": false,
@@ -3787,6 +3797,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 1-validated_2023"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3809,6 +3822,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 2-validated_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3831,6 +3847,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 3-validated_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3853,6 +3872,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 4-validated_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3875,6 +3897,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseEF_video_MakeSprite_2023"
+        ],
         "progression": "Video: How to Make a Sprite"
       },
       "bonus": false,
@@ -3897,6 +3922,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 5-validated_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3919,6 +3947,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 6-validated_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3941,6 +3972,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 7-validated_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -3963,6 +3997,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_introtosprites_2023"
+        ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
       },
       "bonus": false,
@@ -3985,6 +4022,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_say_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4007,6 +4047,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_location_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4029,6 +4072,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_multi_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4051,6 +4097,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_click_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4073,6 +4122,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_2023"
+        ],
         "progression": "Video: Hello World: Programming with Events"
       },
       "bonus": false,
@@ -4095,6 +4147,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_events_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4117,6 +4172,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_backgrounds_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4139,6 +4197,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_costumes_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4161,6 +4222,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sizes_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4183,6 +4247,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_behaviors_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4205,6 +4272,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sounds_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4227,6 +4297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplayvideo_2023"
+        ],
         "progression": "Video: Hello World: Do What You Want"
       },
       "bonus": false,
@@ -4249,6 +4322,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplay_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -4271,6 +4347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_1_2023"
+        ],
         "progression": "Exploration: Rikki's Poster"
       },
       "bonus": false,
@@ -4293,6 +4372,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_2_2023"
+        ],
         "progression": "Mini-Project: About Me"
       },
       "bonus": false,
@@ -4315,6 +4397,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_3_2023"
+        ],
         "progression": "Mini-Project: About Me"
       },
       "bonus": false,
@@ -4337,6 +4422,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_4_2023"
+        ],
         "progression": "Mini-Project: About Me"
       },
       "bonus": false,
@@ -4359,6 +4447,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_5_2023"
+        ],
         "progression": "Mini-Project: About Me"
       },
       "bonus": false,
@@ -4381,6 +4472,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aboutme_6_2023"
+        ],
         "progression": "Mini-Project: About Me"
       },
       "bonus": false,
@@ -4403,6 +4497,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_artist_2023"
+        ],
         "progression": "Video: Artist Intro with JR Hildebrande"
       },
       "bonus": false,
@@ -4425,6 +4522,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4447,6 +4547,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4469,6 +4572,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_video_loopsArtist_2023"
+        ],
         "progression": "Video: Loops with the Artist"
       },
       "bonus": false,
@@ -4491,6 +4597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4513,6 +4622,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog4_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4535,6 +4647,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops5_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4557,6 +4672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_Artist_Practice_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4579,6 +4697,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge1_2023"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -4601,6 +4722,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog_challenge2a_2023"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -4623,6 +4747,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4645,6 +4772,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops1a_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4667,6 +4797,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_nestedLoopsArtist_2023"
+        ],
         "progression": "Video: Nested Loops"
       },
       "bonus": false,
@@ -4689,6 +4822,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4711,6 +4847,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops4_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4733,6 +4872,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops10_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4755,6 +4897,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_Lesson_7_Artist_Practice_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4777,6 +4922,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoopsFP_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -4799,6 +4947,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops_challenge1_2023"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -4821,6 +4972,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops_challenge2_2023"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -4843,6 +4997,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project1_2023"
+        ],
         "progression": "Mini-Project: Snowflake #1"
       },
       "bonus": false,
@@ -4865,6 +5022,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project2_2023"
+        ],
         "progression": "Mini-Project: Snowflake #1"
       },
       "bonus": false,
@@ -4887,6 +5047,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project3_2023"
+        ],
         "progression": "Mini-Project: Snowflake #1"
       },
       "bonus": false,
@@ -4909,6 +5072,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project4_2023"
+        ],
         "progression": "Mini-Project: Snowflake #1"
       },
       "bonus": false,
@@ -4931,6 +5097,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project5_2023"
+        ],
         "progression": "Mini-Project: Snowflake #1"
       },
       "bonus": false,
@@ -4953,6 +5122,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project1a_2023"
+        ],
         "progression": "Mini-Project: Snowflake #2"
       },
       "bonus": false,
@@ -4975,6 +5147,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project2a_2023"
+        ],
         "progression": "Mini-Project: Snowflake #2"
       },
       "bonus": false,
@@ -4997,6 +5172,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project3a_2023"
+        ],
         "progression": "Mini-Project: Snowflake #2"
       },
       "bonus": false,
@@ -5019,6 +5197,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_project4a_2023"
+        ],
         "progression": "Mini-Project: Snowflake #2"
       },
       "bonus": false,
@@ -5041,6 +5222,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Songwriting-Unplugged2022_2023"
+        ],
         "progression": "Songwriting - Functions Unplugged Activity"
       },
       "bonus": false,
@@ -5063,6 +5247,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid1_2023"
+        ],
         "progression": "Video: Minecraft - The Agent"
       },
       "bonus": false,
@@ -5085,6 +5272,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_01_RETRY_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5107,6 +5297,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_02_Cole_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5129,6 +5322,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid2_2023"
+        ],
         "progression": "Video: Minecraft - Repeat Loops"
       },
       "bonus": false,
@@ -5151,6 +5347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_03_Cole_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5173,6 +5372,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04_Cole_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5195,6 +5397,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04POINT5_RYAN_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5217,6 +5422,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_05_Cole_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5239,6 +5447,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_06_Cole_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5261,6 +5472,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid3_2023"
+        ],
         "progression": "Video: Minecraft - Functions"
       },
       "bonus": false,
@@ -5283,6 +5497,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Function intro Ryan_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5305,6 +5522,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_07_Cole_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5327,6 +5547,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_10_RETRY_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5349,6 +5572,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_Ali_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5371,6 +5597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid4_2023"
+        ],
         "progression": "Video: Minecraft - Congratulations"
       },
       "bonus": false,
@@ -5393,6 +5622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_FP20x20_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -5415,6 +5647,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_predict1_2023"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -5437,6 +5672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5459,6 +5697,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5481,6 +5722,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions5_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5503,6 +5747,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions7_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5525,6 +5772,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8a_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5547,6 +5797,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8b_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5569,6 +5822,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8c_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5591,6 +5847,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5613,6 +5872,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_Lesson_11_Artist_Practice_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5635,6 +5897,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_challenge1_2023"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -5657,6 +5922,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_challenge2_2023"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -5679,6 +5947,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aquatic_vid1_2023"
+        ],
         "progression": "Video: Minecraft: Voyage Aquatic Introduction"
       },
       "bonus": false,
@@ -5701,6 +5972,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5723,6 +5997,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5745,6 +6022,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5767,6 +6047,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aquatic_vid2_2023"
+        ],
         "progression": "Video: Minecraft: Voyage Aquatic Repeat Until"
       },
       "bonus": false,
@@ -5789,6 +6072,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_4_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5811,6 +6097,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_5_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5833,6 +6122,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_6_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5855,6 +6147,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aquatic_vid3_2023"
+        ],
         "progression": "Video: Minecraft: Voyage Aquatic Conditionals"
       },
       "bonus": false,
@@ -5877,6 +6172,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_7a_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5899,6 +6197,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_8_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5921,6 +6222,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_9b_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5943,6 +6247,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_10_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5965,6 +6272,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_11_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5987,6 +6297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_aquatic_vid4_2023"
+        ],
         "progression": "Video: Minecraft: Voyage Aquatic Congratulations"
       },
       "bonus": false,
@@ -6009,6 +6322,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HOC 2018 Level_12_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -6031,6 +6347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6053,6 +6372,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6075,6 +6397,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while3_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6097,6 +6422,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro_2023"
+        ],
         "progression": "Video: While Loops with the Farmer"
       },
       "bonus": false,
@@ -6119,6 +6447,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_predict1_2023"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -6141,6 +6472,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11a_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6163,6 +6497,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11b_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6185,6 +6522,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12b_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6207,6 +6547,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12_forswap_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6229,6 +6572,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil_2023"
+        ],
         "progression": "Video: Repeat Until Blocks"
       },
       "bonus": false,
@@ -6251,6 +6597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12c_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6273,6 +6622,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12d_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6295,6 +6647,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12e_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6317,6 +6672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_video_BeeifElse_2023"
+        ],
         "progression": "Video: \"If/Else\""
       },
       "bonus": false,
@@ -6340,6 +6698,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseE_farmer_ramp12f_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6362,6 +6723,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_while1_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6384,6 +6748,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "harvester_skinOverview_video_2023"
+        ],
         "progression": "Video: The Harvester"
       },
       "bonus": false,
@@ -6406,6 +6773,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6428,6 +6798,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions1a_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6450,6 +6823,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions2b_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6472,6 +6848,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions2ba_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6494,6 +6873,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions3c_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6516,6 +6898,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions3c1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6538,6 +6923,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions7a1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6560,6 +6948,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions8a1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6582,6 +6973,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions9a1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6605,6 +6999,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseE_farmer_functions10a1_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6627,6 +7024,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions13_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6649,6 +7049,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_farmer_functions11_predict_2023"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -6671,6 +7074,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "DesigningForAccessibilityMarkdownLevel2022_2023"
+        ],
         "progression": "Designing for Accessibility"
       },
       "bonus": false,
@@ -6693,6 +7099,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "DigitalSharing-Unplugged2022_2023"
+        ],
         "progression": "Digital Sharing - Unplugged Activity"
       },
       "bonus": false,
@@ -6715,6 +7124,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_EOC_examples2022_2023"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -6737,6 +7149,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_EOC2022_2023"
+        ],
         "progression": "Create your project"
       },
       "bonus": false,
@@ -8414,16 +8829,6 @@
   ],
   "resources": [
     {
-      "name": "2022 Change Log",
-      "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview",
-      "key": "2022_change_log",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2022_change_log"
-      }
-    },
-    {
       "name": "About Me Planning Guide",
       "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview",
       "key": "about_me_planning_guide",
@@ -8438,7 +8843,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/coursee-2022/resources",
+      "url": "/s/coursee-2023/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -8449,7 +8854,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursee-2022/standards",
+      "url": "/s/coursee-2023/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -8460,7 +8865,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursee-2022/vocab",
+      "url": "/s/coursee-2023/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -8542,13 +8947,15 @@
       }
     },
     {
-      "name": "Curriculum Guide",
-      "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview",
-      "key": "curriculum_guide",
+      "name": "CSF Course Syllabus",
+      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+      "key": "csf_course_syllabus",
       "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "curriculum_guide"
+        "resource.key": "csf_course_syllabus"
       }
     },
     {
@@ -8810,6 +9217,16 @@
       }
     },
     {
+      "name": "Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+      "key": "teaching_and_learning_strategies",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teaching_and_learning_strategies"
+      }
+    },
+    {
       "name": "Turns & Angles",
       "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
       "key": "turns_angles",
@@ -8859,13 +9276,15 @@
       }
     },
     {
-      "name": "Virtual Lesson Modifications",
-      "url": "https://docs.google.com/document/d/1WDr-KRGUThXMzL1ppDIkbueQrJfF0lwrwFhEsO6ET5s/view",
-      "key": "virtual_lesson_modifications",
+      "name": "Values and Philosophy",
+      "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview\t",
+      "key": "values_and_philosophy",
       "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "virtual_lesson_modifications"
+        "resource.key": "values_and_philosophy"
       }
     }
   ],
@@ -9132,12 +9551,6 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "2022_change_log",
-        "script.name": "coursee-2023"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "all_resources",
         "script.name": "coursee-2023"
       }
@@ -9168,7 +9581,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "curriculum_guide",
+        "resource.key": "csf_course_syllabus",
         "script.name": "coursee-2023"
       }
     },
@@ -9210,7 +9623,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "virtual_lesson_modifications",
+        "resource.key": "teaching_and_learning_strategies",
+        "script.name": "coursee-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "values_and_philosophy",
         "script.name": "coursee-2023"
       }
     }
@@ -10196,5 +10615,14 @@
         "opportunity_standard.shortcode": "4.MD.5.b"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

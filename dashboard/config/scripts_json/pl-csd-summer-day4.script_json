@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-07 14:21:56 UTC",
+    "serialized_at": "2023-06-28 19:13:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -62,7 +62,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThis session expands the reflections around identity to include unconscious biases that exist as a result of identity markers of self and others. Participants will be asked to reflect on how their unconscious biases impact their view of who belongs in CS. They will also be challenged to name the responsibility they will claim in ensuring that all students feel like they belong in CS.\n\n\n**Objectives:**\n* Participants use a shared definition of unconscious bias\n* Participants are able to articulate who they believe should have access to CS and what has shaped those beliefs\n* Participants recognize that all students can and should learn CS\n\n**Suggested Time:** 35 minutes",
+        "overview": "**Purpose:**\nThis session expands the reflections around identity to include unconscious biases that exist as a result of identity markers of self and others. Participants will be asked to reflect on how their unconscious biases impact their view of who belongs in CS. They will also be challenged to name the responsibility they will claim in ensuring that all students feel like they belong in CS.\n\n\n**Objectives:**\n* Participants use a shared definition of unconscious bias\n* Participants are able to articulate who they believe should have access to CS and what has shaped those beliefs\n* Participants recognize that all students can and should learn CS\n\n**Suggested Time:** 25 minutes",
         "student_overview": "**You will:**\n* Use a shared definition of unconscious bias\n* Articulate who you believe should have access to CS and what has shaped those beliefs\n* Recognize that all students can and should learn CS"
       },
       "seeding_key": {
@@ -97,9 +97,9 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** The teacher prompts for and facilitates collaboration for students in small groups and whole-class discussions.\n\n\n**Potential Teaching Group Decisions:**\n  * Encourage students to make their best guess for each meal recommendation possible using the data they have and a consensus among the group.\n  * Call out exemplar moments of collaboration among students.\n  * When facilitating a whole-class discussion, ask students how they came to an answer as a group using collaborative practices.\n  * Highlight that collaborating with others helps us to see the larger picture of a story, rather than just a narrow slice of it, like they encountered in the lesson.\n\n\n**Objectives:**\n* Participants engage in Unit 5 Lesson 1 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants discuss the importance of group work in the CS Discoveries curriculum.\n\n**Suggested Time:** 65 minutes\n\n<a href=\"https://studio.code.org/s/csd5-2022/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
+        "overview": "**Purpose:**\n* **Essential Practice:** The teacher prompts for and facilitates collaboration for students in small groups and whole-class discussions.\n\n\n**Potential Teaching Group Decisions:**\n  * Encourage students to make their best guess for each meal recommendation possible using the data they have and a consensus among the group.\n  * Call out exemplar moments of collaboration among students.\n  * When facilitating a whole-class discussion, ask students how they came to an answer as a group using collaborative practices.\n  * Highlight that collaborating with others helps us to see the larger picture of a story, rather than just a narrow slice of it, like they encountered in the lesson.\n\n\n**Objectives:**\n* Participants engage in Unit 5 Lesson 1 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants discuss the importance of group work in the CS Discoveries curriculum.\n\n**Suggested Time:** 65 minutes\n\n<a href=\"https://studio.code.org/s/csd5-2023/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
         "preparation": "* Print copies of the Meals Data resource so that each group can get one of the four pages\n* Print one copy of the activity guide for each group\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
-        "student_overview": "**Question of the Day:** How does data affect decisions we make every day?\n\nIn this lesson, you will explore what data is and how it is used to solve problems. \n\n<a href=\"https://studio.code.org/s/csd5-2022/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> "
+        "student_overview": "**Question of the Day:** How does data affect decisions we make every day?\n\nIn this lesson, you will explore what data is and how it is used to solve problems. \n\n<a href=\"https://studio.code.org/s/csd5-2023/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> "
       },
       "seeding_key": {
         "lesson.key": "Representation Matters",
@@ -133,9 +133,9 @@
       "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** Discussion is an opportunity to hear multiple voices and bring different perspectives and experiences into the conversation.\n\n\n* **Potential Teaching Group Decisions:**\n  * Make an effort to bring multiple voices into class discussions\n  * Use the Think-Pair-Share strategy to facilitate discussion\n\n\n**Objectives:**\n* Participants engage in Unit 6 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants brainstorm ways to lead an inclusive class discussion.\n\n**Suggested Time:** 65 minutes\n\n<a href=\"https://studio.code.org/s/csd6-2022/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n",
+        "overview": "**Purpose:**\n* **Essential Practice:** Discussion is an opportunity to hear multiple voices and bring different perspectives and experiences into the conversation.\n\n\n* **Potential Teaching Group Decisions:**\n  * Make an effort to bring multiple voices into class discussions\n  * Use the Think-Pair-Share strategy to facilitate discussion\n\n\n**Objectives:**\n* Participants engage in Unit 6 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants brainstorm ways to lead an inclusive class discussion.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://studio.code.org/s/csd6-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "student_overview": "**Question of the Day:** How can we design apps with devices based on the needs of a user?\n\nIn this lesson, you will explore how we can design apps with devices for different users and purposes\n\n<a href=\"https://studio.code.org/s/csd6-2022/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n"
+        "student_overview": "**Question of the Day:** How can we design apps with devices based on the needs of a user?\n\nIn this lesson, you will explore how we can design apps with devices for different users and purposes\n\n<a href=\"https://studio.code.org/s/csd6-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n"
       },
       "seeding_key": {
         "lesson.key": "Physical Designs",
@@ -178,9 +178,9 @@
           }
         ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** The teacher helps students manage multiple tabs and resources to keep thinking organized while learning new CS content.\n\n\n* **Potential Teaching Group Decisions:**\n  * Remind students often to refer back to and fill out Activity Guides as they are completing lesson activities.\n  * If the Activity Guide is being used virtually, remind students to switch tabs or view in split screen.\n  * If students have a question, prompt them to think of a resource they might use to answer the question before providing them with an answer.\n\n\n**Objectives:**\n* Participants engage in Unit 7 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson.\n\n\n**Suggested Time:** 65 minutes\n\n<a href=\"https://studio.code.org/s/csd7-2022/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
+        "overview": "**Purpose:**\n* **Essential Practice:** The teacher helps students manage multiple tabs and resources to keep thinking organized while learning new CS content.\n\n\n* **Potential Teaching Group Decisions:**\n  * Remind students often to refer back to and fill out Activity Guides as they are completing lesson activities.\n  * If the Activity Guide is being used virtually, remind students to switch tabs or view in split screen.\n  * If students have a question, prompt them to think of a resource they might use to answer the question before providing them with an answer.\n\n\n**Objectives:**\n* Participants engage in Unit 7 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson.\n\n\n**Suggested Time:** 65 minutes\n\n<a href=\"https://studio.code.org/s/csd7-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
         "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?\n\n<a href=\"https://studio.code.org/s/csd7-2022/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> "
+        "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?\n\n<a href=\"https://studio.code.org/s/csd7-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> "
       },
       "seeding_key": {
         "lesson.key": "Introduction to Machine Learning",
@@ -213,7 +213,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "**Purpose:**\nIn this session, participants are given time to share ideas and learn about opportunities for differentiation within the CS Discoveries curriculum. The goal of the session is for participants to commit to one thing they will do in their classrooms to meet the unique learning needs of their students.\n\n\n**Objectives:**\n* Participants collaborate and share differentiation strategies and ideas\n* Participants commit to trying one strategy for differentiation with their students\n\n**Suggested Time:** 35 minutes",
+        "overview": "**Purpose:**\nIn this session, participants are given time to share ideas and learn about opportunities for differentiation within the CS Discoveries curriculum. The goal of the session is for participants to commit to one thing they will do in their classrooms to meet the unique learning needs of their students.\n\n\n**Objectives:**\n* Participants collaborate and share differentiation strategies and ideas\n* Participants commit to trying one strategy for differentiation with their students\n\n**Suggested Time:** 30 minutes",
         "student_overview": "**You will:**\n* Collaborate and share differentiation strategies and ideas\n* Commit to trying one strategy for differentiation with your students"
       },
       "seeding_key": {
@@ -230,7 +230,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "**Purpose:**\nThe equity-focused discussions throughout the week have all been building up to this session where participants will be asked to make a commitment related to equity in CS education. The goal is for participants to leave this session with a concrete plan for how they will make progress towards the goal they have committed to. This plan will be revisited during the academic year workshops.\n\n\n**Objectives:**\n* Participants identify barriers in their classrooms, school, and teaching practice that limit access, diversity, and inclusion in CS\n* Participants determine which of those barriers they have the power to influence\n* Participants identify concrete and reasonable strategies to address the barriers they have the power to influence\n* Participants describe the commitment they will pursue in support of equity in CS, and the strategies they will use to support that commitment\n* Participants define the support they will need to pursue that commitment.\n* Participants identify the measurement(s) they will use to track progress toward the commitment\n\n**Suggested Time:** 60 minutes",
+        "overview": "**Purpose:**\nThe equity-focused discussions throughout the week have all been building up to this session where participants will be asked to make a commitment related to equity in CS education. The goal is for participants to leave this session with a concrete plan for how they will make progress towards the goal they have committed to. This plan will be revisited during the academic year workshops.\n\n\n**Objectives:**\n* Participants identify barriers in their classrooms, school, and teaching practice that limit access, diversity, and inclusion in CS\n* Participants determine which of those barriers they have the power to influence\n* Participants identify concrete and reasonable strategies to address the barriers they have the power to influence\n* Participants describe the commitment they will pursue in support of equity in CS, and the strategies they will use to support that commitment\n* Participants define the support they will need to pursue that commitment.\n* Participants identify the measurement(s) they will use to track progress toward the commitment\n\n**Suggested Time:** 50 minutes",
         "student_overview": "**You will:**\n* Identify barriers in your classroom, school, and teaching practice that limit access, diversity, and inclusion in CS\n* Determine which of those barriers you have the power to influence\n* Identify concrete and reasonable strategies to address the barriers you have the power to influence\n* Describe the commitment you will pursue in support of equity in CS, and the strategies you will use to support that commitment\n* Define the support you will need to pursue that commitment.\n* Identify the measurement(s) you will use to track progress toward the commitment"
       },
       "seeding_key": {
@@ -1093,7 +1093,7 @@
       "key": "b832362a-3782-4e2e-a60f-e6f1afde3edd",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r app_design_for_users/csd6/2023] activity guide to each student. \n\n",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r physical_designs/pl-csd-summer/2023] activity guide to each student. \n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1143,7 +1143,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Value Reasoning over Correctness:** Each user is designed with a particular template in mind, but students are encouraged to use their own reasoning and logic when recommending a template to users. It's okay for students to not make an \"obvious\" choice as long as they're thinking carefully about their reasoning and are able to justify their choices.\n\nThe animations and games are intentionally simple, to help set expectations about the animations and games that students will be creating over the course of the unit.\n"
+            "markdown": "**Value Reasoning over Correctness:** Each user is designed with a particular template in mind, but students are encouraged to use their own reasoning and logic when recommending a template to users. It's okay for students to not make an \"obvious\" choice as long as they're thinking carefully about their reasoning and are able to justify their choices.\n\nThe prototypes are intentionally simple, to help set expectations about the prototypes that students will be creating over the course of the unit.\n"
           }
         ]
       },
@@ -1174,7 +1174,7 @@
       "position": 7,
       "properties": {
         "description": "Now we've been asked to create a physical design for a client. We can create our own design, but it should meet the needs of our users.\n",
-        "name": "Designing an Animation or Game",
+        "name": "Creating a Physical Design",
         "remarks": true,
         "tips": [
           {
@@ -1318,7 +1318,7 @@
       "key": "25dbb9d0-0f48-4243-8554-ad30ef0e177f",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r ai_what_is_machine_learning_/csd7/2023] video in the slides\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r ai_what_is_machine_learning_/csd/2023] video in the slides\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1928,6 +1928,18 @@
   ],
   "resources": [
     {
+      "name": "[Exemplar] Physical Designs",
+      "url": "https://docs.google.com/document/d/1COKnyGNlEBpB8giiVDPGl-ubK1OEUU3fxYjNIhzpQT4/edit",
+      "key": "_exemplar_physical_designs",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_physical_designs"
+      }
+    },
+    {
       "name": "(Warm Up) Word Search",
       "url": "https://docs.google.com/document/d/14hKTZSrP7tnghpJhTLYJNEPeb1CinUaa0KtzRPADji4/edit",
       "key": "_warm_up_word_search",
@@ -2188,6 +2200,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Machine Learning",
         "resource.key": "introduction_to_machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Physical Designs",
+        "resource.key": "_exemplar_physical_designs"
       }
     },
     {

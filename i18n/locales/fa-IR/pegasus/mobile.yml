@@ -466,7 +466,7 @@
   dashboard_sections_table_secret: "نوع ورود"
   dashboard_sections_table_grade: "درجه"
   dashboard_sections_table_course: "دوره"
-  dashboard_sections_table_pairing_allowed: "برنامه نویسی دوتایی"
+  dashboard_sections_table_pairing_allowed: "برنامه نویسی اشتراکی"
   dashboard_sections_table_students: "دانش آموزان"
   dashboard_sections_table_code: "بخش کد"
   dashboard_sections_name: 'نام بخش'
@@ -509,7 +509,7 @@
   dashboard_course4: 'درس 4 (بتا): '
   dashboard_curriculum: "برنامه آموزشی"
   dashboard_curriculum_overview: "بررسی اجمالی برنامه کلاس پنجمی ها"
-  dashboard_overview: "بررسی اجمالی"
+  dashboard_overview: "مرور کلی"
   dashboard_sequence: "دنباله"
   dashboard_framework: "چارچوب کار"
   dashboard_standards: "استانداردها"
@@ -651,6 +651,7 @@
   classicmaze_name: "هزارتوی کلاسیک"
   iceage_name: "عصر یخبندان"
   minecraft_name: "ماینکرفت"
+  text-compression_name: فشرده‌سازی متن
   applab_name: "آزمایشگاه نرم افزار"
   gamelab_name: "کارگاه بازی سازی"
   applab_gradelevel: "سنین سیزده به بالا"
@@ -1149,7 +1150,7 @@
   page_not_found_title: "صفحه پیدا نشد"
   hoc2022_mc_mee_title: "فرار از عمارت ماینکرافت"
   hoc2022_mc_mee_description: 'از عمارت رازآلود تا زمان طلوع آفتاب فرار کنید و یک میلیون زمرد دریافت کنید! آموزش جدید Hour of Code ماینکرافت حالا در نسخه آموزشی تحت ویندوز، مک، کروم‌بوک، آیپد و موبایل موجود است. با منابع مربیان، آموزشها و ویدئوها کار را شروع کنید. '
-  hoc2022_mc_mee_timecraft_description: 'در این درس رایگان کدنویسی نسخه آموزشی Minecraft برای نجات آینده با ماشین زمان سفر کنید.'
+  hoc2022_mc_mee_timecraft_description: "در این درس رایگان کدنویسی نسخه آموزشی Minecraft برای نجات آینده با ماشین زمان سفر کنید."
   footer_powered_by_aws: "قدرت گرفته شده توسط وب سرویس های آمازون"
   footer_built_on_github: "ساخته‌شده در GitHub از طریق مایکروسافت"
   codebytes_skinny_banner_english_only: "فقط انگلیسی"
@@ -1160,6 +1161,7 @@
   footer_store: "فروشگاه"
   footer_support: "پشتیبانی"
   footer_terms: "شرایط"
+  ai_for_oceans: "هوش مصنوعی برای اقیانوس‌ها"
   ai_for_oceans_lesson_plan: "طرح درس"
   ai_activity: "فعالیت"
   ai_description: "توضیحات"

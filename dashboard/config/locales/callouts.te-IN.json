@@ -2,7 +2,49 @@
   "te-IN": {
     "data": {
       "callouts": {
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "పూర్తి వృత్తం చేయడానికి జోంబీ ఎన్నిసార్లు తరలించాలో నమోదు చేయండి"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "“రిపీట్” బ్లాక్ను ఉపయోగించండి మరియు వర్క్స్పేస్లో బ్లాకుల చుట్టూ చుట్టండి"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "ఈ బ్లాక్ లోపల మీ కౌంటర్ వేరియబుల్ను లాగండి"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "“రిపీట్” బ్లాక్ను ఉపయోగించండి మరియు వర్క్స్పేస్లో బ్లాకుల చుట్టూ చుట్టండి"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "సరైన విలువకు “పొడవు” సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "సరైన విలువకు “పొడవు” సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "ప్రతి కోణం యొక్క పరిమాణాన్ని డిగ్రీలలో పొందడానికి 360 ను భుజాల సంఖ్యతో విభజించండి."
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "ఫంక్షన్ను సవరించడానికి మరియు తేనెను పొందడానికి బీ తిరిగే దిశను మార్చడానికి ఈ బటన్ను ఉపయోగించండి."
+        },
+        "Course 4 Maze 4": {
+          "repeat": "ఆదేశాలను పునరావృతం చేయడానికి లూప్ లోపల బ్లాక్లను ఉంచండి"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "మీ ఫంక్షన్ను సవరించడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "మీ ఫంక్షన్లో పరామితిని జోడించడానికి సవరించు క్లిక్ చేయండి"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "నటుడిని తరలించడానికి బాణాలను ఉపయోగించండి"
+        },
         "CourseD_Dance_2020_04": {
+          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        },
+        "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
         },
         "CourseD_Dance_Party_01": {
@@ -16,6 +58,9 @@
         },
         "CourseD_Dance_Party_06": {
           "dance_callout_06": "ఇక్కడ మీ కొత్త డాన్సర్‌ను జోడించండి"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
         },
         "Dance_2019_04": {
           "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
@@ -32,17 +77,133 @@
         "Dance_Party_06": {
           "dance_callout_06": "ఇక్కడ మీ కొత్త డాన్సర్‌ను జోడించండి"
         },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "ఈ సంఘటన జరిగినప్పుడు ధ్వనిని ప్లే చేయండి."
         },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "పైకి బాణం నొక్కినప్పుడు బేమాక్స్ పైకి కదలడానికి ఏ బ్లాక్ చేస్తుంది?",
+          "Infinity_move_directions_callout_arrow": "అజేయ ఈ బాణాలు ఉపయోగించండి"
         },
-        "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "తరలింపు బ్లాక్ను ఇక్కడ జోడించండి"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "ప్లేస్ తరలించు బ్లాక్స్ లోపల ఇక్కడ"
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "మీ ఫంక్షన్ను సవరించడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "మీ ఫంక్షన్ను సవరించడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "“విధులు” ఫ్లైఅవుట్ తెరవడానికి ఇక్కడ క్లిక్ చేసి, ఆపై “ఫంక్షన్ సృష్టించు” బటన్ క్లిక్ చేయండి."
+        },
+        "NEW Course 4 Artist Params 9": {
+          "add_and_drag_parameter": "ఇక్కడ మీ పరామితి పేరిట వ్రాయండి, జోడించు క్లిక్ చేసి, ఆపై మీ ఫంక్షన్ నిర్వచనంలోకి లాగండి",
+          "edit_add_parameter": "మీ ఫంక్షన్లో పరామితిని జోడించడానికి సవరించు క్లిక్ చేయండి"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "ప్రశ్న గుర్తులను భర్తీ చేయడానికి పొడవు వేరియబుల్ను ఇక్కడ లాగండి"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "టూల్ బాక్స్ కొత్త రూపాన్ని పొందింది! “చర్యలు” బ్లాక్స్ ఇప్పుడు ఇక్కడ ఉన్నాయి."
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "వివిధ వడగళ్ళు సృష్టించడానికి ఈ డ్రాప్-డౌన్ ఉపయోగించండి!"
         },
         "New Sprite Lab Project": {
           "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "మీరు ప్రారంభించడానికి మేము ఇక్కడ కొన్ని బ్లాక్లను ఉంచాము"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "మీరు ప్రారంభించడానికి మేము ఇక్కడ కొన్ని బ్లాక్లను ఉంచాము"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "మీరు ప్రారంభించడానికి మేము ఇక్కడ కొన్ని బ్లాక్లను ఉంచాము"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "మీరు ప్రారంభించడానికి మేము ఇక్కడ కొన్ని బ్లాక్లను ఉంచాము"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "మీరు ప్రారంభించడానికి మేము ఇక్కడ కొన్ని బ్లాక్లను ఉంచాము"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "ఈ కోడ్ మీ ఇంటిని నిర్మించడాన్ని ప్రారంభిస్తుంది. మీరు దాన్ని పూర్తి చేయగలరా?"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "ఈ కోడ్ మీ ఇంటిని నిర్మించడాన్ని ప్రారంభిస్తుంది. మీరు దాన్ని పూర్తి చేయగలరా?"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "ఈ కోడ్ మీ ఇంటిని నిర్మించడాన్ని ప్రారంభిస్తుంది. మీరు దాన్ని పూర్తి చేయగలరా?"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "ఈ కోడ్ మీ ఇంటిని నిర్మించడాన్ని ప్రారంభిస్తుంది. మీరు దాన్ని పూర్తి చేయగలరా?"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "ఈ కోడ్ మీ ఇంటిని నిర్మించడాన్ని ప్రారంభిస్తుంది. మీరు దాన్ని పూర్తి చేయగలరా?"
+        },
+        "Overworld Move to Sheep": {
+          "craft_run_button_callout": "మీ ప్రోగ్రామ్ను ప్రయత్నించడానికి “రన్” నొక్కండి"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "మీ ప్రోగ్రామ్ను ప్రయత్నించడానికి “రన్” నొక్కండి"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_run_button_callout": "మీ ప్రోగ్రామ్ను ప్రయత్నించడానికి “రన్” నొక్కండి"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_run_button_callout": "మీ ప్రోగ్రామ్ను ప్రయత్నించడానికి “రన్” నొక్కండి"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "మీ ప్రోగ్రామ్ను ప్రయత్నించడానికి “రన్” నొక్కండి"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "బ్లాకులను ఇక్కడ ఉంచడం ద్వారా చర్యలను పునరావృతం చేయండి"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "బ్లాకులను ఇక్కడ ఉంచడం ద్వారా చర్యలను పునరావృతం చేయండి"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "బ్లాకులను ఇక్కడ ఉంచడం ద్వారా చర్యలను పునరావృతం చేయండి"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "బ్లాకులను ఇక్కడ ఉంచడం ద్వారా చర్యలను పునరావృతం చేయండి"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "బ్లాకులను ఇక్కడ ఉంచడం ద్వారా చర్యలను పునరావృతం చేయండి"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "ఈ కోడ్ లావా కోసం తనిఖీ చేస్తుంది, మీరు ముందుకు సాగడానికి ఆదేశాన్ని జోడించగలరా?"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "ఈ కోడ్ లావా కోసం తనిఖీ చేస్తుంది, మీరు ముందుకు సాగడానికి ఆదేశాన్ని జోడించగలరా?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "ఈ కోడ్ లావా కోసం తనిఖీ చేస్తుంది, మీరు ముందుకు సాగడానికి ఆదేశాన్ని జోడించగలరా?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "ఈ కోడ్ లావా కోసం తనిఖీ చేస్తుంది, మీరు ముందుకు సాగడానికి ఆదేశాన్ని జోడించగలరా?"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "ఈ కోడ్ లావా కోసం తనిఖీ చేస్తుంది, మీరు ముందుకు సాగడానికి ఆదేశాన్ని జోడించగలరా?"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "ఈ ఇనుమును మైన్ చేయండి!"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "ఈ ఇనుమును మైన్ చేయండి!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "ఈ ఇనుమును మైన్ చేయండి!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "ఈ ఇనుమును మైన్ చేయండి!"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "ఈ ఇనుమును మైన్ చేయండి!"
         },
         "courseE_aboutme_22022": {
           "": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
@@ -54,8 +215,48 @@
           "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
         },
         "coursee_helloworld_say": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "“వృత్తాన్ని సృష్టించండి” బ్లాక్ ఉపయోగించండి మరియు పరిమాణాన్ని మార్చండి."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) ఈ బ్లాక్ను ఉపయోగించండి మరియు వర్క్స్పేస్లో బూడిద బ్లాకుల చుట్టూ ఉంచండి",
+          "repeat_blocks_2": "(2) ఇక్కడ “రిపీట్” బ్లాక్ను తరలించి, బూడిద బ్లాకులను లోపల ఉంచండి"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "“???” స్థానంలో డ్రాప్-డౌన్ ఉపయోగించండి ఒక సంఖ్యతో"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "ఈ ఆకారాన్ని సృష్టించడానికి రిపీట్ బ్లాక్ ఉపయోగించండి."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "ఈ ఆకారాన్ని సృష్టించడానికి రిపీట్ బ్లాక్ ఉపయోగించండి."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "వివిధ వడగళ్ళు సృష్టించడానికి ఈ డ్రాప్-డౌన్ ఉపయోగించండి!"
+        },
+        "frozen line": {
+          "move_elsa_forward": "ఎల్సా ముందుకు సాగడానికి “మూవ్ ఫార్వర్డ్” బ్లాక్ను లాగి, “రన్ చేసినప్పుడు” బ్లాక్ క్రింద స్నాప్ చేయండి"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "ఎల్సా టర్న్ చేయడానికి “టర్న్” బ్లాక్ ఉపయోగించండి. డ్రాప్-డౌన్లోని సంఖ్య ఎల్సా ఎంత మారుతుందో నిర్ణయిస్తుంది"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "“స్నోఫ్లేక్ బ్రాంచ్ను సృష్టించండి” బ్లాక్ ఉపయోగించండి"
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "చదరపు సృష్టించడానికి ఇక్కడ మరిన్ని బ్లాక్లను అటాచ్ చేయండి"
+        },
+        "frozen square loop": {
+          "replace_questions": "“???” స్థానంలో డ్రాప్-డౌన్ ఉపయోగించండి ఒక సంఖ్యతో"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "“???” స్థానంలో డ్రాప్-డౌన్ ఉపయోగించండి ఒక సంఖ్యతో"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "“???” స్థానంలో డ్రాప్-డౌన్ ఉపయోగించండి ఒక సంఖ్యతో"
         },
         "helloworld_animals_backgrounds": {
           "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
@@ -79,8 +280,8 @@
           "pin": "పిన్"
         },
         "helloworld_animals_say": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
         },
         "helloworld_animals_sizes": {
           "hello_world_new_block": "కొత్త బ్లాక్!!!!"
@@ -107,8 +308,8 @@
           "pin": "పిన్"
         },
         "helloworld_emoji_say": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
         },
         "helloworld_food_backgrounds": {
           "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
@@ -174,16 +375,16 @@
           "pin": "పిన్"
         },
         "helloworld_food_say": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
         },
         "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
         },
         "helloworld_food_say_space-2022": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
         },
         "helloworld_retro_backgrounds": {
           "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
@@ -207,8 +408,8 @@
           "pin": "పిన్"
         },
         "helloworld_retro_say": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
         }
       }
     }

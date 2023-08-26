@@ -35,7 +35,7 @@ When terminating an application instance it's import to make sure all of the log
 1. Remove the instance from service
 1. `ssh` to the instance.
 1. Eliminate activity that generates new log events:
-  1. Stop all of our services on the instance (`sudo service stop varnish`, repeat for `dashboard` and `pegasus`)
+  1. Stop all of our services on the instance (`sudo systemctl varnish stop`, repeat for `dashboard` and `pegasus`)
   1. Disable all cronjobs (`crontab -e`, use `#` to comment out lines)
 1. `logrotate -f /etc/logrotate.d/dashboard`
 1. `logrotate -f /etc/logrotate.d/pegasus`

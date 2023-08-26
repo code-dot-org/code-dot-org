@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "spila hljóð",
   "blockly_blockPlaySoundAtMeasureTooltip": "spila hljóð",
+  "blockly_blockPlaySoundTooltip": "spila hljóð",
   "blockly_blockRepeatTooltip": "endurtaka",
   "blockly_blockRestTooltip": "hvíla",
   "blockly_blockWhenRun": "þegar keyrt",
@@ -11,7 +11,10 @@
   "blockly_toolboxCategoryLogic": "Rökvísi",
   "blockly_toolboxCategoryMath": "Reikningur",
   "blockly_toolboxCategoryVariables": "Breytur",
+  "continue": "Áfram",
   "feedback": "Endurgjöf",
+  "panelHeaderInstructions": "Leiðbeiningar",
+  "panelHeaderWorkspace": "Vinnusvæði: ",
   "share": "Deila leik",
   "startOver": "Byrja aftur",
   "upload": "Hlaða upp"

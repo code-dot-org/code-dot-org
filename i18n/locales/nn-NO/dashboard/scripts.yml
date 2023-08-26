@@ -171,6 +171,7 @@ nn:
           description_short: Lag ei historie eller eit spel med Gumball spel-lab!
           student_description: Lag ei historie eller eit spel med Gumball spel-lab!
         starwars:
+          title: 'Star Wars: Bygg ein galakse med kode(JavaScript)'
           description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
           description_short: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
           student_description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
@@ -2569,6 +2570,8 @@ nn:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
             lessonGroup-3:
               display_name: 'Kapittel 2: Datamaskiner og problemløsing'
+            lessonGroup-5:
+              display_name: Undersøking
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2795,6 +2798,8 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2811,6 +2816,8 @@ nn:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
             lessonGroup-3:
               display_name: 'Kapittel 2: Datamaskiner og problemløsing'
+            lessonGroup-5:
+              display_name: Undersøking
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2825,6 +2832,8 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -2839,6 +2848,8 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2853,6 +2864,8 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2867,6 +2880,8 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2897,6 +2912,10 @@ nn:
           lessons:
             lesson-3:
               name: Introduksjon
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introduksjon
         csd-post-survey-2023:
           title: Undersøking etter kurs
         focus-on-data-post-survey-2023:
@@ -2911,3 +2930,77 @@ nn:
           title: Undersøking etter kurs
         focus-on-creativity-post-survey-2023:
           title: Undersøking etter kurs
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: Variablar
+          description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-3:
+              display_name: Sekvensiering
+            lessonGroup-4:
+              display_name: Løkker
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-3:
+              display_name: Sekvensiering
+            lessonGroup-4:
+              display_name: Løkker
+          description_short: Ein introduksjon til informatikk for dei som ikkje kan lese.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-3:
+              display_name: Sekvensiering
+            lessonGroup-4:
+              display_name: Løkker
+            lessonGroup-6:
+              display_name: Hendingar
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-3:
+              display_name: Sekvensiering
+            lessonGroup-4:
+              display_name: Løkker
+            lessonGroup-5:
+              display_name: Hendingar
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-3:
+              display_name: Sekvensiering
+            lessonGroup-6:
+              display_name: Løkker
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Løkker i løkke
+            lessonGroup-4:
+              display_name: Funksjonar
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Betingelser
+            lessonGroup-5:
+              display_name: Variablar
+          description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.

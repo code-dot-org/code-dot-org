@@ -3,94 +3,646 @@ te:
   data:
     script:
       name:
+        playlab:
+          title: ల్యాబ్ ప్లే
+        artist:
+          title: కళాకారుడు
+        hourofcode:
+          title: క్లాసిక్ మేజ్
+        frozen:
+          title: అన్నా మరియు ఎల్సాతో కోడ్
+        infinity:
+          title: డిస్నీ ఇన్‌ఫినిటీ ప్లే ల్యాబ్
+          description: డిస్నీ ఇన్ఫినిటీ పాత్రలు నటించిన కథ లేదా ఆటను సృష్టించడానికి ప్లే ల్యాబ్ ఉపయోగించండి.
+          description_short: డిస్నీ ఇన్ఫినిటీ పాత్రలు నటించిన కథ లేదా ఆటను సృష్టించడానికి ప్లే ల్యాబ్ ఉపయోగించండి.
+          student_description: డిస్నీ ఇన్ఫినిటీ పాత్రలు నటించిన కథ లేదా ఆటను సృష్టించడానికి ప్లే ల్యాబ్ ఉపయోగించండి.
+        netsim:
+          title: ఇంటర్నెట్ సిమ్యులేటర్
+        pixelation:
+          title: పిక్సెలేషన్
+        20-hour:
+          description: ఈ 20 గంటల కోర్సు కోర్సులలో కోర్ కంప్యూటర్ సైన్స్ మరియు ప్రోగ్రామింగ్ భావనలను కవర్ చేస్తుంది 2-4. కోర్సు 10-18 సంవత్సరాల వయస్సు గల ఉపయోగం కోసం రూపొందించబడింది. మరింత పూర్తి అనుభవం కోసం 2-4 కోర్సులను చూడండి!
+          student_description: ఈ 20 గంటల కోర్సు కోర్సులలో కోర్ కంప్యూటర్ సైన్స్ మరియు ప్రోగ్రామింగ్ భావనలను కవర్ చేస్తుంది 2-4. కోర్సు 10-18 సంవత్సరాల వయస్సు గల ఉపయోగం కోసం రూపొందించబడింది. మరింత పూర్తి అనుభవం కోసం 2-4 కోర్సులను చూడండి!
+          name: 20 గంటల
         events:
           title: ఈవెంట్లు
           description: ఈవెంట్లు
           description_short: ఈవెంట్లు
           student_description: ఈవెంట్లు
+        flappy:
+          title: ఫ్లాపీ కోడ్
+          description: మీ స్వంత ఆటను 10 నిమిషాల్లోపు రాయాలనుకుంటున్నారా? మా Flappy కోడ్ ట్యుటోరియల్ని ప్రయత్నించండి!
+          student_description: మీ స్వంత ఆటను 10 నిమిషాల్లోపు రాయాలనుకుంటున్నారా? మా Flappy కోడ్ ట్యుటోరియల్ని ప్రయత్నించండి!
+        jigsaw:
+          title: అడ్డదిడ్డంగా
+        step:
+          title: దశ
+        text-compression:
+          title: వచనం కుదింపు
+        allthethings:
+          lessons:
+            lesson-49:
+              name: సంగీతం
+        cspunit4draft:
+          description_short: డేటా
+        gumball:
+          title: గమ్‌బాల్ ప్లే ల్యాబ్
+        starwars:
+          title: 'స్టార్ వార్స్: కోడ్ తో ఒక గెలాక్సీని నిర్మించడం (జావాస్క్రిప్ట్)'
+        starwarsblocks:
+          title: 'స్టార్ వార్స్: కోడ్ తో ఒక గెలాక్సీని నిర్మించడం (బ్లాక్‌లీ)'
+        mc:
+          description_short: కోడ్ ద్వారా Minecraft ప్రపంచాన్ని అన్వేషించండి.
+        oceans:
+          title: AI ఫర్ ఓషన్స్
+        CSDU3-Draft:
+          description_short: ప్రోగ్రాము చేయడం
+        TEMP CSD Unit 3:
+          description_short: ప్రోగ్రాము చేయడం
+        CSDU2-Draft:
+          description_short: వెబ్ అభివృద్ధి
+        CSDU5-Draft:
+          description_short: డేటా
+        CSDU6-Draft:
+          description_short: మేకర్‌ల్యాబ్
+        csp1-support:
+          title: యూనిట్ 1 ఆన్‌లైన్ ప్రొఫెషనల్ లెర్నింగ్ కోర్సు
+        basketball:
+          title: మీ బృందమును ఎంచుకోండి మరియు ఒక బాస్కెట్‌బాల్ ఆట చేయండి
+          description_short: మీ బృందమును ఎంచుకోండి మరియు ఒక బాస్కెట్‌బాల్ ఆట చేయండి
+          description: మీ బృందమును ఎంచుకోండి మరియు ఒక బాస్కెట్‌బాల్ ఆట చేయండి
+          student_description: మీ బృందమును ఎంచుకోండి మరియు ఒక బాస్కెట్‌బాల్ ఆట చేయండి
+          name: బాస్కెట్బాల్
+        minecraft:
+          description_short: Minecraft యొక్క మీ స్వంత వెర్షన్లో ప్రోగ్రామ్ జంతువులు మరియు ఇతర Minecraft జీవులు.
+          description: Minecraft యొక్క మీ స్వంత వెర్షన్లో ప్రోగ్రామ్ జంతువులు మరియు ఇతర Minecraft జీవులు.
+          student_description: Minecraft యొక్క మీ స్వంత వెర్షన్లో ప్రోగ్రామ్ జంతువులు మరియు ఇతర Minecraft జీవులు.
+        coursea-draft:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు A'
+        courseb-draft:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు B.'
+        coursec-draft:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు C'
+        coursed-draft:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు D'
+        coursee-draft:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు E'
+        coursef-draft:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు F'
+        sports:
+          name: క్రీడలు
+        coursed-ramp:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు D'
+        csd2-old:
+          description_short: వెబ్ అభివృద్ధి
+        coursea-2017:
+          title: కోర్సు A.
+          assignment_family_title: కోర్సు A.
+        courseb-2017:
+          title: కోర్సు B
+          assignment_family_title: కోర్సు B
+        coursec-2017:
+          title: కోర్సు C
+          assignment_family_title: కోర్సు C
+        coursed-2017:
+          title: కోర్సు D
+          assignment_family_title: కోర్సు D
+        coursee-2017:
+          title: కోర్సు E
+          assignment_family_title: కోర్సు E
+        coursef-2017:
+          title: కోర్సు F
+          assignment_family_title: కోర్సు F
+        pre-express-2017:
+          title: ప్రీ-రీడర్ ఎక్స్‌ప్రెస్
+          assignment_family_title: ప్రీ-రీడర్ ఎక్స్‌ప్రెస్
+        applab-intro:
+          title: యాప్ ల్యాబ్ కు పరిచయం
+        hero:
+          name: హీరో
+        coursea-2018:
+          assignment_family_title: కోర్సు A.
+        courseb-2018:
+          assignment_family_title: కోర్సు B
+        coursed-2018:
+          assignment_family_title: కోర్సు D
+        coursec-2018:
+          assignment_family_title: కోర్సు C
+        coursee-2018:
+          assignment_family_title: కోర్సు E
+        coursef-2018:
+          assignment_family_title: కోర్సు F
+        pre-express-2018:
+          assignment_family_title: ప్రీ-రీడర్ ఎక్స్‌ప్రెస్
         dance:
+          title: డాన్స్ పార్టీ (2018)
           name: డాన్స్
         aquatic:
           name: జలచర
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        dance-extras:
+          title: డ్యాన్స్ చేస్తూనే ఉండండి (2018)
+        coursef-2019:
+          lesson_groups:
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_data:
+              display_name: డేటా
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
+            csf_internet:
+              display_name: అంతర్జాలం
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
         coursed-2019:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_binary:
+              display_name: బైనరీ
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_nested_loops:
+              display_name: సమూహ ఉచ్చులు
+            csf_functions:
+              display_name: విధులు
+        express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_functions:
+              display_name: విధులు
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
         coursec-2019:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_binary:
+              display_name: బైనరీ
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_data:
+              display_name: డేటా
+        gamelab:
+          title: గేమ్ ల్యాబ్
         coursea-2019:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         courseb-2019:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         pre-express-2019:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: జాబితాలు
+            csp_loops:
+              display_name: ఉచ్చులు
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: జాబితాలు
+            csp_loops:
+              display_name: ఉచ్చులు
         csl-vn:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         dance-2019:
           title: డాన్స్ పార్టీ
           description_short: మీ స్నేహితులతో పంచుకోవడానికి ఒక డాన్స్ పార్టీని కోడ్ చేయండి. బియాన్స్, హ్యారీ స్టైల్స్, లిజ్జో, లిల్ నాస్ ఎక్స్, సెలెనా గోమెజ్ నటించారు, డిస్నీ యొక్క “ఎన్కాంటో” నుండి సంగీతం మరియు మరెన్నో!
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_conditionals:
+              display_name: షరతులు
+            csf_nested_loops:
+              display_name: సమూహ ఉచ్చులు
+            csf_functions:
+              display_name: విధులు
         time4cs-control-unit-1:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
         time4cs-experiment-unit-1:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: జాబితాలు
+            csp_loops:
+              display_name: ఉచ్చులు
         coursea-2020:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         courseb-2020:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         coursec-2020:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_binary:
+              display_name: బైనరీ
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_data:
+              display_name: డేటా
         coursed-2020:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_binary:
+              display_name: బైనరీ
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_nested_loops:
+              display_name: సమూహ ఉచ్చులు
+            csf_functions:
+              display_name: విధులు
+        coursef-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_data:
+              display_name: డేటా
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_functions:
+              display_name: విధులు
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
         pre-express-2020:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+        csp5-virtual:
+          title: యాప్ ల్యాబ్‌లో ఈవెంట్‌చే-నడపబడే ప్రోగ్రామింగ్
+        csd3-virtual:
+          title: గేమ్ ల్యాబ్ కు స్వీయ ఒరవడి పరిచయము
+        outbreak:
+          title: ఔట్‌బ్రేక్ సిమ్యులేటర్
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: పరిచయం
+            lessonGroup-3:
+              display_name: వేరియబుల్స్
+            outbreak:
+              display_name: ఔట్‌బ్రేక్ సిమ్యులేటర్
+            debugging:
+              display_name: డీబగ్గింగ్
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: జాబితాలు
+            csp_loops:
+              display_name: ఉచ్చులు
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: అల్గోరిథంలు
         coursea-2021:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         courseb-2021:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         coursec-2021:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_binary:
+              display_name: బైనరీ
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_data:
+              display_name: డేటా
         coursed-2021:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_binary:
+              display_name: బైనరీ
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-6:
+              display_name: డిజిటల్ పౌరసత్వం
+        coursee-2021:
+          lesson_groups:
+            ramp_up:
+              display_name: సమూహ ఉచ్చులు
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_nested_loops:
+              display_name: షరతులు
+            csf_functions:
+              display_name: విధులు
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_variables:
+              display_name: ఉచ్చులు కోసం
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
+            lessonGroup-8:
+              display_name: వేరియబుల్స్
+            lessonGroup-7:
+              display_name: డిజిటల్ పౌరసత్వం
         express-2021:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_functions:
+              display_name: విధులు
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
             lessonGroup-9:
               display_name: ఈవెంట్లు
         pre-express-2021:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: పరిచయం
+            lessonGroup-3:
+              display_name: వేరియబుల్స్
+            variables:
+              display_name: వేరియబుల్స్
+        k5-onlinepd-2021:
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: పరిచయం
+            Introduction:
+              display_name: పరిచయం
+        aiml-2021:
+          title: AI మరియు మెషీన్ లెర్నింగ్ మాడ్యూల్
+        csd7-2021:
+          title: AI మరియు మెషీన్ లెర్నింగ్
+        self-paced-pl-csd1-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Code.org కు నావిగేట్ అవుతోంది
+            lessonGroup-5:
+              display_name: CS అన్వేషణలను బోధించడానికి తయారవుతోంది
+          title: 'మోడ్యూల్ 1: సుస్వాగతం '
+          description: "ఈ మోడ్యూల్ Code.org మరియు ఈ వృత్తినైపుణ్య అభ్యసనా కోర్సు రెండింటికీ ఒక క్లుప్తమైన పరిచయము. \n\n**మీరు:**\n\n-   Code.org మరియు CS అన్వేషణలకు పరిచయం పొందుతారు.\n-   ఈ వృత్తినైపుణ్య అభ్యసన కోర్సులో ఎలా నిమగ్నం కావాలో తెలుసుకుంటారు.\n\n**సూచించబడిన సమయం:** 10 నిముషాలు"
+          student_description: "ఈ మోడ్యూల్ Code.org మరియు ఈ వృత్తినైపుణ్య అభ్యసనా కోర్సు రెండింటికీ ఒక క్లుప్తమైన పరిచయము. \n\n**మీరు:**\n\n-   Code.org మరియు CS అన్వేషణలకు పరిచయం పొందుతారు.\n-   ఈ వృత్తినైపుణ్య అభ్యసన కోర్సులో ఎలా నిమగ్నం కావాలో తెలుసుకుంటారు.\n\n**సూచించబడిన సమయం:** 10 నిముషాలు"
+        self-paced-pl-csd2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.org కు నావిగేట్ అవుతోంది
+          title: 'మోడ్యూల్ 2: Code.org న్యావిగేట్ చేయుట'
+          description: "CS అన్వేషణలను బోధించునప్పుడు విద్యార్థుల అభ్యసనానికి మద్దతు ఇవ్వడానికి మీరు ఉపయోగించే సాధనాల పట్ల మీకు అవగాహన కలిగించడానికి ఈ మోడ్యూల్ రూపొందించబడింది. \n\n**మీరు ఇలా చేస్తారు:**\n\n-   Code.org వెబ్‌సైట్ మరియు టీచర్ టూల్స్ కు న్యావిగేట్ అవుతారు.\n-   ఒక తరగతి గది ఏర్పాటు చేస్తారు\n-   కోర్సు పాఠ్య ప్రణాళికలు మరియు టీచర్ వనరుల్ని గుర్తించి మరియు ఉపయోగిస్తారు. \n-   కోర్సును బోధిస్తున్నప్పుడు మద్దతు ఎలా గ్రహించాలో తెలుసుకుంటారు.\n\n**సూచించబడిన సమయం:** 60 నిముషాలు"
+          student_description: "CS అన్వేషణలను బోధించునప్పుడు విద్యార్థుల అభ్యసనానికి మద్దతు ఇవ్వడానికి మీరు ఉపయోగించే సాధనాల పట్ల మీకు అవగాహన కలిగించడానికి ఈ మోడ్యూల్ రూపొందించబడింది. \n\n**మీరు ఇలా చేస్తారు:**\n\n-   Code.org వెబ్‌సైట్ మరియు టీచర్ టూల్స్ కు న్యావిగేట్ అవుతారు.\n-   ఒక తరగతి గది ఏర్పాటు చేస్తారు\n-   కోర్సు పాఠ్య ప్రణాళికలు మరియు టీచర్ వనరుల్ని గుర్తించి మరియు ఉపయోగిస్తారు. \n-   కోర్సును బోధిస్తున్నప్పుడు మద్దతు ఎలా గ్రహించాలో తెలుసుకుంటారు.\n\n**సూచించబడిన సమయం:** 60 నిముషాలు"
+        self-paced-pl-csd3-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS అన్వేషణల యొక్క అవలోకనం
+          title: 'మోడ్యూల్ 3: CS అన్వేషణల యొక్క అవలోకనం'
+          description: "ఈ మోడ్యూల్ మీకు, విద్యార్థులు కోర్సు అంతటా నేర్చుకోబోయే సిద్ధాంతాలు మరియు విద్యార్థులు ఉపయోగించే సాధనాల పట్ల ప్రయత్నముతో CS అన్వేషణల కోర్సు యొక్క ఒక అవలోకనాన్ని అందిస్తుంది. ఈ మోడ్యూలులో నిమగ్నం కావడం వల్ల మీ తరగతి గదిలో మీరు అమలు చేయబోయే కోర్సు కంటెంటును ఎలా ఎంపిక చేసుకోవాలో నిర్ణయాలు తీసుకోవడానికి మీకు సహాయపడుతుంది. \n\n**మీరు:**\n\n-   CS అన్వేషణల పాఠ్యాంశ ప్రణాళికపై ఉన్నత-స్థాయి అవగాహన సంపాదించుకుంటారు.\n-   CS అన్వేషణల లోపున ఉపయోగించబడే ప్రోగ్రామింగ్ వాతావరణాలతో సుపరిచితులు అవుతారు.\n-   మీ తరగతిలో ఏ CS అన్వేషణలను మీరు బోధించాలో నిర్ణయించుకుంటారు.\n\n**సూచించబడిన సమయం:** 60 నిముషాలు"
+          student_description: "ఈ మోడ్యూల్ మీకు, విద్యార్థులు కోర్సు అంతటా నేర్చుకోబోయే సిద్ధాంతాలు మరియు విద్యార్థులు ఉపయోగించే సాధనాల పట్ల ప్రయత్నముతో CS అన్వేషణల కోర్సు యొక్క ఒక అవలోకనాన్ని అందిస్తుంది. ఈ మోడ్యూలులో నిమగ్నం కావడం వల్ల మీ తరగతి గదిలో మీరు అమలు చేయబోయే కోర్సు కంటెంటును ఎలా ఎంపిక చేసుకోవాలో నిర్ణయాలు తీసుకోవడానికి మీకు సహాయపడుతుంది. \n\n**మీరు:**\n\n-   CS అన్వేషణల పాఠ్యాంశ ప్రణాళికపై ఉన్నత-స్థాయి అవగాహన సంపాదించుకుంటారు.\n-   CS అన్వేషణల లోపున ఉపయోగించబడే ప్రోగ్రామింగ్ వాతావరణాలతో సుపరిచితులు అవుతారు.\n-   మీ తరగతిలో ఏ CS అన్వేషణలను మీరు బోధించాలో నిర్ణయించుకుంటారు.\n\n**సూచించబడిన సమయం:** 60 నిముషాలు"
+        self-paced-pl-csd4-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS అన్వేషణల బోధన మరియు అభ్యసనం
+          title: 'మోడ్యూల్ 4: CS అన్వేషణల బోధన మరియు అభ్యసనం'
+          description: "ఈ మోడ్యూలులో, విద్యార్థులు CS అన్వేషణల కోర్సు అంతటా నిమగ్నమయ్యే అధీకృత CS అభ్యాసాలను మీకు పరిచయం చేయడం జరుగుతుంది. ఈ ఆచరణలలో డీబగ్గింగ్, వనరులను ఉపయోగించుకోవడం, మరియు పెయిర్ ప్రోగ్రామింగ్ ఇమిడి ఉంటాయి. ఒక CS అన్వేషణల తరగతి గది లోపున టీచర్ పాత్రను కూడా మీరు అన్వేషిస్తారు మరియు కోర్సును బోధిస్తూనే విద్యార్థి అభ్యసనానికి మీరు ఎలా మద్దతు ఇస్తారో ఒక ప్రణాళిక చేసుకుంటారు. \n\n**మీరు ఇలా చేస్తారు:**\n\n-   CS అన్వేషణల తరగతి గది లోపున టీచర్ పాత్రను పరిగణిస్తారు. \n-   విద్యార్థులు CS అన్వేషణల కోర్సు అంతటా వృద్ధి చేసుకునే అధీకృత CS అభ్యాసాల గురించి తెలుసుకుంటారు.\n-   వైవిధ్యత, కొనసాగుతున్న విశ్లేషణ, మరియు చేకూర్పు యొక్క సంస్కృతిని ప్రోత్సహించడం ద్వారా విద్యార్థి అభ్యసనానికి మీరు ఎలా మద్దతు ఇస్తారో ఒక ప్రణాళిక చేసుకుంటారు. \n\n**సూచించబడిన సమయం:** 50 నిముషాలు"
+          student_description: "ఈ మోడ్యూలులో, విద్యార్థులు CS అన్వేషణల కోర్సు అంతటా నిమగ్నమయ్యే అధీకృత CS అభ్యాసాలను మీకు పరిచయం చేయడం జరుగుతుంది. ఈ ఆచరణలలో డీబగ్గింగ్, వనరులను ఉపయోగించుకోవడం, మరియు పెయిర్ ప్రోగ్రామింగ్ ఇమిడి ఉంటాయి. ఒక CS అన్వేషణల తరగతి గది లోపున టీచర్ పాత్రను కూడా మీరు అన్వేషిస్తారు మరియు కోర్సును బోధిస్తూనే విద్యార్థి అభ్యసనానికి మీరు ఎలా మద్దతు ఇస్తారో ఒక ప్రణాళిక చేసుకుంటారు. \n\n**మీరు ఇలా చేస్తారు:**\n\n-   CS అన్వేషణల తరగతి గది లోపున టీచర్ పాత్రను పరిగణిస్తారు. \n-   విద్యార్థులు CS అన్వేషణల కోర్సు అంతటా వృద్ధి చేసుకునే అధీకృత CS అభ్యాసాల గురించి తెలుసుకుంటారు.\n-   వైవిధ్యత, కొనసాగుతున్న విశ్లేషణ, మరియు చేకూర్పు యొక్క సంస్కృతిని ప్రోత్సహించడం ద్వారా విద్యార్థి అభ్యసనానికి మీరు ఎలా మద్దతు ఇస్తారో ఒక ప్రణాళిక చేసుకుంటారు. \n\n**సూచించబడిన సమయం:** 50 నిముషాలు"
+        self-paced-pl-csd5-2021:
+          title: AI మరియు మెషీన్ లెర్నింగ్ బోధన
+          description: "Code.org యొక్క AI మరియు మెషీన్ లెర్నింగ్ యూనిట్ ను బోధించడానికి మీ తయారీకి సహాయపడేందుకు ఈ వృత్తినైపుణ్యమైన మోడ్యూల్ రూపొందించబడింది.\n\n**ఈ వృత్తినైపుణ్యమైన మోడ్యూల్ లో మీరు:**\n\n-   కృత్రిమ మేధ మరియు మెషీన్ లెర్నింగ్ కు పరిచయం పొందుతారు. \n-   యూనిట్ లో చేర్చబడిన ముఖ్య సిద్ధాంతాలను ఆచరిస్తారు.\n-   AI ల్యాబ్ మరియు యాప్ ల్యాబ్ తో నిమగ్నమవుతారు.\n-   అధ్యాయపు చివరి ప్రాజెక్టులను అన్వేషిస్తారు. \n-   మీ విద్యార్థులతో యూనిట్ అమలుకు ప్రణాళిక చేసుకుంటారు.\n\n**సూచించబడిన సమయం:** 120 నిముషాలు"
+          student_description: "Code.org యొక్క AI మరియు మెషీన్ లెర్నింగ్ యూనిట్ ను బోధించడానికి మీ తయారీకి సహాయపడేందుకు ఈ వృత్తినైపుణ్యమైన మోడ్యూల్ రూపొందించబడింది.  \n\n**ఈ వృత్తినైపుణ్యమైన అభ్యసన మోడ్యూల్ లో మీరు:**\n\n-   కృత్రిమ మేధ మరియు మెషీన్ లెర్నింగ్ కు పరిచయం పొందుతారు. \n-   AI ల్యాబ్ ఉపయోగించి మెషీన్ లెర్నింగ్ నమూనాను శిక్షణ ఇస్తారు.\n-   మెషీన్ లెర్నింగ్ యాప్స్ లో నిమగ్నమవుతారు. \n-   AI మరియు మెషీన్ లెర్నింగ్ యొక్క వాస్తవ-ప్రపంచ పర్యవసానాలను పరిగణిస్తారు. \n-   అధ్యాయపు చివరి ప్రాజెక్టులను అన్వేషిస్తారు.\n\n**సూచించబడిన సమయం:** 120 నిముషాలు"
+        self-paced-pl-csd6-2021:
+          description: "Code.org యొక్క AI మరియు మెషీన్ లెర్నింగ్ యూనిట్ ను బోధించడానికి మీ తయారీకి సహాయపడేందుకు ఈ వృత్తినైపుణ్యమైన మోడ్యూల్ రూపొందించబడింది.  \n\n**ఈ వృత్తినైపుణ్యమైన అభ్యసన మోడ్యూల్ లో మీరు:**\n\n-   కృత్రిమ మేధ మరియు మెషీన్ లెర్నింగ్ కు పరిచయం పొందుతారు. \n-   AI ల్యాబ్ ఉపయోగించి మెషీన్ లెర్నింగ్ నమూనాను శిక్షణ ఇస్తారు.\n-   మెషీన్ లెర్నింగ్ యాప్స్ లో నిమగ్నమవుతారు. \n-   AI మరియు మెషీన్ లెర్నింగ్ యొక్క వాస్తవ-ప్రపంచ పర్యవసానాలను పరిగణిస్తారు. \n-   అధ్యాయపు చివరి ప్రాజెక్టులను అన్వేషిస్తారు.\n\n**సూచించబడిన సమయం:** 120 నిముషాలు"
+        self-paced-pl-csp2-2021:
+          title: 'మోడ్యూల్ 2: Code.org న్యావిగేట్ చేయుట'
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: వనరుల
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: పాఠాలు
+        csa-self-paced-pl:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.org కు నావిగేట్ అవుతోంది
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: పాఠాలు
+        hello-world-animals:
+          title: 'హలో వరల్డ్: జంతువులు'
+        hello-world-retro:
+          title: 'హలో వరల్డ్: రెట్రో'
+        ai-ethics:
+          title: మా నైతికతల యొక్క AI కోడ్
+          description_audience: 6-12 తరగతులు
+        dance-unplugged:
+          title: అవర్ ఆఫ్ కోడ్ - డాన్స్ పార్టీ - అన్‌ప్లగ్ చేయబడింది
+        poem-art:
+          title: పద్య కళ
         csd-post-survey-2021:
           name: csd-పోస్ట్-సర్వే-2021
           description: ఈ యూనిట్‌లో కోర్సు-పూర్వ సర్వే CS అన్వేషణలు ఉన్నాయి. విద్యార్థులు CS అన్వేషణలలో వారికి కేటాయించిన అఖరి యూనిట్ పూర్తి చేసిన తర్వాత ఈ యూనిట్ కేటాయించబడవచ్చు.
@@ -106,78 +658,421 @@ te:
         csa-pl-module-3-test:
           name: csa-pl-మాడ్యూల్-3-టెస్ట్
           title: టెక్స్ట్-ఆధారిత ప్రోగ్రామింగ్‌తో మద్దతు
+        ai-ethics-2021:
+          title: మా నైతికతల యొక్క AI కోడ్
+          description_audience: 6-12 తరగతులు
+        poem-art-2021:
+          title: పద్య కళ
+        poetry-2021:
+          title: కవిత్వముతో కోడింగ్
+        hello-world-animals-2021:
+          title: 'హలో వరల్డ్: జంతువులు'
+        hello-world-retro-2021:
+          title: 'హలో వరల్డ్: రెట్రో'
         2022drafting:
           lesson_groups:
             lessonGroup-8:
               display_name: అవర్ ఆఫ్ కోడ్
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: వేరియబుల్స్
         coursea-2022:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         express-2022:
           lesson_groups:
             lessonGroup-9:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_functions:
+              display_name: విధులు
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: జాబితాలు
+            csp_loops:
+              display_name: ఉచ్చులు
         courseb-2022:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         coursec-2022:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_data:
+              display_name: డేటా
         coursed-2022:
           lesson_groups:
+            lessonGroup-6:
+              display_name: డిజిటల్ పౌరసత్వం
             csf_events:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            ramp_up:
+              display_name: సమూహ ఉచ్చులు
+            csf_functions:
+              display_name: విధులు
+            csf_nested_loops:
+              display_name: షరతులు
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-8:
+              display_name: వేరియబుల్స్
         pre-express-2022:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+        self-paced-pl-csa2-2022:
+          title: 'మోడ్యూల్ 2: Code.org న్యావిగేట్ చేయుట'
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-8:
+              display_name: వేరియబుల్స్
+        vpl-csd7-ci-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: AI మరియు మెషీన్ లెర్నింగ్ బోధన
         csd-post-survey-2022:
           description: ఈ యూనిట్‌లో కోర్సు-పూర్వ సర్వే CS అన్వేషణలు ఉన్నాయి. విద్యార్థులు CS అన్వేషణలలో వారికి కేటాయించిన అఖరి యూనిట్ పూర్తి చేసిన తర్వాత ఈ యూనిట్ కేటాయించబడవచ్చు.
           student_description: ఈ యూనిట్‌లో CS అన్వేషణలను క్లాసు పూర్తి చేసినప్పుడు ఒక సర్వే ఉంది. ఈ సర్వే చేయడానికి సమయం వచ్చినప్పుడు మీ టీచర్ మీకు చెప్తారు.
+        aiml-2022:
+          title: AI మరియు మెషీన్ లెర్నింగ్ మాడ్యూల్
+        self-paced-pl-csd1-2022:
+          title: 'మోడ్యూల్ 1: సుస్వాగతం '
+          description: "ఈ మోడ్యూల్ Code.org మరియు ఈ వృత్తినైపుణ్య అభ్యసనా కోర్సు రెండింటికీ ఒక క్లుప్తమైన పరిచయము. \n\n**మీరు:**\n\n-   Code.org మరియు CS అన్వేషణలకు పరిచయం పొందుతారు.\n-   ఈ వృత్తినైపుణ్య అభ్యసన కోర్సులో ఎలా నిమగ్నం కావాలో తెలుసుకుంటారు.\n\n**సూచించబడిన సమయం:** 10 నిముషాలు"
+          student_description: "ఈ మోడ్యూల్ Code.org మరియు ఈ వృత్తినైపుణ్య అభ్యసనా కోర్సు రెండింటికీ ఒక క్లుప్తమైన పరిచయము. \n\n**మీరు:**\n\n-   Code.org మరియు CS అన్వేషణలకు పరిచయం పొందుతారు.\n-   ఈ వృత్తినైపుణ్య అభ్యసన కోర్సులో ఎలా నిమగ్నం కావాలో తెలుసుకుంటారు.\n\n**సూచించబడిన సమయం:** 10 నిముషాలు"
+        self-paced-pl-csd2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.org కు నావిగేట్ అవుతోంది
+          title: 'మోడ్యూల్ 2: Code.org న్యావిగేట్ చేయుట'
+          description: "CS అన్వేషణలను బోధించునప్పుడు విద్యార్థుల అభ్యసనానికి మద్దతు ఇవ్వడానికి మీరు ఉపయోగించే సాధనాల పట్ల మీకు అవగాహన కలిగించడానికి ఈ మోడ్యూల్ రూపొందించబడింది. \n\n**మీరు ఇలా చేస్తారు:**\n\n-   Code.org వెబ్‌సైట్ మరియు టీచర్ టూల్స్ కు న్యావిగేట్ అవుతారు.\n-   ఒక తరగతి గది ఏర్పాటు చేస్తారు\n-   కోర్సు పాఠ్య ప్రణాళికలు మరియు టీచర్ వనరుల్ని గుర్తించి మరియు ఉపయోగిస్తారు. \n-   కోర్సును బోధిస్తున్నప్పుడు మద్దతు ఎలా గ్రహించాలో తెలుసుకుంటారు.\n\n**సూచించబడిన సమయం:** 60 నిముషాలు"
+          student_description: "CS అన్వేషణలను బోధించునప్పుడు విద్యార్థుల అభ్యసనానికి మద్దతు ఇవ్వడానికి మీరు ఉపయోగించే సాధనాల పట్ల మీకు అవగాహన కలిగించడానికి ఈ మోడ్యూల్ రూపొందించబడింది. \n\n**మీరు ఇలా చేస్తారు:**\n\n-   Code.org వెబ్‌సైట్ మరియు టీచర్ టూల్స్ కు న్యావిగేట్ అవుతారు.\n-   ఒక తరగతి గది ఏర్పాటు చేస్తారు\n-   కోర్సు పాఠ్య ప్రణాళికలు మరియు టీచర్ వనరుల్ని గుర్తించి మరియు ఉపయోగిస్తారు. \n-   కోర్సును బోధిస్తున్నప్పుడు మద్దతు ఎలా గ్రహించాలో తెలుసుకుంటారు.\n\n**సూచించబడిన సమయం:** 60 నిముషాలు"
+        self-paced-pl-csd3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS అన్వేషణల యొక్క అవలోకనం
+          title: 'మోడ్యూల్ 3: CS అన్వేషణల యొక్క అవలోకనం'
+          description: "ఈ మోడ్యూల్ మీకు, విద్యార్థులు కోర్సు అంతటా నేర్చుకోబోయే సిద్ధాంతాలు మరియు విద్యార్థులు ఉపయోగించే సాధనాల పట్ల ప్రయత్నముతో CS అన్వేషణల కోర్సు యొక్క ఒక అవలోకనాన్ని అందిస్తుంది. ఈ మోడ్యూలులో నిమగ్నం కావడం వల్ల మీ తరగతి గదిలో మీరు అమలు చేయబోయే కోర్సు కంటెంటును ఎలా ఎంపిక చేసుకోవాలో నిర్ణయాలు తీసుకోవడానికి మీకు సహాయపడుతుంది. \n\n**మీరు:**\n\n-   CS అన్వేషణల పాఠ్యాంశ ప్రణాళికపై ఉన్నత-స్థాయి అవగాహన సంపాదించుకుంటారు.\n-   CS అన్వేషణల లోపున ఉపయోగించబడే ప్రోగ్రామింగ్ వాతావరణాలతో సుపరిచితులు అవుతారు.\n-   మీ తరగతిలో ఏ CS అన్వేషణలను మీరు బోధించాలో నిర్ణయించుకుంటారు.\n\n**సూచించబడిన సమయం:** 60 నిముషాలు"
+          student_description: "ఈ మోడ్యూల్ మీకు, విద్యార్థులు కోర్సు అంతటా నేర్చుకోబోయే సిద్ధాంతాలు మరియు విద్యార్థులు ఉపయోగించే సాధనాల పట్ల ప్రయత్నముతో CS అన్వేషణల కోర్సు యొక్క ఒక అవలోకనాన్ని అందిస్తుంది. ఈ మోడ్యూలులో నిమగ్నం కావడం వల్ల మీ తరగతి గదిలో మీరు అమలు చేయబోయే కోర్సు కంటెంటును ఎలా ఎంపిక చేసుకోవాలో నిర్ణయాలు తీసుకోవడానికి మీకు సహాయపడుతుంది. \n\n**మీరు:**\n\n-   CS అన్వేషణల పాఠ్యాంశ ప్రణాళికపై ఉన్నత-స్థాయి అవగాహన సంపాదించుకుంటారు.\n-   CS అన్వేషణల లోపున ఉపయోగించబడే ప్రోగ్రామింగ్ వాతావరణాలతో సుపరిచితులు అవుతారు.\n-   మీ తరగతిలో ఏ CS అన్వేషణలను మీరు బోధించాలో నిర్ణయించుకుంటారు.\n\n**సూచించబడిన సమయం:** 60 నిముషాలు"
+        self-paced-pl-csd4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS అన్వేషణల బోధన మరియు అభ్యసనం
+          title: 'మోడ్యూల్ 4: CS అన్వేషణల బోధన మరియు అభ్యసనం'
+          description: "ఈ మోడ్యూలులో, విద్యార్థులు CS అన్వేషణల కోర్సు అంతటా నిమగ్నమయ్యే అధీకృత CS అభ్యాసాలను మీకు పరిచయం చేయడం జరుగుతుంది. ఈ ఆచరణలలో డీబగ్గింగ్, వనరులను ఉపయోగించుకోవడం, మరియు పెయిర్ ప్రోగ్రామింగ్ ఇమిడి ఉంటాయి. ఒక CS అన్వేషణల తరగతి గది లోపున టీచర్ పాత్రను కూడా మీరు అన్వేషిస్తారు మరియు కోర్సును బోధిస్తూనే విద్యార్థి అభ్యసనానికి మీరు ఎలా మద్దతు ఇస్తారో ఒక ప్రణాళిక చేసుకుంటారు. \n\n**మీరు ఇలా చేస్తారు:**\n\n-   CS అన్వేషణల తరగతి గది లోపున టీచర్ పాత్రను పరిగణిస్తారు. \n-   విద్యార్థులు CS అన్వేషణల కోర్సు అంతటా వృద్ధి చేసుకునే అధీకృత CS అభ్యాసాల గురించి తెలుసుకుంటారు.\n-   వైవిధ్యత, కొనసాగుతున్న విశ్లేషణ, మరియు చేకూర్పు యొక్క సంస్కృతిని ప్రోత్సహించడం ద్వారా విద్యార్థి అభ్యసనానికి మీరు ఎలా మద్దతు ఇస్తారో ఒక ప్రణాళిక చేసుకుంటారు. \n\n**సూచించబడిన సమయం:** 50 నిముషాలు"
+          student_description: "ఈ మోడ్యూలులో, విద్యార్థులు CS అన్వేషణల కోర్సు అంతటా నిమగ్నమయ్యే అధీకృత CS అభ్యాసాలను మీకు పరిచయం చేయడం జరుగుతుంది. ఈ ఆచరణలలో డీబగ్గింగ్, వనరులను ఉపయోగించుకోవడం, మరియు పెయిర్ ప్రోగ్రామింగ్ ఇమిడి ఉంటాయి. ఒక CS అన్వేషణల తరగతి గది లోపున టీచర్ పాత్రను కూడా మీరు అన్వేషిస్తారు మరియు కోర్సును బోధిస్తూనే విద్యార్థి అభ్యసనానికి మీరు ఎలా మద్దతు ఇస్తారో ఒక ప్రణాళిక చేసుకుంటారు. \n\n**మీరు ఇలా చేస్తారు:**\n\n-   CS అన్వేషణల తరగతి గది లోపున టీచర్ పాత్రను పరిగణిస్తారు. \n-   విద్యార్థులు CS అన్వేషణల కోర్సు అంతటా వృద్ధి చేసుకునే అధీకృత CS అభ్యాసాల గురించి తెలుసుకుంటారు.\n-   వైవిధ్యత, కొనసాగుతున్న విశ్లేషణ, మరియు చేకూర్పు యొక్క సంస్కృతిని ప్రోత్సహించడం ద్వారా విద్యార్థి అభ్యసనానికి మీరు ఎలా మద్దతు ఇస్తారో ఒక ప్రణాళిక చేసుకుంటారు. \n\n**సూచించబడిన సమయం:** 50 నిముషాలు"
+        self-paced-pl-csp2-2022:
+          title: 'మోడ్యూల్ 2: Code.org న్యావిగేట్ చేయుట'
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
               name: అసమకాలికమైన డీబగ్గింగ్ పొడిగింపు
+        self-paced-pl-csd5-2022:
+          description: "Code.org యొక్క AI మరియు మెషీన్ లెర్నింగ్ యూనిట్ ను బోధించడానికి మీ తయారీకి సహాయపడేందుకు ఈ వృత్తినైపుణ్యమైన మోడ్యూల్ రూపొందించబడింది.\n\n**ఈ వృత్తినైపుణ్యమైన మోడ్యూల్ లో మీరు:**\n\n-   కృత్రిమ మేధ మరియు మెషీన్ లెర్నింగ్ కు పరిచయం పొందుతారు. \n-   యూనిట్ లో చేర్చబడిన ముఖ్య సిద్ధాంతాలను ఆచరిస్తారు.\n-   AI ల్యాబ్ మరియు యాప్ ల్యాబ్ తో నిమగ్నమవుతారు.\n-   అధ్యాయపు చివరి ప్రాజెక్టులను అన్వేషిస్తారు. \n-   మీ విద్యార్థులతో యూనిట్ అమలుకు ప్రణాళిక చేసుకుంటారు.\n\n**సూచించబడిన సమయం:** 120 నిముషాలు"
+          student_description: "Code.org యొక్క AI మరియు మెషీన్ లెర్నింగ్ యూనిట్ ను బోధించడానికి మీ తయారీకి సహాయపడేందుకు ఈ వృత్తినైపుణ్యమైన మోడ్యూల్ రూపొందించబడింది.\n\n**ఈ వృత్తినైపుణ్యమైన మోడ్యూల్ లో మీరు:**\n\n-   కృత్రిమ మేధ మరియు మెషీన్ లెర్నింగ్ కు పరిచయం పొందుతారు. \n-   యూనిట్ లో చేర్చబడిన ముఖ్య సిద్ధాంతాలను ఆచరిస్తారు.\n-   AI ల్యాబ్ మరియు యాప్ ల్యాబ్ తో నిమగ్నమవుతారు.\n-   అధ్యాయపు చివరి ప్రాజెక్టులను అన్వేషిస్తారు. \n-   మీ విద్యార్థులతో యూనిట్ అమలుకు ప్రణాళిక చేసుకుంటారు.\n\n**సూచించబడిన సమయం:** 120 నిముషాలు"
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-6:
               name: మాడ్యూల్ 2 అసమకాలికమైన పని
         soccer:
+          name: సాకర్
           title: మీ స్వంత సాకర్ ఆటను కోడ్ చేయండి
           description_short: ఒక సాకర్ ఆటను చేయండి
           description: ఒక సాకర్ ఆటను చేయండి
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: జావా ల్యాబ్
+            lesson-6:
+              name: ఉచ్చులు
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: వేరియబుల్స్
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: వన్-డైమెన్షనల్ (1 డి) శ్రేణులు
+            lesson-3:
+              name: ఉచ్చులు కోసం
         hello-world-space-2022:
           title: 'హలో వరల్డ్: స్పేస్'
         hello-world-soccer-2022:
           title: 'హలో వరల్డ్: సాకర్'
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: యాప్ ల్యాబ్ కు పరిచయం
         csc-function-machines-pilot:
           lessons:
             lesson-1:
               name: ఆ శబ్దం ఏమిటి?
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: డేటా
+            csp_loops:
+              display_name: ఉచ్చులు
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: జాబితాలు
+            lessonGroup-3:
+              display_name: ఉచ్చులు
+        self-paced-pl-csa2-2023:
+          title: 'మోడ్యూల్ 2: Code.org న్యావిగేట్ చేయుట'
+        devices-2022:
+          title: ఉపరికరణాలతో అనువర్తనాలను సృష్టించుట (సర్క్యూట్ ప్లేగ్రౌండ్)
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: యాప్ ల్యాబ్ కు పరిచయం
+        testing-focus-on-creativity2:
+          title: వెబ్ అభివృద్ధి
         pre-express-2023:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         express-2023:
           lesson_groups:
             lessonGroup-9:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_functions:
+              display_name: విధులు
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
         coursea-2023:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         courseb-2023:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         coursec-2023:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_data:
+              display_name: డేటా
         coursed-2023:
           lesson_groups:
+            lessonGroup-6:
+              display_name: డిజిటల్ పౌరసత్వం
             csf_events:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            ramp_up:
+              display_name: సమూహ ఉచ్చులు
+            csf_functions:
+              display_name: విధులు
+            csf_nested_loops:
+              display_name: షరతులు
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: యాప్ ల్యాబ్ కు పరిచయం
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: యాప్ ల్యాబ్ కు పరిచయం
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: యాప్ ల్యాబ్ కు పరిచయం
+        self-paced-pl-csd1-2023:
+          title: 'మోడ్యూల్ 1: సుస్వాగతం '
+          description: "ఈ మోడ్యూల్ Code.org మరియు ఈ వృత్తినైపుణ్య అభ్యసనా కోర్సు రెండింటికీ ఒక క్లుప్తమైన పరిచయము. \n\n**మీరు:**\n\n-   Code.org మరియు CS అన్వేషణలకు పరిచయం పొందుతారు.\n-   ఈ వృత్తినైపుణ్య అభ్యసన కోర్సులో ఎలా నిమగ్నం కావాలో తెలుసుకుంటారు.\n\n**సూచించబడిన సమయం:** 10 నిముషాలు"
+          student_description: "ఈ మోడ్యూల్ Code.org మరియు ఈ వృత్తినైపుణ్య అభ్యసనా కోర్సు రెండింటికీ ఒక క్లుప్తమైన పరిచయము. \n\n**మీరు:**\n\n-   Code.org మరియు CS అన్వేషణలకు పరిచయం పొందుతారు.\n-   ఈ వృత్తినైపుణ్య అభ్యసన కోర్సులో ఎలా నిమగ్నం కావాలో తెలుసుకుంటారు.\n\n**సూచించబడిన సమయం:** 10 నిముషాలు"
+        self-paced-pl-csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.org కు నావిగేట్ అవుతోంది
+          title: 'మోడ్యూల్ 2: Code.org న్యావిగేట్ చేయుట'
+          description: "CS అన్వేషణలను బోధించునప్పుడు విద్యార్థుల అభ్యసనానికి మద్దతు ఇవ్వడానికి మీరు ఉపయోగించే సాధనాల పట్ల మీకు అవగాహన కలిగించడానికి ఈ మోడ్యూల్ రూపొందించబడింది. \n\n**మీరు ఇలా చేస్తారు:**\n\n-   Code.org వెబ్‌సైట్ మరియు టీచర్ టూల్స్ కు న్యావిగేట్ అవుతారు.\n-   ఒక తరగతి గది ఏర్పాటు చేస్తారు\n-   కోర్సు పాఠ్య ప్రణాళికలు మరియు టీచర్ వనరుల్ని గుర్తించి మరియు ఉపయోగిస్తారు. \n-   కోర్సును బోధిస్తున్నప్పుడు మద్దతు ఎలా గ్రహించాలో తెలుసుకుంటారు.\n\n**సూచించబడిన సమయం:** 60 నిముషాలు"
+          student_description: "CS అన్వేషణలను బోధించునప్పుడు విద్యార్థుల అభ్యసనానికి మద్దతు ఇవ్వడానికి మీరు ఉపయోగించే సాధనాల పట్ల మీకు అవగాహన కలిగించడానికి ఈ మోడ్యూల్ రూపొందించబడింది. \n\n**మీరు ఇలా చేస్తారు:**\n\n-   Code.org వెబ్‌సైట్ మరియు టీచర్ టూల్స్ కు న్యావిగేట్ అవుతారు.\n-   ఒక తరగతి గది ఏర్పాటు చేస్తారు\n-   కోర్సు పాఠ్య ప్రణాళికలు మరియు టీచర్ వనరుల్ని గుర్తించి మరియు ఉపయోగిస్తారు. \n-   కోర్సును బోధిస్తున్నప్పుడు మద్దతు ఎలా గ్రహించాలో తెలుసుకుంటారు.\n\n**సూచించబడిన సమయం:** 60 నిముషాలు"
+        self-paced-pl-csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS అన్వేషణల యొక్క అవలోకనం
+          title: 'మోడ్యూల్ 3: CS అన్వేషణల యొక్క అవలోకనం'
+          description: "ఈ మోడ్యూల్ మీకు, విద్యార్థులు కోర్సు అంతటా నేర్చుకోబోయే సిద్ధాంతాలు మరియు విద్యార్థులు ఉపయోగించే సాధనాల పట్ల ప్రయత్నముతో CS అన్వేషణల కోర్సు యొక్క ఒక అవలోకనాన్ని అందిస్తుంది. ఈ మోడ్యూలులో నిమగ్నం కావడం వల్ల మీ తరగతి గదిలో మీరు అమలు చేయబోయే కోర్సు కంటెంటును ఎలా ఎంపిక చేసుకోవాలో నిర్ణయాలు తీసుకోవడానికి మీకు సహాయపడుతుంది. \n\n**మీరు:**\n\n-   CS అన్వేషణల పాఠ్యాంశ ప్రణాళికపై ఉన్నత-స్థాయి అవగాహన సంపాదించుకుంటారు.\n-   CS అన్వేషణల లోపున ఉపయోగించబడే ప్రోగ్రామింగ్ వాతావరణాలతో సుపరిచితులు అవుతారు.\n-   మీ తరగతిలో ఏ CS అన్వేషణలను మీరు బోధించాలో నిర్ణయించుకుంటారు.\n\n**సూచించబడిన సమయం:** 60 నిముషాలు"
+          student_description: "ఈ మోడ్యూల్ మీకు, విద్యార్థులు కోర్సు అంతటా నేర్చుకోబోయే సిద్ధాంతాలు మరియు విద్యార్థులు ఉపయోగించే సాధనాల పట్ల ప్రయత్నముతో CS అన్వేషణల కోర్సు యొక్క ఒక అవలోకనాన్ని అందిస్తుంది. ఈ మోడ్యూలులో నిమగ్నం కావడం వల్ల మీ తరగతి గదిలో మీరు అమలు చేయబోయే కోర్సు కంటెంటును ఎలా ఎంపిక చేసుకోవాలో నిర్ణయాలు తీసుకోవడానికి మీకు సహాయపడుతుంది. \n\n**మీరు:**\n\n-   CS అన్వేషణల పాఠ్యాంశ ప్రణాళికపై ఉన్నత-స్థాయి అవగాహన సంపాదించుకుంటారు.\n-   CS అన్వేషణల లోపున ఉపయోగించబడే ప్రోగ్రామింగ్ వాతావరణాలతో సుపరిచితులు అవుతారు.\n-   మీ తరగతిలో ఏ CS అన్వేషణలను మీరు బోధించాలో నిర్ణయించుకుంటారు.\n\n**సూచించబడిన సమయం:** 60 నిముషాలు"
+        self-paced-pl-csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS అన్వేషణల బోధన మరియు అభ్యసనం
+          title: 'మోడ్యూల్ 4: CS అన్వేషణల బోధన మరియు అభ్యసనం'
+          description: "ఈ మోడ్యూలులో, విద్యార్థులు CS అన్వేషణల కోర్సు అంతటా నిమగ్నమయ్యే అధీకృత CS అభ్యాసాలను మీకు పరిచయం చేయడం జరుగుతుంది. ఈ ఆచరణలలో డీబగ్గింగ్, వనరులను ఉపయోగించుకోవడం, మరియు పెయిర్ ప్రోగ్రామింగ్ ఇమిడి ఉంటాయి. ఒక CS అన్వేషణల తరగతి గది లోపున టీచర్ పాత్రను కూడా మీరు అన్వేషిస్తారు మరియు కోర్సును బోధిస్తూనే విద్యార్థి అభ్యసనానికి మీరు ఎలా మద్దతు ఇస్తారో ఒక ప్రణాళిక చేసుకుంటారు. \n\n**మీరు ఇలా చేస్తారు:**\n\n-   CS అన్వేషణల తరగతి గది లోపున టీచర్ పాత్రను పరిగణిస్తారు. \n-   విద్యార్థులు CS అన్వేషణల కోర్సు అంతటా వృద్ధి చేసుకునే అధీకృత CS అభ్యాసాల గురించి తెలుసుకుంటారు.\n-   వైవిధ్యత, కొనసాగుతున్న విశ్లేషణ, మరియు చేకూర్పు యొక్క సంస్కృతిని ప్రోత్సహించడం ద్వారా విద్యార్థి అభ్యసనానికి మీరు ఎలా మద్దతు ఇస్తారో ఒక ప్రణాళిక చేసుకుంటారు. \n\n**సూచించబడిన సమయం:** 50 నిముషాలు"
+          student_description: "ఈ మోడ్యూలులో, విద్యార్థులు CS అన్వేషణల కోర్సు అంతటా నిమగ్నమయ్యే అధీకృత CS అభ్యాసాలను మీకు పరిచయం చేయడం జరుగుతుంది. ఈ ఆచరణలలో డీబగ్గింగ్, వనరులను ఉపయోగించుకోవడం, మరియు పెయిర్ ప్రోగ్రామింగ్ ఇమిడి ఉంటాయి. ఒక CS అన్వేషణల తరగతి గది లోపున టీచర్ పాత్రను కూడా మీరు అన్వేషిస్తారు మరియు కోర్సును బోధిస్తూనే విద్యార్థి అభ్యసనానికి మీరు ఎలా మద్దతు ఇస్తారో ఒక ప్రణాళిక చేసుకుంటారు. \n\n**మీరు ఇలా చేస్తారు:**\n\n-   CS అన్వేషణల తరగతి గది లోపున టీచర్ పాత్రను పరిగణిస్తారు. \n-   విద్యార్థులు CS అన్వేషణల కోర్సు అంతటా వృద్ధి చేసుకునే అధీకృత CS అభ్యాసాల గురించి తెలుసుకుంటారు.\n-   వైవిధ్యత, కొనసాగుతున్న విశ్లేషణ, మరియు చేకూర్పు యొక్క సంస్కృతిని ప్రోత్సహించడం ద్వారా విద్యార్థి అభ్యసనానికి మీరు ఎలా మద్దతు ఇస్తారో ఒక ప్రణాళిక చేసుకుంటారు. \n\n**సూచించబడిన సమయం:** 50 నిముషాలు"
+        self-paced-pl-csd5-2023:
+          description: "Code.org యొక్క AI మరియు మెషీన్ లెర్నింగ్ యూనిట్ ను బోధించడానికి మీ తయారీకి సహాయపడేందుకు ఈ వృత్తినైపుణ్యమైన మోడ్యూల్ రూపొందించబడింది.\n\n**ఈ వృత్తినైపుణ్యమైన మోడ్యూల్ లో మీరు:**\n\n-   కృత్రిమ మేధ మరియు మెషీన్ లెర్నింగ్ కు పరిచయం పొందుతారు. \n-   యూనిట్ లో చేర్చబడిన ముఖ్య సిద్ధాంతాలను ఆచరిస్తారు.\n-   AI ల్యాబ్ మరియు యాప్ ల్యాబ్ తో నిమగ్నమవుతారు.\n-   అధ్యాయపు చివరి ప్రాజెక్టులను అన్వేషిస్తారు. \n-   మీ విద్యార్థులతో యూనిట్ అమలుకు ప్రణాళిక చేసుకుంటారు.\n\n**సూచించబడిన సమయం:** 120 నిముషాలు"
+          student_description: "Code.org యొక్క AI మరియు మెషీన్ లెర్నింగ్ యూనిట్ ను బోధించడానికి మీ తయారీకి సహాయపడేందుకు ఈ వృత్తినైపుణ్యమైన మోడ్యూల్ రూపొందించబడింది.\n\n**ఈ వృత్తినైపుణ్యమైన మోడ్యూల్ లో మీరు:**\n\n-   కృత్రిమ మేధ మరియు మెషీన్ లెర్నింగ్ కు పరిచయం పొందుతారు. \n-   యూనిట్ లో చేర్చబడిన ముఖ్య సిద్ధాంతాలను ఆచరిస్తారు.\n-   AI ల్యాబ్ మరియు యాప్ ల్యాబ్ తో నిమగ్నమవుతారు.\n-   అధ్యాయపు చివరి ప్రాజెక్టులను అన్వేషిస్తారు. \n-   మీ విద్యార్థులతో యూనిట్ అమలుకు ప్రణాళిక చేసుకుంటారు.\n\n**సూచించబడిన సమయం:** 120 నిముషాలు"
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: పరిచయం
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: పరిచయం
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: అసెస్మెంట్
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-4:
+              display_name: వేరియబుల్స్
+        self-paced-pl-csp2-2023:
+          title: 'మోడ్యూల్ 2: Code.org న్యావిగేట్ చేయుట'
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: డేటా
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-4:
+              display_name: ఉచ్చులు
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: డేటా
+          lesson_groups:
+            lessonGroup-2:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-4:
+              display_name: ఉచ్చులు
+            lessonGroup-6:
+              display_name: డేటా
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: డేటా
+          lesson_groups:
+            lessonGroup-2:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-4:
+              display_name: ఉచ్చులు
+            lessonGroup-6:
+              display_name: ఈవెంట్లు
+            lessonGroup-8:
+              display_name: డేటా
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: కంప్యూటింగ్ సిస్టమ్స్
+          lesson_groups:
+            lessonGroup-2:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-4:
+              display_name: ఉచ్చులు
+            lessonGroup-5:
+              display_name: ఈవెంట్లు
+            lessonGroup-6:
+              display_name: డేటా
+            lessonGroup-8:
+              display_name: కంప్యూటింగ్ సిస్టమ్స్
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-6:
+              display_name: ఉచ్చులు
+            lessonGroup-7:
+              display_name: డేటా
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: సమూహ ఉచ్చులు
+            lessonGroup-4:
+              display_name: విధులు
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: షరతులు
+            lessonGroup-5:
+              display_name: వేరియబుల్స్

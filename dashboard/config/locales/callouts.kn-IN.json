@@ -2,21 +2,76 @@
   "kn-IN": {
     "data": {
       "callouts": {
+        "4-5 Bee Conditionals 2": {
+          "4_5_Bee_Conditionals_2_1": "ನೆನಪಿಡಿ, ಪ್ರತಿ ಮೋಡವು ಹೂವನ್ನು ಹೊಂದಿದೆಯೇ ಎಂದು ಪರೀಕ್ಷಿಸಿ. ನೀವು ಜೇನುಗೂಡುಗಳನ್ನು ಪರೀಕ್ಷಿಸಬೇಕಾಗಿಲ್ಲ."
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "ಪರದೆಯು ಹಸಿರು ಬಣ್ಣಕ್ಕೆ ತಿರುಗಿದೆಯೇ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "ನೀವು ಈಗ ವಿನ್ಯಾಸ ಮೋಡ್‌ನಲ್ಲಿರುವಿರಿ."
+        },
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "ಪೂರ್ಣ ವೃತ್ತವನ್ನು ಮಾಡಲು ಜೊಂಬಿ ಎಷ್ಟು ಬಾರಿ ಚಲಿಸಬೇಕಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನಮೂದಿಸಿ"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "“ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಬ್ಲಾಕ್‌ಗಳ ಸುತ್ತಲೂ ಅದನ್ನು ಸುತ್ತಿ"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "ಈ ಬ್ಲಾಕ್ನಲ್ಲಿ ನಿಮ್ಮ ಕೌಂಟರ್ ವೇರಿಯಬಲ್ ಅನ್ನು ಎಳೆಯಿರಿ"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "“ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಬ್ಲಾಕ್‌ಗಳ ಸುತ್ತಲೂ ಅದನ್ನು ಸುತ್ತಿ"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "ಸರಿಯಾದ ಮೌಲ್ಯಕ್ಕೆ “ಉದ್ದ” ಹೊಂದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "ಸರಿಯಾದ ಮೌಲ್ಯಕ್ಕೆ “ಉದ್ದ” ಹೊಂದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "ಪ್ರತಿ ಕೋನದ ಗಾತ್ರವನ್ನು ಡಿಗ್ರಿಗಳಲ್ಲಿ ಪಡೆಯಲು 360 ಅನ್ನು ಬದಿಗಳ ಸಂಖ್ಯೆಯಿಂದ ಭಾಗಿಸಿ."
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "ಕಾರ್ಯವನ್ನು ಸಂಪಾದಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಬಳಸಿ ಮತ್ತು ಮಕರಂದವನ್ನು ಪಡೆಯಲು ಬೀ ತಿರುಗುವ ದಿಕ್ಕನ್ನು ಬದಲಾಯಿಸಿ."
+        },
+        "Course 4 Maze 4": {
+          "repeat": "ಆಜ್ಞೆಗಳನ್ನು ಪುನರಾವರ್ತಿಸಲು ಲೂಪ್ ಒಳಗೆ ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಿ"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "ನಿಮ್ಮ ಕಾರ್ಯವನ್ನು ಸಂಪಾದಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "ನಿಮ್ಮ ಕಾರ್ಯದಲ್ಲಿ ನಿಯತಾಂಕವನ್ನು ಸೇರಿಸಲು ಸಂಪಾದಿಸು ಕ್ಲಿಕ್ ಮಾಡಿ"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "ನಟನನ್ನು ಸರಿಸಲು ಬಾಣಗಳನ್ನು ಬಳಸಿ"
+        },
         "CourseD_Dance_2020_01": {
+          "dance_callout_01": "ಇಲ್ಲಿ ಡ್ಯಾನ್ಸರ್‌ ವಿಧವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ."
+        },
+        "CourseD_Dance_2020_012022": {
           "dance_callout_01": "ಇಲ್ಲಿ ಡ್ಯಾನ್ಸರ್‌ ವಿಧವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ."
         },
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "ಇಲ್ಲಿ ಡ್ಯಾನ್ಸರ್‌ ವಿಧವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ."
         },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಈ ಬ್ಲಾಕ್ ಸೇರಿಸಿ.",
-          "arrow_buttons": "ನಿಮ್ಮ ಡ್ಯಾನ್ಸರ್‌ ನಿಯಂತ್ರಿಸಲು ಬಾಣದ ಗುರುತನ್ನು ಒತ್ತಿ."
+          "arrow_buttons": "ನಿಮ್ಮ ಡ್ಯಾನ್ಸರ್‌ ನಿಯಂತ್ರಿಸಲು ಬಾಣದ ಗುರುತನ್ನು ಒತ್ತಿ.",
+          "dance_callout_11_a": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಈ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
+        },
+        "CourseD_Dance_2020_022022": {
+          "arrow_buttons": "ನಿಮ್ಮ ಡ್ಯಾನ್ಸರ್‌ ನಿಯಂತ್ರಿಸಲು ಬಾಣದ ಗುರುತನ್ನು ಒತ್ತಿ.",
+          "dance_callout_11_a": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಈ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
         },
         "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಈ ಬ್ಲಾಕ್ ಸೇರಿಸಿ.",
-          "arrow_buttons": "ನಿಮ್ಮ ಡ್ಯಾನ್ಸರ್‌ ನಿಯಂತ್ರಿಸಲು ಬಾಣದ ಗುರುತನ್ನು ಒತ್ತಿ."
+          "arrow_buttons": "ನಿಮ್ಮ ಡ್ಯಾನ್ಸರ್‌ ನಿಯಂತ್ರಿಸಲು ಬಾಣದ ಗುರುತನ್ನು ಒತ್ತಿ.",
+          "dance_callout_11_a": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಈ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
         },
         "CourseD_Dance_2020_04": {
+          "dance_callout_02": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಈ ಬ್ಲಾಕ್ ಸೇರಿಸಿ!"
+        },
+        "CourseD_Dance_2020_042022": {
           "dance_callout_02": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಈ ಬ್ಲಾಕ್ ಸೇರಿಸಿ!"
         },
         "CourseD_Dance_2020_04_2021": {
@@ -25,10 +80,16 @@
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಹೊಸ ಇವೆಂಟ್‌ ಅನ್ನು ಸೇರಿಸಿ."
         },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಹೊಸ ಇವೆಂಟ್‌ ಅನ್ನು ಸೇರಿಸಿ."
+        },
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಹೊಸ ಇವೆಂಟ್‌ ಅನ್ನು ಸೇರಿಸಿ."
         },
         "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "CourseD_Dance_2020_062022": {
           "dance_party_11_5_groups": "ಹೊಸ ಬ್ಲಾಕ್!"
         },
         "CourseD_Dance_2020_06_2021": {
@@ -37,10 +98,17 @@
         "CourseD_Dance_2020_07": {
           "setprop_hint": "ಹೊಸ ಬ್ಲಾಕ್!"
         },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "ಹೊಸ ಬ್ಲಾಕ್!"
         },
         "CourseD_Dance_2020_09": {
+          "new_block_3": "ಹೊಸ ಬ್ಲಾಕ್!",
+          "new_block_4": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "CourseD_Dance_2020_092022": {
           "new_block_3": "ಹೊಸ ಬ್ಲಾಕ್!",
           "new_block_4": "ಹೊಸ ಬ್ಲಾಕ್!"
         },
@@ -71,15 +139,22 @@
           "minitoolbox": "ಬ್ಲಾಕ್ ವಿಸ್ತರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ.",
           "pointerlocation": "ಇಲ್ಲಿ ಒಂದು ಸಬ್ಜೆಕ್ಟ್ ಬ್ಲಾಕ್ ಅನ್ನು ಡ್ರ್ಯಾಗ್ ಮಾಡಿ."
         },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "ಬ್ಲಾಕ್ ವಿಸ್ತರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ.",
+          "pointerlocation": "ಇಲ್ಲಿ ಒಂದು ಸಬ್ಜೆಕ್ಟ್ ಬ್ಲಾಕ್ ಅನ್ನು ಡ್ರ್ಯಾಗ್ ಮಾಡಿ."
+        },
         "CourseF_outbreak7": {
           "costumes_callout": "ಹೊಸ ಕಾಸ್ಟ್ಯೂಮ್ ಮಾಡಲು ಕ್ಲಿಕ್ ಮಾಡಿ"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
         "Dance_2019_01": {
           "dance_callout_01": "ಇಲ್ಲಿ ಡ್ಯಾನ್ಸರ್‌ ವಿಧವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ."
         },
         "Dance_2019_02": {
-          "dance_callout_11_a": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಈ ಬ್ಲಾಕ್ ಸೇರಿಸಿ.",
-          "arrow_buttons": "ನಿಮ್ಮ ಡ್ಯಾನ್ಸರ್‌ ನಿಯಂತ್ರಿಸಲು ಬಾಣದ ಗುರುತನ್ನು ಒತ್ತಿ."
+          "arrow_buttons": "ನಿಮ್ಮ ಡ್ಯಾನ್ಸರ್‌ ನಿಯಂತ್ರಿಸಲು ಬಾಣದ ಗುರುತನ್ನು ಒತ್ತಿ.",
+          "dance_callout_11_a": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಈ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
         },
         "Dance_2019_04": {
           "dance_callout_02": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಈ ಬ್ಲಾಕ್ ಸೇರಿಸಿ!"
@@ -116,10 +191,22 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "\"ಎಲ್ಲ ಬಾತುಕೋಳಿಗಳು\" ಬ್ಲಾಕ್‌ಗಳಿಗಾಗಿ ಇಲ್ಲಿ ನೋಡಿ"
         },
+        "Fish Tank 3-validated2022": {
+          "spritelab_comment": "ನಿಮ್ಮ ಕೋಡ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಎಂಬುದರ ಕುರಿತು ನಿಮ್ಮನ್ನು ಅಥವಾ ನಿಮ್ಮ ಶಿಕ್ಷಕರ ಟಿಪ್ಪಣಿಗಳನ್ನು ಬಿಡಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
+        },
+        "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "ನಿಮ್ಮ ಕೋಡ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಎಂಬುದರ ಕುರಿತು ನಿಮ್ಮನ್ನು ಅಥವಾ ನಿಮ್ಮ ಶಿಕ್ಷಕರ ಟಿಪ್ಪಣಿಗಳನ್ನು ಬಿಡಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
+        },
+        "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "ನಿಮ್ಮ ಕೋಡ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಎಂಬುದರ ಕುರಿತು ನಿಮ್ಮನ್ನು ಅಥವಾ ನಿಮ್ಮ ಶಿಕ್ಷಕರ ಟಿಪ್ಪಣಿಗಳನ್ನು ಬಿಡಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
+        },
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "ನಿಮ್ಮ ಕೋಡ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಎಂಬುದರ ಕುರಿತು ನಿಮ್ಮನ್ನು ಅಥವಾ ನಿಮ್ಮ ಶಿಕ್ಷಕರ ಟಿಪ್ಪಣಿಗಳನ್ನು ಬಿಡಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
         },
         "Function intro Ryan": {
+          "Function_intro_Ryan_1": "ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಅದೇ ಹೆಸರಿನಿಂದ ದೊಡ್ಡ ಕೋಡ್ ತುಂಡನ್ನು ರನ್ ಮಾಡಲು ಕಂಪ್ಯೂಟರ್ ಈ ಸಣ್ಣ ಸೂಚನೆಯು ಸೂಚಿಸುತ್ತದೆ."
+        },
+        "Function intro Ryan2022": {
           "Function_intro_Ryan_1": "ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಅದೇ ಹೆಸರಿನಿಂದ ದೊಡ್ಡ ಕೋಡ್ ತುಂಡನ್ನು ರನ್ ಮಾಡಲು ಕಂಪ್ಯೂಟರ್ ಈ ಸಣ್ಣ ಸೂಚನೆಯು ಸೂಚಿಸುತ್ತದೆ."
         },
         "Function intro Ryan_2019": {
@@ -131,6 +218,19 @@
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಅದೇ ಹೆಸರಿನಿಂದ ದೊಡ್ಡ ಕೋಡ್ ತುಂಡನ್ನು ರನ್ ಮಾಡಲು ಕಂಪ್ಯೂಟರ್ ಈ ಸಣ್ಣ ಸೂಚನೆಯು ಸೂಚಿಸುತ್ತದೆ."
         },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "ಈ ಘಟನೆ ಸಂಭವಿಸಿದಾಗ ಧ್ವನಿಯನ್ನು ಪ್ಲೇ ಮಾಡಿ."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "ಮೇಲಿನ ಬಾಣವನ್ನು ಒತ್ತಿದಾಗ ಯಾವ ಬ್ಲಾಕ್ ಬೇಮ್ಯಾಕ್ಸ್ ಅನ್ನು ಚಲಿಸುವಂತೆ ಮಾಡುತ್ತದೆ?",
+          "Infinity_move_directions_callout_arrow": "ಸ್ಟಿಯರ್ ಮಾಡಲು ಈ ಬಾಣಗಳನ್ನು ಬಳಸಿ"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "ಮೂವ್ ಬ್ಲಾಕ್ ಅನ್ನು ಇಲ್ಲಿ ಸೇರಿಸಿ"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "ಇಲ್ಲಿ ಒಳಗೆ ಬ್ಲಾಕ್ಗಳನ್ನು ಸರಿಸಿ"
+        },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "ನೀವು ಸಿದ್ಧವಾದಾಗ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು \"ರನ್\" ಎಂಬುದನ್ನು ಒತ್ತಿ."
         },
@@ -138,6 +238,9 @@
           "MC_HOC_2016_New_Walk_callout2": "ಚಲಿಸುವುದನ್ನು ಆರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿ."
         },
         "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_1": "ಇದು 'ರಿಪೀಟ್' ಲೂಪ್! ಇದನ್ನು ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಕ್ಲಿಕ್ ಮಾಡಿ ಮತ್ತು ಪದೇ ಪದೇ ನೀವು ರನ್ ಮಾಡಲು ಬಯಸುವ ಕೋಡ್ ಸೇರಿಸಿ."
+        },
+        "MC_HOC_2017_03_Cole2022": {
           "MC_HOC_2017_03_Cole_1": "ಇದು 'ರಿಪೀಟ್' ಲೂಪ್! ಇದನ್ನು ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಕ್ಲಿಕ್ ಮಾಡಿ ಮತ್ತು ಪದೇ ಪದೇ ನೀವು ರನ್ ಮಾಡಲು ಬಯಸುವ ಕೋಡ್ ಸೇರಿಸಿ."
         },
         "MC_HOC_2017_03_Cole_2019": {
@@ -152,6 +255,9 @@
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "ಏಜೆಂಟ್ ನೀರಿನ ಮೇಲಿನಿಂದ ಸಾಗಬಹುದು. ಆದರೆ ಪ್ಲೇಯರ್ ಸಾಗುವುದು ಸಾಧ್ಯವಿಲ್ಲ!"
         },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "ಏಜೆಂಟ್ ನೀರಿನ ಮೇಲಿನಿಂದ ಸಾಗಬಹುದು. ಆದರೆ ಪ್ಲೇಯರ್ ಸಾಗುವುದು ಸಾಧ್ಯವಿಲ್ಲ!"
+        },
         "MC_HOC_2017_04_Cole_2019": {
           "MC_HOC_2017_04_Cole_a": "ಏಜೆಂಟ್ ನೀರಿನ ಮೇಲಿನಿಂದ ಸಾಗಬಹುದು. ಆದರೆ ಪ್ಲೇಯರ್ ಸಾಗುವುದು ಸಾಧ್ಯವಿಲ್ಲ!"
         },
@@ -162,6 +268,9 @@
           "MC_HOC_2017_04_Cole_a": "ಏಜೆಂಟ್ ನೀರಿನ ಮೇಲಿನಿಂದ ಸಾಗಬಹುದು. ಆದರೆ ಪ್ಲೇಯರ್ ಸಾಗುವುದು ಸಾಧ್ಯವಿಲ್ಲ!"
         },
         "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "ನೀವು ಈ ಬ್ಲಾಕ್‌ಗಳನ್ನು ದೂರ ಎಸೆಯಲಾಗದು. ಆದರೆ ನೀವು ಅವುಗಳನ್ನು ಎಡಿಟ್ ಮಾಡಬಹುದು!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
           "MC_HOC_2017_06_Cole_1": "ನೀವು ಈ ಬ್ಲಾಕ್‌ಗಳನ್ನು ದೂರ ಎಸೆಯಲಾಗದು. ಆದರೆ ನೀವು ಅವುಗಳನ್ನು ಎಡಿಟ್ ಮಾಡಬಹುದು!"
         },
         "MC_HOC_2017_06_Cole_2019": {
@@ -176,6 +285,9 @@
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "ಏಜೆಂಟ್ ಲಾವಾ ಮೇಲಿನಿಂದ ಹೋಗಬಹುದು. ಆದರೆ, ಸ್ಟೀವ್ ಮತ್ತು ಅಲೆಕ್ಸಾರಿಂದ ಸಾಧ್ಯವಿಲ್ಲ!"
         },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "ಏಜೆಂಟ್ ಲಾವಾ ಮೇಲಿನಿಂದ ಹೋಗಬಹುದು. ಆದರೆ, ಸ್ಟೀವ್ ಮತ್ತು ಅಲೆಕ್ಸಾರಿಂದ ಸಾಧ್ಯವಿಲ್ಲ!"
+        },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_1": "ಏಜೆಂಟ್ ಲಾವಾ ಮೇಲಿನಿಂದ ಹೋಗಬಹುದು. ಆದರೆ, ಸ್ಟೀವ್ ಮತ್ತು ಅಲೆಕ್ಸಾರಿಂದ ಸಾಧ್ಯವಿಲ್ಲ!"
         },
@@ -185,526 +297,31 @@
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "ಏಜೆಂಟ್ ಲಾವಾ ಮೇಲಿನಿಂದ ಹೋಗಬಹುದು. ಆದರೆ, ಸ್ಟೀವ್ ಮತ್ತು ಅಲೆಕ್ಸಾರಿಂದ ಸಾಧ್ಯವಿಲ್ಲ!"
         },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "ನೀವು ಪ್ರಾರಂಭಿಸಲು ನಾವು ಇಲ್ಲಿ ಕೆಲವು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಇರಿಸಿದ್ದೇವೆ"
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "ನಿಮ್ಮ ಕಾರ್ಯವನ್ನು ಸಂಪಾದಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "ಈ ಕೋಡ್ ನಿಮ್ಮ ಮನೆಯನ್ನು ನಿರ್ಮಿಸಲು ಪ್ರಾರಂಭಿಸುತ್ತದೆ. ನೀವು ಅದನ್ನು ಮುಗಿಸಬಹುದೇ?"
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "ನಿಮ್ಮ ಕಾರ್ಯವನ್ನು ಸಂಪಾದಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
-        "Overworld Move to Sheep": {
-          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ"
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "“ಕಾರ್ಯಗಳು” ಫ್ಲೈಔಟ್ ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ, ನಂತರ “ಕಾರ್ಯವನ್ನು ರಚಿಸಿ” ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
-        "Overworld Move to Sheep_2019": {
-          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ"
+        "NEW Course 4 Artist Params 9": {
+          "add_and_drag_parameter": "ನಿಮ್ಮ ನಿಯತಾಂಕದ ಹೆಸರಿನಲ್ಲಿ ಬರೆಯಿರಿ ಇಲ್ಲಿ, ಸೇರಿಸು ಕ್ಲಿಕ್ ಮಾಡಿ, ತದನಂತರ ಅದನ್ನು ನಿಮ್ಮ ಕಾರ್ಯ ವ್ಯಾಖ್ಯಾನಕ್ಕೆ ಎಳೆಯಿರಿ",
+          "edit_add_parameter": "ನಿಮ್ಮ ಕಾರ್ಯದಲ್ಲಿ ನಿಯತಾಂಕವನ್ನು ಸೇರಿಸಲು ಸಂಪಾದಿಸು ಕ್ಲಿಕ್ ಮಾಡಿ"
         },
-        "Overworld Move to Sheep_2020": {
-          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ"
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "ಪ್ರಶ್ನೆ ಗುರುತುಗಳನ್ನು ಬದಲಿಸಲು ಉದ್ದದ ವೇರಿಯೇಬಲ್ ಅನ್ನು ಇಲ್ಲಿ ಎಳೆಯಿರಿ"
         },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ",
-          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ"
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "ಟೂಲ್ ಬಾಕ್ಸ್ ಹೊಸ ನೋಟವನ್ನು ಪಡೆದುಕೊಂಡಿದೆ! “ಕ್ರಿಯೆಗಳು” ಬ್ಲಾಕ್ಗಳು ಈಗ ಇಲ್ಲಿವೆ."
         },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "ಇಲ್ಲಿ ಬ್ಲಾಕ್ಗಳನ್ನು ಇರಿಸುವ ಮೂಲಕ ಕ್ರಿಯೆಗಳನ್ನು ಪುನರಾವರ್ತಿಸಿ"
+        "New Frozen Project": {
+          "snowflake_dropdown": "ವಿಭಿನ್ನ ಸ್ನೋಫ್ಲೇಕ್ಗಳನ್ನು ರಚಿಸಲು ಈ ಡ್ರಾಪ್-ಡೌನ್ ಬಳಸಿ!"
         },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "ಈ ಕೋಡ್ ಲಾವಾವನ್ನು ಪರಿಶೀಲಿಸುತ್ತದೆ, ಮುಂದುವರೆಯಲು ನೀವು ಆಜ್ಞೆಯನ್ನು ಸೇರಿಸಬಹುದೇ?"
-        },
-        "Virtual Pet 2_2021": {
-          "vp_costumes": "ನಿಮ್ಮ ಯೋಜನೆಗೆ ಹೊಸ ವೇಷಭೂಷಣಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
-        },
-        "Virtual Pet 6_2021": {
-          "vp_costumes": "ನಿಮ್ಮ ಯೋಜನೆಗೆ ಹೊಸ ವೇಷಭೂಷಣಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
-        },
-        "courseA_EOC_playlab_animals": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people": {
-          "question_mark": "?"
-        },
-        "courseA_artist_loops4_2021": {
-          "courseA_artist_loops4_1": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಬಹುದು ಎಂಬುದನ್ನು ಈ ಸಂಖ್ಯೆ ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
-        },
-        "courseA_artist_loops7_2021": {
-          "courseA_artist_loops7_1": "ಈ ಸಂಖ್ಯೆಯು ಈ ರೀತಿಯ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದನ್ನು ಮಾತ್ರ ಅಂತಿಮ ಉತ್ತರದಲ್ಲಿ ಬಳಸಬಹುದು."
-        },
-        "courseA_artist_loops8_2021": {
-          "courseA_artist_loops8_1": "ನಿಮಗೆ ಅಗತ್ಯವಿರುವಾಗ ನೀವು ರೇಖೆಯ ಮೇಲೆ ಹಿಂತಿರುಗಬಹುದು ಎಂದು ನಿಮಗೆ ತಿಳಿದಿದೆಯೇ?"
-        },
-        "courseA_collector_loops1_2021": {
-          "courseA_collector_loops1_1": "ನಿಧಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
-        },
-        "courseA_collector_loops3_2021": {
-          "gradek_adventurer_loops2_1": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಬಹುದು ಎಂಬುದನ್ನು ಈ ಸಂಖ್ಯೆ ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
-        },
-        "courseA_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
-        },
-        "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_1": "ನಿಮಗೆ ಸುಳಿವು ಬೇಕಾದಾಗ ಲೈಟ್‌ಬಲ್ಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ!"
-        },
-        "courseA_playLab_events4_2021": {
-          "courseA_playlab_events4_callout1": "ಇದು ಕಾಲ್ಔಟ್ ಆಗಿದೆ"
-        },
-        "courseA_playLab_events5_2021": {
-          "courseA_playLab_events5_1": "ಈವೆಂಟ್ ಬಾಣದ ದಿಕ್ಕನ್ನು ಬದಲಾಯಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "courseA_playLab_events6_2021": {
-          "courseA_playLab_events6_1": "ಇದು ನಿಮಗೆ \"ಯಾದೃಚ್ಛಿಕ\" ಧ್ವನಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಅವಕಾಶ ಮಾಡಿಕೊಡುತ್ತದೆ, ಇದರರ್ಥ ನೀವು ಅದನ್ನು ಕೇಳುವವರೆಗೂ ನೀವು ಏನನ್ನು ಪಡೆಯುತ್ತೀರಿ ಎಂದು ನಿಮಗೆ ತಿಳಿದಿಲ್ಲ!"
-        },
-        "courseB_Scrat_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
-        },
-        "courseB_Scrat_ramp3a_2021": {
-          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
-        },
-        "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಈ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದು ಮಾತ್ರ ಇದೆ. ನೀವು ಅದನ್ನು ಹೇಗೆ ಬಳಸುತ್ತೀರಿ?"
-        },
-        "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_1": "ನಿಧಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
-        },
-        "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1": "ನಿಮಗೆ ಸುಳಿವು ಬೇಕಾದಾಗ ಲೈಟ್‌ಬಲ್ಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ!"
-        },
-        "courseB_playlab_events6_2021": {
-          "courseB_playlab_events6_a": "ದಿಕ್ಕುಗಳನ್ನು ಬದಲಾಯಿಸಲು ಹಸಿರು ಡ್ರಾಪ್ ಡೌನ್ ಬಾಣವನ್ನು ಬಳಸಿ."
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "courseE_playLab_scaffold3_1": "ಒಂದು ಆಟ ಆಡೋಣ. ಪೆಂಗ್ವಿನ್ ಅನ್ನು ಆಕ್ಟೋಪಸ್‌ಗೆ ಸರಿಸುವ ಮೂಲಕ 5 ಅಂಕಗಳನ್ನು ಗಳಿಸಿ!"
-        },
-        "courseC_PlayLab_events8_2021": {
-          "courseC_PlayLab_events8_callout1": "ವ್ಯಾಡಲ್ಸ್ ಮತ್ತು ಚಾಂಪ್ ಸ್ಪರ್ಶಿಸುವಾಗ ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ!"
-        },
-        "courseC_PlayLab_events_challenge1_2021": {
-          "courseC_PlayLab_events_challenge1_1": "ಆಟದ ಸ್ಥಳದ ವಿವಿಧ ಭಾಗಗಳಿಗೆ ನಟರನ್ನು ಸರಿಸಲು ಈ ಬ್ಲಾಕ್ ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ."
-        },
-        "courseC_artist_loops1a_2021": {
-          "jumpto_callout": "ಈ ಯೋಜನೆಗೆ ಈ ಬ್ಲಾಕ್ ಬಹಳ ಮುಖ್ಯವಾಗಿದೆ. ಅದನ್ನು ಬಳಸಲು ಮರೆಯದಿರಿ!"
-        },
-        "courseC_artist_loops1b_2021": {
-          "sticker2": "ಇದನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಕ್ರಮದ ಮಧ್ಯಭಾಗಕ್ಕೆ ಸೇರಿಸಿ."
-        },
-        "courseC_artist_prog2_2021": {
-          "slider": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ನೀವು ಇಲ್ಲಿ ನಿಧಾನಗೊಳಿಸಬಹುದು."
-        },
-        "courseC_collector_prog1_2021": {
-          "courseC_collector_prog1_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ನೀವು ಕೆಲವು ಹೊಸ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೋಡುತ್ತೀರಾ? ಚಿಂತಿಸಬೇಡಿ, ಇನ್ನೊಂದು ಪಾಠದಲ್ಲಿ ಅವುಗಳನ್ನು ಹೇಗೆ ಬಳಸಬೇಕೆಂದು ನಾವು ನಿಮಗೆ ತೋರಿಸುತ್ತೇವೆ."
-        },
-        "courseC_collector_prog7_2021": {
-          "courseC_collector_prog7_1": "ನಿಮಗೆ ಅಗತ್ಯವಿದ್ದರೆ ನೀವು ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಹೆಚ್ಚಿನ ಬ್ಲಾಕ್‌ಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು!"
-        },
-        "courseC_harvester_loops1_2021": {
-          "courseC_harvester_loops1_callout1": "ಕುಂಬಳಕಾಯಿಯ ಮೇಲಿನ ನಾಲ್ಕು ಸಂಖ್ಯೆಯು ನಾಲ್ಕು ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಲಭ್ಯವಿದೆ ಎಂದು ಹೇಳುತ್ತದೆ."
-        },
-        "courseC_maze_debugging5_2021": {
-          "courseC_maze_debugging5_1": "ಈ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಲಾಕ್ ಮಾಡಲಾಗಿದೆ ಮತ್ತು ಅಳಿಸಲಾಗುವುದಿಲ್ಲ!"
-        },
-        "courseC_maze_debugging9_2021": {
-          "courseC_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
-        },
-        "courseC_maze_programming1_2021": {
-          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
-        },
-        "courseC_maze_programming2_2021": {
-          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
-        },
-        "courseC_maze_programming3_2021": {
-          "courseC_maze_programming3_2": "ಅವುಗಳನ್ನು ಎಸೆಯಲು ನೀವು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ಗೆ ಎಳೆಯಬಹುದು.",
-          "courseC_maze_programming3_3": "ಈ ಬ್ಲಾಕ್ಗಳು ಕಲ್ಲು ಮತ್ತು ಎಸೆಯಲಾಗುವುದಿಲ್ಲ."
-        },
-        "courseC_maze_programming4_2021": {
-          "courseC_maze_programming4_1": "ಇದು ನಿಮ್ಮ ಬ್ಲಾಕ್ ಮಿತಿಯಾಗಿದೆ. ಇವುಗಳಲ್ಲಿ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಬಳಸಲು ಬಿಟ್ಟಿದ್ದೀರಿ ಎಂಬುದನ್ನು ಇದು ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
-        },
-        "courseC_maze_programming5_2021": {
-          "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
-        },
-        "courseC_maze_programming7_2021": {
-          "courseC_maze_programming7_1": "ಇದು ನಿಮ್ಮ ಮೊದಲ ಸವಾಲಿನ ಒಗಟು! ಇವುಗಳು ಕಠಿಣವಾಗಿರುತ್ತವೆ ಮತ್ತು ಹಲವಾರು ಪ್ರಯತ್ನಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು.",
-          "courseC_maze_programming7_2": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಕಲ್ಲಿನಿಂದ ಮಾಡಲ್ಪಟ್ಟಿದೆ ಮತ್ತು ಎಸೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
-        },
-        "courseC_starWars_loops2": {
-          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
-        },
-        "courseC_starWars_loops2_2018": {
-          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
-        },
-        "courseC_starWars_loops2_2019": {
-          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
-        },
-        "courseC_starWars_loops2_2020": {
-          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
-        },
-        "courseC_starWars_loops2_2021": {
-          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
-        },
-        "courseC_starWars_loops2_copy": {
-          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
-        },
-        "courseC_starWars_loops2_dani": {
-          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
-        },
-        "courseD_artist_nestedLoops1a_2021": {
-          "courseD_artist_nestedLoops1a_1": "ಈ ಪಝಲ್ ಅನ್ನು ಸರಿಯಾಗಿ ಪಡೆಯಲು ನೀವು ಬಣ್ಣಗಳನ್ನು ಬಳಸಬೇಕಾಗಿಲ್ಲ. ನೀವು ಬಯಸಿದರೆ, ಈ `ಯಾದೃಚ್ಛಿಕ ಬಣ್ಣ` ಬ್ಲಾಕ್ ಅದನ್ನು ಸುಲಭಗೊಳಿಸುತ್ತದೆ!"
-        },
-        "courseD_bee_conditionals2_2021": {
-          "4_5_Bee_Conditionals_2_1": "ನೆನಪಿಡಿ, ಪ್ರತಿ ಮೋಡವು ಹೂವನ್ನು ಹೊಂದಿದೆಯೇ ಎಂದು ಪರೀಕ್ಷಿಸಿ. ನೀವು ಜೇನುಗೂಡುಗಳನ್ನು ಪರೀಕ್ಷಿಸಬೇಕಾಗಿಲ್ಲ."
-        },
-        "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge2_1": "ಒಂದು ಹೂವಿನಿಂದ (ಅಥವಾ ಜೇನುಗೂಡು) ಎಲ್ಲಾ ಮಕರಂದವನ್ನು (ಅಥವಾ ಜೇನುತುಪ್ಪ) ಸಂಗ್ರಹಿಸಲು ಈ ಲೂಪ್ ಅನ್ನು ಬಳಸಿ."
-        },
-        "courseD_bee_nestedLoops1a_2021": {
-          "stepButton": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಒಂದು ಸಮಯದಲ್ಲಿ ಒಂದು ಬ್ಲಾಕ್ ಮೂಲಕ ಹೆಜ್ಜೆ ಹಾಕಲು ಪ್ರಯತ್ನಿಸಿ."
-        },
-        "courseD_farmer_while7_2021": {
-          "courseD_farmer_while7_2018_PathAhead": "ಈ ಪಝಲ್ ಅನ್ನು ಪರಿಹರಿಸಲು ನೀವು `ಮುಂದೆ ಇರುವ ಹಾದಿ~ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಬೇಕಾಗುತ್ತದೆ."
-        },
-        "courseD_maze_intro4_2021": {
-          "courseC_maze_programming4_1": "ಇದು ನಿಮ್ಮ ಬ್ಲಾಕ್ ಮಿತಿಯಾಗಿದೆ. ಇವುಗಳಲ್ಲಿ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಬಳಸಲು ಬಿಟ್ಟಿದ್ದೀರಿ ಎಂಬುದನ್ನು ಇದು ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
-        },
-        "courseD_maze_intro5a_2021": {
-          "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
-        },
-        "courseD_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
-        },
-        "courseD_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
-        },
-        "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "ಅವುಗಳನ್ನು ಎಸೆಯಲು ನೀವು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ಗೆ ಎಳೆಯಬಹುದು.",
-          "stone_block_2": "ಬೂದು ಬ್ಲಾಕ್ಗಳನ್ನು ಎಸೆಯಲಾಗುವುದಿಲ್ಲ."
-        },
-        "courseD_maze_ramp5_2021": {
-          "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
-        },
-        "courseE_aboutme_2_2021": {
-          "": "ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
-        },
-        "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_1": "ಈ ಹಸಿರು ಬ್ಲಾಕ್ ರನ್ ಮಾಡಿದಾಗ, ಫಂಕ್ಷನ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ಮೊದಲ ಚೌಕವನ್ನು ಚಿತ್ರಿಸಿದ ನಂತರ ಕಲಾವಿದ ಏನು ಮಾಡಬೇಕು?"
-        },
-        "courseE_artist_functions8a_2021": {
-          "courseD_artist_functions8_1": "ಕಾರ್ಯಗಳನ್ನು ರಚಿಸಲು ನಿಮ್ಮ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಈ ಲೇಬಲ್ ಅಡಿಯಲ್ಲಿ ಸರಿಸಲಾಗಿದೆ."
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "courseE_artist_functions_challenge1_callout1": "ಕೆಳಭಾಗಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡ್ ಸೇರಿಸುವ ಮೂಲಕ ಈ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಮುಂದುವರಿಸಿ.",
-          "courseE_artist_functions_challenge1_callout2": "ನಿಮಗೆ ಈ ವಿನ್ಯಾಸ ಇಷ್ಟವಾಗದಿದ್ದರೆ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಬದಲಾಯಿಸಿ!"
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "courseE_artist_functions_challenge2_callout1": "ಕೆಳಭಾಗಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡ್ ಸೇರಿಸುವ ಮೂಲಕ ಈ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಮುಂದುವರಿಸಿ.",
-          "courseE_artist_functions_challenge2_callout2": "ನಿಮಗೆ ಈ ವಿನ್ಯಾಸ ಇಷ್ಟವಾಗದಿದ್ದರೆ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಬದಲಾಯಿಸಿ!"
-        },
-        "courseE_farmer_functions13_2021": {
-          "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
-        },
-        "courseE_farmer_functions1_2021": {
-          "courseE_farmer_functions1_2": "ಟೂಲ್‌ಬಾಕ್ಸ್ ಅನ್ನು ಈ ಬಾರಿ ಸ್ವಲ್ಪ ವಿಭಿನ್ನವಾಗಿ ಆಯೋಜಿಸಲಾಗಿದೆ! ನೀವು ಯಾವ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರುವಿರಿ ಎಂಬುದನ್ನು ನೋಡಲು ವಿವಿಧ ವರ್ಗಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "courseE_farmer_functions1a_2021": {
-          "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
-        },
-        "courseE_farmer_functions2b_2021": {
-          "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
-        },
-        "courseF_apps_aquarium": {
-          "run_button": "ಮೊದಲು ರನ್ ಬಟನ್ ಒತ್ತಿರಿ!",
-          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
-        },
-        "courseF_apps_card": {
-          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
-        },
-        "courseF_apps_chatbot": {
-          "run_button": "ಮೊದಲು ರನ್ ಬಟನ್ ಒತ್ತಿರಿ!",
-          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
-        },
-        "courseF_apps_collector": {
-          "run_button": "ಮೊದಲು ರನ್ ಬಟನ್ ಒತ್ತಿರಿ!",
-          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
-        },
-        "courseF_apps_madlib": {
-          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
-        },
-        "courseF_apps_pet": {
-          "run_button": "ಮೊದಲು ರನ್ ಬಟನ್ ಒತ್ತಿರಿ!",
-          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
-        },
-        "courseF_artist_for1_2021": {
-          "courseF_artist_for1_1": "ನಿಮ್ಮ ಕೋಡ್‌ಗೆ ಹೆಚ್ಚಿನ ಸ್ಥಳಾವಕಾಶವನ್ನು ನೀಡಲು ಟೂಲ್‌ಬಾಕ್ಸ್ \"ವರ್ಗ\" ಮೋಡ್‌ನಲ್ಲಿದೆ. `ಫಾರ್` ಲೂಪ್‌ಗಳು ಇಲ್ಲಿ ವಾಸಿಸುತ್ತವೆ."
-        },
-        "courseF_bee_for4_2021": {
-          "courseF_bee_for4_1": "ನೀವು ಇಲ್ಲಿ `ಫಾರ್` ಲೂಪ್ ಅನ್ನು ಕಾಣಬಹುದು!"
-        },
-        "courseF_bee_for9_2021": {
-          "courseF_bee_for9_1": "ನೀವು ಇಲ್ಲಿ `ಗಣಿತ` ಬ್ಲಾಕ್ ಅನ್ನು ಕಾಣಬಹುದು."
-        },
-        "courseF_bee_variables_1a_2021": {
-          "courseF_bee_functions_1_2018_1": "ನಿಮ್ಮ ವೇರಿಯಬಲ್‌ಗಳನ್ನು ನೀವು ಇಲ್ಲಿ ಕಾಣಬಹುದು!"
-        },
-        "courseF_editable_card": {
-          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
-        },
-        "courseF_editable_chatbot": {
-          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
-        },
-        "courseF_editable_madlib": {
-          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
-        },
-        "courseF_events_choice_penguin": {
-          "whenToWhile": "ಯಾವಾಗ ಎಂದು ಬದಲಾಯಿಸಲು ಪ್ರಯತ್ನಿಸಿ."
-        },
-        "courseF_events_conflict": {
-          "stops_block": "ಇಲ್ಲಿ ಹೊಸ ಬ್ಲಾಕ್‌ಗಳಿವೆ!"
-        },
-        "courseF_events_key": {
-          "whenKey": "ಇಲ್ಲಿ ಕಂಡುಬರುವ ಹೊಸ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
-        },
-        "courseF_events_practice_reorder": {
-          "stopAllBug": "ಈ ಬ್ಲಾಕ್ ತಪ್ಪಾದ ಕ್ರಮದಲ್ಲಿದೆ."
-        },
-        "courseF_events_predict": {
-          "behaviors_edit": "ಈ ವರ್ತನೆ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತಿದೆ ಎಂದು ನೋಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "courseF_events_time": {
-          "events_category": "ಈವೆಂಟ್‌ಗಳ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "courseF_label_predict": {
-          "variablesPredict": "ಈ ಹಂತದಲ್ಲಿ ಕೆಳಗಿನ ಕೋಡ್ ಅನ್ನು ಹತ್ತಿರದಿಂದ ನೋಡಿ."
-        },
-        "courseF_sprites_behaviors": {
-          "behaviors_category": "ನಡವಳಿಕೆಯ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "courseF_sprites_make": {
-          "sprites_category": "ಸ್ಪ್ರೈಟ್ಸ್ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "courseF_sprites_positioning": {
-          "locations_category": "ಸ್ಥಳಗಳ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "courseF_sprites_properties": {
-          "sprites_category2": "ಇಲ್ಲಿ ಹೊಸ ಬ್ಲಾಕ್ ಅನ್ನು ನೋಡಿ."
-        },
-        "courseF_text_answer": {
-          "answered_block": "ಇಲ್ಲಿ ಹೊಸ ಬ್ಲಾಕ್ ಅನ್ನು ನೋಡಿ!"
-        },
-        "courseF_text_choice_color": {
-          "text_color_finish": "ನೀವು ಪ್ರಶ್ನೆಗೆ ಉತ್ತರಿಸಿದಾಗ ಹಿನ್ನೆಲೆ ಬಣ್ಣ ಬದಲಾಗಿದೆಯೇ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
-        },
-        "courseF_text_choice_conversation": {
-          "text_generic_finish": "ನಿಮ್ಮ ಕೆಲಸವಾಯಿತೆ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
-        },
-        "courseF_text_choice_title": {
-          "title_block": "ಇಲ್ಲಿ ಎರಡು ಹೊಸ ಬ್ಲಾಕ್‌ಗಳಿಗಾಗಿ ನೋಡಿ!",
-          "text_answer_finish": "ಶೀರ್ಷಿಕೆ ಪರದೆಯು 3 ಸೆಕೆಂಡುಗಳವರೆಗೆ ತೋರಿಸಿದೆಯೇ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
-        },
-        "courseF_text_concat": {
-          "join_blocks": "ಹೊಸ ಪುಸ್ತಕಗಳಿಗಾಗಿ ಇಲ್ಲಿ ನೋಡಿ!"
-        },
-        "courseF_text_events": {
-          "events_category": "ಈವೆಂಟ್‌ಗಳ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "courseF_text_print": {
-          "print_block": "ಪ್ರಿಂಟ್ ಬ್ಲಾಕ್ ಅನ್ನು ಇಲ್ಲಿ ಹುಡುಕಿ!",
-          "text_print_finish": "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಮೇಲೆ ಮುದ್ರಿಸಲಾಗಿದೆಯೇ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
-        },
-        "courseF_text_prompts": {
-          "prompt_block": "ಪ್ರಾಂಪ್ಟ್ ಬ್ಲಾಕ್ ಅನ್ನು ಇಲ್ಲಿ ಹುಡುಕಿ!"
-        },
-        "courseF_variables_predict": {
-          "variablesPredict": "ಈ ಹಂತದಲ್ಲಿ ಕೆಳಗಿನ ಕೋಡ್ ಅನ್ನು ಹತ್ತಿರದಿಂದ ನೋಡಿ."
-        },
-        "coursea_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಒಟ್ಟಿಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
-        },
-        "express_maze_debugging9_2021": {
-          "express_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
-        },
-        "helloworld_animals_backgrounds": {
-          "hw_background_location": "ಹೊಸ ಹಿನ್ನೆಲೆ ನಿಗದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
-        },
-        "helloworld_animals_behaviors": {
-          "hello_world_behavior_blocks": "ಈ ಕೆಳಗಿನ ಒಂದು ವರ್ತನೆಗಳೊಂದಿಗೆ ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
-        },
-        "helloworld_animals_click": {
-          "hw_Run": "ಕೋಡ್ ರನ್ ಮಾಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "helloworld_animals_costumes": {
-          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "helloworld_animals_events": {
-          "hello_world_click_hint": "ನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಈ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
-        },
-        "helloworld_animals_freeplay": {
-          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "helloworld_animals_location": {
-          "pin": "ಪಿನ್"
-        },
-        "helloworld_animals_multi": {
-          "pin": "ಪಿನ್"
-        },
-        "helloworld_animals_say": {
-          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
-          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
-        },
-        "helloworld_animals_sizes": {
-          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!",
-          "hello_world_new_block": "ಹೊಸ ಬ್ಲಾಕ್!!!!"
-        },
-        "helloworld_animals_sounds": {
-          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "helloworld_emoji_backgrounds": {
-          "hw_background_location": "ಹೊಸ ಹಿನ್ನೆಲೆ ನಿಗದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
-        },
-        "helloworld_emoji_behaviors": {
-          "hello_world_behavior_blocks": "ಈ ಕೆಳಗಿನ ಒಂದು ವರ್ತನೆಗಳೊಂದಿಗೆ ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
-        },
-        "helloworld_emoji_click": {
-          "hw_Run": "ಕೋಡ್ ರನ್ ಮಾಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "helloworld_emoji_costumes": {
-          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "helloworld_emoji_events": {
-          "hello_world_click_hint": "ನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಈ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
-        },
-        "helloworld_emoji_freeplay": {
-          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "helloworld_emoji_location": {
-          "pin": "ಪಿನ್"
-        },
-        "helloworld_emoji_multi": {
-          "pin": "ಪಿನ್"
-        },
-        "helloworld_emoji_say": {
-          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
-          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
-        },
-        "helloworld_emoji_sizes": {
-          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!",
-          "hello_world_new_block": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "helloworld_emoji_sounds": {
-          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "helloworld_food_backgrounds": {
-          "hw_background_location": "ಹೊಸ ಹಿನ್ನೆಲೆ ನಿಗದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
-        },
-        "helloworld_food_behaviors": {
-          "hello_world_behavior_blocks": "ಈ ಕೆಳಗಿನ ಒಂದು ವರ್ತನೆಗಳೊಂದಿಗೆ ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
-        },
-        "helloworld_food_click": {
-          "hw_Run": "ಕೋಡ್ ರನ್ ಮಾಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "helloworld_food_costumes": {
-          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "helloworld_food_events": {
-          "hello_world_click_hint": "ನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಈ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
-        },
-        "helloworld_food_freeplay": {
-          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "helloworld_food_location": {
-          "pin": "ಪಿನ್"
-        },
-        "helloworld_food_multi": {
-          "pin": "ಪಿನ್"
-        },
-        "helloworld_food_say": {
-          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
-          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
-        },
-        "helloworld_food_sizes": {
-          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!",
-          "hello_world_new_block": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "helloworld_food_sounds": {
-          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "helloworld_retro_backgrounds": {
-          "hw_background_location": "ಹೊಸ ಹಿನ್ನೆಲೆ ನಿಗದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
-        },
-        "helloworld_retro_behaviors": {
-          "hello_world_behavior_blocks": "ಈ ಕೆಳಗಿನ ಒಂದು ವರ್ತನೆಗಳೊಂದಿಗೆ ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
-        },
-        "helloworld_retro_click": {
-          "hw_Run": "ಕೋಡ್ ರನ್ ಮಾಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "helloworld_retro_costumes": {
-          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "helloworld_retro_events": {
-          "hello_world_click_hint": "ನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಈ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
-        },
-        "helloworld_retro_freeplay": {
-          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "helloworld_retro_location": {
-          "pin": "ಪಿನ್"
-        },
-        "helloworld_retro_multi": {
-          "pin": "ಪಿನ್"
-        },
-        "helloworld_retro_say": {
-          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
-          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
-        },
-        "helloworld_retro_sizes": {
-          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!",
-          "hello_world_new_block": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "helloworld_retro_sounds": {
-          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "poetry_hoc_addSprites": {
-          "poetry_sprite": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "poetry_hoc_backgroundEffects": {
-          "poetry_background": "ಕೋಡ್ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಇಲ್ಲಿ ಕಂಡುಕೊಳ್ಳಿ.",
-          "run_button": "ಈ ಬಟನ್ ಬಳಸಿ ನಿಮ್ಮ ಆನಿಮೇಶನ್ ಟೆಸ್ಟ್ ಮಾಡಿ."
-        },
-        "poetry_hoc_events1": {
-          "poetry_event": "ಹೊಸ ಬ್ಲಾಕ್!",
-          "poetry_foreground": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "poetry_hoc_freeplay": {
-          "poetry_new_block": "ಹೊಸ ಬ್ಲಾಕ್!",
-          "poetry_selector": "ಯಾವುದೇ ಕವನ ಆಯ್ಕೆ ಮಾಡಿ ಅಥವಾ ನಿಮ್ಮದೇ ಕವನ ನಮೂದಿಸಿ!"
-        },
-        "poetry_hoc_sounds": {
-          "poetry_sound": "ಹೊಸ ಬ್ಲಾಕ್!",
-          "poetry_music": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "poetry_hoc_spriteBehaviors": {
-          "poetry_sprite_begins": "ಹೊಸ ಬ್ಲಾಕ್!",
-          "poetry_sprite_stops": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "ಹೊಸ ಬ್ಲಾಕ್!",
-          "poetry_remove_sprite": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "AppLab Intro 7 - Change Screen Color": {
-          "applab_hoc_finish": "ಪರದೆಯು ಹಸಿರು ಬಣ್ಣಕ್ಕೆ ತಿರುಗಿದೆಯೇ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-          "AppLabHoCFinal11": "ನೀವು ಈಗ ವಿನ್ಯಾಸ ಮೋಡ್‌ನಲ್ಲಿರುವಿರಿ."
-        },
-        "frozen line": {
-          "run": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ"
-        },
-        "4-5 Bee Conditionals 2": {
-          "4_5_Bee_Conditionals_2_1": "ನೆನಪಿಡಿ, ಪ್ರತಿ ಮೋಡವು ಹೂವನ್ನು ಹೊಂದಿದೆಯೇ ಎಂದು ಪರೀಕ್ಷಿಸಿ. ನೀವು ಜೇನುಗೂಡುಗಳನ್ನು ಪರೀಕ್ಷಿಸಬೇಕಾಗಿಲ್ಲ."
-        },
-        "Fish Tank 3-validated_2019": {
-          "spritelab_comment": "ನಿಮ್ಮ ಕೋಡ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಎಂಬುದರ ಕುರಿತು ನಿಮ್ಮನ್ನು ಅಥವಾ ನಿಮ್ಮ ಶಿಕ್ಷಕರ ಟಿಪ್ಪಣಿಗಳನ್ನು ಬಿಡಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
-        },
-        "Fish Tank 3-validated_2020": {
-          "spritelab_comment": "ನಿಮ್ಮ ಕೋಡ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಎಂಬುದರ ಕುರಿತು ನಿಮ್ಮನ್ನು ಅಥವಾ ನಿಮ್ಮ ಶಿಕ್ಷಕರ ಟಿಪ್ಪಣಿಗಳನ್ನು ಬಿಡಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
+        "New Sprite Lab Project": {
+          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ.",
+          "make_sprite": "ಸ್ಪ್ರೈಟ್ ಮಾಡಲು ಇಲ್ಲಿ ಬ್ಲಾಕ್ಗಳನ್ನು ಬಳಸಿ!"
         },
         "OPD-K5-forloops-5": {
           "courseF_bee_for4_1": "ನೀವು ಇಲ್ಲಿ `ಫಾರ್` ಲೂಪ್ ಅನ್ನು ಕಾಣಬಹುದು!"
@@ -715,11 +332,118 @@
         "OPD-K5-spritelab-3": {
           "spritelab_comment": "ನಿಮ್ಮ ಕೋಡ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಎಂಬುದರ ಕುರಿತು ನಿಮ್ಮನ್ನು ಅಥವಾ ನಿಮ್ಮ ಶಿಕ್ಷಕರ ಟಿಪ್ಪಣಿಗಳನ್ನು ಬಿಡಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
         },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "ನೀವು ಪ್ರಾರಂಭಿಸಲು ನಾವು ಇಲ್ಲಿ ಕೆಲವು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಿದ್ದೇವೆ"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "ನೀವು ಪ್ರಾರಂಭಿಸಲು ನಾವು ಇಲ್ಲಿ ಕೆಲವು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಿದ್ದೇವೆ"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "ನೀವು ಪ್ರಾರಂಭಿಸಲು ನಾವು ಇಲ್ಲಿ ಕೆಲವು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಿದ್ದೇವೆ"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "ನೀವು ಪ್ರಾರಂಭಿಸಲು ನಾವು ಇಲ್ಲಿ ಕೆಲವು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಿದ್ದೇವೆ"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "ನೀವು ಪ್ರಾರಂಭಿಸಲು ನಾವು ಇಲ್ಲಿ ಕೆಲವು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಇರಿಸಿದ್ದೇವೆ"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "ಈ ಕೋಡ್ ನಿಮ್ಮ ಮನೆಯನ್ನು ನಿರ್ಮಿಸಲು ಪ್ರಾರಂಭಿಸುತ್ತದೆ. ನೀವು ಅದನ್ನು ಮುಗಿಸಬಹುದೇ?"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "ಈ ಕೋಡ್ ನಿಮ್ಮ ಮನೆಯನ್ನು ನಿರ್ಮಿಸಲು ಪ್ರಾರಂಭಿಸುತ್ತದೆ. ನೀವು ಅದನ್ನು ಮುಗಿಸಬಹುದೇ?"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "ಈ ಕೋಡ್ ನಿಮ್ಮ ಮನೆಯನ್ನು ನಿರ್ಮಿಸಲು ಪ್ರಾರಂಭಿಸುತ್ತದೆ. ನೀವು ಅದನ್ನು ಮುಗಿಸಬಹುದೇ?"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "ಈ ಕೋಡ್ ನಿಮ್ಮ ಮನೆಯನ್ನು ನಿರ್ಮಿಸಲು ಪ್ರಾರಂಭಿಸುತ್ತದೆ. ನೀವು ಅದನ್ನು ಮುಗಿಸಬಹುದೇ?"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "ಈ ಕೋಡ್ ನಿಮ್ಮ ಮನೆಯನ್ನು ನಿರ್ಮಿಸಲು ಪ್ರಾರಂಭಿಸುತ್ತದೆ. ನೀವು ಅದನ್ನು ಮುಗಿಸಬಹುದೇ?"
+        },
+        "Overworld Move to Sheep": {
+          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ",
+          "craft_run_button_callout": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು “ರನ್” ಒತ್ತಿರಿ"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ",
+          "craft_run_button_callout": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು “ರನ್” ಒತ್ತಿರಿ"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ",
+          "craft_run_button_callout": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು “ರನ್” ಒತ್ತಿರಿ"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ",
+          "craft_run_button_callout": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು “ರನ್” ಒತ್ತಿರಿ"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ",
+          "craft_run_button_callout": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "ಇಲ್ಲಿ ಬ್ಲಾಕ್ಗಳನ್ನು ಇರಿಸುವ ಮೂಲಕ ಕ್ರಿಯೆಗಳನ್ನು ಪುನರಾವರ್ತಿಸಿ"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "ಇಲ್ಲಿ ಬ್ಲಾಕ್ಗಳನ್ನು ಇರಿಸುವ ಮೂಲಕ ಕ್ರಿಯೆಗಳನ್ನು ಪುನರಾವರ್ತಿಸಿ"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "ಇಲ್ಲಿ ಬ್ಲಾಕ್ಗಳನ್ನು ಇರಿಸುವ ಮೂಲಕ ಕ್ರಿಯೆಗಳನ್ನು ಪುನರಾವರ್ತಿಸಿ"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "ಇಲ್ಲಿ ಬ್ಲಾಕ್ಗಳನ್ನು ಇರಿಸುವ ಮೂಲಕ ಕ್ರಿಯೆಗಳನ್ನು ಪುನರಾವರ್ತಿಸಿ"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "ಇಲ್ಲಿ ಬ್ಲಾಕ್ಗಳನ್ನು ಇರಿಸುವ ಮೂಲಕ ಕ್ರಿಯೆಗಳನ್ನು ಪುನರಾವರ್ತಿಸಿ"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "ಈ ಕೋಡ್ ಲಾವಾವನ್ನು ಪರಿಶೀಲಿಸುತ್ತದೆ, ಮುಂದುವರಿಯಲು ನೀವು ಆಜ್ಞೆಯನ್ನು ಸೇರಿಸಬಹುದೇ?"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "ಈ ಕೋಡ್ ಲಾವಾವನ್ನು ಪರಿಶೀಲಿಸುತ್ತದೆ, ಮುಂದುವರಿಯಲು ನೀವು ಆಜ್ಞೆಯನ್ನು ಸೇರಿಸಬಹುದೇ?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "ಈ ಕೋಡ್ ಲಾವಾವನ್ನು ಪರಿಶೀಲಿಸುತ್ತದೆ, ಮುಂದುವರಿಯಲು ನೀವು ಆಜ್ಞೆಯನ್ನು ಸೇರಿಸಬಹುದೇ?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "ಈ ಕೋಡ್ ಲಾವಾವನ್ನು ಪರಿಶೀಲಿಸುತ್ತದೆ, ಮುಂದುವರಿಯಲು ನೀವು ಆಜ್ಞೆಯನ್ನು ಸೇರಿಸಬಹುದೇ?"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "ಈ ಕೋಡ್ ಲಾವಾವನ್ನು ಪರಿಶೀಲಿಸುತ್ತದೆ, ಮುಂದುವರೆಯಲು ನೀವು ಆಜ್ಞೆಯನ್ನು ಸೇರಿಸಬಹುದೇ?"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "ಈ ಕಬ್ಬಿಣವನ್ನು ಗಣಿ ಮಾಡಿ!"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "ಈ ಕಬ್ಬಿಣವನ್ನು ಗಣಿ ಮಾಡಿ!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "ಈ ಕಬ್ಬಿಣವನ್ನು ಗಣಿ ಮಾಡಿ!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "ಈ ಕಬ್ಬಿಣವನ್ನು ಗಣಿ ಮಾಡಿ!"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "ಈ ಕಬ್ಬಿಣವನ್ನು ಗಣಿ ಮಾಡಿ!"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "ನಿಮ್ಮ ಯೋಜನೆಗೆ ಹೊಸ ವೇಷಭೂಷಣಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
+        },
         "Virtual Pet 2_2019": {
           "": "ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
         },
         "Virtual Pet 2_2020": {
           "": "ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "ನಿಮ್ಮ ಯೋಜನೆಗೆ ಹೊಸ ವೇಷಭೂಷಣಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "ನಿಮ್ಮ ಯೋಜನೆಗೆ ಹೊಸ ವೇಷಭೂಷಣಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "ನಿಮ್ಮ ಯೋಜನೆಗೆ ಹೊಸ ವೇಷಭೂಷಣಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
         },
         "behaviors 1": {
           "behaviors_edit": "ಈ ವರ್ತನೆ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತಿದೆ ಎಂದು ನೋಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
@@ -751,7 +475,28 @@
           "courseE_artist_functions_challenge2_callout1": "ಕೆಳಭಾಗಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡ್ ಸೇರಿಸುವ ಮೂಲಕ ಈ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಮುಂದುವರಿಸಿ.",
           "courseE_artist_functions_challenge2_callout2": "ನಿಮಗೆ ಈ ವಿನ್ಯಾಸ ಇಷ್ಟವಾಗದಿದ್ದರೆ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಬದಲಾಯಿಸಿ!"
         },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಬಹುದು ಎಂಬುದನ್ನು ಈ ಸಂಖ್ಯೆ ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
+        },
+        "courseA_artist_loops42022": {
           "courseA_artist_loops4_1": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಬಹುದು ಎಂಬುದನ್ನು ಈ ಸಂಖ್ಯೆ ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
         },
         "courseA_artist_loops4_2018": {
@@ -763,7 +508,13 @@
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_1": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಬಹುದು ಎಂಬುದನ್ನು ಈ ಸಂಖ್ಯೆ ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
         },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಬಹುದು ಎಂಬುದನ್ನು ಈ ಸಂಖ್ಯೆ ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
+        },
         "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "ಈ ಸಂಖ್ಯೆಯು ಈ ರೀತಿಯ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದನ್ನು ಮಾತ್ರ ಅಂತಿಮ ಉತ್ತರದಲ್ಲಿ ಬಳಸಬಹುದು."
+        },
+        "courseA_artist_loops72022": {
           "courseA_artist_loops7_1": "ಈ ಸಂಖ್ಯೆಯು ಈ ರೀತಿಯ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದನ್ನು ಮಾತ್ರ ಅಂತಿಮ ಉತ್ತರದಲ್ಲಿ ಬಳಸಬಹುದು."
         },
         "courseA_artist_loops7_2018": {
@@ -775,7 +526,13 @@
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_1": "ಈ ಸಂಖ್ಯೆಯು ಈ ರೀತಿಯ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದನ್ನು ಮಾತ್ರ ಅಂತಿಮ ಉತ್ತರದಲ್ಲಿ ಬಳಸಬಹುದು."
         },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "ಈ ಸಂಖ್ಯೆಯು ಈ ರೀತಿಯ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದನ್ನು ಮಾತ್ರ ಅಂತಿಮ ಉತ್ತರದಲ್ಲಿ ಬಳಸಬಹುದು."
+        },
         "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "ನಿಮಗೆ ಅಗತ್ಯವಿರುವಾಗ ನೀವು ರೇಖೆಯ ಮೇಲೆ ಹಿಂತಿರುಗಬಹುದು ಎಂದು ನಿಮಗೆ ತಿಳಿದಿದೆಯೇ?"
+        },
+        "courseA_artist_loops82022": {
           "courseA_artist_loops8_1": "ನಿಮಗೆ ಅಗತ್ಯವಿರುವಾಗ ನೀವು ರೇಖೆಯ ಮೇಲೆ ಹಿಂತಿರುಗಬಹುದು ಎಂದು ನಿಮಗೆ ತಿಳಿದಿದೆಯೇ?"
         },
         "courseA_artist_loops8_2018": {
@@ -787,13 +544,25 @@
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_1": "ನಿಮಗೆ ಅಗತ್ಯವಿರುವಾಗ ನೀವು ರೇಖೆಯ ಮೇಲೆ ಹಿಂತಿರುಗಬಹುದು ಎಂದು ನಿಮಗೆ ತಿಳಿದಿದೆಯೇ?"
         },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "ನಿಮಗೆ ಅಗತ್ಯವಿರುವಾಗ ನೀವು ರೇಖೆಯ ಮೇಲೆ ಹಿಂತಿರುಗಬಹುದು ಎಂದು ನಿಮಗೆ ತಿಳಿದಿದೆಯೇ?"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "ನಿಧಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
+        },
         "courseA_collector_loops1_2019": {
           "courseA_collector_loops1_1": "ನಿಧಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
         },
         "courseA_collector_loops1_2020": {
           "courseA_collector_loops1_1": "ನಿಧಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
         },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "ನಿಧಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
+        },
         "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಬಹುದು ಎಂಬುದನ್ನು ಈ ಸಂಖ್ಯೆ ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
+        },
+        "courseA_collector_loops32022": {
           "gradek_adventurer_loops2_1": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಬಹುದು ಎಂಬುದನ್ನು ಈ ಸಂಖ್ಯೆ ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
         },
         "courseA_collector_loops3_2018": {
@@ -805,16 +574,28 @@
         "courseA_collector_loops3_2020": {
           "gradek_adventurer_loops2_1": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಬಹುದು ಎಂಬುದನ್ನು ಈ ಸಂಖ್ಯೆ ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
         },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಬಹುದು ಎಂಬುದನ್ನು ಈ ಸಂಖ್ಯೆ ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
+        },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
+        },
         "courseA_maze_ramp2_2019": {
           "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
         },
         "courseA_maze_ramp2_2020": {
           "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
         },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
+        },
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
         },
         "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "ನಿಮಗೆ ಸುಳಿವು ಬೇಕಾದಾಗ ಲೈಟ್‌ಬಲ್ಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ!"
+        },
+        "courseA_maze_seq12022": {
           "courseA_maze_seq1_1": "ನಿಮಗೆ ಸುಳಿವು ಬೇಕಾದಾಗ ಲೈಟ್‌ಬಲ್ಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ!"
         },
         "courseA_maze_seq1_2018": {
@@ -826,7 +607,13 @@
         "courseA_maze_seq1_2020": {
           "courseA_maze_seq1_1": "ನಿಮಗೆ ಸುಳಿವು ಬೇಕಾದಾಗ ಲೈಟ್‌ಬಲ್ಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ!"
         },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "ನಿಮಗೆ ಸುಳಿವು ಬೇಕಾದಾಗ ಲೈಟ್‌ಬಲ್ಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ!"
+        },
         "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "ಇದು ಕಾಲ್ಔಟ್ ಆಗಿದೆ"
+        },
+        "courseA_playLab_events42022": {
           "courseA_playlab_events4_callout1": "ಇದು ಕಾಲ್ಔಟ್ ಆಗಿದೆ"
         },
         "courseA_playLab_events4_2018": {
@@ -838,7 +625,13 @@
         "courseA_playLab_events4_2020": {
           "courseA_playlab_events4_callout1": "ಇದು ಕಾಲ್ಔಟ್ ಆಗಿದೆ"
         },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "ಇದು ಕಾಲ್ಔಟ್ ಆಗಿದೆ"
+        },
         "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "ಈವೆಂಟ್ ಬಾಣದ ದಿಕ್ಕನ್ನು ಬದಲಾಯಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "ಈವೆಂಟ್ ಬಾಣದ ದಿಕ್ಕನ್ನು ಬದಲಾಯಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
         "courseA_playLab_events5_2018": {
@@ -850,7 +643,13 @@
         "courseA_playLab_events5_2020": {
           "courseA_playLab_events5_1": "ಈವೆಂಟ್ ಬಾಣದ ದಿಕ್ಕನ್ನು ಬದಲಾಯಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "ಈವೆಂಟ್ ಬಾಣದ ದಿಕ್ಕನ್ನು ಬದಲಾಯಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
         "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "ಇದು ನಿಮಗೆ \"ಯಾದೃಚ್ಛಿಕ\" ಧ್ವನಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಅವಕಾಶ ಮಾಡಿಕೊಡುತ್ತದೆ, ಇದರರ್ಥ ನೀವು ಅದನ್ನು ಕೇಳುವವರೆಗೂ ನೀವು ಏನನ್ನು ಪಡೆಯುತ್ತೀರಿ ಎಂದು ನಿಮಗೆ ತಿಳಿದಿಲ್ಲ!"
+        },
+        "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "ಇದು ನಿಮಗೆ \"ಯಾದೃಚ್ಛಿಕ\" ಧ್ವನಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಅವಕಾಶ ಮಾಡಿಕೊಡುತ್ತದೆ, ಇದರರ್ಥ ನೀವು ಅದನ್ನು ಕೇಳುವವರೆಗೂ ನೀವು ಏನನ್ನು ಪಡೆಯುತ್ತೀರಿ ಎಂದು ನಿಮಗೆ ತಿಳಿದಿಲ್ಲ!"
         },
         "courseA_playLab_events6_2018": {
@@ -862,6 +661,12 @@
         "courseA_playLab_events6_2020": {
           "courseA_playLab_events6_1": "ಇದು ನಿಮಗೆ \"ಯಾದೃಚ್ಛಿಕ\" ಧ್ವನಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಅವಕಾಶ ಮಾಡಿಕೊಡುತ್ತದೆ, ಇದರರ್ಥ ನೀವು ಅದನ್ನು ಕೇಳುವವರೆಗೂ ನೀವು ಏನನ್ನು ಪಡೆಯುತ್ತೀರಿ ಎಂದು ನಿಮಗೆ ತಿಳಿದಿಲ್ಲ!"
         },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "ಇದು ನಿಮಗೆ \"ಯಾದೃಚ್ಛಿಕ\" ಧ್ವನಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಅವಕಾಶ ಮಾಡಿಕೊಡುತ್ತದೆ, ಇದರರ್ಥ ನೀವು ಅದನ್ನು ಕೇಳುವವರೆಗೂ ನೀವು ಏನನ್ನು ಪಡೆಯುತ್ತೀರಿ ಎಂದು ನಿಮಗೆ ತಿಳಿದಿಲ್ಲ!"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
+        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
         },
@@ -871,13 +676,25 @@
         "courseB_Scrat_ramp1_2020": {
           "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
         },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
+        },
         "courseB_Scrat_ramp3a_2019": {
           "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
         },
         "courseB_Scrat_ramp3a_2020": {
           "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
         },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
+        },
         "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಈ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದು ಮಾತ್ರ ಇದೆ. ನೀವು ಅದನ್ನು ಹೇಗೆ ಬಳಸುತ್ತೀರಿ?"
+        },
+        "courseB_artist_loops32022": {
           "courseB_artist_loops3_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಈ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದು ಮಾತ್ರ ಇದೆ. ನೀವು ಅದನ್ನು ಹೇಗೆ ಬಳಸುತ್ತೀರಿ?"
         },
         "courseB_artist_loops3_2018": {
@@ -889,6 +706,12 @@
         "courseB_artist_loops3_2020": {
           "courseB_artist_loops3_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಈ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದು ಮಾತ್ರ ಇದೆ. ನೀವು ಅದನ್ನು ಹೇಗೆ ಬಳಸುತ್ತೀರಿ?"
         },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಈ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದು ಮಾತ್ರ ಇದೆ. ನೀವು ಅದನ್ನು ಹೇಗೆ ಬಳಸುತ್ತೀರಿ?"
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "ನಿಧಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
+        },
         "courseB_collector_loops1_2018": {
           "courseB_collector_loops1_1": "ನಿಧಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
         },
@@ -898,7 +721,13 @@
         "courseB_collector_loops1_2020": {
           "courseB_collector_loops1_1": "ನಿಧಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
         },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "ನಿಧಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
+        },
         "courseB_maze_seq1": {
+          "courseB_maze_seq1": "ನಿಮಗೆ ಸುಳಿವು ಬೇಕಾದಾಗ ಲೈಟ್‌ಬಲ್ಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ!"
+        },
+        "courseB_maze_seq12022": {
           "courseB_maze_seq1": "ನಿಮಗೆ ಸುಳಿವು ಬೇಕಾದಾಗ ಲೈಟ್‌ಬಲ್ಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ!"
         },
         "courseB_maze_seq1_2018": {
@@ -910,7 +739,13 @@
         "courseB_maze_seq1_2020": {
           "courseB_maze_seq1": "ನಿಮಗೆ ಸುಳಿವು ಬೇಕಾದಾಗ ಲೈಟ್‌ಬಲ್ಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ!"
         },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "ನಿಮಗೆ ಸುಳಿವು ಬೇಕಾದಾಗ ಲೈಟ್‌ಬಲ್ಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ!"
+        },
         "courseB_playlab_events6": {
+          "courseB_playlab_events6_a": "ದಿಕ್ಕುಗಳನ್ನು ಬದಲಾಯಿಸಲು ಹಸಿರು ಡ್ರಾಪ್ ಡೌನ್ ಬಾಣವನ್ನು ಬಳಸಿ."
+        },
+        "courseB_playlab_events62022": {
           "courseB_playlab_events6_a": "ದಿಕ್ಕುಗಳನ್ನು ಬದಲಾಯಿಸಲು ಹಸಿರು ಡ್ರಾಪ್ ಡೌನ್ ಬಾಣವನ್ನು ಬಳಸಿ."
         },
         "courseB_playlab_events6_2018": {
@@ -922,13 +757,25 @@
         "courseB_playlab_events6_2020": {
           "courseB_playlab_events6_a": "ದಿಕ್ಕುಗಳನ್ನು ಬದಲಾಯಿಸಲು ಹಸಿರು ಡ್ರಾಪ್ ಡೌನ್ ಬಾಣವನ್ನು ಬಳಸಿ."
         },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "ದಿಕ್ಕುಗಳನ್ನು ಬದಲಾಯಿಸಲು ಹಸಿರು ಡ್ರಾಪ್ ಡೌನ್ ಬಾಣವನ್ನು ಬಳಸಿ."
+        },
         "courseC19_playLab_EOC3": {
+          "courseE_playLab_scaffold3_1": "ಒಂದು ಆಟ ಆಡೋಣ. ಪೆಂಗ್ವಿನ್ ಅನ್ನು ಆಕ್ಟೋಪಸ್‌ಗೆ ಸರಿಸುವ ಮೂಲಕ 5 ಅಂಕಗಳನ್ನು ಗಳಿಸಿ!"
+        },
+        "courseC19_playLab_EOC32022": {
           "courseE_playLab_scaffold3_1": "ಒಂದು ಆಟ ಆಡೋಣ. ಪೆಂಗ್ವಿನ್ ಅನ್ನು ಆಕ್ಟೋಪಸ್‌ಗೆ ಸರಿಸುವ ಮೂಲಕ 5 ಅಂಕಗಳನ್ನು ಗಳಿಸಿ!"
         },
         "courseC19_playLab_EOC3_2020": {
           "courseE_playLab_scaffold3_1": "ಒಂದು ಆಟ ಆಡೋಣ. ಪೆಂಗ್ವಿನ್ ಅನ್ನು ಆಕ್ಟೋಪಸ್‌ಗೆ ಸರಿಸುವ ಮೂಲಕ 5 ಅಂಕಗಳನ್ನು ಗಳಿಸಿ!"
         },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "ಒಂದು ಆಟ ಆಡೋಣ. ಪೆಂಗ್ವಿನ್ ಅನ್ನು ಆಕ್ಟೋಪಸ್‌ಗೆ ಸರಿಸುವ ಮೂಲಕ 5 ಅಂಕಗಳನ್ನು ಗಳಿಸಿ!"
+        },
         "courseC_PlayLab_events8": {
+          "courseC_PlayLab_events8_callout1": "ವ್ಯಾಡಲ್ಸ್ ಮತ್ತು ಚಾಂಪ್ ಸ್ಪರ್ಶಿಸುವಾಗ ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ!"
+        },
+        "courseC_PlayLab_events82022": {
           "courseC_PlayLab_events8_callout1": "ವ್ಯಾಡಲ್ಸ್ ಮತ್ತು ಚಾಂಪ್ ಸ್ಪರ್ಶಿಸುವಾಗ ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ!"
         },
         "courseC_PlayLab_events8_2018": {
@@ -940,7 +787,13 @@
         "courseC_PlayLab_events8_2020": {
           "courseC_PlayLab_events8_callout1": "ವ್ಯಾಡಲ್ಸ್ ಮತ್ತು ಚಾಂಪ್ ಸ್ಪರ್ಶಿಸುವಾಗ ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ!"
         },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "ವ್ಯಾಡಲ್ಸ್ ಮತ್ತು ಚಾಂಪ್ ಸ್ಪರ್ಶಿಸುವಾಗ ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ!"
+        },
         "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "ಆಟದ ಸ್ಥಳದ ವಿವಿಧ ಭಾಗಗಳಿಗೆ ನಟರನ್ನು ಸರಿಸಲು ಈ ಬ್ಲಾಕ್ ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ."
+        },
+        "courseC_PlayLab_events_challenge12022": {
           "courseC_PlayLab_events_challenge1_1": "ಆಟದ ಸ್ಥಳದ ವಿವಿಧ ಭಾಗಗಳಿಗೆ ನಟರನ್ನು ಸರಿಸಲು ಈ ಬ್ಲಾಕ್ ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ."
         },
         "courseC_PlayLab_events_challenge1_2018": {
@@ -952,17 +805,44 @@
         "courseC_PlayLab_events_challenge1_2020": {
           "courseC_PlayLab_events_challenge1_1": "ಆಟದ ಸ್ಥಳದ ವಿವಿಧ ಭಾಗಗಳಿಗೆ ನಟರನ್ನು ಸರಿಸಲು ಈ ಬ್ಲಾಕ್ ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ."
         },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "ಆಟದ ಸ್ಥಳದ ವಿವಿಧ ಭಾಗಗಳಿಗೆ ನಟರನ್ನು ಸರಿಸಲು ಈ ಬ್ಲಾಕ್ ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ."
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "ಆಟದ ಸ್ಥಳದ ವಿವಿಧ ಭಾಗಗಳಿಗೆ ನಟರನ್ನು ಸರಿಸಲು ಈ ಬ್ಲಾಕ್ ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ."
+        },
+        "courseC_artist_loops1a2022": {
+          "jumpto_callout": "ಈ ಯೋಜನೆಗೆ ಈ ಬ್ಲಾಕ್ ಬಹಳ ಮುಖ್ಯವಾಗಿದೆ. ಅದನ್ನು ಬಳಸಲು ಮರೆಯದಿರಿ!"
+        },
         "courseC_artist_loops1a_2019": {
           "jumpto_callout": "ಈ ಯೋಜನೆಗೆ ಈ ಬ್ಲಾಕ್ ಬಹಳ ಮುಖ್ಯವಾಗಿದೆ. ಅದನ್ನು ಬಳಸಲು ಮರೆಯದಿರಿ!"
         },
         "courseC_artist_loops1a_2020": {
           "jumpto_callout": "ಈ ಯೋಜನೆಗೆ ಈ ಬ್ಲಾಕ್ ಬಹಳ ಮುಖ್ಯವಾಗಿದೆ. ಅದನ್ನು ಬಳಸಲು ಮರೆಯದಿರಿ!"
         },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "ಈ ಯೋಜನೆಗೆ ಈ ಬ್ಲಾಕ್ ಬಹಳ ಮುಖ್ಯವಾಗಿದೆ. ಅದನ್ನು ಬಳಸಲು ಮರೆಯದಿರಿ!"
+        },
+        "courseC_artist_loops1b2022": {
+          "sticker2": "ಇದನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಕ್ರಮದ ಮಧ್ಯಭಾಗಕ್ಕೆ ಸೇರಿಸಿ."
+        },
         "courseC_artist_loops1b_2019": {
           "sticker2": "ಇದನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಕ್ರಮದ ಮಧ್ಯಭಾಗಕ್ಕೆ ಸೇರಿಸಿ."
         },
         "courseC_artist_loops1b_2020": {
           "sticker2": "ಇದನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಕ್ರಮದ ಮಧ್ಯಭಾಗಕ್ಕೆ ಸೇರಿಸಿ."
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "ಇದನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಕ್ರಮದ ಮಧ್ಯಭಾಗಕ್ಕೆ ಸೇರಿಸಿ."
+        },
+        "courseC_artist_prog22022": {
+          "slider": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ನೀವು ಇಲ್ಲಿ ನಿಧಾನಗೊಳಿಸಬಹುದು."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ನೀವು ಇಲ್ಲಿ ನಿಧಾನಗೊಳಿಸಬಹುದು."
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ನೀವು ಕೆಲವು ಹೊಸ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೋಡುತ್ತೀರಾ? ಚಿಂತಿಸಬೇಡಿ, ಇನ್ನೊಂದು ಪಾಠದಲ್ಲಿ ಅವುಗಳನ್ನು ಹೇಗೆ ಬಳಸಬೇಕೆಂದು ನಾವು ನಿಮಗೆ ತೋರಿಸುತ್ತೇವೆ."
         },
         "courseC_collector_prog1_2018": {
           "courseC_collector_prog1_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ನೀವು ಕೆಲವು ಹೊಸ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೋಡುತ್ತೀರಾ? ಚಿಂತಿಸಬೇಡಿ, ಇನ್ನೊಂದು ಪಾಠದಲ್ಲಿ ಅವುಗಳನ್ನು ಹೇಗೆ ಬಳಸಬೇಕೆಂದು ನಾವು ನಿಮಗೆ ತೋರಿಸುತ್ತೇವೆ."
@@ -973,7 +853,13 @@
         "courseC_collector_prog1_2020": {
           "courseC_collector_prog1_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ನೀವು ಕೆಲವು ಹೊಸ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೋಡುತ್ತೀರಾ? ಚಿಂತಿಸಬೇಡಿ, ಇನ್ನೊಂದು ಪಾಠದಲ್ಲಿ ಅವುಗಳನ್ನು ಹೇಗೆ ಬಳಸಬೇಕೆಂದು ನಾವು ನಿಮಗೆ ತೋರಿಸುತ್ತೇವೆ."
         },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ನೀವು ಕೆಲವು ಹೊಸ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೋಡುತ್ತೀರಾ? ಚಿಂತಿಸಬೇಡಿ, ಇನ್ನೊಂದು ಪಾಠದಲ್ಲಿ ಅವುಗಳನ್ನು ಹೇಗೆ ಬಳಸಬೇಕೆಂದು ನಾವು ನಿಮಗೆ ತೋರಿಸುತ್ತೇವೆ."
+        },
         "courseC_collector_prog7": {
+          "courseC_collector_prog7_1": "ನಿಮಗೆ ಅಗತ್ಯವಿದ್ದರೆ ನೀವು ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಹೆಚ್ಚಿನ ಬ್ಲಾಕ್‌ಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು!"
+        },
+        "courseC_collector_prog72022": {
           "courseC_collector_prog7_1": "ನಿಮಗೆ ಅಗತ್ಯವಿದ್ದರೆ ನೀವು ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಹೆಚ್ಚಿನ ಬ್ಲಾಕ್‌ಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು!"
         },
         "courseC_collector_prog7_2018": {
@@ -985,7 +871,13 @@
         "courseC_collector_prog7_2020": {
           "courseC_collector_prog7_1": "ನಿಮಗೆ ಅಗತ್ಯವಿದ್ದರೆ ನೀವು ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಹೆಚ್ಚಿನ ಬ್ಲಾಕ್‌ಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು!"
         },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "ನಿಮಗೆ ಅಗತ್ಯವಿದ್ದರೆ ನೀವು ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಹೆಚ್ಚಿನ ಬ್ಲಾಕ್‌ಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು!"
+        },
         "courseC_harvester_loops1": {
+          "courseC_harvester_loops1_callout1": "ಕುಂಬಳಕಾಯಿಯ ಮೇಲಿನ ನಾಲ್ಕು ಸಂಖ್ಯೆಯು ನಾಲ್ಕು ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಲಭ್ಯವಿದೆ ಎಂದು ಹೇಳುತ್ತದೆ."
+        },
+        "courseC_harvester_loops12022": {
           "courseC_harvester_loops1_callout1": "ಕುಂಬಳಕಾಯಿಯ ಮೇಲಿನ ನಾಲ್ಕು ಸಂಖ್ಯೆಯು ನಾಲ್ಕು ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಲಭ್ಯವಿದೆ ಎಂದು ಹೇಳುತ್ತದೆ."
         },
         "courseC_harvester_loops1_2018": {
@@ -997,11 +889,23 @@
         "courseC_harvester_loops1_2020": {
           "courseC_harvester_loops1_callout1": "ಕುಂಬಳಕಾಯಿಯ ಮೇಲಿನ ನಾಲ್ಕು ಸಂಖ್ಯೆಯು ನಾಲ್ಕು ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಲಭ್ಯವಿದೆ ಎಂದು ಹೇಳುತ್ತದೆ."
         },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "ಕುಂಬಳಕಾಯಿಯ ಮೇಲಿನ ನಾಲ್ಕು ಸಂಖ್ಯೆಯು ನಾಲ್ಕು ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಲಭ್ಯವಿದೆ ಎಂದು ಹೇಳುತ್ತದೆ."
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "ಈ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಲಾಕ್ ಮಾಡಲಾಗಿದೆ ಮತ್ತು ಅಳಿಸಲಾಗುವುದಿಲ್ಲ!"
+        },
         "courseC_maze_debugging5_2019": {
           "courseC_maze_debugging5_1": "ಈ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಲಾಕ್ ಮಾಡಲಾಗಿದೆ ಮತ್ತು ಅಳಿಸಲಾಗುವುದಿಲ್ಲ!"
         },
         "courseC_maze_debugging5_2020": {
           "courseC_maze_debugging5_1": "ಈ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಲಾಕ್ ಮಾಡಲಾಗಿದೆ ಮತ್ತು ಅಳಿಸಲಾಗುವುದಿಲ್ಲ!"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "ಈ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಲಾಕ್ ಮಾಡಲಾಗಿದೆ ಮತ್ತು ಅಳಿಸಲಾಗುವುದಿಲ್ಲ!"
+        },
+        "courseC_maze_debugging92022": {
+          "courseC_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
         },
         "courseC_maze_debugging9_2019": {
           "courseC_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
@@ -1009,10 +913,16 @@
         "courseC_maze_debugging9_2020": {
           "courseC_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
         },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
+        },
         "courseC_maze_debugging9_copy_2020": {
           "courseC_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
         },
         "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
+        },
+        "courseC_maze_programming12022": {
           "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
         },
         "courseC_maze_programming1_2018": {
@@ -1024,7 +934,13 @@
         "courseC_maze_programming1_2020": {
           "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
         },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
+        },
         "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
+        },
+        "courseC_maze_programming22022": {
           "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
         },
         "courseC_maze_programming2_2018": {
@@ -1036,7 +952,14 @@
         "courseC_maze_programming2_2020": {
           "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
         },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
+        },
         "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "ಅವುಗಳನ್ನು ಎಸೆಯಲು ನೀವು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ಗೆ ಎಳೆಯಬಹುದು.",
+          "courseC_maze_programming3_3": "ಈ ಬ್ಲಾಕ್ಗಳು ಕಲ್ಲು ಮತ್ತು ಎಸೆಯಲಾಗುವುದಿಲ್ಲ."
+        },
+        "courseC_maze_programming32022": {
           "courseC_maze_programming3_2": "ಅವುಗಳನ್ನು ಎಸೆಯಲು ನೀವು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ಗೆ ಎಳೆಯಬಹುದು.",
           "courseC_maze_programming3_3": "ಈ ಬ್ಲಾಕ್ಗಳು ಕಲ್ಲು ಮತ್ತು ಎಸೆಯಲಾಗುವುದಿಲ್ಲ."
         },
@@ -1052,7 +975,14 @@
           "courseC_maze_programming3_2": "ಅವುಗಳನ್ನು ಎಸೆಯಲು ನೀವು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ಗೆ ಎಳೆಯಬಹುದು.",
           "courseC_maze_programming3_3": "ಈ ಬ್ಲಾಕ್ಗಳು ಕಲ್ಲು ಮತ್ತು ಎಸೆಯಲಾಗುವುದಿಲ್ಲ."
         },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "ಅವುಗಳನ್ನು ಎಸೆಯಲು ನೀವು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ಗೆ ಎಳೆಯಬಹುದು.",
+          "courseC_maze_programming3_3": "ಈ ಬ್ಲಾಕ್ಗಳು ಕಲ್ಲು ಮತ್ತು ಎಸೆಯಲಾಗುವುದಿಲ್ಲ."
+        },
         "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "ಇದು ನಿಮ್ಮ ಬ್ಲಾಕ್ ಮಿತಿಯಾಗಿದೆ. ಇವುಗಳಲ್ಲಿ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಬಳಸಲು ಬಿಟ್ಟಿದ್ದೀರಿ ಎಂಬುದನ್ನು ಇದು ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
+        },
+        "courseC_maze_programming42022": {
           "courseC_maze_programming4_1": "ಇದು ನಿಮ್ಮ ಬ್ಲಾಕ್ ಮಿತಿಯಾಗಿದೆ. ಇವುಗಳಲ್ಲಿ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಬಳಸಲು ಬಿಟ್ಟಿದ್ದೀರಿ ಎಂಬುದನ್ನು ಇದು ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
         },
         "courseC_maze_programming4_2018": {
@@ -1064,7 +994,13 @@
         "courseC_maze_programming4_2020": {
           "courseC_maze_programming4_1": "ಇದು ನಿಮ್ಮ ಬ್ಲಾಕ್ ಮಿತಿಯಾಗಿದೆ. ಇವುಗಳಲ್ಲಿ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಬಳಸಲು ಬಿಟ್ಟಿದ್ದೀರಿ ಎಂಬುದನ್ನು ಇದು ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
         },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "ಇದು ನಿಮ್ಮ ಬ್ಲಾಕ್ ಮಿತಿಯಾಗಿದೆ. ಇವುಗಳಲ್ಲಿ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಬಳಸಲು ಬಿಟ್ಟಿದ್ದೀರಿ ಎಂಬುದನ್ನು ಇದು ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
+        },
         "courseC_maze_programming5": {
+          "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
+        },
+        "courseC_maze_programming52022": {
           "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
         },
         "courseC_maze_programming5_2018": {
@@ -1076,7 +1012,14 @@
         "courseC_maze_programming5_2020": {
           "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
         },
+        "courseC_maze_programming5_2021": {
+          "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
+        },
         "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "ಇದು ನಿಮ್ಮ ಮೊದಲ ಸವಾಲಿನ ಒಗಟು! ಇವುಗಳು ಕಠಿಣವಾಗಿರುತ್ತವೆ ಮತ್ತು ಹಲವಾರು ಪ್ರಯತ್ನಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು.",
+          "courseC_maze_programming7_2": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಕಲ್ಲಿನಿಂದ ಮಾಡಲ್ಪಟ್ಟಿದೆ ಮತ್ತು ಎಸೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
+        },
+        "courseC_maze_programming72022": {
           "courseC_maze_programming7_1": "ಇದು ನಿಮ್ಮ ಮೊದಲ ಸವಾಲಿನ ಒಗಟು! ಇವುಗಳು ಕಠಿಣವಾಗಿರುತ್ತವೆ ಮತ್ತು ಹಲವಾರು ಪ್ರಯತ್ನಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು.",
           "courseC_maze_programming7_2": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಕಲ್ಲಿನಿಂದ ಮಾಡಲ್ಪಟ್ಟಿದೆ ಮತ್ತು ಎಸೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
         },
@@ -1092,7 +1035,38 @@
           "courseC_maze_programming7_1": "ಇದು ನಿಮ್ಮ ಮೊದಲ ಸವಾಲಿನ ಒಗಟು! ಇವುಗಳು ಕಠಿಣವಾಗಿರುತ್ತವೆ ಮತ್ತು ಹಲವಾರು ಪ್ರಯತ್ನಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು.",
           "courseC_maze_programming7_2": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಕಲ್ಲಿನಿಂದ ಮಾಡಲ್ಪಟ್ಟಿದೆ ಮತ್ತು ಎಸೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
         },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "ಇದು ನಿಮ್ಮ ಮೊದಲ ಸವಾಲಿನ ಒಗಟು! ಇವುಗಳು ಕಠಿಣವಾಗಿರುತ್ತವೆ ಮತ್ತು ಹಲವಾರು ಪ್ರಯತ್ನಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು.",
+          "courseC_maze_programming7_2": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಕಲ್ಲಿನಿಂದ ಮಾಡಲ್ಪಟ್ಟಿದೆ ಮತ್ತು ಎಸೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
+        },
         "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "ಈ ಪಝಲ್ ಅನ್ನು ಸರಿಯಾಗಿ ಪಡೆಯಲು ನೀವು ಬಣ್ಣಗಳನ್ನು ಬಳಸಬೇಕಾಗಿಲ್ಲ. ನೀವು ಬಯಸಿದರೆ, ಈ `ಯಾದೃಚ್ಛಿಕ ಬಣ್ಣ` ಬ್ಲಾಕ್ ಅದನ್ನು ಸುಲಭಗೊಳಿಸುತ್ತದೆ!"
+        },
+        "courseD_artist_nestedLoops1a2022": {
           "courseD_artist_nestedLoops1a_1": "ಈ ಪಝಲ್ ಅನ್ನು ಸರಿಯಾಗಿ ಪಡೆಯಲು ನೀವು ಬಣ್ಣಗಳನ್ನು ಬಳಸಬೇಕಾಗಿಲ್ಲ. ನೀವು ಬಯಸಿದರೆ, ಈ `ಯಾದೃಚ್ಛಿಕ ಬಣ್ಣ` ಬ್ಲಾಕ್ ಅದನ್ನು ಸುಲಭಗೊಳಿಸುತ್ತದೆ!"
         },
         "courseD_artist_nestedLoops1a_2018": {
@@ -1104,7 +1078,13 @@
         "courseD_artist_nestedLoops1a_2020": {
           "courseD_artist_nestedLoops1a_1": "ಈ ಪಝಲ್ ಅನ್ನು ಸರಿಯಾಗಿ ಪಡೆಯಲು ನೀವು ಬಣ್ಣಗಳನ್ನು ಬಳಸಬೇಕಾಗಿಲ್ಲ. ನೀವು ಬಯಸಿದರೆ, ಈ `ಯಾದೃಚ್ಛಿಕ ಬಣ್ಣ` ಬ್ಲಾಕ್ ಅದನ್ನು ಸುಲಭಗೊಳಿಸುತ್ತದೆ!"
         },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "ಈ ಪಝಲ್ ಅನ್ನು ಸರಿಯಾಗಿ ಪಡೆಯಲು ನೀವು ಬಣ್ಣಗಳನ್ನು ಬಳಸಬೇಕಾಗಿಲ್ಲ. ನೀವು ಬಯಸಿದರೆ, ಈ `ಯಾದೃಚ್ಛಿಕ ಬಣ್ಣ` ಬ್ಲಾಕ್ ಅದನ್ನು ಸುಲಭಗೊಳಿಸುತ್ತದೆ!"
+        },
         "courseD_bee_conditionals2": {
+          "4_5_Bee_Conditionals_2_1": "ನೆನಪಿಡಿ, ಪ್ರತಿ ಮೋಡವು ಹೂವನ್ನು ಹೊಂದಿದೆಯೇ ಎಂದು ಪರೀಕ್ಷಿಸಿ. ನೀವು ಜೇನುಗೂಡುಗಳನ್ನು ಪರೀಕ್ಷಿಸಬೇಕಾಗಿಲ್ಲ."
+        },
+        "courseD_bee_conditionals22022": {
           "4_5_Bee_Conditionals_2_1": "ನೆನಪಿಡಿ, ಪ್ರತಿ ಮೋಡವು ಹೂವನ್ನು ಹೊಂದಿದೆಯೇ ಎಂದು ಪರೀಕ್ಷಿಸಿ. ನೀವು ಜೇನುಗೂಡುಗಳನ್ನು ಪರೀಕ್ಷಿಸಬೇಕಾಗಿಲ್ಲ."
         },
         "courseD_bee_conditionals2_2018": {
@@ -1116,6 +1096,9 @@
         "courseD_bee_conditionals2_2020": {
           "4_5_Bee_Conditionals_2_1": "ನೆನಪಿಡಿ, ಪ್ರತಿ ಮೋಡವು ಹೂವನ್ನು ಹೊಂದಿದೆಯೇ ಎಂದು ಪರೀಕ್ಷಿಸಿ. ನೀವು ಜೇನುಗೂಡುಗಳನ್ನು ಪರೀಕ್ಷಿಸಬೇಕಾಗಿಲ್ಲ."
         },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "ನೆನಪಿಡಿ, ಪ್ರತಿ ಮೋಡವು ಹೂವನ್ನು ಹೊಂದಿದೆಯೇ ಎಂದು ಪರೀಕ್ಷಿಸಿ. ನೀವು ಜೇನುಗೂಡುಗಳನ್ನು ಪರೀಕ್ಷಿಸಬೇಕಾಗಿಲ್ಲ."
+        },
         "courseD_bee_conditionals2_copy": {
           "4_5_Bee_Conditionals_2_1": "ನೆನಪಿಡಿ, ಪ್ರತಿ ಮೋಡವು ಹೂವನ್ನು ಹೊಂದಿದೆಯೇ ಎಂದು ಪರೀಕ್ಷಿಸಿ. ನೀವು ಜೇನುಗೂಡುಗಳನ್ನು ಪರೀಕ್ಷಿಸಬೇಕಾಗಿಲ್ಲ."
         },
@@ -1123,6 +1106,9 @@
           "4_5_Bee_Conditionals_2_1": "ನೆನಪಿಡಿ, ಪ್ರತಿ ಮೋಡವು ಹೂವನ್ನು ಹೊಂದಿದೆಯೇ ಎಂದು ಪರೀಕ್ಷಿಸಿ. ನೀವು ಜೇನುಗೂಡುಗಳನ್ನು ಪರೀಕ್ಷಿಸಬೇಕಾಗಿಲ್ಲ."
         },
         "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "ಒಂದು ಹೂವಿನಿಂದ (ಅಥವಾ ಜೇನುಗೂಡು) ಎಲ್ಲಾ ಮಕರಂದವನ್ನು (ಅಥವಾ ಜೇನುತುಪ್ಪ) ಸಂಗ್ರಹಿಸಲು ಈ ಲೂಪ್ ಅನ್ನು ಬಳಸಿ."
+        },
+        "courseD_bee_conditionals_challenge22022": {
           "courseD_bee_conditionals_challenge2_1": "ಒಂದು ಹೂವಿನಿಂದ (ಅಥವಾ ಜೇನುಗೂಡು) ಎಲ್ಲಾ ಮಕರಂದವನ್ನು (ಅಥವಾ ಜೇನುತುಪ್ಪ) ಸಂಗ್ರಹಿಸಲು ಈ ಲೂಪ್ ಅನ್ನು ಬಳಸಿ."
         },
         "courseD_bee_conditionals_challenge2_2018": {
@@ -1134,6 +1120,18 @@
         "courseD_bee_conditionals_challenge2_2020": {
           "courseD_bee_conditionals_challenge2_1": "ಒಂದು ಹೂವಿನಿಂದ (ಅಥವಾ ಜೇನುಗೂಡು) ಎಲ್ಲಾ ಮಕರಂದವನ್ನು (ಅಥವಾ ಜೇನುತುಪ್ಪ) ಸಂಗ್ರಹಿಸಲು ಈ ಲೂಪ್ ಅನ್ನು ಬಳಸಿ."
         },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "ಒಂದು ಹೂವಿನಿಂದ (ಅಥವಾ ಜೇನುಗೂಡು) ಎಲ್ಲಾ ಮಕರಂದವನ್ನು (ಅಥವಾ ಜೇನುತುಪ್ಪ) ಸಂಗ್ರಹಿಸಲು ಈ ಲೂಪ್ ಅನ್ನು ಬಳಸಿ."
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಒಂದು ಸಮಯದಲ್ಲಿ ಒಂದು ಬ್ಲಾಕ್ ಮೂಲಕ ಹೆಜ್ಜೆ ಹಾಕಲು ಪ್ರಯತ್ನಿಸಿ."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಒಂದು ಸಮಯದಲ್ಲಿ ಒಂದು ಬ್ಲಾಕ್ ಮೂಲಕ ಹೆಜ್ಜೆ ಹಾಕಲು ಪ್ರಯತ್ನಿಸಿ."
+        },
+        "courseD_farmer_while72022": {
+          "courseD_farmer_while7_2018_PathAhead": "ಈ ಪಝಲ್ ಅನ್ನು ಪರಿಹರಿಸಲು ನೀವು `ಮುಂದೆ ಇರುವ ಹಾದಿ~ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಬೇಕಾಗುತ್ತದೆ."
+        },
         "courseD_farmer_while7_2018": {
           "courseD_farmer_while7_2018_PathAhead": "ಈ ಪಝಲ್ ಅನ್ನು ಪರಿಹರಿಸಲು ನೀವು `ಮುಂದೆ ಇರುವ ಹಾದಿ~ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಬೇಕಾಗುತ್ತದೆ."
         },
@@ -1143,11 +1141,23 @@
         "courseD_farmer_while7_2020": {
           "courseD_farmer_while7_2018_PathAhead": "ಈ ಪಝಲ್ ಅನ್ನು ಪರಿಹರಿಸಲು ನೀವು `ಮುಂದೆ ಇರುವ ಹಾದಿ~ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಬೇಕಾಗುತ್ತದೆ."
         },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "ಈ ಪಝಲ್ ಅನ್ನು ಪರಿಹರಿಸಲು ನೀವು `ಮುಂದೆ ಇರುವ ಹಾದಿ~ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಬೇಕಾಗುತ್ತದೆ."
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "ಇದು ನಿಮ್ಮ ಬ್ಲಾಕ್ ಮಿತಿಯಾಗಿದೆ. ಇವುಗಳಲ್ಲಿ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಬಳಸಲು ಬಿಟ್ಟಿದ್ದೀರಿ ಎಂಬುದನ್ನು ಇದು ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
+        },
         "courseD_maze_intro4_2019": {
           "courseC_maze_programming4_1": "ಇದು ನಿಮ್ಮ ಬ್ಲಾಕ್ ಮಿತಿಯಾಗಿದೆ. ಇವುಗಳಲ್ಲಿ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಬಳಸಲು ಬಿಟ್ಟಿದ್ದೀರಿ ಎಂಬುದನ್ನು ಇದು ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
         },
         "courseD_maze_intro4_2020": {
           "courseC_maze_programming4_1": "ಇದು ನಿಮ್ಮ ಬ್ಲಾಕ್ ಮಿತಿಯಾಗಿದೆ. ಇವುಗಳಲ್ಲಿ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಬಳಸಲು ಬಿಟ್ಟಿದ್ದೀರಿ ಎಂಬುದನ್ನು ಇದು ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "ಇದು ನಿಮ್ಮ ಬ್ಲಾಕ್ ಮಿತಿಯಾಗಿದೆ. ಇವುಗಳಲ್ಲಿ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಬಳಸಲು ಬಿಟ್ಟಿದ್ದೀರಿ ಎಂಬುದನ್ನು ಇದು ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
+        },
+        "courseD_maze_intro5a2022": {
+          "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
         },
         "courseD_maze_intro5a_2019": {
           "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
@@ -1155,7 +1165,13 @@
         "courseD_maze_intro5a_2020": {
           "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
         },
+        "courseD_maze_intro5a_2021": {
+          "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
+        },
         "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
+        },
+        "courseD_maze_ramp12022": {
           "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
         },
         "courseD_maze_ramp1_2018": {
@@ -1167,7 +1183,13 @@
         "courseD_maze_ramp1_2020": {
           "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
         },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
+        },
         "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
+        },
+        "courseD_maze_ramp22022": {
           "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
         },
         "courseD_maze_ramp2_2018": {
@@ -1179,8 +1201,15 @@
         "courseD_maze_ramp2_2020": {
           "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
         },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
+        },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_2": "ಅವುಗಳನ್ನು ಎಸೆಯಲು ನೀವು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ಗೆ ಎಳೆಯಬಹುದು."
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "ಅವುಗಳನ್ನು ಎಸೆಯಲು ನೀವು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ಗೆ ಎಳೆಯಬಹುದು.",
+          "stone_block_2": "ಬೂದು ಬ್ಲಾಕ್ಗಳನ್ನು ಎಸೆಯಲಾಗುವುದಿಲ್ಲ."
         },
         "courseD_maze_ramp3_2018": {
           "courseC_maze_programming3_2": "ಅವುಗಳನ್ನು ಎಸೆಯಲು ನೀವು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ಗೆ ಎಳೆಯಬಹುದು."
@@ -1190,6 +1219,10 @@
           "stone_block_2": "ಬೂದು ಬ್ಲಾಕ್ಗಳನ್ನು ಎಸೆಯಲಾಗುವುದಿಲ್ಲ."
         },
         "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "ಅವುಗಳನ್ನು ಎಸೆಯಲು ನೀವು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ಗೆ ಎಳೆಯಬಹುದು.",
+          "stone_block_2": "ಬೂದು ಬ್ಲಾಕ್ಗಳನ್ನು ಎಸೆಯಲಾಗುವುದಿಲ್ಲ."
+        },
+        "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "ಅವುಗಳನ್ನು ಎಸೆಯಲು ನೀವು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ಗೆ ಎಳೆಯಬಹುದು.",
           "stone_block_2": "ಬೂದು ಬ್ಲಾಕ್ಗಳನ್ನು ಎಸೆಯಲಾಗುವುದಿಲ್ಲ."
         },
@@ -1208,6 +1241,9 @@
         "courseD_maze_ramp5": {
           "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
         },
+        "courseD_maze_ramp52022": {
+          "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
+        },
         "courseD_maze_ramp5_2018": {
           "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
         },
@@ -1215,6 +1251,9 @@
           "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
         },
         "courseD_maze_ramp5_2020": {
+          "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
+        },
+        "courseD_maze_ramp5_2021": {
           "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
         },
         "courseD_maze_ramp5a": {
@@ -1250,10 +1289,19 @@
         "courseE_aboutme_2": {
           "": "ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
         },
+        "courseE_aboutme_22022": {
+          "": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
         "courseE_aboutme_2_2020": {
           "": "ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
         },
+        "courseE_aboutme_2_2021": {
+          "": "ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
+        },
         "courseE_artist_functions2": {
+          "courseD_artist_functions2_1": "ಈ ಹಸಿರು ಬ್ಲಾಕ್ ರನ್ ಮಾಡಿದಾಗ, ಫಂಕ್ಷನ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ಮೊದಲ ಚೌಕವನ್ನು ಚಿತ್ರಿಸಿದ ನಂತರ ಕಲಾವಿದ ಏನು ಮಾಡಬೇಕು?"
+        },
+        "courseE_artist_functions22022": {
           "courseD_artist_functions2_1": "ಈ ಹಸಿರು ಬ್ಲಾಕ್ ರನ್ ಮಾಡಿದಾಗ, ಫಂಕ್ಷನ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ಮೊದಲ ಚೌಕವನ್ನು ಚಿತ್ರಿಸಿದ ನಂತರ ಕಲಾವಿದ ಏನು ಮಾಡಬೇಕು?"
         },
         "courseE_artist_functions2_2018": {
@@ -1265,6 +1313,9 @@
         "courseE_artist_functions2_2020": {
           "courseD_artist_functions2_1": "ಈ ಹಸಿರು ಬ್ಲಾಕ್ ರನ್ ಮಾಡಿದಾಗ, ಫಂಕ್ಷನ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ಮೊದಲ ಚೌಕವನ್ನು ಚಿತ್ರಿಸಿದ ನಂತರ ಕಲಾವಿದ ಏನು ಮಾಡಬೇಕು?"
         },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "ಈ ಹಸಿರು ಬ್ಲಾಕ್ ರನ್ ಮಾಡಿದಾಗ, ಫಂಕ್ಷನ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ಮೊದಲ ಚೌಕವನ್ನು ಚಿತ್ರಿಸಿದ ನಂತರ ಕಲಾವಿದ ಏನು ಮಾಡಬೇಕು?"
+        },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_1": "ಈ ಹಸಿರು ಬ್ಲಾಕ್ ರನ್ ಮಾಡಿದಾಗ, ಫಂಕ್ಷನ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ಮೊದಲ ಚೌಕವನ್ನು ಚಿತ್ರಿಸಿದ ನಂತರ ಕಲಾವಿದ ಏನು ಮಾಡಬೇಕು?"
         },
@@ -1272,6 +1323,9 @@
           "courseD_artist_functions2_1": "ಈ ಹಸಿರು ಬ್ಲಾಕ್ ರನ್ ಮಾಡಿದಾಗ, ಫಂಕ್ಷನ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ಮೊದಲ ಚೌಕವನ್ನು ಚಿತ್ರಿಸಿದ ನಂತರ ಕಲಾವಿದ ಏನು ಮಾಡಬೇಕು?"
         },
         "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "ಕಾರ್ಯಗಳನ್ನು ರಚಿಸಲು ನಿಮ್ಮ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಈ ಲೇಬಲ್ ಅಡಿಯಲ್ಲಿ ಸರಿಸಲಾಗಿದೆ."
+        },
+        "courseE_artist_functions8a2022": {
           "courseD_artist_functions8_1": "ಕಾರ್ಯಗಳನ್ನು ರಚಿಸಲು ನಿಮ್ಮ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಈ ಲೇಬಲ್ ಅಡಿಯಲ್ಲಿ ಸರಿಸಲಾಗಿದೆ."
         },
         "courseE_artist_functions8a_2018": {
@@ -1283,7 +1337,14 @@
         "courseE_artist_functions8a_2020": {
           "courseD_artist_functions8_1": "ಕಾರ್ಯಗಳನ್ನು ರಚಿಸಲು ನಿಮ್ಮ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಈ ಲೇಬಲ್ ಅಡಿಯಲ್ಲಿ ಸರಿಸಲಾಗಿದೆ."
         },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "ಕಾರ್ಯಗಳನ್ನು ರಚಿಸಲು ನಿಮ್ಮ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಈ ಲೇಬಲ್ ಅಡಿಯಲ್ಲಿ ಸರಿಸಲಾಗಿದೆ."
+        },
         "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "ಕೆಳಭಾಗಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡ್ ಸೇರಿಸುವ ಮೂಲಕ ಈ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಮುಂದುವರಿಸಿ.",
+          "courseE_artist_functions_challenge1_callout2": "ನಿಮಗೆ ಈ ವಿನ್ಯಾಸ ಇಷ್ಟವಾಗದಿದ್ದರೆ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಬದಲಾಯಿಸಿ!"
+        },
+        "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_callout1": "ಕೆಳಭಾಗಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡ್ ಸೇರಿಸುವ ಮೂಲಕ ಈ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಮುಂದುವರಿಸಿ.",
           "courseE_artist_functions_challenge1_callout2": "ನಿಮಗೆ ಈ ವಿನ್ಯಾಸ ಇಷ್ಟವಾಗದಿದ್ದರೆ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಬದಲಾಯಿಸಿ!"
         },
@@ -1299,7 +1360,15 @@
           "courseE_artist_functions_challenge1_callout1": "ಕೆಳಭಾಗಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡ್ ಸೇರಿಸುವ ಮೂಲಕ ಈ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಮುಂದುವರಿಸಿ.",
           "courseE_artist_functions_challenge1_callout2": "ನಿಮಗೆ ಈ ವಿನ್ಯಾಸ ಇಷ್ಟವಾಗದಿದ್ದರೆ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಬದಲಾಯಿಸಿ!"
         },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "ಕೆಳಭಾಗಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡ್ ಸೇರಿಸುವ ಮೂಲಕ ಈ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಮುಂದುವರಿಸಿ.",
+          "courseE_artist_functions_challenge1_callout2": "ನಿಮಗೆ ಈ ವಿನ್ಯಾಸ ಇಷ್ಟವಾಗದಿದ್ದರೆ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಬದಲಾಯಿಸಿ!"
+        },
         "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "ಕೆಳಭಾಗಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡ್ ಸೇರಿಸುವ ಮೂಲಕ ಈ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಮುಂದುವರಿಸಿ.",
+          "courseE_artist_functions_challenge2_callout2": "ನಿಮಗೆ ಈ ವಿನ್ಯಾಸ ಇಷ್ಟವಾಗದಿದ್ದರೆ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಬದಲಾಯಿಸಿ!"
+        },
+        "courseE_artist_functions_challenge22022": {
           "courseE_artist_functions_challenge2_callout1": "ಕೆಳಭಾಗಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡ್ ಸೇರಿಸುವ ಮೂಲಕ ಈ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಮುಂದುವರಿಸಿ.",
           "courseE_artist_functions_challenge2_callout2": "ನಿಮಗೆ ಈ ವಿನ್ಯಾಸ ಇಷ್ಟವಾಗದಿದ್ದರೆ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಬದಲಾಯಿಸಿ!"
         },
@@ -1315,8 +1384,18 @@
           "courseE_artist_functions_challenge2_callout1": "ಕೆಳಭಾಗಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡ್ ಸೇರಿಸುವ ಮೂಲಕ ಈ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಮುಂದುವರಿಸಿ.",
           "courseE_artist_functions_challenge2_callout2": "ನಿಮಗೆ ಈ ವಿನ್ಯಾಸ ಇಷ್ಟವಾಗದಿದ್ದರೆ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಬದಲಾಯಿಸಿ!"
         },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "ಕೆಳಭಾಗಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡ್ ಸೇರಿಸುವ ಮೂಲಕ ಈ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಮುಂದುವರಿಸಿ.",
+          "courseE_artist_functions_challenge2_callout2": "ನಿಮಗೆ ಈ ವಿನ್ಯಾಸ ಇಷ್ಟವಾಗದಿದ್ದರೆ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಬದಲಾಯಿಸಿ!"
+        },
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_2": "ಟೂಲ್‌ಬಾಕ್ಸ್ ಅನ್ನು ಈ ಬಾರಿ ಸ್ವಲ್ಪ ವಿಭಿನ್ನವಾಗಿ ಆಯೋಜಿಸಲಾಗಿದೆ! ನೀವು ಯಾವ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರುವಿರಿ ಎಂಬುದನ್ನು ನೋಡಲು ವಿವಿಧ ವರ್ಗಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "ಟೂಲ್‌ಬಾಕ್ಸ್ ಅನ್ನು ಈ ಬಾರಿ ಸ್ವಲ್ಪ ವಿಭಿನ್ನವಾಗಿ ಆಯೋಜಿಸಲಾಗಿದೆ! ನೀವು ಯಾವ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರುವಿರಿ ಎಂಬುದನ್ನು ನೋಡಲು ವಿವಿಧ ವರ್ಗಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "courseE_farmer_functions132022": {
+          "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
         },
         "courseE_farmer_functions13_2018": {
           "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
@@ -1325,6 +1404,9 @@
           "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
         },
         "courseE_farmer_functions13_2020": {
+          "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
+        },
+        "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
         },
         "courseE_farmer_functions1_2018": {
@@ -1336,7 +1418,13 @@
         "courseE_farmer_functions1_2020": {
           "courseE_farmer_functions1_2": "ಟೂಲ್‌ಬಾಕ್ಸ್ ಅನ್ನು ಈ ಬಾರಿ ಸ್ವಲ್ಪ ವಿಭಿನ್ನವಾಗಿ ಆಯೋಜಿಸಲಾಗಿದೆ! ನೀವು ಯಾವ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರುವಿರಿ ಎಂಬುದನ್ನು ನೋಡಲು ವಿವಿಧ ವರ್ಗಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "ಟೂಲ್‌ಬಾಕ್ಸ್ ಅನ್ನು ಈ ಬಾರಿ ಸ್ವಲ್ಪ ವಿಭಿನ್ನವಾಗಿ ಆಯೋಜಿಸಲಾಗಿದೆ! ನೀವು ಯಾವ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರುವಿರಿ ಎಂಬುದನ್ನು ನೋಡಲು ವಿವಿಧ ವರ್ಗಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
         "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
+        },
+        "courseE_farmer_functions1a2022": {
           "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
         },
         "courseE_farmer_functions1a_2018": {
@@ -1348,7 +1436,13 @@
         "courseE_farmer_functions1a_2020": {
           "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
         },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
+        },
         "courseE_farmer_functions2b": {
+          "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
+        },
+        "courseE_farmer_functions2b2022": {
           "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
         },
         "courseE_farmer_functions2b_2018": {
@@ -1360,311 +1454,18 @@
         "courseE_farmer_functions2b_2020": {
           "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
         },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
+        },
         "courseE_playLab_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "ಆಟದ ಸ್ಥಳದ ವಿವಿಧ ಭಾಗಗಳಿಗೆ ನಟರನ್ನು ಸರಿಸಲು ಈ ಬ್ಲಾಕ್ ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ."
         },
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "ಒಂದು ಆಟ ಆಡೋಣ. ಪೆಂಗ್ವಿನ್ ಅನ್ನು ಆಕ್ಟೋಪಸ್‌ಗೆ ಸರಿಸುವ ಮೂಲಕ 5 ಅಂಕಗಳನ್ನು ಗಳಿಸಿ!"
         },
-        "courseF_artist_for1": {
-          "courseF_artist_for1_1": "ನಿಮ್ಮ ಕೋಡ್‌ಗೆ ಹೆಚ್ಚಿನ ಸ್ಥಳಾವಕಾಶವನ್ನು ನೀಡಲು ಟೂಲ್‌ಬಾಕ್ಸ್ \"ವರ್ಗ\" ಮೋಡ್‌ನಲ್ಲಿದೆ. `ಫಾರ್` ಲೂಪ್‌ಗಳು ಇಲ್ಲಿ ವಾಸಿಸುತ್ತವೆ."
-        },
-        "courseF_artist_for1_2018": {
-          "courseF_artist_for1_1": "ನಿಮ್ಮ ಕೋಡ್‌ಗೆ ಹೆಚ್ಚಿನ ಸ್ಥಳಾವಕಾಶವನ್ನು ನೀಡಲು ಟೂಲ್‌ಬಾಕ್ಸ್ \"ವರ್ಗ\" ಮೋಡ್‌ನಲ್ಲಿದೆ. `ಫಾರ್` ಲೂಪ್‌ಗಳು ಇಲ್ಲಿ ವಾಸಿಸುತ್ತವೆ."
-        },
-        "courseF_artist_for1_2019": {
-          "courseF_artist_for1_1": "ನಿಮ್ಮ ಕೋಡ್‌ಗೆ ಹೆಚ್ಚಿನ ಸ್ಥಳಾವಕಾಶವನ್ನು ನೀಡಲು ಟೂಲ್‌ಬಾಕ್ಸ್ \"ವರ್ಗ\" ಮೋಡ್‌ನಲ್ಲಿದೆ. `ಫಾರ್` ಲೂಪ್‌ಗಳು ಇಲ್ಲಿ ವಾಸಿಸುತ್ತವೆ."
-        },
-        "courseF_artist_for1_2020": {
-          "courseF_artist_for1_1": "ನಿಮ್ಮ ಕೋಡ್‌ಗೆ ಹೆಚ್ಚಿನ ಸ್ಥಳಾವಕಾಶವನ್ನು ನೀಡಲು ಟೂಲ್‌ಬಾಕ್ಸ್ \"ವರ್ಗ\" ಮೋಡ್‌ನಲ್ಲಿದೆ. `ಫಾರ್` ಲೂಪ್‌ಗಳು ಇಲ್ಲಿ ವಾಸಿಸುತ್ತವೆ."
-        },
-        "courseF_bee_for4": {
-          "courseF_bee_for4_1": "ನೀವು ಇಲ್ಲಿ `ಫಾರ್` ಲೂಪ್ ಅನ್ನು ಕಾಣಬಹುದು!"
-        },
-        "courseF_bee_for4_2018": {
-          "courseF_bee_for4_1": "ನೀವು ಇಲ್ಲಿ `ಫಾರ್` ಲೂಪ್ ಅನ್ನು ಕಾಣಬಹುದು!"
-        },
-        "courseF_bee_for4_2019": {
-          "courseF_bee_for4_1": "ನೀವು ಇಲ್ಲಿ `ಫಾರ್` ಲೂಪ್ ಅನ್ನು ಕಾಣಬಹುದು!"
-        },
-        "courseF_bee_for4_2020": {
-          "courseF_bee_for4_1": "ನೀವು ಇಲ್ಲಿ `ಫಾರ್` ಲೂಪ್ ಅನ್ನು ಕಾಣಬಹುದು!"
-        },
-        "courseF_bee_for9": {
-          "courseF_bee_for9_1": "ನೀವು ಇಲ್ಲಿ `ಗಣಿತ` ಬ್ಲಾಕ್ ಅನ್ನು ಕಾಣಬಹುದು."
-        },
-        "courseF_bee_for9_2018": {
-          "courseF_bee_for9_1": "ನೀವು ಇಲ್ಲಿ `ಗಣಿತ` ಬ್ಲಾಕ್ ಅನ್ನು ಕಾಣಬಹುದು."
-        },
-        "courseF_bee_for9_2019": {
-          "courseF_bee_for9_1": "ನೀವು ಇಲ್ಲಿ `ಗಣಿತ` ಬ್ಲಾಕ್ ಅನ್ನು ಕಾಣಬಹುದು."
-        },
-        "courseF_bee_for9_2020": {
-          "courseF_bee_for9_1": "ನೀವು ಇಲ್ಲಿ `ಗಣಿತ` ಬ್ಲಾಕ್ ಅನ್ನು ಕಾಣಬಹುದು."
-        },
-        "courseF_bee_variables_1_2018": {
-          "courseF_bee_functions_1_2018_1": "ನಿಮ್ಮ ವೇರಿಯಬಲ್‌ಗಳನ್ನು ನೀವು ಇಲ್ಲಿ ಕಾಣಬಹುದು!"
-        },
-        "courseF_bee_variables_1_2019": {
-          "courseF_bee_functions_1_2018_1": "ನಿಮ್ಮ ವೇರಿಯಬಲ್‌ಗಳನ್ನು ನೀವು ಇಲ್ಲಿ ಕಾಣಬಹುದು!"
-        },
-        "courseF_bee_variables_1_2020": {
-          "courseF_bee_functions_1_2018_1": "ನಿಮ್ಮ ವೇರಿಯಬಲ್‌ಗಳನ್ನು ನೀವು ಇಲ್ಲಿ ಕಾಣಬಹುದು!"
-        },
-        "coursea_maze_ramp1_2018": {
-          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಒಟ್ಟಿಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
-        },
-        "coursea_maze_ramp1_2019": {
-          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಒಟ್ಟಿಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
-        },
-        "coursea_maze_ramp1_2020": {
-          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಒಟ್ಟಿಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
-        },
-        "express_maze_debugging9_2019": {
-          "express_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
-        },
-        "express_maze_debugging9_2020": {
-          "express_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
-        },
-        "New Sprite Lab Project": {
-          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ.",
-          "make_sprite": "ಸ್ಪ್ರೈಟ್ ಮಾಡಲು ಇಲ್ಲಿ ಬ್ಲಾಕ್ಗಳನ್ನು ಬಳಸಿ!"
-        },
-        "CourseD_Dance_2020_012022": {
-          "dance_callout_01": "ಇಲ್ಲಿ ಡ್ಯಾನ್ಸರ್‌ ವಿಧವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ."
-        },
-        "CourseD_Dance_2020_022022": {
-          "dance_callout_11_a": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಈ ಬ್ಲಾಕ್ ಸೇರಿಸಿ.",
-          "arrow_buttons": "ನಿಮ್ಮ ಡ್ಯಾನ್ಸರ್‌ ನಿಯಂತ್ರಿಸಲು ಬಾಣದ ಗುರುತನ್ನು ಒತ್ತಿ."
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಈ ಬ್ಲಾಕ್ ಸೇರಿಸಿ!"
-        },
-        "CourseD_Dance_2020_052022": {
-          "dance_callout_05": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಮ್‌ಗೆ ಹೊಸ ಇವೆಂಟ್‌ ಅನ್ನು ಸೇರಿಸಿ."
-        },
-        "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "CourseD_Dance_2020_072022": {
-          "setprop_hint": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "CourseD_Dance_2020_092022": {
-          "new_block_3": "ಹೊಸ ಬ್ಲಾಕ್!",
-          "new_block_4": "ಹೊಸ ಬ್ಲಾಕ್!"
-        },
-        "CourseF_outbreak2_-2022-2": {
-          "minitoolbox": "ಬ್ಲಾಕ್ ವಿಸ್ತರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ.",
-          "pointerlocation": "ಇಲ್ಲಿ ಒಂದು ಸಬ್ಜೆಕ್ಟ್ ಬ್ಲಾಕ್ ಅನ್ನು ಡ್ರ್ಯಾಗ್ ಮಾಡಿ."
-        },
-        "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "Fish Tank 3-validated2022": {
-          "spritelab_comment": "ನಿಮ್ಮ ಕೋಡ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಎಂಬುದರ ಕುರಿತು ನಿಮ್ಮನ್ನು ಅಥವಾ ನಿಮ್ಮ ಶಿಕ್ಷಕರ ಟಿಪ್ಪಣಿಗಳನ್ನು ಬಿಡಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_1": "ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಅದೇ ಹೆಸರಿನಿಂದ ದೊಡ್ಡ ಕೋಡ್ ತುಂಡನ್ನು ರನ್ ಮಾಡಲು ಕಂಪ್ಯೂಟರ್ ಈ ಸಣ್ಣ ಸೂಚನೆಯು ಸೂಚಿಸುತ್ತದೆ."
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_1": "ಇದು 'ರಿಪೀಟ್' ಲೂಪ್! ಇದನ್ನು ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಕ್ಲಿಕ್ ಮಾಡಿ ಮತ್ತು ಪದೇ ಪದೇ ನೀವು ರನ್ ಮಾಡಲು ಬಯಸುವ ಕೋಡ್ ಸೇರಿಸಿ."
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "ಏಜೆಂಟ್ ನೀರಿನ ಮೇಲಿನಿಂದ ಸಾಗಬಹುದು. ಆದರೆ ಪ್ಲೇಯರ್ ಸಾಗುವುದು ಸಾಧ್ಯವಿಲ್ಲ!"
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_1": "ನೀವು ಈ ಬ್ಲಾಕ್‌ಗಳನ್ನು ದೂರ ಎಸೆಯಲಾಗದು. ಆದರೆ ನೀವು ಅವುಗಳನ್ನು ಎಡಿಟ್ ಮಾಡಬಹುದು!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_1": "ಏಜೆಂಟ್ ಲಾವಾ ಮೇಲಿನಿಂದ ಹೋಗಬಹುದು. ಆದರೆ, ಸ್ಟೀವ್ ಮತ್ತು ಅಲೆಕ್ಸಾರಿಂದ ಸಾಧ್ಯವಿಲ್ಲ!"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_drag_block_callout": "\"ಮುಂದಕ್ಕೆ ಸಾಗಿ\" ಬ್ಲಾಕ್ ಎಳೆಯಿರಿ ಮತ್ತು ಇನ್ನೊಂದು ಬ್ಲಾಕ್ ಕೆಳಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿ"
-        },
-        "Virtual Pet 2_-2022-2": {
-          "vp_costumes": "ನಿಮ್ಮ ಯೋಜನೆಗೆ ಹೊಸ ವೇಷಭೂಷಣಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
-        },
-        "Virtual Pet 6_-2022-2": {
-          "vp_costumes": "ನಿಮ್ಮ ಯೋಜನೆಗೆ ಹೊಸ ವೇಷಭೂಷಣಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
-        },
-        "courseA_EOC_playlab_animals2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people2022": {
-          "question_mark": "?"
-        },
-        "courseA_artist_loops42022": {
-          "courseA_artist_loops4_1": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಬಹುದು ಎಂಬುದನ್ನು ಈ ಸಂಖ್ಯೆ ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
-        },
-        "courseA_artist_loops72022": {
-          "courseA_artist_loops7_1": "ಈ ಸಂಖ್ಯೆಯು ಈ ರೀತಿಯ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದನ್ನು ಮಾತ್ರ ಅಂತಿಮ ಉತ್ತರದಲ್ಲಿ ಬಳಸಬಹುದು."
-        },
-        "courseA_artist_loops82022": {
-          "courseA_artist_loops8_1": "ನಿಮಗೆ ಅಗತ್ಯವಿರುವಾಗ ನೀವು ರೇಖೆಯ ಮೇಲೆ ಹಿಂತಿರುಗಬಹುದು ಎಂದು ನಿಮಗೆ ತಿಳಿದಿದೆಯೇ?"
-        },
-        "courseA_collector_loops12022": {
-          "courseA_collector_loops1_1": "ನಿಧಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
-        },
-        "courseA_collector_loops32022": {
-          "gradek_adventurer_loops2_1": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಬಹುದು ಎಂಬುದನ್ನು ಈ ಸಂಖ್ಯೆ ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
-        },
-        "courseA_maze_ramp22022": {
-          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
-        },
-        "courseA_maze_seq12022": {
-          "courseA_maze_seq1_1": "ನಿಮಗೆ ಸುಳಿವು ಬೇಕಾದಾಗ ಲೈಟ್‌ಬಲ್ಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ!"
-        },
-        "courseA_playLab_events42022": {
-          "courseA_playlab_events4_callout1": "ಇದು ಕಾಲ್ಔಟ್ ಆಗಿದೆ"
-        },
-        "courseA_playLab_events52022": {
-          "courseA_playLab_events5_1": "ಈವೆಂಟ್ ಬಾಣದ ದಿಕ್ಕನ್ನು ಬದಲಾಯಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "courseA_playLab_events62022": {
-          "courseA_playLab_events6_1": "ಇದು ನಿಮಗೆ \"ಯಾದೃಚ್ಛಿಕ\" ಧ್ವನಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಅವಕಾಶ ಮಾಡಿಕೊಡುತ್ತದೆ, ಇದರರ್ಥ ನೀವು ಅದನ್ನು ಕೇಳುವವರೆಗೂ ನೀವು ಏನನ್ನು ಪಡೆಯುತ್ತೀರಿ ಎಂದು ನಿಮಗೆ ತಿಳಿದಿಲ್ಲ!"
-        },
-        "courseB_Scrat_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
-        },
-        "courseB_Scrat_ramp3a2022": {
-          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
-        },
-        "courseB_artist_loops32022": {
-          "courseB_artist_loops3_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಈ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದು ಮಾತ್ರ ಇದೆ. ನೀವು ಅದನ್ನು ಹೇಗೆ ಬಳಸುತ್ತೀರಿ?"
-        },
-        "courseB_collector_loops12022": {
-          "courseB_collector_loops1_1": "ನಿಧಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
-        },
-        "courseB_maze_seq12022": {
-          "courseB_maze_seq1": "ನಿಮಗೆ ಸುಳಿವು ಬೇಕಾದಾಗ ಲೈಟ್‌ಬಲ್ಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ!"
-        },
-        "courseB_playlab_events62022": {
-          "courseB_playlab_events6_a": "ದಿಕ್ಕುಗಳನ್ನು ಬದಲಾಯಿಸಲು ಹಸಿರು ಡ್ರಾಪ್ ಡೌನ್ ಬಾಣವನ್ನು ಬಳಸಿ."
-        },
-        "courseC19_playLab_EOC32022": {
-          "courseE_playLab_scaffold3_1": "ಒಂದು ಆಟ ಆಡೋಣ. ಪೆಂಗ್ವಿನ್ ಅನ್ನು ಆಕ್ಟೋಪಸ್‌ಗೆ ಸರಿಸುವ ಮೂಲಕ 5 ಅಂಕಗಳನ್ನು ಗಳಿಸಿ!"
-        },
-        "courseC_PlayLab_events82022": {
-          "courseC_PlayLab_events8_callout1": "ವ್ಯಾಡಲ್ಸ್ ಮತ್ತು ಚಾಂಪ್ ಸ್ಪರ್ಶಿಸುವಾಗ ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ!"
-        },
-        "courseC_PlayLab_events_challenge12022": {
-          "courseC_PlayLab_events_challenge1_1": "ಆಟದ ಸ್ಥಳದ ವಿವಿಧ ಭಾಗಗಳಿಗೆ ನಟರನ್ನು ಸರಿಸಲು ಈ ಬ್ಲಾಕ್ ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ."
-        },
-        "courseC_PlayLab_events_lesson_extras": {
-          "courseC_PlayLab_events_challenge1_1": "ಆಟದ ಸ್ಥಳದ ವಿವಿಧ ಭಾಗಗಳಿಗೆ ನಟರನ್ನು ಸರಿಸಲು ಈ ಬ್ಲಾಕ್ ನಿಮಗೆ ಅನುಮತಿಸುತ್ತದೆ."
-        },
-        "courseC_artist_loops1a2022": {
-          "jumpto_callout": "ಈ ಯೋಜನೆಗೆ ಈ ಬ್ಲಾಕ್ ಬಹಳ ಮುಖ್ಯವಾಗಿದೆ. ಅದನ್ನು ಬಳಸಲು ಮರೆಯದಿರಿ!"
-        },
-        "courseC_artist_loops1b2022": {
-          "sticker2": "ಇದನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಕ್ರಮದ ಮಧ್ಯಭಾಗಕ್ಕೆ ಸೇರಿಸಿ."
-        },
-        "courseC_artist_prog22022": {
-          "slider": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ನೀವು ಇಲ್ಲಿ ನಿಧಾನಗೊಳಿಸಬಹುದು."
-        },
-        "courseC_collector_prog12022": {
-          "courseC_collector_prog1_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ನೀವು ಕೆಲವು ಹೊಸ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೋಡುತ್ತೀರಾ? ಚಿಂತಿಸಬೇಡಿ, ಇನ್ನೊಂದು ಪಾಠದಲ್ಲಿ ಅವುಗಳನ್ನು ಹೇಗೆ ಬಳಸಬೇಕೆಂದು ನಾವು ನಿಮಗೆ ತೋರಿಸುತ್ತೇವೆ."
-        },
-        "courseC_collector_prog72022": {
-          "courseC_collector_prog7_1": "ನಿಮಗೆ ಅಗತ್ಯವಿದ್ದರೆ ನೀವು ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಹೆಚ್ಚಿನ ಬ್ಲಾಕ್‌ಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು!"
-        },
-        "courseC_harvester_loops12022": {
-          "courseC_harvester_loops1_callout1": "ಕುಂಬಳಕಾಯಿಯ ಮೇಲಿನ ನಾಲ್ಕು ಸಂಖ್ಯೆಯು ನಾಲ್ಕು ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಲಭ್ಯವಿದೆ ಎಂದು ಹೇಳುತ್ತದೆ."
-        },
-        "courseC_maze_debugging52022": {
-          "courseC_maze_debugging5_1": "ಈ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಲಾಕ್ ಮಾಡಲಾಗಿದೆ ಮತ್ತು ಅಳಿಸಲಾಗುವುದಿಲ್ಲ!"
-        },
-        "courseC_maze_debugging92022": {
-          "courseC_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
-        },
-        "courseC_maze_programming12022": {
-          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
-        },
-        "courseC_maze_programming22022": {
-          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
-        },
-        "courseC_maze_programming32022": {
-          "courseC_maze_programming3_2": "ಅವುಗಳನ್ನು ಎಸೆಯಲು ನೀವು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ಗೆ ಎಳೆಯಬಹುದು.",
-          "courseC_maze_programming3_3": "ಈ ಬ್ಲಾಕ್ಗಳು ಕಲ್ಲು ಮತ್ತು ಎಸೆಯಲಾಗುವುದಿಲ್ಲ."
-        },
-        "courseC_maze_programming42022": {
-          "courseC_maze_programming4_1": "ಇದು ನಿಮ್ಮ ಬ್ಲಾಕ್ ಮಿತಿಯಾಗಿದೆ. ಇವುಗಳಲ್ಲಿ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಬಳಸಲು ಬಿಟ್ಟಿದ್ದೀರಿ ಎಂಬುದನ್ನು ಇದು ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
-        },
-        "courseC_maze_programming52022": {
-          "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
-        },
-        "courseC_maze_programming72022": {
-          "courseC_maze_programming7_1": "ಇದು ನಿಮ್ಮ ಮೊದಲ ಸವಾಲಿನ ಒಗಟು! ಇವುಗಳು ಕಠಿಣವಾಗಿರುತ್ತವೆ ಮತ್ತು ಹಲವಾರು ಪ್ರಯತ್ನಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು.",
-          "courseC_maze_programming7_2": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಕಲ್ಲಿನಿಂದ ಮಾಡಲ್ಪಟ್ಟಿದೆ ಮತ್ತು ಎಸೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
-        },
-        "courseC_starWars_loops22022": {
-          "courseC_starWars_loops2": "ಈ ಪಝಲ್‌ನಲ್ಲಿ ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಹೊಂದಿದ್ದೀರಿ."
-        },
-        "courseD_artist_nestedLoops1a2022": {
-          "courseD_artist_nestedLoops1a_1": "ಈ ಪಝಲ್ ಅನ್ನು ಸರಿಯಾಗಿ ಪಡೆಯಲು ನೀವು ಬಣ್ಣಗಳನ್ನು ಬಳಸಬೇಕಾಗಿಲ್ಲ. ನೀವು ಬಯಸಿದರೆ, ಈ `ಯಾದೃಚ್ಛಿಕ ಬಣ್ಣ` ಬ್ಲಾಕ್ ಅದನ್ನು ಸುಲಭಗೊಳಿಸುತ್ತದೆ!"
-        },
-        "courseD_bee_conditionals22022": {
-          "4_5_Bee_Conditionals_2_1": "ನೆನಪಿಡಿ, ಪ್ರತಿ ಮೋಡವು ಹೂವನ್ನು ಹೊಂದಿದೆಯೇ ಎಂದು ಪರೀಕ್ಷಿಸಿ. ನೀವು ಜೇನುಗೂಡುಗಳನ್ನು ಪರೀಕ್ಷಿಸಬೇಕಾಗಿಲ್ಲ."
-        },
-        "courseD_bee_conditionals_challenge22022": {
-          "courseD_bee_conditionals_challenge2_1": "ಒಂದು ಹೂವಿನಿಂದ (ಅಥವಾ ಜೇನುಗೂಡು) ಎಲ್ಲಾ ಮಕರಂದವನ್ನು (ಅಥವಾ ಜೇನುತುಪ್ಪ) ಸಂಗ್ರಹಿಸಲು ಈ ಲೂಪ್ ಅನ್ನು ಬಳಸಿ."
-        },
-        "courseD_bee_nestedLoops1a2022": {
-          "stepButton": "ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಒಂದು ಸಮಯದಲ್ಲಿ ಒಂದು ಬ್ಲಾಕ್ ಮೂಲಕ ಹೆಜ್ಜೆ ಹಾಕಲು ಪ್ರಯತ್ನಿಸಿ."
-        },
-        "courseD_farmer_while72022": {
-          "courseD_farmer_while7_2018_PathAhead": "ಈ ಪಝಲ್ ಅನ್ನು ಪರಿಹರಿಸಲು ನೀವು `ಮುಂದೆ ಇರುವ ಹಾದಿ~ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಬೇಕಾಗುತ್ತದೆ."
-        },
-        "courseD_maze_intro42022": {
-          "courseC_maze_programming4_1": "ಇದು ನಿಮ್ಮ ಬ್ಲಾಕ್ ಮಿತಿಯಾಗಿದೆ. ಇವುಗಳಲ್ಲಿ ಎಷ್ಟು ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಬಳಸಲು ಬಿಟ್ಟಿದ್ದೀರಿ ಎಂಬುದನ್ನು ಇದು ನಿಮಗೆ ತಿಳಿಸುತ್ತದೆ."
-        },
-        "courseD_maze_intro5a2022": {
-          "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
-        },
-        "courseD_maze_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
-        },
-        "courseD_maze_ramp22022": {
-          "courseC_maze_programming2_1": "ಇದು ಟೂಲ್ ಬಾಕ್ಸ್ ಆಗಿದೆ. ನಿಮ್ಮ ಒಗಟುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು."
-        },
-        "courseD_maze_ramp32022": {
-          "courseC_maze_programming3_2": "ಅವುಗಳನ್ನು ಎಸೆಯಲು ನೀವು ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ಗೆ ಎಳೆಯಬಹುದು.",
-          "stone_block_2": "ಬೂದು ಬ್ಲಾಕ್ಗಳನ್ನು ಎಸೆಯಲಾಗುವುದಿಲ್ಲ."
-        },
-        "courseD_maze_ramp52022": {
-          "": "ಈ ಬ್ಲಾಕ್‌ಗಳು ಅವುಗಳ ಮೇಲೆ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನಿಮಗೆ ಬೇಕಾದಷ್ಟು ಬಳಸಬಹುದು!"
-        },
-        "courseE_aboutme_22022": {
-          "": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "courseE_artist_functions22022": {
-          "courseD_artist_functions2_1": "ಈ ಹಸಿರು ಬ್ಲಾಕ್ ರನ್ ಮಾಡಿದಾಗ, ಫಂಕ್ಷನ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಕೋಡ್ ರನ್ ಆಗುತ್ತದೆ. ಮೊದಲ ಚೌಕವನ್ನು ಚಿತ್ರಿಸಿದ ನಂತರ ಕಲಾವಿದ ಏನು ಮಾಡಬೇಕು?"
-        },
-        "courseE_artist_functions8a2022": {
-          "courseD_artist_functions8_1": "ಕಾರ್ಯಗಳನ್ನು ರಚಿಸಲು ನಿಮ್ಮ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಈ ಲೇಬಲ್ ಅಡಿಯಲ್ಲಿ ಸರಿಸಲಾಗಿದೆ."
-        },
-        "courseE_artist_functions_challenge12022": {
-          "courseE_artist_functions_challenge1_callout1": "ಕೆಳಭಾಗಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡ್ ಸೇರಿಸುವ ಮೂಲಕ ಈ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಮುಂದುವರಿಸಿ.",
-          "courseE_artist_functions_challenge1_callout2": "ನಿಮಗೆ ಈ ವಿನ್ಯಾಸ ಇಷ್ಟವಾಗದಿದ್ದರೆ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಬದಲಾಯಿಸಿ!"
-        },
-        "courseE_artist_functions_challenge22022": {
-          "courseE_artist_functions_challenge2_callout1": "ಕೆಳಭಾಗಕ್ಕೆ ಹೆಚ್ಚಿನ ಕೋಡ್ ಸೇರಿಸುವ ಮೂಲಕ ಈ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಮುಂದುವರಿಸಿ.",
-          "courseE_artist_functions_challenge2_callout2": "ನಿಮಗೆ ಈ ವಿನ್ಯಾಸ ಇಷ್ಟವಾಗದಿದ್ದರೆ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಬದಲಾಯಿಸಿ!"
-        },
-        "courseE_farmer_functions12022": {
-          "courseE_farmer_functions1_2": "ಟೂಲ್‌ಬಾಕ್ಸ್ ಅನ್ನು ಈ ಬಾರಿ ಸ್ವಲ್ಪ ವಿಭಿನ್ನವಾಗಿ ಆಯೋಜಿಸಲಾಗಿದೆ! ನೀವು ಯಾವ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಹೊಂದಿರುವಿರಿ ಎಂಬುದನ್ನು ನೋಡಲು ವಿವಿಧ ವರ್ಗಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ."
-        },
-        "courseE_farmer_functions132022": {
-          "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
-        },
-        "courseE_farmer_functions1a2022": {
-          "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
-        },
-        "courseE_farmer_functions2b2022": {
-          "courseE_farmer_functions1a_1": "ಈ ಸಸ್ಯಾಹಾರಿ ತಿಳಿದಿಲ್ಲ. ನೀವು ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ ಅದು ಬದಲಾಗುತ್ತದೆ."
+        "courseF_apps_aquarium": {
+          "run_button": "ಮೊದಲು ರನ್ ಬಟನ್ ಒತ್ತಿರಿ!",
+          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
         },
         "courseF_apps_aquarium2022": {
           "run_button": "ಮೊದಲು ರನ್ ಬಟನ್ ಒತ್ತಿರಿ!",
@@ -1674,10 +1475,17 @@
           "run_button": "ಮೊದಲು ರನ್ ಬಟನ್ ಒತ್ತಿರಿ!",
           "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
         },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
+        },
         "courseF_apps_card2022": {
           "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "ಮೊದಲು ರನ್ ಬಟನ್ ಒತ್ತಿರಿ!",
           "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
         },
         "courseF_apps_chatbot2022": {
@@ -1685,6 +1493,10 @@
           "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "ಮೊದಲು ರನ್ ಬಟನ್ ಒತ್ತಿರಿ!",
+          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
+        },
+        "courseF_apps_collector": {
           "run_button": "ಮೊದಲು ರನ್ ಬಟನ್ ಒತ್ತಿರಿ!",
           "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
         },
@@ -1708,10 +1520,17 @@
         "courseF_apps_collector_move_-2022-2": {
           "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
         },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
+        },
         "courseF_apps_madlib2022": {
           "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
         },
         "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
+        },
+        "courseF_apps_pet": {
+          "run_button": "ಮೊದಲು ರನ್ ಬಟನ್ ಒತ್ತಿರಿ!",
           "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
         },
         "courseF_apps_pet2022": {
@@ -1722,82 +1541,207 @@
           "run_button": "ಮೊದಲು ರನ್ ಬಟನ್ ಒತ್ತಿರಿ!",
           "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
         },
+        "courseF_artist_for1": {
+          "courseF_artist_for1_1": "ನಿಮ್ಮ ಕೋಡ್‌ಗೆ ಹೆಚ್ಚಿನ ಸ್ಥಳಾವಕಾಶವನ್ನು ನೀಡಲು ಟೂಲ್‌ಬಾಕ್ಸ್ \"ವರ್ಗ\" ಮೋಡ್‌ನಲ್ಲಿದೆ. `ಫಾರ್` ಲೂಪ್‌ಗಳು ಇಲ್ಲಿ ವಾಸಿಸುತ್ತವೆ."
+        },
         "courseF_artist_for12022": {
           "courseF_artist_for1_1": "ನಿಮ್ಮ ಕೋಡ್‌ಗೆ ಹೆಚ್ಚಿನ ಸ್ಥಳಾವಕಾಶವನ್ನು ನೀಡಲು ಟೂಲ್‌ಬಾಕ್ಸ್ \"ವರ್ಗ\" ಮೋಡ್‌ನಲ್ಲಿದೆ. `ಫಾರ್` ಲೂಪ್‌ಗಳು ಇಲ್ಲಿ ವಾಸಿಸುತ್ತವೆ."
+        },
+        "courseF_artist_for1_2018": {
+          "courseF_artist_for1_1": "ನಿಮ್ಮ ಕೋಡ್‌ಗೆ ಹೆಚ್ಚಿನ ಸ್ಥಳಾವಕಾಶವನ್ನು ನೀಡಲು ಟೂಲ್‌ಬಾಕ್ಸ್ \"ವರ್ಗ\" ಮೋಡ್‌ನಲ್ಲಿದೆ. `ಫಾರ್` ಲೂಪ್‌ಗಳು ಇಲ್ಲಿ ವಾಸಿಸುತ್ತವೆ."
+        },
+        "courseF_artist_for1_2019": {
+          "courseF_artist_for1_1": "ನಿಮ್ಮ ಕೋಡ್‌ಗೆ ಹೆಚ್ಚಿನ ಸ್ಥಳಾವಕಾಶವನ್ನು ನೀಡಲು ಟೂಲ್‌ಬಾಕ್ಸ್ \"ವರ್ಗ\" ಮೋಡ್‌ನಲ್ಲಿದೆ. `ಫಾರ್` ಲೂಪ್‌ಗಳು ಇಲ್ಲಿ ವಾಸಿಸುತ್ತವೆ."
+        },
+        "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "ನಿಮ್ಮ ಕೋಡ್‌ಗೆ ಹೆಚ್ಚಿನ ಸ್ಥಳಾವಕಾಶವನ್ನು ನೀಡಲು ಟೂಲ್‌ಬಾಕ್ಸ್ \"ವರ್ಗ\" ಮೋಡ್‌ನಲ್ಲಿದೆ. `ಫಾರ್` ಲೂಪ್‌ಗಳು ಇಲ್ಲಿ ವಾಸಿಸುತ್ತವೆ."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "ನಿಮ್ಮ ಕೋಡ್‌ಗೆ ಹೆಚ್ಚಿನ ಸ್ಥಳಾವಕಾಶವನ್ನು ನೀಡಲು ಟೂಲ್‌ಬಾಕ್ಸ್ \"ವರ್ಗ\" ಮೋಡ್‌ನಲ್ಲಿದೆ. `ಫಾರ್` ಲೂಪ್‌ಗಳು ಇಲ್ಲಿ ವಾಸಿಸುತ್ತವೆ."
+        },
+        "courseF_bee_for4": {
+          "courseF_bee_for4_1": "ನೀವು ಇಲ್ಲಿ `ಫಾರ್` ಲೂಪ್ ಅನ್ನು ಕಾಣಬಹುದು!"
         },
         "courseF_bee_for42022": {
           "courseF_bee_for4_1": "ನೀವು ಇಲ್ಲಿ `ಫಾರ್` ಲೂಪ್ ಅನ್ನು ಕಾಣಬಹುದು!"
         },
+        "courseF_bee_for4_2018": {
+          "courseF_bee_for4_1": "ನೀವು ಇಲ್ಲಿ `ಫಾರ್` ಲೂಪ್ ಅನ್ನು ಕಾಣಬಹುದು!"
+        },
+        "courseF_bee_for4_2019": {
+          "courseF_bee_for4_1": "ನೀವು ಇಲ್ಲಿ `ಫಾರ್` ಲೂಪ್ ಅನ್ನು ಕಾಣಬಹುದು!"
+        },
+        "courseF_bee_for4_2020": {
+          "courseF_bee_for4_1": "ನೀವು ಇಲ್ಲಿ `ಫಾರ್` ಲೂಪ್ ಅನ್ನು ಕಾಣಬಹುದು!"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "ನೀವು ಇಲ್ಲಿ `ಫಾರ್` ಲೂಪ್ ಅನ್ನು ಕಾಣಬಹುದು!"
+        },
+        "courseF_bee_for9": {
+          "courseF_bee_for9_1": "ನೀವು ಇಲ್ಲಿ `ಗಣಿತ` ಬ್ಲಾಕ್ ಅನ್ನು ಕಾಣಬಹುದು."
+        },
         "courseF_bee_for92022": {
           "courseF_bee_for9_1": "ನೀವು ಇಲ್ಲಿ `ಗಣಿತ` ಬ್ಲಾಕ್ ಅನ್ನು ಕಾಣಬಹುದು."
+        },
+        "courseF_bee_for9_2018": {
+          "courseF_bee_for9_1": "ನೀವು ಇಲ್ಲಿ `ಗಣಿತ` ಬ್ಲಾಕ್ ಅನ್ನು ಕಾಣಬಹುದು."
+        },
+        "courseF_bee_for9_2019": {
+          "courseF_bee_for9_1": "ನೀವು ಇಲ್ಲಿ `ಗಣಿತ` ಬ್ಲಾಕ್ ಅನ್ನು ಕಾಣಬಹುದು."
+        },
+        "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "ನೀವು ಇಲ್ಲಿ `ಗಣಿತ` ಬ್ಲಾಕ್ ಅನ್ನು ಕಾಣಬಹುದು."
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "ನೀವು ಇಲ್ಲಿ `ಗಣಿತ` ಬ್ಲಾಕ್ ಅನ್ನು ಕಾಣಬಹುದು."
+        },
+        "courseF_bee_variables_1_2018": {
+          "courseF_bee_functions_1_2018_1": "ನಿಮ್ಮ ವೇರಿಯಬಲ್‌ಗಳನ್ನು ನೀವು ಇಲ್ಲಿ ಕಾಣಬಹುದು!"
+        },
+        "courseF_bee_variables_1_2019": {
+          "courseF_bee_functions_1_2018_1": "ನಿಮ್ಮ ವೇರಿಯಬಲ್‌ಗಳನ್ನು ನೀವು ಇಲ್ಲಿ ಕಾಣಬಹುದು!"
+        },
+        "courseF_bee_variables_1_2020": {
+          "courseF_bee_functions_1_2018_1": "ನಿಮ್ಮ ವೇರಿಯಬಲ್‌ಗಳನ್ನು ನೀವು ಇಲ್ಲಿ ಕಾಣಬಹುದು!"
         },
         "courseF_bee_variables_1a2022": {
           "courseF_bee_functions_1_2018_1": "ನಿಮ್ಮ ವೇರಿಯಬಲ್‌ಗಳನ್ನು ನೀವು ಇಲ್ಲಿ ಕಾಣಬಹುದು!"
         },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "ನಿಮ್ಮ ವೇರಿಯಬಲ್‌ಗಳನ್ನು ನೀವು ಇಲ್ಲಿ ಕಾಣಬಹುದು!"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
+        },
         "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
+        },
+        "courseF_editable_chatbot": {
           "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
         },
         "courseF_editable_chatbot_-2022-2": {
           "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
         },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
+        },
         "courseF_editable_madlib_-2022-2": {
           "visualizationResizeBar": "ಆಟದ ಪ್ರದೇಶವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಲು 3 ಚುಕ್ಕೆಗಳನ್ನು ಎಳೆಯಿರಿ."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "ಯಾವಾಗ ಎಂದು ಬದಲಾಯಿಸಲು ಪ್ರಯತ್ನಿಸಿ."
         },
         "courseF_events_choice_penguin_-2022-2": {
           "whenToWhile": "ಯಾವಾಗ ಎಂದು ಬದಲಾಯಿಸಲು ಪ್ರಯತ್ನಿಸಿ."
         },
+        "courseF_events_conflict": {
+          "stops_block": "ಇಲ್ಲಿ ಹೊಸ ಬ್ಲಾಕ್‌ಗಳಿವೆ!"
+        },
         "courseF_events_conflict_-2022-2": {
           "stops_block": "ಇಲ್ಲಿ ಹೊಸ ಬ್ಲಾಕ್‌ಗಳಿವೆ!"
+        },
+        "courseF_events_key": {
+          "whenKey": "ಇಲ್ಲಿ ಕಂಡುಬರುವ ಹೊಸ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
         },
         "courseF_events_key_-2022-2": {
           "whenKey": "ಇಲ್ಲಿ ಕಂಡುಬರುವ ಹೊಸ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
         },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "ಈ ಬ್ಲಾಕ್ ತಪ್ಪಾದ ಕ್ರಮದಲ್ಲಿದೆ."
+        },
         "courseF_events_practice_reorder_-2022-2": {
           "stopAllBug": "ಈ ಬ್ಲಾಕ್ ತಪ್ಪಾದ ಕ್ರಮದಲ್ಲಿದೆ."
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "ಈ ವರ್ತನೆ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತಿದೆ ಎಂದು ನೋಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
         "courseF_events_predict_-2022-2": {
           "behaviors_edit": "ಈ ವರ್ತನೆ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತಿದೆ ಎಂದು ನೋಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
+        "courseF_events_time": {
+          "events_category": "ಈವೆಂಟ್‌ಗಳ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
         "courseF_events_time_-2022-2": {
           "events_category": "ಈವೆಂಟ್‌ಗಳ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "ಈ ಹಂತದಲ್ಲಿ ಕೆಳಗಿನ ಕೋಡ್ ಅನ್ನು ಹತ್ತಿರದಿಂದ ನೋಡಿ."
         },
         "courseF_label_predict_-2022-2": {
           "variablesPredict": "ಈ ಹಂತದಲ್ಲಿ ಕೆಳಗಿನ ಕೋಡ್ ಅನ್ನು ಹತ್ತಿರದಿಂದ ನೋಡಿ."
         },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "ನಡವಳಿಕೆಯ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
         "courseF_sprites_behaviors_-2022-2": {
           "behaviors_category": "ನಡವಳಿಕೆಯ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "ಸ್ಪ್ರೈಟ್ಸ್ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
         "courseF_sprites_make_-2022-2": {
           "sprites_category": "ಸ್ಪ್ರೈಟ್ಸ್ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
+        "courseF_sprites_positioning": {
+          "locations_category": "ಸ್ಥಳಗಳ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
         "courseF_sprites_positioning_-2022-2": {
           "locations_category": "ಸ್ಥಳಗಳ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "ಇಲ್ಲಿ ಹೊಸ ಬ್ಲಾಕ್ ಅನ್ನು ನೋಡಿ."
         },
         "courseF_sprites_properties_-2022-2": {
           "sprites_category2": "ಇಲ್ಲಿ ಹೊಸ ಬ್ಲಾಕ್ ಅನ್ನು ನೋಡಿ."
         },
+        "courseF_text_answer": {
+          "answered_block": "ಇಲ್ಲಿ ಹೊಸ ಬ್ಲಾಕ್ ಅನ್ನು ನೋಡಿ!"
+        },
         "courseF_text_answer_-2022-2": {
           "answered_block": "ಇಲ್ಲಿ ಹೊಸ ಬ್ಲಾಕ್ ಅನ್ನು ನೋಡಿ!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "ನೀವು ಪ್ರಶ್ನೆಗೆ ಉತ್ತರಿಸಿದಾಗ ಹಿನ್ನೆಲೆ ಬಣ್ಣ ಬದಲಾಗಿದೆಯೇ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
         },
         "courseF_text_choice_color_-2022-2": {
           "text_color_finish": "ನೀವು ಪ್ರಶ್ನೆಗೆ ಉತ್ತರಿಸಿದಾಗ ಹಿನ್ನೆಲೆ ಬಣ್ಣ ಬದಲಾಗಿದೆಯೇ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
         },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "ನಿಮ್ಮ ಕೆಲಸವಾಯಿತೆ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
+        },
         "courseF_text_choice_conversation_-2022-2": {
           "text_generic_finish": "ನಿಮ್ಮ ಕೆಲಸವಾಯಿತೆ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
         },
+        "courseF_text_choice_title": {
+          "text_answer_finish": "ಶೀರ್ಷಿಕೆ ಪರದೆಯು 3 ಸೆಕೆಂಡುಗಳವರೆಗೆ ತೋರಿಸಿದೆಯೇ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ.",
+          "title_block": "ಇಲ್ಲಿ ಎರಡು ಹೊಸ ಬ್ಲಾಕ್‌ಗಳಿಗಾಗಿ ನೋಡಿ!"
+        },
         "courseF_text_choice_title_-2022-2": {
-          "title_block": "ಇಲ್ಲಿ ಎರಡು ಹೊಸ ಬ್ಲಾಕ್‌ಗಳಿಗಾಗಿ ನೋಡಿ!",
-          "text_answer_finish": "ಶೀರ್ಷಿಕೆ ಪರದೆಯು 3 ಸೆಕೆಂಡುಗಳವರೆಗೆ ತೋರಿಸಿದೆಯೇ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
+          "text_answer_finish": "ಶೀರ್ಷಿಕೆ ಪರದೆಯು 3 ಸೆಕೆಂಡುಗಳವರೆಗೆ ತೋರಿಸಿದೆಯೇ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ.",
+          "title_block": "ಇಲ್ಲಿ ಎರಡು ಹೊಸ ಬ್ಲಾಕ್‌ಗಳಿಗಾಗಿ ನೋಡಿ!"
+        },
+        "courseF_text_concat": {
+          "join_blocks": "ಹೊಸ ಪುಸ್ತಕಗಳಿಗಾಗಿ ಇಲ್ಲಿ ನೋಡಿ!"
         },
         "courseF_text_concat_-2022-2": {
           "join_blocks": "ಹೊಸ ಪುಸ್ತಕಗಳಿಗಾಗಿ ಇಲ್ಲಿ ನೋಡಿ!"
         },
+        "courseF_text_events": {
+          "events_category": "ಈವೆಂಟ್‌ಗಳ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
         "courseF_text_events_-2022-2": {
           "events_category": "ಈವೆಂಟ್‌ಗಳ ವರ್ಗವನ್ನು ತೆರೆಯಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "courseF_text_print": {
+          "print_block": "ಪ್ರಿಂಟ್ ಬ್ಲಾಕ್ ಅನ್ನು ಇಲ್ಲಿ ಹುಡುಕಿ!",
+          "text_print_finish": "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಮೇಲೆ ಮುದ್ರಿಸಲಾಗಿದೆಯೇ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
         },
         "courseF_text_print_-2022-2": {
           "print_block": "ಪ್ರಿಂಟ್ ಬ್ಲಾಕ್ ಅನ್ನು ಇಲ್ಲಿ ಹುಡುಕಿ!",
           "text_print_finish": "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಮೇಲೆ ಮುದ್ರಿಸಲಾಗಿದೆಯೇ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "ಪ್ರಾಂಪ್ಟ್ ಬ್ಲಾಕ್ ಅನ್ನು ಇಲ್ಲಿ ಹುಡುಕಿ!"
         },
         "courseF_text_prompts_-2022-2": {
           "prompt_block": "ಪ್ರಾಂಪ್ಟ್ ಬ್ಲಾಕ್ ಅನ್ನು ಇಲ್ಲಿ ಹುಡುಕಿ!"
@@ -1805,10 +1749,25 @@
         "courseF_variables2_predict_-2022-2": {
           "variablesPredict": "ಈ ಹಂತದಲ್ಲಿ ಕೆಳಗಿನ ಕೋಡ್ ಅನ್ನು ಹತ್ತಿರದಿಂದ ನೋಡಿ."
         },
+        "courseF_variables_predict": {
+          "variablesPredict": "ಈ ಹಂತದಲ್ಲಿ ಕೆಳಗಿನ ಕೋಡ್ ಅನ್ನು ಹತ್ತಿರದಿಂದ ನೋಡಿ."
+        },
         "courseF_variables_predict_-2022-2": {
           "variablesPredict": "ಈ ಹಂತದಲ್ಲಿ ಕೆಳಗಿನ ಕೋಡ್ ಅನ್ನು ಹತ್ತಿರದಿಂದ ನೋಡಿ."
         },
         "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಒಟ್ಟಿಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
+        },
+        "coursea_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಒಟ್ಟಿಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
+        },
+        "coursea_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಒಟ್ಟಿಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
+        },
+        "coursea_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಒಟ್ಟಿಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
+        },
+        "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "ಎಲ್ಲಾ ಬ್ಲಾಕ್ಗಳನ್ನು ಒಟ್ಟಿಗೆ ಸ್ನ್ಯಾಪ್ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ."
         },
         "coursee_helloworld_events": {
@@ -1818,11 +1777,134 @@
           "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
         "coursee_helloworld_say": {
-          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
-          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
+          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
+        },
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
+        },
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "ಟೂಲ್‌ಬಾಕ್ಸ್‌ನಿಂದ ಬ್ಲಾಕ್‌ಗಳನ್ನು ನಿಮ್ಮ ಕಾರ್ಯಸ್ಥಳಕ್ಕೆ ಎಳೆಯಿರಿ."
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "“ವೃತ್ತವನ್ನು ರಚಿಸಿ” ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸಿ."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) ಈ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ಕಾರ್ಯಕ್ಷೇತ್ರದಲ್ಲಿ ಬೂದು ಬ್ಲಾಕ್ಗಳ ಸುತ್ತಲೂ ಇರಿಸಿ",
+          "repeat_blocks_2": "(2) ಇಲ್ಲಿ “ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಮೂವ್ ಮಾಡಿ ಮತ್ತು ಒಳಗೆ ಗ್ರೇ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಇರಿಸಿ"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "ಬದಲಿಗೆ ಡ್ರಾಪ್-ಡೌನ್ ಬಳಸಿ “???” ಒಂದು ಸಂಖ್ಯೆಯೊಂದಿಗೆ"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "ಈ ಆಕಾರವನ್ನು ರಚಿಸಲು ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "ಈ ಆಕಾರವನ್ನು ರಚಿಸಲು ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "ವಿಭಿನ್ನ ಸ್ನೋಫ್ಲೇಕ್ಗಳನ್ನು ರಚಿಸಲು ಈ ಡ್ರಾಪ್-ಡೌನ್ ಬಳಸಿ!"
+        },
+        "frozen line": {
+          "move_elsa_forward": "“ಮೂವ್ ಫಾರ್ವರ್ಡ್” ಬ್ಲಾಕ್ ಅನ್ನು ಎಳೆಯಿರಿ ಮತ್ತು ಎಲ್ಸಾ ಮುಂದುವರಿಯಲು “ರನ್ ಮಾಡಿದಾಗ” ಬ್ಲಾಕ್ನ ಕೆಳಗೆ ಅದನ್ನು ಸ್ನ್ಯಾಪ್ ಮಾಡಿ",
+          "run": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "ಎಲ್ಸಾ ಟರ್ನ್ ಮಾಡಲು “ಟರ್ನ್” ಬ್ಲಾಕ್ ಬಳಸಿ. ಡ್ರಾಪ್-ಡೌನ್ನಲ್ಲಿರುವ ಸಂಖ್ಯೆಯು ಎಲ್ಸಾ ಎಷ್ಟು ತಿರುಗುತ್ತದೆ ಎಂಬುದನ್ನು ನಿರ್ಧರಿಸುತ್ತದೆ"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "“ಸ್ನೋಫ್ಲೇಕ್ ಶಾಖೆಯನ್ನು ರಚಿಸಿ” ಬ್ಲಾಕ್ ಬಳಸಿ"
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "ಚೌಕವನ್ನು ರಚಿಸಲು ಇಲ್ಲಿ ಹೆಚ್ಚಿನ ಬ್ಲಾಕ್ಗಳನ್ನು ಲಗತ್ತಿಸಿ"
+        },
+        "frozen square loop": {
+          "replace_questions": "ಬದಲಿಗೆ ಡ್ರಾಪ್-ಡೌನ್ ಬಳಸಿ “???” ಒಂದು ಸಂಖ್ಯೆಯೊಂದಿಗೆ"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "ಬದಲಿಗೆ ಡ್ರಾಪ್-ಡೌನ್ ಬಳಸಿ “???” ಒಂದು ಸಂಖ್ಯೆಯೊಂದಿಗೆ"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "ಬದಲಿಗೆ ಡ್ರಾಪ್-ಡೌನ್ ಬಳಸಿ “???” ಒಂದು ಸಂಖ್ಯೆಯೊಂದಿಗೆ"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "ಹೊಸ ಹಿನ್ನೆಲೆ ನಿಗದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "ಈ ಕೆಳಗಿನ ಒಂದು ವರ್ತನೆಗಳೊಂದಿಗೆ ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "ಕೋಡ್ ರನ್ ಮಾಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "ನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಈ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "helloworld_animals_location": {
+          "pin": "ಪಿನ್"
+        },
+        "helloworld_animals_multi": {
+          "pin": "ಪಿನ್"
+        },
+        "helloworld_animals_say": {
+          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
+          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!",
+          "hello_world_new_block": "ಹೊಸ ಬ್ಲಾಕ್!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "ಹೊಸ ಹಿನ್ನೆಲೆ ನಿಗದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "ಈ ಕೆಳಗಿನ ಒಂದು ವರ್ತನೆಗಳೊಂದಿಗೆ ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "ಕೋಡ್ ರನ್ ಮಾಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "ನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಈ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "helloworld_emoji_location": {
+          "pin": "ಪಿನ್"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "ಪಿನ್"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
+          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!",
+          "hello_world_new_block": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "ಹೊಸ ಹಿನ್ನೆಲೆ ನಿಗದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
         },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "ಹೊಸ ಹಿನ್ನೆಲೆ ನಿಗದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
@@ -1830,14 +1912,26 @@
         "helloworld_food_backgrounds_space-2022": {
           "hw_background_location": "ಹೊಸ ಹಿನ್ನೆಲೆ ನಿಗದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
         },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "ಈ ಕೆಳಗಿನ ಒಂದು ವರ್ತನೆಗಳೊಂದಿಗೆ ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
         "helloworld_food_behaviors_soccer-2022": {
           "hello_world_behavior_blocks": "ಈ ಕೆಳಗಿನ ಒಂದು ವರ್ತನೆಗಳೊಂದಿಗೆ ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
         },
         "helloworld_food_behaviors_space-2022": {
           "hello_world_behavior_blocks": "ಈ ಕೆಳಗಿನ ಒಂದು ವರ್ತನೆಗಳೊಂದಿಗೆ ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
         },
+        "helloworld_food_click": {
+          "hw_Run": "ಕೋಡ್ ರನ್ ಮಾಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "ಕೋಡ್ ರನ್ ಮಾಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "ಮೊದಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
         },
         "helloworld_food_costumes_soccer-2022": {
           "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
@@ -1845,11 +1939,17 @@
         "helloworld_food_costumes_space-2022": {
           "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
         },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "ನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಈ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
+        },
         "helloworld_food_events_soccer-2022": {
           "hello_world_click_hint": "ನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಈ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
         },
         "helloworld_food_events_space-2022": {
           "hello_world_click_hint": "ನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಈ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
         "helloworld_food_freeplay_soccer-2022": {
           "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
@@ -1857,10 +1957,16 @@
         "helloworld_food_freeplay_space-2022": {
           "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
+        "helloworld_food_location": {
+          "pin": "ಪಿನ್"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "ಪಿನ್"
         },
         "helloworld_food_location_space-2022": {
+          "pin": "ಪಿನ್"
+        },
+        "helloworld_food_multi": {
           "pin": "ಪಿನ್"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -1869,13 +1975,21 @@
         "helloworld_food_multi_space-2022": {
           "pin": "ಪಿನ್"
         },
+        "helloworld_food_say": {
+          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
+          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
         "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
-          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
+          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
         },
         "helloworld_food_say_space-2022": {
-          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
-          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
+          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!",
+          "hello_world_new_block": "ಹೊಸ ಬ್ಲಾಕ್!"
         },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!",
@@ -1885,29 +1999,76 @@
           "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!",
           "hello_world_new_block": "ಹೊಸ ಬ್ಲಾಕ್!"
         },
+        "helloworld_food_sounds": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
         "helloworld_food_sounds_soccer-2022": {
           "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
         },
-        "Course 4 Artist 7": {
-          "repeat_blocks": "“ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಬ್ಲಾಕ್‌ಗಳ ಸುತ್ತಲೂ ಅದನ್ನು ಸುತ್ತಿ"
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "ಹೊಸ ಹಿನ್ನೆಲೆ ನಿಗದಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
         },
-        "Course 4 Artist Vars 1": {
-          "repeat_blocks": "“ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಬ್ಲಾಕ್‌ಗಳ ಸುತ್ತಲೂ ಅದನ್ನು ಸುತ್ತಿ"
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "ಈ ಕೆಳಗಿನ ಒಂದು ವರ್ತನೆಗಳೊಂದಿಗೆ ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
         },
-        "frozen cross": {
-          "repeat_blocks_2": "(2) ಇಲ್ಲಿ “ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಮೂವ್ ಮಾಡಿ ಮತ್ತು ಒಳಗೆ ಗ್ರೇ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಇರಿಸಿ"
+        "helloworld_retro_click": {
+          "hw_Run": "ಕೋಡ್ ರನ್ ಮಾಡಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
-        "frozen diamond": {
-          "frozen_diamond_repeat": "ಈ ಆಕಾರವನ್ನು ರಚಿಸಲು ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        "helloworld_retro_costumes": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
         },
-        "frozen diamond snowflake": {
-          "frozen_diamond_repeat": "ಈ ಆಕಾರವನ್ನು ರಚಿಸಲು ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "ನಿಮ್ಮ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ಗೆ ಈ ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಸೇರಿಸಿ."
         },
-        "helloworld_food_click_space-2022": {
-          "hw_Run": "ಮೊದಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ಗೆ ಕಾಸ್ಟ್ಯೂಮ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ."
+        },
+        "helloworld_retro_location": {
+          "pin": "ಪಿನ್"
+        },
+        "helloworld_retro_multi": {
+          "pin": "ಪಿನ್"
+        },
+        "helloworld_retro_say": {
+          "hello_world_make_sprite": "ಸ್ಪ್ರೈಟ್ ರಚಿಸಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ.",
+          "hello_world_say": "ಸ್ಪ್ರೈಟ್‌ಗಳು ಮಾತನಾಡುವಂತೆ ಮಾಡಲು ಈ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!",
+          "hello_world_new_block": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "ಕೋಡ್ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಇಲ್ಲಿ ಕಂಡುಕೊಳ್ಳಿ.",
+          "run_button": "ಈ ಬಟನ್ ಬಳಸಿ ನಿಮ್ಮ ಆನಿಮೇಶನ್ ಟೆಸ್ಟ್ ಮಾಡಿ."
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "ಹೊಸ ಬ್ಲಾಕ್!",
+          "poetry_foreground": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_new_block": "ಹೊಸ ಬ್ಲಾಕ್!",
+          "poetry_selector": "ಯಾವುದೇ ಕವನ ಆಯ್ಕೆ ಮಾಡಿ ಅಥವಾ ನಿಮ್ಮದೇ ಕವನ ನಮೂದಿಸಿ!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_music": "ಹೊಸ ಬ್ಲಾಕ್!",
+          "poetry_sound": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "ಹೊಸ ಬ್ಲಾಕ್!",
+          "poetry_sprite_stops": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "ಹೊಸ ಬ್ಲಾಕ್!",
+          "poetry_set_sprite": "ಹೊಸ ಬ್ಲಾಕ್!"
         }
       }
     }

@@ -102,6 +102,7 @@
     "LISTS_CREATE_WITH_TOOLTIP": "Ixtiyoriy sondagi elementlar bilan ro‘yxat yaratadi.",
     "LISTS_GET_INDEX_FIRST": "birinchi",
     "LISTS_GET_INDEX_FROM_END": "Oxiridan boshlab №",
+    "LISTS_GET_INDEX_FROM_START": "#",
     "LISTS_GET_INDEX_GET": "olish",
     "LISTS_GET_INDEX_GET_REMOVE": "olish va o‘chirish",
     "LISTS_GET_INDEX_LAST": "oxirgi",

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.7.5'
+ruby '3.0.5'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
@@ -11,6 +11,10 @@ gem 'thwait'
 # validation; manually target a later version to pick up https://github.com/ruby/cgi/pull/29
 gem 'cgi', '~> 0.3.6'
 
+# Ruby 3.0 no longer provides sorted_set by default, so install it manually
+# see https://github.com/ruby/set/pull/2
+gem 'sorted_set'
+
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
 # @see https://github.com/bundler/bundler/issues/4978
@@ -19,7 +23,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.1.4.7'
+gem 'rails', '~> 6.1'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -31,7 +35,7 @@ gem 'sprockets-rails', '3.3.0'
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 3.0'
 
-gem 'sinatra', '2.1.0', require: 'sinatra/base'
+gem 'sinatra', '2.2.3', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 
@@ -94,7 +98,6 @@ group :development, :test do
 
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'sqlite3'
   gem 'timecop'
 
   # For UI testing.
@@ -103,13 +106,14 @@ group :development, :test do
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
+  gem 'minitest-stub-const', '~> 0.6'
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver', '3.141.0'
+  gem 'selenium-webdriver', '~> 4.0'
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
-  gem 'webdrivers', '~> 3.0'
+  gem 'webdrivers', '~> 5.2'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
@@ -122,14 +126,13 @@ gem 'factory_bot_rails', '~> 6.2', group: [:development, :staging, :test, :adhoc
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
 
-# Ref: https://github.com/tmm1/gctools/pull/17
-gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
-# Ref: https://github.com/puma/puma/pull/1646
-gem 'puma', github: 'wjordan/puma', branch: 'debugging'
+
+gem 'puma', '~> 5.0'
 gem 'puma_worker_killer'
 gem 'raindrops'
+gem 'sd_notify' # required for Puma to support systemd's Type=notify
 
 gem 'chronic', '~> 0.10.2'
 
@@ -182,7 +185,7 @@ gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.3.4'
+gem 'redcarpet', '~> 3.5.1'
 
 gem 'geocoder'
 
@@ -206,7 +209,10 @@ gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt' # single signon for zendesk
 
-gem 'twilio-ruby' # SMS API for send-to-phone feature
+# SMS API for send-to-phone feature; 6.0 includes some breaking changes which
+# we'll need to prepare for:
+# https://github.com/twilio/twilio-ruby/blob/6.0.0/UPGRADE.md#2023-05-03-5xx-to-6xx
+gem 'twilio-ruby', '< 6.0'
 
 gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'
@@ -236,7 +242,7 @@ gem 'aws-sdk-secretsmanager'
 # Lint tools
 group :development, :staging, :levelbuilder do
   gem 'haml_lint', require: false
-  gem 'rubocop', '1.28', require: false
+  gem 'rubocop', '~> 1.28', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rails-accessibility', require: false
@@ -308,7 +314,7 @@ gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
 
 gem 'recaptcha', require: 'recaptcha/rails'
 
-gem 'loofah', ' ~> 2.2.1'
+gem 'loofah', '~> 2.19.1'
 
 # Install pg gem only on specific production hosts and the i18n-dev server.
 require_pg = -> do

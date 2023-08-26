@@ -11,5 +11,10 @@
   "image": "https://images.code.org/a1541df872e234d4872ccbf1c97127f7-iceage.png",
   "cs_topic": "games_and_animations,programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": "Join Sid and Scrat from \"Ice Age\" for a fun introduction to computer science as you use basic block code to create a game.",
+  "professional_learning_program": null,
+  "video": "https://www.youtube-nocookie.com/embed/ap_5Ft3KocU/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=ap_5Ft3KocU&wmode=transparent",
+  "published_date": "2015-12-03 05:00:00 UTC",
+  "self_paced_pl_course_offering_id": null
 }

@@ -11,12 +11,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-08 22:53:29 UTC",
+    "serialized_at": "2023-08-24 20:23:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1886,7 +1887,7 @@
       "key": "69154734-5b41-4f61-b1e4-b594d29dbcda",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd3/2023] to each student, face down. Make sure students don't start the word search ahead of time."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time."
       },
       "seeding_key": {
         "activity_section.key": "69154734-5b41-4f61-b1e4-b594d29dbcda",
@@ -1954,7 +1955,7 @@
       "key": "122ed1c3-ec23-4041-ba57-4f6ad839c7ec",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
@@ -2056,7 +2057,7 @@
       "key": "691d3e87-b63b-4010-886e-9df4e9d7e2fd",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r app_design_for_users/csd3/2023] activity guide to each student. \n\n",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r app_design_for_users/csd/2023] activity guide to each student. \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2155,7 +2156,7 @@
       "key": "e92c0c58-b850-44dc-90e5-0916bb630442",
       "position": 8,
       "properties": {
-        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic animation/game design for, following the Problem-Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their designs.\n\n**Distribute:** Pass out copies of the [r problem_solving_and_design/csd3/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit.\n\n**Circulate:** Monitor students as they complete this activity, ensuring that students are creating designs that match the needs of the user they chose. Monitor student conversations as well to make sure both voices are being heard during discussions and decisions. Students will be working in pairs throughout the unit, so it can be good to intervene early to reinforce good collaboration habits.\n\n**(Optional) Share Out:** Depending on how much time is left in class, allow students to trade with other groups and share their designs. Encourage students to share with another group who picked the same user so they can see similarities and differences in their designs.\n\n",
+        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic animation/game design for, following the Problem-Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their designs.\n\n**Distribute:** Pass out copies of the [r problem_solving_and_design/csd/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit.\n\n**Circulate:** Monitor students as they complete this activity, ensuring that students are creating designs that match the needs of the user they chose. Monitor student conversations as well to make sure both voices are being heard during discussions and decisions. Students will be working in pairs throughout the unit, so it can be good to intervene early to reinforce good collaboration habits.\n\n**(Optional) Share Out:** Depending on how much time is left in class, allow students to trade with other groups and share their designs. Encourage students to share with another group who picked the same user so they can see similarities and differences in their designs.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2522,7 +2523,7 @@
       "key": "2ef19cd2-87ef-4290-a62a-8026acca3296",
       "position": 4,
       "properties": {
-        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd3/2023] video in the slides.\n",
+        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd/2023] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2573,7 +2574,7 @@
       "key": "eae3f1fc-9263-4892-a141-6c50d1f3b3de",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_2/csd3/2023] video in the slides.\n**Questions to Consider with Video:**\n- What’s the difference between stroke and fill?\n\n**Discussion Goal:** Stroke controls the border color of the shape, and fill controls the color inside of it.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_2/csd/2023] video in the slides.\n**Questions to Consider with Video:**\n- What’s the difference between stroke and fill?\n\n**Discussion Goal:** Stroke controls the border color of the shape, and fill controls the color inside of it.\n"
       },
       "seeding_key": {
         "activity_section.key": "eae3f1fc-9263-4892-a141-6c50d1f3b3de",
@@ -2702,7 +2703,7 @@
       "key": "44340843-ad41-441f-983f-9d0d0e72588b",
       "position": 3,
       "properties": {
-        "description": "If we want our blocks to draw shapes in different ways they'll need more inputs that let us tell them how to draw. The inputs or openings in our blocks have a formal name, [v parameter/csd3/2023]s, and today we're going to be learning more about how to use them.",
+        "description": "If we want our blocks to draw shapes in different ways they'll need more inputs that let us tell them how to draw. The inputs or openings in our blocks have a formal name, [v parameter/csd/2023]s, and today we're going to be learning more about how to use them.",
         "remarks": true
       },
       "seeding_key": {
@@ -2926,7 +2927,7 @@
       "key": "c4ffb29d-cce7-4fcb-a503-1ac238f6b1d7",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_variables/csd3/2023] video in the slides.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_variables/csd/2023] video in the slides.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3272,7 +3273,7 @@
       "key": "2224277a-ca84-4713-a137-d0c990fb241a",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out copies of the [r activity_guide_-_robot_face_planning/csd3/2023]. Students should use this worksheet to guide them through the Problem-Solving Process and plan out the robot face they create at the end of this lesson.\n\n"
+        "description": "**Distribute:** Pass out copies of the [r activity_guide_-_robot_face_planning/csd/2023]. Students should use this worksheet to guide them through the Problem-Solving Process and plan out the robot face they create at the end of this lesson.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2224277a-ca84-4713-a137-d0c990fb241a",
@@ -3326,7 +3327,7 @@
       "key": "ddd15dbf-db18-4920-80cd-ba04b2dba229",
       "position": 5,
       "properties": {
-        "description": "**Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n"
+        "description": "**Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd/2023] to pairs of students. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ddd15dbf-db18-4920-80cd-ba04b2dba229",
@@ -3504,7 +3505,7 @@
       "key": "1cf25bad-898f-4920-9419-15d582df7747",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_sprites/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_sprites/csd/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3562,7 +3563,7 @@
       "key": "25bcbbd2-7a2f-4c98-9f61-a99686d91397",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r the_animation_tab/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n\n**Discussion Goal:** Make sure students understand that they will need to both **create the image** (or animation) in the Animation Tab **and** then **add the animation to the sprite** using the [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r the_animation_tab/csd/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n\n**Discussion Goal:** Make sure students understand that they will need to both **create the image** (or animation) in the Animation Tab **and** then **add the animation to the sprite** using the [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n\n",
         "progression_name": "Video: The Animation Tab",
         "tips": [
           {
@@ -3742,7 +3743,7 @@
       "key": "018269af-e160-4502-9b18-15c10310dd92",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_needs_updating_/csd3/2023] video in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_needs_updating_/csd/2023] video in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4080,7 +4081,7 @@
       "key": "f56ea3ca-1a96-4ed9-892f-b4a8ede419cb",
       "position": 5,
       "properties": {
-        "description": "**Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n"
+        "description": "**Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd/2023] to pairs of students. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "f56ea3ca-1a96-4ed9-892f-b4a8ede419cb",
@@ -4278,7 +4279,7 @@
       "key": "91af4e95-88e2-457c-b6df-1d704404f2c8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_the_draw_loop/csd3/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_the_draw_loop/csd/2023] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -4347,7 +4348,13 @@
       "position": 6,
       "properties": {
         "description": "The second prediction level program has one small difference that will make it run a little differently. \n\n**Discuss:** Students should consider and discuss:\n* What will this program do? \n\n**Discussion Goal:** Notice that the blue background is never visible because it is immediately drawn over by the red background. Also, there's only ever one yellow dot visible since as the draw loop runs over and over it is placing down new backgrounds.\n",
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Inside versus outside the draw loop**\n\nThis is a good time to make sure students understand that code **outside** the draw loop is used to **set up the program**. It is for how you want your program to start. Code **inside** the draw loop is for things that are **changing as the program is running**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5b1985f6-d193-4456-865e-344495f2d52d",
@@ -4509,7 +4516,7 @@
       "key": "edb20353-f050-4cb3-99f4-ddd66a421ce9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_movement/csd3/2023] video in the slides.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_movement/csd/2023] video in the slides.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4663,7 +4670,7 @@
       "key": "dd8a51ba-e183-4b42-a3ce-b89ce885fb5a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r animated_scene_1/csd3/2023]. Students should use this worksheet to guide them through the Problem-Solving Process and plan out the animated scene they create at the end of this lesson.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r animated_scene_1/csd/2023]. Students should use this worksheet to guide them through the Problem-Solving Process and plan out the animated scene they create at the end of this lesson.\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -4722,7 +4729,7 @@
       "key": "98112b16-adcb-48db-8aea-b650606ed7c6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students or have them take this resource out if they still have it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd/2023] to pairs of students or have them take this resource out if they still have it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n\n\n",
         "name": "Step 3: Try - Develop Your Scene",
         "progression_name": "Plan Your Scene"
       },
@@ -4980,7 +4987,7 @@
       "key": "529ce195-5758-4385-8d85-76a4554d6201",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r boolean_expressions/csd3/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r boolean_expressions/csd/2023] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -5031,7 +5038,7 @@
       "key": "23e30728-5bed-44bd-8c4b-1074b93e8239",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r conditional_statements/csd3/2023] video in the slides.\n\n**Question to Consider with Video:**\n- When would you want to use an if statement?\n\n**Discussion Goal:** The broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations. Encourage students to think of particular situations in which this would be the case. For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level. Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r conditional_statements/csd/2023] video in the slides.\n\n**Question to Consider with Video:**\n- When would you want to use an if statement?\n\n**Discussion Goal:** The broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations. Encourage students to think of particular situations in which this would be the case. For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level. Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item.\n\n\n",
         "progression_name": "Video: Conditional Statements"
       },
       "seeding_key": {
@@ -5305,7 +5312,7 @@
       "key": "286ee182-4df3-4f7d-bef6-1011fcf1b56a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:**  Show students the [r if_else_statements/csd3/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:**  Show students the [r if_else_statements/csd/2023] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -5472,7 +5479,7 @@
       "key": "a7382d57-4a04-4bea-86eb-89e8a1312f1f",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share their observations and analyses of the program. \n\nEncourage the class to consider that there are multiple approaches to programming anything, but that there may be clues as to how something was created. In particular, when they are sharing their thoughts ask them to specify the following:\n\n* Clues that suggest a sprite was used\n* Clues that suggest a conditional was used\n* Clues that suggest an iterator pattern was used\n\n**Display:** Show students the rubric and student checklist.  Review the different components of the rubric with them to make sure they understand the components of the project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r interactive_card_1/csd3/2023]. Student should use this activity guide to plan out what they want to create before they head to the computer so that once they get to the computer they are just executing the plan. Give students some time to brainstorm the type of card they want to create and who the recipient will be. \n\nAlso distribute a copy of the [r interactive_card_-_student_checklist/csd3/2023] to each student. Students can use this to self-assess and reflect as they develop their project.\n\n",
+        "description": "**Discuss:** Have students share their observations and analyses of the program. \n\nEncourage the class to consider that there are multiple approaches to programming anything, but that there may be clues as to how something was created. In particular, when they are sharing their thoughts ask them to specify the following:\n\n* Clues that suggest a sprite was used\n* Clues that suggest a conditional was used\n* Clues that suggest an iterator pattern was used\n\n**Display:** Show students the rubric and student checklist.  Review the different components of the rubric with them to make sure they understand the components of the project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r interactive_card_1/csd/2023]. Student should use this activity guide to plan out what they want to create before they head to the computer so that once they get to the computer they are just executing the plan. Give students some time to brainstorm the type of card they want to create and who the recipient will be. \n\nAlso distribute a copy of the [r interactive_card_-_student_checklist/csd/2023] to each student. Students can use this to self-assess and reflect as they develop their project.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -5507,7 +5514,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd3/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -5533,7 +5540,7 @@
       "key": "cfe7d63e-fa10-41cc-baaa-b540e001c2cb",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.\n",
         "progression_name": "Make an Interactive Card",
         "tips": [
           {
@@ -5709,7 +5716,7 @@
       "key": "abb8365c-303e-410d-a30b-a54115599db1",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal:** Student predictions will vary but some may predict that the new [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block might make the sprite move faster than the counter pattern. Once they run the program, students will see that the two lines of code cause the same sprite movement - the difference being the  [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block hides the details of the counter pattern *and* happens *outside* the draw loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r velocity/csd3/2023] video in the slides.\n",
+        "description": "**Discussion Goal:** Student predictions will vary but some may predict that the new [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block might make the sprite move faster than the counter pattern. Once they run the program, students will see that the two lines of code cause the same sprite movement - the difference being the  [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block hides the details of the counter pattern *and* happens *outside* the draw loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r velocity/csd/2023] video in the slides.\n",
         "progression_name": "Skill Building",
         "tips": [
           {
@@ -6121,7 +6128,7 @@
       "key": "90da1fce-029b-4071-811d-9c582d9ddc14",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r side_scroller_1/csd3/2023]. Student should use this activity guide to plan out and brainstorm how to program the side scroller game before they head to the computer so that once they get to the computer they are just executing the plan.  \n\n**Optional Transition** You can choose to either send students to Code Studio to play the Side Scroller example game or demo the game for the students.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r side_scroller_1/csd/2023]. Student should use this activity guide to plan out and brainstorm how to program the side scroller game before they head to the computer so that once they get to the computer they are just executing the plan.  \n\n**Optional Transition** You can choose to either send students to Code Studio to play the Side Scroller example game or demo the game for the students.\n",
         "progression_name": "Side Scroller Example"
       },
       "seeding_key": {
@@ -6171,7 +6178,7 @@
       "key": "81ec9172-9243-4727-8eb1-91c9261cd682",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.\n",
         "progression_name": "Draw Your Background",
         "tips": [
           {
@@ -6731,7 +6738,7 @@
       "key": "a0d70d1a-da8d-4a7d-bb7d-2af56ab37296",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r flyer_game_1/csd3/2023]. Student should use this activity guide to plan out and brainstorm how to program the flyer game before they head to the computer so that once they get to the computer they are just executing the plan.  \n\n**Optional Transition** You can choose to either send students to Code Studio to play the flyer game example game or demo the game for the students.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of the [r flyer_game_1/csd/2023]. Student should use this activity guide to plan out and brainstorm how to program the flyer game before they head to the computer so that once they get to the computer they are just executing the plan.  \n\n**Optional Transition** You can choose to either send students to Code Studio to play the flyer game example game or demo the game for the students.\n\n",
         "progression_name": "Flyer Game Example"
       },
       "seeding_key": {
@@ -6781,7 +6788,7 @@
       "key": "c81e2265-ff17-420a-9def-e2c71a004da1",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.\n",
         "progression_name": "Make Your Sprites",
         "tips": [
           {
@@ -6926,7 +6933,7 @@
       "key": "1693c6a1-f3db-4262-a4ba-99e228c5a39d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r functions/csd3/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r functions/csd/2023] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -7642,12 +7649,12 @@
       "key": "a55e3691-9685-4192-89b5-0ee62a4c1c15",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd3/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to Code Studio to start programming. The levels provide some guidance on how students may go about implementing their project guide. None of the steps are significantly different from what students have seen from the previous two lessons. If they wish, students can work in a different order than the one suggested in these levels.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the [r problem_solving_with_programming/csd/2023] to pairs of students or have students take this resource out if they kept it after the last project. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic.\n\n**Transition:** Once students have completed their planning sheet, it's time to head to Code Studio to start programming. The levels provide some guidance on how students may go about implementing their project guide. None of the steps are significantly different from what students have seen from the previous two lessons. If they wish, students can work in a different order than the one suggested in these levels.\n",
         "name": "Step 3: Try - Write Code",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd3/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -16071,7 +16078,7 @@
   "resources": [
     {
       "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/14hKTZSrP7tnghpJhTLYJNEPeb1CinUaa0KtzRPADji4/edit",
+      "url": "https://docs.google.com/document/d/1Mk9elfN5zVH2LLaY6Z5-c-97wt1k9qDCyMfxRBlB8qM/edit?usp=sharing",
       "key": "_warm_up_word_search",
       "properties": {
         "audience": "Student",
@@ -16505,7 +16512,7 @@
     },
     {
       "name": "Drawing Shapes",
-      "url": "https://docs.google.com/document/d/1B1fjF39Xr1KKDILVzcXqvEpi1ri3MiDkkVLIMZquh_8/view",
+      "url": "https://docs.google.com/document/d/1XuLY5osr9sZMfLAWMkqi8C7IdG_Uu3PshqKeSIhtKno/edit?usp=sharing",
       "key": "drawing_shapes",
       "properties": {
         "audience": "Verified Teacher",
@@ -16653,7 +16660,7 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1GaKD2JihCwsreJPzSTpSrl3MltFWpdwvFgej0QqFQ_s/template/preview",
+      "url": "https://docs.google.com/presentation/d/1HX7a6aQXxnjvS99K0FDO0W7Kp23fnMNSHiHCYtcuD-s/view",
       "key": "functions_2",
       "properties": {
         "audience": "Teacher",
@@ -16765,7 +16772,7 @@
     },
     {
       "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
+      "url": "https://docs.google.com/document/d/10XQ5HTNnp2OlJm0w3cF9urOGdPUDTbdK2I4VYadeomU/view",
       "key": "interactive_card_3",
       "properties": {
         "audience": "Student",
@@ -17378,18 +17385,6 @@
       }
     },
     {
-      "name": "The Counter Pattern",
-      "url": "https://youtu.be/sLIJNEIE0Rs",
-      "key": "the_counter_pattern",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_counter_pattern"
-      }
-    },
-    {
       "name": "The Draw Loop",
       "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
       "key": "the_draw_loop",
@@ -17497,6 +17492,18 @@
       }
     },
     {
+      "name": "Variables",
+      "url": "https://docs.google.com/presentation/d/1HtBUmXrH6cqE2SPhCtaxnouYF_xaitoWrvBgZDFOnpk/template/preview",
+      "key": "variables_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "variables_2"
+      }
+    },
+    {
       "name": "Velocity",
       "url": "https://youtu.be/zcP94yMYqrI",
       "key": "velocity",
@@ -17546,8 +17553,8 @@
       }
     },
     {
-      "name": "Animation and Game Design Template ",
-      "url": "https://docs.google.com/presentation/d/1O1oWeMbIOetBbgmuwyXlUDmlr6L9ygQi0wLG89w_uq0/edit?usp=share_link",
+      "name": "Web Design Template ",
+      "url": "https://docs.google.com/presentation/d/1L7BgZu3XJVajibAfhK4c9o2R1_-nMC0ND_R3mXgN2wg/edit?usp=sharing",
       "key": "web_design_template",
       "properties": {
         "audience": "Student",
@@ -18060,12 +18067,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "the_counter_pattern"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Sprite Properties",
         "resource.key": "sprite_properties"
       }
@@ -18206,6 +18207,12 @@
       "seeding_key": {
         "lesson.key": "Variables",
         "resource.key": "variables_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "variables_2"
       }
     },
     {
@@ -20338,6 +20345,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

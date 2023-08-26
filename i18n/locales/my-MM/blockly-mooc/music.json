@@ -8,5 +8,7 @@
   "blockly_toolboxCategoryLogic": "Logic",
   "blockly_toolboxCategoryMath": "သင်္ချာ",
   "blockly_toolboxCategoryVariables": "Variables",
-  "startOver": "အစက ပြန်စပါ"
+  "startOver": "အစက ပြန်စပါ",
+  "panelHeaderWorkspace": "Workspace: ",
+  "continue": "ဆက်လုပ်ပါ"
 }

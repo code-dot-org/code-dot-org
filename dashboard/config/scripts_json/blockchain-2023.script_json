@@ -9,13 +9,14 @@
       "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "blockchain",
-    "serialized_at": "2023-03-20 23:16:18 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-08-23 19:06:43 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -840,7 +841,7 @@
       "key": "0f2f39f4-a8bc-487a-aa95-3e7643e7423a",
       "position": 11,
       "properties": {
-        "description": "| Student Actions | Teacher Actions |\n|---|---|\n| The instructions are purposefully vague on how to get started, so a variety of interactions may occur as the simulation begins. It can be useful to look out for these potential behaviors:<br /><ul><li>**Cliques:** Students may fall into familiar social relationships to barter and trade, making it so a small pocket of students are able to meet the goals of the activity while others are potentially excluded.</li><li>*Scarcity:,** Some students may “hoard” resources, meaning there may not be enough for others as the activity continues</li><li>**Deceit:** A student may perform a deceptive trade and another student may become upset. If this happens, it’s okay to assure students that this is just a simulation and this is something we’ll address when debriefing, but they should continue for now.</li></ul> | As you participate in the activity, there are several specific actions that you should try and perform, which can then be discussed and debriefed afterwards. If you’re not able to perform these actions, that’s okay - they can also be brought up in the discussion after the simulation.<br /><ul><li>**Wrong Amount:** Agree on a trade with someone but, when making the trade, include a few blank cards mixed in with your resources so that your trading partner receives less than what was agreed upon</li><li>**Wrong Resource:** Agree on a trade with someone but, when making the trade, trade the wrong resource that you all agreed upon.</li><li>**Ghosting:** Agree to trade with someone but, when making the trade, ensure that you are handed the resource cards first. Once you have them in your hand, rescind your deal and walk away from the trade, keeping the other person’s cards.</li><li>**Lose your cards:** Pretend to have misplaced your cards and make a big deal out of not being able to find them, which means you’ve essentially lost all of your resources.</li></ul> |"
+        "description": "| Student Actions | Teacher Actions |\n|---|---|\n| The instructions are purposefully vague on how to get started, so a variety of interactions may occur as the simulation begins. It can be useful to look out for these potential behaviors:<br /><ul><li>**Cliques:** Students may fall into familiar social relationships to barter and trade, making it so a small pocket of students are able to meet the goals of the activity while others are potentially excluded.</li><li>**Scarcity:** Some students may “hoard” resources, meaning there may not be enough for others as the activity continues</li><li>**Deceit:** A student may perform a deceptive trade and another student may become upset. If this happens, it’s okay to assure students that this is just a simulation and this is something we’ll address when debriefing, but they should continue for now.</li></ul> | As you participate in the activity, there are several specific actions that you should try and perform, which can then be discussed and debriefed afterwards. If you’re not able to perform these actions, that’s okay - they can also be brought up in the discussion after the simulation.<br /><ul><li>**Wrong Amount:** Agree on a trade with someone but, when making the trade, include a few blank cards mixed in with your resources so that your trading partner receives less than what was agreed upon</li><li>**Wrong Resource:** Agree on a trade with someone but, when making the trade, trade the wrong resource that you all agreed upon.</li><li>**Ghosting:** Agree to trade with someone but, when making the trade, ensure that you are handed the resource cards first. Once you have them in your hand, rescind your deal and walk away from the trade, keeping the other person’s cards.</li><li>**Lose your cards:** Pretend to have misplaced your cards and make a big deal out of not being able to find them, which means you’ve essentially lost all of your resources.</li></ul> |"
       },
       "seeding_key": {
         "activity_section.key": "0f2f39f4-a8bc-487a-aa95-3e7643e7423a",
@@ -5268,6 +5269,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

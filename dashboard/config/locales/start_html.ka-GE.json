@@ -3,87 +3,89 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "დიახ",
           "No": "არა",
+          "Yes": "დიახ",
           "cute": "საყვარელი"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "დიახ",
           "No": "არა",
+          "Yes": "დიახ",
           "cute": "საყვარელი"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "დიახ",
           "No": "არა",
+          "Yes": "დიახ",
           "cute": "საყვარელი"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "დიახ",
           "No": "არა",
+          "Yes": "დიახ",
           "cute": "საყვარელი"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "სახელი",
+          "City": "ქალაქი",
           "Color": "ფერი",
           "Food": "საჭმელი",
-          "City": "ქალაქი",
+          "Name": "სახელი",
           "text": "ტექსტი"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "სახელი",
+          "City": "ქალაქი",
           "Color": "ფერი",
           "Food": "საჭმელი",
-          "City": "ქალაქი",
+          "Name": "სახელი",
           "text": "ტექსტი"
         },
         "CSD U1 processing bday_2021": {
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
-          "12": "12",
-          "15": "15"
-        },
-        "CSD U1 processing bday_2022": {
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
-          "12": "12",
-          "15": "15"
-        },
-        "CSD U1 processing fastest_2021": {
-          "s": "s",
-          "k": "k",
-          "0": "0"
-        },
-        "CSD U1 processing fastest_2022": {
-          "s": "s",
-          "k": "k",
-          "0": "0"
-        },
-        "CSD U1 processing guess_2021": {
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "12": "12",
           "15": "15",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing bday_2022": {
+          "12": "12",
+          "15": "15",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing fastest_2021": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2022": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing guess_2021": {
+          "12": "12",
+          "15": "15",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
           "text": "ტექსტი"
         },
         "CSD U1 processing guess_2022": {
+          "12": "12",
+          "15": "15",
           "2": "2",
           "3": "3",
           "4": "4",
@@ -92,14 +94,16 @@
           "7": "7",
           "8": "8",
           "9": "9",
-          "12": "12",
-          "15": "15",
           "text": "ტექსტი"
         },
         "CSD U1 processing live_2021": {
+          "bear": "დათვი",
+          "rat": "ვირთხა",
           "walking": "სიარული"
         },
         "CSD U1 processing live_2022": {
+          "bear": "დათვი",
+          "rat": "ვირთხა",
           "walking": "სიარული"
         },
         "CSD U1 processing npark_2021": {
@@ -109,6 +113,8 @@
           "Sorry!": "ბოდიში!"
         },
         "CSD U1 processing writers_2021": {
+          "12": "12",
+          "15": "15",
           "2": "2",
           "3": "3",
           "4": "4",
@@ -116,11 +122,11 @@
           "6": "6",
           "7": "7",
           "8": "8",
-          "9": "9",
-          "12": "12",
-          "15": "15"
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
+          "12": "12",
+          "15": "15",
           "2": "2",
           "3": "3",
           "4": "4",
@@ -128,9 +134,7 @@
           "6": "6",
           "7": "7",
           "8": "8",
-          "9": "9",
-          "12": "12",
-          "15": "15"
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "უკან"
@@ -139,30 +143,32 @@
           "Back": "უკან"
         },
         "CSD U1 storage movies_2021": {
+          "No": "არა",
           "Star Wars": "ვარსკვლავური ომები",
           "Yes": "დიახ",
-          "No": "არა",
           "text": "ტექსტი"
         },
         "CSD U1 storage movies_2022": {
+          "No": "არა",
           "Star Wars": "ვარსკვლავური ომები",
           "Yes": "დიახ",
-          "No": "არა",
           "text": "ტექსტი"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "გასუფთავება",
-          "white": "თეთრი",
-          "pink": "ვარდისფერი",
+          "black": "შავი",
           "green": "მწვანე",
-          "black": "შავი"
+          "pink": "ვარდისფერი",
+          "purple": "მეწამული",
+          "white": "თეთრი"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "გასუფთავება",
-          "white": "თეთრი",
-          "pink": "ვარდისფერი",
+          "black": "შავი",
           "green": "მწვანე",
-          "black": "შავი"
+          "pink": "ვარდისფერი",
+          "purple": "მეწამული",
+          "white": "თეთრი"
         },
         "CSD U2 RGB intro": {
           "2": "2",
@@ -231,9 +237,9 @@
           "Success!": "წარმატება!"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "აღმოსავლეთი",
           "North": "ჩრდილოეთი",
           "South": "სამრხეთი",
-          "East": "აღმოსავლეთი",
           "West": "აღმოსავლეთი"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
@@ -249,52 +255,56 @@
           "Medium": "საშუალო"
         },
         "CSD U6 - Combine Inputs - A_2222": {
+          "green": "მწვანე",
           "left": "მარცხნივ",
-          "right": "მარჯვნივ",
+          "purple": "მეწამული",
           "red": "წითელი",
-          "yellow": "ყვითელი",
-          "green": "მწვანე"
+          "right": "მარჯვნივ",
+          "yellow": "ყვითელი"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "ჩქარი",
-          "slow": "ნელი",
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე",
+          "slow": "ნელი"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "წითელი",
+          "Blue": "ლურჯი",
           "Green": "მწვანე",
-          "Blue": "ლურჯი"
+          "Red": "წითელი"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "მარცხნივ",
           "right": "მარჯვნივ"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "ყვითელი",
-          "green": "მწვანე",
           "blue": "ლურჯი",
-          "orange": "ნარინჯისფერი"
+          "green": "მწვანე",
+          "orange": "ნარინჯისფერი",
+          "yellow": "ყვითელი"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "მშვიდი"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "წითელი",
-          "Blue": "ლურჯი"
+          "Blue": "ლურჯი",
+          "Red": "წითელი"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -303,9 +313,9 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "სახელი"
@@ -326,40 +336,41 @@
           "G": "ვ"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
           "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "Note:": "შენიშვნა:"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "წარმატება!"
@@ -377,8 +388,8 @@
           "Success!": "წარმატება!"
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "ქულა",
-          "0": "0"
+          "0": "0",
+          "Score": "ქულა"
         },
         "CSD U6 - Physical Input - PC_2222": {
           "Success!": "წარმატება!"
@@ -420,15 +431,15 @@
           "Name:": "სახელი:"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "წითელი",
+          "Blue": "ლურჯი",
           "Green": "მწვანე",
-          "Blue": "ლურჯი"
+          "Red": "წითელი"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "ლურჯი",
+          "Green": "მწვანე",
           "Name:": "სახელი:",
           "Red": "წითელი",
-          "Green": "მწვანე",
-          "Blue": "ლურჯი",
           "Save": "შენახვა"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
@@ -452,16 +463,16 @@
           "title": "დასახელება"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "თეთრკანიანი",
-          "Red": "წითელი",
+          "Blue": "ლურჯი",
           "Green": "მწვანე",
-          "Blue": "ლურჯი"
+          "Red": "წითელი",
+          "White": "თეთრკანიანი"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "ზემოთ",
           "down": "ქვემოთ",
           "left": "მარცხნივ",
-          "right": "მარჯვნივ"
+          "right": "მარჯვნივ",
+          "up": "ზემოთ"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "სახელი"
@@ -470,12 +481,25 @@
           "0": "0"
         },
         "CSD U6 - Sensors - P_2222": {
-          "text": "ტექსტი",
           "high": "მაღალი",
-          "low": "დაბალი"
+          "low": "დაბალი",
+          "text": "ტექსტი"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "ღირებულება"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "განახლება"
+          "Update": "განახლება",
+          "value": "ღირებულება"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "ღირებულება"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "გამოგივიდათ!"
@@ -537,53 +561,93 @@
         "CSD U6 add LED button_2021": {
           "Success!": "წარმატება!"
         },
+        "CSD U6 analog change": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog data": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "ღირებულება"
+        },
         "CSD U6 analog light": {
-          "Update": "განახლება"
+          "Update": "განახლება",
+          "value": "ღირებულება"
         },
         "CSD U6 analog light_2018": {
-          "Update": "განახლება"
+          "Update": "განახლება",
+          "value": "ღირებულება"
         },
         "CSD U6 analog light_2019": {
-          "Update": "განახლება"
+          "Update": "განახლება",
+          "value": "ღირებულება"
         },
         "CSD U6 analog light_2021": {
-          "Update": "განახლება"
+          "Update": "განახლება",
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog sound": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "ღირებულება"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "ღირებულება"
         },
         "CSD U6 array piano": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSD U6 array piano_2018": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSD U6 array piano_2019": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSD U6 array piano_2021": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSD U6 arrays select predict": {
           "first": "პირველი"
@@ -598,20 +662,20 @@
           "first": "პირველი"
         },
         "CSD U6 change": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 change_2018": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 change_2019": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 change_2021": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "საშუალო"
@@ -638,79 +702,79 @@
           "Happy": "ბედნიერი"
         },
         "CSD U6 frequency": {
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე"
         },
         "CSD U6 frequency_2018": {
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე"
         },
         "CSD U6 frequency_2019": {
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე"
         },
         "CSD U6 frequency_2021": {
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე"
         },
         "CSD U6 get toggle": {
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე"
         },
         "CSD U6 get toggle_2018": {
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე"
         },
         "CSD U6 get toggle_2019": {
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე"
         },
         "CSD U6 get toggle_2021": {
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "ლურჯი",
+          "Green": "მწვანე",
           "Name:": "სახელი:",
           "Red": "წითელი",
-          "Green": "მწვანე",
-          "Blue": "ლურჯი",
           "Save": "შენახვა"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "ლურჯი",
+          "Green": "მწვანე",
           "Name:": "სახელი:",
           "Red": "წითელი",
-          "Green": "მწვანე",
-          "Blue": "ლურჯი",
           "Save": "შენახვა"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "ლურჯი",
+          "Green": "მწვანე",
           "Name:": "სახელი:",
           "Red": "წითელი",
-          "Green": "მწვანე",
-          "Blue": "ლურჯი",
           "Save": "შენახვა"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "ლურჯი",
+          "Green": "მწვანე",
           "Name:": "სახელი:",
           "Red": "წითელი",
-          "Green": "მწვანე",
-          "Blue": "ლურჯი",
           "Save": "შენახვა"
         },
         "CSD U6 getProperty input": {
@@ -726,68 +790,68 @@
           "Submit": "გაგზავნა"
         },
         "CSD U6 getters debug": {
-          "slow": "ნელი",
           "fast": "ჩქარი",
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე",
+          "slow": "ნელი"
         },
         "CSD U6 getters debug_2018": {
           "fast": "ჩქარი",
-          "slow": "ნელი",
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე",
+          "slow": "ნელი"
         },
         "CSD U6 getters debug_2019": {
           "fast": "ჩქარი",
-          "slow": "ნელი",
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე",
+          "slow": "ნელი"
         },
         "CSD U6 getters debug_2021": {
           "fast": "ჩქარი",
-          "slow": "ნელი",
-          "short": "მოკლე",
+          "high": "მაღალი",
           "long": "გრძელი",
           "low": "დაბალი",
-          "high": "მაღალი"
+          "short": "მოკლე",
+          "slow": "ნელი"
         },
         "CSD U6 interval": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 interval_2018": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 interval_2019": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 interval_2021": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 params create colors": {
-          "Red": "წითელი",
-          "Blue": "ლურჯი"
+          "Blue": "ლურჯი",
+          "Red": "წითელი"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "წითელი",
-          "Blue": "ლურჯი"
+          "Blue": "ლურჯი",
+          "Red": "წითელი"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "წითელი",
-          "Blue": "ლურჯი"
+          "Blue": "ლურჯი",
+          "Red": "წითელი"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "წითელი",
-          "Blue": "ლურჯი"
+          "Blue": "ლურჯი",
+          "Red": "წითელი"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -814,24 +878,24 @@
           "Success!": "წარმატება!"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "ტექსტი",
           "high": "მაღალი",
-          "low": "დაბალი"
+          "low": "დაბალი",
+          "text": "ტექსტი"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "ტექსტი",
           "high": "მაღალი",
-          "low": "დაბალი"
+          "low": "დაბალი",
+          "text": "ტექსტი"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "ტექსტი",
           "high": "მაღალი",
-          "low": "დაბალი"
+          "low": "დაბალი",
+          "text": "ტექსტი"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "ტექსტი",
           "high": "მაღალი",
-          "low": "დაბალი"
+          "low": "დაბალი",
+          "text": "ტექსტი"
         },
         "CSD U6 setProperty predict app": {
           "title": "დასახელება"
@@ -846,20 +910,20 @@
           "title": "დასახელება"
         },
         "CSD U6 slider intro": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 slider intro_2018": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 slider intro_2019": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 slider intro_2021": {
-          "short": "მოკლე",
-          "long": "გრძელი"
+          "long": "გრძელი",
+          "short": "მოკლე"
         },
         "CSD U6 test LED": {
           "Success!": "წარმატება!"
@@ -874,68 +938,71 @@
           "Success!": "წარმატება!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "წითელი",
+          "Blue": "ლურჯი",
           "Green": "მწვანე",
-          "Blue": "ლურჯი"
+          "Red": "წითელი"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "წითელი",
+          "Blue": "ლურჯი",
           "Green": "მწვანე",
-          "Blue": "ლურჯი"
+          "Red": "წითელი"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "გაიცანით",
           "About Us": "ჩვენ შესახებ",
-          "Cancel": "გაუქმება",
-          "Name:": "სახელი:",
-          "Red": "წითელი",
-          "Green": "მწვანე",
           "Blue": "ლურჯი",
-          "Yes": "დიახ",
+          "Cancel": "გაუქმება",
+          "Green": "მწვანე",
+          "Name:": "სახელი:",
           "No": "არა",
-          "Save": "შენახვა"
+          "Red": "წითელი",
+          "Save": "შენახვა",
+          "Yes": "დიახ"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "გაიცანით",
           "About Us": "ჩვენ შესახებ",
-          "Cancel": "გაუქმება",
-          "Name:": "სახელი:",
-          "Red": "წითელი",
-          "Green": "მწვანე",
           "Blue": "ლურჯი",
-          "Yes": "დიახ",
+          "Cancel": "გაუქმება",
+          "Green": "მწვანე",
+          "Name:": "სახელი:",
           "No": "არა",
-          "Save": "შენახვა"
+          "Red": "წითელი",
+          "Save": "შენახვა",
+          "Yes": "დიახ"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "გაიცანით",
           "About Us": "ჩვენ შესახებ",
-          "Cancel": "გაუქმება",
-          "Name:": "სახელი:",
-          "Red": "წითელი",
-          "Green": "მწვანე",
           "Blue": "ლურჯი",
-          "Yes": "დიახ",
+          "Cancel": "გაუქმება",
+          "Green": "მწვანე",
+          "Name:": "სახელი:",
           "No": "არა",
-          "Save": "შენახვა"
+          "Red": "წითელი",
+          "Save": "შენახვა",
+          "Yes": "დიახ"
         },
         "CSDU4 Decision App Demo": {
           "About": "გაიცანით",
+          "About Us": "ჩვენ შესახებ",
           "I don't know": "არ ვიცი",
           "When?": "როდის?",
-          "About Us": "ჩვენ შესახებ"
+          "Why?": "რატომ?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "გაიცანით",
+          "About Us": "ჩვენ შესახებ",
           "I don't know": "არ ვიცი",
           "When?": "როდის?",
-          "About Us": "ჩვენ შესახებ"
+          "Why?": "რატომ?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "გაიცანით",
+          "About Us": "ჩვენ შესახებ",
           "I don't know": "არ ვიცი",
           "When?": "როდის?",
-          "About Us": "ჩვენ შესახებ"
+          "Why?": "რატომ?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "დამალვა",
@@ -944,38 +1011,41 @@
         "CSDU4 List App Demo": {
           "About": "გაიცანით",
           "About Us": "ჩვენ შესახებ",
-          "Done": "მზადაა",
-          "Cancel": "გაუქმება"
+          "Cancel": "გაუქმება",
+          "Done": "მზადაა"
         },
         "CSDU4 List App Demo_2018": {
           "About": "გაიცანით",
           "About Us": "ჩვენ შესახებ",
-          "Done": "მზადაა",
-          "Cancel": "გაუქმება"
+          "Cancel": "გაუქმება",
+          "Done": "მზადაა"
         },
         "CSDU4 List App Demo_2019": {
           "About": "გაიცანით",
           "About Us": "ჩვენ შესახებ",
-          "Done": "მზადაა",
-          "Cancel": "გაუქმება"
+          "Cancel": "გაუქმება",
+          "Done": "მზადაა"
         },
         "CSDU4 Quiz App Demo": {
           "About": "გაიცანით",
+          "About Us": "ჩვენ შესახებ",
           "Submit": "გაგზავნა",
           "When?": "როდის?",
-          "About Us": "ჩვენ შესახებ"
+          "Why?": "რატომ?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "გაიცანით",
+          "About Us": "ჩვენ შესახებ",
           "Submit": "გაგზავნა",
           "When?": "როდის?",
-          "About Us": "ჩვენ შესახებ"
+          "Why?": "რატომ?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "გაიცანით",
+          "About Us": "ჩვენ შესახებ",
           "Submit": "გაგზავნა",
           "When?": "როდის?",
-          "About Us": "ჩვენ შესახებ"
+          "Why?": "რატომ?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1000,76 +1070,76 @@
           "Success!": "წარმატება!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSDU6 piano with notes": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "ა",
+          "B": "ბ",
           "C": "გ",
           "D": "დ",
           "E": "E",
           "F": "ე",
-          "G": "ვ",
-          "A": "ა",
-          "B": "ბ"
+          "G": "ვ"
         },
         "allthethings design mode elements": {
           "text": "ტექსტი"
@@ -1090,12 +1160,12 @@
           "Start": "დაწყება"
         },
         "csd-apps for good-2": {
-          "Next": "შემდეგი",
-          "Home": "მთავარი"
+          "Home": "მთავარი",
+          "Next": "შემდეგი"
         },
         "csd-apps for good-2_2022": {
-          "Next": "შემდეგი",
-          "Home": "მთავარი"
+          "Home": "მთავარი",
+          "Next": "შემდეგი"
         },
         "csd-apps for good-3": {
           "2": "2",
@@ -1108,14 +1178,16 @@
           "4": "4"
         },
         "csd-explore ui-2": {
-          "Next": "შემდეგი",
-          "Home": "მთავარი"
+          "Home": "მთავარი",
+          "Next": "შემდეგი"
         },
         "csd-explore ui-2_2022": {
-          "Next": "შემდეგი",
-          "Home": "მთავარი"
+          "Home": "მთავარი",
+          "Next": "შემდეგი"
         },
         "csd-explore ui-3": {
+          "12": "12",
+          "15": "15",
           "2": "2",
           "3": "3",
           "4": "4",
@@ -1123,11 +1195,11 @@
           "6": "6",
           "7": "7",
           "8": "8",
-          "9": "9",
-          "12": "12",
-          "15": "15"
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
+          "12": "12",
+          "15": "15",
           "2": "2",
           "3": "3",
           "4": "4",
@@ -1135,9 +1207,7 @@
           "6": "6",
           "7": "7",
           "8": "8",
-          "9": "9",
-          "12": "12",
-          "15": "15"
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Sorry!": "ბოდიში!"
@@ -1146,6 +1216,8 @@
           "Sorry!": "ბოდიში!"
         },
         "csd-explore ui-5": {
+          "12": "12",
+          "15": "15",
           "2": "2",
           "3": "3",
           "4": "4",
@@ -1153,11 +1225,11 @@
           "6": "6",
           "7": "7",
           "8": "8",
-          "9": "9",
-          "12": "12",
-          "15": "15"
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
+          "12": "12",
+          "15": "15",
           "2": "2",
           "3": "3",
           "4": "4",
@@ -1165,9 +1237,7 @@
           "6": "6",
           "7": "7",
           "8": "8",
-          "9": "9",
-          "12": "12",
-          "15": "15"
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "შემდეგი"
@@ -1190,12 +1260,12 @@
           "Next": "შემდეგი"
         },
         "ml-customize-raspado-2021": {
-          "yes": "დიახ",
-          "no": "არა"
+          "no": "არა",
+          "yes": "დიახ"
         },
         "ml-customize-raspado_2022": {
-          "yes": "დიახ",
-          "no": "არა"
+          "no": "არა",
+          "yes": "დიახ"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "გაგრძელება",
@@ -1212,18 +1282,18 @@
           "Silly": "სულელური"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "W",
           "A": "ა",
-          "yes": "დიახ",
+          "W": "W",
+          "head": "თავი",
           "no": "არა",
-          "head": "თავი"
+          "yes": "დიახ"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "W",
           "A": "ა",
-          "yes": "დიახ",
+          "W": "W",
+          "head": "თავი",
           "no": "არა",
-          "head": "თავი"
+          "yes": "დიახ"
         },
         "ml-model cards-book recommender model card": {
           "Silly": "სულელური"
@@ -1232,56 +1302,56 @@
           "Silly": "სულელური"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
-          "2": "2"
+          "2": "2",
+          "3": "3"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
-          "2": "2"
+          "2": "2",
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
-          "2": "2"
+          "2": "2",
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
-          "2": "2"
+          "2": "2",
+          "3": "3"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
           "2": "2",
+          "3": "3",
           "Back": "უკან"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
           "2": "2",
+          "3": "3",
           "Back": "უკან"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
-          "2": "2"
+          "2": "2",
+          "3": "3"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
-          "2": "2"
+          "2": "2",
+          "3": "3"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "დიახ",
+          "B": "ბ",
           "No": "არა",
-          "B": "ბ"
+          "Yes": "დიახ"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "დიახ",
+          "B": "ბ",
           "No": "არა",
-          "B": "ბ"
+          "Yes": "დიახ"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "დიახ",
-          "No": "არა"
+          "No": "არა",
+          "Yes": "დიახ"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "დიახ",
-          "No": "არა"
+          "No": "არა",
+          "Yes": "დიახ"
         },
         "ml-models-shoes decision tree-2021": {
           "Sports": "სპორტი"
@@ -1290,16 +1360,16 @@
           "Sports": "სპორტი"
         },
         "ml-use model card-example3A-2021": {
-          "rain": "წვიმა",
-          "snow": "თოვლი",
           "cloudy": "ღრუბლიანი",
-          "night": "ღამე"
+          "night": "ღამე",
+          "rain": "წვიმა",
+          "snow": "თოვლი"
         },
         "ml-use model card-example3A_2022": {
-          "rain": "წვიმა",
-          "snow": "თოვლი",
           "cloudy": "ღრუბლიანი",
-          "night": "ღამე"
+          "night": "ღამე",
+          "rain": "წვიმა",
+          "snow": "თოვლი"
         }
       }
     }

@@ -14,10 +14,22 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Вие учител по информатика ли сте? Вhttps://crowdin.com/translate/codeorg/56/enus-bg#вижте други ресурси на CSEdWeek</a>'
   csedweek_banner_teachers_text: "Вие учител по информатика ли сте? Вhttps://crowdin.com/translate/codeorg/56/enus-bg#вижте други ресурси на CSEdWeek"
   n_have_learned_an_hoc: "<h1>Опитайте</h1><h2>Часът на кодирането</h2><h3># пробваха</h3>"
+  try_hoc_num_served: "<h1>Пробвайте</h1><h2>Час на Кода</h2><h3>%{num} сервирами</h3>"
+  try_hoc_num_served_markdown: |-
+    # Пробвайте
+
+     ## Час на Кода
+
+    ### %{num} сервирани #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Всеки може да се научи."
   learn_now: "Научете сега"
   petition_message: "Всеки ученик в училище трябва да има възможност да учи компютърни науки"
   petition_sign_message: 'Ако сте съгласни, подпишете се с името си. Присъединете се към # други.'
+  petition_sign_message_num: "Ако сте съгласни, влезте с името си и се присъединете към имейл бюлетината ни, заедно с %{num} други."
   petition_join_others: 'Присъединете се към # другите'
   petition_join_others_num: "Присъединете се към %{num} други"
   name: "Име"
@@ -153,10 +165,14 @@
   print_batch_certificates: "Изпринтирай група сертификати"
   print_certificates: "Печат на сертификати"
   certificate_sponsor_message: "%{sponsor_name} направи щедрият подарък да спонсорира твоето обучение."
+  print_ice_art_from_frozen: "Принитрайте ледено изкуство от уроци за Замръзналото Кралство"
+  want_a_blank_certificate_template: "Искате празен шаблон на сертификат, за да напишете имената на учениците си?"
+  landscape_recommended_certificates: "Препоръчително е да изберете **Пейзаж**, когато принтирате сертификати."
   print_one_here_certificates: "Изпринтирай един тук."
   enter_certificate_names: "Въведете до 30 имена, **по едно на ред**. Страница за принтиране с персонализирани %{script_name} сертификати ще бъде генерирана."
   share_achievement: "Споделете вашето постижение"
   beyond_hour_message: "Продължете с нашия<a href='http://studio.code.org'> 20-часов курс</a>, или вижте повече възможности да <a href='/learn/beyond'> учите след ПЪРВИЯ час</a>."
+  beyond_hour_message_markdown: "Продължете с нашите [други курсове](http://studio.code.org) или вижте още опции да [Учите след Часа](/learn/beyond)."
   leaderboards_for_hoc: "Класации за Часа на Кодирането."
   support_url: "http://support.code.org"
   country: "Държава"
@@ -246,7 +262,7 @@
   studiobar_flappy_body: "Направете и споделете своя собствена Flappy игра"
   studiobar_teacher_title: "За учители"
   studiobar_teacher_body: "Използвайте Студиото по кодиране в класната си стая"
-  studiobar_frozen_title: "Hour of Code"
+  studiobar_frozen_title: "Час на Кода"
   studiobar_frozen_body: "Създаване на зимна приказка с Анна и Елза"
   studiobar_donate_title: "Дарения"
   studiobar_donate_body: "Едно дете  получава вузможност да учи от всеки долар, който си дарил"
@@ -326,6 +342,7 @@
   homepage_banner_40k_teachers_link: "Научете повече"
   homepage_slot_text_title_hoc: "Hour of Code"
   homepage_slot_text_blurb_hoc: "Всеки може да се научи. Започнете днес"
+  homepage_slot_text_blurb_hoc_2022: "Изследайте, играйте и създавайте!"
   homepage_slot_text_link_hoc: "Опитайте Hour of Code"
   homepage_slot_text_link_about_hoc: "За Часа на кода"
   homepage_slot_text_link_host: "Организирайте Hour of Code"
@@ -352,12 +369,13 @@
   homepage_slot_text_link_donate: "Направете дарение"
   homepage_slot_text_link_shop: "Тениски, шапки & повече"
   homepage_slot_text_link_administrators: "Въведете CS във вашето училище"
-  homepage_gallery_header: "Над %{project_count} милиона Code.org проекти създадени"
+  homepage_gallery_header: "Над %{project_count} милиона създадени Code.org проекти"
   homepage_header_donors: "Code.org благодари"
   homepage_donors_seall: "Вижте още поддръжници"
   homepage_donors_donate: "Дарения"
   homepage_below_hero_announcement_text: "Ние се грижим за вашата поверителност и направихме някои актуализации за поверителността, влезнаха в сила от 25 май."
   homepage_below_hero_announcement_link_text: "Научете повече"
+  homepage_csa_subhead: "Нов подход към"
   contact_form_topic_student: "Аз съм ученик"
   contact_form_topic_parent: "Аз съм родител"
   contact_form_topic_teacher: "Аз съм учител/обучител"
@@ -468,6 +486,7 @@
   video_title_marco_belinelli: "Hour of Code с Marco Belinelli"
   video_title_chris_bosh: "Крис Бош за компютърните науки"
   video_title_my_name_is_aracely: "Моето Име е Аракели"
+  video_title_change_face_of_cs: "Променте Лицето на Компютърните Науки"
   video_1min: "1 мин."
   video_2min: "2 мин."
   video_3min: "3 мин"
@@ -514,6 +533,7 @@
   volunteer_engineer_submission_field_email_preference_no: 'Не'
   volunteer_engineer_submission_final_paragraph: "Вие ще бъдете отбелязан на картата в помощ на местните учители, за да се свържем с Вас за Часът на кода или други възможности за доброволчество. Вашата електронна поща и точния адрес няма да бъдат споделяни. Но друга информация (включително приблизителното местоположение) ще бъде публична и видима от местните учители."
   volunteer_engineer_submission_checkbox_contact: 'Съгласен съм, учителите да могат да се свържат с мен за доброволческа помощ (Забележка: Вашият имейл адрес няма да бъде споделен)'
+  volunteer_engineer_submission_checkbox_age_18_plus: "Удостоверявам, че съм поне на 18 години."
   volunteer_engineer_submission_submit: "Подаване"
   volunteer_engineer_submission_thankyou: "Благодарим Ви за изпращане на Вашата информация."
   volunteer_engineer_submission_commitment_uncertain: "Неопределено"
@@ -673,6 +693,7 @@
   dashboard_error_none_selected: "Не сте избрали ученици, които да преместите. Моля, изберете поне един ученик."
   dashboard_error_other_section: "Ако премествате ученици между собствените си раздели, изберете вашия раздел от падащото меню. Само изберете \"Друг раздел\", за да преместите вашите ученици в различен учителски раздел."
   dashboard_students_add_multiple: 'Въведете или поставете имената на вашите ученици, по едно име на ред:'
+  dashboard_students_new_google_classroom_section: "За да добавите ученици, използвайте <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> и след това натиснете <b>Синхронизиране на ученици от Google Classroom</b> бутона отгоре."
   dashboard_students_new_section: "Създали сте нов раздел! Сега добавете вашите ученици, използвайки <b>Добавяне на ученик</b> и <b>Добавяне на няколко ученици</b> от бутоните по-горе."
   dashboard_students_name: 'Име'
   dashboard_students_progress: "Прогрес"
@@ -681,6 +702,7 @@
   dashboard_students_completed_levels: "Завършени нива"
   dashboard_students_total_lines: "Редове с код"
   dashboard_students_share_section: "Споделете този код за раздел с вашите ученици:"
+  dashboard_students_share_section_secondary: 'Алтернативно, споделете страницата за вход на тази секция с учениците ви:'
   dashboard_students_print_info: "Отпечатайте карти с информация за влизане в сайта на вашите ученици."
   dashboard_students_secret_picture_title: "Тайна картинка"
   dashboard_students_secret_picture: "Този раздел използва <b>картина</b> като начин за достъп.  Това означава, че всеки от вашите ученици има тайна картина, която използва вместо парола за влизане.  Учениците трябва да използват посочения уеб адрес за достъп."
@@ -691,6 +713,7 @@
   dashboard_students_join_link: "Кажете на вашите ученици да си създат свои собствени акаунти и да се присъединят към вашият раздел "
   dashboard_students_no_email: "Ако учениците ви нямат свой имейл адрес, но искате да създадете акаунти за тях, променете начина на влизане в този раздел на <b>дума</b> или <b>картина</b>."
   dashboard_students_print_page: "Печат на тази страница"
+  dashboard_students_signin_card: "Посетете %{join_url} и въведете %{section_code}"
   dashboard_students_url: "URL АДРЕС"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\"> Щракнете тук</a> за нашата декларация за поверителност, която може да се сподели или да се отпечата за вашите ученици."
   dashboard_curriculum_k5_title: "K-5 ресурси за учителя"
@@ -703,11 +726,14 @@
   dashboard_course3: 'Курс 3:'
   dashboard_course4: 'Курс 4: '
   dashboard_coursea: 'Курс A: '
+  dashboard_courseb: 'Курс B: '
   dashboard_coursec: 'Курс C: '
   dashboard_coursed: 'Курс D: '
   dashboard_coursee: 'Курс E:  '
   dashboard_coursef: 'Курс F:  '
+  dashboard_express: 'Експресен Курс: '
   dashboard_unplugged: "Ако не разполагате с компютри, <a href='%{unplugged_url}'> Опитайте тези уроци без компютър</a> в класната стая."
+  dashboard_unplugged_markdown: "Ако нямате компютри, [пробвайте тези ънплъгд уроци](%{unplugged_url}) в класната ви стая."
   dashboard_tools: 'Инструменти: '
   dashboard_curriculum: "Учебна програма"
   dashboard_curriculum_overview: "K-5 преглед на програмата"
@@ -726,6 +752,7 @@
   dashboard_curriculum_csins: 'Компютърни науки в науката:'
   dashboard_curriculum_csp: 'AP ® Принципи на компютърните науки:'
   dashboard_curriculum_ecs: 'Изследване на компютърните науки:'
+  dashboard_curriculum_csd: 'Открития в Компютърните Науки: '
   dashboard_grade_k: "Предучилище"
   dashboard_grade_other: "Друго"
   dashboard_login_word: "Дума"
@@ -806,12 +833,17 @@
   carousel_heading_webpages: "Научете се да програмирате уеб страници"
   carousel_heading_robots: "Научете се да програмирате с роботи"
   carousel_heading_ide: "Платформи, популярни сред учителите"
+  carousel_heading_mobtabelem: "За телефони и таблети"
+  carousel_heading_prereader: "За учащи се да четат"
+  carousel_heading_beyondblocks: "Преминете отвъд блоковете - научете език за програмиране"
+  carousel_heading_nointernet: "Ненадежден или нямате интернет? Инсталирайте тези приложения на компютъра си"
   educator_notes: "Бележки за учители"
   teach_led_lesson_plans: "Ръководство с учебни планове за учители"
   learn_footer_all_tutorials: "Вижте <a href=\"https://code.org/educate/allhourofcode\"> пълен списък с уроците на Hour of Code</a>. За да видите нашите критерии за кандидатстване и насоки за уроците, <a href=\"https://hourofcode.com/tutorial-guidelines\"> щракнете тук,.</a>"
   how_to_teach_hoc: "Как да преподавате един Час на Кода"
   more_resources_educators: "Повече ресурси за учители и възпитатели"
   beyond_submission: "Искате ли да продължите с уроците и след Часа на кода? Вижте критериите за попълване на форма."
+  third_party_submission: "Искате да и изпратите урок, който да бъде посочен тук? <a href=\"%{submission_url}\">Вижте критериите и формата за пращане.</a>"
   participants: "участници"
   teachers_notes: "Указания за учители"
   teachers_notes_hoc: 'Учители: Прочетете важни бележки тук'
@@ -913,6 +945,10 @@
   courseb-2021_name: Курс B (2021)
   coursec-2021_name: Курс C (2021)
   coursef-2021_name: Курс F (2021)
+  express-2018_name: Експресем Курс (2018)
+  pre-express-2018_name: Експресен Курс за Учещи се да Четат (2018)
+  express-2019_name: Експресен Курс (2019)
+  pre-express-2019_name: Експресен Курс за Учащи се да Четат (2019)
   csd2_name: 'Урок 2: Уеб Разработка'
   csd3_name: 'Урок 3: Анимация и Игри'
   accelerated_name: "Ускорен курс"
@@ -1378,7 +1414,7 @@
   header_educate_elementary: "Начално училище"
   header_educate_middle: "Средно училище"
   header_educate_high: "Гимназия"
-  header_educate_hoc: "Hour of Code"
+  header_educate_hoc: "Час на Кода"
   header_educate_partner: "Партньорство с нас"
   header_educate_beyond: "Отвъд Code.org"
   header_educate_inspire: "Вдъхнови ученик"
@@ -1399,13 +1435,22 @@
   header_stats: "Статистика"
   header_help_us: "Помогнете ни"
   header_about: "Относно"
+  header_incubator: "Инкубатор"
   header_teacher_community: "Учителска общност"
   header_report_bug: "Съобщи за бъгове"
+  header_report_abuse: "Съобщете за злоупотреба"
+  header_legal: "Поверителност и Легално"
   header_legal_privacy: "Защита на личните данни"
   header_legal_tos: "Термини"
   header_tutorials: "Уроци"
   header_screen_reader_hamburger: "Меню"
   header_screen_reader_help: "Помощно Меню"
+  app_lab_documentation: "App Lab Документация"
+  app_lab_tutorials: "App Lab Уроци"
+  game_lab_documentation: "Game Lab Документация"
+  game_lab_tutorials: "Game Lab Уроци"
+  sprite_lab_documentation: "Sprite Lab Документация"
+  sprite_lab_tutorials: "Sprite Lab Уроци"
   header_documentation: "Документация"
   user_header_label: "Здравейте %{username}"
   user_header_team: "Екип"
@@ -1419,17 +1464,25 @@
   user_header_gamelab: "Играта лаборатория"
   user_header_playlab: "Театрална лаборатория"
   user_header_dance: "Танцово Парти"
+  user_header_spritelab: "Sprite Lab"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
+  user_header_view_all: "Покажи всички проекти..."
   user_header_view_project_gallery: "Покажи Галерия с проекти"
   user_header_view_my_projects: "Покажи моите проекти"
   view_all_sections: "Покажи всички раздели"
+  view_section: "Виж Раздел"
+  view_named_section: "Виж %{section_name}"
   signing_in: "Влизане"
   sign_in_instruct_website: "Отидете на %{code_org_url}."
   sign_in_instruct_code: 'Въведете кода за секцията им: %{section_code}.'
   sign_in_instruct_secret: "Изберете тяхната тайна %{secret}."
   sign_in_instruct_button: "Натиснете бутона \"Вход\"."
+  syncing_students: "Синхронизиране на учениците ви"
   hero_name: 'Minecraft: Пътуването на героя'
+  applab-intro_name: Въведение в App Lab
+  applab_tile_title: "Въведение в App Lab (Възрасти 13+)"
+  applab_tile_subtitle: "Създайте свое собствено приложение с JavaScript, използвайки блок-базирано програмиране. Или издигнете уменията си на следващото ниво с текст-базирано програмиране. (Само на Английски)"
   applab_tile_start_tutorial: "Старт"
   aquatic_name: 'Minecraft: Подводното пътешествие'
   account_sign_up_email_opt_in: "Можем ли да ви изпращаме обновления на нашите курсове, локални  възможности или други новини свързани с компютърните науки? (горе-долу веднъж на месец)"
@@ -1511,6 +1564,7 @@
   page_not_found_description: "Страницата, която търсите, не съществува на този адрес. Проверете уеб адреса и изпратете отново. Или се върнете на началната ни страница."
   page_not_found_button: "Началната страница"
   hoc2018_mc_with_microsoft: "В партньорство с"
+  homepage_slot_text_blurb_at_home: "Тези материали го правят лесно"
   page_not_available_button: "Началната страница"
   hoc2020_mc_available_code_org: "Досстъпно на Code.org"
   hoc2020_mc_mee_title: "Minecraft Историята на Две Села"

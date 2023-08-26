@@ -2,14 +2,11 @@
   "vi-VN": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "Tiêu chuẩn khoa học máy tính CSTA K-12 (2017)"
+        "ai4k12-2021": {
+          "name": "Hướng dẫn quốc gia AI4K12 2021"
         },
-        "csp2021": {
-          "name": "Khung khái niệm CSP"
-        },
-        "csta2011": {
-          "name": "Tiêu chuẩn khoa học máy tính CSTA K-12 (2011)"
+        "c3ss": {
+          "name": "Tiêu chuẩn Nghiên cứu Xã hội C3"
         },
         "ccela": {
           "name": "Tiêu chuẩn ngữ văn Anh ngữ căn bản phổ thông"
@@ -17,8 +14,23 @@
         "ccmath": {
           "name": "Tiêu chuẩn toán học căn bản phổ thông"
         },
+        "csa": {
+          "name": "Khung Khái niệm CSA"
+        },
+        "csp2021": {
+          "name": "Khung khái niệm CSP"
+        },
+        "csta": {
+          "name": "Tiêu chuẩn khoa học máy tính CSTA K-12 (2017)"
+        },
+        "csta2011": {
+          "name": "Tiêu chuẩn khoa học máy tính CSTA K-12 (2011)"
+        },
         "iste": {
           "name": "Tiêu chuẩn ISTE cho học sinh"
+        },
+        "ngss": {
+          "name": "Tiêu chuẩn khoa học thế hệ kế tiếp"
         }
       }
     }

@@ -2,50 +2,78 @@
   "fil-PH": {
     "data": {
       "start_html": {
+        "AppLab Intro 7 - Change Text 2": {
+          "Make me bigger and blue!": "Gawin akong mas malaki at kulay asul!"
+        },
+        "AppLab Intro 7 - Full Text": {
+          "Make me blue!": "Gawin akong asul!",
+          "Make me red!": "Gawin akong pula!",
+          "Write code to change my text!": "Sumulat ng code upang baguhin ang text ko!"
+        },
+        "AppLab Intro 7 - onEvent intro": {
+          "Green-ify!": "Berde-hin!"
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "Flashlight App": "Flashlight na App"
+        },
+        "AppLab Intro 7 - playSound": {
+          "Animal Sound Board!!!": "Board ng Tunog ng Hayop!!!",
+          "Horse!": "Kabayo!",
+          "Monkey!": "Unggoy!",
+          "Tiger!": "Tigre!",
+          "You Choose!": "Pumili Ka!"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "This or That?!": "Ito o Iyon?!",
+          "This!": "Ito!",
+          "You clicked this!": "Na-click mo ito!"
+        },
+        "AppLab Intro 7 - thisOrThatPersonalize": {
+          "This or That?!": "Ito o Iyon?!",
+          "This!": "Ito!",
+          "You clicked this!": "Na-click mo ito!"
+        },
+        "AppLab Intro 7 - thisOrThatSetScreen": {
+          "This or That?!": "Ito o Iyon?!",
+          "This!": "Ito!",
+          "You clicked this!": "Na-click mo ito!"
+        },
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Oo",
           "No": "Hindi",
+          "Yes": "Oo",
           "cute": "maliit"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Oo",
           "No": "Hindi",
+          "Yes": "Oo",
           "cute": "maliit"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Oo",
           "No": "Hindi",
+          "Yes": "Oo",
           "cute": "maliit"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Oo",
           "No": "Hindi",
+          "Yes": "Oo",
           "cute": "maliit"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Pangalan",
+          "City": "siyudad",
           "Color": "Kulay",
           "Food": "Pagkain",
-          "City": "siyudad",
+          "Name": "Pangalan",
           "text": "text"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Pangalan",
+          "City": "siyudad",
           "Color": "Kulay",
           "Food": "Pagkain",
-          "City": "siyudad",
+          "Name": "Pangalan",
           "text": "text"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -56,6 +84,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -66,19 +95,18 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31"
+          "31": "31",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -89,6 +117,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -99,8 +128,15 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31"
+          "31": "31",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing countries_2021": {
           "32": "32"
@@ -109,25 +145,17 @@
           "32": "32"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -138,6 +166,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -148,6 +177,7 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
           "31": "31",
           "32": "32",
@@ -158,20 +188,18 @@
           "37": "37",
           "38": "38",
           "39": "39",
+          "4": "4",
           "40": "40",
-          "text": "text",
-          "?": "?"
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "text"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -182,6 +210,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -192,6 +221,7 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
           "31": "31",
           "32": "32",
@@ -202,19 +232,25 @@
           "37": "37",
           "38": "38",
           "39": "39",
+          "4": "4",
           "40": "40",
-          "text": "text",
-          "?": "?"
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "text"
         },
         "CSD U1 processing live_2021": {
-          "walking": "naglalakad",
           "bear": "oso",
-          "rat": "daga"
+          "rat": "daga",
+          "walking": "naglalakad"
         },
         "CSD U1 processing live_2022": {
-          "walking": "naglalakad",
           "bear": "oso",
-          "rat": "daga"
+          "rat": "daga",
+          "walking": "naglalakad"
         },
         "CSD U1 processing npark_2021": {
           "Sorry!": "Paumanhin!"
@@ -224,14 +260,6 @@
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -242,6 +270,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -252,19 +281,18 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31"
+          "31": "31",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -275,6 +303,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -285,8 +314,15 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31"
+          "31": "31",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Bumalik"
@@ -295,32 +331,32 @@
           "Back": "Bumalik"
         },
         "CSD U1 storage movies_2021": {
+          "No": "Hindi",
           "Star Wars": "Star Wars",
           "Yes": "Oo",
-          "No": "Hindi",
           "text": "text"
         },
         "CSD U1 storage movies_2022": {
+          "No": "Hindi",
           "Star Wars": "Star Wars",
           "Yes": "Oo",
-          "No": "Hindi",
           "text": "text"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "Alisin",
-          "white": "puti",
-          "pink": "pink",
-          "green": "berde",
           "black": "itim",
-          "purple": "lila"
+          "green": "berde",
+          "pink": "pink",
+          "purple": "lila",
+          "white": "puti"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Alisin",
-          "white": "puti",
-          "pink": "pink",
-          "green": "berde",
           "black": "itim",
-          "purple": "lila"
+          "green": "berde",
+          "pink": "pink",
+          "purple": "lila",
+          "white": "puti"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -394,9 +430,9 @@
           "Success!": "Tagumpay!"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "Silangan",
           "North": "Hilaga",
           "South": "Timog",
-          "East": "Silangan",
           "West": "Kanluran"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
@@ -412,58 +448,58 @@
           "Medium": "Medium"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "kaliwa",
-          "right": "kanan",
-          "red": "pula",
-          "yellow": "dilaw",
           "green": "berde",
-          "purple": "lila"
+          "left": "kaliwa",
+          "purple": "lila",
+          "red": "pula",
+          "right": "kanan",
+          "yellow": "dilaw"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "sa",
           "fast": "mabilis",
-          "slow": "mabagal",
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "on": "sa",
+          "short": "maikli",
+          "slow": "mabagal"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "Pula",
+          "Blue": "Asul",
           "Green": "Luntian",
-          "Blue": "Asul"
+          "Red": "Pula"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "kaliwa",
           "right": "kanan"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "dilaw",
-          "green": "berde",
           "blue": "asul",
-          "orange": "dalandan"
+          "green": "berde",
+          "orange": "dalandan",
+          "yellow": "dilaw"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "quiet": "tahimik",
-          "Test": "Test"
+          "Test": "Test",
+          "quiet": "tahimik"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "short": "maikli"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "Pula",
-          "Blue": "Asul"
+          "Blue": "Asul",
+          "Red": "Pula"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -472,9 +508,9 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Pangalan"
@@ -495,41 +531,41 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
           "G": "G",
-          "A": "A",
-          "B": "B",
           "Note:": "Paalala:"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Tagumpay!"
@@ -548,8 +584,8 @@
           "Success!": "Tagumpay!"
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "Iskor",
-          "0": "0"
+          "0": "0",
+          "Score": "Iskor"
         },
         "CSD U6 - Physical Input - PC_2222": {
           "Success!": "Tagumpay!"
@@ -591,15 +627,15 @@
           "Name:": "Pangalan:"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "Pula",
+          "Blue": "Asul",
           "Green": "Luntian",
-          "Blue": "Asul"
+          "Red": "Pula"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "Asul",
+          "Green": "Luntian",
           "Name:": "Pangalan:",
           "Red": "Pula",
-          "Green": "Luntian",
-          "Blue": "Asul",
           "Save": "I-save"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
@@ -617,23 +653,23 @@
           "white": "puti"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "Masaya",
-          "?": "?"
+          "?": "?",
+          "Happy": "Masaya"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "title"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "Puti",
-          "Red": "Pula",
+          "Blue": "Asul",
           "Green": "Luntian",
-          "Blue": "Asul"
+          "Red": "Pula",
+          "White": "Puti"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "paitaas",
           "down": "baba",
           "left": "kaliwa",
-          "right": "kanan"
+          "right": "kanan",
+          "up": "paitaas"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "pangalan"
@@ -646,12 +682,24 @@
           "on": "sa"
         },
         "CSD U6 - Sensors - P_2222": {
-          "text": "text",
           "high": "mataas",
-          "low": "mababa"
+          "low": "mababa",
+          "text": "text"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "value"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "I-update",
+          "value": "value"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "value"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "value"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
           "value": "value"
         },
         "CSD U6 Driver pt 2": {
@@ -726,6 +774,30 @@
         "CSD U6 add LED button_2021": {
           "Success!": "Tagumpay!"
         },
+        "CSD U6 analog change": {
+          "value": "value"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "value"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "value"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "value"
+        },
+        "CSD U6 analog data": {
+          "value": "value"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "value"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "value"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "value"
+        },
         "CSD U6 analog light": {
           "Update": "I-update",
           "value": "value"
@@ -742,41 +814,53 @@
           "Update": "I-update",
           "value": "value"
         },
+        "CSD U6 analog sound": {
+          "value": "value"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "value"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "value"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "value"
+        },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "Una"
@@ -791,20 +875,20 @@
           "first": "Una"
         },
         "CSD U6 change": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 change_2018": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 change_2019": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 change_2021": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Medium"
@@ -819,95 +903,95 @@
           "Medium": "Medium"
         },
         "CSD U6 emotion machine example": {
-          "Happy": "Masaya",
-          "?": "?"
+          "?": "?",
+          "Happy": "Masaya"
         },
         "CSD U6 emotion machine example_2018": {
-          "Happy": "Masaya",
-          "?": "?"
+          "?": "?",
+          "Happy": "Masaya"
         },
         "CSD U6 emotion machine example_2019": {
-          "Happy": "Masaya",
-          "?": "?"
+          "?": "?",
+          "Happy": "Masaya"
         },
         "CSD U6 emotion machine example_2021": {
-          "Happy": "Masaya",
-          "?": "?"
+          "?": "?",
+          "Happy": "Masaya"
         },
         "CSD U6 frequency": {
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "short": "maikli"
         },
         "CSD U6 frequency_2018": {
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "short": "maikli"
         },
         "CSD U6 frequency_2019": {
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "short": "maikli"
         },
         "CSD U6 frequency_2021": {
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "short": "maikli"
         },
         "CSD U6 get toggle": {
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "short": "maikli"
         },
         "CSD U6 get toggle_2018": {
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "short": "maikli"
         },
         "CSD U6 get toggle_2019": {
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "short": "maikli"
         },
         "CSD U6 get toggle_2021": {
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "short": "maikli"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "Asul",
+          "Green": "Luntian",
           "Name:": "Pangalan:",
           "Red": "Pula",
-          "Green": "Luntian",
-          "Blue": "Asul",
           "Save": "I-save"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "Asul",
+          "Green": "Luntian",
           "Name:": "Pangalan:",
           "Red": "Pula",
-          "Green": "Luntian",
-          "Blue": "Asul",
           "Save": "I-save"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "Asul",
+          "Green": "Luntian",
           "Name:": "Pangalan:",
           "Red": "Pula",
-          "Green": "Luntian",
-          "Blue": "Asul",
           "Save": "I-save"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "Asul",
+          "Green": "Luntian",
           "Name:": "Pangalan:",
           "Red": "Pula",
-          "Green": "Luntian",
-          "Blue": "Asul",
           "Save": "I-save"
         },
         "CSD U6 getProperty input": {
@@ -923,84 +1007,84 @@
           "Submit": "Ipasa"
         },
         "CSD U6 getters debug": {
-          "slow": "mabagal",
           "fast": "mabilis",
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "short": "maikli",
+          "slow": "mabagal"
         },
         "CSD U6 getters debug_2018": {
           "fast": "mabilis",
-          "slow": "mabagal",
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "short": "maikli",
+          "slow": "mabagal"
         },
         "CSD U6 getters debug_2019": {
           "fast": "mabilis",
-          "slow": "mabagal",
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "short": "maikli",
+          "slow": "mabagal"
         },
         "CSD U6 getters debug_2021": {
           "fast": "mabilis",
-          "slow": "mabagal",
-          "short": "maikli",
+          "high": "mataas",
           "long": "mataas",
           "low": "mababa",
-          "high": "mataas"
+          "short": "maikli",
+          "slow": "mabagal"
         },
         "CSD U6 interval": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 interval_2018": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 interval_2019": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 interval_2021": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 light show": {
-          "on": "sa",
-          "off": "off"
+          "off": "off",
+          "on": "sa"
         },
         "CSD U6 light show_2018": {
-          "on": "sa",
-          "off": "off"
+          "off": "off",
+          "on": "sa"
         },
         "CSD U6 light show_2019": {
-          "on": "sa",
-          "off": "off"
+          "off": "off",
+          "on": "sa"
         },
         "CSD U6 light show_2021": {
-          "on": "sa",
-          "off": "off"
+          "off": "off",
+          "on": "sa"
         },
         "CSD U6 params create colors": {
-          "Red": "Pula",
-          "Blue": "Asul"
+          "Blue": "Asul",
+          "Red": "Pula"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "Pula",
-          "Blue": "Asul"
+          "Blue": "Asul",
+          "Red": "Pula"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "Pula",
-          "Blue": "Asul"
+          "Blue": "Asul",
+          "Red": "Pula"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "Pula",
-          "Blue": "Asul"
+          "Blue": "Asul",
+          "Red": "Pula"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -1027,24 +1111,24 @@
           "Success!": "Tagumpay!"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "text",
           "high": "mataas",
-          "low": "mababa"
+          "low": "mababa",
+          "text": "text"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "text",
           "high": "mataas",
-          "low": "mababa"
+          "low": "mababa",
+          "text": "text"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "text",
           "high": "mataas",
-          "low": "mababa"
+          "low": "mababa",
+          "text": "text"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "text",
           "high": "mataas",
-          "low": "mababa"
+          "low": "mababa",
+          "text": "text"
         },
         "CSD U6 setProperty predict app": {
           "title": "title"
@@ -1059,20 +1143,20 @@
           "title": "title"
         },
         "CSD U6 slider intro": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 slider intro_2018": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 slider intro_2019": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 slider intro_2021": {
-          "short": "maikli",
-          "long": "mataas"
+          "long": "mataas",
+          "short": "maikli"
         },
         "CSD U6 test LED": {
           "Success!": "Tagumpay!"
@@ -1087,71 +1171,74 @@
           "Success!": "Tagumpay!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "Pula",
+          "Blue": "Asul",
           "Green": "Luntian",
-          "Blue": "Asul"
+          "Red": "Pula"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "Pula",
+          "Blue": "Asul",
           "Green": "Luntian",
-          "Blue": "Asul"
+          "Red": "Pula"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "Tungkol sa",
           "About Us": "Tungkol sa Amin",
-          "Cancel": "Kanselahin",
-          "Name:": "Pangalan:",
-          "Red": "Pula",
-          "Green": "Luntian",
           "Blue": "Asul",
-          "Yes": "Oo",
+          "Cancel": "Kanselahin",
+          "Green": "Luntian",
+          "Name:": "Pangalan:",
           "No": "Hindi",
-          "Save": "I-save"
+          "Red": "Pula",
+          "Save": "I-save",
+          "User": "User",
+          "Yes": "Oo"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Tungkol sa",
           "About Us": "Tungkol sa Amin",
-          "Cancel": "Kanselahin",
-          "Name:": "Pangalan:",
-          "Red": "Pula",
-          "Green": "Luntian",
           "Blue": "Asul",
-          "Yes": "Oo",
+          "Cancel": "Kanselahin",
+          "Green": "Luntian",
+          "Name:": "Pangalan:",
           "No": "Hindi",
-          "Save": "I-save"
+          "Red": "Pula",
+          "Save": "I-save",
+          "User": "User",
+          "Yes": "Oo"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Tungkol sa",
           "About Us": "Tungkol sa Amin",
-          "Cancel": "Kanselahin",
-          "Name:": "Pangalan:",
-          "Red": "Pula",
-          "Green": "Luntian",
           "Blue": "Asul",
-          "Yes": "Oo",
+          "Cancel": "Kanselahin",
+          "Green": "Luntian",
+          "Name:": "Pangalan:",
           "No": "Hindi",
-          "Save": "I-save"
+          "Red": "Pula",
+          "Save": "I-save",
+          "User": "User",
+          "Yes": "Oo"
         },
         "CSDU4 Decision App Demo": {
           "About": "Tungkol sa",
-          "Why?": "Bakit?",
+          "About Us": "Tungkol sa Amin",
           "I don't know": "Hindi ko alam",
           "When?": "Kailan?",
-          "About Us": "Tungkol sa Amin"
+          "Why?": "Bakit?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Tungkol sa",
-          "Why?": "Bakit?",
+          "About Us": "Tungkol sa Amin",
           "I don't know": "Hindi ko alam",
           "When?": "Kailan?",
-          "About Us": "Tungkol sa Amin"
+          "Why?": "Bakit?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Tungkol sa",
-          "Why?": "Bakit?",
+          "About Us": "Tungkol sa Amin",
           "I don't know": "Hindi ko alam",
           "When?": "Kailan?",
-          "About Us": "Tungkol sa Amin"
+          "Why?": "Bakit?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Itago",
@@ -1160,41 +1247,41 @@
         "CSDU4 List App Demo": {
           "About": "Tungkol sa",
           "About Us": "Tungkol sa Amin",
-          "Done": "Tapos na",
-          "Cancel": "Kanselahin"
+          "Cancel": "Kanselahin",
+          "Done": "Tapos na"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Tungkol sa",
           "About Us": "Tungkol sa Amin",
-          "Done": "Tapos na",
-          "Cancel": "Kanselahin"
+          "Cancel": "Kanselahin",
+          "Done": "Tapos na"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Tungkol sa",
           "About Us": "Tungkol sa Amin",
-          "Done": "Tapos na",
-          "Cancel": "Kanselahin"
+          "Cancel": "Kanselahin",
+          "Done": "Tapos na"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Tungkol sa",
+          "About Us": "Tungkol sa Amin",
           "Submit": "Ipasa",
-          "Why?": "Bakit?",
           "When?": "Kailan?",
-          "About Us": "Tungkol sa Amin"
+          "Why?": "Bakit?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Tungkol sa",
+          "About Us": "Tungkol sa Amin",
           "Submit": "Ipasa",
-          "Why?": "Bakit?",
           "When?": "Kailan?",
-          "About Us": "Tungkol sa Amin"
+          "Why?": "Bakit?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Tungkol sa",
+          "About Us": "Tungkol sa Amin",
           "Submit": "Ipasa",
-          "Why?": "Bakit?",
           "When?": "Kailan?",
-          "About Us": "Tungkol sa Amin"
+          "Why?": "Bakit?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1219,83 +1306,83 @@
           "Success!": "Tagumpay!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "text"
         },
         "csa widget test2": {
-          "8": "8",
-          "32": "32"
+          "32": "32",
+          "8": "8"
         },
         "csd u5 recommender sample": {
           "Start": "Panimula"
@@ -1310,12 +1397,12 @@
           "Start": "Panimula"
         },
         "csd-apps for good-2": {
-          "Next": "Susunod",
-          "Home": "Home"
+          "Home": "Home",
+          "Next": "Susunod"
         },
         "csd-apps for good-2_2022": {
-          "Next": "Susunod",
-          "Home": "Home"
+          "Home": "Home",
+          "Next": "Susunod"
         },
         "csd-apps for good-3": {
           "1": "1",
@@ -1330,23 +1417,15 @@
           "4": "4"
         },
         "csd-explore ui-2": {
-          "Next": "Susunod",
-          "Home": "Home"
+          "Home": "Home",
+          "Next": "Susunod"
         },
         "csd-explore ui-2_2022": {
-          "Next": "Susunod",
-          "Home": "Home"
+          "Home": "Home",
+          "Next": "Susunod"
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1357,6 +1436,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -1367,19 +1447,18 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31"
+          "31": "31",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1390,6 +1469,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -1400,8 +1480,15 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31"
+          "31": "31",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Sorry!": "Paumanhin!"
@@ -1411,14 +1498,6 @@
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1429,6 +1508,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -1439,19 +1519,18 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31"
+          "31": "31",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1462,6 +1541,7 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
           "21": "21",
           "22": "22",
@@ -1472,8 +1552,15 @@
           "27": "27",
           "28": "28",
           "29": "29",
+          "3": "3",
           "30": "30",
-          "31": "31"
+          "31": "31",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "Susunod"
@@ -1482,13 +1569,13 @@
           "Next": "Susunod"
         },
         "ml-L2 supervised - green glass door-2021": {
-          "Green Glass Door": "Berdeng Pintuang Salamin",
           "Accepted": "Tinanggap",
+          "Green Glass Door": "Berdeng Pintuang Salamin",
           "Rejected": "Tinanggihan"
         },
         "ml-L2 supervised - green glass door_2022": {
-          "Green Glass Door": "Berdeng Pintuang Salamin",
           "Accepted": "Tinanggap",
+          "Green Glass Door": "Berdeng Pintuang Salamin",
           "Rejected": "Tinanggihan"
         },
         "ml-L2 unsupervised - 1-2021": {
@@ -1498,16 +1585,16 @@
           "Next": "Susunod"
         },
         "ml-customize-raspado-2021": {
-          "yes": "oo",
-          "no": "hindi",
+          "Predict": "Hula",
           "Raspado Recommender": "Raspado Recommender",
-          "Predict": "Hula"
+          "no": "hindi",
+          "yes": "oo"
         },
         "ml-customize-raspado_2022": {
-          "yes": "oo",
-          "no": "hindi",
+          "Predict": "Hula",
           "Raspado Recommender": "Raspado Recommender",
-          "Predict": "Hula"
+          "no": "hindi",
+          "yes": "oo"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Magpatuloy",
@@ -1518,106 +1605,106 @@
           "Loading...": "Loading..."
         },
         "ml-intro app lab-book recommender demo-2021": {
-          "Silly": "Tanga",
-          "Predict": "Hula"
+          "Predict": "Hula",
+          "Silly": "Tanga"
         },
         "ml-intro app lab-book recommender demo_2022": {
-          "Silly": "Tanga",
-          "Predict": "Hula"
+          "Predict": "Hula",
+          "Silly": "Tanga"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "W",
           "A": "A",
-          "yes": "oo",
+          "W": "W",
+          "head": "ulo",
           "no": "hindi",
-          "head": "ulo"
+          "yes": "oo"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "W",
           "A": "A",
-          "yes": "oo",
+          "W": "W",
+          "head": "ulo",
           "no": "hindi",
-          "head": "ulo"
+          "yes": "oo"
         },
         "ml-model cards-book recommender model card": {
-          "Silly": "Tanga",
-          "Predict": "Hula"
+          "Predict": "Hula",
+          "Silly": "Tanga"
         },
         "ml-model cards-book recommender model card_2022": {
-          "Silly": "Tanga",
-          "Predict": "Hula"
+          "Predict": "Hula",
+          "Silly": "Tanga"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Hula"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Hula"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Hula"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Hula"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "Hula",
-          "Back": "Bumalik"
+          "2": "2",
+          "3": "3",
+          "Back": "Bumalik",
+          "Predict": "Hula"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "Hula",
-          "Back": "Bumalik"
+          "2": "2",
+          "3": "3",
+          "Back": "Bumalik",
+          "Predict": "Hula"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Hula"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Hula"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Oo",
-          "No": "Hindi",
           "B": "B",
-          "Predict": "Hula"
+          "No": "Hindi",
+          "Predict": "Hula",
+          "Yes": "Oo"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Oo",
-          "No": "Hindi",
           "B": "B",
-          "Predict": "Hula"
+          "No": "Hindi",
+          "Predict": "Hula",
+          "Yes": "Oo"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Oo",
           "No": "Hindi",
-          "Predict": "Hula"
+          "Predict": "Hula",
+          "Yes": "Oo"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Oo",
           "No": "Hindi",
-          "Predict": "Hula"
+          "Predict": "Hula",
+          "Yes": "Oo"
         },
         "ml-models-shoes decision tree-2021": {
           "Improved Shoe Recommender": "Pinahusay na Shoe Recommender",
@@ -1641,105 +1728,21 @@
         },
         "ml-use model card-example3A-2021": {
           "Driver Alert System": "Alert System ng Driver",
-          "rain": "ulan",
-          "snow": "niyebe",
+          "Predict": "Hula",
           "cloudy": "maulap",
-          "night": "gabi",
           "dusk": "Takipsilim",
-          "Predict": "Hula"
+          "night": "gabi",
+          "rain": "ulan",
+          "snow": "niyebe"
         },
         "ml-use model card-example3A_2022": {
           "Driver Alert System": "Alert System ng Driver",
-          "rain": "ulan",
-          "snow": "niyebe",
+          "Predict": "Hula",
           "cloudy": "maulap",
-          "night": "gabi",
           "dusk": "Takipsilim",
-          "Predict": "Hula"
-        },
-        "AppLab Intro 7 - Change Text 2": {
-          "Make me bigger and blue!": "Gawin akong mas malaki at kulay asul!"
-        },
-        "AppLab Intro 7 - Full Text": {
-          "Make me red!": "Gawin akong pula!",
-          "Make me blue!": "Gawin akong asul!",
-          "Write code to change my text!": "Sumulat ng code upang baguhin ang text ko!"
-        },
-        "AppLab Intro 7 - onEvent intro": {
-          "Green-ify!": "Berde-hin!"
-        },
-        "AppLab Intro 7 - onEvent twoButtons": {
-          "Flashlight App": "Flashlight na App"
-        },
-        "AppLab Intro 7 - playSound": {
-          "Horse!": "Kabayo!",
-          "You Choose!": "Pumili Ka!",
-          "Animal Sound Board!!!": "Board ng Tunog ng Hayop!!!",
-          "Monkey!": "Unggoy!",
-          "Tiger!": "Tigre!"
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-          "This!": "Ito!",
-          "This or That?!": "Ito o Iyon?!",
-          "You clicked this!": "Na-click mo ito!"
-        },
-        "AppLab Intro 7 - thisOrThatPersonalize": {
-          "This!": "Ito!",
-          "This or That?!": "Ito o Iyon?!",
-          "You clicked this!": "Na-click mo ito!"
-        },
-        "AppLab Intro 7 - thisOrThatSetScreen": {
-          "This!": "Ito!",
-          "This or That?!": "Ito o Iyon?!",
-          "You clicked this!": "Na-click mo ito!"
-        },
-        "CSD U6 - Sensors - SB1_2222": {
-          "value": "value"
-        },
-        "CSD U6 - Sensors - SB3_2222": {
-          "value": "value"
-        },
-        "CSD U6 - Sensors - SB4.1_2222": {
-          "value": "value"
-        },
-        "CSD U6 - Sensors - SB4_2222": {
-          "value": "value"
-        },
-        "CSD U6 analog change": {
-          "value": "value"
-        },
-        "CSD U6 analog change_2018": {
-          "value": "value"
-        },
-        "CSD U6 analog change_2019": {
-          "value": "value"
-        },
-        "CSD U6 analog change_2021": {
-          "value": "value"
-        },
-        "CSD U6 analog data": {
-          "value": "value"
-        },
-        "CSD U6 analog data_2018": {
-          "value": "value"
-        },
-        "CSD U6 analog data_2019": {
-          "value": "value"
-        },
-        "CSD U6 analog data_2021": {
-          "value": "value"
-        },
-        "CSD U6 analog sound": {
-          "value": "value"
-        },
-        "CSD U6 analog sound_2018": {
-          "value": "value"
-        },
-        "CSD U6 analog sound_2019": {
-          "value": "value"
-        },
-        "CSD U6 analog sound_2021": {
-          "value": "value"
+          "night": "gabi",
+          "rain": "ulan",
+          "snow": "niyebe"
         }
       }
     }

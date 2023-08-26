@@ -2,8 +2,302 @@
 hu:
   data:
     unplugged:
+      BigEvent:
+        desc: A diákok megismerkednek az "események" fogalmával, melyek olyan programozási
+          cselekvések, amiket a számítógép folyamatosan figyel.  A tanár gombokat
+          rajzol egy papírra és a diákok attól függően kell, hogy reagáljanak, hogy
+          a tanár melyik gombot "nyomja meg".
+        title: A nagy esemény
+      BigEvent_2018:
+        desc: A diákok megismerkednek az "események" fogalmával, melyek olyan programozási
+          cselekvések, amiket a számítógép folyamatosan figyel.  A tanár gombokat
+          rajzol egy papírra és a diákok attól függően kell, hogy reagáljanak, hogy
+          a tanár melyik gombot "nyomja meg".
+        title: A nagy esemény
+      BigEvent_2019:
+        desc: A diákok megismerkednek az "események" fogalmával, melyek olyan programozási
+          cselekvések, amiket a számítógép folyamatosan figyel.  A tanár gombokat
+          rajzol egy papírra és a diákok attól függően kell, hogy reagáljanak, hogy
+          a tanár melyik gombot "nyomja meg".
+        title: A nagy esemény
+      BinaryBracelets:
+        desc: Diákok karkötőket készítenek nevük első betűjének bináris ábrázolására.  A
+          diákok így megtanulják az adatok több módon is megjeleníthetők és tárolhatók.
+        title: Bináris karkötők
+      BinaryBracelets_2018:
+        desc: Diákok karkötőket készítenek nevük első betűjének bináris ábrázolására.  A
+          diákok így megtanulják az adatok több módon is megjeleníthetők és tárolhatók.
+        title: Bináris karkötők
+      BinaryBracelets_2019:
+        desc: Diákok karkötőket készítenek nevük első betűjének bináris ábrázolására.  A
+          diákok így megtanulják az adatok több módon is megjeleníthetők és tárolhatók.
+        title: Bináris karkötők
+      BinaryImages:
+        desc: Sokan azt hiszik, a bináris rendszer szigorúan nullákkal és egyesekkel
+          operál, ám korábbi tanfolyamainkon megtanultuk,  a bináris opciók sokféle
+          információt tudnak képviselni.  Ez a lecke ezt a koncepciót viszi előrébb
+          egy lépéssel azt mutatva, hogy egy számítógép hogy képes tárolni összetett
+          információt (például a képeket és színeket) is binárisan.
+        title: Bináris képek
+      BinaryImages_2018:
+        desc: Sokan azt hiszik, a bináris rendszer szigorúan nullákkal és egyesekkel
+          operál, ám korábbi tanfolyamainkon megtanultuk,  a bináris opciók sokféle
+          információt tudnak képviselni.  Ez a lecke ezt a koncepciót viszi előrébb
+          egy lépéssel azt mutatva, hogy egy számítógép hogy képes tárolni összetett
+          információt (például a képeket és színeket) is binárisan.
+        title: Bináris képek
+      BinaryImages_2019:
+        desc: Sokan azt hiszik, a bináris rendszer szigorúan nullákkal és egyesekkel
+          operál, ám korábbi tanfolyamainkon megtanultuk,  a bináris opciók sokféle
+          információt tudnak képviselni.  Ez a lecke ezt a koncepciót viszi előrébb
+          egy lépéssel azt mutatva, hogy egy számítógép hogy képes tárolni összetett
+          információt (például a képeket és színeket) is binárisan.
+        title: Bináris képek
+      Booleans:
+        desc: A negyedik és egyben utolsó amit ebben a kurzusban tanulunk a Logikai
+          adattípus. Ebben feladatban megtanulod mi a Logikai típus és hogyan segítenek
+          nekünk logikusan gondolkodó függvényeket létrehozni
+        title: Logikai változók és a logika
+      BuildingAFoundation:
+        desc: Diákok építenek egy szerkezet csak a megadott összetevők igénybevételével.
+          A szerkezeteknek kell tudni látniuk valamilyen feladatot (érjenek el egy
+          bizonyos magasságot vagy kibírjanak egy bizonyos terhet), és a diákok meg
+          kell tanulniuk megvitatni az elképzeléseiket az állandóan növekvő bonyolultsági
+          fokozat mellett.
+        title: Az alap megépítése
+      BuildingAFoundation_2019:
+        desc: 'hiányzó fordítás: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+        title: 'hiányzó fordítás: en-US.data.unplugged.BuildingAFoundation_2018.title'
+      CollisionDetection:
+        desc: Meghatározni mikor érintik a képernyő szélét az objektumok egy fontos
+          szempont a legtöbb játékban. Ebben a leckében megnézzük hogyan használható
+          a Pitagorasz-tétel és Távolság-tétel két pont távolságának meghatározására
+          a síkban és hogy a két pont (vagy játék szereplő) érinti-e egymást.
+        title: Összeütközés felderítése és a Pitagorasz-tétel
+      ComputationalThinking:
+        desc: Diákok a számítási gondolkodás lépéseit használják (a dekompozíciót,
+          a mintával való összevetést, az elvonatkoztatást, az algoritmust) a játékmenet
+          kitalálásához, mivel nincsenek megadva a játékszabályok.
+        title: Számítógépes gondolkodás
+      Conditionals:
+        desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot
+          játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros
+          lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
+        title: Feltételek
+      ConditionalsPiecewiseFunctions:
+        desc: A függvényeknek átadott paraméterek szigorú minta szerint befolyásolják
+          az eredményt. Tegyük fel azt szeretnéd hogy a paraméter néhány értéke az
+          egyik minta alapján és más értékek más minta alapján befolyásolják az eredményt.
+          Ekkor van szükség feltételes módra...
+        title: Feltételes utasítások és összetett függvények
+      Conditionals_2018:
+        desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot
+          játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros
+          lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
+        title: Feltételek
+      Conditionals_2019:
+        desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot
+          játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros
+          lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
+        title: Feltételek
+      Contracts:
+        desc: Szerződések segíthetnek megérteni és megvitatni a funkciók működését.
+          Ebben a leckében megnézzük a szerződések hogyan segítenek megérteni egy
+          új programozási nyelvet vagy függvényt.
+        title: Szerződések, Domainok és tartományok
+      Crowdsourcing:
+        desc: Diákok közösen gondolkodnak, ez a közös gondolkodás gyakori problémamegoldási
+          mód a számítógép-tudományban, együtt egy osztály sokkal hatékonyabb, mintha
+          egy diák egyedül próbálkozna.
+        title: Csoportos megoldás
+      Crowdsourcing_2019:
+        desc: 'hiányzó fordítás: en-US.data.unplugged.Crowdsourcing_2018.desc'
+        title: 'hiányzó fordítás: en-US.data.unplugged.Crowdsourcing_2018.title'
+      DesignRecipe:
+        desc: Az utolsó szakaszban a diákok írnak néhány egyszerűbb függvényt - bár
+          a kifinomultabb függvények átgondolt megközelítést igényelnek. A Tervezési
+          Recept egy olyan strukturált megközelítés, amely magába foglalja a tesztek
+          írását is a függvény megfelelő működésének biztosítása érdekében.
+        title: A dizájn receptje
+      DiceRace:
+        desc: Ez a lecke rávilágít a valós életben is használt algoritmusokra. Ennek
+          részeként a diákok azonosítják és leírják egy kockajáték során használt
+          algoritmusokat.
+        title: 'Algoritmusok a valós életben: kockadobás'
+      DigitalCitizenship:
+        desc: A diákok felfedezik a különbséget a személyes adatok és a személyes
+          információk között megkülönböztetve, mit biztonságos és mit nem biztonságos
+          megosztani az interneten.
+        title: Digitális állampolgárság
+      DigitalFootprint:
+        desc: A tanárok bemutatják, hogy ha a diákok információt helyeznek el magukról
+          online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.
+        title: A digitális lábnyomod
+      DigitalFootprint_2018:
+        desc: A tanárok bemutatják, hogy ha a diákok információt helyeznek el magukról
+          online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.
+        title: A digitális lábnyomod
+      DigitalFootprint_2019:
+        desc: A tanárok bemutatják, hogy ha a diákok információt helyeznek el magukról
+          online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.
+        title: A digitális lábnyomod
+      EnvelopeVariables:
+        desc: A változók nagyon sok szabadságot biztosítanak a számítástechnikában.  Ez
+          a lecke segít megmagyarázni, hogy mik azok a változók és hogyan használhatjuk
+          őket, nagyon sokféle módon. Használd ezt a tevékenységet, az absztrakció
+          lecke előtt (vagy együtt), hogy igazán érthető legyen.
+        title: Boríték változók
+      EnvelopeVariables_2019:
+        desc: 'hiányzó fordítás: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+        title: 'hiányzó fordítás: en-US.data.unplugged.EnvelopeVariables_2018.title'
+      ForLoopFun:
+        desc: Tudjuk, hogy a ciklusok lehetővé teszik, hogy dolgokat újra és újra
+          megismételjünk, de most megtanuljuk, hogy miként használhatjuk a ciklusok
+          beépített extra funkcióit.
+        title: Szórakozás a For ciklussal
+      ForLoopFun_2019:
+        desc: 'hiányzó fordítás: en-US.data.unplugged.ForLoopFun_2018.desc'
+        title: 'hiányzó fordítás: en-US.data.unplugged.ForLoopFun_2018.title'
+      FunctionalSuncatchers:
+        desc: A diákok létrehoznak egy algoritmust változók és függvények (olyan kódrészletek,
+          amiket újra és újra fel lehet használni) segítségével zsinórra fűzött csillogó
+          dekor és gyöngyök elkészítéséhez.
+        title: Hasznos díszek
+      GettingLoopy:
+        desc: Ez a lecke bevezet a ciklusok (ismétlődő utasítások) programozásának
+          rejtelmeibe a tánc segítségével. A diákok megtanulnak egy egyszerű koreográfiát,
+          majd azt újra megismétlik.
+        title: Ciklikusság
+      GettingLoopy_2018:
+        desc: Ez a lecke bevezet a ciklusok (ismétlődő utasítások) programozásának
+          rejtelmeibe a tánc segítségével. A diákok megtanulnak egy egyszerű koreográfiát,
+          majd azt újra megismétlik.
+        title: Ciklikusság
+      GettingLoopy_2019:
+        desc: Ez a lecke bevezet a ciklusok (ismétlődő utasítások) programozásának
+          rejtelmeibe a tánc segítségével. A diákok megtanulnak egy egyszerű koreográfiát,
+          majd azt újra megismétlik.
+        title: Ciklikusság
+      GoingPlacesSafely:
+        desc: Az interneten egy hatalmas, de néha veszélyes hely. A tanárok bemutatják,
+          hogyan maradhat biztonságos az interneten való jelenlét.
+        title: Biztonságos utazás
+      GoingPlacesSafely_2018:
+        desc: Az interneten egy hatalmas, de néha veszélyes hely. A tanárok bemutatják,
+          hogyan maradhat biztonságos az interneten való jelenlét.
+        title: Biztonságos utazás
+      GoingPlacesSafely_2019:
+        desc: Az interneten egy hatalmas, de néha veszélyes hely. A tanárok bemutatják,
+          hogyan maradhat biztonságos az interneten való jelenlét.
+        title: Biztonságos utazás
+      GraphPaperProgramming:
+        desc: A diákok egy algoritmust (utasítások sorozata) írnak osztálytársaiknak
+          egy sor előre definiált parancs segítségével, hogy reprodukáljanak egy rajzot.
+        title: Grafikus programozás
+      GraphPaperProgramming_2018:
+        desc: A diákok egy algoritmust (utasítások sorozata) írnak osztálytársaiknak
+          egy sor előre definiált parancs segítségével, hogy reprodukáljanak egy rajzot.
+        title: Grafikus programozás
+      GraphPaperProgramming_2019:
+        desc: A diákok egy algoritmust (utasítások sorozata) írnak osztálytársaiknak
+          egy sor előre definiált parancs segítségével, hogy reprodukáljanak egy rajzot.
+        title: Grafikus programozás
+      GraphingData_2019:
+        desc: Ebben a leckében a hallgatók Play Lab projektből vagy a valóságból gyűjtenek
+          adatokat, és jóslatok készítésére használják azokat.
+        title: Az adatok leképezése
+      Internet:
+        desc: Diákok papírra írt üzenetekkel mutatják be a különböző internetes adatátviteli
+          módszereket.
+        title: Internet
+      Internet_2019:
+        desc: 'hiányzó fordítás: en-US.data.unplugged.Internet_2018.desc'
+        title: 'hiányzó fordítás: en-US.data.unplugged.Internet_2018.title'
+      MadGlibs:
+        desc: Az absztrakció, az egyik legfontosabb készsége egy számítógép tudósnak.  A
+          diákoknak történeteket kell elemezniük, eltéréseket keresve és elvonatkoztatniuk.
+          Ezek az elvonatkoztatott, absztrakt történetek szórakoztató és őrült új
+          történetekké válnak.
+        title: Mad Glibs
+      MoveIt:
+        desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
+          hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
+        title: Gyerünk, gyerünk!
+      MoveItMoveIt_2018:
+        title: Gyerünk, gyerünk!
+      MoveItMoveIt_2019:
+        title: Gyerünk, gyerünk!
+      PaperPlanes:
+        desc: Ebben a leckében az algoritmusok mindennapi életünkben való használatáról
+          szól, konkrétan papír repülőgépek segítségével. Ez a lecke nagyobb képet
+          ad a számítógép-tudományról és arra összpontosít, hogyan játszanak alapvető
+          szerepet a számítástechnikában az algoritmusok.
+        title: 'Hétköznapi algoritmusok: Papírrepülők'
+      PaperPlanes_2018:
+        desc: Ebben a leckében az algoritmusok mindennapi életünkben való használatáról
+          szól, konkrétan papír repülőgépek segítségével. Ez a lecke nagyobb képet
+          ad a számítógép-tudományról és arra összpontosít, hogyan játszanak alapvető
+          szerepet a számítástechnikában az algoritmusok.
+        title: 'Hétköznapi algoritmusok: Papírrepülők'
+      PaperPlanes_2019:
+        desc: Ebben a leckében az algoritmusok mindennapi életünkben való használatáról
+          szól, konkrétan papír repülőgépek segítségével. Ez a lecke nagyobb képet
+          ad a számítógép-tudományról és arra összpontosít, hogyan játszanak alapvető
+          szerepet a számítástechnikában az algoritmusok.
+        title: 'Hétköznapi algoritmusok: Papírrepülők'
+      PlantASeed:
+        desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét
+          nézzük meg egy mag elvetésének példáján keresztül. A lecke emellett a számítástechnika
+          nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető
+          szerepet.
+        title: 'Valós algoritmusok: Ültess el egy magot!'
+      PlantASeed_2018:
+        desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét
+          nézzük meg egy mag elvetésének példáján keresztül. A lecke emellett a számítástechnika
+          nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető
+          szerepet.
+        title: 'Valós algoritmusok: Ültess el egy magot!'
+      PlantASeed_2019:
+        desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét
+          nézzük meg egy mag elvetésének példáján keresztül. A lecke emellett a számítástechnika
+          nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető
+          szerepet.
+        title: 'Valós algoritmusok: Ültess el egy magot!'
+      RelayProgramming:
+        desc: Diákok egy váltófutáson vesznek részt, ahol ők az udvaron futnak végig
+          a "Milliméterpapírra történő programozás" képén ábrázolt algoritmus szerint.
+          Ők csak egy utasítást írhatnak le egyszerre, és ha van egy hiba valahol,
+          akkor mindent törölniük kell eddig a pontig.
+        title: Váltó programozás
+      RelayProgramming_2018:
+        desc: Ez a tevékenység egy rövid leckével kezdődik a hibakeresésről és a kitartásról,
+          majd gyorsan átalakul a verseny az idővel játékká, a diákok csapatokra osztódnak
+          és együtt dolgoznak, hogy programot írjanak egy-egy utasításra.
+        title: Váltó programozás
+      RelayProgramming_2018_2019:
+        desc: Ez a tevékenység egy rövid leckével kezdődik a hibakeresésről és a kitartásról,
+          majd gyorsan átalakul a verseny az idővel játékká, a diákok csapatokra osztódnak
+          és együtt dolgoznak, hogy programot írjanak egy-egy utasításra.
+        title: Váltó programozás
+      SongwritingParameters:
+        desc: Diákok a kórus és dala segítségével értik meg a paraméterhelyettesítést
+          (ami testreszabja a függvényt anélkül, hogy átírná azt).
+        title: Dalszerzés paraméterekkel
+      SongwritingParameters_2019:
+        desc: 'hiányzó fordítás: en-US.data.unplugged.SongwritingParameters_2018.desc'
+        title: 'hiányzó fordítás: en-US.data.unplugged.SongwritingParameters_2018.title'
+      SongwritingWithParameters:
+        desc: 'A számítógép-tudomány egyik legcsodálatosabb szerkezete a függvény.
+          A függvények (más néven eljárások) egy mini programok, amiket használhatsz
+          újra és újra a nagyobb programodban. Ez a lecke segít a diákoknak intuitív
+          módon megérteni, miért hasznos gyakorlat kódrészleteket függvényekké egyesíteni.  '
+        title: Dalszerzés paraméterekkel
+      TangramAlgorithms:
+        desc: Ez a lecke megmutat valami fontosat algoritmusokról. Ha egy algoritmus
+          egyszerű marad nagyon sokmindenre használható.  Ha azt akarod, hogy a végeredmény
+          mindig ugyanaz legyen, az algoritmusnak is részletesebbnek kell lennie.
+        title: Tangram algoritmusok
       Unplug1:
-        title: Bevezetés a számítógép tudományába
         desc: Ez a lecke bevezet a számítógép-tudományba és elmagyarázza, mit csinál
           egy számítógéptudós. Emellett lehetőséget ad a diákoknak, hogy belekóstoljanak
           a szakmába. A program végén minden diák kap egy kis emlékeztetőt arról,
@@ -11,8 +305,17 @@ hu:
           a következő leckékben található szakkifejezéseket, de ezek vidám és játékos
           megismertetése ebben a fázisban sokkal hatékonyabb, mintha későbbre hagynád
           őket.
+        title: Bevezetés a számítógép tudományába
+      Unplug10:
+        desc: Ebben a leckében diákok úgy tesznek, mintha maguk is fent lennének az
+          interneten, miközben a webcímekről, IP és DNS azonosítókról tanulnak.
+        title: Az internet
+      Unplug11:
+        desc: Az első 20 órás sorozat vége segít átélni az osztály kedvenc pillanatait
+          és rávezeti őket a következő lépésekre, ha érdekli őket a számítógép tudománnyal
+          megkezdett út folytatása.
+        title: Összegzés
       Unplug2:
-        title: Számítógépes gondolkodás
         desc: "Csak papírral és filccel felszerelkezve a diákok megtanulják a programozói
           gondolkodás négy lépését. Egy rövid bemutatkozás után a diákok csoportokban
           dolgoznak, ahol a feladatuk, hogy (szörnyek katalógusából választott) szörnyet
@@ -23,22 +326,22 @@ hu:
           szörnyet. A csapatok végül kicserélik a kész algoritmusokat és lerajzolják
           az az alapján készült szörnyet. Vajon az lesz a képen, amit az algoritmust
           író csapat szeretett volna?"
+        title: Számítógépes gondolkodás
       Unplug3:
-        title: Grafikus programozás
         desc: Egymás rajzolásra való beprogramozásával a diákok elkezdik megérteni,
           hogy mi is a programozás igazából. Kezdésként a diákok egymásnak adnak utasításokat,
           hogy egy négyzethálós papíron négyzeteket színezzenek, reprodukálva egy
           már meglévő képet. Ha van rá idő, akkor a leckét a diákok saját képeivel
           lehet zárni.
+        title: Grafikus programozás
       Unplug4:
-        title: algoritmusok
         desc: Ez a leckét az algoritmusokat fedi le.  A tangram alakzatok és milliméterpapír
           használatával, az első gyakorlat megmutatja, mennyire fontos, hogy minden
           utasítás amennyire csak lehet, világos és egyértelmű legyen.  Utána az osztály
           megvizsgálja, milyen módokon lehet egy papírt téglalappá hajtogatni, megjegyezve,
           hogy egyes módszerek több vagy kevesebb hajtást igényelnek, mint mások.
+        title: algoritmusok
       Unplug5:
-        title: funkciók
         desc: Ebben a leckében a diákok madzagból, gyöngyökből és speciális kiegészítőből
           egy ablakdíszt készítenek. A diákok egy sor ismétlődő műveletet végeznek
           el, amiket kérésre munkafázisként azonosítaniuk kell tudni. Amint ezeket
@@ -48,577 +351,274 @@ hu:
           függetlenül. Hogy megfelelően alkalmazhassák a programot, ki kell emelni
           az elérhető hozzávalókat. A helyettesítők ilyenfajta használata remek lehetőség
           a változók bevezetésére.
+        title: funkciók
       Unplug6:
-        title: Feltételek
         desc: Ez egy osztálytermi játék. A feltételek, ha utasítások és ciklusok megismerése
           után az osztály egy előre megírt program, egy kártyapakli és sorshúzás segítségével
           gyakorolhatnak.
+        title: Feltételek
       Unplug7:
-        title: Dal iras
         desc: A dalszövegek olvasása a legtöbb diák számára természetes folyamat.
           Egy olyan tevékenységet fogunk végezni, amivel már mindenki tisztában van,
           és felhasználjuk ezt a függvények definiálására és meghívására. Miután a
           diákok megértik a definiálás és a meghívás lényegét, bevezetjük az extra
           lehetőségek biztosítását lehetővé tevő paramétereket.
+        title: Dal iras
       Unplug8:
-        title: Absztrakció
         desc: Ezt a tevékenység ötvözi a tanulók mindennapi rutinját és a Mad-Lib
           stílusú gondolkodtató játékot, hogy segítsen az osztálynak megtanulni az
           absztrakció hatékonyságát.
+        title: Absztrakció
       Unplug9:
-        title: Váltó programozás
         desc: Ezt a lecke egy korábbi tevékenységből (4. Grafikon papír programozás)
           származó ötletet hasznosít és az ott szerzett képességeket használja hogy
           kiemelje a sorrendben működő programok befejezésének fontosságát, valamint
           gyakori program ellenőrzéseket a hibák kiszűréséhez.
-      Unplug10:
-        title: Az internet
-        desc: Ebben a leckében diákok úgy tesznek, mintha maguk is fent lennének az
-          interneten, miközben a webcímekről, IP és DNS azonosítókról tanulnak.
-      Unplug11:
-        title: Összegzés
-        desc: Az első 20 órás sorozat vége segít átélni az osztály kedvenc pillanatait
-          és rávezeti őket a következő lépésekre, ha érdekli őket a számítógép tudománnyal
-          megkezdett út folytatása.
-      UnplugHappyMaps:
-        title: Vidám térképek
-        desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
-          hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
-      MoveIt:
-        title: Gyerünk, gyerünk!
-        desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
-          hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
-      PlantASeed:
-        title: 'Valós algoritmusok: Ültess el egy magot!'
-        desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét
-          nézzük meg egy mag elvetésének példáján keresztül. A lecke emellett a számítástechnika
-          nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető
-          szerepet.
-      BuildingAFoundation:
-        title: Az alap megépítése
-        desc: Diákok építenek egy szerkezet csak a megadott összetevők igénybevételével.
-          A szerkezeteknek kell tudni látniuk valamilyen feladatot (érjenek el egy
-          bizonyos magasságot vagy kibírjanak egy bizonyos terhet), és a diákok meg
-          kell tanulniuk megvitatni az elképzeléseiket az állandóan növekvő bonyolultsági
-          fokozat mellett.
-      GettingLoopy:
-        title: Ciklikusság
-        desc: Ez a lecke bevezet a ciklusok (ismétlődő utasítások) programozásának
-          rejtelmeibe a tánc segítségével. A diákok megtanulnak egy egyszerű koreográfiát,
-          majd azt újra megismétlik.
-      RelayProgramming:
         title: Váltó programozás
-        desc: Diákok egy váltófutáson vesznek részt, ahol ők az udvaron futnak végig
-          a "Milliméterpapírra történő programozás" képén ábrázolt algoritmus szerint.
-          Ők csak egy utasítást írhatnak le egyszerre, és ha van egy hiba valahol,
-          akkor mindent törölniük kell eddig a pontig.
-      Conditionals:
-        title: Feltételek
-        desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot
-          játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros
-          lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
-      BigEvent:
-        title: A nagy esemény
-        desc: A diákok megismerkednek az "események" fogalmával, melyek olyan programozási
-          cselekvések, amiket a számítógép folyamatosan figyel.  A tanár gombokat
-          rajzol egy papírra és a diákok attól függően kell, hogy reagáljanak, hogy
-          a tanár melyik gombot "nyomja meg".
-      GoingPlacesSafely:
-        title: Biztonságos utazás
-        desc: Az interneten egy hatalmas, de néha veszélyes hely. A tanárok bemutatják,
-          hogyan maradhat biztonságos az interneten való jelenlét.
-      GraphPaperProgramming:
-        title: Grafikus programozás
-        desc: A diákok egy algoritmust (utasítások sorozata) írnak osztálytársaiknak
-          egy sor előre definiált parancs segítségével, hogy reprodukáljanak egy rajzot.
-      PaperPlanes:
-        title: 'Hétköznapi algoritmusok: Papírrepülők'
-        desc: Ebben a leckében az algoritmusok mindennapi életünkben való használatáról
-          szól, konkrétan papír repülőgépek segítségével. Ez a lecke nagyobb képet
-          ad a számítógép-tudományról és arra összpontosít, hogyan játszanak alapvető
-          szerepet a számítástechnikában az algoritmusok.
-      BinaryBracelets:
-        title: Bináris karkötők
-        desc: Diákok karkötőket készítenek nevük első betűjének bináris ábrázolására.  A
-          diákok így megtanulják az adatok több módon is megjeleníthetők és tárolhatók.
-      DigitalFootprint:
-        title: A digitális lábnyomod
-        desc: A tanárok bemutatják, hogy ha a diákok információt helyeznek el magukról
-          online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.
-      ComputationalThinking:
-        title: Számítógépes gondolkodás
-        desc: Diákok a számítási gondolkodás lépéseit használják (a dekompozíciót,
-          a mintával való összevetést, az elvonatkoztatást, az algoritmust) a játékmenet
-          kitalálásához, mivel nincsenek megadva a játékszabályok.
-      FunctionalSuncatchers:
-        title: Hasznos díszek
-        desc: A diákok létrehoznak egy algoritmust változók és függvények (olyan kódrészletek,
-          amiket újra és újra fel lehet használni) segítségével zsinórra fűzött csillogó
-          dekor és gyöngyök elkészítéséhez.
-      SongwritingParameters:
-        title: Dalszerzés paraméterekkel
-        desc: Diákok a kórus és dala segítségével értik meg a paraméterhelyettesítést
-          (ami testreszabja a függvényt anélkül, hogy átírná azt).
-      DiceRace:
-        title: 'Algoritmusok a valós életben: kockadobás'
-        desc: Ez a lecke rávilágít a valós életben is használt algoritmusokra. Ennek
-          részeként a diákok azonosítják és leírják egy kockajáték során használt
-          algoritmusokat.
-      Internet:
-        title: Internet
-        desc: Diákok papírra írt üzenetekkel mutatják be a különböző internetes adatátviteli
-          módszereket.
-      Crowdsourcing:
-        title: Csoportos megoldás
-        desc: Diákok közösen gondolkodnak, ez a közös gondolkodás gyakori problémamegoldási
-          mód a számítógép-tudományban, együtt egy osztály sokkal hatékonyabb, mintha
-          egy diák egyedül próbálkozna.
-      DigitalCitizenship:
-        title: Digitális állampolgárság
-        desc: A diákok felfedezik a különbséget a személyes adatok és a személyes
-          információk között megkülönböztetve, mit biztonságos és mit nem biztonságos
-          megosztani az interneten.
-      TangramAlgorithms:
-        title: Tangram algoritmusok
-        desc: Ez a lecke megmutat valami fontosat algoritmusokról. Ha egy algoritmus
-          egyszerű marad nagyon sokmindenre használható.  Ha azt akarod, hogy a végeredmény
-          mindig ugyanaz legyen, az algoritmusnak is részletesebbnek kell lennie.
-      EnvelopeVariables:
-        title: Boríték változók
-        desc: A változók nagyon sok szabadságot biztosítanak a számítástechnikában.  Ez
-          a lecke segít megmagyarázni, hogy mik azok a változók és hogyan használhatjuk
-          őket, nagyon sokféle módon. Használd ezt a tevékenységet, az absztrakció
-          lecke előtt (vagy együtt), hogy igazán érthető legyen.
-      MadGlibs:
-        title: Mad Glibs
-        desc: Az absztrakció, az egyik legfontosabb készsége egy számítógép tudósnak.  A
-          diákoknak történeteket kell elemezniük, eltéréseket keresve és elvonatkoztatniuk.
-          Ezek az elvonatkoztatott, absztrakt történetek szórakoztató és őrült új
-          történetekké válnak.
-      ForLoopFun:
-        title: Szórakozás a For ciklussal
-        desc: Tudjuk, hogy a ciklusok lehetővé teszik, hogy dolgokat újra és újra
-          megismételjünk, de most megtanuljuk, hogy miként használhatjuk a ciklusok
-          beépített extra funkcióit.
-      SongwritingWithParameters:
-        title: Dalszerzés paraméterekkel
-        desc: 'A számítógép-tudomány egyik legcsodálatosabb szerkezete a függvény.
-          A függvények (más néven eljárások) egy mini programok, amiket használhatsz
-          újra és újra a nagyobb programodban. Ez a lecke segít a diákoknak intuitív
-          módon megérteni, miért hasznos gyakorlat kódrészleteket függvényekké egyesíteni.  '
-      BinaryImages:
-        title: Bináris képek
-        desc: Sokan azt hiszik, a bináris rendszer szigorúan nullákkal és egyesekkel
-          operál, ám korábbi tanfolyamainkon megtanultuk,  a bináris opciók sokféle
-          információt tudnak képviselni.  Ez a lecke ezt a koncepciót viszi előrébb
-          egy lépéssel azt mutatva, hogy egy számítógép hogy képes tárolni összetett
-          információt (például a képeket és színeket) is binárisan.
+      UnplugHappyMaps:
+        desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
+          hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
+        title: Vidám térképek
+      UnplugHappyMaps_2018:
+        desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
+          hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
+        title: Vidám térképek
+      UnplugHappyMaps_2019:
+        desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
+          hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
+        title: Vidám térképek
       VideoGamesCoordinatePlanes:
-        title: Videó játékok és koordináta síkok
         desc: Fedezd fel hogy a videójátékot amivel szeretsz játszani hogyan működteti
           az algebra! Az algebrai kifejezések és koordináta-rendszer segítenek megérteni
           hogyan működnek a videójátékok és elkezdheted tervezni a játékot, amit majd
           Te fogsz létrehozni.
-      Contracts:
-        title: Szerződések, Domainok és tartományok
-        desc: Szerződések segíthetnek megérteni és megvitatni a funkciók működését.
-          Ebben a leckében megnézzük a szerződések hogyan segítenek megérteni egy
-          új programozási nyelvet vagy függvényt.
-      DesignRecipe:
-        title: A dizájn receptje
-        desc: Az utolsó szakaszban a diákok írnak néhány egyszerűbb függvényt - bár
-          a kifinomultabb függvények átgondolt megközelítést igényelnek. A Tervezési
-          Recept egy olyan strukturált megközelítés, amely magába foglalja a tesztek
-          írását is a függvény megfelelő működésének biztosítása érdekében.
-      Booleans:
-        title: Logikai változók és a logika
-        desc: A negyedik és egyben utolsó amit ebben a kurzusban tanulunk a Logikai
-          adattípus. Ebben feladatban megtanulod mi a Logikai típus és hogyan segítenek
-          nekünk logikusan gondolkodó függvényeket létrehozni
-      ConditionalsPiecewiseFunctions:
-        title: Feltételes utasítások és összetett függvények
-        desc: A függvényeknek átadott paraméterek szigorú minta szerint befolyásolják
-          az eredményt. Tegyük fel azt szeretnéd hogy a paraméter néhány értéke az
-          egyik minta alapján és más értékek más minta alapján befolyásolják az eredményt.
-          Ekkor van szükség feltételes módra...
-      CollisionDetection:
-        title: Összeütközés felderítése és a Pitagorasz-tétel
-        desc: Meghatározni mikor érintik a képernyő szélét az objektumok egy fontos
-          szempont a legtöbb játékban. Ebben a leckében megnézzük hogyan használható
-          a Pitagorasz-tétel és Távolság-tétel két pont távolságának meghatározására
-          a síkban és hogy a két pont (vagy játék szereplő) érinti-e egymást.
-      courseA_unplugged_loops:
-        title: Ciklus leválasztva
-        desc: Ebben a leckében a ciklusokról tanulunk!
-      courseB_unplugged_MRF:
-        title: Offline tevékenység
-        desc: Ebben a leckében a barátaidat fogod "programozni"!
-      courseB_unplugged_loopyMRF:
-        title: Offline tevékenység
-        desc: Úgy mint a "Robotikus barátaim"-ban a barátaidat fogod "programozni,
-          de most ciklusokkal!
-      courseC_Unplugged_ScreenOutTheMean:
-        title: Offline tevékenység
-        desc: Ma arról fogunk tanulni, hogy mit kell tenned, ha valaki rossz az interneten.
-      courseD_unplugged_digitalCitizenship:
-        title: Offline tevékenység
-        desc: Ma arról fogunk tanulni, hogy mit jelent Digitális Állampolgárnak lenni.
-      courseE_unplugged_privateInformation:
-        title: 'Általános oktatás: Személyes és személyes információk'
-        desc: Ma arról fogunk tanulni, mi a különbség a magán és a személyes adatok
-          között!
-      courseF_unplugged_powerOfWords:
-        title: Offline tevékenység
-        desc: Ma arról fogunk tanulni, hogy mit kell tenned, ha valaki rossz az interneten.
-      deeper learning description:
-        desc: 'fordítás hiányzik: en-US.data.unplugged.desc'
-      courseAB_unplugged_plantASeed:
-        title: 'Valós algoritmusok: Ültess el egy magot!'
-        desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét
-          nézzük meg egy mag elvetésének példáján keresztül. A lecke emellett a számítástechnika
-          nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető
-          szerepet.
-      courseA_unplugged_happyMaps:
-        title: Vidám térképek
-        desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
-          hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
-      courseA_unplugged_goingPlacesSafely:
-        title: Biztonságos utazás
-        desc: Az interneten egy hatalmas, de néha veszélyes hely. A tanárok bemutatják,
-          hogyan maradhat biztonságos az interneten való jelenlét.
+        title: Videó játékok és koordináta síkok
       courseABC_unplugged_bigEvent:
-        title: A nagy esemény
         desc: A diákok megismerkednek az "események" fogalmával, melyek olyan programozási
           cselekvések, amiket a számítógép folyamatosan figyel.  A tanár gombokat
           rajzol egy papírra és a diákok attól függően kell, hogy reagáljanak, hogy
           a tanár melyik gombot "nyomja meg".
+        title: A nagy esemény
+      courseAB_unplugged_plantASeed:
+        desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét
+          nézzük meg egy mag elvetésének példáján keresztül. A lecke emellett a számítástechnika
+          nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető
+          szerepet.
+        title: 'Valós algoritmusok: Ültess el egy magot!'
+      courseA_unplugged_goingPlacesSafely:
+        desc: Az interneten egy hatalmas, de néha veszélyes hely. A tanárok bemutatják,
+          hogyan maradhat biztonságos az interneten való jelenlét.
+        title: Biztonságos utazás
+      courseA_unplugged_happyMaps:
+        desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
+          hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
+        title: Vidám térképek
+      courseA_unplugged_loops:
+        desc: Ebben a leckében a ciklusokról tanulunk!
+        title: Ciklus leválasztva
+      courseA_unplugged_loops_2018:
+        desc: Ebben a leckében a ciklusokról tanulunk!
+        title: Ciklus leválasztva
+      courseA_unplugged_loops_2019:
+        desc: Ebben a leckében a ciklusokról tanulunk!
+        title: Ciklus leválasztva
+      courseB_unplugged_CnC_2018:
+        desc: Ezt a leckét a Copyright and Creativity (Szerzői jog és kreativitás)
+          csapata adta kölcsön a Computer Science Fundamentals (Számítástechnikai
+          alapismeretek) számára, azzal a céllal, hogy a lecke segítségével a diákok
+          megértsék a megosztás és az inspirálás kreatív folyamatát. További cél a
+          diákok bátorítása a kreatív kifejezésmód használatára, és hogy megértsék
+          a kreatív munkához tisztességesen kell viszonyulni.
+        title: Remek dolog tisztességesen alkotni és játszani
+      courseB_unplugged_CnC_2019:
+        desc: Ezt a leckét a Copyright and Creativity (Szerzői jog és kreativitás)
+          csapata adta kölcsön a Computer Science Fundamentals (Számítástechnikai
+          alapismeretek) számára, azzal a céllal, hogy a lecke segítségével a diákok
+          megértsék a megosztás és az inspirálás kreatív folyamatát. További cél a
+          diákok bátorítása a kreatív kifejezésmód használatára, és hogy megértsék
+          a kreatív munkához tisztességesen kell viszonyulni.
+        title: Remek dolog tisztességesen alkotni és játszani
+      courseB_unplugged_MRF:
+        desc: Ebben a leckében a barátaidat fogod "programozni"!
+        title: Offline tevékenység
+      courseB_unplugged_MRF_2018:
+        desc: Tanulj programozni úgy, hogy kódot írsz barátaid számára!
+        title: A robot barátaim
+      courseB_unplugged_MRF_2019:
+        desc: Tanulj programozni úgy, hogy kódot írsz barátaid számára!
+        title: A robot barátaim
       courseB_unplugged_digitalFootprint:
-        title: A digitális lábnyomod
         desc: A tanárok bemutatják, hogy ha a diákok információt helyeznek el magukról
           online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.
+        title: A digitális lábnyomod
+      courseB_unplugged_loopyMRF:
+        desc: Úgy mint a "Robotikus barátaim"-ban a barátaidat fogod "programozni,
+          de most ciklusokkal!
+        title: Offline tevékenység
+      courseB_unplugged_loopyMRF_2019:
+        title: Ciklusos robot barátim
+      courseB_unplugged_passwords_2019:
+        desc: Fedezd fel, miért használják az emberek a jelszavakat, ismerd meg a
+          jelszavak használatának előnyeit, és fedezd fel az erős, biztonságos jelszavak
+          létrehozásának és megőrzésének stratégiáit.
+        title: Erős jelszavak
+      courseC_Unplugged_ScreenOutTheMean:
+        desc: Ma arról fogunk tanulni, hogy mit kell tenned, ha valaki rossz az interneten.
+        title: Offline tevékenység
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        desc: Ma arról fogunk tanulni, hogy mit kell tenned, ha valaki rossz az interneten.
+        title: Offline tevékenység
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        desc: Ma arról fogunk tanulni, hogy mit kell tenned, ha valaki rossz az interneten.
+        title: Offline tevékenység
+      courseC_unplugged_binaryBracelets:
+        desc: Diákok karkötőket készítenek nevük első betűjének bináris ábrázolására.  A
+          diákok így megtanulják az adatok több módon is megjeleníthetők és tárolhatók.
+        title: Bináris karkötők
       courseC_unplugged_buildingAFoundation:
-        title: Az alap megépítése
         desc: Diákok építenek egy szerkezet csak a megadott összetevők igénybevételével.
           A szerkezeteknek kell tudni látniuk valamilyen feladatot (érjenek el egy
           bizonyos magasságot vagy kibírjanak egy bizonyos terhet), és a diákok meg
           kell tanulniuk megvitatni az elképzeléseiket az állandóan növekvő bonyolultsági
           fokozat mellett.
+        title: Az alap megépítése
+      courseC_unplugged_gettingLoopy:
+        desc: Ez a lecke bevezet a ciklusok (ismétlődő utasítások) programozásának
+          rejtelmeibe a tánc segítségével. A diákok megtanulnak egy egyszerű koreográfiát,
+          majd azt újra megismétlik.
+        title: Ciklikusság
       courseC_unplugged_paperPlanes:
-        title: 'Hétköznapi algoritmusok: Papírrepülők'
         desc: Ebben a leckében az algoritmusok mindennapi életünkben való használatáról
           szól, konkrétan papír repülőgépek segítségével. Ez a lecke nagyobb képet
           ad a számítógép-tudományról és arra összpontosít, hogyan játszanak alapvető
           szerepet a számítástechnikában az algoritmusok.
-      courseC_unplugged_gettingLoopy:
-        title: Ciklikusság
-        desc: Ez a lecke bevezet a ciklusok (ismétlődő utasítások) programozásának
-          rejtelmeibe a tánc segítségével. A diákok megtanulnak egy egyszerű koreográfiát,
-          majd azt újra megismétlik.
-      courseC_unplugged_binaryBracelets:
-        title: Bináris karkötők
-        desc: Diákok karkötőket készítenek nevük első betűjének bináris ábrázolására.  A
-          diákok így megtanulják az adatok több módon is megjeleníthetők és tárolhatók.
+        title: 'Hétköznapi algoritmusok: Papírrepülők'
+      courseD_unplugged_binaryImages:
+        desc: Sokan azt hiszik, a bináris rendszer szigorúan nullákkal és egyesekkel
+          operál, ám korábbi tanfolyamainkon megtanultuk,  a bináris opciók sokféle
+          információt tudnak képviselni.  Ez a lecke ezt a koncepciót viszi előrébb
+          egy lépéssel azt mutatva, hogy egy számítógép hogy képes tárolni összetett
+          információt (például a képeket és színeket) is binárisan.
+        title: Bináris képek
+      courseD_unplugged_conditionalsCards:
+        desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot
+          játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros
+          lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
+        title: Feltételek kártyákkal
+      courseD_unplugged_digitalCitizenship:
+        desc: Ma arról fogunk tanulni, hogy mit jelent Digitális Állampolgárnak lenni.
+        title: Offline tevékenység
+      courseD_unplugged_digitalCitizenship_2018:
+        desc: Ma arról fogunk tanulni, hogy mit jelent Digitális Állampolgárnak lenni.
+        title: Offline tevékenység
+      courseD_unplugged_digitalCitizenship_2019:
+        desc: Ma arról fogunk tanulni, hogy mit jelent Digitális Állampolgárnak lenni.
+        title: Offline tevékenység
       courseD_unplugged_graphPaperProgramming:
-        title: Grafikus programozás
         desc: A diákok egy algoritmust (utasítások sorozata) írnak osztálytársaiknak
           egy sor előre definiált parancs segítségével, hogy reprodukáljanak egy rajzot.
+        title: Grafikus programozás
       courseD_unplugged_relayProgramming:
-        title: Váltó programozás
         desc: Diákok egy váltófutáson vesznek részt, ahol ők az udvaron futnak végig
           a "Milliméterpapírra történő programozás" képén ábrázolt algoritmus szerint.
           Ők csak egy utasítást írhatnak le egyszerre, és ha van egy hiba valahol,
           akkor mindent törölniük kell eddig a pontig.
-      courseD_unplugged_conditionalsCards:
-        title: Feltételek kártyákkal
-        desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot
-          játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros
-          lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
-      courseD_unplugged_binaryImages:
-        title: Bináris képek
-        desc: Sokan azt hiszik, a bináris rendszer szigorúan nullákkal és egyesekkel
-          operál, ám korábbi tanfolyamainkon megtanultuk,  a bináris opciók sokféle
-          információt tudnak képviselni.  Ez a lecke ezt a koncepciót viszi előrébb
-          egy lépéssel azt mutatva, hogy egy számítógép hogy képes tárolni összetett
-          információt (például a képeket és színeket) is binárisan.
-      courseE_unplugged_diceRace:
-        title: 'Algoritmusok a valós életben: kockadobás'
-        desc: Ez a lecke rávilágít a valós életben is használt algoritmusokra. Ennek
-          részeként a diákok azonosítják és leírják egy kockajáték során használt
-          algoritmusokat.
-      courseE_unplugged_songwritingParameters:
-        title: Dalszerzés paraméterekkel
-        desc: Diákok a kórus és dala segítségével értik meg a paraméterhelyettesítést
-          (ami testreszabja a függvényt anélkül, hogy átírná azt).
-      courseE_unplugged_internet:
-        title: Internet
-        desc: Diákok papírra írt üzenetekkel mutatják be a különböző internetes adatátviteli
-          módszereket.
+        title: Váltó programozás
+      courseE_simon_says_2019:
+        desc: "Játssz egy játékot, és gondold át, milyen parancsokra van szükség a
+          megfelelő eredmény eléréséhez.\r\n\r\n![test image](https://code.org/images/logo.png)"
+        title: Simon mondja
+      courseE_unplugged_CnC_2018:
+        desc: Ezt a leckét a Copyright and Creativity (Szerzői jog és kreativitás)
+          csapata adta kölcsön az Computer Science Fundamentals (Számítástechnikai
+          alapismeretek) számára, azzal a célla, hogy a lecke segítségével a diákok
+          megértsék, miért fontos tiszteletben tartani a tulajdonjogot és a szerzői
+          jogokat, és hogy milyen feladatok és előnyök járnak ezekkel együtt, különösen
+          digitális környezetben. A diákokat arra kell bátorítani, hogy tartsák tiszteletben
+          a művészek jogait, ami fontos része annak, hogy etikus digitális polgárként
+          tudjanak viselkedni.
+        title: Digitális megosztás
+      courseE_unplugged_CnC_2019:
+        desc: Ezt a leckét a Copyright and Creativity (Szerzői jog és kreativitás)
+          csapata adta kölcsön az Computer Science Fundamentals (Számítástechnikai
+          alapismeretek) számára, azzal a célla, hogy a lecke segítségével a diákok
+          megértsék, miért fontos tiszteletben tartani a tulajdonjogot és a szerzői
+          jogokat, és hogy milyen feladatok és előnyök járnak ezekkel együtt, különösen
+          digitális környezetben. A diákokat arra kell bátorítani, hogy tartsák tiszteletben
+          a művészek jogait, ami fontos része annak, hogy etikus digitális polgárként
+          tudjanak viselkedni.
+        title: Digitális megosztás
+      courseE_unplugged_accessAbility_2019:
+        desc: Ismerje meg az akadálymentességet és az empátia értékét ötletbörze és
+          hozzáférhető megoldások megtervezése révén hipotetikus alkalmazásokhoz.
+        title: Hozzáférési képesség
       courseE_unplugged_crowdsourcing:
-        title: Csoportos megoldás
         desc: Diákok közösen gondolkodnak, ez a közös gondolkodás gyakori problémamegoldási
           mód a számítógép-tudományban, együtt egy osztály sokkal hatékonyabb, mintha
           egy diák egyedül próbálkozna.
+        title: Csoportos megoldás
+      courseE_unplugged_diceRace:
+        desc: Ez a lecke rávilágít a valós életben is használt algoritmusokra. Ennek
+          részeként a diákok azonosítják és leírják egy kockajáték során használt
+          algoritmusokat.
+        title: 'Algoritmusok a valós életben: kockadobás'
+      courseE_unplugged_internet:
+        desc: Diákok papírra írt üzenetekkel mutatják be a különböző internetes adatátviteli
+          módszereket.
+        title: Internet
+      courseE_unplugged_privateInformation:
+        desc: Ma arról fogunk tanulni, mi a különbség a magán és a személyes adatok
+          között!
+        title: 'Általános oktatás: Személyes és személyes információk'
+      courseE_unplugged_privateInformation_2019:
+        desc: A Common Sense Education által kifejlesztett lecke arról szól, hogy
+          mi a különbség az interneten biztonságosan megosztható és a nem biztonságos
+          információ között.
+        title: Magán és személyes információk
       courseE_unplugged_songwriting:
-        title: Dalszerzés paraméterekkel
         desc: Diákok a kórus és dala segítségével értik meg a paraméterhelyettesítést
           (ami testreszabja a függvényt anélkül, hogy átírná azt).
-      courseF_unplugged_tangrams:
-        title: Tangram algoritmusok
-        desc: Ez a lecke megmutat valami fontosat algoritmusokról. Ha egy algoritmus
-          egyszerű marad nagyon sokmindenre használható.  Ha azt akarod, hogy a végeredmény
-          mindig ugyanaz legyen, az algoritmusnak is részletesebbnek kell lennie.
+        title: Dalszerzés paraméterekkel
+      courseE_unplugged_songwritingParameters:
+        desc: Diákok a kórus és dala segítségével értik meg a paraméterhelyettesítést
+          (ami testreszabja a függvényt anélkül, hogy átírná azt).
+        title: Dalszerzés paraméterekkel
       courseF_unplugged_envelopeVariables:
-        title: Boríték változók
         desc: A változók nagyon sok szabadságot biztosítanak a számítástechnikában.  Ez
           a lecke segít megmagyarázni, hogy mik azok a változók és hogyan használhatjuk
           őket, nagyon sokféle módon. Használd ezt a tevékenységet, az absztrakció
           lecke előtt (vagy együtt), hogy igazán érthető legyen.
+        title: Boríték változók
       courseF_unplugged_forLoopFun:
-        title: Szórakozás a For ciklussal
         desc: Tudjuk, hogy a ciklusok lehetővé teszik, hogy dolgokat újra és újra
           megismételjünk, de most megtanuljuk, hogy miként használhatjuk a ciklusok
           beépített extra funkcióit.
+        title: Szórakozás a For ciklussal
+      courseF_unplugged_powerOfWords:
+        desc: Ma arról fogunk tanulni, hogy mit kell tenned, ha valaki rossz az interneten.
+        title: Offline tevékenység
+      courseF_unplugged_powerOfWords_2019:
+        desc: 'hiányzó fordítás: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+        title: 'hiányzó fordítás: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
       courseF_unplugged_songwritingParameters:
-        title: Dalszerzés paraméterekkel
         desc: 'A számítógép-tudomány egyik legcsodálatosabb szerkezete a függvény.
           A függvények (más néven eljárások) egy mini programok, amiket használhatsz
           újra és újra a nagyobb programodban. Ez a lecke segít a diákoknak intuitív
           módon megérteni, miért hasznos gyakorlat kódrészleteket függvényekké egyesíteni.  '
-      courseB_unplugged_MRF_2018:
-        title: A robot barátaim
-        desc: Tanulj programozni úgy, hogy kódot írsz barátaid számára!
-      PlantASeed_2018:
-        title: 'Valós algoritmusok: Ültess el egy magot!'
-        desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét
-          nézzük meg egy mag elvetésének példáján keresztül. A lecke emellett a számítástechnika
-          nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető
-          szerepet.
-      UnplugHappyMaps_2018:
-        title: Vidám térképek
-        desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
-          hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
-      GoingPlacesSafely_2018:
-        title: Biztonságos utazás
-        desc: Az interneten egy hatalmas, de néha veszélyes hely. A tanárok bemutatják,
-          hogyan maradhat biztonságos az interneten való jelenlét.
-      courseA_unplugged_loops_2018:
-        title: Ciklus leválasztva
-        desc: Ebben a leckében a ciklusokról tanulunk!
-      BigEvent_2018:
-        title: A nagy esemény
-        desc: A diákok megismerkednek az "események" fogalmával, melyek olyan programozási
-          cselekvések, amiket a számítógép folyamatosan figyel.  A tanár gombokat
-          rajzol egy papírra és a diákok attól függően kell, hogy reagáljanak, hogy
-          a tanár melyik gombot "nyomja meg".
-      GraphPaperProgramming_2018:
-        title: Grafikus programozás
-        desc: A diákok egy algoritmust (utasítások sorozata) írnak osztálytársaiknak
-          egy sor előre definiált parancs segítségével, hogy reprodukáljanak egy rajzot.
-      courseD_unplugged_digitalCitizenship_2018:
-        title: Offline tevékenység
-        desc: Ma arról fogunk tanulni, hogy mit jelent Digitális Állampolgárnak lenni.
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Offline tevékenység
-        desc: Ma arról fogunk tanulni, hogy mit kell tenned, ha valaki rossz az interneten.
-      Conditionals_2018:
-        title: Feltételek
+        title: Dalszerzés paraméterekkel
+      courseF_unplugged_tangrams:
+        desc: Ez a lecke megmutat valami fontosat algoritmusokról. Ha egy algoritmus
+          egyszerű marad nagyon sokmindenre használható.  Ha azt akarod, hogy a végeredmény
+          mindig ugyanaz legyen, az algoritmusnak is részletesebbnek kell lennie.
+        title: Tangram algoritmusok
+      deeper learning description:
+        desc: 'fordítás hiányzik: en-US.data.unplugged.desc'
+      timeforcs_demo_conditionals:
         desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot
           játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros
           lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
-      DigitalFootprint_2018:
-        title: A digitális lábnyomod
-        desc: A tanárok bemutatják, hogy ha a diákok információt helyeznek el magukról
-          online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.
-      BinaryImages_2018:
-        title: Bináris képek
-        desc: Sokan azt hiszik, a bináris rendszer szigorúan nullákkal és egyesekkel
-          operál, ám korábbi tanfolyamainkon megtanultuk,  a bináris opciók sokféle
-          információt tudnak képviselni.  Ez a lecke ezt a koncepciót viszi előrébb
-          egy lépéssel azt mutatva, hogy egy számítógép hogy képes tárolni összetett
-          információt (például a képeket és színeket) is binárisan.
-      PaperPlanes_2018:
-        title: 'Hétköznapi algoritmusok: Papírrepülők'
-        desc: Ebben a leckében az algoritmusok mindennapi életünkben való használatáról
-          szól, konkrétan papír repülőgépek segítségével. Ez a lecke nagyobb képet
-          ad a számítógép-tudományról és arra összpontosít, hogyan játszanak alapvető
-          szerepet a számítástechnikában az algoritmusok.
-      GettingLoopy_2018:
-        title: Ciklikusság
-        desc: Ez a lecke bevezet a ciklusok (ismétlődő utasítások) programozásának
-          rejtelmeibe a tánc segítségével. A diákok megtanulnak egy egyszerű koreográfiát,
-          majd azt újra megismétlik.
-      BinaryBracelets_2018:
-        title: Bináris karkötők
-        desc: Diákok karkötőket készítenek nevük első betűjének bináris ábrázolására.  A
-          diákok így megtanulják az adatok több módon is megjeleníthetők és tárolhatók.
-      MoveItMoveIt_2018:
-        title: Gyerünk, gyerünk!
-      courseB_unplugged_CnC_2018:
-        title: Remek dolog tisztességesen alkotni és játszani
-        desc: Ezt a leckét a Copyright and Creativity (Szerzői jog és kreativitás)
-          csapata adta kölcsön a Computer Science Fundamentals (Számítástechnikai
-          alapismeretek) számára, azzal a céllal, hogy a lecke segítségével a diákok
-          megértsék a megosztás és az inspirálás kreatív folyamatát. További cél a
-          diákok bátorítása a kreatív kifejezésmód használatára, és hogy megértsék
-          a kreatív munkához tisztességesen kell viszonyulni.
-      courseE_unplugged_CnC_2018:
-        title: Digitális megosztás
-        desc: Ezt a leckét a Copyright and Creativity (Szerzői jog és kreativitás)
-          csapata adta kölcsön az Computer Science Fundamentals (Számítástechnikai
-          alapismeretek) számára, azzal a célla, hogy a lecke segítségével a diákok
-          megértsék, miért fontos tiszteletben tartani a tulajdonjogot és a szerzői
-          jogokat, és hogy milyen feladatok és előnyök járnak ezekkel együtt, különösen
-          digitális környezetben. A diákokat arra kell bátorítani, hogy tartsák tiszteletben
-          a művészek jogait, ami fontos része annak, hogy etikus digitális polgárként
-          tudjanak viselkedni.
-      RelayProgramming_2018:
-        title: Váltó programozás
-        desc: Ez a tevékenység egy rövid leckével kezdődik a hibakeresésről és a kitartásról,
-          majd gyorsan átalakul a verseny az idővel játékká, a diákok csapatokra osztódnak
-          és együtt dolgoznak, hogy programot írjanak egy-egy utasításra.
-      courseB_unplugged_MRF_2019:
-        title: A robot barátaim
-        desc: Tanulj programozni úgy, hogy kódot írsz barátaid számára!
-      BuildingAFoundation_2019:
-        title: 'hiányzó fordítás: en-US.data.unplugged.BuildingAFoundation_2018.title'
-        desc: 'hiányzó fordítás: en-US.data.unplugged.BuildingAFoundation_2018.desc'
-      courseB_unplugged_loopyMRF_2019:
-        title: Ciklusos robot barátim
-      Conditionals_2019:
         title: Feltételek
-        desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot
-          játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros
-          lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
-      courseF_unplugged_powerOfWords_2019:
-        title: 'hiányzó fordítás: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
-        desc: 'hiányzó fordítás: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
-      EnvelopeVariables_2019:
-        title: 'hiányzó fordítás: en-US.data.unplugged.EnvelopeVariables_2018.title'
-        desc: 'hiányzó fordítás: en-US.data.unplugged.EnvelopeVariables_2018.desc'
-      ForLoopFun_2019:
-        title: 'hiányzó fordítás: en-US.data.unplugged.ForLoopFun_2018.title'
-        desc: 'hiányzó fordítás: en-US.data.unplugged.ForLoopFun_2018.desc'
-      GraphPaperProgramming_2019:
-        title: Grafikus programozás
-        desc: A diákok egy algoritmust (utasítások sorozata) írnak osztálytársaiknak
-          egy sor előre definiált parancs segítségével, hogy reprodukáljanak egy rajzot.
-      RelayProgramming_2018_2019:
-        title: Váltó programozás
-        desc: Ez a tevékenység egy rövid leckével kezdődik a hibakeresésről és a kitartásról,
-          majd gyorsan átalakul a verseny az idővel játékká, a diákok csapatokra osztódnak
-          és együtt dolgoznak, hogy programot írjanak egy-egy utasításra.
-      courseD_unplugged_digitalCitizenship_2019:
-        title: Offline tevékenység
-        desc: Ma arról fogunk tanulni, hogy mit jelent Digitális Állampolgárnak lenni.
-      BinaryImages_2019:
-        title: Bináris képek
-        desc: Sokan azt hiszik, a bináris rendszer szigorúan nullákkal és egyesekkel
-          operál, ám korábbi tanfolyamainkon megtanultuk,  a bináris opciók sokféle
-          információt tudnak képviselni.  Ez a lecke ezt a koncepciót viszi előrébb
-          egy lépéssel azt mutatva, hogy egy számítógép hogy képes tárolni összetett
-          információt (például a képeket és színeket) is binárisan.
-      courseE_unplugged_privateInformation_2019:
-        title: Magán és személyes információk
-        desc: A Common Sense Education által kifejlesztett lecke arról szól, hogy
-          mi a különbség az interneten biztonságosan megosztható és a nem biztonságos
-          információ között.
-      SongwritingParameters_2019:
-        title: 'hiányzó fordítás: en-US.data.unplugged.SongwritingParameters_2018.title'
-        desc: 'hiányzó fordítás: en-US.data.unplugged.SongwritingParameters_2018.desc'
-      courseE_unplugged_CnC_2019:
-        title: Digitális megosztás
-        desc: Ezt a leckét a Copyright and Creativity (Szerzői jog és kreativitás)
-          csapata adta kölcsön az Computer Science Fundamentals (Számítástechnikai
-          alapismeretek) számára, azzal a célla, hogy a lecke segítségével a diákok
-          megértsék, miért fontos tiszteletben tartani a tulajdonjogot és a szerzői
-          jogokat, és hogy milyen feladatok és előnyök járnak ezekkel együtt, különösen
-          digitális környezetben. A diákokat arra kell bátorítani, hogy tartsák tiszteletben
-          a művészek jogait, ami fontos része annak, hogy etikus digitális polgárként
-          tudjanak viselkedni.
-      Internet_2019:
-        title: 'hiányzó fordítás: en-US.data.unplugged.Internet_2018.title'
-        desc: 'hiányzó fordítás: en-US.data.unplugged.Internet_2018.desc'
-      Crowdsourcing_2019:
-        title: 'hiányzó fordítás: en-US.data.unplugged.Crowdsourcing_2018.title'
-        desc: 'hiányzó fordítás: en-US.data.unplugged.Crowdsourcing_2018.desc'
-      GettingLoopy_2019:
-        title: Ciklikusság
-        desc: Ez a lecke bevezet a ciklusok (ismétlődő utasítások) programozásának
-          rejtelmeibe a tánc segítségével. A diákok megtanulnak egy egyszerű koreográfiát,
-          majd azt újra megismétlik.
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Offline tevékenység
-        desc: Ma arról fogunk tanulni, hogy mit kell tenned, ha valaki rossz az interneten.
-      BigEvent_2019:
-        title: A nagy esemény
-        desc: A diákok megismerkednek az "események" fogalmával, melyek olyan programozási
-          cselekvések, amiket a számítógép folyamatosan figyel.  A tanár gombokat
-          rajzol egy papírra és a diákok attól függően kell, hogy reagáljanak, hogy
-          a tanár melyik gombot "nyomja meg".
-      BinaryBracelets_2019:
-        title: Bináris karkötők
-        desc: Diákok karkötőket készítenek nevük első betűjének bináris ábrázolására.  A
-          diákok így megtanulják az adatok több módon is megjeleníthetők és tárolhatók.
-      PaperPlanes_2019:
-        title: 'Hétköznapi algoritmusok: Papírrepülők'
-        desc: Ebben a leckében az algoritmusok mindennapi életünkben való használatáról
-          szól, konkrétan papír repülőgépek segítségével. Ez a lecke nagyobb képet
-          ad a számítógép-tudományról és arra összpontosít, hogyan játszanak alapvető
-          szerepet a számítástechnikában az algoritmusok.
-      PlantASeed_2019:
-        title: 'Valós algoritmusok: Ültess el egy magot!'
-        desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét
-          nézzük meg egy mag elvetésének példáján keresztül. A lecke emellett a számítástechnika
-          nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető
-          szerepet.
-      UnplugHappyMaps_2019:
-        title: Vidám térképek
-        desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
-          hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
-      GoingPlacesSafely_2019:
-        title: Biztonságos utazás
-        desc: Az interneten egy hatalmas, de néha veszélyes hely. A tanárok bemutatják,
-          hogyan maradhat biztonságos az interneten való jelenlét.
-      courseA_unplugged_loops_2019:
-        title: Ciklus leválasztva
-        desc: Ebben a leckében a ciklusokról tanulunk!
-      MoveItMoveIt_2019:
-        title: Gyerünk, gyerünk!
-      DigitalFootprint_2019:
-        title: A digitális lábnyomod
-        desc: A tanárok bemutatják, hogy ha a diákok információt helyeznek el magukról
-          online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.
-      courseB_unplugged_CnC_2019:
-        title: Remek dolog tisztességesen alkotni és játszani
-        desc: Ezt a leckét a Copyright and Creativity (Szerzői jog és kreativitás)
-          csapata adta kölcsön a Computer Science Fundamentals (Számítástechnikai
-          alapismeretek) számára, azzal a céllal, hogy a lecke segítségével a diákok
-          megértsék a megosztás és az inspirálás kreatív folyamatát. További cél a
-          diákok bátorítása a kreatív kifejezésmód használatára, és hogy megértsék
-          a kreatív munkához tisztességesen kell viszonyulni.
-      GraphingData_2019:
-        title: Az adatok leképezése
-        desc: Ebben a leckében a hallgatók Play Lab projektből vagy a valóságból gyűjtenek
-          adatokat, és jóslatok készítésére használják azokat.
-      courseE_unplugged_accessAbility_2019:
-        title: Hozzáférési képesség
-        desc: Ismerje meg az akadálymentességet és az empátia értékét ötletbörze és
-          hozzáférhető megoldások megtervezése révén hipotetikus alkalmazásokhoz.
-      courseE_simon_says_2019:
-        title: Simon mondja
-        desc: "Játssz egy játékot, és gondold át, milyen parancsokra van szükség a
-          megfelelő eredmény eléréséhez.\r\n\r\n![test image](https://code.org/images/logo.png)"
-      courseB_unplugged_passwords_2019:
-        title: Erős jelszavak
-        desc: Fedezd fel, miért használják az emberek a jelszavakat, ismerd meg a
-          jelszavak használatának előnyeit, és fedezd fel az erős, biztonságos jelszavak
-          létrehozásának és megőrzésének stratégiáit.
       timeforcs_demo_crowdsourcing:
-        title: Csoportos megoldás
         desc: '_Josh megjegyzés: az első leckével ellentétben ezt is úgy formáztam,
           mint egy tipikus, kihúzott leckét.'
-      timeforcs_demo_conditionals:
-        title: Feltételek
-        desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot
-          játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros
-          lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
+        title: Csoportos megoldás

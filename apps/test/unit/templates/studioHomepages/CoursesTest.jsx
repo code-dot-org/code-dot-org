@@ -8,7 +8,6 @@ import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
 const TEST_PROPS = {
   isEnglish: true,
-  isTeacher: true,
   isSignedOut: true,
   studentsCount: '0',
   modernElementaryCoursesAvailable: true,
@@ -19,84 +18,59 @@ describe('Courses', () => {
     it('shows a short banner when signed in', () => {
       const wrapper = shallow(<Courses {...TEST_PROPS} isSignedOut={false} />);
       const header = wrapper.find(HeaderBanner);
-      assert.isTrue(header.prop('short'));
       assert.isUndefined(header.prop('description'));
     });
 
     it('shows a long banner when signed out', () => {
       const wrapper = shallow(<Courses {...TEST_PROPS} isSignedOut={true} />);
       const header = wrapper.find(HeaderBanner);
-      assert.isFalse(header.prop('short'));
       assert.isString(header.prop('description'));
     });
   });
 
   describe('course ordering', () => {
-    describe('English', () => {
-      const isEnglish = true;
-
-      it('as student', () => {
-        const wrapper = mountCourses({isEnglish, isTeacher: false});
-        assertComponentsInOrder(wrapper, [
-          'SpecialAnnouncement',
-          'CourseBlocksWrapper',
-          'CourseBlocksHoc',
-          'LocalClassActionBlock',
-        ]);
-      });
-
-      it('as teacher', () => {
-        const wrapper = mountCourses({isEnglish, isTeacher: true});
-        assertComponentsInOrder(wrapper, [
-          'CoursesTeacherEnglish',
-          'CourseBlocksWrapper',
-          'CourseBlocksHoc',
-          'CourseBlocksWrapper',
-          'AdministratorResourcesActionBlock',
-        ]);
-      });
+    it('English', () => {
+      const wrapper = mountCourses({isEnglish: true});
+      assertComponentsInOrder(wrapper, [
+        'SpecialAnnouncement',
+        'CourseBlocksWrapper',
+        'CourseBlocksHoc',
+        'LocalClassActionBlock',
+      ]);
     });
 
     describe('non-English', () => {
       const isEnglish = false;
 
-      // Student and teacher view should be the same for international
-      // users.  Run all tests for both cases to verify that this is true.
-      [false, true].forEach(isTeacher => {
-        describe(isTeacher ? 'as teacher' : 'as student', () => {
-          it('modern CSF', () => {
-            const wrapper = mountCourses({
-              isEnglish,
-              isTeacher,
-              modernElementaryCoursesAvailable: true,
-            });
-            assertComponentsInOrder(wrapper, [
-              'ModernCsfCourses',
-              'CourseBlocksHoc',
-              'SpecialAnnouncement',
-              'CoursesAToF',
-              'LegacyCSFNotification',
-              'CourseBlocksWrapper',
-              'CourseBlocksWrapper',
-            ]);
-          });
-
-          it('legacy CSF', () => {
-            const wrapper = mountCourses({
-              isEnglish,
-              isTeacher,
-              modernElementaryCoursesAvailable: false,
-            });
-            assertComponentsInOrder(wrapper, [
-              'AcceleratedAndUnplugged',
-              'CourseBlocksHoc',
-              'SpecialAnnouncement',
-              'Courses1To4',
-              'CourseBlocksWrapper',
-              'CourseBlocksWrapper',
-            ]);
-          });
+      it('modern CSF', () => {
+        const wrapper = mountCourses({
+          isEnglish,
+          modernElementaryCoursesAvailable: true,
         });
+        assertComponentsInOrder(wrapper, [
+          'ModernCsfCourses',
+          'CourseBlocksHoc',
+          'SpecialAnnouncement',
+          'CoursesAToF',
+          'LegacyCSFNotification',
+          'CourseBlocksWrapper',
+          'CourseBlocksWrapper',
+        ]);
+      });
+
+      it('legacy CSF', () => {
+        const wrapper = mountCourses({
+          isEnglish,
+          modernElementaryCoursesAvailable: false,
+        });
+        assertComponentsInOrder(wrapper, [
+          'AcceleratedAndUnplugged',
+          'CourseBlocksHoc',
+          'SpecialAnnouncement',
+          'Courses1To4',
+          'CourseBlocksWrapper',
+          'CourseBlocksWrapper',
+        ]);
       });
     });
   });

@@ -703,6 +703,7 @@ hr:
         csf_express: 'Osnove RZ (Pred-Brzi ili Brzi)'
         csd: 'RZ otkrića'
         csp: 'Principi RZ'
+        other: 'Ostalo'
         not_applicable: "Nije primjenjivo"
       email_opt_in:
         opt_in_yes: 'Da'
@@ -737,3 +738,4 @@ hr:
       forbidden: "Korisnik ne može ažurirati stanje zaključavanja učenika"
   pixelation:
     binary: "Binarno"
+

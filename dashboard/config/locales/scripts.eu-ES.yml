@@ -3,148 +3,72 @@ eu:
   data:
     script:
       name:
-        course1:
-          title: 1.  Kurtsoa
-          description: Lehenengo kurtsoa erabiltzaile berriei zuzenduta dago. Ikasleek
-            programazioko oinarrizko kontzeptuak ulertuko dituzte, beste batrzuekin
-            lan egiten ikasten duten bitartean.  Problemak ebazteklo gaitasunak eta
-            lan gogorren aurrean dirautzeko gaitasuna garatzen laguntzen du. Kurtso
-            bukaerarako, ikasleak beraien joku edo historio sortu ahal izango dute,
-            eta elkarbanatu.
-          description_short: Hasi 1. kurtsoarekin irakurle goiztiarrekin.
-          description_audience: 4-6 urte
-          student_description: Lehenengo kurtsoa erabiltzaile berriei zuzenduta dago.
-            Ikasleek programazioko oinarrizko kontzeptuak ulertuko dituzte, beste
-            batrzuekin lan egiten ikasten duten bitartean.  Problemak ebazteklo gaitasunak
-            eta lan gogorren aurrean dirautzeko gaitasuna garatzen laguntzen du. Kurtso
-            bukaerarako, ikasleak beraien joku edo historio sortu ahal izango dute,
-            eta elkarbanatu.
-        course2:
-          title: 2.  Kurtsoa
-          description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen esperientziarik
-            ez duten ikasleekin. Kurtso honetan ikasleek programak sortuko dituzte
-            problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu ditzaketen
-            istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen da.
-          description_short: Hasi 2 kurtosarekin irakurtzen dakiten ikasleekin.
-          description_audience: 6+ urte (Nahitaezko irakurketa)
-          student_description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen
-            esperientziarik ez duten ikasleekin. Kurtso honetan ikasleek programak
-            sortuko dituzte problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu
-            ditzaketen istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen
-            da.
-        course3:
-          title: 3.  Kurtsoa
-          description: Hirugarren maila, bigarren maila egin duten ikasleentzat dago
-            dineinatuta. Ikasleak aurreko mailetan emandako irakasgailetan gehiago
-            sakonduko dute, problema komplexuagoei erantzuna ematen gai izateko. Maila
-            honen amaierarako, ikasleak gai izango dira isotio iteraktiboak eta jokuak
-            sortu, eta edozeinekin partekatzeko. 4-5 urte artekoentzat gomendatua.
-          description_short: 3.  kurtsoa 2. kurtsoaren jarraipena da.
-          description_audience: 8-18 bitarteko adina
-          student_description: Hirugarren maila, bigarren maila egin duten ikasleentzat
-            dago dineinatuta. Ikasleak aurreko mailetan emandako irakasgailetan gehiago
-            sakonduko dute, problema komplexuagoei erantzuna ematen gai izateko. Maila
-            honen amaierarako, ikasleak gai izango dira isotio iteraktiboak eta jokuak
-            sortu, eta edozeinekin partekatzeko. 4-5 urte artekoentzat gomendatua.
-        playlab:
-          title: Jolas Laborategia
-          description: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
-          description_short: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
-          student_description: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
-        artist:
-          title: Artista
-          description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
-          description_short: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
-          student_description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
-        hourofcode:
-          title: Labirinto klasikoa
-          description: Informatikaren oinarriak ikasi itzazu Angry Birds, Plants vs
-            Zombies eta Ice Age-ko Scrat-ekin!
-          description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
-          student_description: Informatikaren oinarriak ikasi itzazu Angry Birds,
-            Plants vs Zombies eta Ice Age-ko Scrat-ekin!
-        frozen:
-          title: Anna eta Elsarekin programatu
-          description: Erabil dezagun kodea Ana eta Elsa elkar daitezen izotzaren
-            edertasuna eta magia aurkitzen duten bitartean. Elur malutak eta patroiak
-            sortuko dituzu izotz gainean patinatzen duzun bitartean eta modu honetan
-            zure lagunekin partekatu dezakezun neguko paisaia sortuko duzu!
-          description_short: Erabil dezagun kodea Ana eta Elsarekin bat egin dezagun
-            izotz mundu magiko eta ederra esploratzeko.
-          student_description: Erabil dezagun kodea Ana eta Elsa elkar daitezen izotzaren
-            edertasuna eta magia aurkitzen duten bitartean. Elur malutak eta patroiak
-            sortuko dituzu izotz gainean patinatzen duzun bitartean eta modu honetan
-            zure lagunekin partekatu dezakezun neguko paisaia sortuko duzu!
-        course4:
-          title: 4.  Kurtsoa
-          description_short: 4.  kurtsoa egin ahal izateko, ikasleek 2, eta 3. kurtsoak
-            eginda izan behar dituzte.
+        20-hour:
+          description: |-
+            20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.
+            Gehiago ikasteko ikusi maila bereko gure ikastaroak!
           description_audience: 10-18 bitarteko adina
+          description_short: 20 orduko ikastaro honek 2-4 kurtsotako informatikako
+            eta programazioko oinarrizko kontzeptuak biltzen ditu.
+          student_description: |-
+            20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.
+            Gehiago ikasteko ikusi maila bereko gure ikastaroak!
+          title: CS kurtsora sarrera azkarra
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: Arazketa
+            introduction:
+              display_name: Sarrera
+            lessonGroup-3:
+              display_name: Aldagaiak
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Kode Ordua
+        CSDU5-Draft:
+          description_short: Datu
+        CSF_Secret_Sample:
+          description_audience: 8-18 bitarteko adina
+        CSF_Secret_Sample_Story:
+          description_audience: 8-18 bitarteko adina+
         Course4pre:
-          title: 4 kurtsoko aurrebaldintza
           description: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako
             laburpena
           description_short: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako
             laburpena
           student_description: Bigarren eta hirugarren kurtsoak landu ez dituzten
             ikasleentzako laburpena
-        algebra:
-          title: Informatika Aljebran
-        infinity:
-          title: Disneyren Infinity Play Lab
-          description: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak
-            edo jokoak sortzeko
-          description_short: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin
-            istorioak edo jokoak sortzeko
-          student_description: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin
-            istorioak edo jokoak sortzeko
-        netsim:
-          title: Internet simulagailua
-        20-hour:
-          title: CS kurtsora sarrera azkarra
-          description: |-
-            20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.
-            Gehiago ikasteko ikusi maila bereko gure ikastaroak!
-          description_short: 20 orduko ikastaro honek 2-4 kurtsotako informatikako
-            eta programazioko oinarrizko kontzeptuak biltzen ditu.
-          description_audience: 10-18 bitarteko adina
-          student_description: |-
-            20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.
-            Gehiago ikasteko ikusi maila bereko gure ikastaroak!
-        edit-code:
-          title: Editatu kodea
-          description: Editatu kodea
-          description_short: Editatu kodea
-          student_description: Editatu kodea
-        events:
-          title: Gertaerak
-          description: Gertaerak
-          description_short: Gertaerak
-          student_description: Gertaerak
-        flappy:
-          title: Flappy Code
-          description: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan?
-            Saiatu Flappy Code tutoriala!
-          description_short: Idatz ezazu zure Flappy joko propioa
-          student_description: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan?
-            Saiatu Flappy Code tutoriala!
-        jigsaw:
-          title: Buruhaustea
-          description: Proba ezazu gure buruhauste tutoriala!!!
-          description_short: Proba ezazu gure buruhauste tutoriala!!!
-          student_description: Proba ezazu gure buruhauste tutoriala!!!
-        step:
-          title: Pauso
-          description: Pausokako tutoriala
-          description_short: Pausokako tutoriala
-          student_description: Pausokako tutoriala
+          title: 4 kurtsoko aurrebaldintza
+        ECSPD2:
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+        ECSPD2-NexTech:
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+        ECSPD2-iZone:
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
         Hour of Code:
-          title: Kodearen ordua 2013
           description: Murgildu konputagailu zientziaren oinarrietan Angry Birds eta
             Plants vs. Zombiesen pertsonaien laguntzaz!
           description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
           student_description: Murgildu konputagailu zientziaren oinarrietan Angry
             Birds eta Plants vs. Zombiesen pertsonaien laguntzaz!
+          title: Kodearen ordua 2013
+        MikeTest:
+          description_audience: 8-98 bitarteko adina
+        Special Fun:
+          description_audience: 10-18 bitarteko adina
+        SpecialSeries:
+          description_audience: 10-18 bitarteko adina
+        afterschool1:
+          description_audience: 7-13 adinak
+        algebra:
+          title: Informatika Aljebran
         algebraPD2a:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
@@ -153,238 +77,424 @@ eu:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
           student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-        ECSPD2:
-          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-        sciencePD2b:
-          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-        sciencePD2b-iZone:
-          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-        ECSPD2-iZone:
-          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-        ECSPD2-NexTech:
-          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
-          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
-        asUnplugged:
-          description_audience: 6-13 adinak
-        afterschool1:
-          description_audience: 7-13 adinak
-        cspunit4draft:
-          description_short: Datu
-        Special Fun:
-          description_audience: 10-18 bitarteko adina
-        SpecialSeries:
-          description_audience: 10-18 bitarteko adina
-        iceage:
-          title: Ice Age joku laborategia
-          description: Ice Age joku laborategiarekin sortu istorio bat edo egin joku
-            bat!
-          description_short: Ice Age joku laborategiarekin sortu istorio bat edo egin
-            joku bat!
-          student_description: Ice Age joku laborategiarekin sortu istorio bat edo
-            egin joku bat!
-        gumball:
-          title: Gumball joko laborategia
-          description: Gumball joku laborategiarekin sortu istorio bat edo egin joku
-            bat!
-          description_short: Gumball joku laborategiarekin sortu istorio bat edo egin
-            joku bat!
-          student_description: Gumball joku laborategiarekin sortu istorio bat edo
-            egin joku bat!
-        starwars:
-          description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua
-            urrun, urruneko galaxia batetan.
-          description_short: Ikasi droideak programatzen, eta sortu zure Star Wars
-            jokua urrun, urruneko galaxia batetan.
-          student_description: Ikasi droideak programatzen, eta sortu zure Star Wars
-            jokua urrun, urruneko galaxia batetan.
-        starwarsblocks:
-          description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua
-            urrun, urruneko galaxia batetan.
-          description_short: Ikasi droideak programatzen, eta sortu zure Star Wars
-            jokua urrun, urruneko galaxia batetan.
-          student_description: Ikasi droideak programatzen, eta sortu zure Star Wars
-            jokua urrun, urruneko galaxia batetan.
-        mc:
-          title: Minecraft Kode Ordua
-          description: Erabili kode blokeak Steve edo Alex eramateko abentura batera
-            Minecraft mundu honetan.
-          description_short: Esploratu Minecraft mundu bat kodearen bitartez.
-          student_description: Erabili kode blokeak Steve edo Alex eramateko abentura
-            batera Minecraft mundu honetan.
-        CSF_Secret_Sample:
-          description_audience: 8-18 bitarteko adina
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: Bista orokorra
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: Bista orokorra
-        CSDU5-Draft:
-          description_short: Datu
-        CSF_Secret_Sample_Story:
-          description_audience: 8-18 bitarteko adina+
-        MikeTest:
-          description_audience: 8-98 bitarteko adina
-        artistExemplar:
-          description_audience: 8-18 bitarteko adina
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: Bista orokorra
-        gradeKinder:
-          description_audience: 5-18 urte bitarteko adinak
-        grade4:
-          description_audience: 9-99 adin bitartea
-        grade1:
-          description_audience: 5-18 urte bitarteko adinak
-        grade5:
-          description_audience: 10 eta 110 urte bitartean
-        grade3:
-          description_audience: 5-18 urte bitarteko adinak
         alltheplcthings:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        grade2:
-          description_audience: 5-18 urte bitarteko adinak
-        csp-online-test:
+        andrea-test:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: Bista orokorra
+        artist:
+          description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
+          description_short: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
+          student_description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
+          title: Artista
+        artistExemplar:
+          description_audience: 8-18 bitarteko adina
+        asUnplugged:
+          description_audience: 6-13 adinak
         basketball:
           name: saskibaloia
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: Bista orokorra
         classic-hoc-impact-study:
           description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
-        hoc-impact-study:
-          description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
-        csp3-support:
+        course1:
+          description: Lehenengo kurtsoa erabiltzaile berriei zuzenduta dago. Ikasleek
+            programazioko oinarrizko kontzeptuak ulertuko dituzte, beste batrzuekin
+            lan egiten ikasten duten bitartean.  Problemak ebazteklo gaitasunak eta
+            lan gogorren aurrean dirautzeko gaitasuna garatzen laguntzen du. Kurtso
+            bukaerarako, ikasleak beraien joku edo historio sortu ahal izango dute,
+            eta elkarbanatu.
+          description_audience: 4-6 urte
+          description_short: Hasi 1. kurtsoarekin irakurle goiztiarrekin.
+          student_description: Lehenengo kurtsoa erabiltzaile berriei zuzenduta dago.
+            Ikasleek programazioko oinarrizko kontzeptuak ulertuko dituzte, beste
+            batrzuekin lan egiten ikasten duten bitartean.  Problemak ebazteklo gaitasunak
+            eta lan gogorren aurrean dirautzeko gaitasuna garatzen laguntzen du. Kurtso
+            bukaerarako, ikasleak beraien joku edo historio sortu ahal izango dute,
+            eta elkarbanatu.
+          title: 1.  Kurtsoa
+        course2:
+          description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen esperientziarik
+            ez duten ikasleekin. Kurtso honetan ikasleek programak sortuko dituzte
+            problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu ditzaketen
+            istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen da.
+          description_audience: 6+ urte (Nahitaezko irakurketa)
+          description_short: Hasi 2 kurtosarekin irakurtzen dakiten ikasleekin.
+          student_description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen
+            esperientziarik ez duten ikasleekin. Kurtso honetan ikasleek programak
+            sortuko dituzte problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu
+            ditzaketen istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen
+            da.
+          title: 2.  Kurtsoa
+        course3:
+          description: Hirugarren maila, bigarren maila egin duten ikasleentzat dago
+            dineinatuta. Ikasleak aurreko mailetan emandako irakasgailetan gehiago
+            sakonduko dute, problema komplexuagoei erantzuna ematen gai izateko. Maila
+            honen amaierarako, ikasleak gai izango dira isotio iteraktiboak eta jokuak
+            sortu, eta edozeinekin partekatzeko. 4-5 urte artekoentzat gomendatua.
+          description_audience: 8-18 bitarteko adina
+          description_short: 3.  kurtsoa 2. kurtsoaren jarraipena da.
+          student_description: Hirugarren maila, bigarren maila egin duten ikasleentzat
+            dago dineinatuta. Ikasleak aurreko mailetan emandako irakasgailetan gehiago
+            sakonduko dute, problema komplexuagoei erantzuna ematen gai izateko. Maila
+            honen amaierarako, ikasleak gai izango dira isotio iteraktiboak eta jokuak
+            sortu, eta edozeinekin partekatzeko. 4-5 urte artekoentzat gomendatua.
+          title: 3.  Kurtsoa
+        course4:
+          description_audience: 10-18 bitarteko adina
+          description_short: 4.  kurtsoa egin ahal izateko, ikasleek 2, eta 3. kurtsoak
+            eginda izan behar dituzte.
+          title: 4.  Kurtsoa
+        coursea-2019:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp4-support:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        coursea-2020:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp5-support:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        coursea-2021:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        cspnovice:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        coursea-2022:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp1-dlp:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        coursea-2023:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp2-dlp:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        courseb-2019:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp3-dlp:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        courseb-2020:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp4-dlp:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        courseb-2021:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp5-dlp:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        courseb-2022:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csd1-dlp:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        courseb-2023:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csd6-dlp:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        coursec-2019:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csd5-dlp:
+            csf_binary:
+              display_name: Bitarra
+            csf_data:
+              display_name: Datu
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        coursec-2020:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csd4-dlp:
+            csf_binary:
+              display_name: Bitarra
+            csf_data:
+              display_name: Datu
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        coursec-2021:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csd3-dlp:
+            csf_binary:
+              display_name: Bitarra
+            csf_data:
+              display_name: Datu
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        coursec-2022:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csd2-dlp:
+            csf_data:
+              display_name: Datu
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        coursec-2023:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csd1-dlp-18:
+            csf_data:
+              display_name: Datu
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        coursed-2019:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csd2-dlp-18:
+            csf_binary:
+              display_name: Bitarra
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        coursed-2020:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csd3-dlp-18:
+            csf_binary:
+              display_name: Bitarra
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        coursed-2021:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csd4-dlp-18:
+            csf_binary:
+              display_name: Bitarra
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+            lessonGroup-6:
+              display_name: Hiritartasun digitala
+        coursed-2022:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csd5-dlp-18:
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+            lessonGroup-6:
+              display_name: Hiritartasun digitala
+        coursed-2023:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csd6-dlp-18:
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+            lessonGroup-6:
+              display_name: Hiritartasun digitala
+        coursee-2019:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp1-dlp-18:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_functions:
+              display_name: Funtzioak
+            csf_nested_loops:
+              display_name: Kabiatutako begiztak
+            csf_sprites:
+              display_name: Pertsonaiak
+        coursee-2020:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp2-dlp-18:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_functions:
+              display_name: Funtzioak
+            csf_nested_loops:
+              display_name: Kabiatutako begiztak
+            csf_sprites:
+              display_name: Pertsonaiak
+        coursee-2021:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp3-dlp-18:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_functions:
+              display_name: Funtzioak
+            csf_nested_loops:
+              display_name: Baldintzak
+            csf_sprites:
+              display_name: Pertsonaiak
+            ramp_up:
+              display_name: Kabiatutako begiztak
+        coursee-2022:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp4-dlp-18:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_functions:
+              display_name: Funtzioak
+            csf_nested_loops:
+              display_name: Baldintzak
+            csf_sprites:
+              display_name: Pertsonaiak
+            ramp_up:
+              display_name: Kabiatutako begiztak
+        coursee-2023:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp5-dlp-18:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_functions:
+              display_name: Funtzioak
+            csf_nested_loops:
+              display_name: Baldintzak
+            csf_sprites:
+              display_name: Pertsonaiak
+            ramp_up:
+              display_name: Kabiatutako begiztak
+        coursef-2019:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp-explore-dlp-18:
+            csf_data:
+              display_name: Datu
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_for_loops:
+              display_name: For begiztak
+            csf_internet:
+              display_name: Internet
+            csf_sprites:
+              display_name: Pertsonaiak
+            csf_variables:
+              display_name: Aldagaiak
+        coursef-2020:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp-create-dlp-18:
+            csf_data:
+              display_name: Datu
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_for_loops:
+              display_name: For begiztak
+            csf_sprites:
+              display_name: Pertsonaiak
+            csf_variables:
+              display_name: Aldagaiak
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_for_loops:
+              display_name: For begiztak
+            csf_variables:
+              display_name: For begiztak
+            lessonGroup-7:
+              display_name: Hiritartasun digitala
+            lessonGroup-8:
+              display_name: Aldagaiak
+            lessonGroup-9:
+              display_name: ezabatu
+            ramp_up:
+              display_name: Pertsonaiak
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Hiritartasun digitala
+            lessonGroup-8:
+              display_name: Aldagaiak
+            ramp_up:
+              display_name: Pertsonaiak
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Hiritartasun digitala
+            lessonGroup-8:
+              display_name: Aldagaiak
+            ramp_up:
+              display_name: Pertsonaiak
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hiritartasun digitala
+            lessonGroup-3:
+              display_name: Pertsonaiak
+            lessonGroup-4:
+              display_name: Aldagaiak
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Datu
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Gaia 1
+            lessonGroup-4:
+              display_name: Gaia 2
+            lessonGroup-5:
+              display_name: Gaia 3
+            lessonGroup-6:
+              display_name: Gaia 4
+            lessonGroup-7:
+              display_name: Gaia 5
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Itzuliak
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Aldagaiak
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For begiztak
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Ausazkoa
+        csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Bista orokorra
@@ -392,7 +502,85 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        csd-apprentice-18:
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csf-2021-pilot:
+          lesson_groups:
+            Sprites:
+              display_name: Pertsonaiak
+            lessonGroup-3:
+              display_name: Aldagaiak
+            ramp_up:
+              display_name: Sarrera
+            variables:
+              display_name: Aldagaiak
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pertsonaiak
+            lessonGroup-3:
+              display_name: Aldagaiak
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp-explore-dlp-18:
           lesson_groups:
             required:
               display_name: Bista orokorra
@@ -400,192 +588,184 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        csp-apprentice-18:
+        csp-online-test:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        fit-test:
+        csp1-dlp:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        cspplayground:
+        csp1-dlp-18:
           lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
-            csp_conditionals:
-              display_name: Baldintzak
-            csp_functions:
-              display_name: Funtzioak
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Aldagaiak
-            csf_data:
-              display_name: Datu
-            csf_for_loops:
-              display_name: For begiztak
-            csf_internet:
-              display_name: Internet
-            csf_sprites:
-              display_name: Pertsonaiak
-            csf_digcit:
-              display_name: Hiritartasun digitala
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Gertaerak
-            csf_loops:
-              display_name: Itzuliak
-            csf_conditionals:
-              display_name: Baldintzak
-            csf_binary:
-              display_name: Bitarra
-            csf_digcit:
-              display_name: Hiritartasun digitala
-        coursee-2019:
-          lesson_groups:
-            csf_sprites:
-              display_name: Pertsonaiak
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_nested_loops:
-              display_name: Kabiatutako begiztak
-            csf_functions:
-              display_name: Funtzioak
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Itzuliak
-            csf_conditionals:
-              display_name: Baldintzak
-            csf_functions:
-              display_name: Funtzioak
-            csf_variables:
-              display_name: Aldagaiak
-            csf_for_loops:
-              display_name: For begiztak
-            csf_sprites:
-              display_name: Pertsonaiak
-        andrea-test:
-          lesson_groups:
-            required:
-              display_name: Bista orokorra
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_binary:
-              display_name: Bitarra
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-            csf_data:
-              display_name: Datu
-        gamelab:
-          title: Jolas laborategia
-        coursea-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
-            csp_conditionals:
-              display_name: Baldintzak
-            csp_functions:
-              display_name: Funtzioak
             required:
               display_name: Bista orokorra
         csp1-pilot:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        time4csdemo:
-          lesson_groups:
-            csf_sprites:
-              display_name: Pertsonaiak
         csp1-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
             csp_conditionals:
               display_name: Baldintzak
             csp_functions:
               display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         csp2-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
             csp_conditionals:
               display_name: Baldintzak
             csp_functions:
               display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
+            required:
+              display_name: Bista orokorra
         csp4-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
             csp_conditionals:
               display_name: Baldintzak
             csp_functions:
               display_name: Funtzioak
-        csp5-pilot-staging:
+            csp_variables:
+              display_name: Aldagaiak
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Zerrendak
             csp_loops:
               display_name: Itzuliak
-        csp6-pilot-staging:
+        csp5-2021:
           lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
-            csp_conditionals:
-              display_name: Baldintzak
-            csp_functions:
-              display_name: Funtzioak
-        csp8-pilot-staging:
+            csp_lists:
+              display_name: Zerrendak
+            csp_loops:
+              display_name: Itzuliak
+        csp5-2022:
           lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
-            csp_conditionals:
-              display_name: Baldintzak
-            csp_functions:
-              display_name: Funtzioak
-        csp9-pilot-staging:
+            csp_lists:
+              display_name: Zerrendak
+            csp_loops:
+              display_name: Itzuliak
+        csp5-2023:
           lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
-            csp_conditionals:
-              display_name: Baldintzak
-            csp_functions:
-              display_name: Funtzioak
-        csp10-pilot-staging:
+            csp_lists:
+              display_name: Datu
+            csp_loops:
+              display_name: Itzuliak
+        csp5-dlp:
           lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
-            csp_conditionals:
-              display_name: Baldintzak
-            csp_functions:
-              display_name: Funtzioak
+            required:
+              display_name: Bista orokorra
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -594,29 +774,77 @@ eu:
               display_name: Itzuliak
             required:
               display_name: Bista orokorra
-        fit2019-novice:
+        csp5-pilot-staging:
           lesson_groups:
-            required:
-              display_name: Bista orokorra
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp3-pilot:
-          lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csl-vn:
-          lesson_groups:
-            csf_loops:
+            csp_lists:
+              display_name: Zerrendak
+            csp_loops:
               display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        dlp19-csd-mod-fit:
+        csp5-support:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        dlp19-csp-mod-fit:
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmoak
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Zerrendak
+            lessonGroup-3:
+              display_name: Itzuliak
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+            csp_variables:
+              display_name: Aldagaiak
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        cspunit4draft:
+          description_short: Datu
+        dlp19-csd-mod-fit:
           lesson_groups:
             required:
               display_name: Bista orokorra
@@ -636,6 +864,10 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
@@ -652,533 +884,383 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        csp2-pilot:
-          lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp6-pilot:
-          lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
-            csp_conditionals:
-              display_name: Baldintzak
-            csp_functions:
-              display_name: Funtzioak
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_conditionals:
-              display_name: Baldintzak
-            csf_nested_loops:
-              display_name: Kabiatutako begiztak
-            csf_functions:
-              display_name: Funtzioak
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Itzuliak
-            csf_conditionals:
-              display_name: Baldintzak
-            csf_events:
-              display_name: Gertaerak
-            csf_sprites:
-              display_name: Pertsonaiak
-            csf_digcit:
-              display_name: Hiritartasun digitala
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Itzuliak
-            csf_conditionals:
-              display_name: Baldintzak
-            csf_events:
-              display_name: Gertaerak
-            csf_sprites:
-              display_name: Pertsonaiak
-            csf_digcit:
-              display_name: Hiritartasun digitala
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: Bista orokorra
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
-            csp_conditionals:
-              display_name: Baldintzak
-            csp_functions:
-              display_name: Funtzioak
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Zerrendak
-            csp_loops:
-              display_name: Itzuliak
-        coursea-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        courseb-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        coursec-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_binary:
-              display_name: Bitarra
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-            csf_data:
-              display_name: Datu
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Gertaerak
-            csf_loops:
-              display_name: Itzuliak
-            csf_conditionals:
-              display_name: Baldintzak
-            csf_binary:
-              display_name: Bitarra
-            csf_digcit:
-              display_name: Hiritartasun digitala
-        coursee-2020:
-          lesson_groups:
-            csf_sprites:
-              display_name: Pertsonaiak
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_nested_loops:
-              display_name: Kabiatutako begiztak
-            csf_functions:
-              display_name: Funtzioak
-        coursef-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_variables:
-              display_name: Aldagaiak
-            csf_data:
-              display_name: Datu
-            csf_for_loops:
-              display_name: For begiztak
-            csf_sprites:
-              display_name: Pertsonaiak
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Itzuliak
-            csf_conditionals:
-              display_name: Baldintzak
-            csf_functions:
-              display_name: Funtzioak
-            csf_variables:
-              display_name: Aldagaiak
-            csf_for_loops:
-              display_name: For begiztak
-            csf_sprites:
-              display_name: Pertsonaiak
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        2021drafting:
-          lesson_groups:
-            introduction:
-              display_name: Sarrera
-            lessonGroup-3:
-              display_name: Aldagaiak
-            debugging:
-              display_name: Arazketa
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
-            csp_conditionals:
-              display_name: Baldintzak
-            csp_functions:
-              display_name: Funtzioak
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Zerrendak
-            csp_loops:
-              display_name: Itzuliak
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Algoritmoak
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_binary:
-              display_name: Bitarra
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-            csf_data:
-              display_name: Datu
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Gertaerak
-            csf_loops:
-              display_name: Itzuliak
-            csf_conditionals:
-              display_name: Baldintzak
-            csf_binary:
-              display_name: Bitarra
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            lessonGroup-6:
-              display_name: Hiritartasun digitala
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Kabiatutako begiztak
-            csf_sprites:
-              display_name: Pertsonaiak
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_nested_loops:
-              display_name: Baldintzak
-            csf_functions:
-              display_name: Funtzioak
-        coursef-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Pertsonaiak
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_variables:
-              display_name: For begiztak
-            csf_for_loops:
-              display_name: For begiztak
-            lessonGroup-8:
-              display_name: Aldagaiak
-            lessonGroup-9:
-              display_name: ezabatu
-            lessonGroup-7:
-              display_name: Hiritartasun digitala
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Itzuliak
-            csf_conditionals:
-              display_name: Baldintzak
-            csf_functions:
-              display_name: Funtzioak
-            csf_variables:
-              display_name: Aldagaiak
-            csf_for_loops:
-              display_name: For begiztak
-            csf_sprites:
-              display_name: Pertsonaiak
-            lessonGroup-9:
-              display_name: Gertaerak
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: Sarrera
-            lessonGroup-3:
-              display_name: Aldagaiak
-            Sprites:
-              display_name: Pertsonaiak
-            variables:
-              display_name: Aldagaiak
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: Sarrera
-            Introduction:
-              display_name: Sarrera
-        csa-videos:
+        dlp21-csd:
           lesson_groups:
             lessonGroup-2:
-              display_name: Gaia 1
-            lessonGroup-4:
-              display_name: Gaia 2
-            lessonGroup-5:
-              display_name: Gaia 3
-            lessonGroup-6:
-              display_name: Gaia 4
-            lessonGroup-7:
-              display_name: Gaia 5
+              description: proba
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
               display_name: 1.  etapa
             lessonGroup-3:
               display_name: 2.  etapa
-        dlp21-csd:
+        edit-code:
+          description: Editatu kodea
+          description_short: Editatu kodea
+          student_description: Editatu kodea
+          title: Editatu kodea
+        events:
+          description: Gertaerak
+          description_short: Gertaerak
+          student_description: Gertaerak
+          title: Gertaerak
+        express-2019:
           lesson_groups:
-            lessonGroup-2:
-              description: proba
-        spelling-bee:
-          title: Letraz-letra
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Kode Ordua
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Pertsonaiak
-            lessonGroup-3:
-              display_name: Aldagaiak
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_for_loops:
+              display_name: For begiztak
+            csf_functions:
+              display_name: Funtzioak
             csf_loops:
               display_name: Itzuliak
-            csf_events:
+            csf_sprites:
+              display_name: Pertsonaiak
+            csf_variables:
+              display_name: Aldagaiak
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_for_loops:
+              display_name: For begiztak
+            csf_functions:
+              display_name: Funtzioak
+            csf_loops:
+              display_name: Itzuliak
+            csf_sprites:
+              display_name: Pertsonaiak
+            csf_variables:
+              display_name: Aldagaiak
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_for_loops:
+              display_name: For begiztak
+            csf_functions:
+              display_name: Funtzioak
+            csf_loops:
+              display_name: Itzuliak
+            csf_sprites:
+              display_name: Pertsonaiak
+            csf_variables:
+              display_name: Aldagaiak
+            lessonGroup-9:
               display_name: Gertaerak
         express-2022:
           lesson_groups:
-            csf_sprites:
-              display_name: Pertsonaiak
-            lessonGroup-9:
-              display_name: Gertaerak
-            csf_loops:
-              display_name: Itzuliak
             csf_conditionals:
               display_name: Baldintzak
-            csf_functions:
-              display_name: Funtzioak
-            csf_variables:
-              display_name: Aldagaiak
             csf_for_loops:
               display_name: For begiztak
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
-            csp_conditionals:
-              display_name: Baldintzak
-            csp_functions:
-              display_name: Funtzioak
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Zerrendak
-            csp_loops:
-              display_name: Itzuliak
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-            csf_data:
-              display_name: Datu
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Hiritartasun digitala
-            csf_events:
-              display_name: Gertaerak
-            csf_loops:
-              display_name: Itzuliak
-            csf_conditionals:
-              display_name: Baldintzak
-        coursee-2022:
-          lesson_groups:
-            csf_sprites:
-              display_name: Pertsonaiak
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            ramp_up:
-              display_name: Kabiatutako begiztak
             csf_functions:
               display_name: Funtzioak
-            csf_nested_loops:
-              display_name: Baldintzak
-        coursef-2022:
-          lesson_groups:
-            ramp_up:
-              display_name: Pertsonaiak
-            lessonGroup-7:
-              display_name: Hiritartasun digitala
-            lessonGroup-8:
-              display_name: Aldagaiak
-        pre-express-2022:
-          lesson_groups:
             csf_loops:
               display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Hiritartasun digitala
-            ramp_up:
+            csf_sprites:
               display_name: Pertsonaiak
-            lessonGroup-8:
+            csf_variables:
               display_name: Aldagaiak
-        soccer:
-          name: futbola
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: Itzuliak
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Aldagaiak
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: For begiztak
-        csa4-2023:
-          lessons:
-            lesson-9:
-              name: Ausazkoa
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Aldagaiak
-            csp_conditionals:
-              display_name: Baldintzak
-            csp_functions:
-              display_name: Funtzioak
-        csp5-2023:
-          lesson_groups:
-            csp_lists:
-              display_name: Datu
-            csp_loops:
-              display_name: Itzuliak
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Zerrendak
-            lessonGroup-3:
-              display_name: Itzuliak
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
+            lessonGroup-9:
               display_name: Gertaerak
         express-2023:
           lesson_groups:
-            csf_sprites:
-              display_name: Pertsonaiak
-            lessonGroup-9:
-              display_name: Gertaerak
-            csf_loops:
-              display_name: Itzuliak
             csf_conditionals:
               display_name: Baldintzak
-            csf_functions:
-              display_name: Funtzioak
-            csf_variables:
-              display_name: Aldagaiak
             csf_for_loops:
               display_name: For begiztak
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_loops:
-              display_name: Itzuliak
-            csf_events:
-              display_name: Gertaerak
-            csf_data:
-              display_name: Datu
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Hiritartasun digitala
-            csf_events:
-              display_name: Gertaerak
-            csf_loops:
-              display_name: Itzuliak
-            csf_conditionals:
-              display_name: Baldintzak
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Hiritartasun digitala
-            csf_sprites:
-              display_name: Pertsonaiak
-            ramp_up:
-              display_name: Kabiatutako begiztak
             csf_functions:
               display_name: Funtzioak
-            csf_nested_loops:
+            csf_loops:
+              display_name: Itzuliak
+            csf_sprites:
+              display_name: Pertsonaiak
+            csf_variables:
+              display_name: Aldagaiak
+            lessonGroup-9:
+              display_name: Gertaerak
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        flappy:
+          description: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan?
+            Saiatu Flappy Code tutoriala!
+          description_short: Idatz ezazu zure Flappy joko propioa
+          student_description: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan?
+            Saiatu Flappy Code tutoriala!
+          title: Flappy Code
+        frozen:
+          description: Erabil dezagun kodea Ana eta Elsa elkar daitezen izotzaren
+            edertasuna eta magia aurkitzen duten bitartean. Elur malutak eta patroiak
+            sortuko dituzu izotz gainean patinatzen duzun bitartean eta modu honetan
+            zure lagunekin partekatu dezakezun neguko paisaia sortuko duzu!
+          description_short: Erabil dezagun kodea Ana eta Elsarekin bat egin dezagun
+            izotz mundu magiko eta ederra esploratzeko.
+          student_description: Erabil dezagun kodea Ana eta Elsa elkar daitezen izotzaren
+            edertasuna eta magia aurkitzen duten bitartean. Elur malutak eta patroiak
+            sortuko dituzu izotz gainean patinatzen duzun bitartean eta modu honetan
+            zure lagunekin partekatu dezakezun neguko paisaia sortuko duzu!
+          title: Anna eta Elsarekin programatu
+        gamelab:
+          title: Jolas laborategia
+        grade1:
+          description_audience: 5-18 urte bitarteko adinak
+        grade2:
+          description_audience: 5-18 urte bitarteko adinak
+        grade3:
+          description_audience: 5-18 urte bitarteko adinak
+        grade4:
+          description_audience: 9-99 adin bitartea
+        grade5:
+          description_audience: 10 eta 110 urte bitartean
+        gradeKinder:
+          description_audience: 5-18 urte bitarteko adinak
+        gumball:
+          description: Gumball joku laborategiarekin sortu istorio bat edo egin joku
+            bat!
+          description_short: Gumball joku laborategiarekin sortu istorio bat edo egin
+            joku bat!
+          student_description: Gumball joku laborategiarekin sortu istorio bat edo
+            egin joku bat!
+          title: Gumball joko laborategia
+        hoc-impact-study:
+          description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
+        hourofcode:
+          description: Informatikaren oinarriak ikasi itzazu Angry Birds, Plants vs
+            Zombies eta Ice Age-ko Scrat-ekin!
+          description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
+          student_description: Informatikaren oinarriak ikasi itzazu Angry Birds,
+            Plants vs Zombies eta Ice Age-ko Scrat-ekin!
+          title: Labirinto klasikoa
+        iceage:
+          description: Ice Age joku laborategiarekin sortu istorio bat edo egin joku
+            bat!
+          description_short: Ice Age joku laborategiarekin sortu istorio bat edo egin
+            joku bat!
+          student_description: Ice Age joku laborategiarekin sortu istorio bat edo
+            egin joku bat!
+          title: Ice Age joku laborategia
+        infinity:
+          description: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak
+            edo jokoak sortzeko
+          description_short: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin
+            istorioak edo jokoak sortzeko
+          student_description: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin
+            istorioak edo jokoak sortzeko
+          title: Disneyren Infinity Play Lab
+        jigsaw:
+          description: Proba ezazu gure buruhauste tutoriala!!!
+          description_short: Proba ezazu gure buruhauste tutoriala!!!
+          student_description: Proba ezazu gure buruhauste tutoriala!!!
+          title: Buruhaustea
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: Sarrera
+            k5_getting_started_1:
+              display_name: Sarrera
+        mc:
+          description: Erabili kode blokeak Steve edo Alex eramateko abentura batera
+            Minecraft mundu honetan.
+          description_short: Esploratu Minecraft mundu bat kodearen bitartez.
+          student_description: Erabili kode blokeak Steve edo Alex eramateko abentura
+            batera Minecraft mundu honetan.
+          title: Minecraft Kode Ordua
+        netsim:
+          title: Internet simulagailua
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pertsonaiak
+            lessonGroup-3:
               display_name: Baldintzak
+            lessonGroup-5:
+              display_name: Aldagaiak
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pertsonaiak
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hiritartasun digitala
+            lessonGroup-4:
+              display_name: Itzuliak
+            lessonGroup-6:
+              display_name: Gertaerak
+            lessonGroup-8:
+              display_name: Datu
+          lessons:
+            lesson-1:
+              name: Datu
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kabiatutako begiztak
+            lessonGroup-4:
+              display_name: Funtzioak
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hiritartasun digitala
+            lessonGroup-4:
+              display_name: Itzuliak
+            lessonGroup-6:
+              display_name: Datu
+          lessons:
+            lesson-1:
+              name: Datu
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hiritartasun digitala
+            lessonGroup-4:
+              display_name: Itzuliak
+            lessonGroup-5:
+              display_name: Gertaerak
+            lessonGroup-6:
+              display_name: Datu
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hiritartasun digitala
+            lessonGroup-6:
+              display_name: Itzuliak
+            lessonGroup-7:
+              display_name: Datu
         pl-csd-summer-day1:
           lessons:
             lesson-3:
+              name: Sarrera
+        playlab:
+          description: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
+          description_short: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
+          student_description: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
+          title: Jolas Laborategia
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+        sciencePD2b:
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+        sciencePD2b-iZone:
+          description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
+          student_description: '2 Fasea Online: Nahasitako Uda Ikasketa'
+        soccer:
+          name: futbola
+        spelling-bee:
+          title: Letraz-letra
+        starwars:
+          description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua
+            urrun, urruneko galaxia batetan.
+          description_short: Ikasi droideak programatzen, eta sortu zure Star Wars
+            jokua urrun, urruneko galaxia batetan.
+          student_description: Ikasi droideak programatzen, eta sortu zure Star Wars
+            jokua urrun, urruneko galaxia batetan.
+        starwarsblocks:
+          description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua
+            urrun, urruneko galaxia batetan.
+          description_short: Ikasi droideak programatzen, eta sortu zure Star Wars
+            jokua urrun, urruneko galaxia batetan.
+          student_description: Ikasi droideak programatzen, eta sortu zure Star Wars
+            jokua urrun, urruneko galaxia batetan.
+        step:
+          description: Pausokako tutoriala
+          description_short: Pausokako tutoriala
+          student_description: Pausokako tutoriala
+          title: Pauso
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hiritartasun digitala
+            lessonGroup-4:
+              display_name: Itzuliak
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+            csf_sprites:
+              display_name: Pertsonaiak
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_functions:
+              display_name: Funtzioak
+            csf_nested_loops:
+              display_name: Kabiatutako begiztak
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+            csf_sprites:
+              display_name: Pertsonaiak
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Pertsonaiak
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
               name: Sarrera

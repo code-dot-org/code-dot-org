@@ -68,19 +68,21 @@ ja:
         csd-2023:
           title: コンピューター サイエンス発見
     resources:
-      curriculum/csd/2020:
-        name: カリキュラム
-      teacher_forum/csd/2020:
-        name: 先生用フォーラム
       curriculum/csd/2017:
         name: カリキュラム
       teacher_forum_6/csd/2017:
-        name: 先生用フォーラム
-      curriculum/csd/2019:
-        name: カリキュラム
-      teacher_forum/csd/2019:
         name: 先生用フォーラム
       curriculum/csd/2018:
         name: カリキュラム
       teacher_forum_6/csd/2018:
         name: 先生用フォーラム
+      curriculum/csd/2019:
+        name: カリキュラム
+      teacher_forum/csd/2019:
+        name: 先生用フォーラム
+      curriculum/csd/2020:
+        name: カリキュラム
+      teacher_forum/csd/2020:
+        name: 先生用フォーラム
+      getting_started_with_csd/csd/2021:
+        name: CSDを始めるにあたって

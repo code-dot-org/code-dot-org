@@ -2,366 +2,57 @@
   "bg-BG": {
     "data": {
       "vocabularies": {
-        "debugging/minecraft/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "loop/minecraft/unversioned": {
-          "word": "Цикъл"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "function/hero/unversioned": {
-          "word": "Функция"
-        },
-        "code/poem-art/2021": {
-          "word": "Код"
-        },
-        "code/flappy/unversioned": {
-          "word": "Код",
-          "definition": "(v) да напишеш код или да напишеш инструкции за компютър."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Отстраняване на грешки",
-          "definition": "Намиране и управяна на проблеми в алгоритъм или програма"
-        },
-        "program/flappy/unversioned": {
-          "word": "Програма",
-          "definition": "Алгоритъм, който е бил написан на език който може да бъде разчет и изпълнен от машина."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "code/artist/unversioned": {
-          "word": "Код"
-        },
-        "debugging/artist/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "condition/aquatic/unversioned": {
-          "word": "Условие",
-          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "Условия"
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "loops/aquatic/unversioned": {
-          "word": "Повторения"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "debugging/mc/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "definition": "алгоритъм за компресиране, който позволява данните да бъдат перфектно възстановени от копмресираните данни. Най-често използвани за компресиране на текст(т.е. .zip компресия)"
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/sports/unversioned": {
-          "word": "Код"
-        },
-        "debugging/sports/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "debugging/basketball/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "Машинно Обучение",
-          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
-        },
-        "algorithm/coursed/2022": {
-          "word": "Алгоритъм"
-        },
-        "debugging/coursed/2022": {
-          "word": "Отстраняване на грешки"
-        },
-        "loop/coursed/2022": {
-          "word": "Цикъл"
-        },
-        "programming/coursed/2022": {
-          "word": "Програмиране"
-        },
-        "conditionals/coursed/2022": {
-          "word": "Условия"
-        },
-        "condition/coursed/2022": {
-          "word": "Условие",
-          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
-        },
-        "user/coursef/2022": {
-          "word": "Потребител",
-          "definition": "Някой, който използва обект, включително софтуер и хардуер."
-        },
-        "algorithm/coursef/2022": {
-          "word": "Алгоритъм"
-        },
-        "behavior/coursef/2022": {
-          "word": "Поведение"
-        },
-        "variable/coursef/2022": {
-          "word": "Променлива"
-        },
-        "input/coursef/2022": {
+        "input/csd/2021": {
           "word": "Поле за въвеждане"
         },
-        "machine_learning/coursef/2022": {
-          "word": "Машинно Обучение",
-          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
-        },
-        "internet/coursef/2022": {
-          "word": "Интернет"
-        },
-        "define/coursef/2022": {
-          "word": "Дефиниране"
-        },
-        "behavior/coursee/2022": {
-          "word": "Поведение"
-        },
-        "loop/coursee/2022": {
-          "word": "Цикъл"
-        },
-        "function/coursee/2022": {
-          "word": "Функция"
-        },
-        "condition/coursee/2022": {
-          "word": "Условие"
-        },
-        "conditionals/coursee/2022": {
-          "word": "Условия"
-        },
-        "copyright/coursee/2022": {
+        "copyright/csd/2021": {
           "word": "Авторско право"
         },
-        "define/coursee/2022": {
-          "word": "Дефиниране"
-        },
-        "algorithm/courseb/2022": {
-          "word": "Алгоритъм"
-        },
-        "debugging/courseb/2022": {
+        "debugging/csd/2021": {
           "word": "Отстраняване на грешки"
         },
-        "drop/courseb/2022": {
-          "word": "Капка"
-        },
-        "programming/courseb/2022": {
-          "word": "Програмиране"
-        },
-        "loop/courseb/2022": {
-          "word": "Цикъл"
-        },
-        "algorithm/express/2022": {
-          "word": "Алгоритъм"
-        },
-        "debugging/express/2022": {
-          "word": "Отстраняване на грешки"
-        },
-        "programming/express/2022": {
-          "word": "Програмиране"
-        },
-        "behavior/express/2022": {
-          "word": "Поведение"
-        },
-        "loop/express/2022": {
-          "word": "Цикъл"
-        },
-        "condition/express/2022": {
-          "word": "Условие",
-          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
-        },
-        "conditionals/express/2022": {
-          "word": "Условия"
-        },
-        "function/express/2022": {
-          "word": "Функция"
-        },
-        "variable/express/2022": {
+        "variable/csd/2021": {
           "word": "Променлива"
         },
-        "define/express/2022": {
-          "word": "Дефиниране"
-        },
-        "drop/pre-express/2022": {
-          "word": "Капка"
-        },
-        "algorithm/pre-express/2022": {
-          "word": "Алгоритъм"
-        },
-        "debugging/pre-express/2022": {
-          "word": "Отстраняване на грешки"
-        },
-        "programming/pre-express/2022": {
-          "word": "Програмиране"
-        },
-        "loop/pre-express/2022": {
-          "word": "Цикъл"
-        },
-        "algorithm/coursea/2022": {
-          "word": "Алгоритъм"
-        },
-        "debugging/coursea/2022": {
-          "word": "Отстраняване на грешки"
-        },
-        "drop/coursea/2022": {
-          "word": "Капка"
-        },
-        "programming/coursea/2022": {
-          "word": "Програмиране"
-        },
-        "loop/coursea/2022": {
-          "word": "Цикъл"
-        },
-        "algorithm/coursec/2022": {
-          "word": "Алгоритъм"
-        },
-        "debugging/coursec/2022": {
-          "word": "Отстраняване на грешки"
-        },
-        "programming/coursec/2022": {
-          "word": "Програмиране"
-        },
-        "loop/coursec/2022": {
-          "word": "Цикъл"
-        },
-        "data/coursec/2022": {
-          "word": "Данни"
-        },
-        "binary/coursec/2022": {
-          "word": "Двоичен код"
-        },
-        "input/csd/2022": {
-          "word": "Поле за въвеждане"
-        },
-        "debugging/csd/2022": {
-          "word": "Отстраняване на грешки"
-        },
-        "variable/csd/2022": {
-          "word": "Променлива"
-        },
-        "condition/csd/2022": {
+        "condition/csd/2021": {
           "word": "Условие"
         },
-        "conditionals/csd/2022": {
+        "conditionals/csd/2021": {
           "word": "Условия"
         },
-        "abstraction/csd/2022": {
+        "abstraction/csd/2021": {
           "word": "Абстракция"
         },
-        "function/csd/2022": {
+        "function/csd/2021": {
           "word": "Функция"
         },
-        "copyright/csd/2022": {
-          "word": "Авторско право"
-        },
-        "empathy/csd/2022": {
+        "empathy/csd/2021": {
           "word": "Емпатия",
           "definition": "В дизайнм обрищайте внимание към чувствата на потребителя когато правите дизайн на продукт."
         },
-        "user/csd/2022": {
+        "user/csd/2021": {
           "word": "Потребител",
           "definition": "Някой, който използва обект, включително софтуер и хардуер."
         },
-        "usability/csd/2022": {
+        "usability/csd/2021": {
           "word": "Ползваемост",
           "definition": "Колко е лесно, ефективно, и удволетворяващо да използваш обект или устройство (включващо и софтуер) направен от друг човек."
         },
-        "machine_learning/csd/2022": {
+        "binary_system/csd/2021": {
+          "word": "Двоична Система",
+          "definition": "начин за представяне на информация, използвайки само две опции"
+        },
+        "ascii/csd/2021": {
+          "word": "ASCII",
+          "definition": "популярна система за представяне на текст двоичната система"
+        },
+        "bit/csd/2021": {
+          "word": "Бит",
+          "definition": "едно парче двоична информация"
+        },
+        "machine_learning/csd/2021": {
           "word": "Машинно Обучение",
           "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Код",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "Потребител",
-          "definition": "Някой, който използва обект, включително софтуер и хардуер."
-        },
-        "algorithm/coursef/2021": {
-          "word": "Алгоритъм"
-        },
-        "behavior/coursef/2021": {
-          "word": "Поведение"
-        },
-        "variable/coursef/2021": {
-          "word": "Променлива"
-        },
-        "input/coursef/2021": {
-          "word": "Поле за въвеждане"
-        },
-        "loop/coursef/2021": {
-          "word": "Цикъл"
-        },
-        "machine_learning/coursef/2021": {
-          "word": "Машинно Обучение",
-          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
-        },
-        "internet/coursef/2021": {
-          "word": "Интернет"
-        },
-        "define/coursef/2021": {
-          "word": "Дефиниране"
-        },
-        "algorithm/courseb/2021": {
-          "word": "Алгоритъм"
-        },
-        "debugging/courseb/2021": {
-          "word": "Отстраняване на грешки"
-        },
-        "drop/courseb/2021": {
-          "word": "Капка"
-        },
-        "programming/courseb/2021": {
-          "word": "Програмиране"
-        },
-        "loop/courseb/2021": {
-          "word": "Цикъл"
         },
         "algorithm/coursea/2021": {
           "word": "Алгоритъм"
@@ -376,6 +67,21 @@
           "word": "Програмиране"
         },
         "loop/coursea/2021": {
+          "word": "Цикъл"
+        },
+        "algorithm/courseb/2021": {
+          "word": "Алгоритъм"
+        },
+        "debugging/courseb/2021": {
+          "word": "Отстраняване на грешки"
+        },
+        "drop/courseb/2021": {
+          "word": "Капка"
+        },
+        "programming/courseb/2021": {
+          "word": "Програмиране"
+        },
+        "loop/courseb/2021": {
           "word": "Цикъл"
         },
         "algorithm/coursec/2021": {
@@ -411,6 +117,57 @@
         "condition/coursed/2021": {
           "word": "Условие",
           "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
+        },
+        "behavior/coursee/2021": {
+          "word": "Поведение"
+        },
+        "copyright/coursee/2021": {
+          "word": "Авторско право"
+        },
+        "loop/coursee/2021": {
+          "word": "Цикъл"
+        },
+        "function/coursee/2021": {
+          "word": "Функция"
+        },
+        "condition/coursee/2021": {
+          "word": "Условие",
+          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
+        },
+        "conditionals/coursee/2021": {
+          "word": "Условия"
+        },
+        "define/coursee/2021": {
+          "word": "Дефиниране"
+        },
+        "user/coursef/2021": {
+          "word": "Потребител",
+          "definition": "Някой, който използва обект, включително софтуер и хардуер."
+        },
+        "algorithm/coursef/2021": {
+          "word": "Алгоритъм"
+        },
+        "behavior/coursef/2021": {
+          "word": "Поведение"
+        },
+        "variable/coursef/2021": {
+          "word": "Променлива"
+        },
+        "input/coursef/2021": {
+          "word": "Поле за въвеждане"
+        },
+        "loop/coursef/2021": {
+          "word": "Цикъл"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Машинно Обучение",
+          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
+        },
+        "internet/coursef/2021": {
+          "word": "Интернет"
+        },
+        "define/coursef/2021": {
+          "word": "Дефиниране"
         },
         "algorithm/express/2021": {
           "word": "Алгоритъм"
@@ -458,67 +215,346 @@
         "loop/pre-express/2021": {
           "word": "Цикъл"
         },
-        "behavior/coursee/2021": {
-          "word": "Поведение"
+        "input/csd/2022": {
+          "word": "Поле за въвеждане"
         },
-        "copyright/coursee/2021": {
+        "copyright/csd/2022": {
           "word": "Авторско право"
         },
-        "loop/coursee/2021": {
-          "word": "Цикъл"
+        "debugging/csd/2022": {
+          "word": "Отстраняване на грешки"
         },
-        "function/coursee/2021": {
-          "word": "Функция"
+        "variable/csd/2022": {
+          "word": "Променлива"
         },
-        "condition/coursee/2021": {
-          "word": "Условие",
-          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
+        "condition/csd/2022": {
+          "word": "Условие"
         },
-        "conditionals/coursee/2021": {
+        "conditionals/csd/2022": {
           "word": "Условия"
         },
-        "define/coursee/2021": {
-          "word": "Дефиниране"
+        "abstraction/csd/2022": {
+          "word": "Абстракция"
         },
-        "machine_learning/csd/2021": {
-          "word": "Машинно Обучение",
-          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
+        "function/csd/2022": {
+          "word": "Функция"
         },
-        "empathy/csd/2021": {
+        "empathy/csd/2022": {
           "word": "Емпатия",
           "definition": "В дизайнм обрищайте внимание към чувствата на потребителя когато правите дизайн на продукт."
         },
-        "user/csd/2021": {
+        "user/csd/2022": {
           "word": "Потребител",
           "definition": "Някой, който използва обект, включително софтуер и хардуер."
         },
-        "usability/csd/2021": {
+        "usability/csd/2022": {
           "word": "Ползваемост",
           "definition": "Колко е лесно, ефективно, и удволетворяващо да използваш обект или устройство (включващо и софтуер) направен от друг човек."
         },
-        "debugging/csd/2021": {
+        "ascii/csd/2022": {
+          "word": "ASCII",
+          "definition": "популярна система за представяне на текст двоичната система"
+        },
+        "binary_system/csd/2022": {
+          "word": "Двоична Система",
+          "definition": "начин за представяне на информация, използвайки само две опции"
+        },
+        "bit/csd/2022": {
+          "word": "Бит",
+          "definition": "едно парче двоична информация"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Машинно Обучение",
+          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
+        },
+        "algorithm/coursea/2022": {
+          "word": "Алгоритъм"
+        },
+        "debugging/coursea/2022": {
           "word": "Отстраняване на грешки"
         },
-        "variable/csd/2021": {
-          "word": "Променлива"
+        "drop/coursea/2022": {
+          "word": "Капка"
         },
-        "condition/csd/2021": {
-          "word": "Условие"
+        "programming/coursea/2022": {
+          "word": "Програмиране"
         },
-        "conditionals/csd/2021": {
+        "loop/coursea/2022": {
+          "word": "Цикъл"
+        },
+        "algorithm/courseb/2022": {
+          "word": "Алгоритъм"
+        },
+        "debugging/courseb/2022": {
+          "word": "Отстраняване на грешки"
+        },
+        "drop/courseb/2022": {
+          "word": "Капка"
+        },
+        "programming/courseb/2022": {
+          "word": "Програмиране"
+        },
+        "loop/courseb/2022": {
+          "word": "Цикъл"
+        },
+        "algorithm/coursec/2022": {
+          "word": "Алгоритъм"
+        },
+        "debugging/coursec/2022": {
+          "word": "Отстраняване на грешки"
+        },
+        "persistence/coursec/2022": {
+          "definition": "Да не се предаваш."
+        },
+        "programming/coursec/2022": {
+          "word": "Програмиране"
+        },
+        "angle/coursec/2022": {
+          "word": "Ъгъл",
+          "definition": "Където две страни на фигура се срещнат, измерван в градуси."
+        },
+        "loop/coursec/2022": {
+          "word": "Цикъл"
+        },
+        "data/coursec/2022": {
+          "word": "Данни",
+          "definition": "Колекция от информация"
+        },
+        "graph/coursec/2022": {
+          "word": "Графика",
+          "definition": "Снимка или диаграма, която представя данни или стойности по организиран начин"
+        },
+        "binary/coursec/2022": {
+          "word": "Двоичен код"
+        },
+        "algorithm/coursed/2022": {
+          "word": "Алгоритъм"
+        },
+        "debugging/coursed/2022": {
+          "word": "Отстраняване на грешки"
+        },
+        "loop/coursed/2022": {
+          "word": "Цикъл"
+        },
+        "programming/coursed/2022": {
+          "word": "Програмиране"
+        },
+        "conditionals/coursed/2022": {
           "word": "Условия"
         },
-        "abstraction/csd/2021": {
-          "word": "Абстракция"
+        "condition/coursed/2022": {
+          "word": "Условие",
+          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
         },
-        "function/csd/2021": {
+        "behavior/coursee/2022": {
+          "word": "Поведение"
+        },
+        "loop/coursee/2022": {
+          "word": "Цикъл"
+        },
+        "function/coursee/2022": {
           "word": "Функция"
         },
-        "input/csd/2021": {
+        "condition/coursee/2022": {
+          "word": "Условие"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Условия"
+        },
+        "copyright/coursee/2022": {
+          "word": "Авторско право"
+        },
+        "define/coursee/2022": {
+          "word": "Дефиниране"
+        },
+        "user/coursef/2022": {
+          "word": "Потребител",
+          "definition": "Някой, който използва обект, включително софтуер и хардуер."
+        },
+        "algorithm/coursef/2022": {
+          "word": "Алгоритъм"
+        },
+        "behavior/coursef/2022": {
+          "word": "Поведение"
+        },
+        "variable/coursef/2022": {
+          "word": "Променлива"
+        },
+        "input/coursef/2022": {
           "word": "Поле за въвеждане"
         },
-        "copyright/csd/2021": {
-          "word": "Авторско право"
+        "machine_learning/coursef/2022": {
+          "word": "Машинно Обучение",
+          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
+        },
+        "internet/coursef/2022": {
+          "word": "Интернет"
+        },
+        "define/coursef/2022": {
+          "word": "Дефиниране"
+        },
+        "algorithm/express/2022": {
+          "word": "Алгоритъм"
+        },
+        "debugging/express/2022": {
+          "word": "Отстраняване на грешки"
+        },
+        "programming/express/2022": {
+          "word": "Програмиране"
+        },
+        "behavior/express/2022": {
+          "word": "Поведение"
+        },
+        "loop/express/2022": {
+          "word": "Цикъл"
+        },
+        "condition/express/2022": {
+          "word": "Условие",
+          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
+        },
+        "conditionals/express/2022": {
+          "word": "Условия"
+        },
+        "function/express/2022": {
+          "word": "Функция"
+        },
+        "variable/express/2022": {
+          "word": "Променлива"
+        },
+        "define/express/2022": {
+          "word": "Дефиниране"
+        },
+        "drop/pre-express/2022": {
+          "word": "Капка"
+        },
+        "algorithm/pre-express/2022": {
+          "word": "Алгоритъм"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Отстраняване на грешки"
+        },
+        "programming/pre-express/2022": {
+          "word": "Програмиране"
+        },
+        "loop/pre-express/2022": {
+          "word": "Цикъл"
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Условие",
+          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Условия"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Повторения"
+        },
+        "code/artist/unversioned": {
+          "word": "Код"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "code/flappy/unversioned": {
+          "word": "Код",
+          "definition": "(v) да напишеш код или да напишеш инструкции за компютър."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Отстраняване на грешки",
+          "definition": "Намиране и управяна на проблеми в алгоритъм или програма"
+        },
+        "program/flappy/unversioned": {
+          "word": "Програма",
+          "definition": "Алгоритъм, който е бил написан на език който може да бъде разчет и изпълнен от машина."
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "function/hero/unversioned": {
+          "word": "Функция"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Цикъл"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Машинно Обучение",
+          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "code/poem-art/2021": {
+          "word": "Код"
+        },
+        "code/sports/unversioned": {
+          "word": "Код"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "definition": "алгоритъм за компресиране, който позволява данните да бъдат перфектно възстановени от копмресираните данни. Най-често използвани за компресиране на текст(т.е. .zip компресия)"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Код",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         }
       }
     }

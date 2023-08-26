@@ -210,8 +210,11 @@ ky:
       robotics:
         grok: 'Grok үйрөнүү'
         other: "Башка"
+      workshop_course:
+        other: 'Башка'
       email_opt_in:
         opt_in_yes: 'Ооба'
         opt_in_no: 'Жок'
   page_not_found_title: "Барак табылган жок"
   copy: 'Көчүрүү'
+

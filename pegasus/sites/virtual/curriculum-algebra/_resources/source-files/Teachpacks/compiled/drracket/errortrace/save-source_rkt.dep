@@ -1,1 +1,0 @@
-("6.0" ("881a4fa2e28a1898231a94573571ad9e81cb0680" . "ba07336ee3896afd549b02d5128b6b95e21c1892") (collects #"racket" #"base.rkt") (collects #"rackunit" #"main.rkt") (collects #"scheme" #"runtime-config.rkt") (collects #"lang" #"prim.rkt") (collects #"racket" #"bool.rkt") (collects #"scheme" #"main.rkt"))

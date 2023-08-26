@@ -42,9 +42,17 @@ class Follower < ApplicationRecord
     errors.add(:student_user, 'cannot be admin') if student_user.admin?
   end
 
+  def pl_participant_cannot_have_family_name
+    return unless section && student_user
+    if section.pl_section? && student_user.family_name
+      errors.add(:student_user, 'cannot have family_name as a PL participant')
+    end
+  end
+
   validate :cannot_follow_yourself, unless: -> {deleted?}
   validate :teacher_must_be_teacher, unless: -> {deleted?}
   validate :student_cannot_be_admin
+  validate :pl_participant_cannot_have_family_name
 
   validates_presence_of :student_user, unless: -> {deleted?}
   validates_presence_of :section, unless: -> {deleted?}
@@ -52,5 +60,16 @@ class Follower < ApplicationRecord
   after_create :assign_script
   def assign_script
     student_user.assign_script(section.script) if section.script
+  end
+
+  after_destroy :remove_family_name, if: proc {DCDO.get('family-name-features', false)}
+  def remove_family_name
+    # If the student is in zero sections, and has a family name set,
+    # remove the family name.
+    if student_user.family_name && student_user.sections_as_student.empty?
+      # can't remove keys from properties directly, so just set it to nil.
+      student_user.family_name = nil
+      student_user.save!
+    end
   end
 end

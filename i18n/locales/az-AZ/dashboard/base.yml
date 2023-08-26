@@ -60,6 +60,7 @@ az:
         reset_password_token: "İzlədiyiniz parolun sıfırlanması bağlantısı"
         error:
           future: gələcəkdə ola bilməz
+        us_state: 'dövlət'
   beta: "beta versiya"
   hello: "Salam, dünya"
   welcome_back: "Bir daha xoş gəldiniz, %{name}"
@@ -199,6 +200,7 @@ az:
     parent_account_checkbox: "Mən övladımın adından qeydiyyatdan keçən valideyn/qəyyumam."
     parent_account_email_progress_permission: "Övladınızın tərəqqisi və layihələri haqqında hər hansı bir yeniləmə, kursları və kompüter elmləri ilə bağlı yenilikləri sizə göndərə bilərikmi? [(Məxfilik siyasətimizə baxın)] (%{privacy_policy_url})"
     parent_account_email_label: "Valideyn /Qəyyum E-poçtu"
+    us_state: 'dövlət'
   school_info:
     title: 'Təhsil müəssisəsi haqqında məlumat (istəyə görə)'
     school_country: 'Məktəb Ölkəsi'
@@ -1183,6 +1185,7 @@ az:
         csf_express: 'CS (Əvvəldən ifadə etmək və ya ifadə etmək)'
         csd: 'Kompüter Elmləri kəşfləri'
         csp: 'Kompüter Elmləri prinsipləri'
+        other: 'Digər'
         not_applicable: "Tətbiq olunmağa uyğun deyil"
       email_opt_in:
         opt_in_yes: 'Bəli'
@@ -1266,3 +1269,4 @@ az:
     binary: "İkilik"
     hexadecimal: "Hexadecimal/ on altı ədədli"
     pixel_format_header: "Piksel(-in) Formatı"
+

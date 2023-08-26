@@ -15,7 +15,6 @@ ur:
             '0.75': چھوٹا
             '1.00': متوسط
             '2.00': بڑا
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +22,6 @@ ur:
             '0.75': چھوٹا
             '1.00': متوسط
             '2.00': بڑا
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} ہر {N} پیمائشوں
@@ -453,26 +451,6 @@ ur:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': خلائی مخلوق
             '"BEAR"': ریچھ
@@ -994,8 +972,6 @@ ur:
         options:
           INPUT1:
             '1': لیموں کا رس
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} اثر لگائیں۔"
         options:
@@ -1012,8 +988,6 @@ ur:
         options:
           INPUT1:
             '1': لیموں کا رس
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: " {VAR1} {SPRITE1COSTUME} کے ساتھ بات چیت کریں"
       FunctionBlocks_makeManipulative2:
@@ -1498,11 +1472,9 @@ ur:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': سست
             '5': عام
             '7': تیز
-            '9': extra fast
       gamelab_setTint:
         text: تبدیل کریں رنگ {THIS} کرنے کے لئے {COLOR}
       gamelab_setupScoreboard:
@@ -1947,14 +1919,10 @@ ur:
         options:
           INPUT1:
             '1': لیموں کا رس
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': لیموں کا رس
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -2160,7 +2128,6 @@ ur:
         text: جب لائن {N} نطر آ جاتی ہے
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2220,16 +2187,10 @@ ur:
         options:
           PORTION:
             '1': تمام
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': تمام
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} کہتا ہے {SPEECH}"
       adaptations_startFollowing:
@@ -2336,6 +2297,21 @@ ur:
           DIR:
             right: ٹھیک ہے
             left: بائیں بازو
+      ecosystems_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: پرنٹ {TEXT}
       storylab_setForegroundEffect2:
         text: "{EFFECT} اثر لگائیں۔"
         options:

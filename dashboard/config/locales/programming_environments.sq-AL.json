@@ -2,8 +2,472 @@
   "sq-AL": {
     "data": {
       "programming_environments": {
+        "applab": {
+          "categories": {
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Rrezja e rrethit, në piksele."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "Pozicioni x në piksele të këndit të sipërm të majtë të imazhit për të vizatuar."
+                    },
+                    "x": {
+                      "description": "Pozicioni x në piksele të këndit të sipërm të majtë të imazhit për të vizatuar."
+                    },
+                    "y": {
+                      "description": "Pozicioni y në piksele të këndit të sipërm të majtë të imazhit për të vizatuar."
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    },
+                    "y": {
+                      "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    }
+                  },
+                  "short_description": "Kthen sasinë e alfa (errësirë) (duke filluar nga 0 në 255) në ngjyrën e pikselit të vendosur në pozicionin e dhënë x dhe y në të dhënat e imazhit të dhënë."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    },
+                    "y": {
+                      "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    },
+                    "y": {
+                      "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "Lartësia e drejtkëndëshit kufijor për të kapur të dhënat e imazhit."
+                    },
+                    "width": {
+                      "description": "Gjerësia e drejtkëndëshit kufijor për të kapur të dhënat e imazhit."
+                    },
+                    "x": {
+                      "description": "Pozicioni x në piksele për të filluar kapjen."
+                    },
+                    "y": {
+                      "description": "Pozicioni y në piksele për të filluar kapjen."
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    },
+                    "y": {
+                      "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit për të vendosur të dhënat në kanavacë."
+                    },
+                    "y": {
+                      "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit për të vendosur të dhënat në kanavacë."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "Lartësia vertikale në piksele të drejtkëndëshit."
+                    },
+                    "width": {
+                      "description": "Gjerësia horizontale në piksele të drejtkëndëshit."
+                    },
+                    "x": {
+                      "description": "Pozicioni x në piksele të këndit të sipërm të majtë të drejtkëndëshit."
+                    },
+                    "y": {
+                      "description": "Pozicioni y në piksele të këndit të sipërm të majtë të drejtkëndëshit."
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "Sasia e alfa (errësirës) (nga 0 në 255) për të vendosur në pixel."
+                    },
+                    "x": {
+                      "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    },
+                    "y": {
+                      "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    }
+                  },
+                  "short_description": "Vendos sasinë e alfa (errësirë) (duke filluar nga 0 në 255) në ngjyrën e pikselit të vendosur në pozicionin e dhënë x dhe y në të dhënat e dhëna të imazhit."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "Sasia e blu (nga 0 në 255) për të vendosur në pixel."
+                    },
+                    "x": {
+                      "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    },
+                    "y": {
+                      "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    }
+                  },
+                  "short_description": "Vendos sasinë e blu (duke filluar nga 0 në 255) në ngjyrën e pikselit të vendosur në pozicionin e dhënë x dhe y në të dhënat e imazhit të dhënë në sasinë e hyrjes BlueVlue."
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "Sasia e gjelbër (nga 0 në 255) për të vendosur në pixel."
+                    },
+                    "x": {
+                      "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    },
+                    "y": {
+                      "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    }
+                  },
+                  "short_description": "Vendos sasinë e gjelbër (duke filluar nga 0 në 255) në ngjyrën e pikselit të vendosur në pozicionin e dhënë x dhe y në të dhënat e imazhit të dhënë në sasinë e hyrjes së GreenValue."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "Opsionale. Sasia e errësirës (nga 0 në 255) për të vendosur në pixel. Defaults në 255 (errësirë e plotë)."
+                    },
+                    "blue": {
+                      "description": "Sasia e blu (nga 0 në 255) për të vendosur në pixel."
+                    },
+                    "green": {
+                      "description": "Sasia e gjelbër (nga 0 në 255) për të vendosur në pixel."
+                    },
+                    "red": {
+                      "description": "Sasia e kuqe (nga 0 në 255) për të vendosur në pixel."
+                    },
+                    "x": {
+                      "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    },
+                    "y": {
+                      "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "redValue": {
+                      "description": "Sasia e kuqe (nga 0 në 255) për të vendosur në pixel."
+                    },
+                    "x": {
+                      "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    },
+                    "y": {
+                      "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
+                    }
+                  },
+                  "short_description": "Vendos sasinë e kuqe (duke filluar nga 0 në 255) në ngjyrën e pikselit të vendosur në pozicionin e dhënë x dhe y në të dhënat e imazhit të dhënë në sasinë e hyrjes RedValue."
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Vlera e kthyer nga funksioni SetTimeOut për të anuluar."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numri i milisekondave midis secilit ekzekutim të funksionit."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numri i milisekondave për të pritur para ekzekutimit të funksionit."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksion"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "tableName": {
+                      "description": "Emri i tabelës për të tërhequr të dhënat nga."
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Emri i çelësit që do të merret."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksion"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Merr një identifikues unik për përdoruesin aktual të këtij aplikacioni."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Emri i tabelës në të cilën zbatohet ky mbajtës i ngjarjes."
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Emri i çelësit që do të ruhet."
+                    },
+                    "value": {
+                      "description": "Të dhënat që do të ruhen."
+                    }
+                  },
+                  "short_description": "Ruan një çift çelës/vlere në ruajtjen e të dhënave të çelës/vlerës së App Lab dhe e quan funksionin e kthimit të thirrjes kur veprimi të përfundojë."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Adresa e internetit e një shërbimi që kthen të dhëna."
+                    }
+                  }
+                }
+              },
+              "name": "të dhëna"
+            },
+            "functions": {
+              "name": "funksione"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Numri maksimal i kthyer"
+                    },
+                    "min": {
+                      "description": "Numri minimal i kthyer"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Numri maksimal i kthyer"
+                    },
+                    "min": {
+                      "description": "Numri minimal i kthyer"
+                    }
+                  }
+                }
+              },
+              "name": "Matematikë"
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "Lëviz breshkën përpara dhe në të majtë në një hark të qetë, rrethor."
+                },
+                "getX": {
+                  "short_description": "Merr koordinatën aktuale x në pikselët e breshkës."
+                },
+                "getY": {
+                  "short_description": "Merr koordinatën aktuale y në piksele të breshkës."
+                },
+                "hide": {
+                  "short_description": "E bën breshkën të padukshme në vendndodhjen e saj aktuale."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Numri i pikselëve për të lëvizur breshkën djathtas."
+                    },
+                    "y": {
+                      "description": "Numri i pikselëve për të lëvizur breshkën poshtë."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Lëviz breshkën prapa një numri të caktuar pikselësh nga drejtimi aktual."
+                },
+                "moveForward": {
+                  "short_description": "Lëviz breshkën përpara një numri të caktuar pikselësh në drejtimin aktual."
+                },
+                "moveTo": {
+                  "short_description": "Lëviz breshkën në një pozicion specifik (x, y) në ekran."
+                },
+                "penColor": {
+                  "short_description": "Vendos ngjyrën e stilolapsit të përdorur nga breshkë për vizatimin e linjave dhe pikave."
+                },
+                "penDown": {
+                  "short_description": "Vendos stilolapsin poshtë kështu që breshka tërheq një vijë pas saj ndërsa lëviz."
+                },
+                "penRGB": {
+                  "short_description": "Duke përdorur vlerat RGBA, përcakton ngjyrën e stilolapsit të përdorur nga breshkë për vizatimin e linjave dhe pikave."
+                },
+                "penUp": {
+                  "short_description": "Zgjedh stilolapsin në mënyrë që breshka të mos tërheqë një vijë ndërsa lëviz."
+                },
+                "penWidth": {
+                  "short_description": "Vendos gjerësinë e vijës në piksele që breshka tërheq pas saj ndërsa lëviz."
+                },
+                "show": {
+                  "short_description": "Bën breshkën të dukshme në vendndodhjen e saj aktuale."
+                },
+                "speed": {
+                  "short_description": "Vendos shpejtësinë për ekzekutimin e aplikacionit, i cili përfshin shpejtësinë e breshkës."
+                },
+                "turnLeft": {
+                  "short_description": "Rrotullon breshkën e lënë nga këndi i specifikuar. Pozicioni i breshkës mbetet i njëjtë."
+                },
+                "turnRight": {
+                  "short_description": "Rrotullon breshkën drejtë nga këndi i specifikuar. Pozicioni i breshkës mbetet i njëjtë."
+                },
+                "turnTo": {
+                  "short_description": "Ndryshon drejtimin e breshkës në një kënd specifik. 0 është lart, 90 është e drejtë, 180 është poshtë dhe 270 është lënë."
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "Krijon një buton në ekran që shfaq tekstin e dhënë dhe referuar nga id dhënë në vendndodhjen e paracaktuar (0,0)."
+                },
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksion"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "Prona për të ndryshuar."
+                    }
+                  },
+                  "short_description": "Vendos një pronë në një vlerë të re për elementin e specifikuar."
+                },
+                "setScreen": {
+                  "short_description": "Vendos ekranin në ScreenID të dhënë."
+                },
+                "showElement": {
+                  "short_description": "Tregon elementin me id-në e dhënë."
+                },
+                "textLabel": {
+                  "short_description": "Krijon një etiketë teksti në ekran duke shfaqur tekstin e dhënë dhe referuar nga id dhënë në vendndodhjen e paracaktuar (0,0)."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "Asnjë"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "Deklaroni dhe caktoni një grup në një ndryshore"
+                },
+                "declareAssign_x": {
+                  "short_description": "Deklaron dhe i cakton një vlerë fillestare një vektori."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "Deklaron një variabël dhe emrin përkatës"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Vargu për të kërkuar."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Vargu për të kërkuar."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Gjatësia e vargut"
+                }
+              },
+              "name": "variabla"
+            }
+          },
+          "description": "Laboratori i Aplikacioneve është një mjedis programimi ku ju mund të bëni aplikacione të thjeshta. Dizenjo një aplikacioni, kodo me blloqe ose Javascript për ta bërë funksionale dhe shpërndaje aplikacionin tuaj në sekond.",
+          "name": "Laboratori i Aplikacioneve"
+        },
         "gamelab": {
           "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numri i milisekondave midis secilit ekzekutim të funksionit."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numri i milisekondave për të pritur para ekzekutimit të funksionit."
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "funksione"
+            },
+            "game_lab": {
+              "expressions": {
+                "showMobileControls": {
+                  "content": "Ndryshon kontrollet celular të dukshme nën hapësirën e luajtjes.",
+                  "short_description": "Ndryshon kontrollet celular të dukshme nën hapësirën e luajtjes."
+                }
+              }
+            },
             "groups": {
               "expressions": {
                 "setColorEach": {
@@ -23,128 +487,71 @@
               }
             },
             "math": {
-              "name": "Matematikë",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "Numri minimal i kthyer"
-                    },
                     "max": {
                       "description": "Numri maksimal i kthyer"
+                    },
+                    "min": {
+                      "description": "Numri minimal i kthyer"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "Numri minimal i kthyer"
-                    },
                     "max": {
                       "description": "Numri maksimal i kthyer"
+                    },
+                    "min": {
+                      "description": "Numri minimal i kthyer"
                     }
                   }
                 }
-              }
+              },
+              "name": "Matematikë"
+            },
+            "sprites": {
+              "expressions": {
+                "sprite.height": {
+                  "return_value": "Lartësia e sprite."
+                },
+                "sprite.width": {
+                  "return_value": "Gjerësia e sprite."
+                }
+              },
+              "name": "Sprites"
             },
             "variables": {
-              "name": "variabla",
               "expressions": {
                 "assign_x": {
                   "short_description": "Përcaktoji një vlerë variablës së deklaruar më përpara"
                 },
-                "declareNoAssign_x": {
-                  "short_description": "Deklaron një variabël dhe emrin përkatës"
-                },
-                "declareAssign_x": {
-                  "short_description": "Deklaron dhe i cakton një vlerë fillestare një vektori."
-                }
-              }
-            },
-            "functions": {
-              "name": "funksione"
-            }
-          }
-        },
-        "applab": {
-          "name": "Laboratori i Aplikacioneve",
-          "description": "Laboratori i Aplikacioneve është një mjedis programimi ku ju mund të bëni aplikacione të thjeshta. Dizenjo një aplikacioni, kodo me blloqe ose Javascript për ta bërë funksionale dhe shpërndaje aplikacionin tuaj në sekond.",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funksion"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "name": "të dhëna",
-              "expressions": {
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funksion"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funksion"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematikë",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Numri minimal i kthyer"
-                    },
-                    "max": {
-                      "description": "Numri maksimal i kthyer"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Numri minimal i kthyer"
-                    },
-                    "max": {
-                      "description": "Numri maksimal i kthyer"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "variabla",
-              "expressions": {
-                "declareNoAssign_x": {
-                  "short_description": "Deklaron një variabël dhe emrin përkatës"
-                },
                 "declareAssign_x": {
                   "short_description": "Deklaron dhe i cakton një vlerë fillestare një vektori."
                 },
-                "addPair": {
-                  "return_value": "Asnjë"
+                "declareNoAssign_x": {
+                  "short_description": "Deklaron një variabël dhe emrin përkatës"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Vargu për të kërkuar."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Vargu për të kërkuar."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Gjatësia e vargut"
                 }
-              }
-            },
-            "functions": {
-              "name": "funksione"
+              },
+              "name": "variabla"
             }
           }
         },
@@ -156,23 +563,23 @@
             "events": {
               "name": "Ngjarje"
             },
-            "loops": {
-              "name": "cikle "
-            },
-            "variables": {
-              "name": "variabla"
-            },
-            "math": {
-              "name": "Matematikë"
+            "functions": {
+              "name": "funksione"
             },
             "logic": {
               "name": "Logjikë"
             },
-            "functions": {
-              "name": "funksione"
+            "loops": {
+              "name": "cikle "
+            },
+            "math": {
+              "name": "Matematikë"
             },
             "text": {
               "name": "Tekst"
+            },
+            "variables": {
+              "name": "variabla"
             }
           }
         }

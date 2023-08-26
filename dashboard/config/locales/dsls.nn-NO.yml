@@ -247,8 +247,8 @@ nn-NO:
         - text: Pusse tenna
         - text: Bake kaker
         - text: Handle med ei handleliste
-        - text: Banan
-          correct: true
+        - correct: true
+          text: Banan
         questions:
         - text: Kva for eit av desse elementa er det vansklegast å skildre ei algoritme
             til?
@@ -270,8 +270,8 @@ nn-NO:
       4-5 Computational Thinking Multi 1:
         answers:
         - text: Seattle _____ ein _____ _____.
-        - text: _____ er ein _____ by.
-          correct: true
+        - correct: true
+          text: _____ er ein _____ by.
         - text: _____ er _____ ein _____.
         - text: Eugene er ein _____ by.
         questions:
@@ -287,8 +287,8 @@ nn-NO:
         title: Fleirval
       4-5 Crowdsourcing Multi 2:
         answers:
-        - text: Rydde rommet ditt
-          correct: true
+        - correct: true
+          text: Rydde rommet ditt
         - text: Spise desserten din
         - text: Børste håret
         - text: Vaske andletet ditt
@@ -298,8 +298,8 @@ nn-NO:
       4-5 Digital Footprint Multi 1:
         answers:
         - text: Fødselsdagen din
-        - text: Favorittmaten din
-          correct: true
+        - correct: true
+          text: Favorittmaten din
         - text: Adressa di
         - text: Kredittkortnummeret til foreldra dine
         questions:
@@ -328,9 +328,9 @@ nn-NO:
       4-5 Songwriting Multi 1:
         answers:
         - text: Lou, Lou, skip to my Lou,
-        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+        - correct: true
+          text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
-          correct: true
         - {}
         - {}
         questions:
@@ -450,6 +450,28 @@ nn-NO:
         content1: forklaring her
       Begin planning your project_2018_2019_2020:
         content1: forklaring her
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties multi predict_2022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Eigenskapar ved Sprite
+      CSD Games Properties practice_2022:
+        display_name: Eigenskapar ved Sprite
       CSD Header Size MC:
         answers:
         - {}
@@ -467,6 +489,135 @@ nn-NO:
         - {}
         - correct: true
         - {}
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U1 IOSP match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Inngang
+        - {}
+        - {}
+        - {}
+      CSD U1 IOSP match_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Inngang
+        - {}
+        - {}
+        - {}
+      CSD U1 IOSP match_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Inngang
+        - {}
+        - {}
+        - {}
+      CSD U1 Test PSP match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - text: Definer
+      CSD U1 Test PSP match_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - text: Definer
+      CSD U1 Test PSP match_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - text: Definer
+      CSD U1 Test define a computer:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U1 Test define a computer_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U1 Test define a computer_2022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U1 Test define problem:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U1 Test define problem_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U1 Test define problem_2022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       CSD U2 Design Project:
         content1: forklaring her
@@ -488,6 +639,183 @@ nn-NO:
         content1: forklaring her
       CSD U2 Lesson 6 Overview:
         content1: forklaring her
+      CSD U2 Test Classes:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test Classes_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test Classes_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test ContentStructureStyle:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U2 Test ContentStructureStyle_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U2 Test ContentStructureStyle_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U2 Test Copyright:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test Copyright_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test Copyright_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test Debug:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 Test Debug_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 Test Debug_pilot_2022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 Test HTML Usage:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U2 Test HTML Usage_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U2 Test HTML Usage_pilot_2022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U2 Test code styles:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U2 Test code styles_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U2 Test code styles_pilot_2022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U2 Test code stylesheet:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 Test code stylesheet_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 Test code stylesheet_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
       CSD U2 expand project:
         content1: forklaring her
       CSD U2 expand project_2018:
@@ -495,6 +823,32 @@ nn-NO:
       CSD U2 expand project_2018_2019:
         content1: forklaring her
       CSD U2 image debug match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 image debug match_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
         answers:
         - {}
         - {}
@@ -552,6 +906,10 @@ nn-NO:
         content1: forklaring her
       CSD U2 project guide_2018_2019:
         content1: forklaring her
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: forklaring her
+      CSD U2 project guide_2018_2019_pilot_2022:
+        content1: forklaring her
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -591,6 +949,32 @@ nn-NO:
         - {}
         - {}
         - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -618,9 +1002,29 @@ nn-NO:
         questions:
         - {}
         title: tittel
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: tittel
+      CSD U3 Boolean MC_2018_2019_pilot_2022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: tittel
       CSD U3 Card Examples_2018:
         content1: forklaring her
       CSD U3 Card Examples_2018_2019:
+        content1: forklaring her
+      CSD U3 Card Examples_2018_2019_pilot_2021:
         content1: forklaring her
       CSD U3 Functions Prediction define first:
         answers:
@@ -635,6 +1039,18 @@ nn-NO:
         - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
         answers:
         - {}
         - {}
@@ -691,6 +1107,22 @@ nn-NO:
         - {}
         questions:
         - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       CSD U3 Sprites intro predict multi:
         answers:
         - {}
@@ -709,6 +1141,174 @@ nn-NO:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test clean code:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Test clean code_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Test clean code_pilot_2022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Test comment:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Test comment_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Test comment_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Test debugging:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Test debugging_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Test debugging_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Test functions:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U3 Test functions_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U3 Test functions_pilot_2022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U3 Test planning:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Test planning_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Test planning_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Test variables:
+        answers:
+        - text: '20'
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test variables_pilot_2021:
+        answers:
+        - text: '20'
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test variables_pilot_2022:
+        answers:
+        - text: '20'
         - correct: true
         - {}
         - {}
@@ -743,11 +1343,35 @@ nn-NO:
         - {}
         - {}
         - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
         content1: forklaring her
       CSD U3 game intro_2018:
         content1: forklaring her
       CSD U3 game intro_2018_2019:
+        content1: forklaring her
+      CSD U3 game intro_2018_2019_pilot_2021:
         content1: forklaring her
       CSD U3 platform intro:
         content1: forklaring her
@@ -755,6 +1379,157 @@ nn-NO:
         content1: forklaring her
       CSD U3 platform intro_2018_2019:
         content1: forklaring her
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: forklaring her
+      CSD U3 platform intro_2018_2019_pilot_2022:
+        content1: forklaring her
+      CSD U4 test feature match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U4 test feature match_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U4 test feature match_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U4 test needs multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test needs multi_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test needs multi_2022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test prioritize multi:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test prioritize multi_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test prioritize multi_2022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test testing multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 test testing multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 test testing multi_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 wireframe test multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 wireframe test multi_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 wireframe test multi_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
       CSD U5 Encryption 1:
         content1: forklaring her
       CSD U5 Encryption 1_2018:
@@ -787,11 +1562,154 @@ nn-NO:
         content1: forklaring her
       CSD U5 student record_2018_2019:
         content1: forklaring her
+      CSD U5 test clean multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test clean multi_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test clean multi_2022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test crosstab multi:
+        answers:
+        - text: hund
+        - text: pingvin
+        - correct: true
+          text: frosk
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test crosstab multi_2021:
+        answers:
+        - text: hund
+        - text: pingvin
+        - correct: true
+          text: frosk
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test crosstab multi_2022:
+        answers:
+        - text: hund
+        - text: pingvin
+        - correct: true
+          text: frosk
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test datacount multi:
+        answers:
+        - correct: true
+          text: hund
+        - text: pingvin
+        - text: frosk
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test datacount multi_2021:
+        answers:
+        - correct: true
+          text: hund
+        - text: pingvin
+        - text: frosk
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test datacount multi_2022:
+        answers:
+        - correct: true
+          text: hund
+        - text: pingvin
+        - text: frosk
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test encoding multi2:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test encoding multi2_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test encoding multi2_2022:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test secure multi:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test secure multi_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test secure multi_2022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD U6 LED create intro:
         content1: forklaring her
       CSD U6 LED create intro_2018:
         content1: forklaring her
       CSD U6 LED create intro_2018_2019:
+        content1: forklaring her
+      CSD U6 LED create intro_2021:
         content1: forklaring her
       CSD U6 array multi:
         answers:
@@ -817,11 +1735,21 @@ nn-NO:
         - correct: true
         questions:
         - {}
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       CSD U6 final intro:
         content1: forklaring her
       CSD U6 final intro_2018:
         content1: forklaring her
       CSD U6 final intro_2018_2019:
+        content1: forklaring her
+      CSD U6 final intro_2021:
         content1: forklaring her
       CSD U6 setProperty predict multi:
         answers:
@@ -847,6 +1775,176 @@ nn-NO:
         - correct: true
         questions:
         - {}
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 test algorithms multi2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 test algorithms multi2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 test debugging multi:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test debugging multi_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test debugging multi_2022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test events multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 test events multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 test events multi_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 test hardware multi2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 test hardware multi2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 test hardware multi2_2022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 test parameters multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test parameters multi_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test parameters multi_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSP PD Example Question 1:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+      CSP PD Example Question 2:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+      Choose 2 Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CourseF_outbreak_story:
+        content1: forklaring her
+      CourseF_outbreak_story2:
+        content1: forklaring her
+      CourseF_outbreak_story2022_2022_pilot_-2022-2:
+        content1: forklaring her
+      CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: forklaring her
       Dance_Party_extras_intro:
         markdown: "# Dans vidare!\n\nFor del 2 skal du lage eit eige prosjekt. Det
           er ingen oppgåver her. I staden er det ei rekke prosjekt som viser ulike
@@ -959,6 +2057,14 @@ nn-NO:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
+      Eval Contracts F:
+        answers:
+        - ''
+      HappyMaps-Unplugged_2021:
+        markdown: |-
+          # Glade Kart
+
+          Lag en algoritme for å bevege en figur gjennom labyrinten
       Internet Simulator Setup:
         content1: forklaring her
       Internet Simulator Setup 2:
@@ -1155,12 +2261,22 @@ nn-NO:
       K-1 Word Search Multi 3:
         answers:
         - text: SETT
-        - text: KVADRAT
-          correct: true
+        - correct: true
+          text: KVADRAT
         - text: SØR
         questions:
         - text: Kva ord blir stava?
         title: Fleirval
+      Multi Horizontal Scroll Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       Multi-Screen Apps:
         content1: forklaring her
       New Challenge Introduction:
@@ -1189,6 +2305,8 @@ nn-NO:
       OPD-K5 Stage3aGo:
         content1: forklaring her
       OPD-K5 Stage3aGo_copy:
+        content1: forklaring her
+      OPD-K5 Stage3aGo_dani:
         content1: forklaring her
       OPD-K5 conditionals introduced:
         content1: forklaring her
@@ -1244,2432 +2362,6 @@ nn-NO:
         content1: forklaring her
       OPD-K5-projects-1:
         content1: forklaring her
-      Prepare for your presentation:
-        content1: forklaring her
-      'Technique: Frequency Analysis':
-        content1: forklaring her
-        markdown: "# Knekke erstatningskode\n\nDen beste teknikken for å knekke ein
-          tilfeldig erstatningskode er kjent som **frekvensanalyse** \n\nOmskrive
-          frå: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
-          **Frekvensanalyse** er ein teknikk som baserar seg på kor **ofte** (frekvens)
-          ulike bokstavar dukkar opp i engelsk versus andre språk.\n* Til dømes, i
-          ein del med engelsk tekst, er *E*, *T*, *A* og *O* mest vanleg, medan *Z*,
-          *Q* og *X* er sjeldne. På same måte er *TH*, *ER*, *ON*, and *AN* dei mest
-          vanlege bokstavane som står ved sidan av kvarandre.\n* Faktisk så er distribusjonen
-          av bokstavar ganske det same for nesten *alle* døme på engelsk tekst.\n\n\nVersjonen
-          på modulen for førre side er meint til å hjelpe deg å **knekke erstatningskode
-          gjennom frekvensanalyse**.\n\nVed å analysere frekvensen på bokstavar i
-          den krypterte meldinga samanlikna med frekvensen på bokstavar i ein typisk
-          engelsk tekst, kan du komme inn på kva noko av kartlegginga av bokstavane.
-          \ \n\nVerktøyet viser deg frekvensen av bokstavar i den krypterte teksten
-          (oransje) samanlikna med frekvensen frå typisk engelsk (blå).\n\n### Hint:
-          Kor startar ein?\n\n1. Finn dei korte orda og \"knekk\" dei først.  Kor
-          mange ord på ein bokstav kjenner du til? (\"a\"). Eit veldig vanleg ord
-          på tre bokstavar er \"the\".\n2. Når du har gjort det, kan du ha erstatningar
-          for nokre av dei mest vanlege bokstavane.  Du kan bruke intuisjon for å
-          sjå på andre ord med desse erstatningane og gitte vidare.\n3. Etter du berre
-          har funne nokre få bokstavar som er vanskelege å finne, kan resten komme
-          ganske kjapt.\n4. Samanlikning av frekvensen på bokstavar gir god innsikt
-          for å kunne gitte bra. \n\n### Prøv dette:\nAnimasjonen under viser nokon
-          som kjem i gang. Dette prøvde dei\n\n* Først sortere bokstavane etter frekvens.
-          \n* Identifisere eit par med bokstavar som kan kartlegge ordet `the`.  \nDet
-          er ein god start!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
-          Er tilfeldig erstatning bra?\n* Etter litt øving, kor lang tid tar det deg
-          å knekke ein tilfeldig erstatningskode?\n* Er dette bra eller ikkje?\n\n\n"
-      Terminology Recap:
-        content1: forklaring her
-        markdown: "# Ta pause og oppsummer \n\nMeldingar som er krypterte med **Cæsarkode**
-          er veldig lette å knekke, spesielt når du har eit dataverktøy. No som du
-          har litt øving med å knekke alfabetiske sifferkodar (ganske enkelt, sant?),
-          la oss prøve noko meir vanskeleg. \n\n**Oppsummer terminologi:**\n\n* **Kryptering**
-          – ein prosess der ein koder meldingar for å halde dei hemmelege, slik at
-          berre \"autoriserte\" kan lese det.\n* **Dekryptering** – ein prosess som
-          omgjer krypteringa, tar ei hemmeleg melding og reproduserar den orginale
-          teksten.\n* **Kode** – det generiske namnet for ein teknikk (eller algoritme)
-          som gjer krypteringa\n* **Cæsarkode** – ein krypteringsteknikk som shifter
-          på alfabetet etter nokre bokstavar.\n* **Knekke kryptering** – Når du prøver
-          å finne ei hemmeleg melding *utan* å vite alle spesifikasjonane i koden,
-          brøver du å **knekke** krypteringa. \n\nKlikk på Hald fram for å sjå **Neste
-          utfordring**...\n"
-      behaviors 1 predict:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - feedback: Feil
-        questions:
-        - {}
-      behaviors 1 predict_2020:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - feedback: Feil
-        questions:
-        - {}
-      behaviors 4 predict:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - feedback: Feil
-        questions:
-        - {}
-      behaviors 4 predict_2020:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - feedback: Feil
-        questions:
-        - {}
-      courseC_multi_artist_prog6_predict1:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseC_multi_artist_prog6_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseC_multi_artist_prog6_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseC_multi_artist_prog6_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1:
-        answers:
-        - text: '4'
-        - text: '12'
-          correct: true
-        - text: '15'
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2018:
-        answers:
-        - text: '4'
-        - text: '12'
-          correct: true
-        - text: '15'
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2018_2019:
-        answers:
-        - text: '4'
-        - text: '12'
-          correct: true
-        - text: '15'
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
-        answers:
-        - text: '4'
-        - text: '12'
-          correct: true
-        - text: '15'
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2018:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2018_2019:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2018:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2018_2019:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict1:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - text: Eg veit ikkje
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - text: Eg veit ikkje
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - text: Eg veit ikkje
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - text: Eg veit ikkje
-        questions:
-        - {}
-      courseC_multi_starWars_predict2:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2018:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2018_2019:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2018_2019_2020:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_binary8_predict1:
-        answers:
-        - text: A
-        - text: B
-        - text: C
-        - text: D
-          correct: true
-        questions:
-        - {}
-      courseD_multi_artist_binary8_predict1_2018:
-        answers:
-        - text: A
-        - text: B
-        - text: C
-        - text: D
-          correct: true
-        questions:
-        - {}
-      courseD_multi_artist_binary8_predict1_2018_2019:
-        answers:
-        - text: A
-        - text: B
-        - text: C
-        - text: D
-          correct: true
-        questions:
-        - {}
-      courseD_multi_artist_binary8_predict1_2018_2019_2020:
-        answers:
-        - text: A
-        - text: B
-        - text: C
-        - text: D
-          correct: true
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-        - text: C
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2018:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-        - text: C
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-        - text: C
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-        - text: C
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2018:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2018_2019:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_copy:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2018:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2018_2019:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2:
-        answers:
-        - text: '4'
-        - text: '8'
-          correct: true
-        - text: '12'
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2018:
-        answers:
-        - text: '4'
-        - text: '8'
-          correct: true
-        - text: '12'
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        answers:
-        - text: '4'
-        - text: '8'
-          correct: true
-        - text: '12'
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
-        answers:
-        - text: '4'
-        - text: '8'
-          correct: true
-        - text: '12'
-        - {}
-        questions:
-        - {}
-      courseD_multi_collector_debugging10_predict1:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_ramp13:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2018:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2018_2019:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2018_2019_2020:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2018:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2018_2019:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2018_2019_2020:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2018:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2018_2019:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_scrat_predict1:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_bee_functions_predict1:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2018:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2018_2019:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_copy:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      courseF_bee_variables_8a_2018:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_bee_variables_8a_2018_2019:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_bee_variables_8a_2018_2019_2020:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_for10_predict1:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_for10_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_for10_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_for10_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_fwp2_predict1:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2018:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2018_2019:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_conditionals1_predict1:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_conditionals7_predict2:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2018:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2018_2019:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_fwp9_predict1:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_playlab_variables4c_predictive1:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      coursee_prediction_artistfunction2:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      coursee_prediction_artistfunction2_2018:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      coursee_prediction_artistfunction2_2018_2019:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      coursee_prediction_artistfunction2_2018_2019_2020:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      csd-post-survey-2017-levelgroup-2018-2nd-semester:
-        title: CS Funns Slutt på Kursets Elevundersøkelse
-      csd-post-survey-levelgroup-2018:
-        title: CS Funns Slutt på Kursets Elevundersøkelse
-      csf_be_a_super_digital_citizen:
-        content1: forklaring her
-      csf_password_power-up:
-        content1: forklaring her
-      csf_putting_a_stop_to_online_meanness:
-        content1: forklaring her
-      grade2_multi_collector_A_predict1:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      grade2_multi_collector_A_predict1_2018:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      grade2_multi_collector_A_predict1_2018_2019:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      grade2_multi_collector_A_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      csd-pre-survey-2017-levelgroup:
-        title: CS Funns Før-Kurs' Studentundersøkelse
-      csd-pre-survey-2017-levelgroup_2018:
-        title: CS Funns Før-Kurs' Studentundersøkelse
-      csd-pre-survey-levelgroup_2019:
-        title: CS Funns Før-Kurs' Studentundersøkelse
-      outbreak_story:
-        content1: forklaring her
-      outbreak_story2:
-        content1: forklaring her
-      outbreak_freeplay_choice:
-        display_name: Gjer kva du vil
-      CourseF_outbreak_story:
-        content1: forklaring her
-      CourseF_outbreak_story2:
-        content1: forklaring her
-      OPD-K5 Stage3aGo_dani:
-        content1: forklaring her
-      courseC_multi_artist_prog6_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2021:
-        answers:
-        - text: '4'
-        - text: '12'
-          correct: true
-        - text: '15'
-        - text: '20'
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2021:
-        answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2021:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-        - text: C
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_dani:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2021:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2021:
-        answers:
-        - text: '4'
-        - text: '8'
-          correct: true
-        - text: '10'
-        - text: '12'
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2021:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_dance_events_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_dani:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      courseE_swim_fish_behavior_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseF_events_predict_multi:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseF_labels_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2021:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_sprites_predict_multi:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_predict_multi:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_stop:
-        content1: forklaring her
-      coursee_prediction_artistfunction2_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      csf_be_a_super_digital_citizen_2021:
-        content1: forklaring her
-      csf_password_power-up_2021:
-        content1: forklaring her
-      csf_putting_a_stop_to_online_meanness_2021:
-        content1: forklaring her
-      grade2_multi_collector_A_predict1_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      HappyMaps-Unplugged_2021:
-        markdown: |-
-          # Glade Kart
-
-          Lag en algoritme for å bevege en figur gjennom labyrinten
-      csf_safety_in_my_online_neighborhood_2021:
-        markdown: |-
-          # Mitt Nabolag på nettet
-
-          ## Hvordan beveger du deg trygt på nettet?
-      CSD Games Properties multi predict_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD Games Properties practice_2021:
-        display_name: Eigenskapar ved Sprite
-      CSD Header Size MC_2018_2019_pilot_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-      CSD U2 image debug match_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 project guide_2018_2019_pilot_2021:
-        content1: forklaring her
-      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Boolean MC_2018_2019_pilot_2021:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        title: tittel
-      CSD U3 Card Examples_2018_2019_pilot_2021:
-        content1: forklaring her
-      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U3 drawSprites placement match_2019_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 game intro_2018_2019_pilot_2021:
-        content1: forklaring her
-      CSD U3 platform intro_2018_2019_pilot_2021:
-        content1: forklaring her
-      CSD U6 LED create intro_2021:
-        content1: forklaring her
-      CSD U6 array multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U6 final intro_2021:
-        content1: forklaring her
-      CSD U6 setProperty predict multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      csd-pre-survey-levelgroup_21_22:
-        title: CS Funns Før-Kurs' Studentundersøkelse
-      Choose 2 Test:
-        answers:
-        - correct: true
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      Eval Contracts F:
-        answers:
-        - ''
-      Multi Horizontal Scroll Test:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      Submittable Multi:
-        answers:
-        - text: blå
-        - text: grøn
-        - {}
-        - {}
-        - correct: true
-        - text: raud
-        questions:
-        - {}
-      Test Contained Multi:
-        answers:
-        - text: '0'
-        - text: '1'
-        - text: '2'
-          correct: true
-        - text: '4'
-        questions:
-        - {}
-      allthethings_external_displayed_as_unplugged:
-        content1: forklaring her
-      allthethings_external_not_displayed_as_unplugged:
-        content1: forklaring her
-      contained_Choose_2_Test:
-        answers:
-        - correct: true
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      contained_Choose_2_Test_2:
-        answers:
-        - correct: true
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      contained_Happy_Maps_Multi 1:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - text: Kva for pil flyttar Flurb til skatten?
-        title: Fleirval
-      test questionless single multi:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD Games Properties multi predict_2022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD Games Properties practice_2022:
-        display_name: Eigenskapar ved Sprite
-      CSD Header Size MC_2018_2019_pilot_2022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-      CSD U1 IOSP match:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - text: Inngang
-        - {}
-        - {}
-        - {}
-      CSD U1 IOSP match_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - text: Inngang
-        - {}
-        - {}
-        - {}
-      CSD U1 IOSP match_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - text: Inngang
-        - {}
-        - {}
-        - {}
-      CSD U1 Test PSP match:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - text: Definer
-      CSD U1 Test PSP match_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - text: Definer
-      CSD U1 Test PSP match_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - text: Definer
-      CSD U1 Test define a computer:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U1 Test define a computer_2021:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U1 Test define a computer_2022:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U1 Test define problem:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U1 Test define problem_2021:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U1 Test define problem_2022:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Classes:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Classes_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Classes_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test ContentStructureStyle:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U2 Test ContentStructureStyle_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U2 Test ContentStructureStyle_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Copyright:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Copyright_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Copyright_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Debug:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 Test Debug_pilot_2021:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 Test Debug_pilot_2022:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 Test HTML Usage:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U2 Test HTML Usage_pilot_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U2 Test HTML Usage_pilot_2022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U2 Test code styles:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U2 Test code styles_pilot_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U2 Test code styles_pilot_2022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U2 Test code stylesheet:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
-      CSD U2 Test code stylesheet_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
-      CSD U2 Test code stylesheet_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
-      CSD U2 image debug match_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 project guide_2018_2019_pilot_2022:
-        content1: forklaring her
-      CSD U3 - conditionals - Matching_2018_2019_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Boolean MC_2018_2019_pilot_2022:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        title: tittel
-      CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U3 Test clean code:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U3 Test clean code_pilot_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U3 Test clean code_pilot_2022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U3 Test comment:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Test comment_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Test comment_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Test debugging:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-      CSD U3 Test debugging_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-      CSD U3 Test debugging_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-      CSD U3 Test functions:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U3 Test functions_pilot_2021:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U3 Test functions_pilot_2022:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U3 Test planning:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U3 Test planning_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U3 Test planning_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U3 Test variables:
-        answers:
-        - text: '20'
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test variables_pilot_2021:
-        answers:
-        - text: '20'
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test variables_pilot_2022:
-        answers:
-        - text: '20'
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 drawSprites placement match_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 platform intro_2018_2019_pilot_2022:
-        content1: forklaring her
-      CSD U4 test feature match:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U4 test feature match_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U4 test feature match_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U4 test needs multi:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test needs multi_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test needs multi_2022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test prioritize multi:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test prioritize multi_2021:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test prioritize multi_2022:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test testing multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U4 test testing multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U4 test testing multi_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U4 wireframe test multi:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U4 wireframe test multi_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U4 wireframe test multi_2022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U5 test clean multi:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test clean multi_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test clean multi_2022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test crosstab multi:
-        answers:
-        - text: hund
-        - text: pingvin
-        - text: frosk
-          correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test crosstab multi_2021:
-        answers:
-        - text: hund
-        - text: pingvin
-        - text: frosk
-          correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test crosstab multi_2022:
-        answers:
-        - text: hund
-        - text: pingvin
-        - text: frosk
-          correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test datacount multi:
-        answers:
-        - text: hund
-          correct: true
-        - text: pingvin
-        - text: frosk
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test datacount multi_2021:
-        answers:
-        - text: hund
-          correct: true
-        - text: pingvin
-        - text: frosk
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test datacount multi_2022:
-        answers:
-        - text: hund
-          correct: true
-        - text: pingvin
-        - text: frosk
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test encoding multi2:
-        answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test encoding multi2_2021:
-        answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test encoding multi2_2022:
-        answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test secure multi:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test secure multi_2021:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test secure multi_2022:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 setProperty predict multi_2222:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      CSD U6 test algorithms multi2:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U6 test algorithms multi2_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U6 test debugging multi:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test debugging multi_2021:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test debugging multi_2022:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test events multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U6 test events multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U6 test events multi_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U6 test hardware multi2:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U6 test hardware multi2_2021:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U6 test hardware multi2_2022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      CSD U6 test parameters multi:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test parameters multi_2021:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test parameters multi_2022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      CSP PD Example Question 1:
-        answers:
-        - {}
-        - {}
-        questions:
-        - {}
-      CSP PD Example Question 2:
-        answers:
-        - {}
-        - {}
-        questions:
-        - {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -3734,6 +2426,8 @@ nn-NO:
         - {}
         questions:
         - {}
+      Prepare for your presentation:
+        content1: forklaring her
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -3752,6 +2446,79 @@ nn-NO:
         - correct: true
         - correct: true
         - correct: true
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: blå
+        - text: grøn
+        - {}
+        - {}
+        - correct: true
+        - text: raud
+        questions:
+        - {}
+      'Technique: Frequency Analysis':
+        content1: forklaring her
+        markdown: "# Knekke erstatningskode\n\nDen beste teknikken for å knekke ein
+          tilfeldig erstatningskode er kjent som **frekvensanalyse** \n\nOmskrive
+          frå: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
+          **Frekvensanalyse** er ein teknikk som baserar seg på kor **ofte** (frekvens)
+          ulike bokstavar dukkar opp i engelsk versus andre språk.\n* Til dømes, i
+          ein del med engelsk tekst, er *E*, *T*, *A* og *O* mest vanleg, medan *Z*,
+          *Q* og *X* er sjeldne. På same måte er *TH*, *ER*, *ON*, and *AN* dei mest
+          vanlege bokstavane som står ved sidan av kvarandre.\n* Faktisk så er distribusjonen
+          av bokstavar ganske det same for nesten *alle* døme på engelsk tekst.\n\n\nVersjonen
+          på modulen for førre side er meint til å hjelpe deg å **knekke erstatningskode
+          gjennom frekvensanalyse**.\n\nVed å analysere frekvensen på bokstavar i
+          den krypterte meldinga samanlikna med frekvensen på bokstavar i ein typisk
+          engelsk tekst, kan du komme inn på kva noko av kartlegginga av bokstavane.
+          \ \n\nVerktøyet viser deg frekvensen av bokstavar i den krypterte teksten
+          (oransje) samanlikna med frekvensen frå typisk engelsk (blå).\n\n### Hint:
+          Kor startar ein?\n\n1. Finn dei korte orda og \"knekk\" dei først.  Kor
+          mange ord på ein bokstav kjenner du til? (\"a\"). Eit veldig vanleg ord
+          på tre bokstavar er \"the\".\n2. Når du har gjort det, kan du ha erstatningar
+          for nokre av dei mest vanlege bokstavane.  Du kan bruke intuisjon for å
+          sjå på andre ord med desse erstatningane og gitte vidare.\n3. Etter du berre
+          har funne nokre få bokstavar som er vanskelege å finne, kan resten komme
+          ganske kjapt.\n4. Samanlikning av frekvensen på bokstavar gir god innsikt
+          for å kunne gitte bra. \n\n### Prøv dette:\nAnimasjonen under viser nokon
+          som kjem i gang. Dette prøvde dei\n\n* Først sortere bokstavane etter frekvens.
+          \n* Identifisere eit par med bokstavar som kan kartlegge ordet `the`.  \nDet
+          er ein god start!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Er tilfeldig erstatning bra?\n* Etter litt øving, kor lang tid tar det deg
+          å knekke ein tilfeldig erstatningskode?\n* Er dette bra eller ikkje?\n\n\n"
+      Terminology Recap:
+        content1: forklaring her
+        markdown: "# Ta pause og oppsummer \n\nMeldingar som er krypterte med **Cæsarkode**
+          er veldig lette å knekke, spesielt når du har eit dataverktøy. No som du
+          har litt øving med å knekke alfabetiske sifferkodar (ganske enkelt, sant?),
+          la oss prøve noko meir vanskeleg. \n\n**Oppsummer terminologi:**\n\n* **Kryptering**
+          – ein prosess der ein koder meldingar for å halde dei hemmelege, slik at
+          berre \"autoriserte\" kan lese det.\n* **Dekryptering** – ein prosess som
+          omgjer krypteringa, tar ei hemmeleg melding og reproduserar den orginale
+          teksten.\n* **Kode** – det generiske namnet for ein teknikk (eller algoritme)
+          som gjer krypteringa\n* **Cæsarkode** – ein krypteringsteknikk som shifter
+          på alfabetet etter nokre bokstavar.\n* **Knekke kryptering** – Når du prøver
+          å finne ei hemmeleg melding *utan* å vite alle spesifikasjonane i koden,
+          brøver du å **knekke** krypteringa. \n\nKlikk på Hald fram for å sjå **Neste
+          utfordring**...\n"
+      Test Contained Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - correct: true
+          text: '2'
+        - text: '4'
+        questions:
+        - {}
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - correct: true
+          text: '2'
+        - text: '4'
         questions:
         - {}
       aiml-ch1-pulse-survey-q1_2021:
@@ -4013,6 +2780,10 @@ nn-NO:
         - correct: true
         questions:
         - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: forklaring her
+      allthethings_external_not_displayed_as_unplugged:
+        content1: forklaring her
       asked-to-problem-solve:
         answers:
         - correct: true
@@ -4031,6 +2802,38 @@ nn-NO:
         - correct: true
         - correct: true
         - correct: true
+        questions:
+        - {}
+      behaviors 1 predict:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Feil
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Feil
+        questions:
+        - {}
+      behaviors 4 predict:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Feil
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Feil
         questions:
         - {}
       comfortable-in-cs-class:
@@ -4066,22 +2869,1389 @@ nn-NO:
         - correct: true
         questions:
         - {}
+      contained_Choose_2_Test:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Kva for pil flyttar Flurb til skatten?
+        title: Fleirval
       counselor_encourage:
         answers:
-        - text: ja
-          correct: true
-        - text: nei
-          correct: true
+        - correct: true
+          text: ja
+        - correct: true
+          text: nei
         questions:
         - {}
       counselor_encourage_2022:
         answers:
-        - text: ja
-          correct: true
-        - text: nei
-          correct: true
+        - correct: true
+          text: ja
+        - correct: true
+          text: nei
         questions:
         - {}
+      courseC_multi_artist_prog6_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '12'
+        - text: '15'
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '12'
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '12'
+        - text: '15'
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '12'
+        - text: '15'
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '12'
+        - text: '15'
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '12'
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Eg veit ikkje
+        questions:
+        - {}
+      courseC_multi_starWars_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Eg veit ikkje
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Eg veit ikkje
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Eg veit ikkje
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict22022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - correct: true
+          text: D
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - correct: true
+          text: D
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - correct: true
+          text: D
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - correct: true
+          text: D
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - correct: true
+          text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - correct: true
+          text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        answers:
+        - correct: true
+          text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+        - correct: true
+          text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+          text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - correct: true
+          text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict22022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '8'
+        - text: '12'
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '8'
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '8'
+        - text: '12'
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '8'
+        - text: '12'
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '8'
+        - text: '12'
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '8'
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_collector_debugging10_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_ramp13:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict22022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict22022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_scrat_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_bee_functions_predict1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_fwp2_predict1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_conditionals1_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_conditionals7_predict2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_fwp9_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_playlab_variables4c_predictive1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict2_multi2022_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: forklaring her
+      courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: forklaring her
+      coursee_prediction_artistfunction2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: CS Funns Slutt på Kursets Elevundersøkelse
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -4418,118 +4588,118 @@ nn-NO:
         - {}
       csd-post-survey-2018-topic-ai:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - {}
       csd-post-survey-2018-topic-cryptocurrency:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - {}
       csd-post-survey-2018-topic-cybersecurity:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - text: Datasikkerheit
       csd-post-survey-2018-topic-databases:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - {}
       csd-post-survey-2018-topic-datascience:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - {}
       csd-post-survey-2018-topic-gamedev:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - {}
       csd-post-survey-2018-topic-hardware:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - {}
       csd-post-survey-2018-topic-internet:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - {}
       csd-post-survey-2018-topic-mobile:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - {}
       csd-post-survey-2018-topic-parallel:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - {}
       csd-post-survey-2018-topic-programming:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - {}
       csd-post-survey-2018-topic-robotics:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - text: Robotikk
       csd-post-survey-2018-topic-web:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - {}
@@ -4588,6 +4758,8 @@ nn-NO:
         - correct: true
         questions:
         - {}
+      csd-post-survey-levelgroup-2018:
+        title: CS Funns Slutt på Kursets Elevundersøkelse
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -4739,6 +4911,14 @@ nn-NO:
         content1: forklaring her
       csd-post-survey-unit6-preamble:
         content1: forklaring her
+      csd-pre-survey-2017-levelgroup:
+        title: CS Funns Før-Kurs' Studentundersøkelse
+      csd-pre-survey-2017-levelgroup_2018:
+        title: CS Funns Før-Kurs' Studentundersøkelse
+      csd-pre-survey-levelgroup_2019:
+        title: CS Funns Før-Kurs' Studentundersøkelse
+      csd-pre-survey-levelgroup_21_22:
+        title: CS Funns Før-Kurs' Studentundersøkelse
       csd-pre-survey-levelgroup_21_22_2022:
         title: CS Funns Før-Kurs' Studentundersøkelse
       csd-pulse-check-survey-1-q1 U1Ch2:
@@ -7216,6 +7396,29 @@ nn-NO:
         - correct: true
         questions:
         - {}
+      csf_be_a_super_digital_citizen:
+        content1: forklaring her
+      csf_be_a_super_digital_citizen2022:
+        content1: forklaring her
+      csf_be_a_super_digital_citizen_2021:
+        content1: forklaring her
+      csf_password_power-up:
+        content1: forklaring her
+      csf_password_power-up2022:
+        content1: forklaring her
+      csf_password_power-up_2021:
+        content1: forklaring her
+      csf_putting_a_stop_to_online_meanness:
+        content1: forklaring her
+      csf_putting_a_stop_to_online_meanness2022:
+        content1: forklaring her
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: forklaring her
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # Mitt Nabolag på nettet
+
+          ## Hvordan beveger du deg trygt på nettet?
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -8411,34 +8614,34 @@ nn-NO:
         - {}
       csp-pre-survey-2017-q37:
         answers:
-        - text: ja
-          correct: true
-        - text: nei
-          correct: true
+        - correct: true
+          text: ja
+        - correct: true
+          text: nei
         questions:
         - {}
       csp-pre-survey-2017-q37_2018:
         answers:
-        - text: ja
-          correct: true
-        - text: nei
-          correct: true
+        - correct: true
+          text: ja
+        - correct: true
+          text: nei
         questions:
         - {}
       csp-pre-survey-2017-q39:
         answers:
-        - text: ja
-          correct: true
-        - text: nei
-          correct: true
+        - correct: true
+          text: ja
+        - correct: true
+          text: nei
         questions:
         - {}
       csp-pre-survey-2017-q39_2018:
         answers:
-        - text: ja
-          correct: true
-        - text: nei
-          correct: true
+        - correct: true
+          text: ja
+        - correct: true
+          text: nei
         questions:
         - {}
       csp-pre-survey-2017-q3_2018:
@@ -8491,8 +8694,8 @@ nn-NO:
         - correct: true
         - correct: true
         - correct: true
-        - text: Anna
-          correct: true
+        - correct: true
+          text: Anna
         - correct: true
         questions:
         - {}
@@ -8502,8 +8705,8 @@ nn-NO:
         - correct: true
         - correct: true
         - correct: true
-        - text: Anna
-          correct: true
+        - correct: true
+          text: Anna
         - correct: true
         questions:
         - {}
@@ -8726,18 +8929,66 @@ nn-NO:
         - {}
       family_encourage:
         answers:
-        - text: ja
-          correct: true
-        - text: nei
-          correct: true
+        - correct: true
+          text: ja
+        - correct: true
+          text: nei
         questions:
         - {}
       family_encourage_2022:
         answers:
-        - text: ja
-          correct: true
-        - text: nei
-          correct: true
+        - correct: true
+          text: ja
+        - correct: true
+          text: nei
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - {}
       how-often-consider-alternative-approaches-2019:
@@ -8905,6 +9156,12 @@ nn-NO:
         - correct: true
         questions:
         - {}
+      outbreak_freeplay_choice:
+        display_name: Gjer kva du vil
+      outbreak_story:
+        content1: forklaring her
+      outbreak_story2:
+        content1: forklaring her
       outside-school-cs:
         answers:
         - correct: true
@@ -9086,18 +9343,18 @@ nn-NO:
         - {}
       pre-assessment survey q24:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         questions:
         - {}
       pre-assessment survey q26:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         questions:
         - {}
       pre-assessment survey q27:
@@ -9106,37 +9363,37 @@ nn-NO:
         - correct: true
         - correct: true
         - correct: true
-        - text: Anna
-          correct: true
+        - correct: true
+          text: Anna
         - correct: true
         questions:
         - {}
       pre-assessment survey q28:
         answers:
-        - text: '8'
-          correct: true
-        - text: '9'
-          correct: true
-        - text: '10'
-          correct: true
-        - text: '11'
-          correct: true
-        - text: '12'
-          correct: true
-        - text: Anna
-          correct: true
+        - correct: true
+          text: '8'
+        - correct: true
+          text: '9'
+        - correct: true
+          text: '10'
+        - correct: true
+          text: '11'
+        - correct: true
+          text: '12'
+        - correct: true
+          text: Anna
         questions:
         - {}
       pre-assessment survey q29:
         answers:
-        - text: Mann
-          correct: true
-        - text: Kvinne
-          correct: true
-        - text: Anna
-          correct: true
-        - text: Foretrekker å ikkje svare
-          correct: true
+        - correct: true
+          text: Mann
+        - correct: true
+          text: Kvinne
+        - correct: true
+          text: Anna
+        - correct: true
+          text: Foretrekker å ikkje svare
         questions:
         - {}
       pre-assessment survey q3:
@@ -9152,19 +9409,19 @@ nn-NO:
       pre-assessment survey q30:
         answers:
         - correct: true
-        - text: Asiatisk
-          correct: true
-        - text: Afrikansk
-          correct: true
+        - correct: true
+          text: Asiatisk
+        - correct: true
+          text: Afrikansk
         - correct: true
         - correct: true
-        - text: Kvit
-          correct: true
         - correct: true
-        - text: Anna
-          correct: true
-        - text: Foretrekker å ikkje svare
-          correct: true
+          text: Kvit
+        - correct: true
+        - correct: true
+          text: Anna
+        - correct: true
+          text: Foretrekker å ikkje svare
         questions:
         - {}
       pre-assessment survey q4:
@@ -9279,34 +9536,34 @@ nn-NO:
         - {}
       someone_else_encourage:
         answers:
-        - text: ja
-          correct: true
-        - text: nei
-          correct: true
+        - correct: true
+          text: ja
+        - correct: true
+          text: nei
         questions:
         - {}
       someone_else_encourage_2022:
         answers:
-        - text: ja
-          correct: true
-        - text: nei
-          correct: true
+        - correct: true
+          text: ja
+        - correct: true
+          text: nei
         questions:
         - {}
       taken-other-code-org:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
-        - text: Eg veit ikkje
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
+        - correct: true
+          text: Eg veit ikkje
         questions:
         - {}
       taken-other-cs:
         answers:
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Nei
         - correct: true
         - correct: true
         - correct: true
@@ -9314,26 +9571,26 @@ nn-NO:
         - {}
       teacher_encourage:
         answers:
-        - text: ja
-          correct: true
-        - text: nei
-          correct: true
+        - correct: true
+          text: ja
+        - correct: true
+          text: nei
         questions:
         - {}
       teacher_encourage_2022:
         answers:
-        - text: ja
-          correct: true
-        - text: nei
-          correct: true
+        - correct: true
+          text: ja
+        - correct: true
+          text: nei
         questions:
         - {}
       test anonymous student survey educational:
         answers:
-        - text: Ja
-          correct: true
-        - text: Nei
-          correct: true
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nei
         - correct: true
         questions:
         - {}
@@ -9344,6 +9601,22 @@ nn-NO:
         - correct: true
         - correct: true
         - correct: true
+        questions:
+        - {}
+      test questionless single multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
         questions:
         - {}
       will-be-myself-in-cs:
@@ -9410,261 +9683,5 @@ nn-NO:
         - correct: true
         - correct: true
         - correct: true
-        questions:
-        - {}
-      CourseF_outbreak_story2022_2022_pilot_-2022-2:
-        content1: forklaring her
-      CourseF_outbreak_story22022_2022_pilot_-2022-2:
-        content1: forklaring her
-      courseF_events_predict_multi2022_2022_pilot_-2022-2:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseF_groups_predict_multi_2022_pilot_-2022-2:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_labels_predict_multi2022_2022_pilot_-2022-2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables2_predict2_multi2022_-2022-2:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseF_variables_predict_multi2022_2022_pilot_-2022-2:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_stop2022_2022_pilot_-2022-2:
-        content1: forklaring her
-      courseC_multi_artist_prog6_predict12022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict12022:
-        answers:
-        - text: '4'
-        - text: '12'
-          correct: true
-        - text: '15'
-        - text: '20'
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict12022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict12022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict12022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict22022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict12022:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-        - text: C
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict12022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict22022:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict12022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict22022:
-        answers:
-        - text: '4'
-        - text: '8'
-          correct: true
-        - text: '10'
-        - text: '12'
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict12022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict22022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict12022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict22022:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict12022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict2022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        questions:
-        - {}
-      courseE_swim_fish_behavior_predict12022:
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict12022:
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict12022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      coursee_prediction_artistfunction22022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        questions:
-        - {}
-      csf_be_a_super_digital_citizen2022:
-        content1: forklaring her
-      csf_password_power-up2022:
-        content1: forklaring her
-      csf_putting_a_stop_to_online_meanness2022:
-        content1: forklaring her
-      grade2_multi_collector_A_predict12022:
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
         questions:
         - {}

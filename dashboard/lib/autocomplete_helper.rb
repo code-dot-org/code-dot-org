@@ -12,13 +12,13 @@ class AutocompleteHelper
   # @param limit [Integer] The specified limit.
   # @return [Integer] The bounded limit.
   def self.format_limit(limit)
-    return [MIN_LIMIT, [limit.to_i, MAX_LIMIT].min].max
+    return limit.to_i.clamp(MIN_LIMIT, MAX_LIMIT)
   end
 
   def self.get_query_terms(query)
-    query.strip.split(/\s+|\W+/).map do |w|
+    query.strip.split(/\s+|\W+/).filter_map do |w|
       w.upcase.presence
-    end.compact
+    end
   end
 
   # Formats the query string for boolean full-text search.

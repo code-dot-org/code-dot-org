@@ -104,12 +104,6 @@ header.build = function (
     currentPageNumber
   );
 
-  // Store the current level ID in the progress redux handler.
-  // This is important for levels which don't require reloads between
-  // other levels, since the initial URL determines where we start
-  // in a progression.
-  setCurrentLevelId(currentLevelId);
-
   // Set up a navigation handler, in case we contain levels that don't
   // require a page reload when switching between them.
   setupNavigationHandler(lessonData);
@@ -117,10 +111,9 @@ header.build = function (
   // Hold off on rendering HeaderMiddle.  This will allow the "app load"
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
-  const store = getStore();
   $(document).ready(function () {
     ReactDOM.render(
-      <Provider store={store}>
+      <Provider store={getStore()}>
         <HeaderMiddle
           scriptNameData={scriptNameData}
           lessonData={lessonData}
@@ -140,9 +133,14 @@ header.build = function (
   });
 };
 
-header.buildProjectInfoOnly = function () {
+header.buildProjectInfoOnly = function (currentLevelId) {
+  const store = getStore();
+
+  // Store the current level ID in the progressRedux store.
+  store.dispatch(setCurrentLevelId(currentLevelId));
+
   ReactDOM.render(
-    <Provider store={getStore()}>
+    <Provider store={store}>
       <HeaderMiddle projectInfoOnly={true} />
     </Provider>,
     document.querySelector('.header_level')

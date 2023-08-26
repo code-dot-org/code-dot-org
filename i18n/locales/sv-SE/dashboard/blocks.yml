@@ -2163,18 +2163,12 @@ sv:
         options:
           PORTION:
             '1': alla
-            '0.75': most
-            '0.5': half of
-            '0.25': few
           RATE:
             '"immediately"': omedelbart
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': alla
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} säger {SPEECH}"
       adaptations_adaptationBehaviors:
@@ -2323,6 +2317,21 @@ sv:
           DIR:
             right: höger ↻
             left: vänster ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: tryck {TEXT}
       storylab_setForegroundEffect2:
         options:
           EFFECT:

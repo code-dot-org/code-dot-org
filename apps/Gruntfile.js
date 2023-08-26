@@ -31,7 +31,7 @@ module.exports = function (grunt) {
     const loadContext = isDirectory
       ? `let testsContext = require.context(${JSON.stringify(
           path.resolve(process.env.mocha_entry)
-        )}, true, /\\.jsx?$/);`
+        )}, true, /\\.[j|t]sx?$/);`
       : '';
     const runTests = isDirectory
       ? 'testsContext.keys().forEach(testsContext);'
@@ -85,12 +85,12 @@ describe('entry tests', () => {
     'flappy',
     'javalab',
     'gamelab',
-    'spritelab',
     'jigsaw',
+    'lab2',
     'maze',
-    'music',
     'netsim',
     'poetry',
+    'spritelab',
     'studio',
     'turtle',
     'weblab',
@@ -171,6 +171,12 @@ describe('entry tests', () => {
           src: ['**'],
           //TODO: Would be preferrable to separate Blockly media.
           dest: 'build/package/media',
+        },
+        {
+          expand: true,
+          cwd: 'node_modules/blockly/media',
+          src: ['**'],
+          dest: 'build/package/media/google_blockly',
         },
         {
           expand: true,
@@ -319,13 +325,6 @@ describe('entry tests', () => {
           },
         },
       ],
-    },
-  };
-
-  config.ts = {
-    default: {
-      tsconfig: './tsconfig.json',
-      src: ['./src/**/*.ts', './src/**/*.tsx'],
     },
   };
 
@@ -602,6 +601,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
     'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
     'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
+    'policy_compliance/child_account_consent':
+      './src/sites/studio/pages/policy_compliance/child_account_consent.js',
     'print_certificates/batch':
       './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
@@ -612,6 +613,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_environments/show.js',
     'programming_expressions/show':
       './src/sites/studio/pages/programming_expressions/show.js',
+    'sessions/lockout': './src/sites/studio/pages/sessions/lockout.js',
     'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
     'devise/registrations/_sign_up':
       './src/sites/studio/pages/devise/registrations/_sign_up.js',
@@ -738,6 +740,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
     'levels/editors/fields/_validation_code':
       './src/sites/studio/pages/levels/editors/fields/_validation_code.js',
+    'levels/editors/fields/_validations':
+      './src/sites/studio/pages/levels/editors/fields/_validations.js',
     'levels/editors/fields/_video':
       './src/sites/studio/pages/levels/editors/fields/_video.js',
     'levels/editors/_gamelab':
@@ -768,6 +772,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/reference_guides/edit_all.js',
     'programming_expressions/index':
       './src/sites/studio/pages/programming_expressions/index.js',
+    'rubrics/new': './src/sites/studio/pages/rubrics/new.js',
+    'rubrics/edit': './src/sites/studio/pages/rubrics/edit.js',
     'sections/new': './src/sites/studio/pages/sections/new.js',
     'sections/edit': './src/sites/studio/pages/sections/edit.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
@@ -790,8 +796,6 @@ describe('entry tests', () => {
   var pegasusEntries = {
     // code.org
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
-    'code.org/public/educate/curriculum/courses':
-      './src/sites/code.org/pages/public/educate/curriculum/courses.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
     'code.org/public/teacher-dashboard/index':
@@ -808,6 +812,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/share_privacy.js',
     'code.org/views/theme_common_head_after':
       './src/sites/code.org/pages/views/theme_common_head_after.js',
+    'code.org/views/theme_google_analytics':
+      './src/sites/code.org/pages/views/theme_google_analytics.js',
     'code.org/views/workshop_search':
       './src/sites/code.org/pages/views/workshop_search.js',
     'code.org/views/amazon_future_engineer':
@@ -825,6 +831,8 @@ describe('entry tests', () => {
       './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
     'hourofcode.com/views/hoc_events_map':
       './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
+    'hourofcode.com/views/theme_google_analytics':
+      './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
 
     // shared between code.org and hourofcode.com
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
@@ -1261,7 +1269,6 @@ describe('entry tests', () => {
     watch: {
       tasks: [
         'watch',
-        'ts',
         envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch',
       ],
       options: {

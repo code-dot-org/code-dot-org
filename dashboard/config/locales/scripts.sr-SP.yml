@@ -3,136 +3,74 @@ sr:
   data:
     script:
       name:
-        course1:
-          title: Курс 1
-          description: Почни са првим курсем за ученике који су тек научили да читају.
-            Препоручујемо за узраст до првог разреда.
-          description_short: Курс је намењен узрасту од 4 до 6 година.
-          description_audience: Узраст од 4 до 6 година
-          student_description: Почни са првим курсем за ученике који су тек научили
-            да читају. Препоручујемо за узраст до првог разреда.
-        course2:
-          title: Курс 2
-          description: Курс 2 могу да раде ученици који знају да читају и немају искуства
-            са програмирањем. У овом курсу ученици ће писати програме који решавају
-            проблеме и развијати интерактивне игре и приче које могу да деле са другима.
-            Препоручено за ученике до петог разреда.
-          description_short: Курс 2 могу да раде ученици који знају да читају .
-          description_audience: Ages 6-18
-          student_description: Курс 2 могу да раде ученици који знају да читају и
-            немају искуства са програмирањем. У овом курсу ученици ће писати програме
-            који решавају проблеме и развијати интерактивне игре и приче које могу
-            да деле са другима. Препоручено за ученике до петог разреда.
-        course3:
-          title: Курс 3
-          description: Курс 3 је дизајниран за ученике који су прошли курс 2. До краја
-            овог курса, студенти стварају интерактивне приче и игре могу да деле са
-            другима. Препоручује се за разреде 4-5.
-          description_short: Курс 3 је наставак курса 2.
-          description_audience: За године од 8 до 18
-          student_description: Курс 3 је дизајниран за ученике који су прошли курс
-            2. До краја овог курса, студенти стварају интерактивне приче и игре могу
-            да деле са другима. Препоручује се за разреде 4-5.
-        playlab:
-          title: Играоница
-          description: Направи причу или игру у Играоници!
-          description_short: Направи причу или игру у Играоници!
-          student_description: Направи причу или игру у Играоници!
-        artist:
-          title: Уметник
-          description: Цртај слике са уметником!
-          description_short: Цртај слике са уметником!
-          student_description: Цртај слике са уметником!
-        hourofcode:
-          description: Испробај основе рачунарских наука са љутим птичицама, цвећем
-            против зомбија, и Скречом из леденог доба!
-          description_short: Try the basics of computer science with many fun characters!
-          student_description: Испробај основе рачунарских наука са љутим птичицама,
-            цвећем против зомбија, и Скречом из леденог доба!
-        frozen:
-          title: Програмирај са Аном и Елзом
-          description: Хајде да искористимо програмирање да би се придружили Ани и
-            Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце
-            док клижете по леду и направићете зимску чаролију коју можете поделити
-            са својим пријатељима!
-          description_short: Хајде да искористимо програмирање да би се придружили
-            Ани и Елзи у истраживању магије и лепоте леда.
-          student_description: Хајде да искористимо програмирање да би се придружили
-            Ани и Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце
-            док клижете по леду и направићете зимску чаролију коју можете поделити
-            са својим пријатељима!
-        course4:
-          title: Course 4
-          description: Курс 4 је направљен за ученике који су прошли курсеве 2 и 3.
-            Ученици ће научити како да решавају сложеније проблеме док уче како да
-            комбинују различите наредбе којима могу да решавају различите проблеме.
-            Када заврше курс 4, ученици ће бити способни да праве програме са понављањима
-            (петљама), функцијама са параметрима, итд. Препоручено за ученике од 4.
-            до 8. разреда.
-          description_short: Ученици који пробају курс 4 би требало пре тога да прођу
-            курсеве 2 и 3.
+        20-hour:
+          description: Овај 20-часовни  курс представља срж компјутерских наука и
+            програмерских основа. Курс је дизајниран за употребу у учионицама за разреде
+            К-8, али је забавно учити у било којем животном периоду.
           description_audience: Узраст од 10 до 18 година
-          student_description: Курс 4 је направљен за ученике који су прошли курсеве
-            2 и 3. Ученици ће научити како да решавају сложеније проблеме док уче
-            како да комбинују различите наредбе којима могу да решавају различите
-            проблеме. Када заврше курс 4, ученици ће бити способни да праве програме
-            са понављањима (петљама), функцијама са параметрима, итд. Препоручено
-            за ученике од 4. до 8. разреда.
+          description_short: This 20-hour course covers the core computer science
+            and programming concepts in courses 2-4.
+          student_description: Овај 20-часовни  курс представља срж компјутерских
+            наука и програмерских основа. Курс је дизајниран за употребу у учионицама
+            за разреде К-8, али је забавно учити у било којем животном периоду.
+          title: Accelerated Intro to CS Course
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: Отклањање грешака
+            lessonGroup-3:
+              display_name: Променљиве
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Час кода
+        CSDU3-Draft:
+          description_short: Programming
+        CSF_Secret_Sample:
+          description_audience: За године од 8 до 18
+        CSF_Secret_Sample_Story:
+          description_audience: За године од 8 до 18+
         Course4pre:
-          title: Предуслови за курс 4
           description: A brief rampup of concepts for students who have not taken
             Course 2 and 3.
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
           student_description: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
-        algebra:
-          title: Наука информатике у Алгебри
-        infinity:
-          title: Дизнијева Играоница
-          description: Креирај приче и игре са Дизнијевим ликовима у Играоници.
-          description_short: Креирај приче и игре са Дизнијевим ликовима у Играоници.
-          student_description: Креирај приче и игре са Дизнијевим ликовима у Играоници.
-        20-hour:
-          title: Accelerated Intro to CS Course
-          description: Овај 20-часовни  курс представља срж компјутерских наука и
-            програмерских основа. Курс је дизајниран за употребу у учионицама за разреде
-            К-8, али је забавно учити у било којем животном периоду.
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
-          description_audience: Узраст од 10 до 18 година
-          student_description: Овај 20-часовни  курс представља срж компјутерских
-            наука и програмерских основа. Курс је дизајниран за употребу у учионицама
-            за разреде К-8, али је забавно учити у било којем животном периоду.
-        edit-code:
-          title: Уреди код
-          description: Уреди код
-          description_short: Уреди код
-          student_description: Уреди код
-        events:
-          title: Догађаји
-          description: Догађаји
-          description_short: Догађаји
-          student_description: Догађаји
-        flappy:
-          description_short: Направи своју Флапи игру за мање од 10 минута!
-        jigsaw:
-          title: Слагалица
-          description: Пробај нашу слагалицу.
-          description_short: Пробај нашу слагалицу.
-          student_description: Пробај нашу слагалицу.
-        step:
-          title: Корак
-          description: Step tutorial
-          description_short: Step tutorial
-          student_description: Step tutorial
+          title: Предуслови за курс 4
+        ECSPD2:
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          student_description: 'Phase 2 Online: Blended Summer Study'
+        ECSPD2-NexTech:
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          student_description: 'Phase 2 Online: Blended Summer Study'
+        ECSPD2-iZone:
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          student_description: 'Phase 2 Online: Blended Summer Study'
         Hour of Code:
-          title: Час кода 2013
           description: Try the basics of computer science with characters from Angry
             Birds and Plants vs. Zombies!
           description_short: Try the basics of computer science with many fun characters!
           student_description: Try the basics of computer science with characters
             from Angry Birds and Plants vs. Zombies!
+          title: Час кода 2013
+        MikeTest:
+          description_audience: За године од 8 до 98
+        Special Fun:
+          description_audience: Узраст од 10 до 18 година
+        SpecialSeries:
+          description_audience: Узраст од 10 до 18 година
+        TEMP CSD Unit 3:
+          description_short: Programming
+        afterschool1:
+          description_audience: Узраста 7.-13.
+        ai-ethics-2021:
+          description_audience: Разреди 6-12
+        algebra:
+          title: Наука информатике у Алгебри
         algebraPD2a:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -141,291 +79,243 @@ sr:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           student_description: 'Phase 2 Online: Blended Summer Study'
-        ECSPD2:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          student_description: 'Phase 2 Online: Blended Summer Study'
-        sciencePD2b:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          student_description: 'Phase 2 Online: Blended Summer Study'
-        sciencePD2b-iZone:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          student_description: 'Phase 2 Online: Blended Summer Study'
-        ECSPD2-iZone:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          student_description: 'Phase 2 Online: Blended Summer Study'
-        ECSPD2-NexTech:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          student_description: 'Phase 2 Online: Blended Summer Study'
-        asUnplugged:
-          description_audience: Узраста 6.-13.
-        afterschool1:
-          description_audience: Узраста 7.-13.
-        Special Fun:
-          description_audience: Узраст од 10 до 18 година
-        SpecialSeries:
-          description_audience: Узраст од 10 до 18 година
-        iceage:
-          title: Ледено доба - Играоница
-          description: Create a story or make a game with Ice Age Играоница!
-          description_short: Create a story or make a game with Ice Age Играоница!
-          student_description: Create a story or make a game with Ice Age Играоница!
-        gumball:
-          title: Gumball Играоница
-          description: Create a story or make a game with Gumball Играоница!
-          description_short: Create a story or make a game with Gumball Играоница!
-          student_description: Create a story or make a game with Gumball Играоница!
-        starwars:
-          description: Научите да програмирате дроиде и креирате сопствену игру Ратова
-            звезда у галаксији далеко, далеко.
-          description_short: Научите да програмирате дроиде и креирате сопствену игру
-            Ратова звезда у галаксији далеко, далеко.
-          student_description: Научите да програмирате дроиде и креирате сопствену
-            игру Ратова звезда у галаксији далеко, далеко.
-        starwarsblocks:
-          description: Научите да програмирате дроиде и креирате сопствену игру Ратова
-            звезда у галаксији далеко, далеко.
-          description_short: Научите да програмирате дроиде и креирате сопствену игру
-            Ратова звезда у галаксији далеко, далеко.
-          student_description: Научите да програмирате дроиде и креирате сопствену
-            игру Ратова звезда у галаксији далеко, далеко.
-        mc:
-          title: Мајнкрафт час програмирања
-          description: Користите блокове кода да поведете Стива или Алекс у авантуру
-            кроз овај Мајнкрафт свет.
-          description_short: Истражите Мајнкрафт свет кроз кôд
-          student_description: Користите блокове кода да поведете Стива или Алекс
-            у авантуру кроз овај Мајнкрафт свет.
-        CSDU3-Draft:
-          description_short: Programming
-        TEMP CSD Unit 3:
-          description_short: Programming
-        CSF_Secret_Sample:
-          description_audience: За године од 8 до 18
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        CSF_Secret_Sample_Story:
-          description_audience: За године од 8 до 18+
-        MikeTest:
-          description_audience: За године од 8 до 98
-        artistExemplar:
-          description_audience: За године од 8 до 18
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        gradeKinder:
-          description_audience: Ages 5-18
-        grade4:
-          description_audience: Узраст од 10 до 99 година
-        grade1:
-          description_audience: Ages 5-18
-        grade5:
-          description_audience: Узраст од 10 до 110 година
-        grade3:
-          description_audience: Ages 5-18
         alltheplcthings:
           lesson_groups:
             required:
               display_name: Преглед
-        grade2:
-          description_audience: Ages 5-18
-        csp-online-test:
+        andrea-test:
           lesson_groups:
             required:
               display_name: Преглед
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        minecraft:
-          title: Мајнкрафт дизајнер - час програмирања
-          description_short: Програмирај животиње и друга Minecraft створења у својој
-            верзији Minecraft-а.
-          description: Програмирај животиње и друга Minecraft створења у својој верзији
-            Minecraft-а.
-          student_description: Програмирај животиње и друга Minecraft створења у својој
-            верзији Minecraft-а.
+        artist:
+          description: Цртај слике са уметником!
+          description_short: Цртај слике са уметником!
+          student_description: Цртај слике са уметником!
+          title: Уметник
+        artistExemplar:
+          description_audience: За године од 8 до 18
+        asUnplugged:
+          description_audience: Узраста 6.-13.
         classic-hoc-impact-study:
           description_short: Try the basics of computer science with many fun characters!
-        hoc-impact-study:
-          description_short: Try the basics of computer science with many fun characters!
-        csp3-support:
+        course1:
+          description: Почни са првим курсем за ученике који су тек научили да читају.
+            Препоручујемо за узраст до првог разреда.
+          description_audience: Узраст од 4 до 6 година
+          description_short: Курс је намењен узрасту од 4 до 6 година.
+          student_description: Почни са првим курсем за ученике који су тек научили
+            да читају. Препоручујемо за узраст до првог разреда.
+          title: Курс 1
+        course2:
+          description: Курс 2 могу да раде ученици који знају да читају и немају искуства
+            са програмирањем. У овом курсу ученици ће писати програме који решавају
+            проблеме и развијати интерактивне игре и приче које могу да деле са другима.
+            Препоручено за ученике до петог разреда.
+          description_audience: Ages 6-18
+          description_short: Курс 2 могу да раде ученици који знају да читају .
+          student_description: Курс 2 могу да раде ученици који знају да читају и
+            немају искуства са програмирањем. У овом курсу ученици ће писати програме
+            који решавају проблеме и развијати интерактивне игре и приче које могу
+            да деле са другима. Препоручено за ученике до петог разреда.
+          title: Курс 2
+        course3:
+          description: Курс 3 је дизајниран за ученике који су прошли курс 2. До краја
+            овог курса, студенти стварају интерактивне приче и игре могу да деле са
+            другима. Препоручује се за разреде 4-5.
+          description_audience: За године од 8 до 18
+          description_short: Курс 3 је наставак курса 2.
+          student_description: Курс 3 је дизајниран за ученике који су прошли курс
+            2. До краја овог курса, студенти стварају интерактивне приче и игре могу
+            да деле са другима. Препоручује се за разреде 4-5.
+          title: Курс 3
+        course4:
+          description: Курс 4 је направљен за ученике који су прошли курсеве 2 и 3.
+            Ученици ће научити како да решавају сложеније проблеме док уче како да
+            комбинују различите наредбе којима могу да решавају различите проблеме.
+            Када заврше курс 4, ученици ће бити способни да праве програме са понављањима
+            (петљама), функцијама са параметрима, итд. Препоручено за ученике од 4.
+            до 8. разреда.
+          description_audience: Узраст од 10 до 18 година
+          description_short: Ученици који пробају курс 4 би требало пре тога да прођу
+            курсеве 2 и 3.
+          student_description: Курс 4 је направљен за ученике који су прошли курсеве
+            2 и 3. Ученици ће научити како да решавају сложеније проблеме док уче
+            како да комбинују различите наредбе којима могу да решавају различите
+            проблеме. Када заврше курс 4, ученици ће бити способни да праве програме
+            са понављањима (петљама), функцијама са параметрима, итд. Препоручено
+            за ученике од 4. до 8. разреда.
+          title: Course 4
+        coursea-2019:
           lesson_groups:
-            required:
-              display_name: Преглед
-        csp4-support:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp5-support:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        cspnovice:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp1-dlp:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp2-dlp:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp3-dlp:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp4-dlp:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp5-dlp:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd1-dlp:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd6-dlp:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd5-dlp:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd4-dlp:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd3-dlp:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd2-dlp:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd6-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp-explore-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp-create-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd-novice-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csd-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp-novice-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        fit-test:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: Променљиве
-            csp_conditionals:
-              display_name: Кондиционали
-            csp_functions:
-              display_name: Функције
-        dance-extras:
-          description: Иди даље од првог часа са новим идејама за пројекте.
-          student_description: Иди даље од првог часа са новим идејама за пројекте.
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Променљиве
-            csf_for_loops:
-              display_name: Бројачке петље
-            csf_internet:
-              display_name: Интернет
             csf_digcit:
               display_name: Дигитално држављанство
-        coursed-2019:
-          lesson_groups:
             csf_events:
               display_name: Догађаји
             csf_loops:
               display_name: Петље
+        coursea-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        coursea-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        coursea-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        courseb-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        courseb-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        courseb-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        courseb-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        coursec-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        coursec-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        coursec-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        coursec-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        coursed-2019:
+          lesson_groups:
             csf_conditionals:
               display_name: Кондиционали
             csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        coursed-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Кондиционали
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        coursed-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Кондиционали
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+            lessonGroup-6:
+              display_name: Дигитално држављанство
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Кондиционали
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+            lessonGroup-6:
+              display_name: Дигитално држављанство
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Кондиционали
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+            lessonGroup-6:
               display_name: Дигитално држављанство
         coursee-2019:
           lesson_groups:
@@ -433,64 +323,208 @@ sr:
               display_name: Дигитално држављанство
             csf_functions:
               display_name: Функције
-        express-2019:
+        coursee-2020:
           lesson_groups:
-            csf_loops:
-              display_name: Петље
-            csf_conditionals:
-              display_name: Кондиционали
+            csf_digcit:
+              display_name: Дигитално држављанство
             csf_functions:
               display_name: Функције
-            csf_variables:
-              display_name: Променљиве
+        coursee-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_functions:
+              display_name: Функције
+            csf_nested_loops:
+              display_name: Кондиционали
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_functions:
+              display_name: Функције
+            csf_nested_loops:
+              display_name: Кондиционали
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_functions:
+              display_name: Функције
+            csf_nested_loops:
+              display_name: Кондиционали
+        coursef-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
             csf_for_loops:
               display_name: Бројачке петље
-        andrea-test:
+            csf_internet:
+              display_name: Интернет
+            csf_variables:
+              display_name: Променљиве
+        coursef-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_for_loops:
+              display_name: Бројачке петље
+            csf_variables:
+              display_name: Променљиве
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_for_loops:
+              display_name: Бројачке петље
+            csf_variables:
+              display_name: Бројачке петље
+            lessonGroup-7:
+              display_name: Дигитално држављанство
+            lessonGroup-8:
+              display_name: Променљиве
+            lessonGroup-9:
+              display_name: уклони
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Дигитално држављанство
+            lessonGroup-8:
+              display_name: Променљиве
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Дигитално држављанство
+            lessonGroup-8:
+              display_name: Променљиве
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Променљиве
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unit 1
+            lessonGroup-4:
+              display_name: Unit 2
+            lessonGroup-5:
+              display_name: Unit 3
+            lessonGroup-6:
+              display_name: Unit 4
+            lessonGroup-7:
+              display_name: Unit 5
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Петље
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Променљиве
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Бројачке петље
+        csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Преглед
-        dance-extras-gallery:
-          title: Настави плес
-          description: Иди даље од првог часа са новим идејама за пројекте.
-          student_description: Иди даље од првог часа са новим идејама за пројекте.
-        coursec-2019:
+        csd-novice-18:
           lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        coursea-2019:
+            required:
+              display_name: Преглед
+        csd1-dlp:
           lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        courseb-2019:
+            required:
+              display_name: Преглед
+        csd1-dlp-18:
           lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        pre-express-2019:
+            required:
+              display_name: Преглед
+        csd2-dlp:
           lesson_groups:
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        csp4-pilot:
+            required:
+              display_name: Преглед
+        csd2-dlp-18:
           lesson_groups:
-            csp_variables:
+            required:
+              display_name: Преглед
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
               display_name: Променљиве
-            csp_conditionals:
-              display_name: Кондиционали
-            csp_functions:
-              display_name: Функције
+            variables:
+              display_name: Променљиве
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Променљиве
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp1-dlp-18:
+          lesson_groups:
             required:
               display_name: Преглед
         csp1-pilot:
@@ -499,66 +533,164 @@ sr:
               display_name: Преглед
         csp1-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Променљиве
             csp_conditionals:
               display_name: Кондиционали
             csp_functions:
               display_name: Функције
+            csp_variables:
+              display_name: Променљиве
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+            csp_variables:
+              display_name: Променљиве
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Преглед
         csp2-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Променљиве
             csp_conditionals:
               display_name: Кондиционали
             csp_functions:
               display_name: Функције
+            csp_variables:
+              display_name: Променљиве
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+            csp_variables:
+              display_name: Променљиве
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+            csp_variables:
+              display_name: Променљиве
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+            csp_variables:
+              display_name: Променљиве
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+            csp_variables:
+              display_name: Променљиве
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+            csp_variables:
+              display_name: Променљиве
+            required:
+              display_name: Преглед
         csp4-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Променљиве
             csp_conditionals:
               display_name: Кондиционали
             csp_functions:
               display_name: Функције
-        csp5-pilot-staging:
+            csp_variables:
+              display_name: Променљиве
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+            csp_variables:
+              display_name: Променљиве
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Листе
             csp_loops:
               display_name: Петље
-        csp6-pilot-staging:
+        csp5-2021:
           lesson_groups:
-            csp_variables:
-              display_name: Променљиве
-            csp_conditionals:
-              display_name: Кондиционали
-            csp_functions:
-              display_name: Функције
-        csp8-pilot-staging:
+            csp_lists:
+              display_name: Листе
+            csp_loops:
+              display_name: Петље
+        csp5-2022:
           lesson_groups:
-            csp_variables:
-              display_name: Променљиве
-            csp_conditionals:
-              display_name: Кондиционали
-            csp_functions:
-              display_name: Функције
-        csp9-pilot-staging:
+            csp_lists:
+              display_name: Листе
+            csp_loops:
+              display_name: Петље
+        csp5-2023:
           lesson_groups:
-            csp_variables:
-              display_name: Променљиве
-            csp_conditionals:
-              display_name: Кондиционали
-            csp_functions:
-              display_name: Функције
-        csp10-pilot-staging:
+            csp_loops:
+              display_name: Петље
+        csp5-dlp:
           lesson_groups:
-            csp_variables:
-              display_name: Променљиве
-            csp_conditionals:
-              display_name: Кондиционали
-            csp_functions:
-              display_name: Функције
+            required:
+              display_name: Преглед
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Преглед
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -567,29 +699,86 @@ sr:
               display_name: Петље
             required:
               display_name: Преглед
-        fit2019-novice:
+        csp5-pilot-staging:
           lesson_groups:
-            required:
-              display_name: Преглед
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp3-pilot:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csl-vn:
-          lesson_groups:
-            csf_loops:
+            csp_lists:
+              display_name: Листе
+            csp_loops:
               display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        dlp19-csd-mod-fit:
+        csp5-support:
           lesson_groups:
             required:
               display_name: Преглед
-        dlp19-csp-mod-fit:
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Алгоритми
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Листе
+            lessonGroup-3:
+              display_name: Петље
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+            csp_variables:
+              display_name: Променљиве
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+            csp_variables:
+              display_name: Променљиве
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+            csp_variables:
+              display_name: Променљиве
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+            csp_variables:
+              display_name: Променљиве
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        dance-extras:
+          description: Иди даље од првог часа са новим идејама за пројекте.
+          student_description: Иди даље од првог часа са новим идејама за пројекте.
+        dance-extras-2019:
+          description: Иди даље од првог часа са новим идејама за пројекте.
+          student_description: Иди даље од првог часа са новим идејама за пројекте.
+          title: Настави плес
+        dance-extras-gallery:
+          description: Иди даље од првог часа са новим идејама за пројекте.
+          student_description: Иди даље од првог часа са новим идејама за пројекте.
+          title: Настави плес
+        dlp19-csd-mod-fit:
           lesson_groups:
             required:
               display_name: Преглед
@@ -609,6 +798,10 @@ sr:
           lesson_groups:
             required:
               display_name: Преглед
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Преглед
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
@@ -625,459 +818,316 @@ sr:
           lesson_groups:
             required:
               display_name: Преглед
-        csp2-pilot:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp6-pilot:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        dance-extras-2019:
-          title: Настави плес
-          description: Иди даље од првог часа са новим идејама за пројекте.
-          student_description: Иди даље од првог часа са новим идејама за пројекте.
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: Променљиве
-            csp_conditionals:
-              display_name: Кондиционали
-            csp_functions:
-              display_name: Функције
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_conditionals:
-              display_name: Кондиционали
-            csf_functions:
-              display_name: Функције
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Петље
-            csf_conditionals:
-              display_name: Кондиционали
-            csf_events:
-              display_name: Догађаји
-            csf_digcit:
-              display_name: Дигитално држављанство
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Петље
-            csf_conditionals:
-              display_name: Кондиционали
-            csf_events:
-              display_name: Догађаји
-            csf_digcit:
-              display_name: Дигитално држављанство
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: Преглед
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Променљиве
-            csp_conditionals:
-              display_name: Кондиционали
-            csp_functions:
-              display_name: Функције
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Листе
-            csp_loops:
-              display_name: Петље
-        coursea-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        courseb-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        coursec-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Догађаји
-            csf_loops:
-              display_name: Петље
-            csf_conditionals:
-              display_name: Кондиционали
-            csf_digcit:
-              display_name: Дигитално држављанство
-        coursee-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_functions:
-              display_name: Функције
-        coursef-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_variables:
-              display_name: Променљиве
-            csf_for_loops:
-              display_name: Бројачке петље
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Петље
-            csf_conditionals:
-              display_name: Кондиционали
-            csf_functions:
-              display_name: Функције
-            csf_variables:
-              display_name: Променљиве
-            csf_for_loops:
-              display_name: Бројачке петље
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        2021drafting:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Променљиве
-            debugging:
-              display_name: Отклањање грешака
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Променљиве
-            csp_conditionals:
-              display_name: Кондиционали
-            csp_functions:
-              display_name: Функције
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Листе
-            csp_loops:
-              display_name: Петље
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Алгоритми
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Догађаји
-            csf_loops:
-              display_name: Петље
-            csf_conditionals:
-              display_name: Кондиционали
-            csf_digcit:
-              display_name: Дигитално држављанство
-            lessonGroup-6:
-              display_name: Дигитално држављанство
-        coursee-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_nested_loops:
-              display_name: Кондиционали
-            csf_functions:
-              display_name: Функције
-        coursef-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_variables:
-              display_name: Бројачке петље
-            csf_for_loops:
-              display_name: Бројачке петље
-            lessonGroup-8:
-              display_name: Променљиве
-            lessonGroup-9:
-              display_name: уклони
-            lessonGroup-7:
-              display_name: Дигитално држављанство
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Петље
-            csf_conditionals:
-              display_name: Кондиционали
-            csf_functions:
-              display_name: Функције
-            csf_variables:
-              display_name: Променљиве
-            csf_for_loops:
-              display_name: Бројачке петље
-            lessonGroup-9:
-              display_name: Догађаји
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        csf-2021-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Променљиве
-            variables:
-              display_name: Променљиве
-        csa-videos:
+        dlp21-csd:
           lesson_groups:
             lessonGroup-2:
-              display_name: Unit 1
-            lessonGroup-4:
-              display_name: Unit 2
-            lessonGroup-5:
-              display_name: Unit 3
-            lessonGroup-6:
-              display_name: Unit 4
-            lessonGroup-7:
-              display_name: Unit 5
+              description: тест
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
               display_name: Фаза 1
             lessonGroup-3:
               display_name: Фаза 2
-        dlp21-csd:
+        edit-code:
+          description: Уреди код
+          description_short: Уреди код
+          student_description: Уреди код
+          title: Уреди код
+        events:
+          description: Догађаји
+          description_short: Догађаји
+          student_description: Догађаји
+          title: Догађаји
+        express-2019:
           lesson_groups:
-            lessonGroup-2:
-              description: тест
-        spelling-bee:
-          title: Пчелица словарица
-        ai-ethics-2021:
-          description_audience: Разреди 6-12
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Час кода
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Променљиве
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
+            csf_conditionals:
+              display_name: Кондиционали
+            csf_for_loops:
+              display_name: Бројачке петље
+            csf_functions:
+              display_name: Функције
             csf_loops:
               display_name: Петље
-            csf_events:
+            csf_variables:
+              display_name: Променљиве
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Кондиционали
+            csf_for_loops:
+              display_name: Бројачке петље
+            csf_functions:
+              display_name: Функције
+            csf_loops:
+              display_name: Петље
+            csf_variables:
+              display_name: Променљиве
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Кондиционали
+            csf_for_loops:
+              display_name: Бројачке петље
+            csf_functions:
+              display_name: Функције
+            csf_loops:
+              display_name: Петље
+            csf_variables:
+              display_name: Променљиве
+            lessonGroup-9:
               display_name: Догађаји
         express-2022:
           lesson_groups:
-            lessonGroup-9:
-              display_name: Догађаји
-            csf_loops:
-              display_name: Петље
             csf_conditionals:
               display_name: Кондиционали
-            csf_functions:
-              display_name: Функције
-            csf_variables:
-              display_name: Променљиве
             csf_for_loops:
               display_name: Бројачке петље
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Променљиве
-            csp_conditionals:
-              display_name: Кондиционали
-            csp_functions:
-              display_name: Функције
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Листе
-            csp_loops:
-              display_name: Петље
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Дигитално држављанство
-            csf_events:
-              display_name: Догађаји
-            csf_loops:
-              display_name: Петље
-            csf_conditionals:
-              display_name: Кондиционали
-        coursee-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
             csf_functions:
               display_name: Функције
-            csf_nested_loops:
-              display_name: Кондиционали
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Дигитално држављанство
-            lessonGroup-8:
-              display_name: Променљиве
-        pre-express-2022:
-          lesson_groups:
             csf_loops:
               display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Дигитално држављанство
-            lessonGroup-8:
+            csf_variables:
               display_name: Променљиве
-        soccer:
-          name: Фудбал
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: Петље
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Променљиве
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: Бројачке петље
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Променљиве
-            csp_conditionals:
-              display_name: Кондиционали
-            csp_functions:
-              display_name: Функције
-        csp5-2023:
-          lesson_groups:
-            csp_loops:
-              display_name: Петље
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Листе
-            lessonGroup-3:
-              display_name: Петље
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Петље
-            csf_events:
+            lessonGroup-9:
               display_name: Догађаји
         express-2023:
           lesson_groups:
-            lessonGroup-9:
-              display_name: Догађаји
-            csf_loops:
-              display_name: Петље
             csf_conditionals:
               display_name: Кондиционали
-            csf_functions:
-              display_name: Функције
-            csf_variables:
-              display_name: Променљиве
             csf_for_loops:
               display_name: Бројачке петље
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
+            csf_functions:
+              display_name: Функције
             csf_loops:
               display_name: Петље
-            csf_events:
+            csf_variables:
+              display_name: Променљиве
+            lessonGroup-9:
               display_name: Догађаји
-        courseb-2023:
+        fit-test:
           lesson_groups:
-            csf_digcit:
+            required:
+              display_name: Преглед
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        flappy:
+          description_short: Направи своју Флапи игру за мање од 10 минута!
+        frozen:
+          description: Хајде да искористимо програмирање да би се придружили Ани и
+            Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце
+            док клижете по леду и направићете зимску чаролију коју можете поделити
+            са својим пријатељима!
+          description_short: Хајде да искористимо програмирање да би се придружили
+            Ани и Елзи у истраживању магије и лепоте леда.
+          student_description: Хајде да искористимо програмирање да би се придружили
+            Ани и Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце
+            док клижете по леду и направићете зимску чаролију коју можете поделити
+            са својим пријатељима!
+          title: Програмирај са Аном и Елзом
+        grade1:
+          description_audience: Ages 5-18
+        grade2:
+          description_audience: Ages 5-18
+        grade3:
+          description_audience: Ages 5-18
+        grade4:
+          description_audience: Узраст од 10 до 99 година
+        grade5:
+          description_audience: Узраст од 10 до 110 година
+        gradeKinder:
+          description_audience: Ages 5-18
+        gumball:
+          description: Create a story or make a game with Gumball Играоница!
+          description_short: Create a story or make a game with Gumball Играоница!
+          student_description: Create a story or make a game with Gumball Играоница!
+          title: Gumball Играоница
+        hoc-impact-study:
+          description_short: Try the basics of computer science with many fun characters!
+        hourofcode:
+          description: Испробај основе рачунарских наука са љутим птичицама, цвећем
+            против зомбија, и Скречом из леденог доба!
+          description_short: Try the basics of computer science with many fun characters!
+          student_description: Испробај основе рачунарских наука са љутим птичицама,
+            цвећем против зомбија, и Скречом из леденог доба!
+        iceage:
+          description: Create a story or make a game with Ice Age Играоница!
+          description_short: Create a story or make a game with Ice Age Играоница!
+          student_description: Create a story or make a game with Ice Age Играоница!
+          title: Ледено доба - Играоница
+        infinity:
+          description: Креирај приче и игре са Дизнијевим ликовима у Играоници.
+          description_short: Креирај приче и игре са Дизнијевим ликовима у Играоници.
+          student_description: Креирај приче и игре са Дизнијевим ликовима у Играоници.
+          title: Дизнијева Играоница
+        jigsaw:
+          description: Пробај нашу слагалицу.
+          description_short: Пробај нашу слагалицу.
+          student_description: Пробај нашу слагалицу.
+          title: Слагалица
+        mc:
+          description: Користите блокове кода да поведете Стива или Алекс у авантуру
+            кроз овај Мајнкрафт свет.
+          description_short: Истражите Мајнкрафт свет кроз кôд
+          student_description: Користите блокове кода да поведете Стива или Алекс
+            у авантуру кроз овај Мајнкрафт свет.
+          title: Мајнкрафт час програмирања
+        minecraft:
+          description: Програмирај животиње и друга Minecraft створења у својој верзији
+            Minecraft-а.
+          description_short: Програмирај животиње и друга Minecraft створења у својој
+            верзији Minecraft-а.
+          student_description: Програмирај животиње и друга Minecraft створења у својој
+            верзији Minecraft-а.
+          title: Мајнкрафт дизајнер - час програмирања
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Кондиционали
+            lessonGroup-5:
+              display_name: Променљиве
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
               display_name: Дигитално држављанство
-            csf_loops:
+            lessonGroup-4:
               display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Дигитално држављанство
-            csf_loops:
-              display_name: Петље
-            csf_events:
-              display_name: Догађаји
-        coursed-2023:
-          lesson_groups:
             lessonGroup-6:
+              display_name: Догађаји
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Функције
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
               display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Петље
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Петље
+            lessonGroup-5:
+              display_name: Догађаји
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-6:
+              display_name: Петље
+        playlab:
+          description: Направи причу или игру у Играоници!
+          description_short: Направи причу или игру у Играоници!
+          student_description: Направи причу или игру у Играоници!
+          title: Играоница
+        pre-express-2019:
+          lesson_groups:
             csf_events:
               display_name: Догађаји
             csf_loops:
               display_name: Петље
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        sciencePD2b:
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          student_description: 'Phase 2 Online: Blended Summer Study'
+        sciencePD2b-iZone:
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          student_description: 'Phase 2 Online: Blended Summer Study'
+        soccer:
+          name: Фудбал
+        spelling-bee:
+          title: Пчелица словарица
+        starwars:
+          description: Научите да програмирате дроиде и креирате сопствену игру Ратова
+            звезда у галаксији далеко, далеко.
+          description_short: Научите да програмирате дроиде и креирате сопствену игру
+            Ратова звезда у галаксији далеко, далеко.
+          student_description: Научите да програмирате дроиде и креирате сопствену
+            игру Ратова звезда у галаксији далеко, далеко.
+        starwarsblocks:
+          description: Научите да програмирате дроиде и креирате сопствену игру Ратова
+            звезда у галаксији далеко, далеко.
+          description_short: Научите да програмирате дроиде и креирате сопствену игру
+            Ратова звезда у галаксији далеко, далеко.
+          student_description: Научите да програмирате дроиде и креирате сопствену
+            игру Ратова звезда у галаксији далеко, далеко.
+        step:
+          description: Step tutorial
+          description_short: Step tutorial
+          student_description: Step tutorial
+          title: Корак
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Петље
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Преглед
+        time4cs-control-unit-1:
+          lesson_groups:
             csf_conditionals:
               display_name: Кондиционали
-        coursee-2023:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+        time4cs-control-unit-2:
           lesson_groups:
+            csf_conditionals:
+              display_name: Кондиционали
             csf_digcit:
               display_name: Дигитално држављанство
             csf_functions:
               display_name: Функције
-            csf_nested_loops:
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
               display_name: Кондиционали
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље

@@ -5,10 +5,20 @@ uk:
       driving with arrow keys: рух за стрілками
       fluttering: пурхання
       growing: ріст
-      moving east and looping: рух на схід і циклічно
-      moving west and looping: рух на захід і циклічно
+      jittering: тремтіння
+      moving east: рух на схід
+      moving east and looping: рух на схід у циклі
+      moving north: рух на північ
+      moving north and looping: рух на північ у циклі
+      moving south: рух на південь
+      moving south and looping: рух на південь у циклі
+      moving west: рух на захід
+      moving west and looping: рух на захід у циклі
       moving with arrow keys: рух за стрілками
       patrolling: патрулювання
       shrinking: стиснення
+      spinning left: обертання ліворуч
+      spinning right: обертання праворуч
+      swimming left and right: рух рибки ліворуч та праворуч
       wandering: бродіння
       wobbling: хитання

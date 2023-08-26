@@ -546,15 +546,179 @@ uz:
         codebreak_e10: 'Code Break 10.0: Kat Grem va Keyt Park bilan birgalikda sun''iy intellekt'
         codebreak_e11: 'Code Break 11.0: Susan Woykiki va Chayna Enn Makleyn bilan Abstraksiya'
         codebreak_e12: 'Code Break 12.0: Aloe Blak, Bret Teylor va Paola Meyia Minaya bilan Hardware - Uskunalar'
+        csf21pilot_events: 'Sprite laboratoriyasi: harakatdagi spritlar'
+        csf21pilot_prompts: 'Sprite laboratoriyasi: matn va ko''rsatmalar'
         csd_ml_intro_to_ai_lab: 6-dars
+        csd_ml_import_model: AI modelini import qilish
+        csf_lots_of_sprites: 'Sprite laboratoriyasi: ko''plab spritlar'
         playlab_2021: Play Lab bilan tanishish
         playlab_2021_reader: Play Lab bilan tanishish
+        csp_defining_calling_functions: Funktsiyalarni aniqlash va chaqirish
+        csp_tutorial_datatab: Ilova laboratoriyasidagi ma'lumotlar yorlig'i
+        csp_tutorial_libraries: App Laboratoriyasidagi kutubxonalar
+        PL-Video-21: Code.org professional ta'limiga xush kelibsiz!
+        csp_tutorial_datavis1: App Laboratoriyasida ma'lumotlarni vizualizatsiya qilish vositasi - 1 qism
+        csp_tutorial_datavis2: App Laboratoriyasida ma'lumotlarni vizualizatsiya qilish vositasi - 2-qism
         csd_ml_intro_ai_lab_july2021: 6-dars
-        csd_u6_circuit_playground: Jismoniy hisoblash
+        csd_ml_training_testing_ai_lan: AI laboratoriyasida o'qitish va sinov
+        csd_ml_model_cards_july2021: AI laboratoriyasidagi model kartalar
+        csd_ml_numerical_ai_lab: AI laboratoriyasidagi raqamli ma'lumotlar
+        Gettting_Started_Progress: Taraqqiyot, fikr va baholash
+        Gettting_Started_ClassSection: Sinf bo'limini yaratish
+        Gettting_Started_StudentExperience: Talabalar tajribasi
+        Getting_Started_BasicFeatures: Code.org ning asosiy xususiyatlari
+        PL_overview_CSD: Kompyuter fanlari kashfiyotlari nima?
+        PL_CSD_TeacherTips_Advise: O'qituvchilarga maslahatlar - yangi o'qituvchilarga maslahat
+        PL_CSD_TeacherTips_IntroToCSD: O'qituvchi uchun maslahatlar - CS kashfiyotlariga kirish
+        PL_CSD_TeacherTips_ProblemSolvingProcess: O'qituvchi maslahatlari - muammolarni hal qilish jarayoni
+        PL_CSD_TeacherTips_PairProgramming: O'qituvchi uchun maslahatlar - juftlik dasturlash
+        PL_CSD_TeacherTips_Debugging: O'qituvchi uchun maslahatlar - disk raskadrovka
+        PL_CSD_TeacherTips_LeadLearner: O'qituvchi uchun maslahatlar - etakchi o'quvchi
+        poembot-playtest-intro: PoemBot Playtest Kirish
+        poembot-playtest-sprites: PoemBot Playtest Sprites
+        poembot-playtest-events: PoemBot Playtest tadbirlari
+        hello_world_intro: Salom dunyo - Sprite laboratoriyasiga xush kelibsiz
+        hello_world_events: Salom Dunyo - Tadbirlar bilan dasturlash
+        hello_world_congrats: Salom Dunyo - Sen Xohlaganingni Qilma
+        csp_global_vs_local: Global va mahalliy o'zgaruvchilarni disk raskadrovka
+        rough_poemart_intro: v1 She'r Art Intro
+        rough_poemart_events: v1 She'r San'at Tadbirlar
+        rough_poemart_imagery: v1 She'r badiiy tasviri
+        rough_poemart_congrats: v1 She'r san'ati bilan tabriklaymiz
+        poetry_module_variables: O'zgaruvchilar - She'riyat bilan kodlash
+        poetry_module_textandvariables: Matn va o'zgaruvchilar - she'riyat bilan kodlash
+        poetry_module_planningapp: She'r generatori ilovasini rejalashtirish - she'r bilan kodlash
+        poetry_module_multichoiceprompts: Ko'p tanlovli takliflar - she'riyat bilan kodlash
+        poetry_module_conditionals: Shartlar - She'riyat bilan kodlash
+        poemart_intro: She'r san'atiga kirish
+        poemart_events: She'r san'ati tadbirlari
+        poemart_imagery: She'r san'ati tasviri
+        poemart_celebration: She'r san'ati bayrami
+        csd_u6_variables_part2: O'zgaruvchilar - hisoblagich namunasi
+        csd_ml_ethics_ai: 'Etika va AI '
+        outbreak_intro: 'Kasallik simulyatsiyasi: Kirish'
+        outbreak_events: 'Epilasyon Simulator: Voqealar'
+        outbreak_scientist: 'Epilasyon simulyatori: olim kabi o''ylash'
+        outbreak_outro: 'Epilasyon Simulator: Bepul o''yin'
+        PL_overview_CSP: Kompyuter fanlari tamoyillari nima?
+        PL_CSP_EIPMOverview: EIPM darslari bo'yicha qo'llanma
+        CSA-PL-debugging-temp: Java laboratoriyasida nosozliklarni tuzatishga kirish - temp
+        csd_app_lab_design_mode: CSD App laboratoriyasini loyihalash rejimi
+        csd_app_lab_events: CSD App Lab tadbirlari
+        PL_CSD_Unit4_AppTesting: Qog'oz prototipini sinovdan o'tkazish
+        csd_u6_circuit_playground: Jismoniy Hisoblash
         csd_u6_input_output: Input and Output
+        CSA-PL-for-loops: Java-da looplar uchun
+        CSA-PL-variables: Java-da o'zgaruvchilar yaratish
+        PL_CS_Journeys_Overview: CS sayohatlari
+        CSA-PL-intro-to-java-lab: Java laboratoriyasi asoslari
+        CSA-PL-first-program: Java-da dastur yozish
+        CSD_u6_variables_part1: 'CSD: O''zgaruvchilar'
+        csd_u6_if_statements: 'CSD: Agar bayonotlar'
+        csc-poem-art-intro: Kirish videosi
+        csc-poem-art-outro: Videoni uzing
+        csd_u6_call_define_functions: 'CSD: Qo''ng''iroq qilish va funktsiyalarni aniqlash'
         csp_applab_parameters: Funksiyalar (parameterlari bilan)
+        starquilts_intro_artist: Yulduzli choyshablarga kirish
+        CSA-PL-intro-to-arrays: Bir o'lchovli (1D) massivlar
+        CSA-PL-1d-arrays-new-values: 1D massivlarda qiymatlarni kiritish
+        CSA-PL-conditionals: Java-da shartli bayonotlar
+        CSA-PL-two-way-selection: Ikki tomonlama tanlov
+        CSA-PL-Printing-in-Java: Java-da chop etish
+        CSA-PL-multi-selection-statements: Ko'p tanlovli bayonotlar
+        PL_CSP_TeacherTips_Advice: 'O''qituvchi uchun maslahatlar: Yangi CS o''qituvchilariga maslahat'
+        PL_CSP_TeacherTips_IntroToCSP: 'O''qituvchi uchun maslahatlar: CS tamoyillariga kirish'
+        PL_CSP_TeacherTips_Debugging: 'O''qituvchi maslahatlari: disk raskadrovka bo''yicha yordam'
+        PL_CSP_TeacherTips_LeadLearner: 'O''qituvchi maslahatlari: Qanday qilib etakchi o''quvchi bo''lish kerak'
+        PL_CSP_TeacherTips_APExam: 'O''qituvchi maslahatlari: AP imtihoniga tayyorgarlik'
+        PL_CSP_TeacherTips_EIPM: 'O''qituvchi uchun maslahatlar: EIPM jarayoni'
+        PL_CSD_CircuitPlayground_Overview: O'chirish maydonchasi haqida umumiy ma'lumot
+        CSA-PL-debugging-22: Java laboratoriyasida disk raskadrovka
+        CSD_Unit6_InteractiveArtExemplar: Interaktiv san'at namunalari
         CS_Changing_Everything: Kompyuter fanlari hamma narsani o‘zgartirmoqda
+        csa-alias-video: Teng va taxalluslar
+        csa-equals-video: Equals () usuli
+        csa-user-stories: Dasturiy injiniringi bo'yicha foydalanuvchi hikoyalari
+        csa-pl-vpl-m1-unit-3: 3-bo'limda dasturiy ta'minot muhandisligi
+        csa-pl-intro-to-equality: Tenglikka kirish
+        csa-pl-intro-to-equals-method: .equals () usuliga kirish
+        csa-pl-equals-book: Kitob sinfi uchun equals () usulini yozish
+        csa-multi-select-pl: Java-da ko'p tanlovli bayonotlar
+        csc_timecapsule_intro: Vaqt kapsulasi bilan tanishish
+        PL_Equity_in_CS_Education: CS ta'limida kapital
+        csc_fm_pilot: Funktsiya mashinalari (uchuvchi)
+        csc_fm_pilot_v2: 'Funktsiya mashinalari Kirish '
+        csc-sprite-lab-pixel-editor: O'zingizning Sprite-ni chizing
+        csa-pl-intro-to-strings: Java-da Strings-ga kirish
+        csa-pl-compareTo: CompareTo () usuli
+        csc-event-short-intro: Voqealar Qisqa Kirish
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: O'chirish maydonchasi birligi haqida umumiy ma'lumot
+        csa-day-in-pm-pl: Loyiha menejeri nima qiladi?
+        csa-pl-intro-to-pm: Loyiha boshqaruviga kirish
+        PL_CSD_CircuitPlayground_Setup: O'chirish Playground Setup
+        csa_object_oriented_programming: 'CSA: Ob''ektga yo''naltirilgan dasturlash'
+        csa_creating_objects: 'CSA: Ob''ektlarni yaratish'
+        csa_calling_methods: 'CSA: Qo''ng''iroq usullari'
+        csa_while_loops: 'CSA: Looplar'
+        csa_inheritance: 'CSA: meros'
+        csa_writing_a_method: 'CSA: Usul yozish'
+        csa_software_engineering_code_reviews: 'CSA: Dasturiy ta''minot muhandisligi - Kodni ko''rib chiqish'
+        csa_conditional_statements: 'CSA: Shartli bayonotlar'
+        csa_printing_in_java: 'CSA: Java-da chop etish'
+        csa_two_way_selection_and_not: 'CSA: Ikki tomonlama tanlov va YO''Q'
+        csa-pl-intro-to-oop: Ob'ektga yo'naltirilgan dasturlashga kirish
+        csa-pl-welcome-to-Neighborhood: The Neighborniyaga xush kelibsiz
+        csa-pl-calling-methods: Java-da qo'ng'iroq qilish usullari
+        csa-pl-creating-objects: Ob'ektlarni yaratish
+        csa_accessor_methods: 'CSA: Accessor usullari'
+        csa_constructors: 'CSA: Konstruktorlar'
+        csa_creating_a_scanner_object: 'CSA: Brauzer ob''ektini yaratish'
+        csa_creating_variables: 'CSA: O''zgaruvchilarni yaratish'
+        csa_instance_variables_and_attributes: 'CSA: Instance o''zgaruvchilari va atributlari'
+        csa_mutator_methods: 'CSA: Mutator usullari'
+        csa_overloaded_constructors: 'CSA: Haddan tashqari yuklangan konstruktorlar'
+        csa_the_tostring_method: 'CSA: ToString () usuli'
+        csa_scanner_class_methods: 'CSA: Skaner sinfi usullari'
+        csa_for_loops: 'CSA: Looplar uchun'
+        csa_enhanced_for_loops: 'CSA: ko''chadan uchun Kengaytirilgan'
+        csa_modifying_values_in_a_1d_array: 'CSA: 1D massivdagi qiymatlarni o''zgartirish'
+        csa_nested_loops: 'CSA: Ichki ilmoqlar'
+        csa_one_dimensional_arrays: 'CSA: Bir o''lchovli (1D) massivlar'
+        csa_polymorphism: 'CSA: Polimorfizm'
+        csa_casting: 'CSA: to''qimalarining'
+        csa_equals_and_aliases: 'CSA: Teng va taxalluslar'
+        csa_multi-selection_statements: 'CSA: Ko''p tanlovli bayonotlar'
+        csa_random_numbers: 'CSA: Tasodifiy raqamlar'
+        csa_static_methods: 'CSA: Statik usullar'
+        csa_static_variables: 'CSA: Statik o''zgaruvchilar'
+        csa_the_equals_method: 'CSA: Equals () usuli'
+        csa_welcome_to_the_theater: 'CSA: Teatrga xush kelibsiz'
+        enter_your_own_poem: O'z she'ringizni kiriting
+        csa-example-solution-1: 'Namuna echimini jonli kodlash '
         csd_sprite_properties: Sprait hususiyatlari
+        csa-pl-documentation: Java laboratoriyasida hujjatlar
+        csc-starquilts-intro: 'CSC: Yulduzli ko''rpa-ko''rpa'
+        csa-pl-vocab-pm: Loyihani boshqarish lug'ati
+        csc-ecosystems-intro: Ekotizimlar Kirish
+        PL_CSD_MicroBit_Intro: 'Mikrofonga kirish: bit'
+        csc_animal_adaptations_intro: Hayvonlarning moslashuvi Kirish
+        csa_two_dimensional_arrays: 'CSA: Ikki o''lchovli (2D) massivlar'
+        csa_working_with_2d_array_elements: 'CSA: 2D qator elementlari bilan ishlash'
+        csa_row_major_traversal: 'CSA: Qator-asosiy o''tish'
+        csa_column_major_traversal: 'CSA: Ustun-Major Traversal'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: ko''chadan va 2D massivlar uchun kengaytirilgan'
+        csa_images_and_pixels: 'CSA: Rasmlar va piksellar'
+        csa_wrapper_classes_part_1: 'CSA: Wrapper sinflari 1-qism'
+        csa_wrapper_classes_part_2: 'CSA: Wrapper Sinflar 2-qism'
+        csa_the_arraylist_class: 'CSA: ArrayList klassi'
+        csa_working_with_arraylist_data: 'CSA: ArrayList ma''lumotlari bilan ishlash'
+        csa_remving_data_from_an_arraylist: 'CSA: ArrayList-dan ma''lumotlarni olib tashlash'
+        csa_private_methods: 'CSA: Xususiy usullar'
+        csa_recursion: 'CSA: rekursiya'
+        csa_searching_algorithms: 'CSA: algoritmlarni qidirish'
+        csa_sorting_algorithms: 'CSA: Saralash algoritmlari'
+        star_quilts_intro_to_artist: 'Yulduzli ko''rpa-ko''rpa: rassomga kirish'
+        upload_sprites_backgrounds: Maxsus spritlar va fonlarni yuklash
     callout:
       text:
         drag_blocks: '"move" blokini olib boshqa blok pastiga biriktiring.'

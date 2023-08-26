@@ -78,9 +78,9 @@ Se crei un'attività o un tutorial progettato per studenti con bisogni speciali,
 
 L'obiettivo di un'Ora del Codice è quello di rendere accessibile ai principianti un primo assaggio di informatica o di programmazione. Il tono dovrebbe essere questo:
 
-- Chiunque può imparare l'informatica, indipendentemente da età, sesso, razza o capacità/disabilità. 
+- Chiunque può imparare l'informatica, indipendentemente da età, sesso, razza o capacità/disabilità.
 - L'informatica è connessa a un'ampia gamma di campi di interesse. Tutti dovrebbero impararla!
-- Incoraggia gli studenti a creare qualcosa di unico che possa essere condiviso con genitori/amici o online. 
+- Incoraggia gli studenti a creare qualcosa di unico che possa essere condiviso con genitori/amici o online.
 
 Le attività dovrebbero insegnare concetti di informatica tipo i cicli, le istruzioni condizionali, la crittografia o il funzionamento di Internet. Un'attività può anche insegnare come l'informatica si collega a occupazioni, eventi o storia del mondo reale. Ad esempio, insegnare la progettazione dell'esperienza utente per creare app significative per un pubblico o una causa. Sconsigliamo attività che si concentrano sulla sintassi della programmazione piuttosto che sui concetti. Ad esempio, elencheremo, ma non evidenzieremo, le attività che insegnano l'HTML. Allo stesso modo, scoraggiamo lezioni di programmazione a blocchi centrate sull'impostazione/modifica delle opzioni di configurazione piuttosto che sull'imparare a modellare un algoritmo o un processo.
 
@@ -122,7 +122,7 @@ Cosa ti serve:
 
 #### Altre cose di cui avrai bisogno per inviare i piani di lezione
 
-* Link al tuo piano della lezione. Può essere una pagina web, un collegamento a una casella personale, Google Drive o un servizio simile. 
+* Link al tuo piano della lezione. Può essere una pagina web, un collegamento a una casella personale, Google Drive o un servizio simile.
 * Di quale software e/o hardware il docente avrà bisogno per svolgere il tuo piano di lezione (Scratch? Robots? Nessuno?)
 
 #### Altre cose di cui avrai bisogno quando invii attività online
@@ -181,22 +181,22 @@ Se il comitato di revisione valuta l'attività a zero in termini di qualità del
 Inoltre, per essere elencate, tutte le attività devono:
 
 - Essere appropriato per un'aula di una scuola pubblica (niente armi, nessun contenuto esplicito/maturo, nessun contenuto religioso, ecc.)
-- Non richiedono l'iscrizione 
+- Non richiedono l'iscrizione
 - Non richiedono alcun pagamento (eccezione per le attività di robotica che possono richiedere l'acquisto di robot/kit) Per le attività autogestite per nuovi insegnanti e studenti, il comitato di revisione cercherà di vedere se:
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+Per quanto riguarda le attività autonome destinate a nuovi insegnanti e studenti, il comitato di revisione verificherà se:
 
 - Ricevono i voti più alti dal comitato di revisione
 - Sono attività autogestite di un'ora progettate per principianti (studenti e insegnanti)
 - Attraggono una vasta gamma di utenti (attraverso piattaforme, lingue ed età)
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+Insegnanti e studenti potranno cercare e filtrare il nostro elenco di attività in base a filtri come voto, livello di esperienza, materia, hardware, ecc. Per impostazione predefinita, mostreremo prima i piani delle lezioni e le attività che:
 
 - Feedback positivo: Cosa funziona bene?
 - Feedback critico: Cosa si potrebbe migliorare?
-- Appeal to a wide range of users (across platforms, languages, and ages)
+- Attraggono una vasta gamma di utenti (attraverso piattaforme, lingue ed età)
 - Questa attività incoraggia gli studenti a creare qualcosa di unico?
-- Are new this year
+- Sono nuove quest'anno
 
 [**Torna all'inizio**](#top)
 
@@ -204,26 +204,26 @@ Teachers and students will be able to search through and filter our list of acti
 
 ## Linee guida per la presentazione di una revisione qualitativa anticipata (NOVITÀ)
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Puoi includere il [logo dell'Ora del Codice](https://hourofcode.com/us/promote/resources#logo) nel tuo tutorial, ma questo non è obbligatorio. Se si utilizza il logo Hour of Code vedere le linee guida del marchio qui sotto. <u>In nessun caso è possibile utilizzare il logo e il nome Code.org.</u> Entrambi sono marchi registrati e non possono essere combinati con un marchio di terze parti senza espressa autorizzazione scritta.
 
 Nota: queste sono le linee guida generali per fornire un commento. La revisione anticipata della tua attività può includere commenti su tutte queste categorie oppure può includere commenti solo in una o due.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Includi le note per l'insegnante.** La maggior parte delle attività dovrebbe essere autogestita dagli studenti, ma se un'attività deve essere guidata o gestita da un insegnante ti preghiamo di includere delle indicazioni chiare e semplici per l'insegnante, in forma di note disponibili ad un URL separato da inviare unitamente alla tua attività. Non sono solo gli studenti ad essere principianti, lo sono anche alcuni degli insegnanti. Includi le informazioni utili come:
 
 - Su quali piattaforme e browser funziona meglio il tutorial?
 - Funziona sugli smartphone? Sui Tablet?
-- Si consiglia la programmazione in coppia? 
+- Si consiglia la programmazione in coppia?
 - Considerazioni per l'uso in una classe? Per esempio, se ci sono video, consiglia agli insegnanti di mostrare i video su uno schermo proiettato affinché l'intera classe possa vederli insieme
 
 Tutte le attività inviate per una revisione anticipata riceveranno un riscontro entro il 1 settembre. Forniremo anche un collegamento a un modulo che puoi utilizzare per spiegare modifiche specifiche apportate a un'attività in risposta ai commenti.
 
-Ogni attività inviata prima del 1° ottobre riceverà una revisione standard, indipendentemente dal fatto che riceva una revisione anticipata o meno. Durante il periodo di revisione standard (settembre-ottobre), i revisori si concentreranno sulla valutazione delle attività secondo i criteri descritti nella sezione "Come verranno valutate le attività" sopra. A meno che non si notino modifiche specifiche a un'attività, i revisori possono e probabilmente faranno affidamento sui commenti delle revisioni anticipate per valutare le attività. @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+Ogni attività inviata prima del 1° ottobre riceverà una revisione standard, indipendentemente dal fatto che riceva una revisione anticipata o meno. Durante il periodo di revisione standard (settembre-ottobre), i revisori si concentreranno sulla valutazione delle attività secondo i criteri descritti nella sezione "Come verranno valutate le attività" sopra. A meno che non si notino modifiche specifiche a un'attività, i revisori possono e probabilmente faranno affidamento sui commenti delle revisioni anticipate per valutare le attività. @Scratch." Utilizza l'hashtag **#HourOfCode** (con lettere H, O e C maiuscole)
 
-**Create your activity in Spanish or in other languages besides English.**
+**Crea la tua attività in Italiano o altre lingue oltre l'Inglese.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Spiega o collega l'attività a un contesto sociale significativo.** La programmazione di computer può diventare un superpotere se gli studenti si rendono conto di quanto può cambiare il mondo il meglio!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**Assicurati che il tuo tutorial possa essere utilizzato in un paradigma di [Programmazione in coppia.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)** Ciò è particolarmente utile per l'Ora del Codice perché molte classi non dispongono di hardware 1: 1 per tutti gli studenti.
 
 [**Torna all'inizio**](#top)
 
@@ -231,15 +231,15 @@ Ogni attività inviata prima del 1° ottobre riceverà una revisione standard, i
 
 ## Suggerimenti per la progettazione di tutorial autoguidati di un'ora
 
-**Aggiungi un feedback alla fine dell'attività.** (Per esempio: "Hai completato 10 livelli e hai imparato cosa sono i cicli! Ben fatto!") We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+**Aggiungi un feedback alla fine dell'attività.** (Per esempio: "Hai completato 10 livelli e hai imparato cosa sono i cicli! Ben fatto!") Non vogliamo impedire questo utilizzo, ma vogliamo assicurarci che l'utilizzo rientri in alcuni limiti:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. Usa «Hour of Code» solo in relazione alle attività non commerciali di CS Education nel contesto della campagna Hour of Code e per nessun altro scopo.
+2. Qualsiasi riferimento a "Hour of Code" ("Ora del codice") deve essere fatto in modo che non suggerisca che sia un tuo marchio, ma piuttosto si riferisca all'Ora del Codice come un movimento di gente comune. Buon esempio: «Partecipa all'Ora del Codice® su AcmeCorp.com». Un esempio di uso sbagliato: "Prova l'Ora del Codice di ACME Corp".
+3. Usa un apice «®» nei punti più importanti in cui menzioni «L'ora del codice», sia sul tuo sito web che nelle descrizioni delle app.
+4. Includi un linguaggio nella pagina (o nel piè di pagina), compresi i link ai siti web di Hour of Code, CSedWeek e Code.org, che indichi entrambi i seguenti elementi: a. Hour of Code® e Hora del Código® sono marchi registrati di Code.org; e b. «L'Ora[del Codice](http://hourofcode.com/) ® è un'iniziativa nazionale di [Code.org](http://code.org/) per avvicinare milioni di studenti a un'ora di informatica e programmazione informatica».
+5. Non utilizzare «Hour of Code» nei nomi delle app.
+6. Non utilizzare «L'Ora del Codice» in relazione a qualsiasi uso o scopo commerciale (ad esempio, inserire la tua attività sull'Ora del Codice dietro un paywall; promuovere un altro servizio a pagamento come parte della tua attività L'Ora del Codice; vendere prodotti dell'Ora del Codice).
+7. Non utilizzare «Hour of Code» in relazione ad attività che richiedono un accesso o la creazione di un account.
 
 [**Torna all'inizio**](#top)
 
@@ -247,15 +247,15 @@ Ogni attività inviata prima del 1° ottobre riceverà una revisione standard, i
 
 ## Linee guida sui Marchi Registrati
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+Per monitorare in modo più accurato la partecipazione, chiediamo a ogni partner del tutorial di includere un'immagine di monitoraggio di 1 pixel nella prima pagina dei tutorial dell'Ora del Codice. L'immagine pixel deve essere solo sulla pagina iniziale. Non includerla in nessuna pagina provvisoria del tuo tutorial.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+Questo ci consentirà di contare gli utenti che seguono il tuo tutorial sull'Ora del Codice. Porterà a conteggi di partecipazione più accurati per il tuo tutorial.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Se il tuo corso viene approvato e incluso nell'elenco finale dei corsi, Code.org ti fornirà uno specifico pixel di tracciamento che potrai integrare nel tuo corso. Vedi l'esempio in basso.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+Nota: non è importante farlo per le applicazioni installabili (app iOS/Android, o app da installare sul PC)
 
-Example tracking pixels for Dance Party:
+Pixel di monitoraggio di esempio per Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
@@ -266,7 +266,7 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 ## Pixel di Tracciamento
 
-Questo ci consentirà di contare gli utenti che seguono il tuo tutorial sull'Ora del Codice. Porterà a conteggi di partecipazione più accurati per il tuo tutorial. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+Questo ci consentirà di contare gli utenti che seguono il tuo tutorial sull'Ora del Codice. Porterà a conteggi di partecipazione più accurati per il tuo tutorial. I tuoi utenti saranno molto più propensi ad iniziare l'attività ricevendo da te una messaggio di posta elettronica riguardante i tuoi corsi. Utilizza la campagna internazionale dell'Ora del Codice per la Settimana dell'Educazione Informatica come un pretesto per incoraggiare gli utenti a invitare altri a partecipare, aiutaci a raggiungere più studenti.
 
 - Presenta l'Ora del Codice e la settimana dell'insegnamento dell'informatica sul tuo sito web. Esempio: <http://www.tynker.com/hour-of-code>
 - Promuovi l'Ora del Codice utilizzando i sociali network, i media tradizionali, le mailing list, ecc, usando l'hashtag #HourOfCode (con le lettere H, O e C maiuscole)
@@ -275,4 +275,4 @@ Questo ci consentirà di contare gli utenti che seguono il tuo tutorial sull'Ora
 
 [**Torna all'inizio**](#top)
 
-NOTA: questo non è importante per le app installabili (app iOS/Android o app installate sul desktop)<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+NOTA: questo non è importante per le app installabili (app iOS/Android o app installate sul desktop)

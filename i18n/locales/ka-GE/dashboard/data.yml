@@ -485,35 +485,73 @@ ka:
         hoc_dance_events: ცეკვის წვეულება - ღონისძიებები
         hoc_dance_properties: ცეკვის პარტია - თვისებები
         hoc_dance_congrats: საცეკვაო წვეულება - წვეულების დროა!
+        c_and_c_great_to_create: შესანიშნავია სამართლიანი შექმნა და თამაში
         c_and_c_digital_sharing: ციფრული გაზიარება
         teaching_csf_how_it_works: 'კომპიუტერული მეცნიერების სწავლების საფუძვლები: როგორ მუშაობს კურსი?'
         elem_pd_2: დაწყებითი სკოლის კომპიუტერული მეცნიერება - პროფესიული განვითარების ვიდეო 2/2
         what_is_cs: რა არის კომპიუტერული მეცნიერება?
         repeat_block: გამეორების ბლოკის გამოყენება
         lesson_planning: გაკვეთილის დაგეგმვა
+        opd_closing: 'CS საფუძვლების სწავლება: დახურვა და შემდეგი ნაბიჯები'
+        why_unplugged_lessons: მიღება „unplugged“
+        writing_first_program: თქვენი პირველი კომპიუტერული პროგრამის წერა
+        conditionals_with_cards: Unplugged გაკვეთილი მოქმედებაში - პირობები ბარათებით
+        songwriting_with_functions: Unplugged გაკვეთილი მოქმედებაში - სიმღერების ტექსტი ფუნქციებით
         what_is_an_event: რა არის ღონისძიება?
+        teaching_cs_pair_programming: 'CS საფუძვლების სწავლება: წყვილი პროგრამირება'
+        teaching_problem_solving: 'CS საფუძვლების სწავლება: პრობლემის გადაჭრის სწავლება'
+        csd_applab_designmode: 'CS აღმოჩენები: აპლიკაციის ლაბორატორია - დიზაინის რეჟიმი'
         csd_pair_programming: პროგრამირება წყვილებში
+        csd_gamelab_functions: დარეკვა და ფუნქციების განსაზღვრა
         csd_applab_parameters: ფუნქციები პარამეტრებით
+        csd_applab_loops: მარყუჟები აპლიკაციის ლაბორატორიაში
         csd_problem_solving_process: პროებლემების გადაჭრის პროცესი
+        CSF_Going_Places_Safely: ჩემი ონლაინ სამეზობლო
+        CSF_SpriteLab_Intro_v2: წარმოგიდგენთ Sprite ლაბორატორიას
+        CSF_Spritelab_MakeSprite_v2: როგორ გააკეთოთ Sprite
         CSF_SpriteLab_SpritesInAction_v2: სპრაიტები მოქმედებაში
         csd_debugging: გამართვა
+        csd_applab_designmode_short: აპლიკაციის ლაბორატორიის დიზაინის რეჟიმი
+        csp-pd-welcome: კეთილი იყოს თქვენი მობრძანება ოჯახში!
+        CSF-Teaching-Problem-Solving: CSF სწავლების პრობლემის გადაჭრა
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - საპილოტე ვიდეო - მონაცემთა ბლოკი
+        u7-libraries-explanation: 'აპლიკაციის ლაბორატორია: შექმენით საკუთარი ბლოკები - როგორ გამოვიყენოთ ბიბლიოთეკები'
+        how-to-k5-workshops: 'Code.org— ის CS საფუძვლები: ბავშვის ტესტირება, მასწავლებლის დამტკიცება'
+        why-should-teach-unplugged-activities: 'ხშირად დასმული კითხვები: რატომ უნდა ვასწავლო „გამორთული“ აქტივობები?'
+        cs-principles-intro-to-objects: 'CS პრინციპები: შესავალი ობიექტებში'
+        oceans_machine_learning: მანქანათმცოდნეობა
+        oceans_training_data: ტრენინგის მონაცემები
+        oceans_societal_implications: საზოგადოების შედეგები
         hoc_dance_congrats_2019: საცეკვაო წვეულება - წვეულების დროა!
         hoc_dance_warmup_2019: საცეკვაო წვეულება - გახურება
         hoc_dance_events_2019: ცეკვის წვეულება - ღონისძიებები
+        hoc_dance_measures_2019: საცეკვაო წვეულება - ზომები
         hoc_dance_properties_2019: ცეკვის პარტია - თვისებები
+        csd_what_computers_do: რას აკეთებენ კომპიუტერები?
+        csf_my_online_neighborhood_2020: ჩემი ონლაინ სამეზობლო
         csf_follow_the_digital_trail: მიჰყევით ციფრულ ნაკვალევს
         csf_private_and_personal_information: კონფიდენციალური და პირადი ინფორმაცია
         csd_what_computers_are: რა არის კომპიუტერი?
+        csd_how_teamwork_works: როგორ მუშაობს გუნდური მუშაობა
+        csd_teamwork_and_disagreement: გუნდური მუშაობა - უთანხმოების მოგვარება
+        csf21pilot_events: 'Sprite ლაბორატორია: სპრიტები მოქმედებაში'
+        csf21pilot_prompts: 'Sprite Lab: ტექსტი და მოთხოვნები'
         poembot-pilot-text: ჰაიკუ ბოტები - ტექსტის შენახვა [PILOT]
         poembot-pilot-haiku: ჰაიკუ ბოტები - აჩვენეთ თქვენი ჰაიკუ [PILOT]
         csd_ml_intro_to_ai_lab: AI ლაბორატორიის შესავალი
         csd_ml_import_model: AI მოდელის იმპორტი
+        csf_lots_of_sprites: 'Sprite ლაბორატორია: უამრავი სპრიტი'
         playlab_2021: თამაშების ლაბი - შესავალი
         playlab_2021_reader: თამაშების ლაბი - შესავალი
         csp_defining_calling_functions: ფუნქციების განსაზღვრა და გამოძახება
+        csp_tutorial_datatab: მონაცემთა ჩანართი App Lab- ში
         csp_tutorial_libraries: ბიბლიოთეკები აპების ლაბში
         PL-Video-21: მოგესალმებით Code.org-ის პროფესიონალურ სწავლებაში!
+        csp_tutorial_datavis1: მონაცემთა ვიზუალიზატორი App Lab- ში - ნაწილი 1
+        csp_tutorial_datavis2: მონაცემთა ვიზუალიზატორი App Lab- ში - ნაწილი 2
         csd_ml_intro_ai_lab_july2021: AI ლაბორატორიის შესავალი
+        csd_ml_training_testing_ai_lan: ტრენინგი და ტესტირება AI ლაბორატორიაში
+        csd_ml_model_cards_july2021: მოდელის ბარათები AI ლაბორატორიაში
         csd_ml_numerical_ai_lab: რიცხვითი მონაცემები AI ლაბში
         Gettting_Started_Progress: პროგრესი, უკუკავშირი და შეფასება
         Gettting_Started_ClassSection: კლასის სექციის შექმნა
@@ -525,15 +563,151 @@ ka:
         PL_CSD_TeacherTips_ProblemSolvingProcess: 'მასწავლებლის რჩევები: პრობლემის გადაჭრის პროცესი'
         PL_CSD_TeacherTips_PairProgramming: მასწავლებლის რჩევები - პროგრამირება წყვილში
         PL_CSD_TeacherTips_Debugging: მასწავლებლის რჩევები - დებაგირება
+        PL_CSD_TeacherTips_LeadLearner: მასწავლებლის რჩევები - წამყვანი მოსწავლე
+        poembot-playtest-intro: PoEMBOT სათამაშო ტესტის შესავალი
+        poembot-playtest-sprites: PEMBOT სათამაშო ტესტის სპრიტები
+        poembot-playtest-events: POEMBOT სათამაშო ტესტის ღონისძიებები
+        hello_world_intro: Hello World - კეთილი იყოს თქვენი მობრძანება Sprite Lab-ში
         hello_world_events: გამარჯობა სამყაროვ - პროგრამირება ღონისძიებებით
         hello_world_congrats: გამარჯობა სამყაროვ - რაც გინდა ქენი
         csp_global_vs_local: გლობალური vs. ლოკალური ცვლადების დებაგირება
+        rough_poemart_intro: v1 პოემა ხელოვნება შესავალი
+        rough_poemart_events: v1 პოემა ხელოვნების ღონისძიებები
+        rough_poemart_imagery: v1 პოემა ხელოვნების გამოსახულება
+        rough_poemart_congrats: v1 ლექსი ხელოვნება გილოცავთ
+        poetry_module_variables: ცვლადები - კოდირება პოეზიით
+        poetry_module_textandvariables: ტექსტი და ცვლადები - კოდირება პოეზიით
+        poetry_module_planningapp: თქვენი ლექსების გენერატორის აპლიკაციის დაგეგმვა - კოდირება პოეზიით
+        poetry_module_multichoiceprompts: მრავალჯერადი არჩევანის მოთხოვნა - კოდირება პოეზიით
+        poetry_module_conditionals: პირობითები - კოდირება პოეზიით
+        poemart_intro: პოემა ხელოვნების შესავალი
+        poemart_events: პოემა ხელოვნების ღონისძიებები
+        poemart_imagery: პოემა ხელოვნების გამოსახულება
+        poemart_celebration: პოემა ხელოვნების ზეიმი
+        csd_u6_variables_part2: ცვლადები - მრიცხველის ნიმუში
         csd_ml_ethics_ai: 'ეთიკა და ხელოვნური ინტელექტი'
+        outbreak_intro: 'ეპიდემიის სიმულაცია: შესავალი'
+        outbreak_events: 'ეპიდემიის სიმულატორი: მოვლენები'
+        outbreak_scientist: 'ეპიდემიის სიმულატორი: ფიქრი როგორც მეცნიერი'
+        outbreak_outro: 'ეპიდემიის სიმულატორი: უფასო თამაში'
+        PL_overview_CSP: რა არის კომპიუტერული მეცნიერების პრინციპები?
+        PL_CSP_EIPMOverview: EIPM გაკვეთილების გზამკვლევი
+        CSA-PL-debugging-temp: შესავალი გამართვის შესახებ ჯავის ლაბორატორიაში - ტემპი
+        csd_app_lab_design_mode: CSD აპლიკაციის ლაბორატორიის დიზაინის რეჟიმი
+        csd_app_lab_events: CSD აპლიკაციის ლაბორატორიის ღონისძიებები
+        PL_CSD_Unit4_AppTesting: ქაღალდის პროტოტიპის ტესტირება
+        csd_u6_circuit_playground: ფიზიკური გამოთვლა
         csd_u6_input_output: შესაყვანი და გამოსაყვანი ინფორმაცია
+        CSA-PL-for-loops: იყიდება მარყუჟების Java
+        CSA-PL-variables: ცვლადების შექმნა ჯავაში
         PL_CS_Journeys_Overview: კომპიუტერული მეცნიერების მოგზაურობები
+        CSA-PL-intro-to-java-lab: ჯავის ლაბორატორიის საფუძვლები
+        CSA-PL-first-program: პროგრამის წერა ჯავაში
+        CSD_u6_variables_part1: 'CSD: ცვლადები'
+        csd_u6_if_statements: 'CSD: თუ განცხადებები'
+        csc-poem-art-intro: შესავალი ვიდეო
+        csc-poem-art-outro: Outro ვიდეო
+        csd_u6_call_define_functions: 'CSD: დარეკვა და ფუნქციების განსაზღვრა'
         csp_applab_parameters: ფუნქციები პარამეტრებით
+        starquilts_intro_artist: შესავალი ვარსკვლავური საბნები
+        CSA-PL-intro-to-arrays: ერთგანზომილებიანი (1D) მასივები
+        CSA-PL-1d-arrays-new-values: მნიშვნელობების შეყვანა 1D მასივებში
+        CSA-PL-conditionals: პირობითი განცხადებები ჯავაში
+        CSA-PL-two-way-selection: ორი გზა შერჩევა
         CSA-PL-Printing-in-Java: ბეჭდვა ჯავაში
+        CSA-PL-multi-selection-statements: მრავალ შერჩევის განცხადებები
+        PL_CSP_TeacherTips_Advice: 'მასწავლებლის რჩევები: რჩევა ახალ CS მასწავლებლებს'
+        PL_CSP_TeacherTips_IntroToCSP: 'მასწავლებლის რჩევები: შესავალი CS პრინციპებში'
+        PL_CSP_TeacherTips_Debugging: 'მასწავლებლის რჩევები: დახმარება გამართვის გამართვაში'
+        PL_CSP_TeacherTips_LeadLearner: 'მასწავლებლის რჩევები: როგორ გავხდეთ წამყვანი მოსწავლე'
+        PL_CSP_TeacherTips_APExam: 'მასწავლებლის რჩევები: ემზადება AP გამოცდისთვის'
+        PL_CSP_TeacherTips_EIPM: 'მასწავლებლის რჩევები: EIPM პროცესი'
+        PL_CSD_CircuitPlayground_Overview: მიკროსქემის სათამაშო მოედნის მიმოხილვა
+        CSA-PL-debugging-22: გამართვა ჯავის ლაბორატორიაში
+        CSD_Unit6_InteractiveArtExemplar: ინტერაქტიული ხელოვნების ნიმუშები
         CS_Changing_Everything: კომპიუტერული მეცნიერება ცვლის ყველაფერს
+        csa-alias-video: უდრის და მეტსახელებს
+        csa-equals-video: ტოლობის () მეთოდი
+        csa-user-stories: მომხმარებლის ისტორიები პროგრამული ინჟინერიაში
+        csa-pl-vpl-m1-unit-3: პროგრამული ინჟინერია მე-3 განყოფილებაში
+        csa-pl-intro-to-equality: შესავალი თანასწორობაში
+        csa-pl-intro-to-equals-method: შესავალი .equals () მეთოდით
+        csa-pl-equals-book: წიგნის კლასის ტოლობის () მეთოდის დაწერა
+        csa-multi-select-pl: მრავალჯერადი შერჩევის განცხადებები ჯავაში
+        csc_timecapsule_intro: დროის კაფსულის შესავალი
+        PL_Equity_in_CS_Education: კაპიტალი CS განათლებაში
+        csc_fm_pilot: ფუნქციური მანქანები (პილოტი)
+        csc_fm_pilot_v2: 'ფუნქცია მანქანები Intro '
+        csc-sprite-lab-pixel-editor: დახაზეთ თქვენი საკუთარი Sprite
+        csa-pl-intro-to-strings: შესავალი სტრიქონებში ჯავაში
+        csa-pl-compareTo: შედარებაიტო () მეთოდი
+        csc-event-short-intro: ღონისძიებები მოკლე შესავალი
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: მიკროსქემის სათამაშო მოედნის განყოფილების მიმოხილვა
+        csa-day-in-pm-pl: რას აკეთებს პროექტის მენეჯერი?
+        csa-pl-intro-to-pm: შესავალი პროექტის მენეჯმენტში
+        PL_CSD_CircuitPlayground_Setup: მიკროსქემის სათამაშო მოედნის დაყენება
+        csa_object_oriented_programming: 'CSA: ობიექტზე ორიენტირებული პროგრამირება'
+        csa_creating_objects: 'CSA: ობიექტების შექმნა'
+        csa_calling_methods: 'CSA: დარეკვის მეთოდები'
+        csa_while_loops: 'CSA: მიუხედავად იმისა, რომ მარყუჟების'
+        csa_inheritance: 'CSA: მემკვიდრეობა'
+        csa_writing_a_method: 'CSA: მეთოდის წერა'
+        csa_software_engineering_code_reviews: 'CSA: პროგრამული უზრუნველყოფის ინჟინერია - კოდექსის მიმოხილვები'
+        csa_conditional_statements: 'CSA: პირობითი განცხადებები'
+        csa_printing_in_java: 'CSA: ბეჭდვა ჯავაში'
+        csa_two_way_selection_and_not: 'CSA: ორმხრივი შერჩევა და არა'
+        csa-pl-intro-to-oop: ობიექტზე ორიენტირებული პროგრამირების შესავალი
+        csa-pl-welcome-to-Neighborhood: კეთილი იყოს თქვენი მობრძანება სამეზობლოში
+        csa-pl-calling-methods: დარეკვის მეთოდები ჯავაში
+        csa-pl-creating-objects: ობიექტების შექმნა
+        csa_accessor_methods: 'CSA: აქსესუარის მეთოდები'
+        csa_constructors: 'CSA: კონსტრუქტორები'
+        csa_creating_a_scanner_object: 'CSA: სკანერის ობიექტის შექმნა'
+        csa_creating_variables: 'CSA: ცვლადების შექმნა'
+        csa_instance_variables_and_attributes: 'CSA: ინსტანციის ცვლადები და ატრიბუტები'
+        csa_mutator_methods: 'CSA: მუტატორის მეთოდები'
+        csa_overloaded_constructors: 'CSA: გადატვირთული კონსტრუქტორები'
+        csa_the_tostring_method: 'CSA: ToString () მეთოდი'
+        csa_scanner_class_methods: 'CSA: სკანერის კლასის მეთოდები'
+        csa_for_loops: 'CSA: მარყუჟებისთვის'
+        csa_enhanced_for_loops: 'CSA: გაძლიერებულია მარყუჟებისთვის'
+        csa_modifying_values_in_a_1d_array: 'CSA: მნიშვნელობების შეცვლა 1D მასივში'
+        csa_nested_loops: 'CSA: წყობილი მარყუჟები'
+        csa_one_dimensional_arrays: 'CSA: ერთგანზომილებიანი (1D) მასივები'
+        csa_polymorphism: 'CSA: პოლიმორფიზმი'
+        csa_casting: 'CSA: ჩამოსხმა'
+        csa_equals_and_aliases: 'CSA: ტოლი და მეტსახელები'
+        csa_multi-selection_statements: 'CSA: მრავალ შერჩევის განცხადებები'
+        csa_random_numbers: 'CSA: შემთხვევითი რიცხვები'
+        csa_static_methods: 'CSA: სტატიკური მეთოდები'
+        csa_static_variables: 'CSA: სტატიკური ცვლადები'
+        csa_the_equals_method: 'CSA: უდრის () მეთოდი'
+        csa_welcome_to_the_theater: 'CSA: კეთილი იყოს თქვენი მობრძანება თეატრში'
+        enter_your_own_poem: შეიყვანეთ თქვენი საკუთარი ლექსი
+        csa-example-solution-1: 'ცოცხალი კოდირება მაგალითის ამოხსნა '
+        csa-pl-documentation: დოკუმენტაცია ჯავის ლაბორატორიაში
+        csc-starquilts-intro: 'CSC: ვარსკვლავური საბნები'
+        csa-pl-vocab-pm: პროექტის მენეჯმენტის ლექსიკა
+        csc-ecosystems-intro: ეკოსისტემების შესავალი
+        PL_CSD_MicroBit_Intro: 'შესავალი მიკრო: BIT'
+        csc_animal_adaptations_intro: ცხოველთა ადაპტაცია შესავალი
+        csa_two_dimensional_arrays: 'CSA: ორგანზომილებიანი (2D) მასივები'
+        csa_working_with_2d_array_elements: 'CSA: მუშაობა 2D მასივის ელემენტებთან'
+        csa_row_major_traversal: 'CSA: რიგი-ძირითადი ტრავერსალი'
+        csa_column_major_traversal: 'CSA: სვეტი-ძირითადი ტრავერსალი'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: გაუმჯობესებულია მარყუჟებისა და 2D მასივებისთვის'
+        csa_images_and_pixels: 'CSA: სურათები და პიქსელები'
+        csa_wrapper_classes_part_1: 'CSA: შეფუთვის კლასები ნაწილი 1'
+        csa_wrapper_classes_part_2: 'CSA: შეფუთვის კლასები ნაწილი 2'
+        csa_the_arraylist_class: 'CSA: მასივის სიის კლასი'
+        csa_working_with_arraylist_data: 'CSA: მუშაობა ArrayList მონაცემებთან'
+        csa_remving_data_from_an_arraylist: 'CSA: მონაცემების ამოღება ArrayList- დან'
+        csa_private_methods: 'CSA: პირადი მეთოდები'
+        csa_recursion: 'CSA: რეკურსია'
+        csa_searching_algorithms: 'CSA: ალგორითმების ძიება'
+        csa_sorting_algorithms: 'CSA: ალგორითმების დახარისხება'
+        star_quilts_intro_to_artist: 'ვარსკვლავური საბნები: შესავალი მხატვრისთვის'
+        upload_sprites_backgrounds: ატვირთვა საბაჟო Sprites და ფონზე
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ

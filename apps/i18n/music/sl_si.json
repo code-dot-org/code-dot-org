@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "predvajaj zvok",
   "blockly_blockPlaySoundAtMeasureTooltip": "predvajaj zvok",
+  "blockly_blockPlaySoundTooltip": "predvajaj zvok",
   "blockly_blockRepeatTooltip": "ponovi",
   "blockly_blockWhenRun": "ob zagonu",
   "blockly_blockWhenRunTooltip": "ob zagonu",
@@ -11,6 +11,9 @@
   "blockly_toolboxCategoryLogic": "Logika",
   "blockly_toolboxCategoryMath": "Matematika",
   "blockly_toolboxCategoryVariables": "Spremenljivke",
+  "continue": "Nadaljuj",
+  "panelHeaderInstructions": "Navodila",
+  "panelHeaderWorkspace": "Delovni prostor: ",
   "share": "Deli",
   "startOver": "Začni znova"
 }

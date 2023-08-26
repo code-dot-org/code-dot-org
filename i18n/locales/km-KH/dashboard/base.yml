@@ -60,6 +60,7 @@ km:
         reset_password_token: "តំណភ្ជាប់សម្រាប់ការផ្លាស់ប្តូរលេខសម្ងាត់ដែលអ្នកបានធ្វើតាម"
         error:
           future: មិន​អាច​នៅ​ក្នុង​ថ្ងៃ​ក្រោយ
+        us_state: 'រដ្ឋ​(សាលា)'
   hello: "សួស្ដី​ពិភពលោក"
   welcome_back: "ស្វាគមន៍​ការ​មក​វិញ, %{name}"
   your_professional_learning_plan: "គំរោងនៃការសិក្សាមុខជំនាញរបស់អ្នក"
@@ -86,7 +87,7 @@ km:
     submit: 'ដាក់តម្រុយសម្រាបសម្កាល់'
   appname: "Code.org"
   stage: "ដំណាក់​កាល"
-  stage_number: "ដំណាក់កាល %{number}"
+  stage_number: "មេរៀនទី %{number}"
   puzzle: "បញ្ហា"
   trophies: "ពាន​រង្វាន់"
   courses: 'វគ្គ​សិក្សា'
@@ -95,14 +96,14 @@ km:
     title_teacher: "បង្រៀនជាមួយកម្មវិធីសរសេរកូដ"
   unplugged_activity: 'Unplugged Activity'
   of: "នៃ"
-  more: "បង្ហាញ​ច្រើន"
+  more: "​ច្រើនទៀត"
   less: "បង្ហាញ​តិច"
   try_hoc: "សាក​ល្បង \"ពេល​វេលា​នៃ​កូដ\" ដោយ​ចុច​ទីនេះ >> "
   try_k8intro: "សាកល្បងជាមួយការណែនាំពី K-8 នៃមុខវិទ្យាវិទ្យាសាស្រ្តកុំព្យូទ័រ(15-25ម៉ោង)"
   k8intro: "ការណែនាំពី K-8 នៃមុខវិទ្យាវិទ្យាសាស្រ្តកុំព្យូទ័រ(15-25ម៉ោង)"
   already_started: "បាន​ចាប់​ផ្ដើម​ហើយ? បន្ត​នៅ​ទីនេះ >> "
   demos: "រដ្ឋបា​លៈ ការធ្វេើបទបង្ហាយទាំងអស់"
-  continue: 'បន្ត'
+  continue: 'បន្ត '
   prize: 'រង្វាន់'
   more_info: 'ព័ត៌មាន​បន្ថែម'
   auth:
@@ -164,6 +165,7 @@ km:
     email_preference_no: "ទេ"
     share_teacher_email_reg_partner_preference_yes: "យល់ព្រម"
     share_teacher_email_reg_partner_preference_no: "ទេ"
+    us_state: 'រដ្ឋ​(សាលា)'
   school_info:
     title: 'ព័ត៌មានអំពីសាលា'
     school_country: 'សាលាក្នុងប្រទេស'
@@ -288,12 +290,13 @@ km:
         personal_login_created_username: 'អ្នកបានបង្កើតគណនីផ្ទាល់ខ្លួនដោយជោគជ័យ។​ ឥលូវនេះអ្នកអាចចូលទៅកាន់គណនីជាមួយនឹងusername​ (%{username})និងលេខសម្ងាត់របស់អ្នក។'
   nav:
     header:
-      finished_hoc: "ខ្ញុំបានបញ្ចប់វគ្គ Hour of Code​​ របស់ខ្ញុំ។"
+      finished_hoc: "ខ្ញុំបានបញ្ចប់!"
       sign_in_to_save: 'ចូលទៅកាន់គណនីដើម្បីកត់ទុកនូវតំណើរការ'
       my_dashboard: "ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ"
-      course_catalog: "មុខវិជ្ជាដោយផ្នែក"
-      project_gallery: "គម្រោង"
+      course_catalog: "កាតាឡុកវគ្គសិក្សា"
+      project_gallery: "គម្រោង​"
       sections: "វគ្គ"
+      help_support: "ជំនួយ និងការគាំទ្រ"
       report_bug: "រាយការណ៌អំពីកំហុសរបស់កម្មវិធី"
       report_abuse: "រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ"
       teacher_community: "សមាគមគ្រូបង្រៀន"
@@ -327,6 +330,7 @@ km:
       about: "អំពី"
       legal: "ភាពឯកជននិងច្បាប់"
       legal_privacy: "គោលការណ៍ឯកជនភាព"
+      legal_cookie_notice: "សេចក្តីជូនដំណឹងអំពីខូគី"
       legal_tos: "លក្ខខណ្ឌ"
     user:
       classroom: 'ទំព័រដើមរបស់់គ្រូបង្រៀន'
@@ -335,23 +339,28 @@ km:
       my_projects: 'គម្រោងរបស់ខ្ញុំ'
       settings: 'ការកែប្រែក្នុងគណនី​'
       logout: 'ចាកចេញពីគណនី'
-      signin: 'ចូល​គណនី'
+      signin: 'ចូល​គណនី '
       signup: 'បង្កើតគណនីថ្មី'
       already_registered: 'បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?'
       team: 'ក្រុម'
-      create: 'បង្កើត'
+      create: 'បង្កើត '
       algebra_game: 'ពិជគណិត'
+      applab: 'មន្ទីរពិសោធន៍កម្មវិធី​'
+      artist: 'សិល្បករ'
       artist_k1: 'សិល្បករ (អ្នកដែលទើបតែរៀនអាន)'
       basketball: 'កីឡាបាល់បោះ'
       bounce: 'បាល់​លោត'
-      dance: 'Dance Party'
+      dance: 'កម្មវិធីរាំ'
+      gamelab: 'មន្ទីរពិសោធន៍ហ្គេម'
       gamelab_jr: 'បន្ទប់ហ្គេម (beta)'
       gumball: 'The Amazing World of Gumball'
       iceage: 'Ice Age'
       infinity: 'អនន្ត'
       minecraft_adventurer: 'Minecraft Adventurer'
+      minecraft_designer: 'ម៉ាញក្រាស់'
       playlab_k1: 'បន្ទប់លេង (សម្រាប់អ្នកដែលទើបរៀនអាន)'
-      spritelab: 'Sprite Lab'
+      poetry: 'កំណាព្យ'
+      spritelab: 'មន្ទីរពិសោធន៍ Sprite '
       starwarsblocks: 'Star Wars (ប្លុក)'
       starwarsblocks_hour: 'Star Wars (ប្លុក)'
       loading: 'កំពុង​ដំណើរការ...'
@@ -452,9 +461,15 @@ km:
     student: 'សិស្ស'
     teacher: 'គ្រូបង្រៀន'
   footer:
+    thank_you: '<a href="https://code.org/about/partners">'
+    help_from_html: 'យើងចង់ទទួលស្គាល់ជាពិសេសវិស្វករ មកពី Amazon, Google និង Microsoft ដែលបានជួយបង្កើតអ្វីទាំងនេះ។'
+    help_from_html_old: 'វិស្វករមកពីក្រុមហ៊ុន Amazon, Google, and Microsoft បានជួយបង្កើតឯកសារនេះឡើង។'
+    art_from_html: 'Minecraft&#8482; &ចម្លង; %{current_year} Microsoft ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ សង្គ្រាមផ្កាយ&#8482; &ចម្លង; %{current_year} Disney និង Lucasfilm ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ បង្កក&#8482; &ចម្លង; %{current_year} Disney ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ យុគសម័យទឹកកក&#8482; &ចម្លង; %{current_year} 20th Century Fox។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ Angry Birds&#8482; &ចម្លង; 2009-%{current_year} Rovio Entertainment Ltd. រក្សាសិទ្ធិគ្រប់យ៉ាង។ រុក្ខជាតិទល់នឹង Zombies&#8482; &ចម្លង; %{current_year} Electronic Arts Inc. រក្សាសិទ្ធិគ្រប់យ៉ាង។ DreamWorks មនុស្សអាក្រក់ &copy; %{current_year} DreamWorks Animation LLC ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។'
+    art_from_html_old: 'Minecraft&#8482; &ចម្លង; %{current_year} Microsoft ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ សង្គ្រាមផ្កាយ&#8482; &ចម្លង; %{current_year} Disney និង Lucasfilm ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ បង្កក&#8482; &ចម្លង; %{current_year} Disney ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ យុគសម័យទឹកកក&#8482; &ចម្លង; %{current_year} 20th Century Fox។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ Angry Birds&#8482; &ចម្លង; 2009-%{current_year} Rovio Entertainment Ltd. រក្សាសិទ្ធិគ្រប់យ៉ាង។ រុក្ខជាតិទល់នឹង Zombies&#8482; &ចម្លង; %{current_year} Electronic Arts Inc. រក្សាសិទ្ធិគ្រប់យ៉ាង។ DreamWorks មនុស្សអាក្រក់ &copy; %{current_year} DreamWorks Animation LLC ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។'
+    powered_by_aws: 'Amazon Web Services ដែល “Powered by AWS” គឺជាពាណិជ្ជសញ្ញារបស់ Amazon.com, Inc. ឬសាខារបស់ខ្លួន នៅសហរដ្ឋអាមេរិក និង ប្រទេសផ្សេងទៀត។'
     built_on_github: 'បង្កើតឡើងលើ GitHub ដោយ Microsoft'
-    copyright: 'រក្សាសិទ្ធដោយ'
-    more: 'ផ្សេង​ទៀត'
+    copyright: 'រក្សាសិទ្ធ'
+    more: 'ច្រើនទៀត'
     feedback: 'ផ្ដល់​មតិ​កែ​លម្អ'
     translate: 'ជួយ​ពួក​យើង​ក្នុង​ការ​បកប្រែ​ទៅ​ភាសា​របស់​អ្នក'
     support: 'ការ​គាំទ្រ'
@@ -466,24 +481,33 @@ km:
     report_abuse: 'រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ'
     try_hour_of_code: 'សាកល្បងរៀនជាមួយHour of Code!'
     store: 'ហាង'
+    cookie_notice: 'សេចក្តីជូនដំណឹងអំពីខូគី'
   reference_area:
-    title: 'ត្រូវការ​ជំនួយ?'
-    subtitle: 'មើល​វីដេអូ​និង​គន្លឹះ​ទាំង​នេះ'
+    title: 'ត្រូវការ​ជំនួយ? '
+    subtitle: 'មើល​វីដេអូ​និង​គន្លឹះ​ទាំង​នេះ '
     teacher: 'មើល​ដំណោះស្រាយ'
   video:
     tab: 'វីដេអូ។'
     notes: 'គ្មាន​វីដេអូ​ទេ? មើល​កំណត់​ចំណាំ។'
     autoplay_option: 'ចាក់​វីដេអូ​ដោយ​ស្វ័យប្រវត្តិ'
-    download: 'ទាញយក​វីដេអូ'
+    download: 'ទាញយក​វីដេអូ '
+    show_notes: 'បង្ហាញកំណត់ចំណាំ'
+    show_video: 'បង្ហាញកំណត់ចំណាំ'
     label: 'វីដេអូ'
   compatibility:
     upgrade:
+      unsupported_message: "កម្មវិធីសម្រាប់ស្វែងរករបស់អ្នកមិនអាចប្រើប្រាស់បានទេ។ សូមធ្វើបច្ចុប្បន្នាភាពកម្មវិធីស្វែងរករបស់អ្នកទៅជា <a href='%{supported_browsers_url}', target='_blank'>' មួយនៃកម្មវិធីស្វែងរករបស់យើងខ្ញុំ</a>។ អ្នកអាចសាកល្បងមើលទំព័រនេះម្តងទៀត ប៉ុន្តែសូមអ្នករំពឹងថាមុខងាររបស់វាត្រូវបានខូច។"
       link: "ស្វែងយល់បន្ថែម"
+      applab_unsupported_tablet: "App Lab ដំណើរការបានល្អបំផុតនៅលើកុំព្យូទ័រលើតុ ឬ កុំព្យូទ័រយួរដៃ ដោយប្រើ mouse និងក្តារចុច។ អ្នកអាចនឹងជួបប្រទះបញ្ហាដោយប្រើឧបករណ៍នេះ នៅលើឧបករណ៍បច្ចុប្បន្នរបស់អ្នក។"
+      gamelab_unsupported_tablet: "App Lab ដំណើរការបានល្អបំផុតនៅលើកុំព្យូទ័រលើតុ ឬ កុំព្យូទ័រយួរដៃ ដោយប្រើ mouse និងក្តារចុច។ អ្នកអាចនឹងជួបប្រទះបញ្ហាដោយប្រើឧបករណ៍នេះ នៅលើឧបករណ៍បច្ចុប្បន្នរបស់អ្នក។"
+      weblab_unsupported_locale_storage: "អ្នកអាចជួបប្រទះបញ្ហាដោយប្រើ Web Lab នៅក្នុងរបៀបរុករកឯកជន។ សូមផ្ទុកគម្រោងរបស់អ្នកឡើងវិញក្នុងរបៀបធម្មតា។ សូមអភ័យទោសចំពោះការរអាក់រអួល។"
+  slow_loading: 'វាចំណាយពេលយូរជាងធម្មតា...'
   try_reloading: 'សូម​សាកល្បង​ផ្ទុក​ទំព័រ​ឡើង​វិញ'
   next_stage: 'បាន​បញ្ចប់! បន្ត​ទៅ​ដំណាក់កាល​បន្ទាប់'
   download_pdf: 'បើក​ប្លង់​មេរៀន'
   share_code:
     title: "ចុច 'រត់' ដើម្បី​មើល​ដំណើរការ​កម្មវិធី​របស់​ខ្ញុំ"
+    check_out_what_i_made: "ពិនិត្យមើលអ្វីដែលខ្ញុំបានធ្វើ"
     og_description: "ខ្ញុំ​បាន​សរសេរ​កូដ​ដោយ​ខ្លួន​ឯង​ជាមួយ Code.org"
   builder:
     created: "ខ្ញុំ​បាន​បង្កើត​ស្គ្រីប​ថ្មី​មួយ។"
@@ -494,23 +518,37 @@ km:
       current: "កម្រិត​បច្ចុប្បន្ន"
       unused: "កម្រិត​ដែល​មិន​បាន​ប្រើ"
   upsell:
+    applab:
+      title: 'មន្ទីរពិសោធន៍កម្មវិធី​'
+    aquatic:
+      title: "ម៉ាញក្រាស់"
     dance-2019:
-      title: 'Dance Party'
+      title: 'កម្មវិធីរាំ'
     dance:
-      title: 'Dance Party'
+      title: 'កម្មវិធីរាំ'
     flappy:
       title: 'Flappy កូដ'
       body: 'តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!'
+    gamelab:
+      title: "មន្ទីរពិសោធន៍ហ្គេម"
     hero:
+      title: "ម៉ាញក្រាស់"
       body: "Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។"
     hoc-encryption:
       title: "ការអ៉ីនគ្រីបធម្មតា"
     hoc:
       body: 'សាក​ល្បង​ផ្នែក​មូលដ្ឋាន​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ។ មនុស្ស​ជា​ច្រើន​លាន​នាក់​បាន​សាកល្បង​រួច​ហើយ។'
+    minecraft:
+      title: "ម៉ាញក្រាស់"
+    minecraft2016:
+      title: "ម៉ាញក្រាស់"
     widgets:
       audience: "អាយុ 14 ឆ្នាំឡើង"
     unplugged_conditionals:
       title: "លក្ខខណ្ឌ"
+  landing:
+    support: "ទទួលជំនួយ"
+    help_support: "ជំនួយ និងការគាំទ្រ"
   multi:
     wrong_title: "សំណួរ​មិន​ត្រឹមត្រូវ"
     wrong_body: "សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!"
@@ -535,10 +573,12 @@ km:
   text_match:
     correct_title: "ត្រឹម​ត្រូវ"
     correct_body: "នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។"
+  lesson_extras:
+    bonus_level: "កម្រិតបន្ថែម"
   dialog:
     ok: "យល់ព្រម"
     startover_title: "តើ​អ្នក​ពិត​ជា​ចង់​ចាប់ផ្ដើម​ឡើង​វិញ​មែនទេ?"
-    startover_ok: "ចាប់ផ្ដើម​ឡើង​វិញ"
+    startover_ok: "ចាប់ផ្ដើម​សារឡើង​វិញ"
     startover_cancel: "បោះបង់"
   terms_interstitial:
     tos: "លក្ខខណ្ឌ"
@@ -565,6 +605,8 @@ km:
           other: 'ផ្សេងៗ'
   hoc_download:
     minecraft_name: 'Minecraft Hour of Code'
+  hidden_stage: "គ្រូរបស់អ្នកមិនរំពឹងថាអ្នកនៅទីនេះទេ។ សូមសួរគ្រូរបស់អ្នក ថាតើមេរៀនណាដែលអ្នកគួររៀន។"
+  return_unit_overview: 'ចូលទៅកាន់ការពណ៍នាមេរៀន'
   view_teacher_guide: 'បង្ហាញការណែនាំសម្រាប់គ្រូ'
   pd:
     form_labels:
@@ -592,9 +634,14 @@ km:
       robotics:
         kodable: 'Kodable'
         other: "ផ្សេងៗ"
+      workshop_course:
+        other: 'ផ្សេងៗ'
       email_opt_in:
         opt_in_yes: 'យល់ព្រម'
         opt_in_no: 'ទេ'
+  course_offering:
+    headers:
+      minecraft: 'ម៉ាញក្រាស់'
   cookie_banner:
     accept: 'ខ្ញុំ​យល់​ព្រម'
   page_not_found_title: "រកទំព័រពុំឃើញ"
@@ -602,3 +649,7 @@ km:
   page_not_found_description: "ទំព័រដែលអ្នកកំពុងរកមិនមាននៅក្នុងអាសយដ្ឋាននេះទេ។ សូមពិនិត្យអាសយដ្ឋានគេហទំព័រ ហើយដាក់ស្នើម្ដងទៀត ឬត្រឡប់ទៅទំព័រដើមរបស់យើងវិញ។"
   page_not_found_button: "ត្រឡប់ទៅទំព័រដើម"
   copy: 'ចម្លង'
+  behaviors:
+    this_sprite: "Sprite មួយនេះ"
+  code_org_logo_alt: "ទំព័រដើម Code.org​"
+

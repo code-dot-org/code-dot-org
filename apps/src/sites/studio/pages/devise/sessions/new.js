@@ -17,4 +17,10 @@ $(document).ready(() => {
   document.getElementById('user_signup').addEventListener('click', () => {
     analyticsReporter.sendEvent(EVENTS.SIGN_UP_STARTED_EVENT);
   });
+
+  if (window.location.href.includes('user_return_to=/catalog')) {
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_SIGN_IN_CLICKED_IN_ASSIGN_DIALOG
+    );
+  }
 });

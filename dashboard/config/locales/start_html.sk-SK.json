@@ -3,57 +3,151 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Áno",
+          "1584 Maple St": "Dlhá 18",
+          "Are you allergic to pet fur?": "Máš alergiu na zvieraciu srsť?",
+          "Click here to start!": "Spusti kliknutím tu!",
+          "Closest pet shop:": "Najbližší obchod so zvieratami:",
+          "Crowd": "Prispôsobovanie",
+          "Different": "Odlišovanie",
+          "Do you like going outside?": "Baví ťa chodiť von?",
+          "Do you want to play with the pet?": "Chceš sa so zvieratkom hrať?",
+          "Downtown Pets and More": "Mega zvieratká s.r.o.",
+          "Find it!": "Nájsť zvieratko",
+          "Get a bettafish!": "Zožeň si bojovnicu!",
+          "Get a dog!": "Zožeň si psa!",
+          "Get a goat!": "Zožeň si kozu!",
+          "Get a hamster!": "Zožeň si škrečka!",
+          "Get a parrot!": "Zožeň si papagája!",
+          "Get a rat!": "Zožeň si potkana!",
+          "Get a scorpion!": "Zožeň si škorpióna!",
+          "Get a tarantula!": "Zožeň si tarantulu!",
+          "How cute should the pet be?": "Aké milé by malo zvieratko byť?",
+          "Medium Cute": "Stredne milé",
           "No": "Nie",
+          "Open Now!": "Máme otvorené!",
+          "Pet Chooser!": "zvieratka!",
+          "Should the pet be noisy?": "Malo by byť zvieratko hlučné?",
+          "Should your pet be cute or creepy?": "Chceš milé alebo strašidelné zvieratko?",
+          "The Ultimate": "Výber",
+          "Very Cute": "Veľmi milé",
+          "Would you rather go with the crowd or be different?": "Zvykneš sa prispôsobovať ostatným, alebo sa radšej odlišuješ?",
+          "Yes": "Áno",
+          "creepy": "strašidelné",
           "cute": "milý"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Áno",
+          "1584 Maple St": "Dlhá 18",
+          "Are you allergic to pet fur?": "Máš alergiu na zvieraciu srsť?",
+          "Click here to start!": "Spusti kliknutím tu!",
+          "Closest pet shop:": "Najbližší obchod so zvieratami:",
+          "Crowd": "Prispôsobovanie",
+          "Different": "Odlišovanie",
+          "Do you like going outside?": "Baví ťa chodiť von?",
+          "Do you want to play with the pet?": "Chceš sa so zvieratkom hrať?",
+          "Downtown Pets and More": "Mega zvieratká s.r.o.",
+          "Find it!": "Nájsť zvieratko",
+          "Get a bettafish!": "Zožeň si bojovnicu!",
+          "Get a dog!": "Zožeň si psa!",
+          "Get a goat!": "Zožeň si kozu!",
+          "Get a hamster!": "Zožeň si škrečka!",
+          "Get a parrot!": "Zožeň si papagája!",
+          "Get a rat!": "Zožeň si potkana!",
+          "Get a scorpion!": "Zožeň si škorpióna!",
+          "Get a tarantula!": "Zožeň si tarantulu!",
+          "How cute should the pet be?": "Aké milé by malo zvieratko byť?",
+          "Medium Cute": "Stredne milé",
           "No": "Nie",
+          "Open Now!": "Máme otvorené!",
+          "Pet Chooser!": "zvieratka!",
+          "Should the pet be noisy?": "Malo by byť zvieratko hlučné?",
+          "Should your pet be cute or creepy?": "Chceš milé alebo strašidelné zvieratko?",
+          "The Ultimate": "Výber",
+          "Very Cute": "Veľmi milé",
+          "Would you rather go with the crowd or be different?": "Zvykneš sa prispôsobovať ostatným, alebo sa radšej odlišuješ?",
+          "Yes": "Áno",
+          "creepy": "strašidelné",
           "cute": "milý"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Áno",
+          "Are you allergic to pet fur?": "Máš alergiu na zvieraciu srsť?",
+          "Click here to start!": "Spusti kliknutím tu!",
+          "Crowd": "Prispôsobovanie",
+          "Different": "Odlišovanie",
+          "Do you like going outside?": "Baví ťa chodiť von?",
+          "Do you want to play with the pet?": "Chceš sa so zvieratkom hrať?",
+          "Get a bettafish!": "Zožeň si bojovnicu!",
+          "Get a dog!": "Zožeň si psa!",
+          "Get a goat!": "Zožeň si kozu!",
+          "Get a hamster!": "Zožeň si škrečka!",
+          "Get a parrot!": "Zožeň si papagája!",
+          "Get a rat!": "Zožeň si potkana!",
+          "Get a scorpion!": "Zožeň si škorpióna!",
+          "Get a tarantula!": "Zožeň si tarantulu!",
+          "How cute should the pet be?": "Aké milé by malo zvieratko byť?",
+          "Medium Cute": "Stredne milé",
           "No": "Nie",
+          "Pet Chooser!": "zvieratka!",
+          "Should the pet be noisy?": "Malo by byť zvieratko hlučné?",
+          "Should your pet be cute or creepy?": "Chceš milé alebo strašidelné zvieratko?",
+          "The Ultimate": "Výber",
+          "Very Cute": "Veľmi milé",
+          "Would you rather go with the crowd or be different?": "Zvykneš sa prispôsobovať ostatným, alebo sa radšej odlišuješ?",
+          "Yes": "Áno",
+          "creepy": "strašidelné",
           "cute": "milý"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Áno",
+          "Are you allergic to pet fur?": "Máš alergiu na zvieraciu srsť?",
+          "Click here to start!": "Spusti kliknutím tu!",
+          "Crowd": "Prispôsobovanie",
+          "Different": "Odlišovanie",
+          "Do you like going outside?": "Baví ťa chodiť von?",
+          "Do you want to play with the pet?": "Chceš sa so zvieratkom hrať?",
+          "Get a bettafish!": "Zožeň si bojovnicu!",
+          "Get a dog!": "Zožeň si psa!",
+          "Get a goat!": "Zožeň si kozu!",
+          "Get a hamster!": "Zožeň si škrečka!",
+          "Get a parrot!": "Zožeň si papagája!",
+          "Get a rat!": "Zožeň si potkana!",
+          "Get a scorpion!": "Zožeň si škorpióna!",
+          "Get a tarantula!": "Zožeň si tarantulu!",
+          "How cute should the pet be?": "Aké milé by malo zvieratko byť?",
+          "Medium Cute": "Stredne milé",
           "No": "Nie",
+          "Pet Chooser!": "zvieratka!",
+          "Should the pet be noisy?": "Malo by byť zvieratko hlučné?",
+          "Should your pet be cute or creepy?": "Chceš milé alebo strašidelné zvieratko?",
+          "The Ultimate": "Výber",
+          "Very Cute": "Veľmi milé",
+          "Would you rather go with the crowd or be different?": "Zvykneš sa prispôsobovať ostatným, alebo sa radšej odlišuješ?",
+          "Yes": "Áno",
+          "creepy": "strašidelné",
           "cute": "milý"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Meno",
-          "Color": "Farba",
-          "Food": "Jedlo",
           "City": "Mesto",
-          "text": "text",
-          "Fill in the blanks to create a custom story!": "Vyplň prázdne políčka a vytvor si vlastný príbeh!",
+          "Color": "Farba",
           "Emotion": "Emócia",
+          "Fill in the blanks to create a custom story!": "Vyplň prázdne políčka a vytvor si vlastný príbeh!",
+          "Food": "Jedlo",
           "Make a Sci-Fi Story!": "Vytvor sci-fi príbeh!",
-          "Make a Western Story!": "Vytvor westernový príbeh!"
+          "Make a Western Story!": "Vytvor westernový príbeh!",
+          "Name": "Meno",
+          "text": "text"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Meno",
-          "Color": "Farba",
-          "Food": "Jedlo",
           "City": "Mesto",
-          "text": "text",
-          "Fill in the blanks to create a custom story!": "Vyplň prázdne políčka a vytvor si vlastný príbeh!",
+          "Color": "Farba",
           "Emotion": "Emócia",
+          "Fill in the blanks to create a custom story!": "Vyplň prázdne políčka a vytvor si vlastný príbeh!",
+          "Food": "Jedlo",
           "Make a Sci-Fi Story!": "Vytvor sci-fi príbeh!",
-          "Make a Western Story!": "Vytvor westernový príbeh!"
+          "Make a Western Story!": "Vytvor westernový príbeh!",
+          "Name": "Meno",
+          "text": "text"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -64,18 +158,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -86,29 +180,54 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing countries_2021": {
+          "How Many Countries...": "Koľko krajín...",
+          "are bigger than Alaska?": "je väčších než Aljaška?",
+          "are decreasing population?": "má klesajúci počet obyvateľov?",
+          "are land locked?": "nemá spojenie s morom?",
+          "have more than a billion people?": "má viac ako miliardu obyvateľov?",
+          "have no land borders?": "nemá pozemné hranice?",
+          "have sent people to space?": "vyslalo ľudí na mesiac?",
+          "have won the World Cup?": "vyhralo majstrovstvá sveta vo futbale?"
+        },
+        "CSD U1 processing countries_2022": {
+          "How Many Countries...": "Koľko krajín...",
+          "are bigger than Alaska?": "je väčších než Aljaška?",
+          "are decreasing population?": "má klesajúci počet obyvateľov?",
+          "are land locked?": "nemá spojenie s morom?",
+          "have more than a billion people?": "má viac ako miliardu obyvateľov?",
+          "have no land borders?": "nemá pozemné hranice?",
+          "have sent people to space?": "vyslalo ľudí na mesiac?",
+          "have won the World Cup?": "vyhralo majstrovstvá sveta vo futbale?"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
+          "It's a tie!": "Je to remíza!",
+          "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "Polož jeden prst na kláves „s“ a druhý na kláves „k“. Potom ťukaj klávesmi tak rýchlo, ako len vieš.",
+          "Which finger is the FASTEST?": "Ktorý prst je RÝCHLEJŠÍ?",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
+          "It's a tie!": "Je to remíza!",
+          "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "Polož jeden prst na kláves „s“ a druhý na kláves „k“. Potom ťukaj klávesmi tak rýchlo, ako len vieš.",
+          "Which finger is the FASTEST?": "Ktorý prst je RÝCHLEJŠÍ?",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -119,20 +238,67 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "41": "41",
+          "42": "42",
+          "43": "43",
+          "44": "44",
+          "45": "45",
+          "46": "46",
+          "47": "47",
+          "48": "48",
+          "49": "49",
+          "5": "5",
+          "50": "50",
+          "51": "51",
+          "52": "52",
+          "53": "53",
+          "54": "54",
+          "55": "55",
+          "56": "56",
+          "57": "57",
+          "58": "58",
+          "59": "59",
+          "6": "6",
+          "60": "60",
+          "61": "61",
+          "62": "62",
+          "63": "63",
+          "64": "64",
+          "65": "65",
+          "66": "66",
+          "67": "67",
+          "68": "68",
+          "69": "69",
+          "7": "7",
+          "70": "70",
+          "71": "71",
+          "72": "72",
+          "73": "73",
+          "74": "74",
+          "75": "75",
+          "76": "76",
+          "77": "77",
+          "78": "78",
+          "79": "79",
+          "8": "8",
+          "80": "80",
+          "81": "81",
+          "83": "83",
+          "9": "9",
+          "?": "?",
+          "Can you guess it?": "Podarí sa ti uhádnuť ho?",
+          "I'm thinking of a number from 1 to 100.": "Myslím na číslo od 1 do 100.",
+          "You haven't guessed yet.": "Zatiaľ ho nemáš.",
+          "You only have 5 tries.": "Máš iba 5 pokusov.",
+          "Your guess:": "Tvoj tip:",
           "text": "text"
         },
         "CSD U1 processing guess_2022": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -143,39 +309,87 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "41": "41",
+          "42": "42",
+          "43": "43",
+          "44": "44",
+          "45": "45",
+          "46": "46",
+          "47": "47",
+          "48": "48",
+          "49": "49",
+          "5": "5",
+          "50": "50",
+          "51": "51",
+          "52": "52",
+          "53": "53",
+          "54": "54",
+          "55": "55",
+          "56": "56",
+          "57": "57",
+          "58": "58",
+          "59": "59",
+          "6": "6",
+          "60": "60",
+          "61": "61",
+          "62": "62",
+          "63": "63",
+          "64": "64",
+          "65": "65",
+          "66": "66",
+          "67": "67",
+          "68": "68",
+          "69": "69",
+          "7": "7",
+          "70": "70",
+          "71": "71",
+          "72": "72",
+          "73": "73",
+          "74": "74",
+          "75": "75",
+          "76": "76",
+          "77": "77",
+          "78": "78",
+          "79": "79",
+          "8": "8",
+          "80": "80",
+          "81": "81",
+          "83": "83",
+          "9": "9",
+          "?": "?",
+          "Can you guess it?": "Podarí sa ti uhádnuť ho?",
+          "I'm thinking of a number from 1 to 100.": "Myslím na číslo od 1 do 100.",
+          "You haven't guessed yet.": "Zatiaľ ho nemáš.",
+          "You only have 5 tries.": "Máš iba 5 pokusov.",
+          "Your guess:": "Tvoj tip:",
           "text": "text"
         },
         "CSD U1 processing live_2021": {
-          "walking": "kráčajúci",
           "bear": "medveď",
-          "rat": "potkan"
+          "rat": "potkan",
+          "walking": "kráčajúci"
         },
         "CSD U1 processing live_2022": {
-          "walking": "kráčajúci",
           "bear": "medveď",
-          "rat": "potkan"
+          "rat": "potkan",
+          "walking": "kráčajúci"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "Správne!",
-          "Sorry!": "Prepáč!",
-          "National Park Quiz": "Kvíz o národných parkoch"
+          "National Park Quiz": "Kvíz o národných parkoch",
+          "Sorry!": "Prepáč!"
         },
         "CSD U1 processing npark_2022": {
           "Correct!": "Správne!",
-          "Sorry!": "Prepáč!",
-          "National Park Quiz": "Kvíz o národných parkoch"
+          "National Park Quiz": "Kvíz o národných parkoch",
+          "Sorry!": "Prepáč!"
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -186,18 +400,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -208,53 +422,83 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
-          "Friend Finder": "Nájdi svojich priateľov",
-          "Back": "Naspäť"
+          "Back": "Naspäť",
+          "Friend Finder": "Nájdi svojich priateľov"
         },
         "CSD U1 storage friends_2022": {
-          "Friend Finder": "Nájdi svojich priateľov",
-          "Back": "Naspäť"
+          "Back": "Naspäť",
+          "Friend Finder": "Nájdi svojich priateľov"
         },
         "CSD U1 storage movies_2021": {
-          "Comedy": "Komédia",
           "Action": "Akčné",
-          "Star Wars": "Star Wars",
-          "Yes": "Áno",
+          "Based on your preferences, we think you should watch:": "Na základe tvojich preferencií si myslíme, že dobrou voľbou bude:",
+          "Choose a Kids Movie: Great for Babysitters!": "Odporúčanie detských filmov: super, ak opatrujete deti!",
+          "Comedy": "Komédia",
+          "Do you want an animated movie?": "Chceš animovaný film?",
+          "Harry Potter": "Harry Potter",
+          "Musical": "Muzikál",
+          "My Neighbor Totoro": "Môj susedTotoro",
           "No": "Nie",
-          "text": "text",
-          "Musical": "Muzikál"
+          "Select your favorite movie": "Vyber svoj obľúbený film",
+          "Star Wars": "Star Wars",
+          "Tangled": "Na vlásku",
+          "The LEGO Movie": "Lego príbeh",
+          "What Should I Watch?": "Čo si mám pozrieť?",
+          "What are you in the mood for?": "Na čo máš náladu?",
+          "Yes": "Áno",
+          "You wanted to watch a:": "Chcel/-a si si pozrieť:",
+          "text": "text"
         },
         "CSD U1 storage movies_2022": {
-          "Comedy": "Komédia",
           "Action": "Akčné",
-          "Star Wars": "Star Wars",
-          "Yes": "Áno",
+          "Based on your preferences, we think you should watch:": "Na základe tvojich preferencií si myslíme, že dobrou voľbou bude:",
+          "Choose a Kids Movie: Great for Babysitters!": "Odporúčanie detských filmov: super, ak opatrujete deti!",
+          "Comedy": "Komédia",
+          "Do you want an animated movie?": "Chceš animovaný film?",
+          "Harry Potter": "Harry Potter",
+          "Musical": "Muzikál",
+          "My Neighbor Totoro": "Môj susedTotoro",
           "No": "Nie",
-          "text": "text",
-          "Musical": "Muzikál"
+          "Select your favorite movie": "Vyber svoj obľúbený film",
+          "Star Wars": "Star Wars",
+          "Tangled": "Na vlásku",
+          "The LEGO Movie": "Lego príbeh",
+          "What Should I Watch?": "Čo si mám pozrieť?",
+          "What are you in the mood for?": "Na čo máš náladu?",
+          "Yes": "Áno",
+          "You wanted to watch a:": "Chcel/-a si si pozrieť:",
+          "text": "text"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "Vymazať",
-          "white": "biela",
-          "pink": "ružová",
-          "green": "zelená",
-          "black": "čierne",
-          "purple": "fialová",
           "Outfit Picker": "Výber oblečenia",
-          "What is the weather like today?": "Aké je dnes počasie?"
+          "What is the weather like today?": "Aké je dnes počasie?",
+          "black": "čierne",
+          "green": "zelená",
+          "pink": "ružová",
+          "purple": "fialová",
+          "white": "biela"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Vymazať",
-          "white": "biela",
-          "pink": "ružová",
-          "green": "zelená",
-          "black": "čierne",
-          "purple": "fialová",
           "Outfit Picker": "Výber oblečenia",
-          "What is the weather like today?": "Aké je dnes počasie?"
+          "What is the weather like today?": "Aké je dnes počasie?",
+          "black": "čierne",
+          "green": "zelená",
+          "pink": "ružová",
+          "purple": "fialová",
+          "white": "biela"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -328,9 +572,9 @@
           "Success!": "Úspešne!"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "Východ",
           "North": "Sever",
           "South": "Juh",
-          "East": "Východ",
           "West": "Západ"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
@@ -346,58 +590,58 @@
           "Medium": "Stredný"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "vľavo",
-          "right": "vpravo",
-          "red": "červená",
-          "yellow": "žltá",
           "green": "zelená",
-          "purple": "fialová"
+          "left": "vľavo",
+          "purple": "fialová",
+          "red": "červená",
+          "right": "vpravo",
+          "yellow": "žltá"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "zapnuté",
           "fast": "rýchlo",
-          "slow": "pomaly",
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "on": "zapnuté",
+          "short": "krátky",
+          "slow": "pomaly"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "Červená",
+          "Blue": "Modrá",
           "Green": "Zelená",
-          "Blue": "Modrá"
+          "Red": "Červená"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "vľavo",
           "right": "vpravo"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "žltá",
-          "green": "zelená",
           "blue": "modrá",
-          "orange": "pomaranč"
+          "green": "zelená",
+          "orange": "pomaranč",
+          "yellow": "žltá"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "quiet": "ticho",
-          "Test": "Test"
+          "Test": "Test",
+          "quiet": "ticho"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "short": "krátky"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "Červená",
-          "Blue": "Modrá"
+          "Blue": "Modrá",
+          "Red": "Červená"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -406,9 +650,9 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Meno"
@@ -429,40 +673,41 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "Note:": "Poznámka:"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Úspešne!"
@@ -481,8 +726,8 @@
           "Success!": "Úspešne!"
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "Skóre",
-          "0": "0"
+          "0": "0",
+          "Score": "Skóre"
         },
         "CSD U6 - Physical Input - PC_2222": {
           "Success!": "Úspešne!"
@@ -524,15 +769,15 @@
           "Name:": "Meno:"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "Červená",
+          "Blue": "Modrá",
           "Green": "Zelená",
-          "Blue": "Modrá"
+          "Red": "Červená"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "Modrá",
+          "Green": "Zelená",
           "Name:": "Meno:",
           "Red": "Červená",
-          "Green": "Zelená",
-          "Blue": "Modrá",
           "Save": "Uložiť"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
@@ -547,23 +792,23 @@
           "white": "biela"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "Šťastná",
-          "?": "?"
+          "?": "?",
+          "Happy": "Šťastná"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "nadpis"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "Biela",
-          "Red": "Červená",
+          "Blue": "Modrá",
           "Green": "Zelená",
-          "Blue": "Modrá"
+          "Red": "Červená",
+          "White": "Biela"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "hore",
           "down": "dole",
           "left": "vľavo",
-          "right": "vpravo"
+          "right": "vpravo",
+          "up": "hore"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "meno"
@@ -576,12 +821,25 @@
           "on": "zapnuté"
         },
         "CSD U6 - Sensors - P_2222": {
-          "text": "text",
           "high": "vysoké",
-          "low": "nízke"
+          "low": "nízke",
+          "text": "text"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "hodnota"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Aktualizovať"
+          "Update": "Aktualizovať",
+          "value": "hodnota"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "hodnota"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "hodnota"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "hodnota"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Dokázal/a si to!"
@@ -655,53 +913,93 @@
         "CSD U6 add LED button_2021": {
           "Success!": "Úspešne!"
         },
+        "CSD U6 analog change": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog data": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "hodnota"
+        },
         "CSD U6 analog light": {
-          "Update": "Aktualizovať"
+          "Update": "Aktualizovať",
+          "value": "hodnota"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Aktualizovať"
+          "Update": "Aktualizovať",
+          "value": "hodnota"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Aktualizovať"
+          "Update": "Aktualizovať",
+          "value": "hodnota"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Aktualizovať"
+          "Update": "Aktualizovať",
+          "value": "hodnota"
+        },
+        "CSD U6 analog sound": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "hodnota"
         },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "prvý"
@@ -716,20 +1014,20 @@
           "first": "prvý"
         },
         "CSD U6 change": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 change_2018": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 change_2019": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 change_2021": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Stredný"
@@ -744,95 +1042,95 @@
           "Medium": "Stredný"
         },
         "CSD U6 emotion machine example": {
-          "Happy": "Šťastná",
-          "?": "?"
+          "?": "?",
+          "Happy": "Šťastná"
         },
         "CSD U6 emotion machine example_2018": {
-          "Happy": "Šťastná",
-          "?": "?"
+          "?": "?",
+          "Happy": "Šťastná"
         },
         "CSD U6 emotion machine example_2019": {
-          "Happy": "Šťastná",
-          "?": "?"
+          "?": "?",
+          "Happy": "Šťastná"
         },
         "CSD U6 emotion machine example_2021": {
-          "Happy": "Šťastná",
-          "?": "?"
+          "?": "?",
+          "Happy": "Šťastná"
         },
         "CSD U6 frequency": {
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "short": "krátky"
         },
         "CSD U6 frequency_2018": {
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "short": "krátky"
         },
         "CSD U6 frequency_2019": {
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "short": "krátky"
         },
         "CSD U6 frequency_2021": {
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "short": "krátky"
         },
         "CSD U6 get toggle": {
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "short": "krátky"
         },
         "CSD U6 get toggle_2018": {
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "short": "krátky"
         },
         "CSD U6 get toggle_2019": {
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "short": "krátky"
         },
         "CSD U6 get toggle_2021": {
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "short": "krátky"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "Modrá",
+          "Green": "Zelená",
           "Name:": "Meno:",
           "Red": "Červená",
-          "Green": "Zelená",
-          "Blue": "Modrá",
           "Save": "Uložiť"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "Modrá",
+          "Green": "Zelená",
           "Name:": "Meno:",
           "Red": "Červená",
-          "Green": "Zelená",
-          "Blue": "Modrá",
           "Save": "Uložiť"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "Modrá",
+          "Green": "Zelená",
           "Name:": "Meno:",
           "Red": "Červená",
-          "Green": "Zelená",
-          "Blue": "Modrá",
           "Save": "Uložiť"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "Modrá",
+          "Green": "Zelená",
           "Name:": "Meno:",
           "Red": "Červená",
-          "Green": "Zelená",
-          "Blue": "Modrá",
           "Save": "Uložiť"
         },
         "CSD U6 getProperty input": {
@@ -848,84 +1146,84 @@
           "Submit": "Odoslať"
         },
         "CSD U6 getters debug": {
-          "slow": "pomaly",
           "fast": "rýchlo",
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "short": "krátky",
+          "slow": "pomaly"
         },
         "CSD U6 getters debug_2018": {
           "fast": "rýchlo",
-          "slow": "pomaly",
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "short": "krátky",
+          "slow": "pomaly"
         },
         "CSD U6 getters debug_2019": {
           "fast": "rýchlo",
-          "slow": "pomaly",
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "short": "krátky",
+          "slow": "pomaly"
         },
         "CSD U6 getters debug_2021": {
           "fast": "rýchlo",
-          "slow": "pomaly",
-          "short": "krátky",
+          "high": "vysoké",
           "long": "dlhý",
           "low": "nízke",
-          "high": "vysoké"
+          "short": "krátky",
+          "slow": "pomaly"
         },
         "CSD U6 interval": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 interval_2018": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 interval_2019": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 interval_2021": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 light show": {
-          "on": "zapnuté",
-          "off": "vypnuté"
+          "off": "vypnuté",
+          "on": "zapnuté"
         },
         "CSD U6 light show_2018": {
-          "on": "zapnuté",
-          "off": "vypnuté"
+          "off": "vypnuté",
+          "on": "zapnuté"
         },
         "CSD U6 light show_2019": {
-          "on": "zapnuté",
-          "off": "vypnuté"
+          "off": "vypnuté",
+          "on": "zapnuté"
         },
         "CSD U6 light show_2021": {
-          "on": "zapnuté",
-          "off": "vypnuté"
+          "off": "vypnuté",
+          "on": "zapnuté"
         },
         "CSD U6 params create colors": {
-          "Red": "Červená",
-          "Blue": "Modrá"
+          "Blue": "Modrá",
+          "Red": "Červená"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "Červená",
-          "Blue": "Modrá"
+          "Blue": "Modrá",
+          "Red": "Červená"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "Červená",
-          "Blue": "Modrá"
+          "Blue": "Modrá",
+          "Red": "Červená"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "Červená",
-          "Blue": "Modrá"
+          "Blue": "Modrá",
+          "Red": "Červená"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -952,24 +1250,24 @@
           "Success!": "Úspešne!"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "text",
           "high": "vysoké",
-          "low": "nízke"
+          "low": "nízke",
+          "text": "text"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "text",
           "high": "vysoké",
-          "low": "nízke"
+          "low": "nízke",
+          "text": "text"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "text",
           "high": "vysoké",
-          "low": "nízke"
+          "low": "nízke",
+          "text": "text"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "text",
           "high": "vysoké",
-          "low": "nízke"
+          "low": "nízke",
+          "text": "text"
         },
         "CSD U6 setProperty predict app": {
           "title": "nadpis"
@@ -984,20 +1282,20 @@
           "title": "nadpis"
         },
         "CSD U6 slider intro": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 slider intro_2018": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 slider intro_2019": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 slider intro_2021": {
-          "short": "krátky",
-          "long": "dlhý"
+          "long": "dlhý",
+          "short": "krátky"
         },
         "CSD U6 test LED": {
           "Success!": "Úspešne!"
@@ -1012,71 +1310,74 @@
           "Success!": "Úspešne!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "Červená",
+          "Blue": "Modrá",
           "Green": "Zelená",
-          "Blue": "Modrá"
+          "Red": "Červená"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "Červená",
+          "Blue": "Modrá",
           "Green": "Zelená",
-          "Blue": "Modrá"
+          "Red": "Červená"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "O nás",
           "About Us": "O nás",
-          "User": "Používateľ",
-          "Cancel": "Zrušiť",
-          "Name:": "Meno:",
-          "Red": "Červená",
-          "Green": "Zelená",
           "Blue": "Modrá",
-          "Yes": "Áno",
+          "Cancel": "Zrušiť",
+          "Green": "Zelená",
+          "Name:": "Meno:",
           "No": "Nie",
-          "Save": "Uložiť"
+          "Red": "Červená",
+          "Save": "Uložiť",
+          "User": "Používateľ",
+          "Yes": "Áno"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "O nás",
           "About Us": "O nás",
-          "User": "Používateľ",
-          "Cancel": "Zrušiť",
-          "Name:": "Meno:",
-          "Red": "Červená",
-          "Green": "Zelená",
           "Blue": "Modrá",
-          "Yes": "Áno",
+          "Cancel": "Zrušiť",
+          "Green": "Zelená",
+          "Name:": "Meno:",
           "No": "Nie",
-          "Save": "Uložiť"
+          "Red": "Červená",
+          "Save": "Uložiť",
+          "User": "Používateľ",
+          "Yes": "Áno"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "O nás",
           "About Us": "O nás",
-          "User": "Používateľ",
-          "Cancel": "Zrušiť",
-          "Name:": "Meno:",
-          "Red": "Červená",
-          "Green": "Zelená",
           "Blue": "Modrá",
-          "Yes": "Áno",
+          "Cancel": "Zrušiť",
+          "Green": "Zelená",
+          "Name:": "Meno:",
           "No": "Nie",
-          "Save": "Uložiť"
+          "Red": "Červená",
+          "Save": "Uložiť",
+          "User": "Používateľ",
+          "Yes": "Áno"
         },
         "CSDU4 Decision App Demo": {
           "About": "O nás",
+          "About Us": "O nás",
           "I don't know": "Neviem",
           "When?": "Kedy?",
-          "About Us": "O nás"
+          "Why?": "Prečo?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "O nás",
+          "About Us": "O nás",
           "I don't know": "Neviem",
           "When?": "Kedy?",
-          "About Us": "O nás"
+          "Why?": "Prečo?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "O nás",
+          "About Us": "O nás",
           "I don't know": "Neviem",
           "When?": "Kedy?",
-          "About Us": "O nás"
+          "Why?": "Prečo?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Skryť",
@@ -1085,46 +1386,49 @@
         "CSDU4 List App Demo": {
           "About": "O nás",
           "About Us": "O nás",
-          "Done": "Hotovo",
-          "Cancel": "Zrušiť"
+          "Cancel": "Zrušiť",
+          "Done": "Hotovo"
         },
         "CSDU4 List App Demo_2018": {
           "About": "O nás",
           "About Us": "O nás",
-          "Done": "Hotovo",
-          "Cancel": "Zrušiť"
+          "Cancel": "Zrušiť",
+          "Done": "Hotovo"
         },
         "CSDU4 List App Demo_2019": {
           "About": "O nás",
           "About Us": "O nás",
-          "Done": "Hotovo",
-          "Cancel": "Zrušiť"
+          "Cancel": "Zrušiť",
+          "Done": "Hotovo"
         },
         "CSDU4 Quiz App Demo": {
           "About": "O nás",
+          "About Us": "O nás",
+          "Correct!": "Správne!",
           "Submit": "Odoslať",
           "When?": "Kedy?",
-          "About Us": "O nás",
-          "Correct!": "Správne!"
+          "Why?": "Prečo?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "O nás",
+          "About Us": "O nás",
+          "Correct!": "Správne!",
           "Submit": "Odoslať",
           "When?": "Kedy?",
-          "About Us": "O nás",
-          "Correct!": "Správne!"
+          "Why?": "Prečo?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "O nás",
+          "About Us": "O nás",
+          "Correct!": "Správne!",
           "Submit": "Odoslať",
           "When?": "Kedy?",
-          "About Us": "O nás",
-          "Correct!": "Správne!"
+          "Why?": "Prečo?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
-          "???": "???",
-          "=": "="
+          "=": "=",
+          "???": "???"
         },
         "CSDU6 - UI and Inputs - setScreen": {
           "Back": "Naspäť"
@@ -1145,76 +1449,76 @@
           "Success!": "Úspešne!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "V",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "text"
@@ -1239,12 +1543,12 @@
           "flying": "letieť"
         },
         "csd-apps for good-2": {
-          "Next": "Ďalší",
-          "Home": "Domov"
+          "Home": "Domov",
+          "Next": "Ďalší"
         },
         "csd-apps for good-2_2022": {
-          "Next": "Ďalší",
-          "Home": "Domov"
+          "Home": "Domov",
+          "Next": "Ďalší"
         },
         "csd-apps for good-3": {
           "1": "1",
@@ -1261,23 +1565,15 @@
           "???": "???"
         },
         "csd-explore ui-2": {
-          "Next": "Ďalší",
-          "Home": "Domov"
+          "Home": "Domov",
+          "Next": "Ďalší"
         },
         "csd-explore ui-2_2022": {
-          "Next": "Ďalší",
-          "Home": "Domov"
+          "Home": "Domov",
+          "Next": "Ďalší"
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1288,18 +1584,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1310,28 +1606,28 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Correct!": "Správne!",
-          "Sorry!": "Prepáč!",
-          "National Park Quiz": "Kvíz o národných parkoch"
+          "National Park Quiz": "Kvíz o národných parkoch",
+          "Sorry!": "Prepáč!"
         },
         "csd-explore ui-4_2022": {
           "Correct!": "Správne!",
-          "Sorry!": "Prepáč!",
-          "National Park Quiz": "Kvíz o národných parkoch"
+          "National Park Quiz": "Kvíz o národných parkoch",
+          "Sorry!": "Prepáč!"
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1342,18 +1638,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1364,7 +1660,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "Ďalší"
@@ -1373,13 +1677,13 @@
           "Next": "Ďalší"
         },
         "ml-L2 supervised - green glass door-2021": {
-          "Green Glass Door": "Zelené sklenené dvere",
           "Accepted": "Prijaté",
+          "Green Glass Door": "Zelené sklenené dvere",
           "Rejected": "Odmietnuté"
         },
         "ml-L2 supervised - green glass door_2022": {
-          "Green Glass Door": "Zelené sklenené dvere",
           "Accepted": "Prijaté",
+          "Green Glass Door": "Zelené sklenené dvere",
           "Rejected": "Odmietnuté"
         },
         "ml-L2 unsupervised - 1-2021": {
@@ -1389,18 +1693,18 @@
           "Next": "Ďalší"
         },
         "ml-customize-raspado-2021": {
-          "yes": "áno",
-          "no": "nie",
+          "Predict": "Predpoveď",
           "Raspado Recommender": "Program na odporúčanie ľadových džúsov",
+          "no": "nie",
           "preference": "preferencia",
-          "Predict": "Predpoveď"
+          "yes": "áno"
         },
         "ml-customize-raspado_2022": {
-          "yes": "áno",
-          "no": "nie",
+          "Predict": "Predpoveď",
           "Raspado Recommender": "Program na odporúčanie ľadových džúsov",
+          "no": "nie",
           "preference": "preferencia",
-          "Predict": "Predpoveď"
+          "yes": "áno"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Pokračovať",
@@ -1411,152 +1715,146 @@
           "Loading...": "Načítavanie..."
         },
         "ml-intro app lab-book recommender demo-2021": {
-          "Silly": "Smiešna",
-          "Predict": "Predpoveď"
+          "Predict": "Predpoveď",
+          "Silly": "Smiešna"
         },
         "ml-intro app lab-book recommender demo_2022": {
-          "Silly": "Smiešna",
-          "Predict": "Predpoveď"
+          "Predict": "Predpoveď",
+          "Silly": "Smiešna"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "Z",
           "A": "A",
-          "yes": "áno",
+          "W": "Z",
+          "head": "hlava",
           "no": "nie",
-          "head": "hlava"
+          "yes": "áno"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "Z",
           "A": "A",
-          "yes": "áno",
+          "W": "Z",
+          "head": "hlava",
           "no": "nie",
-          "head": "hlava"
+          "yes": "áno"
         },
         "ml-model cards-book recommender model card": {
-          "Silly": "Smiešna",
-          "Predict": "Predpoveď"
+          "Predict": "Predpoveď",
+          "Silly": "Smiešna"
         },
         "ml-model cards-book recommender model card_2022": {
-          "Silly": "Smiešna",
-          "Predict": "Predpoveď"
+          "Predict": "Predpoveď",
+          "Silly": "Smiešna"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Predpoveď"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Predpoveď"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Predpoveď"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Predpoveď"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "Predpoveď",
-          "Back": "Naspäť"
+          "2": "2",
+          "3": "3",
+          "Back": "Naspäť",
+          "Predict": "Predpoveď"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "Predpoveď",
-          "Back": "Naspäť"
+          "2": "2",
+          "3": "3",
+          "Back": "Naspäť",
+          "Predict": "Predpoveď"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Predpoveď"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Predpoveď"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Áno",
-          "No": "Nie",
           "B": "B",
-          "Predict": "Predpoveď"
+          "No": "Nie",
+          "Predict": "Predpoveď",
+          "Yes": "Áno"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Áno",
-          "No": "Nie",
           "B": "B",
-          "Predict": "Predpoveď"
+          "No": "Nie",
+          "Predict": "Predpoveď",
+          "Yes": "Áno"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Áno",
           "No": "Nie",
-          "Predict": "Predpoveď"
+          "Predict": "Predpoveď",
+          "Yes": "Áno"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Áno",
           "No": "Nie",
-          "Predict": "Predpoveď"
+          "Predict": "Predpoveď",
+          "Yes": "Áno"
         },
         "ml-models-shoes decision tree-2021": {
-          "Improved Shoe Recommender": "Vylepšený program na odporúčanie topánok",
+          "Improved Shoe Recommender": "Lepšie odporúčanie topánok",
           "Sports": "Športy"
         },
         "ml-models-shoes decision tree_2022": {
-          "Improved Shoe Recommender": "Vylepšený program na odporúčanie topánok",
+          "Improved Shoe Recommender": "Lepšie odporúčanie topánok",
           "Sports": "Športy"
         },
         "ml-models-shoes points-2021": {
-          "Ultimate Shoe Recommender": "Záverečný program na odporúčanie topánok"
+          "Ultimate Shoe Recommender": "Najlepšie odporúčanie topánok"
         },
         "ml-models-shoes points_2022": {
-          "Ultimate Shoe Recommender": "Záverečný program na odporúčanie topánok"
+          "Ultimate Shoe Recommender": "Najlepšie odporúčanie topánok"
         },
         "ml-models-shoes random-2021": {
-          "Shoe Recommender": "Program na odporúčanie topánok"
+          "Shoe Recommender": "Odporúčanie topánok"
         },
         "ml-models-shoes random_2022": {
-          "Shoe Recommender": "Program na odporúčanie topánok"
+          "Shoe Recommender": "Odporúčanie topánok"
         },
         "ml-use model card-example3A-2021": {
-          "Driver Alert System": "Výstražný systém pre rodičov",
+          "Driver Alert System": "Výstražný systém pre vodičov",
           "Get Started": "Začíname",
-          "rain": "dážď",
-          "snow": "sneh",
+          "Predict": "Predpoveď",
           "cloudy": "oblačno",
-          "night": "noc",
           "dusk": "Súmrak",
-          "Predict": "Predpoveď"
+          "night": "noc",
+          "rain": "dážď",
+          "snow": "sneh"
         },
         "ml-use model card-example3A_2022": {
-          "Driver Alert System": "Výstražný systém pre rodičov",
+          "Driver Alert System": "Výstražný systém pre vodičov",
           "Get Started": "Začíname",
-          "rain": "dážď",
-          "snow": "sneh",
+          "Predict": "Predpoveď",
           "cloudy": "oblačno",
-          "night": "noc",
           "dusk": "Súmrak",
-          "Predict": "Predpoveď"
-        },
-        "CSD U1 processing countries_2021": {
-          "How Many Countries...": "Koľko krajín..."
-        },
-        "CSD U1 processing countries_2022": {
-          "How Many Countries...": "Koľko krajín..."
+          "night": "noc",
+          "rain": "dážď",
+          "snow": "sneh"
         }
       }
     }

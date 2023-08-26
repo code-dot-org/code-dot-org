@@ -85,6 +85,7 @@ id:
           description_short: Kursus 20 jam ini mencakup komputer ilmu dan pemrograman konsep inti dalam kursus 2-4.
           description_audience: Usia 10 + (setelah Kursus 3)
           student_description: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk semua usia.
+          name: 20 jam
         edit-code:
           title: Mengedit kode
           description: Mengedit kode
@@ -194,10 +195,12 @@ id:
           description_short: Membuat cerita atau membuat permainan dengan laboratorium bermain Gumball!
           student_description: Membuat cerita atau membuat permainan dengan laboratorium bermain Gumball!
         starwars:
+          title: 'Star Wars: Membangun Galaxy Dengan Kode (Javascript)'
           description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
           description_short: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
           student_description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
         starwarsblocks:
+          title: 'Star Wars: Membangun Galaxy Dengan Kode (Blockly)'
           description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
           description_short: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
           student_description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
@@ -316,8 +319,12 @@ id:
           description_short: Penilaian pilihan ganda ini mencakup seputaran 7 ide besar tentang ilmu komputer. ini adalah bagian 2 dari dua bagian 50 soal ujian.
         CSDU1-Draft:
           description_short: Pemecahan Masalah
+        CSDU2-Draft:
+          description_short: Pengembangan Web
         CSDU5-Draft:
           description_short: Data
+        CSDU6-Draft:
+          description_short: Makerlab
         CSF_Secret_Sample_Story:
           description_audience: Usia 8-18+
         MikeTest:
@@ -395,6 +402,7 @@ id:
             practice:
               display_name: Praktik Pengajaran
         csp1-support:
+          title: Unit 1 Kursus Pembelajaran Profesional Online
           lesson_groups:
             required:
               display_name: Tinjauan
@@ -448,14 +456,19 @@ id:
         flappy-impact-study:
           title: Flappy Code dengan survey
         coursea-draft:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus A'
           description_short: Pengenalan ilmu komputer bagi pembaca pemula.
         courseb-draft:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus B'
           description_short: Pengenalan ilmu komputer bagi pembaca pemula.
         coursec-draft:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus C'
           description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
         coursed-draft:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus D'
           description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
         coursee-draft:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus E'
           description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
           lesson_groups:
             content:
@@ -465,6 +478,7 @@ id:
             extra_course_content:
               display_name: Isi Kursus Tambahan
         coursef-draft:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus F'
           description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
           lesson_groups:
             content:
@@ -547,6 +561,8 @@ id:
           description_audience: Sekolah Dan Siswa Menengah Tinggi
           description: Lokakarya ini dirancang untuk memberikan pengenalan dasar app lab kepada murid dalam 2 jam. Murid mestinya bisa hadir dengan latar belakang ilmu komputer yang berbeda dan merasa senang bisa membuat sesuatu.
           student_description: Lokakarya ini dirancang untuk memberikan pengenalan dasar app lab kepada murid dalam 2 jam. Murid mestinya bisa hadir dengan latar belakang ilmu komputer yang berbeda dan merasa senang bisa membuat sesuatu.
+        coursed-ramp:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus D'
         workshop-maker:
           title: Lokakarya Maker Toolkit
           description_audience: Guru menghadiri sendiri Lokakarya Maker Toolkit
@@ -616,6 +632,7 @@ id:
           title: Public Key Cryptography Widget
         csd2-old:
           title: CSD Unit 2 (USANG)
+          description_short: Pengembangan Web
         coursea-2017:
           title: Kursus A
           assignment_family_title: Kursus A
@@ -3188,6 +3205,7 @@ id:
           description: Selamat Datang di Survei Pascakursus CS Principles Code.org.  Survei ini membutuhkan kira-kira 15 menit sampai selesai. Tanggapan Anda bersifat privat dan anonim -- guru Anda dapat melihat hasil agregat anonim untuk seluruh kelas. Hasil survei sangat penting bagi guru Anda dan Code.org demi kelangsungan dan kesempurnaan kursus. Terima kasih atas waktu dan pertimbangan Anda.
           student_description: Selamat Datang di Survei Pascakursus CS Principles Code.org.  Survei ini membutuhkan kira-kira 15 menit sampai selesai. Tanggapan Anda bersifat privat dan anonim -- guru Anda dapat melihat hasil agregat anonim untuk seluruh kelas. Hasil survei sangat penting bagi guru Anda dan Code.org demi kelangsungan dan kesempurnaan kursus. Terima kasih atas waktu dan pertimbangan Anda.
         aiml-2021:
+          title: Modul AI dan Machine Learning
           lesson_groups:
             lessonGroup-4:
               display_name: Survei
@@ -3195,6 +3213,7 @@ id:
           lesson_groups:
             lessonGroup-4:
               display_name: Survei
+          title: AI dan Machine Learning
         kodea-pd-2021:
           description: Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini.
           student_description: Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini.
@@ -3221,6 +3240,129 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Selamat Datang
+            lessonGroup-3:
+              display_name: Menavigasi Code.org
+            lessonGroup-5:
+              display_name: Bersiap Mengajar CS Discoveries
+          title: 'Modul 1: Selamat datang '
+          description: |-
+            Modul ini merupakan pengantar singkat untuk Code.org dan kursus pembelajaran profesional ini.
+
+            **Anda akan:**
+
+            -   Mendapatkan pengantar untuk Code.org dan CS Discoveries.
+            -   Mempelajari cara untuk berpartisipasi dalam kursus pembelajaran profesional ini.
+
+            **Waktu yang Disarankan:** 10 menit
+          student_description: |-
+            Modul ini merupakan pengantar singkat untuk Code.org dan kursus pembelajaran profesional ini.
+
+            **Anda akan:**
+
+            -   Mendapatkan pengantar untuk Code.org dan CS Discoveries.
+            -   Mempelajari cara untuk berpartisipasi dalam kursus pembelajaran profesional ini.
+
+            **Waktu yang Disarankan:** 10 menit
+        self-paced-pl-csd2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Menavigasi Code.org
+          title: 'Modul 2: Menavigasi Code.org'
+          description: |-
+            Modul ini dirancang untuk mengarahkan Anda pada alat yang akan Anda gunakan untuk mendukung pembelajaran siswa saat mengajarkan CS Discoveries.
+
+            **Anda akan:**
+
+            -   Menjelajahi situs web Code.org dan alat untuk guru.
+            -   Membuat sesi kelas
+            -   Mencari dan menggunakan rencana pembelajaran kursus dan sumber daya untuk guru.
+            -   Mempelajari cara mengakses dukungan sambil mengajarkan kursus ini.
+
+            **Waktu yang disarankan:** 60 menit
+          student_description: |-
+            Modul ini dirancang untuk mengarahkan Anda pada alat yang akan Anda gunakan untuk mendukung pembelajaran siswa saat mengajarkan CS Discoveries.
+
+            **Anda akan:**
+
+            -   Menjelajahi situs web Code.org dan alat untuk guru.
+            -   Membuat sesi kelas
+            -   Mencari dan menggunakan rencana pembelajaran kursus dan sumber daya untuk guru.
+            -   Mempelajari cara mengakses dukungan sambil mengajarkan kursus ini.
+
+            **Waktu yang disarankan:** 60 menit
+        self-paced-pl-csd3-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sekilas tentang CS Discoveries
+          title: 'Modul 3: Sekilas tentang CS Discoveries'
+          description: |-
+            Modul ini akan memberi gambaran umum tentang kursus CS Discoveries dengan penekanan pada konsep yang akan dipelajari oleh siswa dan alat yang akan digunakan oleh siswa selama kursus. Partisipasi dalam modul ini akan membantu Anda mengambil keputusan tentang cara memilih konten kursus yang akan Anda terapkan di dalam kelas.
+
+            **Anda akan:**
+
+            -   Mendapatkan pemahaman yang tinggi tentang kurikulum CS Discoveries.
+            -   Terbiasa dengan lingkungan pemrograman yang digunakan dalam CS Discoveries.
+            -   Menentukan unit CS Discoveries apa yang akan Anda ajarkan di dalam kelas.
+
+            **Waktu yang disarankan:** 60 menit
+          student_description: |-
+            Modul ini akan memberi gambaran umum tentang kursus CS Discoveries dengan penekanan pada konsep yang akan dipelajari oleh siswa dan alat yang akan digunakan oleh siswa selama kursus. Partisipasi dalam modul ini akan membantu Anda mengambil keputusan tentang cara memilih konten kursus yang akan Anda terapkan di dalam kelas.
+
+            **Anda akan:**
+
+            -   Mendapatkan pemahaman yang tinggi tentang kurikulum CS Discoveries.
+            -   Terbiasa dengan lingkungan pemrograman yang digunakan dalam CS Discoveries.
+            -   Menentukan unit CS Discoveries apa yang akan Anda ajarkan di dalam kelas.
+
+            **Waktu yang disarankan:** 60 menit
+        self-paced-pl-csd4-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Mengajarkan dan mempelajari CS Discoveries
+          title: 'Modul 4: Mengajarkan dan mempelajari CS Discoveries'
+          description: "Pada modul kali ini, Anda akan dikenalkan dengan praktik CS otentik yang akan dipelajari oleh siswa selama kursus CS Discoveries. Praktek ini mencakup debugging, penggunaan sumber daya, dan pair programming. Anda juga akan mengeksplorasi peran guru dalam kelas CS Discoveries dan membuat rencana untuk membantu pembelajaran siswa saat mengajarkan kursus ini. \n\n\\*\\*Anda akan: \\*\\*\n\n-   Mempertimbangkan peran guru di kelas CS Discoveries. \n-   Mempelajari tentang praktik CS otentik yang akan dikembangkan oleh siswa selama kursus CS Discoveries.\n-   Membuat rencana untuk membantu pembelajaran siswa melalui diferensiasi, penilaian berkelanjutan, dan mempromosikan budaya inklusi. \n\n\\*\\* Waktu yang Disarankan: \\*\\* 50 menit"
+          student_description: "Pada modul kali ini, Anda akan dikenalkan dengan praktik CS otentik yang akan dipelajari oleh siswa selama kursus CS Discoveries. Praktek ini mencakup debugging, penggunaan sumber daya, dan pair programming. Anda juga akan mengeksplorasi peran guru dalam kelas CS Discoveries dan membuat rencana untuk membantu pembelajaran siswa saat mengajarkan kursus ini. \n\n\\*\\*Anda akan: \\*\\*\n\n-   Mempertimbangkan peran guru di kelas CS Discoveries. \n-   Mempelajari tentang praktik CS otentik yang akan dikembangkan oleh siswa selama kursus CS Discoveries.\n-   Membuat rencana untuk membantu pembelajaran siswa melalui diferensiasi, penilaian berkelanjutan, dan mempromosikan budaya inklusi. \n\n\\*\\* Waktu yang Disarankan: \\*\\* 50 menit"
+        self-paced-pl-csd5-2021:
+          title: Mengajarkan AI dan machine learning
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang artificial intelligence  da machine learning.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba AI Lab dan App Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+            -   Membuat rencana untuk mengimplementasikan unit tersebut bersama siswa Anda.
+
+            **Waktu yang disarankan:** 120 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang artificial intelligence  da machine learning.
+            -   Melatih model machine learning menggunakan AI Lab.
+            -   Mencoba aplikasi machine learning.
+            -   Mempertimbangkan aplikasi dunia nyata dari AI dan machine learning.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+        self-paced-pl-csd6-2021:
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang artificial intelligence  da machine learning.
+            -   Melatih model machine learning menggunakan AI Lab.
+            -   Mencoba aplikasi machine learning.
+            -   Mempertimbangkan aplikasi dunia nyata dari AI dan machine learning.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+        self-paced-pl-csp2-2021:
+          title: 'Modul 2: Menavigasi Code.org'
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3277,6 +3419,9 @@ id:
         hello-world-draft:
           title: '"Halo, dunia!"'
         csa-self-paced-pl:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Menavigasi Code.org
           title: Menjelajahi Code.org untuk Guru Percontohan CSA
           description: |-
             Modul ini dirancang untuk mengarahkan Anda pada alat yang akan Anda gunakan untuk mendukung pembelajaran siswa saat mengajarkan CSA.
@@ -3351,6 +3496,10 @@ id:
               display_name: Demo dan Sumber Daya
         tesstest921:
           name: tesstest921
+        hello-world-animals:
+          title: 'Halo Dunia: Hewan'
+        hello-world-retro:
+          title: 'Hello World: Retro'
         hello-world-batman:
           title: Halo Dunia
         csa4-exemplars:
@@ -3363,6 +3512,11 @@ id:
               display_name: Konten
             lessonGroup-2:
               display_name: Konten
+        ai-ethics:
+          title: Kode Etik AI Kami
+          description_audience: kelas 6-12
+        dance-unplugged:
+          title: Hour of Code - Pesta Dansa - Tanpa Komputer
         csc-things:
           name: soal csc
           title: 'CSC Brain Dump '
@@ -3430,9 +3584,16 @@ id:
             lessonGroup-5:
               display_name: Sandbox
         ai-ethics-2021:
+          title: Kode Etik AI Kami
           description_audience: Kelas 6-12
         poem-art-2021:
           title: Seni Puisi
+        poetry-2021:
+          title: Coding dengan Puisi
+        hello-world-animals-2021:
+          title: 'Halo Dunia: Hewan'
+        hello-world-retro-2021:
+          title: 'Hello World: Retro'
         explore-data-1-2021:
           title: Visualisasi Data
         counting-csc-2021:
@@ -3721,6 +3882,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+        self-paced-pl-csa2-2022:
+          title: 'Modul 2: Menavigasi Code.org'
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-2:
@@ -3914,6 +4077,9 @@ id:
 
             **Waktu yang disarankan:** 90 menit
         vpl-csd7-ci-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Mengajarkan AI dan machine learning
           title: 'Modul 7: Bersiap Mengajarkan AI dan Machine Learning'
           description: |-
             Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
@@ -4017,11 +4183,92 @@ id:
           title: Survei Pascakursus CS Principles
         aiml-2022:
           name: aiml-2022
+          title: Modul AI dan Machine Learning
           description_short: Pelajari tentang Artificial Intelligence dan Machine Learning
         self-paced-pl-csd1-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Selamat Datang
+          title: 'Modul 1: Selamat datang '
+          description: |-
+            Modul ini merupakan pengantar singkat untuk Code.org dan kursus pembelajaran profesional ini.
+
+            **Anda akan:**
+
+            -   Mendapatkan pengantar untuk Code.org dan CS Discoveries.
+            -   Mempelajari cara untuk berpartisipasi dalam kursus pembelajaran profesional ini.
+
+            **Waktu yang Disarankan:** 10 menit
+          student_description: |-
+            Modul ini merupakan pengantar singkat untuk Code.org dan kursus pembelajaran profesional ini.
+
+            **Anda akan:**
+
+            -   Mendapatkan pengantar untuk Code.org dan CS Discoveries.
+            -   Mempelajari cara untuk berpartisipasi dalam kursus pembelajaran profesional ini.
+
+            **Waktu yang Disarankan:** 10 menit
+        self-paced-pl-csd2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Menavigasi Code.org
+          title: 'Modul 2: Menavigasi Code.org'
+          description: |-
+            Modul ini dirancang untuk mengarahkan Anda pada alat yang akan Anda gunakan untuk mendukung pembelajaran siswa saat mengajarkan CS Discoveries.
+
+            **Anda akan:**
+
+            -   Menjelajahi situs web Code.org dan alat untuk guru.
+            -   Membuat sesi kelas
+            -   Mencari dan menggunakan rencana pembelajaran kursus dan sumber daya untuk guru.
+            -   Mempelajari cara mengakses dukungan sambil mengajarkan kursus ini.
+
+            **Waktu yang disarankan:** 60 menit
+          student_description: |-
+            Modul ini dirancang untuk mengarahkan Anda pada alat yang akan Anda gunakan untuk mendukung pembelajaran siswa saat mengajarkan CS Discoveries.
+
+            **Anda akan:**
+
+            -   Menjelajahi situs web Code.org dan alat untuk guru.
+            -   Membuat sesi kelas
+            -   Mencari dan menggunakan rencana pembelajaran kursus dan sumber daya untuk guru.
+            -   Mempelajari cara mengakses dukungan sambil mengajarkan kursus ini.
+
+            **Waktu yang disarankan:** 60 menit
+        self-paced-pl-csd3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sekilas tentang CS Discoveries
+          title: 'Modul 3: Sekilas tentang CS Discoveries'
+          description: |-
+            Modul ini akan memberi gambaran umum tentang kursus CS Discoveries dengan penekanan pada konsep yang akan dipelajari oleh siswa dan alat yang akan digunakan oleh siswa selama kursus. Partisipasi dalam modul ini akan membantu Anda mengambil keputusan tentang cara memilih konten kursus yang akan Anda terapkan di dalam kelas.
+
+            **Anda akan:**
+
+            -   Mendapatkan pemahaman yang tinggi tentang kurikulum CS Discoveries.
+            -   Terbiasa dengan lingkungan pemrograman yang digunakan dalam CS Discoveries.
+            -   Menentukan unit CS Discoveries apa yang akan Anda ajarkan di dalam kelas.
+
+            **Waktu yang disarankan:** 60 menit
+          student_description: |-
+            Modul ini akan memberi gambaran umum tentang kursus CS Discoveries dengan penekanan pada konsep yang akan dipelajari oleh siswa dan alat yang akan digunakan oleh siswa selama kursus. Partisipasi dalam modul ini akan membantu Anda mengambil keputusan tentang cara memilih konten kursus yang akan Anda terapkan di dalam kelas.
+
+            **Anda akan:**
+
+            -   Mendapatkan pemahaman yang tinggi tentang kurikulum CS Discoveries.
+            -   Terbiasa dengan lingkungan pemrograman yang digunakan dalam CS Discoveries.
+            -   Menentukan unit CS Discoveries apa yang akan Anda ajarkan di dalam kelas.
+
+            **Waktu yang disarankan:** 60 menit
+        self-paced-pl-csd4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Mengajarkan dan mempelajari CS Discoveries
+          title: 'Modul 4: Mengajarkan dan mempelajari CS Discoveries'
+          description: "Pada modul kali ini, Anda akan dikenalkan dengan praktik CS otentik yang akan dipelajari oleh siswa selama kursus CS Discoveries. Praktek ini mencakup debugging, penggunaan sumber daya, dan pair programming. Anda juga akan mengeksplorasi peran guru dalam kelas CS Discoveries dan membuat rencana untuk membantu pembelajaran siswa saat mengajarkan kursus ini. \n\n\\*\\*Anda akan: \\*\\*\n\n-   Mempertimbangkan peran guru di kelas CS Discoveries. \n-   Mempelajari tentang praktik CS otentik yang akan dikembangkan oleh siswa selama kursus CS Discoveries.\n-   Membuat rencana untuk membantu pembelajaran siswa melalui diferensiasi, penilaian berkelanjutan, dan mempromosikan budaya inklusi. \n\n\\*\\* Waktu yang Disarankan: \\*\\* 50 menit"
+          student_description: "Pada modul kali ini, Anda akan dikenalkan dengan praktik CS otentik yang akan dipelajari oleh siswa selama kursus CS Discoveries. Praktek ini mencakup debugging, penggunaan sumber daya, dan pair programming. Anda juga akan mengeksplorasi peran guru dalam kelas CS Discoveries dan membuat rencana untuk membantu pembelajaran siswa saat mengajarkan kursus ini. \n\n\\*\\*Anda akan: \\*\\*\n\n-   Mempertimbangkan peran guru di kelas CS Discoveries. \n-   Mempelajari tentang praktik CS otentik yang akan dikembangkan oleh siswa selama kursus CS Discoveries.\n-   Membuat rencana untuk membantu pembelajaran siswa melalui diferensiasi, penilaian berkelanjutan, dan mempromosikan budaya inklusi. \n\n\\*\\* Waktu yang Disarankan: \\*\\* 50 menit"
+        self-paced-pl-csp2-2022:
+          title: 'Modul 2: Menavigasi Code.org'
         dlp-csp-mod1-2022:
           title: CS Principles Deeper Learning Modul 1
         vpl-csd1-ayw-pilot-2022:
@@ -4030,6 +4277,30 @@ id:
               name: Ekstensi Debugging Tidak Sinkron
         self-paced-pl-csd5-2022:
           title: self-paced-pl-csd5
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang artificial intelligence  da machine learning.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba AI Lab dan App Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+            -   Membuat rencana untuk mengimplementasikan unit tersebut bersama siswa Anda.
+
+            **Waktu yang disarankan:** 120 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang artificial intelligence  da machine learning.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba AI Lab dan App Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+            -   Membuat rencana untuk mengimplementasikan unit tersebut bersama siswa Anda.
+
+            **Waktu yang disarankan:** 120 menit
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -4156,6 +4427,8 @@ id:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
             lessonGroup-3:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            lessonGroup-5:
+              display_name: Survei
         csd2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
         csd4-2023:
@@ -4277,6 +4550,8 @@ id:
               display_name: Survei Pasca Kursus
         csp-post-survey-2023:
           title: Survei Pascakursus CS Principles
+        self-paced-pl-csa2-2023:
+          title: 'Modul 2: Menavigasi Code.org'
         angelina-playground:
           lessons:
             lesson-5:
@@ -4289,6 +4564,7 @@ id:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Bab 2: Membangun Prototipe Fisik'
+          title: Membuat Aplikasi dengan Perangkat (Circuit Playground)
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -4315,6 +4591,8 @@ id:
             lessonGroup-2:
               display_name: Chapter 1
           title: Pemecahan Masalah
+        testing-focus-on-creativity2:
+          title: Pengembangan Web
         pre-express-2023:
           lesson_groups:
             csf_sequencing:
@@ -4487,6 +4765,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-creativity2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
         focus-on-creativity3-2023:
@@ -4507,6 +4787,8 @@ id:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
             lessonGroup-3:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            lessonGroup-5:
+              display_name: Survei
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4524,6 +4806,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4550,6 +4834,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-design-with-purpose2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
         focus-on-design-with-purpose3-2023:
@@ -4568,6 +4854,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-coding2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
         focus-on-coding3-2023:
@@ -4586,6 +4874,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4789,6 +5079,8 @@ id:
           lesson_groups:
             lessonGroup-3:
               display_name: Masukan dan keluaran
+        ai-temp:
+          title: Bagaimana AI bekerja
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -4801,8 +5093,110 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Selamat Datang
+          title: 'Modul 1: Selamat datang '
+          description: |-
+            Modul ini merupakan pengantar singkat untuk Code.org dan kursus pembelajaran profesional ini.
+
+            **Anda akan:**
+
+            -   Mendapatkan pengantar untuk Code.org dan CS Discoveries.
+            -   Mempelajari cara untuk berpartisipasi dalam kursus pembelajaran profesional ini.
+
+            **Waktu yang Disarankan:** 10 menit
+          student_description: |-
+            Modul ini merupakan pengantar singkat untuk Code.org dan kursus pembelajaran profesional ini.
+
+            **Anda akan:**
+
+            -   Mendapatkan pengantar untuk Code.org dan CS Discoveries.
+            -   Mempelajari cara untuk berpartisipasi dalam kursus pembelajaran profesional ini.
+
+            **Waktu yang Disarankan:** 10 menit
+        self-paced-pl-csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Menavigasi Code.org
+          title: 'Modul 2: Menavigasi Code.org'
+          description: |-
+            Modul ini dirancang untuk mengarahkan Anda pada alat yang akan Anda gunakan untuk mendukung pembelajaran siswa saat mengajarkan CS Discoveries.
+
+            **Anda akan:**
+
+            -   Menjelajahi situs web Code.org dan alat untuk guru.
+            -   Membuat sesi kelas
+            -   Mencari dan menggunakan rencana pembelajaran kursus dan sumber daya untuk guru.
+            -   Mempelajari cara mengakses dukungan sambil mengajarkan kursus ini.
+
+            **Waktu yang disarankan:** 60 menit
+          student_description: |-
+            Modul ini dirancang untuk mengarahkan Anda pada alat yang akan Anda gunakan untuk mendukung pembelajaran siswa saat mengajarkan CS Discoveries.
+
+            **Anda akan:**
+
+            -   Menjelajahi situs web Code.org dan alat untuk guru.
+            -   Membuat sesi kelas
+            -   Mencari dan menggunakan rencana pembelajaran kursus dan sumber daya untuk guru.
+            -   Mempelajari cara mengakses dukungan sambil mengajarkan kursus ini.
+
+            **Waktu yang disarankan:** 60 menit
+        self-paced-pl-csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sekilas tentang CS Discoveries
+          title: 'Modul 3: Sekilas tentang CS Discoveries'
+          description: |-
+            Modul ini akan memberi gambaran umum tentang kursus CS Discoveries dengan penekanan pada konsep yang akan dipelajari oleh siswa dan alat yang akan digunakan oleh siswa selama kursus. Partisipasi dalam modul ini akan membantu Anda mengambil keputusan tentang cara memilih konten kursus yang akan Anda terapkan di dalam kelas.
+
+            **Anda akan:**
+
+            -   Mendapatkan pemahaman yang tinggi tentang kurikulum CS Discoveries.
+            -   Terbiasa dengan lingkungan pemrograman yang digunakan dalam CS Discoveries.
+            -   Menentukan unit CS Discoveries apa yang akan Anda ajarkan di dalam kelas.
+
+            **Waktu yang disarankan:** 60 menit
+          student_description: |-
+            Modul ini akan memberi gambaran umum tentang kursus CS Discoveries dengan penekanan pada konsep yang akan dipelajari oleh siswa dan alat yang akan digunakan oleh siswa selama kursus. Partisipasi dalam modul ini akan membantu Anda mengambil keputusan tentang cara memilih konten kursus yang akan Anda terapkan di dalam kelas.
+
+            **Anda akan:**
+
+            -   Mendapatkan pemahaman yang tinggi tentang kurikulum CS Discoveries.
+            -   Terbiasa dengan lingkungan pemrograman yang digunakan dalam CS Discoveries.
+            -   Menentukan unit CS Discoveries apa yang akan Anda ajarkan di dalam kelas.
+
+            **Waktu yang disarankan:** 60 menit
+        self-paced-pl-csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Mengajarkan dan mempelajari CS Discoveries
+          title: 'Modul 4: Mengajarkan dan mempelajari CS Discoveries'
+          description: "Pada modul kali ini, Anda akan dikenalkan dengan praktik CS otentik yang akan dipelajari oleh siswa selama kursus CS Discoveries. Praktek ini mencakup debugging, penggunaan sumber daya, dan pair programming. Anda juga akan mengeksplorasi peran guru dalam kelas CS Discoveries dan membuat rencana untuk membantu pembelajaran siswa saat mengajarkan kursus ini. \n\n\\*\\*Anda akan: \\*\\*\n\n-   Mempertimbangkan peran guru di kelas CS Discoveries. \n-   Mempelajari tentang praktik CS otentik yang akan dikembangkan oleh siswa selama kursus CS Discoveries.\n-   Membuat rencana untuk membantu pembelajaran siswa melalui diferensiasi, penilaian berkelanjutan, dan mempromosikan budaya inklusi. \n\n\\*\\* Waktu yang Disarankan: \\*\\* 50 menit"
+          student_description: "Pada modul kali ini, Anda akan dikenalkan dengan praktik CS otentik yang akan dipelajari oleh siswa selama kursus CS Discoveries. Praktek ini mencakup debugging, penggunaan sumber daya, dan pair programming. Anda juga akan mengeksplorasi peran guru dalam kelas CS Discoveries dan membuat rencana untuk membantu pembelajaran siswa saat mengajarkan kursus ini. \n\n\\*\\*Anda akan: \\*\\*\n\n-   Mempertimbangkan peran guru di kelas CS Discoveries. \n-   Mempelajari tentang praktik CS otentik yang akan dikembangkan oleh siswa selama kursus CS Discoveries.\n-   Membuat rencana untuk membantu pembelajaran siswa melalui diferensiasi, penilaian berkelanjutan, dan mempromosikan budaya inklusi. \n\n\\*\\* Waktu yang Disarankan: \\*\\* 50 menit"
         self-paced-pl-csd5-2023:
-          title: self-paced-pl-csd5
+          title: 'Modul 7: Bersiap Mengajarkan AI dan Machine Learning'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang artificial intelligence  da machine learning.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba AI Lab dan App Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+            -   Membuat rencana untuk mengimplementasikan unit tersebut bersama siswa Anda.
+
+            **Waktu yang disarankan:** 120 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang artificial intelligence  da machine learning.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba AI Lab dan App Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+            -   Membuat rencana untuk mengimplementasikan unit tersebut bersama siswa Anda.
+
+            **Waktu yang disarankan:** 120 menit
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -4832,6 +5226,32 @@ id:
             lessonGroup-2:
               display_name: Hari 4
           title: Hari 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Pendahuluan
+            lesson-12:
+              name: Penutupan
+          title: Hari 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Penutupan
+          title: Hari 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Penutupan
+          title: Hari 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Penutupan
+          title: Hari 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Penilaian
         csd-post-survey-2023:
           title: Survei Pasca Kursus
         focus-on-data-post-survey-2023:
@@ -4846,3 +5266,205 @@ id:
           title: Survei Pasca Kursus
         focus-on-creativity-post-survey-2023:
           title: Survei Pasca Kursus
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: variabel
+            lessonGroup-6:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 9-13'
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
+        self-paced-pl-csp2-2023:
+          title: 'Modul 2: Menavigasi Code.org'
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kelas
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kelas
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kelas
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Data
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kelas
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kelas
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kelas
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: Dampak dari Komputasi
+          description_audience: 'Usia: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: Dampak dari Komputasi
+            lessonGroup-6:
+              display_name: Data
+          description_audience: 'Usia: 4-7'
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: Dampak dari Komputasi
+            lessonGroup-6:
+              display_name: kegiatan
+            lessonGroup-7:
+              display_name: Proyek Akhir Kursus
+            lessonGroup-8:
+              display_name: Data
+          description_audience: 'Usia: 5-8'
+          description_short: Pengenalan ilmu komputer untuk prabaca. Sama dengan Kursus A, tetapi dengan tambahan konsep 'pendalaman'.
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Sistem Komputasi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: kegiatan
+            lessonGroup-6:
+              display_name: Data
+            lessonGroup-8:
+              display_name: Sistem Komputasi
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Dampak dari Komputasi
+            lessonGroup-6:
+              display_name: Loop
+            lessonGroup-7:
+              display_name: Data
+            lessonGroup-8:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 7-11'
+          description_short: Pelajari tentang pernyataan conditional. Buat karya seni, permainan, dan bahkan pesta dansa.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Nested Loop
+            lessonGroup-4:
+              display_name: fungsi
+            lessonGroup-6:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 8-12'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          description_audience: 'Usia: 9-13'
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Kondisi
+            lessonGroup-5:
+              display_name: variabel
+            lessonGroup-6:
+              display_name: Dampak dari Komputasi
+            lessonGroup-7:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 9-13'
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
+        vpl-csa-2023-m1:
+          title: Modul 1
+        how-ai-works-2023:
+          title: Bagaimana AI bekerja
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8

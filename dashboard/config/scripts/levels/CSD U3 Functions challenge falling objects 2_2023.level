@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-10-04T22:12:15.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
@@ -67,7 +72,7 @@
     "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "instructions_important": "false",
     "show_debug_watch": "true",
     "start_in_animation_tab": "false",
@@ -103,17 +108,10 @@
     "bubble_choice_description": "Use functions to finish this paddle game!",
     "thumbnail_url": "https://images.code.org/91e5f2e222782232b1bba635316a2181-paddle.gif",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "3icTstGWCHhbQvnzUUArwi6GnVKP7scO4SAotbqb29G9tfBrWnCH9gYHkYjS\nuVNIq2VXXmQep1D3Y0RyKSQl7g==\n"
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-10-04T22:12:15.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-04T22:12:15.807+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions challenge falling objects_2023\\\"\"],\"cloned_from\":\"CSD U3 Functions challenge falling objects_2023\"},{\"changed_at\":\"2022-10-04 22:24:31 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-04 22:30:18 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-04 22:30:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-04 23:13:46 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-04 23:16:01 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-28 01:23:57 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-04T22:12:15.807+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions challenge falling objects_2023\\\"\"],\"cloned_from\":\"CSD U3 Functions challenge falling objects_2023\"},{\"changed_at\":\"2022-10-04 22:24:31 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-04 22:30:18 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-04 22:30:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-04 23:13:46 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-04 23:16:01 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-28 01:23:57 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 22:21:03 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-11 18:20:56 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

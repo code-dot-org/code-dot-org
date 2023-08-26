@@ -25,3 +25,22 @@ Which of the following best explains why the code segment does not work as inten
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+In the provided code segment, the intention is to remove all odd elements from the `inventories` list. However, there is a problem with the code that leads to incorrect behavior.
+
+The issue lies in the way elements are removed from the `ArrayList` while iterating over it. Let's break down the code to understand the problem:
+
+1. The method `removeOdds` takes an ArrayList of integers called `inventories` as a parameter.
+
+2. A `for` loop is used to iterate over the elements of the `inventories` ArrayList.
+
+3. Inside the loop, each element at index `i` is checked to see if it is odd using the condition `inventories.get(i) % 2 != 0`.
+
+4. If the element is odd, it is removed from the `inventories` ArrayList using the `remove` method with the current index `i`.
+
+5. The loop continues to the next iteration without considering the fact that the ArrayList's size has changed after removing an element.
+
+The issue arises when an element is removed from the `ArrayList`. When an element is removed, all subsequent elements shift one position to the left to fill the gap. However, the loop continues with the same index, skipping the element that shifted to the current index.
+
+For example, suppose we have an `ArrayList` containing the elements `[1, 2, 3, 4, 5]`. The loop starts with index `0`, where the value is `1`. Since `1` is odd, it is removed from the `ArrayList`. After removal, the `ArrayList` becomes `[2, 3, 4, 5]`. But the loop proceeds to index `1`, skipping the element `2`, which is the new value at index `0`. This skipping of elements continues as the loop progresses, resulting in some odd elements being skipped and not removed.
+MARKDOWN

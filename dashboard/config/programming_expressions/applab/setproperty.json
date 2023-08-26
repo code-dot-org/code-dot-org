@@ -3,7 +3,7 @@
   "name": "setProperty()",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "You will generally want to define properties of UI elements using Design mode in App Lab.  But sometimes you will want to change the value of a property in your app based on the user or in response to an event.  [`setProperty()`(#fff176)](/docs/applab/setProperty/) lets your app change any property listed in Design mode for a given UI element.   \n\n### Possible Properties\n\n| Property  | Value | Works on| \n|-----------------|------|-----------|\n| \"width\" | number | All Design mode elements except screens |\n| \"height\" | number | All design mode elements except screens |\n| \"x\" | number | All design mode elements except screens |\n| \"y\" | number | All design mode elements except screens |\n| \"text-color\" | color string | Button, text input, label, dropdown, and text area |\n| \"background-color\" | color string | Button, text input, label, dropdown, screen, and text area |\n| \"font-size\" | number|  Button, text input, label, dropdown, and text area |\n| \"text-align\" | string (\"left\", \"right\", \"center\", or \"justify\") | Button, label, text area |\n| \"hidden\" | boolean | All design mode elements except screens |\n| \"text\" | string  | Button, label, text area |\n| \"placeholder\" | string | Text input |\n| \"image\" | string  | Button, image |\n| \"icon-color\" | color string  | Image |\n| \"group-id\" | string  | Radio button |\n| \"checked\" | boolean  | Radio button, checkbox |\n| \"readonly\" | boolean  | Text area |\n| \"options\" | list of values | Dropdown |\n| \"value\" | number | Slider |\n| \"min\" | number | Slider |\n| \"max\" | number | Slider |\n| \"step\" | number | Slider |\n| \"fit\" | string | Image |\n| \"index\" | number | Dropdown |",
+  "content": "You will generally want to define properties of UI elements using Design mode in App Lab.  But sometimes you will want to change the value of a property in your app based on the user or in response to an event.  [`setProperty()`(#fff176)](/docs/applab/setProperty/) lets your app change any property listed in Design mode for a given UI element.   \n\n### Possible Properties\n\n| Property  | Value | Works on| \n|-----------------|------|-----------|\n| \"width\" | number | All design mode elements except screens |\n| \"height\" | number | All design mode elements except screens |\n| \"x\" | number | All design mode elements except screens |\n| \"y\" | number | All design mode elements except screens |\n| \"text-color\" | color string | Button, text input, label, dropdown, and text area |\n| \"background-color\" | color string | Button, text input, label, dropdown, screen, and text area |\n| \"font-size\" | number|  Button, text input, label, dropdown, and text area |\n| \"text-align\" | string (\"left\", \"right\", \"center\", or \"justify\") | Button, label, text area |\n| \"hidden\" | boolean | All design mode elements except screens |\n| \"text\" | string  | Button, label, text area |\n| \"placeholder\" | string | Text input |\n| \"image\" | string  | Button, image |\n| \"icon-color\" | color string  | Image |\n| \"group-id\" | string  | Radio button |\n| \"checked\" | boolean  | Radio button, checkbox |\n| \"readonly\" | boolean  | Text area |\n| \"options\" | list of values | Dropdown |\n| \"value\" | number | Slider |\n| \"min\" | number | Slider |\n| \"max\" | number | Slider |\n| \"step\" | number | Slider |\n| \"fit\" | string | Image |\n| \"index\" | number | Dropdown |",
   "examples": [
     {
       "name": "",
@@ -34,6 +34,11 @@
       "required": true,
       "description": "The new value to set the property to.  The type will depend on which property you are trying to set."
     }
+  ],
+  "parameters": [
+    "id",
+    "property",
+    "value"
   ],
   "short_description": "Sets a property to a new value for the specified element.",
   "syntax": "setProperty(id, property, value)",

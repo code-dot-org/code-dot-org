@@ -12,6 +12,7 @@ ms:
           title: Kursus 3
           description_audience: Umur 8-18 tahun
         playlab:
+          title: Main Makmal
           description: Cipta cerita atau buat permainan dengan Makmal Mainan!
           description_short: Cipta cerita atau buat permainan dengan Makmal Mainan!
           student_description: Cipta cerita atau buat permainan dengan Makmal Mainan!
@@ -38,15 +39,21 @@ ms:
         algebra:
           title: Sains Komputer dalam Algebra
         infinity:
+          title: Makmal Permainan Disney Infinity
           description: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
           description_short: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
           student_description: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
           name: infiniti
+        netsim:
+          title: Simulator Internet
+        pixelation:
+          title: Pixelation
         20-hour:
           title: Pengenalan Dipercepatkan kepada Kursus CS
           description: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.
           description_audience: Umur 10-18 tahun
           student_description: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.
+          name: 20 jam
         edit-code:
           title: Mengedit kod
           description: Mengedit kod
@@ -62,6 +69,7 @@ ms:
           description: Anda mahu menulis permainan anda sendiri dalam masa kurang daripada 10 minit? Cuba tutorial Kod Flappy kami!
           student_description: Anda mahu menulis permainan anda sendiri dalam masa kurang daripada 10 minit? Cuba tutorial Kod Flappy kami!
         jigsaw:
+          title: Gergaji jig
           name: susun suai
         step:
           title: Langkah
@@ -71,6 +79,12 @@ ms:
           student_description: Cuba asas sains komputer dengan watak daripada Angry Birds dan Tumbuhan lwn. Zombi!
         text-compression:
           title: Pemampatan Teks
+        cspunit3:
+          title: "(lama) Prinsip CS Unit 3 - Pengaturcaraan"
+          description: Unit ini memperkenalkan konsep asas pengaturcaraan komputer, yang membuka keupayaan untuk membuat aplikasi yang kaya dan interaktif. Kursus ini menggunakan JavaScript sebagai bahasa pengaturcaraan, dan App Lab sebagai persekitaran pengaturcaraan untuk membina aplikasi, tetapi konsep yang dipelajari dalam pelajaran ini merangkumi semua bahasa dan alat pengaturcaraan.
+          student_description: Unit ini memperkenalkan konsep asas pengaturcaraan komputer, yang membuka keupayaan untuk membuat aplikasi yang kaya dan interaktif. Kursus ini menggunakan JavaScript sebagai bahasa pengaturcaraan, dan App Lab sebagai persekitaran pengaturcaraan untuk membina aplikasi, tetapi konsep yang dipelajari dalam pelajaran ini merangkumi semua bahasa dan alat pengaturcaraan.
+        algebraPD3:
+          title: Fasa 3 PD
         allthethings:
           lessons:
             lesson-49:
@@ -87,11 +101,19 @@ ms:
           description_audience: Umur 10-18 tahun
         iceage:
           name: zaman ais
+        cspunit3temp:
+          title: "(lama) Prinsip CS Unit 3 - Pengaturcaraan"
+          description: Unit ini memperkenalkan konsep asas pengaturcaraan komputer, yang membuka keupayaan untuk membuat aplikasi yang kaya dan interaktif. Kursus ini menggunakan JavaScript sebagai bahasa pengaturcaraan, dan App Lab sebagai persekitaran pengaturcaraan untuk membina aplikasi, tetapi konsep yang dipelajari dalam pelajaran ini merangkumi semua bahasa dan alat pengaturcaraan.
+          student_description: Unit ini memperkenalkan konsep asas pengaturcaraan komputer, yang membuka keupayaan untuk membuat aplikasi yang kaya dan interaktif. Kursus ini menggunakan JavaScript sebagai bahasa pengaturcaraan, dan App Lab sebagai persekitaran pengaturcaraan untuk membina aplikasi, tetapi konsep yang dipelajari dalam pelajaran ini merangkumi semua bahasa dan alat pengaturcaraan.
+        gumball:
+          title: Makmal Permainan Gumball
         starwars:
+          title: 'Star Wars: Membina Galaksi Dengan Menggunakan Kod (JavaScript)'
           description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
           description_short: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
           student_description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
         starwarsblocks:
+          title: 'Star Wars: Membina Galaksi Dengan Menggunakan Kod (Blokly)'
           description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
           description_short: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
           student_description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
@@ -119,8 +141,12 @@ ms:
               display_name: Gambaran Keseluruhan
         CSDU1-Draft:
           description_short: Penyelesaian Masalah
+        CSDU2-Draft:
+          description_short: Pembangunan Web
         CSDU5-Draft:
           description_short: Data
+        CSDU6-Draft:
+          description_short: Makerlab
         CSF_Secret_Sample_Story:
           description_audience: Umur 8-18 tahun+
         MikeTest:
@@ -152,10 +178,15 @@ ms:
             required:
               display_name: Gambaran Keseluruhan
         csp1-support:
+          title: Kursus Pembelajaran Profesional Dalam Talian Unit 1
           lesson_groups:
             required:
               display_name: Gambaran Keseluruhan
         basketball:
+          title: Pilih pasukan anda dan buat permainan bola keranjang
+          description_short: Pilih pasukan anda dan buat permainan bola keranjang
+          description: Pilih pasukan anda dan buat permainan bola keranjang
+          student_description: Pilih pasukan anda dan buat permainan bola keranjang
           name: bola keranjang
         csp2-support:
           lesson_groups:
@@ -168,14 +199,19 @@ ms:
         flappy-impact-study:
           title: Flappy Code with Survey
         coursea-draft:
+          title: 'Asas CS: Kursus A'
           description_short: Pengenalan kepada sains komputer untuk pembaca awal.
         courseb-draft:
+          title: 'Asas CS: Kursus B'
           description_short: Pengenalan kepada sains komputer untuk pembaca awal.
         coursec-draft:
+          title: 'Asas CS: Kursus C'
           description_short: Pelajari asas sains komputer dan cipta seni, cerita dan permainan anda sendiri.
         coursed-draft:
+          title: 'Asas CS: Kursus D'
           description_short: Pelajari asas sains komputer dan cipta seni, cerita dan permainan anda sendiri.
         coursee-draft:
+          title: 'Asas CS: Kursus E'
           description_short: Pelajari asas sains komputer dan cipta seni, cerita dan permainan anda sendiri.
           lesson_groups:
             end_of_course_project:
@@ -183,6 +219,7 @@ ms:
             extra_course_content:
               display_name: Kandungan Kursus Tambahan
         coursef-draft:
+          title: 'Asas CS: Kursus F'
           description_short: Pelajari asas sains komputer dan cipta seni, cerita dan permainan anda sendiri.
           lesson_groups:
             end_of_course_project:
@@ -214,8 +251,12 @@ ms:
           lesson_groups:
             required:
               display_name: Gambaran Keseluruhan
+        coursed-ramp:
+          title: 'Asas CS: Kursus D'
         coursee-ramp:
           title: kursuse-tanjakan
+        csd2-old:
+          description_short: Pembangunan Web
         coursea-2017:
           title: Kursus A
           assignment_family_title: Kursus A
@@ -339,10 +380,15 @@ ms:
               display_name: Akhir Projek Kursus
           student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
         pre-express-2017:
+          title: Ekspres Prapembaca
+          assignment_family_title: Ekspres Prapembaca
           description_audience: 'Umur: 4-8 tahun'
           description_short: 'Pengenalan kepada sains komputer untuk prapembaca: menggabungkan kursus tadika dan gred satu yang terbaik.'
           description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
           student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
+        csp3-research-mxghyt:
+          description: Unit ini memperkenalkan konsep asas pengaturcaraan komputer, yang membuka keupayaan untuk membuat aplikasi yang kaya dan interaktif. Kursus ini menggunakan JavaScript sebagai bahasa pengaturcaraan, dan App Lab sebagai persekitaran pengaturcaraan untuk membina aplikasi, tetapi konsep yang dipelajari dalam pelajaran ini merangkumi semua bahasa dan alat pengaturcaraan.
+          student_description: Unit ini memperkenalkan konsep asas pengaturcaraan komputer, yang membuka keupayaan untuk membuat aplikasi yang kaya dan interaktif. Kursus ini menggunakan JavaScript sebagai bahasa pengaturcaraan, dan App Lab sebagai persekitaran pengaturcaraan untuk membina aplikasi, tetapi konsep yang dipelajari dalam pelajaran ini merangkumi semua bahasa dan alat pengaturcaraan.
         applab-intro:
           title: Pengenalan kepada Makmal Aplikasi
         e-f-ramp:
@@ -466,6 +512,9 @@ ms:
             end_of_course_project:
               display_name: Akhir Projek Kursus
           student_description: Pelajari menggunakan pelbagai jenis gelung, peristiwa, fungsi dan bersyarat. Selidik teknik penyelesaian masalah yang berbeza dan bincangkan kesan pengkomputeran dan internet terhadap kemasyarakatan. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga.
+        csp3-2018:
+          description: Unit ini memperkenalkan konsep asas pengaturcaraan komputer, yang membuka keupayaan untuk membuat aplikasi yang kaya dan interaktif. Kursus ini menggunakan JavaScript sebagai bahasa pengaturcaraan, dan App Lab sebagai persekitaran pengaturcaraan untuk membina aplikasi, tetapi konsep yang dipelajari dalam pelajaran ini merangkumi semua bahasa dan alat pengaturcaraan.
+          student_description: Unit ini memperkenalkan konsep asas pengaturcaraan komputer, yang membuka keupayaan untuk membuat aplikasi yang kaya dan interaktif. Kursus ini menggunakan JavaScript sebagai bahasa pengaturcaraan, dan App Lab sebagai persekitaran pengaturcaraan untuk membina aplikasi, tetapi konsep yang dipelajari dalam pelajaran ini merangkumi semua bahasa dan alat pengaturcaraan.
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -536,6 +585,7 @@ ms:
               display_name: Gambaran Keseluruhan
         pre-express-2018:
           title: Ekspres Prapembaca (2018)
+          assignment_family_title: Ekspres Prapembaca
           description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
           description_short: 'Pengenalan kepada sains komputer untuk prapembaca: menggabungkan kursus tadika dan gred satu yang terbaik.'
           description_audience: 'Umur: 4-8 tahun'
@@ -549,6 +599,7 @@ ms:
         frozen-2018-test:
           title: Skrip Frozen Baharu
         dance:
+          title: Majlis Tari-Menari (2018)
           description_short: Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, dan 25 lagi!
           description: Kod majlis tari-menari anda sendiri untuk berkongsi dengan rakan anda!
           student_description: Kod majlis tari-menari anda sendiri untuk berkongsi dengan rakan anda!
@@ -585,6 +636,8 @@ ms:
               display_name: Pemboleh ubah
             csf_data:
               display_name: Data
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_internet:
               display_name: Internet
             csf_sprites:
@@ -610,6 +663,8 @@ ms:
               display_name: Gelung
             csf_conditionals:
               display_name: Bersyarat
+            csf_binary:
+              display_name: Perduaan
             csf_digcit:
               display_name: Kewarganegaraan Digital
             end_of_course_project:
@@ -654,6 +709,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Jin
           student_description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
@@ -675,6 +732,8 @@ ms:
               display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
+            csf_binary:
+              display_name: Perduaan
             csf_loops:
               display_name: Gelung
             csf_events:
@@ -684,6 +743,8 @@ ms:
             end_of_course_project:
               display_name: Akhir Projek Kursus
           student_description: Cipta atur cara dengan penjujukan, gelung dan peristiwa. Terjemahkan tanda nama anda kepada binari, selidik teknik penyelesaian masalah yang berbeza dan pelajari cara bertindak balas terhadap buli siber. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan!
+        gamelab:
+          title: Makmal Permainan
         coursea-2019:
           title: Kursus A (2019)
           description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
@@ -741,6 +802,9 @@ ms:
               display_name: Projek
             required:
               display_name: Gambaran Keseluruhan
+        csp3-2019:
+          description: Unit ini memperkenalkan konsep asas pengaturcaraan komputer, yang membuka keupayaan untuk membuat aplikasi yang kaya dan interaktif. Kursus ini menggunakan JavaScript sebagai bahasa pengaturcaraan, dan App Lab sebagai persekitaran pengaturcaraan untuk membina aplikasi, tetapi konsep yang dipelajari dalam pelajaran ini merangkumi semua bahasa dan alat pengaturcaraan.
+          student_description: Unit ini memperkenalkan konsep asas pengaturcaraan komputer, yang membuka keupayaan untuk membuat aplikasi yang kaya dan interaktif. Kursus ini menggunakan JavaScript sebagai bahasa pengaturcaraan, dan App Lab sebagai persekitaran pengaturcaraan untuk membina aplikasi, tetapi konsep yang dipelajari dalam pelajaran ini merangkumi semua bahasa dan alat pengaturcaraan.
         csp1-pilot:
           lesson_groups:
             required:
@@ -1038,6 +1102,8 @@ ms:
               display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
+            csf_binary:
+              display_name: Perduaan
             csf_loops:
               display_name: Gelung
             csf_events:
@@ -1061,6 +1127,8 @@ ms:
               display_name: Gelung
             csf_conditionals:
               display_name: Bersyarat
+            csf_binary:
+              display_name: Perduaan
             csf_digcit:
               display_name: Kewarganegaraan Digital
             end_of_course_project:
@@ -1101,6 +1169,8 @@ ms:
               display_name: Pemboleh ubah
             csf_data:
               display_name: Data
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Jin
             end_of_course_project:
@@ -1124,6 +1194,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Jin
             end_of_course_project:
@@ -1142,6 +1214,13 @@ ms:
             csf_events:
               display_name: Acara-acara
           student_description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
+        csp3-virtual:
+          description: Unit ini memperkenalkan konsep asas pengaturcaraan komputer, yang membuka keupayaan untuk membuat aplikasi yang kaya dan interaktif. Kursus ini menggunakan JavaScript sebagai bahasa pengaturcaraan, dan App Lab sebagai persekitaran pengaturcaraan untuk membina aplikasi, tetapi konsep yang dipelajari dalam pelajaran ini merangkumi semua bahasa dan alat pengaturcaraan.
+          student_description: Unit ini memperkenalkan konsep asas pengaturcaraan komputer, yang membuka keupayaan untuk membuat aplikasi yang kaya dan interaktif. Kursus ini menggunakan JavaScript sebagai bahasa pengaturcaraan, dan App Lab sebagai persekitaran pengaturcaraan untuk membina aplikasi, tetapi konsep yang dipelajari dalam pelajaran ini merangkumi semua bahasa dan alat pengaturcaraan.
+        csp5-virtual:
+          title: Pengaturcaraan Pacuan Peristiwa di dalam Makmal Aplikasi
+        csd3-virtual:
+          title: Pengenalan Diri kepada Makmal Permainan
         curriculum-sandbox-levels:
           lesson_groups:
             lesson group:
@@ -1166,6 +1245,8 @@ ms:
           student_description: Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.
         2021drafting:
           lesson_groups:
+            introduction:
+              display_name: Pengenalan
             lessonGroup-3:
               display_name: Pemboleh ubah
             outbreak:
@@ -1239,6 +1320,8 @@ ms:
               display_name: Kewarganegaraan Digital
             csf_sequencing:
               display_name: Penjujukan
+            csf_binary:
+              display_name: Perduaan
             csf_loops:
               display_name: Gelung
             csf_events:
@@ -1262,6 +1345,8 @@ ms:
               display_name: Gelung
             csf_conditionals:
               display_name: Bersyarat
+            csf_binary:
+              display_name: Perduaan
             csf_digcit:
               display_name: Kewarganegaraan Digital
             end_of_course_project:
@@ -1301,6 +1386,10 @@ ms:
               display_name: Jin
             csf_digcit:
               display_name: Kewarganegaraan Digital
+            csf_variables:
+              display_name: Untuk Gelung
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Kesan Pengkomputeran
             end_of_course_project:
@@ -1329,6 +1418,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             csf_sprites:
               display_name: Jin
             end_of_course_project:
@@ -1350,6 +1441,8 @@ ms:
           student_description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
         csf-2021-pilot:
           lesson_groups:
+            ramp_up:
+              display_name: Pengenalan
             outbreak:
               display_name: Simulasi Wabak
             lessonGroup-3:
@@ -1394,6 +1487,159 @@ ms:
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
+        k5-onlinepd-2021:
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Pengenalan
+            Introduction:
+              display_name: Pengenalan
+        aiml-2021:
+          title: Modul Pembelajaran AI dan Mesin
+        csd7-2021:
+          title: "  AI dan Pembelajaran Mesin  "
+        self-paced-pl-csd1-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Menavigasi Code.org
+            lessonGroup-5:
+              display_name: Bersedia untuk Mengajar CS Discoveries
+          title: 'Modul 1: Selamat datang '
+          description: |-
+            Modul ini adalah pengenalan ringkas kepada Code.org dan kursus pembelajaran profesional.
+
+            **Anda akan:**
+
+            -   mengenali Code.org dan CS Discoveries.
+            -   Ketahui cara melibatkan diri dalam kursus pembelajaran profesional ini.
+
+            **Masa Dicadangkan:** 10 minit
+          student_description: |-
+            Modul ini adalah pengenalan ringkas kepada Code.org dan kursus pembelajaran profesional.
+
+            **Anda akan:**
+
+            -   mengenali Code.org dan CS Discoveries.
+            -   Ketahui cara melibatkan diri dalam kursus pembelajaran profesional ini.
+
+            **Masa Dicadangkan:** 10 minit
+        self-paced-pl-csd2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Menavigasi Code.org
+          title: 'Modul 2: Menavigasi Code.org'
+          description: |-
+            Modul ini direka bentuk untuk mengarahkan anda kepada alatan yang akan anda gunakan untuk menyokong pembelajaran pelajar semasa mengajar CS Discoveries.
+
+            **Anda akan:**
+
+            -   Navigasi laman web Code.org dan alatan guru.
+            -   Sediakan bahagian bilik darjah
+            -   Cari dan gunakan rancangan pengajaran kursus dan sumber guru.
+            -   Ketahui cara mengakses sokongan semasa mengajar kursus.
+
+            **Masa yang dicadangkan:** 60 minit
+          student_description: |-
+            Modul ini direka bentuk untuk mengarahkan anda kepada alatan yang akan anda gunakan untuk menyokong pembelajaran pelajar semasa mengajar CS Discoveries.
+
+            **Anda akan:**
+
+            -   Navigasi laman web Code.org dan alatan guru.
+            -   Sediakan bahagian bilik darjah
+            -   Cari dan gunakan rancangan pengajaran kursus dan sumber guru.
+            -   Ketahui cara mengakses sokongan semasa mengajar kursus.
+
+            **Masa yang dicadangkan:** 60 minit
+        self-paced-pl-csd3-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Gambaran Keseluruhan CS Discoveries
+          title: 'Modul 3: Gambaran Keseluruhan CS Discoveries'
+          description: |-
+            Modul ini akan memberi anda gambaran keseluruhan kursus CS Discoveries dengan penekanan pada konsep yang akan dipelajari oleh pelajar dan alat yang akan digunakan oleh pelajar sepanjang kursus. Penglibatan dalam modul ini akan membantu anda membuat keputusan tentang cara memilih kandungan kursus yang akan anda laksanakan di dalam bilik darjah anda.
+
+            **Anda akan:**
+
+            -   Dapatkan pemahaman peringkat tinggi tentang kurikulum CS Discoveries.
+            -   Biasakan diri dengan persekitaran pengaturcaraan yang digunakan dalam CS Discoveries.
+            -   Tentukan unit CS Discoveriesyang akan anda ajar dalam kelas anda.
+
+            **Masa yang dicadangkan:** 60 minit
+          student_description: |-
+            Modul ini akan memberi anda gambaran keseluruhan kursus CS Discoveries dengan penekanan pada konsep yang akan dipelajari oleh pelajar dan alat yang akan digunakan oleh pelajar sepanjang kursus. Penglibatan dalam modul ini akan membantu anda membuat keputusan tentang cara memilih kandungan kursus yang akan anda laksanakan di dalam bilik darjah anda.
+
+            **Anda akan:**
+
+            -   Dapatkan pemahaman peringkat tinggi tentang kurikulum CS Discoveries.
+            -   Biasakan diri dengan persekitaran pengaturcaraan yang digunakan dalam CS Discoveries.
+            -   Tentukan unit CS Discoveriesyang akan anda ajar dalam kelas anda.
+
+            **Masa yang dicadangkan:** 60 minit
+        self-paced-pl-csd4-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pengajaran dan pembelajaran CS Discoveries
+          title: 'Modul 4: Pengajaran dan pembelajaran CS Discoveries'
+          description: |-
+            Dalam modul ini, anda akan diperkenalkan kepada amalan CS tulen yang melibatkan pelajar sepanjang kursus CS Discoveries. Amalan ini termasuk penyahpepijatan, menggunakan sumber dan pengaturcaraan pasangan. Anda juga akan meneroka peranan guru dalam bilik darjah CS Discoveries dan membuat rancangan tentang cara anda menyokong pembelajaran pelajar semasa mengajar kursus.
+
+            **Anda akan:**
+
+            -   Pertimbangkan peranan guru dalam bilik darjah CS Discoveries.
+            -   Ketahui tentang amalan CS tulen yang akan dibangunkan oleh pelajar sepanjang kursus CS Discoveries.
+            -   Buat rancangan bagaimana anda akan menyokong pembelajaran pelajar melalui pembezaan, penilaian berterusan dan menggalakkan budaya keterangkuman.
+
+            **Masa Dicadangkan:** 50 minit
+          student_description: |-
+            Dalam modul ini, anda akan diperkenalkan kepada amalan CS tulen yang melibatkan pelajar sepanjang kursus CS Discoveries. Amalan ini termasuk penyahpepijatan, menggunakan sumber dan pengaturcaraan pasangan. Anda juga akan meneroka peranan guru dalam bilik darjah CS Discoveries dan membuat rancangan tentang cara anda menyokong pembelajaran pelajar semasa mengajar kursus.
+
+            **Anda akan:**
+
+            -   Pertimbangkan peranan guru dalam bilik darjah CS Discoveries.
+            -   Ketahui tentang amalan CS tulen yang akan dibangunkan oleh pelajar sepanjang kursus CS Discoveries.
+            -   Buat rancangan bagaimana anda akan menyokong pembelajaran pelajar melalui pembezaan, penilaian berterusan dan menggalakkan budaya keterangkuman.
+
+            **Masa Dicadangkan:** 50 minit
+        self-paced-pl-csd5-2021:
+          title: Mengajar AI dan pembelajaran mesin
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada kecerdasan buatan dan pembelajaran mesin.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan AI Lab dan App Lab.
+            -   Terokai projek akhir bab.
+            -   Buat rancangan untuk melaksanakan unit dengan pelajar anda.
+
+            **Masa Dicadangkan:** 120 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada kecerdasan buatan dan pembelajaran mesin.
+            -   Latih model pembelajaran mesin menggunakan AI Lab.
+            -   Terlibat dengan aplikasi pembelajaran mesin.
+            -   Pertimbangkan implikasi dunia sebenar AI dan pembelajaran mesin.
+            -   Terokai projek akhir bab.
+
+            **Masa Dicadangkan:** 120 minit
+        self-paced-pl-csd6-2021:
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada kecerdasan buatan dan pembelajaran mesin.
+            -   Latih model pembelajaran mesin menggunakan AI Lab.
+            -   Terlibat dengan aplikasi pembelajaran mesin.
+            -   Pertimbangkan implikasi dunia sebenar AI dan pembelajaran mesin.
+            -   Terokai projek akhir bab.
+
+            **Masa Dicadangkan:** 120 minit
+        self-paced-pl-csp2-2021:
+          title: 'Modul 2: Menavigasi Code.org'
         outbreak-module:
           title: Wabak
         csa-videos:
@@ -1419,6 +1665,9 @@ ms:
             lessonGroup-4:
               display_name: Demo dan Sumber
         csa-self-paced-pl:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Menavigasi Code.org
           title: Menavigasi Code.org untuk Guru Perintis CSA
           description: "Modul ini direka untuk mengarahkan anda ke alat yang akan anda gunakan untuk menyokong pembelajaran pelajar semasa mengajar CSA. \n\n**Anda akan belajar cara untuk:**\n\n-   Navigasi laman web Code.org dan alat guru.\n-   Cari dan gunakan rancangan pelajaran kursus dan sumber guru. \n\n**Masa yang dicadangkan:** 1 jam"
           name: csa-self-paced-pl
@@ -1475,8 +1724,17 @@ ms:
               display_name: Demo dan Sumber
         tesstest921:
           name: tesstest921
+        hello-world-animals:
+          title: 'Hello World: Haiwan'
+        hello-world-retro:
+          title: 'Hello World: Retro'
         hello-world-batman:
           title: Helo Dunia
+        ai-ethics:
+          title: Kod Etika AI kami
+          description_audience: gred 6-12
+        dance-unplugged:
+          title: Hour of Code - Parti Tarian - Unplugged
         csc-things:
           name: csc-things
           title: 'CSC Brain Dump '
@@ -1540,9 +1798,16 @@ ms:
             lessonGroup-5:
               display_name: Sandbox
         ai-ethics-2021:
+          title: Kod Etika AI kami
           description_audience: Gred 6-12
         poem-art-2021:
           title: Seni Puisi
+        poetry-2021:
+          title: Pengekodan dengan Puisi
+        hello-world-animals-2021:
+          title: 'Hello World: Haiwan'
+        hello-world-retro-2021:
+          title: 'Hello World: Retro'
         explore-data-1-2021:
           title: Visualisasi Data
         counting-csc-2021:
@@ -1611,6 +1876,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             end_of_course_project:
               display_name: Akhir Projek Kursus
           description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
@@ -1736,6 +2003,8 @@ ms:
           student_description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
         tessplayground:
           name: tessplayground
+        self-paced-pl-csa2-2022:
+          title: 'Modul 2: Menavigasi Code.org'
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-5:
@@ -1853,6 +2122,9 @@ ms:
           description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Pengkomputeran Fizikal Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang Pengkomputeran Fizikal.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan aplikasi pembuat.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
           student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Pengkomputeran Fizikal Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang Pengkomputeran Fizikal.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan aplikasi pembuat.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
         vpl-csd7-ci-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Mengajar AI dan pembelajaran mesin
           title: 'Modul 7: Bersedia untuk Mengajar AI dan Pembelajaran Mesin'
           description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang AI dan Pembelajaran Mesin.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
           student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang AI dan Pembelajaran Mesin.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
@@ -1874,11 +2146,136 @@ ms:
           name: testtess2
         aiml-2022:
           name: aiml-2022
+          title: Modul Pembelajaran AI dan Mesin
           description_short: Ketahui tentang Kepintaran Buatan dan Pembelajaran Mesin
+        self-paced-pl-csd1-2022:
+          title: 'Modul 1: Selamat datang '
+          description: |-
+            Modul ini adalah pengenalan ringkas kepada Code.org dan kursus pembelajaran profesional.
+
+            **Anda akan:**
+
+            -   mengenali Code.org dan CS Discoveries.
+            -   Ketahui cara melibatkan diri dalam kursus pembelajaran profesional ini.
+
+            **Masa Dicadangkan:** 10 minit
+          student_description: |-
+            Modul ini adalah pengenalan ringkas kepada Code.org dan kursus pembelajaran profesional.
+
+            **Anda akan:**
+
+            -   mengenali Code.org dan CS Discoveries.
+            -   Ketahui cara melibatkan diri dalam kursus pembelajaran profesional ini.
+
+            **Masa Dicadangkan:** 10 minit
+        self-paced-pl-csd2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Menavigasi Code.org
+          title: 'Modul 2: Menavigasi Code.org'
+          description: |-
+            Modul ini direka bentuk untuk mengarahkan anda kepada alatan yang akan anda gunakan untuk menyokong pembelajaran pelajar semasa mengajar CS Discoveries.
+
+            **Anda akan:**
+
+            -   Navigasi laman web Code.org dan alatan guru.
+            -   Sediakan bahagian bilik darjah
+            -   Cari dan gunakan rancangan pengajaran kursus dan sumber guru.
+            -   Ketahui cara mengakses sokongan semasa mengajar kursus.
+
+            **Masa yang dicadangkan:** 60 minit
+          student_description: |-
+            Modul ini direka bentuk untuk mengarahkan anda kepada alatan yang akan anda gunakan untuk menyokong pembelajaran pelajar semasa mengajar CS Discoveries.
+
+            **Anda akan:**
+
+            -   Navigasi laman web Code.org dan alatan guru.
+            -   Sediakan bahagian bilik darjah
+            -   Cari dan gunakan rancangan pengajaran kursus dan sumber guru.
+            -   Ketahui cara mengakses sokongan semasa mengajar kursus.
+
+            **Masa yang dicadangkan:** 60 minit
+        self-paced-pl-csd3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Gambaran Keseluruhan CS Discoveries
+          title: 'Modul 3: Gambaran Keseluruhan CS Discoveries'
+          description: |-
+            Modul ini akan memberi anda gambaran keseluruhan kursus CS Discoveries dengan penekanan pada konsep yang akan dipelajari oleh pelajar dan alat yang akan digunakan oleh pelajar sepanjang kursus. Penglibatan dalam modul ini akan membantu anda membuat keputusan tentang cara memilih kandungan kursus yang akan anda laksanakan di dalam bilik darjah anda.
+
+            **Anda akan:**
+
+            -   Dapatkan pemahaman peringkat tinggi tentang kurikulum CS Discoveries.
+            -   Biasakan diri dengan persekitaran pengaturcaraan yang digunakan dalam CS Discoveries.
+            -   Tentukan unit CS Discoveriesyang akan anda ajar dalam kelas anda.
+
+            **Masa yang dicadangkan:** 60 minit
+          student_description: |-
+            Modul ini akan memberi anda gambaran keseluruhan kursus CS Discoveries dengan penekanan pada konsep yang akan dipelajari oleh pelajar dan alat yang akan digunakan oleh pelajar sepanjang kursus. Penglibatan dalam modul ini akan membantu anda membuat keputusan tentang cara memilih kandungan kursus yang akan anda laksanakan di dalam bilik darjah anda.
+
+            **Anda akan:**
+
+            -   Dapatkan pemahaman peringkat tinggi tentang kurikulum CS Discoveries.
+            -   Biasakan diri dengan persekitaran pengaturcaraan yang digunakan dalam CS Discoveries.
+            -   Tentukan unit CS Discoveriesyang akan anda ajar dalam kelas anda.
+
+            **Masa yang dicadangkan:** 60 minit
+        self-paced-pl-csd4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pengajaran dan pembelajaran CS Discoveries
+          title: 'Modul 4: Pengajaran dan pembelajaran CS Discoveries'
+          description: |-
+            Dalam modul ini, anda akan diperkenalkan kepada amalan CS tulen yang melibatkan pelajar sepanjang kursus CS Discoveries. Amalan ini termasuk penyahpepijatan, menggunakan sumber dan pengaturcaraan pasangan. Anda juga akan meneroka peranan guru dalam bilik darjah CS Discoveries dan membuat rancangan tentang cara anda menyokong pembelajaran pelajar semasa mengajar kursus.
+
+            **Anda akan:**
+
+            -   Pertimbangkan peranan guru dalam bilik darjah CS Discoveries.
+            -   Ketahui tentang amalan CS tulen yang akan dibangunkan oleh pelajar sepanjang kursus CS Discoveries.
+            -   Buat rancangan bagaimana anda akan menyokong pembelajaran pelajar melalui pembezaan, penilaian berterusan dan menggalakkan budaya keterangkuman.
+
+            **Masa Dicadangkan:** 50 minit
+          student_description: |-
+            Dalam modul ini, anda akan diperkenalkan kepada amalan CS tulen yang melibatkan pelajar sepanjang kursus CS Discoveries. Amalan ini termasuk penyahpepijatan, menggunakan sumber dan pengaturcaraan pasangan. Anda juga akan meneroka peranan guru dalam bilik darjah CS Discoveries dan membuat rancangan tentang cara anda menyokong pembelajaran pelajar semasa mengajar kursus.
+
+            **Anda akan:**
+
+            -   Pertimbangkan peranan guru dalam bilik darjah CS Discoveries.
+            -   Ketahui tentang amalan CS tulen yang akan dibangunkan oleh pelajar sepanjang kursus CS Discoveries.
+            -   Buat rancangan bagaimana anda akan menyokong pembelajaran pelajar melalui pembezaan, penilaian berterusan dan menggalakkan budaya keterangkuman.
+
+            **Masa Dicadangkan:** 50 minit
+        self-paced-pl-csp2-2022:
+          title: 'Modul 2: Menavigasi Code.org'
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
               name: Sambungan Nyahpepijat Asynchronous
+        self-paced-pl-csd5-2022:
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada kecerdasan buatan dan pembelajaran mesin.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan AI Lab dan App Lab.
+            -   Terokai projek akhir bab.
+            -   Buat rancangan untuk melaksanakan unit dengan pelajar anda.
+
+            **Masa Dicadangkan:** 120 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada kecerdasan buatan dan pembelajaran mesin.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan AI Lab dan App Lab.
+            -   Terokai projek akhir bab.
+            -   Buat rancangan untuk melaksanakan unit dengan pelajar anda.
+
+            **Masa Dicadangkan:** 120 minit
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -1902,6 +2299,8 @@ ms:
           lessons:
             lesson-1:
               name: Tatasusunan Satu Dimensi (1D)
+            lesson-3:
+              name: Untuk Gelung
         hello-world-space-2022:
           title: 'Helo Dunia: Ruang'
         hello-world-soccer-2022:
@@ -1940,6 +2339,8 @@ ms:
               display_name: Gelung
             lessonGroup-5:
               display_name: Projek
+        self-paced-pl-csa2-2023:
+          title: 'Modul 2: Menavigasi Code.org'
         angelina-playground:
           lessons:
             lesson-5:
@@ -1947,6 +2348,8 @@ ms:
         csp-playground:
           description_audience: Penulis Kurikulum
           description_short: Untuk mengemas kini pelajaran atau peringkat antara versi kurikulum
+        devices-2022:
+          title: Mewujudkan Apl dengan Peranti (Circuit Playground)
         microbit-temp:
           lesson_groups:
             lessonGroup-2:
@@ -1963,6 +2366,8 @@ ms:
             lessonGroup-2:
               display_name: Bab 1
           title: Penyelesaian Masalah
+        testing-focus-on-creativity2:
+          title: Pembangunan Web
         pre-express-2023:
           lesson_groups:
             csf_sequencing:
@@ -1991,6 +2396,8 @@ ms:
               display_name: Fungsi
             csf_variables:
               display_name: Pemboleh ubah
+            csf_for_loops:
+              display_name: Untuk Gelung
             end_of_course_project:
               display_name: Akhir Projek Kursus
           description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
@@ -2195,6 +2602,135 @@ ms:
           title: 'Modul 7: Bersedia untuk Mengajar AI dan Pembelajaran Mesin'
           description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang AI dan Pembelajaran Mesin.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
           student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang AI dan Pembelajaran Mesin.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
+        ai-temp:
+          title: Cara AI Berfungsi
+        self-paced-pl-csd1-2023:
+          title: 'Modul 1: Selamat datang '
+          description: |-
+            Modul ini adalah pengenalan ringkas kepada Code.org dan kursus pembelajaran profesional.
+
+            **Anda akan:**
+
+            -   mengenali Code.org dan CS Discoveries.
+            -   Ketahui cara melibatkan diri dalam kursus pembelajaran profesional ini.
+
+            **Masa Dicadangkan:** 10 minit
+          student_description: |-
+            Modul ini adalah pengenalan ringkas kepada Code.org dan kursus pembelajaran profesional.
+
+            **Anda akan:**
+
+            -   mengenali Code.org dan CS Discoveries.
+            -   Ketahui cara melibatkan diri dalam kursus pembelajaran profesional ini.
+
+            **Masa Dicadangkan:** 10 minit
+        self-paced-pl-csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Menavigasi Code.org
+          title: 'Modul 2: Menavigasi Code.org'
+          description: |-
+            Modul ini direka bentuk untuk mengarahkan anda kepada alatan yang akan anda gunakan untuk menyokong pembelajaran pelajar semasa mengajar CS Discoveries.
+
+            **Anda akan:**
+
+            -   Navigasi laman web Code.org dan alatan guru.
+            -   Sediakan bahagian bilik darjah
+            -   Cari dan gunakan rancangan pengajaran kursus dan sumber guru.
+            -   Ketahui cara mengakses sokongan semasa mengajar kursus.
+
+            **Masa yang dicadangkan:** 60 minit
+          student_description: |-
+            Modul ini direka bentuk untuk mengarahkan anda kepada alatan yang akan anda gunakan untuk menyokong pembelajaran pelajar semasa mengajar CS Discoveries.
+
+            **Anda akan:**
+
+            -   Navigasi laman web Code.org dan alatan guru.
+            -   Sediakan bahagian bilik darjah
+            -   Cari dan gunakan rancangan pengajaran kursus dan sumber guru.
+            -   Ketahui cara mengakses sokongan semasa mengajar kursus.
+
+            **Masa yang dicadangkan:** 60 minit
+        self-paced-pl-csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Gambaran Keseluruhan CS Discoveries
+          title: 'Modul 3: Gambaran Keseluruhan CS Discoveries'
+          description: |-
+            Modul ini akan memberi anda gambaran keseluruhan kursus CS Discoveries dengan penekanan pada konsep yang akan dipelajari oleh pelajar dan alat yang akan digunakan oleh pelajar sepanjang kursus. Penglibatan dalam modul ini akan membantu anda membuat keputusan tentang cara memilih kandungan kursus yang akan anda laksanakan di dalam bilik darjah anda.
+
+            **Anda akan:**
+
+            -   Dapatkan pemahaman peringkat tinggi tentang kurikulum CS Discoveries.
+            -   Biasakan diri dengan persekitaran pengaturcaraan yang digunakan dalam CS Discoveries.
+            -   Tentukan unit CS Discoveriesyang akan anda ajar dalam kelas anda.
+
+            **Masa yang dicadangkan:** 60 minit
+          student_description: |-
+            Modul ini akan memberi anda gambaran keseluruhan kursus CS Discoveries dengan penekanan pada konsep yang akan dipelajari oleh pelajar dan alat yang akan digunakan oleh pelajar sepanjang kursus. Penglibatan dalam modul ini akan membantu anda membuat keputusan tentang cara memilih kandungan kursus yang akan anda laksanakan di dalam bilik darjah anda.
+
+            **Anda akan:**
+
+            -   Dapatkan pemahaman peringkat tinggi tentang kurikulum CS Discoveries.
+            -   Biasakan diri dengan persekitaran pengaturcaraan yang digunakan dalam CS Discoveries.
+            -   Tentukan unit CS Discoveriesyang akan anda ajar dalam kelas anda.
+
+            **Masa yang dicadangkan:** 60 minit
+        self-paced-pl-csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pengajaran dan pembelajaran CS Discoveries
+          title: 'Modul 4: Pengajaran dan pembelajaran CS Discoveries'
+          description: |-
+            Dalam modul ini, anda akan diperkenalkan kepada amalan CS tulen yang melibatkan pelajar sepanjang kursus CS Discoveries. Amalan ini termasuk penyahpepijatan, menggunakan sumber dan pengaturcaraan pasangan. Anda juga akan meneroka peranan guru dalam bilik darjah CS Discoveries dan membuat rancangan tentang cara anda menyokong pembelajaran pelajar semasa mengajar kursus.
+
+            **Anda akan:**
+
+            -   Pertimbangkan peranan guru dalam bilik darjah CS Discoveries.
+            -   Ketahui tentang amalan CS tulen yang akan dibangunkan oleh pelajar sepanjang kursus CS Discoveries.
+            -   Buat rancangan bagaimana anda akan menyokong pembelajaran pelajar melalui pembezaan, penilaian berterusan dan menggalakkan budaya keterangkuman.
+
+            **Masa Dicadangkan:** 50 minit
+          student_description: |-
+            Dalam modul ini, anda akan diperkenalkan kepada amalan CS tulen yang melibatkan pelajar sepanjang kursus CS Discoveries. Amalan ini termasuk penyahpepijatan, menggunakan sumber dan pengaturcaraan pasangan. Anda juga akan meneroka peranan guru dalam bilik darjah CS Discoveries dan membuat rancangan tentang cara anda menyokong pembelajaran pelajar semasa mengajar kursus.
+
+            **Anda akan:**
+
+            -   Pertimbangkan peranan guru dalam bilik darjah CS Discoveries.
+            -   Ketahui tentang amalan CS tulen yang akan dibangunkan oleh pelajar sepanjang kursus CS Discoveries.
+            -   Buat rancangan bagaimana anda akan menyokong pembelajaran pelajar melalui pembezaan, penilaian berterusan dan menggalakkan budaya keterangkuman.
+
+            **Masa Dicadangkan:** 50 minit
+        self-paced-pl-csd5-2023:
+          title: 'Modul 7: Bersedia untuk Mengajar AI dan Pembelajaran Mesin'
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada kecerdasan buatan dan pembelajaran mesin.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan AI Lab dan App Lab.
+            -   Terokai projek akhir bab.
+            -   Buat rancangan untuk melaksanakan unit dengan pelajar anda.
+
+            **Masa Dicadangkan:** 120 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada kecerdasan buatan dan pembelajaran mesin.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan AI Lab dan App Lab.
+            -   Terokai projek akhir bab.
+            -   Buat rancangan untuk melaksanakan unit dengan pelajar anda.
+
+            **Masa Dicadangkan:** 120 minit
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Pengenalan
         pl-csd-summer-day2:
           lessons:
             lesson-10:
@@ -2203,3 +2739,156 @@ ms:
           lessons:
             lesson-12:
               name: Penggulungan
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Pengenalan
+            lesson-12:
+              name: Penggulungan
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Penggulungan
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Penggulungan
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Penggulungan
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Penilaian
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraan Digital
+            lessonGroup-3:
+              display_name: Jin
+            lessonGroup-4:
+              display_name: Pemboleh ubah
+            lessonGroup-6:
+              display_name: Akhir Projek Kursus
+          description_audience: 'Umur: 9-13 tahun'
+          description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta seni, cerita atau permainan anda sendiri.
+        self-paced-pl-csp2-2023:
+          title: 'Modul 2: Menavigasi Code.org'
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Data
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraan Digital
+            lessonGroup-3:
+              display_name: Penjujukan
+            lessonGroup-4:
+              display_name: Gelung
+            lessonGroup-5:
+              display_name: Kesan Pengkomputeran
+          description_audience: 'Umur: 4-7 tahun'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraan Digital
+            lessonGroup-3:
+              display_name: Penjujukan
+            lessonGroup-4:
+              display_name: Gelung
+            lessonGroup-5:
+              display_name: Kesan Pengkomputeran
+            lessonGroup-6:
+              display_name: Data
+          description_audience: 'Umur: 4-7 tahun'
+          description_short: Pengenalan kepada sains komputer untuk prapembaca.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraan Digital
+            lessonGroup-3:
+              display_name: Penjujukan
+            lessonGroup-4:
+              display_name: Gelung
+            lessonGroup-5:
+              display_name: Kesan Pengkomputeran
+            lessonGroup-6:
+              display_name: Acara-acara
+            lessonGroup-7:
+              display_name: Akhir Projek Kursus
+            lessonGroup-8:
+              display_name: Data
+          description_audience: 'Umur: 5-8 tahun'
+          description_short: Pengenalan kepada sains komputer untuk prapembaca. Serupa dengan Kursus A, tetapi dengan kedalaman konsep tambahan.
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Sistem Pengkomputeran
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraan Digital
+            lessonGroup-3:
+              display_name: Penjujukan
+            lessonGroup-4:
+              display_name: Gelung
+            lessonGroup-5:
+              display_name: Acara-acara
+            lessonGroup-6:
+              display_name: Data
+            lessonGroup-8:
+              display_name: Sistem Pengkomputeran
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraan Digital
+            lessonGroup-3:
+              display_name: Penjujukan
+            lessonGroup-4:
+              display_name: Kesan Pengkomputeran
+            lessonGroup-6:
+              display_name: Gelung
+            lessonGroup-7:
+              display_name: Data
+            lessonGroup-8:
+              display_name: Akhir Projek Kursus
+          description_audience: 'Umur: 7-11 tahun'
+          description_short: Pelajari tentang pernyataan bersyarat. Cipta seni, permainan dan malah majlis tari-menari anda sendiri.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Gelung Bersarang
+            lessonGroup-4:
+              display_name: Fungsi
+            lessonGroup-6:
+              display_name: Akhir Projek Kursus
+          description_audience: 'Umur: 8-12 tahun'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Jin
+          description_audience: 'Umur: 9-13 tahun'
+          description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta seni, cerita atau permainan anda sendiri.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Jin
+            lessonGroup-3:
+              display_name: Bersyarat
+            lessonGroup-5:
+              display_name: Pemboleh ubah
+            lessonGroup-6:
+              display_name: Kesan Pengkomputeran
+            lessonGroup-7:
+              display_name: Akhir Projek Kursus
+          description_audience: 'Umur: 9-13 tahun'
+          description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta seni, cerita atau permainan anda sendiri.
+        how-ai-works-2023:
+          title: Cara AI Berfungsi

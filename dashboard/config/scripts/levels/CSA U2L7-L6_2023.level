@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-11-30T19:45:18.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The Joyful Pastries food truck owner needs a way to easily get information about the flavor or price of their <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Dessert</code> objects.\r\n\r\n🎒 **IMPORT:** Import your <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Dessert</code> class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* <a href=\"https://studio.code.org/projects/javalab/m01OLP1oaedX95Nw811ZQtrLksXapeNTrmI0d2GuI4E\" target=\"_blank\">***here***</a> *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO #1:** Write accessor methods for the instance variables in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Dessert</code> class.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">FoodTruckRunner.java</code>, instantiate a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Dessert</code> object.\r\n\r\n✅ **TO DO #3:** Call the accessor methods for each instance variable and print the results.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing accessor methods.\r\n</div>\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
@@ -20,16 +24,9 @@
         "tabOrder": 0
       }
     },
-    "video_key": "csa_accessor_methods",
-    "encrypted_examples": [
-
-    ]
+    "video_key": "csa_accessor_methods"
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-11-30T19:45:18.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-11-30T19:45:18.846+00:00\",\"changed\":[\"cloned from \\\"CSA U2L7-L4d_2023\\\"\"],\"cloned_from\":\"CSA U2L7-L4d_2023\"},{\"changed_at\":\"2022-11-30 19:45:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-01 02:03:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-01 02:08:16 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-01 13:20:25 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-01 15:49:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-12 14:25:25 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-14 19:00:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-14 19:01:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-14 19:01:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-02 14:30:37 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-14 15:19:56 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

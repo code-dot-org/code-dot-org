@@ -11,5 +11,8 @@
   "blockly_toolboxCategoryMath": "គណិត​វិទ្យា",
   "blockly_toolboxCategoryVariables": "អ​ថេរ",
   "share": "ចែក​រំលែក",
-  "startOver": "ចាប់ផ្ដើម​ឡើង​វិញ"
+  "startOver": "ចាប់ផ្ដើម​សារឡើង​វិញ",
+  "panelHeaderInstructions": "សេចក្ដី​ណែនាំ ",
+  "panelHeaderWorkspace": "កន្លែងធ្វើការ ",
+  "continue": "បន្ត"
 }

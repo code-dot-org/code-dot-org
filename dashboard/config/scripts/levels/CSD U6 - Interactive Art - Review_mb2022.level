@@ -1,10 +1,15 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:52:43.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Review Your Device\r\n\r\nTake a moment to review your device. Double-check that it meets all the requirements in the rubric - <a href=\"https://docs.google.com/document/d/1gHFFmcxnroXEHFyWYXR3sXzqoe7QMNL5kDkrZbgwsfE/edit#\" target=\"_blank\"> click here to see the rubric</a>. Make any changes or updates you think are necessary, or you may decide that the device is fine.\r\n\r\nWhenever your finished, press Run and then the purple Submit button to submit your project. Once you submit it, you won't be able to edit it.",
+    "long_instructions": "# Review Your Device\r\n\r\nTake a moment to review your device. Double-check that it meets all the requirements in the rubric - <a href=\"https://docs.google.com/document/d/1gHFFmcxnroXEHFyWYXR3sXzqoe7QMNL5kDkrZbgwsfE/edit#\" target=\"_blank\"> click here to see the rubric</a>. Make any changes or updates you think are necessary, or you may decide that the device is fine.\r\n\r\nWhenever you're finished, press Run and then the purple Submit button to submit your project. Once you submit it, you won't be able to edit it.",
     "instructions_important": "false",
     "submittable": "true",
     "is_k1": "false",
@@ -69,7 +74,8 @@
       "/courses/csd-2022/guides/if-statements-2",
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/counter-patterns-with-event"
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/maker/setup"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",
@@ -80,13 +86,8 @@
 
     ]
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:52:43.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:52:43.684+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Interactive Art - Review_2222\\\"\"],\"cloned_from\":\"CSD U6 - Interactive Art - Review_2222\"},{\"changed_at\":\"2023-02-09 16:44:25 +0000\",\"changed\":[\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-22 18:28:00 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:06:47 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:52:43.684+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Interactive Art - Review_2222\\\"\"],\"cloned_from\":\"CSD U6 - Interactive Art - Review_2222\"},{\"changed_at\":\"2023-02-09 16:44:25 +0000\",\"changed\":[\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-22 18:28:00 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:06:47 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-31 19:32:39 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-08-21 23:16:09 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -1,6 +1,6 @@
 {
   "key": "poetry",
-  "display_name": "Poetry Module",
+  "display_name": "Coding with Poetry",
   "category": "csc",
   "is_featured": true,
   "assignable": true,
@@ -11,5 +11,10 @@
   "image": "https://images.code.org/803a9b24caf309116f8f9652d9a3e135-Coding with Poetry.png",
   "cs_topic": "art_and_design,games_and_animations,programming",
   "school_subject": "english_language_arts",
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": "Explore the intersection of coding and language arts by creating interactive poems, illustrating the mood and tone with code.",
+  "professional_learning_program": null,
+  "video": "https://www.youtube-nocookie.com/embed/vT9imQY8Dsc/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=vT9imQY8Dsc&wmode=transparent",
+  "published_date": "2021-12-01 05:00:00 UTC",
+  "self_paced_pl_course_offering_id": 421
 }

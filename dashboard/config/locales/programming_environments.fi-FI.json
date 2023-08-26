@@ -2,119 +2,10 @@
   "fi-FI": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Nettilabra"
-        },
-        "gamelab": {
-          "name": "Pelilabra",
-          "categories": {
-            "game_lab": {
-              "name": "Pelilabra",
-              "expressions": {
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "Mustavalkoinen"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Toistaa MP3-äänitiedoston määritetystä URL-osoitteesta."
-                }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Kierre"
-                    }
-                  }
-                }
-              }
-            },
-            "groups": {
-              "name": "Ryhmät",
-              "expressions": {
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Väri"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Väri"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "Piirustus",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Tähti"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematiikka",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Pienin palautettu luku"
-                    },
-                    "max": {
-                      "description": "Suurin palautettu luku"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Pienin palautettu luku"
-                    },
-                    "max": {
-                      "description": "Suurin palautettu luku"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Muuttujat"
-            },
-            "functions": {
-              "name": "Funktiot"
-            }
-          }
-        },
         "applab": {
-          "name": "Sovelluslabra",
-          "description": "Sovelluslabra on koodausympäristö, jossa voit tehdä yksinkertaisia sovelluksia. Suunnittele sovellus, koodaa lohkoilla tai javaScriptillä kunnes se toimii, ja jaa työsi sekunneissa.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funktio"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Toistaa MP3-äänitiedoston määritetystä URL-osoitteesta."
-                }
-              }
+            "advanced": {
+              "name": "Edistyneet"
             },
             "canvas": {
               "expressions": {
@@ -190,6 +81,17 @@
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktio"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
               "expressions": {
                 "createRecord": {
@@ -243,97 +145,195 @@
                 }
               }
             },
-            "control": {
+            "functions": {
+              "name": "Funktiot"
+            },
+            "math": {
               "expressions": {
-                "timedLoop": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Suurin palautettu luku"
+                    },
+                    "min": {
+                      "description": "Pienin palautettu luku"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Suurin palautettu luku"
+                    },
+                    "min": {
+                      "description": "Pienin palautettu luku"
+                    }
+                  }
+                }
+              },
+              "name": "Matematiikka"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
                   "palette_params": {
                     "callback": {
                       "type": "Funktio"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematiikka",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Pienin palautettu luku"
-                    },
-                    "max": {
-                      "description": "Suurin palautettu luku"
-                    }
-                  }
                 },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Pienin palautettu luku"
-                    },
-                    "max": {
-                      "description": "Suurin palautettu luku"
-                    }
-                  }
+                "playSound": {
+                  "short_description": "Toistaa MP3-äänitiedoston määritetystä URL-osoitteesta."
                 }
               }
             },
             "variables": {
-              "name": "Muuttujat",
               "expressions": {
                 "addPair": {
                   "return_value": "Ei mitään"
                 }
-              }
+              },
+              "name": "Muuttujat"
+            }
+          },
+          "description": "Sovelluslabra on koodausympäristö, jossa voit tehdä yksinkertaisia sovelluksia. Suunnittele sovellus, koodaa lohkoilla tai javaScriptillä kunnes se toimii, ja jaa työsi sekunneissa.",
+          "name": "Sovelluslabra"
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Tähti"
+                    }
+                  }
+                }
+              },
+              "name": "Piirustus"
             },
             "functions": {
               "name": "Funktiot"
             },
-            "advanced": {
-              "name": "Edistyneet"
+            "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Mustavalkoinen"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Toistaa MP3-äänitiedoston määritetystä URL-osoitteesta."
+                }
+              },
+              "name": "Pelilabra"
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Väri"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Väri"
+                    }
+                  }
+                }
+              },
+              "name": "Ryhmät"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Suurin palautettu luku"
+                    },
+                    "min": {
+                      "description": "Pienin palautettu luku"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Suurin palautettu luku"
+                    },
+                    "min": {
+                      "description": "Pienin palautettu luku"
+                    }
+                  }
+                }
+              },
+              "name": "Matematiikka"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Kierre"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Muuttujat"
             }
-          }
+          },
+          "name": "Pelilabra"
         },
         "spritelab": {
           "categories": {
-            "world": {
-              "name": "Maailma"
-            },
-            "location": {
-              "name": "Sijainnit"
-            },
             "actions": {
               "name": "Toiminnot"
-            },
-            "events": {
-              "name": "Tapahtumat"
             },
             "behaviors": {
               "name": "Käyttäytymiset"
             },
-            "loops": {
-              "name": "Silmukat"
+            "comments": {
+              "name": "Kommentit"
             },
-            "variables": {
-              "name": "Muuttujat"
-            },
-            "math": {
-              "name": "Matematiikka"
-            },
-            "logic": {
-              "name": "Logiikka"
+            "events": {
+              "name": "Tapahtumat"
             },
             "functions": {
               "name": "Funktiot"
             },
+            "location": {
+              "name": "Sijainnit"
+            },
+            "logic": {
+              "name": "Logiikka"
+            },
+            "loops": {
+              "name": "Silmukat"
+            },
+            "math": {
+              "name": "Matematiikka"
+            },
             "text": {
               "name": "teksti"
             },
-            "comments": {
-              "name": "Kommentit"
+            "variables": {
+              "name": "Muuttujat"
+            },
+            "world": {
+              "name": "Maailma"
             }
           }
+        },
+        "weblab": {
+          "name": "Nettilabra"
         }
       }
     }

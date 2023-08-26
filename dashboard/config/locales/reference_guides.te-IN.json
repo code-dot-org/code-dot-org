@@ -1,0 +1,50 @@
+{
+  "te-IN": {
+    "data": {
+      "reference_guides": {
+        "csd-2022/app-lab": {
+          "display_name": "యాప్ ల్యాబ్"
+        },
+        "csd-2022/circuit-playground": {
+          "display_name": "సర్క్యూట్ ప్లేగ్రౌండ్ అవలోకనం"
+        },
+        "csd-2022/for-loops": {
+          "display_name": "ఉచ్చులు కోసం"
+        },
+        "csd-2022/functions": {
+          "display_name": "విధులు"
+        },
+        "csd-2022/game-lab": {
+          "display_name": "గేమ్ ల్యాబ్"
+        },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "AI ల్యాబ్ పరిచయం"
+        },
+        "csd-2022/lists": {
+          "display_name": "జాబితాలు"
+        },
+        "csd-2022/maker-toolkit": {
+          "display_name": "Maker టూల్కిట్"
+        },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "AI ల్యాబ్లో మోడల్ కార్డులు"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "సమస్య పరిష్కార ప్రక్రియ"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "సమస్య పరిష్కార ప్రక్రియ"
+        },
+        "csd-2022/variables": {
+          "display_name": "వేరియబుల్స్"
+        },
+        "csd-2022/velocity": {
+          "display_name": "వెలాసిటీ"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "వెబ్ ల్యాబ్"
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: Компьютерийн шинжлэх ухааны боловсролын долоо хоног, кодын цагийг дэмжих жишээ тогтоол
 ---
 
 {{ signup_button }}

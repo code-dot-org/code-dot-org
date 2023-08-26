@@ -56,11 +56,65 @@
         "Overworld Move to Sheep": {
           "craft_run_button_callout": "Klikni \"Zaženi\" in preizkusi"
         },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Klikni \"Zaženi\" in preizkusi"
+        },
         "Overworld Move to Sheep_2019": {
           "craft_run_button_callout": "Klikni \"Zaženi\" in preizkusi"
         },
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "Klikni \"Zaženi\" in preizkusi"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Klikni \"Zaženi\" in preizkusi"
+        },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Premakni igralca na to zastavo, da se premaknete na naslednjo stopnjo."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Uporabite ta blok, ko se Waddles in Chomp dotakneta!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Ta blok vam omogoča premikanje igralcev v različne dele prostora igre."
+        },
+        "courseC_artist_loops1b2022": {
+          "sticker2": "Dodaj to v sredino programa."
+        },
+        "courseC_artist_loops1b_2019": {
+          "sticker2": "Dodaj to v sredino programa."
+        },
+        "courseC_artist_loops1b_2020": {
+          "sticker2": "Dodaj to v sredino programa."
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Dodaj to v sredino programa."
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Številka štiri na buči vam pove, da so na voljo štiri buče."
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Povlecite bloke iz orodjarne v delovni prostor."
+        },
+        "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
+        },
+        "courseD_bee_conditionals_challenge22022": {
+          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
+        },
+        "courseD_bee_conditionals_challenge2_2018": {
+          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
+        },
+        "courseD_bee_conditionals_challenge2_2019": {
+          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
+        },
+        "courseD_bee_conditionals_challenge2_2020": {
+          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
         },
         "frozen circle function with parameter": {
           "frozen_circle_function_with_parameter_circle": "Uporabi blok \"ustvari krog\" in mu spremeni velikost."
@@ -97,45 +151,6 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Namesto \"???\" vnesi številko iz spustnega menuja"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Klikni \"Zaženi\" in preizkusi"
-        },
-        "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
-        },
-        "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
-        },
-        "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
-        },
-        "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
-        },
-        "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
-        },
-        "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Klikni \"Zaženi\" in preizkusi"
-        },
-        "courseD_bee_conditionals_challenge22022": {
-          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
-        },
-        "courseC_artist_loops1b2022": {
-          "sticker2": "Dodaj to v sredino programa."
-        },
-        "courseC_artist_loops1b_2019": {
-          "sticker2": "Dodaj to v sredino programa."
-        },
-        "courseC_artist_loops1b_2020": {
-          "sticker2": "Dodaj to v sredino programa."
-        },
-        "courseC_artist_loops1b_2021": {
-          "sticker2": "Dodaj to v sredino programa."
         }
       }
     }

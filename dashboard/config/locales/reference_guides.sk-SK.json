@@ -26,6 +26,9 @@
         "csd-2022/booleans-and-comparison-operators": {
           "display_name": "Logické výrazy a porovnávacie znamienka"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "Circuit Playground: Prehľad"
+        },
         "csd-2022/classes": {
           "display_name": "Triedy"
         },
@@ -116,8 +119,11 @@
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Prehľad"
         },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Modelové karty v AI Lab"
+        },
         "csd-2022/other": {
-          "display_name": "Ostatné"
+          "display_name": "Iné"
         },
         "csd-2022/other-overview": {
           "display_name": "Prehľad"
@@ -180,7 +186,7 @@
           "display_name": "Web Lab"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+          "content": "[][0]"
         }
       }
     }

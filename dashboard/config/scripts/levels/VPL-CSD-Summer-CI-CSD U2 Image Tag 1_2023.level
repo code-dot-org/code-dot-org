@@ -1,7 +1,12 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 58,
+  "created_at": "2023-04-04T17:08:58.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "properties": {
-    "long_instructions": "# Images\r\n\r\nAfter learning the basics of HTML, students will move on to styling their websites using CSS. However, in lesson 9, students. will return to HTML as they learn how to use the `<img>` tag to add images on to web page.\r\n\r\nA Dog vs Cat web page has been started for you. The dog image has already been added to the below web page. \r\n\r\n# Do this\r\n\r\n1) Look at the code that made the dog image appear\r\n* Use an image tag to add the `cat.jpeg` image to the page below the cat heading\r\n\r\n\r\n::: details [**Show Me How**]\r\n\r\n<img src=\"https://images.code.org/b3ca42dd2b72b58ecf0441bfdcf6b4d6-image-1677101299432.gif\" style=\"width:500px\">\r\n<br>\r\n<br>\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n![]()",
+    "long_instructions": "# Images\r\n\r\nAfter learning the basics of HTML, students will move on to styling their websites using CSS. However, in lesson 9, students will return to HTML as they learn how to use the `<img>` tag to add images on to web page.\r\n\r\nA Dog vs Cat web page has been started for you. The dog image has already been added to the below web page. \r\n\r\n# Do this\r\n\r\n1) Look at the code that made the dog image appear\r\n* Use an image tag to add the `cat.jpeg` image to the page below the cat heading\r\n\r\n\r\n::: details [**Show Me How**]\r\n\r\n<img src=\"https://images.code.org/b3ca42dd2b72b58ecf0441bfdcf6b4d6-image-1677101299432.gif\" style=\"width:500px\">\r\n<br>\r\n<br>\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n![]()",
     "project_template_level_name": "CSDU2 - Images Template_2023",
     "instructions_important": "false",
     "encrypted_examples": "IBDgdmb6hHYqPcC/jfcXi/37obs+Q80XBEhTvNAY/n28P6XCcEIXAqhEWge7\ncWilzrx60jBeLbuLITkxw68htQ==\n",
@@ -25,12 +30,7 @@
     "validation_enabled": "true",
     "teacher_markdown": "Students may come across some image tags that include a slash at the end, like this: \r\n`<img src=\"imgURL.jpg\" alt=\"my image\" />`\r\n\r\nThese ending slashes are there to indicate that this tag is self-closing, but they are optional and have no effect on the web page."
   },
-  "game_id": 58,
-  "published": true,
-  "created_at": "2023-04-04T17:08:58.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-04-04T17:08:58.794+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag 1_2023\\\"\"],\"cloned_from\":\"CSD U2 Image Tag 1_2023\"},{\"changed_at\":\"2023-04-04 17:10:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-04T17:08:58.794+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag 1_2023\\\"\"],\"cloned_from\":\"CSD U2 Image Tag 1_2023\"},{\"changed_at\":\"2023-04-04 17:10:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-20 20:15:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
 </Weblab>

@@ -12,7 +12,7 @@ import FacilitatorsList from './facilitators_list';
 import WorkshopManagement from './workshop_management';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {workshopShape} from '../types.js';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {shouldShowSurveyResults} from '../workshop_summary_utils';
 
 export default class WorkshopTable extends React.Component {

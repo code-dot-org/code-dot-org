@@ -1,7 +1,7 @@
 @import "color.scss";
 
 .chordPanelContainer {
-  background-color: $neutral_dark90;
+  background-color: $neutral_dark;
   align-items: center;
   padding: 5px;
   user-select: none;
@@ -49,10 +49,10 @@
       }
 
       &.disabled {
-        background-color: $neutral_dark40;
+        background-color: $neutral_dark50;
 
         &:hover {
-          background-color: $neutral_dark40;
+          background-color: $neutral_dark50;
         }
       }
 
@@ -88,7 +88,7 @@
     margin: 10px 0;
     height: 110px;
     border-radius: 4px;
-    background-color: $neutral_dark80;
+    background-color: $neutral_dark90;
 
     .gridNote {
       position: absolute;

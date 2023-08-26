@@ -306,7 +306,6 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                   <div>
                     <Button
-                      type="primary"
                       color={Button.ButtonColor.brandSecondaryDefault}
                       id="sharing-dialog-copy-button"
                       icon="clipboard"
@@ -387,6 +386,7 @@ class ShareAllowedDialog extends React.Component {
                             onClickPopup.bind(this),
                             'facebook'
                           )}
+                          style={styles.socialLink}
                         >
                           <FontAwesome icon="facebook" />
                         </a>
@@ -400,6 +400,7 @@ class ShareAllowedDialog extends React.Component {
                             onClickPopup.bind(this),
                             'twitter'
                           )}
+                          style={styles.socialLink}
                         >
                           <FontAwesome icon="twitter" />
                         </a>
@@ -507,7 +508,7 @@ const styles = {
     paddingLeft: 10,
     paddingRight: 10,
     marginTop: 0,
-    marginRight: 8,
+    marginRight: 16,
     marginBottom: 0,
     marginLeft: 0,
     verticalAlign: 'top',
@@ -528,7 +529,10 @@ const styles = {
   copyButton: {
     paddingTop: 12.5,
     paddingBottom: 12.5,
-    margin: 0,
+    marginLeft: 0,
+    marginBottom: 0,
+    marginTop: 0,
+    marginRight: 16,
     fontSize: 'large',
   },
   copyButtonLight: {
@@ -536,7 +540,7 @@ const styles = {
   },
   thumbnail: {
     float: 'left',
-    marginRight: 12,
+    marginRight: 16,
     width: 125,
     height: 125,
     overflow: 'hidden',
@@ -565,7 +569,7 @@ const styles = {
   },
   sendToPhoneButton: {
     margin: 0,
-    marginRight: 12,
+    marginRight: 16,
     fontSize: 'large',
     padding: '0 16px',
     paddingRight: 6,
@@ -586,13 +590,16 @@ const styles = {
     float: 'right',
     width: '30%',
   },
+  socialLink: {
+    marginRight: 16,
+  },
 };
 
 export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
 
 export default connect(
   state => ({
-    exportApp: state.pageConstants.exportApp,
+    exportApp: state.pageConstants?.exportApp,
     isOpen: state.shareDialog.isOpen,
     isUnpublishPending: state.shareDialog.isUnpublishPending,
     inRestrictedShareMode: state.project.inRestrictedShareMode,

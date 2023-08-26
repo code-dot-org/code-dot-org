@@ -2,135 +2,10 @@
   "uk-UA": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "categories": {
-            "html_tags": {
-              "name": "HTML Теги"
-            }
-          }
-        },
-        "gamelab": {
-          "name": "Ігрова лабораторія",
-          "categories": {
-            "game_lab": {
-              "name": "Ігрова лабораторія",
-              "expressions": {
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "Чорний та білий"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Відтворює звуковий MP3-файл із зазначеного URL."
-                }
-              }
-            },
-            "sprites": {
-              "name": "Спрайти",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Спіраль"
-                    }
-                  }
-                }
-              }
-            },
-            "groups": {
-              "name": "Групи",
-              "expressions": {
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Колір"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Колір"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "expressions": {
-                "background": {
-                  "examples": {
-                    "RGB Colors": {
-                      "name": "Кольори RGB"
-                    }
-                  }
-                },
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Зірка"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Математика",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Найменше число, котре можна повернути"
-                    },
-                    "max": {
-                      "description": "Найбільше число, котре можна повернути"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Найменше число, котре можна повернути"
-                    },
-                    "max": {
-                      "description": "Найбільше число, котре можна повернути"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Змінні",
-              "expressions": {
-                "declareAssign_x": {
-                  "short_description": "Оголошує змінну з даним ім'ям після \"var\", і присвоює їй значення правої частини виразу"
-                }
-              }
-            },
-            "functions": {
-              "name": "Функції"
-            }
-          }
-        },
         "applab": {
-          "name": "App Lab",
-          "description": "App Lab - це середовище програмування для створення простих додатків. Розробляйте програму, програмуйте її блоками чи JavaScript, а тоді поділіться нею з іншими.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Функція"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Відтворює звуковий MP3-файл із зазначеного URL."
-                }
-              }
+            "advanced": {
+              "name": "Розширені"
             },
             "canvas": {
               "expressions": {
@@ -206,8 +81,21 @@
                 }
               }
             },
+            "circuit": {
+              "name": "Контур"
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функція"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Дані",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -258,105 +146,275 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "Дані"
             },
-            "control": {
+            "functions": {
+              "name": "Функції"
+            },
+            "math": {
               "expressions": {
-                "timedLoop": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Найбільше число, котре можна повернути"
+                    },
+                    "min": {
+                      "description": "Найменше число, котре можна повернути"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Найбільше число, котре можна повернути"
+                    },
+                    "min": {
+                      "description": "Найменше число, котре можна повернути"
+                    }
+                  }
+                }
+              },
+              "name": "Математика"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Зменшення та збільшення"
+                    }
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "Функція"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "Математика",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Найменше число, котре можна повернути"
-                    },
-                    "max": {
-                      "description": "Найбільше число, котре можна повернути"
-                    }
-                  }
                 },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Найменше число, котре можна повернути"
-                    },
-                    "max": {
-                      "description": "Найбільше число, котре можна повернути"
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Створення музики"
                     }
-                  }
+                  },
+                  "short_description": "Відтворює звуковий MP3-файл із зазначеного URL."
                 }
               }
             },
             "variables": {
-              "name": "Змінні",
               "expressions": {
-                "declareAssign_x": {
-                  "short_description": "Оголошує змінну з даним ім'ям після \"var\", і присвоює їй значення правої частини виразу"
-                },
                 "addPair": {
                   "return_value": "Немає"
+                },
+                "declareAssign_x": {
+                  "short_description": "Оголошує змінну з даним ім'ям після \"var\", і присвоює їй значення правої частини виразу"
                 }
-              }
+              },
+              "name": "Змінні"
+            }
+          },
+          "description": "App Lab - це середовище програмування для створення простих додатків. Розробляйте програму, програмуйте її блоками чи JavaScript, а тоді поділіться нею з іншими.",
+          "name": "Програмна Лабораторія"
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "expressions": {
+                "background": {
+                  "examples": {
+                    "RGB Colors": {
+                      "name": "Кольори RGB"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Зірка"
+                    }
+                  }
+                }
+              },
+              "name": "Малювання"
             },
             "functions": {
               "name": "Функції"
             },
-            "advanced": {
-              "name": "Розширені"
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Чорний та білий"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Створення музики"
+                    }
+                  },
+                  "short_description": "Відтворює звуковий MP3-файл із зазначеного URL."
+                }
+              },
+              "name": "Ігрова лабораторія"
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Колір"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Колір"
+                    }
+                  }
+                }
+              },
+              "name": "Групи"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Найбільше число, котре можна повернути"
+                    },
+                    "min": {
+                      "description": "Найменше число, котре можна повернути"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Найбільше число, котре можна повернути"
+                    },
+                    "min": {
+                      "description": "Найменше число, котре можна повернути"
+                    }
+                  }
+                }
+              },
+              "name": "Математика"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "спіраль"
+                    }
+                  }
+                }
+              },
+              "name": "Спрайти"
+            },
+            "variables": {
+              "expressions": {
+                "declareAssign_x": {
+                  "short_description": "Оголошує змінну з даним ім'ям після \"var\", і присвоює їй значення правої частини виразу"
+                }
+              },
+              "name": "Змінні"
             }
-          }
+          },
+          "name": "Ігрова лабораторія"
         },
         "spritelab": {
           "categories": {
-            "sprites": {
-              "name": "Спрайти"
-            },
-            "world": {
-              "name": "Світ"
-            },
-            "location": {
-              "name": "Розташування"
-            },
             "actions": {
               "name": "Дії"
-            },
-            "events": {
-              "name": "Події"
             },
             "behaviors": {
               "name": "Поведінка"
             },
-            "loops": {
-              "name": "Цикли"
+            "comments": {
+              "name": "Коментарі"
             },
-            "variables": {
-              "name": "Змінні"
-            },
-            "math": {
-              "name": "Математика"
-            },
-            "logic": {
-              "name": "Логіка"
+            "events": {
+              "name": "Події"
             },
             "functions": {
               "name": "Функції"
             },
+            "location": {
+              "name": "Розташування"
+            },
+            "logic": {
+              "name": "Логіка"
+            },
+            "loops": {
+              "name": "Цикли"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "sprites": {
+              "name": "Спрайти"
+            },
             "text": {
               "name": "Текст"
             },
-            "comments": {
-              "name": "Коментарі"
+            "variables": {
+              "name": "Змінні"
+            },
+            "world": {
+              "name": "Світ"
             }
           }
+        },
+        "weblab": {
+          "categories": {
+            "css_properties": {
+              "name": "Властивості CSS"
+            },
+            "html_tags": {
+              "name": "Теги HTML"
+            }
+          },
+          "name": "Веб Лабораторія"
         }
       }
     }

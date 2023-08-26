@@ -3,12 +3,12 @@
 # Use ruby_block to apply after all other notifications.
 ruby_block 'stop services' do
   block {}
-  %w(
-    pegasus
-    dashboard
-    nginx
-  ).each do |service|
-    %i(stop disable).each do |action|
+
+  services = %w(pegasus dashboard nginx)
+  actions = %i(stop disable)
+
+  services.each do |service|
+    actions.each do |action|
       notifies action, "service[#{service}]"
     end
   end

@@ -5,7 +5,10 @@ mr:
       name:
         Unplug2: कॉम्प्युटेशनल विचार  
         Unplug6: कंडीशनल्स 
+        Jigsaw: जिगसॉ
+        StudioEC: प्ले लॅब
         Custom: आर्टीस्ट
+        CustomStudio: प्ले लॅब
         Spritelab: स्प्राइट लॅब
     level:
       instructions:
@@ -64,6 +67,7 @@ mr:
         C1_happy_maps_unplugged: हॅपी मैप्स
         C1_bigevent_unplugged: मोठा इव्हेंट 
         C1_getting_loopy: लूप्स वापरणे
+        C1_pair_programming: पेअर प्रोग्रामिंग
         C1_artist_intro: आर्टीस्ट प्रस्तावना 
         C1_building_foundation: पाया तयार करणे
         C1_going_places_safely: सुरक्षितपणे ठिकाणी जाणे
@@ -129,6 +133,7 @@ mr:
         hoc_dance_congrats: डांस पार्टी - पार्टी करत राहा!
         c_and_c_great_to_create: फेअर तयार करणे आणि प्ले करणे खूप छान आहे
         c_and_c_digital_sharing: डिजिटल शेअरिंग
+        csd_pair_programming: पेअर प्रोग्रामिंग
         csd_debugging: डीबगिंग
         oceans_machine_learning: मशीन लर्निंग
         hoc_dance_congrats_2019: डांस पार्टी - पार्टी करत राहा!
@@ -151,6 +156,7 @@ mr:
         hello_world_congrats: हॅलो वर्ल्ड -  आपणास पाहिजे ते करा
         poemart_intro: कविता ह्या कलेची ओळख
         CSA-PL-debugging-temp: जावा लॅबमध्ये डीबगिंगची ओळख - टेम्प (temp)
+        csd_u6_circuit_playground: फिजिकल कॉम्प्युटिंग
         CSA-PL-for-loops: जावा मधील फॉर लूप्स 
         CSA-PL-variables: जावामध्ये व्हेरिएबल्स तयार करणे
         PL_CS_Journeys_Overview: संगणक शास्त्राचा प्रवास
@@ -169,7 +175,10 @@ mr:
         CSA-PL-Printing-in-Java: जावा मध्ये प्रिंटिंग
         CSA-PL-multi-selection-statements: मल्टी सिलेक्शन स्टेटमेंट्स
         CS_Changing_Everything: संगणक शास्त्रामुळे सगळे काही बदलत आहे
+        csc_timecapsule_intro: टाइम कॅप्सूल कोडिंग
         csd_sprite_properties: स्प्राईट प्रॉपर्टीज
+        csc-starquilts-intro: जिओमेट्रिक स्टार क्विल्ट कोडिंग
+        csc-ecosystems-intro: मरीन इकोसिस्टम सिम्युलेशन
     callout:
       text:
         run: तुमचा प्रोग्रॅम करून पाहण्यासाठी "रन" दाबा

@@ -2,565 +2,6 @@
   "sv-SE": {
     "data": {
       "authored_hints": {
-        "2-3 Artist Debugging 2": {
-          "2-3_Artist_Debugging_2_a": "Tips: Varje morrhår är 75 pixlar lång."
-        },
-        "2-3 Artist Debugging 3": {
-          "2-3_Artist_Debugging_3_a": "En av vändna är 15 grader för liten.",
-          "2-3_Artist_Debugging_3_b": "Om programmet körs för snabbt för att man ska se vad som händer, försök att sakta ner det med justeringsverktyget."
-        },
-        "2-3 Artist Functions 1": {
-          "2-3_Artist_Functions_1_a": "Rutorna varje har 100 pixel sidor, det betyder att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget."
-        },
-        "2-3 Artist Functions 3": {
-          "2-3_Artist_Functions_3_a": "\\*\\* 115 + 45 = 160 \\*\\*"
-        },
-        "2-3 Artist Nested Loops 3": {
-          "2-3_Artist_Nested_Loops_3_a": "Behöver du hjälp med vinklar?   \\*\\* 360/12 = 30 \\*\\*",
-          "2-3_Artist_Nested_Loops_3_b": "Kom ihåg att lägga all den grå koden och ditt 'sväng'-block inuti en slinga."
-        },
-        "2-3 Artist Nested Loops 4": {
-          "2-3_Artist_Nested_Loops_3_a": "Behöver du hjälp med vinklar?   \\*\\* 360/12 = 30 \\*\\*"
-        },
-        "2-3 Bee Loops 3": {
-          "2-3_Bee_Loops_3_a": "Du bör ha 6 block inuti din slinga."
-        },
-        "2-3 Maze 6": {
-          "2-3_Maze_6_a": "Det finns två sätt att lösa detta pussel!"
-        },
-        "4-5 Maze 5": {
-          "4-5_Maze_5_b": "Du kan använda mer än en 'Upprepa' loop i ett pussel."
-        },
-        "4-5 Nested Loops 12": {
-          "4-5_Nested_Loops_12_a": "**360 / 36 = ?**"
-        },
-        "CourseD_Dance_2020_01": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._",
-          "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare."
-        },
-        "CourseD_Dance_2020_02": {
-          "validation": "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-   Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._",
-          "challenges": "**Valfri utmaning**-   Använd mer än ett <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block."
-        },
-        "CourseD_Dance_2020_03": {
-          "validation": "**Hur klarar jag den här nivån?**-   Båda dansarna måste ta ett danssteg.-   Du måste trycka på piltangenterna._Den här nivån är slut efter sex takter._",
-          "challenges": "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med vänster och höger piltangent."
-        },
-        "CourseD_Dance_2020_04": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "CourseD_Dance_2020_05": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._",
-          "challenges": "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna ändrar danssteg."
-        },
-        "CourseD_Dance_2020_06": {
-          "validation": "**Hur klarar jag den här nivån?**\n\n-   Skapa en ledande dansare och en grupp bakgrundsdansare.\n\n_Den här nivån är slut efter sju takter._",
-          "challenges": "**Valfri utmaning**\n\n-   Skapa flera grupper med bakgrundsdansare."
-        },
-        "CourseD_Dance_2020_07": {
-          "validation": "**Hur klara jag den här nivån?**\n\n-   Ändra storlek på minst en dansare när musiken har börjat.\n\n_Den här nivån är slut efter sex takter._",
-          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)."
-        },
-        "CourseD_Dance_2020_08": {
-          "validation": "**Hur klarar jag den här nivån?**\n\n-   Ändra färgton på minst en dansare.\n\n_Den här nivån är slut efter sex takter._",
-          "tint_hint": "Märkte du att dina dansare inte ändrar färg till exakt den ton du valde? Det beror på att **tints** blandar de färger som du väljer med dansarens färger."
-        },
-        "CourseD_Dance_2020_09": {
-          "validation": "**Hur klarar jag den här nivån?**\n\n-   Du behöver bara att trycka på ”Klar”-knappen!",
-          "repeat_every_ideas": "**Behöver du idéer?**\n\n-   Ändra en dansares storlek flera gånger så att den blir större.\n-   Ändra en dansares rotation flera gånger så att den snurrar runt.\n-   Ändra en dansares horisontella eller vertikala position flera gånger så att den rör sig över skärmen.\n\n_Du kan också använda negativa siffror för att skapa motsatt effekt!_",
-          "next_previous": "**Valfri utmaning**-   Du kan också använda det här nya händelse-blocket för att gå igenom flera olika danssteg genom att ange rörelsen som ”(Slumpmässig)”, ”(Nästa)” eller ”(Föregående)”.    <xml><block type=\"Dancelab_changeMoveEachLR\">    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>    <title name=\"MOVE\">\"slump\"</title>    <title name=\"DIR\">-1</title>    </block></xml>"
-        },
-        "CourseD_Dance_2020_bonus1": {
-          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
-        },
-        "CourseD_Dance_Party_01": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._",
-          "challenges": "**Frivilliga utmaningar**\n\n-   Välj en annan låt att spela.\n-   Byt namn på din dansare."
-        },
-        "CourseD_Dance_Party_02": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "CourseD_Dance_Party_03": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._"
-        },
-        "CourseD_Dance_Party_04": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde takten av låten.\n\n_Denna nivå slutar efter 9 takter._",
-          "challenges": "**Valfri utmaning**\n\nÄndra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> händelserna."
-        },
-        "CourseD_Dance_Party_06": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste ha minst två dansare.\n\n_Denna nivå slutar efter 5 takter._",
-          "challenges": "**Valfri utmaning**\n\n-   Lägg till en tredje dansare (eller så många du vill!)\n-   Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten."
-        },
-        "CourseD_Dance_Party_08": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Två dansare måste ha en annan storlek än 100.\n\n_Denna nivå slutar efter 5 takter._",
-          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)"
-        },
-        "CourseD_Dance_Party_09": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Ändra färgtonen på minst en dansare.\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "CourseD_Dance_Party_10": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Egenskaper för två eller flera dansare måste ändras.\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "CourseD_Dance_Party_11": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "CourseD_Dance_Party_11_5": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "CourseD_Dance_Party_11b": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Använd blocket ”när vänsterpilen är intryckt” för att få roboten att göra en dansrörelse när du trycker på den.\n\n_Denna nivå slutar efter 8 åtgärder._"
-        },
-        "CourseE_HOC 2018 Level_10": {
-          "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
-        },
-        "CourseE_HOC 2018 Level_10_2020": {
-          "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
-        },
-        "CourseE_HOC 2018 Level_9b": {
-          "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
-        },
-        "CourseE_HOC 2018 Level_9b_2020": {
-          "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
-        },
-        "Dance_2019_01": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._",
-          "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare."
-        },
-        "Dance_2019_02": {
-          "validation": "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-   Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._",
-          "challenges": "**Valfri utmaning**-   Använd mer än ett <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block."
-        },
-        "Dance_2019_03": {
-          "validation": "**Hur klarar jag den här nivån?**-   Båda dansarna måste ta ett danssteg.-   Du måste trycka på piltangenterna._Den här nivån är slut efter sex takter._",
-          "challenges": "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med vänster och höger piltangent."
-        },
-        "Dance_2019_04": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "Dance_2019_05": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._",
-          "challenges": "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna ändrar danssteg."
-        },
-        "Dance_2019_06": {
-          "validation": "**Hur klarar jag den här nivån?**\n\n-   Skapa en ledande dansare och en grupp bakgrundsdansare.\n\n_Den här nivån är slut efter sju takter._",
-          "challenges": "**Valfri utmaning**\n\n-   Skapa flera grupper med bakgrundsdansare."
-        },
-        "Dance_2019_07": {
-          "validation": "**Hur klara jag den här nivån?**\n\n-   Ändra storlek på minst en dansare när musiken har börjat.\n\n_Den här nivån är slut efter sex takter._",
-          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)."
-        },
-        "Dance_2019_08": {
-          "validation": "**Hur klarar jag den här nivån?**\n\n-   Ändra färgton på minst en dansare.\n\n_Den här nivån är slut efter sex takter._",
-          "tint_hint": "Märkte du att dina dansare inte ändrar färg till exakt den ton du valde? Det beror på att **tints** blandar de färger som du väljer med dansarens färger."
-        },
-        "Dance_2019_09": {
-          "validation": "**Hur klarar jag den här nivån?**\n\n-   Du behöver bara att trycka på ”Klar”-knappen!",
-          "repeat_every_ideas": "**Behöver du idéer?**\n\n-   Ändra en dansares storlek flera gånger så att den blir större.\n-   Ändra en dansares rotation flera gånger så att den snurrar runt.\n-   Ändra en dansares horisontella eller vertikala position flera gånger så att den rör sig över skärmen.\n\n_Du kan också använda negativa siffror för att skapa motsatt effekt!_",
-          "next_previous": "**Valfri utmaning**-   Du kan också använda det här nya händelse-blocket för att gå igenom flera olika danssteg genom att ange rörelsen som ”(Slumpmässig)”, ”(Nästa)” eller ”(Föregående)”.    <xml><block type=\"Dancelab_changeMoveEachLR\">    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>    <title name=\"MOVE\">\"slump\"</title>    <title name=\"DIR\">-1</title>    </block></xml>"
-        },
-        "Dance_Party_01": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._",
-          "challenges": "**Frivilliga utmaningar**\n\n-   Välj en annan låt att spela.\n-   Byt namn på din dansare."
-        },
-        "Dance_Party_02": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "Dance_Party_03": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._"
-        },
-        "Dance_Party_04": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde takten av låten.\n\n_Denna nivå slutar efter 9 takter._",
-          "challenges": "**Valfri utmaning**\n\nÄndra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> händelserna."
-        },
-        "Dance_Party_05": {
-          "validation": "**Hur klarar jag denna nivå?** \n\n-   Din dansare behöver cykla genom åtminstone 4 olika danssteg innan nivån slutar. \n\n_Denna nivå slutar efter 12 takter._"
-        },
-        "Dance_Party_06": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste ha minst två dansare.\n\n_Denna nivå slutar efter 5 takter._",
-          "challenges": "**Valfri utmaning**\n\n-   Lägg till en tredje dansare (eller så många du vill!)\n-   Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten."
-        },
-        "Dance_Party_08": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Två dansare måste ha en annan storlek än 100.\n\n_Denna nivå slutar efter 5 takter._",
-          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)"
-        },
-        "Dance_Party_09": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Ändra färgtonen på minst en dansare.\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "Dance_Party_10": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Egenskaper för två eller flera dansare måste ändras.\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "Dance_Party_11": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "Dance_Party_11_5": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "Dance_Party_11b": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Använd blocket ”när vänsterpilen är intryckt” för att få roboten att göra en dansrörelse när du trycker på den.\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "Dance_Party_extras_alternate_2019": {
-          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
-        },
-        "Function intro Ryan": {
-          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
-          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
-        },
-        "Function intro Ryan_2019": {
-          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
-          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
-        },
-        "Function intro Ryan_2020": {
-          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
-          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
-        },
-        "HOC 2018 Level_10": {
-          "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
-        },
-        "HOC 2018 Level_9b": {
-          "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
-        },
-        "MC_HOC_2017_01_RETRY": {
-          "MC_HOC_2017_01_RETRY_a": "Dra ett \"gå framåt\"-block från verktygslådan till arbetsytan och fäst det under \"vid körning\"-blocket.",
-          "MC_HOC_2017_01_RETRY_b": "Glöm inte att klicka på \"Kör\" för att köra agentens kod.",
-          "MC_HOC_2017_01_RETRY_c": "När agenten har kört sin kod kan du styra spelaren med piltangenterna!"
-        },
-        "MC_HOC_2017_01_RETRY_2019": {
-          "MC_HOC_2017_01_RETRY_a": "Dra ett \"gå framåt\"-block från verktygslådan till arbetsytan och fäst det under \"vid körning\"-blocket.",
-          "MC_HOC_2017_01_RETRY_b": "Glöm inte att klicka på \"Kör\" för att köra agentens kod.",
-          "MC_HOC_2017_01_RETRY_c": "När agenten har kört sin kod kan du styra spelaren med piltangenterna!"
-        },
-        "MC_HOC_2017_01_RETRY_2020": {
-          "MC_HOC_2017_01_RETRY_a": "Dra ett \"gå framåt\"-block från verktygslådan till arbetsytan och fäst det under \"vid körning\"-blocket.",
-          "MC_HOC_2017_01_RETRY_b": "Glöm inte att klicka på \"Kör\" för att köra agentens kod.",
-          "MC_HOC_2017_01_RETRY_c": "När agenten har kört sin kod kan du styra spelaren med piltangenterna!"
-        },
-        "MC_HOC_2017_02_Cole": {
-          "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
-          "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
-          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
-        },
-        "MC_HOC_2017_02_Cole_2019": {
-          "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
-          "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
-          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
-        },
-        "MC_HOC_2017_02_Cole_2020": {
-          "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
-          "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
-          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
-        },
-        "MC_HOC_2017_03_Cole": {
-          "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
-          "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
-        },
-        "MC_HOC_2017_03_Cole_2019": {
-          "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
-          "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
-        },
-        "MC_HOC_2017_03_Cole_2020": {
-          "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
-          "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
-        },
-        "MC_HOC_2017_04POINT5_RYAN": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan."
-        },
-        "MC_HOC_2017_04POINT5_RYAN_2019": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan."
-        },
-        "MC_HOC_2017_04POINT5_RYAN_2020": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan."
-        },
-        "MC_HOC_2017_04_Cole": {
-          "MC_HOC_2017_04_Cole_a": "Agenten måste \"gå framåt\" 7 gånger.  Hur kan du använda en \"upprepa\"-loop för att få det att hända?",
-          "MC_HOC_2017_04_Cole_c": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren."
-        },
-        "MC_HOC_2017_04_Cole_2019": {
-          "MC_HOC_2017_04_Cole_a": "Agenten måste \"gå framåt\" 7 gånger.  Hur kan du använda en \"upprepa\"-loop för att få det att hända?",
-          "MC_HOC_2017_04_Cole_c": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren."
-        },
-        "MC_HOC_2017_04_Cole_2020": {
-          "MC_HOC_2017_04_Cole_a": "Agenten måste \"gå framåt\" 7 gånger.  Hur kan du använda en \"upprepa\"-loop för att få det att hända?",
-          "MC_HOC_2017_04_Cole_c": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren."
-        },
-        "MC_HOC_2017_05_Cole": {
-          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
-          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
-        },
-        "MC_HOC_2017_05_Cole_2019": {
-          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
-          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
-        },
-        "MC_HOC_2017_05_Cole_2020": {
-          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
-          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
-        },
-        "MC_HOC_2017_06_Cole": {
-          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
-          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
-        },
-        "MC_HOC_2017_06_Cole_2019": {
-          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
-          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
-        },
-        "MC_HOC_2017_06_Cole_2020": {
-          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
-          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
-        },
-        "MC_HOC_2017_07_Cole": {
-          "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
-          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
-          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
-        },
-        "MC_HOC_2017_07_Cole_2019": {
-          "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
-          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
-          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
-        },
-        "MC_HOC_2017_07_Cole_2020": {
-          "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
-          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
-          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
-        },
-        "MC_HOC_2017_10_RETRY": {
-          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
-          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
-        },
-        "MC_HOC_2017_10_RETRY_2019": {
-          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
-          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
-        },
-        "MC_HOC_2017_10_RETRY_2020": {
-          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
-          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
-        },
-        "MC_HOC_2017_Ali": {
-          "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
-          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
-        },
-        "MC_HOC_2017_Ali_2019": {
-          "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
-          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
-        },
-        "MC_HOC_2017_Ali_2020": {
-          "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
-          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
-        },
-        "MC_HOC_2017_FP20x20": {
-          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
-        },
-        "MC_HOC_2017_FP20x20_2019": {
-          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
-        },
-        "MC_HOC_2017_FP20x20_2020": {
-          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
-        },
-        "courseB_maze_seq8": {
-          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseB_maze_seq8_2018": {
-          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseB_maze_seq8_2019": {
-          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseB_maze_seq8_2020": {
-          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseC_maze_programming6": {
-          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseC_maze_programming6_2018": {
-          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseC_maze_programming6_2019": {
-          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseC_maze_programming6_2020": {
-          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseD_maze_ramp6": {
-          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseD_scrat_ramp7": {
-          "courseD_scrat_programming6_a": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseE_artist_functions1": {
-          "courseE_artist_functions1_a": "Rutorna varje har 100 pixel sidor, det betyder att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget."
-        },
-        "courseE_artist_functions1_copy": {
-          "courseE_artist_functions1_a": "Rutorna varje har 100 pixel sidor, det betyder att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget."
-        },
-        "courseC_video_angles": {
-          "courseD_scrat_programming6_a": "Det finns två sätt att lösa detta pussel!"
-        },
-        "outbreak1": {
-          "step1": "Använd dessa block för att skapa dina sprites:\n\n[blockly block][0]\n\n[blockly block][1]\n\nDetta block finns i kategorin **Sprites** i verktygslådan.",
-          "step2": "Ändra storleken på sprites med detta block: [blockly block][0].\n\nDet finns i kategorin **Actions** i verktygslådan.",
-          "step3": "Gör så att alla sprites börja vandra med detta: [blockly block][0].\n\nDetta block finns i kategorin **Actions** i verktygslådan."
-        },
-        "outbreak2": {
-          "hint1": "Klicka på '+'-knappen i event-blocket. Fyll det tomma utrymmet i 'change costume'-blocket med 'subject'-blocket däri.\n\n[blockly block][0]"
-        },
-        "outbreak3": {
-          "hint1": "Ge monster munskydd genom att använd 'change costume'-blocket med en 'when clicked-händelse:\n\n[blockly block][0]\n\nVar noga med att också dra in det lilla röda 'clicked'-blocket!",
-          "hint2": "Den nya koden för denna nivå ska se ut så här:\n\n[blockly block][0]"
-        },
-        "outbreak4": {
-          "challenge": "## Letar du efter en extra utmaning?\n\nDu kan också få monster att röra sig snabbare eller långsammare.\n\n1.  Klicka på 'Edit' i detta block [blockly block][0] \n2.  Öka eller minska talet i detta block: \n\n[blockly block][1]\n\nFör att få monster att röra sig långsammare, välj ett decimaltal som '0.5' eller '0,25'. För att få dem att röra sig snabbare, välj valfritt tal över 1."
-        },
-        "outbreak5": {
-          "solution2": "Din nya kod ska se ut så här:\n\n[blockly block][0]"
-        },
-        "outbreak6": {
-          "hint2": "Var noga med att flytta in de andra 'action'-blocken i 'if chance'-blocket:\n\n[blockly block][0]",
-          "hint1": "Du måste lägga till ytterligare 3 'when touches'-händelser för att se alla möjliga kombinationer av 'touches' mellan friska och infekterade sprites.\n\n[blockly block][0]"
-        },
-        "outbreak7": {
-          "whenclicked": "## Vaccin\n\nDu kan ge monster ett vaccin när du klickar på dem. För att göra detta, använd blocket 'change constume' med den här händelsen:\n\n[blockly block][0]",
-          "verionhistory": "Har du kört fast? Du kan alltid återställa koden genom att klicka på 'Verson History\" nedan och sedan välja 'Start Over'."
-        },
-        "CourseD_Dance_2020_01_2021": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._",
-          "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare."
-        },
-        "CourseD_Dance_2020_02_2021": {
-          "validation": "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-   Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._",
-          "challenges": "**Valfri utmaning**-   Använd mer än ett <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block."
-        },
-        "CourseD_Dance_2020_03_2021": {
-          "validation": "**Hur klarar jag den här nivån?**-   Båda dansarna måste ta ett danssteg.-   Du måste trycka på piltangenterna._Den här nivån är slut efter sex takter._",
-          "challenges": "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med vänster och höger piltangent."
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._",
-          "challenges": "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna ändrar danssteg."
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "validation": "**Hur klarar jag den här nivån?**\n\n-   Skapa en ledande dansare och en grupp bakgrundsdansare.\n\n_Den här nivån är slut efter sju takter._",
-          "challenges": "**Valfri utmaning**\n\n-   Skapa flera grupper med bakgrundsdansare."
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "validation": "**Hur klara jag den här nivån?**\n\n-   Ändra storlek på minst en dansare när musiken har börjat.\n\n_Den här nivån är slut efter sex takter._",
-          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)."
-        },
-        "CourseD_Dance_2020_08_2021": {
-          "validation": "**Hur klarar jag den här nivån?**\n\n-   Ändra färgton på minst en dansare.\n\n_Den här nivån är slut efter sex takter._",
-          "tint_hint": "Märkte du att dina dansare inte ändrar färg till exakt den ton du valde? Det beror på att **tints** blandar de färger som du väljer med dansarens färger."
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "validation": "**Hur klarar jag den här nivån?**\n\n-   Du behöver bara att trycka på ”Klar”-knappen!",
-          "repeat_every_ideas": "**Behöver du idéer?**\n\n-   Ändra en dansares storlek flera gånger så att den blir större.\n-   Ändra en dansares rotation flera gånger så att den snurrar runt.\n-   Ändra en dansares horisontella eller vertikala position flera gånger så att den rör sig över skärmen.\n\n_Du kan också använda negativa siffror för att skapa motsatt effekt!_",
-          "next_previous": "**Valfri utmaning**-   Du kan också använda det här nya händelse-blocket för att gå igenom flera olika danssteg genom att ange rörelsen som ”(Slumpmässig)”, ”(Nästa)” eller ”(Föregående)”.    <xml><block type=\"Dancelab_changeMoveEachLR\">    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>    <title name=\"MOVE\">\"slump\"</title>    <title name=\"DIR\">-1</title>    </block></xml>"
-        },
-        "CourseD_Dance_2020_bonus1_2021": {
-          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
-        },
-        "CourseE_HOC 2018 Level_10_2021": {
-          "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
-        },
-        "CourseE_HOC 2018 Level_9b_2021": {
-          "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
-        },
-        "CourseF_outbreak1": {
-          "step1": "Använd dessa block för att skapa dina sprites:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nDetta block finns i kategorin **Sprites** i verktygslådan.",
-          "step2": "Ändra storleken på sprites med detta block: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nDet finns i kategorin **Actions** i verktygslådan.",
-          "step3": "Gör så att alla sprites börja vandra med detta: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nDetta block finns i kategorin **Actions** i verktygslådan."
-        },
-        "CourseF_outbreak2": {
-          "hint1": "Klicka på '+'-knappen i event-blocket. Fyll det tomma utrymmet i 'change costume'-blocket med 'subject'-blocket däri.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
-        },
-        "CourseF_outbreak3": {
-          "hint1": "Ge monster munskydd genom att använd 'change costume'-blocket med en 'when clicked-händelse:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nVar noga med att också dra in det lilla röda 'clicked'-blocket!",
-          "hint2": "Den nya koden för denna nivå ska se ut så här:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
-        },
-        "CourseF_outbreak4": {
-          "challenge": "## Letar du efter en extra utmaning?\n\nDu kan också få monster att röra sig snabbare eller långsammare.\n\n1.  Klicka på 'Edit' i detta block <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Öka eller minska talet i detta block: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nFör att få monster att röra sig långsammare, välj ett decimaltal som '0.5' eller '0,25'. För att få dem att röra sig snabbare, välj valfritt tal över 1."
-        },
-        "CourseF_outbreak6": {
-          "hint2": "Var noga med att flytta in de andra 'action'-blocken i 'if chance'-blocket:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Du måste lägga till ytterligare 3 'when touches'-händelser för att se alla möjliga kombinationer av 'touches' mellan friska och infekterade sprites.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
-        },
-        "CourseF_outbreak7": {
-          "whenclicked": "## Vaccin\n\nDu kan ge monster ett vaccin när du klickar på dem. För att göra detta, använd blocket 'change constume' med den här händelsen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
-          "verionhistory": "Har du kört fast? Du kan alltid återställa koden genom att klicka på 'Verson History\" nedan och sedan välja 'Start Over'."
-        },
-        "Function intro Ryan_2021": {
-          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
-          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
-        },
-        "MC_HOC_2017_01_RETRY_2021": {
-          "MC_HOC_2017_01_RETRY_a": "Dra ett \"gå framåt\"-block från verktygslådan till arbetsytan och fäst det under \"vid körning\"-blocket.",
-          "MC_HOC_2017_01_RETRY_b": "Glöm inte att klicka på \"Kör\" för att köra agentens kod.",
-          "MC_HOC_2017_01_RETRY_c": "När agenten har kört sin kod kan du styra spelaren med piltangenterna!"
-        },
-        "MC_HOC_2017_02_Cole_2021": {
-          "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
-          "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
-          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
-        },
-        "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
-          "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
-        },
-        "MC_HOC_2017_04POINT5_RYAN_2021": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan."
-        },
-        "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Agenten måste \"gå framåt\" 7 gånger.  Hur kan du använda en \"upprepa\"-loop för att få det att hända?",
-          "MC_HOC_2017_04_Cole_c": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren."
-        },
-        "MC_HOC_2017_05_Cole_2021": {
-          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
-          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
-        },
-        "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
-          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
-        },
-        "MC_HOC_2017_07_Cole_2021": {
-          "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
-          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
-          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
-        },
-        "MC_HOC_2017_10_RETRY_2021": {
-          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
-          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
-          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
-        },
-        "MC_HOC_2017_FP20x20_2021": {
-          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
-        },
-        "courseB_maze_seq8_2021": {
-          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseC_maze_programming6_2021": {
-          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseE_artist_functions1_dani": {
-          "courseE_artist_functions1_a": "Rutorna varje har 100 pixel sidor, det betyder att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget."
-        },
         "2-3 Artist 1 new": {
           "2-3_Artist_1_new_a": "Om du använder blocket för att få mig att 'gå framåt med 100 pixlar' så kommer jag att rita en linje automatiskt.",
           "2-3_Artist_1_new_b": "Har du problem med att komma runt hörnet? Använd 'sväng höger med 90 grader'-blocket."
@@ -599,6 +40,13 @@
           "2-3_Artist_Debugging_10_a": "Kom ihåg, du vill göra styrkorset 10 pixlar _bredare_... så se till att _lägga till_ 10 till det nummer du bestämmer dig för att ändra.",
           "2-3_Artist_Debugging_10_b": "**Att pröva sig fram är en utmärkt strategi för denna uppgift!**\n\nBörja med att byta ut en siffra åt gången.\n\nVilka siffror gör vad?\n\nOm du tappar bort dig, klicka bara på 'Börja om' så återställs koden till ursprungsläget."
         },
+        "2-3 Artist Debugging 2": {
+          "2-3_Artist_Debugging_2_a": "Tips: Varje morrhår är 75 pixlar lång."
+        },
+        "2-3 Artist Debugging 3": {
+          "2-3_Artist_Debugging_3_a": "En av vändna är 15 grader för liten.",
+          "2-3_Artist_Debugging_3_b": "Om programmet körs för snabbt för att man ska se vad som händer, försök att sakta ner det med justeringsverktyget."
+        },
         "2-3 Artist Debugging 7": {
           "2-3_Artist_Debugging_7_a": "Vad händer om du får konstnären att gå eller hoppa baklänges efter att han ritat den första linjen."
         },
@@ -608,6 +56,12 @@
         "2-3 Artist Debugging 9": {
           "2-3_Artist_Debugging_9_a": "Konstnären behöver svänga 60 grader mer åt vänster innan hen börjar rita!",
           "2-3_Artist_Debugging_9_b": "Du behöver inte lägga till ett nytt block för att snurra ett helt varv, lägg bara till 60 grader till 'sväng vänster'-blocket som redan ligger där!"
+        },
+        "2-3 Artist Functions 1": {
+          "2-3_Artist_Functions_1_a": "Rutorna varje har 100 pixel sidor, det betyder att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget."
+        },
+        "2-3 Artist Functions 3": {
+          "2-3_Artist_Functions_3_a": "\\*\\* 115 + 45 = 160 \\*\\*"
         },
         "2-3 Artist Loops New 11": {
           "2-3_Artist_Loops_New_11_a": "Kom ihåg att koden från förra pusslet var:",
@@ -628,6 +82,13 @@
         },
         "2-3 Artist Nested Loops 1": {
           "2-3_Artist_Nested_Loops_1_a": "Kom ihåg att lägga alla grå block inuti din slinga."
+        },
+        "2-3 Artist Nested Loops 3": {
+          "2-3_Artist_Nested_Loops_3_a": "Behöver du hjälp med vinklar?   \\*\\* 360/12 = 30 \\*\\*",
+          "2-3_Artist_Nested_Loops_3_b": "Kom ihåg att lägga all den grå koden och ditt 'sväng'-block inuti en slinga."
+        },
+        "2-3 Artist Nested Loops 4": {
+          "2-3_Artist_Nested_Loops_3_a": "Behöver du hjälp med vinklar?   \\*\\* 360/12 = 30 \\*\\*"
         },
         "2-3 Artist Nested Loops 5": {
           "2-3_Artist_Nested_Loops_5_a": "Försök att använda 'hoppa framåt'-blocket för att komma från toppen av en kvadrat till platsen där du ska börja rita nästa.\n\nOm dina kvadrater är 20 pixlar höga och 20 pixlar ifrån varandra, hur långt behöver du då hoppa?"
@@ -664,6 +125,9 @@
         "2-3 Bee Loops 2": {
           "2-3_Bee_Loops_2_a": "Du borde sluta med fyra block inuti din slinga."
         },
+        "2-3 Bee Loops 3": {
+          "2-3_Bee_Loops_3_a": "Du bör ha 6 block inuti din slinga."
+        },
         "2-3 Bee Loops 3B": {
           "2-3_Bee_Loops_3B_a": "Du behöver två olika 'upprepa'-block, ett efter det andra."
         },
@@ -693,6 +157,12 @@
           "2-3_Maze_16_a": "Om det är svårt att se mönstret, försök att koda ut allt först för att se vilka saker som upprepas om och om igen innan du lägger in slingorna.",
           "2-3_Maze_16_b": "För att lägga flera block inuti ett 'upprepa'-block behöver du bara dra ett 'upprepa'-block till arbetsytan, sen drar du alla blocken som fanns i programmet från början in i 'upprepa'-blocket.\n\nKoppla sedan tillbaka allt till 'vid start'-blocket och så är allt klart!"
         },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "Det finns två sätt att lösa detta pussel!"
+        },
+        "2-3 Maze 6": {
+          "2-3_Maze_6_a": "Det finns två sätt att lösa detta pussel!"
+        },
         "2-3 Maze Loops 17": {
           "2-3_Maze_Loops_17_a": "Om det är svårt att se mönstret, försök att koda ut allt först för att se vilka saker som upprepas om och om igen innan du lägger in slingorna.",
           "2-3_Maze_Loops_17_b": "Raderades startkoden? Klicka på 'börja om' för att få tillbaka den!"
@@ -710,10 +180,613 @@
         "2-3 Maze Loops 21": {
           "2-3_Maze_Loops_21_a": "Om du har svårt att hitta trappstegsmönstret, försök att täcka över de blockerade gångarna med ditt finger."
         },
+        "4-5 Artist 1": {
+          "4-5_Artist_1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
         "4-5 Artist 4": {
           "4-5_Artist_4_a": "Det är 360 grader i en cirkel!\n\nDet är så många gånger du behöver upprepa den här koden (Om du svänger 1 grad åt gången) innan cirkeln är klar!"
         },
+        "4-5 Maze 5": {
+          "4-5_Maze_5_b": "Du kan använda mer än en 'Upprepa' loop i ett pussel."
+        },
+        "4-5 Nested Loops 12": {
+          "4-5_Nested_Loops_12_a": "**360 / 36 = ?**"
+        },
+        "Course 4 SCF 3": {
+          "Course_4_SCF_3_a": "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        },
+        "CourseD_Dance_2020_01": {
+          "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._"
+        },
+        "CourseD_Dance_2020_012022": {
+          "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._"
+        },
+        "CourseD_Dance_2020_02": {
+          "challenges": "**Valfri utmaning**-   Använd mer än ett <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block.",
+          "validation": "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-   Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._"
+        },
+        "CourseD_Dance_2020_022022": {
+          "challenges": "**Valfri utmaning**-   Använd mer än ett <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block.",
+          "validation": "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-   Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "challenges": "**Valfri utmaning**-   Använd mer än ett <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block.",
+          "validation": "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-   Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._"
+        },
+        "CourseD_Dance_2020_03": {
+          "challenges": "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med vänster och höger piltangent.",
+          "validation": "**Hur klarar jag den här nivån?**-   Båda dansarna måste ta ett danssteg.-   Du måste trycka på piltangenterna._Den här nivån är slut efter sex takter._"
+        },
+        "CourseD_Dance_2020_032022": {
+          "challenges": "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med vänster och höger piltangent.",
+          "validation": "**Hur klarar jag den här nivån?**-   Båda dansarna måste ta ett danssteg.-   Du måste trycka på piltangenterna._Den här nivån är slut efter sex takter._"
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "challenges": "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med vänster och höger piltangent.",
+          "validation": "**Hur klarar jag den här nivån?**-   Båda dansarna måste ta ett danssteg.-   Du måste trycka på piltangenterna._Den här nivån är slut efter sex takter._"
+        },
+        "CourseD_Dance_2020_04": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "CourseD_Dance_2020_042022": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "CourseD_Dance_2020_05": {
+          "challenges": "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna ändrar danssteg.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._"
+        },
+        "CourseD_Dance_2020_052022": {
+          "challenges": "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna ändrar danssteg.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "challenges": "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna ändrar danssteg.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._"
+        },
+        "CourseD_Dance_2020_06": {
+          "challenges": "**Valfri utmaning**\n\n-   Skapa flera grupper med bakgrundsdansare.",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Skapa en ledande dansare och en grupp bakgrundsdansare.\n\n_Den här nivån är slut efter sju takter._"
+        },
+        "CourseD_Dance_2020_062022": {
+          "challenges": "**Valfri utmaning**\n\n-   Skapa flera grupper med bakgrundsdansare.",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Skapa en ledande dansare och en grupp bakgrundsdansare.\n\n_Den här nivån är slut efter sju takter._"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "challenges": "**Valfri utmaning**\n\n-   Skapa flera grupper med bakgrundsdansare.",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Skapa en ledande dansare och en grupp bakgrundsdansare.\n\n_Den här nivån är slut efter sju takter._"
+        },
+        "CourseD_Dance_2020_07": {
+          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.).",
+          "validation": "**Hur klara jag den här nivån?**\n\n-   Ändra storlek på minst en dansare när musiken har börjat.\n\n_Den här nivån är slut efter sex takter._"
+        },
+        "CourseD_Dance_2020_072022": {
+          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.).",
+          "validation": "**Hur klara jag den här nivån?**\n\n-   Ändra storlek på minst en dansare när musiken har börjat.\n\n_Den här nivån är slut efter sex takter._"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.).",
+          "validation": "**Hur klara jag den här nivån?**\n\n-   Ändra storlek på minst en dansare när musiken har börjat.\n\n_Den här nivån är slut efter sex takter._"
+        },
+        "CourseD_Dance_2020_08": {
+          "tint_hint": "Märkte du att dina dansare inte ändrar färg till exakt den ton du valde? Det beror på att **tints** blandar de färger som du väljer med dansarens färger.",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Ändra färgton på minst en dansare.\n\n_Den här nivån är slut efter sex takter._"
+        },
+        "CourseD_Dance_2020_082022": {
+          "tint_hint": "Märkte du att dina dansare inte ändrar färg till exakt den ton du valde? Det beror på att **tints** blandar de färger som du väljer med dansarens färger.",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Ändra färgton på minst en dansare.\n\n_Den här nivån är slut efter sex takter._"
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "tint_hint": "Märkte du att dina dansare inte ändrar färg till exakt den ton du valde? Det beror på att **tints** blandar de färger som du väljer med dansarens färger.",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Ändra färgton på minst en dansare.\n\n_Den här nivån är slut efter sex takter._"
+        },
+        "CourseD_Dance_2020_09": {
+          "next_previous": "**Valfri utmaning**-   Du kan också använda det här nya händelse-blocket för att gå igenom flera olika danssteg genom att ange rörelsen som ”(Slumpmässig)”, ”(Nästa)” eller ”(Föregående)”.    <xml><block type=\"Dancelab_changeMoveEachLR\">    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>    <title name=\"MOVE\">\"slump\"</title>    <title name=\"DIR\">-1</title>    </block></xml>",
+          "repeat_every_ideas": "**Behöver du idéer?**\n\n-   Ändra en dansares storlek flera gånger så att den blir större.\n-   Ändra en dansares rotation flera gånger så att den snurrar runt.\n-   Ändra en dansares horisontella eller vertikala position flera gånger så att den rör sig över skärmen.\n\n_Du kan också använda negativa siffror för att skapa motsatt effekt!_",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Du behöver bara att trycka på ”Klar”-knappen!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "next_previous": "**Valfri utmaning**-   Du kan också använda det här nya händelse-blocket för att gå igenom flera olika danssteg genom att ange rörelsen som ”(Slumpmässig)”, ”(Nästa)” eller ”(Föregående)”.    <xml><block type=\"Dancelab_changeMoveEachLR\">    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>    <title name=\"MOVE\">\"slump\"</title>    <title name=\"DIR\">-1</title>    </block></xml>",
+          "repeat_every_ideas": "**Behöver du idéer?**\n\n-   Ändra en dansares storlek flera gånger så att den blir större.\n-   Ändra en dansares rotation flera gånger så att den snurrar runt.\n-   Ändra en dansares horisontella eller vertikala position flera gånger så att den rör sig över skärmen.\n\n_Du kan också använda negativa siffror för att skapa motsatt effekt!_",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Du behöver bara att trycka på ”Klar”-knappen!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "next_previous": "**Valfri utmaning**-   Du kan också använda det här nya händelse-blocket för att gå igenom flera olika danssteg genom att ange rörelsen som ”(Slumpmässig)”, ”(Nästa)” eller ”(Föregående)”.    <xml><block type=\"Dancelab_changeMoveEachLR\">    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>    <title name=\"MOVE\">\"slump\"</title>    <title name=\"DIR\">-1</title>    </block></xml>",
+          "repeat_every_ideas": "**Behöver du idéer?**\n\n-   Ändra en dansares storlek flera gånger så att den blir större.\n-   Ändra en dansares rotation flera gånger så att den snurrar runt.\n-   Ändra en dansares horisontella eller vertikala position flera gånger så att den rör sig över skärmen.\n\n_Du kan också använda negativa siffror för att skapa motsatt effekt!_",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Du behöver bara att trycka på ”Klar”-knappen!"
+        },
+        "CourseD_Dance_2020_bonus1": {
+          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
+        },
+        "CourseD_Dance_2020_bonus12022": {
+          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
+        },
+        "CourseD_Dance_2022_lessonextra1": {
+          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
+        },
+        "CourseD_Dance_2022_lessonextra10a": {
+          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
+        },
+        "CourseD_Dance_Party_01": {
+          "challenges": "**Frivilliga utmaningar**\n\n-   Välj en annan låt att spela.\n-   Byt namn på din dansare.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._"
+        },
+        "CourseD_Dance_Party_02": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "CourseD_Dance_Party_03": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._"
+        },
+        "CourseD_Dance_Party_04": {
+          "challenges": "**Valfri utmaning**\n\nÄndra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> händelserna.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde takten av låten.\n\n_Denna nivå slutar efter 9 takter._"
+        },
+        "CourseD_Dance_Party_06": {
+          "challenges": "**Valfri utmaning**\n\n-   Lägg till en tredje dansare (eller så många du vill!)\n-   Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste ha minst två dansare.\n\n_Denna nivå slutar efter 5 takter._"
+        },
+        "CourseD_Dance_Party_08": {
+          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Två dansare måste ha en annan storlek än 100.\n\n_Denna nivå slutar efter 5 takter._"
+        },
+        "CourseD_Dance_Party_09": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Ändra färgtonen på minst en dansare.\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "CourseD_Dance_Party_10": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Egenskaper för två eller flera dansare måste ändras.\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "CourseD_Dance_Party_11": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "CourseD_Dance_Party_11b": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Använd blocket ”när vänsterpilen är intryckt” för att få roboten att göra en dansrörelse när du trycker på den.\n\n_Denna nivå slutar efter 8 åtgärder._"
+        },
+        "CourseE_HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
+        },
+        "CourseE_HOC 2018 Level_102022": {
+          "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
+        },
+        "CourseE_HOC 2018 Level_10_2020": {
+          "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
+        },
+        "CourseE_HOC 2018 Level_9b": {
+          "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
+        },
+        "CourseE_HOC 2018 Level_9b2022": {
+          "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
+        },
+        "CourseE_HOC 2018 Level_9b_2020": {
+          "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
+        },
+        "CourseF_outbreak1": {
+          "step1": "Använd dessa block för att skapa dina sprites:\n\n[blockly block][0]\n\n[blockly block][1]\n\nDetta block finns i kategorin **Sprites** i verktygslådan.",
+          "step2": "Ändra storleken på sprites med detta block: [blockly block][0].\n\nDet finns i kategorin **Actions** i verktygslådan.",
+          "step3": "Gör så att alla sprites börja vandra med detta: [blockly block][0].\n\nDetta block finns i kategorin **Actions** i verktygslådan."
+        },
+        "CourseF_outbreak1_-2022-2": {
+          "step1": "Använd dessa block för att skapa dina sprites:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nDetta block finns i kategorin **Sprites** i verktygslådan.",
+          "step2": "Ändra storleken på sprites med detta block: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nDet finns i kategorin **Actions** i verktygslådan.",
+          "step3": "Gör så att alla sprites börja vandra med detta: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nDetta block finns i kategorin **Actions** i verktygslådan."
+        },
+        "CourseF_outbreak2": {
+          "hint1": "Klicka på '+'-knappen i event-blocket. Fyll det tomma utrymmet i 'change costume'-blocket med 'subject'-blocket däri.\n\n[blockly block][0]"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "hint1": "Klicka på '+'-knappen i event-blocket. Fyll det tomma utrymmet i 'change costume'-blocket med 'subject'-blocket däri.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak3": {
+          "hint1": "Ge monster munskydd genom att använd 'change costume'-blocket med en 'when clicked-händelse:\n\n[blockly block][0]\n\nVar noga med att också dra in det lilla röda 'clicked'-blocket!",
+          "hint2": "Den nya koden för denna nivå ska se ut så här:\n\n[blockly block][0]"
+        },
+        "CourseF_outbreak3_-2022-2": {
+          "hint1": "Ge monster munskydd genom att använd 'change costume'-blocket med en 'when clicked-händelse:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nVar noga med att också dra in det lilla röda 'clicked'-blocket!",
+          "hint2": "Den nya koden för denna nivå ska se ut så här:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak4": {
+          "challenge": "## Letar du efter en extra utmaning?\n\nDu kan också få monster att röra sig snabbare eller långsammare.\n\n1.  Klicka på 'Edit' i detta block [blockly block][0] \n2.  Öka eller minska talet i detta block: \n\n[blockly block][1]\n\nFör att få monster att röra sig långsammare, välj ett decimaltal som '0.5' eller '0,25'. För att få dem att röra sig snabbare, välj valfritt tal över 1."
+        },
+        "CourseF_outbreak4_-2022-2": {
+          "challenge": "## Letar du efter en extra utmaning?\n\nDu kan också få monster att röra sig snabbare eller långsammare.\n\n1.  Klicka på 'Edit' i detta block <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Öka eller minska talet i detta block: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nFör att få monster att röra sig långsammare, välj ett decimaltal som '0.5' eller '0,25'. För att få dem att röra sig snabbare, välj valfritt tal över 1."
+        },
+        "CourseF_outbreak6": {
+          "hint1": "Du måste lägga till ytterligare 3 'when touches'-händelser för att se alla möjliga kombinationer av 'touches' mellan friska och infekterade sprites.\n\n[blockly block][0]",
+          "hint2": "Var noga med att flytta in de andra 'action'-blocken i 'if chance'-blocket:\n\n[blockly block][0]"
+        },
+        "CourseF_outbreak6_-2022-2": {
+          "hint1": "Du måste lägga till ytterligare 3 'when touches'-händelser för att se alla möjliga kombinationer av 'touches' mellan friska och infekterade sprites.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>",
+          "hint2": "Var noga med att flytta in de andra 'action'-blocken i 'if chance'-blocket:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "CourseF_outbreak7": {
+          "verionhistory": "Har du kört fast? Du kan alltid återställa koden genom att klicka på 'Verson History\" nedan och sedan välja 'Start Over'.",
+          "whenclicked": "## Vaccin\n\nDu kan ge monster ett vaccin när du klickar på dem. För att göra detta, använd blocket 'change constume' med den här händelsen:\n\n[blockly block][0]"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "verionhistory": "Har du kört fast? Du kan alltid återställa koden genom att klicka på 'Verson History\" nedan och sedan välja 'Start Over'.",
+          "whenclicked": "## Vaccin\n\nDu kan ge monster ett vaccin när du klickar på dem. För att göra detta, använd blocket 'change constume' med den här händelsen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "Dance_2019_01": {
+          "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._"
+        },
+        "Dance_2019_02": {
+          "challenges": "**Valfri utmaning**-   Använd mer än ett <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block.",
+          "validation": "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-   Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._"
+        },
+        "Dance_2019_03": {
+          "challenges": "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med vänster och höger piltangent.",
+          "validation": "**Hur klarar jag den här nivån?**-   Båda dansarna måste ta ett danssteg.-   Du måste trycka på piltangenterna._Den här nivån är slut efter sex takter._"
+        },
+        "Dance_2019_04": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "Dance_2019_05": {
+          "challenges": "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna ändrar danssteg.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._"
+        },
+        "Dance_2019_06": {
+          "challenges": "**Valfri utmaning**\n\n-   Skapa flera grupper med bakgrundsdansare.",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Skapa en ledande dansare och en grupp bakgrundsdansare.\n\n_Den här nivån är slut efter sju takter._"
+        },
+        "Dance_2019_07": {
+          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.).",
+          "validation": "**Hur klara jag den här nivån?**\n\n-   Ändra storlek på minst en dansare när musiken har börjat.\n\n_Den här nivån är slut efter sex takter._"
+        },
+        "Dance_2019_08": {
+          "tint_hint": "Märkte du att dina dansare inte ändrar färg till exakt den ton du valde? Det beror på att **tints** blandar de färger som du väljer med dansarens färger.",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Ändra färgton på minst en dansare.\n\n_Den här nivån är slut efter sex takter._"
+        },
+        "Dance_2019_09": {
+          "next_previous": "**Valfri utmaning**-   Du kan också använda det här nya händelse-blocket för att gå igenom flera olika danssteg genom att ange rörelsen som ”(Slumpmässig)”, ”(Nästa)” eller ”(Föregående)”.    <xml><block type=\"Dancelab_changeMoveEachLR\">    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>    <title name=\"MOVE\">\"slump\"</title>    <title name=\"DIR\">-1</title>    </block></xml>",
+          "repeat_every_ideas": "**Behöver du idéer?**\n\n-   Ändra en dansares storlek flera gånger så att den blir större.\n-   Ändra en dansares rotation flera gånger så att den snurrar runt.\n-   Ändra en dansares horisontella eller vertikala position flera gånger så att den rör sig över skärmen.\n\n_Du kan också använda negativa siffror för att skapa motsatt effekt!_",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Du behöver bara att trycka på ”Klar”-knappen!"
+        },
+        "Dance_Party_01": {
+          "challenges": "**Frivilliga utmaningar**\n\n-   Välj en annan låt att spela.\n-   Byt namn på din dansare.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._"
+        },
+        "Dance_Party_02": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "Dance_Party_03": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._"
+        },
+        "Dance_Party_04": {
+          "challenges": "**Valfri utmaning**\n\nÄndra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> händelserna.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde takten av låten.\n\n_Denna nivå slutar efter 9 takter._"
+        },
+        "Dance_Party_05": {
+          "validation": "**Hur klarar jag denna nivå?** \n\n-   Din dansare behöver cykla genom åtminstone 4 olika danssteg innan nivån slutar. \n\n_Denna nivå slutar efter 12 takter._"
+        },
+        "Dance_Party_06": {
+          "challenges": "**Valfri utmaning**\n\n-   Lägg till en tredje dansare (eller så många du vill!)\n-   Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste ha minst två dansare.\n\n_Denna nivå slutar efter 5 takter._"
+        },
+        "Dance_Party_08": {
+          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Två dansare måste ha en annan storlek än 100.\n\n_Denna nivå slutar efter 5 takter._"
+        },
+        "Dance_Party_09": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Ändra färgtonen på minst en dansare.\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "Dance_Party_10": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Egenskaper för två eller flera dansare måste ändras.\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "Dance_Party_11": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "Dance_Party_11_5": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "Dance_Party_11b": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Använd blocket ”när vänsterpilen är intryckt” för att få roboten att göra en dansrörelse när du trycker på den.\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "Dance_Party_extras_alternate_2019": {
+          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
+        },
+        "Function intro Ryan": {
+          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
+          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
+          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
+        },
+        "Function intro Ryan_2019": {
+          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
+          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
+        },
+        "Function intro Ryan_2020": {
+          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
+          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
+          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
+        },
+        "HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
+        },
+        "HOC 2018 Level_9b": {
+          "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
+        },
+        "MC_HOC_2017_01_RETRY": {
+          "MC_HOC_2017_01_RETRY_a": "Dra ett \"gå framåt\"-block från verktygslådan till arbetsytan och fäst det under \"vid körning\"-blocket.",
+          "MC_HOC_2017_01_RETRY_b": "Glöm inte att klicka på \"Kör\" för att köra agentens kod.",
+          "MC_HOC_2017_01_RETRY_c": "När agenten har kört sin kod kan du styra spelaren med piltangenterna!"
+        },
+        "MC_HOC_2017_01_RETRY2022": {
+          "MC_HOC_2017_01_RETRY_a": "Dra ett \"gå framåt\"-block från verktygslådan till arbetsytan och fäst det under \"vid körning\"-blocket.",
+          "MC_HOC_2017_01_RETRY_b": "Glöm inte att klicka på \"Kör\" för att köra agentens kod.",
+          "MC_HOC_2017_01_RETRY_c": "När agenten har kört sin kod kan du styra spelaren med piltangenterna!"
+        },
+        "MC_HOC_2017_01_RETRY_2019": {
+          "MC_HOC_2017_01_RETRY_a": "Dra ett \"gå framåt\"-block från verktygslådan till arbetsytan och fäst det under \"vid körning\"-blocket.",
+          "MC_HOC_2017_01_RETRY_b": "Glöm inte att klicka på \"Kör\" för att köra agentens kod.",
+          "MC_HOC_2017_01_RETRY_c": "När agenten har kört sin kod kan du styra spelaren med piltangenterna!"
+        },
+        "MC_HOC_2017_01_RETRY_2020": {
+          "MC_HOC_2017_01_RETRY_a": "Dra ett \"gå framåt\"-block från verktygslådan till arbetsytan och fäst det under \"vid körning\"-blocket.",
+          "MC_HOC_2017_01_RETRY_b": "Glöm inte att klicka på \"Kör\" för att köra agentens kod.",
+          "MC_HOC_2017_01_RETRY_c": "När agenten har kört sin kod kan du styra spelaren med piltangenterna!"
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Dra ett \"gå framåt\"-block från verktygslådan till arbetsytan och fäst det under \"vid körning\"-blocket.",
+          "MC_HOC_2017_01_RETRY_b": "Glöm inte att klicka på \"Kör\" för att köra agentens kod.",
+          "MC_HOC_2017_01_RETRY_c": "När agenten har kört sin kod kan du styra spelaren med piltangenterna!"
+        },
+        "MC_HOC_2017_02_Cole": {
+          "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
+          "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
+          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
+        },
+        "MC_HOC_2017_02_Cole2022": {
+          "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
+          "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
+          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
+        },
+        "MC_HOC_2017_02_Cole_2019": {
+          "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
+          "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
+          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
+        },
+        "MC_HOC_2017_02_Cole_2020": {
+          "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
+          "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
+          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
+          "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
+          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
+        },
+        "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
+          "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
+          "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
+        },
+        "MC_HOC_2017_03_Cole_2019": {
+          "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
+          "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
+        },
+        "MC_HOC_2017_03_Cole_2020": {
+          "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
+          "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
+          "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN": {
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. "
+        },
+        "MC_HOC_2017_04POINT5_RYAN2022": {
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. "
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2019": {
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. "
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2020": {
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. "
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. "
+        },
+        "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Agenten måste \"gå framåt\" 7 gånger.  Hur kan du använda en \"upprepa\"-loop för att få det att hända?",
+          "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren.",
+          "MC_HOC_2017_04_Cole_c": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Agenten måste \"gå framåt\" 7 gånger.  Hur kan du använda en \"upprepa\"-loop för att få det att hända?",
+          "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren.",
+          "MC_HOC_2017_04_Cole_c": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel."
+        },
+        "MC_HOC_2017_04_Cole_2019": {
+          "MC_HOC_2017_04_Cole_a": "Agenten måste \"gå framåt\" 7 gånger.  Hur kan du använda en \"upprepa\"-loop för att få det att hända?",
+          "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren.",
+          "MC_HOC_2017_04_Cole_c": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel."
+        },
+        "MC_HOC_2017_04_Cole_2020": {
+          "MC_HOC_2017_04_Cole_a": "Agenten måste \"gå framåt\" 7 gånger.  Hur kan du använda en \"upprepa\"-loop för att få det att hända?",
+          "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren.",
+          "MC_HOC_2017_04_Cole_c": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agenten måste \"gå framåt\" 7 gånger.  Hur kan du använda en \"upprepa\"-loop för att få det att hända?",
+          "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren.",
+          "MC_HOC_2017_04_Cole_c": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel."
+        },
+        "MC_HOC_2017_05_Cole": {
+          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
+          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
+        },
+        "MC_HOC_2017_05_Cole2022": {
+          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
+          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
+        },
+        "MC_HOC_2017_05_Cole_2019": {
+          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
+          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
+        },
+        "MC_HOC_2017_05_Cole_2020": {
+          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
+          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
+          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
+        },
+        "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
+          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
+          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
+        },
+        "MC_HOC_2017_06_Cole_2019": {
+          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
+          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
+        },
+        "MC_HOC_2017_06_Cole_2020": {
+          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
+          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
+          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
+        },
+        "MC_HOC_2017_07_Cole": {
+          "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
+          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
+          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
+          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
+          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
+          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
+          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
+          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
+          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
+          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
+          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
+          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
+          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
+          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
+          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
+          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
+        },
+        "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
+          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
+          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
+          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
+          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
+          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
+        },
+        "MC_HOC_2017_FP20x20": {
+          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
+        },
+        "MC_HOC_2017_FP20x202022": {
+          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
+        },
+        "OPD-K5-events-2": {
+          "courseC_flappy_events1_a": "[][0]"
+        },
         "Overworld Avoid Monsters": {
+          "mc_8_a": "Det finns några vägar du kan ta. Vilken är kortast?",
+          "mc_8_b": "Använd 'upprepa'-blocket för att förenkla din kod.",
+          "mc_8_c": "Ditt mål är att komma till husets dörröppning vid toppen av skärmen."
+        },
+        "Overworld Avoid Monsters2022": {
           "mc_8_a": "Det finns några vägar du kan ta. Vilken är kortast?",
           "mc_8_b": "Använd 'upprepa'-blocket för att förenkla din kod.",
           "mc_8_c": "Ditt mål är att komma till husets dörröppning vid toppen av skärmen."
@@ -737,6 +810,10 @@
           "mc_2_a": "Du behöver 'gå framåt' två gånger för att stå framför trädet.",
           "mc_2_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
         },
+        "Overworld Chop Tree2022": {
+          "mc_2_a": "Du behöver 'gå framåt' två gånger för att stå framför trädet.",
+          "mc_2_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
+        },
         "Overworld Chop Tree_2019": {
           "mc_2_a": "Du behöver 'gå framåt' två gånger för att stå framför trädet.",
           "mc_2_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
@@ -753,6 +830,10 @@
           "mc_4_a": "Du kan hugga ner träd i vilken ordning som helst. Vilken väg kräver så liten mängd block som möjligt?",
           "mc_4_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
         },
+        "Overworld Chop Trees2022": {
+          "mc_4_a": "Du kan hugga ner träd i vilken ordning som helst. Vilken väg kräver så liten mängd block som möjligt?",
+          "mc_4_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
+        },
         "Overworld Chop Trees_2019": {
           "mc_4_a": "Du kan hugga ner träd i vilken ordning som helst. Vilken väg kräver så liten mängd block som möjligt?",
           "mc_4_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
@@ -766,6 +847,11 @@
           "mc_4_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
         },
         "Overworld House Frame Chosen": {
+          "mc_6_a": "Klicka på pilen på 'placera'-blocket för att välja vad du vill lägga ut.",
+          "mc_6_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än.",
+          "mc_6_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
+        },
+        "Overworld House Frame Chosen2022": {
           "mc_6_a": "Klicka på pilen på 'placera'-blocket för att välja vad du vill lägga ut.",
           "mc_6_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än.",
           "mc_6_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
@@ -789,6 +875,10 @@
           "mc_1_a": "'Gå framåt'-blocket är högst upp i verktygslådan.",
           "mc_1_b": "Se till att båda 'gå framåt'-blocken har klickat fast i 'vid kör'-blocket."
         },
+        "Overworld Move to Sheep2022": {
+          "mc_1_a": "'Gå framåt'-blocket är högst upp i verktygslådan.",
+          "mc_1_b": "Se till att båda 'gå framåt'-blocken har klickat fast i 'vid kör'-blocket."
+        },
         "Overworld Move to Sheep_2019": {
           "mc_1_a": "'Gå framåt'-blocket är högst upp i verktygslådan.",
           "mc_1_b": "Se till att båda 'gå framåt'-blocken har klickat fast i 'vid kör'-blocket."
@@ -802,6 +892,11 @@
           "mc_1_b": "Se till att båda 'gå framåt'-blocken har klickat fast i 'vid kör'-blocket."
         },
         "Overworld Place Wall": {
+          "mc_5_a": "Använd 'placera'-blocket först och sen 'gå'-blocket.",
+          "mc_5_b": "Se till att båda blocken är inuti 'upprepa'-blocket för att köra koden mer än en gång.",
+          "mc_5_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Overworld Place Wall2022": {
           "mc_5_a": "Använd 'placera'-blocket först och sen 'gå'-blocket.",
           "mc_5_b": "Se till att båda blocken är inuti 'upprepa'-blocket för att köra koden mer än en gång.",
           "mc_5_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
@@ -826,6 +921,11 @@
           "mc_7_b": "Båda strecken av brunt land vid vattnet behöver fyllas med grödor.",
           "mc_7_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
         },
+        "Overworld Plant Crops2022": {
+          "mc_7_a": "Använd 'plantera gröda'-blocket för att plantera en gröda i rutan du står i.",
+          "mc_7_b": "Båda strecken av brunt land vid vattnet behöver fyllas med grödor.",
+          "mc_7_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
+        },
         "Overworld Plant Crops_2019": {
           "mc_7_a": "Använd 'plantera gröda'-blocket för att plantera en gröda i rutan du står i.",
           "mc_7_b": "Båda strecken av brunt land vid vattnet behöver fyllas med grödor.",
@@ -845,6 +945,10 @@
           "mc_13_a": "Använd 'placera räls' för att lägga räls i rutan du står i.",
           "mc_13_b": "Använd 'upprepa'-slingor för att korta ner din kod."
         },
+        "Overworld Powered Minecart2022": {
+          "mc_13_a": "Använd 'placera räls' för att lägga räls i rutan du står i.",
+          "mc_13_b": "Använd 'upprepa'-slingor för att korta ner din kod."
+        },
         "Overworld Powered Minecart_2019": {
           "mc_13_a": "Använd 'placera räls' för att lägga räls i rutan du står i.",
           "mc_13_b": "Använd 'upprepa'-slingor för att korta ner din kod."
@@ -858,6 +962,11 @@
           "mc_13_b": "Använd 'upprepa'-slingor för att korta ner din kod."
         },
         "Overworld Shear Sheep": {
+          "mc_3_a": "'Sax'-blocket når fåren framför dig. Står du vänd mot fåret?",
+          "mc_3_b": "Om du behöver ändra vilket håll du är vänd mot, använd ett 'sväng'-block.",
+          "mc_3_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Overworld Shear Sheep2022": {
           "mc_3_a": "'Sax'-blocket når fåren framför dig. Står du vänd mot fåret?",
           "mc_3_b": "Om du behöver ändra vilket håll du är vänd mot, använd ett 'sväng'-block.",
           "mc_3_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
@@ -881,6 +990,10 @@
           "mc_11_a": "All kod som behövs för att leta efter lava och hantera den finns på plats. Allt du behöver göra är att lägga till ett block för att gå.",
           "mc_11_b": "Borde ditt 'gå framåt'-kommando vara inuti 'om'-satsen eller efter?"
         },
+        "Underground Avoiding Lava2022": {
+          "mc_11_a": "All kod som behövs för att leta efter lava och hantera den finns på plats. Allt du behöver göra är att lägga till ett block för att gå.",
+          "mc_11_b": "Borde ditt 'gå framåt'-kommando vara inuti 'om'-satsen eller efter?"
+        },
         "Underground Avoiding Lava_2019": {
           "mc_11_a": "All kod som behövs för att leta efter lava och hantera den finns på plats. Allt du behöver göra är att lägga till ett block för att gå.",
           "mc_11_b": "Borde ditt 'gå framåt'-kommando vara inuti 'om'-satsen eller efter?"
@@ -894,6 +1007,11 @@
           "mc_11_b": "Borde ditt 'gå framåt'-kommando vara inuti 'om'-satsen eller efter?"
         },
         "Underground If Statements": {
+          "mc_12_a": "Du hittar röd sten i rutorna med röda fläckar.",
+          "mc_12_b": "Kan du använda en 'upprepa'-slinga för att göra din kod kortare?",
+          "mc_12_c": "Använd ett 'om'-uttryck för att kolla av rutor efter lava, placera sen kullersten."
+        },
+        "Underground If Statements2022": {
           "mc_12_a": "Du hittar röd sten i rutorna med röda fläckar.",
           "mc_12_b": "Kan du använda en 'upprepa'-slinga för att göra din kod kortare?",
           "mc_12_c": "Använd ett 'om'-uttryck för att kolla av rutor efter lava, placera sen kullersten."
@@ -918,6 +1036,11 @@
           "mc_10_b": "När du står vid kanten av lavan, använd 'placera kullersten framför'-blocket för att göra en säker väg. Sen kan du gå över!",
           "mc_10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
+        "Underground Iron2022": {
+          "mc_10_a": "Järnblocket är det fläckade området bakom facklan! Hur ska du komma dit bort?",
+          "mc_10_b": "När du står vid kanten av lavan, använd 'placera kullersten framför'-blocket för att göra en säker väg. Sen kan du gå över!",
+          "mc_10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
         "Underground Iron_2019": {
           "mc_10_a": "Järnblocket är det fläckade området bakom facklan! Hur ska du komma dit bort?",
           "mc_10_b": "När du står vid kanten av lavan, använd 'placera kullersten framför'-blocket för att göra en säker väg. Sen kan du gå över!",
@@ -938,6 +1061,11 @@
           "mc_9_b": "De svarta fläckarna i väggen är kol! Använd 'förstör block'-blocket på dessa för att gräva fram kolet.",
           "mc_9_c": "Använd 'placera fackla'-blocket för att lägga en fackla i rutan du står i."
         },
+        "Underground Mining Coal2022": {
+          "mc_9_a": "Står du vänd åt rätt håll? 'Förstör block'-blocket gräver i blocket framför dig.",
+          "mc_9_b": "De svarta fläckarna i väggen är kol! Använd 'förstör block'-blocket på dessa för att gräva fram kolet.",
+          "mc_9_c": "Använd 'placera fackla'-blocket för att lägga en fackla i rutan du står i."
+        },
         "Underground Mining Coal_2019": {
           "mc_9_a": "Står du vänd åt rätt håll? 'Förstör block'-blocket gräver i blocket framför dig.",
           "mc_9_b": "De svarta fläckarna i väggen är kol! Använd 'förstör block'-blocket på dessa för att gräva fram kolet.",
@@ -952,6 +1080,11 @@
           "mc_9_a": "Står du vänd åt rätt håll? 'Förstör block'-blocket gräver i blocket framför dig.",
           "mc_9_b": "De svarta fläckarna i väggen är kol! Använd 'förstör block'-blocket på dessa för att gräva fram kolet.",
           "mc_9_c": "Använd 'placera fackla'-blocket för att lägga en fackla i rutan du står i."
+        },
+        "course1_artist_loops_challenge1": {
+          "courseA_artist_loops_challenge1_b": "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)",
+          "courseA_artist_loops_challenge1_c": "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)",
+          "courseA_artist_loops_challenge1_d": "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
         },
         "course2_artist_nestedLoops_challenge1": {
           "courseD_artist_nestedLoops_challenge1_a": "Börja med att göra en inbäddad slinga för att skapa fyra åtthörningar. Sväng 45 grader för att göra åtthörningen. Hoppa och sväng sedan 90 grader efter varje.",
@@ -1005,7 +1138,28 @@
           "courseC_maze_programming_challenge2_a": "_Om du skickar iväg mig baklänges, var extra noga med att jag svänger åt rätt håll!_",
           "courseC_maze_programming_challenge2_b": "Den kortaste lösningen använder enbart 5 block, men det använder 'upprepa'-blocket!"
         },
+        "courseB_maze_seq8": {
+          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
+        },
+        "courseB_maze_seq82022": {
+          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
+        },
+        "courseB_maze_seq8_2018": {
+          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
+        },
+        "courseB_maze_seq8_2019": {
+          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
+        },
+        "courseB_maze_seq8_2020": {
+          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
+        },
         "courseB_starWars_prog9": {
+          "courseB_starWars_prog9_a": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseB_starWars_prog92022": {
           "courseB_starWars_prog9_a": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
         "courseB_starWars_prog9_2018": {
@@ -1023,6 +1177,9 @@
         "courseC_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_b": "Använd slingor så att du inte får slut på 'samla in'-block!"
         },
+        "courseC_collector_loops_challenge22022": {
+          "courseC_maze_loops_challenge2_b": "Använd slingor så att du inte får slut på 'samla in'-block!"
+        },
         "courseC_collector_loops_challenge2_2018": {
           "courseC_maze_loops_challenge2_b": "Använd slingor så att du inte får slut på 'samla in'-block!"
         },
@@ -1035,7 +1192,31 @@
         "courseC_collector_loops_challenge2_2021": {
           "courseC_maze_loops_challenge2_b": "Använd slingor så att du inte får slut på 'samla in'-block!"
         },
+        "courseC_flappy_events1": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+        },
+        "courseC_flappy_events12022": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+        },
+        "courseC_flappy_events1_2018": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+        },
+        "courseC_flappy_events1_2019": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+        },
+        "courseC_flappy_events1_2020": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+        },
+        "courseC_flappy_events1_2021": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+        },
         "courseC_harvester_loops_challenge2": {
+          "courseC_harvester_loops_challenge2_a": "Ett sätt att lösa det här pusslet på är i formen av ett zig-zag-mönster. Ett annat sätt ser ut som en spiral! Det finns många olika lösningar till pussel som det här. Var ihärdig!",
+          "courseC_harvester_loops_challenge2_b": "Du kan upprepa 'gå framåt' och 'välj sallad' så många gånger du behöver, sväng sedan vid varje hörn.",
+          "courseC_harvester_loops_challenge2_c": "Det här zig-zag-mönstret kan upprepas två gånger för att göra klart pusslet med enbart 20 block!",
+          "courseC_harvester_loops_challenge2_d": "Detta spiralmönster kan kodas med enbart 18 block!"
+        },
+        "courseC_harvester_loops_challenge22022": {
           "courseC_harvester_loops_challenge2_a": "Ett sätt att lösa det här pusslet på är i formen av ett zig-zag-mönster. Ett annat sätt ser ut som en spiral! Det finns många olika lösningar till pussel som det här. Var ihärdig!",
           "courseC_harvester_loops_challenge2_b": "Du kan upprepa 'gå framåt' och 'välj sallad' så många gånger du behöver, sväng sedan vid varje hörn.",
           "courseC_harvester_loops_challenge2_c": "Det här zig-zag-mönstret kan upprepas två gånger för att göra klart pusslet med enbart 20 block!",
@@ -1065,10 +1246,31 @@
           "courseC_harvester_loops_challenge2_c": "Det här zig-zag-mönstret kan upprepas två gånger för att göra klart pusslet med enbart 20 block!",
           "courseC_harvester_loops_challenge2_d": "Detta spiralmönster kan kodas med enbart 18 block!"
         },
+        "courseC_maze_programming6": {
+          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
+        },
+        "courseC_maze_programming62022": {
+          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
+        },
+        "courseC_maze_programming6_2018": {
+          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
+        },
+        "courseC_maze_programming6_2019": {
+          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
+        },
+        "courseC_maze_programming6_2020": {
+          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
+        },
         "courseC_starWars_loops1": {
           "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
         "courseC_starWars_loops10": {
+          "courseC_starWars_loops10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops102022": {
           "courseC_starWars_loops10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
         "courseC_starWars_loops10_2018": {
@@ -1083,6 +1285,9 @@
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
+        "courseC_starWars_loops12022": {
+          "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
         "courseC_starWars_loops1_2018": {
           "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
@@ -1096,6 +1301,9 @@
           "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
         "courseC_starWars_loops7": {
+          "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops72022": {
           "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
         "courseC_starWars_loops7_2018": {
@@ -1116,7 +1324,13 @@
         "courseC_starWars_loops7_dani": {
           "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "Det finns två sätt att lösa detta pussel!"
+        },
         "courseD_artist_nestedLoops3": {
+          "courseD_artist_nestedLoops3_a": "Försök att använda 'hoppa framåt'-blocket för att komma från toppen av en kvadrat till platsen där du ska börja rita nästa.\n\nOm dina kvadrater är 20 pixlar höga och 20 pixlar ifrån varandra, hur långt behöver du då hoppa?"
+        },
+        "courseD_artist_nestedLoops32022": {
           "courseD_artist_nestedLoops3_a": "Försök att använda 'hoppa framåt'-blocket för att komma från toppen av en kvadrat till platsen där du ska börja rita nästa.\n\nOm dina kvadrater är 20 pixlar höga och 20 pixlar ifrån varandra, hur långt behöver du då hoppa?"
         },
         "courseD_artist_nestedLoops3_2018": {
@@ -1132,6 +1346,10 @@
           "courseD_artist_nestedLoops3_a": "Försök att använda 'hoppa framåt'-blocket för att komma från toppen av en kvadrat till platsen där du ska börja rita nästa.\n\nOm dina kvadrater är 20 pixlar höga och 20 pixlar ifrån varandra, hur långt behöver du då hoppa?"
         },
         "courseD_artist_nestedLoops_challenge2": {
+          "courseD_artist_nestedLoops_challenge2_a": "För att rita en vanlig åtthörning behöver konstnären svänga 45 grader 8 gånger.",
+          "courseD_artist_nestedLoops_challenge2_b": "För att rita en kvadrat behöver artisten svänga 90 grader 4 gånger."
+        },
+        "courseD_artist_nestedLoops_challenge22022": {
           "courseD_artist_nestedLoops_challenge2_a": "För att rita en vanlig åtthörning behöver konstnären svänga 45 grader 8 gånger.",
           "courseD_artist_nestedLoops_challenge2_b": "För att rita en kvadrat behöver artisten svänga 90 grader 4 gånger."
         },
@@ -1154,6 +1372,9 @@
         "courseD_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
         },
+        "courseD_bee_conditionals_challenge12022": {
+          "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
+        },
         "courseD_bee_conditionals_challenge1_2018": {
           "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
         },
@@ -1166,36 +1387,25 @@
         "courseD_bee_conditionals_challenge1_2021": {
           "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
         },
-        "4-5 Artist 1": {
-          "4-5_Artist_1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        "courseD_maze_ramp6": {
+          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
         },
-        "Course 4 SCF 3": {
-          "Course_4_SCF_3_a": "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        "courseD_scrat_ramp7": {
+          "courseD_scrat_programming6_a": "Det finns två sätt att lösa detta pussel!"
         },
-        "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "[][0]"
+        "courseE_artist_functions1": {
+          "courseE_artist_functions1_a": "Rutorna varje har 100 pixel sidor, det betyder att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget."
         },
-        "course1_artist_loops_challenge1": {
-          "courseA_artist_loops_challenge1_b": "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)",
-          "courseA_artist_loops_challenge1_c": "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)",
-          "courseA_artist_loops_challenge1_d": "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
+        "courseE_artist_functions1_copy": {
+          "courseE_artist_functions1_a": "Rutorna varje har 100 pixel sidor, det betyder att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget."
         },
-        "courseC_flappy_events1": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
-        },
-        "courseC_flappy_events1_2018": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
-        },
-        "courseC_flappy_events1_2019": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
-        },
-        "courseC_flappy_events1_2020": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
-        },
-        "courseC_flappy_events1_2021": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "Rutorna varje har 100 pixel sidor, det betyder att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget."
         },
         "courseE_artist_functions8": {
+          "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
+        },
+        "courseE_artist_functions82022": {
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8_2018": {
@@ -1215,242 +1425,6 @@
         },
         "courseF_artist_variables4": {
           "courseF_artist_variables4_b": "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
-        },
-        "2-3 Maze 3": {
-          "2-3_Maze_6_a": "Det finns två sätt att lösa detta pussel!"
-        },
-        "MC Agent Freeplay": {
-          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
-        },
-        "CourseD_Dance_2020_012022": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._",
-          "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare."
-        },
-        "CourseD_Dance_2020_022022": {
-          "validation": "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-   Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._",
-          "challenges": "**Valfri utmaning**-   Använd mer än ett <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block."
-        },
-        "CourseD_Dance_2020_032022": {
-          "validation": "**Hur klarar jag den här nivån?**-   Båda dansarna måste ta ett danssteg.-   Du måste trycka på piltangenterna._Den här nivån är slut efter sex takter._",
-          "challenges": "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med vänster och höger piltangent."
-        },
-        "CourseD_Dance_2020_042022": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
-        },
-        "CourseD_Dance_2020_052022": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._",
-          "challenges": "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna ändrar danssteg."
-        },
-        "CourseD_Dance_2020_062022": {
-          "validation": "**Hur klarar jag den här nivån?**\n\n-   Skapa en ledande dansare och en grupp bakgrundsdansare.\n\n_Den här nivån är slut efter sju takter._",
-          "challenges": "**Valfri utmaning**\n\n-   Skapa flera grupper med bakgrundsdansare."
-        },
-        "CourseD_Dance_2020_072022": {
-          "validation": "**Hur klara jag den här nivån?**\n\n-   Ändra storlek på minst en dansare när musiken har börjat.\n\n_Den här nivån är slut efter sex takter._",
-          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)."
-        },
-        "CourseD_Dance_2020_082022": {
-          "validation": "**Hur klarar jag den här nivån?**\n\n-   Ändra färgton på minst en dansare.\n\n_Den här nivån är slut efter sex takter._",
-          "tint_hint": "Märkte du att dina dansare inte ändrar färg till exakt den ton du valde? Det beror på att **tints** blandar de färger som du väljer med dansarens färger."
-        },
-        "CourseD_Dance_2020_092022": {
-          "validation": "**Hur klarar jag den här nivån?**\n\n-   Du behöver bara att trycka på ”Klar”-knappen!",
-          "repeat_every_ideas": "**Behöver du idéer?**\n\n-   Ändra en dansares storlek flera gånger så att den blir större.\n-   Ändra en dansares rotation flera gånger så att den snurrar runt.\n-   Ändra en dansares horisontella eller vertikala position flera gånger så att den rör sig över skärmen.\n\n_Du kan också använda negativa siffror för att skapa motsatt effekt!_",
-          "next_previous": "**Valfri utmaning**-   Du kan också använda det här nya händelse-blocket för att gå igenom flera olika danssteg genom att ange rörelsen som ”(Slumpmässig)”, ”(Nästa)” eller ”(Föregående)”.    <xml><block type=\"Dancelab_changeMoveEachLR\">    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>    <title name=\"MOVE\">\"slump\"</title>    <title name=\"DIR\">-1</title>    </block></xml>"
-        },
-        "CourseD_Dance_2020_bonus12022": {
-          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
-        },
-        "CourseD_Dance_2022_lessonextra1": {
-          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
-        },
-        "CourseD_Dance_2022_lessonextra10a": {
-          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
-        },
-        "CourseE_HOC 2018 Level_102022": {
-          "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
-        },
-        "CourseE_HOC 2018 Level_9b2022": {
-          "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
-        },
-        "CourseF_outbreak1_-2022-2": {
-          "step1": "Använd dessa block för att skapa dina sprites:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nDetta block finns i kategorin **Sprites** i verktygslådan.",
-          "step2": "Ändra storleken på sprites med detta block: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nDet finns i kategorin **Actions** i verktygslådan.",
-          "step3": "Gör så att alla sprites börja vandra med detta: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nDetta block finns i kategorin **Actions** i verktygslådan."
-        },
-        "CourseF_outbreak2_-2022-2": {
-          "hint1": "Klicka på '+'-knappen i event-blocket. Fyll det tomma utrymmet i 'change costume'-blocket med 'subject'-blocket däri.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
-        },
-        "CourseF_outbreak3_-2022-2": {
-          "hint1": "Ge monster munskydd genom att använd 'change costume'-blocket med en 'when clicked-händelse:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nVar noga med att också dra in det lilla röda 'clicked'-blocket!",
-          "hint2": "Den nya koden för denna nivå ska se ut så här:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
-        },
-        "CourseF_outbreak4_-2022-2": {
-          "challenge": "## Letar du efter en extra utmaning?\n\nDu kan också få monster att röra sig snabbare eller långsammare.\n\n1.  Klicka på 'Edit' i detta block <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Öka eller minska talet i detta block: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nFör att få monster att röra sig långsammare, välj ett decimaltal som '0.5' eller '0,25'. För att få dem att röra sig snabbare, välj valfritt tal över 1."
-        },
-        "CourseF_outbreak6_-2022-2": {
-          "hint2": "Var noga med att flytta in de andra 'action'-blocken i 'if chance'-blocket:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Du måste lägga till ytterligare 3 'when touches'-händelser för att se alla möjliga kombinationer av 'touches' mellan friska och infekterade sprites.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
-        },
-        "CourseF_outbreak7_-2022-2": {
-          "whenclicked": "## Vaccin\n\nDu kan ge monster ett vaccin när du klickar på dem. För att göra detta, använd blocket 'change constume' med den här händelsen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
-          "verionhistory": "Har du kört fast? Du kan alltid återställa koden genom att klicka på 'Verson History\" nedan och sedan välja 'Start Over'."
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas...",
-          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet."
-        },
-        "MC_HOC_2017_01_RETRY2022": {
-          "MC_HOC_2017_01_RETRY_a": "Dra ett \"gå framåt\"-block från verktygslådan till arbetsytan och fäst det under \"vid körning\"-blocket.",
-          "MC_HOC_2017_01_RETRY_b": "Glöm inte att klicka på \"Kör\" för att köra agentens kod.",
-          "MC_HOC_2017_01_RETRY_c": "När agenten har kört sin kod kan du styra spelaren med piltangenterna!"
-        },
-        "MC_HOC_2017_02_Cole2022": {
-          "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
-          "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
-          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
-          "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
-        },
-        "MC_HOC_2017_04POINT5_RYAN2022": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan."
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "Agenten måste \"gå framåt\" 7 gånger.  Hur kan du använda en \"upprepa\"-loop för att få det att hända?",
-          "MC_HOC_2017_04_Cole_c": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren."
-        },
-        "MC_HOC_2017_05_Cole2022": {
-          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
-          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
-          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
-        },
-        "MC_HOC_2017_07_Cole2022": {
-          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen.",
-          "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
-          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet."
-        },
-        "MC_HOC_2017_10_RETRY2022": {
-          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!",
-          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
-          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
-        },
-        "MC_HOC_2017_FP20x202022": {
-          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
-        },
-        "Overworld Avoid Monsters2022": {
-          "mc_8_a": "Det finns några vägar du kan ta. Vilken är kortast?",
-          "mc_8_b": "Använd 'upprepa'-blocket för att förenkla din kod.",
-          "mc_8_c": "Ditt mål är att komma till husets dörröppning vid toppen av skärmen."
-        },
-        "Overworld Chop Tree2022": {
-          "mc_2_a": "Du behöver 'gå framåt' två gånger för att stå framför trädet.",
-          "mc_2_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
-        },
-        "Overworld Chop Trees2022": {
-          "mc_4_a": "Du kan hugga ner träd i vilken ordning som helst. Vilken väg kräver så liten mängd block som möjligt?",
-          "mc_4_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
-        },
-        "Overworld House Frame Chosen2022": {
-          "mc_6_a": "Klicka på pilen på 'placera'-blocket för att välja vad du vill lägga ut.",
-          "mc_6_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än.",
-          "mc_6_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
-        },
-        "Overworld Move to Sheep2022": {
-          "mc_1_a": "'Gå framåt'-blocket är högst upp i verktygslådan.",
-          "mc_1_b": "Se till att båda 'gå framåt'-blocken har klickat fast i 'vid kör'-blocket."
-        },
-        "Overworld Place Wall2022": {
-          "mc_5_a": "Använd 'placera'-blocket först och sen 'gå'-blocket.",
-          "mc_5_b": "Se till att båda blocken är inuti 'upprepa'-blocket för att köra koden mer än en gång.",
-          "mc_5_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
-        },
-        "Overworld Plant Crops2022": {
-          "mc_7_a": "Använd 'plantera gröda'-blocket för att plantera en gröda i rutan du står i.",
-          "mc_7_b": "Båda strecken av brunt land vid vattnet behöver fyllas med grödor.",
-          "mc_7_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
-        },
-        "Overworld Powered Minecart2022": {
-          "mc_13_a": "Använd 'placera räls' för att lägga räls i rutan du står i.",
-          "mc_13_b": "Använd 'upprepa'-slingor för att korta ner din kod."
-        },
-        "Overworld Shear Sheep2022": {
-          "mc_3_a": "'Sax'-blocket når fåren framför dig. Står du vänd mot fåret?",
-          "mc_3_b": "Om du behöver ändra vilket håll du är vänd mot, använd ett 'sväng'-block.",
-          "mc_3_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
-        },
-        "Underground Avoiding Lava2022": {
-          "mc_11_a": "All kod som behövs för att leta efter lava och hantera den finns på plats. Allt du behöver göra är att lägga till ett block för att gå.",
-          "mc_11_b": "Borde ditt 'gå framåt'-kommando vara inuti 'om'-satsen eller efter?"
-        },
-        "Underground If Statements2022": {
-          "mc_12_a": "Du hittar röd sten i rutorna med röda fläckar.",
-          "mc_12_b": "Kan du använda en 'upprepa'-slinga för att göra din kod kortare?",
-          "mc_12_c": "Använd ett 'om'-uttryck för att kolla av rutor efter lava, placera sen kullersten."
-        },
-        "Underground Iron2022": {
-          "mc_10_a": "Järnblocket är det fläckade området bakom facklan! Hur ska du komma dit bort?",
-          "mc_10_b": "När du står vid kanten av lavan, använd 'placera kullersten framför'-blocket för att göra en säker väg. Sen kan du gå över!",
-          "mc_10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
-        },
-        "Underground Mining Coal2022": {
-          "mc_9_a": "Står du vänd åt rätt håll? 'Förstör block'-blocket gräver i blocket framför dig.",
-          "mc_9_b": "De svarta fläckarna i väggen är kol! Använd 'förstör block'-blocket på dessa för att gräva fram kolet.",
-          "mc_9_c": "Använd 'placera fackla'-blocket för att lägga en fackla i rutan du står i."
-        },
-        "courseB_maze_seq82022": {
-          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseB_starWars_prog92022": {
-          "courseB_starWars_prog9_a": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
-        },
-        "courseC_collector_loops_challenge22022": {
-          "courseC_maze_loops_challenge2_b": "Använd slingor så att du inte får slut på 'samla in'-block!"
-        },
-        "courseC_flappy_events12022": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
-        },
-        "courseC_harvester_loops_challenge22022": {
-          "courseC_harvester_loops_challenge2_a": "Ett sätt att lösa det här pusslet på är i formen av ett zig-zag-mönster. Ett annat sätt ser ut som en spiral! Det finns många olika lösningar till pussel som det här. Var ihärdig!",
-          "courseC_harvester_loops_challenge2_b": "Du kan upprepa 'gå framåt' och 'välj sallad' så många gånger du behöver, sväng sedan vid varje hörn.",
-          "courseC_harvester_loops_challenge2_c": "Det här zig-zag-mönstret kan upprepas två gånger för att göra klart pusslet med enbart 20 block!",
-          "courseC_harvester_loops_challenge2_d": "Detta spiralmönster kan kodas med enbart 18 block!"
-        },
-        "courseC_maze_programming62022": {
-          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
-        },
-        "courseC_starWars_loops102022": {
-          "courseC_starWars_loops10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
-        },
-        "courseC_starWars_loops12022": {
-          "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
-        },
-        "courseC_starWars_loops72022": {
-          "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
-        },
-        "courseD_artist_nestedLoops32022": {
-          "courseD_artist_nestedLoops3_a": "Försök att använda 'hoppa framåt'-blocket för att komma från toppen av en kvadrat till platsen där du ska börja rita nästa.\n\nOm dina kvadrater är 20 pixlar höga och 20 pixlar ifrån varandra, hur långt behöver du då hoppa?"
-        },
-        "courseD_artist_nestedLoops_challenge22022": {
-          "courseD_artist_nestedLoops_challenge2_a": "För att rita en vanlig åtthörning behöver konstnären svänga 45 grader 8 gånger.",
-          "courseD_artist_nestedLoops_challenge2_b": "För att rita en kvadrat behöver artisten svänga 90 grader 4 gånger."
-        },
-        "courseD_bee_conditionals_challenge12022": {
-          "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
-        },
-        "courseE_artist_functions82022": {
-          "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "coursee_helloworld_events": {
           "hello_world_click": "Anslut ett `säga` block under ett `when click` händelseblock:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
@@ -1484,8 +1458,8 @@
           "hello-world-first-solution-bear": "För att få björnen att säga något, anslut kodblocken så här:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_animals_sizes": {
-          "storyboard_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_backgrounds": {
           "hello_world_background": "Du kan ändra bakgrunden genom att ansluta ett `set background` block under ett `när klickade` händelseblock:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1513,8 +1487,8 @@
           "hello-world-first-solution-emoji": "För att få emoji att säga något, anslut kodblocken så här:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_emoji_sizes": {
-          "storyboard_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_17_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_33_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_33_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_17_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_backgrounds": {
           "hello_world_background": "Du kan ändra bakgrunden genom att ansluta ett `set background` block under ett `när klickade` händelseblock:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1592,16 +1566,16 @@
           "hello-world-first-solution-pizza": "För att få spriten att säga något, anslut kodblocken så här:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_food_sizes": {
-          "storyboard_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_sizes_soccer-2022": {
-          "storyboard_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_sizes_space-2022": {
-          "storyboard_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
-          "storyboard_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+          "storyboard_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
+          "storyboard_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
         },
         "helloworld_retro_backgrounds": {
           "hello_world_background": "Du kan ändra bakgrunden genom att ansluta ett `set background` block under ett `när klickade` händelseblock:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1629,8 +1603,34 @@
           "hello-world-first-solution-retrocreature": "För att få varelsen att säga något, anslut kodblocken så här:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_retro_sizes": {
-          "hw_retro_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
-          "hw_retro_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "hw_retro_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
+          "hw_retro_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>"
+        },
+        "outbreak1": {
+          "step1": "Använd dessa block för att skapa dina sprites:\n\n[blockly block][0]\n\n[blockly block][1]\n\nDetta block finns i kategorin **Sprites** i verktygslådan.",
+          "step2": "Ändra storleken på sprites med detta block: [blockly block][0].\n\nDet finns i kategorin **Actions** i verktygslådan.",
+          "step3": "Gör så att alla sprites börja vandra med detta: [blockly block][0].\n\nDetta block finns i kategorin **Actions** i verktygslådan."
+        },
+        "outbreak2": {
+          "hint1": "Klicka på '+'-knappen i event-blocket. Fyll det tomma utrymmet i 'change costume'-blocket med 'subject'-blocket däri.\n\n[blockly block][0]"
+        },
+        "outbreak3": {
+          "hint1": "Ge monster munskydd genom att använd 'change costume'-blocket med en 'when clicked-händelse:\n\n[blockly block][0]\n\nVar noga med att också dra in det lilla röda 'clicked'-blocket!",
+          "hint2": "Den nya koden för denna nivå ska se ut så här:\n\n[blockly block][0]"
+        },
+        "outbreak4": {
+          "challenge": "## Letar du efter en extra utmaning?\n\nDu kan också få monster att röra sig snabbare eller långsammare.\n\n1.  Klicka på 'Edit' i detta block [blockly block][0] \n2.  Öka eller minska talet i detta block: \n\n[blockly block][1]\n\nFör att få monster att röra sig långsammare, välj ett decimaltal som '0.5' eller '0,25'. För att få dem att röra sig snabbare, välj valfritt tal över 1."
+        },
+        "outbreak5": {
+          "solution2": "Din nya kod ska se ut så här:\n\n[blockly block][0]"
+        },
+        "outbreak6": {
+          "hint1": "Du måste lägga till ytterligare 3 'when touches'-händelser för att se alla möjliga kombinationer av 'touches' mellan friska och infekterade sprites.\n\n[blockly block][0]",
+          "hint2": "Var noga med att flytta in de andra 'action'-blocken i 'if chance'-blocket:\n\n[blockly block][0]"
+        },
+        "outbreak7": {
+          "verionhistory": "Har du kört fast? Du kan alltid återställa koden genom att klicka på 'Verson History\" nedan och sedan välja 'Start Over'.",
+          "whenclicked": "## Vaccin\n\nDu kan ge monster ett vaccin när du klickar på dem. För att göra detta, använd blocket 'change constume' med den här händelsen:\n\n[blockly block][0]"
         }
       }
     }

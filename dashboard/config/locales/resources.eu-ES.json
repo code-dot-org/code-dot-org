@@ -2,277 +2,55 @@
   "eu-ES": {
     "data": {
       "resources": {
-        "implementation_guide/coursed/2022": {
-          "name": "Inplementazio Gida"
+        "lesson_plans/csd/2017": {
+          "name": "Gaiaren Planak"
         },
-        "graph_paper_programming/coursed/2022": {
-          "name": "Paper grafiko programazioa"
+        "lesson_plans_1/csd/2017": {
+          "name": "Gaiaren Planak"
         },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "Paper grafiko programazioa"
+        "lesson_plans_2/csd/2017": {
+          "name": "Gaiaren Planak"
         },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "Paper grafiko programazioa"
+        "lesson_plans_3/csd/2017": {
+          "name": "Gaiaren Planak"
         },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "Paper grafiko programazioa"
+        "lesson_plans_4/csd/2017": {
+          "name": "Gaiaren Planak"
         },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "Paper grafiko programazioa"
+        "lesson_plans_5/csd/2017": {
+          "name": "Gaiaren Planak"
         },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "Paper grafiko programazioa"
+        "lesson_plans/csd/2018": {
+          "name": "Gaiaren Planak"
         },
-        "pair_programming/coursed/2022": {
-          "name": "Bikoteka programatzen"
+        "lesson_plans_1/csd/2018": {
+          "name": "Gaiaren Planak"
         },
-        "relay_programming/coursed/2022": {
-          "name": "Txandaka programatzen"
+        "lesson_plans_2/csd/2018": {
+          "name": "Gaiaren Planak"
         },
-        "relay_programming_1/coursed/2022": {
-          "name": "Txandaka programatzen"
+        "lesson_plans_3/csd/2018": {
+          "name": "Gaiaren Planak"
         },
-        "relay_programming_2/coursed/2022": {
-          "name": "Txandaka programatzen"
+        "lesson_plans_4/csd/2018": {
+          "name": "Gaiaren Planak"
         },
-        "relay_programming_3/coursed/2022": {
-          "name": "Txandaka programatzen"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "Txandaka programatzen"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "Txandaka programatzen"
-        },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "Baldintzak Txartelekin"
-        },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "Baldintzak Txartelekin"
-        },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "Baldintzak Txartelekin"
-        },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "Baldintzak Txartelekin"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "Baldintzak Txartelekin"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "Inplementazio Gida"
-        },
-        "internet/coursef/2022": {
-          "name": "Internet"
-        },
-        "internet_1/coursef/2022": {
-          "name": "Internet"
-        },
-        "the_internet/coursef/2022": {
-          "name": "Internet"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "Inplementazio Gida"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "Inplementazio Gida"
-        },
-        "move_it_move_it/courseb/2022": {
-          "name": "Mugi ezazu, mugi ezazu!"
-        },
-        "move_it_move_it_1/courseb/2022": {
-          "name": "Mugi ezazu, mugi ezazu!"
-        },
-        "move_it_move_it_2/courseb/2022": {
-          "name": "Mugi ezazu, mugi ezazu!"
-        },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "Mugitu, mugitu"
-        },
-        "pair_programming/courseb/2022": {
-          "name": "Bikoteka programatzen"
-        },
-        "stevie_and_the_big_project/courseb/2022": {
-          "name": "Stevie eta Big Proiektua"
-        },
-        "unspotted_bugs/courseb/2022": {
-          "name": "Harrapatu gabeko akatsak"
-        },
-        "getting_loopy/courseb/2022": {
-          "name": "Iteratzen"
-        },
-        "getting_loopy_1/courseb/2022": {
-          "name": "Iteratzen"
-        },
-        "getting_loopy_2/courseb/2022": {
-          "name": "Iteratzen"
-        },
-        "getting_loopy_3/courseb/2022": {
-          "name": "Iteratzen"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "Gertaera Handia"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "Gertaera Handia"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "Gertaera Handia"
-        },
-        "pair_programming/express/2022": {
-          "name": "Bikoteka programatzen"
-        },
-        "variables/express/2022": {
-          "name": "Aldagaiak"
-        },
-        "pair_programming/pre-express/2022": {
-          "name": "Bikoteka programatzen"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "Inplementazio Gida"
-        },
-        "pair_programming/coursea/2022": {
-          "name": "Bikoteka programatzen"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "Mapa Zoriontsuak"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "Gertaera Handia"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "Gertaera Handia"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "Gertaera Handia"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "Inplementazio Gida"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "Nire lagun robotikoak"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "Nire lagun robotikoak"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "Nire lagun robotikoak"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "Nire lagun robotikoak"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "Nire lagun robotikoak"
-        },
-        "pair_programming/coursec/2022": {
-          "name": "Bikoteka programatzen"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "Gertaera Handia"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "Gertaera Handia"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "Gertaera Handia"
-        },
-        "binary_bracelets/coursec/2022": {
-          "name": "Eskumuturreko bitarrak"
-        },
-        "binary_bracelets_1/coursec/2022": {
-          "name": "Eskumuturreko bitarrak"
-        },
-        "binary_bracelets_2/coursec/2022": {
-          "name": "Eskumuturreko bitarrak"
-        },
-        "binary_bracelets_3/coursec/2022": {
-          "name": "Eskumuturreko bitarrak"
-        },
-        "binary_bracelets_4/coursec/2022": {
-          "name": "Eskumuturreko bitarrak"
-        },
-        "variables/csd/2022": {
-          "name": "Aldagaiak"
-        },
-        "variables_3/csd/2022": {
-          "name": "Aldagaiak"
-        },
-        "sprites/csd/2022": {
-          "name": "Pertsonaiak"
-        },
-        "the_animation_tab/csd/2022": {
-          "name": "Animazio fitxa"
-        },
-        "sprites_1/csd/2022": {
-          "name": "Pertsonaiak"
-        },
-        "sprite_properties/csd/2022": {
-          "name": "Sprite-n Propietateak"
-        },
-        "sprite_properties_1/csd/2022": {
-          "name": "Sprite-n Propietateak"
-        },
-        "text/csd/2022": {
-          "name": "Testua"
-        },
-        "conditionals/csd/2022": {
-          "name": "Baldintzak"
-        },
-        "velocity/csd/2022": {
-          "name": "Abiadura"
-        },
-        "velocity_1/csd/2022": {
-          "name": "Abiadura"
-        },
-        "velocity_2/csd/2022": {
-          "name": "Abiadura"
-        },
-        "functions/csd/2022": {
-          "name": "Funtzioak"
-        },
-        "functions_1/csd/2022": {
-          "name": "Funtzioak"
-        },
-        "functions_4/csd/2022": {
-          "name": "Funtzioak"
-        },
-        "lists/csd/2022": {
-          "name": "Zerrendak"
-        },
-        "intro_to_css_-_part_1/csd/2022": {
-          "name": "CSS sarrera - 1. zatia"
-        },
-        "intro_to_css_-_part_2/csd/2022": {
-          "name": "CSS sarrera - 2. zatia"
-        },
-        "computer_science_is_changing_everything/csd/2022": {
-          "name": "Informatika dena aldatzen ari da"
-        },
-        "variables_1/csd/2022": {
-          "name": "Aldagaiak"
-        },
-        "variables_2/csd/2022": {
-          "name": "Aldagaiak"
-        },
-        "functions_2/csd/2022": {
-          "name": "Funtzioak"
-        },
-        "functions_3/csd/2022": {
-          "name": "Funtzioak"
-        },
-        "functions_with_parameters/csd/2022": {
-          "name": "Parametrodun funtzioak"
-        },
-        "functions_5/csd/2022": {
-          "name": "Funtzioak"
-        },
-        "lesson_plans/courseb/2018": {
+        "lesson_plans_5/csd/2018": {
           "name": "Gaiaren Planak"
         },
         "lesson_plans/coursea/2018": {
           "name": "Gaiaren Planak"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Gaiaren Planak"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Gaiaren Planak"
+        },
         "lesson_plans/coursed/2018": {
+          "name": "Gaiaren Planak"
+        },
+        "lesson_plans/coursee/2018": {
           "name": "Gaiaren Planak"
         },
         "lesson_plans/coursef/2018": {
@@ -281,55 +59,13 @@
         "lesson_plans/express/2018": {
           "name": "Gaiaren Planak"
         },
-        "lesson_plans/coursee/2018": {
+        "lesson_plans/csd/2019": {
           "name": "Gaiaren Planak"
         },
-        "lesson_plans/coursec/2018": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans/express/2019": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans/coursec/2019": {
+        "lesson_plans_1/csd/2019": {
           "name": "Gaiaren Planak"
         },
         "lesson_plans_2/csd/2019": {
-          "name": "Gaiaren Planak"
-        },
-        "lesson_plans_5/csd/2019": {
           "name": "Gaiaren Planak"
         },
         "lesson_plans_3/csd/2019": {
@@ -338,61 +74,122 @@
         "lesson_plans_4/csd/2019": {
           "name": "Gaiaren Planak"
         },
-        "lesson_plans/csd/2019": {
+        "lesson_plans_5/csd/2019": {
           "name": "Gaiaren Planak"
         },
-        "lesson_plans_1/csd/2019": {
+        "lesson_plans/coursea/2019": {
           "name": "Gaiaren Planak"
         },
-        "lesson_plans_2/csd/2017": {
+        "lesson_plans/courseb/2019": {
           "name": "Gaiaren Planak"
         },
-        "lesson_plans_5/csd/2017": {
+        "lesson_plans/coursec/2019": {
           "name": "Gaiaren Planak"
         },
-        "lesson_plans_1/csd/2017": {
+        "lesson_plans/coursed/2019": {
           "name": "Gaiaren Planak"
         },
-        "lesson_plans/csd/2017": {
+        "lesson_plans/coursee/2019": {
           "name": "Gaiaren Planak"
         },
-        "lesson_plans_4/csd/2017": {
+        "lesson_plans/coursef/2019": {
           "name": "Gaiaren Planak"
         },
-        "lesson_plans_3/csd/2017": {
+        "lesson_plans/express/2019": {
           "name": "Gaiaren Planak"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "lesson_plans/coursea/2020": {
+          "name": "Gaiaren Planak"
         },
-        "implementation_guide/coursef/2021": {
+        "lesson_plans/courseb/2020": {
+          "name": "Gaiaren Planak"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Gaiaren Planak"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Gaiaren Planak"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Gaiaren Planak"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Gaiaren Planak"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Gaiaren Planak"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Gaiaren Planak"
+        },
+        "lists/csd/2021": {
+          "name": "Zerrendak"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "CSS sarrera - 1. zatia"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "CSS sarrera - 2. zatia"
+        },
+        "variables_1/csd/2021": {
+          "name": "Aldagaiak"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Animazio fitxa"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Pertsonaiak"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Sprite-n Propietateak"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Abiadura"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Abiadura"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funtzioak"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funtzioak"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Informatika dena aldatzen ari da"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Ordenagailuen funtzionamendua: Hardwarea eta softwarea"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funtzioak"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For begiztak"
+        },
+        "for_loops/csd/2021": {
+          "name": "For begiztak"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Nola funtzionatzen duten ordenagailuak: zirkuituak eta logika"
+        },
+        "implementation_guide/coursea/2021": {
           "name": "Inplementazio Gida"
         },
-        "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Begizta jostarirako"
+        "pair-programming-vid/coursea/2021": {
+          "name": "Bikoteka programatzen"
         },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Begizta jostarirako"
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Mapa Zoriontsuak"
         },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Begizta jostarirako"
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Gertaera Handia"
         },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Begizta jostarirako"
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Gertaera Handia"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Begizta jostarirako"
-        },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Internet"
-        },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "Internet"
-        },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "Internet"
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Gertaera Handia"
         },
         "implementation_guide/courseb/2021": {
           "name": "Inplementazio Gida"
@@ -437,24 +234,6 @@
           "name": "Gertaera Handia"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "Gertaera Handia"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "Inplementazio Gida"
-        },
-        "pair-programming-vid/coursea/2021": {
-          "name": "Bikoteka programatzen"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Mapa Zoriontsuak"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "Gertaera Handia"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Gertaera Handia"
-        },
-        "unplugged-video-big-event/coursea/2021": {
           "name": "Gertaera Handia"
         },
         "implementation_guide/coursec/2021": {
@@ -559,6 +338,36 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Baldintzak Txartelekin"
         },
+        "implementation_guide/coursee/2021": {
+          "name": "Inplementazio Gida"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Inplementazio Gida"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Begizta jostarirako"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Begizta jostarirako"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Begizta jostarirako"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Begizta jostarirako"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Begizta jostarirako"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Internet"
+        },
         "pair_programming/express/2021": {
           "name": "Bikoteka programatzen"
         },
@@ -568,83 +377,274 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Bikoteka programatzen"
         },
-        "implementation_guide/coursee/2021": {
-          "name": "Inplementazio Gida"
-        },
-        "innovation-video-1-1/csd/2021": {
-          "name": "Informatika dena aldatzen ari da"
-        },
-        "how_computers_word_hardware_software/csd/2021": {
-          "name": "Ordenagailuen funtzionamendua: Hardwarea eta softwarea"
-        },
-        "functions_2/csd/2021": {
-          "name": "Funtzioak"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "For begiztak"
-        },
-        "for_loops/csd/2021": {
-          "name": "For begiztak"
-        },
-        "circuits-logic-video/csd/2021": {
-          "name": "Nola funtzionatzen duten ordenagailuak: zirkuituak eta logika"
-        },
-        "variables_1/csd/2021": {
-          "name": "Aldagaiak"
-        },
-        "the_animation_tab/csd/2021": {
-          "name": "Animazio fitxa"
-        },
-        "sprites_1/csd/2021": {
-          "name": "Pertsonaiak"
-        },
-        "sprite_properties/csd/2021": {
-          "name": "Sprite-n Propietateak"
-        },
-        "velocity_1/csd/2021": {
-          "name": "Abiadura"
-        },
-        "velocity_2/csd/2021": {
-          "name": "Abiadura"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Funtzioak"
-        },
-        "functions_1/csd/2021": {
-          "name": "Funtzioak"
-        },
-        "lists/csd/2021": {
+        "lists/csd/2022": {
           "name": "Zerrendak"
         },
-        "intro_to_css_-_part_1/csd/2021": {
+        "intro_to_css_-_part_1/csd/2022": {
           "name": "CSS sarrera - 1. zatia"
         },
-        "intro_to_css_-_part_2/csd/2021": {
+        "intro_to_css_-_part_2/csd/2022": {
           "name": "CSS sarrera - 2. zatia"
         },
-        "lesson_plans/pre-express/2020": {
-          "name": "Gaiaren Planak"
+        "variables/csd/2022": {
+          "name": "Aldagaiak"
         },
-        "lesson_plans/express/2020": {
-          "name": "Gaiaren Planak"
+        "variables_3/csd/2022": {
+          "name": "Aldagaiak"
         },
-        "lesson_plans/courseb/2020": {
-          "name": "Gaiaren Planak"
+        "sprites/csd/2022": {
+          "name": "Pertsonaiak"
         },
-        "lesson_plans/coursed/2020": {
-          "name": "Gaiaren Planak"
+        "the_animation_tab/csd/2022": {
+          "name": "Animazio fitxa"
         },
-        "lesson_plans/coursec/2020": {
-          "name": "Gaiaren Planak"
+        "sprites_1/csd/2022": {
+          "name": "Pertsonaiak"
         },
-        "lesson_plans/coursee/2020": {
-          "name": "Gaiaren Planak"
+        "sprite_properties/csd/2022": {
+          "name": "Sprite-n Propietateak"
         },
-        "lesson_plans/coursea/2020": {
-          "name": "Gaiaren Planak"
+        "sprite_properties_1/csd/2022": {
+          "name": "Sprite-n Propietateak"
         },
-        "lesson_plans/coursef/2020": {
-          "name": "Gaiaren Planak"
+        "text/csd/2022": {
+          "name": "Testua"
+        },
+        "conditionals/csd/2022": {
+          "name": "Baldintzak"
+        },
+        "velocity/csd/2022": {
+          "name": "Abiadura"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Abiadura"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Abiadura"
+        },
+        "functions/csd/2022": {
+          "name": "Funtzioak"
+        },
+        "functions_1/csd/2022": {
+          "name": "Funtzioak"
+        },
+        "functions_4/csd/2022": {
+          "name": "Funtzioak"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "Informatika dena aldatzen ari da"
+        },
+        "variables_1/csd/2022": {
+          "name": "Aldagaiak"
+        },
+        "variables_2/csd/2022": {
+          "name": "Aldagaiak"
+        },
+        "functions_2/csd/2022": {
+          "name": "Funtzioak"
+        },
+        "functions_3/csd/2022": {
+          "name": "Funtzioak"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Parametrodun funtzioak"
+        },
+        "functions_5/csd/2022": {
+          "name": "Funtzioak"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Inplementazio Gida"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Bikoteka programatzen"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Mapa Zoriontsuak"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Gertaera Handia"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Gertaera Handia"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Gertaera Handia"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Inplementazio Gida"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Mugi ezazu, mugi ezazu!"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Mugi ezazu, mugi ezazu!"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Mugi ezazu, mugi ezazu!"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Mugitu, mugitu"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Bikoteka programatzen"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie eta Big Proiektua"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Harrapatu gabeko akatsak"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Iteratzen"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Iteratzen"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Iteratzen"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Iteratzen"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Gertaera Handia"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Gertaera Handia"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Gertaera Handia"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Inplementazio Gida"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Nire lagun robotikoak"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Nire lagun robotikoak"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Nire lagun robotikoak"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Nire lagun robotikoak"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Nire lagun robotikoak"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Bikoteka programatzen"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Gertaera Handia"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Gertaera Handia"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Gertaera Handia"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Eskumuturreko bitarrak"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Eskumuturreko bitarrak"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Eskumuturreko bitarrak"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Eskumuturreko bitarrak"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Eskumuturreko bitarrak"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Inplementazio Gida"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Paper grafiko programazioa"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Paper grafiko programazioa"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Paper grafiko programazioa"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Paper grafiko programazioa"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Paper grafiko programazioa"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Paper grafiko programazioa"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Bikoteka programatzen"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Txandaka programatzen"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Txandaka programatzen"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Txandaka programatzen"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Txandaka programatzen"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Txandaka programatzen"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Txandaka programatzen"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Baldintzak Txartelekin"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Baldintzak Txartelekin"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Baldintzak Txartelekin"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Baldintzak Txartelekin"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Baldintzak Txartelekin"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Inplementazio Gida"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Inplementazio Gida"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "pair_programming/express/2022": {
+          "name": "Bikoteka programatzen"
+        },
+        "variables/express/2022": {
+          "name": "Aldagaiak"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Bikoteka programatzen"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }

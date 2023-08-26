@@ -14,11 +14,13 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">ඔබ පරිගණක විද්‍යා ගුරුවරයෙක් ද? අනෙකුත් CSEdWeek සම්පත් මෙතනින් ලබා ගන්න.</a>'
   csedweek_banner_teachers_text: "ඔබ පරිගණක විද්‍යා ගුරුවරයෙක් ද? අනෙකුත් CSEdWeek සම්පත් මෙතනින් ලබා ගන්න."
   n_have_learned_an_hoc: "<h1>Hour of Code වැඩසටහන </h1><h2>උත්සාහ කරන්න </h2><h3>එය # දෙනෙකුට උපකාරී වී ඇත</h3>"
+  try_hoc_num_served: "<h1>Hour of Code වැඩසටහන </h1><h2>උත්සාහ කරන්න </h2><h3>එය %{num} දෙනෙකුට උපකාරී වී ඇත</h3>"
   anybody_can_learn: "ඕනෑම අයකුට ඉගෙනගන්න පුලුවන්."
   learn_now: "දැන් ඉගෙනගන්න"
   petition_message: "සෑම පාසලකම සිටින සෑම සිසුවෙකුටම පරිගණක විද්‍යාව ඉගෙනීමට අවස්ථාවක් තිබිය යුතුය"
   petition_sign_message: 'මීට එකඟ වේ නම්, ඔබගේ නම ඇතුලත් කරන්න. තවත් # දෙනෙකු සමග එකතුවෙන්න.'
   petition_join_others: 'තවත් # ක් සමග එක්වන්න'
+  petition_join_others_num: "අනෙකුත් %{num} හා එකතු වෙන්න"
   name: "නම"
   email: "විද්‍යුත් තැපැල"
   zipcode: "ZIP කේතය හෝ රට"
@@ -1272,6 +1274,7 @@
   user_header_minecraft: "Minecraft"
   user_header_flappy: "ෆ්ලැපි"
   applab_tile_start_tutorial: "ආරම්භ කරන්න"
+  hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Hour of Code</a> යනු රටවල් 180+ ක මිලියන ගණනක් සිසුන් වෙත ළඟා වන ගෝලීය වැඩසටහනකි. ඕනෑම කෙනෙකුට, ඕනෑම තැනකදී Hour of Code උත්සවයක් සංවිධානය කිරීමට හෝ භාෂා 45කට වඩා වැඩි ගණනකින් ලබා ගත හැකි, පැය 500+ නිබන්ධනවලින් ඕනෑම එකක් උත්සාහ කළ හැකිය."
   hoc_overview_start_tutorial: "ආරම්භ කරන්න"
   hoc2018_creativity_create: "තනන්න"
   hoc2018_creativity_hoc_coming: "Hour of Code ළඟදීම…"

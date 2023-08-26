@@ -1,1 +1,21 @@
-{}
+{
+  "addCSSButton": "添加 CSS",
+  "addImageButton": "添加圖片",
+  "addHTMLButton": "添加 HTML",
+  "closeFullscreenPreview": "關閉全螢幕預覽",
+  "currentProjectCapacity": "已使用 {currentMegabytes}MB 的 {totalMegabytes}MB",
+  "disallowedHtml": "檔案 \"{filename}\" 包含不允許的 HTML 元素：`{disallowedTags}`。當此對話框關閉時，它們將被刪除。",
+  "errorSavingProject": "自動保存項目時，某些內容不起作用。檢查您的互聯網連接，然後嘗試手動保存。如果此問題仍然存在，請嘗試重新載入頁面以重新開始。",
+  "fatalError": "致命錯誤： {message}。如果您處於「私密瀏覽」模式，則無法寫入資料。",
+  "loadFailure": "很抱歉，Web 實驗室因為某些原因無法載入。錯誤： {message}",
+  "openFullscreenPreview": "開啟全螢幕預覽",
+  "refreshPreview": "重新整理並儲存",
+  "reloading": "正在重新載入...",
+  "reset": "重設網頁實驗室",
+  "resetComplete": "網路實驗室重設完成",
+  "resetFailure": "無法重設網頁實驗室： {message}。",
+  "toggleInspectorOn": "檢查器：關閉",
+  "toggleInspectorOff": "檢查員：開啟",
+  "troubleshootingSupport": "如需詳細資訊，請參閱我們的支援文章 [「網路實驗室問題疑難排解」]({url}) 。",
+  "uploadError": "上傳錯誤"
+}

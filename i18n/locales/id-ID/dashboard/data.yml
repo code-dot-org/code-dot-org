@@ -563,14 +563,28 @@ id:
         codebreak_e04: Code Breal 4.0 Informasi Digital bersama Mike Krieger dan Alice Keeler
         csd_how_teamwork_works: Bagaimana timkerja bekerja
         csd_teamwork_and_disagreement: Timkerja- Menghadapi perbedaan pendapat
+        csf21pilot_events: 'Sprite Lab: Sprite Beraksi'
+        csf21pilot_prompts: 'Sprite Lab: Teks dan Prompt'
         csd_ml_intro_to_ai_lab: Pengantar Lab AI
         csd_ml_import_model: Mengimpor model AI
+        csf_lots_of_sprites: 'Sprite Lab: Banyak Sprite'
         playlab_2021: Pengantar Play Lab
         playlab_2021_reader: Pengantar Play Lab
+        csp_defining_calling_functions: Mendefinisikan dan Memanggil Fungsi
+        csp_tutorial_datatab: Tab Data di App Lab
         csp_tutorial_libraries: Perpustakaan di Lab App
+        PL-Video-21: Selamat datang di Pembelajaran Profesional Code.org!
+        csp_tutorial_datavis1: Visualizer Data di App Lab - Bagian 1
+        csp_tutorial_datavis2: Visualizer Data di App Lab - Bagian 2
         csd_ml_intro_ai_lab_july2021: Pengantar Lab AI
+        csd_ml_training_testing_ai_lan: Pelatihan dan Pengujian di Lab AI
         csd_ml_model_cards_july2021: Model kartu di Lab AI
+        csd_ml_numerical_ai_lab: Data Numerik di Lab AI
+        Gettting_Started_Progress: Kemajuan, Umpan Balik, dan Penilaian
+        Gettting_Started_ClassSection: Membuat Bagian Kelas
         Gettting_Started_StudentExperience: Pengalaman siswa
+        Getting_Started_BasicFeatures: Fitur Dasar Code.org
+        PL_overview_CSD: Apa itu penemuan ilmu komputer?
         PL_CSD_TeacherTips_Advise: Kiat untuk Guru - Saran bagi Guru Baru
         PL_CSD_TeacherTips_IntroToCSD: Kiat untuk Guru - Pengantar CS Discoveries
         PL_CSD_TeacherTips_ProblemSolvingProcess: Kiat untuk Guru - Proses Pemecahan Masalah
@@ -583,6 +597,7 @@ id:
         hello_world_intro: Halo Dunia - Selamat Datang di Sprite Lab
         hello_world_events: Halo Dunia - Pemrograman dengan Event
         hello_world_congrats: Halo Dunia - Lakukan Yang Kamu Inginkan
+        csp_global_vs_local: Debugging Global vs Variabel Lokal
         rough_poemart_intro: v1 Pengantar Seni Puisi
         rough_poemart_events: v1 Event Seni Puisi
         rough_poemart_imagery: v1 Imaji Seni Puisi
@@ -593,11 +608,21 @@ id:
         poetry_module_multichoiceprompts: Beberapa Prompt Pilihan - Coding dengan Puisi
         poetry_module_conditionals: Conditional - Coding dengan Puisi
         poemart_intro: Pengantar Seni Puisi
+        poemart_events: Acara Seni Puisi
+        poemart_imagery: Citra Seni Puisi
+        poemart_celebration: Perayaan Seni Puisi
         csd_u6_variables_part2: Variable - Part 2
         csd_ml_ethics_ai: 'Etika dan AI'
+        outbreak_intro: 'Simulasi Wabah: Pendahuluan'
+        outbreak_events: 'Simulator Wabah: Acara'
+        outbreak_scientist: 'Simulator Wabah: Berpikir Seperti Ilmuwan'
+        outbreak_outro: 'Wabah Simulator: Bermain Gratis'
         PL_overview_CSP: Apa prinsip-prinsip Ilmu Komputer?
         PL_CSP_EIPMOverview: Panduan Belajar EIPM
         CSA-PL-debugging-temp: Pengantar Debugging dalam Java Lab - temp
+        csd_app_lab_design_mode: Mode Desain Lab Aplikasi CSD
+        csd_app_lab_events: Acara Lab Aplikasi CSD
+        PL_CSD_Unit4_AppTesting: Pengujian Prototipe Kertas
         csd_u6_circuit_playground: Komputasi Fisik
         csd_u6_input_output: Input dan Output
         CSA-PL-for-loops: Untuk loop di Java
@@ -618,8 +643,99 @@ id:
         CSA-PL-two-way-selection: Pemilihan dua arah
         CSA-PL-Printing-in-Java: Mencetak di Java
         CSA-PL-multi-selection-statements: Pernyataan Multi-seleksi
+        PL_CSP_TeacherTips_Advice: 'Tips Guru: Saran untuk Guru CS Baru'
+        PL_CSP_TeacherTips_IntroToCSP: 'Tips Guru: Pengantar Prinsip CS'
+        PL_CSP_TeacherTips_Debugging: 'Tips Guru: Bantuan dengan Debugging'
+        PL_CSP_TeacherTips_LeadLearner: 'Tips Guru: Bagaimana menjadi Lead Learner'
+        PL_CSP_TeacherTips_APExam: 'Tips Guru: Mempersiapkan Ujian AP'
+        PL_CSP_TeacherTips_EIPM: 'Tips Guru: Proses EIPM'
+        PL_CSD_CircuitPlayground_Overview: Circuit Playground Ikhtisar
+        CSA-PL-debugging-22: Debugging di Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Interaktif Art Exemplar
         CS_Changing_Everything: Ilmu Komputer Mengubah Segalanya
+        csa-alias-video: Sama dengan dan Alias
+        csa-equals-video: The equals () metode
+        csa-user-stories: Cerita Pengguna dalam Rekayasa Perangkat Lunak
+        csa-pl-vpl-m1-unit-3: Rekayasa Perangkat Lunak di Unit 3
+        csa-pl-intro-to-equality: Pengantar Kesetaraan
+        csa-pl-intro-to-equals-method: Pengantar metode.equals ()
+        csa-pl-equals-book: Menulis equals () metode untuk kelas Book
+        csa-multi-select-pl: Laporan Multi-seleksi di Jawa
+        csc_timecapsule_intro: Time Capsule Pendahuluan
+        PL_Equity_in_CS_Education: Ekuitas dalam Pendidikan CS
+        csc_fm_pilot: Mesin Fungsi (Pilot)
+        csc_fm_pilot_v2: 'Fungsi Mesin Intro '
+        csc-sprite-lab-pixel-editor: Gambar Sprite Anda Sendiri
+        csa-pl-intro-to-strings: Pengantar String di Jawa
+        csa-pl-compareTo: The compareTo () metode
+        csc-event-short-intro: Acara Pendek Intro
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Ikhtisar Unit Taman Bermain Sirkuit
+        csa-day-in-pm-pl: Apa yang dilakukan manajer proyek?
+        csa-pl-intro-to-pm: Pengantar Manajemen Proyek
+        PL_CSD_CircuitPlayground_Setup: Pengaturan Circuit Playground
+        csa_object_oriented_programming: 'CSA: Berorientasi objek pemrograman'
+        csa_creating_objects: 'CSA: Membuat Objek'
+        csa_calling_methods: 'CSA: Memanggil metode'
+        csa_while_loops: 'CSA: Sementara loop'
+        csa_inheritance: 'CSA: Warisan'
+        csa_writing_a_method: 'CSA: Menulis Metode'
+        csa_software_engineering_code_reviews: 'CSA: Rekayasa Perangkat Lunak - Ulasan Kode'
+        csa_conditional_statements: 'CSA: Pernyataan bersyarat'
+        csa_printing_in_java: 'CSA: Mencetak di Jawa'
+        csa_two_way_selection_and_not: 'CSA: Seleksi Dua Arah dan TIDAK'
+        csa-pl-intro-to-oop: Pengantar Pemrograman Berorientasi Objek
+        csa-pl-welcome-to-Neighborhood: Selamat Datang di Lingkungan
+        csa-pl-calling-methods: Memanggil Metode di Jawa
+        csa-pl-creating-objects: Membuat Objek
+        csa_accessor_methods: 'CSA: Metode Accessor'
+        csa_constructors: 'CSA: Konstruktor'
+        csa_creating_a_scanner_object: 'CSA: Membuat Object Scanner'
+        csa_creating_variables: 'CSA: Membuat Variabel'
+        csa_instance_variables_and_attributes: 'CSA: Variabel dan Atribut Instance'
+        csa_mutator_methods: 'CSA: Metode mutator'
+        csa_overloaded_constructors: 'CSA: Kelebihan beban konstruktor'
+        csa_the_tostring_method: 'CSA: The toString () Metode'
+        csa_scanner_class_methods: 'CSA: Metode kelas Scanner'
+        csa_for_loops: 'CSA: Untuk loop'
+        csa_enhanced_for_loops: 'CSA: Ditingkatkan untuk loop'
+        csa_modifying_values_in_a_1d_array: 'CSA: Memodifikasi Nilai dalam Array 1D'
+        csa_nested_loops: 'CSA: Loop bersarang'
+        csa_one_dimensional_arrays: 'CSA: Satu Dimensi (1D) Array'
+        csa_polymorphism: 'CSA: Polimorfisme'
+        csa_casting: 'CSA: Pengecoran'
+        csa_equals_and_aliases: 'CSA: Setara dan Alias'
+        csa_multi-selection_statements: 'CSA: Pernyataan Multi-Seleksi'
+        csa_random_numbers: 'CSA: Nomor acak'
+        csa_static_methods: 'CSA: Metode statis'
+        csa_static_variables: 'CSA: Variabel statis'
+        csa_the_equals_method: 'CSA: The equals () Metode'
+        csa_welcome_to_the_theater: 'CSA: Selamat datang di The Theater'
+        enter_your_own_poem: Masukkan Puisi Anda Sendiri
+        csa-example-solution-1: 'Live Coding Contoh Solusi '
         csd_sprite_properties: Properti Sprite
+        csa-pl-documentation: Dokumentasi di Java Lab
+        csc-starquilts-intro: 'CSC: Bintang selimut'
+        csa-pl-vocab-pm: Kosakata Manajemen Proyek
+        csc-ecosystems-intro: Intro Ekosistem
+        PL_CSD_MicroBit_Intro: 'Pengantar mikro: BIT'
+        csc_animal_adaptations_intro: Hewan Adaptasi Intro
+        csa_two_dimensional_arrays: 'CSA: Dua Dimensi (2D) Array'
+        csa_working_with_2d_array_elements: 'CSA: Bekerja dengan 2D Array Elements'
+        csa_row_major_traversal: 'CSA: Baris-utama Traversal'
+        csa_column_major_traversal: 'CSA: Kolom-utama Traversal'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Ditingkatkan Untuk Loop dan Array 2D'
+        csa_images_and_pixels: 'CSA: Gambar dan Piksel'
+        csa_wrapper_classes_part_1: 'CSA: Kelas Pembungkus Bagian 1'
+        csa_wrapper_classes_part_2: 'CSA: Kelas Pembungkus Bagian 2'
+        csa_the_arraylist_class: 'CSA: Kelas ArrayList'
+        csa_working_with_arraylist_data: 'CSA: Bekerja dengan ArrayList Data'
+        csa_remving_data_from_an_arraylist: 'CSA: Menghapus Data dari ArrayList'
+        csa_private_methods: 'CSA: Metode pribadi'
+        csa_recursion: 'CSA: Rekursi'
+        csa_searching_algorithms: 'CSA: Mencari algoritma'
+        csa_sorting_algorithms: 'CSA: Menyortir algoritma'
+        star_quilts_intro_to_artist: 'Star Quilts: Pengantar Artis'
+        upload_sprites_backgrounds: Meng-upload Kustom Sprite dan Latar Belakang
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import color from '../../util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import Button from '../../templates/Button';
 
 // Record events to Firehose to understand how often users:
 //   - see the download button,
@@ -253,12 +253,10 @@ class DownloadReplayVideoButton extends React.Component {
     }
 
     const style = Object.assign({}, this.props.style);
-    if (!this.buttonEnabled()) {
-      Object.assign(style, styles.disabledLink);
-    }
 
     return (
-      <button
+      <Button
+        color={Button.ButtonColor.neutralDark}
         type="button"
         className="download-replay-video-button"
         style={style}
@@ -269,17 +267,12 @@ class DownloadReplayVideoButton extends React.Component {
         <span style={styles.span}>
           {i18n.downloadReplayVideoButtonDownload()}
         </span>
-      </button>
+      </Button>
     );
   }
 }
 
 const styles = {
-  disabledLink: {
-    backgroundColor: color.lighter_gray,
-    borderColor: color.lighter_gray,
-    boxShadow: 'none',
-  },
   icon: {
     fontSize: 17,
   },
@@ -291,7 +284,7 @@ const styles = {
 export const UnconnectedDownloadReplayVideoButton = DownloadReplayVideoButton;
 
 export default connect(state => ({
-  appType: state.pageConstants.appType,
-  channelId: state.pageConstants.channelId,
+  appType: state.pageConstants?.appType,
+  channelId: state.pageConstants?.channelId,
   replayLog: state.shareDialog.replayLog,
 }))(DownloadReplayVideoButton);

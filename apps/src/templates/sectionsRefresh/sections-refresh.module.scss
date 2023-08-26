@@ -53,6 +53,22 @@ label.typographyLabel {
   }
 }
 
+.splitButtonsContainer {
+  justify-content: flex-end;
+
+  button {
+    font-size: 16px;
+  }
+}
+
+.buttonLeft {
+  float: left;
+}
+
+.buttonRight {
+  float: right;
+}
+
 .buttonRow {
   position: relative;
   display: flex;
@@ -80,6 +96,7 @@ label.typographyLabel {
 .buttonsInRow .buttonStyle.activeMarketingAudienceButton {
   color: $brand_primary_default;
   border-bottom: 2px solid $brand_primary_default;
+  border-radius: 0;
 }
 
 .buttonsInRow .buttonStyle:hover {
@@ -134,7 +151,7 @@ label.typographyLabel {
 
 .courseTableRow {
   &:not(:first-child) {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 }
 
@@ -144,7 +161,8 @@ label.typographyLabel {
 }
 
 .courseOption {
-  margin-top: 10px;
+  margin-top: 20px;
+  align-items: baseline;
 }
 
 .flexDisplay .radio {
@@ -207,4 +225,8 @@ button.advancedSettingsButton {
   padding-top: 0;
   display: flex;
   justify-content: flex-end;
+}
+
+.textPopUp {
+  cursor: pointer;
 }

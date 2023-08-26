@@ -1,132 +1,73 @@
 {
-  "trainModelButtonText": "Qatar",
-  "navigateForward": "Davam et",
-  "navigateBack": "Geri  ",
-  "tryAgain": "Bir daha cəhd edin",
-  "navigateDone": "Son",
-  "saveProgress": "Yadda saxla",
-  "correctAnswer": "Düzgün",
-  "incorrectAnswer": "Yalnış",
-  "potentialUsesPlaceholder": "Qısa təsviri yazın.",
-  "potentialMisusesPlaceholder": "Qısa təsviri yazın.",
-  "modelNameLabel": "Modelin adı",
-  "datasetDescriptionLabel": "Məlumatlar haqqında",
-  "saveModelColumnCountLabel": "Sütun Təsviri",
-  "saveModelFieldRequired": "tələb olunan",
-  "saveModelColumnTypeLabel": "etiket",
-  "saveModelColumnTypeFeature": "xüsusiyyət",
-  "modelCardAccuracy": "Dəqiqlik",
-  "modelCardDatasetDetails": "Məlumatlar haqqında",
-  "modelCardDatasetDetailsSizeCount": "{rowCount} sətirlər",
-  "modelCardFeaturesAndLabel": "Xüsusiyyətlər və Etiket",
-  "modelCardPossibleValues": "Mümkün dəyərlər",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "maks",
+  "addFeatureButton": "Xüsusiyyət əlavə et ",
+  "aiBotAltText": "Süni intellekt botu",
+  "aiBotBeamAltText": "S.Z. bot skaner şüası",
+  "aiBotBodyAltText": "Süni intellekt bot bədən",
+  "aiBotHeadAltText": "Süni intellekt bot baş",
+  "animationDescriptionsHeader": "Animasiya Təsviri",
+  "columnDetailsInformation": "Sütun məlumatı",
+  "columnDetailsMaximumValue": "maks",
+  "columnDetailsMinimumValue": "min",
+  "columnDetailsValueRange": "Qiymətlər oblastı",
   "columnInspectorDataType": "Məlumat növü",
   "columnInspectorDescription": "Təsvir",
-  "columnDetailsInformation": "Sütun məlumatı",
-  "columnDetailsMinimumValue": "min",
-  "columnDetailsMaximumValue": "maks",
-  "columnDetailsValueRange": "Qiymətlər oblastı",
-  "selectLabelButton": "Etiketi seçin",
-  "scatterPlotLabel": "Münasibətlər haqqında məlumat",
-  "addFeatureButton": "Xüsusiyyət əlavə et ",
-  "columnType_numerical": "ədədi",
   "columnType_categorical": "kateqoriyalı",
-  "selectDatasetUploadFileButton": "Yüklə {fileType}",
-  "dataCardDefaultHeader": "Detallar",
-  "dataCardSource": "Mənbə",
-  "dataCardRowCount": "Məlumat sıraları",
-  "dataCardLastUpdated": "Son yenilənmə",
-  "dataCardPotentialUses": "Potensial istifadələr",
-  "dataCardPotentialMisuses": "Potensial sui-istifadələr",
-  "saveStatus_success": "Modeliniz xilas oldu!",
-  "aiBotAltText": "Süni intellekt botu",
-  "aiBotHeadAltText": "Süni intellekt bot baş",
-  "aiBotBodyAltText": "Süni intellekt bot bədən",
-  "aiBotBeamAltText": "S.Z. bot skaner şüası",
-  "animationDescriptionsHeader": "Animasiya Təsviri",
-  "generateResultsHeader": "Modelin sınaqdan keçirilməsi",
-  "resultsHeader": "Nəticə",
-  "resultsAccuracy": "Dəqiqlik",
-  "resultsDetailsButton": "Detallar",
-  "resultsPreviousResults": "Əvvəlki nəticələr",
-  "resultsTableActualValueHeader": "Faktiki",
-  "resultsTablePredictedValueHeader": "Süni İntellektin Proqnozu",
-  "resultsTablePredictionRange": "aralığın +/- {faiz}% 'i proqnozlardır",
-  "predictHeader": "Bunu sınayın!\n",
-  "predictButton": "Proqnozlaşdır",
-  "predictAIBotPredicts": "S.İ. proqnozlaşdırır",
-  "predictPlaceholder": "min{minimum}, max {maksimum}",
+  "columnType_numerical": "ədədi",
+  "correctAnswer": "Düzgün",
   "crossTabRelationshipHeader": "Münasibətlər haqqında məlumat",
   "crossTabTooMuchData": "Hal hazırda seçilmiş məlumatlar cədvəldə göstərmək üçün çox böyükdür.",
-  "predictionStatement": "{giriş} əsasənda {çıxış} proqnozlaşdırın",
+  "dataCardDefaultHeader": "Detallar",
+  "dataCardLastUpdated": "Son yenilənmə",
+  "dataCardPotentialMisuses": "Potensial sui-istifadələr",
+  "dataCardPotentialUses": "Potensial istifadələr",
+  "dataCardRowCount": "Məlumat sıraları",
+  "dataCardSource": "Mənbə",
+  "datasetDescriptionLabel": "Məlumatlar haqqında",
   "datasets": {
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "yaş"
+    "abalone": {
+      "card": {
+        "context": {
+          "potentialUses": "Bir abalonun yaşını müəyyənləşdirin."
         },
-        "gender": {
+        "description": "Bu data bazası fərqli balıqqulağıların, bir növ dəniz ilbizinin, bəzi attributlarından ibarətdir. Məqsəd balıqqulağının qabıqı üzərindəki halaqaların sayını, hansi ki balıqqulağının yaşını təyin edir, təxmin etməkdir."
+      },
+      "fields": {
+        "Diameter": {
+          "description": "Onun diametri millimetrlərlə",
+          "id": "Diametr"
+        },
+        "Height": {
+          "description": "ilbiz qabıqında olarkən millimetirlə hündürlüyü",
+          "id": "Hündürlük"
+        },
+        "Length": {
+          "id": "Uzunluq"
+        },
+        "Rings": {
+          "description": "Yaşı illərlə",
+          "id": "Halqa"
+        },
+        "Sex": {
+          "description": "Abalonun cinsi: M, F və ya I (Körpə).",
           "id": "cins"
         },
-        "race": {
-          "id": "irq"
+        "Shell weight": {
+          "description": "qurudulduqdan sonra qabıqın qramla çəkisi",
+          "id": "Qabıq çəkisi"
         },
-        "bleeding": {
-          "id": "qanaxma"
+        "Shucked weight": {
+          "description": "qabıqın çəkisi çıxılmaqla ilbizin qramla kütləsi"
         },
-        "weight": {
-          "id": "çəki"
+        "Viscera weight": {
+          "description": "daxili orqanların qramla cəkisi",
+          "id": "daxili orqan cəkisi"
         },
-        "area_of_pain": {
-          "id": "ağrının_sahəsi"
-        },
-        "decision": {
-          "id": "qərar"
+        "Whole weight": {
+          "description": "Bütün balıqqulağının qramla çəkisi",
+          "id": "Bütün çəki"
         }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "hava"
-        },
-        "day": {
-          "id": "gün"
-        },
-        "shoe": {
-          "id": "Ayaqqabı"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "cilantro": {
-          "id": "kilantro"
-        },
-        "onion": {
-          "id": "Soğan"
-        },
-        "avocado": {
-          "id": "avokado"
-        },
-        "corn": {
-          "id": "qarğıdalı  "
-        },
-        "beans": {
-          "id": "lobyalar"
-        },
-        "garlic": {
-          "id": "sarımsaq"
-        },
-        "lime": {
-          "id": "əhəng"
-        },
-        "preference": {
-          "id": "Tərcih"
-        }
-      }
+      },
+      "name": "balıqqulağı"
     },
     "auto_mpg": {
       "fields": {
@@ -140,222 +81,37 @@
         "Date": {
           "id": "Tarix"
         },
-        "Season": {
-          "id": "Fəsil"
-        },
-        "Month": {
-          "id": "Ay"
+        "Day of Week": {
+          "id": "Həftənin günü"
         },
         "Holiday": {
           "id": "Bayram"
         },
-        "Day of Week": {
-          "id": "Həftənin günü"
+        "Humidity (0 - 1)": {
+          "id": "Rütubət (0 - 1)"
         },
-        "Workday": {
-          "id": "İş günü"
+        "Month": {
+          "id": "Ay"
+        },
+        "Season": {
+          "id": "Fəsil"
+        },
+        "Total Users": {
+          "description": "İstifadəçilərin ümumi sayı.",
+          "id": "Ümumi İstifadəçilər"
         },
         "Weather Description": {
           "id": "Hava Haqqında məlumat"
         },
-        "Humidity (0 - 1)": {
-          "id": "Rütubət (0 - 1)"
-        },
         "Wind Speed": {
-          "id": "Külək sürəti",
-          "description": "Külək sürəti."
+          "description": "Külək sürəti.",
+          "id": "Külək sürəti"
         },
-        "Total Users": {
-          "id": "Ümumi İstifadəçilər",
-          "description": "İstifadəçilərin ümumi sayı."
+        "Workday": {
+          "id": "İş günü"
         }
       },
       "name": "Velosiped Paylaşımı"
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "göbələk"
-        },
-        "lobster": {
-          "id": "xərçəng"
-        },
-        "bacon": {
-          "id": "donuz əti"
-        },
-        "cheese": {
-          "id": "pendir"
-        },
-        "meat": {
-          "id": "ət"
-        },
-        "preference": {
-          "id": "Tərcih"
-        }
-      }
-    },
-    "club_biased_toy": {
-      "fields": {
-        "activity": {
-          "id": "fəaliyyət"
-        },
-        "club": {
-          "id": "klub"
-        }
-      }
-    },
-    "loneliness_phobias": {
-      "fields": {
-        "Flying": {
-          "id": "Uçan",
-          "description": "Uçmaqdan qorxuram"
-        },
-        "Storm": {
-          "id": "Fırtına",
-          "description": "Fırtınalardan qorxuram"
-        },
-        "Darkness": {
-          "id": "Qaranlıq",
-          "description": "Qaranlıqdan qorxuram"
-        },
-        "Heights": {
-          "id": "Yüksəkliklər",
-          "description": "Yüksəkliklərdən qorxuram"
-        },
-        "Spiders": {
-          "id": "Hörümçəklər",
-          "description": "Örümceklerden qorxuram"
-        },
-        "Snakes": {
-          "id": "İlanlar",
-          "description": "İlanlardan qorxuram"
-        },
-        "Rats": {
-          "id": "Siçanlar",
-          "description": "Siçanlardan qorxuram"
-        },
-        "Ageing": {
-          "id": "Qocalma",
-          "description": "Qocalmaqdan qorxuram"
-        },
-        "Dangerous dogs": {
-          "id": "Təhlükəli itlər",
-          "description": "Təhlükəli itlərdən qorxuram"
-        }
-      }
-    },
-    "cookies_toy": {
-      "fields": {
-        "preference": {
-          "id": "Tərcih"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "rəng"
-        },
-        "music": {
-          "id": "musiqi"
-        },
-        "food": {
-          "id": "\nyemək"
-        },
-        "club": {
-          "id": "klub"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "yaş"
-        },
-        "sex": {
-          "id": "Cins"
-        },
-        "bmi": {
-          "description": "Bədən kütləsi indeksi."
-        },
-        "children": {
-          "id": "uşaqlar",
-          "description": "Tibbi sığorta ilə əhatə olunan uşaqların sayı."
-        },
-        "smoker": {
-          "id": "siqaret çəkən",
-          "description": "Şəxs siqaret çəkir və ya yox"
-        },
-        "region": {
-          "id": "bölgə"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Bölüm"
-        },
-        "Description": {
-          "id": "Təsvir"
-        },
-        "Ash": {
-          "id": "Kül"
-        }
-      },
-      "name": "Qidalanma"
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "çiyələk"
-        },
-        "lime": {
-          "id": "əhəng"
-        },
-        "preference": {
-          "id": "Tərcih"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "tərəflər"
-        },
-        "size": {
-          "id": "ölçü"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "pomidor"
-        },
-        "avocado": {
-          "id": "avokado"
-        },
-        "chicken": {
-          "id": "cücə"
-        },
-        "seeds": {
-          "id": "toxumlar"
-        },
-        "fruit": {
-          "id": "meyvə"
-        },
-        "beans": {
-          "id": "lobyalar"
-        },
-        "cheese": {
-          "id": "pendir"
-        },
-        "preference": {
-          "id": "Tərcih"
-        }
-      },
-      "name": "Salat"
     },
     "billionaires": {
       "fields": {
@@ -383,91 +139,10 @@
       },
       "name": "Milyarderlər"
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "məktəb"
-        },
-        "sex": {
-          "id": "Cins"
-        },
-        "age": {
-          "id": "yaş"
-        },
-        "address": {
-          "id": "ünvan"
-        },
-        "family size": {
-          "id": "ailə ölçüsü"
-        },
-        "mother's education": {
-          "id": "ananın təhsili"
-        },
-        "father's education": {
-          "id": "atanın təhsili",
-          "description": "Atanın təhsili 0-dan 4-ə qədər (ali təhsil)"
-        },
-        "mother's job": {
-          "id": "ananın işi",
-          "description": "Ananın işinin növü."
-        },
-        "father's job": {
-          "id": "atanın işi",
-          "description": "Atanın işinin növü."
-        },
-        "reason": {
-          "id": "səbəb",
-          "description": "Bu məktəbi seçmək üçün səbəb."
-        },
-        "guardian": {
-          "id": "nəzarətçi"
-        },
-        "traveltime": {
-          "id": "səyahət vaxtı",
-          "description": "Şagirdin məktəbə səyahət vaxtı, saatlarla."
-        },
-        "studytime": {
-          "id": "təhsil vaxtı"
-        },
-        "failures": {
-          "id": "uğursuzluqlar"
-        },
-        "school support": {
-          "id": "məktəb dəstəyi",
-          "description": "Məktəbdən əlavə təhsil dəstəyi."
-        },
-        "family support": {
-          "id": "ailə dəstəyi",
-          "description": "Ailədəndən əlavə təhsil dəstəyi."
-        },
-        "health": {
-          "id": "sağlamlıq"
-        }
-      }
-    },
-    "icecream_toppings_toy": {
-      "fields": {
-        "Preference": {
-          "id": "Tərcih"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "cücə"
-        },
-        "lamb": {
-          "id": "quzu"
-        },
-        "onion": {
-          "id": "Soğan"
-        },
-        "garlic": {
-          "id": "sarımsaq"
-        },
-        "cheese": {
-          "id": "pendir"
+        "banana": {
+          "id": "banan"
         },
         "preference": {
           "id": "Tərcih"
@@ -479,237 +154,39 @@
         "age": {
           "id": "yaş"
         },
-        "race": {
-          "id": "irq"
-        },
         "gender": {
           "id": "cins"
+        },
+        "race": {
+          "id": "irq"
         }
       }
     },
-    "loneliness_movies": {
-      "fields": {
-        "Movies": {
-          "id": "Filmlər",
-          "description": "Kinoya baxmaqdan zövq alıram"
-        },
-        "Horror": {
-          "id": "Qorxu",
-          "description": "Qorxu filmlərindən zövq alıram"
-        },
-        "Thriller": {
-          "id": "Triller"
-        },
-        "Comedy": {
-          "id": "Komediya",
-          "description": "Komediya filmlərindən zövq alıram"
-        },
-        "Romantic": {
-          "id": "Romantik",
-          "description": "Romantik filmlərdən zövq alıram"
-        },
-        "Sci-fi": {
-          "id": "Elmi-Fantastika",
-          "description": "Elmi-Fantastika filmlərindən zövq alıram"
-        },
-        "War": {
-          "id": "Müharibə",
-          "description": "Müharibə filmlərindən zövq alıram"
-        },
-        "Fantasy/Fairy tales": {
-          "id": "Fantaziya/Nağıllar"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "History": {
-          "id": "Tarix",
-          "description": "Tarixi xoşlayıram"
-        },
-        "Psychology": {
-          "id": "Psixologiya",
-          "description": "Psixologiyanı xoşlayıram"
-        },
-        "Politics": {
-          "id": "Siyasət",
-          "description": "Siyasəti xoşlayıram"
-        },
-        "Mathematics": {
-          "id": "Riyaziyyat",
-          "description": "Riyaziyyatı xoşlayıram"
-        },
-        "Physics": {
-          "id": "Fizika",
-          "description": "Fizikanı xoşlayıram"
-        },
-        "Internet": {
-          "id": "İnternet",
-          "description": "İnternetdən istifadə etməyi xoşlayıram"
-        },
-        "PC": {
-          "id": "Şəxsi Kompüter",
-          "description": "Mən PC istifadə etməyi xoşlayıram"
-        },
-        "Economy Management": {
-          "id": "İqtisadiyyatın idarə edilməsi",
-          "description": "İqtisadiyyatın idarə edilməsi xoşlayıram"
-        },
-        "Biology": {
-          "id": "Biologiya",
-          "description": "Biologiya xoşuma gəlir"
-        },
-        "Chemistry": {
-          "id": "Kimya"
-        }
-      }
-    },
-    "movies": {
-      "fields": {
-        "Score": {
-          "id": "Xal"
-        },
-        "Country": {
-          "id": "Ölkə"
-        },
-        "Name": {
-          "id": "Ad"
-        },
-        "Star": {
-          "id": "Ulduz"
-        }
-      }
-    },
-    "club_specific_toy": {
+    "club_biased_toy": {
       "fields": {
         "activity": {
           "id": "fəaliyyət"
-        },
-        "favorite movie": {
-          "id": "sevimli film",
-          "description": "Bu filmlərdən hansı ən çox xoşunuza gəlir?"
-        },
-        "lunch food": {
-          "id": "nahar yeməyi",
-          "description": "Bu qidalardan hansını nahar üçün yeyərdiniz?"
         },
         "club": {
           "id": "klub"
         }
       }
     },
-    "songs": {
+    "club_random_toy": {
       "fields": {
-        "Artist": {
-          "id": "Rəssam"
+        "club": {
+          "id": "klub"
+        },
+        "color": {
+          "id": "rəng"
+        },
+        "food": {
+          "id": "\nyemək"
+        },
+        "music": {
+          "id": "musiqi"
         }
       }
-    },
-    "safari_toy": {
-      "fields": {
-        "lions": {
-          "id": "şirlər"
-        },
-        "temperature": {
-          "id": "temperatur",
-          "description": "Səfər zamanı temperatur"
-        },
-        "people": {
-          "id": "insanlar"
-        },
-        "rhino": {
-          "id": "kərgədan"
-        },
-        "elephant": {
-          "id": "fil",
-          "description": "Səfər zamanı görülən fillərin sayı"
-        },
-        "alligator": {
-          "id": "timsah"
-        },
-        "trees": {
-          "id": "ağaclar"
-        },
-        "mosquitos": {
-          "id": "ağcaqanadlar"
-        }
-      },
-      "name": "Safari"
-    },
-    "abalone": {
-      "fields": {
-        "Sex": {
-          "id": "cins",
-          "description": "Abalonun cinsi: M, F və ya I (Körpə)."
-        },
-        "Length": {
-          "id": "Uzunluq"
-        },
-        "Diameter": {
-          "id": "Diametr",
-          "description": "Onun diametri millimetrlərlə"
-        },
-        "Height": {
-          "id": "Hündürlük",
-          "description": "ilbiz qabıqında olarkən millimetirlə hündürlüyü"
-        },
-        "Whole weight": {
-          "id": "Bütün çəki",
-          "description": "Bütün balıqqulağının qramla çəkisi"
-        },
-        "Shucked weight": {
-          "description": "qabıqın çəkisi çıxılmaqla ilbizin qramla kütləsi"
-        },
-        "Viscera weight": {
-          "id": "daxili orqan cəkisi",
-          "description": "daxili orqanların qramla cəkisi"
-        },
-        "Shell weight": {
-          "id": "Qabıq çəkisi",
-          "description": "qurudulduqdan sonra qabıqın qramla çəkisi"
-        },
-        "Rings": {
-          "id": "Halqa",
-          "description": "Yaşı illərlə"
-        }
-      },
-      "card": {
-        "description": "Bu data bazası fərqli balıqqulağıların, bir növ dəniz ilbizinin, bəzi attributlarından ibarətdir. Məqsəd balıqqulağının qabıqı üzərindəki halaqaların sayını, hansi ki balıqqulağının yaşını təyin edir, təxmin etməkdir.",
-        "context": {
-          "potentialUses": "Bir abalonun yaşını müəyyənləşdirin."
-        }
-      },
-      "name": "balıqqulağı"
-    },
-    "zoo": {
-      "fields": {
-        "Animal Name": {
-          "id": "Heyvan adı",
-          "description": "Heyvanın adı"
-        },
-        "Feathers": {
-          "id": "Lələklər"
-        },
-        "Eggs": {
-          "id": "Yumurtalar"
-        },
-        "Milk": {
-          "id": "Süd"
-        },
-        "Aquatic": {
-          "id": "Suda yaşayan"
-        },
-        "Predator": {
-          "id": "Yırtıcı"
-        },
-        "Tail": {
-          "id": "Quyruq"
-        },
-        "Class": {
-          "id": "Sinif"
-        }
-      },
-      "name": "Zoopark"
     },
     "club_sparse_toy": {
       "fields": {
@@ -721,229 +198,26 @@
         }
       }
     },
-    "poke_toy": {
+    "club_specific_toy": {
       "fields": {
-        "avocado": {
-          "id": "avokado"
+        "activity": {
+          "id": "fəaliyyət"
         },
-        "onion": {
-          "id": "Soğan"
+        "club": {
+          "id": "klub"
         },
-        "wasabi": {
-          "id": "vasabi"
+        "favorite movie": {
+          "description": "Bu filmlərdən hansı ən çox xoşunuza gəlir?",
+          "id": "sevimli film"
         },
-        "ginger": {
-          "id": "zəncəfil"
-        },
-        "seaweed": {
-          "id": "dəniz yosunu"
-        },
-        "chili": {
-          "id": "çili"
-        },
-        "preference": {
-          "id": "Tərcih"
+        "lunch food": {
+          "description": "Bu qidalardan hansını nahar üçün yeyərdiniz?",
+          "id": "nahar yeməyi"
         }
       }
     },
-    "housing_data": {
+    "cookies_toy": {
       "fields": {
-        "Property tax": {
-          "id": "Əmlak vergisi"
-        },
-        "Student-teacher ratio": {
-          "id": "Tələbə-müəllim nisbəti"
-        },
-        "Lower status population": {
-          "id": "Aşağı statuslu əhali"
-        },
-        "Median home value": {
-          "id": "Ortalama ev dəyəri"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Music": {
-          "id": "Musiqi"
-        },
-        "Dance": {
-          "id": "Rəqs"
-        },
-        "Country": {
-          "id": "Ölkə"
-        },
-        "Punk": {
-          "id": "Punk",
-          "description": "Mən Punk musiqisindən həzz alıram"
-        },
-        "Hiphop, Rap": {
-          "id": "Hiphop, Rap",
-          "description": "Hiphop və ya Rap musiqisini sevirəm"
-        },
-        "Rock n roll": {
-          "id": "Rok-n roll"
-        },
-        "Alternative": {
-          "id": "Alternativ",
-          "description": "Alternativ musiqidən zövq alıram"
-        },
-        "Latino": {
-          "id": "Latın",
-          "description": "Mən Latın musiqisindən həzz alıram"
-        },
-        "Opera": {
-          "id": "Opera",
-          "description": "Mən Opera musiqisindən həzz alıram"
-        },
-        "Movies": {
-          "id": "Filmlər",
-          "description": "Kinoya baxmaqdan zövq alıram"
-        },
-        "Horror": {
-          "id": "Qorxu",
-          "description": "Qorxu filmlərindən zövq alıram"
-        },
-        "Thriller": {
-          "id": "Triller"
-        },
-        "Comedy": {
-          "id": "Komediya",
-          "description": "Komediya filmlərindən zövq alıram"
-        },
-        "Romantic": {
-          "id": "Romantik",
-          "description": "Romantik filmlərdən zövq alıram"
-        },
-        "Sci-fi": {
-          "id": "Elmi-Fantastika",
-          "description": "Elmi-Fantastika filmlərindən zövq alıram"
-        },
-        "War": {
-          "id": "Müharibə",
-          "description": "Müharibə filmlərindən zövq alıram"
-        },
-        "Fantasy/Fairy tales": {
-          "id": "Fantaziya/Nağıllar"
-        },
-        "History": {
-          "id": "Tarix",
-          "description": "Tarixi xoşlayıram"
-        },
-        "Psychology": {
-          "id": "Psixologiya",
-          "description": "Psixologiyanı xoşlayıram"
-        },
-        "Politics": {
-          "id": "Siyasət",
-          "description": "Siyasəti xoşlayıram"
-        },
-        "Mathematics": {
-          "id": "Riyaziyyat",
-          "description": "Riyaziyyatı xoşlayıram"
-        },
-        "Physics": {
-          "id": "Fizika",
-          "description": "Fizikanı xoşlayıram"
-        },
-        "Internet": {
-          "id": "İnternet",
-          "description": "İnternetdən istifadə etməyi xoşlayıram"
-        },
-        "PC": {
-          "id": "Şəxsi Kompüter",
-          "description": "Mən PC istifadə etməyi xoşlayıram"
-        },
-        "Economy Management": {
-          "id": "İqtisadiyyatın idarə edilməsi",
-          "description": "İqtisadiyyatın idarə edilməsi xoşlayıram"
-        },
-        "Biology": {
-          "id": "Biologiya",
-          "description": "Biologiya xoşuma gəlir"
-        },
-        "Chemistry": {
-          "id": "Kimya"
-        },
-        "Flying": {
-          "id": "Uçan",
-          "description": "Uçmaqdan qorxuram"
-        },
-        "Storm": {
-          "id": "Fırtına",
-          "description": "Fırtınalardan qorxuram"
-        },
-        "Darkness": {
-          "id": "Qaranlıq",
-          "description": "Qaranlıqdan qorxuram"
-        },
-        "Heights": {
-          "id": "Yüksəkliklər",
-          "description": "Yüksəkliklərdən qorxuram"
-        },
-        "Spiders": {
-          "id": "Hörümçəklər",
-          "description": "Örümceklerden qorxuram"
-        },
-        "Snakes": {
-          "id": "İlanlar",
-          "description": "İlanlardan qorxuram"
-        },
-        "Rats": {
-          "id": "Siçanlar",
-          "description": "Siçanlardan qorxuram"
-        },
-        "Ageing": {
-          "id": "Qocalma",
-          "description": "Qocalmaqdan qorxuram"
-        },
-        "Dangerous dogs": {
-          "id": "Təhlükəli itlər",
-          "description": "Təhlükəli itlərdən qorxuram"
-        },
-        "Healthy eating": {
-          "id": "Sağlam yemək"
-        },
-        "Daily events": {
-          "id": "Gündəlik hadisələr"
-        },
-        "Writing notes": {
-          "description": "Mən həmişə siyahı hazırlayıram ona görə də heç nəyi unutmuram."
-        },
-        "Reliability": {
-          "id": "Etibarlılıq"
-        },
-        "Keeping promises": {
-          "description": "Mən həmişə verdiyim sözlərə əməl edirəm."
-        },
-        "Fake": {
-          "id": "saxta"
-        },
-        "Elections": {
-          "id": "Seçkilər"
-        },
-        "Achievements": {
-          "id": "Nailiyyətlər."
-        },
-        "Age": {
-          "id": "Yaşınız",
-          "description": "Yaşınız"
-        },
-        "Height": {
-          "id": "Hündürlük",
-          "description": "Hündürlük"
-        },
-        "Gender": {
-          "id": "Cins",
-          "description": "Cins"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banan"
-        },
         "preference": {
           "id": "Tərcih"
         }
@@ -959,6 +233,476 @@
         }
       }
     },
+    "housing_data": {
+      "fields": {
+        "Lower status population": {
+          "id": "Aşağı statuslu əhali"
+        },
+        "Median home value": {
+          "id": "Ortalama ev dəyəri"
+        },
+        "Property tax": {
+          "id": "Əmlak vergisi"
+        },
+        "Student-teacher ratio": {
+          "id": "Tələbə-müəllim nisbəti"
+        }
+      }
+    },
+    "icecream_toppings_toy": {
+      "fields": {
+        "Preference": {
+          "id": "Tərcih"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "yaş"
+        },
+        "bmi": {
+          "description": "Bədən kütləsi indeksi."
+        },
+        "children": {
+          "description": "Tibbi sığorta ilə əhatə olunan uşaqların sayı.",
+          "id": "uşaqlar"
+        },
+        "region": {
+          "id": "bölgə"
+        },
+        "sex": {
+          "id": "Cins"
+        },
+        "smoker": {
+          "description": "Şəxs siqaret çəkir və ya yox",
+          "id": "siqaret çəkən"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Biology": {
+          "description": "Biologiya xoşuma gəlir",
+          "id": "Biologiya"
+        },
+        "Chemistry": {
+          "id": "Kimya"
+        },
+        "Economy Management": {
+          "description": "İqtisadiyyatın idarə edilməsi xoşlayıram",
+          "id": "İqtisadiyyatın idarə edilməsi"
+        },
+        "History": {
+          "description": "Tarixi xoşlayıram",
+          "id": "Tarix"
+        },
+        "Internet": {
+          "description": "İnternetdən istifadə etməyi xoşlayıram",
+          "id": "İnternet"
+        },
+        "Mathematics": {
+          "description": "Riyaziyyatı xoşlayıram",
+          "id": "Riyaziyyat"
+        },
+        "PC": {
+          "description": "Mən PC istifadə etməyi xoşlayıram",
+          "id": "Şəxsi Kompüter"
+        },
+        "Physics": {
+          "description": "Fizikanı xoşlayıram",
+          "id": "Fizika"
+        },
+        "Politics": {
+          "description": "Siyasəti xoşlayıram",
+          "id": "Siyasət"
+        },
+        "Psychology": {
+          "description": "Psixologiyanı xoşlayıram",
+          "id": "Psixologiya"
+        }
+      }
+    },
+    "loneliness_movies": {
+      "fields": {
+        "Comedy": {
+          "description": "Komediya filmlərindən zövq alıram",
+          "id": "Komediya"
+        },
+        "Fantasy/Fairy tales": {
+          "id": "Fantaziya/Nağıllar"
+        },
+        "Horror": {
+          "description": "Qorxu filmlərindən zövq alıram",
+          "id": "Qorxu"
+        },
+        "Movies": {
+          "description": "Kinoya baxmaqdan zövq alıram",
+          "id": "Filmlər"
+        },
+        "Romantic": {
+          "description": "Romantik filmlərdən zövq alıram",
+          "id": "Romantik"
+        },
+        "Sci-fi": {
+          "description": "Elmi-Fantastika filmlərindən zövq alıram",
+          "id": "Elmi-Fantastika"
+        },
+        "Thriller": {
+          "id": "Triller"
+        },
+        "War": {
+          "description": "Müharibə filmlərindən zövq alıram",
+          "id": "Müharibə"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Alternative": {
+          "description": "Alternativ musiqidən zövq alıram",
+          "id": "Alternativ"
+        },
+        "Country": {
+          "id": "Ölkə"
+        },
+        "Dance": {
+          "id": "Rəqs"
+        },
+        "Hiphop, Rap": {
+          "description": "Hiphop və ya Rap musiqisini sevirəm",
+          "id": "Hiphop, Rap"
+        },
+        "Latino": {
+          "description": "Mən Latın musiqisindən həzz alıram",
+          "id": "Latın"
+        },
+        "Music": {
+          "id": "Musiqi"
+        },
+        "Opera": {
+          "description": "Mən Opera musiqisindən həzz alıram",
+          "id": "Opera"
+        },
+        "Punk": {
+          "description": "Mən Punk musiqisindən həzz alıram",
+          "id": "Punk"
+        },
+        "Rock n roll": {
+          "id": "Rok-n roll"
+        }
+      },
+      "name": "Tələbə sorğusu - Musiqi"
+    },
+    "loneliness_personality": {
+      "fields": {
+        "Reliability": {
+          "id": "Etibarlılıq"
+        }
+      }
+    },
+    "loneliness_phobias": {
+      "fields": {
+        "Ageing": {
+          "description": "Qocalmaqdan qorxuram",
+          "id": "Qocalma"
+        },
+        "Dangerous dogs": {
+          "description": "Təhlükəli itlərdən qorxuram",
+          "id": "Təhlükəli itlər"
+        },
+        "Darkness": {
+          "description": "Qaranlıqdan qorxuram",
+          "id": "Qaranlıq"
+        },
+        "Flying": {
+          "description": "Uçmaqdan qorxuram",
+          "id": "Uçan"
+        },
+        "Heights": {
+          "description": "Yüksəkliklərdən qorxuram",
+          "id": "Yüksəkliklər"
+        },
+        "Rats": {
+          "description": "Siçanlardan qorxuram",
+          "id": "Siçanlar"
+        },
+        "Snakes": {
+          "description": "İlanlardan qorxuram",
+          "id": "İlanlar"
+        },
+        "Spiders": {
+          "description": "Örümceklerden qorxuram",
+          "id": "Hörümçəklər"
+        },
+        "Storm": {
+          "description": "Fırtınalardan qorxuram",
+          "id": "Fırtına"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "yaş"
+        },
+        "area_of_pain": {
+          "id": "ağrının_sahəsi"
+        },
+        "bleeding": {
+          "id": "qanaxma"
+        },
+        "decision": {
+          "id": "qərar"
+        },
+        "gender": {
+          "id": "cins"
+        },
+        "race": {
+          "id": "irq"
+        },
+        "weight": {
+          "id": "çəki"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "Ölkə"
+        },
+        "Name": {
+          "id": "Ad"
+        },
+        "Score": {
+          "id": "Xal"
+        },
+        "Star": {
+          "id": "Ulduz"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "pendir"
+        },
+        "chicken": {
+          "id": "cücə"
+        },
+        "garlic": {
+          "id": "sarımsaq"
+        },
+        "lamb": {
+          "id": "quzu"
+        },
+        "onion": {
+          "id": "Soğan"
+        },
+        "preference": {
+          "id": "Tərcih"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Ash": {
+          "id": "Kül"
+        },
+        "Category": {
+          "id": "Bölüm"
+        },
+        "Description": {
+          "id": "Təsvir"
+        }
+      },
+      "name": "Qidalanma"
+    },
+    "pizza_toppings_toy": {
+      "fields": {
+        "Bacon": {
+          "id": "Donuz əti"
+        },
+        "Broccoli": {
+          "description": "Pizzada brokoli varmı?",
+          "id": "Brokoli"
+        },
+        "Extra Cheese": {
+          "description": "Pizzada əlavə pendir var idi?",
+          "id": "Əlavə Pendir"
+        },
+        "Fried Chicken": {
+          "description": "Pizza qızardılmış toyuq var idi mi?",
+          "id": "Qızardılmış Toyuq"
+        },
+        "Olives": {
+          "description": "Pizzada zeytun var idi mi?",
+          "id": "Zeytunlar"
+        },
+        "Pepperoni": {
+          "description": "Pizzada pepperoni var idi?",
+          "id": "Pepperoni"
+        },
+        "Peppers": {
+          "description": "Pizzada bibər var idi mi?",
+          "id": "Bibərlər"
+        },
+        "Preference": {
+          "id": "Tərcih"
+        },
+        "Sausage": {
+          "id": "Sosiska"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
+        "chili": {
+          "id": "çili"
+        },
+        "ginger": {
+          "id": "zəncəfil"
+        },
+        "onion": {
+          "id": "Soğan"
+        },
+        "preference": {
+          "id": "Tərcih"
+        },
+        "seaweed": {
+          "id": "dəniz yosunu"
+        },
+        "wasabi": {
+          "id": "vasabi"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "bacon": {
+          "id": "donuz əti"
+        },
+        "cheese": {
+          "id": "pendir"
+        },
+        "lobster": {
+          "id": "xərçəng"
+        },
+        "meat": {
+          "id": "ət"
+        },
+        "mushrooms": {
+          "id": "göbələk"
+        },
+        "preference": {
+          "id": "Tərcih"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "lime": {
+          "id": "əhəng"
+        },
+        "preference": {
+          "id": "Tərcih"
+        },
+        "strawberry": {
+          "id": "çiyələk"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "timsah"
+        },
+        "elephant": {
+          "description": "Səfər zamanı görülən fillərin sayı",
+          "id": "fil"
+        },
+        "lions": {
+          "id": "şirlər"
+        },
+        "mosquitos": {
+          "id": "ağcaqanadlar"
+        },
+        "people": {
+          "id": "insanlar"
+        },
+        "rhino": {
+          "id": "kərgədan"
+        },
+        "temperature": {
+          "description": "Səfər zamanı temperatur",
+          "id": "temperatur"
+        },
+        "trees": {
+          "id": "ağaclar"
+        }
+      },
+      "name": "Safari"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
+        "beans": {
+          "id": "lobyalar"
+        },
+        "cheese": {
+          "id": "pendir"
+        },
+        "chicken": {
+          "id": "cücə"
+        },
+        "fruit": {
+          "id": "meyvə"
+        },
+        "preference": {
+          "id": "Tərcih"
+        },
+        "seeds": {
+          "id": "toxumlar"
+        },
+        "tomato": {
+          "id": "pomidor"
+        }
+      },
+      "name": "Salat"
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
+        "beans": {
+          "id": "lobyalar"
+        },
+        "cilantro": {
+          "id": "kilantro"
+        },
+        "corn": {
+          "id": "qarğıdalı  "
+        },
+        "garlic": {
+          "id": "sarımsaq"
+        },
+        "lime": {
+          "id": "əhəng"
+        },
+        "onion": {
+          "id": "Soğan"
+        },
+        "preference": {
+          "id": "Tərcih"
+        }
+      }
+    },
     "shapes_v1_toy": {
       "fields": {
         "sides": {
@@ -969,96 +713,272 @@
         }
       }
     },
-    "pizza_toppings_toy": {
+    "shapes_v2_toy": {
       "fields": {
-        "Pepperoni": {
-          "id": "Pepperoni",
-          "description": "Pizzada pepperoni var idi?"
+        "sides": {
+          "id": "tərəflər"
         },
-        "Extra Cheese": {
-          "id": "Əlavə Pendir",
-          "description": "Pizzada əlavə pendir var idi?"
-        },
-        "Broccoli": {
-          "id": "Brokoli",
-          "description": "Pizzada brokoli varmı?"
-        },
-        "Olives": {
-          "id": "Zeytunlar",
-          "description": "Pizzada zeytun var idi mi?"
-        },
-        "Sausage": {
-          "id": "Sosiska"
-        },
-        "Fried Chicken": {
-          "id": "Qızardılmış Toyuq",
-          "description": "Pizza qızardılmış toyuq var idi mi?"
-        },
-        "Peppers": {
-          "id": "Bibərlər",
-          "description": "Pizzada bibər var idi mi?"
-        },
-        "Bacon": {
-          "id": "Donuz əti"
-        },
-        "Preference": {
-          "id": "Tərcih"
+        "size": {
+          "id": "ölçü"
         }
       }
     },
-    "loneliness_personality": {
+    "shoe_survey_toy": {
       "fields": {
+        "day": {
+          "id": "gün"
+        },
+        "shoe": {
+          "id": "Ayaqqabı"
+        },
+        "weather": {
+          "id": "hava"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Rəssam"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "address": {
+          "id": "ünvan"
+        },
+        "age": {
+          "id": "yaş"
+        },
+        "failures": {
+          "id": "uğursuzluqlar"
+        },
+        "family size": {
+          "id": "ailə ölçüsü"
+        },
+        "family support": {
+          "description": "Ailədəndən əlavə təhsil dəstəyi.",
+          "id": "ailə dəstəyi"
+        },
+        "father's education": {
+          "description": "Atanın təhsili 0-dan 4-ə qədər (ali təhsil)",
+          "id": "atanın təhsili"
+        },
+        "father's job": {
+          "description": "Atanın işinin növü.",
+          "id": "atanın işi"
+        },
+        "guardian": {
+          "id": "nəzarətçi"
+        },
+        "health": {
+          "id": "sağlamlıq"
+        },
+        "mother's education": {
+          "id": "ananın təhsili"
+        },
+        "mother's job": {
+          "description": "Ananın işinin növü.",
+          "id": "ananın işi"
+        },
+        "reason": {
+          "description": "Bu məktəbi seçmək üçün səbəb.",
+          "id": "səbəb"
+        },
+        "school": {
+          "id": "məktəb"
+        },
+        "school support": {
+          "description": "Məktəbdən əlavə təhsil dəstəyi.",
+          "id": "məktəb dəstəyi"
+        },
+        "sex": {
+          "id": "Cins"
+        },
+        "studytime": {
+          "id": "təhsil vaxtı"
+        },
+        "traveltime": {
+          "description": "Şagirdin məktəbə səyahət vaxtı, saatlarla.",
+          "id": "səyahət vaxtı"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Nailiyyətlər."
+        },
+        "Age": {
+          "description": "Yaşınız",
+          "id": "Yaşınız"
+        },
+        "Ageing": {
+          "description": "Qocalmaqdan qorxuram",
+          "id": "Qocalma"
+        },
+        "Alternative": {
+          "description": "Alternativ musiqidən zövq alıram",
+          "id": "Alternativ"
+        },
+        "Biology": {
+          "description": "Biologiya xoşuma gəlir",
+          "id": "Biologiya"
+        },
+        "Chemistry": {
+          "id": "Kimya"
+        },
+        "Comedy": {
+          "description": "Komediya filmlərindən zövq alıram",
+          "id": "Komediya"
+        },
+        "Country": {
+          "id": "Ölkə"
+        },
+        "Daily events": {
+          "id": "Gündəlik hadisələr"
+        },
+        "Dance": {
+          "id": "Rəqs"
+        },
+        "Dangerous dogs": {
+          "description": "Təhlükəli itlərdən qorxuram",
+          "id": "Təhlükəli itlər"
+        },
+        "Darkness": {
+          "description": "Qaranlıqdan qorxuram",
+          "id": "Qaranlıq"
+        },
+        "Economy Management": {
+          "description": "İqtisadiyyatın idarə edilməsi xoşlayıram",
+          "id": "İqtisadiyyatın idarə edilməsi"
+        },
+        "Elections": {
+          "id": "Seçkilər"
+        },
+        "Fake": {
+          "id": "saxta"
+        },
+        "Fantasy/Fairy tales": {
+          "id": "Fantaziya/Nağıllar"
+        },
+        "Flying": {
+          "description": "Uçmaqdan qorxuram",
+          "id": "Uçan"
+        },
+        "Gender": {
+          "description": "Cins",
+          "id": "Cins"
+        },
+        "Healthy eating": {
+          "id": "Sağlam yemək"
+        },
+        "Height": {
+          "description": "Hündürlük",
+          "id": "Hündürlük"
+        },
+        "Heights": {
+          "description": "Yüksəkliklərdən qorxuram",
+          "id": "Yüksəkliklər"
+        },
+        "Hiphop, Rap": {
+          "description": "Hiphop və ya Rap musiqisini sevirəm",
+          "id": "Hiphop, Rap"
+        },
+        "History": {
+          "description": "Tarixi xoşlayıram",
+          "id": "Tarix"
+        },
+        "Horror": {
+          "description": "Qorxu filmlərindən zövq alıram",
+          "id": "Qorxu"
+        },
+        "Internet": {
+          "description": "İnternetdən istifadə etməyi xoşlayıram",
+          "id": "İnternet"
+        },
+        "Keeping promises": {
+          "description": "Mən həmişə verdiyim sözlərə əməl edirəm."
+        },
+        "Latino": {
+          "description": "Mən Latın musiqisindən həzz alıram",
+          "id": "Latın"
+        },
+        "Mathematics": {
+          "description": "Riyaziyyatı xoşlayıram",
+          "id": "Riyaziyyat"
+        },
+        "Movies": {
+          "description": "Kinoya baxmaqdan zövq alıram",
+          "id": "Filmlər"
+        },
+        "Music": {
+          "id": "Musiqi"
+        },
+        "Opera": {
+          "description": "Mən Opera musiqisindən həzz alıram",
+          "id": "Opera"
+        },
+        "PC": {
+          "description": "Mən PC istifadə etməyi xoşlayıram",
+          "id": "Şəxsi Kompüter"
+        },
+        "Physics": {
+          "description": "Fizikanı xoşlayıram",
+          "id": "Fizika"
+        },
+        "Politics": {
+          "description": "Siyasəti xoşlayıram",
+          "id": "Siyasət"
+        },
+        "Psychology": {
+          "description": "Psixologiyanı xoşlayıram",
+          "id": "Psixologiya"
+        },
+        "Punk": {
+          "description": "Mən Punk musiqisindən həzz alıram",
+          "id": "Punk"
+        },
+        "Rats": {
+          "description": "Siçanlardan qorxuram",
+          "id": "Siçanlar"
+        },
         "Reliability": {
           "id": "Etibarlılıq"
-        }
-      }
-    },
-    "thanksgiving": {
-      "fields": {
-        "Main dish": {
-          "id": "əsas yemək"
         },
-        "Gravy": {
-          "id": "Sous"
+        "Rock n roll": {
+          "id": "Rok-n roll"
         },
-        "Corn": {
-          "id": "Qarğıdalı"
+        "Romantic": {
+          "description": "Romantik filmlərdən zövq alıram",
+          "id": "Romantik"
         },
-        "Fruit salad": {
-          "id": "Meyvə salatı"
+        "Sci-fi": {
+          "description": "Elmi-Fantastika filmlərindən zövq alıram",
+          "id": "Elmi-Fantastika"
         },
-        "Squash": {
-          "id": "Balqabaq"
+        "Snakes": {
+          "description": "İlanlardan qorxuram",
+          "id": "İlanlar"
         },
-        "Apple pie": {
-          "id": "Alma piroqu"
+        "Spiders": {
+          "description": "Örümceklerden qorxuram",
+          "id": "Hörümçəklər"
         },
-        "Cherry pie": {
-          "id": "Albalı piroqu"
+        "Storm": {
+          "description": "Fırtınalardan qorxuram",
+          "id": "Fırtına"
         },
-        "Chocolate pie": {
-          "id": "Şokolad piroqu"
+        "Thriller": {
+          "id": "Triller"
         },
-        "Coconut cream pie": {
-          "id": "Kokos cremi piroqu"
+        "War": {
+          "description": "Müharibə filmlərindən zövq alıram",
+          "id": "Müharibə"
         },
-        "Peach pie": {
-          "id": "Şaftalı piroqu"
-        },
-        "Pecan pie": {
-          "id": "Pekan piroqu"
-        },
-        "Pumpkin pie": {
-          "id": "Balqabaq  piroqu"
-        },
-        "Sweet potato pie": {
-          "id": "Şirin kartof piroqu"
-        },
-        "Blondies": {
-          "id": "Sarışınlar"
-        },
-        "Carrot cake": {
-          "id": "Kök tortu"
+        "Writing notes": {
+          "description": "Mən həmişə siyahı hazırlayıram ona görə də heç nəyi unutmuram."
         }
       }
     },
@@ -1069,42 +989,123 @@
         }
       }
     },
-    "loneliness_music": {
+    "thanksgiving": {
       "fields": {
-        "Music": {
-          "id": "Musiqi"
+        "Apple pie": {
+          "id": "Alma piroqu"
         },
-        "Dance": {
-          "id": "Rəqs"
+        "Blondies": {
+          "id": "Sarışınlar"
         },
-        "Country": {
-          "id": "Ölkə"
+        "Carrot cake": {
+          "id": "Kök tortu"
         },
-        "Punk": {
-          "id": "Punk",
-          "description": "Mən Punk musiqisindən həzz alıram"
+        "Cherry pie": {
+          "id": "Albalı piroqu"
         },
-        "Hiphop, Rap": {
-          "id": "Hiphop, Rap",
-          "description": "Hiphop və ya Rap musiqisini sevirəm"
+        "Chocolate pie": {
+          "id": "Şokolad piroqu"
         },
-        "Rock n roll": {
-          "id": "Rok-n roll"
+        "Coconut cream pie": {
+          "id": "Kokos cremi piroqu"
         },
-        "Alternative": {
-          "id": "Alternativ",
-          "description": "Alternativ musiqidən zövq alıram"
+        "Corn": {
+          "id": "Qarğıdalı"
         },
-        "Latino": {
-          "id": "Latın",
-          "description": "Mən Latın musiqisindən həzz alıram"
+        "Fruit salad": {
+          "id": "Meyvə salatı"
         },
-        "Opera": {
-          "id": "Opera",
-          "description": "Mən Opera musiqisindən həzz alıram"
+        "Gravy": {
+          "id": "Sous"
+        },
+        "Main dish": {
+          "id": "əsas yemək"
+        },
+        "Peach pie": {
+          "id": "Şaftalı piroqu"
+        },
+        "Pecan pie": {
+          "id": "Pekan piroqu"
+        },
+        "Pumpkin pie": {
+          "id": "Balqabaq  piroqu"
+        },
+        "Squash": {
+          "id": "Balqabaq"
+        },
+        "Sweet potato pie": {
+          "id": "Şirin kartof piroqu"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Animal Name": {
+          "description": "Heyvanın adı",
+          "id": "Heyvan adı"
+        },
+        "Aquatic": {
+          "id": "Suda yaşayan"
+        },
+        "Class": {
+          "id": "Sinif"
+        },
+        "Eggs": {
+          "id": "Yumurtalar"
+        },
+        "Feathers": {
+          "id": "Lələklər"
+        },
+        "Milk": {
+          "id": "Süd"
+        },
+        "Predator": {
+          "id": "Yırtıcı"
+        },
+        "Tail": {
+          "id": "Quyruq"
         }
       },
-      "name": "Tələbə sorğusu - Musiqi"
+      "name": "Zoopark"
     }
-  }
+  },
+  "generateResultsHeader": "Modelin sınaqdan keçirilməsi",
+  "incorrectAnswer": "Yalnış",
+  "modelCardAccuracy": "Dəqiqlik",
+  "modelCardDatasetDetails": "Məlumatlar haqqında",
+  "modelCardDatasetDetailsSizeCount": "{rowCount} sətirlər",
+  "modelCardFeaturesAndLabel": "Xüsusiyyətlər və Etiket",
+  "modelCardPossibleValues": "Mümkün dəyərlər",
+  "modelCardPossibleValuesMaximum": "maks",
+  "modelCardPossibleValuesMinimum": "min",
+  "modelNameLabel": "Modelin adı",
+  "navigateBack": "Geri  ",
+  "navigateDone": "Son",
+  "navigateForward": "Davam et",
+  "potentialMisusesPlaceholder": "Qısa təsviri yazın.",
+  "potentialUsesPlaceholder": "Qısa təsviri yazın.",
+  "predictAIBotPredicts": "S.İ. proqnozlaşdırır",
+  "predictButton": "Proqnozlaşdır",
+  "predictHeader": "Bunu sınayın!\n",
+  "predictPlaceholder": "min{minimum}, max {maksimum}",
+  "predictionStatement": "{giriş} əsasənda {çıxış} proqnozlaşdırın",
+  "resultsAccuracy": "Dəqiqlik",
+  "resultsDetailsButton": "Detallar",
+  "resultsHeader": "Nəticə",
+  "resultsPreviousResults": "Əvvəlki nəticələr",
+  "resultsTableActualValueHeader": "Faktiki",
+  "resultsTablePredictedValueHeader": "Süni İntellektin Proqnozu",
+  "resultsTablePredictionRange": "aralığın +/- {faiz}% 'i proqnozlardır",
+  "saveModelColumnCountLabel": "Sütun Təsviri",
+  "saveModelColumnTypeFeature": "xüsusiyyət",
+  "saveModelColumnTypeLabel": "etiket",
+  "saveModelFieldRequired": "tələb olunan",
+  "saveProgress": "Yadda saxla",
+  "saveStatus_success": "Modeliniz xilas oldu!",
+  "scatterPlotLabel": "Münasibətlər haqqında məlumat",
+  "selectDatasetUploadFileButton": "Yüklə {fileType}",
+  "selectLabelButton": "Etiketi seçin",
+  "trainModelButtonText": "Qatar",
+  "tryAgain": "Bir daha cəhd edin",
+  "uniqueOptionsWarningNotice": "Qeyd"
 }

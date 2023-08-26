@@ -643,13 +643,21 @@
   coursed-2021_name: Curs D (2021)
   coursee-2021_name: Curs E (2021)
   coursef-2021_name: Curs F (2021)
+  coursea-2022_name: Curs A (2022)
+  courseb-2022_name: Curs B (2022)
+  coursec-2022_name: Curs C (2022)
+  coursed-2022_name: Curs D (2022)
+  coursee-2022_name: Curs E (2022)
+  coursef-2022_name: Curs F (2022)
   express-2021_name: Curs exprés (2021)
+  express-2022_name: Curs Express (2022)
   accelerated_name: "Curs accelerat"
   express_name: "Curs exprés"
   20-hour_name: Curs accelerat
   classicmaze_name: "Laberint clàssic"
   iceage_name: "Edat de gel"
   minecraft_name: "Minecraft"
+  text-compression_name: Compressió de text
   applab_name: "Laboratori d'aplicacions"
   gamelab_name: "Laboratori de jocs"
   applab_gradelevel: "A partir de 13 anys"
@@ -1109,6 +1117,7 @@
   header_stats: "Estadístiques"
   header_help_us: "Ajuda'ns"
   header_about: "Qui som"
+  header_incubator: "Incubadora"
   header_help_support: 'Ajuda i suport '
   header_report_bug: "Informar d'un problema"
   header_legal_privacy: "Política de privacitat"
@@ -1164,7 +1173,7 @@
   hoc2018_mc_download_adventurer: "Baixeu la versió sense connexió de l'Aventurer Minecraft."
   hoc2018_mc_educators: "Per a docents"
   hoc2018_mc_educators_box1_title: "Programeu amb Minecraft"
-  hoc2018_mc_educators_box1_desc: 'L''edició d''educació de Minecraft proporciona un currículum, exercicis i programació a Minecraft segons els estàndards educatius.'
+  hoc2018_mc_educators_box1_desc: "L'edició d'educació de Minecraft proporciona un currículum, exercicis i programació a Minecraft segons els estàndards educatius."
   hoc2018_mc_educators_box1_button: "Comença"
   hoc2018_mc_educators_box2_title: "Baixeu la guia didàctica"
   hoc2018_mc_educators_box2_desc: "Aquest joc d'eines us ajudarà a organitzar una Hora del codi i a motivar els alumnes a aprendre informàtica."
@@ -1229,7 +1238,7 @@
   hoc2018_mc_with_microsoft: "En associació amb"
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'Escapar de la misteriosa mansió per l''alba i guanyar un milió de maragdes! El nou tutorial de Minecraft Hora del Codi ja està disponible a Minecraft: Educació Edició per a Windows, Mac, Chromebook, Ipad i Mòbil. Comença amb recursos educatius gratuïts, formacions i vídeos. '
-  hoc2022_mc_mee_timecraft_description: 'Viatja en el temps per salvar el futur en aquesta lliçó de codificació gratuïta a Minecraft: Education Edition.'
+  hoc2022_mc_mee_timecraft_description: "Viatja en el temps per salvar el futur en aquesta lliçó de codificació gratuïta a Minecraft: Education Edition."
   footer_powered_by_aws: "Funciona amb Amazon Web Services"
   footer_built_on_github: "Fet amb GitHub de Microsoft"
   codebytes_skinny_banner_english_only: "Només en anglès"
@@ -1240,6 +1249,7 @@
   footer_store: "Botiga"
   footer_support: "Suport"
   footer_terms: "Condicions"
+  ai_for_oceans: "IA per Oceans"
   ai_for_oceans_lesson_plan: "unitat didàctica/lliço"
   ai_in_partnership_with: "En associació amb"
   ai_activity: "Activitat"

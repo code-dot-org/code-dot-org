@@ -1,0 +1,13 @@
+name 'hoc-amazon - multi - 3'
+title 'Assessment: Encoding Text'
+description ''
+question 'Example Question 3'
+wrong 'wrong 1'
+wrong 'wrong 2'
+wrong 'wrong 3'
+right 'right 1'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+allow_multiple_attempts true

@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import FormController from '../form_components/FormController';
 import FormComponent from '../form_components/FormComponent';
-import formComponentUtils from '../form_components/utils';
 import DatePicker from '../workshop_dashboard/components/date_picker';
 import moment from 'moment';
 import {DATE_FORMAT} from '../workshop_dashboard/workshopConstants';
-import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap';
+import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {snakeCase} from 'lodash';
 
 export default class InternationalOptIn extends FormController {
   static propTypes = {
@@ -72,7 +72,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isColombiaSelected() {
-    return this.props.data?.schoolCountry?.toLowerCase() === 'colombia';
+    return getCountryKey(this.props.data?.schoolCountry) === 'colombia';
   }
 
   /**
@@ -83,7 +83,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isChileSelected() {
-    return this.props.data?.schoolCountry?.toLowerCase() === 'chile';
+    return getCountryKey(this.props.data?.schoolCountry) === 'chile';
   }
 
   /**
@@ -94,7 +94,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isUzbekistanSelected() {
-    return this.props.data?.schoolCountry?.toLowerCase() === 'uzbekistan';
+    return getCountryKey(this.props.data?.schoolCountry) === 'uzbekistan';
   }
 
   /**
@@ -397,14 +397,10 @@ class InternationalOptInComponent extends FormComponent {
 
   renderSchoolFieldGroups() {
     let schoolDataFieldGroup;
-    const selectedCountry = this.props.data?.schoolCountry?.toLowerCase();
+    const selectedCountry = this.props.data?.schoolCountry;
     if (this.isColombiaSelected()) {
       schoolDataFieldGroup = this.renderColombianSchoolDataFieldGroup();
-    } else if (
-      this.isChileSelected() &&
-      this.props.options.workshopFacilitator[selectedCountry] !==
-        'Centro de Innovación - Mineduc' //we want the free text fields in this case
-    ) {
+    } else if (this.isChileSelected()) {
       schoolDataFieldGroup = this.renderChileanSchoolDataFieldGroup();
     } else if (this.isUzbekistanSelected()) {
       schoolDataFieldGroup = this.renderUzebekistanSchoolDataFieldGroup();
@@ -456,11 +452,11 @@ class InternationalOptInComponent extends FormComponent {
   renderWorkshopFieldGroups() {
     // If no country has been selected, display the inputs disabled with a
     // placeholder text asking the user to select their country first.
-    const selectedCountry = this.props.data?.schoolCountry?.toLowerCase();
+    const selectedCountry = this.props.data?.schoolCountry;
     const placeholder = selectedCountry ? undefined : i18n.selectCountryFirst();
 
     const organizers = this.props.options.workshopOrganizer[
-      selectedCountry
+      getCountryKey(selectedCountry)
     ] || [i18n.organizerNotListed()];
     const selectOrganizer = this.buildSelectFieldGroup({
       name: 'workshopOrganizer',
@@ -471,48 +467,17 @@ class InternationalOptInComponent extends FormComponent {
       required: true,
     });
 
-    const facilitators = this.props.options.workshopFacilitator[
-      selectedCountry
-    ] || [i18n.facilitatorNotListed()];
-    const selectFacilitator = this.buildSelectFieldGroup({
-      name: 'workshopFacilitator',
-      label: this.props.labels.workshopFacilitator,
-      options: facilitators,
-      disabled: !selectedCountry,
-      placeholder: selectedCountry ? i18n.selectAnOption() : placeholder,
-      required: true,
-    });
-
-    return (
-      <FormGroup>
-        {selectOrganizer}
-        {selectFacilitator}
-      </FormGroup>
-    );
+    return <FormGroup>{selectOrganizer}</FormGroup>;
   }
 
   render() {
     const labels = this.props.labels;
 
-    const lastSubjectsKey = formComponentUtils.normalizeAnswer(
-      this.props.options.subjects[this.props.options.subjects.length - 1]
-    ).answerValue;
-    const textFieldMapSubjects = {[lastSubjectsKey]: 'other'};
-
-    const lastResourcesKey = formComponentUtils.normalizeAnswer(
-      this.props.options.resources[this.props.options.resources.length - 1]
-    ).answerValue;
-    const textFieldMapResources = {[lastResourcesKey]: 'other'};
-
-    const lastRoboticsKey = formComponentUtils.normalizeAnswer(
-      this.props.options.robotics[this.props.options.robotics.length - 1]
-    ).answerValue;
-    const textFieldMapRobotics = {[lastRoboticsKey]: 'other'};
-
     return (
       <FormGroup>
         <br />
         <h4>{i18n.tellUsAboutYourself()}</h4>
+
         {/* Personal */}
         {this.buildFieldGroup({
           name: 'firstName',
@@ -539,52 +504,13 @@ class InternationalOptInComponent extends FormComponent {
           value: this.props.accountEmail,
           readOnly: true,
         })}
-        {this.buildFieldGroup({
-          name: 'emailAlternate',
-          label: labels.emailAlternate,
-          type: 'text',
-        })}
-        {this.buildButtonsFromOptions({
-          name: 'gender',
-          label: labels.gender,
-          type: 'radio',
-          required: true,
-        })}
 
         {/* School */}
         {this.renderSchoolFieldGroups()}
 
-        {/* Teaching */}
-        {this.buildButtonsFromOptions({
-          name: 'ages',
-          label: labels.ages,
-          type: 'check',
-          required: true,
-        })}
-        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
-          name: 'subjects',
-          label: labels.subjects,
-          type: 'check',
-          required: true,
-          textFieldMap: textFieldMapSubjects,
-        })}
-        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
-          name: 'resources',
-          label: labels.resources,
-          type: 'check',
-          required: false,
-          textFieldMap: textFieldMapResources,
-        })}
-        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
-          name: 'robotics',
-          label: labels.robotics,
-          type: 'check',
-          required: false,
-          textFieldMap: textFieldMapRobotics,
-        })}
-
         <br />
         <h4>{i18n.tellUsAboutWorkshop()}</h4>
+
         {/* Workshop */}
         <FormGroup
           id="date"
@@ -652,23 +578,20 @@ function dateStringToMoment(dateString) {
   return null;
 }
 
+function getCountryKey(countryName) {
+  return snakeCase(countryName);
+}
+
 InternationalOptInComponent.associatedFields = [
   'firstName',
   'firstNamePreferred',
   'lastName',
   'email',
-  'emailAlternate',
-  'gender',
   'schoolName',
   'schoolCity',
   'schoolCountry',
-  'ages',
-  'subjects',
-  'resources',
-  'robotics',
   'date',
   'workshopOrganizer',
-  'workshopFacilitator',
   'workshopCourse',
   'emailOptIn',
   'legalOptIn',

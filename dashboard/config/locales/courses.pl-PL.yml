@@ -3,188 +3,14 @@ pl:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Zasady informatyki
-          title: Zasady informatyki ('17-'18)
-          version_title: "'17-'18"
-          description_student: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie
-            najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza
-            uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie
-            poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady
-            informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu
-            liderów w dziedzinie informatyki oraz przyciągania i angażowania tych
-            osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając
-            im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
-          description_teacher: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie
-            najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza
-            uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie
-            poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady
-            informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu
-            liderów w dziedzinie informatyki oraz przyciągania i angażowania tych
-            osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając
-            im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
-          description_short: Poznaj podstawowe pojęcia informatyczne.
-        csd-2017:
-          assignment_family_title: Odkrycia Informatyczne
-          title: Odkrycia Informatyczne (:17-'18)
-          version_title: "'17-'18"
-          description_student: Odkrycia informatyczne (CS Discoveries) to wprowadzający
-            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
-            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
-            rozwiązywania problemów i rozrywki.
-          description_teacher: Odkrycia informatyczne (CS Discoveries) to wprowadzający
-            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
-            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
-            rozwiązywania problemów i rozrywki.
-          description_short: Wprowadzający kurs informatyczny dający uczniom umiejętności
-            tworzenia autentycznych artefaktów.
         allthethingscourse:
-          title: allthethingscourse
           description_short: To jest kurs dla allthethings
           description_student: Ten kurs jest dla allthethings i ma dłuższe objaśnienie
             dla uczniów
           description_teacher: Ten kurs jest dla allthethings i ma dłuższe objaśnienie
             dla nauczycieli
-        csd-2018:
-          assignment_family_title: Odkrycia Informatyczne
-          title: Odkrycia Informatyczne ('18-'19)
-          version_title: "'18-'19"
-          description_short: Wprowadzający kurs informatyczny dający uczniom umiejętności
-            tworzenia autentycznych artefaktów.
-          description_student: Odkrycia informatyczne (CS Discoveries) to wprowadzający
-            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
-            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
-            rozwiązywania problemów i rozrywki.
-          description_teacher: Odkrycia informatyczne (CS Discoveries) to wprowadzający
-            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
-            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
-            rozwiązywania problemów i rozrywki.
-        csp-2018:
-          assignment_family_title: Zasady informatyki
-          title: Zasady informatyki ('18-'19)
-          version_title: "'18-'19"
-          description_short: Poznaj podstawowe pojęcia informatyczne.
-          description_student: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie
-            najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza
-            uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie
-            poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady
-            informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu
-            liderów w dziedzinie informatyki oraz przyciągania i angażowania tych
-            osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając
-            im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
-          description_teacher: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie
-            najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza
-            uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie
-            poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady
-            informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu
-            liderów w dziedzinie informatyki oraz przyciągania i angażowania tych
-            osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając
-            im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
-        csp-2019:
-          title: Zasady informatyki ('19-'20)
-          version_title: "'19-'20"
-          description_short: Poznaj podstawowe pojęcia informatyczne.
-          description_student: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie
-            najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza
-            uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie
-            poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady
-            informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu
-            liderów w dziedzinie informatyki oraz przyciągania i angażowania tych
-            osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając
-            im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
-          description_teacher: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie
-            najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza
-            uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie
-            poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady
-            informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu
-            liderów w dziedzinie informatyki oraz przyciągania i angażowania tych
-            osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając
-            im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
-        csd-2019:
-          title: Odkrycia Informatyczne ('19-'20)
-          version_title: "'19-'20"
-          description_short: Wprowadzający kurs informatyczny dający uczniom umiejętności
-            tworzenia autentycznych artefaktów.
-          description_student: Odkrycia informatyczne (CS Discoveries) to wprowadzający
-            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
-            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
-            rozwiązywania problemów i rozrywki.
-          description_teacher: Odkrycia informatyczne (CS Discoveries) to wprowadzający
-            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
-            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
-            rozwiązywania problemów i rozrywki.
-        csd-pilot:
-          title: CSD Kurs pilotażowy
-          description_short: "(Wersja pilotażowa) Wprowadzający kurs informatyki,
-            który umożliwia uczniom tworzenie autentycznych artefaktów."
-          description_student: Odkrycia informatyczne (CS Discoveries) to wprowadzający
-            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
-            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
-            rozwiązywania problemów i rozrywki.
-        time4cs-experiment:
-          title: Time4cs (Eksperyment)
-        csp-2020:
-          title: Zasady informatyki ('20-'21)
-          version_title: "'20-'21"
-          description_short: Poznaj podstawowe pojęcia informatyczne.
-          description_student: W 2016 roku College Board uruchomił swój najnowszy
-            kurs AP®, AP Zasady informatyki (Computer Science Principles). W roku
-            szkolnym 2020-21 wprowadzono znaczące aktualizacje ram kursu. CSP wprowadza
-            ucznió w podstawowe koncepcje informatyki i rzuca im wyzwanie, aby zbadali,
-            w jaki sposób komputery i technologia mogą wpływać na świat. Program AP
-            zaprojektował zasady informatyki AP w celu stworzenia liderów w dziedzinach
-            informatyki oraz przyciągania i angażowania tych, którzy są tradycyjnie
-            niedostatecznie reprezentowani za pomocą niezbędnych narzędzi obliczeniowych
-            i możliwości multidyscyplinarnych.
-          description_teacher: W 2016 roku College Board uruchomił swój najnowszy
-            kurs AP®, AP Zasady informatyki (Computer Science Principles). W roku
-            szkolnym 2020-21 wprowadzono znaczące aktualizacje ram kursu. CSP wprowadza
-            ucznió w podstawowe koncepcje informatyki i rzuca im wyzwanie, aby zbadali,
-            w jaki sposób komputery i technologia mogą wpływać na świat. Program AP
-            zaprojektował zasady informatyki AP w celu stworzenia liderów w dziedzinach
-            informatyki oraz przyciągania i angażowania tych, którzy są tradycyjnie
-            niedostatecznie reprezentowani za pomocą niezbędnych narzędzi obliczeniowych
-            i możliwości multidyscyplinarnych.
-        csd-2020:
-          title: Odkrycia Informatyki ('20-'21)
-          version_title: "'20-'21"
-          description_short: Wprowadzający kurs informatyczny dający uczniom umiejętności
-            tworzenia autentycznych artefaktów.
-          description_student: Odkrycia informatyczne (CS Discoveries) to wprowadzający
-            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
-            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
-            rozwiązywania problemów i rozrywki.
-          description_teacher: Odkrycia informatyczne (CS Discoveries) to wprowadzający
-            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
-            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
-            rozwiązywania problemów i rozrywki.
-        csp-2021:
-          title: Zasady informatyki ('21-'22)
-          description_short: Poznaj podstawowe pojęcia informatyczne.
-          version_title: "'21-'22"
-        csd-2021:
-          title: Odkrycia Informatyki ('21-'22)
-          description_short: Wprowadzający kurs informatyki, umożliwiający uczniom
-            tworzeniae autentycznych artefaktów
-          version_title: "'21-'22"
-        csa-pilot:
-          title: Pilotaż CSA
-        mike-test:
-          title: Podstawy Informatyki
-        self-paced-pl-csd-2021:
-          title: self-paced-pl-csd-2021
-          version_title: "'21 - '22"
-        self-paced-pl-csp-2021:
-          title: self-paced-pl-csp-2021
-          version_title: "'21-'22"
-        csa-pilot-facilitator:
-          title: Facylitatorzy pilotażU CSA
-        csp-2022:
-          title: Zasady informatyki ('22-'23)
-          description_short: Poznaj podstawowe pojęcia informatyczne.
-          version_title: "'22-'23"
+          title: allthethingscourse
         csa-2022:
-          title: Informatyka A ('22-'23)
           description_short: Poznaj programowanie w Javie i umiejętności inżynierii
             programowania.
           description_student: Computer Science A (CSA) - Informatyka A wprowadza
@@ -203,46 +29,38 @@ pl:
             -   Dostępny jest rozwój zawodowy, który pomoże Ci rozpocząć nauczanie CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Kliknij tutaj</a>, aby dowiedzieć się więcej o możliwościach profesjonalnego uczenia się w Twoim region.
 
             -   W menu Zasoby dla nauczycieli poniżej możesz znaleźć _Przewodnik po programie nauczania_, _Słownictwo dotyczące kursu_ i inne zasoby, które pomogą Ci wdrożyć ten program nauczania.
+          title: Informatyka A ('22-'23)
           version_title: "'22-'23"
-        csa-pilot-extra:
-          title: Jednostki CSA 7 i 8 Pilotaż
-        vpl-csd-summer-pilot-2022:
-          title: Wirtualne letnie warsztaty Odkrycia informatyki
-          description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się
-            do nauczania kursu Odkrycia Informatyki.\n-   Przećwiczysz kluczowe pojęcia
-            z programu nauczania Odkrycia Informatyki.\n-   Zwiększysz zrozumienie
-            sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń
-            uczniów. \n-   Staniesz się częścią sieci nauczycieli, którzy wykonują
-            podobną pracę."
-          description_teacher: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się
-            do nauczania kursu Odkrycia Informatyki.\n-   Przećwiczysz kluczowe pojęcia
-            z programu nauczania Odkrycia Informatyki.\n-   Zwiększysz zrozumienie
-            sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń
-            uczniów. \n-   Staniesz się częścią sieci nauczycieli, którzy wykonują
-            podobną pracę."
+        csa-2023:
+          description_short: Poznaj programowanie w Javie i umiejętności inżynierii
+            programowania.
+          description_student: Computer Science A (CSA) - Informatyka A wprowadza
+            uczniów w inżynierię oprogramowania oraz programowanie obiektowe i projektowanie
+            z wykorzystaniem języka programowania Java. Program ten obejmuje szeroki
+            zakres tematów, w tym projektowanie rozwiązań problemów, wykorzystanie
+            struktur danych do organizowania dużych zbiorów danych, opracowywanie
+            i wdrażanie algorytmów do przetwarzania danych i odkrywania nowych informacji,
+            analizę potencjalnych rozwiązań oraz etyczne i społeczne implikacje systemów
+            komputerowych.
+          description_teacher: |-
+            Computer Science A (CSA) - Informatyka A wprowadza uczniów w inżynierię oprogramowania oraz programowanie obiektowe i projektowanie z wykorzystaniem języka programowania Java. Program ten obejmuje szeroki zakres tematów, w tym projektowanie rozwiązań problemów, wykorzystanie struktur danych do organizowania dużych zbiorów danych, opracowywanie i wdrażanie algorytmów do przetwarzania danych i odkrywania nowych informacji, analizę potencjalnych rozwiązań oraz etyczne i społeczne implikacje systemów komputerowych.
+
+            **Czy wiedziałeś?**
+
+            -   Dostępny jest rozwój zawodowy, który pomoże Ci rozpocząć nauczanie CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Kliknij tutaj</a>, aby dowiedzieć się więcej o możliwościach profesjonalnego uczenia się w Twoim region.
+
+            -   W menu Zasoby dla nauczycieli poniżej możesz znaleźć _Przewodnik po programie nauczania_, _Słownictwo dotyczące kursu_ i inne zasoby, które pomogą Ci wdrożyć ten program nauczania.
+          title: Informatyka A ('23-'24)
+          version_title: "'23-'24"
         csa-async-2022:
           title: csa-async
           version_title: "'22"
-        vpl-csd-summer-pilot-ci-2022:
-          title: Badania programu Odkryć informatycznych
-          version_title: "'21-'22"
-        self-paced-pl-csa-2022:
-          title: Moduły wprowadzające CSA
-          version_title: "'22-'23"
-        csd-2022:
-          title: Odkrycia Informatyki ('22-'23)
-          description_short: Wprowadzający kurs informatyki, umożliwiający uczniom
-            tworzeniae autentycznych artefaktów
-          version_title: "'22-'23"
-        self-paced-pl-csd-2022:
-          title: self-paced-pl-csd-2021
-          version_title: "'22-'23"
-        self-paced-pl-csp-2022:
-          title: self-paced-pl-csp-2021
-          version_title: "'22-'23"
-        vpl-csd-ayw-pilot-2022:
-          title: Warsztaty wirtualnego roku akademickiego CS Discoveries (Odkrycia
-            Informatyki)
+        csa-pilot:
+          title: Pilotaż CSA
+        csa-pilot-extra:
+          title: Jednostki CSA 7 i 8 Pilotaż
+        csa-pilot-facilitator:
+          title: Facylitatorzy pilotażU CSA
         csa-validation-pilot-2022:
           description_short: Poznaj programowanie w Javie i umiejętności inżynierii
             programowania.
@@ -263,70 +81,195 @@ pl:
             analizę potencjalnych rozwiązań oraz etyczne i społeczne implikacje systemów
             komputerowych.
           version_title: "'22-'23"
-        csa-2023:
-          title: Informatyka A ('23-'24)
-          description_short: Poznaj programowanie w Javie i umiejętności inżynierii
-            programowania.
-          description_student: Computer Science A (CSA) - Informatyka A wprowadza
-            uczniów w inżynierię oprogramowania oraz programowanie obiektowe i projektowanie
-            z wykorzystaniem języka programowania Java. Program ten obejmuje szeroki
-            zakres tematów, w tym projektowanie rozwiązań problemów, wykorzystanie
-            struktur danych do organizowania dużych zbiorów danych, opracowywanie
-            i wdrażanie algorytmów do przetwarzania danych i odkrywania nowych informacji,
-            analizę potencjalnych rozwiązań oraz etyczne i społeczne implikacje systemów
-            komputerowych.
-          description_teacher: |-
-            Computer Science A (CSA) - Informatyka A wprowadza uczniów w inżynierię oprogramowania oraz programowanie obiektowe i projektowanie z wykorzystaniem języka programowania Java. Program ten obejmuje szeroki zakres tematów, w tym projektowanie rozwiązań problemów, wykorzystanie struktur danych do organizowania dużych zbiorów danych, opracowywanie i wdrażanie algorytmów do przetwarzania danych i odkrywania nowych informacji, analizę potencjalnych rozwiązań oraz etyczne i społeczne implikacje systemów komputerowych.
-
-            **Czy wiedziałeś?**
-
-            -   Dostępny jest rozwój zawodowy, który pomoże Ci rozpocząć nauczanie CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Kliknij tutaj</a>, aby dowiedzieć się więcej o możliwościach profesjonalnego uczenia się w Twoim region.
-
-            -   W menu Zasoby dla nauczycieli poniżej możesz znaleźć _Przewodnik po programie nauczania_, _Słownictwo dotyczące kursu_ i inne zasoby, które pomogą Ci wdrożyć ten program nauczania.
-          version_title: "'23-'24"
-        self-paced-pl-physical-computing-2022:
-          title: 'Nauczanie tworzenia aplikacji za pomocą urządzeń '
-          version_title: "'22 - '23"
-        csp-2023:
-          title: Zasady informatyki '23-'24
-          description_short: Poznaj podstawowe pojęcia informatyczne.
-          version_title: "'23-'24"
-        self-paced-pl-csa-2023:
-          title: Moduły wprowadzające CSA
-          version_title: '2023'
-        tess-testing-focus-on-creativity-2023:
-          title: tess-testing-focus-on-creativity-collection-2023
-        csd-2023:
-          title: csd-2023
+        csd-2017:
+          assignment_family_title: Odkrycia Informatyczne
+          description_short: Wprowadzający kurs informatyczny dający uczniom umiejętności
+            tworzenia autentycznych artefaktów.
+          description_student: Odkrycia informatyczne (CS Discoveries) to wprowadzający
+            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
+            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
+            rozwiązywania problemów i rozrywki.
+          description_teacher: Odkrycia informatyczne (CS Discoveries) to wprowadzający
+            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
+            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
+            rozwiązywania problemów i rozrywki.
+          title: Odkrycia Informatyczne (:17-'18)
+          version_title: "'17-'18"
+        csd-2018:
+          assignment_family_title: Odkrycia Informatyczne
+          description_short: Wprowadzający kurs informatyczny dający uczniom umiejętności
+            tworzenia autentycznych artefaktów.
+          description_student: Odkrycia informatyczne (CS Discoveries) to wprowadzający
+            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
+            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
+            rozwiązywania problemów i rozrywki.
+          description_teacher: Odkrycia informatyczne (CS Discoveries) to wprowadzający
+            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
+            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
+            rozwiązywania problemów i rozrywki.
+          title: Odkrycia Informatyczne ('18-'19)
+          version_title: "'18-'19"
+        csd-2019:
+          description_short: Wprowadzający kurs informatyczny dający uczniom umiejętności
+            tworzenia autentycznych artefaktów.
+          description_student: Odkrycia informatyczne (CS Discoveries) to wprowadzający
+            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
+            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
+            rozwiązywania problemów i rozrywki.
+          description_teacher: Odkrycia informatyczne (CS Discoveries) to wprowadzający
+            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
+            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
+            rozwiązywania problemów i rozrywki.
+          title: Odkrycia Informatyczne ('19-'20)
+          version_title: "'19-'20"
+        csd-2020:
+          description_short: Wprowadzający kurs informatyczny dający uczniom umiejętności
+            tworzenia autentycznych artefaktów.
+          description_student: Odkrycia informatyczne (CS Discoveries) to wprowadzający
+            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
+            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
+            rozwiązywania problemów i rozrywki.
+          description_teacher: Odkrycia informatyczne (CS Discoveries) to wprowadzający
+            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
+            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
+            rozwiązywania problemów i rozrywki.
+          title: Odkrycia Informatyki ('20-'21)
+          version_title: "'20-'21"
+        csd-2021:
           description_short: Wprowadzający kurs informatyki, umożliwiający uczniom
             tworzeniae autentycznych artefaktów
+          title: Odkrycia Informatyki ('21-'22)
+          version_title: "'21-'22"
+        csd-2022:
+          description_short: Wprowadzający kurs informatyki, umożliwiający uczniom
+            tworzeniae autentycznych artefaktów
+          title: Odkrycia Informatyki ('22-'23)
+          version_title: "'22-'23"
+        csd-2023:
+          description_short: Wprowadzający kurs informatyki, umożliwiający uczniom
+            tworzeniae autentycznych artefaktów
+          title: csd-2023
           version_title: "'23-'24"
+        csd-pilot:
+          description_short: "(Wersja pilotażowa) Wprowadzający kurs informatyki,
+            który umożliwia uczniom tworzenie autentycznych artefaktów."
+          description_student: Odkrycia informatyczne (CS Discoveries) to wprowadzający
+            kurs informatyczny, który daje uczniom umiejętności tworzenia autentycznych
+            artefaktów, i angażuje z informatyką jako medium kreatywności, komunikacji,
+            rozwiązywania problemów i rozrywki.
+          title: CSD Kurs pilotażowy
+        csp-2017:
+          assignment_family_title: Zasady informatyki
+          description_short: Poznaj podstawowe pojęcia informatyczne.
+          description_student: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie
+            najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza
+            uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie
+            poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady
+            informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu
+            liderów w dziedzinie informatyki oraz przyciągania i angażowania tych
+            osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając
+            im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
+          description_teacher: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie
+            najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza
+            uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie
+            poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady
+            informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu
+            liderów w dziedzinie informatyki oraz przyciągania i angażowania tych
+            osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając
+            im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
+          title: Zasady informatyki ('17-'18)
+          version_title: "'17-'18"
+        csp-2018:
+          assignment_family_title: Zasady informatyki
+          description_short: Poznaj podstawowe pojęcia informatyczne.
+          description_student: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie
+            najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza
+            uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie
+            poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady
+            informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu
+            liderów w dziedzinie informatyki oraz przyciągania i angażowania tych
+            osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając
+            im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
+          description_teacher: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie
+            najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza
+            uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie
+            poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady
+            informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu
+            liderów w dziedzinie informatyki oraz przyciągania i angażowania tych
+            osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając
+            im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
+          title: Zasady informatyki ('18-'19)
+          version_title: "'18-'19"
+        csp-2019:
+          description_short: Poznaj podstawowe pojęcia informatyczne.
+          description_student: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie
+            najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza
+            uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie
+            poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady
+            informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu
+            liderów w dziedzinie informatyki oraz przyciągania i angażowania tych
+            osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając
+            im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
+          description_teacher: Jesienią 2016 roku rada uczelni zainaugurowała prowadzenie
+            najnowszego kursu AP® zatytułowanego "Zasady informatyki AP". Kurs wprowadza
+            uczniów w podstawowe pojęcia informatyki oraz stawia przed nimi wyzwanie
+            poznania sposobu, w jaki obliczanie i technologia wpływają na świat. "Zasady
+            informatyki AP" zaprojektowano w ramach Programu AP i ma on służyć kreowaniu
+            liderów w dziedzinie informatyki oraz przyciągania i angażowania tych
+            osób, które tradycyjnie są niezbyt licznie reprezentowane zapewniając
+            im podstawowe narzędzia komputacyjne oraz mulidyscyplinarne możliwości.
+          title: Zasady informatyki ('19-'20)
+          version_title: "'19-'20"
+        csp-2020:
+          description_short: Poznaj podstawowe pojęcia informatyczne.
+          description_student: W 2016 roku College Board uruchomił swój najnowszy
+            kurs AP®, AP Zasady informatyki (Computer Science Principles). W roku
+            szkolnym 2020-21 wprowadzono znaczące aktualizacje ram kursu. CSP wprowadza
+            ucznió w podstawowe koncepcje informatyki i rzuca im wyzwanie, aby zbadali,
+            w jaki sposób komputery i technologia mogą wpływać na świat. Program AP
+            zaprojektował zasady informatyki AP w celu stworzenia liderów w dziedzinach
+            informatyki oraz przyciągania i angażowania tych, którzy są tradycyjnie
+            niedostatecznie reprezentowani za pomocą niezbędnych narzędzi obliczeniowych
+            i możliwości multidyscyplinarnych.
+          description_teacher: W 2016 roku College Board uruchomił swój najnowszy
+            kurs AP®, AP Zasady informatyki (Computer Science Principles). W roku
+            szkolnym 2020-21 wprowadzono znaczące aktualizacje ram kursu. CSP wprowadza
+            ucznió w podstawowe koncepcje informatyki i rzuca im wyzwanie, aby zbadali,
+            w jaki sposób komputery i technologia mogą wpływać na świat. Program AP
+            zaprojektował zasady informatyki AP w celu stworzenia liderów w dziedzinach
+            informatyki oraz przyciągania i angażowania tych, którzy są tradycyjnie
+            niedostatecznie reprezentowani za pomocą niezbędnych narzędzi obliczeniowych
+            i możliwości multidyscyplinarnych.
+          title: Zasady informatyki ('20-'21)
+          version_title: "'20-'21"
+        csp-2021:
+          description_short: Poznaj podstawowe pojęcia informatyczne.
+          title: Zasady informatyki ('21-'22)
+          version_title: "'21-'22"
+        csp-2022:
+          description_short: Poznaj podstawowe pojęcia informatyczne.
+          title: Zasady informatyki ('22-'23)
+          version_title: "'22-'23"
+        csp-2023:
+          description_short: Poznaj podstawowe pojęcia informatyczne.
+          title: Zasady informatyki '23-'24
+          version_title: "'23-'24"
+        focus-on-coding-2023:
+          title: Skoncentruj się na kodowaniu
         focus-on-creativity-2023:
           title: Skoncentruj się na kreatywności
           version_title: "'23-24"
-        focus-on-hardware-2023:
-          title: Skoncentruj się na sprzęcie
         focus-on-data-2023:
           title: Skoncentruj się na danych
         focus-on-design-with-purpose-2023:
           title: Skoncentruj się na projektowaniu z celem
-        focus-on-coding-2023:
-          title: Skoncentruj się na kodowaniu
+        focus-on-hardware-2023:
+          title: Skoncentruj się na sprzęcie
         focus-on-impact-in-society-2023:
           title: Skoncentruj się na wpływie w społeczeństwie
-        vpl-csd-summer-ci-2023:
-          title: Badania programu Odkryć informatycznych
-          version_title: "'23-'24"
-        self-paced-pl-physical-computing-2023:
-          title: " Nauczanie tworzenia aplikacji za pomocą urządzeń"
-          version_title: "'23 - '24"
-        self-paced-pl-csd-2023:
-          title: self-paced-pl-csd-2021
-          version_title: "'23-'24"
-        self-paced-pl-microbit-2023:
-          title: self-paced-pl-microbit-2023
+        mike-test:
+          title: Podstawy Informatyki
         pl-csd-summer-2023:
-          title: Letnie warsztaty Odkryć Informatyki
           description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się
             do nauczania kursu Odkrycia Informatyki.\n-   Przećwiczysz kluczowe pojęcia
             z programu nauczania Odkrycia Informatyki.\n-   Zwiększysz zrozumienie
@@ -339,71 +282,172 @@ pl:
             sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń
             uczniów. \n-   Staniesz się częścią sieci nauczycieli, którzy wykonują
             podobną pracę."
+          title: Letnie warsztaty Odkryć Informatyki
+        self-paced-pl-aiml-2023:
+          description_student: "## Witamy\n\nWitamy w bezpłatnej, samodzielnej nauce
+            online o Code.org dla nauczycieli, aby przygotować się do nauczania z
+            Code.org! Po ukończeniu tego doskonalenia zawodowego **będziesz mógł rozpocząć
+            nauczanie jednostki Code.org dotyczcej tworzenia AI i uczenia maszynowego**
+            ze swoimi uczniami.\n\n### Wybierz sposób uczenia się, który Ci odpowiada\n\n-
+            \  **Podżaj we własnym tempie:** Uczenie się we własnym tempie ma Ci zapewnić
+            panowanie nad własną nauką. Sugerowane czasy zajęć są podane dla każdej
+            lekcji. Zachęcamy jednak do **angażowania się we własnym tempa.**\n\n-
+            \  **Wybierz treści:** Treści s zorganizowane z sugerowanym postępem dla
+            nauczycieli nowicjuszy zarówno w Code.org, jak i jednostce AI i Uczenie
+            Maszynowe. Możesz jednak **podżać w kolejności, która najlepiej odpowiada
+            Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć
+            Pierwsze kroki z Code.org i przejść od razu do przygotowania się do uczenia
+            AI i uczenie maszynowe. "
+          description_teacher: "## Witamy\n\nWitamy w bezpłatnej, samodzielnej nauce
+            online o Code.org dla nauczycieli, aby przygotować się do nauczania z
+            Code.org! Po ukończeniu tego doskonalenia zawodowego **będziesz mógł rozpocząć
+            nauczanie jednostki Code.org dotyczcej tworzenia AI i uczenia maszynowego**
+            ze swoimi uczniami.\n\n### Wybierz sposób uczenia się, który Ci odpowiada\n\n-
+            \  **Podżaj we własnym tempie:** Uczenie się we własnym tempie ma Ci zapewnić
+            panowanie nad własną nauką. Sugerowane czasy zajęć są podane dla każdej
+            lekcji. Zachęcamy jednak do **angażowania się we własnym tempa.**\n\n-
+            \  **Wybierz treści:** Treści s zorganizowane z sugerowanym postępem dla
+            nauczycieli nowicjuszy zarówno w Code.org, jak i jednostce AI i Uczenie
+            Maszynowe. Możesz jednak **podżać w kolejności, która najlepiej odpowiada
+            Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć
+            Pierwsze kroki z Code.org i przejść od razu do przygotowania się do uczenia
+            AI i uczenie maszynowe. "
+          title: 'Przygotowanie do nauczania sztucznej inteligencji i uczenia maszynowego '
+        self-paced-pl-csa-2022:
+          title: Moduły wprowadzające CSA
+          version_title: "'22-'23"
+        self-paced-pl-csa-2023:
+          title: Moduły wprowadzające CSA
+          version_title: '2023'
+        self-paced-pl-csd-2021:
+          title: self-paced-pl-csd-2021
+          version_title: "'21 - '22"
+        self-paced-pl-csd-2022:
+          title: self-paced-pl-csd-2021
+          version_title: "'22-'23"
+        self-paced-pl-csd-2023:
+          title: self-paced-pl-csd-2021
+          version_title: "'23-'24"
+        self-paced-pl-csp-2021:
+          title: self-paced-pl-csp-2021
+          version_title: "'21-'22"
+        self-paced-pl-csp-2022:
+          title: self-paced-pl-csp-2021
+          version_title: "'22-'23"
+        self-paced-pl-csp-2023:
+          title: self-paced-pl-csp-2021
+          version_title: 22-23
+        self-paced-pl-microbit-2023:
+          title: self-paced-pl-microbit-2023
+        self-paced-pl-physical-computing-2022:
+          title: Nauczanie tworzenia aplikacji za pomocą urządzeń
+          version_title: "'22 - '23"
+        self-paced-pl-physical-computing-2023:
+          title: " Nauczanie tworzenia aplikacji za pomocą urządzeń"
+          version_title: "'23 - '24"
+        tess-testing-focus-on-creativity-2023:
+          title: tess-testing-focus-on-creativity-collection-2023
+        time4cs-experiment:
+          title: Time4cs (Eksperyment)
         virtual-pl-csd-summer-2023:
+          description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się
+            do nauczania kursu Odkrycia Informatyki.\n-   Przećwiczysz kluczowe pojęcia
+            z programu nauczania Odkrycia Informatyki.\n-   Zwiększysz zrozumienie
+            sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń
+            uczniów. \n-   Staniesz się częścią sieci nauczycieli, którzy wykonują
+            podobną pracę."
+          description_teacher: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się
+            do nauczania kursu Odkrycia Informatyki.\n-   Przećwiczysz kluczowe pojęcia
+            z programu nauczania Odkrycia Informatyki.\n-   Zwiększysz zrozumienie
+            sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń
+            uczniów. \n-   Staniesz się częścią sieci nauczycieli, którzy wykonują
+            podobną pracę."
           title: virtual-pl-csd-summer-2023
+        vpl-csa-2023:
+          title: CSA Wirtualne profesjonalne uczenie się
+        vpl-csd-2023:
+          title: Wirtualne profesjonalne uczenie się CSD
+        vpl-csd-ayw-pilot-2022:
+          title: Warsztaty wirtualnego roku akademickiego CS Discoveries (Odkrycia
+            Informatyki)
+        vpl-csd-summer-ci-2023:
+          title: Badania programu Odkryć informatycznych
+          version_title: "'23-'24"
+        vpl-csd-summer-pilot-2022:
+          description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się
+            do nauczania kursu Odkrycia Informatyki.\n-   Przećwiczysz kluczowe pojęcia
+            z programu nauczania Odkrycia Informatyki.\n-   Zwiększysz zrozumienie
+            sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń
+            uczniów. \n-   Staniesz się częścią sieci nauczycieli, którzy wykonują
+            podobną pracę."
+          description_teacher: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się
+            do nauczania kursu Odkrycia Informatyki.\n-   Przećwiczysz kluczowe pojęcia
+            z programu nauczania Odkrycia Informatyki.\n-   Zwiększysz zrozumienie
+            sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń
+            uczniów. \n-   Staniesz się częścią sieci nauczycieli, którzy wykonują
+            podobną pracę."
+          title: Wirtualne letnie warsztaty Odkrycia informatyki
+        vpl-csd-summer-pilot-ci-2022:
+          title: Badania programu Odkryć informatycznych
+          version_title: "'21-'22"
+        vpl-csp-2023:
+          title: Zasady CS Wirtualny kurs warsztatowy PL
     resources:
-      curriculum/csd/2020:
-        name: Program nauczania
-        url: https://curriculum.code.org/csd-20/
-      teacher_forum/csd/2020:
-        name: Forum Nauczycieli
-        url: https://forum.code.org/c/csd
-      curriculum/csd/2017:
-        name: Program nauczania
-        url: https://curriculum.code.org/csd-1718/
-      teacher_forum_6/csd/2017:
-        name: Forum Nauczycieli
-        url: https://forum.code.org/c/csd
+      all_code/csd/2021:
+        name: Cały kod
+        url: "/courses/csd-2021/code"
+      all_code_2/csd/2023:
+        name: Cały kod
+        url: "/courses/csd-2023/code"
       all_code_5/csd/2022:
         name: Cały kod
         url: "/courses/csd-2022/code"
+      all_resources_1/csd/2021:
+        name: Wszystkie zasoby
+        url: "/courses/csd-2021/resources"
+      all_resources_2/csd/2023:
+        name: Wszystkie zasoby
+        url: "/courses/csd-2023/resources"
       all_resources_7/csd/2022:
         name: Wszystkie zasoby
         url: "/courses/csd-2022/resources"
+      all_standards_1/csd/2021:
+        name: Wszystkie standardy
+        url: "/courses/csd-2021/standards"
+      all_standards_2/csd/2023:
+        name: Wszystkie standardy
+        url: "/courses/csd-2023/standards"
       all_standards_7/csd/2022:
         name: Wszystkie standardy
         url: "/courses/csd-2022/standards"
+      all_vocabulary_1/csd/2021:
+        name: Całe słownictwo
+        url: "/courses/csd-2021/vocab"
+      all_vocabulary_2/csd/2023:
+        name: Całe słownictwo
+        url: "/courses/csd-2023/vocab"
       all_vocabulary_7/csd/2022:
         name: Całe słownictwo
         url: "/courses/csd-2022/vocab"
       csd_changelog_22-_23/csd/2022:
         name: Dziennik zmian CSD '22-'23
         url: https://docs.google.com/document/d/1GR3VaThoqXY6XBeVCHcYvZtaQFn47jPpmLNRQB4IK7Y/preview
+      csd_changelog_23-_24/csd/2023:
+        name: Dziennik zmian CSD '23-'24
+        url: https://docs.google.com/document/d/1p5wN0AlEUoKZ0WpcBryjkxLyQKsAr4k6zWqI91faksI/view
+      csd_course_standards_csta_alignment/csd/2023:
+        name: Standardy kursu CSD Wyrównanie CSTA
+        url: https://docs.google.com/spreadsheets/d/1mSkUykxhOhSviA7wmo5Ejh3vYgLJDtG46rCm_92607g/edit?usp=sharing
+      csd_curriculum_guide/csd/2021:
+        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
       csd_curriculum_guide/csd/2022:
         url: https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview
+      csd_guide_to_assessment/csd/2021:
+        name: Przewodnik po ocenie CSD
+        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
       csd_guide_to_assessment/csd/2022:
         name: Przewodnik po ocenie CSD
         url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
-      csd_guide_to_debugging/csd/2022:
-        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
-      csd_guide_to_differentiation/csd/2022:
-        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
-      csd_guide_to_using_resources/csd/2022:
-        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
-      csd_implementation_guide/csd/2022:
-        url: https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview
-      csd_learning_frameworks/csd/2022:
-        url: https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview
-      csd_programming_levels_guide/csd/2022:
-        url: https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview
-      curriculum/csd/2019:
-        name: Program nauczania
-        url: https://curriculum.code.org/csd-19/
-      teacher_forum/csd/2019:
-        name: Forum Nauczycieli
-        url: https://forum.code.org/c/csd
-      all_code_2/csd/2023:
-        name: Cały kod
-        url: "/courses/csd-2023/code"
-      all_resources_2/csd/2023:
-        name: Wszystkie zasoby
-        url: "/courses/csd-2023/resources"
-      all_standards_2/csd/2023:
-        name: Wszystkie standardy
-        url: "/courses/csd-2023/standards"
-      all_vocabulary_2/csd/2023:
-        name: Całe słownictwo
-        url: "/courses/csd-2023/vocab"
       csd_guide_to_assessment/csd/2023:
         name: Przewodnik po ocenie CSD
         url: https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view
@@ -413,6 +457,14 @@ pl:
       csd_guide_to_curriculum_videos/csd/2023:
         name: Przewodnik CSD dotyczący filmów o programach nauczania
         url: https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view
+      csd_guide_to_debugging/csd/2021:
+        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
+      csd_guide_to_debugging/csd/2022:
+        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
+      csd_guide_to_differentiation/csd/2021:
+        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
+      csd_guide_to_differentiation/csd/2022:
+        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
       csd_guide_to_differentiation_1/csd/2023:
         url: https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view
       csd_guide_to_getting_started/csd/2023:
@@ -424,46 +476,51 @@ pl:
       csd_guide_to_teaching_and_learning_strategies/csd/2023:
         name: Przewodnik CSD dotyczący strategii nauczania i uczenia się
         url: https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view
+      csd_guide_to_using_resources/csd/2021:
+        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
+      csd_guide_to_using_resources/csd/2022:
+        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
       csd_guide_to_using_resources_1/csd/2023:
         url: https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view
+      csd_implementation_guide/csd/2021:
+        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
+      csd_implementation_guide/csd/2022:
+        url: https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview
       csd_implementation_guide_1/csd/2023:
         url: https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view
+      csd_learning_frameworks/csd/2022:
+        url: https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview
       csd_learning_frameworks_1/csd/2023:
         url: https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view
+      csd_programming_levels_guide/csd/2022:
+        url: https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview
       csd_syllabus/csd/2023:
         name: Syllabus CSD
         url: https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view
-      all_code/csd/2021:
-        name: Cały kod
-        url: "/courses/csd-2021/code"
-      all_resources_1/csd/2021:
-        name: Wszystkie zasoby
-        url: "/courses/csd-2021/resources"
-      all_standards_1/csd/2021:
-        name: Wszystkie standardy
-        url: "/courses/csd-2021/standards"
-      all_vocabulary_1/csd/2021:
-        name: Całe słownictwo
-        url: "/courses/csd-2021/vocab"
-      csd_curriculum_guide/csd/2021:
-        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
-      csd_guide_to_assessment/csd/2021:
-        name: Przewodnik po ocenie CSD
-        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
-      csd_guide_to_debugging/csd/2021:
-        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
-      csd_guide_to_differentiation/csd/2021:
-        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
-      csd_guide_to_using_resources/csd/2021:
-        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
-      csd_implementation_guide/csd/2021:
-        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
-      getting_started_with_csd/csd/2021:
-        name: Pierwsze kroki z CSD
-        url: https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview
+      curriculum/csd/2017:
+        name: Program nauczania
+        url: https://curriculum.code.org/csd-1718/
       curriculum/csd/2018:
         name: Program nauczania
         url: https://curriculum.code.org/csd-18/
+      curriculum/csd/2019:
+        name: Program nauczania
+        url: https://curriculum.code.org/csd-19/
+      curriculum/csd/2020:
+        name: Program nauczania
+        url: https://curriculum.code.org/csd-20/
+      getting_started_with_csd/csd/2021:
+        name: Pierwsze kroki z CSD
+        url: https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview
+      teacher_forum/csd/2019:
+        name: Forum Nauczycieli
+        url: https://forum.code.org/c/csd
+      teacher_forum/csd/2020:
+        name: Forum Nauczycieli
+        url: https://forum.code.org/c/csd
+      teacher_forum_6/csd/2017:
+        name: Forum Nauczycieli
+        url: https://forum.code.org/c/csd
       teacher_forum_6/csd/2018:
         name: Forum Nauczycieli
         url: https://forum.code.org/c/csd

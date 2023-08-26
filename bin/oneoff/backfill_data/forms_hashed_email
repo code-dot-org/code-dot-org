@@ -8,7 +8,7 @@ require 'digest/md5'
 require src_dir 'database'
 
 if ARGV.length < 3 || ARGV.length > 4
-  puts 'Usage: ./bin/oneoff/backfill_data/forms_hashed_email '\
+  puts 'Usage: ./bin/oneoff/backfill_data/forms_hashed_email ' \
     'start_index end_index batch_size [--dry-run]'
   exit 1
 end

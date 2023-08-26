@@ -2,128 +2,10 @@
   "nl-NL": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab"
-        },
-        "gamelab": {
-          "name": "Game Lab",
-          "categories": {
-            "game_lab": {
-              "name": "Game Lab",
-              "expressions": {
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "Zwart-wit"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Speelt het MP3-geluidsbestand via de opgegeven URL."
-                }
-              }
-            },
-            "sprites": {
-              "name": "Sprites",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Spiraal"
-                    }
-                  }
-                }
-              }
-            },
-            "groups": {
-              "name": "Groepen",
-              "expressions": {
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Kleur"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Kleur"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "Tekenen",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Ster"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "wiskundige",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Het minimum getal geretourneerd"
-                    },
-                    "max": {
-                      "description": "Het maximum getal geretourneerd"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Het minimum getal geretourneerd"
-                    },
-                    "max": {
-                      "description": "Het maximum getal geretourneerd"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Variabelen",
-              "expressions": {
-                "assign_x": {
-                  "short_description": "Geeft een waarde aan een bestaande variabele. Bijvoorbeeld: x = 0;"
-                },
-                "declareAssign_x": {
-                  "short_description": "Declareert een variabele met de naam die na het woordje 'var' komt en wijst er de waarde aan rechterzijde van de expressie aan toe"
-                }
-              }
-            },
-            "functions": {
-              "name": "Functies"
-            }
-          }
-        },
         "applab": {
-          "name": "App Lab",
-          "description": "App Lab is een programmeeromgeving waarmee je simpele apps kan maken. Ontwerp een app, programmeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Functie"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Speelt het MP3-geluidsbestand via de opgegeven URL."
-                }
-              }
+            "advanced": {
+              "name": "Geavanceerd"
             },
             "canvas": {
               "expressions": {
@@ -199,8 +81,18 @@
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Functie"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Data",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -251,106 +143,214 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "Data"
             },
-            "control": {
+            "functions": {
+              "name": "Functies"
+            },
+            "math": {
               "expressions": {
-                "timedLoop": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Het maximum getal geretourneerd"
+                    },
+                    "min": {
+                      "description": "Het minimum getal geretourneerd"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Het maximum getal geretourneerd"
+                    },
+                    "min": {
+                      "description": "Het minimum getal geretourneerd"
+                    }
+                  }
+                }
+              },
+              "name": "wiskundige"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
                   "palette_params": {
                     "callback": {
                       "type": "Functie"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "wiskundige",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Het minimum getal geretourneerd"
-                    },
-                    "max": {
-                      "description": "Het maximum getal geretourneerd"
-                    }
-                  }
                 },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Het minimum getal geretourneerd"
-                    },
-                    "max": {
-                      "description": "Het maximum getal geretourneerd"
-                    }
-                  }
+                "playSound": {
+                  "short_description": "Speelt het MP3-geluidsbestand via de opgegeven URL."
                 }
               }
             },
             "variables": {
-              "name": "Variabelen",
               "expressions": {
-                "declareAssign_x": {
-                  "short_description": "Declareert een variabele met de naam die na het woordje 'var' komt en wijst er de waarde aan rechterzijde van de expressie aan toe"
-                },
                 "addPair": {
                   "return_value": "Geen"
+                },
+                "declareAssign_x": {
+                  "short_description": "Declareert een variabele met de naam die na het woordje 'var' komt en wijst er de waarde aan rechterzijde van de expressie aan toe"
                 }
-              }
+              },
+              "name": "Variabelen"
+            }
+          },
+          "description": "App Lab is een programmeeromgeving waarmee je simpele apps kan maken. Ontwerp een app, programmeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden.",
+          "name": "App Lab"
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Ster"
+                    }
+                  }
+                }
+              },
+              "name": "Tekenen"
             },
             "functions": {
               "name": "Functies"
             },
-            "advanced": {
-              "name": "Geavanceerd"
-            }
-          }
-        },
-        "spritelab": {
-          "name": "Sprite Lab",
-          "categories": {
+            "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Zwart-wit"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Speelt het MP3-geluidsbestand via de opgegeven URL."
+                }
+              },
+              "name": "Game Lab"
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Kleur"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Kleur"
+                    }
+                  }
+                }
+              },
+              "name": "Groepen"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Het maximum getal geretourneerd"
+                    },
+                    "min": {
+                      "description": "Het minimum getal geretourneerd"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Het maximum getal geretourneerd"
+                    },
+                    "min": {
+                      "description": "Het minimum getal geretourneerd"
+                    }
+                  }
+                }
+              },
+              "name": "wiskundige"
+            },
             "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiraal"
+                    }
+                  }
+                }
+              },
               "name": "Sprites"
             },
-            "world": {
-              "name": "Wereld"
-            },
-            "location": {
-              "name": "Plaatsen"
-            },
+            "variables": {
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Geeft een waarde aan een bestaande variabele. Bijvoorbeeld: x = 0;"
+                },
+                "declareAssign_x": {
+                  "short_description": "Declareert een variabele met de naam die na het woordje 'var' komt en wijst er de waarde aan rechterzijde van de expressie aan toe"
+                }
+              },
+              "name": "Variabelen"
+            }
+          },
+          "name": "Game Lab"
+        },
+        "spritelab": {
+          "categories": {
             "actions": {
               "name": "Acties"
-            },
-            "events": {
-              "name": "Gebeurtenissen"
             },
             "behaviors": {
               "name": "Gedrag"
             },
-            "loops": {
-              "name": "Lussen"
+            "comments": {
+              "name": "Opmerkingen"
             },
-            "variables": {
-              "name": "Variabelen"
-            },
-            "math": {
-              "name": "wiskundige"
-            },
-            "logic": {
-              "name": "Logica"
+            "events": {
+              "name": "Gebeurtenissen"
             },
             "functions": {
               "name": "Functies"
             },
+            "location": {
+              "name": "Plaatsen"
+            },
+            "logic": {
+              "name": "Logica"
+            },
+            "loops": {
+              "name": "Lussen"
+            },
+            "math": {
+              "name": "wiskundige"
+            },
+            "sprites": {
+              "name": "Sprites"
+            },
             "text": {
               "name": "Tekst"
             },
-            "comments": {
-              "name": "Opmerkingen"
+            "variables": {
+              "name": "Variabelen"
+            },
+            "world": {
+              "name": "Wereld"
             }
-          }
+          },
+          "name": "Sprite Lab"
+        },
+        "weblab": {
+          "name": "Web Lab"
         }
       }
     }

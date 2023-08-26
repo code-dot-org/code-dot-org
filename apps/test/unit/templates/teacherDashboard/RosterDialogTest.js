@@ -95,4 +95,19 @@ describe('RosterDialog', () => {
 
     analyticsSpy.restore();
   });
+
+  it('displays import and redirect button to new section setup', () => {
+    const wrapper = mount(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        isOpen={true}
+        classrooms={[fakeClassroom]}
+        loadError={null}
+        rosterProvider={OAuthSectionTypes.google_classroom}
+        userId={90}
+      />
+    );
+    expect(wrapper.find('#import-button-and-redirect')).to.have.lengthOf(1);
+  });
 });

@@ -1,4 +1,15 @@
-cookbook_file '/etc/gemrc' do
+# Clean up configuration file for our old, apt-installed rubygems if it's still
+# around. TODO: remove this block once all environments have been cleaned up
+file '/etc/gemrc' do
+  action :delete
+  only_if {File.exist? '/etc/gemrc'}
+end
+
+directory '/usr/local/etc' do
+  recursive true
+end
+
+cookbook_file '/usr/local/etc/gemrc' do
   action :create_if_missing
   source 'gemrc'
   mode '0644'

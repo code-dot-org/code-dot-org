@@ -7,6 +7,12 @@
   "catProcedures": "Funcións",
   "catText": "Texto",
   "catVariables": "Variables",
+  "designElementProperty_text": "texto",
+  "designElementProperty_textAlignment_left": "esquerda",
+  "designElementProperty_textAlignment_right": "dereita",
+  "designElementProperty_zOrder": "profundidade",
+  "designElementTheme_classic": "Clásico",
+  "designElementTheme_default": "Por defecto",
   "designWorkspaceHeader": "Espazo de traballo: ",
   "dropletBlock_drawImage_param4": "altura",
   "dropletBlock_setRGB_param3": "vermello",
@@ -18,7 +24,7 @@
   "nextLevel": "Parabéns! Vostede completou o desafío.",
   "no": "Non",
   "numBlocksNeeded": "Este desafío pode ser resolvido com %1 bloques.",
-  "repeatForever": "Repetir para sempre",
   "repeatDo": "faga",
+  "repeatForever": "Repetir para sempre",
   "yes": "Si"
 }

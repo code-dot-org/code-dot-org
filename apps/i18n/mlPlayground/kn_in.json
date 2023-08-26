@@ -1,127 +1,24 @@
 {
-  "navigateForward": "ಮುಂದುವರೆಯಿರಿ",
-  "navigateBack": "ಹಿಂದೆ",
-  "tryAgain": "ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
-  "navigateDone": "ಪೂರ್ಣಗೊಳಿಸು",
-  "saveProgress": "ಉಳಿಸಿ",
-  "correctAnswer": "ಸರಿ",
-  "modelCardPossibleValuesMinimum": "ನಿಮಿಷ",
-  "modelCardPossibleValuesMaximum": "ಗರಿಷ್ಠ",
-  "columnInspectorDescription": "ವಿವರಣೆ",
-  "columnDetailsMinimumValue": "ನಿಮಿಷ",
   "columnDetailsMaximumValue": "ಗರಿಷ್ಠ",
+  "columnDetailsMinimumValue": "ನಿಮಿಷ",
+  "columnInspectorDescription": "ವಿವರಣೆ",
+  "correctAnswer": "ಸರಿ",
   "dataCardLastUpdated": "ಕೊನೆಯದಾಗಿ ನವೀಕರಿಸಿದ್ದು",
   "datasets": {
-    "shoe_survey_toy": {
+    "abalone": {
       "fields": {
-        "weather": {
-          "id": "ಹವಾಮಾನ"
+        "Height": {
+          "id": "ಎತ್ತರ"
         },
-        "day": {
-          "id": "ದಿನ"
-        },
-        "shoe": {
-          "id": "ಶೂ"
+        "Length": {
+          "id": "ಉದ್ದ"
         }
       }
     },
-    "salsa_toy": {
+    "bike_sharing": {
       "fields": {
-        "onion": {
-          "id": "ಈರುಳ್ಳಿ"
-        },
-        "avocado": {
-          "id": "ಅವೊಕಾಡೋ"
-        },
-        "corn": {
-          "id": "ಜೋಳ"
-        },
-        "beans": {
-          "id": "ಬೀನ್ಸ್"
-        },
-        "lime": {
-          "id": "ನಿಂಬೆ"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "ಅಣಬೆಗಳು"
-        },
-        "lobster": {
-          "id": "ಲಾಬ್‌ಸ್ಟರ್"
-        },
-        "bacon": {
-          "id": "ಬೇಕನ್"
-        },
-        "cheese": {
-          "id": "ಚೀಸ್"
-        },
-        "meat": {
-          "id": "ಮಾಂಸ"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "music": {
-          "id": "ಸಂಗೀತ"
-        },
-        "food": {
-          "id": "ಆಹಾರ"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "ವಿಭಾಗ"
-        },
-        "Description": {
-          "id": "ವಿವರಣೆ"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "ಸ್ಟ್ರಾಬೆರಿ"
-        },
-        "lime": {
-          "id": "ನಿಂಬೆ"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "ಬದಿಗಳು"
-        },
-        "size": {
-          "id": "ಗಾತ್ರ"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "ಟೊಮಾಟೋ"
-        },
-        "avocado": {
-          "id": "ಅವೊಕಾಡೋ"
-        },
-        "chicken": {
-          "id": "ಚಿಕನ್"
-        },
-        "fruit": {
-          "id": "ಹಣ್ಣು"
-        },
-        "beans": {
-          "id": "ಬೀನ್ಸ್"
-        },
-        "cheese": {
-          "id": "ಚೀಸ್"
+        "Month": {
+          "id": "ತಿಂಗಳು"
         }
       }
     },
@@ -135,29 +32,27 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "ಶಾಲೆ"
-        },
-        "health": {
-          "id": "ಆರೋಗ್ಯ"
+        "banana": {
+          "id": "ಬಾಳೆಹಣ್ಣು"
         }
       }
     },
-    "naan_toy": {
+    "club_random_toy": {
       "fields": {
-        "chicken": {
-          "id": "ಚಿಕನ್"
+        "food": {
+          "id": "ಆಹಾರ"
         },
-        "lamb": {
-          "id": "ಮೇಕೆ"
-        },
-        "onion": {
-          "id": "ಈರುಳ್ಳಿ"
-        },
-        "cheese": {
-          "id": "ಚೀಸ್"
+        "music": {
+          "id": "ಸಂಗೀತ"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "ವಯಸ್ಸು"
         }
       }
     },
@@ -171,52 +66,52 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "ದೇಶ"
+        },
+        "Music": {
+          "id": "ಸಂಗಿತ"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "ಸ್ಕೋರ್"
-        },
         "Country": {
           "id": "ದೇಶ"
         },
         "Name": {
           "id": "ಹೆಸರು"
+        },
+        "Score": {
+          "id": "ಸ್ಕೋರ್"
         }
       }
     },
-    "safari_toy": {
+    "naan_toy": {
       "fields": {
-        "people": {
-          "id": "ಜನರು"
+        "cheese": {
+          "id": "ಚೀಸ್"
         },
-        "rhino": {
-          "id": "ರಿನೋ"
+        "chicken": {
+          "id": "ಚಿಕನ್"
         },
-        "elephant": {
-          "id": "ಆನೆ"
+        "lamb": {
+          "id": "ಕುರಿಮರಿ"
         },
-        "alligator": {
-          "id": "ಅಲಿಗೇಟರ್"
-        },
-        "trees": {
-          "id": "ಮರಗಳು"
+        "onion": {
+          "id": "ಈರುಳ್ಳಿ"
         }
       }
     },
-    "abalone": {
+    "nutrition": {
       "fields": {
-        "Length": {
-          "id": "ಉದ್ದ"
+        "Category": {
+          "id": "ವಿಭಾಗ"
         },
-        "Height": {
-          "id": "ಎತ್ತರ"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "ಜಲಚರ"
+        "Description": {
+          "id": "ವಿವರಣೆ"
         }
       }
     },
@@ -225,56 +120,100 @@
         "avocado": {
           "id": "ಅವೊಕಾಡೋ"
         },
-        "onion": {
-          "id": "ಈರುಳ್ಳಿ"
-        },
         "ginger": {
           "id": "ಶುಂಠಿ"
+        },
+        "onion": {
+          "id": "ಈರುಳ್ಳಿ"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "ಸಂಗಿತ"
+        "bacon": {
+          "id": "ಬೇಕನ್"
         },
-        "Country": {
-          "id": "ದೇಶ"
+        "cheese": {
+          "id": "ಚೀಸ್"
         },
-        "Internet": {
-          "id": "ಇಂಟರ್ನೆಟ್"
+        "lobster": {
+          "id": "ಲಾಬ್‌ಸ್ಟರ್"
         },
-        "Writing": {
-          "id": "ಬರೆಯುವುದು"
+        "meat": {
+          "id": "ಮಾಂಸ"
         },
-        "Achievements": {
-          "id": "ಸಾಧನೆಗಳು"
-        },
-        "Age": {
-          "id": "ವಯಸ್ಸು",
-          "description": "ವಯಸ್ಸು"
-        },
-        "Height": {
-          "id": "ಎತ್ತರ",
-          "description": "ಎತ್ತರ"
-        },
-        "Gender": {
-          "id": "ಲಿಂಗ",
-          "description": "ಲಿಂಗ"
+        "mushrooms": {
+          "id": "ಅಣಬೆಗಳು"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "ಬಾಳೆಹಣ್ಣು"
+        "lime": {
+          "id": "ನಿಂಬೆ"
+        },
+        "strawberry": {
+          "id": "ಸ್ಟ್ರಾಬೆರಿ"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "ವಯಸ್ಸು"
+        "alligator": {
+          "id": "ಮೊಸಳೆ"
+        },
+        "elephant": {
+          "id": "ಆನೆ"
+        },
+        "people": {
+          "id": "ಜನರು"
+        },
+        "rhino": {
+          "id": "ರಿನೋ"
+        },
+        "trees": {
+          "id": "ಮರಗಳು"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "ಅವೊಕಾಡೋ"
+        },
+        "beans": {
+          "id": "ಬೀನ್ಸ್"
+        },
+        "cheese": {
+          "id": "ಚೀಸ್"
+        },
+        "chicken": {
+          "id": "ಚಿಕನ್"
+        },
+        "fruit": {
+          "id": "ಹಣ್ಣು"
+        },
+        "tomato": {
+          "id": "ಟೊಮಾಟೋ"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "ಅವೊಕಾಡೋ"
+        },
+        "beans": {
+          "id": "ಬೀನ್ಸ್"
+        },
+        "corn": {
+          "id": "ಜೋಳ"
+        },
+        "lime": {
+          "id": "ನಿಂಬೆ"
+        },
+        "onion": {
+          "id": "ಈರುಳ್ಳಿ"
         }
       }
     },
@@ -288,15 +227,91 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "ಸಂಗಿತ"
+        "sides": {
+          "id": "ಬದಿಗಳು"
+        },
+        "size": {
+          "id": "ಗಾತ್ರ"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "ದಿನ"
+        },
+        "shoe": {
+          "id": "ಶೂ"
+        },
+        "weather": {
+          "id": "ಹವಾಮಾನ"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "ಆರ್ಟಿಸ್ಟ್"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "health": {
+          "id": "ಆರೋಗ್ಯ"
+        },
+        "school": {
+          "id": "ಶಾಲೆ"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "ಸಾಧನೆಗಳು"
+        },
+        "Age": {
+          "description": "ವಯಸ್ಸು",
+          "id": "ವಯಸ್ಸು"
         },
         "Country": {
           "id": "ದೇಶ"
+        },
+        "Gender": {
+          "description": "ಲಿಂಗ",
+          "id": "ಲಿಂಗ"
+        },
+        "Height": {
+          "description": "ಎತ್ತರ",
+          "id": "ಎತ್ತರ"
+        },
+        "Internet": {
+          "id": "ಇಂಟರ್ನೆಟ್"
+        },
+        "Music": {
+          "id": "ಸಂಗಿತ"
+        },
+        "Writing": {
+          "id": "ಬರೆಯುವುದು"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "ಜಲಚರ"
         }
       }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "ಗರಿಷ್ಠ",
+  "modelCardPossibleValuesMinimum": "ನಿಮಿಷ",
+  "navigateBack": "ಹಿಂದೆ",
+  "navigateDone": "ಪೂರ್ಣಗೊಳಿಸು",
+  "navigateForward": "ಮುಂದುವರೆಯಿರಿ",
+  "saveProgress": "ಉಳಿಸಿ",
+  "tryAgain": "ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
+  "uniqueOptionsWarningNotice": "ಟಿಪ್ಪಣಿ"
 }

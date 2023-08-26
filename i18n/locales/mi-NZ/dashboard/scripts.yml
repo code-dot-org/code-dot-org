@@ -108,6 +108,7 @@ mi:
           description_short: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga Tākaro Gumball!
           student_description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga Tākaro Gumball!
         starwars:
+          title: 'Star Wars: Te Hanga Ikarangi me te Waehere (JavaScript)'
           description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
           description_short: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
           student_description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
@@ -1295,3 +1296,59 @@ mi:
           lessons:
             lesson-3:
               name: Kupu Whakataki
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Kupu Whakataki
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-4:
+              display_name: Ngā Taurangi
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-4:
+              display_name: Ngā Koromeke
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-4:
+              display_name: Ngā Koromeke
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-4:
+              display_name: Ngā Koromeke
+            lessonGroup-6:
+              display_name: Ngā Takunetanga
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-4:
+              display_name: Ngā Koromeke
+            lessonGroup-5:
+              display_name: Ngā Takunetanga
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-6:
+              display_name: Ngā Koromeke
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ngā Koromeke Tauroto
+            lessonGroup-4:
+              display_name: Ngā Taumahi
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ngā Here
+            lessonGroup-5:
+              display_name: Ngā Taurangi

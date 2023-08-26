@@ -73,8 +73,9 @@ el:
       'CSD: For Loop': 'CSD: Για βρόχους'
       Cake Defender: Cake Defender
       Cake Survey: Έρευνα για Κέικ
-      Challenge: Εξάσκηση
+      Challenge: Πρόκληση
       Challenge Levels: Επίπεδα πρόκλησης
+      Challenge/Practice: Πρόκληση/Εξάσκηση
       'Challenge: Draw an Image': 'Εξάσκηση: Σχεδιασμός εικόνας'
       'Challenge: Lists': 'Πρόκληση: Λίστες'
       'Challenge: RGB Colors': 'Πρόκληση: Χρώματα RGB (κόκκινο, πράσινο, μπλε).'
@@ -210,6 +211,7 @@ el:
       Intro to Sprites: Εισαγωγή στα μοτίβα
       Intro to Variables: Εισαγωγή σε Μεταβλητές
       Introducing Sprite Lab: 'Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων'
+      Introduction to Arrays: Εισαγωγή στις συστοιχίες
       Introduction to Game Lab: Εισαγωγή στο Εργαστήριο Παιχνιδιού
       Isaac's Survey Data: Δεδομένα Εκτίμησης του Ισαάκ
       Iteration and Parameters: Επανάληψη και Παράμετρος
@@ -254,6 +256,7 @@ el:
       'Mini-Project: Royal Battle': 'Mini-Project: Βασιλική Μάχη'
       "Mini-Project: Snowflake #1": "Mini-Project: Χιονονιφάδα #1"
       "Mini-Project: Snowflake #2": "Mini-Project: Χιονονιφάδα #2"
+      'Mini-Project: Sticker Art': 'Μικρή Εργασία: Τέχνη με Αυτοκόλλητα'
       'Mini-Project: Swimming Fish': 'Mini-Project: Ψάρι που κολυμπάει'
       'Mini-Project: Swimming Fish (continued)': 'Mini-Project: Ψάρι που κολυμπάει (συνέχεια)'
       'Mini-Project: User Input Programs': 'Mini-Project: Προγράμματα Εισόδου Χρήστη'
@@ -274,9 +277,10 @@ el:
       Multiframe Animations: Κινήσεις πολλαπλών καρέ
       Musical Arrays: Μουσικοί Πίνακες
       My Loopy Robotic Friends - Unplugged Activity: Οι επαναλαμβανόμενοι ρομποτικοί φίλοι μου - αυτόνομη δραστηρίοτητα
+      My Online Neighborhood: Η Online Γειτονιά μου
       My Robotic Friends - Unplugged Activity: Οι ρομποτικοί φίλοι μου - αυτόνομη δραστηριότητα
       Naming Variables: Ορίζοντας Μεταβλητές
-      Nested Loops with the Bee: '''Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα'
+      Nested Loops with the Bee: Εμφωλευμένοι Βρόχοι με την Μέλισσα
       New Challenge Introduction: Εισαγωγή σε Καινούρια Πρόκληση
       New Shapes: Καινούρια Μεγέθη
       Orientation: Προσανατολισμός
@@ -412,20 +416,21 @@ el:
       Using Random Numbers: Χρησιμοποιώντας Τυχαίους Αριθμούς
       Using Training Data: Χρησιμοποιώντας  Δεδομένα Εκπαίδευσης
       Using the LED: Χρησιμοποιώντας LED
+      Using the Repeat Block: Χρήση του μπλοκ επανάληψης
       Using the Switch: Χρησιμοποιώντας το Διακόπτη
       Variables: Μεταβλητές
       Velocity: Ταχύτητα
       Velocity and the Counter Pattern: Ταχύτητα και το μοτίβο αντίθετης φοράς
       Video: Βίντεο
       Video - Encryption and Public Keys: Βίντεο - Κρυπτογράφηση και Δημόσια Κλειδιά
-      'Video - Maze Intro: Programming with Blocks': 'Βίντεο - Εισαγωγή στον Λαβύρινθο: Προγραμματισμός με Κύβους'
+      'Video - Maze Intro: Programming with Blocks': 'Βίντεο - Εισαγωγή στον Λαβύρινθο: Προγραμματισμός με Μπλοκ'
       'Video:  Debugging with the Step Button': 'Βίντεο: Αποσφαλμάτωση με το Κουμπί Βήμα'
       'Video:  Minecraft - The Agent': 'Βίντεο: Ναρκαλιευτής - Ο πράκτορας λογισμικού'
       'Video:  Text  and Prompts': 'Βίντεο: Κείμενο και Προτροπές'
       'Video: "If/Else"': 'Βίντεο: "Αν/Διαφορετικά"'
       'Video: AI: What is Machine Learning?': 'Βίντεο: Τεχνητή Νοημοσύνη: Τι είναι Μηχανική Μάθηση;'
       'Video: Amazon and Data': 'Βίντεο: Amazon και Δεδομένα'
-      'Video: Artist Intro with JR Hildebrand': 'Βίντεο: Εισαγωγή Καλλιτέχνη με τον JR Hildebrand'
+      'Video: Artist Intro with JR Hildebrand': 'Βίντεο: Εισαγωγή στον Καλλιτέχνη με τον JR Hildebrand'
       'Video: Artist Intro with JR Hildebrande': 'Βίντεο: Εισαγωγή Καλλιτέχνη με τον JR Hildebrand'
       'Video: Circuits and Logic': 'Βίντεο: Κυκλώματα και Λογική'
       'Video: Code Your Own Flappy Game': 'Βίντεο: Προγραμματίστε με κώδικα το δικό σας Flappy παιχνίδι'
@@ -443,7 +448,7 @@ el:
       'Video: Drawing in Game Lab - Part 1': 'Βίντεο: Σχεδίαση στο Εργαστήριο Παιχνιδιού-Μέρος 1'
       'Video: Events': 'Βίντεο: Γεγονότα'
       'Video: Follow The Digital Trail': 'Βίντεο: Ακολουθήστε το Ψηφιακό Ίχνος'
-      'Video: Getting Loopy': 'Βίντεο: Εμφωλευμένοι Βρόχοι'
+      'Video: Getting Loopy': 'Βίντεο: Εξερευνώντας τους βρόγχους'
       'Video: Happy Maps - Unplugged Activity': 'Βίντεο: Χαρούμενοι Χάρτες - Δραστηριότητα εκτός Διαδικτύου'
       'Video: Harvesting with Conditionals': 'Βίντεο: Σοδειά με "Υπό Συνθήκες"'
       'Video: How Search Works': 'Βίντεο: Πώς Λειτουργεί η Αναζήτηση'
@@ -475,7 +480,7 @@ el:
       'Video: Minecraft: Voyage Aquatic Introduction': 'Βίντεο: Ναρκαλιευτής (Minecraft): Υδάτινο Ταξίδι Εισαγωγή'
       'Video: Minecraft: Voyage Aquatic Repeat Until': 'Βίντεο: Ναρκαλιευτής (Minecraft): Υδάτινο Ταξίδι Επανάλαβε Μέχρι'
       'Video: Nested Loops': 'Βίντεο: Εμφωλευμένοι Βρόχοι'
-      'Video: Nested Loops with the Bee': 'Βίντεο: ''Ενθετοι/Περιεχόμενοι Βρόχοι με την Μέλισσα'
+      'Video: Nested Loops with the Bee': 'Βίντεο: Εμφωλευμένοι Βρόχοι με την Μέλισσα'
       'Video: Netflix and Data': 'Βίντεο: Netflix και Δεδομένα'
       'Video: Pair Programming': 'Βίντεο: Προγραμματισμός ανά ζεύγη'
       'Video: Pair Programming ': 'Βίντεο: Προγραμματισμός ανά ζεύγη'
@@ -484,10 +489,10 @@ el:
       'Video: Programming with Rey and BB-8': 'Βίντεο: Προγραμματίζοντας με τον Ρέι και BB-8'
       'Video: Properties': 'Βίντεο: Ιδιότητες'
       'Video: Publishing Your Website': 'Βίντεο: Δημοσιοποιώντας Τον Ιστότοπό Σας'
-      'Video: Repeat Blocks': 'Βίντεο: Κύβοι Επανάληψης'
-      'Video: Repeat Blocks with BB-8': 'Βίντεο: Κύβοι Επανάληψης με BB-8'
-      'Video: Repeat Blocks with the Artist': 'Βίντεο: Κύβοι Επανάληψης με τον Καλλιτέχνη'
-      'Video: Repeat Until Blocks': 'Βίντεο: Κύβοι Επανάληψης Έως'
+      'Video: Repeat Blocks': 'Βίντεο: Επανάλαβε μπλοκ'
+      'Video: Repeat Blocks with BB-8': 'Βίντεο: Επανάλαβε μπλοκ με τον BB-8'
+      'Video: Repeat Blocks with the Artist': 'Βίντεο: Επανάλαβε μπλοκ με τον Καλλιτέχνη'
+      'Video: Repeat Until Blocks': 'Βίντεο: Επανάλαβε Έως μπλοκ'
       'Video: Repeat Until Statements': 'Βίντεο: Εντολές Επανάλαβε Μέχρι'
       'Video: Sprites in Action': 'Βίντεο: Χαρακτήρες σε Δράση'
       'Video: Star Wars Project': 'Βίντεο: Έργο Star Wars (Πόλεμος των Άστρων)'
@@ -496,7 +501,7 @@ el:
       'Video: The Artist in Code Studio': 'Βίντεο: Ο καλλιτέχνης στο Code Studio'
       'Video: The Big Event - Unplugged Activity': 'Βίντεο: Το Μεγάλο Γεγονός - Δραστηριότητα εκτός Διαδικτύου'
       'Video: The Collector': 'Βίντεο: Ο Συλλέκτης'
-      'Video: The Harvester': 'Βίντεο: Η συλλεκτική μηχανή'
+      'Video: The Harvester': 'Βίντεο: Ο Θεριστής'
       'Video: Training Data & Bias': 'Βίντεο: Δεδομένα εκπαίδευσης & Προκαταλήψεις'
       'Video: Training Data and Bias': 'Βίντεο: Δεδομένα εκπαίδευσης και Προκαταλήψεις'
       'Video: Unplugged Variables in Envelopes': 'Βίντεο: Μεταβλητές σε Φακέλους για εκτός διαδικτύου'
@@ -513,7 +518,7 @@ el:
       Where'd They Go?: Πού θα πήγαιναν;
       While Loops with the Farmer: Βρόχοι Ενώ με τον Αγρότη
       'Widget: Text Compression': 'Γραφικό στοιχείο: Συμπύκνωση Κειμένου'
-      Wrap-up: συνοψίζω
+      Wrap-up: Περίληψη
       'You Choose: Improve Your App': 'Εσείς επιλέγετε: Βελτιώστε την Εφαρμογή Σας'
       'You Choose: Restaurant Recommendations': 'Εσείς Επιλέγετε: Προτάσεις Εστιατορίων '
       Your Personal Website: Το προσωπικό σας σάιτ

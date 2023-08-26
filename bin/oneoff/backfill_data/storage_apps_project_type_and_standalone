@@ -28,7 +28,7 @@ end
 
 def main
   if ARGV.length != 3
-    puts 'Usage: ./bin/oneoff/backfill_data/storage_apps_project_type_and_standalone '\
+    puts 'Usage: ./bin/oneoff/backfill_data/storage_apps_project_type_and_standalone ' \
       'start_index end_index batch_size'
     exit 1
   end

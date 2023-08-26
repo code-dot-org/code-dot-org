@@ -8,6 +8,9 @@
         "csd-2022/applab-overview": {
           "display_name": "ภาพรวม"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "ภาพรวมสนามเด็กเล่น"
+        },
         "csd-2022/css-overview": {
           "display_name": "ภาพรวม"
         },
@@ -29,6 +32,9 @@
         "csd-2022/html-overview": {
           "display_name": "ภาพรวม"
         },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "ความรู้เบื้องต้นเกี่ยวกับ AI Lab"
+        },
         "csd-2022/javascript": {
           "display_name": "จาวาสคริปต์"
         },
@@ -38,8 +44,14 @@
         "csd-2022/lists": {
           "display_name": "รายการ"
         },
+        "csd-2022/maker-toolkit": {
+          "display_name": "ชุดเครื่องมือผู้สร้าง"
+        },
         "csd-2022/maker-toolkit-overview": {
           "display_name": "ภาพรวม"
+        },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "โมเดลการ์ดในห้องปฏิบัติการ AI"
         },
         "csd-2022/other": {
           "display_name": "อาชีพอื่น ๆ"
@@ -50,17 +62,26 @@
         "csd-2022/patterns-overview": {
           "display_name": "ภาพรวม"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "กระบวนการแก้ปัญหา"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "กระบวนการแก้ปัญหา"
+        },
         "csd-2022/sprite-properties": {
           "display_name": "คุณสมบัติของสไปร์ท"
         },
         "csd-2022/variables": {
           "display_name": "ตัวแปร"
         },
+        "csd-2022/velocity": {
+          "display_name": "ความเร็ว"
+        },
         "csd-2022/web-lab": {
           "display_name": "เว็บแลป"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+          "content": "[][0]"
         }
       }
     }

@@ -72,6 +72,7 @@
   "createNotDraggableSPrite": "फक्त फूड स्प्राइट ड्रॅग करण्यायोग्य असावे. आपल्या पाळीव प्राण्याचे वर्तन काढून टाका.",
   "createTwoDraggableSprites": "आपल्या पाळीव प्राण्याचे अन्न आणि मित्र स्प्राईट यांना `ड्रॅग करण्यायोग्य` वागणूक सुरू करण्याची आवश्यकता आहे.",
   "createVariable": "तुम्ही व्हेरीएबल सेट करणे आवश्यक आहे.\n<xml>\n<block type=\"variables_set\">\n    <title name=\"VAR\">counter</title>\n    <value name=\"VALUE\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">0</title>\n      </block>\n    </value>\n  </block>\n  </xml> ",
+  "cscAdaptationsRightArrowKey": "*\"रन\"* दाबल्यानंतर एरो की दाबण्याची खात्री करा. तुम्ही प्ले एरिया अंतर्गत ऑरेंज बटणावर क्लिक करू शकता किंवा तुमच्या कीबोर्डवरील की दाबू शकता.",
   "debugBehaviors": "तुमच्या वर्तनाशी संबंधित एक चूक आहे.",
   "debugEvents": "इव्हेंटशी  संबंधित तुमची चूक आहे.",
   "debugGroups": "स्प्राइट्सच्या गटांशी संबंधित तुमची चूक आहे.",

@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:00:40.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -60,7 +65,7 @@
     "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "palette_category_at_start": "gamelab",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "instructions_important": "false",
     "show_debug_watch": "true",
     "start_in_animation_tab": "false",
@@ -91,13 +96,8 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:00:40.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:00:40.600+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collision detection challenge collider circle_2022\\\"\"],\"cloned_from\":\"CSD U3 collision detection challenge collider circle_2022\"},{\"changed_at\":\"2023-01-19 00:52:53 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-19 00:54:16 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:00:40.600+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collision detection challenge collider circle_2022\\\"\"],\"cloned_from\":\"CSD U3 collision detection challenge collider circle_2022\"},{\"changed_at\":\"2023-01-19 00:52:53 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-19 00:54:16 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 22:02:03 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

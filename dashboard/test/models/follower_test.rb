@@ -74,4 +74,73 @@ class FollowerTest < ActiveSupport::TestCase
     @follower.destroy
     refute CodeReviewGroupMember.exists?(follower_id: @follower.id, code_review_group_id: code_review_group.id)
   end
+
+  test 'deleting a follower removes the associated student family name' do
+    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+
+    student = @follower.student_user
+    student.family_name = 'test'
+    student.save!
+    student.reload
+
+    assert_equal 'test', student.family_name
+
+    @follower.destroy
+    student.reload
+
+    assert_nil student.family_name
+
+    DCDO.unstub(:get)
+  end
+
+  test 'family name removal is behind the DCDO flag' do
+    DCDO.stubs(:get).with('family-name-features', false).returns(false)
+
+    student = @follower.student_user
+    student.family_name = 'test'
+    student.save!
+    student.reload
+
+    assert_equal 'test', student.family_name
+
+    @follower.destroy
+    student.reload
+
+    assert_equal 'test', student.family_name
+
+    DCDO.unstub(:get)
+  end
+
+  test 'deleting one of many followers keeps the associated student family name' do
+    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+
+    student = @follower.student_user
+    student.family_name = 'test'
+    student.save!
+    student.reload
+
+    create(:follower, student_user: student)
+
+    assert_equal 'test', student.family_name
+
+    @follower.destroy
+    student.reload
+
+    assert_equal 'test', student.family_name
+
+    DCDO.unstub(:get)
+  end
+
+  test 'cannot create a follower for a PL section and a user with a family name' do
+    teacher = create(:teacher)
+    pl_section = create :section, :teacher_participants, user_id: teacher.id
+
+    pl_participant = create(:user)
+    pl_participant.family_name = 'TestFamName'
+    pl_participant.save!
+
+    assert_raises(ActiveRecord::RecordInvalid) do
+      create :follower, section: pl_section, student_user: pl_participant
+    end
+  end
 end

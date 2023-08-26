@@ -87,11 +87,31 @@ $container-width: 309px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+}
 
-    &:hover {
-      max-width: inherit;
-      overflow: inherit;
+.labelTooltip {
+  opacity: 1;
+  margin-bottom: 0.75em;
+  pointer-events: none;
+
+  :global(.tooltip-inner) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
+    border-radius: 5px;
+    color: #fff;
+    background-color: #222;
+
+    p {
+      color: #fff;
+      margin: 0;
     }
+  }
+
+  :global(.tooltip-arrow) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
+    left: 50%;
+    bottom: 0;
+    border: 15px solid transparent;
+    border-top: 15px solid #222;
+    transform: translate(-50%, calc(100% - 8px));
   }
 }
 
@@ -105,6 +125,10 @@ $container-width: 309px;
     font-size: 0.875em;
     margin: 0;
     color: $neutral_dark;
+  }
+
+  i {
+    font-size: 0.875em;
   }
 }
 
@@ -133,6 +157,8 @@ $container-width: 309px;
   a:link,
   a:visited {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -146,5 +172,27 @@ $container-width: 309px;
     // width calculated to ensure space between buttons is 12px
     // (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
     width: math.div($container-width - (2 * 16) - 12, 2);
+  }
+}
+
+.centerExpandedCard {
+  display: flex;
+}
+
+.cardsContainer:nth-child(3n + 1) .centerExpandedCard {
+  justify-content: flex-start;
+}
+
+.cardsContainer:nth-child(3n + 2) .centerExpandedCard {
+  justify-content: center;
+}
+
+.cardsContainer:nth-child(3n + 3) {
+  .centerExpandedCard {
+    justify-content: flex-end;
+  }
+
+  .arrowContainer:before {
+    background: $neutral_light;
   }
 }

@@ -14,5 +14,8 @@
   "feedback": "Endurgjöf",
   "share": "Deila leik",
   "startOver": "Byrja aftur",
-  "upload": "Hlaða upp"
+  "upload": "Hlaða upp",
+  "panelHeaderInstructions": "Leiðbeiningar",
+  "panelHeaderWorkspace": "Vinnusvæði: ",
+  "continue": "Áfram"
 }

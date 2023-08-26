@@ -3,15 +3,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {
-  switchToSection,
-  recordSwitchToSection,
-  recordOpenEditSectionDetails,
-} from './sectionHelpers';
+import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SmallChevronLink from '../SmallChevronLink';
-import {ReloadAfterEditSectionDialog} from './EditSectionDialog';
 import {
   beginEditingSection,
   getAssignmentName,
@@ -28,7 +23,6 @@ class TeacherDashboardHeader extends React.Component {
     selectedSection: sectionShape.isRequired,
     openEditSectionDialog: PropTypes.func.isRequired,
     assignmentName: PropTypes.string,
-    userId: PropTypes.number,
   };
 
   constructor(props) {
@@ -97,8 +91,6 @@ class TeacherDashboardHeader extends React.Component {
   };
 
   render() {
-    const testingUserId = -1;
-
     return (
       <div>
         <SmallChevronLink
@@ -127,36 +119,16 @@ class TeacherDashboardHeader extends React.Component {
           </div>
           <div style={styles.rightColumn}>
             <div style={styles.buttonSection}>
-              {this.props.userId % 10 === testingUserId && (
-                <Button
-                  __useDeprecatedTag
-                  href={this.editRedirectUrl(this.props.selectedSection.id)}
-                  className="edit-section-details-link"
-                  icon="gear"
-                  size="narrow"
-                  color="gray"
-                  text={i18n.editSectionDetails()}
-                  style={styles.buttonWithMargin}
-                />
-              )}
-              {this.props.userId % 10 !== testingUserId && (
-                <Button
-                  onClick={() => {
-                    this.props.openEditSectionDialog(
-                      this.props.selectedSection.id
-                    );
-                    recordOpenEditSectionDetails(
-                      this.props.selectedSection.id,
-                      'dashboard_header'
-                    );
-                  }}
-                  icon="gear"
-                  size="narrow"
-                  color="gray"
-                  text={i18n.editSectionDetails()}
-                  style={styles.buttonWithMargin}
-                />
-              )}
+              <Button
+                __useDeprecatedTag
+                href={this.editRedirectUrl(this.props.selectedSection.id)}
+                className="edit-section-details-link"
+                icon="gear"
+                size="narrow"
+                color="gray"
+                text={i18n.editSectionDetails()}
+                style={styles.buttonWithMargin}
+              />
               <DropdownButton
                 size="narrow"
                 color="gray"
@@ -167,7 +139,6 @@ class TeacherDashboardHeader extends React.Component {
             </div>
           </div>
         </div>
-        <ReloadAfterEditSectionDialog />
       </div>
     );
   }
@@ -208,9 +179,8 @@ export default connect(
     );
     let selectedSectionId = state.teacherSections.selectedSectionId;
     let selectedSection = state.teacherSections.sections[selectedSectionId];
-    let userId = state.currentUser.userId;
     let assignmentName = getAssignmentName(state, selectedSectionId);
-    return {sections, selectedSection, assignmentName, userId};
+    return {sections, selectedSection, assignmentName};
   },
   dispatch => {
     return {

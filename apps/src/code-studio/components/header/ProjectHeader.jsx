@@ -20,7 +20,9 @@ export default class ProjectHeader extends React.Component {
 
         {/* For Minecraft Code Connection (aka CodeBuilder) projects, add the
             option to import code from an Hour of Code share link */}
-        {appOptions.level.isConnectionLevel && <ProjectImport />}
+        {window.appOptions && appOptions.level.isConnectionLevel && (
+          <ProjectImport />
+        )}
       </div>
     );
   }

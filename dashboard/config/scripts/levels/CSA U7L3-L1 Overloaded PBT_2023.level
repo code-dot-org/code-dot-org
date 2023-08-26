@@ -1,15 +1,34 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-04-11T13:58:46.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Short one-sentence description of problem to solve.\r\n\r\n🎒 **IMPORT:** Import your <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO #1:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n✅ **TO DO #2:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClassName</code> class in the <strong>Documentation</strong> tab ⬆️ for a thing to look for!\r\n</div>\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for a thing to look for!\r\n</div>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🔦 Need help with your algorithm?</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n    \t<p>Here is one approach to solving this problem.</p>\r\n        <pre style=\"background-color: #333333; color: white;\">\r\nalgorithm for method to write\r\n</pre>\r\n    </div>\r\n</details>\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "start_sources": {
-      "Runner.java": {
-        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+      "Playlist.java": {
+        "text": "import java.util.ArrayList;\n\n/*\n * Represents a playlist of songs\n */\npublic class Playlist {\n\n  private ArrayList<Song> songs;    // The list of Song objects\n\n  /*\n   * Initializes songs to an empty list\n   */\n  public Playlist() {\n    this.songs = new ArrayList<Song>();\n  }\n\n  /*\n   * Returns the list of songs\n   */\n  public ArrayList<Song> getSongs() {\n    return songs;\n  }\n\n  /*\n   * Returns the number of songs in the playlist\n   */\n  public int getNumSongs() {\n    return songs.size();\n  }\n\n  /*\n   * Returns the song at the specified index\n   */\n  public Song getSong(int index) {\n    return songs.get(index);\n  }\n\n  /*\n   * Adds a song to the list of songs\n   */\n  public void addSong(Song newSong) {\n    songs.add(new Song(newSong.getTitle(), newSong.getArtist()));\n  }\n\n  /*\n   * Returns a String containing each song in the playlist\n   */\n  public String toString() {\n    String result = \"\";\n\n    for (Song song : songs) {\n      result += song + \"\\n\";\n    }\n\n    return result;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "Song.java": {
+        "text": "/*\n * Represents a song\n */\npublic class Song {\n\n  private String title;     // The title of a song\n  private String artist;    // The name of the artist of a song\n\n  /*\n   * Sets title and artist to the specified values\n   */\n  public Song(String title, String artist) {\n    this.title = title;\n    this.artist = artist;\n  }\n\n  /*\n   * Returns the title of the song\n   */\n  public String getTitle() {\n    return title;\n  }\n\n  /*\n   * Returns the artist of the song\n   */\n  public String getArtist() {\n    return artist;\n  }\n\n  /*\n   * Returns a String containing the song information\n   */\n  public String toString() {\n    return title + \" by \" + artist;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 3
+      },
+      "MusicPlayer.java": {
+        "text": "/*\n * Represents a music player\n */\npublic class MusicPlayer {\n\n  /*\n   * Returns a String containing the text \"Now playing: \"\n   * and the song's information\n   */\n  public String play(Song song) {\n    return \"Now playing: \" + song;\n  }\n\n  /* \n   * Returns a String containig each song in playlist\n   */\n  public String play(Playlist playlist) {\n    String result = \"First up: \" + playlist.getSong(0) + \"\\n\";\n\n    for (int index = 1; index < playlist.getNumSongs(); index++) {\n      result += \"Next up: \" + playlist.getSong(index) + \"\\n\";\n    }\n\n    return result;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "MusicRunner.java": {
+        "text": "import java.util.ArrayList;\n\npublic class MusicRunner {\n  public static void main(String[] args) {\n\n    // Creates several Song objects\n    Song queen = new Song(\"Bohemian Rhapsody\", \"Queen\");\n    Song lennon = new Song(\"Imagine\", \"John Lennon\");\n    Song weeknd = new Song(\"Blinding Lights\", \"The Weeknd\");\n    Song pharrell = new Song(\"Happy\", \"Pharrell Williams\");\n    Song bruno = new Song(\"Count on Me\", \"Bruno Mars\");\n\n    // Creates a Playlist object\n    Playlist music = new Playlist();\n    music.addSong(queen);\n    music.addSong(lennon);\n    music.addSong(weeknd);\n    music.addSong(pharrell);\n    music.addSong(bruno);\n\n    // Creates a MusicPlayer object\n    MusicPlayer player = new MusicPlayer();\n\n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n\n    \n\n\n\n    \n    \n  }\n}",
         "isVisible": true,
         "tabOrder": 0
       }
@@ -18,11 +37,6 @@
 
     ]
   },
-  "game_id": 68,
-  "published": true,
-  "created_at": "2023-04-11T13:58:46.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-04-11T13:58:46.948+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L7d_2023\\\"\"],\"cloned_from\":\"CSA U7L2-L7d_2023\"},{\"changed_at\":\"2023-04-11 13:58:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T13:58:46.948+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L7d_2023\\\"\"],\"cloned_from\":\"CSA U7L2-L7d_2023\"},{\"changed_at\":\"2023-04-11 13:58:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-11 20:03:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-11 20:03:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-11 20:03:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-11 20:03:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

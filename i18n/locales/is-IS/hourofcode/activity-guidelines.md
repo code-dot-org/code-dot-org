@@ -8,271 +8,271 @@ title: Leiðarvísar kennsluefnis
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Leiðbeiningar um að búa til og senda námskeið og kennslustundir fyrir Hour of Code™ og Computer Science Education Week
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org hýsir margs konar Hour of Code™ starfsemi, kennslustundir og myndbönd á Code.org og Hour of Code vefsíðunum. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+Langar þig til að leggja fram eigin sjálf-leiðsögn einkatími, kennara-leiddur kennslustund, eða vélfærafræði/framleiðandi virkni sem útskýrir tölvunarfræði meginreglu? Taktu þátt í þessari alþjóðlegu hreyfingu og hjálpaðu þátttakendum um allan heim að byrja með klukkutíma kóða eða fara lengra með fjölkennslu, dagslanga eða vikulanga starfsemi.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2022, will not be listed for 2022's Hour of Code.)** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**Eftir að hafa lesið leiðbeiningarnar geturðu sent inn virkni þína í gegnum okkar [Hour of Code™ Activity Uppgjöf síðu](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Þú getur sent inn starfsemi hvenær sem er, en frestur til að taka þátt í hverju almanaksári er 1. október. (Til dæmis, allir starfsemi berast eftir 1. október 2023, verður ekki skráð fyrir Hour 2023 er Code.)** Ef þú hefur einhverjar spurningar um starfsemi þína, vinsamlegast hafðu samband við okkur á support@code.org.
 
-A few tips:
+Nokkrar ábendingar:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **Sendu inn fleiri en eina virkni**: Ef þú hefur byggt upp athafnir fyrir mismunandi stig, mismunandi aldur eða aðra flokka skráum við athafnir þínar sérstaklega svo hver kennari geti fundið það rétta fyrir kennslustofuna sína. Sendu hverja einkatími eða virkni fyrir sig. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. Eftir það munum við gera a bestur tilraun til að endurskoða sem flest áður en Hour of Code hefst.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **Handan byrjendakennslu**: Til viðbótar við kennslustundir fyrir kennara og nemendur sem eru að læra tölvunarfræði í fyrsta skipti, skráum við námsreynslu fyrir tölvunarfræði-kunnátta kennslustofur sem vilja fara aðeins lengra! Hjálpaðu okkur með því að leggja fram kennslustundir fyrir námskeið sem eru nú þegar ánægð með grunnatriði.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Efnissvið**: Hafa mikla kennslustund hugmynd sem samþættir tölvunarfræði í stærðfræði? Saga? Tungumál Listir? Vísindi? List? Eða annað efni? Við höfum fengið fjölmargar beiðnir frá kennurum sem vilja tengja Hour of Code við sitt fagsvið. Kennarar geta síað fyrir tegund kennslustofunnar (bekk hljómsveit eða fagsvæði) þannig að við þurfum hjálp þína við að fylla í eyður til að bjóða upp á starfsemi í kennslustofunni eða kennslustundaráætlanir sem tengjast CS öllum helstu efnissviðum fyrir mismunandi bekkjarhljómsveitir. Við höldum áfram að hafa “Tölvunarfræði” flokk fyrir kennara sem eru að leita að almennri CS starfsemi.
 
 <a id="top"></a>
 
-## Index:
+## Vísitala:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Hvað á að leggja](#whatsubmit)
+- [Almennar leiðbeiningar um að búa til klukkustund af kóða™ virkni](#guidelines)
+- [Hvernig á að senda inn](#submit)
+- [Hvernig starfsemi verður metin](#inclusion)
+- [Tillögur um að hanna virkni þína](#design)
+- [Leiðbeiningar um vörumerki](#tm)
+- [Pixel mælingar](#pixel)
+- [Að stuðla að virkni þinni, CsedWeek og Hour of Code](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## Hvað á að leggja
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Sjálfstýrð ráðgáta eða leikur ([dæmi](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+Þessi starfsemi er hönnuð fyrir nemendur að sjálf-beina í gegnum einkatími. Þeir þurfa ekki mikið kennslu frá kennara eða kennara prep vinnu.
 
 **Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Nú þegar hundruð þúsunda kennara hafa reynt Hour of Code, margir kennslustofur eru tilbúin fyrir fleiri skapandi starfsemi sem kenna grunnatriði tölvunarfræði. Til að hjálpa fleiri háþróaður kennara finna innblástur, safna við og curate “kennari-leiddi” kennslustundir og starfsemi áætlanir fyrir Hour of Code vopnahlésdagurinn.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+Ein tegund af starfsemi sem við munum lögun fyrir reynda kennara eru “opinn sandkassi” sköpun verkefni. Starfsemi sem hvetur nemendur til að byggja upp eigin app, leik, vefsíðu eða önnur verkefni. Ef auðveldara almennilega, fleiri opinn-endir starfsemi getur betur sýna skapandi eðli tölvunarfræði.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+Sumir kennarar geta einnig kjósa að hýsa Hour of Code starfsemi sem fylgir hefðbundnum kennslustund sniði frekar en leiðbeinandi-ráðgáta/leikur reynslu.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+Þú getur byrjað með þetta [sniðmát](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) fyrir kennsluáætlunina þína.
 
-**Activities for teachers in other subjects/fields**
+**Starfsemi fyrir kennara í öðrum viðfangsefnum/sviðum**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+Við erum einnig með kennsluáætlanir sem eru hannaðar fyrir mismunandi efnissvið. Til dæmis, a einn-klukkustund kennslustund áætlun fyrir kennslu kóða í rúmfræði bekknum. Eða mad-lib æfing fyrir enska bekknum. Eða skapandi quiz-sköpun starfsemi fyrir sögu bekknum. Þetta getur hjálpað til við að ráða kennara á öðrum efnissviðum til að leiðbeina klukkutíma kóðastarfsemi sem er einstök fyrir sitt svið, en sýna fram á hvernig CS getur haft áhrif á og aukið mörg mismunandi efnissvið.
 
-Examples:
+Dæmi:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- Spegill Images (starfsemi fyrir listakennara)
+- Arduino virkni fyrir eðlisfræðikennara
+- Saga tækni starfsemi fyrir sögukennara
+- Og sjá [þennan lista](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) til að fá fleiri hugmyndir frá kennurum (eða bættu þínum eigin við listann til að hvetja aðra)
 
-**For students with special needs**
+**Fyrir nemendur með sérþarfir**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+Ef þú býrð til virkni eða einkatími sem er hannað fyrir nemendur með sérþarfir, vinsamlegast hringdu í það út í lýsingunni. Einkum eru mjög fáir möguleikar fyrir sjónskertan. Ef starfsemi þín er hönnuð fyrir þennan markhóp, vinsamlegast láttu okkur vita.
 
-[**Back to the top**](#top)
+[**Aftur á toppinn**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Almennar leiðbeiningar um að búa til klukkustund af kóðastarfsemi
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+Markmið Hour of Code er að gefa byrjendum aðgengilegt fyrsta bragð af tölvunarfræði eða forritun. Tónninn ætti að vera að:
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability. 
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online. 
+- Hver sem er getur lært tölvunarfræði - óháð aldri, kyni, kynþætti eða hæfileika/fötlun.
+- Tölvunarfræði er tengdur við a breiður fjölbreytni af sviðum og áhugamál. Allir ættu að læra það!
+- Hvetja nemendur til að búa til eitthvað einstakt sem hægt er að deila með foreldrum/vinum eða á netinu.
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+Starfsemin ætti að kenna tölvunarfræði hugtak eins og lykkjur, conditionals, dulkóðun, eða hvernig internetið virkar. Starfsemi getur einnig kennt um hvernig tölvunarfræði tengist raunverulegum heimstörfum, atburðum eða sögu. Til dæmis, að kenna UX hönnun til að búa til forrit sem eru þýðingarmikil fyrir áhorfendur eða málstað. Við aftra starfsemi sem einblína á setningafræði forritun frekar en hugtökin. Til dæmis munum við skrá, en ekki varpa ljósi á, starfsemi sem kennir HTML. Að sama skapi letjum við loka forritunarkennslu sem einbeita sér að því að stilla/breyta stillingarmöguleikum frekar en að læra hvernig á að móta reiknirit eða ferli.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Starfsemi sem krefst app-install, skrifborð app, eða leikja-hugga reynslu eru í lagi en ekki hugsjón. Við munum ekki telja upp athafnir sem krefjast skráningar eða greiðslu. (Vélfærafræði starfsemi getur krafist vélfærafræði kaupa.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*Student LED (Self-Guided) Snið:* Upprunalega Hour of Code var byggt að mestu leyti á velgengni sjálf-leiðsögn námskeið eða kennslustundir, mögulega auðveldað af kennaranum. Það eru fullt af núverandi valkostum, en ef þú vilt búa til nýjan, þessi starfsemi ætti að vera hönnuð þannig að þeir geta verið gaman fyrir nemanda að vinna einn, eða í kennslustofunni sem kennari hefur lágmarks prep eða CS bakgrunn. Þeir ættu að veita leiðbeiningar fyrir nemendur í stað opinnar klukkustundar langrar áskorunar. Helst eru leiðbeiningarnar og námskeiðin samþætt beint í forritunarvettvanginn, til að forðast að skipta um flipa eða glugga á milli námskeiðsins og forritunarpallsins.
 
 To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
 
-[**Back to the top**](#top)
+[**Aftur á toppinn**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## Hvernig á að leggja fram
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+Farðu á [Hour of Code™ Activity Uppgjöf síðu](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) og kláraðu spurningarnar til að leggja fram virkni þína.
 
-What you’ll need:
+Það sem þú þarft:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* Nafn og tölvupóstur aðaltengiliðar sem táknar framlagða starfsemi
+* Virkni Nafn (getur ekki innihaldið “Klukkustund kóðans” í nafninu)
+* URL tengill á virkni
+* Virkni lýsing (max stafafjöldi: 400) 
+    * Vinsamlegast láttu fylgja lýsingunni hvort það er aðallega nemenda-leiðsögn eða kennara-auðveldað. Auk, sumir skólar hafa áhuga á að vita hvort Hour of Code starfsemi fjallar Common Core eða Next Generation Science Standards. Ef starfsemin fjallar tiltekna staðla, íhuga þar á meðal þessar upplýsingar.
+* Mælt er með stig/stigum fyrir ætlaða notendur. Þú getur vísað til \[Tölvunarfræði Kennarasambands K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) fyrir bekk viðeigandi tölvunarfræði hugtök. Dæmi bekk stigum eru: 
+    * Leikskóli - 1. bekkur (aldur 4-6)
+    * Einkunnir 2-5 (aldur 7-10)
+    * Einkunnir 6-8 (aldur 11-13 ára)
+    * Einkunnir 9+ (aldur 14+)
+* Listi yfir efnissvið sem starfsemin nær yfir (auk tölvunarfræði). Til dæmis, ef stærðfræðikennari getur notað virkni þína til að kenna um horn eða fleygboga skaltu skrá sem stærðfræði. Ef þú ert með vitlausa libs starfsemi sem kennir sagnir/nafnorð/etc. velja tungumál listir.
+* Listi yfir forritunarmál sem virkni þín kennir. þ.e. C/C ++, Java, JavaScript osfrv. eða tungumál óháð (fyrir kennsluáætlanir sem hægt er að kenna á mörgum tungumálum)
+* Listi yfir studd náttúruleg tungumál. Athugaðu: Tungumál uppgötvun er á ábyrgð athafnaveitunnar; við munum beina öllum notendum á eina vefslóðina sem gefin er upp.
+* Hvaða reynslu ætti kennari að hafa til að nota virkni þína? (td byrjandi eða þægilegt.) Og, hvaða stigi reynslu ættu nemendur að hafa? Ef þú vilt undirbúa fleiri háþróaður Hour of Code™ Starfsemi, vinsamlegast láttu fyrirfram þekkingu sem þörf er á í lýsingu á starfsemi þinni.
+* Lengd starfsemi þinnar 
+    * Aðeins 1 klukkustund
+    * 1 klukkustund með eftirfylgni
+    * 2-6 klukkustundir (getur verið margar kennslustundir)
+* Listi yfir aðgengi gistingu, ef starfsemi þín hefur þá. Þetta felur í sér samhæfni skjálesara, texta-til-tal getu, notkun hár-andstæða litum, eða önnur húsnæði gert fyrir nemendur með fötlun.
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### Viðbótarupplýsingar sem þú þarft þegar þú sendir inn kennsluáætlun
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* Tengill á kennsluáætlun þína. Þetta getur verið vefsíða, dropbox hlekkur, google drif eða svipuð þjónusta.
+* Hvaða hugbúnað og/eða vélbúnað kennarinn þarf til að gera kennsluáætlun þína (Scratch? Vélmenni? Ekkert?)
 
-#### Additional things you’ll need when submitting Online Activities
+#### Önnur atriði sem þú þarft þegar þú sendir inn starfsemi á netinu
 
-* Name and logo of your organization
-* Whether it is COPPA compliant or not
-* A URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
+* Nafn og lógó fyrirtækis þíns
+* Hvort sem það uppfyllir COPPA eða ekki
+* Vefslóð hlekkur á minnispunkta kennara (valfrjálst)
+* Listi yfir prófað/samhæfa palla: 
+    * Vefur undirstaða: Hvaða palla hefur þú prófað? 
+        * OS - Mac, Win og aðrar útgáfur
+        * Vafrar - IE11, Edge, Firefox, Króm, Safari
+        * iOS farsíma Safari (farsími-bjartsýni)
+        * Android Chrome (farsíma-bjartsýni)
+    * Non vefur-undirstaða: tilgreina vettvang fyrir innfæddur kóða (Mac, Win, iOS, Android, XBox, annað)
     * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
+* Skjámynd eða markaðssetning mynd af Hour Code virkni. Vinsamlegast sendu að minnsta kosti eina mynd með 4:3 mál. Það ætti að vera að minnsta kosti 520px með 390px. Þessi mynd ætti að hafa ENGINN texta á sér (annan en lógóið þitt) til að gera hana aðgengilegri fyrir þá sem ekki eru enskumælandi. Ef viðeigandi mynd er ekki veitt gætum við tekið okkar eigin skjámynd af námskeiðinu þínu EÐA við gætum valið að skrá það ekki. Allar myndir verður að senda inn sem slóðatengil á.jpg, .jpeg eða .png.
+* Til þess að fylgjast nákvæmlega með þátttöku þurfa samstarfsaðilar þriðja aðila að innihalda 1-pixla mælingar myndir á fyrstu síðu Hour of Code námskeiðanna. Sjá kaflann [Rekja Pixel](#pixel) hér að neðan til að fá frekari upplýsingar.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+    * Deildu á samfélagsmiðlum sem þeir luku Hour of Code
+    * Fá vottorð um að þeir hafi lokið klukkustund kóðans
+    * Sjá topplista um hvaða lönd/borgir eru með hæsta þátttökuhlutfall í starfsemi Hour of Code
     * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* (Valfrjálst) Við gætum fylgst með netkönnun/eyðublaðstengli þar sem beðið er um skýrslu um eftirfarandi starfsmælikvarða: 
+    * Fyrir starfsemi á netinu (sérstaklega snjallsíma/spjaldtölvuforrit): 
+        * Fjöldi notenda
+        * Hversu margir lokið verkefni
+        * Meðaltími á verkefni
+        * Fjöldi heildarlína af kóða sem skrifaðar eru yfir alla notendur
+        * Hversu margir héldu áfram til frekara náms (mælt sem allir notendur sem lýkur verkefninu og fara í fleiri verkefni á síðuna þína)
+    * Fyrir ótengda starfsemi 
+        * Fjöldi niðurhals af pappírsútgáfu af starfsemi (ef við á)
 
-#### Additional things you’ll need when submitting Robotics
+#### Viðbótarupplýsingar sem þú þarft þegar þú sendir inn vélfærafræði
 
-* If you submit a robotics activity, we need to know the cost per student for robotics.
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* Ef þú sendir inn vélfærafræði, þurfum við að vita kostnað á nemanda fyrir vélfærafræði.
+* Til að meta vélfærafræði starfsemi fyrir þátttöku á vefsíðunni, munum við þurfa að senda sýnishorn pökkum til gagnrýnenda.
 
-[**Back to the top**](#top)
+[**Aftur á toppinn**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## Hvernig starfsemi verður metin
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+Fjölbreytt nefnd tölvunarfræðikennara mun raða framtölum út frá eigindlegum og megindlegum forsendum. Öll starfsemi sem passar við grunnviðmiðanir verður skráð. Kennarar geta síað og flokkað til að finna bestu starfsemina fyrir kennslustofuna sína.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+The rubrik til að meta starfsemi og kennslustund áætlanir mun leita að eftirfarandi forsendum um alla starfsemi og staða þá í samræmi við það:
 
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+- Hár framleiðslu gæði
+- Efla nám allra lýðfræðilegra hópa (ESP. nemendur sem eru undirfulltrúar í CS, eins og ungar konur, nemendur frá jaðarsettum kynþátta- og þjóðernishópum og fötluðum nemendum)
+- Náms (kennir tölvunarfræði hugtök vel)
+- Skemmtilegt og grípandi
+- Hvetur nemendur til að búa til eitthvað einstakt sem þeir geta deilt (Fyrir yngri nemendur: með foreldrum og bekkjarfélögum. Fyrir eldri nemendur: á Netinu)
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+Ef endurskoðunarnefndin metur starfsemina núll í framleiðslugæðum (vegna slæmra galla eða leiðbeininga sem gera það mjög erfitt að nota), til að stuðla að námi í undirfulltrúum hópa (vegna kynþáttahaturs/kynlífsfræðilegs efnis), í menntunargildi (kennir ekki CS hugtök) eða gaman/grípandi (vegna þess að vera erfið/letjandi fyrir nemendur að vinna í gegnum), verður starfsemin ekki skráð.
 
-In addition, in order to be listed, all activities must:
+Að auki, til þess að vera skráð, skal öll starfsemi:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up 
-- Require no payment (exception for robotics activities these can require robot/kit purchase)
+- Vertu viðeigandi fyrir opinbera skólastofu (engar byssur, ekkert skýrt/þroskað efni, ekkert trúarlegt efni osfrv.)
+- Krefjast ekki skrá sig
+- Krefjast engrar greiðslu (undantekning fyrir vélfærastarfsemi sem þessi getur krafist kaupa á vélmenni/búnaði)
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+Fyrir sjálf-beint starfsemi fyrir nýja kennara og nemendur endurskoðun nefndarinnar verður að leita að því hvort:
 
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+- Kennarar geta notað kennsluefnið eða virkni án bakgrunns í tölvunarfræði
+- Nemendur geta náð árangri með engan bakgrunn í tölvunarfræði
+- Nemendur geta beint sér í gegnum kennsluefnið án leiðsagnar foreldra eða kennara
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+Kennarar og nemendur munu geta leitað í gegnum og síað lista okkar yfir athafnir byggðar á síum eins og bekk, reynslustigi, efni, vélbúnaði osfrv. Sjálfgefið munum við sýna kennslustundaráætlanir og athafnir fyrst að:
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+- Fá hæstu einkunnir frá endurskoðunarnefndinni
+- Eru eina klukkustund sjálf-beint starfsemi hannað fyrir byrjendur (nemendur og kennara)
+- Höfða til margs notenda (á vettvangi, tungumálum og aldri)
+- Krefjast enga uppsetningu
+- Eru ný á þessu ári
 
-[**Back to the top**](#top)
+[**Aftur á toppinn**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## Tillögur um að hanna einnar klukkustundar sjálfsleiðsögn námskeið
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Þú getur falið í sér [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) í kennslunni þinni, en þetta er ekki krafist. Ef þú notar merki Hour of Code, sjá leiðbeiningar um vörumerki hér að neðan. <u>Undir engum kringumstæðum er hægt að nota merkið og nafnið Code.org.</u> Báðir eru vörumerktir og ekki er hægt að blanda þeim saman við vörumerki þriðja aðila án skriflegs leyfis.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Gakktu úr skugga um að meðalnemandinn geti klárað þægilega á klukkutíma.** Íhugaðu að bæta við opinni virkni í lokin fyrir nemendur sem fara hraðar í gegnum kennslustundina. Mundu að flestir krakkarnir verða alger byrjendur í tölvunarfræði og erfðaskrá.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Ekki aðeins eru nemendur nýliði, sumir kennarar eru eins og heilbrigður. Hafa upplýsingar eins og:
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming? 
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+- Hvaða kerfum og vöfrum virkar einkatími best á?
+- Virkar það á smartphones? Töflur?
+- Mælir þú með parforritun?
+- Dómgreind til notkunar í kennslustofu? Til dæmis ef það eru myndbönd, ráðleggja kennurum að sýna myndskeiðin á spáðum skjá fyrir alla skólastofuna til að skoða saman
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+**Fella inn endurgjöf í lok starfseminnar.** (td “Þú lauk 10 stigum og lært um lykkjur! Frábært starf!”)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Hvetja nemendur til að senda á samfélagsmiðla (þar sem við á) þegar þeir hafa lokið.** Til dæmis “Ég hef gert klukkutíma af kóða með ________ Hefur þú? #HourOfCode” eða “Ég hef gert #HourOfCode sem hluta af #CSEdWeek. Hefur þú? @Scratch.” Notaðu hashtag **#HourOfCode** (með hástöfum H, O, C)
 
-**Create your activity in Spanish or in other languages besides English.**
+**Búðu til virkni þína á spænsku eða á öðrum tungumálum fyrir utan ensku.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Útskýrðu eða tengdu starfsemina við félagslega þýðingarmikið samhengi.** Tölvuforritun verður stórveldi þegar nemendur sjá hvernig hún getur breytt heiminum til hins betra!
 
 **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
-[**Back to the top**](#top)
+[**Aftur á toppinn**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Leiðbeiningar um vörumerki
 
-Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+Klukkustund Code® og Hora del Código® eru skráð vörumerki Code.org. Margir af einkatími samstarfsaðila okkar hafa notað okkar “Hour of Code” vörumerki á vefsíðum sínum í tengslum við Hour þeirra Code starfsemi. Við viljum ekki koma í veg fyrir þessa notkun, en við viljum ganga úr skugga um að notkunin falli innan nokkurra marka:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. Nota “Hour of Code” aðeins í tengslum við non-auglýsing CS Education starfsemi í tengslum við Hour of Code herferð, og í engum öðrum tilgangi.
+2. Allar tilvísanir í “Hour of Code” ætti að nota á þann hátt sem bendir ekki til þess að það sé þitt eigið vörumerki, heldur að það vísi frekar í Hour of Code sem grasrótarhreyfingu. Gott dæmi: “Taktu þátt í klukkustund Code® á AcmeCorp.com”. Slæmt dæmi: “Prófaðu klukkustund af kóða með ACME Corp”.
+3. Notaðu “®” uppskrift á áberandi stöðum sem þú nefnir “Hour of Code”, bæði á vefsíðunni þinni og í applýsingum.
+4. Hafa tungumál á síðunni (eða í fæti), þar á meðal tengla á Hour of Code, CsedWeek og Code.org vefur staður, sem birtir bæði eftirfarandi: a. Klukkustund Code® og Hora del Código® eru skráð vörumerki Code.org; og b. “The '[Hour of Code](http://hourofcode.com/) ® er landsvísu frumkvæði af [Code.org](http://code.org/) til að kynna milljónir nemenda til eina klukkustund tölvunarfræði og tölvuforritun.”
+5. Ekki nota “Hour of Code” í nöfnum forrita.
+6. Ekki nota “Hour of Code” í tengslum við neina notkun eða tilgang í atvinnuskyni (t.d., að setja Hour of Code starfsemi þína á bak við paywall; stuðla að annarri greiddri þjónustu sem hluta af klukkustund af Code starfsemi þinni; selja Hour of Code varningi).
+7. Ekki nota “Hour of Code” í tengslum við neina starfsemi sem krefst innskráningar eða reikningssköpunar.
 
-[**Back to the top**](#top)
+[**Aftur á toppinn**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Pixel mælingar
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+Til þess að fylgjast betur með þátttöku biðjum við alla einkatími samstarfsaðila að láta 1-pixla rekja mynd á fyrstu síðu Hour of Code námskeiðanna. Pixel-myndin verður aðeins að vera á upphafssíðunni. Ekki taka með á neinum tímabundnum síðum námskeiðsins.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+Þetta mun leyfa okkur að telja notendur sem gera þinn Hour of Code einkatími. Það mun leiða til nákvæmari þátttökutalningar fyrir námskeiðið þitt.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Ef einkatími þinn er samþykktur og innifalinn á lokatími síðunni, Code.org mun veita þér einstakt rekja pixla fyrir þig til að samþætta í kennsluefni þínu. Sjá dæmi hér að neðan.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+ATH: þetta er ekki mikilvægt að gera fyrir uppsetningarforrit (iOS/Android forrit eða skjáborðsforrit)
 
-Example tracking pixels for Dance Party:
+Dæmi mælingar pixla fyrir Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**Aftur á toppinn**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## Kynna starfsemi þína, CsedWeek, og Hour of Code
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+Vinsamlegast kynna starfsemi þína á netið þitt! Beindu þeim á Hour of Code síðuna þína. Notendur þínir eru mun líklegri til að bregðast við pósti frá þér um starfsemi þína. Notaðu alþjóðlegu Hour of Code herferðina á tölvufræðikennsluviku sem afsökun til að hvetja notendur til að bjóða öðrum að taka þátt í og hjálpa okkur að ná til fleiri nemenda!
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- Lögun klukkustund af kóða og CSEDWeek á vefsíðunni þinni. Ex: <http://www.tynker.com/hour-of-code>
+- Stuðla að klukkustund af kóða með því að nota samfélagsmiðla, hefðbundna fjölmiðla, póstlista osfrv. Með því að nota hashtag #HourOfCode (með hástöfum H, O, C)
+- Hýsaðu staðbundinn viðburð eða biðjið starfsmenn þína um að halda viðburð í skólum eða samfélagshópum.
+- Sjá okkar [úrræði Kit](https://hourofcode.com/us/promote) fyrir frekari upplýsingar.
 
-[**Back to the top**](#top)
+[**Aftur á toppinn**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+{{ signup_button }}

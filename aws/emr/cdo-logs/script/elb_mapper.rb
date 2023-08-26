@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 # The list of tutorials. Note that relative order matters, e.g., it is important
 # that "starwarsblocks" proceeds "starwars" as the latter will match the regex
@@ -87,13 +87,13 @@ ARGF.each do |line|
     # Using LONG_VALUE_SUM instructs hadoop's streaming aggregate class how to
     # aggregate. Using the date, type (begin, beginpng, 443), and tutorial as
     # the key gives breakdowns by day, type, and tutorial.
-    if line.include? "begin" + "\/" + t
+    if line.include? "begin" + "/" + t
       puts LONG_VALUE_SUM + date + " begin " + t + "\t" + "1"
       break
     elsif line.include? "begin_" + t + ".png"
       puts LONG_VALUE_SUM + date + " beginpng " + t + "\t" + "1"
       break
-    elsif line.include? "443" + "\/" + t
+    elsif line.include? "443" + "/" + t
       puts LONG_VALUE_SUM + date + " 443 " + t + "\t" + "1"
       break
     end

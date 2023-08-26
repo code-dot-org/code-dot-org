@@ -8,271 +8,271 @@ title: Richtlijnen voor de tutorials
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Richtlijnen voor het maken en indienen van tutorials en lessen voor Hour of Code™ en Computer Science Education Week
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org biedt verschillende Hour of Code™ -activiteiten, lessen en video's op de websites van Code.org en Hour of Code. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+Wil je je eigen zelfgeleide tutorial, les onder leiding van een leraar of robotica/makeractiviteit indienen waarin een computerwetenschappelijk principe wordt uitgelegd? Sluit je aan bij deze wereldwijde beweging en help deelnemers over de hele wereld om aan de slag te gaan met een uur code of ga verder met activiteiten die meerdere lessen, dagen of weken duren.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2022, will not be listed for 2022's Hour of Code.)** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**Na het lezen van de richtlijnen kun je je activiteit indienen via onze [Hour of Code™ Activity Submission pagina](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Je kunt op elk moment een activiteit indienen, maar de deadline voor opname in een bepaald kalenderjaar is 1 oktober. (Activiteiten die na 1 oktober 2023 worden ontvangen, worden bijvoorbeeld niet vermeld in de Hour of Code van 2023.)** Als je vragen hebt over het indienen van je activiteiten, neem dan contact met ons op via support@code.org.
 
-A few tips:
+Enkele tips:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **Meer dan één activiteit indienen**: Als je activiteiten hebt samengesteld voor verschillende niveaus, verschillende leeftijden of andere categorieën, vermelden we je activiteiten apart, zodat elke leerkracht het juiste voor zijn of haar klas kan vinden. Dien elke tutorial of activiteit afzonderlijk in. Gezien het aantal inzendingen dat we de afgelopen jaren hebben gezien, hebben we tijd om **tot 5 activiteiten te beoordelen,** per partner. Daarna zullen we ons best doen om er zoveel mogelijk te beoordelen voordat Hour of Code begint.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **Naast lessen voor beginners**: Naast lessen voor docenten en studenten die voor het eerst informatica leren, geven we een overzicht van leerervaringen voor klaslokalen met computerwetenschap die een stapje verder willen gaan! Help ons door lessen in te dienen voor lessen die al vertrouwd zijn met de basis.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Vakgebieden**: Heb je een geweldig lesidee dat informatica integreert in wiskunde? Geschiedenis? Taalkunsten? Wetenschap? Kunst? Of een ander onderwerp? We hebben talloze verzoeken gekregen van docenten die het Hour of Code aan hun vakgebied willen koppelen. Leraren kunnen filteren op hun klastype (klasgroep of vakgebied), dus we hebben je hulp nodig om hiaten op te vullen om klasactiviteiten of lesplannen aan te bieden waarin CS wordt gekoppeld aan elk hoofdvak voor verschillende leerjaren. We hebben ook nog steeds een categorie „Informatica” voor docenten die op zoek zijn naar generieke CS-activiteiten.
 
 <a id="top"></a>
 
 ## Index:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Wat moet ik indienen](#whatsubmit)
+- [Algemene richtlijnen voor het samenstellen van een CodeUur activiteit](#guidelines)
+- [Hoe kunt u dit indienen](#submit)
+- [Hoe activiteiten zullen worden geëvalueerd](#inclusion)
+- [Tips voor het ontwerpen van een activiteit](#design)
+- [Richtlijnen voor gebruik van het handelsmerk](#tm)
+- [Bijhouden van Pixel](#pixel)
+- [Je activiteit, CSEDweek en Hour of Code promoten](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## Wat moet ik indienen
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Zelfgeleide puzzel of spel ([voorbeeld](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+Deze activiteiten zijn bedoeld om studenten zelf te laten regisseren door middel van een tutorial. Ze hebben niet veel instructie nodig van een leraar of voorbereidend werk van de leraar.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Door de leerkracht gefaciliteerde les ([voorbeeld](https://studio.code.org/s/course1/lessons/2/levels/1), [sjabloon](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Nu honderdduizenden docenten het Hour of Code hebben geprobeerd, zijn veel klaslokalen klaar voor creatievere activiteiten waarbij de basisbeginselen van de informatica worden onderwezen. Om meer gevorderde docenten te helpen inspiratie op te doen, verzamelen en beheren we lessen en activiteitenplannen onder leiding van docenten voor Hour of Code-veteranen.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+Een soort activiteit die we voor ervaren docenten zullen aanbieden, zijn projecten voor het maken van „open sandboxen”. Activiteiten die leerlingen aanmoedigen om hun eigen app, game, website of ander project te bouwen. Als het goed is vergemakkelijkt, kunnen meer open activiteiten beter de creatieve aard van programmering tentoonstellen.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+Sommige docenten geven er misschien ook de voorkeur aan Hour of Code-activiteiten te organiseren die een traditionele lesvorm volgen in plaats van een begeleide puzzel-/spelervaring.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+Je kunt beginnen met dit [sjabloon](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) voor je lesplan.
 
-**Activities for teachers in other subjects/fields**
+**Activiteiten voor docenten in andere vakken/vakgebieden**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+We bieden ook lesplannen die zijn ontworpen voor verschillende vakgebieden. Bijvoorbeeld, een één uur durende lesplan voor het onderwijzen van codering in de meetkunde les. Of een mad-lib oefening voor Engels les. Of een creatieve quiz voor geschiedenis les. Deze kunnen helpen bij het werven van docenten in andere vakgebieden om een Hour of Code-activiteit te begeleiden die uniek is voor hun vakgebied, en tegelijkertijd laten zien hoe CS veel verschillende vakgebieden kan beïnvloeden en versterken.
 
-Examples:
+Voorbeelden:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- Mirror Images (een activiteit voor een kunst docent)
+- Een arduino activiteit voor een natuurkunde docent
+- De geschiedenis van technologie voor een geschiedenis docent
+- En zie [deze lijst](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) voor meer ideeën van docenten (of voeg je eigen ideeën toe aan de lijst om anderen te inspireren)
 
-**For students with special needs**
+**Voor studenten met speciale behoeften**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+Als je een activiteit of tutorial maakt die is ontworpen voor leerlingen met speciale behoeften, vermeld dat dan in de beschrijving. Er zijn met name weinig opties voor slechtzienden. Als je activiteit is bedoeld voor dit publiek, laat het ons dan weten.
 
-[**Back to the top**](#top)
+[**Terug naar de top**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Algemene richtlijnen voor het samenstellen van een CodeUur-activiteit
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+Het doel van een Hour of Code is om beginners een toegankelijke eerste kennismaking te geven met informatica of programmeren. De toon zou moeten zijn dat:
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability. 
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online. 
+- Iedereen kan informatica leren, ongeacht leeftijd, geslacht, ras of capaciteit/beperking.
+- Informatica is verbonden met een grote verscheidenheid aan vakgebieden en interesses. Iedereen zou het moeten leren!
+- Moedig leerlingen aan om iets unieks te maken dat kan worden gedeeld met ouders/vrienden of online.
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+De activiteiten moeten een computerwetenschappelijk concept aanleren, zoals loops, conditionals, encryptie of hoe het internet werkt. Een activiteit kan ook leren over hoe informatica verband houdt met beroepen, gebeurtenissen of geschiedenis in de echte wereld. Bijvoorbeeld door UX-design aan te leren om apps te maken die betekenisvol zijn voor een publiek of doel. We raden activiteiten af die zich richten op de syntaxis van programmeren in plaats van op de concepten. We zullen bijvoorbeeld activiteiten die HTML aanleren opsommen, maar niet benadrukken. Op dezelfde manier raden we lessen in blokprogrammering af die gericht zijn op het instellen/wijzigen van configuratieopties in plaats van te leren hoe een algoritme of proces te modelleren.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activiteiten waarvoor een app moet worden geïnstalleerd, een desktop-app of een spelconsole moet worden gebruikt, zijn oké, maar niet ideaal. We zullen geen activiteiten vermelden waarvoor aanmelding of betaling vereist is. (Robotica-activiteiten kunnen de aanschaf van robotica vereisen.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*Indeling onder leiding van studenten (zelfgestuurd):* Het oorspronkelijke Hour of Code was voornamelijk gebaseerd op het succes van zelfgeleide tutorials of lessen, optioneel gefaciliteerd door de docent. Er zijn al een tal van bestaande opties, maar als u een nieuwe wilt creëeren, moet deze zo worden ontworpen dat het leuk blijft voor een student om er alleen aan te werken en dat het makkelijk is voor een leraar die zich minimaal heeft voorbereid en weinig af weet van programmering. Deze moeten aanwijzingen bieden voor de scholieren, in tegenstelling tot een open-einde urenlange uitdaging. In het ideale geval zijn de instructies en tutorials rechtstreeks geïntegreerd in het programmeringsplatform, om te voorkomen er geschakeld moet worden tussen tabs of windows van de tutorial en het programmeringsplatform.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+Om een idee te krijgen van de grote verscheidenheid aan soorten tutorials en lesplannen die je kunt maken, ga naar de pagina [Hour of Code-activiteiten](https://hourofcode.com/us/learn).
 
-[**Back to the top**](#top)
+[**Terug naar de top**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## Hoe kunt u een aanvraag indienen
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+Ga naar de pagina [Hour of Code™ Activity Submission](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) en vul de vragen in om je activiteit in te dienen.
 
-What you’ll need:
+Wat u nodig heeft:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* Naam en e-mailadres van de primaire contactpersoon die de ingezonden activiteit vertegenwoordigt
+* Naam van de activiteit (mag „Hour of Code” niet in de naam opnemen)
+* URL-link naar de activiteit
+* Een beschrijving van de activiteit (maximaal aantal tekens: 400) 
+    * Vermeld in de beschrijving of het een voornamelijk student-geleide of leraar-begeleide opgave is. Bovendien, zijn sommige scholen er in geïnteresseerd of de Uur Code activiteiten aansluiten bij gemeenschappelijke basis Science Standards. Als de activiteit specifieke normen ondersteunt, kunt u overwegen deze informatie toe te voegen.
+* Aanbevolen niveau (s) voor beoogde gebruikers. U kunt de \[K-12-normen van de Computer Science Teachers' Association\] (https://k12cs.org/framework-statements-by-grade-band/) raadplegen voor computerwetenschappelijke concepten die bij de klas passen. Voorbeelden van cijferniveaus zijn onder meer: 
+    * Kleuterschool - Graad 1 (4-6 jaar)
+    * Graden 2-5 (7-10 jaar)
+    * Graad 6-8 (leeftijd 11-13 jaar)
+    * Graad 9+ (14 jaar en ouder)
+* Een lijst van vakgebieden die je activiteit omvat (naast informatica). Als een wiskundeleraar je activiteit bijvoorbeeld kan gebruiken om les te geven over hoeken of parabolen, vermeld dit dan als wiskunde. Als je een Mad Libs-activiteit hebt waarbij je werkwoords/zelfstandige naamwoorden/enz. leert. kies voor taalkunsten.
+* Een lijst met programmeertalen die je activiteit leert. Dat wil zeggen C/C++, Java, JavaScript, enz. of taalonafhankelijk (voor lesplannen die in meerdere talen kunnen worden gegeven)
+* Een lijst van ondersteunde natuurlijke talen. Opmerking: Taaldetectie valt onder de verantwoordelijkheid van de aanbieder van de activiteit; we zullen alle gebruikers doorverwijzen naar de enkele opgegeven URL.
+* Welk ervaringsniveau moet een opvoeder hebben om uw activiteit te gebruiken? (bijv. Beginner of Comfortabel.) En welk ervaringsniveau moeten de studenten hebben? Als je meer geavanceerde Hour of Code™ -activiteiten wilt voorbereiden, vermeld dan de vereiste voorkennis in de beschrijving van je activiteit.
+* De duur van je activiteit 
+    * Slechts 1 uur
+    * 1 uur met vervolgcursus
+    * 2-6 uur (dit kunnen meerdere lessen zijn)
+* Een lijst met toegankelijkheidsaccommodaties, als je activiteit die heeft. Deze omvatten compatibiliteit met schermlezers, tekst-naar-spraakmogelijkheden, het gebruik van contrastrijke kleuren of andere aanpassingen die zijn gemaakt voor leerlingen met een handicap.
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### Aanvullende dingen die je nodig hebt bij het indienen van lesplannen
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* Link naar je lesplan. Dit kan een webpagina, dropbox-link, google drive of vergelijkbare service zijn.
+* Welke software en/of hardware heeft de docent nodig om je lesplan te maken (Scratch)? Robots? Niets?)
 
-#### Additional things you’ll need when submitting Online Activities
+#### Aanvullende dingen die je nodig hebt bij het indienen van online activiteiten
 
-* Name and logo of your organization
-* Whether it is COPPA compliant or not
-* A URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
+* Naam en logo van je organisatie
+* Of het nu COPPA-conform is of niet
+* Een URL-link naar de notities van de docent (optioneel)
+* Een lijst van geteste/compatibele platforms: 
+    * Webgebaseerd: welke platforms heb je getest? 
+        * OS - Mac, Win en andere versies
         * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+        * iOS mobiele Safari (mobiele-geoptimaliseerde)
+        * Androïde Chrome (mobiele-geoptimaliseerde)
+    * Niet van de web gebaseerde: platform voor systeemeigen code opgeven (Mac, Win, iOS, Android, xBox, andere)
+    * Niet aangesloten
+* Schermafbeelding of marketingafbeelding van de Hour of Code-activiteit. Stuur minstens één afbeelding met een afmeting van 4:3. Het moet minimaal 520 pixels bij 390 pixels zijn. Deze afbeelding mag GEEN tekst bevatten (behalve uw logo), om deze toegankelijker te maken voor niet-Engelstaligen. Als er geen geschikte afbeelding wordt aangeleverd , kunnen wij onze eigen screenshot van je tutorial maken, of we kunnen er voor kiezen deze niet aan de lijst toe te voegen. Alle afbeeldingen moeten worden ingediend als een URL-link naar een .jpg, .jpeg of .png.
+* Om de deelname nauwkeuriger te kunnen volgen, moeten externe trainingspartners trackingafbeeldingen van 1 pixel opnemen op de eerste pagina van hun Hour of Code-tutorials. Zie de sectie [Tracking Pixel](#pixel) hieronder voor meer informatie.
+* Na afloop van je activiteit moeten gebruikers worden doorverwezen naar [code.org/api/hour/finish](https://code.org/api/hour/finish) waar ze het volgende kunnen doen: 
+    * Delen op sociale media dat zij het CodeUur voltooid hebben
+    * Een certificaat ontvangen voor het voltooien van het CodeUur
+    * Het bekijken van leaderboards waar te vinden is welke landen/steden de hoogste participatiegraad van CodeUur activiteiten hebben
     * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* (Optioneel) We kunnen vervolgens een link naar een online enquête of formulier plaatsen waarin om een rapport van de volgende activiteitsstatistieken wordt gevraagd: 
+    * Voor online activiteiten (met name smartphone/Tablet PC apps): 
+        * Aantal gebruikers
+        * Hoeveel hebben de taak voltooid
+        * Gemiddelde tijd op de taak
+        * Aantal totale lijnen code die is geschreven over alle gebruikers
+        * Hoeveel gebruikers verder zijn gegaan met leren (gemeten als: elke gebruiker die de taak heeft voltooid en doorgaat met extra taken op uw site)
+    * Voor offline activiteiten 
+        * Aantal downloads van papieren versie van de activiteit (indien van toepassing)
 
-#### Additional things you’ll need when submitting Robotics
+#### Aanvullende dingen die je nodig hebt bij het indienen van robotica
 
-* If you submit a robotics activity, we need to know the cost per student for robotics.
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* Als je een robotica-activiteit indient, moeten we weten wat de kosten per student voor robotica zijn.
+* Om robotica-activiteiten te evalueren voor opname op de website, moet u voorbeeldkits naar de beoordelaars sturen.
 
-[**Back to the top**](#top)
+[**Terug naar de top**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## Hoe activiteiten zullen worden geëvalueerd
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+Een diverse commissie van informaticadocenten zal de inzendingen rangschikken op basis van kwalitatieve en kwantitatieve criteria. Alle activiteiten die voldoen aan de basiscriteria worden vermeld. Leerkrachten kunnen filteren en sorteren om de beste activiteiten voor hun klas te vinden.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+De rubriek voor het evalueren van activiteiten en lesplannen zal voor alle activiteiten naar de volgende criteria zoeken en deze dienovereenkomstig rangschikken:
 
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+- Hoge productiekwaliteit
+- Bevorder het leren van alle demografische groepen (in het bijzonder studenten die ondervertegenwoordigd zijn in de informatica, zoals jonge vrouwen, studenten uit gemarginaliseerde raciale en etnische groepen en studenten met een handicap)
+- Educatief (leert computerwetenschappelijke concepten goed)
+- Leuk en boeiend
+- Stimuleert leerlingen om iets unieks te creëren dat ze kunnen delen (Voor jongere leerlingen: met ouders en klasgenoten). Voor oudere studenten: op het internet)
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+Als de beoordelingscommissie de activiteit als nul beoordeelt wat betreft productiekwaliteit (vanwege slechte bugs of instructies waardoor de activiteit erg moeilijk te gebruiken is), wat betreft het bevorderen van leren in ondervertegenwoordigde groepen (vanwege racistisch/seksistisch materiaal), in educatieve waarde (leert geen CS-concepten) of leuk/boeiend (omdat het voor studenten moeilijk/ontmoedigend is om door te werken), wordt de activiteit niet vermeld.
 
-In addition, in order to be listed, all activities must:
+Om in de lijst te worden opgenomen, moeten alle activiteiten bovendien:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up 
-- Require no payment (exception for robotics activities these can require robot/kit purchase)
+- Geschikt zijn voor een klaslokaal op een openbare school (geen wapens, geen expliciete/volwassen inhoud, geen religieuze inhoud, enz.)
+- Geen aanmelding vereist
+- Geen betaling vereist (behalve voor robotica-activiteiten, hiervoor kan de aankoop van een robot/kit vereist zijn)
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+Voor zelfsturende activiteiten voor nieuwe docenten en leerlingen zal de toetsingscommissie onderzoeken of:
 
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+- Docenten kunnen de tutorial of activiteit gebruiken zonder achtergrond in informatica
+- Studenten kunnen succesvol zijn zonder achtergrond in informatica
+- Leerlingen kunnen zichzelf door de tutorial leiden zonder begeleiding van ouders of leerkracht
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+Docenten en studenten kunnen onze lijst met activiteiten doorzoeken en filteren op basis van filters zoals cijfer, ervaringsniveau, onderwerp, hardware, enz. Standaard tonen we eerst lesplannen en activiteiten die:
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+- Ontvang de hoogste beoordelingen van de beoordelingscommissie
+- Zijn zelfgestuurde activiteiten van een uur bedoeld voor beginners (studenten en docenten)
+- Spreek een breed scala aan gebruikers aan (op verschillende platforms, talen en leeftijden)
+- Geen installatie nodig
+- Zijn dit jaar nieuw
 
-[**Back to the top**](#top)
+[**Terug naar de top**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## Suggesties voor het ontwerpen van zelfgeleide tutorials van een uur
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Je kunt het [Hour of Code-logo](https://hourofcode.com/us/promote/resources#logo) in je tutorial opnemen, maar dit is niet verplicht. Als u het CodeUur-logo wilt gebruiken, zie dan de onderstaande richtlijnen van het handelsmerk. <u>In geen geval kunnen het logo en de naam van Code.org worden gebruikt.</u> Beide zijn handelsmerken en kunnen niet worden gecombineerd met een merknaam van derden zonder uitdrukkelijke schriftelijke toestemming.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Zorg er voor dat de gemiddelde student comfortabel in een uurtje kan eindigen.** Overweeg het toevoegen van een open activiteit aan het einde voor studenten die sneller door de les gaan. Hou in gedachten dat de meeste kinderen geen enkele basiskennis hebben van informatica en coderen.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Leraar aanbevelingen opnemen.** De meeste activiteiten zouden student-gestuurd moeten zijn, maar als een activiteit wordt ondersteund door een leerkracht, geef dan duidelijke en eenvoudige aanwijzingen voor de leraar in de vorm van leraar-opmerkingen, biedt deze aan via een afzonderlijke URL bij uw activiteit. Niet alleen de studenten zijn beginners, sommige van de leraren zijn dat net zo goed. Voeg info toe zoals:
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming? 
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+- Op welke platforms en browsers werkt de tutorial het beste?
+- Werkt het op smartphones? Tabletten?
+- Raadt u het programmeren in groepjes van twee leerlingen aan?
+- Overwegingen voor gebruik in een klaslokaal? Als er bijvoorbeeld video's zijn, raad de leerkrachten dan aan om de video's op een geprojecteerd scherm te laten zien zodat de hele klas ze samen kan bekijken
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+**Voeg feedback toe aan het einde van de activiteit.** (Bijvoorbeeld: „Je hebt 10 levels voltooid en hebt over loops geleerd! Geweldig gedaan!”)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Moedig de leerlingen aan om te posten op sociale media (in voorkomend geval) wanneer ze klaar.** Bijvoorbeeld "Ik heb meegedaan aan een CodeUur met ________, Doe jij ook mee? #HourOfCode” of „Ik heb een #HourOfCode gedaan als onderdeel van #CSEdWeek. En jij? @Scratch." Gebruik de hashtag **#HourOfCode** (met hoofdletters H, O, C)
 
-**Create your activity in Spanish or in other languages besides English.**
+**Creëer je activiteit in het Spaans of in andere talen dan Engels.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Verbind de activiteit aan een maatschappelijk relevante context.** Leerlingen zullen programmeren als een machtig middel ervaren als ze zien dat het problemen in de wereld kan helpen oplossen!
 
 **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
-[**Back to the top**](#top)
+[**Terug naar de top**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Richtlijnen voor gebruik van het handelsmerk
 
-Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+Hour of Code® en Hora de Código® zijn geregistreerde handelsmerken van Code.org. Veel van onze instructiepartners hebben onze handelsmerken „Hour of Code” op hun websites gebruikt in verband met hun Hour of Code-activiteiten. We willen dit gebruik niet voorkomen, maar we willen er wel voor zorgen dat het gebruik binnen een aantal limieten valt:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. Gebruik „Hour of Code” alleen in verband met niet-commerciële CS Education-activiteiten in het kader van de Hour of Code-campagne, en voor geen enkel ander doel.
+2. Elke verwijzing naar „Hour of Code” moet worden gebruikt op een manier die niet suggereert dat het je eigen merknaam is, maar dat het eerder verwijst naar Hour of Code als een volksbeweging. Goed voorbeeld: „Neem deel aan de Hour of Code® op AcmeCorp.com”. Slecht voorbeeld: "Probeer CodeUur door ACME Corp".
+3. Gebruik een „®” superscript op de meest prominente plekken waar je „Hour of Code” noemt, zowel op je website als in de beschrijvingen van apps.
+4. Vermeld taal op de pagina (of in de voettekst), waaronder links naar de websites Hour of Code, CSEDweek en Code.org, waarin het volgende wordt beschreven: a. Hour of Code® en Hora de Código® zijn geregistreerde handelsmerken van Code.org; en b. „The '[Hour of Code](http://hourofcode.com/) ® is een landelijk initiatief van [Code.org](http://code.org/) om miljoenen studenten kennis te laten maken met een uur informatica en computerprogrammering.”
+5. Gebruik „Hour of Code” niet in de namen van apps.
+6. Gebruik „Hour of Code” niet voor commercieel gebruik of doel (bijvoorbeeld door je Hour of Code-activiteit achter een betaalmuur te plaatsen, een andere betaalde dienst te promoten als onderdeel van je Hour of Code-activiteit; het verkopen van Hour of Code-artikelen).
+7. Gebruik „Hour of Code” niet in verband met activiteiten waarvoor een login of het aanmaken van een account vereist is.
 
-[**Back to the top**](#top)
+[**Terug naar de top**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Bijhouden van Pixel
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+Om de deelname nauwkeuriger te kunnen volgen, vragen we elke studiepartner om een trackingafbeelding van 1 pixel toe te voegen op de eerste pagina van hun Hour of Code-tutorials. De pixelafbeelding mag alleen op de startpagina staan. Voeg dit niet toe aan tussenliggende pagina's van je tutorial.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+Dit stelt ons in staat om gebruikers te tellen die jouw Hour of Code-tutorial hebben gedaan. Het zal leiden tot nauwkeurigere deelnametellingen voor je tutorial.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Als je tutorial is goedgekeurd en op de uiteindelijke instructiepagina is opgenomen, zal Code.org je een unieke trackingpixel geven die je kunt integreren in je tutorial. Zie het voorbeeld hieronder.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+Opmerking: dit is niet belangrijk voor installeerbare apps (iOS/Android apps of desktop-install apps)
 
-Example tracking pixels for Dance Party:
+Voorbeelden van trackingpixels voor Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**Terug naar de top**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## Het promoten van uw activiteiten, CSEDweek en Hour of Code
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+Promoot alstublieft uw activiteit in uw netwerk! Stuur ze naar je Hour of Code-pagina. Uw gebruikers reageren veel sneller op een mailing van u over uw activiteit. Gebruik de internationale Hour of Code-campagne tijdens de Computer Science Education Week als excuus om gebruikers aan te moedigen anderen uit te nodigen om mee te doen, en help ons meer studenten te bereiken!
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- Vermeld Hour of Code en CSEDweek op uw website. Bijv.: <http://www.tynker.com/hour-of-code>
+- Promoot Hour of Code via sociale media, traditionele media, mailinglijsten, enz., met de hashtag #HourOfCode (met hoofdletters H, O, C)
+- Organiseer een lokaal evenement of vraag uw werknemers voor het hosten van een evenement op lokale scholen.
+- Zie onze [resource kit](https://hourofcode.com/us/promote) voor meer informatie.
 
-[**Back to the top**](#top)
+[**Terug naar de top**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+{{ signup_button }}

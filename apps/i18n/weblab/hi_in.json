@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "CSS जोड़ें",
+  "addHTMLButton": "HTML जोड़ें",
+  "addImageButton": "छवि जोड़ें",
+  "closeFullscreenPreview": "फ़ुल स्क्रीन पूर्वावलोकन बंद करें",
+  "currentProjectCapacity": "{totalMegabytes}एमबी में से {currentMegabytes}एमबी का इस्तेमाल किया",
+  "disallowedHtml": "फ़ाइल \"{filename}\" में HTML तत्व शामिल हैं जिनकी अनुमति नहीं है: `{disallowedTags}`। यह संवाद बंद होने पर उन्हें हटा दिया जाएगा।",
+  "errorSavingProject": "आपके प्रोजेक्ट को ऑटो-सेव करते समय कुछ काम नहीं आया। अपने इंटरनेट कनेक्शन की जांच करें और मैन्युअल रूप से सहेजने का प्रयास करें। यदि यह समस्या बनी रहती है, तो फिर से शुरू करने के लिए पेज को फिर से लोड करने का प्रयास करें।",
+  "fatalError": "घातक त्रुटि: {message}। यदि आप निजी ब्राउज़िंग मोड में हैं, तो डेटा लिखा नहीं जा सकता।",
+  "loadFailure": "हमें खेद है, वेब लैब किसी कारण से लोड करने में विफल रही। त्रुटि: {message}",
+  "openFullscreenPreview": "फ़ुल स्क्रीन पूर्वावलोकन खोलें",
+  "refreshPreview": "रिफ्रेश करें और सेव करें",
+  "reloading": "फिर से लोड हो रहा है...",
+  "reset": "वेब लैब को रीसेट करें",
+  "resetComplete": "वेब लैब रीसेट पूरा हुआ",
+  "resetFailure": "वेब लैब को रीसेट करने में विफल: {message}।",
+  "toggleInspectorOff": "इंस्पेक्टर: ऑन",
+  "toggleInspectorOn": "इंस्पेक्टर: ऑफ",
+  "troubleshootingSupport": "अधिक जानकारी के लिए कृपया हमारा सहायता लेख [\"वेब लैब समस्याओं का निवारण\"]({url}) देखें।",
+  "uploadError": "अपलोड करने में त्रुटि"
 }

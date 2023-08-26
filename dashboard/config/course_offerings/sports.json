@@ -1,6 +1,6 @@
 {
   "key": "sports",
-  "display_name": "Code your own sports game",
+  "display_name": "Code Your Own Sports Game",
   "category": "hoc",
   "is_featured": false,
   "assignable": true,
@@ -11,5 +11,10 @@
   "image": "https://images.code.org/c44e0f56d86262d7884692253e0e43af-Sports.png",
   "cs_topic": "games_and_animations,programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": "Score big with a sports game coded by you! Learn all about events in programming, work through puzzles, and customize the fun. Let's play and code like champs!",
+  "professional_learning_program": null,
+  "video": "https://www.youtube-nocookie.com/embed/ip051U7Rvds/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=ip051U7Rvds&wmode=transparent",
+  "published_date": null,
+  "self_paced_pl_course_offering_id": null
 }

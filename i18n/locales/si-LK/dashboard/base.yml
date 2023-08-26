@@ -706,6 +706,7 @@ si:
         other: "වෙනත්"
       workshop_course:
         csp: '''16-''17 පරිගණක විද්‍යාවේ මූලිකාංග'
+        other: 'වෙනත්'
       email_opt_in:
         opt_in_yes: 'ඔව්'
         opt_in_no: 'නැහැ'
@@ -719,3 +720,4 @@ si:
   copy: 'පිටපත් කරන්න'
   pixelation:
     binary: "ද්විමය"
+

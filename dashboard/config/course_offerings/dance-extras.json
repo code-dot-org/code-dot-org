@@ -11,5 +11,10 @@
   "image": "https://images.code.org/92a84e8142f14ef274f0f786f75b0430-Keep Dancing 2018.png",
   "cs_topic": "games_and_animations,programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": "One of our most popular lessons! Get creative when you use code to make animated characters bust a move in this introductory activity. Requires sound, reading.",
+  "professional_learning_program": null,
+  "video": "https://www.youtube-nocookie.com/embed/pIxdBhJb8lc/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=pIxdBhJb8lc&wmode=transparent",
+  "published_date": null,
+  "self_paced_pl_course_offering_id": null
 }

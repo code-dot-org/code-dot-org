@@ -2,7 +2,6 @@ Feature: Block auto-layout
 
 Background:
   Given I am on "http://studio.code.org/flappy/10?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
 
 Scenario: Auto-placing malformed start blocks
@@ -17,7 +16,6 @@ Scenario: Auto-placing blocks
 
 Scenario: Auto-placing blocks with XML positioning
   Given I am on "http://studio.code.org/s/allthethings/lessons/5/levels/4?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
 
   When I've initialized the workspace with a manually-positioned playlab puzzle

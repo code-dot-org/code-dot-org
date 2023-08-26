@@ -88,6 +88,7 @@ ro:
           description_short: Acest curs de 20 de ore acopera elementele de baza in informatica si concepte de programare in cadrul cursurilor 2-4.
           description_audience: Vârste 10 - 18 ani
           student_description: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.
+          name: 20 ore
         edit-code:
           title: Editează Codul
           description: Editează Codul
@@ -228,6 +229,7 @@ ro:
           description_short: Exploreaza o lume Minecraft prin cod.
           student_description: Utilizeaza blocuri de cod pentru a-l lua pe Steve sau Alex intr-o aventura in acest univers Minecraft.
         oceans:
+          title: IA pentru Oceane
           name: oceane
         ScienceP3OLPT3: {}
         cspunit5:
@@ -305,9 +307,12 @@ ro:
         cspexam1-mWU7ilDYM9: {}
         cspexam2-AKwgAh1ac5: {}
         CSDU4-Draft: {}
-        CSDU2-Draft: {}
+        CSDU2-Draft:
+          description_short: Dezvoltare Web
         CSDU5-Draft:
           description_short: Date
+        CSDU6-Draft:
+          description_short: Makerlab
         CSF_Secret_Sample_Story:
           description_audience: Vârste 8 - 18 ani+
         MikeTest:
@@ -387,6 +392,7 @@ ro:
             practice:
               display_name: Practicile de predare
         csp1-support:
+          title: Unitatea 1 Curs Online de Învățare Profesională
           lesson_groups:
             required:
               display_name: Prezentare generală
@@ -433,14 +439,19 @@ ro:
         flappy-impact-study:
           title: Cod Flappy cu Chestionar
         coursea-draft:
+          title: 'Fundamentele Informaticii: Cursul A'
           description_short: O introducere în știința calculatoarelor pentru cititorii începători.
         courseb-draft:
+          title: 'Fundamentele Informaticii: Cursul B'
           description_short: O introducere în știința calculatoarelor pentru cititorii începători.
         coursec-draft:
+          title: 'Fundamentele Informaticii: Cursul C'
           description_short: Învață noțiunile de bază ale științei calculatoarelor și creează desene, povești și jocuri.
         coursed-draft:
+          title: 'Fundamentele Informaticii: Cursul D'
           description_short: Învață noțiunile de bază ale științei calculatoarelor și creează desene, povești și jocuri.
         coursee-draft:
+          title: 'Fundamentele Informaticii: Cursul E'
           description_short: Învață noțiunile de bază ale științei calculatoarelor și creează desene, povești și jocuri.
           lesson_groups:
             content:
@@ -450,6 +461,7 @@ ro:
             extra_course_content:
               display_name: Conținut curs suplimentar
         coursef-draft:
+          title: 'Fundamentele Informaticii: Cursul F'
           description_short: Învață noțiunile de bază ale științei calculatoarelor și creează desene, povești și jocuri.
           lesson_groups:
             content:
@@ -525,7 +537,8 @@ ro:
               display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
         applab-1hour: {}
         applab-2hour: {}
-        coursed-ramp: {}
+        coursed-ramp:
+          title: 'Fundamentele Informaticii: Cursul D'
         coursee-ramp:
           title: perfecționare-cursanți
         csd6-2017:
@@ -556,7 +569,8 @@ ro:
             cspSurvey:
               display_name: Sondaj
         public-key-cryptography: {}
-        csd2-old: {}
+        csd2-old:
+          description_short: Dezvoltare Web
         artist-and-bb8: {}
         coursea-2017:
           title: Curs A
@@ -711,6 +725,8 @@ ro:
               display_name: Proiect de final de curs
           student_description: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
         pre-express-2017:
+          title: Curs Rapid Preșcolar
+          assignment_family_title: Curs Rapid Preșcolar
           description_audience: 'Vârsta: 4-8 ani'
           description_short: 'Introducere în știința calculatoarelor pentru copiii care încă nu au învățat să citească: o combinație a celor mai bune cursuri pentru grădiniță și clasa I.'
           description: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
@@ -731,7 +747,8 @@ ro:
             csd4_2:
               display_name: 'Capitolul 2: Prototipare aplicații'
         craft17: {}
-        applab-intro: {}
+        applab-intro:
+          title: Introducere în App Lab
         e-f-ramp:
           lesson_groups:
             csf_e_1:
@@ -1107,6 +1124,7 @@ ro:
               display_name: Conţinut
         pre-express-2018:
           title: Curs expres pentru preșcolari (2018)
+          assignment_family_title: Curs Rapid Preșcolar
           description: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
           description_short: 'Introducere în știința calculatoarelor pentru copiii care încă nu au învățat să citească: o combinație a celor mai bune cursuri pentru grădiniță și clasa I.'
           description_audience: 'Vârsta: 4-8 ani'
@@ -1125,6 +1143,7 @@ ro:
         frozen-2018: {}
         frozen-2018-test: {}
         dance:
+          title: Petrecere Dansantă (2018)
           description_short: Împreună cu Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara și încă 25!
           name: dans
         frozen-2018-test-b: {}
@@ -1144,6 +1163,7 @@ ro:
             csp_functions:
               display_name: Funcţii
         dance-extras:
+          title: Continuă să Dansezi (2018)
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
           student_description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
         coursef-2019:
@@ -1991,7 +2011,8 @@ ro:
               display_name: 'Capitolul 1: Conţinutul Web şi HTML'
             csd2_2:
               display_name: 'Capitolul 2: Styling şi CSS'
-        csp5-virtual: {}
+        csp5-virtual:
+          title: Programare Influențată de Evenimente în Laboratorul pentru Aplicații
         virtual-holding-place:
           lesson_groups:
             content:
@@ -2014,6 +2035,7 @@ ro:
             cspSurvey:
               display_name: Sondaj
         csd3-virtual:
+          title: Introducere în Ritm Propriu în Laboratorul de Jocuri
           lesson_groups:
             csd3_1:
               display_name: Conţinut
@@ -2438,6 +2460,7 @@ ro:
             cspSurvey2020:
               display_name: Sondaj
         aiml-2021:
+          title: Modulul IA și Învățare Automată
           lesson_groups:
             lessonGroup-4:
               display_name: Sondaj
@@ -2445,19 +2468,105 @@ ro:
           lesson_groups:
             lessonGroup-4:
               display_name: Sondaj
+          title: IA și Învățarea Automată
         kodea-pd-2021: {}
         vpl-csd-2021: {}
         vpl-csp-2021: {}
-        self-paced-pl-csd1-2021: {}
-        self-paced-pl-csd2-2021: {}
-        self-paced-pl-csd3-2021: {}
-        self-paced-pl-csd4-2021: {}
-        self-paced-pl-csd5-2021: {}
-        self-paced-pl-csd6-2021: {}
+        self-paced-pl-csd1-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Navigare prin Code.org
+            lessonGroup-5:
+              display_name: Pregătirea pentru Predarea Descoperirilor Informaticii
+          title: 'Modulul 1: Bun venit'
+          description: |-
+            Acest modul este o scurtă introducere atât în Code.org, cât și în acest curs de învățare profesională.
+
+            **Vei:**
+
+            -   Primi o introducere în Code.org și Descoperirile Informaticii.
+            -   Învăța cum să te implici în acest curs de învățare profesională.
+
+            **Timp sugerat:** 10 minute
+          student_description: |-
+            Acest modul este o scurtă introducere atât în Code.org, cât și în acest curs de învățare profesională.
+
+            **Vei:**
+
+            -   Primi o introducere în Code.org și Descoperirile Informaticii.
+            -   Învăța cum să te implici în acest curs de învățare profesională.
+
+            **Timp sugerat:** 10 minute
+        self-paced-pl-csd2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigare prin Code.org
+          title: 'Modulul 2: Navigare prin Code.org'
+          description: |-
+            Acest modul este conceput  să te orienteze către instrumentele pe care le vei utiliza pentru a sprijini cursanții să învețe în timp ce predai Descoperirile Informaticii (CS).
+
+            **Vei:**
+
+            -   Naviga pe site-ul Code.org și prin instrumentele profesorului.
+            -   Configura o secțiune a clasei
+            -   Localiza și utiliza planuri ale lecției de curs și resursele profesorului.
+            -   Învăța cum să accesezi sprijinul în timpul predării cursului.
+
+            **Timp sugerat:** 60 de minute
+          student_description: |-
+            Acest modul este conceput  să te orienteze către instrumentele pe care le vei utiliza pentru a sprijini cursanții să învețe în timp ce predai Descoperirile Informaticii (CS).
+
+            **Vei:**
+
+            -   Naviga pe site-ul Code.org și prin instrumentele profesorului.
+            -   Configura o secțiune a clasei
+            -   Localiza și utiliza planuri ale lecției de curs și resursele profesorului.
+            -   Învăța cum să accesezi sprijinul în timpul predării cursului.
+
+            **Timp sugerat:** 60 de minute
+        self-paced-pl-csd3-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Prezentare generală a Descoperirilor Informaticii
+          title: 'Modulul 3: Prezentare generală a Descoperirilor Informaticii'
+          description: "Acest modul îți va oferi o prezentare generală a cursului Descoperirile Informaticii, punând accentul pe conceptele pe care cursanții le vor învăța și pe instrumentele pe care le vor utiliza pe parcursul cursului. Implicarea în acest modul te va ajuta să iei decizii cu privire la modul de selectare a conținutului cursului pe care îl vei implementa în clasa ta. \n\n**Vei:**\n\n-   Obține o înțelegere la nivel înalt a programei Descoperirile Informaticii.\n-   Te vei familiariza cu mediile de programare utilizate în cadrul Descoperirilor Informaticii.\n-   Decide ce unități din Descoperirile Informaticii vei preda în clasa ta.\n\n**Timp sugerat:** 60 de minute"
+          student_description: "Acest modul îți va oferi o prezentare generală a cursului Descoperirile Informaticii, punând accentul pe conceptele pe care cursanții le vor învăța și pe instrumentele pe care le vor utiliza pe parcursul cursului. Implicarea în acest modul te va ajuta să iei decizii cu privire la modul de selectare a conținutului cursului pe care îl vei implementa în clasa ta. \n\n**Vei:**\n\n-   Obține o înțelegere la nivel înalt a programei Descoperirile Informaticii.\n-   Te vei familiariza cu mediile de programare utilizate în cadrul Descoperirilor Informaticii.\n-   Decide ce unități din Descoperirile Informaticii vei preda în clasa ta.\n\n**Timp sugerat:** 60 de minute"
+        self-paced-pl-csd4-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Predarea și învățarea Descoperirilor Informaticii
+          title: 'Modulul 4: Predarea și învățarea Descoperirilor Informaticii'
+          description: |-
+            În acest modul, vei face cunoștință cu practicile CS autentice cu care cursanții se vor implica pe parcursul cursului Descoperirile Informaticii. Aceste practici includ depanarea, utilizarea resurselor și programarea în perechi. De asemenea, vei explora rolul profesorului în cadrul unei clase Descoperirile Informaticii și vei face un plan pentru modul în care vei sprijini învățarea elevilor în timpul predării cursului.
+
+            **Vei:**
+
+            -   Lua în considerare rolul profesorului într-o clasă Descoperirile Informaticii.
+            -   Învăța destre practicile Informaticii autentice pe care elevii le vor dezvolta pe parcursul cursului Descoperirile Informaticii.
+            -   Face planul pentru modul în care vei sprijini învățarea elevilor prin diferențiere, evaluare continuă și promovarea unei culturi a incluziunii.
+
+            **Timp sugerat:** 50 de minute
+          student_description: |-
+            În acest modul, vei face cunoștință cu practicile CS autentice cu care cursanții se vor implica pe parcursul cursului Descoperirile Informaticii. Aceste practici includ depanarea, utilizarea resurselor și programarea în perechi. De asemenea, vei explora rolul profesorului în cadrul unei clase Descoperirile Informaticii și vei face un plan pentru modul în care vei sprijini învățarea elevilor în timpul predării cursului.
+
+            **Vei:**
+
+            -   Lua în considerare rolul profesorului într-o clasă Descoperirile Informaticii.
+            -   Învăța destre practicile Informaticii autentice pe care elevii le vor dezvolta pe parcursul cursului Descoperirile Informaticii.
+            -   Face planul pentru modul în care vei sprijini învățarea elevilor prin diferențiere, evaluare continuă și promovarea unei culturi a incluziunii.
+
+            **Timp sugerat:** 50 de minute
+        self-paced-pl-csd5-2021:
+          title: Predare IA și învățarea automată
+          description: "Acest modul de învățare profesională este destinat să te ajute să te pregătești să predai unitatea IA și Învățarea Automată a Code.org.\n\n**În acest modul de învățare profesională, (te) vei:**\n\n-   Obține o introducere în inteligența artificială și învățarea automată. \n-   Pune în practică conceptele cheie incluse în unitate.\n-   Implică în AI Lab și App Lab.\n-   Explora proiectele de sfârșit de capitol. \n-   Elabora un plan de implementare a unității cu elevii tăi.\n\n**Timp sugerat:** 120 minute"
+          student_description: "Acest modul de învățare profesională este destinat să te ajute să te pregătești să predai unitatea IA și Învățarea Automată a Code.org.\n\n**În acest modul de învățare profesională, (te) vei:**\n\n-   Obține o introducere în inteligența artificială și învățarea automată. \n-   Instructa un model de învățare automată folosing AI Lab.\n-   Implica în aplicațiile de învățare automată.\n-   Lua în considerare implicațiile IA și învățării automate în lumea reală. \n-   Explora proiectele de sfârșit de capitol. \n\n**Timp sugerat:** 120 minute"
+        self-paced-pl-csd6-2021:
+          description: "Acest modul de învățare profesională este destinat să te ajute să te pregătești să predai unitatea IA și Învățarea Automată a Code.org.\n\n**În acest modul de învățare profesională, (te) vei:**\n\n-   Obține o introducere în inteligența artificială și învățarea automată. \n-   Instructa un model de învățare automată folosing AI Lab.\n-   Implica în aplicațiile de învățare automată.\n-   Lua în considerare implicațiile IA și învățării automate în lumea reală. \n-   Explora proiectele de sfârșit de capitol. \n\n**Timp sugerat:** 120 minute"
         self-paced-pl-csd7-2021: {}
         self-paced-pl-csd8-2021: {}
         self-paced-pl-csp1-2021: {}
-        self-paced-pl-csp2-2021: {}
+        self-paced-pl-csp2-2021:
+          title: 'Modulul 2: Navigare prin Code.org'
         self-paced-pl-csp3-2021: {}
         self-paced-pl-csp4-2021: {}
         self-paced-pl-csp5-2021: {}
@@ -2534,6 +2643,9 @@ ro:
               display_name: Demonstrații și Resurse
         hello-world-draft: {}
         csa-self-paced-pl:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigare prin Code.org
           title: Navighează Code.org pentru Profesorii CSA Pilot
           description: |-
             Acest modul este menit să te orienteze către instrumentele pe care le vei utiliza pentru a sprijini învățarea elevului în timpul predării CSA.
@@ -2605,9 +2717,11 @@ ro:
             lessonGroup-4:
               display_name: Demonstrații și Resurse
         tesstest921: {}
-        hello-world-animals: {}
+        hello-world-animals:
+          title: 'Bună Lume: Animale'
         hello-world-emoji: {}
-        hello-world-retro: {}
+        hello-world-retro:
+          title: 'Bună Lume: Retro'
         hello-world-batman:
           title: Bună Lume
         csa4-exemplars:
@@ -2620,6 +2734,11 @@ ro:
               display_name: Conţinut
             lessonGroup-2:
               display_name: Conţinut
+        ai-ethics:
+          title: Codul nostru de Etică IA
+          description_audience: clasele 6-12
+        dance-unplugged:
+          title: Hour of Code - Petrecere Dansantă - Deconectată
         csc-things:
           name: csc-things
           title: CSC Brain Dump
@@ -2688,14 +2807,18 @@ ro:
             lessonGroup-5:
               display_name: Cutie cu nisip
         ai-ethics-2021:
+          title: Codul nostru de Etică IA
           description_audience: Clasele 6-12
         poem-art-2021:
           title: Arta Poeziei
-        poetry-2021: {}
+        poetry-2021:
+          title: Codare cu Poezie
         hello-world-food-2021: {}
         hello-world-emoji-2021: {}
-        hello-world-animals-2021: {}
-        hello-world-retro-2021: {}
+        hello-world-animals-2021:
+          title: 'Bună Lume: Animale'
+        hello-world-retro-2021:
+          title: 'Bună Lume: Retro'
         spelling-bee-2021: {}
         explore-data-1-2021: {}
         counting-csc-2021:
@@ -2962,7 +3085,8 @@ ro:
               display_name: Conţinut
         pltess: {}
         self-paced-pl-csa1-2022: {}
-        self-paced-pl-csa2-2022: {}
+        self-paced-pl-csa2-2022:
+          title: 'Modulul 2: Navigare prin Code.org'
         self-paced-pl-csa3-2022: {}
         csa7-pilot-extra:
           lesson_groups:
@@ -3070,6 +3194,9 @@ ro:
           description: "Acest modul de învățare profesională este conceput pentru a te ajuta să te pregătești să predai unitatea Calcule Fizice de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere la Calculele Fizice.\n-   Practica conceptele cheie incluse în unitate.\n-   Te vei implica în aplicația maker.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 90 de minute"
           student_description: "Acest modul de învățare profesională este conceput pentru a te ajuta să te pregătești să predai unitatea Calcule Fizice de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere la Calculele Fizice.\n-   Practica conceptele cheie incluse în unitate.\n-   Te vei implica în aplicația maker.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 90 de minute"
         vpl-csd7-ci-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Predare IA și învățarea automată
           title: 'Modulul 7: Pregătire pentru Predarea IA și Învățarea Automată'
           description: "Acest modul de învățare profesională este conceput pentru a te ajuta să te pregătești să predai unitatea IA și Învățarea Automată de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere în  IA și Învățarea Automată.\n-   Practicai conceptele cheie incluse în unitate.\n-   Participa la IA Lab și App Lab.\n-   Explora proiectele de sfârșit de capitol.\n-   Face un plan de implementare a unității cu elevii tăi.\n\n**Timp sugerat:** 120 minute"
           student_description: "Acest modul de învățare profesională este conceput pentru a te ajuta să te pregătești să predai unitatea IA și Învățarea Automată de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-   Obține o introducere în  IA și Învățarea Automată.\n-   Practicai conceptele cheie incluse în unitate.\n-   Participa la IA Lab și App Lab.\n-   Explora proiectele de sfârșit de capitol.\n-   Face un plan de implementare a unității cu elevii tăi.\n\n**Timp sugerat:** 120 minute"
@@ -3133,15 +3260,92 @@ ro:
           student_description: Această unitate conține un sondaj care va fi distribuit când colegii tăi termină unitățile din ȘC Descoperiri. Profesorul îți va spune când trebuie să răspunzi la acest sondaj.
         testtess2: {}
         csp-post-survey-2022: {}
-        aiml-2022: {}
+        aiml-2022:
+          title: Modulul IA și Învățare Automată
         vpl-csd-2022: {}
         vpl-csp-2022: {}
-        self-paced-pl-csd1-2022: {}
-        self-paced-pl-csd2-2022: {}
-        self-paced-pl-csd3-2022: {}
-        self-paced-pl-csd4-2022: {}
+        self-paced-pl-csd1-2022:
+          title: 'Modulul 1: Bun venit'
+          description: |-
+            Acest modul este o scurtă introducere atât în Code.org, cât și în acest curs de învățare profesională.
+
+            **Vei:**
+
+            -   Primi o introducere în Code.org și Descoperirile Informaticii.
+            -   Învăța cum să te implici în acest curs de învățare profesională.
+
+            **Timp sugerat:** 10 minute
+          student_description: |-
+            Acest modul este o scurtă introducere atât în Code.org, cât și în acest curs de învățare profesională.
+
+            **Vei:**
+
+            -   Primi o introducere în Code.org și Descoperirile Informaticii.
+            -   Învăța cum să te implici în acest curs de învățare profesională.
+
+            **Timp sugerat:** 10 minute
+        self-paced-pl-csd2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigare prin Code.org
+          title: 'Modulul 2: Navigare prin Code.org'
+          description: |-
+            Acest modul este conceput  să te orienteze către instrumentele pe care le vei utiliza pentru a sprijini cursanții să învețe în timp ce predai Descoperirile Informaticii (CS).
+
+            **Vei:**
+
+            -   Naviga pe site-ul Code.org și prin instrumentele profesorului.
+            -   Configura o secțiune a clasei
+            -   Localiza și utiliza planuri ale lecției de curs și resursele profesorului.
+            -   Învăța cum să accesezi sprijinul în timpul predării cursului.
+
+            **Timp sugerat:** 60 de minute
+          student_description: |-
+            Acest modul este conceput  să te orienteze către instrumentele pe care le vei utiliza pentru a sprijini cursanții să învețe în timp ce predai Descoperirile Informaticii (CS).
+
+            **Vei:**
+
+            -   Naviga pe site-ul Code.org și prin instrumentele profesorului.
+            -   Configura o secțiune a clasei
+            -   Localiza și utiliza planuri ale lecției de curs și resursele profesorului.
+            -   Învăța cum să accesezi sprijinul în timpul predării cursului.
+
+            **Timp sugerat:** 60 de minute
+        self-paced-pl-csd3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Prezentare generală a Descoperirilor Informaticii
+          title: 'Modulul 3: Prezentare generală a Descoperirilor Informaticii'
+          description: "Acest modul îți va oferi o prezentare generală a cursului Descoperirile Informaticii, punând accentul pe conceptele pe care cursanții le vor învăța și pe instrumentele pe care le vor utiliza pe parcursul cursului. Implicarea în acest modul te va ajuta să iei decizii cu privire la modul de selectare a conținutului cursului pe care îl vei implementa în clasa ta. \n\n**Vei:**\n\n-   Obține o înțelegere la nivel înalt a programei Descoperirile Informaticii.\n-   Te vei familiariza cu mediile de programare utilizate în cadrul Descoperirilor Informaticii.\n-   Decide ce unități din Descoperirile Informaticii vei preda în clasa ta.\n\n**Timp sugerat:** 60 de minute"
+          student_description: "Acest modul îți va oferi o prezentare generală a cursului Descoperirile Informaticii, punând accentul pe conceptele pe care cursanții le vor învăța și pe instrumentele pe care le vor utiliza pe parcursul cursului. Implicarea în acest modul te va ajuta să iei decizii cu privire la modul de selectare a conținutului cursului pe care îl vei implementa în clasa ta. \n\n**Vei:**\n\n-   Obține o înțelegere la nivel înalt a programei Descoperirile Informaticii.\n-   Te vei familiariza cu mediile de programare utilizate în cadrul Descoperirilor Informaticii.\n-   Decide ce unități din Descoperirile Informaticii vei preda în clasa ta.\n\n**Timp sugerat:** 60 de minute"
+        self-paced-pl-csd4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Predarea și învățarea Descoperirilor Informaticii
+          title: 'Modulul 4: Predarea și învățarea Descoperirilor Informaticii'
+          description: |-
+            În acest modul, vei face cunoștință cu practicile CS autentice cu care cursanții se vor implica pe parcursul cursului Descoperirile Informaticii. Aceste practici includ depanarea, utilizarea resurselor și programarea în perechi. De asemenea, vei explora rolul profesorului în cadrul unei clase Descoperirile Informaticii și vei face un plan pentru modul în care vei sprijini învățarea elevilor în timpul predării cursului.
+
+            **Vei:**
+
+            -   Lua în considerare rolul profesorului într-o clasă Descoperirile Informaticii.
+            -   Învăța destre practicile Informaticii autentice pe care elevii le vor dezvolta pe parcursul cursului Descoperirile Informaticii.
+            -   Face planul pentru modul în care vei sprijini învățarea elevilor prin diferențiere, evaluare continuă și promovarea unei culturi a incluziunii.
+
+            **Timp sugerat:** 50 de minute
+          student_description: |-
+            În acest modul, vei face cunoștință cu practicile CS autentice cu care cursanții se vor implica pe parcursul cursului Descoperirile Informaticii. Aceste practici includ depanarea, utilizarea resurselor și programarea în perechi. De asemenea, vei explora rolul profesorului în cadrul unei clase Descoperirile Informaticii și vei face un plan pentru modul în care vei sprijini învățarea elevilor în timpul predării cursului.
+
+            **Vei:**
+
+            -   Lua în considerare rolul profesorului într-o clasă Descoperirile Informaticii.
+            -   Învăța destre practicile Informaticii autentice pe care elevii le vor dezvolta pe parcursul cursului Descoperirile Informaticii.
+            -   Face planul pentru modul în care vei sprijini învățarea elevilor prin diferențiere, evaluare continuă și promovarea unei culturi a incluziunii.
+
+            **Timp sugerat:** 50 de minute
         self-paced-pl-csp1-2022: {}
-        self-paced-pl-csp2-2022: {}
+        self-paced-pl-csp2-2022:
+          title: 'Modulul 2: Navigare prin Code.org'
         self-paced-pl-csp3-2022: {}
         self-paced-pl-csp4-2022: {}
         csa9-2022: {}
@@ -3165,7 +3369,9 @@ ro:
             lesson-6:
               name: Extensie de Depanare Asincronă
         alltheblocklythings: {}
-        self-paced-pl-csd5-2022: {}
+        self-paced-pl-csd5-2022:
+          description: "Acest modul de învățare profesională este destinat să te ajute să te pregătești să predai unitatea IA și Învățarea Automată a Code.org.\n\n**În acest modul de învățare profesională, (te) vei:**\n\n-   Obține o introducere în inteligența artificială și învățarea automată. \n-   Pune în practică conceptele cheie incluse în unitate.\n-   Implică în AI Lab și App Lab.\n-   Explora proiectele de sfârșit de capitol. \n-   Elabora un plan de implementare a unității cu elevii tăi.\n\n**Timp sugerat:** 120 minute"
+          student_description: "Acest modul de învățare profesională este destinat să te ajute să te pregătești să predai unitatea IA și Învățarea Automată a Code.org.\n\n**În acest modul de învățare profesională, (te) vei:**\n\n-   Obține o introducere în inteligența artificială și învățarea automată. \n-   Pune în practică conceptele cheie incluse în unitate.\n-   Implică în AI Lab și App Lab.\n-   Explora proiectele de sfârșit de capitol. \n-   Elabora un plan de implementare a unității cu elevii tăi.\n\n**Timp sugerat:** 120 minute"
         vpl-csa-2022: {}
         csa-labs-2022: {}
         csa-draft-pl: {}
@@ -3283,6 +3489,8 @@ ro:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
             lessonGroup-3:
               display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+            lessonGroup-5:
+              display_name: Sondaj
         csd2-2023: {}
         csd4-2023:
           lesson_groups:
@@ -3309,6 +3517,8 @@ ro:
               display_name: Capitolul 1
             lessonGroup-3:
               display_name: Capirolul 2
+            lessonGroup-4:
+              display_name: Introducere în App Lab
         physcomp-temp: {}
         csc-bookcover: {}
         csc-landmarks-pilot: {}
@@ -3376,7 +3586,8 @@ ro:
               display_name: Chestionar după curs
         csp-post-survey-2023: {}
         self-paced-pl-csa1-2023: {}
-        self-paced-pl-csa2-2023: {}
+        self-paced-pl-csa2-2023:
+          title: 'Modulul 2: Navigare prin Code.org'
         self-paced-pl-csa3-2023: {}
         csa-examples-22: {}
         amy-playground: {}
@@ -3390,14 +3601,18 @@ ro:
           description_audience: Scriitori de Curriculum
           description_short: Pentru actualizările pe stadii ale lecțiilor sau nivelurile dintre versiunile planului curicular
         csc-pilot-fa2022-particles: {}
-        devices-2022: {}
+        devices-2022:
+          title: Crearea Aplicațiilor cu Dispozitive (Circuit Playground)
         allthevalidation: {}
         vpl-csd5-ayw-pilot-2022: {}
         vpl-csd6-ayw-pilot-2022: {}
         self-paced-pl-csa4-2023: {}
         katies-playground: {}
         microbit-2022: {}
-        microbit-temp: {}
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introducere în App Lab
         csc-timecapsule-2023: {}
         vpl-csd7-ayw-pilot-2022: {}
         vpl-csd8-ayw-pilot-2022: {}
@@ -3417,7 +3632,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Capitolul 1
-        testing-focus-on-creativity2: {}
+        testing-focus-on-creativity2:
+          title: Dezvoltare Web
         poetry-2023: {}
         poemmaker-2023: {}
         dlp-core-2023: {}
@@ -3581,6 +3797,8 @@ ro:
               display_name: Sondaj
         aiml-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Introducere în App Lab
             lessonGroup-3:
               display_name: Capitolul 1
             lessonGroup-4:
@@ -3591,6 +3809,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-creativity2-2023: {}
         focus-on-creativity3-2023:
           lesson_groups:
@@ -3606,6 +3826,8 @@ ro:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
             lessonGroup-3:
               display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+            lessonGroup-5:
+              display_name: Sondaj
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3617,6 +3839,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -3629,6 +3853,8 @@ ro:
               display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
         focus-on-data3-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Introducere în App Lab
             lessonGroup-3:
               display_name: Capitolul 1
             lessonGroup-4:
@@ -3637,6 +3863,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         self-paced-pl-k5-getting-started: {}
         focus-on-design-with-purpose2-2023: {}
         focus-on-design-with-purpose3-2023:
@@ -3651,6 +3879,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-coding2-2023: {}
         focus-on-coding3-2023:
           lesson_groups:
@@ -3663,6 +3893,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3679,6 +3911,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Capitolul 1
+            lessonGroup-3:
+              display_name: Introducere în App Lab
             lessonGroup-4:
               display_name: Capirolul 2
         csd6a-2023: {}
@@ -3751,11 +3985,89 @@ ro:
         vpl-csd-ci-6b: {}
         self-paced-pl-physical-computing1-2023: {}
         self-paced-pl-physical-computing2-2023: {}
-        self-paced-pl-csd1-2023: {}
-        self-paced-pl-csd2-2023: {}
-        self-paced-pl-csd3-2023: {}
-        self-paced-pl-csd4-2023: {}
-        self-paced-pl-csd5-2023: {}
+        self-paced-pl-csd1-2023:
+          title: 'Modulul 1: Bun venit'
+          description: |-
+            Acest modul este o scurtă introducere atât în Code.org, cât și în acest curs de învățare profesională.
+
+            **Vei:**
+
+            -   Primi o introducere în Code.org și Descoperirile Informaticii.
+            -   Învăța cum să te implici în acest curs de învățare profesională.
+
+            **Timp sugerat:** 10 minute
+          student_description: |-
+            Acest modul este o scurtă introducere atât în Code.org, cât și în acest curs de învățare profesională.
+
+            **Vei:**
+
+            -   Primi o introducere în Code.org și Descoperirile Informaticii.
+            -   Învăța cum să te implici în acest curs de învățare profesională.
+
+            **Timp sugerat:** 10 minute
+        self-paced-pl-csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigare prin Code.org
+          title: 'Modulul 2: Navigare prin Code.org'
+          description: |-
+            Acest modul este conceput  să te orienteze către instrumentele pe care le vei utiliza pentru a sprijini cursanții să învețe în timp ce predai Descoperirile Informaticii (CS).
+
+            **Vei:**
+
+            -   Naviga pe site-ul Code.org și prin instrumentele profesorului.
+            -   Configura o secțiune a clasei
+            -   Localiza și utiliza planuri ale lecției de curs și resursele profesorului.
+            -   Învăța cum să accesezi sprijinul în timpul predării cursului.
+
+            **Timp sugerat:** 60 de minute
+          student_description: |-
+            Acest modul este conceput  să te orienteze către instrumentele pe care le vei utiliza pentru a sprijini cursanții să învețe în timp ce predai Descoperirile Informaticii (CS).
+
+            **Vei:**
+
+            -   Naviga pe site-ul Code.org și prin instrumentele profesorului.
+            -   Configura o secțiune a clasei
+            -   Localiza și utiliza planuri ale lecției de curs și resursele profesorului.
+            -   Învăța cum să accesezi sprijinul în timpul predării cursului.
+
+            **Timp sugerat:** 60 de minute
+        self-paced-pl-csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Prezentare generală a Descoperirilor Informaticii
+          title: 'Modulul 3: Prezentare generală a Descoperirilor Informaticii'
+          description: "Acest modul îți va oferi o prezentare generală a cursului Descoperirile Informaticii, punând accentul pe conceptele pe care cursanții le vor învăța și pe instrumentele pe care le vor utiliza pe parcursul cursului. Implicarea în acest modul te va ajuta să iei decizii cu privire la modul de selectare a conținutului cursului pe care îl vei implementa în clasa ta. \n\n**Vei:**\n\n-   Obține o înțelegere la nivel înalt a programei Descoperirile Informaticii.\n-   Te vei familiariza cu mediile de programare utilizate în cadrul Descoperirilor Informaticii.\n-   Decide ce unități din Descoperirile Informaticii vei preda în clasa ta.\n\n**Timp sugerat:** 60 de minute"
+          student_description: "Acest modul îți va oferi o prezentare generală a cursului Descoperirile Informaticii, punând accentul pe conceptele pe care cursanții le vor învăța și pe instrumentele pe care le vor utiliza pe parcursul cursului. Implicarea în acest modul te va ajuta să iei decizii cu privire la modul de selectare a conținutului cursului pe care îl vei implementa în clasa ta. \n\n**Vei:**\n\n-   Obține o înțelegere la nivel înalt a programei Descoperirile Informaticii.\n-   Te vei familiariza cu mediile de programare utilizate în cadrul Descoperirilor Informaticii.\n-   Decide ce unități din Descoperirile Informaticii vei preda în clasa ta.\n\n**Timp sugerat:** 60 de minute"
+        self-paced-pl-csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Predarea și învățarea Descoperirilor Informaticii
+          title: 'Modulul 4: Predarea și învățarea Descoperirilor Informaticii'
+          description: |-
+            În acest modul, vei face cunoștință cu practicile CS autentice cu care cursanții se vor implica pe parcursul cursului Descoperirile Informaticii. Aceste practici includ depanarea, utilizarea resurselor și programarea în perechi. De asemenea, vei explora rolul profesorului în cadrul unei clase Descoperirile Informaticii și vei face un plan pentru modul în care vei sprijini învățarea elevilor în timpul predării cursului.
+
+            **Vei:**
+
+            -   Lua în considerare rolul profesorului într-o clasă Descoperirile Informaticii.
+            -   Învăța destre practicile Informaticii autentice pe care elevii le vor dezvolta pe parcursul cursului Descoperirile Informaticii.
+            -   Face planul pentru modul în care vei sprijini învățarea elevilor prin diferențiere, evaluare continuă și promovarea unei culturi a incluziunii.
+
+            **Timp sugerat:** 50 de minute
+          student_description: |-
+            În acest modul, vei face cunoștință cu practicile CS autentice cu care cursanții se vor implica pe parcursul cursului Descoperirile Informaticii. Aceste practici includ depanarea, utilizarea resurselor și programarea în perechi. De asemenea, vei explora rolul profesorului în cadrul unei clase Descoperirile Informaticii și vei face un plan pentru modul în care vei sprijini învățarea elevilor în timpul predării cursului.
+
+            **Vei:**
+
+            -   Lua în considerare rolul profesorului într-o clasă Descoperirile Informaticii.
+            -   Învăța destre practicile Informaticii autentice pe care elevii le vor dezvolta pe parcursul cursului Descoperirile Informaticii.
+            -   Face planul pentru modul în care vei sprijini învățarea elevilor prin diferențiere, evaluare continuă și promovarea unei culturi a incluziunii.
+
+            **Timp sugerat:** 50 de minute
+        self-paced-pl-csd5-2023:
+          title: 'Modulul 7: Pregătire pentru Predarea IA și Învățarea Automată'
+          description: "Acest modul de învățare profesională este destinat să te ajute să te pregătești să predai unitatea IA și Învățarea Automată a Code.org.\n\n**În acest modul de învățare profesională, (te) vei:**\n\n-   Obține o introducere în inteligența artificială și învățarea automată. \n-   Pune în practică conceptele cheie incluse în unitate.\n-   Implică în AI Lab și App Lab.\n-   Explora proiectele de sfârșit de capitol. \n-   Elabora un plan de implementare a unității cu elevii tăi.\n\n**Timp sugerat:** 120 minute"
+          student_description: "Acest modul de învățare profesională este destinat să te ajute să te pregătești să predai unitatea IA și Învățarea Automată a Code.org.\n\n**În acest modul de învățare profesională, (te) vei:**\n\n-   Obține o introducere în inteligența artificială și învățarea automată. \n-   Pune în practică conceptele cheie incluse în unitate.\n-   Implică în AI Lab și App Lab.\n-   Explora proiectele de sfârșit de capitol. \n-   Elabora un plan de implementare a unității cu elevii tăi.\n\n**Timp sugerat:** 120 minute"
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -3770,6 +4082,28 @@ ro:
             lesson-12:
               name: Încheiere
         pl-csd-summer-day5: {}
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introducere
+            lesson-12:
+              name: Încheiere
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Încheiere
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Încheiere
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Încheiere
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Evaluare
         self-paced-pl-microbit1: {}
         self-paced-pl-microbit2: {}
         seesaw-adaptations: {}
@@ -3788,3 +4122,175 @@ ro:
           title: Chestionar după curs
         focus-on-creativity-post-survey-2023:
           title: Chestionar după curs
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cetățenia Digitală
+            lessonGroup-3:
+              display_name: Spiriduși
+            lessonGroup-4:
+              display_name: Variabile
+            lessonGroup-6:
+              display_name: Proiect de final de curs
+          description_audience: 'Vârsta: 9-13 ani'
+          description_short: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
+        ey-ecosystems: {}
+        self-paced-pl-csp1-2023: {}
+        self-paced-pl-csp2-2023:
+          title: 'Modulul 2: Navigare prin Code.org'
+        self-paced-pl-csp3-2023: {}
+        self-paced-pl-csp4-2023: {}
+        musiclab: {}
+        csa-software-engineering: {}
+        csa-frq-practice: {}
+        hoc-amazon-poc: {}
+        musiclab-2023: {}
+        csa-frq-practice-2019: {}
+        csa-frq-practice-2021: {}
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Date
+        csa-frq-practice-2023: {}
+        csa-frq-practice-pre2019: {}
+        self-paced-pl-aiml1: {}
+        self-paced-pl-aiml2: {}
+        musiclab-pilot: {}
+        tesspltest23: {}
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cetățenia Digitală
+            lessonGroup-3:
+              display_name: Secvențiere
+            lessonGroup-4:
+              display_name: Bucle
+            lessonGroup-5:
+              display_name: Impactul computerelor
+          description_audience: 'Vârsta: 4-7 ani'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Date
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cetățenia Digitală
+            lessonGroup-3:
+              display_name: Secvențiere
+            lessonGroup-4:
+              display_name: Bucle
+            lessonGroup-5:
+              display_name: Impactul computerelor
+            lessonGroup-6:
+              display_name: Date
+          description_audience: 'Vârsta: 4-7 ani'
+          description_short: O introducere în informatică pentru preșcolari.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Date
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cetățenia Digitală
+            lessonGroup-3:
+              display_name: Secvențiere
+            lessonGroup-4:
+              display_name: Bucle
+            lessonGroup-5:
+              display_name: Impactul computerelor
+            lessonGroup-6:
+              display_name: Evenimente
+            lessonGroup-7:
+              display_name: Proiect de final de curs
+            lessonGroup-8:
+              display_name: Date
+          description_audience: 'Vârsta: 5-8 ani'
+          description_short: O introducere în știința calculatoarelor pentru preșcolari. Asemănătoare cu Cursul A, dar cu o prezentare mai aprofundată a conceptelor.
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Sisteme de calcul
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cetățenia Digitală
+            lessonGroup-3:
+              display_name: Secvențiere
+            lessonGroup-4:
+              display_name: Bucle
+            lessonGroup-5:
+              display_name: Evenimente
+            lessonGroup-6:
+              display_name: Date
+            lessonGroup-8:
+              display_name: Sisteme de calcul
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cetățenia Digitală
+            lessonGroup-3:
+              display_name: Secvențiere
+            lessonGroup-4:
+              display_name: Impactul computerelor
+            lessonGroup-6:
+              display_name: Bucle
+            lessonGroup-7:
+              display_name: Date
+            lessonGroup-8:
+              display_name: Proiect de final de curs
+          description_audience: 'Vârsta: 7-11 ani'
+          description_short: Învață despre condiții. Creează propriile opere de artă, jocuri, chiar și o petrecere dansantă.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Repetiții imbricate
+            lessonGroup-4:
+              display_name: Funcţii
+            lessonGroup-6:
+              display_name: Proiect de final de curs
+          description_audience: 'Vârsta: 8-12 ani'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spiriduși
+          description_audience: 'Vârsta: 9-13 ani'
+          description_short: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spiriduși
+            lessonGroup-3:
+              display_name: Condiţionale
+            lessonGroup-5:
+              display_name: Variabile
+            lessonGroup-6:
+              display_name: Impactul computerelor
+            lessonGroup-7:
+              display_name: Proiect de final de curs
+          description_audience: 'Vârsta: 9-13 ani'
+          description_short: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
+        vpl-csp-2023-m1: {}
+        vpl-csp-2023-m2: {}
+        vpl-csp-2023-m3: {}
+        vpl-csp-2023-m4: {}
+        vpl-csp-2023-m5: {}
+        vpl-csp-2023-m6: {}
+        vpl-csp-2023-m7: {}
+        vpl-csp-2023-m8: {}
+        vpl-csa-2023-m1: {}
+        how-ai-works-2023: {}
+        vpl-csa-2023-m2: {}
+        vpl-csa-2023-m3: {}
+        vpl-csa-2023-m4: {}
+        vpl-csa-2023-m5: {}
+        vpl-csa-2023-m6: {}
+        vpl-csa-2023-m7: {}
+        vpl-csa-2023-m8: {}
+        pl-csd-2023-m1: {}
+        vpl-csd-2023-m1: {}
+        vpl-csd-2023-m2: {}
+        vpl-csd-2023-m3: {}
+        vpl-csd-2023-m4: {}
+        vpl-csd-2023-m5: {}
+        vpl-csd-2023-m6: {}
+        vpl-csd-2023-m7: {}
+        vpl-csd-2023-m8: {}

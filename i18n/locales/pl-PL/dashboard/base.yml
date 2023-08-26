@@ -60,6 +60,7 @@ pl:
         reset_password_token: "Link do resetowania hasła, z którego skorzystałeś"
         error:
           future: nie może być w przyszłości
+        us_state: 'Stan'
   beta: "beta"
   hello: "Witaj świecie"
   welcome_back: "Witaj z powrotem, %{name}"
@@ -69,7 +70,9 @@ pl:
   unsubmit: Nieprzesłane
   previous_page: Poprzednia strona
   next_page: Następna strona
+  next_level: Następny poziom
   next_resource: Kolejne zasoby
+  done_with_module: Sporządzono z tym modułem edukacyjnym
   cancel: "Anuluj"
   okay: "OK"
   or: "lub"
@@ -198,6 +201,9 @@ pl:
     parent_account_checkbox: "Jestem rodzicem/opiekunem rejestrującym się w imieniu mojego dziecka"
     parent_account_email_progress_permission: "Czy możemy od czasu do czasu przesyłać Ci e-mailem informacje o postępach i projektach Twojego dziecka, a także o jego kursie i informatyce? [(Zobacz naszą Politykę prywatności)] (%{privacy_policy_url})"
     parent_account_email_label: "Adres e-mail rodzica/opiekuna"
+    us_state: 'Stan'
+    us_state_dropdown_options:
+      other: "Mieszkam w miejscu niewymienionym tutaj"
   school_info:
     title: 'Informacja o Szkole (opcjonalne)'
     school_country: 'Kraj szkoły'
@@ -266,6 +272,9 @@ pl:
   parent_mailer:
     student_associated_subject: 'Informacje logowania na Code.org'
     parent_email_added_subject: 'Witaj na Code.org!'
+    parent_permission_request_subject: "Zgoda rodziców potrzebna do uzyskania dostępu dziecka do Code.org"
+    parent_permission_reminder_subject: "Przypomnienie, zgoda rodziców potrzebna do uzyskania dostępu dziecka do Code.org"
+    parent_permission_confirmation_subject: "Dziękujemy za zatwierdzenie dostępu Twojego dziecka do Code.org!"
   teacher_mailer:
     new_teacher_subject: 'Witaj na Code.org!'
     delete_teacher_subject: 'Powiadomienie Code.org: Twoje konto zostało usunięte'
@@ -351,6 +360,7 @@ pl:
       sprite_lab_documentation: "Dokumentacja Sprite Lab"
       sprite_lab_tutorials: "Samouczki Sprite Lab"
       web_lab_documentation: "Dokumentacja Web Lab"
+      project_beats_documentation: "Dokumentacja projektu Beats"
       educate_overview: "Przegląd edukatora"
       educate_elementary: "Szkoła podstawowa"
       educate_middle: "Gimnazjum"
@@ -864,6 +874,8 @@ pl:
     submit-incomplete-body: "Brak odpowiedzi na niektóre pytania. Nie masz możliwości poprawy sprawdzianu po jego przesłaniu. Czy chcesz kontynuować?"
     submit-complete-title: "Prześlij swój sprawdzian"
     submit-complete-body: "Nie masz możliwości poprawy sprawdzianu po jego przesłaniu. Czy chcesz kontynuować?"
+  level_summary:
+    correct_answer: "Prawidłowa odpowiedź"
   match:
     wrong_title: "Niepoprawne rozwiązanie"
     wrong_body: "Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!"
@@ -1012,6 +1024,7 @@ pl:
     instructor_feedback: 'Opinie instruktora'
     peer_feedback: 'Wzajemne opinie'
     outdated: 'Ta opinia została dodana do wcześniej zgłoszonej wersji'
+    review_count: 'Musisz wypełnić %{review_count} recenzji dla tego urządzenia'
     peer_review: 'Wzajemne recenzje'
   external_links:
     disclaimer: Uwaga
@@ -1124,17 +1137,34 @@ pl:
         not_listed: 'Preferowanego terminu nie ma na liście'
         none: 'Wolę nie odpowiadać'
       school_country:
+        australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belize'
+        brazil: 'Brazylia'
         canada: 'Kanada'
         chile: 'Chile'
         colombia: 'Kolumbia'
+        dominican_republic: 'Dominikana'
+        india: 'Indie'
+        indonesia: 'Indonezja'
         israel: 'Izrael'
+        jamaica: 'Jamajka'
+        kenya: 'Kenia'
+        kosovo: 'Kosowo'
         malaysia: 'Malezja'
+        maldives: 'Malediwy'
         mexico: 'Meksyk'
+        mongolia: 'Mongolia'
+        new_zealand: 'Nowa Zelandia'
         paraguay: 'Paragwaj'
+        portugal: 'Portugalia'
+        slovakia: 'Słowacja'
+        south_korea: 'Korea Południowa'
+        spain: 'Hiszpania'
         thailand: 'Tajlandia'
+        trinidad_and_tobago: 'Trynidad i Tobago'
         uzbekistan: 'Uzbekistan'
+        vietnam: 'Wietnam'
       ages:
         ages_under_6: 'w wieku ponżej 6 lat'
         ages_7_8: 'w wieku 7-8 lat'
@@ -1183,6 +1213,8 @@ pl:
         csf_express: 'Podstawy informatyki (Wstępne ekspresowe lub ekspresowe)'
         csd: 'Odkrycia informatyki'
         csp: 'Podstawy Informatyki'
+        csa: 'CS A'
+        other: 'Inni/inne'
         not_applicable: "Nie dotyczy"
       email_opt_in:
         opt_in_yes: 'Tak'
@@ -1243,6 +1275,7 @@ pl:
       error_invalid_user: 'Nieważny identyfikator użytkownika. Prosimy spróbować zalogować się ponownie.'
       error_no_code: 'Prosimy wpisać swój kod logowania.'
       confirm_login: "Wybierz Potwierdź, aby zalogować się ze swoim kontem Google.\n"
+    setup_page_title: 'Konfiguracja Maker'
   parent_email_banner:
     text: "**Czy jesteś rodzicem lub opiekunem?** Połącz swój adres e-mail z tym kontem, aby być na bieżąco z postępami i projektami swojego dziecka!"
     link_your_email: "Połącz swój e-mail"
@@ -1278,3 +1311,7 @@ pl:
     binary: "Binarny"
     hexadecimal: "Szesnastkowy"
     pixel_format_header: "Format pikseli"
+  course_deprecated:
+    title: "Głowy do góry! Ten program nauczania nie jest już dostępny, ale Code.org ma dla Ciebie nowsze opcje."
+    button: "Zobacz nowy program nauczania"
+

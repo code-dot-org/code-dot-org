@@ -3,93 +3,6 @@ lv:
   data:
     script:
       name:
-        course1:
-          title: Kurss 1
-          description: Kurss 1 ir radīts, lai ļautu jaunākiem lasītājiem radīt datorprogrammas,
-            kas palīdzēs viņiem apgūt sadarbību ar kolēģiem, attīstīt problēmu risināšanas
-            prasmes un neatlaisties no sarežģītiem uzdevumiem. Šī kursa beigās skolēni
-            radīs paši savu spēli vai stāstu ar ko varēs dalīties vai publicēt. Ieteicams
-            klasēm K-1.
-          description_short: 1.  kurss piemērots ar nelielu lasītprasmi.
-          description_audience: No 4 gadiem (nav jālasa)
-          student_description: Kurss 1 ir radīts, lai ļautu jaunākiem lasītājiem radīt
-            datorprogrammas, kas palīdzēs viņiem apgūt sadarbību ar kolēģiem, attīstīt
-            problēmu risināšanas prasmes un neatlaisties no sarežģītiem uzdevumiem.
-            Šī kursa beigās skolēni radīs paši savu spēli vai stāstu ar ko varēs dalīties
-            vai publicēt. Ieteicams klasēm K-1.
-        course2:
-          title: Kurss 2
-          description: 2.  kurss ir veidots skolēniem, kuri prot lasīt un kuriem nav
-            ieprieksējās programmēšnas pieredzes. Šajā kursā skolēni veidos programmas,
-            kas risina problēmas, un radīs interaktīvas spēles vai stāstus ar kuriem
-            var dalīties vai publicēt. Iteicams no 2.-5. klasei.
-          description_short: 2.  kurss paredzēts skolēniem, kuri prot lasīt.
-          description_audience: No 6 gadiem (jāprot lasīt)
-          student_description: 2.  kurss ir veidots skolēniem, kuri prot lasīt un
-            kuriem nav ieprieksējās programmēšnas pieredzes. Šajā kursā skolēni veidos
-            programmas, kas risina problēmas, un radīs interaktīvas spēles vai stāstus
-            ar kuriem var dalīties vai publicēt. Iteicams no 2.-5. klasei.
-        course3:
-          title: Kurss 3
-          description: 3.  kurss ir paredzēts skolēniem, kas ir pabeiguši 2. kursu.
-            Skolēni vairāk iedziļinās programmēšanas tēmās, ar kurām iepazinās iepriekšējos
-            kursos, lai atrastu vairāk atbildes grūtākām problēmām. Šī kursa beigās,
-            skolēni izveido interaktīvus stāstus un spēles, lai dalītos ar pārējiem.
-            Ieteicams no 4.-5. klasei.
-          description_short: 3.  kurss seko 2. kursam.
-          description_audience: Vecumā no 8 gadiem (pēc 2. kursa)
-          student_description: 3.  kurss ir paredzēts skolēniem, kas ir pabeiguši
-            2. kursu. Skolēni vairāk iedziļinās programmēšanas tēmās, ar kurām iepazinās
-            iepriekšējos kursos, lai atrastu vairāk atbildes grūtākām problēmām. Šī
-            kursa beigās, skolēni izveido interaktīvus stāstus un spēles, lai dalītos
-            ar pārējiem. Ieteicams no 4.-5. klasei.
-        playlab:
-          title: Spēles laboratorija
-          description: Izveidot stāstu vai spēli ar Spēles laboratoriju!
-          description_short: Izveidot stāstu vai spēli ar Spēles laboratoriju!
-          student_description: Izveidot stāstu vai spēli ar Spēles laboratoriju!
-        artist:
-          title: Mākslinieks
-          description: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
-          description_short: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
-          student_description: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
-        hourofcode:
-          description: Mēģiniet datorzinātņu pamatus ar tēliem no dusmīgajiem putniem,
-            augiem pret zombijiem un Skretu no Ledus laikmeta!
-          description_short: Izmēģini datrzinību pamatus ar daudz jaukiem tēliem!
-          student_description: Mēģiniet datorzinātņu pamatus ar tēliem no dusmīgajiem
-            putniem, augiem pret zombijiem un Skretu no Ledus laikmeta!
-        frozen:
-          title: Programmē ar Annu un Elzu
-          description: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus
-            burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot
-            un taisot ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
-          description_short: Kodē, lai kopā ar Annu un Elzu iepazītu ledus skaistumu
-            un burvību.
-          student_description: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt
-            ledus burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot
-            un taisot ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
-        course4:
-          title: 4.  kurss
-          description_short: Skolēniem, kas pilda 4. kursu vajadzēja pabeigt 2. un
-            3. kursu.
-          description_audience: Vecumā no 10 gadiem (pēc 3. kursa)
-        Course4pre:
-          title: 4.  kursa priekšnoteikums
-          description: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un
-            3. kursu.
-          description_short: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši
-            2. un 3. kursu.
-          student_description: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši
-            2. un 3. kursu.
-        usability:
-          title: lietojamības testēšana
-          description: Atlasīti 4. kuras līmeņi lietošanas testēšanai.
-          student_description: Atlasīti 4. kuras līmeņi lietošanas testēšanai.
-        algebra:
-          title: Datorzinātne Algebrā
-        netsim:
-          title: Interneta simulators
         20-hour:
           description: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
             pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs,
@@ -98,191 +11,67 @@ lv:
           student_description: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
             pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs,
             bet tas sagādās prieku mācīties visos vecumos.
-        edit-code:
-          title: rediģēt kodu
-          description: rediģēt kodu
-          description_short: rediģēt kodu
-          student_description: rediģēt kodu
-        events:
-          title: Pasākumi
-          description: Pasākumi
-          description_short: Pasākumi
-          student_description: Pasākumi
-        flappy:
-          title: Flappy kods
-          description: Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs? Izmēģini
-            Flappy koda apmācību!
-          student_description: Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs?
-            Izmēģini Flappy koda apmācību!
-        jigsaw:
-          title: Puzle
-        step:
-          title: Solis
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: Atkļūdošana
+            introduction:
+              display_name: Ievads
+            lessonGroup-3:
+              display_name: Mainīgie
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Programmēšanas stunda
+        CSF_Secret_Sample:
+          description_audience: Vecumā no 8 gadiem (pēc 2. kursa)
+        CSF_Secret_Sample_Story:
+          description_audience: Vecums 8-18+
+        Course4pre:
+          description: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un
+            3. kursu.
+          description_short: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši
+            2. un 3. kursu.
+          student_description: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši
+            2. un 3. kursu.
+          title: 4.  kursa priekšnoteikums
         Hour of Code:
           description_short: Izmēģini datrzinību pamatus ar daudz jaukiem tēliem!
-        asUnplugged:
-          description_audience: Vecumā 6-13
-        afterschool1:
-          description_audience: Vecumā 7-13
+        MikeTest:
+          description_audience: Vecumā no 8-98
         Special Fun:
           description_audience: Vecumā no 10 gadiem (pēc 3. kursa)
         SpecialSeries:
           description_audience: Vecumā no 10 gadiem (pēc 3. kursa)
-        mc:
-          description_short: Iepazīsti Minecraft pasauli, izmantojot kodu
-        CSF_Secret_Sample:
-          description_audience: Vecumā no 8 gadiem (pēc 2. kursa)
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        CSF_Secret_Sample_Story:
-          description_audience: Vecums 8-18+
-        MikeTest:
-          description_audience: Vecumā no 8-98
-        artistExemplar:
-          description_audience: Vecumā no 8 gadiem (pēc 2. kursa)
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        gradeKinder:
-          description_audience: Vecums 5-18
-        grade4:
-          description_audience: Vecums no 9-99
-        grade1:
-          description_audience: Vecums 5-18
-        grade5:
-          description_audience: Vecumā no 10-110
-        grade3:
-          description_audience: Vecums 5-18
+        afterschool1:
+          description_audience: Vecumā 7-13
+        algebra:
+          title: Datorzinātne Algebrā
         alltheplcthings:
           lesson_groups:
             required:
               display_name: Pārskats
-        grade2:
-          description_audience: Vecums 5-18
-        csp-online-test:
+        andrea-test:
           lesson_groups:
             required:
               display_name: Pārskats
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: Pārskats
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Novērtējumi
+        artist:
+          description: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
+          description_short: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
+          student_description: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
+          title: Mākslinieks
+        artistExemplar:
+          description_audience: Vecumā no 8 gadiem (pēc 2. kursa)
+        asUnplugged:
+          description_audience: Vecumā 6-13
         basketball:
           name: basketbols
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: Pārskats
         classic-hoc-impact-study:
           description_short: Izmēģini datrzinību pamatus ar daudz jaukiem tēliem!
-        hoc-impact-study:
-          description_short: Izmēģini datrzinību pamatus ar daudz jaukiem tēliem!
-        csp3-support:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp4-support:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp5-support:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        coursea-2017:
-          title: A kurss
-          assignment_family_title: A kurss
-        courseb-2017:
-          title: B kurss
-          assignment_family_title: B kurss
-        coursec-2017:
-          title: C kurss
-          assignment_family_title: C kurss
-        coursed-2017:
-          title: D kurss
-          assignment_family_title: D kurss
-        coursee-2017:
-          title: E kurss
-          assignment_family_title: E kurss
-          lesson_groups:
-            csf_e_2:
-              display_name: Kursa E saturs
-        coursef-2017:
-          title: F kurss
-          assignment_family_title: F kurss
-          lesson_groups:
-            csf_f_2:
-              display_name: Kursa F saturs
-        cspnovice:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp1-dlp:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp2-dlp:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp3-dlp:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp4-dlp:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp5-dlp:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csd1-dlp:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csd6-dlp:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csd5-dlp:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csd4-dlp:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csd3-dlp:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csd2-dlp:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        express-2017:
-          title: Ekspress kurss
-          assignment_family_title: Ekspress kurss
-        e-f-ramp:
-          lesson_groups:
-            csf_e_2:
-              display_name: Kursa E saturs
-        new-e:
-          lesson_groups:
-            csf_e_2:
-              display_name: Kursa E saturs
-        new-f:
-          lesson_groups:
-            csf_f_2:
-              display_name: Kursa F saturs
         course-e-2018:
           lesson_groups:
             csf_e_2:
@@ -291,76 +80,398 @@ lv:
           lesson_groups:
             csf_f_2:
               display_name: Kursa F saturs
+        course1:
+          description: Kurss 1 ir radīts, lai ļautu jaunākiem lasītājiem radīt datorprogrammas,
+            kas palīdzēs viņiem apgūt sadarbību ar kolēģiem, attīstīt problēmu risināšanas
+            prasmes un neatlaisties no sarežģītiem uzdevumiem. Šī kursa beigās skolēni
+            radīs paši savu spēli vai stāstu ar ko varēs dalīties vai publicēt. Ieteicams
+            klasēm K-1.
+          description_audience: No 4 gadiem (nav jālasa)
+          description_short: 1.  kurss piemērots ar nelielu lasītprasmi.
+          student_description: Kurss 1 ir radīts, lai ļautu jaunākiem lasītājiem radīt
+            datorprogrammas, kas palīdzēs viņiem apgūt sadarbību ar kolēģiem, attīstīt
+            problēmu risināšanas prasmes un neatlaisties no sarežģītiem uzdevumiem.
+            Šī kursa beigās skolēni radīs paši savu spēli vai stāstu ar ko varēs dalīties
+            vai publicēt. Ieteicams klasēm K-1.
+          title: Kurss 1
+        course2:
+          description: 2.  kurss ir veidots skolēniem, kuri prot lasīt un kuriem nav
+            ieprieksējās programmēšnas pieredzes. Šajā kursā skolēni veidos programmas,
+            kas risina problēmas, un radīs interaktīvas spēles vai stāstus ar kuriem
+            var dalīties vai publicēt. Iteicams no 2.-5. klasei.
+          description_audience: No 6 gadiem (jāprot lasīt)
+          description_short: 2.  kurss paredzēts skolēniem, kuri prot lasīt.
+          student_description: 2.  kurss ir veidots skolēniem, kuri prot lasīt un
+            kuriem nav ieprieksējās programmēšnas pieredzes. Šajā kursā skolēni veidos
+            programmas, kas risina problēmas, un radīs interaktīvas spēles vai stāstus
+            ar kuriem var dalīties vai publicēt. Iteicams no 2.-5. klasei.
+          title: Kurss 2
+        course3:
+          description: 3.  kurss ir paredzēts skolēniem, kas ir pabeiguši 2. kursu.
+            Skolēni vairāk iedziļinās programmēšanas tēmās, ar kurām iepazinās iepriekšējos
+            kursos, lai atrastu vairāk atbildes grūtākām problēmām. Šī kursa beigās,
+            skolēni izveido interaktīvus stāstus un spēles, lai dalītos ar pārējiem.
+            Ieteicams no 4.-5. klasei.
+          description_audience: Vecumā no 8 gadiem (pēc 2. kursa)
+          description_short: 3.  kurss seko 2. kursam.
+          student_description: 3.  kurss ir paredzēts skolēniem, kas ir pabeiguši
+            2. kursu. Skolēni vairāk iedziļinās programmēšanas tēmās, ar kurām iepazinās
+            iepriekšējos kursos, lai atrastu vairāk atbildes grūtākām problēmām. Šī
+            kursa beigās, skolēni izveido interaktīvus stāstus un spēles, lai dalītos
+            ar pārējiem. Ieteicams no 4.-5. klasei.
+          title: Kurss 3
+        course4:
+          description_audience: Vecumā no 10 gadiem (pēc 3. kursa)
+          description_short: Skolēniem, kas pilda 4. kursu vajadzēja pabeigt 2. un
+            3. kursu.
+          title: 4.  kurss
+        coursea-2017:
+          assignment_family_title: A kurss
+          title: A kurss
         coursea-2018:
           assignment_family_title: A kurss
-        express-2018:
-          title: Ekspress kurss
-          assignment_family_title: Ekspress kurss
+        coursea-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        coursea-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        coursea-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        coursea-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        courseb-2017:
+          assignment_family_title: B kurss
+          title: B kurss
         courseb-2018:
           assignment_family_title: B kurss
-        coursed-2018:
-          assignment_family_title: D kurss
+        courseb-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        courseb-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        courseb-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        courseb-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        coursec-2017:
+          assignment_family_title: C kurss
+          title: C kurss
         coursec-2018:
           assignment_family_title: C kurss
+        coursec-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Binārie
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        coursec-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: Binārie
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        coursec-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: Binārie
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        coursec-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        coursed-2017:
+          assignment_family_title: D kurss
+          title: D kurss
+        coursed-2018:
+          assignment_family_title: D kurss
+        coursed-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Binārie
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        coursed-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: Binārie
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        coursed-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: Binārie
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+            lessonGroup-6:
+              display_name: Digitālā pilsonība
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+            lessonGroup-6:
+              display_name: Digitālā pilsonība
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+            lessonGroup-6:
+              display_name: Digitālā pilsonība
+        coursee-2017:
+          assignment_family_title: E kurss
+          lesson_groups:
+            csf_e_2:
+              display_name: Kursa E saturs
+          title: E kurss
         coursee-2018:
           assignment_family_title: E kurss
           lesson_groups:
             csf_e_2:
               display_name: Kursa E saturs
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_functions:
+              display_name: Funkcijas
+            csf_nested_loops:
+              display_name: Cikls ciklā
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_functions:
+              display_name: Funkcijas
+            csf_nested_loops:
+              display_name: Cikls ciklā
+        coursee-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_functions:
+              display_name: Funkcijas
+            csf_nested_loops:
+              display_name: Sazarojumi
+            ramp_up:
+              display_name: Cikls ciklā
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_functions:
+              display_name: Funkcijas
+            csf_nested_loops:
+              display_name: Sazarojumi
+            ramp_up:
+              display_name: Cikls ciklā
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_functions:
+              display_name: Funkcijas
+            csf_nested_loops:
+              display_name: Sazarojumi
+            ramp_up:
+              display_name: Cikls ciklā
+        coursef-2017:
+          assignment_family_title: F kurss
+          lesson_groups:
+            csf_f_2:
+              display_name: Kursa F saturs
+          title: F kurss
         coursef-2018:
           assignment_family_title: F kurss
           lesson_groups:
             csf_f_2:
               display_name: Kursa F saturs
-        csd1-dlp-18:
+        coursef-2019:
           lesson_groups:
-            required:
-              display_name: Pārskats
-        csd2-dlp-18:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_for_loops:
+              display_name: '"par" cikli'
+            csf_internet:
+              display_name: Internets
+            csf_variables:
+              display_name: Mainīgie
+        coursef-2020:
           lesson_groups:
-            required:
-              display_name: Pārskats
-        csd3-dlp-18:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_for_loops:
+              display_name: '"par" cikli'
+            csf_variables:
+              display_name: Mainīgie
+        coursef-2021:
           lesson_groups:
-            required:
-              display_name: Pārskats
-        csd4-dlp-18:
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_for_loops:
+              display_name: '"par" cikli'
+            csf_variables:
+              display_name: '"par" cikli'
+            lessonGroup-7:
+              display_name: Digitālā pilsonība
+            lessonGroup-8:
+              display_name: Mainīgie
+            lessonGroup-9:
+              display_name: noņemt
+        coursef-2022:
           lesson_groups:
-            required:
-              display_name: Pārskats
-        csd5-dlp-18:
+            lessonGroup-7:
+              display_name: Digitālā pilsonība
+            lessonGroup-8:
+              display_name: Mainīgie
+        coursef-2022-pilot:
           lesson_groups:
-            required:
-              display_name: Pārskats
-        csd6-dlp-18:
+            lessonGroup-7:
+              display_name: Digitālā pilsonība
+            lessonGroup-8:
+              display_name: Mainīgie
+        coursef-2023:
           lesson_groups:
-            required:
-              display_name: Pārskats
-        csp1-dlp-18:
+            lessonGroup-2:
+              display_name: Digitālā pilsonība
+            lessonGroup-4:
+              display_name: Mainīgie
+        csa-videos:
           lesson_groups:
-            required:
-              display_name: Pārskats
-        csp2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp-explore-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp-create-dlp-18:
+            lessonGroup-2:
+              display_name: 1.  nodaļa
+            lessonGroup-4:
+              display_name: 2.  nodaļa
+            lessonGroup-5:
+              display_name: 3.  nodaļa
+            lessonGroup-6:
+              display_name: 4.  nodaļa
+            lessonGroup-7:
+              display_name: 5.  nodaļa
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Cikli
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Mainīgie
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: '"par" cikli'
+        csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Pārskats
@@ -368,7 +479,81 @@ lv:
           lesson_groups:
             required:
               display_name: Pārskats
-        csd-apprentice-18:
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mainīgie
+            ramp_up:
+              display_name: Ievads
+            variables:
+              display_name: Mainīgie
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mainīgie
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp-explore-dlp-18:
           lesson_groups:
             required:
               display_name: Pārskats
@@ -376,108 +561,16 @@ lv:
           lesson_groups:
             required:
               display_name: Pārskats
-        csp-apprentice-18:
+        csp-online-test:
           lesson_groups:
             required:
               display_name: Pārskats
-        fit-test:
+        csp1-dlp:
           lesson_groups:
             required:
               display_name: Pārskats
-        cspplayground:
+        csp1-dlp-18:
           lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
-            csp_conditionals:
-              display_name: Sazarojumi
-            csp_functions:
-              display_name: Funkcijas
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Mainīgie
-            csf_for_loops:
-              display_name: '"par" cikli'
-            csf_internet:
-              display_name: Internets
-            csf_digcit:
-              display_name: Digitālā pilsonība
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Pasākumi
-            csf_loops:
-              display_name: Cikli
-            csf_conditionals:
-              display_name: Sazarojumi
-            csf_binary:
-              display_name: Binārie
-            csf_digcit:
-              display_name: Digitālā pilsonība
-        coursee-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_nested_loops:
-              display_name: Cikls ciklā
-            csf_functions:
-              display_name: Funkcijas
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Cikli
-            csf_conditionals:
-              display_name: Sazarojumi
-            csf_functions:
-              display_name: Funkcijas
-            csf_variables:
-              display_name: Mainīgie
-            csf_for_loops:
-              display_name: '"par" cikli'
-        andrea-test:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_binary:
-              display_name: Binārie
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        coursea-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
-            csp_conditionals:
-              display_name: Sazarojumi
-            csp_functions:
-              display_name: Funkcijas
             required:
               display_name: Pārskats
         csp1-pilot:
@@ -486,66 +579,164 @@ lv:
               display_name: Pārskats
         csp1-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
             csp_conditionals:
               display_name: Sazarojumi
             csp_functions:
               display_name: Funkcijas
+            csp_variables:
+              display_name: Mainīgie
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+            csp_variables:
+              display_name: Mainīgie
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Pārskats
         csp2-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
             csp_conditionals:
               display_name: Sazarojumi
             csp_functions:
               display_name: Funkcijas
+            csp_variables:
+              display_name: Mainīgie
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+            csp_variables:
+              display_name: Mainīgie
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+            csp_variables:
+              display_name: Mainīgie
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+            csp_variables:
+              display_name: Mainīgie
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+            csp_variables:
+              display_name: Mainīgie
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+            csp_variables:
+              display_name: Mainīgie
+            required:
+              display_name: Pārskats
         csp4-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
             csp_conditionals:
               display_name: Sazarojumi
             csp_functions:
               display_name: Funkcijas
-        csp5-pilot-staging:
+            csp_variables:
+              display_name: Mainīgie
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+            csp_variables:
+              display_name: Mainīgie
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Saraksti
             csp_loops:
               display_name: Cikli
-        csp6-pilot-staging:
+        csp5-2021:
           lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
-            csp_conditionals:
-              display_name: Sazarojumi
-            csp_functions:
-              display_name: Funkcijas
-        csp8-pilot-staging:
+            csp_lists:
+              display_name: Saraksti
+            csp_loops:
+              display_name: Cikli
+        csp5-2022:
           lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
-            csp_conditionals:
-              display_name: Sazarojumi
-            csp_functions:
-              display_name: Funkcijas
-        csp9-pilot-staging:
+            csp_lists:
+              display_name: Saraksti
+            csp_loops:
+              display_name: Cikli
+        csp5-2023:
           lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
-            csp_conditionals:
-              display_name: Sazarojumi
-            csp_functions:
-              display_name: Funkcijas
-        csp10-pilot-staging:
+            csp_loops:
+              display_name: Cikli
+        csp5-dlp:
           lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
-            csp_conditionals:
-              display_name: Sazarojumi
-            csp_functions:
-              display_name: Funkcijas
+            required:
+              display_name: Pārskats
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pārskats
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -554,29 +745,75 @@ lv:
               display_name: Cikli
             required:
               display_name: Pārskats
-        fit2019-novice:
+        csp5-pilot-staging:
           lesson_groups:
-            required:
-              display_name: Pārskats
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp3-pilot:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csl-vn:
-          lesson_groups:
-            csf_loops:
+            csp_lists:
+              display_name: Saraksti
+            csp_loops:
               display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        dlp19-csd-mod-fit:
+        csp5-support:
           lesson_groups:
             required:
               display_name: Pārskats
-        dlp19-csp-mod-fit:
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmi
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Saraksti
+            lessonGroup-3:
+              display_name: Cikli
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+            csp_variables:
+              display_name: Mainīgie
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+            csp_variables:
+              display_name: Mainīgie
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+            csp_variables:
+              display_name: Mainīgie
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+            csp_variables:
+              display_name: Mainīgie
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        dlp19-csd-mod-fit:
           lesson_groups:
             required:
               display_name: Pārskats
@@ -596,6 +833,10 @@ lv:
           lesson_groups:
             required:
               display_name: Pārskats
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Pārskats
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
@@ -612,491 +853,306 @@ lv:
           lesson_groups:
             required:
               display_name: Pārskats
-        csp2-pilot:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp6-pilot:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
-            csp_conditionals:
-              display_name: Sazarojumi
-            csp_functions:
-              display_name: Funkcijas
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_conditionals:
-              display_name: Sazarojumi
-            csf_nested_loops:
-              display_name: Cikls ciklā
-            csf_functions:
-              display_name: Funkcijas
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Cikli
-            csf_conditionals:
-              display_name: Sazarojumi
-            csf_events:
-              display_name: Pasākumi
-            csf_digcit:
-              display_name: Digitālā pilsonība
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Cikli
-            csf_conditionals:
-              display_name: Sazarojumi
-            csf_events:
-              display_name: Pasākumi
-            csf_digcit:
-              display_name: Digitālā pilsonība
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: Pārskats
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
-            csp_conditionals:
-              display_name: Sazarojumi
-            csp_functions:
-              display_name: Funkcijas
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Saraksti
-            csp_loops:
-              display_name: Cikli
-        coursea-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        courseb-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        coursec-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_binary:
-              display_name: Binārie
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Pasākumi
-            csf_loops:
-              display_name: Cikli
-            csf_conditionals:
-              display_name: Sazarojumi
-            csf_binary:
-              display_name: Binārie
-            csf_digcit:
-              display_name: Digitālā pilsonība
-        coursee-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_nested_loops:
-              display_name: Cikls ciklā
-            csf_functions:
-              display_name: Funkcijas
-        coursef-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_variables:
-              display_name: Mainīgie
-            csf_for_loops:
-              display_name: '"par" cikli'
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Cikli
-            csf_conditionals:
-              display_name: Sazarojumi
-            csf_functions:
-              display_name: Funkcijas
-            csf_variables:
-              display_name: Mainīgie
-            csf_for_loops:
-              display_name: '"par" cikli'
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        2021drafting:
-          lesson_groups:
-            introduction:
-              display_name: Ievads
-            lessonGroup-3:
-              display_name: Mainīgie
-            debugging:
-              display_name: Atkļūdošana
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
-            csp_conditionals:
-              display_name: Sazarojumi
-            csp_functions:
-              display_name: Funkcijas
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Saraksti
-            csp_loops:
-              display_name: Cikli
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Algoritmi
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_binary:
-              display_name: Binārie
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Pasākumi
-            csf_loops:
-              display_name: Cikli
-            csf_conditionals:
-              display_name: Sazarojumi
-            csf_binary:
-              display_name: Binārie
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            lessonGroup-6:
-              display_name: Digitālā pilsonība
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Cikls ciklā
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_nested_loops:
-              display_name: Sazarojumi
-            csf_functions:
-              display_name: Funkcijas
-        coursef-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_variables:
-              display_name: '"par" cikli'
-            csf_for_loops:
-              display_name: '"par" cikli'
-            lessonGroup-8:
-              display_name: Mainīgie
-            lessonGroup-9:
-              display_name: noņemt
-            lessonGroup-7:
-              display_name: Digitālā pilsonība
-        express-2021:
-          lesson_groups:
-            csf_warmup:
-              display_name: Iesildīšanās
-            csf_loops:
-              display_name: Cikli
-            csf_conditionals:
-              display_name: Sazarojumi
-            csf_functions:
-              display_name: Funkcijas
-            csf_variables:
-              display_name: Mainīgie
-            csf_for_loops:
-              display_name: '"par" cikli'
-            lessonGroup-9:
-              display_name: Pasākumi
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: Ievads
-            lessonGroup-3:
-              display_name: Mainīgie
-            variables:
-              display_name: Mainīgie
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: Ievads
-            Introduction:
-              display_name: Ievads
-        csa-videos:
+        dlp21-csd:
           lesson_groups:
             lessonGroup-2:
-              display_name: 1.  nodaļa
-            lessonGroup-4:
-              display_name: 2.  nodaļa
-            lessonGroup-5:
-              display_name: 3.  nodaļa
-            lessonGroup-6:
-              display_name: 4.  nodaļa
-            lessonGroup-7:
-              display_name: 5.  nodaļa
+              description: pārbaude
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
               display_name: Līmenis 1
             lessonGroup-3:
               display_name: Līmenis 2
-        dlp21-csd:
+        e-f-ramp:
           lesson_groups:
-            lessonGroup-2:
-              description: pārbaude
-        spelling-bee:
-          title: Burtošanas bite
-        2022drafting:
+            csf_e_2:
+              display_name: Kursa E saturs
+        edit-code:
+          description: rediģēt kodu
+          description_short: rediģēt kodu
+          student_description: rediģēt kodu
+          title: rediģēt kodu
+        events:
+          description: Pasākumi
+          description_short: Pasākumi
+          student_description: Pasākumi
+          title: Pasākumi
+        express-2017:
+          assignment_family_title: Ekspress kurss
+          title: Ekspress kurss
+        express-2018:
+          assignment_family_title: Ekspress kurss
+          title: Ekspress kurss
+        express-2019:
           lesson_groups:
-            lessonGroup-8:
-              display_name: Programmēšanas stunda
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Mainīgie
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_for_loops:
+              display_name: '"par" cikli'
+            csf_functions:
+              display_name: Funkcijas
             csf_loops:
               display_name: Cikli
-            csf_events:
+            csf_variables:
+              display_name: Mainīgie
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_for_loops:
+              display_name: '"par" cikli'
+            csf_functions:
+              display_name: Funkcijas
+            csf_loops:
+              display_name: Cikli
+            csf_variables:
+              display_name: Mainīgie
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_for_loops:
+              display_name: '"par" cikli'
+            csf_functions:
+              display_name: Funkcijas
+            csf_loops:
+              display_name: Cikli
+            csf_variables:
+              display_name: Mainīgie
+            csf_warmup:
+              display_name: Iesildīšanās
+            lessonGroup-9:
               display_name: Pasākumi
         express-2022:
           lesson_groups:
-            lessonGroup-9:
-              display_name: Pasākumi
-            csf_loops:
-              display_name: Cikli
             csf_conditionals:
               display_name: Sazarojumi
-            csf_functions:
-              display_name: Funkcijas
-            csf_variables:
-              display_name: Mainīgie
             csf_for_loops:
               display_name: '"par" cikli'
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
-            csp_conditionals:
-              display_name: Sazarojumi
-            csp_functions:
-              display_name: Funkcijas
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Saraksti
-            csp_loops:
-              display_name: Cikli
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digitālā pilsonība
-            csf_events:
-              display_name: Pasākumi
-            csf_loops:
-              display_name: Cikli
-            csf_conditionals:
-              display_name: Sazarojumi
-        coursee-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            ramp_up:
-              display_name: Cikls ciklā
             csf_functions:
               display_name: Funkcijas
-            csf_nested_loops:
-              display_name: Sazarojumi
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Digitālā pilsonība
-            lessonGroup-8:
-              display_name: Mainīgie
-        pre-express-2022:
-          lesson_groups:
             csf_loops:
               display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Digitālā pilsonība
-            lessonGroup-8:
+            csf_variables:
               display_name: Mainīgie
-        soccer:
-          name: futbols
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: Cikli
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Mainīgie
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: '"par" cikli'
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Mainīgie
-            csp_conditionals:
-              display_name: Sazarojumi
-            csp_functions:
-              display_name: Funkcijas
-        csp5-2023:
-          lesson_groups:
-            csp_loops:
-              display_name: Cikli
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Saraksti
-            lessonGroup-3:
-              display_name: Cikli
-        angelina-playground:
-          lessons:
-            lesson-5:
-              name: Novērtējumi
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Cikli
-            csf_events:
+            lessonGroup-9:
               display_name: Pasākumi
         express-2023:
           lesson_groups:
-            lessonGroup-9:
-              display_name: Pasākumi
-            csf_loops:
-              display_name: Cikli
             csf_conditionals:
               display_name: Sazarojumi
-            csf_functions:
-              display_name: Funkcijas
-            csf_variables:
-              display_name: Mainīgie
             csf_for_loops:
               display_name: '"par" cikli'
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            csf_loops:
-              display_name: Cikli
-            csf_events:
-              display_name: Pasākumi
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digitālā pilsonība
-            csf_events:
-              display_name: Pasākumi
-            csf_loops:
-              display_name: Cikli
-            csf_conditionals:
-              display_name: Sazarojumi
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitālā pilsonība
-            ramp_up:
-              display_name: Cikls ciklā
             csf_functions:
               display_name: Funkcijas
-            csf_nested_loops:
+            csf_loops:
+              display_name: Cikli
+            csf_variables:
+              display_name: Mainīgie
+            lessonGroup-9:
+              display_name: Pasākumi
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        flappy:
+          description: Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs? Izmēģini
+            Flappy koda apmācību!
+          student_description: Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs?
+            Izmēģini Flappy koda apmācību!
+          title: Flappy kods
+        frozen:
+          description: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus
+            burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot
+            un taisot ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
+          description_short: Kodē, lai kopā ar Annu un Elzu iepazītu ledus skaistumu
+            un burvību.
+          student_description: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt
+            ledus burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot
+            un taisot ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
+          title: Programmē ar Annu un Elzu
+        grade1:
+          description_audience: Vecums 5-18
+        grade2:
+          description_audience: Vecums 5-18
+        grade3:
+          description_audience: Vecums 5-18
+        grade4:
+          description_audience: Vecums no 9-99
+        grade5:
+          description_audience: Vecumā no 10-110
+        gradeKinder:
+          description_audience: Vecums 5-18
+        hoc-impact-study:
+          description_short: Izmēģini datrzinību pamatus ar daudz jaukiem tēliem!
+        hourofcode:
+          description: Mēģiniet datorzinātņu pamatus ar tēliem no dusmīgajiem putniem,
+            augiem pret zombijiem un Skretu no Ledus laikmeta!
+          description_short: Izmēģini datrzinību pamatus ar daudz jaukiem tēliem!
+          student_description: Mēģiniet datorzinātņu pamatus ar tēliem no dusmīgajiem
+            putniem, augiem pret zombijiem un Skretu no Ledus laikmeta!
+        jigsaw:
+          title: Puzle
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: Ievads
+            k5_getting_started_1:
+              display_name: Ievads
+        mc:
+          description_short: Iepazīsti Minecraft pasauli, izmantojot kodu
+        netsim:
+          title: Interneta simulators
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
               display_name: Sazarojumi
+            lessonGroup-5:
+              display_name: Mainīgie
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitālā pilsonība
+            lessonGroup-4:
+              display_name: Cikli
+            lessonGroup-6:
+              display_name: Pasākumi
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Cikls ciklā
+            lessonGroup-4:
+              display_name: Funkcijas
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitālā pilsonība
+            lessonGroup-4:
+              display_name: Cikli
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitālā pilsonība
+            lessonGroup-4:
+              display_name: Cikli
+            lessonGroup-5:
+              display_name: Pasākumi
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitālā pilsonība
+            lessonGroup-6:
+              display_name: Cikli
+        new-e:
+          lesson_groups:
+            csf_e_2:
+              display_name: Kursa E saturs
+        new-f:
+          lesson_groups:
+            csf_f_2:
+              display_name: Kursa F saturs
         pl-csd-summer-day1:
           lessons:
             lesson-3:
+              name: Ievads
+        playlab:
+          description: Izveidot stāstu vai spēli ar Spēles laboratoriju!
+          description_short: Izveidot stāstu vai spēli ar Spēles laboratoriju!
+          student_description: Izveidot stāstu vai spēli ar Spēles laboratoriju!
+          title: Spēles laboratorija
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        soccer:
+          name: futbols
+        spelling-bee:
+          title: Burtošanas bite
+        step:
+          title: Solis
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitālā pilsonība
+            lessonGroup-4:
+              display_name: Cikli
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Pārskats
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_functions:
+              display_name: Funkcijas
+            csf_nested_loops:
+              display_name: Cikls ciklā
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Sazarojumi
+            csf_digcit:
+              display_name: Digitālā pilsonība
+            csf_events:
+              display_name: Pasākumi
+            csf_loops:
+              display_name: Cikli
+        usability:
+          description: Atlasīti 4. kuras līmeņi lietošanas testēšanai.
+          student_description: Atlasīti 4. kuras līmeņi lietošanas testēšanai.
+          title: lietojamības testēšana
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
               name: Ievads

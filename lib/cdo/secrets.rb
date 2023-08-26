@@ -62,13 +62,11 @@ module Cdo
     # @return [Concurrent::Promises::Future<String>] Resolved value
     def get(key)
       key = key.to_s
-      @values[key] ||= begin
-        client_promise.then do |client|
-          parse_json(get_secret_value(client, key))
-        rescue => exception
-          exception.message << " Key: #{key}"
-          raise
-        end
+      @values[key] ||= client_promise.then do |client|
+        parse_json(get_secret_value(client, key))
+      rescue => exception
+        exception.message << " Key: #{key}"
+        raise
       end
     end
 
@@ -142,21 +140,15 @@ module Cdo
       raise
     end
 
-    # If +value+ is JSON, parse it.
-    #
-    # If +value+ is a JSON array, return it.
-    #
-    # If +value+ is a JSON object, wrap in ActiveSupport::OrderedOptions so
-    # property-method lookup chains are possible (e.g., secrets.secret.key).
-    #
-    # Otherwise, cast the value to a string.
+    # If +value+ is a JSON array, return an Array.
+    # If +value+ is a JSON object, return a Hash.
+    # Otherwise, return +value+ cast to String.
     #
     # @param value[String]
-    # @return [Array, ActiveSupport::OrderedOptions, String]
+    # @return [Array, Hash, String]
     private def parse_json(value)
       parsed = JSON.parse(value)
-      return parsed if parsed.is_a?(Array)
-      return ActiveSupport::OrderedOptions[parsed.symbolize_keys] if parsed.is_a?(Hash)
+      return parsed if parsed.is_a?(Array) || parsed.is_a?(Hash)
       return parsed.to_s
     rescue JSON::ParserError, TypeError
       value

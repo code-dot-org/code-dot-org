@@ -1,146 +1,27 @@
 {
-  "navigateForward": "Продовжити",
-  "navigateBack": "Назад",
-  "tryAgain": "Спробуйте знову",
-  "navigateDone": "Кінець",
-  "saveProgress": "Зберегти",
-  "correctAnswer": "Правильно",
-  "incorrectAnswer": "Неправильно",
-  "modelCardPossibleValuesMinimum": "мінімум",
-  "modelCardPossibleValuesMaximum": "максимум",
-  "columnInspectorDescription": "Опис",
-  "columnDetailsMinimumValue": "мінімум",
   "columnDetailsMaximumValue": "максимум",
+  "columnDetailsMinimumValue": "мінімум",
+  "columnInspectorDescription": "Опис",
+  "correctAnswer": "Правильно",
   "dataCardLastUpdated": "Останнє оновлення",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "вік"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "погода"
+        "Height": {
+          "id": "Висота"
         },
-        "day": {
-          "id": "день"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "цибуля"
-        },
-        "avocado": {
-          "id": "авокадо"
-        },
-        "corn": {
-          "id": "кукурудза"
-        },
-        "beans": {
-          "id": "боби"
-        },
-        "lime": {
-          "id": "лайм"
+        "Length": {
+          "id": "Тривалість"
         }
       }
     },
     "bike_sharing": {
       "fields": {
+        "Month": {
+          "id": "Місяць"
+        },
         "index": {
           "id": "індекс"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "гриби"
-        },
-        "lobster": {
-          "id": "лобстер"
-        },
-        "bacon": {
-          "id": "шинка"
-        },
-        "cheese": {
-          "id": "сир"
-        },
-        "meat": {
-          "id": "м'ясо"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "колір"
-        },
-        "music": {
-          "id": "музика"
-        },
-        "food": {
-          "id": "їжа"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "вік"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Категорія"
-        },
-        "Description": {
-          "id": "Опис"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "полуниця"
-        },
-        "lime": {
-          "id": "лайм"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "сторони"
-        },
-        "size": {
-          "id": "розмір"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "авокадо"
-        },
-        "chicken": {
-          "id": "курка"
-        },
-        "fruit": {
-          "id": "фрукт"
-        },
-        "beans": {
-          "id": "боби"
-        },
-        "cheese": {
-          "id": "сир"
         }
       }
     },
@@ -154,29 +35,10 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "школа"
-        },
-        "age": {
-          "id": "вік"
-        },
-        "health": {
-          "id": "здоров’я"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "курка"
-        },
-        "onion": {
-          "id": "цибуля"
-        },
-        "cheese": {
-          "id": "сир"
+        "banana": {
+          "id": "банан"
         }
       }
     },
@@ -187,67 +49,96 @@
         }
       }
     },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "колір"
+        },
+        "food": {
+          "id": "їжа"
+        },
+        "music": {
+          "id": "музика"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Вік"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "вік"
+        }
+      }
+    },
     "loneliness_interests": {
       "fields": {
         "Internet": {
           "id": "Інтернет"
+        },
+        "Writing": {
+          "id": "Написання"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Країна"
+        },
+        "Music": {
+          "id": "Музика"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "вік"
         }
       }
     },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Рахунок"
-        },
         "Country": {
           "id": "Країна"
         },
         "Name": {
           "id": "Ім’я"
         },
+        "Score": {
+          "id": "Рахунок"
+        },
         "Star": {
           "id": "Зірка"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Художник"
+        "cheese": {
+          "id": "сир"
+        },
+        "chicken": {
+          "id": "курка"
+        },
+        "onion": {
+          "id": "цибуля"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "люди"
+        "Category": {
+          "id": "Категорія"
         },
-        "rhino": {
-          "id": "носоріг"
-        },
-        "elephant": {
-          "id": "слон"
-        },
-        "trees": {
-          "id": "дерева"
-        }
-      },
-      "name": "Сафарі"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Тривалість"
-        },
-        "Height": {
-          "id": "Висота"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Водні"
+        "Description": {
+          "id": "Опис"
         }
       }
     },
@@ -261,45 +152,87 @@
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Музика"
+        "bacon": {
+          "id": "шинка"
         },
-        "Country": {
-          "id": "Країна"
+        "cheese": {
+          "id": "сир"
         },
-        "Internet": {
-          "id": "Інтернет"
+        "lobster": {
+          "id": "лобстер"
         },
-        "Achievements": {
-          "id": "Досягнення"
+        "meat": {
+          "id": "м'ясо"
         },
-        "Age": {
-          "id": "Вік",
-          "description": "Вік"
-        },
-        "Height": {
-          "id": "Висота",
-          "description": "Висота"
-        },
-        "Gender": {
-          "id": "Стать",
-          "description": "Стать"
+        "mushrooms": {
+          "id": "гриби"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "банан"
+        "lime": {
+          "id": "лайм"
+        },
+        "strawberry": {
+          "id": "полуниця"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Вік"
+        "elephant": {
+          "id": "слон"
+        },
+        "people": {
+          "id": "люди"
+        },
+        "rhino": {
+          "id": "носоріг"
+        },
+        "trees": {
+          "id": "дерева"
+        }
+      },
+      "name": "Сафарі"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "авокадо"
+        },
+        "beans": {
+          "id": "боби"
+        },
+        "cheese": {
+          "id": "сир"
+        },
+        "chicken": {
+          "id": "курка"
+        },
+        "fruit": {
+          "id": "фрукт"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "авокадо"
+        },
+        "beans": {
+          "id": "боби"
+        },
+        "corn": {
+          "id": "кукурудзу"
+        },
+        "lime": {
+          "id": "лайм"
+        },
+        "onion": {
+          "id": "цибуля"
         }
       }
     },
@@ -313,15 +246,99 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Музика"
+        "sides": {
+          "id": "сторони"
+        },
+        "size": {
+          "id": "розмір"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "день"
+        },
+        "weather": {
+          "id": "погода"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Художник"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "вік"
+        },
+        "health": {
+          "id": "здоров’я"
+        },
+        "school": {
+          "id": "школа"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Досягнення"
+        },
+        "Age": {
+          "description": "Вік",
+          "id": "Вік"
         },
         "Country": {
           "id": "Країна"
+        },
+        "Empathy": {
+          "id": "Емпатія"
+        },
+        "Gender": {
+          "description": "Стать",
+          "id": "Стать"
+        },
+        "Height": {
+          "description": "Висота",
+          "id": "Висота"
+        },
+        "Internet": {
+          "id": "Інтернет"
+        },
+        "Music": {
+          "id": "Музика"
+        },
+        "Writing": {
+          "id": "Написання"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Водні"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Неправильно",
+  "modelCardFeatures": "Ознаки",
+  "modelCardLabel": "Мітка",
+  "modelCardPossibleValuesMaximum": "максимум",
+  "modelCardPossibleValuesMinimum": "мінімум",
+  "navigateBack": "Назад",
+  "navigateDone": "Кінець",
+  "navigateForward": "Продовжити",
+  "predictButton": "Прогнозування",
+  "resultsTableFeatureHeader": "Ознаки",
+  "saveProgress": "Зберегти",
+  "trainModelHeading": "Тренування",
+  "tryAgain": "Спробуйте знову"
 }

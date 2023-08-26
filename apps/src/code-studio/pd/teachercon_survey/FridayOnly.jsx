@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FormComponent from '../form_components/FormComponent';
 import VariableFormGroup from '../workshop_survey/VariableFormGroup';
 import QuestionsTable from '../form_components/QuestionsTable';

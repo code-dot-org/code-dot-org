@@ -5,6 +5,7 @@ mn:
       age: нас
       answer: хариулт
       binary: хоёрт
+      birds: шувууд
       cats: муур
       color: өнгө
       counter: тоологч
@@ -18,10 +19,12 @@ mn:
       name: нэр
       nectar: шүүс
       object: объект
+      planet: гариг
       points: цэгүүд
       repeat: давтах
       right: баруун
       score: оноо
+      shout: хашгирахаар
       size: хэмжээ
       speed: хурд
       type: төрөл

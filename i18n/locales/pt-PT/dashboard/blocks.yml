@@ -13,7 +13,6 @@ pt:
             '0.75': pequeno
             '1.00': intermédio
             '2.00': grande
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -21,7 +20,6 @@ pt:
             '0.75': pequeno
             '1.00': intermédio
             '2.00': grande
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} alterna a cada {N} medida entre {MOVE1} e {MOVE2}"
         options:
@@ -368,6 +366,7 @@ pt:
             '"right"': coluna da direita
             '"x"': linhas cruzadas
             '"plus"': mais
+            '"spiral"': espiral
             '"random"': aleatório
       Dancelab_makeAnonymousDanceSprite:
         text: fazer um(a) novo(a) {COSTUME} em {LOCATION}
@@ -450,26 +449,6 @@ pt:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': alienígenas
             '"BEAR"': Ursos
@@ -497,6 +476,7 @@ pt:
             '"right"': coluna da direita
             '"x"': linhas cruzadas
             '"plus"': mais
+            '"spiral"': espiral
             '"random"': aleatório
       Dancelab_mixColors:
         text: Mesclar {COLOR1} e {COLOR2}
@@ -1244,6 +1224,7 @@ pt:
             '"burst"': explosão
             '"pop"': estalo
             '"rain"': chuva
+            '"spiral"': espiral
       gamelab_makeNewSpriteAnon:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       gamelab_makeNewSpriteGroup:
@@ -1334,6 +1315,7 @@ pt:
             "'sound://category_nature/thunderstorm_1.mp3'": trovoada
             "'sound://category_animals/chick.mp3'": pintinho
             "'sound://category_animals/dog.mp3'": cão
+            "'sound://category_animals/tiger.mp3'": tigre
             "'sound://category_collect/trill_stings.mp3'": vibrar
             "'sound://category_instrumental/harpe_pluck_1.mp3'": Harpa
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": toque
@@ -1347,6 +1329,10 @@ pt:
             "'sound://category_digital/jump_7.mp3'": saltar
       gamelab_playSoundOptionsSoccer:
         text: reproduzir som {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": buzina
+            "'sound://category_sports/One_Whistle_SFX.mp3'": apito
       gamelab_playSoundOptionsSpace:
         text: reproduzir som {SOUND}
       gamelab_playSpeech:
@@ -1463,11 +1449,9 @@ pt:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': devagar
             '5': normal
             '7': rápido
-            '9': extra fast
       gamelab_setTint:
         text: mudar a cor de {THIS} para {COLOR}
       gamelab_setupScoreboard:
@@ -1951,6 +1935,7 @@ pt:
             '"burst"': explosão
             '"pop"': estalo
             '"rain"': chuva
+            '"spiral"': espiral
       Poetry_makeNewSpriteAnon:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       Poetry_makeNumSprites:
@@ -1967,7 +1952,9 @@ pt:
             '"sound://category_loops/red_flag_loop1.mp3"': Missão
             '"sound://category_nature/summer_night_loop.mp3"': noite
             '"sound://category_background/ocean_waves.mp3"': oceano
+            '"sound://category_background/rainforest_ambient_sound.mp3"': floresta tropical
             '"sound://category_background/repitition.mp3"': Equitação
+            '"sound://category_background/wavering_wind.mp3"': sonolenta
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Lento
       Poetry_playSound:
         text: reproduzir som {SOUND}
@@ -2108,7 +2095,6 @@ pt:
         text: quando a linha {N} aparecer
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2359,6 +2345,21 @@ pt:
           DIR:
             right: à direita ↻
             left: à esquerda ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: imprimir {TEXT}
       storylab_setForegroundEffect2:
         text: criar efeito {EFFECT} efeito
         options:

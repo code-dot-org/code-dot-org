@@ -1,5 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: د نمونې پریکړه د کمپیوټر ساینس زده کړې اونۍ او د کوډ ساعت ملاتړ کوي
 ---
 
 {{ signup_button }}

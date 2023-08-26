@@ -8,15 +8,33 @@
         "CourseD_Dance_2020_01": {
           "validation": "\\*\\* Kuidas ma siit tasemelt läbi saan? \\*\\*\n\n-   Veenduge, et tantsija kuvatakse ekraanil.\n\n-   See tase lõppeb peale 4 ühikut.\\*"
         },
+        "CourseD_Dance_2020_012022": {
+          "validation": "\\*\\* Kuidas ma siit tasemelt läbi saan? \\*\\*\n\n-   Veenduge, et tantsija kuvatakse ekraanil.\n\n-   See tase lõppeb peale 4 ühikut.\\*"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "\\*\\* Kuidas ma siit tasemelt läbi saan? \\*\\*\n\n-   Veenduge, et tantsija kuvatakse ekraanil.\n\n-   See tase lõppeb peale 4 ühikut.\\*"
+        },
         "CourseD_Dance_2020_04": {
+          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Tantsija peab liigutust vahetame peale 4 ühikut.\n\n_Tase lõppeb peale 8 ühikut_"
+        },
+        "CourseD_Dance_2020_042022": {
+          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Tantsija peab liigutust vahetame peale 4 ühikut.\n\n_Tase lõppeb peale 8 ühikut_"
+        },
+        "CourseD_Dance_2020_04_2021": {
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Tantsija peab liigutust vahetame peale 4 ühikut.\n\n_Tase lõppeb peale 8 ühikut_"
         },
         "CourseD_Dance_2020_05": {
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sinu tantsija peab peale 6 ühikut tantsima teist moodi kui ta tantsis peale 4 ühikut.\n\n_Tase lõppeb peale 12 ühikut_"
         },
+        "CourseD_Dance_2020_052022": {
+          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sinu tantsija peab peale 6 ühikut tantsima teist moodi kui ta tantsis peale 4 ühikut.\n\n_Tase lõppeb peale 12 ühikut_"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sinu tantsija peab peale 6 ühikut tantsima teist moodi kui ta tantsis peale 4 ühikut.\n\n_Tase lõppeb peale 12 ühikut_"
+        },
         "CourseD_Dance_Party_01": {
-          "validation": "\\*\\* Kuidas ma siit tasemelt läbi saan? \\*\\*\n\n-   Veenduge, et tantsija kuvatakse ekraanil.\n\n-   See tase lõppeb peale 4 ühikut.\\*",
-          "challenges": "**Lisaväljakutsed**\n\n-   Vali teine laul.\n-   Vali teine tegelane, kes näeb välja nagu põder!\n-   Nimeta tantsija ümber."
+          "challenges": "**Lisaväljakutsed**\n\n-   Vali teine laul.\n-   Vali teine tegelane, kes näeb välja nagu põder!\n-   Nimeta tantsija ümber.",
+          "validation": "\\*\\* Kuidas ma siit tasemelt läbi saan? \\*\\*\n\n-   Veenduge, et tantsija kuvatakse ekraanil.\n\n-   See tase lõppeb peale 4 ühikut.\\*"
         },
         "CourseD_Dance_Party_02": {
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Tantsija peab liigutust vahetame peale 4 ühikut.\n\n_Tase lõppeb peale 8 ühikut_"
@@ -25,16 +43,16 @@
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sinu tantsija peab peale 6 ühikut tantsima teist moodi kui ta tantsis peale 4 ühikut.\n\n_Tase lõppeb peale 12 ühikut_"
         },
         "CourseD_Dance_Party_04": {
-          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sa pead muutma taustaefekti kusagil laulu 7 ühiku juures.\n\n_See ühik lõppeb peale 10 ühikut._",
-          "challenges": "**Lisaväljakutse**\n\nMuuda taustaefekti loo erinevate osade juures, ühendades uue ploki <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"ühikud\"</title></block></xml> sündmuse alla."
+          "challenges": "**Lisaväljakutse**\n\nMuuda taustaefekti loo erinevate osade juures, ühendades uue ploki <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"ühikud\"</title></block></xml> sündmuse alla.",
+          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sa pead muutma taustaefekti kusagil laulu 7 ühiku juures.\n\n_See ühik lõppeb peale 10 ühikut._"
         },
         "CourseD_Dance_Party_06": {
-          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Pead kasutama vähemalt kahte tantsijat\n\n_See tase lõppeb peale 6 ühikut._",
-          "challenges": "**Lisaväljakutse**\n\n-   Lisa kolmas tantsija (või nii mitu tantsijat kui soovid!)\n-   Pane kõik oma tantsijad sooritama erinevaid liigutusi erinevate laulu osade ajal."
+          "challenges": "**Lisaväljakutse**\n\n-   Lisa kolmas tantsija (või nii mitu tantsijat kui soovid!)\n-   Pane kõik oma tantsijad sooritama erinevaid liigutusi erinevate laulu osade ajal.",
+          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Pead kasutama vähemalt kahte tantsijat\n\n_See tase lõppeb peale 6 ühikut._"
         },
         "CourseD_Dance_Party_08": {
-          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Kahe tantsijat suurus peab olema 100st erinev. \n\n_See tase lõppeb peale 6 ühikut._",
-          "challenges": "**Lisaväljakutse**\n\n-   Katseta ja muuda teisi omadusi (laius, kõrgus, rotatsioon jne.)"
+          "challenges": "**Lisaväljakutse**\n\n-   Katseta ja muuda teisi omadusi (laius, kõrgus, rotatsioon jne.)",
+          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Kahe tantsijat suurus peab olema 100st erinev. \n\n_See tase lõppeb peale 6 ühikut._"
         },
         "CourseD_Dance_Party_09": {
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Muuda vähemalt ühe tantsija tooni.\n\n_See ühik lõppeb peale 8 ühikut._"
@@ -54,19 +72,37 @@
         "CourseE_HOC 2018 Level_10": {
           "voyage_aquatic_10a": "Vaata **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kuidas sa saad kasutada Tingimusi koos sellega, et jõuda Ocean Monument juurde?"
         },
+        "CourseE_HOC 2018 Level_102022": {
+          "voyage_aquatic_10a": "Vaata **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kuidas sa saad kasutada Tingimusi koos sellega, et jõuda Ocean Monument juurde?"
+        },
         "CourseE_HOC 2018 Level_10_2020": {
+          "voyage_aquatic_10a": "Vaata **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kuidas sa saad kasutada Tingimusi koos sellega, et jõuda Ocean Monument juurde?"
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
           "voyage_aquatic_10a": "Vaata **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kuidas sa saad kasutada Tingimusi koos sellega, et jõuda Ocean Monument juurde?"
         },
         "CourseE_HOC 2018 Level_7a": {
           "aquatic7": "Paremale keeramiseks sa saad kasutada \"kui\" raja-plokki (if path block)."
         },
+        "CourseE_HOC 2018 Level_7a2022": {
+          "aquatic7": "Paremale keeramiseks sa saad kasutada \"kui\" raja-plokki (if path block)."
+        },
         "CourseE_HOC 2018 Level_7a_2020": {
+          "aquatic7": "Paremale keeramiseks sa saad kasutada \"kui\" raja-plokki (if path block)."
+        },
+        "CourseE_HOC 2018 Level_7a_2021": {
           "aquatic7": "Paremale keeramiseks sa saad kasutada \"kui\" raja-plokki (if path block)."
         },
         "CourseE_HOC 2018 Level_9b": {
           "voyage_aquatic_9a": "Näed punaseid ja siniseid koralli plokke? Kasuta neid juhtpostidena, et keerata paremale ja vasakule läbi kaljuriffi."
         },
+        "CourseE_HOC 2018 Level_9b2022": {
+          "voyage_aquatic_9a": "Näed punaseid ja siniseid koralli plokke? Kasuta neid juhtpostidena, et keerata paremale ja vasakule läbi kaljuriffi."
+        },
         "CourseE_HOC 2018 Level_9b_2020": {
+          "voyage_aquatic_9a": "Näed punaseid ja siniseid koralli plokke? Kasuta neid juhtpostidena, et keerata paremale ja vasakule läbi kaljuriffi."
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
           "voyage_aquatic_9a": "Näed punaseid ja siniseid koralli plokke? Kasuta neid juhtpostidena, et keerata paremale ja vasakule läbi kaljuriffi."
         },
         "Dance_2019_01": {
@@ -79,8 +115,8 @@
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sinu tantsija peab peale 6 ühikut tantsima teist moodi kui ta tantsis peale 4 ühikut.\n\n_Tase lõppeb peale 12 ühikut_"
         },
         "Dance_Party_01": {
-          "validation": "\\*\\* Kuidas ma siit tasemelt läbi saan? \\*\\*\n\n-   Veenduge, et tantsija kuvatakse ekraanil.\n\n-   See tase lõppeb peale 4 ühikut.\\*",
-          "challenges": "**Lisaväljakutsed**\n\n-   Vali teine laul.\n-   Vali teine tegelane, kes näeb välja nagu põder!\n-   Nimeta tantsija ümber."
+          "challenges": "**Lisaväljakutsed**\n\n-   Vali teine laul.\n-   Vali teine tegelane, kes näeb välja nagu põder!\n-   Nimeta tantsija ümber.",
+          "validation": "\\*\\* Kuidas ma siit tasemelt läbi saan? \\*\\*\n\n-   Veenduge, et tantsija kuvatakse ekraanil.\n\n-   See tase lõppeb peale 4 ühikut.\\*"
         },
         "Dance_Party_02": {
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Tantsija peab liigutust vahetame peale 4 ühikut.\n\n_Tase lõppeb peale 8 ühikut_"
@@ -89,16 +125,19 @@
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sinu tantsija peab peale 6 ühikut tantsima teist moodi kui ta tantsis peale 4 ühikut.\n\n_Tase lõppeb peale 12 ühikut_"
         },
         "Dance_Party_04": {
-          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sa pead muutma taustaefekti kusagil laulu 7 ühiku juures.\n\n_See ühik lõppeb peale 10 ühikut._",
-          "challenges": "**Lisaväljakutse**\n\nMuuda taustaefekti loo erinevate osade juures, ühendades uue ploki <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"ühikud\"</title></block></xml> sündmuse alla."
+          "challenges": "**Lisaväljakutse**\n\nMuuda taustaefekti loo erinevate osade juures, ühendades uue ploki <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"ühikud\"</title></block></xml> sündmuse alla.",
+          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sa pead muutma taustaefekti kusagil laulu 7 ühiku juures.\n\n_See ühik lõppeb peale 10 ühikut._"
+        },
+        "Dance_Party_05": {
+          "validation": "\\*\\* Kuidas ma saan sellest tasemest läbi? \\*\\*\n\n-   Teie tantsija peab enne taseme lõppu läbima vähemalt 4 erinevat tantsukäiku.\n\n\\_See tase lõpeb pärast 12-t mõõtu. \\_"
         },
         "Dance_Party_06": {
-          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Pead kasutama vähemalt kahte tantsijat\n\n_See tase lõppeb peale 6 ühikut._",
-          "challenges": "**Lisaväljakutse**\n\n-   Lisa kolmas tantsija (või nii mitu tantsijat kui soovid!)\n-   Pane kõik oma tantsijad sooritama erinevaid liigutusi erinevate laulu osade ajal."
+          "challenges": "**Lisaväljakutse**\n\n-   Lisa kolmas tantsija (või nii mitu tantsijat kui soovid!)\n-   Pane kõik oma tantsijad sooritama erinevaid liigutusi erinevate laulu osade ajal.",
+          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Pead kasutama vähemalt kahte tantsijat\n\n_See tase lõppeb peale 6 ühikut._"
         },
         "Dance_Party_08": {
-          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Kahe tantsijat suurus peab olema 100st erinev. \n\n_See tase lõppeb peale 6 ühikut._",
-          "challenges": "**Lisaväljakutse**\n\n-   Katseta ja muuda teisi omadusi (laius, kõrgus, rotatsioon jne.)"
+          "challenges": "**Lisaväljakutse**\n\n-   Katseta ja muuda teisi omadusi (laius, kõrgus, rotatsioon jne.)",
+          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Kahe tantsijat suurus peab olema 100st erinev. \n\n_See tase lõppeb peale 6 ühikut._"
         },
         "Dance_Party_09": {
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Muuda vähemalt ühe tantsija tooni.\n\n_See ühik lõppeb peale 8 ühikut._"
@@ -115,6 +154,26 @@
         "Dance_Party_11b": {
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Kasuta plokki `kui vajutatakse vasakut nooleklahvi`, et Robot sooritaks tantsuliigutuse kui seda klahvi vajutatakse.\n\n_See tase lõppeb peale 8 ühikut_"
         },
+        "Function intro Ryan": {
+          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle.",
+          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite..."
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle.",
+          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite..."
+        },
+        "Function intro Ryan_2019": {
+          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle.",
+          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite..."
+        },
+        "Function intro Ryan_2020": {
+          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle.",
+          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite..."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle.",
+          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite..."
+        },
         "HOC 2018 Level_10": {
           "voyage_aquatic_10a": "Vaata **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kuidas sa saad kasutada Tingimusi koos sellega, et jõuda Ocean Monument juurde?"
         },
@@ -124,7 +183,15 @@
         "HOC 2018 Level_9b": {
           "voyage_aquatic_9a": "Näed punaseid ja siniseid koralli plokke? Kasuta neid juhtpostidena, et keerata paremale ja vasakule läbi kaljuriffi."
         },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Püüa panna Agent ehitama mõned minecartid, et ta saaks maailma avastada!"
+        },
         "MC_HOC_2017_01_RETRY": {
+          "MC_HOC_2017_01_RETRY_a": "Lohistage üks `liigu edasi` plokk tööriista kastist töölauale ja kinnita see `pärast käivitamis`ploki alla.",
+          "MC_HOC_2017_01_RETRY_b": "Ära unusta vajutada \"Käivita \"Agendi koodi käivitamiseks.",
+          "MC_HOC_2017_01_RETRY_c": "Kui Agent läbinud kõik oma koodi, saad mängijat nooleklahvide abil liigutada!"
+        },
+        "MC_HOC_2017_01_RETRY2022": {
           "MC_HOC_2017_01_RETRY_a": "Lohistage üks `liigu edasi` plokk tööriista kastist töölauale ja kinnita see `pärast käivitamis`ploki alla.",
           "MC_HOC_2017_01_RETRY_b": "Ära unusta vajutada \"Käivita \"Agendi koodi käivitamiseks.",
           "MC_HOC_2017_01_RETRY_c": "Kui Agent läbinud kõik oma koodi, saad mängijat nooleklahvide abil liigutada!"
@@ -139,7 +206,18 @@
           "MC_HOC_2017_01_RETRY_b": "Ära unusta vajutada \"Käivita \"Agendi koodi käivitamiseks.",
           "MC_HOC_2017_01_RETRY_c": "Kui Agent läbinud kõik oma koodi, saad mängijat nooleklahvide abil liigutada!"
         },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Lohistage üks `liigu edasi` plokk tööriista kastist töölauale ja kinnita see `pärast käivitamis`ploki alla.",
+          "MC_HOC_2017_01_RETRY_b": "Ära unusta vajutada \"Käivita \"Agendi koodi käivitamiseks.",
+          "MC_HOC_2017_01_RETRY_c": "Kui Agent läbinud kõik oma koodi, saad mängijat nooleklahvide abil liigutada!"
+        },
         "MC_HOC_2017_02_Cole": {
+          "MC_HOC_2017_02_Cole_a": "Liikuda Agenti edasi kaks sammu, et ta saaks seista surveplaadile.  See avab su mängijale ukse.",
+          "MC_HOC_2017_02_Cole_b": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
+          "MC_HOC_2017_02_Cole_c": "Kui Agent on avanud ukse, kasutage nooleklahve mängija liigutamiseks kaardil!",
+          "MC_HOC_2017_02_Cole_d": "Veenduge, et Agent jälgib rada, mis on märgitud kaardil!"
+        },
+        "MC_HOC_2017_02_Cole2022": {
           "MC_HOC_2017_02_Cole_a": "Liikuda Agenti edasi kaks sammu, et ta saaks seista surveplaadile.  See avab su mängijale ukse.",
           "MC_HOC_2017_02_Cole_b": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
           "MC_HOC_2017_02_Cole_c": "Kui Agent on avanud ukse, kasutage nooleklahve mängija liigutamiseks kaardil!",
@@ -157,7 +235,17 @@
           "MC_HOC_2017_02_Cole_c": "Kui Agent on avanud ukse, kasutage nooleklahve mängija liigutamiseks kaardil!",
           "MC_HOC_2017_02_Cole_d": "Veenduge, et Agent jälgib rada, mis on märgitud kaardil!"
         },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Liikuda Agenti edasi kaks sammu, et ta saaks seista surveplaadile.  See avab su mängijale ukse.",
+          "MC_HOC_2017_02_Cole_b": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
+          "MC_HOC_2017_02_Cole_c": "Kui Agent on avanud ukse, kasutage nooleklahve mängija liigutamiseks kaardil!",
+          "MC_HOC_2017_02_Cole_d": "Veenduge, et Agent jälgib rada, mis on märgitud kaardil!"
+        },
         "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_a": "Kui oled viinud Agendi surveplaadini, saad kasutada nooleklahve, et liigutada mängija kompassini!",
+          "MC_HOC_2017_03_Cole_b": "Kas kood tundub natukene pikk?  Proovige kasutada \"korrata\" tsüklikt ja vaata, kuidas koodi lühemaks teha!"
+        },
+        "MC_HOC_2017_03_Cole2022": {
           "MC_HOC_2017_03_Cole_a": "Kui oled viinud Agendi surveplaadini, saad kasutada nooleklahve, et liigutada mängija kompassini!",
           "MC_HOC_2017_03_Cole_b": "Kas kood tundub natukene pikk?  Proovige kasutada \"korrata\" tsüklikt ja vaata, kuidas koodi lühemaks teha!"
         },
@@ -169,34 +257,60 @@
           "MC_HOC_2017_03_Cole_a": "Kui oled viinud Agendi surveplaadini, saad kasutada nooleklahve, et liigutada mängija kompassini!",
           "MC_HOC_2017_03_Cole_b": "Kas kood tundub natukene pikk?  Proovige kasutada \"korrata\" tsüklikt ja vaata, kuidas koodi lühemaks teha!"
         },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "Kui oled viinud Agendi surveplaadini, saad kasutada nooleklahve, et liigutada mängija kompassini!",
+          "MC_HOC_2017_03_Cole_b": "Kas kood tundub natukene pikk?  Proovige kasutada \"korrata\" tsüklikt ja vaata, kuidas koodi lühemaks teha!"
+        },
         "MC_HOC_2017_04POINT5_RYAN": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Kasutage \"pööra paremale\" plokki Agendi suuna muutmiseks ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agent peab pääsema ainult esimese surveplaadini, et lubada Alex või Steve kirvest läbi."
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agent peab pääsema ainult esimese surveplaadini, et lubada Alex või Steve kirvest läbi.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Kasutage \"pööra paremale\" plokki Agendi suuna muutmiseks "
+        },
+        "MC_HOC_2017_04POINT5_RYAN2022": {
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agent peab pääsema ainult esimese surveplaadini, et lubada Alex või Steve kirvest läbi.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Kasutage \"pööra paremale\" plokki Agendi suuna muutmiseks "
         },
         "MC_HOC_2017_04POINT5_RYAN_2019": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Kasutage \"pööra paremale\" plokki Agendi suuna muutmiseks ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agent peab pääsema ainult esimese surveplaadini, et lubada Alex või Steve kirvest läbi."
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agent peab pääsema ainult esimese surveplaadini, et lubada Alex või Steve kirvest läbi.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Kasutage \"pööra paremale\" plokki Agendi suuna muutmiseks "
         },
         "MC_HOC_2017_04POINT5_RYAN_2020": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Kasutage \"pööra paremale\" plokki Agendi suuna muutmiseks ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agent peab pääsema ainult esimese surveplaadini, et lubada Alex või Steve kirvest läbi."
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agent peab pääsema ainult esimese surveplaadini, et lubada Alex või Steve kirvest läbi.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Kasutage \"pööra paremale\" plokki Agendi suuna muutmiseks "
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agent peab pääsema ainult esimese surveplaadini, et lubada Alex või Steve kirvest läbi.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Kasutage \"pööra paremale\" plokki Agendi suuna muutmiseks "
         },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Agent peab \"liigu edasi\" 7 korda.  Kuidas sa saaksid kasutada \"korda\" tsüklit, et seda teha?",
-          "MC_HOC_2017_04_Cole_c": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
-          "MC_HOC_2017_04_Cole_b": "Kui Agent jõuab surveplaadile, siis Agent saab avada mängijale ukse."
+          "MC_HOC_2017_04_Cole_b": "Kui Agent jõuab surveplaadile, siis Agent saab avada mängijale ukse.",
+          "MC_HOC_2017_04_Cole_c": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Agent peab \"liigu edasi\" 7 korda.  Kuidas sa saaksid kasutada \"korda\" tsüklit, et seda teha?",
+          "MC_HOC_2017_04_Cole_b": "Kui Agent jõuab surveplaadile, siis Agent saab avada mängijale ukse.",
+          "MC_HOC_2017_04_Cole_c": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti."
         },
         "MC_HOC_2017_04_Cole_2019": {
           "MC_HOC_2017_04_Cole_a": "Agent peab \"liigu edasi\" 7 korda.  Kuidas sa saaksid kasutada \"korda\" tsüklit, et seda teha?",
-          "MC_HOC_2017_04_Cole_c": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
-          "MC_HOC_2017_04_Cole_b": "Kui Agent jõuab surveplaadile, siis Agent saab avada mängijale ukse."
+          "MC_HOC_2017_04_Cole_b": "Kui Agent jõuab surveplaadile, siis Agent saab avada mängijale ukse.",
+          "MC_HOC_2017_04_Cole_c": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti."
         },
         "MC_HOC_2017_04_Cole_2020": {
           "MC_HOC_2017_04_Cole_a": "Agent peab \"liigu edasi\" 7 korda.  Kuidas sa saaksid kasutada \"korda\" tsüklit, et seda teha?",
-          "MC_HOC_2017_04_Cole_c": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
-          "MC_HOC_2017_04_Cole_b": "Kui Agent jõuab surveplaadile, siis Agent saab avada mängijale ukse."
+          "MC_HOC_2017_04_Cole_b": "Kui Agent jõuab surveplaadile, siis Agent saab avada mängijale ukse.",
+          "MC_HOC_2017_04_Cole_c": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent peab \"liigu edasi\" 7 korda.  Kuidas sa saaksid kasutada \"korda\" tsüklit, et seda teha?",
+          "MC_HOC_2017_04_Cole_b": "Kui Agent jõuab surveplaadile, siis Agent saab avada mängijale ukse.",
+          "MC_HOC_2017_04_Cole_c": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti."
         },
         "MC_HOC_2017_05_Cole": {
+          "MC_HOC_2017_05_Cole_a": "Kas teadsid, et saad panna rohkem kui ühe tüki koodi tsükli sisse?  Proovige liikuda edasi \\*\\* ja\\*\\* panna laud \"korrata\" sisse, et lõpetada see pusle.",
+          "MC_HOC_2017_05_Cole_b": "Saada Agent üle jõe ehitades silda samal ajal."
+        },
+        "MC_HOC_2017_05_Cole2022": {
           "MC_HOC_2017_05_Cole_a": "Kas teadsid, et saad panna rohkem kui ühe tüki koodi tsükli sisse?  Proovige liikuda edasi \\*\\* ja\\*\\* panna laud \"korrata\" sisse, et lõpetada see pusle.",
           "MC_HOC_2017_05_Cole_b": "Saada Agent üle jõe ehitades silda samal ajal."
         },
@@ -208,7 +322,15 @@
           "MC_HOC_2017_05_Cole_a": "Kas teadsid, et saad panna rohkem kui ühe tüki koodi tsükli sisse?  Proovige liikuda edasi \\*\\* ja\\*\\* panna laud \"korrata\" sisse, et lõpetada see pusle.",
           "MC_HOC_2017_05_Cole_b": "Saada Agent üle jõe ehitades silda samal ajal."
         },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "Kas teadsid, et saad panna rohkem kui ühe tüki koodi tsükli sisse?  Proovige liikuda edasi \\*\\* ja\\*\\* panna laud \"korrata\" sisse, et lõpetada see pusle.",
+          "MC_HOC_2017_05_Cole_b": "Saada Agent üle jõe ehitades silda samal ajal."
+        },
         "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_a": "Mitu korda see tsükkel teeb?  Mitu korda _peaks_ see tegema?",
+          "MC_HOC_2017_06_Cole_b": "Aita ehitada Agendil sild üle vee! "
+        },
+        "MC_HOC_2017_06_Cole2022": {
           "MC_HOC_2017_06_Cole_a": "Mitu korda see tsükkel teeb?  Mitu korda _peaks_ see tegema?",
           "MC_HOC_2017_06_Cole_b": "Aita ehitada Agendil sild üle vee! "
         },
@@ -220,34 +342,61 @@
           "MC_HOC_2017_06_Cole_a": "Mitu korda see tsükkel teeb?  Mitu korda _peaks_ see tegema?",
           "MC_HOC_2017_06_Cole_b": "Aita ehitada Agendil sild üle vee! "
         },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Mitu korda see tsükkel teeb?  Mitu korda _peaks_ see tegema?",
+          "MC_HOC_2017_06_Cole_b": "Aita ehitada Agendil sild üle vee! "
+        },
         "MC_HOC_2017_07_Cole": {
-          "MC_HOC_2017_07_Cole_c": "Kõik, mida vajad on, et Agent puhastaks raja Minecartino.",
           "MC_HOC_2017_07_Cole_a": "Et lahenda see pusle, proovi aru saada, mida \"puhasta rada/clear path\" funktsioon teeb ja korda seda nii mitu korda kui vajad, kasutades väikest rohelist \"puhasta rada/clear path\" plokki tööriista kastist.",
-          "MC_HOC_2017_07_Cole_b": "Et saaksid pusle lahendada proovige segada funktsioon plokke muude plokkidega tööriistakastist."
+          "MC_HOC_2017_07_Cole_b": "Et saaksid pusle lahendada proovige segada funktsioon plokke muude plokkidega tööriistakastist.",
+          "MC_HOC_2017_07_Cole_c": "Kõik, mida vajad on, et Agent puhastaks raja Minecartino."
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "MC_HOC_2017_07_Cole_a": "Et lahenda see pusle, proovi aru saada, mida \"puhasta rada/clear path\" funktsioon teeb ja korda seda nii mitu korda kui vajad, kasutades väikest rohelist \"puhasta rada/clear path\" plokki tööriista kastist.",
+          "MC_HOC_2017_07_Cole_b": "Et saaksid pusle lahendada proovige segada funktsioon plokke muude plokkidega tööriistakastist.",
+          "MC_HOC_2017_07_Cole_c": "Kõik, mida vajad on, et Agent puhastaks raja Minecartino."
         },
         "MC_HOC_2017_07_Cole_2019": {
-          "MC_HOC_2017_07_Cole_c": "Kõik, mida vajad on, et Agent puhastaks raja Minecartino.",
           "MC_HOC_2017_07_Cole_a": "Et lahenda see pusle, proovi aru saada, mida \"puhasta rada/clear path\" funktsioon teeb ja korda seda nii mitu korda kui vajad, kasutades väikest rohelist \"puhasta rada/clear path\" plokki tööriista kastist.",
-          "MC_HOC_2017_07_Cole_b": "Et saaksid pusle lahendada proovige segada funktsioon plokke muude plokkidega tööriistakastist."
+          "MC_HOC_2017_07_Cole_b": "Et saaksid pusle lahendada proovige segada funktsioon plokke muude plokkidega tööriistakastist.",
+          "MC_HOC_2017_07_Cole_c": "Kõik, mida vajad on, et Agent puhastaks raja Minecartino."
         },
         "MC_HOC_2017_07_Cole_2020": {
-          "MC_HOC_2017_07_Cole_c": "Kõik, mida vajad on, et Agent puhastaks raja Minecartino.",
           "MC_HOC_2017_07_Cole_a": "Et lahenda see pusle, proovi aru saada, mida \"puhasta rada/clear path\" funktsioon teeb ja korda seda nii mitu korda kui vajad, kasutades väikest rohelist \"puhasta rada/clear path\" plokki tööriista kastist.",
-          "MC_HOC_2017_07_Cole_b": "Et saaksid pusle lahendada proovige segada funktsioon plokke muude plokkidega tööriistakastist."
+          "MC_HOC_2017_07_Cole_b": "Et saaksid pusle lahendada proovige segada funktsioon plokke muude plokkidega tööriistakastist.",
+          "MC_HOC_2017_07_Cole_c": "Kõik, mida vajad on, et Agent puhastaks raja Minecartino."
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_a": "Et lahenda see pusle, proovi aru saada, mida \"puhasta rada/clear path\" funktsioon teeb ja korda seda nii mitu korda kui vajad, kasutades väikest rohelist \"puhasta rada/clear path\" plokki tööriista kastist.",
+          "MC_HOC_2017_07_Cole_b": "Et saaksid pusle lahendada proovige segada funktsioon plokke muude plokkidega tööriistakastist.",
+          "MC_HOC_2017_07_Cole_c": "Kõik, mida vajad on, et Agent puhastaks raja Minecartino."
         },
         "MC_HOC_2017_10_RETRY": {
-          "MC_HOC_2017_10_Cole_b": "Ei tea kuhu minna?  Vaata, kasi leiad punktiirjoone!",
-          "MC_HOC_2017_10_Cole_a": "Kasutage funktsioone, et seda puslet lihtamalt lahendada!"
+          "MC_HOC_2017_10_Cole_a": "Kasutage funktsioone, et seda puslet lihtamalt lahendada!",
+          "MC_HOC_2017_10_Cole_b": "Ei tea kuhu minna?  Vaata, kasi leiad punktiirjoone!"
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "MC_HOC_2017_10_Cole_a": "Kasutage funktsioone, et seda puslet lihtamalt lahendada!",
+          "MC_HOC_2017_10_Cole_b": "Ei tea kuhu minna?  Vaata, kasi leiad punktiirjoone!"
         },
         "MC_HOC_2017_10_RETRY_2019": {
-          "MC_HOC_2017_10_Cole_b": "Ei tea kuhu minna?  Vaata, kasi leiad punktiirjoone!",
-          "MC_HOC_2017_10_Cole_a": "Kasutage funktsioone, et seda puslet lihtamalt lahendada!"
+          "MC_HOC_2017_10_Cole_a": "Kasutage funktsioone, et seda puslet lihtamalt lahendada!",
+          "MC_HOC_2017_10_Cole_b": "Ei tea kuhu minna?  Vaata, kasi leiad punktiirjoone!"
         },
         "MC_HOC_2017_10_RETRY_2020": {
-          "MC_HOC_2017_10_Cole_b": "Ei tea kuhu minna?  Vaata, kasi leiad punktiirjoone!",
-          "MC_HOC_2017_10_Cole_a": "Kasutage funktsioone, et seda puslet lihtamalt lahendada!"
+          "MC_HOC_2017_10_Cole_a": "Kasutage funktsioone, et seda puslet lihtamalt lahendada!",
+          "MC_HOC_2017_10_Cole_b": "Ei tea kuhu minna?  Vaata, kasi leiad punktiirjoone!"
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_a": "Kasutage funktsioone, et seda puslet lihtamalt lahendada!",
+          "MC_HOC_2017_10_Cole_b": "Ei tea kuhu minna?  Vaata, kasi leiad punktiirjoone!"
         },
         "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_a": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
+          "MC_HOC_2017_08_RY_b": "On PALJU viise, kuidas seda puslet lahendada. Proovige mõnda!",
+          "MC_HOC_2017_08_RY_c": "Proovi järgida punktiirjoont lihtsa raja leidmiseks läbi laava."
+        },
+        "MC_HOC_2017_Ali2022": {
           "MC_HOC_2017_08_RY_a": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
           "MC_HOC_2017_08_RY_b": "On PALJU viise, kuidas seda puslet lahendada. Proovige mõnda!",
           "MC_HOC_2017_08_RY_c": "Proovi järgida punktiirjoont lihtsa raja leidmiseks läbi laava."
@@ -262,7 +411,15 @@
           "MC_HOC_2017_08_RY_b": "On PALJU viise, kuidas seda puslet lahendada. Proovige mõnda!",
           "MC_HOC_2017_08_RY_c": "Proovi järgida punktiirjoont lihtsa raja leidmiseks läbi laava."
         },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
+          "MC_HOC_2017_08_RY_b": "On PALJU viise, kuidas seda puslet lahendada. Proovige mõnda!",
+          "MC_HOC_2017_08_RY_c": "Proovi järgida punktiirjoont lihtsa raja leidmiseks läbi laava."
+        },
         "MC_HOC_2017_FP20x20": {
+          "MC_HOC_2017_13_Cole_a": "Püüa panna Agent ehitama mõned minecartid, et ta saaks maailma avastada!"
+        },
+        "MC_HOC_2017_FP20x202022": {
           "MC_HOC_2017_13_Cole_a": "Püüa panna Agent ehitama mõned minecartid, et ta saaks maailma avastada!"
         },
         "MC_HOC_2017_FP20x20_2019": {
@@ -271,180 +428,8 @@
         "MC_HOC_2017_FP20x20_2020": {
           "MC_HOC_2017_13_Cole_a": "Püüa panna Agent ehitama mõned minecartid, et ta saaks maailma avastada!"
         },
-        "CourseD_Dance_2020_01_2021": {
-          "validation": "\\*\\* Kuidas ma siit tasemelt läbi saan? \\*\\*\n\n-   Veenduge, et tantsija kuvatakse ekraanil.\n\n-   See tase lõppeb peale 4 ühikut.\\*"
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Tantsija peab liigutust vahetame peale 4 ühikut.\n\n_Tase lõppeb peale 8 ühikut_"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sinu tantsija peab peale 6 ühikut tantsima teist moodi kui ta tantsis peale 4 ühikut.\n\n_Tase lõppeb peale 12 ühikut_"
-        },
-        "CourseE_HOC 2018 Level_10_2021": {
-          "voyage_aquatic_10a": "Vaata **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kuidas sa saad kasutada Tingimusi koos sellega, et jõuda Ocean Monument juurde?"
-        },
-        "CourseE_HOC 2018 Level_7a_2021": {
-          "aquatic7": "Paremale keeramiseks sa saad kasutada \"kui\" raja-plokki (if path block)."
-        },
-        "CourseE_HOC 2018 Level_9b_2021": {
-          "voyage_aquatic_9a": "Näed punaseid ja siniseid koralli plokke? Kasuta neid juhtpostidena, et keerata paremale ja vasakule läbi kaljuriffi."
-        },
-        "MC_HOC_2017_01_RETRY_2021": {
-          "MC_HOC_2017_01_RETRY_a": "Lohistage üks `liigu edasi` plokk tööriista kastist töölauale ja kinnita see `pärast käivitamis`ploki alla.",
-          "MC_HOC_2017_01_RETRY_b": "Ära unusta vajutada \"Käivita \"Agendi koodi käivitamiseks.",
-          "MC_HOC_2017_01_RETRY_c": "Kui Agent läbinud kõik oma koodi, saad mängijat nooleklahvide abil liigutada!"
-        },
-        "MC_HOC_2017_02_Cole_2021": {
-          "MC_HOC_2017_02_Cole_a": "Liikuda Agenti edasi kaks sammu, et ta saaks seista surveplaadile.  See avab su mängijale ukse.",
-          "MC_HOC_2017_02_Cole_b": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
-          "MC_HOC_2017_02_Cole_c": "Kui Agent on avanud ukse, kasutage nooleklahve mängija liigutamiseks kaardil!",
-          "MC_HOC_2017_02_Cole_d": "Veenduge, et Agent jälgib rada, mis on märgitud kaardil!"
-        },
-        "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_a": "Kui oled viinud Agendi surveplaadini, saad kasutada nooleklahve, et liigutada mängija kompassini!",
-          "MC_HOC_2017_03_Cole_b": "Kas kood tundub natukene pikk?  Proovige kasutada \"korrata\" tsüklikt ja vaata, kuidas koodi lühemaks teha!"
-        },
-        "MC_HOC_2017_04POINT5_RYAN_2021": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Kasutage \"pööra paremale\" plokki Agendi suuna muutmiseks ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agent peab pääsema ainult esimese surveplaadini, et lubada Alex või Steve kirvest läbi."
-        },
-        "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Agent peab \"liigu edasi\" 7 korda.  Kuidas sa saaksid kasutada \"korda\" tsüklit, et seda teha?",
-          "MC_HOC_2017_04_Cole_c": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
-          "MC_HOC_2017_04_Cole_b": "Kui Agent jõuab surveplaadile, siis Agent saab avada mängijale ukse."
-        },
-        "MC_HOC_2017_05_Cole_2021": {
-          "MC_HOC_2017_05_Cole_a": "Kas teadsid, et saad panna rohkem kui ühe tüki koodi tsükli sisse?  Proovige liikuda edasi \\*\\* ja\\*\\* panna laud \"korrata\" sisse, et lõpetada see pusle.",
-          "MC_HOC_2017_05_Cole_b": "Saada Agent üle jõe ehitades silda samal ajal."
-        },
-        "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_a": "Mitu korda see tsükkel teeb?  Mitu korda _peaks_ see tegema?",
-          "MC_HOC_2017_06_Cole_b": "Aita ehitada Agendil sild üle vee! "
-        },
-        "MC_HOC_2017_07_Cole_2021": {
-          "MC_HOC_2017_07_Cole_c": "Kõik, mida vajad on, et Agent puhastaks raja Minecartino.",
-          "MC_HOC_2017_07_Cole_a": "Et lahenda see pusle, proovi aru saada, mida \"puhasta rada/clear path\" funktsioon teeb ja korda seda nii mitu korda kui vajad, kasutades väikest rohelist \"puhasta rada/clear path\" plokki tööriista kastist.",
-          "MC_HOC_2017_07_Cole_b": "Et saaksid pusle lahendada proovige segada funktsioon plokke muude plokkidega tööriistakastist."
-        },
-        "MC_HOC_2017_10_RETRY_2021": {
-          "MC_HOC_2017_10_Cole_b": "Ei tea kuhu minna?  Vaata, kasi leiad punktiirjoone!",
-          "MC_HOC_2017_10_Cole_a": "Kasutage funktsioone, et seda puslet lihtamalt lahendada!"
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_a": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
-          "MC_HOC_2017_08_RY_b": "On PALJU viise, kuidas seda puslet lahendada. Proovige mõnda!",
-          "MC_HOC_2017_08_RY_c": "Proovi järgida punktiirjoont lihtsa raja leidmiseks läbi laava."
-        },
         "MC_HOC_2017_FP20x20_2021": {
           "MC_HOC_2017_13_Cole_a": "Püüa panna Agent ehitama mõned minecartid, et ta saaks maailma avastada!"
-        },
-        "MC Agent Freeplay": {
-          "MC_HOC_2017_13_Cole_a": "Püüa panna Agent ehitama mõned minecartid, et ta saaks maailma avastada!"
-        },
-        "CourseD_Dance_2020_012022": {
-          "validation": "\\*\\* Kuidas ma siit tasemelt läbi saan? \\*\\*\n\n-   Veenduge, et tantsija kuvatakse ekraanil.\n\n-   See tase lõppeb peale 4 ühikut.\\*"
-        },
-        "CourseD_Dance_2020_042022": {
-          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Tantsija peab liigutust vahetame peale 4 ühikut.\n\n_Tase lõppeb peale 8 ühikut_"
-        },
-        "CourseD_Dance_2020_052022": {
-          "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sinu tantsija peab peale 6 ühikut tantsima teist moodi kui ta tantsis peale 4 ühikut.\n\n_Tase lõppeb peale 12 ühikut_"
-        },
-        "CourseE_HOC 2018 Level_102022": {
-          "voyage_aquatic_10a": "Vaata **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kuidas sa saad kasutada Tingimusi koos sellega, et jõuda Ocean Monument juurde?"
-        },
-        "CourseE_HOC 2018 Level_7a2022": {
-          "aquatic7": "Paremale keeramiseks sa saad kasutada \"kui\" raja-plokki (if path block)."
-        },
-        "CourseE_HOC 2018 Level_9b2022": {
-          "voyage_aquatic_9a": "Näed punaseid ja siniseid koralli plokke? Kasuta neid juhtpostidena, et keerata paremale ja vasakule läbi kaljuriffi."
-        },
-        "MC_HOC_2017_01_RETRY2022": {
-          "MC_HOC_2017_01_RETRY_a": "Lohistage üks `liigu edasi` plokk tööriista kastist töölauale ja kinnita see `pärast käivitamis`ploki alla.",
-          "MC_HOC_2017_01_RETRY_b": "Ära unusta vajutada \"Käivita \"Agendi koodi käivitamiseks.",
-          "MC_HOC_2017_01_RETRY_c": "Kui Agent läbinud kõik oma koodi, saad mängijat nooleklahvide abil liigutada!"
-        },
-        "MC_HOC_2017_02_Cole2022": {
-          "MC_HOC_2017_02_Cole_a": "Liikuda Agenti edasi kaks sammu, et ta saaks seista surveplaadile.  See avab su mängijale ukse.",
-          "MC_HOC_2017_02_Cole_b": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
-          "MC_HOC_2017_02_Cole_c": "Kui Agent on avanud ukse, kasutage nooleklahve mängija liigutamiseks kaardil!",
-          "MC_HOC_2017_02_Cole_d": "Veenduge, et Agent jälgib rada, mis on märgitud kaardil!"
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_a": "Kui oled viinud Agendi surveplaadini, saad kasutada nooleklahve, et liigutada mängija kompassini!",
-          "MC_HOC_2017_03_Cole_b": "Kas kood tundub natukene pikk?  Proovige kasutada \"korrata\" tsüklikt ja vaata, kuidas koodi lühemaks teha!"
-        },
-        "MC_HOC_2017_04POINT5_RYAN2022": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Kasutage \"pööra paremale\" plokki Agendi suuna muutmiseks ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agent peab pääsema ainult esimese surveplaadini, et lubada Alex või Steve kirvest läbi."
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "Agent peab \"liigu edasi\" 7 korda.  Kuidas sa saaksid kasutada \"korda\" tsüklit, et seda teha?",
-          "MC_HOC_2017_04_Cole_c": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
-          "MC_HOC_2017_04_Cole_b": "Kui Agent jõuab surveplaadile, siis Agent saab avada mängijale ukse."
-        },
-        "MC_HOC_2017_05_Cole2022": {
-          "MC_HOC_2017_05_Cole_a": "Kas teadsid, et saad panna rohkem kui ühe tüki koodi tsükli sisse?  Proovige liikuda edasi \\*\\* ja\\*\\* panna laud \"korrata\" sisse, et lõpetada see pusle.",
-          "MC_HOC_2017_05_Cole_b": "Saada Agent üle jõe ehitades silda samal ajal."
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_a": "Mitu korda see tsükkel teeb?  Mitu korda _peaks_ see tegema?",
-          "MC_HOC_2017_06_Cole_b": "Aita ehitada Agendil sild üle vee! "
-        },
-        "MC_HOC_2017_07_Cole2022": {
-          "MC_HOC_2017_07_Cole_c": "Kõik, mida vajad on, et Agent puhastaks raja Minecartino.",
-          "MC_HOC_2017_07_Cole_a": "Et lahenda see pusle, proovi aru saada, mida \"puhasta rada/clear path\" funktsioon teeb ja korda seda nii mitu korda kui vajad, kasutades väikest rohelist \"puhasta rada/clear path\" plokki tööriista kastist.",
-          "MC_HOC_2017_07_Cole_b": "Et saaksid pusle lahendada proovige segada funktsioon plokke muude plokkidega tööriistakastist."
-        },
-        "MC_HOC_2017_10_RETRY2022": {
-          "MC_HOC_2017_10_Cole_b": "Ei tea kuhu minna?  Vaata, kasi leiad punktiirjoone!",
-          "MC_HOC_2017_10_Cole_a": "Kasutage funktsioone, et seda puslet lihtamalt lahendada!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_a": "Saad käivitada oma kood isegi siis, kui see ei ole õige.  Vajutage \"Käivita'' niipalju kordi, kui saad aru, mis on valesti.",
-          "MC_HOC_2017_08_RY_b": "On PALJU viise, kuidas seda puslet lahendada. Proovige mõnda!",
-          "MC_HOC_2017_08_RY_c": "Proovi järgida punktiirjoont lihtsa raja leidmiseks läbi laava."
-        },
-        "MC_HOC_2017_FP20x202022": {
-          "MC_HOC_2017_13_Cole_a": "Püüa panna Agent ehitama mõned minecartid, et ta saaks maailma avastada!"
-        },
-        "Dance_Party_05": {
-          "validation": "\\*\\* Kuidas ma saan sellest tasemest läbi? \\*\\*\n\n-   Teie tantsija peab enne taseme lõppu läbima vähemalt 4 erinevat tantsukäiku.\n\n\\_See tase lõpeb pärast 12-t mõõtu. \\_"
-        },
-        "Function intro Ryan": {
-          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite...",
-          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle."
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite...",
-          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle."
-        },
-        "Function intro Ryan_2019": {
-          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite...",
-          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle."
-        },
-        "Function intro Ryan_2020": {
-          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite...",
-          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle."
-        },
-        "Function intro Ryan_2021": {
-          "Function_intro_Ryan_b": "Kui kutsute funktsioone õigesti välja, siis on see tee, mida te reisite...",
-          "Function_intro_Ryan_a": "Võite funktsiooni mitu korda välja kutsuda oma programmi sees! Proovige seda kaks korda välja kutsuda, et lahendada see pusle."
-        },
-        "courseC_artist_loops7a2022": {
-          "courseC_artist_loops7a_a": "Ringis on 360 kraadi. Korruta oma pöörde kraadid nii mitu korda kui Sa kordad pööret. Kas see on 360-ga võrdne?\nKontrollige soovitatud pöördeid, et näha, et see toimib!\n\nSiin on mõned näited, kuidas alustada:\n\n-   Proovige 60-kraadist pööret 6 korda\n-   Proovige 45-kraadist pööret 8 korda\n-   Proovige 30-kraadist pööret 12 korda"
-        },
-        "courseD_artist_nestedLoops52022": {
-          "courseD_artist_nestedLoops5_a": "Selleks et lihtsalt teha:\n\n- korda 4 korda\n  - tee ring\n  - hüppa edasi 50 pikslit\n  - pööra paremale 90 kraadi"
-        },
-        "courseD_artist_nestedLoops72022": {
-          "courseD_artist_nestedLoops7_b": "Kasutage pesastatud tsüklit, kus sisemine tsükkel on ruudu kood.\n\n- korda 6 korda\n  - tee ruut\n  - hüppa edasi **50 pikslit**\n  - keera **60 kraadi**"
-        },
-        "courseD_artist_nestedLoops82022": {
-          "courseD_artist_nestedLoops8_c": "Kasuta pesastatud tsüklit:\n\n  - Korda 8 korda\n    - joonista kuusnurk\n    - hüppa edasi 50 pikslit\n    - pööra paremale 45 kraadi"
-        },
-        "courseD_artist_nestedLoops92022": {
-          "courseD_artist_nestedLoops9_c": "Kasutage kahte pesastatud tsüklit:\n  - Korda 8 korda\n    - joonista ruut\n    - hüppa edasi 50 pikslit\n    - pööra paremale 45 kraadi\n  - Korda 8 korda\n    - joonista kolmnurk\n    - hüppa edasi 50 pikslit\n    - pööra paremale 45 kraadi"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "Siin on mõned teed, mida saad võtta. Milline on kõige lühem?",
@@ -764,6 +749,9 @@
         "courseB_starWars_prog9_2021": {
           "courseB_starWars_prog9_a": "Ära karda teha vigu! Käivita kood, et näha, mis juhtub, isegi kui Sa pole puslet veel lahendanud."
         },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Ringis on 360 kraadi. Korruta oma pöörde kraadid nii mitu korda kui Sa kordad pööret. Kas see on 360-ga võrdne?\nKontrollige soovitatud pöördeid, et näha, et see toimib!\n\nSiin on mõned näited, kuidas alustada:\n\n-   Proovige 60-kraadist pööret 6 korda\n-   Proovige 45-kraadist pööret 8 korda\n-   Proovige 30-kraadist pööret 12 korda"
+        },
         "courseC_starWars_loops1": {
           "courseC_starWars_loops1_b": "Ära karda teha vigu! Käivita kood, et näha, mis juhtub, isegi kui Sa pole puslet veel lahendanud."
         },
@@ -823,6 +811,18 @@
         },
         "courseC_starWars_loops7_dani": {
           "courseC_starWars_loops7_c": "Ära karda teha vigu! Käivita kood, et näha, mis juhtub, isegi kui Sa pole puslet veel lahendanud."
+        },
+        "courseD_artist_nestedLoops52022": {
+          "courseD_artist_nestedLoops5_a": "Selleks et lihtsalt teha:\n\n- korda 4 korda\n  - tee ring\n  - hüppa edasi 50 pikslit\n  - pööra paremale 90 kraadi"
+        },
+        "courseD_artist_nestedLoops72022": {
+          "courseD_artist_nestedLoops7_b": "Kasutage pesastatud tsüklit, kus sisemine tsükkel on ruudu kood.\n\n- korda 6 korda\n  - tee ruut\n  - hüppa edasi **50 pikslit**\n  - keera **60 kraadi**"
+        },
+        "courseD_artist_nestedLoops82022": {
+          "courseD_artist_nestedLoops8_c": "Kasuta pesastatud tsüklit:\n\n  - Korda 8 korda\n    - joonista kuusnurk\n    - hüppa edasi 50 pikslit\n    - pööra paremale 45 kraadi"
+        },
+        "courseD_artist_nestedLoops92022": {
+          "courseD_artist_nestedLoops9_c": "Kasutage kahte pesastatud tsüklit:\n  - Korda 8 korda\n    - joonista ruut\n    - hüppa edasi 50 pikslit\n    - pööra paremale 45 kraadi\n  - Korda 8 korda\n    - joonista kolmnurk\n    - hüppa edasi 50 pikslit\n    - pööra paremale 45 kraadi"
         }
       }
     }

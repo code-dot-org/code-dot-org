@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class OrganizerFormPart extends React.Component {
   static propTypes = {
@@ -65,11 +65,12 @@ export default class OrganizerFormPart extends React.Component {
           <Col sm={8}>
             {this.state.potentialOrganizers && (
               <select
+                id="organizer-selector"
                 className="form-control"
                 value={this.props.organizerId}
                 onChange={this.props.onChange}
                 disabled={this.props.readOnly}
-                style={this.props.readOnly && styles.readOnlyInput}
+                style={this.props.readOnly ? styles.readOnlyInput : {}}
               >
                 {organizerOptions}
               </select>

@@ -60,6 +60,7 @@ zh-CN:
         reset_password_token: "重置密码链接"
         error:
           future: 不能选择将来的时间
+        us_state: '省/直辖市/自治区'
   beta: "测试版"
   hello: "世界你好"
   welcome_back: "欢迎回来，%{name}"
@@ -69,6 +70,7 @@ zh-CN:
   unsubmit: 未提交
   previous_page: 上一页
   next_page: 下一页
+  next_level: 下一级
   next_resource: 下一个资源
   done_with_module: 完成本学习模块
   cancel: "取消"
@@ -199,6 +201,7 @@ zh-CN:
     parent_account_checkbox: "我是家长/监护人，代表我的孩子登录"
     parent_account_email_progress_permission: "我们是否可以偶尔通过电子邮件向你发送关于你孩子进度和项目的最新信息，以及关于其课程和计算机科学的最新信息？[(参见我们的隐私政策)](%{privacy_policy_url})"
     parent_account_email_label: "家长/监护人电子邮箱"
+    us_state: '省/直辖市/自治区'
   school_info:
     title: '学校信息（选填）'
     school_country: '学校所在国家'
@@ -676,65 +679,139 @@ zh-CN:
       body_short: "设计一个应用，用代码模块或者 JavaScript 来写出这个程序，然后马上分享你的应用吧。"
       audience: '13岁以上'
       cta: '了解操作方法'
+      image_alt: '一只身穿火箭动力背包的紫色小兔子。'
+    applab-intro:
+      image_alt: '一只手在敲击智能手机屏幕的中央。屏幕上有光和火花。'
     aquatic:
       title: "我的世界"
+      image_alt: '我的世界的史蒂夫和亚历克斯在看着你。'
+    artist:
+      image_alt: '一个卡通人拿着一支大铅笔画了一个三角形。'
+    conditionals:
+      image_alt: '两只手洗一副扑克牌。'
+    course1:
+      image_alt: 'Code.org 大黄蜂和橙鱼站在一些代码前。'
+    course2:
+      image_alt: '一组由 Code.org 拼图组成的拼图，上面有绿色巫师、艺术家和橙鱼。'
+    course3:
+      image_alt: '一组 Code.org 拼图，展示了游戏、僵尸和忍者。'
+    course4:
+      image_alt: '一组由 Code.org 拼图组成的拼图，展示了足球、宠物和艺术家。'
+    coursea:
+      image_alt: '一组 Code.org 拼图，上面有一头大象和一只松鼠。'
+    courseb:
+      image_alt: '一组由 Code.org 拼图组成的拼图，展示了探险家、宝石和一朵花。'
+    coursec:
+      image_alt: '一组 Code.org 拼图，展示了游戏《愤怒的小鸟》中的松鼠、二进制数和一只红鸟。'
+    coursed:
+      image_alt: '一组 Code.org 拼图，展示了游戏《愤怒的小鸟》中的一只蜜蜂、一朵花、一只蜜蜂和一只绿猪。'
+    coursee:
+      image_alt: '一组 Code.org 拼图，显示一个人拿着铲子、南瓜、果园和牛。'
+    coursef:
+      image_alt: '一组由 Code.org 拼图组成的拼图，上面显示了五颜六色的几何形状、一个红色海盗和一位艺术家。'
     dance-2019:
       title: '舞蹈派对'
+      image_alt: '一只快乐的猫、树懒和鲨鱼在跳舞。'
+    dance-2022:
+      image_alt: '一个绿色外星人和机器人，背景是土星。'
     dance:
       title: '舞蹈派对'
+      image_alt: '一只很酷的猫和快乐的鲨鱼在派对上跳舞。'
+    donate:
+      image_alt: '一个孩子指着显示 Code.org 拼图的笔记本电脑屏幕。'
+    elementary:
+      image_alt: '一只大黄蜂和松鼠站在彩虹前的田野里。'
+    express:
+      image_alt: '植物大战僵尸僵尸和站在 Flappy Bird 旁边的植物。'
     flappy:
       title: '飞扬的代码'
       body: '想要在 10 分钟内写你自己的游戏吗？请尝试我们像素鸟编程教程 ！'
+      image_alt: '一只黄鸟在绿色管道之间飞行。'
     frozen:
       title: "冰雪奇缘"
+      image_alt: '电影《冰雪奇缘》中的安娜和艾尔莎。它们之间是安娜用溜冰鞋在冰上画一个漂亮的形状的照片。'
     gallery:
       title: "作品"
       body: "查看由我们用户创建的应用程序和艺术家图片的作品"
+      image_alt: '一位画了很多圆圈的艺术家，还有一只猫、蝙蝠和幽灵站在冬季度假胜地。'
     gamelab:
       title: "游戏实验室"
       body: "游戏实验室是一个编程环境，它能让你做一些物体和角色的简单互动动画和游戏。"
       audience: "13岁以上"
       cta: "了解操作方法"
+      image_alt: '许多卡通人和动物站在人行道上微笑。'
+    hello-world-food:
+      image_alt: '许多动物、外星人和表情符号绕着地球运行。'
     hello-world:
       title: '你好世界'
       body: '从四个有趣的主题中选择，在你创建的世界中为交互式角色编码。'
     hero:
       title: "我的世界"
       body: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+      image_alt: '一个来自《我的世界》的钢铁巨人站在安娜解谜的俯视图前。'
     hoc-encryption:
       title: "简单加密"
       body: "学生将学习技术来创建和破解加密的信息。"
+      image_alt: '英语中字母频率的条形图。'
     hoc:
       title: '经典迷宫'
       body: '请尝试计算机科学的基本知识。数百万人尝试了它。'
+      image_alt: '一组显示代码、马克·扎克伯格和愤怒的小鸟的图片拼贴画。'
+    hourofcode:
+      image_alt: '一组显示代码、马克·扎克伯格和愤怒的小鸟的图片拼贴画。'
     hoc2014:
       try_new_tutorial: '试试我们新的测试版的编程一小时教程'
       try_frozen: '来自冰雪奇缘的艺术家安娜及爱莎。'
     infinity:
       title: "无限发挥游戏实验室"
       body: "通过游戏实验室用迪斯尼无限的角色创建故事或游戏。"
+      image_alt: '来自《冰雪奇缘》、《魔发奇缘》和《大英雄6》的五个角色站在一起。'
+    map:
+      image_alt: '一张美国的灰色图像，其中大约 20 个州以紫色突出显示。'
+    mc_escape:
+      image_alt: '一个戴着大礼帽和单眼镜的我的世界角色正在打开装满翡翠的宝箱。'
+    mc:
+      image_alt: '来自《我的世界》的安娜和史蒂夫站在 Code.org 的《我的世界》拼图前。'
     minecraft:
       title: "我的世界"
       body: "用代码来探索《我的世界》。"
+      image_alt: '来自《我的世界》的安娜和史蒂夫站在 Code.org 的《我的世界》拼图前。'
     minecraft2016:
       title: "我的世界"
       body: "在你自建的《我的世界》中对各种动物和其他生物进行编程。"
+    oceans:
+      image_alt: '海洋中的机器人正在扫描各种海洋生物。'
+    playlab:
+      image_alt: '一张显示蓝猫、傻狗和史前黄鼠狼的图像拼贴画。'
     poem-art:
       title: '诗歌艺术'
       body: '表达自己！使用代码创建动画诗歌。'
+      image_alt: '一只时髦的鱿鱼在舞台上表演。'
+    pre-express-2017:
+      image_alt: '一只狗和独角兽站在一棵由拼图块组成的树前。'
+    pre-express-2018:
+      image_alt: '一只狗和独角兽站在一棵由拼图块组成的树前。'
+    pre-express-2019:
+      image_alt: '一只狗和独角兽站在一棵由拼图块组成的树前。'
+    pre-express:
+      image_alt: '一只狗和独角兽站在一棵由拼图块组成的树前。'
     sports:
       title: "运动"
       body: "创造一个篮球游戏或跨越各种运动的混合比赛。"
+      image_alt: 'NBA 和 WNBA 徽标显示在足球、足球、曲棍球和篮球旁边。'
     starwars:
       title: "星球大战"
+      image_alt: 'R2-D2、Leia、Rey 和 BB-8 站在沙漠中。'
     text-compression:
       title: "文本压缩"
       body: "在这节课中，学生们会通过符号替换模式的方法来使用文本压缩组件来压缩文本。"
+      image_alt: '通过将整个单词替换为单个符号来压缩文本。'
     weblab:
       title: "网站实验室（测试版）"
       body: "网站实验室是一个你能够通过html和css制作简单网页的编程环境。在几秒钟内，你就能设计并分享自己的网页。"
       audience: "13岁以上"
       cta: "了解操作方法"
+      image_alt: '显示 HTML 代码的计算机屏幕。'
     widgets:
       title: "小部件"
       body: "学生们能使用这些数字工具来动手学习一些计算机科学原理课程的概念。学生们可以自己使用这些工具，也可以为您的班级上一堂单个概念的课程。"
@@ -916,6 +993,7 @@ zh-CN:
           age: '请指定年龄'
           abuse_type: '请回答此内容如何违反服务条款'
           abuse_detail: '请提供有关您所报告的内容的详细信息'
+          captcha: '请填写验证码以举报此内容。'
         abusive_url: '内容的地址将被提交'
         abuse_type:
           question: '此内容是如何违反%{link_start}服务条款%{link_end}的?'
@@ -1109,6 +1187,7 @@ zh-CN:
         csf_express: '计算机科学基础课程（预快速或快速）'
         csd: '计算机科学发现'
         csp: '计算机科学原理'
+        other: '其他'
         not_applicable: "不适用"
       email_opt_in:
         opt_in_yes: '对'
@@ -1132,11 +1211,23 @@ zh-CN:
   courses_category: '完整课程'
   course_offering:
     headers:
+      favorites: '我的最爱'
+      labs_and_skills: '实验室和技能'
       minecraft: '我的世界'
       hello_world: '你好世界'
+      popular_media: '大众媒体'
       sports: '运动'
+      express: '快递'
       csf: '计算机科学基本原理'
       csc: '计算机科学联系'
+      year_long: '长达一年'
+      csa_labs: 'CSA 实验室'
+      self_paced: '自定进度'
+      teacher_led: '教师主导'
+      collections: '馆藏'
+      workshops_k5: 'K-5 研讨会'
+      summer_workshops_612: '6-12 暑期工作坊'
+      virtual_academic_year_workshops_612: '6—12 学年虚拟研讨会'
   cookie_banner:
     message: '通过继续浏览我们的网站或单击"我同意"，您同意在你的计算机或设备上存储 cookies。'
     more_information: "查看 Code.org 的隐私政策。"
@@ -1176,4 +1267,20 @@ zh-CN:
   pixelation:
     raw_format: "原始格式"
     raw_format_alt: "查看清除格式的比特"
+    readable_format: "可读格式"
+    readable_format_alt: "查看按像素分隔的比特"
+    save_image: "保存图片"
+    actual_size: "实际大小"
+    image_file_format_header: "图像文件格式"
+    image_file_format_width: "宽度：1 字节"
+    image_file_format_height: "高度：1 字节"
+    image_file_format_bits_per_pixel: "每像素位数：1 字节"
+    image_file_format_data_a: "n 位像素数据"
+    image_file_format_data_b: "n = 宽度 * 高度 * 每像素位数"
+    image_width: "图像宽度"
+    image_height: "图像高度"
+    bits_per_pixel_header: "每像素比特数"
     binary: "二进制"
+    hexadecimal: "十六进制"
+    pixel_format_header: "像素格式"
+

@@ -14,6 +14,7 @@ import javalab, {
   setValidationPassed,
   setHasRunOrTestedCode,
   setIsJavabuilderConnecting,
+  setIsCaptchaDialogOpen,
 } from './redux/javalabRedux';
 import javalabConsole, {
   appendOutputLog,
@@ -192,6 +193,7 @@ Javalab.prototype.init = function (config) {
     isResponsive: true,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
+    recaptchaSiteKey: config.level.recaptchaSiteKey,
   });
 
   registerReducers({javalab, javalabConsole, javalabEditor, javalabView});
@@ -373,7 +375,6 @@ Javalab.prototype.executeJavabuilder = function (executionType) {
   }
 
   this.javabuilderConnection = new JavabuilderConnection(
-    this.level.javabuilderUrl,
     this.onOutputMessage,
     this.miniApp,
     getStore().getState().pageConstants.serverLevelId,
@@ -388,7 +389,8 @@ Javalab.prototype.executeJavabuilder = function (executionType) {
     this.csrf_token,
     () => this.onValidationPassed(this.studioApp_),
     () => this.onValidationFailed(this.studioApp_),
-    () => getStore().dispatch(setIsJavabuilderConnecting(false))
+    () => getStore().dispatch(setIsJavabuilderConnecting(false)),
+    () => getStore().dispatch(setIsCaptchaDialogOpen(true))
   );
 
   let connectToJavabuilder;

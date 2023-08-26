@@ -4,7 +4,6 @@ import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedSectionActionDropdown as SectionActionDropdown} from '@cdo/apps/templates/teacherDashboard/SectionActionDropdown';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
-import sinon from 'sinon';
 
 const sections = [
   {
@@ -63,8 +62,6 @@ const DEFAULT_PROPS = {
 };
 
 describe('SectionActionDropdown', () => {
-  const onEditFunction = sinon.fake();
-
   it('renders the delete option when a section is not a third party and has zero students', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[0]} />
@@ -95,11 +92,7 @@ describe('SectionActionDropdown', () => {
 
   it('renders the four standard options for a third party section (Google Classroom)', () => {
     const wrapper = shallow(
-      <SectionActionDropdown
-        {...DEFAULT_PROPS}
-        sectionData={sections[1]}
-        userId={1539347}
-      />
+      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[1]} />
     );
     expect(wrapper).to.contain('View Progress');
     expect(wrapper).to.contain('Manage Students');
@@ -114,11 +107,7 @@ describe('SectionActionDropdown', () => {
 
   it('renders the five standard options for not a third party section', () => {
     const wrapper = shallow(
-      <SectionActionDropdown
-        {...DEFAULT_PROPS}
-        sectionData={sections[0]}
-        userId={1539347}
-      />
+      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[0]} />
     );
     expect(wrapper).to.contain('View Progress');
     expect(wrapper).to.contain('Manage Students');
@@ -145,35 +134,15 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.contain('Restore Section');
   });
 
-  // Uncomment for launch
-  // it('sends selected user to the new edit page', () => {
-  //   const wrapper = shallow(
-  //     <SectionActionDropdown
-  //       {...DEFAULT_PROPS}
-  //       sectionData={sections[3]}
-  //       userId={1539340}
-  //     />
-  //   );
-  //   const sectionId = wrapper.instance().props.sectionData.id;
-  //   const expectedUrl = '/sections/' + sectionId + '/edit';
-  //   expect(wrapper).to.contain('Edit Section Details');
-  //   expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
-  //     expectedUrl
-  //   );
-  // });
-
-  // this test can be deleted once we fully switch over to the new flow
-  it('sends user to the old edit page', () => {
+  it('sends selected user to the new edit page', () => {
     const wrapper = shallow(
-      <SectionActionDropdown
-        {...DEFAULT_PROPS}
-        sectionData={sections[3]}
-        userId={1539347}
-        handleEdit={onEditFunction}
-      />
+      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
+    const sectionId = wrapper.instance().props.sectionData.id;
+    const expectedUrl = '/sections/' + sectionId + '/edit';
     expect(wrapper).to.contain('Edit Section Details');
-    wrapper.find('.edit-section-details-link').simulate('click');
-    expect(onEditFunction).to.have.been.calledOnce;
+    expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
+      expectedUrl
+    );
   });
 });

@@ -3,58 +3,58 @@ nn:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: AP® Prinsipp i Datavitskap
-          version_title: "'17-'18"
-        csd-2017:
-          assignment_family_title: Oppdagingar i datavitskap
-          version_title: "'17-'18"
-          description_short: En introduksjon til kurs i datavitenskap som gir elevene
-            muligheten til å skape autentiske artifakter.
         allthethingscourse:
-          title: alt kursinnhald
           description_short: Dette er ei kursrekke som har med alle våre kurs
           description_student: Dette er ei kursrekke for alle kurs og har lengre skildring
             for elevar
           description_teacher: Dette er ei kursrekke for alle kurs og har lengre skildring
             for lærarar
-        csd-2018:
+          title: alt kursinnhald
+        csd-2017:
           assignment_family_title: Oppdagingar i datavitskap
-          title: Informatikkoppdagelser ('18-'19)
-          version_title: "'18-'19"
           description_short: En introduksjon til kurs i datavitenskap som gir elevene
             muligheten til å skape autentiske artifakter.
+          version_title: "'17-'18"
+        csd-2018:
+          assignment_family_title: Oppdagingar i datavitskap
+          description_short: En introduksjon til kurs i datavitenskap som gir elevene
+            muligheten til å skape autentiske artifakter.
+          title: Informatikkoppdagelser ('18-'19)
+          version_title: "'18-'19"
+        csd-2019:
+          description_short: En introduksjon til kurs i datavitenskap som gir elevene
+            muligheten til å skape autentiske artifakter.
+          version_title: "'19-'20"
+        csd-2020:
+          description_short: En introduksjon til kurs i datavitenskap som gir elevene
+            muligheten til å skape autentiske artifakter.
+        csd-2023:
+          title: Oppdagingar i datavitskap
+        csp-2017:
+          assignment_family_title: AP® Prinsipp i Datavitskap
+          version_title: "'17-'18"
         csp-2018:
           assignment_family_title: AP® Prinsipp i Datavitskap
           title: Informatikkprinsipper ('18-'19)
           version_title: "'18-'19"
         csp-2019:
           version_title: "'19-'20"
-        csd-2019:
-          version_title: "'19-'20"
-          description_short: En introduksjon til kurs i datavitenskap som gir elevene
-            muligheten til å skape autentiske artifakter.
-        csd-2020:
-          description_short: En introduksjon til kurs i datavitenskap som gir elevene
-            muligheten til å skape autentiske artifakter.
         mike-test:
           title: Grunnleggande datavitskap
-        csd-2023:
-          title: Oppdagingar i datavitskap
     resources:
-      curriculum/csd/2020:
-        name: Læreplan
-      teacher_forum/csd/2020:
-        name: Lærarforum
       curriculum/csd/2017:
         name: Læreplan
-      teacher_forum_6/csd/2017:
-        name: Lærarforum
+      curriculum/csd/2018:
+        name: Læreplan
       curriculum/csd/2019:
+        name: Læreplan
+      curriculum/csd/2020:
         name: Læreplan
       teacher_forum/csd/2019:
         name: Lærarforum
-      curriculum/csd/2018:
-        name: Læreplan
+      teacher_forum/csd/2020:
+        name: Lærarforum
+      teacher_forum_6/csd/2017:
+        name: Lærarforum
       teacher_forum_6/csd/2018:
         name: Lærarforum

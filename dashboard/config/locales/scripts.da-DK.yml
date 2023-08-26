@@ -3,235 +3,31 @@ da:
   data:
     script:
       name:
-        course1:
-          title: Kursus 1
-          description: Kursus 1 er designet til at give tidlige læsere mulighed for
-            at lave programmer, som vil hjælpe dem med at lære at samarbejde med andre,
-            løse problemer, og fortsætte gennem selv vanskelige opgaver. Ved slutningen
-            af dette kursus opretter eleven sit helt eget spil eller historie, som
-            kan deles med andre. Anbefales til elever i 1. klasse.
-          description_short: Kursus 1 er designet til tidlige læsere.
-          description_audience: Fra 4 år (ikke-læsere)
-          student_description: Kursus 1 er designet til at give tidlige læsere mulighed
-            for at lave programmer, som vil hjælpe dem med at lære at samarbejde med
-            andre, løse problemer, og fortsætte gennem selv vanskelige opgaver. Ved
-            slutningen af dette kursus opretter eleven sit helt eget spil eller historie,
-            som kan deles med andre. Anbefales til elever i 1. klasse.
-        course2:
-          title: Kursus 2
-          description: Kursus 2 er designet til elever der kan læse, men uden forudgående
-            erfaring med programmering. I dette kursus vil elever løse problemer ved
-            at lave programmer, og udvikle interaktive spil eller historier der kan
-            deles. Anbefales til elever i 2.-5. klasse.
-          description_short: Kursus 2 er designet til elever, der kan læse.
-          description_audience: Fra 6 år (læsning nødvendigt)
-          student_description: Kursus 2 er designet til elever der kan læse, men uden
-            forudgående erfaring med programmering. I dette kursus vil elever løse
-            problemer ved at lave programmer, og udvikle interaktive spil eller historier
-            der kan deles. Anbefales til elever i 2.-5. klasse.
-        course3:
-          title: Kursus 3
-          description: Kursus 3 er til elever, der har taget Kursus 2. Eleverne kommer
-            til at dykke dybere ned i emnerne introduceret i tidligere kurser, for
-            at finde fleksible løsninger til mere komplekse problemer. Ved slutningen
-            af dette kursus vil eleverne have produceret interaktive historier og
-            spil de kan dele. Anbefales til elever i 4. -5. klasse.
-          description_short: Kursus 3 bygger videre på kursus 2.
-          description_audience: Fra 8 år (efter kursus 2)
-          student_description: Kursus 3 er til elever, der har taget Kursus 2. Eleverne
-            kommer til at dykke dybere ned i emnerne introduceret i tidligere kurser,
-            for at finde fleksible løsninger til mere komplekse problemer. Ved slutningen
-            af dette kursus vil eleverne have produceret interaktive historier og
-            spil de kan dele. Anbefales til elever i 4. -5. klasse.
-        playlab:
-          title: Play Lab
-          description: Opret en historie eller lav et spil med Play Lab!
-          description_short: Opret en historie eller lav et spil med Play Lab!
-          student_description: Opret en historie eller lav et spil med Play Lab!
-        artist:
-          title: Kunstner
-          description: Tegn seje billeder og designs!
-          description_short: Tegn seje billeder og designs!
-          student_description: Tegn seje billeder og designs!
-        hourofcode:
-          title: Klassisk labyrint
-          description: Prøv grundlæggende programmering med firgurer fra Angry Birds,
-            Plants vs. Zombies og Scrat fra Ice Age!
-          description_short: Prøv grundlæggende programmering med masser af sjove
-            figurer!
-          student_description: Prøv grundlæggende programmering med firgurer fra Angry
-            Birds, Plants vs. Zombies og Scrat fra Ice Age!
-        frozen:
-          title: Kod med Anna og Elsa
-          description: Lad os bruge kode til at udforske isens magi og skønhed sammen
-            med Anna og Elsa. Du kan tegne snefnug og mønstre, mens du skøjter og
-            laver et vinterlandskab, som du derefter kan dele med dine venner!
-          description_short: Lad os bruge noget kode for at slutte os til Anna og
-            Elsa, når de går på opdagelse i magien og isens skønhed.
-          student_description: Lad os bruge kode til at udforske isens magi og skønhed
-            sammen med Anna og Elsa. Du kan tegne snefnug og mønstre, mens du skøjter
-            og laver et vinterlandskab, som du derefter kan dele med dine venner!
-        course4:
-          title: Kursus 4
-          description: Kursus 4 er til elever, der har taget Kursus 2 og Kursus 3.
-            Eleverne kommer til lære at løse gåder med øget kompleksitet i takt med
-            at de lærer at kombinere flere koncepter når de løser en opgave. Når dette
-            kursus er afsluttet vil elever kunne lave programmer som fremviser en
-            række færdigheder, så som for-løkker og funktioner med parametre. Anbefales
-            til elever i 4. -8. klasse.
-          description_short: Elever der tager kursus 4 skal allerede have gennemført
-            kursus 2 og 3.
-          description_audience: Fra 10 år (efter kursus 3)
-          student_description: Kursus 4 er til elever, der har taget Kursus 2 og Kursus
-            3. Eleverne kommer til lære at løse gåder med øget kompleksitet i takt
-            med at de lærer at kombinere flere koncepter når de løser en opgave. Når
-            dette kursus er afsluttet vil elever kunne lave programmer som fremviser
-            en række færdigheder, så som for-løkker og funktioner med parametre. Anbefales
-            til elever i 4. -8. klasse.
-        Course4pre:
-          title: Kursus 4 forudsætninger
-          description: En kort opsamling af koncepter for elever, der ikke har taget
-            kursus 2 og 3.
-          description_short: En kort opsamling af koncepter for elever, der ikke har
-            taget kursus 2 og 3.
-          student_description: En kort opsamling af koncepter for elever, der ikke
-            har taget kursus 2 og 3.
-        usability:
-          title: Usability test
-          description: Et udvalg af øvelser med 4 niveauer til brugervenlighedstest.
-          student_description: Et udvalg af øvelser med 4 niveauer til brugervenlighedstest.
-        algebra:
-          title: Datalogi i Algebra
-          description: Lære funktionel programmering gennem Algebra.
-          description_short: Lære funktionel programmering gennem Algebra.
-          student_description: Lære funktionel programmering gennem Algebra.
-        infinity:
-          title: Disney Infinity Play Lab
-          description: Brug Play Lab til at skabe en historie eller et spil med karakterer
-            fra Disneys Infinity
-          description_short: Brug Play Lab til at skabe en historie eller et spil
-            med karakterer fra Disneys Infinity
-          student_description: Brug Play Lab til at skabe en historie eller et spil
-            med karakterer fra Disneys Infinity
-        netsim:
-          title: Internet Simulator
-        pixelation:
-          description: Skab billeder med bits og bytes.
-          description_short: Skab billeder med bits og bytes.
-          student_description: Skab billeder med bits og bytes.
         20-hour:
-          title: Lyn-intro til Computer- og Programmeringskursus
           description: Dette 20-timers kursus introducerer centrale computer videnskabs
             og programmering begreber. Kurset er designet til brug i folkeskolens
             klasseværelser, men det er sjovt at lære i alle aldre.
+          description_audience: Fra 10 år (efter kursus 3)
           description_short: Dette 20-timers kursus dækker centrale begreber indenfor
             programmering og computerkendskab - svarende til kurserne 2-4.
-          description_audience: Fra 10 år (efter kursus 3)
           student_description: Dette 20-timers kursus introducerer centrale computer
             videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens
             klasseværelser, men det er sjovt at lære i alle aldre.
-        edit-code:
-          title: Redigér Kode
-          description: Redigér Kode
-          description_short: Redigér Kode
-          student_description: Redigér Kode
-        events:
-          title: Hændelser
-          description: Hændelser
-          description_short: Hændelser
-          student_description: Hændelser
-        flappy:
-          title: Flappy kode
-          description: Vil du skrive dit eget spil på mindre end 10 minutter? Prøv
-            vores Flappy kode undervisning!
-          description_short: Lav dit eget Flappy-spil på mindre end 10 minutter!
-          student_description: Vil du skrive dit eget spil på mindre end 10 minutter?
-            Prøv vores Flappy kode undervisning!
-        jigsaw:
-          title: Puslespil
-          description: Prøv vores Puslespils-øvelse.
-          description_short: Prøv vores Puslespils-øvelse.
-          student_description: Prøv vores Puslespils-øvelse.
-        step:
-          title: Tip!
-          description: Trin-øvelse
-          description_short: Trin-øvelse
-          student_description: Trin-øvelse
-        Hour of Code:
-          title: Hour of Code 2013
-          description: Prøv det grundlæggende indenfor programmering med figurer fra
-            Angry Birds og Plants vs. Zombies!
-          description_short: Prøv grundlæggende programmering med masser af sjove
-            figurer!
-          student_description: Prøv det grundlæggende indenfor programmering med figurer
-            fra Angry Birds og Plants vs. Zombies!
-        algebraPD2a:
-          description: 'Fase 2 Online: Blandet Sommerkursus'
-          description_short: 'Fase 2 Online: Blandet Sommerkursus'
-          student_description: 'Fase 2 Online: Blandet Sommerkursus'
-        algebraPD2b:
-          description: 'Fase 2 Online: Blandet Sommerkursus'
-          description_short: 'Fase 2 Online: Blandet Sommerkursus'
-          student_description: 'Fase 2 Online: Blandet Sommerkursus'
-        ECSPD2:
-          description: 'Fase 2 Online: Blandet Sommerkursus'
-          description_short: 'Fase 2 Online: Blandet Sommerkursus'
-          student_description: 'Fase 2 Online: Blandet Sommerkursus'
-        sciencePD2b:
-          description: 'Fase 2 Online: Blandet Sommerkursus'
-          description_short: 'Fase 2 Online: Blandet Sommerkursus'
-          student_description: 'Fase 2 Online: Blandet Sommerkursus'
-        sciencePD2b-iZone:
-          description: 'Fase 2 Online: Blandet Sommerkursus'
-          description_short: 'Fase 2 Online: Blandet Sommerkursus'
-          student_description: 'Fase 2 Online: Blandet Sommerkursus'
-        ECSPD2-iZone:
-          description: 'Fase 2 Online: Blandet Sommerkursus'
-          description_short: 'Fase 2 Online: Blandet Sommerkursus'
-          student_description: 'Fase 2 Online: Blandet Sommerkursus'
-        ECSPD2-NexTech:
-          description: 'Fase 2 Online: Blandet Sommerkursus'
-          description_short: 'Fase 2 Online: Blandet Sommerkursus'
-          student_description: 'Fase 2 Online: Blandet Sommerkursus'
-        asUnplugged:
-          description_audience: I alderen 6-13
-        afterschool1:
-          description_audience: I alderen 7-13
-        Special Fun:
-          description_audience: Fra 10 år (efter kursus 3)
-        SpecialSeries:
-          description_audience: Fra 10 år (efter kursus 3)
-        iceage:
-          title: Ice Age Play Lab
-          description: Lav en historie eller et spil med Ice Age Play Lab!
-          description_short: Lav en historie eller et spil med Ice Age Play Lab!
-          student_description: Lav en historie eller et spil med Ice Age Play Lab!
-        gumball:
-          title: Gumball Play Lab
-          description: Lav en historie eller et spil med Gumball Play Lab!
-          description_short: Lav en historie eller et spil med Gumball Play Lab!
-          student_description: Lav en historie eller et spil med Gumball Play Lab!
-        starwars:
-          description: Lær at programmere droider, og lav dit eget Star Wars spil
-            i en galakse langt, langt herfra.
-          description_short: Lær at programmere droider, og lav dit eget Star Wars
-            spil i en galakse langt, langt herfra.
-          student_description: Lær at programmere droider, og lav dit eget Star Wars
-            spil i en galakse langt, langt herfra.
-        starwarsblocks:
-          description: Lær at programmere droider, og lav dit eget Star Wars spil
-            i en galakse langt, langt herfra.
-          description_short: Lær at programmere droider, og lav dit eget Star Wars
-            spil i en galakse langt, langt herfra.
-          student_description: Lær at programmere droider, og lav dit eget Star Wars
-            spil i en galakse langt, langt herfra.
-        mc:
-          title: Minecraft Hour of Code
-          description: Brug kodeblokke til at lede Steve eller Alex gennem et eventyr
-            i denne Minecraft-verden.
-          description_short: Udforsk en Minecraft-verden gennem kode
-          student_description: Brug kodeblokke til at lede Steve eller Alex gennem
-            et eventyr i denne Minecraft-verden.
+          title: Lyn-intro til Computer- og Programmeringskursus
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: Fejlfinding
+            introduction:
+              display_name: Introduktion
+            lessonGroup-3:
+              display_name: Variabler
+            outbreak:
+              display_name: Udbrud Simulator
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hour of Code
         AlgebraA:
           description: Lære funktionel programmering gennem Algebra
           description_short: Lære funktionel programmering gennem Algebra
@@ -242,189 +38,485 @@ da:
           student_description: Lære funktionel programmering gennem Algebra
         CSDU3-Draft:
           description_short: Programmering
-        TEMP CSD Unit 3:
-          description_short: Programmering
         CSF_Secret_Sample:
           description_audience: Fra 8 år (efter kursus 2)
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: Oversigt
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: Oversigt
         CSF_Secret_Sample_Story:
           description_audience: Alderen 8 - 18+
+        Course4pre:
+          description: En kort opsamling af koncepter for elever, der ikke har taget
+            kursus 2 og 3.
+          description_short: En kort opsamling af koncepter for elever, der ikke har
+            taget kursus 2 og 3.
+          student_description: En kort opsamling af koncepter for elever, der ikke
+            har taget kursus 2 og 3.
+          title: Kursus 4 forudsætninger
+        ECSPD2:
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
+          student_description: 'Fase 2 Online: Blandet Sommerkursus'
+        ECSPD2-NexTech:
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
+          student_description: 'Fase 2 Online: Blandet Sommerkursus'
+        ECSPD2-iZone:
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
+          student_description: 'Fase 2 Online: Blandet Sommerkursus'
+        Hour of Code:
+          description: Prøv det grundlæggende indenfor programmering med figurer fra
+            Angry Birds og Plants vs. Zombies!
+          description_short: Prøv grundlæggende programmering med masser af sjove
+            figurer!
+          student_description: Prøv det grundlæggende indenfor programmering med figurer
+            fra Angry Birds og Plants vs. Zombies!
+          title: Hour of Code 2013
         MikeTest:
           description_audience: Alder 8-98
-        artistExemplar:
-          description_audience: Fra 8 år (efter kursus 2)
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: Oversigt
-        gradeKinder:
-          description_audience: Alderen 5 - 18
-        grade4:
-          title: 4.  klasse
-          description_audience: I alderen 9-99
-        grade1:
-          title: 1.  klasse
-          description_audience: Alderen 5 - 18
-        grade5:
-          title: 5.  klasse
-          description_audience: Alder 10-110
-        grade3:
-          title: 3.  klasse
-          description_audience: Alderen 5 - 18
+        Special Fun:
+          description_audience: Fra 10 år (efter kursus 3)
+        SpecialSeries:
+          description_audience: Fra 10 år (efter kursus 3)
+        TEMP CSD Unit 3:
+          description_short: Programmering
+        afterschool1:
+          description_audience: I alderen 7-13
+        ai-ethics-2021:
+          description_audience: 6.  klasse til gymnasium
+        algebra:
+          description: Lære funktionel programmering gennem Algebra.
+          description_short: Lære funktionel programmering gennem Algebra.
+          student_description: Lære funktionel programmering gennem Algebra.
+          title: Datalogi i Algebra
+        algebraPD2a:
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
+          student_description: 'Fase 2 Online: Blandet Sommerkursus'
+        algebraPD2b:
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
+          student_description: 'Fase 2 Online: Blandet Sommerkursus'
         alltheplcthings:
           lesson_groups:
             required:
               display_name: Oversigt
-        grade2:
-          description_audience: Alderen 5 - 18
-        csp-online-test:
+        andrea-test:
           lesson_groups:
             required:
               display_name: Oversigt
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: Oversigt
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Vurderinger
+        aquatic:
+          description_short: Minecraft er tilbage med en splinterny aktivitet for
+            En Times Kodning!
+          title: 'Minecraft: Akvatisk rejse'
+        artist:
+          description: Tegn seje billeder og designs!
+          description_short: Tegn seje billeder og designs!
+          student_description: Tegn seje billeder og designs!
+          title: Kunstner
+        artistExemplar:
+          description_audience: Fra 8 år (efter kursus 2)
+        asUnplugged:
+          description_audience: I alderen 6-13
         basketball:
           name: basketball
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: Oversigt
-        minecraft:
-          description_short: Programmer dyr og andre Minecraft-væsner i din egen udgave
-            af Minecraft.
-          description: Programmer dyr og andre Minecraft-væsner i din egen udgave
-            af Minecraft.
-          student_description: Programmer dyr og andre Minecraft-væsner i din egen
-            udgave af Minecraft.
         classic-hoc-impact-study:
           description_short: Prøv grundlæggende programmering med masser af sjove
             figurer!
-        hoc-impact-study:
-          description_short: Prøv grundlæggende programmering med masser af sjove
-            figurer!
-        csp3-support:
+        contagion-pilot:
+          description: 'Brug Sprite Lab til at programmere en simulation ud af et
+            virusudbrud. '
+          description_audience: 5.  klasse
+          description_short: 'Brug Sprite Lab til at programmere en simulation ud
+            af et virusudbrud. '
+          student_description: 'Brug Sprite Lab til at programmere en simulation ud
+            af et virusudbrud. '
+        course1:
+          description: Kursus 1 er designet til at give tidlige læsere mulighed for
+            at lave programmer, som vil hjælpe dem med at lære at samarbejde med andre,
+            løse problemer, og fortsætte gennem selv vanskelige opgaver. Ved slutningen
+            af dette kursus opretter eleven sit helt eget spil eller historie, som
+            kan deles med andre. Anbefales til elever i 1. klasse.
+          description_audience: Fra 4 år (ikke-læsere)
+          description_short: Kursus 1 er designet til tidlige læsere.
+          student_description: Kursus 1 er designet til at give tidlige læsere mulighed
+            for at lave programmer, som vil hjælpe dem med at lære at samarbejde med
+            andre, løse problemer, og fortsætte gennem selv vanskelige opgaver. Ved
+            slutningen af dette kursus opretter eleven sit helt eget spil eller historie,
+            som kan deles med andre. Anbefales til elever i 1. klasse.
+          title: Kursus 1
+        course2:
+          description: Kursus 2 er designet til elever der kan læse, men uden forudgående
+            erfaring med programmering. I dette kursus vil elever løse problemer ved
+            at lave programmer, og udvikle interaktive spil eller historier der kan
+            deles. Anbefales til elever i 2.-5. klasse.
+          description_audience: Fra 6 år (læsning nødvendigt)
+          description_short: Kursus 2 er designet til elever, der kan læse.
+          student_description: Kursus 2 er designet til elever der kan læse, men uden
+            forudgående erfaring med programmering. I dette kursus vil elever løse
+            problemer ved at lave programmer, og udvikle interaktive spil eller historier
+            der kan deles. Anbefales til elever i 2.-5. klasse.
+          title: Kursus 2
+        course3:
+          description: Kursus 3 er til elever, der har taget Kursus 2. Eleverne kommer
+            til at dykke dybere ned i emnerne introduceret i tidligere kurser, for
+            at finde fleksible løsninger til mere komplekse problemer. Ved slutningen
+            af dette kursus vil eleverne have produceret interaktive historier og
+            spil de kan dele. Anbefales til elever i 4. -5. klasse.
+          description_audience: Fra 8 år (efter kursus 2)
+          description_short: Kursus 3 bygger videre på kursus 2.
+          student_description: Kursus 3 er til elever, der har taget Kursus 2. Eleverne
+            kommer til at dykke dybere ned i emnerne introduceret i tidligere kurser,
+            for at finde fleksible løsninger til mere komplekse problemer. Ved slutningen
+            af dette kursus vil eleverne have produceret interaktive historier og
+            spil de kan dele. Anbefales til elever i 4. -5. klasse.
+          title: Kursus 3
+        course4:
+          description: Kursus 4 er til elever, der har taget Kursus 2 og Kursus 3.
+            Eleverne kommer til lære at løse gåder med øget kompleksitet i takt med
+            at de lærer at kombinere flere koncepter når de løser en opgave. Når dette
+            kursus er afsluttet vil elever kunne lave programmer som fremviser en
+            række færdigheder, så som for-løkker og funktioner med parametre. Anbefales
+            til elever i 4. -8. klasse.
+          description_audience: Fra 10 år (efter kursus 3)
+          description_short: Elever der tager kursus 4 skal allerede have gennemført
+            kursus 2 og 3.
+          student_description: Kursus 4 er til elever, der har taget Kursus 2 og Kursus
+            3. Eleverne kommer til lære at løse gåder med øget kompleksitet i takt
+            med at de lærer at kombinere flere koncepter når de løser en opgave. Når
+            dette kursus er afsluttet vil elever kunne lave programmer som fremviser
+            en række færdigheder, så som for-løkker og funktioner med parametre. Anbefales
+            til elever i 4. -8. klasse.
+          title: Kursus 4
+        coursea-2019:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp4-support:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        coursea-2020:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp5-support:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        coursea-2021:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        cspnovice:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        coursea-2022:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp1-dlp:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        coursea-2023:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp2-dlp:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        courseb-2019:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp3-dlp:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        courseb-2020:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp4-dlp:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        courseb-2021:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp5-dlp:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        courseb-2022:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csd1-dlp:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        courseb-2023:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csd6-dlp:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        coursec-2019:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csd5-dlp:
+            csf_binary:
+              display_name: Binære
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        coursec-2020:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csd4-dlp:
+            csf_binary:
+              display_name: Binære
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        coursec-2021:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csd3-dlp:
+            csf_binary:
+              display_name: Binære
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        coursec-2022:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csd2-dlp:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        coursec-2023:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        hero:
-          description: Minecraft er tilbage med en splinterny aktivitet i En Times
-            Kodning! En rejse gennem Minecraft ved hjælp af kode.
-          student_description: Minecraft er tilbage med en splinterny aktivitet i
-            En Times Kodning! En rejse gennem Minecraft ved hjælp af kode.
-        csd1-dlp-18:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        coursed-2019:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csd2-dlp-18:
+            csf_binary:
+              display_name: Binære
+            csf_conditionals:
+              display_name: Betingelser
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        coursed-2020:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csd3-dlp-18:
+            csf_binary:
+              display_name: Binære
+            csf_conditionals:
+              display_name: Betingelser
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        coursed-2021:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csd4-dlp-18:
+            csf_binary:
+              display_name: Binære
+            csf_conditionals:
+              display_name: Betingelser
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+            lessonGroup-6:
+              display_name: Digital statsborgerskab
+        coursed-2022:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csd5-dlp-18:
+            csf_conditionals:
+              display_name: Betingelser
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+            lessonGroup-6:
+              display_name: Digital statsborgerskab
+        coursed-2023:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csd6-dlp-18:
+            csf_conditionals:
+              display_name: Betingelser
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+            lessonGroup-6:
+              display_name: Digital statsborgerskab
+        coursee-2019:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp1-dlp-18:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_functions:
+              display_name: Funktioner
+            csf_nested_loops:
+              display_name: Indlejret Løkker
+            csf_sprites:
+              display_name: figure
+        coursee-2020:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp2-dlp-18:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_functions:
+              display_name: Funktioner
+            csf_nested_loops:
+              display_name: Indlejret Løkker
+            csf_sprites:
+              display_name: figure
+        coursee-2021:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp3-dlp-18:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_functions:
+              display_name: Funktioner
+            csf_nested_loops:
+              display_name: Betingelser
+            csf_sprites:
+              display_name: figure
+            ramp_up:
+              display_name: Indlejret Løkker
+        coursee-2022:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp4-dlp-18:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_functions:
+              display_name: Funktioner
+            csf_nested_loops:
+              display_name: Betingelser
+            csf_sprites:
+              display_name: figure
+            ramp_up:
+              display_name: Indlejret Løkker
+        coursee-2023:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp5-dlp-18:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_functions:
+              display_name: Funktioner
+            csf_nested_loops:
+              display_name: Betingelser
+            csf_sprites:
+              display_name: figure
+            ramp_up:
+              display_name: Indlejret Løkker
+        coursef-2019:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp-explore-dlp-18:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_for_loops:
+              display_name: For Loops
+            csf_internet:
+              display_name: Internet
+            csf_sprites:
+              display_name: figure
+            csf_variables:
+              display_name: Variabler
+        coursef-2020:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        csp-create-dlp-18:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_for_loops:
+              display_name: For Loops
+            csf_sprites:
+              display_name: figure
+            csf_variables:
+              display_name: Variabler
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_for_loops:
+              display_name: For Loops
+            csf_variables:
+              display_name: For Loops
+            lessonGroup-7:
+              display_name: Digital statsborgerskab
+            lessonGroup-8:
+              display_name: Variabler
+            lessonGroup-9:
+              display_name: fjern
+            ramp_up:
+              display_name: figure
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digital statsborgerskab
+            lessonGroup-8:
+              display_name: Variabler
+            ramp_up:
+              display_name: figure
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digital statsborgerskab
+            lessonGroup-8:
+              display_name: Variabler
+            ramp_up:
+              display_name: figure
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital statsborgerskab
+            lessonGroup-3:
+              display_name: figure
+            lessonGroup-4:
+              display_name: Variabler
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enhed 1
+            lessonGroup-4:
+              display_name: Enhed 2
+            lessonGroup-5:
+              display_name: Enhed 3
+            lessonGroup-6:
+              display_name: Enhed 4
+            lessonGroup-7:
+              display_name: Enhed 5
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Løkker
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variabler
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For Loops
+        csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Oversigt
@@ -432,7 +524,87 @@ da:
           lesson_groups:
             required:
               display_name: Oversigt
-        csd-apprentice-18:
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csf-2021-pilot:
+          lesson_groups:
+            Sprites:
+              display_name: figure
+            lessonGroup-3:
+              display_name: Variabler
+            outbreak:
+              display_name: Udbrud Simulering
+            ramp_up:
+              display_name: Introduktion
+            variables:
+              display_name: Variabler
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: figure
+            lessonGroup-3:
+              display_name: Variabler
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp-explore-dlp-18:
           lesson_groups:
             required:
               display_name: Oversigt
@@ -440,204 +612,182 @@ da:
           lesson_groups:
             required:
               display_name: Oversigt
-        csp-apprentice-18:
+        csp-online-test:
           lesson_groups:
             required:
               display_name: Oversigt
-        fit-test:
+        csp1-dlp:
           lesson_groups:
             required:
               display_name: Oversigt
-        dance:
-          description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
-            Ciara og 25 andre!
-          description: Lav din egen dansefest sammen med dine venner.
-          student_description: Lav din egen dansefest sammen med dine venner.
-        aquatic:
-          title: 'Minecraft: Akvatisk rejse'
-          description_short: Minecraft er tilbage med en splinterny aktivitet for
-            En Times Kodning!
-        cspplayground:
+        csp1-dlp-18:
           lesson_groups:
-            csp_variables:
-              display_name: Variabler
-            csp_conditionals:
-              display_name: Betingelser
-            csp_functions:
-              display_name: Funktioner
-        dance-extras:
-          description: Overskrid den første time med udvidede projektideer.
-          student_description: Overskrid den første time med udvidede projektideer.
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Variabler
-            csf_for_loops:
-              display_name: For Loops
-            csf_internet:
-              display_name: Internet
-            csf_sprites:
-              display_name: figure
-            csf_digcit:
-              display_name: Digital statsborgerskab
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Hændelser
-            csf_loops:
-              display_name: Løkker
-            csf_conditionals:
-              display_name: Betingelser
-            csf_binary:
-              display_name: Binære
-            csf_digcit:
-              display_name: Digital statsborgerskab
-        coursee-2019:
-          lesson_groups:
-            csf_sprites:
-              display_name: figure
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_nested_loops:
-              display_name: Indlejret Løkker
-            csf_functions:
-              display_name: Funktioner
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Løkker
-            csf_conditionals:
-              display_name: Betingelser
-            csf_functions:
-              display_name: Funktioner
-            csf_variables:
-              display_name: Variabler
-            csf_for_loops:
-              display_name: For Loops
-            csf_sprites:
-              display_name: figure
-        andrea-test:
-          lesson_groups:
-            required:
-              display_name: Oversigt
-        dance-extras-gallery:
-          title: Bliv ved med at danse
-          description: Overskrid den første time med udvidede projektideer.
-          student_description: Overskrid den første time med udvidede projektideer.
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_binary:
-              display_name: Binære
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        gamelab:
-          title: Spil Laboratoriet
-        coursea-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: Variabler
-            csp_conditionals:
-              display_name: Betingelser
-            csp_functions:
-              display_name: Funktioner
             required:
               display_name: Oversigt
         csp1-pilot:
           lesson_groups:
             required:
               display_name: Oversigt
-        time4csdemo:
-          lesson_groups:
-            csf_sprites:
-              display_name: figure
         csp1-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Variabler
             csp_conditionals:
               display_name: Betingelser
             csp_functions:
               display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         csp2-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Variabler
             csp_conditionals:
               display_name: Betingelser
             csp_functions:
               display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
+            required:
+              display_name: Oversigt
         csp4-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Variabler
             csp_conditionals:
               display_name: Betingelser
             csp_functions:
               display_name: Funktioner
-        csp5-pilot-staging:
+            csp_variables:
+              display_name: Variabler
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Lister
             csp_loops:
               display_name: Løkker
-        csp6-pilot-staging:
+        csp5-2021:
           lesson_groups:
-            csp_variables:
-              display_name: Variabler
-            csp_conditionals:
-              display_name: Betingelser
-            csp_functions:
-              display_name: Funktioner
-        csp8-pilot-staging:
+            csp_lists:
+              display_name: Lister
+            csp_loops:
+              display_name: Løkker
+        csp5-2022:
           lesson_groups:
-            csp_variables:
-              display_name: Variabler
-            csp_conditionals:
-              display_name: Betingelser
-            csp_functions:
-              display_name: Funktioner
-        csp9-pilot-staging:
+            csp_lists:
+              display_name: Lister
+            csp_loops:
+              display_name: Løkker
+        csp5-2023:
           lesson_groups:
-            csp_variables:
-              display_name: Variabler
-            csp_conditionals:
-              display_name: Betingelser
-            csp_functions:
-              display_name: Funktioner
-        csp10-pilot-staging:
+            csp_loops:
+              display_name: Løkker
+        csp5-dlp:
           lesson_groups:
-            csp_variables:
-              display_name: Variabler
-            csp_conditionals:
-              display_name: Betingelser
-            csp_functions:
-              display_name: Funktioner
+            required:
+              display_name: Oversigt
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -646,29 +796,95 @@ da:
               display_name: Løkker
             required:
               display_name: Oversigt
-        fit2019-novice:
+        csp5-pilot-staging:
           lesson_groups:
-            required:
-              display_name: Oversigt
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: Oversigt
-        csp3-pilot:
-          lesson_groups:
-            required:
-              display_name: Oversigt
-        csl-vn:
-          lesson_groups:
-            csf_loops:
+            csp_lists:
+              display_name: Lister
+            csp_loops:
               display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        dlp19-csd-mod-fit:
+        csp5-support:
           lesson_groups:
             required:
               display_name: Oversigt
-        dlp19-csp-mod-fit:
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmer
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lister
+            lessonGroup-3:
+              display_name: Løkker
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+            csp_variables:
+              display_name: Variabler
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        dance:
+          description: Lav din egen dansefest sammen med dine venner.
+          description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara og 25 andre!
+          student_description: Lav din egen dansefest sammen med dine venner.
+        dance-2019:
+          description: Lav din egen dansefest sammen med dine venner.
+          student_description: Lav din egen dansefest sammen med dine venner.
+          title: Dance Party
+        dance-extras:
+          description: Overskrid den første time med udvidede projektideer.
+          student_description: Overskrid den første time med udvidede projektideer.
+        dance-extras-2019:
+          description: Overskrid den første time med udvidede projektideer.
+          student_description: Overskrid den første time med udvidede projektideer.
+          title: Bliv ved med at danse
+        dance-extras-gallery:
+          description: Overskrid den første time med udvidede projektideer.
+          student_description: Overskrid den første time med udvidede projektideer.
+          title: Bliv ved med at danse
+        dlp19-csd-mod-fit:
           lesson_groups:
             required:
               display_name: Oversigt
@@ -688,6 +904,10 @@ da:
           lesson_groups:
             required:
               display_name: Oversigt
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
@@ -704,565 +924,409 @@ da:
           lesson_groups:
             required:
               display_name: Oversigt
-        csp2-pilot:
-          lesson_groups:
-            required:
-              display_name: Oversigt
-        csp6-pilot:
-          lesson_groups:
-            required:
-              display_name: Oversigt
-        dance-2019:
-          title: Dance Party
-          description: Lav din egen dansefest sammen med dine venner.
-          student_description: Lav din egen dansefest sammen med dine venner.
-        dance-extras-2019:
-          title: Bliv ved med at danse
-          description: Overskrid den første time med udvidede projektideer.
-          student_description: Overskrid den første time med udvidede projektideer.
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: Variabler
-            csp_conditionals:
-              display_name: Betingelser
-            csp_functions:
-              display_name: Funktioner
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_conditionals:
-              display_name: Betingelser
-            csf_nested_loops:
-              display_name: Indlejret Løkker
-            csf_functions:
-              display_name: Funktioner
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Løkker
-            csf_conditionals:
-              display_name: Betingelser
-            csf_events:
-              display_name: Hændelser
-            csf_sprites:
-              display_name: figure
-            csf_digcit:
-              display_name: Digital statsborgerskab
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Løkker
-            csf_conditionals:
-              display_name: Betingelser
-            csf_events:
-              display_name: Hændelser
-            csf_sprites:
-              display_name: figure
-            csf_digcit:
-              display_name: Digital statsborgerskab
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: Oversigt
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Variabler
-            csp_conditionals:
-              display_name: Betingelser
-            csp_functions:
-              display_name: Funktioner
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Lister
-            csp_loops:
-              display_name: Løkker
-        coursea-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        courseb-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        coursec-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_binary:
-              display_name: Binære
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Hændelser
-            csf_loops:
-              display_name: Løkker
-            csf_conditionals:
-              display_name: Betingelser
-            csf_binary:
-              display_name: Binære
-            csf_digcit:
-              display_name: Digital statsborgerskab
-        coursee-2020:
-          lesson_groups:
-            csf_sprites:
-              display_name: figure
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_nested_loops:
-              display_name: Indlejret Løkker
-            csf_functions:
-              display_name: Funktioner
-        coursef-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_variables:
-              display_name: Variabler
-            csf_for_loops:
-              display_name: For Loops
-            csf_sprites:
-              display_name: figure
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Løkker
-            csf_conditionals:
-              display_name: Betingelser
-            csf_functions:
-              display_name: Funktioner
-            csf_variables:
-              display_name: Variabler
-            csf_for_loops:
-              display_name: For Loops
-            csf_sprites:
-              display_name: figure
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        virustest:
-          title: Simulering af et udbrud
-          description_short: 'Brug Sprite Lab til at oprette en simulation ud af et
-            virusudbrud. '
-        outbreak:
-          lesson_groups:
-            outbreak:
-              display_name: Udbrud Simulering
-          title: Udbrud Simulator
-          description_short: 'Brug Sprite Lab til at programmere en simulation ud
-            af et virusudbrud. '
-          description: 'Brug Sprite Lab til at programmere en simulation ud af et
-            virusudbrud. '
-          name: udbrud
-          student_description: 'Brug Sprite Lab til at programmere en simulation ud
-            af et virusudbrud. '
-        2021drafting:
-          lesson_groups:
-            introduction:
-              display_name: Introduktion
-            lessonGroup-3:
-              display_name: Variabler
-            outbreak:
-              display_name: Udbrud Simulator
-            debugging:
-              display_name: Fejlfinding
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Variabler
-            csp_conditionals:
-              display_name: Betingelser
-            csp_functions:
-              display_name: Funktioner
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Lister
-            csp_loops:
-              display_name: Løkker
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Algoritmer
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_binary:
-              display_name: Binære
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Hændelser
-            csf_loops:
-              display_name: Løkker
-            csf_conditionals:
-              display_name: Betingelser
-            csf_binary:
-              display_name: Binære
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            lessonGroup-6:
-              display_name: Digital statsborgerskab
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Indlejret Løkker
-            csf_sprites:
-              display_name: figure
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_nested_loops:
-              display_name: Betingelser
-            csf_functions:
-              display_name: Funktioner
-        coursef-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: figure
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_variables:
-              display_name: For Loops
-            csf_for_loops:
-              display_name: For Loops
-            lessonGroup-8:
-              display_name: Variabler
-            lessonGroup-9:
-              display_name: fjern
-            lessonGroup-7:
-              display_name: Digital statsborgerskab
-        express-2021:
-          lesson_groups:
-            csf_warmup:
-              display_name: Opvarmning
-            csf_loops:
-              display_name: Løkker
-            csf_conditionals:
-              display_name: Betingelser
-            csf_functions:
-              display_name: Funktioner
-            csf_variables:
-              display_name: Variabler
-            csf_for_loops:
-              display_name: For Loops
-            csf_sprites:
-              display_name: figure
-            lessonGroup-9:
-              display_name: Hændelser
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: Introduktion
-            outbreak:
-              display_name: Udbrud Simulering
-            lessonGroup-3:
-              display_name: Variabler
-            Sprites:
-              display_name: figure
-            variables:
-              display_name: Variabler
-        contagion-pilot:
-          description_audience: 5.  klasse
-          description_short: 'Brug Sprite Lab til at programmere en simulation ud
-            af et virusudbrud. '
-          description: 'Brug Sprite Lab til at programmere en simulation ud af et
-            virusudbrud. '
-          student_description: 'Brug Sprite Lab til at programmere en simulation ud
-            af et virusudbrud. '
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: Introduktion
-            Introduction:
-              display_name: Introduktion
-        outbreak-module:
-          title: Udbrud
-        csa-videos:
+        dlp21-csd:
           lesson_groups:
             lessonGroup-2:
-              display_name: Enhed 1
-            lessonGroup-4:
-              display_name: Enhed 2
-            lessonGroup-5:
-              display_name: Enhed 3
-            lessonGroup-6:
-              display_name: Enhed 4
-            lessonGroup-7:
-              display_name: Enhed 5
+              description: test
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
               display_name: Trin 1
             lessonGroup-3:
               display_name: Trin 2
-        dlp21-csd:
+        edit-code:
+          description: Redigér Kode
+          description_short: Redigér Kode
+          student_description: Redigér Kode
+          title: Redigér Kode
+        events:
+          description: Hændelser
+          description_short: Hændelser
+          student_description: Hændelser
+          title: Hændelser
+        express-2019:
           lesson_groups:
-            lessonGroup-2:
-              description: test
-        spelling-bee:
-          title: Stave-bien
-        outbreak-csc:
-          title: Udbrud
-        ai-ethics-2021:
-          description_audience: 6.  klasse til gymnasium
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Hour of Code
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: figure
-            lessonGroup-3:
-              display_name: Variabler
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
+            csf_conditionals:
+              display_name: Betingelser
+            csf_for_loops:
+              display_name: For Loops
+            csf_functions:
+              display_name: Funktioner
             csf_loops:
               display_name: Løkker
-            csf_events:
+            csf_sprites:
+              display_name: figure
+            csf_variables:
+              display_name: Variabler
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Betingelser
+            csf_for_loops:
+              display_name: For Loops
+            csf_functions:
+              display_name: Funktioner
+            csf_loops:
+              display_name: Løkker
+            csf_sprites:
+              display_name: figure
+            csf_variables:
+              display_name: Variabler
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Betingelser
+            csf_for_loops:
+              display_name: For Loops
+            csf_functions:
+              display_name: Funktioner
+            csf_loops:
+              display_name: Løkker
+            csf_sprites:
+              display_name: figure
+            csf_variables:
+              display_name: Variabler
+            csf_warmup:
+              display_name: Opvarmning
+            lessonGroup-9:
               display_name: Hændelser
         express-2022:
           lesson_groups:
-            csf_sprites:
-              display_name: figure
-            lessonGroup-9:
-              display_name: Hændelser
-            csf_loops:
-              display_name: Løkker
             csf_conditionals:
               display_name: Betingelser
-            csf_functions:
-              display_name: Funktioner
-            csf_variables:
-              display_name: Variabler
             csf_for_loops:
               display_name: For Loops
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Variabler
-            csp_conditionals:
-              display_name: Betingelser
-            csp_functions:
-              display_name: Funktioner
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Lister
-            csp_loops:
-              display_name: Løkker
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digital statsborgerskab
-            csf_events:
-              display_name: Hændelser
-            csf_loops:
-              display_name: Løkker
-            csf_conditionals:
-              display_name: Betingelser
-        coursee-2022:
-          lesson_groups:
-            csf_sprites:
-              display_name: figure
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            ramp_up:
-              display_name: Indlejret Løkker
             csf_functions:
               display_name: Funktioner
-            csf_nested_loops:
-              display_name: Betingelser
-        coursef-2022:
-          lesson_groups:
-            ramp_up:
-              display_name: figure
-            lessonGroup-7:
-              display_name: Digital statsborgerskab
-            lessonGroup-8:
-              display_name: Variabler
-        pre-express-2022:
-          lesson_groups:
             csf_loops:
               display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Digital statsborgerskab
-            ramp_up:
+            csf_sprites:
               display_name: figure
-            lessonGroup-8:
+            csf_variables:
               display_name: Variabler
-        soccer:
-          name: fodbold
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: Løkker
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Variabler
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: For Loops
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Variabler
-            csp_conditionals:
-              display_name: Betingelser
-            csp_functions:
-              display_name: Funktioner
-        csp5-2023:
-          lesson_groups:
-            csp_loops:
-              display_name: Løkker
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Lister
-            lessonGroup-3:
-              display_name: Løkker
-        angelina-playground:
-          lessons:
-            lesson-5:
-              name: Vurderinger
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Løkker
-            csf_events:
+            lessonGroup-9:
               display_name: Hændelser
         express-2023:
           lesson_groups:
-            csf_sprites:
-              display_name: figure
-            lessonGroup-9:
-              display_name: Hændelser
-            csf_loops:
-              display_name: Løkker
             csf_conditionals:
               display_name: Betingelser
-            csf_functions:
-              display_name: Funktioner
-            csf_variables:
-              display_name: Variabler
             csf_for_loops:
               display_name: For Loops
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_loops:
-              display_name: Løkker
-            csf_events:
-              display_name: Hændelser
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digital statsborgerskab
-            csf_events:
-              display_name: Hændelser
-            csf_loops:
-              display_name: Løkker
-            csf_conditionals:
-              display_name: Betingelser
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital statsborgerskab
-            csf_sprites:
-              display_name: figure
-            ramp_up:
-              display_name: Indlejret Løkker
             csf_functions:
               display_name: Funktioner
-            csf_nested_loops:
+            csf_loops:
+              display_name: Løkker
+            csf_sprites:
+              display_name: figure
+            csf_variables:
+              display_name: Variabler
+            lessonGroup-9:
+              display_name: Hændelser
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        flappy:
+          description: Vil du skrive dit eget spil på mindre end 10 minutter? Prøv
+            vores Flappy kode undervisning!
+          description_short: Lav dit eget Flappy-spil på mindre end 10 minutter!
+          student_description: Vil du skrive dit eget spil på mindre end 10 minutter?
+            Prøv vores Flappy kode undervisning!
+          title: Flappy kode
+        frozen:
+          description: Lad os bruge kode til at udforske isens magi og skønhed sammen
+            med Anna og Elsa. Du kan tegne snefnug og mønstre, mens du skøjter og
+            laver et vinterlandskab, som du derefter kan dele med dine venner!
+          description_short: Lad os bruge noget kode for at slutte os til Anna og
+            Elsa, når de går på opdagelse i magien og isens skønhed.
+          student_description: Lad os bruge kode til at udforske isens magi og skønhed
+            sammen med Anna og Elsa. Du kan tegne snefnug og mønstre, mens du skøjter
+            og laver et vinterlandskab, som du derefter kan dele med dine venner!
+          title: Kod med Anna og Elsa
+        gamelab:
+          title: Spil Laboratoriet
+        grade1:
+          description_audience: Alderen 5 - 18
+          title: 1.  klasse
+        grade2:
+          description_audience: Alderen 5 - 18
+        grade3:
+          description_audience: Alderen 5 - 18
+          title: 3.  klasse
+        grade4:
+          description_audience: I alderen 9-99
+          title: 4.  klasse
+        grade5:
+          description_audience: Alder 10-110
+          title: 5.  klasse
+        gradeKinder:
+          description_audience: Alderen 5 - 18
+        gumball:
+          description: Lav en historie eller et spil med Gumball Play Lab!
+          description_short: Lav en historie eller et spil med Gumball Play Lab!
+          student_description: Lav en historie eller et spil med Gumball Play Lab!
+          title: Gumball Play Lab
+        hero:
+          description: Minecraft er tilbage med en splinterny aktivitet i En Times
+            Kodning! En rejse gennem Minecraft ved hjælp af kode.
+          student_description: Minecraft er tilbage med en splinterny aktivitet i
+            En Times Kodning! En rejse gennem Minecraft ved hjælp af kode.
+        hoc-impact-study:
+          description_short: Prøv grundlæggende programmering med masser af sjove
+            figurer!
+        hourofcode:
+          description: Prøv grundlæggende programmering med firgurer fra Angry Birds,
+            Plants vs. Zombies og Scrat fra Ice Age!
+          description_short: Prøv grundlæggende programmering med masser af sjove
+            figurer!
+          student_description: Prøv grundlæggende programmering med firgurer fra Angry
+            Birds, Plants vs. Zombies og Scrat fra Ice Age!
+          title: Klassisk labyrint
+        iceage:
+          description: Lav en historie eller et spil med Ice Age Play Lab!
+          description_short: Lav en historie eller et spil med Ice Age Play Lab!
+          student_description: Lav en historie eller et spil med Ice Age Play Lab!
+          title: Ice Age Play Lab
+        infinity:
+          description: Brug Play Lab til at skabe en historie eller et spil med karakterer
+            fra Disneys Infinity
+          description_short: Brug Play Lab til at skabe en historie eller et spil
+            med karakterer fra Disneys Infinity
+          student_description: Brug Play Lab til at skabe en historie eller et spil
+            med karakterer fra Disneys Infinity
+          title: Disney Infinity Play Lab
+        jigsaw:
+          description: Prøv vores Puslespils-øvelse.
+          description_short: Prøv vores Puslespils-øvelse.
+          student_description: Prøv vores Puslespils-øvelse.
+          title: Puslespil
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: Introduktion
+            k5_getting_started_1:
+              display_name: Introduktion
+        mc:
+          description: Brug kodeblokke til at lede Steve eller Alex gennem et eventyr
+            i denne Minecraft-verden.
+          description_short: Udforsk en Minecraft-verden gennem kode
+          student_description: Brug kodeblokke til at lede Steve eller Alex gennem
+            et eventyr i denne Minecraft-verden.
+          title: Minecraft Hour of Code
+        minecraft:
+          description: Programmer dyr og andre Minecraft-væsner i din egen udgave
+            af Minecraft.
+          description_short: Programmer dyr og andre Minecraft-væsner i din egen udgave
+            af Minecraft.
+          student_description: Programmer dyr og andre Minecraft-væsner i din egen
+            udgave af Minecraft.
+        netsim:
+          title: Internet Simulator
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: figure
+            lessonGroup-3:
               display_name: Betingelser
+            lessonGroup-5:
+              display_name: Variabler
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: figure
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital statsborgerskab
+            lessonGroup-4:
+              display_name: Løkker
+            lessonGroup-6:
+              display_name: Hændelser
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Indlejret Løkker
+            lessonGroup-4:
+              display_name: Funktioner
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital statsborgerskab
+            lessonGroup-4:
+              display_name: Løkker
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital statsborgerskab
+            lessonGroup-4:
+              display_name: Løkker
+            lessonGroup-5:
+              display_name: Hændelser
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital statsborgerskab
+            lessonGroup-6:
+              display_name: Løkker
+        outbreak:
+          description: 'Brug Sprite Lab til at programmere en simulation ud af et
+            virusudbrud. '
+          description_short: 'Brug Sprite Lab til at programmere en simulation ud
+            af et virusudbrud. '
+          lesson_groups:
+            outbreak:
+              display_name: Udbrud Simulering
+          name: udbrud
+          student_description: 'Brug Sprite Lab til at programmere en simulation ud
+            af et virusudbrud. '
+          title: Udbrud Simulator
+        outbreak-csc:
+          title: Udbrud
+        outbreak-module:
+          title: Udbrud
+        pixelation:
+          description: Skab billeder med bits og bytes.
+          description_short: Skab billeder med bits og bytes.
+          student_description: Skab billeder med bits og bytes.
         pl-csd-summer-day1:
           lessons:
             lesson-3:
               name: Introduktion
+        playlab:
+          description: Opret en historie eller lav et spil med Play Lab!
+          description_short: Opret en historie eller lav et spil med Play Lab!
+          student_description: Opret en historie eller lav et spil med Play Lab!
+          title: Play Lab
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+        sciencePD2b:
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
+          student_description: 'Fase 2 Online: Blandet Sommerkursus'
+        sciencePD2b-iZone:
+          description: 'Fase 2 Online: Blandet Sommerkursus'
+          description_short: 'Fase 2 Online: Blandet Sommerkursus'
+          student_description: 'Fase 2 Online: Blandet Sommerkursus'
+        soccer:
+          name: fodbold
+        spelling-bee:
+          title: Stave-bien
+        starwars:
+          description: Lær at programmere droider, og lav dit eget Star Wars spil
+            i en galakse langt, langt herfra.
+          description_short: Lær at programmere droider, og lav dit eget Star Wars
+            spil i en galakse langt, langt herfra.
+          student_description: Lær at programmere droider, og lav dit eget Star Wars
+            spil i en galakse langt, langt herfra.
+        starwarsblocks:
+          description: Lær at programmere droider, og lav dit eget Star Wars spil
+            i en galakse langt, langt herfra.
+          description_short: Lær at programmere droider, og lav dit eget Star Wars
+            spil i en galakse langt, langt herfra.
+          student_description: Lær at programmere droider, og lav dit eget Star Wars
+            spil i en galakse langt, langt herfra.
+        step:
+          description: Trin-øvelse
+          description_short: Trin-øvelse
+          student_description: Trin-øvelse
+          title: Tip!
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital statsborgerskab
+            lessonGroup-4:
+              display_name: Løkker
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Betingelser
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+            csf_sprites:
+              display_name: figure
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Betingelser
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_functions:
+              display_name: Funktioner
+            csf_nested_loops:
+              display_name: Indlejret Løkker
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Betingelser
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+            csf_sprites:
+              display_name: figure
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: figure
+        usability:
+          description: Et udvalg af øvelser med 4 niveauer til brugervenlighedstest.
+          student_description: Et udvalg af øvelser med 4 niveauer til brugervenlighedstest.
+          title: Usability test
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introduktion
+        virustest:
+          description_short: 'Brug Sprite Lab til at oprette en simulation ud af et
+            virusudbrud. '
+          title: Simulering af et udbrud

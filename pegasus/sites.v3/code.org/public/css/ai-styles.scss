@@ -37,9 +37,22 @@
   }
 
   .text-wrapper {
+    width: 70%;
+
+    p {
+      width: 90%;
+    }
 
     @media screen and (max-width: $width-md) {
       width: 60%;
+
+      h1 {
+        @include heading-xl;
+      }
+
+      p {
+        width: 100%;
+      }
     }
 
     @media screen and (max-width: $width-sm) {
@@ -58,44 +71,12 @@
     @media screen and (max-width: $width-sm) {
       width: 150px;
       float: none;
-      margin: 2em auto 0;
+      margin: 2rem auto 0;
     }
   }
 
   img {
+    position: absolute;
     width: 100%;
-
-    @media screen and (max-width: $width-md) {
-      display: block;
-    }
-  }
-}
-
-.video-series,
-.video {
-
-  & > div.col-50 {
-    padding: 0 !important;
-    margin: 1em 0 0 !important;
-    width: 49%;
-
-    .video_caption_link {
-      @include figcaption;
-    }
-
-    .modal-body {
-
-      figure {
-        width: 100%;
-      }
-    }
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
-    }
-  }
-
-  .play {
-    top: 30% !important;
   }
 }

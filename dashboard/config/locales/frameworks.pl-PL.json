@@ -2,26 +2,35 @@
   "pl-PL": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "Normy informatyczne CSTA K-12 (2017)"
+        "ai4k12-2021": {
+          "name": "AI4K12 Krajowe Wytyczne 2021"
         },
-        "csp2021": {
-          "name": "Ramy koncepcyjne \"Programu nauki informatyki\" (CSP)"
-        },
-        "csta2011": {
-          "name": "Standardy Informatyki CSTA dla K-12 (2011)"
+        "c3ss": {
+          "name": "C3 Standardy badań społecznych"
         },
         "ccela": {
           "name": "Standardy Common Core English Language Arts"
         },
-        "ngss": {
-          "name": "Standardy przyrody nowej generacji"
-        },
         "ccmath": {
           "name": "Standardy matematyczne Common Core"
         },
+        "csa": {
+          "name": "Ramy koncepcyjne CSA"
+        },
+        "csp2021": {
+          "name": "Ramy koncepcyjne \"Programu nauki informatyki\" (CSP)"
+        },
+        "csta": {
+          "name": "Normy informatyczne CSTA K-12 (2017)"
+        },
+        "csta2011": {
+          "name": "Standardy Informatyki CSTA dla K-12 (2011)"
+        },
         "iste": {
           "name": "Standardy ISTE dla uczniów"
+        },
+        "ngss": {
+          "name": "Standardy przyrody nowej generacji"
         }
       }
     }

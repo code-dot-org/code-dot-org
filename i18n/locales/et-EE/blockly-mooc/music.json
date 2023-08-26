@@ -12,5 +12,8 @@
   "blockly_toolboxCategoryVariables": "Muutujad",
   "feedback": "Tagasiside",
   "share": "Jaga",
-  "startOver": "Alusta uuesti"
+  "startOver": "Alusta uuesti",
+  "panelHeaderInstructions": "Juhised",
+  "panelHeaderWorkspace": "Tööruum: ",
+  "continue": "Jätka"
 }

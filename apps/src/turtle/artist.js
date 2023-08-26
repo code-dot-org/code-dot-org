@@ -489,7 +489,10 @@ Artist.prototype.prepareForRemix = function () {
   cleanBlocks(blocksDom);
 
   Blockly.mainBlockSpace.clear();
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
+  Blockly.cdoUtils.loadBlocksToWorkspace(
+    Blockly.mainBlockSpace,
+    Blockly.Xml.domToText(blocksDom)
+  );
   return Promise.resolve();
 };
 

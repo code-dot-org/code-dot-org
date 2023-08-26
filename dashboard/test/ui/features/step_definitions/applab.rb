@@ -22,7 +22,6 @@ end
 Given /^I start a new Applab project/ do
   steps <<-GHERKIN
     And I am on "http://studio.code.org/projects/applab/new"
-    And I rotate to landscape
     And I wait for the page to fully load
     And element "#runButton" is visible
     And element "#codeModeButton" is visible
@@ -34,7 +33,6 @@ end
 Given /^I am on the (\d+)(?:st|nd|rd|th)? App ?Lab test level$/ do |level_index|
   steps <<-GHERKIN
     And I am on "http://studio.code.org/s/allthethings/lessons/#{APPLAB_ALLTHETHINGS_LESSON}/levels/#{level_index}"
-    And I rotate to landscape
     And I wait for the page to fully load
   GHERKIN
 end

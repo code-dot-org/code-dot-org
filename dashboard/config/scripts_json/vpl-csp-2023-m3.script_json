@@ -1,0 +1,492 @@
+{
+  "script": {
+    "name": "vpl-csp-2023-m3",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSP Virtual PL",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2023-08-02 19:59:40 UTC",
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csp-2023-m3"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+      "name": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "396e3462-78c6-41a8-a875-75e82bc13c0b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "396e3462-78c6-41a8-a875-75e82bc13c0b",
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "8f42a66d-de95-4262-ab86-a6ecae983cb0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 3 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f42a66d-de95-4262-ab86-a6ecae983cb0",
+        "lesson_activity.key": "396e3462-78c6-41a8-a875-75e82bc13c0b"
+      }
+    },
+    {
+      "key": "a3c01f7a-4b8e-423f-8645-703276e15fda",
+      "position": 2,
+      "properties": {
+        "progression_name": "Understanding the Context for Lists (~55 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3c01f7a-4b8e-423f-8645-703276e15fda",
+        "lesson_activity.key": "396e3462-78c6-41a8-a875-75e82bc13c0b"
+      }
+    },
+    {
+      "key": "364e54d5-2223-47f0-a493-aa57d1b1f7c0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~20 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "364e54d5-2223-47f0-a493-aa57d1b1f7c0",
+        "lesson_activity.key": "396e3462-78c6-41a8-a875-75e82bc13c0b"
+      }
+    },
+    {
+      "key": "491d9819-9fc8-43d5-a2ce-2f9e870d4cc8",
+      "position": 4,
+      "properties": {
+        "name": "Module 3 Asynchronous Wrap Up (~10 minutes)",
+        "progression_name": "Module 3 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "491d9819-9fc8-43d5-a2ce-2f9e870d4cc8",
+        "lesson_activity.key": "396e3462-78c6-41a8-a875-75e82bc13c0b"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP-PL AYWS3 Workshop Overview_2023"
+        ],
+        "progression": "Module 3 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL AYWS3 Workshop Overview_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "8f42a66d-de95-4262-ab86-a6ecae983cb0"
+      },
+      "level_keys": [
+        "CSP-PL AYWS3 Workshop Overview_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Understanding the context for the Model Lesson overview_2023"
+        ],
+        "progression": "Understanding the Context for Lists (~55 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Understanding the context for the Model Lesson overview_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "a3c01f7a-4b8e-423f-8645-703276e15fda"
+      },
+      "level_keys": [
+        "CSP - Understanding the context for the Model Lesson overview_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Synch3 - Reflection 1_2023"
+        ],
+        "progression": "Understanding the Context for Lists (~55 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Synch3 - Reflection 1_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "a3c01f7a-4b8e-423f-8645-703276e15fda"
+      },
+      "level_keys": [
+        "CSP - Synch3 - Reflection 1_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Synch3 - Reflection 2_2023"
+        ],
+        "progression": "Understanding the Context for Lists (~55 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Synch3 - Reflection 2_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "a3c01f7a-4b8e-423f-8645-703276e15fda"
+      },
+      "level_keys": [
+        "CSP - Synch3 - Reflection 2_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Intro to CI_2023"
+        ],
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~20 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Intro to CI_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "364e54d5-2223-47f0-a493-aa57d1b1f7c0"
+      },
+      "level_keys": [
+        "CSP - Asynch3 - Intro to CI_2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Broadening the def_2023"
+        ],
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~20 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Broadening the def_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "364e54d5-2223-47f0-a493-aa57d1b1f7c0"
+      },
+      "level_keys": [
+        "CSP - Asynch3 - Broadening the def_2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Feedback in CI_2023"
+        ],
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~20 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Feedback in CI_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "364e54d5-2223-47f0-a493-aa57d1b1f7c0"
+      },
+      "level_keys": [
+        "CSP - Asynch3 - Feedback in CI_2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Practice feedback_2023"
+        ],
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~20 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Practice feedback_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "364e54d5-2223-47f0-a493-aa57d1b1f7c0"
+      },
+      "level_keys": [
+        "CSP - Asynch3 - Practice feedback_2023"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Module 3 Wrap Up_2023"
+        ],
+        "progression": "Module 3 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 3 Wrap Up_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "491d9819-9fc8-43d5-a2ce-2f9e870d4cc8"
+      },
+      "level_keys": [
+        "CSP - Module 3 Wrap Up_2023"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL AYWS3 Workshop Overview_2023",
+        "script_level.level_keys": [
+          "CSP-PL AYWS3 Workshop Overview_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "8f42a66d-de95-4262-ab86-a6ecae983cb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Understanding the context for the Model Lesson overview_2023",
+        "script_level.level_keys": [
+          "CSP - Understanding the context for the Model Lesson overview_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "a3c01f7a-4b8e-423f-8645-703276e15fda"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Synch3 - Reflection 1_2023",
+        "script_level.level_keys": [
+          "CSP - Synch3 - Reflection 1_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "a3c01f7a-4b8e-423f-8645-703276e15fda"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Synch3 - Reflection 2_2023",
+        "script_level.level_keys": [
+          "CSP - Synch3 - Reflection 2_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "a3c01f7a-4b8e-423f-8645-703276e15fda"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Asynch3 - Intro to CI_2023",
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Intro to CI_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "364e54d5-2223-47f0-a493-aa57d1b1f7c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Asynch3 - Broadening the def_2023",
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Broadening the def_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "364e54d5-2223-47f0-a493-aa57d1b1f7c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Asynch3 - Feedback in CI_2023",
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Feedback in CI_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "364e54d5-2223-47f0-a493-aa57d1b1f7c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Asynch3 - Practice feedback_2023",
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Practice feedback_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "364e54d5-2223-47f0-a493-aa57d1b1f7c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 3 Wrap Up_2023",
+        "script_level.level_keys": [
+          "CSP - Module 3 Wrap Up_2023"
+        ],
+        "lesson.key": "Module 3: Wrapping Up Unit 4 & Lists in Unit 5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2023-m3",
+        "activity_section.key": "491d9819-9fc8-43d5-a2ce-2f9e870d4cc8"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "key": "basketball",
-  "display_name": "Choose your team and make a basketball game",
+  "display_name": "Choose Your Team and Make a Basketball Game",
   "category": "hoc",
   "is_featured": false,
   "assignable": true,
@@ -11,5 +11,10 @@
   "image": "https://images.code.org/4fa759ec366f0adf519c35b20ab66bbc-Basketball.png",
   "cs_topic": "games_and_animations,programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": "Learn what \"events\" are and how computers use them in programs like video games! Students work through puzzles and customize their games with speed and sound.",
+  "professional_learning_program": null,
+  "video": "https://www.youtube-nocookie.com/embed/ip051U7Rvds/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=ip051U7Rvds&wmode=transparent",
+  "published_date": null,
+  "self_paced_pl_course_offering_id": null
 }

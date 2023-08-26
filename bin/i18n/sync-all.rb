@@ -40,14 +40,17 @@ class I18nSync
 
   def run
     if @options[:interactive]
+      # download and distribute translations from the previous sync
       return_to_staging_branch
-      sync_in if should_i "sync in"
-      sync_up if should_i "sync up"
-      CreateI18nPullRequests.in_and_up if @options[:with_pull_request] && should_i("create the in & up PR")
       sync_down if should_i "sync down"
       sync_out(true) if should_i "sync out"
       CreateI18nPullRequests.down_and_out if @options[:with_pull_request] && should_i("create the down & out PR")
-      return_to_staging_branch
+
+      # force switch to the staging branch to collect and upload the most relevant English content
+      return_to_staging_branch(force: true)
+      sync_in if should_i "sync in"
+      sync_up if should_i "sync up"
+      CreateI18nPullRequests.in_and_up if @options[:with_pull_request] && should_i("create the in & up PR")
     elsif @options[:command]
       case @options[:command]
       when 'in'
@@ -75,6 +78,14 @@ class I18nSync
   end
 
   private
+
+  def sync_in
+    I18n::SyncIn.perform
+  end
+
+  def sync_out(upload_manifests = false)
+    I18n::SyncOut.perform(upload_manifests: upload_manifests)
+  end
 
   def parse_options(args)
     options = {}
@@ -138,15 +149,14 @@ class I18nSync
     end
   end
 
-  def return_to_staging_branch
+  def return_to_staging_branch(force: false)
     case GitUtils.current_branch
     when "staging"
       # If we're already on staging, we don't need to bother
       return
     when /^i18n-sync/
-      # If we're on an i18n sync branch, only return to staging if the branch
-      # has been merged.
-      return unless GitUtils.current_branch_merged_into? "origin/staging"
+      # If we're on an i18n sync branch, only return to staging if the branch has been merged.
+      return if !force && !GitUtils.current_branch_merged_into?('origin/staging')
     else
       # If we're on some other branch, then we're in some kind of weird state,
       # so error out.

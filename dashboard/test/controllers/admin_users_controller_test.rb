@@ -475,7 +475,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_select 'td', text: duplicate_user1.id.to_s
     assert_select(
       '.alert-success',
-      "More than one User matches email address.  Showing first result.  "\
+      "More than one User matches email address.  Showing first result.  " \
       "Matching User IDs - #{duplicate_user1.id},#{duplicate_user2.id}",
     )
   end

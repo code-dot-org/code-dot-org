@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-02-01T10:47:07.000Z",
   "level_num": "custom",
@@ -40,10 +41,9 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
     "expand_debugger": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -58,12 +58,14 @@
     "code_functions": {
       "comment": null
     },
-    "start_blocks": "//Change the colors and number on the right-side of these blocks\nvar color1 = \"orange\";\nvar color2 = \"cyan\";\nvar blockWidth = 45;\nvar blockHeight = 70;\n\n//Don't change anything below here!\nsetProperty(\"block1\", \"background-color\", color1);\nsetProperty(\"block1\", \"width\", blockWidth);\nsetProperty(\"block1\", \"height\", blockHeight);\n\nsetProperty(\"block2\", \"background-color\", color2);\nsetProperty(\"block2\", \"width\", blockWidth);\nsetProperty(\"block2\", \"height\", blockHeight);\n\nsetProperty(\"block3\", \"background-color\", color1);\nsetProperty(\"block3\", \"width\", blockWidth);\nsetProperty(\"block3\", \"height\", blockHeight);\n\nsetProperty(\"block4\", \"background-color\", color2);\nsetProperty(\"block4\", \"width\", blockWidth);\nsetProperty(\"block4\", \"height\", blockHeight);\n\nsetProperty(\"block5\", \"background-color\", color2);\nsetProperty(\"block5\", \"width\", blockWidth);\nsetProperty(\"block5\", \"height\", blockHeight);\n\nsetProperty(\"block6\", \"background-color\", color1);\nsetProperty(\"block6\", \"width\", blockWidth);\nsetProperty(\"block6\", \"height\", blockHeight);\n\nsetProperty(\"block7\", \"background-color\", color2);\nsetProperty(\"block7\", \"width\", blockWidth);\nsetProperty(\"block7\", \"height\", blockHeight);\n\nsetProperty(\"block8\", \"background-color\", color1);\nsetProperty(\"block8\", \"width\", blockWidth);\nsetProperty(\"block8\", \"height\", blockHeight);\n\nsetProperty(\"block9\", \"background-color\", color1);\nsetProperty(\"block9\", \"width\", blockWidth);\nsetProperty(\"block9\", \"height\", blockHeight);\n\nsetProperty(\"block10\", \"background-color\", color2);\nsetProperty(\"block10\", \"width\", blockWidth);\nsetProperty(\"block10\", \"height\", blockHeight);\n\nsetProperty(\"block11\", \"background-color\", color1);\nsetProperty(\"block11\", \"width\", blockWidth);\nsetProperty(\"block11\", \"height\", blockHeight);\n\nsetProperty(\"block12\", \"background-color\", color2);\nsetProperty(\"block12\", \"width\", blockWidth);\nsetProperty(\"block12\", \"height\", blockHeight);\n",
-    "preload_asset_list": null
+    "start_blocks": "//Change the colors and number on the right-side of these blocks\r\nvar color1 = \"orange\";\r\nvar color2 = \"cyan\";\r\nvar blockWidth = 45;\r\nvar blockHeight = 70;\r\n\r\n//Don't change anything below here!\r\nsetProperty(\"block1\", \"background-color\", color1);\r\nsetProperty(\"block1\", \"width\", blockWidth);\r\nsetProperty(\"block1\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block2\", \"background-color\", color2);\r\nsetProperty(\"block2\", \"width\", blockWidth);\r\nsetProperty(\"block2\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block3\", \"background-color\", color1);\r\nsetProperty(\"block3\", \"width\", blockWidth);\r\nsetProperty(\"block3\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block4\", \"background-color\", color2);\r\nsetProperty(\"block4\", \"width\", blockWidth);\r\nsetProperty(\"block4\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block5\", \"background-color\", color2);\r\nsetProperty(\"block5\", \"width\", blockWidth);\r\nsetProperty(\"block5\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block6\", \"background-color\", color1);\r\nsetProperty(\"block6\", \"width\", blockWidth);\r\nsetProperty(\"block6\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block7\", \"background-color\", color2);\r\nsetProperty(\"block7\", \"width\", blockWidth);\r\nsetProperty(\"block7\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block8\", \"background-color\", color1);\r\nsetProperty(\"block8\", \"width\", blockWidth);\r\nsetProperty(\"block8\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block9\", \"background-color\", color1);\r\nsetProperty(\"block9\", \"width\", blockWidth);\r\nsetProperty(\"block9\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block10\", \"background-color\", color2);\r\nsetProperty(\"block10\", \"width\", blockWidth);\r\nsetProperty(\"block10\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block11\", \"background-color\", color1);\r\nsetProperty(\"block11\", \"width\", blockWidth);\r\nsetProperty(\"block11\", \"height\", blockHeight);\r\n\r\nsetProperty(\"block12\", \"background-color\", color2);\r\nsetProperty(\"block12\", \"width\", blockWidth);\r\nsetProperty(\"block12\", \"height\", blockHeight);\r\n",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:07.156+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB0_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB0_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:07.156+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB0_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB0_2222\"},{\"changed_at\":\"2023-07-17 23:00:50 +0000\",\"changed\":[\"show_debug_watch\",\"makerlab_enabled\",\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

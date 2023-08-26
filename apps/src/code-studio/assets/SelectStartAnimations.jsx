@@ -111,7 +111,6 @@ export default class SelectStartAnimations extends React.Component {
               onUploadClick={() => console.log('Not supported at this time')}
               playAnimations={false}
               libraryManifest={this.state.levelAnimationsManifest}
-              hideUploadOption
               hideAnimationNames={false}
               navigable
               hideBackgrounds={false}
@@ -129,7 +128,6 @@ export default class SelectStartAnimations extends React.Component {
             onUploadClick={() => console.log('Not supported at this time')}
             playAnimations={false}
             libraryManifest={this.state.libraryManifest}
-            hideUploadOption
             hideAnimationNames={false}
             navigable
             hideBackgrounds={false}

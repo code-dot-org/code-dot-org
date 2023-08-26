@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "Shto CSS",
+  "addHTMLButton": "Shto HTML",
+  "addImageButton": "Shto imazhin",
+  "closeFullscreenPreview": "Mbyllni pamjen paraprake në",
+  "currentProjectCapacity": "{currentMegabytes}MB e {totalMegabytes}MB të përdorura",
+  "disallowedHtml": "Skedari \"{filename}\" përmban elemente HTML që nuk lejohen: `{disallowedTags}`. Ato do të hiqen kur ky dialog të mbyllet.",
+  "errorSavingProject": "Diçka nuk funksionoi ndërsa kurseni automatikisht projektin tuaj. Kontrolloni lidhjen tuaj të internetit dhe provoni të kurseni manualisht. Nëse ky problem vazhdon, provoni të rimbushni faqen për të filluar nga e para.",
+  "fatalError": "Gabim fatal: {message}. Nëse jeni në modalitetin e Shfletimit Privat, të dhënat nuk mund të shkruhen.",
+  "loadFailure": "Na vjen keq, Web Lab nuk arriti të ngarkojë për disa arsye. Gabim: {message}",
+  "openFullscreenPreview": "Hap pamjen paraprake në ekran",
+  "refreshPreview": "Rifreskoni dhe ruani",
+  "reloading": "Ringarkimi...",
+  "reset": "Rivendos Web Lab",
+  "resetComplete": "Rivendosja e plotë e laboratorit në",
+  "resetFailure": "Dështoi në rivendosjen e Web Lab: {message}.",
+  "toggleInspectorOff": "Inspektori: Në",
+  "toggleInspectorOn": "Inspektori: Off",
+  "troubleshootingSupport": "Ju lutemi shikoni artikullin tonë të mbështetjes [\"Zgjidhja e problemeve të Web Lab\"]({url}) për më shumë informacion.",
+  "uploadError": "Gabim në ngarkim"
 }

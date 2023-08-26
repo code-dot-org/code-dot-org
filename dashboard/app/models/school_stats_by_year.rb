@@ -83,11 +83,11 @@ class SchoolStatsByYear < ApplicationRecord
       raise "This was a dry run. No rows were modified or added. Set dry_run: false to modify db" if dry_run
     ensure
       future_tense_dry_run = dry_run ? ' to be' : ''
-      summary_message = "School stats seeding: done processing #{filename}.\n"\
-        "#{new_schools} new stats#{future_tense_dry_run} added.\n"\
-        "#{updated_schools} stats#{future_tense_dry_run} updated.\n"\
-        "#{unchanged_schools} stats#{future_tense_dry_run} unchanged.\n"\
-        "#{errored_schools.length} stats failed to be added:\n"\
+      summary_message = "School stats seeding: done processing #{filename}.\n" \
+        "#{new_schools} new stats#{future_tense_dry_run} added.\n" \
+        "#{updated_schools} stats#{future_tense_dry_run} updated.\n" \
+        "#{unchanged_schools} stats#{future_tense_dry_run} unchanged.\n" \
+        "#{errored_schools.length} stats failed to be added:\n" \
         "#{errored_schools.join("\n")}\n"
 
       CDO.log.info summary_message

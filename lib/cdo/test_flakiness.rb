@@ -53,7 +53,7 @@ class TestFlakiness
       break if new_jobs.empty?
       jobs += new_jobs
     end
-    jobs.group_by {|job| job['name']}.map do |name, samples|
+    jobs.group_by {|job| job['name']}.filter_map do |name, samples|
       passed = samples.select {|job| job['passed']}
       next if passed.empty?
       summary = {
@@ -64,7 +64,7 @@ class TestFlakiness
         'duration' => 1.0 * passed.sum {|job| job['end_time'].to_f - job['start_time'].to_f} / passed.count
       }
       [name, summary]
-    end.compact.to_h
+    end.to_h
   end
 
   # Recommends a number of re-runs based on the flakiness score.
@@ -72,7 +72,7 @@ class TestFlakiness
   # @return [Array] The recommended number of re-runs and confidence factor.
   def self.recommend_reruns(flakiness)
     recommended_reruns = Math.log(MAX_FAILURE_RATE, flakiness)
-    max_reruns = [1, [recommended_reruns, 5].min].max.ceil
+    max_reruns = recommended_reruns.clamp(1, 5).ceil
     confidence = (1.0 - (flakiness**(max_reruns + 1))).round(3)
     return [max_reruns, confidence]
   end

@@ -633,6 +633,7 @@ hy:
         other: "Այլ"
       workshop_course:
         csp: '''16-''17 CS Principles'
+        other: 'Այլ'
       email_opt_in:
         opt_in_yes: 'այո'
         opt_in_no: 'ոչ'
@@ -645,3 +646,4 @@ hy:
   copy: 'պատճեն'
   pixelation:
     binary: "երկուական"
+

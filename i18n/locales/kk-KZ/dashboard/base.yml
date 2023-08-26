@@ -609,6 +609,8 @@ kk:
       robotics:
         kodable: 'Kodable'
         other: "Басқасы"
+      workshop_course:
+        other: 'Басқасы'
       email_opt_in:
         opt_in_yes: 'Иә'
         opt_in_no: 'Жоқ'
@@ -621,3 +623,4 @@ kk:
   copy: 'Көшіру'
   pixelation:
     binary: "Бинарлы"
+

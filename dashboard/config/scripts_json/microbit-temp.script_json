@@ -1328,7 +1328,7 @@
       "key": "724717f4-111e-439f-a5b3-5595b97bfb5d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd6/2023] to each student, face down. Make sure students don't start the word search ahead of time."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time."
       },
       "seeding_key": {
         "activity_section.key": "724717f4-111e-439f-a5b3-5595b97bfb5d",
@@ -1396,7 +1396,7 @@
       "key": "ff6c8c20-2d8b-475f-b94f-090b28552f9a",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd6/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
@@ -1498,7 +1498,7 @@
       "key": "eed2a30d-7ccc-4252-bed0-fca4ef2bce65",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r app_design_for_users/csd6/2023] activity guide to each student. \n\n",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r app_design_for_users/csd/2023] activity guide to each student. \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1597,7 +1597,7 @@
       "key": "2dfc4396-be11-4ae5-992b-a6d7217c31cd",
       "position": 8,
       "properties": {
-        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic physical design for, following the Problem-Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their designs.\n\n**Distribute:** Pass out copies of the [r problem_solving_and_design/csd6/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit.\n\n**Circulate:** Monitor students as they complete this activity, ensuring that students are creating designs that match the needs of the user they chose. Monitor student conversations as well to make sure both voices are being heard during discussions and decisions. Students will be working in pairs throughout the unit, so it can be good to intervene early to reinforce good collaboration habits.\n\n**(Optional) Share Out:** Depending on how much time is left in class, allow students to trade with other groups and share their designs. Encourage students to share with another group who picked the same user so they can see similarities and differences in their designs.\n\n",
+        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic physical design for, following the Problem-Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their designs.\n\n**Distribute:** Pass out copies of the [r problem_solving_and_design/csd/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit.\n\n**Circulate:** Monitor students as they complete this activity, ensuring that students are creating designs that match the needs of the user they chose. Monitor student conversations as well to make sure both voices are being heard during discussions and decisions. Students will be working in pairs throughout the unit, so it can be good to intervene early to reinforce good collaboration habits.\n\n**(Optional) Share Out:** Depending on how much time is left in class, allow students to trade with other groups and share their designs. Encourage students to share with another group who picked the same user so they can see similarities and differences in their designs.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2241,7 +2241,7 @@
       "key": "cadf6ed5-b78e-45af-8df0-5b85eb054ae5",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r variables_1/csd6/2023] video in the slides.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r variables_1/csd/2023] video in the slides.",
         "progression_name": "Video - Variables",
         "tips": [
           {
@@ -2299,7 +2299,7 @@
       "key": "83b74141-44a5-4fd1-a090-e3bc3177c4c5",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r if_statements_1/csd6/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r if_statements_1/csd/2023] video in the slides.\n",
         "progression_name": "Video - If Statements",
         "tips": [
           {
@@ -3705,7 +3705,7 @@
       "key": "47ba1164-d61d-4ee6-8ec1-759ca18811b5",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal:** Students might predict that the screen will update with button presses and the emoji and background colors will change. They may notice that `updateScreen()` appears in three places: within the two button events, and as a larger green block at the bottom of the code. It's okay if they're not completely sure how the green block is working, and they may try to describe what's happening by relating to variables - that a variable can be used in place of a value, and maybe `updateScreen()` is being used as a placeholder for the code at the bottom of the screen. Guide students to notice this is useful because the same code can be used in two different places (the left button and the right button).\n\nIt's okay to not come to a firm conclusion, since students will watch a video in the next level that explains Functions and how to use them in code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the  [r functions_1/csd6/2023] video in the slides.",
+        "description": "**Discussion Goal:** Students might predict that the screen will update with button presses and the emoji and background colors will change. They may notice that `updateScreen()` appears in three places: within the two button events, and as a larger green block at the bottom of the code. It's okay if they're not completely sure how the green block is working, and they may try to describe what's happening by relating to variables - that a variable can be used in place of a value, and maybe `updateScreen()` is being used as a placeholder for the code at the bottom of the screen. Guide students to notice this is useful because the same code can be used in two different places (the left button and the right button).\n\nIt's okay to not come to a firm conclusion, since students will watch a video in the next level that explains Functions and how to use them in code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the  [r functions_1/csd/2023] video in the slides.",
         "progression_name": "Video - Functions",
         "tips": [
           {
@@ -3745,7 +3745,7 @@
       "key": "88a67139-0927-4b87-b1f9-89f27f8c04e9",
       "position": 6,
       "properties": {
-        "description": "**Discussion Goal:** Students should notice that the left and right buttons are used, and that the function at the bottom is using the accelerometer to move something on the screen. Students may predict that the function changes depending on which button is pressed - the left button moves the purple bug, and the right button moves the orange bug. Students may also notice that the function has a variable, `bug`, that is included at the top of the function and used throughout. \n\nIn the next level, students will watch a video describing how these functions work and how `bug` is a **parameter** that can be used to change the behavior of a function when the function is called, like moving the orange bug or purple bug.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the  [r functions_with_parameters/csd6/2023] from the lesson slides.",
+        "description": "**Discussion Goal:** Students should notice that the left and right buttons are used, and that the function at the bottom is using the accelerometer to move something on the screen. Students may predict that the function changes depending on which button is pressed - the left button moves the purple bug, and the right button moves the orange bug. Students may also notice that the function has a variable, `bug`, that is included at the top of the function and used throughout. \n\nIn the next level, students will watch a video describing how these functions work and how `bug` is a **parameter** that can be used to change the behavior of a function when the function is called, like moving the orange bug or purple bug.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the  [r functions_with_parameters/csd/2023] from the lesson slides.",
         "progression_name": "Video - Parameters",
         "tips": [
           {

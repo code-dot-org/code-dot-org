@@ -60,6 +60,7 @@ ca:
         reset_password_token: "L'enllaç que has fet servir per restablir la contrasenya"
         error:
           future: no pot ser en el futur
+        us_state: 'Estat/província'
   beta: "beta"
   hello: "Hola món"
   welcome_back: "Benvingut de nou, %{name}"
@@ -69,6 +70,7 @@ ca:
   unsubmit: Retirar
   previous_page: Pàgina anterior
   next_page: Pàgina següent
+  next_level: Següent nivell
   next_resource: Recurs següent
   done_with_module: Mòdul d'Aprenentatge acabat
   cancel: "Cancel·lar"
@@ -199,6 +201,7 @@ ca:
     parent_account_checkbox: "Soc pare/mare/tutor legal i estic registrant el compte en nom del meu fill/filla"
     parent_account_email_progress_permission: "Us podem enviar notificacions ocasionals sobre la feina i els projectes del vostre fill, i notícies sobre el seu curs i la informàtica? [(Vegeu la nostra Política de Privacitat)](%{privacy_policy_url})"
     parent_account_email_label: "Correu electrònic per pares/tutors"
+    us_state: 'Estat/província'
   school_info:
     title: 'Informació de l''escola (opcional)'
     school_country: 'País de l''escola'
@@ -784,6 +787,7 @@ ca:
       title: "Star Wars"
       image_alt: 'L''R2-D2, la Leia, la Rey i el BB-8 en un desert.'
     text-compression:
+      title: "Compressió de text"
       body: "En aquesta lliçó, els alumnes faran servir el Widget de Compressió de Text per comprimir textos tot substituint patrons per símbols."
       image_alt: 'Text que es comprimeix per mitjà de la substitució de paraules senceres per un únic símbol.'
     weblab:
@@ -1167,6 +1171,7 @@ ca:
         csf_express: 'Fonaments de la Informàtica (Pre-exprés o Exprés)'
         csd: 'Descobriments Informàtics'
         csp: 'Principis de la Informàtica'
+        other: 'Altres'
         not_applicable: "No aplica"
       email_opt_in:
         opt_in_yes: 'Sí'
@@ -1190,11 +1195,23 @@ ca:
   courses_category: 'Cursos complets'
   course_offering:
     headers:
+      favorites: 'Favorits'
+      labs_and_skills: 'Laboratoris i Habilitats'
       minecraft: 'Minecraft'
       hello_world: 'Hola, món'
+      popular_media: 'Mitjans de comunicació populars'
       sports: 'Esports'
+      express: 'Express'
       csf: 'Fonaments de la Informàtica'
       csc: 'Connexions CS'
+      year_long: 'Llarg any'
+      csa_labs: 'CSA Labs'
+      self_paced: 'Auto-Paced'
+      teacher_led: 'Professor-Led'
+      collections: 'Col·leccions'
+      workshops_k5: 'K-5 Tallers'
+      summer_workshops_612: '6-12 Tallers d''estiu'
+      virtual_academic_year_workshops_612: '6—12 Tallers virtuals del curs acadèmic'
   cookie_banner:
     message: 'Si continueu fent servir la nostra pàgina web o feu clic a "Accepto", accepteu que es guardin galetes al vostre ordinador o dispositiu.'
     more_information: "Vegeu la Política de privacitat de Code.org."
@@ -1246,3 +1263,4 @@ ca:
     binary: "Binari"
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Format de píxel"
+

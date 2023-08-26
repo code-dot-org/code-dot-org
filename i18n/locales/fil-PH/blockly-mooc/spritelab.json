@@ -73,6 +73,7 @@
   "createNotDraggableSPrite": "Tanging ang pagkaing tiyanak lang ang nahihila. Alisin ang pag-uugali mula sa alaga mo.",
   "createTwoDraggableSprites": "Kailangang simulan ng alagang pagkain at kaibigang sprite ang `nahihila` na pag-uugali.",
   "createVariable": "Kailangan mong magtakda ng variable. \n<xml>\n<block type=\"variables_set\">\n    <title name=\"VAR\">counter</title>\n    <value name=\"VALUE\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">0</title>\n      </block>\n    </value>\n  </block>\n  </xml>",
+  "cscAdaptationsRightArrowKey": "Siguraduhing pindutin ang arrow key pagkatapos pindutin ang *\"Paganahin\"*. Maaari mong i-click ang mga orange na button sa ilalim ng play area o pindutin ang mga key sa keyboard mo.",
   "cscBookcoverChangeSize": "Pareho ang laki ng mga sprite mo.\nTiyaking gumamit ng `i-set ang laki ng sprite` na block upang baguhin ang isa sa laki.",
   "cscBookcoverClickNoSpeech": "Nag-click ka kay Hank, pero wala siyang sinasabi.\nGamitin ang `sprite sabihin` na block upang mag-usap ang dalawang sprite.",
   "cscBookcoverMatchSpriteSpeech": "Tiyaking tugma ang lahat ng mga sprite costume mo.",

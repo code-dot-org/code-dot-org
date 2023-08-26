@@ -1,11 +1,4 @@
 {
-  "coursea": "Cursus A",
-  "courseb": "Cursus B",
-  "coursec": "Cursus C",
-  "coursed": "Cursus D",
-  "coursee": "Cursus E",
-  "coursef": "Cursus F",
-  "express": "Express-cursus",
   "csd": "Ontdekkingen in de informatica",
   "csp": "Basisprincipes uit de informatica",
   "csa": "Computer Wetenschap A",
@@ -31,7 +24,6 @@
   "outbreak": "Uitbraaksimulator",
   "pixelation": "Pixelachtig",
   "playlab": "Speel Lab",
-  "sports": "Codeer je eigen sportspel",
   "text-compression": "Tekstcompressie",
   "csa-self-paced-pl": "Navigeen door Code.org voor leraren van de CSA Pilot",
   "outbreak-csc": "Uitbraak",
@@ -45,5 +37,6 @@
   "csa5-exemplars": "csa5-exemplars",
   "soccer": "voetbal",
   "hello-world-space": "Hallo World: Space",
-  "hello-world-soccer": "Hello World: Voetbal"
+  "hello-world-soccer": "Hello World: Voetbal",
+  "how-ai-works": "Hoe AI werkt"
 }

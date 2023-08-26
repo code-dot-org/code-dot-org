@@ -2,6 +2,36 @@
   "dv-MV": {
     "data": {
       "vocabularies": {
+        "copyright/csd/2021": {
+          "word": "ކޮޕީރައިޓްސް"
+        },
+        "drop/coursea/2021": {
+          "word": "ޑްރޮޕް"
+        },
+        "drop/courseb/2021": {
+          "word": "ޑްރޮޕް"
+        },
+        "copyright/coursee/2021": {
+          "word": "ކޮޕީރައިޓްސް"
+        },
+        "drop/pre-express/2021": {
+          "word": "ޑްރޮޕް"
+        },
+        "copyright/csd/2022": {
+          "word": "ކޮޕީރައިޓްސް"
+        },
+        "drop/coursea/2022": {
+          "word": "ޑްރޮޕް"
+        },
+        "drop/courseb/2022": {
+          "word": "ޑްރޮޕް"
+        },
+        "copyright/coursee/2022": {
+          "word": "ކޮޕީރައިޓްސް"
+        },
+        "drop/pre-express/2022": {
+          "word": "ޑްރޮޕް"
+        },
         "event/outbreak/unversioned": {
           "word": "",
           "definition": ""
@@ -9,21 +39,6 @@
         "models_and_simulations/outbreak/unversioned": {
           "word": "",
           "definition": ""
-        },
-        "copyright/coursee/2022": {
-          "word": "ކޮޕީރައިޓްސް"
-        },
-        "drop/courseb/2022": {
-          "word": "ޑްރޮޕް"
-        },
-        "drop/pre-express/2022": {
-          "word": "ޑްރޮޕް"
-        },
-        "drop/coursea/2022": {
-          "word": "ޑްރޮޕް"
-        },
-        "copyright/csd/2022": {
-          "word": "ކޮޕީރައިޓްސް"
         },
         "code/poem-art/unversioned": {
           "word": "",
@@ -44,21 +59,6 @@
         "line/poem-art/unversioned": {
           "word": "",
           "definition": ""
-        },
-        "drop/courseb/2021": {
-          "word": "ޑްރޮޕް"
-        },
-        "drop/coursea/2021": {
-          "word": "ޑްރޮޕް"
-        },
-        "drop/pre-express/2021": {
-          "word": "ޑްރޮޕް"
-        },
-        "copyright/coursee/2021": {
-          "word": "ކޮޕީރައިޓްސް"
-        },
-        "copyright/csd/2021": {
-          "word": "ކޮޕީރައިޓްސް"
         }
       }
     }

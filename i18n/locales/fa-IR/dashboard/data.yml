@@ -162,7 +162,7 @@ fa:
         maze_3_4: آخ! یه برنامه برام بنویس که من رو از کنار بمب ها بگذرونه و به خوک برسونه.
         Custom_builder: بلوک‌ها را از جعبه‌ابزار به فضای کاری بکش تا مرحله دلخواه خود را بسازی. وقتی آماده شد، "اجرا" را بزن.
         jigsaw_1: بر روی بلوک کلیک کنید
-        jigsaw_2: بلوک را به سمت هدف بکش
+        jigsaw_2: بلوک را به سمت هدف بکشید
         jigsaw_3: بلوک‌ها را مرتب کنید تا تصویر شکل بگیرد
         jigsaw_4: بلوک‌ها را مرتب کنید تا تصویر شکل بگیرد
         jigsaw_5: بلوک‌ها را مرتب کنید تا تصویر شکل بگیرد
@@ -283,11 +283,11 @@ fa:
         Unplug9: برنامه نویسی دست به دست
         Unplug10: اینترنت
         Unplug11: خلاصه
-        C1_happy_maps_unplugged: نقشه های شاد
-        C1_moveitmoveit_unplugged: حرکت کن، حرکت کن
+        C1_happy_maps_unplugged: نقشه‌های شاد
+        C1_moveitmoveit_unplugged: حرکت بده، حرکت بده
         C1_bigevent_unplugged: رویداد بزرگ
-        C1_getting_loopy: سر گیجه گرفتن
-        C1_pair_programming: برنامه نویسی دوتایی
+        C1_getting_loopy: حلقه زدن
+        C1_pair_programming: برنامه نویسی اشتراکی
         C1_maze_intro_sequencing: مراحل ماز مقدماتی
         C1_maze_debugging: عیب یابی ماز
         C1_bee_level_intro: مرحله ی زنبور - مقدماتی
@@ -359,8 +359,8 @@ fa:
         CSF_collector_repeat_loops: حلقه‌های تکرار جمع‌آوری‌کننده
         CSF_collector_text_blocks: 'مبانی CS: جمع‌آوری‌کننده'
         CSF_create_functions: ساختن توابع
-        CSF_debugging_k1_blocks: اشکال‌زدایی
-        CSF_debugging_text_blocks: اشکال‌زدایی
+        CSF_debugging_k1_blocks: رفع اشکال
+        CSF_debugging_text_blocks: رفع اشکال
         CSF_EF_cs_matters: موضوعات مربوط به علوم کامپیوتر
         CSF_maze_intro_k1_blocks: مقدمه استودیو کد
         CSF_maze_intro_text_blocks: مقدمه استودیو کد
@@ -524,7 +524,7 @@ fa:
         teaching_cs_pair_programming: 'آموزش مبانی CS: برنامه‌نویسی دونفره'
         teaching_problem_solving: 'آموزش مبانی CS: آموزش حل مسئله'
         csd_applab_designmode: 'اکتشافات CS: ‏App Lab - حالت طراحی'
-        csd_pair_programming: برنامه نویسی دوتایی
+        csd_pair_programming: برنامه نویسی اشتراکی
         csd_gamelab_functions: فراخوانی و تعریف توابع
         csd_applab_parameters: معادله با پارامترها
         csd_applab_loops: حلقه‌ها در ‏App Lab
@@ -533,7 +533,7 @@ fa:
         CSF_SpriteLab_Intro_v2: آشنایی با آزمایشگاه اسپرایت
         CSF_Spritelab_MakeSprite_v2: نحوه ساخت اسپرایت
         CSF_SpriteLab_SpritesInAction_v2: اسپرایت‌ها در عمل
-        csd_debugging: اشکال‌زدایی
+        csd_debugging: رفع اشکال
         csd_applab_designmode_short: حالت طراحی App Lab
         csp-pd-welcome: به خانواده خوش آمدید!
         CSF-Teaching-Problem-Solving: آموزش حل مسئله CSF 
@@ -694,6 +694,8 @@ fa:
         csa_one_dimensional_arrays: 'CSA: آرایه‌های یک بعدی (1D)'
         csa_polymorphism: 'CSA: چند شکلی'
         csd_sprite_properties: ویژگی‌های اسپرایت
+        csc-starquilts-intro: کدنویسی لحاف ستاره‌ای هندسی
+        csc-ecosystems-intro: ماژول اکوسیستمها
     callout:
       text:
         drag_blocks: یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان

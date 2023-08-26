@@ -1,6 +1,5 @@
 // Extensions & Mutator Names
 
-export const DYNAMIC_TRIGGER_EXTENSION = 'dynamic_trigger_extension';
 export const DEFAULT_TRACK_NAME_EXTENSION = 'default_track_name_extension';
 export const PLAY_MULTI_MUTATOR = 'play_multi_mutator';
 
@@ -17,6 +16,7 @@ export const PRIMARY_SOUND_INPUT_NAME = 'primary_sound';
 export const FIELD_REST_DURATION_NAME = 'rest_duration';
 export const FIELD_EFFECTS_NAME = 'effects_name';
 export const FIELD_EFFECTS_VALUE = 'effects_value';
+export const FIELD_TRIGGER_START_NAME = 'trigger_start';
 
 // Types
 
@@ -42,3 +42,13 @@ export const MINUS_IMAGE =
   'MC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBkPS' +
   'JNMTggMTFoLTEyYy0xLjEwNCAwLTIgLjg5Ni0yIDJzLjg5NiAyIDIgMmgxMmMxLjEwNCAw' +
   'IDItLjg5NiAyLTJzLS44OTYtMi0yLTJ6IiBmaWxsPSJ3aGl0ZSIgLz48L3N2Zz4K';
+
+// Other
+
+export const DOCS_BASE_URL = '/docs/ide/projectbeats/expressions/';
+
+export const TriggerStart = {
+  IMMEDIATELY: 'immediately',
+  NEXT_BEAT: 'next_beat',
+  NEXT_MEASURE: 'next_measure',
+};

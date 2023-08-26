@@ -229,7 +229,7 @@ class LevelGroup < DSLDefined
 
       # Go through each student, and make sure to shuffle their results for additional
       # anonymity.
-      results = section.students.map do |student|
+      results = section.students.filter_map do |student|
         # Skip student if they haven't submitted for this LevelGroup.
         user_level = UserLevel.find_by(
           user: student,
@@ -239,7 +239,7 @@ class LevelGroup < DSLDefined
         next unless user_level.try(:submitted)
 
         get_sublevel_result(sublevel, student.last_attempt(sublevel).try(:level_source).try(:data))
-      end.compact.shuffle
+      end.shuffle
 
       answers = sublevel.properties.try(:[], "answers")
       answer_texts = answers.map {|answer| answer["text"]} if answers

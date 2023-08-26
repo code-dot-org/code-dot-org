@@ -2,7 +2,7 @@
   "path": "initial-progression",
   "steps": [
     {
-      "text": "First, please play a sound.",
+      "text": "**First**, please play a sound.",
       "toolbox": {
         "Play": ["play_sound_at_current_location_simple2"]
       },
@@ -11,15 +11,22 @@
       },
       "validations": [
         {
-          "conditions": ["played_one_sound"],
+          "conditions": [{"name": "played_sounds_together", "value": 1}],
           "message": "Nice work.",
           "next": "true"
         },
         {"message": "Please play a sound."}
-      ]
+      ],
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [{"id": "when-run-block", "type": "when_run_simple2", "x": 31, "y": 31}]
+        },
+        "variables": [{"name": "currentTime"}, {"name": "i"}]
+      }
     },
     {
-      "text": "Second, please play three sounds at the same time.",
+      "text": "**Second**, please play three sounds at the same time.<p>Try now!<p/>",
       "toolbox": {
         "Play": ["play_sound_at_current_location_simple2"],
         "Control": ["play_sounds_together"]
@@ -30,23 +37,37 @@
       },
       "validations": [
         {
-          "conditions": ["played_three_sounds_together", "used_together_block"],
+          "conditions": [{"name": "played_sounds_together", "value": 3}],
           "message": "Nice work.",
           "next": "true"
         },
         {
-          "conditions": ["played_two_sounds_together"],
-          "message": "It's good that you played two sounds, but you need to play another one."
+          "conditions": [{"name": "played_sounds_together", "value": 2}],
+          "message": "It's good that you played two sounds, but you need to **play another one**."
         },
         {
-          "conditions": ["played_one_sound"],
-          "message": "It's good that you played one sound, but you need to play two more."
+          "conditions": [{"name": "played_sounds_together", "value": 1}],
+          "message": "It's good that you played one sound, but you need to **play two more**."
         },
-        {"message": "Please play three sounds together."}
-      ]
+        {"message": "Please **play three sounds together**."}
+      ],
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [{"type": "when_run_simple2", "x": 32, "y": 32}]
+        },
+        "variables": [{"name": "currentTime"}, {"name": "i"}]
+      }
     },
     {
-      "text": "Try everything!"
+      "text": "Try everything!",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [{"type": "when_run_simple2", "x": 33, "y": 33}]
+        },
+        "variables": [{"name": "currentTime"}, {"name": "i"}]
+      }
     }
   ]
 }

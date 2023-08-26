@@ -1,5 +1,3 @@
-# coding: utf-8
-
 # Run 'rake' or 'rake -P' to get a list of valid Rake commands.
 
 require 'cdo/chat_client'
@@ -25,58 +23,56 @@ namespace :test do
   end
 
   timed_task_with_logging :regular_ui do
-    Dir.chdir(dashboard_dir('test/ui')) do
-      ChatClient.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_with_chat_logging(
-        'bundle', 'exec', './runner.rb',
-        '-d', CDO.site_host('studio.code.org'),
-        '-p', CDO.site_host('code.org'),
-        '--db', # Ensure features that require database access are run even if the server name isn't "test"
-        '--parallel', '120',
-        '--magic_retry',
-        '--with-status-page',
-        '--fail_fast',
-        '--priority 0'
-      )
-      if failed_browser_count == 0
-        message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
-        ChatClient.log message
-        ChatClient.message 'server operations', message, color: 'green'
-      else
-        message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
-        ChatClient.log message, color: 'red'
-        ChatClient.message 'server operations', message, color: 'red', notify: 1
-        raise "UI tests failed"
-      end
+    ChatClient.log 'Running <b>dashboard</b> UI tests...'
+    failed_browser_count = RakeUtils.system_with_chat_logging(
+      "cd #{dashboard_dir('test/ui')} &&",
+      'bundle', 'exec', './runner.rb',
+      '-d', CDO.site_host('studio.code.org'),
+      '-p', CDO.site_host('code.org'),
+      '--db', # Ensure features that require database access are run even if the server name isn't "test"
+      '--parallel', '120',
+      '--magic_retry',
+      '--with-status-page',
+      '--fail_fast',
+      '--priority 0'
+    )
+    if failed_browser_count == 0
+      message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
+      ChatClient.log message
+      ChatClient.message 'server operations', message, color: 'green'
+    else
+      message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+      ChatClient.log message, color: 'red'
+      ChatClient.message 'server operations', message, color: 'red', notify: 1
+      raise "UI tests failed"
     end
   end
 
   timed_task_with_logging :eyes_ui do
-    Dir.chdir(dashboard_dir('test/ui')) do
-      ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
-      eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
-      failed_browser_count = RakeUtils.system_with_chat_logging(
-        'bundle', 'exec', './runner.rb',
-        '-c', 'Chrome,iPhone',
-        '-d', CDO.site_host('studio.code.org'),
-        '-p', CDO.site_host('code.org'),
-        '--db', # Ensure features that require database access are run even if the server name isn't "test"
-        '--eyes',
-        '--magic_retry',
-        '--with-status-page',
-        '-f', eyes_features.join(","),
-        '--parallel', (eyes_features.count * 2).to_s
-      )
-      if failed_browser_count == 0
-        message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
-        ChatClient.log message
-        ChatClient.message 'server operations', message, color: 'green'
-      else
-        message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
-        ChatClient.log message, color: 'red'
-        ChatClient.message 'server operations', message, color: 'red', notify: 1
-        raise "Eyes tests failed"
-      end
+    ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
+    eyes_features = `cd #{dashboard_dir('test/ui')} && find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
+    failed_browser_count = RakeUtils.system_with_chat_logging(
+      "cd #{dashboard_dir('test/ui')} &&",
+      'bundle', 'exec', './runner.rb',
+      '-c', 'Chrome,iPhone',
+      '-d', CDO.site_host('studio.code.org'),
+      '-p', CDO.site_host('code.org'),
+      '--db', # Ensure features that require database access are run even if the server name isn't "test"
+      '--eyes',
+      '--magic_retry',
+      '--with-status-page',
+      '-f', eyes_features.join(","),
+      '--parallel', (eyes_features.count * 2).to_s
+    )
+    if failed_browser_count == 0
+      message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
+      ChatClient.log message
+      ChatClient.message 'server operations', message, color: 'green'
+    else
+      message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+      ChatClient.log message, color: 'red'
+      ChatClient.message 'server operations', message, color: 'red', notify: 1
+      raise "Eyes tests failed"
     end
   end
 
@@ -243,11 +239,11 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :bin_i18n_ci do
+  timed_task_with_logging :bin_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
-    TestRunUtils.run_bin_i18n_tests
+    TestRunUtils.run_bin_tests
     ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
@@ -258,7 +254,7 @@ namespace :test do
     :dashboard_ci,
     :dashboard_legacy_ci,
     :lib_ci,
-    :bin_i18n_ci,
+    :bin_ci,
     :ui_live
   ]
 
@@ -287,9 +283,9 @@ namespace :test do
     TestRunUtils.run_lib_tests
   end
 
-  desc 'Runs bin/i18n tests.'
-  timed_task_with_logging :bin_i18n do
-    TestRunUtils.run_bin_i18n_tests
+  desc 'Runs bin tests.'
+  timed_task_with_logging :bin do
+    TestRunUtils.run_bin_tests
   end
 
   namespace :changed do
@@ -392,9 +388,9 @@ namespace :test do
     end
 
     desc 'Runs lib tests if lib might have changed from staging.'
-    timed_task_with_logging :bin_i18n do
-      run_tests_if_changed('bin_i18n', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'bin/i18n/**/*']) do
-        TestRunUtils.run_bin_i18n_tests
+    timed_task_with_logging :bin do
+      run_tests_if_changed('bin', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'bin/**/*']) do
+        TestRunUtils.run_bin_tests
       end
     end
 
@@ -406,7 +402,7 @@ namespace :test do
                  :pegasus,
                  :shared,
                  :lib,
-                 :bin_i18n]
+                 :bin]
 
     timed_task_with_logging all_but_apps: all_tasks.reject {|t| t == :apps}
 
@@ -415,7 +411,7 @@ namespace :test do
 
   timed_task_with_logging changed: ['changed:all']
 
-  timed_task_with_logging all: [:apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin_i18n]
+  timed_task_with_logging all: [:apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin]
 end
 timed_task_with_logging test: ['test:changed']
 

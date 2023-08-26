@@ -5,23 +5,15 @@ el:
       AmysBlocks_spriteSayVar:
         text: "{SPRITE}πες{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
-        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
+        text: δημιουργία νέου {ANIMATION_NAME} χαρακτήρα σε {LOCATION}
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': μεσαία
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': μεσαία
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} εναλλαγή κάθε {N} μέτρα \nμεταξύ {MOVE1} και {MOVE2}"
         options:
@@ -364,9 +356,10 @@ el:
             '"right"': δεξιά στήλη
             '"x"': χιαστί
             '"plus"': συν
+            '"spiral"': σπιράλ
             '"random"': τυχαίο
       Dancelab_makeAnonymousDanceSprite:
-        text: φτιάξει ένα καινούριο {COSTUME} σε {LOCATION}
+        text: φτιάξε ένα καινούριο {COSTUME} σε {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': εξωγήινος
@@ -407,7 +400,7 @@ el:
             '"MOOSE"': όλα τα ελάφια
             '"PINEAPPLE"': Ανανάς
             '"ROBOT"': ρομπότ
-            '"SHARK"': Καρχαρίας
+            '"SHARK"': καρχαρίας
             '"SLOTH"': βραδύπους
             '"UNICORN"': μονόκερος
           LOCATION:
@@ -446,26 +439,6 @@ el:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
@@ -493,6 +466,7 @@ el:
             '"right"': δεξιά στήλη
             '"x"': χιαστί
             '"plus"': συν
+            '"spiral"': σπιράλ
             '"random"': τυχαίο
       Dancelab_mixColors:
         text: ανακάτεψε {COLOR1} και {COLOR2}
@@ -541,7 +515,7 @@ el:
             '"vintage"': Βίντατζ
             '"warm"': Κόκκινα
       Dancelab_setBackgroundEffectWithPalette:
-        text: ορισμός εφέ φόντου {PALETTE} {EFFECT}
+        text: όρισε εφέ φόντου {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Κανένα
@@ -986,8 +960,6 @@ el:
         options:
           INPUT1:
             '1': χυμός λεμονιού
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1000,8 +972,6 @@ el:
         options:
           INPUT1:
             '1': χυμός λεμονιού
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Επικοινωνία {VAR1} με {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1218,9 +1188,11 @@ el:
       gamelab_makeBurst:
         options:
           EFFECT:
+            '"burst"': εκρήγνυται
             '"rain"': βροχή
+            '"spiral"': σπιράλ
       gamelab_makeNewSpriteAnon:
-        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
+        text: δημιουργία νέου {ANIMATION_NAME} χαρακτήρα σε {LOCATION}
       gamelab_makeNewSpriteGroup:
         options:
           FORMAT:
@@ -1244,9 +1216,7 @@ el:
         text: φτιάξε {NUM} καινούριο {SIZE} {COSTUME} χαρακτήρες
         options:
           SIZE:
-            '30': small
             '50': μεσαία
-            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} γύρνα προς {DIRECTION}"
         options:
@@ -1279,16 +1249,22 @@ el:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": κουμπί
             "'sound://category_collect/clicky_crunch.mp3'": τρίξιμο
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": φυσαλλίδα
             "'sound://category_animals/bear.mp3'": Αρκούδα
             "'sound://category_animals/cat.mp3'": γάτα
             "'sound://category_animals/cow.mp3'": αγελάδα
             "'sound://category_animals/pig.mp3'": γουρούνι
             "'sound://category_animals/sheep.mp3'": πρόβατο
+            "'sound://category_animals/goat.mp3'": γίδα
             "'sound://category_animals/chicken.mp3'": κοτόπουλο
+            "'sound://category_animals/rooster.mp3'": κόκορας
             "'sound://category_animals/elephant.mp3'": ελέφαντας
             "'sound://category_animals/dolphin.mp3'": δελφίνι
+            "'sound://category_animals/chick.mp3'": νεοσσός
             "'sound://category_animals/dog.mp3'": σκύλος
             "'sound://category_animals/tiger.mp3'": τίγρης
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": άρπα
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": επιλέξτε
             "'sound://category_digital/jump_7.mp3'": πήδα
       gamelab_playSoundOptionsSoccer:
         text: παίξεΉχο {SOUND}
@@ -1360,8 +1336,12 @@ el:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': έρημος
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': γαλαξίας
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': πλέγμα
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': λιβάδι
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ουράνιο τόξο
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': σκηνή
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': αστέρια
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': μετρό
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': υπόγεια
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': υποβρύχια
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': χειμώνας
             undefined: Καμία
@@ -1370,12 +1350,9 @@ el:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': μεσαία
-            '100': large
       gamelab_setProp:
-        text: "΄όρισε {SPRITE} {PROPERTY} σε {VAL}"
+        text: όρισε {SPRITE} {PROPERTY} σε {VAL}
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -1390,10 +1367,7 @@ el:
           PROPERTY:
             '"scale"': μέγεθος
           SIZE:
-            '25': extra small
-            '50': small
             '75': μεσαία
-            '100': large
       gamelab_setSizes:
         text: όρισε* {SPRITE} {PROPERTY} στο {N}%
         options:
@@ -1404,11 +1378,9 @@ el:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': αργή
             '5': κανονικό
             '7': γρήγορη
-            '9': extra fast
       gamelab_setTint:
         text: άλλαξε το χρώμα του {THIS} σε {COLOR}
       gamelab_setupSim:
@@ -1579,7 +1551,7 @@ el:
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
       Mikelab_groupCreateNewSprite:
-        text: φτιάξει ένα καινούριο {COSTUME} σε {LOCATION}
+        text: φτιάξε ένα καινούριο {COSTUME} σε {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": πάνω
@@ -1730,6 +1702,10 @@ el:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': πόλη
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': λιβάδι
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': σκηνή
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': μετρό
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': υπόγεια
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1816,14 +1792,10 @@ el:
         options:
           INPUT1:
             '1': χυμός λεμονιού
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': χυμός λεμονιού
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1847,27 +1819,40 @@ el:
         options:
           BRUSH:
             '"brick"': τούβλο
+            '"fire"': φωτιά
+            '"flowers"': λουλουδιών
             '"hearts"': καρδιές
             '"iceCream"': Παγωτό
+            '"leaves"': φύλλα
             '"rainbow"': ουράνιο τόξο
             '"stars"': αστέρια
+            '"waves"': κύματα
       Poetry_makeBurst:
         options:
           EFFECT:
+            '"burst"': εκρήγνυται
             '"rain"': βροχή
+            '"spiral"': σπιράλ
       Poetry_makeNewSpriteAnon:
-        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
+        text: δημιουργία νέου {ANIMATION_NAME} χαρακτήρα σε {LOCATION}
       Poetry_playMusic:
         options:
           SOUND:
+            '"sound://category_nature/steady_campfire_loop.mp3"': πυρός προσκόπων
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': δάσους
             '"sound://category_nature/summer_night_loop.mp3"': νύχτα
+            '"sound://category_background/ocean_waves.mp3"': ωκεανός
+            '"sound://category_background/rainforest_ambient_sound.mp3"': τροπικό δάσος
+            '"sound://category_background/wavering_wind.mp3"': υπνηλία
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': αργή
       Poetry_playSound:
         text: παίξεΉχο {SOUND}
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': καμπάνα
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': φυσαλλίδα
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': πήδα
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ανοιχτόχρωμος
       Poetry_playSoundOptionsSpace:
         text: παίξεΉχο {SOUND}
         options:
@@ -1899,7 +1884,9 @@ el:
             '"stars"': Αστέρια
             '"squiggles"': Μουτζούρες
           PALETTE:
+            '"ocean"': ωκεανός
             '"rainbow"': ουράνιο τόξο
+            '"spring"': άνοιξη
             '"winter"': χειμώνας
       Poetry_setBackgroundImageAs:
         text: Ορισμός φόντου σε {IMG}
@@ -1938,7 +1925,6 @@ el:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -1996,16 +1982,10 @@ el:
         options:
           PORTION:
             '1': όλα
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': όλα
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       adaptations_adaptationBehaviors:
         options:
           BEHAVIOR:
@@ -2149,6 +2129,21 @@ el:
           DIR:
             right: δεξιά ↻
             left: αριστερά ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: εκτύπωσε {TEXT}
       storylab_setForegroundEffect2:
         options:
           EFFECT:

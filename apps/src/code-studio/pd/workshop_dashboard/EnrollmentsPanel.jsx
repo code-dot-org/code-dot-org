@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import moment from 'moment';
 import MoveEnrollmentsDialog from './components/move_enrollments_dialog';
 import EditEnrollmentNameDialog from './components/edit_enrollment_name_dialog';
@@ -34,6 +34,7 @@ export default class EnrollmentsPanel extends React.Component {
       ['scholarship_workshop?']: PropTypes.bool,
       sessions: PropTypes.array,
       subject: PropTypes.string,
+      state: PropTypes.string,
     }),
     enrollments: PropTypes.array,
     isLoadingEnrollments: PropTypes.bool,
@@ -318,8 +319,6 @@ export default class EnrollmentsPanel extends React.Component {
 
           {viewSurveyUrl &&
             shouldShowSurveyResults(
-              // TODO: Add prop types for this field
-              // eslint-disable-next-line react/prop-types
               workshop.state,
               workshop.course,
               workshop.subject,

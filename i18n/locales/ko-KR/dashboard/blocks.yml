@@ -17,7 +17,6 @@ ko:
             '0.75': 작음
             '1.00': 보통
             '2.00': 큰
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -25,7 +24,6 @@ ko:
             '0.75': 작음
             '1.00': 보통
             '2.00': 큰
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} 이(가) {N} 마디마다 \n{MOVE1} 와(과) {MOVE2} 을(를) 교대"
         options:
@@ -454,26 +452,6 @@ ko:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
@@ -923,7 +901,6 @@ ko:
             '"u"': u
             '"v"': v
             '"w"': w
-            '"x"': x
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
@@ -969,7 +946,6 @@ ko:
             '"u"': u
             '"v"': v
             '"w"': w
-            '"x"': x
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
@@ -998,8 +974,6 @@ ko:
         options:
           INPUT1:
             '1': 레몬 주스
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} 효과 연출"
         options:
@@ -1016,8 +990,6 @@ ko:
         options:
           INPUT1:
             '1': 레몬 주스
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: "{SPRITE1COSTUME}(으)로 {VAR1}와(과) 소통"
       FunctionBlocks_makeManipulative2:
@@ -1190,7 +1162,6 @@ ko:
             '"u"': u
             '"v"': v
             '"w"': w
-            '"x"': x
             '"y"': 'y'
             '"z"': z
       gamelab_isTouchingEdges:
@@ -1234,7 +1205,6 @@ ko:
             '"u"': u
             '"v"': v
             '"w"': w
-            '"x"': x
             '"y"': 'y'
             '"z"': z
       gamelab_layoutSprites:
@@ -1515,11 +1485,9 @@ ko:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': 느리게
             '5': 보통
             '7': 빠르게
-            '9': extra fast
       gamelab_setTint:
         text: 의 색상을 변경 {THIS} 받는 사람 {COLOR}
       gamelab_setupScoreboard:
@@ -1994,14 +1962,10 @@ ko:
         options:
           INPUT1:
             '1': 레몬 주스
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': 레몬 주스
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2281,16 +2245,10 @@ ko:
         options:
           PORTION:
             '1': 모두
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': 모두
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE}이(가) {SPEECH}을(를) 말함"
       adaptations_adaptationBehaviors:
@@ -2358,7 +2316,7 @@ ko:
             '"d"': d
       craft_ifPath:
         text: |-
-          {DIR}에 길이 있을 경우
+          경로가 {DIR}인 경우
           {STATEMENT}
         options:
           DIR:
@@ -2367,7 +2325,7 @@ ko:
             "'left'": 왼쪽
       craft_ifStandingOn:
         text: |-
-          {TYPE} 위에 서 있을 경우
+          {TYPE} 위에 서있을 경우
           {STATEMENT}
         options:
           TYPE:
@@ -2379,7 +2337,7 @@ ko:
             "'seaLantern'": 바다 랜턴
       craft_ifStandingOnLimit:
         text: |-
-          {TYPE} 위에 서 있을 경우
+          {TYPE} 위에 서있을 경우
           {STATEMENT}
         options:
           TYPE:
@@ -2390,35 +2348,51 @@ ko:
       craft_moveForward:
         text: 앞으로 이동
       craft_placeBlock:
-        text: 장소 {blockType}
+        text: "{blockType} 놓기"
         options:
           blockType:
             '"chiseledStoneBricks"': 장식용 석조 벽돌
             '"seaLantern"': 바다 랜턴
       craft_placePrismarine:
-        text: 장소 프리스마린
+        text: 프리즈머린 놓기
       craft_placeTorch:
         text: 횃불 놓기
       craft_repeatUntilConduit:
         text: |-
-          도관이 완료될 때까지 반복
+          전달체가 완료될 때까지 반복
           {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           목표까지 반복
           {STATEMENT}
       craft_spawnEntity:
-        text: 산란 {ENTITY}
+        text: "{ENTITY} 생성"
         options:
           ENTITY:
             '"dolphin"': 돌고래
             '"squid"': 오징어
       craft_turn:
-        text: 설정 {DIR}
+        text: "{DIR} 회전"
         options:
           DIR:
-            right: 우측 윙어
-            left: 왼쪽
+            right: 오른쪽 ↻
+            left: 왼쪽 ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: 인쇄 {TEXT}
       storylab_setForegroundEffect2:
         text: "{EFFECT} 효과 연출"
         options:

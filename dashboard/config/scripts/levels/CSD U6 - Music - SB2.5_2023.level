@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:17:42.000Z",
   "level_num": "custom",
@@ -46,8 +47,8 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
-    "long_instructions": "# Piano with Arrays\r\n\r\nThis app has a piano without any of the upper sharp keys (they'll appear in the next level). The app also has all of the notes stored in an array: \r\n\r\n- `var notes = [\"C4\", \"D4\", \"E4\"];`(#BB77C7)\r\n\r\nSince the piano has the keys in order, we can play each note by accessing each element of the array in order. For example, we can play the first note on the piano using `buzzer.note(`(#f78183)`notes[0]`(#BB77C7)`)`(#f78183)\r\n\r\nIn the program below, all of the keys have been coded correctly, but the array is missing some of the notes on the piano. We need to add more notes to our `notes` array so the keyboard plays correctly.\r\n\r\n<img src=\"https://images.code.org/19401eb46cb7b5dac409ed98172f29b9-image-1638808891945.png\" width=\"500px\" />\r\n\r\n## Do This\r\n\r\n1) Press the ➡️ at the end of the `notes` array to add a new space to the array. Repeat this until the array has 8 total elements\r\n2) Add in the missing notes: `\"F4\", \"G4\", \"A4\", B4\", \"C5\"`.\r\n\t- Don't forget to include quotes when typing them into the array!\r\n    - ::: details [**Show Me How**]\r\n![](https://images.code.org/e66d16ed2d62baf1e8d06de6f21929ae-image-1638809170842.gif)\r\n:::\r\n\r\n**Run the program!** Press each of the keys and verify that the piano works!\r\n\r\n\r\n<hr />\r\n\r\n- (Optional) Change the numbers at the end of each note to change the octave the piano plays in (for example: change \"C4\" to \"C3\", etc). Then run the app again and see how the piano sounds",
+    "makerlab_enabled": "circuitPlayground",
+    "long_instructions": "# Piano with Arrays\r\n\r\nThis app has a piano without any of the upper sharp keys (they'll appear in the next level). The app also has all of the notes stored in an array: \r\n\r\n- `var notes = [\"C4\", \"D4\", \"E4\"];`(#BB77C7)\r\n\r\nSince the piano has the keys in order, we can play each note by accessing each element of the array in order. For example, we can play the first note on the piano using `buzzer.note(`(#f78183)`notes[0]`(#BB77C7)`)`(#f78183)\r\n\r\nIn the program below, all of the keys have been coded correctly, but the array is missing some of the notes on the piano. We need to add more notes to our `notes` array so the keyboard plays correctly.\r\n\r\n<img src=\"https://images.code.org/19401eb46cb7b5dac409ed98172f29b9-image-1638808891945.png\" width=\"500px\" />\r\n\r\n## Do This\r\n\r\n1) Press the ➡️ at the end of the `notes` array to add a new space to the array. Repeat this until the array has 8 total elements\r\n2) Add in the missing notes: `\"F4\", \"G4\", \"A4\", \"B4\", \"C5\"`.\r\n\t- Don't forget to include quotes when typing them into the array!\r\n    - ::: details [**Show Me How**]\r\n![](https://images.code.org/e66d16ed2d62baf1e8d06de6f21929ae-image-1638809170842.gif)\r\n:::\r\n\r\n**Run the program!** Press each of the keys and verify that the piano works!\r\n\r\n\r\n<hr />\r\n\r\n- (Optional) Change the numbers at the end of each note to change the octave the piano plays in (for example: change \"C4\" to \"C3\", etc). Then run the app again and see how the piano sounds",
     "code_functions": {
       "buzzer.note": null,
       "declareAssign_list_abd": null,
@@ -61,7 +62,8 @@
     "reference_links": [
       "/courses/csd-2022/guides/playing-notes",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/arrays"
+      "/courses/csd-2022/guides/arrays",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/modifying-arrays",
     "mini_rubric": "false",
@@ -74,9 +76,8 @@
     "encrypted_examples": "Ngcmh91kPCENi0UoAItwkVi2lz65DqV8J9SK3D5WiXqSj6bdWSDV2JkDy0SD\nMFQHW7Z2cV9vEB+ZOUmn50mKrA==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:42.891+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB2.5_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB2.5_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:42.891+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB2.5_2222\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB2.5_2222\"},{\"changed_at\":\"2023-05-12 17:39:03 +0000\",\"changed\":[\"makerlab_enabled\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-16 19:33:40 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

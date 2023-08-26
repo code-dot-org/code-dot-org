@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-27 11:37:30 UTC",
+    "serialized_at": "2023-06-27 19:15:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -46,7 +46,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**Purpose:**\nThis session is intended to welcome and orient participants to the day.\n\n\n**Objectives:**\n* Participants are oriented to the day\n\n**Suggested Time:** 15 minutes",
-        "student_overview": "**You will:**\n* Get and orientation to the day"
+        "student_overview": "**You will:**\n* Get oriented to the day"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -62,7 +62,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThis session is designed for participants to begin to understand their context related to equity in CS education. Participants will use data to explore who has access to CS both nationally and within their home state. They will then discuss systemic barriers that limit access, diversity, and inclusion in CS education.\n\n\n**Objectives:**\n* Participants use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of CS education\n* Participants recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally\n* Participants identify systemic barriers that limit access, diversity, and inclusion in CS education\n* Participants list strategies to gather data (quantitative and qualitative) about access, diversity, and inclusion in CS courses locally (within school and classroom)\n\n**Suggessted Time:** 50 minutes ",
+        "overview": "**Purpose:**\nThis session is designed for participants to begin to understand their context related to equity in CS education. Participants will use data to explore who has access to CS both nationally and within their home state. They will then discuss systemic barriers that limit access, diversity, and inclusion in CS education.\n\n\n**Objectives:**\n* Participants use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of CS education\n* Participants recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally\n* Participants identify systemic barriers that limit access, diversity, and inclusion in CS education\n* Participants list strategies to gather data (quantitative and qualitative) about access, diversity, and inclusion in CS courses locally (within school and classroom)\n\n**Suggessted Time:** 45 minutes ",
         "student_overview": "**You will:**\n* Use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of CS education\n* Recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education\n* List strategies to gather data (quantitative and qualitative) about access, diversity, and inclusion in CS courses locally (within school and classroom)"
       },
       "seeding_key": {
@@ -79,7 +79,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**Purpose:**\nBy this point in the workshop, participants have had experience with the computer science concepts in Units 1-3. This session invites participants to consider what it might feel like to teach these concepts to their students and act as the “lead learner” during the school year.\n\n\n**Objectives:**\n* Participants reflect on how being a lead learner in the classroom is similar to and different from how they have previously taught.\n* Participants understand the importance of modeling as a lead learner in the CS classroom.\n\n**Suggested Time:** 40 minutes",
+        "overview": "**Purpose:**\nBy this point in the workshop, participants have had experience with the computer science concepts in Units 1-3. This session invites participants to consider what it might feel like to teach these concepts to their students and act as the “lead learner” during the school year.\n\n\n**Objectives:**\n* Participants reflect on how being a lead learner in the classroom is similar to and different from how they have previously taught.\n* Participants understand the importance of modeling as a lead learner in the CS classroom.\n\n**Suggested Time:** 30 minutes",
         "student_overview": "**You will:**\n* Reflect on how being a lead learner in the classroom is similar to and different from how you have previously taught\n* Understand the importance of modeling as a lead learner in the CS classroom"
       },
       "seeding_key": {
@@ -97,7 +97,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**Purpose:**\nThis session is a preparation for the next two TLOs that participants will engage in: U3L6 Random Numbers and U3L8 Sprites. This curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants learn how to use variables in Game Lab to prepare for their model lesson and TLOs\n* Participants know what sprites are in Game Lab \n\n**Suggested Time:** 40 minutes",
-        "student_overview": "**You will:**\n* Learn how to use variables in Game Lab to prepare for their model lesson and TLOs\n* Learn what sprites are in Game Lab "
+        "student_overview": "**You will:**\n* Learn how to use variables in Game Lab to prepare for your model lesson and TLOs\n* Learn what sprites are in Game Lab "
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -133,9 +133,9 @@
       "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** The teacher uses journaling for individual reflection and sensemaking along with discussion for group reflection and sensemaking.\n\n\n* **Potential Teaching Group Decisions:**\n  * Have participants respond to prompts using a journal\n  * Have participants add key vocabulary to their journal\n  * Facilitate discussion providing time for individual reflection before group sharing - the Think-Pair-Share strategy does not always need to include all three steps, but at a minimum it should include some individual think time\n\n\n**Objectives:**\n* Participants have reflected on the role of journaling and discussion as a metacognitive opportunity for students to make connections between the activities they are doing and the new knowledge and skills they are gaining\n* Participants can create and use a sprite.\n\n**Suggested Time:** 65 minutes\n\n<a href=\"url\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>",
+        "overview": "**Purpose:**\n* **Essential Practice:** The teacher uses journaling for individual reflection and sensemaking along with discussion for group reflection and sensemaking.\n\n\n* **Potential Teaching Group Decisions:**\n  * Have participants respond to prompts using a journal\n  * Have participants add key vocabulary to their journal\n  * Facilitate discussion providing time for individual reflection before group sharing - the Think-Pair-Share strategy does not always need to include all three steps, but at a minimum it should include some individual think time\n\n\n**Objectives:**\n* Participants have reflected on the role of journaling and discussion as a metacognitive opportunity for students to make connections between the activities they are doing and the new knowledge and skills they are gaining\n* Participants can create and use a sprite.\n\n**Suggested Time:** 65 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "student_overview": "**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n\nToday you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!\n\n<a href=\"url\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>"
+        "student_overview": "**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n\nToday you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs, but will also allow you to create more interesting and fun images!\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>"
       },
       "seeding_key": {
         "lesson.key": "Sprites",
@@ -151,7 +151,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**Purpose:**\nOn Days 2 and 3, participants engaged in four Unit 3 - Interactive Animations and Games lessons. This session provides participants with space to review what they’ve learned and ask questions about the unit.\n\n\n**Objectives:**\n* Participants are aware of the content in Unit 3 that has not been covered in the workshop\n\n**Suggested Time:** 25 minutes",
+        "overview": "**Purpose:**\nOn Days 2 and 3, participants engaged in four Unit 3 - Interactive Animations and Games lessons. This session provides participants with space to review what they’ve learned and ask questions about the unit.\n\n\n**Objectives:**\n* Participants are aware of the content in Unit 3 that has not been covered in the workshop\n\n**Suggested Time:** 20 minutes",
         "student_overview": "**You will:**\n* Get an overview of the content in Unit 3 that has not been covered in the workshop"
       },
       "seeding_key": {
@@ -168,7 +168,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**Purpose:**\nThis session is designed to create a space for participants to reflect on the culture they hope to create in their classrooms. There is time to describe a positive classroom culture and collaborate with other teachers to share strategies for creating that culture. This is also a time to tie together themes from the previous TLOs as participants think about how a positive classroom culture might support practices such as pair programming, debugging, and student collaboration. The session ends with a discussion about teamwork, which is a large component of Chapter 2 or Unit 2 - Web Development.\n\n\n**Objectives:**\n* Participants have reflected on and defined what a positive classroom culture looks like\n* Participants have collaborated with their peers about ways to create a positive classroom culture that supports practices such as debugging, pair programming, and peer collaboration\n* Participants have shared strategies for supporting student teamwork\n\n**Suggested Time:** 40 minutes",
+        "overview": "**Purpose:**\nThis session is designed to create a space for participants to reflect on the culture they hope to create in their classrooms. There is time to describe a positive classroom culture and collaborate with other teachers to share strategies for creating that culture. This is also a time to tie together themes from the previous TLOs as participants think about how a positive classroom culture might support practices such as pair programming, debugging, and student collaboration. The session ends with a discussion about teamwork, which is a large component of Chapter 2 or Unit 2 - Web Development.\n\n\n**Objectives:**\n* Participants have reflected on and defined what a positive classroom culture looks like\n* Participants have collaborated with their peers about ways to create a positive classroom culture that supports practices such as debugging, pair programming, and peer collaboration\n* Participants have shared strategies for supporting student teamwork\n\n**Suggested Time:** 30 minutes",
         "student_overview": "**You will:**\n* Reflect on and define what a positive classroom culture looks like\n* Collaborate with other teachers about ways to create a positive classroom culture that supports practices such as debugging, pair programming, and peer collaboration\n* Shared strategies for supporting student teamwork"
       },
       "seeding_key": {
@@ -725,7 +725,7 @@
       "key": "5d56f378-af7e-4f44-8971-86bef452448d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_sprites/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_sprites/csd/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -783,7 +783,7 @@
       "key": "1411f843-20c2-4a71-9dd5-e80a5a68c139",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r the_animation_tab/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n\n**Discussion Goal:** Make sure students understand that they will need to both **create the image** (or animation) in the Animation Tab **and** then **add the animation to the sprite** using the [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r the_animation_tab/csd/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n\n**Discussion Goal:** Make sure students understand that they will need to both **create the image** (or animation) in the Animation Tab **and** then **add the animation to the sprite** using the [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n\n",
         "progression_name": "Video: The Animation Tab",
         "tips": [
           {
@@ -1001,7 +1001,7 @@
       "key": "ebb808c4-4f9f-44ba-bf11-efc25cdf3002",
       "position": 1,
       "properties": {
-        "description": "**Video:** Show students the [r the_design_thinking_process/csd4/2023] video in the slides. Stop the video after Step 5 (around 3:10).\n\n",
+        "description": "**Video:** Show students the [r the_design_thinking_process/csd/2023] video in the slides. Stop the video after Step 5 (around 3:10).\n\n",
         "name": "Introduce Design Thinking\r",
         "tips": [
           {
@@ -1586,14 +1586,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD U3 Sprites intro sprites_pl"
+          "CSD U3 Sprites intro sprites 2_pl"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites_pl"
+          "CSD U3 Sprites intro sprites 2_pl"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
@@ -1601,7 +1601,7 @@
         "activity_section.key": "49ae8f1a-5380-4175-8cfc-4e7a9a1046ff"
       },
       "level_keys": [
-        "CSD U3 Sprites intro sprites_pl"
+        "CSD U3 Sprites intro sprites 2_pl"
       ]
     },
     {
@@ -1761,6 +1761,9 @@
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "PL-summer- CSD U3 L7 mini project_2023"
+        ],
         "progression": "Lesson 7: Mini-Project - Robot Faces"
       },
       "bonus": false,
@@ -1784,6 +1787,9 @@
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "PL summer - CSD U3 Scene Example_2023"
+        ],
         "progression": "Lesson 11: Mini-Project - Captioned Scenes"
       },
       "bonus": false,
@@ -1807,6 +1813,9 @@
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "PL Summer - CSD web project animated example_2023"
+        ],
         "progression": "Lesson 14: Mini-Project - Animation"
       },
       "bonus": false,
@@ -1830,6 +1839,9 @@
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "PL Summer CSD U3 - Interactive Card - ExampleChoice_2023"
+        ],
         "progression": "Lesson 18: Project - Interactive Card"
       },
       "bonus": false,
@@ -1994,9 +2006,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Sprites intro sprites_pl",
+        "level.key": "CSD U3 Sprites intro sprites 2_pl",
         "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites_pl"
+          "CSD U3 Sprites intro sprites 2_pl"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",

@@ -47,6 +47,9 @@
         "csd-2022/patterns-overview": {
           "display_name": "Përmbledhja"
         },
+        "csd-2022/sprites": {
+          "display_name": "Sprites"
+        },
         "csd-2022/variables": {
           "display_name": "variabla"
         }

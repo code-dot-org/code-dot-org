@@ -3,31 +3,31 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Si",
-          "No": "Non"
+          "No": "Non",
+          "Yes": "Si"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Si",
-          "No": "Non"
+          "No": "Non",
+          "Yes": "Si"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Si",
-          "No": "Non"
+          "No": "Non",
+          "Yes": "Si"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Si",
-          "No": "Non"
+          "No": "Non",
+          "Yes": "Si"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Nome",
-          "Color": "Cor",
           "City": "Cidade",
+          "Color": "Cor",
+          "Name": "Nome",
           "text": "texto"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Nome",
-          "Color": "Cor",
           "City": "Cidade",
+          "Color": "Cor",
+          "Name": "Nome",
           "text": "texto"
         },
         "CSD U1 processing guess_2021": {
@@ -49,24 +49,24 @@
           "Back": "Voltar"
         },
         "CSD U1 storage movies_2021": {
+          "No": "Non",
           "Star Wars": "Star Wars",
           "Yes": "Si",
-          "No": "Non",
           "text": "texto"
         },
         "CSD U1 storage movies_2022": {
+          "No": "Non",
           "Star Wars": "Star Wars",
           "Yes": "Si",
-          "No": "Non",
           "text": "texto"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "verde",
-          "black": "negro"
+          "black": "negro",
+          "green": "verde"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "verde",
-          "black": "negro"
+          "black": "negro",
+          "green": "verde"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Conseguichelo!"
@@ -105,18 +105,18 @@
           "Medium": "Medio"
         },
         "CSD U6 - Combine Inputs - A_2222": {
+          "green": "verde",
           "left": "esquerda",
-          "right": "dereita",
           "red": "vermello",
-          "green": "verde"
+          "right": "dereita"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "esquerda",
           "right": "dereita"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "verde",
-          "blue": "azul"
+          "blue": "azul",
+          "green": "verde"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
@@ -135,40 +135,40 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Feito!"
@@ -231,10 +231,10 @@
           "title": "Título"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "arriba",
           "down": "abaixo",
           "left": "esquerda",
-          "right": "dereita"
+          "right": "dereita",
+          "up": "arriba"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "nome"
@@ -306,40 +306,40 @@
           "Update": "Actualizar"
         },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "primeiro"
@@ -441,40 +441,40 @@
           "About": "Sobre",
           "About Us": "Quen somos",
           "Cancel": "Cancelar",
-          "Yes": "Si",
           "No": "Non",
-          "Save": "Salvar"
+          "Save": "Salvar",
+          "Yes": "Si"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Sobre",
           "About Us": "Quen somos",
           "Cancel": "Cancelar",
-          "Yes": "Si",
           "No": "Non",
-          "Save": "Salvar"
+          "Save": "Salvar",
+          "Yes": "Si"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Sobre",
           "About Us": "Quen somos",
           "Cancel": "Cancelar",
-          "Yes": "Si",
           "No": "Non",
-          "Save": "Salvar"
+          "Save": "Salvar",
+          "Yes": "Si"
         },
         "CSDU4 Decision App Demo": {
           "About": "Sobre",
-          "When?": "Cando?",
-          "About Us": "Quen somos"
+          "About Us": "Quen somos",
+          "When?": "Cando?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Sobre",
-          "When?": "Cando?",
-          "About Us": "Quen somos"
+          "About Us": "Quen somos",
+          "When?": "Cando?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Sobre",
-          "When?": "Cando?",
-          "About Us": "Quen somos"
+          "About Us": "Quen somos",
+          "When?": "Cando?"
         },
         "CSDU4 Functionality visible": {
           "Show": "Mostrar"
@@ -482,38 +482,38 @@
         "CSDU4 List App Demo": {
           "About": "Sobre",
           "About Us": "Quen somos",
-          "Done": "Feito",
-          "Cancel": "Cancelar"
+          "Cancel": "Cancelar",
+          "Done": "Feito"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Sobre",
           "About Us": "Quen somos",
-          "Done": "Feito",
-          "Cancel": "Cancelar"
+          "Cancel": "Cancelar",
+          "Done": "Feito"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Sobre",
           "About Us": "Quen somos",
-          "Done": "Feito",
-          "Cancel": "Cancelar"
+          "Cancel": "Cancelar",
+          "Done": "Feito"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Sobre",
+          "About Us": "Quen somos",
           "Submit": "Enviar",
-          "When?": "Cando?",
-          "About Us": "Quen somos"
+          "When?": "Cando?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Sobre",
+          "About Us": "Quen somos",
           "Submit": "Enviar",
-          "When?": "Cando?",
-          "About Us": "Quen somos"
+          "When?": "Cando?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Sobre",
+          "About Us": "Quen somos",
           "Submit": "Enviar",
-          "When?": "Cando?",
-          "About Us": "Quen somos"
+          "When?": "Cando?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+"
@@ -537,76 +537,76 @@
           "Success!": "Feito!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "texto"
@@ -624,20 +624,20 @@
           "Start": "Comezar"
         },
         "csd-apps for good-2": {
-          "Next": "Seguinte",
-          "Home": "Inicio"
+          "Home": "Inicio",
+          "Next": "Seguinte"
         },
         "csd-apps for good-2_2022": {
-          "Next": "Seguinte",
-          "Home": "Inicio"
+          "Home": "Inicio",
+          "Next": "Seguinte"
         },
         "csd-explore ui-2": {
-          "Next": "Seguinte",
-          "Home": "Inicio"
+          "Home": "Inicio",
+          "Next": "Seguinte"
         },
         "csd-explore ui-2_2022": {
-          "Next": "Seguinte",
-          "Home": "Inicio"
+          "Home": "Inicio",
+          "Next": "Seguinte"
         },
         "csd-explore ui-4": {
           "Sorry!": "Perdón!"
@@ -658,12 +658,12 @@
           "Next": "Seguinte"
         },
         "ml-customize-raspado-2021": {
-          "yes": "si",
-          "no": "non"
+          "no": "non",
+          "yes": "si"
         },
         "ml-customize-raspado_2022": {
-          "yes": "si",
-          "no": "non"
+          "no": "non",
+          "yes": "si"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Continuar",
@@ -674,16 +674,16 @@
           "Loading...": "Cargando..."
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "O",
           "A": "A",
-          "yes": "si",
-          "no": "non"
+          "W": "O",
+          "no": "non",
+          "yes": "si"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "O",
           "A": "A",
-          "yes": "si",
-          "no": "non"
+          "W": "O",
+          "no": "non",
+          "yes": "si"
         },
         "ml-models in applab-choice intended warnings": {
           "Back": "Voltar"
@@ -692,22 +692,22 @@
           "Back": "Voltar"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Si",
+          "B": "B",
           "No": "Non",
-          "B": "B"
+          "Yes": "Si"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Si",
+          "B": "B",
           "No": "Non",
-          "B": "B"
+          "Yes": "Si"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Si",
-          "No": "Non"
+          "No": "Non",
+          "Yes": "Si"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Si",
-          "No": "Non"
+          "No": "Non",
+          "Yes": "Si"
         },
         "ml-use model card-example3A-2021": {
           "cloudy": "nubrado",

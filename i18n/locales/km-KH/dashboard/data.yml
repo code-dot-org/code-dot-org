@@ -12,8 +12,12 @@ km:
         Unplug10: អ៊ីនធឺណិត
         Bounce: បាល់​លោត
         Flappy: Flappy Bird
+        Webapp: មន្ទីរពិសោធន៍កម្មវិធី​
         ArtistEC: វិចិត្រករ
-        Spritelab: Sprite Lab
+        Applab: មន្ទីរពិសោធន៍កម្មវិធី​
+        Custom: សិល្បករ
+        Gamelab: មន្ទីរពិសោធន៍ហ្គេម
+        Spritelab: មន្ទីរពិសោធន៍ Sprite 
     trophy:
       name:
         Bronze: សំរឹទ្ធ
@@ -24,10 +28,35 @@ km:
         function: អនុ​គមន៍
     level:
       instructions:
-        maze_2_13: "Use the `if` block to help me decide\nwhen to turn. \\\\r\n"
-        maze_2_14: នេះ​ដូច​ទៅ​នឹង​ល្បែង​ប្រាជ្ញា​មុន​ដែរ ប៉ុន្តែ​អ្នក​ត្រូវ​ចងចាំ​អំពី​របៀប​ដែល​អ្នក​ប្រើ​ប្លុក "បើ" និង​ប្លុក "ធ្វើ​ឡើង​វិញ" ជាមួយ​គ្នា។
+        maze_2_2: 'តើអ្នកអាចជួយខ្ញុំឱ្យចាប់ជ្រូកកំហូចបានទេ? ដាក់ប្លុក "ផ្លាស់ទីទៅមុខ" ពីរបីរួមគ្នាហើយចុច "ដំណើរការ" ដើម្បីជួយខ្ញុំទៅដល់គោលដៅ។'
+        maze_2_1: ជ្រូក​នេះ​រំខាន់ខ្ញុំណាស់។ ជួយខ្ញុំដើម្បីរកជ្រូកកំហូច!
+        maze_2_2_5: តាមដានផ្លូវ ហើយនាំខ្ញុំទៅរកជ្រូកកំហូច។ ជៀសវាងម៉្សៅជាតិផ្ទុះ (TNT) បើមិនចឹងទេផ្ទុះខ្ទិចស្លាប។ 
+        maze_2_3: នាំខ្ញុំទៅរកជ្រូកបៃតងកំហូច! (ប្រយ័ត្នចំពោះ TNT)
+        maze_2_4: ស្ងប់អារម្មណ៍ ហើយជួយខ្ញុំទៅដល់ជ្រូកកំហូច។ បើមិនដូច្នោះទេខ្ញុំប្រហែលជាខឹង!
+        maze_2_5: មានវិធីមួយដែលខ្ញុំអាចទៅដល់ជ្រូកកំហូចដោយប្រើតែ 2 ប្លុកប៉ុណ្ណោះ។ តើអ្នកអាចដោះស្រាយវាបានទេ?
+        maze_2_6: ព្យាយាមនាំខ្ញុំទៅដល់ជ្រូកឈ្លានពានបៃតងដោយប្រើតែបីប្លុក។
+        maze_2_7: ជួយខ្ញុំបណ្តេញជ្រូកកំហូចនេះដោយប្រើចំនួនប្លុកតិចបំផុត។ សាកល្បងប្រើប្លុក "ធ្វើឡើងវិញ" ច្រើនជាងមួយ។
+        maze_2_8: 'នៅពេលដែលប្លុកមានពណ៌ប្រផេះ នោះមានន័យថាអ្នកមិនអាចលុបវាបានទេ។ ដោះស្រាយល្បែងផ្គុំរូបនេះដោយប្រើប្លុក "ធ្វើឡើងវិញ" ដែលចំនួនកំណត់ 3 ដង។ សាកល្បងដាក់ប្លុកទាំង 3 នេះនៅខាងក្នុងប្លុក "ធ្វើឡើងវិញ" ពណ៌ប្រផេះ៖ ផ្លាស់ទី ផ្លាស់ទី​ ហើយ បត់។'
+        maze_2_9: សាកល្បងប្រើប្លុកថ្មី "ធ្វើឡើងវិញរហូតដល់" - វានឹងធ្វើឡើងវិញរហូតដល់ខ្ញុំអាចទៅដល់ជ្រូកមហារំខាន។
+        maze_2_10: ជាការប្រសើរណាស់, ជាលើកចុងក្រោយសម្រាប់ការអនុវត្ត - តើអ្នកអាចដោះស្រាយបញ្ហានេះដោយប្រើតែ 4 ប្លុកបានទេ?
+        maze_2_11: សួរស្ដីមនុស្សចិត្តល្អ! ខ្ញុំជាខ្មោចឆៅ (zombie) ហើយ ខ្ញុំឃ្លានណាស់។ ខ្ញុំត្រូវតែ ... ផ្លាស់ទី ... ទៅផ្កាឈូករ័ត្ន ... តើអ្នកអាចជួយខ្ញុំឱ្យទៅដល់ទីនោះដោយប្រើតែ 5 ប្លុកបានដែរឬទេ?
+        maze_2_12: Okay, នេះគឺស្រដៀងគ្នានឹងវគ្គមុន, ប៉ុន្តែខុសគ្នាបន្តិច។ តើអ្នកអាចធ្វើវាដោយប្រើត្រឹមតែ 5 ប្លុកដែលឬទេ?
+        maze_2_13: 'ប្រើប្លុកថ្មី "ប្រសិនបើ" ដើម្បីឱ្យខ្ញុំសម្រេចចិត្តថាត្រូវបត់នៅពេលណា។ ព័ត៌មានជំនួយ៖ អ្នកគ្រាន់តែត្រូវការប្លុកមួយបន្ថែមទៀត ប៉ុន្តែអ្នកគូររៀនពីរបៀបដែលយើងតម្រៀបកូដ ដូច្នេះអ្នកអាចធ្វើវាដោយខ្លួនឯងបាននៅពេលក្រោយ។'
+        maze_2_14: Okay, នេះគឺដូចជាល្បែងផ្គុំរូបមុនដែរ ប៉ុន្តែអ្នកត្រូវចាំពីរបៀបដែលអ្នកបានប្រើប្លុក "ប្រសិនបើ" និងប្លុក "ធ្វើឡើងវិញ" ជាមួយគ្នា។
         maze_2_17: "The `if/else` block checks a condition,\nand then does one thing OR another. \\\\r\n\\\\r\nUse this new block to get me to\nthe sunflower."
         maze_2_18: "One more practice puzzle with the `if/else`\nblock!\\\\r\n\\\\r\nTrace it with your finger to see if you can figure it out on\nyour first try."
+        jigsaw_1: ចុចលើប្លុក
+        jigsaw_2: អូសប្លុកទៅរកគោលដៅ
+        jigsaw_3: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_4: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_5: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_6: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_7: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_8: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_9: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_10: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_11: ដាក់ប្លុកទាំងនេះ តាមលំដាប់លំដោយលេខរៀង
+        jigsaw_12: ដាក់ប្លុកទាំងនេះ តាមលំដាប់លំដោយលេខរៀង
         studio_c2_8: "Can you have Waddles (actor 1) say\n\"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \\\\r\n\\\\r\nWhen you're\ndone, play the game to make that happen."
         studio_c2_9: "Can you add a block to score a point\nwhen Waddles runs into Octavia (actor 3)? \\\\r\nPlay the game and move Waddles\nwith the arrows until you score!"
         studio_c2_10: "Add blocks to the `when run` event\nto change the background and the speed of Waddles.\\\\r\n\\\\r\nPlay the game and\nmove Waddles with the arrows until you score."
@@ -36,22 +65,43 @@ km:
         studio_c3_game_6: "Add blocks to the `when run` event\nto change the background and the speed of Waddles.\\\\r\n\\\\r\nPlay the game and\nmove Waddles with the arrows until you score."
     video:
       name:
+        artist_intro: ការណែនាំពីវិចិត្រករ
+        loop_times: ប្លុក "ធ្វើឡើងវិញ"
+        loop_until: ប្លុក "ធ្វើឡើងវិញរហូតដល់"
+        if_else_scrat: ប្លុក 'if/else'
         function: អនុគមន៍
         Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         Unplug5: អនុគមន៍
         Unplug6: លក្ខខណ្ឌ
         C1_bigevent_unplugged: ព្រឹត្តិការណ៍ធំ
+        C1_artist_intro: ការណែនាំពីវិចិត្រករ
+        C2_artist_intro: ការណែនាំពីវិចិត្រករ
         C2_conditionals_with_cards: លក្ខខណ្ឌ
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
+        C3_artist_intro: ការណែនាំពីវិចិត្រករ
+        C3_artist_nested_loops: បណ្ដុំប្រតិបត្តិដដែលៗ
+        C3_bee_nested_loops: បណ្ដុំប្រតិបត្តិដដែលៗ
         C3_bounce: បាល់​លោត
         C3_computational_thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
-        C4_loops_zombie: រង្វិល​ជុំ
+        C4_loops_zombie: ប្រតិបត្តិដដែលៗ
+        C4_variables_artist: អថេរ - សិល្បករ
         C4_conditionals: លក្ខខណ្ឌ
+        CSF_a_b_artist_loops: សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)
+        CSF_collector_k1_blocks: 'មូលដ្ធានគ្រឹះ វិទ្យាសាស្រ្តកុំព្យូទ័រ : អ្នកប្រមូលកំណប់'
+        CSF_collector_repeat_loops: ការប្រើប្រាស់កូដប្លុក ធ្វើឡើងវិញ​​ (loops)
+        CSF_collector_text_blocks: 'មូលដ្ធានគ្រឹះ វិទ្យាសាស្រ្តកុំព្យូទ័រ : អ្នកប្រមូលកំណប់'
+        CSF_debugging_k1_blocks: ការបំបាត់កំហុស (Debugging)
+        CSF_debugging_text_blocks: ការបំបាត់កំហុស (Debugging)
+        CSF_maze_intro_k1_blocks: ការណែនាំអំពីកូដស្ទូឌីយោ (Code studio)
+        CSF_maze_intro_text_blocks: ការណែនាំអំពីកូដស្ទូឌីយោ (Code studio)
         CSF_my_robotic_friends: មិត្តរ៉ូបូតរបស់ខ្ញុំ
         CSF_stevie_big_project: Stevie and the Big Project
         CSF_unspotted_bugs: កំហុសដែលមិនបានគ្រោងទុក
-        csp_applab_loops: រង្វិល​ជុំ
+        playlab_intro: ការណែនាំអំពីការអនុវត្តលើ Play Lab
+        csp_applab_loops: ប្រតិបត្តិដដែលៗ
+        mc_intro: ការណែនាំពី Minecraft
+        mc_repeat: ការប្រើប្រាស់ ប្រតិបត្តិដដែលៗ ក្នុង Minecraft
         mc_2016_congrats: Minecraft Hour of Code - អបអរសាទរ
         mc_2017_agent_intro: Minecraft Hour of Code - The Agent
         mc_2017_repeat: Minecraft Hour of Code - រង្វិលជុំ
@@ -61,9 +111,44 @@ km:
         mc_2017_puzzle_3: Minecraft Hour of Code - រង្វិលជុំ
         mc_2017_puzzle_8: Minecraft Hour of Code - មុខងារ
         mc_2017_puzzle_12: Minecraft Hour of Code - លេងដោយសេរី
-        CSF_loops_AB: រង្វិល​ជុំ
-        hoc_dance_events: ព្រឹត្ដិការណ៍ - Dance Party
-        hoc_dance_properties: លក្ខណៈសម្បត្តិ - Dance Party
-        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - Dance Party
-        hoc_dance_properties_2019: លក្ខណៈសម្បត្តិ - Dance Party
+        CSF_skinOverview_Harvester: អ្នកប្រមូលផល
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: ប្រតិបត្តិដដែលៗជាមួយ​ BB-8
+        CSF_harvester_skinOverview_K-1: អ្នកប្រមូលផល
+        CSF_scrat_loops_K1: ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក
+        CSF_scrat_loops_CF: រង្វិលជុំក្នុងយុគសម័យទឹកកក
+        CSF_if_allskins: ការណែនាំពី ប្លុក ប្រសិនបើ (if)
+        CSF_ifelse_allskins: របៀបប្រើប្រាស់ប្លុក If/Else
+        CSF_loops_AB: ប្រតិបត្តិដដែលៗ
+        CDEF_Video_SpritesInAction: កំណត់សកម្មភាពឱ្យ Sprites
+        CSF_SpriteLab_SpritesInAction_CDEF: កំណត់សកម្មភាពឱ្យ Sprites
+        mc_2018_intro: 'Minecraft: ការណែនាំអំពីដំណើរកម្សាន្តក្នុងទឹក'
+        MC_2018_loops: 'Minecraft: ដំណើរកម្សាន្តក្នុងទឹក (ធ្វើសារឡើងវិញ)'
+        mc_2018_conditionals: 'Minecraft: ដំណើរផ្សងព្រេងក្នុងទឹក ដោយប្រើលក្ខខណ្ឌ'
+        mc_2018_closing: 'Minecraft: សូមអបអរសាទរដំណើរកម្សាន្តក្នុងទឹក'
+        hoc_dance_warmup: កម្មវិធីរាំ - ការចាប់ផ្ដើម
+        hoc_dance_events: ព្រឹត្ដិការណ៍ - ពិធីជប់លៀងរាំកំសាន្ត
+        hoc_dance_properties: ជប់លៀងរាំ - លក្ខណៈសម្បត្តិ 
+        hoc_dance_congrats: កម្មវិធីរាំ - កម្មវិធីរីករាយ
+        CSF_SpriteLab_Intro_v2: សេចក្ដីណែនាំពី Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: របៀបបង្កើត SPRITE
+        CSF_SpriteLab_SpritesInAction_v2: កំណត់សកម្មភាពឱ្យ Sprites
+        csd_debugging: ការបំបាត់កំហុស (Debugging)
+        hoc_dance_congrats_2019: កម្មវិធីរាំ - កម្មវិធីរីករាយ
+        hoc_dance_warmup_2019: កម្មវិធីរាំ - ការចាប់ផ្ដើម
+        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - ពិធីជប់លៀងរាំកំសាន្ត
+        hoc_dance_measures_2019: ចង្វាក់ភ្លេង-ពិធីជួបលៀងរាំកំសាន្ត
+        hoc_dance_properties_2019: លក្ខណៈ​ (properties) - ពិធីជួបលៀងរាំកំសាន្ត
+        csf21pilot_events: 'កំណត់សកម្មភាពឱ្យ Sprites'
+        playlab_2021: ការណែនាំអំពីការអនុវត្តលើ Play Lab
+        playlab_2021_reader: ការណែនាំអំពីការអនុវត្តលើ Play Lab
         csd_sprite_properties: លក្ខណៈសម្បត្តិនៃ sprite
+    callout:
+      text:
+        drag_blocks: អូសប្លុក "ផ្លាស់ទីទៅមុខ" ហើយភ្ជាប់វានៅខាងក្រោមប្លុកផ្សេងទៀត។
+        run: ចុច "ដំណើរការ" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!
+        watch_again: ចុចទីនេះដើម្បីមើលវីដេអូម្តងទៀត
+        gray_block_explanation: ប្លុកដែលមានពណ៌ប្រផេះមិនអាចលុបបានទេ។ តើអ្នកអាចដោះស្រាយល្បែងផ្គុំរូបបានទេ?
+        show_code_explanation: ចុចទីនេះដើម្បីមើលកូដលើកម្មវិធីដែលអ្នកកំពុងបង្កើត
+        craft_run_button_callout: ចុច "ដំណើរការ" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!

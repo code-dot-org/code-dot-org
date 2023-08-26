@@ -11,5 +11,8 @@
   "blockly_toolboxCategoryMath": "Математика",
   "blockly_toolboxCategoryVariables": "Променљиве",
   "share": "Подели",
-  "startOver": "Počni ponovo"
+  "startOver": "Počni ponovo",
+  "panelHeaderInstructions": "Упутства",
+  "panelHeaderWorkspace": "Радни простор: ",
+  "continue": "Настави"
 }

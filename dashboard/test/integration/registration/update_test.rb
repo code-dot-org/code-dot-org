@@ -40,7 +40,7 @@ module RegistrationsControllerTests
         put '/users', params: {format: :js, user: {age: 9}}
         assert_response :no_content
 
-        assert_equal Date.today - 9.years, assigns(:user).birthday
+        assert_equal Time.zone.today - 9.years, assigns(:user).birthday
       end
     end
 

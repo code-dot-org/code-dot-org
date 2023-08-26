@@ -1,5 +1,5 @@
 require 'test_helper'
-class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
+class Pd::SessionAttendanceControllerTest < ActionController::TestCase
   freeze_time
 
   self.use_transactional_test_case = true
@@ -54,11 +54,16 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
     assert_template :too_late
   end
 
-  test 'attend no matching enrollment renders match_registration view' do
+  test 'attend signed out redirects to sign_in page' do
+    get :attend, params: {session_code: @session.code}
+    assert_redirected_to_sign_in
+  end
+
+  test 'attend no matching enrollment renders no_enrollment_match view' do
     sign_in @teacher
     get :attend, params: {session_code: @session.code}
     assert_response :success
-    assert_template :match_registration
+    assert_template :no_enrollment_match
   end
 
   test 'attend with a matching enrollment creates attendance and redirects to home' do

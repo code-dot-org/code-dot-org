@@ -11,9 +11,13 @@
   "blockly_toolboxCategoryFunctions": "Mga function",
   "blockly_toolboxCategoryLogic": "Lohika",
   "blockly_toolboxCategoryMath": "Math",
+  "blockly_toolboxCategoryPlay": "Mga Tunog",
   "blockly_toolboxCategoryVariables": "Mga variable",
   "feedback": "Feedback",
   "share": "Ibahagi",
   "startOver": "Magsimula sa Umpisa",
-  "upload": "I-upload"
+  "upload": "I-upload",
+  "panelHeaderInstructions": "Mga Tagubilin",
+  "panelHeaderWorkspace": "Workspace: ",
+  "continue": "Magpatuloy"
 }

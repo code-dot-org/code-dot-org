@@ -23,8 +23,16 @@ execute 'install ruby-build' do
   not_if "which ruby-build && ruby-build --version | grep --quiet --fixed-strings 'ruby-build #{RUBY_BUILD_VERSION}'"
 end
 
+# Install dependencies require for ruby-build to succeed
+apt_package %w(zlib1g-dev)
+
 execute 'install ruby with ruby build' do
-  # target /usr for consistency; that's where our old apt approach targeted
-  command "ruby-build #{node['cdo-ruby']['version']} /usr"
-  not_if "which ruby && ruby --version | grep --quiet '^ruby #{node['cdo-ruby']['version']}'"
+  # Target /usr/local; it might make sense to install ruby itself to /usr as
+  # our old apt approach did, but the directory we target here is also the one
+  # RubyGems will target, and local is more appropriate for that installation
+  command "ruby-build #{node['cdo-ruby']['version']} /usr/local"
+
+  # Only actually execute this if there's a change to either the install
+  # directory or the version of ruby that we're trying to install
+  not_if "(which ruby | grep --quiet --fixed-strings '/usr/local/bin/ruby') && (ruby --version | grep --quiet '^ruby #{node['cdo-ruby']['version']}')"
 end

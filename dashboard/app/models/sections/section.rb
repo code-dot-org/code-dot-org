@@ -228,7 +228,9 @@ class Section < ApplicationRecord
   def name_safe_students
     name_splitter_proc = ->(student) {FullNameSplitter.split(student.name)}
 
-    SafeNames.get_safe_names(students, name_splitter_proc).map do |safe_name_and_student|
+    students_only = students.where.not(user_type: "teacher")
+
+    SafeNames.get_safe_names(students_only, name_splitter_proc).map do |safe_name_and_student|
       # Replace each student name with the safe name (for this instance, not saved)
       safe_name, student = safe_name_and_student
       student.name = safe_name
@@ -283,14 +285,14 @@ class Section < ApplicationRecord
     # OAUTH login section (Google Classroom / clever).
     # added_by is passed only from the sections_students_controller, used by teachers to
     # manager their rosters.
-    unless added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)
-      return ADD_STUDENT_RESTRICTED if restrict_section == true && (!follower || follower.deleted?)
+    if !(added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)) && (restrict_section == true && (!follower || follower.deleted?))
+      return ADD_STUDENT_RESTRICTED
     end
 
     # Unless the sections login type is Google or Clever
-    unless externally_rostered?
+    if !externally_rostered? && (students.distinct(&:id).size >= @@section_capacity)
       # Return a full section error if the section is already at capacity.
-      return ADD_STUDENT_FULL if students.distinct(&:id).size >= @@section_capacity
+      return ADD_STUDENT_FULL
     end
 
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
@@ -322,11 +324,9 @@ class Section < ApplicationRecord
       end
     end
 
-    if options[:notify]
-      # Though in theory required, we are missing an email address for many teachers.
-      if user && user.email.present?
-        FollowerMailer.student_disassociated_notify_teacher(teacher, student).deliver_now
-      end
+    # Though in theory required, we are missing an email address for many teachers.
+    if options[:notify] && user && user.email.present?
+      FollowerMailer.student_disassociated_notify_teacher(teacher, student).deliver_now
     end
   end
 

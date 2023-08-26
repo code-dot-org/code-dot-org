@@ -1,0 +1,31 @@
+{
+  "category": "TestCategory",
+  "config": {
+    "func": "testFunc",
+    "blockText": "{TEST_TYPE} | {TEST_OPTIONS_1} | {TEST_OPTIONS_1}",
+    "args": [
+      {
+        "name": "TEST_TYPE",
+        "type": "TestType"
+      },
+      {
+        "name": "TEST_OPTIONS_1",
+        "options": [
+          [
+            "Test_1",
+            "\"Test_1\""
+          ]
+        ]
+      },
+      {
+        "name": "TEST_OPTIONS_2",
+        "options": [
+          [
+            "Test_2",
+            "\"Test_2\""
+          ]
+        ]
+      }
+    ]
+  }
+}

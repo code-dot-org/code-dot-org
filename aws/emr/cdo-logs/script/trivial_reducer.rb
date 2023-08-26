@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 # This implements the trivial reducer, e.g., the reducer that emits all inputs
 # without mutation.

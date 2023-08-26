@@ -732,6 +732,7 @@ ne:
         other: "अन्य"
       workshop_course:
         csp: '''16-''17 CS Principles'
+        other: 'अन्य'
       email_opt_in:
         opt_in_yes: 'हो'
         opt_in_no: 'होइन'
@@ -744,3 +745,4 @@ ne:
   copy: 'प्रतिलिपि गर्नुहोस्'
   pixelation:
     binary: "Binary"
+

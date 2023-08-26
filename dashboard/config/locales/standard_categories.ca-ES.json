@@ -2,17 +2,719 @@
   "ca-ES": {
     "data": {
       "standard_categories": {
-        "CT": {
-          "description": "Pensament computacional"
+        "1": {
+          "description": "Els estudiants demostren pensament creatiu, construir coneixement i desenvolupar productes i processos innovadors utilitzant la tecnologia."
         },
-        "L": {
-          "description": "Llengua"
+        "2": {
+          "description": "Els estudiants utilitzen mitjans i entorns digitals per comunicar-se i treballar col·laborativament, fins i tot a distància, per donar suport a l'aprenentatge individual i contribuir a l'aprenentatge dels altres."
+        },
+        "3": {
+          "description": "Els estudiants apliquen eines digitals per recopilar, avaluar i utilitzar informació."
+        },
+        "3-A-i": {
+          "description": "Naturalesa de l'aprenentatge - humans vs màquines"
+        },
+        "3-A-ii": {
+          "description": "Naturalesa de l'aprenentatge - trobar patrons en les dades"
+        },
+        "3-A-iii": {
+          "description": "Naturalesa de l'Aprenentatge - formació d'un model"
+        },
+        "3-A-iv": {
+          "description": "Naturalesa de l'aprenentatge - constructinv vs l'ús d'un raonador"
+        },
+        "3-A-v": {
+          "description": "Naturalesa de l'aprenentatge - ajust de les representacions internes"
+        },
+        "3-A-vi": {
+          "description": "Naturalesa de l'aprenentatge - aprendre de l'experiència"
+        },
+        "3-B-i": {
+          "description": "Xarxes Neuronals - estructura d'una xarxa neuronal"
+        },
+        "3-B-ii": {
+          "description": "Xarxes Neuronals: ajust de pes"
+        },
+        "3-C-i": {
+          "description": "Conjunts de dades: conjunts de característiques"
+        },
+        "3-C-ii": {
+          "description": "Conjunts de dades - grans conjunts de dades"
+        },
+        "3-C-iii": {
+          "description": "Conjunts de dades - biaix"
+        },
+        "4": {
+          "description": "Els estudiants utilitzen habilitats de pensament crític per planificar i dur a terme investigacions, gestionar projectes, resoldre problemes i prendre decisions informades utilitzant eines i recursos digitals adequats."
+        },
+        "5": {
+          "description": "Que els estudiants comprenguin qüestions humanes, culturals i socials relacionades amb la tecnologia i practiquin un comportament legal i ètic."
+        },
+        "6": {
+          "description": "Els estudiants demostren una comprensió sòlida dels conceptes de tecnologia, sistemes i operacions."
+        },
+        "AAP-1": {
+          "description": "Per trobar solucions específiques a problemes generalitzables, els programadors representen i organitzen les dades de múltiples maneres."
+        },
+        "AAP-1.A": {
+          "description": "Representa un valor amb una variable."
+        },
+        "AAP-1.B": {
+          "description": "Determineu el valor d'una variable com a resultat d'una tasca."
+        },
+        "AAP-1.C": {
+          "description": "Representeu una llista o cadena utilitzant una variable."
+        },
+        "AAP-2": {
+          "description": "La forma en què les declaracions són seqüenciades i combinades en un programa determina el resultat computat. Els programes incorporen construccions d'iteració i selecció per representar la repetició i prendre decisions per gestionar valors d'entrada variats."
+        },
+        "AAP-2.A": {
+          "description": "Expressar un algorisme que utilitza seqüenciació sense utilitzar un llenguatge de programació."
+        },
+        "AAP-2.B": {
+          "description": "Representeu un procés algorítmic pas a pas utilitzant sentències de codi seqüencial."
+        },
+        "AAP-2.C": {
+          "description": "Avaluar expressions que utilitzen operadors aritmètics."
+        },
+        "AAP-2.D": {
+          "description": "Avaluar expressions que manipulen cadenes."
+        },
+        "AAP-2.E": {
+          "description": "Per a les relacions entre dues variables, expressions o valors: \na. representar utilitzant operadors relacionals\nb Avaluar expressions que utilitzen operadors relacionals."
+        },
+        "AAP-2.F": {
+          "description": "Per a les relacions entre valors booleans:\na. representar utilitzant operadors lògics.\nb Avaluar expressions que utilitzen operadors lògics."
+        },
+        "AAP-2.G": {
+          "description": "Expressar un algorisme que utilitza la selecció sense utilitzar un llenguatge de programació."
+        },
+        "AAP-2.H": {
+          "description": "Per a la selecció:\na Representeu les sentències condicionals.\nb Determineu el resultat de les declaracions condicionals."
+        },
+        "AAP-2.I": {
+          "description": "Per a la selecció imbricada:\na. representeu usant sentències condicionals niades. \nb Determineu el resultat de les declaracions condicionals niades."
+        },
+        "AAP-2.J": {
+          "description": "Expressar un algorisme que utilitza iteració sense utilitzar un llenguatge de programació."
+        },
+        "AAP-2.K": {
+          "description": "Per a la iteració:\na. representeu usant sentències d'iteració.\nb Determineu el resultat o l'efecte secundari de les declaracions d'iteració."
+        },
+        "AAP-2.L": {
+          "description": "Compareu diversos algoritmes per determinar si produeixen el mateix efecte secundari o resultat."
+        },
+        "AAP-2.N": {
+          "description": "Per a les operacions de llista:\na Escriu expressions que utilitzen procediments d'indexació de llistes i llistes.\nb Avaluar expressions que utilitzen procediments d'indexació de llistes i llistes."
+        },
+        "AAP-2.O": {
+          "description": "Per als algorismes que impliquen elements d'una llista:\na. representeu utilitzant sentències iteratives per recórrer una llista.\nb Determinar el resultat d'un algorisme amb traversals de llista."
+        },
+        "AAP-2.P": {
+          "description": "Per algorismes de cerca binària:\na. determinar el nombre d'iteracions necessàries per trobar un valor en un conjunt de dades. \nb Explicar els requisits necessaris per completar una cerca binària."
+        },
+        "AAP-3": {
+          "description": "Els programadors descomponen els problemes en peces més petites i manejables. Mitjançant la creació de procediments i l'aprofitament de paràmetres, els programadors generalitzen processos que poden ser reutilitzats. Els procediments permeten als programadors aprofitar el codi existent que ja ha estat provat, permetent als programadors escriure programes més ràpidament i amb més confiança."
+        },
+        "AAP-3.A": {
+          "description": "Per a les trucades de procediment:\na Escriu declaracions per trucar als procediments.\nb Determineu el resultat o l'efecte d'una trucada de procediment."
+        },
+        "AAP-3.B": {
+          "description": "Per a les trucades de procediment:\na Escriu declaracions per trucar als procediments.\nb Determineu el resultat o l'efecte d'una trucada de procediment."
+        },
+        "AAP-3.C": {
+          "description": "Desenvolupar abstraccions procedimentals per gestionar la complexitat en un programa mitjançant procediments d'escriptura."
+        },
+        "AAP-3.D": {
+          "description": "Seleccioneu biblioteques apropiades o segments de codi existents per utilitzar-los en la creació de nous programes."
+        },
+        "AAP-3.E": {
+          "description": "Per generar valors aleatoris: \na. escriure expressions per generar possibles valors. \nb Avaluar expressions per determinar els possibles resultats."
+        },
+        "AAP-3.F": {
+          "description": "Per a simulacions:\na. explicar com es poden utilitzar els ordinadors per representar fenòmens o resultats del món real. \nb Comparar l'ús de simulacions amb contextos del món real."
+        },
+        "AAP-4": {
+          "description": "Hi ha problemes que l'ordinador no pot resoldre, i fins i tot quan l'ordinador pot resoldre un problema, pot no ser capaç de fer-ho en un temps raonable."
+        },
+        "AAP-4.B": {
+          "description": "Explicar l'existència de problemes indecidibles en informàtica."
+        },
+        "AP": {
+          "description": "Algorismes i programació"
+        },
+        "APR": {
+          "description": "Aritmètica amb polinomis i expressions racionals"
+        },
+        "BF": {
+          "description": "Funcions de construcció"
+        },
+        "BI-1": {
+          "description": "Els ordinadors perceben el món mitjançant sensors"
+        },
+        "BI-2": {
+          "description": "Els agents mantenen representacions del món i les utilitzen per raonar"
+        },
+        "BI-3": {
+          "description": "Els ordinadors poden aprendre de les dades"
+        },
+        "BI-4": {
+          "description": "Els agents intel·ligents requereixen molts tipus de coneixements per interactuar de forma natural amb els humans"
+        },
+        "BI-5": {
+          "description": "La IA pot afectar la societat de manera positiva i negativa"
         },
         "C": {
           "description": "Túnel"
         },
+        "CC": {
+          "description": "Comptar i cardinalitat"
+        },
+        "CD": {
+          "description": "Ordinadors i dispositius de comunicació"
+        },
+        "CED": {
+          "description": "Creació d'equacions"
+        },
+        "CI": {
+          "description": "Impactes comunitaris, globals i ètics"
+        },
+        "CL": {
+          "description": "Col·laboració"
+        },
+        "CN": {
+          "description": "El sistema de nombres complexos"
+        },
+        "CO": {
+          "description": "Congruència"
+        },
+        "CON-1": {
+          "description": "La forma en què les variables i els operadors són seqüenciats i combinats en una expressió determina el resultat computat."
+        },
+        "CON-1.A": {
+          "description": "Avaluar expressions aritmètiques en un codi de programa"
+        },
+        "CON-1.B": {
+          "description": "Avaluar el que s'emmagatzema en una variable com a resultat d'una expressió amb una sentència d'assignació"
+        },
+        "CON-1.C": {
+          "description": "Avaluar expressions aritmètiques que utilitzen el càsting."
+        },
+        "CON-1.D": {
+          "description": "Avaluar expressions que utilitzen els mètodes de la classe de Matemàtiques."
+        },
+        "CON-1.E": {
+          "description": "Avaluar expressions booleanes que utilitzen operadors relacionals en el codi del programa."
+        },
+        "CON-1.F": {
+          "description": "Avaluar expressions booleanes compostes en codi de programa."
+        },
+        "CON-1.G": {
+          "description": "Comparar i contrastar expressions booleanes equivalents."
+        },
+        "CON-1.H": {
+          "description": "Comparar referències a objectes utilitzant expressions booleanes en el codi del programa."
+        },
+        "CON-2": {
+          "description": "Els programadors incorporen iteració i selecció al codi com a forma de proporcionar instruccions perquè l'ordinador processi cadascun dels molts valors d'entrada possibles"
+        },
+        "CON-2.A": {
+          "description": "Representar processos lògics de ramificació mitjançant l'ús de sentències condicionals."
+        },
+        "CON-2.B": {
+          "description": "Representar processos lògics de ramificació mitjançant l'ús de sentències condicionals niades."
+        },
+        "CON-2.C": {
+          "description": "Representar processos iteratius utilitzant un whileloop."
+        },
+        "CON-2.D": {
+          "description": "Per algorismes en el context d'una especificació determinada que no requereixi l'ús de traversals: • Identificar algoritmes estàndard. • modificar algoritmes estàndard • Desenvolupar un algorisme."
+        },
+        "CON-2.E": {
+          "description": "Representar processos iteratius utilitzant un bucle for."
+        },
+        "CON-2.F": {
+          "description": "Per algorismes en el context d'una especificació particular que involucra objectes String • Identificar algorismes estàndard • Modificar algoritmes estàndard • Desenvolupar un algorisme."
+        },
+        "CON-2.G": {
+          "description": "Representar processos iteratius niats"
+        },
+        "CON-2.H": {
+          "description": "Comptes d'execució de sentències de càlcul i comparació informal en temps d'execució de sentències iteratives."
+        },
+        "CON-2.I": {
+          "description": "Per algorismes en el context d'una especificació particular que requereixi l'ús de traversals de matriu: • Identificar algoritmes estàndard. • modificar algoritmes estàndard • Desenvolupar un algorisme."
+        },
+        "CON-2.J": {
+          "description": "Per algorismes en el context d'una especificació particular que requereix l'ús de traversals d'ArrayList: • Identificar algorismes estàndard. • Modificar algoritmes estàndard • Desenvolupar un algorisme."
+        },
+        "CON-2.K": {
+          "description": "Aplicar algorismes de cerca seqüencial/lineal per cercar informació específica en objectes array o ArrayList."
+        },
+        "CON-2.L": {
+          "description": "Aplica algorismes d'ordenació de selecció i ordenació d'inserció per ordenar els elements dels objectes array o ArrayList."
+        },
+        "CON-2.M": {
+          "description": "Comptes d'execució de sentències de càlcul i comparació informal en temps d'execució dels algorismes d'ordenació."
+        },
+        "CON-2.N": {
+          "description": "Per Algorismes en el context d'una especificació particular que requereix l'ús de travesses de matriu 2D: • Identificar algoritmes estàndard. • Modificar algoritmes estàndard • Desenvolupar un algorisme."
+        },
+        "CON-2.O": {
+          "description": "Determinar el resultat de l'execució de mètodes recursius."
+        },
+        "CON-2.P": {
+          "description": "Aplicar algorismes de cerca recursiva a la informació dels objectes String, 1D array o ArrayList."
+        },
+        "CON-2.Q": {
+          "description": "Aplicar algorismes recursius per ordenar elements d'objectes array o ArrayList."
+        },
+        "CP": {
+          "description": "Probabilitat condicional i les regles de la probabilitat"
+        },
+        "CPP": {
+          "description": "Pràctica i programació d'Informàtica"
+        },
+        "CRD-1": {
+          "description": "Incorporar múltiples perspectives a través de la col·laboració millora les innovacions informàtiques que s'estan desenvolupant."
+        },
+        "CRD-1.A": {
+          "description": "Explicar com es milloren les innovacions informàtiques a través de la col·laboració."
+        },
+        "CRD-1.B": {
+          "description": "Explicar com les innovacions informàtiques són desenvolupades per grups de persones."
+        },
+        "CRD-1.C": {
+          "description": "Demostrar habilitats interpersonals efectives durant la col·laboració."
+        },
+        "CRD-2": {
+          "description": "Els desenvolupadors creen i innoven utilitzant un procés de disseny iteratiu centrat en l'usuari, que incorpora cicles d'implementació/retroalimentació i que deixa un ampli espai per a l'experimentació i la presa de riscos."
+        },
+        "CRD-2.A": {
+          "description": "Descriure el propòsit d'una innovació informàtica."
+        },
+        "CRD-2.B": {
+          "description": "Expliqueu com funciona un programa o un segment de codi."
+        },
+        "CRD-2.C": {
+          "description": "Identificar les entrades a un programa."
+        },
+        "CRD-2.D": {
+          "description": "Identificar les sortides produïdes per un programa."
+        },
+        "CRD-2.E": {
+          "description": "Desenvolupar un programa utilitzant un procés de desenvolupament."
+        },
+        "CRD-2.F": {
+          "description": "Dissenyar un programa i la seva interfície d'usuari."
+        },
+        "CRD-2.G": {
+          "description": "Descriure el propòsit d'un segment de codi o programa escrivint documentació."
+        },
+        "CRD-2.H": {
+          "description": "Reconeixeu els segments de codi utilitzats d'altres fonts."
+        },
+        "CRD-2.I": {
+          "description": "Per errors en un algoritme o programa: \na Identificar l'error. \nb Corregeix l'error."
+        },
+        "CRD-2.J": {
+          "description": "Identificar les entrades i les corresponents sortides esperades o comportaments que es poden utilitzar per comprovar la correcció d'un algoritme o programa."
+        },
+        "CS": {
+          "description": "Sistemes Informàtics"
+        },
+        "CSN-1": {
+          "description": "Els sistemes informàtics i les xarxes faciliten com es transfereixen les dades."
+        },
+        "CSN-1.A": {
+          "description": "Explicar com funcionen els dispositius informàtics junts en una xarxa."
+        },
+        "CSN-1.B": {
+          "description": "Expliqueu com funciona Internet."
+        },
+        "CSN-1.C": {
+          "description": "Explicar com s'envien les dades a través d'Internet a través de paquets."
+        },
+        "CSN-1.D": {
+          "description": "Descriure les diferències entre Internet i la World Wide Web."
+        },
+        "CSN-2": {
+          "description": "La computació paral·lela i distribuïda aprofita múltiples ordinadors per resoldre més ràpidament problemes complexos o processar grans conjunts de dades."
+        },
+        "CSN-2.A": {
+          "description": "Comparar solucions de problemes que utilitzen computació seqüencial, paral·lela i distribuïda."
+        },
+        "CSN-2.B": {
+          "description": "Determinar l'eficiència de solucions seqüencials i paral·leles."
+        },
+        "CSN-2.C": {
+          "description": "Descriure beneficis i reptes de la computació paral·lela i distribuïda."
+        },
+        "CT": {
+          "description": "Pensament computacional"
+        },
+        "D1": {
+          "description": "Desenvolupament de preguntes i planificació de consultes"
+        },
+        "D2.Civ": {
+          "description": "Cívics"
+        },
+        "D2.Eco": {
+          "description": "Economia"
+        },
+        "D3.Claims": {
+          "description": "Desenvolupament de reclamacions i ús de proves"
+        },
+        "D3.Sources": {
+          "description": "Recopilació i avaluació de fonts"
+        },
+        "D4.Action": {
+          "description": "Prenent accions informades"
+        },
+        "D4.Conclusions": {
+          "description": "Comunicar i Criticar Conclusions"
+        },
+        "DA": {
+          "description": "Dades i anàlisi"
+        },
+        "DAT-1": {
+          "description": "La forma en què l'ordinador representa les dades és diferent de la forma en què les dades s'interpreten i es mostren per a l'usuari. Els programes s'utilitzen per traduir dades en una representació que és més fàcilment entesa per les persones."
+        },
+        "DAT-1.A": {
+          "description": "Expliqueu com es poden representar les dades mitjançant bits."
+        },
+        "DAT-1.B": {
+          "description": "Explicar les conseqüències de l'ús de bits per representar dades."
+        },
+        "DAT-1.D": {
+          "description": "Comparar algoritmes de compressió de dades per determinar quin és el millor en un context concret."
+        },
+        "DAT-2": {
+          "description": "Els programes es poden utilitzar per processar dades, cosa que permet als usuaris descobrir informació i crear nou coneixement."
+        },
+        "DAT-2.A": {
+          "description": "Descriure quina informació es pot extreure de les dades."
+        },
+        "DAT-2.B": {
+          "description": "Descriviu quina informació es pot extreure de les metadades."
+        },
+        "DAT-2.C": {
+          "description": "Identificar els reptes associats al tractament de dades."
+        },
+        "DAT-2.D": {
+          "description": "Extreure informació de dades mitjançant un programa."
+        },
+        "DAT-2.E": {
+          "description": "Expliqueu com es poden utilitzar els programes per obtenir informació i coneixement a partir de les dades."
+        },
+        "EE": {
+          "description": "Expressions i equacions"
+        },
+        "ESS": {
+          "description": "Ciència de la Terra i l'Espai"
+        },
+        "ESS1": {
+          "description": "Lloc de la Terra a l'Univers"
+        },
+        "ESS2": {
+          "description": "Sistemes de la Terra"
+        },
+        "ESS3": {
+          "description": "Terra i Activitat Humana"
+        },
+        "ETS": {
+          "description": "Enginyeria en Ciències"
+        },
+        "ETS1": {
+          "description": "Disseny d'enginyeria"
+        },
         "F": {
           "description": "Funcions"
+        },
+        "G": {
+          "description": "Geometria"
+        },
+        "GMD": {
+          "description": "Mesura i dimensió geomètrica"
+        },
+        "GPE": {
+          "description": "Expressió de propietats geomètriques amb equacions"
+        },
+        "IC": {
+          "description": "Els impactes de la informàtica"
+        },
+        "ID": {
+          "description": "Interpretar dades categòriques i quantitatives"
+        },
+        "IF": {
+          "description": "Funcions d'interpretació"
+        },
+        "IOC-1": {
+          "description": "Tot i que les innovacions informàtiques solen dissenyar-se per aconseguir un propòsit específic, poden tenir conseqüències no desitjades."
+        },
+        "IOC-1.A": {
+          "description": "Explicar com un efecte d'una innovació informàtica pot ser beneficiós i perjudicial."
+        },
+        "IOC-1.B": {
+          "description": "Explicar com una innovació informàtica pot tenir un impacte més enllà del propòsit previst."
+        },
+        "IOC-1.C": {
+          "description": "Descriure qüestions que contribueixen a la bretxa digital."
+        },
+        "IOC-1.D": {
+          "description": "Expliqueu com existeix el biaix en les innovacions informàtiques."
+        },
+        "IOC-1.E": {
+          "description": "Explicar com les persones participen en els processos de resolució de problemes a escala."
+        },
+        "IOC-1.F": {
+          "description": "Explicar com l'ús de la informàtica podria plantejar preocupacions legals i ètiques."
+        },
+        "IOC-2": {
+          "description": "L'ús d'innovacions informàtiques pot implicar riscos per a la seva seguretat personal i identitat."
+        },
+        "IOC-2.A": {
+          "description": "Descriure els riscos per a la privacitat de recopilar i emmagatzemar dades personals en un sistema informàtic."
+        },
+        "IOC-2.B": {
+          "description": "Expliqueu com es poden protegir els recursos informàtics i es poden utilitzar malament."
+        },
+        "IOC-2.C": {
+          "description": "Expliqueu com es guanya l'accés no autoritzat als recursos informàtics."
+        },
+        "L": {
+          "description": "Llengua"
+        },
+        "LE": {
+          "description": "Models lineals, quadràtics i exponencials ★"
+        },
+        "LS": {
+          "description": "Ciència de la Vida"
+        },
+        "LS1": {
+          "description": "De les molècules als organismes: estructures i processos"
+        },
+        "LS2": {
+          "description": "Ecosistemes: Interaccions, Energia i Dinàmica"
+        },
+        "LS3": {
+          "description": "Herència: Herència i Variació de Trets"
+        },
+        "LS4": {
+          "description": "Evolució Biològica: Unitat i Diversitat"
+        },
+        "MD": {
+          "description": "Ús de la probabilitat per prendre decisions"
+        },
+        "MG": {
+          "description": "Modelatge amb geometria"
+        },
+        "MOD-1": {
+          "description": "Alguns objectes o conceptes es representen amb tanta freqüència que els programadors poden aprofitar el codi existent que ja ha estat provat, permetent-los escriure solucions més ràpidament i amb un major grau de confiança"
+        },
+        "MOD-1.A": {
+          "description": "Trucar als mètodes de la classe System per generar sortida a la consola."
+        },
+        "MOD-1.B": {
+          "description": "Explicar la relació entre una classe i un objecte."
+        },
+        "MOD-1.C": {
+          "description": "Identificar, utilitzant la seva signatura, el constructor correcte que s'està anomenant."
+        },
+        "MOD-1.D": {
+          "description": "Per crear objecte: a. crear objectes cridant constructors sense paràmetres. b. crear objectes cridant constructors amb paràmetres."
+        },
+        "MOD-1.E": {
+          "description": "Trucar mètodes de buit no estàtics sense paràmetres."
+        },
+        "MOD-1.F": {
+          "description": "Trucar mètodes de buit no estàtic amb paràmetres"
+        },
+        "MOD-1.G": {
+          "description": "Trucar mètodes no estàtics no nuls amb o sense paràmetres"
+        },
+        "MOD-1.H": {
+          "description": "Trucar mètodes estàtics."
+        },
+        "MOD-2": {
+          "description": "Els programadors utilitzen codi per representar un objecte físic o concepte no físic, real o imaginat, definint una classe basada en els attirbutes i/o comportaments de l'objecte o concepte"
+        },
+        "MOD-2.A": {
+          "description": "Designar restriccions d'accés i visibilitat a classes, dades, constructors i mètodes."
+        },
+        "MOD-2.B": {
+          "description": "Definir variables d'instància per als atributs a inicialitzar a través dels constructors d'una classe."
+        },
+        "MOD-2.C": {
+          "description": "Desribe la funcionalitat i l'ús del codi del programa a través de comentaris."
+        },
+        "MOD-2.D": {
+          "description": "Definir comportaments d'un objecte a través de mètodes no nuls sense pràmetres escrits en una classe."
+        },
+        "MOD-2.E": {
+          "description": "Definir comportaments d'un objecte a través de mètodes de buit amb o sense paràmetres escrits en una classe."
+        },
+        "MOD-2.F": {
+          "description": "Definir comportaments d'un objecte a través de mètodes no nuls amb paràmetres escrits en una classe."
+        },
+        "MOD-2.G": {
+          "description": "Definir comportaments d'una classe a través de mètodes estàtics."
+        },
+        "MOD-2.H": {
+          "description": "Definir les variables estàtiques que pertanyen a la classe."
+        },
+        "MOD-3": {
+          "description": "Quan les classes mulitple contenen atributs i comportaments comuns, els programadors creen una nova classe que conté els atributs i comportaments compartits formant una jerarquia. Les modificacions realitzades al nivell més alt de la jerarquia s'apliquen a les subclasses."
+        },
+        "MOD-3.A": {
+          "description": "Designar visibilitat privada de variables d'instància per encapsular els atributs d'un objecte."
+        },
+        "MOD-3.B": {
+          "description": "Crear una relació d'herència d'una subclasse a la superclasse."
+        },
+        "MOD-3.C": {
+          "description": "Definir variables de referència d'una superclasse a assignar a un objecte d'una subclasse en la mateixa jerarquia."
+        },
+        "MOD-3.D": {
+          "description": "Mètodes de trucada en una relació d'herència."
+        },
+        "MOD-3.E": {
+          "description": "Anomenar mètodes de classe Object a través de l'herència."
+        },
+        "MP": {
+          "description": "Pràctiques de Matemàtiques"
+        },
+        "NBT": {
+          "description": "Nombre i operacions a la base deu"
+        },
+        "NF": {
+          "description": "Nombre i operacions — Fraccions"
+        },
+        "NI": {
+          "description": "Xarxes i Internet"
+        },
+        "NS": {
+          "description": "El sistema de números"
+        },
+        "OA": {
+          "description": "Operacions i pensament algebraic"
+        },
+        "PS": {
+          "description": "Ciències Físiques"
+        },
+        "PS1": {
+          "description": "La matèria i les seves interaccions"
+        },
+        "PS2": {
+          "description": "Moviment i estabilitat: forces i interaccions"
+        },
+        "PS3": {
+          "description": "Energia"
+        },
+        "PS4": {
+          "description": "Les ones i les seves aplicacions en tecnologies en transferència d'informació"
+        },
+        "Q": {
+          "description": "Quantitats"
+        },
+        "REI": {
+          "description": "Raonament amb equacions i desigualtats"
+        },
+        "RF": {
+          "description": "Habilitats fundacionals de lectura"
+        },
+        "RH": {
+          "description": "Lectura Història/Estudis Socials"
+        },
+        "RI": {
+          "description": "Lectura Informativa"
+        },
+        "RL": {
+          "description": "Llegir Literatura"
+        },
+        "RN": {
+          "description": "El sistema de nombres reals"
+        },
+        "RP": {
+          "description": "Ràtios i relacions proporcionals"
+        },
+        "RST": {
+          "description": "Lectura Ciència/Tècnica"
+        },
+        "SL": {
+          "description": "Parlar i escoltar"
+        },
+        "SP": {
+          "description": "Estadística i probabilitat"
+        },
+        "SRT": {
+          "description": "Similitud, triangles de dreta i trigonometria"
+        },
+        "SSE": {
+          "description": "Veure l'estructura en expressions"
+        },
+        "TF": {
+          "description": "Funcions trigonomètriques"
+        },
+        "VAR-1": {
+          "description": "Per trobar solucions específiques a problemes generalitzables, els programadors inclouen variables en el seu codi perquè el mateix algorisme s'executi utilitzant diferents valors d'entrada"
+        },
+        "VAR-1.A": {
+          "description": "Crear literals de cadena"
+        },
+        "VAR-1.B": {
+          "description": "Identificar la categoria de tipus de dades més apropiada per a una especificació concreta"
+        },
+        "VAR-1.C": {
+          "description": "Declarar variables dels tipus correctes per representar dades primitives"
+        },
+        "VAR-1.D": {
+          "description": "Definir variables dels tipus correctes per representar les dades de referència."
+        },
+        "VAR-1.E": {
+          "description": "Per a la classe String: a Crear objectes String. b. crida als mètodes String."
+        },
+        "VAR-1.F": {
+          "description": "Per a classes d'embolcall: a. crear objectes enters. b. cridar mètodes enters. c. crear objectes dobles. d. cridar mètodes dobles."
+        },
+        "VAR-1.G": {
+          "description": "Expliqueu on es poden utilitzar les variables en el codi del programa."
+        },
+        "VAR-1.H": {
+          "description": "Avaluar les expressions de referència a objectes que utilitzen la paraula clau this."
+        },
+        "VAR-2": {
+          "description": "Per gestionar grans quantitats de dades o relacions complexes en les dades, els programadors escriuen codi que agrupa les dades en una única estructura de dades wihtout creant variables individuals per a cada valor."
+        },
+        "VAR-2.A": {
+          "description": "Representar col·leccions de dades primitives o de referència a objectes relacionats utilitzant objectes de matriu unidimensional (1D)."
+        },
+        "VAR-2.B": {
+          "description": "Recorre els elements en una matriu 1D."
+        },
+        "VAR-2.C": {
+          "description": "Recorre els elements en un objecte de matriu 1D utilitzant un bucle millorat per."
+        },
+        "VAR-2.D": {
+          "description": "Representar col·leccions de dades de referència d'objectes relacionats utilitzant objectes ArrayList."
+        },
+        "VAR-2.E": {
+          "description": "Per objectes ArrayList: • Travessar utilitzant un bucle for or while. • Travessar usant un bucle millorat per."
+        },
+        "VAR-2.F": {
+          "description": "Representar col·leccions de dades primitives o de referència a objectes relacionats utilitzant objectes de matriu bidimensional (2D)."
+        },
+        "VAR-2.G": {
+          "description": "Per a objectes de matriu 2D: • Recorre usant niat per bucles. • travessa usant niat millorat per bucles."
+        },
+        "VM": {
+          "description": "Quantitats de vector i matriu"
+        },
+        "W": {
+          "description": "Escriure"
+        },
+        "WHST": {
+          "description": "Escriure HS/S/T"
         }
       }
     }

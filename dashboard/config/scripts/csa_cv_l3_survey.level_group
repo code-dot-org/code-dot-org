@@ -1,0 +1,11 @@
+name 'CSA-CV-L3-Survey'
+title 'Lesson 3: Using Your Model Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'CSA SE Student End of Lesson Survey'
+level 'CSA-CV-L3-Survey-Q01'
+level 'CSA-CV-L3-Survey-Q02'
+level 'CSA-CV-L3-Survey-Q03'
+level 'CSA-CV-L3-Survey-Q04'

@@ -14,6 +14,9 @@
         "csd-2022/board-events": {
           "display_name": "ボードイベント"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "サーキットプレイグラウンドの概要"
+        },
         "csd-2022/classes": {
           "display_name": "クラス"
         },
@@ -38,6 +41,9 @@
         "csd-2022/html-overview": {
           "display_name": "概要"
         },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "AI ラボの紹介"
+        },
         "csd-2022/javascript": {
           "display_name": "JavaScriptの"
         },
@@ -52,6 +58,9 @@
         },
         "csd-2022/maker-toolkit-overview": {
           "display_name": "概要"
+        },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "AI ラボのモデルカード"
         },
         "csd-2022/multi-screen-apps": {
           "display_name": "マルチスクリーンアプリ"
@@ -96,7 +105,7 @@
           "display_name": "ウェッブ ラボ"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+          "content": "[][0]"
         }
       }
     }

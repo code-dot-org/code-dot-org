@@ -12,5 +12,8 @@
   "blockly_toolboxCategoryVariables": "Променливи",
   "control": "Контрола",
   "share": "Сподели",
-  "startOver": "Започни"
+  "startOver": "Започни",
+  "panelHeaderInstructions": "Инструкции",
+  "panelHeaderWorkspace": "Работна површина: ",
+  "continue": "Продолжи"
 }

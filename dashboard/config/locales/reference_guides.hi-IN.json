@@ -17,6 +17,9 @@
         "csd-2022/board-events": {
           "display_name": "बोर्ड इवेंट्स"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "सर्किट प्लेग्राउंड अवलोकन"
+        },
         "csd-2022/classes": {
           "display_name": "कक्षाएं"
         },
@@ -50,6 +53,9 @@
         "csd-2022/images-in-html": {
           "display_name": "HTML में चित्र"
         },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "AI लैब का परिचय"
+        },
         "csd-2022/javascript": {
           "display_name": "जावास्क्रिप्ट"
         },
@@ -64,6 +70,9 @@
         },
         "csd-2022/maker-toolkit-overview": {
           "display_name": "रूपरेखा"
+        },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "AI लैब में मॉडल कार्ड"
         },
         "csd-2022/multi-screen-apps": {
           "display_name": "मल्टी-स्क्रीन ऐप्स"
@@ -108,7 +117,7 @@
           "display_name": "वेब लैब"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+          "content": "[][0]"
         }
       }
     }

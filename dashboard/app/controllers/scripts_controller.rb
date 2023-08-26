@@ -13,6 +13,9 @@ class ScriptsController < ApplicationController
   use_reader_connection_for_route(:show)
 
   def show
+    if @script.is_deprecated
+      return render 'errors/deprecated_course'
+    end
     if @script.redirect_to?
       redirect_path = script_path(Unit.get_from_cache(@script.redirect_to))
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
@@ -155,14 +158,18 @@ class ScriptsController < ApplicationController
     @script.destroy
     if Rails.application.config.levelbuilder_mode
       filename = "config/scripts/#{@script.name}.script"
-      File.delete(filename) if File.exist?(filename)
+      FileUtils.rm_f(filename)
       filename = "config/scripts_json/#{@script.name}.script_json"
-      File.delete(filename) if File.exist?(filename)
+      FileUtils.rm_f(filename)
     end
     redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Unit.model_name.human)
   end
 
   def edit
+    # Deprecated scripts should not be edited.
+    if @script.is_deprecated
+      return render 'errors/deprecated_course'
+    end
     raise "The new unit editor does not support level variants with experiments" if @script.is_migrated && @script.script_levels.any?(&:has_experiment?)
     @show_all_instructions = params[:show_all_instructions]
     @script_data = {

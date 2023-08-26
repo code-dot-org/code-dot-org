@@ -1,0 +1,16 @@
+%div.flex-container.align-content-baseline.wrap
+  %figure
+    %img{src: "/images/teach-page-pl-offerings-workshops.png", alt: ""}
+  .content-wrapper
+    - if request.language == "en"
+      %h3.heading-sm
+        =hoc_s(:teach_page_pl_offerings_list_heading_workshops_facilitator_led)
+      %p=hoc_s(:teach_page_pl_offerings_list_desc_workshops_en)
+      %a.link-button{href: "/professional-learning"}
+        =hoc_s(:call_to_action_explore_workshops)
+    - else
+      %h3.heading-sm
+        =hoc_s(:teach_page_pl_offerings_list_heading_workshops)
+      %p=hoc_s(:teach_page_pl_offerings_list_desc_workshops_intl)
+      %a.link-button{href: "https://support.code.org/hc/en-us/articles/115003865532-I-teach-outside-of-the-US-Are-there-resources-to-help-me-teach-computer-science-", target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s(:call_to_action_learn_more)

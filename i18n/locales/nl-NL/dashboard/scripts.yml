@@ -2486,6 +2486,10 @@ nl:
           title: 'Hallo World: Space'
         hello-world-soccer-2022:
           title: 'Hello World: Voetbal'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Vragenlijst
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2670,10 +2674,18 @@ nl:
               display_name: Hoofdstuk 2
             lessonGroup-5:
               display_name: Vragenlijst
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-creativity4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Vragenlijst
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2682,6 +2694,10 @@ nl:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -2696,14 +2712,26 @@ nl:
               display_name: Hoofdstuk 1
             lessonGroup-4:
               display_name: Hoofdstuk 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-design-with-purpose4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-coding4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-impact-in-society3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2728,6 +2756,8 @@ nl:
               display_name: 'Hoofdstuk 2: Hardware Input'
             lessonGroup-5:
               display_name: Vragenlijst
+        ai-temp:
+          title: Hoe AI werkt
         self-paced-pl-csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2761,3 +2791,192 @@ nl:
             lessonGroup-2:
               display_name: Dag 4
           title: Dag 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introductie
+            lesson-12:
+              name: Afronden
+          title: Dag 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Afronden
+          title: Dag 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Afronden
+          title: Dag 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Afronden
+          title: Dag 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Beoordeling
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: Variabelen
+          description_audience: 'Leeftijden: 9-13'
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lessen
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lessen
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lessen
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Data
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lessen
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lessen
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lessen
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-4:
+              display_name: Lussen
+          description_audience: 'Leeftijden: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-4:
+              display_name: Lussen
+            lessonGroup-6:
+              display_name: Data
+          description_audience: 'Leeftijden: 4-7'
+          description_short: Een inleiding tot informatica voor pre-readers.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-4:
+              display_name: Lussen
+            lessonGroup-6:
+              display_name: Gebeurtenissen
+            lessonGroup-8:
+              display_name: Data
+          description_audience: 'Leeftijden: 5-8'
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-4:
+              display_name: Lussen
+            lessonGroup-5:
+              display_name: Gebeurtenissen
+            lessonGroup-6:
+              display_name: Data
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-6:
+              display_name: Lussen
+            lessonGroup-7:
+              display_name: Data
+          description_audience: 'Leeftijden: 7-11'
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Genestelde lussen
+            lessonGroup-4:
+              display_name: Functies
+          description_audience: 'Leeftijden: 8-12'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          description_audience: 'Leeftijden: 9-13'
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Voorwaardelijke instructies
+            lessonGroup-5:
+              display_name: Variabelen
+          description_audience: 'Leeftijden: 9-13'
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
+        vpl-csp-2023-m1:
+          title: Module 1
+        vpl-csp-2023-m2:
+          title: Module 2
+        vpl-csp-2023-m3:
+          title: Module 3
+        vpl-csp-2023-m4:
+          title: Module 4
+        vpl-csp-2023-m5:
+          title: Module 5
+        vpl-csp-2023-m6:
+          title: Module 6
+        vpl-csp-2023-m7:
+          title: Module 7
+        vpl-csp-2023-m8:
+          title: Module 8
+        vpl-csa-2023-m1:
+          title: Module 1
+        how-ai-works-2023:
+          title: Hoe AI werkt
+        vpl-csa-2023-m2:
+          title: Module 2
+        vpl-csa-2023-m3:
+          title: Module 3
+        vpl-csa-2023-m4:
+          title: Module 4
+        vpl-csa-2023-m5:
+          title: Module 5
+        vpl-csa-2023-m6:
+          title: Module 6
+        vpl-csa-2023-m7:
+          title: Module 7
+        vpl-csa-2023-m8:
+          title: Module 8
+        vpl-csd-2023-m1:
+          title: Module 1
+        vpl-csd-2023-m2:
+          title: Module 2
+        vpl-csd-2023-m3:
+          title: Module 3
+        vpl-csd-2023-m4:
+          title: Module 4
+        vpl-csd-2023-m5:
+          title: Module 5
+        vpl-csd-2023-m6:
+          title: Module 6
+        vpl-csd-2023-m7:
+          title: Module 7
+        vpl-csd-2023-m8:
+          title: Module 8

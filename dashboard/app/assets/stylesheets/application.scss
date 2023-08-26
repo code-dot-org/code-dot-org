@@ -71,7 +71,8 @@ body.oceans-blue {
 }
 
 body.music-black {
-  background-color: $music_black;
+  background-color: $dark_black;
+  overscroll-behavior: none;
 }
 
 h1 {
@@ -218,19 +219,19 @@ img.video_thumbnail {
     text-overflow: ellipsis;
   }
 
-  @media screen and (min-width: 971px) {
+  @media screen and (min-width: 1011px) {
     .show_on_tablet {
       display: none;
     }
   }
 
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 1010px) {
     .hide_on_tablet {
       display: none;
     }
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1120px) {
     .create_menu {
       display: none !important;
     }
@@ -317,6 +318,7 @@ img.video_thumbnail {
       margin-top: 2px;
       font-size: 12px;
       display: inline-block;
+      border-radius: 4px;
     }
   }
 
@@ -419,6 +421,21 @@ img.video_thumbnail {
   .children {
     margin-top: 16px;
   }
+}
+
+/* When we are using a dark theme in Google Blockly, we want the main Blockly area (inside #codeWorkspace)
+ * to have a 1px separation between it and the PaneHeader above it.
+*  */
+#codeWorkspace > .cdomoderndark-theme,
+#codeWorkspace > .cdohighcontrastdark-theme,
+#codeWorkspace > .cdoprotanopiadark-theme,
+#codeWorkspace > .cdodeuteranopiadark-theme,
+#codeWorkspace > .cdotritanopiadark-theme {
+  /* A small separation. */
+  margin-top: 1px;
+
+  /* Override the height in Google Blockly's .injectionDiv */
+  height: calc(100% - 1px);
 }
 
 .bannerContentContainer {
@@ -807,9 +824,62 @@ $small-footer-standard-width: 400px;
   height: 24px;
 }
 
-.oceans-blue .small-footer-base {
+.oceans-blue .small-footer-base, .music-black .small-footer-base {
   background-color: initial;
   border-top: initial;
+}
+
+/* Custom styling for the locale & copyright buttons and the copyright flyout,
+ * for Music Lab.
+ */
+.music-black {
+  #page-small-footer {
+    user-select: none;
+
+    .small-footer-base {
+      margin-left: 10px;
+    }
+
+    .i18n-dropdown-container, .copyright-link {
+      height: 26px;
+      box-sizing: border-box;
+      border: solid 1px $neutral_dark40;
+    }
+
+    .copyright-button {
+      user-select: none;
+
+      .copyright-link {
+        width: 26px;
+      }
+    }
+
+    .i18n-dropdown-container, .globe-icon, #locale, .copyright-link {
+      background-color: initial;
+      color: $neutral_dark40;
+    }
+
+    #copyright-flyout {
+      border: solid 1px $neutral_dark40;
+      box-sizing: border-box;
+
+      h4, a:link {
+        color: $neutral_dark50;
+      }
+
+      img {
+        background-color: $neutral_light;
+        border-radius: 4px;
+        padding: 4px;
+        margin-bottom: 6px;
+      }
+    }
+
+    #copyright-flyout, #copyright-scroll-area {
+      background-color: $neutral_dark;
+      color: $neutral_light;
+    }
+  }
 }
 
 .header_separator {
@@ -1533,12 +1603,12 @@ a.download-video {
   cursor: pointer;
   width: 40px;
   height: 34px;
-  font-size: 36px;
+  font-size: 28px;
   background-color: $neutral_white;
   color: $neutral_dark;
   border: 2px solid $neutral_dark;
   padding: 0;
-  line-height: 40px;
+  line-height: 36px;
 
   &:hover {
     background: $neutral_dark20;
@@ -3947,6 +4017,41 @@ html[dir=rtl] {
   &:disabled {
     background-color: $lightest_red;
     box-shadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)';
+  }
+}
+
+a {
+  &.design-system-btn {
+    &:link, &:visited, &:hover, &:active {
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: $gotham-bold;
+      font-size: 1em !important;
+      padding: 10px 20px;
+      height: auto;
+      margin-right: 0;
+      background-color: $brand_secondary_default;
+      border: 2px solid $brand_secondary_default;
+      color: $neutral_white;
+      line-height: unset;
+
+      &:hover {
+        background-color: $brand_secondary_dark;
+        border-color: $brand_secondary_dark;
+        box-shadow: none;
+      }
+
+      &:focus {
+        border-color: $brand_primary_default;
+      }
+
+      &:disabled {
+        color: $neutral_white;
+        border-color: $neutral_dark20;
+        background-color: $neutral_dark20;
+        cursor: not-allowed;
+      }
+    }
   }
 }
 

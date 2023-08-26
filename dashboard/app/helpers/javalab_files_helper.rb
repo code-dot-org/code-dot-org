@@ -1,6 +1,6 @@
 module JavalabFilesHelper
-  def self.upload_project_files(project_files, hostname, auth_token)
-    uri = URI.parse("#{CDO.javabuilder_upload_url}?Authorization=#{auth_token}")
+  def self.upload_project_files(project_files, hostname, auth_token, upload_url)
+    uri = URI.parse("#{upload_url}?Authorization=#{auth_token}")
     upload_request = Net::HTTP::Put.new(uri)
     upload_request['Origin'] = hostname
     upload_request['Content-Type'] = 'application/json'

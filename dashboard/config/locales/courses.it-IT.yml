@@ -3,54 +3,46 @@ it:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Principi di informatica
-          title: Principi di informatica ('17-'18)
-          version_title: "'17-'18"
-          description_student: Nell'autunno 2016, il College Board ha lanciato il
-            nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
-            studenti ai concetti fondamentali di informatica e li sfida ad esplorare
-            come l'informatica e la tecnologia possano avere impatto sul mondo. Il
-            Programma AP ha progettato i Principi di Informatica AP con lo scopo di
-            creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
-            di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
-            informatici di base e nel cogliere opportunità multidisciplinari.
-          description_teacher: Nell'autunno 2016, il College Board ha lanciato il
-            nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
-            studenti ai concetti fondamentali di informatica e li sfida ad esplorare
-            come l'informatica e la tecnologia possano avere impatto sul mondo. Il
-            Programma AP ha progettato i Principi di Informatica AP con lo scopo di
-            creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
-            di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
-            informatici di base e nel cogliere opportunità multidisciplinari.
-          description_short: Impara i princìpi fondamentali dell'informatica.
-        csd-2017:
-          assignment_family_title: Alla scoperta dell'informatica
-          title: Alla scoperta dell'informatica ('17-'18)
-          version_title: "'17-'18"
-          description_student: Alla Scoperta dell'informatica (CSD - Computer Science
-            Discoveries) è un corso di introduzione all'informatica che conduce gli
-            studenti alla realizzazione di autentici artefatti digitali e che introduce
-            l'uso dell'informatica come strumento per la creatività, la comunicazione,
-            il problem-solving e il divertimento.
-          description_teacher: Alla Scoperta dell'informatica (CSD - Computer Science
-            Discoveries) è un corso di introduzione all'informatica che conduce gli
-            studenti alla realizzazione di autentici artefatti digitali e che introduce
-            l'uso dell'informatica come strumento per la creatività, la comunicazione,
-            il problem-solving e il divertimento.
-          description_short: Corso di introduzione all'informatica che conduce gli
-            studenti alla realizzazione di autentici artefatti digitali.
         allthethingscourse:
-          title: corso globale
           description_short: Si tratta di un corso globale
           description_student: Questo è un corso globale, ha quindi una corposa descrizione
             per gli studenti
           description_teacher: Questo è un corso globale, ha quindi una corposa descrizione
             per gli insegnanti
+          title: corso globale
+        csd-2017:
+          assignment_family_title: Alla scoperta dell'informatica
+          description_short: Corso di introduzione all'informatica che conduce gli
+            studenti alla realizzazione di autentici artefatti digitali.
+          description_student: Alla Scoperta dell'informatica (CSD - Computer Science
+            Discoveries) è un corso di introduzione all'informatica che conduce gli
+            studenti alla realizzazione di autentici artefatti digitali e che introduce
+            l'uso dell'informatica come strumento per la creatività, la comunicazione,
+            il problem-solving e il divertimento.
+          description_teacher: Alla Scoperta dell'informatica (CSD - Computer Science
+            Discoveries) è un corso di introduzione all'informatica che conduce gli
+            studenti alla realizzazione di autentici artefatti digitali e che introduce
+            l'uso dell'informatica come strumento per la creatività, la comunicazione,
+            il problem-solving e il divertimento.
+          title: Alla scoperta dell'informatica ('17-'18)
+          version_title: "'17-'18"
         csd-2018:
           assignment_family_title: Alla scoperta dell'informatica
+          description_short: Corso di introduzione all'informatica che conduce gli
+            studenti alla realizzazione di autentici artefatti digitali.
+          description_student: Alla Scoperta dell'informatica (CSD - Computer Science
+            Discoveries) è un corso di introduzione all'informatica che conduce gli
+            studenti alla realizzazione di autentici artefatti digitali e che introduce
+            l'uso dell'informatica come strumento per la creatività, la comunicazione,
+            il problem-solving e il divertimento.
+          description_teacher: Alla Scoperta dell'informatica (CSD - Computer Science
+            Discoveries) è un corso di introduzione all'informatica che conduce gli
+            studenti alla realizzazione di autentici artefatti digitali e che introduce
+            l'uso dell'informatica come strumento per la creatività, la comunicazione,
+            il problem-solving e il divertimento.
           title: Alla scoperta dell'informatica ('18-'19)
           version_title: "'18-'19"
+        csd-2019:
           description_short: Corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali.
           description_student: Alla Scoperta dell'informatica (CSD - Computer Science
@@ -63,70 +55,8 @@ it:
             studenti alla realizzazione di autentici artefatti digitali e che introduce
             l'uso dell'informatica come strumento per la creatività, la comunicazione,
             il problem-solving e il divertimento.
-        csp-2018:
-          assignment_family_title: Principi di informatica
-          title: Principi di informatica ('18-'19)
-          version_title: "'18-'19"
-          description_short: Impara i princìpi fondamentali dell'informatica.
-          description_student: Nell'autunno 2016, il College Board ha lanciato il
-            nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
-            studenti ai concetti fondamentali di informatica e li sfida ad esplorare
-            come l'informatica e la tecnologia possano avere impatto sul mondo. Il
-            Programma AP ha progettato i Principi di Informatica AP con lo scopo di
-            creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
-            di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
-            informatici di base e nel cogliere opportunità multidisciplinari.
-          description_teacher: Nell'autunno 2016, il College Board ha lanciato il
-            nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
-            studenti ai concetti fondamentali di informatica e li sfida ad esplorare
-            come l'informatica e la tecnologia possano avere impatto sul mondo. Il
-            Programma AP ha progettato i Principi di Informatica AP con lo scopo di
-            creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
-            di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
-            informatici di base e nel cogliere opportunità multidisciplinari.
-        csp-2019:
-          title: Principi di informatica ('19-'20)
-          version_title: "'19-'20"
-          description_short: Impara i princìpi fondamentali dell'informatica.
-          description_student: Nell'autunno 2016, il College Board ha lanciato il
-            nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
-            studenti ai concetti fondamentali di informatica e li sfida ad esplorare
-            come l'informatica e la tecnologia possano avere impatto sul mondo. Il
-            Programma AP ha progettato i Principi di Informatica AP con lo scopo di
-            creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
-            di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
-            informatici di base e nel cogliere opportunità multidisciplinari.
-          description_teacher: Nell'autunno 2016, il College Board ha lanciato il
-            nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
-            studenti ai concetti fondamentali di informatica e li sfida ad esplorare
-            come l'informatica e la tecnologia possano avere impatto sul mondo. Il
-            Programma AP ha progettato i Principi di Informatica AP con lo scopo di
-            creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
-            di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
-            informatici di base e nel cogliere opportunità multidisciplinari.
-        csd-2019:
           title: Alla scoperta dell'informatica ('19-'20)
           version_title: "'19-'20"
-          description_short: Corso di introduzione all'informatica che conduce gli
-            studenti alla realizzazione di autentici artefatti digitali.
-          description_student: Alla Scoperta dell'informatica (CSD - Computer Science
-            Discoveries) è un corso di introduzione all'informatica che conduce gli
-            studenti alla realizzazione di autentici artefatti digitali e che introduce
-            l'uso dell'informatica come strumento per la creatività, la comunicazione,
-            il problem-solving e il divertimento.
-          description_teacher: Alla Scoperta dell'informatica (CSD - Computer Science
-            Discoveries) è un corso di introduzione all'informatica che conduce gli
-            studenti alla realizzazione di autentici artefatti digitali e che introduce
-            l'uso dell'informatica come strumento per la creatività, la comunicazione,
-            il problem-solving e il divertimento.
-        csd-pilot:
-          description_student: Alla Scoperta dell'informatica (CSD - Computer Science
-            Discoveries) è un corso di introduzione all'informatica che conduce gli
-            studenti alla realizzazione di autentici artefatti digitali e che introduce
-            l'uso dell'informatica come strumento per la creatività, la comunicazione,
-            il problem-solving e il divertimento.
-        csp-2020:
-          description_short: Impara i princìpi fondamentali dell'informatica.
         csd-2020:
           description_short: Corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali.
@@ -140,88 +70,170 @@ it:
             studenti alla realizzazione di autentici artefatti digitali e che introduce
             l'uso dell'informatica come strumento per la creatività, la comunicazione,
             il problem-solving e il divertimento.
+        csd-2023:
+          title: Alla scoperta dell'informatica
+        csd-pilot:
+          description_student: Alla Scoperta dell'informatica (CSD - Computer Science
+            Discoveries) è un corso di introduzione all'informatica che conduce gli
+            studenti alla realizzazione di autentici artefatti digitali e che introduce
+            l'uso dell'informatica come strumento per la creatività, la comunicazione,
+            il problem-solving e il divertimento.
+        csp-2017:
+          assignment_family_title: Principi di informatica
+          description_short: Impara i princìpi fondamentali dell'informatica.
+          description_student: Nell'autunno 2016, il College Board ha lanciato il
+            nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
+            studenti ai concetti fondamentali di informatica e li sfida ad esplorare
+            come l'informatica e la tecnologia possano avere impatto sul mondo. Il
+            Programma AP ha progettato i Principi di Informatica AP con lo scopo di
+            creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
+            di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
+            informatici di base e nel cogliere opportunità multidisciplinari.
+          description_teacher: Nell'autunno 2016, il College Board ha lanciato il
+            nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
+            studenti ai concetti fondamentali di informatica e li sfida ad esplorare
+            come l'informatica e la tecnologia possano avere impatto sul mondo. Il
+            Programma AP ha progettato i Principi di Informatica AP con lo scopo di
+            creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
+            di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
+            informatici di base e nel cogliere opportunità multidisciplinari.
+          title: Principi di informatica ('17-'18)
+          version_title: "'17-'18"
+        csp-2018:
+          assignment_family_title: Principi di informatica
+          description_short: Impara i princìpi fondamentali dell'informatica.
+          description_student: Nell'autunno 2016, il College Board ha lanciato il
+            nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
+            studenti ai concetti fondamentali di informatica e li sfida ad esplorare
+            come l'informatica e la tecnologia possano avere impatto sul mondo. Il
+            Programma AP ha progettato i Principi di Informatica AP con lo scopo di
+            creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
+            di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
+            informatici di base e nel cogliere opportunità multidisciplinari.
+          description_teacher: Nell'autunno 2016, il College Board ha lanciato il
+            nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
+            studenti ai concetti fondamentali di informatica e li sfida ad esplorare
+            come l'informatica e la tecnologia possano avere impatto sul mondo. Il
+            Programma AP ha progettato i Principi di Informatica AP con lo scopo di
+            creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
+            di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
+            informatici di base e nel cogliere opportunità multidisciplinari.
+          title: Principi di informatica ('18-'19)
+          version_title: "'18-'19"
+        csp-2019:
+          description_short: Impara i princìpi fondamentali dell'informatica.
+          description_student: Nell'autunno 2016, il College Board ha lanciato il
+            nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
+            studenti ai concetti fondamentali di informatica e li sfida ad esplorare
+            come l'informatica e la tecnologia possano avere impatto sul mondo. Il
+            Programma AP ha progettato i Principi di Informatica AP con lo scopo di
+            creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
+            di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
+            informatici di base e nel cogliere opportunità multidisciplinari.
+          description_teacher: Nell'autunno 2016, il College Board ha lanciato il
+            nuovo corso AP®, AP Computer Science Principles. Il corso introduce gli
+            studenti ai concetti fondamentali di informatica e li sfida ad esplorare
+            come l'informatica e la tecnologia possano avere impatto sul mondo. Il
+            Programma AP ha progettato i Principi di Informatica AP con lo scopo di
+            creare leader nei campi informatici ed attrarre ed ingaggiare le fasce
+            di popolazione tradizionalmente sotto rappresentate nell'uso di strumenti
+            informatici di base e nel cogliere opportunità multidisciplinari.
+          title: Principi di informatica ('19-'20)
+          version_title: "'19-'20"
+        csp-2020:
+          description_short: Impara i princìpi fondamentali dell'informatica.
         csp-2021:
+          description_short: Impara i princìpi fondamentali dell'informatica.
+        csp-2022:
+          description_short: Impara i princìpi fondamentali dell'informatica.
+        csp-2023:
           description_short: Impara i princìpi fondamentali dell'informatica.
         mike-test:
           title: Fondamenti di Informatica
-        csp-2022:
-          description_short: Impara i princìpi fondamentali dell'informatica.
-        vpl-csd-summer-pilot-ci-2022:
-          title: Investigazione Curriculare di CS Discoveries
         self-paced-pl-csa-2022:
           title: CSA Moduli Per Iniziare
-        csp-2023:
-          description_short: Impara i princìpi fondamentali dell'informatica.
         self-paced-pl-csa-2023:
           title: CSA Moduli Per Iniziare
-        csd-2023:
-          title: Alla scoperta dell'informatica
+        self-paced-pl-csp-2021:
+          title: Insegnare i Principi Informatici
+        self-paced-pl-csp-2022:
+          title: Insegnare i Principi Informatici
+        self-paced-pl-csp-2023:
+          title: Insegnare i Principi Informatici
         vpl-csd-summer-ci-2023:
           title: Investigazione Curriculare di CS Discoveries
+        vpl-csd-summer-pilot-ci-2022:
+          title: Investigazione Curriculare di CS Discoveries
     resources:
-      curriculum/csd/2020:
-        name: Curriculum
-      teacher_forum/csd/2020:
-        name: Forum dell'insegnante
-      curriculum/csd/2017:
-        name: Curriculum
-      teacher_forum_6/csd/2017:
-        name: Forum dell'insegnante
-      all_code_5/csd/2022:
+      all_code/csd/2021:
         name: Tutti i programmi
-      all_resources_7/csd/2022:
-        name: Tutte le risorse
-      all_standards_7/csd/2022:
-        name: Tutti gli standard
-      all_vocabulary_7/csd/2022:
-        name: Tutte le voci di glossario
-      csd_curriculum_guide/csd/2022:
-        name: Guida al piano di studi
-      csd_guide_to_debugging/csd/2022:
-        name: Guida al debugging
-      csd_guide_to_differentiation/csd/2022:
-        name: Guida alla differenziazione
-      csd_guide_to_using_resources/csd/2022:
-        name: Guida all'utilizzo delle risorse
-      csd_implementation_guide/csd/2022:
-        name: Implementation Guide
-      curriculum/csd/2019:
-        name: Curriculum
-      teacher_forum/csd/2019:
-        name: Forum dell'insegnante
       all_code_2/csd/2023:
         name: Tutti i programmi
-      all_resources_2/csd/2023:
-        name: Tutte le risorse
-      all_standards_2/csd/2023:
-        name: Tutti gli standard
-      all_vocabulary_2/csd/2023:
-        name: Tutte le voci di glossario
-      csd_guide_to_differentiation_1/csd/2023:
-        name: Guida alla differenziazione
-      csd_guide_to_using_resources_1/csd/2023:
-        name: Guida all'utilizzo delle risorse
-      csd_implementation_guide_1/csd/2023:
-        name: Implementation Guide
-      all_code/csd/2021:
+      all_code_5/csd/2022:
         name: Tutti i programmi
       all_resources_1/csd/2021:
         name: Tutte le risorse
+      all_resources_2/csd/2023:
+        name: Tutte le risorse
+      all_resources_7/csd/2022:
+        name: Tutte le risorse
       all_standards_1/csd/2021:
+        name: Tutti gli standard
+      all_standards_2/csd/2023:
+        name: Tutti gli standard
+      all_standards_7/csd/2022:
         name: Tutti gli standard
       all_vocabulary_1/csd/2021:
         name: Tutte le voci di glossario
+      all_vocabulary_2/csd/2023:
+        name: Tutte le voci di glossario
+      all_vocabulary_7/csd/2022:
+        name: Tutte le voci di glossario
       csd_curriculum_guide/csd/2021:
+        name: Guida al piano di studi
+      csd_curriculum_guide/csd/2022:
         name: Guida al piano di studi
       csd_guide_to_debugging/csd/2021:
         name: Guida al debugging
+      csd_guide_to_debugging/csd/2022:
+        name: Guida al debugging
       csd_guide_to_differentiation/csd/2021:
+        name: Guida alla differenziazione
+      csd_guide_to_differentiation/csd/2022:
+        name: Guida alla differenziazione
+      csd_guide_to_differentiation_1/csd/2023:
         name: Guida alla differenziazione
       csd_guide_to_using_resources/csd/2021:
         name: Guida all'utilizzo delle risorse
+      csd_guide_to_using_resources/csd/2022:
+        name: Guida all'utilizzo delle risorse
+      csd_guide_to_using_resources_1/csd/2023:
+        name: Guida all'utilizzo delle risorse
       csd_implementation_guide/csd/2021:
         name: Implementation Guide
+      csd_implementation_guide/csd/2022:
+        name: Implementation Guide
+      csd_implementation_guide_1/csd/2023:
+        name: Implementation Guide
+      csd_learning_frameworks/csd/2022:
+        name: Piano di apprendimento
+      csd_learning_frameworks_1/csd/2023:
+        name: Piano di apprendimento
+      csd_programming_levels_guide/csd/2022:
+        name: Guida agli esercizi di programmazione
+      curriculum/csd/2017:
+        name: Curriculum
       curriculum/csd/2018:
         name: Curriculum
+      curriculum/csd/2019:
+        name: Curriculum
+      curriculum/csd/2020:
+        name: Curriculum
+      teacher_forum/csd/2019:
+        name: Forum dell'insegnante
+      teacher_forum/csd/2020:
+        name: Forum dell'insegnante
+      teacher_forum_6/csd/2017:
+        name: Forum dell'insegnante
       teacher_forum_6/csd/2018:
         name: Forum dell'insegnante

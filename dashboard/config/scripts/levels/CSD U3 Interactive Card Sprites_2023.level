@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:59:12.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -171,7 +176,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Adding Sprites\r\nNow that you have the more static elements of your card laid out, it's time to add the Sprites. Your Sprites should provide the primary animations and interactions for your card - so feel free to get creative here and have fun.\r\n\r\n# Do This\r\nCheck out the Sprites table on the back of your planning sheet. For each Sprite in your table:\r\n\r\n* Initialize the Sprite at the top of your program with `createSprite()`.\r\n* Find or create the image(s) for the Sprite and set it with `setAnimation()`.\r\n* Inside the `draw()` loop update any Sprite properties that we will be constantly animating (we'll deal with conditionals in a minute).",
+    "long_instructions": "# Adding Sprites\r\nNow that you have the more static elements of your card laid out, it's time to add the Sprites. Your Sprites should provide the primary animations and interactions for your card - so feel free to get creative here and have fun.\r\n\r\n# Do This\r\nCheck out the Sprites table in your project guide. For each Sprite in your table:\r\n\r\n1) Initialize the Sprite at the top of your program with [`createSprite()`(#f78183)](/docs/ide/gamelab/expressions/createSprite).\r\n* Find or create the image(s) for the Sprite in the Animation tab and then set them with [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation).\r\n* Inside the [`draw()`(#68D995)](/docs/ide/gamelab/expressions/draw) loop update any Sprite properties that we will be constantly animating (we'll deal with conditionals in a minute).",
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -200,7 +205,7 @@
     "show_debug_watch": "true",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "encrypted_examples": "4yFqO07oP4/qm58OurvkJZQzi6EjTVQ7F9wjHkF+ToIDleWJs5j2MLuqdUqU\n/4N3\n",
     "parent_level_id": 20791,
@@ -220,13 +225,8 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:59:12.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:59:12.903+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Interactive Card Sprites_2022\\\"\"],\"cloned_from\":\"CSD U3 Interactive Card Sprites_2022\"},{\"changed_at\":\"2023-01-05 18:41:11 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-09 17:46:12 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:59:12.903+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Interactive Card Sprites_2022\\\"\"],\"cloned_from\":\"CSD U3 Interactive Card Sprites_2022\"},{\"changed_at\":\"2023-01-05 18:41:11 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-09 17:46:12 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-22 16:48:22 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 16:36:11 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:43:44 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

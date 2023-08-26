@@ -60,6 +60,7 @@ vi:
         reset_password_token: "Liên kết đặt lại mật khẩu bạn đã theo dõi"
         error:
           future: không thể trong tương lai
+        us_state: 'Quốc gia'
   beta: "phiên bản thử nghiệm"
   hello: "Xin chào thế giới"
   welcome_back: "Chào mừng trở lại, %{name}"
@@ -69,6 +70,7 @@ vi:
   unsubmit: Ngưng gửi
   previous_page: Trang trước
   next_page: Trang tiếp theo
+  next_level: Cấp độ tiếp theo
   next_resource: Tài nguyên tiếp theo
   done_with_module: Đã xong với học phần này
   cancel: "Huỷ"
@@ -199,6 +201,7 @@ vi:
     parent_account_checkbox: "Tôi là phụ huynh/người giám hộ đăng ký nhân danh con của tôi"
     parent_account_email_progress_permission: "Liệu chúng tôi có thể gửi thư điện tử chứa những cập nhật thường xuyên về tiến trình và các bài tập cũng như cập nhật về khóa học và khoa học máy tính của trẻ cho bạn không? [(Xem Chính sách riêng tư của chúng tôi)](%{privacy_policy_url})"
     parent_account_email_label: "Email của phụ huynh hoặc người giám hộ"
+    us_state: 'Quốc gia'
   school_info:
     title: 'Thông tin trường học (không bắt buộc)'
     school_country: 'Quốc gia'
@@ -270,6 +273,7 @@ vi:
   teacher_mailer:
     new_teacher_subject: 'Chào mừng tới Code.org!'
     delete_teacher_subject: 'Code.org thông báo: tài khoản của bạn đã bị xóa'
+    verified_teacher_subject: 'Code.org Teacher Verification - Thành công'
   section:
     your_section:
       one: 'Mục của bạn:'
@@ -377,6 +381,7 @@ vi:
       help_us: "Giúp đỡ chúng tôi"
       teach: "Dạy"
       about: "Giới thiệu"
+      incubator: "Ấp ấp"
       legal: "Quyền riêng tư & Pháp lý"
       legal_privacy: "Chính sách bảo mật"
       legal_cookie_notice: "Thông báo về cookie"
@@ -608,6 +613,7 @@ vi:
     store: 'Cửa hàng'
     cookie_notice: 'Thông báo về cookie'
     view_code: 'Xem mã lệnh'
+    locale_select: "Chọn ngôn ngữ"
   reference_area:
     title: 'Cần trợ giúp?'
     subtitle: 'Xem các video và gợi ý'
@@ -632,6 +638,8 @@ vi:
       applab_unsupported_tablet: "App Lab hoạt động tốt nhất trên máy tính để bàn hoặc máy tính xách tay có chuột và bàn phím. Bạn có thể gặp sự cố khi sử dụng công cụ này trên thiết bị hiện tại của mình."
       gamelab_unsupported_tablet: "Game Lab hoạt động tốt nhất trên máy tính để bàn hoặc máy tính xách tay với chuột và bàn phím. Bạn có thể gặp sự cố khi sử dụng công cụ này trên thiết bị hiện tại của mình."
       weblab_unsupported_locale_storage: "Bạn có thể gặp sự cố khi sử dụng Web Lab ở chế độ Duyệt web Riêng tư. Vui lòng tải lại dự án của bạn ở chế độ thông thường. Xin lỗi vì sự bất tiện."
+  deprecation:
+    algebra_lab: "CS trong chương trình giảng dạy đại số và nội dung đang bị phản đối. Trong vòng vài tháng tới, phòng thí nghiệm này sẽ không còn nữa. Xin vui lòng kiểm tra [Bootstrap: Đại số] (%{bootstrap_algebra_url}) thay thế. [Tìm hiểu thêm] (%{cs_algebra_url})."
   slow_loading: 'Điều này mất nhiều thời gian hơn bình thường...'
   try_reloading: 'Hãy thử tải lại trang'
   next_stage: 'Hoàn thành! Tiếp tục màn tiếp theo'
@@ -670,65 +678,139 @@ vi:
       body_short: "Hãy thiết kế ứng dụng, mã lệnh bằng các khối hoặc JavaScript để làm ứng dụng hoạt động rồi chia sẻ ứng dụng của bạn ngay lập tức."
       audience: '13 tuổi trở lên'
       cta: 'Học cách làm'
+      image_alt: 'Một chú thỏ màu tím mặc ba lô chạy bằng tên lửa.'
+    applab-intro:
+      image_alt: 'Một bàn tay đang chạm vào trung tâm của màn hình điện thoại thông minh. Ánh sáng và lấp lánh đang ra khỏi màn hình.'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Steve và Alex từ Minecraft đang nhìn bạn.'
+    artist:
+      image_alt: 'Một người hoạt hình cầm một cây bút chì khổng lồ và vẽ một hình tam giác.'
+    conditionals:
+      image_alt: 'Hai tay xáo trộn một bộ bài chơi.'
+    course1:
+      image_alt: 'Con ong bumble Code.org và cá cam đứng trước một số mã.'
+    course2:
+      image_alt: 'Một ghép các câu đố Code.org cho thấy một thuật sĩ màu xanh lá cây, nghệ sĩ, và cá cam.'
+    course3:
+      image_alt: 'Một ghép các câu đố Code.org hiển thị một trò chơi, zombie, và ninja.'
+    course4:
+      image_alt: 'Một ghép các câu đố Code.org hiển thị bóng đá, vật nuôi, và một nghệ sĩ.'
+    coursea:
+      image_alt: 'Một ghép các câu đố Code.org cho thấy một con voi và một con sóc.'
+    courseb:
+      image_alt: 'Một ghép các câu đố Code.org cho thấy một nhà thám hiểm, đá quý, và một bông hoa.'
+    coursec:
+      image_alt: 'Một ghép các câu đố Code.org cho thấy một con sóc, số nhị phân, và một con chim màu đỏ từ trò chơi Angry Birds.'
+    coursed:
+      image_alt: 'Một ghép các câu đố Code.org cho thấy một con ong, hoa, mật ong, và một con lợn màu xanh lá cây từ trò chơi Angry Birds.'
+    coursee:
+      image_alt: 'Một ảnh ghép của các câu đố Code.org cho thấy một người cầm một cái xẻng, bí ngô, vườn cây ăn quả, và bò.'
+    coursef:
+      image_alt: 'Một ghép các câu đố Code.org cho thấy hình dạng hình học đầy màu sắc, một tên cướp biển màu đỏ, và một nghệ sĩ.'
     dance-2019:
       title: 'Bữa Tiệc Khiêu Vũ'
+      image_alt: 'Một con mèo vui vẻ, con lười, và nhảy múa cá mập.'
+    dance-2022:
+      image_alt: 'Một người ngoài hành tinh màu xanh lá cây và robot nhảy múa với Sao Thổ ở chế độ nền.'
     dance:
       title: 'Bữa Tiệc Khiêu Vũ'
+      image_alt: 'Một con mèo mát mẻ và cá mập hạnh phúc nhảy múa tại một bữa tiệc.'
+    donate:
+      image_alt: 'Một đứa trẻ chỉ vào một màn hình máy tính xách tay hiển thị một câu đố Code.org.'
+    elementary:
+      image_alt: 'Một con ong bumble và sóc đứng trên một cánh đồng trước cầu vồng.'
+    express:
+      image_alt: 'Cây vs Zombies zombie và nhà máy đứng bên cạnh Flappy Bird.'
     flappy:
       title: 'Lập trình Flappy'
       body: 'Muốn viết trò chơi của riêng bạn trong vòng chưa đầy 10 phút? Hãy thử lớp học lập trình Flappy của chúng tôi!'
+      image_alt: 'Một con chim vàng bay giữa các ống màu xanh lá cây.'
     frozen:
       title: "Frozen"
+      image_alt: 'Anna và Elsa trong bộ phim Frozen. Giữa chúng là một hình ảnh Anna vẽ một hình dạng đẹp trong băng bằng cách sử dụng giày trượt băng của mình.'
     gallery:
       title: "Bộ sưu tập"
       body: "Xem một bộ sưu tập các ứng dụng và họa sĩ thiết kế hình ảnh được tạo bởi người dùng của chúng tôi"
+      image_alt: 'Một nghệ sĩ vẽ rất nhiều vòng tròn và một con mèo, dơi, và ma đứng trong một vùng đất nghỉ đông.'
     gamelab:
       title: "Phòng thí nghiệm trò chơi"
       body: "Game Lab là môi trường lập trình để bạn có thể tạo các hoạt ảnh và game đơn giản bằng các đối tượng và nhân vật tương tác với nhau."
       audience: "13 tuổi trở lên"
       cta: "Học cách làm"
+      image_alt: 'Nhiều người hoạt hình và động vật đứng trên vỉa hè và mỉm cười.'
+    hello-world-food:
+      image_alt: 'Nhiều loài động vật, người ngoài hành tinh và biểu tượng cảm xúc quay quanh Trái Đất.'
     hello-world:
       title: 'Xin chào cả thế giới'
       body: 'Hãy chọn trong bốn chủ đề thú vị để lập trình các nhân vật tương tác trong thế giới do chính bạn tạo ra.'
     hero:
       title: "Minecraft"
       body: "Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã."
+      image_alt: 'Một Golem sắt từ Minecraft đứng trước một cái nhìn trên cao của Anna giải quyết một câu đố.'
     hoc-encryption:
       title: "Mã hóa đơn giản"
       body: "Học sinh sẽ học các kỹ thuật tạo và giải mã các tin nhắn được mã hóa."
+      image_alt: 'Biểu đồ thanh tần số chữ cái bằng tiếng Anh.'
     hoc:
       title: 'Mê cung cổ điển'
       body: 'Hãy thử những điều cơ bản của khoa học máy tính. Hàng triệu người đã sử dụng nó.'
+      image_alt: 'Một ảnh ghép của hình ảnh hiển thị mã, Mark Zuckerberg, và Angry Birds.'
+    hourofcode:
+      image_alt: 'Một ảnh ghép của hình ảnh hiển thị mã, Mark Zuckerberg, và Angry Birds.'
     hoc2014:
       try_new_tutorial: 'Hãy thử lớp học Giờ Lập trình phiên bản beta của chúng tôi'
       try_frozen: 'Họa sĩ vẽ Anna và Elsa, từ bộ phim Frozen'
     infinity:
       title: "Phòng thí nghiệm Vui Chơi Bất Tận"
       body: "Sử dụng Play Lab để tạo một câu chuyện hoặc tựa game có sự tham gia của các nhân vật Disney Infinity."
+      image_alt: 'Năm nhân vật trong Froze, Tangled, và Big Hero 6 đứng cùng nhau.'
+    map:
+      image_alt: 'Một hình ảnh màu xám của Hoa Kỳ với khoảng 20 tiểu bang được đánh dấu bằng màu tím.'
+    mc_escape:
+      image_alt: 'Một nhân vật Minecraft đội một chiếc mũ và monocle hàng đầu trong khi mở một rương kho báu đầy ngọc lục bảo.'
+    mc:
+      image_alt: 'Anna và Steve từ Minecraft đứng trước một câu đố Code.org Minecraft.'
     minecraft:
       title: "Minecraft"
       body: "Hãy khám phá thế giới Minecraft qua những đoạn mã"
+      image_alt: 'Anna và Steve từ Minecraft đứng trước một câu đố Code.org Minecraft.'
     minecraft2016:
       title: "Minecraft"
       body: "Chương trình động vật và sinh vật Minecraft khác trong phiên bản Minecraft của riêng bạn."
+    oceans:
+      image_alt: 'Một robot trong đại dương quét các sinh vật biển khác nhau.'
+    playlab:
+      image_alt: 'Một hình ảnh cắt dán cho thấy một con mèo xanh, chó ngớ ngẩn, và chồn thời tiền sử.'
     poem-art:
       title: 'Tranh thơ ca'
       body: 'Hãy thể hiện bản thân! Hãy dùng mã lệnh để tạo bài thơ có hình chuyển động.'
+      image_alt: 'Một con mực hipster biểu diễn trên một sân khấu.'
+    pre-express-2017:
+      image_alt: 'Một chú chó và kỳ lân đứng trước một cái cây làm bằng những mảnh ghép.'
+    pre-express-2018:
+      image_alt: 'Một chú chó và kỳ lân đứng trước một cái cây làm bằng những mảnh ghép.'
+    pre-express-2019:
+      image_alt: 'Một chú chó và kỳ lân đứng trước một cái cây làm bằng những mảnh ghép.'
+    pre-express:
+      image_alt: 'Một chú chó và kỳ lân đứng trước một cái cây làm bằng những mảnh ghép.'
     sports:
       title: "Thể thao"
       body: "Thực hiện một trò chơi bóng rổ hoặc trộn lẫn và kết hợp với thể thao."
+      image_alt: 'Logo NBA và WNBA được hiển thị bên cạnh một bóng đá, bóng đá, bóng hockey puck, và bóng rổ.'
     starwars:
       title: "Chiến tranh giữa các vì sao"
+      image_alt: 'R2-D2, Leia, Rey, và BB-8 đứng trong một sa mạc.'
     text-compression:
       title: "Nén văn bản"
       body: "Trong bài học này, học viên sẽ sử dụng Widget nén văn bản để nén văn bản bằng cách thay thế các mẫu với các ký hiệu."
+      image_alt: 'Văn bản được nén bằng cách thay thế toàn bộ từ bằng một ký hiệu duy nhất.'
     weblab:
       title: "Phòng thí nghiệm web (beta)"
       body: "Web Lab là một môi trường lập trình nơi bạn có thể tạo các trang web đơn giản bằng HTML và CSS. Thiết kế các trang web của bạn và chia sẻ trang web của bạn trong vài giây."
       audience: "13 tuổi trở lên"
       cta: "Học cách làm"
+      image_alt: 'Một màn hình máy tính hiển thị mã HTML.'
     widgets:
       title: "Vật dụng"
       body: "Sinh viên có thể khám phá các khái niệm từ các Nguyên tắc Khoa học Máy tính của chúng tôi thực hành bằng cách sử dụng các công cụ kỹ thuật số này. Sử dụng các vật dụng một mình, hoặc tạo một bài học khái niệm đơn cho lớp học của bạn."
@@ -909,6 +991,7 @@ vi:
           age: 'Xin vui lòng cho biết tuổi'
           abuse_type: 'Xin vui lòng cho biết nội dung này vi phạm Điều khoản Dịch vụ như thế nào'
           abuse_detail: 'Xin vui lòng cung cấp chi tiết đối với nội dung bạn đang báo cáo'
+          captcha: 'Vui lòng điền vào CAPTCHA để báo cáo nội dung này.'
         abusive_url: 'Địa chỉ trang web của nội dung được báo cáo'
         abuse_type:
           question: 'Nội dung này vi phạm %{link_start}Terms Service%{link_end} như thế nào?'
@@ -1044,6 +1127,8 @@ vi:
         not_listed: 'Điều khoản ưu tiên không được liệt kê'
         none: 'Tùy chọn không muốn trả lời'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belize'
         canada: 'Canada'
         chile: 'Chile'
         colombia: 'Colombia'
@@ -1100,6 +1185,7 @@ vi:
         csf_express: 'Nguyên tắc cơ bản của KHMT (Cấp tốc hoặc Cấp tốc cho trẻ chưa biết đọc)'
         csd: 'Khám phá KHMT'
         csp: 'Nguyên tắc của KHMT'
+        other: 'Khác'
         not_applicable: "Không áp dụng"
       email_opt_in:
         opt_in_yes: 'Đồng ý'
@@ -1123,11 +1209,23 @@ vi:
   courses_category: 'Các khóa học đầy đủ'
   course_offering:
     headers:
+      favorites: 'Mục yêu thích'
+      labs_and_skills: 'Phòng thí nghiệm và kỹ năng'
       minecraft: 'Minecraft'
       hello_world: 'Xin chào cả thế giới'
+      popular_media: 'Truyền thông phổ biến'
       sports: 'Thể thao'
+      express: 'Express'
       csf: 'Nguyên tắc cơ bản của KHMT'
       csc: 'Kết nối KHMT'
+      year_long: 'Năm dài'
+      csa_labs: 'Phòng thí nghiệm CSA'
+      self_paced: 'Tự nhịp độ'
+      teacher_led: 'Giáo viên hướng dẫn'
+      collections: 'Bộ sưu tập'
+      workshops_k5: 'Hội thảo K-5'
+      summer_workshops_612: '6-12 Hội thảo Mùa hè'
+      virtual_academic_year_workshops_612: 'Hội thảo năm học ảo 6—12'
   cookie_banner:
     message: 'Bằng cách tiếp tục duyệt trang web của chúng tôi hoặc nhấp vào “Tôi đồng ý”, bạn đồng ý với hoạt động lưu trữ cookie trên máy tính hoặc thiết bị của mình.'
     more_information: "Xem Chính sách quyền riêng tư của Code.org."
@@ -1165,4 +1263,22 @@ vi:
       forbidden: "Người dùng không thể cập nhật trạng thái khóa của học sinh"
   reset_predict_progress_button: "Xóa câu trả lời"
   pixelation:
+    raw_format: "Định dạng thô"
+    raw_format_alt: "Xem bit mà không có bất kỳ định dạng nào"
+    readable_format: "Định dạng có thể đọc"
+    readable_format_alt: "Xem các bit phân cách bởi điểm ảnh"
+    save_image: "Lưu ảnh"
+    actual_size: "Kích thước thực"
+    image_file_format_header: "Định dạng tệp ảnh"
+    image_file_format_width: "Chiều rộng: 1 byte"
+    image_file_format_height: "Chiều cao: 1 byte"
+    image_file_format_bits_per_pixel: "Bit trên mỗi Pixel: 1 byte"
+    image_file_format_data_a: "n bit của dữ liệu điểm ảnh"
+    image_file_format_data_b: "n = Chiều rộng * Chiều cao * Bit trên mỗi Pixel"
+    image_width: "Chiều rộng ảnh"
+    image_height: "Chiều cao ảnh"
+    bits_per_pixel_header: "Bit trên mỗi điểm ảnh"
     binary: "Nhị phân"
+    hexadecimal: "Hệ thập lục phân"
+    pixel_format_header: "Định dạng điểm ảnh"
+

@@ -3,17 +3,21 @@ title 'Making Counters'
 
 
 markdown <<MARKDOWN
-##The Food Chain:
 
-###1.  The sun provides energy for photosynthesis in algae.
-###2. The algae is eaten by fish.
-###3. Humans catch the fish using nets and boats then they eat it.
-
-![](https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg)
-
->**All ecosystems have a delicately balanced food chain. In the first two lessons we observed the effects of overfishing. The boat took too many fish which lead to too much algae. Then we modeled three sustainable fishing practices so the boat removed less fish from the ecosystem.** <br> <br>
->In the next level you will explore a few other ecosystems that are facing challenges. <br><br>
->Can you modify the simulation to bring the system back into balance? 
+##**All ecosystems have a _delicately balanced_ food chain**
+###The marine ecosystem food chain:
 
 
+
+<img src="https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg" style= "width:80%">
+<div style= "width: 80%"> 
+
+>###1. The sun provides energy for photosynthesis to occur in algae.
+>###2. The algae is eaten by fish.
+>###3. Fish are caught and eaten by humans, who use fishing boats with nets. 
+
+</div>
+
+
+##**If there is too much or too little of one organism in the food chain, there are effects on the whole ecosystem.**
 MARKDOWN

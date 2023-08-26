@@ -549,9 +549,26 @@ fr:
         csf21pilot_events: 'Les Labo des Sprites : les Sprites en Action'
         csf21pilot_prompts: 'Labo des sprites : Texte et Invites'
         outbreak_mike: CodeBytes Episode 3 avec Mike - Simulateur d'épidémie
+        csd_ml_intro_to_ai_lab: Présentation d'AI Lab
         csd_ml_import_model: Importer un modèle IA
+        csf_lots_of_sprites: 'Sprite Lab : de nombreux sprites'
         playlab_2021: Introduction au Labo Jeux
         playlab_2021_reader: Introduction au Labo Jeux
+        csp_defining_calling_functions: Définition et appel de fonctions
+        csp_tutorial_datatab: Onglet Données dans App Lab
+        csp_tutorial_libraries: Bibliothèques dans App Lab
+        PL-Video-21: Bienvenue dans la formation professionnelle de Code.org !
+        csp_tutorial_datavis1: Visualiseur de données dans App Lab - Partie 1
+        csp_tutorial_datavis2: Visualiseur de données dans App Lab - Partie 2
+        csd_ml_intro_ai_lab_july2021: Présentation d'AI Lab
+        csd_ml_training_testing_ai_lan: Formation et tests dans un laboratoire d'IA
+        csd_ml_model_cards_july2021: Modèles de cartes dans un laboratoire d'IA
+        csd_ml_numerical_ai_lab: Données numériques dans un laboratoire d'IA
+        Gettting_Started_Progress: Progrès, commentaires et évaluation
+        Gettting_Started_ClassSection: Création d'une section de classe
+        Gettting_Started_StudentExperience: L'expérience étudiante
+        Getting_Started_BasicFeatures: Fonctionnalités de base de Code.org
+        PL_overview_CSD: Qu'est-ce que Computer Science Discoveries ?
         PL_CSD_TeacherTips_Advise: Conseils aux enseignants - Conseils destinés aux nouveaux enseignants
         PL_CSD_TeacherTips_IntroToCSD: Conseils aux enseignants - Cours d'initiation à la science informatique
         PL_CSD_TeacherTips_ProblemSolvingProcess: Conseils aux enseignants - Le processus de résolution de problèmes
@@ -564,6 +581,7 @@ fr:
         hello_world_intro: Bonjour à tous - Bienvenue au Labo des Sprites
         hello_world_events: Bonjour à tous - Programmer avec des événements
         hello_world_congrats: Bonjour à tous - Faites ce que vous voulez
+        csp_global_vs_local: Déboguer les variables globales par rapport aux variables locales
         rough_poemart_intro: v1 Intro Art de la poésie
         rough_poemart_events: v1 Événements Art de la poésie
         rough_poemart_imagery: v1 Imagerie Art de la poésie
@@ -574,15 +592,140 @@ fr:
         poetry_module_multichoiceprompts: Invites à choix multiples - Codage avec poésie
         poetry_module_conditionals: Conditions - Codage avec poésie
         poemart_intro: Introduction à l'art de la poésie
+        poemart_events: Événements d'art poétique
+        poemart_imagery: Imagerie d'art poétique
+        poemart_celebration: Célébration de l'art du poème
+        csd_u6_variables_part2: Variables - Le modèle du compteur
+        csd_ml_ethics_ai: 'Éthique et IA '
         outbreak_intro: 'Simulation d''Épidémie : Introduction'
+        outbreak_events: 'Outbreak Simulator : événements'
+        outbreak_scientist: 'Outbreak Simulator : penser comme un scientifique'
+        outbreak_outro: 'Outbreak Simulator : jeu gratuit'
+        PL_overview_CSP: Qu'est-ce que les principes de l'informatique ?
+        PL_CSP_EIPMOverview: Guide des leçons de l'EIPM
         CSA-PL-debugging-temp: Initiation au débogage dans Java Lab - temp
+        csd_app_lab_design_mode: Mode de conception de CSD App Lab
+        csd_app_lab_events: Événements du CSD App Lab
+        PL_CSD_Unit4_AppTesting: Essais de prototypes en papier
         csd_u6_circuit_playground: L'Informatique Physique
         csd_u6_input_output: Entrée et Sortie
+        CSA-PL-for-loops: Pour les boucles en Java
+        CSA-PL-variables: Création de variables en Java
         PL_CS_Journeys_Overview: Voyages Informatiques
+        CSA-PL-intro-to-java-lab: Principes de base de Java Lab
+        CSA-PL-first-program: Écrire un programme en Java
+        CSD_u6_variables_part1: 'CSD : Variables'
+        csd_u6_if_statements: 'CSD : Si Statements'
+        csc-poem-art-intro: Vidéo d'introduction
+        csc-poem-art-outro: Autre vidéo
+        csd_u6_call_define_functions: 'CSD : Appeler et définir des fonctions'
         csp_applab_parameters: Fonctions avec Paramètres
+        starquilts_intro_artist: Présentation de Star Quilts
         CSA-PL-intro-to-arrays: Tableaux unidimensionnels (1D)
+        CSA-PL-1d-arrays-new-values: Saisie de valeurs dans des tableaux 1D
+        CSA-PL-conditionals: Instructions conditionnelles en Java
+        CSA-PL-two-way-selection: Sélection bidirectionnelle
+        CSA-PL-Printing-in-Java: Impression en Java
+        CSA-PL-multi-selection-statements: Déclarations à sélection multiple
+        PL_CSP_TeacherTips_Advice: 'Conseils aux enseignants : conseils aux nouveaux professeurs de CS'
+        PL_CSP_TeacherTips_IntroToCSP: 'Conseils aux enseignants : introduction aux principes du CS'
+        PL_CSP_TeacherTips_Debugging: 'Conseils aux enseignants : aide au débogage'
+        PL_CSP_TeacherTips_LeadLearner: 'Conseils pour les enseignants : Comment devenir un apprenant principal'
+        PL_CSP_TeacherTips_APExam: 'Conseils aux enseignants : Préparation à l''examen AP'
+        PL_CSP_TeacherTips_EIPM: 'Conseils aux enseignants : le processus EIPM'
+        PL_CSD_CircuitPlayground_Overview: Présentation de Circuit Playground
+        CSA-PL-debugging-22: Débogage dans Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Exemple d'art interactif
         CS_Changing_Everything: L'informatique est en Train de Tout Changer
+        csa-alias-video: Égaux et alias
+        csa-equals-video: La méthode equals ()
+        csa-user-stories: Témoignages d'utilisateurs en génie logiciel
+        csa-pl-vpl-m1-unit-3: Génie logiciel dans l'unité 3
+        csa-pl-intro-to-equality: Introduction à l'égalité
+        csa-pl-intro-to-equals-method: Présentation de la méthode .equals ()
+        csa-pl-equals-book: Écrire la méthode equals () pour la classe Book
+        csa-multi-select-pl: Instructions à sélection multiple en Java
+        csc_timecapsule_intro: Présentation de Time Capsule
+        PL_Equity_in_CS_Education: L'équité dans l'enseignement de l'informatique
+        csc_fm_pilot: Machines fonctionnelles (pilote)
+        csc_fm_pilot_v2: 'Présentation de Function Machines '
+        csc-sprite-lab-pixel-editor: Dessinez votre propre sprite
+        csa-pl-intro-to-strings: Présentation des chaînes de caractères en Java
+        csa-pl-compareTo: La méthode compareTo ()
+        csc-event-short-intro: Courte introduction aux événements
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Présentation de l'unité Circuit Playground
+        csa-day-in-pm-pl: Que fait un chef de projet ?
+        csa-pl-intro-to-pm: Introduction à la gestion de projet
+        PL_CSD_CircuitPlayground_Setup: Configuration du Circuit Playground
+        csa_object_oriented_programming: 'CSA : Programmation orientée objet'
+        csa_creating_objects: 'CSA : Création d''objets'
+        csa_calling_methods: 'CSA : Méthodes d''appel'
+        csa_while_loops: 'CSA : While Loops'
+        csa_inheritance: 'CSA : Héritage'
+        csa_writing_a_method: 'CSA : Rédaction d''une méthode'
+        csa_software_engineering_code_reviews: 'CSA : Génie logiciel - Révisions de codes'
+        csa_conditional_statements: 'CSA : Déclarations conditionnelles'
+        csa_printing_in_java: 'CSA : Impression en Java'
+        csa_two_way_selection_and_not: 'CSA : sélection bidirectionnelle et NON'
+        csa-pl-intro-to-oop: Introduction à la programmation orientée objet
+        csa-pl-welcome-to-Neighborhood: Bienvenue dans The Neighborhood
+        csa-pl-calling-methods: Méthodes d'appel en Java
+        csa-pl-creating-objects: Création d'objets
+        csa_accessor_methods: 'CSA : Méthodes d''accès'
+        csa_constructors: 'CSA : Constructeurs'
+        csa_creating_a_scanner_object: 'CSA : Création d''un objet scanné'
+        csa_creating_variables: 'CSA : Création de variables'
+        csa_instance_variables_and_attributes: 'CSA : Variables et attributs d''instance'
+        csa_mutator_methods: 'CSA : Mutator Methods'
+        csa_overloaded_constructors: 'CSA : Constructeurs surchargés'
+        csa_the_tostring_method: 'CSA : La méthode toString ()'
+        csa_scanner_class_methods: 'CSA : Méthodes relatives aux classes de scanners'
+        csa_for_loops: 'CSA : Pour Loops'
+        csa_enhanced_for_loops: 'CSA : amélioré pour les boucles'
+        csa_modifying_values_in_a_1d_array: 'CSA : Modification des valeurs dans un tableau 1D'
+        csa_nested_loops: 'CSA : Boucles imbriquées'
+        csa_one_dimensional_arrays: 'CSA : Tableaux unidimensionnels (1D)'
+        csa_polymorphism: 'CSA : Polymorphisme'
+        csa_casting: 'CSA : Casting'
+        csa_equals_and_aliases: 'CSA : Égaux et alias'
+        csa_multi-selection_statements: 'CSA : Déclarations à sélection multiple'
+        csa_random_numbers: 'CSA : Numéros aléatoires'
+        csa_static_methods: 'CSA : Méthodes statiques'
+        csa_static_variables: 'CSA : Variables statiques'
+        csa_the_equals_method: 'CSA : La méthode equals ()'
+        csa_welcome_to_the_theater: 'CSA : Bienvenue au théâtre'
+        enter_your_own_poem: Entrez votre propre poème
+        csa-example-solution-1: 'Codage en direct : un exemple de solution '
         csd_sprite_properties: Propriétés du sprite
+        csa-pl-documentation: Documentation dans Java Lab
+        csc-starquilts-intro: 'CSC : Édredons Star'
+        csc-mapmakers-intro: Codage de cartes interactives
+        csa-pl-vocab-pm: Vocabulaire de la gestion
+        csc-ecosystems-intro: Présentation des écosystèmes
+        PL_CSD_MicroBit_Intro: Présentation du Micro:bit
+        csc_animal_adaptations_intro: Intro sur les adaptations des animaux
+        csa_two_dimensional_arrays: 'CSA : Tableaux bidimensionnels (2D)'
+        csa_working_with_2d_array_elements: 'CSA : Utilisation d''éléments de matrice 2D'
+        csa_row_major_traversal: 'CSA : Traversée entre Row Major'
+        csa_column_major_traversal: 'CSA : Traversée entre colonnes principales'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA : amélioré pour les boucles et les matrices 2D'
+        csa_images_and_pixels: 'CSA : Images et pixels'
+        csa_wrapper_classes_part_1: 'CSA : Classes d''emballage, partie 1'
+        csa_wrapper_classes_part_2: 'CSA : Classes d''emballage, partie 2'
+        csa_the_arraylist_class: 'CSA : La classe ArrayList'
+        csa_working_with_arraylist_data: 'CSA : Utilisation des données ArrayList'
+        csa_remving_data_from_an_arraylist: 'CSA : Supprimer des données d''une ArrayList'
+        csa_private_methods: 'CSA : Méthodes privées'
+        csa_recursion: 'CSA : Récursion'
+        csa_searching_algorithms: 'CSA : Algorithmes de recherche'
+        csa_sorting_algorithms: 'CSA : Algorithmes de tri'
+        star_quilts_intro_to_artist: 'Star Quilts : présentation de l''artiste'
+        upload_sprites_backgrounds: Téléchargement de sprites et d'arrière-plans personnalisés
+        PL_CSD_EquityBlindSpotsvid: Biais & Responsabilité
+        how-ai-works-llms-full: Comment Marchent les Chatbots et les Grands Modèles de Langage
+        how-ai-works-creativity-full: L'IA a-t-elle de la Créativité et de l'Imagination?
+        how-ai-works-llms-part1: Chatbots et Grands Modèles de Langage Partie 1
+        how-ai-works-llms-part2: Chatbots et Grands Modèles de Langage Partie 2
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

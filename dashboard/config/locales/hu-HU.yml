@@ -1,51 +1,14 @@
 ---
 hu:
-  errors:
-    messages:
-      not_saved: 'Kérjük, javítsd a következő hibákat:'
-      too_young: Erre a tartalomra életkori korlátozás van érvényben, és nem elérhető
-        fiatalabb diákok számára.
-      teacher_must_accept_terms: Ez a tartalom fiatal diákok számára nem elérhető.
-        Kérd meg tanárodat, hogy fogadja el a frissített Általános Szerződési Feltételeket,
-        hogy hozzáférj ehhez a tartalomhoz. A tanár ezt megteheti, ha bejelentkezik
-        a Kód Stúdióba, ha rákattint a Kód Stúdió kezdőlapjának tetején található
-        "Felülvizsgálat frissítések" gombra.
-      pair_programmer: Jelenleg párban programozol egy olyan diáktársaddal, aki ehhez
-        a tartalomhoz nem férhet hozzá. Hogy elérd ezt a tartalmat, állítsd le a páros
-        programozást, és próbáld újra.
   activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            reset_password_token:
-              invalid: nem érvényes. Minden link csak egyszer használható fel arra,
-                hogy megváltoztasd a jelszavadat, és csak a legutoljára elküldött
-                link fog működni.
-      messages:
-        blank: szükséges
-        blank_plural: szükségesek
-        invalid: érvénytelen
-        invalid_plural: érvénytelenek
     attributes:
       user:
-        name: Megjelenítendő név
-        name_example: Megjelenítendő név (pl. Menő Kódoló)
-        email: Email
-        parent_email: Szülő/gondviselő e-mail
-        personal_email: Személyes e-mail cím <a href="%{url}">(kattints ide, ha nem
-          rendelkezel e-mail címmel)</a>
-        personal_email_markdown: Személyes e-mail cím [(kattints ide, ha nem rendelkezel
-          e-mail címmel)](%{url})
-        username: felhasználónév
-        password: Jelszó
-        verified_teacher: Igazolt tanár
-        password_confirmation: Jelszó megerősítése
-        current_password: Jelenlegi jelszó
-        locale: Nyelv
         age: Kor
-        gender: Nem
+        current_password: Jelenlegi jelszó
         edit_header: Felhasználói adatok szerkesztése
+        email: Email
+        error:
+          future: nem lehet a jövőben
         finish_sign_up_header: A profilod létrehozásának befejezése
         finish_sign_up_subheader: Töltsd ki az alábbi adatokat <strong>%{email}</strong>
           Code.org fiókod létrehozásához.
@@ -55,94 +18,57 @@ hu:
           felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Töltsd ki az alábbi adatokat a
           Code.org felhasználó fiókod befejezéséhez **%{provider}****%{email}**.
+        gender: Nem
+        locale: Nyelv
+        name: Megjelenítendő név
+        name_example: Megjelenítendő név (pl. Menő Kódoló)
+        parent_email: Szülő/gondviselő e-mail
+        password: Jelszó
+        password_confirmation: Jelszó megerősítése
+        personal_email: Személyes e-mail cím <a href="%{url}">(kattints ide, ha nem
+          rendelkezel e-mail címmel)</a>
+        personal_email_markdown: Személyes e-mail cím [(kattints ide, ha nem rendelkezel
+          e-mail címmel)](%{url})
         reset_password_token: A jelszó megváltoztatásához használt link
-        error:
-          future: nem lehet a jövőben
-  beta: béta
-  hello: Helló világ
-  welcome_back: Üdv újra, %{name}
-  your_professional_learning_plan: Saját Profi Tanulmányi Terv
-  see_your_learning_plan: Tekintsd meg a tanulmányi tervedet
-  submit: Elküldés
-  unsubmit: Visszavon
-  previous_page: Előző oldal
-  next_page: Következő oldal
-  next_resource: Következő erőforrás
-  done_with_module: Végeztem ezzel a tanulási modullal
-  cancel: Mégsem
-  okay: Oké
-  or: vagy
-  heading_x_of_y: "%{heading} (%{x}. oldal / %{y})"
-  join_section:
-    code:
-      title: Csatlakozz egy csoporthoz a Code.org-on
-      placeholder: Szakasz kód (ABCDEF)
-      instructions: 'Kérlek, írd be a tanárod által megadott 6 betűs kódot (például:
-        "ABCDEF"), hogy csatlakozhass a csoporthoz.'
-      instructions_short: Add meg a 6 karakteres szakasz kódod
-      submit: Csatlakozás
+        us_state: Állam
+        username: felhasználónév
+        verified_teacher: Igazolt tanár
+    errors:
+      messages:
+        blank: szükséges
+        blank_plural: szükségesek
+        invalid: érvénytelen
+        invalid_plural: érvénytelenek
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: nem érvényes. Minden link csak egyszer használható fel arra,
+                hogy megváltoztasd a jelszavadat, és csak a legutoljára elküldött
+                link fog működni.
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
     submit: Adj tanácsot
-  appname: Code.org
-  stage: szakasz
-  stage_number: "%{number}. lecke"
-  puzzle: Kirakós
-  trophies: trófeák
-  courses: tanfolyamok
-  courses_page:
-    title_student: 'Tanulj a számítástechnikát '
-    title_teacher: Taníts számítástechnikát
-  unplugged_activity: Offline tevékenység
-  of: "/"
-  more: TÖBB
-  less: KEVESEBB
-  try_hoc: 'Próbáld ki a Kódolás Óráját, kattints ide >> '
-  try_k8intro: Próbáld ki az általános iskolások szóló, számítógép-tudományba bevezető
-    tanfolyamot (15-25 óra)
-  k8intro: A számítógép-tudományba bevető tanfolyam általános iskolások számára (15-25
-    óra)
+  age_interstitial:
+    age: Életkorod
+    disclaimer: A korábbiakhoz hasonlóan a code.org soha sem adja ki, nem adja el
+      és nem osztja meg ezeket az információkat harmadik felekkel.
+    header: Felhasználói adatok frissítése
+    sign_out_markdown: Ha nem kívánod megadni az életkorod, akkor [kijelentkezhetsz](%{url}).
+    warning: A még erősebb adatvédelem érdekében még gyűjtjük a tapasztalatokat. Ehhez
+      arra van szükségünk, hogy a jelenlegi felhasználók megadják az életkorukat itt.
   already_started: Már elkezdted? Folytasd itt >>
-  demos: 'Admin: Minden demó'
-  continue: Tovább
-  prize: díj
-  more_info: További információk
+  appname: Code.org
   auth:
-    continue_with: 'Folytatás ezzel: %{provider}'
-    sign_in_with: 'Bejelentkezés ezzel a fiókkal:  %{provider}'
-    signed_in: Bejelentkezve!
-    signed_out_markdown: "### Kijelentkeztél innen: [Code.org](%{url})."
-    sign_out_of_markdown: "#### Te a %{provider} segítségével léptél be. [Kattints
-      ide,](%{url}) hogy kijelentkezz a %{provider} szolgáltatásból."
-    already_signedup: Már regisztráltál?
-    notyet_signedup: Még nem csatlakoztál?
-    google_oauth2: Google fiók
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Microsoft fiók
-    microsoft_v2_auth: Microsoft fiók
-    clever: Okos fiók
-    powerschool: Powerschool fiók
-    forgot_password: Elfelejtette jelszavát?
-    migration_success: Sikeresen frissítettél az új felhasználói élményeinkhez.
-    demigration_success: Az új felhasználói élmények nem elérhetők a fiókodban.
-    need_confirmation: Nem kaptad meg a megerősítő utasításokat?
-    need_unlock: Nem kaptad meg az útmutatót a zárolás megszüntetéséhez?
-    not_linked: Sajnáljuk, de Code.org-fiókod nem kapcsolódik a %{provider} fiókhoz.
-      Úgy kell bejelentkezned, hogy beírod a jelszavad.
-    use_clever: Sajnáljuk, de Code.org-fiókod nem kapcsolódik a %{provider} szolgáltatáshoz.
-      Kérjük, jelentkezz be az Okos Portálon keresztül.
-    invalid_provider: Sajnos a %{provider} felhasználói fiókot nem lehet társítani
-      a Code.org fiókhoz.
-    migration_required: Sajnálom, nem lehet fel- vagy lecsatlakoztatni fiókokat, amíg
-      a régi felhasználói környezetet használod. Kérlek frissíts az újra.
-    unable_to_connect_provider: Nem lehet összekötni Code.org-fiókod, a %{provider}
-      szolgáltatással. Kérjük, próbálja meg újra!
-    disconnect_successful: Siker! Szétkapcsoltuk a külső fiókodat a Code.org fiókodtól.
     already_in_use: A %{provider} fiókodat már korábban összekapcsoltuk egy másik
       Code.org fiókkal.
     already_linked: A %{provider} fiókodat már korábban összekapcsoltuk egy másik
       Code.org fiókkal.
+    already_signedup: Már regisztráltál?
+    clever: Okos fiók
+    continue_with: 'Folytatás ezzel: %{provider}'
+    demigration_success: Az új felhasználói élmények nem elérhetők a fiókodban.
+    disconnect_successful: Siker! Szétkapcsoltuk a külső fiókodat a Code.org fiókodtól.
     existing_account:
       account_exists: Jó hírek! Már van egy Code.org fiókod, ami a(z) %{email} email
         címet használja.
@@ -151,561 +77,181 @@ hu:
       sign_up: Nem a saját email címed? Szeretnél egy új fiókot egy másik email címmel?
         Bejelentkezés után összekötheted a %{provider} profilodat a Fiók Beállítások
         oldalon, hogyha új fiókot készítessz.
-  signup_form:
-    email_signup: Regisztrálj az e-mail címeddel
-    student_count: "%{count} tanuló iratkozott már fel."
-    teacher_count: "%{count} tanár iratkozott már fel."
-    overview: Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy irányíthass
-      egy osztályt. <a href="/">Böngészhetsz a különböző szintek és feladványok között</a>
-      fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.
-    overview_markdown: Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy
-      egy osztályt irányíthass. [Böngészhetsz a különböző szintek és feladványok között](/)
-      fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.
-    hoc_already_signed_up_heading: Kezdés bejelentkezés nélkül
-    hoc_already_signed_up_content: Sikeresen bejelentkeztél a Kódolás Órájába! Neked
-      és a diákjaidnak nem kell bejelentkezned a Kód Stúdióba, hogy részt vehess az
-      eseményen. A kezdéshez <a href="%{learn_url}"> válassz ki egy feladatot az osztályodnak,
-      és oszd meg a linket.<br/><br/> Ha élvezted a Kódolás Óráját, akkor állíts be
-      magadnak egy jelszót, és csinálj egy Kód Stúdió fiókot, hogy felvedd a diákjaidat
-      egy <a href="%{educate_url}"> kurzusra.
-    hoc_already_signed_up_content_post_hoc: Köszönjük, hogy otthont adsz egy Kódolás
-      Órájának. A Code Studio szolgáltatásba való bejelentkezéshez jelszót kell beállítanod
-      a fiókodhoz. Ezzel elmentheted a haladásod és kezelheted az osztályodat. A tanulókhoz
-      kurzusokat rendelhetsz, és nyomon követheted előrehaladásukat. <a href="%{studio_url}">
-      Továbbra is folytathatod a különböző szakaszok és feladványok böngészését </a>
-      fiók létrehozása nélkül.
-    hoc_already_signed_up_content_post_hoc_markdown: Köszönjük, hogy otthont adsz
-      egy Kódolás Órájának. A Code Studio szolgáltatásba való bejelentkezéshez jelszót
-      kell beállítanod a fiókodhoz. Ezzel elmentheted a haladásod és kezelheted az
-      osztályodat. A tanulókhoz kurzusokat rendelhetsz, és nyomon követheted előrehaladásukat.  Továbbra
-      is folytathatod a különböző szakaszok és feladványok böngészését (%{studio_url})
-      fiók létrehozása nélkül.
-    teacher_educator_guide: Nézd meg a tanári útmutatót
-    title: Regisztrálj a Code.org-ba
-    school_name: Iskola neve (nem kötelező)
-    school_address: Iskola címe (nem kötelező)
-    address_placeholder: cím, város, állam (megye), irányítószám
-    gender: Nem (nem kötelező)
-    birthday: Születésnap (nem kötelező)
-    age: Kor
-    user_type: Diák vagy tanár vagy?
-    submit: Regisztrálás
-    go_to_account: A fiókomhoz
-    teacher: Tanár vagy?
-    valid_username: Elérhető!
-    invalid_username: A felhasználónév legyen legalább 5 karakter hosszú
-    taken_username: Felhasználónév már foglalt
-    valid_password: Érvényes jelszó!
-    invalid_password: A jelszónak legalább 6 karakter hosszúnak kell lennie
-    mismatch_password: A megadott két jelszó nem egyezik
-    student_consent: Megerősítem, hogy a szülőm vagy törvényes gondviselőm engedélyt
-      adott, hogy használjam Code.org szolgáltatásait.
-    agree_us_data_transfer_student: "**Hozzájárulok ahhoz, hogy a Code.org adatokat
-      továbbítson (beleértve személyes adatokat is) az Egyesült Államokba** azok tárolása
-      és feldolgozása céljából arról, hogy én hogyan használom ezt a webhelyet."
-    agree_us_data_transfer_teacher: "**Hozzájárulok ahhoz, hogy a Code.org adatokat
-      továbbítson (beleértve személyes adatokat is) az Egyesült Államokba** azok tárolása
-      és feldolgozása céljából arról, hogy én (és a diákjaim) hogyan használják ezt
-      a webhelyet."
-    data_collection_us: Tudom, hogy a Code.org egy nonprofit webhely, amelynek székhelye
-      az USA-ban van, és az USA adatgyűjtésre vonatkozó törvényei eltérhetnek az én
-      hazám törvényeitől.
-    visit_privacy: További információkért keresd fel a Code.org webhelyen az [Adatvédelmi
-      Szabályokat](%{privacy_url}).
-    student_terms_markdown: Az e-mail címeket olyan módon tároljuk, hogy az nem teszi
-      lehetővé számunkra a kapcsolatfelvételt a tanulókkal. A tanulók a jelszóemlékeztető
-      kivételével soha nem fognak e-mailt kapni a Code.org-tól. További információt
-      az [adatvédelem](http://code.org/privacy) részben találsz.
-    user_type_button: Felhasználói fiók-típus módosítása
-    user_type_label: Fióktípus
-    user_type_student: Diák
-    user_type_student_desc: 'Fedezd fel az összes tanfolyamunkat és tevékenységünket,
-      továbbá:'
-    user_type_student_ability_1: Mentsd el a haladásod és a projektjeid
-    user_type_student_ability_2: Csatlakozz a tanárod osztálytermi csoportjához
-    user_type_teacher: Tanár
-    user_type_teacher_desc: 'Minden, amihez a diákok hozzáférnek, plusz:'
-    user_type_teacher_ability_1: Hozz létre új osztálytermi csoportot
-    user_type_teacher_ability_2: A diákok munkájának kiosztása és nyomon követése
-    user_type_teacher_ability_3: Beiratkozás szakmai tanulásra
-    user_type_teacher_ability_4: Kommunikáció a tanári fórumon
-    field_is_required: szükséges
-    accept_terms: El kell fogadnod, hogy fiókot hozhass létre
-    error: Hiba történt
-    email_preference_question: Küldhetünk neked email üzeneteket az új tanfolyamjainkról,
-      helyi lehetőségekről, és egyéb informatikai hírekről? (kb. havonta egyszer)
-    email_preference_privacy: "(Tekintsd át az adatvédelmi irányelveinket)"
-    email_preference_yes: Igen
-    email_preference_no: Nem
-    email_preference_required: Meg kell adnod egy e-mail címet.
-    share_teacher_email_reg_partner_question: Szeretné, ha megosztanánk elérhetőségét
-      az Ön országának [Code.org regionális partnerével](%{cdo_regional_partner_desc})?  Így
-      értesítést kaphat a helyi szakma fejlődéséről, az erőforrásokról és eseményekről?
-    share_teacher_email_reg_partner_preference_yes: Igen
-    share_teacher_email_reg_partner_preference_no: Nem
-    share_teacher_email_reg_partner_preference_required: Meg kell adnod egy e-mail
-      címet.
-    parent_account_checkbox: Szülő/gondviselő vagyok, a gyermekem nevében jelentkezem
-    parent_account_email_progress_permission: Küldhetünk Önnek esetenként e-mailt
-      a gyermeke fejlődéséről és projektjeiről, valamint frissítéseket a tanfolyamáról
-      és a számítástechnikai ismereteiről? [(Lásd az adatvédelmi irányelveinket)](%{privacy_policy_url})
-    parent_account_email_label: Szülő/gondviselő e-mail címe
-  school_info:
-    title: Iskolai információ (opcionális)
-    school_country: Iskola országa
-    select_school_type: Iskola típusa
-    charter: Charter
-    private: Magán
-    public: Nyilvános
-    homeschool: Bázisiskola
-    after_school: Iskola után
-    other: Egyéb
-    state: Állam
-    district: Kerület
-    other_district_not_listed: Más, fel nem sorolt kerület
-    district_name: Kerület neve
-    school: Iskola
-    other_school_not_listed: Más, fel nem sorolt iskola
-    school_name: Iskola neve
-    school_zip: Iskola irányítószáma
-    school_address: Iskola címe
-    school_organization_name: Iskola vagy szervezet neve
-    school_organization_zip: Iskola/szervezet irányítószáma
-  signin_form:
-    title: Már van felhasználói fiókod? Jelentkezz be
-    login: Email
-    login_username: E-mail cím vagy felhasználónév
-    password: Jelszó
-    remember: Emlékezz rám
-    submit: Bejelentkezés
-  signin:
-    try_heading: Bejelentkezés nélkül próbálnád ki a kódolást?
-    try_hoc: Először próbáld meg a Kódolás Óráját
-    try_20hours: Próbáld ki a 20 órás bevezetést a számítógép-tudományba
-  signinsection:
-    welcome: 'Üdvözlünk itt: %{section_name}'
-    name: Válaszd ki a neved
-    picture: Keresd meg a titkos képed
-    words: Írd be a titkos szavaidat
-    login: Bejelentkezés
-    invalid_login: Érvénytelen bejelentkezés, kérjük próbáld meg újra
-    pair_programming: Van egy társam a számítógépnél
-    student_privacy_markdown: "[Itt](%{student_privacy_blog}) megtudhatod, hogy miért
-      nem látod a teljes nevedet."
-  password:
-    reset_form:
-      title: Elfelejtette jelszavát?
-      instructions: Adja meg e-mail címét alul, és elküldjük Önnek jelszó visszaállítási
-        utasításokat.
-      email: E-mail cím
-      submit: Elküldés
-    reset_errors:
-      captcha_required: Kérlek, töltsd ki a CAPTCHA-t, hogy új jelszót állíthass be.
-      invalid_email: Úgy tűnik, nem létező e-mail címmel hoztál létre fiókot. Kérjük,
-        írj a support@code.org-ra, hogy jelszó-helyreállítási linket kapj.
-    change_form:
-      title: Jelszó módosítása
-      new_password: Új jelszó
-      confirm_password: Erősítse meg új jelszavát
-      submit: Jelszavam módosítása
-  welcome_email:
-    subject: Csatlakozz az én osztályomhoz (a Code.org-on)
-    body: "Kattints az alábbi linkre, hogy számítógép-tudományi gyakorlatokra iratkozz
-      fel a Code.org rendszerben (velem, mint tanár): %{link} \n\nA gyakorlatok izgalmasak,
-      látványosak, és a számítógép-tudomány alapvető fogalmait egyszerű, irányított,
-      játékos módon tanítják. Tanulj programozni olyan tanároktól, mint Bill Gates,
-      Mark Zuckerberg, az Angry Birds és a zombik! :-) %{name}\n"
-  parent_mailer:
-    student_associated_subject: Belépési információk a Code.org-hoz
-    parent_email_added_subject: Üdvözlünk a Code.org-on!
-  teacher_mailer:
-    new_teacher_subject: Üdvözlünk a Code.org-on!
-    delete_teacher_subject: 'Code.org figyelmeztetés: a fiókod törölve lett'
-    verified_teacher_subject: Code.org tanári azonosítás - sikeres
-  section:
-    your_section:
-      one: 'A szakaszod:'
-      other: 'Csoportjaid:'
-    code_with_teacher: "%{section_code} %{teacher_name} tanárral"
-    confirm:
-      remove: Biztosan el akarod hagyni ezt a szakaszt?
-    default_name: Név nélküli szakasz
-    remove: "(szakasz eltávolítása)"
-    type:
-      picture: képes jelszó
-      word: Titkos szó
-      email: Email
-      google_classroom: Google Tanterem
-      clever: Okos
+    facebook: Facebook
+    forgot_password: Elfelejtette jelszavát?
+    google_oauth2: Google fiók
+    invalid_provider: Sajnos a %{provider} felhasználói fiókot nem lehet társítani
+      a Code.org fiókhoz.
+    microsoft_v2_auth: Microsoft fiók
+    migration_required: Sajnálom, nem lehet fel- vagy lecsatlakoztatni fiókokat, amíg
+      a régi felhasználói környezetet használod. Kérlek frissíts az újra.
+    migration_success: Sikeresen frissítettél az új felhasználói élményeinkhez.
+    need_confirmation: Nem kaptad meg a megerősítő utasításokat?
+    need_unlock: Nem kaptad meg az útmutatót a zárolás megszüntetéséhez?
+    not_linked: Sajnáljuk, de Code.org-fiókod nem kapcsolódik a %{provider} fiókhoz.
+      Úgy kell bejelentkezned, hogy beírod a jelszavad.
+    notyet_signedup: Még nem csatlakoztál?
+    powerschool: Powerschool fiók
+    sign_in_with: 'Bejelentkezés ezzel a fiókkal:  %{provider}'
+    sign_out_of_markdown: "#### Te a %{provider} segítségével léptél be. [Kattints
+      ide,](%{url}) hogy kijelentkezz a %{provider} szolgáltatásból."
+    signed_in: Bejelentkezve!
+    signed_out_markdown: "### Kijelentkeztél innen: [Code.org](%{url})."
+    twitter: Twitter
+    unable_to_connect_provider: Nem lehet összekötni Code.org-fiókod, a %{provider}
+      szolgáltatással. Kérjük, próbálja meg újra!
+    use_clever: Sajnáljuk, de Code.org-fiókod nem kapcsolódik a %{provider} szolgáltatáshoz.
+      Kérjük, jelentkezz be az Okos Portálon keresztül.
+    windowslive: Microsoft fiók
+  behaviors:
+    this_sprite: ez a sprite
+  beta: béta
+  builder:
+    back: Vissza a szkriptekhez
+    created: Létrehoztál egy új szkriptet.
+    destroyed: Töröltél egy szkriptet.
+    level:
+      create: Hozzon létre új szintet
+      current: Aktuális szintek
+      unused: Nem használt szintek
+    manage: Szintek építése
+    success: Sikeresen szerkesztetted a blokkokat.
+    view: Nézet
+  cancel: Mégsem
+  certificate_hour_of_code: A kódolás órája
+  certificate_sponsor_message: "%{sponsor_name} tette a nagylelkű ajándékot, hogy
+    szponzorálja a tanulást."
+  code_org_logo_alt: Code.org kezdőlap
+  compatibility:
+    upgrade:
+      applab_unsupported_tablet: Az App Lab legjobban asztali számítógépen vagy laptopon
+        működik, egérrel és billentyűzettel. A jelenlegi eszköz használata nehézségekbe
+        ütközhet.
+      gamelab_unsupported_tablet: A Game Lab legjobban asztali számítógépen vagy laptopon
+        működik, egérrel és billentyűzettel. A jelenlegi eszköz használata nehézségekbe
+        ütközhet.
+      link: Tudj meg többet
+      unsupported_message: A böngésződ nem támogatott. Frissítsd böngészőt [a támogatott
+        böngészők egyikére](%{supported_browsers_url}). Megtekintheted az oldalt,
+        de számolj azzal, hogy a funkciók nem működnek.
+      weblab_unsupported_locale_storage: A Weblabor használata magánböngészési módban
+        problémával járhat. Töltsd be újra a projektet normál módban. Elnézést a kellemetlenségért.
+  confirm: Jóváhagy
+  continue: Tovább
+  contract_match:
+    baddomainname: Egy vagy több tartományban helytelen név szerepel.
+    baddomainsize: A megkötésedben nincs megfelelő számú érték annak tartományában.
+    baddomaintype: A tartomány elemek közül egy vagy több nem megfelelő típusú, vagy
+      rossz sorrendben vannak.
+    badname: A megkötés elnevezése nem megfelelő.
+    badname_case: A függvények elnevezése érzékeny a kis-és nagybetűkre. Próbáld újra
+      elnevezni a megkötést.
+    badrange: A megkötésednek nem megfelelő a tartománya.
+    wrong_title: Helytelen válasz
+  cookie_banner:
+    accept: Egyetértek
+    message: A weboldalunk további böngészésével vagy az Elfogadom gombra kattintással
+      hozzájárulsz a sütik számítógépen vagy más eszközön történő tárolásához.
+    more_information: Lásd a Code.org adatvédelmi irányelveit.
+  copy: Másol
+  course_offering:
+    headers:
+      csc: Kapcsolatok az informatikával
+      csf: A számítógép-tudomány alapjai
+      hello_world: Helló világ
+      minecraft: Minecraft
+      sports: Sportok
+  courses: tanfolyamok
+  courses_category: Komplett tanfolyamok
+  courses_page:
+    title_student: 'Tanulj a számítástechnikát '
+    title_teacher: Taníts számítástechnikát
+  crud:
+    access_denied: 'Nincs jogosultságod ehhez: %{model}.'
+    back: Vissza
+    confirm: Biztos vagy benne?
+    created: "%{model} sikeresen létrehozva."
+    destroy: Elpusztítani
+    destroyed: "%{model} sikeresen törölve."
+    edit: Szerkeszt
+    edit_model: "%{model} módosítása"
+    new_model: Új %{model}
+    show: Mutat
+    submit: Elküldés
+    update: Frissíteni
+    updated: "%{model} sikeresen frissítve."
+  demos: 'Admin: Minden demó'
+  devise:
+    registrations:
+      user:
+        personal_login_created_email: Sikeresen létrehoztad a személyes felhasználói
+          fiókodat. Beléphetsz a fiókodba az e-mail címed és a jelszavad megadásával
+        personal_login_created_username: 'Sikeresen elkészítetted a személyes profilod.
+          Most beléphetsz a saját fiókodba (%{username}) felhasználóneveddel és jelszavaddal. '
+        user_type_change_email_mismatch: A megadott e-mail cím nem egyezik a fiókhoz
+          tartozó e-mail címmel
+  dialog:
+    ok: OK
+    startover_body: Visszaállítja a kiindulási állapotot és töröl minden blokkot,
+      amit hozzáadtál a programhoz, vagy amit megváltoztattál.
+    startover_cancel: Mégsem
+    startover_ok: Újrakezdés
+    startover_title: Biztosan újra szeretnéd kezdeni?
+  done_with_module: Végeztem ezzel a tanulási modullal
+  download_coming_soon: Hamarosan lesz letölthető tevékenység.
+  download_pdf: Óravázlat megnyitása
+  errors:
+    messages:
+      not_saved: 'Kérjük, javítsd a következő hibákat:'
+      pair_programmer: Jelenleg párban programozol egy olyan diáktársaddal, aki ehhez
+        a tartalomhoz nem férhet hozzá. Hogy elérd ezt a tartalmat, állítsd le a páros
+        programozást, és próbáld újra.
+      teacher_must_accept_terms: Ez a tartalom fiatal diákok számára nem elérhető.
+        Kérd meg tanárodat, hogy fogadja el a frissített Általános Szerződési Feltételeket,
+        hogy hozzáférj ehhez a tartalomhoz. A tanár ezt megteheti, ha bejelentkezik
+        a Kód Stúdióba, ha rákattint a Kód Stúdió kezdőlapjának tetején található
+        "Felülvizsgálat frissítések" gombra.
+      too_young: Erre a tartalomra életkori korlátozás van érvényben, és nem elérhető
+        fiatalabb diákok számára.
+  external_links:
+    disclaimer: Felelősséget kizáró nyilatkozat
+    disclaimer_text: Ennek az oldalnak az adatvédelmi irányelvei nem feltételnül azonosak
+      a Code.org irányelveivel. Azért választottuk ki ezeket a harmadik féltől származó
+      forrásokat, mert úgy gondoljuk, hogy hasznosak lehetnek a számodra. Bár közvetlenül
+      nem vagyunk felelősek az ilyen webhelyek tartalmáért, ha kifogásolhatónak találod
+      a tartalmat, vagy ha a hivatkozott webhely már nem elérhető, kérjük <a href='%{support_url}'>lépj
+      kapcsolatba az ügyfélszolgálattal</a>.
+    leaving_domain: Most kilépsz ebből a tartományból egy olyan webhelyre, amelyet
+      nem a Code.org üzemeltet.
   follower:
-    invite_sent: Meghívó elküldve
     added_teacher: "%{name} hozzáadva mint a tanárod"
-    registered: Csatlakoztál a %{section_name} kurzushoz.
-    captcha_required: Kérjük, töltsd ki a CAPTCHA-t, hogy csatlakozzon ehhez a kurzushoz.
     already_exists: " Már csatlakoztál a %{section_name} kurzushoz."
+    captcha_required: Kérjük, töltsd ki a CAPTCHA-t, hogy csatlakozzon ehhez a kurzushoz.
     error:
-      signed_in: Kérjük, jelentkezz ki, mielőtt folytatnád
-      username_not_found: "%{username} felhasználónév nem található"
-      username_in_use: "%{username} már foglalt. Kérjük, válassz egy másikat"
+      blank_code: Add meg a szakasz kódját
+      cant_join_own_section: Sajnáljuk, de nem csatlakozhatsz a saját szakaszodhoz.
+      full_section: Nem tudtunk hozzáadni a %{section_code} kurzushoz, mert már %{section_capacity}
+        diák benne van. Kérj segítséget a tanárodtól!
       no_teacher: Nem található bejelentkezett felhasználó '%{teacher_email_or_code}'
         e-mail címmel. Kérdd meg, hogy jelentkezzen be itt, majd próbáld meg felvenni
         újra
-      section_not_found: 'Nem található szakasz ezzel a kóddal: ''%{section_code}''.'
-      blank_code: Add meg a szakasz kódját
-      cant_join_own_section: Sajnáljuk, de nem csatlakozhatsz a saját szakaszodhoz.
+      not_participant_type: Nem tudtunk felvenni a %{section_code} csoportba, mert
+        nem felelsz meg a csoporthoz tartozó résztvevők típusának.
       provider_managed_section: Ezt a szakaszt egy másik szolgáltató kezeli és nem
         lehet hozzá csatlakozni. Kérd meg a tanárodat, hogy adjon hozzá a %{provider}
         szolgáltatón keresztül, és szinkronizálja újra a szakaszt.
       restricted_section: Nem tudtunk hozzáadni a %{section_code} kurzuushoz, mert
         az le van zárva. Kérj segítséget a tanárodtól!
-      full_section: Nem tudtunk hozzáadni a %{section_code} kurzushoz, mert már %{section_capacity}
-        diák benne van. Kérj segítséget a tanárodtól!
-      not_participant_type: Nem tudtunk felvenni a %{section_code} csoportba, mert
-        nem felelsz meg a csoporthoz tartozó résztvevők típusának.
+      section_not_found: 'Nem található szakasz ezzel a kóddal: ''%{section_code}''.'
+      signed_in: Kérjük, jelentkezz ki, mielőtt folytatnád
+      username_in_use: "%{username} már foglalt. Kérjük, válassz egy másikat"
+      username_not_found: "%{username} felhasználónév nem található"
+    invite_sent: Meghívó elküldve
     mail:
       student_disassociated:
         subject: 'Code.org figyelmeztetés: %{student_name} már nem a diákod a rendszerben.'
-  reports:
-    error:
-      access_denied: Nincs jogosultságod megtekinteni ennek a személynek a statisztikáit
-  crud:
-    new_model: Új %{model}
-    show: Mutat
-    edit: Szerkeszt
-    edit_model: "%{model} módosítása"
-    update: Frissíteni
-    submit: Elküldés
-    destroy: Elpusztítani
-    back: Vissza
-    confirm: Biztos vagy benne?
-    created: "%{model} sikeresen létrehozva."
-    updated: "%{model} sikeresen frissítve."
-    destroyed: "%{model} sikeresen törölve."
-    access_denied: 'Nincs jogosultságod ehhez: %{model}.'
-  devise:
-    registrations:
-      user:
-        user_type_change_email_mismatch: A megadott e-mail cím nem egyezik a fiókhoz
-          tartozó e-mail címmel
-        personal_login_created_email: Sikeresen létrehoztad a személyes felhasználói
-          fiókodat. Beléphetsz a fiókodba az e-mail címed és a jelszavad megadásával
-        personal_login_created_username: 'Sikeresen elkészítetted a személyes profilod.
-          Most beléphetsz a saját fiókodba (%{username}) felhasználóneveddel és jelszavaddal. '
-  nav:
-    header:
-      finished_hoc: Végeztem!
-      sign_in_to_save: Jelentkezz be, hogy később ugyaninnen folytathasd
-      my_dashboard: Vezérlőpultom
-      course_catalog: Tanfolyamaink
-      project_gallery: Projektek
-      sections: Szakaszok
-      help_support: Súgó és támogatás
-      report_bug: Hiba jelentése
-      report_abuse: Visszaélés jelentése
-      teacher_community: Tanári közösség
-      professional_learning: Professzionális tanulás
-      documentation: Dokumentáció
-      tutorials: Útmutatók
-      app_lab_documentation: App Lab dokumentáció
-      app_lab_tutorials: App Lab oktatóanyagok
-      game_lab_documentation: Játéklabor dokumentáció
-      game_lab_tutorials: Játék Lab oktatóanyagok
-      sprite_lab_documentation: Sprite Lab dokumentációja
-      sprite_lab_tutorials: Sprite Lab oktatóanyagok
-      web_lab_documentation: Web Lab dokumentáció
-      educate_overview: Áttekintés oktatóknak
-      educate_elementary: Alsó tagozat
-      educate_middle: Felső tagozat
-      educate_high: Középiskola
-      educate_hoc: A kódolás órája
-      educate_partner: Legyen a partnerünk
-      educate_beyond: A Code.org-on túl
-      educate_inspire: Motiválj egy tanulót
-      educate_community: Online közösség
-      educate_requirements: Technikai követelmények
-      educate_tools: Eszközök és videók
-      about_us: Rólunk
-      about_leadership: Vezetőség
-      about_donors: Adományozók
-      about_partners: Partnerek
-      about_team: Teljes csapat
-      about_news: Hírszoba
-      about_evaluation: Értékelés
-      about_jobs: Állás
-      about_contact: Kapcsolat
-      about_faqs: GYIK
-      learn: Tanulj
-      stats: statisztikák
-      help_us: Támogass minket
-      teach: Taníts
-      about: Rólunk
-      legal: Adatvédelem és jogi
-      legal_privacy: Adatvédelmi Elvek
-      legal_cookie_notice: Sütikre vonatkozó figyelmeztetés
-      legal_tos: Feltételek
-    user:
-      classroom: Tanári kezdőlap
-      district_dashboard: Tankerületi munkafelület
-      label: Üdv %{username}
-      stats: Kód Stúdió
-      my_projects: Projektek
-      settings: Fiók beállítások
-      logout: Kijelentkezés
-      signin: Bejelentkezés
-      signup: Hozzon létre egy fiókot
-      already_registered: Már regisztráltál?
-      pair_programming: Páros programozás
-      team: Csapat
-      driver: Vezető
-      navigator: Navigátor
-      create: Létrehoz
-      algebra_game: Algebra
-      applab: App Lab
-      artist: Művész
-      artist_k1: Művész (nem olvasó)
-      basketball: Kosárlabda
-      bounce: Ugrál
-      calc: Számolás
-      dance: Táncos buli
-      eval: Kiértékel
-      flappy: Flappy
-      frozen: Jégvarázs
-      gamelab: Játék Labor
-      gamelab_jr: Játéklabor (beta)
-      gumball: Gumball csodálatos világa
-      iceage: Jégkorszak
-      infinity: Végtelen
-      makerlab: Készítés eszköztár
-      minecraft_adventurer: Minecraft kaland
-      minecraft_aquatic: Minecraft Tenger
-      minecraft_codebuilder: 'Minecraft: Kód Csatlakozás'
-      minecraft_designer: Minecraft
-      minecraft_hero: Minecraft Hős
-      playlab: Játéklabor
-      playlab_k1: Játéklabor (nem olvasó)
-      poetry: Költészet
-      poetry_hoc: Versművészet
-      scratch: Scratch
-      sports: Sportok
-      spritelab: Sprite labor
-      starwars: Star Wars
-      starwarsblocks: Csillagok háborúja (blokkok)
-      starwarsblocks_hour: Csillagok háborúja (blokkok)
-      thebadguys: A rossz fiúk
-      loading: Betöltés...
-      weblab: Web-Lab
-      view_all: Nézd meg az összes projektet...
-    popup:
-      progress_for_user: "%{name} fejlődése"
-      progress: Haladásod
-      close: BEZÁRÁS
-      mastery: Fogalmak
-      puzzle_map: Szakaszok
-      prizes: Gyűjtsd össze az összes %{total_trophies} trófeát, és nyerj díjakat!
-      prize_earned: Az összes  %{total_trophies}  trófeát  összegyűjtötted. Megnyerted
-        a díjat!
-      prize_us_only: "(Kizárólag U.S. Diákoknak)"
-      prizes_link: További információk
-  teacher:
-    answer: Válasz
-    dashboard: Tanári nyitólap
-    for_teachers_only: Csak tanároknak
-    title:
-      one: 'A tanárod:'
-      other: 'A tanáraid:'
-    remove: "(tanár eltávolítása)"
-    confirm:
-      remove: Biztosan el szeretnéd távolítani ezt a tanárt?
-    students:
-      dashboard: Vissza a Tanári Vezérlőpultra
-    user_not_found: Ez a tanár nem található.
-    student_teacher_disassociated: Elhagytad a %{teacher_name} tanárod %{section_code}
-      szakaszát.
-    panel:
-      answer_viewer: Tanár Panel
-      student: Diák
-      viewing_solution: Megoldások megtekintése
-      try_it_yourself: Próbáld ki magad
-      section: Csoport
-      example: Példa a megoldásra
-      example_with_number: "%{solution_number}. példa a megoldásra "
-      submitted_on: 'Benyújtva ekkor: %{date}'
-      last_updated: 'Legutóbb frissítve:'
-      unsubmit: Visszavon
-      worked_with: dolgozott vele
-      update_lock_settings: Zárbeállítások frissítése itt.
-      clear_response: Válasz törlése
-    student_code_view_diabled: A tanuló kódja nem tekinthető meg ezzel a tevékenységgel.
-  user:
-    email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
-    email_confirm_needed_required: 'A %{email} e-mail cím nincs megerősítve:'
-    email_confirm_wrong_email: "(Helytelen e-mail cím?)"
-    email_resend_confirm: Megerősítés újraküldése
-    new_email_hint: "(győződj meg róla, hogy hozzáférsz az erre az e-mail címre érkező
-      e-mailekhez)"
-    new_password_hint: "(hagyd üresen, ha nem akarod megváltoztatni)"
-    current_password_hint: "(szükségünk van a jelenlegi jelszavadra a módosítások
-      végrehajtásához)"
-    delete: Fiók törlése
-    delete_text: A fiókod törlésével törölsz minden a fiókodhoz tartozó információt
-      és törlöd az eddig elért eredményeidet is.
-    delete_text_teacher_managed_note: Nincs jogosultságod törölni ezt a fiókot, mert
-      ezt a tanárod kezeli. A tanárodnak előbb el kell távolítania téged a szakaszából,
-      csak utána törölheted a fiókodat.
-    delete_text_teacher_note: 'Kérjük, vedd figyelembe: a fiókod törlésével a tanulóid
-      fiókjai nem törlődnek.'
-    delete_confirm: Biztosan törölni akarod a fiókodat?
-    deleted_user: törölt felhasználó
-    no_password_because_oauth: Nincs jelszavad, mivel egy másik szolgáltatón keresztül
-      léptél be.
-    no_password_because_sponsored: A jelszavad kezelése miatt fordulj a tanárodhoz!
-    create_personal_login: Személyes jelszó létrehozása a belépéshez
-    create_personal_login_under_13_info: Ha a tanév vége után is használni akarod
-      a Code.org fiókodat, kérd meg valamelyik szülődet/gondviselődet, hogy segítsen
-      saját személyes fiókod létrehozásában.
-    create_personal_login_under_13_username: Felhasználói név (ne használd a valós
-      nevedet!)
-    create_personal_login_under_13_parent_email: Szülő/gondviselő e-mail címe
-    create_personal_login_info: Ha a tanév vége után is használni akarod a Code.org
-      fiókodat, hozz létre saját személyes fiókot!
-    create_personal_login_link_account: Ehelyett választhatod a személyes fiókhoz
-      való csatlakozást is a "Kapcsolódó fiókok kezelése" szakaszban.
-    create_personal_login_terms: A személyes bejelentkezés létrehozásával elfogadom
-      a Code.org <a href='%{terms_of_service_url}', target='_blank'>szolgáltatási
-      feltételeket</a>. Megerősítem, hogy szüleimtől vagy a törvényes képviselőmtől
-      engedélyt kaptam a Code.org szolgáltatások használatához, akár tanár nélkül
-      is.
-    create_personal_login_terms_markdown: A személyes bejelentkezés létrehozásával
-      elfogadom a Code.org <a href='%{terms_of_service_url} [szolgáltatási feltételeket].
-      Megerősítem, hogy szüleimtől vagy a törvényes képviselőmtől engedélyt kaptam
-      a Code.org szolgáltatások használatához, akár tanár nélkül is.
-    create_personal_login_email_note: 'Megjegyzés: a tanulók e-mail címeit olyan módon
-      tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt. A tanulók
-      a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól.
-      További információt az <a href=''%{privacy_policy_url}'', target=''_blank''>adatvédelem</a>
-      részben találsz.'
-    create_personal_login_email_note_markdown: 'Megjegyzés: a tanulók e-mail címeit
-      olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt.
-      A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól.
-      További információt az [adatvédelem](%{privacy_policy_url}) részben találsz.'
-    enter_new_login_info: Írd be az új bejelentkezési adataidat!
-    confirm_secret_words: A jelenlegi titkos szavad beírásával erősítsd meg, hogy
-      valóban te akarsz belépni.
-    parent_email_label: Szülő/gondviselő e-mail címe (opcionális)
-    parent_email_hint: "(Ezt a jelszavad visszaállításához tudod használni)"
-    enter_parent_email: Add meg szülőd vagy gondviselőd e-mail címét (jelszó-visszaállítás
-      esetére)
-    update: Fiók frissítése
-    account_successfully_updated: A fiók frissítése sikeres volt.
-    auth_option_saved: Sikeresen összekapcsoltad a(z) %{provider} fiókodat a(z) %{email}
-      címmel.
-    auth_option_saved_no_email: Sikeresen összekapcsoltad a(z) %{provider} fiókodat.
-    update_email: Frissíteni
-    for_parents_and_guardians: Szülőknek és gondviselőknek
-    link_a_parent_email: 'Kapcsolja a szülő/gondviselő e-mail címét ehhez a fiókhoz,
-      így friss információkat kaphat gyermeke fejlődéséről és projektjeiről. Ezzel
-      az e-mail címmel tudja a jelszavát is visszaállítani.  '
-    parent_guardian_email_label: Szülő/gondviselő e-mail
-    remove_parent_email_label: Eltávolítás
-    none: Egyik sem
-    only_one_parent_email_supported_warning: 'Megjegyzés: ez alkalommal diákonként
-      csak egy szülői/gondviselői e-mail címet tudunk támogatni.'
-    encrypted: titkosítva
-  user_level:
-    completed: Teljesítve
-    tried: Próbáltam
-  home:
-    title: Kód stúdió
-    all_courses: 1., 2. és 3. tanfolyam áttekintése
-    lesson_plans: Óravázlatok
-    signin_message: Már regisztráltál? %{link}
-    student_reg_link: Diák regisztráció
-    teacher_reg_link: Tanári regisztráció
-    signin_directions: Fiók használatával nyomon követheted a haladásodat. <br/> A
-      tanárok nyomon követhetik az egész osztályt.
-    teacher_dashboard: Nézd meg a nyomonkövetési vezérlőpultot
-    teacher_student_count_one: "%{count} diákod van."
-    teacher_student_count: "%{count} diákod van."
-    teacher_averages: Diákjaid átlagosan  %{trophy_average} trófeát szereztek meg
-      a %{trophy_max}  "Concept Mastery" trófeákból.
-    teacher_print_certificates: Nyomtasa ki a bizonyítványokat a diákoknak, akik befejezték
-      a tanfolyamot
-    teacher_read_blog: Olvastam a híreket és frissítéseket az anyagokhoz  a Pedagógus
-      Blog-ban
-    classroom: A tantermed
-    student_progress: Előrehaladásod
-    student_stats: Már megszereztél %{trophy_count} trófeát a %{trophy_max} "Concept
-      Mastery" trófeából.
-    student_left_off: 'Ahol abbahagytad:'
-    student_finished: 'Befejezted az összes Code.org bevezető feladatot. Válassz másik
-      osztályt itt: %{online_link} vagy itt: %{local_school_link}'
-    local_school: helyi iskola
-    online: online
-    see_details: Részletek
-    view_course: Tanfolyam megtekintése
-    prize_info: 'Részvételért járó díjak (csak USA állami iskolai tanároknak): akár
-      $1,000.'
-    tryfirst: 'Akár ki is próbálhatja, és csak utána jelentkezik be:'
-    trynow: Próbálja ki most
-    add_hint_help: Segíts, hogy okos tippekkel láthassuk el oktatóanyagainkat a Code.org-on
-    20hour_overview: Ez a 20 órás kurzus bemutatja a számítástechnika és programozás
-      alapfogalmait. A kurzus általános iskolai használatra lett kitalálva, de mindenki
-      számára jó időtöltés lehet.
-    test_videos_help: Teszteld az új videó lejátszót az iskolában
-    try_beta_courses: 'ÚJ! Próbáld ki az alsó tagozatos diákoknak szóló béta kurzusokat '
-    use_as_teacher: Használd ezt az oldalt tanárként
-    heading_elementary_markdown: |-
-      ## 20 órás tanfolyamok
-
-      # Számítástechnikai alapismeretek (minden korosztálynak)
-    your_gallery: Galéria
-    no_primary_course: Próbálj ki egy tanfolyamot a Kód Stúdióban
-    choose_next_course: Próbáld ki a Kód Stúdiót, válassz egyet az alábbi tanfolyamok
-      közül
-    print_certificate: Oklevél nyomtatása
-  certificate_sponsor_message: "%{sponsor_name} tette a nagylelkű ajándékot, hogy
-    szponzorálja a tanulást."
-  certificate_hour_of_code: A kódolás órája
-  move_students:
-    new_section_dne: Sajnáljuk, de a %{new_section_code} kurzus nem létezik. Próbálkozz
-      egy másik kódot beírni!
-    section_code_cant_be_current_section: A jelenlegi kurzus és az új kurzus nem lehet
-      ugyanaz!
-    current_section_dne: Sajnáljuk, de a %{current_section_code} kurzus nem létezik.
-      Próbálkozz egy másik kódot beírni!
-    student_ids_not_entered: Add meg a tanulók azonosítóit.
-    student_not_found: Egy vagy több diák nem található.
-    all_students_must_be_in_current_section: Az összes diáknak be kell jelentkeznie
-      a kurzusodba.
-    already_enrolled_in_new_section: 'Nem tudod áthelyezni ezeket a diákokat, mert
-      már benne vannak az új kurzusban. '
-    third_party_login: Nem helyezhetsz át diákokat olyan csoportba, amely egy harmadik
-      fél eszközével van szinkronizálva.
-    not_correct_participant_type: Ezeket a felhasználókat azért nem tudod áthelyezni,
-      mert nincs engedélyük az új csoport munkájában részt venni.
-  share:
-    title: Tanulj a Kód Stúdióban
-    description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat,
-      alkalmazásokat vagy készíts alkotásokat a kódolás segítségével!
-    try_hour_of_code: Próbáld ki a Kódolás Óráját!
-  gender:
-    male: Férfi
-    female: Nő
-    non_binary: Nem bináris
-    not_listed: A preferált kifejezés nem szerepel a listán
-    none: Inkább nem válaszolok
-  user_type:
-    student: Diák
-    teacher: Tanár
+    registered: Csatlakoztál a %{section_name} kurzushoz.
   footer:
-    thank_you: Köszönjük <a href="https://code.org/about/donors">támogatóink</a>,
-      <a href="https://code.org/about/partners">partnereink</a>, <a href="https://code.org/about/team">csapatunk</a>,
-      videósaink, és <a href="https://code.org/about/advisors">oktatási tanácsadóink</a>
-      segítségét, hogy hozzájárultak a Kód Stúdió létrehozásához.
-    help_from_html: Külön köszönjük az Amazon, a Google, és a Microsoft mérnökeinek,
-      akik segítették ezen anyagok létrehozását.
-    help_from_html_old: Az Amazon, a Google és a Microsoft mérnökei segítettek ezen
-      anyagok létrehozásában.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Minden jog fenntartva.<br
       />Star Wars&#8482; &copy; %{current_year} Disney és Lucasfilm. Minden jog fenntartva.<br
       />Jégvarázs&#8482; &copy; %{current_year} Disney. Minden jog fenntartva.<br
@@ -722,495 +268,59 @@ hu:
       jog fenntartva. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
       Arts Inc. Minden jog fenntartva. a Gumball csodálatos világa a Cartoon Network
       &copy; %{current_year} bejegyzett védjegye.
+    built_on_code_studio: Készült a Kód Stúdió segítségével
+    built_on_github: A Microsoft GitHubra épül
     code_from_html: A Code.org p5.play-t használ, amelyet <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       a GNU LGPL 2.1</a> licenc véd.
-    powered_by_aws: 'Az Amazon Web Services és a  “Powered by AWS” logo az Amazon.com,
-      Inc. és leányvállalatainak védjegyei az Egyesült Államokban és/vagy más országokban. '
-    built_on_github: A Microsoft GitHubra épül
+    cookie_notice: Sütikre vonatkozó figyelmeztetés
+    copyright: Szerzői jog
+    feedback: Visszajelzés küldése
     google_copyright: "&copy; Google Inc. engedélyével használható. A Google Classroom
       a Google Inc. védjegye."
-    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az
-      Kódolás Órája&reg; a Code.org védjegyei."
-    copyright: Szerzői jog
+    help_from_html: Külön köszönjük az Amazon, a Google, és a Microsoft mérnökeinek,
+      akik segítették ezen anyagok létrehozását.
+    help_from_html_old: Az Amazon, a Google és a Microsoft mérnökei segítettek ezen
+      anyagok létrehozásában.
+    how_it_works: Hogyan működik (Kód megtekintése)
+    make_my_own_app: Készítsd el saját alkalmazásod
     more: Mégtöbb
-    feedback: Visszajelzés küldése
-    translate: Segítsen lefordítani az oldalt az anyanyelvére
-    support: Segítség
-    support_url: http://support.code.org
-    tos_short: Felhasználási feltételek
-    tos: Feltételek
+    powered_by_aws: 'Az Amazon Web Services és a  “Powered by AWS” logo az Amazon.com,
+      Inc. és leányvállalatainak védjegyei az Egyesült Államokban és/vagy más országokban. '
     privacy: Adatvédelmi Elvek
     privacy_updated: Adatvédelmi irányelvek (frissítve)
-    secure: Biztonságos változat
     report_abuse: Visszaélés jelentése
-    built_on_code_studio: Készült a Kód Stúdió segítségével
-    make_my_own_app: Készítsd el saját alkalmazásod
-    how_it_works: Hogyan működik (Kód megtekintése)
-    try_hour_of_code: Próbáld ki a Kódolás Óráját!
+    secure: Biztonságos változat
     store: Áruház
-    cookie_notice: Sütikre vonatkozó figyelmeztetés
+    support: Segítség
+    support_url: http://support.code.org
+    thank_you: Köszönjük <a href="https://code.org/about/donors">támogatóink</a>,
+      <a href="https://code.org/about/partners">partnereink</a>, <a href="https://code.org/about/team">csapatunk</a>,
+      videósaink, és <a href="https://code.org/about/advisors">oktatási tanácsadóink</a>
+      segítségét, hogy hozzájárultak a Kód Stúdió létrehozásához.
+    tos: Feltételek
+    tos_short: Felhasználási feltételek
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az
+      Kódolás Órája&reg; a Code.org védjegyei."
+    translate: Segítsen lefordítani az oldalt az anyanyelvére
+    try_hour_of_code: Próbáld ki a Kódolás Óráját!
     view_code: Kódok megtekintése
-  reference_area:
-    title: Segítségre van szükséged?
-    subtitle: Nézd meg ezeket a videókat és tippeket
-    teacher: Megoldás megtekintése
-    teacher_no_solution: Tovább ne mutasd a megoldásokat!
-    auth_error: Nem nézheted meg a megoldást
-    submit: Frissítsd a Művész helyét
-    direction: Kezdő irány (fokban)
-  video:
-    tab: Videó.
-    notes: Nem látszik a videó? Mutasd a szöveges magyarázatot!
-    notes_coming_soon: Ehhez a videóhoz hamarosan leírás is lesz.
-    autoplay_option: Videók automatikus lejátszása
-    download: Videó letöltése
-    show_notes: Mutasd a jegyzeteket
-    show_video: Mutasd a videót
-    label: Videó
-  compatibility:
-    upgrade:
-      unsupported_message: A böngésződ nem támogatott. Frissítsd böngészőt [a támogatott
-        böngészők egyikére](%{supported_browsers_url}). Megtekintheted az oldalt,
-        de számolj azzal, hogy a funkciók nem működnek.
-      link: Tudj meg többet
-      applab_unsupported_tablet: Az App Lab legjobban asztali számítógépen vagy laptopon
-        működik, egérrel és billentyűzettel. A jelenlegi eszköz használata nehézségekbe
-        ütközhet.
-      gamelab_unsupported_tablet: A Game Lab legjobban asztali számítógépen vagy laptopon
-        működik, egérrel és billentyűzettel. A jelenlegi eszköz használata nehézségekbe
-        ütközhet.
-      weblab_unsupported_locale_storage: A Weblabor használata magánböngészési módban
-        problémával járhat. Töltsd be újra a projektet normál módban. Elnézést a kellemetlenségért.
-  slow_loading: Ez a megszokottnál tovább tart...
-  try_reloading: Próbálja meg újratölteni az oldalt
-  next_stage: Végeztél! Folytasd a következő leckével!
-  download_pdf: Óravázlat megnyitása
-  lesson_plan: Óravázlat
-  view_lesson_plan: Óravázlat megtekintése
-  pdf_download: Letöltés PDF-ben
-  download_coming_soon: Hamarosan lesz letölthető tevékenység.
-  video_coming_soon: Hamarosan lesz videó!
-  share_code:
-    title: Kattints a "Futtatás" gombra, hogy lásd a programomat működés közben
-    bounce_og_title: Nézd meg a Visszapattanós játékomat
-    flappy_og_title: Nézd meg a Flappy játékomat
-    studio_og_title: Próbáld ki a Játéklabor alkalmazásomat
-    check_out_what_i_made: Nézd meg, mit csináltam
-    og_description: A kódját magam írtam a Code.org segítségével
-    phone_number_not_allowed: Olyan, mintha telefonszámot tartalmazna. Próbálj módosítani
-      a szövegen.
-    address_not_allowed: Olyan, mintha címet tartalmazna. Próbálj módosítani a szövegen.
-    email_not_allowed: Olyan, mintha e-mail címet tartalmazna. Próbálj módosítani
-      a szövegen.
-    profanity_not_allowed: Úgy tűnik, mintha csúnya kifejezést tartalmazna. Próbálj
-      módosítani a szövegen.
-  builder:
-    created: Létrehoztál egy új szkriptet.
-    destroyed: Töröltél egy szkriptet.
-    manage: Szintek építése
-    view: Nézet
-    back: Vissza a szkriptekhez
-    success: Sikeresen szerkesztetted a blokkokat.
-    level:
-      create: Hozzon létre új szintet
-      current: Aktuális szintek
-      unused: Nem használt szintek
-  upsell:
-    applab:
-      title: App Lab
-      body: Az App Lab egy programozási környezet egyszerű alkalmazásokra. Tervezd
-        meg, kódolj blokkokkal vagy JavaScript-el, hogy működjön, majd oszd meg másodpercek
-        alatt.
-      body_short: Tervezz egy alkalmazást, kódolj elemekből vagy JavaScript-ben, majd
-        oszd meg néhány másodperc alatt.
-      audience: 13 éves kor felett
-      cta: Ismerd meg, hogyan
-    aquatic:
-      title: Minecraft
-    dance-2019:
-      title: Táncos buli
-    dance:
-      title: Táncos buli
-    flappy:
-      title: Flappy kód
-      body: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld
-        ki a Flappy kód gyakorlatot!
-    frozen:
-      title: Jégvarázs
-    gallery:
-      title: Galéria
-      body: Nézd meg a felhasználóink által készített alkalmazásokat és a művészi
-        képek galériáját
-    gamelab:
-      title: Játék Labor
-      body: A Game Lab egy olyan programozási környezet, amelyben egyszerű animációkat
-        és játékokat lehet készíteni egymással kölcsönhatásban lévő objektumokkal
-        és karakterekkel.
-      audience: 13 éves kor felett
-      cta: Ismerd meg, hogyan
-    hello-world:
-      title: Helló világ
-      body: Válassz a négy szórakoztató téma közül, ha interaktív karaktereket akarsz
-        kódolni az általad létrehozott világban.
-    hero:
-      title: Minecraft
-      body: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz
-        végig a Minecraft világán kódok segítségével.
-    hoc-encryption:
-      title: Egyszerű titkosítás
-      body: A diákok megtanulják, hogyan kell titkosított üzeneteket létrehozni és
-        feltörni.
-    hoc:
-      title: Hagyományos labirintus
-      body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
-    hoc2014:
-      try_new_tutorial: Próbáld ki az új Kódolás Órája oktató anyagunk béta változatát
-      try_frozen: Művészkedj Annával és Elzával a Jégvarázsból
-    infinity:
-      title: Infinity játéklabor
-      body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney
-        Infinity szereplőkkel.
-    minecraft:
-      title: Minecraft
-      body: Fedezd fel a Minecraft világát kódolással
-    minecraft2016:
-      title: Minecraft
-      body: Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban.
-    poem-art:
-      title: Versművészet
-      body: Fejezd ki magad! Készíts animált verseket kódok felhasználásával.
-    sports:
-      title: Sportok
-      body: Készíts egy kosárlabda-játékot, vagy kombináld a különböző sportágakat.
-    starwars:
-      title: Star Wars
-    text-compression:
-      title: Szöveg tömörítése
-      body: Ebben a leckében a tanulók a szövegtömörítő widget segítségével tömörítik
-        a szöveget, a mintákat szimbólumokkal helyettesítik.
-    weblab:
-      title: Web Lab (béta)
-      body: A Web Lab egy programozási környezet, ahol egyszerű weboldalakat lehet
-        készíteni HTML és CSS segítségével. Tervezd meg weboldalaid, és oszd meg a
-        webhelyet akár pár másodperc alatt.
-      audience: 13 éves kor felett
-      cta: Ismerd meg, hogyan
-    widgets:
-      title: Widgetek
-      body: Ezeknek a digitális eszközöknek a segítségével a diákok gyakorlatokon
-        keresztül fedezhetik fel a Számítástechnika alapjai kurzusunkban szereplő
-        fogalmakat. Használd a widgeteket önállóan, vagy készíts egy, egy fogalom
-        köré épült leckét az osztálynak.
-      audience: 14 éves kortól
-      cta: Ismerd meg, hogyan
-    unplugged_conditionals:
-      title: Feltételek
-      body: Ismerd meg az algoritmusokat és a feltételes utasításokat ebben a számítógép
-        nélküli tevékenységben egy kártyapakli segítségével.
-    unplugged:
-      title: Offline tanórák
-      audience: 4 éven felettieknek
-      body: Összeállítottunk egy listát a számítógép nélküli leckékről, ezeket lehet
-        használni az osztályteremben. Mostantól taníthatod a számítástechnika alapjait,
-        akár van számítógép az osztályteremben, akár nincs! Próbáld ki ezeket a leckéket
-        önálló tananyagként vagy más számítógépes tanfolyam kiegészítő leckéjeként
-        használni.
-      body_short: Ha nincs számítógéped, próbáld ki ezeket az offline tanórákat az
-        osztályoddal!
-    20-hour:
-      title: Gyorsított tanfolyam
-      body: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap
-        fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára
-        jó időtöltés lehet.
-      body_short: Ismerd meg a számítógép-tudomány alapjait, a 2-4. gyorsított tanfolyamban.
-  landing:
-    prerelease_tutorial: Ez a gyakorlat **béta** állapotban van.  A visszajelzések
-      és a fejlesztések alapján átdolgozásra kerül.
-    report_bug: Hiba bejelentése
-    support: Segítség kérése
-    support_url: "//support.code.org"
-    help_resources: Súgó és erőforrások
-    help_support: Súgó és támogatás
-    documentation: Dokumentáció
-    tutorials: Útmutatók
   free_response:
     placeholder: Itt add meg a válaszod
-  multi:
-    wrong_title: Helytelen válasz
-    wrong_body: A megadott válasz nem megfelelő.  Próbáld újra!
-    correct_title: Helyes
-    correct_body: Ez a helyes válasz.
-  multi-submittable:
-    wrong_title: Köszönöm
-    wrong_body: Köszönjük hogy elküldtél egy választ.
-    correct_title: Köszönöm
-    correct_body: Köszönjük hogy elküldtél egy választ.
-  level_group:
-    wrong_title: Köszönöm
-    wrong_body: Köszönjük az elküldött válaszokat.
-    correct_title: Köszönöm
-    correct_body: Köszönjük az elküldött válaszokat.
-    hide_survey_last_answer: Ez egy név nélküli felmérés.  Az összesített eredmények
-      megtekinthetők a tanári irányítópulton. Az eredmények csak akkor láthatók, ha
-      legalább öt diák beküldte a kérdőívet.
-    survey_submission_thankyou: Köszönjük, hogy beküldted ezt a kérdőívet! A kitöltött
-      kérdőívet töröltük, így a válaszok névtelenek maradnak. Ne feledd, hogy a tanárod
-      látja az egész osztály válaszait, de nevek nélkül.
-  level_group-submittable:
-    wrong_title: Köszönöm
-    wrong_body: Köszönjük az elküldött válaszokat.
-    correct_title: Köszönöm
-    correct_body: Köszönjük az elküldött válaszokat.
-    unsubmit-title: Értékelés visszavonása
-    unsubmit-body: Az értékelés visszavonása visszaállítja a beküldés időpontját és
-      a dátumot.  Biztos vagy benne?
-    submit-incomplete-title: Értékelés benyújtása
-    submit-incomplete-body: Néhány kérdésre hiányosan válaszoltál.  Az értékelés elküldése
-      után az értékelés már nem szerkeszthető.  Biztos vagy benne?
-    submit-complete-title: Értékelés benyújtása
-    submit-complete-body: Az értékelés elküldése után az értékelés már nem szerkeszthető.  Biztos
-      vagy benne?
-  match:
-    wrong_title: Helytelen megoldás
-    wrong_body: A megadott megoldás nem megfelelő.  Próbáld újra.
-    correct_title: Helyes
-    correct_body: Ez a helyes válasz.
-  contract_match:
-    wrong_title: Helytelen válasz
-    badname: A megkötés elnevezése nem megfelelő.
-    badname_case: A függvények elnevezése érzékeny a kis-és nagybetűkre. Próbáld újra
-      elnevezni a megkötést.
-    badrange: A megkötésednek nem megfelelő a tartománya.
-    baddomainsize: A megkötésedben nincs megfelelő számú érték annak tartományában.
-    baddomainname: Egy vagy több tartományban helytelen név szerepel.
-    baddomaintype: A tartomány elemek közül egy vagy több nem megfelelő típusú, vagy
-      rossz sorrendben vannak.
-  text_match:
-    placeholder: Itt add meg a válaszod
-    open_response_title: Köszönjük
-    open_response_body: Köszönjük a választ!
-    correct_title: Helyes
-    correct_body: Ez a helyes válasz.
-  lesson_extras:
-    bonus_level: Bónusz szint
-  dialog:
-    ok: OK
-    startover_title: Biztosan újra szeretnéd kezdeni?
-    startover_body: Visszaállítja a kiindulási állapotot és töröl minden blokkot,
-      amit hozzáadtál a programhoz, vagy amit megváltoztattál.
-    startover_ok: Újrakezdés
-    startover_cancel: Mégsem
-  time:
-    hour: 1 óra
-    day: nap
-    week: hét
-  age_interstitial:
-    age: Életkorod
-    header: Felhasználói adatok frissítése
-    warning: A még erősebb adatvédelem érdekében még gyűjtjük a tapasztalatokat. Ehhez
-      arra van szükségünk, hogy a jelenlegi felhasználók megadják az életkorukat itt.
-    disclaimer: A korábbiakhoz hasonlóan a code.org soha sem adja ki, nem adja el
-      és nem osztja meg ezeket az információkat harmadik felekkel.
-    sign_out_markdown: Ha nem kívánod megadni az életkorod, akkor [kijelentkezhetsz](%{url}).
-  terms_interstitial:
-    title: Frissített szolgáltatási feltételek és adatvédelmi irányelvek
-    intro_desc: 'Frissítettük a szolgáltatási feltételeket és az adatvédelmi irányelveket
-      az alábbiak szerint. A változások 2016. augusztus 24-én lépnek hatályba.  A
-      legnagyobb változás: a diákfiókok e-mail-címeit <i>többé nem tároljuk a Code
-      Studio-ban.</i> Ez nagy dolog számunkra, és reméljük, hogy az oktatási technológiákban
-      ez egy új standard lesz a diákok adatvédelmével kapcsolatban. A többi változásról
-      e-mailben küldtünk egy összefoglalót.'
-    intro_desc_markdown: 'Frissítettük a szolgáltatási feltételeket és az adatvédelmi
-      irányelveket, az alábbiak szerint. A változások 2016. augusztus 24-én lépnek
-      hatályba.  A legnagyobb változás: a diákfiókok e-mail-címeit *többé nem tároljuk
-      a Code Studio-ban*. Ez nagy dolog számunkra, és reméljük, hogy az oktatási technológiákban
-      ez egy új standard lesz a diákok adatvédelmével kapcsolatban. A többi változásról
-      e-mailben küldtünk egy összefoglalót.'
-    intro_instructions: Az osztályodban tanuló 13 év alatti diákok számára el kell
-      fogadnod ezeket az új feltételeket ahhoz, hogy teljes körű hozzáférést kapj
-      a Code Studio legújabb funkcióihoz.  A 13 év alatti diák fiókjának regisztrálásakor
-      kérjük, erősítsd meg, hogy iskolája rendelkezik szülői beleegyezéssel, és a
-      diákok személyes adatait az iskola használhatja és saját érdekében felhasználhatja,
-      beleértve az olyan oktatási programokat, mint a Code Studio.
-    tos: Feltételek
-    privacy: Adatvédelmi Elvek
-    privacy_notice: Adatvédelmi nyilatkozat
-    accept_label: Elfogadom a frissített <a href="%{tos_url}" target="_blank">Felhasználási
-      feltételeket</a> és az <a href="%{privacy_url}" target="_blank">Adatvédelmi
-      irányelveket</a>
-    accept_label_markdown: Elfogadom a frissített [Felhasználási feltételeket](%{tos_url})
-      és az [Adatvédelmi irányelveket](%{privacy_url})
-    accept_tos: A Code.org weboldalra történő regisztrációval elfogadod az [Általános
-      Szerződési Feltételeinket](%{tos_url}) és az [Adatvédelmi irányelveinket](%{privacy_url}).
-    accept: Elfogadás
-    print: Nyomtatás
-    reminder_desc: Frissítettük a <a href="%{tos_url}" target="_blank">Szolgáltatási
-      feltételeket</a> és az <a href="%{privacy_url}" target="_blank">Adatvédelmi
-      irányelveket</a>. Kérjük, hogy mielőtt elfogadod ezeket, gondosan olvasd el
-      őket. Vedd figyelembe, hogy a frissített feltételek kifejezett elfogadása előtt
-      a JavaScriptet tanító eszközeink nem lesznek feltétlenül elérhetők a diákok
-      számára.
-    reminder_desc_markdown: Frissítettük a [Felhasználási feltételeket](%{tos_url})
-      és az [Adatvédelmi irányelveket](%{privacy_url}). Kérjük, mielőtt elfogadod
-      ezeket, olvasd el őket figyelmesen. Vedd figyelembe, hogy a frissített feltételek
-      kifejezett elfogadása előtt a JavaScriptet tanító eszközeink nem feltétlenül
-      lesznek elérhetők a diákok számára.
-    review_terms: Frissített feltételek megtekintése
-  school_info_interstitial:
-    title: Szeretnénk minden diák számára elérhetővé tenni az informatikát - segíts
-      és kövesd nyomon a fejlődésünket!
-    message: Kérjük, add meg az iskolád adatait lent.
-    message_with_suggestion: Kérjük, ellenőrizd, hogy az alábbi adatok helyesek-e,
-      ha szükség van rá, frissítsd őket.
-    save: Mentés
-  race_interstitial:
-    title: 'Választható: Segíts nekünk, kövesd nyomon aszámítástechnika sokszínűségének
-      javítása érdekében tett erőfeszítéseinket.'
-    message: Kérjük, add meg a faji vagy etnikai hovatartozásodat (több válasz is
-      adható).
-    races:
-      white: Fehér
-      black: Fekete vagy afroamerikai
-      hispanic: Spanyol vagy latin-amerikai
-      asian: Ázsiai
-      hawaiian: Hawaii őslakos vagy más csendes-óceáni szigetlakó
-      american_indian: Amerikai indián/alaszkai őslakos
-      other: Egyéb
-      opt_out: Nem kívánok válaszolni
-    submit: Elküldés
-    decline: Bezár
-  zendesk_too_young_message: Elnézést, de kiskorú felhasználók nem regisztrálhatnak
-    a támogatói oldalunkra. Megnézheted a <a href="http://support.code.org"> support.code.org</a>
-    oldalakat regisztráció nélkül, illetve kérd meg a szüleidet vagy tanáraidat, hogy
-    lépjenek kapcsolatba velünk a nevedben.
-  zendesk_too_young_message_markdown: Elnézést, de kiskorú felhasználók nem regisztrálhatnak
-    a támogatói oldalunkra. Megnézheted a [support.code.org](http://support.code.org)
-    oldalakat regisztráció nélkül, illetve kérd meg a szüleidet vagy tanáraidat, hogy
-    lépjenek kapcsolatba velünk a nevedben.
-  progress:
-    not_started: el nem kezdett
-    in_progress: folyamatban
-    completed_too_many_blocks: elkészült, túl sok a blokk
-    completed_perfect: elkészült, tökéletes
-    furthest_level_attempted: a legmagasabb szint megpróbálva
-    assessment: értékelés
-    submitted: elküldve
-  studio:
-    courses_working_on: Tanfolyamok, amelyeken dolgozol
-    completed_courses: Teljesített tanfolyamok
-    all_courses: Minden tanfolyam
-  project:
-    projects: Projektek
-    create: Projekt létrehozása
-    create_a_project: 'Új projekt létrehozása:'
-    new: Új létrehozása
-    exit: Vissza a tanfolyamhoz
-    project_gallery: Projektek
-    publish: Közzétesz
-    unpublish: Közzététel visszavonása
-    share_title: A projekt megosztása
-    share_copy_link: 'A hivatkozás másolása:'
-    share_embed_description: Ha a projektet az egyik weboldalon akarod megjeleníteni,
-      a beágyazott kódot beillesztheted egy HTML-oldalba.
-    share_u13_warning: A megosztás előtt kérdezd meg a tanárodat. Csak az iskoládban
-      tanulókkal oszd meg.
-    embed: Beágyaz
-    advanced_share: Speciális beállítások megjelenítése
-    no_projects: Jelenleg nincsenek projektjeid. Ha projektet szeretnél készíteni,
-      kattints az egyik fenti gombra.
-    name: Név
-    updated: Frissítve
-    project_type: Projekt típusa
-    help_text: Kattints az <strong>App készítése</strong> vagy a <strong>Rajzolj valamit</strong>
-      feliratokra egy új projekt létrehozásához!<br/>Bármikor vissza tudsz térni és
-      folytathatod a munkát a projektjeiden.
-    need_help: Szükséged van segítségre a kezdéshez?
-    thumbnail_help: Nem látod a megfelelő miniatűrképet a projektedhez? Futtasd az
-      alkalmazást, ezzel új miniatűrképet tudsz generálni. Vedd figyelembe, hogy eltarthat
-      néhány óráig, amíg a miniatűrkép mindenhol frissül.
-    saved: Mentve
-    not_saved: Nincs mentve
-    view_all: Projektjeim megtekintése
-    edit_project: Projekt szerkesztése
-    sharing_disabled: Sajnáljuk, ez a projekt nem megosztható. Ha ez a te projekted
-      vagy valamelyik diákodé, a projekt megtekintéséhez kérjük <a href='https://studio.code.org/users/sign_in'>jelentkezz
-      be</a> a fiókodba .
-    abuse:
-      tos: Ezt a projektet jelentették azért, mint amely nem tesz eleget a Code.org
-        <a href='http://code.org/tos'>Felhasználói Feltételek</a> követelményeinek,
-        ezért nem osztható meg másokkal.
-      policy_violation: Ez a projekt olyan információkat tartalmaz, amelyek nem oszthatók
-        meg másokkal. Kérjük, lépj kapcsolatba az alkalmazás tulajdonosával, hogy
-        kijavítsa az alkalmazása tartalmát.
-      contact_us: Ha úgy gondolod, hogy ez egy hiba, kérjük, <a href='https://code.org/contact'>vedd
-        fel velünk a kapcsolatot.</a>
-      go_to_code_studio: Menj a Kód Stúdióba
-      report_abuse_form:
-        intro: Ha sértő tartalommal, fenyegetéssel, online zaklatással, visszaéléssel
-          vagy szerzői joggal kapcsolatos sérelemmel találkoztál a Kód Stúdióval készített
-          alkalmazások használata közben, kérjük, töltsd ki az alábbi űrlapot! Az
-          ügyet nagyon komolyan fogjuk venni, megfelelően ki fogjuk vizsgálni, és
-          meg fogjuk tenni a szükséges lépéseket.
-        validation:
-          email: Kérjük, add meg az e-mail címed
-          age: Kérjük, add meg az életkorod
-          abuse_type: Kérjük, válaszold meg, hogyan sérti a tartalom a Felhasználói
-            szabályokat
-          abuse_detail: Kérjük, adj meg részleteket a jelenteni kívánt tartalomról
-        abusive_url: Jelenteni kívánt tartalom URL-je
-        abuse_type:
-          question: Miben sérti a tartalom a %{link_start}Felhasználói szabályokat%{link_end}?
-          harassment: Fenyegetések, online zaklatás, visszaélés
-          offensive: Sértő tartalom
-          infringement: Szerzői jog megsértése
-          other: Egyéb
-        detail: Kérjük, adj meg a lehető legtöbb részletet a jelenteni kívánt tartalommal
-          kapcsolatban!
-        acknowledge: Az alábbi információk megadásával tudomásul veszed, hogy azokat
-          az %{link_start_privacy}Adatvédelmi szabályzatnak%{link_end} és a %{link_start_tos}Felhasználói
-          szabályoknak%{link_end} megfelelően kezeljük
-  peer_review:
-    accepted:
-      name: Elfogadva
-      description_markdown: "**Igen**, ez a beadvány **megfelel** a követelményeknek."
-    rejected:
-      name: Elutasítva
-      description_markdown: "**Nem**, ez a beadvány **nem felel meg** a követelményeknek."
-    escalated:
-      name: Eszkalálódott
-      description: Szeretném, ha egy tanár átnézné ezt a beadványt
-    instructor_feedback: Tanári visszajelzés
-    peer_feedback: Társ visszajelzése
-    outdated: Ezt a visszajelzést hozzáadták egy korábban benyújtott verzióhoz
-    review_count: Ehhez az egységhez %{review_count} értékelést kell készíteni
-    peer_review: Társ értékelése
-  external_links:
-    disclaimer: Felelősséget kizáró nyilatkozat
-    leaving_domain: Most kilépsz ebből a tartományból egy olyan webhelyre, amelyet
-      nem a Code.org üzemeltet.
-    disclaimer_text: Ennek az oldalnak az adatvédelmi irányelvei nem feltételnül azonosak
-      a Code.org irányelveivel. Azért választottuk ki ezeket a harmadik féltől származó
-      forrásokat, mert úgy gondoljuk, hogy hasznosak lehetnek a számodra. Bár közvetlenül
-      nem vagyunk felelősek az ilyen webhelyek tartalmáért, ha kifogásolhatónak találod
-      a tartalmat, vagy ha a hivatkozott webhely már nem elérhető, kérjük <a href='%{support_url}'>lépj
-      kapcsolatba az ügyfélszolgálattal</a>.
+  gender:
+    female: Nő
+    male: Férfi
+    non_binary: Nem bináris
+    none: Inkább nem válaszolok
+    not_listed: A preferált kifejezés nem szerepel a listán
+  heading_x_of_y: "%{heading} (%{x}. oldal / %{y})"
+  hello: Helló világ
+  hidden_script: A tanárod nem számított rá, hogy itt leszel. Kérdezd meg a tanárodat,
+    hogy melyik egységgel kellene foglalkoznod.
+  hidden_stage: A tanárod nem számított rá, hogy itt leszel. Kérdezd meg a tanárodat,
+    hogy melyik leckével kellene foglalkoznod.
   hoc_download:
-    title: Kódolás órája letöltések
-    capsule_title: Van interneted?
     capsule_desc: Használd az online, webes [%{app_name}](%{url}) alkalmazást.
-    instructions_headline: Nincs internet?
-    instructions: 'Útmutatás tanároknak: Ha gyenge az internetszolgáltatás, ezek a
-      Kódolás órája oktatóanyagok letölthetők és telepíthetők offline használatra
-      is. Válaszd ki a nyelvet és a platformot, töltsd le és telepítsd az osztályterem
-      összes számítógépére. Érdemes egy USB-meghajtót használni, mert így egyszeri
-      letöltéssel lehet telepíteni az összes számítógépre. Megjegyzés: a tanulók nem
-      tudnak bejelentkezni a Code Studio programba, nem tudják elmenteni az elért
-      eredményeket, és nem tudnak tanúsítványokat nyomtatni. A tanárok előre kinyomtathatják
-      a tanúsítványokat [here](%{url}).'
-    minecraft_name: Minecraft Kódolás Órája
-    starwars_blocks_name: 'Star Wars: Egy galaxis építése kóddal (Blokkokból)'
-    starwars_javascript_name: 'Star Wars: Egy galaxis építése kóddal (JavaScript)'
-    download_message: "%{app_name} letöltése offline használatra (136MB)"
+    capsule_title: Van interneted?
     download_in_Albanian: 'Letöltés albán nyelven:'
     download_in_Arabic: 'Letöltés arab nyelven:'
     download_in_Azerbaijani: 'Letöltés azerbajdzsáni nyelven:'
@@ -1218,8 +328,8 @@ hu:
     download_in_Bosnian: 'Letöltés bosnyák nyelven:'
     download_in_Bulgarian: 'Letöltés bolgárul:'
     download_in_Catalan: 'Letöltés katalánul:'
-    download_in_Chinese-Taiwan: 'Letöltés tajván-kínai dialektusban:'
     download_in_Chinese: 'Letöltés kínaiul:'
+    download_in_Chinese-Taiwan: 'Letöltés tajván-kínai dialektusban:'
     download_in_Croatian: 'Letöltés horvát nyelven:'
     download_in_Czech: 'Letöltés cseh nyelven:'
     download_in_Danish: 'Letöltés dánul:'
@@ -1242,8 +352,8 @@ hu:
     download_in_Norwegian: 'Letöltés norvég nyelven:'
     download_in_Norwegian-Nynorsk: 'Letöltés norvég-nynorsk nyelven:'
     download_in_Polish: 'Letöltés lengyelül:'
-    download_in_Portuguese-Brazil: 'Letöltés brazil-portugál nyelven:'
     download_in_Portuguese: 'Letöltés portugál nyelven:'
+    download_in_Portuguese-Brazil: 'Letöltés brazil-portugál nyelven:'
     download_in_Romanian: 'Letöltés románul:'
     download_in_Russian: 'Letöltés oroszul:'
     download_in_Serbian: 'Letöltés szerb nyelven:'
@@ -1253,68 +363,435 @@ hu:
     download_in_Turkish: 'Letöltés törökül:'
     download_in_Ukrainian: 'Letöltés ukránul:'
     download_in_Vietnamese: 'Letöltés vietnami nyelven:'
-    windows: Windows (64 bit)
+    download_message: "%{app_name} letöltése offline használatra (136MB)"
+    instructions: 'Útmutatás tanároknak: Ha gyenge az internetszolgáltatás, ezek a
+      Kódolás órája oktatóanyagok letölthetők és telepíthetők offline használatra
+      is. Válaszd ki a nyelvet és a platformot, töltsd le és telepítsd az osztályterem
+      összes számítógépére. Érdemes egy USB-meghajtót használni, mert így egyszeri
+      letöltéssel lehet telepíteni az összes számítógépre. Megjegyzés: a tanulók nem
+      tudnak bejelentkezni a Code Studio programba, nem tudják elmenteni az elért
+      eredményeket, és nem tudnak tanúsítványokat nyomtatni. A tanárok előre kinyomtathatják
+      a tanúsítványokat [here](%{url}).'
+    instructions_headline: Nincs internet?
     mac: Mac OS X
+    minecraft_name: Minecraft Kódolás Órája
+    starwars_blocks_name: 'Star Wars: Egy galaxis építése kóddal (Blokkokból)'
+    starwars_javascript_name: 'Star Wars: Egy galaxis építése kóddal (JavaScript)'
+    title: Kódolás órája letöltések
+    windows: Windows (64 bit)
+  home:
+    20hour_overview: Ez a 20 órás kurzus bemutatja a számítástechnika és programozás
+      alapfogalmait. A kurzus általános iskolai használatra lett kitalálva, de mindenki
+      számára jó időtöltés lehet.
+    add_hint_help: Segíts, hogy okos tippekkel láthassuk el oktatóanyagainkat a Code.org-on
+    all_courses: 1., 2. és 3. tanfolyam áttekintése
+    choose_next_course: Próbáld ki a Kód Stúdiót, válassz egyet az alábbi tanfolyamok
+      közül
+    classroom: A tantermed
+    heading_elementary_markdown: |-
+      ## 20 órás tanfolyamok
+
+      # Számítástechnikai alapismeretek (minden korosztálynak)
+    lesson_plans: Óravázlatok
+    local_school: helyi iskola
+    no_primary_course: Próbálj ki egy tanfolyamot a Kód Stúdióban
+    online: online
+    print_certificate: Oklevél nyomtatása
+    prize_info: 'Részvételért járó díjak (csak USA állami iskolai tanároknak): akár
+      $1,000.'
+    see_details: Részletek
+    signin_directions: Fiók használatával nyomon követheted a haladásodat. <br/> A
+      tanárok nyomon követhetik az egész osztályt.
+    signin_message: Már regisztráltál? %{link}
+    student_finished: 'Befejezted az összes Code.org bevezető feladatot. Válassz másik
+      osztályt itt: %{online_link} vagy itt: %{local_school_link}'
+    student_left_off: 'Ahol abbahagytad:'
+    student_progress: Előrehaladásod
+    student_reg_link: Diák regisztráció
+    student_stats: Már megszereztél %{trophy_count} trófeát a %{trophy_max} "Concept
+      Mastery" trófeából.
+    teacher_averages: Diákjaid átlagosan  %{trophy_average} trófeát szereztek meg
+      a %{trophy_max}  "Concept Mastery" trófeákból.
+    teacher_dashboard: Nézd meg a nyomonkövetési vezérlőpultot
+    teacher_print_certificates: Nyomtasa ki a bizonyítványokat a diákoknak, akik befejezték
+      a tanfolyamot
+    teacher_read_blog: Olvastam a híreket és frissítéseket az anyagokhoz  a Pedagógus
+      Blog-ban
+    teacher_reg_link: Tanári regisztráció
+    teacher_student_count: "%{count} diákod van."
+    teacher_student_count_one: "%{count} diákod van."
+    test_videos_help: Teszteld az új videó lejátszót az iskolában
+    title: Kód stúdió
+    try_beta_courses: 'ÚJ! Próbáld ki az alsó tagozatos diákoknak szóló béta kurzusokat '
+    tryfirst: 'Akár ki is próbálhatja, és csak utána jelentkezik be:'
+    trynow: Próbálja ki most
+    use_as_teacher: Használd ezt az oldalt tanárként
+    view_course: Tanfolyam megtekintése
+    your_gallery: Galéria
+  join_section:
+    code:
+      instructions: 'Kérlek, írd be a tanárod által megadott 6 betűs kódot (például:
+        "ABCDEF"), hogy csatlakozhass a csoporthoz.'
+      instructions_short: Add meg a 6 karakteres szakasz kódod
+      placeholder: Szakasz kód (ABCDEF)
+      submit: Csatlakozás
+      title: Csatlakozz egy csoporthoz a Code.org-on
+  k8intro: A számítógép-tudományba bevető tanfolyam általános iskolások számára (15-25
+    óra)
+  landing:
+    documentation: Dokumentáció
+    help_resources: Súgó és erőforrások
+    help_support: Súgó és támogatás
+    prerelease_tutorial: Ez a gyakorlat **béta** állapotban van.  A visszajelzések
+      és a fejlesztések alapján átdolgozásra kerül.
+    report_bug: Hiba bejelentése
+    support: Segítség kérése
+    support_url: "//support.code.org"
+    tutorials: Útmutatók
+  less: KEVESEBB
+  lesson_extras:
+    bonus_level: Bónusz szint
+  lesson_lock:
+    error:
+      cannot_view_locked_answers: Zárolt állapotban a válaszokat nem lehet megtekinteni
+      forbidden: A felhasználó nem frissítheti a tanuló zárolható állapotát
+      missing_params: Meg kell adni a felhasználó, a szint és az egység azonosítóját
+      no_updates: Nincs végrehajtandó frissítés
+  lesson_plan: Óravázlat
+  level_group:
+    correct_body: Köszönjük az elküldött válaszokat.
+    correct_title: Köszönöm
+    hide_survey_last_answer: Ez egy név nélküli felmérés.  Az összesített eredmények
+      megtekinthetők a tanári irányítópulton. Az eredmények csak akkor láthatók, ha
+      legalább öt diák beküldte a kérdőívet.
+    survey_submission_thankyou: Köszönjük, hogy beküldted ezt a kérdőívet! A kitöltött
+      kérdőívet töröltük, így a válaszok névtelenek maradnak. Ne feledd, hogy a tanárod
+      látja az egész osztály válaszait, de nevek nélkül.
+    wrong_body: Köszönjük az elküldött válaszokat.
+    wrong_title: Köszönöm
+  level_group-submittable:
+    correct_body: Köszönjük az elküldött válaszokat.
+    correct_title: Köszönöm
+    submit-complete-body: Az értékelés elküldése után az értékelés már nem szerkeszthető.  Biztos
+      vagy benne?
+    submit-complete-title: Értékelés benyújtása
+    submit-incomplete-body: Néhány kérdésre hiányosan válaszoltál.  Az értékelés elküldése
+      után az értékelés már nem szerkeszthető.  Biztos vagy benne?
+    submit-incomplete-title: Értékelés benyújtása
+    unsubmit-body: Az értékelés visszavonása visszaállítja a beküldés időpontját és
+      a dátumot.  Biztos vagy benne?
+    unsubmit-title: Értékelés visszavonása
+    wrong_body: Köszönjük az elküldött válaszokat.
+    wrong_title: Köszönöm
   locked_stage: A lecke tartalma nem látható, mivel ez a lecke jelenleg zárolva van.
     A tanárod feloldhatja ezt a leckét akkor, amikor foglalkozni kell vele, vagy amikor
     ellenőrzi a válaszaid.
-  hidden_stage: A tanárod nem számított rá, hogy itt leszel. Kérdezd meg a tanárodat,
-    hogy melyik leckével kellene foglalkoznod.
-  hidden_script: A tanárod nem számított rá, hogy itt leszel. Kérdezd meg a tanárodat,
-    hogy melyik egységgel kellene foglalkoznod.
+  maker:
+    google_oauth:
+      confirm_login: A Google-fiókoddal történő bejelentkezéshez válaszd a Megerősítés
+        lehetőséget.
+      copy_code: Kérjük, másold ki és illeszd be ezt a kódot a Maker App alkalmazásba,
+        amikor a Code.org-ra jelentkezel be.
+      enter_code: Kérjük, írd be a Google-on keresztül történő bejelentkezéskor kapott
+        kódot az alapértelmezett böngésződbe.
+      error_invalid_user: Érvénytelen felhasználói azonosító. Kérjük, jelentkezz be
+        újra.
+      error_no_code: Kérjük, add meg a bejelentkezési kódod.
+      error_token_expired: A token lejárt. Kérjük, jelentkezz be újra egy új tokenért.
+      error_wrong_provider: Rossz szolgáltató. Kérjük, ellenőrizd, hogy a Google-val
+        jelentkeztél-e be.
+      login_with_google: Bejelentkezés a Maker alkalmazásba a Google segítségével
+  match:
+    correct_body: Ez a helyes válasz.
+    correct_title: Helyes
+    wrong_body: A megadott megoldás nem megfelelő.  Próbáld újra.
+    wrong_title: Helytelen megoldás
+  more: TÖBB
+  more_info: További információk
+  move_students:
+    all_students_must_be_in_current_section: Az összes diáknak be kell jelentkeznie
+      a kurzusodba.
+    already_enrolled_in_new_section: 'Nem tudod áthelyezni ezeket a diákokat, mert
+      már benne vannak az új kurzusban. '
+    current_section_dne: Sajnáljuk, de a %{current_section_code} kurzus nem létezik.
+      Próbálkozz egy másik kódot beírni!
+    new_section_dne: Sajnáljuk, de a %{new_section_code} kurzus nem létezik. Próbálkozz
+      egy másik kódot beírni!
+    not_correct_participant_type: Ezeket a felhasználókat azért nem tudod áthelyezni,
+      mert nincs engedélyük az új csoport munkájában részt venni.
+    section_code_cant_be_current_section: A jelenlegi kurzus és az új kurzus nem lehet
+      ugyanaz!
+    student_ids_not_entered: Add meg a tanulók azonosítóit.
+    student_not_found: Egy vagy több diák nem található.
+    third_party_login: Nem helyezhetsz át diákokat olyan csoportba, amely egy harmadik
+      fél eszközével van szinkronizálva.
+  multi:
+    correct_body: Ez a helyes válasz.
+    correct_title: Helyes
+    wrong_body: A megadott válasz nem megfelelő.  Próbáld újra!
+    wrong_title: Helytelen válasz
+  multi-submittable:
+    correct_body: Köszönjük hogy elküldtél egy választ.
+    correct_title: Köszönöm
+    wrong_body: Köszönjük hogy elküldtél egy választ.
+    wrong_title: Köszönöm
+  nav:
+    header:
+      about: Rólunk
+      about_contact: Kapcsolat
+      about_donors: Adományozók
+      about_evaluation: Értékelés
+      about_faqs: GYIK
+      about_jobs: Állás
+      about_leadership: Vezetőség
+      about_news: Hírszoba
+      about_partners: Partnerek
+      about_team: Teljes csapat
+      about_us: Rólunk
+      app_lab_documentation: App Lab dokumentáció
+      app_lab_tutorials: App Lab oktatóanyagok
+      course_catalog: Tanfolyamok
+      documentation: Dokumentáció
+      educate_beyond: A Code.org-on túl
+      educate_community: Online közösség
+      educate_elementary: Alsó tagozat
+      educate_high: Középiskola
+      educate_hoc: A kódolás órája
+      educate_inspire: Motiválj egy tanulót
+      educate_middle: Felső tagozat
+      educate_overview: Áttekintés oktatóknak
+      educate_partner: Legyen a partnerünk
+      educate_requirements: Technikai követelmények
+      educate_tools: Eszközök és videók
+      finished_hoc: Végeztem!
+      game_lab_documentation: Játéklabor dokumentáció
+      game_lab_tutorials: Játék Lab oktatóanyagok
+      help_support: Súgó és támogatás
+      help_us: Támogass minket
+      learn: Tanulj
+      legal: Adatvédelem és jogi
+      legal_cookie_notice: Sütikre vonatkozó figyelmeztetés
+      legal_privacy: Adatvédelmi Elvek
+      legal_tos: Feltételek
+      my_dashboard: Vezérlőpultom
+      professional_learning: Professzionális tanulás
+      project_gallery: Projektek
+      report_abuse: Visszaélés jelentése
+      report_bug: Hiba jelentése
+      sections: Szakaszok
+      sign_in_to_save: Jelentkezz be, hogy később ugyaninnen folytathasd
+      sprite_lab_documentation: Sprite Lab dokumentációja
+      sprite_lab_tutorials: Sprite Lab oktatóanyagok
+      stats: statisztikák
+      teach: Taníts
+      teacher_community: Tanári közösség
+      tutorials: Útmutatók
+      web_lab_documentation: Web Lab dokumentáció
+    popup:
+      close: BEZÁRÁS
+      mastery: Fogalmak
+      prize_earned: Az összes  %{total_trophies}  trófeát  összegyűjtötted. Megnyerted
+        a díjat!
+      prize_us_only: "(Kizárólag U.S. Diákoknak)"
+      prizes: Gyűjtsd össze az összes %{total_trophies} trófeát, és nyerj díjakat!
+      prizes_link: További információk
+      progress: Haladásod
+      progress_for_user: "%{name} fejlődése"
+      puzzle_map: Szakaszok
+    user:
+      algebra_game: Algebra
+      already_registered: Már regisztráltál?
+      applab: App Lab
+      artist: Művész
+      artist_k1: Művész (nem olvasó)
+      basketball: Kosárlabda
+      bounce: Ugrál
+      calc: Számolás
+      classroom: Tanári kezdőlap
+      create: Létrehoz
+      dance: Táncos buli
+      district_dashboard: Tankerületi munkafelület
+      driver: Vezető
+      eval: Kiértékel
+      flappy: Flappy
+      frozen: Jégvarázs
+      gamelab: Játék Labor
+      gamelab_jr: Játéklabor (beta)
+      gumball: Gumball csodálatos világa
+      iceage: Jégkorszak
+      infinity: Végtelen
+      label: Üdv %{username}
+      loading: Betöltés...
+      logout: Kijelentkezés
+      makerlab: Készítés eszköztár
+      minecraft_adventurer: Minecraft kaland
+      minecraft_aquatic: Minecraft Tenger
+      minecraft_codebuilder: 'Minecraft: Kód Csatlakozás'
+      minecraft_designer: Minecraft
+      minecraft_hero: Minecraft Hős
+      my_projects: Projektek
+      navigator: Navigátor
+      pair_programming: Páros programozás
+      playlab: Játéklabor
+      playlab_k1: Játéklabor (nem olvasó)
+      poetry: Költészet
+      poetry_hoc: Versművészet
+      scratch: Scratch
+      settings: Fiók beállítások
+      signin: Bejelentkezés
+      signup: Hozzon létre egy fiókot
+      sports: Sportok
+      spritelab: Sprite labor
+      starwars: Star Wars
+      starwarsblocks: Csillagok háborúja (blokkok)
+      starwarsblocks_hour: Csillagok háborúja (blokkok)
+      stats: Kód Stúdió
+      team: Csapat
+      thebadguys: A rossz fiúk
+      view_all: Nézd meg az összes projektet...
+      weblab: Web-Lab
+  next_level: Következő szint
+  next_page: Következő oldal
+  next_resource: Következő erőforrás
+  next_stage: Végeztél! Folytasd a következő leckével!
   no_course_access_student: Nincs hozzáférésed ehhez a tanfolyamhoz. Kérjük, kérdezd
     meg a tanárodat, hogy melyik tanfolyamon kellene lenned.
   no_course_access_teacher: Nincs hozzáférésed ehhez a tanfolyamhoz. Ha úgy gondolod,
     hogy neked hozzá kellene férned ehhez a tanfolyamhoz, írj a support@code.org címre,
     és korrigáljuk a helyzetet.
-  no_script_access_student: Nincs hozzáférésed ehhez az egységhez. Kérjük, kérdezd
-    meg a tanárodat, hogy melyik egységgel kellene foglalkoznod.
-  no_script_access_teacher: Nincs hozzáférésed ehhez az egységhez. Ha úgy gondolod,
-    hogy neked hozzá kellene férned ehhez az egységhez, írj a support@code.org címre,
-    és korrigáljuk a helyzetet.
-  no_level_access_student: Nincs hozzáférésed ehhez a szinthez. Kérjük, kérdezd meg
-    a tanárodat, hogy melyik szinten kellene lenned.
-  no_level_access_teacher: Nincs hozzáférésed ehhez a szinthez. Ha úgy gondolod, hogy
-    neked hozzá kellene férned ehhez a szinthez, írj a support@code.org címre, és
-    korrigáljuk a helyzetet.
   no_exemplar: Ehhez a szinthez nem tartozik példa.
   no_exemplar_access_student: Diákoknak nincs hozzáférésük ehhez a példakódhoz. Kérjük,
     kérdezd meg a tanárodat, hogy melyik szinten kellene lenned.
   no_exemplar_access_teacher: Csak igazolt tanárok férhetnek hozzá a példakódhoz.
     Ha igazolt tanár szeretnél lenni, írj a support@code.org címre.
-  return_unit_overview: Ugrás az egység összefoglalásához
-  return_course_overview: Ugrás a tanfolyam összefoglalásához
-  view_all_units: Összes egység megtekintése
-  view_teacher_guide: Oktatói útmutató megtekintése
+  no_level_access_student: Nincs hozzáférésed ehhez a szinthez. Kérjük, kérdezd meg
+    a tanárodat, hogy melyik szinten kellene lenned.
+  no_level_access_teacher: Nincs hozzáférésed ehhez a szinthez. Ha úgy gondolod, hogy
+    neked hozzá kellene férned ehhez a szinthez, írj a support@code.org címre, és
+    korrigáljuk a helyzetet.
+  no_script_access_student: Nincs hozzáférésed ehhez az egységhez. Kérjük, kérdezd
+    meg a tanárodat, hogy melyik egységgel kellene foglalkoznod.
+  no_script_access_teacher: Nincs hozzáférésed ehhez az egységhez. Ha úgy gondolod,
+    hogy neked hozzá kellene férned ehhez az egységhez, írj a support@code.org címre,
+    és korrigáljuk a helyzetet.
+  of: "/"
+  okay: Oké
+  or: vagy
+  page_not_found_button: Hazatérés
+  page_not_found_description: A keresett oldal nem létezik ezen a címen. Ellenőrizze
+    a webcímet, és küldje el újra. Vagy térjen vissza a honlapunkra.
+  page_not_found_header: '404: Az oldal nem található'
+  page_not_found_title: Az oldal nem található
+  parent_email_banner:
+    link_your_email: Kapcsold az e-mail címed
+    not_now: Most nem
+    text: "**Ön szülő vagy gondviselő?** Kapcsolja az e-mail címét ehhez a fiókhoz,
+      így friss információkat kaphat gyermeke fejlődéséről és projektjeiről!"
+  parent_mailer:
+    parent_email_added_subject: Üdvözlünk a Code.org-on!
+    student_associated_subject: Belépési információk a Code.org-hoz
+  password:
+    change_form:
+      confirm_password: Erősítse meg új jelszavát
+      new_password: Új jelszó
+      submit: Jelszavam módosítása
+      title: Jelszó módosítása
+    reset_errors:
+      captcha_required: Kérlek, töltsd ki a CAPTCHA-t, hogy új jelszót állíthass be.
+      invalid_email: Úgy tűnik, nem létező e-mail címmel hoztál létre fiókot. Kérjük,
+        írj a support@code.org-ra, hogy jelszó-helyreállítási linket kapj.
+    reset_form:
+      email: E-mail cím
+      instructions: Adja meg e-mail címét alul, és elküldjük Önnek jelszó visszaállítási
+        utasításokat.
+      submit: Elküldés
+      title: Elfelejtette jelszavát?
   pd:
+    form_entries:
+      ages:
+        ages_11_12: 11-12 évesek
+        ages_13_14: 13-14 évesek
+        ages_15_16: 15-16 évesek
+        ages_17_18: 17-18 évesek
+        ages_19_over: 19 évesnél idősebb
+        ages_7_8: 7-8 évesek
+        ages_9_10: 9-10 évesek
+        ages_under_6: 6 éves korig
+      email_opt_in:
+        opt_in_no: Nem
+        opt_in_yes: Igen
+      gender:
+        female: Nő
+        male: Férfi
+        non_binary: Nem bináris
+        none: Inkább nem válaszolok
+        not_listed: A preferált kifejezés nem szerepel a listán
+      resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Akadémia
+        kodable: Kodable
+        na: Nem alkalmazható
+        other: Egyéb
+        scratch: Scratch
+        tynker: Tynker
+      robotics:
+        grok: Grok Learning
+        kodable: Kodable
+        lego: LEGO oktatás
+        microbit: Microbit
+        na: Nem alkalmazható
+        other: Egyéb
+        ozobot: Ozobot
+        raspberry: Raspberry Pi
+        sphero: Sphero
+        wonder: Wonder Workshop
+      school_country:
+        canada: Kanada
+        chile: Chile
+        colombia: Kolumbia
+        israel: Izrael
+        malaysia: Malajzia
+        mexico: Mexikó
+        paraguay: Paraguay
+        thailand: Thaiföld
+        uzbekistan: Üzbegisztán
+      subjects:
+        art: Művészetet
+        cs: Számítógép-tudomány
+        efl: Az angol mint idegen nyelv
+        history: Történelem / Társadalomtudományok
+        ict: ICT
+        la: Nyelvek
+        math: Matematika
+        music: Zene
+        na: Nem alkalmazható
+        other: 'Egyéb:'
+        science: Tudományok
+      workshop_course:
+        csd: Számítástechnika felfedezése
+        csf_af: A számítógép-tudomány alapjai (A-F tanfolyamok)
+        csf_express: Számítástechnika alapjai (expressz vagy azt megelőző)
+        csp: Számítástechnika alapjai
+        not_applicable: Nem alkalmazható
+        other: Egyéb
     form_labels:
-      first_name: Utónév
-      first_name_preferred: Preferált utónév
-      last_name: Vezetéknév
-      email: Email
-      email_alternate: Másodlagos e-mail
-      gender: Nemi identitás
-      school: Iskola
-      school_name: Iskola neve
-      school_city: Iskola városa
-      school_city_district: Iskola városa/kerülete
-      school_country: Iskola országa
-      school_department_region: 'Iskola: részleg/régió'
-      colombian_school_city: Iskola városa
-      colombian_chilean_school_department: 'Iskola: részleg/régió'
-      colombian_school_municipality: 'Iskola: település'
-      colombian_chilean_school_name: Iskola neve
+      ages: Melyik korosztály(oka)t tanítod ebben az évben?
       chilean_school_commune: Közösség
       chilean_school_id: Iskola azonosítója
-      ages: Melyik korosztály(oka)t tanítod ebben az évben?
-      subjects: Melyik tárgy(ak)at tanítod ebben az évben?
-      resources: Az alábbi számítástechnikai oktatási források közül melyeket használod?
-      robotics: Az alábbi robotikai források közül melyeket használod?
-      workshop_organizer: Workshop szervező
-      workshop_facilitator: Workshop moderátor
-      workshop_course: Workshop tanfolyam
+      colombian_chilean_school_department: 'Iskola: részleg/régió'
+      colombian_chilean_school_name: Iskola neve
+      colombian_school_city: Iskola városa
+      colombian_school_municipality: 'Iskola: település'
+      email: Email
+      email_alternate: Másodlagos e-mail
       email_opt_in: Küldhetünk e-maileket a nemzetközi Code-org programról, tanfolyami
         újdonságokról és számítógép-tudománnyal kapcsolatos hírekről?
+      first_name: Utónév
+      first_name_preferred: Preferált utónév
+      gender: Nemi identitás
+      last_name: Vezetéknév
       legal_opt_in: 'Az űrlap elküldésével beleegyezel abba, hogy a Code.org megossza
         a Code.org és a szakmai oktatási források használatára vonatkozó információkat
         az országodban működő Code.org nemzetközi partner(ek)kel, az iskola körzetével
@@ -1326,95 +803,42 @@ hu:
         alapján a diákjaidat nem lehet beazonosítani, az adatokat összesítve használjuk.
         Nemzetközi partnereink és segítőink szerződésben kötelesek ezeket az információkat
         ugyanolyan bizalmasan kezelni, mint a Code.org.'
-    form_entries:
-      gender:
-        male: Férfi
-        female: Nő
-        non_binary: Nem bináris
-        not_listed: A preferált kifejezés nem szerepel a listán
-        none: Inkább nem válaszolok
-      school_country:
-        canada: Kanada
-        chile: Chile
-        colombia: Kolumbia
-        israel: Izrael
-        malaysia: Malajzia
-        mexico: Mexikó
-        paraguay: Paraguay
-        thailand: Thaiföld
-        uzbekistan: Üzbegisztán
-      ages:
-        ages_under_6: 6 éves korig
-        ages_7_8: 7-8 évesek
-        ages_9_10: 9-10 évesek
-        ages_11_12: 11-12 évesek
-        ages_13_14: 13-14 évesek
-        ages_15_16: 15-16 évesek
-        ages_17_18: 17-18 évesek
-        ages_19_over: 19 évesnél idősebb
-      subjects:
-        cs: Számítógép-tudomány
-        ict: ICT
-        math: Matematika
-        science: Tudományok
-        history: Történelem / Társadalomtudományok
-        la: Nyelvek
-        efl: Az angol mint idegen nyelv
-        music: Zene
-        art: Művészetet
-        other: 'Egyéb:'
-        na: Nem alkalmazható
-      resources:
-        bootstrap: Bootstrap
-        codecademy: CodeCademy
-        csfirst: Google CS First
-        khan: Khan Akadémia
-        kodable: Kodable
-        scratch: Scratch
-        tynker: Tynker
-        other: Egyéb
-        na: Nem alkalmazható
-      robotics:
-        grok: Grok Learning
-        kodable: Kodable
-        lego: LEGO oktatás
-        microbit: Microbit
-        ozobot: Ozobot
-        sphero: Sphero
-        raspberry: Raspberry Pi
-        wonder: Wonder Workshop
-        other: Egyéb
-        na: Nem alkalmazható
-      workshop_course:
-        csf_af: A számítógép-tudomány alapjai (A-F tanfolyamok)
-        csf_express: Számítástechnika alapjai (expressz vagy azt megelőző)
-        csd: Számítástechnika felfedezése
-        csp: Számítástechnika alapjai
-        not_applicable: Nem alkalmazható
-      email_opt_in:
-        opt_in_yes: Igen
-        opt_in_no: Nem
+      resources: Az alábbi számítástechnikai oktatási források közül melyeket használod?
+      robotics: Az alábbi robotikai források közül melyeket használod?
+      school: Iskola
+      school_city: Iskola városa
+      school_city_district: Iskola városa/kerülete
+      school_country: Iskola országa
+      school_department_region: 'Iskola: részleg/régió'
+      school_name: Iskola neve
+      subjects: Melyik tárgy(ak)at tanítod ebben az évben?
+      workshop_course: Workshop tanfolyam
+      workshop_facilitator: Workshop moderátor
+      workshop_organizer: Workshop szervező
     international_opt_in:
-      title: Workshop látogatottság
-      intro: Köszönjük, hogy időt szakítasz a Code.org tananyaggal kapcsolatos képzésre.
-        Küldetésünk, hogy a világ összes iskolájában minden gyermek számára elérhetővé
-        tegyük a számítástechnikai oktatást, ami nélkületek nem lenne lehetséges.
+      facilitator_not_applicable: Nem alkalmazható
+      facilitator_not_listed: Az én moderátorom nincs a listán
       instructions: Kérjük, töltsd ki az alábbi űrlapot, jelezd, hogy 1) részt vettél
         a Code.org egyik nemzetközi partnere által szervezett workshopon, és 2) beleegyezel,
         hogy az adataidat megosszuk az országodban működő nemzetközi partnerünkkel,
         így ők támogatni tudnak a számítástechnikai tanári munkádban.
+      intro: Köszönjük, hogy időt szakítasz a Code.org tananyaggal kapcsolatos képzésre.
+        Küldetésünk, hogy a világ összes iskolájában minden gyermek számára elérhetővé
+        tegyük a számítástechnikai oktatást, ami nélkületek nem lenne lehetséges.
+      organizer_not_listed: Az én szervezőm nincs a listán
       thanks_markdown: Köszönjük a jelentkezést! Alig várjuk, hogy megismertessük
         veled a Code.org tantervét és eszközeit. Kérjük, továbbra is oszd meg velünk
         kérdéseid és visszajelzéseid, írj nekünk a [support@code.org](%{support_email_url})
         címre, vagy írj a [tanári fórum](%{teacher_forum_url}) oldalra!
-      facilitator_not_listed: Az én moderátorom nincs a listán
-      facilitator_not_applicable: Nem alkalmazható
-      organizer_not_listed: Az én szervezőm nincs a listán
+      title: Workshop látogatottság
     logged_out:
-      heading: Köszönjük érdeklődésed a Szakmai tanulási program iránt!
       body: A kezdéshez először be kell jelentkezned a Code.org-fiókodba. Ha még a
         jelentkezés előtt további információkat szeretnél kapni a programról, nézd
         meg a <a href="%{url}">Szakmai tanulási program áttekintése</a> című dokumentumot.
+      heading: Köszönjük érdeklődésed a Szakmai tanulási program iránt!
+    no_teacher_email:
+      body_markdown: A fiókodnak nincs e-mail-címe. Kérjük, [látogass el a fiók beállításokhoz](%{user_registration}),
+        és az űrlap kitöltése előtt add meg az e-mail-címed.
     not_teacher:
       body_markdown: Köszönjük érdeklődésed a Code.org szakmai tanulási programja
         iránt! Jelenleg egy diákfiókba vagy bejelentkezve. Kérjük, vagy hozz létre
@@ -1423,60 +847,642 @@ hu:
       more_markdown: Ha a jelentkezés előtt további információkat szeretnél a programról,
         kérjük, nézd meg a [Szakmai tanulási program áttekintése](%{pl_overview})
         című dokumentumot.
-    no_teacher_email:
-      body_markdown: A fiókodnak nincs e-mail-címe. Kérjük, [látogass el a fiók beállításokhoz](%{user_registration}),
-        és az űrlap kitöltése előtt add meg az e-mail-címed.
-  courses_category: Komplett tanfolyamok
-  course_offering:
-    headers:
-      minecraft: Minecraft
-      hello_world: Helló világ
-      sports: Sportok
-      csf: A számítógép-tudomány alapjai
-      csc: Kapcsolatok az informatikával
-  cookie_banner:
-    message: A weboldalunk további böngészésével vagy az Elfogadom gombra kattintással
-      hozzájárulsz a sütik számítógépen vagy más eszközön történő tárolásához.
-    more_information: Lásd a Code.org adatvédelmi irányelveit.
-    accept: Egyetértek
-  page_not_found_title: Az oldal nem található
-  page_not_found_header: '404: Az oldal nem található'
-  page_not_found_description: A keresett oldal nem létezik ezen a címen. Ellenőrizze
-    a webcímet, és küldje el újra. Vagy térjen vissza a honlapunkra.
-  page_not_found_button: Hazatérés
-  copy: Másol
-  confirm: Jóváhagy
-  maker:
-    google_oauth:
-      login_with_google: Bejelentkezés a Maker alkalmazásba a Google segítségével
-      enter_code: Kérjük, írd be a Google-on keresztül történő bejelentkezéskor kapott
-        kódot az alapértelmezett böngésződbe.
-      copy_code: Kérjük, másold ki és illeszd be ezt a kódot a Maker App alkalmazásba,
-        amikor a Code.org-ra jelentkezel be.
-      error_token_expired: A token lejárt. Kérjük, jelentkezz be újra egy új tokenért.
-      error_wrong_provider: Rossz szolgáltató. Kérjük, ellenőrizd, hogy a Google-val
-        jelentkeztél-e be.
-      error_invalid_user: Érvénytelen felhasználói azonosító. Kérjük, jelentkezz be
-        újra.
-      error_no_code: Kérjük, add meg a bejelentkezési kódod.
-      confirm_login: A Google-fiókoddal történő bejelentkezéshez válaszd a Megerősítés
-        lehetőséget.
-  parent_email_banner:
-    text: "**Ön szülő vagy gondviselő?** Kapcsolja az e-mail címét ehhez a fiókhoz,
-      így friss információkat kaphat gyermeke fejlődéséről és projektjeiről!"
-    link_your_email: Kapcsold az e-mail címed
-    not_now: Most nem
-  behaviors:
-    this_sprite: ez a sprite
-  unit_prefix: Egység %{n}
-  code_org_logo_alt: Code.org kezdőlap
-  teacher_feedback: Tanári visszajelzés
-  lesson_lock:
-    error:
-      no_updates: Nincs végrehajtandó frissítés
-      missing_params: Meg kell adni a felhasználó, a szint és az egység azonosítóját
-      cannot_view_locked_answers: Zárolt állapotban a válaszokat nem lehet megtekinteni
-      forbidden: A felhasználó nem frissítheti a tanuló zárolható állapotát
-  reset_predict_progress_button: Válasz törlése
+  pdf_download: Letöltés PDF-ben
+  peer_review:
+    accepted:
+      description_markdown: "**Igen**, ez a beadvány **megfelel** a követelményeknek."
+      name: Elfogadva
+    escalated:
+      description: Szeretném, ha egy tanár átnézné ezt a beadványt
+      name: Eszkalálódott
+    instructor_feedback: Tanári visszajelzés
+    outdated: Ezt a visszajelzést hozzáadták egy korábban benyújtott verzióhoz
+    peer_feedback: Társ visszajelzése
+    peer_review: Társ értékelése
+    rejected:
+      description_markdown: "**Nem**, ez a beadvány **nem felel meg** a követelményeknek."
+      name: Elutasítva
+    review_count: Ehhez az egységhez %{review_count} értékelést kell készíteni
   pixelation:
     binary: Bináris
+  previous_page: Előző oldal
+  prize: díj
+  progress:
+    assessment: értékelés
+    completed_perfect: elkészült, tökéletes
+    completed_too_many_blocks: elkészült, túl sok a blokk
+    furthest_level_attempted: a legmagasabb szint megpróbálva
+    in_progress: folyamatban
+    not_started: el nem kezdett
+    submitted: elküldve
+  project:
+    abuse:
+      contact_us: Ha úgy gondolod, hogy ez egy hiba, kérjük, <a href='https://code.org/contact'>vedd
+        fel velünk a kapcsolatot.</a>
+      go_to_code_studio: Menj a Kód Stúdióba
+      policy_violation: Ez a projekt olyan információkat tartalmaz, amelyek nem oszthatók
+        meg másokkal. Kérjük, lépj kapcsolatba az alkalmazás tulajdonosával, hogy
+        kijavítsa az alkalmazása tartalmát.
+      report_abuse_form:
+        abuse_type:
+          harassment: Fenyegetések, online zaklatás, visszaélés
+          infringement: Szerzői jog megsértése
+          offensive: Sértő tartalom
+          other: Egyéb
+          question: Miben sérti a tartalom a %{link_start}Felhasználói szabályokat%{link_end}?
+        abusive_url: Jelenteni kívánt tartalom URL-je
+        acknowledge: Az alábbi információk megadásával tudomásul veszed, hogy azokat
+          az %{link_start_privacy}Adatvédelmi szabályzatnak%{link_end} és a %{link_start_tos}Felhasználói
+          szabályoknak%{link_end} megfelelően kezeljük
+        detail: Kérjük, adj meg a lehető legtöbb részletet a jelenteni kívánt tartalommal
+          kapcsolatban!
+        intro: Ha sértő tartalommal, fenyegetéssel, online zaklatással, visszaéléssel
+          vagy szerzői joggal kapcsolatos sérelemmel találkoztál a Kód Stúdióval készített
+          alkalmazások használata közben, kérjük, töltsd ki az alábbi űrlapot! Az
+          ügyet nagyon komolyan fogjuk venni, megfelelően ki fogjuk vizsgálni, és
+          meg fogjuk tenni a szükséges lépéseket.
+        validation:
+          abuse_detail: Kérjük, adj meg részleteket a jelenteni kívánt tartalomról
+          abuse_type: Kérjük, válaszold meg, hogyan sérti a tartalom a Felhasználói
+            szabályokat
+          age: Kérjük, add meg az életkorod
+          email: Kérjük, add meg az e-mail címed
+      tos: Ezt a projektet jelentették azért, mint amely nem tesz eleget a Code.org
+        <a href='http://code.org/tos'>Felhasználói Feltételek</a> követelményeinek,
+        ezért nem osztható meg másokkal.
+    advanced_share: Speciális beállítások megjelenítése
+    create: Projekt létrehozása
+    create_a_project: 'Új projekt létrehozása:'
+    edit_project: Projekt szerkesztése
+    embed: Beágyaz
+    exit: Vissza a tanfolyamhoz
+    help_text: Kattints az <strong>App készítése</strong> vagy a <strong>Rajzolj valamit</strong>
+      feliratokra egy új projekt létrehozásához!<br/>Bármikor vissza tudsz térni és
+      folytathatod a munkát a projektjeiden.
+    name: Név
+    need_help: Szükséged van segítségre a kezdéshez?
+    new: Új létrehozása
+    no_projects: Jelenleg nincsenek projektjeid. Ha projektet szeretnél készíteni,
+      kattints az egyik fenti gombra.
+    not_saved: Nincs mentve
+    project_gallery: Projektek
+    project_type: Projekt típusa
+    projects: Projektek
+    publish: Közzétesz
+    saved: Mentve
+    share_copy_link: 'A hivatkozás másolása:'
+    share_embed_description: Ha a projektet az egyik weboldalon akarod megjeleníteni,
+      a beágyazott kódot beillesztheted egy HTML-oldalba.
+    share_title: A projekt megosztása
+    share_u13_warning: A megosztás előtt kérdezd meg a tanárodat. Csak az iskoládban
+      tanulókkal oszd meg.
+    sharing_disabled: Sajnáljuk, ez a projekt nem megosztható. Ha ez a te projekted
+      vagy valamelyik diákodé, a projekt megtekintéséhez kérjük <a href='https://studio.code.org/users/sign_in'>jelentkezz
+      be</a> a fiókodba .
+    thumbnail_help: Nem látod a megfelelő miniatűrképet a projektedhez? Futtasd az
+      alkalmazást, ezzel új miniatűrképet tudsz generálni. Vedd figyelembe, hogy eltarthat
+      néhány óráig, amíg a miniatűrkép mindenhol frissül.
+    unpublish: Közzététel visszavonása
+    updated: Frissítve
+    view_all: Projektjeim megtekintése
+  puzzle: Kirakós
+  race_interstitial:
+    decline: Bezár
+    message: Kérjük, add meg a faji vagy etnikai hovatartozásodat (több válasz is
+      adható).
+    races:
+      american_indian: Amerikai indián/alaszkai őslakos
+      asian: Ázsiai
+      black: Fekete vagy afroamerikai
+      hawaiian: Hawaii őslakos vagy más csendes-óceáni szigetlakó
+      hispanic: Spanyol vagy latin-amerikai
+      opt_out: Nem kívánok válaszolni
+      other: Egyéb
+      white: Fehér
+    submit: Elküldés
+    title: 'Választható: Segíts nekünk, kövesd nyomon aszámítástechnika sokszínűségének
+      javítása érdekében tett erőfeszítéseinket.'
+  reference_area:
+    auth_error: Nem nézheted meg a megoldást
+    direction: Kezdő irány (fokban)
+    submit: Frissítsd a Művész helyét
+    subtitle: Nézd meg ezeket a videókat és tippeket
+    teacher: Megoldás megtekintése
+    teacher_no_solution: Tovább ne mutasd a megoldásokat!
+    title: Segítségre van szükséged?
+  reports:
+    error:
+      access_denied: Nincs jogosultságod megtekinteni ennek a személynek a statisztikáit
+  reset_predict_progress_button: Válasz törlése
+  return_course_overview: Ugrás a tanfolyam összefoglalásához
+  return_unit_overview: Ugrás az egység összefoglalásához
+  school_info:
+    after_school: Iskola után
+    charter: Charter
+    district: Kerület
+    district_name: Kerület neve
+    homeschool: Bázisiskola
+    other: Egyéb
+    other_district_not_listed: Más, fel nem sorolt kerület
+    other_school_not_listed: Más, fel nem sorolt iskola
+    private: Magán
+    public: Nyilvános
+    school: Iskola
+    school_address: Iskola címe
+    school_country: Iskola országa
+    school_name: Iskola neve
+    school_organization_name: Iskola vagy szervezet neve
+    school_organization_zip: Iskola/szervezet irányítószáma
+    school_zip: Iskola irányítószáma
+    select_school_type: Iskola típusa
+    state: Állam
+    title: Iskolai információ (opcionális)
+  school_info_interstitial:
+    message: Kérjük, add meg az iskolád adatait lent.
+    message_with_suggestion: Kérjük, ellenőrizd, hogy az alábbi adatok helyesek-e,
+      ha szükség van rá, frissítsd őket.
+    save: Mentés
+    title: Szeretnénk minden diák számára elérhetővé tenni az informatikát - segíts
+      és kövesd nyomon a fejlődésünket!
+  section:
+    code_with_teacher: "%{section_code} %{teacher_name} tanárral"
+    confirm:
+      remove: Biztosan el akarod hagyni ezt a szakaszt?
+    default_name: Név nélküli szakasz
+    remove: "(szakasz eltávolítása)"
+    type:
+      clever: Okos
+      email: Email
+      google_classroom: Google Tanterem
+      picture: képes jelszó
+      word: Titkos szó
+    your_section:
+      one: 'A szakaszod:'
+      other: 'Csoportjaid:'
+  see_your_learning_plan: Tekintsd meg a tanulmányi tervedet
+  share:
+    description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat,
+      alkalmazásokat vagy készíts alkotásokat a kódolás segítségével!
+    title: Tanulj a Kód Stúdióban
+    try_hour_of_code: Próbáld ki a Kódolás Óráját!
+  share_code:
+    address_not_allowed: Olyan, mintha címet tartalmazna. Próbálj módosítani a szövegen.
+    bounce_og_title: Nézd meg a Visszapattanós játékomat
+    check_out_what_i_made: Nézd meg, mit csináltam
+    email_not_allowed: Olyan, mintha e-mail címet tartalmazna. Próbálj módosítani
+      a szövegen.
+    flappy_og_title: Nézd meg a Flappy játékomat
+    og_description: A kódját magam írtam a Code.org segítségével
+    phone_number_not_allowed: Olyan, mintha telefonszámot tartalmazna. Próbálj módosítani
+      a szövegen.
+    profanity_not_allowed: Úgy tűnik, mintha csúnya kifejezést tartalmazna. Próbálj
+      módosítani a szövegen.
+    studio_og_title: Próbáld ki a Játéklabor alkalmazásomat
+    title: Kattints a "Futtatás" gombra, hogy lásd a programomat működés közben
+  signin:
+    try_20hours: Próbáld ki a 20 órás bevezetést a számítógép-tudományba
+    try_heading: Bejelentkezés nélkül próbálnád ki a kódolást?
+    try_hoc: Először próbáld meg a Kódolás Óráját
+  signin_form:
+    login: Email
+    login_username: E-mail cím vagy felhasználónév
+    password: Jelszó
+    remember: Emlékezz rám
+    submit: Bejelentkezés
+    title: Már van felhasználói fiókod? Jelentkezz be
+  signinsection:
+    invalid_login: Érvénytelen bejelentkezés, kérjük próbáld meg újra
+    login: Bejelentkezés
+    name: Válaszd ki a neved
+    pair_programming: Van egy társam a számítógépnél
+    picture: Keresd meg a titkos képed
+    student_privacy_markdown: "[Itt](%{student_privacy_blog}) megtudhatod, hogy miért
+      nem látod a teljes nevedet."
+    welcome: 'Üdvözlünk itt: %{section_name}'
+    words: Írd be a titkos szavaidat
+  signup_form:
+    accept_terms: El kell fogadnod, hogy fiókot hozhass létre
+    address_placeholder: cím, város, állam (megye), irányítószám
+    age: Kor
+    agree_us_data_transfer_student: "**Hozzájárulok ahhoz, hogy a Code.org adatokat
+      továbbítson (beleértve személyes adatokat is) az Egyesült Államokba** azok tárolása
+      és feldolgozása céljából arról, hogy én hogyan használom ezt a webhelyet."
+    agree_us_data_transfer_teacher: "**Hozzájárulok ahhoz, hogy a Code.org adatokat
+      továbbítson (beleértve személyes adatokat is) az Egyesült Államokba** azok tárolása
+      és feldolgozása céljából arról, hogy én (és a diákjaim) hogyan használják ezt
+      a webhelyet."
+    birthday: Születésnap (nem kötelező)
+    data_collection_us: Tudom, hogy a Code.org egy nonprofit webhely, amelynek székhelye
+      az USA-ban van, és az USA adatgyűjtésre vonatkozó törvényei eltérhetnek az én
+      hazám törvényeitől.
+    email_preference_no: Nem
+    email_preference_privacy: "(Tekintsd át az adatvédelmi irányelveinket)"
+    email_preference_question: Küldhetünk neked email üzeneteket az új tanfolyamjainkról,
+      helyi lehetőségekről, és egyéb informatikai hírekről? (kb. havonta egyszer)
+    email_preference_required: Meg kell adnod egy e-mail címet.
+    email_preference_yes: Igen
+    email_signup: Regisztrálj az e-mail címeddel
+    error: Hiba történt
+    field_is_required: szükséges
+    gender: Nem (nem kötelező)
+    go_to_account: A fiókomhoz
+    hoc_already_signed_up_content: Sikeresen bejelentkeztél a Kódolás Órájába! Neked
+      és a diákjaidnak nem kell bejelentkezned a Kód Stúdióba, hogy részt vehess az
+      eseményen. A kezdéshez <a href="%{learn_url}"> válassz ki egy feladatot az osztályodnak,
+      és oszd meg a linket.<br/><br/> Ha élvezted a Kódolás Óráját, akkor állíts be
+      magadnak egy jelszót, és csinálj egy Kód Stúdió fiókot, hogy felvedd a diákjaidat
+      egy <a href="%{educate_url}"> kurzusra.
+    hoc_already_signed_up_content_post_hoc: Köszönjük, hogy otthont adsz egy Kódolás
+      Órájának. A Code Studio szolgáltatásba való bejelentkezéshez jelszót kell beállítanod
+      a fiókodhoz. Ezzel elmentheted a haladásod és kezelheted az osztályodat. A tanulókhoz
+      kurzusokat rendelhetsz, és nyomon követheted előrehaladásukat. <a href="%{studio_url}">
+      Továbbra is folytathatod a különböző szakaszok és feladványok böngészését </a>
+      fiók létrehozása nélkül.
+    hoc_already_signed_up_content_post_hoc_markdown: Köszönjük, hogy otthont adsz
+      egy Kódolás Órájának. A Code Studio szolgáltatásba való bejelentkezéshez jelszót
+      kell beállítanod a fiókodhoz. Ezzel elmentheted a haladásod és kezelheted az
+      osztályodat. A tanulókhoz kurzusokat rendelhetsz, és nyomon követheted előrehaladásukat.  Továbbra
+      is folytathatod a különböző szakaszok és feladványok böngészését (%{studio_url})
+      fiók létrehozása nélkül.
+    hoc_already_signed_up_heading: Kezdés bejelentkezés nélkül
+    invalid_password: A jelszónak legalább 6 karakter hosszúnak kell lennie
+    invalid_username: A felhasználónév legyen legalább 5 karakter hosszú
+    mismatch_password: A megadott két jelszó nem egyezik
+    overview: Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy irányíthass
+      egy osztályt. <a href="/">Böngészhetsz a különböző szintek és feladványok között</a>
+      fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.
+    overview_markdown: Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy
+      egy osztályt irányíthass. [Böngészhetsz a különböző szintek és feladványok között](/)
+      fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.
+    parent_account_checkbox: Szülő/gondviselő vagyok, a gyermekem nevében jelentkezem
+    parent_account_email_label: Szülő/gondviselő e-mail címe
+    parent_account_email_progress_permission: Küldhetünk Önnek esetenként e-mailt
+      a gyermeke fejlődéséről és projektjeiről, valamint frissítéseket a tanfolyamáról
+      és a számítástechnikai ismereteiről? [(Lásd az adatvédelmi irányelveinket)](%{privacy_policy_url})
+    school_address: Iskola címe (nem kötelező)
+    school_name: Iskola neve (nem kötelező)
+    share_teacher_email_reg_partner_preference_no: Nem
+    share_teacher_email_reg_partner_preference_required: Meg kell adnod egy e-mail
+      címet.
+    share_teacher_email_reg_partner_preference_yes: Igen
+    share_teacher_email_reg_partner_question: Szeretné, ha megosztanánk elérhetőségét
+      az Ön országának [Code.org regionális partnerével](%{cdo_regional_partner_desc})?  Így
+      értesítést kaphat a helyi szakma fejlődéséről, az erőforrásokról és eseményekről?
+    student_consent: Megerősítem, hogy a szülőm vagy törvényes gondviselőm engedélyt
+      adott, hogy használjam Code.org szolgáltatásait.
+    student_count: "%{count} tanuló iratkozott már fel."
+    student_terms_markdown: Az e-mail címeket olyan módon tároljuk, hogy az nem teszi
+      lehetővé számunkra a kapcsolatfelvételt a tanulókkal. A tanulók a jelszóemlékeztető
+      kivételével soha nem fognak e-mailt kapni a Code.org-tól. További információt
+      az [adatvédelem](http://code.org/privacy) részben találsz.
+    submit: Regisztrálás
+    taken_username: Felhasználónév már foglalt
+    teacher: Tanár vagy?
+    teacher_count: "%{count} tanár iratkozott már fel."
+    teacher_educator_guide: Nézd meg a tanári útmutatót
+    title: Regisztrálj a Code.org-ba
+    us_state: Állam
+    us_state_dropdown_options:
+      other: Olyan helyen élek, ami nem szerepel a listában.
+    user_type: Diák vagy tanár vagy?
+    user_type_button: Felhasználói fiók-típus módosítása
+    user_type_label: Fióktípus
+    user_type_student: Diák
+    user_type_student_ability_1: Mentsd el a haladásod és a projektjeid
+    user_type_student_ability_2: Csatlakozz a tanárod osztálytermi csoportjához
+    user_type_student_desc: 'Fedezd fel az összes tanfolyamunkat és tevékenységünket,
+      továbbá:'
+    user_type_teacher: Tanár
+    user_type_teacher_ability_1: Hozz létre új osztálytermi csoportot
+    user_type_teacher_ability_2: A diákok munkájának kiosztása és nyomon követése
+    user_type_teacher_ability_3: Beiratkozás szakmai tanulásra
+    user_type_teacher_ability_4: Kommunikáció a tanári fórumon
+    user_type_teacher_desc: 'Minden, amihez a diákok hozzáférnek, plusz:'
+    valid_password: Érvényes jelszó!
+    valid_username: Elérhető!
+    visit_privacy: További információkért keresd fel a Code.org webhelyen az [Adatvédelmi
+      Szabályokat](%{privacy_url}).
+  slow_loading: Ez a megszokottnál tovább tart...
+  stage: szakasz
+  stage_number: "%{number}. lecke"
+  studio:
+    all_courses: Minden tanfolyam
+    completed_courses: Teljesített tanfolyamok
+    courses_working_on: Tanfolyamok, amelyeken dolgozol
+  submit: Elküldés
+  teacher:
+    answer: Válasz
+    confirm:
+      remove: Biztosan el szeretnéd távolítani ezt a tanárt?
+    dashboard: Tanári nyitólap
+    for_teachers_only: Csak tanároknak
+    panel:
+      answer_viewer: Tanár Panel
+      clear_response: Válasz törlése
+      example: Példa a megoldásra
+      example_with_number: "%{solution_number}. példa a megoldásra "
+      last_updated: 'Legutóbb frissítve:'
+      section: Csoport
+      student: Diák
+      submitted_on: 'Benyújtva ekkor: %{date}'
+      try_it_yourself: Próbáld ki magad
+      unsubmit: Visszavon
+      update_lock_settings: Zárbeállítások frissítése itt.
+      viewing_solution: Megoldások megtekintése
+      worked_with: dolgozott vele
+    remove: "(tanár eltávolítása)"
+    student_code_view_diabled: A tanuló kódja nem tekinthető meg ezzel a tevékenységgel.
+    student_teacher_disassociated: Elhagytad a %{teacher_name} tanárod %{section_code}
+      szakaszát.
+    students:
+      dashboard: Vissza a Tanári Vezérlőpultra
+    title:
+      one: 'A tanárod:'
+      other: 'A tanáraid:'
+    user_not_found: Ez a tanár nem található.
+  teacher_feedback: Tanári visszajelzés
+  teacher_mailer:
+    delete_teacher_subject: 'Code.org figyelmeztetés: a fiókod törölve lett'
+    new_teacher_subject: Üdvözlünk a Code.org-on!
+    verified_teacher_subject: Code.org tanári azonosítás - sikeres
+  terms_interstitial:
+    accept: Elfogadás
+    accept_label: Elfogadom a frissített <a href="%{tos_url}" target="_blank">Felhasználási
+      feltételeket</a> és az <a href="%{privacy_url}" target="_blank">Adatvédelmi
+      irányelveket</a>
+    accept_label_markdown: Elfogadom a frissített [Felhasználási feltételeket](%{tos_url})
+      és az [Adatvédelmi irányelveket](%{privacy_url})
+    accept_tos: A Code.org weboldalra történő regisztrációval elfogadod az [Általános
+      Szerződési Feltételeinket](%{tos_url}) és az [Adatvédelmi irányelveinket](%{privacy_url}).
+    intro_desc: 'Frissítettük a szolgáltatási feltételeket és az adatvédelmi irányelveket
+      az alábbiak szerint. A változások 2016. augusztus 24-én lépnek hatályba.  A
+      legnagyobb változás: a diákfiókok e-mail-címeit <i>többé nem tároljuk a Code
+      Studio-ban.</i> Ez nagy dolog számunkra, és reméljük, hogy az oktatási technológiákban
+      ez egy új standard lesz a diákok adatvédelmével kapcsolatban. A többi változásról
+      e-mailben küldtünk egy összefoglalót.'
+    intro_desc_markdown: 'Frissítettük a szolgáltatási feltételeket és az adatvédelmi
+      irányelveket, az alábbiak szerint. A változások 2016. augusztus 24-én lépnek
+      hatályba.  A legnagyobb változás: a diákfiókok e-mail-címeit *többé nem tároljuk
+      a Code Studio-ban*. Ez nagy dolog számunkra, és reméljük, hogy az oktatási technológiákban
+      ez egy új standard lesz a diákok adatvédelmével kapcsolatban. A többi változásról
+      e-mailben küldtünk egy összefoglalót.'
+    intro_instructions: Az osztályodban tanuló 13 év alatti diákok számára el kell
+      fogadnod ezeket az új feltételeket ahhoz, hogy teljes körű hozzáférést kapj
+      a Code Studio legújabb funkcióihoz.  A 13 év alatti diák fiókjának regisztrálásakor
+      kérjük, erősítsd meg, hogy iskolája rendelkezik szülői beleegyezéssel, és a
+      diákok személyes adatait az iskola használhatja és saját érdekében felhasználhatja,
+      beleértve az olyan oktatási programokat, mint a Code Studio.
+    print: Nyomtatás
+    privacy: Adatvédelmi Elvek
+    privacy_notice: Adatvédelmi nyilatkozat
+    reminder_desc: Frissítettük a <a href="%{tos_url}" target="_blank">Szolgáltatási
+      feltételeket</a> és az <a href="%{privacy_url}" target="_blank">Adatvédelmi
+      irányelveket</a>. Kérjük, hogy mielőtt elfogadod ezeket, gondosan olvasd el
+      őket. Vedd figyelembe, hogy a frissített feltételek kifejezett elfogadása előtt
+      a JavaScriptet tanító eszközeink nem lesznek feltétlenül elérhetők a diákok
+      számára.
+    reminder_desc_markdown: Frissítettük a [Felhasználási feltételeket](%{tos_url})
+      és az [Adatvédelmi irányelveket](%{privacy_url}). Kérjük, mielőtt elfogadod
+      ezeket, olvasd el őket figyelmesen. Vedd figyelembe, hogy a frissített feltételek
+      kifejezett elfogadása előtt a JavaScriptet tanító eszközeink nem feltétlenül
+      lesznek elérhetők a diákok számára.
+    review_terms: Frissített feltételek megtekintése
+    title: Frissített szolgáltatási feltételek és adatvédelmi irányelvek
+    tos: Feltételek
+  text_match:
+    correct_body: Ez a helyes válasz.
+    correct_title: Helyes
+    open_response_body: Köszönjük a választ!
+    open_response_title: Köszönjük
+    placeholder: Itt add meg a válaszod
+  time:
+    day: nap
+    hour: 1 óra
+    week: hét
+  trophies: trófeák
+  try_hoc: 'Próbáld ki a Kódolás Óráját, kattints ide >> '
+  try_k8intro: Próbáld ki az általános iskolások szóló, számítógép-tudományba bevezető
+    tanfolyamot (15-25 óra)
+  try_reloading: Próbálja meg újratölteni az oldalt
+  unit_prefix: Egység %{n}
+  unplugged_activity: Offline tevékenység
+  unsubmit: Visszavon
+  upsell:
+    20-hour:
+      body: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap
+        fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára
+        jó időtöltés lehet.
+      body_short: Ismerd meg a számítógép-tudomány alapjait, a 2-4. gyorsított tanfolyamban.
+      title: Gyorsított tanfolyam
+    applab:
+      audience: 13 éves kor felett
+      body: Az App Lab egy programozási környezet egyszerű alkalmazásokra. Tervezd
+        meg, kódolj blokkokkal vagy JavaScript-el, hogy működjön, majd oszd meg másodpercek
+        alatt.
+      body_short: Tervezz egy alkalmazást, kódolj elemekből vagy JavaScript-ben, majd
+        oszd meg néhány másodperc alatt.
+      cta: Ismerd meg, hogyan
+      title: App Lab
+    aquatic:
+      title: Minecraft
+    dance:
+      title: Táncos buli
+    dance-2019:
+      title: Táncos buli
+    flappy:
+      body: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld
+        ki a Flappy kód gyakorlatot!
+      title: Flappy kód
+    frozen:
+      title: Jégvarázs
+    gallery:
+      body: Nézd meg a felhasználóink által készített alkalmazásokat és a művészi
+        képek galériáját
+      title: Galéria
+    gamelab:
+      audience: 13 éves kor felett
+      body: A Game Lab egy olyan programozási környezet, amelyben egyszerű animációkat
+        és játékokat lehet készíteni egymással kölcsönhatásban lévő objektumokkal
+        és karakterekkel.
+      cta: Ismerd meg, hogyan
+      title: Játék Labor
+    hello-world:
+      body: Válassz a négy szórakoztató téma közül, ha interaktív karaktereket akarsz
+        kódolni az általad létrehozott világban.
+      title: Helló világ
+    hero:
+      body: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz
+        végig a Minecraft világán kódok segítségével.
+      title: Minecraft
+    hoc:
+      body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
+      title: Hagyományos labirintus
+    hoc-encryption:
+      body: A diákok megtanulják, hogyan kell titkosított üzeneteket létrehozni és
+        feltörni.
+      title: Egyszerű titkosítás
+    hoc2014:
+      try_frozen: Művészkedj Annával és Elzával a Jégvarázsból
+      try_new_tutorial: Próbáld ki az új Kódolás Órája oktató anyagunk béta változatát
+    infinity:
+      body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney
+        Infinity szereplőkkel.
+      title: Infinity játéklabor
+    minecraft:
+      body: Fedezd fel a Minecraft világát kódolással
+      title: Minecraft
+    minecraft2016:
+      body: Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban.
+      title: Minecraft
+    poem-art:
+      body: Fejezd ki magad! Készíts animált verseket kódok felhasználásával.
+      title: Versművészet
+    sports:
+      body: Készíts egy kosárlabda-játékot, vagy kombináld a különböző sportágakat.
+      title: Sportok
+    starwars:
+      title: Star Wars
+    text-compression:
+      body: Ebben a leckében a tanulók a szövegtömörítő widget segítségével tömörítik
+        a szöveget, a mintákat szimbólumokkal helyettesítik.
+      title: Szöveg tömörítése
+    unplugged:
+      audience: 4 éven felettieknek
+      body: Összeállítottunk egy listát a számítógép nélküli leckékről, ezeket lehet
+        használni az osztályteremben. Mostantól taníthatod a számítástechnika alapjait,
+        akár van számítógép az osztályteremben, akár nincs! Próbáld ki ezeket a leckéket
+        önálló tananyagként vagy más számítógépes tanfolyam kiegészítő leckéjeként
+        használni.
+      body_short: Ha nincs számítógéped, próbáld ki ezeket az offline tanórákat az
+        osztályoddal!
+      title: Offline tanórák
+    unplugged_conditionals:
+      body: Ismerd meg az algoritmusokat és a feltételes utasításokat ebben a számítógép
+        nélküli tevékenységben egy kártyapakli segítségével.
+      title: Feltételek
+    weblab:
+      audience: 13 éves kor felett
+      body: A Web Lab egy programozási környezet, ahol egyszerű weboldalakat lehet
+        készíteni HTML és CSS segítségével. Tervezd meg weboldalaid, és oszd meg a
+        webhelyet akár pár másodperc alatt.
+      cta: Ismerd meg, hogyan
+      title: Web Lab (béta)
+    widgets:
+      audience: 14 éves kortól
+      body: Ezeknek a digitális eszközöknek a segítségével a diákok gyakorlatokon
+        keresztül fedezhetik fel a Számítástechnika alapjai kurzusunkban szereplő
+        fogalmakat. Használd a widgeteket önállóan, vagy készíts egy, egy fogalom
+        köré épült leckét az osztálynak.
+      cta: Ismerd meg, hogyan
+      title: Widgetek
+  user:
+    account_successfully_updated: A fiók frissítése sikeres volt.
+    auth_option_saved: Sikeresen összekapcsoltad a(z) %{provider} fiókodat a(z) %{email}
+      címmel.
+    auth_option_saved_no_email: Sikeresen összekapcsoltad a(z) %{provider} fiókodat.
+    confirm_secret_words: A jelenlegi titkos szavad beírásával erősítsd meg, hogy
+      valóban te akarsz belépni.
+    create_personal_login: Személyes jelszó létrehozása a belépéshez
+    create_personal_login_email_note: 'Megjegyzés: a tanulók e-mail címeit olyan módon
+      tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt. A tanulók
+      a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól.
+      További információt az <a href=''%{privacy_policy_url}'', target=''_blank''>adatvédelem</a>
+      részben találsz.'
+    create_personal_login_email_note_markdown: 'Megjegyzés: a tanulók e-mail címeit
+      olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt.
+      A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól.
+      További információt az [adatvédelem](%{privacy_policy_url}) részben találsz.'
+    create_personal_login_info: Ha a tanév vége után is használni akarod a Code.org
+      fiókodat, hozz létre saját személyes fiókot!
+    create_personal_login_link_account: Ehelyett választhatod a személyes fiókhoz
+      való csatlakozást is a "Kapcsolódó fiókok kezelése" szakaszban.
+    create_personal_login_terms: A személyes bejelentkezés létrehozásával elfogadom
+      a Code.org <a href='%{terms_of_service_url}', target='_blank'>szolgáltatási
+      feltételeket</a>. Megerősítem, hogy szüleimtől vagy a törvényes képviselőmtől
+      engedélyt kaptam a Code.org szolgáltatások használatához, akár tanár nélkül
+      is.
+    create_personal_login_terms_markdown: A személyes bejelentkezés létrehozásával
+      elfogadom a Code.org <a href='%{terms_of_service_url} [szolgáltatási feltételeket].
+      Megerősítem, hogy szüleimtől vagy a törvényes képviselőmtől engedélyt kaptam
+      a Code.org szolgáltatások használatához, akár tanár nélkül is.
+    create_personal_login_under_13_info: Ha a tanév vége után is használni akarod
+      a Code.org fiókodat, kérd meg valamelyik szülődet/gondviselődet, hogy segítsen
+      saját személyes fiókod létrehozásában.
+    create_personal_login_under_13_parent_email: Szülő/gondviselő e-mail címe
+    create_personal_login_under_13_username: Felhasználói név (ne használd a valós
+      nevedet!)
+    current_password_hint: "(szükségünk van a jelenlegi jelszavadra a módosítások
+      végrehajtásához)"
+    delete: Fiók törlése
+    delete_confirm: Biztosan törölni akarod a fiókodat?
+    delete_text: A fiókod törlésével törölsz minden a fiókodhoz tartozó információt
+      és törlöd az eddig elért eredményeidet is.
+    delete_text_teacher_managed_note: Nincs jogosultságod törölni ezt a fiókot, mert
+      ezt a tanárod kezeli. A tanárodnak előbb el kell távolítania téged a szakaszából,
+      csak utána törölheted a fiókodat.
+    delete_text_teacher_note: 'Kérjük, vedd figyelembe: a fiókod törlésével a tanulóid
+      fiókjai nem törlődnek.'
+    deleted_user: törölt felhasználó
+    email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
+    email_confirm_needed_required: 'A %{email} e-mail cím nincs megerősítve:'
+    email_confirm_wrong_email: "(Helytelen e-mail cím?)"
+    email_resend_confirm: Megerősítés újraküldése
+    encrypted: titkosítva
+    enter_new_login_info: Írd be az új bejelentkezési adataidat!
+    enter_parent_email: Add meg szülőd vagy gondviselőd e-mail címét (jelszó-visszaállítás
+      esetére)
+    for_parents_and_guardians: Szülőknek és gondviselőknek
+    link_a_parent_email: 'Kapcsolja a szülő/gondviselő e-mail címét ehhez a fiókhoz,
+      így friss információkat kaphat gyermeke fejlődéséről és projektjeiről. Ezzel
+      az e-mail címmel tudja a jelszavát is visszaállítani.  '
+    new_email_hint: "(győződj meg róla, hogy hozzáférsz az erre az e-mail címre érkező
+      e-mailekhez)"
+    new_password_hint: "(hagyd üresen, ha nem akarod megváltoztatni)"
+    no_password_because_oauth: Nincs jelszavad, mivel egy másik szolgáltatón keresztül
+      léptél be.
+    no_password_because_sponsored: A jelszavad kezelése miatt fordulj a tanárodhoz!
+    none: Egyik sem
+    only_one_parent_email_supported_warning: 'Megjegyzés: ez alkalommal diákonként
+      csak egy szülői/gondviselői e-mail címet tudunk támogatni.'
+    parent_email_hint: "(Ezt a jelszavad visszaállításához tudod használni)"
+    parent_email_label: Szülő/gondviselő e-mail címe (opcionális)
+    parent_guardian_email_label: Szülő/gondviselő e-mail
+    remove_parent_email_label: Eltávolítás
+    update: Fiók frissítése
+    update_email: Frissíteni
+  user_level:
+    completed: Teljesítve
+    tried: Próbáltam
+  user_type:
+    student: Diák
+    teacher: Tanár
+  video:
+    autoplay_option: Videók automatikus lejátszása
+    download: Videó letöltése
+    label: Videó
+    notes: Nem látszik a videó? Mutasd a szöveges magyarázatot!
+    notes_coming_soon: Ehhez a videóhoz hamarosan leírás is lesz.
+    show_notes: Mutasd a jegyzeteket
+    show_video: Mutasd a videót
+    tab: Videó.
+  video_coming_soon: Hamarosan lesz videó!
+  view_all_units: Összes egység megtekintése
+  view_lesson_plan: Óravázlat megtekintése
+  view_teacher_guide: Oktatói útmutató megtekintése
+  welcome_back: Üdv újra, %{name}
+  welcome_email:
+    body: "Kattints az alábbi linkre, hogy számítógép-tudományi gyakorlatokra iratkozz
+      fel a Code.org rendszerben (velem, mint tanár): %{link} \n\nA gyakorlatok izgalmasak,
+      látványosak, és a számítógép-tudomány alapvető fogalmait egyszerű, irányított,
+      játékos módon tanítják. Tanulj programozni olyan tanároktól, mint Bill Gates,
+      Mark Zuckerberg, az Angry Birds és a zombik! :-) %{name}\n"
+    subject: Csatlakozz az én osztályomhoz (a Code.org-on)
+  your_professional_learning_plan: Saját Profi Tanulmányi Terv
+  zendesk_too_young_message: Elnézést, de kiskorú felhasználók nem regisztrálhatnak
+    a támogatói oldalunkra. Megnézheted a <a href="http://support.code.org"> support.code.org</a>
+    oldalakat regisztráció nélkül, illetve kérd meg a szüleidet vagy tanáraidat, hogy
+    lépjenek kapcsolatba velünk a nevedben.
+  zendesk_too_young_message_markdown: Elnézést, de kiskorú felhasználók nem regisztrálhatnak
+    a támogatói oldalunkra. Megnézheted a [support.code.org](http://support.code.org)
+    oldalakat regisztráció nélkül, illetve kérd meg a szüleidet vagy tanáraidat, hogy
+    lépjenek kapcsolatba velünk a nevedben.

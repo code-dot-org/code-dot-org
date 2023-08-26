@@ -8,12 +8,13 @@
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2023-05-06 20:48:32 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-07-25 22:13:52 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -44,7 +45,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In Lesson 1, students will use computer science to bring a digital time capsule to life! Students will learn the basics of Sprite Lab by coding the mood and imagery of a short poem written about a specific, important moment in time. Students will have various examples of time capsule poems to choose from, ranging from 1905-2023. Students will practice using code blocks to set a background, set text effects, create sprites with behaviors, play sounds, and trigger events to occur during certain lines of the text.",
-        "preparation": "- Play through the levels and review the lesson slides\n- Identify levels where your students will require additional support\n- Read through the debugging tips\n- Some levels require sound to play. Hand out headphones ahead of time. ",
+        "preparation": "- Play through the levels and review the lesson slides\n- Identify levels where your students will require additional support\n- Some levels require sound to play. Hand out headphones ahead of time. \n- Consider exploring the recommended preparation activities before beginning ([link](https://studio.code.org/s/csc-timecapsule-2023/lessons/1#activity-4365340)).\n* Consider these related extension options (link) to explore after the last lesson.",
         "purpose": "This lesson provides an engaging and interactive learning experience that integrates social studies learning standards with computer science objectives. By combining these two content standards, the lesson aims to help students develop a deeper understanding of both subjects and to see the connections between them.",
         "student_overview": "In this lesson you will be introduced to various examples of time capsules. Your job is to learn the basics of coding on Sprite Lab so that you can bring these poems to life with color, sounds, animation and music! Imagine you are telling someone 50 years from now about life right now. Maybe you will share about the first Electric Vehicles or the first song to reach 1 billion views on YouTube. By choosing backgrounds, text effects, sprites, and sounds you can add details that create a powerful time capsule for someone in the future. "
       },
@@ -63,7 +64,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "In this lesson, students will plan and write their own time capsule poem. Students will reflect on their life and personal experiences to select an important idea for a short poem about the current time period. Students should imagine what someone 50 years in the future would want to know about today.",
-        "preparation": "- Review the lesson slides.\n- Print one ***Write Your Own Time Capsule Poem Handout** for each student.\n",
+        "preparation": "- Review the lesson slides.\n- Print one **Write Your Own Time Capsule Poem Handout** (<a href=\"https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview\" target=\"_blank\">Sentence Stems</a> | <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\t\n\" target=\"_blank\">Question Grab Bag</a>)\n for each student.\n",
         "purpose": "Today you will write your own time capsule poem. As you plan, think about what someone in the future would want to learn about your life. Imagine your future grandchildren asking you what it was like when you were young. They want to see life through your eyes. Next class you will code your time capsule poem. Start thinking about what backgrounds, text effects, sounds, sprites and events you may use."
       },
       "seeding_key": {
@@ -81,7 +82,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "In this lesson, students will warm up by reading time capsule poem examples. Then they will start coding their own time capsule poems. Students will use the “Enter My Own” feature to input their completed poems from the handout they completed last class. Last, students will use code blocks to animate and enhance their projects. To do so, they will review the skills they learned in Lesson 1.",
-        "preparation": "- Play through the levels and review the lesson slides\n- Identify levels where your students will require additional support\n- Make sure students have their Write Your Time Capsule Poem handout from last class.\n- Print one ***[Time Capsule Poem Checklist](https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/template/preview)** for each student.\n- Consider the need for headphones if students plan to add sounds to their projects\n- Create your own time capsule poem as an example for students\n\n",
+        "preparation": "- Play through the levels and review the lesson slides\n- Identify levels where your students will require additional support\n- Make sure students have their Write Your Time Capsule Poem handout from last class.\n- Print one <a href=\"https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/template/preview\" target=\"_blank\">Time Capsule Poem Checklist</a> for each student.\n- Consider the need for headphones if students plan to add sounds to their projects\n- Create your own time capsule poem as an example for students\n\n",
         "purpose": "Students will be able to personalize their poems by choosing what effects they want to add to their programs. They will curate their projects according to their own interests and personal experiences.\n",
         "student_overview": "Today, you will be able to personalize your poem by choosing what effects you want to add to your time capsule. "
       },
@@ -100,7 +101,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "In this final lesson, students will share their apps with one another.  First they will copy and paste their app links into a new tab. Then students will walk around and run each other’s time capsule stories. Finally, the whole class will have a discussion on the importance of curation and how to decide what elements to keep in retelling history.",
-        "preparation": "- Have student handouts and projects pulled up from the previous class\n- Hand out a stack of Post It notes (or the [Gallery Walk Sticky Notes](https://docs.google.com/document/d/16OGg95k4WsOrusXBO-jjTBFMstI2Att8j6ggZCgpvls/template/preview)) to each student \n",
+        "preparation": "- Have student handouts and projects pulled up from the previous class\n- Hand out a stack of Post It notes (or the  <a href=\"https://docs.google.com/document/d/16OGg95k4WsOrusXBO-jjTBFMstI2Att8j6ggZCgpvls/template/preview\" target=\"_blank\">Gallery Walk Sticky Notes</a>) to each student \n* Consider these related extension options ([link](https://studio.code.org/s/csc-timecapsule-2023/lessons/4#activity-4365344)) to explore after the last lesson.\n",
         "purpose": "This lesson provides students with an opportunity to showcase their learning and to receive feedback from their peers. By sharing their time capsule apps, students can see how their classmates approached the same task and can learn from each other's successes and challenges."
       },
       "seeding_key": {
@@ -112,8 +113,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "54cef2c3-d829-48f3-ba0c-07905e2ecad0",
+      "key": "9e38b776-8b6b-4c75-8742-3776c454a8b7",
       "position": 1,
+      "properties": {
+        "name": "Recommended Preparation"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9e38b776-8b6b-4c75-8742-3776c454a8b7",
+        "lesson.key": "Time Capsule Introduction (pilot)",
+        "lesson_group.key": "",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
+      "key": "54cef2c3-d829-48f3-ba0c-07905e2ecad0",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -127,7 +141,7 @@
     },
     {
       "key": "f9f1326b-d1e4-4304-9c20-597037c86ffe",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Main Activity"
@@ -141,13 +155,26 @@
     },
     {
       "key": "695703b8-0d00-47a2-bf43-3c522d641b8a",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "695703b8-0d00-47a2-bf43-3c522d641b8a",
+        "lesson.key": "Time Capsule Introduction (pilot)",
+        "lesson_group.key": "",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
+      "key": "9e1bcfef-a26f-469b-9d89-2c7dd7c7dff9",
+      "position": 5,
+      "properties": {
+        "name": "Extension Opportunities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9e1bcfef-a26f-469b-9d89-2c7dd7c7dff9",
         "lesson.key": "Time Capsule Introduction (pilot)",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2023"
@@ -196,6 +223,19 @@
       }
     },
     {
+      "key": "62312fb1-df70-417f-8173-c2e6969a705a",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "62312fb1-df70-417f-8173-c2e6969a705a",
+        "lesson.key": "My Time Capsule Story (pilot)",
+        "lesson_group.key": "",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
       "key": "3cb581b5-04a4-4a5c-915e-90b88fd3cd41",
       "position": 1,
       "properties": {
@@ -232,6 +272,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "d7b1d196-06b9-49c7-8ef3-f1644b41f499",
+        "lesson.key": "Coding My Time Capsule (pilot)",
+        "lesson_group.key": "",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
+      "key": "4d283725-bc40-45e0-a2ba-0c722a357729",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d283725-bc40-45e0-a2ba-0c722a357729",
         "lesson.key": "Coding My Time Capsule (pilot)",
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2023"
@@ -278,9 +331,38 @@
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2023"
       }
+    },
+    {
+      "key": "0e7086c2-52d3-419a-b55c-9881ed7a8335",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunties"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0e7086c2-52d3-419a-b55c-9881ed7a8335",
+        "lesson.key": "Sharing My Time Capsule (pilot)",
+        "lesson_group.key": "",
+        "script.name": "csc-timecapsule-2023"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "21c79679-ce86-40c1-a4ff-73c22f80798c",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Social Studies:** Read any of these <a href=\"https://docs.google.com/document/d/1GU2wLxQ2xkoYGrjJU2mbngZEDxOX7bEWTlh4Ns1cnh8/template/preview\" target=\"_blank\">Multiple Perspectives Read Alouds</a> together as a class to enrich the discussion questions throughout the module, especially regarding the importance of having your voice in your own story, and what happens if certain things are included or left out. \n\n**ELA:** Read poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  Students will be working with sprites and events in the module. We recommend beginning with <a href=\"https://studio.code.org/s/coursee-2023/lessons/4\" target=\"_blank\">Hello World</a> (45 minutes) where students will gain a basic introduction to sprites and how to animate them with events. \n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "21c79679-ce86-40c1-a4ff-73c22f80798c",
+        "lesson_activity.key": "9e38b776-8b6b-4c75-8742-3776c454a8b7"
+      }
+    },
     {
       "key": "7bc2ddf3-1601-406c-ba64-f083f5a3ecb7",
       "position": 1,
@@ -310,7 +392,7 @@
       "key": "84058fad-d235-4ca2-9d3e-e4dff9cf7769",
       "position": 3,
       "properties": {
-        "description": "Instead of making a physical time capsule with a box that we bury, we are instead going to use the power of computer science to make a digital time capsule! This digital time capsule can preserve your memories for much longer than a physical box could last. A digital time capsule is also easier to share with a big group of friends or family members. All you need to do is give them a link to your project. \n\nIn your digital time capsule, you will write a short time capsule poem and you can choose pictures, animations, music, and sound effects that represent your life right now.\n\nThen, you can set a date in the future for when you want your time capsule to be opened. It could be next year, in five years, or even twenty years from now!\n\nWhen the time comes, people will be able to see what your life was like back then, and it will be like a window into the past. It's a fun way to preserve memories and share them with others!\n\nLet’s look at an example of a [Time Capsule](https://studio.code.org/projects/poetry_hoc/vWM8NbLtagEc3DVX_kzkjgr8gYS-W8kuaxJ_TjOfQHw). As we run the code, what do you notice? What do you wonder about this project?\n",
+        "description": "Instead of making a physical time capsule with a box that we bury, we are instead going to use the power of computer science to make a digital time capsule! This digital time capsule can preserve your memories for much longer than a physical box could last. A digital time capsule is also easier to share with a big group of friends or family members. All you need to do is give them a link to your project. \n\nIn your digital time capsule, you will write a short time capsule poem and you can choose pictures, animations, music, and sound effects that represent your life right now.\n\nThen, you can set a date in the future for when you want your time capsule to be opened. It could be next year, in five years, or even twenty years from now!\n\nWhen the time comes, people will be able to see what your life was like back then, and it will be like a window into the past. It's a fun way to preserve memories and share them with others!\n\nLet’s look at an example of a **<a href=\"https://studio.code.org/projects/poetry_hoc/vWM8NbLtagEc3DVX_kzkjgr8gYS-W8kuaxJ_TjOfQHw\" target=\"_blank\">Time Capsule</a>**. As we run the code, what do you notice? What do you wonder about this project?\n",
         "remarks": true
       },
       "seeding_key": {
@@ -526,6 +608,23 @@
       }
     },
     {
+      "key": "defbf867-9ef8-4921-a1db-a94b58d8715d",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of social studies and ELA. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 3 in this module.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Social Studies:**\n- CSC  <a href=\"studio.code.org/s/csc-mappinglandmarks-2023\" target=\"_blank\">Coding an Interactive Map</a> continues to connect computer science and social studies.\n\n**ELA:**\n- CSC <a href=\"studio.code.org/s/poetry\" target=\"_blank\">Coding with Poetry</a> continues to connect computer science with poetry.\n\n**Computer Science:**\n- Play CSF  <a href=\"https://studio.code.org/s/coursee-2023/lessons/3\" target=\"_blank\">Swimming Fish</a> to develop additional skills related to sprites and events.\n- Try CSF <a href=\"URL\" target=\"_blank\">Sprites in Action</a> to continue learning about sprites. Students will learn a greater variety of event blocks and sprite behaviors.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "defbf867-9ef8-4921-a1db-a94b58d8715d",
+        "lesson_activity.key": "9e1bcfef-a26f-469b-9d89-2c7dd7c7dff9"
+      }
+    },
+    {
       "key": "45a57785-1232-4312-956f-1652042c5329",
       "position": 1,
       "properties": {
@@ -607,7 +706,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "In this lesson, you will be using the provided [rubric](https://docs.google.com/document/d/1oE_z84x5GRJ34fRDLCc-YfKJQIQab90pLjozaGQKaJ0/template/preview) to assess your students' projects. Rubrics are valuable tools that bring consistency and clarity to the evaluation process. By outlining specific criteria and performance levels, rubrics ensure that all students are assessed fairly and objectively. \n\nWe encourage you to share the rubric with your students before they begin their projects. This helps them understand the expectations and work towards meeting the outlined criteria. Additionally, as you grade their work, refer to the rubric consistently, so that each aspect of the project is assessed based on the same set of standards. By adopting this approach, you promote fairness, provide meaningful feedback to students, and help them identify areas for growth and improvement."
+            "markdown": "In this lesson, you will be using the provided <a href=\"https://docs.google.com/document/d/1oE_z84x5GRJ34fRDLCc-YfKJQIQab90pLjozaGQKaJ0/template/preview\" target=\"_blank\">rubric</a> to assess your students' projects. Rubrics are valuable tools that bring consistency and clarity to the evaluation process. By outlining specific criteria and performance levels, rubrics ensure that all students are assessed fairly and objectively. \n\nWe encourage you to share the rubric with your students before they begin their projects. This helps them understand the expectations and work towards meeting the outlined criteria. Additionally, as you grade their work, refer to the rubric consistently, so that each aspect of the project is assessed based on the same set of standards. By adopting this approach, you promote fairness, provide meaningful feedback to students, and help them identify areas for growth and improvement."
           }
         ]
       },
@@ -758,6 +857,23 @@
       }
     },
     {
+      "key": "413bff8b-1c6e-4f15-b923-a3a09b6bb290",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of social studies and ELA. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 3 in this module.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Social Studies:**\n- CSC  <a href=\"studio.code.org/s/csc-mappinglandmarks-2023\" target=\"_blank\">Coding an Interactive Map</a> continues to connect computer science and social studies.\n\n**ELA:**\n- CSC <a href=\"studio.code.org/s/poetry\" target=\"_blank\">Coding with Poetry</a> continues to connect computer science with poetry.\n\n**Computer Science:**\n- Play CSF  <a href=\"https://studio.code.org/s/coursee-2023/lessons/3\" target=\"_blank\">Swimming Fish</a> to develop additional skills related to sprites and events.\n- Try CSF <a href=\"URL\" target=\"_blank\">Sprites in Action</a> to continue learning about sprites. Students will learn a greater variety of event blocks and sprite behaviors.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "413bff8b-1c6e-4f15-b923-a3a09b6bb290",
+        "lesson_activity.key": "62312fb1-df70-417f-8173-c2e6969a705a"
+      }
+    },
+    {
       "key": "239e4137-6c3a-45ef-a6e6-6c267855ba37",
       "position": 1,
       "properties": {
@@ -803,7 +919,7 @@
       "key": "6d72a1ee-ec11-434d-b63b-5b61bcff6025",
       "position": 2,
       "properties": {
-        "description": "Now it is time to start coding our time capsule poems. You are going to take the poem you wrote last class and code it as a time capsule app. As you add blocks to your program, refer to your completed handout to see which words or phrases you want to enhance with visual effects, imagery, and sound. If you need to remember how to add in specific blocks, go to the choice level in this lesson to refresh your skills.\n\nAs you work, make sure to reference your [Time Capsule Poem Checklist](https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/template/preview) to make sure that your app meets all of the requirements.",
+        "description": "Now it is time to start coding our time capsule poems. You are going to take the poem you wrote last class and code it as a time capsule app. As you add blocks to your program, refer to your completed handout to see which words or phrases you want to enhance with visual effects, imagery, and sound. If you need to remember how to add in specific blocks, go to the choice level in this lesson to refresh your skills.\n\nAs you work, make sure to reference your <a href=\"https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/template/preview\" target=\"_blank\">Time Capsule Poem Checklist</a> to make sure that your app meets all of the requirements.",
         "remarks": true
       },
       "seeding_key": {
@@ -815,7 +931,7 @@
       "key": "8850e4a1-b18f-4fc9-922d-ba85c7cf84e1",
       "position": 3,
       "properties": {
-        "description": "**Do This**: Have students move to their computers and sign in. Students will now code their own time capsule poem. Students should use their Write Your Time Capsule Poem handout and Time Capsule Poem Checklist as a guide as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from the Lesson 1 tutorial to enhance their time capsule poems. \n\nCirculate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their poem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 1 - Code Your Short Poem” slide \n\n**Debugging tips**: \n\n**Level 1**: To type up their poems, students will need to click the \"Enter Your Own\" option in the poem dropdown menu. Students will fill in the text for their time capsule poem that they wrote last class. They will write in their title, their own name or nickname, and each line of their short poem. Have students watch the short [video](https://www.youtube.com/watch?v=oKPgbzdpTSA) explanation before beginning.\n\n\n",
+        "description": "**Do This**: Have students move to their computers and sign in. Students will now code their own time capsule poem. Students should use their Write Your Time Capsule Poem handout and Time Capsule Poem Checklist as a guide as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from the Lesson 1 tutorial to enhance their time capsule poems. \n\nCirculate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their poem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 1 - Code Your Short Poem” slide \n\n**Debugging tips**: \n\n**Level 1**: To type up their poems, students will need to click the \"Enter Your Own\" option in the poem dropdown menu. Students will fill in the text for their time capsule poem that they wrote last class. They will write in their title, their own name or nickname, and each line of their short poem. Have students watch the short <a href=\"https://www.youtube.com/watch?v=oKPgbzdpTSA\" target=\"_blank\">video</a> explanation before beginning.\n\n",
         "progression_name": "My Time Capsule"
       },
       "seeding_key": {
@@ -878,6 +994,23 @@
       "seeding_key": {
         "activity_section.key": "3da2ce72-c5f6-49b0-af27-760527a9dedb",
         "lesson_activity.key": "d7b1d196-06b9-49c7-8ef3-f1644b41f499"
+      }
+    },
+    {
+      "key": "90b2f155-1db3-4b59-8cd9-914cc34a100c",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of social studies and ELA. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 3 in this module.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Social Studies:**\n- CSC  <a href=\"studio.code.org/s/csc-mappinglandmarks-2023\" target=\"_blank\">Coding an Interactive Map</a> continues to connect computer science and social studies.\n\n**ELA:**\n- CSC <a href=\"studio.code.org/s/poetry\" target=\"_blank\">Coding with Poetry</a> continues to connect computer science with poetry.\n\n**Computer Science:**\n- Play CSF  <a href=\"https://studio.code.org/s/coursee-2023/lessons/3\" target=\"_blank\">Swimming Fish</a> to develop additional skills related to sprites and events.\n- Try CSF <a href=\"URL\" target=\"_blank\">Sprites in Action</a> to continue learning about sprites. Students will learn a greater variety of event blocks and sprite behaviors.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "90b2f155-1db3-4b59-8cd9-914cc34a100c",
+        "lesson_activity.key": "4d283725-bc40-45e0-a2ba-0c722a357729"
       }
     },
     {
@@ -951,7 +1084,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "There is an optional [Sticky Notes Handout](https://docs.google.com/document/d/16OGg95k4WsOrusXBO-jjTBFMstI2Att8j6ggZCgpvls/template/preview) with sentence stems that you can print out and cut into slips for students to use during the Gallery Walk. This way students do not have to spend time writing out the sentence stems each time, and can devote more of their energy on experiencing the different projects."
+            "markdown": "There is an optional <a href=\"https://docs.google.com/document/d/16OGg95k4WsOrusXBO-jjTBFMstI2Att8j6ggZCgpvls/template/preview\" target=\"_blank\">Sticky Notes Handout</a> with sentence stems that you can print out and cut into slips for students to use during the Gallery Walk. This way students do not have to spend time writing out the sentence stems each time, and can devote more of their energy on experiencing the different projects."
           }
         ]
       },
@@ -982,6 +1115,33 @@
       "seeding_key": {
         "activity_section.key": "0510b578-c44b-48d3-87c2-0886282e0857",
         "lesson_activity.key": "1c83e587-e10c-4f6b-9183-8e269511015c"
+      }
+    },
+    {
+      "key": "f360eceb-67ee-4b33-9e05-dfb5f9c00f87",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of social studies and ELA. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 3 in this module.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f360eceb-67ee-4b33-9e05-dfb5f9c00f87",
+        "lesson_activity.key": "0e7086c2-52d3-419a-b55c-9881ed7a8335"
+      }
+    },
+    {
+      "key": "91250125-a737-4cf9-8478-3b10aea48e69",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Social Studies:**\n- CSC  <a href=\"studio.code.org/s/csc-mappinglandmarks-2023\" target=\"_blank\">Coding an Interactive Map</a> continues to connect computer science and social studies.\n\n**ELA:**\n- CSC <a href=\"studio.code.org/s/poetry\" target=\"_blank\">Coding with Poetry</a> continues to connect computer science with poetry.\n\n**Computer Science:**\n- Play CSF  <a href=\"https://studio.code.org/s/coursee-2023/lessons/3\" target=\"_blank\">Swimming Fish</a> to develop additional skills related to sprites and events.\n- Try CSF <a href=\"URL\" target=\"_blank\">Sprites in Action</a> to continue learning about sprites. Students will learn a greater variety of event blocks and sprite behaviors.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "91250125-a737-4cf9-8478-3b10aea48e69",
+        "lesson_activity.key": "0e7086c2-52d3-419a-b55c-9881ed7a8335"
       }
     }
   ],
@@ -1569,6 +1729,62 @@
       }
     },
     {
+      "name": "Resource List for All Lessons",
+      "url": "/s/csc-timecapsule-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "Standards in Coding a Time Capsule",
+      "url": "/s/csc-timecapsule-2023/standards",
+      "key": "all_standards",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "Vocabulary in Coding a Time Capsule",
+      "url": "/s/csc-timecapsule-2023/vocab",
+      "key": "all_vocab",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "all_vocab"
+      }
+    },
+    {
+      "name": "CS Connections Landing Page",
+      "url": "https://code.org/educate/csc",
+      "key": "cs_connections_landing_page",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page"
+      }
+    },
+    {
+      "name": "CSC Extended Connections Book List",
+      "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+      "key": "csc_extended_connections_book_list",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list"
+      }
+    },
+    {
       "name": "Enter Your Own Poem",
       "url": "https://www.youtube.com/watch?v=oKPgbzdpTSA",
       "key": "enter_your_own_poem",
@@ -1591,6 +1807,18 @@
       },
       "seeding_key": {
         "resource.key": "helpful_hints"
+      }
+    },
+    {
+      "name": "Helpful Hints for teachers and learners",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+      "key": "helpful_hints_for_teachers_and_learners",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners"
       }
     },
     {
@@ -1875,7 +2103,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocab",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners",
+        "script.name": "csc-timecapsule-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

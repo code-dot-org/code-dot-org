@@ -1,345 +1,137 @@
 ---
 eu:
-  errors:
-    messages:
-      not_saved: 'Zuzendu hurrengo akatsak mesedez:'
-      too_young: Eduki honek adin murriztapenak ditu eta ikasle gazteenentzat ez dago
-        eskuragarri.
-      teacher_must_accept_terms: Eduki honek adin-murrizketak ditu eta ez da ikasle
-        gazteagoentzat erabilgarri. Eska iezaiozu zure irakasleari onartzeko Zerbitzuaren
-        Zehaztapen eguneratuak eduki honetarako sarrera zuri emateko. Zure irakasleak
-        hori egin dezake Code Studioan sartuz eta orri nagusiaren goialdetik hurbil
-        dagoen "Review updated terms" botoian klik eginez.
   activerecord:
+    attributes:
+      user:
+        age: Adina
+        current_password: Uneko pasahitza
+        edit_header: Aldatu kontuaren xehetasunak
+        email: E-posta
+        error:
+          future: ezin du izan etorkizunean
+        gender: Generoa
+        locale: Hizkuntza
+        name: Izena Erakutsi
+        parent_email: Guraso/tutore emaila
+        password: Pasahitza
+        password_confirmation: Pasahitza errepikatu
+        username: Erabiltzaile-izena
     errors:
       messages:
         blank: beharrezkoa da
         invalid: okerra da
         invalid_plural: okerrak dira
-    attributes:
-      user:
-        name: Izena Erakutsi
-        email: E-posta
-        parent_email: Guraso/tutore emaila
-        username: Erabiltzaile-izena
-        password: Pasahitza
-        password_confirmation: Pasahitza errepikatu
-        current_password: Uneko pasahitza
-        locale: Hizkuntza
-        age: Adina
-        gender: Generoa
-        edit_header: Aldatu kontuaren xehetasunak
-        error:
-          future: ezin du izan etorkizunean
-  beta: beta
-  hello: Kaixo, mundua
-  welcome_back: Ongi etorria berriro, %{name}
-  submit: Bidali
-  unsubmit: Bidalketa ezeztatu
-  previous_page: Aurreko orrialdea
-  next_page: Hurrengo orria
-  cancel: Ezeztatu
-  okay: Ongi da
-  or: edo
-  join_section:
-    code:
-      placeholder: Atal Kodea (ABCDEF)
   add_hint_form:
     placeholder: Mesedez sartu hemen zure pista
     submit: Gehitu pista
+  age_interstitial:
+    age: Zure adina
+    header: Kontuaren Informazioa Eguneratu
+  already_started: 'Jadanik hasia? Jarraitu hemen >> '
   appname: Code.org
-  stage: Maila
-  stage_number: Maila %{number}
-  puzzle: Ariketa
-  trophies: garaikurrak
+  auth:
+    already_signedup: Dagoeneko izena eman duzu?
+    facebook: Facebook
+    forgot_password: Pasahitza ahaztu duzu?
+    google_oauth2: Google kontua
+    microsoft_v2_auth: Microsoft kontua
+    need_confirmation: Ez dituzu konfirmazio argibideak jaso?
+    need_unlock: Ez dituzu liberatzeko argibideak jaso?
+    notyet_signedup: Ez zara batu oraindik?
+    sign_in_with: Sartu  %{provider}ekin
+    signed_in: Barruan zaude!
+    twitter: Twitter
+    windowslive: Microsoft kontua
+  beta: beta
+  builder:
+    back: Script-etara itzuli
+    created: Script berri bat sortu duzu.
+    destroyed: Script bat ezabatu duzu.
+    level:
+      create: Maila berria sortu
+      current: Uneko mailak
+      unused: Erabili gabeko mailak
+    manage: Mailak eraiki
+    success: Blokeak arrakastaz editatu dituzu.
+    view: Ikusi
+  cancel: Ezeztatu
+  certificate_hour_of_code: Kode Ordua
+  compatibility:
+    upgrade:
+      link: Ikasi gehiago
+  continue: Jarraitu
+  contract_match:
+    baddomainname: Zure domeinuko elementu batek edo gehiagok izen okerra dute.
+    baddomainsize: Kontratuak domeinuan elementu kopuru okerra du.
+    baddomaintype: Zure domeinuko elementu bat edo gehiago mota okerrekoak dira edo
+      ordena desegokian daude.
+    badname: Kontratuak okerreko izena du.
+    badname_case: Funtzio izenek letra larriak eta xeheak bereizten dituzte. Saiatu
+      kontratuaren izena aldatzen.
+    badrange: Kontratuak luzera okerra du.
+    wrong_title: Erantzun okerra
+  cookie_banner:
+    accept: Ados
+  copy: Kopiatu
+  course_offering:
+    headers:
+      minecraft: Minecraft
   courses: Mailak
   courses_page:
     title_student: Ezagutu Code Studio
-  unplugged_activity: Lineaz kanpoko ekintza
-  of: "-tik"
-  more: GEHIAGO
-  less: GUTXIAGO
-  try_hoc: 'Probatu kode ordu bat. Klikatu hemen >> '
-  try_k8intro: Probatu gure 2. DBHko Informatikarako Sarrera kurtsoa (15-25 ordu)
-  k8intro: 2. DBHko Informatikarako Sarrera kurtsoa (15-25 ordu)
-  already_started: 'Jadanik hasia? Jarraitu hemen >> '
-  demos: 'Kudeatzailea: erakustaldi guztiak'
-  continue: Jarraitu
-  prize: Saria
-  more_info: Informazio gehiago
-  auth:
-    sign_in_with: Sartu  %{provider}ekin
-    signed_in: Barruan zaude!
-    already_signedup: Dagoeneko izena eman duzu?
-    notyet_signedup: Ez zara batu oraindik?
-    google_oauth2: Google kontua
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Microsoft kontua
-    microsoft_v2_auth: Microsoft kontua
-    forgot_password: Pasahitza ahaztu duzu?
-    need_confirmation: Ez dituzu konfirmazio argibideak jaso?
-    need_unlock: Ez dituzu liberatzeko argibideak jaso?
-  signup_form:
-    student_count: "%{count} ikasleek izena eman dute."
-    teacher_count: "%{count} irakaslek izena eman dute."
-    teacher_educator_guide: Ikusi hezitzailearen gida
-    school_name: Ikastetxearen izena (aukerakoa)
-    school_address: Ikastetxearen helbidea (aukerakoa)
-    address_placeholder: Helbidea, hiria, herrialdea, posta kodea
-    gender: Generoa (aukerakoa)
-    birthday: Urtebetetzea (aukerakoa)
-    age: Adina
-    user_type: Ikaslea edo irakaslea zara?
-    submit: Eman izena
-    teacher: Irakaslea al zara?
-    valid_username: Erabilgarri!
-    invalid_username: Erabiltzailearen izenak gutxienez 5 karaktere izan behar ditu
-    taken_username: Erabiltzailearen izen hori hartuta dago jada
-    valid_password: Pasahitza zuzena!
-    invalid_password: Pasahitzak gutxienez 6 karaktere izan behar ditu
-    mismatch_password: Idatzitako bi pasahitzak ez dira berdinak
-    user_type_student: Ikaslea
-    user_type_teacher: Irakaslea
-    field_is_required: beharrezkoa da
-    email_preference_yes: Bai
-    email_preference_no: Ez
-    share_teacher_email_reg_partner_preference_yes: Bai
-    share_teacher_email_reg_partner_preference_no: Ez
-  school_info:
-    other: Beste bat
-  signin_form:
-    title: Kontua daukazu? Hasi saioa
-    login: E-posta
-    password: Pasahitza
-    remember: Kontua daukazu? Hasi saioa
-    submit: Hasi saioa
-  signin:
-    try_heading: Saioa hasi gabe kodetu nahi duzu?
-    try_hoc: Lehenik, probatu Kode Ordu bat
-    try_20hours: Probatu Informatikarako 20 orduko sarrera
-  signinsection:
-    welcome: Ongi etorri %{section_name}-ra
-    name: Aukeratu zure izena
-    picture: Orain bila ezazu zure irudi sekretua
-    words: Orain sar itzazu zure hitz sekretuak
-    login: Hasi saioa
-  password:
-    reset_form:
-      title: Pasahitza ahaztu duzu?
-      email: Email helbidea
-      submit: Bidali
-    change_form:
-      title: Aldatu zure pasahitza
-      new_password: Pasahitz berria
-      confirm_password: Baieztatu pasahitz berria
-      submit: Aldatu pasahitza
-  welcome_email:
-    subject: Nire klasean parte hartu (Code.org-n)
-    body: |
-      Klikatu beheko estekan Code.org-ko informatikako tutorialetan izena emateko (ni zure "irakaslea" izanda):
-
-      %{link}
-
-      Tutorialak dibertigarriak eta bisualki erakargarriak dira, eta jolas-antzeko esperientzia sinple eta gidatu batez informatikaren oinarrizko kontzeptuak irakasten dituzte. Ikasi programatzen Bill Gates, Mark Zuckerberg, Angry Birds eta Plants vs. Zombies-en eskutik! :-)
-
-      %{name}
-  section:
-    type:
-      word: Ezkutuko hitza
-      email: E-posta
-  follower:
-    invite_sent: Gonbidapena bidalita
-    added_teacher: "%{name} zure irakasle moduan gehituta"
-    registered: "%{section_name}-n izena eman duzu."
-    error:
-      signed_in: Mesedez, itxi saioa jarraitu aurretik
-      username_not_found: "%{username} erabiltzaile izena ez da topatzen"
-      username_in_use: "%{username} erabiltzaile izena existitzen da; mesedez, aukeratu
-        beste bat"
-      no_teacher: Ezin izan da '%{teacher_email_or_code}'rekin izen emandako inor
-        aurkitu. Mesedez, eska iezaiezu hemen izena emateko eta saiatu berriro gehitzen
-      section_not_found: Ez da aurkitu '%{section_code}' kodea duen atalik.
-      blank_code: Mesedez, sar ezazu atal kode bat
-      cant_join_own_section: Barkatu, baina ezin duzu parte hartu zuk sortutako atal
-        batean.
-    mail:
-      student_disassociated:
-        subject: 'Code.org abisua: %{student_name} dagoeneko ez da zure ikaslea.'
-  reports:
-    error:
-      access_denied: Ez daukazu pertsona honen estatistikak ikusteko baimena
   crud:
-    new_model: "%{model} berria"
-    show: Erakutsi
-    edit: Editatu
-    edit_model: Editatu %{model}
-    update: Eguneratu
-    submit: Bidali
-    destroy: Suntsitu
+    access_denied: Ez daukazu %{model} eredu honetarako baimenik.
     back: Atzera
     confirm: Ziur zaude?
     created: "%{model} ongi sortu da."
-    updated: "%{model} ongi eguneratu da."
+    destroy: Suntsitu
     destroyed: "%{model} ongi ezabatu da."
-    access_denied: Ez daukazu %{model} eredu honetarako baimenik.
-  nav:
-    header:
-      finished_hoc: Nire Kode Ordua bukatu dut
-      sign_in_to_save: Sartu aurrerapenak gordetzeko
-      course_catalog: Ikastaroak
-      project_gallery: Proiektuak
-      educate_hoc: Kode Ordua
-      stats: Estatistikak Ikusi
-      about: Code.org-i buruz
-      legal_privacy: Pribatutasun politika
-      legal_tos: Erabilera baldintzak
-    user:
-      classroom: Irakasleen sarrera orria
-      district_dashboard: Hezkuntza distritua
-      label: Kaixo %{username}
-      stats: Kode Estudioa
-      settings: Nire kontua
-      logout: Amaitu saioa
-      signin: Hasi saioa
-      already_registered: Dagoeneko izena emanda?
-      create: Sortu
-      algebra_game: Aljebra
-      applab: App laborategia
-      artist: Artista
-      bounce: Errebotea
-      calc: Kalk
-      eval: Ebal
-      flappy: Flappy
-      frozen: Frozen
-      gamelab: Jolas laborategia
-      gamelab_jr: Game Lab (beta)
-      gumball: Gumball
-      iceage: Izotz Aroa
-      infinity: Infinitu
-      minecraft_designer: Minecraft
-      playlab: Jolas Laborategia
-      starwars: Star Wars
-      loading: Kargatzen...
-      weblab: Web Lab
-    popup:
-      progress_for_user: "%{name}'ren aurrerapenak"
-      progress: Zure aurrerapena
-      close: ITXI
-      mastery: Kontzeptuak
-      puzzle_map: Mailak
-      prizes: Eskuratu %{total_trophies} garaikur guztiak eta sariak irabazi!
-      prize_earned: "%{total_trophies} garaikur guztiak lortuta. Saria irabazita!"
-      prize_us_only: "(AEB-ko ikasleak bakarrik)"
-      prizes_link: informazio gehiago
-  teacher:
-    answer: Erantzuna
-    dashboard: Irakaslearen arbela
-    for_teachers_only: Irakasleentzat soilik
-    title:
-      one: 'Zure irakaslea:'
-      other: 'Zure irakasleak:'
-    remove: "(irakaslea ezabatu)"
-    confirm:
-      remove: Ziur zaude irakasle hau ezabatu nahi duzula?
-    students:
-      dashboard: Joan irakaslearen mahaigainera
-    user_not_found: Irakaslea ezin izan da aurkitu.
-    student_teacher_disassociated: "%{teacher_name} zure irakasleetatik ezabatu duzu."
-    panel:
-      answer_viewer: Irakaslearen Arbela
-      student: Ikaslea
-      viewing_solution: Ikusi emaitza
-      try_it_yourself: Probatu zuk zeuk
-      section: Atala
-      example: Emaitza adibidea
-      example_with_number: Emaitza adibidea %{solution_number}
-      submitted_on: "%{date}-n bidalia"
-      unsubmit: Bidalketa ezeztatu
-  user:
-    email_confirm_needed: 'Email helbidea ez da baieztatu:'
-    email_confirm_needed_required: "%{email} zure emaila ez da baieztatu:"
-    email_confirm_wrong_email: "(Email helbide okerra?)"
-    email_resend_confirm: Baieztatzeko jarraibideak birbidali
-    new_password_hint: "(ez baduzu aldatu nahi, bete gabe utzi)"
-    current_password_hint: "(zure egungo pasahitza behar dugu aldaketak baieztatzeko)"
-    delete: Zure kontua ezabatu
-    delete_text: Beheko botoia klikatuz gero zure kontua ezabatuko da.
-    delete_text_teacher_note: 'Mesedez kontutan izan: zure kontua ezabatzeak ez ditu
-      zure ikasleen kontuak ezabatuko.'
-    delete_confirm: Ziur zaude zure kontua ezabatu nahi duzula?
-    update_email: Eguneratu
-    parent_guardian_email_label: Guraso/tutore emaila
-    remove_parent_email_label: Kendu
-  user_level:
-    completed: Amaituta
-    tried: Saiatua
-  home:
-    title: Kode Estudioa
-    all_courses: 1., 2. eta 3. Kurtsoen laburpena
-    lesson_plans: Ikasketa plana
-    signin_message: Jadanik erregistratuta? %{link}
-    student_reg_link: Ikaslearen izen ematea
-    teacher_reg_link: Irakasleen izen ematea
-    signin_directions: Erabili kontu bat aurrerapenen jarraipena egiteko.<br/> Irakasleok,
-      egin klase osoaren jarraipena.
-    teacher_dashboard: Ikusi aurrerapen panela
-    teacher_student_count_one: Ikasle %{count} duzu.
-    teacher_student_count: "%{count} ikasle dituzu."
-    teacher_averages: Batezbeste, zure ikasleek "kontzeptuen menperatze" %{trophy_max}
-      garaikurretatik %{trophy_average} irabazi dituzte.
-    teacher_print_certificates: Inprimatu ikastaro hau bukatu duten ikasleen ziurtagiriak
-    teacher_read_blog: Irakurri berriak eta gure materialaren eguneraketak Hezitzaileen
-      Blogean
-    classroom: Zure ikasgela
-    student_progress: Zure ikaskuntza aurrerapena
-    student_stats: '"Kontzeptuen menperatze" %{trophy_max} garaikurretatik %{trophy_count}
-      irabazi dituzu.'
-    student_left_off: 'Non utzi zenuen:'
-    student_finished: Code.org tutorial guztiak amaitu dituzu. Aukeratu beste ikasgela
-      bat %{online_link} edo %{local_school_link}.
-    local_school: bertako eskola
-    online: online
-    see_details: Ikusi xehetasunak
-    view_course: Ikusi ikastaroa
-    prize_info: 'Parte hartzeagatik sariak (soilik Estatu Batuetako eskola publikoetako
-      irakasleak): 1000$ arteko ikasgelarako ordainsariak.'
-    tryfirst: 'Edo lehenenik probatu, eta ondoren izena eman dezakezu:'
-    trynow: Saiatu orain
-    add_hint_help: Mesedez, lagun gaitzazu iradokizun erabilgarriak gehitzen Code.org
-      tutorialetan
-    20hour_overview: 20 orduko ikastaro honek informatikaren eta programazioaren oinarrizko
-      kontzeptuak aurkezten ditu. Ikastaroa DBH2ko ikasleentzat prestatuta dago, baina
-      edozein adinetan ikasteko dibertigarria da.
-    test_videos_help: Probatu gure bideo irakurgailu berria zure eskolan
-    try_beta_courses: Berria! proba itzazu LH5 ikasleentzako beta ikastaroak
-    use_as_teacher: Erabili gune hau irakasle gisa
-    your_gallery: Galeria
-    no_primary_course: Probatu Code Studioko ikastaro bat
-    choose_next_course: Probatu Code Studioko ikastaro bat hauetako bat aukeratuta
-    print_certificate: Inprimatu ziurtagiria
-  certificate_hour_of_code: Kode Ordua
-  share:
-    title: Ezagutu Code Studio
-    description: Edonork ikas dezake informatika. Jokoak, aplikazioak eta artea sortu
-      programazioaren bidez.
-    try_hour_of_code: Saiatu Kode Ordu bat!
-  gender:
-    male: Gizona
-    female: Emakumea
-    none: Nahiago dut ez erantzun
-  user_type:
-    student: Ikaslea
-    teacher: Irakaslea
+    edit: Editatu
+    edit_model: Editatu %{model}
+    new_model: "%{model} berria"
+    show: Erakutsi
+    submit: Bidali
+    update: Eguneratu
+    updated: "%{model} ongi eguneratu da."
+  demos: 'Kudeatzailea: erakustaldi guztiak'
+  dialog:
+    ok: Ongi
+    startover_body: Honek ariketa hasierako egoeran berrezarriko du eta gehitu edo
+      aldatu dituzun datu guztiak berrasieratuko ditu.
+    startover_cancel: Ezeztatu
+    startover_ok: Hasi Berriro
+    startover_title: Ziur al zaude berriro hasi nahi duzula?
+  download_coming_soon: Jarduera deskargagarria aurki.
+  download_pdf: Ireki ikasgaiaren plana
+  errors:
+    messages:
+      not_saved: 'Zuzendu hurrengo akatsak mesedez:'
+      teacher_must_accept_terms: Eduki honek adin-murrizketak ditu eta ez da ikasle
+        gazteagoentzat erabilgarri. Eska iezaiozu zure irakasleari onartzeko Zerbitzuaren
+        Zehaztapen eguneratuak eduki honetarako sarrera zuri emateko. Zure irakasleak
+        hori egin dezake Code Studioan sartuz eta orri nagusiaren goialdetik hurbil
+        dagoen "Review updated terms" botoian klik eginez.
+      too_young: Eduki honek adin murriztapenak ditu eta ikasle gazteenentzat ez dago
+        eskuragarri.
+  follower:
+    added_teacher: "%{name} zure irakasle moduan gehituta"
+    error:
+      blank_code: Mesedez, sar ezazu atal kode bat
+      cant_join_own_section: Barkatu, baina ezin duzu parte hartu zuk sortutako atal
+        batean.
+      no_teacher: Ezin izan da '%{teacher_email_or_code}'rekin izen emandako inor
+        aurkitu. Mesedez, eska iezaiezu hemen izena emateko eta saiatu berriro gehitzen
+      section_not_found: Ez da aurkitu '%{section_code}' kodea duen atalik.
+      signed_in: Mesedez, itxi saioa jarraitu aurretik
+      username_in_use: "%{username} erabiltzaile izena existitzen da; mesedez, aukeratu
+        beste bat"
+      username_not_found: "%{username} erabiltzaile izena ez da topatzen"
+    invite_sent: Gonbidapena bidalita
+    mail:
+      student_disassociated:
+        subject: 'Code.org abisua: %{student_name} dagoeneko ez da zure ikaslea.'
+    registered: "%{section_name}-n izena eman duzu."
   footer:
-    thank_you: Eskerrak eman gure <a href="https://code.org/about/donors">emaileei</a>,
-      <a href="https://code.org/about/partners">kideei</a>, gure <a href="https://code.org/about/team">talde
-      zabalari</a>, gure bideo zerrendari, eta gure <a href="https://code.org/about/advisors">hezkuntza
-      aholkulariei</a> Code Studio sortzen emandako babesagatik.
-    help_from_html: Bereziki eskertu nahi diegu Google, Microsoft, Facebook, eta Twitter-eko
-      ingeniariei, eta material hauek sortzen lagundu duten guztiei.
-    help_from_html_old: Google, Microsoft, Facebook eta Twitterreko ingeniariek material
-      hau sortzen lagundu dute.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Eskubide guztiak
       erreserbatuta.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
       Eskubide guztiak erreserbatuta.<br />Frozen&#8482; &copy; %{current_year} Disney.
@@ -358,183 +150,487 @@ eu:
       &copy; %{current_year} Electronic Arts Inc. Eskubide guztiak erreserbatuta.
       The Amazing World of Gumball marka erregistratua da eta &copy; 2015 Cartoon
       Network.
+    built_on_code_studio: Code Studio-n eraikia
+    copyright: Egile-eskubideak
+    feedback: Bidali iruzkina
+    help_from_html: Bereziki eskertu nahi diegu Google, Microsoft, Facebook, eta Twitter-eko
+      ingeniariei, eta material hauek sortzen lagundu duten guztiei.
+    help_from_html_old: Google, Microsoft, Facebook eta Twitterreko ingeniariek material
+      hau sortzen lagundu dute.
+    how_it_works: Funtzionamendua
+    make_my_own_app: Nire app-a egin
+    more: Gehiago
     powered_by_aws: Amazon Web Servicesek sostengatua
+    privacy: Pribatutasun politika
+    report_abuse: Erabilera okerra jakinarazi
+    secure: Bertsio segurua
+    support: Laguntza
+    thank_you: Eskerrak eman gure <a href="https://code.org/about/donors">emaileei</a>,
+      <a href="https://code.org/about/partners">kideei</a>, gure <a href="https://code.org/about/team">talde
+      zabalari</a>, gure bideo zerrendari, eta gure <a href="https://code.org/about/advisors">hezkuntza
+      aholkulariei</a> Code Studio sortzen emandako babesagatik.
+    tos: Erabilera baldintzak
+    tos_short: Baldintzak
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg; CODE logoa eta Kode
       Ordua&reg; Code.org-ren marka bereziak dira."
-    copyright: Egile-eskubideak
-    more: Gehiago
-    feedback: Bidali iruzkina
     translate: Lagun gaitzazu zure hizkuntzara itzultzen
-    support: Laguntza
-    tos_short: Baldintzak
-    tos: Erabilera baldintzak
-    privacy: Pribatutasun politika
-    secure: Bertsio segurua
-    report_abuse: Erabilera okerra jakinarazi
-    built_on_code_studio: Code Studio-n eraikia
-    make_my_own_app: Nire app-a egin
-    how_it_works: Funtzionamendua
     try_hour_of_code: Saiatu Kode Ordu bat!
+  free_response:
+    placeholder: Idatzi hemen zure erantzuna
+  gender:
+    female: Emakumea
+    male: Gizona
+    none: Nahiago dut ez erantzun
+  hello: Kaixo, mundua
+  hoc_download:
+    minecraft_name: Minecraft Kode Ordua
+  home:
+    20hour_overview: 20 orduko ikastaro honek informatikaren eta programazioaren oinarrizko
+      kontzeptuak aurkezten ditu. Ikastaroa DBH2ko ikasleentzat prestatuta dago, baina
+      edozein adinetan ikasteko dibertigarria da.
+    add_hint_help: Mesedez, lagun gaitzazu iradokizun erabilgarriak gehitzen Code.org
+      tutorialetan
+    all_courses: 1., 2. eta 3. Kurtsoen laburpena
+    choose_next_course: Probatu Code Studioko ikastaro bat hauetako bat aukeratuta
+    classroom: Zure ikasgela
+    lesson_plans: Ikasketa plana
+    local_school: bertako eskola
+    no_primary_course: Probatu Code Studioko ikastaro bat
+    online: online
+    print_certificate: Inprimatu ziurtagiria
+    prize_info: 'Parte hartzeagatik sariak (soilik Estatu Batuetako eskola publikoetako
+      irakasleak): 1000$ arteko ikasgelarako ordainsariak.'
+    see_details: Ikusi xehetasunak
+    signin_directions: Erabili kontu bat aurrerapenen jarraipena egiteko.<br/> Irakasleok,
+      egin klase osoaren jarraipena.
+    signin_message: Jadanik erregistratuta? %{link}
+    student_finished: Code.org tutorial guztiak amaitu dituzu. Aukeratu beste ikasgela
+      bat %{online_link} edo %{local_school_link}.
+    student_left_off: 'Non utzi zenuen:'
+    student_progress: Zure ikaskuntza aurrerapena
+    student_reg_link: Ikaslearen izen ematea
+    student_stats: '"Kontzeptuen menperatze" %{trophy_max} garaikurretatik %{trophy_count}
+      irabazi dituzu.'
+    teacher_averages: Batezbeste, zure ikasleek "kontzeptuen menperatze" %{trophy_max}
+      garaikurretatik %{trophy_average} irabazi dituzte.
+    teacher_dashboard: Ikusi aurrerapen panela
+    teacher_print_certificates: Inprimatu ikastaro hau bukatu duten ikasleen ziurtagiriak
+    teacher_read_blog: Irakurri berriak eta gure materialaren eguneraketak Hezitzaileen
+      Blogean
+    teacher_reg_link: Irakasleen izen ematea
+    teacher_student_count: "%{count} ikasle dituzu."
+    teacher_student_count_one: Ikasle %{count} duzu.
+    test_videos_help: Probatu gure bideo irakurgailu berria zure eskolan
+    title: Kode Estudioa
+    try_beta_courses: Berria! proba itzazu LH5 ikasleentzako beta ikastaroak
+    tryfirst: 'Edo lehenenik probatu, eta ondoren izena eman dezakezu:'
+    trynow: Saiatu orain
+    use_as_teacher: Erabili gune hau irakasle gisa
+    view_course: Ikusi ikastaroa
+    your_gallery: Galeria
+  join_section:
+    code:
+      placeholder: Atal Kodea (ABCDEF)
+  k8intro: 2. DBHko Informatikarako Sarrera kurtsoa (15-25 ordu)
+  landing:
+    report_bug: Akatsa jakinarazi
+    support: Lortu laguntza
+  less: GUTXIAGO
+  lesson_plan: Ikasgaiaren plana
+  level_group:
+    correct_title: Mila esker
+    wrong_title: Mila esker
+  level_group-submittable:
+    correct_title: Mila esker
+    wrong_title: Mila esker
+  match:
+    correct_body: Erantzun zuzena.
+    correct_title: Zuzena
+    wrong_body: Soluzioa ez da zuzena. Saiatu berriro!
+    wrong_title: Soluzio okerra
+  more: GEHIAGO
+  more_info: Informazio gehiago
+  multi:
+    correct_body: Erantzun zuzena.
+    correct_title: Zuzena
+    wrong_body: Erantzuna ez da zuzena. Saiatu berriro!
+    wrong_title: Erantzun okerra
+  multi-submittable:
+    correct_title: Mila esker
+    wrong_title: Mila esker
+  nav:
+    header:
+      about: Code.org-i buruz
+      course_catalog: Ikastaroak
+      educate_hoc: Kode Ordua
+      finished_hoc: Nire Kode Ordua bukatu dut
+      legal_privacy: Pribatutasun politika
+      legal_tos: Erabilera baldintzak
+      project_gallery: Proiektuak
+      sign_in_to_save: Sartu aurrerapenak gordetzeko
+      stats: Estatistikak Ikusi
+    popup:
+      close: ITXI
+      mastery: Kontzeptuak
+      prize_earned: "%{total_trophies} garaikur guztiak lortuta. Saria irabazita!"
+      prize_us_only: "(AEB-ko ikasleak bakarrik)"
+      prizes: Eskuratu %{total_trophies} garaikur guztiak eta sariak irabazi!
+      prizes_link: informazio gehiago
+      progress: Zure aurrerapena
+      progress_for_user: "%{name}'ren aurrerapenak"
+      puzzle_map: Mailak
+    user:
+      algebra_game: Aljebra
+      already_registered: Dagoeneko izena emanda?
+      applab: App laborategia
+      artist: Artista
+      bounce: Errebotea
+      calc: Kalk
+      classroom: Irakasleen sarrera orria
+      create: Sortu
+      district_dashboard: Hezkuntza distritua
+      eval: Ebal
+      flappy: Flappy
+      frozen: Frozen
+      gamelab: Jolas laborategia
+      gamelab_jr: Game Lab (beta)
+      gumball: Gumball
+      iceage: Izotz Aroa
+      infinity: Infinitu
+      label: Kaixo %{username}
+      loading: Kargatzen...
+      logout: Amaitu saioa
+      minecraft_designer: Minecraft
+      playlab: Jolas Laborategia
+      settings: Nire kontua
+      signin: Hasi saioa
+      starwars: Star Wars
+      stats: Kode Estudioa
+      weblab: Web Lab
+  next_page: Hurrengo orria
+  next_stage: Amaituta! Jarraitu hurrengo atalera
+  of: "-tik"
+  okay: Ongi da
+  or: edo
+  password:
+    change_form:
+      confirm_password: Baieztatu pasahitz berria
+      new_password: Pasahitz berria
+      submit: Aldatu pasahitza
+      title: Aldatu zure pasahitza
+    reset_form:
+      email: Email helbidea
+      submit: Bidali
+      title: Pasahitza ahaztu duzu?
+  pd:
+    form_entries:
+      email_opt_in:
+        opt_in_no: Ez
+        opt_in_yes: Bai
+      gender:
+        female: Emakumea
+        male: Gizona
+        none: Nahiago dut ez erantzun
+      resources:
+        kodable: Kodable
+        lightbot: Argibot
+        other: Beste bat
+      robotics:
+        kodable: Kodable
+        other: Beste bat
+      subjects:
+        cs: Informatika
+        la: Hizkuntzalaritza
+        math: Matematika
+        other: Beste bat
+        science: Zientzia
+      workshop_course:
+        other: Beste bat
+    form_labels:
+      email: E-posta
+  pdf_download: Jaitsi PDFa
+  pixelation:
+    binary: Bitarra
+  previous_page: Aurreko orrialdea
+  prize: Saria
+  progress:
+    assessment: ebaluazioa
+    completed_perfect: burutua, bikain
+    completed_too_many_blocks: burutua, baina bloke gehiegi daude
+    furthest_level_attempted: saiatutako maila altuena
+    in_progress: bidean
+    not_started: hasi gabe
+  project:
+    abuse:
+      contact_us: Hau errorea dela uste baduzu, mesedez <a href='https://code.org/contact'>jarri
+        harremanetan gurekin.</a>
+      go_to_code_studio: Joan Code Sudio-ra
+      report_abuse_form:
+        abuse_type:
+          harassment: Mehatxuak, cyberbulling-a, jazarpena
+          infringement: Copyright-a urratu
+          offensive: Eduki iraingarria
+          other: Beste bat
+          question: Nola hausten ditu eduki honek %{link_start}Zerbitzuaren Baldintzak%{link_end}?
+        abusive_url: Salatzen ari den edukiaren URLa
+        acknowledge: Informazio hau bidaliz, %{link_start_privacy}Pibatutasun Politika%{link_end}
+          eta %{link_start_tos}Zerbitzuaren Baldintzak%{link_end} adierazitako terminoetan
+          erabiliko dela onartzen duzu
+        detail: Mesedez, salatzen ari zaren edukiaren inguruko ahalik eta xehetasun
+          gehien eman.
+        intro: Code Studio-z egindako app-ak erabiliz, eduki iraingarriak, mehatxuak,
+          cyberbulling-a, jazarpenak edo zure jabegoko edukiaren copyrighta hausten
+          duen zerbait aurkitu baduzu, mesedez bete beheko fitxa. Zure txostena oso
+          serio hartuko dugu, ikertu eta beharrezko neurriak hartuko ditugu.
+        validation:
+          abuse_detail: Mesedez, zehaztu salatzen ari zaren edukia
+          abuse_type: Mesedez, adierazi nola hausten dituen eduki honek Zerbitzuaren
+            Baldintzak
+          age: Mesedez, zehaztu adina
+          email: Mesedez, sartu email helbide bat
+      tos: Proiektu honek Code.org-en <a href='http://code.org/tos'>Zerbitzuaren Baldintzak</a>
+        hautsi ditu eta ezin da konpartitu.
+    create: Sortu proiektua
+    create_a_project: 'Sortu proiektu berria:'
+    edit_project: Editatu Proiektua
+    exit: Itzuli kurtsora
+    help_text: Egin klik behean <strong>Egin app bat</strong> edo <strong>Marraztu
+      zerbait</strong>-en, Artista edo Jolas Laborategiko proiektu berri bat egiteko!<br/>Zure
+      proiektuetara itzuli ahal izango zara edozein unetan.
+    name: Izena
+    need_help: Hasteko laguntzarik behar?
+    new: Berria sortu
+    not_saved: Gorde gabe
+    project_gallery: Proiektuak
+    project_type: Proiektu mota
+    projects: Proiektuak
+    saved: Gordeta
+    share_copy_link: 'Esteka kopiatu:'
+    share_title: Partekatu zure proiektuak
+    updated: Eguneratua
+    view_all: Ikusi Nire Proiektuak
+  puzzle: Ariketa
+  race_interstitial:
+    decline: Itxi
+    races:
+      other: Beste bat
+    submit: Bidali
   reference_area:
-    title: Laguntzarik behar?
+    auth_error: Ez zaude soluzioa ikusteko baimenduta.
+    direction: Hasierako norabidea (gradutan)
+    submit: Artistaren kokapena eguneratu
     subtitle: Ikusi bideo eta aholku hauek
     teacher: Ikusi soluzioa
-    auth_error: Ez zaude soluzioa ikusteko baimenduta.
-    submit: Artistaren kokapena eguneratu
-    direction: Hasierako norabidea (gradutan)
-  video:
-    tab: Bideoa.
-    notes: Bideorik ez? Erakutsi oharrak.
-    notes_coming_soon: Bideo honen oharrak laser eskuragarri.
-    autoplay_option: Erreproduzitu bideoak automatikoki
-    download: Bideoa jaitsi
-  compatibility:
-    upgrade:
-      link: Ikasi gehiago
-  slow_loading: Normalean baino denbora gehiago behar izaten ari da...
-  try_reloading: Saiatu webgunea eguneratzen
-  next_stage: Amaituta! Jarraitu hurrengo atalera
-  download_pdf: Ireki ikasgaiaren plana
-  lesson_plan: Ikasgaiaren plana
-  view_lesson_plan: Ikus ikasgaiaren plana
-  pdf_download: Jaitsi PDFa
-  download_coming_soon: Jarduera deskargagarria aurki.
-  video_coming_soon: Bideoa laster!
+    title: Laguntzarik behar?
+  reports:
+    error:
+      access_denied: Ez daukazu pertsona honen estatistikak ikusteko baimena
+  school_info:
+    other: Beste bat
+  school_info_interstitial:
+    save: Gorde
+  section:
+    type:
+      email: E-posta
+      word: Ezkutuko hitza
+  share:
+    description: Edonork ikas dezake informatika. Jokoak, aplikazioak eta artea sortu
+      programazioaren bidez.
+    title: Ezagutu Code Studio
+    try_hour_of_code: Saiatu Kode Ordu bat!
   share_code:
-    title: Sakatu "Hasi" nire programa martxan ikusteko
+    address_not_allowed: Helbide bat dagoela dirudi. Saia zaitez testua aldatzen.
     bounce_og_title: Berrikusi nire errebote jokoa
-    flappy_og_title: Berrikusi nire Flappy Bird jokoa
-    studio_og_title: Berrikusi nire Jolas Laborategia aplikazioa
     check_out_what_i_made: Ikusi egin dudana
+    email_not_allowed: Email bat dagoela dirudi. Saia zaitez testua aldatzen.
+    flappy_og_title: Berrikusi nire Flappy Bird jokoa
     og_description: Kodea nik idatzi dut Code.org bidez
     phone_number_not_allowed: Telefono zenbaki bat dagoela dirudi. Saia zaitez testua
       aldatzen.
-    address_not_allowed: Helbide bat dagoela dirudi. Saia zaitez testua aldatzen.
-    email_not_allowed: Email bat dagoela dirudi. Saia zaitez testua aldatzen.
     profanity_not_allowed: Birao bat dagoela dirudi. Saia zaitez testua aldatzen.
-  builder:
-    created: Script berri bat sortu duzu.
-    destroyed: Script bat ezabatu duzu.
-    manage: Mailak eraiki
-    view: Ikusi
-    back: Script-etara itzuli
-    success: Blokeak arrakastaz editatu dituzu.
-    level:
-      create: Maila berria sortu
-      current: Uneko mailak
-      unused: Erabili gabeko mailak
+    studio_og_title: Berrikusi nire Jolas Laborategia aplikazioa
+    title: Sakatu "Hasi" nire programa martxan ikusteko
+  signin:
+    try_20hours: Probatu Informatikarako 20 orduko sarrera
+    try_heading: Saioa hasi gabe kodetu nahi duzu?
+    try_hoc: Lehenik, probatu Kode Ordu bat
+  signin_form:
+    login: E-posta
+    password: Pasahitza
+    remember: Kontua daukazu? Hasi saioa
+    submit: Hasi saioa
+    title: Kontua daukazu? Hasi saioa
+  signinsection:
+    login: Hasi saioa
+    name: Aukeratu zure izena
+    picture: Orain bila ezazu zure irudi sekretua
+    welcome: Ongi etorri %{section_name}-ra
+    words: Orain sar itzazu zure hitz sekretuak
+  signup_form:
+    address_placeholder: Helbidea, hiria, herrialdea, posta kodea
+    age: Adina
+    birthday: Urtebetetzea (aukerakoa)
+    email_preference_no: Ez
+    email_preference_yes: Bai
+    field_is_required: beharrezkoa da
+    gender: Generoa (aukerakoa)
+    invalid_password: Pasahitzak gutxienez 6 karaktere izan behar ditu
+    invalid_username: Erabiltzailearen izenak gutxienez 5 karaktere izan behar ditu
+    mismatch_password: Idatzitako bi pasahitzak ez dira berdinak
+    school_address: Ikastetxearen helbidea (aukerakoa)
+    school_name: Ikastetxearen izena (aukerakoa)
+    share_teacher_email_reg_partner_preference_no: Ez
+    share_teacher_email_reg_partner_preference_yes: Bai
+    student_count: "%{count} ikasleek izena eman dute."
+    submit: Eman izena
+    taken_username: Erabiltzailearen izen hori hartuta dago jada
+    teacher: Irakaslea al zara?
+    teacher_count: "%{count} irakaslek izena eman dute."
+    teacher_educator_guide: Ikusi hezitzailearen gida
+    user_type: Ikaslea edo irakaslea zara?
+    user_type_student: Ikaslea
+    user_type_teacher: Irakaslea
+    valid_password: Pasahitza zuzena!
+    valid_username: Erabilgarri!
+  slow_loading: Normalean baino denbora gehiago behar izaten ari da...
+  stage: Maila
+  stage_number: Maila %{number}
+  studio:
+    all_courses: Kurtso guztiak
+    completed_courses: Bukatutako kurtsoak
+    courses_working_on: Parte hartzen ari zaren kurtsoak
+  submit: Bidali
+  teacher:
+    answer: Erantzuna
+    confirm:
+      remove: Ziur zaude irakasle hau ezabatu nahi duzula?
+    dashboard: Irakaslearen arbela
+    for_teachers_only: Irakasleentzat soilik
+    panel:
+      answer_viewer: Irakaslearen Arbela
+      example: Emaitza adibidea
+      example_with_number: Emaitza adibidea %{solution_number}
+      section: Atala
+      student: Ikaslea
+      submitted_on: "%{date}-n bidalia"
+      try_it_yourself: Probatu zuk zeuk
+      unsubmit: Bidalketa ezeztatu
+      viewing_solution: Ikusi emaitza
+    remove: "(irakaslea ezabatu)"
+    student_teacher_disassociated: "%{teacher_name} zure irakasleetatik ezabatu duzu."
+    students:
+      dashboard: Joan irakaslearen mahaigainera
+    title:
+      one: 'Zure irakaslea:'
+      other: 'Zure irakasleak:'
+    user_not_found: Irakaslea ezin izan da aurkitu.
+  terms_interstitial:
+    print: Inprimatu
+    privacy: Pribatutasun politika
+    tos: Erabilera baldintzak
+  text_match:
+    correct_body: Erantzun zuzena.
+    correct_title: Zuzena
+    open_response_body: Eskerrik asko zure erantzunagatik!
+    open_response_title: Eskerrik asko
+    placeholder: Idatzi hemen zure erantzuna
+  time:
+    day: eguna
+    hour: Ordu bat
+    week: astea
+  trophies: garaikurrak
+  try_hoc: 'Probatu kode ordu bat. Klikatu hemen >> '
+  try_k8intro: Probatu gure 2. DBHko Informatikarako Sarrera kurtsoa (15-25 ordu)
+  try_reloading: Saiatu webgunea eguneratzen
+  unplugged_activity: Lineaz kanpoko ekintza
+  unsubmit: Bidalketa ezeztatu
   upsell:
-    applab:
-      title: App laborategia
-    aquatic:
-      title: Minecraft
-    flappy:
-      title: Flappy Code
-      body: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan? Saiatu Flappy
-        Code tutoriala!
-    frozen:
-      title: Frozen
-    gallery:
-      title: Galeria
-      body: Begira ezazu gure erabiltzaileek sortutako app eta irudi artistikoen bilduma
-        bat
-    gamelab:
-      title: Jolas laborategia
-    hero:
-      title: Minecraft
-    hoc:
-      title: Labirinto klasikoa
-      body: Oinarrizko informatikarekin saiatu. Miliokak egin du proba.
-    hoc2014:
-      try_new_tutorial: Probatu gure Kode Ordu berria beta bertsioan
-      try_frozen: Artista Frozeneko Anna eta Elsarekin
-    infinity:
-      title: Infinity Jolas Laborategia
-      body: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak
-        sortzeko
-    minecraft:
-      title: Minecraft
-      body: Esploratu Minecraft mundu bat kodearen bitartez.
-    minecraft2016:
-      title: Minecraft
-    starwars:
-      title: Star Wars
-    widgets:
-      audience: 14 urtetik aurrera
-    unplugged_conditionals:
-      title: Baldintzak
     20-hour:
-      title: Ikastaro Azeleratua
       body: |-
         20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.
         Gehiago ikasteko ikusi maila bereko gure ikastaroak!
       body_short: Oinarrizko informatika ikasi 2-4 ikastaroen bertsio azeleratuen
         bidez.
-  landing:
-    report_bug: Akatsa jakinarazi
-    support: Lortu laguntza
-  free_response:
-    placeholder: Idatzi hemen zure erantzuna
-  multi:
-    wrong_title: Erantzun okerra
-    wrong_body: Erantzuna ez da zuzena. Saiatu berriro!
-    correct_title: Zuzena
-    correct_body: Erantzun zuzena.
-  multi-submittable:
-    wrong_title: Mila esker
-    correct_title: Mila esker
-  level_group:
-    wrong_title: Mila esker
-    correct_title: Mila esker
-  level_group-submittable:
-    wrong_title: Mila esker
-    correct_title: Mila esker
-  match:
-    wrong_title: Soluzio okerra
-    wrong_body: Soluzioa ez da zuzena. Saiatu berriro!
-    correct_title: Zuzena
-    correct_body: Erantzun zuzena.
-  contract_match:
-    wrong_title: Erantzun okerra
-    badname: Kontratuak okerreko izena du.
-    badname_case: Funtzio izenek letra larriak eta xeheak bereizten dituzte. Saiatu
-      kontratuaren izena aldatzen.
-    badrange: Kontratuak luzera okerra du.
-    baddomainsize: Kontratuak domeinuan elementu kopuru okerra du.
-    baddomainname: Zure domeinuko elementu batek edo gehiagok izen okerra dute.
-    baddomaintype: Zure domeinuko elementu bat edo gehiago mota okerrekoak dira edo
-      ordena desegokian daude.
-  text_match:
-    placeholder: Idatzi hemen zure erantzuna
-    open_response_title: Eskerrik asko
-    open_response_body: Eskerrik asko zure erantzunagatik!
-    correct_title: Zuzena
-    correct_body: Erantzun zuzena.
-  dialog:
-    ok: Ongi
-    startover_title: Ziur al zaude berriro hasi nahi duzula?
-    startover_body: Honek ariketa hasierako egoeran berrezarriko du eta gehitu edo
-      aldatu dituzun datu guztiak berrasieratuko ditu.
-    startover_ok: Hasi Berriro
-    startover_cancel: Ezeztatu
-  time:
-    hour: Ordu bat
-    day: eguna
-    week: astea
-  age_interstitial:
-    age: Zure adina
-    header: Kontuaren Informazioa Eguneratu
-  terms_interstitial:
-    tos: Erabilera baldintzak
-    privacy: Pribatutasun politika
-    print: Inprimatu
-  school_info_interstitial:
-    save: Gorde
-  race_interstitial:
-    races:
-      other: Beste bat
-    submit: Bidali
-    decline: Itxi
+      title: Ikastaro Azeleratua
+    applab:
+      title: App laborategia
+    aquatic:
+      title: Minecraft
+    flappy:
+      body: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan? Saiatu Flappy
+        Code tutoriala!
+      title: Flappy Code
+    frozen:
+      title: Frozen
+    gallery:
+      body: Begira ezazu gure erabiltzaileek sortutako app eta irudi artistikoen bilduma
+        bat
+      title: Galeria
+    gamelab:
+      title: Jolas laborategia
+    hero:
+      title: Minecraft
+    hoc:
+      body: Oinarrizko informatikarekin saiatu. Miliokak egin du proba.
+      title: Labirinto klasikoa
+    hoc2014:
+      try_frozen: Artista Frozeneko Anna eta Elsarekin
+      try_new_tutorial: Probatu gure Kode Ordu berria beta bertsioan
+    infinity:
+      body: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak
+        sortzeko
+      title: Infinity Jolas Laborategia
+    minecraft:
+      body: Esploratu Minecraft mundu bat kodearen bitartez.
+      title: Minecraft
+    minecraft2016:
+      title: Minecraft
+    starwars:
+      title: Star Wars
+    unplugged_conditionals:
+      title: Baldintzak
+    widgets:
+      audience: 14 urtetik aurrera
+  user:
+    current_password_hint: "(zure egungo pasahitza behar dugu aldaketak baieztatzeko)"
+    delete: Zure kontua ezabatu
+    delete_confirm: Ziur zaude zure kontua ezabatu nahi duzula?
+    delete_text: Beheko botoia klikatuz gero zure kontua ezabatuko da.
+    delete_text_teacher_note: 'Mesedez kontutan izan: zure kontua ezabatzeak ez ditu
+      zure ikasleen kontuak ezabatuko.'
+    email_confirm_needed: 'Email helbidea ez da baieztatu:'
+    email_confirm_needed_required: "%{email} zure emaila ez da baieztatu:"
+    email_confirm_wrong_email: "(Email helbide okerra?)"
+    email_resend_confirm: Baieztatzeko jarraibideak birbidali
+    new_password_hint: "(ez baduzu aldatu nahi, bete gabe utzi)"
+    parent_guardian_email_label: Guraso/tutore emaila
+    remove_parent_email_label: Kendu
+    update_email: Eguneratu
+  user_level:
+    completed: Amaituta
+    tried: Saiatua
+  user_type:
+    student: Ikaslea
+    teacher: Irakaslea
+  video:
+    autoplay_option: Erreproduzitu bideoak automatikoki
+    download: Bideoa jaitsi
+    notes: Bideorik ez? Erakutsi oharrak.
+    notes_coming_soon: Bideo honen oharrak laser eskuragarri.
+    tab: Bideoa.
+  video_coming_soon: Bideoa laster!
+  view_lesson_plan: Ikus ikasgaiaren plana
+  welcome_back: Ongi etorria berriro, %{name}
+  welcome_email:
+    body: |
+      Klikatu beheko estekan Code.org-ko informatikako tutorialetan izena emateko (ni zure "irakaslea" izanda):
+
+      %{link}
+
+      Tutorialak dibertigarriak eta bisualki erakargarriak dira, eta jolas-antzeko esperientzia sinple eta gidatu batez informatikaren oinarrizko kontzeptuak irakasten dituzte. Ikasi programatzen Bill Gates, Mark Zuckerberg, Angry Birds eta Plants vs. Zombies-en eskutik! :-)
+
+      %{name}
+    subject: Nire klasean parte hartu (Code.org-n)
   zendesk_too_young_message: Barka, erabiltzaile gaztetxoak ezin dira konektatu jarraitzaileen
     lekura. <a href="http://support.code.org">support.code.org</a> webgunean nabigatu
     dezakezu konektatu gabe edo zure guraso zein irakasleari esan gurekin harremanetan
@@ -543,97 +639,3 @@ eu:
     jarraitzaileen lekura. [support.code.org](http://support.code.org) webgunean nabigatu
     dezakezu konektatu gabe edo zure guraso zein irakasleari esan gurekin harremanetan
     jartzeko.
-  progress:
-    not_started: hasi gabe
-    in_progress: bidean
-    completed_too_many_blocks: burutua, baina bloke gehiegi daude
-    completed_perfect: burutua, bikain
-    furthest_level_attempted: saiatutako maila altuena
-    assessment: ebaluazioa
-  studio:
-    courses_working_on: Parte hartzen ari zaren kurtsoak
-    completed_courses: Bukatutako kurtsoak
-    all_courses: Kurtso guztiak
-  project:
-    projects: Proiektuak
-    create: Sortu proiektua
-    create_a_project: 'Sortu proiektu berria:'
-    new: Berria sortu
-    exit: Itzuli kurtsora
-    project_gallery: Proiektuak
-    share_title: Partekatu zure proiektuak
-    share_copy_link: 'Esteka kopiatu:'
-    name: Izena
-    updated: Eguneratua
-    project_type: Proiektu mota
-    help_text: Egin klik behean <strong>Egin app bat</strong> edo <strong>Marraztu
-      zerbait</strong>-en, Artista edo Jolas Laborategiko proiektu berri bat egiteko!<br/>Zure
-      proiektuetara itzuli ahal izango zara edozein unetan.
-    need_help: Hasteko laguntzarik behar?
-    saved: Gordeta
-    not_saved: Gorde gabe
-    view_all: Ikusi Nire Proiektuak
-    edit_project: Editatu Proiektua
-    abuse:
-      tos: Proiektu honek Code.org-en <a href='http://code.org/tos'>Zerbitzuaren Baldintzak</a>
-        hautsi ditu eta ezin da konpartitu.
-      contact_us: Hau errorea dela uste baduzu, mesedez <a href='https://code.org/contact'>jarri
-        harremanetan gurekin.</a>
-      go_to_code_studio: Joan Code Sudio-ra
-      report_abuse_form:
-        intro: Code Studio-z egindako app-ak erabiliz, eduki iraingarriak, mehatxuak,
-          cyberbulling-a, jazarpenak edo zure jabegoko edukiaren copyrighta hausten
-          duen zerbait aurkitu baduzu, mesedez bete beheko fitxa. Zure txostena oso
-          serio hartuko dugu, ikertu eta beharrezko neurriak hartuko ditugu.
-        validation:
-          email: Mesedez, sartu email helbide bat
-          age: Mesedez, zehaztu adina
-          abuse_type: Mesedez, adierazi nola hausten dituen eduki honek Zerbitzuaren
-            Baldintzak
-          abuse_detail: Mesedez, zehaztu salatzen ari zaren edukia
-        abusive_url: Salatzen ari den edukiaren URLa
-        abuse_type:
-          question: Nola hausten ditu eduki honek %{link_start}Zerbitzuaren Baldintzak%{link_end}?
-          harassment: Mehatxuak, cyberbulling-a, jazarpena
-          offensive: Eduki iraingarria
-          infringement: Copyright-a urratu
-          other: Beste bat
-        detail: Mesedez, salatzen ari zaren edukiaren inguruko ahalik eta xehetasun
-          gehien eman.
-        acknowledge: Informazio hau bidaliz, %{link_start_privacy}Pibatutasun Politika%{link_end}
-          eta %{link_start_tos}Zerbitzuaren Baldintzak%{link_end} adierazitako terminoetan
-          erabiliko dela onartzen duzu
-  hoc_download:
-    minecraft_name: Minecraft Kode Ordua
-  pd:
-    form_labels:
-      email: E-posta
-    form_entries:
-      gender:
-        male: Gizona
-        female: Emakumea
-        none: Nahiago dut ez erantzun
-      subjects:
-        cs: Informatika
-        math: Matematika
-        science: Zientzia
-        la: Hizkuntzalaritza
-        other: Beste bat
-      resources:
-        kodable: Kodable
-        lightbot: Argibot
-        other: Beste bat
-      robotics:
-        kodable: Kodable
-        other: Beste bat
-      email_opt_in:
-        opt_in_yes: Bai
-        opt_in_no: Ez
-  course_offering:
-    headers:
-      minecraft: Minecraft
-  cookie_banner:
-    accept: Ados
-  copy: Kopiatu
-  pixelation:
-    binary: Bitarra

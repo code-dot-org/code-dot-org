@@ -3,48 +3,40 @@ sk:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Princípy informatiky
-          title: Princípy informatiky ('17-'18)
-          version_title: "'17-'18"
-          description_student: Na jeseň 2016 uviedla Rada škôl a gymnázií najnovší
-            AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty
-            informatiky a umožňuje im objavovať, akým spôsobom počítače a technológie
-            ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom
-            vychovať lídrov v oblasti IT a prilákať a zapojiť tých, ktorí sú v IT
-            tradične menej zastúpení a to použitím základných IT nástrojov a medzidisciplinárných
-            možností.
-          description_teacher: Na jeseň 2016 uviedla Rada škôl a gymnázií najnovší
-            AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty
-            informatiky a umožňuje im objavovať, akým spôsobom počítače a technológie
-            ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom
-            vychovať lídrov v oblasti IT a prilákať a zapojiť tých, ktorí sú v IT
-            tradične menej zastúpení a to použitím základných IT nástrojov a medzidisciplinárných
-            možností.
-          description_short: Naučte sa základné koncepty informatiky.
-        csd-2017:
-          assignment_family_title: Objavujeme informatiku
-          title: Objavujeme informatiku ('17-'18)
-          version_title: "'17-'18"
-          description_student: Objavujeme informatiku (CS Discoveries) je kurz informatiky,
-            v ktorom si študenti naprogramujú reálne objekty (web stránky, hry a pod.)
-            a v ktorom im je informatika predstavená ako prostriedok pre kreativitu,
-            komunikáciu, riešenie problémov a zábavu.
-          description_teacher: Objavujeme informatiku (CS Discoveries) je kurz informatiky,
-            v ktorom si študenti naprogramujú reálne objekty (web stránky, hry a pod.)
-            a v ktorom im je informatika predstavená ako prostriedok pre kreativitu,
-            komunikáciu, riešenie problémov a zábavu.
-          description_short: Úvodný kurz informatiky, ktorý motivuje študentov k vytvoreniu
-            jedinečných výtvorov.
         allthethingscourse:
-          title: kurzvšetkého
           description_short: Toto je lekcia ovšetkom
           description_student: Toto je lekcia ovšetkom a má dlhší popis pre študentov
           description_teacher: Toto je lekcia ovšetkom a má dlhší popis pre školiteľov
+          title: kurzvšetkého
+        csd-2017:
+          assignment_family_title: Objavujeme informatiku
+          description_short: Úvodný kurz informatiky, ktorý motivuje študentov k vytvoreniu
+            jedinečných výtvorov.
+          description_student: Objavujeme informatiku (CS Discoveries) je kurz informatiky,
+            v ktorom si študenti naprogramujú reálne objekty (web stránky, hry a pod.)
+            a v ktorom im je informatika predstavená ako prostriedok pre kreativitu,
+            komunikáciu, riešenie problémov a zábavu.
+          description_teacher: Objavujeme informatiku (CS Discoveries) je kurz informatiky,
+            v ktorom si študenti naprogramujú reálne objekty (web stránky, hry a pod.)
+            a v ktorom im je informatika predstavená ako prostriedok pre kreativitu,
+            komunikáciu, riešenie problémov a zábavu.
+          title: Objavujeme informatiku ('17-'18)
+          version_title: "'17-'18"
         csd-2018:
           assignment_family_title: Objavujeme informatiku
+          description_short: Úvodný kurz informatiky, ktorý motivuje študentov k vytvoreniu
+            jedinečných výtvorov.
+          description_student: Objavujeme informatiku (CS Discoveries) je kurz informatiky,
+            v ktorom si študenti naprogramujú reálne objekty (web stránky, hry a pod.)
+            a v ktorom im je informatika predstavená ako prostriedok pre kreativitu,
+            komunikáciu, riešenie problémov a zábavu.
+          description_teacher: Objavujeme informatiku (CS Discoveries) je kurz informatiky,
+            v ktorom si študenti naprogramujú reálne objekty (web stránky, hry a pod.)
+            a v ktorom im je informatika predstavená ako prostriedok pre kreativitu,
+            komunikáciu, riešenie problémov a zábavu.
           title: Objavujeme informatiku ('18-'19)
           version_title: "'18-'19"
+        csd-2019:
           description_short: Úvodný kurz informatiky, ktorý motivuje študentov k vytvoreniu
             jedinečných výtvorov.
           description_student: Objavujeme informatiku (CS Discoveries) je kurz informatiky,
@@ -55,63 +47,8 @@ sk:
             v ktorom si študenti naprogramujú reálne objekty (web stránky, hry a pod.)
             a v ktorom im je informatika predstavená ako prostriedok pre kreativitu,
             komunikáciu, riešenie problémov a zábavu.
-        csp-2018:
-          assignment_family_title: Princípy informatiky
-          title: Princípy informatiky ('18-'19)
-          version_title: "'18-'19"
-          description_short: Naučte sa základné koncepty informatiky.
-          description_student: Na jeseň 2016 uviedla Rada škôl a gymnázií najnovší
-            AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty
-            informatiky a umožňuje im objavovať, akým spôsobom počítače a technológie
-            ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom
-            vychovať lídrov v oblasti IT a prilákať a zapojiť tých, ktorí sú v IT
-            tradične menej zastúpení a to použitím základných IT nástrojov a medzidisciplinárných
-            možností.
-          description_teacher: Na jeseň 2016 uviedla Rada škôl a gymnázií najnovší
-            AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty
-            informatiky a umožňuje im objavovať, akým spôsobom počítače a technológie
-            ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom
-            vychovať lídrov v oblasti IT a prilákať a zapojiť tých, ktorí sú v IT
-            tradične menej zastúpení a to použitím základných IT nástrojov a medzidisciplinárných
-            možností.
-        csp-2019:
-          title: Princípy informatiky ('19-'20)
-          version_title: "'19-'20"
-          description_short: Naučte sa základné koncepty informatiky.
-          description_student: Na jeseň 2016 uviedla Rada škôl a gymnázií najnovší
-            AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty
-            informatiky a umožňuje im objavovať, akým spôsobom počítače a technológie
-            ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom
-            vychovať lídrov v oblasti IT a prilákať a zapojiť tých, ktorí sú v IT
-            tradične menej zastúpení a to použitím základných IT nástrojov a medzidisciplinárných
-            možností.
-          description_teacher: Na jeseň 2016 uviedla Rada škôl a gymnázií najnovší
-            AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty
-            informatiky a umožňuje im objavovať, akým spôsobom počítače a technológie
-            ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom
-            vychovať lídrov v oblasti IT a prilákať a zapojiť tých, ktorí sú v IT
-            tradične menej zastúpení a to použitím základných IT nástrojov a medzidisciplinárných
-            možností.
-        csd-2019:
           title: Objavujeme informatiku ('19-'20)
           version_title: "'19-'20"
-          description_short: Úvodný kurz informatiky, ktorý motivuje študentov k vytvoreniu
-            jedinečných výtvorov.
-          description_student: Objavujeme informatiku (CS Discoveries) je kurz informatiky,
-            v ktorom si študenti naprogramujú reálne objekty (web stránky, hry a pod.)
-            a v ktorom im je informatika predstavená ako prostriedok pre kreativitu,
-            komunikáciu, riešenie problémov a zábavu.
-          description_teacher: Objavujeme informatiku (CS Discoveries) je kurz informatiky,
-            v ktorom si študenti naprogramujú reálne objekty (web stránky, hry a pod.)
-            a v ktorom im je informatika predstavená ako prostriedok pre kreativitu,
-            komunikáciu, riešenie problémov a zábavu.
-        csd-pilot:
-          description_student: Objavujeme informatiku (CS Discoveries) je kurz informatiky,
-            v ktorom si študenti naprogramujú reálne objekty (web stránky, hry a pod.)
-            a v ktorom im je informatika predstavená ako prostriedok pre kreativitu,
-            komunikáciu, riešenie problémov a zábavu.
-        csp-2020:
-          description_short: Naučte sa základné koncepty informatiky.
         csd-2020:
           description_short: Úvodný kurz informatiky, ktorý motivuje študentov k vytvoreniu
             jedinečných výtvorov.
@@ -123,74 +60,155 @@ sk:
             v ktorom si študenti naprogramujú reálne objekty (web stránky, hry a pod.)
             a v ktorom im je informatika predstavená ako prostriedok pre kreativitu,
             komunikáciu, riešenie problémov a zábavu.
+        csd-2023:
+          title: Objavujeme informatiku
+        csd-pilot:
+          description_student: Objavujeme informatiku (CS Discoveries) je kurz informatiky,
+            v ktorom si študenti naprogramujú reálne objekty (web stránky, hry a pod.)
+            a v ktorom im je informatika predstavená ako prostriedok pre kreativitu,
+            komunikáciu, riešenie problémov a zábavu.
+        csp-2017:
+          assignment_family_title: Princípy informatiky
+          description_short: Naučte sa základné koncepty informatiky.
+          description_student: Na jeseň 2016 uviedla Rada škôl a gymnázií najnovší
+            AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty
+            informatiky a umožňuje im objavovať, akým spôsobom počítače a technológie
+            ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom
+            vychovať lídrov v oblasti IT a prilákať a zapojiť tých, ktorí sú v IT
+            tradične menej zastúpení a to použitím základných IT nástrojov a medzidisciplinárných
+            možností.
+          description_teacher: Na jeseň 2016 uviedla Rada škôl a gymnázií najnovší
+            AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty
+            informatiky a umožňuje im objavovať, akým spôsobom počítače a technológie
+            ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom
+            vychovať lídrov v oblasti IT a prilákať a zapojiť tých, ktorí sú v IT
+            tradične menej zastúpení a to použitím základných IT nástrojov a medzidisciplinárných
+            možností.
+          title: Princípy informatiky ('17-'18)
+          version_title: "'17-'18"
+        csp-2018:
+          assignment_family_title: Princípy informatiky
+          description_short: Naučte sa základné koncepty informatiky.
+          description_student: Na jeseň 2016 uviedla Rada škôl a gymnázií najnovší
+            AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty
+            informatiky a umožňuje im objavovať, akým spôsobom počítače a technológie
+            ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom
+            vychovať lídrov v oblasti IT a prilákať a zapojiť tých, ktorí sú v IT
+            tradične menej zastúpení a to použitím základných IT nástrojov a medzidisciplinárných
+            možností.
+          description_teacher: Na jeseň 2016 uviedla Rada škôl a gymnázií najnovší
+            AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty
+            informatiky a umožňuje im objavovať, akým spôsobom počítače a technológie
+            ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom
+            vychovať lídrov v oblasti IT a prilákať a zapojiť tých, ktorí sú v IT
+            tradične menej zastúpení a to použitím základných IT nástrojov a medzidisciplinárných
+            možností.
+          title: Princípy informatiky ('18-'19)
+          version_title: "'18-'19"
+        csp-2019:
+          description_short: Naučte sa základné koncepty informatiky.
+          description_student: Na jeseň 2016 uviedla Rada škôl a gymnázií najnovší
+            AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty
+            informatiky a umožňuje im objavovať, akým spôsobom počítače a technológie
+            ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom
+            vychovať lídrov v oblasti IT a prilákať a zapojiť tých, ktorí sú v IT
+            tradične menej zastúpení a to použitím základných IT nástrojov a medzidisciplinárných
+            možností.
+          description_teacher: Na jeseň 2016 uviedla Rada škôl a gymnázií najnovší
+            AP® kurz, AP princípy informatiky. Kurz prináša študentom základné koncepty
+            informatiky a umožňuje im objavovať, akým spôsobom počítače a technológie
+            ovplyvňujú svet. AP program vytvoril AP kurz princípov informatiky s cieľom
+            vychovať lídrov v oblasti IT a prilákať a zapojiť tých, ktorí sú v IT
+            tradične menej zastúpení a to použitím základných IT nástrojov a medzidisciplinárných
+            možností.
+          title: Princípy informatiky ('19-'20)
+          version_title: "'19-'20"
+        csp-2020:
+          description_short: Naučte sa základné koncepty informatiky.
         csp-2021:
           description_short: Naučte sa základné koncepty informatiky.
-        mike-test:
-          title: Základy informatiky
         csp-2022:
           description_short: Naučte sa základné koncepty informatiky.
         csp-2023:
           description_short: Naučte sa základné koncepty informatiky.
-        csd-2023:
-          title: Objavujeme informatiku
+        focus-on-coding-2023:
+          title: Zamerané na programovanie (Objavujeme informatiku)
+        focus-on-creativity-2023:
+          title: Zamerané na kreativitu (Objavujeme informatiku)
+        focus-on-data-2023:
+          title: Zamerané na data (Objavujeme informatiku)
+        focus-on-design-with-purpose-2023:
+          title: Zamerané na zmysluplný dizajn (Objavujeme informatiku)
+        focus-on-hardware-2023:
+          title: Zamerané na hardvér (Objavujeme informatiku)
+        focus-on-impact-in-society-2023:
+          title: Zamerané na spoločenský dopad (Objavujeme informatiku)
+        mike-test:
+          title: Základy informatiky
+        self-paced-pl-microbit-2023:
+          title: Vyučujeme Aplikácie a hardvér (micro:bit)
+        self-paced-pl-physical-computing-2022:
+          title: Vyučujeme Aplikácie a hardvér  (Circuit Playground)
+        self-paced-pl-physical-computing-2023:
+          title: " Vyučujeme Aplikácie a hardvér  (Circuit Playground)"
     resources:
-      curriculum/csd/2020:
-        name: Osnovy
-      teacher_forum/csd/2020:
-        name: Fórum učiteľov
-      curriculum/csd/2017:
-        name: Osnovy
-      teacher_forum_6/csd/2017:
-        name: Fórum učiteľov
-      all_code_5/csd/2022:
+      all_code/csd/2021:
         name: Všetok kód
-      all_resources_7/csd/2022:
-        name: Všetky zdroje
-      all_standards_7/csd/2022:
-        name: Všetky normy
-      all_vocabulary_7/csd/2022:
-        name: Všetky pojmy
-      csd_curriculum_guide/csd/2022:
-        name: Sprievodca osnovami pre kurz Objavujeme informatiku
-      csd_guide_to_debugging/csd/2022:
-        name: 'Objavujeme informatiku: Sprievodca ladením'
-      csd_guide_to_differentiation/csd/2022:
-        name: 'Objavujeme informatiku: Sprievodca diferenciáciou'
-      csd_implementation_guide/csd/2022:
-        name: Implementačná príručka pre kurz Objavujeme informatiku
-      curriculum/csd/2019:
-        name: Osnovy
-      teacher_forum/csd/2019:
-        name: Fórum učiteľov
       all_code_2/csd/2023:
         name: Všetok kód
-      all_resources_2/csd/2023:
-        name: Všetky zdroje
-      all_standards_2/csd/2023:
-        name: Všetky normy
-      all_vocabulary_2/csd/2023:
-        name: Všetky pojmy
-      csd_guide_to_differentiation_1/csd/2023:
-        name: 'Objavujeme informatiku: Sprievodca diferenciáciou'
-      csd_implementation_guide_1/csd/2023:
-        name: Implementačná príručka pre kurz Objavujeme informatiku
-      all_code/csd/2021:
+      all_code_5/csd/2022:
         name: Všetok kód
       all_resources_1/csd/2021:
         name: Všetky zdroje
+      all_resources_2/csd/2023:
+        name: Všetky zdroje
+      all_resources_7/csd/2022:
+        name: Všetky zdroje
       all_standards_1/csd/2021:
+        name: Všetky normy
+      all_standards_2/csd/2023:
+        name: Všetky normy
+      all_standards_7/csd/2022:
         name: Všetky normy
       all_vocabulary_1/csd/2021:
         name: Všetky pojmy
+      all_vocabulary_2/csd/2023:
+        name: Všetky pojmy
+      all_vocabulary_7/csd/2022:
+        name: Všetky pojmy
       csd_curriculum_guide/csd/2021:
+        name: Sprievodca osnovami pre kurz Objavujeme informatiku
+      csd_curriculum_guide/csd/2022:
         name: Sprievodca osnovami pre kurz Objavujeme informatiku
       csd_guide_to_debugging/csd/2021:
         name: 'Objavujeme informatiku: Sprievodca ladením'
+      csd_guide_to_debugging/csd/2022:
+        name: 'Objavujeme informatiku: Sprievodca ladením'
       csd_guide_to_differentiation/csd/2021:
+        name: 'Objavujeme informatiku: Sprievodca diferenciáciou'
+      csd_guide_to_differentiation/csd/2022:
+        name: 'Objavujeme informatiku: Sprievodca diferenciáciou'
+      csd_guide_to_differentiation_1/csd/2023:
         name: 'Objavujeme informatiku: Sprievodca diferenciáciou'
       csd_implementation_guide/csd/2021:
         name: Implementačná príručka pre kurz Objavujeme informatiku
+      csd_implementation_guide/csd/2022:
+        name: Implementačná príručka pre kurz Objavujeme informatiku
+      csd_implementation_guide_1/csd/2023:
+        name: Implementačná príručka pre kurz Objavujeme informatiku
+      curriculum/csd/2017:
+        name: Osnovy
       curriculum/csd/2018:
         name: Osnovy
+      curriculum/csd/2019:
+        name: Osnovy
+      curriculum/csd/2020:
+        name: Osnovy
+      teacher_forum/csd/2019:
+        name: Fórum učiteľov
+      teacher_forum/csd/2020:
+        name: Fórum učiteľov
+      teacher_forum_6/csd/2017:
+        name: Fórum učiteľov
       teacher_forum_6/csd/2018:
         name: Fórum učiteľov

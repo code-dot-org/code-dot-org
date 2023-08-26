@@ -1,0 +1,66 @@
+-# Can only be used on rebranded pages that use the
+-# "design-system-pegasus.scss" stylesheet.
+
+-# FontAwesome icons
+- icon_user = "fa-solid fa-user"
+- icon_arrow_up_wide_short = "fa-solid fa-arrow-up-wide-short"
+- icon_clock = "fa-solid fa-clock"
+- icon_book = "fa-solid fa-book"
+- icon_desktop = "fa-solid fa-desktop"
+- icon_screwdriver_wrench = "fa-solid fa-screwdriver-wrench"
+- icon_chalkboard_user = "fa-solid fa-chalkboard-user"
+- icon_language = "fa-solid fa-language"
+- icon_universal_access = "fa-solid fa-universal-access"
+
+%h2
+  #{heading}
+
+.curriculum-glance.grid-container
+  %ul.flex-container.flex-direction-column
+    %li
+      %i{class: "#{icon_user}"}
+      %p
+        %strong=hoc_s(:module_label_grades)
+        #{grades}
+    %li
+      %i{class: "#{icon_arrow_up_wide_short}"}
+      %p
+        %strong=hoc_s(:module_label_level)
+        #{level}
+    %li
+      %i{class: "#{icon_clock}"}
+      %p
+        %strong=hoc_s(:module_label_duration)
+        #{duration}
+    %li
+      %i{class: "#{icon_desktop}"}
+      %p
+        %strong=hoc_s(:module_label_devices)
+        #{devices}
+    %li
+      %i{class: "#{icon_book}"}
+      %p
+        %strong=hoc_s(:module_label_topics)
+        #{topics}
+  %ul.flex-container.flex-direction-column
+    %li
+      %i{class: "#{icon_screwdriver_wrench}"}
+      %p
+        %strong=hoc_s(:module_label_tools)
+        #{tools}
+    %li
+      %i{class: "#{icon_chalkboard_user}"}
+      %p
+        %strong=hoc_s(:module_label_professional_learning)
+        #{professional_learning}
+    %li
+      %i{class: "#{icon_universal_access}"}
+      %p
+        %strong=hoc_s(:module_label_accessibility_features)
+        #{accessibility_features}
+    %li
+      %i{class: "#{icon_language}"}
+      %p
+        %strong=hoc_s(:module_label_languages)
+        #{languages}
+

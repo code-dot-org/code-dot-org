@@ -1,147 +1,24 @@
 {
-  "navigateForward": "Devam",
-  "navigateBack": "Geri",
-  "tryAgain": "Tekrar dene",
-  "navigateDone": "Bitiş",
-  "saveProgress": "Kaydet",
-  "correctAnswer": "Doğru",
-  "incorrectAnswer": "Yanlış",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "maks",
-  "columnInspectorDescription": "Tanım",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "maks",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Tanım",
+  "correctAnswer": "Doğru",
   "dataCardLastUpdated": "Son güncelleme",
-  "predictButton": "Tahmin Et",
-  "uniqueOptionsWarningNotice": "Not",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "yaş"
+        "Height": {
+          "id": "Yükseklik"
+        },
+        "Length": {
+          "id": "Uzunluk"
         }
       }
     },
-    "shoe_survey_toy": {
+    "bike_sharing": {
       "fields": {
-        "weather": {
-          "id": "hava durumu"
-        },
-        "day": {
-          "id": "gün"
-        },
-        "shoe": {
-          "id": "ayakkabı"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "soğan"
-        },
-        "avocado": {
-          "id": "avokado"
-        },
-        "corn": {
-          "id": "mısır"
-        },
-        "beans": {
-          "id": "fasulye"
-        },
-        "lime": {
-          "id": "Misket limonu"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "mantarlar"
-        },
-        "lobster": {
-          "id": "ıstakoz"
-        },
-        "bacon": {
-          "id": "domuz pastırması"
-        },
-        "cheese": {
-          "id": "peynir\n"
-        },
-        "meat": {
-          "id": "et"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "renk"
-        },
-        "music": {
-          "id": "müzik"
-        },
-        "food": {
-          "id": "yiyecek"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "yaş"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Kategori"
-        },
-        "Description": {
-          "id": "Tanım"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "çilek"
-        },
-        "lime": {
-          "id": "Misket limonu"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "kenarlar"
-        },
-        "size": {
-          "id": "boyut"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "domates"
-        },
-        "avocado": {
-          "id": "avokado"
-        },
-        "chicken": {
-          "id": "tavuk"
-        },
-        "fruit": {
-          "id": "meyve"
-        },
-        "beans": {
-          "id": "fasulye"
-        },
-        "cheese": {
-          "id": "peynir\n"
+        "Month": {
+          "id": "Ay"
         }
       }
     },
@@ -155,36 +32,41 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "okul"
-        },
-        "age": {
-          "id": "yaş"
-        },
-        "health": {
-          "id": "sağlık"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "tavuk"
-        },
-        "lamb": {
-          "id": "kuzu"
-        },
-        "onion": {
-          "id": "soğan"
-        },
-        "cheese": {
-          "id": "peynir\n"
+        "banana": {
+          "id": "muz"
         }
       }
     },
     "census_part": {
+      "fields": {
+        "age": {
+          "id": "yaş"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "renk"
+        },
+        "food": {
+          "id": "yiyecek"
+        },
+        "music": {
+          "id": "müzik"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Yaş"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "yaş"
@@ -201,63 +83,65 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Ülke"
+        },
+        "Dance": {
+          "id": "Dans et"
+        },
+        "Music": {
+          "id": "Müzik"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "yaş"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Puan"
-        },
         "Country": {
           "id": "Ülke"
         },
         "Name": {
           "id": "İsim"
         },
+        "Score": {
+          "id": "Puan"
+        },
         "Star": {
           "id": "Yıldız"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Sanatçı"
+        "cheese": {
+          "id": "peynir\n"
+        },
+        "chicken": {
+          "id": "tavuk"
+        },
+        "lamb": {
+          "id": "kuzu"
+        },
+        "onion": {
+          "id": "soğan"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "insanlar"
+        "Category": {
+          "id": "Kategori"
         },
-        "rhino": {
-          "id": "gergedan"
-        },
-        "elephant": {
-          "id": "fil"
-        },
-        "alligator": {
-          "id": "Timsah"
-        },
-        "trees": {
-          "id": "ağaçlar "
-        }
-      },
-      "name": "Safari"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Uzunluk"
-        },
-        "Height": {
-          "id": "Yükseklik"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Su"
+        "Description": {
+          "id": "Tanım"
         }
       }
     },
@@ -266,59 +150,101 @@
         "avocado": {
           "id": "avokado"
         },
-        "onion": {
-          "id": "soğan"
-        },
         "ginger": {
           "id": "zencefil"
+        },
+        "onion": {
+          "id": "soğan"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Müzik"
+        "bacon": {
+          "id": "domuz pastırması"
         },
-        "Dance": {
-          "id": "Dans et"
+        "cheese": {
+          "id": "peynir\n"
         },
-        "Country": {
-          "id": "Ülke"
+        "lobster": {
+          "id": "ıstakoz"
         },
-        "Internet": {
-          "id": "İnternet"
+        "meat": {
+          "id": "et"
         },
-        "Writing": {
-          "id": "Yazma"
-        },
-        "Achievements": {
-          "id": "Başarılar"
-        },
-        "Age": {
-          "id": "Yaş",
-          "description": "Yaş"
-        },
-        "Height": {
-          "id": "Yükseklik",
-          "description": "Yükseklik"
-        },
-        "Gender": {
-          "id": "Cinsiyet",
-          "description": "Cinsiyet"
+        "mushrooms": {
+          "id": "mantarlar"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "muz"
+        "lime": {
+          "id": "Misket limonu"
+        },
+        "strawberry": {
+          "id": "çilek"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Yaş"
+        "alligator": {
+          "id": "Timsah"
+        },
+        "elephant": {
+          "id": "fil"
+        },
+        "people": {
+          "id": "insanlar"
+        },
+        "rhino": {
+          "id": "gergedan"
+        },
+        "trees": {
+          "id": "ağaçlar "
+        }
+      },
+      "name": "Safari"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
+        "beans": {
+          "id": "fasulye"
+        },
+        "cheese": {
+          "id": "peynir\n"
+        },
+        "chicken": {
+          "id": "tavuk"
+        },
+        "fruit": {
+          "id": "meyve"
+        },
+        "tomato": {
+          "id": "domates"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
+        "beans": {
+          "id": "fasulye"
+        },
+        "corn": {
+          "id": "mısır"
+        },
+        "lime": {
+          "id": "Misket limonu"
+        },
+        "onion": {
+          "id": "soğan"
         }
       }
     },
@@ -332,18 +258,99 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Müzik"
+        "sides": {
+          "id": "kenarlar"
+        },
+        "size": {
+          "id": "boyut"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "gün"
+        },
+        "shoe": {
+          "id": "ayakkabı"
+        },
+        "weather": {
+          "id": "hava durumu"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Sanatçı"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "yaş"
+        },
+        "health": {
+          "id": "sağlık"
+        },
+        "school": {
+          "id": "okul"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Başarılar"
+        },
+        "Age": {
+          "description": "Yaş",
+          "id": "Yaş"
+        },
+        "Country": {
+          "id": "Ülke"
         },
         "Dance": {
           "id": "Dans et"
         },
-        "Country": {
-          "id": "Ülke"
+        "Gender": {
+          "description": "Cinsiyet",
+          "id": "Cinsiyet"
+        },
+        "Height": {
+          "description": "Yükseklik",
+          "id": "Yükseklik"
+        },
+        "Internet": {
+          "id": "İnternet"
+        },
+        "Music": {
+          "id": "Müzik"
+        },
+        "Writing": {
+          "id": "Yazma"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Su"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Yanlış",
+  "modelCardPossibleValuesMaximum": "maks",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Geri",
+  "navigateDone": "Bitiş",
+  "navigateForward": "Devam",
+  "predictButton": "Tahmin Et",
+  "saveProgress": "Kaydet",
+  "tryAgain": "Tekrar dene",
+  "uniqueOptionsWarningNotice": "Not"
 }

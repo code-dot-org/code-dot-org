@@ -1,0 +1,98 @@
+---
+title: 'Accessibility'
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/accessibility-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.hero-banner-basic--accessibility
+  .wrapper
+    .flex-container
+      .text-wrapper.col-50.flex-container.align-items-center
+        .hero-banner-basic__content
+          %h1{style: "color: white"}
+            =hoc_s(:accessibility_hero_heading)
+          %p{style: "color: white"}
+            =hoc_s(:accessibility_hero_desc)
+      .col-50.flex-container.justify-end
+        %img{src: "/images/accessibility/hero-image.png", alt: ""}
+    .clear
+
+%section.accessibility-efforts.bg-neutral-light
+  .wrapper
+    .text-wrapper
+      %h2
+        = hoc_s(:accessibility_efforts_title)
+      %p.body-two
+        = hoc_s(:accessibility_efforts_desc)
+    .grid-container
+      - item_count = 4
+      - item_count.times do |index|
+        .flex-container
+          %figure
+            %img{src: "/images/accessibility/efforts_#{index + 1}.png",  alt: hoc_s("accessibility_efforts_card_title_#{index + 1}")}
+          .text-wrapper
+            %h3.heading-sm
+              =hoc_s("accessibility_efforts_card_title_#{index + 1}")
+            %p.body-three
+              - if index == 1
+                =hoc_s(:accessibility_efforts_card_desc_2, markdown: :inline, locals: {voluntary_url: "https://www.section508.gov/sell/vpat/"})
+              - elsif index == 3
+                =hoc_s(:accessibility_efforts_card_desc_4, markdown: :inline, locals: {wcag_url: "https://www.w3.org/TR/WCAG20/"})
+              - else
+                = hoc_s("accessibility_efforts_card_desc_#{index + 1}")
+
+%section.accessibility-explore
+  .wrapper
+    %h2=hoc_s(:accessibility_explore_title)
+    .action-block.action-block--two-col
+      %img{src: "/images/accessibility/explore.jpg", alt: hoc_s(:accessibility_explore_title), class: "col-50"}
+      .text-wrapper.col-50
+        %p.heading-sm=hoc_s(:accessibility_explore_text)
+        %a{href: "https://support.code.org/hc/en-us/sections/15186591538957-Accessibility", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_explore_title")}}
+          =hoc_s(:accessibility_explore_button)
+    .clear
+
+%section.bg-neutral-light.accessibility-help
+  .wrapper
+    .text-wrapper
+      %h2=hoc_s(:accessibility_help_us_title)
+      %p=hoc_s(:accessibility_help_us_text)
+      %a{href: "https://support.code.org/hc/en-us/sections/15186591538957-Accessibility", target: "_blank", class: "link-button", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_help_us_title")}}
+        =hoc_s(:accessibility_help_us_button)
+
+%section.accessibility-commit
+  .wrapper
+    .text-wrapper
+      %h2=hoc_s(:accessibility_commit_title)
+      - commit_index = 4
+      - commit_index.times do |index|
+        %p=hoc_s("accessibility_commit_text_#{index + 1}")
+
+= view :section_divider_line
+
+- partner_index = 10
+- accessibility_partner_links = ["https://www.washington.edu/accesscomputing/accesscsforall","https://milnel2.github.io/blocks4alliOS/","https://codejumper.com/","https://www.csforall.org/projects_and_programs/accessibility-pledge/","https://www.deafkidscode.org/","https://www.apple.com/education/docs/everyone-can-code-curriculum-guide.pdf","https://www.khanacademy.org/","https://www.aph.org/product/snap-circuits-jr-access-pack/","https://sphero.com/products/sphero-bolt","https://quorumlanguage.com/lessons/code.html"]
+- accessibility_partner_tags = [hoc_s(:module_label_student_content_resources),hoc_s(:module_label_student_product),hoc_s(:module_label_student_product),hoc_s(:module_label_student_content_resources),hoc_s(:module_label_curriculum_pure),hoc_s(:module_label_student_product),hoc_s(:module_label_curriculum_pure),hoc_s(:module_label_student_product),hoc_s(:module_label_student_product),hoc_s(:module_label_curriculum_pure)]
+- accessibility_partner_levels = [": K-12", ": K-8", ": K-6",": K-12", ": K-12", ": K-12", ": K-12", ": K-6", ": K-12", ": K 9-12"]
+
+%section.accessibility-partner
+  .wrapper
+    .text-wrapper
+      %h2=hoc_s(:accessibility_partner_title)
+      %p=hoc_s(:accessibility_partner_desc)
+    .action-block__wrapper.action-block__wrapper--three-col
+      - partner_index.times do |index|
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            %p.overline
+              =accessibility_partner_tags[index]
+            %h3=hoc_s("accessibility_card_title_#{index + 1}")
+            %p
+              =hoc_s(:grade_level)
+              =accessibility_partner_levels[index]
+            %p=hoc_s("accessibility_card_text_#{index + 1}")
+          .content-footer
+            %a.link-button{href: accessibility_partner_links[index], target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_card_title_#{index + 1}")}}
+              = hoc_s(:call_to_action_learn_more)

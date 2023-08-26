@@ -6,7 +6,7 @@ ka:
       'Artist: Variables': 'მხატვარი: ცვლადები'
       Assessment: 'შეფასება
 
-'
+        '
       Binary Numbers: ორობითი რიცხვები
       Collision Detection: შეჯახების აღმოჩენა
       Collisions: შეჯახებები
@@ -22,7 +22,9 @@ ka:
       Functions: ფუნქციები
       Functions with Parameters: ფუნქციები პარამეტრებით
       Headings: სათაურები
+      How to Make a Sprite: როგორ გააკეთოთ Sprite
       Images in HTML: სურათები HTML-ში
+      Introducing Sprite Lab: წარმოგიდგენთ Sprite ლაბორატორიას
       Introduction to Arrays: შესავალი მასივებში
       Keyboard Input: კლავიატურიდან შეყვანილი ინფორმაცია
       Lesson Extras: გაკვეთილების დამატებითი მასალები
@@ -31,12 +33,15 @@ ka:
       Lists: სიები
       Making Music: მუსიკის შექმნა
       'Minecraft: Hero''s Journey': 'Minecraft: გმირის მოგზაურობა'
+      My Online Neighborhood: ჩემი ონლაინ სამეზობლო
       Overview: მიმოხილვა
       Pair Programming: პროგრამირება წყვილებში
+      Picturing Data: სურათების მონაცემები
       Planning: დაგეგმვა
       Programming with Rey and BB-8: პროგრამირება რეისთან და BB-8-სთან ერთად
       Reflection: არეკვლა
       Review: მიმოხილვა
+      Sprite Lab Project: Sprite ლაბორატორიის პროექტი
       Sprite Movement: სპრაიტების მოძრაობა
       Text Compression: ტექსტის შეკუმშვა
       The Animation Tab: ანიმაციის ტაბი

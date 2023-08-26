@@ -431,7 +431,7 @@ sk:
         mc_2016_intro: Minecraft Hodina Kódu - Úvod
         mc_2016_loops: Minecraft Hodina Kódu - Cykly
         mc_2016_events: Minecraft Hodina Kódu - Udalosti
-        mc_2016_spawn: Minecraft Hodina Kódu - Vytváranie postáv
+        mc_2016_spawn: Minecraft Hodina kódu – Vytváranie sprajtov
         mc_2016_congrats: Minecraft Hodina Kódu - Gratulujeme
         applab_hoc_welcome: App Lab Hodina Kódu - Vitajte
         applab_hoc_setproperty: App Lab Hodina Kódu - setProperty
@@ -496,7 +496,7 @@ sk:
         hoc_dance_congrats: Tanečná párty - Párty pokračuje!
         c_and_c_great_to_create: Je skvelé tvoriť a hrať férovo
         c_and_c_digital_sharing: Digitálne zdieľanie
-        teaching_csf_how_it_works: 'Vyučujeme základy informatiky: Ako funguje tento kurz'
+        teaching_csf_how_it_works: 'Vyučujeme Základy informatiky: Ako funguje tento kurz'
         elem_pd_2: Informatika pre prvý stupeň - PD video 2/2
         what_is_cs: Čo je informatika?
         repeat_block: 'Video: Používanie bloku „opakuj“'
@@ -570,8 +570,17 @@ sk:
         csp_tutorial_datatab: Zložka údajov v App Labe
         csp_tutorial_libraries: Knižnice v App Labe
         PL-Video-21: Vitaj v profesionálnom vzdelávaní Code.org!
+        csp_tutorial_datavis1: Vizualizátor údajov v laboratóriu aplikácií - 1. časť
+        csp_tutorial_datavis2: Vizualizátor údajov v laboratóriu aplikácií - časť 2
         csd_ml_intro_ai_lab_july2021: Úvod do UI Labu
+        csd_ml_training_testing_ai_lan: Školenie a testovanie v AI Lab
+        csd_ml_model_cards_july2021: Modelové karty v AI Lab
         csd_ml_numerical_ai_lab: Číselné údaje v AI Labe
+        Gettting_Started_Progress: Pokrok, spätná väzba a hodnotenie
+        Gettting_Started_ClassSection: Vytvorenie sekcie triedy
+        Gettting_Started_StudentExperience: Študentská skúsenosť
+        Getting_Started_BasicFeatures: Základné vlastnosti Code.org
+        PL_overview_CSD: Čo je to Computer Science Discoveries?
         PL_CSD_TeacherTips_Advise: Tipy pre učiteľa – Rady pre nových učiteľov
         PL_CSD_TeacherTips_IntroToCSD: Tipy pre učiteľa – Úvod ku kurzu Objavujeme informatiku
         PL_CSD_TeacherTips_ProblemSolvingProcess: Tipy pre učiteľa - Postup riešenia problémov
@@ -581,9 +590,10 @@ sk:
         poembot-playtest-intro: Testovanie poetického bota – Úvod
         poembot-playtest-sprites: Testovanie poetického bota – Postavičky
         poembot-playtest-events: Testovanie poetického bota – Udalosti
-        hello_world_intro: Ahoj svet – vitaj v laboratóriu postáv
-        hello_world_events: Ahoj svet – programovanie s udalosťami
-        hello_world_congrats: Ahoj svet – rob si, čo chceš 
+        hello_world_intro: Ahoj svet - Vitaj v Sprite Labe
+        hello_world_events: Ahoj svet – Programovanie s udalosťami
+        hello_world_congrats: Ahoj svet – Rob si, čo chceš 
+        csp_global_vs_local: Ladenie globálnych a lokálnych premenných
         rough_poemart_intro: v1 Umenie poézie Úvod
         rough_poemart_events: v1 Umenie poézie Podujatia 
         rough_poemart_imagery: v1 Umenie poézie Obraznosť
@@ -594,13 +604,140 @@ sk:
         poetry_module_multichoiceprompts: Výzvy s viacerými možnosťami – programovanie s poéziou
         poetry_module_conditionals: Podmienené - programovanie s poéziou
         poemart_intro: Úvod do umenia básne 
+        poemart_events: Umelecké podujatia básne
+        poemart_imagery: Umelecké snímky básne
+        poemart_celebration: Oslava umenia básne
+        csd_u6_variables_part2: Premenné - Counter Pattern
+        csd_ml_ethics_ai: 'Etika a AI '
+        outbreak_intro: 'Simulácia ohniska: Úvod'
+        outbreak_events: 'Outbreak Simulator: Udalosti'
+        outbreak_scientist: 'Simulátor vypuknutia: Myslenie ako vedec'
+        outbreak_outro: 'Outbreak Simulator: Voľná hra'
+        PL_overview_CSP: Čo je to Computer Science Princípy?
+        PL_CSP_EIPMOverview: Sprievodca lekciami EIPM
         CSA-PL-debugging-temp: Úvod do ladenia v Java Lab - dočasný
-        csd_u6_circuit_playground: Fyzické výpočty
+        csd_app_lab_design_mode: Režim návrhu laboratória aplikácie CSD
+        csd_app_lab_events: CSD App Laboratórne udalosti
+        PL_CSD_Unit4_AppTesting: Testovanie prototypov papiera
+        csd_u6_circuit_playground: Programovanie s hardvérom
         csd_u6_input_output: Vstup a výstup
+        CSA-PL-for-loops: Pre slučky v jazyku Java
+        CSA-PL-variables: Vytváranie premenných v jazyku Java
+        PL_CS_Journeys_Overview: CS Journeys
+        CSA-PL-intro-to-java-lab: Základy Java Lab
+        CSA-PL-first-program: Písanie programu v jazyku Java
+        CSD_u6_variables_part1: 'CSD: Premenné'
+        csd_u6_if_statements: 'CDCP: Ak vyhlásenia'
+        csc-poem-art-intro: Úvod Video
+        csc-poem-art-outro: Outro Video
+        csd_u6_call_define_functions: 'CSD: Volanie a definovanie funkcií'
         csp_applab_parameters: Funkcie s parametrami
+        starquilts_intro_artist: Úvod do hviezdnych prikrývok
         CSA-PL-intro-to-arrays: Jednorozmerné (1D) polia
+        CSA-PL-1d-arrays-new-values: Zadávanie hodnôt v 1D poliach
+        CSA-PL-conditionals: Podmienené vyhlásenia v jazyku Java
+        CSA-PL-two-way-selection: Obojsmerný výber
+        CSA-PL-Printing-in-Java: Tlač v jazyku Java
+        CSA-PL-multi-selection-statements: Viacnásobné výberové vyhlásenia
+        PL_CSP_TeacherTips_Advice: 'Tipy pre učiteľov: Poradenstvo novým učiteľom CS'
+        PL_CSP_TeacherTips_IntroToCSP: 'Tipy pre učiteľov: Úvod do princípov CS'
+        PL_CSP_TeacherTips_Debugging: 'Tipy pre učiteľov: Pomoc s ladením'
+        PL_CSP_TeacherTips_LeadLearner: 'Tipy pre učiteľov: Ako byť vedúcim študentom'
+        PL_CSP_TeacherTips_APExam: 'Tipy pre učiteľov: Príprava na skúšku AP'
+        PL_CSP_TeacherTips_EIPM: 'Tipy pre učiteľov: Proces EIPM'
+        PL_CSD_CircuitPlayground_Overview: 'Circuit Playground: Prehľad'
+        CSA-PL-debugging-22: Ladenie v Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Interaktívny Art Exemplar
         CS_Changing_Everything: Informatika mení svet okolo nás
+        csa-alias-video: Rovná sa a Aliasy
+        csa-equals-video: Metóda rovná sa ()
+        csa-user-stories: Príbehy používateľov v softvérovom inžinierstve
+        csa-pl-vpl-m1-unit-3: Softvérové inžinierstvo v jednotke 3
+        csa-pl-intro-to-equality: Úvod do rovnosti
+        csa-pl-intro-to-equals-method: Úvod do metódy .equals ()
+        csa-pl-equals-book: Písanie metódy rovná sa () pre triedu Book
+        csa-multi-select-pl: Viacnásobné výberové príkazy v jazyku Java
+        csc_timecapsule_intro: Úvod do časovej kapsuly
+        PL_Equity_in_CS_Education: Equity v CS Education
+        csc_fm_pilot: Funkčné stroje (Pilot)
+        csc_fm_pilot_v2: 'Funkčné stroje Intro '
+        csc-sprite-lab-pixel-editor: Nakreslite svoj vlastný Sprite
+        csa-pl-intro-to-strings: Úvod do reťazcov v jazyku Java
+        csa-pl-compareTo: Metóda compareto ()
+        csc-event-short-intro: Udalosti Short Intro
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: 'Circuit Playground: Prehľad lekcie'
+        csa-day-in-pm-pl: Čo robí projektový manažér?
+        csa-pl-intro-to-pm: Úvod do projektového manažmentu
+        PL_CSD_CircuitPlayground_Setup: 'Circuit Playground: Nastavenie'
+        csa_object_oriented_programming: 'CSA: Objektovo orientované programovanie'
+        csa_creating_objects: 'CSA: Vytváranie objektov'
+        csa_calling_methods: 'CSA: Metódy volania'
+        csa_while_loops: 'CSA: Kým slučky'
+        csa_inheritance: 'ČSA: Dedičstvo'
+        csa_writing_a_method: 'ČSA: Písanie metódy'
+        csa_software_engineering_code_reviews: 'CSA: Softvérové inžinierstvo - Recenzie kódu'
+        csa_conditional_statements: 'CSA: Podmienené vyhlásenia'
+        csa_printing_in_java: 'CSA: Tlač v jazyku Java'
+        csa_two_way_selection_and_not: 'CSA: Obojsmerný výber a NIE'
+        csa-pl-intro-to-oop: Úvod do objektovo orientovaného programovania
+        csa-pl-welcome-to-Neighborhood: Vitajte v susedstve
+        csa-pl-calling-methods: Metódy volania v jazyku Java
+        csa-pl-creating-objects: Vytváranie objektov
+        csa_accessor_methods: 'CSA: Prístupné metódy'
+        csa_constructors: 'CSA: Konštruktéri'
+        csa_creating_a_scanner_object: 'CSA: Vytvorenie objektu skenera'
+        csa_creating_variables: 'CSA: Vytváranie premenných'
+        csa_instance_variables_and_attributes: 'CSA: Premenné a atribúty inštancie'
+        csa_mutator_methods: 'ČSA: Metódy mutátora'
+        csa_overloaded_constructors: 'CSA: Preťažení konštruktéri'
+        csa_the_tostring_method: 'CSA: Metóda toString ()'
+        csa_scanner_class_methods: 'CSA: Metódy triedy skenera'
+        csa_for_loops: 'CSA: Pre slučky'
+        csa_enhanced_for_loops: 'CSA: Vylepšené pre slučky'
+        csa_modifying_values_in_a_1d_array: 'CSA: Úprava hodnôt v 1D poli'
+        csa_nested_loops: 'CSA: Vnorené slučky'
+        csa_one_dimensional_arrays: 'CSA: Jednorozmerné (1D) polia'
+        csa_polymorphism: 'CSA: Polymorfizmus'
+        csa_casting: 'CSA: Odlievanie'
+        csa_equals_and_aliases: 'CSA: Rovné a Aliasy'
+        csa_multi-selection_statements: 'CSA: Viacnásobné výberové vyhlásenia'
+        csa_random_numbers: 'CSA: Náhodné čísla'
+        csa_static_methods: 'ČSA: Statické metódy'
+        csa_static_variables: 'CSA: Statické premenné'
+        csa_the_equals_method: 'CSA: Metóda rovná sa ()'
+        csa_welcome_to_the_theater: 'CSA: Vitajte v divadle'
+        enter_your_own_poem: Zadajte svoju vlastnú báseň
+        csa-example-solution-1: 'Živé kódovanie príkladového riešenia '
         csd_sprite_properties: Vlastnosti sprajtov
+        csa-pl-documentation: Dokumentácia v Java Lab
+        csc-starquilts-intro: 'CSC: Hviezda deky'
+        csa-pl-vocab-pm: Projektový manažment Slovník
+        csc-ecosystems-intro: Úvod do ekosystémov
+        PL_CSD_MicroBit_Intro: Úvod do mikro:BIT
+        csc_animal_adaptations_intro: Zvieracie adaptácie Úvod
+        csa_two_dimensional_arrays: 'CSA: Dvojrozmerné (2D) polia'
+        csa_working_with_2d_array_elements: 'CSA: Práca s prvkami 2D poľa'
+        csa_row_major_traversal: 'ČSA: Row-Major Traversal'
+        csa_column_major_traversal: 'CSA: Stĺpc-Major Traversal'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Vylepšené pre slučky a 2D polia'
+        csa_images_and_pixels: 'CSA: Obrázky a pixely'
+        csa_wrapper_classes_part_1: 'CSA: Triedy obalov Časť 1'
+        csa_wrapper_classes_part_2: 'CSA: Triedy obalov Časť 2'
+        csa_the_arraylist_class: 'CSA: Trieda ArrayList'
+        csa_working_with_arraylist_data: 'CSA: Práca s údajmi ArrayList'
+        csa_remving_data_from_an_arraylist: 'CSA: Odstránenie údajov zo zoznamu polia'
+        csa_private_methods: 'ČSA: Súkromné metódy'
+        csa_recursion: 'CSA: Rekúzia'
+        csa_searching_algorithms: 'CSA: Vyhľadávacie algoritmy'
+        csa_sorting_algorithms: 'CSA: Triediace algoritmy'
+        star_quilts_intro_to_artist: 'Hviezdne deky: Úvod do umelca'
+        upload_sprites_backgrounds: Nahrávanie vlastných škriatkov a pozadia
+        how-ai-works-llms-full: Ako fungujú chatboty a veľké jazykové modely
+        how-ai-works-creativity-full: Má AI kreativitu a predstavivosť?
+        how-ai-works-llms-part1: Chatboty a veľké jazykové modely Časť 1
+        how-ai-works-llms-part2: Chatboty a veľké jazykové modely, časť 2
+        llms-cobranded: 'Ako funguje AI: Chatboty a veľké jazykové modely'
+        generative-ai-cobranded: 'Ako funguje AI: Generatívna AI'
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

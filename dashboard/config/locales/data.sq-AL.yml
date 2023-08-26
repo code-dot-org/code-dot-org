@@ -1,81 +1,193 @@
 ---
 sq:
   data:
-    game:
-      name:
-        Unplug1: Hyrje në Shkencë Kompjuterike
-        Maze: Labirinti
-        Multi: Lojërat me alternativa
-        Unplug2: Te menduarit kompjuterik
-        Unplug3: Programimi Grafik me Letër
-        Artist: Artisti
-        Unplug4: Algoritmet
-        Artist2: Artisti 2
-        Unplug5: Funksionet
-        Farmer: Fermeri
-        Unplug6: Kushtet
-        Artist3: Artisti 3
-        Unplug7: Të Shkruarit Këngë
-        Farmer2: Fermeri 2
-        Unplug8: Abstraksioni
-        Artist4: Artisti 4
-        Unplug9: Programimi i Besuar
-        Farmer3: Fermeri 3
-        Unplug10: Interneti
-        Artist5: Artisti 5
-        Unplug11: Mbështjell
-        MazeEC: Labirinti
-        Bounce: Hidhu
-        Flappy: Flappy Bird
-        Jigsaw: Jigsaw
-        MazeStep: Forma e Fazës Labirinth
-        Wordsearch: Kërkimi i Fjalëve
-        Webapp: Laboratori i Aplikacioneve
-        ArtistEC: Artisti
-        TextMatch: Përshtatja e Tekstit
-        StudioEC: Play Lab
-        Applab: Laboratori i Aplikacionit
-        NetSim: Imitues Interneti
-        Custom: Artisti
-        CustomStudio: Play Lab
-    trophy:
-      name:
-        Bronze: Bronx
-        Silver: Argjend
-        Gold: Ari
+    callout:
+      text:
+        Infinity_move_collide_callout: Vendos një tingull kur të ndodhi ky event.
+        Infinity_move_directions_callout: Cili bllok do e bëjë Baymax-in të lëvizi
+          sipër kur shigjeta e sipërme është e shtypur?
+        Infinity_move_directions_callout_arrow: Përdor këto shigjeta për orientim
+        Infinity_move_right_runbutton: Shto lëviz bllokun këtu
+        Infinity_repeat_callout: Vendos bllogjet e Lëvizjes këtu brënda
+        actions_category: Shiriti i mjeteve mori një pamje të re! Blloqet "Actions"
+          janë këtu tani.
+        add_and_drag_parameter: Shkruaj emrin e parametrit tënd këtu, kliko shto,
+          dhe më pas zhvendos atë në përcaktimin e funksionit tënd
+        arrows_move_actor: Përdor shigjetat për të lëvizur aktorin
+        bee_for_loop: Zhvendos numrin më të madh të nektarit që dëshiron që të mbledhë
+          bleta këtu
+        category_explanation: Ti ke të njëjtët blloqe, por tani ato janë të ndara
+          në kategori
+        change_here: Bëj ndryshimet e tua këtu
+        craft_callout_moveforward: Ky kod do të kontrollojë për llava, mund të shtoni
+          një komandë për të lëvizur përpara?
+        craft_callout_preplaced: Ne kemi vendosur disa blloqe këtu që ju të filloni
+        craft_callout_preplaced_house: Ky kod do të fillojë ndërtimin e shtëpisë tuaj.
+          Mund të përfundoni atë?
+        craft_drag_block_callout: Terhiq një bllok "lëvizPërpara ();" dhe vendose
+          atë poshtë një bllok tjetër
+        craft_inside_repeat: Përsëritni veprimet duke vendosur blloqe këtu
+        craft_run_button_callout: Shtyp "Run" për të provuar programin tënd
+        craft_what_is_iron: Hidhe në erë këtë hekur!
+        create_function: Kliko këtu për të hapur "Funksionet", më pas kliko butonin
+          "Krijo një Funksion".
+        degrees_per_side: Ndaje 360 nga numri i anëve për të gjetur masën e çdo këndi
+          në gradë.
+        drag_blocks: Lëviz një bllok "move" dhe vendose atë poshtë blloku tjetër
+        draw_square_hint: 'Ndihmë: Përdor ciklin katror që sapo bëre në puzzle-in
+          e fundit.'
+        edit_add_parameter: Kliko redakto për të shtuar një parametër në funksionin
+          tënd
+        edit_draw_square: Përdor këtë buton për të redaktuar funksionin dhe shtoje
+          në cikël.
+        edit_function: Kliko këtu për të redaktuar funksionin tënd.
+        edit_get_nectar: Përdor këtë buton për të redaktuar funksionin dhe ndrysho
+          drejtimin që Bleta do kthehet të marrë nektarin.
+        fill_in_actor: Plotësoji  ??? me numra që i korrespondojnë çdo pjesëmarrësi
+          (1,2 dhe 3)
+        frozen_circle_function_in_circle_turn: Mos harro të kthehesh pasi të kesh
+          krijuar çdo rreth.
+        frozen_circle_function_with_parameter_circle: Përdor bllokun "create a circle"
+          dhe ndrysho madhësinë.
+        frozen_create_square: Bashko më shumë blloqe këtu për të krijuar një katror
+        frozen_diamond_repeat: Përdor bllokun përsërit për të krijuar këtë formë.
+        frozen_snowflake_branch: Përdor bllokun "create a snowflake"
+        function_editor_draw_square: Ky është përcaktimi i funkisonit tënd. Keto blloqe
+          ekzekutohen sa herë ti përdor bllokun "draw a square"
+        get_nectar: Përdor bllokun e ri "get nectar".
+        gray_block_explanation: Blloqet gri nuk mund të fshihen. A mund ta zgjidhësh
+          puzzle-in gjithsesi?
+        house_hint: Është gjithçka në rregull nëse figura nuk duket si shtëpi akoma.
+          Ne do ta riparojmë atë në puzzle-in tjetër.
+        if_bee_nectar: Përdor bllokun "if" për të vendosur nëse bleta duhet të mbledhi
+          nektar
+        if_else_bee: Përdor bllokun "if/else" në mënyrë që Bleta të mbledhë nektar
+          nga një lule dhe të bëjë mjaltë nëse nuk është lule
+        instructions_repeat_explanation: Udhëzimet për secilin puzzle përsëriten këtu
+        jigsaw_click: Kliko këtë bllok!
+        length_parameter: A mund ta përditësosh këtë funksion në mënyrë që të përdorë
+          parametrin e "gjatësisë"?
+        logic_category: Hap "Logjikën" të gjesh bllokun "if/else".
+        move_elsa_forward: Lëviz një bllok "Move Forward" dhe vendose poshtë bllokut
+          "When Run" për ta bërë Elsën të ecë përpara
+        name_function: Shkruaj emrin e funksionit tënd këtu
+        place_counter_variable: Zhvendos ndryshoren tënde të numërimit brenda këtij
+          blloku
+        place_length_variable: Zhvendos ndryshorin e gjatësisë këtu për të rivendosur
+          pikëpyetjet
+        place_variable: Zhvendos ndryshoren tënde brenda këtij blloku
+        playlab_add_blocks: Shto blloqet e tua këtu
+        playlab_add_move: Shto blloqet "lëviz" brenda këtij blloku "përsërit"
+        playlab_add_score: Shto blloqe pikësh këtu
+        playlab_arrow_keys: Kujtohu që ti përdorësh këto për të lëvizur magjistaren
+          pasi ke klikuar Run
+        playlab_drag_say: Zhvendos bllokun "thuaj" këtu dhe shtyp "çkemi"
+        playlab_move_girl: Përdor bllokun "move right" të lëvizësh Vajzën Teniste
+        playlab_play_sound: Shto bllokun "play sound" këtu
+        playlab_use_twice: Përdor këtë bllok dy herë dhe kujtohu të ndryshosh numrin
+          e pjesmarrësit
+        repeat: Vendos blloqe brenda ciklit për të përsëritur komandat
+        repeat_blocks: Përdor bllokun "Repeat" dhe përmblidhe rreth blloqeve në vendin
+          e punës
+        repeat_blocks_1: "(1) Përdor këtë bllok dhe vendose rreth blloqeve gri në
+          vendin tënd të punës"
+        repeat_blocks_2: (2) Lëviz bllokun "Repeat" këtu dhe vendosi blloqet gri brenda
+        repeat_full_circle: Fut numrin e herëve që zombi duhet të lëvizë për të bërë
+          një rreth të plotë
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+        replace_questions_degree: Përdor listën drop down për të zëvendëësuar "???"
+          me gradën e duhur për tu kthyer
+        right_arrow_fireball: Përdor shigjetën djathtas të gjuash topat e zjarrit
+        run: Shtyp "Run" për të provuar programin tënd
+        set_length: Përdor këtë bllok për të vendosur "gjatësinë" tek vlera e duhur.
+        set_sides: Përdor këtë bllok për të vendosur "anët" tek numri i nevojshëm
+          që të përfundosh puzzle-in.
+        set_sprite_image: Bashko një bllok "set actor image" tek blloku "when story
+          starts" për të aktivizuar një aktor për këtë histori
+        set_variable: Zhvendos një bllok numri këtu që të vendosësh ndryshoret e tua
+        show_code_explanation: Kliko këtu që të shohësh kodin  për programin që po
+          bën
+        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
+        studio_say_text: Shtyp çfarë dëshiron që të thotë aktori jot brënda këtyre
+          shprehjeve
+        turn_elsa: Përdor bllokun "turn" për ta bërë Elsën të kthehet. Numri në listën
+          drop down përcakton sa herë kthehet Elsa
+        watch_again: Kliko këtu për të parë videon përsëri
+        which_equation: Cili ekuacion bën çdo brinjë më të shkurtër për format me
+          më shumë brinjë?
+        write_draw_square_function: Zhvendos blloqet nga toolbox në atë që vizaton
+          një katror
+        write_draw_triangle_function: Zhvendos blloqet nga toolbox në atë që vizaton
+          një trekëndor
     concept:
       description:
-        sequence: Sekuencë
+        function: funksione
         if: blloku Nëse
         if_else: blloku Nëse-Përndryshe
+        loop_for: blloku i Numërimit
         loop_times: blloku i herëve të Përsëritura
         loop_until: blloku Përsërit derisa
         loop_while: blloku Ndërsa
-        loop_for: blloku i Numërimit
-        function: funksione
         parameters: Funksionet me parametra
+        sequence: Sekuencë
+    game:
+      name:
+        Applab: Laboratori i Aplikacionit
+        Artist: Artisti
+        Artist2: Artisti 2
+        Artist3: Artisti 3
+        Artist4: Artisti 4
+        Artist5: Artisti 5
+        ArtistEC: Artisti
+        Bounce: Hidhu
+        Custom: Artisti
+        CustomStudio: Play Lab
+        Farmer: Fermeri
+        Farmer2: Fermeri 2
+        Farmer3: Fermeri 3
+        Flappy: Flappy Bird
+        Jigsaw: Jigsaw
+        Maze: Labirinti
+        MazeEC: Labirinti
+        MazeStep: Forma e Fazës Labirinth
+        Multi: Lojërat me alternativa
+        NetSim: Imitues Interneti
+        Spritelab: Sprite Lab
+        StudioEC: Play Lab
+        TextMatch: Përshtatja e Tekstit
+        Unplug1: Hyrje në Shkencë Kompjuterike
+        Unplug10: Interneti
+        Unplug11: Mbështjell
+        Unplug2: Te menduarit kompjuterik
+        Unplug3: Programimi Grafik me Letër
+        Unplug4: Algoritmet
+        Unplug5: Funksionet
+        Unplug6: Kushtet
+        Unplug7: Të Shkruarit Këngë
+        Unplug8: Abstraksioni
+        Unplug9: Programimi i Besuar
+        Webapp: Laboratori i Aplikacioneve
+        Wordsearch: Kërkimi i Fjalëve
     level:
       instructions:
-        maze_2_2: 'Më ndihmon dot të kap derrkucin e pabindur? Grumbullo disa blloqe
-          "lëviz përpara" dhe shtyp "Vrapo" që të më ndihmosh të arrij atje. '
+        Custom_builder: Lëviz blloqet nga toolboxi tek vendi i punës për të vizatuar
+          nivelin që dëshiron të krijosh. Shtyp "Run" kur të jesh gati.
+        applab_ec_simple: Krijo aplikacionin tënd duke përdorur blloqet në toolbox.
+        jigsaw_1: Kliko bllokun
+        jigsaw_10: Rregullo blloqet për të formuar imazhin
+        jigsaw_11: Vendos këto blloqe sipas numrit
+        jigsaw_12: Vendos këto blloqe sipas numrit
+        jigsaw_13: Rregullo puzzle-in!
+        jigsaw_2: Tërhiqeni bllokun te objektivi
+        jigsaw_3: Rregullo blloqet për të formuar imazhin
+        jigsaw_4: Rregullo blloqet për të formuar imazhin
+        jigsaw_5: Rregullo blloqet për të formuar imazhin
+        jigsaw_6: Rregullo blloqet për të formuar imazhin
+        jigsaw_7: Rregulloni blloqet për të formuar imazhin
+        jigsaw_8: Rregullo blloqet për të formuar imazhin
+        jigsaw_9: Rregullo blloqet për të formuar imazhin
         maze_2_1: Ky derrkuci po më bezdis. Më ndihmo t'a gjej!
-        maze_2_2_5: Ndiq gjurmët dhe më drejto për tek derrkuci budalla. Shmang TNT-në
-          ose përndryshe do të ikin puplat!
-        maze_2_3: Me udhëhiq për tek green evilness! (Kujdes nga TNT)
-        maze_2_4: Ruaj qetësinë dhe më ndihmo të gjej derrkucin e keq! Përndryshe
-          do të nevrikosem!
-        maze_2_5: Ka një mënyrë për të shkuar tek derrkuci budalla duke përdorur 2
-          blloqe. E gjen dot cila është?
-        maze_2_6: Përpiqu të më çosh tek ai i keqi i gjelbër duke përdorur vetëm tre
-          blloqe.
-        maze_2_7: Më ndihmo ta dëboj këtë derkkuc të keq duke përodrur numrin më të
-          ulët të blloqeve. Përpiqu të përdorësh më shumë se një bllok "repeat times".
-        maze_2_8: 'Kur një bllok është gri, kjo do të thotë që ti nuk mund ta fshish
-          atë. Zgjidh këtë formues duke përdorur bllokun "repeat", që përsëritet 3
-          herë. Përpiqu të vendosësh këto 3 blloqe brenda bllokut gri "repeat": lëviz,
-          lëviz, kthehu.'
-        maze_2_9: Në rregull, provo bllokun e ri "përserit derisa"  - ai do të përsëritet
-          derisa unë të arrij derrkucin e mërzitshëm.
         maze_2_10: Në rregull, edhe një herë të fundit për tu praktikuar - a mund
           ta zgidhësh këtë duke përdorur vetëm 4 blloqe?
         maze_2_11: I dashur person. Unë zombi, Unë i uritur. Duhet... të shkoj...
@@ -100,9 +212,308 @@ sq:
         maze_2_19: A mund të shtosh thjesht 3 blloqe për të më ndihmuar mua të zgjidh
           një maze të vështirësuar? Nëse e bën si duhet, unë mund të ec në çdo rrugë
           të dredhuar pa marrë parasysh gjatësinë.
+        maze_2_2: 'Më ndihmon dot të kap derrkucin e pabindur? Grumbullo disa blloqe
+          "lëviz përpara" dhe shtyp "Vrapo" që të më ndihmosh të arrij atje. '
+        maze_2_2_5: Ndiq gjurmët dhe më drejto për tek derrkuci budalla. Shmang TNT-në
+          ose përndryshe do të ikin puplat!
+        maze_2_3: Me udhëhiq për tek green evilness! (Kujdes nga TNT)
+        maze_2_4: Ruaj qetësinë dhe më ndihmo të gjej derrkucin e keq! Përndryshe
+          do të nevrikosem!
+        maze_2_5: Ka një mënyrë për të shkuar tek derrkuci budalla duke përdorur 2
+          blloqe. E gjen dot cila është?
+        maze_2_6: Përpiqu të më çosh tek ai i keqi i gjelbër duke përdorur vetëm tre
+          blloqe.
+        maze_2_7: Më ndihmo ta dëboj këtë derkkuc të keq duke përodrur numrin më të
+          ulët të blloqeve. Përpiqu të përdorësh më shumë se një bllok "repeat times".
+        maze_2_8: 'Kur një bllok është gri, kjo do të thotë që ti nuk mund ta fshish
+          atë. Zgjidh këtë formues duke përdorur bllokun "repeat", që përsëritet 3
+          herë. Përpiqu të vendosësh këto 3 blloqe brenda bllokut gri "repeat": lëviz,
+          lëviz, kthehu.'
+        maze_2_9: Në rregull, provo bllokun e ri "përserit derisa"  - ai do të përsëritet
+          derisa unë të arrij derrkucin e mërzitshëm.
+        maze_3_1: Unë kam nevojë të arrij tek ai derrkuc! Shkruaj disa thirrje për
+          të lëvizur(); që unë të marr mbrapsht vezët e mia.
+        maze_3_2: Më shkruaj një program që unë të shkoj tek ai derrkuc.
+        maze_3_3: Si të shkoj te derrkuci? Sigurohu që unë nuk vrapoj brenda kutisë
+          së TNT!
+        maze_3_4: Argh! Më shkruaj një program që më nxjerr nga TNT dhe më çon drejt
+          derrkucit.
+        maze_karel_1_1: Përshëndetje, unë jam një fermer. Kam nevojë për ndihmën tënde
+          që të zbukuroj fushën në fermën time në mënyrë që të jetë gati për mbjellje.
+          Më zhvendos në grumbullin e baltës dhe përdor bllokun "fshi" për t'a hequr.
+        maze_karel_1_10: Unë jam duke punuar deri vonë, kështu që u errësua jashtë
+          dhe s'mund ta dalloj sa të mëdhaja janë grumbujt me dhe. Tani, unë nuk kam
+          më të gjitha mundësitë që kisha tek blloku ndërsa. Më lëviz përgjatë fushës
+          dhe nëse ka ndonjë grumbull, hiqe atë.
+        maze_karel_1_11: 'Është ende errësirë jashtë. Më lëviz përgjatë rrugës, Nëse
+          ka ndonjë grumbull, hiqe atë dhe nëse ka ndonjë gropë, mbushe atë. Ndihmë:
+          përdor menunë e opsioneve në bllokun "nëse".'
+        maze_karel_1_2: Më pas, më zhvendos tek gropa dhe mbushe atë me DY lopata
+          plot me baltë duke përdorur bllokun "mbush".
+        maze_karel_1_3: Më zhvendos tek grumbulli i baltës dhe më thuaj sa lopata
+          të plota të heq duke përdorur sa më pak blloqe të jetë e mundur.
+        maze_karel_1_4: 'Mund të më ndihmosh të heq të katërt grumbujt e baltës? Ndihmë:
+          nëse ke mundësi, përdor një bllok përsëritës.'
+        maze_karel_1_5: 'Më ndihmo t''i mbush të gjitha gropat me 5 lopata me baltë.
+          Ndihmë: mund të vendosësh një bllok "repeat" brenda bllokut "while".'
+        maze_karel_1_6: Hiq të gjithë grumbujt me dhe duke përdorur sa më pak blloqe
+          të jetë e mundur. Opsionet në menunë dropdown tek blloku "ndërsa" më tregojnë
+          nëse jam duke qëndruar në grumbull ose në një gropë.
+        maze_karel_1_7: Uau, unë gjeta një gropë vërtet të thellë! Nuk e di se sa
+          lopata me dhe nevojiten. A mund të shkruash një program që e mbush atë derisa
+          toka të jetë e shtruar?
+        maze_karel_1_8: Më ndihmo të mbush gropën në fund të fushës, dukë përdorur
+          sa më pak blloqe të jetë e mundur.
+        maze_karel_1_9: 'Më bëj që të heq të githë grumbullin me dhe. Përpiqu të përdorësh
+          sa më pak blloqe që të jetë e mundur. Ndihmë: përpiqu të përdorësh bllokun
+          "ndërsa".'
+        maze_karel_2_1: 'Provo të përdorësh blloqet për të më ndihmuar mua që të heq
+          gjithë grumbullin dhe të mbush të gjitha gropat në tokë. Përpiqu të përodrësh
+          cikle në vend që të përdorësh shumë blloqe. Ndihmë: Mund të vendosësh një
+          cikël brenda një cikli tjetër.'
+        maze_karel_2_10: Më lëviz mua përmes fushës dhe përdor këto dy funksione,
+          për të më ndihmuar mua të heq gjithë grumbujt dhe të mbush gjithë gropat.
+        maze_karel_2_2: Ne kemi përcaktuar bllokun tonë të quajtur "fill 5", që është
+          tani në kategorinë e Funksioneve. Përdore atë që të më ndihmosh mua të mbush
+          këtë gropën.
+        maze_karel_2_3: Përdor bllokun e funksionit të ri "fill 5" për të më bërë
+          mua të mbush gjithë gropat. Ti duhet të zvarrisësh bllokun "fill 5" nga
+          kategoria e Funksioneve.
+        maze_karel_2_4: Përcakto një funksion të ri që heq 7 lopata të mbushura. Më
+          pas përodre atë për të shkruar një program që më ndihmon të heq të gjithë
+          grumbujt.
+        maze_karel_2_5: Krijo një funksion të ri që heq 6 lopata të mbushura nga grumbulli
+          dhe përdore atë për të më ndihmuar mua të niveloj të gjithë grumbujt.
+        maze_karel_2_6: Përdor dy funkisone të reja. "fill 8" dhe "remove 8", për
+          të më ndihmuar mua të niveloj grumbullin dhe të mbush gropën.
+        maze_karel_2_7: Ka një lopë në fushën time! Shkruaj një funksion të ri që
+          më ndihmon mua të shmang lopën dhe të heq grumbullin. Vendos të gjithë blloqet
+          brenda funkisonit të ri.
+        maze_karel_2_8: Përodr këtë funksion të ri, "avoid the cow and remove 1",
+          për të më ndihmuar mua të heq të gjithë grumbujt.
+        maze_karel_2_9: Në rregull, këtu ka një funksion që heq 4 grumbuj të ndryshëm
+          dheu në një kolonë vertikale. Përpiqu të vendosësh këtë funksion brenda
+          një cikli, që të mund të heqësh të gjithë grumbujt e dheut duke përdorur
+          disa blloqe të reja.
+        maze_karel_debug_function_1: Çfarë duhet të ndryshosh në këtë program që të
+          më ndihmosh të heq gjithë grumbujt?
+        maze_karel_debug_function_2: A mund të rregullosh këtë program për mua që
+          ta bëj fushën time të sheshtë?
+        maze_karel_debug_function_3: 'Modifiko këtë program që të heq gjithë grumbujt
+          nga fusha. '
+        maze_karel_debug_if: Ndihmë! Rregullo programin, që fusha ime të jetë totalisht
+          e sheshtë.
+        maze_karel_debug_if_else: Rregullo këtë program në mënyrë që të mbush gropat
+          dhe të heq gjithë grumbujt.
+        maze_karel_debug_repeat: Rregulloje këtë program për mua, që fusha ime të
+          jetë e sheshtë dhe e mirë.
+        maze_karel_debug_seq_1: MIrë se vini në debugging! Kodi im nuk punon si duhet.
+          Mund ta shënoni si problem dhe ta rregulloni në mënyrë që të më shtrohet
+          fusha dhe të jetë gati për mbjellje?
+        maze_karel_debug_seq_2: Çfarë problemi ka me këtë program? Si mund ta rregullosh
+          në mënyrë që të heq këtë grumbull?
+        maze_karel_debug_while: Si mund të ndryshosh këtë program për të më ndihmuar
+          mua të mbush gropën?
+        maze_wordsearch_k_1: Më lëviz që të gërmëzoj fjalën LINDJE
+        maze_wordsearch_k_13: Më lëviz mua në një mënyrë, më pas në një tjetër, që
+          të gërmëzohet fjala EKZEKUTO
+        maze_wordsearch_k_15: Më lëviz mua në një mënyrë, më pas në një tjetër, që
+          të gërmëzohet fjala LART
+        maze_wordsearch_k_16: Më lëviz mua në një mënyrë, më pas në një tjetër, që
+          të gërmëzohet fjala POSHTË
+        maze_wordsearch_k_2: Më lëviz që të gërmëzoj fjalën JUG
+        maze_wordsearch_k_20: Ky është një tets! Më lëviz mua në një mënyrë, më pas
+          në mënyrë tjetër që të gërmëzohet fjala NGJARJE
+        maze_wordsearch_k_3: Më lëviz që të gërmëzoj fjalën PERËNDIM
+        maze_wordsearch_k_4: Më lëivz që të gërmëzoj fjalën VERI
+        maze_wordsearch_k_6: Më lëviz nga Lindja dhe më pas nga Jugu për të gërmëzuar
+          fjalën KËRCE
+        maze_wordsearch_k_9: Më lëviz nga një anë, më pas nga ana tjetër që të gërmëzoj
+          fjalën KOD
+        mazestep_1: Përshkrimi i hapave të labirintit është këtu
+        mazestep_2: Përshkrimi i hapave të Maze është këtu
+        mazestep_3: Përshkrimi i hapave të Maze është këtu
+        mazestep_4: Përshkrimi i hapave të Maze është këtu
+        mazestep_5: Përshkrimi i hapave të Maze është këtu
+        studio_c2_1: A mund ta bësh këtë qen të thotë "përshëndetje botë"?
+        studio_c2_10: A mund të shtoni blloqe për të ndryshuar sfondin dhe shpejtësinë
+          e Waddles dhe më pas lëvize atë me shigjetat derisa të shënosh?
+        studio_c2_11: Krijo ngjarjen tënde. Kur të përfundosh, kliko Mbaro që të lejosh
+          shokët të provojnë lojën në telefonat e tyre.
+        studio_c2_2: A mund ta bësh qenin të thotë diçka dhe më pas të bësh macen
+          të thotë diçka ?
+        studio_c2_3: A mund të shkruash një program që ta bëjë këtë qenin të lëvizë
+          për tek macja?
+        studio_c2_4: A mund të shkruash një program që bën qenin të lëviz për tek
+          macja dhe më pas macja ti thotë "përshëndetje" kur qeni ta arrijë atë?
+        studio_c2_5: A mund të shkruash një program që ta bëjë oktapodin të thotë
+          "përshëndetje" kur klikohet?
+        studio_c2_6: A mund të shkruash një program që bën Waddles të lëvizë rreth
+          e rrotull duke përdorur tastat lart/poshtë/majtas/djathtas për të goditur
+          të gjthë objektivët?
+        studio_c2_7: Blloku "përsërit gjithmonë" të lejon ta ekzekutosh kodin në mënyrë
+          të vazhdueshme. A mund të bashkosh blloqet për të lëvizur dinosaurin lart
+          e poshtë vazhdimisht?
+        studio_c2_8: A mund ta bësh Waddles të thotë "Ouch!" dhe të vendosësh një
+          tingull "gjuajtje" nëse ai shkon drejt dinosaurit dhe më pas ta lëvizësh
+          atë me shigjetat që ta bësh të mundur këtë gjë?
+        studio_c2_9: A mund të shtoni një bllok për të shënuar një pikë kur Waddles
+          përplaset shkon drejt oktapodit dhe më pas ta lëvizësh atë me shigjetat
+          derisa ju të shënoni?
+        studio_c3_game_1: A mund të bësh një program që ta bëjë oktapodin të thotë
+          "përshëndetje" kur klikohet?
+        studio_c3_game_2: A mund të shkruash një program që bën pinguinin të lëvizë
+          rreth e rrotull duke përodrur tastat lart/poshtë/majtas/djathtas për të
+          goditur të gjthë objektivët?
+        studio_c3_game_3: Blloku "repeat forever" të lejon ta ekzekutosh kodin në
+          mënyrë të vazhdueshme. A mund të bashkosh blloqet për të lëvizur dinosaurin
+          lart e poshtë vazhdimisht?
+        studio_c3_game_4: A mund ta bësh pinguinin të thotë "Ouch!" dhe të vendosësh
+          një tingull "gjuajtje" nëse ai përplaset me dinosaurin dhe më pas lëvize
+          atë me shigjetat që ta bësh të mundur këtë gjë?
+        studio_c3_game_5: A mund të shtoni një bllok për të shënuar një pikë kur pinguini
+          përplaset me oktapodin dhe më pas lëvize atë me shigjetat derisa të shënojë?
+        studio_c3_game_6: A mund të shtoni blloqe për të ndryshuar sfondin dhe shpejtësinë
+          e pinguinit dhe më pas lëvize atë me shigjetat derisa të shënosh?
+        studio_c3_game_7: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të
+          lejosh shokët e tu ta provojnë atë në telefonat e tyre.
+        studio_c3_story_1: A mund ta bësh këtë qen të thotë "përshëndetje botë"?
+        studio_c3_story_2: A mund ta bësh qenin të thotë diçka dhe më pas të bësh
+          dhe macen të thotë diçka më pas?
+        studio_c3_story_3: A mund të bësh një program që ta bëjë qenin të lëivzë për
+          tek macja?
+        studio_c3_story_4: A mund të shkruash një program që e lëviz qenin për tek
+          macja dhe më pas ti thotë "përshëndetje" kur qeni ta arrijë atë?
+        studio_c3_story_5: A mund të shtosh një bllok që ta bësh oktapodin e lumtur?
+        studio_c3_story_6: Krijo ngjarjen tënde. Kur të përfundosh, kliko Mbaro që
+          të lejosh shokët të provojnë lojën në telefonat e tyre.
+        studio_ec_sandbox: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të
+          lejosh shokët e tu ta provojnë atë në telefonat e tyre.
+        studio_full_sandbox: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që
+          të lejosh shokët e tu ta provojnë atë në telefonat e tyre.
+        studio_gumball_click_hello: Mund ta ndihmoni Anton të njoftojë fillimin e
+          një gare duke thënë se "Gati, pozicionohu, nisu!"? Për të testuar programin
+          tuaj, mos harroni të klikoni Anton pasi ju të klikoni Ekzekuto!
+        studio_gumball_free_play: Krijo lojën apo historin tuaj! Kur të mbarosh, kliko
+          Përfundova për të lejuar shokët të provojnë lojën tënde në telefonat , tabletët
+          apo kompjuterat e tyre!
+        studio_gumball_hello1: Anais dëshiron te bëj disa shokë të rinj. A mund ta
+          ndihmoni atë të thoj "përshëndetje"duke terhequr bllokun që thotë "Përshëndetje"
+          brenda zonës së punës dhe duke shkruar brenda fjalën "Përshëndetje"?
+        studio_gumball_hello2: Darwin (aktori 1) dhe vëllai i tij Gumball (aktori
+          2) po shkojnë në shkollë. Ndihmoni  ata të përshëndesin njëri-tjetrin duke
+          përdorur bllokun "aktori thotë"  dy herë.
+        studio_gumball_join_food_fight: Bashkengjituni luftës së ushqimit! Përdorni
+          komanden "aktori hedh objekt djathtas"  që të bëjë Banana Joe (aktorin 1)të
+          hedhi ushqimi te Anton (aktori 2)! Vendos gjendje të zëmëruar të Antonit
+          kur ai goditet.
+        studio_gumball_move_events: Darwin është në konkursin e mbledhjes së flamurit!
+          Ndihmoje atë të lëviz përreth duke ia bashkangjitur bllokun "lëviz"  secilës  ngjarje.
+          Kur të mbarosh, kliko Ekzekuto dhe përpiqu të mbledhësh të gjithë flamujt.
+        studio_gumball_move_to_actor: Gumball (aktori 1) dhe Darwin (aktori 2) janë
+          vonë për ditën e stërvitjes! Ndihmoje  Gumball të lëviz 200 pixels poshtë
+          për te Darvin duke  përdorur bllokun "lëviz aktorin". Tjetra, lidhë një
+          bllok me ngjarjen "kur aktori prek" që të luajë një tingull kur ata gjejnë
+          njëri-tjetrin.
+        studio_gumball_move_to_flag: Banana Joe është gati për të fituar garën e një
+          dite të tërë! Ndihmojë atë të shkojë te 200 piksele e fundit duke përdorur
+          bllokun "lëviz".
+        studio_gumball_repeat: Blloku "përsërit përgjithmonë" të lejon të ekzekutosh
+          kodin në mënyrë të vazhdueshme. A mund të bashkëngjitni blloqe aty për të
+          ndihmuar Gumball të bëj nxemje për garën e tij  duke lëvizur majtas dhe
+          të djathtas në mënyrë të përsëritur?
+        studio_gumball_sound_and_points: Ne kemi dhënë shumicën e  kodit që mban Anton(aktorin
+          1) duke lëvizur majtas dhe  djathtas, si dhe kodin për të lëvizur Banana
+          Joe (aktori 2) nëpër ekran. Mund të përfundoni kodin dhe shtimin e blloqeve
+          tek eventi "kur aktori prek"  për ta bërë atë në mënyrë që ju të dy të luani  një
+          tingull dhe të shënoni një pikë kur Banana Joe dhe Anton përplasen? Shtyp
+          Ekzekuto për të luajtur lojën.
+        studio_gumball_warn_food_fight: Darvini sapo i  shpëtoi një lufte ushqim!
+          Të ndryshuar sfondin  në"karaktere" dhe  vendosni shpejtësinë e Darwin të
+          shpejt , pastaj shtypni Ekzekuto dhe lëvizeni atë te Penny për të për të
+          paralajmëruar atë
+        studio_iceage_click_hello: A mund të ndihmoni Sid të bëj një thirrje të fundit
+          për miqtë kur klikohet? Mos harroni të klikoni mbi të, pasi ju shtyp Ekzekuto.
+        studio_iceage_free_play: Koha për të krijuar lojën apo historin tuaj! Kur
+          të mbarosh, kliko Përfundova për të lejuar shokët të provojnë lojën tënde
+          në telefonat e tyre!
+        studio_iceage_hello1: Sid dëshiron ti ftoje të gjithë për një aventurë të
+          re. A mund ta ndihmoni atë të thoj  "përshëndetje"duke terhequr bllokun
+          që thotë "Përshëndetje" brenda zonës së punës dhe duke shkruar brenda "Përshëndetje"?
+        studio_iceage_hello2: Manny (aktori 1) gjendet Sid (aktorin 2) dhe do ta ftojë
+          atë në aventurë. Ndihmo ata të përshëndesin njëri-tjetrin duke përdorur
+          blokun "aktori thotë" dy herë.
+        studio_iceage_move_events: Scrat është ende në kërkim të lajthisë! Ndihmojë
+          atë të vrapoj përreth duke ia bashkangjitur bllokun "lëviz"  për secilën
+          nga ngjarjet dhe ndryshuar drejtimin për të punuar për çdo çelës shigjetë.
+          Kur ju keni përfunduar, klikoni Ekzekuto dhe  përpiqu të mbledhësh  të gjitha
+          lajthit.
+        studio_iceage_move_to_actor: Diego (aktor 1) është në kërkim për Manny (aktorin
+          2). Ndihmoje Diegon të lëvizi 200 pixels poshtë për te Manny duke përdorur
+          bllokun "lëviz aktorin" . Tjetra, lidhë një bllok me ngjarjen "kur aktori
+          prek" që të luajë një tingull kur ata gjejnë njëri-tjetrin.
+        studio_iceage_move_to_flag: Scrat është duke kërkuar për lajthin  e tij! Ndihmojë
+          atë të shkojë në 200 pikselat e fundit duke përdorur bllokun "lëviz".
+        studio_iceage_repeat: Blloku "përsërit përgjithmonë" të lejon të ekzekutosh
+          kodin në mënyrë të vazhdueshme. A mund të bashkëngjitni blloqe aty për të
+          ndihmuar gjyshen  të bëj  disa ushtrime duke lëvizur majtas dhe të djathtas
+          në mënyrë të përsëritur?
+        studio_iceage_sound_and_points: Ne kemi dhënë shumicën e  kodit që mban Gjyshen
+          duke lëvizur majtas dhe  djathtas, si dhe kodin për të lëvizur Sid nëpër
+          ekran. Mund të përfundoni kodin dhe shtimin e blloqeve tek eventi "kur aktori
+          prek"  për ta bërë atë në mënyrë që ju të dy të luani  një tingull dhe të
+          shënoni një pikë kur Sid dhe Granny përplasen? Shtyp Ekzekuto për të luajtur
+          lojën.
+        studio_iceage_throw_hearts: Sid dëshiron tja bëj të ditur gjyshes së tij,
+          Granny, që ai e do atë. Përdor komandën "Aktori hedh" ta bëj Sid (aktorin
+          1) të hedh zemra te Granny (aktori 2)! Vendos gjendjen e gjyshes të lumtur
+          kur ajo goditet nga zemrat.
+        studio_iceage_warn_ice_age: Gjithkush ka nevojë për të lëvizur më shpejt sepse
+          një epokë akullnaje po vjen! Ndrysho sfondin në një sfond të akullt dhe
+          vendose shpejtësinë e Sid në të shpejtë, pastaj shtypni Ekzekuto dhe lëvizni
+          atë te Diego për ta paralajmëruar atë.
+        studio_k1_1: A mund ta bësh këtë qen të thotë "hello world"?
+        studio_k1_2: A mund ta bësh qenin të thotë diçka dhe më pas të bësh macen
+          të thotë diçka?
+        studio_k1_3: A mund të bësh një program që ta bëjë qenin të lëivzë për tek
+          macja?
+        studio_k1_4: Bëje qenin të lëvizë për tek macja dhe macja të thotë "përshëndetje"
+          kur ai arrin atje.
+        studio_k1_5: A mund të shtosh një bllok për ta bërë oktapodin të lumtur?
+        studio_k1_6: Krijo ngjarjen tënde! Lëviz rreth maces dhe qenit dhe beji ata
+          të flasin.
+        studio_playlab_1: Pinguini dëshiron të thotë "përshëndetje" - mund t'a ndihmoni
+          atë?
+        studio_playlab_10: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të
+          lejosh shokët e tu ta provojnë atë në telefonat e tyre.
+        studio_playlab_2: Djali i Shpellës (pjesëmarrësi 1) dhe Vajza Shpellës (pjesëmarrësi
+          2) dëshirojnë ti thonë "përshëndetje" njëri tjetrit. A mund ti ndihmoni
+          ata duke përdorur bllokun "say" dy herë?
+        studio_playlab_3: A mund ta ndihmosh Vajzën Teniste të arrijë tek flamuri?
+        studio_playlab_4: A mund ta ndihmosh Djalin Tenist (pjesëmarrësi 1) të shkojë
+          tek Vajaz Teniste (pjesëmarrësja 2) dhe të vendosësh një tingull kur ai
+          arrin atje?
+        studio_playlab_5: A mund ta ndihmosh Alienin të thotë "përshëndetje tokësorë"
+          kur klikohet? Mos harro ta klikosh atë pasi ke klikuar Run
+        studio_playlab_6: A mund ta ndihmosh Magjistaren të lëvizë rreth e rrotull
+          duke përdorur tastat lart/poshtë/djathtas/majtas të marrë të gjithë topat
+          e zjarrtë magjikë?
+        studio_playlab_7: Blloku "përsërit përgjithmonë" të lejon të ekzekutosh kodin
+          në mënyrë të vazhdueshme. A mund të shtoni blloqe tek ai bllok për të ndihmuar
+          magjistaren të lëvizë djathas dhe majtas në mënyrë të vazhdueshme?
+        studio_playlab_8: A mund të shtosh një bllok për të shënar një pikë dhe një
+          bllok për të luajtur një tingull kur njëbrirëshi has magjistaren, dhe më
+          pas ta lëvizësh atë me shigjeta derisa të shënosh pikë?
+        studio_playlab_9: Vendos sfondin për këtë invasion alienësh dhe ndihmo Anijen
+          kozmike të shkojë tek alieni më shpejt duke ndryshuar shpejtësinë e tij.
+          Më pas lëvize atë me shigjeta të arrijë tek Anija kozmike dhe të lajmërojë
+          gjithë të tjerët
         turtle_1_1: Përshëndetje! Unë jam një artist. Ti mund të shkruash kod për
           të më bërë mua të vizatoj çdo gjë. Përdor pak blloqe për të më bërë të vizatoj
           vijat gri në figurë.
+        turtle_1_10: 'Ti ja dole! Tani vizato çfarë të duash. Disa ide argëtuese:
+          një figurë ngjitëse, flok dëbore ose spirale. Gjithashtu, provo bllokun
+          e ri "set width". Bëfsh qejf!'
         turtle_1_2: 'Tani, vizato një katror. Shënim: përdor ngjyrën e preferuar duke
           e zgjedhur atë në bllokun e ri "set color".'
         turtle_1_3: Bëj një katror duke përdorur vetëm 3 blloqe.
@@ -123,70 +534,12 @@ sq:
           herë sa ta mbarosh vizatimin. Ngjyrat do të jenë të ndryshme çdo herë.
         turtle_1_9: A mund të zbulosh se me çfarë numri ti zëvëndësosh pikëpyetjet
           për të vizatuar një rreth?
-        turtle_1_10: 'Ti ja dole! Tani vizato çfarë të duash. Disa ide argëtuese:
-          një figurë ngjitëse, flok dëbore ose spirale. Gjithashtu, provo bllokun
-          e ri "set width". Bëfsh qejf!'
-        turtle_4_1: 'A mund të vizatosh një trekëndor (me cepa 100 piksela) me vetëm
-          3 blloqe? Ndihmë: përdor bllokun "përsërit".'
-        turtle_4_2: Shto një bllok "kthehu djathtas me 90 gradë" diku në mes të programit,
-          jashtë zonës tënde të punës, për të vizatuar këto trekëndorë.
-        turtle_4_3: Në rregull, ja ku është kodi që shkruajte për të vizatuar një
-          trekëndor. Mund të shtosh një bllok "përsërit" dhe "kthehu" për të bërë
-          një lule të bukur?
-        turtle_4_4: 'Këtu është i njëjti kod si me atë të puzzle-it të mëparshëm,
-          por me kthim vetëm me 36 gradë pas vizatimit të secilit trekëndësh. Sa herë
-          duhet të përsëritet kjo? (Ndihmë: pas 360 gradësh rrotullim do të krijohet
-          rrethi i plotë)'
-        turtle_4_5: 'Këtu është i njëjti kod si ai i puzzle-it të mëparshëm, por duke
-          përsëritur kthimet 36 herë. Sa gradë duhet të jetë kthimi? (Ndihmë: pas
-          360 gradësh kthim, vizatimi do të jetë rreth i plotë)'
-        turtle_4_6: Mund të vizatosh një katror me cepa 20 piksel, duke përdorur vetëm
-          3 blloqe?
-        turtle_4_7: 'Këtu ke kodin për të vizatuar katrorin e lojës së fundit formuese.
-          Je në gjendje t''a përsërisësh që të vizatosh 10 katrorë të ndryshëm në
-          formën e një shkalle? Ndihmë: të duhen 2 blloqe më shumë.'
-        turtle_4_8: Ja ku është zgjidhja e lojës formuese së mëparshme. Mund të shtosh
-          2 blloqe më shumë për të përfunduar vizatimin?
-        turtle_4_9: Ja ku është zgjidhja e lojës formuese së mëparshme. Sa gradë duhet
-          të kthehesh për të përfunduar vizatimin? ( Ndoshta do të të duhet t'a hamendësosh
-          disa herë)
-        turtle_4_10: Ja ku është zgjidhja e lojës formuese së mëparshme. Sa herë duhet
-          t'a përsërisësh që të përfundosh vizatimin?
-        turtle_4_11: Përpiqu të ndryshosh numrat në blloqet "kthehu" dhe "përsërit"
-          për të krijuar modele të ndryshme. Ose, eksperimento duke ndryshuar të gjithë
-          pjesën e mbetur të kodit për të vizatuar çfarë të dëshirosh.
-        maze_karel_1_1: Përshëndetje, unë jam një fermer. Kam nevojë për ndihmën tënde
-          që të zbukuroj fushën në fermën time në mënyrë që të jetë gati për mbjellje.
-          Më zhvendos në grumbullin e baltës dhe përdor bllokun "fshi" për t'a hequr.
-        maze_karel_1_2: Më pas, më zhvendos tek gropa dhe mbushe atë me DY lopata
-          plot me baltë duke përdorur bllokun "mbush".
-        maze_karel_1_3: Më zhvendos tek grumbulli i baltës dhe më thuaj sa lopata
-          të plota të heq duke përdorur sa më pak blloqe të jetë e mundur.
-        maze_karel_1_4: 'Mund të më ndihmosh të heq të katërt grumbujt e baltës? Ndihmë:
-          nëse ke mundësi, përdor një bllok përsëritës.'
-        maze_karel_1_5: 'Më ndihmo t''i mbush të gjitha gropat me 5 lopata me baltë.
-          Ndihmë: mund të vendosësh një bllok "repeat" brenda bllokut "while".'
-        maze_karel_1_6: Hiq të gjithë grumbujt me dhe duke përdorur sa më pak blloqe
-          të jetë e mundur. Opsionet në menunë dropdown tek blloku "ndërsa" më tregojnë
-          nëse jam duke qëndruar në grumbull ose në një gropë.
-        maze_karel_1_7: Uau, unë gjeta një gropë vërtet të thellë! Nuk e di se sa
-          lopata me dhe nevojiten. A mund të shkruash një program që e mbush atë derisa
-          toka të jetë e shtruar?
-        maze_karel_1_8: Më ndihmo të mbush gropën në fund të fushës, dukë përdorur
-          sa më pak blloqe të jetë e mundur.
-        maze_karel_1_9: 'Më bëj që të heq të githë grumbullin me dhe. Përpiqu të përdorësh
-          sa më pak blloqe që të jetë e mundur. Ndihmë: përpiqu të përdorësh bllokun
-          "ndërsa".'
-        maze_karel_1_10: Unë jam duke punuar deri vonë, kështu që u errësua jashtë
-          dhe s'mund ta dalloj sa të mëdhaja janë grumbujt me dhe. Tani, unë nuk kam
-          më të gjitha mundësitë që kisha tek blloku ndërsa. Më lëviz përgjatë fushës
-          dhe nëse ka ndonjë grumbull, hiqe atë.
-        maze_karel_1_11: 'Është ende errësirë jashtë. Më lëviz përgjatë rrugës, Nëse
-          ka ndonjë grumbull, hiqe atë dhe nëse ka ndonjë gropë, mbushe atë. Ndihmë:
-          përdor menunë e opsioneve në bllokun "nëse".'
         turtle_2_1: 'Përshëndetje. Unë jam një zombie. Më pëlqen shumë të vizatoj!
           Më ndihmo që të vizatoj një katror me ndonjë ngjyrë të veçantë. Shënim i
           rëndësishëm: ke të njëjtët blloqe, por tani ata janë vendosur nëpër kategori.'
+        turtle_2_10: Këtu jepet një kod, që të provosh të eksperimentosh me spirale
+          të ndryshme. Çfarë ndodh nëse ndryshon numrin e kthimeve? Apo të vendosësh
+          një ngjyrë të çfarëdoshme tek cikli? Vizato çfarë të dëshirosh.
         turtle_2_2: Mirë se erdhe tek funksionet e përdorueshëm, që  të lejojnë ty
           të përcaktosh blloqe të reja! Provo bllokun e ri "vizato një katror", që
           ndodhet tek kategoria "Funksionet", për të vizatuar një katror të vogël,
@@ -217,41 +570,13 @@ sq:
         turtle_2_9: Përdor një funksion ciklik "count with" për të vizatuar një familje
           me pleq dëbore me gjatësi 110, 100, 90, 80 dhe 70. Pleqtë e dëborës duhet
           të jenë të gjithë 60 piksela larg.
-        turtle_2_10: Këtu jepet një kod, që të provosh të eksperimentosh me spirale
-          të ndryshme. Çfarë ndodh nëse ndryshon numrin e kthimeve? Apo të vendosësh
-          një ngjyrë të çfarëdoshme tek cikli? Vizato çfarë të dëshirosh.
-        maze_karel_2_1: 'Provo të përdorësh blloqet për të më ndihmuar mua që të heq
-          gjithë grumbullin dhe të mbush të gjitha gropat në tokë. Përpiqu të përodrësh
-          cikle në vend që të përdorësh shumë blloqe. Ndihmë: Mund të vendosësh një
-          cikël brenda një cikli tjetër.'
-        maze_karel_2_2: Ne kemi përcaktuar bllokun tonë të quajtur "fill 5", që është
-          tani në kategorinë e Funksioneve. Përdore atë që të më ndihmosh mua të mbush
-          këtë gropën.
-        maze_karel_2_3: Përdor bllokun e funksionit të ri "fill 5" për të më bërë
-          mua të mbush gjithë gropat. Ti duhet të zvarrisësh bllokun "fill 5" nga
-          kategoria e Funksioneve.
-        maze_karel_2_4: Përcakto një funksion të ri që heq 7 lopata të mbushura. Më
-          pas përodre atë për të shkruar një program që më ndihmon të heq të gjithë
-          grumbujt.
-        maze_karel_2_5: Krijo një funksion të ri që heq 6 lopata të mbushura nga grumbulli
-          dhe përdore atë për të më ndihmuar mua të niveloj të gjithë grumbujt.
-        maze_karel_2_6: Përdor dy funkisone të reja. "fill 8" dhe "remove 8", për
-          të më ndihmuar mua të niveloj grumbullin dhe të mbush gropën.
-        maze_karel_2_7: Ka një lopë në fushën time! Shkruaj një funksion të ri që
-          më ndihmon mua të shmang lopën dhe të heq grumbullin. Vendos të gjithë blloqet
-          brenda funkisonit të ri.
-        maze_karel_2_8: Përodr këtë funksion të ri, "avoid the cow and remove 1",
-          për të më ndihmuar mua të heq të gjithë grumbujt.
-        maze_karel_2_9: Në rregull, këtu ka një funksion që heq 4 grumbuj të ndryshëm
-          dheu në një kolonë vertikale. Përpiqu të vendosësh këtë funksion brenda
-          një cikli, që të mund të heqësh të gjithë grumbujt e dheut duke përdorur
-          disa blloqe të reja.
-        maze_karel_2_10: Më lëviz mua përmes fushës dhe përdor këto dy funksione,
-          për të më ndihmuar mua të heq gjithë grumbujt dhe të mbush gjithë gropat.
         turtle_3_1: Ky puzzle të tregon se si janë përcaktuar funksionet "draw a square"
           dhe "draw a circle". Për të përcaktuar një funksion nuk përdoren blloqet
           e tij. Ti duhet të zvarrisësh bllokun "draw a square" për të vizatuar një
           katror.
+        turtle_3_10: Ti ke mësuar shumë! Tani përdore për të vizatuar çfarëdo që ti
+          dëshiron. Përpiqu të vizatosh një yll ose një spirale ose një flok dëbore
+          të bukur.
         turtle_3_2: Duke përdorur funksionin "draw a square" si nje shembull, krijo
           nje funksion "draw a triangle" dhe përodre atë.
         turtle_3_3: 'Vizato gardhe trekëndorë rreth maceve dhe gardh katror rreth
@@ -272,28 +597,35 @@ sq:
           për të vizatuar 3 shtëpi.
         turtle_3_9: A mund të rikrijosh funksionin "draw a house" pa ndihmë? Provoje
           dhe pastaj vizato një rresht me shtëpi.
-        turtle_3_10: Ti ke mësuar shumë! Tani përdore për të vizatuar çfarëdo që ti
-          dëshiron. Përpiqu të vizatosh një yll ose një spirale ose një flok dëbore
-          të bukur.
-        maze_karel_debug_seq_1: MIrë se vini në debugging! Kodi im nuk punon si duhet.
-          Mund ta shënoni si problem dhe ta rregulloni në mënyrë që të më shtrohet
-          fusha dhe të jetë gati për mbjellje?
-        maze_karel_debug_seq_2: Çfarë problemi ka me këtë program? Si mund ta rregullosh
-          në mënyrë që të heq këtë grumbull?
-        maze_karel_debug_repeat: Rregulloje këtë program për mua, që fusha ime të
-          jetë e sheshtë dhe e mirë.
-        maze_karel_debug_while: Si mund të ndryshosh këtë program për të më ndihmuar
-          mua të mbush gropën?
-        maze_karel_debug_if: Ndihmë! Rregullo programin, që fusha ime të jetë totalisht
-          e sheshtë.
-        maze_karel_debug_if_else: Rregullo këtë program në mënyrë që të mbush gropat
-          dhe të heq gjithë grumbujt.
-        maze_karel_debug_function_1: Çfarë duhet të ndryshosh në këtë program që të
-          më ndihmosh të heq gjithë grumbujt?
-        maze_karel_debug_function_2: A mund të rregullosh këtë program për mua që
-          ta bëj fushën time të sheshtë?
-        maze_karel_debug_function_3: 'Modifiko këtë program që të heq gjithë grumbujt
-          nga fusha. '
+        turtle_4_1: 'A mund të vizatosh një trekëndor (me cepa 100 piksela) me vetëm
+          3 blloqe? Ndihmë: përdor bllokun "përsërit".'
+        turtle_4_10: Ja ku është zgjidhja e lojës formuese së mëparshme. Sa herë duhet
+          t'a përsërisësh që të përfundosh vizatimin?
+        turtle_4_11: Përpiqu të ndryshosh numrat në blloqet "kthehu" dhe "përsërit"
+          për të krijuar modele të ndryshme. Ose, eksperimento duke ndryshuar të gjithë
+          pjesën e mbetur të kodit për të vizatuar çfarë të dëshirosh.
+        turtle_4_2: Shto një bllok "kthehu djathtas me 90 gradë" diku në mes të programit,
+          jashtë zonës tënde të punës, për të vizatuar këto trekëndorë.
+        turtle_4_3: Në rregull, ja ku është kodi që shkruajte për të vizatuar një
+          trekëndor. Mund të shtosh një bllok "përsërit" dhe "kthehu" për të bërë
+          një lule të bukur?
+        turtle_4_4: 'Këtu është i njëjti kod si me atë të puzzle-it të mëparshëm,
+          por me kthim vetëm me 36 gradë pas vizatimit të secilit trekëndësh. Sa herë
+          duhet të përsëritet kjo? (Ndihmë: pas 360 gradësh rrotullim do të krijohet
+          rrethi i plotë)'
+        turtle_4_5: 'Këtu është i njëjti kod si ai i puzzle-it të mëparshëm, por duke
+          përsëritur kthimet 36 herë. Sa gradë duhet të jetë kthimi? (Ndihmë: pas
+          360 gradësh kthim, vizatimi do të jetë rreth i plotë)'
+        turtle_4_6: Mund të vizatosh një katror me cepa 20 piksel, duke përdorur vetëm
+          3 blloqe?
+        turtle_4_7: 'Këtu ke kodin për të vizatuar katrorin e lojës së fundit formuese.
+          Je në gjendje t''a përsërisësh që të vizatosh 10 katrorë të ndryshëm në
+          formën e një shkalle? Ndihmë: të duhen 2 blloqe më shumë.'
+        turtle_4_8: Ja ku është zgjidhja e lojës formuese së mëparshme. Mund të shtosh
+          2 blloqe më shumë për të përfunduar vizatimin?
+        turtle_4_9: Ja ku është zgjidhja e lojës formuese së mëparshme. Sa gradë duhet
+          të kthehesh për të përfunduar vizatimin? ( Ndoshta do të të duhet t'a hamendësosh
+          disa herë)
         turtle_5_1: Provo ta ekzekutosh këtë program dhe bëj ndryshime për të parë
           se çfarë ndodh. A mund ta kuptosh se si punon? (Ose fshije atë dhe zëvëndësoje
           me diçka komplet ndryshe)
@@ -312,245 +644,99 @@ sq:
         turtle_5_6: Përpiqu ta ekzekutosh këtë program dhe bëj ndryshime për të parë
           se çfarë ndodh. A mund ta imagjinosh se si punon? (Ose fshije atë dhe zëvëndësoje
           atë me diçka komplet ndryshe)
-        maze_3_1: Unë kam nevojë të arrij tek ai derrkuc! Shkruaj disa thirrje për
-          të lëvizur(); që unë të marr mbrapsht vezët e mia.
-        maze_3_2: Më shkruaj një program që unë të shkoj tek ai derrkuc.
-        maze_3_3: Si të shkoj te derrkuci? Sigurohu që unë nuk vrapoj brenda kutisë
-          së TNT!
-        maze_3_4: Argh! Më shkruaj një program që më nxjerr nga TNT dhe më çon drejt
-          derrkucit.
-        Custom_builder: Lëviz blloqet nga toolboxi tek vendi i punës për të vizatuar
-          nivelin që dëshiron të krijosh. Shtyp "Run" kur të jesh gati.
-        jigsaw_1: Kliko bllokun
-        jigsaw_2: Lëviz bllokun tek objektivi
-        jigsaw_3: Vendos blloqet që të formojnë një imazh
-        jigsaw_4: Vendos blloqet që të formojnë një imazh
-        jigsaw_5: Vendos blloqet që të formojnë një imazh
-        jigsaw_6: Vendos blloqet që të formojnë një imazh
-        jigsaw_7: Vendos blloqet që të formojnë një imazh
-        jigsaw_8: Vendos blloqet që të formojnë një imazh
-        jigsaw_9: Vendos blloqet që të formojnë një imazh
-        jigsaw_10: Vendos blloqet që të formojnë një imazh
-        jigsaw_11: Vendos blloqet që të formojnë një imazh
-        jigsaw_12: Vendos blloqet që të formojnë një imazh
-        jigsaw_13: Rregullo puzzle-in!
-        mazestep_1: Përshkrimi i hapave të labirintit është këtu
-        mazestep_2: Përshkrimi i hapave të Maze është këtu
-        mazestep_3: Përshkrimi i hapave të Maze është këtu
-        mazestep_4: Përshkrimi i hapave të Maze është këtu
-        mazestep_5: Përshkrimi i hapave të Maze është këtu
-        studio_c2_1: A mund ta bësh këtë qen të thotë "përshëndetje botë"?
-        studio_c2_2: A mund ta bësh qenin të thotë diçka dhe më pas të bësh macen
-          të thotë diçka ?
-        studio_c2_3: A mund të shkruash një program që ta bëjë këtë qenin të lëvizë
-          për tek macja?
-        studio_c2_4: A mund të shkruash një program që bën qenin të lëviz për tek
-          macja dhe më pas macja ti thotë "përshëndetje" kur qeni ta arrijë atë?
-        studio_c2_5: A mund të shkruash një program që ta bëjë oktapodin të thotë
-          "përshëndetje" kur klikohet?
-        studio_c2_6: A mund të shkruash një program që bën Waddles të lëvizë rreth
-          e rrotull duke përdorur tastat lart/poshtë/majtas/djathtas për të goditur
-          të gjthë objektivët?
-        studio_c2_7: Blloku "përsërit gjithmonë" të lejon ta ekzekutosh kodin në mënyrë
-          të vazhdueshme. A mund të bashkosh blloqet për të lëvizur dinosaurin lart
-          e poshtë vazhdimisht?
-        studio_c2_8: A mund ta bësh Waddles të thotë "Ouch!" dhe të vendosësh një
-          tingull "gjuajtje" nëse ai shkon drejt dinosaurit dhe më pas ta lëvizësh
-          atë me shigjetat që ta bësh të mundur këtë gjë?
-        studio_c2_9: A mund të shtoni një bllok për të shënuar një pikë kur Waddles
-          përplaset shkon drejt oktapodit dhe më pas ta lëvizësh atë me shigjetat
-          derisa ju të shënoni?
-        studio_c2_10: A mund të shtoni blloqe për të ndryshuar sfondin dhe shpejtësinë
-          e Waddles dhe më pas lëvize atë me shigjetat derisa të shënosh?
-        studio_c2_11: Krijo ngjarjen tënde. Kur të përfundosh, kliko Mbaro që të lejosh
-          shokët të provojnë lojën në telefonat e tyre.
-        studio_c3_story_1: A mund ta bësh këtë qen të thotë "përshëndetje botë"?
-        studio_c3_story_2: A mund ta bësh qenin të thotë diçka dhe më pas të bësh
-          dhe macen të thotë diçka më pas?
-        studio_c3_story_3: A mund të bësh një program që ta bëjë qenin të lëivzë për
-          tek macja?
-        studio_c3_story_4: A mund të shkruash një program që e lëviz qenin për tek
-          macja dhe më pas ti thotë "përshëndetje" kur qeni ta arrijë atë?
-        studio_c3_story_5: A mund të shtosh një bllok që ta bësh oktapodin e lumtur?
-        studio_c3_story_6: Krijo ngjarjen tënde. Kur të përfundosh, kliko Mbaro që
-          të lejosh shokët të provojnë lojën në telefonat e tyre.
-        studio_c3_game_1: A mund të bësh një program që ta bëjë oktapodin të thotë
-          "përshëndetje" kur klikohet?
-        studio_c3_game_2: A mund të shkruash një program që bën pinguinin të lëvizë
-          rreth e rrotull duke përodrur tastat lart/poshtë/majtas/djathtas për të
-          goditur të gjthë objektivët?
-        studio_c3_game_3: Blloku "repeat forever" të lejon ta ekzekutosh kodin në
-          mënyrë të vazhdueshme. A mund të bashkosh blloqet për të lëvizur dinosaurin
-          lart e poshtë vazhdimisht?
-        studio_c3_game_4: A mund ta bësh pinguinin të thotë "Ouch!" dhe të vendosësh
-          një tingull "gjuajtje" nëse ai përplaset me dinosaurin dhe më pas lëvize
-          atë me shigjetat që ta bësh të mundur këtë gjë?
-        studio_c3_game_5: A mund të shtoni një bllok për të shënuar një pikë kur pinguini
-          përplaset me oktapodin dhe më pas lëvize atë me shigjetat derisa të shënojë?
-        studio_c3_game_6: A mund të shtoni blloqe për të ndryshuar sfondin dhe shpejtësinë
-          e pinguinit dhe më pas lëvize atë me shigjetat derisa të shënosh?
-        studio_c3_game_7: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të
-          lejosh shokët e tu ta provojnë atë në telefonat e tyre.
-        studio_playlab_1: Pinguini dëshiron të thotë "përshëndetje" - mund t'a ndihmoni
-          atë?
-        studio_playlab_2: Djali i Shpellës (pjesëmarrësi 1) dhe Vajza Shpellës (pjesëmarrësi
-          2) dëshirojnë ti thonë "përshëndetje" njëri tjetrit. A mund ti ndihmoni
-          ata duke përdorur bllokun "say" dy herë?
-        studio_playlab_3: A mund ta ndihmosh Vajzën Teniste të arrijë tek flamuri?
-        studio_playlab_4: A mund ta ndihmosh Djalin Tenist (pjesëmarrësi 1) të shkojë
-          tek Vajaz Teniste (pjesëmarrësja 2) dhe të vendosësh një tingull kur ai
-          arrin atje?
-        studio_playlab_5: A mund ta ndihmosh Alienin të thotë "përshëndetje tokësorë"
-          kur klikohet? Mos harro ta klikosh atë pasi ke klikuar Run
-        studio_playlab_6: A mund ta ndihmosh Magjistaren të lëvizë rreth e rrotull
-          duke përdorur tastat lart/poshtë/djathtas/majtas të marrë të gjithë topat
-          e zjarrtë magjikë?
-        studio_playlab_7: Blloku "përsërit përgjithmonë" të lejon të ekzekutosh kodin
-          në mënyrë të vazhdueshme. A mund të shtoni blloqe tek ai bllok për të ndihmuar
-          magjistaren të lëvizë djathas dhe majtas në mënyrë të vazhdueshme?
-        studio_playlab_8: A mund të shtosh një bllok për të shënar një pikë dhe një
-          bllok për të luajtur një tingull kur njëbrirëshi has magjistaren, dhe më
-          pas ta lëvizësh atë me shigjeta derisa të shënosh pikë?
-        studio_playlab_9: Vendos sfondin për këtë invasion alienësh dhe ndihmo Anijen
-          kozmike të shkojë tek alieni më shpejt duke ndryshuar shpejtësinë e tij.
-          Më pas lëvize atë me shigjeta të arrijë tek Anija kozmike dhe të lajmërojë
-          gjithë të tjerët
-        studio_playlab_10: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të
-          lejosh shokët e tu ta provojnë atë në telefonat e tyre.
-        studio_iceage_hello1: Sid dëshiron ti ftoje të gjithë për një aventurë të
-          re. A mund ta ndihmoni atë të thoj  "përshëndetje"duke terhequr bllokun
-          që thotë "Përshëndetje" brenda zonës së punës dhe duke shkruar brenda "Përshëndetje"?
-        studio_iceage_hello2: Manny (aktori 1) gjendet Sid (aktorin 2) dhe do ta ftojë
-          atë në aventurë. Ndihmo ata të përshëndesin njëri-tjetrin duke përdorur
-          blokun "aktori thotë" dy herë.
-        studio_iceage_move_to_flag: Scrat është duke kërkuar për lajthin  e tij! Ndihmojë
-          atë të shkojë në 200 pikselat e fundit duke përdorur bllokun "lëviz".
-        studio_iceage_move_to_actor: Diego (aktor 1) është në kërkim për Manny (aktorin
-          2). Ndihmoje Diegon të lëvizi 200 pixels poshtë për te Manny duke përdorur
-          bllokun "lëviz aktorin" . Tjetra, lidhë një bllok me ngjarjen "kur aktori
-          prek" që të luajë një tingull kur ata gjejnë njëri-tjetrin.
-        studio_iceage_repeat: Blloku "përsërit përgjithmonë" të lejon të ekzekutosh
-          kodin në mënyrë të vazhdueshme. A mund të bashkëngjitni blloqe aty për të
-          ndihmuar gjyshen  të bëj  disa ushtrime duke lëvizur majtas dhe të djathtas
-          në mënyrë të përsëritur?
-        studio_iceage_click_hello: A mund të ndihmoni Sid të bëj një thirrje të fundit
-          për miqtë kur klikohet? Mos harroni të klikoni mbi të, pasi ju shtyp Ekzekuto.
-        studio_iceage_move_events: Scrat është ende në kërkim të lajthisë! Ndihmojë
-          atë të vrapoj përreth duke ia bashkangjitur bllokun "lëviz"  për secilën
-          nga ngjarjet dhe ndryshuar drejtimin për të punuar për çdo çelës shigjetë.
-          Kur ju keni përfunduar, klikoni Ekzekuto dhe  përpiqu të mbledhësh  të gjitha
-          lajthit.
-        studio_iceage_sound_and_points: Ne kemi dhënë shumicën e  kodit që mban Gjyshen
-          duke lëvizur majtas dhe  djathtas, si dhe kodin për të lëvizur Sid nëpër
-          ekran. Mund të përfundoni kodin dhe shtimin e blloqeve tek eventi "kur aktori
-          prek"  për ta bërë atë në mënyrë që ju të dy të luani  një tingull dhe të
-          shënoni një pikë kur Sid dhe Granny përplasen? Shtyp Ekzekuto për të luajtur
-          lojën.
-        studio_iceage_warn_ice_age: Gjithkush ka nevojë për të lëvizur më shpejt sepse
-          një epokë akullnaje po vjen! Ndrysho sfondin në një sfond të akullt dhe
-          vendose shpejtësinë e Sid në të shpejtë, pastaj shtypni Ekzekuto dhe lëvizni
-          atë te Diego për ta paralajmëruar atë.
-        studio_iceage_throw_hearts: Sid dëshiron tja bëj të ditur gjyshes së tij,
-          Granny, që ai e do atë. Përdor komandën "Aktori hedh" ta bëj Sid (aktorin
-          1) të hedh zemra te Granny (aktori 2)! Vendos gjendjen e gjyshes të lumtur
-          kur ajo goditet nga zemrat.
-        studio_iceage_free_play: Koha për të krijuar lojën apo historin tuaj! Kur
-          të mbarosh, kliko Përfundova për të lejuar shokët të provojnë lojën tënde
-          në telefonat e tyre!
-        studio_gumball_hello1: Anais dëshiron te bëj disa shokë të rinj. A mund ta
-          ndihmoni atë të thoj "përshëndetje"duke terhequr bllokun që thotë "Përshëndetje"
-          brenda zonës së punës dhe duke shkruar brenda fjalën "Përshëndetje"?
-        studio_gumball_hello2: Darwin (aktori 1) dhe vëllai i tij Gumball (aktori
-          2) po shkojnë në shkollë. Ndihmoni  ata të përshëndesin njëri-tjetrin duke
-          përdorur bllokun "aktori thotë"  dy herë.
-        studio_gumball_move_to_flag: Banana Joe është gati për të fituar garën e një
-          dite të tërë! Ndihmojë atë të shkojë te 200 piksele e fundit duke përdorur
-          bllokun "lëviz".
-        studio_gumball_move_to_actor: Gumball (aktori 1) dhe Darwin (aktori 2) janë
-          vonë për ditën e stërvitjes! Ndihmoje  Gumball të lëviz 200 pixels poshtë
-          për te Darvin duke  përdorur bllokun "lëviz aktorin". Tjetra, lidhë një
-          bllok me ngjarjen "kur aktori prek" që të luajë një tingull kur ata gjejnë
-          njëri-tjetrin.
-        studio_gumball_repeat: Blloku "përsërit përgjithmonë" të lejon të ekzekutosh
-          kodin në mënyrë të vazhdueshme. A mund të bashkëngjitni blloqe aty për të
-          ndihmuar Gumball të bëj nxemje për garën e tij  duke lëvizur majtas dhe
-          të djathtas në mënyrë të përsëritur?
-        studio_gumball_click_hello: Mund ta ndihmoni Anton të njoftojë fillimin e
-          një gare duke thënë se "Gati, pozicionohu, nisu!"? Për të testuar programin
-          tuaj, mos harroni të klikoni Anton pasi ju të klikoni Ekzekuto!
-        studio_gumball_move_events: Darwin është në konkursin e mbledhjes së flamurit!
-          Ndihmoje atë të lëviz përreth duke ia bashkangjitur bllokun "lëviz"  secilës  ngjarje.
-          Kur të mbarosh, kliko Ekzekuto dhe përpiqu të mbledhësh të gjithë flamujt.
-        studio_gumball_sound_and_points: Ne kemi dhënë shumicën e  kodit që mban Anton(aktorin
-          1) duke lëvizur majtas dhe  djathtas, si dhe kodin për të lëvizur Banana
-          Joe (aktori 2) nëpër ekran. Mund të përfundoni kodin dhe shtimin e blloqeve
-          tek eventi "kur aktori prek"  për ta bërë atë në mënyrë që ju të dy të luani  një
-          tingull dhe të shënoni një pikë kur Banana Joe dhe Anton përplasen? Shtyp
-          Ekzekuto për të luajtur lojën.
-        studio_gumball_warn_food_fight: Darvini sapo i  shpëtoi një lufte ushqim!
-          Të ndryshuar sfondin  në"karaktere" dhe  vendosni shpejtësinë e Darwin të
-          shpejt , pastaj shtypni Ekzekuto dhe lëvizeni atë te Penny për të për të
-          paralajmëruar atë
-        studio_gumball_join_food_fight: Bashkengjituni luftës së ushqimit! Përdorni
-          komanden "aktori hedh objekt djathtas"  që të bëjë Banana Joe (aktorin 1)të
-          hedhi ushqimi te Anton (aktori 2)! Vendos gjendje të zëmëruar të Antonit
-          kur ai goditet.
-        studio_gumball_free_play: Krijo lojën apo historin tuaj! Kur të mbarosh, kliko
-          Përfundova për të lejuar shokët të provojnë lojën tënde në telefonat , tabletët
-          apo kompjuterat e tyre!
-        studio_full_sandbox: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që
-          të lejosh shokët e tu ta provojnë atë në telefonat e tyre.
-        studio_k1_1: A mund ta bësh këtë qen të thotë "hello world"?
-        studio_k1_2: A mund ta bësh qenin të thotë diçka dhe më pas të bësh macen
-          të thotë diçka?
-        studio_k1_3: A mund të bësh një program që ta bëjë qenin të lëivzë për tek
-          macja?
-        studio_k1_4: Bëje qenin të lëvizë për tek macja dhe macja të thotë "përshëndetje"
-          kur ai arrin atje.
-        studio_k1_5: A mund të shtosh një bllok për ta bërë oktapodin të lumtur?
-        studio_k1_6: Krijo ngjarjen tënde! Lëviz rreth maces dhe qenit dhe beji ata
-          të flasin.
-        maze_wordsearch_k_1: Më lëviz që të gërmëzoj fjalën LINDJE
-        maze_wordsearch_k_2: Më lëviz që të gërmëzoj fjalën JUG
-        maze_wordsearch_k_3: Më lëviz që të gërmëzoj fjalën PERËNDIM
-        maze_wordsearch_k_4: Më lëivz që të gërmëzoj fjalën VERI
-        maze_wordsearch_k_6: Më lëviz nga Lindja dhe më pas nga Jugu për të gërmëzuar
-          fjalën KËRCE
-        maze_wordsearch_k_9: Më lëviz nga një anë, më pas nga ana tjetër që të gërmëzoj
-          fjalën KOD
-        maze_wordsearch_k_13: Më lëviz mua në një mënyrë, më pas në një tjetër, që
-          të gërmëzohet fjala EKZEKUTO
-        maze_wordsearch_k_15: Më lëviz mua në një mënyrë, më pas në një tjetër, që
-          të gërmëzohet fjala LART
-        maze_wordsearch_k_16: Më lëviz mua në një mënyrë, më pas në një tjetër, që
-          të gërmëzohet fjala POSHTË
-        maze_wordsearch_k_20: Ky është një tets! Më lëviz mua në një mënyrë, më pas
-          në mënyrë tjetër që të gërmëzohet fjala NGJARJE
-        applab_ec_simple: Krijo aplikacionin tënd duke përdorur blloqet në toolbox.
-        turtle_ec_1_2: 'Tani, vizato një katror. SHËNIM: përdor ngjyrën tënde të preferuar
-          duke e zgjedhur atë në bllokun "penColor".'
         turtle_ec_1_10: 'Ti ja dole! Tani vizato çfarë të duah. Disa ide zbavitëse:
           një figurë ngjitëse, flok dëbore ose spirale. Gjithashtu, provo bllokun
           e ri "penWidth". Bëfsh qejf!'
-        studio_ec_sandbox: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të
-          lejosh shokët e tu ta provojnë atë në telefonat e tyre.
+        turtle_ec_1_2: 'Tani, vizato një katror. SHËNIM: përdor ngjyrën tënde të preferuar
+          duke e zgjedhur atë në bllokun "penColor".'
+    trophy:
+      name:
+        Bronze: Bronx
+        Gold: Ari
+        Silver: Argjend
     video:
       name:
-        maze_intro: Hyrja e Maze
-        artist_intro: Hyrja e Artistit
-        farmer_intro: Hyrja e Fermerit
-        flappy_intro: Hyrja e Flappy-t
-        loop_times: Blloku Përsëritja e Herëve
-        loop_until: Blloku Përsërit Derisa
-        if: Blloku If
-        if_else: Blloku If/Else
-        if_else_scrat: Blloku Nëse/përndryshe
-        function: Funksionet
-        loop_while: Blloku While
-        loop_for: Blloku Counter
-        parameters: Funksionet me parametra
-        hoc_wrapup: Përmbledhja e Orës së Kodimit
+        C1_artist_intro: Hyrja Artistit
+        C1_bee_level_intro: Niveli i Bletëve - Hyrje
+        C1_bee_loops: Përsëritja e Bletëve
+        C1_bigevent_unplugged: Ngjarja e Madhe
+        C1_building_foundation: Ndërtimi i një Baze
+        C1_getting_loopy: Duke u Çmëndur
+        C1_going_places_safely: Të shkuarit nëpër Vende në mënyrë të Sigurtë
+        C1_happy_maps_unplugged: Hartat e Lumtura
+        C1_maze_debugging: Riparimi i Maze
+        C1_maze_intro_sequencing: Hyrja e Sekuencuar e Maze
+        C1_maze_loops: Përsëritja e Maze
+        C1_moveitmoveit_unplugged: Lëvize atë, lëvize atë
+        C1_pair_programming: Programim në çift
+        C1_planting_seed: Mbjellja e një fare
+        C1_playlab_storytelling: Play Lab - Krijo një Ngjarje
+        C1_spelling_bee_intro: Hyrja e Bletëve të gërmëzuara
+        C1_zuck_repeat_loop: Përsëritja e Maze
+        C2_artist_debugging: Riparimi i Artistit
+        C2_artist_intro: Hyrja e Artistit
+        C2_artist_loops: Përsëritjet e Artistit
+        C2_bee_conditionals: Kushtet e Bletëve
+        C2_bee_debugging: Riparimi i Bletëve
+        C2_bee_loops: Përsëritja e Bletëve
+        C2_binary_bracelets: Byzylyku Binar
+        C2_conditionals_with_cards: Kushtet
+        C2_digital_footprint: Hapat e tua Dixhitale
+        C2_digital_footprint_v2: Gjurmët e Tua Dixhitale
+        C2_graph_paper: Programimi grafik me letër
+        C2_maze_intro: Hyrja e Maze
+        C2_paper_airplanes: Avionët prej Letre
+        C2_playlab_createstory: Play Lab - Krijo një Ngjarje
+        C2_relay_programming: Programimi i Besuar
+        C2_zuck_repeat_loop: Përsëritja e Maze
+        C3_artist_functions: Funksionet e Artistit
+        C3_artist_intro: Hyrja e Artistit
+        C3_artist_nested_loops: Përsëritjet e Mbivendosura
+        C3_bee_conditionals: Kushtet e Bletëve
+        C3_bee_debugging: Riparimi i Bletëve
+        C3_bee_functions: Funksionet e Bletëve
+        C3_bee_nested_loops: Përsëritjet e Mbivendosura
+        C3_bounce: Hidhu
+        C3_computational_thinking: Te menduarit kompjuterik
+        C3_crowdsourcing: Crowdsourcing
+        C3_dice_race: Gara me zar
+        C3_farmer_while: Përsëritjet Ndërsa
+        C3_functional_suncatchers: Suncatchers Funksionalë
+        C3_internet: Internet
+        C3_maze_conditionals: Kushtet e Maze
+        C3_maze_level_4: Përsëritja e Maze
+        C3_playlab_create_game: Play Lab - Krijo një Lojë
+        C3_songwriting_with_parameters: Të shkruarit këngë me Parametra
+        C4_bee_conditional: Kushtet e Bletëve
+        C4_conditionals: Kushtet
+        C4_for_loops: Për Ciklet
+        C4_for_loops_bee: Për Ciklet
+        C4_for_loops_no_bee: Për Ciklet
+        C4_function_create: Krijimi i Funksioneve
+        C4_function_edit: Redaktimi i Funksioneve
+        C4_function_parameters: Funksionet me parametra
+        C4_intro: Hyrje
+        C4_loops_zombie: përsëritje
+        C4_math_artist: Të programosh Artistin me Matematikën
+        C4_unplugged_algorithms: Algoritmet me Tangrams
+        C4_unplugged_binary: Binare
+        C4_unplugged_forloops: Për Ciklet
+        C4_unplugged_madlibs: Libs-i i Çmendur
+        C4_unplugged_parameters: Të shkruarit këngë me Parametra
+        C4_unplugged_variables: Variablat në Zarfe
+        C4_variables_artist: Variablat - Artist
+        C4_variables_playlab: Variablat - Play Lab
+        CDEF_Video_SpritesInAction: Sprites në veprim
+        CSF_SpriteLab_Intro_v2: Prezantimi i Sprite Lab
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites në veprim
+        CSF_SpriteLab_SpritesInAction_v2: Sprites në veprim
+        CSF_debugging_k1_blocks: Rregullimi
+        CSF_debugging_text_blocks: Rregullimi
+        CSF_loops_AB: cikle
+        CSF_my_robotic_friends: Shokët e mi robotik
         Unplug1: Çfarë është CS?
+        Unplug10: Internet
+        Unplug11: Mbështjell
         Unplug2: Te menduarit kompjuterikë
         Unplug3: Programimi grafik me leter
         Unplug4: Algoritmet
@@ -559,242 +745,62 @@ sq:
         Unplug7: Të shkruarit e Këngëve
         Unplug8: Abstraksion
         Unplug9: Programim i Besueshëm
-        Unplug10: Internet
-        Unplug11: Mbështjell
-        C1_happy_maps_unplugged: Hartat e Lumtura
-        C1_moveitmoveit_unplugged: Lëvize atë, lëvize atë
-        C1_bigevent_unplugged: Ngjarja e Madhe
-        C1_getting_loopy: Duke u Çmëndur
-        C1_pair_programming: Programim në çift
-        C1_maze_intro_sequencing: Hyrja e Sekuencuar e Maze
-        C1_maze_debugging: Riparimi i Maze
-        C1_bee_level_intro: Niveli i Bletëve - Hyrje
-        C1_artist_intro: Hyrja Artistit
-        C1_spelling_bee_intro: Hyrja e Bletëve të gërmëzuara
-        C1_zuck_repeat_loop: Përsëritja e Maze
-        C1_bee_loops: Përsëritja e Bletëve
-        C1_maze_loops: Përsëritja e Maze
-        C1_playlab_storytelling: Play Lab - Krijo një Ngjarje
-        C1_planting_seed: Mbjellja e një fare
-        C1_building_foundation: Ndërtimi i një Baze
-        C1_going_places_safely: Të shkuarit nëpër Vende në mënyrë të Sigurtë
-        C2_maze_intro: Hyrja e Maze
-        C2_artist_intro: Hyrja e Artistit
-        C2_zuck_repeat_loop: Përsëritja e Maze
-        C2_artist_loops: Përsëritjet e Artistit
-        C2_artist_debugging: Riparimi i Artistit
-        C2_bee_loops: Përsëritja e Bletëve
-        C2_bee_debugging: Riparimi i Bletëve
-        C2_bee_conditionals: Kushtet e Bletëve
-        C2_playlab_createstory: Play Lab - Krijo një Ngjarje
-        C2_graph_paper: Programimi grafik me letër
-        C2_conditionals_with_cards: Kushtet
-        C2_binary_bracelets: Byzylyku Binar
-        C2_relay_programming: Programimi i Besuar
-        C2_paper_airplanes: Avionët prej Letre
-        C2_digital_footprint: Hapat e tua Dixhitale
-        C2_digital_footprint_v2: Gjurmët e Tua Dixhitale
-        C3_maze_level_4: Përsëritja e Maze
-        C3_artist_intro: Hyrja e Artistit
-        C3_artist_functions: Funksionet e Artistit
-        C3_bee_functions: Funksionet e Bletëve
-        C3_bee_conditionals: Kushtet e Bletëve
-        C3_maze_conditionals: Kushtet e Maze
-        C3_artist_nested_loops: Përsëritjet e Mbivendosura
-        C3_farmer_while: Përsëritjet Ndërsa
-        C3_bee_nested_loops: Përsëritjet e Mbivendosura
-        C3_bee_debugging: Riparimi i Bletëve
-        C3_bounce: Hidhu
-        C3_playlab_create_game: Play Lab - Krijo një Lojë
-        C3_computational_thinking: Te menduarit kompjuterik
-        C3_dice_race: Gara me zar
-        C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Suncatchers Funksionalë
-        C3_songwriting_with_parameters: Të shkruarit këngë me Parametra
-        C4_intro: Hyrja
-        C4_loops_zombie: përsëritje
-        C4_bee_conditional: Kushtet e Bletëve
-        C4_variables_artist: Variablat - Artist
-        C4_variables_playlab: Variablat - Play Lab
-        C4_for_loops: Për Ciklet
-        C4_for_loops_bee: Për Ciklet
-        C4_for_loops_no_bee: Për Ciklet
-        C4_math_artist: Të programosh Artistin me Matematikën
-        C4_function_edit: Redaktimi i Funksioneve
-        C4_function_create: Krijimi i Funksioneve
-        C4_function_parameters: Funksionet me parametra
-        C4_conditionals: Kushtet
-        C4_unplugged_algorithms: Algoritmet me Tangrams
-        C4_unplugged_madlibs: Libs-i i Çmendur
-        C4_unplugged_variables: Variablat në Zarfe
-        C4_unplugged_forloops: Për Ciklet
-        C4_unplugged_parameters: Të shkruarit këngë me Parametra
-        C4_unplugged_binary: Binare
-        CSF_debugging_k1_blocks: Rregullimi
-        CSF_debugging_text_blocks: Rregullimi
-        CSF_my_robotic_friends: Miqtë e mi Robotikë
-        frozen_intro: Hyrja e Orës së Kodimit
-        frozen_loops: Hyrja tek Ciklet
-        frozen_functions: Hyrja në Funksione
-        playlab_intro: Hyrje në Play Lab
-        playlab_events: Ngjarjet Play Lab
-        playlab_repeat_forever: Përsërit Gjithmonë Play Lab
-        tutorial_puzzle_challenge: Sfida e Tutorialeve Puzzle
-        infinity_playlab_intro: Hyrja- Laboratori i Lojrave
-        infinity_playlab_events: Eventet- Laboratori i Lojrave
-        infinity_playlab_repeat_forever: Përsërit përgjithmonë- Laboratorti i Lojrave
+        artist_intro: Hyrja e Artistit
+        csd_applab_parameters: Funksionet me parametra
+        csd_debugging: Rregullimi
+        csd_pair_programming: Programim në çift
         csp_applab_functions: Hyrja në Funksione
         csp_applab_functions_parameters: Funksionet me parametra
         csp_applab_loops: cikle
+        csp_applab_parameters: Funksionet me parametra
         csp_concept_rgb: Disa të dhëna rreth Piksel-ave
-        starwars_intro: 'Lufta e yjeve: Ndërto një Galaksi me  kode prezantimi'
-        starwars_typing: 'Lufta e yjeve: Ndërto  një Galaksi me kode JavaScripti'
-        starwars_events: 'Lufta e yjeve: Ndërto një Galaksi me Kode Ngjarjesh'
-        starwars_congrats: 'Lufta e yjeve: Ndërto një Galaksi me kode urimi'
-        starwars_blocks_intro: 'Lufta e yjeve: Ndërto një Galaksi me  kode prezantimi'
-        starwars_blocks_events: 'Lufta e yjeve: Ndërto një Galaksi me Kode Ngjarjesh'
-        starwars_blocks_congrats: 'Lufta e yjeve: Ndërto një Galaksi me kode urimi'
-        mc_intro: Minecraft-Prezantimi
-        mc_repeat: Minecraft- Përsërit
-        mc_if_statements: Minecraft-kushti if
-        mc_congrats_share: Minecraft-Urime
-        mc_congrats_no_share: Minecraft-Urime
-        gumball_intro: Prezantimi i Orës së Kodimit Gumball
+        farmer_intro: Hyrja e Fermerit
+        flappy_intro: Hyrja e Flappy-t
+        frozen_functions: Hyrja në Funksione
+        frozen_intro: Hyrja e Orës së Kodimit
+        frozen_loops: Hyrja tek Ciklet
+        function: Funksionet
         gumball_events: Eventet e Orës së Kodimit Gumball
+        gumball_intro: Prezantimi i Orës së Kodimit Gumball
         gumball_repeat: Kushtet Përsërit të Orës së Kodimit Gumball
-        iceage_intro: Prezantimi i Orës së Kodimit Epoka e Akullnajave
+        hoc_wrapup: Përmbledhja e Orës së Kodimit
         iceage_events: Eventet e Orës së Kodimit Epoka e Akullnajave
+        iceage_intro: Prezantimi i Orës së Kodimit Epoka e Akullnajave
         iceage_repeat: Kushtet Përsërit të Orës së Kodimit Epoka e Akullnajave
+        if: Blloku If
+        if_else: Blloku If/Else
+        if_else_scrat: Blloku Nëse/përndryshe
+        infinity_playlab_events: Eventet- Laboratori i Lojrave
+        infinity_playlab_intro: Hyrja- Laboratori i Lojrave
+        infinity_playlab_repeat_forever: Përsërit përgjithmonë- Laboratorti i Lojrave
+        loop_for: Blloku Counter
+        loop_times: Blloku Përsëritja e Herëve
+        loop_until: Blloku Përsërit Derisa
+        loop_while: Blloku While
+        maze_intro: Hyrja e Maze
+        mc_2016_congrats: Urimet e Orës së Kodimit Minecraft
+        mc_2016_events: Eventet e Orës së Kodimit Minecraft
         mc_2016_intro: Prezantimi i Orës së Kodimit Minecraft
         mc_2016_loops: Ciklet e Orës së Kodimit Minecraft
-        mc_2016_events: Eventet e Orës së Kodimit Minecraft
         mc_2016_spawn: Lindja e Orës së Kodimit Minecraft
-        mc_2016_congrats: Urimet e Orës së Kodimit Minecraft
         mc_2017_congratulations: Urimet e Orës së Kodimit Minecraft
-        CSF_loops_AB: cikle
-        csd_pair_programming: Programim në çift
-        csd_applab_parameters: Funksionet me parametra
-        csd_debugging: Rregullimi
+        mc_congrats_no_share: Minecraft-Urime
+        mc_congrats_share: Minecraft-Urime
+        mc_if_statements: Minecraft-kushti if
+        mc_intro: Minecraft-Prezantimi
+        mc_repeat: Minecraft- Përsërit
+        oceans_machine_learning: Mësimi i Makinave
+        parameters: Funksionet me parametra
         playlab_2021: Hyrje në Play Lab
         playlab_2021_reader: Hyrje në Play Lab
-        csp_applab_parameters: Funksionet me parametra
-    callout:
-      text:
-        drag_blocks: Lëviz një bllok "move" dhe vendose atë poshtë blloku tjetër
-        run: Shtyp "Run" për të provuar programin tënd
-        watch_again: Kliko këtu për të parë videon përsëri
-        gray_block_explanation: Blloqet gri nuk mund të fshihen. A mund ta zgjidhësh
-          puzzle-in gjithsesi?
-        show_code_explanation: Kliko këtu që të shohësh kodin  për programin që po
-          bën
-        instructions_repeat_explanation: Udhëzimet për secilin puzzle përsëriten këtu
-        category_explanation: Ti ke të njëjtët blloqe, por tani ato janë të ndara
-          në kategori
-        set_sprite_image: Bashko një bllok "set actor image" tek blloku "when story
-          starts" për të aktivizuar një aktor për këtë histori
-        studio_say_text: Shtyp çfarë dëshiron që të thotë aktori jot brënda këtyre
-          shprehjeve
-        jigsaw_click: Kliko këtë bllok!
-        move_elsa_forward: Lëviz një bllok "Move Forward" dhe vendose poshtë bllokut
-          "When Run" për ta bërë Elsën të ecë përpara
-        turn_elsa: Përdor bllokun "turn" për ta bërë Elsën të kthehet. Numri në listën
-          drop down përcakton sa herë kthehet Elsa
-        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
-          numër
-        replace_questions_degree: Përdor listën drop down për të zëvendëësuar "???"
-          me gradën e duhur për tu kthyer
-        repeat_blocks: Përdor bllokun "Repeat" dhe përmblidhe rreth blloqeve në vendin
-          e punës
-        repeat_blocks_1: "(1) Përdor këtë bllok dhe vendose rreth blloqeve gri në
-          vendin tënd të punës"
-        repeat_blocks_2: (2) Lëviz bllokun "Repeat" këtu dhe vendosi blloqet gri brenda
-        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
-        degrees_per_side: Ndaje 360 nga numri i anëve për të gjetur masën e çdo këndi
-          në gradë.
-        set_sides: Përdor këtë bllok për të vendosur "anët" tek numri i nevojshëm
-          që të përfundosh puzzle-in.
-        set_length: Përdor këtë bllok për të vendosur "gjatësinë" tek vlera e duhur.
-        which_equation: Cili ekuacion bën çdo brinjë më të shkurtër për format me
-          më shumë brinjë?
-        get_nectar: Përdor bllokun e ri "get nectar".
-        actions_category: Shiriti i mjeteve mori një pamje të re! Blloqet "Actions"
-          janë këtu tani.
-        draw_square_hint: 'Ndihmë: Përdor ciklin katror që sapo bëre në puzzle-in
-          e fundit.'
-        edit_function: Kliko këtu për të redaktuar funksionin tënd.
-        create_function: Kliko këtu për të hapur "Funksionet", më pas kliko butonin
-          "Krijo një Funksion".
-        house_hint: Është gjithçka në rregull nëse figura nuk duket si shtëpi akoma.
-          Ne do ta riparojmë atë në puzzle-in tjetër.
-        edit_draw_square: Përdor këtë buton për të redaktuar funksionin dhe shtoje
-          në cikël.
-        edit_get_nectar: Përdor këtë buton për të redaktuar funksionin dhe ndrysho
-          drejtimin që Bleta do kthehet të marrë nektarin.
-        logic_category: Hap "Logjikën" të gjesh bllokun "if/else".
-        length_parameter: A mund ta përditësosh këtë funksion në mënyrë që të përdorë
-          parametrin e "gjatësisë"?
-        frozen_diamond_repeat: Përdor bllokun përsërit për të krijuar këtë formë.
-        frozen_circle_function_in_circle_turn: Mos harro të kthehesh pasi të kesh
-          krijuar çdo rreth.
-        frozen_circle_function_with_parameter_circle: Përdor bllokun "create a circle"
-          dhe ndrysho madhësinë.
-        frozen_snowflake_branch: Përdor bllokun "create a snowflake"
-        frozen_create_square: Bashko më shumë blloqe këtu për të krijuar një katror
-        playlab_drag_say: Zhvendos bllokun "thuaj" këtu dhe shtyp "çkemi"
-        playlab_use_twice: Përdor këtë bllok dy herë dhe kujtohu të ndryshosh numrin
-          e pjesmarrësit
-        playlab_move_girl: Përdor bllokun "move right" të lëvizësh Vajzën Teniste
-        playlab_play_sound: Shto bllokun "play sound" këtu
-        playlab_arrow_keys: Kujtohu që ti përdorësh këto për të lëvizur magjistaren
-          pasi ke klikuar Run
-        playlab_add_move: Shto blloqet "lëviz" brenda këtij blloku "përsërit"
-        playlab_add_score: Shto blloqe pikësh këtu
-        playlab_add_blocks: Shto blloqet e tua këtu
-        set_variable: Zhvendos një bllok numri këtu që të vendosësh ndryshoret e tua
-        place_variable: Zhvendos ndryshoren tënde brenda këtij blloku
-        bee_for_loop: Zhvendos numrin më të madh të nektarit që dëshiron që të mbledhë
-          bleta këtu
-        place_counter_variable: Zhvendos ndryshoren tënde të numërimit brenda këtij
-          blloku
-        function_editor_draw_square: Ky është përcaktimi i funkisonit tënd. Keto blloqe
-          ekzekutohen sa herë ti përdor bllokun "draw a square"
-        change_here: Bëj ndryshimet e tua këtu
-        write_draw_square_function: Zhvendos blloqet nga toolbox në atë që vizaton
-          një katror
-        write_draw_triangle_function: Zhvendos blloqet nga toolbox në atë që vizaton
-          një trekëndor
-        edit_add_parameter: Kliko redakto për të shtuar një parametër në funksionin
-          tënd
-        add_and_drag_parameter: Shkruaj emrin e parametrit tënd këtu, kliko shto,
-          dhe më pas zhvendos atë në përcaktimin e funksionit tënd
-        fill_in_actor: Plotësoji  ??? me numra që i korrespondojnë çdo pjesëmarrësi
-          (1,2 dhe 3)
-        repeat: Vendos blloqe brenda ciklit për të përsëritur komandat
-        if_bee_nectar: Përdor bllokun "if" për të vendosur nëse bleta duhet të mbledhi
-          nektar
-        if_else_bee: Përdor bllokun "if/else" në mënyrë që Bleta të mbledhë nektar
-          nga një lule dhe të bëjë mjaltë nëse nuk është lule
-        repeat_full_circle: Fut numrin e herëve që zombi duhet të lëvizë për të bërë
-          një rreth të plotë
-        place_length_variable: Zhvendos ndryshorin e gjatësisë këtu për të rivendosur
-          pikëpyetjet
-        arrows_move_actor: Përdor shigjetat për të lëvizur aktorin
-        right_arrow_fireball: Përdor shigjetën djathtas të gjuash topat e zjarrit
-        name_function: Shkruaj emrin e funksionit tënd këtu
-        Infinity_move_right_runbutton: Shto lëviz bllokun këtu
-        Infinity_move_directions_callout: Cili bllok do e bëjë Baymax-in të lëvizi
-          sipër kur shigjeta e sipërme është e shtypur?
-        Infinity_move_directions_callout_arrow: Përdor këto shigjeta për orientim
-        Infinity_move_collide_callout: Vendos një tingull kur të ndodhi ky event.
-        Infinity_repeat_callout: Vendos bllogjet e Lëvizjes këtu brënda
-        craft_run_button_callout: Shtyp "Run" për të provuar programin tënd
-        craft_drag_block_callout: Terhiq një bllok "lëvizPërpara ();" dhe vendose
-          atë poshtë një bllok tjetër
-        craft_callout_preplaced: Ne kemi vendosur disa blloqe këtu që ju të filloni
-        craft_inside_repeat: Përsëritni veprimet duke vendosur blloqe këtu
-        craft_callout_preplaced_house: Ky kod do të fillojë ndërtimin e shtëpisë tuaj.
-          Mund të përfundoni atë?
-        craft_what_is_iron: Hidhe në erë këtë hekur!
-        craft_callout_moveforward: Ky kod do të kontrollojë për llava, mund të shtoni
-          një komandë për të lëvizur përpara?
+        playlab_events: Ngjarjet Play Lab
+        playlab_intro: Hyrje në Play Lab
+        playlab_repeat_forever: Përsërit Gjithmonë Play Lab
+        starwars_blocks_congrats: 'Lufta e yjeve: Ndërto një Galaksi me kode urimi'
+        starwars_blocks_events: 'Lufta e yjeve: Ndërto një Galaksi me Kode Ngjarjesh'
+        starwars_blocks_intro: 'Lufta e yjeve: Ndërto një Galaksi me  kode prezantimi'
+        starwars_congrats: 'Lufta e yjeve: Ndërto një Galaksi me kode urimi'
+        starwars_events: 'Lufta e yjeve: Ndërto një Galaksi me Kode Ngjarjesh'
+        starwars_intro: 'Lufta e yjeve: Ndërto një Galaksi me  kode prezantimi'
+        starwars_typing: 'Lufta e yjeve: Ndërto  një Galaksi me kode JavaScripti'
+        tutorial_puzzle_challenge: Sfida e Tutorialeve Puzzle

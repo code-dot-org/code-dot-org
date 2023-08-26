@@ -1966,37 +1966,19 @@ az:
       4:
         text: "Sonra bu xətt ekranda özünü büruzə verəndə əhval-ruhiyyənin dəyişməsini əks etdirmək üçün bir şeydə proqramla. \"Başlada\" basdıqda kodladığınızı görə bilərsiniz."
     hello_world_intro:
-      1:
-      2:
-      3:
-      4:
       5:
         text: "Bu orta sahə alətlər qutusudur. Dərsdən keçərkən bu məkanda yeni kod blokları əlçatan olacaq."
       6:
         text: "Sağ tərəfdəki boşluq iş sahəsidir. Toolbox-dan blokları çıxara bilərsiniz və proqramınızı qurmaq üçün iş yerinə daxil ola bilərsiniz."
       7:
         text: "Hər bir səviyyə üçün təlimatlar ekranın yuxarı hissəsində burada olacaq. Əgər işarə istəyirsinizsə, lampanın üzərinə basın."
-      8:
-      9:
-      10:
     hello_world_events:
-      1:
       2:
         text: "Hadisələrin bəzi nümunələri siçan klik, ox düyməsi və ya ekranda tap dinləyir. \"Clicked\" kimi bloklar hadisə blokları adlanır. Hadisə blokuna bağlı kod müvafiq hərəkət aşkar edildikdə işə salır."
-      3:
-      4:
-      5:
     hello_world_congrats:
-      1:
-      2:
       3:
         text: "Özün də çəkə bilərsən! Bəyəndiyiniz kostyuma sahib olduqdan sonra kodunuza geri dönün."
-      4:
-      5:
-      6:
-      7:
       8:
         text: "Ətrafa nəzər salın. Bu yeni blok və xüsusiyyətləri təcrübədən keçirməyə çalışın. Təlimatın sonunda \"Paylaş\" düyməsinə basaraq, yaratdığınız bir linki dostlarınızla paylaşın."
-      9:
       10:
         text: "Belə isə nə yaradırsınız? Özünüz haqqında bir hekayə danışa bilərdiniz... və ya birini öz xüsusi qəhrəmanlarınızı düzəldin. Bəlkə siz hətta yeni kompüter elmləri bacarıqlarınızı növbəti məktəb layihəniz üçün istifadə edəcəksiniz! Təxəyyülünüzü uzatın və əylənin!"

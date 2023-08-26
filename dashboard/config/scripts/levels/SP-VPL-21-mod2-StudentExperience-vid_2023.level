@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2023-05-30T13:31:41.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "Gettting_Started_StudentExperience",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28813,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "long_instructions": "## Consider the following when watching this video:\r\n#### What will students see when they log into their Code.org account?\r\n\r\n##### **Additional resource:**\r\n\r\n* <a href=\"https://support.code.org/hc/en-us/articles/115001347791-The-student-experience-on-Code-org\" target=\"blank\" rel=\"noopener noreferrer\">The student experience on Code.org</a> "
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-05-30T13:31:41.151+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-21-mod2-StudentExperience-vid_2022\\\"\"],\"cloned_from\":\"SP-VPL-21-mod2-StudentExperience-vid_2022\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

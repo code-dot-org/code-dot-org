@@ -231,19 +231,7 @@ state-facts: true
   %div
     %ul
       %li
-        Send a letter:
-        %ul
-          %li
-            To your school/district asking them to expand computer science offerings at every grade level:
-            %a{href:"https://code.org/promote/letter"} www.code.org/promote/letter
-          %li
-            To your elected officials asking them to support computer science education policy in
-            = succeed ":" do
-              = state_info[:state_name_s]
-            - if state_info[:action_text_s] == "NA"
-              %a{href: "https://votervoice.net/Code/campaigns/58463/respond"} www.votervoice.net/Code/campaigns/58463/respond
-            - else
-              = state_info[:action_text_s]
+        Send a letter to your school/district asking them to expand computer science offerings at every grade 		level: %a{href:"https://code.org/promote/letter"} www.code.org/promote/letter
       %li
         Find out if your school teaches computer science or submit information about your school's offerings at
         = succeed "." do
@@ -573,7 +561,7 @@ state-facts: true
         - if state_info[:higher_ed_entrance_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
-            %b IHE Admission -
+            %b Higher Ed Admission -
             = state_info[:higher_ed_t]
         - elsif state_info[:higher_ed_entrance_s] == 'No'
           %div
@@ -587,6 +575,22 @@ state-facts: true
             %i.fa.fa-square-o
             %b IHE Admission -
             = state_info[:higher_ed_t]
+
+      .policy-item
+        - if state_info[:grad_requirement_s] == 'Yes'
+          %div
+            %i.fa.fa-check-square-o
+            %b Graduation Requirement -
+            = state_info[:grad_requirement_t]
+        - elsif state_info[:grad_requirement_s] == 'No'
+          %div
+            %i.fa.fa-square-o
+            %b Graduation Requirement -
+            = state_info[:state_name_s]
+            %b does not yet
+            require students to take computer science to earn a high school diploma. Graduation requirements ensure that all students get exposure to computer science. 
+
+
 
   %div
     %h3 Follow us!

@@ -45,6 +45,7 @@ fr:
         personal_email_markdown: "Adresse email personnelle [(cliquer ici si vous n'avez pas d'adresse email)](%{url})"
         username: 'nom d''utilisateur'
         password: 'Mot de passe'
+        verified_teacher: 'Professeur vérifié'
         password_confirmation: 'Confirmation du mot de passe'
         current_password: 'Mot de passe actuel'
         locale: 'Langue'
@@ -59,6 +60,7 @@ fr:
         reset_password_token: "Le lien de réinitialisation du mot de passe que vous avez suivi"
         error:
           future: ne peut pas être dans le futur
+        us_state: 'État'
   beta: "beta"
   hello: "Bonjour tout le monde"
   welcome_back: "Bienvenue %{name}"
@@ -68,6 +70,7 @@ fr:
   unsubmit: Ne pas envoyer
   previous_page: Page précédente
   next_page: Page suivante
+  next_level: Niveau suivant
   next_resource: Ressource suivante
   done_with_module: Module d'apprentissage terminé
   cancel: "Annuler"
@@ -198,6 +201,9 @@ fr:
     parent_account_checkbox: "Je suis un parent/tuteur inscrit au nom de mon enfant"
     parent_account_email_progress_permission: "Pouvons-nous vous envoyer, par courriel, des mises à jour occasionnelles, sur les progrès et les projets de votre enfant, ainsi que des mises à jour sur ses cours et l’informatique ? [(Voir notre politique de confidentialité)] %{privacy_policy_url}"
     parent_account_email_label: "Adresse électronique du parent/tuteur "
+    us_state: 'État'
+    us_state_dropdown_options:
+      other: "L'endroit où j'habite n'est pas listé"
   school_info:
     title: 'Informations de l’école (facultatif)'
     school_country: 'Pays de l’École'
@@ -266,9 +272,13 @@ fr:
   parent_mailer:
     student_associated_subject: 'Informations de connexion pour Code.org'
     parent_email_added_subject: 'Bienvenue sur Code.org!'
+    parent_permission_request_subject: "Consentement parental requis pour l'accès de votre enfant à Code.org"
+    parent_permission_reminder_subject: "Rappel, consentement parental requis pour l'accès de votre enfant à Code.org"
+    parent_permission_confirmation_subject: "Merci d'avoir approuvé l'accès de votre enfant à Code.org !"
   teacher_mailer:
     new_teacher_subject: 'Bienvenue sur Code.org!'
     delete_teacher_subject: 'Notification de Code.org : votre compte a été supprimé'
+    verified_teacher_subject: 'Vérification des enseignants de Code.org - Succès'
   section:
     your_section:
       one: 'Ta section:'
@@ -350,6 +360,7 @@ fr:
       sprite_lab_documentation: "Documentation sur le Labo des Sprites"
       sprite_lab_tutorials: "Tutoriels du Labo des Sprites"
       web_lab_documentation: "Documentation Web Lab"
+      project_beats_documentation: "Documentation du projet Beats"
       educate_overview: "Aperçu enseignant"
       educate_elementary: "École primaire"
       educate_middle: "Collège"
@@ -376,6 +387,7 @@ fr:
       help_us: "Nous aider"
       teach: "Enseigner"
       about: "À propos"
+      incubator: "Incubateur"
       legal: "Confidentialité et mentions légales"
       legal_privacy: "Politique de confidentialité"
       legal_cookie_notice: " Utilisation des cookies"
@@ -607,6 +619,8 @@ fr:
     try_hour_of_code: 'Essaie une Heure du Code !'
     store: 'Boutique'
     cookie_notice: ' Utilisation des cookies'
+    view_code: 'Afficher le code'
+    locale_select: "Sélectionnez la langue"
   reference_area:
     title: 'Besoin d''aide ?'
     subtitle: 'Regarder les vidéos et les indices'
@@ -631,6 +645,8 @@ fr:
       applab_unsupported_tablet: "Le Labo des Applis fonctionne au mieux sur un ordinateur portable ou fixe équipé d'une souris et d'un clavier. Il se peut que vous rencontriez des difficultés en utilisant cet outil avec votre appareil actuel."
       gamelab_unsupported_tablet: "Le Labo Jeux fonctionne au mieux sur un ordinateur portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez des problèmes en utilisant cet outil avec votre appareil actuel."
       weblab_unsupported_locale_storage: "Il se peut que vous rencontriez des difficultés en utilisant le Labo Web en mode Navigation Privée. Merci de réactualiser votre projet en mode normal. Nous sommes désolés pour la gêne occasionnée."
+  deprecation:
+    algebra_lab: "Le programme et le contenu de CS in Algebra sont obsolètes. Au cours des prochains mois, ce laboratoire ne sera plus disponible. Veuillez plutôt consulter [Bootstrap : Algebra] (%{bootstrap_algebra_url}). [En savoir plus] (%{cs_algebra_url})."
   slow_loading: 'Cela prend plus de temps que d''habitude...'
   try_reloading: 'Essaie de recharger la page'
   next_stage: 'Terminé! Continue vers l''étape suivante'
@@ -669,65 +685,139 @@ fr:
       body_short: "Concevez une application, codez à l'aide de blocs ou en JavaScript pour la faire fonctionner, puis partagez votre application en quelques secondes."
       audience: 'Âge recommandé: 13 ans et plus'
       cta: 'Apprendre comment'
+      image_alt: 'Un lapin violet portant un sac à dos propulsé par une fusée.'
+    applab-intro:
+      image_alt: 'Une main touche le centre de l''écran d''un smartphone. De la lumière et des étincelles sortent de l''écran.'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Steve et Alex de Minecraft vous regardent.'
+    artist:
+      image_alt: 'Un personnage caricatural tenant un énorme crayon et dessinant un triangle.'
+    conditionals:
+      image_alt: 'Deux mains mélangeant un jeu de cartes à jouer.'
+    course1:
+      image_alt: 'Le bourdon et le poisson orange de Code.org debout devant un code.'
+    course2:
+      image_alt: 'Un collage de puzzles de Code.org représentant un magicien vert, un artiste et un poisson-orange.'
+    course3:
+      image_alt: 'Un collage de puzzles de Code.org représentant un jeu, un zombie et un ninja.'
+    course4:
+      image_alt: 'Un collage de puzzles de Code.org représentant le football, des animaux domestiques et un artiste.'
+    coursea:
+      image_alt: 'Un collage de puzzles de Code.org représentant un éléphant et un écureuil.'
+    courseb:
+      image_alt: 'Un collage de puzzles de Code.org représentant un explorateur, des pierres précieuses et une fleur.'
+    coursec:
+      image_alt: 'Un collage de puzzles Code.org représentant un écureuil, des nombres binaires et un oiseau rouge du jeu Angry Birds.'
+    coursed:
+      image_alt: 'Un collage de puzzles Code.org représentant une abeille, des fleurs, du miel et un cochon vert du jeu Angry Birds.'
+    coursee:
+      image_alt: 'Un collage de puzzles de Code.org montrant une personne tenant une pelle, une citrouille, un verger et une vache.'
+    coursef:
+      image_alt: 'Un collage de puzzles Code.org représentant des formes géométriques colorées, un pirate rouge et un artiste.'
     dance-2019:
       title: 'Soirée Dansante'
+      image_alt: 'Un chat heureux, un paresseux et un requin dansant.'
+    dance-2022:
+      image_alt: 'Un extraterrestre vert et un robot dansant avec Saturne en arrière-plan.'
     dance:
       title: 'Soirée Dansante'
+      image_alt: 'Un chat cool et un requin joyeux dansant lors d''une fête.'
+    donate:
+      image_alt: 'Un enfant pointe du doigt l''écran d''un ordinateur portable montrant un puzzle Code.org.'
+    elementary:
+      image_alt: 'Un bourdon et un écureuil debout dans un champ devant un arc-en-ciel.'
+    express:
+      image_alt: 'Plants vs Zombies zombie et plante debout à côté de Flappy Bird.'
     flappy:
       title: 'Flappy l''oiseau'
       body: 'Tu veux écrire ton propre jeu en moins de 10 minutes ? Essaie notre tutoriel de Code Flappy !'
+      image_alt: 'Un oiseau jaune volant entre des tuyaux verts.'
     frozen:
       title: "La Reine des neiges"
+      image_alt: 'Anna et Elsa du film La Reine des neiges. Entre les deux se trouve une image d''Anna dessinant une jolie forme sur la glace à l''aide de ses patins à glace.'
     gallery:
       title: "Galerie"
       body: "Regarde une galerie des applications et des images d'artistes créées par nos utilisateurs."
+      image_alt: 'Un artiste dessinant de nombreux cercles et un chat, une chauve-souris et un fantôme debout dans un pays de vacances d''hiver.'
     gamelab:
       title: "Labo Jeux"
       body: "Le Labo Jeux est un environnement de programmation où on peut créer des animations simples et des jeux avec des objets et des personnages qui interagissent entre eux."
       audience: "Âge recommandé: 13 ans et plus"
       cta: "Apprendre comment"
+      image_alt: 'Beaucoup de personnages de dessins animés et d''animaux debout sur un trottoir et souriants.'
+    hello-world-food:
+      image_alt: 'De nombreux animaux, extraterrestres et emojis gravitent autour de la Terre.'
     hello-world:
       title: 'Bonjour tout le monde !'
       body: 'Choisis entre quatre activités amusantes pour programmer des personnages interactifs dans un monde que tu as créé!'
     hero:
       title: "Minecraft"
       body: "Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité\_! Exploration de Minecraft avec le code."
+      image_alt: 'Un golem de fer de Minecraft debout devant une vue aérienne d''Anna résolvant un casse-tête.'
     hoc-encryption:
       title: "Cryptage simple"
       body: "Les élèves apprendront les techniques pour créer et casser des messages chiffrés."
+      image_alt: 'Un graphique à barres de la fréquence des lettres en anglais.'
     hoc:
       title: 'Labyrinthe classique'
       body: 'Essaie les fondamentaux de l''informatique. Des millions ont essayé.'
+      image_alt: 'Un collage d''images montrant du code, Mark Zuckerberg et Angry Birds.'
+    hourofcode:
+      image_alt: 'Un collage d''images montrant du code, Mark Zuckerberg et Angry Birds.'
     hoc2014:
       try_new_tutorial: 'Essaie notre nouveau tutoriel Heure de Code en version bêta'
       try_frozen: 'Artiste avec Anna et Elsa, de La Reine des neiges'
     infinity:
       title: "Labo Jeux Infinity"
       body: "Utilise le Labo Jeux pour créer une histoire ou un jeu mettant en scène les personnages de Disney Infinity."
+      image_alt: 'Cinq personnages de Froze, Tangled et Big Hero 6 debout côte à côte.'
+    map:
+      image_alt: 'Une image grise des États-Unis avec une vingtaine d''États surlignés en violet.'
+    mc_escape:
+      image_alt: 'Un personnage de Minecraft portant un chapeau haut de forme et un monocle tout en ouvrant un coffre au trésor rempli d''émeraudes.'
+    mc:
+      image_alt: 'Anna et Steve de Minecraft debout devant un puzzle Minecraft de Code.org.'
     minecraft:
       title: "Minecraft"
       body: "Explore un monde Minecraft à travers son code."
+      image_alt: 'Anna et Steve de Minecraft debout devant un puzzle Minecraft de Code.org.'
     minecraft2016:
       title: "Minecraft"
       body: "Créez un jeu Minecraft. Créez vos propres versions des poulets, des moutons, des creepers, des zombies et bien d'autres encore."
+    oceans:
+      image_alt: 'Un robot dans l''océan scanne diverses créatures marines.'
+    playlab:
+      image_alt: 'Un collage d''images montrant un chat bleu, un chien loufoque et une belette préhistorique.'
     poem-art:
       title: 'Art du poème'
       body: 'Exprime-toi! Programme un poème animé.'
+      image_alt: 'Un calamar branché sur scène.'
+    pre-express-2017:
+      image_alt: 'Un chien et une licorne debout devant un arbre fait de pièces de puzzle.'
+    pre-express-2018:
+      image_alt: 'Un chien et une licorne debout devant un arbre fait de pièces de puzzle.'
+    pre-express-2019:
+      image_alt: 'Un chien et une licorne debout devant un arbre fait de pièces de puzzle.'
+    pre-express:
+      image_alt: 'Un chien et une licorne debout devant un arbre fait de pièces de puzzle.'
     sports:
       title: "Sports"
       body: "Créer un jeu de basket ou un mélange de différents sports."
+      image_alt: 'Les logos de la NBA et de la WNBA sont affichés à côté d''un ballon de football, d''un ballon de soccer, d''une rondelle de hockey et d''un ballon de basket.'
     starwars:
       title: "Star Wars"
+      image_alt: 'R2-D2, Leia, Rey et BB-8 debout dans le désert.'
     text-compression:
       title: "Compression de texte"
       body: "Dans cette leçon, les élèves utiliseront le Widget de Compression de Texte pour compresser le texte en remplaçant des modèles par des symboles."
+      image_alt: 'Le texte est compressé en remplaçant des mots entiers par un seul symbole.'
     weblab:
       title: "Le Labo du Web (beta)"
       body: "Le Labo Web est un environnement de programmation où tu peux créer des pages web simples, en utilisant l'HTML et le CSS. Crée tes pages web et partage ton site en quelques instants."
       audience: "Âge recommandé: 13 ans et plus"
       cta: "Apprendre comment"
+      image_alt: 'Un écran d''ordinateur affichant du code HTML.'
     widgets:
       title: "Widgets"
       body: "Les élèves peuvent découvrir les concepts de notre cours pratique sur les Principes de l'Informatique en utilisant ces outils numériques. Utilisez les widgets directement, ou bien créez une leçon focalisant sur un seul concept, pour votre classe."
@@ -788,6 +878,8 @@ fr:
     submit-incomplete-body: "Tu as laissé quelques questions sans réponse. Tu ne pourras plus modifier ton évaluation après l'avoir envoyée. Es-tu sûr ?"
     submit-complete-title: "Envoyer une évaluation"
     submit-complete-body: "Tu ne pourras plus modifier ton évaluation après l'avoir envoyée. Es-tu sûr ?"
+  level_summary:
+    correct_answer: "Bonne réponse"
   match:
     wrong_title: "Solution incorrecte"
     wrong_body: "La solution que tu as saisie est incorrecte.  Merci de réessayer !"
@@ -913,6 +1005,7 @@ fr:
           age: 'Merci de donner ton âge'
           abuse_type: 'Merci de préciser comment ce contenu viole les Conditions générales d''utilisation'
           abuse_detail: 'Merci de donner des précisions au sujet du contenu que tu signales'
+          captcha: 'Veuillez remplir le CAPTCHA pour signaler ce contenu.'
         abusive_url: 'URL du contenu signalé'
         abuse_type:
           question: 'Comment ce contenu viole-t-il les %{link_start}Conditions générales d''utilisation%{link_end} ?'
@@ -1048,14 +1141,33 @@ fr:
         not_listed: 'Terme préféré non listé'
         none: 'Préfère ne pas répondre'
       school_country:
+        australia: 'Australie'
+        barbados: 'Barbade'
+        belize: 'Belize'
+        brazil: 'Brézil'
         canada: 'Canada'
         chile: 'Chili'
         colombia: 'Colombie'
+        dominican_republic: 'République dominicaine'
+        india: 'Inde'
+        indonesia: 'Indonésie'
         israel: 'Israël'
+        jamaica: 'Jamaïque'
+        kenya: 'Kenya'
         malaysia: 'Malaisie'
+        maldives: 'Maldives'
         mexico: 'Mexique'
+        mongolia: 'Mongolie'
+        new_zealand: 'Nouvelle-Zélande'
+        paraguay: 'Paraguay'
+        portugal: 'Portugal'
+        slovakia: 'Slovaquie'
+        south_korea: 'Corée du Sud'
+        spain: 'Espagne'
         thailand: 'Thaïlande'
+        trinidad_and_tobago: 'Trinité-et-Tobago'
         uzbekistan: 'Ouzbékistan'
+        vietnam: 'Viêt Nam'
       ages:
         ages_under_6: 'Moins de 6 ans'
         ages_7_8: '7-8 ans'
@@ -1103,6 +1215,7 @@ fr:
         csf_express: 'Les Fondamentaux de l’Informatique (Pré-Express ou Express)'
         csd: 'Découvertes de l''Informatique'
         csp: 'Principes de l''Informatique'
+        other: 'Autre'
         not_applicable: "Non applicable"
       email_opt_in:
         opt_in_yes: 'Oui'
@@ -1126,11 +1239,23 @@ fr:
   courses_category: 'Cours Complets'
   course_offering:
     headers:
+      favorites: 'Favoris'
+      labs_and_skills: 'Laboratoires et compétences'
       minecraft: 'Minecraft'
       hello_world: 'Bonjour tout le monde !'
+      popular_media: 'Médias populaires'
       sports: 'Sports'
+      express: 'Express'
       csf: 'Fondamentaux d''Informatique'
       csc: 'Connexions CS'
+      year_long: 'Toute l''année'
+      csa_labs: 'Laboratoires CSA'
+      self_paced: 'À votre rythme'
+      teacher_led: 'Dirigé par un enseignant'
+      collections: 'Collections'
+      workshops_k5: 'Ateliers K-5'
+      summer_workshops_612: '6 à 12 ateliers d''été'
+      virtual_academic_year_workshops_612: '6 à 12 ateliers virtuels pour l''année universitaire'
   cookie_banner:
     message: 'En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte », vous acceptez le stockage de cookies sur votre ordinateur ou appareil.'
     more_information: "Consulter la Politique de Confidentialité de Code.org."
@@ -1168,4 +1293,22 @@ fr:
       forbidden: "L'utilisateur ne peut pas modifier les paramètres de verrouillage de l'apprenant"
   reset_predict_progress_button: "Supprimer la réponse"
   pixelation:
+    raw_format: "Format RAW"
+    raw_format_alt: "Afficher les bits sans aucun formatage"
+    readable_format: "Format lisible"
+    readable_format_alt: "Afficher les bits séparés par pixel"
+    save_image: "Enregistrer l'image"
+    actual_size: "Taille réelle"
+    image_file_format_header: "Format de fichier image"
+    image_file_format_width: "Largeur : 1 octet"
+    image_file_format_height: "Hauteur : 1 octet"
+    image_file_format_bits_per_pixel: "Bits par pixel : 1 octet"
+    image_file_format_data_a: "n bits de données de pixels"
+    image_file_format_data_b: "n = Largeur* Hauteur* Bits par pixel"
+    image_width: "Largeur de l'image"
+    image_height: "Hauteur de l'image"
+    bits_per_pixel_header: "Bits par pixel"
     binary: "Binaire"
+    hexadecimal: "Hexadécimal"
+    pixel_format_header: "Format de pixels"
+

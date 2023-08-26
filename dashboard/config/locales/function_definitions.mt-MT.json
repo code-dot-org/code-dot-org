@@ -12,9 +12,65 @@
             "name": "Agħmel xi ħaġa"
           }
         },
+        "Course E: Frozen Project_examples2022": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "Irrepeti"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "Irrepeti"
+            }
+          }
+        },
         "Course E: Play Lab Project": {
           "do something": {
             "name": "Agħmel xi ħaġa"
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "Irrepeti"
+            }
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "Irrepeti"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "Irrepeti"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "Irrepeti"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "Irrepeti"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "Irrepeti"
+            }
           }
         },
         "Find the Wizard": {
@@ -91,7 +147,17 @@
             "name": "Agħmel xi ħaġa"
           }
         },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
         "courseC_data wizard_2020": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
+        "courseC_data wizard_2021": {
           "do something": {
             "name": "Agħmel xi ħaġa"
           }
@@ -116,6 +182,11 @@
             "name": "Agħmel xi ħaġa"
           }
         },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
         "courseE_artist_functions10_2018": {
           "do something": {
             "name": "Agħmel xi ħaġa"
@@ -131,7 +202,17 @@
             "name": "Agħmel xi ħaġa"
           }
         },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
         "courseE_artist_functions8": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
+        "courseE_artist_functions82022": {
           "do something": {
             "name": "Agħmel xi ħaġa"
           }
@@ -151,6 +232,16 @@
             "name": "Agħmel xi ħaġa"
           }
         },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
         "courseE_artist_functions8a_2018": {
           "do something": {
             "name": "Agħmel xi ħaġa"
@@ -162,6 +253,16 @@
           }
         },
         "courseE_artist_functions8a_2020": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
+        "courseE_artist_functions8b2022": {
           "do something": {
             "name": "Agħmel xi ħaġa"
           }
@@ -181,6 +282,16 @@
             "name": "Agħmel xi ħaġa"
           }
         },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
         "courseE_artist_functions8c_2018": {
           "do something": {
             "name": "Agħmel xi ħaġa"
@@ -196,7 +307,17 @@
             "name": "Agħmel xi ħaġa"
           }
         },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
         "courseE_artist_functions9": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
+        "courseE_artist_functions92022": {
           "do something": {
             "name": "Agħmel xi ħaġa"
           }
@@ -216,7 +337,17 @@
             "name": "Agħmel xi ħaġa"
           }
         },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
         "courseE_artist_functions_challenge1": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
           "do something": {
             "name": "Agħmel xi ħaġa"
           }
@@ -236,7 +367,17 @@
             "name": "Agħmel xi ħaġa"
           }
         },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
         "courseE_artist_functions_challenge2": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
           "do something": {
             "name": "Agħmel xi ħaġa"
           }
@@ -256,7 +397,17 @@
             "name": "Agħmel xi ħaġa"
           }
         },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
         "courseE_artist_functions_predict2": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
           "do something": {
             "name": "Agħmel xi ħaġa"
           }
@@ -272,6 +423,11 @@
           }
         },
         "courseE_artist_functions_predict2_2020": {
+          "do something": {
+            "name": "Agħmel xi ħaġa"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "Agħmel xi ħaġa"
           }
@@ -356,162 +512,6 @@
         "courseF_bee_functions8a": {
           "do something": {
             "name": "Agħmel xi ħaġa"
-          }
-        },
-        "CourseD_EOC_artist": {
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "Irrepeti"
-            }
-          }
-        },
-        "Course E: Frozen Project_examples_2021": {
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "Irrepeti"
-            }
-          }
-        },
-        "Course F: Artist Project_Flowers_examples_2021": {
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "Irrepeti"
-            }
-          }
-        },
-        "CourseD_EOC_artist_2021": {
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "Irrepeti"
-            }
-          }
-        },
-        "CourseD_EOC_artist_example2021": {
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "Irrepeti"
-            }
-          }
-        },
-        "courseC_data wizard_2021": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions10_2021": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions8_2021": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions8a_2021": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions8b_2021": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions8c_2021": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions9_2021": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions_predict2_2021": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "Course E: Frozen Project_examples2022": {
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "Irrepeti"
-            }
-          }
-        },
-        "CourseD_EOC_artist_example20212022": {
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "Irrepeti"
-            }
-          }
-        },
-        "courseC_data wizard2022": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions102022": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions82022": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions8a2022": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions8b2022": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions8c2022": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions92022": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions_challenge12022": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions_challenge22022": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "courseE_artist_functions_predict22022": {
-          "do something": {
-            "name": "Agħmel xi ħaġa"
-          }
-        },
-        "CourseD_EOC_artist2022": {
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "Irrepeti"
-            }
           }
         }
       }

@@ -155,6 +155,7 @@ ga:
           description_short: Cruthaigh scéal nó cluiche sa Spraotharlann Gumball!
           student_description: Cruthaigh scéal nó cluiche sa Spraotharlann Gumball!
         starwars:
+          title: 'Star Wars: Tóg do Réaltra Féin le Cód (JavaScript)'
           description: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
           description_short: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
           student_description: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
@@ -2649,6 +2650,8 @@ ga:
               display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
             lessonGroup-3:
               display_name: 'Caibidil 2: Ríomhairí agus Réiteach Fadhbanna'
+            lessonGroup-5:
+              display_name: Suirbhé
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2896,6 +2899,8 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
+            lessonGroup-4:
+              display_name: Suirbhé
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2912,6 +2917,8 @@ ga:
               display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
             lessonGroup-3:
               display_name: 'Caibidil 2: Ríomhairí agus Réiteach Fadhbanna'
+            lessonGroup-5:
+              display_name: Suirbhé
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2926,6 +2933,8 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
+            lessonGroup-4:
+              display_name: Suirbhé
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -2944,6 +2953,8 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
+            lessonGroup-4:
+              display_name: Suirbhé
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2958,6 +2969,8 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
+            lessonGroup-4:
+              display_name: Suirbhé
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2972,6 +2985,8 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
+            lessonGroup-4:
+              display_name: Suirbhé
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3006,6 +3021,14 @@ ga:
           lessons:
             lesson-3:
               name: Réamhrá
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Réamhrá
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Measúnú
         csd-post-survey-2023:
           title: Suirbhé Iarchúrsa
         focus-on-data-post-survey-2023:
@@ -3020,3 +3043,78 @@ ga:
           title: Suirbhé Iarchúrsa
         focus-on-creativity-post-survey-2023:
           title: Suirbhé Iarchúrsa
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Saoránacht Dhigiteach
+            lessonGroup-3:
+              display_name: Sprideanna
+            lessonGroup-4:
+              display_name: Athróga
+          description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Saoránacht Dhigiteach
+            lessonGroup-3:
+              display_name: Seicheamhú
+            lessonGroup-4:
+              display_name: Lúba
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Saoránacht Dhigiteach
+            lessonGroup-3:
+              display_name: Seicheamhú
+            lessonGroup-4:
+              display_name: Lúba
+          description_short: Buntús na ríomheolaíochta do réamhléitheoirí.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Saoránacht Dhigiteach
+            lessonGroup-3:
+              display_name: Seicheamhú
+            lessonGroup-4:
+              display_name: Lúba
+            lessonGroup-6:
+              display_name: Teagmhais
+          description_short: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí. Cosúil le Cúrsa A, ach le coincheapa níos doimhne.
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Saoránacht Dhigiteach
+            lessonGroup-3:
+              display_name: Seicheamhú
+            lessonGroup-4:
+              display_name: Lúba
+            lessonGroup-5:
+              display_name: Teagmhais
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Saoránacht Dhigiteach
+            lessonGroup-3:
+              display_name: Seicheamhú
+            lessonGroup-6:
+              display_name: Lúba
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lúba Neadaithe
+            lessonGroup-4:
+              display_name: Feidhmeanna
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprideanna
+          description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprideanna
+            lessonGroup-3:
+              display_name: Coinníollacha
+            lessonGroup-5:
+              display_name: Athróga
+          description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.

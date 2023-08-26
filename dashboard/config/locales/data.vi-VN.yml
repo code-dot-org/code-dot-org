@@ -1,86 +1,196 @@
 ---
 vi:
   data:
-    game:
-      name:
-        Unplug1: Giới thiệu về khoa học máy tính
-        Maze: mê cung
-        Multi: Các lựa chọn chất liệu
-        Unplug2: Tư duy máy tính
-        Unplug3: lập trình đồ thị trên giấy
-        Artist: nghệ sĩ
-        Unplug4: các bước lập trình
-        Artist2: Nghệ sĩ 2
-        Unplug5: Các hàm
-        Farmer: người nông dân
-        Unplug6: Điều kiện
-        Artist3: nghệ sĩ 3
-        Unplug7: Viết nhạc
-        Farmer2: Người nông dân 2
-        Unplug8: Trừu tượng
-        Artist4: nghệ sĩ 4
-        Unplug9: Chương trình chuyển tiếp
-        Farmer3: người nông dân 3
-        Unplug10: Internet
-        Artist5: Nghệ sĩ 5
-        Unplug11: Gói gọn
-        MazeEC: mê cung
-        Bounce: Bật lại
-        Flappy: Flappy Bird
-        Jigsaw: Ghép hình
-        MazeStep: Chế độ mê cung từng bước thực hiện
-        Wordsearch: Tìm kiếm từ/ từ vựng
-        Webapp: Phòng thí nghiệm ứng dụng
-        ArtistEC: nghệ sĩ
-        TextMatch: 'Hợp ngữ cảnh
-
-'
-        StudioEC: Phòng trò chơi
-        Applab: Phòng thí nghiệm ứng dụng
-        NetSim: bộ mô phỏng internet
-        Custom: Họa sĩ
-        CustomStudio: Phòng trò chơi
-        Gamelab: Phòng thí nghiệm trò chơi
-        Spritelab: Sprite Lab
-    trophy:
-      name:
-        Bronze: Đồng
-        Silver: Bạc
-        Gold: Vàng
+    callout:
+      text:
+        Infinity_move_collide_callout: Phát âm thanh khi sự kiện này xảy ra.
+        Infinity_move_directions_callout: Khối lệnh nào sẽ làm Baymax di chuyển lên
+          trên khi ta nhấn phím mũi tên lên?
+        Infinity_move_directions_callout_arrow: Sử dụng các mũi tên để đi chuyển
+        Infinity_move_right_runbutton: Thêm khối lệnh di chuyển ở đây
+        Infinity_repeat_callout: Đặt khối lệnh di chuyển ở trong vị trí này
+        actions_category: Hộp công cụ có một cái nhìn mới! Các khối "hành động" đã
+          ở đây.
+        add_and_drag_parameter: Viết tên tham số của bạn vào đây, bấm vào "Thêm",
+          và sau đó kéo nó vào định nghĩa hàm của bạn
+        arrows_move_actor: Sử dụng các mũi tên để di chuyển các diễn viên
+        bee_for_loop: Kéo số mật hoa lớn nhất mà bạn muốn ong đi hút ở đây
+        category_explanation: Bạn vẫn có các khối lệnh như xưa, nhưng giờ đây chúng
+          đã được phân thành các nhóm nhỏ
+        change_here: Thực hiện thay đổi của bạn ở đây
+        craft_callout_moveforward: Mã này sẽ kiểm tra xem có dung nham hay không,
+          bạn có thể thêm một lệnh để di chuyển về phía trước không?
+        craft_callout_preplaced: Chúng tôi đã đặt một số khối gỗ ở đây để giúp bạn
+          bắt đầu
+        craft_callout_preplaced_house: Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn.
+          Bạn có hoàn thành được không?
+        craft_drag_block_callout: Kéo một khối "moveForward();" và thả xuống bên dưới
+          khối gỗ khác
+        craft_inside_repeat: Lặp lại các hành động bằng cách đặt các khối gỗ vào đây
+        craft_run_button_callout: Nhấn "Run" để thử chương trình của bạn
+        craft_what_is_iron: Hãy đào khối sắt này!
+        create_function: Nhấp vào đâu để mở hộp "chức năng", sau đó nhấp vào "tạo
+          một chức năng mới".
+        degrees_per_side: Chia 360 độ cho số cạnh để suy ra số độ của mỗi góc.
+        drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác
+        draw_square_hint: 'Gợi ý: Sử dụng các vòng lặp vuông bạn vừa tạo ra trong
+          màn trước.'
+        edit_add_parameter: Nhấp vào chỉnh sửa để thêm một tham số trong hàm của bạn
+        edit_draw_square: Sử dụng nút này để chỉnh sửa các hàm và thêm vòng lặp.
+        edit_function: Click vào đây để chỉnh sửa hàm của bạn.
+        edit_get_nectar: Sử dụng nút này để chỉnh sửa các hàm và thay đổi hướng của
+          ong để nó rẽ và lấy mật hoa.
+        fill_in_actor: Điền vào các dấu ??? với con số tương ứng với mỗi diễn viên
+          (1, 2 và 3)
+        frozen_circle_function_in_circle_turn: Đừng quên xoay một góc thích hợp sau
+          khi tạo mỗi vòng tròn.
+        frozen_circle_function_with_parameter_circle: Sử dụng khối "tạo ra một vòng
+          tròn" và thay đổi kích thước.
+        frozen_create_square: Đính kèm thêm nhiều khối lệnh ở đây để tạo ra một hình
+          vuông
+        frozen_diamond_repeat: Sử dụng các khối lặp lại để vẽ ra hình này.
+        frozen_snowflake_branch: Sử dụng khối "tạo ra một nhánh bông tuyết"
+        function_editor_draw_square: Đây là định nghĩa về hàm của bạn. Các khối lệnh
+          này luôn vẽ một hình vuông khi bạn dùng lệnh "vẽ một hình vuông"
+        get_nectar: Sử dụng các khối mới tên là "lấy mật hoa".
+        gray_block_explanation: Khối có màu xám không thể bị xóa. Hãy giải câu đố
+          dùng khối xám đó!
+        house_hint: Có thể tạm thời chấp nhận hình vừa vẽ chưa giống nhà thật. Chúng
+          ta sẽ sửa lại ở màn tiếp theo.
+        if_bee_nectar: Sử dụng khối lệnh "nếu" để để giúp ong tự quyết định có lấy
+          mật hoa hay không lấy
+        if_else_bee: Sử dụng các khối lệnh "nếu/thì" để ong lấy được mật hoa từ một
+          bông hoa, và để ong làm mật ong nếu đó là tổ ong
+        instructions_repeat_explanation: Các hướng dẫn cho mỗi câu đố được lặp đi
+          lặp lại ở đây
+        jigsaw_click: Nhấp vào khối này!
+        length_parameter: Bạn có thể viết lại hàm này để nó sử dụng tham số "chiều
+          dài" không?
+        logic_category: Mở hộp "Logic" để tìm các khối "nếu/khác".
+        move_elsa_forward: Kéo một khối lệnh "Di chuyển về phía trước" và gắn nó ngay
+          dưới khối "Khi chạy" để làm cho Elsa di chuyển về phía trước
+        name_function: Viết tên của hàm của bạn ở đây
+        place_counter_variable: Kéo biến để đếm số vào trong khối lệnh này
+        place_length_variable: Kéo biến chiều dài ở đây để thay thế các ký hiệu chấm
+          hỏi
+        place_variable: Kéo biến số của bạn vào trong khối lệnh này
+        playlab_add_blocks: Thêm khối lệnh của bạn ở đây
+        playlab_add_move: Thêm khối lệnh "di chuyển" bên trong vòng lặp này
+        playlab_add_score: Thêm khối lệnh về điểm số ở đây
+        playlab_arrow_keys: Nhớ dùng chúng để di chuyển các phù thủy sau khi nhấn
+          nút "Chạy"
+        playlab_drag_say: Kéo khối "nói" ở đây và gõ "Xin chào"
+        playlab_move_girl: Sử dụng khối lệnh "di chuyển sang phải" để di chuyển bóng
+          cô gái
+        playlab_play_sound: Thêm khối lệnh "phát âm thanh" ở đây
+        playlab_use_twice: Sử dụng khối này hai lần và nhớ thay đổi số thứ tự của
+          diễn viên
+        repeat: Đặt khối bên trong vòng lặp để lặp lại lệnh
+        repeat_blocks: Sử dụng khối "Lặp lại" và đè nó xung quanh các khối trong vùng
+          không gian làm việc
+        repeat_blocks_1: "(1) sử dụng khối này và đặt nó bao quanh các khối màu xám"
+        repeat_blocks_2: (2) di chuyển các khối "Lặp lại" ở đây, và đặt các khối màu
+          xám bên trong
+        repeat_full_circle: Nhập vào số lần các zombie đã di chuyển để vẽ một vòng
+          tròn
+        replace_questions: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với
+          một số
+        replace_questions_degree: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???"
+          với góc cần thiết
+        right_arrow_fireball: Sử dụng mũi tên bên phải để bắn quả cầu lửa
+        run: Nhấn "Run" để thử chương trình của bạn
+        set_length: Sử dụng khối này để đặt "chiều dài" về giá trị chính xác.
+        set_sides: Sử dụng khối này để đặt "số cạnh" với số lượng cần thiết để hoàn
+          thành câu đố.
+        set_sprite_image: Đính kèm khối "thiết lập hình ảnh cho diễn viên" với khối
+          "khi câu chuyện bắt đầu" để tạo một nhân vật
+        set_variable: Kéo một khối số ở đây để đặt biến của bạn
+        show_code_explanation: Click vào đây để xem mã lệnh cho chương trình bạn đang
+          thực hiện
+        snowflake_dropdown: Sử dụng cái này để thả xuống tạo các bông tuyết khác nhau!
+        studio_say_text: Gõ những gì bạn muốn diễn viên của bạn nói trong các dấu
+          ngoặc kép
+        turn_elsa: Sử dụng khối "rẽ" để làm Elsa rẽ. Số khung bên trong khối xoay
+          sẽ xác định Elsa quay một góc bao nhiêu độ
+        watch_again: Click vào đây để xem lại video
+        which_equation: Cân bằng như thế nào để mỗi bên ngẵn hơn so với hình dạng
+          bên?
+        write_draw_square_function: Kéo khối lệnh từ hộp công cụ vào đây để vẽ ra
+          một hình vuông
+        write_draw_triangle_function: Kéo khối lệnh từ hộp công cụ vào đây để vẽ ra
+          một tam giác
     concept:
       description:
-        sequence: Chuỗi tuần tự
+        function: Các hàm
         if: khối lệnh "nếu"
         if_else: khối lệnh "nếu-ngoài ra"
+        loop_for: khối lệnh "trái ngược"
         loop_times: khối lệnh "lập lại số lần"
         loop_until: Lặp lại cho đến khi bị khóa
         loop_while: khối lệnh "khi mà"
-        loop_for: khối lệnh "trái ngược"
-        function: Các hàm
         parameters: phương trình với tham số
+        sequence: Chuỗi tuần tự
+    game:
+      name:
+        Applab: Phòng thí nghiệm ứng dụng
+        Artist: nghệ sĩ
+        Artist2: Nghệ sĩ 2
+        Artist3: nghệ sĩ 3
+        Artist4: nghệ sĩ 4
+        Artist5: Nghệ sĩ 5
+        ArtistEC: nghệ sĩ
+        Bounce: Bật lại
+        Custom: Họa sĩ
+        CustomStudio: Phòng trò chơi
+        Farmer: người nông dân
+        Farmer2: Người nông dân 2
+        Farmer3: người nông dân 3
+        Flappy: Flappy Bird
+        Gamelab: Phòng thí nghiệm trò chơi
+        Jigsaw: Ghép hình
+        Maze: mê cung
+        MazeEC: mê cung
+        MazeStep: Chế độ mê cung từng bước thực hiện
+        Multi: Các lựa chọn chất liệu
+        NetSim: bộ mô phỏng internet
+        Spritelab: Sprite Lab
+        StudioEC: Phòng trò chơi
+        TextMatch: 'Hợp ngữ cảnh
+
+          '
+        Unplug1: Giới thiệu về khoa học máy tính
+        Unplug10: Internet
+        Unplug11: Gói gọn
+        Unplug2: Tư duy máy tính
+        Unplug3: lập trình đồ thị trên giấy
+        Unplug4: các bước lập trình
+        Unplug5: Các hàm
+        Unplug6: Điều kiện
+        Unplug7: Viết nhạc
+        Unplug8: Trừu tượng
+        Unplug9: Chương trình chuyển tiếp
+        Webapp: Phòng thí nghiệm ứng dụng
+        Wordsearch: Tìm kiếm từ/ từ vựng
     level:
       instructions:
-        maze_2_2: 'Bạn có thể giúp mình bắt những con lợn nghịch ngợm không? Hãy xếp
-          những khối lệnh "move forward" với nhau và bấm "Run" để giúp mình đến nơi
-          nhé. '
+        Custom_builder: Kéo khổi từ hộp công cụ không gian làm việc đê vẻ cấp độ bạn
+          muốn tạo. Bấm "Chạy" khi bạn đã sẵn sàng.
+        applab_ec_simple: Tạo ra các ứng dụng của bạn bằng cách sử dụng các khối trong
+          thanh công cụ.
+        jigsaw_1: Nhấp vào khối
+        jigsaw_10: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
+        jigsaw_11: Đặt các khối vào đúng thứ tự các số.
+        jigsaw_12: Đặt các khối vào đúng thứ tự các số.
+        jigsaw_13: Giải quyết các câu đố!
+        jigsaw_2: Kéo các khối vào các vị trí cho sẵn
+        jigsaw_3: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
+        jigsaw_4: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
+        jigsaw_5: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
+        jigsaw_6: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
+        jigsaw_7: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
+        jigsaw_8: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
+        jigsaw_9: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
         maze_2_1: Chú lợn này đang làm rối lông của tui. Giúp tôi tìm nó!
-        maze_2_2_5: Lần theo con đường và dẫn tôi tới chú heo ngốc. Nhớ tránh TNT
-          không thì bay mất xác!
-        maze_2_3: Hãy dẫn dắt tôi tới chỗ chú heo màu xanh lá cây! (Nhớ coi chừng
-          thuốc nổ)
-        maze_2_4: Giữ bình tĩnh và giúp mình tìm những chú lợn xấu xa. Hoặc là mình
-          giận đó!
-        maze_2_5: Có một cách mà tôi có thể đến chỗ heo ngốc chỉ bằng hai khối lệnh.
-          Bạn có làm được không?
-        maze_2_6: Hãy đưa mình đến chỗ heo ngốc chỉ trong ba khối lệnh.
-        maze_2_7: Giúp mình đuổi chú lợn xấu xí này đi bằng cách sử dụng các khối
-          lệnh ít nhất có thể. Bạn thử dùng các khối lệnh lặp lại nhiều hơn một lần.
-        maze_2_8: 'Khi một khối lệnh có màu xám, thì có nghĩa rằng bạn không thể xóa
-          nó. Giải quyết câu đố này bằng cách sử dụng khối lệnh "lặp lại"lặp đi lặp
-          lại 3 lần. Cố gắng đưa 3 khối bên trong "lặp lại" khối màu xám: di chuyển,
-          di chuyển, lần lượt.'
-        maze_2_9: Ok, hãy thử khối lệnh mới " lặp lại cho đến khi" nó sẽ lặp lại hành
-          động cho đến khi gặp được những chú lợn phiền toái.
         maze_2_10: Được rồi, lần cuối để luyện tập nhé - Bạn có thể giải quyết trò
           này chỉ bằng 4 khối được không?
         maze_2_11: Bạn thân mến. Là tôi zombie đây... Tôi đói quá... Tôi cần tới chỗ
@@ -106,62 +216,43 @@ vi:
         maze_2_19: Bạn có thể thêm chỉ 3 khối để giúp tôi giải quyết một mê cung phức
           tạp hơn được không? Nếu bạn làm điều đó đúng, tôi có thể đi bộ trên con
           đường cong và không có vấn đề với chiều dài.
-        turtle_1_1: Xin chào, tôi là một nghệ sĩ/ hoạ sĩ. Bạn có thể viết mã lập trình
-          code để khiến tôi vẽ hầu hết mọi thứ bạn lập trình. Hãy sử dụng một vài
-          khối để giúp tôi vẽ qua đường màu xám trong hình.
-        turtle_1_2: 'Bây giờ, vẽ một hình vuông. Lưu ý: sử dụng màu sắc yêu thích
-          của bạn bằng cách chọn nó trong khối mới "thiết lập màu".'
-        turtle_1_3: Vẽ một hình vuông, chỉ sử dụng 3 khối.
-        turtle_1_4: 'Hãy vẽ một tam giác có các cạnh/ mặt khác màu nhau, sử dụng lựa
-          chọn "màu ngẫu nhiên" để chọn một màu khác nhau cho mỗi thời điểm. Gợi ý:
-          bạn sẽ phải tìm ra khoảng cách bao xa để chuyển/ vòng lại bằng cách click
-          vào số trong những turn block.'
-        turtle_1_5: Bây giờ, để thực hành, vẽ một hình tam giác và sau đó là một hình
-          vuông để vẽ một phong bì.
-        turtle_1_6: 'Bạn có thể tìm ra cách vẽ những hình tam giác, hình vuông này
-          không? Gợi ý: Hãy làm hình tam giác trước, sau đó bạn hãy tìm khoảng bao
-          nhiêu góc trước khi thực hiện vẽ hình vuông.'
-        turtle_1_7: Ok, chúng ta hãy làm cho nó khó khăn hơn một chút - xem nếu bạn
-          có thể vẽ các ô kính màu xanh lá cây. Các ô vuông độ dài là 100 điểm ảnh
-          mỗi cạnh, và khoảng cách giữa chúng là 50 pixel. Đừng quên vẽ màu xanh lá
-          cây!
-        turtle_1_8: Được rồi, cố gắng nhìn xem những gì sẽ xảy ra nếu bạn chạy mã
-          này (hoặc nhấn "Chạy" để thử nó). Sau đó, lặp lại nó đủ số lần để hoàn tất
-          bản vẽ. Các màu sắc sẽ khác nhau mỗi lần.
-        turtle_1_9: Bạn hãy tìm ra số để thay thế các ký hiệu chấm hỏi để vẽ một vòng
-          tròn?
-        turtle_1_10: 'Bạn đã làm nó! Bây giờ, vẽ bất cứ cái gì bạn muốn. Một số thú
-          vị ý tưởng: một nhân vật dính, bông tuyết hoặc xoắn ốc. Cũng thử khối mới
-          "thiết lập chiều rộng". Chúc vui vẻ!'
-        turtle_4_1: 'Bạn có thể vẽ một hình tam giác (với mỗi cạnh là 100 điểm ảnh)
-          với chỉ 3 khối? Gợi ý: sử dụng một khối "lặp lại".'
-        turtle_4_2: Thêm một khối "quay phải 90 độ" vào chương trình được viết sẵn
-          trên màn hình để vẽ những hình tam giác này.
-        turtle_4_3: Ok, đây là lệnh mà bạn viết để vẽ một hình tam giác. Bạn có thể
-          thêm khối "lặp lại" và "quay" để tạo thành một bông hoa thật đẹp?
-        turtle_4_4: 'Đây là các lệnh của câu đố trước, nhưng chỉ quay 36 độ sau khi
-          vẽ một tam giác. Việc này cần phải lặp lại bao nhiêu lần? (Gợi ý: sau khi
-          quay 360 độ hình vẽ sẽ trở thành một đường tròn)'
-        turtle_4_5: 'Đây là các lệnh của câu đố trước, nhưng lặp lại việc quay 36
-          lần. Vậy mỗi lần cần quay bao nhiêu độ? (Gợi ý: sau khi quay 360 độ hình
-          vẽ sẽ trở thành một đường tròn)'
-        turtle_4_6: Chỉ sử dụng 3 khối lệnh, bạn có thể vẽ một hình vuông có cạnh
-          là 20 pixel không?
-        turtle_4_7: 'Đây là các lệnh để vẽ hình vuông từ câu đố trước. Bạn có thể
-          lặp lại các lệnh đó để vẽ 10 hình vuông liền kề giống như một cái thang
-          không? Gợi ý: bạn chỉ cần thêm 2 khối lệnh.'
-        turtle_4_8: Đây là lời giải của câu đố vừa rồi. Bạn có thể thêm 2 khối lệnh
-          nữa để hoàn thành hình vẽ không?
-        turtle_4_9: Đây là lời giải của câu đố vừa rồi. Bạn cần quay bao nhiêu độ
-          để hoàn thành hình vẽ? (Bạn có thể cần phải đoán một vài lần)
-        turtle_4_10: Đây là lời giải của câu đố vừa rồi. Bạn cần phải lặp lại bao
-          nhiêu lần để hoàn thành hình vẽ?
-        turtle_4_11: Hãy thử đổi những số trong những khối "xoay" và "lặp lai" để
-          tạo những mô hình khác nhau. Ngoài ra, có thể thử thay đổi phần còn lại
-          của lệnh để vẽ bất kỳ thứ gì bạn muốn.
+        maze_2_2: 'Bạn có thể giúp mình bắt những con lợn nghịch ngợm không? Hãy xếp
+          những khối lệnh "move forward" với nhau và bấm "Run" để giúp mình đến nơi
+          nhé. '
+        maze_2_2_5: Lần theo con đường và dẫn tôi tới chú heo ngốc. Nhớ tránh TNT
+          không thì bay mất xác!
+        maze_2_3: Hãy dẫn dắt tôi tới chỗ chú heo màu xanh lá cây! (Nhớ coi chừng
+          thuốc nổ)
+        maze_2_4: Giữ bình tĩnh và giúp mình tìm những chú lợn xấu xa. Hoặc là mình
+          giận đó!
+        maze_2_5: Có một cách mà tôi có thể đến chỗ heo ngốc chỉ bằng hai khối lệnh.
+          Bạn có làm được không?
+        maze_2_6: Hãy đưa mình đến chỗ heo ngốc chỉ trong ba khối lệnh.
+        maze_2_7: Giúp mình đuổi chú lợn xấu xí này đi bằng cách sử dụng các khối
+          lệnh ít nhất có thể. Bạn thử dùng các khối lệnh lặp lại nhiều hơn một lần.
+        maze_2_8: 'Khi một khối lệnh có màu xám, thì có nghĩa rằng bạn không thể xóa
+          nó. Giải quyết câu đố này bằng cách sử dụng khối lệnh "lặp lại"lặp đi lặp
+          lại 3 lần. Cố gắng đưa 3 khối bên trong "lặp lại" khối màu xám: di chuyển,
+          di chuyển, lần lượt.'
+        maze_2_9: Ok, hãy thử khối lệnh mới " lặp lại cho đến khi" nó sẽ lặp lại hành
+          động cho đến khi gặp được những chú lợn phiền toái.
+        maze_3_1: Tôi cần nhận được để cho chú lợn này! nhập vào một cặp để kêu gọi
+          di chuyển; như vậy tôi có thể nhận trở lại trứng của tôi.
+        maze_3_2: Viết một chương trình, như vậy tôi có thể làm mọi thứ cho chú lợn.
+        maze_3_3: Tôi phải làm gì để đến chỗ chú lợn? Đảm bảo rằng tôi không chạy
+          vào hộp TNT!
+        maze_3_4: Ah! Viết cho tôi một chương trình để đưa tôi vong quan TNT và đến
+          với chú lợn.
         maze_karel_1_1: Chào. Tôi là nông dân. Tôi cần bạn xới phẳng ruộng để tôi
           có thể sẵn sàng trồng cây. Xoay tôi đến chỗ bùn bẩn và dùng khối lệnh "xóa"
           để xới phẳng chỗ ruộng ấy.
+        maze_karel_1_10: Tôi đang làm đồng vào buổi đêm, nên trời cực kỳ tối! Tôi
+          không thể nhìn rõ cái ụ đất lớn từng nào. Hiện tại tôi không có nhiều lệnh
+          trong khối lệnh "trong khi". Di chuyển tôi xung quanh cánh đồng, nếu ở đó
+          có ụ đất nào thì hãy san phẳng nó.
+        maze_karel_1_11: |-
+          Bên ngoài vẫn tối. Di chuyển tôi dọc cánh đồng. Nếu ở đó có một ụ đất, hãy san phẳng nó. Nếu có hố hãy lấp phẳng nó.
+          Gợi ý: click vào ô trong khối lệnh nếu để sử dụng linh hoạt nó.
         maze_karel_1_2: Tiếp đó, hãy di chuyển tôi đến cái hố và lấp đầy nó bằng hai
           xẻng đất, bằng cách sử dụng khối lệnh "lấp đầy".
         maze_karel_1_3: Di chuyển tôi đến đống đất bẩn và nói cho tôi biết tôi cần
@@ -185,16 +276,270 @@ vi:
         maze_karel_1_9: |-
           Giúp tôi san phẳng các ụ đất này với! Hãy cố gắng sử dụng càng ít khối lệnh càng tốt.
           Gợi ý: cố gắng dùng khối lệnh "trong khi".
-        maze_karel_1_10: Tôi đang làm đồng vào buổi đêm, nên trời cực kỳ tối! Tôi
-          không thể nhìn rõ cái ụ đất lớn từng nào. Hiện tại tôi không có nhiều lệnh
-          trong khối lệnh "trong khi". Di chuyển tôi xung quanh cánh đồng, nếu ở đó
-          có ụ đất nào thì hãy san phẳng nó.
-        maze_karel_1_11: |-
-          Bên ngoài vẫn tối. Di chuyển tôi dọc cánh đồng. Nếu ở đó có một ụ đất, hãy san phẳng nó. Nếu có hố hãy lấp phẳng nó.
-          Gợi ý: click vào ô trong khối lệnh nếu để sử dụng linh hoạt nó.
+        maze_karel_2_1: Thử dùng các khối lệnh để giúp tôi san phẳng các ụ đất và
+          lấp đầy các hố đất. Sử dụng vòng lặp để giảm số khối lệnh phải viết. Gợi
+          ý, bạn có thể đặt một vòng lặp ở trong một vòng lặp.
+        maze_karel_2_10: Di chuyển tôi qua ruộng, và sứ dụng hai chức năng để giúp
+          tôi loại bỏ tất cả các ụ và điền vào tất cả chỗ trống.
+        maze_karel_2_2: Chúng ta đã viết định nghĩa khối "Lấp 5 lần", trong nhóm "Hàm".
+          Dùng nó để giúp tôi lấp hố đất này.
+        maze_karel_2_3: Dùng hàm "Lấp 5 lần" để giúp tôi lấp đầy các hố đất này. Bạn
+          sẽ phải kéo nó ra từ nhóm "Hàm".
+        maze_karel_2_4: Viết một hàm mói để nó xúc 7 xẻng đất để san bằng đống đất.
+          Sau đo dùng nó để viết chương trình giúp tôi san phẳng hết các ụ đất trên
+          đồng.
+        maze_karel_2_5: Viết một hàm mói để nó xúc 6 xẻng đất để san bằng đống đất.
+          Sau đó dùng nó để viết chương trình giúp tôi san phẳng hết các ụ đất trên
+          đồng.
+        maze_karel_2_6: Dùng hai hàm mới là "Lấp 8 lần" và "San phẳng 8 lần" để giúp
+          tôi san bằng các ụ đất và lấp đầy các hố đất.
+        maze_karel_2_7: Có một con bò trong ruộng của tôi! Viết một hàm mới để giúp
+          tôi tránh còn bò và san phẳng các ụ đất. Đặt tất cả các khối lệnh trong
+          hàm mới đó.
+        maze_karel_2_8: Dùng hàm mới "tránh con bò và san phẳng 1 lần" để giúp tôi
+          san phẳng mọi ụ đất.
+        maze_karel_2_9: Ok, đây là một chức năng loại bỏ 4 ụ đất bẩn trong cùng 1
+          hàng dọc. Cố gắng đưa chức năng này vào một vòng lặp, do đó bạn loại bỏ
+          tất cả các ụ bẩn bằng cách sử dụng chỉ có một vài khối lệnh mới.
+        maze_karel_debug_function_1: Bạn nên thay đổi chương trình này như thế nào
+          để giúp tôi san phẳng các ụ đất?
+        maze_karel_debug_function_2: 'Hãy sủa lỗi chương trình này để tôi có thể làm
+          cho ruộng của tôi thật phẳng!
+
+          '
+        maze_karel_debug_function_3: Sửa chương trình này để tôi có thể san phẳng
+          các ụ đất trên đồng.
+        maze_karel_debug_if: Giúp tôi với! Hãy sửa chương trình của bạn để làm cho
+          ruộng của tôi thật phẳng.
+        maze_karel_debug_if_else: Sửa lỗi chương trình này để tôi có thể lấp đầy các
+          hố và san bằng các ụ đất.
+        maze_karel_debug_repeat: Sửa các lỗi của chương trình này để làm cho ruộng
+          của tôi thật phẳng và đẹp!
+        maze_karel_debug_seq_1: Chào mừng bạn để gỡ lỗi! Mã của tôi không hoạt động
+          đúng. Bạn có thể phát hiện vấn đề và sửa chữa nó như vậy tôi có thể nhận
+          được hoàn toàn bãi của tôi và sẵn sàng để trồng?
+        maze_karel_debug_seq_2: Không biết chương trình này sai ở đâu vậy? Bạn sẽ
+          sửa chương trình này thế nào để tôi có thể san bằng hết các ụ đất nhỉ?
+        maze_karel_debug_while: Bạn sẽ chỉnh lại chương trình này như thế nào để giúp
+          tôi lấp đầy các hố đất?
+        maze_wordsearch_k_1: Di chuyển tôi để đánh vần từ EAST
+        maze_wordsearch_k_13: 'Di chuyển tôi theo hướng để đánh vần chữ DEBUG (tiếng
+          Việt nghĩa là: gỡ lỗi của chương trình)'
+        maze_wordsearch_k_15: Di chuyển tôi theo hướng để đánh vần chữ ABOVE
+        maze_wordsearch_k_16: Di chuyển tôi theo hướng để đánh vần chữ BELOW
+        maze_wordsearch_k_2: Di chuyển tôi để đánh vần từ SOUTH
+        maze_wordsearch_k_20: Đây là bài kiểm tra!!! Di chuyển tôi theo hướng để đánh
+          vần chữ STORY
+        maze_wordsearch_k_3: Di chuyển tôi để đánh vần từ WEST
+        maze_wordsearch_k_4: Di chuyển tôi để đánh vần từ NORTH
+        maze_wordsearch_k_6: Di chuyển tôi theo hướng Đông rồi tiếp đó theo hướng
+          Nam để đánh vân từ JUMP
+        maze_wordsearch_k_9: Di chuyển tôi để đánh vần từ CODE
+        mazestep_1: Các bước giải mê cung được mô tả ở đây
+        mazestep_2: Các bước giải mê cung được mô tả ở đây
+        mazestep_3: Các bước giải mê cung được mô tả ở đây
+        mazestep_4: Các bước giải mê cung được mô tả ở đây
+        mazestep_5: Các bước giải mê cung được mô tả ở đây
+        studio_c2_1: Bạn có thể làm chú chó nói "hello world" không?
+        studio_c2_10: Bạn có thể thêm khối để thay đổi hình nền và tốc độ của Waddles,
+          sau đó di chuyển chú ta cùng với mũi tên sau khi bạn ghi điểm không?
+        studio_c2_11: Tạo câu chuyện của chính bạn. Khi bạn đã viết xong câu chuyện
+          đó, nhấn "Hoàn thành" để gửi cho bạn của bạn xem câu chuyện bạn vừa làm
+          ra!
+        studio_c2_2: Bạn có thể làm chú chó nói vài điều, sau đó chú mèo nói tiếp
+          vài điều không?
+        studio_c2_3: Bạn có thể viết một chương trình để làm cho con chó này di chuyển
+          đến con mèo không?
+        studio_c2_4: Bạn có thể viết một chương trình mà làm cho con chó di chuyển
+          đến mèo, và làm con mèo nói "Xin chào" khi con chó đến nó không?
+        studio_c2_5: Bạn có thể viết một chương trình giúp chú bạch tuộc nói "Xin
+          chào" khi nó bị nhấp chuột vào không?
+        studio_c2_6: Bạn có thể viết một chương trình để làm Waddles di chuyển xung
+          quanh bằng các phím lên / xuống / trái / phải để đạt mục tiêu?
+        studio_c2_7: Khối "lặp lại mãi mãi" cho phép bạn chạy mã liên tục. Bạn có
+          thể dùng khối này để di chuyển con khủng long lên và xuống nhiều lần không?
+        studio_c2_8: Bạn có khiến Waddles nói "ouch!" và phát âm thanh "hit" khi chú
+          chạy vào chỗ những con khủng long, và sau đó di chuyển chú cùng với các
+          mũi tên nếu điều đó xảy ra không?
+        studio_c2_9: Bạn có thể thêm các khối để ghi điểm khi Waddles chạy vào chỗ
+          bạch tuộc và sau đó di chuyển chú ta cùng mũi tên sau khi bạn ghi điểm không?
+        studio_c3_game_1: Bạn có thể viết một chương trình giúp chú bạch tuộc nói
+          "Xin chào" khi nó bị nhấp chuột vào không?
+        studio_c3_game_2: Bạn có thể viết một chương trình để làm Waddles di chuyển
+          xung quanh bằng các phím lên / xuống / trái / phải để đạt mục tiêu?
+        studio_c3_game_3: Khối "lặp lại mãi mãi" cho phép bạn chạy mã liên tục. Bạn
+          có thể dùng khối này để di chuyển con khủng long lên và xuống nhiều lần
+          không?
+        studio_c3_game_4: Bạn có khiến Waddles nói "ouch!" và phát âm thanh "hit"
+          khi chú chạy vào chỗ những con khủng long, và sau đó di chuyển chú cùng
+          với các mũi tên nếu điều đó xảy ra không?
+        studio_c3_game_5: Bạn có thể thêm các khối để ghi điểm khi Waddles chạy vào
+          chỗ bạch tuộc và sau đó di chuyển chú ta cùng mũi tên sau khi bạn ghi điểm
+          không?
+        studio_c3_game_6: Bạn có thể thêm khối để thay đổi hình nền và tốc độ của
+          Waddles, sau đó di chuyển chú ta cùng với mũi tên sau khi bạn ghi điểm không?
+        studio_c3_game_7: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn
+          thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại
+          của họ.
+        studio_c3_story_1: Bạn có thể làm chú chó nói "hello world" không?
+        studio_c3_story_2: Bạn có thể làm chú chó nói vài điều, sau đó chú mèo nói
+          tiếp vài điều không?
+        studio_c3_story_3: Bạn có thể viết một chương trình để làm cho con chó này
+          di chuyển đến con mèo không?
+        studio_c3_story_4: Bạn có thể viết một chương trình mà làm cho con chó di
+          chuyển đến mèo, và làm con mèo nói "Xin chào" khi con chó đến nó không?
+        studio_c3_story_5: Bạn có thể thêm khối lệnh làm cho bạch tuộc trở nên vui
+          vẻ không?
+        studio_c3_story_6: Tạo câu chuyện của chính bạn. Khi bạn đã viết xong câu
+          chuyện đó, nhấn "Hoàn thành" để gửi cho bạn của bạn xem câu chuyện bạn vừa
+          làm ra!
+        studio_ec_sandbox: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn
+          thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại
+          của họ.
+        studio_full_sandbox: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn
+          thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại
+          của họ.
+        studio_gumball_click_hello: Bạn có thể giúp Anton thông báo sự bắt đầu của
+          một cuộc đua bằng cách nói “Sẵn sàng, thiết lập, đi!”? Để kiểm tra chương
+          trình của bạn, đừng quên bấm vào Anton sau khi bạn nhấp vào Chạy!
+        studio_gumball_free_play: Tạo trò chơi hoặc câu chuyện của riêng bạn. Khi
+          bạn hoàn tất, hãy nhấp vào Kết thúc để cho phép bạn bè thử trò chơi của
+          bạn trên điện thoại, máy tính bảng hoặc máy tính của họ!
+        studio_gumball_hello1: Anais muốn kết bạn mới. Bạn có thể giúp cô ấy nói “hello”
+          bằng cách kéo khối “nói” ra vào khu vực làm việc và gõ từ “hello” bên trong?
+        studio_gumball_hello2: Darwin (diễn viên 1) và anh trai Gumball (diễn viên
+          2) đang đi học. Giúp họ chào đón nhau bằng cách sử dụng khối “diễn viên
+          nói” hai lần.
+        studio_gumball_join_food_fight: Tham gia vào cuộc chiến lương thực! Sử dụng
+          lệnh “diễn viên ném item đúng” để có Banana Joe (diễn viên 1) ném thức ăn
+          vào Anton (diễn viên 2)! Đặt tâm trạng của Anton trở nên tức giận khi hắn
+          bị trúng đạn.
+        studio_gumball_move_events: Darwin đang tham gia cuộc thi tập cờ! Giúp anh
+          ta chạy xung quanh bằng cách gắn khối “di chuyển” cho mỗi sự kiện. Khi bạn
+          hoàn tất, bấm Chạy và cố gắng thu thập tất cả các cờ.
+        studio_gumball_move_to_actor: Gumball (diễn viên 1) và Darwin (diễn viên 2)
+          là muộn cho ngày thực địa! Trợ giúp Gumball di chuyển 200 pixel xuống Darwin
+          bằng cách sử dụng khối “di chuyển diễn viên”. Tiếp theo, kết nối một khối
+          với sự kiện “khi diễn viên chạm” để phát âm thanh khi họ tìm thấy nhau.
+        studio_gumball_move_to_flag: Banana Joe sắp giành chiến thắng một cuộc đua
+          ngày sân! Giúp anh ta đi 200 pixel cuối cùng bằng cách sử dụng khối “di
+          chuyển”.
+        studio_gumball_repeat: Khối “lặp lại mãi mãi” cho phép bạn chạy mã liên tục.
+          Bạn có thể đính kèm các khối để nó để giúp Gumball ấm lên cho cuộc đua của
+          mình bằng cách di chuyển trái và phải nhiều lần?
+        studio_gumball_sound_and_points: Chúng tôi đã cung cấp hầu hết mã giúp Anton
+          (diễn viên 2) di chuyển trái và phải, cũng như mã để di chuyển Banana Joe
+          (diễn viên 1) quanh màn hình. Bạn có thể kết thúc mã và thêm khối vào sự
+          kiện “khi diễn viên chạm” để làm cho nó để cả hai chơi một âm thanh và ghi
+          điểm một điểm khi Banana Joe và Anton va chạm? Nhấn Run để chơi trò chơi.
+        studio_gumball_warn_food_fight: Darwin vừa thoát khỏi cuộc chiến lương thực!
+          Thay đổi nền thành “nhân vật” và đặt tốc độ của Darwin thành nhanh, sau
+          đó nhấn Run và di chuyển anh ta đến Penny để cảnh báo cô.
+        studio_iceage_click_hello: Bạn có thể giúp Sid thử gọi bạn bè lần cuối khi
+          nhấp chuột không? Đừng quên nhấp chuột vào cậu ta sau khi nhấn Chạy.
+        studio_iceage_free_play: Đã đến lúc làm game hoặc câu chuyện của riêng bạn
+          rồi! Khi bạn hoàn tất, hãy nhấp chuột vào Hoàn tất để cho bạn bè của mình
+          chơi thử game của bạn trên điện thoại, máy tính bảng hoặc máy tính của họ!
+        studio_iceage_hello1: Sid muốn tập hợp tất cả mọi người trong một chuyến phiêu
+          lưu mới. Bạn có thể giúp cậu ấy nói “Xin chào” bằng cách kéo các khối “nói”
+          vào không gian làm việc và gõ từ “xin chào” bên trong không?
+        studio_iceage_hello2: Manny (nhân vật 1) tìm thấy Sid (nhân vật 2) và muốn
+          mời anh ta tham gia cuộc phiêu lưu. Hãy giúp họ chào nhau bằng cách sử dụng
+          khối “nhân vật nói” hai lần.
+        studio_iceage_move_events: Scrat vẫn đang tìm hạt sồi! Hãy giúp cậu ấy lùng
+          sục xung quanh bằng cách gắn khối “di chuyển” vào mỗi sự kiện và thay đổi
+          hướng hoạt động cho mỗi phím mũi tên. Khi bạn hoàn tất, hãy nhấp chuột vào
+          Chạy và cố gắng thu thập tất cả các hạt sồi nhé.
+        studio_iceage_move_to_actor: Diego (nhân vật 1) đang tìm kiếm Manny (nhân
+          vật 2). Hãy giúp Diego di chuyển xuống 200 pixel tới chỗ Manny bằng khối
+          “di chuyển nhân vật”. Tiếp theo, hãy nối một khối với sự kiện “khi nhân
+          vật chạm” để phát âm thanh khi họ tìm thấy nhau.
+        studio_iceage_move_to_flag: Scrat đang tìm kiếm hạt sồi của mình! Hãy giúp
+          cậu ấy đi tới 200 pixel cuối bằng cách sử dụng khối “di chuyển”.
+        studio_iceage_repeat: Khối lệnh "lặp lại mãi mãi" cho phép bạn có
+          thể chạy đoạn mã liên tục. Bạn có thể gắn khối lệnh để giúp
+          Granny tập thể dục bằng cách di chuyển qua trái và qua phải lặp
+          lại không?
+        studio_iceage_sound_and_points: Chúng tôi đã cung cấp hầu hết các mã lệnh
+          giúp Granny di chuyển sang trái và phải cũng như mã lệnh để di chuyển Sid
+          quanh màn hình. Bạn có thể hoàn thành mã lệnh và thêm các khối vào sự kiện
+          “khi diễn viên chạm vào” để tạo ra sự kiện đó và cả hai cùng phát ra âm
+          thanh cũng như ghi điểm khi Sid và Granny va chạm không? Nhấn Chạy để chơi
+          trò chơi.
+        studio_iceage_throw_hearts: Sid muốn cho bà của mình, Granny, biết rằng anh
+          yêu bà. Hãy sử dụng lệnh “diễn viên ném” để Sid (diễn viên 1) ném trái tim
+          vào Granny (diễn viên 2)! Đặt tâm trạng của Granny thành hạnh phúc khi bà
+          nhận được trái tim.
+        studio_iceage_warn_ice_age: Mọi người cần phải di chuyển nhanh hơn vì kỷ băng
+          hà đang đến gần! Hãy đổi cảnh nền thành băng giá và đặt tốc độ của Sid thành
+          nhanh, sau đó nhấn Chạy và di chuyển cậu ta đến chỗ Diego để cảnh báo.
+        studio_k1_1: Bạn có thể làm chú chó nói "hello world" không?
+        studio_k1_2: Bạn có thể làm chú chó nói vài điều, sau đó chú mèo nói tiếp
+          vài điều không?
+        studio_k1_3: Bạn có thể viết một chương trình để làm cho con chó này di chuyển
+          đến con mèo không?
+        studio_k1_4: Làm chú chó đi đến chỗ chú mèo, và chú mèo nói "xin chào" khi
+          chú chó đến nơi.
+        studio_k1_5: Bạn có thể thêm khối lệnh làm cho bạch tuộc trở nên vui vẻ không?
+        studio_k1_6: Tạo ra câu chuyện của chính bạn! Cho chú chó và chú mèo đi xung
+          quanh và nói chuyện với nhau.
+        studio_playlab_1: Bạn có thể giúp Waddles nói "Xin chào" không?
+        studio_playlab_10: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn
+          thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại
+          của họ.
+        studio_playlab_2: Cậu bé Hang Động (người 1) và Jasmine (người 2) muốn nói
+          "xin chào" với nhau. Bạn có thể giúp họ bằng cách sử dụng khối "nói chuyện"
+          2 lần không?
+        studio_playlab_3: Bạn có thể giúp cô gái Tennis nhận được cờ không?
+        studio_playlab_4: Bạn có thể giúp cậu bé Tennisa ( người 1) đến chỗ Cô gái
+          Tennis và phát âm thanh khi cậu đến đó không?
+        studio_playlab_5: Bạn có thể giúp Spacebot nói "chúc mừng trần gian" khi nó
+          được nhấp vào? Đừng quên bấm vào đó sau khi bạn bấm Chạy
+        studio_playlab_6: Bạn có thể giúp Cô Phù thủy đi chuyển xung quanh bằng các
+          phím lên/xuống/phải/trái để có được tất cả các quả cầu ma thuật không?
+        studio_playlab_7: Khối "Lặp lại mãi mãi" cho phép bạn chạy mã liên tục. Bạn
+          có thể đính kèm khối để giúp thuật sĩ di chuyển bên phải và trái nhiều lần
+          không?
+        studio_playlab_8: Bạn có thể thêm một khối để ghi thêm điểm và một khối để
+          phát ra âm thanh khi con Kì lân chạy xung quanh Thật sĩ, và sau đó di chuyển
+          ông ấy cùng mũi tên cho đến khi bạn ghi điểm không?
+        studio_playlab_9: Thiết lập hình nền cho các cuộc xâm lược ngoài hành tinh
+          và giúp Spacebot bắt được người ngoài hành tinh nhanh hơn bằng cách thay
+          đổi tốc độ của nó. Sau đó di chuyển anh ấy với các phím mũi tên để giúp
+          Spacebot và cảnh báo những người khác
+        turtle_1_1: Xin chào, tôi là một nghệ sĩ/ hoạ sĩ. Bạn có thể viết mã lập trình
+          code để khiến tôi vẽ hầu hết mọi thứ bạn lập trình. Hãy sử dụng một vài
+          khối để giúp tôi vẽ qua đường màu xám trong hình.
+        turtle_1_10: 'Bạn đã làm nó! Bây giờ, vẽ bất cứ cái gì bạn muốn. Một số thú
+          vị ý tưởng: một nhân vật dính, bông tuyết hoặc xoắn ốc. Cũng thử khối mới
+          "thiết lập chiều rộng". Chúc vui vẻ!'
+        turtle_1_2: 'Bây giờ, vẽ một hình vuông. Lưu ý: sử dụng màu sắc yêu thích
+          của bạn bằng cách chọn nó trong khối mới "thiết lập màu".'
+        turtle_1_3: Vẽ một hình vuông, chỉ sử dụng 3 khối.
+        turtle_1_4: 'Hãy vẽ một tam giác có các cạnh/ mặt khác màu nhau, sử dụng lựa
+          chọn "màu ngẫu nhiên" để chọn một màu khác nhau cho mỗi thời điểm. Gợi ý:
+          bạn sẽ phải tìm ra khoảng cách bao xa để chuyển/ vòng lại bằng cách click
+          vào số trong những turn block.'
+        turtle_1_5: Bây giờ, để thực hành, vẽ một hình tam giác và sau đó là một hình
+          vuông để vẽ một phong bì.
+        turtle_1_6: 'Bạn có thể tìm ra cách vẽ những hình tam giác, hình vuông này
+          không? Gợi ý: Hãy làm hình tam giác trước, sau đó bạn hãy tìm khoảng bao
+          nhiêu góc trước khi thực hiện vẽ hình vuông.'
+        turtle_1_7: Ok, chúng ta hãy làm cho nó khó khăn hơn một chút - xem nếu bạn
+          có thể vẽ các ô kính màu xanh lá cây. Các ô vuông độ dài là 100 điểm ảnh
+          mỗi cạnh, và khoảng cách giữa chúng là 50 pixel. Đừng quên vẽ màu xanh lá
+          cây!
+        turtle_1_8: Được rồi, cố gắng nhìn xem những gì sẽ xảy ra nếu bạn chạy mã
+          này (hoặc nhấn "Chạy" để thử nó). Sau đó, lặp lại nó đủ số lần để hoàn tất
+          bản vẽ. Các màu sắc sẽ khác nhau mỗi lần.
+        turtle_1_9: Bạn hãy tìm ra số để thay thế các ký hiệu chấm hỏi để vẽ một vòng
+          tròn?
         turtle_2_1: |-
           Chào! Tôi là nghệ sĩ zombie. Tôi rất thích vẽ tranh! Giúp tôi vẽ hình vuông với màu sắc thật sặc sỡ.
           Lưu ý: bạn có những khối lệnh tương tự, nhưng bây giờ chúng đã được phân loại.
+        turtle_2_10: Đây là một vài đoạn mã khác nhau để thử nghiệm với các độ khó
+          khác nhau. Điều gì sẽ xảy ra nếu bạn thay đổi thứ tự tất cả? Hoặc chọn một
+          màu ngẫu nhiên trong vòng lặp? Vẽ bất cứ điều gì bạn muốn.
         turtle_2_2: Chào mừng các bạn đến với phương pháp sử dụng hàm. Thử "vẽ một
           hình vuông" trong nhóm "hàm", để vẽ hình vuông cỡ 50x50 màu xanh.
         turtle_2_3: Sử dụng các khối "lặp lại" trong nhóm "Vòng lặp" để vẽ 3 hình
@@ -221,38 +566,13 @@ vi:
         turtle_2_9: Sử dụng vòng lặp "thuật đếm" để vẽ nên một gia đình người tuyết
           với chiều cao là 110, 100, 90, 80 và 70. Tất cả người tuyết đều lớn hơn
           60 điểm ảnh.
-        turtle_2_10: Đây là một vài đoạn mã khác nhau để thử nghiệm với các độ khó
-          khác nhau. Điều gì sẽ xảy ra nếu bạn thay đổi thứ tự tất cả? Hoặc chọn một
-          màu ngẫu nhiên trong vòng lặp? Vẽ bất cứ điều gì bạn muốn.
-        maze_karel_2_1: Thử dùng các khối lệnh để giúp tôi san phẳng các ụ đất và
-          lấp đầy các hố đất. Sử dụng vòng lặp để giảm số khối lệnh phải viết. Gợi
-          ý, bạn có thể đặt một vòng lặp ở trong một vòng lặp.
-        maze_karel_2_2: Chúng ta đã viết định nghĩa khối "Lấp 5 lần", trong nhóm "Hàm".
-          Dùng nó để giúp tôi lấp hố đất này.
-        maze_karel_2_3: Dùng hàm "Lấp 5 lần" để giúp tôi lấp đầy các hố đất này. Bạn
-          sẽ phải kéo nó ra từ nhóm "Hàm".
-        maze_karel_2_4: Viết một hàm mói để nó xúc 7 xẻng đất để san bằng đống đất.
-          Sau đo dùng nó để viết chương trình giúp tôi san phẳng hết các ụ đất trên
-          đồng.
-        maze_karel_2_5: Viết một hàm mói để nó xúc 6 xẻng đất để san bằng đống đất.
-          Sau đó dùng nó để viết chương trình giúp tôi san phẳng hết các ụ đất trên
-          đồng.
-        maze_karel_2_6: Dùng hai hàm mới là "Lấp 8 lần" và "San phẳng 8 lần" để giúp
-          tôi san bằng các ụ đất và lấp đầy các hố đất.
-        maze_karel_2_7: Có một con bò trong ruộng của tôi! Viết một hàm mới để giúp
-          tôi tránh còn bò và san phẳng các ụ đất. Đặt tất cả các khối lệnh trong
-          hàm mới đó.
-        maze_karel_2_8: Dùng hàm mới "tránh con bò và san phẳng 1 lần" để giúp tôi
-          san phẳng mọi ụ đất.
-        maze_karel_2_9: Ok, đây là một chức năng loại bỏ 4 ụ đất bẩn trong cùng 1
-          hàng dọc. Cố gắng đưa chức năng này vào một vòng lặp, do đó bạn loại bỏ
-          tất cả các ụ bẩn bằng cách sử dụng chỉ có một vài khối lệnh mới.
-        maze_karel_2_10: Di chuyển tôi qua ruộng, và sứ dụng hai chức năng để giúp
-          tôi loại bỏ tất cả các ụ và điền vào tất cả chỗ trống.
         turtle_3_1: Đây là câu đố giúp bạn hiểu được cách viết định nghĩa cho các
           hàm "vẽ một hình vuông" và "vẽ một vòng tròn". Khi bạn viết định nghĩa cho
           hàm, chưa có nghĩa là nó có thể chạy ngay. Bạn phải kéo khối "Vẽ một hình
           vuông" vào cụm lệnh chính để thực sự vẽ hình vuông.
+        turtle_3_10: Bạn đã học được rất nhiều! Bây giờ sử dụng nó để vẽ bất cứ điều
+          gì bạn muốn. Cố gắng để vẽ một ngôi sao, hoặc một xoắn ốc, hoặc một bông
+          tuyết ưa thích.
         turtle_3_2: Tương tự hàm "vẽ một hình vuông", tạo một hàm "vẽ một tam giác"
           để vẽ một tam giác và dùng nó.
         turtle_3_3: Vẽ một hàng rào hình tam giác xung quanh những chú mèo và một
@@ -271,30 +591,32 @@ vi:
           ở góc phải dưới cùng. Sử dụng chức năng chỉnh sửa này để vẻ 3 ngôi nhà mới.
         turtle_3_9: Bạn có thể tái tạo chức năng "vẽ một ngôi nhà" mà không cần sự
           trợ giúp? Hãy thử, và sau đó vẽ một dãy nhà.
-        turtle_3_10: Bạn đã học được rất nhiều! Bây giờ sử dụng nó để vẽ bất cứ điều
-          gì bạn muốn. Cố gắng để vẽ một ngôi sao, hoặc một xoắn ốc, hoặc một bông
-          tuyết ưa thích.
-        maze_karel_debug_seq_1: Chào mừng bạn để gỡ lỗi! Mã của tôi không hoạt động
-          đúng. Bạn có thể phát hiện vấn đề và sửa chữa nó như vậy tôi có thể nhận
-          được hoàn toàn bãi của tôi và sẵn sàng để trồng?
-        maze_karel_debug_seq_2: Không biết chương trình này sai ở đâu vậy? Bạn sẽ
-          sửa chương trình này thế nào để tôi có thể san bằng hết các ụ đất nhỉ?
-        maze_karel_debug_repeat: Sửa các lỗi của chương trình này để làm cho ruộng
-          của tôi thật phẳng và đẹp!
-        maze_karel_debug_while: Bạn sẽ chỉnh lại chương trình này như thế nào để giúp
-          tôi lấp đầy các hố đất?
-        maze_karel_debug_if: Giúp tôi với! Hãy sửa chương trình của bạn để làm cho
-          ruộng của tôi thật phẳng.
-        maze_karel_debug_if_else: Sửa lỗi chương trình này để tôi có thể lấp đầy các
-          hố và san bằng các ụ đất.
-        maze_karel_debug_function_1: Bạn nên thay đổi chương trình này như thế nào
-          để giúp tôi san phẳng các ụ đất?
-        maze_karel_debug_function_2: 'Hãy sủa lỗi chương trình này để tôi có thể làm
-          cho ruộng của tôi thật phẳng!
-
-'
-        maze_karel_debug_function_3: Sửa chương trình này để tôi có thể san phẳng
-          các ụ đất trên đồng.
+        turtle_4_1: 'Bạn có thể vẽ một hình tam giác (với mỗi cạnh là 100 điểm ảnh)
+          với chỉ 3 khối? Gợi ý: sử dụng một khối "lặp lại".'
+        turtle_4_10: Đây là lời giải của câu đố vừa rồi. Bạn cần phải lặp lại bao
+          nhiêu lần để hoàn thành hình vẽ?
+        turtle_4_11: Hãy thử đổi những số trong những khối "xoay" và "lặp lai" để
+          tạo những mô hình khác nhau. Ngoài ra, có thể thử thay đổi phần còn lại
+          của lệnh để vẽ bất kỳ thứ gì bạn muốn.
+        turtle_4_2: Thêm một khối "quay phải 90 độ" vào chương trình được viết sẵn
+          trên màn hình để vẽ những hình tam giác này.
+        turtle_4_3: Ok, đây là lệnh mà bạn viết để vẽ một hình tam giác. Bạn có thể
+          thêm khối "lặp lại" và "quay" để tạo thành một bông hoa thật đẹp?
+        turtle_4_4: 'Đây là các lệnh của câu đố trước, nhưng chỉ quay 36 độ sau khi
+          vẽ một tam giác. Việc này cần phải lặp lại bao nhiêu lần? (Gợi ý: sau khi
+          quay 360 độ hình vẽ sẽ trở thành một đường tròn)'
+        turtle_4_5: 'Đây là các lệnh của câu đố trước, nhưng lặp lại việc quay 36
+          lần. Vậy mỗi lần cần quay bao nhiêu độ? (Gợi ý: sau khi quay 360 độ hình
+          vẽ sẽ trở thành một đường tròn)'
+        turtle_4_6: Chỉ sử dụng 3 khối lệnh, bạn có thể vẽ một hình vuông có cạnh
+          là 20 pixel không?
+        turtle_4_7: 'Đây là các lệnh để vẽ hình vuông từ câu đố trước. Bạn có thể
+          lặp lại các lệnh đó để vẽ 10 hình vuông liền kề giống như một cái thang
+          không? Gợi ý: bạn chỉ cần thêm 2 khối lệnh.'
+        turtle_4_8: Đây là lời giải của câu đố vừa rồi. Bạn có thể thêm 2 khối lệnh
+          nữa để hoàn thành hình vẽ không?
+        turtle_4_9: Đây là lời giải của câu đố vừa rồi. Bạn cần quay bao nhiêu độ
+          để hoàn thành hình vẽ? (Bạn có thể cần phải đoán một vài lần)
         turtle_5_1: Thử chạy chương trình này, và tạo vài thay đổi để xem điều gì
           sẽ xảy ra. Bạn có thể tìm ra cách mà nó hoạt động? (Hoặc xóa nó và thay
           thế nó bằng một cái gì đó hoàn toàn khác)
@@ -313,201 +635,183 @@ vi:
         turtle_5_6: Thử chạy chương trình này, và tạo vài thay đổi để xem điều gì
           sẽ xảy ra. Bạn có thể tìm ra cách mà nó hoạt động? (Hoặc xóa nó và thay
           thế nó bằng một cái gì đó hoàn toàn khác)
-        maze_3_1: Tôi cần nhận được để cho chú lợn này! nhập vào một cặp để kêu gọi
-          di chuyển; như vậy tôi có thể nhận trở lại trứng của tôi.
-        maze_3_2: Viết một chương trình, như vậy tôi có thể làm mọi thứ cho chú lợn.
-        maze_3_3: Tôi phải làm gì để đến chỗ chú lợn? Đảm bảo rằng tôi không chạy
-          vào hộp TNT!
-        maze_3_4: Ah! Viết cho tôi một chương trình để đưa tôi vong quan TNT và đến
-          với chú lợn.
-        Custom_builder: Kéo khổi từ hộp công cụ không gian làm việc đê vẻ cấp độ bạn
-          muốn tạo. Bấm "Chạy" khi bạn đã sẵn sàng.
-        jigsaw_1: Nhấp vào khối
-        jigsaw_2: Kéo các khối vào các vị trí cho sẵn
-        jigsaw_3: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
-        jigsaw_4: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
-        jigsaw_5: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
-        jigsaw_6: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
-        jigsaw_7: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
-        jigsaw_8: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
-        jigsaw_9: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
-        jigsaw_10: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
-        jigsaw_11: Đặt các khối vào đúng thứ tự các số.
-        jigsaw_12: Đặt các khối vào đúng thứ tự các số.
-        jigsaw_13: Giải quyết các câu đố!
-        mazestep_1: Các bước giải mê cung được mô tả ở đây
-        mazestep_2: Các bước giải mê cung được mô tả ở đây
-        mazestep_3: Các bước giải mê cung được mô tả ở đây
-        mazestep_4: Các bước giải mê cung được mô tả ở đây
-        mazestep_5: Các bước giải mê cung được mô tả ở đây
-        studio_c2_1: Bạn có thể làm chú chó nói "hello world" không?
-        studio_c2_2: Bạn có thể làm chú chó nói vài điều, sau đó chú mèo nói tiếp
-          vài điều không?
-        studio_c2_3: Bạn có thể viết một chương trình để làm cho con chó này di chuyển
-          đến con mèo không?
-        studio_c2_4: Bạn có thể viết một chương trình mà làm cho con chó di chuyển
-          đến mèo, và làm con mèo nói "Xin chào" khi con chó đến nó không?
-        studio_c2_5: Bạn có thể viết một chương trình giúp chú bạch tuộc nói "Xin
-          chào" khi nó bị nhấp chuột vào không?
-        studio_c2_6: Bạn có thể viết một chương trình để làm Waddles di chuyển xung
-          quanh bằng các phím lên / xuống / trái / phải để đạt mục tiêu?
-        studio_c2_7: Khối "lặp lại mãi mãi" cho phép bạn chạy mã liên tục. Bạn có
-          thể dùng khối này để di chuyển con khủng long lên và xuống nhiều lần không?
-        studio_c2_8: Bạn có khiến Waddles nói "ouch!" và phát âm thanh "hit" khi chú
-          chạy vào chỗ những con khủng long, và sau đó di chuyển chú cùng với các
-          mũi tên nếu điều đó xảy ra không?
-        studio_c2_9: Bạn có thể thêm các khối để ghi điểm khi Waddles chạy vào chỗ
-          bạch tuộc và sau đó di chuyển chú ta cùng mũi tên sau khi bạn ghi điểm không?
-        studio_c2_10: Bạn có thể thêm khối để thay đổi hình nền và tốc độ của Waddles,
-          sau đó di chuyển chú ta cùng với mũi tên sau khi bạn ghi điểm không?
-        studio_c2_11: Tạo câu chuyện của chính bạn. Khi bạn đã viết xong câu chuyện
-          đó, nhấn "Hoàn thành" để gửi cho bạn của bạn xem câu chuyện bạn vừa làm
-          ra!
-        studio_c3_story_1: Bạn có thể làm chú chó nói "hello world" không?
-        studio_c3_story_2: Bạn có thể làm chú chó nói vài điều, sau đó chú mèo nói
-          tiếp vài điều không?
-        studio_c3_story_3: Bạn có thể viết một chương trình để làm cho con chó này
-          di chuyển đến con mèo không?
-        studio_c3_story_4: Bạn có thể viết một chương trình mà làm cho con chó di
-          chuyển đến mèo, và làm con mèo nói "Xin chào" khi con chó đến nó không?
-        studio_c3_story_5: Bạn có thể thêm khối lệnh làm cho bạch tuộc trở nên vui
-          vẻ không?
-        studio_c3_story_6: Tạo câu chuyện của chính bạn. Khi bạn đã viết xong câu
-          chuyện đó, nhấn "Hoàn thành" để gửi cho bạn của bạn xem câu chuyện bạn vừa
-          làm ra!
-        studio_c3_game_1: Bạn có thể viết một chương trình giúp chú bạch tuộc nói
-          "Xin chào" khi nó bị nhấp chuột vào không?
-        studio_c3_game_2: Bạn có thể viết một chương trình để làm Waddles di chuyển
-          xung quanh bằng các phím lên / xuống / trái / phải để đạt mục tiêu?
-        studio_c3_game_3: Khối "lặp lại mãi mãi" cho phép bạn chạy mã liên tục. Bạn
-          có thể dùng khối này để di chuyển con khủng long lên và xuống nhiều lần
-          không?
-        studio_c3_game_4: Bạn có khiến Waddles nói "ouch!" và phát âm thanh "hit"
-          khi chú chạy vào chỗ những con khủng long, và sau đó di chuyển chú cùng
-          với các mũi tên nếu điều đó xảy ra không?
-        studio_c3_game_5: Bạn có thể thêm các khối để ghi điểm khi Waddles chạy vào
-          chỗ bạch tuộc và sau đó di chuyển chú ta cùng mũi tên sau khi bạn ghi điểm
-          không?
-        studio_c3_game_6: Bạn có thể thêm khối để thay đổi hình nền và tốc độ của
-          Waddles, sau đó di chuyển chú ta cùng với mũi tên sau khi bạn ghi điểm không?
-        studio_c3_game_7: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn
-          thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại
-          của họ.
-        studio_playlab_1: Bạn có thể giúp Waddles nói "Xin chào" không?
-        studio_playlab_2: Cậu bé Hang Động (người 1) và Jasmine (người 2) muốn nói
-          "xin chào" với nhau. Bạn có thể giúp họ bằng cách sử dụng khối "nói chuyện"
-          2 lần không?
-        studio_playlab_3: Bạn có thể giúp cô gái Tennis nhận được cờ không?
-        studio_playlab_4: Bạn có thể giúp cậu bé Tennisa ( người 1) đến chỗ Cô gái
-          Tennis và phát âm thanh khi cậu đến đó không?
-        studio_playlab_5: Bạn có thể giúp Spacebot nói "chúc mừng trần gian" khi nó
-          được nhấp vào? Đừng quên bấm vào đó sau khi bạn bấm Chạy
-        studio_playlab_6: Bạn có thể giúp Cô Phù thủy đi chuyển xung quanh bằng các
-          phím lên/xuống/phải/trái để có được tất cả các quả cầu ma thuật không?
-        studio_playlab_7: Khối "Lặp lại mãi mãi" cho phép bạn chạy mã liên tục. Bạn
-          có thể đính kèm khối để giúp thuật sĩ di chuyển bên phải và trái nhiều lần
-          không?
-        studio_playlab_8: Bạn có thể thêm một khối để ghi thêm điểm và một khối để
-          phát ra âm thanh khi con Kì lân chạy xung quanh Thật sĩ, và sau đó di chuyển
-          ông ấy cùng mũi tên cho đến khi bạn ghi điểm không?
-        studio_playlab_9: Thiết lập hình nền cho các cuộc xâm lược ngoài hành tinh
-          và giúp Spacebot bắt được người ngoài hành tinh nhanh hơn bằng cách thay
-          đổi tốc độ của nó. Sau đó di chuyển anh ấy với các phím mũi tên để giúp
-          Spacebot và cảnh báo những người khác
-        studio_playlab_10: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn
-          thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại
-          của họ.
-        studio_iceage_hello1: Sid muốn tập hợp tất cả mọi người trong một chuyến phiêu
-          lưu mới. Bạn có thể giúp cậu ấy nói “Xin chào” bằng cách kéo các khối “nói”
-          vào không gian làm việc và gõ từ “xin chào” bên trong không?
-        studio_iceage_hello2: Manny (nhân vật 1) tìm thấy Sid (nhân vật 2) và muốn
-          mời anh ta tham gia cuộc phiêu lưu. Hãy giúp họ chào nhau bằng cách sử dụng
-          khối “nhân vật nói” hai lần.
-        studio_iceage_move_to_flag: Scrat đang tìm kiếm hạt sồi của mình! Hãy giúp
-          cậu ấy đi tới 200 pixel cuối bằng cách sử dụng khối “di chuyển”.
-        studio_iceage_move_to_actor: Diego (nhân vật 1) đang tìm kiếm Manny (nhân
-          vật 2). Hãy giúp Diego di chuyển xuống 200 pixel tới chỗ Manny bằng khối
-          “di chuyển nhân vật”. Tiếp theo, hãy nối một khối với sự kiện “khi nhân
-          vật chạm” để phát âm thanh khi họ tìm thấy nhau.
-        studio_iceage_repeat: Khối lệnh "lặp lại mãi mãi" cho phép bạn có
-          thể chạy đoạn mã liên tục. Bạn có thể gắn khối lệnh để giúp
-          Granny tập thể dục bằng cách di chuyển qua trái và qua phải lặp
-          lại không?
-        studio_iceage_click_hello: Bạn có thể giúp Sid thử gọi bạn bè lần cuối khi
-          nhấp chuột không? Đừng quên nhấp chuột vào cậu ta sau khi nhấn Chạy.
-        studio_iceage_move_events: Scrat vẫn đang tìm hạt sồi! Hãy giúp cậu ấy lùng
-          sục xung quanh bằng cách gắn khối “di chuyển” vào mỗi sự kiện và thay đổi
-          hướng hoạt động cho mỗi phím mũi tên. Khi bạn hoàn tất, hãy nhấp chuột vào
-          Chạy và cố gắng thu thập tất cả các hạt sồi nhé.
-        studio_iceage_sound_and_points: Chúng tôi đã cung cấp hầu hết các mã lệnh
-          giúp Granny di chuyển sang trái và phải cũng như mã lệnh để di chuyển Sid
-          quanh màn hình. Bạn có thể hoàn thành mã lệnh và thêm các khối vào sự kiện
-          “khi diễn viên chạm vào” để tạo ra sự kiện đó và cả hai cùng phát ra âm
-          thanh cũng như ghi điểm khi Sid và Granny va chạm không? Nhấn Chạy để chơi
-          trò chơi.
-        studio_iceage_warn_ice_age: Mọi người cần phải di chuyển nhanh hơn vì kỷ băng
-          hà đang đến gần! Hãy đổi cảnh nền thành băng giá và đặt tốc độ của Sid thành
-          nhanh, sau đó nhấn Chạy và di chuyển cậu ta đến chỗ Diego để cảnh báo.
-        studio_iceage_throw_hearts: Sid muốn cho bà của mình, Granny, biết rằng anh
-          yêu bà. Hãy sử dụng lệnh “diễn viên ném” để Sid (diễn viên 1) ném trái tim
-          vào Granny (diễn viên 2)! Đặt tâm trạng của Granny thành hạnh phúc khi bà
-          nhận được trái tim.
-        studio_iceage_free_play: Đã đến lúc làm game hoặc câu chuyện của riêng bạn
-          rồi! Khi bạn hoàn tất, hãy nhấp chuột vào Hoàn tất để cho bạn bè của mình
-          chơi thử game của bạn trên điện thoại, máy tính bảng hoặc máy tính của họ!
-        studio_full_sandbox: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn
-          thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại
-          của họ.
-        studio_k1_1: Bạn có thể làm chú chó nói "hello world" không?
-        studio_k1_2: Bạn có thể làm chú chó nói vài điều, sau đó chú mèo nói tiếp
-          vài điều không?
-        studio_k1_3: Bạn có thể viết một chương trình để làm cho con chó này di chuyển
-          đến con mèo không?
-        studio_k1_4: Làm chú chó đi đến chỗ chú mèo, và chú mèo nói "xin chào" khi
-          chú chó đến nơi.
-        studio_k1_5: Bạn có thể thêm khối lệnh làm cho bạch tuộc trở nên vui vẻ không?
-        studio_k1_6: Tạo ra câu chuyện của chính bạn! Cho chú chó và chú mèo đi xung
-          quanh và nói chuyện với nhau.
-        maze_wordsearch_k_1: Di chuyển tôi để đánh vần từ EAST
-        maze_wordsearch_k_2: Di chuyển tôi để đánh vần từ SOUTH
-        maze_wordsearch_k_3: Di chuyển tôi để đánh vần từ WEST
-        maze_wordsearch_k_4: Di chuyển tôi để đánh vần từ NORTH
-        maze_wordsearch_k_6: Di chuyển tôi theo hướng Đông rồi tiếp đó theo hướng
-          Nam để đánh vân từ JUMP
-        maze_wordsearch_k_9: Di chuyển tôi để đánh vần từ CODE
-        maze_wordsearch_k_13: 'Di chuyển tôi theo hướng để đánh vần chữ DEBUG (tiếng
-          Việt nghĩa là: gỡ lỗi của chương trình)'
-        maze_wordsearch_k_15: Di chuyển tôi theo hướng để đánh vần chữ ABOVE
-        maze_wordsearch_k_16: Di chuyển tôi theo hướng để đánh vần chữ BELOW
-        maze_wordsearch_k_20: Đây là bài kiểm tra!!! Di chuyển tôi theo hướng để đánh
-          vần chữ STORY
-        applab_ec_simple: Tạo ra các ứng dụng của bạn bằng cách sử dụng các khối trong
-          thanh công cụ.
-        turtle_ec_1_2: 'Bây giờ, vẽ một hình vuông. Lưu ý: sử dụng màu sắc yêu thích
-          của bạn bằng cách chọn nó trong khối mới "thiết lập màu".'
         turtle_ec_1_10: Chúc mừng! Bạn đã làm được! Bây giờ, hãy vẽ bất kỳ thứ gì
           bạn muốn. Sử dụng linh hoạt các nhân vật hoạt hình, những bông tuyết,...
           Hãy thử sử dụng cả khối lệnh "thiết lập chiều rộng" Chúc bạn vui!!!
-        studio_ec_sandbox: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn
-          thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại
-          của họ.
+        turtle_ec_1_2: 'Bây giờ, vẽ một hình vuông. Lưu ý: sử dụng màu sắc yêu thích
+          của bạn bằng cách chọn nó trong khối mới "thiết lập màu".'
+    trophy:
+      name:
+        Bronze: Đồng
+        Gold: Vàng
+        Silver: Bạc
     video:
       name:
-        maze_intro: Giới thiệu về mê cung
-        artist_intro: Giới thiệu về nghệ sĩ
-        farmer_intro: Giới thiệu về nông dân
-        flappy_intro: Giới thiệu về Flappy Bird
-        loop_times: Lặp lại khối Thời gian
-        loop_until: Lặp lại khối Cho đến khi
-        if: Khối lệnh "nếu"
-        if_else: Khối lệnh "nếu/thì"
-        if_else_scrat: Khối lệnh "nếu/thì"
-        function: Các hàm
-        loop_while: Khối lệnh "khi"
-        loop_for: Biến đếm
-        parameters: Hàm và tham số
-        hoc_wrapup: Giờ lập trình in a nut shell
+        C1_artist_intro: Giới thiệu về nghệ sĩ
+        C1_bee_level_intro: Bee Level - giới thiệu
+        C1_bee_loops: Các vòng ong
+        C1_bigevent_unplugged: Sự kiện lớn
+        C1_building_foundation: Xây dựng nền tảng
+        C1_getting_loopy: Tạo vòng lặp
+        C1_going_places_safely: Đến nơi an toàn
+        C1_happy_maps_unplugged: Bản đồ thú vị
+        C1_maze_debugging: 'Mê cung: gỡ lỗi'
+        C1_maze_intro_sequencing: Giới thiệu về mê cung và chuỗi
+        C1_maze_loops: Vòng lặp mê cung
+        C1_moveitmoveit_unplugged: Di chuyển nó, di chuyển nó
+        C1_pair_programming: Lập trình đôi
+        C1_planting_seed: Trồng một hạt giống
+        C1_playlab_storytelling: 'Play Lab: Kể chuyện'
+        C1_spelling_bee_intro: Giới thiệu Ong Đánh Vần
+        C1_zuck_repeat_loop: Vòng lặp mê cung
+        C2_artist_debugging: Nghệ sĩ gỡ lỗi
+        C2_artist_intro: Giới thiệu về nghệ sĩ
+        C2_artist_loops: Nghệ sĩ vòng
+        C2_bee_conditionals: 'Ong: Các điều kiện'
+        C2_bee_debugging: 'Ong: sửa lỗi'
+        C2_bee_loops: Các vòng ong
+        C2_binary_bracelets: Vòng đeo tay nhị phân
+        C2_conditionals_with_cards: Điều kiện
+        C2_digital_footprint: Dấu chân kỹ thuật số
+        C2_digital_footprint_v2: Dấu chân kỹ thuật số
+        C2_graph_paper: lập trình đồ thị trên giấy
+        C2_maze_intro: Giới thiệu về mê cung
+        C2_paper_airplanes: Máy bay giấy
+        C2_playlab_createstory: 'Play Lab: Kể chuyện'
+        C2_relay_programming: Chương trình chuyển tiếp
+        C2_zuck_repeat_loop: Vòng lặp mê cung
+        C3_artist_functions: 'Nghệ sĩ: chức năng'
+        C3_artist_intro: Giới thiệu về nghệ sĩ
+        C3_artist_nested_loops: Vòng lặp lồng nhau
+        C3_bee_conditionals: 'Ong: Các điều kiện'
+        C3_bee_debugging: 'Ong: sửa lỗi'
+        C3_bee_functions: 'Ong: chức năng'
+        C3_bee_nested_loops: Vòng lặp lồng nhau
+        C3_bounce: Bật lại
+        C3_computational_thinking: Tư duy máy tính
+        C3_crowdsourcing: Đa nguồn
+        C3_dice_race: Vòng quay xúc sắc
+        C3_farmer_while: Vòng lặp "trong khi"
+        C3_functional_suncatchers: Chức năng của tấm hứng ánh nắng
+        C3_internet: internet
+        C3_maze_conditionals: Các điều kiện của mê cung
+        C3_maze_level_4: Vòng lặp mê cung
+        C3_playlab_create_game: 'Phòng trò chơi: Thiết kế trò chơi'
+        C3_songwriting_with_parameters: Sáng tác nhạc với tham số
+        C4_bee_conditional: 'Ong: Các điều kiện'
+        C4_conditionals: Điều kiện
+        C4_for_loops: Cho vòng lặp
+        C4_for_loops_bee: Cho vòng lặp
+        C4_for_loops_no_bee: Cho vòng lặp
+        C4_function_create: Tạo ra hàm
+        C4_function_edit: Chỉnh sửa hàm
+        C4_function_parameters: Hàm và tham số
+        C4_intro: Giới thiệu
+        C4_loops_zombie: Vòng lặp
+        C4_math_artist: Lập trình cho nghệ sĩ bằng các phép toán
+        C4_unplugged_algorithms: Các thuật toán với Tangrams
+        C4_unplugged_binary: Nhị phân
+        C4_unplugged_forloops: Cho vòng lặp
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_parameters: Sáng tác với tham số
+        C4_unplugged_variables: Biến trong bao bọc
+        C4_variables_artist: Biến - nghệ sĩ
+        C4_variables_playlab: Biến - Play Lab
+        CDEF_Video_SpritesInAction: Sprites trong hành động
+        CSA-PL-1d-arrays-new-values: Nhập giá trị theo các dãy 1 chiều
+        CSA-PL-Printing-in-Java: Hiển thị văn bản trong Java
+        CSA-PL-conditionals: Câu lệnh điều kiện trong Java
+        CSA-PL-debugging-22: Gỡ lỗi trong Java Lab
+        CSA-PL-debugging-temp: Giới thiệu về Gỡ lỗi trong Java Lab - tạm thời
+        CSA-PL-first-program: Viết chương trình trong Java
+        CSA-PL-for-loops: Vòng lặp for trong Java
+        CSA-PL-intro-to-arrays: Mảng một chiều (1D)
+        CSA-PL-intro-to-java-lab: Java Lab Căn bản
+        CSA-PL-multi-selection-statements: Câu lệnh nhiều lựa chọn
+        CSA-PL-two-way-selection: Lựa chọn hai hướng
+        CSA-PL-variables: Tạo biến trong Java
+        CSD_Unit6_InteractiveArtExemplar: Mẫu nghệ thuật tương tác
+        CSD_u6_variables_part1: 'CSD: Biến'
+        CSF-Teaching-Problem-Solving: Giải quyết vấn đề giảng dạy CSF
+        CSF_EF_cs_matters: Các vấn đề khoa học máy tính
+        CSF_Going_Places_Safely: Khu phố trực tuyến của tôi
+        CSF_Power_of_Words: Sức mạnh của từ
+        CSF_SpriteLabIntro_CDEF: Đây là phòng thí nghiệm Sprite
+        CSF_SpriteLab_Intro_v2: Giới thiệu Sprite Lab
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites trong hành động
+        CSF_SpriteLab_SpritesInAction_v2: Sprites trong hành động
+        CSF_Spritelab_MakeSprite_CDEF: Làm thế nào để làm cho một Sprite trong phòng
+          thí nghiệm Sprite
+        CSF_Spritelab_MakeSprite_v2: Làm thế nào để làm cho một Sprite
+        CSF_StarWars_ProjectIntro: Giới thiệu Dự án Star Wars
+        CSF_Super_Digital_Citizen: Super Digital Citizen
+        CSF_a_b_artist_loops: Vòng lặp trong Artist
+        CSF_artist_angles: Góc trong Artist
+        CSF_bb8_loops_C-F: Vòng lặp với BB-8
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_collector_k1_blocks: 'Các nguyên tắc cơ bản CS: The Collector'
+        CSF_collector_repeat_loops: Loops lặp lại Collector
+        CSF_collector_text_blocks: 'Các nguyên tắc cơ bản CS: The Collector'
+        CSF_create_functions: Tạo các hàm
+        CSF_debugging_k1_blocks: Sửa lỗi
+        CSF_debugging_text_blocks: Sửa lỗi
+        CSF_harvester_loops_K1: Loops trong Harvester
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_if_allskins: Khối If
+        CSF_ifelse_allskins: Sử dụng If/Else Blocks
+        CSF_ifelseifelse_allskins: Sử dụng các khối IF/Elseif/else
+        CSF_loops_AB: Vòng lặp
+        CSF_maze_intro_k1_blocks: Hướng dẫn sử dụng Code Studio
+        CSF_maze_intro_text_blocks: Hướng dẫn sử dụng Code Studio
+        CSF_my_robotic_friends: Bạn bè robot của tôi
+        CSF_scrat_loops_CF: Vòng lặp trong Kỷ băng hà
+        CSF_scrat_loops_K1: Vòng lặp trong Kỷ băng hà
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_stevie_big_project: Stevie và dự án lớn
+        CSF_unspotted_bugs: Lỗi chưa phát hiện
+        CSF_zuck_loops_short: Lặp lại vòng lặp
+        CS_Changing_Everything: Khoa học máy tính là Thay đổi Tất cả mọi thứ
+        Getting_Started_BasicFeatures: Các tính năng cơ bản của Code.org
+        Gettting_Started_ClassSection: Tạo một phần lớp
+        Gettting_Started_Progress: Tiến trình, Phản hồi và Đánh giá
+        Gettting_Started_StudentExperience: Trải nghiệm sinh viên
+        MC_2018_loops: 'Minecraft: Chuyến thám hiểm đại dương - Lặp tới khi'
+        PL-Video-21: Chào mừng bạn đến với Code.org của Professional Learning!
+        PL_CSD_CircuitPlayground_Overview: Tổng quan về Sân chơi Circuit
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Tổng quan về đơn vị sân
+          chơi mạch
+        PL_CSD_CircuitPlayground_Setup: Thiết lập sân chơi mạch
+        PL_CSD_MicroBit_Intro: Giới thiệu về Micro:bit
+        PL_CSD_TeacherTips_Advise: Mẹo dành cho giáo viên – Lời khuyên dành cho giáo
+          viên mới
+        PL_CSD_TeacherTips_Debugging: Mẹo dành cho giáo viên – Sửa lỗi
+        PL_CSD_TeacherTips_IntroToCSD: Mẹo dành cho giáo viên – Giới thiệu về Khám
+          phá KHMT
+        PL_CSD_TeacherTips_LeadLearner: Mẹo dành cho giáo viên – Dẫn dắt học viên
+        PL_CSD_TeacherTips_PairProgramming: Mẹo dành cho giáo viên – Lập trình theo
+          cặp
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Mẹo dành cho giáo viên – Quy trình
+          giải quyết vấn đề
+        PL_CSD_Unit4_AppTesting: Kiểm tra nguyên mẫu giấy
+        PL_CSP_EIPMOverview: Hướng dẫn về các bài học EIPM
+        PL_CSP_TeacherTips_APExam: 'Lời khuyên của giáo viên: Chuẩn bị cho kỳ thi
+          AP'
+        PL_CSP_TeacherTips_Advice: 'Lời khuyên của giáo viên: Lời khuyên cho giáo
+          viên CS mới'
+        PL_CSP_TeacherTips_Debugging: 'Lời khuyên của giáo viên: Trợ giúp với gỡ lỗi'
+        PL_CSP_TeacherTips_EIPM: 'Lời khuyên của giáo viên: Quy trình EIPM'
+        PL_CSP_TeacherTips_IntroToCSP: 'Lời khuyên của giáo viên: Giới thiệu về các
+          nguyên tắc CS'
+        PL_CSP_TeacherTips_LeadLearner: 'Lời khuyên của giáo viên: Làm thế nào để
+          trở thành một người học chính'
+        PL_CS_Journeys_Overview: Hành trình KHMT
+        PL_Equity_in_CS_Education: Công bằng trong CS Education
+        PL_overview_CSD: Khám phá Khoa học Máy tính là gì?
+        PL_overview_CSP: Nguyên tắc khoa học máy tính là gì?
         Unplug1: CS là gì?
+        Unplug10: internet
+        Unplug11: Gói gọn
         Unplug2: Tư duy máy tính
         Unplug3: lập trình đồ thị trên giấy
         Unplug4: các bước lập trình
@@ -516,320 +820,310 @@ vi:
         Unplug7: Sáng tác nhạc
         Unplug8: Trừu tượng
         Unplug9: Chương trình chuyển tiếp
-        Unplug10: internet
-        Unplug11: Gói gọn
-        C1_happy_maps_unplugged: Bản đồ thú vị
-        C1_moveitmoveit_unplugged: Di chuyển nó, di chuyển nó
-        C1_bigevent_unplugged: Sự kiện lớn
-        C1_getting_loopy: Tạo vòng lặp
-        C1_pair_programming: Lập trình đôi
-        C1_maze_intro_sequencing: Giới thiệu về mê cung và chuỗi
-        C1_maze_debugging: 'Mê cung: gỡ lỗi'
-        C1_bee_level_intro: Bee Level - giới thiệu
-        C1_artist_intro: Giới thiệu về nghệ sĩ
-        C1_spelling_bee_intro: Giới thiệu Ong Đánh Vần
-        C1_zuck_repeat_loop: Vòng lặp mê cung
-        C1_bee_loops: Các vòng ong
-        C1_maze_loops: Vòng lặp mê cung
-        C1_playlab_storytelling: 'Play Lab: Kể chuyện'
-        C1_planting_seed: Trồng một hạt giống
-        C1_building_foundation: Xây dựng nền tảng
-        C1_going_places_safely: Đến nơi an toàn
-        C2_maze_intro: Giới thiệu về mê cung
-        C2_artist_intro: Giới thiệu về nghệ sĩ
-        C2_zuck_repeat_loop: Vòng lặp mê cung
-        C2_artist_loops: Nghệ sĩ vòng
-        C2_artist_debugging: Nghệ sĩ gỡ lỗi
-        C2_bee_loops: Các vòng ong
-        C2_bee_debugging: 'Ong: sửa lỗi'
-        C2_bee_conditionals: 'Ong: Các điều kiện'
-        C2_playlab_createstory: 'Play Lab: Kể chuyện'
-        C2_graph_paper: lập trình đồ thị trên giấy
-        C2_conditionals_with_cards: Điều kiện
-        C2_binary_bracelets: Vòng đeo tay nhị phân
-        C2_relay_programming: Chương trình chuyển tiếp
-        C2_paper_airplanes: Máy bay giấy
-        C2_digital_footprint: Dấu chân kỹ thuật số
-        C2_digital_footprint_v2: Dấu chân kỹ thuật số
-        C3_maze_level_4: Vòng lặp mê cung
-        C3_artist_intro: Giới thiệu về nghệ sĩ
-        C3_artist_functions: 'Nghệ sĩ: chức năng'
-        C3_bee_functions: 'Ong: chức năng'
-        C3_bee_conditionals: 'Ong: Các điều kiện'
-        C3_maze_conditionals: Các điều kiện của mê cung
-        C3_artist_nested_loops: Vòng lặp lồng nhau
-        C3_farmer_while: Vòng lặp "trong khi"
-        C3_bee_nested_loops: Vòng lặp lồng nhau
-        C3_bee_debugging: 'Ong: sửa lỗi'
-        C3_bounce: Bật lại
-        C3_playlab_create_game: 'Phòng trò chơi: Thiết kế trò chơi'
-        C3_computational_thinking: Tư duy máy tính
-        C3_dice_race: Vòng quay xúc sắc
-        C3_internet: internet
-        C3_crowdsourcing: Đa nguồn
-        C3_functional_suncatchers: Chức năng của tấm hứng ánh nắng
-        C3_songwriting_with_parameters: Sáng tác nhạc với tham số
-        C4_intro: Giới thiệu
-        C4_loops_zombie: Vòng lặp
-        C4_bee_conditional: 'Ong: Các điều kiện'
-        C4_variables_artist: Biến - nghệ sĩ
-        C4_variables_playlab: Biến - Play Lab
-        C4_for_loops: Cho vòng lặp
-        C4_for_loops_bee: Cho vòng lặp
-        C4_for_loops_no_bee: Cho vòng lặp
-        C4_math_artist: Lập trình cho nghệ sĩ bằng các phép toán
-        C4_function_edit: Chỉnh sửa hàm
-        C4_function_create: Tạo ra hàm
-        C4_function_parameters: Hàm và tham số
-        C4_conditionals: Điều kiện
-        C4_unplugged_algorithms: Các thuật toán với Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Biến trong bao bọc
-        C4_unplugged_forloops: Cho vòng lặp
-        C4_unplugged_parameters: Sáng tác với tham số
-        C4_unplugged_binary: Nhị phân
-        CSF_a_b_artist_loops: Vòng lặp trong Artist
-        CSF_artist_angles: Góc trong Artist
-        CSF_debugging_k1_blocks: Sửa lỗi
-        CSF_debugging_text_blocks: Sửa lỗi
-        CSF_maze_intro_k1_blocks: Hướng dẫn sử dụng Code Studio
-        CSF_maze_intro_text_blocks: Hướng dẫn sử dụng Code Studio
-        CSF_my_robotic_friends: Bạn bè robot của tôi
-        frozen_intro: Giới thiệu về Giờ Lập Trình
-        frozen_loops: Giới thiệu về vòng lặp
-        frozen_functions: Giới thiệu về hàm
-        playlab_intro: Giới thiệu về Phòng Trò Chơi
-        playlab_events: Sự kiện tại Phòng Trò Chơi
-        playlab_repeat_forever: Phòng Trò Chơi lặp lại mãi mãi
-        tutorial_puzzle_challenge: Hướng dẫn các câu đố
-        infinity_playlab_intro: Phòng trò chơi - Giới thiệu
-        infinity_playlab_events: Sự kiện Phòng Trò Chơi
-        infinity_playlab_repeat_forever: Phòng Trò Chơi lặp lại mãi mãi
+        applab_hoc_designmode: ApplAb Hour of Code - Chế độ Thiết kế
+        applab_hoc_onevent: App Lab Hour of Code - OnEvent
+        applab_hoc_setproperty: App Lab Hour Code - SetProperty
+        applab_hoc_share: ApplAb Hour of Code - Chia sẻ
+        applab_hoc_welcome: App Lab Hour of Code - Welcome
+        applab_intro_designmode: App Lab - Chế độ thiết kế
+        applab_intro_events: App Lab - Làm cho nó tương tác
+        applab_intro_share: App Lab - Chia sẻ ứng dụng của bạn
+        applab_intro_sounds: App Lab - Hình ảnh và Âm thanh
+        applab_intro_welcome: App Lab - Bắt đầu
+        artist_intro: Giới thiệu về nghệ sĩ
+        c_and_c_digital_sharing: Chia sẻ nội dung số
+        c_and_c_great_to_create: Sáng tạo và vui chơi công bằng thật tuyệt vời
+        conditionals_with_cards: Unplugged Bài học trong hành động - Điều kiện với
+          Thẻ
+        cs-principles-intro-to-objects: 'Nguyên tắc CS: Giới thiệu cho các đối tượng'
+        csa-alias-video: Equals và bí danh
+        csa-day-in-pm-pl: Người quản lý dự án làm gì?
+        csa-equals-video: Phương pháp equals ()
+        csa-example-solution-1: 'Live Coding một giải pháp ví dụ '
+        csa-multi-select-pl: Câu lệnh đa lựa chọn trong Java
+        csa-pl-calling-methods: Phương pháp gọi điện thoại trong Java
+        csa-pl-compareTo: Phương pháp compareto ()
+        csa-pl-creating-objects: Tạo các đối tượng
+        csa-pl-documentation: Tài liệu trong Java Lab
+        csa-pl-equals-book: Viết phương pháp equals () cho lớp Book
+        csa-pl-intro-to-equality: Giới thiệu về Bình đẳng
+        csa-pl-intro-to-equals-method: Giới thiệu về phương pháp .equals ()
+        csa-pl-intro-to-oop: Giới thiệu về lập trình hướng đối tượng
+        csa-pl-intro-to-pm: Giới thiệu về quản lý dự án
+        csa-pl-intro-to-strings: Giới thiệu về Strings trong Java
+        csa-pl-vocab-pm: Từ vựng quản lý dự án
+        csa-pl-vpl-m1-unit-3: Kỹ thuật phần mềm trong đơn vị 3
+        csa-pl-welcome-to-Neighborhood: Chào mừng bạn đến với The Neighborhood
+        csa-user-stories: Câu chuyện người dùng trong Kỹ thuật Phần mềm
+        csa_accessor_methods: 'CSA: Phương pháp Accessor'
+        csa_calling_methods: 'CSA: Phương pháp gọi'
+        csa_casting: 'CSA: Đúc'
+        csa_column_major_traversal: 'CSA: Column-Major Traversal'
+        csa_conditional_statements: 'CSA: Câu lệnh có điều kiện'
+        csa_constructors: 'CSA: Constructors'
+        csa_creating_a_scanner_object: 'CSA: Tạo một đối tượng máy quét'
+        csa_creating_objects: 'CSA: Tạo các đối tượng'
+        csa_creating_variables: 'CSA: Tạo các biến'
+        csa_enhanced_for_loops: 'CSA: Nâng cao cho vòng lặp'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Tăng cường cho các vòng lặp và
+          mảng 2D'
+        csa_equals_and_aliases: 'CSA: Bằng và bí danh'
+        csa_for_loops: 'CSA: Đối với vòng lặp'
+        csa_images_and_pixels: 'CSA: Hình ảnh và Pixel'
+        csa_inheritance: 'CSA: Thừa kế'
+        csa_instance_variables_and_attributes: 'CSA: Phiên bản biến và thuộc tính'
+        csa_modifying_values_in_a_1d_array: 'CSA: Sửa đổi giá trị trong một mảng 1D'
+        csa_multi-selection_statements: 'CSA: Báo cáo đa lựa chọn'
+        csa_mutator_methods: 'CSA: Phương pháp Mutator'
+        csa_nested_loops: 'CSA: Vòng lặp lồng nhau'
+        csa_object_oriented_programming: 'CSA: Lập trình hướng đối tượng'
+        csa_one_dimensional_arrays: 'CSA: Mảng một chiều (1D)'
+        csa_overloaded_constructors: 'CSA: Constructors quá tải'
+        csa_polymorphism: 'CSA: Đa hình'
+        csa_printing_in_java: 'CSA: In ấn bằng Java'
+        csa_private_methods: 'CSA: Phương pháp riêng'
+        csa_random_numbers: 'CSA: Số Ngẫu nhiên'
+        csa_recursion: 'CSA: Đệ quy'
+        csa_remving_data_from_an_arraylist: 'CSA: Loại bỏ dữ liệu từ một ArrayList'
+        csa_row_major_traversal: 'CSA: Traversal Row-Major'
+        csa_scanner_class_methods: 'CSA: Phương pháp lớp máy quét'
+        csa_searching_algorithms: 'CSA: Các thuật toán tìm kiếm'
+        csa_software_engineering_code_reviews: 'CSA: Software Engineering - Code Reviews'
+        csa_sorting_algorithms: 'CSA: Các thuật toán sắp xếp'
+        csa_static_methods: 'CSA: Phương pháp tĩnh'
+        csa_static_variables: 'CSA: Biến tĩnh'
+        csa_the_arraylist_class: 'CSA: Lớp ArrayList'
+        csa_the_equals_method: 'CSA: Phương pháp equals ()'
+        csa_the_tostring_method: 'CSA: Phương pháp ToString ()'
+        csa_two_dimensional_arrays: 'CSA: Mảng hai chiều (2D)'
+        csa_two_way_selection_and_not: 'CSA: Lựa chọn hai chiều và KHÔNG'
+        csa_welcome_to_the_theater: 'CSA: Chào mừng bạn đến với Nhà hát'
+        csa_while_loops: 'CSA: Trong khi vòng'
+        csa_working_with_2d_array_elements: 'CSA: Làm việc với các phần tử mảng 2D'
+        csa_working_with_arraylist_data: 'CSA: Làm việc với dữ liệu ArrayList'
+        csa_wrapper_classes_part_1: 'CSA: Lớp Wrapper Phần 1'
+        csa_wrapper_classes_part_2: 'CSA: Lớp Wrapper Phần 2'
+        csa_writing_a_method: 'CSA: Viết một phương pháp'
+        csc-ecosystems-intro: Giới thiệu về hệ sinh thái
+        csc-event-short-intro: Giới thiệu ngắn sự kiện
+        csc-poem-art-intro: Video giới thiệu
+        csc-poem-art-outro: Video kết thúc
+        csc-sprite-lab-pixel-editor: Vẽ Sprite của riêng bạn
+        csc-starquilts-intro: 'CSC: Chăn bông sao'
+        csc_animal_adaptations_intro: Giới thiệu thích nghi động vật
+        csc_fm_pilot: Máy chức năng (Pilot)
+        csc_fm_pilot_v2: 'Giới thiệu máy chức năng '
+        csc_timecapsule_intro: Time Capsule Giới thiệu
+        csd_app_lab_design_mode: Chế độ thiết kế CSD App Lab
+        csd_app_lab_events: Sự kiện CSD App Lab
+        csd_applab_arrays: Giới thiệu Danh sách
+        csd_applab_designmode: 'CS Discoveries: App Lab - Chế độ thiết kế'
+        csd_applab_designmode_short: Chế độ thiết kế App Lab
+        csd_applab_loops: Vòng lặp trong App Lab
+        csd_applab_parameters: Hàm và tham số
+        csd_concept_binary_data: 'Làm thế nào máy tính hoạt động: Nhị phân & dữ liệu'
+        csd_concept_circuits_logic: 'Làm thế nào máy tính hoạt động: Mạch & Logic'
+        csd_concept_computer: 'Làm thế nào máy tính hoạt động: Điều gì tạo ra một
+          máy tính, một máy tính?'
+        csd_concept_hardware_software: 'Làm thế nào máy tính hoạt động: Phần cứng
+          & phần mềm'
+        csd_concept_how_computers_work: Giới thiệu cách thức hoạt động của máy tính
+        csd_concept_memory_cpu_input_output: 'Làm thế nào máy tính hoạt động: Bộ nhớ,
+          CPU, đầu vào và đầu ra'
+        csd_concept_search: Cách hoạt động của Tìm kiếm
+        csd_debugging: Sửa lỗi
+        csd_external_amazon_data: Dữ liệu lớn được sử dụng như thế nào trong các hệ
+          thống khuyến nghị của Amazon để thay đổi cuộc sống của chúng tôi
+        csd_external_netflix_data: Làm thế nào để Netflix thực hiện chương trình truyền
+          hình và đề xuất phim?
+        csd_external_waze_data: Tại sao nhiều người dùng bị ám ảnh bởi Waze?
+        csd_gamelab_animation_tab: Tab hoạt hình
+        csd_gamelab_booleans: Biểu thức Boolean
+        csd_gamelab_conditional_statements: Câu lệnh có điều kiện
+        csd_gamelab_functions: Gọi và xác định hàm
+        csd_gamelab_if_else: Câu lệnh IF/Else
+        csd_gamelab_velocity: Vận tốc
+        csd_how_teamwork_works: Làm thế nào làm việc theo nhóm
+        csd_ml_ethics_ai: 'Đạo đức và AI '
+        csd_ml_import_model: Nhập mô hình AI
+        csd_ml_intro_ai_lab_july2021: Giới thiệu về AI Lab
+        csd_ml_intro_to_ai_lab: Giới thiệu về AI Lab
+        csd_ml_model_cards_july2021: Thẻ mẫu trong AI Lab
+        csd_ml_numerical_ai_lab: Dữ liệu số trong phòng thí nghiệm AI
+        csd_ml_training_testing_ai_lan: Đào tạo và thử nghiệm trong phòng thí nghiệm
+          AI
+        csd_pair_programming: Lập trình đôi
+        csd_problem_solving_process: Quá trình giải quyết vấn đề
+        csd_sprite_properties: Thuộc tính của nhân vật
+        csd_teamwork_and_disagreement: Làm việc theo nhóm - Xử lý bất đồng
+        csd_u6_call_define_functions: 'CSD: Gọi và định nghĩa hàm'
+        csd_u6_circuit_playground: Điện toán vật lý
+        csd_u6_if_statements: 'CSD: Câu lệnh if'
+        csd_u6_variables_part2: Biến - Mẫu truy cập
+        csd_weblab_css_1: Giới thiệu về CSS - Phần 1
+        csd_weblab_css_2: Giới thiệu về CSS - Phần 2
+        csd_weblab_intro_1: Giới thiệu về Web Lab - Phần 1
+        csd_weblab_intro_2: Giới thiệu về Web Lab - Phần 2
+        csd_weblab_intro_3: Giới thiệu về Web Lab - Phần 3
+        csd_what_computers_are: Máy tính là gì?
+        csd_what_computers_do: Máy tính làm gì?
+        csf21pilot_events: 'Sprite Lab: Sprites trong hành động'
+        csf21pilot_prompts: 'Sprite Lab: Văn bản và lời nhắc'
+        csf_follow_the_digital_trail: Đi theo đường mòn kỹ thuật số
+        csf_lots_of_sprites: 'Sprite Lab: Rất nhiều nhân vật'
+        csf_my_online_neighborhood_2020: Khu phố trực tuyến của tôi
+        csf_private_and_personal_information: Thông tin cá nhân và riêng tư
+        csp-pd-welcome: Chào mừng bạn đến với Gia đình!
         csp_applab_functions: Giới thiệu về hàm
         csp_applab_functions_parameters: Hàm và tham số
         csp_applab_loops: Vòng lặp
+        csp_applab_parameters: Hàm và tham số
         csp_cs_is_changing_everything: Khoa học máy tính là Thay đổi Tất cả mọi thứ
-        starwars_intro: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Giới thiệu'
-        starwars_typing: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - JavaScript'
-        starwars_events: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Sự kiện'
-        starwars_congrats: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Chúc mừng'
-        starwars_blocks_intro: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Giới
-          thiệu'
-        starwars_blocks_events: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Sự kiện'
-        starwars_blocks_congrats: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Chúc
-          mừng'
-        mc_intro: Minecraft - Giới thiệu
-        mc_repeat: Minecraft - Lặp lại
-        mc_if_statements: Minecraft - Lệnh if
-        mc_congrats_share: Minecraft - Xin chúc mừng
-        mc_congrats_no_share: Minecraft - Xin chúc mừng
-        mc_2016_intro: Giờ lập trình Minecraft - Giới thiệu
-        mc_2016_loops: Giờ lập trình Minecraft - Vòng lặp
-        mc_2016_events: Giờ lập trình Minecraft - Sự kiện
-        mc_2016_spawn: Giờ lập trình Minecraft - Tạo nhân vật
-        mc_2016_congrats: Giờ lập trình Minecraft - Chúc mừng
-        mc_2017_agent_intro: Giờ lập trình Minecraft - Đặc vụ
-        mc_2017_repeat: Giờ lập trình Minecraft - Vòng lặp liên tiếp
-        mc_2017_functions: Giờ lập trình Minecraft - Hàm
-        mc_2017_congratulations: Giờ lập trình Minecraft - Chúc mừng
-        mc_2017_puzzle_1: Giờ lập trình Minecraft - Đặc vụ
-        mc_2017_puzzle_3: Giờ lập trình Minecraft - Vòng lặp liên tiếp
-        mc_2017_puzzle_8: Giờ lập trình Minecraft - Hàm
-        mc_2017_puzzle_12: Giờ lập trình Minecraft - Chơi tự do
-        csd_applab_arrays: Giới thiệu Danh sách
-        CSF_scrat_loops_K1: Vòng lặp trong Kỷ băng hà
-        CSF_scrat_loops_CF: Vòng lặp trong Kỷ băng hà
-        CSF_loops_AB: Vòng lặp
-        CSF_StarWars_ProjectIntro: Giới thiệu Dự án Star Wars
-        mc_2018_intro: 'Minecraft: Chuyến thám hiểm đại dương - Giới thiệu'
-        MC_2018_loops: 'Minecraft: Chuyến thám hiểm đại dương - Lặp tới khi'
-        mc_2018_conditionals: 'Minecraft: Chuyến thám hiểm đại dương - Điều kiện'
-        mc_2018_closing: 'Minecraft: Chuyến thám hiểm đại dương - Chúc mừng'
-        hoc_dance_warmup: Bữa Tiệc Khiêu Vũ - Khởi động
-        hoc_dance_events: Bữa tiệc khiêu vũ – Sự kiện
-        hoc_dance_properties: Bữa tiệc khiêu vũ – Thuộc tính
+        csp_defining_calling_functions: Xác định và gọi hàm
+        csp_global_vs_local: Gỡ lỗi toàn cầu so với các biến cục bộ
+        csp_tutorial_datatab: Tab dữ liệu trong App Lab
+        csp_tutorial_datavis1: Trình hiển thị dữ liệu trong App Lab - Phần 1
+        csp_tutorial_datavis2: Trình hiển thị dữ liệu trong App Lab - Phần 2
+        csp_tutorial_libraries: Thư viện trong App Lab
+        elem_pd_2: Trường Tiểu học Khoa học Máy tính - PD video 2/2
+        enter_your_own_poem: Nhập bài thơ của riêng bạn
+        farmer_intro: Giới thiệu về nông dân
+        flappy_intro: Giới thiệu về Flappy Bird
+        frozen_functions: Giới thiệu về hàm
+        frozen_intro: Giới thiệu về Giờ Lập Trình
+        frozen_loops: Giới thiệu về vòng lặp
+        function: Các hàm
+        gumball_events: Gumball Hour of Code - Sự kiện
+        gumball_intro: Gumball Hour of Code - Giới thiệu
+        gumball_repeat: Gumball Hour of Code - Lặp lại các câu lệnh
+        hello_world_congrats: Xin chào thế giới - Làm điều bạn muốn
+        hello_world_events: Xin chào thế giới - Lập trình với sự kiện
+        hello_world_intro: Xin chào thế giới - Chào mừng đến với Sprite Lab
+        hint_videos_d_11_11_first: 'Gợi ý Video: D.11.11 Đầu tiên'
+        hint_videos_d_11_11_last: 'Gợi ý Video: D.11.11 Cuối'
+        hint_videos_d_11_3_first: 'Gợi ý Video: D.11.3 Đầu tiên'
+        hint_videos_d_11_3_last: 'Gợi ý Video: D.11.3 Cuối'
+        hint_videos_d_11_4_first: 'Gợi ý Video: D.11.4 Đầu tiên'
+        hint_videos_d_11_4_last: 'Gợi ý Video: D.11.4 Cuối'
+        hint_videos_d_11_5_first: 'Gợi ý Video: D.11.5 Đầu tiên'
+        hint_videos_d_11_5_last: 'Gợi ý Video: D.11.5 Last'
+        hint_videos_d_11_6_first: 'Gợi ý Video: D.11.6 Đầu tiên'
+        hint_videos_d_11_6_last: 'Gợi ý Video: D.11.6 Last'
+        hint_videos_d_11_7_first: 'Gợi ý Video: D.11.7 Đầu tiên'
+        hint_videos_d_11_7_last: 'Gợi ý Video: D.11.7 Cuối'
+        hint_videos_d_11_9_first: 'Gợi ý Video: D.11.9 Đầu tiên'
+        hint_videos_d_11_9_last: 'Gợi ý Video: D.11.9 Cuối'
         hoc_dance_congrats: Bữa Tiệc Khiêu Vũ - Quẩy lên!
-        c_and_c_great_to_create: Sáng tạo và vui chơi công bằng thật tuyệt vời
-        c_and_c_digital_sharing: Chia sẻ nội dung số
-        csd_pair_programming: Lập trình đôi
-        csd_applab_parameters: Hàm và tham số
-        csd_problem_solving_process: Quá trình giải quyết vấn đề
-        csd_debugging: Sửa lỗi
-        oceans_machine_learning: Học máy
         hoc_dance_congrats_2019: Bữa Tiệc Khiêu Vũ 2019 - Quẩy lên!
-        hoc_dance_warmup_2019: Bữa Tiệc Khiêu Vũ 2019 - Khởi động
+        hoc_dance_events: Bữa tiệc khiêu vũ – Sự kiện
         hoc_dance_events_2019: Bữa Tiệc Khiêu Vũ 2019 - Sự kiện
         hoc_dance_measures_2019: Bữa Tiệc Khiêu Vũ 2019 - Nhịp
+        hoc_dance_properties: Bữa tiệc khiêu vũ – Thuộc tính
         hoc_dance_properties_2019: Bữa Tiệc Khiêu Vũ 2019 - Thuộc tính
-        csf_private_and_personal_information: Thông tin cá nhân và riêng tư
-        csd_what_computers_are: Máy tính là gì?
+        hoc_dance_warmup: Bữa Tiệc Khiêu Vũ - Khởi động
+        hoc_dance_warmup_2019: Bữa Tiệc Khiêu Vũ 2019 - Khởi động
+        hoc_wrapup: Giờ lập trình in a nut shell
+        how-to-k5-workshops: 'Các nguyên tắc cơ bản CS của Code.org: Kiểm tra trẻ
+          em, Giáo viên được phê duyệt'
+        iceage_events: Ice Age Hour of Code - Sự kiện
+        iceage_intro: Ice Age Hour of Code - Giới thiệu
+        iceage_repeat: Ice Age Hour of Code - Báo cáo lặp lại
+        if: Khối lệnh "nếu"
+        if_else: Khối lệnh "nếu/thì"
+        if_else_scrat: Khối lệnh "nếu/thì"
+        infinity_playlab_events: Sự kiện Phòng Trò Chơi
+        infinity_playlab_intro: Phòng trò chơi - Giới thiệu
+        infinity_playlab_repeat_forever: Phòng Trò Chơi lặp lại mãi mãi
+        lesson_planning: Lập kế hoạch bài học
+        loop_for: Biến đếm
+        loop_times: Lặp lại khối Thời gian
+        loop_until: Lặp lại khối Cho đến khi
+        loop_while: Khối lệnh "khi"
+        maze_intro: Giới thiệu về mê cung
+        mc_2016_congrats: Giờ lập trình Minecraft - Chúc mừng
+        mc_2016_events: Giờ lập trình Minecraft - Sự kiện
+        mc_2016_intro: Giờ lập trình Minecraft - Giới thiệu
+        mc_2016_loops: Giờ lập trình Minecraft - Vòng lặp
+        mc_2016_spawn: Giờ lập trình Minecraft - Tạo nhân vật
+        mc_2017_agent_intro: Giờ lập trình Minecraft - Đặc vụ
+        mc_2017_congratulations: Giờ lập trình Minecraft - Chúc mừng
+        mc_2017_functions: Giờ lập trình Minecraft - Hàm
+        mc_2017_puzzle_1: Giờ lập trình Minecraft - Đặc vụ
+        mc_2017_puzzle_12: Giờ lập trình Minecraft - Chơi tự do
+        mc_2017_puzzle_3: Giờ lập trình Minecraft - Vòng lặp liên tiếp
+        mc_2017_puzzle_8: Giờ lập trình Minecraft - Hàm
+        mc_2017_repeat: Giờ lập trình Minecraft - Vòng lặp liên tiếp
+        mc_2018_closing: 'Minecraft: Chuyến thám hiểm đại dương - Chúc mừng'
+        mc_2018_conditionals: 'Minecraft: Chuyến thám hiểm đại dương - Điều kiện'
+        mc_2018_intro: 'Minecraft: Chuyến thám hiểm đại dương - Giới thiệu'
+        mc_congrats_no_share: Minecraft - Xin chúc mừng
+        mc_congrats_share: Minecraft - Xin chúc mừng
+        mc_if_statements: Minecraft - Lệnh if
+        mc_intro: Minecraft - Giới thiệu
+        mc_repeat: Minecraft - Lặp lại
+        oceans_machine_learning: Học máy
+        oceans_societal_implications: Tác động xã hội
+        oceans_training_data: Dữ liệu đào tạo
+        opd_closing: 'Giảng dạy các nguyên tắc cơ bản CS: Kết thúc & Các bước tiếp
+          theo'
+        outbreak_events: 'Trình mô phỏng bùng nổ: Sự kiện'
+        outbreak_intro: 'Mô phỏng bùng phát: Giới thiệu'
         outbreak_mike: CodeBytes Tập 3 cùng Mike - Trình mô phỏng dịch bệnh bùng phát
-        csf_lots_of_sprites: 'Sprite Lab: Rất nhiều nhân vật'
+        outbreak_outro: 'Mô phỏng bùng nổ: Chơi miễn phí'
+        outbreak_scientist: 'Trình mô phỏng bùng nổ: suy nghĩ giống như một nhà khoa
+          học'
+        parameters: Hàm và tham số
         playlab_2021: Giới thiệu về Phòng Trò Chơi
         playlab_2021_reader: Giới thiệu về Phòng Trò Chơi
-        PL_CSD_TeacherTips_Advise: Mẹo dành cho giáo viên – Lời khuyên dành cho giáo
-          viên mới
-        PL_CSD_TeacherTips_IntroToCSD: Mẹo dành cho giáo viên – Giới thiệu về Khám
-          phá KHMT
-        PL_CSD_TeacherTips_ProblemSolvingProcess: Mẹo dành cho giáo viên – Quy trình
-          giải quyết vấn đề
-        PL_CSD_TeacherTips_PairProgramming: Mẹo dành cho giáo viên – Lập trình theo
-          cặp
-        PL_CSD_TeacherTips_Debugging: Mẹo dành cho giáo viên – Sửa lỗi
-        PL_CSD_TeacherTips_LeadLearner: Mẹo dành cho giáo viên – Dẫn dắt học viên
+        playlab_events: Sự kiện tại Phòng Trò Chơi
+        playlab_intro: Giới thiệu về Phòng Trò Chơi
+        playlab_repeat_forever: Phòng Trò Chơi lặp lại mãi mãi
+        poemart_celebration: Lễ kỷ niệm nghệ thuật bài thơ
+        poemart_events: Sự kiện nghệ thuật bài thơ
+        poemart_imagery: Hình ảnh nghệ thuật bài thơ
+        poemart_intro: Giới thiệu Tranh thơ ca
+        poembot-playtest-events: Chơi thử PoemBot Sự kiện
         poembot-playtest-intro: Chơi thử PoemBot Giới thiệu
         poembot-playtest-sprites: Chơi thử PoemBot Nhân vật
-        poembot-playtest-events: Chơi thử PoemBot Sự kiện
-        hello_world_intro: Xin chào thế giới - Chào mừng đến với Sprite Lab
-        hello_world_events: Xin chào thế giới - Lập trình với sự kiện
-        hello_world_congrats: Xin chào thế giới - Làm điều bạn muốn
-        rough_poemart_intro: v1 Nghệ Thuật Thơ Ca - Giới Thiệu
-        rough_poemart_events: v1 Nghệ Thuật Thơ Ca - Sự Kiện
-        rough_poemart_imagery: v1 Nghệ Thuật Thơ Ca - Hình Ảnh
-        rough_poemart_congrats: v1 Nghệ Thuật Thơ Ca - Chúc mừng
-        poetry_module_variables: Biến - Code và Thơ
-        poetry_module_textandvariables: Văn bản & Biến - Code và Thơ
+        poetry_module_conditionals: Điều kiện - Code và Thơ
+        poetry_module_multichoiceprompts: Lời nhắc nhiều lựa chọn - Code và Thơ
         poetry_module_planningapp: Lập kế hoạch xây dựng ứng dụng Trình sáng tác thơ
           của bạn - Code và Thơ
-        poetry_module_multichoiceprompts: Lời nhắc nhiều lựa chọn - Code và Thơ
-        poetry_module_conditionals: Điều kiện - Code và Thơ
-        poemart_intro: Giới thiệu Tranh thơ ca
-        CSA-PL-debugging-temp: Giới thiệu về Gỡ lỗi trong Java Lab - tạm thời
-        CSA-PL-for-loops: Vòng lặp for trong Java
-        CSA-PL-variables: Tạo biến trong Java
-        PL_CS_Journeys_Overview: Hành trình KHMT
-        CSA-PL-intro-to-java-lab: Java Lab Căn bản
-        CSA-PL-first-program: Viết chương trình trong Java
-        CSD_u6_variables_part1: 'CSD: Biến'
-        csd_u6_if_statements: 'CSD: Câu lệnh if'
-        csc-poem-art-intro: Video giới thiệu
-        csc-poem-art-outro: Video kết thúc
-        csd_u6_call_define_functions: 'CSD: Gọi và định nghĩa hàm'
-        csp_applab_parameters: Hàm và tham số
+        poetry_module_textandvariables: Văn bản & Biến - Code và Thơ
+        poetry_module_variables: Biến - Code và Thơ
+        repeat_block: Sử dụng khối lặp lại
+        rough_poemart_congrats: v1 Nghệ Thuật Thơ Ca - Chúc mừng
+        rough_poemart_events: v1 Nghệ Thuật Thơ Ca - Sự Kiện
+        rough_poemart_imagery: v1 Nghệ Thuật Thơ Ca - Hình Ảnh
+        rough_poemart_intro: v1 Nghệ Thuật Thơ Ca - Giới Thiệu
+        songwriting_with_functions: Unplugged Lesson in Action - Bài hát với chức
+          năng
+        star_quilts_intro_to_artist: 'Star Quilt: Giới thiệu cho nghệ sĩ'
         starquilts_intro_artist: Giới thiệu về Ghép vải hình ngôi sao
-        CSA-PL-intro-to-arrays: Mảng một chiều (1D)
-        CSA-PL-1d-arrays-new-values: Nhập giá trị theo các dãy 1 chiều
-        CSA-PL-conditionals: Câu lệnh điều kiện trong Java
-        CSA-PL-two-way-selection: Lựa chọn hai hướng
-        CSA-PL-Printing-in-Java: Hiển thị văn bản trong Java
-        CSA-PL-multi-selection-statements: Câu lệnh nhiều lựa chọn
-        CS_Changing_Everything: Khoa học máy tính là Thay đổi Tất cả mọi thứ
-        csd_sprite_properties: Thuộc tính của nhân vật
-    callout:
-      text:
-        drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác
-        run: Nhấn "Run" để thử chương trình của bạn
-        watch_again: Click vào đây để xem lại video
-        gray_block_explanation: Khối có màu xám không thể bị xóa. Hãy giải câu đố
-          dùng khối xám đó!
-        show_code_explanation: Click vào đây để xem mã lệnh cho chương trình bạn đang
-          thực hiện
-        instructions_repeat_explanation: Các hướng dẫn cho mỗi câu đố được lặp đi
-          lặp lại ở đây
-        category_explanation: Bạn vẫn có các khối lệnh như xưa, nhưng giờ đây chúng
-          đã được phân thành các nhóm nhỏ
-        set_sprite_image: Đính kèm khối "thiết lập hình ảnh cho diễn viên" với khối
-          "khi câu chuyện bắt đầu" để tạo một nhân vật
-        studio_say_text: Gõ những gì bạn muốn diễn viên của bạn nói trong các dấu
-          ngoặc kép
-        jigsaw_click: Nhấp vào khối này!
-        move_elsa_forward: Kéo một khối lệnh "Di chuyển về phía trước" và gắn nó ngay
-          dưới khối "Khi chạy" để làm cho Elsa di chuyển về phía trước
-        turn_elsa: Sử dụng khối "rẽ" để làm Elsa rẽ. Số khung bên trong khối xoay
-          sẽ xác định Elsa quay một góc bao nhiêu độ
-        replace_questions: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với
-          một số
-        replace_questions_degree: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???"
-          với góc cần thiết
-        repeat_blocks: Sử dụng khối "Lặp lại" và đè nó xung quanh các khối trong vùng
-          không gian làm việc
-        repeat_blocks_1: "(1) sử dụng khối này và đặt nó bao quanh các khối màu xám"
-        repeat_blocks_2: (2) di chuyển các khối "Lặp lại" ở đây, và đặt các khối màu
-          xám bên trong
-        snowflake_dropdown: Sử dụng cái này để thả xuống tạo các bông tuyết khác nhau!
-        degrees_per_side: Chia 360 độ cho số cạnh để suy ra số độ của mỗi góc.
-        set_sides: Sử dụng khối này để đặt "số cạnh" với số lượng cần thiết để hoàn
-          thành câu đố.
-        set_length: Sử dụng khối này để đặt "chiều dài" về giá trị chính xác.
-        which_equation: Cân bằng như thế nào để mỗi bên ngẵn hơn so với hình dạng
-          bên?
-        get_nectar: Sử dụng các khối mới tên là "lấy mật hoa".
-        actions_category: Hộp công cụ có một cái nhìn mới! Các khối "hành động" đã
-          ở đây.
-        draw_square_hint: 'Gợi ý: Sử dụng các vòng lặp vuông bạn vừa tạo ra trong
-          màn trước.'
-        edit_function: Click vào đây để chỉnh sửa hàm của bạn.
-        create_function: Nhấp vào đâu để mở hộp "chức năng", sau đó nhấp vào "tạo
-          một chức năng mới".
-        house_hint: Có thể tạm thời chấp nhận hình vừa vẽ chưa giống nhà thật. Chúng
-          ta sẽ sửa lại ở màn tiếp theo.
-        edit_draw_square: Sử dụng nút này để chỉnh sửa các hàm và thêm vòng lặp.
-        edit_get_nectar: Sử dụng nút này để chỉnh sửa các hàm và thay đổi hướng của
-          ong để nó rẽ và lấy mật hoa.
-        logic_category: Mở hộp "Logic" để tìm các khối "nếu/khác".
-        length_parameter: Bạn có thể viết lại hàm này để nó sử dụng tham số "chiều
-          dài" không?
-        frozen_diamond_repeat: Sử dụng các khối lặp lại để vẽ ra hình này.
-        frozen_circle_function_in_circle_turn: Đừng quên xoay một góc thích hợp sau
-          khi tạo mỗi vòng tròn.
-        frozen_circle_function_with_parameter_circle: Sử dụng khối "tạo ra một vòng
-          tròn" và thay đổi kích thước.
-        frozen_snowflake_branch: Sử dụng khối "tạo ra một nhánh bông tuyết"
-        frozen_create_square: Đính kèm thêm nhiều khối lệnh ở đây để tạo ra một hình
-          vuông
-        playlab_drag_say: Kéo khối "nói" ở đây và gõ "Xin chào"
-        playlab_use_twice: Sử dụng khối này hai lần và nhớ thay đổi số thứ tự của
-          diễn viên
-        playlab_move_girl: Sử dụng khối lệnh "di chuyển sang phải" để di chuyển bóng
-          cô gái
-        playlab_play_sound: Thêm khối lệnh "phát âm thanh" ở đây
-        playlab_arrow_keys: Nhớ dùng chúng để di chuyển các phù thủy sau khi nhấn
-          nút "Chạy"
-        playlab_add_move: Thêm khối lệnh "di chuyển" bên trong vòng lặp này
-        playlab_add_score: Thêm khối lệnh về điểm số ở đây
-        playlab_add_blocks: Thêm khối lệnh của bạn ở đây
-        set_variable: Kéo một khối số ở đây để đặt biến của bạn
-        place_variable: Kéo biến số của bạn vào trong khối lệnh này
-        bee_for_loop: Kéo số mật hoa lớn nhất mà bạn muốn ong đi hút ở đây
-        place_counter_variable: Kéo biến để đếm số vào trong khối lệnh này
-        function_editor_draw_square: Đây là định nghĩa về hàm của bạn. Các khối lệnh
-          này luôn vẽ một hình vuông khi bạn dùng lệnh "vẽ một hình vuông"
-        change_here: Thực hiện thay đổi của bạn ở đây
-        write_draw_square_function: Kéo khối lệnh từ hộp công cụ vào đây để vẽ ra
-          một hình vuông
-        write_draw_triangle_function: Kéo khối lệnh từ hộp công cụ vào đây để vẽ ra
-          một tam giác
-        edit_add_parameter: Nhấp vào chỉnh sửa để thêm một tham số trong hàm của bạn
-        add_and_drag_parameter: Viết tên tham số của bạn vào đây, bấm vào "Thêm",
-          và sau đó kéo nó vào định nghĩa hàm của bạn
-        fill_in_actor: Điền vào các dấu ??? với con số tương ứng với mỗi diễn viên
-          (1, 2 và 3)
-        repeat: Đặt khối bên trong vòng lặp để lặp lại lệnh
-        if_bee_nectar: Sử dụng khối lệnh "nếu" để để giúp ong tự quyết định có lấy
-          mật hoa hay không lấy
-        if_else_bee: Sử dụng các khối lệnh "nếu/thì" để ong lấy được mật hoa từ một
-          bông hoa, và để ong làm mật ong nếu đó là tổ ong
-        repeat_full_circle: Nhập vào số lần các zombie đã di chuyển để vẽ một vòng
-          tròn
-        place_length_variable: Kéo biến chiều dài ở đây để thay thế các ký hiệu chấm
-          hỏi
-        arrows_move_actor: Sử dụng các mũi tên để di chuyển các diễn viên
-        right_arrow_fireball: Sử dụng mũi tên bên phải để bắn quả cầu lửa
-        name_function: Viết tên của hàm của bạn ở đây
-        Infinity_move_right_runbutton: Thêm khối lệnh di chuyển ở đây
-        Infinity_move_directions_callout: Khối lệnh nào sẽ làm Baymax di chuyển lên
-          trên khi ta nhấn phím mũi tên lên?
-        Infinity_move_directions_callout_arrow: Sử dụng các mũi tên để đi chuyển
-        Infinity_move_collide_callout: Phát âm thanh khi sự kiện này xảy ra.
-        Infinity_repeat_callout: Đặt khối lệnh di chuyển ở trong vị trí này
-        craft_run_button_callout: Nhấn "Run" để thử chương trình của bạn
-        craft_drag_block_callout: Kéo một khối "moveForward();" và thả xuống bên dưới
-          khối gỗ khác
-        craft_callout_preplaced: Chúng tôi đã đặt một số khối gỗ ở đây để giúp bạn
-          bắt đầu
-        craft_inside_repeat: Lặp lại các hành động bằng cách đặt các khối gỗ vào đây
-        craft_callout_preplaced_house: Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn.
-          Bạn có hoàn thành được không?
-        craft_what_is_iron: Hãy đào khối sắt này!
-        craft_callout_moveforward: Mã này sẽ kiểm tra xem có dung nham hay không,
-          bạn có thể thêm một lệnh để di chuyển về phía trước không?
+        starwars_blocks_congrats: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Chúc
+          mừng'
+        starwars_blocks_events: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Sự kiện'
+        starwars_blocks_intro: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Giới
+          thiệu'
+        starwars_congrats: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Chúc mừng'
+        starwars_events: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Sự kiện'
+        starwars_intro: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Giới thiệu'
+        starwars_typing: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - JavaScript'
+        teaching_cs_pair_programming: 'Giảng dạy các nguyên tắc cơ bản CS: Lập trình
+          cặp'
+        teaching_csf_how_it_works: 'Giảng dạy các nguyên tắc cơ bản CS: Cách hoạt
+          động của khóa học'
+        teaching_problem_solving: 'Giảng dạy các nguyên tắc cơ bản CS: Giảng dạy giải
+          quyết vấn đề'
+        tutorial_puzzle_challenge: Hướng dẫn các câu đố
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video
+          - Khối dữ liệu
+        u7-libraries-explanation: 'App Lab: Tạo khối của riêng bạn - Làm thế nào để
+          sử dụng thư viện'
+        upload_sprites_backgrounds: Tải lên tùy chỉnh Sprites và hình nền
+        what_is_an_event: Sự kiện là gì?
+        what_is_cs: Khoa học máy tính là gì?
+        why-should-teach-unplugged-activities: 'Hỏi đáp: Tại sao tôi nên dạy các hoạt
+          động “không cắm”?'
+        why_unplugged_lessons: Nhận được “rút phích cắm”
+        writing_first_program: Viết chương trình máy tính đầu tiên của bạn

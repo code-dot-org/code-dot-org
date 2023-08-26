@@ -120,8 +120,13 @@ When /^I switch tabs$/ do
   @browser.switch_to.window(@browser.window_handles.detect {|handle| handle != tab})
 end
 
-When /^I switch to the first iframe$/ do
+When /^I switch to the first iframe( once it exists)?$/ do |wait|
   $default_window = @browser.window_handle
+  if wait
+    wait_short_until do
+      @browser.find_elements(tag_name: 'iframe').any?
+    end
+  end
   @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
 end
 
@@ -198,6 +203,7 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
 end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
+  wait_for_jquery
   wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
 end
 
@@ -299,15 +305,13 @@ When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
 
-When /^I rotate to landscape$/ do
+When /^I rotate to (landscape|portrait)$/ do |orientation|
   if ENV['BS_ROTATABLE'] == "true"
-    @browser.rotate(:landscape)
-  end
-end
-
-When /^I rotate to portrait$/ do
-  if ENV['BS_ROTATABLE'] == "true"
-    @browser.rotate(:portrait)
+    $http_client.call(
+      :post,
+      "/wd/hub/session/#{@browser.session_id}/orientation",
+      {orientation: orientation.upcase}
+    )
   end
 end
 
@@ -405,10 +409,10 @@ When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   # editor is open, the first if it isn't
   @browser.execute_script(
     "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
-    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {"\
-      "bubbles: true,"\
-      "cancelable: true,"\
-      "view: window"\
+    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {" \
+      "bubbles: true," \
+      "cancelable: true," \
+      "view: window" \
     "}))"
   )
 rescue
@@ -422,10 +426,10 @@ And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
   # Escaping those gives us \\\\ per-character
   category_selector = "#\\\\:#{id}\\\\.label"
   @browser.execute_script(
-    "$('#{category_selector}').last().get(0).dispatchEvent(new MouseEvent('mousedown', {"\
-      "bubbles: true,"\
-      "cancelable: true,"\
-      "view: window"\
+    "$('#{category_selector}').last().get(0).dispatchEvent(new MouseEvent('mousedown', {" \
+      "bubbles: true," \
+      "cancelable: true," \
+      "view: window" \
     "}))"
   )
 rescue
@@ -503,7 +507,7 @@ When /^I click selector "([^"]*)" if I see it$/ do |selector|
     @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
   end
   @browser.execute_script("$(\"#{selector}:visible\")[0].click();")
-rescue Selenium::WebDriver::Error::TimeOutError
+rescue Selenium::WebDriver::Error::TimeoutError
   # Element never appeared, ignore it
 end
 
@@ -544,7 +548,7 @@ When /^I type "([^"]*)" into "([^"]*)"$/ do |input_text, selector|
 end
 
 When /^I type '([^']*)' into "([^"]*)"$/ do |input_text, selector|
-  type_into_selector("\'#{input_text}\'", selector)
+  type_into_selector("'#{input_text}'", selector)
 end
 
 When /^I type "([^"]*)" into "([^"]*)" if I see it$/ do |input_text, selector|
@@ -554,7 +558,7 @@ When /^I type "([^"]*)" into "([^"]*)" if I see it$/ do |input_text, selector|
     @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
   end
   type_into_selector("\"#{input_text}\"", selector)
-rescue Selenium::WebDriver::Error::TimeOutError
+rescue Selenium::WebDriver::Error::TimeoutError
   # Element never appeared, ignore it
 end
 
@@ -930,7 +934,7 @@ end
 def wait_for_jquery
   wait_until do
     @browser.execute_script("return (typeof jQuery !== 'undefined');")
-  rescue Selenium::WebDriver::Error::ScriptTimeOutError
+  rescue Selenium::WebDriver::Error::ScriptTimeoutError
     puts "execute_script timed out after 30 seconds, likely because this is \
 Safari and the browser was still on about:blank when wait_for_jquery \
 was called. Ignoring this error and continuing to wait..."

@@ -48,9 +48,9 @@ module Services
           # lesson with a title page.
           script.lessons.each do |lesson|
             ChatClient.log("Gathering resources for #{lesson.key.inspect}") if DEBUG
-            lesson_pdfs = lesson.resources.map do |resource|
+            lesson_pdfs = lesson.resources.filter_map do |resource|
               fetch_resource_pdf(resource, pdfs_dir) if resource.should_include_in_pdf?
-            end.compact
+            end
 
             next if lesson_pdfs.empty?
 

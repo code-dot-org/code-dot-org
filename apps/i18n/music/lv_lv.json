@@ -7,6 +7,9 @@
   "blockly_toolboxCategoryLogic": "Loģika",
   "blockly_toolboxCategoryMath": "Matemātika",
   "blockly_toolboxCategoryVariables": "Mainīgie",
+  "continue": "Turpināt",
+  "panelHeaderInstructions": "Instrukcijas",
+  "panelHeaderWorkspace": "Darba virsma: ",
   "share": "Ieteikt",
   "startOver": "Sākt no sākuma"
 }

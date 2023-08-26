@@ -2,238 +2,55 @@
   "kk-KZ": {
     "data": {
       "resources": {
-        "implementation_guide/coursed/2022": {
-          "name": "Іске асыру туралы нұсқаулық"
+        "lesson_plans/csd/2017": {
+          "name": "Сабақтар жоспары"
         },
-        "graph_paper_programming/coursed/2022": {
-          "name": "Миллиметрлік Бағдарламалау"
+        "lesson_plans_1/csd/2017": {
+          "name": "Сабақтар жоспары"
         },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "Миллиметрлік Бағдарламалау"
+        "lesson_plans_2/csd/2017": {
+          "name": "Сабақтар жоспары"
         },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "Миллиметрлік Бағдарламалау"
+        "lesson_plans_3/csd/2017": {
+          "name": "Сабақтар жоспары"
         },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "Миллиметрлік Бағдарламалау"
+        "lesson_plans_4/csd/2017": {
+          "name": "Сабақтар жоспары"
         },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "Миллиметрлік Бағдарламалау"
+        "lesson_plans_5/csd/2017": {
+          "name": "Сабақтар жоспары"
         },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "Миллиметрлік Бағдарламалау"
+        "lesson_plans/csd/2018": {
+          "name": "Сабақтар жоспары"
         },
-        "pair_programming/coursed/2022": {
-          "name": "Жұптасып Бағдарламалау"
+        "lesson_plans_1/csd/2018": {
+          "name": "Сабақтар жоспары"
         },
-        "relay_programming/coursed/2022": {
-          "name": "Релелік Бағдарламалау"
+        "lesson_plans_2/csd/2018": {
+          "name": "Сабақтар жоспары"
         },
-        "relay_programming_1/coursed/2022": {
-          "name": "Релелік Бағдарламалау"
+        "lesson_plans_3/csd/2018": {
+          "name": "Сабақтар жоспары"
         },
-        "relay_programming_2/coursed/2022": {
-          "name": "Релелік Бағдарламалау"
+        "lesson_plans_4/csd/2018": {
+          "name": "Сабақтар жоспары"
         },
-        "relay_programming_3/coursed/2022": {
-          "name": "Релелік Бағдарламалау"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "Релелік Бағдарламалау"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "Релелік Бағдарламалау"
-        },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "Картаға қатысты шартты белгілер"
-        },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "Картаға қатысты шартты белгілер"
-        },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "Картаға қатысты шартты белгілер"
-        },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "Картаға қатысты шартты белгілер"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "Картаға қатысты шартты белгілер"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "Іске асыру туралы нұсқаулық"
-        },
-        "internet/coursef/2022": {
-          "name": "Ғаламтор"
-        },
-        "internet_1/coursef/2022": {
-          "name": "Ғаламтор"
-        },
-        "the_internet/coursef/2022": {
-          "name": "Ғаламтор"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "Іске асыру туралы нұсқаулық"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "Іске асыру туралы нұсқаулық"
-        },
-        "move_it_move_it/courseb/2022": {
-          "name": "Қозғал, Қозғал"
-        },
-        "move_it_move_it_1/courseb/2022": {
-          "name": "Қозғал, Қозғал"
-        },
-        "move_it_move_it_2/courseb/2022": {
-          "name": "Қозғал, Қозғал"
-        },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "Қозғал, Қозғал"
-        },
-        "pair_programming/courseb/2022": {
-          "name": "Жұптасып Бағдарламалау"
-        },
-        "getting_loopy/courseb/2022": {
-          "name": "Ілмектерді үйрену"
-        },
-        "getting_loopy_1/courseb/2022": {
-          "name": "Ілмектерді үйрену"
-        },
-        "getting_loopy_2/courseb/2022": {
-          "name": "Ілмектерді үйрену"
-        },
-        "getting_loopy_3/courseb/2022": {
-          "name": "Ілмектерді үйрену"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "Үлкен Оқиға"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "Үлкен Оқиға"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "Үлкен Оқиға"
-        },
-        "pair_programming/express/2022": {
-          "name": "Жұптасып Бағдарламалау"
-        },
-        "variables/express/2022": {
-          "name": "Айнымалылар"
-        },
-        "pair_programming/pre-express/2022": {
-          "name": "Жұптасып Бағдарламалау"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "Іске асыру туралы нұсқаулық"
-        },
-        "pair_programming/coursea/2022": {
-          "name": "Жұптасып Бағдарламалау"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "Көңілді Карталар"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "Үлкен Оқиға"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "Үлкен Оқиға"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "Үлкен Оқиға"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "Іске асыру туралы нұсқаулық"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "Менің Достарым Роботтар"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "Менің Достарым Роботтар"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "Менің Достарым Роботтар"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "Менің Достарым Роботтар"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "Менің Достарым Роботтар"
-        },
-        "pair_programming/coursec/2022": {
-          "name": "Жұптасып Бағдарламалау"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "Үлкен Оқиға"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "Үлкен Оқиға"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "Үлкен Оқиға"
-        },
-        "binary_bracelets/coursec/2022": {
-          "name": "Екілік Білезіктер"
-        },
-        "binary_bracelets_1/coursec/2022": {
-          "name": "Екілік Білезіктер"
-        },
-        "binary_bracelets_2/coursec/2022": {
-          "name": "Екілік Білезіктер"
-        },
-        "binary_bracelets_3/coursec/2022": {
-          "name": "Екілік Білезіктер"
-        },
-        "binary_bracelets_4/coursec/2022": {
-          "name": "Екілік Білезіктер"
-        },
-        "variables/csd/2022": {
-          "name": "Айнымалылар"
-        },
-        "variables_3/csd/2022": {
-          "name": "Айнымалылар"
-        },
-        "text/csd/2022": {
-          "name": "Мәтін"
-        },
-        "conditionals/csd/2022": {
-          "name": "Шарттар"
-        },
-        "functions/csd/2022": {
-          "name": "Функциялар"
-        },
-        "functions_1/csd/2022": {
-          "name": "Функциялар"
-        },
-        "functions_4/csd/2022": {
-          "name": "Функциялар"
-        },
-        "lists/csd/2022": {
-          "name": "Тізімдер"
-        },
-        "variables_1/csd/2022": {
-          "name": "Айнымалылар"
-        },
-        "variables_2/csd/2022": {
-          "name": "Айнымалылар"
-        },
-        "functions_2/csd/2022": {
-          "name": "Функциялар"
-        },
-        "functions_3/csd/2022": {
-          "name": "Функциялар"
-        },
-        "functions_with_parameters/csd/2022": {
-          "name": "Параметрлі Функциялар"
-        },
-        "functions_5/csd/2022": {
-          "name": "Функциялар"
-        },
-        "lesson_plans/courseb/2018": {
+        "lesson_plans_5/csd/2018": {
           "name": "Сабақтар жоспары"
         },
         "lesson_plans/coursea/2018": {
           "name": "Сабақтар жоспары"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Сабақтар жоспары"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Сабақтар жоспары"
+        },
         "lesson_plans/coursed/2018": {
+          "name": "Сабақтар жоспары"
+        },
+        "lesson_plans/coursee/2018": {
           "name": "Сабақтар жоспары"
         },
         "lesson_plans/coursef/2018": {
@@ -242,55 +59,13 @@
         "lesson_plans/express/2018": {
           "name": "Сабақтар жоспары"
         },
-        "lesson_plans/coursee/2018": {
+        "lesson_plans/csd/2019": {
           "name": "Сабақтар жоспары"
         },
-        "lesson_plans/coursec/2018": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans/express/2019": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans/coursec/2019": {
+        "lesson_plans_1/csd/2019": {
           "name": "Сабақтар жоспары"
         },
         "lesson_plans_2/csd/2019": {
-          "name": "Сабақтар жоспары"
-        },
-        "lesson_plans_5/csd/2019": {
           "name": "Сабақтар жоспары"
         },
         "lesson_plans_3/csd/2019": {
@@ -299,61 +74,92 @@
         "lesson_plans_4/csd/2019": {
           "name": "Сабақтар жоспары"
         },
-        "lesson_plans/csd/2019": {
+        "lesson_plans_5/csd/2019": {
           "name": "Сабақтар жоспары"
         },
-        "lesson_plans_1/csd/2019": {
+        "lesson_plans/coursea/2019": {
           "name": "Сабақтар жоспары"
         },
-        "lesson_plans_2/csd/2017": {
+        "lesson_plans/courseb/2019": {
           "name": "Сабақтар жоспары"
         },
-        "lesson_plans_5/csd/2017": {
+        "lesson_plans/coursec/2019": {
           "name": "Сабақтар жоспары"
         },
-        "lesson_plans_1/csd/2017": {
+        "lesson_plans/coursed/2019": {
           "name": "Сабақтар жоспары"
         },
-        "lesson_plans/csd/2017": {
+        "lesson_plans/coursee/2019": {
           "name": "Сабақтар жоспары"
         },
-        "lesson_plans_4/csd/2017": {
+        "lesson_plans/coursef/2019": {
           "name": "Сабақтар жоспары"
         },
-        "lesson_plans_3/csd/2017": {
+        "lesson_plans/express/2019": {
           "name": "Сабақтар жоспары"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "lesson_plans/coursea/2020": {
+          "name": "Сабақтар жоспары"
         },
-        "implementation_guide/coursef/2021": {
+        "lesson_plans/courseb/2020": {
+          "name": "Сабақтар жоспары"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Сабақтар жоспары"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Сабақтар жоспары"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Сабақтар жоспары"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Сабақтар жоспары"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Сабақтар жоспары"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Сабақтар жоспары"
+        },
+        "lists/csd/2021": {
+          "name": "Тізімдер"
+        },
+        "variables_1/csd/2021": {
+          "name": "Айнымалылар"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Функциялар"
+        },
+        "functions_1/csd/2021": {
+          "name": "Функциялар"
+        },
+        "functions_2/csd/2021": {
+          "name": "Функциялар"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For ілмектері"
+        },
+        "for_loops/csd/2021": {
+          "name": "For ілмектері"
+        },
+        "implementation_guide/coursea/2021": {
           "name": "Іске асыру туралы нұсқаулық"
         },
-        "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Көңілді For циклі"
+        "pair-programming-vid/coursea/2021": {
+          "name": "Жұптасып Бағдарламалау"
         },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Көңілді For циклі"
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Көңілді Карталар"
         },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Көңілді For циклі"
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Үлкен Оқиға"
         },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Көңілді For циклі"
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Үлкен Оқиға"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Көңілді For циклі"
-        },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Ғаламтор"
-        },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "Ғаламтор"
-        },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "Ғаламтор"
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Үлкен Оқиға"
         },
         "implementation_guide/courseb/2021": {
           "name": "Іске асыру туралы нұсқаулық"
@@ -392,24 +198,6 @@
           "name": "Үлкен Оқиға"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "Үлкен Оқиға"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "Іске асыру туралы нұсқаулық"
-        },
-        "pair-programming-vid/coursea/2021": {
-          "name": "Жұптасып Бағдарламалау"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Көңілді Карталар"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "Үлкен Оқиға"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Үлкен Оқиға"
-        },
-        "unplugged-video-big-event/coursea/2021": {
           "name": "Үлкен Оқиға"
         },
         "implementation_guide/coursec/2021": {
@@ -514,6 +302,36 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Картаға қатысты шартты белгілер"
         },
+        "implementation_guide/coursee/2021": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Көңілді For циклі"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Көңілді For циклі"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Көңілді For циклі"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Көңілді For циклі"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Көңілді For циклі"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Ғаламтор"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Ғаламтор"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Ғаламтор"
+        },
         "pair_programming/express/2021": {
           "name": "Жұптасып Бағдарламалау"
         },
@@ -523,53 +341,235 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Жұптасып Бағдарламалау"
         },
-        "implementation_guide/coursee/2021": {
-          "name": "Іске асыру туралы нұсқаулық"
-        },
-        "functions_2/csd/2021": {
-          "name": "Функциялар"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "For ілмектері"
-        },
-        "for_loops/csd/2021": {
-          "name": "For ілмектері"
-        },
-        "variables_1/csd/2021": {
-          "name": "Айнымалылар"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Функциялар"
-        },
-        "functions_1/csd/2021": {
-          "name": "Функциялар"
-        },
-        "lists/csd/2021": {
+        "lists/csd/2022": {
           "name": "Тізімдер"
         },
-        "lesson_plans/pre-express/2020": {
-          "name": "Сабақтар жоспары"
+        "variables/csd/2022": {
+          "name": "Айнымалылар"
         },
-        "lesson_plans/express/2020": {
-          "name": "Сабақтар жоспары"
+        "variables_3/csd/2022": {
+          "name": "Айнымалылар"
         },
-        "lesson_plans/courseb/2020": {
-          "name": "Сабақтар жоспары"
+        "text/csd/2022": {
+          "name": "Мәтін"
         },
-        "lesson_plans/coursed/2020": {
-          "name": "Сабақтар жоспары"
+        "conditionals/csd/2022": {
+          "name": "Шарттар"
         },
-        "lesson_plans/coursec/2020": {
-          "name": "Сабақтар жоспары"
+        "functions/csd/2022": {
+          "name": "Функциялар"
         },
-        "lesson_plans/coursee/2020": {
-          "name": "Сабақтар жоспары"
+        "functions_1/csd/2022": {
+          "name": "Функциялар"
         },
-        "lesson_plans/coursea/2020": {
-          "name": "Сабақтар жоспары"
+        "functions_4/csd/2022": {
+          "name": "Функциялар"
         },
-        "lesson_plans/coursef/2020": {
-          "name": "Сабақтар жоспары"
+        "variables_1/csd/2022": {
+          "name": "Айнымалылар"
+        },
+        "variables_2/csd/2022": {
+          "name": "Айнымалылар"
+        },
+        "functions_2/csd/2022": {
+          "name": "Функциялар"
+        },
+        "functions_3/csd/2022": {
+          "name": "Функциялар"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Параметрлі Функциялар"
+        },
+        "functions_5/csd/2022": {
+          "name": "Функциялар"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Көңілді Карталар"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Қозғал, Қозғал"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Қозғал, Қозғал"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Қозғал, Қозғал"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Қозғал, Қозғал"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Ілмектерді үйрену"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Ілмектерді үйрену"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Ілмектерді үйрену"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Ілмектерді үйрену"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Екілік Білезіктер"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Екілік Білезіктер"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Екілік Білезіктер"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Екілік Білезіктер"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Екілік Білезіктер"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "internet/coursef/2022": {
+          "name": "Ғаламтор"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Ғаламтор"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Ғаламтор"
+        },
+        "pair_programming/express/2022": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "variables/express/2022": {
+          "name": "Айнымалылар"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }

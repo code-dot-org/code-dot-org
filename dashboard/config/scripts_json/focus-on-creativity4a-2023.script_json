@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-02 19:45:58 UTC",
+    "serialized_at": "2023-08-08 18:46:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1524,7 +1525,7 @@
       "key": "d0afb210-b303-4983-be9b-8e821c98c0af",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd6/2023] to each student, face down. Make sure students don't start the word search ahead of time."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time."
       },
       "seeding_key": {
         "activity_section.key": "d0afb210-b303-4983-be9b-8e821c98c0af",
@@ -1592,7 +1593,7 @@
       "key": "a56247e4-8e96-45fb-a016-ff070c9c51f0",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd6/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd/2023] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
@@ -1694,7 +1695,7 @@
       "key": "b55bb929-c860-4709-be6e-e7b09401e1d5",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r app_design_for_users/csd6/2023] activity guide to each student. \n\n",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r physical_designs/focus-on-creativity/2023] activity guide to each student. \n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1744,7 +1745,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Value Reasoning over Correctness:** Each user is designed with a particular template in mind, but students are encouraged to use their own reasoning and logic when recommending a template to users. It's okay for students to not make an \"obvious\" choice as long as they're thinking carefully about their reasoning and are able to justify their choices.\n\nThe animations and games are intentionally simple, to help set expectations about the animations and games that students will be creating over the course of the unit.\n"
+            "markdown": "**Value Reasoning over Correctness:** Each user is designed with a particular template in mind, but students are encouraged to use their own reasoning and logic when recommending a template to users. It's okay for students to not make an \"obvious\" choice as long as they're thinking carefully about their reasoning and are able to justify their choices.\n\nThe prototypes are intentionally simple, to help set expectations about the prototypes that students will be creating over the course of the unit.\n"
           }
         ]
       },
@@ -1775,7 +1776,7 @@
       "position": 7,
       "properties": {
         "description": "Now we've been asked to create a physical design for a client. We can create our own design, but it should meet the needs of our users.\n",
-        "name": "Designing an Animation or Game",
+        "name": "Designing a Physical Prototype",
         "remarks": true,
         "tips": [
           {
@@ -1793,7 +1794,7 @@
       "key": "8b9ea091-88df-490d-832a-1d1c814929be",
       "position": 8,
       "properties": {
-        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic physical design for, following the Problem-Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their designs.\n\n**Distribute:** Pass out copies of the [r problem_solving_and_design/csd6/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit.\n\n**Circulate:** Monitor students as they complete this activity, ensuring that students are creating designs that match the needs of the user they chose. Monitor student conversations as well to make sure both voices are being heard during discussions and decisions. Students will be working in pairs throughout the unit, so it can be good to intervene early to reinforce good collaboration habits.\n\n**(Optional) Share Out:** Depending on how much time is left in class, allow students to trade with other groups and share their designs. Encourage students to share with another group who picked the same user so they can see similarities and differences in their designs.\n\n",
+        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic physical design for, following the Problem-Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their designs.\n\n**Distribute:** Pass out copies of the [r problem_solving_and_design/csd/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit.\n\n**Circulate:** Monitor students as they complete this activity, ensuring that students are creating designs that match the needs of the user they chose. Monitor student conversations as well to make sure both voices are being heard during discussions and decisions. Students will be working in pairs throughout the unit, so it can be good to intervene early to reinforce good collaboration habits.\n\n**(Optional) Share Out:** Depending on how much time is left in class, allow students to trade with other groups and share their designs. Encourage students to share with another group who picked the same user so they can see similarities and differences in their designs.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -10899,6 +10900,18 @@
   ],
   "resources": [
     {
+      "name": "[Exemplar] Physical Designs",
+      "url": "https://docs.google.com/document/d/1COKnyGNlEBpB8giiVDPGl-ubK1OEUU3fxYjNIhzpQT4/edit",
+      "key": "_exemplar_physical_designs",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_physical_designs"
+      }
+    },
+    {
       "name": "(Warm Up) Word Search",
       "url": "https://docs.google.com/document/d/14hKTZSrP7tnghpJhTLYJNEPeb1CinUaa0KtzRPADji4/edit",
       "key": "_warm_up_word_search_2",
@@ -11943,7 +11956,7 @@
     },
     {
       "name": "The Counter Pattern",
-      "url": "https://youtu.be/sLIJNEIE0Rs",
+      "url": "https://www.youtube.com/watch?v=GiHbeLq1ZkM",
       "key": "the_counter_pattern_1",
       "properties": {
         "audience": "Student",
@@ -12260,6 +12273,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: Interactive Art",
         "resource.key": "student_rubric_-_interactive_art"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Physical Designs",
+        "resource.key": "_exemplar_physical_designs"
       }
     },
     {
@@ -14152,6 +14171,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

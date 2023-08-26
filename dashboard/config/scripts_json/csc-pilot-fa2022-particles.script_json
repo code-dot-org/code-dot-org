@@ -4,16 +4,27 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "9ef1fe1f-81cb-445e-8fce-7819be457cbc",
+          "notice": "Particles Pilot is being deprecated",
+          "details": "We are in the process of fully removing the Particles Pilot content and course from Code.org within the next 5-7 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Particles Pilot content will unfortunately not be addressed or fixed, as we work towards fully removing it. You can learn more about other course options here: ",
+          "link": "https://code.org/educate/csc",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "CS Connections Landing Page"
+        }
+      ],
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "csc-pilot-fa2022-particles",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csc-pilot-fa2022-particles",
-    "serialized_at": "2023-01-03 22:24:17 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2023-06-27 22:26:15 UTC",
+    "published_state": "sunsetting",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",

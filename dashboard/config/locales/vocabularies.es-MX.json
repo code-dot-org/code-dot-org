@@ -2,1218 +2,309 @@
   "es-MX": {
     "data": {
       "vocabularies": {
-        "code/dance-extras/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "event/dance-extras/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "program/dance-extras/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/minecraft/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/minecraft/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "event/minecraft/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "loop/minecraft/unversioned": {
-          "word": "Bucle",
-          "definition": "la acción de hacer algo una y otra vez."
-        },
-        "program/minecraft/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/hero/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "function/hero/unversioned": {
-          "word": "Función",
-          "definition": "código que puedes llamar fácilmente una y otra vez."
-        },
-        "program/hero/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/poem-art/2021": {
-          "word": "Código",
-          "definition": "(v) escribir instrucciones para un ordenador."
-        },
-        "event/poem-art/2021": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "line/poem-art/2021": {
-          "word": "Línea",
-          "definition": "(poesía) - la subdivisión de un poema dispuesta en una fila que termina en el margen derecho. "
-        },
-        "mood/poem-art/2021": {
-          "word": "Estado de ánimo",
-          "definition": "la expresión de un sentimiento, una atmósfera o una emoción en el arte o la escritura."
-        },
-        "program/poem-art/2021": {
-          "word": "Programa",
-          "definition": "Una serie de pasos que han sido codificados de manera que puedan ser ejecutados por una máquina."
-        },
-        "code/flappy/unversioned": {
-          "word": "programar",
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/flappy/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/hourofcode/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/frozen/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/frozen/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/iceage/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/iceage/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/artist/unversioned": {
-          "word": "Código",
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/artist/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/artist/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/gumball/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/gumball/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/dance/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "event/dance/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "program/dance/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/aquatic/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "condition/aquatic/unversioned": {
-          "word": "Condición",
-          "definition": "algo que un programa verifica para ver si es verdadero antes de permitir una acción."
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "Condicionales",
-          "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "loops/aquatic/unversioned": {
-          "word": "Bucles",
-          "definition": "la acción de hacer algo una y otra vez."
-        },
-        "program/aquatic/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "Cifrado César ",
-          "definition": "una técnica de encriptación que desplaza el alfabeto en un número determinado de caracteres"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "Cifrado",
-          "definition": "el término genérico para una técnica (o algoritmo) que realiza el cifrado"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "Romper la encriptación",
-          "definition": "Cuando se intenta descifrar un mensaje secreto sin conocer todos los detalles del cifrado, se está tratando de \"romper\" el cifrado. "
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "Desencriptación",
-          "definition": "un proceso que invierte el cifrado, tomando un mensaje secreto y reproduciendo el texto plano original"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "Cifrado",
-          "definition": "un proceso de codificación de los mensajes para mantenerlos en secreto, de modo que sólo las partes \"autorizadas\" puedan leerlo."
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "Cifrado de Sustitución Aleatoria",
-          "definition": "una técnica de cifrado que asigna cada letra del alfabeto a otras letras del alfabeto elegidas al azar."
-        },
-        "code/starwars/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/starwars/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/mc/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/mc/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/mc/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/playlab/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/playlab/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/starwarsblocks/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "Compresión sin pérdidas",
-          "definition": "un algoritmo de compresión de datos que permite reconstruir perfectamente los datos originales a partir de los datos comprimidos.  Se utiliza sobre todo para la compresión de texto (por ejemplo, la compresión .zip)"
-        },
-        "event/outbreak/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Modelos y Simulaciones",
-          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
-        },
-        "code/sports/unversioned": {
-          "word": "Código",
-          "definition": "(v) escribir código o escribir instrucciones para un ordenador."
-        },
-        "debugging/sports/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "event/sports/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "program/sports/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/infinity/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/infinity/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/basketball/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/basketball/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "event/basketball/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "program/basketball/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "code/dance-2019/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "Aprendizaje automático",
-          "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
-        },
-        "algorithm/coursed/2022": {
-          "word": "Algoritmo",
-          "definition": "una lista de pasos para terminar una tarea. "
-        },
-        "program/coursed/2022": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "bug/coursed/2022": {
-          "word": "Bug (error)",
-          "definition": "parte de un programa que no funciona correctamente."
-        },
-        "debugging/coursed/2022": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "loop/coursed/2022": {
-          "word": "Bucle",
-          "definition": "la acción de hacer algo una y otra vez."
-        },
-        "programming/coursed/2022": {
-          "word": "Programación",
-          "definition": "El arte de crear un programa"
-        },
-        "frustrated/coursed/2022": {
-          "word": "Frustración",
-          "definition": "Sentirse molesto o enojado porque algo no funciona como quieres."
-        },
-        "persistence/coursed/2022": {
-          "word": "Perseverancia",
-          "definition": "intentar una y otra vez, incluso cuando algo es muy difícil."
-        },
-        "event/coursed/2022": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "code/coursed/2022": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "repeat/coursed/2022": {
-          "word": "Repetir",
-          "definition": "Hacer algo otra vez."
-        },
-        "command/coursed/2022": {
-          "word": "Comando",
-          "definition": "Una instrucción para un computador. Muchos comandos juntos forman algoritmos y programas."
-        },
-        "conditionals/coursed/2022": {
-          "word": "Condicionales",
-          "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
-        },
-        "pseudocode/coursed/2022": {
-          "word": "seudocódigo",
-          "definition": "Descripción en lenguaje sencillo de los pasos de un algoritmo"
-        },
-        "condition/coursed/2022": {
-          "word": "Condición",
-          "definition": "algo que un programa verifica para ver si es verdadero antes de permitir una acción."
-        },
-        "while_loop/coursed/2022": {
-          "word": "Bucle mientras",
-          "definition": "Un bucle que se repite mientras se cumpla una condición."
-        },
-        "until/coursed/2022": {
-          "word": "Hasta",
-          "definition": "Un comando que establece realizar una acción sólo hasta que algo sea verdadero."
-        },
-        "sprite/coursef/2022": {
-          "word": "Sprite",
-          "definition": "Un gráfico en pantalla con ubicación, tamaño y apariencia."
-        },
-        "user/coursef/2022": {
-          "word": "Usuario",
-          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
-        },
-        "algorithm/coursef/2022": {
-          "word": "Algoritmo",
-          "definition": "Una lista de pasos para completar una tarea."
-        },
-        "behavior/coursef/2022": {
-          "word": "Comportamiento",
-          "definition": "Una acción en el Laboratorio Sprite que un sprite realiza continuamente hasta que se le dice que se detenga."
-        },
-        "program/coursef/2022": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "event/coursef/2022": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "variable/coursef/2022": {
-          "word": "Variable",
-          "definition": "Una etiqueta para una porción de información en un programa."
-        },
-        "prompt/coursef/2022": {
-          "word": "Mensaje",
-          "definition": "Un mensaje en la pantalla del computador que espera la entrada del usuario."
-        },
-        "input/coursef/2022": {
-          "word": "Entrada",
-          "definition": "La información que los computadores obtienen de los usuarios."
-        },
-        "models_and_simulations/coursef/2022": {
-          "word": "Modelos y Simulaciones",
-          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
-        },
-        "machine_learning/coursef/2022": {
-          "word": "Aprendizaje automático",
-          "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
-        },
-        "dns/coursef/2022": {
-          "word": "DNS",
-          "definition": "abreviación de Domain Name System (sistema de nombres de dominio). Este sistema traduce nombres de dominio como ejemplo.com a direcciones de IP, como 93.184.216.34."
-        },
-        "dsl_cable/coursef/2022": {
-          "word": "DSL/Cable",
-          "definition": "Un método para enviar información a través de un cable de teléfono o de televisión."
-        },
-        "fiber_optic_cable/coursef/2022": {
-          "word": "Cable de fibra óptica",
-          "definition": "Una conexión que usa la luz para transmitir información."
-        },
-        "internet/coursef/2022": {
-          "word": "Internet",
-          "definition": "Un conjunto de computadores y servidores conectados unos con otros."
-        },
-        "ip_address/coursef/2022": {
-          "word": "Dirección IP",
-          "definition": "Un número asignado a cada aparato y dispositivo conectado a Internet."
-        },
-        "packets/coursef/2022": {
-          "word": "Paquetes",
-          "definition": "Pequeños conjuntos de información que fueron cuidadosamente formados en base a porciones de información más grandes."
-        },
-        "servers/coursef/2022": {
-          "word": "Servidores",
-          "definition": "Computadores que existen con el único objetivo de proveer servicios a los demás."
-        },
-        "url/coursef/2022": {
-          "word": "URL",
-          "definition": "Una dirección fácil de recordar para referirse a una página web, como www.code.org."
-        },
-        "wi_fi/coursef/2022": {
-          "word": "Wi-Fi",
-          "definition": "Un método inalámbrico para enviar información a través de ondas de radio."
-        },
-        "define/coursef/2022": {
-          "word": "Definir",
-          "definition": "Averiguar los detalles de los problemas que se intentan resolver."
-        },
-        "prepare/coursef/2022": {
-          "word": "Preparar",
-          "definition": "Investigar, planificar y recolectar materiales para la actividad que realizarás."
-        },
-        "reflect/coursef/2022": {
-          "word": "Reflexionar",
-          "definition": "Pensar minuciosamente sobre algo, con el objetivo de mejorar el resultado."
-        },
-        "try/coursef/2022": {
-          "word": "Intentar",
-          "definition": "Probar cómo hacer algo."
-        },
-        "behavior/coursee/2022": {
-          "word": "Comportamiento",
-          "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
-        },
-        "sprite/coursee/2022": {
-          "word": "Sprite",
-          "definition": "Un gráfico en pantalla con ubicación, tamaño y apariencia."
-        },
-        "loop/coursee/2022": {
-          "word": "Bucle",
-          "definition": "la acción de hacer algo una y otra vez."
-        },
-        "repeat/coursee/2022": {
-          "word": "Repetir",
-          "definition": "Hacer algo otra vez."
-        },
-        "function/coursee/2022": {
-          "word": "Función",
-          "definition": "Un fragmento de código que puedes llamar una y otra vez."
-        },
-        "call_a_function/coursee/2022": {
-          "word": "Llamar a una Función",
-          "definition": "Utilizar el nombre de la función para indicar al ordenador que ejecute el código escrito en la función."
-        },
-        "declare_a_function/coursee/2022": {
-          "word": "Declarar una Función",
-          "definition": "Rellena una función con código y dale un nombre."
-        },
-        "condition/coursee/2022": {
-          "word": "Condición",
-          "definition": "Una sentencia que un programa comprueba para ver si es verdadera o falsa. Si es verdadera, se realiza una acción. En caso contrario, se ignora la acción."
-        },
-        "conditionals/coursee/2022": {
-          "word": "Condicionales",
-          "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
-        },
-        "while_loop/coursee/2022": {
-          "word": "Bucle mientras",
-          "definition": "Un bucle que se repite mientras se cumpla una condición."
-        },
-        "copyright/coursee/2022": {
-          "word": "Derechos de autor",
-          "definition": "el derecho legal a imprimir, publicar, realizar, filmar o grabar de forma exclusiva material literario, artístico o musical, y la capacidad de autorizar a otros a hacerlo también"
-        },
-        "define/coursee/2022": {
-          "word": "Definir",
-          "definition": "Averiguar los detalles de los problemas que se intentan resolver."
-        },
-        "prepare/coursee/2022": {
-          "word": "Preparar",
-          "definition": "Investigar, planificar y recolectar materiales para la actividad que realizarás."
-        },
-        "reflect/coursee/2022": {
-          "word": "Reflexionar",
-          "definition": "Pensar minuciosamente sobre algo, con el objetivo de mejorar el resultado."
-        },
-        "try/coursee/2022": {
-          "word": "Intentar",
-          "definition": "Probar cómo hacer algo."
-        },
-        "algorithm/courseb/2022": {
-          "word": "Algoritmo",
-          "definition": "una lista de pasos para terminar una tarea. "
-        },
-        "bug/courseb/2022": {
-          "word": "Bug (error)",
-          "definition": "parte de un programa que no funciona correctamente."
-        },
-        "debugging/courseb/2022": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "click/courseb/2022": {
-          "word": "Clic",
-          "definition": "Presionar el botón del mouse"
-        },
-        "double_click/courseb/2022": {
-          "word": "Doble clic",
-          "definition": "Presionar dos veces el botón del mouse, muy rápido"
-        },
-        "drag/courseb/2022": {
-          "word": "Arrastrar",
-          "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
-        },
-        "drop/courseb/2022": {
-          "word": "Caída",
-          "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
-        },
-        "program/courseb/2022": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "programming/courseb/2022": {
-          "word": "Programación",
-          "definition": "El arte de crear un programa"
-        },
-        "persistence/courseb/2022": {
-          "word": "Perseverancia",
-          "definition": "intentar una y otra vez, incluso cuando algo es muy difícil."
-        },
-        "loop/courseb/2022": {
-          "word": "Bucle",
-          "definition": "la acción de hacer algo una y otra vez."
-        },
-        "repeat/courseb/2022": {
-          "word": "Repetir",
-          "definition": "Hacer algo otra vez."
-        },
-        "event/courseb/2022": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "algorithm/express/2022": {
-          "word": "Algoritmo",
-          "definition": "una lista de pasos para terminar una tarea. "
-        },
-        "bug/express/2022": {
-          "word": "Bug (error)",
-          "definition": "parte de un programa que no funciona correctamente."
-        },
-        "debugging/express/2022": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "sequencing/express/2022": {
-          "word": "Secuencias",
-          "definition": "Poner los comandos en el orden correcto para que los computadores puedan leerlos."
-        },
-        "program/express/2022": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "programming/express/2022": {
-          "word": "Programación",
-          "definition": "El arte de crear un programa"
-        },
-        "behavior/express/2022": {
-          "word": "Comportamiento",
-          "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
-        },
-        "sprite/express/2022": {
-          "word": "Sprite",
-          "definition": "Un gráfico en pantalla con ubicación, tamaño y apariencia."
-        },
-        "event/express/2022": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "code/express/2022": {
-          "definition": "escribir código, o escribir instrucciones para un computador."
-        },
-        "loop/express/2022": {
-          "word": "Bucle",
-          "definition": "la acción de hacer algo una y otra vez."
-        },
-        "repeat/express/2022": {
-          "word": "Repetir",
-          "definition": "Hacer algo otra vez."
-        },
-        "command/express/2022": {
-          "word": "Comando",
-          "definition": "Una instrucción para un computador. Muchos comandos juntos forman algoritmos y programas."
-        },
-        "condition/express/2022": {
-          "word": "Condición",
-          "definition": "algo que un programa verifica para ver si es verdadero antes de permitir una acción."
-        },
-        "conditionals/express/2022": {
-          "word": "Condicionales",
-          "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
-        },
-        "while_loop/express/2022": {
-          "word": "Bucle mientras",
-          "definition": "Un bucle que se repite mientras se cumpla una condición."
-        },
-        "until/express/2022": {
-          "word": "Hasta",
-          "definition": "Un comando que establece realizar una acción sólo hasta que algo sea verdadero."
-        },
-        "function/express/2022": {
-          "word": "Función",
-          "definition": "código que puedes llamar fácilmente una y otra vez."
-        },
-        "prompt/express/2022": {
-          "word": "mensaje",
-          "definition": "Un mensaje en la pantalla del computador que espera la entrada del usuario."
-        },
-        "variable/express/2022": {
-          "word": "Variable",
-          "definition": "Una etiqueta para una porción de información en un programa."
-        },
-        "for_loop/express/2022": {
-          "word": "Bucle desde",
-          "definition": "Bucles que tienen un inicio, un fin y un incremento prestablecidos (intervalo de pasos)."
-        },
-        "define/express/2022": {
-          "word": "Definir",
-          "definition": "Averiguar los detalles de los problemas que se intentan resolver."
-        },
-        "prepare/express/2022": {
-          "word": "Preparar",
-          "definition": "Investigar, planificar y recolectar materiales para la actividad que realizarás."
-        },
-        "reflect/express/2022": {
-          "word": "Reflexionar",
-          "definition": "Pensar minuciosamente sobre algo, con el objetivo de mejorar el resultado."
-        },
-        "try/express/2022": {
-          "word": "Intentar",
-          "definition": "Probar cómo hacer algo."
-        },
-        "click/pre-express/2022": {
-          "word": "Clic",
-          "definition": "Presionar el botón del mouse"
-        },
-        "double_click/pre-express/2022": {
-          "word": "Doble clic",
-          "definition": "Presionar dos veces el botón del mouse, muy rápido"
-        },
-        "drag/pre-express/2022": {
-          "word": "Arrastrar",
-          "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
-        },
-        "drop/pre-express/2022": {
-          "word": "Caída",
-          "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
-        },
-        "algorithm/pre-express/2022": {
-          "word": "Algoritmo",
-          "definition": "una lista de pasos para terminar una tarea. "
-        },
-        "bug/pre-express/2022": {
-          "word": "Bug (error)",
-          "definition": "parte de un programa que no funciona correctamente."
-        },
-        "debugging/pre-express/2022": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/pre-express/2022": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "programming/pre-express/2022": {
-          "word": "Programación",
-          "definition": "El arte de crear un programa"
-        },
-        "persistence/pre-express/2022": {
-          "word": "Perseverancia",
-          "definition": "intentar una y otra vez, incluso cuando algo es muy difícil."
-        },
-        "loop/pre-express/2022": {
-          "word": "Bucle",
-          "definition": "la acción de hacer algo una y otra vez."
-        },
-        "repeat/pre-express/2022": {
-          "word": "Repetir",
-          "definition": "Hacer algo otra vez."
-        },
-        "event/pre-express/2022": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "algorithm/coursea/2022": {
-          "word": "Algoritmo",
-          "definition": "una lista de pasos para terminar una tarea. "
-        },
-        "debugging/coursea/2022": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/coursea/2022": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "click/coursea/2022": {
-          "word": "Clic",
-          "definition": "Presionar el botón del mouse"
-        },
-        "double_click/coursea/2022": {
-          "word": "Doble clic",
-          "definition": "Presionar dos veces el botón del mouse, muy rápido"
-        },
-        "drag/coursea/2022": {
-          "word": "Arrastrar",
-          "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
-        },
-        "drop/coursea/2022": {
-          "word": "Caída",
-          "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
-        },
-        "bug/coursea/2022": {
-          "word": "Bug (error)",
-          "definition": "parte de un programa que no funciona correctamente."
-        },
-        "programming/coursea/2022": {
-          "word": "Programación",
-          "definition": "El arte de crear un programa"
-        },
-        "loop/coursea/2022": {
-          "word": "Bucle",
-          "definition": "la acción de hacer algo una y otra vez."
-        },
-        "repeat/coursea/2022": {
-          "word": "Repetir",
-          "definition": "Hacer algo otra vez."
-        },
-        "event/coursea/2022": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "algorithm/coursec/2022": {
-          "word": "Algoritmo",
-          "definition": "una lista de pasos para terminar una tarea. "
-        },
-        "bug/coursec/2022": {
-          "word": "Bug (error)",
-          "definition": "parte de un programa que no funciona correctamente."
-        },
-        "debugging/coursec/2022": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/coursec/2022": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "sequencing/coursec/2022": {
-          "word": "Secuencias",
-          "definition": "Poner los comandos en el orden correcto para que los computadores puedan leerlos."
-        },
-        "persistence/coursec/2022": {
-          "word": "Perseverancia",
-          "definition": "No te rindas."
-        },
-        "programming/coursec/2022": {
-          "word": "Programación",
-          "definition": "El arte de crear un programa"
-        },
-        "angle/coursec/2022": {
-          "word": "Ángulo",
-          "definition": "Punto de encuentro de dos lados de una figura, medido en grados."
-        },
-        "loop/coursec/2022": {
-          "word": "Bucle",
-          "definition": "la acción de hacer algo una y otra vez."
-        },
-        "repeat/coursec/2022": {
-          "word": "Repetir",
-          "definition": "Hacer algo otra vez."
-        },
-        "event/coursec/2022": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "data/coursec/2022": {
-          "word": "Datos",
-          "definition": "Una recopilación de información"
-        },
-        "graph/coursec/2022": {
-          "word": "Gráfico",
-          "definition": "Una imagen o un diagrama que representa datos o valores de forma organizada."
-        },
-        "binary/coursec/2022": {
-          "word": "Binario",
-          "definition": "Una forma de representar información usando sólo dos opciones."
-        },
-        "decode/csd/2022": {
-          "word": "Decodificar",
-          "definition": "cambiar la forma en la que la información está representada para que una persona puede leerla"
-        },
-        "encode/csd/2022": {
-          "word": "Codificar",
-          "definition": "cambiar la forma en la que la información está representada para que una computadora pueda leerla"
-        },
-        "ascii/csd/2022": {
-          "word": "ASCII",
-          "definition": "un sistema popular para representar un texto en binario"
-        },
-        "binary_system/csd/2022": {
-          "word": "Sistema Binario",
-          "definition": "una forma de representar información utilizando solamente dos opciones"
-        },
-        "bit/csd/2022": {
-          "word": "Bit",
-          "definition": "una sola pieza de información binaria"
-        },
-        "pixel/csd/2022": {
-          "word": "Pixel",
-          "definition": "un cuadrado o punto pequeño que representa un solo punto de color en una imagen de gran tamaño."
-        },
-        "decrypt/csd/2022": {
-          "word": "Desencriptar",
-          "definition": "cambiar la información con el objetivo de revelar su significado"
-        },
-        "encrypt/csd/2022": {
-          "word": "Encriptar",
-          "definition": "cambiar la información con el objetivo de ocultar su significado"
-        },
-        "computer/csd/2022": {
+        "computer/csd/2021": {
           "word": "Computadora",
           "definition": "Una máquina que trabaja con información."
         },
-        "input/csd/2022": {
+        "input/csd/2021": {
           "word": "Entrada",
           "definition": "la información que las computadoras obtienen de los usuarios, dispositivos u otras computadoras"
         },
-        "output/csd/2022": {
+        "output/csd/2021": {
           "word": "Salida",
           "definition": "la información que las computadoras dan a los usuarios, a los dispositivos o a otras computadoras"
         },
-        "processing/csd/2022": {
+        "processing/csd/2021": {
           "word": "Procesamiento",
           "definition": "El proceso que las computadoras hacen para convertir la entrada en salida."
         },
-        "storage/csd/2022": {
+        "storage/csd/2021": {
           "word": "almacenamiento",
           "definition": "Guardar información para poder utilizarla en el futuro"
         },
-        "bug/csd/2022": {
-          "word": "Bug (error)",
-          "definition": "parte de un programa que no funciona correctamente."
-        },
-        "debugging/csd/2022": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/csd/2022": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "parameter/csd/2022": {
-          "word": "Parámetro",
-          "definition": "Información adicional introducida en un bloque para personalizar su funcionalidad"
-        },
-        "variable/csd/2022": {
-          "word": "Variable",
-          "definition": "Una etiqueta para una porción de información en un programa."
-        },
-        "dot_notation/csd/2022": {
-          "word": "Notación de puntos",
-          "definition": "La forma en la que las propiedades de los sprites se utilizan en el Game Lab. Conectando el sprite y sus propiedades mediante un punto."
-        },
-        "property/csd/2022": {
-          "word": "Propiedades",
-          "definition": "Una etiqueta para una característica de un sprite, como su ubicación y su apariencia"
-        },
-        "sprite/csd/2022": {
-          "word": "Sprite",
-          "definition": "Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y apariencia. "
-        },
-        "boolean_expression/csd/2022": {
-          "word": "Expresión Booleana",
-          "definition": "En programación, una expresión evalúa Verdadero o Falso. "
-        },
-        "condition/csd/2022": {
-          "word": "Condición",
-          "definition": "Algo que un programa debe revisar para comprobar si es verdadero antes de decidir una acción."
-        },
-        "conditionals/csd/2022": {
-          "word": "Condicionales",
-          "definition": "Sentencias que solo se ejecutan cuando ciertas condiciones son verdaderas."
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstracción",
-          "definition": "una representación simplificada de algo más complejo. Las abstracciones permiten ocultar los detalles para ayudarnos a gestionar la complejidad, enfocarnos en conceptos relevantes y para que podamos analizar problemas en un nivel más alto."
-        },
-        "function/csd/2022": {
-          "word": "Función",
-          "definition": "Un fragmento etiquetado de instrucciones de programación."
-        },
-        "html/csd/2022": {
+        "html/csd/2021": {
           "word": "HTML",
           "definition": "Lenguaje de Marcas de Hipertexto, un lenguaje usado para crear páginas web."
         },
-        "html_element/csd/2022": {
+        "html_element/csd/2021": {
           "word": "Elemento HTML",
           "definition": "Un extracto de un sitio web, marcado por una etiqueta de inicio y por lo general cerrado con una etiqueta de fin."
         },
-        "html_tag/csd/2022": {
+        "html_tag/csd/2021": {
           "word": "Etiqueta HTML",
           "definition": "Un conjunto de caracteres que indica el inicio y el fin de un elemento HTML y qué tipo de elemento es"
         },
-        "website_content/csd/2022": {
+        "website_content/csd/2021": {
           "word": "Contenido de sitio web",
           "definition": "El texto y las imágenes en un sitio web"
         },
-        "website_structure/csd/2022": {
+        "website_structure/csd/2021": {
           "word": "Estructura del sitio web",
           "definition": "La forma en la que se organiza el contenido de un sitio web"
         },
-        "heading/csd/2022": {
+        "heading/csd/2021": {
           "word": "Encabezado",
           "definition": "Un título o resumen de un documento o de una sección de un documento."
         },
-        "digital_footprint/csd/2022": {
-          "word": "Huella Digital",
+        "digital_footprint/csd/2021": {
+          "word": "Huella digital",
           "definition": "La información recopilada sobre una persona en varios sitios web de Internet."
         },
-        "css/csd/2022": {
+        "css/csd/2021": {
           "word": "CSS",
           "definition": "Cascading Style Sheets (en español hojas de estilo en cascada): Un lenguaje usado para describir el estilo de los elementos HTML"
         },
-        "css_selector/csd/2022": {
+        "css_selector/csd/2021": {
           "word": "Selector CSS",
           "definition": "La parte de un set de reglas de CSS que indica a qué elementos del HTML deben aplicarse un estilo."
         },
-        "copyright/csd/2022": {
+        "copyright/csd/2021": {
           "word": "Derechos de autor",
-          "definition": "el derecho legal a imprimir, publicar, realizar, filmar o grabar de forma exclusiva material literario, artístico o musical, y la capacidad de autorizar a otros a hacerlo también"
+          "definition": "el derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
         },
-        "relevant/csd/2022": {
+        "relevant/csd/2021": {
           "word": "Relevante",
           "definition": "relacionado con un tema"
         },
-        "search_engine/csd/2022": {
-          "word": "Motor de búsqueda",
-          "definition": "Un programa que busca elementos en la Red Informática Mundial (World wide web)."
-        },
-        "trustworthy/csd/2022": {
+        "trustworthy/csd/2021": {
           "word": "Confiable",
           "definition": "fiable, honesto, y verdadero "
         },
-        "css_class/csd/2022": {
+        "search_engine/csd/2021": {
+          "word": "Motor de búsqueda",
+          "definition": "Un programa que busca elementos en la Red Informática Mundial (World wide web)."
+        },
+        "css_class/csd/2021": {
           "word": "Clase CSS",
           "definition": "Un identificador que permite que múltiples elementos en un documento HTML tengan el mismo estilo."
         },
-        "empathy/csd/2022": {
-          "word": "Empatía",
-          "definition": "En el área del diseño, se refiere a poner atención a los sentimientos y necesidades del usuario cuando se está diseñando un producto."
+        "bug/csd/2021": {
+          "word": "Bug (error)",
+          "definition": "parte de un programa que no funciona correctamente."
         },
-        "user/csd/2022": {
-          "word": "Usuario",
-          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        "debugging/csd/2021": {
+          "word": "Depurar",
+          "definition": "Encontrar y reparar los problemas de un programa o algoritmo."
         },
-        "usability/csd/2022": {
-          "word": "Usabilidad",
-          "definition": "Facilidad, eficacia y satisfacción en el uso de un objeto o dispositivo hecho por el hombre (incluido el software)."
-        },
-        "prototype/csd/2022": {
-          "word": "Prototipo",
-          "definition": "primer modelo de un producto que permite probar conjeturas antes de desarrollar una versión final."
-        },
-        "user_interface/csd/2022": {
-          "word": "Pantalla de Usuario",
-          "definition": "elementos visuales de un programa que sirven para comunicarse con la aplicación o controlarla. En español, se usa comúnmente la abreviación en inglés UI."
-        },
-        "feature/csd/2022": {
-          "word": "Característica",
-          "definition": "Parte de un programa que añade funcionalidad para el usuario"
-        },
-        "innovation/csd/2022": {
-          "word": "Innovación",
-          "definition": "Una idea, dispositivo, producto, etc. nuevo o mejorado, o su desarrollo"
-        },
-        "circuit/csd/2022": {
-          "word": "Circuito",
-          "definition": "Un dispositivo que proporciona el trayecto para una corriente eléctrica, usualmente modificando esa corriente. En las computadoras, los circuitos permiten operaciones lógicas y matemáticas utilizando electricidad."
-        },
-        "machine_learning/csd/2022": {
-          "word": "Aprendizaje automático",
-          "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
-        },
-        "features/csd/2022": {
-          "word": "Características",
-          "definition": "Entradas que un modelo utiliza para tomar decisiones"
-        },
-        "label/csd/2022": {
-          "word": "Etiqueta",
-          "definition": "Salida que se intenta decidir o predecir a través de un modelo"
-        },
-        "model/csd/2022": {
-          "word": "Modelo",
-          "definition": "Programa computacional diseñado para tomar decisiones"
-        },
-        "supervised_learning/csd/2022": {
-          "word": "Aprendizaje Supervisado",
-          "definition": "Proceso en el que un humano entrena un modelo para que aprenda mediante ejemplos"
-        },
-        "training/csd/2022": {
-          "word": "Entrenamiento",
-          "definition": "Presentación de ejemplos a un modelo para que éste aprenda"
-        },
-        "unsupervised_learning/csd/2022": {
-          "word": "Aprendizaje No Supervisado",
-          "definition": "Detección de patrones en datos que no tienen etiquetas"
-        },
-        "categorical_data/csd/2022": {
-          "word": "Datos categóricos",
-          "definition": "Datos que pueden separarse en grupos"
-        },
-        "classification/csd/2022": {
-          "word": "Clasificación",
-          "definition": "Predicción de una categoría basada en otras características"
-        },
-        "bias/csd/2022": {
-          "word": "Sesgo",
-          "definition": "Cuando una decisión favorece algunas cosas y quita prioridad o excluye otras"
-        },
-        "numerical_data/csd/2022": {
-          "word": "Datos Numéricos",
-          "definition": "Datos que se pueden contar o medir"
-        },
-        "ethics/csd/2022": {
-          "word": "Ética",
-          "definition": "Normas para un buen comportamiento."
-        },
-        "code/poem-art/unversioned": {
-          "word": "Código",
-          "definition": "(v) escribir instrucciones para un ordenador."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "program/poem-art/unversioned": {
+        "program/csd/2021": {
           "word": "Programa",
-          "definition": "Una serie de pasos que han sido codificados de manera que puedan ser ejecutados por una máquina."
+          "definition": "Un algoritmo codificado que puede ser ejecutado por una máquina."
         },
-        "mood/poem-art/unversioned": {
-          "word": "Estado de ánimo",
-          "definition": "la expresión de un sentimiento, una atmósfera o una emoción en el arte o la escritura."
+        "parameter/csd/2021": {
+          "word": "Parámetro",
+          "definition": "Un parámetro es una pieza adicional de información que puedes pasar a una función para personalizarla para una necesidad especial."
         },
-        "line/poem-art/unversioned": {
-          "word": "Línea",
-          "definition": "(poesía) - la subdivisión de un poema dispuesta en una fila que termina en el margen derecho. "
-        },
-        "sprite/coursef/2021": {
-          "word": "Sprite",
-          "definition": "Un gráfico en pantalla con ubicación, tamaño y apariencia."
-        },
-        "user/coursef/2021": {
-          "word": "Usuario",
-          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
-        },
-        "algorithm/coursef/2021": {
-          "word": "Algoritmo",
-          "definition": "Una lista de pasos para completar una tarea."
-        },
-        "behavior/coursef/2021": {
-          "word": "Comportamiento",
-          "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
-        },
-        "program/coursef/2021": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "event/coursef/2021": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "variable/coursef/2021": {
+        "variable/csd/2021": {
           "word": "Variable",
           "definition": "Una etiqueta para una porción de información en un programa."
         },
-        "prompt/coursef/2021": {
-          "word": "Mensaje",
-          "definition": "Un mensaje en la pantalla del computador que espera la entrada del usuario."
+        "property/csd/2021": {
+          "word": "Propiedades",
+          "definition": "Una etiqueta para una característica de un sprite, como su ubicación y su apariencia"
         },
-        "input/coursef/2021": {
-          "word": "Entrada",
-          "definition": "La información que los computadores obtienen de los usuarios."
+        "sprite/csd/2021": {
+          "word": "Sprite",
+          "definition": "Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y apariencia. "
         },
-        "loop/coursef/2021": {
-          "word": "Bucle",
-          "definition": "la acción de hacer algo una y otra vez."
+        "dot_notation/csd/2021": {
+          "word": "Notación de puntos",
+          "definition": "La forma en la que las propiedades de los sprites se utilizan en el Game Lab. Conectando el sprite y sus propiedades mediante un punto."
         },
-        "repeat/coursef/2021": {
-          "word": "Repetir",
-          "definition": "Hacer algo otra vez."
+        "condition/csd/2021": {
+          "word": "Condición",
+          "definition": "Algo que un programa debe revisar para comprobar si es verdadero antes de decidir una acción."
         },
-        "for_loop/coursef/2021": {
+        "conditionals/csd/2021": {
+          "word": "Condicionales",
+          "definition": "Sentencias que solo se ejecutan cuando ciertas condiciones son verdaderas."
+        },
+        "boolean_expression/csd/2021": {
+          "word": "Expresión Booleana",
+          "definition": "En programación, una expresión evalúa Verdadero o Falso. "
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstracción",
+          "definition": "una representación simplificada de algo más complejo. Las abstracciones permiten ocultar los detalles para ayudarnos a gestionar la complejidad, enfocarnos en conceptos relevantes y para que podamos analizar problemas en un nivel más alto."
+        },
+        "function/csd/2021": {
+          "word": "Función",
+          "definition": "Un fragmento etiquetado de instrucciones de programación."
+        },
+        "empathy/csd/2021": {
+          "word": "Empatía",
+          "definition": "En el área del diseño, se refiere a poner atención a los sentimientos y necesidades del usuario cuando se está diseñando un producto."
+        },
+        "user/csd/2021": {
+          "word": "Usuario",
+          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        },
+        "usability/csd/2021": {
+          "word": "Usabilidad",
+          "definition": "Facilidad, eficacia y satisfacción en el uso de un objeto o dispositivo hecho por el hombre (incluido el software)."
+        },
+        "prototype/csd/2021": {
+          "word": "Prototipo",
+          "definition": "primer modelo de un producto que permite probar conjeturas antes de desarrollar una versión final."
+        },
+        "user_interface/csd/2021": {
+          "word": "Interfaces de Usuario",
+          "definition": "elementos visuales de un programa que sirven para comunicarse con la aplicación o controlarla. En español, se usa comúnmente la abreviación en inglés UI."
+        },
+        "feature/csd/2021": {
+          "word": "Característica",
+          "definition": "Parte de un programa que añade funcionalidad para el usuario"
+        },
+        "decode/csd/2021": {
+          "word": "Decodificar",
+          "definition": "cambiar la forma en la que la información está representada para que una persona puede leerla"
+        },
+        "encode/csd/2021": {
+          "word": "Codificar",
+          "definition": "cambiar la forma en la que la información está representada para que una computadora pueda leerla"
+        },
+        "binary_system/csd/2021": {
+          "word": "Sistema Binario",
+          "definition": "una forma de representar información utilizando solamente dos opciones"
+        },
+        "ascii/csd/2021": {
+          "word": "ASCII",
+          "definition": "un sistema popular para representar un texto en binario"
+        },
+        "bit/csd/2021": {
+          "word": "Bit",
+          "definition": "una sola pieza de información binaria"
+        },
+        "pixel/csd/2021": {
+          "word": "Pixel",
+          "definition": "un cuadrado o punto pequeño que representa un solo punto de color en una imagen de gran tamaño."
+        },
+        "decrypt/csd/2021": {
+          "word": "Desencriptar",
+          "definition": "cambiar la información con el objetivo de revelar su significado"
+        },
+        "encrypt/csd/2021": {
+          "word": "Encriptar",
+          "definition": "cambiar la información con el objetivo de ocultar su significado"
+        },
+        "innovation/csd/2021": {
+          "word": "Innovación",
+          "definition": "Una nueva o mejorada idea de aparato, producto, etc, o el desarrollo de este"
+        },
+        "analog/csd/2021": {
+          "word": "Análogo",
+          "definition": "Una señal que cambia continuamente y que no está restringida a un conjunto de valores limitados. Por ejemplo, la forma ondulada de las palabras habladas son una señal análoga."
+        },
+        "digital/csd/2021": {
+          "word": "Digital",
+          "definition": "Datos o señales representadas por un número limitado de valores. Señales análogas (que pueden tener valores limitados) deben convertirse a digital para ser computadas."
+        },
+        "array/csd/2021": {
+          "word": "Arreglo",
+          "definition": "Una estructura de datos en JavaScript que se utiliza para representar una lista."
+        },
+        "for_loop/csd/2021": {
           "word": "Bucle desde",
           "definition": "Bucles que tienen un inicio, un fin y un incremento prestablecidos (intervalo de pasos)."
         },
-        "models_and_simulations/coursef/2021": {
-          "word": "Modelos y Simulaciones",
-          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
+        "circuit/csd/2021": {
+          "word": "Circuito",
+          "definition": "Un dispositivo que proporciona el trayecto para una corriente eléctrica, usualmente modificando esa corriente. En las computadoras, los circuitos permiten operaciones lógicas y matemáticas utilizando electricidad."
         },
-        "machine_learning/coursef/2021": {
+        "machine_learning/csd/2021": {
           "word": "Aprendizaje automático",
           "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
         },
-        "dns/coursef/2021": {
-          "word": "DNS",
-          "definition": "abreviación de Domain Name System (sistema de nombres de dominio). Este sistema traduce nombres de dominio como ejemplo.com a direcciones de IP, como 93.184.216.34."
+        "features/csd/2021": {
+          "word": "Características",
+          "definition": "Entradas que un modelo utiliza para tomar decisiones"
         },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/Cable",
-          "definition": "Un método para enviar información a través de un cable de teléfono o de televisión."
+        "label/csd/2021": {
+          "word": "Etiqueta",
+          "definition": "Salida que se intenta decidir o predecir a través de un modelo"
         },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Cable de fibra óptica",
-          "definition": "Una conexión que usa la luz para transmitir información."
+        "model/csd/2021": {
+          "word": "Modelo",
+          "definition": "Programa computacional diseñado para tomar decisiones"
         },
-        "internet/coursef/2021": {
-          "word": "Internet",
-          "definition": "Un conjunto de computadores y servidores conectados unos con otros."
+        "supervised_learning/csd/2021": {
+          "word": "Aprendizaje Supervisado",
+          "definition": "Proceso en el que un humano entrena un modelo para que aprenda mediante ejemplos"
         },
-        "ip_address/coursef/2021": {
-          "word": "Dirección IP",
-          "definition": "Un número asignado a cada aparato y dispositivo conectado a Internet."
+        "training/csd/2021": {
+          "word": "Entrenamiento",
+          "definition": "Presentación de ejemplos a un modelo para que éste aprenda"
         },
-        "packets/coursef/2021": {
-          "word": "Paquetes",
-          "definition": "Pequeños conjuntos de información que fueron cuidadosamente formados en base a porciones de información más grandes."
+        "unsupervised_learning/csd/2021": {
+          "word": "Aprendizaje No Supervisado",
+          "definition": "Detección de patrones en datos que no tienen etiquetas"
         },
-        "servers/coursef/2021": {
-          "word": "Servidores",
-          "definition": "Computadores que existen con el único objetivo de proveer servicios a los demás."
+        "categorical_data/csd/2021": {
+          "word": "Datos categóricos",
+          "definition": "Datos que pueden separarse en grupos"
         },
-        "url/coursef/2021": {
-          "word": "URL",
-          "definition": "Una dirección fácil de recordar para referirse a una página web, como www.code.org."
+        "classification/csd/2021": {
+          "word": "Clasificación",
+          "definition": "Predicción de una categoría basada en otras características"
         },
-        "wi_fi/coursef/2021": {
-          "word": "Wi-Fi",
-          "definition": "Un método inalámbrico para enviar información a través de ondas de radio."
+        "bias/csd/2021": {
+          "word": "Sesgo",
+          "definition": "Cuando una decisión favorece algunas cosas y quita prioridad o excluye otras"
         },
-        "define/coursef/2021": {
-          "word": "Definir",
-          "definition": "Averiguar los detalles de los problemas que se intentan resolver."
+        "numerical_data/csd/2021": {
+          "word": "Datos Numéricos",
+          "definition": "Datos que se pueden contar o medir"
         },
-        "prepare/coursef/2021": {
-          "word": "Preparar",
-          "definition": "Investigar, planificar y recolectar materiales para la actividad que realizarás."
+        "ethics/csd/2021": {
+          "word": "Ética",
+          "definition": "Normas para un buen comportamiento."
         },
-        "reflect/coursef/2021": {
-          "word": "Reflexionar",
-          "definition": "Pensar minuciosamente sobre algo, con el objetivo de mejorar el resultado."
+        "algorithm/coursea/2021": {
+          "word": "Algoritmo",
+          "definition": "una lista de pasos para terminar una tarea. "
         },
-        "try/coursef/2021": {
-          "word": "Intentar",
-          "definition": "Probar cómo hacer algo."
+        "debugging/coursea/2021": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/coursea/2021": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "click/coursea/2021": {
+          "word": "Clic",
+          "definition": "Presionar el botón del mouse"
+        },
+        "double_click/coursea/2021": {
+          "word": "Doble clic",
+          "definition": "Presionar dos veces el botón del mouse, muy rápido"
+        },
+        "drag/coursea/2021": {
+          "word": "Arrastrar",
+          "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
+        },
+        "drop/coursea/2021": {
+          "word": "Caída",
+          "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
+        },
+        "bug/coursea/2021": {
+          "word": "Bug (error)",
+          "definition": "parte de un programa que no funciona correctamente."
+        },
+        "programming/coursea/2021": {
+          "word": "Programación",
+          "definition": "El arte de crear un programa"
+        },
+        "loop/coursea/2021": {
+          "word": "Bucle",
+          "definition": "la acción de hacer algo una y otra vez."
+        },
+        "repeat/coursea/2021": {
+          "word": "Repetir",
+          "definition": "Hacer algo otra vez."
+        },
+        "event/coursea/2021": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
         },
         "algorithm/courseb/2021": {
           "word": "Algoritmo",
@@ -1264,54 +355,6 @@
           "definition": "Hacer algo otra vez."
         },
         "event/courseb/2021": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "algorithm/coursea/2021": {
-          "word": "Algoritmo",
-          "definition": "una lista de pasos para terminar una tarea. "
-        },
-        "debugging/coursea/2021": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/coursea/2021": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "click/coursea/2021": {
-          "word": "Clic",
-          "definition": "Presionar el botón del mouse"
-        },
-        "double_click/coursea/2021": {
-          "word": "Doble clic",
-          "definition": "Presionar dos veces el botón del mouse, muy rápido"
-        },
-        "drag/coursea/2021": {
-          "word": "Arrastrar",
-          "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
-        },
-        "drop/coursea/2021": {
-          "word": "Caída",
-          "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
-        },
-        "bug/coursea/2021": {
-          "word": "Bug (error)",
-          "definition": "parte de un programa que no funciona correctamente."
-        },
-        "programming/coursea/2021": {
-          "word": "Programación",
-          "definition": "El arte de crear un programa"
-        },
-        "loop/coursea/2021": {
-          "word": "Bucle",
-          "definition": "la acción de hacer algo una y otra vez."
-        },
-        "repeat/coursea/2021": {
-          "word": "Repetir",
-          "definition": "Hacer algo otra vez."
-        },
-        "event/coursea/2021": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
         },
@@ -1421,6 +464,174 @@
         "until/coursed/2021": {
           "word": "Hasta",
           "definition": "Un comando que establece realizar una acción sólo hasta que algo sea verdadero."
+        },
+        "algorithm/coursee/2021": {
+          "word": "algoritmo",
+          "definition": "Una lista de pasos para finalizar una tarea"
+        },
+        "behavior/coursee/2021": {
+          "word": "Comportamiento",
+          "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
+        },
+        "sprite/coursee/2021": {
+          "word": "Sprite",
+          "definition": "Un gráfico en pantalla con ubicación, tamaño y apariencia."
+        },
+        "event/coursee/2021": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "copyright/coursee/2021": {
+          "word": "Derechos de autor",
+          "definition": "el derecho legal a imprimir, publicar, realizar, filmar o grabar de forma exclusiva material literario, artístico o musical, y la capacidad de autorizar a otros a hacerlo también"
+        },
+        "loop/coursee/2021": {
+          "word": "Bucle",
+          "definition": "la acción de hacer algo una y otra vez."
+        },
+        "repeat/coursee/2021": {
+          "word": "Repetir",
+          "definition": "Hacer algo otra vez."
+        },
+        "function/coursee/2021": {
+          "word": "Función",
+          "definition": "código que puedes llamar fácilmente una y otra vez."
+        },
+        "condition/coursee/2021": {
+          "word": "Condición",
+          "definition": "algo que un programa verifica para ver si es verdadero antes de permitir una acción."
+        },
+        "conditionals/coursee/2021": {
+          "word": "Condicionales",
+          "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
+        },
+        "while_loop/coursee/2021": {
+          "word": "Bucle mientras",
+          "definition": "Un bucle que se repite mientras se cumpla una condición."
+        },
+        "define/coursee/2021": {
+          "word": "Definir",
+          "definition": "Averiguar los detalles de los problemas que se intentan resolver."
+        },
+        "prepare/coursee/2021": {
+          "word": "Preparar",
+          "definition": "Investigar, planificar y recolectar materiales para la actividad que realizarás."
+        },
+        "reflect/coursee/2021": {
+          "word": "Reflexionar",
+          "definition": "Pensar minuciosamente sobre algo, con el objetivo de mejorar el resultado."
+        },
+        "try/coursee/2021": {
+          "word": "Intentar",
+          "definition": "Probar cómo hacer algo."
+        },
+        "sprite/coursef/2021": {
+          "word": "Sprite",
+          "definition": "Un gráfico en pantalla con ubicación, tamaño y apariencia."
+        },
+        "user/coursef/2021": {
+          "word": "Usuario",
+          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algoritmo",
+          "definition": "Una lista de pasos para completar una tarea."
+        },
+        "behavior/coursef/2021": {
+          "word": "Comportamiento",
+          "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
+        },
+        "program/coursef/2021": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "event/coursef/2021": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "variable/coursef/2021": {
+          "word": "Variable",
+          "definition": "Una etiqueta para una porción de información en un programa."
+        },
+        "prompt/coursef/2021": {
+          "word": "Mensaje",
+          "definition": "Un mensaje en la pantalla del computador que espera la entrada del usuario."
+        },
+        "input/coursef/2021": {
+          "word": "Entrada",
+          "definition": "La información que los computadores obtienen de los usuarios."
+        },
+        "loop/coursef/2021": {
+          "word": "Bucle",
+          "definition": "la acción de hacer algo una y otra vez."
+        },
+        "repeat/coursef/2021": {
+          "word": "Repetir",
+          "definition": "Hacer algo otra vez."
+        },
+        "for_loop/coursef/2021": {
+          "word": "Bucle desde",
+          "definition": "Bucles que tienen un inicio, un fin y un incremento prestablecidos (intervalo de pasos)."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modelos y Simulaciones",
+          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Aprendizaje automático",
+          "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
+        },
+        "dns/coursef/2021": {
+          "word": "DNS",
+          "definition": "abreviación de Domain Name System (sistema de nombres de dominio). Este sistema traduce nombres de dominio como ejemplo.com a direcciones de IP, como 93.184.216.34."
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/Cable",
+          "definition": "Un método para enviar información a través de un cable de teléfono o de televisión."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Cable de fibra óptica",
+          "definition": "Una conexión que usa la luz para transmitir información."
+        },
+        "internet/coursef/2021": {
+          "word": "Internet",
+          "definition": "Un conjunto de computadores y servidores conectados unos con otros."
+        },
+        "ip_address/coursef/2021": {
+          "word": "Dirección IP",
+          "definition": "Un número asignado a cada aparato y dispositivo conectado a Internet."
+        },
+        "packets/coursef/2021": {
+          "word": "Paquetes",
+          "definition": "Pequeños conjuntos de información que fueron cuidadosamente formados en base a porciones de información más grandes."
+        },
+        "servers/coursef/2021": {
+          "word": "Servidores",
+          "definition": "Computadores que existen con el único objetivo de proveer servicios a los demás."
+        },
+        "url/coursef/2021": {
+          "word": "URL",
+          "definition": "Una dirección fácil de recordar para referirse a una página web, como www.code.org."
+        },
+        "wi_fi/coursef/2021": {
+          "word": "Wi-Fi",
+          "definition": "Un método inalámbrico para enviar información a través de ondas de radio."
+        },
+        "define/coursef/2021": {
+          "word": "Definir",
+          "definition": "Averiguar los detalles de los problemas que se intentan resolver."
+        },
+        "prepare/coursef/2021": {
+          "word": "Preparar",
+          "definition": "Investigar, planificar y recolectar materiales para la actividad que realizarás."
+        },
+        "reflect/coursef/2021": {
+          "word": "Reflexionar",
+          "definition": "Pensar minuciosamente sobre algo, con el objetivo de mejorar el resultado."
+        },
+        "try/coursef/2021": {
+          "word": "Intentar",
+          "definition": "Probar cómo hacer algo."
         },
         "algorithm/express/2021": {
           "word": "Algoritmo",
@@ -1573,321 +784,1110 @@
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
         },
-        "algorithm/coursee/2021": {
-          "word": "algoritmo",
-          "definition": "Una lista de pasos para finalizar una tarea"
-        },
-        "behavior/coursee/2021": {
-          "word": "Comportamiento",
-          "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
-        },
-        "sprite/coursee/2021": {
-          "word": "Sprite",
-          "definition": "Un gráfico en pantalla con ubicación, tamaño y apariencia."
-        },
-        "event/coursee/2021": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "copyright/coursee/2021": {
-          "word": "Derechos de autor",
-          "definition": "el derecho legal a imprimir, publicar, realizar, filmar o grabar de forma exclusiva material literario, artístico o musical, y la capacidad de autorizar a otros a hacerlo también"
-        },
-        "loop/coursee/2021": {
-          "word": "Bucle",
-          "definition": "la acción de hacer algo una y otra vez."
-        },
-        "repeat/coursee/2021": {
-          "word": "Repetir",
-          "definition": "Hacer algo otra vez."
-        },
-        "function/coursee/2021": {
-          "word": "Función",
-          "definition": "código que puedes llamar fácilmente una y otra vez."
-        },
-        "condition/coursee/2021": {
-          "word": "Condición",
-          "definition": "algo que un programa verifica para ver si es verdadero antes de permitir una acción."
-        },
-        "conditionals/coursee/2021": {
-          "word": "Condicionales",
-          "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
-        },
-        "while_loop/coursee/2021": {
-          "word": "Bucle mientras",
-          "definition": "Un bucle que se repite mientras se cumpla una condición."
-        },
-        "define/coursee/2021": {
-          "word": "Definir",
-          "definition": "Averiguar los detalles de los problemas que se intentan resolver."
-        },
-        "prepare/coursee/2021": {
-          "word": "Preparar",
-          "definition": "Investigar, planificar y recolectar materiales para la actividad que realizarás."
-        },
-        "reflect/coursee/2021": {
-          "word": "Reflexionar",
-          "definition": "Pensar minuciosamente sobre algo, con el objetivo de mejorar el resultado."
-        },
-        "try/coursee/2021": {
-          "word": "Intentar",
-          "definition": "Probar cómo hacer algo."
-        },
-        "machine_learning/csd/2021": {
-          "word": "Aprendizaje automático",
-          "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
-        },
-        "features/csd/2021": {
-          "word": "Características",
-          "definition": "Entradas que un modelo utiliza para tomar decisiones"
-        },
-        "label/csd/2021": {
-          "word": "Etiqueta",
-          "definition": "Salida que se intenta decidir o predecir a través de un modelo"
-        },
-        "model/csd/2021": {
-          "word": "Modelo",
-          "definition": "Programa computacional diseñado para tomar decisiones"
-        },
-        "supervised_learning/csd/2021": {
-          "word": "Aprendizaje Supervisado",
-          "definition": "Proceso en el que un humano entrena un modelo para que aprenda mediante ejemplos"
-        },
-        "training/csd/2021": {
-          "word": "Entrenamiento",
-          "definition": "Presentación de ejemplos a un modelo para que éste aprenda"
-        },
-        "unsupervised_learning/csd/2021": {
-          "word": "Aprendizaje No Supervisado",
-          "definition": "Detección de patrones en datos que no tienen etiquetas"
-        },
-        "categorical_data/csd/2021": {
-          "word": "Datos categóricos",
-          "definition": "Datos que pueden separarse en grupos"
-        },
-        "classification/csd/2021": {
-          "word": "Clasificación",
-          "definition": "Predicción de una categoría basada en otras características"
-        },
-        "bias/csd/2021": {
-          "word": "Sesgo",
-          "definition": "Cuando una decisión favorece algunas cosas y quita prioridad o excluye otras"
-        },
-        "numerical_data/csd/2021": {
-          "word": "Datos Numéricos",
-          "definition": "Datos que se pueden contar o medir"
-        },
-        "ethics/csd/2021": {
-          "word": "Ética",
-          "definition": "Normas para un buen comportamiento."
-        },
-        "empathy/csd/2021": {
-          "word": "Empatía",
-          "definition": "En el área del diseño, se refiere a poner atención a los sentimientos y necesidades del usuario cuando se está diseñando un producto."
-        },
-        "user/csd/2021": {
-          "word": "Usuario",
-          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
-        },
-        "usability/csd/2021": {
-          "word": "Usabilidad",
-          "definition": "Facilidad, eficacia y satisfacción en el uso de un objeto o dispositivo hecho por el hombre (incluido el software)."
-        },
-        "prototype/csd/2021": {
-          "word": "Prototipo",
-          "definition": "primer modelo de un producto que permite probar conjeturas antes de desarrollar una versión final."
-        },
-        "user_interface/csd/2021": {
-          "word": "Interfaces de Usuario",
-          "definition": "elementos visuales de un programa que sirven para comunicarse con la aplicación o controlarla. En español, se usa comúnmente la abreviación en inglés UI."
-        },
-        "bug/csd/2021": {
-          "word": "Bug",
-          "definition": "Una parte de un programa que no funciona correctamente."
-        },
-        "feature/csd/2021": {
-          "word": "Característica",
-          "definition": "Parte de un programa que añade funcionalidad para el usuario"
-        },
-        "innovation/csd/2021": {
-          "word": "Innovación",
-          "definition": "Una nueva o mejorada idea de aparato, producto, etc, o el desarrollo de este"
-        },
-        "analog/csd/2021": {
-          "word": "Análogo",
-          "definition": "Una señal que cambia continuamente y que no está restringida a un conjunto de valores limitados. Por ejemplo, la forma ondulada de las palabras habladas son una señal análoga."
-        },
-        "digital/csd/2021": {
-          "word": "Digital",
-          "definition": "Datos o señales representadas por un número limitado de valores. Señales análogas (que pueden tener valores limitados) deben convertirse a digital para ser computadas."
-        },
-        "array/csd/2021": {
-          "word": "Arreglo",
-          "definition": "Una estructura de datos en JavaScript que se utiliza para representar una lista."
-        },
-        "for_loop/csd/2021": {
-          "word": "Bucle desde",
-          "definition": "Bucles que tienen un inicio, un fin y un incremento prestablecidos (intervalo de pasos)."
-        },
-        "parameter/csd/2021": {
-          "word": "Parámetro",
-          "definition": "Un parámetro es una pieza adicional de información que puedes pasar a una función para personalizarla para una necesidad especial."
-        },
-        "circuit/csd/2021": {
-          "word": "Circuito",
-          "definition": "Un dispositivo que proporciona el trayecto para una corriente eléctrica, usualmente modificando esa corriente. En las computadoras, los circuitos permiten operaciones lógicas y matemáticas utilizando electricidad."
-        },
-        "decode/csd/2021": {
-          "word": "Decodificar",
-          "definition": "cambiar la forma en la que la información está representada para que una persona puede leerla"
-        },
-        "encode/csd/2021": {
-          "word": "Codificar",
-          "definition": "cambiar la forma en la que la información está representada para que una computadora pueda leerla"
-        },
-        "binary_system/csd/2021": {
-          "word": "Sistema Binario",
-          "definition": "una forma de representar información utilizando solamente dos opciones"
-        },
-        "ascii/csd/2021": {
-          "word": "ASCII",
-          "definition": "un sistema popular para representar un texto en binario"
-        },
-        "bit/csd/2021": {
-          "word": "Bit",
-          "definition": "una sola pieza de información binaria"
-        },
-        "pixel/csd/2021": {
-          "word": "Pixel",
-          "definition": "un cuadrado o punto pequeño que representa un solo punto de color en una imagen de gran tamaño."
-        },
-        "decrypt/csd/2021": {
-          "word": "Desencriptar",
-          "definition": "cambiar la información con el objetivo de revelar su significado"
-        },
-        "encrypt/csd/2021": {
-          "word": "Encriptar",
-          "definition": "cambiar la información con el objetivo de ocultar su significado"
-        },
-        "debugging/csd/2021": {
-          "word": "Depurar",
-          "definition": "Encontrar y reparar los problemas de un programa o algoritmo."
-        },
-        "program/csd/2021": {
-          "word": "Programa",
-          "definition": "Un algoritmo codificado que puede ser ejecutado por una máquina."
-        },
-        "variable/csd/2021": {
-          "word": "Variable",
-          "definition": "Una etiqueta para una porción de información en un programa."
-        },
-        "property/csd/2021": {
-          "word": "Propiedades",
-          "definition": "Una etiqueta para una característica de un sprite, como su ubicación y su apariencia"
-        },
-        "sprite/csd/2021": {
-          "word": "Sprite",
-          "definition": "Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y apariencia. "
-        },
-        "dot_notation/csd/2021": {
-          "word": "Notación de puntos",
-          "definition": "La forma en la que las propiedades de los sprites se utilizan en el Game Lab. Conectando el sprite y sus propiedades mediante un punto."
-        },
-        "condition/csd/2021": {
-          "word": "Condición",
-          "definition": "Algo que un programa debe revisar para comprobar si es verdadero antes de decidir una acción."
-        },
-        "conditionals/csd/2021": {
-          "word": "Condicionales",
-          "definition": "Sentencias que solo se ejecutan cuando ciertas condiciones son verdaderas."
-        },
-        "boolean_expression/csd/2021": {
-          "word": "Expresión Booleana",
-          "definition": "En programación, una expresión evalúa Verdadero o Falso. "
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstracción",
-          "definition": "una representación simplificada de algo más complejo. Las abstracciones permiten ocultar los detalles para ayudarnos a gestionar la complejidad, enfocarnos en conceptos relevantes y para que podamos analizar problemas en un nivel más alto."
-        },
-        "function/csd/2021": {
-          "word": "Función",
-          "definition": "Un fragmento etiquetado de instrucciones de programación."
-        },
-        "computer/csd/2021": {
+        "computer/csd/2022": {
           "word": "Computadora",
           "definition": "Una máquina que trabaja con información."
         },
-        "input/csd/2021": {
+        "input/csd/2022": {
           "word": "Entrada",
           "definition": "la información que las computadoras obtienen de los usuarios, dispositivos u otras computadoras"
         },
-        "output/csd/2021": {
+        "output/csd/2022": {
           "word": "Salida",
           "definition": "la información que las computadoras dan a los usuarios, a los dispositivos o a otras computadoras"
         },
-        "processing/csd/2021": {
+        "processing/csd/2022": {
           "word": "Procesamiento",
           "definition": "El proceso que las computadoras hacen para convertir la entrada en salida."
         },
-        "storage/csd/2021": {
+        "storage/csd/2022": {
           "word": "almacenamiento",
           "definition": "Guardar información para poder utilizarla en el futuro"
         },
-        "html/csd/2021": {
+        "html/csd/2022": {
           "word": "HTML",
           "definition": "Lenguaje de Marcas de Hipertexto, un lenguaje usado para crear páginas web."
         },
-        "html_element/csd/2021": {
+        "html_element/csd/2022": {
           "word": "Elemento HTML",
           "definition": "Un extracto de un sitio web, marcado por una etiqueta de inicio y por lo general cerrado con una etiqueta de fin."
         },
-        "html_tag/csd/2021": {
+        "html_tag/csd/2022": {
           "word": "Etiqueta HTML",
           "definition": "Un conjunto de caracteres que indica el inicio y el fin de un elemento HTML y qué tipo de elemento es"
         },
-        "website_content/csd/2021": {
+        "website_content/csd/2022": {
           "word": "Contenido de sitio web",
           "definition": "El texto y las imágenes en un sitio web"
         },
-        "website_structure/csd/2021": {
+        "website_structure/csd/2022": {
           "word": "Estructura del sitio web",
           "definition": "La forma en la que se organiza el contenido de un sitio web"
         },
-        "heading/csd/2021": {
+        "heading/csd/2022": {
           "word": "Encabezado",
           "definition": "Un título o resumen de un documento o de una sección de un documento."
         },
-        "digital_footprint/csd/2021": {
-          "word": "Huella digital",
+        "digital_footprint/csd/2022": {
+          "word": "Huella Digital",
           "definition": "La información recopilada sobre una persona en varios sitios web de Internet."
         },
-        "css/csd/2021": {
+        "css/csd/2022": {
           "word": "CSS",
           "definition": "Cascading Style Sheets (en español hojas de estilo en cascada): Un lenguaje usado para describir el estilo de los elementos HTML"
         },
-        "css_selector/csd/2021": {
+        "css_selector/csd/2022": {
           "word": "Selector CSS",
           "definition": "La parte de un set de reglas de CSS que indica a qué elementos del HTML deben aplicarse un estilo."
         },
-        "copyright/csd/2021": {
+        "copyright/csd/2022": {
           "word": "Derechos de autor",
-          "definition": "el derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
+          "definition": "el derecho legal a imprimir, publicar, realizar, filmar o grabar de forma exclusiva material literario, artístico o musical, y la capacidad de autorizar a otros a hacerlo también"
         },
-        "relevant/csd/2021": {
+        "relevant/csd/2022": {
           "word": "Relevante",
           "definition": "relacionado con un tema"
         },
-        "trustworthy/csd/2021": {
-          "word": "Confiable",
-          "definition": "fiable, honesto, y verdadero "
-        },
-        "search_engine/csd/2021": {
+        "search_engine/csd/2022": {
           "word": "Motor de búsqueda",
           "definition": "Un programa que busca elementos en la Red Informática Mundial (World wide web)."
         },
-        "css_class/csd/2021": {
+        "trustworthy/csd/2022": {
+          "word": "Confiable",
+          "definition": "fiable, honesto, y verdadero "
+        },
+        "css_class/csd/2022": {
           "word": "Clase CSS",
           "definition": "Un identificador que permite que múltiples elementos en un documento HTML tengan el mismo estilo."
+        },
+        "bug/csd/2022": {
+          "word": "Bug (error)",
+          "definition": "parte de un programa que no funciona correctamente."
+        },
+        "debugging/csd/2022": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/csd/2022": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "parameter/csd/2022": {
+          "word": "Parámetro",
+          "definition": "Información adicional introducida en un bloque para personalizar su funcionalidad"
+        },
+        "variable/csd/2022": {
+          "word": "Variable",
+          "definition": "Una etiqueta para una porción de información en un programa."
+        },
+        "dot_notation/csd/2022": {
+          "word": "Notación de puntos",
+          "definition": "La forma en la que las propiedades de los sprites se utilizan en el Game Lab. Conectando el sprite y sus propiedades mediante un punto."
+        },
+        "property/csd/2022": {
+          "word": "Propiedades",
+          "definition": "Una etiqueta para una característica de un sprite, como su ubicación y su apariencia"
+        },
+        "sprite/csd/2022": {
+          "word": "Sprite",
+          "definition": "Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y apariencia. "
+        },
+        "boolean_expression/csd/2022": {
+          "word": "Expresión Booleana",
+          "definition": "En programación, una expresión evalúa Verdadero o Falso. "
+        },
+        "condition/csd/2022": {
+          "word": "Condición",
+          "definition": "Algo que un programa debe revisar para comprobar si es verdadero antes de decidir una acción."
+        },
+        "conditionals/csd/2022": {
+          "word": "Condicionales",
+          "definition": "Sentencias que solo se ejecutan cuando ciertas condiciones son verdaderas."
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstracción",
+          "definition": "una representación simplificada de algo más complejo. Las abstracciones permiten ocultar los detalles para ayudarnos a gestionar la complejidad, enfocarnos en conceptos relevantes y para que podamos analizar problemas en un nivel más alto."
+        },
+        "function/csd/2022": {
+          "word": "Función",
+          "definition": "Un fragmento etiquetado de instrucciones de programación."
+        },
+        "empathy/csd/2022": {
+          "word": "Empatía",
+          "definition": "En el área del diseño, se refiere a poner atención a los sentimientos y necesidades del usuario cuando se está diseñando un producto."
+        },
+        "user/csd/2022": {
+          "word": "Usuario",
+          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        },
+        "usability/csd/2022": {
+          "word": "Usabilidad",
+          "definition": "Facilidad, eficacia y satisfacción en el uso de un objeto o dispositivo hecho por el hombre (incluido el software)."
+        },
+        "prototype/csd/2022": {
+          "word": "Prototipo",
+          "definition": "primer modelo de un producto que permite probar conjeturas antes de desarrollar una versión final."
+        },
+        "user_interface/csd/2022": {
+          "word": "Pantalla de Usuario",
+          "definition": "elementos visuales de un programa que sirven para comunicarse con la aplicación o controlarla. En español, se usa comúnmente la abreviación en inglés UI."
+        },
+        "feature/csd/2022": {
+          "word": "Característica",
+          "definition": "Parte de un programa que añade funcionalidad para el usuario"
+        },
+        "decode/csd/2022": {
+          "word": "Decodificar",
+          "definition": "cambiar la forma en la que la información está representada para que una persona puede leerla"
+        },
+        "encode/csd/2022": {
+          "word": "Codificar",
+          "definition": "cambiar la forma en la que la información está representada para que una computadora pueda leerla"
+        },
+        "ascii/csd/2022": {
+          "word": "ASCII",
+          "definition": "un sistema popular para representar un texto en binario"
+        },
+        "binary_system/csd/2022": {
+          "word": "Sistema Binario",
+          "definition": "una forma de representar información utilizando solamente dos opciones"
+        },
+        "bit/csd/2022": {
+          "word": "Bit",
+          "definition": "una sola pieza de información binaria"
+        },
+        "pixel/csd/2022": {
+          "word": "Pixel",
+          "definition": "un cuadrado o punto pequeño que representa un solo punto de color en una imagen de gran tamaño."
+        },
+        "decrypt/csd/2022": {
+          "word": "Desencriptar",
+          "definition": "cambiar la información con el objetivo de revelar su significado"
+        },
+        "encrypt/csd/2022": {
+          "word": "Encriptar",
+          "definition": "cambiar la información con el objetivo de ocultar su significado"
+        },
+        "innovation/csd/2022": {
+          "word": "Innovación",
+          "definition": "Una idea, dispositivo, producto, etc. nuevo o mejorado, o su desarrollo"
+        },
+        "circuit/csd/2022": {
+          "word": "Circuito",
+          "definition": "Un dispositivo que proporciona el trayecto para una corriente eléctrica, usualmente modificando esa corriente. En las computadoras, los circuitos permiten operaciones lógicas y matemáticas utilizando electricidad."
+        },
+        "machine_learning/csd/2022": {
+          "word": "Aprendizaje automático",
+          "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
+        },
+        "features/csd/2022": {
+          "word": "Características",
+          "definition": "Entradas que un modelo utiliza para tomar decisiones"
+        },
+        "label/csd/2022": {
+          "word": "Etiqueta",
+          "definition": "Salida que se intenta decidir o predecir a través de un modelo"
+        },
+        "model/csd/2022": {
+          "word": "Modelo",
+          "definition": "Programa computacional diseñado para tomar decisiones"
+        },
+        "supervised_learning/csd/2022": {
+          "word": "Aprendizaje Supervisado",
+          "definition": "Proceso en el que un humano entrena un modelo para que aprenda mediante ejemplos"
+        },
+        "training/csd/2022": {
+          "word": "Entrenamiento",
+          "definition": "Presentación de ejemplos a un modelo para que éste aprenda"
+        },
+        "unsupervised_learning/csd/2022": {
+          "word": "Aprendizaje No Supervisado",
+          "definition": "Detección de patrones en datos que no tienen etiquetas"
+        },
+        "categorical_data/csd/2022": {
+          "word": "Datos categóricos",
+          "definition": "Datos que pueden separarse en grupos"
+        },
+        "classification/csd/2022": {
+          "word": "Clasificación",
+          "definition": "Predicción de una categoría basada en otras características"
+        },
+        "bias/csd/2022": {
+          "word": "Sesgo",
+          "definition": "Cuando una decisión favorece algunas cosas y quita prioridad o excluye otras"
+        },
+        "numerical_data/csd/2022": {
+          "word": "Datos Numéricos",
+          "definition": "Datos que se pueden contar o medir"
+        },
+        "ethics/csd/2022": {
+          "word": "Ética",
+          "definition": "Normas para un buen comportamiento."
+        },
+        "algorithm/coursea/2022": {
+          "word": "Algoritmo",
+          "definition": "una lista de pasos para terminar una tarea. "
+        },
+        "debugging/coursea/2022": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/coursea/2022": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "click/coursea/2022": {
+          "word": "Clic",
+          "definition": "Presionar el botón del mouse"
+        },
+        "double_click/coursea/2022": {
+          "word": "Doble clic",
+          "definition": "Presionar dos veces el botón del mouse, muy rápido"
+        },
+        "drag/coursea/2022": {
+          "word": "Arrastrar",
+          "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
+        },
+        "drop/coursea/2022": {
+          "word": "Caída",
+          "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
+        },
+        "bug/coursea/2022": {
+          "word": "Bug (error)",
+          "definition": "parte de un programa que no funciona correctamente."
+        },
+        "programming/coursea/2022": {
+          "word": "Programación",
+          "definition": "El arte de crear un programa"
+        },
+        "loop/coursea/2022": {
+          "word": "Bucle",
+          "definition": "la acción de hacer algo una y otra vez."
+        },
+        "repeat/coursea/2022": {
+          "word": "Repetir",
+          "definition": "Hacer algo otra vez."
+        },
+        "event/coursea/2022": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "algorithm/courseb/2022": {
+          "word": "Algoritmo",
+          "definition": "una lista de pasos para terminar una tarea. "
+        },
+        "bug/courseb/2022": {
+          "word": "Bug (error)",
+          "definition": "parte de un programa que no funciona correctamente."
+        },
+        "debugging/courseb/2022": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "click/courseb/2022": {
+          "word": "Clic",
+          "definition": "Presionar el botón del mouse"
+        },
+        "double_click/courseb/2022": {
+          "word": "Doble clic",
+          "definition": "Presionar dos veces el botón del mouse, muy rápido"
+        },
+        "drag/courseb/2022": {
+          "word": "Arrastrar",
+          "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
+        },
+        "drop/courseb/2022": {
+          "word": "Caída",
+          "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
+        },
+        "program/courseb/2022": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "programming/courseb/2022": {
+          "word": "Programación",
+          "definition": "El arte de crear un programa"
+        },
+        "persistence/courseb/2022": {
+          "word": "Perseverancia",
+          "definition": "intentar una y otra vez, incluso cuando algo es muy difícil."
+        },
+        "loop/courseb/2022": {
+          "word": "Bucle",
+          "definition": "la acción de hacer algo una y otra vez."
+        },
+        "repeat/courseb/2022": {
+          "word": "Repetir",
+          "definition": "Hacer algo otra vez."
+        },
+        "event/courseb/2022": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "algorithm/coursec/2022": {
+          "word": "Algoritmo",
+          "definition": "una lista de pasos para terminar una tarea. "
+        },
+        "bug/coursec/2022": {
+          "word": "Bug (error)",
+          "definition": "parte de un programa que no funciona correctamente."
+        },
+        "debugging/coursec/2022": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/coursec/2022": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "sequencing/coursec/2022": {
+          "word": "Secuencias",
+          "definition": "Poner los comandos en el orden correcto para que los computadores puedan leerlos."
+        },
+        "persistence/coursec/2022": {
+          "word": "Perseverancia",
+          "definition": "No te rindas."
+        },
+        "programming/coursec/2022": {
+          "word": "Programación",
+          "definition": "El arte de crear un programa"
+        },
+        "angle/coursec/2022": {
+          "word": "Ángulo",
+          "definition": "Punto de encuentro de dos lados de una figura, medido en grados."
+        },
+        "loop/coursec/2022": {
+          "word": "Bucle",
+          "definition": "la acción de hacer algo una y otra vez."
+        },
+        "repeat/coursec/2022": {
+          "word": "Repetir",
+          "definition": "Hacer algo otra vez."
+        },
+        "event/coursec/2022": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "data/coursec/2022": {
+          "word": "Datos",
+          "definition": "Una recopilación de información"
+        },
+        "graph/coursec/2022": {
+          "word": "Gráfico",
+          "definition": "Una imagen o un diagrama que representa datos o valores de forma organizada."
+        },
+        "binary/coursec/2022": {
+          "word": "Binario",
+          "definition": "Una forma de representar información usando sólo dos opciones."
+        },
+        "algorithm/coursed/2022": {
+          "word": "Algoritmo",
+          "definition": "una lista de pasos para terminar una tarea. "
+        },
+        "program/coursed/2022": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "bug/coursed/2022": {
+          "word": "Bug (error)",
+          "definition": "parte de un programa que no funciona correctamente."
+        },
+        "debugging/coursed/2022": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "loop/coursed/2022": {
+          "word": "Bucle",
+          "definition": "la acción de hacer algo una y otra vez."
+        },
+        "programming/coursed/2022": {
+          "word": "Programación",
+          "definition": "El arte de crear un programa"
+        },
+        "frustrated/coursed/2022": {
+          "word": "Frustración",
+          "definition": "Sentirse molesto o enojado porque algo no funciona como quieres."
+        },
+        "persistence/coursed/2022": {
+          "word": "Perseverancia",
+          "definition": "intentar una y otra vez, incluso cuando algo es muy difícil."
+        },
+        "event/coursed/2022": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "code/coursed/2022": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "repeat/coursed/2022": {
+          "word": "Repetir",
+          "definition": "Hacer algo otra vez."
+        },
+        "command/coursed/2022": {
+          "word": "Comando",
+          "definition": "Una instrucción para un computador. Muchos comandos juntos forman algoritmos y programas."
+        },
+        "conditionals/coursed/2022": {
+          "word": "Condicionales",
+          "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
+        },
+        "pseudocode/coursed/2022": {
+          "word": "seudocódigo",
+          "definition": "Descripción en lenguaje sencillo de los pasos de un algoritmo"
+        },
+        "condition/coursed/2022": {
+          "word": "Condición",
+          "definition": "algo que un programa verifica para ver si es verdadero antes de permitir una acción."
+        },
+        "while_loop/coursed/2022": {
+          "word": "Bucle mientras",
+          "definition": "Un bucle que se repite mientras se cumpla una condición."
+        },
+        "until/coursed/2022": {
+          "word": "Hasta",
+          "definition": "Un comando que establece realizar una acción sólo hasta que algo sea verdadero."
+        },
+        "behavior/coursee/2022": {
+          "word": "Comportamiento",
+          "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
+        },
+        "sprite/coursee/2022": {
+          "word": "Sprite",
+          "definition": "Un gráfico en pantalla con ubicación, tamaño y apariencia."
+        },
+        "loop/coursee/2022": {
+          "word": "Bucle",
+          "definition": "la acción de hacer algo una y otra vez."
+        },
+        "repeat/coursee/2022": {
+          "word": "Repetir",
+          "definition": "Hacer algo otra vez."
+        },
+        "function/coursee/2022": {
+          "word": "Función",
+          "definition": "Un fragmento de código que puedes llamar una y otra vez."
+        },
+        "call_a_function/coursee/2022": {
+          "word": "Llamar a una Función",
+          "definition": "Utilizar el nombre de la función para indicar al ordenador que ejecute el código escrito en la función."
+        },
+        "declare_a_function/coursee/2022": {
+          "word": "Declarar una Función",
+          "definition": "Rellena una función con código y dale un nombre."
+        },
+        "condition/coursee/2022": {
+          "word": "Condición",
+          "definition": "Una sentencia que un programa comprueba para ver si es verdadera o falsa. Si es verdadera, se realiza una acción. En caso contrario, se ignora la acción."
+        },
+        "conditionals/coursee/2022": {
+          "word": "Condicionales",
+          "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
+        },
+        "while_loop/coursee/2022": {
+          "word": "Bucle mientras",
+          "definition": "Un bucle que se repite mientras se cumpla una condición."
+        },
+        "copyright/coursee/2022": {
+          "word": "Derechos de autor",
+          "definition": "el derecho legal a imprimir, publicar, realizar, filmar o grabar de forma exclusiva material literario, artístico o musical, y la capacidad de autorizar a otros a hacerlo también"
+        },
+        "define/coursee/2022": {
+          "word": "Definir",
+          "definition": "Averiguar los detalles de los problemas que se intentan resolver."
+        },
+        "prepare/coursee/2022": {
+          "word": "Preparar",
+          "definition": "Investigar, planificar y recolectar materiales para la actividad que realizarás."
+        },
+        "reflect/coursee/2022": {
+          "word": "Reflexionar",
+          "definition": "Pensar minuciosamente sobre algo, con el objetivo de mejorar el resultado."
+        },
+        "try/coursee/2022": {
+          "word": "Intentar",
+          "definition": "Probar cómo hacer algo."
+        },
+        "sprite/coursef/2022": {
+          "word": "Sprite",
+          "definition": "Un gráfico en pantalla con ubicación, tamaño y apariencia."
+        },
+        "user/coursef/2022": {
+          "word": "Usuario",
+          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        },
+        "algorithm/coursef/2022": {
+          "word": "Algoritmo",
+          "definition": "Una lista de pasos para completar una tarea."
+        },
+        "behavior/coursef/2022": {
+          "word": "Comportamiento",
+          "definition": "Una acción en el Laboratorio Sprite que un sprite realiza continuamente hasta que se le dice que se detenga."
+        },
+        "program/coursef/2022": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "event/coursef/2022": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "variable/coursef/2022": {
+          "word": "Variable",
+          "definition": "Una etiqueta para una porción de información en un programa."
+        },
+        "prompt/coursef/2022": {
+          "word": "Mensaje",
+          "definition": "Un mensaje en la pantalla del computador que espera la entrada del usuario."
+        },
+        "input/coursef/2022": {
+          "word": "Entrada",
+          "definition": "La información que los computadores obtienen de los usuarios."
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "Modelos y Simulaciones",
+          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Aprendizaje automático",
+          "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
+        },
+        "dns/coursef/2022": {
+          "word": "DNS",
+          "definition": "abreviación de Domain Name System (sistema de nombres de dominio). Este sistema traduce nombres de dominio como ejemplo.com a direcciones de IP, como 93.184.216.34."
+        },
+        "dsl_cable/coursef/2022": {
+          "word": "DSL/Cable",
+          "definition": "Un método para enviar información a través de un cable de teléfono o de televisión."
+        },
+        "fiber_optic_cable/coursef/2022": {
+          "word": "Cable de fibra óptica",
+          "definition": "Una conexión que usa la luz para transmitir información."
+        },
+        "internet/coursef/2022": {
+          "word": "Internet",
+          "definition": "Un conjunto de computadores y servidores conectados unos con otros."
+        },
+        "ip_address/coursef/2022": {
+          "word": "Dirección IP",
+          "definition": "Un número asignado a cada aparato y dispositivo conectado a Internet."
+        },
+        "packets/coursef/2022": {
+          "word": "Paquetes",
+          "definition": "Pequeños conjuntos de información que fueron cuidadosamente formados en base a porciones de información más grandes."
+        },
+        "servers/coursef/2022": {
+          "word": "Servidores",
+          "definition": "Computadores que existen con el único objetivo de proveer servicios a los demás."
+        },
+        "url/coursef/2022": {
+          "word": "URL",
+          "definition": "Una dirección fácil de recordar para referirse a una página web, como www.code.org."
+        },
+        "wi_fi/coursef/2022": {
+          "word": "Wi-Fi",
+          "definition": "Un método inalámbrico para enviar información a través de ondas de radio."
+        },
+        "define/coursef/2022": {
+          "word": "Definir",
+          "definition": "Averiguar los detalles de los problemas que se intentan resolver."
+        },
+        "prepare/coursef/2022": {
+          "word": "Preparar",
+          "definition": "Investigar, planificar y recolectar materiales para la actividad que realizarás."
+        },
+        "reflect/coursef/2022": {
+          "word": "Reflexionar",
+          "definition": "Pensar minuciosamente sobre algo, con el objetivo de mejorar el resultado."
+        },
+        "try/coursef/2022": {
+          "word": "Intentar",
+          "definition": "Probar cómo hacer algo."
+        },
+        "algorithm/express/2022": {
+          "word": "Algoritmo",
+          "definition": "una lista de pasos para terminar una tarea. "
+        },
+        "bug/express/2022": {
+          "word": "Bug (error)",
+          "definition": "parte de un programa que no funciona correctamente."
+        },
+        "debugging/express/2022": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "sequencing/express/2022": {
+          "word": "Secuencias",
+          "definition": "Poner los comandos en el orden correcto para que los computadores puedan leerlos."
+        },
+        "program/express/2022": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "programming/express/2022": {
+          "word": "Programación",
+          "definition": "El arte de crear un programa"
+        },
+        "behavior/express/2022": {
+          "word": "Comportamiento",
+          "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
+        },
+        "sprite/express/2022": {
+          "word": "Sprite",
+          "definition": "Un gráfico en pantalla con ubicación, tamaño y apariencia."
+        },
+        "event/express/2022": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "code/express/2022": {
+          "definition": "escribir código, o escribir instrucciones para un computador."
+        },
+        "loop/express/2022": {
+          "word": "Bucle",
+          "definition": "la acción de hacer algo una y otra vez."
+        },
+        "repeat/express/2022": {
+          "word": "Repetir",
+          "definition": "Hacer algo otra vez."
+        },
+        "command/express/2022": {
+          "word": "Comando",
+          "definition": "Una instrucción para un computador. Muchos comandos juntos forman algoritmos y programas."
+        },
+        "condition/express/2022": {
+          "word": "Condición",
+          "definition": "algo que un programa verifica para ver si es verdadero antes de permitir una acción."
+        },
+        "conditionals/express/2022": {
+          "word": "Condicionales",
+          "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
+        },
+        "while_loop/express/2022": {
+          "word": "Bucle mientras",
+          "definition": "Un bucle que se repite mientras se cumpla una condición."
+        },
+        "until/express/2022": {
+          "word": "Hasta",
+          "definition": "Un comando que establece realizar una acción sólo hasta que algo sea verdadero."
+        },
+        "function/express/2022": {
+          "word": "Función",
+          "definition": "código que puedes llamar fácilmente una y otra vez."
+        },
+        "prompt/express/2022": {
+          "word": "mensaje",
+          "definition": "Un mensaje en la pantalla del computador que espera la entrada del usuario."
+        },
+        "variable/express/2022": {
+          "word": "Variable",
+          "definition": "Una etiqueta para una porción de información en un programa."
+        },
+        "for_loop/express/2022": {
+          "word": "Bucle desde",
+          "definition": "Bucles que tienen un inicio, un fin y un incremento prestablecidos (intervalo de pasos)."
+        },
+        "define/express/2022": {
+          "word": "Definir",
+          "definition": "Averiguar los detalles de los problemas que se intentan resolver."
+        },
+        "prepare/express/2022": {
+          "word": "Preparar",
+          "definition": "Investigar, planificar y recolectar materiales para la actividad que realizarás."
+        },
+        "reflect/express/2022": {
+          "word": "Reflexionar",
+          "definition": "Pensar minuciosamente sobre algo, con el objetivo de mejorar el resultado."
+        },
+        "try/express/2022": {
+          "word": "Intentar",
+          "definition": "Probar cómo hacer algo."
+        },
+        "click/pre-express/2022": {
+          "word": "Clic",
+          "definition": "Presionar el botón del mouse"
+        },
+        "double_click/pre-express/2022": {
+          "word": "Doble clic",
+          "definition": "Presionar dos veces el botón del mouse, muy rápido"
+        },
+        "drag/pre-express/2022": {
+          "word": "Arrastrar",
+          "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
+        },
+        "drop/pre-express/2022": {
+          "word": "Caída",
+          "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
+        },
+        "algorithm/pre-express/2022": {
+          "word": "Algoritmo",
+          "definition": "una lista de pasos para terminar una tarea. "
+        },
+        "bug/pre-express/2022": {
+          "word": "Bug (error)",
+          "definition": "parte de un programa que no funciona correctamente."
+        },
+        "debugging/pre-express/2022": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/pre-express/2022": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "programming/pre-express/2022": {
+          "word": "Programación",
+          "definition": "El arte de crear un programa"
+        },
+        "persistence/pre-express/2022": {
+          "word": "Perseverancia",
+          "definition": "intentar una y otra vez, incluso cuando algo es muy difícil."
+        },
+        "loop/pre-express/2022": {
+          "word": "Bucle",
+          "definition": "la acción de hacer algo una y otra vez."
+        },
+        "repeat/pre-express/2022": {
+          "word": "Repetir",
+          "definition": "Hacer algo otra vez."
+        },
+        "event/pre-express/2022": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Condición",
+          "definition": "algo que un programa verifica para ver si es verdadero antes de permitir una acción."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Condicionales",
+          "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Bucles",
+          "definition": "la acción de hacer algo una y otra vez."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/artist/unversioned": {
+          "word": "Código",
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/artist/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/artist/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/basketball/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "event/basketball/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "program/basketball/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/dance-extras/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/dance/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "event/dance/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "program/dance/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/flappy/unversioned": {
+          "word": "programar",
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/flappy/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/frozen/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/frozen/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/gumball/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/gumball/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/hero/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/hero/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "function/hero/unversioned": {
+          "word": "Función",
+          "definition": "código que puedes llamar fácilmente una y otra vez."
+        },
+        "program/hero/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Cifrado César ",
+          "definition": "una técnica de encriptación que desplaza el alfabeto en un número determinado de caracteres"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Cifrado",
+          "definition": "el término genérico para una técnica (o algoritmo) que realiza el cifrado"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Romper la encriptación",
+          "definition": "Cuando se intenta descifrar un mensaje secreto sin conocer todos los detalles del cifrado, se está tratando de \"romper\" el cifrado. "
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Desencriptación",
+          "definition": "un proceso que invierte el cifrado, tomando un mensaje secreto y reproduciendo el texto plano original"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Cifrado",
+          "definition": "un proceso de codificación de los mensajes para mantenerlos en secreto, de modo que sólo las partes \"autorizadas\" puedan leerlo."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Cifrado de Sustitución Aleatoria",
+          "definition": "una técnica de cifrado que asigna cada letra del alfabeto a otras letras del alfabeto elegidas al azar."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/iceage/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/infinity/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/infinity/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/mc/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/mc/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/mc/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Bucle",
+          "definition": "la acción de hacer algo una y otra vez."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Aprendizaje automático",
+          "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modelos y Simulaciones",
+          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
+        },
+        "code/playlab/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/playlab/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/poem-art/2021": {
+          "word": "Código",
+          "definition": "(v) escribir instrucciones para un ordenador."
+        },
+        "event/poem-art/2021": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "line/poem-art/2021": {
+          "word": "Línea",
+          "definition": "(poesía) - la subdivisión de un poema dispuesta en una fila que termina en el margen derecho. "
+        },
+        "mood/poem-art/2021": {
+          "word": "Estado de ánimo",
+          "definition": "la expresión de un sentimiento, una atmósfera o una emoción en el arte o la escritura."
+        },
+        "program/poem-art/2021": {
+          "word": "Programa",
+          "definition": "Una serie de pasos que han sido codificados de manera que puedan ser ejecutados por una máquina."
+        },
+        "code/sports/unversioned": {
+          "word": "Código",
+          "definition": "(v) escribir código o escribir instrucciones para un ordenador."
+        },
+        "debugging/sports/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "event/sports/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "program/sports/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/starwars/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/starwars/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Compresión sin pérdidas",
+          "definition": "un algoritmo de compresión de datos que permite reconstruir perfectamente los datos originales a partir de los datos comprimidos.  Se utiliza sobre todo para la compresión de texto (por ejemplo, la compresión .zip)"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Código",
+          "definition": "(v) escribir instrucciones para un ordenador."
+        },
+        "event/poem-art/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Programa",
+          "definition": "Una serie de pasos que han sido codificados de manera que puedan ser ejecutados por una máquina."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Estado de ánimo",
+          "definition": "la expresión de un sentimiento, una atmósfera o una emoción en el arte o la escritura."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Línea",
+          "definition": "(poesía) - la subdivisión de un poema dispuesta en una fila que termina en el margen derecho. "
         }
       }
     }

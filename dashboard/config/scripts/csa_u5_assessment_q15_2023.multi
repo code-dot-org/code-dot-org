@@ -31,3 +31,16 @@ Which of the following could be used to replace `/* missing code */` so that `fi
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+To replace the `/* missing code */` in the given `findClosest()` method so that it works as intended, we need to determine the condition that checks if the current element is closer to the `targetValue` than the current `result` value.
+
+`Math.abs(numbers[row][col] - targetValue)` calculates the absolute difference between the current element (`numbers[row][col]`) and the `targetValue`.
+
+`difference` represents the difference between the current `result` value and the `targetValue`.
+
+The condition `Math.abs(numbers[row][col] - targetValue) < difference` checks if the absolute difference between the current element and the `targetValue` is smaller than the current difference.
+
+If the condition evaluates to `true`, it means that the current element is closer to the `targetValue` than the current result value. Therefore, the `result` and `difference` variables are updated accordingly.
+
+By using this condition, the `findClosest()` method will correctly update the `result` variable with the element that is closest to the `targetValue` in the two-dimensional array.
+MARKDOWN

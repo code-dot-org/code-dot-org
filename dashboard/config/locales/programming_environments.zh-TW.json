@@ -2,165 +2,57 @@
   "zh-TW": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab",
-          "categories": {
-            "html_tags": {
-              "name": "HTML 標籤"
-            }
-          }
-        },
-        "gamelab": {
-          "name": "Game Lab",
-          "categories": {
-            "game_lab": {
-              "name": "Game Lab",
-              "expressions": {
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "黑白"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "製作音樂"
-                    }
-                  },
-                  "short_description": "播放指定網址上的 MP3 音訊檔案。"
-                }
-              }
-            },
-            "sprites": {
-              "name": "角色",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "螺旋"
-                    }
-                  }
-                }
-              }
-            },
-            "groups": {
-              "name": "群組",
-              "expressions": {
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "顏色"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "顏色"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "繪圖",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Star"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "運算",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "傳回的最小數值"
-                    },
-                    "max": {
-                      "description": "傳回的最大數值"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "傳回的最小數值"
-                    },
-                    "max": {
-                      "description": "傳回的最大數值"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "變數",
-              "expressions": {
-                "assign_x": {
-                  "short_description": "將一個值分配給以前宣告的變數。"
-                },
-                "declareNoAssign_x": {
-                  "short_description": "宣告一個具有給定名稱的變數。"
-                },
-                "declareAssign_x": {
-                  "short_description": "宣告並分配一個初始值給變數。"
-                }
-              }
-            },
-            "functions": {
-              "name": "函式"
-            }
-          }
-        },
         "applab": {
-          "name": "App Lab",
-          "description": "App Lab 是個編程環境，你可以在裡頭做些簡單的應用程式。可以用積木或是 JavaScript 的方式設計，製作完後也能分享。",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "縮小和放大"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "函式"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "製作音樂"
-                    }
-                  },
-                  "short_description": "播放指定網址上的 MP3 音訊檔案。"
-                }
-              }
+            "advanced": {
+              "name": "進階設定"
             },
             "canvas": {
               "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "圓的半徑，以像素為單位。"
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "要繪製的影像左上角的 x 位置 (以像素為單位)。"
+                    },
+                    "x": {
+                      "description": "要繪製的影像左上角的 x 位置 (以像素為單位)。"
+                    },
+                    "y": {
+                      "description": "要繪製的影像左上角的 y 位置 (以像素為單位)。"
+                    }
+                  }
+                },
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
                     }
-                  }
+                  },
+                  "short_description": "返回位於給定圖像數據中給定 x 和 y 位置的像素的顏色阿爾法（不透明度）（範圍從 0 到 255）的量。"
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
                     }
                   }
                 },
@@ -168,6 +60,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "擷取影像資料的邊界矩形高度。"
+                    },
+                    "width": {
+                      "description": "擷取影像資料的邊界矩形寬度。"
+                    },
+                    "x": {
+                      "description": "開始擷取的 x 位置 (以像素為單位)。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置開始捕獲。"
                     }
                   }
                 },
@@ -175,6 +89,12 @@
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
                     }
                   }
                 },
@@ -182,34 +102,104 @@
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從圖像的左上角開始，以將數據放置在畫布上。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從圖像的左上角開始，以將數據放置在畫布上。"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "矩形的垂直高度，以像素為單位。"
+                    },
+                    "width": {
+                      "description": "矩形的水平寬度，以像素為單位。"
+                    },
+                    "x": {
+                      "description": "矩形左上角的 x 位置 (以像素為單位)。"
+                    },
+                    "y": {
+                      "description": "矩形左上角的 y 位置 (以像素為單位)。"
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
+                    "alphaValue": {
+                      "description": "要在像素中設定的 Alpha (不透明度) 量 (從 0 到 255)。"
+                    },
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
                     }
-                  }
+                  },
+                  "short_description": "設定位於給定影像資料中給定 x 和 y 位置的像素顏色中 Alpha (不透明度) 量 (範圍從 0 到 255)。"
                 },
                 "setBlue": {
                   "palette_params": {
+                    "blueValue": {
+                      "description": "要在像素中設定的藍色量 (從 0 到 255)。"
+                    },
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
                     }
-                  }
+                  },
+                  "short_description": "將位於給定影像資料中給定 x 和 y 位置的像素顏色中的藍色量 (範圍從 0 到 255) 設定為 BlueValue 輸入量。"
                 },
                 "setGreen": {
                   "palette_params": {
+                    "greenValue": {
+                      "description": "要在像素中設定的綠色量 (從 0 到 255)。"
+                    },
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
                     }
-                  }
+                  },
+                  "short_description": "將位於給定影像資料中給定 x 和 y 位置的像素顏色中的綠色數量 (範圍從 0 到 255) 設定為 GreenValue 輸入量。"
                 },
                 "setRGB": {
                   "palette_params": {
+                    "alpha": {
+                      "description": "選擇性。要在像素中設定的不透明度量 (從 0 到 255)。預設為 255 (完全不透明)。"
+                    },
+                    "blue": {
+                      "description": "要在像素中設定的藍色量 (從 0 到 255)。"
+                    },
+                    "green": {
+                      "description": "要在像素中設定的綠色量 (從 0 到 255)。"
+                    },
                     "imageData": {
                       "type": "對象"
+                    },
+                    "red": {
+                      "description": "要在像素中設定的紅色量 (從 0 到 255)。"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
                     }
                   }
                 },
@@ -217,13 +207,54 @@
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "redValue": {
+                      "description": "要在像素中設定的紅色量 (從 0 到 255)。"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
+                    }
+                  },
+                  "short_description": "將位於給定影像資料中給定 x 和 y 位置的像素顏色中的紅色量 (範圍從 0 到 255) 設定為 RedValue 輸入量。"
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "由設置超時函數返回的值取消。"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "每次執行函數之間的毫秒數。"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "執行函數之前等待的毫秒數。"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "函式"
                     }
                   }
                 }
               }
             },
             "data": {
-              "name": "數據",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -250,6 +281,16 @@
                   "palette_params": {
                     "options": {
                       "type": "對象"
+                    },
+                    "tableName": {
+                      "description": "要從中檢索記錄的表的名稱。"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "要擷取的金鑰名稱。"
                     }
                   }
                 },
@@ -260,10 +301,38 @@
                     }
                   }
                 },
+                "getUserId": {
+                  "short_description": "獲取此應用程序當前用戶的唯一標識符。"
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "此事件處理常式適用的資料表名稱。"
+                    }
+                  }
+                },
                 "readRecords": {
                   "palette_params": {
                     "terms": {
                       "type": "對象"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "要儲存的金鑰名稱。"
+                    },
+                    "value": {
+                      "description": "要存儲的數據。"
+                    }
+                  },
+                  "short_description": "將鍵/值對存儲在 App Lab 的鍵/值數據存儲中，並在操作完成後調用回調函數。"
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "傳回資料之服務的網址。"
                     }
                   }
                 },
@@ -274,56 +343,153 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "數據"
+            },
+            "functions": {
+              "name": "函式"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "傳回的最大數值"
+                    },
+                    "min": {
+                      "description": "傳回的最小數值"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "傳回的最大數值"
+                    },
+                    "min": {
+                      "description": "傳回的最小數值"
+                    }
+                  }
+                }
+              },
+              "name": "運算"
             },
             "turtle": {
               "expressions": {
                 "arcLeft": {
                   "short_description": "以平滑的圓弧向前和向左移動烏龜。"
+                },
+                "getX": {
+                  "short_description": "取得目前的 x 座標 (以海龜像素為單位)。"
+                },
+                "getY": {
+                  "short_description": "獲取海龜像素的當前 y 坐標。"
+                },
+                "hide": {
+                  "short_description": "使海龜在其當前位置不可見。"
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "要向右移動海龜的像素數。"
+                    },
+                    "y": {
+                      "description": "將海龜向下移動的像素數。"
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "從目前方向向向移動指定數目的像素，將海龜向後移動。"
+                },
+                "moveForward": {
+                  "short_description": "在目前方向上移動指定數目的像素，龜形向前移動。"
+                },
+                "moveTo": {
+                  "short_description": "將海龜移動到螢幕上特定的 (x, y) 位置。"
+                },
+                "penColor": {
+                  "short_description": "設定烏龜用來繪製線條和點的筆的顏色。"
+                },
+                "penDown": {
+                  "short_description": "將筆放下，以便烏龜在移動時在其後方畫一條線。"
+                },
+                "penRGB": {
+                  "short_description": "使用 RGBA 值，設定烏龜用來繪製線條和點的筆的顏色。"
+                },
+                "penUp": {
+                  "short_description": "拿起筆，這樣海龜就不會在移動時畫出一條線。"
+                },
+                "penWidth": {
+                  "short_description": "以像素為單位，設定龜在移動時在其後面繪製的線條寬度。"
+                },
+                "show": {
+                  "short_description": "使海龜在其目前位置可見。"
+                },
+                "speed": {
+                  "short_description": "設置應用程序的執行速度，其中包括海龜的速度。"
+                },
+                "turnLeft": {
+                  "short_description": "將龜形向左旋轉指定的角度。海龜的位置保持不變。"
+                },
+                "turnRight": {
+                  "short_description": "以指定的角度向右旋轉海龜。海龜的位置保持不變。"
+                },
+                "turnTo": {
+                  "short_description": "將海龜的方向變更為特定的角度。0 表示向上，90 是右邊，180 是下方，剩下 270。"
                 }
               }
             },
-            "control": {
+            "ui_controls": {
               "expressions": {
-                "timedLoop": {
+                "button": {
+                  "short_description": "在屏幕上創建顯示默認位置（0,0）提供和由給定 ID 引用的文本的按鈕。"
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "縮小和放大"
+                    }
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "函式"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "運算",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "傳回的最小數值"
-                    },
-                    "max": {
-                      "description": "傳回的最大數值"
-                    }
-                  }
                 },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "傳回的最小數值"
-                    },
-                    "max": {
-                      "description": "傳回的最大數值"
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "製作音樂"
                     }
-                  }
+                  },
+                  "short_description": "播放指定網址上的 MP3 音訊檔案。"
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "要變更的屬性。"
+                    }
+                  },
+                  "short_description": "將屬性設置為指定元素的新值。"
+                },
+                "setScreen": {
+                  "short_description": "將屏幕設置為給定的屏幕 ID。"
+                },
+                "showElement": {
+                  "short_description": "顯示具有提供的 ID 的元素。"
+                },
+                "textLabel": {
+                  "short_description": "在屏幕上創建顯示默認位置（0,0）提供和由給定 ID 引用的文本的文本標籤。"
                 }
               }
             },
             "variables": {
-              "name": "變數",
               "expressions": {
-                "declareNoAssign_x": {
-                  "short_description": "宣告一個具有給定名稱的變數。"
+                "addPair": {
+                  "return_value": "無"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "聲明並將數組分配給變量"
                 },
                 "declareAssign_object": {
                   "examples": {
@@ -335,65 +501,277 @@
                 "declareAssign_x": {
                   "short_description": "宣告並分配一個初始值給變數。"
                 },
-                "addPair": {
-                  "return_value": "無"
+                "declareNoAssign_x": {
+                  "short_description": "宣告一個具有給定名稱的變數。"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "要搜尋的字串。"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "要搜尋的字串。"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "字符串的長度"
+                }
+              },
+              "name": "變數"
+            }
+          },
+          "description": "App Lab 是個編程環境，你可以在裡頭做些簡單的應用程式。可以用積木或是 JavaScript 的方式設計，製作完後也能分享。",
+          "name": "App Lab"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "每次執行函數之間的毫秒數。"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "執行函數之前等待的毫秒數。"
+                    }
+                  }
                 }
               }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Star"
+                    }
+                  }
+                }
+              },
+              "name": "繪圖"
             },
             "functions": {
               "name": "函式"
             },
-            "advanced": {
-              "name": "進階設定"
-            }
-          }
-        },
-        "spritelab": {
-          "name": "Sprite Lab",
-          "categories": {
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "雪碧"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "雪碧"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "黑白"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "製作音樂"
+                    }
+                  },
+                  "short_description": "播放指定網址上的 MP3 音訊檔案。"
+                },
+                "showMobileControls": {
+                  "content": "變更遊戲空間下方可見的行動控制項。",
+                  "short_description": "變更遊戲空間下方可見的行動控制項。"
+                }
+              },
+              "name": "Game Lab"
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "雪碧"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "雪碧"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "雪碧"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "顏色"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "顏色"
+                    }
+                  }
+                }
+              },
+              "name": "群組"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "傳回的最大數值"
+                    },
+                    "min": {
+                      "description": "傳回的最小數值"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "傳回的最大數值"
+                    },
+                    "min": {
+                      "description": "傳回的最小數值"
+                    }
+                  }
+                }
+              },
+              "name": "運算"
+            },
             "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "螺旋"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "精靈的高度。"
+                },
+                "sprite.width": {
+                  "return_value": "精靈的寬度。"
+                }
+              },
               "name": "角色"
             },
-            "world": {
-              "name": "世界"
-            },
-            "location": {
-              "name": "座標"
-            },
+            "variables": {
+              "expressions": {
+                "assign_x": {
+                  "short_description": "將一個值分配給以前宣告的變數。"
+                },
+                "declareAssign_x": {
+                  "short_description": "宣告並分配一個初始值給變數。"
+                },
+                "declareNoAssign_x": {
+                  "short_description": "宣告一個具有給定名稱的變數。"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "要搜尋的字串。"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "要搜尋的字串。"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "字符串的長度"
+                }
+              },
+              "name": "變數"
+            }
+          },
+          "name": "Game Lab"
+        },
+        "javalab": {
+          "name": "Java 實驗室"
+        },
+        "spritelab": {
+          "categories": {
             "actions": {
               "name": "動作"
-            },
-            "events": {
-              "name": "事件"
             },
             "behaviors": {
               "name": "行為"
             },
-            "loops": {
-              "name": "迴圈"
+            "comments": {
+              "name": "註解"
             },
-            "variables": {
-              "name": "變數"
-            },
-            "math": {
-              "name": "運算"
-            },
-            "logic": {
-              "name": "邏輯"
+            "events": {
+              "name": "事件"
             },
             "functions": {
               "name": "函式"
             },
+            "location": {
+              "name": "座標"
+            },
+            "logic": {
+              "name": "邏輯"
+            },
+            "loops": {
+              "name": "迴圈"
+            },
+            "math": {
+              "name": "運算"
+            },
+            "sprites": {
+              "name": "角色"
+            },
             "text": {
               "name": "文字"
             },
-            "comments": {
-              "name": "註解"
+            "variables": {
+              "name": "變數"
+            },
+            "world": {
+              "name": "世界"
             }
-          }
+          },
+          "name": "Sprite Lab"
         },
-        "javalab": {
-          "name": "Java 實驗室"
+        "weblab": {
+          "categories": {
+            "html_tags": {
+              "name": "HTML 標籤"
+            }
+          },
+          "name": "Web Lab"
         }
       }
     }

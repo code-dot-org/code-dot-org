@@ -1,5 +1,5 @@
 ---
-title: Activity Guidelines
+title: د فعالیت لارښوونې
 ---
 
 <style>
@@ -8,271 +8,271 @@ title: Activity Guidelines
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# د کوډ ساعت™ او د کمپیوټر ساینس زده کړې اونۍ لپاره د ښوونې او درسونو رامینځته کولو او سپارلو لارښوونې
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org د Code.org او ساعت د کوډ ویب پا onو کې د کوډ™ مختلف ساعت فعالیتونه، درسونه او ویډیوګانې کوربه کوي. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+ایا غواړئ خپل ځان لارښود لارښود، د ښوونکي په مشرۍ درس، یا روبوټیک/جوړونکي فعالیت وسپارئ چې د کمپیوټر ساینس اصول تشریح کوي؟ پدې نړیوال حرکت کې ګډون وکړئ او په ټوله نړۍ کې برخه اخیستونکو سره مرسته وکړئ چې د یو ساعت کوډ سره پیل شي یا د څو درسي، ورځې اوږد، یا اونۍ اوږد فعالیتونو سره نور لاړ شئ.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2022, will not be listed for 2022's Hour of Code.)** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**د لارښوونو لوستلو وروسته، تاسو کولی شئ خپل فعالیت زموږ د [ساعت کوډ™ فعالیت سپارلو پا pageې](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform)له لارې وسپارئ. تاسو کولی شئ په هر وخت کې فعالیت وسپارئ، مګر په کوم ټاکل شوي کال کې د شمولیت وروستۍ نیټه د اکتوبر 1 ده. (د مثال په توګه، کوم فعالیتونه چې د اکتوبر 1، 2023 وروسته ترلاسه شوي، به د 2023 د کوډ ساعت لپاره لیست نشي.)** که تاسو د خپل فعالیت سپارلو په اړه کومه پوښتنه لرئ، مهرباني وکړئ موږ ته په support@code.org کې اړیکه ونیسئ.
 
-A few tips:
+یو څو لارښوونې:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **له یو څخه ډیر فعالیت وسپارئ**: که تاسو د مختلف کچو، مختلف عمرونو، یا نورو کټګوریو لپاره فعالیتونه جوړ کړي وي، موږ ستاسو فعالیتونه په جلا توګه لیست کوو نو هر ښوونکی کولی شي د دوی ټولګي لپاره سم شی ومومي. هر ټیوټوریل یا فعالیت په انفرادي ډول وسپارئ. د سپارښتنو شمیر ته په پام سره چې موږ پدې وروستیو کلونو کې لیدلي، موږ به وخت ولرو چې د **څخه تر 5 فعالیتونو** په هر ملګري کې بیاکتنه وکړو. له هغې وروسته، موږ به د کوډ ساعت پیل کیدو دمخه د امکان تر حده د بیاکتنې لپاره غوره هڅه وکړو.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **د ابتدايي درسونو هاخوا**: د ښوونکو او زده کونکو لپاره د درسونو سربیره چې د لومړي ځل لپاره د کمپیوټر ساینس زده کوي، موږ د کمپیوټر ساینس پوهه ټولګیو لپاره د زده کړې تجربې لیست کوو چې غواړي یو څه نور هم لاړ شي! د ټولګیو لپاره درسونو په سپارلو سره زموږ سره مرسته وکړئ چې دمخه د اساساتو سره راحته دي.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **د موضوع ساحې**: د عالي درس نظر لرئ چې د کمپیوټر ساینس په ریاضی کې مدغم کوي؟ تاریخ؟ د ژبې هنر؟ ساینس؟ هنر؟ یا بله موضوع؟ موږ د ښوونکو څخه ډیری غوښتنې درلودې څوک چې غواړي د کوډ ساعت د دوی موضوع ساحې سره وصل کړي. ښوونکي کولی شي د دوی د ټولګي ډول (د درجې بینډ یا موضوع ساحه) لپاره فلټر کړي نو موږ ستاسو مرستې ته اړتیا لرو ترڅو د ټولګي فعالیتونه یا درسي پلانونه وړاندې کړو چې CS د مختلف درجې بانډونو لپاره هرې لوی موضوع ساحې سره تړاو لري. موږ د ښوونکو لپاره د «کمپیوټر ساینس» کټګورۍ ته هم دوام ورکوو څوک چې د CS عمومي فعالیتونو په لټه کې دي.
 
 <a id="top"></a>
 
-## Index:
+## ډېرځليزې:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [څه باید وسپاري](#whatsubmit)
+- [د کوډ™ فعالیت ساعت رامینځته کولو لپاره عمومي لارښوونې](#guidelines)
+- [څنګه وسپارئ](#submit)
+- [فعالیتونه به څنګه وارزول شي](#inclusion)
+- [ستاسو د فعالیت ډیزاین کولو لپاره وړاندیزونه](#design)
+- [د سوداګریزې نښې لارښوونې](#tm)
+- [د پکسل تعقیب](#pixel)
+- [خپل فعالیت ته وده ورکول، CSEdweek، او د کوډ ساعت](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## څه باید وسپاري
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**د ځان لارښود پہیلی یا لوبه ([مثال](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+دا فعالیتونه د زده کونکو لپاره ډیزاین شوي ترڅو د ښوونې له لارې ځان مستقیم کړي. دوی د ښوونکي یا ښوونکي چمتو کولو کار څخه ډیرې لارښوونې ته اړتیا نلري.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**د ښوونکي اسانه لوست ([مثال](https://studio.code.org/s/course1/lessons/2/levels/1)، [ټیمپلیټ](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+اوس چې په سلګونو زره ښوونکو د کوډ ساعت هڅه کړې، ډیری ټولګي د نورو تخلیقي فعالیتونو لپاره چمتو دي چې د کمپیوټر ساینس اساسات درس ورکوي. د پرمختللي ښوونکو سره د الهام موندلو کې د مرستې لپاره، موږ د کوډ وترنرانو ساعت لپاره د «ښوونکي په مشرۍ» درسونه او د فعالیت پلانونه راټول او تنظیم کوو.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+یو ډول فعالیت چې موږ به یې د تجربه لرونکو ښوونکو لپاره ب featureه کړو د «خلاص سینڈ باکس» رامینځته کولو پروژې دي. هغه فعالیتونه چې زده کونکي هڅوي چې خپل ایپ، لوبې، ویب پا orه یا نورې پروژې رامینځته کړي. که چیرې په سمه توګه اسانه شي، نو ډیر خلاص پای فعالیتونه کولی شي د کمپیوټر ساینس تخلیقي طبیعت په ښه توګه وښیې.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+ځینې ښوونکي ممکن د ساعت کوډ فعالیتونو کوربه توب هم غوره کړي چې د لارښود پزل/لوبې تجربې پرځای د دودیز درس ب followه تعقیبوي.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+تاسو کولی شئ د خپل لوست پلان لپاره د دې [ټیمپلیټ](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) سره پیل کړئ.
 
-**Activities for teachers in other subjects/fields**
+**په نورو مضمون/برخو کې د ښوونکو لپاره فعالیتونه**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+موږ د مختلف موضوعاتو ساحو لپاره ډیزاین شوي درسي پلانونه هم وړاندې کوو. د مثال په توګه، د جیومیټری ټولګي کې د تدریس کوډ لپاره د یو ساعت درس پلان. یا د انګلیسي ټولګي لپاره د میډ - لیب تمرین. یا د تاریخ ټولګي لپاره د تخلیقي پوښتنې رامینځته کولو فعالیت. دا کولی شي په نورو موضوعاتو برخو کې د ښوونکو ګمارلو کې مرسته وکړي ترڅو د کوډ فعالیت ساعت لارښود کړي چې د دوی ساحې ته ځانګړی دی، پداسې حال کې چې دا ښیې چې CS څنګه کولی شي ډیری مختلف موضوع ساحې اغیزه او وده وکړي.
 
-Examples:
+مثالونه:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- د عکس عکسونه (د هنر ښوونکي لپاره فعالیت)
+- د فزیک ښوونکي لپاره د اردوینو فعالیت
+- د تاریخ ښوونکي لپاره د ټیکنالوژۍ فعالیت تاریخ
+- او وګورئ [دا لیست](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) د ښوونکو څخه د نورو نظرونو لپاره (یا خپل ځان په لیست کې اضافه کړئ ترڅو نورو ته الهام ورکړئ)
 
-**For students with special needs**
+**د ځانګړو اړتیاو سره د زده کونکو لپاره**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+که تاسو یو فعالیت یا ټیوټوریل رامینځته کړئ چې د ځانګړي اړتیاو زده کونکو لپاره ډیزاین شوی وي، مهرباني وکړئ دا په تفصیل کې زنګ ووهئ. په ځانګړي توګه، د لید ضعیف لپاره خورا لږ اختیارونه شتون لري. که ستاسو فعالیت د دې لیدونکو لپاره ډیزاین شوی وي، مهرباني وکړئ موږ ته خبر راکړئ.
 
-[**Back to the top**](#top)
+[**بېرته سر ته**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## د کوډ فعالیت ساعت رامینځته کولو لپاره عمومي لارښوونې
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+د کوډ د ساعت هدف دا دی چې پیل کونکو ته د کمپیوټر ساینس یا برنامې لاسرسي لومړی خوند ورکړي. سر باید دا وي:
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability. 
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online. 
+- هرڅوک کولی شي د کمپیوټر ساینس زده کړي - پرته لدې چې عمر، جنس، نژاد، یا وړتیا/معلولیت په پام کې ونیول شي.
+- د کمپیوټر ساینس په پراخه کچه برخو او ګټو سره تړاو لري. هرڅوک باید دا زده کړي!
+- زده کونکي وهڅوئ چې یو څه ځانګړی رامینځته کړي چې د والدین/ملګرو یا آنلاین سره شریک کیدی شي.
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+فعالیتونه باید د کمپیوټر ساینس مفهوم درس ورکړي لکه لوپونه، شرایط، کوډ کول، یا څنګه انټرنیټ کار کوي. یو فعالیت کولی شي پدې اړه هم درس ورکړي چې څنګه د کمپیوټر ساینس د ریښتیني نړۍ اشغال، پیښو، یا تاریخ سره وصل کیږي. د مثال په توګه، د UX ډیزاین ښوونه کول ترڅو ایپس رامینځته کړي چې د لیدونکو یا لامل لپاره معنی لري. موږ هغه فعالیتونه منع کوو چې د مفاهیمو پرځای د برنامې ترکیب باندې تمرکز کوي. د مثال په توګه، موږ به لیست وکړو، مګر روښانه نه کړو، هغه فعالیتونه چې HTML درس ورکوي. په ورته ډول، موږ د بلاک برنامې درسونه منع کوو چې د الګوریتم یا پروسې ماډل کولو څرنګوالي زده کولو پرځای د ترتیب کولو اختیارونو تنظیم/بدلولو باندې تمرکز کوي.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). هغه فعالیتونه چې د اپلیکیشن نصب، ډیسټاپ ایپ، یا د لوبې کنسول تجربو ته اړتیا لري سم دي مګر مثالی ندي. موږ به هغه فعالیتونه لیست نه کړو چې لاسلیک یا تادیې ته اړتیا لري. (د روبوټکس فعالیتونه کولی شي د روبوټکس پیرود ته اړتیا ولري.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*د زده کونکي په مشرۍ (ځان لارښود) ب formatه:* د کوډ اصلي ساعت اکثرا د ځان لارښود ښوونې یا درسونو بریا باندې رامینځته شوی، په اختیاري ډول د ښوونکي لخوا اسانه شوی. ډیری موجود اختیارونه شتون لري، مګر که تاسو غواړئ یو نوی رامینځته کړئ، دا فعالیتونه باید ډیزاین شي نو دا د هغه زده کونکي لپاره ساتیري کیدی شي چې یوازې کار کوي، یا په ټولګي کې چې ښوونکی یې لږترلږه چمتووالی یا CS شالید لري. دوی باید د زده کونکو لپاره لارښوونې چمتو کړي لکه څنګه چې د خلاص پای ساعت اوږد ننګونې سره مخالف دي. په مثالي توګه، لارښوونې او ښوونې په مستقیم ډول د برنامه کولو پلیټ فارم کې مدغم شوي، ترڅو د ټیوټوریل او برنامې پلیټ فارم ترمینځ د ټبونو یا وینډوز بدلولو څخه مخنیوی وشي.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+د درسونو او درسي پلانونو پراخه ډولونو احساس ترلاسه کولو لپاره چې تاسو یې رامینځته کولی شئ، د کوډ فعالیتونو پا pageې [ساعت څخه لیدنه وکړئ](https://hourofcode.com/us/learn).
 
-[**Back to the top**](#top)
+[**بېرته سر ته**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## څنګه وسپارئ
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+د [ساعت کوډ™ د فعالیت سپارلو پا pageې](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) څخه لیدنه وکړئ او د خپل فعالیت سپارلو لپاره پوښتنې بشپړې کړئ.
 
-What you’ll need:
+هغه څه چې تاسو ورته اړتیا لرئ:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* د لومړني تماس نوم او بریښنالیک د سپارل شوي فعالیت نمایندګي کوي
+* د فعالیت نوم (په نوم کې «د کوډ ساعت» نشي شاملولی)
+* د فعالیت سره د URL لینک
+* د فعالیت توضیحات (د کرکټر اعظمي شمیره: 400) 
+    * مهرباني وکړئ په تفصیل کې شامل کړئ چې ایا دا په عمده ډول د زده کونکي لارښود یا د ښوونکي اسانه دی. سربیره پردې، ځینې ښوونځي پدې پوهیدلو کې علاقه لري چې ایا د کوډ فعالیتونه د عام کور یا راتلونکي نسل ساینس معیارونو ته په ګوته کوي. که فعالیت ځانګړي معیارونه په ګوته کړي، د دې معلوماتو په شمول غور وکړئ.
+* د مطلوب کاروونکو لپاره وړاندیز شوي درجې کچه (ګانې). تاسو ممکن د [کمپیوټر ساینس ښوونکو اتحادیې K-12 معیارونو] ته مراجعه وکړئ (https://k12cs.org/framework-statements-by-grade-band/) د درجې مناسب کمپیوټر ساینس مفاهیمو لپاره. د بیلګې په توګه د درجې کچې کې شامل دي: 
+    * وړکتون - لومړۍ درجه (د 4-6 کلونو عمر)
+    * 2-5 ټولګي (عمرونه 7-10)
+    * د 6-8 درجې (عمر 11-13)
+    * 9+ درجې (عمرونه 14+)
+* د موضوع ساحو لیست چې ستاسو فعالیت یې پوښي (د کمپیوټر ساینس سربیره). د مثال په توګه، که چیرې د ریاضی ښوونکی وکولی شي ستاسو فعالیت د زاویو یا پارابولونو په اړه درس ورکولو لپاره وکاروي، د ریاضی په توګه لیست کړئ. که تاسو د لیوني لیب فعالیت لرئ چې فعلو/اسم/نور درس ورکوي. د ژبې هنرونه غوره کړئ.
+* د پروګرام کولو ژبو لیست چې ستاسو فعالیت درس ورکوي. د مثال په توګه C/C ++، جاوا، جاواسکریپټ، او داسې نور. یا ژبه خپلواکه (د درسي پلانونو لپاره چې په څو ژبو کې تدریس کیدی شي)
+* د ملاتړ شوي طبیعي ژبو لیست. یادونه: د ژبې کشف د فعالیت چمتو کونکي مسؤلیت دی؛ موږ به ټول کاروونکي چمتو شوي واحد URL ته واړوو.
+* د کومې کچې تجربه باید یو ښوونکی ستاسو فعالیت وکاروي؟ (د مثال په توګه پیل کونکی یا راحته.) او، زده کونکي باید د کومې کچې تجربه ولري؟ که تاسو غواړئ د کوډ™ فعالیتونو ډیر پرمختللي ساعت چمتو کړئ، مهرباني وکړئ د خپل فعالیت په تفصیل کې اړین مخکینۍ پوهه شامل کړئ.
+* ستاسو د فعالیت اوږدوالی 
+    * یوازې 1 ساعت
+    * د تعقیب کورس سره 1 ساعت
+    * 2-6 ساعته (ډیری درسونه کیدی شي)
+* د لاسرسي ځایونو لیست، که ستاسو فعالیت دوی ولري. پدې کې د سکرین لوستونکي مطابقت، د متن څخه تر وینا ظرفیتونه، د لوړ برعکس رنګونو کارول، یا کوم بل استوګنځایونه چې د معلولیت لرونکو زده کونکو لپاره رامینځته شوي شامل دي.
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### اضافي شیان چې تاسو ورته اړتیا لرئ کله چې د لوست پلانونه وسپارئ
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* ستاسو د لوست پلان سره اړیکه. دا کیدی شي ویب پا pageه، ډراپ باکس لینک، ګوګل ډرایو یا ورته خدمت وي.
+* کوم سافټویر او/یا هارډویر ښوونکي به ستاسو د لوست پلان کولو ته اړتیا ولري (سکریچ؟ روبوټونه؟ هیڅ نه؟)
 
-#### Additional things you’ll need when submitting Online Activities
+#### اضافي شیان چې تاسو ورته اړتیا لرئ کله چې آنلاین فعالیتونه وسپارئ
 
-* Name and logo of your organization
-* Whether it is COPPA compliant or not
-* A URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
+* ستاسو د سازمان نوم او لوګو
+* ایا دا د COPPA مطابق دی یا نه
+* د ښوونکي نوټونو ته یو آر ایل لینک (اختیاري)
+* د ازموینې/مطابقت لرونکي پلیټ فارمونو لیست: 
+    * د ویب پراساس: کوم پلیټ فارمونه تاسو ازموینه کړې؟ 
+        * OS - ماک، وین، او نورې نسخې
+        * براوزرونه - IE11، ایج، فایرفوکس، کروم، سفاري
+        * د iOS ګرځنده سفاري (ګرځنده اصلاح شوی)
+        * د Android کروم (ګرځنده مطلوب)
+    * غیر ویب میشته: د اصلي کوډ لپاره پلیټ فارم مشخص کړئ (ماک، وین، iOS، Android، Xbox، نور)
+    * بې پلګ شوی
+* د کوډ فعالیت ساعت سکرین شاټ یا بازار موندنې عکس. مهرباني وکړئ لږترلږه یو عکس د 4:3 ابعادو سره واستوئ. دا باید لږترلږه 520px د 390px لخوا وي. دا عکس باید پدې کې هیڅ متن ونه لري (ستاسو د لوګو پرته)، ترڅو دا د غیر انګلیسي ویناوالو لپاره د لاسرسي وړ کړي. که مناسب عکس چمتو نه وي، موږ ممکن ستاسو د ښوونې خپل سکرین شاټ واخلو یا موږ ممکن دا لیست نه کړو. ټول عکسونه باید د.jpg، .jpeg، یا .png ته د URL لینک په توګه وسپارل شي.
+* د ډیر دقیق ګډون تعقیب کولو لپاره، د دریمې ډلې ټیوټوریل شریکان اړتیا لري د دوی د کوډ ښوونې په لومړۍ پا onه کې د 1 پکسل تعقیب عکسونه شامل کړي. د نورو جزیاتو لپاره لاندې د [تعقیب پکسل](#pixel) برخه وګورئ.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+    * په ټولنیزو رسنیو کې شریک کړئ چې دوی د کوډ ساعت بشپړ کړی
+    * یو سند ترلاسه کړئ چې دوی د کوډ ساعت بشپړ کړی
+    * لیډربورډونه وګورئ چې کوم هیوادونه/ښارونه د کوډ ساعتونو فعالیتونو کې د ګډون ترټولو لوړه کچه لري
     * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* (اختیاري) موږ ممکن د آنلاین سروې/فارم لینک سره تعقیب کړو چې د لاندې فعالیت میتریکونو راپور غوښتنه کوي: 
+    * د آنلاین فعالیتونو لپاره (په ځانګړي توګه د سمارټ فون/ټابلیټ ایپس): 
+        * د کاروونکو شمیر
+        * څومره کار بشپړ کړ
+        * په دنده کې اوسط وخت
+        * په ټولو کاروونکو کې د لیکل شوي کوډ د ټولو لینونو شمیر
+        * څومره نور زده کړې ته دوام ورکړ (د هر کارونکي په توګه اندازه کیږي څوک چې دنده پای ته رسوي او ستاسو په سایټ کې اضافي کارونو ته ځي)
+    * د آفلاین فعالیتونو لپاره 
+        * د فعالیت د کاغذ نسخه د ډاونلوډونو شمیر (که پلي کیدونکی وي)
 
-#### Additional things you’ll need when submitting Robotics
+#### اضافي شیان چې تاسو ورته اړتیا لرئ کله چې د روبوټکس سپارلو پرمهال
 
-* If you submit a robotics activity, we need to know the cost per student for robotics.
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* که تاسو د روبوټکس فعالیت وسپارئ، موږ اړتیا لرو د روبوټکس لپاره د هر زده کونکي لګښت وپیژنو.
+* په ویب پا onه کې د شمولیت لپاره د روبوټکس فعالیتونو ارزولو لپاره، موږ به تاسو ته اړتیا ولرو چې بیاکتنې کونکو ته د نمونې کټونه واستوو.
 
-[**Back to the top**](#top)
+[**بېرته سر ته**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## فعالیتونه به څنګه وارزول شي
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+د کمپیوټر ساینس ښوونکو متنوع کمیټه به د کیفیت او کمیتي معیارونو پراساس سپارښتنې درجه بندي کړي. ټول فعالیتونه چې د اساسي معیارونو سره سمون لري به لیست شي. ښوونکي به وکولی شي فلټر او ترتیب کړي ترڅو د دوی ټولګي لپاره غوره فعالیتونه ومومي.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+د فعالیتونو او درسي پلانونو ارزولو لپاره روبریک به په ټولو فعالیتونو کې لاندې معیارونه وګوري او د هغې مطابق یې درجه بندي کړي:
 
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+- د لوړ تولید کیفیت
+- د ټولو ډیموګرافیک ډلو لخوا زده کړې ته وده ورکول (esp. زده کونکي په CS کې کم استازیتوب کوي، لکه ځوانې میرمنې، د ګوښه شوي توکمیز او توکمیز ډلو زده کونکي، او معلولیت لرونکي زده کونکي)
+- تعلیمي (د کمپیوټر ساینس مفکورې ښه درس ورکوي)
+- ساتیري او ښکیل
+- زده کونکي هڅوي چې یو څه ځانګړي رامینځته کړي چې دوی یې شریک کولی شي (د ځوانو زده کونکو لپاره: د والدین او ټولګیوالو سره. د زړو زده کونکو لپاره: په انټرنیټ کې)
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+که چیرې د بیاکتنې کمیټه فعالیت د تولید کیفیت کې صفر درجه کړي (د خراب بګونو یا لارښوونو له امله چې کارول یې خورا سخت کوي)، په کم نمایندګیو ډلو کې زده کړې ته وده ورکولو کې (د نژادي/جنسیتي موادو له امله)، په تعلیمي ارزښت کې (د CS مفهومونه نه ښوونه کوي)، یا ساتیري کول/ښکیل کول (د زده کونکو لپاره د کار کولو لپاره ستونزې/مایوسه کیدو له امله)، فعالیت به لیست نشي.
 
-In addition, in order to be listed, all activities must:
+سربیره پردې، د لیست کولو لپاره، ټول فعالیتونه باید:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up 
-- Require no payment (exception for robotics activities these can require robot/kit purchase)
+- د عامه ښوونځي ټولګي لپاره مناسب اوسئ (هیڅ ټوپک، هیڅ څرګند/بالغ مینځپانګه، هیڅ مذهبي مینځپانګه، او داسې نور)
+- هیڅ لاسلیک ته اړتیا نشته
+- هیڅ تادیې ته اړتیا نلري (د روبوټکس فعالیتونو استثنا دا کولی شي د روبوټ/کټ پیرود ته اړتیا ولري)
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+د نوي ښوونکو او زده کونکو لپاره د ځان لارښود فعالیتونو لپاره د بیاکتنې کمیټه به په لټه کې وي چې ایا:
 
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+- ښوونکي کولی شي د کمپیوټر ساینس کې هیڅ شالید پرته ښوونه یا فعالیت وکاروي
+- زده کونکي کولی شي د کمپیوټر ساینس کې هیڅ شالید سره بریالي شي
+- زده کونکي کولی شي ځان د مور او پلار یا ښوونکي لارښود پرته د ښوونې له لارې لارښود کړي
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+ښوونکي او زده کونکي به وکولی شي زموږ د فعالیتونو لیست د فلټرونو پراساس وپلټئ او فلټر کړئ لکه درجې، د تجربې کچه، موضوع، هارډویر، او نور. په ډیفالټ، موږ به لومړی د لوست پلانونه او فعالیتونه وښیو چې:
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+- د بیاکتنې کمیټې څخه ترټولو لوړې درجې ترلاسه کړئ
+- د یو ساعت ځان لارښود فعالیتونه دي چې د پیل کونکو لپاره ډیزاین شوي (زده کونکي او ښوونکي)
+- د کاروونکو پراخه لړۍ ته اپیل (په پلیټ فارمونو، ژبو او عمرونو کې)
+- هیڅ نصب ته اړتیا نلري
+- سږ کال نوي دي
 
-[**Back to the top**](#top)
+[**بېرته سر ته**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## د یو ساعت ځان لارښود ښوونې ډیزاین کولو لپاره وړاندیزونه
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+تاسو کولی شئ په خپل ټیوټوریل کې د [ساعت کوډ لوګو](https://hourofcode.com/us/promote/resources#logo) شامل کړئ، مګر دا اړتیا نلري. که تاسو د ساعت کوډ لوګو کاروئ، لاندې د سوداګریزې نښې لارښوونې وګورئ. <u>په هیڅ حالت کې د Code.org لوګو او نوم نشي کارول کیدی.</u> دواړه سوداګریز نښه شوي، او د څرګند لیکلي اجازې پرته د دریمې ډلې برانډ نوم سره ګډ نشي کیدی.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**ډاډ ترلاسه کړئ چې اوسط زده کونکی کولی شي په یو ساعت کې په آرامۍ سره پای ته ورسوي.** د زده کونکو لپاره په پای کې د خلاص پای فعالیت اضافه کولو ته پام وکړئ څوک چې د درس له لارې ډیر ګړندي حرکت کوي. په یاد ولرئ چې ډیری ماشومان به د کمپیوټر ساینس او کوډ کولو لپاره مطلق پیل کونکي وي.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**د ښوونکي یادداشتونه شامل کړئ.** ډیری فعالیتونه باید د زده کونکي لارښود وي، مګر که چیرې یو فعالیت د ښوونکي لخوا اسانه یا اداره شي، نو مهرباني وکړئ د ښوونکي لپاره روښانه او ساده لارښوونې د ښوونکي نوټونو په ب inه په جلا URL کې شامل کړئ چې ستاسو د فعالیت سره سپارل شوي. نه یوازې زده کونکي نوي دي، بلکه ځینې ښوونکي هم دي. معلومات شامل کړئ لکه:
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming? 
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+- ټیوټوریل په کوم پلیټ فارمونو او براوزرونو کې غوره کار کوي؟
+- ایا دا په سمارټ فونونو کار کوي؟ ګولۍ؟
+- ایا تاسو د جوړه برنامې وړاندیز کوئ؟
+- په ټولګي کې د کارولو لپاره نظرونه؟ د مثال په توګه که ویډیوګانې شتون ولري، ښوونکو ته مشوره ورکړئ چې ویډیوګانې د ټول ټولګي لپاره په اټکل شوي سکرین کې وښیې ترڅو یوځای وګوري
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+**د فعالیت په پای کې فیډبیک شامل کړئ.** (د مثال په توګه «تاسو 10 کچې پای ته ورساوه او د لوپونو په اړه یې زده کړل! عالي دنده! «)
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**زده کونکي وهڅوئ چې ټولنیزو رسنیو ته پوسټ کړي (چیرې چې مناسب وي) کله چې دوی پای ته ورسي.** د مثال په توګه «ما د ________ سره د کوډ ساعت ترسره کړی ایا تاسو؟ #HourOfCode «یا» ما د #CSEdWeek د یوې برخې په توګه #HourOfCode ترسره کړی دی. ایا ته یې؟ @Scratch. د هشتګ کارول **#HourOfCode** (د لوی حروف H، O، C سره)
 
-**Create your activity in Spanish or in other languages besides English.**
+**خپل فعالیت په هسپانوي یا د انګلیسي سربیره په نورو ژبو کې رامینځته کړئ.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**فعالیت په ټولنیز ډول د پام وړ شرایطو سره تشریح یا وصل کړئ.** د کمپیوټر برنامه یو سپر پاور کیږي کله چې زده کونکي وګوري چې دا څنګه کولی شي نړۍ د غوره لپاره بدل کړي!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**ډاډ ترلاسه کړئ چې ستاسو ټیوټوریل د [جوړه برنامې](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) تمثیل کې کارول کیدی شي.** دا په ځانګړي ډول د کوډ ساعت لپاره ګټور دی ځکه چې ډیری ټولګي د ټولو زده کونکو لپاره 1:1 هارډویر نلري.
 
-[**Back to the top**](#top)
+[**بېرته سر ته**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## د سوداګریزې نښې لارښوونې
 
-Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+د کوډ ساعت او هورا ډیل کوډګو® د Code.org راجستر شوي سوداګریزې نښې دي. زموږ ډیری ټیوټوریل شریکانو زموږ د «ساعت کوډ» سوداګریزې نښې په خپلو ویب پا sitesو کې د دوی د کوډ فعالیتونو ساعت په تړاو کارولي دي. موږ نه غواړو د دې کارونې مخه ونیسو، مګر موږ غواړو ډاډ ترلاسه کړو چې کارول په یو څو حدونو کې راځي:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. د «کوډ ساعت» یوازې د غیر تجارتي CS زده کړې فعالیتونو سره په تړاو د کوډ د ساعت کمپاین په شرایطو کې، او د بل هدف لپاره.
+2. د «کوډ ساعت» ته هر ډول حواله باید په داسې فیشن کې وکارول شي چې وړاندیز نه کوي چې دا ستاسو د برانډ نوم دی، مګر دا چې دا د کوډ ساعت د اصلي حرکت په توګه حواله کوي. ښه مثال: «په Acmecorp.com کې د کوډ په ساعت کې برخه واخلئ». بد مثال: «د ACME کارپوریشن لخوا د کوډ ساعت هڅه وکړئ».
+3. په خورا مشهور ځایونو کې د «®» سوپر سکریپټ وکاروئ چې تاسو یې د «کوډ ساعت» یادونه کوئ، دواړه ستاسو په ویب پا onه او د اپلیکیشن توضیحاتو کې.
+4. په پا pageه کې ژبه شامل کړئ (یا په فوټر کې)، د کوډ ساعت، CSedweek او Code.org ویب سایټونو لینکونه په شمول، چې لاندې دواړه افشا کوي: a. د کوډ ساعت او هورا ډیل کوډګو® د Code.org راجستر شوي سوداګریزې نښې دي؛ او ب. «د[ساعت کوډ](http://hourofcode.com/) ® د [Code.org](http://code.org/) لخوا په ټول هیواد کې نوښت دی چې ملیونونه زده کونکي یو ساعت کمپیوټر ساینس او کمپیوټر برنامې ته معرفي کړي.»
+5. د اپلیکیشن نومونو کې «د کوډ ساعت» مه کاروئ.
+6. د کوم سوداګریز کارونې یا هدف سره په تړاو «د کوډ ساعت» مه کاروئ (د بیلګې په توګه، د تادیې وال شاته ستاسو د کوډ ساعت فعالیت ساتل؛ ستاسو د کوډ ساعت فعالیت برخې په توګه بل تادیه شوي خدمت ته وده ورکول؛ د کوډ سوداګریز ساعت پلورل).
+7. د هر هغه فعالیت په تړاو چې د ننوتلو یا حساب جوړولو ته اړتیا لري د «کوډ ساعت» مه کاروئ.
 
-[**Back to the top**](#top)
+[**بېرته سر ته**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## د پکسل تعقیب
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+د ډیر دقیق ګډون تعقیب کولو لپاره موږ د هر ټیوټوریل ملګري څخه غوښتنه کوو چې د دوی د کوډ ښوونو ساعت په لومړۍ پا onه کې د 1 پکسل تعقیب عکس شامل کړي. د پکسل عکس باید یوازې د پیل پا pageې کې وي. د خپل ټیوټوریل په کوم لنډمهاله پا pagesو کې شامل نه کړئ.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+دا به موږ ته اجازه راکړي چې هغه کارونکي وشمیرل شي څوک چې ستاسو د کوډ ساعت ټیوټوریل کوي. دا به ستاسو د ښوونې لپاره د دقیق ګډون شمیرو لامل شي.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+که ستاسو ټیوټوریل تصویب شي او په وروستي ټیوټوریل پا pageه کې شامل شي، Code.org به تاسو ته ستاسو لپاره ستاسو په ټیوټوریل کې مدغم کولو لپاره یو ځانګړی تعقیب پکسل چمتو کړي. لاندې مثال وګورئ.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+یادښت: دا د نصب وړ ایپسونو لپاره مهم ندي (iOS/Android اطلاقات، یا د ډیسټاپ نصب ایپس)
 
-Example tracking pixels for Dance Party:
+د نڅا ګوند لپاره د تعقیب پکسلز مثال:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**بېرته سر ته**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## ستاسو فعالیتونو ته وده ورکول، CSEdweek، او د کوډ ساعت
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+مهرباني وکړئ خپل فعالیت خپلې شبکې ته وده ورکړئ! دوی د خپل ساعت کوډ پا pageې ته مستقیم کړئ. ستاسو کاروونکي خورا ډیر احتمال لري چې ستاسو د فعالیت په اړه ستاسو څخه بریښنالیک ته عکس العمل وښیې. د کمپیوټر ساینس تعلیم اونۍ په جریان کې د کوډ نړیوال ساعت کمپاین د عذر په توګه وکاروئ ترڅو کاروونکي وهڅوي چې نورو ته بلنه ورکړي چې ګډون وکړي، او موږ سره نورو زده کونکو ته رسیدو کې مرسته وکړي!
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- ستاسو په ویب پا onه کې د کوډ او CSEdweek فیچر ساعت. مثال: <http://www.tynker.com/hour-of-code>
+- د ټولنیزو رسنیو، دودیزو رسنیو، بریښنالیک لیستونو، او نورو په کارولو سره د کوډ ساعت ته وده ورکړئ، د هشتګ #HourOfCode په کارولو سره (د لوی حروف H، O، C سره)
+- د ځایی پیښې کوربه توب وکړئ یا له خپلو کارمندانو څخه وغواړئ چې په محلي ښوونځیو یا د ټولنې ډلو کې د پیښې کوربه توب وکړي.
+- د نورو معلوماتو لپاره زموږ د [سرچینې کټ](https://hourofcode.com/us/promote) وګورئ.
 
-[**Back to the top**](#top)
+[**بېرته سر ته**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+{{ signup_button }}

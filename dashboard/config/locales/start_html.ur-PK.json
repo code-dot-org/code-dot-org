@@ -3,49 +3,41 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "جی",
           "No": "نہيں",
+          "Yes": "جی",
           "cute": "خوبصورت"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "جی",
           "No": "نہيں",
+          "Yes": "جی",
           "cute": "خوبصورت"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "جی",
           "No": "نہيں",
+          "Yes": "جی",
           "cute": "خوبصورت"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "جی",
           "No": "نہيں",
+          "Yes": "جی",
           "cute": "خوبصورت"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "نام",
+          "City": "Shaher",
           "Color": "رنگ بھریں",
           "Food": "غذا",
-          "City": "Shaher",
+          "Name": "نام",
           "text": "ٹیکسٹ"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "نام",
+          "City": "Shaher",
           "Color": "رنگ بھریں",
           "Food": "غذا",
-          "City": "Shaher",
+          "Name": "نام",
           "text": "ٹیکسٹ"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -56,18 +48,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -78,28 +70,28 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -110,21 +102,21 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
-          "text": "ٹیکسٹ",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "90": "90",
           "?": "؟",
-          "90": "90"
+          "text": "ٹیکسٹ"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -135,20 +127,28 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
-          "text": "ٹیکسٹ",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "90": "90",
           "?": "؟",
-          "90": "90"
+          "text": "ٹیکسٹ"
         },
         "CSD U1 processing live_2021": {
-          "walking": "چلنا",
           "bear": "ریچھ",
-          "rat": "چوہا"
+          "rat": "چوہا",
+          "walking": "چلنا"
         },
         "CSD U1 processing live_2022": {
-          "walking": "چلنا",
           "bear": "ریچھ",
-          "rat": "چوہا"
+          "rat": "چوہا",
+          "walking": "چلنا"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "درست!",
@@ -160,14 +160,6 @@
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -178,18 +170,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -200,39 +192,53 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 storage friends_2021": {
+          "Back": "واپس"
+        },
+        "CSD U1 storage friends_2022": {
+          "Back": "واپس"
         },
         "CSD U1 storage movies_2021": {
+          "No": "نہيں",
           "Star Wars": "اسٹار وارز",
           "Yes": "جی",
-          "No": "نہيں",
           "text": "ٹیکسٹ"
         },
         "CSD U1 storage movies_2022": {
+          "No": "نہيں",
           "Star Wars": "اسٹار وارز",
           "Yes": "جی",
-          "No": "نہيں",
           "text": "ٹیکسٹ"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "کلیئر کریں",
-          "white": "سفید",
-          "pink": "گلابی",
-          "green": "سبز",
-          "black": "سیاہ",
-          "purple": "جامنی",
+          "Rainy": "برسات",
           "Sunny": "سنی",
-          "Rainy": "برسات"
+          "black": "سیاہ",
+          "green": "سبز",
+          "pink": "گلابی",
+          "purple": "جامنی",
+          "white": "سفید"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "کلیئر کریں",
-          "white": "سفید",
-          "pink": "گلابی",
-          "green": "سبز",
-          "black": "سیاہ",
-          "purple": "جامنی",
+          "Rainy": "برسات",
           "Sunny": "سنی",
-          "Rainy": "برسات"
+          "black": "سیاہ",
+          "green": "سبز",
+          "pink": "گلابی",
+          "purple": "جامنی",
+          "white": "سفید"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -306,9 +312,9 @@
           "Success!": "کامیابی!"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "مشرق",
           "North": "شمال",
           "South": "جنوب",
-          "East": "مشرق",
           "West": "مغرب"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
@@ -324,57 +330,57 @@
           "Medium": "درمیانہ"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "بائیں",
-          "right": "درست",
-          "red": "لال",
-          "yellow": "زرد",
           "green": "سبز",
-          "purple": "جامنی"
+          "left": "بائیں",
+          "purple": "جامنی",
+          "red": "لال",
+          "right": "درست",
+          "yellow": "زرد"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "پر",
           "fast": "تیز",
-          "slow": "سست",
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "on": "پر",
+          "short": "چحوٹے قد کے",
+          "slow": "سست"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "سرخ",
+          "Blue": "نیلا",
           "Green": "سبز",
-          "Blue": "نیلا"
+          "Red": "سرخ"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "بائیں",
           "right": "درست"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "زرد",
-          "green": "سبز",
           "blue": "نيلا",
-          "orange": "نارنجی"
+          "green": "سبز",
+          "orange": "نارنجی",
+          "yellow": "زرد"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "quiet": "خاموش"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "سرخ",
-          "Blue": "نیلا"
+          "Blue": "نیلا",
+          "Red": "سرخ"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -383,9 +389,9 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "نام"
@@ -406,40 +412,41 @@
           "G": "جی"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
           "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "Note:": "نوٹ:"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "کامیابی!"
@@ -458,8 +465,8 @@
           "Success!": "کامیابی!"
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "سکور",
-          "0": "0"
+          "0": "0",
+          "Score": "سکور"
         },
         "CSD U6 - Physical Input - PC_2222": {
           "Success!": "کامیابی!"
@@ -501,15 +508,15 @@
           "Name:": "نام:"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "سرخ",
+          "Blue": "نیلا",
           "Green": "سبز",
-          "Blue": "نیلا"
+          "Red": "سرخ"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "نیلا",
+          "Green": "سبز",
           "Name:": "نام:",
           "Red": "سرخ",
-          "Green": "سبز",
-          "Blue": "نیلا",
           "Save": "محفوظ کریں"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
@@ -524,22 +531,23 @@
           "white": "سفید"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "خوش",
-          "?": "؟"
+          "?": "؟",
+          "Happy": "خوش"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "عنوان"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "Red": "سرخ",
+          "Blue": "نیلا",
           "Green": "سبز",
-          "Blue": "نیلا"
+          "Red": "سرخ",
+          "White": "وائٹ"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "اوپر",
           "down": "نیچے",
           "left": "بائیں",
-          "right": "درست"
+          "right": "درست",
+          "up": "اوپر"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "نام"
@@ -552,9 +560,25 @@
           "on": "پر"
         },
         "CSD U6 - Sensors - P_2222": {
-          "text": "ٹیکسٹ",
           "high": "زیادہ",
-          "low": "کم"
+          "low": "کم",
+          "text": "ٹیکسٹ"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "اہمیت"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "Update": "اپ ڈیٹ کریں",
+          "value": "اہمیت"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "اہمیت"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "اہمیت"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "اہمیت"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "آپ یہ کیا!"
@@ -628,41 +652,93 @@
         "CSD U6 add LED button_2021": {
           "Success!": "کامیابی!"
         },
+        "CSD U6 analog change": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog data": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog light": {
+          "Update": "اپ ڈیٹ کریں",
+          "value": "اہمیت"
+        },
+        "CSD U6 analog light_2018": {
+          "Update": "اپ ڈیٹ کریں",
+          "value": "اہمیت"
+        },
+        "CSD U6 analog light_2019": {
+          "Update": "اپ ڈیٹ کریں",
+          "value": "اہمیت"
+        },
+        "CSD U6 analog light_2021": {
+          "Update": "اپ ڈیٹ کریں",
+          "value": "اہمیت"
+        },
+        "CSD U6 analog sound": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "اہمیت"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "اہمیت"
+        },
         "CSD U6 array piano": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSD U6 array piano_2018": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSD U6 array piano_2019": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSD U6 array piano_2021": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSD U6 arrays select predict": {
           "first": "اول"
@@ -677,20 +753,20 @@
           "first": "اول"
         },
         "CSD U6 change": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 change_2018": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 change_2019": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 change_2021": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "درمیانہ"
@@ -705,95 +781,95 @@
           "Medium": "درمیانہ"
         },
         "CSD U6 emotion machine example": {
-          "Happy": "خوش",
-          "?": "؟"
+          "?": "؟",
+          "Happy": "خوش"
         },
         "CSD U6 emotion machine example_2018": {
-          "Happy": "خوش",
-          "?": "؟"
+          "?": "؟",
+          "Happy": "خوش"
         },
         "CSD U6 emotion machine example_2019": {
-          "Happy": "خوش",
-          "?": "؟"
+          "?": "؟",
+          "Happy": "خوش"
         },
         "CSD U6 emotion machine example_2021": {
-          "Happy": "خوش",
-          "?": "؟"
+          "?": "؟",
+          "Happy": "خوش"
         },
         "CSD U6 frequency": {
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 frequency_2018": {
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 frequency_2019": {
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 frequency_2021": {
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 get toggle": {
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 get toggle_2018": {
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 get toggle_2019": {
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 get toggle_2021": {
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "نیلا",
+          "Green": "سبز",
           "Name:": "نام:",
           "Red": "سرخ",
-          "Green": "سبز",
-          "Blue": "نیلا",
           "Save": "محفوظ کریں"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "نیلا",
+          "Green": "سبز",
           "Name:": "نام:",
           "Red": "سرخ",
-          "Green": "سبز",
-          "Blue": "نیلا",
           "Save": "محفوظ کریں"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "نیلا",
+          "Green": "سبز",
           "Name:": "نام:",
           "Red": "سرخ",
-          "Green": "سبز",
-          "Blue": "نیلا",
           "Save": "محفوظ کریں"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "نیلا",
+          "Green": "سبز",
           "Name:": "نام:",
           "Red": "سرخ",
-          "Green": "سبز",
-          "Blue": "نیلا",
           "Save": "محفوظ کریں"
         },
         "CSD U6 getProperty input": {
@@ -809,84 +885,84 @@
           "Submit": "جمع کرائیں"
         },
         "CSD U6 getters debug": {
-          "slow": "سست",
           "fast": "تیز",
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "short": "چحوٹے قد کے",
+          "slow": "سست"
         },
         "CSD U6 getters debug_2018": {
           "fast": "تیز",
-          "slow": "سست",
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "short": "چحوٹے قد کے",
+          "slow": "سست"
         },
         "CSD U6 getters debug_2019": {
           "fast": "تیز",
-          "slow": "سست",
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "short": "چحوٹے قد کے",
+          "slow": "سست"
         },
         "CSD U6 getters debug_2021": {
           "fast": "تیز",
-          "slow": "سست",
-          "short": "چحوٹے قد کے",
+          "high": "زیادہ",
           "long": "لمبا",
           "low": "کم",
-          "high": "زیادہ"
+          "short": "چحوٹے قد کے",
+          "slow": "سست"
         },
         "CSD U6 interval": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 interval_2018": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 interval_2019": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 interval_2021": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 light show": {
-          "on": "پر",
-          "off": "بند"
+          "off": "بند",
+          "on": "پر"
         },
         "CSD U6 light show_2018": {
-          "on": "پر",
-          "off": "بند"
+          "off": "بند",
+          "on": "پر"
         },
         "CSD U6 light show_2019": {
-          "on": "پر",
-          "off": "بند"
+          "off": "بند",
+          "on": "پر"
         },
         "CSD U6 light show_2021": {
-          "on": "پر",
-          "off": "بند"
+          "off": "بند",
+          "on": "پر"
         },
         "CSD U6 params create colors": {
-          "Red": "سرخ",
-          "Blue": "نیلا"
+          "Blue": "نیلا",
+          "Red": "سرخ"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "سرخ",
-          "Blue": "نیلا"
+          "Blue": "نیلا",
+          "Red": "سرخ"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "سرخ",
-          "Blue": "نیلا"
+          "Blue": "نیلا",
+          "Red": "سرخ"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "سرخ",
-          "Blue": "نیلا"
+          "Blue": "نیلا",
+          "Red": "سرخ"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -913,24 +989,24 @@
           "Success!": "کامیابی!"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "ٹیکسٹ",
           "high": "زیادہ",
-          "low": "کم"
+          "low": "کم",
+          "text": "ٹیکسٹ"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "ٹیکسٹ",
           "high": "زیادہ",
-          "low": "کم"
+          "low": "کم",
+          "text": "ٹیکسٹ"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "ٹیکسٹ",
           "high": "زیادہ",
-          "low": "کم"
+          "low": "کم",
+          "text": "ٹیکسٹ"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "ٹیکسٹ",
           "high": "زیادہ",
-          "low": "کم"
+          "low": "کم",
+          "text": "ٹیکسٹ"
         },
         "CSD U6 setProperty predict app": {
           "title": "عنوان"
@@ -945,20 +1021,20 @@
           "title": "عنوان"
         },
         "CSD U6 slider intro": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 slider intro_2018": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 slider intro_2019": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 slider intro_2021": {
-          "short": "چحوٹے قد کے",
-          "long": "لمبا"
+          "long": "لمبا",
+          "short": "چحوٹے قد کے"
         },
         "CSD U6 test LED": {
           "Success!": "کامیابی!"
@@ -973,108 +1049,124 @@
           "Success!": "کامیابی!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "سرخ",
+          "Blue": "نیلا",
           "Green": "سبز",
-          "Blue": "نیلا"
+          "Red": "سرخ"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "سرخ",
+          "Blue": "نیلا",
           "Green": "سبز",
-          "Blue": "نیلا"
+          "Red": "سرخ"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "متعلق",
-          "User": "صارف",
-          "Cancel": "منسوخ کریں",
-          "Name:": "نام:",
-          "Red": "سرخ",
-          "Green": "سبز",
+          "About Us": "ہمارے بارے میں",
           "Blue": "نیلا",
-          "Yes": "جی",
+          "Cancel": "منسوخ کریں",
+          "Green": "سبز",
+          "Name:": "نام:",
           "No": "نہيں",
-          "Save": "محفوظ کریں"
+          "Red": "سرخ",
+          "Save": "محفوظ کریں",
+          "User": "صارف",
+          "Yes": "جی"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "متعلق",
-          "User": "صارف",
-          "Cancel": "منسوخ کریں",
-          "Name:": "نام:",
-          "Red": "سرخ",
-          "Green": "سبز",
+          "About Us": "ہمارے بارے میں",
           "Blue": "نیلا",
-          "Yes": "جی",
+          "Cancel": "منسوخ کریں",
+          "Green": "سبز",
+          "Name:": "نام:",
           "No": "نہيں",
-          "Save": "محفوظ کریں"
+          "Red": "سرخ",
+          "Save": "محفوظ کریں",
+          "User": "صارف",
+          "Yes": "جی"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "متعلق",
-          "User": "صارف",
-          "Cancel": "منسوخ کریں",
-          "Name:": "نام:",
-          "Red": "سرخ",
-          "Green": "سبز",
+          "About Us": "ہمارے بارے میں",
           "Blue": "نیلا",
-          "Yes": "جی",
+          "Cancel": "منسوخ کریں",
+          "Green": "سبز",
+          "Name:": "نام:",
           "No": "نہيں",
-          "Save": "محفوظ کریں"
+          "Red": "سرخ",
+          "Save": "محفوظ کریں",
+          "User": "صارف",
+          "Yes": "جی"
         },
         "CSDU4 Decision App Demo": {
           "About": "متعلق",
-          "Why?": "کیوں؟",
+          "About Us": "ہمارے بارے میں",
           "I don't know": "مے نی جانتا",
-          "When?": "کب؟"
+          "When?": "کب؟",
+          "Why?": "کیوں؟"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "متعلق",
-          "Why?": "کیوں؟",
+          "About Us": "ہمارے بارے میں",
           "I don't know": "مے نی جانتا",
-          "When?": "کب؟"
+          "When?": "کب؟",
+          "Why?": "کیوں؟"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "متعلق",
-          "Why?": "کیوں؟",
+          "About Us": "ہمارے بارے میں",
           "I don't know": "مے نی جانتا",
-          "When?": "کب؟"
+          "When?": "کب؟",
+          "Why?": "کیوں؟"
         },
         "CSDU4 Functionality visible": {
-          "Hide": "پوشیدہ"
+          "Hide": "پوشیدہ",
+          "Show": "دکھائیں"
         },
         "CSDU4 List App Demo": {
           "About": "متعلق",
+          "About Us": "ہمارے بارے میں",
           "Cancel": "منسوخ کریں"
         },
         "CSDU4 List App Demo_2018": {
           "About": "متعلق",
+          "About Us": "ہمارے بارے میں",
           "Cancel": "منسوخ کریں"
         },
         "CSDU4 List App Demo_2019": {
           "About": "متعلق",
+          "About Us": "ہمارے بارے میں",
           "Cancel": "منسوخ کریں"
         },
         "CSDU4 Quiz App Demo": {
           "About": "متعلق",
+          "About Us": "ہمارے بارے میں",
+          "Correct!": "درست!",
           "Submit": "جمع کرائیں",
-          "Why?": "کیوں؟",
           "When?": "کب؟",
-          "Correct!": "درست!"
+          "Why?": "کیوں؟"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "متعلق",
+          "About Us": "ہمارے بارے میں",
+          "Correct!": "درست!",
           "Submit": "جمع کرائیں",
-          "Why?": "کیوں؟",
           "When?": "کب؟",
-          "Correct!": "درست!"
+          "Why?": "کیوں؟"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "متعلق",
+          "About Us": "ہمارے بارے میں",
+          "Correct!": "درست!",
           "Submit": "جمع کرائیں",
-          "Why?": "کیوں؟",
           "When?": "کب؟",
-          "Correct!": "درست!"
+          "Why?": "کیوں؟"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
           "=": "="
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "واپس"
         },
         "CSDU6 Circuit Playground Test": {
           "Success!": "کامیابی!"
@@ -1092,76 +1184,76 @@
           "Success!": "کامیابی!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSDU6 piano with notes": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "ایے",
+          "B": "بی",
           "C": "سی",
           "D": "ڈی",
           "E": "مشرق",
           "F": "ایف",
-          "G": "جی",
-          "A": "ایے",
-          "B": "بی"
+          "G": "جی"
         },
         "allthethings design mode elements": {
           "text": "ٹیکسٹ"
@@ -1195,14 +1287,6 @@
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1213,18 +1297,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1235,7 +1319,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Correct!": "درست!",
@@ -1247,14 +1339,6 @@
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1265,18 +1349,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1287,603 +1371,617 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
-        },
-        "ml-customize-raspado-2021": {
-          "yes": "جی",
-          "no": "نہيں",
-          "pecan:": "پیکن:",
-          "strawberry:": "اسٹرابیری:",
-          "mango:": "آم:",
-          "vanilla:": "ونیلا:",
-          "lime:": "چونا:",
-          "chili en polbo:": "مرچ اور پولبو:",
-          "lechera:": "لیچیرا:",
-          "coconut:": "ناریل:"
-        },
-        "ml-customize-raspado_2022": {
-          "yes": "جی",
-          "no": "نہيں",
-          "pecan:": "پیکن:",
-          "strawberry:": "اسٹرابیری:",
-          "mango:": "آم:",
-          "vanilla:": "ونیلا:",
-          "lime:": "چونا:",
-          "chili en polbo:": "مرچ اور پولبو:",
-          "lechera:": "لیچیرا:",
-          "coconut:": "ناریل:"
-        },
-        "ml-intro ai lab- fruit veggie widget": {
-          "Continue": "جاری رکھیے",
-          "Hover over a dot to see its name": "اس کا نام دیکھنے کے لئے ایک نقطہ پر ہور",
-          "Try Your Own Food!": "آپ کی اپنی خوراک کی کوشش کریں!",
-          "x Axis": "X محور",
-          "y Axis": "y محور",
-          "Flip Colors": "رنگ پلٹائیں",
-          "Fruit Accuracy:": "پھلوں کی درستگی:",
-          "Veggie Accuracy:": "ویجی درستگی:",
-          "Click in two places to draw a line!": "ایک لائن اپنی طرف متوجہ کرنے کے لئے دو جگہوں پر کلک کریں!",
-          "What is the nameof your food?": "آپ کی خوراک کا نام کیا ہے؟",
-          "Let's See What The Model Decides": "آئیے دیکھتے ہیں کہ ماڈل کیا فیصلہ کرتا ہے",
-          "On a Scale from 1-10, how would you rate": "1-10 سے اسکیل پر، آپ کس طرح کی شرح کریں گے",
-          "Your new food has been added to the graph as a gray square!": "آپ کا نیا کھانا گراف میں سرمئی مربع کے طور پر شامل کیا گیا ہے!",
-          "According to the line you drew, your model thinks this food is a": "آپ نے اپنی طرف متوجہ کردہ لائن کے مطابق، آپ کا ماڈل سوچتا ہے کہ یہ کھانا ایک ہے"
-        },
-        "ml-intro ai lab- fruit veggie widget_2022": {
-          "Continue": "جاری رکھیے",
-          "Hover over a dot to see its name": "اس کا نام دیکھنے کے لئے ایک نقطہ پر ہور",
-          "Try Your Own Food!": "آپ کی اپنی خوراک کی کوشش کریں!",
-          "x Axis": "X محور",
-          "y Axis": "y محور",
-          "Flip Colors": "رنگ پلٹائیں",
-          "Fruit Accuracy:": "پھلوں کی درستگی:",
-          "Veggie Accuracy:": "ویجی درستگی:",
-          "Click in two places to draw a line!": "ایک لائن اپنی طرف متوجہ کرنے کے لئے دو جگہوں پر کلک کریں!",
-          "What is the nameof your food?": "آپ کی خوراک کا نام کیا ہے؟",
-          "Let's See What The Model Decides": "آئیے دیکھتے ہیں کہ ماڈل کیا فیصلہ کرتا ہے",
-          "On a Scale from 1-10, how would you rate": "1-10 سے اسکیل پر، آپ کس طرح کی شرح کریں گے",
-          "Your new food has been added to the graph as a gray square!": "آپ کا نیا کھانا گراف میں سرمئی مربع کے طور پر شامل کیا گیا ہے!",
-          "According to the line you drew, your model thinks this food is a": "آپ نے اپنی طرف متوجہ کردہ لائن کے مطابق، آپ کا ماڈل سوچتا ہے کہ یہ کھانا ایک ہے"
-        },
-        "ml-intro app lab-book recommender demo-2021": {
-          "Silly": "بیوقوف",
-          "Class Book Recommender": "کلاس بک ریماینڈر",
-          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "یہ اپلی کیشن آپ کے مفادات کی بنیاد پر پڑھنے کے لئے ایک کتاب کی سفارش کر سکتے ہیں. یہ اسکول میں ایک نئے طالب علم کے لئے ہے تاکہ وہ ایک کتاب پڑھ سکیں جو اسکول کے دوسرے لوگوں نے بھی پڑھا ہے اور نئے دوست بنانے کے لئے کچھ بات کرنے کے لئے کچھ ہے.",
-          "Which animal do you like the most?": "کون سا جانور آپ کو سب سے زیادہ پسند ہے؟",
-          "Wolf": "بھیڑیا",
-          "Dragon": "ڈریگن",
-          "Walrus": "والرس",
-          "How would your friends describe you?": "آپ کے دوست آپ کو کیسے بیان کریں گے؟",
-          "Independent": "آزاد",
-          "Thoughtful": "سوچے سمجھے۔",
-          "Myterious": "افسانہ",
-          "Where do you like to spend time?": "آپ وقت کہاں خرچ کرنا پسند کرتے ہیں؟",
-          "Outdoors": "باہر",
-          "Indoors": "گھر کے اندر",
-          "How do you like to spendtime?": "آپ کس طرح وقت گزارنا پسند کرتے ہیں؟",
-          "By Myself": "خود کی قسم",
-          "With Friends": "دوستوں کے ساتھ"
-        },
-        "ml-intro app lab-book recommender demo_2022": {
-          "Silly": "بیوقوف",
-          "Class Book Recommender": "کلاس بک ریماینڈر",
-          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "یہ اپلی کیشن آپ کے مفادات کی بنیاد پر پڑھنے کے لئے ایک کتاب کی سفارش کر سکتے ہیں. یہ اسکول میں ایک نئے طالب علم کے لئے ہے تاکہ وہ ایک کتاب پڑھ سکیں جو اسکول کے دوسرے لوگوں نے بھی پڑھا ہے اور نئے دوست بنانے کے لئے کچھ بات کرنے کے لئے کچھ ہے.",
-          "Which animal do you like the most?": "کون سا جانور آپ کو سب سے زیادہ پسند ہے؟",
-          "Wolf": "بھیڑیا",
-          "Dragon": "ڈریگن",
-          "Walrus": "والرس",
-          "How would your friends describe you?": "آپ کے دوست آپ کو کیسے بیان کریں گے؟",
-          "Independent": "آزاد",
-          "Thoughtful": "سوچے سمجھے۔",
-          "Myterious": "افسانہ",
-          "Where do you like to spend time?": "آپ وقت کہاں خرچ کرنا پسند کرتے ہیں؟",
-          "Outdoors": "باہر",
-          "Indoors": "گھر کے اندر",
-          "How do you like to spendtime?": "آپ کس طرح وقت گزارنا پسند کرتے ہیں؟",
-          "By Myself": "خود کی قسم",
-          "With Friends": "دوستوں کے ساتھ"
-        },
-        "ml-model card-medical app v2 2021-2": {
-          "W": "مغرب",
-          "A": "ایے",
-          "yes": "جی",
-          "no": "نہيں",
-          "head": "سر",
-          "Medical Priority": "طبی ترجیح",
-          "Please Sign In Below": "براہ مہربانی ذیل میں سائن ان کریں",
-          "Over 60": "60 سے زائد",
-          "18-34": "18-34",
-          "Under 18": "18 کے تحت",
-          "35-60": "35-60",
-          "Age?": "عمر؟",
-          "Bleeding?": "خون بہہ رہا ہے؟",
-          "Race?": "ریس؟",
-          "BAM": "بام",
-          "NHPI": "این ایچ پی",
-          "AIAN": "ایشیائی",
-          "Gender?": "جنس؟",
-          "male": "مرد",
-          "female": "لڑکی",
-          "nonbinary (identifies outside gender binary)": "غیر ثنائی (جنس بائنری سے باہر کی شناخت کرتا ہے)",
-          "Shortness of Breath?": "سانس لینے میں کمی؟",
-          "Pain Type": "درد کی قسم",
-          "Achy": "اچی",
-          "Dull": "سست",
-          "Sharp": "شارپ",
-          "Stabbing": "چھرا گھونٹنا۔",
-          "Throbbing": "دھڑک رہا ہے۔",
-          "Area of Pain?": "درد کا علاقہ؟",
-          "stomach": "پیٹ",
-          "limb": "اعضاء",
-          "chest": "سینہ",
-          "Sign In": "سائن ان"
-        },
-        "ml-model card-medical app v2 2021-2_2022": {
-          "W": "مغرب",
-          "A": "ایے",
-          "yes": "جی",
-          "no": "نہيں",
-          "head": "سر",
-          "Medical Priority": "طبی ترجیح",
-          "Please Sign In Below": "براہ مہربانی ذیل میں سائن ان کریں",
-          "Over 60": "60 سے زائد",
-          "18-34": "18-34",
-          "Under 18": "18 کے تحت",
-          "35-60": "35-60",
-          "Age?": "عمر؟",
-          "Bleeding?": "خون بہہ رہا ہے؟",
-          "Race?": "ریس؟",
-          "BAM": "بام",
-          "NHPI": "این ایچ پی",
-          "AIAN": "ایشیائی",
-          "Gender?": "جنس؟",
-          "male": "مرد",
-          "female": "لڑکی",
-          "nonbinary (identifies outside gender binary)": "غیر ثنائی (جنس بائنری سے باہر کی شناخت کرتا ہے)",
-          "Shortness of Breath?": "سانس لینے میں کمی؟",
-          "Pain Type": "درد کی قسم",
-          "Achy": "اچی",
-          "Dull": "سست",
-          "Sharp": "شارپ",
-          "Stabbing": "چھرا گھونٹنا۔",
-          "Throbbing": "دھڑک رہا ہے۔",
-          "Area of Pain?": "درد کا علاقہ؟",
-          "stomach": "پیٹ",
-          "limb": "اعضاء",
-          "chest": "سینہ",
-          "Sign In": "سائن ان"
-        },
-        "ml-model cards-book recommender model card": {
-          "Silly": "بیوقوف",
-          "Class Book Recommender": "کلاس بک ریماینڈر",
-          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "یہ اپلی کیشن آپ کے مفادات کی بنیاد پر پڑھنے کے لئے ایک کتاب کی سفارش کر سکتے ہیں. یہ اسکول میں ایک نئے طالب علم کے لئے ہے تاکہ وہ ایک کتاب پڑھ سکیں جو اسکول کے دوسرے لوگوں نے بھی پڑھا ہے اور نئے دوست بنانے کے لئے کچھ بات کرنے کے لئے کچھ ہے.",
-          "Which animal do you like the most?": "کون سا جانور آپ کو سب سے زیادہ پسند ہے؟",
-          "Wolf": "بھیڑیا",
-          "Dragon": "ڈریگن",
-          "Walrus": "والرس",
-          "How would your friends describe you?": "آپ کے دوست آپ کو کیسے بیان کریں گے؟",
-          "Independent": "آزاد",
-          "Thoughtful": "سوچے سمجھے۔",
-          "Myterious": "افسانہ",
-          "Where do you like to spend time?": "آپ وقت کہاں خرچ کرنا پسند کرتے ہیں؟",
-          "Outdoors": "باہر",
-          "Indoors": "گھر کے اندر",
-          "How do you like to spendtime?": "آپ کس طرح وقت گزارنا پسند کرتے ہیں؟",
-          "By Myself": "خود کی قسم",
-          "With Friends": "دوستوں کے ساتھ"
-        },
-        "ml-model cards-book recommender model card_2022": {
-          "Silly": "بیوقوف",
-          "Class Book Recommender": "کلاس بک ریماینڈر",
-          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "یہ اپلی کیشن آپ کے مفادات کی بنیاد پر پڑھنے کے لئے ایک کتاب کی سفارش کر سکتے ہیں. یہ اسکول میں ایک نئے طالب علم کے لئے ہے تاکہ وہ ایک کتاب پڑھ سکیں جو اسکول کے دوسرے لوگوں نے بھی پڑھا ہے اور نئے دوست بنانے کے لئے کچھ بات کرنے کے لئے کچھ ہے.",
-          "Which animal do you like the most?": "کون سا جانور آپ کو سب سے زیادہ پسند ہے؟",
-          "Wolf": "بھیڑیا",
-          "Dragon": "ڈریگن",
-          "Walrus": "والرس",
-          "How would your friends describe you?": "آپ کے دوست آپ کو کیسے بیان کریں گے؟",
-          "Independent": "آزاد",
-          "Thoughtful": "سوچے سمجھے۔",
-          "Myterious": "افسانہ",
-          "Where do you like to spend time?": "آپ وقت کہاں خرچ کرنا پسند کرتے ہیں؟",
-          "Outdoors": "باہر",
-          "Indoors": "گھر کے اندر",
-          "How do you like to spendtime?": "آپ کس طرح وقت گزارنا پسند کرتے ہیں؟",
-          "By Myself": "خود کی قسم",
-          "With Friends": "دوستوں کے ساتھ"
-        },
-        "ml-models in applab-choice if quotes": {
-          "3": "3",
           "2": "2",
-          "1": "1",
-          "Free Time": "مفت وقت",
-          "Playful?": "چنچل؟",
-          "Sort Of": "ترتیب دیں",
-          "Not At All": "بالکل نہیں",
-          "Very": "بہت",
-          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
-          "4+": "4+",
-          "Pet": "پالتو جانور",
-          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
-          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
-          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
-          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!"
-        },
-        "ml-models in applab-choice if quotes_2022": {
+          "20": "20",
           "3": "3",
-          "2": "2",
-          "1": "1",
-          "Free Time": "مفت وقت",
-          "Playful?": "چنچل؟",
-          "Sort Of": "ترتیب دیں",
-          "Not At All": "بالکل نہیں",
-          "Very": "بہت",
-          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
-          "4+": "4+",
-          "Pet": "پالتو جانور",
-          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
-          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
-          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
-          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!"
-        },
-        "ml-models in applab-choice if wrong place": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Free Time": "مفت وقت",
-          "Playful?": "چنچل؟",
-          "Sort Of": "ترتیب دیں",
-          "Not At All": "بالکل نہیں",
-          "Very": "بہت",
-          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
-          "4+": "4+",
-          "Pet": "پالتو جانور",
-          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
-          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
-          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
-          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!"
-        },
-        "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Free Time": "مفت وقت",
-          "Playful?": "چنچل؟",
-          "Sort Of": "ترتیب دیں",
-          "Not At All": "بالکل نہیں",
-          "Very": "بہت",
-          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
-          "4+": "4+",
-          "Pet": "پالتو جانور",
-          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
-          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
-          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
-          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!"
-        },
-        "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Free Time": "مفت وقت",
-          "Playful?": "چنچل؟",
-          "Sort Of": "ترتیب دیں",
-          "Not At All": "بالکل نہیں",
-          "Very": "بہت",
-          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
-          "4+": "4+",
-          "Pet": "پالتو جانور",
-          "More Information": "مزید معلومات",
-          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
-          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
-          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
-          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!",
-          "Intended Uses": "مقصود استعمال",
-          "Limitations and Warnings": "حدود اور انتباہ"
-        },
-        "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Free Time": "مفت وقت",
-          "Playful?": "چنچل؟",
-          "Sort Of": "ترتیب دیں",
-          "Not At All": "بالکل نہیں",
-          "Very": "بہت",
-          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
-          "4+": "4+",
-          "Pet": "پالتو جانور",
-          "More Information": "مزید معلومات",
-          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
-          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
-          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
-          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!",
-          "Intended Uses": "مقصود استعمال",
-          "Limitations and Warnings": "حدود اور انتباہ"
-        },
-        "ml-models in applab-choice predict typos": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Free Time": "مفت وقت",
-          "Playful?": "چنچل؟",
-          "Sort Of": "ترتیب دیں",
-          "Not At All": "بالکل نہیں",
-          "Very": "بہت",
-          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
-          "4+": "4+",
-          "Pet": "پالتو جانور",
-          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
-          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
-          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
-          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!"
-        },
-        "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Free Time": "مفت وقت",
-          "Playful?": "چنچل؟",
-          "Sort Of": "ترتیب دیں",
-          "Not At All": "بالکل نہیں",
-          "Very": "بہت",
-          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
-          "4+": "4+",
-          "Pet": "پالتو جانور",
-          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
-          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
-          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
-          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!"
-        },
-        "ml-models in applab-zoo assessment": {
-          "Yes": "جی",
-          "No": "نہيں",
-          "B": "بی",
-          "H": "ح",
-          "AQ": "آق",
-          "AB": "AB",
-          "It's A Reptile!": "یہ ایک سانپ ہے!",
-          "It's A Mammal!": "یہ ایک جانور ہے!",
-          "It's a Bird!": "یہ ایک پرندہ ہے!",
-          "It's a Fish!": "یہ ایک مچھلی ہے!",
-          "It's an Amphibian!": "یہ ایک امفبیون ہے!",
-          "It's a Bug!": "یہ ایک بگ ہے!",
-          "It's a Crustacean!": "یہ ایک کرسٹاسین ہے!"
-        },
-        "ml-models in applab-zoo assessment_2022": {
-          "Yes": "جی",
-          "No": "نہيں",
-          "B": "بی",
-          "H": "ح",
-          "AQ": "آق",
-          "AB": "AB",
-          "It's A Reptile!": "یہ ایک سانپ ہے!",
-          "It's A Mammal!": "یہ ایک جانور ہے!",
-          "It's a Bird!": "یہ ایک پرندہ ہے!",
-          "It's a Fish!": "یہ ایک مچھلی ہے!",
-          "It's an Amphibian!": "یہ ایک امفبیون ہے!",
-          "It's a Bug!": "یہ ایک بگ ہے!",
-          "It's a Crustacean!": "یہ ایک کرسٹاسین ہے!"
-        },
-        "ml-models in applab-zoo model embed": {
-          "Yes": "جی",
-          "No": "نہيں",
-          "Animal Predictor!": "جانوروں کی پیش گوئی!",
-          "This app will predict a type of animal based on four questions!": "یہ اپلی کیشن چار سوالات کی بنیاد پر جانوروں کی ایک قسم کی پیشن گوئی کرے گا!",
-          "More Information": "مزید معلومات",
-          "Does it have hair?": "کیا اس کے بال ہیں؟",
-          "Is it aquatic?": "کیا یہ آبی ہے؟",
-          "Does it have a backbone?": "کیا اس کی ریڑھ کی ہڈی ہے؟",
-          "Is it airborne?": "کیا یہ ہوائی ہے؟",
-          "It's A Reptile!": "یہ ایک سانپ ہے!",
-          "It's A Mammal!": "یہ ایک جانور ہے!",
-          "It's a Bird!": "یہ ایک پرندہ ہے!",
-          "It's a Fish!": "یہ ایک مچھلی ہے!",
-          "It's an Amphibian!": "یہ ایک امفبیون ہے!",
-          "It's a Bug!": "یہ ایک بگ ہے!",
-          "It's a Crustacean!": "یہ ایک کرسٹاسین ہے!",
-          "Intended Uses": "مقصود استعمال",
-          "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.": "یہ اپلی کیشن آپ کو حقیقی دنیا میں دیکھ جانوروں کی قسم کی شناخت کے لئے استعمال کیا جا سکتا ہے. یہ چڑیا یا جنگلی حیات پناہ گاہوں میں استعمال کیا جا سکتا ہے تاکہ لوگوں کو ان جانوروں کی قسم کے بارے میں تعلیم دینے میں مدد مل سکے۔",
-          "Next!": "اگلا!",
-          "Limitations": "حدود",
-          "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals.": "یہ اپلی کیشن جانوروں کی ایک چھوٹی سی سیٹ اور عام طور پر ایک چڑیا گھر میں ظاہر ہے کہ صرف جانوروں پر تربیت دی گئی تھی. یہ اپلی کیشن زیادہ غیر ملکی جانوروں کے ساتھ اچھی طرح سے کام نہیں کر سکتا."
-        },
-        "ml-models in applab-zoo model embed_2022": {
-          "Yes": "جی",
-          "No": "نہيں",
-          "Animal Predictor!": "جانوروں کی پیش گوئی!",
-          "This app will predict a type of animal based on four questions!": "یہ اپلی کیشن چار سوالات کی بنیاد پر جانوروں کی ایک قسم کی پیشن گوئی کرے گا!",
-          "More Information": "مزید معلومات",
-          "Does it have hair?": "کیا اس کے بال ہیں؟",
-          "Is it aquatic?": "کیا یہ آبی ہے؟",
-          "Does it have a backbone?": "کیا اس کی ریڑھ کی ہڈی ہے؟",
-          "Is it airborne?": "کیا یہ ہوائی ہے؟",
-          "It's A Reptile!": "یہ ایک سانپ ہے!",
-          "It's A Mammal!": "یہ ایک جانور ہے!",
-          "It's a Bird!": "یہ ایک پرندہ ہے!",
-          "It's a Fish!": "یہ ایک مچھلی ہے!",
-          "It's an Amphibian!": "یہ ایک امفبیون ہے!",
-          "It's a Bug!": "یہ ایک بگ ہے!",
-          "It's a Crustacean!": "یہ ایک کرسٹاسین ہے!",
-          "Intended Uses": "مقصود استعمال",
-          "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.": "یہ اپلی کیشن آپ کو حقیقی دنیا میں دیکھ جانوروں کی قسم کی شناخت کے لئے استعمال کیا جا سکتا ہے. یہ چڑیا یا جنگلی حیات پناہ گاہوں میں استعمال کیا جا سکتا ہے تاکہ لوگوں کو ان جانوروں کی قسم کے بارے میں تعلیم دینے میں مدد مل سکے۔",
-          "Next!": "اگلا!",
-          "Limitations": "حدود",
-          "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals.": "یہ اپلی کیشن جانوروں کی ایک چھوٹی سی سیٹ اور عام طور پر ایک چڑیا گھر میں ظاہر ہے کہ صرف جانوروں پر تربیت دی گئی تھی. یہ اپلی کیشن زیادہ غیر ملکی جانوروں کے ساتھ اچھی طرح سے کام نہیں کر سکتا."
-        },
-        "ml-models-shoes decision tree-2021": {
-          "Sports": "کھیل کود",
-          "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
-          "Another Recommendation!": "ایک اور سفارش!",
-          "We Recommend...": "ہم سفارش کرتے ہیں...",
-          "Is It Raining Outside?": "باہر بارش ہو رہی ہے؟",
-          "Yes!": "جی ہاں!",
-          "No!": "نہیں!",
-          "Where Are You Spending Your Day?": "آپ اپنا دن کہاں خرچ کر رہے ہیں؟",
-          "Choose An Option": "ایک آپشن منتخب کریں",
-          "Indoors": "گھر کے اندر",
-          "Outdoors": "باہر",
-          "In Bed": "بستر میں",
-          "Recommend Shoes": "جوتے کی سفارش کریں",
-          "What Kind Of Day is Today?": "آج کس قسم کا دن ہے؟",
-          "Casual": "آرام دہ اور پرسکون",
-          "Fancy": "فینسی"
-        },
-        "ml-models-shoes decision tree_2022": {
-          "Sports": "کھیل کود",
-          "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
-          "Another Recommendation!": "ایک اور سفارش!",
-          "We Recommend...": "ہم سفارش کرتے ہیں...",
-          "Is It Raining Outside?": "باہر بارش ہو رہی ہے؟",
-          "Yes!": "جی ہاں!",
-          "No!": "نہیں!",
-          "Where Are You Spending Your Day?": "آپ اپنا دن کہاں خرچ کر رہے ہیں؟",
-          "Choose An Option": "ایک آپشن منتخب کریں",
-          "Indoors": "گھر کے اندر",
-          "Outdoors": "باہر",
-          "In Bed": "بستر میں",
-          "Recommend Shoes": "جوتے کی سفارش کریں",
-          "What Kind Of Day is Today?": "آج کس قسم کا دن ہے؟",
-          "Casual": "آرام دہ اور پرسکون",
-          "Fancy": "فینسی"
-        },
-        "ml-use model card-example3A-2021": {
-          "rain": "بارش",
-          "snow": "برف باری",
-          "cloudy": "بادل دار",
-          "night": "رات",
-          "dusk": "ڈھلتی شام",
-          "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.": "یہ ایپ کار الرٹ سسٹم کی حفاظت کی خصوصیت کو سمولیٹ کرتا ہے. یہ سڑک کے حالات کا تجزیہ کرتا ہے اور اس کی درجہ بندی دیتا ہے کہ یہ ابھی ڈرائیونگ کرنا کتنا محفوظ ہے.",
-          "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself": "نوٹ: عام طور پر اس اعداد و شمار کے تمام سینسر کی طرف سے جمع کیا جائے گا. اس ٹیسٹ کے لئے، آپ کو اپنے آپ کو ڈیٹا درج کرنے کی ضرورت ہوگی",
-          "Weather:": "موسم:",
-          "foggy": "دھندلا",
-          "sunny": "روشن",
-          "Time Of Day:": "دن کا وقت:",
-          "daylight": "دن کی روشنی",
-          "Temperature:": "درجہ حرارت:",
-          "Cars:": "کاریں:",
-          "How Many Other Cars Are On The Road?": "سڑک پر کتنے دیگر کاریں ہیں؟",
-          "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.": "یہ خصوصیت اس بات کا تعین کرتی ہے کہ قربت سینسر کا استعمال کرتے ہوئے سڑک پر کتنی دیگر کاریں ہیں. سڑک پر جتنی زیادہ کاریں ہوتی ہیں اتنی ہی خطرناک ڈرائیونگ کے حالات ہوسکتے ہیں۔",
-          "What Is The Weather Like?": "موسم کی طرح کیا ہے؟",
-          "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents": "یہ خصوصیت اس بات کا تعین کرتی ہے کہ موسم ایک ماحول سینسر کا استعمال کرتے ہوئے کیا ہے. برفانی یا دھندلا موسم میں سڑک کے حالات زیادہ خطرناک ہو جاتے ہیں۔ کچھ شرائط کے تحت، سورج ڈرائیوروں کو بھی اندھا کر سکتا ہے اور حادثات کا سبب بن سکتا ہے",
-          "What is the Temperature Outside?": "باہر درجہ حرارت کیا ہے؟",
-          "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "یہ خصوصیت درجہ حرارت سینسر کا استعمال کرتے ہوئے موجودہ درجہ حرارت کا تعین کرتی ہے. موسم بہت گرم ہے تو، گاڑیوں کو گرم اور خرابی کر سکتے ہیں. اگر موسم بہت سرد ہے تو، گاڑی کے کچھ حصے منجمد یا سخت اور خرابی کرسکتے ہیں.",
-          "What time of day is it?": "دن کا کیا وقت ہے؟",
-          "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "یہ خصوصیت ایک روشنی سینسر کا استعمال کرتے ہوئے دن کے وقت کا تعین کرتا ہے. شام اور رات کے وقت ڈرائیونگ دن کی روشنی ڈرائیونگ سے زیادہ خطرناک ہوتے ہیں.",
-          "Predict!": "پیشن گوئی!"
-        },
-        "ml-use model card-example3A_2022": {
-          "rain": "بارش",
-          "snow": "برف باری",
-          "cloudy": "بادل دار",
-          "night": "رات",
-          "dusk": "ڈھلتی شام",
-          "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.": "یہ ایپ کار الرٹ سسٹم کی حفاظت کی خصوصیت کو سمولیٹ کرتا ہے. یہ سڑک کے حالات کا تجزیہ کرتا ہے اور اس کی درجہ بندی دیتا ہے کہ یہ ابھی ڈرائیونگ کرنا کتنا محفوظ ہے.",
-          "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself": "نوٹ: عام طور پر اس اعداد و شمار کے تمام سینسر کی طرف سے جمع کیا جائے گا. اس ٹیسٹ کے لئے، آپ کو اپنے آپ کو ڈیٹا درج کرنے کی ضرورت ہوگی",
-          "Weather:": "موسم:",
-          "foggy": "دھندلا",
-          "sunny": "روشن",
-          "Time Of Day:": "دن کا وقت:",
-          "daylight": "دن کی روشنی",
-          "Temperature:": "درجہ حرارت:",
-          "Cars:": "کاریں:",
-          "How Many Other Cars Are On The Road?": "سڑک پر کتنے دیگر کاریں ہیں؟",
-          "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.": "یہ خصوصیت اس بات کا تعین کرتی ہے کہ قربت سینسر کا استعمال کرتے ہوئے سڑک پر کتنی دیگر کاریں ہیں. سڑک پر جتنی زیادہ کاریں ہوتی ہیں اتنی ہی خطرناک ڈرائیونگ کے حالات ہوسکتے ہیں۔",
-          "What Is The Weather Like?": "موسم کی طرح کیا ہے؟",
-          "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents": "یہ خصوصیت اس بات کا تعین کرتی ہے کہ موسم ایک ماحول سینسر کا استعمال کرتے ہوئے کیا ہے. برفانی یا دھندلا موسم میں سڑک کے حالات زیادہ خطرناک ہو جاتے ہیں۔ کچھ شرائط کے تحت، سورج ڈرائیوروں کو بھی اندھا کر سکتا ہے اور حادثات کا سبب بن سکتا ہے",
-          "What is the Temperature Outside?": "باہر درجہ حرارت کیا ہے؟",
-          "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "یہ خصوصیت درجہ حرارت سینسر کا استعمال کرتے ہوئے موجودہ درجہ حرارت کا تعین کرتی ہے. موسم بہت گرم ہے تو، گاڑیوں کو گرم اور خرابی کر سکتے ہیں. اگر موسم بہت سرد ہے تو، گاڑی کے کچھ حصے منجمد یا سخت اور خرابی کرسکتے ہیں.",
-          "What time of day is it?": "دن کا کیا وقت ہے؟",
-          "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "یہ خصوصیت ایک روشنی سینسر کا استعمال کرتے ہوئے دن کے وقت کا تعین کرتا ہے. شام اور رات کے وقت ڈرائیونگ دن کی روشنی ڈرائیونگ سے زیادہ خطرناک ہوتے ہیں.",
-          "Predict!": "پیشن گوئی!"
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "ml-L2 supervised - green glass door-2021": {
-          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "اس کھیل میں، ہم یہ جاننے کی کوشش کر رہے ہیں کہ گرین شیشے کے دروازے کے ذریعے کون سے الفاظ کی اجازت ہے.",
-          "Some words are accepted and others are rejected": "کچھ الفاظ قبول کیے جاتے ہیں اور بعض مسترد کر دیے جاتے ہیں۔",
-          "In the next screen, a wise wizard will show us how to play the game": "اگلے اسکرین میں، ایک وار مددگار ہمیں دکھائے گا کہ کس طرح کھیل کھیلنا ہے",
-          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "اس کے بعد ہمیں کھیلنے اور اندازہ لگانے کا موقع ملے گا کہ کون سے الفاظ دروازے کی طرف سے قبول یا مسترد کیے جاتے ہیں.",
-          "Start Playing": "کھیلنا شروع کریں",
-          "Word:": "لفظ:",
+          "Accepted": "منظور شدہ",
+          "Check Your Word": "اپنے کلام کی جانچ پڑتال کریں",
           "Decision:": "فیصلہ:",
-          "New Example Word": "نیا مثال لفظ",
           "I'm Ready To Try Myself!": "میں خود کی کوشش کرنے کے لئے تیار ہوں!",
-          "See All Results": "تمام نتائج دیکھیں",
+          "In the next screen, a wise wizard will show us how to play the game": "اگلے اسکرین میں، ایک وار مددگار ہمیں دکھائے گا کہ کس طرح کھیل کھیلنا ہے",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "اس کھیل میں، ہم یہ جاننے کی کوشش کر رہے ہیں کہ گرین شیشے کے دروازے کے ذریعے کون سے الفاظ کی اجازت ہے.",
+          "New Example Word": "نیا مثال لفظ",
           "On this screen, the wizard can show you example words. See if you notice any patterns": "اس اسکرین پر، مددگار آپ کو مثال کے الفاظ دکھا سکتا ہے. اگر آپ کسی بھی پیٹرن کو نوٹس دیکھتے ہیں تو دیکھیں",
-          "Check Your Word": "اپنے کلام کی جانچ پڑتال کریں"
+          "Rejected": "مسترد",
+          "See All Results": "تمام نتائج دیکھیں",
+          "Some words are accepted and others are rejected": "کچھ الفاظ قبول کیے جاتے ہیں اور بعض مسترد کر دیے جاتے ہیں۔",
+          "Start Playing": "کھیلنا شروع کریں",
+          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "اس کے بعد ہمیں کھیلنے اور اندازہ لگانے کا موقع ملے گا کہ کون سے الفاظ دروازے کی طرف سے قبول یا مسترد کیے جاتے ہیں.",
+          "Word:": "لفظ:"
         },
         "ml-L2 supervised - green glass door_2022": {
-          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "اس کھیل میں، ہم یہ جاننے کی کوشش کر رہے ہیں کہ گرین شیشے کے دروازے کے ذریعے کون سے الفاظ کی اجازت ہے.",
-          "Some words are accepted and others are rejected": "کچھ الفاظ قبول کیے جاتے ہیں اور بعض مسترد کر دیے جاتے ہیں۔",
-          "In the next screen, a wise wizard will show us how to play the game": "اگلے اسکرین میں، ایک وار مددگار ہمیں دکھائے گا کہ کس طرح کھیل کھیلنا ہے",
-          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "اس کے بعد ہمیں کھیلنے اور اندازہ لگانے کا موقع ملے گا کہ کون سے الفاظ دروازے کی طرف سے قبول یا مسترد کیے جاتے ہیں.",
-          "Start Playing": "کھیلنا شروع کریں",
-          "Word:": "لفظ:",
+          "Accepted": "منظور شدہ",
+          "Check Your Word": "اپنے کلام کی جانچ پڑتال کریں",
           "Decision:": "فیصلہ:",
-          "New Example Word": "نیا مثال لفظ",
           "I'm Ready To Try Myself!": "میں خود کی کوشش کرنے کے لئے تیار ہوں!",
-          "See All Results": "تمام نتائج دیکھیں",
+          "In the next screen, a wise wizard will show us how to play the game": "اگلے اسکرین میں، ایک وار مددگار ہمیں دکھائے گا کہ کس طرح کھیل کھیلنا ہے",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "اس کھیل میں، ہم یہ جاننے کی کوشش کر رہے ہیں کہ گرین شیشے کے دروازے کے ذریعے کون سے الفاظ کی اجازت ہے.",
+          "New Example Word": "نیا مثال لفظ",
           "On this screen, the wizard can show you example words. See if you notice any patterns": "اس اسکرین پر، مددگار آپ کو مثال کے الفاظ دکھا سکتا ہے. اگر آپ کسی بھی پیٹرن کو نوٹس دیکھتے ہیں تو دیکھیں",
-          "Check Your Word": "اپنے کلام کی جانچ پڑتال کریں"
+          "Rejected": "مسترد",
+          "See All Results": "تمام نتائج دیکھیں",
+          "Some words are accepted and others are rejected": "کچھ الفاظ قبول کیے جاتے ہیں اور بعض مسترد کر دیے جاتے ہیں۔",
+          "Start Playing": "کھیلنا شروع کریں",
+          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "اس کے بعد ہمیں کھیلنے اور اندازہ لگانے کا موقع ملے گا کہ کون سے الفاظ دروازے کی طرف سے قبول یا مسترد کیے جاتے ہیں.",
+          "Word:": "لفظ:"
+        },
+        "ml-customize-raspado-2021": {
+          "chili en polbo:": "مرچ اور پولبو:",
+          "coconut:": "ناریل:",
+          "lechera:": "لیچیرا:",
+          "lime:": "چونا:",
+          "mango:": "آم:",
+          "no": "نہيں",
+          "pecan:": "پیکن:",
+          "strawberry:": "اسٹرابیری:",
+          "vanilla:": "ونیلا:",
+          "yes": "جی"
+        },
+        "ml-customize-raspado_2022": {
+          "chili en polbo:": "مرچ اور پولبو:",
+          "coconut:": "ناریل:",
+          "lechera:": "لیچیرا:",
+          "lime:": "چونا:",
+          "mango:": "آم:",
+          "no": "نہيں",
+          "pecan:": "پیکن:",
+          "strawberry:": "اسٹرابیری:",
+          "vanilla:": "ونیلا:",
+          "yes": "جی"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "According to the line you drew, your model thinks this food is a": "آپ نے اپنی طرف متوجہ کردہ لائن کے مطابق، آپ کا ماڈل سوچتا ہے کہ یہ کھانا ایک ہے",
+          "Click in two places to draw a line!": "ایک لائن اپنی طرف متوجہ کرنے کے لئے دو جگہوں پر کلک کریں!",
+          "Continue": "جاری رکھیے",
+          "Flip Colors": "رنگ پلٹائیں",
+          "Fruit Accuracy:": "پھلوں کی درستگی:",
+          "Hover over a dot to see its name": "اس کا نام دیکھنے کے لئے ایک نقطہ پر ہور",
+          "Let's See What The Model Decides": "آئیے دیکھتے ہیں کہ ماڈل کیا فیصلہ کرتا ہے",
+          "On a Scale from 1-10, how would you rate": "1-10 سے اسکیل پر، آپ کس طرح کی شرح کریں گے",
+          "Try Your Own Food!": "آپ کی اپنی خوراک کی کوشش کریں!",
+          "Veggie Accuracy:": "ویجی درستگی:",
+          "What is the nameof your food?": "آپ کی خوراک کا نام کیا ہے؟",
+          "Your new food has been added to the graph as a gray square!": "آپ کا نیا کھانا گراف میں سرمئی مربع کے طور پر شامل کیا گیا ہے!",
+          "x Axis": "X محور",
+          "y Axis": "y محور"
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "According to the line you drew, your model thinks this food is a": "آپ نے اپنی طرف متوجہ کردہ لائن کے مطابق، آپ کا ماڈل سوچتا ہے کہ یہ کھانا ایک ہے",
+          "Click in two places to draw a line!": "ایک لائن اپنی طرف متوجہ کرنے کے لئے دو جگہوں پر کلک کریں!",
+          "Continue": "جاری رکھیے",
+          "Flip Colors": "رنگ پلٹائیں",
+          "Fruit Accuracy:": "پھلوں کی درستگی:",
+          "Hover over a dot to see its name": "اس کا نام دیکھنے کے لئے ایک نقطہ پر ہور",
+          "Let's See What The Model Decides": "آئیے دیکھتے ہیں کہ ماڈل کیا فیصلہ کرتا ہے",
+          "On a Scale from 1-10, how would you rate": "1-10 سے اسکیل پر، آپ کس طرح کی شرح کریں گے",
+          "Try Your Own Food!": "آپ کی اپنی خوراک کی کوشش کریں!",
+          "Veggie Accuracy:": "ویجی درستگی:",
+          "What is the nameof your food?": "آپ کی خوراک کا نام کیا ہے؟",
+          "Your new food has been added to the graph as a gray square!": "آپ کا نیا کھانا گراف میں سرمئی مربع کے طور پر شامل کیا گیا ہے!",
+          "x Axis": "X محور",
+          "y Axis": "y محور"
+        },
+        "ml-intro app lab-book recommender demo-2021": {
+          "By Myself": "خود کی قسم",
+          "Class Book Recommender": "کلاس بک ریماینڈر",
+          "Dragon": "ڈریگن",
+          "How do you like to spendtime?": "آپ کس طرح وقت گزارنا پسند کرتے ہیں؟",
+          "How would your friends describe you?": "آپ کے دوست آپ کو کیسے بیان کریں گے؟",
+          "Independent": "آزاد",
+          "Indoors": "گھر کے اندر",
+          "Myterious": "افسانہ",
+          "Outdoors": "باہر",
+          "Silly": "بیوقوف",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "یہ اپلی کیشن آپ کے مفادات کی بنیاد پر پڑھنے کے لئے ایک کتاب کی سفارش کر سکتے ہیں. یہ اسکول میں ایک نئے طالب علم کے لئے ہے تاکہ وہ ایک کتاب پڑھ سکیں جو اسکول کے دوسرے لوگوں نے بھی پڑھا ہے اور نئے دوست بنانے کے لئے کچھ بات کرنے کے لئے کچھ ہے.",
+          "Thoughtful": "سوچے سمجھے۔",
+          "Walrus": "والرس",
+          "Where do you like to spend time?": "آپ وقت کہاں خرچ کرنا پسند کرتے ہیں؟",
+          "Which animal do you like the most?": "کون سا جانور آپ کو سب سے زیادہ پسند ہے؟",
+          "With Friends": "دوستوں کے ساتھ",
+          "Wolf": "بھیڑیا"
+        },
+        "ml-intro app lab-book recommender demo_2022": {
+          "By Myself": "خود کی قسم",
+          "Class Book Recommender": "کلاس بک ریماینڈر",
+          "Dragon": "ڈریگن",
+          "How do you like to spendtime?": "آپ کس طرح وقت گزارنا پسند کرتے ہیں؟",
+          "How would your friends describe you?": "آپ کے دوست آپ کو کیسے بیان کریں گے؟",
+          "Independent": "آزاد",
+          "Indoors": "گھر کے اندر",
+          "Myterious": "افسانہ",
+          "Outdoors": "باہر",
+          "Silly": "بیوقوف",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "یہ اپلی کیشن آپ کے مفادات کی بنیاد پر پڑھنے کے لئے ایک کتاب کی سفارش کر سکتے ہیں. یہ اسکول میں ایک نئے طالب علم کے لئے ہے تاکہ وہ ایک کتاب پڑھ سکیں جو اسکول کے دوسرے لوگوں نے بھی پڑھا ہے اور نئے دوست بنانے کے لئے کچھ بات کرنے کے لئے کچھ ہے.",
+          "Thoughtful": "سوچے سمجھے۔",
+          "Walrus": "والرس",
+          "Where do you like to spend time?": "آپ وقت کہاں خرچ کرنا پسند کرتے ہیں؟",
+          "Which animal do you like the most?": "کون سا جانور آپ کو سب سے زیادہ پسند ہے؟",
+          "With Friends": "دوستوں کے ساتھ",
+          "Wolf": "بھیڑیا"
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "18-34": "18-34",
+          "35-60": "35-60",
+          "A": "ایے",
+          "AIAN": "ایشیائی",
+          "Achy": "اچی",
+          "Age?": "عمر؟",
+          "Area of Pain?": "درد کا علاقہ؟",
+          "BAM": "بام",
+          "Bleeding?": "خون بہہ رہا ہے؟",
+          "Dull": "سست",
+          "Gender?": "جنس؟",
+          "Medical Priority": "طبی ترجیح",
+          "NHPI": "این ایچ پی",
+          "Over 60": "60 سے زائد",
+          "Pain Type": "درد کی قسم",
+          "Please Sign In Below": "براہ مہربانی ذیل میں سائن ان کریں",
+          "Race?": "ریس؟",
+          "Sharp": "شارپ",
+          "Shortness of Breath?": "سانس لینے میں کمی؟",
+          "Sign In": "سائن ان",
+          "Stabbing": "چھرا گھونٹنا۔",
+          "Throbbing": "دھڑک رہا ہے۔",
+          "Under 18": "18 کے تحت",
+          "W": "مغرب",
+          "chest": "سینہ",
+          "female": "لڑکی",
+          "head": "سر",
+          "limb": "اعضاء",
+          "male": "مرد",
+          "no": "نہيں",
+          "nonbinary (identifies outside gender binary)": "غیر ثنائی (جنس بائنری سے باہر کی شناخت کرتا ہے)",
+          "stomach": "پیٹ",
+          "yes": "جی"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "18-34": "18-34",
+          "35-60": "35-60",
+          "A": "ایے",
+          "AIAN": "ایشیائی",
+          "Achy": "اچی",
+          "Age?": "عمر؟",
+          "Area of Pain?": "درد کا علاقہ؟",
+          "BAM": "بام",
+          "Bleeding?": "خون بہہ رہا ہے؟",
+          "Dull": "سست",
+          "Gender?": "جنس؟",
+          "Medical Priority": "طبی ترجیح",
+          "NHPI": "این ایچ پی",
+          "Over 60": "60 سے زائد",
+          "Pain Type": "درد کی قسم",
+          "Please Sign In Below": "براہ مہربانی ذیل میں سائن ان کریں",
+          "Race?": "ریس؟",
+          "Sharp": "شارپ",
+          "Shortness of Breath?": "سانس لینے میں کمی؟",
+          "Sign In": "سائن ان",
+          "Stabbing": "چھرا گھونٹنا۔",
+          "Throbbing": "دھڑک رہا ہے۔",
+          "Under 18": "18 کے تحت",
+          "W": "مغرب",
+          "chest": "سینہ",
+          "female": "لڑکی",
+          "head": "سر",
+          "limb": "اعضاء",
+          "male": "مرد",
+          "no": "نہيں",
+          "nonbinary (identifies outside gender binary)": "غیر ثنائی (جنس بائنری سے باہر کی شناخت کرتا ہے)",
+          "stomach": "پیٹ",
+          "yes": "جی"
+        },
+        "ml-model cards-book recommender model card": {
+          "By Myself": "خود کی قسم",
+          "Class Book Recommender": "کلاس بک ریماینڈر",
+          "Dragon": "ڈریگن",
+          "How do you like to spendtime?": "آپ کس طرح وقت گزارنا پسند کرتے ہیں؟",
+          "How would your friends describe you?": "آپ کے دوست آپ کو کیسے بیان کریں گے؟",
+          "Independent": "آزاد",
+          "Indoors": "گھر کے اندر",
+          "Myterious": "افسانہ",
+          "Outdoors": "باہر",
+          "Silly": "بیوقوف",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "یہ اپلی کیشن آپ کے مفادات کی بنیاد پر پڑھنے کے لئے ایک کتاب کی سفارش کر سکتے ہیں. یہ اسکول میں ایک نئے طالب علم کے لئے ہے تاکہ وہ ایک کتاب پڑھ سکیں جو اسکول کے دوسرے لوگوں نے بھی پڑھا ہے اور نئے دوست بنانے کے لئے کچھ بات کرنے کے لئے کچھ ہے.",
+          "Thoughtful": "سوچے سمجھے۔",
+          "Walrus": "والرس",
+          "Where do you like to spend time?": "آپ وقت کہاں خرچ کرنا پسند کرتے ہیں؟",
+          "Which animal do you like the most?": "کون سا جانور آپ کو سب سے زیادہ پسند ہے؟",
+          "With Friends": "دوستوں کے ساتھ",
+          "Wolf": "بھیڑیا"
+        },
+        "ml-model cards-book recommender model card_2022": {
+          "By Myself": "خود کی قسم",
+          "Class Book Recommender": "کلاس بک ریماینڈر",
+          "Dragon": "ڈریگن",
+          "How do you like to spendtime?": "آپ کس طرح وقت گزارنا پسند کرتے ہیں؟",
+          "How would your friends describe you?": "آپ کے دوست آپ کو کیسے بیان کریں گے؟",
+          "Independent": "آزاد",
+          "Indoors": "گھر کے اندر",
+          "Myterious": "افسانہ",
+          "Outdoors": "باہر",
+          "Silly": "بیوقوف",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "یہ اپلی کیشن آپ کے مفادات کی بنیاد پر پڑھنے کے لئے ایک کتاب کی سفارش کر سکتے ہیں. یہ اسکول میں ایک نئے طالب علم کے لئے ہے تاکہ وہ ایک کتاب پڑھ سکیں جو اسکول کے دوسرے لوگوں نے بھی پڑھا ہے اور نئے دوست بنانے کے لئے کچھ بات کرنے کے لئے کچھ ہے.",
+          "Thoughtful": "سوچے سمجھے۔",
+          "Walrus": "والرس",
+          "Where do you like to spend time?": "آپ وقت کہاں خرچ کرنا پسند کرتے ہیں؟",
+          "Which animal do you like the most?": "کون سا جانور آپ کو سب سے زیادہ پسند ہے؟",
+          "With Friends": "دوستوں کے ساتھ",
+          "Wolf": "بھیڑیا"
+        },
+        "ml-models in applab-choice if quotes": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4+": "4+",
+          "Free Time": "مفت وقت",
+          "Not At All": "بالکل نہیں",
+          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
+          "Pet": "پالتو جانور",
+          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!",
+          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
+          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
+          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
+          "Playful?": "چنچل؟",
+          "Sort Of": "ترتیب دیں",
+          "Very": "بہت"
+        },
+        "ml-models in applab-choice if quotes_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4+": "4+",
+          "Free Time": "مفت وقت",
+          "Not At All": "بالکل نہیں",
+          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
+          "Pet": "پالتو جانور",
+          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!",
+          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
+          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
+          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
+          "Playful?": "چنچل؟",
+          "Sort Of": "ترتیب دیں",
+          "Very": "بہت"
+        },
+        "ml-models in applab-choice if wrong place": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4+": "4+",
+          "Free Time": "مفت وقت",
+          "Not At All": "بالکل نہیں",
+          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
+          "Pet": "پالتو جانور",
+          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!",
+          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
+          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
+          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
+          "Playful?": "چنچل؟",
+          "Sort Of": "ترتیب دیں",
+          "Very": "بہت"
+        },
+        "ml-models in applab-choice if wrong place_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4+": "4+",
+          "Free Time": "مفت وقت",
+          "Not At All": "بالکل نہیں",
+          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
+          "Pet": "پالتو جانور",
+          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!",
+          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
+          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
+          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
+          "Playful?": "چنچل؟",
+          "Sort Of": "ترتیب دیں",
+          "Very": "بہت"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4+": "4+",
+          "Back": "واپس",
+          "Free Time": "مفت وقت",
+          "Intended Uses": "مقصود استعمال",
+          "Limitations and Warnings": "حدود اور انتباہ",
+          "More Information": "مزید معلومات",
+          "Not At All": "بالکل نہیں",
+          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
+          "Pet": "پالتو جانور",
+          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!",
+          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
+          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
+          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
+          "Playful?": "چنچل؟",
+          "Sort Of": "ترتیب دیں",
+          "Very": "بہت"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4+": "4+",
+          "Back": "واپس",
+          "Free Time": "مفت وقت",
+          "Intended Uses": "مقصود استعمال",
+          "Limitations and Warnings": "حدود اور انتباہ",
+          "More Information": "مزید معلومات",
+          "Not At All": "بالکل نہیں",
+          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
+          "Pet": "پالتو جانور",
+          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!",
+          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
+          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
+          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
+          "Playful?": "چنچل؟",
+          "Sort Of": "ترتیب دیں",
+          "Very": "بہت"
+        },
+        "ml-models in applab-choice predict typos": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4+": "4+",
+          "Free Time": "مفت وقت",
+          "Not At All": "بالکل نہیں",
+          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
+          "Pet": "پالتو جانور",
+          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!",
+          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
+          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
+          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
+          "Playful?": "چنچل؟",
+          "Sort Of": "ترتیب دیں",
+          "Very": "بہت"
+        },
+        "ml-models in applab-choice predict typos_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4+": "4+",
+          "Free Time": "مفت وقت",
+          "Not At All": "بالکل نہیں",
+          "Number of Pets?": "پالتو جانوروں کی تعداد؟",
+          "Pet": "پالتو جانور",
+          "Pet Recommendation: Dog!": "پالتو جانوروں کی سفارش: کتا!",
+          "Pet Recommendation: Fish!": "پالتو جانوروں کی سفارش: مچھلی!",
+          "Pet Recommendation: Iguana!": "پالتو جانوروں کی سفارش: Iguana!",
+          "Pet Recommendation: Parakeet": "پالتو جانوروں کی سفارش: پالتو جانور",
+          "Playful?": "چنچل؟",
+          "Sort Of": "ترتیب دیں",
+          "Very": "بہت"
+        },
+        "ml-models in applab-zoo assessment": {
+          "AB": "AB",
+          "AQ": "آق",
+          "B": "بی",
+          "H": "ح",
+          "It's A Mammal!": "یہ ایک جانور ہے!",
+          "It's A Reptile!": "یہ ایک سانپ ہے!",
+          "It's a Bird!": "یہ ایک پرندہ ہے!",
+          "It's a Bug!": "یہ ایک بگ ہے!",
+          "It's a Crustacean!": "یہ ایک کرسٹاسین ہے!",
+          "It's a Fish!": "یہ ایک مچھلی ہے!",
+          "It's an Amphibian!": "یہ ایک امفبیون ہے!",
+          "No": "نہيں",
+          "Yes": "جی"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "AB": "AB",
+          "AQ": "آق",
+          "B": "بی",
+          "H": "ح",
+          "It's A Mammal!": "یہ ایک جانور ہے!",
+          "It's A Reptile!": "یہ ایک سانپ ہے!",
+          "It's a Bird!": "یہ ایک پرندہ ہے!",
+          "It's a Bug!": "یہ ایک بگ ہے!",
+          "It's a Crustacean!": "یہ ایک کرسٹاسین ہے!",
+          "It's a Fish!": "یہ ایک مچھلی ہے!",
+          "It's an Amphibian!": "یہ ایک امفبیون ہے!",
+          "No": "نہيں",
+          "Yes": "جی"
+        },
+        "ml-models in applab-zoo model embed": {
+          "Animal Predictor!": "جانوروں کی پیش گوئی!",
+          "Does it have a backbone?": "کیا اس کی ریڑھ کی ہڈی ہے؟",
+          "Does it have hair?": "کیا اس کے بال ہیں؟",
+          "Intended Uses": "مقصود استعمال",
+          "Is it airborne?": "کیا یہ ہوائی ہے؟",
+          "Is it aquatic?": "کیا یہ آبی ہے؟",
+          "It's A Mammal!": "یہ ایک جانور ہے!",
+          "It's A Reptile!": "یہ ایک سانپ ہے!",
+          "It's a Bird!": "یہ ایک پرندہ ہے!",
+          "It's a Bug!": "یہ ایک بگ ہے!",
+          "It's a Crustacean!": "یہ ایک کرسٹاسین ہے!",
+          "It's a Fish!": "یہ ایک مچھلی ہے!",
+          "It's an Amphibian!": "یہ ایک امفبیون ہے!",
+          "Limitations": "حدود",
+          "More Information": "مزید معلومات",
+          "Next!": "اگلا!",
+          "No": "نہيں",
+          "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.": "یہ اپلی کیشن آپ کو حقیقی دنیا میں دیکھ جانوروں کی قسم کی شناخت کے لئے استعمال کیا جا سکتا ہے. یہ چڑیا یا جنگلی حیات پناہ گاہوں میں استعمال کیا جا سکتا ہے تاکہ لوگوں کو ان جانوروں کی قسم کے بارے میں تعلیم دینے میں مدد مل سکے۔",
+          "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals.": "یہ اپلی کیشن جانوروں کی ایک چھوٹی سی سیٹ اور عام طور پر ایک چڑیا گھر میں ظاہر ہے کہ صرف جانوروں پر تربیت دی گئی تھی. یہ اپلی کیشن زیادہ غیر ملکی جانوروں کے ساتھ اچھی طرح سے کام نہیں کر سکتا.",
+          "This app will predict a type of animal based on four questions!": "یہ اپلی کیشن چار سوالات کی بنیاد پر جانوروں کی ایک قسم کی پیشن گوئی کرے گا!",
+          "Yes": "جی"
+        },
+        "ml-models in applab-zoo model embed_2022": {
+          "Animal Predictor!": "جانوروں کی پیش گوئی!",
+          "Does it have a backbone?": "کیا اس کی ریڑھ کی ہڈی ہے؟",
+          "Does it have hair?": "کیا اس کے بال ہیں؟",
+          "Intended Uses": "مقصود استعمال",
+          "Is it airborne?": "کیا یہ ہوائی ہے؟",
+          "Is it aquatic?": "کیا یہ آبی ہے؟",
+          "It's A Mammal!": "یہ ایک جانور ہے!",
+          "It's A Reptile!": "یہ ایک سانپ ہے!",
+          "It's a Bird!": "یہ ایک پرندہ ہے!",
+          "It's a Bug!": "یہ ایک بگ ہے!",
+          "It's a Crustacean!": "یہ ایک کرسٹاسین ہے!",
+          "It's a Fish!": "یہ ایک مچھلی ہے!",
+          "It's an Amphibian!": "یہ ایک امفبیون ہے!",
+          "Limitations": "حدود",
+          "More Information": "مزید معلومات",
+          "Next!": "اگلا!",
+          "No": "نہيں",
+          "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.": "یہ اپلی کیشن آپ کو حقیقی دنیا میں دیکھ جانوروں کی قسم کی شناخت کے لئے استعمال کیا جا سکتا ہے. یہ چڑیا یا جنگلی حیات پناہ گاہوں میں استعمال کیا جا سکتا ہے تاکہ لوگوں کو ان جانوروں کی قسم کے بارے میں تعلیم دینے میں مدد مل سکے۔",
+          "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals.": "یہ اپلی کیشن جانوروں کی ایک چھوٹی سی سیٹ اور عام طور پر ایک چڑیا گھر میں ظاہر ہے کہ صرف جانوروں پر تربیت دی گئی تھی. یہ اپلی کیشن زیادہ غیر ملکی جانوروں کے ساتھ اچھی طرح سے کام نہیں کر سکتا.",
+          "This app will predict a type of animal based on four questions!": "یہ اپلی کیشن چار سوالات کی بنیاد پر جانوروں کی ایک قسم کی پیشن گوئی کرے گا!",
+          "Yes": "جی"
+        },
+        "ml-models-shoes decision tree-2021": {
+          "Another Recommendation!": "ایک اور سفارش!",
+          "Casual": "آرام دہ اور پرسکون",
+          "Choose An Option": "ایک آپشن منتخب کریں",
+          "Fancy": "فینسی",
+          "In Bed": "بستر میں",
+          "Indoors": "گھر کے اندر",
+          "Is It Raining Outside?": "باہر بارش ہو رہی ہے؟",
+          "No!": "نہیں!",
+          "Outdoors": "باہر",
+          "Recommend Shoes": "جوتے کی سفارش کریں",
+          "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
+          "Sports": "کھیل کود",
+          "We Recommend...": "ہم سفارش کرتے ہیں...",
+          "What Kind Of Day is Today?": "آج کس قسم کا دن ہے؟",
+          "Where Are You Spending Your Day?": "آپ اپنا دن کہاں خرچ کر رہے ہیں؟",
+          "Yes!": "جی ہاں!"
+        },
+        "ml-models-shoes decision tree_2022": {
+          "Another Recommendation!": "ایک اور سفارش!",
+          "Casual": "آرام دہ اور پرسکون",
+          "Choose An Option": "ایک آپشن منتخب کریں",
+          "Fancy": "فینسی",
+          "In Bed": "بستر میں",
+          "Indoors": "گھر کے اندر",
+          "Is It Raining Outside?": "باہر بارش ہو رہی ہے؟",
+          "No!": "نہیں!",
+          "Outdoors": "باہر",
+          "Recommend Shoes": "جوتے کی سفارش کریں",
+          "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
+          "Sports": "کھیل کود",
+          "We Recommend...": "ہم سفارش کرتے ہیں...",
+          "What Kind Of Day is Today?": "آج کس قسم کا دن ہے؟",
+          "Where Are You Spending Your Day?": "آپ اپنا دن کہاں خرچ کر رہے ہیں؟",
+          "Yes!": "جی ہاں!"
         },
         "ml-models-shoes points-2021": {
-          "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
           "Another Recommendation!": "ایک اور سفارش!",
-          "We Recommend...": "ہم سفارش کرتے ہیں...",
-          "Where will you spend most of your time?": "آپ اپنا زیادہ تر وقت کہاں گزاریں گے؟",
+          "Casual": "آرام دہ اور پرسکون",
+          "Do you care about people noticing your shoes?": "کیا آپ اپنے جوتے دیکھ رہے لوگوں کے بارے میں پرواہ کرتے ہیں؟",
+          "Hard Work": "محنت",
+          "How do you feel about socks?": "آپ جرابوں کے بارے میں کیسے محسوس کرتے ہیں؟",
           "In Bed": "بستر میں",
           "Indoors": "گھر کے اندر",
-          "Outside in a City": "باہر ایک شہر میں",
-          "Outside in Nature": "فطرت میں باہر",
-          "What is the weather like?": "موسم کیسا ہے؟",
-          "Sunny": "سنی",
-          "Rainy": "برسات",
-          "Snowy": "برفیلی",
-          "Windy": "تیز ہوا",
-          "How do you feel about socks?": "آپ جرابوں کے بارے میں کیسے محسوس کرتے ہیں؟",
-          "Yes Socks!": "جی ہاں، جرابیں!",
-          "No Socks!": "کوئی جرابیں نہیں",
-          "What is your day like?": "آپ کا دن کیسا ہے؟",
-          "Casual": "آرام دہ اور پرسکون",
-          "Professional": "پروفیشنل",
-          "Hard Work": "محنت",
           "Lazy": "سست",
-          "Do you care about people noticing your shoes?": "کیا آپ اپنے جوتے دیکھ رہے لوگوں کے بارے میں پرواہ کرتے ہیں؟",
-          "Yes!": "جی ہاں!",
-          "No!": "نہیں!"
+          "No Socks!": "کوئی جرابیں نہیں",
+          "No!": "نہیں!",
+          "Outside in Nature": "فطرت میں باہر",
+          "Outside in a City": "باہر ایک شہر میں",
+          "Professional": "پروفیشنل",
+          "Rainy": "برسات",
+          "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
+          "Snowy": "برفیلی",
+          "Sunny": "سنی",
+          "We Recommend...": "ہم سفارش کرتے ہیں...",
+          "What is the weather like?": "موسم کیسا ہے؟",
+          "What is your day like?": "آپ کا دن کیسا ہے؟",
+          "Where will you spend most of your time?": "آپ اپنا زیادہ تر وقت کہاں گزاریں گے؟",
+          "Windy": "تیز ہوا",
+          "Yes Socks!": "جی ہاں، جرابیں!",
+          "Yes!": "جی ہاں!"
         },
         "ml-models-shoes points_2022": {
-          "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
           "Another Recommendation!": "ایک اور سفارش!",
-          "We Recommend...": "ہم سفارش کرتے ہیں...",
-          "Where will you spend most of your time?": "آپ اپنا زیادہ تر وقت کہاں گزاریں گے؟",
+          "Casual": "آرام دہ اور پرسکون",
+          "Do you care about people noticing your shoes?": "کیا آپ اپنے جوتے دیکھ رہے لوگوں کے بارے میں پرواہ کرتے ہیں؟",
+          "Hard Work": "محنت",
+          "How do you feel about socks?": "آپ جرابوں کے بارے میں کیسے محسوس کرتے ہیں؟",
           "In Bed": "بستر میں",
           "Indoors": "گھر کے اندر",
-          "Outside in a City": "باہر ایک شہر میں",
-          "Outside in Nature": "فطرت میں باہر",
-          "What is the weather like?": "موسم کیسا ہے؟",
-          "Sunny": "سنی",
-          "Rainy": "برسات",
-          "Snowy": "برفیلی",
-          "Windy": "تیز ہوا",
-          "How do you feel about socks?": "آپ جرابوں کے بارے میں کیسے محسوس کرتے ہیں؟",
-          "Yes Socks!": "جی ہاں، جرابیں!",
-          "No Socks!": "کوئی جرابیں نہیں",
-          "What is your day like?": "آپ کا دن کیسا ہے؟",
-          "Casual": "آرام دہ اور پرسکون",
-          "Professional": "پروفیشنل",
-          "Hard Work": "محنت",
           "Lazy": "سست",
-          "Do you care about people noticing your shoes?": "کیا آپ اپنے جوتے دیکھ رہے لوگوں کے بارے میں پرواہ کرتے ہیں؟",
-          "Yes!": "جی ہاں!",
-          "No!": "نہیں!"
+          "No Socks!": "کوئی جرابیں نہیں",
+          "No!": "نہیں!",
+          "Outside in Nature": "فطرت میں باہر",
+          "Outside in a City": "باہر ایک شہر میں",
+          "Professional": "پروفیشنل",
+          "Rainy": "برسات",
+          "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
+          "Snowy": "برفیلی",
+          "Sunny": "سنی",
+          "We Recommend...": "ہم سفارش کرتے ہیں...",
+          "What is the weather like?": "موسم کیسا ہے؟",
+          "What is your day like?": "آپ کا دن کیسا ہے؟",
+          "Where will you spend most of your time?": "آپ اپنا زیادہ تر وقت کہاں گزاریں گے؟",
+          "Windy": "تیز ہوا",
+          "Yes Socks!": "جی ہاں، جرابیں!",
+          "Yes!": "جی ہاں!"
         },
         "ml-models-shoes random-2021": {
-          "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
           "Another Recommendation!": "ایک اور سفارش!",
+          "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
           "We Recommend...": "ہم سفارش کرتے ہیں..."
         },
         "ml-models-shoes random_2022": {
-          "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
           "Another Recommendation!": "ایک اور سفارش!",
+          "Recommend Shoes!": "جوتے کی سفارش کرتے ہیں!",
           "We Recommend...": "ہم سفارش کرتے ہیں..."
+        },
+        "ml-use model card-example3A-2021": {
+          "Cars:": "کاریں:",
+          "How Many Other Cars Are On The Road?": "سڑک پر کتنے دیگر کاریں ہیں؟",
+          "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself": "نوٹ: عام طور پر اس اعداد و شمار کے تمام سینسر کی طرف سے جمع کیا جائے گا. اس ٹیسٹ کے لئے، آپ کو اپنے آپ کو ڈیٹا درج کرنے کی ضرورت ہوگی",
+          "Predict!": "پیشن گوئی!",
+          "Temperature:": "درجہ حرارت:",
+          "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.": "یہ ایپ کار الرٹ سسٹم کی حفاظت کی خصوصیت کو سمولیٹ کرتا ہے. یہ سڑک کے حالات کا تجزیہ کرتا ہے اور اس کی درجہ بندی دیتا ہے کہ یہ ابھی ڈرائیونگ کرنا کتنا محفوظ ہے.",
+          "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.": "یہ خصوصیت اس بات کا تعین کرتی ہے کہ قربت سینسر کا استعمال کرتے ہوئے سڑک پر کتنی دیگر کاریں ہیں. سڑک پر جتنی زیادہ کاریں ہوتی ہیں اتنی ہی خطرناک ڈرائیونگ کے حالات ہوسکتے ہیں۔",
+          "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "یہ خصوصیت درجہ حرارت سینسر کا استعمال کرتے ہوئے موجودہ درجہ حرارت کا تعین کرتی ہے. موسم بہت گرم ہے تو، گاڑیوں کو گرم اور خرابی کر سکتے ہیں. اگر موسم بہت سرد ہے تو، گاڑی کے کچھ حصے منجمد یا سخت اور خرابی کرسکتے ہیں.",
+          "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "یہ خصوصیت ایک روشنی سینسر کا استعمال کرتے ہوئے دن کے وقت کا تعین کرتا ہے. شام اور رات کے وقت ڈرائیونگ دن کی روشنی ڈرائیونگ سے زیادہ خطرناک ہوتے ہیں.",
+          "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents": "یہ خصوصیت اس بات کا تعین کرتی ہے کہ موسم ایک ماحول سینسر کا استعمال کرتے ہوئے کیا ہے. برفانی یا دھندلا موسم میں سڑک کے حالات زیادہ خطرناک ہو جاتے ہیں۔ کچھ شرائط کے تحت، سورج ڈرائیوروں کو بھی اندھا کر سکتا ہے اور حادثات کا سبب بن سکتا ہے",
+          "Time Of Day:": "دن کا وقت:",
+          "Weather:": "موسم:",
+          "What Is The Weather Like?": "موسم کی طرح کیا ہے؟",
+          "What is the Temperature Outside?": "باہر درجہ حرارت کیا ہے؟",
+          "What time of day is it?": "دن کا کیا وقت ہے؟",
+          "cloudy": "بادل دار",
+          "daylight": "دن کی روشنی",
+          "dusk": "ڈھلتی شام",
+          "foggy": "دھندلا",
+          "night": "رات",
+          "rain": "بارش",
+          "snow": "برف باری",
+          "sunny": "روشن"
+        },
+        "ml-use model card-example3A_2022": {
+          "Cars:": "کاریں:",
+          "How Many Other Cars Are On The Road?": "سڑک پر کتنے دیگر کاریں ہیں؟",
+          "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself": "نوٹ: عام طور پر اس اعداد و شمار کے تمام سینسر کی طرف سے جمع کیا جائے گا. اس ٹیسٹ کے لئے، آپ کو اپنے آپ کو ڈیٹا درج کرنے کی ضرورت ہوگی",
+          "Predict!": "پیشن گوئی!",
+          "Temperature:": "درجہ حرارت:",
+          "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.": "یہ ایپ کار الرٹ سسٹم کی حفاظت کی خصوصیت کو سمولیٹ کرتا ہے. یہ سڑک کے حالات کا تجزیہ کرتا ہے اور اس کی درجہ بندی دیتا ہے کہ یہ ابھی ڈرائیونگ کرنا کتنا محفوظ ہے.",
+          "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.": "یہ خصوصیت اس بات کا تعین کرتی ہے کہ قربت سینسر کا استعمال کرتے ہوئے سڑک پر کتنی دیگر کاریں ہیں. سڑک پر جتنی زیادہ کاریں ہوتی ہیں اتنی ہی خطرناک ڈرائیونگ کے حالات ہوسکتے ہیں۔",
+          "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "یہ خصوصیت درجہ حرارت سینسر کا استعمال کرتے ہوئے موجودہ درجہ حرارت کا تعین کرتی ہے. موسم بہت گرم ہے تو، گاڑیوں کو گرم اور خرابی کر سکتے ہیں. اگر موسم بہت سرد ہے تو، گاڑی کے کچھ حصے منجمد یا سخت اور خرابی کرسکتے ہیں.",
+          "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "یہ خصوصیت ایک روشنی سینسر کا استعمال کرتے ہوئے دن کے وقت کا تعین کرتا ہے. شام اور رات کے وقت ڈرائیونگ دن کی روشنی ڈرائیونگ سے زیادہ خطرناک ہوتے ہیں.",
+          "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents": "یہ خصوصیت اس بات کا تعین کرتی ہے کہ موسم ایک ماحول سینسر کا استعمال کرتے ہوئے کیا ہے. برفانی یا دھندلا موسم میں سڑک کے حالات زیادہ خطرناک ہو جاتے ہیں۔ کچھ شرائط کے تحت، سورج ڈرائیوروں کو بھی اندھا کر سکتا ہے اور حادثات کا سبب بن سکتا ہے",
+          "Time Of Day:": "دن کا وقت:",
+          "Weather:": "موسم:",
+          "What Is The Weather Like?": "موسم کی طرح کیا ہے؟",
+          "What is the Temperature Outside?": "باہر درجہ حرارت کیا ہے؟",
+          "What time of day is it?": "دن کا کیا وقت ہے؟",
+          "cloudy": "بادل دار",
+          "daylight": "دن کی روشنی",
+          "dusk": "ڈھلتی شام",
+          "foggy": "دھندلا",
+          "night": "رات",
+          "rain": "بارش",
+          "snow": "برف باری",
+          "sunny": "روشن"
         }
       }
     }

@@ -1,15 +1,20 @@
 {
   "key": "csc-bookcovers",
-  "display_name": "csc-bookcovers",
-  "category": "other",
+  "display_name": "Coding Book Covers",
+  "category": "csc",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
-  "marketing_initiative": null,
+  "curriculum_type": "Module",
+  "marketing_initiative": "CSC",
   "grade_levels": "3,4,5",
-  "header": null,
+  "header": "csc",
   "image": "https://images.code.org/11d83ab1d397cafda327782812e8988c-Book Covers.png",
   "cs_topic": "art_and_design,app_design,games_and_animations,programming",
   "school_subject": "english_language_arts",
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": "Use code to create an interactive cover of a book, using sprites and text to convey characters, setting, and more.",
+  "professional_learning_program": null,
+  "video": "https://www.youtube-nocookie.com/embed/CqUNczW1oKs/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=CqUNczW1oKs&wmode=transparent",
+  "published_date": "2023-07-10 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": 421
 }

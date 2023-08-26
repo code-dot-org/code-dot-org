@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:01:05.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
@@ -27,7 +32,7 @@
     "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
-    "long_instructions": "# Scoreboard\r\n\r\nRight now the health is displayed, but the score is not.\r\n\r\n# Do This\r\n\r\n* Find the code comment `// SCOREBOARD` and read the code that makes the health information display.\r\n* Add code to create a scoreboard.\r\n* Run the program to test your code.",
+    "long_instructions": "# Scoreboard\r\n\r\nRight now the health is displayed, but the score is not.\r\n\r\n# Do This\r\n\r\n1) Find the code comment `// SCOREBOARD` and read the code that makes the health information display.\r\n* Add code to create a scoreboard.\r\n* Run the program to test your code.",
     "code_functions": {
       "draw": null,
       "text": null,
@@ -95,13 +100,8 @@
     "validation_enabled": "true",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:01:05.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:01:05.856+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions scoreboard_2022\\\"\"],\"cloned_from\":\"CSD U3 collisions scoreboard_2022\"},{\"changed_at\":\"2023-03-09 17:49:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:01:05.856+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions scoreboard_2022\\\"\"],\"cloned_from\":\"CSD U3 collisions scoreboard_2022\"},{\"changed_at\":\"2023-03-09 17:49:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-25 19:35:04 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -689,6 +689,8 @@ fil:
         csa_nested_loops: 'CSA: Naka-nest na mga Loop'
         csa_one_dimensional_arrays: 'CSA: Isang-Dimensiyonal (1D) na mga Hanay'
         csa_polymorphism: 'CSA: Polymorphism'
+        csc-starquilts-intro: Pag-code ng Geometric Star Quilt
+        csc-ecosystems-intro: Paggaya sa Ekolohiyang Pandagat
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang bloke

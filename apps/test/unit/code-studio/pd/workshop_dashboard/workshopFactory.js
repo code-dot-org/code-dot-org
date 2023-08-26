@@ -33,6 +33,12 @@ Factory.define('workshop')
   .attr('organizer', {name: 'Oscar Organzier', email: 'oscar@code.org'})
   .attr('virtual', false);
 
+Factory.define('workshop multiple sessions')
+  .extend('workshop')
+  .attr('sessions', () => Factory.buildList('session', 3));
+
+Factory.define('virtual workshop').extend('workshop').attr('virtual', true);
+
 Factory.define('csp summer workshop')
   .extend('workshop')
   .attr('course', 'CS Principles')
@@ -132,16 +138,16 @@ Factory.define('session starting in over a month from middleOfYearFakeToday')
     'start',
     new Date(
       middleOfYearFakeToday.getFullYear(),
-      middleOfYearFakeToday.getMonth() + 2,
-      middleOfYearFakeToday.getDate()
+      middleOfYearFakeToday.getMonth(),
+      middleOfYearFakeToday.getDate() + 32
     ).toISOString()
   )
   .attr(
     'end',
     new Date(
       middleOfYearFakeToday.getFullYear(),
-      middleOfYearFakeToday.getMonth() + 2,
-      middleOfYearFakeToday.getDate()
+      middleOfYearFakeToday.getMonth(),
+      middleOfYearFakeToday.getDate() + 32
     ).toISOString()
   );
 
@@ -170,16 +176,16 @@ Factory.define('session starting in over a month from endOfYearFakeToday')
     'start',
     new Date(
       endOfYearFakeToday.getFullYear(),
-      endOfYearFakeToday.getMonth() + 2,
-      endOfYearFakeToday.getDate()
+      endOfYearFakeToday.getMonth(),
+      endOfYearFakeToday.getDate() + 32
     ).toISOString()
   )
   .attr(
     'end',
     new Date(
       endOfYearFakeToday.getFullYear(),
-      endOfYearFakeToday.getMonth() + 2,
-      endOfYearFakeToday.getDate()
+      endOfYearFakeToday.getMonth(),
+      endOfYearFakeToday.getDate() + 32
     ).toISOString()
   );
 

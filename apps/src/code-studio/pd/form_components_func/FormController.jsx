@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import $ from 'jquery';
-import {Button, Alert, FormGroup} from 'react-bootstrap';
+import {Button, Alert, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {Pagination} from '@react-bootstrap/pagination';
 import {isEqual, omit} from 'lodash';
 import i18n from '@cdo/locale';

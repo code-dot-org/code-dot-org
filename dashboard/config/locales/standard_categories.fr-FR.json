@@ -2,17 +2,722 @@
   "fr-FR": {
     "data": {
       "standard_categories": {
-        "CT": {
-          "description": "Algorithmique"
+        "1": {
+          "description": "Les élèves font preuve de créativité, acquièrent des connaissances et développent des produits et des processus innovants à l'aide de la technologie."
         },
-        "L": {
-          "description": "Langue"
+        "2": {
+          "description": "Les élèves utilisent les médias et les environnements numériques pour communiquer et travailler en collaboration, y compris à distance, afin de favoriser l'apprentissage individuel et de contribuer à l'apprentissage des autres."
+        },
+        "3": {
+          "description": "Les élèves utilisent des outils numériques pour recueillir, évaluer et utiliser des informations."
+        },
+        "3-A-i": {
+          "description": "La nature de l'apprentissage : les humains contre les machines"
+        },
+        "3-A-ii": {
+          "description": "Nature de l'apprentissage : trouver des modèles dans les données"
+        },
+        "3-A-iii": {
+          "description": "Nature de l'apprentissage : la formation d'un modèle"
+        },
+        "3-A-iv": {
+          "description": "Nature de l'apprentissage : construire ou utiliser un raisonnement"
+        },
+        "3-A-v": {
+          "description": "Nature de l'apprentissage : ajustement des représentations internes"
+        },
+        "3-A-vi": {
+          "description": "Nature de l'apprentissage : apprendre par l'expérience"
+        },
+        "3-B-i": {
+          "description": "Réseaux de neurones - structure d'un réseau de neurones"
+        },
+        "3-B-ii": {
+          "description": "Réseaux de neurones - ajustement du poids"
+        },
+        "3-C-i": {
+          "description": "Ensembles de données - ensembles de fonctionnalités"
+        },
+        "3-C-ii": {
+          "description": "Ensembles de données - grands ensembles de données"
+        },
+        "3-C-iii": {
+          "description": "Ensembles de données - biais"
+        },
+        "4": {
+          "description": "Les étudiants utilisent leur esprit critique pour planifier et mener des recherches, gérer des projets, résoudre des problèmes et prendre des décisions éclairées à l'aide d'outils et de ressources numériques appropriés."
+        },
+        "5": {
+          "description": "Les étudiants comprennent les problèmes humains, culturels et sociétaux liés à la technologie et pratiquent un comportement légal et éthique."
+        },
+        "6": {
+          "description": "Les élèves démontrent une bonne compréhension des concepts, des systèmes et des opérations technologiques."
+        },
+        "AAP-1": {
+          "description": "Pour trouver des solutions spécifiques à des problèmes généralisables, les programmeurs représentent et organisent les données de multiples manières."
+        },
+        "AAP-1.A": {
+          "description": "Représentez une valeur par une variable."
+        },
+        "AAP-1.B": {
+          "description": "Déterminez la valeur d'une variable à la suite d'une affectation."
+        },
+        "AAP-1.C": {
+          "description": "Représentez une liste ou une chaîne à l'aide d'une variable."
+        },
+        "AAP-1.D": {
+          "description": "Pour l'abstraction de données : \na. Développez une abstraction de données à l'aide de listes pour stocker plusieurs éléments.\nb. Expliquer comment l'utilisation de l'abstraction de données permet de gérer la complexité du code du programme."
+        },
+        "AAP-2": {
+          "description": "La façon dont les instructions sont séquencées et combinées dans un programme détermine le résultat calculé. Les programmes incorporent des structures d'itération et de sélection pour représenter la répétition et prendre des décisions pour gérer des valeurs d'entrée variées."
+        },
+        "AAP-2.A": {
+          "description": "Exprime un algorithme qui utilise le séquençage sans utiliser de langage de programmation."
+        },
+        "AAP-2.B": {
+          "description": "Représentez un processus algorithmique étape par étape à l'aide d'instructions de code séquentielles."
+        },
+        "AAP-2.C": {
+          "description": "Évaluez les expressions qui utilisent des opérateurs arithmétiques."
+        },
+        "AAP-2.D": {
+          "description": "Évaluez les expressions qui manipulent des chaînes."
+        },
+        "AAP-2.E": {
+          "description": "Pour les relations entre deux variables, expressions ou valeurs : \na. Représentez à l'aide d'opérateurs relationnels\nb. Évaluez les expressions qui utilisent des opérateurs relationnels."
+        },
+        "AAP-2.F": {
+          "description": "Pour les relations entre les valeurs booléennes :\na. Représentez à l'aide d'opérateurs logiques.\nb. Évaluez les expressions qui utilisent des opérateurs logiques."
+        },
+        "AAP-2.G": {
+          "description": "Exprime un algorithme qui utilise la sélection sans utiliser de langage de programmation."
+        },
+        "AAP-2.I": {
+          "description": "Pour une sélection imbriquée :\na. Représentez à l'aide d'instructions conditionnelles imbriquées. \nb. Déterminez le résultat d'instructions conditionnelles imbriquées."
+        },
+        "AAP-2.J": {
+          "description": "Exprime un algorithme qui utilise l'itération sans utiliser de langage de programmation."
+        },
+        "AAP-2.K": {
+          "description": "Pour l'itération :\na. Représentez à l'aide d'instructions d'itération.\nb. Déterminez le résultat ou l'effet secondaire des instructions d'itération."
+        },
+        "AAP-2.L": {
+          "description": "Comparez plusieurs algorithmes pour déterminer s'ils produisent le même effet secondaire ou le même résultat."
+        },
+        "AAP-2.M": {
+          "description": "Pour les algorithmes : \na. Créez des algorithmes. \nb. Combinez et modifiez les algorithmes existants."
+        },
+        "AAP-2.P": {
+          "description": "Pour les algorithmes de recherche binaires :\na. Déterminez le nombre d'itérations nécessaires pour trouver une valeur dans un ensemble de données. \nb. Expliquez les exigences nécessaires pour effectuer une recherche binaire."
+        },
+        "AAP-3": {
+          "description": "Les programmeurs décomposent les problèmes en éléments plus petits et plus faciles à gérer. En créant des procédures et en exploitant des paramètres, les programmeurs généralisent les processus qui peuvent être réutilisés. Les procédures permettent aux programmeurs de s'appuyer sur du code existant qui a déjà été testé, ce qui leur permet d'écrire des programmes plus rapidement et avec plus de confiance."
+        },
+        "AAP-3.A": {
+          "description": "Pour les appels de procédure :\na. Rédigez des instructions pour appeler les procédures.\nb. Déterminez le résultat ou l'effet d'un appel de procédure."
+        },
+        "AAP-3.B": {
+          "description": "Pour les appels de procédure :\na. Rédigez des instructions pour appeler les procédures.\nb. Déterminez le résultat ou l'effet d'un appel de procédure."
+        },
+        "AAP-3.C": {
+          "description": "Développez des abstractions procédurales pour gérer la complexité d'un programme en écrivant des procédures."
+        },
+        "AAP-3.D": {
+          "description": "Sélectionnez les bibliothèques ou les segments de code existants appropriés à utiliser pour créer de nouveaux programmes."
+        },
+        "AAP-3.E": {
+          "description": "Pour générer des valeurs aléatoires : \na. Écrivez des expressions pour générer des valeurs possibles. \nb. Évaluez les expressions pour déterminer les résultats possibles."
+        },
+        "AAP-3.F": {
+          "description": "Pour les simulations :\na. Expliquez comment les ordinateurs peuvent être utilisés pour représenter des phénomènes ou des résultats du monde réel. \nb. Comparez l'utilisation des simulations avec des contextes réels."
+        },
+        "AAP-4": {
+          "description": "Il existe des problèmes que l'ordinateur ne peut pas résoudre, et même s'il peut résoudre un problème, il se peut qu'il ne soit pas en mesure de le faire dans un délai raisonnable."
+        },
+        "AAP-4.A": {
+          "description": "Pour déterminer l'efficacité d'un algorithme :\na. Expliquez la différence entre les algorithmes qui s'exécutent dans un délai raisonnable et ceux qui ne s'exécutent pas dans un délai raisonnable. \nb. Identifiez les situations dans lesquelles une solution heuristique peut être plus appropriée."
+        },
+        "AAP-4.B": {
+          "description": "Expliquer l'existence de problèmes inévitables en informatique."
+        },
+        "AP": {
+          "description": "Algorithmes et programmation"
+        },
+        "APR": {
+          "description": "Arithmétique avec polynômes et expressions rationnelles"
+        },
+        "BF": {
+          "description": "Fonctions du bâtiment"
+        },
+        "BI-1": {
+          "description": "Les ordinateurs perçoivent le monde à l'aide de capteurs"
+        },
+        "BI-2": {
+          "description": "Les agents conservent des représentations du monde et les utilisent pour raisonner"
+        },
+        "BI-3": {
+          "description": "Les ordinateurs peuvent apprendre à partir des données"
+        },
+        "BI-4": {
+          "description": "Les agents intelligents ont besoin de nombreux types de connaissances pour interagir naturellement avec les humains"
+        },
+        "BI-5": {
+          "description": "L'IA peut avoir un impact positif et négatif sur la société"
         },
         "C": {
           "description": "Tunnel"
         },
+        "CC": {
+          "description": "Comptage et cardinalité"
+        },
+        "CD": {
+          "description": "Ordinateurs et appareils de communication"
+        },
+        "CED": {
+          "description": "Création d'équations"
+        },
+        "CI": {
+          "description": "Impacts communautaires, mondiaux et éthiques"
+        },
+        "CL": {
+          "description": "Collaboration"
+        },
+        "CN": {
+          "description": "Le système de numération complexe"
+        },
+        "CO": {
+          "description": "Congruence"
+        },
+        "CON-1": {
+          "description": "La façon dont les variables et les opérateurs sont séquencés et combinés dans une expression détermine le résultat calculé."
+        },
+        "CON-1.A": {
+          "description": "Évaluer des expressions arithmétiques dans le code d'un programme"
+        },
+        "CON-1.B": {
+          "description": "Évaluer ce qui est stocké dans une variable à la suite d'une expression avec une instruction d'affectation"
+        },
+        "CON-1.C": {
+          "description": "Évaluez les expressions arithmétiques qui utilisent le casting."
+        },
+        "CON-1.D": {
+          "description": "Évaluez les expressions qui utilisent les méthodes de la classe Math."
+        },
+        "CON-1.E": {
+          "description": "Évaluez les expressions booléennes qui utilisent des opérateurs relationnels dans le code du programme."
+        },
+        "CON-1.F": {
+          "description": "Évaluez les expressions booléennes composées dans le code du programme."
+        },
+        "CON-1.G": {
+          "description": "Comparez et contrastez des expressions booléennes équivalentes."
+        },
+        "CON-1.H": {
+          "description": "Comparez les références d'objets à l'aide d'expressions booléennes dans le code du programme."
+        },
+        "CON-2": {
+          "description": "Les programmeurs incorporent l'itération et la sélection dans le code afin de fournir des instructions à l'ordinateur pour traiter chacune des nombreuses valeurs d'entrée possibles."
+        },
+        "CON-2.A": {
+          "description": "Représentez les processus logiques de branchement à l'aide d'instructions conditionnelles."
+        },
+        "CON-2.B": {
+          "description": "Représentez les processus logiques de branchement à l'aide d'instructions conditionnelles imbriquées."
+        },
+        "CON-2.C": {
+          "description": "Représentez les processus itératifs à l'aide d'une boucle while."
+        },
+        "CON-2.D": {
+          "description": "Pour les algorithmes dans le contexte d'une spécification particulière qui ne nécessitent pas l'utilisation de traversées : • Identifiez les algorithmes standard. • Modifiez les algorithmes standard. • Développez un algorithme."
+        },
+        "CON-2.E": {
+          "description": "Représentez les processus itératifs à l'aide d'une boucle for."
+        },
+        "CON-2.F": {
+          "description": "Pour les algorithmes dans le contexte d'une spécification particulière impliquant des objets String • Identifiez les algorithmes standard. • Modifiez les algorithmes standard. • Développez un algorithme."
+        },
+        "CON-2.G": {
+          "description": "Représenter des processus itératifs imbriqués"
+        },
+        "CON-2.H": {
+          "description": "Calcule le nombre d'exécutions d'instructions et compare de manière informelle les instructions itératives au moment de leur exécution."
+        },
+        "CON-2.I": {
+          "description": "Pour les algorithmes dans le contexte d'une spécification particulière qui nécessite l'utilisation de traversées de tableaux : • Identifiez les algorithmes standard. • Modifiez les algorithmes standard. • Développez un algorithme."
+        },
+        "CON-2.J": {
+          "description": "Pour les algorithmes dans le contexte d'une spécification particulière nécessitant l'utilisation de traversées ArrayList : • Identifiez les algorithmes standard. • Modifiez les algorithmes standard. • Développez un algorithme."
+        },
+        "CON-2.K": {
+          "description": "Appliquez des algorithmes de recherche séquentiels/linéaires pour rechercher des informations spécifiques dans des objets Array ou ArrayList."
+        },
+        "CON-2.L": {
+          "description": "Appliquez des algorithmes de tri par sélection et de tri par insertion pour trier les éléments des objets Array ou ArrayList."
+        },
+        "CON-2.M": {
+          "description": "Calcule le nombre d'exécutions d'instructions et compare de manière informelle les algorithmes de tri au moment de l'exécution."
+        },
+        "CON-2.N": {
+          "description": "Pour les algorithmes dans le contexte d'une spécification particulière nécessitant l'utilisation de traversées de tableaux 2D : • Identifiez les algorithmes standard. • Modifiez les algorithmes standard. • Développez un algorithme."
+        },
+        "CON-2.O": {
+          "description": "Déterminez le résultat de l'exécution de méthodes récursives."
+        },
+        "CON-2.P": {
+          "description": "Appliquez des algorithmes de recherche récursifs aux informations contenues dans des objets String, 1D array ou ArrayList."
+        },
+        "CON-2.Q": {
+          "description": "Appliquez des algorithmes récursifs pour trier les éléments d'un tableau ou d'un objet ArrayList."
+        },
+        "CP": {
+          "description": "Probabilité conditionnelle et règles de probabilité"
+        },
+        "CPP": {
+          "description": "Pratique informatique et programmation"
+        },
+        "CRD-1": {
+          "description": "L'intégration de perspectives multiples grâce à la collaboration améliore les innovations informatiques en cours de développement."
+        },
+        "CRD-1.A": {
+          "description": "Expliquer comment les innovations informatiques sont améliorées grâce à la collaboration."
+        },
+        "CRD-1.B": {
+          "description": "Expliquez comment les innovations informatiques sont développées par des groupes de personnes."
+        },
+        "CRD-1.C": {
+          "description": "Démontrer des compétences interpersonnelles efficaces lors de la collaboration."
+        },
+        "CRD-2": {
+          "description": "Les développeurs créent et innovent à l'aide d'un processus de conception itératif axé sur l'utilisateur, qui intègre des cycles de mise en œuvre et de feedback et qui laisse suffisamment de place à l'expérimentation et à la prise de risques."
+        },
+        "CRD-2.A": {
+          "description": "Décrivez l'objectif d'une innovation informatique."
+        },
+        "CRD-2.B": {
+          "description": "Expliquer le fonctionnement d'un programme ou d'un segment de code."
+        },
+        "CRD-2.C": {
+          "description": "Identifiez les entrées d'un programme."
+        },
+        "CRD-2.D": {
+          "description": "Identifiez les sorties produites par un programme."
+        },
+        "CRD-2.E": {
+          "description": "Développez un programme à l'aide d'un processus de développement."
+        },
+        "CRD-2.F": {
+          "description": "Concevez un programme et son interface utilisateur."
+        },
+        "CRD-2.G": {
+          "description": "Décrivez l'objectif d'un segment de code ou d'un programme en rédigeant de la documentation."
+        },
+        "CRD-2.H": {
+          "description": "Reconnaissez les segments de code utilisés à partir d'autres sources."
+        },
+        "CRD-2.I": {
+          "description": "Pour les erreurs dans un algorithme ou un programme : \na. Identifiez l'erreur. \nb. Corrigez l'erreur."
+        },
+        "CRD-2.J": {
+          "description": "Identifiez les entrées et les résultats attendus correspondants ou les comportements qui peuvent être utilisés pour vérifier l'exactitude d'un algorithme ou d'un programme."
+        },
+        "CS": {
+          "description": "Systèmes informatiques"
+        },
+        "CSN-1": {
+          "description": "Les systèmes informatiques et les réseaux facilitent le transfert des données."
+        },
+        "CSN-1.A": {
+          "description": "Expliquer comment les appareils informatiques fonctionnent ensemble au sein d'un réseau."
+        },
+        "CSN-1.B": {
+          "description": "Expliquez comment fonctionne Internet."
+        },
+        "CSN-1.C": {
+          "description": "Expliquer comment les données sont envoyées via Internet via des paquets."
+        },
+        "CSN-1.D": {
+          "description": "Décrivez les différences entre Internet et le World Wide Web."
+        },
+        "CSN-2": {
+          "description": "L'informatique parallèle et distribuée utilise plusieurs ordinateurs pour résoudre plus rapidement des problèmes complexes ou traiter de grands ensembles de données."
+        },
+        "CSN-2.A": {
+          "description": "Comparez les solutions aux problèmes qui utilisent le calcul séquentiel, parallèle et distribué."
+        },
+        "CSN-2.B": {
+          "description": "Déterminez l'efficacité des solutions séquentielles et parallèles."
+        },
+        "CSN-2.C": {
+          "description": "Décrire les avantages et les défis de l'informatique parallèle et distribuée."
+        },
+        "CT": {
+          "description": "Algorithmique"
+        },
+        "D1": {
+          "description": "Élaboration de questions et planification d'enquêtes"
+        },
+        "D2.Civ": {
+          "description": "Éducation civique"
+        },
+        "D2.Eco": {
+          "description": "Économie"
+        },
+        "D3.Claims": {
+          "description": "Élaboration d'allégations et utilisation de preuves"
+        },
+        "D3.Sources": {
+          "description": "Recueillir et évaluer les sources"
+        },
+        "D4.Action": {
+          "description": "Agir en connaissance de cause"
+        },
+        "D4.Conclusions": {
+          "description": "Communiquer et critiquer les conclusions"
+        },
+        "DA": {
+          "description": "Données et analyses"
+        },
+        "DAT-1": {
+          "description": "La façon dont l'ordinateur représente les données est différente de la façon dont les données sont interprétées et affichées pour l'utilisateur. Les programmes sont utilisés pour traduire les données en une représentation plus facilement compréhensible par les utilisateurs."
+        },
+        "DAT-1.A": {
+          "description": "Expliquer comment les données peuvent être représentées à l'aide de bits."
+        },
+        "DAT-1.B": {
+          "description": "Expliquer les conséquences de l'utilisation de bits pour représenter des données."
+        },
+        "DAT-1.C": {
+          "description": "Pour les nombres binaires :\na. Calculez l'équivalent binaire (base 2) d'un entier positif (base 10) et vice versa. \nb. Comparez et ordonnez des nombres binaires."
+        },
+        "DAT-1.D": {
+          "description": "Comparez les algorithmes de compression de données pour déterminer celui qui convient le mieux à un contexte particulier."
+        },
+        "DAT-2": {
+          "description": "Les programmes peuvent être utilisés pour traiter des données, ce qui permet aux utilisateurs de découvrir des informations et de créer de nouvelles connaissances."
+        },
+        "DAT-2.A": {
+          "description": "Décrivez les informations qui peuvent être extraites des données."
+        },
+        "DAT-2.B": {
+          "description": "Décrivez les informations qui peuvent être extraites des métadonnées."
+        },
+        "DAT-2.C": {
+          "description": "Identifiez les défis liés au traitement des données."
+        },
+        "DAT-2.D": {
+          "description": "Extraire des informations à partir de données à l'aide d'un programme."
+        },
+        "DAT-2.E": {
+          "description": "Expliquer comment les programmes peuvent être utilisés pour obtenir des informations et des connaissances à partir de données."
+        },
+        "EE": {
+          "description": "Expressions et équations"
+        },
+        "ESS": {
+          "description": "Sciences de la Terre et de l'espace"
+        },
+        "ESS1": {
+          "description": "La place de la Terre dans l'univers"
+        },
+        "ESS2": {
+          "description": "Systèmes de la Terre"
+        },
+        "ESS3": {
+          "description": "La Terre et l'activité humaine"
+        },
+        "ETS": {
+          "description": "L'ingénierie dans les sciences"
+        },
+        "ETS1": {
+          "description": "Conception technique"
+        },
         "F": {
           "description": "Fonctions"
+        },
+        "G": {
+          "description": "Géométrie"
+        },
+        "GMD": {
+          "description": "Mesure géométrique et dimension"
+        },
+        "GPE": {
+          "description": "Expression de propriétés géométriques à l'aide d'équations"
+        },
+        "IC": {
+          "description": "L'impact de l'informatique"
+        },
+        "ID": {
+          "description": "Interprétation des données catégorielles et quantitatives"
+        },
+        "IF": {
+          "description": "Fonctions d'interprétation"
+        },
+        "IOC-1": {
+          "description": "Bien que les innovations informatiques soient généralement conçues pour atteindre un objectif spécifique, elles peuvent avoir des conséquences imprévues."
+        },
+        "IOC-1.A": {
+          "description": "Expliquez comment l'effet d'une innovation informatique peut être à la fois bénéfique et néfaste."
+        },
+        "IOC-1.B": {
+          "description": "Expliquez comment une innovation informatique peut avoir un impact au-delà de son objectif."
+        },
+        "IOC-1.C": {
+          "description": "Décrivez les problèmes qui contribuent à la fracture numérique."
+        },
+        "IOC-1.D": {
+          "description": "Expliquez comment les innovations informatiques sont biaisées."
+        },
+        "IOC-1.E": {
+          "description": "Expliquez comment les gens participent aux processus de résolution de problèmes à grande échelle."
+        },
+        "IOC-1.F": {
+          "description": "Expliquez comment l'utilisation de l'informatique peut soulever des préoccupations juridiques et éthiques."
+        },
+        "IOC-2": {
+          "description": "L'utilisation d'innovations informatiques peut comporter des risques pour votre sécurité et votre identité personnelles."
+        },
+        "IOC-2.A": {
+          "description": "Décrire les risques pour la vie privée liés à la collecte et au stockage de données personnelles sur un système informatique."
+        },
+        "IOC-2.B": {
+          "description": "Expliquer comment les ressources informatiques peuvent être protégées et utilisées à mauvais escient."
+        },
+        "IOC-2.C": {
+          "description": "Expliquer comment l'accès non autorisé aux ressources informatiques est obtenu."
+        },
+        "L": {
+          "description": "Langue"
+        },
+        "LE": {
+          "description": "Modèles linéaires, quadratiques et exponentiels ★"
+        },
+        "LS": {
+          "description": "Sciences de la vie"
+        },
+        "LS1": {
+          "description": "Des molécules aux organismes : structures et processus"
+        },
+        "LS2": {
+          "description": "Écosystèmes : interactions, énergie et dynamique"
+        },
+        "LS3": {
+          "description": "Hérédité : héritage et variation des traits"
+        },
+        "LS4": {
+          "description": "Évolution biologique : unité et diversité"
+        },
+        "MD": {
+          "description": "Utiliser les probabilités pour prendre des décisions"
+        },
+        "MG": {
+          "description": "Modélisation avec géométrie"
+        },
+        "MOD-1": {
+          "description": "Certains objets ou concepts sont si fréquemment représentés que les programmeurs peuvent s'appuyer sur du code existant qui a déjà été testé, ce qui leur permet d'écrire des solutions plus rapidement et avec un plus grand degré de confiance"
+        },
+        "MOD-1.A": {
+          "description": "Appelez les méthodes de la classe System pour générer une sortie vers la console."
+        },
+        "MOD-1.B": {
+          "description": "Expliquez la relation entre une classe et un objet."
+        },
+        "MOD-1.C": {
+          "description": "Identifiez, à l'aide de sa signature, le bon constructeur appelé."
+        },
+        "MOD-1.D": {
+          "description": "Pour créer un objet : a. Créez des objets en appelant des constructeurs sans paramètres. b. Créez des objets en appelant des constructeurs avec des paramètres."
+        },
+        "MOD-1.E": {
+          "description": "Appelez des méthodes void non statiques sans paramètres."
+        },
+        "MOD-1.F": {
+          "description": "Appelez des méthodes void non statiques avec des paramètres"
+        },
+        "MOD-1.G": {
+          "description": "Appelez des méthodes non statiques et non nulles avec ou sans paramètres"
+        },
+        "MOD-1.H": {
+          "description": "Appelez des méthodes statiques."
+        },
+        "MOD-2": {
+          "description": "Les programmeurs utilisent du code pour représenter un objet physique ou un concept non physique, réel ou imaginaire, en définissant une classe basée sur les attributs et/ou les comportements de l'objet ou du concept"
+        },
+        "MOD-2.A": {
+          "description": "Désignez des contraintes d'accès et de visibilité pour les classes, les données, les constructeurs et les méthodes."
+        },
+        "MOD-2.B": {
+          "description": "Définissez des variables d'instance pour les attributs à initialiser via les constructeurs d'une classe."
+        },
+        "MOD-2.C": {
+          "description": "Décrivez la fonctionnalité et l'utilisation du code du programme à l'aide de commentaires."
+        },
+        "MOD-2.D": {
+          "description": "Définissez les comportements d'un objet à l'aide de méthodes non nulles sans paramètres écrits dans une classe."
+        },
+        "MOD-2.E": {
+          "description": "Définissez les comportements d'un objet à l'aide de méthodes vides avec ou sans paramètres écrits dans une classe."
+        },
+        "MOD-2.F": {
+          "description": "Définissez les comportements d'un objet à l'aide de méthodes non nulles avec des paramètres écrits dans une classe."
+        },
+        "MOD-2.G": {
+          "description": "Définissez les comportements d'une classe à l'aide de méthodes statiques."
+        },
+        "MOD-2.H": {
+          "description": "Définissez les variables statiques qui appartiennent à la classe."
+        },
+        "MOD-3": {
+          "description": "Lorsque plusieurs classes contiennent des attributs et des comportements communs, les programmeurs créent une nouvelle classe contenant les attributs et comportements partagés formant une hiérarchie. Les modifications apportées au niveau le plus élevé de la hiérarchie s'appliquent aux sous-classes."
+        },
+        "MOD-3.A": {
+          "description": "Désignez la visibilité privée des variables d'instance pour encapsuler les attributs d'un objet."
+        },
+        "MOD-3.B": {
+          "description": "Créez une relation d'héritage entre une sous-classe et la superclasse."
+        },
+        "MOD-3.C": {
+          "description": "Définissez les variables de référence d'une superclasse à affecter à un objet d'une sous-classe dans la même hiérarchie."
+        },
+        "MOD-3.D": {
+          "description": "Méthodes d'appel dans une relation d'héritage."
+        },
+        "MOD-3.E": {
+          "description": "Appelez des méthodes de classe Object par héritage."
+        },
+        "MP": {
+          "description": "Pratiques mathématiques"
+        },
+        "NBT": {
+          "description": "Nombre et opérations en base dix"
+        },
+        "NF": {
+          "description": "Nombre et opérations — Fractions"
+        },
+        "NI": {
+          "description": "Réseaux et Internet"
+        },
+        "NS": {
+          "description": "Le système de numérotation"
+        },
+        "OA": {
+          "description": "Opérations et pensée algébrique"
+        },
+        "PS": {
+          "description": "Sciences physiques"
+        },
+        "PS1": {
+          "description": "La matière et ses interactions"
+        },
+        "PS2": {
+          "description": "Mouvement et stabilité : forces et interactions"
+        },
+        "PS3": {
+          "description": "Énergie"
+        },
+        "PS4": {
+          "description": "Les ondes et leurs applications dans les technologies de transfert d'informations"
+        },
+        "Q": {
+          "description": "Quantités"
+        },
+        "REI": {
+          "description": "Raisonner avec des équations et des inégalités"
+        },
+        "RF": {
+          "description": "Compétences de base en lecture"
+        },
+        "RH": {
+          "description": "Histoire de la lecture/Études sociales"
+        },
+        "RI": {
+          "description": "Informations sur la lecture"
+        },
+        "RL": {
+          "description": "Lire de la littérature"
+        },
+        "RN": {
+          "description": "Le système de nombres réels"
+        },
+        "RP": {
+          "description": "Ratios et relations proportionnelles"
+        },
+        "RST": {
+          "description": "Science de la lecture/Technique"
+        },
+        "SL": {
+          "description": "Parler et écouter"
+        },
+        "SP": {
+          "description": "Statistiques et probabilités"
+        },
+        "SRT": {
+          "description": "Similarité, triangles droits et trigonométrie"
+        },
+        "SSE": {
+          "description": "Affichage de la structure dans les expressions"
+        },
+        "TF": {
+          "description": "Fonctions trigonométriques"
+        },
+        "VAR-1": {
+          "description": "Pour trouver des solutions spécifiques à des problèmes généralisables, les programmeurs incluent des variables dans leur code afin que le même algorithme s'exécute en utilisant différentes valeurs d'entrée."
+        },
+        "VAR-1.A": {
+          "description": "Créer des chaînes de caractères"
+        },
+        "VAR-1.B": {
+          "description": "Identifier la catégorie de type de données la plus appropriée pour une spécification particulière"
+        },
+        "VAR-1.C": {
+          "description": "Déclarer des variables du type correct pour représenter des données primitives"
+        },
+        "VAR-1.D": {
+          "description": "Définissez des variables du type approprié pour représenter les données de référence."
+        },
+        "VAR-1.E": {
+          "description": "Pour la classe String : a. Créez des objets String. b. Appelez les méthodes String."
+        },
+        "VAR-1.F": {
+          "description": "Pour les classes d'enveloppe : a. Créez des objets entiers. b. Appelez des méthodes entières. c. Créez des objets doubles. d. Appelez des méthodes doubles."
+        },
+        "VAR-1.G": {
+          "description": "Expliquez où les variables peuvent être utilisées dans le code du programme."
+        },
+        "VAR-1.H": {
+          "description": "Évaluez les expressions de référence d'objet qui utilisent le mot clé this."
+        },
+        "VAR-2": {
+          "description": "Pour gérer de grandes quantités de données ou des relations complexes entre les données, les programmeurs écrivent du code qui regroupe les données dans une structure de données unique sans créer de variables individuelles pour chaque valeur."
+        },
+        "VAR-2.A": {
+          "description": "Représentez des collections de données primitives ou de référence d'objets connexes à l'aide d'objets matriciels unidimensionnels (1D)."
+        },
+        "VAR-2.B": {
+          "description": "Parcourez les éléments d'un tableau 1D."
+        },
+        "VAR-2.C": {
+          "description": "Parcourez les éléments d'un objet matriciel 1D à l'aide d'une boucle for améliorée."
+        },
+        "VAR-2.D": {
+          "description": "Représentez des collections de données de référence d'objets connexes à l'aide d'objets ArrayList."
+        },
+        "VAR-2.E": {
+          "description": "Pour les objets ArrayList : • Parcourez à l'aide d'une boucle for ou while. • Parcourez à l'aide d'une boucle for améliorée."
+        },
+        "VAR-2.F": {
+          "description": "Représentez des collections de données primitives ou de référence d'objets connexes à l'aide d'objets matriciels bidimensionnels (2D)."
+        },
+        "VAR-2.G": {
+          "description": "Pour les objets matriciels 2D : • Traversez à l'aide de la fonction imbriquée pour les boucles. • Traversez à l'aide de la fonction imbriquée améliorée pour les boucles."
+        },
+        "VM": {
+          "description": "Quantités vectorielles et matricielles"
+        },
+        "W": {
+          "description": "Écriture"
+        },
+        "WHST": {
+          "description": "Rédaction HS/S/T"
         }
       }
     }

@@ -53,6 +53,7 @@
         finish_sign_up_subheader_provider_markdown: 'Fyll ut følgende informasjon for å fullføre opprettelsen av en Code.org konto med **%{provider}** for **%{email}**.'
         error:
           future: ikke mulig å være i framtiden
+        us_state: 'Fylke'
   beta: "beta"
   hello: "Hei, verden"
   welcome_back: "Velkommen tilbake, %{name}"
@@ -161,6 +162,7 @@
     share_teacher_email_reg_partner_preference_yes: "Ja"
     share_teacher_email_reg_partner_preference_no: "Nei"
     share_teacher_email_reg_partner_preference_required: "Du må angi en e-postpreferanse."
+    us_state: 'Fylke'
   school_info:
     title: 'Informasjon til skolen (valgfritt)'
     school_country: 'Landet til skolen'
@@ -968,6 +970,7 @@
         other: "Andre"
       workshop_course:
         csp: 'Prinsipper i informatikk'
+        other: 'Andre'
       email_opt_in:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nei'
@@ -987,3 +990,4 @@
   confirm: 'Bekreft'
   pixelation:
     binary: "Binær"
+

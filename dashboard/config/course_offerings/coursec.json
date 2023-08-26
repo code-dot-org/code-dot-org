@@ -1,6 +1,6 @@
 {
   "key": "coursec",
-  "display_name": "Course C",
+  "display_name": "CS Fundamentals: Course C",
   "category": "csf",
   "is_featured": false,
   "assignable": true,
@@ -11,5 +11,10 @@
   "image": "https://images.code.org/c3cf934b9335645a2ee31ef84b6b7dcb-Course C.png",
   "cs_topic": "programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": "In this course, students create programs with sequencing, loops, and events. They also investigate problem-solving techniques and build interactive games.",
+  "professional_learning_program": "code.org/professional-development-workshops",
+  "video": "https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent",
+  "published_date": "2023-07-10 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": 93
 }

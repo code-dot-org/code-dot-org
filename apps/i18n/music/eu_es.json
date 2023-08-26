@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "erreproduzitu soinua",
   "blockly_blockPlaySoundAtMeasureTooltip": "erreproduzitu soinua",
+  "blockly_blockPlaySoundTooltip": "erreproduzitu soinua",
   "blockly_blockRepeatTooltip": "errepikatu",
   "blockly_blockWhenRun": "martxan dagoenean",
   "blockly_blockWhenRunTooltip": "martxan dagoenean",
@@ -10,6 +10,9 @@
   "blockly_toolboxCategoryLogic": "Logika",
   "blockly_toolboxCategoryMath": "Matematika",
   "blockly_toolboxCategoryVariables": "Aldagaiak",
+  "continue": "Jarraitu",
+  "panelHeaderInstructions": "Argibideak",
+  "panelHeaderWorkspace": "Lan eremua: ",
   "share": "Partekatu",
   "startOver": "Hasi Berriro"
 }

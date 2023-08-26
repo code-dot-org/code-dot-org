@@ -171,6 +171,7 @@ ta:
       Fonts and Style: எழுத்துருக்கள் மற்றும் நடை
       FoodFight: உணவுச்சண்டை
       For Loop Fun - Unplugged Activity: லூப் வேடிக்கைக்காக - இணைக்கப்படாத செயல்பாடு
+      For Loops: சுழல்கள்
       For Loops and Color LEDs: சுழல்கள் மற்றும் வண்ண LED களுக்கு
       For Loops and Repeat Blocks: லூப்ஸ் மற்றும் ரிபீட் பிளாக்குகளுக்கு
       Free Play: இலவசமாக விளையாடு 
@@ -178,6 +179,7 @@ ta:
       'Free Play: Make an Interactive Scene': 'இலவச விளையாட்டு: ஒரு ஊடாடும் காட்சியை உருவாக்குங்கள்'
       Fruit and Veggie Explorer: பழம் மற்றும் காய்கறி எக்ஸ்ப்ளோரர்
       Functions: செயல்பாடுகள்
+      Functions with Parameters: அளவுருக்களுடன் செயல்பாடுகள்
       Get In Formation: உருவாக்கத்திற்கு வருதல்
       Getting Properties: சொத்துக்களை பெறுதல்
       Graph Paper Programming - Unplugged Activity: வரைபட காகித நிரலாக்கம் - இணைக்கப்படாத செயல்பாடு
@@ -186,6 +188,7 @@ ta:
       Headings: தலைப்புகள்
       Hello World: வணக்கம் உலகம்
       How to Create a Simple Function: ஒரு எளிய செயல்பாட்டை எவ்வாறு உருவாக்குவது
+      How to Make a Sprite: ஒரு கிறிஸ்துமஸ் மரம் எப்படி
       Ice Age Loops: பனி யுக சுழல்கள்
       Images and Sounds: படங்கள் மற்றும் ஒலிகள்
       Import Your Model: உங்கள் மாதிரியை இறக்குமதி செய்யவும்
@@ -202,6 +205,8 @@ ta:
       Intro to Side Scrollers: பக்க ஸ்க்ரோலர்களுக்கான அறிமுகம்
       Intro to Sprites: ஸ்ப்ரிட்ஸ் அறிமுகம்
       Intro to Variables: மாறிகள் அறிமுகம்
+      Introducing Sprite Lab: ஸ்பிரிட் லேப் அறிமுகம்
+      Introduction to Arrays: வரிசைகள் அறிமுகம்
       Isaac's Survey Data: ஐசக்கின் சர்வே தரவு
       Iteration and Parameters: மறு செய்கை மற்றும் அளவுருக்கள்
       Keep On Dancing!: ஆடிக்கொண்டே இரு!
@@ -243,6 +248,7 @@ ta:
       'Mini-Project: Royal Battle': 'சிறு திட்டம்: ராயல் பாட்டில் '
       "Mini-Project: Snowflake #1": "மினி-திட்டம்: ஸ்னோஃப்ளேக் #1"
       "Mini-Project: Snowflake #2": "மினி-திட்டம்: ஸ்னோஃப்ளேக் #2"
+      'Mini-Project: Sticker Art': 'மினி-திட்டம்: ஸ்டிக்கர் கலை'
       'Mini-Project: Swimming Fish': 'மினி-திட்டம்: நீச்சல் மீன்'
       'Mini-Project: Swimming Fish (continued)': 'மினி-திட்டம்: நீச்சல் மீன் (தொடரும்)'
       'Mini-Project: User Input Programs': 'மினி-திட்டம்: பயனர் உள்ளீட்டு நிரல்கள்'
@@ -263,6 +269,7 @@ ta:
       Multiframe Animations: மல்டிபிரேம் அனிமேஷன்கள்
       Musical Arrays: இசை வரிசைகள்
       My Loopy Robotic Friends - Unplugged Activity: மை லூப்பி ரோபோடிக் நண்பர்கள் - அன்பிளக் செய்யப்பட்ட செயல்பாடு
+      My Online Neighborhood: என் ஆன்லைன் அக்கம்பக்கத்து
       My Robotic Friends - Unplugged Activity: எனது ரோபோ நண்பர்கள் - இணைக்கப்படாத செயல்பாடு
       Nested Loops with the Bee: தேனீயுடன் உள்ளமைக்கப்பட்ட சுழல்கள்
       New Challenge Introduction: புதிய சவால் அறிமுகம்
@@ -274,6 +281,7 @@ ta:
       'Overview: Images': 'கண்ணோட்டம்: படங்கள்'
       'Overview: onEvent': 'கண்ணோட்டம்: படங்கள்'
       'Overview: setPosition': 'கண்ணோட்டம்: தொகுப்பு நிலை'
+      Pair Programming: ஜோடி நிரலாக்கம்
       Pet Recommender: செல்லப்பிராணி பரிந்துரையாளர்
       Picturing Data: படமாக்கல் தரவு
       Pizza Party Data: பிஸ்ஸா பார்ட்டி தரவு
@@ -374,10 +382,12 @@ ta:
       'Technique: Frequency Analysis': 'நுட்பம்: அதிர்வெண் பகுப்பாய்வு'
       Terminology Recap: சொற்களஞ்சியம் மறுபரிசீலனை
       Text Compression: உரை சுருக்க
+      The Animation Tab: தி அனிமேஷன் தாவல்
       The Artist in Code Studio: கோட் ஸ்டுடியோவில் கலைஞர்
       The Big Event - Unplugged Activity: பெரிய நிகழ்வு - இணைக்கப்படாத செயல்பாடு
       The Buzzer: தி பஸர்
       The Collector: ஆட்சியா்
+      The Harvester: தி ஹார்வெஸ்டர்
       The Internet - Unplugged Activity: இணையம் - இணைக்கப்படாத செயல்பாடு
       The Power of Words - Unplugged Activity: வார்த்தைகளின் சக்தி - இணைக்கப்படாத செயல்பாடு
       The Right App - Unplugged Activity: சரியான பயன்பாடு - இணைக்கப்படாத செயல்பாடு
@@ -395,8 +405,10 @@ ta:
       Using Random Numbers: ரேண்டம் எண்களைப் பயன்படுத்துதல்
       Using Training Data: பயிற்சி தரவைப் பயன்படுத்துதல்
       Using the LED: LED ஐப் பயன்படுத்துதல்
+      Using the Repeat Block: மீண்டும் பிளாக் பயன்படுத்தி
       Using the Switch: சுவிட்சைப் பயன்படுத்துதல்
       Variables: மாறிலிகள்
+      Velocity: திசைவேகம்
       Velocity and the Counter Pattern: வேகம் மற்றும் எதிர் முறை
       Video: காணொளி
       Video - Encryption and Public Keys: வீடியோ - குறியாக்கம் மற்றும் பொது விசைகள்
@@ -495,6 +507,7 @@ ta:
       Where'd They Go?: அவர்கள் எங்கு செல்வார்கள்?
       While Loops with the Farmer: விவசாயியுடன் சுழலும் போது
       'Widget: Text Compression': 'விட்ஜெட்: உரை சுருக்கம்'
+      Wrap-up: மடக்கு அப்
       'You Choose: Improve Your App': 'நீங்கள் தேர்வு செய்க: உங்கள் பயன்பாட்டை மேம்படுத்தவும்'
       'You Choose: Restaurant Recommendations': 'நீங்கள் தேர்வு செய்க: உணவகப் பரிந்துரைகள்'
       Your Personal Website: உங்கள் தனிப்பட்ட இணையதளம்

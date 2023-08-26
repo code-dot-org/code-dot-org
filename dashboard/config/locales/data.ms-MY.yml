@@ -1,94 +1,265 @@
 ---
 ms:
   data:
-    game:
-      name:
-        Unplug1: Pengenalan kepada Sains komputer
-        Maze: Simpang Siur
-        Unplug2: Pengiraan pemikiran
-        Unplug3: Pengaturcaraan kertas graf
-        Artist: Pelukis
-        Unplug4: Algoritma
-        Artist2: Artis 2
-        Unplug5: Fungsi
-        Farmer: Petani
-        Unplug6: Bersyarat
-        Artist3: Artis 3
-        Unplug7: Lagu
-        Farmer2: Petani 2
-        Unplug8: Abstraksi
-        Artist4: Artis 4
-        Unplug9: Pengaturcaraan penyampai
-        Farmer3: Petani 3
-        Unplug10: Internet
-        Artist5: Artis 5
-        Unplug11: Wrap-up
-        MazeEC: Simpang Siur
-        Bounce: Lantunan
-        ArtistEC: Pelukis
-        TextMatch: Padanan Teks
-        Custom: Artis
-        Spritelab: Sprite Lab
-    trophy:
-      name:
-        Bronze: Gangsa
-        Silver: Perak
-        Gold: Emas
+    callout:
+      text:
+        Infinity_move_collide_callout: Memainkan bunyi apabila peristiwa ini berlaku.
+        Infinity_move_directions_callout: Blok mana yang akan membuat Baymax bergerak
+          ke atas apabila anak panah atas ditekan?
+        Infinity_move_directions_callout_arrow: Gunakan anak panah ini untuk memandu
+        Infinity_move_right_runbutton: Tambah blok alih di sini
+        Infinity_repeat_callout: Letakkan Pindah blok di dalam sini
+        actions_category: Kotak alat mendapat wajah baru! Blok “Tindakan” ada di sini
+          sekarang.
+        add_and_drag_parameter: Tulis dalam nama parameter anda di sini, klik tambah,
+          dan kemudian seret ke dalam definisi fungsi anda
+        arrows_move_actor: Gunakan anak panah untuk menggerakkan pelakon
+        bee_for_loop: seret bilangan terbesar nektar yang anda mahu lebah untuk mengumpul
+          di sini
+        category_explanation: Anda mempunyai semua blok yang sama tetapi mereka kini
+          telah disusun dalam kategori
+        change_here: Buat perubahan anda di sini
+        craft_callout_moveforward: Kod ini akan memeriksa lahar, bolehkah anda tambahkan
+          perintah untuk bergerak ke hadapan?
+        craft_callout_preplaced: Kami telah meletakkan beberapa blok di sini untuk
+          membantu anda bermula
+        craft_callout_preplaced_house: Kod ini akan mula membina rumah anda. Bolehkah
+          anda menyiapkan rumah itu?
+        craft_drag_block_callout: Seret blok “MoveForward ();” dan snap ia di bawah
+          blok lain
+        craft_inside_repeat: Ulangi tindakan dengan meletakkan blok di sini
+        craft_run_button_callout: |2-
+
+
+          Tekan "Jalankan" untuk mencuba atur cara anda
+        craft_what_is_iron: Melombong besi ini!
+        create_function: Klik di sini untuk membuka flyout “Fungsi”, kemudian klik
+          butang “Buat Fungsi”.
+        degrees_per_side: Bahagikan 360 dengan bilangan sisi untuk mendapatkan saiz
+          setiap sudut dalam darjah.
+        drag_blocks: Seret blok “bergerak” dan snap di bawah blok lain
+        draw_square_hint: 'petunjuk: menggunakan gelung persegi anda hanya dibuat
+          dalam teka-teki terakhir.'
+        edit_add_parameter: Klik edit untuk menambah parameter dalam fungsi anda
+        edit_draw_square: Gunakan butang ini untuk mengedit fungsi dan menambah gelung.
+        edit_function: Klik di sini untuk mengedit fungsi anda.
+        edit_get_nectar: Gunakan butang ini untuk mengedit fungsi dan menukar arah
+          Bee akan berubah untuk mendapatkan nektar.
+        fill_in_actor: Isi??? dengan nombor yang sesuai dengan setiap pelakon (1,
+          2, dan 3)
+        frozen_circle_function_in_circle_turn: Jangan lupa untuk menghidupkan selepas
+          membuat setiap bulatan.
+        frozen_circle_function_with_parameter_circle: Gunakan blok “buat bulatan”
+          dan ubah saiznya.
+        frozen_create_square: Lampirkan lebih banyak blok di sini untuk membuat persegi
+        frozen_diamond_repeat: Gunakan blok ulangi untuk membuat bentuk ini.
+        frozen_snowflake_branch: Gunakan blok “Buat Cawangan Snowflake”
+        function_editor_draw_square: Ini adalah definisi fungsi anda. Blok ini berjalan
+          setiap kali anda menggunakan blok “lukis persegi”
+        get_nectar: Gunakan blok “dapatkan nektar” yang baru.
+        gray_block_explanation: Blok yang berwarna kelabu tidak boleh dipadamkan.
+          Bolehkah anda menyelesaikan teka-teki anyway?
+        house_hint: Tidak mengapa jika gambar itu belum kelihatan seperti rumah. Kami
+          akan memperbaikinya dalam teka-teki seterusnya.
+        if_bee_nectar: Gunakan blok “jika” untuk menentukan sama ada lebah perlu mendapatkan
+          nektar
+        if_else_bee: Gunakan blok “jika/lain” supaya Bee mendapat nektar dari bunga,
+          dan membuat madu jika ia bukan bunga
+        instructions_repeat_explanation: Arahan untuk setiap teka-teki diulang di
+          sini
+        jigsaw_click: Klik blok ini!
+        length_parameter: Bolehkah anda mengemas kini fungsi ini supaya ia menggunakan
+          parameter “panjang”?
+        logic_category: Buka flyout “Logik” untuk mencari blok “jika/lain”.
+        move_elsa_forward: Seret blok “Move Forward” dan snap ia di bawah “When Run”
+          blok untuk membuat Elsa bergerak ke hadapan
+        name_function: Tulis nama fungsi anda di sini
+        place_counter_variable: Seret pembolehubah kaunter anda di dalam blok ini
+        place_length_variable: Seret pembolehubah panjang di sini untuk menggantikan
+          tanda tanya
+        place_variable: Seret pembolehubah anda di dalam blok ini
+        playlab_add_blocks: Tambah blok anda di sini
+        playlab_add_move: Tambah blok “bergerak” di dalam blok berulang ini
+        playlab_add_score: Tambah blok skor di sini
+        playlab_arrow_keys: Ingat untuk menggunakan ini untuk memindahkan ahli sihir
+          selepas klik pada Run
+        playlab_drag_say: Seret blok “katakan” di sini dan ketik “hello”
+        playlab_move_girl: Gunakan blok “bergerak ke kanan” untuk menggerakkan Tenis
+          Girl
+        playlab_play_sound: Tambah & quot; main bunyi & quot; blok di sini
+        playlab_use_twice: Gunakan blok ini dua kali dan ingat untuk menukar nombor
+          pelakon
+        repeat: Letakkan blok di dalam gelung untuk mengulangi arahan
+        repeat_blocks: Gunakan blok “Ulang” dan bungkusnya di sekitar blok di ruang
+          kerja
+        repeat_blocks_1: "(1) Gunakan blok ini dan letakkannya di sekitar blok kelabu
+          di ruang kerja"
+        repeat_blocks_2: "(2) Pindahkan blok “Ulang” di sini, dan letakkan blok kelabu
+          di dalamnya"
+        repeat_full_circle: Masukkan dalam bilangan kali zombie telah bergerak untuk
+          membuat bulatan penuh
+        replace_questions: Gunakan drop-down untuk menggantikan “???” dengan nombor
+        replace_questions_degree: Gunakan drop-down untuk menggantikan “???” dengan
+          ijazah yang betul untuk bertukar
+        right_arrow_fireball: menggunakan anak panah kanan untuk menembak bola api
+        run: |2-
+
+
+          Tekan "Jalankan" untuk mencuba atur cara anda
+        set_length: Gunakan blok ini untuk menetapkan “panjang” ke nilai yang betul.
+        set_sides: Gunakan blok ini untuk menetapkan “sisi” ke nombor yang diperlukan
+          untuk menyelesaikan teka-teki.
+        set_sprite_image: Lampirkan blok “tetapkan pelakon ke gambar” ke blok “apabila
+          cerita bermula” untuk membolehkan pelakon untuk cerita ini
+        set_variable: Seret blok nombor di sini untuk menetapkan pembolehubah anda
+        show_code_explanation: Klik di sini untuk melihat kod untuk program yang anda
+          buat
+        snowflake_dropdown: Gunakan drop-down ini untuk membuat kepingan salji yang
+          berbeza!
+        studio_say_text: Taip apa yang anda mahu pelakon anda katakan dalam petikan
+          ini
+        turn_elsa: Gunakan “Turn” blok untuk membuat Elsa giliran. Nombor dalam drop-down
+          menentukan berapa banyak Elsa bertukar
+        watch_again: Klik di sini untuk menonton video sekali lagi
+        which_equation: Persamaan mana yang menjadikan setiap sisi lebih pendek untuk
+          bentuk dengan lebih banyak sisi?
+        write_draw_square_function: Seret blok dari kotak alat ke sini yang menarik
+          persegi
+        write_draw_triangle_function: Seret blok dari kotak alat ke sini yang menarik
+          segitiga
     concept:
       description:
-        sequence: Urutan
+        function: Fungsi
         if: Jika blok
         if_else: Blok (if/else)
+        loop_for: Kaunter blok
         loop_times: Mengulangi masa blok
         loop_until: Ulangi sehingga blok
         loop_while: Sementara blok
-        loop_for: Kaunter blok
-        function: Fungsi
         parameters: Fungsi-fungsi dengan parameter
+        sequence: Urutan
+    game:
+      name:
+        Applab: Makmal Aplikasi
+        Artist: Pelukis
+        Artist2: Artis 2
+        Artist3: Artis 3
+        Artist4: Artis 4
+        Artist5: Artis 5
+        ArtistEC: Pelukis
+        Bounce: Lantunan
+        Custom: Artis
+        CustomStudio: Main Makmal
+        Farmer: Petani
+        Farmer2: Petani 2
+        Farmer3: Petani 3
+        Flappy: Burung Flappy
+        Gamelab: Makmal Permainan
+        Jigsaw: Gergaji jig
+        Maze: Simpang Siur
+        MazeEC: Simpang Siur
+        MazeStep: Mod Langkah Maze
+        Multi: Pelbagai Pilihan Barang
+        NetSim: Simulator Internet
+        Spritelab: Sprite Lab
+        StudioEC: Main Makmal
+        TextMatch: Padanan Teks
+        Unplug1: Pengenalan kepada Sains komputer
+        Unplug10: Internet
+        Unplug11: Wrap-up
+        Unplug2: Pengiraan pemikiran
+        Unplug3: Pengaturcaraan kertas graf
+        Unplug4: Algoritma
+        Unplug5: Fungsi
+        Unplug6: Bersyarat
+        Unplug7: Lagu
+        Unplug8: Abstraksi
+        Unplug9: Pengaturcaraan penyampai
+        Webapp: Makmal Aplikasi
+        Wordsearch: Carian Kata
     level:
       instructions:
-        maze_2_6: Cuba bawa saya ke penceroboh hijau dengan hanya menggunakan tiga
-          blok.
+        Custom_builder: Seret blok dari kotak alat ke ruang kerja untuk menarik tahap
+          yang ingin anda buat. Tekan “Run” apabila anda sudah bersedia.
+        applab_ec_simple: Cipta aplikasi anda dengan menggunakan blok dalam kotak
+          alat.
+        jigsaw_1: Klik blok
+        jigsaw_10: Susun blok untuk membentuk imej
+        jigsaw_11: Letakkan blok ini mengikut nombor
+        jigsaw_12: Letakkan blok ini mengikut nombor
+        jigsaw_13: Betulkan teka-teki!
+        jigsaw_2: Seret blok ke sasaran
+        jigsaw_3: Susun blok untuk membentuk imej
+        jigsaw_4: Susun blok untuk membentuk imej
+        jigsaw_5: Susun blok untuk membentuk imej
+        jigsaw_6: Susun blok untuk membentuk imej
+        jigsaw_7: Susun blok untuk membentuk imej
+        jigsaw_8: Susun blok untuk membentuk imej
+        jigsaw_9: Susun blok untuk membentuk imej
+        maze_2_1: Babi ini mengacak-acak bulu saya. Bantu saya untuk mencarinya!
+        maze_2_10: Ok, kali terakhir untuk latihan - bolehkah anda menyelesaikannya
+          hanya menggunakan 4 blok?
+        maze_2_11: Orang yang dihormati. Saya zombie. Saya lapar. Mesti... mendapatkan...
+          untuk bunga matahari... Bolehkah anda mendapatkan saya di sana dengan hanya
+          5 blok?
         maze_2_12: OK, ini adalah sama, tetapi berbeza sedikit. Boleh lakukannya hanya
           dengan 5 blok?
-        turtle_1_4: 'Lukis segi tiga yang berlainan warna, dengan menggunakan pilihan
-          "warna rawak" yang mengambil warna yang berlainan setiap kali. Petunjuk:
-          anda akan mengenalpasti sejauh manakah untuk membelok dengan mengklik nombor
-          dalam blok belok.'
-        turtle_1_5: Sekarang, untuk latihan, lukis segi tiga dan kemudian segi empat
-          untuk melukis sampul surat.
-        turtle_1_6: 'Bolehkah anda mengenal pasti bagaimana untuk melukis segi tiga
-          dan segi empat? Petunjuk: Pertama, buat segi tiga, kemudian kenal pasti
-          berapa kali untuk membelok sebelum melukis segi empat.'
-        turtle_1_7: Ok, mari kita buat yang lebih sukar - lihat jika anda boleh lukis
-          gelas hijau. Segi empat ini adalah 100 piksel di setiap sisi, dan terpisah
-          50 piksel. Jangan lupa untuk lukis dengan warna hijau!
-        turtle_1_8: OK, fahamkan apa yang akan berlaku jika anda menjalankan kod ini
-          (atau tekan "Main" untuk mencuba). Kemudian, ulangi dengan mencukupi masa
-          untuk menyiapkan lukisan. Warna akan berbeza setiap kali.
-        turtle_1_9: Bolehkah anda memikirkan apa nombor untuk menggantikan tanda soal
-          untuk melukis bulatan?
-        turtle_1_10: 'Anda berjaya! Sekarang, lukis apa sahaja yang anda mahu. Antara
-          idea yang menyeronokkan: rajah kayu, snowman atau lingkaran. Juga, cuba
-          blok baru "set lebar". selamat bergembira!'
-        turtle_4_4: 'Berikut adalah kod yang sama dari teka-teki yang sebelumnya,
-          tetapi dipusing hanya 36 darjah selepas melukis setiap segitiga. Berapa
-          kalikah ini perlu diulang? (Pembayang: selepas pusingan sebanyak 360 darjah,
-          lukisan akan menjadi bulatan penuh)'
-        turtle_4_5: 'Berikut adalah kod yang sama dari teka-teki yang sebelumnya,
-          tetapi diulangi pusingan sebanyak 36 kali. Berapakah darjah yang sepatutnya
-          bagi pusingan-pusingan itu? (Pembayang: selepas pusingan sebanyak 360 darjah,
-          lukisan akan menjadi bulatan penuh)'
-        turtle_4_8: Berikut adalah penyelesaian kepada teka-teki yang sebelumnya.
-          Boleh anda menambah hanya 2 lagi blok untuk menyiapkan lukisan?
-        turtle_4_9: Berikut adalah penyelesaian kepada teka-teki yang sebelumnya.
-          Berapa darjah yang perlu anda putarkan untuk menyiapkan lukisan? (Anda mungkin
-          perlu untuk meneka beberapa kali)
-        turtle_4_10: Berikut adalah penyelesaian kepada teka-teki yang sebelumnya.
-          Berapa kali anda harus ulang untuk menyiapkan lukisan?
+        maze_2_13: 'Gunakan blok “jika” baru untuk membiarkan saya memutuskan bila
+          hendak bertukar. Petunjuk: anda hanya memerlukan satu blok lagi, tetapi
+          pelajari bagaimana kami menyiapkannya supaya anda boleh melakukannya sendiri
+          pada masa akan datang.'
+        maze_2_14: Ok, ini sama seperti teka-teki terakhir, tetapi anda perlu ingat
+          bagaimana anda menggunakan blok “jika” dan blok “ulangi” bersama-sama.
+        maze_2_15: Saya mahu bunga matahari! Gunakan blok “jika” untuk membawa saya
+          ke sana dengan jumlah blok paling sedikit.
+        maze_2_16: Ok, mari kita lakukan lagi untuk latihan - ini tidak begitu berbeza,
+          tetapi berhati-hati untuk chompers!
+        maze_2_17: "“Jika-lain” blok memeriksa keadaan, dan kemudian melakukan satu
+          perkara ATAU yang lain. Untuk mendapatkan saya ke bunga matahari cuba untuk
+          menggunakan blok baru ini."
+        maze_2_18: Satu lagi amalan blok “jika-lain”, bolehkah anda mendapatkannya
+          dengan betul pada percubaan pertama anda?
+        maze_2_19: Bolehkah anda menambah hanya 3 blok untuk membantu saya menyelesaikan
+          maze yang lebih kompleks? Jika anda melakukannya dengan betul, saya boleh
+          berjalan di mana-mana jalan curvy tidak kira panjang.
+        maze_2_2: 'Bolehkah anda membantu saya untuk menangkap Babi nakal? Stack beberapa
+          “bergerak ke hadapan” blok bersama-sama dan tekan “Run” untuk membantu saya
+          sampai ke sana. '
+        maze_2_2_5: Jejak jalan dan bawa saya ke babi bodoh. Elakkan TNT atau bulu
+          akan terbang!
+        maze_2_3: Bimbing saya kepada kejahatan hijau! (Berhati-hati untuk TNT)
+        maze_2_4: Bertenang dan membantu saya untuk mencari babi yang buruk. Jika
+          tidak, saya mungkin marah!
+        maze_2_5: Ada cara saya boleh sampai ke babi bodoh hanya menggunakan 2 blok.
+          Bolehkah anda memikirkannya?
+        maze_2_6: Cuba bawa saya ke penceroboh hijau dengan hanya menggunakan tiga
+          blok.
+        maze_2_7: Membantu saya membuang piggy buruk ini menggunakan bilangan paling
+          sedikit blok. Cuba gunakan lebih daripada satu blok “berulang kali”.
+        maze_2_8: 'Apabila blok berwarna kelabu, itu bermakna anda tidak boleh memadamkannya.
+          Selesaikan teka-teki ini menggunakan blok “ulangi” yang mengulangi 3 kali.
+          Cuba letakkan 3 blok ini di dalam blok “ulangi” kelabu: bergerak, bergerak,
+          putar.'
+        maze_2_9: Ok, cuba blok “ulangi sehingga” baru - ia akan berulang sehingga
+          saya sampai ke babi yang menjengkelkan.
+        maze_3_1: Saya perlu pergi ke babinya! Taip beberapa panggilan untuk bergerak
+          (); jadi saya boleh mendapatkan telur saya kembali.
+        maze_3_2: Tulis saya satu program, supaya saya boleh membuat ia semua jalan
+          ke khinzir.
+        maze_3_3: Bagaimana saya perlu sampai ke dalam khinzir? Pastikan saya tidak
+          masuk ke dalam kotak TNT!
+        maze_3_4: Argh! Tulis saya satu program yang membawa saya di sekitar TNT dan
+          kepada khinzir.
         maze_karel_1_1: Hai, saya ialah farmer. Saya perlukan pertolongan anda untuk
           meratakan kawasan kebun saya supaya sedia untuk penanaman. Gerakkan saya
           ke timbunan kotor dan gunakan "alihkan" blok utuk mengalihkannya.
+        maze_karel_1_10: Saya lambat bekerja, semuanya gelap, dan saya tidak dapat
+          beritahu berapa besar longgokan itu. Sekarang saya tidak ada pilihan yang
+          boleh saya gunakan untuk blok semasa. Gerakkan saya sepanjang lapangan,
+          dan jika terdapat longgokan, alihkan.
+        maze_karel_1_11: 'Ianya masih gelap di luar. Gerakkan saya sepanjang lapangan.
+          Jika terdapat longgokan, keluarkan ia, dan jika ada lubang, timbuskan ia.
+          Petunjuk: gunakan menu dropdown dari pilihan di blok "Jika".'
         maze_karel_1_2: Seterusnya, pindahkan saya ke lubang dan isi dengan DUA  penggali
           kotoran, menggunakan blok "isi".
         maze_karel_1_3: Pindahkan saya ke longgokan kotoran dan beritahu saya berapa
@@ -106,16 +277,274 @@ ms:
           aturcara yang mengisinya sehingga dipenuhi tanah?
         maze_karel_1_8: Bantu saya untuk mengisi lubang di hujung lapangan, gunakan
           blok sedikit yang mungkin.
-        maze_karel_1_10: Saya lambat bekerja, semuanya gelap, dan saya tidak dapat
-          beritahu berapa besar longgokan itu. Sekarang saya tidak ada pilihan yang
-          boleh saya gunakan untuk blok semasa. Gerakkan saya sepanjang lapangan,
-          dan jika terdapat longgokan, alihkan.
-        maze_karel_1_11: 'Ianya masih gelap di luar. Gerakkan saya sepanjang lapangan.
-          Jika terdapat longgokan, keluarkan ia, dan jika ada lubang, timbuskan ia.
-          Petunjuk: gunakan menu dropdown dari pilihan di blok "Jika".'
+        maze_karel_1_9: 'Buat saya keluarkan semua timbunan kotoran ini. Cuba gunakan
+          sebagai beberapa blok yang mungkin. Petunjuk: cuba gunakan blok “sementara”.'
+        maze_karel_2_1: 'Cuba gunakan blok untuk membantu saya alihkan kesemua longgokan
+          dan penuhkan ke dalam lubang di tanah. Cuba gunakan gelung berbanding menggunakan
+          terlalu banyak blok. Hint: anda boleh simpan gelung dalam gelung lain.'
+        maze_karel_2_10: Pindah saya di seluruh bidang, dan menggunakan kedua-dua
+          fungsi untuk membantu saya mengeluarkan semua buasir dan mengisi semua lubang.
+        maze_karel_2_2: Kami telah menentukan blok kami sendiri yang dipanggil “fill
+          5", yang kini berada dalam kategori Fungsi. Gunakannya untuk membantu saya
+          mengisi lubang ini.
+        maze_karel_2_3: Gunakan blok fungsi “fill 5" baru untuk membuat saya mengisi
+          semua lubang. Anda perlu menyeret blok “isi 5" keluar dari kategori Fungsi.
+        maze_karel_2_4: Tentukan fungsi baru yang menghilangkan 7 shovelfuls. Kemudian
+          gunakannya untuk menulis program yang membantu saya mengeluarkan semua buasir.
+        maze_karel_2_5: Buat fungsi baru yang menghilangkan 6 shovelfuls dari longgokan,
+          dan gunakannya untuk membantu saya meratakan semua buasir.
+        maze_karel_2_6: Gunakan dua fungsi baru, “isi 8" dan “keluarkan 8", untuk
+          membantu saya meratakan longgokan dan mengisi lubang.
+        maze_karel_2_7: Ada seekor lembu di ladang saya! Tulis fungsi baru yang membantu
+          saya mengelakkan lembu dan mengeluarkan longgokan. Letakkan semua blok anda
+          di dalam fungsi baru.
+        maze_karel_2_8: Guna fungsi baru ini, "Elak daripada lembu dan buangkan 1",
+          untuk membantu saya membuang semua timbunan.
+        maze_karel_2_9: Ok, inilah fungsi yang menghilangkan 4 buasir kotoran yang
+          berbeza dalam lajur menegak. Cuba letakkan fungsi ini di dalam gelung, supaya
+          anda mengeluarkan semua timbunan kotoran menggunakan hanya beberapa blok
+          baru.
+        maze_karel_debug_function_1: Apa yang perlu anda ubah mengenai program ini
+          untuk membantu saya mengeluarkan semua buasir?
+        maze_karel_debug_function_2: Bolehkah anda de-bug program ini untuk saya supaya
+          saya boleh membuat bidang saya rata?
+        maze_karel_debug_function_3: 'Edit program ini supaya saya akan mengeluarkan
+          semua buasir di padang saya. '
+        maze_karel_debug_if: Tolong! Betulkan program supaya bidang saya akan benar-benar
+          rata.
+        maze_karel_debug_if_else: De-bug program ini supaya saya boleh mengisi lubang-lubang
+          dan mengeluarkan semua buasir.
+        maze_karel_debug_repeat: De-bug program ini untuk saya supaya bidang saya
+          akan menjadi baik dan rata.
+        maze_karel_debug_seq_1: Selamat datang ke debugging! Kod saya tidak berfungsi
+          dengan betul. Bolehkah anda melihat masalah dan memperbaikinya supaya saya
+          dapat mendapatkan ladang saya rata dan bersedia untuk ditanam?
+        maze_karel_debug_seq_2: Apa yang salah dengan program ini? Bagaimana anda
+          perlu memperbaikinya supaya saya boleh mengeluarkan longgokan itu?
+        maze_karel_debug_while: Bagaimanakah anda mengubah program ini untuk membantu
+          saya mengisi lubang?
+        maze_wordsearch_k_1: Pindahkan saya untuk mengeja perkataan EAST
+        maze_wordsearch_k_13: Pindah saya satu cara, kemudian yang lain untuk mengeja
+          perkataan DEBUG
+        maze_wordsearch_k_15: Pindahkan saya satu cara, kemudian yang lain untuk mengeja
+          perkataan DI ATAS
+        maze_wordsearch_k_16: Pindahkan saya satu cara, kemudian yang lain untuk mengeja
+          perkataan BAWAH
+        maze_wordsearch_k_2: Pindahkan saya untuk mengeja perkataan SOUTH
+        maze_wordsearch_k_20: Ini adalah ujian! Pindahkan saya satu cara, kemudian
+          yang lain untuk mengeja perkataan STORY
+        maze_wordsearch_k_3: Pindahkan saya untuk mengeja perkataan WEST
+        maze_wordsearch_k_4: Pindahkan saya untuk mengeja perkataan NORTH
+        maze_wordsearch_k_6: Pindah saya Timur dan kemudian Selatan untuk mengeja
+          perkataan JUMP
+        maze_wordsearch_k_9: Pindahkan saya satu cara, kemudian yang lain untuk mengeja
+          KOD perkataan
+        mazestep_1: Penerangan langkah maze di sini
+        mazestep_2: Penerangan langkah maze di sini
+        mazestep_3: Penerangan langkah maze di sini
+        mazestep_4: Penerangan langkah maze di sini
+        mazestep_5: Penerangan langkah maze di sini
+        studio_c2_1: Bolehkah anda membuat anjing ini berkata “hello world”?
+        studio_c2_10: Bolehkah anda menambah blok untuk menukar latar belakang dan
+          kelajuan Waddles, dan kemudian bergerak dia dengan anak panah sehingga anda
+          skor?
+        studio_c2_11: Buat cerita anda sendiri. Apabila anda selesai, klik Selesai
+          untuk membiarkan rakan mencuba cerita anda di telefon mereka.
+        studio_c2_2: Bolehkah anda membuat anjing mengatakan sesuatu dan kemudian
+          meminta kucing mengatakan sesuatu selepas itu?
+        studio_c2_3: Bolehkah anda menulis program untuk membuat anjing ini bergerak
+          ke kucing?
+        studio_c2_4: Bolehkah anda menulis program yang membuat anjing bergerak ke
+          kucing, dan meminta kucing mengatakan “hello” ketika anjing itu menghampirinya?
+        studio_c2_5: Bolehkah anda menulis program untuk membuat sotong berkata “hello”
+          apabila ia diklik?
+        studio_c2_6: Bolehkah anda menulis program untuk membuat Waddles bergerak
+          menggunakan kekunci atas/bawah/kiri/kanan untuk memukul semua sasaran?
+        studio_c2_7: Blok “ulangi selama-lamanya” membolehkan anda menjalankan kod
+          secara berterusan. Bolehkah anda melampirkan blok untuk memindahkan dinosaur
+          ini ke atas dan ke bawah berulang kali?
+        studio_c2_8: Bolehkah anda mempunyai Waddles mengatakan “Aduh!” dan memainkan
+          “hit” bunyi jika dia berjalan ke dinosaur, dan kemudian bergerak dia dengan
+          anak panah untuk membuat yang berlaku?
+        studio_c2_9: Bolehkah anda menambah blok untuk menjaringkan titik apabila
+          Waddles berjalan ke sotong, dan kemudian bergerak dia dengan anak panah
+          sehingga anda skor?
+        studio_c3_game_1: Bolehkah anda menulis program untuk membuat sotong berkata
+          “hello” apabila ia diklik?
+        studio_c3_game_2: Bolehkah anda menulis program untuk membuat Waddles bergerak
+          menggunakan kekunci atas/bawah/kiri/kanan untuk memukul semua sasaran?
+        studio_c3_game_3: Blok “ulangi selama-lamanya” membolehkan anda menjalankan
+          kod secara berterusan. Bolehkah anda melampirkan blok untuk memindahkan
+          dinosaur ini ke atas dan ke bawah berulang kali?
+        studio_c3_game_4: Bolehkah anda mempunyai Waddles mengatakan “Aduh!” dan memainkan
+          “hit” bunyi jika dia berjalan ke dinosaur, dan kemudian bergerak dia dengan
+          anak panah untuk membuat yang berlaku?
+        studio_c3_game_5: Bolehkah anda menambah blok untuk menjaringkan titik apabila
+          Waddles berjalan ke sotong, dan kemudian bergerak dia dengan anak panah
+          sehingga anda skor?
+        studio_c3_game_6: Bolehkah anda menambah blok untuk menukar latar belakang
+          dan kelajuan Waddles, dan kemudian bergerak dia dengan anak panah sehingga
+          anda skor?
+        studio_c3_game_7: Buat permainan anda sendiri. Apabila anda selesai, klik
+          Selesai untuk membiarkan rakan mencuba permainan anda di telefon mereka.
+        studio_c3_story_1: Bolehkah anda membuat anjing ini berkata “hello world”?
+        studio_c3_story_2: Bolehkah anda membuat anjing mengatakan sesuatu dan kemudian
+          meminta kucing mengatakan sesuatu selepas itu?
+        studio_c3_story_3: Bolehkah anda menulis program untuk membuat anjing ini
+          bergerak ke kucing?
+        studio_c3_story_4: Bolehkah anda menulis program yang membuat anjing bergerak
+          ke kucing, dan meminta kucing mengatakan “hello” ketika anjing itu menghampirinya?
+        studio_c3_story_5: Bolehkah anda menambah blok untuk membuat sotong gembira?
+        studio_c3_story_6: Buat cerita anda sendiri. Apabila anda selesai, klik Selesai
+          untuk membiarkan rakan mencuba cerita anda di telefon mereka.
+        studio_ec_sandbox: Buat permainan anda sendiri. Apabila anda selesai, klik
+          Selesai untuk membiarkan rakan mencuba permainan anda di telefon mereka.
+        studio_full_sandbox: Buat permainan anda sendiri. Apabila anda selesai, klik
+          Selesai untuk membiarkan rakan mencuba permainan anda di telefon mereka.
+        studio_gumball_click_hello: Bolehkah anda membantu Anton mengumumkan permulaan
+          perlumbaan dengan mengatakan “Sedia, tetapkan, pergi!”? Untuk menguji program
+          anda, jangan lupa klik Anton selepas anda klik Run!
+        studio_gumball_free_play: Buat permainan atau cerita anda sendiri. Apabila
+          anda selesai, klik Selesai untuk membiarkan rakan mencuba permainan anda
+          di telefon, tablet, atau komputer mereka!
+        studio_gumball_hello1: Anais mahu membuat beberapa kawan baru. Bolehkah anda
+          membantunya mengatakan “hello” dengan menyeret blok “katakan” keluar ke
+          kawasan kerja dan menaip perkataan “hello” di dalamnya?
+        studio_gumball_hello2: Darwin (pelakon 1) dan saudaranya Gumball (pelakon
+          2) sedang menuju ke sekolah. Bantu mereka saling menyapa dengan menggunakan
+          blok “pelakon katakan” dua kali.
+        studio_gumball_join_food_fight: Sertai perjuangan makanan! Gunakan arahan
+          “pelakon membuang item kanan” untuk mempunyai Banana Joe (pelakon 1) membuang
+          makanan di Anton (pelakon 2)! Tetapkan mood Anton untuk marah apabila dia
+          terkena.
+        studio_gumball_move_events: Darwin adalah dalam pertandingan perhimpunan bendera!
+          Bantu dia berlari dengan melampirkan blok “bergerak” untuk setiap peristiwa.
+          Apabila anda selesai, klik Run dan cuba untuk mengumpul semua bendera.
+        studio_gumball_move_to_actor: Gumball (pelakon 1) dan Darwin (pelakon 2) terlambat
+          untuk hari padang! Bantuan Gumball bergerak 200 piksel ke Darwin menggunakan
+          blok “pelakon bergerak”. Seterusnya, sambungkan blok ke acara “apabila pelakon
+          menyentuh” untuk memainkan bunyi apabila mereka mencari satu sama lain.
+        studio_gumball_move_to_flag: Banana Joe adalah kira-kira untuk memenangi perlumbaan
+          hari padang! Bantu dia pergi 200 piksel terakhir menggunakan blok “bergerak”.
+        studio_gumball_repeat: Blok “ulangi selama-lamanya” membolehkan anda menjalankan
+          kod secara berterusan. Bolehkah anda melampirkan blok kepadanya untuk membantu
+          Gumball memanaskan untuk perlumbaan beliau dengan bergerak kiri dan kanan
+          berulang kali?
+        studio_gumball_sound_and_points: Kami telah menyediakan sebahagian besar kod
+          yang menyimpan Anton (pelakon 2) bergerak ke kiri dan kanan, serta kod untuk
+          memindahkan Banana Joe (pelakon 1) di sekitar skrin. Bolehkah anda menyelesaikan
+          kod dan menambah blok ke acara “apabila pelakon menyentuh” untuk menjadikannya
+          supaya anda berdua memainkan bunyi dan menjaringkan titik ketika Banana
+          Joe dan Anton bertembung? Tekan Run untuk bermain permainan.
+        studio_gumball_warn_food_fight: Darwin baru saja melarikan diri dari pertarungan
+          makanan! Tukar latar belakang kepada “watak” dan tetapkan kelajuan Darwin
+          untuk berpuasa, kemudian tekan Run dan pindahkan dia ke Penny untuk memberi
+          amaran kepadanya.
+        studio_iceage_click_hello: Bolehkah anda membantu Sid melakukan panggilan
+          terakhir untuk rakan-rakan apabila diklik? Don 't lupa untuk klik pada beliau
+          selepas anda memukul Run.
+        studio_iceage_free_play: Masa untuk membuat permainan atau cerita anda sendiri!
+          Apabila anda selesai, klik Selesai untuk membiarkan rakan mencuba permainan
+          anda di telefon, tablet, atau komputer mereka!
+        studio_iceage_hello1: Sid mahu mengumpulkan semua orang untuk pengembaraan
+          baru. Bolehkah anda membantunya mengatakan “hello” dengan menyeret blok
+          “katakan” ke kawasan kerja dan menaip perkataan “hello” di dalamnya?
+        studio_iceage_hello2: Manny (pelakon 1) mendapati Sid (pelakon 2) dan mahu
+          menjemput beliau pada pengembaraan. Bantu mereka menyambut satu sama lain
+          dengan menggunakan blok “pelakon katakan” dua kali.
+        studio_iceage_move_events: Scrat masih mencari acorns! Bantu dia scamper sekitar
+          dengan melampirkan blok “bergerak” untuk setiap peristiwa dan mengubah arah
+          untuk bekerja untuk setiap kekunci anak panah. Apabila anda selesai, klik
+          Run dan cuba untuk mengumpul semua acorns.
+        studio_iceage_move_to_actor: Diego (pelakon 1) sedang mencari Manny (pelakon
+          2). Bantu Diego bergerak 200 piksel ke Manny menggunakan blok “pelakon bergerak”.
+          Seterusnya, sambungkan blok ke acara “apabila pelakon menyentuh” untuk memainkan
+          bunyi apabila mereka mencari satu sama lain.
+        studio_iceage_move_to_flag: Scrat sedang mencari acorn beliau! Bantu dia pergi
+          200 piksel terakhir menggunakan blok “bergerak”.
+        studio_iceage_repeat: Blok “ulangi selama-lamanya” membolehkan anda menjalankan
+          kod secara berterusan. Bolehkah anda melampirkan blok kepadanya untuk membantu
+          Nenek mendapatkan latihan dengan bergerak ke kiri dan kanan berulang kali?
+        studio_iceage_sound_and_points: Kami telah menyediakan sebahagian besar kod
+          yang menyimpan Granny bergerak ke kiri dan kanan, serta kod untuk bergerak
+          Sid sekitar skrin. Bolehkah anda menyelesaikan kod dan menambah blok ke
+          acara “apabila pelakon menyentuh” untuk menjadikannya supaya anda berdua
+          memainkan bunyi dan menjaringkan titik apabila Sid dan Granny bertembung?
+          Tekan Run untuk bermain permainan.
+        studio_iceage_throw_hearts: Sid mahu membiarkan neneknya, Granny, tahu bahawa
+          dia mencintainya. Gunakan arahan “pelakon membuang” untuk mempunyai Sid
+          (pelakon 1) membuang hati di Granny (pelakon 2)! Tetapkan mood Granny untuk
+          gembira apabila dia dipukul dengan hati.
+        studio_iceage_warn_ice_age: Semua orang perlu bergerak lebih cepat kerana
+          zaman ais akan datang! Tukar latar belakang ke latar belakang yang sejuk
+          dan tetapkan kelajuan Sid untuk berpuasa, kemudian tekan Run dan gerakkan
+          dia ke Diego untuk memberi amaran kepadanya.
+        studio_k1_1: Bolehkah anda membuat anjing ini berkata “hello world”?
+        studio_k1_2: Bolehkah anda membuat anjing mengatakan sesuatu dan kemudian
+          meminta kucing mengatakan sesuatu selepas itu?
+        studio_k1_3: Bolehkah anda menulis program untuk membuat anjing ini bergerak
+          ke kucing?
+        studio_k1_4: Buat anjing bergerak ke kucing dan kucing berkata “hello” apabila
+          dia sampai di sana.
+        studio_k1_5: Bolehkah anda menambah blok untuk membuat sotong gembira?
+        studio_k1_6: Mencipta cerita anda sendiri! Gerakkan kucing dan anjing dan
+          buatkan kedua-duanya mengatakan sesuatu.
+        studio_playlab_1: Waddles mahu mengatakan “hello” - bolehkah anda membantunya?
+        studio_playlab_10: Buat permainan anda sendiri. Apabila anda selesai, klik
+          Selesai untuk membiarkan rakan mencuba permainan anda di telefon mereka.
+        studio_playlab_2: Cave Boy (pelakon 1) dan Jasmine (pelakon 2) ingin mengatakan
+          “hello” antara satu sama lain. Bolehkah anda membantu mereka dengan menggunakan
+          blok “katakan” dua kali?
+        studio_playlab_3: Bolehkah anda membantu Tennis Girl sampai ke bendera?
+        studio_playlab_4: Bolehkah anda membantu Tennis Boy (pelakon 1) sampai ke
+          Tennis Girl (pelakon 2) dan memainkan bunyi apabila dia sampai di sana?
+        studio_playlab_5: Bolehkah anda membantu Spacebot mengatakan “salam penduduk
+          bumi” apabila diklik? Jangan lupa klik selepas anda mengklik Run
+        studio_playlab_6: Bolehkah anda membantu Witch bergerak di sekitar menggunakan
+          kekunci anak panah atas/bawah/kanan/kiri untuk sampai ke semua bola api
+          ajaib?
+        studio_playlab_7: Blok “ulangi selama-lamanya” membolehkan anda menjalankan
+          kod secara berterusan. Bolehkah anda melampirkan blok kepadanya untuk membantu
+          wizard bergerak ke kanan dan kiri berulang kali?
+        studio_playlab_8: Bolehkah anda menambah blok untuk menjaringkan mata dan
+          blok untuk memainkan bunyi apabila unicorn berjalan ke wizard, dan kemudian
+          bergerak dia dengan anak panah sehingga anda skor?
+        studio_playlab_9: Tetapkan latar belakang pencerobohan asing ini dan bantu
+          Spacebot sampai ke makhluk asing dengan lebih cepat dengan mengubah kelajuannya.
+          Kemudian gerakkan dia dengan kekunci anak panah untuk sampai ke Spacebot
+          dan memberi amaran kepada orang lain
+        turtle_1_1: Hai, saya seorang artis. Anda boleh menulis kod untuk membuat
+          saya menarik hampir apa-apa. Gunakan beberapa blok untuk membuat saya menarik
+          garis kelabu dalam gambar.
+        turtle_1_10: 'Anda berjaya! Sekarang, lukis apa sahaja yang anda mahu. Antara
+          idea yang menyeronokkan: rajah kayu, snowman atau lingkaran. Juga, cuba
+          blok baru "set lebar". selamat bergembira!'
+        turtle_1_2: 'Sekarang, lukiskan persegi. NOTA: gunakan warna kegemaran anda
+          dengan memilihnya di blok “set color” yang baru.'
+        turtle_1_3: Buat persegi menggunakan hanya 3 blok.
+        turtle_1_4: 'Lukis segi tiga yang berlainan warna, dengan menggunakan pilihan
+          "warna rawak" yang mengambil warna yang berlainan setiap kali. Petunjuk:
+          anda akan mengenalpasti sejauh manakah untuk membelok dengan mengklik nombor
+          dalam blok belok.'
+        turtle_1_5: Sekarang, untuk latihan, lukis segi tiga dan kemudian segi empat
+          untuk melukis sampul surat.
+        turtle_1_6: 'Bolehkah anda mengenal pasti bagaimana untuk melukis segi tiga
+          dan segi empat? Petunjuk: Pertama, buat segi tiga, kemudian kenal pasti
+          berapa kali untuk membelok sebelum melukis segi empat.'
+        turtle_1_7: Ok, mari kita buat yang lebih sukar - lihat jika anda boleh lukis
+          gelas hijau. Segi empat ini adalah 100 piksel di setiap sisi, dan terpisah
+          50 piksel. Jangan lupa untuk lukis dengan warna hijau!
+        turtle_1_8: OK, fahamkan apa yang akan berlaku jika anda menjalankan kod ini
+          (atau tekan "Main" untuk mencuba). Kemudian, ulangi dengan mencukupi masa
+          untuk menyiapkan lukisan. Warna akan berbeza setiap kali.
+        turtle_1_9: Bolehkah anda memikirkan apa nombor untuk menggantikan tanda soal
+          untuk melukis bulatan?
         turtle_2_1: 'Hello. Saya artis zombie. Saya suka melukis! Bantu saya lukis
           segi empat dengan warna khas. Nota penting: anda mempunyai semua blok sama
           tetapi mereka kini telah telah diaturkan dalam kategori.'
+        turtle_2_10: Berikut merupakan beberapa kod untuk cubaan eksperimen dengan
+          lingkaran berbeza. Apa akan terjadi jika anda mengubah pilin yang berbeza.
+          Atau set satu warna rawak dalam gelung? Lukis apa jua yang anda suka.
         turtle_2_2: Selamat menggunakan fungsi, yang akan membolehkan anda mengenalpasti
           blok baru! Cuba blok baru "lukis segi empat", yang terdapat di kategori
           "fungsi" untuk melukis segi empat 50x50 hijau yang kecil.
@@ -144,35 +573,255 @@ ms:
         turtle_2_9: Gunakan gelung "kira dengan" baru untuk melukis keluarga snowman
           dengan ketinggian 110, 100, 90, 80, dan 70. Semua snowman perlu 60 piksel
           terpisah.
-        turtle_2_10: Berikut merupakan beberapa kod untuk cubaan eksperimen dengan
-          lingkaran berbeza. Apa akan terjadi jika anda mengubah pilin yang berbeza.
-          Atau set satu warna rawak dalam gelung? Lukis apa jua yang anda suka.
-        maze_karel_2_1: 'Cuba gunakan blok untuk membantu saya alihkan kesemua longgokan
-          dan penuhkan ke dalam lubang di tanah. Cuba gunakan gelung berbanding menggunakan
-          terlalu banyak blok. Hint: anda boleh simpan gelung dalam gelung lain.'
-        maze_karel_2_8: Guna fungsi baru ini, "Elak daripada lembu dan buangkan 1",
-          untuk membantu saya membuang semua timbunan.
-        maze_karel_debug_while: Bagaimanakah anda mengubah program ini untuk membantu
-          saya mengisi lubang?
-        studio_k1_6: Mencipta cerita anda sendiri! Gerakkan kucing dan anjing dan
-          buatkan kedua-duanya mengatakan sesuatu.
+        turtle_3_1: Teka-teki ini menunjukkan kepada anda bagaimana fungsi “lukis
+          persegi” dan “lukis bulatan” ditakrifkan. Mendefinisikan fungsi tidak menjalankan
+          bloknya. Anda perlu mengeluarkan blok “lukis persegi” untuk benar-benar
+          menarik persegi.
+        turtle_3_10: Anda telah belajar banyak! Sekarang gunakannya untuk menarik
+          apa sahaja yang anda mahukan. Cuba untuk menarik bintang, atau lingkaran,
+          atau salji mewah.
+        turtle_3_2: Menggunakan fungsi “lukis persegi” sebagai contoh, buat fungsi
+          “lukis segitiga” dan gunakannya.
+        turtle_3_3: 'Lukis pagar segi tiga di sekitar kucing dan pagar persegi di
+          sekitar lembu. Petua: uji program semasa anda pergi bersama.'
+        turtle_3_4: Lihat jika anda boleh memikirkan cara menggunakan “lukis persegi”
+          dan “lukis segitiga” (dan beberapa blok lain) untuk menarik rumah di sekitar
+          singa.
+        turtle_3_5: 'Sekarang buat fungsi “lukis rumah” baru dan gunakannya untuk
+          menempatkan dua kucing. Petunjuk: buat fungsi baru menggunakan blok “lakukan
+          sesuatu”, dan taip teks anda sendiri untuk menamakan blok tersebut.'
+        turtle_3_6: 'Menggunakan “lukis persegi” sebagai contoh, tambahkan input bernama
+          “panjang” ke “lukis segitiga”. Kemudian, lukis segitiga dalam pelbagai saiz.
+          (Petunjuk: klik bintang untuk menambah input ke fungsi)'
+        turtle_3_7: Tambah input bernama “panjang” untuk “menarik rumah” dan membina
+          sebuah rumah besar untuk gajah (dengan tepi 150 piksel panjang)
+        turtle_3_8: Ubah suai “lukis rumah” jadi saya berakhir di sudut kanan bawah
+          selepas melukis rumah baru. Gunakan fungsi yang diubah suai ini untuk menarik
+          tiga buah rumah.
+        turtle_3_9: Bolehkah anda mencipta semula fungsi “menarik rumah” tanpa bantuan?
+          Cubalah, dan kemudian lukiskan deretan rumah.
+        turtle_4_1: 'Bolehkah anda melukis segitiga (dengan tepi 100 piksel) dengan
+          hanya 3 blok? Petunjuk: gunakan blok “ulangi”.'
+        turtle_4_10: Berikut adalah penyelesaian kepada teka-teki yang sebelumnya.
+          Berapa kali anda harus ulang untuk menyiapkan lukisan?
+        turtle_4_11: Cuba ubah nombor dalam blok “giliran” dan “ulangi” untuk membuat
+          corak yang berbeza. Atau, eksperimen mengubah seluruh kod untuk menarik
+          apa sahaja yang anda mahu.
+        turtle_4_2: Tambah blok “belok kanan dengan 90 darjah” di suatu tempat di
+          tengah-tengah program yang sudah keluar di ruang kerja untuk menarik segitiga
+          ini.
+        turtle_4_3: Ok, inilah kod yang anda tulis untuk menarik segitiga tunggal.
+          Bolehkah anda menambah blok “ulangi” dan “giliran” untuk membuat bunga yang
+          cantik?
+        turtle_4_4: 'Berikut adalah kod yang sama dari teka-teki yang sebelumnya,
+          tetapi dipusing hanya 36 darjah selepas melukis setiap segitiga. Berapa
+          kalikah ini perlu diulang? (Pembayang: selepas pusingan sebanyak 360 darjah,
+          lukisan akan menjadi bulatan penuh)'
+        turtle_4_5: 'Berikut adalah kod yang sama dari teka-teki yang sebelumnya,
+          tetapi diulangi pusingan sebanyak 36 kali. Berapakah darjah yang sepatutnya
+          bagi pusingan-pusingan itu? (Pembayang: selepas pusingan sebanyak 360 darjah,
+          lukisan akan menjadi bulatan penuh)'
+        turtle_4_6: Menggunakan hanya 3 blok, bolehkah anda melukis persegi dengan
+          tepi 20 piksel?
+        turtle_4_7: 'Berikut adalah kod untuk melukis persegi dari teka-teki terakhir.
+          Bolehkah anda mengulanginya untuk menarik 10 dataran bersebelahan seperti
+          tangga? Petunjuk: anda hanya memerlukan 2 blok lagi.'
+        turtle_4_8: Berikut adalah penyelesaian kepada teka-teki yang sebelumnya.
+          Boleh anda menambah hanya 2 lagi blok untuk menyiapkan lukisan?
+        turtle_4_9: Berikut adalah penyelesaian kepada teka-teki yang sebelumnya.
+          Berapa darjah yang perlu anda putarkan untuk menyiapkan lukisan? (Anda mungkin
+          perlu untuk meneka beberapa kali)
+        turtle_5_1: Cuba jalankan program ini, dan buat perubahan untuk melihat apa
+          yang berlaku. Bolehkah anda memikirkan bagaimana ia berfungsi? (Atau padamkan
+          dan gantikannya dengan sesuatu yang sama sekali berbeza)
+        turtle_5_2: Cuba jalankan program ini, dan buat perubahan untuk melihat apa
+          yang berlaku. Bolehkah anda memikirkan bagaimana ia berfungsi? (Atau padamkan
+          dan gantikannya dengan sesuatu yang sama sekali berbeza)
+        turtle_5_3: Cuba jalankan program ini, dan buat perubahan untuk melihat apa
+          yang berlaku. Bolehkah anda memikirkan bagaimana ia berfungsi? (Atau padamkan
+          dan gantikannya dengan sesuatu yang sama sekali berbeza)
+        turtle_5_4: Cuba jalankan program ini, dan buat perubahan untuk melihat apa
+          yang berlaku. Bolehkah anda memikirkan bagaimana ia berfungsi? (Atau padamkan
+          dan gantikannya dengan sesuatu yang sama sekali berbeza)
+        turtle_5_5: Cuba jalankan program ini, dan buat perubahan untuk melihat apa
+          yang berlaku. Bolehkah anda memikirkan bagaimana ia berfungsi? (Atau padamkan
+          dan gantikannya dengan sesuatu yang sama sekali berbeza)
+        turtle_5_6: Cuba jalankan program ini, dan buat perubahan untuk melihat apa
+          yang berlaku. Bolehkah anda memikirkan bagaimana ia berfungsi? (Atau padamkan
+          dan gantikannya dengan sesuatu yang sama sekali berbeza)
         turtle_ec_1_10: 'Anda berjaya! Sekarang, lukis apa sahaja yang anda mahu.
           Antara idea yang menyeronokkan: rajah kayu, snowman atau lingkaran. Juga,
           cuba blok baru "set lebar". selamat bergembira!'
+        turtle_ec_1_2: 'Sekarang, lukiskan persegi. NOTA: gunakan warna kegemaran
+          anda dengan memilihnya di blok “PenColor” yang baru.'
+    trophy:
+      name:
+        Bronze: Gangsa
+        Gold: Emas
+        Silver: Perak
     video:
       name:
-        maze_intro: Maze Intro
-        artist_intro: Pengenalan Artis
-        farmer_intro: Intro petani
-        loop_times: Mengulangi masa blok
-        loop_until: Ulangi sehingga blok
-        if: Jika blok
-        if_else: Jika/lain blok
-        if_else_scrat: Jika/lain blok
-        function: Fungsi
-        loop_while: Sementara blok
-        loop_for: Kaunter blok
-        parameters: Fungsi-fungsi dengan parameter
+        C1_artist_intro: Intro artis
+        C1_bee_level_intro: Tahap Lebah - Pengenalan
+        C1_bee_loops: Gelung Lebah
+        C1_bigevent_unplugged: The Big Event
+        C1_building_foundation: Membina Asas
+        C1_getting_loopy: Getting Loopy
+        C1_going_places_safely: Going Places Safely
+        C1_happy_maps_unplugged: Peta-peta Gembira
+        C1_maze_debugging: Penyahpepijatan Maze
+        C1_maze_intro_sequencing: Pengenalan Penjujukan Maze
+        C1_maze_loops: Gelung Maze
+        C1_moveitmoveit_unplugged: Pindahkan, Pindahkan
+        C1_pair_programming: Pengaturcaraan Pasangan
+        C1_planting_seed: Menanam Benih
+        C1_playlab_storytelling: Main Makmal - Buat Cerita
+        C1_spelling_bee_intro: Ejaan Bee Intro
+        C1_zuck_repeat_loop: Gelung Maze
+        C2_artist_debugging: Penyahpepijatan Artis
+        C2_artist_intro: Intro artis
+        C2_artist_loops: Gelung Artis
+        C2_bee_conditionals: Lebah Bersyarat
+        C2_bee_debugging: Penyahpepijatan Lebah
+        C2_bee_loops: Gelung Lebah
+        C2_binary_bracelets: Binary Bracelets
+        C2_conditionals_with_cards: Bersyarat
+        C2_digital_footprint: Your Digital Footprint
+        C2_digital_footprint_v2: Your Digital Footprint
+        C2_graph_paper: Pengaturcaraan kertas graf
+        C2_maze_intro: Maze Intro
+        C2_paper_airplanes: Paper Airplanes
+        C2_playlab_createstory: Main Makmal - Buat Cerita
+        C2_relay_programming: Pengaturcaraan penyampai
+        C2_zuck_repeat_loop: Gelung Maze
+        C3_artist_functions: Fungsi Artis
+        C3_artist_intro: Intro artis
+        C3_artist_nested_loops: Gelung Bersarang
+        C3_bee_conditionals: Lebah Bersyarat
+        C3_bee_debugging: Penyahpepijatan Lebah
+        C3_bee_functions: Fungsi Bee
+        C3_bee_nested_loops: Gelung Bersarang
+        C3_bounce: Lantunan
+        C3_computational_thinking: Pengiraan pemikiran
+        C3_crowdsourcing: Crowdsourcing
+        C3_dice_race: Perlumbaan Dadu
+        C3_farmer_while: Sementara Gelung
+        C3_functional_suncatchers: Functional Suncatchers
+        C3_internet: Internet
+        C3_maze_conditionals: Maze Conditionals
+        C3_maze_level_4: Gelung Maze
+        C3_playlab_create_game: Main Makmal - Buat Permainan
+        C3_songwriting_with_parameters: Penulisan Lagu Dengan Parameter
+        C4_bee_conditional: Lebah Bersyarat
+        C4_conditionals: Bersyarat
+        C4_for_loops: Untuk Gelung
+        C4_for_loops_bee: Untuk Gelung
+        C4_for_loops_no_bee: Untuk Gelung
+        C4_function_create: Mencipta Fungsi
+        C4_function_edit: Fungsi Penyuntingan
+        C4_function_parameters: Fungsi-fungsi dengan parameter
+        C4_intro: Pengenalan
+        C4_loops_zombie: Gelung
+        C4_math_artist: Mengatur Cara Artis dengan Matematik
+        C4_unplugged_algorithms: Algoritma dengan Tangram
+        C4_unplugged_binary: Perduaan
+        C4_unplugged_forloops: Untuk Gelung
+        C4_unplugged_madlibs: Libs Gila
+        C4_unplugged_parameters: Penulisan lagu dengan Parameter
+        C4_unplugged_variables: Pembolehubah dalam Sampul
+        C4_variables_artist: Pemboleh Ubah - Artis
+        C4_variables_playlab: Pembolehubah - Main Makmal
+        CDEF_Video_SpritesInAction: Sprite dalam Tindakan
+        CSA-PL-1d-arrays-new-values: Memasukkan nilai dalam tatasusunan 1D
+        CSA-PL-Printing-in-Java: Percetakan dalam Java
+        CSA-PL-conditionals: Kenyataan Bersyarat dalam Java
+        CSA-PL-debugging-22: Penyahpepijatan di Makmal Java
+        CSA-PL-debugging-temp: Pengenalan kepada Penyahpepijatan dalam Makmal Java
+          - temp
+        CSA-PL-first-program: Menulis Program dalam Java
+        CSA-PL-for-loops: Untuk gelung dalam Java
+        CSA-PL-intro-to-arrays: Tatasusunan Satu Dimensi (1D)
+        CSA-PL-intro-to-java-lab: Asas Makmal Java
+        CSA-PL-multi-selection-statements: Kenyataan Pelbagai Pilihan
+        CSA-PL-two-way-selection: Pemilihan dua hala
+        CSA-PL-variables: Mencipta Pembolehubah dalam Java
+        CSD_Unit6_InteractiveArtExemplar: Interaktif Art Exemplar
+        CSD_u6_variables_part1: 'CSD: Pembolehubah
+
+          '
+        CSF-Teaching-Problem-Solving: Penyelesaian Masalah Pengajaran CSF
+        CSF_EF_cs_matters: Perkara Sains Komputer
+        CSF_Going_Places_Safely: Kejiranan Dalam Talian Saya
+        CSF_Power_of_Words: Kuasa Perkataan
+        CSF_SpriteLabIntro_CDEF: Ini ialah Makmal Peperi
+        CSF_SpriteLab_Intro_v2: Memperkenalkan Sprite Lab
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprite dalam Tindakan
+        CSF_SpriteLab_SpritesInAction_v2: Sprite dalam Tindakan
+        CSF_Spritelab_MakeSprite_CDEF: Cara Membuat Sprite di Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: Cara Membuat Peperi
+        CSF_StarWars_ProjectIntro: Pengenalan kepada Projek Star Wars
+        CSF_Super_Digital_Citizen: Warganegara Super Digital
+        CSF_a_b_artist_loops: Gelung di dalam Artis
+        CSF_artist_angles: Sudut di dalam Artis
+        CSF_bb8_loops_C-F: Gelung dengan BB-8
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_collector_k1_blocks: 'CS Asas: Pemungut'
+        CSF_collector_repeat_loops: Pemungut Ulang Gelung
+        CSF_collector_text_blocks: 'CS Asas: Pemungut'
+        CSF_create_functions: Buat Fungsi
+        CSF_debugging_k1_blocks: Penyahpepijatan
+        CSF_debugging_text_blocks: Penyahpepijatan
+        CSF_harvester_loops_K1: Gelung dalam Harvester
+        CSF_harvester_skinOverview_K-1: Penuai
+        CSF_if_allskins: Blok Jika
+        CSF_ifelse_allskins: Menggunakan Jika/Lain Blok
+        CSF_ifelseifelse_allskins: Menggunakan jika/lain/blok lain
+        CSF_loops_AB: Gelung
+        CSF_maze_intro_k1_blocks: Pengenalan kepada Code Studio
+        CSF_maze_intro_text_blocks: Pengenalan kepada Code Studio
+        CSF_my_robotic_friends: Rakan-rakan Robotik Saya
+        CSF_scrat_loops_CF: Gelung dalam Zaman Ais
+        CSF_scrat_loops_K1: Gelung dalam Zaman Ais
+        CSF_skinOverview_Harvester: Penuai
+        CSF_stevie_big_project: Stevie dan Projek Besar
+        CSF_unspotted_bugs: Bugs Unspotted
+        CSF_zuck_loops_short: Ulangi Gelung
+        CS_Changing_Everything: Sains Komputer Mengubah Segalanya
+        Getting_Started_BasicFeatures: Ciri-ciri Asas Code.org
+        Gettting_Started_ClassSection: Membuat Seksyen Kelas
+        Gettting_Started_Progress: Kemajuan, Maklum Balas, dan Penilaian
+        Gettting_Started_StudentExperience: Pengalaman Pelajar
+        MC_2018_loops: 'Minecraft: Perjalanan Akuatik Ulang Sehingga'
+        PL-Video-21: Selamat datang ke Pembelajaran Profesional Code.org!
+        PL_CSD_CircuitPlayground_Overview: Gambaran Keseluruhan Circuit Playground
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Gambaran Keseluruhan Unit
+          Taman Permainan Litar
+        PL_CSD_CircuitPlayground_Setup: Persediaan Taman Permainan Litar
+        PL_CSD_EquityBlindSpotsvid: Berat sebelah & Tanggungjawab
+        PL_CSD_MicroBit_Intro: 'Pengenalan kepada mikro: BIT'
+        PL_CSD_TeacherTips_Advise: Tips Guru - Nasihat Kepada Guru Baharu
+        PL_CSD_TeacherTips_Debugging: Petua Guru - Penyahpepijatan
+        PL_CSD_TeacherTips_IntroToCSD: Petua Guru - Pengenalan kepada Penemuan SK
+        PL_CSD_TeacherTips_LeadLearner: Petua Guru - Pelajar Utama
+        PL_CSD_TeacherTips_PairProgramming: Petua Guru - Pengaturcaraan Berpasangan
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Petua Guru - Proses Penyelesaian
+          Masalah
+        PL_CSD_Unit4_AppTesting: Ujian Prototaip Kertas
+        PL_CSP_EIPMOverview: Panduan Pelajaran EIPM
+        PL_CSP_TeacherTips_APExam: 'Petua Guru: Bersedia untuk Peperiksaan AP'
+        PL_CSP_TeacherTips_Advice: 'Petua Guru: Nasihat kepada Guru CS Baru'
+        PL_CSP_TeacherTips_Debugging: 'Petua Guru: Bantu dengan Penyahpepijatan'
+        PL_CSP_TeacherTips_EIPM: 'Petua Guru: Proses EIPM'
+        PL_CSP_TeacherTips_IntroToCSP: 'Petua Guru: Pengenalan Prinsip CS'
+        PL_CSP_TeacherTips_LeadLearner: 'Petua Guru: Bagaimana Menjadi Pelajar Utama'
+        PL_CS_Journeys_Overview: Perjalanan CS
+        PL_Equity_in_CS_Education: Ekuiti dalam Pendidikan CS
+        PL_overview_CSD: Apakah penemuan sains komputer?
+        PL_overview_CSP: Apakah prinsip-prinsip sains komputer?
+        Unplug1: Apa itu CS?
+        Unplug10: Internet
+        Unplug11: Wrap-up
         Unplug2: Pengiraan pemikiran
         Unplug3: Pengaturcaraan kertas graf
         Unplug4: Algoritma
@@ -181,164 +830,308 @@ ms:
         Unplug7: Songwriting
         Unplug8: Abstraksi
         Unplug9: Pengaturcaraan penyampai
-        Unplug10: Internet
-        Unplug11: Wrap-up
-        C1_happy_maps_unplugged: Peta-peta Gembira
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loopy: Getting Loopy
-        C1_artist_intro: Intro artis
-        C1_building_foundation: Membina Asas
-        C1_going_places_safely: Going Places Safely
-        C2_maze_intro: Maze Intro
-        C2_artist_intro: Intro artis
-        C2_artist_loops: Gelung Artis
-        C2_artist_debugging: Penyahpepijatan Artis
-        C2_bee_conditionals: Lebah Bersyarat
-        C2_graph_paper: Pengaturcaraan kertas graf
-        C2_conditionals_with_cards: Bersyarat
-        C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: Pengaturcaraan penyampai
-        C2_digital_footprint: Your Digital Footprint
-        C2_digital_footprint_v2: Your Digital Footprint
-        C3_artist_intro: Intro artis
-        C3_artist_functions: Fungsi Artis
-        C3_bee_conditionals: Lebah Bersyarat
-        C3_artist_nested_loops: Gelung Bersarang
-        C3_bee_nested_loops: Gelung Bersarang
-        C3_bounce: Lantunan
-        C3_computational_thinking: Pengiraan pemikiran
-        C3_dice_race: Perlumbaan Dadu
-        C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
-        C4_loops_zombie: Gelung
-        C4_bee_conditional: Lebah Bersyarat
-        C4_variables_artist: Pemboleh Ubah - Artis
-        C4_math_artist: Mengatur Cara Artis dengan Matematik
-        C4_function_parameters: Fungsi-fungsi dengan parameter
-        C4_conditionals: Bersyarat
-        CSF_a_b_artist_loops: Gelung di dalam Artis
-        CSF_artist_angles: Sudut di dalam Artis
-        CSF_debugging_k1_blocks: Penyahpepijatan
-        CSF_debugging_text_blocks: Penyahpepijatan
-        CSF_my_robotic_friends: Rakan-rakan Robotik Saya
-        frozen_intro: Pengenalan Jam Kod
-        frozen_loops: Pengenalan kepada Gelung
-        frozen_functions: Pengenalan kepada Fungsi
-        infinity_playlab_intro: Makmal Mainan - Pengenalan
-        infinity_playlab_events: Makmal Mainan - Acara
-        infinity_playlab_repeat_forever: Makmal Mainan - Berulang Selamanya
+        applab_hoc_designmode: Jam Kod AppLab - Mod Reka Bentuk
+        applab_hoc_onevent: App Lab Hour of Code - OnEvent
+        applab_hoc_setproperty: App Jam Kod Makmal - SetProperty
+        applab_hoc_share: Jam Kod AppLab - Kongsi
+        applab_hoc_welcome: App Lab Hour of Code - Selamat Datang
+        applab_intro_designmode: App Lab - Mod Reka Bentuk
+        applab_intro_events: App Lab - Jadikan Ia Interaktif
+        applab_intro_share: App Lab - Kongsi Aplikasi Anda
+        applab_intro_sounds: App Lab - Imej dan Bunyi
+        applab_intro_welcome: App Lab - Bermula
+        artist_intro: Pengenalan Artis
+        c_and_c_digital_sharing: Perkongsian Digital
+        c_and_c_great_to_create: Sangat Hebat untuk Mencipta dan Bermain dengan Adil
+        conditionals_with_cards: Pelajaran yang tidak dicabut dalam tindakan - syarat
+          dengan kad
+        cs-principles-intro-to-objects: 'Prinsip CS: Pengenalan kepada Objek'
+        csa-alias-video: Sama dan Alias
+        csa-day-in-pm-pl: Apa yang dilakukan oleh pengurus projek?
+        csa-equals-video: The equals () metode
+        csa-example-solution-1: 'Live Coding Contoh Penyelesaian '
+        csa-multi-select-pl: Pernyataan Multi-seleksi di Jawa
+        csa-pl-calling-methods: Memanggil Metode di Java
+        csa-pl-compareTo: The compareTo () metode
+        csa-pl-creating-objects: Mencipta Objek
+        csa-pl-documentation: Dokumentasi di Java Lab
+        csa-pl-equals-book: Menulis equals () metode untuk kelas Book
+        csa-pl-intro-to-equality: Pengenalan kepada Kesaksamaan
+        csa-pl-intro-to-equals-method: Pengenalan kepada kaedah.equals ()
+        csa-pl-intro-to-oop: Pengenalan kepada Pengaturcaraan Berorientasikan Objek
+        csa-pl-intro-to-pm: Pengenalan Pengurusan Projek
+        csa-pl-intro-to-strings: Pengenalan Strings di Java
+        csa-pl-vocab-pm: Perbendaharaan Kata Pengurusan Projek
+        csa-pl-vpl-m1-unit-3: Kejuruteraan Perisian di Unit 3
+        csa-pl-welcome-to-Neighborhood: Selamat datang ke kejiranan
+        csa-user-stories: Cerita Pengguna dalam Kejuruteraan Perisian
+        csa_accessor_methods: 'CSA: Kaedah pengakses'
+        csa_calling_methods: 'CSA: Memanggil kaedah'
+        csa_casting: 'CSA: Pemutus'
+        csa_column_major_traversal: 'CSA: Lajur utama Traversal'
+        csa_conditional_statements: 'CSA: Penyata bersyarat'
+        csa_constructors: 'CSA: Pembina'
+        csa_creating_a_scanner_object: 'CSA: Membuat Objek Pengimbas'
+        csa_creating_objects: 'CSA: Mewujudkan Objek'
+        csa_creating_variables: 'CSA: Mewujudkan Pembolehubah'
+        csa_enhanced_for_loops: 'CSA: Dipertingkatkan untuk gelung'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Dipertingkatkan untuk gelung dan
+          tatasusunan 2D'
+        csa_equals_and_aliases: 'CSA: Sama dan Alias'
+        csa_for_loops: 'CSA: Untuk gelung'
+        csa_images_and_pixels: 'CSA: Imej dan Piksel'
+        csa_inheritance: 'CSA: Warisan'
+        csa_instance_variables_and_attributes: 'CSA: Pembolehubah dan Atribut Contoh'
+        csa_modifying_values_in_a_1d_array: 'CSA: Mengubah Nilai dalam Array 1D'
+        csa_multi-selection_statements: 'CSA: Penyata pelbagai pilihan'
+        csa_mutator_methods: 'CSA: Kaedah mutator'
+        csa_nested_loops: 'CSA: Gelung bersarang'
+        csa_object_oriented_programming: 'CSA: Objek berorientasikan pengaturcaraan'
+        csa_one_dimensional_arrays: 'CSA: Satu Dimensi (1D) Tatasusunan'
+        csa_overloaded_constructors: 'CSA: Terlalu muatan pembina'
+        csa_polymorphism: 'CSA: Polimorfisme'
+        csa_printing_in_java: 'CSA: Percetakan di Jawa'
+        csa_private_methods: 'CSA: Kaedah peribadi'
+        csa_random_numbers: 'CSA: Nombor rawak'
+        csa_recursion: 'CSA: Rekursi'
+        csa_remving_data_from_an_arraylist: 'CSA: Mengeluarkan Data dari ArrayList'
+        csa_row_major_traversal: 'CSA: Bertaris-utama Traversal'
+        csa_scanner_class_methods: 'CSA: Kaedah kelas pengimbas'
+        csa_searching_algorithms: 'CSA: Mencari algoritma'
+        csa_software_engineering_code_reviews: 'CSA: Kejuruteraan Perisian - Kod Ulasan'
+        csa_sorting_algorithms: 'CSA: Menyusun algoritma'
+        csa_static_methods: 'CSA: Kaedah statik'
+        csa_static_variables: 'CSA: Pembolehubah statik'
+        csa_the_arraylist_class: 'CSA: Kelas ArrayList'
+        csa_the_equals_method: 'CSA: The equals () Metode'
+        csa_the_tostring_method: 'CSA: The toString () Metode'
+        csa_two_dimensional_arrays: 'CSA: Dua Dimensi (2D) Tatasusunan'
+        csa_two_way_selection_and_not: 'CSA: Pemilihan dua hala dan TIDAK'
+        csa_welcome_to_the_theater: 'CSA: Selamat datang ke Teater'
+        csa_while_loops: 'CSA: Manakala gelung'
+        csa_working_with_2d_array_elements: 'CSA: Bekerja dengan Elemen Array 2D'
+        csa_working_with_arraylist_data: 'CSA: Bekerja dengan ArrayList Data'
+        csa_wrapper_classes_part_1: 'CSA: Kelas Pembungkus Bahagian 1'
+        csa_wrapper_classes_part_2: 'CSA: Kelas Wrapper Bahagian 2'
+        csa_writing_a_method: 'CSA: Menulis Kaedah'
+        csc-ecosystems-intro: Pengenalan Ekosistem
+        csc-event-short-intro: Peristiwa Pengenalan Pendek
+        csc-poem-art-intro: Video Pengenalan
+        csc-poem-art-outro: Video Penutup
+        csc-sprite-lab-pixel-editor: Lukis Sprite Anda Sendiri
+        csc-starquilts-intro: 'CSC: Bintang kuilt'
+        csc_animal_adaptations_intro: Pengenalan Adaptasi Haiwan
+        csc_fm_pilot: Mesin Fungsi (Pilot)
+        csc_fm_pilot_v2: 'Fungsi Mesin Pengenalan '
+        csc_timecapsule_intro: Time Capsule Pengenalan
+        csd_app_lab_design_mode: Mod Reka Bentuk Makmal Aplikasi CSD
+        csd_app_lab_events: Acara Makmal Aplikasi CSD
+        csd_applab_arrays: Pengenalan kepada Tatasusunan
+        csd_applab_designmode: 'Penemuan CS: Makmal Aplikasi - Mod Reka Bentuk'
+        csd_applab_designmode_short: Mod Reka Bentuk Makmal App
+        csd_applab_loops: Gelung dalam Makmal Aplikasi
+        csd_applab_parameters: Fungsi-fungsi dengan parameter
+        csd_concept_binary_data: 'Bagaimana Komputer Berfungsi: Perduaan & Data'
+        csd_concept_circuits_logic: 'Bagaimana Komputer Berfungsi: Litar & Logik'
+        csd_concept_computer: 'Bagaimana Komputer Berfungsi: Apa yang Membuat Komputer,
+          Komputer?'
+        csd_concept_hardware_software: 'Bagaimana Komputer Berfungsi: Perkakasan &
+          Perisian'
+        csd_concept_how_computers_work: Memperkenalkan Bagaimana Komputer Berfungsi
+        csd_concept_memory_cpu_input_output: 'Bagaimana Komputer Berfungsi: Memori,
+          CPU, Input, & Output'
+        csd_concept_search: Bagaimana Carian Berfungsi
+        csd_debugging: Penyahpepijatan
+        csd_external_amazon_data: Bagaimana Data Besar Digunakan Dalam Sistem Cadangan
+          Amazon Untuk Mengubah Kehidupan Kita
+        csd_external_netflix_data: Bagaimana Netflix Membuat Rancangan TV dan Cadangan
+          Filem?
+        csd_external_waze_data: Mengapa Banyak Pengguna Terobsesi Dengan Waze?
+        csd_gamelab_animation_tab: Tab Animasi
+        csd_gamelab_booleans: Ungkapan Boolean
+        csd_gamelab_conditional_statements: Pernyataan Bersyarat
+        csd_gamelab_functions: Memanggil dan Mendefinisikan Fungsi
+        csd_gamelab_if_else: Jika/Pernyataan Lain
+        csd_gamelab_velocity: Halaju
+        csd_how_teamwork_works: Bagaimana Kerja Berpasukan Berfungsi
+        csd_ml_ethics_ai: 'Etika dan AI '
+        csd_ml_import_model: Mengimport Model AI
+        csd_ml_intro_ai_lab_july2021: Pengenalan kepada Makmal AI
+        csd_ml_intro_to_ai_lab: Pengenalan kepada Makmal AI
+        csd_ml_model_cards_july2021: Kad Model di Makmal AI
+        csd_ml_numerical_ai_lab: Data Berangka di Makmal AI
+        csd_ml_training_testing_ai_lan: Latihan dan Ujian di Makmal AI
+        csd_pair_programming: Pengaturcaraan Pasangan
+        csd_problem_solving_process: Proses Penyelesaian Masalah
+        csd_sprite_properties: Sifat Peperi
+        csd_teamwork_and_disagreement: Kerja Berpasukan - Berurusan dengan Perselisihan
+        csd_u6_call_define_functions: 'CSD: Fungsi Memanggil dan Mentakrifkan'
+        csd_u6_circuit_playground: Pengkomputeran Fizikal
+        csd_u6_if_statements: 'CSD: Jika Kenyataan'
+        csd_u6_variables_part2: Pembolehubah - Corak Kaunter
+        csd_weblab_css_1: Pengenalan kepada CSS - Bahagian 1
+        csd_weblab_css_2: Pengenalan kepada CSS - Bahagian 2
+        csd_weblab_intro_1: Pengenalan kepada Makmal Web - Bahagian 1
+        csd_weblab_intro_2: Pengenalan kepada Makmal Web - Bahagian 2
+        csd_weblab_intro_3: Pengenalan kepada Makmal Web - Bahagian 3
+        csd_what_computers_are: Apa itu komputer?
+        csd_what_computers_do: Apa yang dilakukan oleh komputer?
+        csf21pilot_events: 'Sprite Lab: Sprite dalam Tindakan'
+        csf21pilot_prompts: 'Sprite Lab: Teks dan Prompt'
+        csf_follow_the_digital_trail: Ikuti Jejak Digital
+        csf_lots_of_sprites: 'Makmal Peperi: Banyak Peperi'
+        csf_my_online_neighborhood_2020: Kejiranan Dalam Talian Saya
+        csf_private_and_personal_information: Sulit dan Maklumat Peribadi
+        csp-pd-welcome: Selamat datang ke Keluarga!
         csp_applab_functions: Pengenalan kepada Fungsi
         csp_applab_functions_parameters: Fungsi-fungsi dengan parameter
         csp_applab_loops: Gelung
+        csp_applab_parameters: Fungsi-fungsi dengan parameter
         csp_cs_is_changing_everything: Sains Komputer Mengubah Segalanya
-        starwars_intro: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - Pengenalan'
-        starwars_typing: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - JavaScript'
-        starwars_events: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - Acara'
-        starwars_congrats: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - Tahniah'
-        starwars_blocks_intro: 'Star Wars: Membina Galaksi dengan Menggunakan Kod
-          - Pengenalan'
-        starwars_blocks_events: 'Star Wars: Membina Galaksi dengan Menggunakan Kod
-          - Acara'
-        starwars_blocks_congrats: 'Star Wars: Membina Galaksi dengan Menggunakan Kod
-          - Tahniah'
-        mc_2016_intro: Jam Kod Minecraft - Pengenalan
-        mc_2016_loops: Jam Kod Minecraft - Gelung
-        mc_2016_events: Jam Kod Minecraft - Acara
-        mc_2016_spawn: Jam Kod Minecraft - Penciptaan dan Penempatan
-        mc_2016_congrats: Jam Kod Minecraft - Tahniah
-        mc_2017_agent_intro: Jam Kod Minecraft - Agen
-        mc_2017_repeat: Jam Kod Minecraft - Gelung Berulang
-        mc_2017_functions: Jam Kod Minecraft - Fungsi
-        mc_2017_congratulations: Jam Kod Minecraft - Tahniah
-        mc_2017_puzzle_1: Jam Kod Minecraft - Agen
-        mc_2017_puzzle_3: Jam Kod Minecraft - Gelung Berulang
-        mc_2017_puzzle_8: Jam Kod Minecraft - Fungsi
-        mc_2017_puzzle_12: Jam Kod Minecraft - Permainan Bebas
-        CSF_loops_AB: Gelung
-        CSF_SpriteLabIntro_CDEF: Ini ialah Makmal Peperi
-        CSF_StarWars_ProjectIntro: Pengenalan kepada Projek Star Wars
-        hoc_dance_warmup: Majlis Tari-Menari - Masa Mula Memanas
-        hoc_dance_events: Pesta Tarian - Acara
-        hoc_dance_properties: Pesta Tarian - Hartanah
+        csp_defining_calling_functions: Mendefinisikan dan Memanggil Fungsi
+        csp_global_vs_local: Penyahpepijatan Global vs Pembolehubah Tempatan
+        csp_tutorial_datatab: Tab Data dalam Makmal Aplikasi
+        csp_tutorial_datavis1: Visualizer Data dalam Makmal Aplikasi - Bahagian 1
+        csp_tutorial_datavis2: Visualizer Data dalam Makmal Aplikasi - Bahagian 2
+        csp_tutorial_libraries: Perpustakaan di App Lab
+        elem_pd_2: Sekolah Rendah Sains Komputer - PD Video 2/2
+        enter_your_own_poem: Masukkan Puisi Anda Sendiri
+        farmer_intro: Intro petani
+        flappy_intro: Pengenalan Flappy
+        frozen_functions: Pengenalan kepada Fungsi
+        frozen_intro: Pengenalan Jam Kod
+        frozen_loops: Pengenalan kepada Gelung
+        function: Fungsi
+        gumball_events: Jam Kod Gumball - Acara
+        gumball_intro: Jam Kod Gumball - Pengenalan
+        gumball_repeat: Gumball Hour of Code - Ulangi kenyataan
+        hello_world_congrats: Helo Dunia - Lakukan Segala yang Anda Inginkan
+        hello_world_events: Helo Dunia - Pengaturcaraan dengan Acara
+        hello_world_intro: Helo Dunia - Selamat datang ke Makmal Pari-pari
+        hint_videos_d_11_11_first: 'Petunjuk Video: D.11.11 Pertama'
+        hint_videos_d_11_11_last: 'Petunjuk Video: D.11.11 Terakhir'
+        hint_videos_d_11_3_first: 'Petunjuk Video: D.11.3 Pertama'
+        hint_videos_d_11_3_last: 'Petunjuk Video: D.11.3 Terakhir'
+        hint_videos_d_11_4_first: 'Petunjuk Video: D.11.4 Pertama'
+        hint_videos_d_11_4_last: 'Petunjuk Video: D.11.4 Terakhir'
+        hint_videos_d_11_5_first: 'Video Petunjuk: D.11.5 Pertama'
+        hint_videos_d_11_5_last: 'Petunjuk Video: D.11.5 Terakhir'
+        hint_videos_d_11_6_first: 'Petunjuk Video: D.11.6 Pertama'
+        hint_videos_d_11_6_last: 'Petunjuk Video: D.11.6 Terakhir'
+        hint_videos_d_11_7_first: 'Petunjuk Video: D.11.7 Pertama'
+        hint_videos_d_11_7_last: 'Petunjuk Video: D.11.7 Terakhir'
+        hint_videos_d_11_9_first: 'Petunjuk Video: D.11.9 Pertama'
+        hint_videos_d_11_9_last: 'Petunjuk Video: D.11.9 Terakhir'
         hoc_dance_congrats: Majlis Tari-Menari - Majlis Bermula!
-        c_and_c_great_to_create: Sangat Hebat untuk Mencipta dan Bermain dengan Adil
-        c_and_c_digital_sharing: Perkongsian Digital
-        csd_applab_parameters: Fungsi-fungsi dengan parameter
-        CSF_Spritelab_MakeSprite_v2: Cara Membuat Peperi
-        csd_debugging: Penyahpepijatan
-        how-to-k5-workshops: 'Asas CS Code.org: Kanak-kanak Diuji, Guru Meluluskan'
         hoc_dance_congrats_2019: Majlis Tari-Menari 2019 - Majlis Bermula!
-        hoc_dance_warmup_2019: Majlis Tari-Menari 2019 - Masa Mula Memanas
+        hoc_dance_events: Pesta Tarian - Acara
         hoc_dance_events_2019: Majlis Tari-Menari 2019 - Acara
         hoc_dance_measures_2019: Majlis Tari-Menari 2019 - Corak Berirama
+        hoc_dance_properties: Pesta Tarian - Hartanah
         hoc_dance_properties_2019: Majlis Tari-Menari 2019 - Sifat
-        csf_private_and_personal_information: Sulit dan Maklumat Peribadi
-        csf_lots_of_sprites: 'Makmal Peperi: Banyak Peperi'
-        PL_CSD_TeacherTips_Advise: Tips Guru - Nasihat Kepada Guru Baharu
-        PL_CSD_TeacherTips_IntroToCSD: Petua Guru - Pengenalan kepada Penemuan SK
-        PL_CSD_TeacherTips_ProblemSolvingProcess: Petua Guru - Proses Penyelesaian
-          Masalah
-        PL_CSD_TeacherTips_PairProgramming: Petua Guru - Pengaturcaraan Berpasangan
-        PL_CSD_TeacherTips_Debugging: Petua Guru - Penyahpepijatan
-        PL_CSD_TeacherTips_LeadLearner: Petua Guru - Pelajar Utama
+        hoc_dance_warmup: Majlis Tari-Menari - Masa Mula Memanas
+        hoc_dance_warmup_2019: Majlis Tari-Menari 2019 - Masa Mula Memanas
+        hoc_wrapup: Jam Kod Wrapup
+        how-ai-works-creativity-full: Adakah AI Mempunyai Kreativiti dan Imaginasi?
+        how-ai-works-llms-full: Cara Chatbots dan Model Bahasa Terkemuka Berfungsi
+        how-ai-works-llms-part1: Chatbots dan Model Bahasa Terkemuka Bahagian 1
+        how-ai-works-llms-part2: Chatbots dan Model Bahasa Terkemuka Bahagian 2
+        how-to-k5-workshops: 'Asas CS Code.org: Kanak-kanak Diuji, Guru Meluluskan'
+        iceage_events: Jam Kod Zaman Ais - Acara
+        iceage_intro: Jam Kod Zaman Ais - Pengenalan
+        iceage_repeat: Ice Age Hour of Code - Ulangi kenyataan
+        if: Jika blok
+        if_else: Jika/lain blok
+        if_else_scrat: Jika/lain blok
+        infinity_playlab_events: Makmal Mainan - Acara
+        infinity_playlab_intro: Makmal Mainan - Pengenalan
+        infinity_playlab_repeat_forever: Makmal Mainan - Berulang Selamanya
+        lesson_planning: Perancangan Pelajaran
+        loop_for: Kaunter blok
+        loop_times: Mengulangi masa blok
+        loop_until: Ulangi sehingga blok
+        loop_while: Sementara blok
+        maze_intro: Maze Intro
+        mc_2016_congrats: Jam Kod Minecraft - Tahniah
+        mc_2016_events: Jam Kod Minecraft - Acara
+        mc_2016_intro: Jam Kod Minecraft - Pengenalan
+        mc_2016_loops: Jam Kod Minecraft - Gelung
+        mc_2016_spawn: Jam Kod Minecraft - Penciptaan dan Penempatan
+        mc_2017_agent_intro: Jam Kod Minecraft - Agen
+        mc_2017_congratulations: Jam Kod Minecraft - Tahniah
+        mc_2017_functions: Jam Kod Minecraft - Fungsi
+        mc_2017_puzzle_1: Jam Kod Minecraft - Agen
+        mc_2017_puzzle_12: Jam Kod Minecraft - Permainan Bebas
+        mc_2017_puzzle_3: Jam Kod Minecraft - Gelung Berulang
+        mc_2017_puzzle_8: Jam Kod Minecraft - Fungsi
+        mc_2017_repeat: Jam Kod Minecraft - Gelung Berulang
+        mc_2018_closing: 'Minecraft: Pelayaran Akuatik Tahniah'
+        mc_2018_conditionals: 'Minecraft: Perjalanan Akuatik Conditionals'
+        mc_2018_intro: 'Minecraft: Pengenalan Akuatik Pelayaran'
+        mc_congrats_no_share: Minecraft - Tahniah
+        mc_congrats_share: Minecraft - Tahniah
+        mc_if_statements: Minecraft - Jika pernyataan
+        mc_intro: Minecraft - Pengenalan
+        mc_repeat: Minecraft - Ulang
+        oceans_machine_learning: Pembelajaran Mesin
+        oceans_societal_implications: Implikasi Masyarakat
+        oceans_training_data: Data Latihan
+        opd_closing: 'Mengajar Asas CS: Penutupan & Langkah Seterusnya'
+        outbreak_events: 'Simulator Wabak: Acara'
+        outbreak_intro: 'Simulasi Wabak: Pengenalan'
+        outbreak_outro: 'Wabak Simulator: Main Percuma'
+        outbreak_scientist: 'Wabak Simulator: Berfikir Seperti Saintis'
+        parameters: Fungsi-fungsi dengan parameter
+        playlab_2021: Pengenalan kepada Main Lab
+        playlab_2021_reader: Pengenalan kepada Main Lab
+        playlab_events: Main Acara Makmal
+        playlab_intro: Pengenalan kepada Main Lab
+        playlab_repeat_forever: Main Lab Ulang Selamanya
+        poemart_celebration: Sambutan Seni Puisi
+        poemart_events: Acara Seni Puisi
+        poemart_imagery: Imejan Seni Puisi
+        poemart_intro: Pengenalan Seni Puisi
+        poembot-playtest-events: PoemBot Playtest Peristiwa
         poembot-playtest-intro: PoemBot Playtest Intro
         poembot-playtest-sprites: PoemBot Playtest Sprites
-        poembot-playtest-events: PoemBot Playtest Peristiwa
-        hello_world_intro: Helo Dunia - Selamat datang ke Makmal Pari-pari
-        hello_world_events: Helo Dunia - Pengaturcaraan dengan Acara
-        hello_world_congrats: Helo Dunia - Lakukan Segala yang Anda Inginkan
-        rough_poemart_intro: v1 Pengenalan Seni Sajak
-        rough_poemart_events: v1 Peristiwa Seni Sajak
-        rough_poemart_imagery: v1 Imejan Seni Sajak
-        rough_poemart_congrats: v1 Tahniah Seni Sajak
-        poetry_module_variables: Pemboleh Ubah - Pengekodan dengan Puisi
-        poetry_module_textandvariables: Teks & Pemboleh Ubah - Pengekodan dengan Puisi
-        poetry_module_planningapp: Merancang Aplikasi Penjana Sajak Anda - Pengekodan
-          dengan Puisi
+        poetry_module_conditionals: Bersyarat - Pengekodan dengan Puisi
         poetry_module_multichoiceprompts: Prom Pelbagai Pilihan - Pengekodan dengan
           Puisi
-        poetry_module_conditionals: Bersyarat - Pengekodan dengan Puisi
-        poemart_intro: Pengenalan Seni Puisi
-        CSA-PL-debugging-temp: Pengenalan kepada Penyahpepijatan dalam Makmal Java
-          - temp
-        CSA-PL-for-loops: Untuk gelung dalam Java
-        CSA-PL-variables: Mencipta Pembolehubah dalam Java
-        PL_CS_Journeys_Overview: Perjalanan CS
-        CSA-PL-intro-to-java-lab: Asas Makmal Java
-        CSA-PL-first-program: Menulis Program dalam Java
-        CSD_u6_variables_part1: 'CSD: Pembolehubah
-
-'
-        csd_u6_if_statements: 'CSD: Jika Kenyataan'
-        csc-poem-art-intro: Video Pengenalan
-        csc-poem-art-outro: Video Penutup
-        csd_u6_call_define_functions: 'CSD: Fungsi Memanggil dan Mentakrifkan'
-        csp_applab_parameters: Fungsi-fungsi dengan parameter
+        poetry_module_planningapp: Merancang Aplikasi Penjana Sajak Anda - Pengekodan
+          dengan Puisi
+        poetry_module_textandvariables: Teks & Pemboleh Ubah - Pengekodan dengan Puisi
+        poetry_module_variables: Pemboleh Ubah - Pengekodan dengan Puisi
+        repeat_block: Menggunakan Blok Ulang
+        rough_poemart_congrats: v1 Tahniah Seni Sajak
+        rough_poemart_events: v1 Peristiwa Seni Sajak
+        rough_poemart_imagery: v1 Imejan Seni Sajak
+        rough_poemart_intro: v1 Pengenalan Seni Sajak
+        songwriting_with_functions: Unplugged Pelajaran dalam Tindakan - Penulisan
+          Lagu dengan Fungsi
+        star_quilts_intro_to_artist: 'Star Quilts: Pengenalan kepada Artis'
         starquilts_intro_artist: Pengenalan kepada Star Quilts
-        CSA-PL-intro-to-arrays: Tatasusunan Satu Dimensi (1D)
-        CSA-PL-1d-arrays-new-values: Memasukkan nilai dalam tatasusunan 1D
-        CSA-PL-conditionals: Kenyataan Bersyarat dalam Java
-        CSA-PL-two-way-selection: Pemilihan dua hala
-        CSA-PL-Printing-in-Java: Percetakan dalam Java
-        CSA-PL-multi-selection-statements: Kenyataan Pelbagai Pilihan
-        CS_Changing_Everything: Sains Komputer Mengubah Segalanya
-        csd_sprite_properties: Sifat Peperi
-    callout:
-      text:
-        run: |2-
-
-
-          Tekan "Jalankan" untuk mencuba atur cara anda
-        craft_run_button_callout: |2-
-
-
-          Tekan "Jalankan" untuk mencuba atur cara anda
-        craft_callout_preplaced: Kami telah meletakkan beberapa blok di sini untuk
-          membantu anda bermula
-        craft_inside_repeat: Ulangi tindakan dengan meletakkan blok di sini
-        craft_callout_preplaced_house: Kod ini akan mula membina rumah anda. Bolehkah
-          anda menyiapkan rumah itu?
-        craft_what_is_iron: Melombong besi ini!
-        craft_callout_moveforward: Kod ini akan memeriksa lahar, bolehkah anda tambahkan
-          perintah untuk bergerak ke hadapan?
+        starwars_blocks_congrats: 'Star Wars: Membina Galaksi dengan Menggunakan Kod
+          - Tahniah'
+        starwars_blocks_events: 'Star Wars: Membina Galaksi dengan Menggunakan Kod
+          - Acara'
+        starwars_blocks_intro: 'Star Wars: Membina Galaksi dengan Menggunakan Kod
+          - Pengenalan'
+        starwars_congrats: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - Tahniah'
+        starwars_events: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - Acara'
+        starwars_intro: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - Pengenalan'
+        starwars_typing: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - JavaScript'
+        teaching_cs_pair_programming: 'Mengajar Asas CS: Pengaturcaraan Pasangan'
+        teaching_csf_how_it_works: 'Mengajar Asas CS: Bagaimana Kursus Berfungsi'
+        teaching_problem_solving: 'Mengajar CS Asas: Mengajar Penyelesaian Masalah'
+        tutorial_puzzle_challenge: Tutorial Teka-teki Cabaran
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video
+          - Blok data
+        u7-libraries-explanation: 'Makmal Aplikasi: Buat Blok Anda Sendiri - Cara
+          Menggunakan Perpustakaan'
+        upload_sprites_backgrounds: Memuat naik Sprite Custom dan Latar Belakang
+        what_is_an_event: Apa itu acara?
+        what_is_cs: Apakah sains komputer?
+        why-should-teach-unplugged-activities: 'Soalan Lazim: Mengapa saya harus mengajar
+          aktiviti “dicabut”?'
+        why_unplugged_lessons: Mendapatkan “dicabut”
+        writing_first_program: Menulis program komputer pertama anda

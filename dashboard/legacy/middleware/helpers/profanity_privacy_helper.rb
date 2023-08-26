@@ -91,7 +91,7 @@ def share_failure_from_body(body, locale)
 
   begin
     ShareFiltering.find_share_failure(blockly_source, locale)
-  rescue OpenURI::HTTPError, IO::EAGAINWaitReadable
+  rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable
     # If WebPurify or Geocoder are unavailable, default to viewable
     return false
   end

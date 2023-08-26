@@ -1,15 +1,20 @@
 {
   "key": "focus-on-impact-in-society",
-  "display_name": "focus-on-impact-in-society",
+  "display_name": "Focus on Impact in Society (CS Discoveries)",
   "category": "other",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
-  "marketing_initiative": null,
+  "curriculum_type": "Course",
+  "marketing_initiative": "CSD",
   "grade_levels": "6,7,8,9,10,11,12",
-  "header": null,
-  "image": "https://images.code.org/8c0b6b09b51b4d45e609af01fde3da84-ImpactOnSociety.png",
+  "header": "collections",
+  "image": "https://images.code.org/977b3b89b70b54d36f14c590c11ab9f9-Impact on Society.png",
   "cs_topic": "app_design,artificial_intelligence",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": "How does code impact the world around us? In this unit, students are challenged to consider the broader social impacts of various aspects of computer science.",
+  "professional_learning_program": "code.org/apply",
+  "video": "https://www.youtube-nocookie.com/embed/QvyTEx1wyOY/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=QvyTEx1wyOY&wmode=transparent",
+  "published_date": "2023-07-10 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": 443
 }

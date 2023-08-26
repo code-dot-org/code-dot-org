@@ -42,7 +42,6 @@ MONITORING_GROUPS = {
   'infrastructure' => ['Infrastructure'],
   'international' => ['International Partnerships', 'International'],
   'marketing' => ['Marketing'],
-  'platform-team' => ['Platform Team'],
   'programsnpartners_theluau' => ['Programs Team'],
   'reaching-out' => ['Adoption and Outreach Team', 'Ed Programs', 'Professional Learning'],
   'student-learning' => ['Student Learning'],
@@ -65,7 +64,6 @@ GROUP_FILTERS = {
   'International' => '14740813928845',
   'International Partnerships' => '360086130812',
   'Marketing' => '47756566',
-  'Platform Team' => '360086130792',
   'Professional Learning' => '13462346662541',
   'Programs Team' => '8163316698253',
   'Student Learning' => '9612070142733',
@@ -195,14 +193,14 @@ def get_tickets_by_group
 
   # Report out for each Slack room
   MONITORING_GROUPS.each do |slack_room, groups|
-    group_messages = groups.map do |group_name|
+    group_messages = groups.filter_map do |group_name|
       count = group_counts[group_name] || 0
       next nil if count == 0
 
       url = Zendesk.group_url(group: group_name, statuses: STATUSES_TO_REPORT)
       statuses = STATUSES_TO_REPORT.join('/')
       "<#{url}|#{group_name} has #{count} #{statuses} Zendesk tickets.>"
-    end.compact
+    end
 
     # Don't post if there's nothing to report
     next if group_messages.empty?
@@ -232,7 +230,7 @@ def get_tickets_by_user
 
   # Report out for each Slack room
   MONITORING_USERS.each do |slack_room, users|
-    user_messages = users.map do |user|
+    user_messages = users.filter_map do |user|
       user_email = "#{user}@code.org"
       count = user_counts[user_email] || 0
       next nil if count == 0
@@ -240,7 +238,7 @@ def get_tickets_by_user
       url = Zendesk.user_url(user: user_email, statuses: STATUSES_TO_REPORT)
       statuses = STATUSES_TO_REPORT.join('/')
       "<#{url}|#{user_email} has #{count} #{statuses} Zendesk tickets.>"
-    end.compact
+    end
 
     # Don't post if there's nothing to report
     next if user_messages.empty?

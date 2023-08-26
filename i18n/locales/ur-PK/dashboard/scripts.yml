@@ -8,9 +8,13 @@ ur:
         course3:
           description_audience: Ages 8-18
         playlab:
+          title: لیب کھیلیں
           name: پلے لیب
         artist:
+          title: آرٹسٹ
           name: فنکار
+        hourofcode:
+          title: کلاسک بھولبلییا
         frozen:
           title: اینا اور ایلسا کے ساتھ کوڈ
           description: آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک اینڈ بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس اور پیٹرنز تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں کو بھی دکھا سکیں گے۔
@@ -19,18 +23,40 @@ ur:
         course4:
           description_audience: Ages 9-18
         infinity:
+          title: Disney Infinity Play Lab
+          description: ڈزنی انفینٹی حروف ابنیت ایک کہانی یا کھیل پیدا کرنے کے لئے کھیلیں لیب کا استعمال کریں.
+          description_short: ڈزنی انفینٹی حروف ابنیت ایک کہانی یا کھیل پیدا کرنے کے لئے کھیلیں لیب کا استعمال کریں.
+          student_description: ڈزنی انفینٹی حروف ابنیت ایک کہانی یا کھیل پیدا کرنے کے لئے کھیلیں لیب کا استعمال کریں.
           name: انفینیٹی
+        netsim:
+          title: انٹرنیٹ سمیلیٹر
+        pixelation:
+          title: پکسلیشن
         20-hour:
+          description: یہ 20 گھنٹے کا کورس 2-4 کورس میں بنیادی کمپیوٹر سائنس اور پروگرامنگ تصورات کا احاطہ کرتا ہے. کورس عمر 10-18 کے ساتھ استعمال کے لئے ڈیزائن کیا گیا ہے. کورسز چیک کریں 2-4 ایک سے زیادہ مکمل تجربے کے لئے!
           description_audience: Ages 10-18
+          student_description: یہ 20 گھنٹے کا کورس 2-4 کورس میں بنیادی کمپیوٹر سائنس اور پروگرامنگ تصورات کا احاطہ کرتا ہے. کورس عمر 10-18 کے ساتھ استعمال کے لئے ڈیزائن کیا گیا ہے. کورسز چیک کریں 2-4 ایک سے زیادہ مکمل تجربے کے لئے!
+          name: 20 گھنٹے
         events:
           title: ایونٹس/واقعات
           description: ایونٹس/واقعات
           description_short: ایونٹس/واقعات
           student_description: ایونٹس/واقعات
+        flappy:
+          title: فلاپی کوڈ
+          description: چاہتے ہیں کم از کم 10 منٹ میں آپ کے اپنے کھیل لکھتے ہیں؟ ہمارے Flappy کوڈ ٹیوٹوریل کی کوشش کریں!
+          student_description: چاہتے ہیں کم از کم 10 منٹ میں آپ کے اپنے کھیل لکھتے ہیں؟ ہمارے Flappy کوڈ ٹیوٹوریل کی کوشش کریں!
         jigsaw:
+          title: پہیلیاں۔
           name: جگسا
         step:
           title: اسٹیپ
+        text-compression:
+          title: متن گٹھانا
+        allthethings:
+          lessons:
+            lesson-49:
+              name: میوزک
         asUnplugged:
           description_audience: Ages 6-13
         afterschool1:
@@ -43,6 +69,8 @@ ur:
           description_audience: Ages 10-18
         iceage:
           name: برفانی دور
+        gumball:
+          title: Gumball Play Lab
         starwars:
           title: 'اسٹار وارز: کوڈ کے ساتھ کہکشاں بنانا (جاوا اسکرپٹ)'
           description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں میں اپنی اسٹار وارز گیم بنائیں۔
@@ -55,12 +83,22 @@ ur:
           student_description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں میں اپنی اسٹار وارز گیم بنائیں۔
         mc:
           title: Minecraft کوڈ کی گھڑی
+          description_short: کوڈ کے ذریعے ایک Minecraft دنیا کو دریافت کریں.
         oceans:
+          title: AI فار اوشنز
           name: سمندر
+        CSDU3-Draft:
+          description_short: پروگرامنگ
+        TEMP CSD Unit 3:
+          description_short: پروگرامنگ
         CSF_Secret_Sample:
           description_audience: Ages 8-18
+        CSDU2-Draft:
+          description_short: ویب ڈویلپمنٹ
         CSDU5-Draft:
           description_short: ڈیٹا
+        CSDU6-Draft:
+          description_short: میکر لیب
         CSF_Secret_Sample_Story:
           description_audience: Ages 8-18+
         MikeTest:
@@ -79,12 +117,38 @@ ur:
           description_audience: Ages 5-18
         grade2:
           description_audience: Ages 5-18
+        csp1-support:
+          title: یونٹ 1 آن لائن پروفیشنل لرننگ کورس
         basketball:
+          title: اپنی ٹیم منتخب کریں اور ایک باسکٹ  بال گیم بنائیں
+          description_short: اپنی ٹیم منتخب کریں اور ایک باسکٹ  بال گیم بنائیں
+          description: اپنی ٹیم منتخب کریں اور ایک باسکٹ  بال گیم بنائیں
+          student_description: اپنی ٹیم منتخب کریں اور ایک باسکٹ  بال گیم بنائیں
           name: باسکٹ بال
+        minecraft:
+          description_short: پروگرام جانوروں اور دیگر Minecraft مخلوق Minecraft کے اپنے ورژن میں.
+          description: پروگرام جانوروں اور دیگر Minecraft مخلوق Minecraft کے اپنے ورژن میں.
+          student_description: پروگرام جانوروں اور دیگر Minecraft مخلوق Minecraft کے اپنے ورژن میں.
+        coursea-draft:
+          title: 'CS کے بنیادی اصول: کورس A'
+        courseb-draft:
+          title: 'CS کے بنیادی اصول: کورس B'
+        coursec-draft:
+          title: 'CS کے بنیادی اصول: کورس C'
+        coursed-draft:
+          title: 'CS کے بنیادی اصول: کورس D'
+        coursee-draft:
+          title: 'CS کے بنیادی اصول: کورس E'
+        coursef-draft:
+          title: 'CS کے بنیادی اصول: کورس F'
         sports:
           name: کھیل
         csp5-support:
           description: "#### **یہ کورس اس کورس کے ورژن سے وابستہ ہے جو اب مزید معاونت یافتہ نہیں ہے۔ ہمارے سب سے موجودہ نصاب دیکھنے کے لیے ہمارا کورسز کا عمومی جائزہ صفحہ (<https://studio.code.org/courses>) ملاحظہ کریں۔**\n\nیہ یونٹ 5 پڑھانے کی تیاری کرنے والے CSP اساتذہ کے لیے پروفیشنل لرننگ کورس میں منظم کردہ آن لائن معاونتوں کا ایک مجموعہ ہے۔"
+        coursed-ramp:
+          title: 'CS کے بنیادی اصول: کورس D'
+        csd2-old:
+          description_short: ویب ڈویلپمنٹ
         coursea-2017:
           title: کورس A
           assignment_family_title: کورس A
@@ -108,6 +172,11 @@ ur:
           title: کورس F
           assignment_family_title: کورس F
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        pre-express-2017:
+          title: پری ریڈر ایکسپریس
+          assignment_family_title: پری ریڈر ایکسپریس
+        applab-intro:
+          title: ایپ لیب کا تعارف
         hero:
           name: ہیرو
         coursea-2018:
@@ -124,7 +193,10 @@ ur:
         coursef-2018:
           assignment_family_title: کورس F
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        pre-express-2018:
+          assignment_family_title: پری ریڈر ایکسپریس
         dance:
+          title: ڈانس پارٹی (2018)
           description_short: کیٹی پیری، میڈونا، جے بالون، سیا، کیتھ اربن، سیارا، اور مزید 25 کی خاصیت بنانا!
           name: رقص کرنا
         aquatic:
@@ -135,6 +207,10 @@ ur:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
+        dance-extras:
+          title: ڈانس کرتے رہیں (2018)
         coursef-2019:
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
           lesson_groups:
@@ -142,6 +218,12 @@ ur:
               display_name: متغیرات
             csf_data:
               display_name: ڈیٹا
+            csf_for_loops:
+              display_name: لوپس کے لئے
+            csf_internet:
+              display_name: انٹرنیٹ
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
         coursed-2019:
           lesson_groups:
             csf_events:
@@ -150,31 +232,57 @@ ur:
               display_name: لوپس
             csf_conditionals:
               display_name: شرائط
+            csf_binary:
+              display_name: ثنائی
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_nested_loops:
+              display_name: گھوںسلا لوپس
+            csf_functions:
+              display_name: افعال
         express-2019:
           lesson_groups:
             csf_loops:
               display_name: لوپس
             csf_conditionals:
               display_name: شرائط
+            csf_functions:
+              display_name: افعال
             csf_variables:
               display_name: متغیرات
+            csf_for_loops:
+              display_name: لوپس کے لئے
         coursec-2019:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_binary:
+              display_name: ثنائی
             csf_loops:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
             csf_data:
               display_name: ڈیٹا
+        gamelab:
+          title: کھیل لیب
         coursea-2019:
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_loops:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
         courseb-2019:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_loops:
               display_name: لوپس
             csf_events:
@@ -191,24 +299,32 @@ ur:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
         csp2-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
@@ -221,24 +337,32 @@ ur:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -260,10 +384,18 @@ ur:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
         time4cs-control-unit-2:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_conditionals:
               display_name: شرائط
+            csf_nested_loops:
+              display_name: گھوںسلا لوپس
+            csf_functions:
+              display_name: افعال
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -272,6 +404,8 @@ ur:
               display_name: شرائط
             csf_events:
               display_name: ایونٹس/واقعات
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -280,12 +414,16 @@ ur:
               display_name: شرائط
             csf_events:
               display_name: ایونٹس/واقعات
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
         csp4-2020:
           lesson_groups:
             csp_variables:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -295,18 +433,26 @@ ur:
         coursea-2020:
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_loops:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
         courseb-2020:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_loops:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
         coursec-2020:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_binary:
+              display_name: ثنائی
             csf_loops:
               display_name: لوپس
             csf_events:
@@ -321,27 +467,51 @@ ur:
               display_name: لوپس
             csf_conditionals:
               display_name: شرائط
+            csf_binary:
+              display_name: ثنائی
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_nested_loops:
+              display_name: گھوںسلا لوپس
+            csf_functions:
+              display_name: افعال
         coursef-2020:
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_variables:
               display_name: متغیرات
             csf_data:
               display_name: ڈیٹا
+            csf_for_loops:
+              display_name: لوپس کے لئے
         express-2020:
           lesson_groups:
             csf_loops:
               display_name: لوپس
             csf_conditionals:
               display_name: شرائط
+            csf_functions:
+              display_name: افعال
             csf_variables:
               display_name: متغیرات
+            csf_for_loops:
+              display_name: لوپس کے لئے
         pre-express-2020:
           lesson_groups:
             csf_loops:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
+        csp5-virtual:
+          title: ایونٹ سے اخذ کردہ  پروگرامنگ کی ان ایپ لیب
+        csd3-virtual:
+          title: گیم لیب کے لیے ذاتی پیش رفت کا تعارف
         virustest:
           title: وباء کے پھیلنے کا سیمیولیشن
           description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
@@ -356,37 +526,55 @@ ur:
           student_description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
         2021drafting:
           lesson_groups:
+            introduction:
+              display_name: تعارف
             lessonGroup-3:
               display_name: متغیرات
             outbreak:
               display_name: وباء کا سیمیولیٹر
+            debugging:
+              display_name: ڈیبگنگ
         csp4-2021:
           lesson_groups:
             csp_variables:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: فہرستیں
             csp_loops:
               display_name: لوپس
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: الگورتھم
         coursea-2021:
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_loops:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
         courseb-2021:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_loops:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
         coursec-2021:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_binary:
+              display_name: ثنائی
             csf_loops:
               display_name: لوپس
             csf_events:
@@ -402,25 +590,49 @@ ur:
               display_name: لوپس
             csf_conditionals:
               display_name: شرائط
+            csf_binary:
+              display_name: ثنائی
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-6:
+              display_name: ڈیجیٹل شہریت
         coursee-2021:
           lesson_groups:
+            ramp_up:
+              display_name: گھوںسلا لوپس
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_nested_loops:
               display_name: شرائط
+            csf_functions:
+              display_name: افعال
         coursef-2021:
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_variables:
+              display_name: لوپس کے لئے
+            csf_for_loops:
+              display_name: لوپس کے لئے
             lessonGroup-8:
               display_name: متغیرات
             lessonGroup-9:
               display_name: ہٹانا
+            lessonGroup-7:
+              display_name: ڈیجیٹل شہریت
         express-2021:
           lesson_groups:
             csf_loops:
               display_name: لوپس
             csf_conditionals:
               display_name: شرائط
+            csf_functions:
+              display_name: افعال
             csf_variables:
               display_name: متغیرات
+            csf_for_loops:
+              display_name: لوپس کے لئے
             lessonGroup-9:
               display_name: ایونٹس/واقعات
         pre-express-2021:
@@ -431,6 +643,8 @@ ur:
               display_name: ایونٹس/واقعات
         csf-2021-pilot:
           lesson_groups:
+            ramp_up:
+              display_name: تعارف
             outbreak:
               display_name: وباء کی سیمولیشن
             lessonGroup-3:
@@ -473,6 +687,54 @@ ur:
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
+        k5-onlinepd-2021:
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: تعارف
+            Introduction:
+              display_name: تعارف
+        aiml-2021:
+          title: AI  اور مشین لرننگ ماڈیول
+        csd7-2021:
+          title: AI اور مشین لرننگ
+        self-paced-pl-csd1-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Code.org کو نیویگیٹ کرنا
+            lessonGroup-5:
+              display_name: CS Discoveries کو پڑھانے کے لیے تیاری کرنا
+          title: 'ماڈیول 1: خوش آمدید '
+          description: "یہ ماڈیول Code.org اور اس پیشہ ورانہ لرننگ کورس دونوں کا مختصر تعارف ہے۔ \n\n**آپ:**\n\n-   Code.org اور CS Discoveries کا تعارف حاصل کریں گے۔\n-   اس پیشہ ورانہ لرننگ کورس میں مشغولیت کا طریقہ کار جانیں گے۔\n\n**تجویز کردہ وقت:** 10 منٹس"
+          student_description: "یہ ماڈیول Code.org اور اس پیشہ ورانہ لرننگ کورس دونوں کا مختصر تعارف ہے۔ \n\n**آپ:**\n\n-   Code.org اور CS Discoveries کا تعارف حاصل کریں گے۔\n-   اس پیشہ ورانہ لرننگ کورس میں مشغولیت کا طریقہ کار جانیں گے۔\n\n**تجویز کردہ وقت:** 10 منٹس"
+        self-paced-pl-csd2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.org کو نیویگیٹ کرنا
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
+          description: "یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن کیا گیا ہے جو آپ CS Discoveries پڑھانے کے دوران طلباء کو سیکھنے میں معاونت کے لیے استعمال کریں گے۔ \n\n**آپ:**\n\n-   Code.org ویب سائٹ اور ٹیچر ٹولز میں نیویگیٹ کریں گے۔\n-   کلاس روم کے سیکشن کو سیٹ اپ کریں گے\n-   کورس کے سبق کے پلانز اور ٹیچر کے وسائل کو تلاش اور استعمال کریں گے۔ \n-   کورس پڑھانے کے دوران معاونت تک رسائی کا طریقہ کار جانیں گے۔\n\n**تجویز کردہ وقت:** 60 منٹس"
+          student_description: "یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن کیا گیا ہے جو آپ CS Discoveries پڑھانے کے دوران طلباء کو سیکھنے میں معاونت کے لیے استعمال کریں گے۔ \n\n**آپ:**\n\n-   Code.org ویب سائٹ اور ٹیچر ٹولز میں نیویگیٹ کریں گے۔\n-   کلاس روم کے سیکشن کو سیٹ اپ کریں گے\n-   کورس کے سبق کے پلانز اور ٹیچر کے وسائل کو تلاش اور استعمال کریں گے۔ \n-   کورس پڑھانے کے دوران معاونت تک رسائی کا طریقہ کار جانیں گے۔\n\n**تجویز کردہ وقت:** 60 منٹس"
+        self-paced-pl-csd3-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveries کا مجموعی جائزہ
+          title: 'ماڈیول 3: CS Discoveries کا مجموعی جائزہ'
+          description: "یہ ماڈیول آپ کو اہم تصورات جن کو طلباء سیکھیں گے اور ٹولز جن کو طلباء پورے کورس میں استعمال کریں گے کے حامل CS Discoveries کورس کا مجموعی جائزہ فراہم کرے گا۔ اس ماڈیول میں مشغولیت کرنے سے وہ کورس جس کا مواد آپ اپنے کلاس روم میں لاگو کریں گے اسے منتخب کرنے کے طریقہ کار کے متعلق فیصلے کرنے میں آپ کی مدد کرے گا۔ \n\n**آپ:**\n\n-   CS Discoveries نصاب کی اعلیٰ سمجھ بوجھ حاصل ہو گی۔\n-   CS Discoveries میں استعمال شدہ پروگرامنگ کے ماحول سے مانوس ہوں گے۔\n-   فیصلہ کریں گے کہ آپ اپنی کلاس روم میں  CS Discoveries کے کون سے یونٹس پڑھائیں گے۔\n\n**تجویز کردہ وقت:** 60 منٹس"
+          student_description: "یہ ماڈیول آپ کو اہم تصورات جن کو طلباء سیکھیں گے اور ٹولز جن کو طلباء پورے کورس میں استعمال کریں گے کے حامل CS Discoveries کورس کا مجموعی جائزہ فراہم کرے گا۔ اس ماڈیول میں مشغولیت کرنے سے وہ کورس جس کا مواد آپ اپنے کلاس روم میں لاگو کریں گے اسے منتخب کرنے کے طریقہ کار کے متعلق فیصلے کرنے میں آپ کی مدد کرے گا۔ \n\n**آپ:**\n\n-   CS Discoveries نصاب کی اعلیٰ سمجھ بوجھ حاصل ہو گی۔\n-   CS Discoveries میں استعمال شدہ پروگرامنگ کے ماحول سے مانوس ہوں گے۔\n-   فیصلہ کریں گے کہ آپ اپنی کلاس روم میں  CS Discoveries کے کون سے یونٹس پڑھائیں گے۔\n\n**تجویز کردہ وقت:** 60 منٹس"
+        self-paced-pl-csd4-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveries کو پڑھانا اور سیکھنا
+          title: 'ماڈیول 4: CS Discoveries کو پڑھانا اور سیکھنا'
+          description: "اس ماڈیول میں، آپ ان مصدقہ CS مشقوں سے تعارف حاصل کریں گے جن کے ساتھ پورے CS Discoveries کورس میں طلباء \n مشغول رہیں گے۔ ان مشقوں میں ڈی بگ کرنا، ذرائع کا استعمال، اور پیئر پروگرامنگ شامل ہیں۔ آپ CS Discoveries کلاس روم میں ٹیچر کے کردار کو بھی دریافت کریں گے اور اس بات کا بھی پلان بنائیں گے کہ آپ کورس کی تعلیم دینے کے دوران طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**آپ:**\n\n-   CS Discoveries کلاس روم میں ٹیچر کے کردار کو زیرِ غور لائیں گے۔ \n-   ان مصدقہ CS مشقوں کے متعلق جانیں گے جو طلباء پورے CS Discoveries کورس میں بنائیں گے۔\n-   پلان بنائیں گے کہ آپ ڈفرینشیئشن، جاری جائزے، اور شمولیت کے کلچر کو فروغ دینے کے ذریعے طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**تجویز کردہ وقت:** 50 منٹس"
+          student_description: "اس ماڈیول میں، آپ ان مصدقہ CS مشقوں سے تعارف حاصل کریں گے جن کے ساتھ پورے CS Discoveries کورس میں طلباء \n مشغول رہیں گے۔ ان مشقوں میں ڈی بگ کرنا، ذرائع کا استعمال، اور پیئر پروگرامنگ شامل ہیں۔ آپ CS Discoveries کلاس روم میں ٹیچر کے کردار کو بھی دریافت کریں گے اور اس بات کا بھی پلان بنائیں گے کہ آپ کورس کی تعلیم دینے کے دوران طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**آپ:**\n\n-   CS Discoveries کلاس روم میں ٹیچر کے کردار کو زیرِ غور لائیں گے۔ \n-   ان مصدقہ CS مشقوں کے متعلق جانیں گے جو طلباء پورے CS Discoveries کورس میں بنائیں گے۔\n-   پلان بنائیں گے کہ آپ ڈفرینشیئشن، جاری جائزے، اور شمولیت کے کلچر کو فروغ دینے کے ذریعے طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**تجویز کردہ وقت:** 50 منٹس"
+        self-paced-pl-csd5-2021:
+          title: AI اور مشین لرننگ کو پڑھانا
+          description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور مشین لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-   مصنوعی ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔\n-   AI لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔\n-   باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔ \n-   اپنے طلباء کے ساتھ یونٹ کو لاگو کرنے کا منصوبہ بنائیں گے۔\n\n**تجویز کردہ وقت:** 120 منٹس"
+          student_description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور مشین لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-   مصنوعی ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   AI لیب کو استعمال کرتے ہوئے مشین لرننگ ماڈل کی تربیت دیں گے۔\n-   مشین لرننگ ایپس کے ساتھ مشغول ہوں گے۔ \n-   AI اور مشین لرننگ کو حقیقی دنیا میں لاگو کرنے پر غور کریں گے۔ \n-   باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔\n\n**تجویز کردہ وقت:** 120 منٹس"
+        self-paced-pl-csd6-2021:
+          description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور مشین لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-   مصنوعی ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   AI لیب کو استعمال کرتے ہوئے مشین لرننگ ماڈل کی تربیت دیں گے۔\n-   مشین لرننگ ایپس کے ساتھ مشغول ہوں گے۔ \n-   AI اور مشین لرننگ کو حقیقی دنیا میں لاگو کرنے پر غور کریں گے۔ \n-   باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔\n\n**تجویز کردہ وقت:** 120 منٹس"
+        self-paced-pl-csp2-2021:
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
         outbreak-module:
           title: وباء کا پھیلنا
         csa-videos:
@@ -490,6 +752,9 @@ ur:
             lessonGroup-4:
               display_name: ڈیمو اور وسائل
         csa-self-paced-pl:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.org کو نیویگیٹ کرنا
           title: CSA پائلٹ اساتذہ کے لیے Code.org کا استعمال کرنا
           description: |-
             یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن کیا گیا ہے جن کا استعمال آپ CSA پڑھانے کے دوران طلبہ کے سیکھنے میں مدد کے لیے کریں گے۔
@@ -550,8 +815,17 @@ ur:
               display_name: اسباق
             lessonGroup-4:
               display_name: ڈیمو اور وسائل
+        hello-world-animals:
+          title: 'Hello World: Animals'
+        hello-world-retro:
+          title: 'ہیلو دنیا: ریٹرو'
         hello-world-batman:
           title: ہیلو ورلڈ
+        ai-ethics:
+          title: ہمارے AI کا ضابطہ اخلاق
+          description_audience: گریڈ 6-12
+        dance-unplugged:
+          title: آوور آف کوڈ - ڈانس پارٹی - ان پلگڈ
         csc-things:
           name: csc-things
           title: CSC برین ڈمپ
@@ -613,9 +887,16 @@ ur:
             lessonGroup-5:
               display_name: سینڈباکس
         ai-ethics-2021:
+          title: ہمارے AI کا ضابطہ اخلاق
           description_audience: گریڈز 6-8
         poem-art-2021:
           title: نظم کا فن
+        poetry-2021:
+          title: شاعری کی حامل کوڈنگ
+        hello-world-animals-2021:
+          title: 'Hello World: Animals'
+        hello-world-retro-2021:
+          title: 'ہیلو دنیا: ریٹرو'
         counting-csc-2021:
           title: لارل کے ساتھ گنتی
         2022drafting:
@@ -642,6 +923,8 @@ ur:
               display_name: سینڈباکس
         coursea-2022:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_loops:
               display_name: لوپس
             csf_events:
@@ -655,14 +938,20 @@ ur:
               display_name: لوپس
             csf_conditionals:
               display_name: شرائط
+            csf_functions:
+              display_name: افعال
             csf_variables:
               display_name: متغیرات
+            csf_for_loops:
+              display_name: لوپس کے لئے
         csp4-2022:
           lesson_groups:
             csp_variables:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
         csp5-2022:
           lesson_groups:
             csp_lists:
@@ -671,12 +960,16 @@ ur:
               display_name: لوپس
         courseb-2022:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_loops:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
         coursec-2022:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_loops:
               display_name: لوپس
             csf_events:
@@ -685,6 +978,8 @@ ur:
               display_name: ڈیٹا
         coursed-2022:
           lesson_groups:
+            lessonGroup-6:
+              display_name: ڈیجیٹل شہریت
             csf_events:
               display_name: ایونٹس/واقعات
             csf_loops:
@@ -694,10 +989,18 @@ ur:
           title: کورس D (2021)
         coursee-2022:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            ramp_up:
+              display_name: گھوںسلا لوپس
+            csf_functions:
+              display_name: افعال
             csf_nested_loops:
               display_name: شرائط
         coursef-2022:
           lesson_groups:
+            lessonGroup-7:
+              display_name: ڈیجیٹل شہریت
             lessonGroup-8:
               display_name: متغیرات
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
@@ -711,6 +1014,8 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
+        self-paced-pl-csa2-2022:
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-5:
@@ -721,6 +1026,8 @@ ur:
               display_name: سینڈباکس
         coursef-2022-pilot:
           lesson_groups:
+            lessonGroup-7:
+              display_name: ڈیجیٹل شہریت
             lessonGroup-8:
               display_name: متغیرات
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
@@ -879,6 +1186,9 @@ ur:
 
             **مجوزہ وقت:** 90 منٹ
         vpl-csd7-ci-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: AI اور مشین لرننگ کو پڑھانا
           title: 'ماڈیول 7: AI اور مشین لرننگ سکھانے کی تیاری'
           description: |-
             یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا AI اور مشین لرننگ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
@@ -914,10 +1224,42 @@ ur:
         csd-post-survey-2022:
           description: یہ یونٹ CS ڈسکوریز پوسٹ کورس سروے پر مشتمل ہے۔ یہ یونٹ طلباء کے CS ڈسکوریز میں اپنی حتمی یونٹ مکمل کرنے کے بعد تفویض کیا جا سکتا ہے۔
           student_description: اس یونٹ میں ایک سروے ہوتا ہے جب آپ کی کلاس CS ڈسکوریز میں یونٹس کے ساتھ ختم ہوتی ہے۔ آپ کا استاد آپ کو بتائے گا کہ یہ سروے کرنے کا وقت کب ہے۔
+        aiml-2022:
+          title: AI  اور مشین لرننگ ماڈیول
+        self-paced-pl-csd1-2022:
+          title: 'ماڈیول 1: خوش آمدید '
+          description: "یہ ماڈیول Code.org اور اس پیشہ ورانہ لرننگ کورس دونوں کا مختصر تعارف ہے۔ \n\n**آپ:**\n\n-   Code.org اور CS Discoveries کا تعارف حاصل کریں گے۔\n-   اس پیشہ ورانہ لرننگ کورس میں مشغولیت کا طریقہ کار جانیں گے۔\n\n**تجویز کردہ وقت:** 10 منٹس"
+          student_description: "یہ ماڈیول Code.org اور اس پیشہ ورانہ لرننگ کورس دونوں کا مختصر تعارف ہے۔ \n\n**آپ:**\n\n-   Code.org اور CS Discoveries کا تعارف حاصل کریں گے۔\n-   اس پیشہ ورانہ لرننگ کورس میں مشغولیت کا طریقہ کار جانیں گے۔\n\n**تجویز کردہ وقت:** 10 منٹس"
+        self-paced-pl-csd2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.org کو نیویگیٹ کرنا
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
+          description: "یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن کیا گیا ہے جو آپ CS Discoveries پڑھانے کے دوران طلباء کو سیکھنے میں معاونت کے لیے استعمال کریں گے۔ \n\n**آپ:**\n\n-   Code.org ویب سائٹ اور ٹیچر ٹولز میں نیویگیٹ کریں گے۔\n-   کلاس روم کے سیکشن کو سیٹ اپ کریں گے\n-   کورس کے سبق کے پلانز اور ٹیچر کے وسائل کو تلاش اور استعمال کریں گے۔ \n-   کورس پڑھانے کے دوران معاونت تک رسائی کا طریقہ کار جانیں گے۔\n\n**تجویز کردہ وقت:** 60 منٹس"
+          student_description: "یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن کیا گیا ہے جو آپ CS Discoveries پڑھانے کے دوران طلباء کو سیکھنے میں معاونت کے لیے استعمال کریں گے۔ \n\n**آپ:**\n\n-   Code.org ویب سائٹ اور ٹیچر ٹولز میں نیویگیٹ کریں گے۔\n-   کلاس روم کے سیکشن کو سیٹ اپ کریں گے\n-   کورس کے سبق کے پلانز اور ٹیچر کے وسائل کو تلاش اور استعمال کریں گے۔ \n-   کورس پڑھانے کے دوران معاونت تک رسائی کا طریقہ کار جانیں گے۔\n\n**تجویز کردہ وقت:** 60 منٹس"
+        self-paced-pl-csd3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveries کا مجموعی جائزہ
+          title: 'ماڈیول 3: CS Discoveries کا مجموعی جائزہ'
+          description: "یہ ماڈیول آپ کو اہم تصورات جن کو طلباء سیکھیں گے اور ٹولز جن کو طلباء پورے کورس میں استعمال کریں گے کے حامل CS Discoveries کورس کا مجموعی جائزہ فراہم کرے گا۔ اس ماڈیول میں مشغولیت کرنے سے وہ کورس جس کا مواد آپ اپنے کلاس روم میں لاگو کریں گے اسے منتخب کرنے کے طریقہ کار کے متعلق فیصلے کرنے میں آپ کی مدد کرے گا۔ \n\n**آپ:**\n\n-   CS Discoveries نصاب کی اعلیٰ سمجھ بوجھ حاصل ہو گی۔\n-   CS Discoveries میں استعمال شدہ پروگرامنگ کے ماحول سے مانوس ہوں گے۔\n-   فیصلہ کریں گے کہ آپ اپنی کلاس روم میں  CS Discoveries کے کون سے یونٹس پڑھائیں گے۔\n\n**تجویز کردہ وقت:** 60 منٹس"
+          student_description: "یہ ماڈیول آپ کو اہم تصورات جن کو طلباء سیکھیں گے اور ٹولز جن کو طلباء پورے کورس میں استعمال کریں گے کے حامل CS Discoveries کورس کا مجموعی جائزہ فراہم کرے گا۔ اس ماڈیول میں مشغولیت کرنے سے وہ کورس جس کا مواد آپ اپنے کلاس روم میں لاگو کریں گے اسے منتخب کرنے کے طریقہ کار کے متعلق فیصلے کرنے میں آپ کی مدد کرے گا۔ \n\n**آپ:**\n\n-   CS Discoveries نصاب کی اعلیٰ سمجھ بوجھ حاصل ہو گی۔\n-   CS Discoveries میں استعمال شدہ پروگرامنگ کے ماحول سے مانوس ہوں گے۔\n-   فیصلہ کریں گے کہ آپ اپنی کلاس روم میں  CS Discoveries کے کون سے یونٹس پڑھائیں گے۔\n\n**تجویز کردہ وقت:** 60 منٹس"
+        self-paced-pl-csd4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveries کو پڑھانا اور سیکھنا
+          title: 'ماڈیول 4: CS Discoveries کو پڑھانا اور سیکھنا'
+          description: "اس ماڈیول میں، آپ ان مصدقہ CS مشقوں سے تعارف حاصل کریں گے جن کے ساتھ پورے CS Discoveries کورس میں طلباء \n مشغول رہیں گے۔ ان مشقوں میں ڈی بگ کرنا، ذرائع کا استعمال، اور پیئر پروگرامنگ شامل ہیں۔ آپ CS Discoveries کلاس روم میں ٹیچر کے کردار کو بھی دریافت کریں گے اور اس بات کا بھی پلان بنائیں گے کہ آپ کورس کی تعلیم دینے کے دوران طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**آپ:**\n\n-   CS Discoveries کلاس روم میں ٹیچر کے کردار کو زیرِ غور لائیں گے۔ \n-   ان مصدقہ CS مشقوں کے متعلق جانیں گے جو طلباء پورے CS Discoveries کورس میں بنائیں گے۔\n-   پلان بنائیں گے کہ آپ ڈفرینشیئشن، جاری جائزے، اور شمولیت کے کلچر کو فروغ دینے کے ذریعے طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**تجویز کردہ وقت:** 50 منٹس"
+          student_description: "اس ماڈیول میں، آپ ان مصدقہ CS مشقوں سے تعارف حاصل کریں گے جن کے ساتھ پورے CS Discoveries کورس میں طلباء \n مشغول رہیں گے۔ ان مشقوں میں ڈی بگ کرنا، ذرائع کا استعمال، اور پیئر پروگرامنگ شامل ہیں۔ آپ CS Discoveries کلاس روم میں ٹیچر کے کردار کو بھی دریافت کریں گے اور اس بات کا بھی پلان بنائیں گے کہ آپ کورس کی تعلیم دینے کے دوران طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**آپ:**\n\n-   CS Discoveries کلاس روم میں ٹیچر کے کردار کو زیرِ غور لائیں گے۔ \n-   ان مصدقہ CS مشقوں کے متعلق جانیں گے جو طلباء پورے CS Discoveries کورس میں بنائیں گے۔\n-   پلان بنائیں گے کہ آپ ڈفرینشیئشن، جاری جائزے، اور شمولیت کے کلچر کو فروغ دینے کے ذریعے طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**تجویز کردہ وقت:** 50 منٹس"
+        self-paced-pl-csp2-2022:
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
               name: متزامن ڈیبگنگ ایکسٹنشن
+        self-paced-pl-csd5-2022:
+          description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور مشین لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-   مصنوعی ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔\n-   AI لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔\n-   باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔ \n-   اپنے طلباء کے ساتھ یونٹ کو لاگو کرنے کا منصوبہ بنائیں گے۔\n\n**تجویز کردہ وقت:** 120 منٹس"
+          student_description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور مشین لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-   مصنوعی ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔\n-   AI لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔\n-   باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔ \n-   اپنے طلباء کے ساتھ یونٹ کو لاگو کرنے کا منصوبہ بنائیں گے۔\n\n**تجویز کردہ وقت:** 120 منٹس"
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -941,6 +1283,8 @@ ur:
           lessons:
             lesson-1:
               name: ایک جہتی (1D) صفیں
+            lesson-3:
+              name: لوپس کے لئے
         hello-world-space-2022:
           title: 'ہیلو ورلڈ: خلائی'
         hello-world-soccer-2022:
@@ -951,6 +1295,8 @@ ur:
               display_name: باب 1
             lessonGroup-3:
               display_name: باب 2
+            lessonGroup-4:
+              display_name: ایپ لیب کا تعارف
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -961,6 +1307,8 @@ ur:
               display_name: متغیرات
             csp_conditionals:
               display_name: شرائط
+            csp_functions:
+              display_name: افعال
         csp5-2023:
           lesson_groups:
             csp_lists:
@@ -973,9 +1321,17 @@ ur:
               display_name: فہرستیں
             lessonGroup-3:
               display_name: لوپس
+        self-paced-pl-csa2-2023:
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
         csp-playground:
           description_audience: نصاب کے مصنفین
           description_short: نصاب کے ورژنز کے درمیان اسباق یا سطحوں کی اپ ڈیٹس کے لیے
+        devices-2022:
+          title: ڈیوائسز کے ساتھ ایپس تخلیق کرنا (سرکٹ پلے گراؤنڈ)
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ایپ لیب کا تعارف
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:
@@ -986,6 +1342,8 @@ ur:
           lesson_groups:
             lessonGroup-2:
               display_name: باب 1
+        testing-focus-on-creativity2:
+          title: ویب ڈویلپمنٹ
         pre-express-2023:
           lesson_groups:
             csf_loops:
@@ -1000,10 +1358,16 @@ ur:
               display_name: لوپس
             csf_conditionals:
               display_name: شرائط
+            csf_functions:
+              display_name: افعال
             csf_variables:
               display_name: متغیرات
+            csf_for_loops:
+              display_name: لوپس کے لئے
         coursea-2023:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_loops:
               display_name: لوپس
             csf_events:
@@ -1011,12 +1375,16 @@ ur:
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
         courseb-2023:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_loops:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
         coursec-2023:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
             csf_loops:
               display_name: لوپس
             csf_events:
@@ -1025,6 +1393,8 @@ ur:
               display_name: ڈیٹا
         coursed-2023:
           lesson_groups:
+            lessonGroup-6:
+              display_name: ڈیجیٹل شہریت
             csf_events:
               display_name: ایونٹس/واقعات
             csf_loops:
@@ -1034,16 +1404,26 @@ ur:
           title: کورس D (2021)
         coursee-2023:
           lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            ramp_up:
+              display_name: گھوںسلا لوپس
+            csf_functions:
+              display_name: افعال
             csf_nested_loops:
               display_name: شرائط
         aiml-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: ایپ لیب کا تعارف
             lessonGroup-3:
               display_name: باب 1
             lessonGroup-4:
               display_name: باب 2
         focus-on-data3-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: ایپ لیب کا تعارف
             lessonGroup-3:
               display_name: باب 1
             lessonGroup-4:
@@ -1052,6 +1432,8 @@ ur:
           lesson_groups:
             lessonGroup-2:
               display_name: باب 1
+            lessonGroup-3:
+              display_name: ایپ لیب کا تعارف
             lessonGroup-4:
               display_name: باب 2
         vpl-csd-ci-1:
@@ -1202,6 +1584,39 @@ ur:
             -   اپنے طلباء کے ساتھ یونٹ کو نافذ کرنے کا منصوبہ بنائیں گے۔
 
             **مجوزہ وقت:** 120 منٹ
+        self-paced-pl-csd1-2023:
+          title: 'ماڈیول 1: خوش آمدید '
+          description: "یہ ماڈیول Code.org اور اس پیشہ ورانہ لرننگ کورس دونوں کا مختصر تعارف ہے۔ \n\n**آپ:**\n\n-   Code.org اور CS Discoveries کا تعارف حاصل کریں گے۔\n-   اس پیشہ ورانہ لرننگ کورس میں مشغولیت کا طریقہ کار جانیں گے۔\n\n**تجویز کردہ وقت:** 10 منٹس"
+          student_description: "یہ ماڈیول Code.org اور اس پیشہ ورانہ لرننگ کورس دونوں کا مختصر تعارف ہے۔ \n\n**آپ:**\n\n-   Code.org اور CS Discoveries کا تعارف حاصل کریں گے۔\n-   اس پیشہ ورانہ لرننگ کورس میں مشغولیت کا طریقہ کار جانیں گے۔\n\n**تجویز کردہ وقت:** 10 منٹس"
+        self-paced-pl-csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.org کو نیویگیٹ کرنا
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
+          description: "یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن کیا گیا ہے جو آپ CS Discoveries پڑھانے کے دوران طلباء کو سیکھنے میں معاونت کے لیے استعمال کریں گے۔ \n\n**آپ:**\n\n-   Code.org ویب سائٹ اور ٹیچر ٹولز میں نیویگیٹ کریں گے۔\n-   کلاس روم کے سیکشن کو سیٹ اپ کریں گے\n-   کورس کے سبق کے پلانز اور ٹیچر کے وسائل کو تلاش اور استعمال کریں گے۔ \n-   کورس پڑھانے کے دوران معاونت تک رسائی کا طریقہ کار جانیں گے۔\n\n**تجویز کردہ وقت:** 60 منٹس"
+          student_description: "یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن کیا گیا ہے جو آپ CS Discoveries پڑھانے کے دوران طلباء کو سیکھنے میں معاونت کے لیے استعمال کریں گے۔ \n\n**آپ:**\n\n-   Code.org ویب سائٹ اور ٹیچر ٹولز میں نیویگیٹ کریں گے۔\n-   کلاس روم کے سیکشن کو سیٹ اپ کریں گے\n-   کورس کے سبق کے پلانز اور ٹیچر کے وسائل کو تلاش اور استعمال کریں گے۔ \n-   کورس پڑھانے کے دوران معاونت تک رسائی کا طریقہ کار جانیں گے۔\n\n**تجویز کردہ وقت:** 60 منٹس"
+        self-paced-pl-csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveries کا مجموعی جائزہ
+          title: 'ماڈیول 3: CS Discoveries کا مجموعی جائزہ'
+          description: "یہ ماڈیول آپ کو اہم تصورات جن کو طلباء سیکھیں گے اور ٹولز جن کو طلباء پورے کورس میں استعمال کریں گے کے حامل CS Discoveries کورس کا مجموعی جائزہ فراہم کرے گا۔ اس ماڈیول میں مشغولیت کرنے سے وہ کورس جس کا مواد آپ اپنے کلاس روم میں لاگو کریں گے اسے منتخب کرنے کے طریقہ کار کے متعلق فیصلے کرنے میں آپ کی مدد کرے گا۔ \n\n**آپ:**\n\n-   CS Discoveries نصاب کی اعلیٰ سمجھ بوجھ حاصل ہو گی۔\n-   CS Discoveries میں استعمال شدہ پروگرامنگ کے ماحول سے مانوس ہوں گے۔\n-   فیصلہ کریں گے کہ آپ اپنی کلاس روم میں  CS Discoveries کے کون سے یونٹس پڑھائیں گے۔\n\n**تجویز کردہ وقت:** 60 منٹس"
+          student_description: "یہ ماڈیول آپ کو اہم تصورات جن کو طلباء سیکھیں گے اور ٹولز جن کو طلباء پورے کورس میں استعمال کریں گے کے حامل CS Discoveries کورس کا مجموعی جائزہ فراہم کرے گا۔ اس ماڈیول میں مشغولیت کرنے سے وہ کورس جس کا مواد آپ اپنے کلاس روم میں لاگو کریں گے اسے منتخب کرنے کے طریقہ کار کے متعلق فیصلے کرنے میں آپ کی مدد کرے گا۔ \n\n**آپ:**\n\n-   CS Discoveries نصاب کی اعلیٰ سمجھ بوجھ حاصل ہو گی۔\n-   CS Discoveries میں استعمال شدہ پروگرامنگ کے ماحول سے مانوس ہوں گے۔\n-   فیصلہ کریں گے کہ آپ اپنی کلاس روم میں  CS Discoveries کے کون سے یونٹس پڑھائیں گے۔\n\n**تجویز کردہ وقت:** 60 منٹس"
+        self-paced-pl-csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveries کو پڑھانا اور سیکھنا
+          title: 'ماڈیول 4: CS Discoveries کو پڑھانا اور سیکھنا'
+          description: "اس ماڈیول میں، آپ ان مصدقہ CS مشقوں سے تعارف حاصل کریں گے جن کے ساتھ پورے CS Discoveries کورس میں طلباء \n مشغول رہیں گے۔ ان مشقوں میں ڈی بگ کرنا، ذرائع کا استعمال، اور پیئر پروگرامنگ شامل ہیں۔ آپ CS Discoveries کلاس روم میں ٹیچر کے کردار کو بھی دریافت کریں گے اور اس بات کا بھی پلان بنائیں گے کہ آپ کورس کی تعلیم دینے کے دوران طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**آپ:**\n\n-   CS Discoveries کلاس روم میں ٹیچر کے کردار کو زیرِ غور لائیں گے۔ \n-   ان مصدقہ CS مشقوں کے متعلق جانیں گے جو طلباء پورے CS Discoveries کورس میں بنائیں گے۔\n-   پلان بنائیں گے کہ آپ ڈفرینشیئشن، جاری جائزے، اور شمولیت کے کلچر کو فروغ دینے کے ذریعے طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**تجویز کردہ وقت:** 50 منٹس"
+          student_description: "اس ماڈیول میں، آپ ان مصدقہ CS مشقوں سے تعارف حاصل کریں گے جن کے ساتھ پورے CS Discoveries کورس میں طلباء \n مشغول رہیں گے۔ ان مشقوں میں ڈی بگ کرنا، ذرائع کا استعمال، اور پیئر پروگرامنگ شامل ہیں۔ آپ CS Discoveries کلاس روم میں ٹیچر کے کردار کو بھی دریافت کریں گے اور اس بات کا بھی پلان بنائیں گے کہ آپ کورس کی تعلیم دینے کے دوران طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**آپ:**\n\n-   CS Discoveries کلاس روم میں ٹیچر کے کردار کو زیرِ غور لائیں گے۔ \n-   ان مصدقہ CS مشقوں کے متعلق جانیں گے جو طلباء پورے CS Discoveries کورس میں بنائیں گے۔\n-   پلان بنائیں گے کہ آپ ڈفرینشیئشن، جاری جائزے، اور شمولیت کے کلچر کو فروغ دینے کے ذریعے طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**تجویز کردہ وقت:** 50 منٹس"
+        self-paced-pl-csd5-2023:
+          title: 'ماڈیول 7: AI اور مشین لرننگ سکھانے کی تیاری'
+          description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور مشین لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-   مصنوعی ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔\n-   AI لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔\n-   باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔ \n-   اپنے طلباء کے ساتھ یونٹ کو لاگو کرنے کا منصوبہ بنائیں گے۔\n\n**تجویز کردہ وقت:** 120 منٹس"
+          student_description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور مشین لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-   مصنوعی ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔\n-   AI لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔\n-   باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔ \n-   اپنے طلباء کے ساتھ یونٹ کو لاگو کرنے کا منصوبہ بنائیں گے۔\n\n**تجویز کردہ وقت:** 120 منٹس"
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: تعارف
         pl-csd-summer-day2:
           lessons:
             lesson-10:
@@ -1210,3 +1625,107 @@ ur:
           lessons:
             lesson-12:
               name: اختتام
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: تعارف
+            lesson-12:
+              name: اختتام
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: اختتام
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: اختتام
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: اختتام
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: تشخیصات
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
+              display_name: متغیرات
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        self-paced-pl-csp2-2023:
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: ڈیٹا
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
+              display_name: لوپس
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: ڈیٹا
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
+              display_name: لوپس
+            lessonGroup-6:
+              display_name: ڈیٹا
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: ڈیٹا
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
+              display_name: لوپس
+            lessonGroup-6:
+              display_name: ایونٹس/واقعات
+            lessonGroup-8:
+              display_name: ڈیٹا
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: کمپیوٹنگ سسٹمز
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
+              display_name: لوپس
+            lessonGroup-5:
+              display_name: ایونٹس/واقعات
+            lessonGroup-6:
+              display_name: ڈیٹا
+            lessonGroup-8:
+              display_name: کمپیوٹنگ سسٹمز
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-6:
+              display_name: لوپس
+            lessonGroup-7:
+              display_name: ڈیٹا
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: گھوںسلا لوپس
+            lessonGroup-4:
+              display_name: افعال
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: شرائط
+            lessonGroup-5:
+              display_name: متغیرات
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔

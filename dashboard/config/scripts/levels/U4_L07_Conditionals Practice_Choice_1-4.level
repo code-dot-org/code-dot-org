@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-03-23T19:26:43.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
   "properties": {
     "encrypted": "false",
     "skin": "applab",
@@ -236,20 +241,13 @@
     "ai_enabled": "false",
     "display_name": "CodeFeed Quiz, Part 4",
     "project_template_level_name": "U4_L07_Conditionals Practice_Choice_1-Template",
-    "bubble_choice_description": "In this final level, you can add your own unique quiz questions, images, and flair. Let the customization begin!",
+    "bubble_choice_description": "Spice Level: 🌶🌶\r\n\r\nIn this final level, you can add your own unique quiz questions, images, and flair. Let the customization begin!",
     "thumbnail_url": "https://images.code.org/cbfa84a7082db45977b76d11d8a6e861-codefeed_titleCard.png",
     "long_instructions": "## Your Custom Creation\r\n\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; height: 400px\">\r\n<img src=\"https://images.code.org/62e4aff7cf74d97530a25be6e8510cb8-artist.png\" style=\"margin-left: 40px; float: right\">\r\n<p>You have aced the use of conditional statements and logical operators in order to bring our CodeFeed quiz to the masses! But the masses would get tired of just one quiz, right? Now is the time to add your own unique flair and touch to the quiz by creating your own questions, answers, images, and results.\r\n</p>\r\n<br>\r\n\r\n4️⃣ Customize the now-working CodeFeed quiz in order to make it your own! \r\n* The <code style=\"color:black; background-color:#fef088\">setProperty()</code> command is used to set all of the text and images throughout the quiz.\r\n* The code commenting indicates the question that corresponds to the images and text below it.\r\n* <strong> quizSubjectTextbox </strong>contains the main subject of the quiz from the<i> homeScreen</i>.\r\n</div>\r\n<br>\r\n<br>\r\n\r\n💡 **Feeling Inspired?** Try adding another question (or two!) to the quiz to make it even more involved!\r\n<br>\r\n\r\n💡  Try to create a nested conditional in order to make the scoring system even more interesting.\r\n\r\n<br>",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "vMXz+EGTk6E2V/8Wj/MuvvXLzxpobCep/OsMLWsUCUQpDEjldzrb3Ym8Vr4j\nSa4I2ZeiLy3T7VuL93RqAzKA4A==\n"
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-03-23T19:26:43.000Z",
-  "level_num": "custom",
-  "user_id": 18603,
-  "audit_log": "[{\"changed_at\":\"2023-03-23T19:26:43.152+00:00\",\"changed\":[\"cloned from \\\"U4_L07_Conditionals Practice_Choice_1-3\\\"\"],\"cloned_from\":\"U4_L07_Conditionals Practice_Choice_1-3\"},{\"changed_at\":\"2023-03-23 19:26:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-23 19:28:13 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-24 22:52:18 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-24 22:53:39 +0000\",\"changed\":[\"code_functions\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-04 13:24:51 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-04 13:25:38 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-23T19:26:43.152+00:00\",\"changed\":[\"cloned from \\\"U4_L07_Conditionals Practice_Choice_1-3\\\"\"],\"cloned_from\":\"U4_L07_Conditionals Practice_Choice_1-3\"},{\"changed_at\":\"2023-03-23 19:26:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-23 19:28:13 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-24 22:52:18 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-24 22:53:39 +0000\",\"changed\":[\"code_functions\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-04 13:24:51 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-04 13:25:38 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 17:11:09 +0000\",\"changed\":[\"code_functions\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-22 23:18:33 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

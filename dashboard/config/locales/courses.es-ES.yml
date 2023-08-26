@@ -3,270 +3,14 @@ es:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Principios de Informática
-          title: Principios de Informática ('17-'18)
-          version_title: "'17-'18"
-          description_student: En otoño de 2016, el College Board lanzó su curso AP®
-            más reciente, Principios de Informática AP. El curso introduce a los estudiantes
-            en los conceptos fundamentales de la informática y los desafía a explorar
-            cómo la informática y la tecnología pueden impactar en el mundo. El Programa
-            AP diseñó Principios de Ciencias de la Computación AP con el objetivo
-            de crear líderes en los campos de las ciencias de la computación y atraer
-            e involucrar a aquellos que tradicionalmente están menos representados
-            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
-          description_teacher: En otoño de 2016, el College Board lanzó su curso AP®
-            más reciente, Principios de Informática AP. El curso introduce a los estudiantes
-            en los conceptos fundamentales de la informática y los desafía a explorar
-            cómo la informática y la tecnología pueden impactar en el mundo. El Programa
-            AP diseñó Principios de Ciencias de la Computación AP con el objetivo
-            de crear líderes en los campos de las ciencias de la computación y atraer
-            e involucrar a aquellos que tradicionalmente están menos representados
-            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
-          description_short: Aprender los conceptos básicos de la Informática.
-        csd-2017:
-          assignment_family_title: Descubrimientos de la Informática
-          title: Descubrimientos de Informática ('17-'18)
-          version_title: "'17-'18"
-          description_student: Descubrimientos de Informática es un curso introductorio
-            que permite a los estudiantes crear artefactos auténticos e interactuar
-            con las Ciencias de la Computación como un medio para la creatividad,
-            comunicación, resolución de problemas y diversión.
-          description_teacher: Descubrimientos de Informática es un curso introductorio
-            que permite a los estudiantes crear artefactos auténticos e interactuar
-            con las Ciencias de la Computación como un medio para la creatividad,
-            comunicación, resolución de problemas y diversión.
-          description_short: Un curso de introducción a la informática que permite
-            a los estudiantes crear artefactos auténticos.
         allthethingscourse:
-          title: cursodetodaslascosas
           description_short: Este es un curso para todaslascosas
           description_student: Este es un curso para todas las cosas y tiene una descripción
             más larga para los estudiantes
           description_teacher: Este es un curso para todaslascosas y tiene una descripción
             más larga para los profesores
-        csd-2018:
-          assignment_family_title: Descubrimientos de la Informática
-          title: Descubrimientos de la Informática ('18-'19)
-          version_title: "'18-'19"
-          description_short: Un curso de introducción a la informática que permite
-            a los estudiantes crear artefactos auténticos.
-          description_student: Descubrimientos de Informática es un curso introductorio
-            que permite a los estudiantes crear artefactos auténticos e interactuar
-            con las Ciencias de la Computación como un medio para la creatividad,
-            comunicación, resolución de problemas y diversión.
-          description_teacher: Descubrimientos de Informática es un curso introductorio
-            que permite a los estudiantes crear artefactos auténticos e interactuar
-            con las Ciencias de la Computación como un medio para la creatividad,
-            comunicación, resolución de problemas y diversión.
-        csp-2018:
-          assignment_family_title: Principios de Informática
-          title: Principios de Informática ('18-'19)
-          version_title: "'18-'19"
-          description_short: Aprender los conceptos básicos de la Informática.
-          description_student: En otoño de 2016, el College Board lanzó su curso AP®
-            más reciente, Principios de Informática AP. El curso introduce a los estudiantes
-            en los conceptos fundamentales de la informática y los desafía a explorar
-            cómo la informática y la tecnología pueden impactar en el mundo. El Programa
-            AP diseñó Principios de Ciencias de la Computación AP con el objetivo
-            de crear líderes en los campos de las ciencias de la computación y atraer
-            e involucrar a aquellos que tradicionalmente están menos representados
-            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
-          description_teacher: En otoño de 2016, el College Board lanzó su curso AP®
-            más reciente, Principios de Informática AP. El curso introduce a los estudiantes
-            en los conceptos fundamentales de la informática y los desafía a explorar
-            cómo la informática y la tecnología pueden impactar en el mundo. El Programa
-            AP diseñó Principios de Ciencias de la Computación AP con el objetivo
-            de crear líderes en los campos de las ciencias de la computación y atraer
-            e involucrar a aquellos que tradicionalmente están menos representados
-            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
-        csp-2019:
-          title: Principios de Informática ('19-'20)
-          version_title: "'19-'20"
-          description_short: Aprender los conceptos básicos de la Informática.
-          description_student: En otoño de 2016, el College Board lanzó su curso AP®
-            más reciente, Principios de Informática AP. El curso introduce a los estudiantes
-            en los conceptos fundamentales de la informática y los desafía a explorar
-            cómo la informática y la tecnología pueden impactar en el mundo. El Programa
-            AP diseñó Principios de Ciencias de la Computación AP con el objetivo
-            de crear líderes en los campos de las ciencias de la computación y atraer
-            e involucrar a aquellos que tradicionalmente están menos representados
-            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
-          description_teacher: En otoño de 2016, el College Board lanzó su curso AP®
-            más reciente, Principios de Informática AP. El curso introduce a los estudiantes
-            en los conceptos fundamentales de la informática y los desafía a explorar
-            cómo la informática y la tecnología pueden impactar en el mundo. El Programa
-            AP diseñó Principios de Ciencias de la Computación AP con el objetivo
-            de crear líderes en los campos de las ciencias de la computación y atraer
-            e involucrar a aquellos que tradicionalmente están menos representados
-            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
-        csd-2019:
-          title: Descubrimientos de la Informática ('19-'20)
-          version_title: "'19-'20"
-          description_short: Un curso de introducción a la informática que permite
-            a los estudiantes crear artefactos auténticos.
-          description_student: Descubrimientos de Informática es un curso introductorio
-            que permite a los estudiantes crear artefactos auténticos e interactuar
-            con las Ciencias de la Computación como un medio para la creatividad,
-            comunicación, resolución de problemas y diversión.
-          description_teacher: Descubrimientos de Informática es un curso introductorio
-            que permite a los estudiantes crear artefactos auténticos e interactuar
-            con las Ciencias de la Computación como un medio para la creatividad,
-            comunicación, resolución de problemas y diversión.
-        csd-pilot:
-          title: Curso piloto de CSD
-          description_student: Descubrimientos de Informática es un curso introductorio
-            que permite a los estudiantes crear artefactos auténticos e interactuar
-            con las Ciencias de la Computación como un medio para la creatividad,
-            comunicación, resolución de problemas y diversión.
-        csp-2020:
-          title: Principios de Informática (20-21)
-          version_title: 20-21
-          description_short: Aprender los conceptos básicos de la Informática.
-          description_student: En 2016, el College Board lanzó su curso AP® más reciente,
-            Principios de Informática AP. Para el curso escolar 2020-21 han realizado
-            importantes actualizaciones en el marco del curso. CSP introduce a los
-            estudiantes a los conceptos fundamentales de la informática y los desafía
-            a explorar cómo la informática y la tecnología pueden impactar en el mundo.
-            El Programa AP diseñó Principios de Ciencias de la Computación AP con
-            el objetivo de crear líderes en los campos de ciencias de la computación
-            y atraer e involucrar a aquellos que tradicionalmente están subrepresentados
-            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
-          description_teacher: En 2016, el College Board lanzó su curso AP® más reciente,
-            Principios de Informática AP. Para el curso escolar 2020-21 han realizado
-            importantes actualizaciones en el marco del curso. CSP introduce a los
-            estudiantes a los conceptos fundamentales de la informática y los desafía
-            a explorar cómo la informática y la tecnología pueden impactar en el mundo.
-            El Programa AP diseñó Principios de Ciencias de la Computación AP con
-            el objetivo de crear líderes en los campos de ciencias de la computación
-            y atraer e involucrar a aquellos que tradicionalmente están subrepresentados
-            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
-        csd-2020:
-          title: Descubrimientos de Informática (20-21)
-          version_title: 20-21
-          description_short: Un curso de introducción a la informática que permite
-            a los estudiantes crear artefactos auténticos.
-          description_student: Descubrimientos de Informática es un curso introductorio
-            que permite a los estudiantes crear artefactos auténticos e interactuar
-            con las Ciencias de la Computación como un medio para la creatividad,
-            comunicación, resolución de problemas y diversión.
-          description_teacher: Descubrimientos de Informática es un curso introductorio
-            que permite a los estudiantes crear artefactos auténticos e interactuar
-            con las Ciencias de la Computación como un medio para la creatividad,
-            comunicación, resolución de problemas y diversión.
-        csp-2021:
-          title: Principios de Informática (21-22)
-          description_short: Aprender los conceptos básicos de la Informática.
-          description_student: CSP introduce a los estudiantes a los conceptos fundamentales
-            de la informática y los desafía a explorar cómo la informática y la tecnología
-            pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática
-            con el objetivo de crear líderes en los campos de la informática y atraer
-            e involucrar a aquellos que tradicionalmente están subrepresentados con
-            herramientas informáticas esenciales y oportunidades multidisciplinares.
-          description_teacher: |-
-            CSP introduce a los estudiantes en los conceptos fundamentales de la informática y les desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están poco representados con herramientas informáticas esenciales y oportunidades multidisciplinares.
-
-            \*\*¿Sabías que...?
-
-            -   El desarrollo profesional está disponible para ayudarte en los primeros pasos de la enseñanza de los Principios de Informática. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para saber más sobre las oportunidades de aprendizaje profesional en tu zona o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">pulsa aquí</a> para obtener más información sobre la opción de autoaprendizaje en línea.
-
-            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_ y otros recursos que te ayudarán a poner en práctica este plan de estudios en el menú de Recursos para el Profesor que aparece a continuación
-          version_title: 21-22
-        csd-2021:
-          title: Descubrimientos de Informática (21-22)
-          description_short: Un curso introductorio de informática que permite a los
-            estudiantes crear artefactos auténticos.
-          description_student: |-
-            Descubrimientos de Informática (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y comprometerse con la informática como un medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
-
-            **¿Interesado en enseñar Descubrimientos de Informática?** El desarrollo profesional está disponible para ayudarte a empezar a enseñar Descubrimientos de Informática. [Pulsa aquí](https://code.org/educate/professional-learning/middle-high) para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona o [pulsa aquí](https://code.org/educate/professional-development-online) para obtener más información sobre una opción de autoaprendizaje en línea.
-          description_teacher: |-
-            Descubrimientos de Informática (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y comprometerse con la informática como un medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
-
-            **¿Sabías que...?**
-
-            -   El desarrollo profesional está disponible para ayudarte a empezar a enseñar Descubrimientos de Informática. [Pulsa aquí](https://code.org/educate/professional-learning/middle-high) para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona o [pulsa aquí](https://code.org/educate/professional-development-online) para obtener más información sobre una opción en línea autodidacta.
-
-            -   Este curso es modular y puede ser enseñado en diferentes configuraciones basadas en las necesidades de cada aula. Consulte la _Guía de Implantación de la CDS_ en el menú de Recursos para el Profesorado más abajo para conocer las diferentes opciones.
-
-            -   Puedes encontrar la _Guía del Plan de Estudios_, la _Guía para Comenzar_, la _Guía de Evaluación_, y muchos otros recursos para ayudarte a implementar este plan de estudios en el menú de Recursos para Profesores más abajo.
-          version_title: 21-22
-        csa-pilot:
-          title: Piloto de CSA
-        mike-test:
-          title: Fundamentos de la informatica
-        self-paced-pl-csd-2021:
-          title: autodidáctico-pl-csd-2021
-          description_student: |-
-            ## Bienvenido
-
-            Bienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.
-
-            ### Encuentra el aprendizaje que funciona para ti
-
-            -   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
-
-            -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
-          description_teacher: |-
-            ## Bienvenido
-
-            Bienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.
-
-            ### Encuentra el aprendizaje que funciona para ti
-
-            -   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
-
-            -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
-          version_title: 21 - 22
-        self-paced-pl-csp-2021:
-          title: autodidáctico-pl-csp-2021
-          description_student: |-
-            ## Bienvenido
-
-            ##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.
-
-            ### Encuentra el aprendizaje que funciona para ti
-
-            ##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.
-
-            ### Elige tu contenido
-
-            ##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar.
-          description_teacher: |-
-            ## Bienvenido
-
-            ##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.
-
-            ### Encuentra el aprendizaje que funciona para ti
-
-            ##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.
-
-            ### Elige tu contenido
-
-            ##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar.
-          version_title: 21-22
-        csa-pilot-facilitator:
-          title: Organizadores del Proyecto Piloto CSA
-        csp-2022:
-          title: Principios de Informática (22-23)
-          description_short: Aprender los conceptos básicos de la Informática.
-          description_student: CSP introduce a los estudiantes a los conceptos fundamentales
-            de la informática y los desafía a explorar cómo la informática y la tecnología
-            pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática
-            con el objetivo de crear líderes en los campos de la informática y atraer
-            e involucrar a aquellos que tradicionalmente están subrepresentados con
-            herramientas informáticas esenciales y oportunidades multidisciplinares.
-          description_teacher: |-
-            CSP introduce a los estudiantes en los conceptos fundamentales de la informática y les desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están poco representados con herramientas informáticas esenciales y oportunidades multidisciplinares.
-
-            \*\*¿Sabías que...?
-
-            -   El desarrollo profesional está disponible para ayudarte en los primeros pasos de la enseñanza de los Principios de Informática. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para saber más sobre las oportunidades de aprendizaje profesional en tu zona o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">pulsa aquí</a> para obtener más información sobre la opción de autoaprendizaje en línea.
-
-            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_ y otros recursos que te ayudarán a poner en práctica este plan de estudios en el menú de Recursos para el Profesor que aparece a continuación
-          version_title: 22-23
+          title: cursodetodaslascosas
         csa-2022:
-          title: Informática A (22-23)
           description_short: Aprende programación Java y técnicas de ingeniería de
             software.
           description_student: Informática A (CSA) introduce a los estudiantes a la
@@ -285,102 +29,37 @@ es:
             -   El desarrollo profesional está disponible para ayudarte a empezar a enseñar CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona.
 
             -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_, y otros recursos que te ayudarán a implementar este plan de estudios en el menú de Recursos para el Profesor que aparece más abajo.
+          title: Informática A (22-23)
           version_title: 22-23
-        csa-pilot-extra:
-          title: CSA Unidades 7 y 8 Piloto
-        vpl-csd-summer-pilot-2022:
-          title: Taller virtual de verano Descubrimientos de Informática
-          description_student: "**Podrás:**\n\n-   Prepararte para enseñar Descubrimientos
-            de Informática.\n-   Practicar conceptos clave en el plan de estudios
-            de Descubrimientos de Informática.\n-   Crecer en tu comprensión de la
-            educación equitativa de la Informática. \n-   Desarrollar empatía por
-            la experiencia de los estudiantes. \n-   Formar parte de una red de educadores
-            que realizan un trabajo similar."
-          description_teacher: "**Los participantes podrán:**\n\n-   Prepararse para
-            enseñar Descubrimientos de Informática.\n-   Practicar conceptos clave
-            en el plan de estudios de Descubrimientos de Informática.\n-   Crecer
-            en tu comprensión de la educación equitativa de la Informática. \n-   Desarrollar
-            empatía por la experiencia de los estudiantes. \n-   Formar parte de una
-            red de educadores que realizan un trabajo similar."
+        csa-2023:
+          description_short: Aprende programación Java y técnicas de ingeniería de
+            software.
+          description_student: Informática A (CSA) introduce a los estudiantes a la
+            ingeniería de software y la programación orientada a objetos y el diseño
+            utilizando el lenguaje de programación Java. Este plan de estudios cubre
+            una amplia gama de temas, incluyendo el diseño de soluciones a los problemas,
+            el uso de estructuras de datos para organizar grandes conjuntos de datos,
+            el desarrollo e implementación de algoritmos para procesar datos y descubrir
+            nueva información, el análisis de soluciones potenciales, y las implicaciones
+            éticas y sociales de los sistemas informáticos.
+          description_teacher: |-
+            Informática A (CSA) introduce a los estudiantes a la ingeniería de software y la programación orientada a objetos y el diseño utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluyendo el diseño de soluciones a los problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones, y las implicaciones éticas y sociales de los sistemas informáticos.
+
+            **¿Sabías que?**
+
+            -   El desarrollo profesional está disponible para ayudarte a empezar a enseñar CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona.
+
+            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_, y otros recursos que te ayudarán a implementar este plan de estudios en el menú de Recursos para el Profesor que aparece más abajo.
+          title: Informática A (23-24)
+          version_title: 23-24
         csa-async-2022:
           version_title: '22'
-        vpl-csd-summer-pilot-ci-2022:
-          title: vpl-csd-verano-piloto-ci
-          version_title: 21-22
-        self-paced-pl-csa-2022:
-          title: autodidáctico-pl-csa
-          version_title: 22-23
-        csd-2022:
-          title: Descubrimientos de Informática (22-23)
-          description_short: Un curso introductorio de informática que permite a los
-            estudiantes crear artefactos auténticos.
-          description_student: |-
-            Descubrimientos de Informática (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y comprometerse con la informática como un medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
-
-            **¿Interesado en enseñar Descubrimientos de Informática?** El desarrollo profesional está disponible para ayudarte a empezar a enseñar Descubrimientos de Informática. [Pulsa aquí](https://code.org/educate/professional-learning/middle-high) para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona o [pulsa aquí](https://code.org/educate/professional-development-online) para obtener más información sobre una opción de autoaprendizaje en línea.
-          description_teacher: |-
-            Descubrimientos de Informática (CS Discoveries) es un curso introductorio de informática que permite a los alumnos crear artefactos auténticos y comprometerse con la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
-
-            \*\*¿Sabías que...?
-
-            -   El desarrollo profesional está disponible para ayudarte a empezar a enseñar Descubrimientos de Informática. [Pulsa aquí](https://code.org/educate/professional-learning/middle-high) para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona o [pulsa aquí](https://code.org/educate/professional-development-online) para obtener más información sobre una opción en línea autodidacta.
-
-            -   Este curso tiene una implementación flexible y puede impartirse en diferentes configuraciones en función de las necesidades de cada aula. Consulta la [Guía de Implementación del CDS](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) para obtener más información.
-
-            -   Puedes acceder a la [Guía del Plan de Estudios](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) y a la [Guía de Inicio](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) para obtener más información sobre el curso y empezar.
-          version_title: 22-23
-        self-paced-pl-csd-2022:
-          title: autodidáctico-pl-csd-2021
-          description_student: |-
-            ## Bienvenido
-
-            Bienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.
-
-            ### Encuentra el aprendizaje que funciona para ti
-
-            -   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
-
-            -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
-          description_teacher: |-
-            ## Bienvenido
-
-            Bienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.
-
-            ### Encuentra el aprendizaje que funciona para ti
-
-            -   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
-
-            -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
-          version_title: 22-23
-        self-paced-pl-csp-2022:
-          title: autodidáctico-pl-csp-2021
-          description_student: |-
-            ## Bienvenido
-
-            ##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.
-
-            ### Encuentra el aprendizaje que funciona para ti
-
-            ##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.
-
-            ### Elige tu contenido
-
-            ##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar.
-          description_teacher: |-
-            ## Bienvenido
-
-            ##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.
-
-            ### Encuentra el aprendizaje que funciona para ti
-
-            ##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.
-
-            ### Elige tu contenido
-
-            ##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar.
-          version_title: 22-23
-        vpl-csd-ayw-pilot-2022:
-          title: Descubrimientos de Informática - Talleres virtuales del Año Académico
+        csa-pilot:
+          title: Piloto de CSA
+        csa-pilot-extra:
+          title: CSA Unidades 7 y 8 Piloto
+        csa-pilot-facilitator:
+          title: Organizadores del Proyecto Piloto CSA
         csa-validation-pilot-2022:
           description_short: Aprende programación Java y técnicas de ingeniería de
             software.
@@ -401,29 +80,438 @@ es:
             nueva información, el análisis de soluciones potenciales, y las implicaciones
             éticas y sociales de los sistemas informáticos.
           version_title: 22-23
-        csa-2023:
-          title: Informática A (23-24)
-          description_short: Aprende programación Java y técnicas de ingeniería de
-            software.
-          description_student: Informática A (CSA) introduce a los estudiantes a la
-            ingeniería de software y la programación orientada a objetos y el diseño
-            utilizando el lenguaje de programación Java. Este plan de estudios cubre
-            una amplia gama de temas, incluyendo el diseño de soluciones a los problemas,
-            el uso de estructuras de datos para organizar grandes conjuntos de datos,
-            el desarrollo e implementación de algoritmos para procesar datos y descubrir
-            nueva información, el análisis de soluciones potenciales, y las implicaciones
-            éticas y sociales de los sistemas informáticos.
+        csd-2017:
+          assignment_family_title: Descubrimientos de la Informática
+          description_short: Un curso de introducción a la informática que permite
+            a los estudiantes crear artefactos auténticos.
+          description_student: Descubrimientos de Informática es un curso introductorio
+            que permite a los estudiantes crear artefactos auténticos e interactuar
+            con las Ciencias de la Computación como un medio para la creatividad,
+            comunicación, resolución de problemas y diversión.
+          description_teacher: Descubrimientos de Informática es un curso introductorio
+            que permite a los estudiantes crear artefactos auténticos e interactuar
+            con las Ciencias de la Computación como un medio para la creatividad,
+            comunicación, resolución de problemas y diversión.
+          title: Descubrimientos de Informática ('17-'18)
+          version_title: "'17-'18"
+        csd-2018:
+          assignment_family_title: Descubrimientos de la Informática
+          description_short: Un curso de introducción a la informática que permite
+            a los estudiantes crear artefactos auténticos.
+          description_student: Descubrimientos de Informática es un curso introductorio
+            que permite a los estudiantes crear artefactos auténticos e interactuar
+            con las Ciencias de la Computación como un medio para la creatividad,
+            comunicación, resolución de problemas y diversión.
+          description_teacher: Descubrimientos de Informática es un curso introductorio
+            que permite a los estudiantes crear artefactos auténticos e interactuar
+            con las Ciencias de la Computación como un medio para la creatividad,
+            comunicación, resolución de problemas y diversión.
+          title: Descubrimientos de la Informática ('18-'19)
+          version_title: "'18-'19"
+        csd-2019:
+          description_short: Un curso de introducción a la informática que permite
+            a los estudiantes crear artefactos auténticos.
+          description_student: Descubrimientos de Informática es un curso introductorio
+            que permite a los estudiantes crear artefactos auténticos e interactuar
+            con las Ciencias de la Computación como un medio para la creatividad,
+            comunicación, resolución de problemas y diversión.
+          description_teacher: Descubrimientos de Informática es un curso introductorio
+            que permite a los estudiantes crear artefactos auténticos e interactuar
+            con las Ciencias de la Computación como un medio para la creatividad,
+            comunicación, resolución de problemas y diversión.
+          title: Descubrimientos de la Informática ('19-'20)
+          version_title: "'19-'20"
+        csd-2020:
+          description_short: Un curso de introducción a la informática que permite
+            a los estudiantes crear artefactos auténticos.
+          description_student: Descubrimientos de Informática es un curso introductorio
+            que permite a los estudiantes crear artefactos auténticos e interactuar
+            con las Ciencias de la Computación como un medio para la creatividad,
+            comunicación, resolución de problemas y diversión.
+          description_teacher: Descubrimientos de Informática es un curso introductorio
+            que permite a los estudiantes crear artefactos auténticos e interactuar
+            con las Ciencias de la Computación como un medio para la creatividad,
+            comunicación, resolución de problemas y diversión.
+          title: Descubrimientos de Informática (20-21)
+          version_title: 20-21
+        csd-2021:
+          description_short: Un curso introductorio de informática que permite a los
+            estudiantes crear artefactos auténticos.
+          description_student: |-
+            Descubrimientos de Informática (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y comprometerse con la informática como un medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+
+            **¿Interesado en enseñar Descubrimientos de Informática?** El desarrollo profesional está disponible para ayudarte a empezar a enseñar Descubrimientos de Informática. [Pulsa aquí](https://code.org/educate/professional-learning/middle-high) para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona o [pulsa aquí](https://code.org/educate/professional-development-online) para obtener más información sobre una opción de autoaprendizaje en línea.
           description_teacher: |-
-            Informática A (CSA) introduce a los estudiantes a la ingeniería de software y la programación orientada a objetos y el diseño utilizando el lenguaje de programación Java. Este plan de estudios cubre una amplia gama de temas, incluyendo el diseño de soluciones a los problemas, el uso de estructuras de datos para organizar grandes conjuntos de datos, el desarrollo e implementación de algoritmos para procesar datos y descubrir nueva información, el análisis de posibles soluciones, y las implicaciones éticas y sociales de los sistemas informáticos.
+            Descubrimientos de Informática (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y comprometerse con la informática como un medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
 
-            **¿Sabías que?**
+            **¿Sabías que...?**
 
-            -   El desarrollo profesional está disponible para ayudarte a empezar a enseñar CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona.
+            -   El desarrollo profesional está disponible para ayudarte a empezar a enseñar Descubrimientos de Informática. [Pulsa aquí](https://code.org/educate/professional-learning/middle-high) para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona o [pulsa aquí](https://code.org/educate/professional-development-online) para obtener más información sobre una opción en línea autodidacta.
 
-            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_, y otros recursos que te ayudarán a implementar este plan de estudios en el menú de Recursos para el Profesor que aparece más abajo.
+            -   Este curso es modular y puede ser enseñado en diferentes configuraciones basadas en las necesidades de cada aula. Consulte la _Guía de Implantación de la CDS_ en el menú de Recursos para el Profesorado más abajo para conocer las diferentes opciones.
+
+            -   Puedes encontrar la _Guía del Plan de Estudios_, la _Guía para Comenzar_, la _Guía de Evaluación_, y muchos otros recursos para ayudarte a implementar este plan de estudios en el menú de Recursos para Profesores más abajo.
+          title: Descubrimientos de Informática (21-22)
+          version_title: 21-22
+        csd-2022:
+          description_short: Un curso introductorio de informática que permite a los
+            estudiantes crear artefactos auténticos.
+          description_student: |-
+            Descubrimientos de Informática (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y comprometerse con la informática como un medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+
+            **¿Interesado en enseñar Descubrimientos de Informática?** El desarrollo profesional está disponible para ayudarte a empezar a enseñar Descubrimientos de Informática. [Pulsa aquí](https://code.org/educate/professional-learning/middle-high) para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona o [pulsa aquí](https://code.org/educate/professional-development-online) para obtener más información sobre una opción de autoaprendizaje en línea.
+          description_teacher: |-
+            Descubrimientos de Informática (CS Discoveries) es un curso introductorio de informática que permite a los alumnos crear artefactos auténticos y comprometerse con la informática como medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+
+            \*\*¿Sabías que...?
+
+            -   El desarrollo profesional está disponible para ayudarte a empezar a enseñar Descubrimientos de Informática. [Pulsa aquí](https://code.org/educate/professional-learning/middle-high) para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona o [pulsa aquí](https://code.org/educate/professional-development-online) para obtener más información sobre una opción en línea autodidacta.
+
+            -   Este curso tiene una implementación flexible y puede impartirse en diferentes configuraciones en función de las necesidades de cada aula. Consulta la [Guía de Implementación del CDS](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) para obtener más información.
+
+            -   Puedes acceder a la [Guía del Plan de Estudios](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) y a la [Guía de Inicio](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) para obtener más información sobre el curso y empezar.
+          title: Descubrimientos de Informática (22-23)
+          version_title: 22-23
+        csd-2023:
+          description_short: Un curso introductorio de informática que permite a los
+            estudiantes crear artefactos auténticos.
+          description_student: |-
+            Descubrimientos de Informática (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y comprometerse con la informática como un medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
+
+            **¿Interesado en enseñar Descubrimientos de Informática?** El desarrollo profesional está disponible para ayudarte a empezar a enseñar Descubrimientos de Informática. [Pulsa aquí](https://code.org/educate/professional-learning/middle-high) para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona o [pulsa aquí](https://code.org/educate/professional-development-online) para obtener más información sobre una opción de autoaprendizaje en línea.
+          title: Descubrimientos de la Informática
           version_title: 23-24
+        csd-pilot:
+          description_student: Descubrimientos de Informática es un curso introductorio
+            que permite a los estudiantes crear artefactos auténticos e interactuar
+            con las Ciencias de la Computación como un medio para la creatividad,
+            comunicación, resolución de problemas y diversión.
+          title: Curso piloto de CSD
+        csp-2017:
+          assignment_family_title: Principios de Informática
+          description_short: Aprender los conceptos básicos de la Informática.
+          description_student: En otoño de 2016, el College Board lanzó su curso AP®
+            más reciente, Principios de Informática AP. El curso introduce a los estudiantes
+            en los conceptos fundamentales de la informática y los desafía a explorar
+            cómo la informática y la tecnología pueden impactar en el mundo. El Programa
+            AP diseñó Principios de Ciencias de la Computación AP con el objetivo
+            de crear líderes en los campos de las ciencias de la computación y atraer
+            e involucrar a aquellos que tradicionalmente están menos representados
+            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_teacher: En otoño de 2016, el College Board lanzó su curso AP®
+            más reciente, Principios de Informática AP. El curso introduce a los estudiantes
+            en los conceptos fundamentales de la informática y los desafía a explorar
+            cómo la informática y la tecnología pueden impactar en el mundo. El Programa
+            AP diseñó Principios de Ciencias de la Computación AP con el objetivo
+            de crear líderes en los campos de las ciencias de la computación y atraer
+            e involucrar a aquellos que tradicionalmente están menos representados
+            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          title: Principios de Informática ('17-'18)
+          version_title: "'17-'18"
+        csp-2018:
+          assignment_family_title: Principios de Informática
+          description_short: Aprender los conceptos básicos de la Informática.
+          description_student: En otoño de 2016, el College Board lanzó su curso AP®
+            más reciente, Principios de Informática AP. El curso introduce a los estudiantes
+            en los conceptos fundamentales de la informática y los desafía a explorar
+            cómo la informática y la tecnología pueden impactar en el mundo. El Programa
+            AP diseñó Principios de Ciencias de la Computación AP con el objetivo
+            de crear líderes en los campos de las ciencias de la computación y atraer
+            e involucrar a aquellos que tradicionalmente están menos representados
+            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_teacher: En otoño de 2016, el College Board lanzó su curso AP®
+            más reciente, Principios de Informática AP. El curso introduce a los estudiantes
+            en los conceptos fundamentales de la informática y los desafía a explorar
+            cómo la informática y la tecnología pueden impactar en el mundo. El Programa
+            AP diseñó Principios de Ciencias de la Computación AP con el objetivo
+            de crear líderes en los campos de las ciencias de la computación y atraer
+            e involucrar a aquellos que tradicionalmente están menos representados
+            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          title: Principios de Informática ('18-'19)
+          version_title: "'18-'19"
+        csp-2019:
+          description_short: Aprender los conceptos básicos de la Informática.
+          description_student: En otoño de 2016, el College Board lanzó su curso AP®
+            más reciente, Principios de Informática AP. El curso introduce a los estudiantes
+            en los conceptos fundamentales de la informática y los desafía a explorar
+            cómo la informática y la tecnología pueden impactar en el mundo. El Programa
+            AP diseñó Principios de Ciencias de la Computación AP con el objetivo
+            de crear líderes en los campos de las ciencias de la computación y atraer
+            e involucrar a aquellos que tradicionalmente están menos representados
+            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_teacher: En otoño de 2016, el College Board lanzó su curso AP®
+            más reciente, Principios de Informática AP. El curso introduce a los estudiantes
+            en los conceptos fundamentales de la informática y los desafía a explorar
+            cómo la informática y la tecnología pueden impactar en el mundo. El Programa
+            AP diseñó Principios de Ciencias de la Computación AP con el objetivo
+            de crear líderes en los campos de las ciencias de la computación y atraer
+            e involucrar a aquellos que tradicionalmente están menos representados
+            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          title: Principios de Informática ('19-'20)
+          version_title: "'19-'20"
+        csp-2020:
+          description_short: Aprender los conceptos básicos de la Informática.
+          description_student: En 2016, el College Board lanzó su curso AP® más reciente,
+            Principios de Informática AP. Para el curso escolar 2020-21 han realizado
+            importantes actualizaciones en el marco del curso. CSP introduce a los
+            estudiantes a los conceptos fundamentales de la informática y los desafía
+            a explorar cómo la informática y la tecnología pueden impactar en el mundo.
+            El Programa AP diseñó Principios de Ciencias de la Computación AP con
+            el objetivo de crear líderes en los campos de ciencias de la computación
+            y atraer e involucrar a aquellos que tradicionalmente están subrepresentados
+            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          description_teacher: En 2016, el College Board lanzó su curso AP® más reciente,
+            Principios de Informática AP. Para el curso escolar 2020-21 han realizado
+            importantes actualizaciones en el marco del curso. CSP introduce a los
+            estudiantes a los conceptos fundamentales de la informática y los desafía
+            a explorar cómo la informática y la tecnología pueden impactar en el mundo.
+            El Programa AP diseñó Principios de Ciencias de la Computación AP con
+            el objetivo de crear líderes en los campos de ciencias de la computación
+            y atraer e involucrar a aquellos que tradicionalmente están subrepresentados
+            con herramientas informáticas esenciales y oportunidades multidisciplinarias.
+          title: Principios de Informática (20-21)
+          version_title: 20-21
+        csp-2021:
+          description_short: Aprender los conceptos básicos de la Informática.
+          description_student: CSP introduce a los estudiantes a los conceptos fundamentales
+            de la informática y los desafía a explorar cómo la informática y la tecnología
+            pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática
+            con el objetivo de crear líderes en los campos de la informática y atraer
+            e involucrar a aquellos que tradicionalmente están subrepresentados con
+            herramientas informáticas esenciales y oportunidades multidisciplinares.
+          description_teacher: |-
+            CSP introduce a los estudiantes en los conceptos fundamentales de la informática y les desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están poco representados con herramientas informáticas esenciales y oportunidades multidisciplinares.
+
+            \*\*¿Sabías que...?
+
+            -   El desarrollo profesional está disponible para ayudarte en los primeros pasos de la enseñanza de los Principios de Informática. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para saber más sobre las oportunidades de aprendizaje profesional en tu zona o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">pulsa aquí</a> para obtener más información sobre la opción de autoaprendizaje en línea.
+
+            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_ y otros recursos que te ayudarán a poner en práctica este plan de estudios en el menú de Recursos para el Profesor que aparece a continuación
+          title: Principios de Informática (21-22)
+          version_title: 21-22
+        csp-2022:
+          description_short: Aprender los conceptos básicos de la Informática.
+          description_student: CSP introduce a los estudiantes a los conceptos fundamentales
+            de la informática y los desafía a explorar cómo la informática y la tecnología
+            pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática
+            con el objetivo de crear líderes en los campos de la informática y atraer
+            e involucrar a aquellos que tradicionalmente están subrepresentados con
+            herramientas informáticas esenciales y oportunidades multidisciplinares.
+          description_teacher: |-
+            CSP introduce a los estudiantes en los conceptos fundamentales de la informática y les desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están poco representados con herramientas informáticas esenciales y oportunidades multidisciplinares.
+
+            \*\*¿Sabías que...?
+
+            -   El desarrollo profesional está disponible para ayudarte en los primeros pasos de la enseñanza de los Principios de Informática. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para saber más sobre las oportunidades de aprendizaje profesional en tu zona o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">pulsa aquí</a> para obtener más información sobre la opción de autoaprendizaje en línea.
+
+            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_ y otros recursos que te ayudarán a poner en práctica este plan de estudios en el menú de Recursos para el Profesor que aparece a continuación
+          title: Principios de Informática (22-23)
+          version_title: 22-23
+        csp-2023:
+          description_short: Aprender los conceptos básicos de la Informática.
+          description_student: CSP introduce a los estudiantes a los conceptos fundamentales
+            de la informática y los desafía a explorar cómo la informática y la tecnología
+            pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática
+            con el objetivo de crear líderes en los campos de la informática y atraer
+            e involucrar a aquellos que tradicionalmente están subrepresentados con
+            herramientas informáticas esenciales y oportunidades multidisciplinares.
+          description_teacher: |-
+            CSP introduce a los estudiantes en los conceptos fundamentales de la informática y les desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están poco representados con herramientas informáticas esenciales y oportunidades multidisciplinares.
+
+            \*\*¿Sabías que...?
+
+            -   El desarrollo profesional está disponible para ayudarte en los primeros pasos de la enseñanza de los Principios de Informática. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para saber más sobre las oportunidades de aprendizaje profesional en tu zona o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">pulsa aquí</a> para obtener más información sobre la opción de autoaprendizaje en línea.
+
+            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_ y otros recursos que te ayudarán a poner en práctica este plan de estudios en el menú de Recursos para el Profesor que aparece a continuación
+          title: Principios de Informática 23-24
+          version_title: 23-24
+        focus-on-coding-2023:
+          title: Centrarse en la Codificación
+        focus-on-creativity-2023:
+          title: Centrarse en la Creatividad
+          version_title: 23-24
+        focus-on-data-2023:
+          title: Centrarse en los Datos
+        focus-on-design-with-purpose-2023:
+          title: Centrarse en el Diseño con Finalidad
+        focus-on-hardware-2023:
+          title: Centrarse en el Hardware
+        focus-on-impact-in-society-2023:
+          title: Centrarse en el Impacto Social
+        mike-test:
+          title: Fundamentos de la informatica
+        pl-csd-summer-2023:
+          description_student: "**Podrás:**\n\n-   Prepararte para enseñar Descubrimientos
+            de Informática.\n-   Practicar conceptos clave en el plan de estudios
+            de Descubrimientos de Informática.\n-   Crecer en tu comprensión de la
+            educación equitativa de la Informática. \n-   Desarrollar empatía por
+            la experiencia de los estudiantes. \n-   Formar parte de una red de educadores
+            que realizan un trabajo similar."
+          description_teacher: "**Los participantes podrán:**\n\n-   Prepararse para
+            enseñar Descubrimientos de Informática.\n-   Practicar conceptos clave
+            en el plan de estudios de Descubrimientos de Informática.\n-   Crecer
+            en tu comprensión de la educación equitativa de la Informática. \n-   Desarrollar
+            empatía por la experiencia de los estudiantes. \n-   Formar parte de una
+            red de educadores que realizan un trabajo similar."
+          title: Taller de verano - Descubrimientos de Informática
+        self-paced-pl-csa-2022:
+          title: autodidáctico-pl-csa
+          version_title: 22-23
+        self-paced-pl-csa-2023:
+          title: autodidáctico-pl-csa
+          version_title: '2023'
+        self-paced-pl-csd-2021:
+          description_student: |-
+            ## Bienvenido
+
+            Bienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.
+
+            ### Encuentra el aprendizaje que funciona para ti
+
+            -   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
+
+            -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
+          description_teacher: |-
+            ## Bienvenido
+
+            Bienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.
+
+            ### Encuentra el aprendizaje que funciona para ti
+
+            -   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
+
+            -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
+          title: autodidáctico-pl-csd-2021
+          version_title: 21 - 22
+        self-paced-pl-csd-2022:
+          description_student: |-
+            ## Bienvenido
+
+            Bienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.
+
+            ### Encuentra el aprendizaje que funciona para ti
+
+            -   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
+
+            -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
+          description_teacher: |-
+            ## Bienvenido
+
+            Bienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.
+
+            ### Encuentra el aprendizaje que funciona para ti
+
+            -   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
+
+            -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
+          title: autodidáctico-pl-csd-2021
+          version_title: 22-23
+        self-paced-pl-csd-2023:
+          description_student: |-
+            ## Bienvenido
+
+            Bienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.
+
+            ### Encuentra el aprendizaje que funciona para ti
+
+            -   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
+
+            -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
+          description_teacher: |-
+            ## Bienvenido
+
+            Bienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.
+
+            ### Encuentra el aprendizaje que funciona para ti
+
+            -   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
+
+            -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
+          title: autodidáctico-pl-csd-2021
+          version_title: 23-24
+        self-paced-pl-csp-2021:
+          description_student: |-
+            ## Bienvenido
+
+            ##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.
+
+            ### Encuentra el aprendizaje que funciona para ti
+
+            ##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.
+
+            ### Elige tu contenido
+
+            ##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar.
+          description_teacher: |-
+            ## Bienvenido
+
+            ##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.
+
+            ### Encuentra el aprendizaje que funciona para ti
+
+            ##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.
+
+            ### Elige tu contenido
+
+            ##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar.
+          title: autodidáctico-pl-csp-2021
+          version_title: 21-22
+        self-paced-pl-csp-2022:
+          description_student: |-
+            ## Bienvenido
+
+            ##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.
+
+            ### Encuentra el aprendizaje que funciona para ti
+
+            ##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.
+
+            ### Elige tu contenido
+
+            ##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar.
+          description_teacher: |-
+            ## Bienvenido
+
+            ##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.
+
+            ### Encuentra el aprendizaje que funciona para ti
+
+            ##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.
+
+            ### Elige tu contenido
+
+            ##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar.
+          title: autodidáctico-pl-csp-2021
+          version_title: 22-23
+        self-paced-pl-csp-2023:
+          description_student: |-
+            ## Bienvenido
+
+            ##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.
+
+            ### Encuentra el aprendizaje que funciona para ti
+
+            ##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.
+
+            ### Elige tu contenido
+
+            ##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar.
+          description_teacher: |-
+            ## Bienvenido
+
+            ##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.
+
+            ### Encuentra el aprendizaje que funciona para ti
+
+            ##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.
+
+            ### Elige tu contenido
+
+            ##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar.
+          title: autodidáctico-pl-csp-2021
+        self-paced-pl-microbit-2023:
+          title: Enseñando a crear aplicaciones con dispositivos (micro:bit)
         self-paced-pl-physical-computing-2022:
-          title: 'Enseñando a crear Aplicaciones con Dispositivos '
           description_student: "## Bienvenido\n\nBienvenido al aprendizaje en línea
             gratuito de Code.org dirigido a educadores que deseen empezar a enseñar
             con Code.org. Después de completar esta experiencia de aprendizaje profesional,
@@ -454,53 +542,8 @@ es:
             con la plataforma Code.org, puedes saltarte la Introducción a Code.org
             y pasar directamente a la Preparación para Enseñar a crear Aplicaciones
             con Dispositivos. "
+          title: Enseñando a crear Aplicaciones con Dispositivos
           version_title: 22 - 23
-        csp-2023:
-          title: Principios de Informática 23-24
-          description_short: Aprender los conceptos básicos de la Informática.
-          description_student: CSP introduce a los estudiantes a los conceptos fundamentales
-            de la informática y los desafía a explorar cómo la informática y la tecnología
-            pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática
-            con el objetivo de crear líderes en los campos de la informática y atraer
-            e involucrar a aquellos que tradicionalmente están subrepresentados con
-            herramientas informáticas esenciales y oportunidades multidisciplinares.
-          description_teacher: |-
-            CSP introduce a los estudiantes en los conceptos fundamentales de la informática y les desafía a explorar cómo la informática y la tecnología pueden impactar en el mundo. El Programa AP diseñó AP Principios de Informática con el objetivo de crear líderes en los campos de la informática y atraer e involucrar a aquellos que tradicionalmente están poco representados con herramientas informáticas esenciales y oportunidades multidisciplinares.
-
-            \*\*¿Sabías que...?
-
-            -   El desarrollo profesional está disponible para ayudarte en los primeros pasos de la enseñanza de los Principios de Informática. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Pulsa aquí</a> para saber más sobre las oportunidades de aprendizaje profesional en tu zona o <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">pulsa aquí</a> para obtener más información sobre la opción de autoaprendizaje en línea.
-
-            -   Puedes encontrar la _Guía del Plan de Estudios_, el _Vocabulario del Curso_ y otros recursos que te ayudarán a poner en práctica este plan de estudios en el menú de Recursos para el Profesor que aparece a continuación
-          version_title: 23-24
-        self-paced-pl-csa-2023:
-          title: autodidáctico-pl-csa
-          version_title: '2023'
-        csd-2023:
-          title: Descubrimientos de la Informática
-          description_short: Un curso introductorio de informática que permite a los
-            estudiantes crear artefactos auténticos.
-          description_student: |-
-            Descubrimientos de Informática (CS Discoveries) es un curso introductorio de informática que permite a los estudiantes crear artefactos auténticos y comprometerse con la informática como un medio para la creatividad, la comunicación, la resolución de problemas y la diversión.
-
-            **¿Interesado en enseñar Descubrimientos de Informática?** El desarrollo profesional está disponible para ayudarte a empezar a enseñar Descubrimientos de Informática. [Pulsa aquí](https://code.org/educate/professional-learning/middle-high) para obtener más información sobre las oportunidades de aprendizaje profesional en tu zona o [pulsa aquí](https://code.org/educate/professional-development-online) para obtener más información sobre una opción de autoaprendizaje en línea.
-          version_title: 23-24
-        focus-on-creativity-2023:
-          title: Centrarse en la Creatividad
-          version_title: 23-24
-        focus-on-hardware-2023:
-          title: Centrarse en el Hardware
-        focus-on-data-2023:
-          title: Centrarse en los Datos
-        focus-on-design-with-purpose-2023:
-          title: Centrarse en el Diseño con Finalidad
-        focus-on-coding-2023:
-          title: Centrarse en la Codificación
-        focus-on-impact-in-society-2023:
-          title: Centrarse en el Impacto Social
-        vpl-csd-summer-ci-2023:
-          title: vpl-csd-verano-piloto-ci
-          version_title: 23-24
         self-paced-pl-physical-computing-2023:
           description_student: "## Bienvenido\n\nBienvenido al aprendizaje en línea
             gratuito de Code.org dirigido a educadores que deseen empezar a enseñar
@@ -532,136 +575,146 @@ es:
             con la plataforma Code.org, puedes saltarte la Introducción a Code.org
             y pasar directamente a la Preparación para Enseñar a crear Aplicaciones
             con Dispositivos. "
-        self-paced-pl-csd-2023:
-          title: autodidáctico-pl-csd-2021
-          description_student: |-
-            ## Bienvenido
-
-            Bienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.
-
-            ### Encuentra el aprendizaje que funciona para ti
-
-            -   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
-
-            -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
-          description_teacher: |-
-            ## Bienvenido
-
-            Bienvenido al curso en línea gratuito de Code.org dirigido a educadores para empezar a enseñar Descubrimientos de la Informática. Después de completar este curso en línea, **estarás listo para empezar a enseñar el curso Descubrimientos en Informática de Code.org** con tus alumnos.
-
-            ### Encuentra el aprendizaje que funciona para ti
-
-            -   **Ve a tu propio ritmo:** Este curso autodidacta está diseñado para ponerte en el asiento del conductor, y darte el control sobre tu propio aprendizaje. Los tiempos sugeridos se dan para cada módulo y lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
-
-            -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
-          version_title: 23-24
-        pl-csd-summer-2023:
+          title: Enseñando a crear aplicaciones con dispositivos (Circuit Playground)
+          version_title: 23 - 24
+        virtual-pl-csd-summer-2023:
+          description_student: "**Podrás:**\n\n-   Prepararte para enseñar Descubrimientos
+            de Informática.\n-   Practicar conceptos clave en el plan de estudios
+            de Descubrimientos de Informática.\n-   Crecer en tu comprensión de la
+            educación equitativa de la Informática. \n-   Desarrollar empatía por
+            la experiencia de los estudiantes. \n-   Formar parte de una red de educadores
+            que realizan un trabajo similar."
           description_teacher: "**Los participantes podrán:**\n\n-   Prepararse para
             enseñar Descubrimientos de Informática.\n-   Practicar conceptos clave
             en el plan de estudios de Descubrimientos de Informática.\n-   Crecer
             en tu comprensión de la educación equitativa de la Informática. \n-   Desarrollar
             empatía por la experiencia de los estudiantes. \n-   Formar parte de una
             red de educadores que realizan un trabajo similar."
+          title: virtual-pl-csd-verano-2023
+        vpl-csa-2023:
+          title: Aprendizaje Profesional Virtual de CSA
+        vpl-csd-ayw-pilot-2022:
+          title: Descubrimientos de Informática - Talleres virtuales del Año Académico
+        vpl-csd-summer-ci-2023:
+          title: vpl-csd-verano-piloto-ci
+          version_title: 23-24
+        vpl-csd-summer-pilot-2022:
+          description_student: "**Podrás:**\n\n-   Prepararte para enseñar Descubrimientos
+            de Informática.\n-   Practicar conceptos clave en el plan de estudios
+            de Descubrimientos de Informática.\n-   Crecer en tu comprensión de la
+            educación equitativa de la Informática. \n-   Desarrollar empatía por
+            la experiencia de los estudiantes. \n-   Formar parte de una red de educadores
+            que realizan un trabajo similar."
+          description_teacher: "**Los participantes podrán:**\n\n-   Prepararse para
+            enseñar Descubrimientos de Informática.\n-   Practicar conceptos clave
+            en el plan de estudios de Descubrimientos de Informática.\n-   Crecer
+            en tu comprensión de la educación equitativa de la Informática. \n-   Desarrollar
+            empatía por la experiencia de los estudiantes. \n-   Formar parte de una
+            red de educadores que realizan un trabajo similar."
+          title: Taller virtual de verano Descubrimientos de Informática
+        vpl-csd-summer-pilot-ci-2022:
+          title: vpl-csd-verano-piloto-ci
+          version_title: 21-22
     resources:
-      curriculum/csd/2020:
-        name: Currículum
-      teacher_forum/csd/2020:
-        name: Foro de profesores
-      curriculum/csd/2017:
-        name: Currículum
-      teacher_forum_6/csd/2017:
-        name: Foro de profesores
+      all_code/csd/2021:
+        name: Todos los Códigos
+      all_code_2/csd/2023:
+        name: Todos los Códigos
+        url: "/cursos/csd-2023/código"
       all_code_5/csd/2022:
         name: Todos los Códigos
+      all_resources_1/csd/2021:
+        name: Todos los Recursos
+      all_resources_2/csd/2023:
+        name: Todos los Recursos
+        url: "/cursos/csd-2023/recursos"
       all_resources_7/csd/2022:
         name: Todos los Recursos
+      all_standards_1/csd/2021:
+        name: Todos los Estándares
+      all_standards_2/csd/2023:
+        name: Todos los Estándares
+        url: "/cursos/csd-2023/estándares"
       all_standards_7/csd/2022:
         name: Todos los Estándares
+      all_vocabulary_1/csd/2021:
+        name: Todo el Vocabulario
+      all_vocabulary_2/csd/2023:
+        name: Todo el Vocabulario
+        url: "/cursos/csd-2023/vocabulario"
       all_vocabulary_7/csd/2022:
         name: Todo el Vocabulario
       csd_changelog_22-_23/csd/2022:
         name: Registro de cambios del CSD 22-23
         url: https://docs.google.com/document/d/1GR3VaThoqXY6XBeVCHcYvZtaQFn47jPpmLNRQB4IK7Y/preview
-      csd_curriculum_guide/csd/2022:
-        name: Guía del Plan de Estudios de CSD
-        url: https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview
-      csd_guide_to_assessment/csd/2022:
-        name: Guía de Evaluación de CSD
-        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
-      csd_guide_to_debugging/csd/2022:
-        name: Guía de Depuración de CSD
-        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
-      csd_guide_to_differentiation/csd/2022:
-        name: Guía de Diferenciación de CSD
-        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
-      csd_guide_to_using_resources/csd/2022:
-        name: Guía del CSD para el Uso de los Recursos
-        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
-      csd_implementation_guide/csd/2022:
-        name: Guía de Aplicación de CSD
-        url: https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview
-      csd_learning_frameworks/csd/2022:
-        name: CSD Entorno de Aprendizaje
-        url: https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview
-      csd_programming_levels_guide/csd/2022:
-        name: CSD Guía de Niveles de Programación
-        url: https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview
-      curriculum/csd/2019:
-        name: Currículum
-      teacher_forum/csd/2019:
-        name: Foro de profesores
-      all_code_2/csd/2023:
-        name: Todos los Códigos
-        url: "/cursos/csd-2023/código"
-      all_resources_2/csd/2023:
-        name: Todos los Recursos
-        url: "/cursos/csd-2023/recursos"
-      all_standards_2/csd/2023:
-        name: Todos los Estándares
-        url: "/cursos/csd-2023/estándares"
-      all_vocabulary_2/csd/2023:
-        name: Todo el Vocabulario
-        url: "/cursos/csd-2023/vocabulario"
-      csd_guide_to_assessment/csd/2023:
-        name: Guía de Evaluación de CSD
-      csd_guide_to_differentiation_1/csd/2023:
-        name: Guía de Diferenciación de CSD
-      csd_guide_to_using_resources_1/csd/2023:
-        name: Guía del CSD para el Uso de los Recursos
-      csd_implementation_guide_1/csd/2023:
-        name: Guía de Aplicación de CSD
-      csd_learning_frameworks_1/csd/2023:
-        name: CSD Entorno de Aprendizaje
-      all_code/csd/2021:
-        name: Todos los Códigos
-      all_resources_1/csd/2021:
-        name: Todos los Recursos
-      all_standards_1/csd/2021:
-        name: Todos los Estándares
-      all_vocabulary_1/csd/2021:
-        name: Todo el Vocabulario
       csd_curriculum_guide/csd/2021:
         name: Guía del Plan de Estudios de CSD
         url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
+      csd_curriculum_guide/csd/2022:
+        name: Guía del Plan de Estudios de CSD
+        url: https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview
       csd_guide_to_assessment/csd/2021:
         name: Guía de Evaluación de CSD
         url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
+      csd_guide_to_assessment/csd/2022:
+        name: Guía de Evaluación de CSD
+        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
+      csd_guide_to_assessment/csd/2023:
+        name: Guía de Evaluación de CSD
       csd_guide_to_debugging/csd/2021:
+        name: Guía de Depuración de CSD
+        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
+      csd_guide_to_debugging/csd/2022:
         name: Guía de Depuración de CSD
         url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
       csd_guide_to_differentiation/csd/2021:
         name: Guía de Diferenciación de CSD
         url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
+      csd_guide_to_differentiation/csd/2022:
+        name: Guía de Diferenciación de CSD
+        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
+      csd_guide_to_differentiation_1/csd/2023:
+        name: Guía de Diferenciación de CSD
       csd_guide_to_using_resources/csd/2021:
         name: Guía del CSD para el Uso de los Recursos
         url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
+      csd_guide_to_using_resources/csd/2022:
+        name: Guía del CSD para el Uso de los Recursos
+        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
+      csd_guide_to_using_resources_1/csd/2023:
+        name: Guía del CSD para el Uso de los Recursos
       csd_implementation_guide/csd/2021:
         name: Guía de Aplicación de CSD
         url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
+      csd_implementation_guide/csd/2022:
+        name: Guía de Aplicación de CSD
+        url: https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview
+      csd_implementation_guide_1/csd/2023:
+        name: Guía de Aplicación de CSD
+      csd_learning_frameworks/csd/2022:
+        name: CSD Entorno de Aprendizaje
+        url: https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview
+      csd_learning_frameworks_1/csd/2023:
+        name: CSD Entorno de Aprendizaje
+      csd_programming_levels_guide/csd/2022:
+        name: CSD Guía de Niveles de Programación
+        url: https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview
+      curriculum/csd/2017:
+        name: Currículum
+      curriculum/csd/2018:
+        name: Currículum
+      curriculum/csd/2019:
+        name: Currículum
+      curriculum/csd/2020:
+        name: Currículum
       getting_started_with_csd/csd/2021:
         name: Primeros pasos con CSD
         url: https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview
-      curriculum/csd/2018:
-        name: Currículum
+      teacher_forum/csd/2019:
+        name: Foro de profesores
+      teacher_forum/csd/2020:
+        name: Foro de profesores
+      teacher_forum_6/csd/2017:
+        name: Foro de profesores
       teacher_forum_6/csd/2018:
         name: Foro de profesores

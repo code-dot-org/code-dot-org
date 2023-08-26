@@ -259,7 +259,7 @@
   studiobar_dance_body: "O‘z Raqs Bazmingizni yarating va ulashing"
   studiobar_hoc_title: "Dasturlash soati"
   studiobar_hoc_body: "Jahldor qushchalar bilan dasturlashni o‘rganing"
-  studiobar_flappy_title: "Flappy o‘yinini yarating"
+  studiobar_flappy_title: "Flappy o‘yinini dasturlash"
   studiobar_flappy_body: "O‘z pirilloq quscha o‘yiningizni yaratib ulashing"
   studiobar_teacher_title: "O‘qituvchilar uchun tayyorlangan"
   studiobar_teacher_body: "Sinfingizga Dasturlash studiyasini tanishtiring"
@@ -329,7 +329,7 @@
   homepage_slot_text_studio: "Barcha mashg‘ulotlarimiz"
   homepage_slot_text_course4: "Kurs 4"
   homepage_slot_text_shop: "Xarid"
-  homepage_slot_text_flappy: "Flappy o‘yinini yarating"
+  homepage_slot_text_flappy: "Flappy o‘yinini dasturlash"
   homepage_action_text_hoc: "Har bir o‘quvchi uchun Dasturlash soati."
   homepage_action_text_num_served: "# kishi sinab ko‘rdi"
   homepage_action_text_join_us: "Bizga qo'shiling"
@@ -383,6 +383,7 @@
   homepage_slot_text_link_buy: "Bizga qo‘shiling"
   homepage_slot_text_link_donate: "Xayriya qiling"
   homepage_slot_text_link_shop: "T-shirts, hats, & more"
+  homepage_slot_text_link_thebadguys: "Bad Guys bilan kod"
   homepage_slot_text_link_administrators: "Bring CS to your school"
   homepage_gallery_header: "%{project_count} milliondan ortiq Code.org loyihalari yaratildi"
   homepage_header_donors: "Code.org yordam berganlarga o‘z minnatdorchiligini bildiradi"
@@ -1496,6 +1497,7 @@
   header_stats: "Statistika"
   header_help_us: "Bizga yordam bering"
   header_about: "Biz haqimizda"
+  header_incubator: "Inkubator"
   header_teacher_community: "O‘qituvchilar hamjamiyati"
   header_help_support: 'Yordam va qo‘llab-quvvatlash'
   header_report_bug: "Muammo haqida xabar berish"
@@ -1607,7 +1609,7 @@
   hoc2018_mc_download_adventurer: "\"Minecraft Adventurer\"ning oflayn versiyasini yuklab oling."
   hoc2018_mc_educators: "Pedagoglar uchun"
   hoc2018_mc_educators_box1_title: "Minecraft bilan kod yozing"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Ta''limiy nashr Minecraft-da standartlarga muvofiq o‘quv dasturi, o‘qitish va kod yozishni ta''minlaydi.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Ta'limiy nashr Minecraft-da standartlarga muvofiq o‘quv dasturi, o‘qitish va kod yozishni ta'minlaydi."
   hoc2018_mc_educators_box1_button: "Boshladik"
   hoc2018_mc_educators_box2_title: "Fasilitator uchun qo‘llanmani yuklab oling"
   hoc2018_mc_educators_box2_desc: "Ushbu qo‘llanma sizga Dasturlash soatini o‘tkazishda va o‘quvchilaringizni kompyuter fanlari bilan shug'ullanishga qiziqtirishga yordam beradi."
@@ -1713,7 +1715,7 @@
   hoc2018_mc_with_microsoft: "Hamkor:"
   hoc2018_mc_thank_microsoft: "Biz har bir bolaga 21-asrda informatika va muvaffaqiyatga erishish uchun zarur ko'nikmalarni o'rganish imkoniyatini berishini ta'minlash bo'yicha missiyamiz va ishlarimizni qo'llab-quvvatlaganligi uchun Microsoft-ga minnatdorchilik bildiramiz."
   hoc2019_mc_mee_title: "Minecraft AI yaxshilik uchun"
-  hoc2019_mc_mee_description1: 'Yangi Minecraft Dastulash soati o''quv qo''llanmasi endi Minecraft: Ta''limiy nashr (Education Edition)da Windows, Mac va iPad uchun mavjud. Dasturlash asoslarini o''rganing va talabalaringiz bilan Sum''iy intellekt (AI)ni o''rganing!'
+  hoc2019_mc_mee_description1: "Yangi Minecraft Dastulash soati o'quv qo'llanmasi endi Minecraft: Ta'limiy nashr (Education Edition)da Windows, Mac va iPad uchun mavjud. Dasturlash asoslarini o'rganing va talabalaringiz bilan Sum'iy intellekt (AI)ni o'rganing!"
   hoc2019_mc_mee_description2: "Dars rejasi, videolar, informatika bo'yicha o'quv dasturi va o'qituvchilar treninglari kabi bepul manbalardan foydalaning."
   hoc2019_mc_more_coding_resources: "Ko'proq dasturlash manbalari"
   hoc2019_dance_previous_versions: "Raqs bazmi (Dance Party)ning oldingi versiyasini qidiryapsizmi?\n2018 yildagi [1-qism](%{dance_2018_link}) va [2-qism](%{dance_extras_2018_link})ni boshlash uchun shu yerni bosing."
@@ -1726,12 +1728,12 @@
   page_not_available_description: "Kechirasiz, siz so'ragan sahifa endi ushbu manzilda mavjud emas. Agar sizga hali ham unga kirish kerak bo'lsa, iltimos, [support@code.org](%{support_email_link}) elektron pochtasiga murojaat qiling."
   page_not_available_button: "Bosh sahifaga qaytish"
   hoc2020_mc_available_code_org: "Code.org saytida mavjud"
-  hoc2020_mc_available_mee: 'Minecraft: Ta‘limiy nashri mavjud (Education Edition)'
+  hoc2020_mc_available_mee: "Minecraft: Ta‘limiy nashri mavjud (Education Edition)"
   hoc2020_mc_mee_title: "Minecraft ikkita qishloq haqida ertak"
-  hoc2020_mc_mee_description: 'Yangi Minecraft Dastulash soati o''quv qo''llanmasi endi Minecraft: Ta''limiy nashr (Education Edition)da Windows, Mac va iPad uchun mavjud. Dasturlash asoslarini o''rganing va o''quvchilaringiz bilan xilma-xillik va inklyuziyani o''rganing! Dars rejasi, videolar, informatika bo''yicha o''quv dasturlari, tenglik darslari va o''qituvchilar treninglari kabi bepul manbalardan foydalaning.'
+  hoc2020_mc_mee_description: "Yangi Minecraft Dastulash soati o'quv qo'llanmasi endi Minecraft: Ta'limiy nashr (Education Edition)da Windows, Mac va iPad uchun mavjud. Dasturlash asoslarini o'rganing va o'quvchilaringiz bilan xilma-xillik va inklyuziyani o'rganing! Dars rejasi, videolar, informatika bo'yicha o'quv dasturlari, tenglik darslari va o'qituvchilar treninglari kabi bepul manbalardan foydalaning."
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'Tonggacha sirli qasrdan qochib, million zumradga ega bo''ling! Yangi Minecraft Dasturlas Soati o''quv qo''llanmasi endi Minecraft-da mavjud: Windows, Mac, Chromebook, Ipad va Mobil qurilmalar uchun "Education Edition". Bepul o''qituvchilar uchun resurslar, treninglar va videolardan foydalanga holda boshlang.'
-  hoc2022_mc_mee_timecraft_description: 'Minecraft-dagi ushbu bepul dasturlash darsida kelajakni saqlab qolish uchun o''tmishga sayohat qiling: Education Edition (Ta''limiy nashr).'
+  hoc2022_mc_mee_timecraft_description: "Minecraft-dagi ushbu bepul dasturlash darsida kelajakni saqlab qolish uchun o'tmishga sayohat qiling: Education Edition (Ta'limiy nashr)."
   footer_powered_by_aws: "Amazon Web Services va \"Powered by AWS\" logotipi Amazon.com, Inc yoki uning AQSh va/yoki boshqa mamlakatlardagi filiallarining savdo belgilaridir."
   footer_built_on_github: "Microsoft-dan GitHub-da yaratilgan"
   codebytes_skinny_banner_title: "7-11 dekabr kunlari CodeBytes-ning jonli mini-darslarida ishtirok eting!"

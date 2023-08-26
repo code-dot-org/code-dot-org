@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-09 20:59:16 UTC",
+    "serialized_at": "2023-08-15 19:21:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -86,6 +87,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2023"
       }
+    },
+    {
+      "key": "lessonGroup-7",
+      "user_facing": true,
+      "position": 6,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2023"
+      }
     }
   ],
   "lessons": [
@@ -131,7 +144,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**What are some of the primary components of a Java program?**\n\nStudents are introduced to the Java Lab programming environment and its features. Students encounter their first Java program and explore the structure of a Java source code file. While investigating a simple program, students discover key components of a Java source code file, including the class header, the `main` method, syntax, and comments. Students then use their new knowledge of Java syntax to find and fix syntax errors.",
-        "preparation": "* Print copies of the Unit 1 Guide (one for each student)\n* Print copies of the Investigate: Working with Java Files handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-2-java-lab/37856) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L2 Guided Notes (one for each student)\n* Print copies of the Unit 1 Guide (one for each student)\n* Print copies of the Investigate: Working with Java Files handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-2-java-lab/37856) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What are some of the primary components of a Java program?**\n\nIn this lesson, you are introduced to the Java Lab programming environment and its features. You encounter your first Java program and explore the structure of a Java source code file. While investigating a simple program, you discover key components of a Java source code file, including the class header, the `main` method, syntax, and comments. You then use your new knowledge of Java syntax to find and fix syntax errors."
       },
       "seeding_key": {
@@ -149,7 +162,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**What is object-oriented programming?**\n\nStudents are introduced to The Neighborhood and learn about the organization of the grid, potential obstacles, and some of the classes that make up The Neighborhood. Students begin to develop an understanding of classes and objects in Java and identify the components and relationship between these concepts. Students then explore the `Painter` class to identify the attributes and behavior that a `Painter` object has and can do and consider how they might use a `Painter` object in The Neighborhood.",
-        "preparation": "* Preview the *Object-Oriented Programming* video\n* Print copies of The Painter handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-3-classes-and-objects/37857) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L3 Guided Notes (one for each student)\n* Preview the *Object-Oriented Programming* video\n* Print copies of The Painter handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-3-classes-and-objects/37857) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What is object-oriented programming?**\n\nIn this lesson, you are introduced to The Neighborhood and learn about the organization of the grid, potential obstacles, and some of the classes that make up The Neighborhood. You begin to develop an understanding of classes and objects in Java and identify the components and relationship between these concepts. You then explore the `Painter` class to identify the attributes and behavior that a `Painter` object has and can do and consider how they might use a `Painter` object in The Neighborhood."
       },
       "seeding_key": {
@@ -167,7 +180,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How do I create objects from a class?**\n\nStudents explored the fundamentals of object-oriented programming and the `Painter` class and identified its attributes and behaviors. In this lesson, students learn how to create objects from a class using the `new` keyword and by calling a constructor. Students discover that they can create multiple objects from a class and practice creating `Painter` objects to complete small programs in The Neighborhood.",
-        "preparation": "* Preview the *Creating Objects* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-4-instantiating-objects/37858) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L4 Guided Notes (one for each student)\n* Preview the *Creating Objects* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-4-instantiating-objects/37858) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I create objects from a class?**\n\nYou explored the fundamentals of object-oriented programming and the `Painter` class and identified its attributes and behaviors. In this lesson, you learn how to create objects from a class using the `new` keyword and by calling a constructor. You discover that you can create multiple objects from a class and practice creating `Painter` objects to complete small programs in The Neighborhood."
       },
       "seeding_key": {
@@ -185,7 +198,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How do I give instructions to an object in Java?**\n\nStudents have seen examples of programs where a `Painter` object is moving and painting in The Neighborhood. In this lesson, students explore the `move()` and `turnLeft()` methods in the `Painter` class and learn the syntax for calling methods in Java. Students then practice calling methods to navigate in The Neighborhood.",
-        "preparation": "* Preview the *Calling Methods* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-5-methods/37859) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L5 Guided Notes (one for each student)\n* Preview the *Calling Methods* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-5-methods/37859) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I give instructions to an object in Java?**\n\nYou have seen examples of programs where a `Painter` object is moving and painting in The Neighborhood. In this lesson, you explore the `move()` and `turnLeft()` methods in the `Painter` class and learn the syntax for calling methods in Java. You then practice calling methods to navigate in The Neighborhood."
       },
       "seeding_key": {
@@ -203,7 +216,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can I give a specific value for a method to use?**\n\nIn this lesson, students expand on what they have learned about methods to explore how method parameters and arguments are used to provide additional information for methods to perform their intended task, such as the `paint()` method in the `Painter` class. While learning about arguments, students are introduced to string literals and how to use these to specify paint colors. Students then practice calling methods with and without arguments to navigate and paint in The Neighborhood.",
-        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-6-methods-with-parameters/37860) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L6 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-6-methods-with-parameters/37860) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I give a specific value for a method to use?**\n\nIn this lesson, you expand on what you have learned about methods to explore how method parameters and arguments are used to provide additional information for methods to perform their intended task, such as the `paint()` method in the `Painter` class. While learning about arguments, you are introduced to string literals and how to use these to specify paint colors. You then practice calling methods with and without arguments to navigate and paint in The Neighborhood."
       },
       "seeding_key": {
@@ -221,7 +234,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can the problem-solving process help me plan and implement an algorithm?**\n\nStudents are introduced to iteration using `while` loops to repeat instructions as long as a condition is `true`. Students discover that `while` loops can be combined with methods in the `Painter` class to allow them to repeat a block of code as long as a `Painter` object can move forward in the direction it is facing, is on a paint bucket, or has paint. They learn about the problem solving process and how this approach can help them break down a problem into manageable tasks and practice developing and implementing algorithms using sequencing and iteration in Java.",
-        "preparation": "* Print copies of the Writing Algorithms handout (one for each student)\n* Preview the *While Loops* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-7-loops-lesson/37861) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L7 Guided Notes (one for each student)\n* Print copies of the Writing Algorithms handout (one for each student)\n* Preview the *While Loops* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-7-loops-lesson/37861) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can the problem-solving process help me plan and implement an algorithm?**\n\nIn this lesson, you are introduced to iteration using `while` loops to repeat instructions as long as a condition is `true`. You discover that `while` loops can be combined with methods in the `Painter` class to allow you to repeat a block of code as long as a `Painter` object can move forward in the direction it is facing, is on a paint bucket, or has paint. You learn about the problem solving process and how this approach can help you break down a problem into manageable tasks and practice developing and implementing algorithms using sequencing and iteration in Java."
       },
       "seeding_key": {
@@ -239,7 +252,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**Why would I use inheritance?**\n\nStudents have used the `Painter` class to navigate and paint in The Neighborhood and likely have noticed that the `Painter` class does not have a method to turn right. In this lesson, students learn about inheritance and the need to create superclasses and subclasses to represent similar objects that have shared attributes and behaviors. Students explore different use cases for inheritance and create a `PainterPlus` class as a subclass of the `Painter` class. Students realize that while the `PainterPlus` class has access to the methods in the `Painter` class, they can add new methods to expand its capabilities.",
-        "preparation": "* Preview the *Inheritance* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-8-inheritance/37862) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L8 Guided Notes (one for each student)\n* Preview the *Inheritance* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-8-inheritance/37862) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Why would I use inheritance?**\n\nThe `Painter` class has several methods for navigating and painting The Neighborhood, but it also has limitations. In this lesson, you learn about inheritance and the need to create superclasses and subclasses to represent similar objects that have shared attributes and behaviors. You explore different use cases for inheritance and create a `PainterPlus` class as a subclass of the `Painter` class. With your `PainterPlus` class, you have access to the methods in the `Painter` class and can add new methods to expand its capabilities."
       },
       "seeding_key": {
@@ -257,7 +270,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How do I write methods for the behaviors I want an object to have?**\n\nStudents have used the methods in the `Painter` class to navigate and paint in The Neighborhood and identified the limitations of the methods available in the `Painter` class. In this lesson, students learn to write and use methods in the `PainterPlus` class to expand its functionality. Students learn that a method with a `void` return type does not return a value and identify methods in the `Painter` class that have a `void` return type. The functionality of inheritance is emphasized when students discover that methods written in the `PainterPlus` class cannot be used by a `Painter` object. Students explore how to write methods with and without parameters then practice writing methods in their `PainterPlus` class.",
-        "preparation": "* Preview the *Writing a Method* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-9-writing-methods/37863) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L9 Guided Notes (one for each student)\n* Preview the *Writing a Method* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-9-writing-methods/37863) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I write methods for the behaviors I want an object to have?**\n\nYou have used the methods in the `Painter` class to navigate and paint in The Neighborhood and identified the limitations of the methods available in the `Painter` class. In this lesson, you learn how to write and use methods in the `PainterPlus` class to expand its functionality. You learn that a method with a `void` return type does not return a value and identify methods in the `Painter` class that have a `void` return type. You strengthen your understanding of how inheritance works when you discover that methods written in the `PainterPlus` class cannot be used by a `Painter` object. You explore how to write methods with and without parameters then practice writing methods in your `PainterPlus` class."
       },
       "seeding_key": {
@@ -275,7 +288,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How do software engineers use feedback from peers?**\n\nIn this lesson, students learn about the importance of good programming style and identify guidelines and best practices for formatting their code. Students explore processes and tools used by software engineers to manage projects, including documentation and commits. They learn about using multi-line comments in addition to single-line comments to annotate code and explain the purpose and functionality of programs. Students also learn to use the Backpack in Java Lab to save classes they develop for use in future projects. To encourage and support collaboration and peer feedback on their work, students learn how to conduct a code review and best practices for giving and receiving feedback on code.",
-        "preparation": "* Create code review groups as indicated on the Code Reviews for Teachers resource\n* Print copies of the How to Conduct a Code Review resource (one for each student)\n* Preview the *Software Engineering: Code Reviews* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-10-programming-style-and-feedback/37864) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L10 Guided Notes (one for each student)\n* Create code review groups as indicated on the Code Reviews for Teachers resource\n* Print copies of the How to Conduct a Code Review resource (one for each student)\n* Preview the *Software Engineering: Code Reviews* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-10-programming-style-and-feedback/37864) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do software engineers use feedback from peers?**\n\nIn this lesson, you learn about the importance of good programming style and identify guidelines and best practices for formatting your code. You explore processes and tools used by software engineers to manage projects, including documentation and commits. You learn about using multi-line comments in addition to single-line comments to annotate code and explain the purpose and functionality of programs. You also learn to use the Backpack in Java Lab to save classes you develop for use in future projects. To encourage and support collaboration and peer feedback on your work, you learn how to conduct a code review and best practices for giving and receiving feedback on code."
       },
       "seeding_key": {
@@ -293,7 +306,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How can I write algorithms using sequencing, selection, and iteration in Java?**\n\nStudents have learned how to implement algorithms in Java that repeat a set of instructions while a condition is `true`. In this lesson, students explore selection and learn how to write algorithms using sequencing, selection, and iteration. Students discover additional methods in the `Painter` class that they can use in their algorithms to allow their `Painter` objects to make better decisions about which direction to move or turn or whether or not to paint. Students then practice writing algorithms using these components and methods while revisiting inheritance to create a subclass of the `PainterPlus` class.",
-        "preparation": "* Print copies of the Investigate: Selection Statements handout (one for each pair of students)\n* Print copies of the Writing Algorithms handout (one for each student)\n* Preview the *Conditional Statements* video\n* Gather index cards or scrap pieces of paper (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-11-selection-statements/37865) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L11 Guided Notes (one for each student)\n* Print copies of the Investigate: Selection Statements handout (one for each pair of students)\n* Print copies of the Writing Algorithms handout (one for each student)\n* Preview the *Conditional Statements* video\n* Gather index cards or scrap pieces of paper (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-11-selection-statements/37865) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I write algorithms using sequencing, selection, and iteration in Java?**\n\nYou have learned how to implement algorithms in Java that repeat a set of instructions while a condition is `true`. In this lesson, you explore selection and learn how to write algorithms using sequencing, selection, and iteration. You discover additional methods in the `Painter` class that you can use in your algorithms to allow your `Painter` objects to make better decisions about which direction to move or turn or whether or not to paint. You then practice writing algorithms using these components and methods while revisiting inheritance to create a subclass of the `PainterPlus` class."
       },
       "seeding_key": {
@@ -311,7 +324,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**How can I use the problem solving process to debug a program?**\n\nIn an introductory computer science course such as Computer Science Discoveries (CSD) or Computer Science Principles (CSP), students learned about bugs and debugging strategies. Students recall what they remember about debugging and consider how they have used the problem solving process to develop solutions to learn how to debug Java programs. Students explore variables, printing, and methods in the `Painter` class to obtain information about a `Painter` object and learn how to apply the problem solving process to find errors in a program and develop and test potential solutions. Students then practice using these strategies and the problem solving process to debug a program in The Neighborhood.",
-        "preparation": "* Print copies of the Investigate: Debugging in The Neighborhood handout (one for each pair of students)\n* Preview the *Printing in Java* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-12-debugging-strategies/37866) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L12 Guided Notes (one for each student)\n* Print copies of the Investigate: Debugging in The Neighborhood handout (one for each pair of students)\n* Preview the *Printing in Java* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-12-debugging-strategies/37866) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use the problem solving process to debug a program?**\n\nYou have likely learned about bugs and debugging strategies in a previous computer science course. In this lesson, you recall what you remember about debugging and consider how you have used the problem solving process to develop solutions to learn how to debug Java programs. You explore variables, printing, and methods in the `Painter` class to obtain information about a `Painter` object and learn how to apply the problem solving process to find errors in a program and develop and test potential solutions. You then practice using these strategies and the problem solving process to debug a program in The Neighborhood."
       },
       "seeding_key": {
@@ -329,7 +342,7 @@
       "relative_position": 13,
       "properties": {
         "overview": "**How can I write efficient code?**\n\nStudents build on their knowledge of the problem solving process and writing algorithms to learn how to write efficient programs and minimize redundant code. Students are introduced to decomposition to deconstruct problems into smaller tasks and develop algorithms for these tasks and consider how they can plan and organize their solutions to be more efficient. Students then practice using the problem solving process and decomposition strategies to create a new `PainterPlus` subclass.",
-        "preparation": "* Create code review groups if you are not reusing the same groups\n* Print copies of the Decomposition handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-13-decomposition-and-design/37867) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L13 Guided Notes (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Decomposition handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-13-decomposition-and-design/37867) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I write efficient code?**\n\nIn this lesson, you build on your knowledge of the problem solving process and writing algorithms to learn how to write efficient programs and minimize redundant code. You are introduced to decomposition to deconstruct problems into smaller tasks and develop algorithms for these tasks and develop algorithms for these tasks and consider how you can plan and organize their solutions to be more efficient. You then practice using the problem solving process and decomposition strategies to create a new `PainterPlus` subclass."
       },
       "seeding_key": {
@@ -347,7 +360,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "**How can I check if a condition is NOT `true` or execute a separate block of code if the condition is `false`?**\n\nStudents expand their knowledge of selection statements and Boolean values to learn how to use two-way selection statements and the NOT ( `!` ) logical operator. Students explore the functionality of two-way selection statements and the NOT ( `!` ) logical operator and consider how these can be used to expand or improve the algorithms they have developed so far. Students then practice using these to develop algorithms and create a new subclass of the `PainterPlus` class.",
-        "preparation": "* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Print copies of the Investigate: Selection and Logic handout (one for each pair of students)\n* Print copies of the Unit 1 Study Guide (one for each student)\n* Preview the *Two-Way Selection and NOT* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-14-two-way-selection-statements/37868) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L14 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Print copies of the Investigate: Selection and Logic handout (one for each pair of students)\n* Print copies of the Unit 1 Study Guide (one for each student)\n* Preview the *Two-Way Selection and NOT* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-14-two-way-selection-statements/37868) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I check if a condition is NOT `true` or execute a separate block of code if the condition is `false`?**\n\nSo far, you have used selection statements and Boolean values to execute a specific block of code if a condition is true. In this lesson, you learn how to use two-way selection statements and the NOT ( `!` ) logical operator. You explore the functionality of two-way selection statements and the NOT ( `!` ) logical operator and consider how these can be used to expand or improve the algorithms you have developed so far. You then practice using these to develop algorithms and create a new subclass of the `PainterPlus` class."
       },
       "seeding_key": {
@@ -442,6 +455,21 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "csa1-2023"
       }
     }
@@ -1237,6 +1265,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2023"
       }
+    },
+    {
+      "key": "18711a9c-ad02-440e-9dbb-d0f4a35186da",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18711a9c-ad02-440e-9dbb-d0f4a35186da",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2023"
+      }
     }
   ],
   "activity_sections": [
@@ -1591,15 +1631,9 @@
       "key": "ef33d22a-e3f4-4a09-b76b-69cccd95a749",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 1 Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
-        "name": "Introduction",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The unit guide provides students with guided notes, syntax, and vocabulary for new concepts introduced in each lesson. You can provide the entire unit guide, or you can distribute each section at the start of each lesson.\n\nYou can choose to have students complete the guided notes during the lesson, or you can choose to incorporate the unit guide differently according to the needs of your classroom and students.\n\n**The unit guides are optional!** You can also choose not to use these at all, or use an entirely different approach to guided notes."
-          }
-        ]
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "ef33d22a-e3f4-4a09-b76b-69cccd95a749",
@@ -2108,6 +2142,18 @@
       },
       "seeding_key": {
         "activity_section.key": "704fcabd-bd9c-4e82-be8c-51998db169a7",
+        "lesson_activity.key": "88bbb7aa-783b-4ef8-a80c-0f764b81cb61"
+      }
+    },
+    {
+      "key": "3ea4aa43-3feb-4a9d-8917-f3d75fbc8b1a",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ea4aa43-3feb-4a9d-8917-f3d75fbc8b1a",
         "lesson_activity.key": "88bbb7aa-783b-4ef8-a80c-0f764b81cb61"
       }
     },
@@ -3097,6 +3143,18 @@
       }
     },
     {
+      "key": "ebaba802-185e-46dd-b99c-2ef0ccc15d85",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebaba802-185e-46dd-b99c-2ef0ccc15d85",
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120"
+      }
+    },
+    {
       "key": "e75d2a97-dee4-483f-b55e-73cd961989b2",
       "position": 1,
       "properties": {
@@ -3359,6 +3417,18 @@
       },
       "seeding_key": {
         "activity_section.key": "1f1038ea-4656-4839-83f3-3668950686f4",
+        "lesson_activity.key": "7b69900b-4641-4033-8ac4-c19fa85c0ff2"
+      }
+    },
+    {
+      "key": "9d2ce3e5-d327-4275-84dd-49b4126ff85e",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d2ce3e5-d327-4275-84dd-49b4126ff85e",
         "lesson_activity.key": "7b69900b-4641-4033-8ac4-c19fa85c0ff2"
       }
     },
@@ -4233,6 +4303,18 @@
       }
     },
     {
+      "key": "12dd5504-bb49-412e-b717-f6c7c526c4e0",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.2\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "12dd5504-bb49-412e-b717-f6c7c526c4e0",
+        "lesson_activity.key": "363cb5b7-5b66-4ae8-b5c6-002972a7d1a7"
+      }
+    },
+    {
       "key": "e98d5387-b668-462a-b0e0-63d490b2adea",
       "position": 1,
       "properties": {
@@ -4508,6 +4590,18 @@
       },
       "seeding_key": {
         "activity_section.key": "c037c4d7-9ba2-4da2-aea9-e61147dd8611",
+        "lesson_activity.key": "faae582e-d390-4cee-9892-f14e0e1d68e2"
+      }
+    },
+    {
+      "key": "311874a6-4ad4-4dcd-8833-5b4b49755927",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "311874a6-4ad4-4dcd-8833-5b4b49755927",
         "lesson_activity.key": "faae582e-d390-4cee-9892-f14e0e1d68e2"
       }
     },
@@ -5150,6 +5244,18 @@
       },
       "seeding_key": {
         "activity_section.key": "3d660461-9548-4fe9-ab0d-9c72a21c1f64",
+        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
+      }
+    },
+    {
+      "key": "88145dea-d585-49d3-a41d-e17a15db74fb",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "88145dea-d585-49d3-a41d-e17a15db74fb",
         "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
       }
     },
@@ -5979,6 +6085,28 @@
       "seeding_key": {
         "activity_section.key": "40c4203e-b918-4c71-8ec5-8004174984eb",
         "lesson_activity.key": "55412c10-f40b-4a42-806f-7b2e8c7a8619"
+      }
+    },
+    {
+      "key": "38d82083-6f0c-4a44-9f4e-98c8718a057f",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "38d82083-6f0c-4a44-9f4e-98c8718a057f",
+        "lesson_activity.key": "18711a9c-ad02-440e-9dbb-d0f4a35186da"
+      }
+    },
+    {
+      "key": "88326380-e0f6-42e6-95b7-fed281cb4511",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "88326380-e0f6-42e6-95b7-fed281cb4511",
+        "lesson_activity.key": "18711a9c-ad02-440e-9dbb-d0f4a35186da"
       }
     }
   ],
@@ -7956,6 +8084,50 @@
       "level_keys": [
         "CSA U1 Asphalt Art Project 1-Day_2023"
       ]
+    },
+    {
+      "chapter": 80,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2023",
+        "activity_section.key": "38d82083-6f0c-4a44-9f4e-98c8718a057f"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2023",
+        "activity_section.key": "88326380-e0f6-42e6-95b7-fed281cb4511"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood - No Bucket Sandbox"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -8906,6 +9078,30 @@
         "script.name": "csa1-2023",
         "activity_section.key": "2bc505dc-26c4-4fce-8cdb-4939fd4147ef"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2023",
+        "activity_section.key": "38d82083-6f0c-4a44-9f4e-98c8718a057f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2023",
+        "activity_section.key": "88326380-e0f6-42e6-95b7-fed281cb4511"
+      }
     }
   ],
   "resources": [
@@ -8931,6 +9127,162 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_asphalt_art_project_planning_guide_1"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U1L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1LBMSsk6NqS3jMvhX-DTo64bbrBxLty6jJ_rs6PbbSNU/edit?usp=sharing",
+      "key": "_exemplar_lesson_2_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_lesson_2_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U1L10 Guided Notes",
+      "url": "https://docs.google.com/document/d/1uTw9TozqEsURbvu9MDHXJhiwI9hV7XPUN_BpKOB1NkY/edit?usp=sharing",
+      "key": "_exemplar_u1l10_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u1l10_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U1L11 Guided Notes",
+      "url": "https://docs.google.com/document/d/1RKmj91Z9w0tUosY15psijETM6xsk8fgAhlteKeaTqwY/edit?usp=sharing",
+      "key": "_exemplar_u1l11_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u1l11_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U1L12 Guided Notes",
+      "url": "https://docs.google.com/document/d/1YONQV_7wpfox2zc_lCJlT91MYnqVnyQr_E3DTWpRD90/edit?usp=sharing",
+      "key": "_exemplar_u1l12_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u1l12_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U1L13 Guided Notes",
+      "url": "https://docs.google.com/document/d/1lsmBKMNkGG3nuxxwrN7DOV_1GI9a5cU1_rd95jqcomQ/edit?usp=sharing",
+      "key": "_exemplar_u1l13_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u1l13_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U1L14 Guided Notes",
+      "url": "https://docs.google.com/document/d/1gE0I47puwz3Pf1UY24ThE25DOUjLxnx0u4qcyom_Si0/edit?usp=sharing",
+      "key": "_exemplar_u1l14_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u1l14_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U1L3 Guided Notes",
+      "url": "https://docs.google.com/document/d/1MMvH2oKNz6PjokGp8quLlWx_aEAGOL10ddEEmEZc63w/edit?usp=sharing",
+      "key": "_exemplar_u1l3_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u1l3_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U1L4 Guided Notes",
+      "url": "https://docs.google.com/document/d/1m6oB5Qr01gJsUvdBSIRfqnEMlCJZFqDcjivudo4M2cY/edit?usp=sharing",
+      "key": "_exemplar_u1l4_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u1l4_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U1L5 Guided Notes",
+      "url": "https://docs.google.com/document/d/10D3uJZL_OVZzIN55yH4W0BRO7qaAaKaChQU4dUao2t4/edit?usp=sharing",
+      "key": "_exemplar_u1l5_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u1l5_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U1L6 Guided Notes",
+      "url": "https://docs.google.com/document/d/1qSS45Us1hCR_JbaClL8WTmoVkQylSxkKGxCDCSzup6M/edit?usp=sharing",
+      "key": "_exemplar_u1l6_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u1l6_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U1L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1TVlK7qZS-NYB_2Ig8I_0YPYSvtDsy67Qq3k8DPFqZ9I/edit?usp=sharing",
+      "key": "_exemplar_u1l7_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u1l7_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U1L8 Guided Notes",
+      "url": "https://docs.google.com/document/d/1w9U_KXwjGWFHLNwhdbvNM2R2vU0Yd_dmLMoqSOs4dOI/edit?usp=sharing",
+      "key": "_exemplar_u1l8_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u1l8_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U1L9 Guided Notes",
+      "url": "https://docs.google.com/document/d/1GP71VXJ0uXWfbMYOE7s2ORI5nscWXWcgvrgJhhs6Oxs/edit?usp=sharing",
+      "key": "_exemplar_u1l9_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u1l9_guided_notes"
       }
     },
     {
@@ -9186,18 +9538,6 @@
       }
     },
     {
-      "name": "[KEY] Writing Algorithms",
-      "url": "https://docs.google.com/document/d/1vC8YSyvjxns_saIvd9TsUdJMX72YalxxC_MIQnwD7R4/edit?usp=sharing",
-      "key": "_key_writing_algorithms",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_writing_algorithms"
-      }
-    },
-    {
       "name": "All Resources",
       "url": "/s/csa1-2023/resources",
       "key": "all_resources_1",
@@ -9366,6 +9706,30 @@
       }
     },
     {
+      "name": "CSA Unit 1 Slides",
+      "url": "https://docs.google.com/presentation/d/1bFZJ2H9aGgtfdGgymlQJU1-04SAswwc7IbCBYVJFz34/edit?usp=sharing",
+      "key": "csa_unit_1_slides",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_1_slides"
+      }
+    },
+    {
+      "name": "CSA Unit 1 Word Wall Cards",
+      "url": "https://docs.google.com/document/d/1HzzZWTryqreYF9IuC4BQUS0hiXJAd7J5Jy4NRJZVjrA/edit?usp=share_link",
+      "key": "csa_unit_1_word_wall_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_1_word_wall_cards"
+      }
+    },
+    {
       "name": "Debugging Strategies",
       "url": "https://docs.google.com/presentation/d/1JebRe7kA8gc80b3vrG9zrOZjNtezlIINHuMpAzkz4gk/edit?usp=sharing",
       "key": "debugging_strategies",
@@ -9415,6 +9779,18 @@
       }
     },
     {
+      "name": "Guide to Creating and Using Word Walls",
+      "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
+      "key": "guide_to_creating_and_using_word_walls",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls"
+      }
+    },
+    {
       "name": "Guide to Programming Levels in CSA",
       "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
       "key": "guide_to_programming_levels_in_csa",
@@ -9453,7 +9829,7 @@
     },
     {
       "name": "Inheritance",
-      "url": "https://youtu.be/H0htNTwNvrY",
+      "url": "https://youtu.be/vvDIkfaCy88",
       "key": "inheritance_1",
       "properties": {
         "audience": "Student",
@@ -9520,6 +9896,7 @@
       "key": "investigate_working_with_java_files",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9536,6 +9913,32 @@
       },
       "seeding_key": {
         "resource.key": "java_lab"
+      }
+    },
+    {
+      "name": "U1L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1kQpCoRqC7jjz8nXa1TRxBYa8UKIv4V5mcVbIni5RMdg/edit?usp=sharing",
+      "key": "lesson_2_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_2_guided_notes"
+      }
+    },
+    {
+      "name": "U1L3 Guided Notes",
+      "url": "https://docs.google.com/document/d/1o1U4Q9MLyMuMJUHxrLEPYPs0hfPIDTSwgVwiuXJiTc0/edit?usp=sharing",
+      "key": "lesson_3_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_3_guided_notes"
       }
     },
     {
@@ -9759,6 +10162,19 @@
       }
     },
     {
+      "name": "U1L10 Guided Notes",
+      "url": "https://docs.google.com/document/d/1RdELGol7MF9mUFU6LRATt5XuBf_B8oCqHM7wJUC5hTE/edit?usp=sharing",
+      "key": "u1l10_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l10_guided_notes"
+      }
+    },
+    {
       "name": "U1L11 Extra Practice",
       "url": "https://docs.google.com/document/d/1TCtlH9nNgAi6C0S52VFBJSFBO6GNNgiAB2m2ruRtcR8/edit?usp=sharing",
       "key": "u1l11_extra_practice",
@@ -9769,6 +10185,19 @@
       },
       "seeding_key": {
         "resource.key": "u1l11_extra_practice"
+      }
+    },
+    {
+      "name": "U1L11 Guided Notes",
+      "url": "https://docs.google.com/document/d/1g1vA010kYlPyPKXoejO0moqPUSV2PuCK6q3Wxfc9HEM/edit?usp=sharing",
+      "key": "u1l11_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l11_guided_notes"
       }
     },
     {
@@ -9785,6 +10214,19 @@
       }
     },
     {
+      "name": "U1L12 Guided Notes",
+      "url": "https://docs.google.com/document/d/1hpr2UK3EPt8grxpxAZOElH40ZdweecgoHeUZxF7FVtY/edit?usp=sharing",
+      "key": "u1l12_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l12_guided_notes"
+      }
+    },
+    {
       "name": "U1L13 Extra Practice",
       "url": "https://docs.google.com/document/d/14d-__vjA71T3sUP8cHtuZL4Qsd7bAz_PmlOn7qA1JgM/edit?usp=sharing",
       "key": "u1l13_extra_practice",
@@ -9795,6 +10237,19 @@
       },
       "seeding_key": {
         "resource.key": "u1l13_extra_practice"
+      }
+    },
+    {
+      "name": "U1L13 Guided Notes",
+      "url": "https://docs.google.com/document/d/1aT60g3CdZMeZbTrc9uo3ejbBHzHMXsZtQhQsKMmsGeE/edit?usp=sharing",
+      "key": "u1l13_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l13_guided_notes"
       }
     },
     {
@@ -9811,11 +10266,25 @@
       }
     },
     {
+      "name": "U1L14 Guided Notes",
+      "url": "https://docs.google.com/document/d/1quRjUmGw8rQDOTu4bufSlLzpae7q4RQujT-67JShveM/edit?usp=sharing",
+      "key": "u1l14_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l14_guided_notes"
+      }
+    },
+    {
       "name": "U1L2 Extra Practice",
       "url": "https://docs.google.com/document/d/1HpxVlUVskjmYwknNRCaNcOt5GQQ0C0fiHi-MRgkKHrw/edit?usp=sharing",
       "key": "u1l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -9849,6 +10318,19 @@
       }
     },
     {
+      "name": "U1L4 Guided Notes",
+      "url": "https://docs.google.com/document/d/1rWfwkbD7J7cOCz-e2s8qxpMfuMhP3DjNFx1TQ6VTx0k/edit?usp=sharing",
+      "key": "u1l4_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l4_guided_notes"
+      }
+    },
+    {
       "name": "U1L5 Extra Practice",
       "url": "https://docs.google.com/document/d/1BdJQ8UcUY9cLr8de6A9TezNRRWd9c2E-gzUKjpZXK4Y/edit?usp=sharing",
       "key": "u1l5_extra_practice",
@@ -9859,6 +10341,19 @@
       },
       "seeding_key": {
         "resource.key": "u1l5_extra_practice"
+      }
+    },
+    {
+      "name": "U1L5 Guided Notes",
+      "url": "https://docs.google.com/document/d/1KqUKvCc3izIGMN53-cqkV1e0UNG7Uv-v1mNeAaRtwMQ/edit?usp=sharing",
+      "key": "u1l5_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l5_guided_notes"
       }
     },
     {
@@ -9875,6 +10370,19 @@
       }
     },
     {
+      "name": "U1L6 Guided Notes",
+      "url": "https://docs.google.com/document/d/1q9O965oXLNRSwv9WfL-GQktt8BBxZlsSID-SdTWL1ws/edit?usp=sharing",
+      "key": "u1l6_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l6_guided_notes"
+      }
+    },
+    {
       "name": "U1L7 Extra Practice",
       "url": "https://docs.google.com/document/d/1pEsYPDjnIB_n9AmNduhZi_vHB-ZIP0YSEFmEBRmAexA/edit?usp=sharing",
       "key": "u1l7_extra_practice",
@@ -9885,6 +10393,19 @@
       },
       "seeding_key": {
         "resource.key": "u1l7_extra_practice"
+      }
+    },
+    {
+      "name": "U1L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1JEfYPxGY6evQw4U5aD3N4SmvwdByCy0LEPpfuhY2Geg/edit?usp=sharing",
+      "key": "u1l7_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l7_guided_notes"
       }
     },
     {
@@ -9901,6 +10422,19 @@
       }
     },
     {
+      "name": "U1L8 Guided Notes",
+      "url": "https://docs.google.com/document/d/1XIY1Lnq8GZNzDNotKCeXevsIUcOJMzuJ1X6HSvqvmgk/edit?usp=sharing",
+      "key": "u1l8_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l8_guided_notes"
+      }
+    },
+    {
       "name": "U1L9 Extra Practice",
       "url": "https://docs.google.com/document/d/1C0p12m4jebGIJcgy6NEw8l7oRKSOUKTF-THk-oLWv84/edit?usp=sharing",
       "key": "u1l9_extra_practice",
@@ -9911,6 +10445,19 @@
       },
       "seeding_key": {
         "resource.key": "u1l9_extra_practice"
+      }
+    },
+    {
+      "name": "U1L9 Guided Notes",
+      "url": "https://docs.google.com/document/d/1HuyHBN_MqxzWFdXJgtojRsJwJwGbnzJx7mCB9DFLnj0/edit?usp=sharing",
+      "key": "u1l9_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l9_guided_notes"
       }
     },
     {
@@ -10090,7 +10637,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
-        "resource.key": "_exemplar_unit_1_guide"
+        "resource.key": "_exemplar_u1l11_guided_notes"
       }
     },
     {
@@ -10138,7 +10685,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
-        "resource.key": "unit_1_guide"
+        "resource.key": "u1l11_guided_notes"
       }
     },
     {
@@ -10150,7 +10697,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-11",
-        "resource.key": "_exemplar_unit_1_guide"
+        "resource.key": "_exemplar_u1l12_guided_notes"
       }
     },
     {
@@ -10198,13 +10745,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-11",
-        "resource.key": "unit_1_guide"
+        "resource.key": "u1l12_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
-        "resource.key": "_exemplar_unit_1_guide"
+        "resource.key": "_exemplar_u1l13_guided_notes"
       }
     },
     {
@@ -10246,13 +10793,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
-        "resource.key": "unit_1_guide"
+        "resource.key": "u1l13_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-13",
-        "resource.key": "_exemplar_unit_1_guide"
+        "resource.key": "_exemplar_u1l14_guided_notes"
       }
     },
     {
@@ -10312,7 +10859,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-13",
-        "resource.key": "unit_1_guide"
+        "resource.key": "u1l14_guided_notes"
       }
     },
     {
@@ -10324,7 +10871,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
-        "resource.key": "_exemplar_unit_1_guide"
+        "resource.key": "_exemplar_u1l4_guided_notes"
       }
     },
     {
@@ -10360,13 +10907,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
-        "resource.key": "unit_1_guide"
+        "resource.key": "u1l4_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-15",
-        "resource.key": "_exemplar_unit_1_guide"
+        "resource.key": "_exemplar_u1l6_guided_notes"
       }
     },
     {
@@ -10396,7 +10943,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-15",
-        "resource.key": "unit_1_guide"
+        "resource.key": "u1l6_guided_notes"
       }
     },
     {
@@ -10426,7 +10973,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "resource.key": "_exemplar_unit_1_guide"
+        "resource.key": "_exemplar_lesson_2_guided_notes"
       }
     },
     {
@@ -10462,13 +11009,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "resource.key": "u1l2_extra_practice"
+        "resource.key": "lesson_2_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "resource.key": "unit_1_guide"
+        "resource.key": "u1l2_extra_practice"
       }
     },
     {
@@ -10540,7 +11087,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
-        "resource.key": "_exemplar_unit_1_guide"
+        "resource.key": "_exemplar_u1l3_guided_notes"
       }
     },
     {
@@ -10559,6 +11106,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "lesson_3_guided_notes"
       }
     },
     {
@@ -10587,14 +11140,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "unit_1_guide"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "_exemplar_unit_1_guide"
+        "resource.key": "_exemplar_u1l5_guided_notes"
       }
     },
     {
@@ -10630,25 +11177,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "unit_1_guide"
+        "resource.key": "u1l5_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "resource.key": "_exemplar_unit_1_guide"
+        "resource.key": "_exemplar_u1l7_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_key_u1l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "_key_writing_algorithms"
       }
     },
     {
@@ -10672,7 +11213,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "resource.key": "unit_1_guide"
+        "resource.key": "u1l7_guided_notes"
       }
     },
     {
@@ -10690,7 +11231,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "_exemplar_unit_1_guide"
+        "resource.key": "_exemplar_u1l8_guided_notes"
       }
     },
     {
@@ -10726,13 +11267,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "unit_1_guide"
+        "resource.key": "u1l8_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "resource.key": "_exemplar_unit_1_guide"
+        "resource.key": "_exemplar_u1l9_guided_notes"
       }
     },
     {
@@ -10756,7 +11297,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "resource.key": "unit_1_guide"
+        "resource.key": "u1l9_guided_notes"
       }
     },
     {
@@ -10774,7 +11315,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "_exemplar_unit_1_guide"
+        "resource.key": "_exemplar_u1l10_guided_notes"
       }
     },
     {
@@ -10822,7 +11363,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "unit_1_guide"
+        "resource.key": "u1l10_guided_notes"
       }
     }
   ],
@@ -10848,6 +11389,24 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_1",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_1_slides",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_1_word_wall_cards",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls",
         "script.name": "csa1-2023"
       }
     },
@@ -12020,6 +12579,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-11",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-1.A.1"
@@ -12048,9 +12621,51 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-12",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.G.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
       }
     },
     {
@@ -12076,6 +12691,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-14",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-1.D.1"
@@ -12086,6 +12715,13 @@
         "lesson.key": "lesson-14",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
       }
     },
     {
@@ -12111,6 +12747,48 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.C.1"
@@ -12121,6 +12799,34 @@
         "lesson.key": "lesson-2",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
       }
     },
     {
@@ -12139,6 +12845,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-5",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-1.E.5"
@@ -12149,6 +12869,20 @@
         "lesson.key": "lesson-5",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-1.E.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -12195,6 +12929,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.B.13"
@@ -12230,6 +12985,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-8",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-1.E.3"
@@ -12251,6 +13013,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-9",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.C.1"
@@ -12262,9 +13038,25 @@
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.C.2"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -28,6 +28,8 @@ ka:
           description_short: ისწავლეთ კომპიუტერული მეცნიერებების საფუძვლების შესავალი.
         csp-2019:
           description_short: ისწავლეთ კომპიუტერული მეცნიერებების საფუძვლების შესავალი.
+        csd-pilot:
+          title: CSD საპილოტე კურსი
         csp-2020:
           description_short: ისწავლეთ კომპიუტერული მეცნიერებების საფუძვლების შესავალი.
         csp-2021:
@@ -41,19 +43,19 @@ ka:
         csd-2023:
           title: კომპიუტერული მეცნიერების აღმოჩენები
     resources:
-      curriculum/csd/2020:
-        name: კურიკულუმი
-      teacher_forum/csd/2020:
-        name: მასწავლებლის ფორუმი
       curriculum/csd/2017:
         name: კურიკულუმი
       teacher_forum_6/csd/2017:
+        name: მასწავლებლის ფორუმი
+      curriculum/csd/2018:
+        name: კურიკულუმი
+      teacher_forum_6/csd/2018:
         name: მასწავლებლის ფორუმი
       curriculum/csd/2019:
         name: კურიკულუმი
       teacher_forum/csd/2019:
         name: მასწავლებლის ფორუმი
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: კურიკულუმი
-      teacher_forum_6/csd/2018:
+      teacher_forum/csd/2020:
         name: მასწავლებლის ფორუმი

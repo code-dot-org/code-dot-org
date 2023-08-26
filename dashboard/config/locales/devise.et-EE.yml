@@ -58,6 +58,28 @@ et:
         minuti jooksul meil juhistega, kuidas oma konto lahti lukustada.
       unlocked: Kasutajakonto edukalt lahti lukustatud. Logi sisse, et jätkata.
   errors:
+    invitations:
+      edit:
+        header: Määra oma parool
+        submit_button: Määra minu parool
+      invitation_removed: Sinu kutse eemaldati.
+      invitation_token_invalid: Kutse ei ole kehtiv!
+      new:
+        header: Saada kutse
+        submit_button: Saada kutse
+      no_invitations_remaining: Kutseid ei ole saadaval
+      send_instructions: Kutse on saadetud %{email}.
+      updated: Parool on edukalt seatud. Olete nüüd sisse logitud.
+    mailer:
+      invitation_instructions:
+        accept: Nõustu kutsega
+        hello: Tere %{email}
+        ignore: Kui sa ei taha selle kutsega nõustuda, siis ignoreeri seda meili.<br
+          />Sulle ei looda kontot, kuni pöördud allolevale lingile ja sead endale
+          parooli.
+        someone_invited_you: Keegi on teid kutsunud %{url}, saad selle kinnitada alloleva
+          lingi kaudu.
+        subject: Kutse juhised
     messages:
       already_confirmed: oli juba kinnitatud, proovi sisse logida
       confirmation_period_expired: on vaja kinnitada %{period} jooksul, telli palun
@@ -65,25 +87,3 @@ et:
       expired: on aegunud, palun telli uus
       not_found: ei leitud
       not_locked: ei olnud lukustatud
-    invitations:
-      send_instructions: Kutse on saadetud %{email}.
-      invitation_token_invalid: Kutse ei ole kehtiv!
-      updated: Parool on edukalt seatud. Olete nüüd sisse logitud.
-      no_invitations_remaining: Kutseid ei ole saadaval
-      invitation_removed: Sinu kutse eemaldati.
-      new:
-        header: Saada kutse
-        submit_button: Saada kutse
-      edit:
-        header: Määra oma parool
-        submit_button: Määra minu parool
-    mailer:
-      invitation_instructions:
-        subject: Kutse juhised
-        hello: Tere %{email}
-        someone_invited_you: Keegi on teid kutsunud %{url}, saad selle kinnitada alloleva
-          lingi kaudu.
-        accept: Nõustu kutsega
-        ignore: Kui sa ei taha selle kutsega nõustuda, siis ignoreeri seda meili.<br
-          />Sulle ei looda kontot, kuni pöördud allolevale lingile ja sead endale
-          parooli.

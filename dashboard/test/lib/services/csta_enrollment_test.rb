@@ -164,7 +164,7 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
           "message": "success",
           "content": {
             "submissionID": "4693670621822232790",
-            "URL": "https:\/\/api.jotform.com\/submission\/4693670621822232790"
+            "URL": "https://api.jotform.com/submission/4693670621822232790"
           },
           "duration": "24ms",
           "limit-left": 49996
@@ -182,10 +182,10 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
       response.stubs(:body).returns(<<~BODY)
         {
           "responseCode": 400,
-          "message": "Bad request (\/form-id-submissions) - Submissions couldn't inserted",
+          "message": "Bad request (/form-id-submissions) - Submissions couldn't inserted",
           "content": [],
           "duration": "12ms",
-          "info": "https:\/\/api.jotform.com\/docs#form-id-submissions"
+          "info": "https://api.jotform.com/docs#form-id-submissions"
         }
       BODY
     end

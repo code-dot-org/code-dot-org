@@ -1,0 +1,27 @@
+---
+title: Matching Gifts
+theme: responsive_full_width
+---
+
+:scss
+  #dd-container {
+    margin-top: 3em;
+  }
+
+:javascript
+  var DDCONF = { API_KEY: "#{CDO.ddconf_api_key}" };
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%script{src: "https://doublethedonation.com/api/js/ddplugin.js"}
+
+%section
+  .wrapper
+    %h1 Matching gifts
+    #dd-container
+      %a{href: "https://doublethedonation.com/matching-grant-resources/matching-gift-basics/"} Matching Gift
+      and
+      %a{href: "https://doublethedonation.com/matching-grant-resources/volunteer-grant-basics/"} Volunteer Grant
+      information provided by
+      %br
+      %a{href: "https://doublethedonation.com"}
+        %img{alt: "Powered by Double the Donation", src: "https://doublethedonation.com/api/img/powered-by.png"}

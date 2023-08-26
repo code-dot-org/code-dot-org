@@ -71,6 +71,7 @@ hu:
           description_short: A 20 órás tanfolyam kiterjed az alapvető számítógépes tudományra és a programozási fogalmakra a 2-4. tanfolyamban.
           description_audience: 10-től 18 éves korig
           student_description: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.
+          name: 20 órás
         edit-code:
           title: Kód szerkesztése
           description: Kód szerkesztése
@@ -156,6 +157,7 @@ hu:
           description_short: írj egy történetet vagy készíts egy játékot a Gumball Játéklaborban!
           student_description: írj egy történetet vagy készíts egy játékot a Gumball Játéklaborban!
         starwars:
+          title: 'Star Wars: Egy galaxis építése kóddal (JavaScript)'
           description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
           description_short: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
           student_description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
@@ -1771,6 +1773,7 @@ hu:
             lessonGroup-2:
               display_name: Kérdőív
         coursea-2021:
+          description: 'Az A kurzus számítástechnikai tantervet kínál azoknak az olvasással épp csak ismerkedő gyerekek számára, beleértve akár az óvodásokat is. A diákok megtanulnak programozni olyan parancsokkal, mint a ciklusok és az események. Az ebben a kurzusban bemutatott leckék arra is megtanítják a diákokat, hogy értelmesen együttműködjenek másokkal, vizsgálják meg a különböző problémamegoldó technikákat, a kihívást jelentő feladatok megoldásával kitartóak legyenek, és megismerjék az internetbiztonságot. '
           description_short: Bevezetés a számítástechnikába az előolvasók számára.
           lesson_groups:
             csf_digcit:
@@ -2238,6 +2241,7 @@ hu:
               display_name: Események
             lessonGroup-5:
               display_name: Kurzus Projekt vége
+          description: 'Az A kurzus számítástechnikai tantervet kínál azoknak az olvasással épp csak ismerkedő gyerekek számára, beleértve akár az óvodásokat is. A diákok megtanulnak programozni olyan parancsokkal, mint a ciklusok és az események. Az ebben a kurzusban bemutatott leckék arra is megtanítják a diákokat, hogy értelmesen együttműködjenek másokkal, vizsgálják meg a különböző problémamegoldó technikákat, a kihívást jelentő feladatok megoldásával kitartóak legyenek, és megismerjék az internetbiztonságot. '
           student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
           description_short: Bevezetés a számítástechnikába az előolvasók számára.
         express-2022:
@@ -2605,6 +2609,8 @@ hu:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
             lessonGroup-3:
               display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+            lessonGroup-5:
+              display_name: Kérdőív
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2721,6 +2727,7 @@ hu:
               display_name: Események
             lessonGroup-5:
               display_name: Kurzus Projekt vége
+          description: 'Az A kurzus számítástechnikai tantervet kínál azoknak az olvasással épp csak ismerkedő gyerekek számára, beleértve akár az óvodásokat is. A diákok megtanulnak programozni olyan parancsokkal, mint a ciklusok és az események. Az ebben a kurzusban bemutatott leckék arra is megtanítják a diákokat, hogy értelmesen együttműködjenek másokkal, vizsgálják meg a különböző problémamegoldó technikákat, a kihívást jelentő feladatok megoldásával kitartóak legyenek, és megismerjék az internetbiztonságot. '
           student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
           description_short: Bevezetés a számítástechnikába az előolvasók számára.
         courseb-2023:
@@ -2808,16 +2815,22 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-hardware1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
             lessonGroup-3:
               display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+            lessonGroup-5:
+              display_name: Kérdőív
         focus-on-data1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2828,14 +2841,20 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-coding1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-impact-in-society1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2850,10 +2869,20 @@ hu:
           lesson_groups:
             lessonGroup-5:
               display_name: Kérdőív
+        ai-temp:
+          title: Hogyan működik az MI?
         pl-csd-summer-day1:
           lessons:
             lesson-3:
               name: Bevezető
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Bevezető
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Értékelés
         csd-post-survey-2023:
           title: Tanfomlyam Utáni Felmérés
         focus-on-data-post-survey-2023:
@@ -2868,3 +2897,103 @@ hu:
           title: Tanfomlyam Utáni Felmérés
         focus-on-creativity-post-survey-2023:
           title: Tanfomlyam Utáni Felmérés
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-3:
+              display_name: sprite-ok
+            lessonGroup-4:
+              display_name: változók
+            lessonGroup-6:
+              display_name: Kurzus Projekt vége
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Adat
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-4:
+              display_name: Ciklusok
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Adat
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-4:
+              display_name: Ciklusok
+            lessonGroup-6:
+              display_name: Adat
+          description_short: Bevezetés a számítástechnikába az előolvasók számára.
+          description: Az A kurzus számítástechnikai tantervet kínál azoknak az olvasással épp csak ismerkedő gyerekek számára, beleértve akár az óvodásokat is. A diákok megtanulnak programozni olyan parancsokkal, mint a ciklusok és az események. Az ebben a kurzusban bemutatott leckék arra is megtanítják a diákokat, hogy értelmesen együttműködjenek másokkal, vizsgálják meg a különböző problémamegoldó technikákat, a kihívást jelentő feladatok megoldásával kitartóak legyenek, és megismerjék az internetbiztonságot.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Adat
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-4:
+              display_name: Ciklusok
+            lessonGroup-6:
+              display_name: Események
+            lessonGroup-7:
+              display_name: Kurzus Projekt vége
+            lessonGroup-8:
+              display_name: Adat
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Számítástechnikai rendszerek
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-4:
+              display_name: Ciklusok
+            lessonGroup-5:
+              display_name: Események
+            lessonGroup-6:
+              display_name: Adat
+            lessonGroup-8:
+              display_name: Számítástechnikai rendszerek
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-6:
+              display_name: Ciklusok
+            lessonGroup-7:
+              display_name: Adat
+            lessonGroup-8:
+              display_name: Kurzus Projekt vége
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Egymásba ágyazott ciklusok
+            lessonGroup-4:
+              display_name: Függvények
+            lessonGroup-6:
+              display_name: Kurzus Projekt vége
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: sprite-ok
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: sprite-ok
+            lessonGroup-3:
+              display_name: Feltételek
+            lessonGroup-5:
+              display_name: változók
+            lessonGroup-7:
+              display_name: Kurzus Projekt vége
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
+        how-ai-works-2023:
+          title: Hogyan működik az MI?

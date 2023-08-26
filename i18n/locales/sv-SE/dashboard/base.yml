@@ -60,6 +60,7 @@ sv:
         reset_password_token: "Länken för återställning av lösenord som du har följt"
         error:
           future: kan inte vara i framtiden
+        us_state: 'Stat'
   beta: "beta"
   hello: "Hej världen"
   welcome_back: "Välkommen tillbaka, %{name}"
@@ -163,6 +164,7 @@ sv:
     parent_account_checkbox: "Jag är en förälder / målsman som anmäler mitt barn"
     parent_account_email_progress_permission: "Har vi tillstånd att skicka dig e-post då och då för att uppdatera dig om ditt barns framsteg och projekt samt om deras kurs och datavetenskap? [(Se vår integritetspolicy)] (%{privacy_policy_url})"
     parent_account_email_label: "Förälder/vårdnadshavare"
+    us_state: 'Stat'
   school_info:
     title: 'Skolinformation (valfritt)'
     school_country: 'Skolans land'
@@ -867,6 +869,8 @@ sv:
         microbit: 'Microbit'
         raspberry: 'Raspberry Pi'
         other: "Annat"
+      workshop_course:
+        other: 'Annat'
       email_opt_in:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nej'
@@ -885,3 +889,4 @@ sv:
     not_now: "Inte nu"
   pixelation:
     binary: "Binära"
+

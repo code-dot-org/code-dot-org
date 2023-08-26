@@ -2,736 +2,22 @@
   "hu-HU": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web-Lab",
-          "categories": {
-            "html_tags": {
-              "name": "HTML-címkék"
-            }
-          }
-        },
-        "gamelab": {
-          "name": "Játék Labor",
-          "categories": {
-            "game_lab": {
-              "name": "Játék Labor",
-              "expressions": {
-                "keyDown": {
-                  "palette_params": {
-                    "code": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "keyWentDown": {
-                  "palette_params": {
-                    "code": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "keyWentUp": {
-                  "palette_params": {
-                    "code": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "mouseDown": {
-                  "palette_params": {
-                    "button": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "Fekete-fehér"
-                    }
-                  },
-                  "palette_params": {
-                    "button": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "mouseWentUp": {
-                  "palette_params": {
-                    "button": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Zene Készítése"
-                    }
-                  },
-                  "palette_params": {
-                    "url": {
-                      "type": "Karakterlánc"
-                    },
-                    "loop": {
-                      "type": "Logikai"
-                    }
-                  },
-                  "short_description": "MP3 hang fájl lejátszása a megadott URL-címről."
-                },
-                "playSpeech": {
-                  "palette_params": {
-                    "text": {
-                      "type": "Karakterlánc"
-                    },
-                    "gender": {
-                      "type": "Karakterlánc"
-                    },
-                    "language": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "showMobileControls": {
-                  "palette_params": {
-                    "spaceButtonVisible": {
-                      "type": "Logikai"
-                    },
-                    "dpadVisible": {
-                      "type": "Logikai"
-                    },
-                    "dpadFourWay": {
-                      "type": "Logikai"
-                    },
-                    "mobileOnly": {
-                      "type": "Logikai"
-                    }
-                  }
-                },
-                "stopSound": {
-                  "palette_params": {
-                    "url": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                }
-              }
-            },
-            "sprites": {
-              "name": "sprite-ok",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Spirál"
-                    }
-                  }
-                },
-                "mirrorX": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "mirrorY": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "pointTo": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Szám"
-                    },
-                    "y": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setAnimation": {
-                  "palette_params": {
-                    "label": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "setCollider": {
-                  "palette_params": {
-                    "type": {
-                      "type": "Karakterlánc"
-                    },
-                    "xOffset": {
-                      "type": "Szám"
-                    },
-                    "yOffset": {
-                      "type": "Szám"
-                    },
-                    "width/radius": {
-                      "type": "Szám"
-                    },
-                    "height": {
-                      "type": "Szám"
-                    },
-                    "rotationOffset": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setFrame": {
-                  "palette_params": {
-                    "frame": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setSpeedAndDirection": {
-                  "palette_params": {
-                    "speed": {
-                      "type": "Szám"
-                    },
-                    "angle": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setVelocity": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Szám"
-                    },
-                    "y": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "createSprite": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Szám"
-                    },
-                    "width": {
-                      "type": "Szám"
-                    },
-                    "y": {
-                      "type": "Szám"
-                    },
-                    "height": {
-                      "type": "Szám"
-                    }
-                  }
-                }
-              }
-            },
-            "groups": {
-              "name": "Csoportok",
-              "expressions": {
-                "get": {
-                  "palette_params": {
-                    "i": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "pointToEach": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Szám"
-                    },
-                    "y": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setAnimationEach": {
-                  "palette_params": {
-                    "label": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "setColliderEach": {
-                  "palette_params": {
-                    "type": {
-                      "type": "Karakterlánc"
-                    },
-                    "yOffset": {
-                      "type": "Szám"
-                    },
-                    "width/radius": {
-                      "type": "Szám"
-                    },
-                    "height": {
-                      "type": "Szám"
-                    },
-                    "rotationOffset": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Szín"
-                    }
-                  }
-                },
-                "setHeightEach": {
-                  "palette_params": {
-                    "height": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setLifetimeEach": {
-                  "palette_params": {
-                    "lifetime": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setMirrorXEach": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setMirrorYEach": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setRotateToDirectionEach": {
-                  "palette_params": {
-                    "bool": {
-                      "type": "Logikai"
-                    }
-                  }
-                },
-                "setRotationEach": {
-                  "palette_params": {
-                    "angle": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setRotationSpeedEach": {
-                  "palette_params": {
-                    "speed": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setScaleEach": {
-                  "palette_params": {
-                    "scale": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setSpeedAndDirectionEach": {
-                  "palette_params": {
-                    "speed": {
-                      "type": "Szám"
-                    },
-                    "angle": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Szín"
-                    }
-                  }
-                },
-                "setVelocityEach": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Szám"
-                    },
-                    "y": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setVelocityXEach": {
-                  "palette_params": {
-                    "velocity": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setVelocityYEach": {
-                  "palette_params": {
-                    "velocity": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setVisibleEach": {
-                  "palette_params": {
-                    "bool": {
-                      "type": "Logikai"
-                    }
-                  }
-                },
-                "setWidthEach": {
-                  "palette_params": {
-                    "width": {
-                      "type": "Szám"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "Rajz",
-              "expressions": {
-                "arc": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Szám"
-                    },
-                    "y": {
-                      "type": "Szám"
-                    },
-                    "w": {
-                      "type": "Szám"
-                    },
-                    "h": {
-                      "type": "Szám"
-                    },
-                    "start": {
-                      "type": "Szám"
-                    },
-                    "stop": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "background": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "ellipse": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Szám"
-                    },
-                    "y": {
-                      "type": "Szám"
-                    },
-                    "w": {
-                      "type": "Szám"
-                    },
-                    "h": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "fill": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "line": {
-                  "palette_params": {
-                    "x1": {
-                      "type": "Szám"
-                    },
-                    "y1": {
-                      "type": "Szám"
-                    },
-                    "x2": {
-                      "type": "Szám"
-                    },
-                    "y2": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "point": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Szám"
-                    },
-                    "y": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "rect": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Szám"
-                    },
-                    "y": {
-                      "type": "Szám"
-                    },
-                    "w": {
-                      "type": "Szám"
-                    },
-                    "h": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "regularPolygon": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Szám"
-                    },
-                    "y": {
-                      "type": "Szám"
-                    },
-                    "sides": {
-                      "type": "Szám"
-                    },
-                    "size": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "rgb": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Szám"
-                    },
-                    "g": {
-                      "type": "Szám"
-                    },
-                    "b": {
-                      "type": "Szám"
-                    },
-                    "a": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Csillag"
-                    }
-                  },
-                  "palette_params": {
-                    "x1": {
-                      "type": "Szám"
-                    },
-                    "y1": {
-                      "type": "Szám"
-                    },
-                    "x2": {
-                      "type": "Szám"
-                    },
-                    "y2": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "stroke": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "strokeWeight": {
-                  "palette_params": {
-                    "size": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "text": {
-                  "palette_params": {
-                    "str": {
-                      "type": "Karakterlánc"
-                    },
-                    "x": {
-                      "type": "Szám"
-                    },
-                    "y": {
-                      "type": "Szám"
-                    },
-                    "width": {
-                      "type": "Szám"
-                    },
-                    "height": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "textAlign": {
-                  "palette_params": {
-                    "horiz": {
-                      "type": "Karakterlánc"
-                    },
-                    "vert": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "textFont": {
-                  "palette_params": {
-                    "font": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "textSize": {
-                  "palette_params": {
-                    "pixels": {
-                      "type": "Szám"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematika",
-              "expressions": {
-                "mathSqrt": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "moduloOperator": {
-                  "palette_params": {
-                    "value1": {
-                      "type": "Szám"
-                    },
-                    "value2": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "A legkisebb visszaadott szám"
-                    },
-                    "max": {
-                      "description": "A legnagyobb visszaadott szám"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "A legkisebb visszaadott szám"
-                    },
-                    "max": {
-                      "description": "A legnagyobb visszaadott szám"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "változók"
-            },
-            "functions": {
-              "name": "Függvények"
-            }
-          }
-        },
         "applab": {
-          "name": "App Lab",
-          "description": "Az App Lab egy programozási környezet egyszerű alkalmazásokra. Tervezd meg, kódolj blokkokkal vagy JavaScript-el, hogy működjön, majd oszd meg másodpercek alatt.",
           "categories": {
-            "ui_controls": {
+            "advanced": {
               "expressions": {
-                "getProperty": {
+                "setStyle": {
                   "palette_params": {
-                    "id": {
-                      "type": "Karakterlánc"
-                    },
-                    "property": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "onEvent": {
-                  "palette_params": {
-                    "type": {
+                    "css": {
                       "type": "Karakterlánc"
                     },
                     "id": {
-                      "type": "Karakterlánc"
-                    },
-                    "callback": {
-                      "type": "Függvény"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Zene Készítése"
-                    }
-                  },
-                  "palette_params": {
-                    "loop": {
-                      "type": "Logikai"
-                    }
-                  },
-                  "short_description": "MP3 hang fájl lejátszása a megadott URL-címről."
-                },
-                "playSpeech": {
-                  "palette_params": {
-                    "text": {
-                      "type": "Karakterlánc"
-                    },
-                    "gender": {
-                      "type": "Karakterlánc"
-                    },
-                    "language": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "rgb": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Szám"
-                    },
-                    "g": {
-                      "type": "Szám"
-                    },
-                    "b": {
-                      "type": "Szám"
-                    },
-                    "a": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "id": {
-                      "type": "Karakterlánc"
-                    },
-                    "property": {
                       "type": "Karakterlánc"
                     }
                   }
                 }
-              }
+              },
+              "name": "Haladó"
             },
             "canvas": {
               "expressions": {
@@ -821,8 +107,59 @@
                 }
               }
             },
+            "circuit": {
+              "expressions": {
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "isPressed": {
+                  "return_value": "Logikai"
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Logikai"
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Függvény"
+                    },
+                    "ms": {
+                      "type": "Szám"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Adat",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -861,24 +198,24 @@
                 },
                 "getColumn": {
                   "palette_params": {
-                    "table": {
+                    "column": {
                       "type": "Karakterlánc"
                     },
-                    "column": {
+                    "table": {
                       "type": "Karakterlánc"
                     }
                   }
                 },
                 "getPrediction": {
                   "palette_params": {
-                    "name": {
-                      "type": "Karakterlánc"
+                    "callback": {
+                      "type": "Függvény"
                     },
                     "id": {
                       "type": "Karakterlánc"
                     },
-                    "callback": {
-                      "type": "Függvény"
+                    "name": {
+                      "type": "Karakterlánc"
                     }
                   }
                 },
@@ -903,49 +240,27 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "Adat"
             },
-            "turtle": {
+            "functions": {
+              "name": "Függvények"
+            },
+            "maker": {
               "expressions": {
-                "penColor": {
+                "pinMode": {
                   "palette_params": {
-                    "color": {
+                    "mode": {
                       "type": "Karakterlánc"
-                    }
-                  }
-                },
-                "penRGB": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Szám"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "stopTimedLoop": {
-                  "palette_params": {
-                    "loop": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "timedLoop": {
-                  "palette_params": {
-                    "ms": {
-                      "type": "Szám"
                     },
-                    "callback": {
-                      "type": "Függvény"
+                    "pin": {
+                      "type": "Szám"
                     }
                   }
                 }
               }
             },
             "math": {
-              "name": "Matematika",
               "expressions": {
                 "mathPow": {
                   "palette_params": {
@@ -974,117 +289,28 @@
                     }
                   }
                 },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "A legkisebb visszaadott szám"
-                    },
-                    "max": {
-                      "description": "A legnagyobb visszaadott szám"
-                    }
-                  }
-                },
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "A legkisebb visszaadott szám"
-                    },
                     "max": {
                       "description": "A legnagyobb visszaadott szám"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "változók",
-              "expressions": {
-                "declareAssign_object": {
-                  "examples": {
-                    "Choose Your Own Adventure": {
-                      "name": "Saját kaland kiválasztása"
-                    }
-                  }
-                },
-                "addPair": {
-                  "palette_params": {
-                    "key": {
-                      "type": "Karakterlánc"
-                    }
-                  },
-                  "return_value": "Egyik sem"
-                },
-                "getValue": {
-                  "palette_params": {
-                    "key": {
-                      "type": "Karakterlánc"
-                    }
-                  }
-                }
-              }
-            },
-            "functions": {
-              "name": "Függvények"
-            },
-            "advanced": {
-              "name": "Haladó",
-              "expressions": {
-                "setStyle": {
-                  "palette_params": {
-                    "id": {
-                      "type": "Karakterlánc"
                     },
-                    "css": {
-                      "type": "Karakterlánc"
+                    "min": {
+                      "description": "A legkisebb visszaadott szám"
                     }
                   }
-                }
-              }
-            },
-            "maker": {
-              "expressions": {
-                "pinMode": {
+                },
+                "randomNumber_min_max": {
                   "palette_params": {
-                    "pin": {
-                      "type": "Szám"
+                    "max": {
+                      "description": "A legnagyobb visszaadott szám"
                     },
-                    "mode": {
-                      "type": "Karakterlánc"
+                    "min": {
+                      "description": "A legkisebb visszaadott szám"
                     }
                   }
                 }
-              }
-            },
-            "circuit": {
-              "expressions": {
-                "isPressed": {
-                  "return_value": "Logikai"
-                },
-                "buzzer.play": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "buzzer.playNotes": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "buzzer.playSong": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Szám"
-                    }
-                  }
-                },
-                "toggleSwitch.isOpen": {
-                  "return_value": "Logikai"
-                }
-              }
+              },
+              "name": "Matematika"
             },
             "micro_bit": {
               "expressions": {
@@ -1133,55 +359,829 @@
                   }
                 }
               }
+            },
+            "turtle": {
+              "expressions": {
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Szám"
+                    }
+                  }
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Karakterlánc"
+                    },
+                    "property": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Függvény"
+                    },
+                    "id": {
+                      "type": "Karakterlánc"
+                    },
+                    "type": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Zene Készítése"
+                    }
+                  },
+                  "palette_params": {
+                    "loop": {
+                      "type": "Logikai"
+                    }
+                  },
+                  "short_description": "MP3 hang fájl lejátszása a megadott URL-címről."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "Karakterlánc"
+                    },
+                    "language": {
+                      "type": "Karakterlánc"
+                    },
+                    "text": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Szám"
+                    },
+                    "b": {
+                      "type": "Szám"
+                    },
+                    "g": {
+                      "type": "Szám"
+                    },
+                    "r": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Karakterlánc"
+                    },
+                    "property": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Karakterlánc"
+                    }
+                  },
+                  "return_value": "Egyik sem"
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Saját kaland kiválasztása"
+                    }
+                  }
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                }
+              },
+              "name": "változók"
             }
-          }
+          },
+          "description": "Az App Lab egy programozási környezet egyszerű alkalmazásokra. Tervezd meg, kódolj blokkokkal vagy JavaScript-el, hogy működjön, majd oszd meg másodpercek alatt.",
+          "name": "App Lab"
         },
-        "spritelab": {
-          "name": "Sprite labor",
+        "gamelab": {
           "categories": {
+            "drawing": {
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Szám"
+                    },
+                    "start": {
+                      "type": "Szám"
+                    },
+                    "stop": {
+                      "type": "Szám"
+                    },
+                    "w": {
+                      "type": "Szám"
+                    },
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Szám"
+                    },
+                    "w": {
+                      "type": "Szám"
+                    },
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Szám"
+                    },
+                    "x2": {
+                      "type": "Szám"
+                    },
+                    "y1": {
+                      "type": "Szám"
+                    },
+                    "y2": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Szám"
+                    },
+                    "w": {
+                      "type": "Szám"
+                    },
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "sides": {
+                      "type": "Szám"
+                    },
+                    "size": {
+                      "type": "Szám"
+                    },
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Szám"
+                    },
+                    "b": {
+                      "type": "Szám"
+                    },
+                    "g": {
+                      "type": "Szám"
+                    },
+                    "r": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Csillag"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "Szám"
+                    },
+                    "x2": {
+                      "type": "Szám"
+                    },
+                    "y1": {
+                      "type": "Szám"
+                    },
+                    "y2": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Szám"
+                    },
+                    "str": {
+                      "type": "Karakterlánc"
+                    },
+                    "width": {
+                      "type": "Szám"
+                    },
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "Karakterlánc"
+                    },
+                    "vert": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Szám"
+                    }
+                  }
+                }
+              },
+              "name": "Rajz"
+            },
+            "functions": {
+              "name": "Függvények"
+            },
+            "game_lab": {
+              "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Fekete-fehér"
+                    }
+                  },
+                  "palette_params": {
+                    "button": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Zene Készítése"
+                    }
+                  },
+                  "palette_params": {
+                    "loop": {
+                      "type": "Logikai"
+                    },
+                    "url": {
+                      "type": "Karakterlánc"
+                    }
+                  },
+                  "short_description": "MP3 hang fájl lejátszása a megadott URL-címről."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "Karakterlánc"
+                    },
+                    "language": {
+                      "type": "Karakterlánc"
+                    },
+                    "text": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "showMobileControls": {
+                  "palette_params": {
+                    "dpadFourWay": {
+                      "type": "Logikai"
+                    },
+                    "dpadVisible": {
+                      "type": "Logikai"
+                    },
+                    "mobileOnly": {
+                      "type": "Logikai"
+                    },
+                    "spaceButtonVisible": {
+                      "type": "Logikai"
+                    }
+                  }
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                }
+              },
+              "name": "Játék Labor"
+            },
+            "groups": {
+              "expressions": {
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Szám"
+                    },
+                    "rotationOffset": {
+                      "type": "Szám"
+                    },
+                    "type": {
+                      "type": "Karakterlánc"
+                    },
+                    "width/radius": {
+                      "type": "Szám"
+                    },
+                    "yOffset": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Szín"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Logikai"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Szám"
+                    },
+                    "speed": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Szín"
+                    }
+                  }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Logikai"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "Szám"
+                    }
+                  }
+                }
+              },
+              "name": "Csoportok"
+            },
+            "math": {
+              "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "Szám"
+                    },
+                    "value2": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "A legnagyobb visszaadott szám"
+                    },
+                    "min": {
+                      "description": "A legkisebb visszaadott szám"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "A legnagyobb visszaadott szám"
+                    },
+                    "min": {
+                      "description": "A legkisebb visszaadott szám"
+                    }
+                  }
+                }
+              },
+              "name": "Matematika"
+            },
             "sprites": {
+              "expressions": {
+                "createSprite": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Szám"
+                    },
+                    "width": {
+                      "type": "Szám"
+                    },
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirál"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Szám"
+                    },
+                    "rotationOffset": {
+                      "type": "Szám"
+                    },
+                    "type": {
+                      "type": "Karakterlánc"
+                    },
+                    "width/radius": {
+                      "type": "Szám"
+                    },
+                    "xOffset": {
+                      "type": "Szám"
+                    },
+                    "yOffset": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Szám"
+                    },
+                    "speed": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
+                }
+              },
               "name": "sprite-ok"
             },
-            "world": {
-              "name": "Világ"
-            },
-            "location": {
-              "name": "Helyek"
-            },
+            "variables": {
+              "name": "változók"
+            }
+          },
+          "name": "Játék Labor"
+        },
+        "javalab": {
+          "name": "Java laboratórium"
+        },
+        "spritelab": {
+          "categories": {
             "actions": {
               "name": "Műveletek"
-            },
-            "events": {
-              "name": "Események"
             },
             "behaviors": {
               "name": "Viselkedések"
             },
-            "loops": {
-              "name": "hurkok"
+            "comments": {
+              "name": "Megjegyzések"
             },
-            "variables": {
-              "name": "változók"
-            },
-            "math": {
-              "name": "Matematika"
-            },
-            "logic": {
-              "name": "Logika"
+            "events": {
+              "name": "Események"
             },
             "functions": {
               "name": "funkciók"
             },
+            "location": {
+              "name": "Helyek"
+            },
+            "logic": {
+              "name": "Logika"
+            },
+            "loops": {
+              "name": "hurkok"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "sprites": {
+              "name": "sprite-ok"
+            },
             "text": {
               "name": "szöveg"
             },
-            "comments": {
-              "name": "Megjegyzések"
+            "variables": {
+              "name": "változók"
+            },
+            "world": {
+              "name": "Világ"
             }
-          }
+          },
+          "name": "Sprite labor"
         },
-        "javalab": {
-          "name": "Java laboratórium"
+        "weblab": {
+          "categories": {
+            "html_tags": {
+              "name": "HTML-címkék"
+            }
+          },
+          "name": "Web-Lab"
         }
       }
     }

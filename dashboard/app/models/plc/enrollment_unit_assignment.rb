@@ -69,7 +69,7 @@ class Plc::EnrollmentUnitAssignment < ApplicationRecord
   end
 
   def focus_area_lesson_ids
-    plc_module_assignments.map {|a| a.plc_learning_module.lesson.id unless a.plc_learning_module.required?}.compact
+    plc_module_assignments.filter_map {|a| a.plc_learning_module.lesson.id unless a.plc_learning_module.required?}
   end
 
   def summarize_progress

@@ -17,7 +17,6 @@ vi:
             '0.75': nhỏ
             '1.00': trung bình
             '2.00': lớn
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -25,7 +24,6 @@ vi:
             '0.75': nhỏ
             '1.00': trung bình
             '2.00': lớn
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} luân phiên giữa \n{MOVE1} và {MOVE2} sau mỗi {N} nhịp"
         options:
@@ -371,6 +369,7 @@ vi:
             '"column"': cột
             '"right"': cột phải
             '"plus"': cộng
+            '"spiral"': xoắn ốc
             '"infinity"': đường thẳng vô hạn
             '"random"': ngẫu nhiên
       Dancelab_makeAnonymousDanceSprite:
@@ -454,26 +453,6 @@ vi:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': người ngoài hành tinh
             '"BEAR"': gấu
@@ -500,6 +479,7 @@ vi:
             '"column"': cột
             '"right"': cột phải
             '"plus"': cộng
+            '"spiral"': xoắn ốc
             '"infinity"': đường thẳng vô hạn
             '"random"': ngẫu nhiên
       Dancelab_mixColors:
@@ -997,8 +977,6 @@ vi:
         options:
           INPUT1:
             '1': nước chanh
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: làm hiệu ứng {EFFECT}
         options:
@@ -1015,8 +993,6 @@ vi:
         options:
           INPUT1:
             '1': nước chanh
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Giao tiếp {VAR1} với {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1271,8 +1247,10 @@ vi:
         text: tạo hiệu ứng {EFFECT} có {NUM} nhân vật {ANIMATION_NAME}
         options:
           EFFECT:
+            '"burst"': nổ
             '"pop"': nổ
             '"rain"': mưa
+            '"spiral"': xoắn ốc
       gamelab_makeNewSpriteAnon:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       gamelab_makeNewSpriteGroup:
@@ -1352,20 +1330,26 @@ vi:
             "'sound://category_animals/bear.mp3'": Gấu
             "'sound://category_animals/cat.mp3'": con mèo
             "'sound://category_animals/cow.mp3'": con bò
+            "'sound://category_animals/pig.mp3'": con lợn
             "'sound://category_animals/sheep.mp3'": con cừu
             "'sound://category_animals/goat.mp3'": dê
             "'sound://category_animals/chicken.mp3'": con gà
+            "'sound://category_animals/rooster.mp3'": gà trống
             "'sound://category_animals/elephant.mp3'": voi
             "'sound://category_animals/dolphin.mp3'": cá heo
             "'sound://category_nature/thunderstorm_1.mp3'": mưa bão
+            "'sound://category_animals/chick.mp3'": gà
             "'sound://category_animals/dog.mp3'": con chó
+            "'sound://category_animals/tiger.mp3'": con hổ
             "'sound://category_collect/trill_stings.mp3'": rung
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": đàn hạc
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": gõ
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": âm giọng
             "'sound://category_transition/trippy_robotic_transition.mp3'": chuyển âm robot
             "'sound://category_transition/star_dust_particle_10.mp3'": bụi sao
             "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": tàu vũ trụ ngoài hành tinh
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": thần chú ma thuật
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": lựa chọn
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": tiếng bass vòng
             "'sound://category_digital/jump_7.mp3'": nhảy
       gamelab_playSoundOptionsSoccer:
@@ -1450,16 +1434,20 @@ vi:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': lưới
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': bếp
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': phòng khách
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': đồng cỏ
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': cảnh công viên
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': cây thông
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': cầu vồng
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': khoa học viễn tưởng
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': sân bóng
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': sân khấu
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': sao
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': tàu điện ngầm
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': mặt trời và cầu vồng
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': mưa trong nắng
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': sân quần vợt
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': đảo cây cối
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': ngầm
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': dưới nước
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': mùa đông
             undefined: không
@@ -1508,11 +1496,9 @@ vi:
         text: đặt tốc độ của {SPRITE} thành {SIZE}
         options:
           SIZE:
-            '1': extra slow
             '3': chậm
             '5': bình thường
             '7': nhanh
-            '9': extra fast
       gamelab_setTint:
         text: thay đổi màu sắc của {THIS} thành {COLOR}
       gamelab_setupScoreboard:
@@ -1887,13 +1873,17 @@ vi:
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': trước nhà
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': bếp
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': phòng khách
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': đồng cỏ
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': cảnh công viên
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': cây thông
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': sân bóng
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': sân khấu
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': tàu điện ngầm
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': mặt trời và cầu vồng
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': mưa trong nắng
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': sân quần vợt
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': đảo cây cối
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': ngầm
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -2000,14 +1990,10 @@ vi:
         options:
           INPUT1:
             '1': nước chanh
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': nước chanh
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2037,8 +2023,10 @@ vi:
             '"flowers"': hoa
             '"hearts"': trái tim
             '"iceCream"': Kem
+            '"leaves"': lá
             '"rainbow"': cầu vồng
             '"stars"': sao
+            '"waves"': sóng biển
       Poetry_addLine:
         text: thêm dòng {LINE}
       Poetry_addTextHighlight:
@@ -2055,8 +2043,10 @@ vi:
         text: tạo hiệu ứng {EFFECT} có {NUM} nhân vật {ANIMATION_NAME}
         options:
           EFFECT:
+            '"burst"': nổ
             '"pop"': nổ
             '"rain"': mưa
+            '"spiral"': xoắn ốc
       Poetry_makeNewSpriteAnon:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       Poetry_makeNumSprites:
@@ -2073,7 +2063,10 @@ vi:
             '"sound://category_background/inside_plane.mp3"': Vo ve
             '"sound://category_loops/red_flag_loop1.mp3"': Nhiệm vụ
             '"sound://category_nature/summer_night_loop.mp3"': đêm
+            '"sound://category_background/ocean_waves.mp3"': đại dương
+            '"sound://category_background/rainforest_ambient_sound.mp3"': rừng nhiệt đới
             '"sound://category_background/repitition.mp3"': Cưỡi
+            '"sound://category_background/wavering_wind.mp3"': ngái ngủ
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Chậm
       Poetry_playSound:
         text: phát âm thanh {SOUND}
@@ -2087,6 +2080,7 @@ vi:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Thất bại
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Chớp cánh
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Nhảy cao
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ánh sáng
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Bỗng chốc
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Quét
             '"sound://category_background/typewriter.mp3"': Máy đánh chữ
@@ -2135,6 +2129,7 @@ vi:
             '"sunrise"': Bình minh
             '"sunset"': Hoàng hôn
             '"grayscale"': Xám
+            '"ocean"': đại dương
             '"rainbow"': cầu vồng
             '"roses"': Hoa hồng
             '"sky"': Bầu trời
@@ -2198,6 +2193,7 @@ vi:
             '"shrinking"': thu nhỏ
             '"spinning_left"': xoay trái
             '"spinning_right"': xoay phải
+            '"swimming_left_and_right"': bơi lội
             '"wandering"': lang thang
             '"wobbling"': nhúc nhích
       Poetry_stopBehavior:
@@ -2210,6 +2206,7 @@ vi:
             '"shrinking"': thu nhỏ
             '"spinning_left"': xoay trái
             '"spinning_right"': xoay phải
+            '"swimming_left_and_right"': bơi lội
             '"wandering"': lang thang
             '"wobbling"': nhúc nhích
             '"all"': "--tất cả hành vi--"
@@ -2223,7 +2220,6 @@ vi:
         text: khi dòng {N} hiển thị
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2283,16 +2279,10 @@ vi:
         options:
           PORTION:
             '1': tất cả
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': tất cả
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} nói {SPEECH}"
       adaptations_adaptationBehaviors:
@@ -2449,6 +2439,22 @@ vi:
           DIR:
             right: phải ↻
             left: trái ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: hiển thị {TEXT}
       storylab_setForegroundEffect2:
         text: làm hiệu ứng {EFFECT}
         options:

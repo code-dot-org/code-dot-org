@@ -20,7 +20,7 @@ Scenario: Teacher courses
   And I wait to see ".headerlinks"
   And I see "#header-teacher-courses"
   And I press "header-teacher-courses"
-  And I wait to see "#hero"
+  And I wait to see "#curriculum-catalog-container"
   And I see no difference for "teacher courses page"
   And I close my eyes
 
@@ -55,7 +55,7 @@ Scenario: Signed out courses, teach
   And I wait to see "#headerlinks"
   And I see "#header-en-teach"
   And I press "header-en-teach"
-  Then I am on "http://studio.code.org/courses?view=teacher"
+  Then I am on "https://code.org/teach"
   And I see no difference for "signed-out courses page, teach"
   And I close my eyes
 

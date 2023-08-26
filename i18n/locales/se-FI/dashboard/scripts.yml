@@ -120,6 +120,7 @@ se:
           description_short: Ráhkat muitalusa dahje spealu Gumball Speallan-lab:in
           student_description: Ráhkat muitalusa dahje spealu Gumball Speallan-lab:in
         starwars:
+          title: 'Náste Soahti: Hukse Galáksa Kodemiin (JavaScript)'
           description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
           description_short: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
           student_description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
@@ -1635,6 +1636,8 @@ se:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
             lessonGroup-3:
               display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            lessonGroup-5:
+              display_name: Iskkadeapmi
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1763,6 +1766,8 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1775,14 +1780,20 @@ se:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
             lessonGroup-3:
               display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            lessonGroup-5:
+              display_name: Iskkadeapmi
         focus-on-data1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-design-with-purpose1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1793,6 +1804,8 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1803,6 +1816,8 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1847,6 +1862,22 @@ se:
           lessons:
             lesson-12:
               name: Loahpat
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-12:
+              name: Loahpat
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Loahpat
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Loahpat
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Loahpat
         csd-post-survey-2023:
           title: Maŋŋil Kurssa Iskkadeapmi
         focus-on-data-post-survey-2023:
@@ -1861,3 +1892,65 @@ se:
           title: Maŋŋil Kurssa Iskkadeapmi
         focus-on-creativity-post-survey-2023:
           title: Maŋŋil Kurssa Iskkadeapmi
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+            lessonGroup-3:
+              display_name: Sprite:at
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klássat
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klássat
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klássat
+        csa-frq-practice-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klássat
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klássat
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klássat
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+            lessonGroup-6:
+              display_name: Dáhpáhusaid
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+            lessonGroup-5:
+              display_name: Dáhpáhusaid
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite:at
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite:at

@@ -15,6 +15,16 @@
   csedweek_banner_teachers_text: "Učíte informatiku? Pozrite sa aj na naše ďalšie materiály "
   n_have_learned_an_hoc: "<h1>Skús</h1> <h2>Hodinu Kódu</h2> <h3># účastníkov</h3>"
   try_hoc_num_served: "<h1>Skús</h1><h2>Hodinu Kódu</h2><h3>%{num} účastníkov</h3>"
+  try_hoc_num_served_markdown: |-
+    # Vyskúšaj
+
+    ## Hodinu kódu
+
+    ### Už %{num} účastníkov #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Učiť sa môže každý"
   learn_now: "Nauč sa teraz"
   petition_message: "Aby každý študent na každej škole dostal možnosť študovať informatiku"
@@ -155,6 +165,7 @@
   print_batch_certificates: "Vytlačiť viacero certifikátov"
   print_certificates: "Vytlačiť certifikáty"
   certificate_sponsor_message: "%{sponsor_name} prispel(a) štedrým darom na podporu tvojho učenia."
+  print_one_here_certificates: "Vytlačte jeden tu."
   share_achievement: "Zdieľaj svoj úspech"
   beyond_hour_message: "Pokračujte s našimi <a href='http://studio.code.org'>ďalšími kurzami</a> alebo si prezrite možnosti ako pokračovať vo <a href='/learn/beyond'>výučbe po prvej hodine</a>."
   leaderboards_for_hoc: "Rebríčky pre Hour of Code."
@@ -366,6 +377,7 @@
   homepage_slot_text_link_buy: "Zapoj sa"
   homepage_slot_text_link_donate: "Venuj dar"
   homepage_slot_text_link_shop: "Tričká, čiapky a ďalšie"
+  homepage_slot_text_link_thebadguys: "Kód s Bad Guys"
   homepage_slot_text_link_administrators: "Prines Informatiku na tvoju školu"
   homepage_gallery_header: "Viac ako %{project_count} miliónov vytvorených projektov Code.org"
   homepage_header_donors: "Code.org ďakuje za podporu"
@@ -380,7 +392,7 @@
   contact_form_topic_outside_us: "Som mimo USA"
   contact_form_topic_contribution: "Charitatívne príspevky"
   contact_form_topic_partner: "Rad by som stal partnerom"
-  contact_form_topic_other: "Ostatné"
+  contact_form_topic_other: "Iné"
   contact_form_label_topic: "Predmet"
   contact_form_label_email: "Váš e-mail"
   contact_form_label_message: "Správa"
@@ -503,6 +515,8 @@
   video_title_marco_belinelli: "Hodinu Kódu s Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh na informatike"
   video_title_my_name_is_aracely: "Volám sa Aracely"
+  video_title_change_face_of_cs: "Zmeňte tvár informatiky"
+  video_title_latam_hoc: "Lo Que Falta En Nuestras Escuelas"
   video_1min: "1 min"
   video_2min: "2 min"
   video_3min: "3 minúty"
@@ -574,6 +588,7 @@
   volunteer_engineer_submission_distance_16: "10 míľ"
   volunteer_engineer_submission_distance_24: "15 míľ"
   volunteer_engineer_submission_distance_32: "20 míľ"
+  volunteer_engineer_submission_distance_80: "50 míľ"
   volunteer_engineer_submission_num_volunteers_5: "5 dobrovoľníkov"
   volunteer_engineer_submission_num_volunteers_10: "10 dobrovoľníkov"
   volunteer_engineer_submission_num_volunteers_25: "25 dobrovoľníkov"
@@ -962,7 +977,10 @@
   pre-express-2019_name: Zrýchlený kurz pre predškolákov (2019)
   express-2020_name: Zrýchlený kurz (2019)
   pre-express-2020_name: Zrýchlený kurz pre predškolákov (2020)
+  express-2021_name: Zrýchlený kurz (2021)
   pre-express-2021_name: Zrýchlený kurz pre predškolákov (2021)
+  express-2022_name: Zrýchlený kurz (2022)
+  pre-express-2022_name: Zrýchlený kurz pre predškolákov (2022)
   csd2_name: 'Lekcia 2: Vývoj webových stránok'
   csd3_name: 'Lekcia 3: Animácie a hry'
   accelerated_name: "Zrýchlený kurz"
@@ -977,6 +995,8 @@
   iceage_name: "Doba ľadová"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Bloky)"
+  hoc-impact-study_name: Klasické bludisko s prieskumom
+  flappy-impact-study_name: Flappy kód s prieskumom
   hoc-encryption_name: Jednoduché šifrovanie
   text-compression_name: Kompresia textu
   applab_name: "App Lab"
@@ -1440,12 +1460,22 @@
   header_stats: "Štatistiky"
   header_help_us: "Pomôžte nám"
   header_about: "O nás"
+  header_incubator: "Inkubátor"
   header_teacher_community: "Komunita učiteľov"
   header_help_support: 'Pomoc a podpora '
   header_report_bug: "Nahlásiť chybu"
+  header_report_abuse: "Nahlásiť zneužitie"
+  header_legal: "Ochrana osobných údajov a právne predpisy"
   header_legal_privacy: "Zásady ochrany súkromia"
   header_legal_tos: "Podmienky používania služby"
   header_tutorials: "Návody"
+  header_screen_reader_hamburger: "Menu"
+  header_screen_reader_help: "Pomocné menu"
+  app_lab_tutorials: "App Lab Návody"
+  game_lab_documentation: "Dokumentácia Game Lab"
+  game_lab_tutorials: "Návody na herné laboratórium"
+  sprite_lab_documentation: "Dokumentácia Sprite Lab"
+  sprite_lab_tutorials: "Sprite Lab Návody"
   header_documentation: "Dokumentácia"
   user_header_label: "Ahoj %{username}"
   user_header_team: "Tím"
@@ -1529,6 +1559,7 @@
   hoc2018_mc_aquatic_announcement: "Zaregistrujte svoju triedu a vyskúšajte jednu z viac ako 150 NOVÝCH aktivít v Hodine Kódu (3.-9. decembra)! Určite si tiež pozrite náš nový kurz Minecraftu pre rok 2018, Voyage Aquatic! Prihláste svoju triedu už dnes."
   hoc2018_mc_aquatic_title: "Minecraft Vodné Dobrodužstvo"
   hoc2018_mc_aquatic_description: "Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po Minecrafte s kódom."
+  hoc2019_mc_aquatic_description: "Preskúmajte a budujte podmorské svety pomocou kódu."
   hoc2018_mc_hero_title: "Minecraft Cesta Hrdinu"
   hoc2018_mc_hero_description: "Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po Minecrafte s kódom."
   hoc2018_mc_designer_title: "Minecraft Dizajnér"
@@ -1540,7 +1571,7 @@
   hoc2018_mc_download_adventurer: "Stiahni si offline verziu kurzu Minecraft: Dobrodruh."
   hoc2018_mc_educators: "Pre učiteľov"
   hoc2018_mc_educators_box1_title: "Programovať s Minecraftom"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition obsahuje kompletné učebné osnovy pre vyučovanie programovania v Minecrafte.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Education Edition obsahuje kompletné učebné osnovy pre vyučovanie programovania v Minecrafte."
   hoc2018_mc_educators_box1_button: "Začať"
   hoc2018_mc_educators_box2_title: "Stiahnuť príručku"
   hoc2018_mc_educators_box2_desc: "Tieto materiály vám pomôžu efektívne viesť Hodinu kódu a zaujať Vašich študentov informatikou."
@@ -1588,6 +1619,7 @@
   hoc2018_mc_short_description_shorter: "Pomocou kreativity, schopnosti riešiť problémy a sily kódu objav a vybuduj podvodný svet."
   hoc2018_mc_journey: "Cesta Minecraftom s pomocou kódu."
   hoc2018_dance_party_main_heading: "Tanečná Párty"
+  hoc2018_dance_party_landing_title: "tancovať"
   hoc2018_dance_party_subheading: "Pomôžte preložiť Tanečnú Párty"
   hoc2018_dance_create_your_own_dance_title: "Vytvorte si svoju vlastnú Tanečnú Párty"
   hoc2018_dance_party_box_title: "Tanečná Párty"
@@ -1610,7 +1642,10 @@
   hoc2018_dance_view_creativity_video_playlist: "Čo je Kreativita? Pozrieť všetky videá (5 min.)"
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "V spolupráci s"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* je komplexný program pre deti a mladých ľudí z nízkopríjmových, alebo inak znevýhodnených skupín s cieľom inšpirovať, vzdelávať a trénovať ich od detstva až po dospelosť k tomu, aby nasledovali kariéru v počítačových vedách. <a href='%{amazon_future_engineer_link}' target='_blank'>Zistite viac</a>"
+  hoc2018_dance_amazon_about_future_engineer_title: "O spoločnosti Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_button: "Zistiť viac"
+  hoc2018_dance_amazon_try_coding_this_summer_title: "Skúste toto leto kódovať"
+  hoc2018_dance_amazon_try_coding_this_summer_button: "Pripojte sa do kempu"
   hoc2018_dance_amazon_scholarship_programs_button: "Použiť teraz"
   hoc2018_dance_amazon_internships_button: "Nájsť stáž"
   hoc2018_dance_amazon_k8_programs_title: "Programy pre ZŠ"
@@ -1630,19 +1665,26 @@
   page_not_found_description: "Stránka, ktorú hľadáte na tejto adrese neexistuje. Skontrolujte adresu a zadajte ju znova. Alebo prejdite na našu domovskú stránku."
   page_not_found_button: "Späť na domovskú stránku"
   hoc2018_mc_with_microsoft: "V spolupráci s"
+  hoc2019_mc_mee_title: "Minecraft AI pre dobro"
   homepage_slot_text_title_at_home: "Učenie na doma"
+  homepage_slot_text_blurb_at_home: "Tieto zdroje to uľahčujú"
+  homepage_slot_text_link_do_hoc: "Urobte hodinu kódu"
+  homepage_slot_text_link_express_course: "Vyskúšaj Zrýchlený kurz"
   page_not_available_title: "Stránka je nedostupná"
+  page_not_available_description: "Ľutujeme, ale požadovaná stránka už nie je dostupná na tejto adrese. Ak stále potrebujete prístup, pošlite e-mail na adresu [support@code.org] (%{support_email_link})."
   page_not_available_button: "Späť na domovskú stránku"
-  hoc2020_mc_available_mee: 'Dostupné v Minecrafte: verzia pre vzdelávanie'
+  hoc2020_mc_available_code_org: "Dostupné na Code.org"
+  hoc2020_mc_available_mee: "Dostupné v Minecrafte: verzia pre vzdelávanie"
+  hoc2020_mc_mee_title: "Minecraft Príbeh dvoch dedín"
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Cestujte späť v čase a naučte sa programovať! Nový tutoriál Minecraft Hour of Code je teraz dostupný v hre Minecraft: vzdelávacie vydanie pre Windows, Mac, Chromebook a iPad. Začnite s bezplatnými zdrojmi pre pedagógov a videami.'
+  hoc2021_mc_mee_description: "Cestujte späť v čase a naučte sa programovať! Nový tutoriál Minecraft Hour of Code je teraz dostupný v hre Minecraft: vzdelávacie vydanie pre Windows, Mac, Chromebook a iPad. Začnite s bezplatnými zdrojmi pre pedagógov a videami."
   hoc2021_mc_mee_villages_title: "Rozprávka o dvoch dedinách"
-  hoc2021_mc_mee_villages_description: 'Naučte sa základy programovania a objavte diverzitu a inklúziu so svojimi žiakmi v hre Minecraft: vzdelávacie vydanie'
+  hoc2021_mc_mee_villages_description: "Naučte sa základy programovania a objavte diverzitu a inklúziu so svojimi žiakmi v hre Minecraft: vzdelávacie vydanie"
   hoc2021_mc_mee_ai_title: "Umelá inteligencia pre dobro"
-  hoc2021_mc_mee_ai_description: 'Objavte AI so svojimi žiakmi a naučte sa programovať v hre Minecraft: vzdelávacie vydanie'
+  hoc2021_mc_mee_ai_description: "Objavte AI so svojimi žiakmi a naučte sa programovať v hre Minecraft: vzdelávacie vydanie"
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'Utečte z tajomného sídla do úsvitu a zarobte milión smaragdov! Nový tutoriál Minecraft Hodina kódu je teraz dostupný v hre Minecraft: Vzdelávacie vydanie pre Windows, Mac, Chromebook, Ipad a mobil. Začnite s bezplatnými zdrojmi, školeniami a videami pre pedagógov.'
-  hoc2022_mc_mee_timecraft_description: 'Cestujte späť v čase, aby ste zachránili budúcnosť v tejto bezplatnej hodine kódovania v Minecraft: vzdelávacie vydanie.'
+  hoc2022_mc_mee_timecraft_description: "Cestujte späť v čase, aby ste zachránili budúcnosť v tejto bezplatnej hodine kódovania v Minecraft: vzdelávacie vydanie."
   footer_powered_by_aws: "Poháňaný službami Amazon Web Services"
   codebytes_skinny_banner_english_only: "Len v anglickom jazyku"
   footer_privacy_policy: "Zásady ochrany súkromia"
@@ -1656,20 +1698,31 @@
   ai_for_oceans: "AI pomáha oceánom"
   ai_for_oceans_lesson_plan: "učebný plán"
   how_ai_works: "Ako funguje umelá inteligencia"
+  watch_the_videos: "Pozrite si videá"
   view_lesson_plan: "Zobraziť plán lekcie"
   ai_in_partnership_with: "V spolupráci s"
   cs_for_good: "Počítačová veda na dobré účely"
+  view_resources: "Zobraziť zdroje"
   ai_activity: "Aktivita"
   ai_description: "Popis"
+  ai_seeing_ai: "Vidieť AI"
+  ai_quick_draw: "Rýchlo, kresliť!"
+  ai_teachable_machine_description: "Trénujte počítač, aby rozpoznal svoje vlastné obrázky, zvuky a pózy."
+  ai_google: "Experimenty AI so spoločnosťou Google"
+  ai_machine_learning_for_kids: "Strojové učenie pre deti"
   ai_ibm_machine_learning_for_kids: 'IBM: strojové učenie pre deti'
+  ai_try_activity: "Vyskúšajte aktivitu"
   outbreak_tile_title: "Nákaza"
   outbreak_tile_subtitle: "Mesto Monster Town napadol vírus! Naprogramujte simulátor ohniska a skúste urobiť predpovede, čo sa stane so susedmi mesta Monster Town."
+  outbreak_tile_alt: "Simulácia toho, ako sa vírus šíri skupinou fialových príšer."
+  footer_cookie_notice: "Oznámenie o súboroch cookie"
   hoc2022_banner_title: "Skúmajte, hrajte sa, tvorte!"
   hoc2022_banner_description: "Skúmajte vesmír, streľte gól, prelomte pohyb – existuje tak veľa spôsobov, ako vyskúšať informatiku!"
   hoc2022_cta_primary: "Zobraziť novinky"
   hoc2022_cta_secondary: "Vyskúšajte ďalšie aktivity"
   hoc2022_landing_page_explore_title: "Preskúmať"
   hoc2022_landing_page_explore_description: "Otvorte dvere do nových svetov s informatikou!"
+  hoc2022_landing_page_play_title: "Hrať"
   hoc2022_landing_page_play_description: "Choďte na ihrisko a skórujte!"
   hoc2022_landing_page_create_title: "Vytvoriť"
   hoc2022_landing_page_create_description: "Urobte niečo zvláštne a úžasné!"

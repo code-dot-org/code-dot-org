@@ -175,6 +175,9 @@
           "2-3_Maze_16_a": "Hvis mønsteret er vanskelig å se, prøv å kode det først og se hvilke ting som gjentas før du legger inn løkkene.",
           "2-3_Maze_16_b": "For å sette flere blokker inn i en \"gjenta\"-løkke, dra først en løkke til arbeidsområdet. Legg deretter alle blokkene fra startprogrammet inn i løkken.\n\nKoble alt til `når den kjører`-blokken og så er du klar!"
         },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "Det er to måter å løse denne oppgaven!"
+        },
         "2-3 Maze 6": {
           "2-3_Maze_6_a": "Det er to måter å løse denne oppgaven!"
         },
@@ -280,6 +283,9 @@
         "4-5 While Loops 8": {
           "4-5_While_Loops_8_a": "Hvert element må ha sin egen `så lenge det er gjør` -løkke."
         },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "For å ferdigstille designet må artisten  rotere 120 grader mellom hver firkant."
+        },
         "Course 4 Artist 11": {
           "Course_4_Artist_11_a": "Halv-sekskanten har en \\*\\* lengde på 30 \\*\\* og snur seg \\*\\* 60 grader \\*\\*.  ",
           "Course_4_Artist_11_b": "En 2/3-sekskant har en \\*\\* lengde på 80 \\*\\* og snur seg \\*\\* 120 grader \\*\\*. "
@@ -352,8 +358,8 @@
           "Course_4_Artist_Vars_8_a": "Hvis du deler startlengden på antall sider, vil lengden på hver side bli kortere når antallet sider blir høyere."
         },
         "Course 4 Bee Params 7": {
-          "notice_pattern": "Ser du et mønster for hvordan antall nektar endres? ",
-          "count_with_for": "Legg merke til at nektaren går opp stegvis. Hva slags blokk kan du bruke til å gjøre den samme tingen mange ganger mens den teller oppover?"
+          "count_with_for": "Legg merke til at nektaren går opp stegvis. Hva slags blokk kan du bruke til å gjøre den samme tingen mange ganger mens den teller oppover?",
+          "notice_pattern": "Ser du et mønster for hvordan antall nektar endres? "
         },
         "Course 4 Bee Params 8": {
           "Course_4_Bee_Params_8_a": "Det er greit å spørre om antall honning og antall nektar hver gang.  Hvis det er tomt av noe, kan nummeret være 0."
@@ -472,47 +478,131 @@
           "Course_4_SCV_6_d": "For sikke, ta til venstre ved '360 '/' sider'.  For å sakke, snu til høyre ved '360 '/' sider'. "
         },
         "CourseD_Dance_2020_01": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Pass på at en danser vises på skjermen.\n\n-   dette nivået slutter etter 4 takter.\\*",
-          "challenges": "**Valgfrie utfordringer**\n\n-   velg en annen sang.\n-   flytt danseren din til et annet sted.\n-   lag flere dansere."
+          "challenges": "**Valgfrie utfordringer**\n\n-   velg en annen sang.\n-   flytt danseren din til et annet sted.\n-   lag flere dansere.",
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Pass på at en danser vises på skjermen.\n\n-   dette nivået slutter etter 4 takter.\\*"
+        },
+        "CourseD_Dance_2020_012022": {
+          "challenges": "**Valgfrie utfordringer**\n\n-   velg en annen sang.\n-   flytt danseren din til et annet sted.\n-   lag flere dansere.",
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Pass på at en danser vises på skjermen.\n\n-   dette nivået slutter etter 4 takter.\\*"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "challenges": "**Valgfrie utfordringer**\n\n-   velg en annen sang.\n-   flytt danseren din til et annet sted.\n-   lag flere dansere.",
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Pass på at en danser vises på skjermen.\n\n-   dette nivået slutter etter 4 takter.\\*"
         },
         "CourseD_Dance_2020_02": {
-          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Danseren må foreta en bevegelse.\n-   Du må trykke på en piltast.\n\n_Denne oppgaven slutter etter 4 takter._",
-          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block."
+          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block.",
+          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Danseren må foreta en bevegelse.\n-   Du må trykke på en piltast.\n\n_Denne oppgaven slutter etter 4 takter._"
+        },
+        "CourseD_Dance_2020_022022": {
+          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block.",
+          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Danseren må foreta en bevegelse.\n-   Du må trykke på en piltast.\n\n_Denne oppgaven slutter etter 4 takter._"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block.",
+          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Danseren må foreta en bevegelse.\n-   Du må trykke på en piltast.\n\n_Denne oppgaven slutter etter 4 takter._"
         },
         "CourseD_Dance_2020_03": {
-          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Begge danserne må utføre en bevegelse.\n-   Du må bruke piltastene.\n\n_Denne oppgaven slutter etter 6 takter._",
-          "challenges": "**Valgfri utfordring**\n\n-   Få en danser til å respondere på venstre og høyre piltaster."
+          "challenges": "**Valgfri utfordring**\n\n-   Få en danser til å respondere på venstre og høyre piltaster.",
+          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Begge danserne må utføre en bevegelse.\n-   Du må bruke piltastene.\n\n_Denne oppgaven slutter etter 6 takter._"
+        },
+        "CourseD_Dance_2020_032022": {
+          "challenges": "**Valgfri utfordring**\n\n-   Få en danser til å respondere på venstre og høyre piltaster.",
+          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Begge danserne må utføre en bevegelse.\n-   Du må bruke piltastene.\n\n_Denne oppgaven slutter etter 6 takter._"
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "challenges": "**Valgfri utfordring**\n\n-   Få en danser til å respondere på venstre og høyre piltaster.",
+          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Begge danserne må utføre en bevegelse.\n-   Du må bruke piltastene.\n\n_Denne oppgaven slutter etter 6 takter._"
         },
         "CourseD_Dance_2020_04": {
           "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Danseren må bytte til en ny posisjon etter 4 takter.\n\n-   Nivået ender etter 7 takter.\\*"
         },
+        "CourseD_Dance_2020_042022": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Danseren må bytte til en ny posisjon etter 4 takter.\n\n-   Nivået ender etter 7 takter.\\*"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Danseren må bytte til en ny posisjon etter 4 takter.\n\n-   Nivået ender etter 7 takter.\\*"
+        },
         "CourseD_Dance_2020_05": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Etter 6 takter må din danser må gjøre en annen dans enn den gjorde etter 4 takter.\n\n-   Nivået ender etter 11 takter.\\*",
-          "challenges": "**Valgfri utfordring**\n\n-   Bytt bakgrunn når danseren bytter bevegelse."
+          "challenges": "**Valgfri utfordring**\n\n-   Bytt bakgrunn når danseren bytter bevegelse.",
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Etter 6 takter må din danser må gjøre en annen dans enn den gjorde etter 4 takter.\n\n-   Nivået ender etter 11 takter.\\*"
+        },
+        "CourseD_Dance_2020_052022": {
+          "challenges": "**Valgfri utfordring**\n\n-   Bytt bakgrunn når danseren bytter bevegelse.",
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Etter 6 takter må din danser må gjøre en annen dans enn den gjorde etter 4 takter.\n\n-   Nivået ender etter 11 takter.\\*"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "challenges": "**Valgfri utfordring**\n\n-   Bytt bakgrunn når danseren bytter bevegelse.",
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Etter 6 takter må din danser må gjøre en annen dans enn den gjorde etter 4 takter.\n\n-   Nivået ender etter 11 takter.\\*"
         },
         "CourseD_Dance_2020_06": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Lag en hoveddanser og en gruppe med bakgrunnsdansere innen de fire første taktene av sangen.\n\n_Denne oppgaven slutter etter 7 takter._",
-          "challenges": "**Valgfri utfordring**\n\n-   Lag mange grupper med bakgrunnsdansere."
+          "challenges": "**Valgfri utfordring**\n\n-   Lag mange grupper med bakgrunnsdansere.",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Lag en hoveddanser og en gruppe med bakgrunnsdansere innen de fire første taktene av sangen.\n\n_Denne oppgaven slutter etter 7 takter._"
+        },
+        "CourseD_Dance_2020_062022": {
+          "challenges": "**Valgfri utfordring**\n\n-   Lag mange grupper med bakgrunnsdansere.",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Lag en hoveddanser og en gruppe med bakgrunnsdansere innen de fire første taktene av sangen.\n\n_Denne oppgaven slutter etter 7 takter._"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "challenges": "**Valgfri utfordring**\n\n-   Lag mange grupper med bakgrunnsdansere.",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Lag en hoveddanser og en gruppe med bakgrunnsdansere innen de fire første taktene av sangen.\n\n_Denne oppgaven slutter etter 7 takter._"
         },
         "CourseD_Dance_2020_07": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre størrelsen på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._",
-          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner."
+          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner.",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre størrelsen på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._"
+        },
+        "CourseD_Dance_2020_072022": {
+          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner.",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre størrelsen på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner.",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre størrelsen på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._"
         },
         "CourseD_Dance_2020_08": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._",
-          "tint_hint": "Har du lagt merke til at danserne ikke endrer til nøyaktig den samme fargen som du velger? Det er fordi **fargetonen** mikser fargen du velger med den egentlige fargen på danseren."
+          "tint_hint": "Har du lagt merke til at danserne ikke endrer til nøyaktig den samme fargen som du velger? Det er fordi **fargetonen** mikser fargen du velger med den egentlige fargen på danseren.",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._"
+        },
+        "CourseD_Dance_2020_082022": {
+          "tint_hint": "Har du lagt merke til at danserne ikke endrer til nøyaktig den samme fargen som du velger? Det er fordi **fargetonen** mikser fargen du velger med den egentlige fargen på danseren.",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._"
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "tint_hint": "Har du lagt merke til at danserne ikke endrer til nøyaktig den samme fargen som du velger? Det er fordi **fargetonen** mikser fargen du velger med den egentlige fargen på danseren.",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._"
         },
         "CourseD_Dance_2020_09": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Bare trykk på \"Fullfør\" knappen!",
+          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>",
           "repeat_every_ideas": "**Trenger du noen ideer?**\n\n-   Endre danserens størrelse gjentatte ganger for å få den til å vokse.\n-   Endre danserens rotasjon gjentatte ganger for å få den til å spinne.\n\n_Du kan også bruke negative tall for å skape en motsatt effekt!_",
-          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Bare trykk på \"Fullfør\" knappen!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>",
+          "repeat_every_ideas": "**Trenger du noen ideer?**\n\n-   Endre danserens størrelse gjentatte ganger for å få den til å vokse.\n-   Endre danserens rotasjon gjentatte ganger for å få den til å spinne.\n\n_Du kan også bruke negative tall for å skape en motsatt effekt!_",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Bare trykk på \"Fullfør\" knappen!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>",
+          "repeat_every_ideas": "**Trenger du noen ideer?**\n\n-   Endre danserens størrelse gjentatte ganger for å få den til å vokse.\n-   Endre danserens rotasjon gjentatte ganger for å få den til å spinne.\n\n_Du kan også bruke negative tall for å skape en motsatt effekt!_",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Bare trykk på \"Fullfør\" knappen!"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "Variasjonsblokka er i \"Dansere\" kategorien."
         },
+        "CourseD_Dance_2020_bonus12022": {
+          "alternate": "Variasjonsblokka er i \"Dansere\" kategorien."
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "Variasjonsblokka er i \"Dansere\" kategorien."
+        },
+        "CourseD_Dance_2022_lessonextra1": {
+          "alternate": "Variasjonsblokka er i \"Dansere\" kategorien."
+        },
+        "CourseD_Dance_2022_lessonextra10a": {
+          "alternate": "Variasjonsblokka er i \"Dansere\" kategorien."
+        },
         "CourseD_Dance_Party_01": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Pass på at en danser vises på skjermen.\n\n-   dette nivået slutter etter 4 takter.\\*",
-          "challenges": "\\*\\* Valgfrie utfordringer \\*\\*\n\n-   Velg en annen sang å spille.\n-   Gi din danser nytt navn."
+          "challenges": "\\*\\* Valgfrie utfordringer \\*\\*\n\n-   Velg en annen sang å spille.\n-   Gi din danser nytt navn.",
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Pass på at en danser vises på skjermen.\n\n-   dette nivået slutter etter 4 takter.\\*"
         },
         "CourseD_Dance_Party_02": {
           "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Danseren må bytte til en ny posisjon etter 4 takter.\n\n-   Nivået ender etter 7 takter.\\*"
@@ -523,63 +613,97 @@
         "CourseD_Dance_Party_04": {
           "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Du skal endre en bakgrunnseffekt et sted i den syvende takten av sangen.\n-   Dette nivået ender etter 9 takter.\\*"
         },
+        "CourseD_Dance_Party_08": {
+          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner.)",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n\\*To dansere må ha en størrelse annet enn 100.\n\n\\*Denne oppgaven slutter etter 5 takter."
+        },
+        "CourseD_Dance_Party_09": {
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 7 takter._"
+        },
+        "CourseD_Dance_Party_10": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n\\*Egenskapene til to eller flere danse må endres.\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "CourseD_Dance_Party_11": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "CourseD_Dance_Party_11_5": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
+        },
         "CourseE_HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "Se de \\*\\* havlanternene\\*\\*! \\[] (<https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png>)? Hvordan kan du bruke en \"hvis blokk\" med dem for å komme gjennom havmonumentet?"
+        },
+        "CourseE_HOC 2018 Level_102022": {
           "voyage_aquatic_10a": "Se de \\*\\* havlanternene\\*\\*! \\[] (<https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png>)? Hvordan kan du bruke en \"hvis blokk\" med dem for å komme gjennom havmonumentet?"
         },
         "CourseE_HOC 2018 Level_10_2020": {
           "voyage_aquatic_10a": "Se de \\*\\* havlanternene\\*\\*! \\[] (<https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png>)? Hvordan kan du bruke en \"hvis blokk\" med dem for å komme gjennom havmonumentet?"
         },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Se de \\*\\* havlanternene\\*\\*! \\[] (<https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png>)? Hvordan kan du bruke en \"hvis blokk\" med dem for å komme gjennom havmonumentet?"
+        },
         "CourseE_HOC 2018 Level_7a": {
+          "aquatic7": "Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning."
+        },
+        "CourseE_HOC 2018 Level_7a2022": {
           "aquatic7": "Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning."
         },
         "CourseE_HOC 2018 Level_7a_2020": {
           "aquatic7": "Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning."
         },
+        "CourseE_HOC 2018 Level_7a_2021": {
+          "aquatic7": "Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning."
+        },
         "CourseE_HOC 2018 Level_9b": {
+          "voyage_aquatic_9a": "Se de røde og blå korall blokkene? Bruk dem for å velge høyre eller venstre."
+        },
+        "CourseE_HOC 2018 Level_9b2022": {
           "voyage_aquatic_9a": "Se de røde og blå korall blokkene? Bruk dem for å velge høyre eller venstre."
         },
         "CourseE_HOC 2018 Level_9b_2020": {
           "voyage_aquatic_9a": "Se de røde og blå korall blokkene? Bruk dem for å velge høyre eller venstre."
         },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Se de røde og blå korall blokkene? Bruk dem for å velge høyre eller venstre."
+        },
         "Dance_2019_01": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Pass på at en danser vises på skjermen.\n\n-   dette nivået slutter etter 4 takter.\\*",
-          "challenges": "**Valgfrie utfordringer**\n\n-   velg en annen sang.\n-   flytt danseren din til et annet sted.\n-   lag flere dansere."
+          "challenges": "**Valgfrie utfordringer**\n\n-   velg en annen sang.\n-   flytt danseren din til et annet sted.\n-   lag flere dansere.",
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Pass på at en danser vises på skjermen.\n\n-   dette nivået slutter etter 4 takter.\\*"
         },
         "Dance_2019_02": {
-          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Danseren må foreta en bevegelse.\n-   Du må trykke på en piltast.\n\n_Denne oppgaven slutter etter 4 takter._",
-          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block."
+          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block.",
+          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Danseren må foreta en bevegelse.\n-   Du må trykke på en piltast.\n\n_Denne oppgaven slutter etter 4 takter._"
         },
         "Dance_2019_03": {
-          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Begge danserne må utføre en bevegelse.\n-   Du må bruke piltastene.\n\n_Denne oppgaven slutter etter 6 takter._",
-          "challenges": "**Valgfri utfordring**\n\n-   Få en danser til å respondere på venstre og høyre piltaster."
+          "challenges": "**Valgfri utfordring**\n\n-   Få en danser til å respondere på venstre og høyre piltaster.",
+          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Begge danserne må utføre en bevegelse.\n-   Du må bruke piltastene.\n\n_Denne oppgaven slutter etter 6 takter._"
         },
         "Dance_2019_04": {
           "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Danseren må bytte til en ny posisjon etter 4 takter.\n\n-   Nivået ender etter 7 takter.\\*"
         },
         "Dance_2019_05": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Etter 6 takter må din danser må gjøre en annen dans enn den gjorde etter 4 takter.\n\n-   Nivået ender etter 11 takter.\\*",
-          "challenges": "**Valgfri utfordring**\n\n-   Bytt bakgrunn når danseren bytter bevegelse."
+          "challenges": "**Valgfri utfordring**\n\n-   Bytt bakgrunn når danseren bytter bevegelse.",
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Etter 6 takter må din danser må gjøre en annen dans enn den gjorde etter 4 takter.\n\n-   Nivået ender etter 11 takter.\\*"
         },
         "Dance_2019_06": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Lag en hoveddanser og en gruppe med bakgrunnsdansere innen de fire første taktene av sangen.\n\n_Denne oppgaven slutter etter 7 takter._",
-          "challenges": "**Valgfri utfordring**\n\n-   Lag mange grupper med bakgrunnsdansere."
+          "challenges": "**Valgfri utfordring**\n\n-   Lag mange grupper med bakgrunnsdansere.",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Lag en hoveddanser og en gruppe med bakgrunnsdansere innen de fire første taktene av sangen.\n\n_Denne oppgaven slutter etter 7 takter._"
         },
         "Dance_2019_07": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre størrelsen på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._",
-          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner."
+          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner.",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre størrelsen på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._"
         },
         "Dance_2019_08": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._",
-          "tint_hint": "Har du lagt merke til at danserne ikke endrer til nøyaktig den samme fargen som du velger? Det er fordi **fargetonen** mikser fargen du velger med den egentlige fargen på danseren."
+          "tint_hint": "Har du lagt merke til at danserne ikke endrer til nøyaktig den samme fargen som du velger? Det er fordi **fargetonen** mikser fargen du velger med den egentlige fargen på danseren.",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._"
         },
         "Dance_2019_09": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Bare trykk på \"Fullfør\" knappen!",
+          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>",
           "repeat_every_ideas": "**Trenger du noen ideer?**\n\n-   Endre danserens størrelse gjentatte ganger for å få den til å vokse.\n-   Endre danserens rotasjon gjentatte ganger for å få den til å spinne.\n\n_Du kan også bruke negative tall for å skape en motsatt effekt!_",
-          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Bare trykk på \"Fullfør\" knappen!"
         },
         "Dance_Party_01": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Pass på at en danser vises på skjermen.\n\n-   dette nivået slutter etter 4 takter.\\*",
-          "challenges": "\\*\\* Valgfrie utfordringer \\*\\*\n\n-   Velg en annen sang å spille.\n-   Gi din danser nytt navn."
+          "challenges": "\\*\\* Valgfrie utfordringer \\*\\*\n\n-   Velg en annen sang å spille.\n-   Gi din danser nytt navn.",
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Pass på at en danser vises på skjermen.\n\n-   dette nivået slutter etter 4 takter.\\*"
         },
         "Dance_Party_02": {
           "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Danseren må bytte til en ny posisjon etter 4 takter.\n\n-   Nivået ender etter 7 takter.\\*"
@@ -593,20 +717,47 @@
         "Dance_Party_05": {
           "validation": "**Hvordan kommer jeg videre?**\n\n-   Danseren din trenger å gjennomføre minst 4 ulike bevegelser før de kommer videre.\n\n_Dette nivået inneholder 12 takter._"
         },
+        "Dance_Party_08": {
+          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner.)",
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n\\*To dansere må ha en størrelse annet enn 100.\n\n\\*Denne oppgaven slutter etter 5 takter."
+        },
+        "Dance_Party_09": {
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 7 takter._"
+        },
+        "Dance_Party_10": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n\\*Egenskapene til to eller flere danse må endres.\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "Dance_Party_11": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "Dance_Party_11_5": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "Dance_Party_11b": {
+          "validation": "**Hvordan fullfører jeg dette nivået?**\n\n-   Bruk `når venstre trykkes`-blokken for å få roboten til å gjøre en dansebevegelse når du trykker på venstrepilen.\n\n_Dette nivået avsluttes etter 7 takter._"
+        },
         "Dance_Party_extras_alternate_2019": {
           "alternate": "Variasjonsblokka er i \"Dansere\" kategorien."
         },
         "Function intro Ryan": {
-          "Function_intro_Ryan_b": "Hvis du kaller funksjonene riktig, er dette veien du vil reise...",
-          "Function_intro_Ryan_a": "Du kan kalle en funksjon mange ganger i programmet ditt!  Prøv å kalle den to ganger for å løse denne oppgaven."
+          "Function_intro_Ryan_a": "Du kan kalle en funksjon mange ganger i programmet ditt!  Prøv å kalle den to ganger for å løse denne oppgaven.",
+          "Function_intro_Ryan_b": "Hvis du kaller funksjonene riktig, er dette veien du vil reise..."
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_a": "Du kan kalle en funksjon mange ganger i programmet ditt!  Prøv å kalle den to ganger for å løse denne oppgaven.",
+          "Function_intro_Ryan_b": "Hvis du kaller funksjonene riktig, er dette veien du vil reise..."
         },
         "Function intro Ryan_2019": {
-          "Function_intro_Ryan_b": "Hvis du kaller funksjonene riktig, er dette veien du vil reise...",
-          "Function_intro_Ryan_a": "Du kan kalle en funksjon mange ganger i programmet ditt!  Prøv å kalle den to ganger for å løse denne oppgaven."
+          "Function_intro_Ryan_a": "Du kan kalle en funksjon mange ganger i programmet ditt!  Prøv å kalle den to ganger for å løse denne oppgaven.",
+          "Function_intro_Ryan_b": "Hvis du kaller funksjonene riktig, er dette veien du vil reise..."
         },
         "Function intro Ryan_2020": {
-          "Function_intro_Ryan_b": "Hvis du kaller funksjonene riktig, er dette veien du vil reise...",
-          "Function_intro_Ryan_a": "Du kan kalle en funksjon mange ganger i programmet ditt!  Prøv å kalle den to ganger for å løse denne oppgaven."
+          "Function_intro_Ryan_a": "Du kan kalle en funksjon mange ganger i programmet ditt!  Prøv å kalle den to ganger for å løse denne oppgaven.",
+          "Function_intro_Ryan_b": "Hvis du kaller funksjonene riktig, er dette veien du vil reise..."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_a": "Du kan kalle en funksjon mange ganger i programmet ditt!  Prøv å kalle den to ganger for å løse denne oppgaven.",
+          "Function_intro_Ryan_b": "Hvis du kaller funksjonene riktig, er dette veien du vil reise..."
         },
         "HOC 2018 Level_10": {
           "voyage_aquatic_10a": "Se de \\*\\* havlanternene\\*\\*! \\[] (<https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png>)? Hvordan kan du bruke en \"hvis blokk\" med dem for å komme gjennom havmonumentet?"
@@ -617,7 +768,15 @@
         "HOC 2018 Level_9b": {
           "voyage_aquatic_9a": "Se de røde og blå korall blokkene? Bruk dem for å velge høyre eller venstre."
         },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Prøv å få agenten til å bygge noen minecart-spor slik at du kan utforske verdenen!"
+        },
         "MC_HOC_2017_01_RETRY": {
+          "MC_HOC_2017_01_RETRY_a": "Dra en `gå fremover`-blokk fra verktøykassen inn i arbeidsrområdet og fest den på plass under `når den kjører`-blokka.",
+          "MC_HOC_2017_01_RETRY_b": "Ikke glem å trykk \"Kjør\" for å kjøre koden for agenten.",
+          "MC_HOC_2017_01_RETRY_c": "Når agenten har kjørt all koden sin kan du flytte spilleren med piltastene!"
+        },
+        "MC_HOC_2017_01_RETRY2022": {
           "MC_HOC_2017_01_RETRY_a": "Dra en `gå fremover`-blokk fra verktøykassen inn i arbeidsrområdet og fest den på plass under `når den kjører`-blokka.",
           "MC_HOC_2017_01_RETRY_b": "Ikke glem å trykk \"Kjør\" for å kjøre koden for agenten.",
           "MC_HOC_2017_01_RETRY_c": "Når agenten har kjørt all koden sin kan du flytte spilleren med piltastene!"
@@ -632,7 +791,18 @@
           "MC_HOC_2017_01_RETRY_b": "Ikke glem å trykk \"Kjør\" for å kjøre koden for agenten.",
           "MC_HOC_2017_01_RETRY_c": "Når agenten har kjørt all koden sin kan du flytte spilleren med piltastene!"
         },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Dra en `gå fremover`-blokk fra verktøykassen inn i arbeidsrområdet og fest den på plass under `når den kjører`-blokka.",
+          "MC_HOC_2017_01_RETRY_b": "Ikke glem å trykk \"Kjør\" for å kjøre koden for agenten.",
+          "MC_HOC_2017_01_RETRY_c": "Når agenten har kjørt all koden sin kan du flytte spilleren med piltastene!"
+        },
         "MC_HOC_2017_02_Cole": {
+          "MC_HOC_2017_02_Cole_a": "Flytt agenten framover to plasser for å stå på trykkplaten. Det vil åpne døra for spilleren.",
+          "MC_HOC_2017_02_Cole_b": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
+          "MC_HOC_2017_02_Cole_c": "Når agenten har åpnet døra, bruk piltastene for å flytte spilleren til kartet!",
+          "MC_HOC_2017_02_Cole_d": "Pass på at agenten følger stien markert på kartet!"
+        },
+        "MC_HOC_2017_02_Cole2022": {
           "MC_HOC_2017_02_Cole_a": "Flytt agenten framover to plasser for å stå på trykkplaten. Det vil åpne døra for spilleren.",
           "MC_HOC_2017_02_Cole_b": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
           "MC_HOC_2017_02_Cole_c": "Når agenten har åpnet døra, bruk piltastene for å flytte spilleren til kartet!",
@@ -650,7 +820,17 @@
           "MC_HOC_2017_02_Cole_c": "Når agenten har åpnet døra, bruk piltastene for å flytte spilleren til kartet!",
           "MC_HOC_2017_02_Cole_d": "Pass på at agenten følger stien markert på kartet!"
         },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Flytt agenten framover to plasser for å stå på trykkplaten. Det vil åpne døra for spilleren.",
+          "MC_HOC_2017_02_Cole_b": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
+          "MC_HOC_2017_02_Cole_c": "Når agenten har åpnet døra, bruk piltastene for å flytte spilleren til kartet!",
+          "MC_HOC_2017_02_Cole_d": "Pass på at agenten følger stien markert på kartet!"
+        },
         "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_a": "Når du får agenten til trykkplaten kan du bruke piltastene til å flytte spilleren til den kompasset!",
+          "MC_HOC_2017_03_Cole_b": "Føles koden litt for lang ut? Prøv å bruke en `gjenta`-løkke og se om du kan gjøre den kortere!"
+        },
+        "MC_HOC_2017_03_Cole2022": {
           "MC_HOC_2017_03_Cole_a": "Når du får agenten til trykkplaten kan du bruke piltastene til å flytte spilleren til den kompasset!",
           "MC_HOC_2017_03_Cole_b": "Føles koden litt for lang ut? Prøv å bruke en `gjenta`-løkke og se om du kan gjøre den kortere!"
         },
@@ -662,34 +842,60 @@
           "MC_HOC_2017_03_Cole_a": "Når du får agenten til trykkplaten kan du bruke piltastene til å flytte spilleren til den kompasset!",
           "MC_HOC_2017_03_Cole_b": "Føles koden litt for lang ut? Prøv å bruke en `gjenta`-løkke og se om du kan gjøre den kortere!"
         },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "Når du får agenten til trykkplaten kan du bruke piltastene til å flytte spilleren til den kompasset!",
+          "MC_HOC_2017_03_Cole_b": "Føles koden litt for lang ut? Prøv å bruke en `gjenta`-løkke og se om du kan gjøre den kortere!"
+        },
         "MC_HOC_2017_04POINT5_RYAN": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Bruk `snu mot høyre` blokk for å endre retningen til agenten ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten trenger bare å komme seg til den første trykkplaten for at Alex eller Steve til øksa."
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten trenger bare å komme seg til den første trykkplaten for at Alex eller Steve til øksa.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Bruk `snu mot høyre` blokk for å endre retningen til agenten "
+        },
+        "MC_HOC_2017_04POINT5_RYAN2022": {
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten trenger bare å komme seg til den første trykkplaten for at Alex eller Steve til øksa.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Bruk `snu mot høyre` blokk for å endre retningen til agenten "
         },
         "MC_HOC_2017_04POINT5_RYAN_2019": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Bruk `snu mot høyre` blokk for å endre retningen til agenten ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten trenger bare å komme seg til den første trykkplaten for at Alex eller Steve til øksa."
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten trenger bare å komme seg til den første trykkplaten for at Alex eller Steve til øksa.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Bruk `snu mot høyre` blokk for å endre retningen til agenten "
         },
         "MC_HOC_2017_04POINT5_RYAN_2020": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Bruk `snu mot høyre` blokk for å endre retningen til agenten ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten trenger bare å komme seg til den første trykkplaten for at Alex eller Steve til øksa."
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten trenger bare å komme seg til den første trykkplaten for at Alex eller Steve til øksa.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Bruk `snu mot høyre` blokk for å endre retningen til agenten "
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten trenger bare å komme seg til den første trykkplaten for at Alex eller Steve til øksa.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Bruk `snu mot høyre` blokk for å endre retningen til agenten "
         },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Agenten trenger å `gå fremover` 7 ganger. Hvordan kan du bruke en `gjenta`-løkke for å få det til å skje?",
-          "MC_HOC_2017_04_Cole_c": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
-          "MC_HOC_2017_04_Cole_b": "Når agenten kommer seg på trykkplaten åpnes døra for spilleren."
+          "MC_HOC_2017_04_Cole_b": "Når agenten kommer seg på trykkplaten åpnes døra for spilleren.",
+          "MC_HOC_2017_04_Cole_c": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Agenten trenger å `gå fremover` 7 ganger. Hvordan kan du bruke en `gjenta`-løkke for å få det til å skje?",
+          "MC_HOC_2017_04_Cole_b": "Når agenten kommer seg på trykkplaten åpnes døra for spilleren.",
+          "MC_HOC_2017_04_Cole_c": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt."
         },
         "MC_HOC_2017_04_Cole_2019": {
           "MC_HOC_2017_04_Cole_a": "Agenten trenger å `gå fremover` 7 ganger. Hvordan kan du bruke en `gjenta`-løkke for å få det til å skje?",
-          "MC_HOC_2017_04_Cole_c": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
-          "MC_HOC_2017_04_Cole_b": "Når agenten kommer seg på trykkplaten åpnes døra for spilleren."
+          "MC_HOC_2017_04_Cole_b": "Når agenten kommer seg på trykkplaten åpnes døra for spilleren.",
+          "MC_HOC_2017_04_Cole_c": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt."
         },
         "MC_HOC_2017_04_Cole_2020": {
           "MC_HOC_2017_04_Cole_a": "Agenten trenger å `gå fremover` 7 ganger. Hvordan kan du bruke en `gjenta`-løkke for å få det til å skje?",
-          "MC_HOC_2017_04_Cole_c": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
-          "MC_HOC_2017_04_Cole_b": "Når agenten kommer seg på trykkplaten åpnes døra for spilleren."
+          "MC_HOC_2017_04_Cole_b": "Når agenten kommer seg på trykkplaten åpnes døra for spilleren.",
+          "MC_HOC_2017_04_Cole_c": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agenten trenger å `gå fremover` 7 ganger. Hvordan kan du bruke en `gjenta`-løkke for å få det til å skje?",
+          "MC_HOC_2017_04_Cole_b": "Når agenten kommer seg på trykkplaten åpnes døra for spilleren.",
+          "MC_HOC_2017_04_Cole_c": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt."
         },
         "MC_HOC_2017_05_Cole": {
+          "MC_HOC_2017_05_Cole_a": "Visste du at du kan putte mer enn én blokk med kode inni en løkke? Prøv å flytte fremover **og** plassere en planke inni en `gjenta` for å fullføre denne oppgaven.",
+          "MC_HOC_2017_05_Cole_b": "Få agenten over elva, bygg en bro mens du går."
+        },
+        "MC_HOC_2017_05_Cole2022": {
           "MC_HOC_2017_05_Cole_a": "Visste du at du kan putte mer enn én blokk med kode inni en løkke? Prøv å flytte fremover **og** plassere en planke inni en `gjenta` for å fullføre denne oppgaven.",
           "MC_HOC_2017_05_Cole_b": "Få agenten over elva, bygg en bro mens du går."
         },
@@ -701,7 +907,15 @@
           "MC_HOC_2017_05_Cole_a": "Visste du at du kan putte mer enn én blokk med kode inni en løkke? Prøv å flytte fremover **og** plassere en planke inni en `gjenta` for å fullføre denne oppgaven.",
           "MC_HOC_2017_05_Cole_b": "Få agenten over elva, bygg en bro mens du går."
         },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "Visste du at du kan putte mer enn én blokk med kode inni en løkke? Prøv å flytte fremover **og** plassere en planke inni en `gjenta` for å fullføre denne oppgaven.",
+          "MC_HOC_2017_05_Cole_b": "Få agenten over elva, bygg en bro mens du går."
+        },
         "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_a": "Hvor mange ganger kjører denne løkka? Hvor mange ganger _burde_ den kjøre?",
+          "MC_HOC_2017_06_Cole_b": "Hjelp agenten bygge en bro over vannet! "
+        },
+        "MC_HOC_2017_06_Cole2022": {
           "MC_HOC_2017_06_Cole_a": "Hvor mange ganger kjører denne løkka? Hvor mange ganger _burde_ den kjøre?",
           "MC_HOC_2017_06_Cole_b": "Hjelp agenten bygge en bro over vannet! "
         },
@@ -713,34 +927,61 @@
           "MC_HOC_2017_06_Cole_a": "Hvor mange ganger kjører denne løkka? Hvor mange ganger _burde_ den kjøre?",
           "MC_HOC_2017_06_Cole_b": "Hjelp agenten bygge en bro over vannet! "
         },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Hvor mange ganger kjører denne løkka? Hvor mange ganger _burde_ den kjøre?",
+          "MC_HOC_2017_06_Cole_b": "Hjelp agenten bygge en bro over vannet! "
+        },
         "MC_HOC_2017_07_Cole": {
-          "MC_HOC_2017_07_Cole_c": "Alt du må gjøre er å få agenten til å rydde veien til minecarten.",
           "MC_HOC_2017_07_Cole_a": "For å løse denne oppgaven må du finne ut hva funksjone `clear path` gjør og kalle den så mange ganger som nødvendig ved å bruke den lille grønne blokken `clear path` i verktøykassa.",
-          "MC_HOC_2017_07_Cole_b": "Prøv å bruke funksjonsblokkene sammen med andre blokker fra verktøykassa for å løse denne oppgaven."
+          "MC_HOC_2017_07_Cole_b": "Prøv å bruke funksjonsblokkene sammen med andre blokker fra verktøykassa for å løse denne oppgaven.",
+          "MC_HOC_2017_07_Cole_c": "Alt du må gjøre er å få agenten til å rydde veien til minecarten."
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "MC_HOC_2017_07_Cole_a": "For å løse denne oppgaven må du finne ut hva funksjone `clear path` gjør og kalle den så mange ganger som nødvendig ved å bruke den lille grønne blokken `clear path` i verktøykassa.",
+          "MC_HOC_2017_07_Cole_b": "Prøv å bruke funksjonsblokkene sammen med andre blokker fra verktøykassa for å løse denne oppgaven.",
+          "MC_HOC_2017_07_Cole_c": "Alt du må gjøre er å få agenten til å rydde veien til minecarten."
         },
         "MC_HOC_2017_07_Cole_2019": {
-          "MC_HOC_2017_07_Cole_c": "Alt du må gjøre er å få agenten til å rydde veien til minecarten.",
           "MC_HOC_2017_07_Cole_a": "For å løse denne oppgaven må du finne ut hva funksjone `clear path` gjør og kalle den så mange ganger som nødvendig ved å bruke den lille grønne blokken `clear path` i verktøykassa.",
-          "MC_HOC_2017_07_Cole_b": "Prøv å bruke funksjonsblokkene sammen med andre blokker fra verktøykassa for å løse denne oppgaven."
+          "MC_HOC_2017_07_Cole_b": "Prøv å bruke funksjonsblokkene sammen med andre blokker fra verktøykassa for å løse denne oppgaven.",
+          "MC_HOC_2017_07_Cole_c": "Alt du må gjøre er å få agenten til å rydde veien til minecarten."
         },
         "MC_HOC_2017_07_Cole_2020": {
-          "MC_HOC_2017_07_Cole_c": "Alt du må gjøre er å få agenten til å rydde veien til minecarten.",
           "MC_HOC_2017_07_Cole_a": "For å løse denne oppgaven må du finne ut hva funksjone `clear path` gjør og kalle den så mange ganger som nødvendig ved å bruke den lille grønne blokken `clear path` i verktøykassa.",
-          "MC_HOC_2017_07_Cole_b": "Prøv å bruke funksjonsblokkene sammen med andre blokker fra verktøykassa for å løse denne oppgaven."
+          "MC_HOC_2017_07_Cole_b": "Prøv å bruke funksjonsblokkene sammen med andre blokker fra verktøykassa for å løse denne oppgaven.",
+          "MC_HOC_2017_07_Cole_c": "Alt du må gjøre er å få agenten til å rydde veien til minecarten."
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_a": "For å løse denne oppgaven må du finne ut hva funksjone `clear path` gjør og kalle den så mange ganger som nødvendig ved å bruke den lille grønne blokken `clear path` i verktøykassa.",
+          "MC_HOC_2017_07_Cole_b": "Prøv å bruke funksjonsblokkene sammen med andre blokker fra verktøykassa for å løse denne oppgaven.",
+          "MC_HOC_2017_07_Cole_c": "Alt du må gjøre er å få agenten til å rydde veien til minecarten."
         },
         "MC_HOC_2017_10_RETRY": {
-          "MC_HOC_2017_10_Cole_b": "Vet du ikke hvor du skal gå? Se om du kan finne den prikkete linja!",
-          "MC_HOC_2017_10_Cole_a": "Bruk funksjoner for å løse denne oppgaven på en enklere måte!"
+          "MC_HOC_2017_10_Cole_a": "Bruk funksjoner for å løse denne oppgaven på en enklere måte!",
+          "MC_HOC_2017_10_Cole_b": "Vet du ikke hvor du skal gå? Se om du kan finne den prikkete linja!"
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "MC_HOC_2017_10_Cole_a": "Bruk funksjoner for å løse denne oppgaven på en enklere måte!",
+          "MC_HOC_2017_10_Cole_b": "Vet du ikke hvor du skal gå? Se om du kan finne den prikkete linja!"
         },
         "MC_HOC_2017_10_RETRY_2019": {
-          "MC_HOC_2017_10_Cole_b": "Vet du ikke hvor du skal gå? Se om du kan finne den prikkete linja!",
-          "MC_HOC_2017_10_Cole_a": "Bruk funksjoner for å løse denne oppgaven på en enklere måte!"
+          "MC_HOC_2017_10_Cole_a": "Bruk funksjoner for å løse denne oppgaven på en enklere måte!",
+          "MC_HOC_2017_10_Cole_b": "Vet du ikke hvor du skal gå? Se om du kan finne den prikkete linja!"
         },
         "MC_HOC_2017_10_RETRY_2020": {
-          "MC_HOC_2017_10_Cole_b": "Vet du ikke hvor du skal gå? Se om du kan finne den prikkete linja!",
-          "MC_HOC_2017_10_Cole_a": "Bruk funksjoner for å løse denne oppgaven på en enklere måte!"
+          "MC_HOC_2017_10_Cole_a": "Bruk funksjoner for å løse denne oppgaven på en enklere måte!",
+          "MC_HOC_2017_10_Cole_b": "Vet du ikke hvor du skal gå? Se om du kan finne den prikkete linja!"
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_a": "Bruk funksjoner for å løse denne oppgaven på en enklere måte!",
+          "MC_HOC_2017_10_Cole_b": "Vet du ikke hvor du skal gå? Se om du kan finne den prikkete linja!"
         },
         "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_a": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
+          "MC_HOC_2017_08_RY_b": "Det er MANGE måter å løse denne oppgaven på! Prøv noen!",
+          "MC_HOC_2017_08_RY_c": "Prøv å følge den prikkete linja for en enkel vei over lavaen."
+        },
+        "MC_HOC_2017_Ali2022": {
           "MC_HOC_2017_08_RY_a": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
           "MC_HOC_2017_08_RY_b": "Det er MANGE måter å løse denne oppgaven på! Prøv noen!",
           "MC_HOC_2017_08_RY_c": "Prøv å følge den prikkete linja for en enkel vei over lavaen."
@@ -755,13 +996,24 @@
           "MC_HOC_2017_08_RY_b": "Det er MANGE måter å løse denne oppgaven på! Prøv noen!",
           "MC_HOC_2017_08_RY_c": "Prøv å følge den prikkete linja for en enkel vei over lavaen."
         },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
+          "MC_HOC_2017_08_RY_b": "Det er MANGE måter å løse denne oppgaven på! Prøv noen!",
+          "MC_HOC_2017_08_RY_c": "Prøv å følge den prikkete linja for en enkel vei over lavaen."
+        },
         "MC_HOC_2017_FP20x20": {
+          "MC_HOC_2017_13_Cole_a": "Prøv å få agenten til å bygge noen minecart-spor slik at du kan utforske verdenen!"
+        },
+        "MC_HOC_2017_FP20x202022": {
           "MC_HOC_2017_13_Cole_a": "Prøv å få agenten til å bygge noen minecart-spor slik at du kan utforske verdenen!"
         },
         "MC_HOC_2017_FP20x20_2019": {
           "MC_HOC_2017_13_Cole_a": "Prøv å få agenten til å bygge noen minecart-spor slik at du kan utforske verdenen!"
         },
         "MC_HOC_2017_FP20x20_2020": {
+          "MC_HOC_2017_13_Cole_a": "Prøv å få agenten til å bygge noen minecart-spor slik at du kan utforske verdenen!"
+        },
+        "MC_HOC_2017_FP20x20_2021": {
           "MC_HOC_2017_13_Cole_a": "Prøv å få agenten til å bygge noen minecart-spor slik at du kan utforske verdenen!"
         },
         "NEW Course 4 Artist Functions 13": {
@@ -778,14 +1030,17 @@
           "NEW_Course_4_Artist_Params_11_a": "Det er mer enn et tall som må erstattes med en variabel inne i funksjonen."
         },
         "NEW Course 4 Artist Params inspire": {
+          "after": "Når du er ferdig med hver \"blad\", må du \"flytt fremover\" 20 piksler før du gjør en 60 graders rotasjon.",
           "brush_width": "Vi setter penselbredden til 1 og fargen til blå før vi gjør noe annet.",
-          "double_loop": "Prøv å sette en `tell`-løkke i en `gjenta`-løkke.",
-          "after": "Når du er ferdig med hver \"blad\", må du \"flytt fremover\" 20 piksler før du gjør en 60 graders rotasjon."
+          "double_loop": "Prøv å sette en `tell`-løkke i en `gjenta`-løkke."
         },
         "OPD-K5-events-2": {
           "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "Overworld House Frame Chosen": {
+          "mc_6_c": "Du kan sette flere blokker inne i en 'gjenta'-løkke."
+        },
+        "Overworld House Frame Chosen2022": {
           "mc_6_c": "Du kan sette flere blokker inne i en 'gjenta'-løkke."
         },
         "Overworld House Frame Chosen_2019": {
@@ -794,7 +1049,14 @@
         "Overworld House Frame Chosen_2020": {
           "mc_6_c": "Du kan sette flere blokker inne i en 'gjenta'-løkke."
         },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_c": "Du kan sette flere blokker inne i en 'gjenta'-løkke."
+        },
         "Overworld Move to Sheep": {
+          "mc_1_a": "'Gå fremover'-blokken er på toppen av verktøykassen.",
+          "mc_1_b": "Pass på at begge 'gå-fremover'-blokkene er festet til 'når-den-kjører'-blokken."
+        },
+        "Overworld Move to Sheep2022": {
           "mc_1_a": "'Gå fremover'-blokken er på toppen av verktøykassen.",
           "mc_1_b": "Pass på at begge 'gå-fremover'-blokkene er festet til 'når-den-kjører'-blokken."
         },
@@ -806,7 +1068,14 @@
           "mc_1_a": "'Gå fremover'-blokken er på toppen av verktøykassen.",
           "mc_1_b": "Pass på at begge 'gå-fremover'-blokkene er festet til 'når-den-kjører'-blokken."
         },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "'Gå fremover'-blokken er på toppen av verktøykassen.",
+          "mc_1_b": "Pass på at begge 'gå-fremover'-blokkene er festet til 'når-den-kjører'-blokken."
+        },
         "Overworld Place Wall": {
+          "mc_5_b": "Pass på at begge blokkene er på innsiden av 'gjenta'-løkken for å kunne kjøre koden mer enn en gang."
+        },
+        "Overworld Place Wall2022": {
           "mc_5_b": "Pass på at begge blokkene er på innsiden av 'gjenta'-løkken for å kunne kjøre koden mer enn en gang."
         },
         "Overworld Place Wall_2019": {
@@ -815,7 +1084,13 @@
         "Overworld Place Wall_2020": {
           "mc_5_b": "Pass på at begge blokkene er på innsiden av 'gjenta'-løkken for å kunne kjøre koden mer enn en gang."
         },
+        "Overworld Place Wall_2021": {
+          "mc_5_b": "Pass på at begge blokkene er på innsiden av 'gjenta'-løkken for å kunne kjøre koden mer enn en gang."
+        },
         "Overworld Plant Crops": {
+          "mc_7_c": "Du kan sette flere blokker inne i en 'gjenta'-løkke."
+        },
+        "Overworld Plant Crops2022": {
           "mc_7_c": "Du kan sette flere blokker inne i en 'gjenta'-løkke."
         },
         "Overworld Plant Crops_2019": {
@@ -824,7 +1099,13 @@
         "Overworld Plant Crops_2020": {
           "mc_7_c": "Du kan sette flere blokker inne i en 'gjenta'-løkke."
         },
+        "Overworld Plant Crops_2021": {
+          "mc_7_c": "Du kan sette flere blokker inne i en 'gjenta'-løkke."
+        },
         "Overworld Powered Minecart": {
+          "mc_13_b": "Bruk 'gjenta'-løkken for å lage koden din kortere."
+        },
+        "Overworld Powered Minecart2022": {
           "mc_13_b": "Bruk 'gjenta'-løkken for å lage koden din kortere."
         },
         "Overworld Powered Minecart_2019": {
@@ -833,7 +1114,13 @@
         "Overworld Powered Minecart_2020": {
           "mc_13_b": "Bruk 'gjenta'-løkken for å lage koden din kortere."
         },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_b": "Bruk 'gjenta'-løkken for å lage koden din kortere."
+        },
         "Overworld Shear Sheep": {
+          "mc_3_b": "Dersom du trenger å forandre på hvilken vei du står, bruk en 'snu'-blokk."
+        },
+        "Overworld Shear Sheep2022": {
           "mc_3_b": "Dersom du trenger å forandre på hvilken vei du står, bruk en 'snu'-blokk."
         },
         "Overworld Shear Sheep_2019": {
@@ -842,7 +1129,13 @@
         "Overworld Shear Sheep_2020": {
           "mc_3_b": "Dersom du trenger å forandre på hvilken vei du står, bruk en 'snu'-blokk."
         },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_b": "Dersom du trenger å forandre på hvilken vei du står, bruk en 'snu'-blokk."
+        },
         "Underground If Statements": {
+          "mc_12_a": "Du finner redstone i blokkene med røde merker på."
+        },
+        "Underground If Statements2022": {
           "mc_12_a": "Du finner redstone i blokkene med røde merker på."
         },
         "Underground If Statements_2019": {
@@ -851,10 +1144,16 @@
         "Underground If Statements_2020": {
           "mc_12_a": "Du finner redstone i blokkene med røde merker på."
         },
+        "Underground If Statements_2021": {
+          "mc_12_a": "Du finner redstone i blokkene med røde merker på."
+        },
         "course1_artist_loops_challenge1": {
           "courseA_artist_loops_challenge1_b": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "courseA_artist_loops_challenge1_c": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "courseA_artist_loops_challenge1_d": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "course1_artist_loops_challenge2": {
+          "harvey_tictactoe": "Du kan bruke `hopp`-blokker for å flytte deg til andre ruter på spillbrettet."
         },
         "course1_artist_loops_challenge3": {
           "courseA_artist_loops_challenge2_b": "Når du ha fullført ett fuglehus, \"hopp\" til neste!",
@@ -864,11 +1163,21 @@
           "courseA_collector_loops_challenge1_a": "Hvis noe går galt kan du forsøke å endre tallene i hver løkke.",
           "courseA_collector_loops_challenge1_b": "Du trenger ikke å bruke løkke hvis du bare skal gjøre noe én gang."
         },
+        "course1_collector_loops_challenge3": {
+          "courseB_collector_loops_challenge1_a": "Mønsteret for å gå nord er litt annerledes enn mønsteret for å gå sør.\n\n<xml>\n  <block type=\"collector_collect\"/><next>\n  <block type=\"maze_moveNorth\"/></next>next>\n  </xml>",
+          "courseB_collector_loops_challenge1_b": "Start med å lage en løkke med kommandoene \"gå sør\" og \"hent skatt\"\n\n<xml>\n  <block type=\"maze_moveSouth\"/><next>\n  <block type=\"collector_collect\"/></next>\n  </xml>"
+        },
         "course1_collector_loops_challenge4": {
           "courseB_collector_loops_challenge2_a": "Hvis noe går galt, ikke vær redd for å starte på nytt. Ikke gi opp!"
         },
         "course1_maze_debugging_challenge1": {
           "courseA_maze_seq_challenge1_a": "Noen veier vil lede til TNT hvis du går for langt."
+        },
+        "course1_maze_debugging_challenge2": {
+          "courseB_maze_seq_challenge2_b": "Gjør om på rekkefølgen til blokkene, sånn at du kan følge den midterste veien frem til grisen!"
+        },
+        "course1_playlab_events_challenge1": {
+          "courseA_playlab_events_challenge1_e": "Til slutt, få Trollmannen Wendel til å vise seg når du trykker på Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "course3_bee_functions_challenge1": {
           "courseE_bee_functions_challenge1_a": "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
@@ -877,6 +1186,10 @@
           "courseE_bee_functions_challenge1_a": "Hvis oppgaven virker utfordrende, kan du prøve å bygge funksjonen din litt om gangen.  \n\nLegg til noen blokker, og test dem. Legg til flere, og prøv igjen. Snart vil du få det til!"
         },
         "courseA_collector_loops_challenge1": {
+          "courseA_collector_loops_challenge1_a": "Hvis noe går galt kan du forsøke å endre tallene i hver løkke.",
+          "courseA_collector_loops_challenge1_b": "Du trenger ikke å bruke løkke hvis du bare skal gjøre noe én gang."
+        },
+        "courseA_collector_loops_challenge12022": {
           "courseA_collector_loops_challenge1_a": "Hvis noe går galt kan du forsøke å endre tallene i hver løkke.",
           "courseA_collector_loops_challenge1_b": "Du trenger ikke å bruke løkke hvis du bare skal gjøre noe én gang."
         },
@@ -892,7 +1205,14 @@
           "courseA_collector_loops_challenge1_a": "Hvis noe går galt kan du forsøke å endre tallene i hver løkke.",
           "courseA_collector_loops_challenge1_b": "Du trenger ikke å bruke løkke hvis du bare skal gjøre noe én gang."
         },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_a": "Hvis noe går galt kan du forsøke å endre tallene i hver løkke.",
+          "courseA_collector_loops_challenge1_b": "Du trenger ikke å bruke løkke hvis du bare skal gjøre noe én gang."
+        },
         "courseA_maze_seq1": {
+          "courseA_maze_seq1_a": "Om du har problemer med å få fuglen til å bevege seg, sjekk at blokkene er koblet sammen med \"når den kjører\" blokken[0]"
+        },
+        "courseA_maze_seq12022": {
           "courseA_maze_seq1_a": "Om du har problemer med å få fuglen til å bevege seg, sjekk at blokkene er koblet sammen med \"når den kjører\" blokken[0]"
         },
         "courseA_maze_seq1_2018": {
@@ -904,11 +1224,17 @@
         "courseA_maze_seq1_2020": {
           "courseA_maze_seq1_a": "Om du har problemer med å få fuglen til å bevege seg, sjekk at blokkene er koblet sammen med \"når den kjører\" blokken[0]"
         },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "Om du har problemer med å få fuglen til å bevege seg, sjekk at blokkene er koblet sammen med \"når den kjører\" blokken[0]"
+        },
         "courseA_maze_seq2": {
           "courseA_maze_seq2_a": "Dette programmet mangler en blokk. Klarer du å finne ut hvilken?",
           "courseA_maze_seq2_b": "Prøv å kjøre koden først for å se hvor fuglen ender opp. Hvor skal du videre?"
         },
         "courseA_maze_seq_challenge1": {
+          "courseA_maze_seq_challenge1_a": "Det er to løsninger til dette puslespillet."
+        },
+        "courseA_maze_seq_challenge12022": {
           "courseA_maze_seq_challenge1_a": "Det er to løsninger til dette puslespillet."
         },
         "courseA_maze_seq_challenge1_2018": {
@@ -920,10 +1246,16 @@
         "courseA_maze_seq_challenge1_2020": {
           "courseA_maze_seq_challenge1_a": "Det er to løsninger til dette puslespillet."
         },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "Det er to løsninger til dette puslespillet."
+        },
         "courseB_collector_loops_challenge2": {
           "courseB_collector_loops_challenge2_a": "Hvis noe går galt, ikke vær redd for å starte på nytt. Ikke gi opp!"
         },
         "courseB_maze_seq1": {
+          "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!"
+        },
+        "courseB_maze_seq12022": {
           "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!"
         },
         "courseB_maze_seq1_2018": {
@@ -935,7 +1267,34 @@
         "courseB_maze_seq1_2020": {
           "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!"
         },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!",
+          "courseB_maze_seq1_b": "Dra tre av disse <xml><block type=\"maze_moveSouth\"/></xml> pilene sammen med  <xml><block type=\"when_run\"/></xml> blokken for å få Scrat til eikenøtten"
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "Prøv å legg til en instruksjon av gangen til du kommer til eikenøtten",
+          "courseB_maze_seq4_b": "Du vil bruke <xml><block type=\"maze_moveEast\"/></xml> blokken til å løse denne oppgaven"
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "Hvis du står fast prøv å tegn ruten på papir",
+          "courseB_maze_seq5_b": "Det er to måter å løse denne oppgaven på!",
+          "courseB_maze_seq5_c": "Ikke sikker hvordan du skal komme deg til eikenøtten? Prøve denne ruten"
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq5_c": "Det er to måter å løse oppgaven på.",
+          "courseB_maze_seq5_d": "Skjønner ikke hvordan du skal komme deg til eikenøtten? Prøv denne ruten!",
+          "courseB_maze_seq6_a": "Koden skal til slutt ha tre bevegelsesblokker.",
+          "courseB_maze_seq6_b": "Hvis du står fast, prøv å løs oppgaven i to deler, en sideveis og en opp-og-ned."
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "Legg 1 blokk for å flytte Scrat til eikenøtten.",
+          "courseB_maze_seq7_b": "Prøv å kjøre koden som blir gitt her og se hvor du ender opp.",
+          "courseB_maze_seq7_c": "Klarer du ikke å nå eikenøtten? Prøv denne ruten!"
+        },
         "courseB_maze_seq8": {
+          "courseB_maze_seq8_b": "Det er to måter å løse denne oppgaven!"
+        },
+        "courseB_maze_seq82022": {
           "courseB_maze_seq8_b": "Det er to måter å løse denne oppgaven!"
         },
         "courseB_maze_seq8_2018": {
@@ -947,7 +1306,30 @@
         "courseB_maze_seq8_2020": {
           "courseB_maze_seq8_b": "Det er to måter å løse denne oppgaven!"
         },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "Prøv å legg en blokk om gangen til du løser oppgaven.",
+          "courseB_maze_seq8_b": "Det er to måter å løse denne oppgaven!",
+          "courseB_maze_seq8_c": "Vet du ikke hvilken vei å gå? Prøv denne ruten!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "Prøv å skriv ned alle stegene på en papirlapp først.",
+          "courseB_maze_seq9_b": "Bygg programmet ditt en blokk av gangen og test ettersom du bygger.",
+          "courseB_maze_seq9_c": "Det er to måter å løse denne oppgaven på.",
+          "courseB_maze_seq9_d": "Sitter du fast? Prøv denne ruten!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "Den korteste ruten er ikke sikker fungere denne gangen.",
+          "courseB_maze_seq_challenge1_b": "Prøv å bruke <xml><block type=\"maze_moveWest\"/></xml> blokken til å begynne med."
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "Du trenger ikke legge til eller fjerne blokker for å løse denne oppgaven.",
+          "courseB_maze_seq_challenge2_b": "Omroker blokkene og ta trappetrinn ruten"
+        },
         "courseC_artist_prog2": {
+          "courseC_artist_prog2_a": "*\"Hvis du bruker <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">flyttFremover</title><title name=\"VALUE\">100</title></block></xml>-blokken, vil jeg tegne en linje.\"*",
+          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">snuHøyre</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>-blokken."
+        },
+        "courseC_artist_prog22022": {
           "courseC_artist_prog2_a": "*\"Hvis du bruker <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">flyttFremover</title><title name=\"VALUE\">100</title></block></xml>-blokken, vil jeg tegne en linje.\"*",
           "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">snuHøyre</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>-blokken."
         },
@@ -963,7 +1345,14 @@
           "courseC_artist_prog2_a": "*\"Hvis du bruker <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">flyttFremover</title><title name=\"VALUE\">100</title></block></xml>-blokken, vil jeg tegne en linje.\"*",
           "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">snuHøyre</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>-blokken."
         },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "*\"Hvis du bruker <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">flyttFremover</title><title name=\"VALUE\">100</title></block></xml>-blokken, vil jeg tegne en linje.\"*",
+          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">snuHøyre</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>-blokken."
+        },
         "courseC_flappy_events1": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseC_flappy_events12022": {
           "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "courseC_flappy_events1_2018": {
@@ -975,7 +1364,14 @@
         "courseC_flappy_events1_2020": {
           "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
+        "courseC_flappy_events1_2021": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
         "courseC_maze_programming6": {
+          "courseC_maze_programming6_a": "Det er to måter å løse denne oppgaven!",
+          "courseC_maze_programming6_b": "Følg fingeren din fra fuglen til grisen. Hvilke steg måtte du ta?"
+        },
+        "courseC_maze_programming62022": {
           "courseC_maze_programming6_a": "Det er to måter å løse denne oppgaven!",
           "courseC_maze_programming6_b": "Følg fingeren din fra fuglen til grisen. Hvilke steg måtte du ta?"
         },
@@ -991,7 +1387,17 @@
           "courseC_maze_programming6_a": "Det er to måter å løse denne oppgaven!",
           "courseC_maze_programming6_b": "Følg fingeren din fra fuglen til grisen. Hvilke steg måtte du ta?"
         },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "Det er to måter å løse denne oppgaven!",
+          "courseC_maze_programming6_b": "Følg fingeren din fra fuglen til grisen. Hvilke steg måtte du ta?"
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "Det er to måter å løse denne oppgaven!"
+        },
         "courseD_artist_nestedLoops3": {
+          "courseD_artist_nestedLoops3_a": "Prøv å bruke \"hopp fremover\" blokken for å komme fra toppen av én firkant til stedet der du vil begynne neste. \n\nHvis din rute er 20 piksler høy og de er 20 piksler fra hverandre, hvor langt trenger du å hoppe?"
+        },
+        "courseD_artist_nestedLoops32022": {
           "courseD_artist_nestedLoops3_a": "Prøv å bruke \"hopp fremover\" blokken for å komme fra toppen av én firkant til stedet der du vil begynne neste. \n\nHvis din rute er 20 piksler høy og de er 20 piksler fra hverandre, hvor langt trenger du å hoppe?"
         },
         "courseD_artist_nestedLoops3_2018": {
@@ -1001,6 +1407,9 @@
           "courseD_artist_nestedLoops3_a": "Prøv å bruke \"hopp fremover\" blokken for å komme fra toppen av én firkant til stedet der du vil begynne neste. \n\nHvis din rute er 20 piksler høy og de er 20 piksler fra hverandre, hvor langt trenger du å hoppe?"
         },
         "courseD_artist_nestedLoops3_2020": {
+          "courseD_artist_nestedLoops3_a": "Prøv å bruke \"hopp fremover\" blokken for å komme fra toppen av én firkant til stedet der du vil begynne neste. \n\nHvis din rute er 20 piksler høy og de er 20 piksler fra hverandre, hvor langt trenger du å hoppe?"
+        },
+        "courseD_artist_nestedLoops3_2021": {
           "courseD_artist_nestedLoops3_a": "Prøv å bruke \"hopp fremover\" blokken for å komme fra toppen av én firkant til stedet der du vil begynne neste. \n\nHvis din rute er 20 piksler høy og de er 20 piksler fra hverandre, hvor langt trenger du å hoppe?"
         },
         "courseD_artist_nestedLoops9": {
@@ -1015,6 +1424,9 @@
         "courseD_artist_nestedLoops9_2020": {
           "courseD_artist_nestedLoops9_c": "Bruk to \"løkke i løkke\":\n\n-   Gjenta åtte ganger.\n-   Tegn et kvadrat.\n-   Hopp fremover 50 piksler.\n-   Snu 45 grader mot høyre.\n-   Gjenta åtte ganger.\n-   Tegn en trekant.\n-   Hopp fremover 50 piksler.\n-   Snu 45 grader mot høyre."
         },
+        "courseD_artist_nestedLoops9_2021": {
+          "courseD_artist_nestedLoops9_c": "Bruk to \"løkke i løkke\":\n\n-   Gjenta åtte ganger.\n-   Tegn et kvadrat.\n-   Hopp fremover 50 piksler.\n-   Snu 45 grader mot høyre.\n-   Gjenta åtte ganger.\n-   Tegn en trekant.\n-   Hopp fremover 50 piksler.\n-   Snu 45 grader mot høyre."
+        },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11a": "For å tegne en side må du bruke `flytt fremover med 100 piksler`-blokken og endre 100 til 200."
         },
@@ -1027,22 +1439,33 @@
         "courseD_bee_conditionals4_copy": {
           "courseD_bee_conditionals4_c": "Ved å bruke blokken <xml><block type=\"maze_untilBlocked\"/></xml> går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst, hva skal bien gjøre?"
         },
+        "courseD_bee_conditionals4_dani": {
+          "courseD_bee_conditionals4_c": "Ved å bruke blokken <xml><block type=\"maze_untilBlocked\"/></xml> går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst, hva skal bien gjøre?"
+        },
         "courseD_bee_conditionals5": {
           "courseD_bee_conditionals5_a": "Tenk på hver side av den rektangulære veien som en vei i seg selv. Sett opp en løkke i løkke med en \"gjenta\"-blokk og en \"så lenge det finnes vei foran\"-blokk på innsiden. Hvor mange veier må bien fly ned hvis bien må innom hver side som har en blomst?",
-          "courseD_bee_conditionals5_c": "Det er 3 av rektangelets sider som har blomster, så koden trenger en `gjenta 3 ganger`-blokk. Ved hver gjentakelse må bien fortsette langs veien, `så lenge det finnes vei foran`. For å fortsette langs veien må bien `gå fremover`. Så lenge bien er på veien må den sjekke om det finnes en blomst. Hvis det er en blomst der må bien `få nektar`.",
-          "courseD_bee_conditionals5_b": "Inni \"så lenge det finnes vei foran\"-blokken må du gå fremover og sjekke om det finnes en blomst. Hvordan sjekker du om det finnes en blomst? Hva gjør du om det finnes en blomst?"
+          "courseD_bee_conditionals5_b": "Inni \"så lenge det finnes vei foran\"-blokken må du gå fremover og sjekke om det finnes en blomst. Hvordan sjekker du om det finnes en blomst? Hva gjør du om det finnes en blomst?",
+          "courseD_bee_conditionals5_c": "Det er 3 av rektangelets sider som har blomster, så koden trenger en `gjenta 3 ganger`-blokk. Ved hver gjentakelse må bien fortsette langs veien, `så lenge det finnes vei foran`. For å fortsette langs veien må bien `gå fremover`. Så lenge bien er på veien må den sjekke om det finnes en blomst. Hvis det er en blomst der må bien `få nektar`."
         },
         "courseD_bee_conditionals5_2018": {
           "courseD_bee_conditionals5_a": "Tenk på hver side av den rektangulære veien som en vei i seg selv. Sett opp en løkke i løkke med en \"gjenta\"-blokk og en \"så lenge det finnes vei foran\"-blokk på innsiden. Hvor mange veier må bien fly ned hvis bien må innom hver side som har en blomst?",
-          "courseD_bee_conditionals5_c": "Det er 3 av rektangelets sider som har blomster, så koden trenger en `gjenta 3 ganger`-blokk. Ved hver gjentakelse må bien fortsette langs veien, `så lenge det finnes vei foran`. For å fortsette langs veien må bien `gå fremover`. Så lenge bien er på veien må den sjekke om det finnes en blomst. Hvis det er en blomst der må bien `få nektar`.",
-          "courseD_bee_conditionals5_b": "Inni \"så lenge det finnes vei foran\"-blokken må du gå fremover og sjekke om det finnes en blomst. Hvordan sjekker du om det finnes en blomst? Hva gjør du om det finnes en blomst?"
+          "courseD_bee_conditionals5_b": "Inni \"så lenge det finnes vei foran\"-blokken må du gå fremover og sjekke om det finnes en blomst. Hvordan sjekker du om det finnes en blomst? Hva gjør du om det finnes en blomst?",
+          "courseD_bee_conditionals5_c": "Det er 3 av rektangelets sider som har blomster, så koden trenger en `gjenta 3 ganger`-blokk. Ved hver gjentakelse må bien fortsette langs veien, `så lenge det finnes vei foran`. For å fortsette langs veien må bien `gå fremover`. Så lenge bien er på veien må den sjekke om det finnes en blomst. Hvis det er en blomst der må bien `få nektar`."
         },
         "courseD_bee_conditionals5_copy": {
           "courseD_bee_conditionals5_a": "Tenk på hver side av den rektangulære veien som en vei i seg selv. Sett opp en løkke i løkke med en \"gjenta\"-blokk og en \"så lenge det finnes vei foran\"-blokk på innsiden. Hvor mange veier må bien fly ned hvis bien må innom hver side som har en blomst?",
-          "courseD_bee_conditionals5_c": "Det er 3 av rektangelets sider som har blomster, så koden trenger en `gjenta 3 ganger`-blokk. Ved hver gjentakelse må bien fortsette langs veien, `så lenge det finnes vei foran`. For å fortsette langs veien må bien `gå fremover`. Så lenge bien er på veien må den sjekke om det finnes en blomst. Hvis det er en blomst der må bien `få nektar`.",
-          "courseD_bee_conditionals5_b": "Inni \"så lenge det finnes vei foran\"-blokken må du gå fremover og sjekke om det finnes en blomst. Hvordan sjekker du om det finnes en blomst? Hva gjør du om det finnes en blomst?"
+          "courseD_bee_conditionals5_b": "Inni \"så lenge det finnes vei foran\"-blokken må du gå fremover og sjekke om det finnes en blomst. Hvordan sjekker du om det finnes en blomst? Hva gjør du om det finnes en blomst?",
+          "courseD_bee_conditionals5_c": "Det er 3 av rektangelets sider som har blomster, så koden trenger en `gjenta 3 ganger`-blokk. Ved hver gjentakelse må bien fortsette langs veien, `så lenge det finnes vei foran`. For å fortsette langs veien må bien `gå fremover`. Så lenge bien er på veien må den sjekke om det finnes en blomst. Hvis det er en blomst der må bien `få nektar`."
+        },
+        "courseD_bee_conditionals5_dani": {
+          "courseD_bee_conditionals5_a": "Tenk på hver side av den rektangulære veien som en vei i seg selv. Sett opp en løkke i løkke med en \"gjenta\"-blokk og en \"så lenge det finnes vei foran\"-blokk på innsiden. Hvor mange veier må bien fly ned hvis bien må innom hver side som har en blomst?",
+          "courseD_bee_conditionals5_b": "Inni \"så lenge det finnes vei foran\"-blokken må du gå fremover og sjekke om det finnes en blomst. Hvordan sjekker du om det finnes en blomst? Hva gjør du om det finnes en blomst?",
+          "courseD_bee_conditionals5_c": "Det er 3 av rektangelets sider som har blomster, så koden trenger en `gjenta 3 ganger`-blokk. Ved hver gjentakelse må bien fortsette langs veien, `så lenge det finnes vei foran`. For å fortsette langs veien må bien `gå fremover`. Så lenge bien er på veien må den sjekke om det finnes en blomst. Hvis det er en blomst der må bien `få nektar`."
         },
         "courseD_bee_conditionals8": {
+          "courseD_bee_conditionals8_a": "\\*\\* Husk: \\*\\* Denne oppgaven endres hver gang den kjøres.  \n\nDu bør bruke en betinget blokk (`hvis` eller `hvis/ellers`) for å løse utfordringen."
+        },
+        "courseD_bee_conditionals82022": {
           "courseD_bee_conditionals8_a": "\\*\\* Husk: \\*\\* Denne oppgaven endres hver gang den kjøres.  \n\nDu bør bruke en betinget blokk (`hvis` eller `hvis/ellers`) for å løse utfordringen."
         },
         "courseD_bee_conditionals8_2018": {
@@ -1054,11 +1477,17 @@
         "courseD_bee_conditionals8_2020": {
           "courseD_bee_conditionals8_a": "\\*\\* Husk: \\*\\* Denne oppgaven endres hver gang den kjøres.  \n\nDu bør bruke en betinget blokk (`hvis` eller `hvis/ellers`) for å løse utfordringen."
         },
+        "courseD_bee_conditionals8_2021": {
+          "courseD_bee_conditionals8_a": "\\*\\* Husk: \\*\\* Denne oppgaven endres hver gang den kjøres.  \n\nDu bør bruke en betinget blokk (`hvis` eller `hvis/ellers`) for å løse utfordringen."
+        },
         "courseD_maze_ramp6": {
           "courseC_maze_programming6_a": "Det er to måter å løse denne oppgaven!"
         },
         "courseD_scrat_ramp7": {
           "courseD_scrat_programming6_a": "Det er to måter å løse denne oppgaven!"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "For å tegne en side må du bruke `flytt fremover med 100 piksler`-blokken og endre 100 til 200."
         },
         "courseE_artist_concept_challenge1": {
           "courseE_artist_concept_challenge1_a": "Halv-sekskanten har en \\*\\* lengde på 30 \\*\\* og snur seg \\*\\* 60 grader \\*\\*.  ",
@@ -1076,7 +1505,14 @@
           "courseE_artist_functions1_a": "Sidene på hver firkant er på 100 pixler. Det betyr at du må flytte 175 pixler fram før du kan tegne den andre firkanten.",
           "courseE_artist_functions1_b": "Det er OK å la linjene overlappe hverandre for å tegne brillene."
         },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "Sidene på hver firkant er på 100 pixler. Det betyr at du må flytte 175 pixler fram før du kan tegne den andre firkanten.",
+          "courseE_artist_functions1_b": "Det er OK å la linjene overlappe hverandre for å tegne brillene."
+        },
         "courseE_artist_functions2": {
+          "courseD_artist_functions2_a": "Ditt program skal:\n\n-   Bruke Funksjon\n-   Flytte seg fremover 100 + 75 piksler\n-   Bruke Funksjon"
+        },
+        "courseE_artist_functions22022": {
           "courseD_artist_functions2_a": "Ditt program skal:\n\n-   Bruke Funksjon\n-   Flytte seg fremover 100 + 75 piksler\n-   Bruke Funksjon"
         },
         "courseE_artist_functions2_2018": {
@@ -1088,10 +1524,19 @@
         "courseE_artist_functions2_2020": {
           "courseD_artist_functions2_a": "Ditt program skal:\n\n-   Bruke Funksjon\n-   Flytte seg fremover 100 + 75 piksler\n-   Bruke Funksjon"
         },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_a": "Ditt program skal:\n\n-   Bruke Funksjon\n-   Flytte seg fremover 100 + 75 piksler\n-   Bruke Funksjon"
+        },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_a": "Ditt program skal:\n- Bruke Funksjon\n- Flytte seg fremover 100 + 75 piksler\n- Bruke Funksjon"
+          "courseD_artist_functions2_a": "Ditt program skal:\n\n-   Bruke Funksjon\n-   Flytte seg fremover 100 + 75 piksler\n-   Bruke Funksjon"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_a": "Ditt program skal:\n\n-   Bruke Funksjon\n-   Flytte seg fremover 100 + 75 piksler\n-   Bruke Funksjon"
         },
         "courseE_artist_functions8": {
+          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseE_artist_functions82022": {
           "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "courseE_artist_functions8_2018": {
@@ -1101,6 +1546,9 @@
           "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "courseE_artist_functions8_2020": {
+          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseE_artist_functions8_2021": {
           "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "courseE_artist_ramp8": {
@@ -1125,6 +1573,9 @@
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_a": "Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig."
         },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_a": "Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig."
+        },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_a": "Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig."
         },
@@ -1132,6 +1583,9 @@
           "courseE_farmer_functions1_a": "Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig."
         },
         "courseE_farmer_functions1_2020": {
+          "courseE_farmer_functions1_a": "Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig."
+        },
+        "courseE_farmer_functions1_2021": {
           "courseE_farmer_functions1_a": "Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig."
         },
         "courseF_artist_for4": {
@@ -1151,6 +1605,11 @@
           "courseF_artist_for_challenge1_b": "Gjennomsiktigheten på pennen er alltid `teller`/2.",
           "courseF_artist_for_challenge1_c": "Ikke glem å hoppe tilbake, snu, hoppe igjen og så snu tilbake hver gang du lager et kvadrat!"
         },
+        "courseF_artist_for_challenge12022": {
+          "courseF_artist_for_challenge1_a": "Pennen sin `bredde` er 1. Det første kvadratet har sider på 50 piksler og hvert kvadrat er 50 piksler bredere enn den forrige.",
+          "courseF_artist_for_challenge1_b": "Gjennomsiktigheten på pennen er alltid `teller`/2.",
+          "courseF_artist_for_challenge1_c": "Ikke glem å hoppe tilbake, snu, hoppe igjen og så snu tilbake hver gang du lager et kvadrat!"
+        },
         "courseF_artist_for_challenge1_2018": {
           "courseF_artist_for_challenge1_a": "Pennen sin `bredde` er 1. Det første kvadratet har sider på 50 piksler og hvert kvadrat er 50 piksler bredere enn den forrige.",
           "courseF_artist_for_challenge1_b": "Gjennomsiktigheten på pennen er alltid `teller`/2.",
@@ -1166,21 +1625,34 @@
           "courseF_artist_for_challenge1_b": "Gjennomsiktigheten på pennen er alltid `teller`/2.",
           "courseF_artist_for_challenge1_c": "Ikke glem å hoppe tilbake, snu, hoppe igjen og så snu tilbake hver gang du lager et kvadrat!"
         },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_a": "Pennen sin `bredde` er 1. Det første kvadratet har sider på 50 piksler og hvert kvadrat er 50 piksler bredere enn den forrige.",
+          "courseF_artist_for_challenge1_b": "Gjennomsiktigheten på pennen er alltid `teller`/2.",
+          "courseF_artist_for_challenge1_c": "Ikke glem å hoppe tilbake, snu, hoppe igjen og så snu tilbake hver gang du lager et kvadrat!"
+        },
         "courseF_artist_for_challenge2": {
-          "courseF_artist_for_challenge2_c": "Løkka `tell` går fra 5 til 250 med steg på 2. ",
-          "courseF_artist_for_challenge2_a": "Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`."
+          "courseF_artist_for_challenge2_a": "Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`.",
+          "courseF_artist_for_challenge2_c": "Løkka `tell` går fra 5 til 250 med steg på 2. "
+        },
+        "courseF_artist_for_challenge22022": {
+          "courseF_artist_for_challenge2_a": "Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`.",
+          "courseF_artist_for_challenge2_c": "Løkka `tell` går fra 5 til 250 med steg på 2. "
         },
         "courseF_artist_for_challenge2_2018": {
-          "courseF_artist_for_challenge2_c": "Løkka `tell` går fra 5 til 250 med steg på 2. ",
-          "courseF_artist_for_challenge2_a": "Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`."
+          "courseF_artist_for_challenge2_a": "Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`.",
+          "courseF_artist_for_challenge2_c": "Løkka `tell` går fra 5 til 250 med steg på 2. "
         },
         "courseF_artist_for_challenge2_2019": {
-          "courseF_artist_for_challenge2_c": "Løkka `tell` går fra 5 til 250 med steg på 2. ",
-          "courseF_artist_for_challenge2_a": "Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`."
+          "courseF_artist_for_challenge2_a": "Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`.",
+          "courseF_artist_for_challenge2_c": "Løkka `tell` går fra 5 til 250 med steg på 2. "
         },
         "courseF_artist_for_challenge2_2020": {
-          "courseF_artist_for_challenge2_c": "Løkka `tell` går fra 5 til 250 med steg på 2. ",
-          "courseF_artist_for_challenge2_a": "Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`."
+          "courseF_artist_for_challenge2_a": "Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`.",
+          "courseF_artist_for_challenge2_c": "Løkka `tell` går fra 5 til 250 med steg på 2. "
+        },
+        "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_a": "Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`.",
+          "courseF_artist_for_challenge2_c": "Løkka `tell` går fra 5 til 250 med steg på 2. "
         },
         "courseF_artist_fwp_challenge2": {
           "courseF_artist_fwp_challenge1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
@@ -1224,6 +1696,11 @@
           "courseF_bee_for_challenge2_b": "Prøv å bruke to `tell`-løkker: En for å klatre opp og få tak i nektar og en annen for å klatre ned og lage honning.",
           "courseF_bee_for_challenge2_c": "Legg merke til at `tell`-løkkene trenger flere vanlige løkker inni seg som gjentar `teller` ganger for å lage det økende trappemønsteret. \n\nDen andre `tell`-løkka trenger kun en vanlig løkke for å lage `teller` antall honning."
         },
+        "courseF_bee_for_challenge22022": {
+          "courseF_bee_for_challenge2_a": "Ta en titt på dette alternativet for bevegelse:\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
+          "courseF_bee_for_challenge2_b": "Prøv å bruke to `tell`-løkker: En for å klatre opp og få tak i nektar og en annen for å klatre ned og lage honning.",
+          "courseF_bee_for_challenge2_c": "Legg merke til at `tell`-løkkene trenger flere vanlige løkker inni seg som gjentar `teller` ganger for å lage det økende trappemønsteret. \n\nDen andre `tell`-løkka trenger kun en vanlig løkke for å lage `teller` antall honning."
+        },
         "courseF_bee_for_challenge2_2018": {
           "courseF_bee_for_challenge2_a": "Ta en titt på dette alternativet for bevegelse:\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
           "courseF_bee_for_challenge2_b": "Prøv å bruke to `tell`-løkker: En for å klatre opp og få tak i nektar og en annen for å klatre ned og lage honning.",
@@ -1235,6 +1712,11 @@
           "courseF_bee_for_challenge2_c": "Legg merke til at `tell`-løkkene trenger flere vanlige løkker inni seg som gjentar `teller` ganger for å lage det økende trappemønsteret. \n\nDen andre `tell`-løkka trenger kun en vanlig løkke for å lage `teller` antall honning."
         },
         "courseF_bee_for_challenge2_2020": {
+          "courseF_bee_for_challenge2_a": "Ta en titt på dette alternativet for bevegelse:\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
+          "courseF_bee_for_challenge2_b": "Prøv å bruke to `tell`-løkker: En for å klatre opp og få tak i nektar og en annen for å klatre ned og lage honning.",
+          "courseF_bee_for_challenge2_c": "Legg merke til at `tell`-løkkene trenger flere vanlige løkker inni seg som gjentar `teller` ganger for å lage det økende trappemønsteret. \n\nDen andre `tell`-løkka trenger kun en vanlig løkke for å lage `teller` antall honning."
+        },
+        "courseF_bee_for_challenge2_2021": {
           "courseF_bee_for_challenge2_a": "Ta en titt på dette alternativet for bevegelse:\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
           "courseF_bee_for_challenge2_b": "Prøv å bruke to `tell`-løkker: En for å klatre opp og få tak i nektar og en annen for å klatre ned og lage honning.",
           "courseF_bee_for_challenge2_c": "Legg merke til at `tell`-løkkene trenger flere vanlige løkker inni seg som gjentar `teller` ganger for å lage det økende trappemønsteret. \n\nDen andre `tell`-løkka trenger kun en vanlig løkke for å lage `teller` antall honning."
@@ -1254,488 +1736,6 @@
         },
         "courseF_playlab_variables_challenge2": {
           "courseF_playlab_variables_challenge2_b": "Du kan forandre på hvor langt du beveger figuren din hver gang, ved å trykke på en av piltastene."
-        },
-        "Dance_Party_11b": {
-          "validation": "**Hvordan fullfører jeg dette nivået?**\n\n-   Bruk `når venstre trykkes`-blokken for å få roboten til å gjøre en dansebevegelse når du trykker på venstrepilen.\n\n_Dette nivået avsluttes etter 7 takter._"
-        },
-        "course1_artist_loops_challenge2": {
-          "harvey_tictactoe": "Du kan bruke `hopp`-blokker for å flytte deg til andre ruter på spillbrettet."
-        },
-        "course1_collector_loops_challenge3": {
-          "courseB_collector_loops_challenge1_b": "Start med å lage en løkke med kommandoene \"gå sør\" og \"hent skatt\"\n\n<xml>\n  <block type=\"maze_moveSouth\"/><next>\n  <block type=\"collector_collect\"/></next>\n  </xml>",
-          "courseB_collector_loops_challenge1_a": "Mønsteret for å gå nord er litt annerledes enn mønsteret for å gå sør.\n\n<xml>\n  <block type=\"collector_collect\"/><next>\n  <block type=\"maze_moveNorth\"/></next>next>\n  </xml>"
-        },
-        "course1_maze_debugging_challenge2": {
-          "courseB_maze_seq_challenge2_b": "Gjør om på rekkefølgen til blokkene, sånn at du kan følge den midterste veien frem til grisen!"
-        },
-        "course1_playlab_events_challenge1": {
-          "courseA_playlab_events_challenge1_e": "Til slutt, få Trollmannen Wendel til å vise seg når du trykker på Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
-        },
-        "courseC_video_angles": {
-          "courseD_scrat_programming6_a": "Det er to måter å løse denne oppgaven!"
-        },
-        "courseD_video_nestedLoopsArtist": {
-          "courseE_artist_ramp8_a": "For å tegne en side må du bruke `flytt fremover med 100 piksler`-blokken og endre 100 til 200."
-        },
-        "CourseD_Dance_2020_01_2021": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Pass på at en danser vises på skjermen.\n\n-   dette nivået slutter etter 4 takter.\\*",
-          "challenges": "**Valgfrie utfordringer**\n\n-   velg en annen sang.\n-   flytt danseren din til et annet sted.\n-   lag flere dansere."
-        },
-        "CourseD_Dance_2020_02_2021": {
-          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Danseren må foreta en bevegelse.\n-   Du må trykke på en piltast.\n\n_Denne oppgaven slutter etter 4 takter._",
-          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block."
-        },
-        "CourseD_Dance_2020_03_2021": {
-          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Begge danserne må utføre en bevegelse.\n-   Du må bruke piltastene.\n\n_Denne oppgaven slutter etter 6 takter._",
-          "challenges": "**Valgfri utfordring**\n\n-   Få en danser til å respondere på venstre og høyre piltaster."
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Danseren må bytte til en ny posisjon etter 4 takter.\n\n-   Nivået ender etter 7 takter.\\*"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Etter 6 takter må din danser må gjøre en annen dans enn den gjorde etter 4 takter.\n\n-   Nivået ender etter 11 takter.\\*",
-          "challenges": "**Valgfri utfordring**\n\n-   Bytt bakgrunn når danseren bytter bevegelse."
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Lag en hoveddanser og en gruppe med bakgrunnsdansere innen de fire første taktene av sangen.\n\n_Denne oppgaven slutter etter 7 takter._",
-          "challenges": "**Valgfri utfordring**\n\n-   Lag mange grupper med bakgrunnsdansere."
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre størrelsen på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._",
-          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner."
-        },
-        "CourseD_Dance_2020_08_2021": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._",
-          "tint_hint": "Har du lagt merke til at danserne ikke endrer til nøyaktig den samme fargen som du velger? Det er fordi **fargetonen** mikser fargen du velger med den egentlige fargen på danseren."
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Bare trykk på \"Fullfør\" knappen!",
-          "repeat_every_ideas": "**Trenger du noen ideer?**\n\n-   Endre danserens størrelse gjentatte ganger for å få den til å vokse.\n-   Endre danserens rotasjon gjentatte ganger for å få den til å spinne.\n\n_Du kan også bruke negative tall for å skape en motsatt effekt!_",
-          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
-        },
-        "CourseD_Dance_2020_bonus1_2021": {
-          "alternate": "Variasjonsblokka er i \"Dansere\" kategorien."
-        },
-        "CourseE_HOC 2018 Level_10_2021": {
-          "voyage_aquatic_10a": "Se de \\*\\* havlanternene\\*\\*! \\[] (<https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png>)? Hvordan kan du bruke en \"hvis blokk\" med dem for å komme gjennom havmonumentet?"
-        },
-        "CourseE_HOC 2018 Level_7a_2021": {
-          "aquatic7": "Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning."
-        },
-        "CourseE_HOC 2018 Level_9b_2021": {
-          "voyage_aquatic_9a": "Se de røde og blå korall blokkene? Bruk dem for å velge høyre eller venstre."
-        },
-        "Function intro Ryan_2021": {
-          "Function_intro_Ryan_b": "Hvis du kaller funksjonene riktig, er dette veien du vil reise...",
-          "Function_intro_Ryan_a": "Du kan kalle en funksjon mange ganger i programmet ditt!  Prøv å kalle den to ganger for å løse denne oppgaven."
-        },
-        "MC_HOC_2017_01_RETRY_2021": {
-          "MC_HOC_2017_01_RETRY_a": "Dra en `gå fremover`-blokk fra verktøykassen inn i arbeidsrområdet og fest den på plass under `når den kjører`-blokka.",
-          "MC_HOC_2017_01_RETRY_b": "Ikke glem å trykk \"Kjør\" for å kjøre koden for agenten.",
-          "MC_HOC_2017_01_RETRY_c": "Når agenten har kjørt all koden sin kan du flytte spilleren med piltastene!"
-        },
-        "MC_HOC_2017_02_Cole_2021": {
-          "MC_HOC_2017_02_Cole_a": "Flytt agenten framover to plasser for å stå på trykkplaten. Det vil åpne døra for spilleren.",
-          "MC_HOC_2017_02_Cole_b": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
-          "MC_HOC_2017_02_Cole_c": "Når agenten har åpnet døra, bruk piltastene for å flytte spilleren til kartet!",
-          "MC_HOC_2017_02_Cole_d": "Pass på at agenten følger stien markert på kartet!"
-        },
-        "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_a": "Når du får agenten til trykkplaten kan du bruke piltastene til å flytte spilleren til den kompasset!",
-          "MC_HOC_2017_03_Cole_b": "Føles koden litt for lang ut? Prøv å bruke en `gjenta`-løkke og se om du kan gjøre den kortere!"
-        },
-        "MC_HOC_2017_04POINT5_RYAN_2021": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Bruk `snu mot høyre` blokk for å endre retningen til agenten ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten trenger bare å komme seg til den første trykkplaten for at Alex eller Steve til øksa."
-        },
-        "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Agenten trenger å `gå fremover` 7 ganger. Hvordan kan du bruke en `gjenta`-løkke for å få det til å skje?",
-          "MC_HOC_2017_04_Cole_c": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
-          "MC_HOC_2017_04_Cole_b": "Når agenten kommer seg på trykkplaten åpnes døra for spilleren."
-        },
-        "MC_HOC_2017_05_Cole_2021": {
-          "MC_HOC_2017_05_Cole_a": "Visste du at du kan putte mer enn én blokk med kode inni en løkke? Prøv å flytte fremover **og** plassere en planke inni en `gjenta` for å fullføre denne oppgaven.",
-          "MC_HOC_2017_05_Cole_b": "Få agenten over elva, bygg en bro mens du går."
-        },
-        "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_a": "Hvor mange ganger kjører denne løkka? Hvor mange ganger _burde_ den kjøre?",
-          "MC_HOC_2017_06_Cole_b": "Hjelp agenten bygge en bro over vannet! "
-        },
-        "MC_HOC_2017_07_Cole_2021": {
-          "MC_HOC_2017_07_Cole_c": "Alt du må gjøre er å få agenten til å rydde veien til minecarten.",
-          "MC_HOC_2017_07_Cole_a": "For å løse denne oppgaven må du finne ut hva funksjone `clear path` gjør og kalle den så mange ganger som nødvendig ved å bruke den lille grønne blokken `clear path` i verktøykassa.",
-          "MC_HOC_2017_07_Cole_b": "Prøv å bruke funksjonsblokkene sammen med andre blokker fra verktøykassa for å løse denne oppgaven."
-        },
-        "MC_HOC_2017_10_RETRY_2021": {
-          "MC_HOC_2017_10_Cole_b": "Vet du ikke hvor du skal gå? Se om du kan finne den prikkete linja!",
-          "MC_HOC_2017_10_Cole_a": "Bruk funksjoner for å løse denne oppgaven på en enklere måte!"
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_a": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
-          "MC_HOC_2017_08_RY_b": "Det er MANGE måter å løse denne oppgaven på! Prøv noen!",
-          "MC_HOC_2017_08_RY_c": "Prøv å følge den prikkete linja for en enkel vei over lavaen."
-        },
-        "MC_HOC_2017_FP20x20_2021": {
-          "MC_HOC_2017_13_Cole_a": "Prøv å få agenten til å bygge noen minecart-spor slik at du kan utforske verdenen!"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "mc_6_c": "Du kan sette flere blokker inne i en 'gjenta'-løkke."
-        },
-        "Overworld Move to Sheep_2021": {
-          "mc_1_a": "'Gå fremover'-blokken er på toppen av verktøykassen.",
-          "mc_1_b": "Pass på at begge 'gå-fremover'-blokkene er festet til 'når-den-kjører'-blokken."
-        },
-        "Overworld Place Wall_2021": {
-          "mc_5_b": "Pass på at begge blokkene er på innsiden av 'gjenta'-løkken for å kunne kjøre koden mer enn en gang."
-        },
-        "Overworld Plant Crops_2021": {
-          "mc_7_c": "Du kan sette flere blokker inne i en 'gjenta'-løkke."
-        },
-        "Overworld Powered Minecart_2021": {
-          "mc_13_b": "Bruk 'gjenta'-løkken for å lage koden din kortere."
-        },
-        "Overworld Shear Sheep_2021": {
-          "mc_3_b": "Dersom du trenger å forandre på hvilken vei du står, bruk en 'snu'-blokk."
-        },
-        "Underground If Statements_2021": {
-          "mc_12_a": "Du finner redstone i blokkene med røde merker på."
-        },
-        "courseA_collector_loops_challenge1_2021": {
-          "courseA_collector_loops_challenge1_a": "Hvis noe går galt kan du forsøke å endre tallene i hver løkke.",
-          "courseA_collector_loops_challenge1_b": "Du trenger ikke å bruke løkke hvis du bare skal gjøre noe én gang."
-        },
-        "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_a": "Om du har problemer med å få fuglen til å bevege seg, sjekk at blokkene er koblet sammen med \"når den kjører\" blokken[0]"
-        },
-        "courseA_maze_seq_challenge1_2021": {
-          "courseA_maze_seq_challenge1_a": "Det er to løsninger til dette puslespillet."
-        },
-        "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!",
-          "courseB_maze_seq1_b": "Dra tre av disse <xml><block type=\"maze_moveSouth\"/></xml> pilene sammen med  <xml><block type=\"when_run\"/></xml> blokken for å få Scrat til eikenøtten"
-        },
-        "courseB_maze_seq8_2021": {
-          "courseB_maze_seq8_b": "Det er to måter å løse denne oppgaven!",
-          "courseB_maze_seq8_a": "Prøv å legg en blokk om gangen til du løser oppgaven.",
-          "courseB_maze_seq8_c": "Vet du ikke hvilken vei å gå? Prøv denne ruten!"
-        },
-        "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "*\"Hvis du bruker <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">flyttFremover</title><title name=\"VALUE\">100</title></block></xml>-blokken, vil jeg tegne en linje.\"*",
-          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">snuHøyre</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>-blokken."
-        },
-        "courseC_flappy_events1_2021": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-        },
-        "courseC_maze_programming6_2021": {
-          "courseC_maze_programming6_a": "Det er to måter å løse denne oppgaven!",
-          "courseC_maze_programming6_b": "Følg fingeren din fra fuglen til grisen. Hvilke steg måtte du ta?"
-        },
-        "courseD_artist_nestedLoops3_2021": {
-          "courseD_artist_nestedLoops3_a": "Prøv å bruke \"hopp fremover\" blokken for å komme fra toppen av én firkant til stedet der du vil begynne neste. \n\nHvis din rute er 20 piksler høy og de er 20 piksler fra hverandre, hvor langt trenger du å hoppe?"
-        },
-        "courseD_artist_nestedLoops9_2021": {
-          "courseD_artist_nestedLoops9_c": "Bruk to \"løkke i løkke\":\n\n-   Gjenta åtte ganger.\n-   Tegn et kvadrat.\n-   Hopp fremover 50 piksler.\n-   Snu 45 grader mot høyre.\n-   Gjenta åtte ganger.\n-   Tegn en trekant.\n-   Hopp fremover 50 piksler.\n-   Snu 45 grader mot høyre."
-        },
-        "courseD_bee_conditionals4_dani": {
-          "courseD_bee_conditionals4_c": "Ved å bruke blokken <xml><block type=\"maze_untilBlocked\"/></xml> går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst, hva skal bien gjøre?"
-        },
-        "courseD_bee_conditionals5_dani": {
-          "courseD_bee_conditionals5_a": "Tenk på hver side av den rektangulære veien som en vei i seg selv. Sett opp en løkke i løkke med en \"gjenta\"-blokk og en \"så lenge det finnes vei foran\"-blokk på innsiden. Hvor mange veier må bien fly ned hvis bien må innom hver side som har en blomst?",
-          "courseD_bee_conditionals5_c": "Det er 3 av rektangelets sider som har blomster, så koden trenger en `gjenta 3 ganger`-blokk. Ved hver gjentakelse må bien fortsette langs veien, `så lenge det finnes vei foran`. For å fortsette langs veien må bien `gå fremover`. Så lenge bien er på veien må den sjekke om det finnes en blomst. Hvis det er en blomst der må bien `få nektar`.",
-          "courseD_bee_conditionals5_b": "Inni \"så lenge det finnes vei foran\"-blokken må du gå fremover og sjekke om det finnes en blomst. Hvordan sjekker du om det finnes en blomst? Hva gjør du om det finnes en blomst?"
-        },
-        "courseD_bee_conditionals8_2021": {
-          "courseD_bee_conditionals8_a": "\\*\\* Husk: \\*\\* Denne oppgaven endres hver gang den kjøres.  \n\nDu bør bruke en betinget blokk (`hvis` eller `hvis/ellers`) for å løse utfordringen."
-        },
-        "courseE_artist_functions1_dani": {
-          "courseE_artist_functions1_a": "Sidene på hver firkant er på 100 pixler. Det betyr at du må flytte 175 pixler fram før du kan tegne den andre firkanten.",
-          "courseE_artist_functions1_b": "Det er OK å la linjene overlappe hverandre for å tegne brillene."
-        },
-        "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_a": "Ditt program skal:\n\n-   Bruke Funksjon\n-   Flytte seg fremover 100 + 75 piksler\n-   Bruke Funksjon"
-        },
-        "courseE_artist_functions2_dani": {
-          "courseD_artist_functions2_a": "Ditt program skal:\n\n-   Bruke Funksjon\n-   Flytte seg fremover 100 + 75 piksler\n-   Bruke Funksjon"
-        },
-        "courseE_artist_functions8_2021": {
-          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-        },
-        "courseE_farmer_functions1_2021": {
-          "courseE_farmer_functions1_a": "Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig."
-        },
-        "courseF_artist_for_challenge1_2021": {
-          "courseF_artist_for_challenge1_a": "Pennen sin `bredde` er 1. Det første kvadratet har sider på 50 piksler og hvert kvadrat er 50 piksler bredere enn den forrige.",
-          "courseF_artist_for_challenge1_b": "Gjennomsiktigheten på pennen er alltid `teller`/2.",
-          "courseF_artist_for_challenge1_c": "Ikke glem å hoppe tilbake, snu, hoppe igjen og så snu tilbake hver gang du lager et kvadrat!"
-        },
-        "courseF_artist_for_challenge2_2021": {
-          "courseF_artist_for_challenge2_c": "Løkka `tell` går fra 5 til 250 med steg på 2. ",
-          "courseF_artist_for_challenge2_a": "Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`."
-        },
-        "courseF_bee_for_challenge2_2021": {
-          "courseF_bee_for_challenge2_a": "Ta en titt på dette alternativet for bevegelse:\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
-          "courseF_bee_for_challenge2_b": "Prøv å bruke to `tell`-løkker: En for å klatre opp og få tak i nektar og en annen for å klatre ned og lage honning.",
-          "courseF_bee_for_challenge2_c": "Legg merke til at `tell`-løkkene trenger flere vanlige løkker inni seg som gjentar `teller` ganger for å lage det økende trappemønsteret. \n\nDen andre `tell`-løkka trenger kun en vanlig løkke for å lage `teller` antall honning."
-        },
-        "CourseD_Dance_Party_08": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n\\*To dansere må ha en størrelse annet enn 100.\n\n\\*Denne oppgaven slutter etter 5 takter.",
-          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner.)"
-        },
-        "CourseD_Dance_Party_09": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 7 takter._"
-        },
-        "CourseD_Dance_Party_10": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n\\*Egenskapene til to eller flere danse må endres.\n\n\\*dette nivået slutter etter 7 takter."
-        },
-        "CourseD_Dance_Party_11": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
-        },
-        "CourseD_Dance_Party_11_5": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
-        },
-        "Dance_Party_08": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n\\*To dansere må ha en størrelse annet enn 100.\n\n\\*Denne oppgaven slutter etter 5 takter.",
-          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner.)"
-        },
-        "Dance_Party_09": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 7 takter._"
-        },
-        "Dance_Party_10": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n\\*Egenskapene til to eller flere danse må endres.\n\n\\*dette nivået slutter etter 7 takter."
-        },
-        "Dance_Party_11": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
-        },
-        "Dance_Party_11_5": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
-        },
-        "courseB_maze_seq4_2021": {
-          "courseB_maze_seq4_a": "Prøv å legg til en instruksjon av gangen til du kommer til eikenøtten",
-          "courseB_maze_seq4_b": "Du vil bruke <xml><block type=\"maze_moveEast\"/></xml> blokken til å løse denne oppgaven"
-        },
-        "courseB_maze_seq5_2021": {
-          "courseB_maze_seq5_a": "Hvis du står fast prøv å tegn ruten på papir",
-          "courseB_maze_seq5_b": "Det er to måter å løse denne oppgaven på!",
-          "courseB_maze_seq5_c": "Ikke sikker hvordan du skal komme deg til eikenøtten? Prøve denne ruten"
-        },
-        "courseB_maze_seq6_2021": {
-          "courseB_maze_seq6_a": "Koden skal til slutt ha tre bevegelsesblokker.",
-          "courseB_maze_seq6_b": "Hvis du står fast, prøv å løs oppgaven i to deler, en sideveis og en opp-og-ned.",
-          "courseB_maze_seq5_c": "Det er to måter å løse oppgaven på.",
-          "courseB_maze_seq5_d": "Skjønner ikke hvordan du skal komme deg til eikenøtten? Prøv denne ruten!"
-        },
-        "courseB_maze_seq7_2021": {
-          "courseB_maze_seq7_a": "Legg 1 blokk for å flytte Scrat til eikenøtten.",
-          "courseB_maze_seq7_b": "Prøv å kjøre koden som blir gitt her og se hvor du ender opp.",
-          "courseB_maze_seq7_c": "Klarer du ikke å nå eikenøtten? Prøv denne ruten!"
-        },
-        "courseB_maze_seq9_2021": {
-          "courseB_maze_seq9_a": "Prøv å skriv ned alle stegene på en papirlapp først.",
-          "courseB_maze_seq9_b": "Bygg programmet ditt en blokk av gangen og test ettersom du bygger.",
-          "courseB_maze_seq9_c": "Det er to måter å løse denne oppgaven på.",
-          "courseB_maze_seq9_d": "Sitter du fast? Prøv denne ruten!"
-        },
-        "courseB_maze_seq_challenge1_2021": {
-          "courseB_maze_seq_challenge1_a": "Den korteste ruten er ikke sikker fungere denne gangen.",
-          "courseB_maze_seq_challenge1_b": "Prøv å bruke <xml><block type=\"maze_moveWest\"/></xml> blokken til å begynne med."
-        },
-        "courseB_maze_seq_challenge2_2021": {
-          "courseB_maze_seq_challenge2_a": "Du trenger ikke legge til eller fjerne blokker for å løse denne oppgaven.",
-          "courseB_maze_seq_challenge2_b": "Omroker blokkene og ta trappetrinn ruten"
-        },
-        "2-3 Maze 3": {
-          "2-3_Maze_6_a": "Det er to måter å løse denne oppgaven!"
-        },
-        "Artist Autorun Test": {
-          "2-3_Artist_Functions_4_a": "For å ferdigstille designet må artisten  rotere 120 grader mellom hver firkant."
-        },
-        "MC Agent Freeplay": {
-          "MC_HOC_2017_13_Cole_a": "Prøv å få agenten til å bygge noen minecart-spor slik at du kan utforske verdenen!"
-        },
-        "CourseE_HOC 2018 Level_102022": {
-          "voyage_aquatic_10a": "Se de \\*\\* havlanternene\\*\\*! \\[] (<https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png>)? Hvordan kan du bruke en \"hvis blokk\" med dem for å komme gjennom havmonumentet?"
-        },
-        "CourseE_HOC 2018 Level_7a2022": {
-          "aquatic7": "Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning."
-        },
-        "CourseE_HOC 2018 Level_9b2022": {
-          "voyage_aquatic_9a": "Se de røde og blå korall blokkene? Bruk dem for å velge høyre eller venstre."
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_b": "Hvis du kaller funksjonene riktig, er dette veien du vil reise...",
-          "Function_intro_Ryan_a": "Du kan kalle en funksjon mange ganger i programmet ditt!  Prøv å kalle den to ganger for å løse denne oppgaven."
-        },
-        "MC_HOC_2017_01_RETRY2022": {
-          "MC_HOC_2017_01_RETRY_a": "Dra en `gå fremover`-blokk fra verktøykassen inn i arbeidsrområdet og fest den på plass under `når den kjører`-blokka.",
-          "MC_HOC_2017_01_RETRY_b": "Ikke glem å trykk \"Kjør\" for å kjøre koden for agenten.",
-          "MC_HOC_2017_01_RETRY_c": "Når agenten har kjørt all koden sin kan du flytte spilleren med piltastene!"
-        },
-        "MC_HOC_2017_02_Cole2022": {
-          "MC_HOC_2017_02_Cole_a": "Flytt agenten framover to plasser for å stå på trykkplaten. Det vil åpne døra for spilleren.",
-          "MC_HOC_2017_02_Cole_b": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
-          "MC_HOC_2017_02_Cole_c": "Når agenten har åpnet døra, bruk piltastene for å flytte spilleren til kartet!",
-          "MC_HOC_2017_02_Cole_d": "Pass på at agenten følger stien markert på kartet!"
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_a": "Når du får agenten til trykkplaten kan du bruke piltastene til å flytte spilleren til den kompasset!",
-          "MC_HOC_2017_03_Cole_b": "Føles koden litt for lang ut? Prøv å bruke en `gjenta`-løkke og se om du kan gjøre den kortere!"
-        },
-        "MC_HOC_2017_04POINT5_RYAN2022": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Bruk `snu mot høyre` blokk for å endre retningen til agenten ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten trenger bare å komme seg til den første trykkplaten for at Alex eller Steve til øksa."
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "Agenten trenger å `gå fremover` 7 ganger. Hvordan kan du bruke en `gjenta`-løkke for å få det til å skje?",
-          "MC_HOC_2017_04_Cole_c": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
-          "MC_HOC_2017_04_Cole_b": "Når agenten kommer seg på trykkplaten åpnes døra for spilleren."
-        },
-        "MC_HOC_2017_05_Cole2022": {
-          "MC_HOC_2017_05_Cole_a": "Visste du at du kan putte mer enn én blokk med kode inni en løkke? Prøv å flytte fremover **og** plassere en planke inni en `gjenta` for å fullføre denne oppgaven.",
-          "MC_HOC_2017_05_Cole_b": "Få agenten over elva, bygg en bro mens du går."
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_a": "Hvor mange ganger kjører denne løkka? Hvor mange ganger _burde_ den kjøre?",
-          "MC_HOC_2017_06_Cole_b": "Hjelp agenten bygge en bro over vannet! "
-        },
-        "MC_HOC_2017_07_Cole2022": {
-          "MC_HOC_2017_07_Cole_c": "Alt du må gjøre er å få agenten til å rydde veien til minecarten.",
-          "MC_HOC_2017_07_Cole_a": "For å løse denne oppgaven må du finne ut hva funksjone `clear path` gjør og kalle den så mange ganger som nødvendig ved å bruke den lille grønne blokken `clear path` i verktøykassa.",
-          "MC_HOC_2017_07_Cole_b": "Prøv å bruke funksjonsblokkene sammen med andre blokker fra verktøykassa for å løse denne oppgaven."
-        },
-        "MC_HOC_2017_10_RETRY2022": {
-          "MC_HOC_2017_10_Cole_b": "Vet du ikke hvor du skal gå? Se om du kan finne den prikkete linja!",
-          "MC_HOC_2017_10_Cole_a": "Bruk funksjoner for å løse denne oppgaven på en enklere måte!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_a": "Trykk på \"Kjør\"!\n\nDu kan kjøre koden selv om den ikke er riktig. Kjør og nullstill koden om og om igjen helt til du finner ut hva som går galt.",
-          "MC_HOC_2017_08_RY_b": "Det er MANGE måter å løse denne oppgaven på! Prøv noen!",
-          "MC_HOC_2017_08_RY_c": "Prøv å følge den prikkete linja for en enkel vei over lavaen."
-        },
-        "MC_HOC_2017_FP20x202022": {
-          "MC_HOC_2017_13_Cole_a": "Prøv å få agenten til å bygge noen minecart-spor slik at du kan utforske verdenen!"
-        },
-        "courseA_collector_loops_challenge12022": {
-          "courseA_collector_loops_challenge1_a": "Hvis noe går galt kan du forsøke å endre tallene i hver løkke.",
-          "courseA_collector_loops_challenge1_b": "Du trenger ikke å bruke løkke hvis du bare skal gjøre noe én gang."
-        },
-        "courseA_maze_seq12022": {
-          "courseA_maze_seq1_a": "Om du har problemer med å få fuglen til å bevege seg, sjekk at blokkene er koblet sammen med \"når den kjører\" blokken[0]"
-        },
-        "courseA_maze_seq_challenge12022": {
-          "courseA_maze_seq_challenge1_a": "Det er to løsninger til dette puslespillet."
-        },
-        "courseB_maze_seq12022": {
-          "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!"
-        },
-        "courseB_maze_seq82022": {
-          "courseB_maze_seq8_b": "Det er to måter å løse denne oppgaven!"
-        },
-        "courseC_artist_prog22022": {
-          "courseC_artist_prog2_a": "*\"Hvis du bruker <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">flyttFremover</title><title name=\"VALUE\">100</title></block></xml>-blokken, vil jeg tegne en linje.\"*",
-          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">snuHøyre</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>-blokken."
-        },
-        "courseC_flappy_events12022": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-        },
-        "courseC_maze_programming62022": {
-          "courseC_maze_programming6_a": "Det er to måter å løse denne oppgaven!",
-          "courseC_maze_programming6_b": "Følg fingeren din fra fuglen til grisen. Hvilke steg måtte du ta?"
-        },
-        "courseD_artist_nestedLoops32022": {
-          "courseD_artist_nestedLoops3_a": "Prøv å bruke \"hopp fremover\" blokken for å komme fra toppen av én firkant til stedet der du vil begynne neste. \n\nHvis din rute er 20 piksler høy og de er 20 piksler fra hverandre, hvor langt trenger du å hoppe?"
-        },
-        "courseE_artist_functions22022": {
-          "courseD_artist_functions2_a": "Ditt program skal:\n\n-   Bruke Funksjon\n-   Flytte seg fremover 100 + 75 piksler\n-   Bruke Funksjon"
-        },
-        "courseE_artist_functions82022": {
-          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-        },
-        "courseE_farmer_functions12022": {
-          "courseE_farmer_functions1_a": "Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig."
-        },
-        "CourseD_Dance_2020_012022": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Pass på at en danser vises på skjermen.\n\n-   dette nivået slutter etter 4 takter.\\*",
-          "challenges": "**Valgfrie utfordringer**\n\n-   velg en annen sang.\n-   flytt danseren din til et annet sted.\n-   lag flere dansere."
-        },
-        "CourseD_Dance_2020_022022": {
-          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Danseren må foreta en bevegelse.\n-   Du må trykke på en piltast.\n\n_Denne oppgaven slutter etter 4 takter._",
-          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block."
-        },
-        "CourseD_Dance_2020_032022": {
-          "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Begge danserne må utføre en bevegelse.\n-   Du må bruke piltastene.\n\n_Denne oppgaven slutter etter 6 takter._",
-          "challenges": "**Valgfri utfordring**\n\n-   Få en danser til å respondere på venstre og høyre piltaster."
-        },
-        "CourseD_Dance_2020_042022": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Danseren må bytte til en ny posisjon etter 4 takter.\n\n-   Nivået ender etter 7 takter.\\*"
-        },
-        "CourseD_Dance_2020_052022": {
-          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Etter 6 takter må din danser må gjøre en annen dans enn den gjorde etter 4 takter.\n\n-   Nivået ender etter 11 takter.\\*",
-          "challenges": "**Valgfri utfordring**\n\n-   Bytt bakgrunn når danseren bytter bevegelse."
-        },
-        "CourseD_Dance_2020_062022": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Lag en hoveddanser og en gruppe med bakgrunnsdansere innen de fire første taktene av sangen.\n\n_Denne oppgaven slutter etter 7 takter._",
-          "challenges": "**Valgfri utfordring**\n\n-   Lag mange grupper med bakgrunnsdansere."
-        },
-        "CourseD_Dance_2020_072022": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre størrelsen på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._",
-          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner."
-        },
-        "CourseD_Dance_2020_082022": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 6 takter._",
-          "tint_hint": "Har du lagt merke til at danserne ikke endrer til nøyaktig den samme fargen som du velger? Det er fordi **fargetonen** mikser fargen du velger med den egentlige fargen på danseren."
-        },
-        "CourseD_Dance_2020_092022": {
-          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Bare trykk på \"Fullfør\" knappen!",
-          "repeat_every_ideas": "**Trenger du noen ideer?**\n\n-   Endre danserens størrelse gjentatte ganger for å få den til å vokse.\n-   Endre danserens rotasjon gjentatte ganger for å få den til å spinne.\n\n_Du kan også bruke negative tall for å skape en motsatt effekt!_",
-          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
-        },
-        "CourseD_Dance_2020_bonus12022": {
-          "alternate": "Variasjonsblokka er i \"Dansere\" kategorien."
-        },
-        "CourseD_Dance_2022_lessonextra1": {
-          "alternate": "Variasjonsblokka er i \"Dansere\" kategorien."
-        },
-        "CourseD_Dance_2022_lessonextra10a": {
-          "alternate": "Variasjonsblokka er i \"Dansere\" kategorien."
-        },
-        "Overworld House Frame Chosen2022": {
-          "mc_6_c": "Du kan sette flere blokker inne i en 'gjenta'-løkke."
-        },
-        "Overworld Move to Sheep2022": {
-          "mc_1_a": "'Gå fremover'-blokken er på toppen av verktøykassen.",
-          "mc_1_b": "Pass på at begge 'gå-fremover'-blokkene er festet til 'når-den-kjører'-blokken."
-        },
-        "Overworld Place Wall2022": {
-          "mc_5_b": "Pass på at begge blokkene er på innsiden av 'gjenta'-løkken for å kunne kjøre koden mer enn en gang."
-        },
-        "Overworld Plant Crops2022": {
-          "mc_7_c": "Du kan sette flere blokker inne i en 'gjenta'-løkke."
-        },
-        "Overworld Powered Minecart2022": {
-          "mc_13_b": "Bruk 'gjenta'-løkken for å lage koden din kortere."
-        },
-        "Overworld Shear Sheep2022": {
-          "mc_3_b": "Dersom du trenger å forandre på hvilken vei du står, bruk en 'snu'-blokk."
-        },
-        "Underground If Statements2022": {
-          "mc_12_a": "Du finner redstone i blokkene med røde merker på."
-        },
-        "courseD_bee_conditionals82022": {
-          "courseD_bee_conditionals8_a": "\\*\\* Husk: \\*\\* Denne oppgaven endres hver gang den kjøres.  \n\nDu bør bruke en betinget blokk (`hvis` eller `hvis/ellers`) for å løse utfordringen."
-        },
-        "courseF_artist_for_challenge12022": {
-          "courseF_artist_for_challenge1_a": "Pennen sin `bredde` er 1. Det første kvadratet har sider på 50 piksler og hvert kvadrat er 50 piksler bredere enn den forrige.",
-          "courseF_artist_for_challenge1_b": "Gjennomsiktigheten på pennen er alltid `teller`/2.",
-          "courseF_artist_for_challenge1_c": "Ikke glem å hoppe tilbake, snu, hoppe igjen og så snu tilbake hver gang du lager et kvadrat!"
-        },
-        "courseF_artist_for_challenge22022": {
-          "courseF_artist_for_challenge2_c": "Løkka `tell` går fra 5 til 250 med steg på 2. ",
-          "courseF_artist_for_challenge2_a": "Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`."
-        },
-        "courseF_bee_for_challenge22022": {
-          "courseF_bee_for_challenge2_a": "Ta en titt på dette alternativet for bevegelse:\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
-          "courseF_bee_for_challenge2_b": "Prøv å bruke to `tell`-løkker: En for å klatre opp og få tak i nektar og en annen for å klatre ned og lage honning.",
-          "courseF_bee_for_challenge2_c": "Legg merke til at `tell`-løkkene trenger flere vanlige løkker inni seg som gjentar `teller` ganger for å lage det økende trappemønsteret. \n\nDen andre `tell`-løkka trenger kun en vanlig løkke for å lage `teller` antall honning."
         }
       }
     }

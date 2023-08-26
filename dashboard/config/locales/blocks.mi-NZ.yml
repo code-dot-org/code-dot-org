@@ -5,140 +5,130 @@ mi:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': wawaenga
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': wawaenga
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"ALIEN"': ngā kaituarangi
+            '"BEAR"': ngā pea
+            '"CAT"': ngā ngeru
+            '"DOG"': ngā kurī
+            '"DUCK"': ngā rakiraki
+            '"FROG"': ngā poraka
+            '"MOOSE"': ngā moose
+            '"PINEAPPLE"': ngā painaporo
+            '"ROBOT"': ngā keretao
+            '"SHARK"': ngā mako
+            '"SLOTH"': kararehe māngere
+            '"UNICORN"': ngā mairetahi
+            sprites: katoa
+          MOVE1:
+            MOVES.ClapHigh: Paki ki runga
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Rua Rua
+            MOVES.Drop: Taka Iho
+            MOVES.Floss: Floss
+            MOVES.Fresh: Hou
+            MOVES.Kick: Te Whetū
+            MOVES.Rest: Kore
+            MOVES.Roll: Ngaru Tinana
+            MOVES.ThisOrThat: Tēnei Tēnā
+          MOVE2:
+            MOVES.ClapHigh: Paki ki runga
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Rua Rua
+            MOVES.Drop: Taka Iho
+            MOVES.Floss: Floss
+            MOVES.Fresh: Hou
+            MOVES.Kick: Te Whetū
+            MOVES.Rest: Kore
+            MOVES.Roll: Ngaru Tinana
+            MOVES.ThisOrThat: Tēnei Tēnā
         text: |-
           {GROUP} tinihiaia wāhanga e {N}
           Mai i te {MOVE1} ki te {MOVE2}
-        options:
-          GROUP:
-            sprites: katoa
-            '"ALIEN"': ngā kaituarangi
-            '"BEAR"': ngā pea
-            '"CAT"': ngā ngeru
-            '"DOG"': ngā kurī
-            '"DUCK"': ngā rakiraki
-            '"FROG"': ngā poraka
-            '"MOOSE"': ngā moose
-            '"PINEAPPLE"': ngā painaporo
-            '"ROBOT"': ngā keretao
-            '"SHARK"': ngā mako
-            '"SLOTH"': kararehe māngere
-            '"UNICORN"': ngā mairetahi
-          MOVE1:
-            MOVES.Roll: Ngaru Tinana
-            MOVES.ClapHigh: Paki ki runga
-            MOVES.Dab: Dab
-            MOVES.DoubleJam: Rua Rua
-            MOVES.Drop: Taka Iho
-            MOVES.Floss: Floss
-            MOVES.Fresh: Hou
-            MOVES.Clown: Gangnam
-            MOVES.Kick: Te Whetū
-            MOVES.ThisOrThat: Tēnei Tēnā
-            MOVES.Rest: Kore
-          MOVE2:
-            MOVES.Roll: Ngaru Tinana
-            MOVES.ClapHigh: Paki ki runga
-            MOVES.Dab: Dab
-            MOVES.DoubleJam: Rua Rua
-            MOVES.Drop: Taka Iho
-            MOVES.Floss: Floss
-            MOVES.Fresh: Hou
-            MOVES.Clown: Gangnam
-            MOVES.Kick: Te Whetū
-            MOVES.ThisOrThat: Tēnei Tēnā
-            MOVES.Rest: Kore
       Dancelab_atTimestamp:
-        text: a muri {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': wāhanga
             '"seconds"': ngā hēkona
+        text: a muri {TIMESTAMP} {UNIT}
       Dancelab_changeColorBy:
-        text: tinihia {COLOR} {METHOD} kia {AMOUNT}
         options:
           METHOD:
+            '"brightness"': tae kanapa
             '"hue"': tae kau
             '"saturation"': tae pumau
-            '"brightness"': tae kanapa
+        text: tinihia {COLOR} {METHOD} kia {AMOUNT}
       Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            '"ALIEN"': ngā kaituarangi
+            '"BEAR"': ngā pea
+            '"CAT"': ngā ngeru
+            '"DOG"': ngā kurī
+            '"DUCK"': ngā rakiraki
+            '"FROG"': ngā poraka
+            '"MOOSE"': ngā moose
+            '"PINEAPPLE"': ngā painaporo
+            '"ROBOT"': ngā keretao
+            '"SHARK"': ngā mako
+            '"SLOTH"': kararehe māngere
+            '"UNICORN"': ngā mairetahi
+            sprites: katoa
+          MOVE:
+            '"next"': "(Kōkiri)"
+            '"prev"': "(tōmua)"
+            '"rand"': "(Poka noa)"
+            MOVES.ClapHigh: Paki ki runga
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Rua Rua
+            MOVES.Drop: Taka Iho
+            MOVES.Floss: Floss
+            MOVES.Fresh: Hou
+            MOVES.Kick: Te Whetū
+            MOVES.Rest: Kore
+            MOVES.Roll: Ngaru Tinana
+            MOVES.ThisOrThat: Tēnei Tēnā
         text: "{GROUP} māhia {MOVE} {DIR} mo ake tonu atu"
-        options:
-          GROUP:
-            sprites: katoa
-            '"ALIEN"': ngā kaituarangi
-            '"BEAR"': ngā pea
-            '"CAT"': ngā ngeru
-            '"DOG"': ngā kurī
-            '"DUCK"': ngā rakiraki
-            '"FROG"': ngā poraka
-            '"MOOSE"': ngā moose
-            '"PINEAPPLE"': ngā painaporo
-            '"ROBOT"': ngā keretao
-            '"SHARK"': ngā mako
-            '"SLOTH"': kararehe māngere
-            '"UNICORN"': ngā mairetahi
-          MOVE:
-            '"next"': "(Kōkiri)"
-            '"prev"': "(tōmua)"
-            '"rand"': "(Poka noa)"
-            MOVES.Roll: Ngaru Tinana
-            MOVES.ClapHigh: Paki ki runga
-            MOVES.Dab: Dab
-            MOVES.DoubleJam: Rua Rua
-            MOVES.Drop: Taka Iho
-            MOVES.Floss: Floss
-            MOVES.Fresh: Hou
-            MOVES.Clown: Gangnam
-            MOVES.Kick: Te Whetū
-            MOVES.ThisOrThat: Tēnei Tēnā
-            MOVES.Rest: Kore
       Dancelab_changeMoveLR:
-        text: "{SPRITE} māhia {MOVE} {DIR} mo ake tonu atu"
         options:
           MOVE:
             '"next"': "(Kōkiri)"
             '"prev"': "(tōmua)"
             '"rand"': "(Poka noa)"
-            MOVES.Roll: Ngaru Tinana
             MOVES.ClapHigh: Paki ki runga
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Rua Rua
             MOVES.Drop: Taka Iho
             MOVES.Floss: Floss
             MOVES.Fresh: Hou
-            MOVES.Clown: Gangnam
             MOVES.Kick: Te Whetū
-            MOVES.ThisOrThat: Tēnei Tēnā
             MOVES.Rest: Kore
+            MOVES.Roll: Ngaru Tinana
+            MOVES.ThisOrThat: Tēnei Tēnā
+        text: "{SPRITE} māhia {MOVE} {DIR} mo ake tonu atu"
       Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"height"': teitei
+            '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"width"': whānui
+            '"x"': nohonga haupae
+            '"y"': nohonga poutū
         text: tinihia te {SPRITE} {PROPERTY} kia {VAL}
-        options:
-          PROPERTY:
-            '"scale"': te rahi
-            '"width"': whānui
-            '"height"': teitei
-            '"rotation"': hurihuri
-            '"x"': nohonga haupae
-            '"y"': nohonga poutū
       Dancelab_changePropEachBy:
-        text: tinihia te {GROUP} {PROPERTY} kia {VAL}
         options:
           GROUP:
-            sprites: katoa
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
             '"CAT"': ngā ngeru
@@ -151,18 +141,18 @@ mi:
             '"SHARK"': ngā mako
             '"SLOTH"': kararehe māngere
             '"UNICORN"': ngā mairetahi
+            sprites: katoa
           PROPERTY:
-            '"scale"': te rahi
-            '"width"': whānui
             '"height"': teitei
             '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"width"': whānui
             '"x"': nohonga haupae
             '"y"': nohonga poutū
+        text: tinihia te {GROUP} {PROPERTY} kia {VAL}
       Dancelab_doMoveEachLR:
-        text: "{GROUP} māhia te {MOVE} {DIR} kia kotahi te wa"
         options:
           GROUP:
-            sprites: katoa
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
             '"CAT"': ngā ngeru
@@ -175,99 +165,98 @@ mi:
             '"SHARK"': ngā mako
             '"SLOTH"': kararehe māngere
             '"UNICORN"': ngā mairetahi
+            sprites: katoa
           MOVE:
             '"rand"': "(Poka noa)"
-            MOVES.XBend: Koropiko
-            MOVES.Roll: Ngaru Tinana
-            MOVES.XClapSide: Pakipaki
             MOVES.ClapHigh: Paki ki runga
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
-            MOVES.XFever: Pekerangi
             MOVES.DoubleJam: Rua Rua
             MOVES.Drop: Taka Iho
             MOVES.Floss: Floss
             MOVES.Fresh: Hou
-            MOVES.Clown: Gangnam
+            MOVES.Kick: Te Whetū
+            MOVES.Rest: Kore
+            MOVES.Roll: Ngaru Tinana
+            MOVES.ThisOrThat: Tēnei Tēnā
+            MOVES.XArmsSide: Toro atu
+            MOVES.XArmsUp: Totoro
+            MOVES.XBend: Koropiko
+            MOVES.XClapSide: Pakipaki
+            MOVES.XFever: Pekerangi
             MOVES.XHeadHips: Māhunga + Pokohiwi
-            MOVES.XHop: Pēke
             MOVES.XHighKick: Whana
+            MOVES.XHop: Pēke
             MOVES.XKnee: Turi
             MOVES.XKneel: Tūturi
             MOVES.XOle: Aue
-            MOVES.XArmsSide: Toro atu
             MOVES.XSlide: Reti
-            MOVES.Kick: Te Whetū
-            MOVES.XArmsUp: Totoro
-            MOVES.ThisOrThat: Tēnei Tēnā
-            MOVES.Rest: Kore
+        text: "{GROUP} māhia te {MOVE} {DIR} kia kotahi te wa"
       Dancelab_doMoveLR:
-        text: "{SPRITE} māhia te {MOVE} {DIR} kia kotahi te wa"
         options:
           MOVE:
             '"rand"': "(Poka noa)"
-            MOVES.XBend: Koropiko
-            MOVES.Roll: Ngaru Tinana
-            MOVES.XClapSide: Pakipaki
             MOVES.ClapHigh: Paki ki runga
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
-            MOVES.XFever: Pekerangi
             MOVES.DoubleJam: Rua Rua
             MOVES.Drop: Taka Iho
             MOVES.Floss: Floss
             MOVES.Fresh: Hou
-            MOVES.Clown: Gangnam
+            MOVES.Kick: Te Whetū
+            MOVES.Rest: Kore
+            MOVES.Roll: Ngaru Tinana
+            MOVES.ThisOrThat: Tēnei Tēnā
+            MOVES.XArmsSide: Toro atu
+            MOVES.XArmsUp: Totoro
+            MOVES.XBend: Koropiko
+            MOVES.XClapSide: Pakipaki
+            MOVES.XFever: Pekerangi
             MOVES.XHeadHips: Māhunga + Pokohiwi
-            MOVES.XHop: Pēke
             MOVES.XHighKick: Whana
+            MOVES.XHop: Pēke
             MOVES.XKnee: Turi
             MOVES.XKneel: Tūturi
             MOVES.XOle: Aue
-            MOVES.XArmsSide: Toro atu
             MOVES.XSlide: Reti
-            MOVES.Kick: Te Whetū
-            MOVES.XArmsUp: Totoro
-            MOVES.ThisOrThat: Tēnei Tēnā
-            MOVES.Rest: Kore
+        text: "{SPRITE} māhia te {MOVE} {DIR} kia kotahi te wa"
       Dancelab_everySeconds:
-        text: 'māhia ia {N} {UNIT} '
         options:
           UNIT:
             '"measures"': wāhanga
             '"seconds"': ngā hēkona
+        text: 'māhia ia {N} {UNIT} '
       Dancelab_everyVerseChorus:
-        text: 'ia {UNIT} '
         options:
           UNIT:
-            '"verse"': whītī
             '"chorus"': korihi
+            '"verse"': whītī
+        text: 'ia {UNIT} '
       Dancelab_getEnergy:
-        text: tikina {RANGE}
         options:
           RANGE:
+            '"high"': teitei
             '"low"': nguru
             '"mid"': waenganui
-            '"high"': teitei
+        text: tikina {RANGE}
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
-            '"scale"': te rahi
-            '"width"': whānui
             '"height"': teitei
             '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"tint"': tae
+            '"width"': whānui
             '"x"': nohonga haupae
             '"y"': nohonga poutū
-            '"tint"': tae
+        text: "{SPRITE} {PROPERTY}"
       Dancelab_getTime:
-        text: te wa inaianei {UNIT}
         options:
           UNIT:
             '"measures"': wāhanga
             '"seconds"': ngā hēkona
+        text: te wa inaianei {UNIT}
       Dancelab_ifDanceIs:
-        text: |-
-          mena e mahi ana a {SPRITE} i te {DANCE}
-          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Paki ki runga
@@ -277,39 +266,40 @@ mi:
             MOVES.Drop: Taka Iho
             MOVES.Floss: Floss
             MOVES.Fresh: Hou
-            MOVES.Roll: Ngaru Tinana
             MOVES.Kick: Te Whetū
-            MOVES.ThisOrThat: Tēnei Tēnā
             MOVES.Rest: Kore
-      Dancelab_ifTime:
+            MOVES.Roll: Ngaru Tinana
+            MOVES.ThisOrThat: Tēnei Tēnā
         text: |-
-          mena ko te {OP} {N} a {UNIT}
+          mena e mahi ana a {SPRITE} i te {DANCE}
           {DO1} {DO2}
+      Dancelab_ifTime:
         options:
+          OP:
+            '"<"': "<"
+            '"="': "="
+            '">"': ">"
           UNIT:
             '"measures"': wāhanga
             '"seconds"': ngā hēkona
-          OP:
-            '">"': ">"
-            '"<"': "<"
-            '"="': "="
+        text: |-
+          mena ko te {OP} {N} a {UNIT}
+          {DO1} {DO2}
       Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 100}": ki runga ki te taha māui
+            "{x: 100, y: 200}": mauī
+            "{x: 100, y: 300}": ki raro ki te taha māui
+            "{x: 200, y: 100}": ki runga
+            "{x: 200, y: 300}": ki raro
+            "{x: 300, y: 100}": ki runga ki te taha mātau
+            "{x: 300, y: 200}": matau
+            "{x: 300, y: 300}": ki raro ki te taha mātau
         text: "{SPRITE} pēke atu ki {LOCATION}"
-        options:
-          LOCATION:
-            "{x: 200, y: 100}": ki runga
-            "{x: 200, y: 300}": ki raro
-            "{x: 100, y: 200}": mauī
-            "{x: 300, y: 200}": matau
-            "{x: 100, y: 100}": ki runga ki te taha māui
-            "{x: 300, y: 100}": ki runga ki te taha mātau
-            "{x: 100, y: 300}": ki raro ki te taha māui
-            "{x: 300, y: 300}": ki raro ki te taha mātau
       Dancelab_jumpToEach:
-        text: me pēke ake {GROUP} ki {LOCATION}
         options:
           GROUP:
-            sprites: katoa
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
             '"CAT"': ngā ngeru
@@ -322,46 +312,48 @@ mi:
             '"SHARK"': ngā mako
             '"SLOTH"': kararehe māngere
             '"UNICORN"': ngā mairetahi
+            sprites: katoa
           LOCATION:
+            "{x: 100, y: 100}": ki runga ki te taha māui
+            "{x: 100, y: 200}": mauī
+            "{x: 100, y: 300}": ki raro ki te taha māui
             "{x: 200, y: 100}": ki runga
             "{x: 200, y: 300}": ki raro
-            "{x: 100, y: 200}": mauī
-            "{x: 300, y: 200}": matau
-            "{x: 100, y: 100}": ki runga ki te taha māui
             "{x: 300, y: 100}": ki runga ki te taha mātau
-            "{x: 100, y: 300}": ki raro ki te taha māui
+            "{x: 300, y: 200}": matau
             "{x: 300, y: 300}": ki raro ki te taha mātau
+        text: me pēke ake {GROUP} ki {LOCATION}
       Dancelab_layoutSprites:
-        text: takotohia {GROUP} ki te {FORMAT}
         options:
-          GROUP:
-            sprites: katoa
-            '"ALIEN"': ngā kaituarangi
-            '"BEAR"': ngā pea
-            '"CAT"': ngā ngeru
-            '"DOG"': ngā kurī
-            '"DUCK"': ngā rakiraki
-            '"FROG"': ngā poraka
-            '"MOOSE"': ngā moose
-            '"PINEAPPLE"': ngā painaporo
-            '"ROBOT"': ngā keretao
-            '"SHARK"': ngā mako
-            '"SLOTH"': kararehe māngere
-            '"UNICORN"': ngā mairetahi
           FORMAT:
             '"border"': pae
-            '"inner"': roto tapawha
-            '"diamond"': taimana
-            '"circle"': porpwhita
-            '"grid"': tukutuku
-            '"top"': rārangi runga
-            '"row"': rārangi
             '"bottom"': rārangi raro
-            '"left"': pou māui
+            '"circle"': porpwhita
             '"column"': pou
-            '"right"': pou mātau
-            '"x"': rakapikipiki
+            '"diamond"': taimana
+            '"grid"': tukutuku
+            '"inner"': roto tapawha
+            '"left"': pou māui
             '"plus"': tāpiri
+            '"right"': pou mātau
+            '"row"': rārangi
+            '"top"': rārangi runga
+            '"x"': rakapikipiki
+          GROUP:
+            '"ALIEN"': ngā kaituarangi
+            '"BEAR"': ngā pea
+            '"CAT"': ngā ngeru
+            '"DOG"': ngā kurī
+            '"DUCK"': ngā rakiraki
+            '"FROG"': ngā poraka
+            '"MOOSE"': ngā moose
+            '"PINEAPPLE"': ngā painaporo
+            '"ROBOT"': ngā keretao
+            '"SHARK"': ngā mako
+            '"SLOTH"': kararehe māngere
+            '"UNICORN"': ngā mairetahi
+            sprites: katoa
+        text: takotohia {GROUP} ki te {FORMAT}
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
@@ -378,18 +370,15 @@ mi:
             '"SLOTH"': kararehe māngere
             '"UNICORN"': mairetahi
           LOCATION:
+            "{x: 100, y: 100}": ki runga ki te taha māui
+            "{x: 100, y: 200}": mauī
+            "{x: 100, y: 300}": ki raro ki te taha māui
             "{x: 200, y: 100}": ki runga
             "{x: 200, y: 300}": ki raro
-            "{x: 100, y: 200}": mauī
-            "{x: 300, y: 200}": matau
-            "{x: 100, y: 100}": ki runga ki te taha māui
             "{x: 300, y: 100}": ki runga ki te taha mātau
-            "{x: 100, y: 300}": ki raro ki te taha māui
+            "{x: 300, y: 200}": matau
             "{x: 300, y: 300}": ki raro ki te taha mātau
       Dancelab_makeNewDanceSprite:
-        text: |-
-          hangaia he {COSTUME} hou
-          whakaingoatia {NAME} ki {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': kaituarangi
@@ -405,59 +394,19 @@ mi:
             '"SLOTH"': kararehe māngere
             '"UNICORN"': mairetahi
           LOCATION:
+            "{x: 100, y: 100}": ki runga ki te taha māui
+            "{x: 100, y: 200}": mauī
+            "{x: 100, y: 300}": ki raro ki te taha māui
             "{x: 200, y: 100}": ki runga
             "{x: 200, y: 300}": ki raro
-            "{x: 100, y: 200}": mauī
-            "{x: 300, y: 200}": matau
-            "{x: 100, y: 100}": ki runga ki te taha māui
             "{x: 300, y: 100}": ki runga ki te taha mātau
-            "{x: 100, y: 300}": ki raro ki te taha māui
+            "{x: 300, y: 200}": matau
             "{x: 300, y: 300}": ki raro ki te taha mātau
-      Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          hangaia kia {N} ngā {COSTUME} hou
-          ki roto ki te {LAYOUT}
+          hangaia he {COSTUME} hou
+          whakaingoatia {NAME} ki {LOCATION}
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
@@ -473,18 +422,41 @@ mi:
             '"UNICORN"': ngā mairetahi
           LAYOUT:
             '"border"': pae
-            '"inner"': roto tapawha
-            '"diamond"': taimana
-            '"circle"': porpwhita
-            '"grid"': tukutuku
-            '"top"': rārangi runga
-            '"row"': rārangi
             '"bottom"': rārangi raro
-            '"left"': pou māui
+            '"circle"': porpwhita
             '"column"': pou
-            '"right"': pou mātau
-            '"x"': rakapikipiki
+            '"diamond"': taimana
+            '"grid"': tukutuku
+            '"inner"': roto tapawha
+            '"left"': pou māui
             '"plus"': tāpiri
+            '"right"': pou mātau
+            '"row"': rārangi
+            '"top"': rārangi runga
+            '"x"': rakapikipiki
+          N:
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '2': '2'
+            '20': '20'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+        text: |-
+          hangaia kia {N} ngā {COSTUME} hou
+          ki roto ki te {LAYOUT}
       Dancelab_mixColors:
         text: whakaranu te {COLOR1} me te {COLOR2}
       Dancelab_nMeasures:
@@ -500,95 +472,93 @@ mi:
       Dancelab_setBackground:
         text: kowhiri te tae papamuri {COLOR}
       Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"circles"': Porowhita
+            '"color_cycle"': Tae
+            '"diamonds"': Taimona
+            '"disco"': Tapawha
+            '"disco_ball"': Pōro Whakaata
+            '"fireworks"': Pahū ahi
+            '"galaxy"': Tuarangi
+            '"kaleidoscope"': Takawhīwhiwhi
+            '"lasers"': Papakani Taiaho
+            '"none"': Kore
+            '"rainbow"': Āniwaniwa
+            '"snowflakes"': Hukapapa
+            '"sparkles"': Wherokiroki
+            '"spiral"': Koropikopiko
+            '"splatter"': Peita Peita
+            '"stars"': Ngā Whetū
+            '"swirl"': Whakamoe
+            '"text"': Ingoa Waiata
+          PALETTE:
+            '"cool"': Kōangi
+            '"default"': Rama
+            '"electronic"': Tāhiko
+            '"iceCream"': Aihikirīmi
+            '"neon"': Haukura
+            '"rave"': Pango me te Mā
+            '"tropical"': Pārūrū
+            '"vintage"': Tawhito
+            '"warm"': Mahana
         text: |-
           whakarite i te papamuri
           {EFFECT} {PALETTE}
+      Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
-            '"none"': Kore
             '"circles"': Porowhita
             '"color_cycle"': Tae
             '"diamonds"': Taimona
+            '"disco"': Tapawha
             '"disco_ball"': Pōro Whakaata
             '"fireworks"': Pahū ahi
-            '"swirl"': Whakamoe
+            '"flowers"': Putiputi
+            '"galaxy"': Tuarangi
+            '"growing_stars"': Ngā Whetū Tipu
             '"kaleidoscope"': Takawhīwhiwhi
             '"lasers"': Papakani Taiaho
-            '"splatter"': Peita Peita
+            '"music_wave"': Ngaru
+            '"none"': Kore
+            '"quads"': Ngā Anahera
             '"rainbow"': Āniwaniwa
+            '"rand"': "(Poka noa)"
+            '"ripples"': Ngā Pungarungaru
+            '"ripples_random"': Ngā Pungarungaru Matapōkere
             '"snowflakes"': Hukapapa
-            '"text"': Ingoa Waiata
-            '"galaxy"': Tuarangi
             '"sparkles"': Wherokiroki
             '"spiral"': Koropikopiko
-            '"disco"': Tapawha
+            '"splatter"': Peita Peita
+            '"squiggles"': Ngā Koropikopiko
             '"stars"': Ngā Whetū
+            '"swirl"': Whakamoe
+            '"text"': Ingoa Waiata
           PALETTE:
-            '"rave"': Pango me te Mā
             '"cool"': Kōangi
+            '"default"': Rama
             '"electronic"': Tāhiko
             '"iceCream"': Aihikirīmi
-            '"default"': Rama
             '"neon"': Haukura
+            '"rave"': Pango me te Mā
             '"tropical"': Pārūrū
             '"vintage"': Tawhito
             '"warm"': Mahana
-      Dancelab_setBackgroundEffectWithPalette:
         text: |-
           whakarite i te papamuri
           {PALETTE} {EFFECT}
-        options:
-          EFFECT:
-            '"none"': Kore
-            '"rand"': "(Poka noa)"
-            '"circles"': Porowhita
-            '"quads"': Ngā Anahera
-            '"color_cycle"': Tae
-            '"diamonds"': Taimona
-            '"disco_ball"': Pōro Whakaata
-            '"fireworks"': Pahū ahi
-            '"flowers"': Putiputi
-            '"growing_stars"': Ngā Whetū Tipu
-            '"swirl"': Whakamoe
-            '"kaleidoscope"': Takawhīwhiwhi
-            '"lasers"': Papakani Taiaho
-            '"splatter"': Peita Peita
-            '"rainbow"': Āniwaniwa
-            '"ripples_random"': Ngā Pungarungaru Matapōkere
-            '"ripples"': Ngā Pungarungaru
-            '"snowflakes"': Hukapapa
-            '"text"': Ingoa Waiata
-            '"squiggles"': Ngā Koropikopiko
-            '"galaxy"': Tuarangi
-            '"sparkles"': Wherokiroki
-            '"spiral"': Koropikopiko
-            '"disco"': Tapawha
-            '"stars"': Ngā Whetū
-            '"music_wave"': Ngaru
-          PALETTE:
-            '"rave"': Pango me te Mā
-            '"cool"': Kōangi
-            '"electronic"': Tāhiko
-            '"iceCream"': Aihikirīmi
-            '"default"': Rama
-            '"neon"': Haukura
-            '"tropical"': Pārūrū
-            '"vintage"': Tawhito
-            '"warm"': Mahana
       Dancelab_setDanceSpeed:
-        text: whakarite te haerenga tere o te kanikani a {SPRITE} ki te {SPEED}
         options:
           SPEED:
+            '0.25': tino pōturi
+            '0.5': pōturi
             '1': noa
             '2': tere
             '4': tino tere
-            '0.5': pōturi
-            '0.25': tino pōturi
+        text: whakarite te haerenga tere o te kanikani a {SPRITE} ki te {SPEED}
       Dancelab_setDanceSpeedEach:
-        text: whakarite te haerenga tere o te kanikani a {GROUP} ki te {SPEED}
         options:
           GROUP:
-            sprites: katoa
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
             '"CAT"': ngā ngeru
@@ -601,104 +571,104 @@ mi:
             '"SHARK"': ngā mako
             '"SLOTH"': kararehe māngere
             '"UNICORN"': ngā mairetahi
+            sprites: katoa
           SPEED:
+            '0.25': tino pōturi
+            '0.5': pōturi
             '1': noa
             '2': tere
             '4': tino tere
-            '0.5': pōturi
-            '0.25': tino pōturi
+        text: whakarite te haerenga tere o te kanikani a {GROUP} ki te {SPEED}
       Dancelab_setForegroundEffect:
-        text: whakarite i te papamua {EFFECT}
         options:
           EFFECT:
-            '"none"': Kore
             '"bubbles"': Ngā mirumiru
+            '"color_lights"': Ngā Rama Atamira
             '"confetti"': Pepa tae iti
+            '"floating_rainbows"': Ngā Āniwaniwa
             '"hearts_red"': Ngā Manawa
             '"music_notes"': Rangi Puoro
+            '"none"': Kore
             '"pineapples"': Ngā Painaporo
             '"pizzas"': Ngā Parehe
-            '"smiling_poop"': Tiko
             '"rain"': Ua
-            '"floating_rainbows"': Ngā Āniwaniwa
-            '"smile_face"': Ngā Menemene
-            '"spotlight"': Tūrama Arotahi
-            '"color_lights"': Ngā Rama Atamira
             '"raining_tacos"': Ngā Tako
-      Dancelab_setForegroundEffectExtended:
+            '"smile_face"': Ngā Menemene
+            '"smiling_poop"': Tiko
+            '"spotlight"': Tūrama Arotahi
         text: whakarite i te papamua {EFFECT}
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
-            '"none"': Kore
-            '"rand"': "(Poka noa)"
             '"bubbles"': Ngā mirumiru
-            '"hearts_colorful"': Manawa Tae
+            '"color_lights"': Ngā Rama Atamira
             '"confetti"': Pepa tae iti
             '"emojis"': Ngā Emohi
+            '"exploding_stars"': Pāpahu Whetū
+            '"floating_rainbows"': Ngā Āniwaniwa
+            '"hearts_colorful"': Manawa Tae
             '"hearts_red"': Ngā Manawa
             '"music_notes"': Rangi Puoro
+            '"none"': Kore
             '"paint_drip"': Maturu Peita
             '"pineapples"': Ngā Painaporo
             '"pizzas"': Ngā Parehe
-            '"smiling_poop"': Tiko
             '"rain"': Ua
-            '"floating_rainbows"': Ngā Āniwaniwa
-            '"smile_face"': Ngā Menemene
-            '"spotlight"': Tūrama Arotahi
-            '"color_lights"': Ngā Rama Atamira
-            '"exploding_stars"': Pāpahu Whetū
             '"raining_tacos"': Ngā Tako
+            '"rand"': "(Poka noa)"
+            '"smile_face"': Ngā Menemene
+            '"smiling_poop"': Tiko
+            '"spotlight"': Tūrama Arotahi
+        text: whakarite i te papamua {EFFECT}
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': teitei
+            '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"width"': whānui
+            '"x"': nohonga haupae
+            '"y"': nohonga poutū
         text: 'whakarite te {SPRITE} {PROPERTY} ki te {VAL} '
-        options:
-          PROPERTY:
-            '"scale"': te rahi
-            '"width"': whānui
-            '"height"': teitei
-            '"rotation"': hurihuri
-            '"x"': nohonga haupae
-            '"y"': nohonga poutū
       Dancelab_setPropEach:
+        options:
+          GROUP:
+            '"ALIEN"': ngā kaituarangi
+            '"BEAR"': ngā pea
+            '"CAT"': ngā ngeru
+            '"DOG"': ngā kurī
+            '"DUCK"': ngā rakiraki
+            '"FROG"': ngā poraka
+            '"MOOSE"': ngā moose
+            '"PINEAPPLE"': ngā painaporo
+            '"ROBOT"': ngā keretao
+            '"SHARK"': ngā mako
+            '"SLOTH"': kararehe māngere
+            '"UNICORN"': ngā mairetahi
+            sprites: katoa
+          PROPERTY:
+            '"height"': teitei
+            '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"tint"': tae
+            '"width"': whānui
+            '"x"': nohonga haupae
+            '"y"': nohonga poutū
         text: whakarite te {GROUP} {PROPERTY} ki te {VAL}
-        options:
-          GROUP:
-            sprites: katoa
-            '"ALIEN"': ngā kaituarangi
-            '"BEAR"': ngā pea
-            '"CAT"': ngā ngeru
-            '"DOG"': ngā kurī
-            '"DUCK"': ngā rakiraki
-            '"FROG"': ngā poraka
-            '"MOOSE"': ngā moose
-            '"PINEAPPLE"': ngā painaporo
-            '"ROBOT"': ngā keretao
-            '"SHARK"': ngā mako
-            '"SLOTH"': kararehe māngere
-            '"UNICORN"': ngā mairetahi
-          PROPERTY:
-            '"scale"': te rahi
-            '"width"': whānui
-            '"height"': teitei
-            '"rotation"': hurihuri
-            '"x"': nohonga haupae
-            '"y"': nohonga poutū
-            '"tint"': tae
       Dancelab_setPropRandom:
-        text: kia matapōkere te haere {SPRITE} {PROPERTY}
         options:
           PROPERTY:
-            '"scale"': te rahi
-            '"width"': whānui
             '"height"': teitei
             '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"tint"': tae
+            '"width"': whānui
             '"x"': nohonga haupae
             '"y"': nohonga poutū
-            '"tint"': tae
+        text: kia matapōkere te haere {SPRITE} {PROPERTY}
       Dancelab_setPropRandomEach:
-        text: kia matapōkere te haere {GROUP} {PROPERTY}
         options:
           GROUP:
-            sprites: katoa
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
             '"CAT"': ngā ngeru
@@ -711,21 +681,21 @@ mi:
             '"SHARK"': ngā mako
             '"SLOTH"': kararehe māngere
             '"UNICORN"': ngā mairetahi
+            sprites: katoa
           PROPERTY:
-            '"scale"': te rahi
-            '"width"': whānui
             '"height"': teitei
             '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"tint"': tae
+            '"width"': whānui
             '"x"': nohonga haupae
             '"y"': nohonga poutū
-            '"tint"': tae
+        text: kia matapōkere te haere {GROUP} {PROPERTY}
       Dancelab_setTint:
         text: whakatite te tae o te {SPRITE} ki te {VAL}
       Dancelab_setTintEach:
-        text: whakatite te tae o te {THIS} ki te {VAL}
         options:
           THIS:
-            sprites: katoa
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
             '"CAT"': ngā ngeru
@@ -738,11 +708,11 @@ mi:
             '"SHARK"': ngā mako
             '"SLOTH"': kararehe māngere
             '"UNICORN"': ngā mairetahi
+            sprites: katoa
+        text: whakatite te tae o te {THIS} ki te {VAL}
       Dancelab_setTintEachInline:
-        text: whakatite te tae o te {THIS} ki te {VAL}
         options:
           THIS:
-            sprites: katoa
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
             '"CAT"': ngā ngeru
@@ -755,19 +725,19 @@ mi:
             '"SHARK"': ngā mako
             '"SLOTH"': kararehe māngere
             '"UNICORN"': ngā mairetahi
+            sprites: katoa
+        text: whakatite te tae o te {THIS} ki te {VAL}
       Dancelab_setTintInline:
         text: whakatite te tae o te {SPRITE} ki te {VAL}
       Dancelab_setVisible:
-        text: whakarite te ari o te {SPRITE} ki te {VISIBILITY}
         options:
           VISIBILITY:
-            'true': te ari
             'false': kore kitea
+            'true': te ari
+        text: whakarite te ari o te {SPRITE} ki te {VISIBILITY}
       Dancelab_setVisibleEach:
-        text: whakarite te ari o {THIS} ki te {VISIBILITY}
         options:
           THIS:
-            sprites: katoa
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
             '"CAT"': ngā ngeru
@@ -780,74 +750,74 @@ mi:
             '"SHARK"': ngā mako
             '"SLOTH"': kararehe māngere
             '"UNICORN"': ngā mairetahi
+            sprites: katoa
           VISIBILITY:
-            'true': te ari
             'false': kore kitea
+            'true': te ari
+        text: whakarite te ari o {THIS} ki te {VISIBILITY}
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': teitei
+            '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"tint"': tae
+            '"width"': whānui
+            '"x"': nohonga haupae
+            '"y"': nohonga poutū
+          RANGE:
+            '"bass"': nguru
+            '"mid"': waenganui
+            '"treble"': teitei
         text: ka timata i te {SPRITE} i te {PROPERTY} a muri i te {RANGE}
-        options:
-          PROPERTY:
-            '"scale"': te rahi
-            '"width"': whānui
-            '"height"': teitei
-            '"rotation"': hurihuri
-            '"x"': nohonga haupae
-            '"y"': nohonga poutū
-            '"tint"': tae
-          RANGE:
-            '"bass"': nguru
-            '"mid"': waenganui
-            '"treble"': teitei
       Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': ngā kaituarangi
+            '"BEAR"': ngā pea
+            '"CAT"': ngā ngeru
+            '"DOG"': ngā kurī
+            '"DUCK"': ngā rakiraki
+            '"FROG"': ngā poraka
+            '"MOOSE"': ngā moose
+            '"PINEAPPLE"': ngā painaporo
+            '"ROBOT"': ngā keretao
+            '"SHARK"': ngā mako
+            '"SLOTH"': kararehe māngere
+            '"UNICORN"': ngā mairetahi
+            sprites: katoa
+          PROPERTY:
+            '"height"': teitei
+            '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"tint"': tae
+            '"width"': whānui
+            '"x"': nohonga haupae
+            '"y"': nohonga poutū
+          RANGE:
+            '"bass"': nguru
+            '"mid"': waenganui
+            '"treble"': teitei
         text: ka timata i te {GROUP} i te {PROPERTY} a muri i te {RANGE}
-        options:
-          GROUP:
-            sprites: katoa
-            '"ALIEN"': ngā kaituarangi
-            '"BEAR"': ngā pea
-            '"CAT"': ngā ngeru
-            '"DOG"': ngā kurī
-            '"DUCK"': ngā rakiraki
-            '"FROG"': ngā poraka
-            '"MOOSE"': ngā moose
-            '"PINEAPPLE"': ngā painaporo
-            '"ROBOT"': ngā keretao
-            '"SHARK"': ngā mako
-            '"SLOTH"': kararehe māngere
-            '"UNICORN"': ngā mairetahi
-          PROPERTY:
-            '"scale"': te rahi
-            '"width"': whānui
-            '"height"': teitei
-            '"rotation"': hurihuri
-            '"x"': nohonga haupae
-            '"y"': nohonga poutū
-            '"tint"': tae
-          RANGE:
-            '"bass"': nguru
-            '"mid"': waenganui
-            '"treble"': teitei
       Dancelab_stopMapping:
-        text: ka mutu i te {SPRITE} i te {PROPERTY} a muri i te {RANGE}
         options:
           PROPERTY:
-            '"scale"': te rahi
-            '"width"': whānui
+            '"direction"': aronga nekehanga
             '"height"': teitei
             '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"tint"': tae
+            '"width"': whānui
             '"x"': nohonga haupae
             '"y"': nohonga poutū
-            '"direction"': aronga nekehanga
-            '"tint"': tae
           RANGE:
             '"bass"': nguru
             '"mid"': waenganui
             '"treble"': teitei
+        text: ka mutu i te {SPRITE} i te {PROPERTY} a muri i te {RANGE}
       Dancelab_stopMappingEach:
-        text: ka mutu i te {GROUP} i te {PROPERTY} a muri i te {RANGE}
         options:
           GROUP:
-            sprites: katoa
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
             '"CAT"': ngā ngeru
@@ -860,54 +830,24 @@ mi:
             '"SHARK"': ngā mako
             '"SLOTH"': kararehe māngere
             '"UNICORN"': ngā mairetahi
+            sprites: katoa
           PROPERTY:
-            '"scale"': te rahi
-            '"width"': whānui
+            '"direction"': aronga nekehanga
             '"height"': teitei
             '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"tint"': tae
+            '"width"': whānui
             '"x"': nohonga haupae
             '"y"': nohonga poutū
-            '"direction"': aronga nekehanga
-            '"tint"': tae
           RANGE:
             '"bass"': nguru
             '"mid"': waenganui
             '"treble"': teitei
+        text: ka mutu i te {GROUP} i te {PROPERTY} a muri i te {RANGE}
       Dancelab_translateStrings:
-        text: neke {STRING}
         options:
           STRING:
-            '"music_wave"': Ngaru
-            '"ripples"': Ngā Pungarungaru
-            '"ripples_random"': Ngā Pungarungaru Matapōkere
-            '"quads"': Ngā Anahera
-            '"flowers"': Putiputi
-            '"popsicles"': Ngā Aihiparaka
-            '"squiggles"': Ngā Koropikopiko
-            '"growing_stars"': Ngā Whetū Tipu
-            '"emojis"': Ngā Emohi
-            '"hearts_colorful"': Ngā Manawa
-            '"paint_drio"': Maturu Peita
-            '"exploding_stars"': Pāpahu Whetū
-            '"row_top"': rārangi runga
-            '"row_bottom"': rārangi raro
-            '"column_left"': pou māui
-            '"column_right"': pou mātau
-            '"diamond"': taimana
-            '"mural"': Pikitia Pakitara
-            '"safari"': Haumaru
-            '"network"': Tūhononga
-            '"highway"': Huanui
-            '"stream"': Pūkākī
-            '"tile"': Ropinepine
-            '"shadow"': Ātarangi
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"x"': x
-            '"z"': z
             '"0"': '0'
             '"1"': '1'
             '"2"': '2'
@@ -918,21 +858,58 @@ mi:
             '"7"': '7'
             '"8"': '8'
             '"9"': '9'
+            '"column_left"': pou māui
+            '"column_right"': pou mātau
+            '"diamond"': taimana
+            '"emojis"': Ngā Emohi
+            '"exploding_stars"': Pāpahu Whetū
+            '"flowers"': Putiputi
+            '"growing_stars"': Ngā Whetū Tipu
+            '"hearts_colorful"': Ngā Manawa
+            '"highway"': Huanui
+            '"mural"': Pikitia Pakitara
+            '"music_wave"': Ngaru
+            '"network"': Tūhononga
+            '"paint_drio"': Maturu Peita
+            '"popsicles"': Ngā Aihiparaka
+            '"quads"': Ngā Anahera
+            '"ripples"': Ngā Pungarungaru
+            '"ripples_random"': Ngā Pungarungaru Matapōkere
+            '"row_bottom"': rārangi raro
+            '"row_top"': rārangi runga
+            '"s"': s
+            '"safari"': Haumaru
+            '"shadow"': Ātarangi
+            '"squiggles"': Ngā Koropikopiko
+            '"stream"': Pūkākī
+            '"t"': t
+            '"tile"': Ropinepine
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
+        text: neke {STRING}
       Dancelab_whenKey:
-        text: i te wa ka māhia {KEY}
         options:
           KEY:
-            '"up"': runga
-            '"left"': mauī
-            '"down"': raro
-            '"right"': matau
-            '"space"': tuarangi
-            '"enter"': kuhu
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
             '"a"': a
             '"b"': b
             '"c"': c
             '"d"': d
+            '"down"': raro
             '"e"': e
+            '"enter"': kuhu
             '"f"': f
             '"g"': g
             '"h"': h
@@ -940,36 +917,31 @@ mi:
             '"j"': j
             '"k"': k
             '"l"': l
+            '"left"': mauī
             '"m"': m
             '"n"': n
             '"o"': o
             '"p"': p
             '"q"': q
             '"r"': r
+            '"right"': matau
             '"s"': s
+            '"space"': tuarangi
             '"t"': t
             '"u"': u
+            '"up"': runga
             '"v"': v
             '"w"': w
             '"x"': x
             '"z"': z
-            '"0"': '0'
-            '"1"': '1'
-            '"2"': '2'
-            '"3"': '3'
-            '"4"': '4'
-            '"5"': '5'
-            '"6"': '6'
-            '"7"': '7'
-            '"8"': '8'
-            '"9"': '9'
+        text: i te wa ka māhia {KEY}
       Dancelab_whenPeak:
-        text: i te wa kei te tara {RANGE}
         options:
           RANGE:
             '0': nguru
             '1': waenganui
             '2': teitei
+        text: i te wa kei te tara {RANGE}
       Dancelab_whenSetup:
         text: tatūnga
       Dancelab_whenSetup2:
@@ -982,298 +954,6 @@ mi:
             '"hearts"': ngā manawa
             '"rain"': ua
             '"starburst"': Pāpahu Whetū
-      gamelab_addBehaviorSimple:
-        text: parehe {SPRITE} ka {BEHAVIOR}
-      gamelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
-      gamelab_atTime:
-        options:
-          UNIT:
-            '"seconds"': ngā hēkona
-      gamelab_changePropBy:
-        text: tinihia te {SPRITE} {PROPERTY} kia {VAL}
-        options:
-          PROPERTY:
-            '"scale"': te rahi
-            '"rotation"': hurihuri
-            '"direction"': aronga nekehanga
-            '"speed"': terenga
-      gamelab_checkTouching:
-        text: "{CONDITION} pā {SPRITE1} ki {SPRITE2}"
-        options:
-          CONDITION:
-            '"when"': ina
-            '"while"': i te
-      gamelab_clickedOn:
-        text: ina pāwhiria {SPRITE}
-      gamelab_clickedSpritePointer:
-        text: "{SPRITE}"
-      gamelab_costumeImage:
-        text: "{COSTUME}"
-      gamelab_everyInterval:
-        text: 'māhia ia {N} {UNIT} '
-        options:
-          UNIT:
-            '"seconds"': ngā hēkona
-      gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
-        options:
-          PROPERTY:
-            '"scale"': te rahi
-            '"rotation"': hurihuri
-            '"direction"': aronga nekehanga
-            '"tint"': tae
-            '"speed"': terenga
-      gamelab_getTime:
-        options:
-          UNIT:
-            '"seconds"': ngā hēkona
-      gamelab_int10:
-        options:
-          VALUE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-      gamelab_isKeyPressed:
-        options:
-          KEY:
-            '"up"': runga
-            '"down"': raro
-            '"left"': mauī
-            '"right"': matau
-            '"space"': tuarangi
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
-            '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"x"': x
-            '"z"': z
-      gamelab_jumpTo:
-        text: "{SPRITE} pēke atu ki {LOCATION}"
-      gamelab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': ina
-            '"while"': i te
-          KEY:
-            '"up"': runga
-            '"down"': raro
-            '"left"': mauī
-            '"right"': matau
-            '"space"': tuarangi
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
-            '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"x"': x
-            '"z"': z
-      gamelab_layoutSprites:
-        text: takotohia {GROUP} ki te {FORMAT}
-        options:
-          FORMAT:
-            '"border"': pae
-            '"circle"': porpwhita
-            '"grid"': tukutuku
-            '"top"': rārangi runga
-            '"row"': rārangi
-            '"bottom"': rārangi raro
-            '"left"': pou māui
-            '"column"': pou
-            '"right"': pou mātau
-      gamelab_location_picker:
-        text: "{LOCATION}"
-      gamelab_makeBurst:
-        options:
-          EFFECT:
-            '"rain"': ua
-      gamelab_makeNewSpriteGroup:
-        options:
-          FORMAT:
-            '"border"': pae
-            '"circle"': porpwhita
-            '"grid"': tukutuku
-            '"top"': rārangi runga
-            '"row"': rārangi
-            '"bottom"': rārangi raro
-            '"left"': pou māui
-            '"column"': pou
-            '"right"': pou mātau
-      gamelab_makeProjectile:
-        options:
-          DIRECTION:
-            '0': matau
-            '90': raro
-            '180': mauī
-            '270': runga
-      gamelab_makeSpritesWithSize:
-        options:
-          SIZE:
-            '30': small
-            '50': wawaenga
-            '100': large
-      gamelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': matau
-            '"left"': mauī
-      gamelab_newSpritePointer:
-        text: "{SPRITE}"
-      gamelab_objectSpritePointer:
-        text: "{SPRITE}"
-      gamelab_playSoundOptions:
-        options:
-          SOUND:
-            "'sound://category_collect/clicky_crunch.mp3'": karihi
-            "'sound://category_animals/bear.mp3'": pea
-            "'sound://category_animals/cat.mp3'": ngeru
-            "'sound://category_animals/cow.mp3'": kau
-            "'sound://category_animals/sheep.mp3'": hipi
-            "'sound://category_animals/chicken.mp3'": heihei
-            "'sound://category_animals/dolphin.mp3'": aihe
-            "'sound://category_animals/dog.mp3'": kurī
-            "'sound://category_digital/jump_7.mp3'": peke
-      gamelab_randColor:
-        text: tae matapōkere
-      gamelab_randomColor:
-        text: tae matapōkere
-      gamelab_repeatForever:
-        text: tōaitia mō ake ake
-      gamelab_setBackground:
-        text: kowhiri te tae papamuri {COLOR}
-      gamelab_setBackgroundImage:
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ana
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': tāone
-              nui
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': koraha
-            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': tukutuku
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': kahukura
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': takerewai
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': hōtoke
-            undefined: kore
-      gamelab_setDefaultSpriteSize:
-        options:
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': wawaenga
-            '100': large
-      gamelab_setProp:
-        text: whakarite te {SPRITE} {PROPERTY} ki te {VAL}
-        options:
-          PROPERTY:
-            '"scale"': te rahi
-            '"rotation"': hurihuri
-            '"direction"': aronga nekehanga
-            '"speed"': terenga
-      gamelab_setProp_dropdown:
-        text: whakarite te {SPRITE} {PROPERTY} ki te {SIZE}
-        options:
-          PROPERTY:
-            '"scale"': te rahi
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': wawaenga
-            '100': large
-      gamelab_setSizes:
-        text: whakarite te {SPRITE} {PROPERTY} ki te {N}%
-        options:
-          PROPERTY:
-            '"scale"': te rahi
-            '"width"': whānui
-            '"height"': teitei
-      gamelab_setSpeed_dropdown:
-        options:
-          SIZE:
-            '1': extra slow
-            '3': pōturi
-            '5': noa
-            '7': tere
-            '9': extra fast
-      gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': ina
-            '"while"': i te
-      gamelab_subjectSpritePointer:
-        text: "{SPRITE}"
-      gamelab_turn:
-        options:
-          DIRECTION:
-            '"right"': matau
-            '"left"': mauī
-      gamelab_whenKey:
-        text: i te wa ka māhia {KEY}
-        options:
-          KEY:
-            '"up"': runga
-            '"down"': raro
-            '"left"': mauī
-            '"right"': matau
-            '"space"': tuarangi
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      gamelab_whileKey:
-        options:
-          KEY:
-            '"up"': runga
-            '"down"': raro
-            '"left"': mauī
-            '"right"': matau
-            '"space"': tuarangi
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       Mikelab_addBehaviorSimple:
         text: parehe {SPRITE} ka {BEHAVIOR}
       Mikelab_allSpritesWithAnimation:
@@ -1281,48 +961,48 @@ mi:
       Mikelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': te rahi
-            '"rotation"': hurihuri
             '"direction"': aronga nekehanga
+            '"rotation"': hurihuri
+            '"scale"': te rahi
       Mikelab_createNewSprite:
         options:
           LOCATION:
+            "{x: 100, y: 100}": ki runga ki te taha māui
+            "{x: 100, y: 200}": mauī
+            "{x: 100, y: 300}": ki raro ki te taha māui
             "{x: 200, y: 100}": ki runga
             "{x: 200, y: 300}": ki raro
-            "{x: 100, y: 200}": mauī
-            "{x: 300, y: 200}": matau
-            "{x: 100, y: 100}": ki runga ki te taha māui
             "{x: 300, y: 100}": ki runga ki te taha mātau
-            "{x: 100, y: 300}": ki raro ki te taha māui
+            "{x: 300, y: 200}": matau
             "{x: 300, y: 300}": ki raro ki te taha mātau
       Mikelab_getProp:
         options:
           PROPERTY:
-            '"scale"': te rahi
-            '"rotation"': hurihuri
             '"direction"': aronga nekehanga
+            '"rotation"': hurihuri
+            '"scale"': te rahi
       Mikelab_groupChangeAnim:
         options:
           SELECT:
             '"all"': katoa
       Mikelab_groupChangePropBy:
         options:
+          PROPERTY:
+            '"direction"': aronga nekehanga
+            '"rotation"': hurihuri
+            '"scale"': te rahi
           SELECT:
             '"all"': katoa
-          PROPERTY:
-            '"scale"': te rahi
-            '"rotation"': hurihuri
-            '"direction"': aronga nekehanga
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
+            "{x: 100, y: 100}": ki runga ki te taha māui
+            "{x: 100, y: 200}": mauī
+            "{x: 100, y: 300}": ki raro ki te taha māui
             "{x: 200, y: 100}": ki runga
             "{x: 200, y: 300}": ki raro
-            "{x: 100, y: 200}": mauī
-            "{x: 300, y: 200}": matau
-            "{x: 100, y: 100}": ki runga ki te taha māui
             "{x: 300, y: 100}": ki runga ki te taha mātau
-            "{x: 100, y: 300}": ki raro ki te taha māui
+            "{x: 300, y: 200}": matau
             "{x: 300, y: 300}": ki raro ki te taha mātau
       Mikelab_groupDestroy:
         options:
@@ -1331,9 +1011,9 @@ mi:
       Mikelab_groupGetProp:
         options:
           PROPERTY:
-            '"scale"': te rahi
-            '"rotation"': hurihuri
             '"direction"': aronga nekehanga
+            '"rotation"': hurihuri
+            '"scale"': te rahi
       Mikelab_groupRemoveAllBehaviors:
         options:
           SELECT:
@@ -1348,12 +1028,12 @@ mi:
             '"all"': katoa
       Mikelab_groupSetProp:
         options:
+          PROPERTY:
+            '"direction"': aronga nekehanga
+            '"rotation"': hurihuri
+            '"scale"': te rahi
           SELECT:
             '"all"': katoa
-          PROPERTY:
-            '"scale"': te rahi
-            '"rotation"': hurihuri
-            '"direction"': aronga nekehanga
       Mikelab_groupSetTint:
         options:
           SELECT:
@@ -1361,9 +1041,6 @@ mi:
       Mikelab_groupWhenClickedOn:
         text: ina pāwhiria {COSTUME}
       Mikelab_ifDanceIs:
-        text: |-
-          mena e mahi ana a {SPRITE} i te {DANCE}
-          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Paki ki runga
@@ -1373,10 +1050,13 @@ mi:
             MOVES.Drop: Taka Iho
             MOVES.Floss: Floss
             MOVES.Fresh: Hou
-            MOVES.Roll: Ngaru Tinana
             MOVES.Kick: Te Whetū
-            MOVES.ThisOrThat: Tēnei Tēnā
             MOVES.Rest: Kore
+            MOVES.Roll: Ngaru Tinana
+            MOVES.ThisOrThat: Tēnei Tēnā
+        text: |-
+          mena e mahi ana a {SPRITE} i te {DANCE}
+          {DO1} {DO2}
       Mikelab_joinText:
         text: "{TEXT} {NEXT}"
       Mikelab_location_picker:
@@ -1393,59 +1073,59 @@ mi:
       Mikelab_setProp:
         options:
           PROPERTY:
-            '"scale"': te rahi
-            '"rotation"': hurihuri
             '"direction"': aronga nekehanga
+            '"rotation"': hurihuri
+            '"scale"': te rahi
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': matau
             '"left"': mauī
+            '"right"': matau
       Mikelab_sprite:
         options:
           LOCATION:
+            "{x: 100, y: 100}": ki runga ki te taha māui
+            "{x: 100, y: 200}": mauī
+            "{x: 100, y: 300}": ki raro ki te taha māui
             "{x: 200, y: 100}": ki runga
             "{x: 200, y: 300}": ki raro
-            "{x: 100, y: 200}": mauī
-            "{x: 300, y: 200}": matau
-            "{x: 100, y: 100}": ki runga ki te taha māui
             "{x: 300, y: 100}": ki runga ki te taha mātau
-            "{x: 100, y: 300}": ki raro ki te taha māui
+            "{x: 300, y: 200}": matau
             "{x: 300, y: 300}": ki raro ki te taha mātau
       Mikelab_whenClickedOn:
         text: ina pāwhiria {SPRITE}
       Mikelab_whenKeyPressed:
-        text: i te wa ka māhia {KEY}
         options:
           KEY:
-            '"up"': tohu runga
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
-            '"w"': W
             '"s"': S
+            '"up"': tohu runga
+            '"w"': W
+        text: i te wa ka māhia {KEY}
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': tohu runga
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
-            '"w"': W
             '"s"': S
+            '"up"': tohu runga
+            '"w"': W
       Mikelab_whenYesNoClicked:
-        text: ina pāwhiria {KEY}
         options:
           KEY:
-            '"yes"': āe
             '"no"': kāore
+            '"yes"': āe
+        text: ina pāwhiria {KEY}
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': tohu runga
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
+            '"up"': tohu runga
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1459,8 +1139,8 @@ mi:
       Poetry_playMusic:
         options:
           SOUND:
-            '"sound://category_nature/summer_night_loop.mp3"': pō
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': pōturi
+            '"sound://category_nature/summer_night_loop.mp3"': pō
       Poetry_playSound:
         options:
           SOUND:
@@ -1472,14 +1152,14 @@ mi:
           EFFECT:
             '"bubbles"': Ngā mirumiru
             '"clouds"': kāpuapua
+            '"colors"': Tae
             '"confetti"': Pepa tae iti
             '"hearts"': ngā manawa
-            '"space"': Tuarangi
             '"rain"': ua
             '"ripples"': Ngā Pungarungaru
-            '"colors"': Tae
-            '"stars"': Ngā Whetū
+            '"space"': Tuarangi
             '"squiggles"': Ngā Koropikopiko
+            '"stars"': Ngā Whetū
           PALETTE:
             '"rainbow"': kahukura
             '"winter"': hōtoke
@@ -1494,8 +1174,13 @@ mi:
       Poetry_whenLineShows:
         options:
           N:
-            '0': "???"
             '1': '1'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -1504,12 +1189,6 @@ mi:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
       RyanLab_moveForward:
         text: neke ki mua
       RyanLab_turnLeft:
@@ -1525,106 +1204,100 @@ mi:
       aalab_layoutSprites:
         options:
           FORMAT:
-            '"grid"': tukutuku
             '"border"': pae
+            '"grid"': tukutuku
             '"row"': rārangi
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
             '1': katoa
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': katoa
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:
-            '"up"': runga
             '"down"': raro
             '"left"': mauī
             '"right"': matau
+            '"up"': runga
       binary_whenKey:
-        text: i te wa ka māhia {KEY}
         options:
           KEY:
-            '"up"': runga
+            '"a"': a
+            '"d"': d
             '"down"': raro
             '"left"': mauī
             '"right"': matau
-            '"space"': tuarangi
-            '"a"': a
-            '"w"': w
             '"s"': s
-            '"d"': d
+            '"space"': tuarangi
+            '"up"': runga
+            '"w"': w
+        text: i te wa ka māhia {KEY}
       craft_ifPath:
-        text: |-
-          mena he ara  {DIR}
-          {STATEMENT}
         options:
           DIR:
             "'ahead'": ki mua
-            "'right'": ki te taha matau
             "'left'": ki te taha maui
-      craft_ifStandingOn:
+            "'right'": ki te taha matau
         text: |-
-          mena e tu ana ki runga {TYPE}
+          mena he ara  {DIR}
           {STATEMENT}
+      craft_ifStandingOn:
         options:
           TYPE:
             "'blueCoralBlock'": punga moana kikorangi
+            "'planksOak'": papa oke
             "'redCoralBlock'": punga moana whero
             "'sand'": kirikiri
-            "'wool_blue'": wai hōhonu
-            "'planksOak'": papa oke
             "'seaLantern'": rama moana
-      craft_ifStandingOnLimit:
+            "'wool_blue'": wai hōhonu
         text: |-
           mena e tu ana ki runga {TYPE}
           {STATEMENT}
+      craft_ifStandingOnLimit:
         options:
           TYPE:
-            "'sand'": kirikiri
             "'darkPrismarine'": paraka kikorangi uriuri
+            "'sand'": kirikiri
             "'seaLantern'": rama moana
+        text: |-
+          mena e tu ana ki runga {TYPE}
+          {STATEMENT}
       craft_log:
         text: kārere takiputa {MESSAGE}
       craft_moveForward:
         text: neke ki mua
       craft_placeBlock:
-        text: waiho {blockType}
         options:
           blockType:
-            '"strippedOak"': ōki horea
-            '"strippedDarkOak"': ōki horea uriuri
-            '"stoneBricks"': periki kowhatu
-            '"mossyStoneBricks"': periki kowhatu kohukohu
-            '"crackedStoneBricks"': periki kowhatu pakaru
-            '"chiseledStoneBricks"': periki kowhatu whakapaipai
-            '"blueCoralBlock"': paraka punga moana kikorangi
-            '"pinkCoralBlock"': paraka punga moana māwhero
-            '"magentaCoralBlock"': paraka punga moana mākurakura
-            '"redCoralBlock"': paraka punga moana whero
-            '"yellowCoralBlock"': paraka pungamoana kowhai
-            '"blueDeadCoralBlock"': paraka punga moana kikorangi hūmate
-            '"pinkDeadCoralBlock"': paraka punga moana māwhero hūmate
-            '"magentaDeadCoralBlock"': paraka punga moana mākurakura hūmate
-            '"readDeadCoralBlock"': paraka punga moana whero hūmate
-            '"yellowDeadCoralBlock"': paraka punga moana kowhai hūmate
-            '"prismarine"': paraka kikorangi
-            '"darkPrismarine"': paraka kikorangi uriuri
-            '"seaLantern"': rama moana
-            '"packedIce"': tio whāiti
-            '"blueIce"': tio kikorangi
             '"blackConcrete"': raima pango
-            '"seaGrass"': pātītī moana
+            '"blueCoralBlock"': paraka punga moana kikorangi
+            '"blueDeadCoralBlock"': paraka punga moana kikorangi hūmate
+            '"blueIce"': tio kikorangi
+            '"chiseledStoneBricks"': periki kowhatu whakapaipai
+            '"crackedStoneBricks"': periki kowhatu pakaru
+            '"darkPrismarine"': paraka kikorangi uriuri
             '"kelp"': tāngāngā
+            '"magentaCoralBlock"': paraka punga moana mākurakura
+            '"magentaDeadCoralBlock"': paraka punga moana mākurakura hūmate
+            '"mossyStoneBricks"': periki kowhatu kohukohu
+            '"packedIce"': tio whāiti
+            '"pinkCoralBlock"': paraka punga moana māwhero
+            '"pinkDeadCoralBlock"': paraka punga moana māwhero hūmate
             '"polishedGranite"': toka pīataata
+            '"prismarine"': paraka kikorangi
+            '"readDeadCoralBlock"': paraka punga moana whero hūmate
+            '"redCoralBlock"': paraka punga moana whero
+            '"seaGrass"': pātītī moana
+            '"seaLantern"': rama moana
+            '"stoneBricks"': periki kowhatu
+            '"strippedDarkOak"': ōki horea uriuri
+            '"strippedOak"': ōki horea
+            '"yellowCoralBlock"': paraka pungamoana kowhai
+            '"yellowDeadCoralBlock"': paraka punga moana kowhai hūmate
+        text: waiho {blockType}
       craft_placePrismarine:
         text: waiho te poromoana
       craft_placeTorch:
@@ -1636,7 +1309,6 @@ mi:
           mahia tonu kia whiwhi whāinga
           {STATEMENT}
       craft_spawnEntity:
-        text: whakawhānau {ENTITY}
         options:
           ENTITY:
             '"cod"': pātutuki
@@ -1645,12 +1317,308 @@ mi:
             '"seaTurtle"': honu
             '"squid"': wheke
             '"tropicalFish"': ika pārūrū
+        text: whakawhānau {ENTITY}
       craft_turn:
-        text: hurihia {DIR}
         options:
           DIR:
-            right: matau ↻
             left: maui ↺
+            right: matau ↻
+        text: hurihia {DIR}
+      ecosystems_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '10': '10'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+      gamelab_addBehaviorSimple:
+        text: parehe {SPRITE} ka {BEHAVIOR}
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': ngā hēkona
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"direction"': aronga nekehanga
+            '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"speed"': terenga
+        text: tinihia te {SPRITE} {PROPERTY} kia {VAL}
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
+        text: "{CONDITION} pā {SPRITE1} ki {SPRITE2}"
+      gamelab_clickedOn:
+        text: ina pāwhiria {SPRITE}
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': ngā hēkona
+        text: 'māhia ia {N} {UNIT} '
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"direction"': aronga nekehanga
+            '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"speed"': terenga
+            '"tint"': tae
+        text: "{SPRITE} {PROPERTY}"
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': ngā hēkona
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '10': '10'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"down"': raro
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"left"': mauī
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"right"': matau
+            '"s"': s
+            '"space"': tuarangi
+            '"t"': t
+            '"u"': u
+            '"up"': runga
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
+      gamelab_jumpTo:
+        text: "{SPRITE} pēke atu ki {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
+          KEY:
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"down"': raro
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"left"': mauī
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"right"': matau
+            '"s"': s
+            '"space"': tuarangi
+            '"t"': t
+            '"u"': u
+            '"up"': runga
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': pae
+            '"bottom"': rārangi raro
+            '"circle"': porpwhita
+            '"column"': pou
+            '"grid"': tukutuku
+            '"left"': pou māui
+            '"right"': pou mātau
+            '"row"': rārangi
+            '"top"': rārangi runga
+        text: takotohia {GROUP} ki te {FORMAT}
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ua
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': pae
+            '"bottom"': rārangi raro
+            '"circle"': porpwhita
+            '"column"': pou
+            '"grid"': tukutuku
+            '"left"': pou māui
+            '"right"': pou mātau
+            '"row"': rārangi
+            '"top"': rārangi runga
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': matau
+            '180': mauī
+            '270': runga
+            '90': raro
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '50': wawaenga
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': mauī
+            '"right"': matau
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_animals/bear.mp3'": pea
+            "'sound://category_animals/cat.mp3'": ngeru
+            "'sound://category_animals/chicken.mp3'": heihei
+            "'sound://category_animals/cow.mp3'": kau
+            "'sound://category_animals/dog.mp3'": kurī
+            "'sound://category_animals/dolphin.mp3'": aihe
+            "'sound://category_animals/sheep.mp3'": hipi
+            "'sound://category_collect/clicky_crunch.mp3'": karihi
+            "'sound://category_digital/jump_7.mp3'": peke
+      gamelab_randColor:
+        text: tae matapōkere
+      gamelab_randomColor:
+        text: tae matapōkere
+      gamelab_repeatForever:
+        text: tōaitia mō ake ake
+      gamelab_setBackground:
+        text: kowhiri te tae papamuri {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': tāone
+              nui
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ana
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': koraha
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': tukutuku
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': kahukura
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': takerewai
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': hōtoke
+            undefined: kore
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '75': wawaenga
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"direction"': aronga nekehanga
+            '"rotation"': hurihuri
+            '"scale"': te rahi
+            '"speed"': terenga
+        text: whakarite te {SPRITE} {PROPERTY} ki te {VAL}
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': te rahi
+          SIZE:
+            '75': wawaenga
+        text: whakarite te {SPRITE} {PROPERTY} ki te {SIZE}
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': teitei
+            '"scale"': te rahi
+            '"width"': whānui
+        text: whakarite te {SPRITE} {PROPERTY} ki te {N}%
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '3': pōturi
+            '5': noa
+            '7': tere
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': mauī
+            '"right"': matau
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"a"': a
+            '"d"': d
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
+            '"s"': s
+            '"space"': tuarangi
+            '"up"': runga
+            '"w"': w
+        text: i te wa ka māhia {KEY}
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"a"': a
+            '"d"': d
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
+            '"s"': s
+            '"space"': tuarangi
+            '"up"': runga
+            '"w"': w
       storylab_setForegroundEffect2:
         options:
           EFFECT:

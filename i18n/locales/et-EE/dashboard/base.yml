@@ -45,6 +45,7 @@ et:
         edit_header: 'Muuda kasutajakonto üksikasju'
         error:
           future: ei saa olla tulevikus
+        us_state: 'Olek'
   beta: "beeta"
   hello: "Tere maailm"
   welcome_back: "Tere tulemast tagasi, %{name}"
@@ -140,6 +141,7 @@ et:
     email_preference_no: "Ei"
     share_teacher_email_reg_partner_preference_yes: "Jah"
     share_teacher_email_reg_partner_preference_no: "Ei"
+    us_state: 'Olek'
   school_info:
     private: 'Privaatne'
     public: 'Avalik'
@@ -792,6 +794,8 @@ et:
       robotics:
         kodable: 'Kodable'
         other: "Muu"
+      workshop_course:
+        other: 'Muu'
       email_opt_in:
         opt_in_yes: 'Jah'
         opt_in_no: 'Ei'
@@ -806,3 +810,4 @@ et:
   copy: 'Kopeeri'
   pixelation:
     binary: "Binaarne"
+

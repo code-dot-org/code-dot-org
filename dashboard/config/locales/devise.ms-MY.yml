@@ -60,6 +60,28 @@ ms:
         dengan arahan tentang bagaimana untuk membuka kunci dalam beberapa minit.
       unlocked: Akaun anda telah berjaya dibuka. Sila daftar masuk untuk teruskan.
   errors:
+    invitations:
+      edit:
+        header: Tetapkan kata laluan anda
+        submit_button: Tetapkan kata laluan anda
+      invitation_removed: Undangan anda telah dialih keluar.
+      invitation_token_invalid: Token jemputan yang diberikan tidak sah!
+      new:
+        header: Menghantar undangan
+        submit_button: Menghantar undangan
+      no_invitations_remaining: Tiada undangan yang tinggal
+      send_instructions: E-mel jemputan telah dihantar ke %{email}.
+      updated: Kata laluan anda telah berjaya ditetapkan. Anda kini didaftar masuk.
+    mailer:
+      invitation_instructions:
+        accept: Menerima undangan
+        hello: Helo %{email}
+        ignore: Jika anda tidak mahu menerima undangan, sila abaikan e-mel ini.<br
+          />Akaun anda tidak akan dicipta sehingga anda mengakses pautan di atas dan
+          menetapkan kata laluan anda.
+        someone_invited_you: Seseorang telah mengundang anda ke %{url}, anda boleh
+          menerimanya melalui pautan di bawah.
+        subject: Arahan undangan
     messages:
       already_confirmed: telah disahkan, sila cuba daftar masuk
       confirmation_period_expired: perlu disahkan dalam tempoh %{period}, sila dapatkan
@@ -67,25 +89,3 @@ ms:
       expired: telah tamat tempoh, sila buat permintaan baru
       not_found: tidak dijumpai
       not_locked: tidak dikunci
-    invitations:
-      send_instructions: E-mel jemputan telah dihantar ke %{email}.
-      invitation_token_invalid: Token jemputan yang diberikan tidak sah!
-      updated: Kata laluan anda telah berjaya ditetapkan. Anda kini didaftar masuk.
-      no_invitations_remaining: Tiada undangan yang tinggal
-      invitation_removed: Undangan anda telah dialih keluar.
-      new:
-        header: Menghantar undangan
-        submit_button: Menghantar undangan
-      edit:
-        header: Tetapkan kata laluan anda
-        submit_button: Tetapkan kata laluan anda
-    mailer:
-      invitation_instructions:
-        subject: Arahan undangan
-        hello: Helo %{email}
-        someone_invited_you: Seseorang telah mengundang anda ke %{url}, anda boleh
-          menerimanya melalui pautan di bawah.
-        accept: Menerima undangan
-        ignore: Jika anda tidak mahu menerima undangan, sila abaikan e-mel ini.<br
-          />Akaun anda tidak akan dicipta sehingga anda mengakses pautan di atas dan
-          menetapkan kata laluan anda.

@@ -19,28 +19,40 @@
           }
         },
         "2-3 Artist 3.4": {
-          "draw a circle": {
-            "name": "vẽ một hình tròn"
-          },
           "draw a car": {
             "name": "vẽ 1 cái ô tô"
+          },
+          "draw a circle": {
+            "name": "vẽ một hình tròn"
           }
         },
         "2-3 Artist 7": {
           "draw_rect": {
             "name": "vẽ_hình chữ nhật",
             "parameters": {
-              "width": "chiều rộng",
-              "height": "chiều cao"
+              "height": "chiều cao",
+              "width": "chiều rộng"
             }
           }
         },
         "2-3 Artist Debugging 10": {
+          "draw R pad": {
+            "name": "vẽ đường chữ R"
+          },
+          "draw a button": {
+            "name": "vẽ một nút"
+          },
+          "draw a circle": {
+            "name": "vẽ một hình tròn"
+          },
+          "draw cord": {
+            "name": "vẽ dây"
+          },
           "draw square": {
             "name": "vẽ hình vuông",
             "parameters": {
-              "width": "chiều rộng",
-              "height": "chiều cao"
+              "height": "chiều cao",
+              "width": "chiều rộng"
             }
           },
           "jump to controller top left": {
@@ -48,63 +60,51 @@
           },
           "jump to middle": {
             "name": "nhảy vào giữa"
-          },
-          "draw a circle": {
-            "name": "vẽ một hình tròn"
-          },
-          "draw a button": {
-            "name": "vẽ một nút"
-          },
-          "draw cord": {
-            "name": "vẽ dây"
-          },
-          "draw R pad": {
-            "name": "vẽ đường chữ R"
           }
         },
         "2-3 Artist Debugging 5": {
+          "draw a head": {
+            "name": "vẽ 1 cái đầu"
+          },
+          "draw body and arms": {
+            "name": "vẽ cơ thể và cánh tay"
+          },
           "draw left leg": {
             "name": "vẽ chân trái"
           },
           "draw right leg": {
             "name": "vẽ chân phải"
-          },
-          "draw body and arms": {
-            "name": "vẽ cơ thể và cánh tay"
-          },
-          "draw a head": {
-            "name": "vẽ 1 cái đầu"
           }
         },
         "2-3 Artist Debugging 6": {
+          "draw arms": {
+            "name": "vẽ tay"
+          },
+          "draw head": {
+            "name": "vẽ đầu"
+          },
+          "draw left leg": {
+            "name": "vẽ chân trái"
+          },
           "draw right leg": {
             "name": "vẽ chân phải"
           },
           "draw sitting stick figure": {
             "name": "vẽ hình que ngồi"
           },
-          "draw head": {
-            "name": "vẽ đầu"
-          },
-          "draw arms": {
-            "name": "vẽ tay"
-          },
           "jump to neck": {
             "name": "nhảy vào cổ"
-          },
-          "draw left leg": {
-            "name": "vẽ chân trái"
           }
         },
         "2-3 Artist Debugging 7": {
-          "draw O": {
-            "name": "vẽ O"
-          },
           "draw D": {
             "name": "vẽ D"
           },
           "draw E": {
             "name": "vẽ E"
+          },
+          "draw O": {
+            "name": "vẽ O"
           }
         },
         "2-3 Artist Functions 1": {
@@ -172,2166 +172,28 @@
           }
         },
         "4-5 Artist 7": {
-          "draw a circle": {
-            "name": "vẽ một hình tròn"
-          },
           "draw a car": {
             "name": "vẽ 1 cái ô tô"
           },
+          "draw a circle": {
+            "name": "vẽ một hình tròn"
+          },
           "draw triangle": {
             "name": "vẽ tam giác"
           }
         },
-        "Course 4 Bee Params 8": {
-          "get nectar make honey": {
-            "parameters": {
-              "honey": "mật ong"
-            }
-          }
-        },
-        "Course 4 Play Lab Params 1": {
-          "jump": {
-            "name": "nhảy"
-          }
-        },
-        "Course 4 Play Lab Params 10": {
-          "score_points": {
-            "parameters": {
-              "points": "điểm"
-            }
-          }
-        },
-        "Course 4 Play Lab Params 2": {
-          "jump": {
-            "name": "nhảy"
-          }
-        },
-        "Course 4 Play Lab Params 3": {
-          "jump": {
-            "name": "nhảy",
-            "parameters": {
-              "height": "chiều cao",
-              "actor": "nhân vật"
-            }
-          }
-        },
-        "Course 4 Play Lab Params 4": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "Course 4 Play Lab Params 5": {
-          "patrol": {
-            "parameters": {
-              "actor": "nhân vật"
-            }
-          }
-        },
-        "Course 4 Play Lab Params 6": {
-          "patrol": {
-            "parameters": {
-              "actor": "nhân vật"
-            }
-          }
-        },
-        "Course 4 Play Lab Params 7": {
-          "patrol": {
-            "parameters": {
-              "actor": "nhân vật",
-              "speed": "tốc độ"
-            }
-          }
-        },
-        "Course 4 Play Lab Params 8": {
-          "patrol": {
-            "parameters": {
-              "actor": "nhân vật",
-              "speed": "tốc độ"
-            }
-          }
-        },
-        "Course 4 Play Lab Params 9": {
-          "score_points": {
-            "parameters": {
-              "points": "điểm"
-            }
-          }
-        },
-        "Course 4 Play Lab Vars 1": {
-          "set score": {
-            "name": "thiết lập điểm"
-          }
-        },
-        "Course 4 Play Lab Vars 2": {
-          "set score": {
-            "name": "thiết lập điểm"
-          }
-        },
-        "Course 4 SCF 1": {
-          "draw a hexagon": {
-            "name": "vẽ một hình lục giác"
-          }
-        },
-        "Course 4 SCF 1a": {
-          "get nectar": {
-            "name": "lấy phấn hoa",
-            "parameters": {
-              "counter": "biến đếm"
-            }
-          }
-        },
-        "Course 4 SCF 3": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw an octagon": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "Course E: Play Lab Project": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "Find the Wizard": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "FoodFight": {
-          "score_points": {
-            "parameters": {
-              "points": "điểm"
-            }
-          }
-        },
-        "Geometric Sun": {
-          "diamond": {
-            "name": "kim cương"
-          },
-          "draw a house": {
-            "name": "vẽ một căn nhà"
-          }
-        },
-        "Geometric Sun_2018": {
-          "diamond": {
-            "name": "kim cương"
-          },
-          "draw a house": {
-            "name": "vẽ một căn nhà"
-          }
-        },
-        "InspirationalArtwork": {
-          "n-sided shape": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          },
-          "draw a loop": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          },
-          "draw spiral circle": {
-            "parameters": {
-              "size": "kích cỡ"
-            }
-          }
-        },
-        "InspirationalArtwork_2018": {
-          "draw a loop": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          },
-          "draw spiral circle": {
-            "parameters": {
-              "size": "kích cỡ"
-            }
-          }
-        },
-        "NEW Course 4 Artist Functions 3": {
+        "Artist Autorun Test": {
           "draw a square": {
             "name": "vẽ một hình vuông"
           }
         },
-        "NEW Course 4 Artist Functions 4": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          }
-        },
-        "NEW Course 4 Artist Functions 7": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          }
-        },
-        "NEW Course 4 Artist Functions 8": {
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác"
-          }
-        },
-        "NEW Course 4 Artist Functions 9": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác"
-          }
-        },
-        "NEW Course 4 Artist Params 1": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          }
-        },
-        "NEW Course 4 Artist Params 10": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw a hexagon": {
-            "name": "vẽ một hình lục giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 11": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          },
-          "do something": {
-            "name": "thực hiện",
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 12": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 12a": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 13": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 14": {
-          "draw a spiral edge": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 15": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao",
-            "parameters": {
-              "points": "điểm",
-              "length": "chiều dài"
-            },
-            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước"
-          },
-          "draw a circle": {
-            "name": "vẽ một hình tròn",
-            "description": "vẽ một hình tròn với bán kính cho trước",
-            "parameters": {
-              "radius": "bán kính"
-            }
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "chiều dài",
-              "repeat": "lặp lại",
-              "sides": "các cạnh"
-            },
-            "name": "vẽ một cái chong chóng"
-          },
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            },
-            "name": "vẽ một hình khối"
-          },
-          "draw a house": {
-            "name": "vẽ một căn nhà",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 2": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "description": "vẽ một hình tam giác"
-          }
-        },
-        "NEW Course 4 Artist Params 3": {
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác"
-          }
-        },
-        "NEW Course 4 Artist Params 4": {
-          "draw a triangle with length": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 5": {
-          "draw a pentagon": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 6": {
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a hexagon": {
-            "name": "vẽ một hình lục giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a sqaure": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 7": {
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 8": {
-          "draw a triangle with length": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 9": {
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "NEW Course 4 Artist Params inspire": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "NEW Course 4 Play Lab Params 11": {
-          "jump": {
-            "name": "nhảy",
-            "parameters": {
-              "height": "chiều cao",
-              "actor": "nhân vật"
-            }
-          },
-          "patrol": {
-            "parameters": {
-              "actor": "nhân vật",
-              "speed": "tốc độ"
-            }
-          }
-        },
-        "New Artist Project": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao",
-            "parameters": {
-              "points": "điểm",
-              "length": "chiều dài"
-            },
-            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước"
-          },
-          "draw a circle": {
-            "name": "vẽ một hình tròn",
-            "description": "vẽ một hình tròn với bán kính cho trước",
-            "parameters": {
-              "radius": "bán kính"
-            }
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "chiều dài",
-              "repeat": "lặp lại",
-              "sides": "các cạnh"
-            },
-            "name": "vẽ một cái chong chóng"
-          },
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            },
-            "name": "vẽ một hình khối"
-          },
-          "draw a house": {
-            "name": "vẽ một căn nhà",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "New Play Lab Project": {
-          "jump": {
-            "name": "nhảy",
-            "parameters": {
-              "height": "chiều cao",
-              "actor": "nhân vật"
-            }
-          },
-          "patrol": {
-            "parameters": {
-              "actor": "nhân vật",
-              "speed": "tốc độ"
-            }
-          }
-        },
-        "Robot Doodle": {
-          "draw head": {
-            "name": "vẽ đầu"
-          }
-        },
-        "Robot Doodle_2018": {
-          "draw head": {
-            "name": "vẽ đầu"
-          }
-        },
-        "Standalone_Artist_7": {
-          "draw a flower": {
-            "name": "vẽ một bông hoa"
-          }
-        },
-        "course3_artist_functions_challenge1": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "my design": {
-            "name": "thiết kế của tôi"
-          }
-        },
-        "course3_artist_functions_challenge2": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "my design": {
-            "name": "thiết kế của tôi"
-          }
-        },
-        "course3_bee_functions_challenge1": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "course3_bee_functions_challenge2": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "course3_playLab_challenge1": {
-          "keep playing": {
-            "name": "tiếp tục chơi bài này"
-          }
-        },
-        "course4_artist_functions_challenge2": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "my design": {
-            "name": "thiết kế của tôi"
-          }
-        },
-        "course4_artist_fwp_challenge1": {
-          "draw background": {
-            "parameters": {
-              "color": "màu sắc"
-            }
-          },
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw a polygon": {
-            "parameters": {
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "course4_bee_fwp_challenge1": {
-          "pick row": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "course4_bee_fwp_challenge2": {
-          "pick row": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "courseC_artist_prog3": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
-            "name": "vẽ ngọn lửa"
-          },
-          "draw fire": {
-            "name": "vẽ lửa"
-          }
-        },
-        "courseC_artist_prog3_2018": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
-            "name": "vẽ ngọn lửa"
-          },
-          "draw fire": {
-            "name": "vẽ lửa"
-          }
-        },
-        "courseC_artist_prog3_2019": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
-            "name": "vẽ ngọn lửa"
-          },
-          "draw fire": {
-            "name": "vẽ lửa"
-          }
-        },
-        "courseC_artist_prog3_2020": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
-            "name": "vẽ ngọn lửa"
-          },
-          "draw fire": {
-            "name": "vẽ lửa"
-          }
-        },
-        "courseC_data wizard": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseC_data wizard_2020": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_artist_concept1": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw a hexagon": {
-            "name": "vẽ một hình lục giác"
-          }
-        },
-        "courseE_artist_concept1_2018": {
-          "draw a hexagon": {
-            "name": "vẽ một hình lục giác"
-          }
-        },
-        "courseE_artist_concept4": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_concept4_2018": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_concept_challenge1": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_artist_concept_challenge1_2018": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_artist_functions1": {
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions10": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw hexagon": {
-            "name": "vẽ hình lục giác"
-          },
-          "draw line of hexagons": {
-            "name": "vẽ hàng lục giác"
-          }
-        },
-        "courseE_artist_functions10_2018": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw hexagon": {
-            "name": "vẽ hình lục giác"
-          },
-          "draw line of hexagons": {
-            "name": "vẽ hàng lục giác"
-          }
-        },
-        "courseE_artist_functions10_2019": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw hexagon": {
-            "name": "vẽ hình lục giác"
-          },
-          "draw line of hexagons": {
-            "name": "vẽ hàng lục giác"
-          }
-        },
-        "courseE_artist_functions10_2020": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw hexagon": {
-            "name": "vẽ hình lục giác"
-          },
-          "draw line of hexagons": {
-            "name": "vẽ hàng lục giác"
-          }
-        },
-        "courseE_artist_functions1_copy": {
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions2": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions2_2018": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions2_2019": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions2_2020": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions2_copy": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions3_2018": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions3_2019": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions3_2020": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions4": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions4_copy": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions5": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions5_2018": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions5_2019": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions5_2020": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions5_copy": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions7": {
-          "draw a house": {
-            "name": "vẽ một căn nhà"
-          },
-          "draw a window": {
-            "name": "vẽ cửa sổ"
-          }
-        },
-        "courseE_artist_functions7_2018": {
-          "draw a house": {
-            "name": "vẽ một căn nhà"
-          },
-          "draw a window": {
-            "name": "vẽ cửa sổ"
-          }
-        },
-        "courseE_artist_functions7_2020": {
-          "draw a house": {
-            "name": "vẽ một căn nhà"
-          },
-          "draw a window": {
-            "name": "vẽ cửa sổ"
-          }
-        },
-        "courseE_artist_functions8": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_functions8_2018": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_functions8_2019": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_functions8_2020": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_functions8a_2018": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_artist_functions8a_2019": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_artist_functions8a_2020": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_artist_functions8b_2018": {
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_functions8b_2019": {
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_functions8b_2020": {
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_functions8c_2018": {
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          }
-        },
-        "courseE_artist_functions8c_2019": {
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          }
-        },
-        "courseE_artist_functions8c_2020": {
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          }
-        },
-        "courseE_artist_functions9": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw triangle": {
-            "name": "vẽ tam giác"
-          },
-          "draw line of triangles": {
-            "name": "vẽ hàng tam giác"
-          }
-        },
-        "courseE_artist_functions9_2018": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw triangle": {
-            "name": "vẽ tam giác"
-          },
-          "draw line of triangles": {
-            "name": "vẽ hàng tam giác"
-          }
-        },
-        "courseE_artist_functions9_2019": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw triangle": {
-            "name": "vẽ tam giác"
-          },
-          "draw line of triangles": {
-            "name": "vẽ hàng tam giác"
-          }
-        },
-        "courseE_artist_functions9_2020": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw triangle": {
-            "name": "vẽ tam giác"
-          },
-          "draw line of triangles": {
-            "name": "vẽ hàng tam giác"
-          }
-        },
-        "courseE_artist_functionsProj_2018": {
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "draw hexagon": {
-            "name": "vẽ hình lục giác"
-          },
-          "draw line of hexagons": {
-            "name": "vẽ hàng lục giác"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_functionsProj_2019": {
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "draw hexagon": {
-            "name": "vẽ hình lục giác"
-          },
-          "draw line of hexagons": {
-            "name": "vẽ hàng lục giác"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_functionsProj_2020": {
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "draw hexagon": {
-            "name": "vẽ hình lục giác"
-          },
-          "draw line of hexagons": {
-            "name": "vẽ hàng lục giác"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_functions_challenge1": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "my design": {
-            "name": "thiết kế của tôi"
-          }
-        },
-        "courseE_artist_functions_challenge1_2018": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "my design": {
-            "name": "thiết kế của tôi"
-          }
-        },
-        "courseE_artist_functions_challenge1_2019": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "my design": {
-            "name": "thiết kế của tôi"
-          }
-        },
-        "courseE_artist_functions_challenge1_2020": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "my design": {
-            "name": "thiết kế của tôi"
-          }
-        },
-        "courseE_artist_functions_challenge2": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "my design": {
-            "name": "thiết kế của tôi"
-          }
-        },
-        "courseE_artist_functions_challenge2_2018": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "my design": {
-            "name": "thiết kế của tôi"
-          }
-        },
-        "courseE_artist_functions_challenge2_2019": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "my design": {
-            "name": "thiết kế của tôi"
-          }
-        },
-        "courseE_artist_functions_challenge2_2020": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "my design": {
-            "name": "thiết kế của tôi"
-          }
-        },
-        "courseE_artist_functions_predict1": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions_predict1_2018": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions_predict1_2019": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions_predict1_2020": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions_predict1_copy": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions_predict2": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw line of polygons": {
-            "name": "vẽ hàng đa giác"
-          },
-          "draw polygon": {
-            "name": "vẽ đa giác"
-          }
-        },
-        "courseE_artist_functions_predict2_2018": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw line of polygons": {
-            "name": "vẽ hàng đa giác"
-          },
-          "draw polygon": {
-            "name": "vẽ đa giác"
-          }
-        },
-        "courseE_artist_functions_predict2_2019": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw line of polygons": {
-            "name": "vẽ hàng đa giác"
-          },
-          "draw polygon": {
-            "name": "vẽ đa giác"
-          }
-        },
-        "courseE_artist_functions_predict2_2020": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw line of polygons": {
-            "name": "vẽ hàng đa giác"
-          },
-          "draw polygon": {
-            "name": "vẽ đa giác"
-          }
-        },
-        "courseE_bee_functions1": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_bee_functions_challenge1": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_bee_functions_challenge2": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_farmer_concept1": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_farmer_concept2": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_farmer_concept3": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_playLab_challenge1": {
-          "keep playing": {
-            "name": "tiếp tục chơi bài này"
-          }
-        },
-        "courseE_playLab_scaffold1": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_playLab_scaffold2": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_playLab_scaffold3": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_playLab_scaffold4": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseF_artist_fwp1": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "checker": {
-            "parameters": {
-              "size": "kích cỡ",
-              "color": "màu sắc"
-            }
-          },
-          "do something": {
-            "name": "thực hiện"
-          },
-          "Make gingham": {
-            "parameters": {
-              "size": "kích cỡ"
-            }
-          },
-          "black outline": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "courseF_artist_fwp2": {
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "checker": {
-            "parameters": {
-              "size": "kích cỡ",
-              "color": "màu sắc"
-            }
-          },
-          "do something": {
-            "name": "thực hiện"
-          },
-          "Make gingham": {
-            "parameters": {
-              "size": "kích cỡ"
-            }
-          },
-          "black outline": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "courseF_artist_fwp2_predict1": {
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "courseF_artist_fwp3": {
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a square2": {
-            "parameters": {
-              "size": "kích cỡ"
-            }
-          },
-          "filled square": {
-            "parameters": {
-              "size": "kích cỡ",
-              "color": "màu sắc"
-            }
-          },
-          "black outline": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "courseF_artist_fwp4": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "courseF_artist_fwp5": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "courseF_artist_fwp6": {
-          "draw a spiral edge": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "courseF_artist_fwp7": {
-          "draw a spiral edge": {
-            "parameters": {
-              "length": "chiều dài",
-              "min": "nhỏ nhất",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "courseF_artist_fwp8": {
-          "draw a spiral edge": {
-            "parameters": {
-              "length": "chiều dài",
-              "min": "nhỏ nhất",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "courseF_artist_fwp9": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao",
-            "parameters": {
-              "points": "điểm",
-              "length": "chiều dài"
-            },
-            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước"
-          },
-          "draw a circle": {
-            "name": "vẽ một hình tròn",
-            "description": "vẽ một hình tròn với bán kính cho trước",
-            "parameters": {
-              "radius": "bán kính"
-            }
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "chiều dài",
-              "repeat": "lặp lại",
-              "sides": "các cạnh"
-            },
-            "name": "vẽ một cái chong chóng"
-          },
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            },
-            "name": "vẽ một hình khối"
-          },
-          "draw a house": {
-            "name": "vẽ một căn nhà",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a spiral edge": {
-            "parameters": {
-              "length": "chiều dài",
-              "min": "nhỏ nhất",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "courseF_artist_fwp_challenge1": {
-          "draw background": {
-            "parameters": {
-              "color": "màu sắc"
-            }
-          },
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw a polygon": {
-            "parameters": {
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "courseF_artist_fwp_challenge2": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw an octagon": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "courseF_bee_functions8a": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseF_bee_fwp4": {
-          "rowOfNectar": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "courseF_bee_fwp5": {
-          "rowOfNectar": {
-            "parameters": {
-              "width": "chiều rộng"
-            }
-          }
-        },
-        "courseF_bee_fwp6": {
-          "rowOfNectar": {
-            "parameters": {
-              "width": "chiều rộng"
-            }
-          }
-        },
-        "courseF_bee_fwp7": {
-          "rowOfNectarOrHoney": {
-            "parameters": {
-              "width": "chiều rộng"
-            }
-          }
-        },
-        "courseF_bee_fwp8": {
-          "rowOfNectarOrHoney": {
-            "parameters": {
-              "width": "chiều rộng"
-            }
-          }
-        },
-        "courseF_bee_fwp9_predict1": {
-          "rowOfNectarOrHoney": {
-            "parameters": {
-              "width": "chiều rộng"
-            }
-          }
-        },
-        "courseF_bee_fwp_challenge1": {
-          "pick row": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "courseF_bee_fwp_challenge2": {
-          "pick row": {
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "courseF_bee_variables_7_2018": {
-          "collect": {
-            "name": "thu thập"
-          }
-        },
-        "courseF_bee_variables_7_2019": {
-          "collect": {
-            "name": "thu thập"
-          }
-        },
-        "courseF_bee_variables_7_2020": {
-          "collect": {
-            "name": "thu thập"
-          }
-        },
-        "courseF_bee_variables_8_2018": {
-          "collect": {
-            "name": "thu thập"
-          }
-        },
-        "courseF_bee_variables_8_2019": {
-          "collect": {
-            "name": "thu thập"
-          }
-        },
-        "courseF_bee_variables_8_2020": {
-          "collect": {
-            "name": "thu thập"
-          }
-        },
-        "CourseD_EOC_artist": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao",
-            "parameters": {
-              "points": "điểm",
-              "length": "chiều dài"
-            },
-            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước"
-          },
-          "draw a circle": {
-            "name": "vẽ một hình tròn",
-            "description": "vẽ một hình tròn với bán kính cho trước",
-            "parameters": {
-              "radius": "bán kính"
-            }
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "chiều dài",
-              "repeat": "lặp lại",
-              "sides": "các cạnh"
-            },
-            "name": "vẽ một cái chong chóng"
-          },
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            },
-            "name": "vẽ một hình khối"
-          },
-          "draw a house": {
-            "name": "vẽ một căn nhà",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "Standalone_Artist_9": {
-          "my function": {
-            "name": "hàm của tôi"
-          }
-        },
-        "Function intro Ryan": {
-          "build bridge": {
-            "name": "xây cầu"
-          }
-        },
-        "Function intro Ryan_2019": {
-          "build bridge": {
-            "name": "xây cầu"
-          }
-        },
-        "Function intro Ryan_2020": {
-          "build bridge": {
-            "name": "xây cầu"
-          }
-        },
-        "MC_HOC_2017_07_Cole": {
-          "clear path": {
-            "name": "dọn đường"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2019": {
-          "clear path": {
-            "name": "dọn đường"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2020": {
-          "clear path": {
-            "name": "dọn đường"
-          }
-        },
-        "MC_HOC_2017_10_RETRY": {
-          "fix long path": {
-            "name": "sửa đường dài"
-          },
-          "fix short path": {
-            "name": "sửa đường ngắn"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2019": {
-          "fix long path": {
-            "name": "sửa đường dài"
-          },
-          "fix short path": {
-            "name": "sửa đường ngắn"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2020": {
-          "fix long path": {
-            "name": "sửa đường dài"
-          },
-          "fix short path": {
-            "name": "sửa đường ngắn"
-          }
-        },
-        "MC_HOC_2017_Ali": {
-          "build short bridge": {
-            "name": "xây cầu ngắn"
-          },
-          "build long bridge": {
-            "name": "xây cầu dài"
-          }
-        },
-        "MC_HOC_2017_Ali_2019": {
-          "build short bridge": {
-            "name": "xây cầu ngắn"
-          },
-          "build long bridge": {
-            "name": "xây cầu dài"
-          }
-        },
-        "MC_HOC_2017_Ali_2020": {
-          "build short bridge": {
-            "name": "xây cầu ngắn"
-          },
-          "build long bridge": {
-            "name": "xây cầu dài"
-          }
-        },
-        "Standalone_Artist_8": {
-          "draw a shape": {
-            "name": "vẽ một hình khối"
-          }
-        },
-        "Course E: Artist Project_examples_2021": {
-          "my function": {
-            "name": "hàm của tôi"
-          }
-        },
-        "Course E: Frozen Project_examples_2021": {
-          "small flower": {
-            "name": "bông hoa nhỏ"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "HOA LOGIC2"
-          },
-          "LOGIC FLOWER": {
-            "name": "HOA LOGIC"
-          },
-          "LOGIC FLOWERS": {
-            "name": "HOA LOGIC"
-          },
-          "draw a star": {
-            "name": "vẽ một ngôi sao",
-            "parameters": {
-              "points": "điểm",
-              "length": "chiều dài"
-            },
-            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước"
-          },
-          "draw a circle": {
-            "name": "vẽ một hình tròn",
-            "description": "vẽ một hình tròn với bán kính cho trước",
-            "parameters": {
-              "radius": "bán kính"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "vẽ một cái chong chóng",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài",
-              "repeat": "lặp lại"
-            }
-          },
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
+        "Auto Open Function Editor": {
           "draw a shape": {
             "name": "vẽ một hình khối",
             "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài"
-            }
-          },
-          "draw a house": {
-            "name": "vẽ một căn nhà",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
               "length": "chiều dài",
               "sides": "các cạnh"
             }
-          }
-        },
-        "Course F: Artist Project_Flowers_examples_2021": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao",
-            "parameters": {
-              "points": "điểm",
-              "length": "chiều dài"
-            },
-            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước"
-          },
-          "draw a circle": {
-            "name": "vẽ một hình tròn",
-            "description": "vẽ một hình tròn với bán kính cho trước",
-            "parameters": {
-              "radius": "bán kính"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "vẽ một cái chong chóng",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài",
-              "repeat": "lặp lại"
-            }
-          },
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a shape": {
-            "name": "vẽ một hình khối",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài"
-            }
-          },
-          "draw a house": {
-            "name": "vẽ một căn nhà",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "CourseD_EOC_artist_2021": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao",
-            "parameters": {
-              "points": "điểm",
-              "length": "chiều dài"
-            },
-            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước"
-          },
-          "draw a circle": {
-            "name": "vẽ một hình tròn",
-            "description": "vẽ một hình tròn với bán kính cho trước",
-            "parameters": {
-              "radius": "bán kính"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "vẽ một cái chong chóng",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài",
-              "repeat": "lặp lại"
-            }
-          },
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a shape": {
-            "name": "vẽ một hình khối",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài"
-            }
-          },
-          "draw a house": {
-            "name": "vẽ một căn nhà",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "CourseD_EOC_artist_example2021": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao",
-            "parameters": {
-              "points": "điểm",
-              "length": "chiều dài"
-            },
-            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước"
-          },
-          "draw a circle": {
-            "name": "vẽ một hình tròn",
-            "description": "vẽ một hình tròn với bán kính cho trước",
-            "parameters": {
-              "radius": "bán kính"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "vẽ một cái chong chóng",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài",
-              "repeat": "lặp lại"
-            }
-          },
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a shape": {
-            "name": "vẽ một hình khối",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài"
-            }
-          },
-          "draw a house": {
-            "name": "vẽ một căn nhà",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "CourseF_app_computer": {
-          "reset game": {
-            "name": "đặt lại trò chơi"
-          }
-        },
-        "Function intro Ryan_2021": {
-          "build bridge": {
-            "name": "xây cầu"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2021": {
-          "clear path": {
-            "name": "dọn đường"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2021": {
-          "fix long path": {
-            "name": "sửa đường dài"
-          },
-          "fix short path": {
-            "name": "sửa đường ngắn"
-          }
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "build short bridge": {
-            "name": "xây cầu ngắn"
-          },
-          "build long bridge": {
-            "name": "xây cầu dài"
-          }
-        },
-        "courseC_artist_prog3_2021": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
-            "name": "vẽ ngọn lửa"
-          },
-          "draw fire": {
-            "name": "vẽ lửa"
-          }
-        },
-        "courseC_data wizard_2021": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_artist_functions10_2021": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw hexagon": {
-            "name": "vẽ hình lục giác"
-          },
-          "draw line of hexagons": {
-            "name": "vẽ hàng lục giác"
-          }
-        },
-        "courseE_artist_functions1_dani": {
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions2_2021": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions2_dani": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions3_2021": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions4_dani": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions5_2021": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions5_dani": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions8_2021": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_functions8a_2021": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_artist_functions8b_2021": {
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_functions8c_2021": {
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          }
-        },
-        "courseE_artist_functions9_2021": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw triangle": {
-            "name": "vẽ tam giác"
-          },
-          "draw line of triangles": {
-            "name": "vẽ hàng tam giác"
-          }
-        },
-        "courseE_artist_functionsProj_2021": {
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "draw hexagon": {
-            "name": "vẽ hình lục giác"
-          },
-          "draw line of hexagons": {
-            "name": "vẽ hàng lục giác"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "my design": {
-            "name": "thiết kế của tôi"
-          }
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "my design": {
-            "name": "thiết kế của tôi"
-          }
-        },
-        "courseE_artist_functions_predict1_2021": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions_predict1_dani": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions_predict2_2021": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw line of polygons": {
-            "name": "vẽ hàng đa giác"
-          },
-          "draw polygon": {
-            "name": "vẽ đa giác"
-          }
-        },
-        "courseF_apps_collector": {
-          "end game": {
-            "name": "kết thúc trò chơi"
           }
         },
         "Course 4 Artist Binary 1": {
@@ -2411,6 +273,1223 @@
             }
           }
         },
+        "Course 4 Artist Functions challenge": {
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          }
+        },
+        "Course 4 Bee Params 8": {
+          "get nectar make honey": {
+            "parameters": {
+              "honey": "mật ong"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 1": {
+          "jump": {
+            "name": "nhảy"
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "score_points": {
+            "parameters": {
+              "points": "điểm"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 2": {
+          "jump": {
+            "name": "nhảy"
+          }
+        },
+        "Course 4 Play Lab Params 3": {
+          "jump": {
+            "name": "nhảy",
+            "parameters": {
+              "actor": "nhân vật",
+              "height": "chiều cao"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 4": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "Course 4 Play Lab Params 5": {
+          "patrol": {
+            "parameters": {
+              "actor": "nhân vật"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 6": {
+          "patrol": {
+            "parameters": {
+              "actor": "nhân vật"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 7": {
+          "patrol": {
+            "parameters": {
+              "actor": "nhân vật",
+              "speed": "tốc độ"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 8": {
+          "patrol": {
+            "parameters": {
+              "actor": "nhân vật",
+              "speed": "tốc độ"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "parameters": {
+              "points": "điểm"
+            }
+          }
+        },
+        "Course 4 Play Lab Vars 1": {
+          "set score": {
+            "name": "thiết lập điểm"
+          }
+        },
+        "Course 4 Play Lab Vars 2": {
+          "set score": {
+            "name": "thiết lập điểm"
+          }
+        },
+        "Course 4 SCF 1": {
+          "draw a hexagon": {
+            "name": "vẽ một hình lục giác"
+          }
+        },
+        "Course 4 SCF 1a": {
+          "get nectar": {
+            "name": "lấy phấn hoa",
+            "parameters": {
+              "counter": "biến đếm"
+            }
+          }
+        },
+        "Course 4 SCF 3": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw an octagon": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "hàm của tôi"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "hàm của tôi"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "LOGIC FLOWER": {
+            "name": "HOA LOGIC"
+          },
+          "LOGIC FLOWERS": {
+            "name": "HOA LOGIC"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "HOA LOGIC2"
+          },
+          "draw a circle": {
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "name": "vẽ một hình tròn",
+            "parameters": {
+              "radius": "bán kính"
+            }
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "vẽ một cái chong chóng",
+            "parameters": {
+              "length": "chiều dài",
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a shape": {
+            "name": "vẽ một hình khối",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a star": {
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
+            "name": "vẽ một ngôi sao",
+            "parameters": {
+              "length": "chiều dài",
+              "points": "điểm"
+            }
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "small flower": {
+            "name": "bông hoa nhỏ"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": "HOA LOGIC"
+          },
+          "LOGIC FLOWERS": {
+            "name": "HOA LOGIC"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "HOA LOGIC2"
+          },
+          "draw a circle": {
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "name": "vẽ một hình tròn",
+            "parameters": {
+              "radius": "bán kính"
+            }
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "vẽ một cái chong chóng",
+            "parameters": {
+              "length": "chiều dài",
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a shape": {
+            "name": "vẽ một hình khối",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a star": {
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
+            "name": "vẽ một ngôi sao",
+            "parameters": {
+              "length": "chiều dài",
+              "points": "điểm"
+            }
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "small flower": {
+            "name": "bông hoa nhỏ"
+          }
+        },
+        "Course E: Play Lab Project": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a circle": {
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "name": "vẽ một hình tròn",
+            "parameters": {
+              "radius": "bán kính"
+            }
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "vẽ một cái chong chóng",
+            "parameters": {
+              "length": "chiều dài",
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a shape": {
+            "name": "vẽ một hình khối",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a star": {
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
+            "name": "vẽ một ngôi sao",
+            "parameters": {
+              "length": "chiều dài",
+              "points": "điểm"
+            }
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a circle": {
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "name": "vẽ một hình tròn",
+            "parameters": {
+              "radius": "bán kính"
+            }
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "vẽ một cái chong chóng",
+            "parameters": {
+              "length": "chiều dài",
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a shape": {
+            "name": "vẽ một hình khối",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a star": {
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
+            "name": "vẽ một ngôi sao",
+            "parameters": {
+              "length": "chiều dài",
+              "points": "điểm"
+            }
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a circle": {
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "name": "vẽ một hình tròn",
+            "parameters": {
+              "radius": "bán kính"
+            }
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "vẽ một cái chong chóng",
+            "parameters": {
+              "length": "chiều dài",
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a shape": {
+            "name": "vẽ một hình khối",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a star": {
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
+            "name": "vẽ một ngôi sao",
+            "parameters": {
+              "length": "chiều dài",
+              "points": "điểm"
+            }
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a circle": {
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "name": "vẽ một hình tròn",
+            "parameters": {
+              "radius": "bán kính"
+            }
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "vẽ một cái chong chóng",
+            "parameters": {
+              "length": "chiều dài",
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a shape": {
+            "name": "vẽ một hình khối",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a star": {
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
+            "name": "vẽ một ngôi sao",
+            "parameters": {
+              "length": "chiều dài",
+              "points": "điểm"
+            }
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a circle": {
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "name": "vẽ một hình tròn",
+            "parameters": {
+              "radius": "bán kính"
+            }
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "vẽ một cái chong chóng",
+            "parameters": {
+              "length": "chiều dài",
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a shape": {
+            "name": "vẽ một hình khối",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a star": {
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
+            "name": "vẽ một ngôi sao",
+            "parameters": {
+              "length": "chiều dài",
+              "points": "điểm"
+            }
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "name": "vẽ một hình tròn",
+            "parameters": {
+              "radius": "bán kính"
+            }
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "vẽ một cái chong chóng",
+            "parameters": {
+              "length": "chiều dài",
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a shape": {
+            "name": "vẽ một hình khối",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a star": {
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
+            "name": "vẽ một ngôi sao",
+            "parameters": {
+              "length": "chiều dài",
+              "points": "điểm"
+            }
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "đặt lại trò chơi"
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "đặt lại trò chơi"
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "đặt lại trò chơi"
+          }
+        },
+        "Find the Wizard": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "FoodFight": {
+          "score_points": {
+            "parameters": {
+              "points": "điểm"
+            }
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "xây cầu"
+          }
+        },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "xây cầu"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "xây cầu"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "xây cầu"
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "xây cầu"
+          }
+        },
+        "Geometric Sun": {
+          "diamond": {
+            "name": "kim cương"
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà"
+          },
+          "square": {
+            "name": "Quảng trường"
+          },
+          "sun": {
+            "name": "mặt trời"
+          }
+        },
+        "Geometric Sun_2018": {
+          "diamond": {
+            "name": "kim cương"
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà"
+          },
+          "square": {
+            "name": "Quảng trường"
+          },
+          "sun": {
+            "name": "mặt trời"
+          }
+        },
+        "InspirationalArtwork": {
+          "draw a loop": {
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw spiral circle": {
+            "parameters": {
+              "size": "kích cỡ"
+            }
+          },
+          "n-sided shape": {
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          }
+        },
+        "InspirationalArtwork_2018": {
+          "draw a loop": {
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw spiral circle": {
+            "parameters": {
+              "size": "kích cỡ"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "hàm 1"
+          },
+          "function 2": {
+            "name": "hàm 2"
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "dọn đường"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "clear path": {
+            "name": "dọn đường"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "dọn đường"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "dọn đường"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "dọn đường"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "sửa đường dài"
+          },
+          "fix short path": {
+            "name": "sửa đường ngắn"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "sửa đường dài"
+          },
+          "fix short path": {
+            "name": "sửa đường ngắn"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "sửa đường dài"
+          },
+          "fix short path": {
+            "name": "sửa đường ngắn"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "sửa đường dài"
+          },
+          "fix short path": {
+            "name": "sửa đường ngắn"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "sửa đường dài"
+          },
+          "fix short path": {
+            "name": "sửa đường ngắn"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build long bridge": {
+            "name": "xây cầu dài"
+          },
+          "build short bridge": {
+            "name": "xây cầu ngắn"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build long bridge": {
+            "name": "xây cầu dài"
+          },
+          "build short bridge": {
+            "name": "xây cầu ngắn"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build long bridge": {
+            "name": "xây cầu dài"
+          },
+          "build short bridge": {
+            "name": "xây cầu ngắn"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build long bridge": {
+            "name": "xây cầu dài"
+          },
+          "build short bridge": {
+            "name": "xây cầu ngắn"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build long bridge": {
+            "name": "xây cầu dài"
+          },
+          "build short bridge": {
+            "name": "xây cầu ngắn"
+          }
+        },
+        "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": "hàm 1"
+          },
+          "function 2": {
+            "name": "hàm 2"
+          }
+        },
+        "MC_HOC_2017_FP20x202022": {
+          "function 1": {
+            "name": "hàm 1"
+          },
+          "function 2": {
+            "name": "hàm 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "function 1": {
+            "name": "hàm 1"
+          },
+          "function 2": {
+            "name": "hàm 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "function 1": {
+            "name": "hàm 1"
+          },
+          "function 2": {
+            "name": "hàm 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "hàm 1"
+          },
+          "function 2": {
+            "name": "hàm 2"
+          }
+        },
+        "NEW Course 4 Artist Functions 11": {
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          }
+        },
+        "NEW Course 4 Artist Functions 12": {
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          }
+        },
+        "NEW Course 4 Artist Functions 13": {
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          }
+        },
+        "NEW Course 4 Artist Functions 14": {
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          }
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          }
+        },
+        "NEW Course 4 Artist Functions 4": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          }
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          }
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác"
+          }
+        },
+        "NEW Course 4 Artist Functions 9": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác"
+          }
+        },
+        "NEW Course 4 Artist Params 1": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          }
+        },
+        "NEW Course 4 Artist Params 10": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a hexagon": {
+            "name": "vẽ một hình lục giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 11": {
+          "do something": {
+            "name": "thực hiện",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a polygon": {
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12a": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 13": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 14": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 15": {
+          "draw a circle": {
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "name": "vẽ một hình tròn",
+            "parameters": {
+              "radius": "bán kính"
+            }
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "vẽ một cái chong chóng",
+            "parameters": {
+              "length": "chiều dài",
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a shape": {
+            "name": "vẽ một hình khối",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a star": {
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
+            "name": "vẽ một ngôi sao",
+            "parameters": {
+              "length": "chiều dài",
+              "points": "điểm"
+            }
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 2": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a triangle": {
+            "description": "vẽ một hình tam giác",
+            "name": "vẽ một hình tam giác"
+          }
+        },
+        "NEW Course 4 Artist Params 3": {
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác"
+          }
+        },
+        "NEW Course 4 Artist Params 4": {
+          "draw a triangle with length": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 5": {
+          "draw a pentagon": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 6": {
+          "draw a hexagon": {
+            "name": "vẽ một hình lục giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a sqaure": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 7": {
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 8": {
+          "draw a triangle with length": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 9": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params inspire": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          }
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "jump": {
+            "name": "nhảy",
+            "parameters": {
+              "actor": "nhân vật",
+              "height": "chiều cao"
+            }
+          },
+          "patrol": {
+            "parameters": {
+              "actor": "nhân vật",
+              "speed": "tốc độ"
+            }
+          }
+        },
+        "New Artist Project": {
+          "draw a circle": {
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "name": "vẽ một hình tròn",
+            "parameters": {
+              "radius": "bán kính"
+            }
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "vẽ một cái chong chóng",
+            "parameters": {
+              "length": "chiều dài",
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a shape": {
+            "name": "vẽ một hình khối",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a star": {
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
+            "name": "vẽ một ngôi sao",
+            "parameters": {
+              "length": "chiều dài",
+              "points": "điểm"
+            }
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "hàm 1"
+          },
+          "function 2": {
+            "name": "hàm 2"
+          }
+        },
+        "New Play Lab Project": {
+          "jump": {
+            "name": "nhảy",
+            "parameters": {
+              "actor": "nhân vật",
+              "height": "chiều cao"
+            }
+          },
+          "patrol": {
+            "parameters": {
+              "actor": "nhân vật",
+              "speed": "tốc độ"
+            }
+          }
+        },
+        "Robot Doodle": {
+          "draw head": {
+            "name": "vẽ đầu"
+          }
+        },
+        "Robot Doodle_2018": {
+          "draw head": {
+            "name": "vẽ đầu"
+          }
+        },
+        "Standalone_Artist_7": {
+          "draw a flower": {
+            "name": "vẽ một bông hoa"
+          }
+        },
+        "Standalone_Artist_8": {
+          "draw a shape": {
+            "name": "vẽ một hình khối"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "hàm của tôi"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "lời giải tiềm năng"
+          }
+        },
+        "course3_artist_functions_challenge1": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "course3_artist_functions_challenge2": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "course3_bee_functions_challenge1": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "course3_bee_functions_challenge2": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "course3_playLab_challenge1": {
+          "keep playing": {
+            "name": "tiếp tục chơi bài này"
+          }
+        },
         "course4_artist_binary_challenge1": {
           "draw": {
             "parameters": {
@@ -2423,6 +1502,194 @@
             "parameters": {
               "binary": "nhị phân"
             }
+          }
+        },
+        "course4_artist_functions_challenge2": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "course4_artist_fwp_challenge1": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a polygon": {
+            "parameters": {
+              "sides": "các cạnh"
+            }
+          },
+          "draw background": {
+            "parameters": {
+              "color": "màu sắc"
+            }
+          }
+        },
+        "course4_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "di chuyển và lấy mật hoa bằng biến đếm"
+          }
+        },
+        "course4_bee_fwp_challenge1": {
+          "pick row": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "course4_bee_fwp_challenge2": {
+          "pick row": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "lời giải tiềm năng"
+          }
+        },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": "lời giải tiềm năng"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "lời giải tiềm năng"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "lời giải tiềm năng"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "lời giải tiềm năng"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "lời giải tiềm năng"
+          }
+        },
+        "courseC_artist_prog3": {
+          "draw fire": {
+            "name": "vẽ lửa"
+          },
+          "draw flame": {
+            "name": "vẽ ngọn lửa",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw fire": {
+            "name": "vẽ lửa"
+          },
+          "draw flame": {
+            "name": "vẽ ngọn lửa",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2018": {
+          "draw fire": {
+            "name": "vẽ lửa"
+          },
+          "draw flame": {
+            "name": "vẽ ngọn lửa",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2019": {
+          "draw fire": {
+            "name": "vẽ lửa"
+          },
+          "draw flame": {
+            "name": "vẽ ngọn lửa",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2020": {
+          "draw fire": {
+            "name": "vẽ lửa"
+          },
+          "draw flame": {
+            "name": "vẽ ngọn lửa",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw fire": {
+            "name": "vẽ lửa"
+          },
+          "draw flame": {
+            "name": "vẽ ngọn lửa",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog4": {
+          "booster": {
+            "name": "bảo bối"
+          }
+        },
+        "courseC_artist_prog42022": {
+          "booster": {
+            "name": "bảo bối"
+          }
+        },
+        "courseC_artist_prog4_2018": {
+          "booster": {
+            "name": "bảo bối"
+          }
+        },
+        "courseC_artist_prog4_2019": {
+          "booster": {
+            "name": "bảo bối"
+          }
+        },
+        "courseC_artist_prog4_2020": {
+          "booster": {
+            "name": "bảo bối"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "bảo bối"
+          }
+        },
+        "courseC_data wizard": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseC_data wizard_2020": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "thực hiện"
           }
         },
         "courseD_artist_binary1": {
@@ -2740,236 +2007,289 @@
             }
           }
         },
-        "courseC_artist_prog4_2021": {
-          "booster": {
-            "name": "bảo bối"
-          }
-        },
-        "courseB_artist_loops_challenge2_2021": {
-          "potential solution": {
-            "name": "lời giải tiềm năng"
-          }
-        },
-        "courseF_bee_for_challenge1_2021": {
-          "move and get nectar with counter": {
-            "name": "di chuyển và lấy mật hoa bằng biến đếm"
-          }
-        },
-        "MC_HOC_2017_FP20x20_2021": {
-          "function 1": {
-            "name": "hàm 1"
+        "courseE_artist_concept1": {
+          "do something": {
+            "name": "thực hiện"
           },
-          "function 2": {
-            "name": "hàm 2"
+          "draw a hexagon": {
+            "name": "vẽ một hình lục giác"
           }
         },
-        "courseE_artist_functions7_2021": {
+        "courseE_artist_concept1_2018": {
+          "draw a hexagon": {
+            "name": "vẽ một hình lục giác"
+          }
+        },
+        "courseE_artist_concept4": {
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          }
+        },
+        "courseE_artist_concept4_2018": {
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          }
+        },
+        "courseE_artist_concept_challenge1": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseE_artist_concept_challenge1_2018": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions10": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw hexagon": {
+            "name": "vẽ hình lục giác"
+          },
+          "draw line of hexagons": {
+            "name": "vẽ hàng lục giác"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw hexagon": {
+            "name": "vẽ hình lục giác"
+          },
+          "draw line of hexagons": {
+            "name": "vẽ hàng lục giác"
+          }
+        },
+        "courseE_artist_functions10_2018": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw hexagon": {
+            "name": "vẽ hình lục giác"
+          },
+          "draw line of hexagons": {
+            "name": "vẽ hàng lục giác"
+          }
+        },
+        "courseE_artist_functions10_2019": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw hexagon": {
+            "name": "vẽ hình lục giác"
+          },
+          "draw line of hexagons": {
+            "name": "vẽ hàng lục giác"
+          }
+        },
+        "courseE_artist_functions10_2020": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw hexagon": {
+            "name": "vẽ hình lục giác"
+          },
+          "draw line of hexagons": {
+            "name": "vẽ hàng lục giác"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw hexagon": {
+            "name": "vẽ hình lục giác"
+          },
+          "draw line of hexagons": {
+            "name": "vẽ hàng lục giác"
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions2": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions2_2018": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions2_2019": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions2_2020": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions2_copy": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions3_2018": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions3_2019": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions3_2020": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions4": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions4_copy": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions5_2018": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions5_2019": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions5_2020": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "vẽ một ngôi sao"
+          }
+        },
+        "courseE_artist_functions7": {
+          "draw a house": {
+            "name": "vẽ một căn nhà"
+          },
           "draw a window": {
             "name": "vẽ cửa sổ"
           }
         },
-        "courseE_farmer_functions10a1_2021": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
+        "courseE_artist_functions72022": {
+          "draw a window": {
+            "name": "vẽ cửa sổ"
+          }
+        },
+        "courseE_artist_functions7_2018": {
+          "draw a house": {
+            "name": "vẽ một căn nhà"
           },
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          },
-          "get all pumpkins": {
-            "name": "hái hết bí ngô"
-          },
-          "pumpkin square": {
-            "name": "hình vuông bí ngô"
-          }
-        },
-        "courseE_farmer_functions11_predict_2021": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
-          "pumpkin square": {
-            "name": "hình vuông bí ngô"
-          },
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          },
-          "get produce": {
-            "name": "thu hoạch nông sản"
-          },
-          "get all pumpkins": {
-            "name": "hái hết bí ngô"
-          }
-        },
-        "courseE_farmer_functions13_2021": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
-          "check for corn": {
-            "name": "kiểm tra ngô"
-          },
-          "corn rectangle": {
-            "name": "hình chữ nhật ngô"
-          },
-          "lettuce stairs": {
-            "name": "bậc thang rau diếp"
-          }
-        },
-        "courseE_farmer_functions1a_2021": {
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          }
-        },
-        "courseE_farmer_functions2b_2021": {
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          }
-        },
-        "courseE_farmer_functions2ba_2021": {
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          },
-          "get all pumpkins": {
-            "name": "hái hết bí ngô"
-          }
-        },
-        "courseE_farmer_functions3c1_2021": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          },
-          "get all pumpkins": {
-            "name": "hái hết bí ngô"
-          }
-        },
-        "courseE_farmer_functions3c_2021": {
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          },
-          "get all pumpkins": {
-            "name": "hái hết bí ngô"
-          }
-        },
-        "courseE_farmer_functions7a1_2021": {
-          "garden square": {
-            "name": "hình vuông khu vườn"
-          }
-        },
-        "courseE_farmer_functions8a1_2021": {
-          "garden square": {
-            "name": "hình vuông khu vườn"
-          }
-        },
-        "courseE_farmer_functions9a1_2021": {
-          "garden square": {
-            "name": "hình vuông khu vườn"
-          }
-        },
-        "Course 4 Artist Functions challenge": {
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "MC_HOC_2017_FP20x20": {
-          "function 1": {
-            "name": "hàm 1"
-          },
-          "function 2": {
-            "name": "hàm 2"
-          }
-        },
-        "MC_HOC_2017_FP20x20_2019": {
-          "function 1": {
-            "name": "hàm 1"
-          },
-          "function 2": {
-            "name": "hàm 2"
-          }
-        },
-        "MC_HOC_2017_FP20x20_2020": {
-          "function 1": {
-            "name": "hàm 1"
-          },
-          "function 2": {
-            "name": "hàm 2"
-          }
-        },
-        "NEW Course 4 Artist Functions 11": {
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "NEW Course 4 Artist Functions 12": {
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "NEW Course 4 Artist Functions 13": {
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "NEW Course 4 Artist Functions 14": {
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          }
-        },
-        "New Minecraft Hero Project": {
-          "function 1": {
-            "name": "hàm 1"
-          },
-          "function 2": {
-            "name": "hàm 2"
-          }
-        },
-        "course1_artist_loops_challenge2": {
-          "potential solution": {
-            "name": "lời giải tiềm năng"
-          }
-        },
-        "course4_bee_for_challenge1": {
-          "move and get nectar with counter": {
-            "name": "di chuyển và lấy mật hoa bằng biến đếm"
-          }
-        },
-        "courseB_artist_loops_challenge2": {
-          "potential solution": {
-            "name": "lời giải tiềm năng"
-          }
-        },
-        "courseB_artist_loops_challenge2_2018": {
-          "potential solution": {
-            "name": "lời giải tiềm năng"
-          }
-        },
-        "courseB_artist_loops_challenge2_2019": {
-          "potential solution": {
-            "name": "lời giải tiềm năng"
-          }
-        },
-        "courseB_artist_loops_challenge2_2020": {
-          "potential solution": {
-            "name": "lời giải tiềm năng"
-          }
-        },
-        "courseC_artist_prog4": {
-          "booster": {
-            "name": "bảo bối"
-          }
-        },
-        "courseC_artist_prog4_2018": {
-          "booster": {
-            "name": "bảo bối"
-          }
-        },
-        "courseC_artist_prog4_2019": {
-          "booster": {
-            "name": "bảo bối"
-          }
-        },
-        "courseC_artist_prog4_2020": {
-          "booster": {
-            "name": "bảo bối"
+          "draw a window": {
+            "name": "vẽ cửa sổ"
           }
         },
         "courseE_artist_functions7_2019": {
@@ -2977,103 +2297,842 @@
             "name": "vẽ cửa sổ"
           }
         },
-        "courseE_farmer_functions10a1_2018": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
+        "courseE_artist_functions7_2020": {
+          "draw a house": {
+            "name": "vẽ một căn nhà"
           },
+          "draw a window": {
+            "name": "vẽ cửa sổ"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "vẽ cửa sổ"
+          }
+        },
+        "courseE_artist_functions8": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functions8_2018": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functions8_2019": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functions8_2020": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          }
+        },
+        "courseE_artist_functions8a_2018": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          }
+        },
+        "courseE_artist_functions8a_2019": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          }
+        },
+        "courseE_artist_functions8a_2020": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          }
+        },
+        "courseE_artist_functions8b_2018": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          }
+        },
+        "courseE_artist_functions8b_2019": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          }
+        },
+        "courseE_artist_functions8b_2020": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functions8c_2018": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functions8c_2019": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functions8c_2020": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functions9": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw line of triangles": {
+            "name": "vẽ hàng tam giác"
+          },
+          "draw triangle": {
+            "name": "vẽ tam giác"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw line of triangles": {
+            "name": "vẽ hàng tam giác"
+          },
+          "draw triangle": {
+            "name": "vẽ tam giác"
+          }
+        },
+        "courseE_artist_functions9_2018": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw line of triangles": {
+            "name": "vẽ hàng tam giác"
+          },
+          "draw triangle": {
+            "name": "vẽ tam giác"
+          }
+        },
+        "courseE_artist_functions9_2019": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw line of triangles": {
+            "name": "vẽ hàng tam giác"
+          },
+          "draw triangle": {
+            "name": "vẽ tam giác"
+          }
+        },
+        "courseE_artist_functions9_2020": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw line of triangles": {
+            "name": "vẽ hàng tam giác"
+          },
+          "draw triangle": {
+            "name": "vẽ tam giác"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw line of triangles": {
+            "name": "vẽ hàng tam giác"
+          },
+          "draw triangle": {
+            "name": "vẽ tam giác"
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw hexagon": {
+            "name": "vẽ hình lục giác"
+          },
+          "draw line of hexagons": {
+            "name": "vẽ hàng lục giác"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functionsProj_2018": {
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw hexagon": {
+            "name": "vẽ hình lục giác"
+          },
+          "draw line of hexagons": {
+            "name": "vẽ hàng lục giác"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functionsProj_2019": {
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw hexagon": {
+            "name": "vẽ hình lục giác"
+          },
+          "draw line of hexagons": {
+            "name": "vẽ hàng lục giác"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functionsProj_2020": {
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw hexagon": {
+            "name": "vẽ hình lục giác"
+          },
+          "draw line of hexagons": {
+            "name": "vẽ hàng lục giác"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "draw hexagon": {
+            "name": "vẽ hình lục giác"
+          },
+          "draw line of hexagons": {
+            "name": "vẽ hàng lục giác"
+          },
+          "draw square": {
+            "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          }
+        },
+        "courseE_artist_functions_challenge1": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "courseE_artist_functions_challenge2": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
+          }
+        },
+        "courseE_artist_functions_predict1": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions_predict1_2018": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions_predict1_2019": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions_predict1_2020": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions_predict1_copy": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          },
+          "draw ear stems": {
+            "name": "vẽ thân tai"
+          }
+        },
+        "courseE_artist_functions_predict2": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw line of polygons": {
+            "name": "vẽ hàng đa giác"
+          },
+          "draw polygon": {
+            "name": "vẽ đa giác"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw line of polygons": {
+            "name": "vẽ hàng đa giác"
+          },
+          "draw polygon": {
+            "name": "vẽ đa giác"
+          }
+        },
+        "courseE_artist_functions_predict2_2018": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw line of polygons": {
+            "name": "vẽ hàng đa giác"
+          },
+          "draw polygon": {
+            "name": "vẽ đa giác"
+          }
+        },
+        "courseE_artist_functions_predict2_2019": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw line of polygons": {
+            "name": "vẽ hàng đa giác"
+          },
+          "draw polygon": {
+            "name": "vẽ đa giác"
+          }
+        },
+        "courseE_artist_functions_predict2_2020": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw line of polygons": {
+            "name": "vẽ hàng đa giác"
+          },
+          "draw polygon": {
+            "name": "vẽ đa giác"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw line of polygons": {
+            "name": "vẽ hàng đa giác"
+          },
+          "draw polygon": {
+            "name": "vẽ đa giác"
+          }
+        },
+        "courseE_bee_functions1": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseE_bee_functions_challenge1": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseE_bee_functions_challenge2": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseE_farmer_concept1": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseE_farmer_concept2": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseE_farmer_concept3": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseE_farmer_functions10a12022": {
           "check square for corn": {
             "name": "kiểm tra ngô trong ô"
           },
           "get all pumpkins": {
             "name": "hái hết bí ngô"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
+          },
+          "pumpkin square": {
+            "name": "hình vuông bí ngô"
+          }
+        },
+        "courseE_farmer_functions10a1_2018": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
           },
           "pumpkin square": {
             "name": "hình vuông bí ngô"
           }
         },
         "courseE_farmer_functions10a1_2019": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
           "check square for corn": {
             "name": "kiểm tra ngô trong ô"
           },
           "get all pumpkins": {
             "name": "hái hết bí ngô"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
           },
           "pumpkin square": {
             "name": "hình vuông bí ngô"
           }
         },
         "courseE_farmer_functions10a1_2020": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
           "check square for corn": {
             "name": "kiểm tra ngô trong ô"
           },
           "get all pumpkins": {
             "name": "hái hết bí ngô"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
+          },
+          "pumpkin square": {
+            "name": "hình vuông bí ngô"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
+          },
+          "pumpkin square": {
+            "name": "hình vuông bí ngô"
+          }
+        },
+        "courseE_farmer_functions11_predict2022": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          },
+          "get produce": {
+            "name": "thu hoạch nông sản"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
           },
           "pumpkin square": {
             "name": "hình vuông bí ngô"
           }
         },
         "courseE_farmer_functions11_predict_2018": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          },
+          "get produce": {
+            "name": "thu hoạch nông sản"
+          },
           "pick along path": {
             "name": "nhặt trên đường đi"
           },
           "pumpkin square": {
             "name": "hình vuông bí ngô"
-          },
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          },
-          "get produce": {
-            "name": "thu hoạch nông sản"
-          },
-          "get all pumpkins": {
-            "name": "hái hết bí ngô"
           }
         },
         "courseE_farmer_functions11_predict_2019": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          },
+          "get produce": {
+            "name": "thu hoạch nông sản"
+          },
           "pick along path": {
             "name": "nhặt trên đường đi"
           },
           "pumpkin square": {
             "name": "hình vuông bí ngô"
-          },
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          },
-          "get produce": {
-            "name": "thu hoạch nông sản"
-          },
-          "get all pumpkins": {
-            "name": "hái hết bí ngô"
           }
         },
         "courseE_farmer_functions11_predict_2020": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          },
+          "get produce": {
+            "name": "thu hoạch nông sản"
+          },
           "pick along path": {
             "name": "nhặt trên đường đi"
           },
           "pumpkin square": {
             "name": "hình vuông bí ngô"
-          },
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
           "check square for corn": {
             "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
           },
           "get produce": {
             "name": "thu hoạch nông sản"
           },
-          "get all pumpkins": {
-            "name": "hái hết bí ngô"
+          "pick along path": {
+            "name": "nhặt trên đường đi"
+          },
+          "pumpkin square": {
+            "name": "hình vuông bí ngô"
+          }
+        },
+        "courseE_farmer_functions132022": {
+          "check for corn": {
+            "name": "kiểm tra ngô"
+          },
+          "corn rectangle": {
+            "name": "hình chữ nhật ngô"
+          },
+          "lettuce stairs": {
+            "name": "bậc thang rau diếp"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
           }
         },
         "courseE_farmer_functions13_2018": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
           "check for corn": {
             "name": "kiểm tra ngô"
           },
@@ -3082,12 +3141,12 @@
           },
           "lettuce stairs": {
             "name": "bậc thang rau diếp"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
           }
         },
         "courseE_farmer_functions13_2019": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
           "check for corn": {
             "name": "kiểm tra ngô"
           },
@@ -3096,12 +3155,12 @@
           },
           "lettuce stairs": {
             "name": "bậc thang rau diếp"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
           }
         },
         "courseE_farmer_functions13_2020": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
           "check for corn": {
             "name": "kiểm tra ngô"
           },
@@ -3110,6 +3169,28 @@
           },
           "lettuce stairs": {
             "name": "bậc thang rau diếp"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "check for corn": {
+            "name": "kiểm tra ngô"
+          },
+          "corn rectangle": {
+            "name": "hình chữ nhật ngô"
+          },
+          "lettuce stairs": {
+            "name": "bậc thang rau diếp"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
+          }
+        },
+        "courseE_farmer_functions1a2022": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
           }
         },
         "courseE_farmer_functions1a_2018": {
@@ -3127,6 +3208,16 @@
             "name": "kiểm tra ngô trong ô"
           }
         },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          }
+        },
+        "courseE_farmer_functions2b2022": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          }
+        },
         "courseE_farmer_functions2b_2018": {
           "check square for corn": {
             "name": "kiểm tra ngô trong ô"
@@ -3140,6 +3231,19 @@
         "courseE_farmer_functions2b_2020": {
           "check square for corn": {
             "name": "kiểm tra ngô trong ô"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          }
+        },
+        "courseE_farmer_functions2ba2022": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
           }
         },
         "courseE_farmer_functions2ba_2018": {
@@ -3166,32 +3270,70 @@
             "name": "hái hết bí ngô"
           }
         },
-        "courseE_farmer_functions3c1_2018": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
+        "courseE_farmer_functions2ba_2021": {
           "check square for corn": {
             "name": "kiểm tra ngô trong ô"
           },
           "get all pumpkins": {
             "name": "hái hết bí ngô"
+          }
+        },
+        "courseE_farmer_functions3c12022": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
+          }
+        },
+        "courseE_farmer_functions3c1_2018": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
           }
         },
         "courseE_farmer_functions3c1_2019": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
           "check square for corn": {
             "name": "kiểm tra ngô trong ô"
           },
           "get all pumpkins": {
             "name": "hái hết bí ngô"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
           }
         },
         "courseE_farmer_functions3c1_2020": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          },
           "pick along path": {
             "name": "nhặt trên đường đi"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
           },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          },
+          "pick along path": {
+            "name": "nhặt trên đường đi"
+          }
+        },
+        "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "kiểm tra ngô trong ô"
           },
@@ -3223,6 +3365,19 @@
             "name": "hái hết bí ngô"
           }
         },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          }
+        },
+        "courseE_farmer_functions7a12022": {
+          "garden square": {
+            "name": "hình vuông khu vườn"
+          }
+        },
         "courseE_farmer_functions7a1_2018": {
           "garden square": {
             "name": "hình vuông khu vườn"
@@ -3234,6 +3389,16 @@
           }
         },
         "courseE_farmer_functions7a1_2020": {
+          "garden square": {
+            "name": "hình vuông khu vườn"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "hình vuông khu vườn"
+          }
+        },
+        "courseE_farmer_functions8a12022": {
           "garden square": {
             "name": "hình vuông khu vườn"
           }
@@ -3253,6 +3418,16 @@
             "name": "hình vuông khu vườn"
           }
         },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "hình vuông khu vườn"
+          }
+        },
+        "courseE_farmer_functions9a12022": {
+          "garden square": {
+            "name": "hình vuông khu vườn"
+          }
+        },
         "courseE_farmer_functions9a1_2018": {
           "garden square": {
             "name": "hình vuông khu vườn"
@@ -3268,7 +3443,264 @@
             "name": "hình vuông khu vườn"
           }
         },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "hình vuông khu vườn"
+          }
+        },
+        "courseE_playLab_challenge1": {
+          "keep playing": {
+            "name": "tiếp tục chơi bài này"
+          }
+        },
+        "courseE_playLab_scaffold1": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseE_playLab_scaffold2": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseE_playLab_scaffold3": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseE_playLab_scaffold4": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "kết thúc trò chơi"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "kết thúc trò chơi"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "kết thúc trò chơi"
+          }
+        },
+        "courseF_artist_fwp1": {
+          "Make gingham": {
+            "parameters": {
+              "size": "kích cỡ"
+            }
+          },
+          "black outline": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "checker": {
+            "parameters": {
+              "color": "màu sắc",
+              "size": "kích cỡ"
+            }
+          },
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông"
+          }
+        },
+        "courseF_artist_fwp2": {
+          "Make gingham": {
+            "parameters": {
+              "size": "kích cỡ"
+            }
+          },
+          "black outline": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "checker": {
+            "parameters": {
+              "color": "màu sắc",
+              "size": "kích cỡ"
+            }
+          },
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "courseF_artist_fwp2_predict1": {
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "courseF_artist_fwp3": {
+          "black outline": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a square2": {
+            "parameters": {
+              "size": "kích cỡ"
+            }
+          },
+          "filled square": {
+            "parameters": {
+              "color": "màu sắc",
+              "size": "kích cỡ"
+            }
+          }
+        },
+        "courseF_artist_fwp4": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          }
+        },
+        "courseF_artist_fwp5": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          }
+        },
+        "courseF_artist_fwp6": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          }
+        },
+        "courseF_artist_fwp7": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "chiều dài",
+              "min": "nhỏ nhất",
+              "sides": "các cạnh"
+            }
+          }
+        },
+        "courseF_artist_fwp8": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "chiều dài",
+              "min": "nhỏ nhất",
+              "sides": "các cạnh"
+            }
+          }
+        },
+        "courseF_artist_fwp9": {
+          "draw a circle": {
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "name": "vẽ một hình tròn",
+            "parameters": {
+              "radius": "bán kính"
+            }
+          },
+          "draw a house": {
+            "name": "vẽ một căn nhà",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "vẽ một cái chong chóng",
+            "parameters": {
+              "length": "chiều dài",
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a shape": {
+            "name": "vẽ một hình khối",
+            "parameters": {
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "chiều dài",
+              "min": "nhỏ nhất",
+              "sides": "các cạnh"
+            }
+          },
+          "draw a square": {
+            "name": "vẽ một hình vuông",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          },
+          "draw a star": {
+            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
+            "name": "vẽ một ngôi sao",
+            "parameters": {
+              "length": "chiều dài",
+              "points": "điểm"
+            }
+          },
+          "draw a triangle": {
+            "name": "vẽ một hình tam giác",
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "courseF_artist_fwp_challenge1": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw a polygon": {
+            "parameters": {
+              "sides": "các cạnh"
+            }
+          },
+          "draw background": {
+            "parameters": {
+              "color": "màu sắc"
+            }
+          }
+        },
+        "courseF_artist_fwp_challenge2": {
+          "do something": {
+            "name": "thực hiện"
+          },
+          "draw an octagon": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
         "courseF_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "di chuyển và lấy mật hoa bằng biến đếm"
+          }
+        },
+        "courseF_bee_for_challenge12022": {
           "move and get nectar with counter": {
             "name": "di chuyển và lấy mật hoa bằng biến đếm"
           }
@@ -3288,520 +3720,100 @@
             "name": "di chuyển và lấy mật hoa bằng biến đếm"
           }
         },
-        "Artist Autorun Test": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          }
-        },
-        "Auto Open Function Editor": {
-          "draw a shape": {
-            "name": "vẽ một hình khối",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài"
-            }
-          }
-        },
-        "MC Agent Freeplay": {
-          "function 1": {
-            "name": "hàm 1"
-          },
-          "function 2": {
-            "name": "hàm 2"
-          }
-        },
-        "Course E: Artist Project_examples2022": {
-          "my function": {
-            "name": "hàm của tôi"
-          }
-        },
-        "Course E: Frozen Project_examples2022": {
-          "small flower": {
-            "name": "bông hoa nhỏ"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "HOA LOGIC2"
-          },
-          "LOGIC FLOWER": {
-            "name": "HOA LOGIC"
-          },
-          "LOGIC FLOWERS": {
-            "name": "HOA LOGIC"
-          },
-          "draw a star": {
-            "name": "vẽ một ngôi sao",
-            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
-            "parameters": {
-              "points": "điểm",
-              "length": "chiều dài"
-            }
-          },
-          "draw a circle": {
-            "name": "vẽ một hình tròn",
-            "description": "vẽ một hình tròn với bán kính cho trước",
-            "parameters": {
-              "radius": "bán kính"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "vẽ một cái chong chóng",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài",
-              "repeat": "lặp lại"
-            }
-          },
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a shape": {
-            "name": "vẽ một hình khối",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài"
-            }
-          },
-          "draw a house": {
-            "name": "vẽ một căn nhà",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài",
-              "sides": "các cạnh"
-            }
-          }
-        },
-        "CourseD_EOC_artist2022": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao",
-            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
-            "parameters": {
-              "points": "điểm",
-              "length": "chiều dài"
-            }
-          },
-          "draw a circle": {
-            "name": "vẽ một hình tròn",
-            "description": "vẽ một hình tròn với bán kính cho trước",
-            "parameters": {
-              "radius": "bán kính"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "vẽ một cái chong chóng",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài",
-              "repeat": "lặp lại"
-            }
-          },
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a shape": {
-            "name": "vẽ một hình khối",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài"
-            }
-          },
-          "draw a house": {
-            "name": "vẽ một căn nhà",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "CourseD_EOC_artist_example20212022": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao",
-            "description": "vẽ ngôi sao với các điểm đã cho và cạnh có độ dài cho trước",
-            "parameters": {
-              "points": "điểm",
-              "length": "chiều dài"
-            }
-          },
-          "draw a circle": {
-            "name": "vẽ một hình tròn",
-            "description": "vẽ một hình tròn với bán kính cho trước",
-            "parameters": {
-              "radius": "bán kính"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "vẽ một cái chong chóng",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài",
-              "repeat": "lặp lại"
-            }
-          },
-          "draw a triangle": {
-            "name": "vẽ một hình tam giác",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a shape": {
-            "name": "vẽ một hình khối",
-            "parameters": {
-              "sides": "các cạnh",
-              "length": "chiều dài"
-            }
-          },
-          "draw a house": {
-            "name": "vẽ một căn nhà",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          },
-          "draw a square": {
-            "name": "vẽ một hình vuông",
-            "parameters": {
-              "length": "chiều dài"
-            }
-          }
-        },
-        "CourseF_app_computer2022": {
-          "reset game": {
-            "name": "đặt lại trò chơi"
-          }
-        },
-        "CourseF_app_computer_-2022-2": {
-          "reset game": {
-            "name": "đặt lại trò chơi"
-          }
-        },
-        "Function intro Ryan2022": {
-          "build bridge": {
-            "name": "xây cầu"
-          }
-        },
-        "MC_HOC_2017_07_Cole2022": {
-          "clear path": {
-            "name": "dọn đường"
-          }
-        },
-        "MC_HOC_2017_10_RETRY2022": {
-          "fix long path": {
-            "name": "sửa đường dài"
-          },
-          "fix short path": {
-            "name": "sửa đường ngắn"
-          }
-        },
-        "MC_HOC_2017_Ali2022": {
-          "build short bridge": {
-            "name": "xây cầu ngắn"
-          },
-          "build long bridge": {
-            "name": "xây cầu dài"
-          }
-        },
-        "MC_HOC_2017_FP20x202022": {
-          "function 1": {
-            "name": "hàm 1"
-          },
-          "function 2": {
-            "name": "hàm 2"
-          }
-        },
-        "courseB_artist_loops_challenge22022": {
-          "potential solution": {
-            "name": "lời giải tiềm năng"
-          }
-        },
-        "courseC_artist_prog32022": {
-          "draw flame": {
-            "name": "vẽ ngọn lửa",
-            "parameters": {
-              "x": "x"
-            }
-          },
-          "draw fire": {
-            "name": "vẽ lửa"
-          }
-        },
-        "courseC_artist_prog42022": {
-          "booster": {
-            "name": "bảo bối"
-          }
-        },
-        "courseC_data wizard2022": {
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_artist_functions102022": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw hexagon": {
-            "name": "vẽ hình lục giác"
-          },
-          "draw line of hexagons": {
-            "name": "vẽ hàng lục giác"
-          }
-        },
-        "courseE_artist_functions22022": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions32022": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions52022": {
-          "draw a star": {
-            "name": "vẽ một ngôi sao"
-          }
-        },
-        "courseE_artist_functions72022": {
-          "draw a window": {
-            "name": "vẽ cửa sổ"
-          }
-        },
-        "courseE_artist_functions82022": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          },
-          "draw square": {
-            "name": "vẽ hình vuông"
-          }
-        },
-        "courseE_artist_functions8a2022": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_artist_functions8b2022": {
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          },
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_artist_functions8c2022": {
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          },
-          "draw square": {
-            "name": "vẽ hình vuông"
-          },
-          "do something": {
-            "name": "thực hiện"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          }
-        },
-        "courseE_artist_functions92022": {
-          "do something": {
-            "name": "thực hiện"
-          },
-          "draw triangle": {
-            "name": "vẽ tam giác"
-          },
-          "draw line of triangles": {
-            "name": "vẽ hàng tam giác"
-          }
-        },
-        "courseE_artist_functionsProj2022": {
-          "draw hexagon": {
-            "name": "vẽ hình lục giác"
-          },
-          "draw line of hexagons": {
-            "name": "vẽ hàng lục giác"
-          },
-          "staggered squares": {
-            "name": "hình vuông so le"
-          },
-          "draw a line of squares": {
-            "name": "vẽ một hàng hình vuông"
-          },
-          "draw square": {
-            "name": "vẽ hình vuông"
-          }
-        },
-        "courseE_artist_functions_challenge12022": {
-          "my design": {
-            "name": "thiết kế của tôi"
-          },
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_artist_functions_challenge22022": {
-          "my design": {
-            "name": "thiết kế của tôi"
-          },
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_artist_functions_predict12022": {
-          "draw a square": {
-            "name": "vẽ một hình vuông"
-          },
-          "draw ear stems": {
-            "name": "vẽ thân tai"
-          }
-        },
-        "courseE_artist_functions_predict22022": {
-          "draw line of polygons": {
-            "name": "vẽ hàng đa giác"
-          },
-          "draw polygon": {
-            "name": "vẽ đa giác"
-          },
-          "do something": {
-            "name": "thực hiện"
-          }
-        },
-        "courseE_farmer_functions10a12022": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          },
-          "get all pumpkins": {
-            "name": "hái hết bí ngô"
-          },
-          "pumpkin square": {
-            "name": "hình vuông bí ngô"
-          }
-        },
-        "courseE_farmer_functions11_predict2022": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
-          "pumpkin square": {
-            "name": "hình vuông bí ngô"
-          },
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          },
-          "get produce": {
-            "name": "thu hoạch nông sản"
-          },
-          "get all pumpkins": {
-            "name": "hái hết bí ngô"
-          }
-        },
-        "courseE_farmer_functions132022": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
-          "check for corn": {
-            "name": "kiểm tra ngô"
-          },
-          "corn rectangle": {
-            "name": "hình chữ nhật ngô"
-          },
-          "lettuce stairs": {
-            "name": "bậc thang rau diếp"
-          }
-        },
-        "courseE_farmer_functions1a2022": {
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          }
-        },
-        "courseE_farmer_functions2b2022": {
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          }
-        },
-        "courseE_farmer_functions2ba2022": {
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          },
-          "get all pumpkins": {
-            "name": "hái hết bí ngô"
-          }
-        },
-        "courseE_farmer_functions3c12022": {
-          "pick along path": {
-            "name": "nhặt trên đường đi"
-          },
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          },
-          "get all pumpkins": {
-            "name": "hái hết bí ngô"
-          }
-        },
-        "courseE_farmer_functions3c2022": {
-          "check square for corn": {
-            "name": "kiểm tra ngô trong ô"
-          },
-          "get all pumpkins": {
-            "name": "hái hết bí ngô"
-          }
-        },
-        "courseE_farmer_functions7a12022": {
-          "garden square": {
-            "name": "hình vuông khu vườn"
-          }
-        },
-        "courseE_farmer_functions8a12022": {
-          "garden square": {
-            "name": "hình vuông khu vườn"
-          }
-        },
-        "courseE_farmer_functions9a12022": {
-          "garden square": {
-            "name": "hình vuông khu vườn"
-          }
-        },
-        "courseF_apps_collector2022": {
-          "end game": {
-            "name": "kết thúc trò chơi"
-          }
-        },
-        "courseF_apps_collector_-2022-2": {
-          "end game": {
-            "name": "kết thúc trò chơi"
-          }
-        },
-        "courseF_bee_for_challenge12022": {
+        "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "di chuyển và lấy mật hoa bằng biến đếm"
+          }
+        },
+        "courseF_bee_functions8a": {
+          "do something": {
+            "name": "thực hiện"
+          }
+        },
+        "courseF_bee_fwp4": {
+          "rowOfNectar": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "courseF_bee_fwp5": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "chiều rộng"
+            }
+          }
+        },
+        "courseF_bee_fwp6": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "chiều rộng"
+            }
+          }
+        },
+        "courseF_bee_fwp7": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "chiều rộng"
+            }
+          }
+        },
+        "courseF_bee_fwp8": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "chiều rộng"
+            }
+          }
+        },
+        "courseF_bee_fwp9_predict1": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "chiều rộng"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge1": {
+          "pick row": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge2": {
+          "pick row": {
+            "parameters": {
+              "length": "chiều dài"
+            }
+          }
+        },
+        "courseF_bee_variables_7_2018": {
+          "collect": {
+            "name": "thu thập"
+          }
+        },
+        "courseF_bee_variables_7_2019": {
+          "collect": {
+            "name": "thu thập"
+          }
+        },
+        "courseF_bee_variables_7_2020": {
+          "collect": {
+            "name": "thu thập"
+          }
+        },
+        "courseF_bee_variables_8_2018": {
+          "collect": {
+            "name": "thu thập"
+          }
+        },
+        "courseF_bee_variables_8_2019": {
+          "collect": {
+            "name": "thu thập"
+          }
+        },
+        "courseF_bee_variables_8_2020": {
+          "collect": {
+            "name": "thu thập"
           }
         }
       }

@@ -3,16 +3,1009 @@ ur:
   data:
     script:
       name:
+        20-hour:
+          description: یہ 20 گھنٹے کا کورس 2-4 کورس میں بنیادی کمپیوٹر سائنس اور پروگرامنگ
+            تصورات کا احاطہ کرتا ہے. کورس عمر 10-18 کے ساتھ استعمال کے لئے ڈیزائن
+            کیا گیا ہے. کورسز چیک کریں 2-4 ایک سے زیادہ مکمل تجربے کے لئے!
+          description_audience: Ages 10-18
+          name: 20 گھنٹے
+          student_description: یہ 20 گھنٹے کا کورس 2-4 کورس میں بنیادی کمپیوٹر سائنس
+            اور پروگرامنگ تصورات کا احاطہ کرتا ہے. کورس عمر 10-18 کے ساتھ استعمال
+            کے لئے ڈیزائن کیا گیا ہے. کورسز چیک کریں 2-4 ایک سے زیادہ مکمل تجربے کے
+            لئے!
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: ڈیبگنگ
+            introduction:
+              display_name: تعارف
+            lessonGroup-3:
+              display_name: متغیرات
+            outbreak:
+              display_name: وباء کا سیمیولیٹر
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: آور-آف-کوڈ
+        CSDU2-Draft:
+          description_short: ویب ڈویلپمنٹ
+        CSDU3-Draft:
+          description_short: پروگرامنگ
+        CSDU5-Draft:
+          description_short: ڈیٹا
+        CSDU6-Draft:
+          description_short: میکر لیب
+        CSF_Secret_Sample:
+          description_audience: Ages 8-18
+        CSF_Secret_Sample_Story:
+          description_audience: Ages 8-18+
+        MikeTest:
+          description_audience: Ages 8-98
+        Special Fun:
+          description_audience: Ages 10-18
+        SpecialSeries:
+          description_audience: Ages 10-18
+        TEMP CSD Unit 3:
+          description_short: پروگرامنگ
+        afterschool1:
+          description_audience: Ages 7-13
+        ai-ethics:
+          description_audience: گریڈ 6-12
+          title: ہمارے AI کا ضابطہ اخلاق
+        ai-ethics-2021:
+          description_audience: گریڈز 6-8
+          title: ہمارے AI کا ضابطہ اخلاق
+        aiml-2021:
+          title: AI  اور مشین لرننگ ماڈیول
+        aiml-2022:
+          title: AI  اور مشین لرننگ ماڈیول
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ایپ لیب کا تعارف
+            lessonGroup-3:
+              display_name: باب 1
+            lessonGroup-4:
+              display_name: باب 2
+        allthethings:
+          lessons:
+            lesson-49:
+              name: میوزک
+        applab-intro:
+          title: ایپ لیب کا تعارف
+        aquatic:
+          name: آبی
+        artist:
+          name: فنکار
+          title: آرٹسٹ
+        artistExemplar:
+          description_audience: Ages 8-18
+        asUnplugged:
+          description_audience: Ages 6-13
+        basketball:
+          description: اپنی ٹیم منتخب کریں اور ایک باسکٹ  بال گیم بنائیں
+          description_short: اپنی ٹیم منتخب کریں اور ایک باسکٹ  بال گیم بنائیں
+          name: باسکٹ بال
+          student_description: اپنی ٹیم منتخب کریں اور ایک باسکٹ  بال گیم بنائیں
+          title: اپنی ٹیم منتخب کریں اور ایک باسکٹ  بال گیم بنائیں
+        contagion-pilot:
+          description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے
+            کا سیمیولیشن بنائیں.
+          description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
+            پھیلنے کا سیمیولیشن بنائیں.
+          student_description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
+            پھیلنے کا سیمیولیشن بنائیں.
+        counting-csc:
+          name: counting-csc
+          title: لارل کے ساتھ گنتی
+        counting-csc-2021:
+          title: لارل کے ساتھ گنتی
         course1:
           description_audience: عمر 4-6
         course3:
           description_audience: Ages 8-18
-        playlab:
-          name: پلے لیب
-        artist:
-          name: فنکار
+        course4:
+          description_audience: Ages 9-18
+        coursea-2017:
+          assignment_family_title: کورس A
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+          title: کورس A
+        coursea-2018:
+          assignment_family_title: کورس A
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+        coursea-2019:
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        coursea-2020:
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        coursea-2021:
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        coursea-2022:
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        coursea-2023:
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        coursea-draft:
+          title: 'CS کے بنیادی اصول: کورس A'
+        courseb-2017:
+          assignment_family_title: کورس B
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔ (کورس A سے مشابہ،
+            لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
+          title: کورس B
+        courseb-2018:
+          assignment_family_title: کورس B
+        courseb-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        courseb-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        courseb-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        courseb-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        courseb-draft:
+          title: 'CS کے بنیادی اصول: کورس B'
+        coursec-2017:
+          assignment_family_title: کورس C
+          title: کورس C
+        coursec-2018:
+          assignment_family_title: کورس C
+        coursec-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: ثنائی
+            csf_data:
+              display_name: ڈیٹا
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        coursec-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: ثنائی
+            csf_data:
+              display_name: ڈیٹا
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        coursec-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: ثنائی
+            csf_data:
+              display_name: ڈیٹا
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        coursec-2022:
+          lesson_groups:
+            csf_data:
+              display_name: ڈیٹا
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        coursec-2023:
+          lesson_groups:
+            csf_data:
+              display_name: ڈیٹا
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        coursec-draft:
+          title: 'CS کے بنیادی اصول: کورس C'
+        coursed-2017:
+          assignment_family_title: کورس D
+          description_short: کورس C سے تصورات کا تیزی سے احاطہ کریں، پھر الگورتھمز،
+            نیسٹڈ لوپس، کنڈیشنلز، اور مزید کے ساتھ آگے بڑھیں۔
+          title: کورس D
+        coursed-2018:
+          assignment_family_title: کورس D
+        coursed-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: ثنائی
+            csf_conditionals:
+              display_name: شرائط
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        coursed-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: ثنائی
+            csf_conditionals:
+              display_name: شرائط
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        coursed-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: ثنائی
+            csf_conditionals:
+              display_name: شرائط
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            lessonGroup-6:
+              display_name: ڈیجیٹل شہریت
+          title: کورس D (2021)
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: شرائط
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            lessonGroup-6:
+              display_name: ڈیجیٹل شہریت
+          title: کورس D (2021)
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: شرائط
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            lessonGroup-6:
+              display_name: ڈیجیٹل شہریت
+          title: کورس D (2021)
+        coursed-draft:
+          title: 'CS کے بنیادی اصول: کورس D'
+        coursed-ramp:
+          title: 'CS کے بنیادی اصول: کورس D'
+        coursee-2017:
+          assignment_family_title: کورس E
+          description_short: کورس C اور D میں تصورات کا تیزی سے احاطہ کریں اور پھر
+            فنکشنز کے ساتھ آگے بڑھیں۔
+          title: کورس E
+        coursee-2018:
+          assignment_family_title: کورس E
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_functions:
+              display_name: افعال
+            csf_nested_loops:
+              display_name: گھوںسلا لوپس
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_functions:
+              display_name: افعال
+            csf_nested_loops:
+              display_name: گھوںسلا لوپس
+        coursee-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_functions:
+              display_name: افعال
+            csf_nested_loops:
+              display_name: شرائط
+            ramp_up:
+              display_name: گھوںسلا لوپس
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_functions:
+              display_name: افعال
+            csf_nested_loops:
+              display_name: شرائط
+            ramp_up:
+              display_name: گھوںسلا لوپس
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_functions:
+              display_name: افعال
+            csf_nested_loops:
+              display_name: شرائط
+            ramp_up:
+              display_name: گھوںسلا لوپس
+        coursee-draft:
+          title: 'CS کے بنیادی اصول: کورس E'
+        coursef-2017:
+          assignment_family_title: کورس F
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
+            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+          title: کورس F
+        coursef-2018:
+          assignment_family_title: کورس F
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
+            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        coursef-2019:
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
+            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+          lesson_groups:
+            csf_data:
+              display_name: ڈیٹا
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_for_loops:
+              display_name: لوپس کے لئے
+            csf_internet:
+              display_name: انٹرنیٹ
+            csf_variables:
+              display_name: متغیرات
+        coursef-2020:
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
+            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+          lesson_groups:
+            csf_data:
+              display_name: ڈیٹا
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_for_loops:
+              display_name: لوپس کے لئے
+            csf_variables:
+              display_name: متغیرات
+        coursef-2021:
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
+            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+          lesson_groups:
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_for_loops:
+              display_name: لوپس کے لئے
+            csf_variables:
+              display_name: لوپس کے لئے
+            lessonGroup-7:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-8:
+              display_name: متغیرات
+            lessonGroup-9:
+              display_name: ہٹانا
+        coursef-2022:
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
+            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-8:
+              display_name: متغیرات
+        coursef-2022-pilot:
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
+            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-8:
+              display_name: متغیرات
+        coursef-2023:
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
+            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
+              display_name: متغیرات
+        coursef-draft:
+          title: 'CS کے بنیادی اصول: کورس F'
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: ڈیٹا
+        csa-pl-module-1-test:
+          name: csa-pl-module-1-test
+          title: Code.org اور CSA سے واقفیت
+        csa-pl-module-2-test:
+          name: csa-pl-module-2-test
+          title: Code.org کے ٹولز/وسائل کو دریافت کرنا
+        csa-pl-module-3-test:
+          name: csa-pl-module-3-test
+          title: متن پر مبنی پروگرامنگ کے ساتھ تعاون کرنا
+        csa-pl-test:
+          name: csa-pl-test
+        csa-self-paced-pl:
+          description: |-
+            یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن کیا گیا ہے جن کا استعمال آپ CSA پڑھانے کے دوران طلبہ کے سیکھنے میں مدد کے لیے کریں گے۔
+
+            **آپ سیکھیں گے کہ کیسے:**
+
+            -   Code.org ویب سائٹ اور ٹیچر ٹولز میں نیویگیٹ کریں.
+            -   کورس کے اسباق کے منصوبے اور اساتذہ کے وسائل کو تلاش اور استعمال کریں۔
+
+            **مجوزہ وقت:** 1 گھنٹہ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.org کو نیویگیٹ کرنا
+          name: csa-self-paced-pl
+          title: CSA پائلٹ اساتذہ کے لیے Code.org کا استعمال کرنا
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: اسباق
+            lessonGroup-4:
+              display_name: ڈیمو اور وسائل
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: اسباق
+            lessonGroup-4:
+              display_name: ڈیمو اور وسائل
+        csa-u8-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیمو اور وسائل
+          name: csa-u8-dev
+          title: CSA یونٹ 8 تشکیل
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: وسائل
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: سینڈباکسز
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: جاوا لیب
+            lesson-6:
+              name: لوپس
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+          name: csa1-pilot-facilitator
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: متغیرات
+        csa2-pilot:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: سینڈباکس
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: سینڈباکس
+          name: csa2-pilot-facilitator
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: ایک جہتی (1D) صفیں
+            lesson-3:
+              name: لوپس کے لئے
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+          name: csa3-pilot-facilitator
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: سینڈباکس
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: سینڈباکس
+          name: csa4-pilot-facilitator
+        csa5-exemplars:
+          name: csa5-exemplars
+          title: یونٹ 5 - آبجیکٹس کو منظم کرنا [مثالیں]
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: سینڈباکس
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: سینڈباکس
+          name: csa5-pilot-facilitator
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: یہ کس چیز کی آواز ہے؟
+        csc-things:
+          description: یہ صرف رو بہ ترقی کام ہیں :)
+          name: csc-things
+          title: CSC برین ڈمپ
+        csd-playground:
+          description: نصاب کے ورژنز کے درمیان اسباق یا سطحوں کی اپ ڈیٹس کے لیے
+          description_audience: نصاب کے مصنفین
+          description_short: نصاب کے ورژنز کے درمیان اسباق یا سطحوں کی اپ ڈیٹس کے
+            لیے
+          title: CSD کھیل کا میدان
+        csd-post-survey-2021:
+          description: یہ یونٹ CS ڈسکوریز پوسٹ کورس سروے پر مشتمل ہے۔ یہ یونٹ طلباء
+            کے CS ڈسکوریز میں اپنی حتمی یونٹ مکمل کرنے کے بعد تفویض کیا جا سکتا ہے۔
+          name: csd-post-survey-2021
+          student_description: اس یونٹ میں ایک سروے ہوتا ہے جب آپ کی کلاس CS ڈسکوریز
+            میں یونٹس کے ساتھ ختم ہوتی ہے۔ آپ کا استاد آپ کو بتائے گا کہ یہ سروے کرنے
+            کا وقت کب ہے۔
+        csd-post-survey-2022:
+          description: یہ یونٹ CS ڈسکوریز پوسٹ کورس سروے پر مشتمل ہے۔ یہ یونٹ طلباء
+            کے CS ڈسکوریز میں اپنی حتمی یونٹ مکمل کرنے کے بعد تفویض کیا جا سکتا ہے۔
+          student_description: اس یونٹ میں ایک سروے ہوتا ہے جب آپ کی کلاس CS ڈسکوریز
+            میں یونٹس کے ساتھ ختم ہوتی ہے۔ آپ کا استاد آپ کو بتائے گا کہ یہ سروے کرنے
+            کا وقت کب ہے۔
+        csd2-old:
+          description_short: ویب ڈویلپمنٹ
+        csd3-virtual:
+          title: گیم لیب کے لیے ذاتی پیش رفت کا تعارف
+        csd6-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: باب 1
+            lessonGroup-3:
+              display_name: باب 2
+        csd7-2021:
+          title: AI اور مشین لرننگ
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: باب 1
+            lessonGroup-3:
+              display_name: باب 2
+            lessonGroup-4:
+              display_name: ایپ لیب کا تعارف
+        csdu6-playground:
+          description_short: CSD یونٹ 6 کھیل کا میدان۔ سوالات کے لیے ڈین شنائیڈر دیکھیں
+          lesson_groups:
+            lessonGroup-2:
+              display_name: باب 1
+            lessonGroup-3:
+              display_name: ٹمپلٹس
+            lessonGroup-4:
+              display_name: باب 2
+          name: csdu6-playground
+          student_description: CSD یونٹ 6 کھیل کا میدان۔ سوالات کے لیے ڈین شنائیڈر
+            دیکھیں
+          title: CSD یونٹ 6 کھیل کا میدان
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: متغیرات
+            outbreak:
+              display_name: وباء کی سیمولیشن
+            ramp_up:
+              display_name: تعارف
+            variables:
+              display_name: متغیرات
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: متغیرات
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        csp-playground:
+          description_audience: نصاب کے مصنفین
+          description_short: نصاب کے ورژنز کے درمیان اسباق یا سطحوں کی اپ ڈیٹس کے
+            لیے
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        csp1-support:
+          title: یونٹ 1 آن لائن پروفیشنل لرننگ کورس
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: ڈیٹا
+            csp_loops:
+              display_name: لوپس
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
+        csp5-support:
+          description: |-
+            #### **یہ کورس اس کورس کے ورژن سے وابستہ ہے جو اب مزید معاونت یافتہ نہیں ہے۔ ہمارے سب سے موجودہ نصاب دیکھنے کے لیے ہمارا کورسز کا عمومی جائزہ صفحہ (<https://studio.code.org/courses>) ملاحظہ کریں۔**
+
+            یہ یونٹ 5 پڑھانے کی تیاری کرنے والے CSP اساتذہ کے لیے پروفیشنل لرننگ کورس میں منظم کردہ آن لائن معاونتوں کا ایک مجموعہ ہے۔
+        csp5-virtual:
+          title: ایونٹ سے اخذ کردہ  پروگرامنگ کی ان ایپ لیب
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: الگورتھم
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: فہرستیں
+            lessonGroup-3:
+              display_name: لوپس
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: شرائط
+            csp_functions:
+              display_name: افعال
+            csp_variables:
+              display_name: متغیرات
+        cspunit4draft:
+          description_short: ڈیٹا
+        dance:
+          description_short: کیٹی پیری، میڈونا، جے بالون، سیا، کیتھ اربن، سیارا، اور
+            مزید 25 کی خاصیت بنانا!
+          name: رقص کرنا
+          title: ڈانس پارٹی (2018)
+        dance-2019:
+          description_short: دوستوں اور خاندان کے ساتھ اشتراک کرنے کے لئے ایک ڈانس
+            پارٹی کا کوڈ. بیونسے، ہیری سٹائل، لیزو، لیل ناس ایکس، Selena Gomez، ڈزنی
+            کے “Encanto،” اور زیادہ سے موسیقی کی خاصیت!
+          title: ڈانس پارٹی
+        dance-extras:
+          title: ڈانس کرتے رہیں (2018)
+        dance-unplugged:
+          title: آوور آف کوڈ - ڈانس پارٹی - ان پلگڈ
+        devices-2022:
+          title: ڈیوائسز کے ساتھ ایپس تخلیق کرنا (سرکٹ پلے گراؤنڈ)
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: آزمانا
+        events:
+          description: ایونٹس/واقعات
+          description_short: ایونٹس/واقعات
+          student_description: ایونٹس/واقعات
+          title: ایونٹس/واقعات
+        explore-data-1:
+          name: explore-data-1
+          title: باکس پلاٹ اور ہسٹوگرامس دیکھیں
+        express-2019:
+          lesson_groups:
+            csf_conditionals:
+              display_name: شرائط
+            csf_for_loops:
+              display_name: لوپس کے لئے
+            csf_functions:
+              display_name: افعال
+            csf_loops:
+              display_name: لوپس
+            csf_variables:
+              display_name: متغیرات
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: شرائط
+            csf_for_loops:
+              display_name: لوپس کے لئے
+            csf_functions:
+              display_name: افعال
+            csf_loops:
+              display_name: لوپس
+            csf_variables:
+              display_name: متغیرات
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: شرائط
+            csf_for_loops:
+              display_name: لوپس کے لئے
+            csf_functions:
+              display_name: افعال
+            csf_loops:
+              display_name: لوپس
+            csf_variables:
+              display_name: متغیرات
+            lessonGroup-9:
+              display_name: ایونٹس/واقعات
+        express-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: شرائط
+            csf_for_loops:
+              display_name: لوپس کے لئے
+            csf_functions:
+              display_name: افعال
+            csf_loops:
+              display_name: لوپس
+            csf_variables:
+              display_name: متغیرات
+            lessonGroup-9:
+              display_name: ایونٹس/واقعات
+        express-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: شرائط
+            csf_for_loops:
+              display_name: لوپس کے لئے
+            csf_functions:
+              display_name: افعال
+            csf_loops:
+              display_name: لوپس
+            csf_variables:
+              display_name: متغیرات
+            lessonGroup-9:
+              display_name: ایونٹس/واقعات
+        flappy:
+          description: چاہتے ہیں کم از کم 10 منٹ میں آپ کے اپنے کھیل لکھتے ہیں؟ ہمارے
+            Flappy کوڈ ٹیوٹوریل کی کوشش کریں!
+          student_description: چاہتے ہیں کم از کم 10 منٹ میں آپ کے اپنے کھیل لکھتے
+            ہیں؟ ہمارے Flappy کوڈ ٹیوٹوریل کی کوشش کریں!
+          title: فلاپی کوڈ
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ایپ لیب کا تعارف
+            lessonGroup-3:
+              display_name: باب 1
+            lessonGroup-4:
+              display_name: باب 2
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: باب 1
+            lessonGroup-3:
+              display_name: ایپ لیب کا تعارف
+            lessonGroup-4:
+              display_name: باب 2
         frozen:
-          title: اینا اور ایلسا کے ساتھ کوڈ
           description: آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک اینڈ
             بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس اور پیٹرنز
             تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں کو بھی
@@ -23,1231 +1016,172 @@ ur:
             میجک اینڈ بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس
             اور پیٹرنز تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں
             کو بھی دکھا سکیں گے۔
-        course4:
-          description_audience: Ages 9-18
-        infinity:
-          name: انفینیٹی
-        20-hour:
-          description_audience: Ages 10-18
-        events:
-          title: ایونٹس/واقعات
-          description: ایونٹس/واقعات
-          description_short: ایونٹس/واقعات
-          student_description: ایونٹس/واقعات
-        jigsaw:
-          name: جگسا
-        step:
-          title: اسٹیپ
-        asUnplugged:
-          description_audience: Ages 6-13
-        afterschool1:
-          description_audience: Ages 7-13
-        cspunit4draft:
-          description_short: ڈیٹا
-        Special Fun:
-          description_audience: Ages 10-18
-        SpecialSeries:
-          description_audience: Ages 10-18
-        iceage:
-          name: برفانی دور
-        starwars:
-          title: 'اسٹار وارز: کوڈ کے ساتھ کہکشاں بنانا (جاوا اسکرپٹ)'
-          description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں میں
-            اپنی اسٹار وارز گیم بنائیں۔
-          description_short: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
-            میں اپنی اسٹار وارز گیم بنائیں۔
-          student_description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
-            میں اپنی اسٹار وارز گیم بنائیں۔
-        starwarsblocks:
-          title: کوڈ کے ساتھ کہکشاں بنانا (بلاکلی)
-          description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں میں
-            اپنی اسٹار وارز گیم بنائیں۔
-          description_short: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
-            میں اپنی اسٹار وارز گیم بنائیں۔
-          student_description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
-            میں اپنی اسٹار وارز گیم بنائیں۔
-        mc:
-          title: Minecraft کوڈ کی گھڑی
-        oceans:
-          name: سمندر
-        CSF_Secret_Sample:
-          description_audience: Ages 8-18
-        CSDU5-Draft:
-          description_short: ڈیٹا
-        CSF_Secret_Sample_Story:
-          description_audience: Ages 8-18+
-        MikeTest:
-          description_audience: Ages 8-98
-        artistExemplar:
-          description_audience: Ages 8-18
-        gradeKinder:
-          description_audience: Ages 5-18
-        grade4:
-          description_audience: Ages 9-99
+          title: اینا اور ایلسا کے ساتھ کوڈ
+        gamelab:
+          title: کھیل لیب
         grade1:
-          description_audience: Ages 5-18
-        grade5:
-          description_audience: Ages 10-110
-        grade3:
           description_audience: Ages 5-18
         grade2:
           description_audience: Ages 5-18
-        basketball:
-          name: باسکٹ بال
-        sports:
-          name: کھیل
-        csp5-support:
-          description: |-
-            #### **یہ کورس اس کورس کے ورژن سے وابستہ ہے جو اب مزید معاونت یافتہ نہیں ہے۔ ہمارے سب سے موجودہ نصاب دیکھنے کے لیے ہمارا کورسز کا عمومی جائزہ صفحہ (<https://studio.code.org/courses>) ملاحظہ کریں۔**
-
-            یہ یونٹ 5 پڑھانے کی تیاری کرنے والے CSP اساتذہ کے لیے پروفیشنل لرننگ کورس میں منظم کردہ آن لائن معاونتوں کا ایک مجموعہ ہے۔
-        coursea-2017:
-          title: کورس A
-          assignment_family_title: کورس A
-          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
-        courseb-2017:
-          title: کورس B
-          assignment_family_title: کورس B
-          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔ (کورس A سے مشابہ،
-            لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)
-        coursec-2017:
-          title: کورس C
-          assignment_family_title: کورس C
-        coursed-2017:
-          title: کورس D
-          assignment_family_title: کورس D
-          description_short: کورس C سے تصورات کا تیزی سے احاطہ کریں، پھر الگورتھمز،
-            نیسٹڈ لوپس، کنڈیشنلز، اور مزید کے ساتھ آگے بڑھیں۔
-        coursee-2017:
-          title: کورس E
-          assignment_family_title: کورس E
-          description_short: کورس C اور D میں تصورات کا تیزی سے احاطہ کریں اور پھر
-            فنکشنز کے ساتھ آگے بڑھیں۔
-        coursef-2017:
-          title: کورس F
-          assignment_family_title: کورس F
-          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
-            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        grade3:
+          description_audience: Ages 5-18
+        grade4:
+          description_audience: Ages 9-99
+        grade5:
+          description_audience: Ages 10-110
+        gradeKinder:
+          description_audience: Ages 5-18
+        gumball:
+          title: Gumball Play Lab
+        hello-world-animals:
+          title: 'Hello World: Animals'
+        hello-world-animals-2021:
+          title: 'Hello World: Animals'
+        hello-world-batman:
+          title: ہیلو ورلڈ
+        hello-world-csc:
+          title: ہیلو ورلڈ
+        hello-world-food:
+          name: hello-world-food
+        hello-world-retro:
+          title: 'ہیلو دنیا: ریٹرو'
+        hello-world-retro-2021:
+          title: 'ہیلو دنیا: ریٹرو'
+        hello-world-soccer-2022:
+          title: 'ہیلو ورلڈ: فٹ بال'
+        hello-world-space-2022:
+          title: 'ہیلو ورلڈ: خلائی'
         hero:
           name: ہیرو
-        coursea-2018:
-          assignment_family_title: کورس A
-          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
-        courseb-2018:
-          assignment_family_title: کورس B
-        coursed-2018:
-          assignment_family_title: کورس D
-        coursec-2018:
-          assignment_family_title: کورس C
-        coursee-2018:
-          assignment_family_title: کورس E
-        coursef-2018:
-          assignment_family_title: کورس F
-          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
-            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
-        dance:
-          description_short: کیٹی پیری، میڈونا، جے بالون، سیا، کیتھ اربن، سیارا، اور
-            مزید 25 کی خاصیت بنانا!
-          name: رقص کرنا
-        aquatic:
-          name: آبی
-        cspplayground:
+        hourofcode:
+          title: کلاسک بھولبلییا
+        iceage:
+          name: برفانی دور
+        infinity:
+          description: ڈزنی انفینٹی حروف ابنیت ایک کہانی یا کھیل پیدا کرنے کے لئے
+            کھیلیں لیب کا استعمال کریں.
+          description_short: ڈزنی انفینٹی حروف ابنیت ایک کہانی یا کھیل پیدا کرنے کے
+            لئے کھیلیں لیب کا استعمال کریں.
+          name: انفینیٹی
+          student_description: ڈزنی انفینٹی حروف ابنیت ایک کہانی یا کھیل پیدا کرنے
+            کے لئے کھیلیں لیب کا استعمال کریں.
+          title: Disney Infinity Play Lab
+        jigsaw:
+          name: جگسا
+          title: پہیلیاں۔
+        k5-onlinepd-2021:
           lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        coursef-2019:
-          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
-            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+            Introduction:
+              display_name: تعارف
+            k5_getting_started_1:
+              display_name: تعارف
+        mc:
+          description_short: کوڈ کے ذریعے ایک Minecraft دنیا کو دریافت کریں.
+          title: Minecraft کوڈ کی گھڑی
+        microbit-temp:
           lesson_groups:
-            csf_variables:
-              display_name: متغیرات
-            csf_data:
-              display_name: ڈیٹا
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: ایونٹس/واقعات
-            csf_loops:
-              display_name: لوپس
-            csf_conditionals:
-              display_name: شرائط
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_conditionals:
-              display_name: شرائط
-            csf_variables:
-              display_name: متغیرات
-        coursec-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-            csf_data:
-              display_name: ڈیٹا
-        coursea-2019:
-          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-        courseb-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        csp1-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        csp2-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        csp4-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        csp5-pilot-staging:
-          lesson_groups:
-            csp_lists:
-              display_name: فہرستیں
-            csp_loops:
-              display_name: لوپس
-        csp6-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        csp8-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        csp9-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        csp10-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        csp5-pilot:
-          lesson_groups:
-            csp_lists:
-              display_name: فہرستیں
-            csp_loops:
-              display_name: لوپس
-        csl-vn:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-        dance-2019:
-          title: ڈانس پارٹی
-          description_short: دوستوں اور خاندان کے ساتھ اشتراک کرنے کے لئے ایک ڈانس
-            پارٹی کا کوڈ. بیونسے، ہیری سٹائل، لیزو، لیل ناس ایکس، Selena Gomez، ڈزنی
-            کے “Encanto،” اور زیادہ سے موسیقی کی خاصیت!
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_conditionals:
-              display_name: شرائط
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_conditionals:
-              display_name: شرائط
-            csf_events:
-              display_name: ایونٹس/واقعات
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_conditionals:
-              display_name: شرائط
-            csf_events:
-              display_name: ایونٹس/واقعات
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: فہرستیں
-            csp_loops:
-              display_name: لوپس
-        coursea-2020:
-          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-        courseb-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-        coursec-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-            csf_data:
-              display_name: ڈیٹا
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: ایونٹس/واقعات
-            csf_loops:
-              display_name: لوپس
-            csf_conditionals:
-              display_name: شرائط
-        coursef-2020:
+            lessonGroup-2:
+              display_name: ایپ لیب کا تعارف
+        minecraft:
+          description: پروگرام جانوروں اور دیگر Minecraft مخلوق Minecraft کے اپنے
+            ورژن میں.
+          description_short: پروگرام جانوروں اور دیگر Minecraft مخلوق Minecraft کے
+            اپنے ورژن میں.
+          student_description: پروگرام جانوروں اور دیگر Minecraft مخلوق Minecraft
+            کے اپنے ورژن میں.
+        netsim:
+          title: انٹرنیٹ سمیلیٹر
+        nevada-standards-aligned-fifth-grade-2023:
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
             اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
           lesson_groups:
-            csf_variables:
-              display_name: متغیرات
-            csf_data:
-              display_name: ڈیٹا
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_conditionals:
+            lessonGroup-3:
               display_name: شرائط
-            csf_variables:
+            lessonGroup-5:
               display_name: متغیرات
-        pre-express-2020:
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
+            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        nevada-standards-aligned-first-grade-2023:
           lesson_groups:
-            csf_loops:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
               display_name: لوپس
-            csf_events:
+            lessonGroup-6:
               display_name: ایونٹس/واقعات
-        virustest:
-          title: وباء کے پھیلنے کا سیمیولیشن
+            lessonGroup-8:
+              display_name: ڈیٹا
+          lessons:
+            lesson-1:
+              name: ڈیٹا
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: گھوںسلا لوپس
+            lessonGroup-4:
+              display_name: افعال
+        nevada-standards-aligned-kindergarten-2023:
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
+              display_name: لوپس
+            lessonGroup-6:
+              display_name: ڈیٹا
+          lessons:
+            lesson-1:
+              name: ڈیٹا
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
+              display_name: لوپس
+            lessonGroup-5:
+              display_name: ایونٹس/واقعات
+            lessonGroup-6:
+              display_name: ڈیٹا
+            lessonGroup-8:
+              display_name: کمپیوٹنگ سسٹمز
+          lessons:
+            lesson-1:
+              name: کمپیوٹنگ سسٹمز
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-6:
+              display_name: لوپس
+            lessonGroup-7:
+              display_name: ڈیٹا
+        oceans:
+          name: سمندر
+          title: AI فار اوشنز
+        outbreak:
+          description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے
+            کا سیمیولیشن بنائیں.
           description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
             پھیلنے کا سیمیولیشن بنائیں.
-        outbreak:
           lesson_groups:
             outbreak:
               display_name: وباء کی سیمولیشن
-          title: وباء کا سیمیولیٹر
-          description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
-            پھیلنے کا سیمیولیشن بنائیں.
-          description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے
-            کا سیمیولیشن بنائیں.
           name: وباء کا پھیلنا
           student_description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
             پھیلنے کا سیمیولیشن بنائیں.
-        2021drafting:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: متغیرات
-            outbreak:
-              display_name: وباء کا سیمیولیٹر
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: فہرستیں
-            csp_loops:
-              display_name: لوپس
-        coursea-2021:
-          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-        courseb-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-        coursec-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-            csf_data:
-              display_name: ڈیٹا
-        coursed-2021:
-          title: کورس D (2021)
-          lesson_groups:
-            csf_events:
-              display_name: ایونٹس/واقعات
-            csf_loops:
-              display_name: لوپس
-            csf_conditionals:
-              display_name: شرائط
-        coursee-2021:
-          lesson_groups:
-            csf_nested_loops:
-              display_name: شرائط
-        coursef-2021:
-          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
-            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
-          lesson_groups:
-            lessonGroup-8:
-              display_name: متغیرات
-            lessonGroup-9:
-              display_name: ہٹانا
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_conditionals:
-              display_name: شرائط
-            csf_variables:
-              display_name: متغیرات
-            lessonGroup-9:
-              display_name: ایونٹس/واقعات
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-        csf-2021-pilot:
-          lesson_groups:
-            outbreak:
-              display_name: وباء کی سیمولیشن
-            lessonGroup-3:
-              display_name: متغیرات
-            variables:
-              display_name: متغیرات
-        contagion-pilot:
-          description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
-            پھیلنے کا سیمیولیشن بنائیں.
-          description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے
-            کا سیمیولیشن بنائیں.
-          student_description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
-            پھیلنے کا سیمیولیشن بنائیں.
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-        csa2-pilot:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: سینڈباکس
-        csa3-pilot:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-        csa4-pilot:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: سینڈباکس
-        csa5-pilot:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: سینڈباکس
-        csa6-pilot:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-        csa8-pilot:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-        outbreak-module:
-          title: وباء کا پھیلنا
-        csa-videos:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: وسائل
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              description: آزمانا
-        csa-u6-dev:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: اسباق
-            lessonGroup-4:
-              display_name: ڈیمو اور وسائل
-        csa-self-paced-pl:
-          title: CSA پائلٹ اساتذہ کے لیے Code.org کا استعمال کرنا
-          description: |-
-            یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن کیا گیا ہے جن کا استعمال آپ CSA پڑھانے کے دوران طلبہ کے سیکھنے میں مدد کے لیے کریں گے۔
-
-            **آپ سیکھیں گے کہ کیسے:**
-
-            -   Code.org ویب سائٹ اور ٹیچر ٹولز میں نیویگیٹ کریں.
-            -   کورس کے اسباق کے منصوبے اور اساتذہ کے وسائل کو تلاش اور استعمال کریں۔
-
-            **مجوزہ وقت:** 1 گھنٹہ
-          name: csa-self-paced-pl
-        csa1-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-          name: csa1-pilot-facilitator
-        csa2-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: سینڈباکس
-          name: csa2-pilot-facilitator
-        csa3-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-          name: csa3-pilot-facilitator
-        csa4-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: سینڈباکس
-          name: csa4-pilot-facilitator
-        csa5-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: سینڈباکس
-          name: csa5-pilot-facilitator
-        poetry-hoc:
-          name: poetry-hoc
-          title: شاعری HoC
-          description_short: آور آف کوڈ کی سرگرمی - V2
-        csdu6-playground:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: ٹمپلٹس
-            lessonGroup-2:
-              display_name: باب 1
-            lessonGroup-4:
-              display_name: باب 2
-          name: csdu6-playground
-          title: CSD یونٹ 6 کھیل کا میدان
-          description_short: CSD یونٹ 6 کھیل کا میدان۔ سوالات کے لیے ڈین شنائیڈر دیکھیں
-          student_description: CSD یونٹ 6 کھیل کا میدان۔ سوالات کے لیے ڈین شنائیڈر
-            دیکھیں
-        hello-world-food:
-          name: hello-world-food
-        csa-u7-dev:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: اسباق
-            lessonGroup-4:
-              display_name: ڈیمو اور وسائل
-        hello-world-batman:
-          title: ہیلو ورلڈ
-        csc-things:
-          name: csc-things
-          title: CSC برین ڈمپ
-          description: یہ صرف رو بہ ترقی کام ہیں :)
-        poetry-hoc2:
-          name: poetry-hoc2
-          title: Poetry HoC v2
-        poetry-hoc3:
-          name: poetry-hoc3
-          title: Poetry HoC v3
-        spritelab-effects-challenge:
-          name: spritelab-effects-challenge
-          title: سپرائٹ ایفیکٹ چیلنج
-          description_audience: سپرائٹ لیب کے وسطی/ترقی یافتہ صارفین
-          description_short: سپرائٹ لیب استعمال کرتے ہوئے اپنے سپرائٹ بنانے کا چیلنج
-            قبول کریں!
-        csa-u8-dev:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: ڈیمو اور وسائل
-          name: csa-u8-dev
-          title: CSA یونٹ 8 تشکیل
-        poem-art:
-          name: poem-art
-          title: نظم کا فن
-        poetry:
-          name: شاعری
-          title: کمپیوٹر سائنس اور شاعری
-        spelling-bee:
-          name: spelling-bee
+          title: وباء کا سیمیولیٹر
         outbreak-csc:
           name: outbreak-csc
           title: وباء کا پھیلنا
-        explore-data-1:
-          name: explore-data-1
-          title: باکس پلاٹ اور ہسٹوگرامس دیکھیں
-        counting-csc:
-          name: counting-csc
-          title: لارل کے ساتھ گنتی
-        csa5-exemplars:
-          name: csa5-exemplars
-          title: یونٹ 5 - آبجیکٹس کو منظم کرنا [مثالیں]
-        csd-post-survey-2021:
-          name: csd-post-survey-2021
-          description: یہ یونٹ CS ڈسکوریز پوسٹ کورس سروے پر مشتمل ہے۔ یہ یونٹ طلباء
-            کے CS ڈسکوریز میں اپنی حتمی یونٹ مکمل کرنے کے بعد تفویض کیا جا سکتا ہے۔
-          student_description: اس یونٹ میں ایک سروے ہوتا ہے جب آپ کی کلاس CS ڈسکوریز
-            میں یونٹس کے ساتھ ختم ہوتی ہے۔ آپ کا استاد آپ کو بتائے گا کہ یہ سروے کرنے
-            کا وقت کب ہے۔
-        csa-pl-test:
-          name: csa-pl-test
-        csa-pl-module-1-test:
-          name: csa-pl-module-1-test
-          title: Code.org اور CSA سے واقفیت
-        csa-pl-module-2-test:
-          name: csa-pl-module-2-test
-          title: Code.org کے ٹولز/وسائل کو دریافت کرنا
-        csa-pl-module-3-test:
-          name: csa-pl-module-3-test
-          title: متن پر مبنی پروگرامنگ کے ساتھ تعاون کرنا
-        csa6-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-        ai-ethics-2021:
-          description_audience: گریڈز 6-8
-        poem-art-2021:
-          title: نظم کا فن
-        counting-csc-2021:
-          title: لارل کے ساتھ گنتی
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: آور-آف-کوڈ
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: متغیرات
-        csd6-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: باب 1
-            lessonGroup-3:
-              display_name: باب 2
-        csa7-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-        csa8-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-        coursea-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
-        express-2022:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: ایونٹس/واقعات
-            csf_loops:
-              display_name: لوپس
-            csf_conditionals:
-              display_name: شرائط
-            csf_variables:
-              display_name: متغیرات
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: فہرستیں
-            csp_loops:
-              display_name: لوپس
-        courseb-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-        coursec-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-            csf_data:
-              display_name: ڈیٹا
-        coursed-2022:
-          lesson_groups:
-            csf_events:
-              display_name: ایونٹس/واقعات
-            csf_loops:
-              display_name: لوپس
-            csf_conditionals:
-              display_name: شرائط
-          title: کورس D (2021)
-        coursee-2022:
-          lesson_groups:
-            csf_nested_loops:
-              display_name: شرائط
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: متغیرات
-          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
-            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
-        csa1-2022:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: سینڈباکسز
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-        csa7-pilot-extra:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-        csa8-pilot-extra:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: متغیرات
-          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور
-            اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
-        csa6-2022:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-        csa7-2022:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: سینڈباکس
-        vpl-csd1-ci-pilot-2022:
-          title: 'ماڈیول 1: مسئلہ حل کرنے اور کمپیوٹنگ سکھانے کی تیاری'
-          description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول آپ کو Code.org کے مسئلہ حل کرنے اور کمپیوٹنگ یونٹ کو سکھانے کے لیے تیار کرنے میں مدد کرنے کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ یہ کریں گے:**
-
-            -   مسئلہ حل کرنے اور کمپیوٹنگ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 30 منٹ
-          student_description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول آپ کو Code.org کے مسئلہ حل کرنے اور کمپیوٹنگ یونٹ کو سکھانے کے لیے تیار کرنے میں مدد کرنے کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ یہ کریں گے:**
-
-            -   مسئلہ حل کرنے اور کمپیوٹنگ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 30 منٹ
-        vpl-csd2-ci-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: ویب ڈویلپمنٹ کی تعلیم
-          title: 'ماڈیول 2: ویب ڈویلپمنٹ سکھانے کی تیاری'
-          description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ویب ڈویلپمنٹ یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   ویب ڈویلپمنٹ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   ویب لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-          student_description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ویب ڈویلپمنٹ یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   ویب ڈویلپمنٹ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   ویب لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-        vpl-csd3-ci-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: انٹرایکٹو اینیمیشنز اور گیمز سکھانے کی تیاری
-          title: 'ماڈیول 3: انٹرایکٹو اینیمیشنز اور گیمز سکھانے کی تیاری'
-          description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے انٹرایکٹو اینیمیشنز اور گیمز یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   انٹرایکٹو اینیمیشنز اور گیمز کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   گیم لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 120 منٹ
-          student_description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے انٹرایکٹو اینیمیشنز اور گیمز یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   انٹرایکٹو اینیمیشنز اور گیمز کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   گیم لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 120 منٹ
-        vpl-csd4-ci-pilot-2022:
-          title: 'ماڈیول 4: ڈیزائن کے عمل کو سکھانے کی تیاری'
-          description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا ڈیزائن پراسس یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   ڈیزائن کے عمل کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   ایپ لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-          student_description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا ڈیزائن پراسس یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   ڈیزائن کے عمل کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   ایپ لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-        vpl-csd5-ci-pilot-2022:
-          title: 'ماڈیول 5: ڈیٹا اورمعاشرے کا موضوع سکھانے کی تیاری'
-          description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ڈیٹا اور معاشرہ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   ڈیٹا اور معاشرہ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-          student_description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ڈیٹا اور معاشرہ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   ڈیٹا اور معاشرہ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-        vpl-csd6-ci-pilot-2022:
-          title: 'ماڈیول 6: فزیکل کمپیوٹنگ سکھانے کی تیاری'
-          description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول آپ کو Code.org کے فزیکل کمپیوٹنگ یونٹ کو سکھانے کے لیے تیاری کرنے میں مدد کرنے کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   فزیکل کمپیوٹنگ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   میکر ایپ کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-          student_description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول آپ کو Code.org کے فزیکل کمپیوٹنگ یونٹ کو سکھانے کے لیے تیاری کرنے میں مدد کرنے کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   فزیکل کمپیوٹنگ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   میکر ایپ کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-        vpl-csd7-ci-pilot-2022:
-          title: 'ماڈیول 7: AI اور مشین لرننگ سکھانے کی تیاری'
-          description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا AI اور مشین لرننگ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   AI اور مشین لرننگ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   اے آئی لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-            -   اپنے طلباء کے ساتھ یونٹ کو نافذ کرنے کا منصوبہ بنائیں گے۔
-
-            **مجوزہ وقت:** 120 منٹ
-          student_description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا AI اور مشین لرننگ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   AI اور مشین لرننگ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   اے آئی لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-            -   اپنے طلباء کے ساتھ یونٹ کو نافذ کرنے کا منصوبہ بنائیں گے۔
-
-            **مجوزہ وقت:** 120 منٹ
-        hello-world-csc:
-          title: ہیلو ورلڈ
-        csd-playground:
-          title: CSD کھیل کا میدان
-          description_audience: نصاب کے مصنفین
-          description_short: نصاب کے ورژنز کے درمیان اسباق یا سطحوں کی اپ ڈیٹس کے
-            لیے
-          description: نصاب کے ورژنز کے درمیان اسباق یا سطحوں کی اپ ڈیٹس کے لیے
-        csd-post-survey-2022:
-          description: یہ یونٹ CS ڈسکوریز پوسٹ کورس سروے پر مشتمل ہے۔ یہ یونٹ طلباء
-            کے CS ڈسکوریز میں اپنی حتمی یونٹ مکمل کرنے کے بعد تفویض کیا جا سکتا ہے۔
-          student_description: اس یونٹ میں ایک سروے ہوتا ہے جب آپ کی کلاس CS ڈسکوریز
-            میں یونٹس کے ساتھ ختم ہوتی ہے۔ آپ کا استاد آپ کو بتائے گا کہ یہ سروے کرنے
-            کا وقت کب ہے۔
-        vpl-csd1-ayw-pilot-2022:
+        outbreak-module:
+          title: وباء کا پھیلنا
+        pixelation:
+          title: پکسلیشن
+        pl-csd-summer-day1:
           lessons:
-            lesson-6:
-              name: متزامن ڈیبگنگ ایکسٹنشن
-        vpl-csd2-ayw-pilot-2022:
-          lessons:
-            lesson-6:
-              name: ماڈیول 2 غیر متزامن کام
-        soccer:
-          name: فٹ بال
-          title: کوڈ سے اپنا ہی فٹ بال گیم بنائیں
-          description_short: ایک قٹ بال گیم بنائیں
-          description: ایک قٹ بال گیم بنائیں
-        csa1-2023:
-          lessons:
-            lesson-2:
-              name: جاوا لیب
-            lesson-6:
-              name: لوپس
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: متغیرات
-        csa3-2023:
-          lessons:
-            lesson-1:
-              name: ایک جہتی (1D) صفیں
-        hello-world-space-2022:
-          title: 'ہیلو ورلڈ: خلائی'
-        hello-world-soccer-2022:
-          title: 'ہیلو ورلڈ: فٹ بال'
-        csd7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: باب 1
-            lessonGroup-3:
-              display_name: باب 2
-        csc-function-machines-pilot:
-          lessons:
-            lesson-1:
-              name: یہ کس چیز کی آواز ہے؟
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: متغیرات
-            csp_conditionals:
-              display_name: شرائط
-        csp5-2023:
-          lesson_groups:
-            csp_lists:
-              display_name: ڈیٹا
-            csp_loops:
-              display_name: لوپس
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: فہرستیں
-            lessonGroup-3:
-              display_name: لوپس
-        csp-playground:
-          description_audience: نصاب کے مصنفین
-          description_short: نصاب کے ورژنز کے درمیان اسباق یا سطحوں کی اپ ڈیٹس کے
-            لیے
-        tess-testing-problem-solving-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: باب 1
-            lessonGroup-3:
-              display_name: باب 2
-        testing-focus-on-creativity1:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: باب 1
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-        express-2023:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: ایونٹس/واقعات
-            csf_loops:
-              display_name: لوپس
-            csf_conditionals:
-              display_name: شرائط
-            csf_variables:
-              display_name: متغیرات
-        coursea-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
-        courseb-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-        coursec-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: لوپس
-            csf_events:
-              display_name: ایونٹس/واقعات
-            csf_data:
-              display_name: ڈیٹا
-        coursed-2023:
-          lesson_groups:
-            csf_events:
-              display_name: ایونٹس/واقعات
-            csf_loops:
-              display_name: لوپس
-            csf_conditionals:
-              display_name: شرائط
-          title: کورس D (2021)
-        coursee-2023:
-          lesson_groups:
-            csf_nested_loops:
-              display_name: شرائط
-        aiml-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: باب 1
-            lessonGroup-4:
-              display_name: باب 2
-        focus-on-data3-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: باب 1
-            lessonGroup-4:
-              display_name: باب 2
-        focus-on-impact-in-society4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: باب 1
-            lessonGroup-4:
-              display_name: باب 2
-        vpl-csd-ci-1:
-          title: 'ماڈیول 1: مسئلہ حل کرنے اور کمپیوٹنگ سکھانے کی تیاری'
-          description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول آپ کو Code.org کے مسئلہ حل کرنے اور کمپیوٹنگ یونٹ کو سکھانے کے لیے تیار کرنے میں مدد کرنے کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ یہ کریں گے:**
-
-            -   مسئلہ حل کرنے اور کمپیوٹنگ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 30 منٹ
-          student_description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول آپ کو Code.org کے مسئلہ حل کرنے اور کمپیوٹنگ یونٹ کو سکھانے کے لیے تیار کرنے میں مدد کرنے کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ یہ کریں گے:**
-
-            -   مسئلہ حل کرنے اور کمپیوٹنگ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 30 منٹ
-        vpl-csd-ci-2:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: ویب ڈویلپمنٹ کی تعلیم
-          title: 'ماڈیول 2: ویب ڈویلپمنٹ سکھانے کی تیاری'
-          description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ویب ڈویلپمنٹ یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   ویب ڈویلپمنٹ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   ویب لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-          student_description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ویب ڈویلپمنٹ یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   ویب ڈویلپمنٹ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   ویب لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-        vpl-csd-ci-3:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: انٹرایکٹو اینیمیشنز اور گیمز سکھانے کی تیاری
-          title: 'ماڈیول 3: انٹرایکٹو اینیمیشنز اور گیمز سکھانے کی تیاری'
-          description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے انٹرایکٹو اینیمیشنز اور گیمز یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   انٹرایکٹو اینیمیشنز اور گیمز کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   گیم لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 120 منٹ
-          student_description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے انٹرایکٹو اینیمیشنز اور گیمز یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   انٹرایکٹو اینیمیشنز اور گیمز کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   گیم لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 120 منٹ
-        vpl-csd-ci-4:
-          title: 'ماڈیول 4: ڈیزائن کے عمل کو سکھانے کی تیاری'
-          description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا ڈیزائن پراسس یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   ڈیزائن کے عمل کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   ایپ لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-          student_description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا ڈیزائن پراسس یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   ڈیزائن کے عمل کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   ایپ لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-        vpl-csd-ci-5:
-          title: 'ماڈیول 5: ڈیٹا اورمعاشرے کا موضوع سکھانے کی تیاری'
-          description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ڈیٹا اور معاشرہ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   ڈیٹا اور معاشرہ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-          student_description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ڈیٹا اور معاشرہ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   ڈیٹا اور معاشرہ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-
-            **مجوزہ وقت:** 90 منٹ
-        vpl-csd-ci-7:
-          title: 'ماڈیول 7: AI اور مشین لرننگ سکھانے کی تیاری'
-          description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا AI اور مشین لرننگ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   AI اور مشین لرننگ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   اے آئی لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-            -   اپنے طلباء کے ساتھ یونٹ کو نافذ کرنے کا منصوبہ بنائیں گے۔
-
-            **مجوزہ وقت:** 120 منٹ
-          student_description: |-
-            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا AI اور مشین لرننگ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
-
-            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
-
-            -   AI اور مشین لرننگ کا تعارف حاصل کریں گے۔
-            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
-            -   اے آئی لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔
-            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
-            -   اپنے طلباء کے ساتھ یونٹ کو نافذ کرنے کا منصوبہ بنائیں گے۔
-
-            **مجوزہ وقت:** 120 منٹ
+            lesson-3:
+              name: تعارف
         pl-csd-summer-day2:
           lessons:
             lesson-10:
@@ -1256,3 +1190,815 @@ ur:
           lessons:
             lesson-12:
               name: اختتام
+        playlab:
+          name: پلے لیب
+          title: لیب کھیلیں
+        poem-art:
+          name: poem-art
+          title: نظم کا فن
+        poem-art-2021:
+          title: نظم کا فن
+        poetry:
+          name: شاعری
+          title: کمپیوٹر سائنس اور شاعری
+        poetry-2021:
+          title: شاعری کی حامل کوڈنگ
+        poetry-hoc:
+          description_short: آور آف کوڈ کی سرگرمی - V2
+          name: poetry-hoc
+          title: شاعری HoC
+        poetry-hoc2:
+          name: poetry-hoc2
+          title: Poetry HoC v2
+        poetry-hoc3:
+          name: poetry-hoc3
+          title: Poetry HoC v3
+        pre-express-2017:
+          assignment_family_title: پری ریڈر ایکسپریس
+          title: پری ریڈر ایکسپریس
+        pre-express-2018:
+          assignment_family_title: پری ریڈر ایکسپریس
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        self-paced-pl-csa2-2022:
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
+        self-paced-pl-csa2-2023:
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
+        self-paced-pl-csd1-2021:
+          description: "یہ ماڈیول Code.org اور اس پیشہ ورانہ لرننگ کورس دونوں کا مختصر
+            تعارف ہے۔ \n\n**آپ:**\n\n-   Code.org اور CS Discoveries کا تعارف حاصل
+            کریں گے۔\n-   اس پیشہ ورانہ لرننگ کورس میں مشغولیت کا طریقہ کار جانیں
+            گے۔\n\n**تجویز کردہ وقت:** 10 منٹس"
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Code.org کو نیویگیٹ کرنا
+            lessonGroup-5:
+              display_name: CS Discoveries کو پڑھانے کے لیے تیاری کرنا
+          student_description: "یہ ماڈیول Code.org اور اس پیشہ ورانہ لرننگ کورس دونوں
+            کا مختصر تعارف ہے۔ \n\n**آپ:**\n\n-   Code.org اور CS Discoveries کا تعارف
+            حاصل کریں گے۔\n-   اس پیشہ ورانہ لرننگ کورس میں مشغولیت کا طریقہ کار جانیں
+            گے۔\n\n**تجویز کردہ وقت:** 10 منٹس"
+          title: 'ماڈیول 1: خوش آمدید '
+        self-paced-pl-csd1-2022:
+          description: "یہ ماڈیول Code.org اور اس پیشہ ورانہ لرننگ کورس دونوں کا مختصر
+            تعارف ہے۔ \n\n**آپ:**\n\n-   Code.org اور CS Discoveries کا تعارف حاصل
+            کریں گے۔\n-   اس پیشہ ورانہ لرننگ کورس میں مشغولیت کا طریقہ کار جانیں
+            گے۔\n\n**تجویز کردہ وقت:** 10 منٹس"
+          student_description: "یہ ماڈیول Code.org اور اس پیشہ ورانہ لرننگ کورس دونوں
+            کا مختصر تعارف ہے۔ \n\n**آپ:**\n\n-   Code.org اور CS Discoveries کا تعارف
+            حاصل کریں گے۔\n-   اس پیشہ ورانہ لرننگ کورس میں مشغولیت کا طریقہ کار جانیں
+            گے۔\n\n**تجویز کردہ وقت:** 10 منٹس"
+          title: 'ماڈیول 1: خوش آمدید '
+        self-paced-pl-csd1-2023:
+          description: "یہ ماڈیول Code.org اور اس پیشہ ورانہ لرننگ کورس دونوں کا مختصر
+            تعارف ہے۔ \n\n**آپ:**\n\n-   Code.org اور CS Discoveries کا تعارف حاصل
+            کریں گے۔\n-   اس پیشہ ورانہ لرننگ کورس میں مشغولیت کا طریقہ کار جانیں
+            گے۔\n\n**تجویز کردہ وقت:** 10 منٹس"
+          student_description: "یہ ماڈیول Code.org اور اس پیشہ ورانہ لرننگ کورس دونوں
+            کا مختصر تعارف ہے۔ \n\n**آپ:**\n\n-   Code.org اور CS Discoveries کا تعارف
+            حاصل کریں گے۔\n-   اس پیشہ ورانہ لرننگ کورس میں مشغولیت کا طریقہ کار جانیں
+            گے۔\n\n**تجویز کردہ وقت:** 10 منٹس"
+          title: 'ماڈیول 1: خوش آمدید '
+        self-paced-pl-csd2-2021:
+          description: "یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن کیا
+            گیا ہے جو آپ CS Discoveries پڑھانے کے دوران طلباء کو سیکھنے میں معاونت
+            کے لیے استعمال کریں گے۔ \n\n**آپ:**\n\n-   Code.org ویب سائٹ اور ٹیچر
+            ٹولز میں نیویگیٹ کریں گے۔\n-   کلاس روم کے سیکشن کو سیٹ اپ کریں گے\n-
+            \  کورس کے سبق کے پلانز اور ٹیچر کے وسائل کو تلاش اور استعمال کریں گے۔
+            \n-   کورس پڑھانے کے دوران معاونت تک رسائی کا طریقہ کار جانیں گے۔\n\n**تجویز
+            کردہ وقت:** 60 منٹس"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.org کو نیویگیٹ کرنا
+          student_description: "یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن
+            کیا گیا ہے جو آپ CS Discoveries پڑھانے کے دوران طلباء کو سیکھنے میں معاونت
+            کے لیے استعمال کریں گے۔ \n\n**آپ:**\n\n-   Code.org ویب سائٹ اور ٹیچر
+            ٹولز میں نیویگیٹ کریں گے۔\n-   کلاس روم کے سیکشن کو سیٹ اپ کریں گے\n-
+            \  کورس کے سبق کے پلانز اور ٹیچر کے وسائل کو تلاش اور استعمال کریں گے۔
+            \n-   کورس پڑھانے کے دوران معاونت تک رسائی کا طریقہ کار جانیں گے۔\n\n**تجویز
+            کردہ وقت:** 60 منٹس"
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
+        self-paced-pl-csd2-2022:
+          description: "یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن کیا
+            گیا ہے جو آپ CS Discoveries پڑھانے کے دوران طلباء کو سیکھنے میں معاونت
+            کے لیے استعمال کریں گے۔ \n\n**آپ:**\n\n-   Code.org ویب سائٹ اور ٹیچر
+            ٹولز میں نیویگیٹ کریں گے۔\n-   کلاس روم کے سیکشن کو سیٹ اپ کریں گے\n-
+            \  کورس کے سبق کے پلانز اور ٹیچر کے وسائل کو تلاش اور استعمال کریں گے۔
+            \n-   کورس پڑھانے کے دوران معاونت تک رسائی کا طریقہ کار جانیں گے۔\n\n**تجویز
+            کردہ وقت:** 60 منٹس"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.org کو نیویگیٹ کرنا
+          student_description: "یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن
+            کیا گیا ہے جو آپ CS Discoveries پڑھانے کے دوران طلباء کو سیکھنے میں معاونت
+            کے لیے استعمال کریں گے۔ \n\n**آپ:**\n\n-   Code.org ویب سائٹ اور ٹیچر
+            ٹولز میں نیویگیٹ کریں گے۔\n-   کلاس روم کے سیکشن کو سیٹ اپ کریں گے\n-
+            \  کورس کے سبق کے پلانز اور ٹیچر کے وسائل کو تلاش اور استعمال کریں گے۔
+            \n-   کورس پڑھانے کے دوران معاونت تک رسائی کا طریقہ کار جانیں گے۔\n\n**تجویز
+            کردہ وقت:** 60 منٹس"
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
+        self-paced-pl-csd2-2023:
+          description: "یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن کیا
+            گیا ہے جو آپ CS Discoveries پڑھانے کے دوران طلباء کو سیکھنے میں معاونت
+            کے لیے استعمال کریں گے۔ \n\n**آپ:**\n\n-   Code.org ویب سائٹ اور ٹیچر
+            ٹولز میں نیویگیٹ کریں گے۔\n-   کلاس روم کے سیکشن کو سیٹ اپ کریں گے\n-
+            \  کورس کے سبق کے پلانز اور ٹیچر کے وسائل کو تلاش اور استعمال کریں گے۔
+            \n-   کورس پڑھانے کے دوران معاونت تک رسائی کا طریقہ کار جانیں گے۔\n\n**تجویز
+            کردہ وقت:** 60 منٹس"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Code.org کو نیویگیٹ کرنا
+          student_description: "یہ ماڈیول آپ کو ان ٹولز کی طرف راغب کرنے کے لیے ڈیزائن
+            کیا گیا ہے جو آپ CS Discoveries پڑھانے کے دوران طلباء کو سیکھنے میں معاونت
+            کے لیے استعمال کریں گے۔ \n\n**آپ:**\n\n-   Code.org ویب سائٹ اور ٹیچر
+            ٹولز میں نیویگیٹ کریں گے۔\n-   کلاس روم کے سیکشن کو سیٹ اپ کریں گے\n-
+            \  کورس کے سبق کے پلانز اور ٹیچر کے وسائل کو تلاش اور استعمال کریں گے۔
+            \n-   کورس پڑھانے کے دوران معاونت تک رسائی کا طریقہ کار جانیں گے۔\n\n**تجویز
+            کردہ وقت:** 60 منٹس"
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
+        self-paced-pl-csd3-2021:
+          description: "یہ ماڈیول آپ کو اہم تصورات جن کو طلباء سیکھیں گے اور ٹولز
+            جن کو طلباء پورے کورس میں استعمال کریں گے کے حامل CS Discoveries کورس
+            کا مجموعی جائزہ فراہم کرے گا۔ اس ماڈیول میں مشغولیت کرنے سے وہ کورس جس
+            کا مواد آپ اپنے کلاس روم میں لاگو کریں گے اسے منتخب کرنے کے طریقہ کار
+            کے متعلق فیصلے کرنے میں آپ کی مدد کرے گا۔ \n\n**آپ:**\n\n-   CS Discoveries
+            نصاب کی اعلیٰ سمجھ بوجھ حاصل ہو گی۔\n-   CS Discoveries میں استعمال شدہ
+            پروگرامنگ کے ماحول سے مانوس ہوں گے۔\n-   فیصلہ کریں گے کہ آپ اپنی کلاس
+            روم میں  CS Discoveries کے کون سے یونٹس پڑھائیں گے۔\n\n**تجویز کردہ وقت:**
+            60 منٹس"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveries کا مجموعی جائزہ
+          student_description: "یہ ماڈیول آپ کو اہم تصورات جن کو طلباء سیکھیں گے اور
+            ٹولز جن کو طلباء پورے کورس میں استعمال کریں گے کے حامل CS Discoveries
+            کورس کا مجموعی جائزہ فراہم کرے گا۔ اس ماڈیول میں مشغولیت کرنے سے وہ کورس
+            جس کا مواد آپ اپنے کلاس روم میں لاگو کریں گے اسے منتخب کرنے کے طریقہ کار
+            کے متعلق فیصلے کرنے میں آپ کی مدد کرے گا۔ \n\n**آپ:**\n\n-   CS Discoveries
+            نصاب کی اعلیٰ سمجھ بوجھ حاصل ہو گی۔\n-   CS Discoveries میں استعمال شدہ
+            پروگرامنگ کے ماحول سے مانوس ہوں گے۔\n-   فیصلہ کریں گے کہ آپ اپنی کلاس
+            روم میں  CS Discoveries کے کون سے یونٹس پڑھائیں گے۔\n\n**تجویز کردہ وقت:**
+            60 منٹس"
+          title: 'ماڈیول 3: CS Discoveries کا مجموعی جائزہ'
+        self-paced-pl-csd3-2022:
+          description: "یہ ماڈیول آپ کو اہم تصورات جن کو طلباء سیکھیں گے اور ٹولز
+            جن کو طلباء پورے کورس میں استعمال کریں گے کے حامل CS Discoveries کورس
+            کا مجموعی جائزہ فراہم کرے گا۔ اس ماڈیول میں مشغولیت کرنے سے وہ کورس جس
+            کا مواد آپ اپنے کلاس روم میں لاگو کریں گے اسے منتخب کرنے کے طریقہ کار
+            کے متعلق فیصلے کرنے میں آپ کی مدد کرے گا۔ \n\n**آپ:**\n\n-   CS Discoveries
+            نصاب کی اعلیٰ سمجھ بوجھ حاصل ہو گی۔\n-   CS Discoveries میں استعمال شدہ
+            پروگرامنگ کے ماحول سے مانوس ہوں گے۔\n-   فیصلہ کریں گے کہ آپ اپنی کلاس
+            روم میں  CS Discoveries کے کون سے یونٹس پڑھائیں گے۔\n\n**تجویز کردہ وقت:**
+            60 منٹس"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveries کا مجموعی جائزہ
+          student_description: "یہ ماڈیول آپ کو اہم تصورات جن کو طلباء سیکھیں گے اور
+            ٹولز جن کو طلباء پورے کورس میں استعمال کریں گے کے حامل CS Discoveries
+            کورس کا مجموعی جائزہ فراہم کرے گا۔ اس ماڈیول میں مشغولیت کرنے سے وہ کورس
+            جس کا مواد آپ اپنے کلاس روم میں لاگو کریں گے اسے منتخب کرنے کے طریقہ کار
+            کے متعلق فیصلے کرنے میں آپ کی مدد کرے گا۔ \n\n**آپ:**\n\n-   CS Discoveries
+            نصاب کی اعلیٰ سمجھ بوجھ حاصل ہو گی۔\n-   CS Discoveries میں استعمال شدہ
+            پروگرامنگ کے ماحول سے مانوس ہوں گے۔\n-   فیصلہ کریں گے کہ آپ اپنی کلاس
+            روم میں  CS Discoveries کے کون سے یونٹس پڑھائیں گے۔\n\n**تجویز کردہ وقت:**
+            60 منٹس"
+          title: 'ماڈیول 3: CS Discoveries کا مجموعی جائزہ'
+        self-paced-pl-csd3-2023:
+          description: "یہ ماڈیول آپ کو اہم تصورات جن کو طلباء سیکھیں گے اور ٹولز
+            جن کو طلباء پورے کورس میں استعمال کریں گے کے حامل CS Discoveries کورس
+            کا مجموعی جائزہ فراہم کرے گا۔ اس ماڈیول میں مشغولیت کرنے سے وہ کورس جس
+            کا مواد آپ اپنے کلاس روم میں لاگو کریں گے اسے منتخب کرنے کے طریقہ کار
+            کے متعلق فیصلے کرنے میں آپ کی مدد کرے گا۔ \n\n**آپ:**\n\n-   CS Discoveries
+            نصاب کی اعلیٰ سمجھ بوجھ حاصل ہو گی۔\n-   CS Discoveries میں استعمال شدہ
+            پروگرامنگ کے ماحول سے مانوس ہوں گے۔\n-   فیصلہ کریں گے کہ آپ اپنی کلاس
+            روم میں  CS Discoveries کے کون سے یونٹس پڑھائیں گے۔\n\n**تجویز کردہ وقت:**
+            60 منٹس"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveries کا مجموعی جائزہ
+          student_description: "یہ ماڈیول آپ کو اہم تصورات جن کو طلباء سیکھیں گے اور
+            ٹولز جن کو طلباء پورے کورس میں استعمال کریں گے کے حامل CS Discoveries
+            کورس کا مجموعی جائزہ فراہم کرے گا۔ اس ماڈیول میں مشغولیت کرنے سے وہ کورس
+            جس کا مواد آپ اپنے کلاس روم میں لاگو کریں گے اسے منتخب کرنے کے طریقہ کار
+            کے متعلق فیصلے کرنے میں آپ کی مدد کرے گا۔ \n\n**آپ:**\n\n-   CS Discoveries
+            نصاب کی اعلیٰ سمجھ بوجھ حاصل ہو گی۔\n-   CS Discoveries میں استعمال شدہ
+            پروگرامنگ کے ماحول سے مانوس ہوں گے۔\n-   فیصلہ کریں گے کہ آپ اپنی کلاس
+            روم میں  CS Discoveries کے کون سے یونٹس پڑھائیں گے۔\n\n**تجویز کردہ وقت:**
+            60 منٹس"
+          title: 'ماڈیول 3: CS Discoveries کا مجموعی جائزہ'
+        self-paced-pl-csd4-2021:
+          description: "اس ماڈیول میں، آپ ان مصدقہ CS مشقوں سے تعارف حاصل کریں گے
+            جن کے ساتھ پورے CS Discoveries کورس میں طلباء \n مشغول رہیں گے۔ ان مشقوں
+            میں ڈی بگ کرنا، ذرائع کا استعمال، اور پیئر پروگرامنگ شامل ہیں۔ آپ CS Discoveries
+            کلاس روم میں ٹیچر کے کردار کو بھی دریافت کریں گے اور اس بات کا بھی پلان
+            بنائیں گے کہ آپ کورس کی تعلیم دینے کے دوران طلباء کو سیکھنے میں معاونت
+            کیسے فراہم کریں گے۔ \n\n**آپ:**\n\n-   CS Discoveries کلاس روم میں ٹیچر
+            کے کردار کو زیرِ غور لائیں گے۔ \n-   ان مصدقہ CS مشقوں کے متعلق جانیں
+            گے جو طلباء پورے CS Discoveries کورس میں بنائیں گے۔\n-   پلان بنائیں گے
+            کہ آپ ڈفرینشیئشن، جاری جائزے، اور شمولیت کے کلچر کو فروغ دینے کے ذریعے
+            طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**تجویز کردہ وقت:**
+            50 منٹس"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveries کو پڑھانا اور سیکھنا
+          student_description: "اس ماڈیول میں، آپ ان مصدقہ CS مشقوں سے تعارف حاصل
+            کریں گے جن کے ساتھ پورے CS Discoveries کورس میں طلباء \n مشغول رہیں گے۔
+            ان مشقوں میں ڈی بگ کرنا، ذرائع کا استعمال، اور پیئر پروگرامنگ شامل ہیں۔
+            آپ CS Discoveries کلاس روم میں ٹیچر کے کردار کو بھی دریافت کریں گے اور
+            اس بات کا بھی پلان بنائیں گے کہ آپ کورس کی تعلیم دینے کے دوران طلباء کو
+            سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**آپ:**\n\n-   CS Discoveries
+            کلاس روم میں ٹیچر کے کردار کو زیرِ غور لائیں گے۔ \n-   ان مصدقہ CS مشقوں
+            کے متعلق جانیں گے جو طلباء پورے CS Discoveries کورس میں بنائیں گے۔\n-
+            \  پلان بنائیں گے کہ آپ ڈفرینشیئشن، جاری جائزے، اور شمولیت کے کلچر کو
+            فروغ دینے کے ذریعے طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**تجویز
+            کردہ وقت:** 50 منٹس"
+          title: 'ماڈیول 4: CS Discoveries کو پڑھانا اور سیکھنا'
+        self-paced-pl-csd4-2022:
+          description: "اس ماڈیول میں، آپ ان مصدقہ CS مشقوں سے تعارف حاصل کریں گے
+            جن کے ساتھ پورے CS Discoveries کورس میں طلباء \n مشغول رہیں گے۔ ان مشقوں
+            میں ڈی بگ کرنا، ذرائع کا استعمال، اور پیئر پروگرامنگ شامل ہیں۔ آپ CS Discoveries
+            کلاس روم میں ٹیچر کے کردار کو بھی دریافت کریں گے اور اس بات کا بھی پلان
+            بنائیں گے کہ آپ کورس کی تعلیم دینے کے دوران طلباء کو سیکھنے میں معاونت
+            کیسے فراہم کریں گے۔ \n\n**آپ:**\n\n-   CS Discoveries کلاس روم میں ٹیچر
+            کے کردار کو زیرِ غور لائیں گے۔ \n-   ان مصدقہ CS مشقوں کے متعلق جانیں
+            گے جو طلباء پورے CS Discoveries کورس میں بنائیں گے۔\n-   پلان بنائیں گے
+            کہ آپ ڈفرینشیئشن، جاری جائزے، اور شمولیت کے کلچر کو فروغ دینے کے ذریعے
+            طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**تجویز کردہ وقت:**
+            50 منٹس"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveries کو پڑھانا اور سیکھنا
+          student_description: "اس ماڈیول میں، آپ ان مصدقہ CS مشقوں سے تعارف حاصل
+            کریں گے جن کے ساتھ پورے CS Discoveries کورس میں طلباء \n مشغول رہیں گے۔
+            ان مشقوں میں ڈی بگ کرنا، ذرائع کا استعمال، اور پیئر پروگرامنگ شامل ہیں۔
+            آپ CS Discoveries کلاس روم میں ٹیچر کے کردار کو بھی دریافت کریں گے اور
+            اس بات کا بھی پلان بنائیں گے کہ آپ کورس کی تعلیم دینے کے دوران طلباء کو
+            سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**آپ:**\n\n-   CS Discoveries
+            کلاس روم میں ٹیچر کے کردار کو زیرِ غور لائیں گے۔ \n-   ان مصدقہ CS مشقوں
+            کے متعلق جانیں گے جو طلباء پورے CS Discoveries کورس میں بنائیں گے۔\n-
+            \  پلان بنائیں گے کہ آپ ڈفرینشیئشن، جاری جائزے، اور شمولیت کے کلچر کو
+            فروغ دینے کے ذریعے طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**تجویز
+            کردہ وقت:** 50 منٹس"
+          title: 'ماڈیول 4: CS Discoveries کو پڑھانا اور سیکھنا'
+        self-paced-pl-csd4-2023:
+          description: "اس ماڈیول میں، آپ ان مصدقہ CS مشقوں سے تعارف حاصل کریں گے
+            جن کے ساتھ پورے CS Discoveries کورس میں طلباء \n مشغول رہیں گے۔ ان مشقوں
+            میں ڈی بگ کرنا، ذرائع کا استعمال، اور پیئر پروگرامنگ شامل ہیں۔ آپ CS Discoveries
+            کلاس روم میں ٹیچر کے کردار کو بھی دریافت کریں گے اور اس بات کا بھی پلان
+            بنائیں گے کہ آپ کورس کی تعلیم دینے کے دوران طلباء کو سیکھنے میں معاونت
+            کیسے فراہم کریں گے۔ \n\n**آپ:**\n\n-   CS Discoveries کلاس روم میں ٹیچر
+            کے کردار کو زیرِ غور لائیں گے۔ \n-   ان مصدقہ CS مشقوں کے متعلق جانیں
+            گے جو طلباء پورے CS Discoveries کورس میں بنائیں گے۔\n-   پلان بنائیں گے
+            کہ آپ ڈفرینشیئشن، جاری جائزے، اور شمولیت کے کلچر کو فروغ دینے کے ذریعے
+            طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**تجویز کردہ وقت:**
+            50 منٹس"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: CS Discoveries کو پڑھانا اور سیکھنا
+          student_description: "اس ماڈیول میں، آپ ان مصدقہ CS مشقوں سے تعارف حاصل
+            کریں گے جن کے ساتھ پورے CS Discoveries کورس میں طلباء \n مشغول رہیں گے۔
+            ان مشقوں میں ڈی بگ کرنا، ذرائع کا استعمال، اور پیئر پروگرامنگ شامل ہیں۔
+            آپ CS Discoveries کلاس روم میں ٹیچر کے کردار کو بھی دریافت کریں گے اور
+            اس بات کا بھی پلان بنائیں گے کہ آپ کورس کی تعلیم دینے کے دوران طلباء کو
+            سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**آپ:**\n\n-   CS Discoveries
+            کلاس روم میں ٹیچر کے کردار کو زیرِ غور لائیں گے۔ \n-   ان مصدقہ CS مشقوں
+            کے متعلق جانیں گے جو طلباء پورے CS Discoveries کورس میں بنائیں گے۔\n-
+            \  پلان بنائیں گے کہ آپ ڈفرینشیئشن، جاری جائزے، اور شمولیت کے کلچر کو
+            فروغ دینے کے ذریعے طلباء کو سیکھنے میں معاونت کیسے فراہم کریں گے۔ \n\n**تجویز
+            کردہ وقت:** 50 منٹس"
+          title: 'ماڈیول 4: CS Discoveries کو پڑھانا اور سیکھنا'
+        self-paced-pl-csd5-2021:
+          description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور مشین
+            لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن
+            کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-   مصنوعی
+            ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   یونٹ میں شامل کلیدی
+            تصورات کی مشق کریں گے۔\n-   AI لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔\n-
+            \  باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔ \n-   اپنے طلباء
+            کے ساتھ یونٹ کو لاگو کرنے کا منصوبہ بنائیں گے۔\n\n**تجویز کردہ وقت:**
+            120 منٹس"
+          student_description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور
+            مشین لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے
+            ڈیزائن کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-
+            \  مصنوعی ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   AI لیب کو
+            استعمال کرتے ہوئے مشین لرننگ ماڈل کی تربیت دیں گے۔\n-   مشین لرننگ ایپس
+            کے ساتھ مشغول ہوں گے۔ \n-   AI اور مشین لرننگ کو حقیقی دنیا میں لاگو کرنے
+            پر غور کریں گے۔ \n-   باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔\n\n**تجویز
+            کردہ وقت:** 120 منٹس"
+          title: AI اور مشین لرننگ کو پڑھانا
+        self-paced-pl-csd5-2022:
+          description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور مشین
+            لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن
+            کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-   مصنوعی
+            ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   یونٹ میں شامل کلیدی
+            تصورات کی مشق کریں گے۔\n-   AI لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔\n-
+            \  باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔ \n-   اپنے طلباء
+            کے ساتھ یونٹ کو لاگو کرنے کا منصوبہ بنائیں گے۔\n\n**تجویز کردہ وقت:**
+            120 منٹس"
+          student_description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور
+            مشین لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے
+            ڈیزائن کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-
+            \  مصنوعی ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   یونٹ میں شامل
+            کلیدی تصورات کی مشق کریں گے۔\n-   AI لیب اور ایپ لیب کے ساتھ مشغول ہوں
+            گے۔\n-   باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔ \n-   اپنے
+            طلباء کے ساتھ یونٹ کو لاگو کرنے کا منصوبہ بنائیں گے۔\n\n**تجویز کردہ وقت:**
+            120 منٹس"
+        self-paced-pl-csd5-2023:
+          description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور مشین
+            لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن
+            کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-   مصنوعی
+            ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   یونٹ میں شامل کلیدی
+            تصورات کی مشق کریں گے۔\n-   AI لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔\n-
+            \  باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔ \n-   اپنے طلباء
+            کے ساتھ یونٹ کو لاگو کرنے کا منصوبہ بنائیں گے۔\n\n**تجویز کردہ وقت:**
+            120 منٹس"
+          student_description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور
+            مشین لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے
+            ڈیزائن کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-
+            \  مصنوعی ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   یونٹ میں شامل
+            کلیدی تصورات کی مشق کریں گے۔\n-   AI لیب اور ایپ لیب کے ساتھ مشغول ہوں
+            گے۔\n-   باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔ \n-   اپنے
+            طلباء کے ساتھ یونٹ کو لاگو کرنے کا منصوبہ بنائیں گے۔\n\n**تجویز کردہ وقت:**
+            120 منٹس"
+          title: 'ماڈیول 7: AI اور مشین لرننگ سکھانے کی تیاری'
+        self-paced-pl-csd6-2021:
+          description: "اس پیشہ ورانہ سیکھنے کے ماڈیول کو Code.org کے AI اور مشین
+            لرننگ کے یونٹ کو سکھانے کی غرض سے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن
+            کیا گیا ہے۔  \n\n**اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**\n\n-   مصنوعی
+            ذہانت اور مشین لرننگ کا تعارف حاصل کریں گے۔ \n-   AI لیب کو استعمال کرتے
+            ہوئے مشین لرننگ ماڈل کی تربیت دیں گے۔\n-   مشین لرننگ ایپس کے ساتھ مشغول
+            ہوں گے۔ \n-   AI اور مشین لرننگ کو حقیقی دنیا میں لاگو کرنے پر غور کریں
+            گے۔ \n-   باب کے اختتام پر موجود پروجیکٹس کو دریافت کریں گے۔\n\n**تجویز
+            کردہ وقت:** 120 منٹس"
+        self-paced-pl-csp2-2021:
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
+        self-paced-pl-csp2-2022:
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
+        self-paced-pl-csp2-2023:
+          title: 'ماڈیول 2: Code.org کو نیویگیٹ کرنا'
+        soccer:
+          description: ایک قٹ بال گیم بنائیں
+          description_short: ایک قٹ بال گیم بنائیں
+          name: فٹ بال
+          title: کوڈ سے اپنا ہی فٹ بال گیم بنائیں
+        spelling-bee:
+          name: spelling-bee
+        sports:
+          name: کھیل
+        spritelab-effects-challenge:
+          description_audience: سپرائٹ لیب کے وسطی/ترقی یافتہ صارفین
+          description_short: سپرائٹ لیب استعمال کرتے ہوئے اپنے سپرائٹ بنانے کا چیلنج
+            قبول کریں!
+          name: spritelab-effects-challenge
+          title: سپرائٹ ایفیکٹ چیلنج
+        starwars:
+          description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں میں
+            اپنی اسٹار وارز گیم بنائیں۔
+          description_short: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
+            میں اپنی اسٹار وارز گیم بنائیں۔
+          student_description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
+            میں اپنی اسٹار وارز گیم بنائیں۔
+          title: 'اسٹار وارز: کوڈ کے ساتھ کہکشاں بنانا (جاوا اسکرپٹ)'
+        starwarsblocks:
+          description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں میں
+            اپنی اسٹار وارز گیم بنائیں۔
+          description_short: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
+            میں اپنی اسٹار وارز گیم بنائیں۔
+          student_description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں
+            میں اپنی اسٹار وارز گیم بنائیں۔
+          title: کوڈ کے ساتھ کہکشاں بنانا (بلاکلی)
+        step:
+          title: اسٹیپ
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: باب 1
+            lessonGroup-3:
+              display_name: باب 2
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
+              display_name: لوپس
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: باب 1
+        testing-focus-on-creativity2:
+          title: ویب ڈویلپمنٹ
+        text-compression:
+          title: متن گٹھانا
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: شرائط
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: شرائط
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_functions:
+              display_name: افعال
+            csf_nested_loops:
+              display_name: گھوںسلا لوپس
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: شرائط
+            csf_digcit:
+              display_name: ڈیجیٹل شہریت
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: تعارف
+            lesson-12:
+              name: اختتام
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: اختتام
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: اختتام
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: اختتام
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: تشخیصات
+        virustest:
+          description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
+            پھیلنے کا سیمیولیشن بنائیں.
+          title: وباء کے پھیلنے کا سیمیولیشن
+        vpl-csd-ci-1:
+          description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول آپ کو Code.org کے مسئلہ حل کرنے اور کمپیوٹنگ یونٹ کو سکھانے کے لیے تیار کرنے میں مدد کرنے کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ یہ کریں گے:**
+
+            -   مسئلہ حل کرنے اور کمپیوٹنگ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 30 منٹ
+          student_description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول آپ کو Code.org کے مسئلہ حل کرنے اور کمپیوٹنگ یونٹ کو سکھانے کے لیے تیار کرنے میں مدد کرنے کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ یہ کریں گے:**
+
+            -   مسئلہ حل کرنے اور کمپیوٹنگ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 30 منٹ
+          title: 'ماڈیول 1: مسئلہ حل کرنے اور کمپیوٹنگ سکھانے کی تیاری'
+        vpl-csd-ci-2:
+          description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ویب ڈویلپمنٹ یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   ویب ڈویلپمنٹ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   ویب لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ویب ڈویلپمنٹ کی تعلیم
+          student_description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ویب ڈویلپمنٹ یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   ویب ڈویلپمنٹ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   ویب لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          title: 'ماڈیول 2: ویب ڈویلپمنٹ سکھانے کی تیاری'
+        vpl-csd-ci-3:
+          description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے انٹرایکٹو اینیمیشنز اور گیمز یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   انٹرایکٹو اینیمیشنز اور گیمز کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   گیم لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 120 منٹ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: انٹرایکٹو اینیمیشنز اور گیمز سکھانے کی تیاری
+          student_description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے انٹرایکٹو اینیمیشنز اور گیمز یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   انٹرایکٹو اینیمیشنز اور گیمز کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   گیم لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 120 منٹ
+          title: 'ماڈیول 3: انٹرایکٹو اینیمیشنز اور گیمز سکھانے کی تیاری'
+        vpl-csd-ci-4:
+          description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا ڈیزائن پراسس یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   ڈیزائن کے عمل کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   ایپ لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          student_description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا ڈیزائن پراسس یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   ڈیزائن کے عمل کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   ایپ لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          title: 'ماڈیول 4: ڈیزائن کے عمل کو سکھانے کی تیاری'
+        vpl-csd-ci-5:
+          description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ڈیٹا اور معاشرہ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   ڈیٹا اور معاشرہ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          student_description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ڈیٹا اور معاشرہ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   ڈیٹا اور معاشرہ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          title: 'ماڈیول 5: ڈیٹا اورمعاشرے کا موضوع سکھانے کی تیاری'
+        vpl-csd-ci-7:
+          description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا AI اور مشین لرننگ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   AI اور مشین لرننگ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   اے آئی لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+            -   اپنے طلباء کے ساتھ یونٹ کو نافذ کرنے کا منصوبہ بنائیں گے۔
+
+            **مجوزہ وقت:** 120 منٹ
+          student_description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا AI اور مشین لرننگ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   AI اور مشین لرننگ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   اے آئی لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+            -   اپنے طلباء کے ساتھ یونٹ کو نافذ کرنے کا منصوبہ بنائیں گے۔
+
+            **مجوزہ وقت:** 120 منٹ
+          title: 'ماڈیول 7: AI اور مشین لرننگ سکھانے کی تیاری'
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: متزامن ڈیبگنگ ایکسٹنشن
+        vpl-csd1-ci-pilot-2022:
+          description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول آپ کو Code.org کے مسئلہ حل کرنے اور کمپیوٹنگ یونٹ کو سکھانے کے لیے تیار کرنے میں مدد کرنے کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ یہ کریں گے:**
+
+            -   مسئلہ حل کرنے اور کمپیوٹنگ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 30 منٹ
+          student_description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول آپ کو Code.org کے مسئلہ حل کرنے اور کمپیوٹنگ یونٹ کو سکھانے کے لیے تیار کرنے میں مدد کرنے کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ یہ کریں گے:**
+
+            -   مسئلہ حل کرنے اور کمپیوٹنگ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 30 منٹ
+          title: 'ماڈیول 1: مسئلہ حل کرنے اور کمپیوٹنگ سکھانے کی تیاری'
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: ماڈیول 2 غیر متزامن کام
+        vpl-csd2-ci-pilot-2022:
+          description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ویب ڈویلپمنٹ یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   ویب ڈویلپمنٹ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   ویب لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ویب ڈویلپمنٹ کی تعلیم
+          student_description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ویب ڈویلپمنٹ یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   ویب ڈویلپمنٹ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   ویب لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          title: 'ماڈیول 2: ویب ڈویلپمنٹ سکھانے کی تیاری'
+        vpl-csd3-ci-pilot-2022:
+          description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے انٹرایکٹو اینیمیشنز اور گیمز یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   انٹرایکٹو اینیمیشنز اور گیمز کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   گیم لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 120 منٹ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: انٹرایکٹو اینیمیشنز اور گیمز سکھانے کی تیاری
+          student_description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے انٹرایکٹو اینیمیشنز اور گیمز یونٹ کو سکھانے کے لیے تیار کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   انٹرایکٹو اینیمیشنز اور گیمز کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   گیم لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 120 منٹ
+          title: 'ماڈیول 3: انٹرایکٹو اینیمیشنز اور گیمز سکھانے کی تیاری'
+        vpl-csd4-ci-pilot-2022:
+          description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا ڈیزائن پراسس یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   ڈیزائن کے عمل کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   ایپ لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          student_description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا ڈیزائن پراسس یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   ڈیزائن کے عمل کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   ایپ لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          title: 'ماڈیول 4: ڈیزائن کے عمل کو سکھانے کی تیاری'
+        vpl-csd5-ci-pilot-2022:
+          description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ڈیٹا اور معاشرہ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   ڈیٹا اور معاشرہ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          student_description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کے ڈیٹا اور معاشرہ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   ڈیٹا اور معاشرہ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          title: 'ماڈیول 5: ڈیٹا اورمعاشرے کا موضوع سکھانے کی تیاری'
+        vpl-csd6-ci-pilot-2022:
+          description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول آپ کو Code.org کے فزیکل کمپیوٹنگ یونٹ کو سکھانے کے لیے تیاری کرنے میں مدد کرنے کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   فزیکل کمپیوٹنگ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   میکر ایپ کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          student_description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول آپ کو Code.org کے فزیکل کمپیوٹنگ یونٹ کو سکھانے کے لیے تیاری کرنے میں مدد کرنے کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   فزیکل کمپیوٹنگ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   میکر ایپ کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+
+            **مجوزہ وقت:** 90 منٹ
+          title: 'ماڈیول 6: فزیکل کمپیوٹنگ سکھانے کی تیاری'
+        vpl-csd7-ci-pilot-2022:
+          description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا AI اور مشین لرننگ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   AI اور مشین لرننگ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   اے آئی لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+            -   اپنے طلباء کے ساتھ یونٹ کو نافذ کرنے کا منصوبہ بنائیں گے۔
+
+            **مجوزہ وقت:** 120 منٹ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: AI اور مشین لرننگ کو پڑھانا
+          student_description: |-
+            یہ پیشہ ورانہ سیکھنے کا ماڈیول Code.org کا AI اور مشین لرننگ کا یونٹ سکھانے کے لیے تیاری کرنے میں آپ کی مدد کے لیے ڈیزائن کیا گیا ہے۔
+
+            **اس پیشہ ورانہ سیکھنے کے ماڈیول میں، آپ:**
+
+            -   AI اور مشین لرننگ کا تعارف حاصل کریں گے۔
+            -   یونٹ میں شامل کلیدی تصورات کی مشق کریں گے۔
+            -   اے آئی لیب اور ایپ لیب کے ساتھ مشغول ہوں گے۔
+            -   باب کے اختتام پر پراجیکٹس کو دریافت کریں گے۔
+            -   اپنے طلباء کے ساتھ یونٹ کو نافذ کرنے کا منصوبہ بنائیں گے۔
+
+            **مجوزہ وقت:** 120 منٹ
+          title: 'ماڈیول 7: AI اور مشین لرننگ سکھانے کی تیاری'

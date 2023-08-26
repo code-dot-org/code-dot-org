@@ -1,10 +1,15 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:04:27.000Z",
+  "level_num": "custom",
+  "user_id": 568,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Review Your Game\r\n\r\nLook over the rubric and your project guide to make sure your game has everything it needs.\r\n\r\n* Have you included comments in your code?\r\n* Do you use functions to organize your code and make it easier to read?\r\n* Do the functions and variables have meaningful names?\r\n* Are you using conditionals and sprite interactions to make the game more interesting?",
+    "long_instructions": "# Review Your Game\r\n\r\nLook over the rubric and your project guide to make sure your game has everything it needs.\r\n\r\n1. Have you included comments in your code?\r\n* Do you use functions to organize your code and make it easier to read?\r\n* Do the functions and variables have meaningful names?\r\n* Are you using conditionals and sprite interactions to make the game more interesting?",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -27,7 +32,7 @@
     "lock_zero_param_functions": "false",
     "free_play": "false",
     "text_mode_at_start": "false",
-    "submittable": "false",
+    "submittable": "true",
     "hide_view_data_button": "false",
     "show_debug_watch": "true",
     "debugger_disabled": "true",
@@ -66,13 +71,8 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:04:27.000Z",
-  "level_num": "custom",
-  "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:27.716+00:00\",\"changed\":[\"cloned from \\\"CSD games project review_2022\\\"\"],\"cloned_from\":\"CSD games project review_2022\"},{\"changed_at\":\"2023-03-09 17:56:12 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:27.716+00:00\",\"changed\":[\"cloned from \\\"CSD games project review_2022\\\"\"],\"cloned_from\":\"CSD games project review_2022\"},{\"changed_at\":\"2023-03-09 17:56:12 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 18:09:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-31 21:57:04 +0000\",\"changed\":[\"submittable\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

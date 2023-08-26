@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "play sound",
   "blockly_blockPlaySoundAtMeasureTooltip": "play sound",
+  "blockly_blockPlaySoundTooltip": "play sound",
   "blockly_blockRepeatTooltip": "दोहोरिएको",
   "blockly_blockWhenRun": "when run",
   "blockly_blockWhenRunTooltip": "when run",
@@ -9,6 +9,9 @@
   "blockly_toolboxCategoryLogic": "लजिक",
   "blockly_toolboxCategoryMath": "Math",
   "blockly_toolboxCategoryVariables": "Variables",
+  "continue": "जारी राख्नुहोस्",
+  "panelHeaderInstructions": "निर्देशनहरु",
+  "panelHeaderWorkspace": "कार्यस्थान",
   "share": "आदान-प्रदान गर्नुहोस्",
   "startOver": "सुरु गर्नुहोस्"
 }

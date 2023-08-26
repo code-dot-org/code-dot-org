@@ -35,6 +35,8 @@ export default function reducer(state = ViewType.Participant, action) {
 
 // Action creators
 
+// TODO: When this is converted to redux-toolkit, update progressRedux accordingly, as it has
+// a dependency on this action.
 export const setViewType = viewType => ({
   type: SET_VIEW_TYPE,
   viewType,

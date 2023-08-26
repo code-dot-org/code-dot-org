@@ -2,160 +2,188 @@
   "uk-UA": {
     "data": {
       "start_html": {
+        "AppLab Intro 7 - Change Text 2": {
+          "Make me bigger and blue!": "Зроби мене більшим і синім!"
+        },
+        "AppLab Intro 7 - Full Text": {
+          "Make me blue!": "Зроби мене синім!",
+          "Make me red!": "Зроби мене червоним!",
+          "Write code to change my text!": "Напиши код, щоб змінити мій текст!"
+        },
+        "AppLab Intro 7 - onEvent intro": {
+          "Green-ify!": "Зазеленій!"
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "Flashlight App": "Ліхтарик"
+        },
+        "AppLab Intro 7 - playSound": {
+          "Animal Sound Board!!!": "Звуки тварин!!!",
+          "Horse!": "Кінь!",
+          "Monkey!": "Мавпа!",
+          "Tiger!": "Тигр!",
+          "You Choose!": "Обирай!"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "This or That?!": "Це або те?!",
+          "This!": "Це!",
+          "You clicked this!": "Ви клацнули це!"
+        },
+        "AppLab Intro 7 - thisOrThatPersonalize": {
+          "This or That?!": "Це або те?!",
+          "This!": "Це!",
+          "You clicked this!": "Ви клацнули це!"
+        },
+        "AppLab Intro 7 - thisOrThatSetScreen": {
+          "This or That?!": "Це або те?!",
+          "This!": "Це!",
+          "You clicked this!": "Ви клацнули це!"
+        },
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Так",
-          "No": "Ні",
-          "cute": "милий",
-          "The Ultimate": "Ідеальний",
-          "Pet Chooser!": "підбір улюбленця!",
-          "Click here to start!": "Натисніть тут, щоб почати!",
-          "Do you like going outside?": "Ти любиш виходити на вулицю?",
+          "1584 Maple St": "1584 Мейпл Стріт",
           "Are you allergic to pet fur?": "Маєш алергію на шерсть домашніх тварин?",
-          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
-          "creepy": "Дивний",
-          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Click here to start!": "Натисніть тут, щоб почати!",
+          "Closest pet shop:": "Найближчий зоомагазин:",
           "Crowd": "Як всі",
           "Different": "Вирізнятися",
-          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
-          "Very Cute": "Дуже милий",
-          "Medium Cute": "Досить милий",
-          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Do you like going outside?": "Ти любиш виходити на вулицю?",
           "Do you want to play with the pet?": "Чи хочеш ти гратися з домашнім улюбленцем?",
-          "Get a goat!": "Заведи козу!",
-          "Find it!": "Знайти!",
-          "Get a dog!": "Заведи собаку!",
-          "Get a hamster!": "Заведи хом'яка!",
-          "Get a rat!": "Заведи щура!",
-          "Get a tarantula!": "Заведи тарантула!",
-          "Get a scorpion!": "Заведи скорпіона!",
-          "Get a parrot!": "Заведи папугу!",
-          "Get a bettafish!": "Заведи бійцівську рибку!",
-          "Closest pet shop:": "Найближчий зоомагазин:",
           "Downtown Pets and More": "Downtown Pets and More",
-          "1584 Maple St": "1584 Мейпл Стріт",
-          "Open Now!": "Працює зараз!"
+          "Find it!": "Знайти!",
+          "Get a bettafish!": "Заведи бійцівську рибку!",
+          "Get a dog!": "Заведи собаку!",
+          "Get a goat!": "Заведи козу!",
+          "Get a hamster!": "Заведи хом'яка!",
+          "Get a parrot!": "Заведи папугу!",
+          "Get a rat!": "Заведи щура!",
+          "Get a scorpion!": "Заведи скорпіона!",
+          "Get a tarantula!": "Заведи тарантула!",
+          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
+          "Medium Cute": "Досить милий",
+          "No": "Ні",
+          "Open Now!": "Працює зараз!",
+          "Pet Chooser!": "підбір улюбленця!",
+          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
+          "The Ultimate": "Ідеальний",
+          "Very Cute": "Дуже милий",
+          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Yes": "Так",
+          "creepy": "Дивний",
+          "cute": "милий"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Так",
-          "No": "Ні",
-          "cute": "милий",
-          "The Ultimate": "Ідеальний",
-          "Pet Chooser!": "підбір улюбленця!",
-          "Click here to start!": "Натисніть тут, щоб почати!",
-          "Do you like going outside?": "Ти любиш виходити на вулицю?",
+          "1584 Maple St": "1584 Мейпл Стріт",
           "Are you allergic to pet fur?": "Маєш алергію на шерсть домашніх тварин?",
-          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
-          "creepy": "Дивний",
-          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Click here to start!": "Натисніть тут, щоб почати!",
+          "Closest pet shop:": "Найближчий зоомагазин:",
           "Crowd": "Як всі",
           "Different": "Вирізнятися",
-          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
-          "Very Cute": "Дуже милий",
-          "Medium Cute": "Досить милий",
-          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Do you like going outside?": "Ти любиш виходити на вулицю?",
           "Do you want to play with the pet?": "Чи хочеш ти гратися з домашнім улюбленцем?",
-          "Get a goat!": "Заведи козу!",
-          "Find it!": "Знайти!",
-          "Get a dog!": "Заведи собаку!",
-          "Get a hamster!": "Заведи хом'яка!",
-          "Get a rat!": "Заведи щура!",
-          "Get a tarantula!": "Заведи тарантула!",
-          "Get a scorpion!": "Заведи скорпіона!",
-          "Get a parrot!": "Заведи папугу!",
-          "Get a bettafish!": "Заведи бійцівську рибку!",
-          "Closest pet shop:": "Найближчий зоомагазин:",
           "Downtown Pets and More": "Downtown Pets and More",
-          "1584 Maple St": "1584 Мейпл Стріт",
-          "Open Now!": "Працює зараз!"
+          "Find it!": "Знайти!",
+          "Get a bettafish!": "Заведи бійцівську рибку!",
+          "Get a dog!": "Заведи собаку!",
+          "Get a goat!": "Заведи козу!",
+          "Get a hamster!": "Заведи хом'яка!",
+          "Get a parrot!": "Заведи папугу!",
+          "Get a rat!": "Заведи щура!",
+          "Get a scorpion!": "Заведи скорпіона!",
+          "Get a tarantula!": "Заведи тарантула!",
+          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
+          "Medium Cute": "Досить милий",
+          "No": "Ні",
+          "Open Now!": "Працює зараз!",
+          "Pet Chooser!": "підбір улюбленця!",
+          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
+          "The Ultimate": "Ідеальний",
+          "Very Cute": "Дуже милий",
+          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Yes": "Так",
+          "creepy": "Дивний",
+          "cute": "милий"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Так",
-          "No": "Ні",
-          "cute": "милий",
-          "The Ultimate": "Ідеальний",
-          "Pet Chooser!": "підбір улюбленця!",
-          "Click here to start!": "Натисніть тут, щоб почати!",
-          "Do you like going outside?": "Ти любиш виходити на вулицю?",
           "Are you allergic to pet fur?": "Маєш алергію на шерсть домашніх тварин?",
-          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
-          "creepy": "Дивний",
-          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Click here to start!": "Натисніть тут, щоб почати!",
           "Crowd": "Як всі",
           "Different": "Вирізнятися",
-          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
-          "Very Cute": "Дуже милий",
-          "Medium Cute": "Досить милий",
-          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Do you like going outside?": "Ти любиш виходити на вулицю?",
           "Do you want to play with the pet?": "Чи хочеш ти гратися з домашнім улюбленцем?",
-          "Get a goat!": "Заведи козу!",
+          "Get a bettafish!": "Заведи бійцівську рибку!",
           "Get a dog!": "Заведи собаку!",
+          "Get a goat!": "Заведи козу!",
           "Get a hamster!": "Заведи хом'яка!",
-          "Get a rat!": "Заведи щура!",
-          "Get a tarantula!": "Заведи тарантула!",
-          "Get a scorpion!": "Заведи скорпіона!",
           "Get a parrot!": "Заведи папугу!",
-          "Get a bettafish!": "Заведи бійцівську рибку!"
+          "Get a rat!": "Заведи щура!",
+          "Get a scorpion!": "Заведи скорпіона!",
+          "Get a tarantula!": "Заведи тарантула!",
+          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
+          "Medium Cute": "Досить милий",
+          "No": "Ні",
+          "Pet Chooser!": "підбір улюбленця!",
+          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
+          "The Ultimate": "Ідеальний",
+          "Very Cute": "Дуже милий",
+          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Yes": "Так",
+          "creepy": "Дивний",
+          "cute": "милий"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Так",
-          "No": "Ні",
-          "cute": "милий",
-          "The Ultimate": "Ідеальний",
-          "Pet Chooser!": "підбір улюбленця!",
-          "Click here to start!": "Натисніть тут, щоб почати!",
-          "Do you like going outside?": "Ти любиш виходити на вулицю?",
           "Are you allergic to pet fur?": "Маєш алергію на шерсть домашніх тварин?",
-          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
-          "creepy": "Дивний",
-          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Click here to start!": "Натисніть тут, щоб почати!",
           "Crowd": "Як всі",
           "Different": "Вирізнятися",
-          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
-          "Very Cute": "Дуже милий",
-          "Medium Cute": "Досить милий",
-          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Do you like going outside?": "Ти любиш виходити на вулицю?",
           "Do you want to play with the pet?": "Чи хочеш ти гратися з домашнім улюбленцем?",
-          "Get a goat!": "Заведи козу!",
+          "Get a bettafish!": "Заведи бійцівську рибку!",
           "Get a dog!": "Заведи собаку!",
+          "Get a goat!": "Заведи козу!",
           "Get a hamster!": "Заведи хом'яка!",
-          "Get a rat!": "Заведи щура!",
-          "Get a tarantula!": "Заведи тарантула!",
-          "Get a scorpion!": "Заведи скорпіона!",
           "Get a parrot!": "Заведи папугу!",
-          "Get a bettafish!": "Заведи бійцівську рибку!"
+          "Get a rat!": "Заведи щура!",
+          "Get a scorpion!": "Заведи скорпіона!",
+          "Get a tarantula!": "Заведи тарантула!",
+          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
+          "Medium Cute": "Досить милий",
+          "No": "Ні",
+          "Pet Chooser!": "підбір улюбленця!",
+          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
+          "The Ultimate": "Ідеальний",
+          "Very Cute": "Дуже милий",
+          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Yes": "Так",
+          "creepy": "Дивний",
+          "cute": "милий"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Ім’я",
-          "Color": "Колір",
-          "Food": "Їжа",
           "City": "Місто",
-          "text": "текст",
-          "Fill in the blanks to create a custom story!": "Заповніть пропуски, щоб створити власну історію!",
+          "Color": "Колір",
           "Emotion": "Емоція",
+          "Fill in the blanks to create a custom story!": "Заповніть пропуски, щоб створити власну історію!",
+          "Food": "Їжа",
           "Make a Sci-Fi Story!": "Створити науково-фантастичну історію!",
-          "Make a Western Story!": "Створити історію у стилі вестерн!"
+          "Make a Western Story!": "Створити історію у стилі вестерн!",
+          "Name": "Ім’я",
+          "text": "текст"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Ім’я",
-          "Color": "Колір",
-          "Food": "Їжа",
           "City": "Місто",
-          "text": "текст",
-          "Fill in the blanks to create a custom story!": "Заповніть пропуски, щоб створити власну історію!",
+          "Color": "Колір",
           "Emotion": "Емоція",
+          "Fill in the blanks to create a custom story!": "Заповніть пропуски, щоб створити власну історію!",
+          "Food": "Їжа",
           "Make a Sci-Fi Story!": "Створити науково-фантастичну історію!",
-          "Make a Western Story!": "Створити історію у стилі вестерн!"
+          "Make a Western Story!": "Створити історію у стилі вестерн!",
+          "Name": "Ім’я",
+          "text": "текст"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -166,18 +194,35 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "April": "Квітень",
+          "August": "Серпень",
+          "Choose your Birthday!": "Обери свій день народження!",
+          "December": "Грудень",
+          "February": "Лютий",
+          "Find out if it's your birthday!": "Дізнайся, чи сьогодні твій день народження!",
+          "It was already your birthday this year!!": "Цього року у вас вже був День народження!!!",
+          "It's not your birthday yet this year!": "Ваш День народження цього року ще не наступив!",
+          "It's your birthday!": "Сьогодні ваш День народження!",
+          "January": "Січень",
+          "July": "Липень",
+          "June": "Червень",
+          "March": "Березень",
+          "May": "Травень",
+          "November": "Листопад",
+          "October": "Жовтень",
+          "September": "Вересень"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -188,35 +233,73 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "April": "Квітень",
+          "August": "Серпень",
+          "Choose your Birthday!": "Обери свій день народження!",
+          "December": "Грудень",
+          "February": "Лютий",
+          "Find out if it's your birthday!": "Дізнайся, чи сьогодні твій день народження!",
+          "It was already your birthday this year!!": "Цього року у вас вже був День народження!!!",
+          "It's not your birthday yet this year!": "Ваш День народження цього року ще не наступив!",
+          "It's your birthday!": "Сьогодні ваш День народження!",
+          "January": "Січень",
+          "July": "Липень",
+          "June": "Червень",
+          "March": "Березень",
+          "May": "Травень",
+          "November": "Листопад",
+          "October": "Жовтень",
+          "September": "Вересень"
+        },
+        "CSD U1 processing countries_2021": {
+          "How Many Countries...": "Скільки країн...",
+          "are bigger than Alaska?": "більші за Аляску?",
+          "are decreasing population?": "з населенням, що скорочується?",
+          "are land locked?": "не мають виходу до моря?",
+          "have more than a billion people?": "мають населення понад мільярд людей?",
+          "have no land borders?": "не мають сухопутних кордонів?",
+          "have sent people to space?": "відправляли людей у космос?",
+          "have won the World Cup?": "вигравали Чемпіонат світу?"
+        },
+        "CSD U1 processing countries_2022": {
+          "How Many Countries...": "Скільки країн...",
+          "are bigger than Alaska?": "більші за Аляску?",
+          "are decreasing population?": "з населенням, що скорочується?",
+          "are land locked?": "не мають виходу до моря?",
+          "have more than a billion people?": "мають населення понад мільярд людей?",
+          "have no land borders?": "не мають сухопутних кордонів?",
+          "have sent people to space?": "відправляли людей у космос?",
+          "have won the World Cup?": "вигравали Чемпіонат світу?"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
-          "k": "k",
           "0": "0",
-          "Which finger is the FASTEST?": "Який палець НАЙШВИДШИЙ?",
+          "It's a tie!": "Нічия!",
           "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "Поставте один палець на клавішу «s», а інший — на клавішу «k». Натискайте клавіші максимально швидко.",
-          "It's a tie!": "Нічия!"
+          "Which finger is the FASTEST?": "Який палець НАЙШВИДШИЙ?",
+          "k": "k",
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
-          "k": "k",
           "0": "0",
-          "Which finger is the FASTEST?": "Який палець НАЙШВИДШИЙ?",
+          "It's a tie!": "Нічия!",
           "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "Поставте один палець на клавішу «s», а інший — на клавішу «k». Натискайте клавіші максимально швидко.",
-          "It's a tie!": "Нічия!"
+          "Which finger is the FASTEST?": "Який палець НАЙШВИДШИЙ?",
+          "k": "k",
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
+          "100": "100",
           "11": "11",
           "12": "12",
           "13": "13",
@@ -226,13 +309,10 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
-          "text": "текст",
-          "I'm thinking of a number from 1 to 100.": "Я думаю про число від 1 до 100.",
-          "Can you guess it?": "Зможеш його вгадати?",
-          "You haven't guessed yet.": "Не вгадав.",
-          "Your guess:": "Твоє число:",
-          "You only have 5 tries.": "У тебе є лише 5 спроб.",
+          "3": "3",
+          "4": "4",
           "41": "41",
           "42": "42",
           "43": "43",
@@ -242,6 +322,7 @@
           "47": "47",
           "48": "48",
           "49": "49",
+          "5": "5",
           "50": "50",
           "51": "51",
           "52": "52",
@@ -252,6 +333,7 @@
           "57": "57",
           "58": "58",
           "59": "59",
+          "6": "6",
           "60": "60",
           "61": "61",
           "62": "62",
@@ -262,6 +344,7 @@
           "67": "67",
           "68": "68",
           "69": "69",
+          "7": "7",
           "70": "70",
           "71": "71",
           "72": "72",
@@ -272,6 +355,7 @@
           "77": "77",
           "78": "78",
           "79": "79",
+          "8": "8",
           "80": "80",
           "81": "81",
           "83": "83",
@@ -281,6 +365,7 @@
           "87": "87",
           "88": "88",
           "89": "89",
+          "9": "9",
           "91": "91",
           "92": "92",
           "93": "93",
@@ -290,21 +375,21 @@
           "97": "97",
           "98": "98",
           "99": "99",
-          "You won!": "Ти виграв!",
+          "?": "?",
+          "Can you guess it?": "Зможеш його вгадати?",
+          "I'm thinking of a number from 1 to 100.": "Я думаю про число від 1 до 100.",
+          "No more tries!": "Спроби скінчилися!",
           "The number was": "Було загадане число",
-          "No more tries!": "Спроби скінчилися!"
+          "You haven't guessed yet.": "Не вгадав.",
+          "You only have 5 tries.": "У тебе є лише 5 спроб.",
+          "You won!": "Ти виграв!",
+          "Your guess:": "Твоє число:",
+          "text": "текст"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
+          "100": "100",
           "11": "11",
           "12": "12",
           "13": "13",
@@ -314,13 +399,10 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
-          "text": "текст",
-          "I'm thinking of a number from 1 to 100.": "Я думаю про число від 1 до 100.",
-          "Can you guess it?": "Зможеш його вгадати?",
-          "You haven't guessed yet.": "Не вгадав.",
-          "Your guess:": "Твоє число:",
-          "You only have 5 tries.": "У тебе є лише 5 спроб.",
+          "3": "3",
+          "4": "4",
           "41": "41",
           "42": "42",
           "43": "43",
@@ -330,6 +412,7 @@
           "47": "47",
           "48": "48",
           "49": "49",
+          "5": "5",
           "50": "50",
           "51": "51",
           "52": "52",
@@ -340,6 +423,7 @@
           "57": "57",
           "58": "58",
           "59": "59",
+          "6": "6",
           "60": "60",
           "61": "61",
           "62": "62",
@@ -350,6 +434,7 @@
           "67": "67",
           "68": "68",
           "69": "69",
+          "7": "7",
           "70": "70",
           "71": "71",
           "72": "72",
@@ -360,6 +445,7 @@
           "77": "77",
           "78": "78",
           "79": "79",
+          "8": "8",
           "80": "80",
           "81": "81",
           "83": "83",
@@ -369,6 +455,7 @@
           "87": "87",
           "88": "88",
           "89": "89",
+          "9": "9",
           "91": "91",
           "92": "92",
           "93": "93",
@@ -378,74 +465,127 @@
           "97": "97",
           "98": "98",
           "99": "99",
-          "You won!": "Ти виграв!",
+          "?": "?",
+          "Can you guess it?": "Зможеш його вгадати?",
+          "I'm thinking of a number from 1 to 100.": "Я думаю про число від 1 до 100.",
+          "No more tries!": "Спроби скінчилися!",
           "The number was": "Було загадане число",
-          "No more tries!": "Спроби скінчилися!"
+          "You haven't guessed yet.": "Не вгадав.",
+          "You only have 5 tries.": "У тебе є лише 5 спроб.",
+          "You won!": "Ти виграв!",
+          "Your guess:": "Твоє число:",
+          "text": "текст"
         },
         "CSD U1 processing live_2021": {
-          "bear": "Ведмідь",
-          "rat": "пацюк",
-          "Where should you live?": "Де вам краще жити?",
           "Answer the questions for advice on where to live. ": "Дайте відповідь на питання, щоб отримати пораду, де жити. ",
-          "You should live in a big city.": "Вам краще жити у великому місті.",
-          "What do you like to do for fun?": "Як ви любите розважатися?",
-          "visit museums": "відвідувати музеї",
-          "cookout with friends": "пікніки з друзями",
-          "go to sports games": "ходити на спортивні заходи",
-          "go camping": "ходити в походи",
           "How do you like to get around?": "Як ви любите пересуватися?",
-          "biking": "велосипедом",
-          "public transit": "громадським транспортом",
-          "drive": "за кермом",
+          "Next Question": "Наступне питання",
+          "Start!": "Почали!",
           "What animals are you okay with?": "До яких тварин ви ставитеся спокійно?",
-          "racoon": "єнот",
-          "coyote": "койот",
+          "What do you like to do for fun?": "Як ви любите розважатися?",
           "What food do you like?": "Яка їжа вам подобається?",
+          "Where should you live?": "Де вам краще жити?",
+          "You should live in a big city.": "Вам краще жити у великому місті.",
+          "bear": "Ведмідь",
+          "biking": "велосипедом",
+          "cookout with friends": "пікніки з друзями",
+          "coyote": "койот",
+          "delivery/takeout": "їжа на виніс/з доставкою",
+          "drive": "за кермом",
+          "go camping": "ходити в походи",
+          "go to sports games": "ходити на спортивні заходи",
           "home cooked meals": "домашня їжа",
-          "trying new restaurants": "їжа в нових ресторанах",
           "my regular restaurants": "їжа в моїх звичних ресторанах",
-          "delivery/takeout": "їжа на виніс/з доставкою"
+          "public transit": "громадським транспортом",
+          "racoon": "єнот",
+          "rat": "пацюк",
+          "trying new restaurants": "їжа в нових ресторанах",
+          "visit museums": "відвідувати музеї"
         },
         "CSD U1 processing live_2022": {
-          "bear": "Ведмідь",
-          "rat": "пацюк",
-          "Where should you live?": "Де вам краще жити?",
           "Answer the questions for advice on where to live. ": "Дайте відповідь на питання, щоб отримати пораду, де жити. ",
-          "You should live in a big city.": "Вам краще жити у великому місті.",
-          "What do you like to do for fun?": "Як ви любите розважатися?",
-          "visit museums": "відвідувати музеї",
-          "cookout with friends": "пікніки з друзями",
-          "go to sports games": "ходити на спортивні заходи",
-          "go camping": "ходити в походи",
           "How do you like to get around?": "Як ви любите пересуватися?",
-          "biking": "велосипедом",
-          "public transit": "громадським транспортом",
-          "drive": "за кермом",
+          "Next Question": "Наступне питання",
+          "Start!": "Почали!",
           "What animals are you okay with?": "До яких тварин ви ставитеся спокійно?",
-          "racoon": "єнот",
-          "coyote": "койот",
+          "What do you like to do for fun?": "Як ви любите розважатися?",
           "What food do you like?": "Яка їжа вам подобається?",
+          "Where should you live?": "Де вам краще жити?",
+          "You should live in a big city.": "Вам краще жити у великому місті.",
+          "bear": "Ведмідь",
+          "biking": "велосипедом",
+          "cookout with friends": "пікніки з друзями",
+          "coyote": "койот",
+          "delivery/takeout": "їжа на виніс/з доставкою",
+          "drive": "за кермом",
+          "go camping": "ходити в походи",
+          "go to sports games": "ходити на спортивні заходи",
           "home cooked meals": "домашня їжа",
-          "trying new restaurants": "їжа в нових ресторанах",
           "my regular restaurants": "їжа в моїх звичних ресторанах",
-          "delivery/takeout": "їжа на виніс/з доставкою"
+          "public transit": "громадським транспортом",
+          "racoon": "єнот",
+          "rat": "пацюк",
+          "trying new restaurants": "їжа в нових ресторанах",
+          "visit museums": "відвідувати музеї"
         },
         "CSD U1 processing npark_2021": {
-          "Sorry!": "Вибачте!"
+          "Acadia": "Акадія",
+          "Correct!": "Правильно!",
+          "Death Valley": "Долина Смерті",
+          "Denali": "Деналі",
+          "Grand Canyon": "Великий Каньйон",
+          "Great Smoky Mountains": " Грейт Смокі Маунтінс",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Найбільш відвідуваним є парк \"Грейт-Смокі-Маунтінс\", який щороку відвідують понад 11 мільйонів туристів.",
+          "National Park Quiz": "Вікторина \"Національні парки\"",
+          "Next Question": "Наступне питання",
+          "Olympic": "Олімпійський",
+          "Play Again": "Зіграти ще раз",
+          "Redwood": "Редвуд",
+          "Sequoia": "Секвойя",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Секвойя є домом для найбільшого дерева у світі - Дерева Генерала Шермана.",
+          "Shenandoah": "Шенандоа",
+          "Sorry!": "Вибачте!",
+          "Start!": "Почали!",
+          "What was the first national park?": "Назвіть перший національний парк.",
+          "Which is the largest national park?": "Який найбільший національний парк?",
+          "Which national park gets the most visitors?": "Який національний парк має найбільше відвідувачів?",
+          "Which national park has the largest tree in the world?": "У якому національному парку розташоване найбільше дерево у світі?",
+          "Wrangell-St. Elias": "Врангель-Сент-Еліас",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Врангель-Сент-Еліас - найбільший національний парк, він навіть більший за багато країн!",
+          "Yellowstone": "Йеллоустоун",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Йеллоустоун був першим національним парком, створеним президентом Улісом С. Грантом у 1872 році",
+          "Yosemite": "Йосеміті"
         },
         "CSD U1 processing npark_2022": {
-          "Sorry!": "Вибачте!"
+          "Acadia": "Акадія",
+          "Correct!": "Правильно!",
+          "Death Valley": "Долина Смерті",
+          "Denali": "Деналі",
+          "Grand Canyon": "Великий Каньйон",
+          "Great Smoky Mountains": " Грейт Смокі Маунтінс",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Найбільш відвідуваним є парк \"Грейт-Смокі-Маунтінс\", який щороку відвідують понад 11 мільйонів туристів.",
+          "National Park Quiz": "Вікторина \"Національні парки\"",
+          "Next Question": "Наступне питання",
+          "Olympic": "Олімпійський",
+          "Play Again": "Зіграти ще раз",
+          "Redwood": "Редвуд",
+          "Sequoia": "Секвойя",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Секвойя є домом для найбільшого дерева у світі - Дерева Генерала Шермана.",
+          "Shenandoah": "Шенандоа",
+          "Sorry!": "Вибачте!",
+          "Start!": "Почали!",
+          "What was the first national park?": "Назвіть перший національний парк.",
+          "Which is the largest national park?": "Який найбільший національний парк?",
+          "Which national park gets the most visitors?": "Який національний парк має найбільше відвідувачів?",
+          "Which national park has the largest tree in the world?": "У якому національному парку розташоване найбільше дерево у світі?",
+          "Wrangell-St. Elias": "Врангель-Сент-Еліас",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Врангель-Сент-Еліас - найбільший національний парк, він навіть більший за багато країн!",
+          "Yellowstone": "Йеллоустоун",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Йеллоустоун був першим національним парком, створеним президентом Улісом С. Грантом у 1872 році",
+          "Yosemite": "Йосеміті"
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -456,18 +596,73 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "1998": "1998",
+          "1999": "1999",
+          "2": "2",
+          "20": "20",
+          "2000": "2000",
+          "2001": "2001",
+          "2002": "2002",
+          "2003": "2003",
+          "2004": "2004",
+          "2005": "2005",
+          "2006": "2006",
+          "2007": "2007",
+          "2008": "2008",
+          "2009": "2009",
+          "2010": "2010",
+          "2011": "2011",
+          "2012": "2012",
+          "2013": "2013",
+          "2014": "2014",
+          "2015": "2015",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "Anchee Min": "Анчі Мін",
+          "April": "Квітень",
+          "August": "Серпень",
+          "December": "Грудень",
+          "Enter your Birthday!": "Введіть дату свого дня народження!",
+          "February": "Лютий",
+          "Find a writer!": "Знайти письменника!",
+          "Friday": "П'ятниця",
+          "Gabriel Garcia Marquez": "Габріель Гарсія Маркес",
+          "January": "Січень",
+          "July": "Липень",
+          "June": "Червень",
+          "Khaled Hosseini": "Халід Госсейні",
+          "Langston Hughes": "Ленгстон Г'юз",
+          "March": "Березень",
+          "Margaret Atwood": "Маргарет Етвуд",
+          "May": "Травень",
+          "Monday": "Понеділок",
+          "N. Scott Momaday": "Наварре Скотт Момадей ",
+          "November": "Листопад",
+          "October": "Жовтень",
+          "Public Domain": "З відкритих джерел",
+          "Public Domain Image": "Зображення з відкритих джерел",
+          "Saturday": "Субота",
+          "September": "Вересень",
+          "Sunday": "Неділя",
+          "Thursday": "Четвер",
+          "Toni Morrison": "Тоні Моррісон",
+          "Tuesday": "Вівторок",
+          "Wednesday": "Середа",
+          "You were born on a": "Ви народилися у",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "автор фото Джон Метью Сміт, CC-BY-SA 2.0",
+          "image by Jose Lara, CC-BY-SA": "автор Хосе Лара, CC-BY-SA",
+          "image by Slowking4, GFDL 1.2": "автор фото Slowking4, GFDL 1.2",
+          "image by Vanwaffle, CC BY-SA 3.0": "автор фото Vanwaffle, CC BY-SA 3.0",
+          "just like": "в один день з",
+          "public domain image": "зображення з відкритих джерел"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -478,89 +673,154 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "1998": "1998",
+          "1999": "1999",
+          "2": "2",
+          "20": "20",
+          "2000": "2000",
+          "2001": "2001",
+          "2002": "2002",
+          "2003": "2003",
+          "2004": "2004",
+          "2005": "2005",
+          "2006": "2006",
+          "2007": "2007",
+          "2008": "2008",
+          "2009": "2009",
+          "2010": "2010",
+          "2011": "2011",
+          "2012": "2012",
+          "2013": "2013",
+          "2014": "2014",
+          "2015": "2015",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "Anchee Min": "Анчі Мін",
+          "April": "Квітень",
+          "August": "Серпень",
+          "December": "Грудень",
+          "Enter your Birthday!": "Введіть дату свого дня народження!",
+          "February": "Лютий",
+          "Find a writer!": "Знайти письменника!",
+          "Friday": "П'ятниця",
+          "Gabriel Garcia Marquez": "Габріель Гарсія Маркес",
+          "January": "Січень",
+          "July": "Липень",
+          "June": "Червень",
+          "Khaled Hosseini": "Халід Госсейні",
+          "Langston Hughes": "Ленгстон Г'юз",
+          "March": "Березень",
+          "Margaret Atwood": "Маргарет Етвуд",
+          "May": "Травень",
+          "Monday": "Понеділок",
+          "N. Scott Momaday": "Наварре Скотт Момадей ",
+          "November": "Листопад",
+          "October": "Жовтень",
+          "Public Domain": "З відкритих джерел",
+          "Public Domain Image": "Зображення з відкритих джерел",
+          "Saturday": "Субота",
+          "September": "Вересень",
+          "Sunday": "Неділя",
+          "Thursday": "Четвер",
+          "Toni Morrison": "Тоні Моррісон",
+          "Tuesday": "Вівторок",
+          "Wednesday": "Середа",
+          "You were born on a": "Ви народилися у",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "автор фото Джон Метью Сміт, CC-BY-SA 2.0",
+          "image by Jose Lara, CC-BY-SA": "автор Хосе Лара, CC-BY-SA",
+          "image by Slowking4, GFDL 1.2": "автор фото Slowking4, GFDL 1.2",
+          "image by Vanwaffle, CC BY-SA 3.0": "автор фото Vanwaffle, CC BY-SA 3.0",
+          "just like": "в один день з",
+          "public domain image": "зображення з відкритих джерел"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Назад",
-          "Friend List": "Список друзів",
-          "Friend Requests": "Запити на дружбу",
           "Find Friends": "Знайти друзів",
           "Friend Finder": "Помічник у пошуку друзів",
+          "Friend List": "Список друзів",
+          "Friend Requests": "Запити на дружбу",
           "Friends": "Друзі"
         },
         "CSD U1 storage friends_2022": {
           "Back": "Назад",
-          "Friend List": "Список друзів",
-          "Friend Requests": "Запити на дружбу",
           "Find Friends": "Знайти друзів",
           "Friend Finder": "Помічник у пошуку друзів",
+          "Friend List": "Список друзів",
+          "Friend Requests": "Запити на дружбу",
           "Friends": "Друзі"
         },
         "CSD U1 storage movies_2021": {
-          "Star Wars": "Зоряні війни",
-          "Yes": "Так",
-          "No": "Ні",
-          "text": "текст",
           "-- Select a movie --": "-- Оберіть фільм --",
-          "Harry Potter": "Гаррі Поттер",
-          "The LEGO Movie": "Lego Фільм",
-          "Tangled": "Заплутана історія",
-          "My Neighbor Totoro": "Мій сусід Тоторо",
-          "Select your favorite movie": "Оберіть свій улюблений фільм",
-          "What Should I Watch?": "Що краще подивитися?",
-          "What are you in the mood for?": "Який жанр вам сьогодні до вподоби?",
+          "Based on your preferences, we think you should watch:": "На основі ваших уподобань, ми вважаємо, що вам варто подивитися:",
           "Choose a Kids Movie: Great for Babysitters!": "Оберіть дитячий фільм: чудово підійде для няні!",
           "Do you want an animated movie?": "Шукаєте мультфільм?",
+          "Harry Potter": "Гаррі Поттер",
+          "My Neighbor Totoro": "Мій сусід Тоторо",
+          "No": "Ні",
+          "Select your favorite movie": "Оберіть свій улюблений фільм",
+          "Star Wars": "Зоряні війни",
+          "Tangled": "Заплутана історія",
+          "The LEGO Movie": "Lego Фільм",
+          "What Should I Watch?": "Що краще подивитися?",
+          "What are you in the mood for?": "Який жанр вам сьогодні до вподоби?",
+          "Yes": "Так",
           "You wanted to watch a:": "Ви хотіли подивитися:",
-          "Based on your preferences, we think you should watch:": "На основі ваших уподобань, ми вважаємо, що вам варто подивитися:"
+          "text": "текст"
         },
         "CSD U1 storage movies_2022": {
-          "Star Wars": "Зоряні війни",
-          "Yes": "Так",
-          "No": "Ні",
-          "text": "текст",
           "-- Select a movie --": "-- Оберіть фільм --",
-          "Harry Potter": "Гаррі Поттер",
-          "The LEGO Movie": "Lego Фільм",
-          "Tangled": "Заплутана історія",
-          "My Neighbor Totoro": "Мій сусід Тоторо",
-          "Select your favorite movie": "Оберіть свій улюблений фільм",
-          "What Should I Watch?": "Що краще подивитися?",
-          "What are you in the mood for?": "Який жанр вам сьогодні до вподоби?",
+          "Based on your preferences, we think you should watch:": "На основі ваших уподобань, ми вважаємо, що вам варто подивитися:",
           "Choose a Kids Movie: Great for Babysitters!": "Оберіть дитячий фільм: чудово підійде для няні!",
           "Do you want an animated movie?": "Шукаєте мультфільм?",
+          "Harry Potter": "Гаррі Поттер",
+          "My Neighbor Totoro": "Мій сусід Тоторо",
+          "No": "Ні",
+          "Select your favorite movie": "Оберіть свій улюблений фільм",
+          "Star Wars": "Зоряні війни",
+          "Tangled": "Заплутана історія",
+          "The LEGO Movie": "Lego Фільм",
+          "What Should I Watch?": "Що краще подивитися?",
+          "What are you in the mood for?": "Який жанр вам сьогодні до вподоби?",
+          "Yes": "Так",
           "You wanted to watch a:": "Ви хотіли подивитися:",
-          "Based on your preferences, we think you should watch:": "На основі ваших уподобань, ми вважаємо, що вам варто подивитися:"
+          "text": "текст"
         },
         "CSD U1 storage outfit_2021": {
-          "white": "білий",
-          "pink": "рожевий",
-          "green": "зелений",
-          "black": "чорний",
-          "purple": "фіолетовий",
-          "Spring": "Весна",
-          "Summer": "Літо",
           "Autumn": "Осінь",
-          "Winter": "Зима",
-          "What season is it?": "Який зараз сезон?",
+          "Clear": "Очистити",
           "Cloudy": "Хмарно",
           "Generate Outfit!": "Сформувати вбрання!",
-          "Outfit Picker": "Помічник з вибору одягу"
+          "Outfit Picker": "Помічник з вибору одягу",
+          "Spring": "Весна",
+          "Summer": "Літо",
+          "What season is it?": "Який зараз сезон?",
+          "Winter": "Зима",
+          "black": "чорний",
+          "green": "зелений",
+          "pink": "рожевий",
+          "purple": "фіолетовий",
+          "white": "білий"
         },
         "CSD U1 storage outfit_2022": {
-          "white": "білий",
-          "pink": "рожевий",
-          "green": "зелений",
-          "black": "чорний",
-          "purple": "фіолетовий",
-          "Spring": "Весна",
-          "Summer": "Літо",
           "Autumn": "Осінь",
-          "Winter": "Зима",
-          "What season is it?": "Який зараз сезон?",
+          "Clear": "Очистити",
           "Cloudy": "Хмарно",
           "Generate Outfit!": "Сформувати вбрання!",
-          "Outfit Picker": "Помічник з вибору одягу"
+          "Outfit Picker": "Помічник з вибору одягу",
+          "Spring": "Весна",
+          "Summer": "Літо",
+          "What season is it?": "Який зараз сезон?",
+          "Winter": "Зима",
+          "black": "чорний",
+          "green": "зелений",
+          "pink": "рожевий",
+          "purple": "фіолетовий",
+          "white": "білий"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -597,6 +857,13 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - ChalA_2222": {
+          "pitch:": "pitch:",
+          "roll:": "roll:"
+        },
+        "CSD U6 - Accelerometer - PA_2222": {
+          "Game Over": "Game Over"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
         },
@@ -606,63 +873,205 @@
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - SB1_2222": {
+          "pitch:": "pitch:",
+          "roll:": "roll:"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Дотримуйтесь інструкцій на цьому рівні, потім підключіть плату та натисніть Запустити",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "Happy": "Щаслива"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Click Me": "Клацни тут",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Outputs - PracD_2222": {
+          "100": "100",
+          "200": "200",
+          "300": "300",
+          "400": "400",
+          "500": "500",
+          "600": "600",
+          "700": "700",
+          "800": "800",
+          "900": "900"
+        },
+        "CSD U6 - Board Outputs - PracE_2222": {
+          "1 Second": "1 секунда",
+          "100 Milliseconds": "100 мілісекунд",
+          "2 Seconds": "2 секунди",
+          "4 Seconds": "4 секунди",
+          "Half a Second": "Пів секунди",
+          "Quarter of a Second": "Чверть секунди"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Outputs - SB4_2222": {
+          "Fish": "Риба"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Connect your board to an LED, then plug it in and press Run": "Підключіть плату до світлодіода, потім підключіть її та натисніть Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
         "CSD U6 - Color LEDs - ChalD_2222": {
-          "North": "Північ",
-          "South": "Південь",
           "East": "Схід",
+          "North": "Північ",
+          "Off": "Off",
+          "South": "Південь",
           "West": "Захід"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Color LEDs - PracC_2222": {
+          "OFF": "OFF",
+          "ON": "ON"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Середній"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "ліворуч",
-          "right": "праворуч",
-          "red": "червоний",
-          "yellow": "жовтий",
           "green": "зелений",
-          "purple": "фіолетовий"
+          "left": "ліворуч",
+          "purple": "фіолетовий",
+          "red": "червоний",
+          "right": "праворуч",
+          "yellow": "жовтий"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "далі",
+          "blink": "blink",
           "fast": "швидко",
-          "slow": "повільно",
+          "high": "high",
+          "long": "довго",
+          "low": "low",
+          "on": "далі",
+          "pulse": "pulse",
           "short": "коротко",
-          "long": "довго"
+          "slow": "повільно"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "Червона",
+          "Blue": "Синя",
           "Green": "Зелена",
-          "Blue": "Синя"
+          "Red": "Червона"
+        },
+        "CSD U6 - Combine Inputs - P_2222": {
+          "Off": "Off"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
+          "LED Control": "LED Control",
           "left": "ліворуч",
           "right": "праворуч"
         },
+        "CSD U6 - Combine Inputs - PracB_2222": {
+          "bright": "bright"
+        },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "жовтий",
-          "green": "зелений",
           "blue": "синій",
-          "orange": "апельсин"
+          "green": "зелений",
+          "orange": "апельсин",
+          "yellow": "жовтий"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
+          "Test": "Test",
           "quiet": "тихо"
         },
+        "CSD U6 - Combine Inputs - SB1_2222": {
+          "Off": "Off",
+          "blink": "blink",
+          "pulse": "pulse"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "коротко",
-          "long": "довго"
+          "high": "high",
+          "long": "довго",
+          "low": "low",
+          "short": "коротко"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 - Functions - P2C_2222": {
+          "Blue": "Синя",
           "Red": "Червона",
-          "Blue": "Синя"
+          "Yellow": "Yellow"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -671,15 +1080,22 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Ім’я"
         },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
+        },
+        "CSD U6 - Music - A_2222": {
+          "Happy": "Щаслива",
+          "Sad": "Sad"
+        },
+        "CSD U6 - Music - ChalC_2222": {
+          "Alarm Clock Settings": "Alarm Clock Settings"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "А",
@@ -690,64 +1106,275 @@
           "F": "Ґ",
           "G": "Д"
         },
+        "CSD U6 - Music - P_2222": {
+          "261": "261",
+          "329": "329",
+          "392": "392",
+          "493": "493",
+          "B4": "B4",
+          "C4": "C4",
+          "E4": "E4",
+          "G4": "G4"
+        },
         "CSD U6 - Music - Piano_2222": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#",
+          "Note:": "Note:"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
+        },
+        "CSD U6 - Music - SB2.2_2022": {
+          "Click the buttons from top to bottom to hear a song!": "Натисніть кнопки зверху вниз, щоб почути пісню!",
+          "Note 1": "Note 1",
+          "Note 2": "Note 2",
+          "Note 3": "Note 3",
+          "Note 4": "Note 4",
+          "Note 5": "Note 5",
+          "Note 6": "Note 6",
+          "Note 7": "Note 7",
+          "Note 8": "Note 8"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "А",
+          "B": "Б",
           "C": "В",
           "D": "Г",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G": "Д"
+        },
+        "CSD U6 - Music - SB2_2222": {
+          "C1": "C1",
+          "C2": "C2",
+          "C3": "C3",
+          "C4": "C4",
+          "C5": "C5",
+          "C6": "C6",
+          "C7": "C7",
+          "C8": "C8"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
+        },
+        "CSD U6 - Music - SB4_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Дотримуйтесь інструкцій на цьому рівні, потім підключіть плату та натисніть Запустити",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "Рахунок",
-          "0": "0"
+          "0": "0",
+          "Score": "Рахунок"
+        },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - PA_2222": {
+          "Off": "Off",
+          "On": "On"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Connect your board to an LED, then plug it in and press Run": "Підключіть плату до світлодіода, потім підключіть її та натисніть Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Ім’я:"
         },
+        "CSD U6 - Screen Inputs - ChalA_2222": {
+          "Excitement Meter": "Excitement Meter"
+        },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "Червона",
+          "Blue": "Синя",
           "Green": "Зелена",
-          "Blue": "Синя"
+          "Red": "Червона"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "Синя",
+          "Green": "Зелена",
           "Name:": "Ім’я:",
           "Red": "Червона",
-          "Green": "Зелена",
-          "Blue": "Синя",
           "Save": "Зберегти"
+        },
+        "CSD U6 - Screen Inputs - PracA_2222": {
+          "image://bathroom.png": "image://bathroom.png",
+          "image://bedroom.png": "image://bedroom.png",
+          "image://bunny.png": "image://bunny.png",
+          "image://cat.png": "image://cat.png",
+          "image://dog.png": "image://dog.png",
+          "image://fireplace.png": "image://fireplace.png",
+          "image://kitchen.png": "image://kitchen.png",
+          "image://pig.png": "image://pig.png"
+        },
+        "CSD U6 - Screen Inputs - PracB_2222": {
+          "Create!": "Create!"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
@@ -760,39 +1387,79 @@
           "white": "білий"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "Update Background": "Update Background",
           "black": "чорний",
           "white": "білий"
+        },
+        "CSD U6 - Screen Inputs - SB4_2222": {
+          "Height:": "Height:",
+          "Update!": "Update!",
+          "Width:": "Width:"
+        },
+        "CSD U6 - Screen Inputs - SB5_2222": {
+          "Height:": "Height:",
+          "Update!": "Update!",
+          "Width:": "Width:"
+        },
+        "CSD U6 - Screen Outputs - ChalA_2222": {
+          "OFF": "OFF"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "?": "?",
+          "Emotion Machine": "Emotion Machine",
+          "Happy": "Щаслива"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "назва"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "Білий",
-          "Red": "Червона",
+          "Blue": "Синя",
           "Green": "Зелена",
-          "Blue": "Синя"
+          "Red": "Червона",
+          "White": "Білий"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "вгору",
           "down": "вниз",
           "left": "ліворуч",
-          "right": "праворуч"
+          "right": "праворуч",
+          "up": "вгору"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "Welcome To My App!": "Welcome To My App!",
           "name": "ім’я"
         },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
+        },
+        "CSD U6 - Sensors - ChalC_2222": {
+          "Volume Meter!": "Volume Meter!"
         },
         "CSD U6 - Sensors - PC_2222": {
           "off": "вимкнено",
           "on": "далі"
         },
         "CSD U6 - Sensors - P_2222": {
+          "high": "high",
+          "low": "low",
           "text": "текст"
         },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "value"
+        },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Оновити"
+          "Update": "Оновити",
+          "value": "value"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "Sound Sensor Reading": "Sound Sensor Reading",
+          "value": "value"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "Sound Sensor Reading": "Sound Sensor Reading",
+          "value": "value"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "value"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Ви зробили це!"
@@ -830,6 +1497,38 @@
         "CSD U6 LED all_2021": {
           "on": "далі"
         },
+        "CSD U6 LED toggle": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
         "CSD U6 Pedometer": {
           "0": "0"
         },
@@ -841,6 +1540,38 @@
         },
         "CSD U6 Pedometer_2021": {
           "0": "0"
+        },
+        "CSD U6 add LED button": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 add LED button_2018": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 add LED button_2019": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 add LED button_2021": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 analog light": {
           "Update": "Оновити"
@@ -855,40 +1586,60 @@
           "Update": "Оновити"
         },
         "CSD U6 array piano": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
         },
         "CSD U6 array piano_2018": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
         },
         "CSD U6 array piano_2019": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
         },
         "CSD U6 array piano_2021": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
         },
         "CSD U6 arrays select predict": {
           "first": "перший"
@@ -903,20 +1654,20 @@
           "first": "перший"
         },
         "CSD U6 change": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 change_2018": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 change_2019": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 change_2021": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Середній"
@@ -930,64 +1681,92 @@
         "CSD U6 colorLeds intensity_2021": {
           "Medium": "Середній"
         },
+        "CSD U6 emoji race demo": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "CSD U6 emoji race demo_2018": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "CSD U6 emoji race demo_2019": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "CSD U6 emoji race demo_2021": {
+          "Emoji Race": "Перегони емодзі"
+        },
+        "CSD U6 emotion machine example": {
+          "?": "?",
+          "Happy": "Щаслива"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "?": "?",
+          "Happy": "Щаслива"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "?": "?",
+          "Happy": "Щаслива"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "?": "?",
+          "Happy": "Щаслива"
+        },
         "CSD U6 frequency": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 frequency_2018": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 frequency_2019": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 frequency_2021": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 get toggle": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 get toggle_2018": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 get toggle_2019": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 get toggle_2021": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "Синя",
+          "Green": "Зелена",
           "Name:": "Ім’я:",
           "Red": "Червона",
-          "Green": "Зелена",
-          "Blue": "Синя",
           "Save": "Зберегти"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "Синя",
+          "Green": "Зелена",
           "Name:": "Ім’я:",
           "Red": "Червона",
-          "Green": "Зелена",
-          "Blue": "Синя",
           "Save": "Зберегти"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "Синя",
+          "Green": "Зелена",
           "Name:": "Ім’я:",
           "Red": "Червона",
-          "Green": "Зелена",
-          "Blue": "Синя",
           "Save": "Зберегти"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "Синя",
+          "Green": "Зелена",
           "Name:": "Ім’я:",
           "Red": "Червона",
-          "Green": "Зелена",
-          "Blue": "Синя",
           "Save": "Зберегти"
         },
         "CSD U6 getProperty input": {
@@ -1003,76 +1782,76 @@
           "Submit": "Надіслати"
         },
         "CSD U6 getters debug": {
-          "slow": "повільно",
           "fast": "швидко",
+          "long": "довго",
           "short": "коротко",
-          "long": "довго"
+          "slow": "повільно"
         },
         "CSD U6 getters debug_2018": {
           "fast": "швидко",
-          "slow": "повільно",
+          "long": "довго",
           "short": "коротко",
-          "long": "довго"
+          "slow": "повільно"
         },
         "CSD U6 getters debug_2019": {
           "fast": "швидко",
-          "slow": "повільно",
+          "long": "довго",
           "short": "коротко",
-          "long": "довго"
+          "slow": "повільно"
         },
         "CSD U6 getters debug_2021": {
           "fast": "швидко",
-          "slow": "повільно",
+          "long": "довго",
           "short": "коротко",
-          "long": "довго"
+          "slow": "повільно"
         },
         "CSD U6 interval": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 interval_2018": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 interval_2019": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 interval_2021": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 light show": {
-          "on": "далі",
-          "off": "вимкнено"
+          "off": "вимкнено",
+          "on": "далі"
         },
         "CSD U6 light show_2018": {
-          "on": "далі",
-          "off": "вимкнено"
+          "off": "вимкнено",
+          "on": "далі"
         },
         "CSD U6 light show_2019": {
-          "on": "далі",
-          "off": "вимкнено"
+          "off": "вимкнено",
+          "on": "далі"
         },
         "CSD U6 light show_2021": {
-          "on": "далі",
-          "off": "вимкнено"
+          "off": "вимкнено",
+          "on": "далі"
         },
         "CSD U6 params create colors": {
-          "Red": "Червона",
-          "Blue": "Синя"
+          "Blue": "Синя",
+          "Red": "Червона"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "Червона",
-          "Blue": "Синя"
+          "Blue": "Синя",
+          "Red": "Червона"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "Червона",
-          "Blue": "Синя"
+          "Blue": "Синя",
+          "Red": "Червона"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "Червона",
-          "Blue": "Синя"
+          "Blue": "Синя",
+          "Red": "Червона"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -1085,6 +1864,42 @@
         },
         "CSD U6 params starchaser intro_2021": {
           "0": "0"
+        },
+        "CSD U6 predict LED button": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Click Me": "Клацни тут",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Click Me": "Клацни тут",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Click Me": "Клацни тут",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Click Me": "Клацни тут",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 sensor experiment embedded": {
           "text": "текст"
@@ -1111,84 +1926,129 @@
           "title": "назва"
         },
         "CSD U6 slider intro": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 slider intro_2018": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 slider intro_2019": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
         },
         "CSD U6 slider intro_2021": {
-          "short": "коротко",
-          "long": "довго"
+          "long": "довго",
+          "short": "коротко"
+        },
+        "CSD U6 test LED": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 test LED_2018": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 test LED_2019": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 test LED_2021": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "Червона",
+          "Blue": "Синя",
           "Green": "Зелена",
-          "Blue": "Синя"
+          "Red": "Червона"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "Червона",
+          "Blue": "Синя",
           "Green": "Зелена",
-          "Blue": "Синя"
+          "Red": "Червона"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "Про нас",
           "About Us": "Про нас",
-          "Cancel": "Скасувати",
-          "Name:": "Ім’я:",
-          "Red": "Червона",
-          "Green": "Зелена",
           "Blue": "Синя",
-          "Yes": "Так",
+          "Cancel": "Скасувати",
+          "Green": "Зелена",
+          "Name:": "Ім’я:",
           "No": "Ні",
-          "Save": "Зберегти"
+          "Red": "Червона",
+          "Save": "Зберегти",
+          "User": "Користувач",
+          "User Profile": "Профіль користувача",
+          "Yes": "Так"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Про нас",
           "About Us": "Про нас",
-          "Cancel": "Скасувати",
-          "Name:": "Ім’я:",
-          "Red": "Червона",
-          "Green": "Зелена",
           "Blue": "Синя",
-          "Yes": "Так",
+          "Cancel": "Скасувати",
+          "Green": "Зелена",
+          "Name:": "Ім’я:",
           "No": "Ні",
-          "Save": "Зберегти"
+          "Red": "Червона",
+          "Save": "Зберегти",
+          "User": "Користувач",
+          "User Profile": "Профіль користувача",
+          "Yes": "Так"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Про нас",
           "About Us": "Про нас",
-          "Cancel": "Скасувати",
-          "Name:": "Ім’я:",
-          "Red": "Червона",
-          "Green": "Зелена",
           "Blue": "Синя",
-          "Yes": "Так",
+          "Cancel": "Скасувати",
+          "Green": "Зелена",
+          "Name:": "Ім’я:",
           "No": "Ні",
-          "Save": "Зберегти"
+          "Red": "Червона",
+          "Save": "Зберегти",
+          "User": "Користувач",
+          "User Profile": "Профіль користувача",
+          "Yes": "Так"
         },
         "CSDU4 Decision App Demo": {
           "About": "Про нас",
+          "About Us": "Про нас",
           "I don't know": "Не знаю",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "Why?": "Чому?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Про нас",
+          "About Us": "Про нас",
           "I don't know": "Не знаю",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "Why?": "Чому?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Про нас",
+          "About Us": "Про нас",
           "I don't know": "Не знаю",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "Why?": "Чому?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Приховати",
@@ -1197,38 +2057,47 @@
         "CSDU4 List App Demo": {
           "About": "Про нас",
           "About Us": "Про нас",
-          "Done": "Готово",
-          "Cancel": "Скасувати"
+          "Cancel": "Скасувати",
+          "Done": "Готово"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Про нас",
           "About Us": "Про нас",
-          "Done": "Готово",
-          "Cancel": "Скасувати"
+          "Cancel": "Скасувати",
+          "Done": "Готово"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Про нас",
           "About Us": "Про нас",
-          "Done": "Готово",
-          "Cancel": "Скасувати"
+          "Cancel": "Скасувати",
+          "Done": "Готово"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Про нас",
+          "About Us": "Про нас",
+          "Correct!": "Правильно!",
+          "Next Question": "Наступне питання",
           "Submit": "Надіслати",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "Why?": "Чому?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Про нас",
+          "About Us": "Про нас",
+          "Correct!": "Правильно!",
+          "Next Question": "Наступне питання",
           "Submit": "Надіслати",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "Why?": "Чому?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Про нас",
+          "About Us": "Про нас",
+          "Correct!": "Правильно!",
+          "Next Question": "Наступне питання",
           "Submit": "Надіслати",
           "When?": "Коли?",
-          "About Us": "Про нас"
+          "Why?": "Чому?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1237,77 +2106,162 @@
         "CSDU6 - UI and Inputs - setScreen": {
           "Back": "Назад"
         },
+        "CSDU6 Circuit Playground Test": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіх!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
         "CSDU6 circuit playground piano": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
         },
         "CSDU6 piano with notes": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "А",
+          "A#": "A#",
+          "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
+          "F#": "F#",
           "G": "Д",
-          "A": "А",
-          "B": "Б"
+          "G#": "G#"
         },
         "allthethings design mode elements": {
           "text": "текст"
@@ -1316,55 +2270,171 @@
           "8": "8"
         },
         "csd u5 recommender sample": {
-          "Start": "Початок"
+          "Start": "Початок",
+          "What is the best superpower?": "Яка найкраща суперсила?",
+          "What is your favorite food?": "Яка ваша улюблена їжа?",
+          "Where should you go on vacation?": "Куди поїхати у відпустку?",
+          "Which animal do you like the best?": "Яка тварина вам подобається найбільше?",
+          "You should go to a big city!": "Вам варто поїхати у велике місто!",
+          "You should go to a national park!": "Вам краще поїхати в національний парк!",
+          "You should go to an amusement park!": "Вам слід піти в парк розваг!",
+          "You should go to the beach!": "Вам слід їхати на пляж!",
+          "invisibility": "невидимість",
+          "super strength": "надміцність",
+          "teleport": "телепортація"
         },
         "csd u5 recommender sample_2019": {
-          "Start": "Початок"
+          "Start": "Початок",
+          "What is the best superpower?": "Яка найкраща суперсила?",
+          "What is your favorite food?": "Яка ваша улюблена їжа?",
+          "Where should you go on vacation?": "Куди поїхати у відпустку?",
+          "Which animal do you like the best?": "Яка тварина вам подобається найбільше?",
+          "You should go to a big city!": "Вам варто поїхати у велике місто!",
+          "You should go to a national park!": "Вам краще поїхати в національний парк!",
+          "You should go to an amusement park!": "Вам слід піти в парк розваг!",
+          "You should go to the beach!": "Вам слід їхати на пляж!",
+          "invisibility": "невидимість",
+          "super strength": "надміцність",
+          "teleport": "телепортація"
         },
         "csd u5 recommender sample_2021": {
-          "Start": "Початок"
+          "Start": "Початок",
+          "What is the best superpower?": "Яка найкраща суперсила?",
+          "What is your favorite food?": "Яка ваша улюблена їжа?",
+          "Where should you go on vacation?": "Куди поїхати у відпустку?",
+          "Which animal do you like the best?": "Яка тварина вам подобається найбільше?",
+          "You should go to a big city!": "Вам варто поїхати у велике місто!",
+          "You should go to a national park!": "Вам краще поїхати в національний парк!",
+          "You should go to an amusement park!": "Вам слід піти в парк розваг!",
+          "You should go to the beach!": "Вам слід їхати на пляж!",
+          "invisibility": "невидимість",
+          "super strength": "надміцність",
+          "teleport": "телепортація"
         },
         "csd u5 recommender sample_2022": {
-          "Start": "Початок"
+          "Start": "Початок",
+          "What is the best superpower?": "Яка найкраща суперсила?",
+          "What is your favorite food?": "Яка ваша улюблена їжа?",
+          "Where should you go on vacation?": "Куди поїхати у відпустку?",
+          "Which animal do you like the best?": "Яка тварина вам подобається найбільше?",
+          "You should go to a big city!": "Вам варто поїхати у велике місто!",
+          "You should go to a national park!": "Вам краще поїхати в національний парк!",
+          "You should go to an amusement park!": "Вам слід піти в парк розваг!",
+          "You should go to the beach!": "Вам слід їхати на пляж!",
+          "invisibility": "невидимість",
+          "super strength": "надміцність",
+          "teleport": "телепортація"
+        },
+        "csd-apps for good-1": {
+          "Briggs Avenue Community Garden": "Громадський сад на Бріггс-авеню",
+          "Do More Durham": "Більше Дарема",
+          "Durham Central Park": "Центральний парк Дарема",
+          "Eno River Association": "Асоціація річки Ено",
+          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Долучайтеся до садівництва в Даремі. Ви можете вирощувати власну їжу та сприяти здоровому способу життя в Даремі. ",
+          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "Любите природу? Ви можете допомогти прибирати наші парки або супроводжувати інших у походах. Якими б не були ваші інтереси, ви завжди знайдете спосіб долучитися. ",
+          "Seeds": "Насіння"
+        },
+        "csd-apps for good-1_2022": {
+          "Briggs Avenue Community Garden": "Громадський сад на Бріггс-авеню",
+          "Do More Durham": "Більше Дарема",
+          "Durham Central Park": "Центральний парк Дарема",
+          "Eno River Association": "Асоціація річки Ено",
+          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Долучайтеся до садівництва в Даремі. Ви можете вирощувати власну їжу та сприяти здоровому способу життя в Даремі. ",
+          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "Любите природу? Ви можете допомогти прибирати наші парки або супроводжувати інших у походах. Якими б не були ваші інтереси, ви завжди знайдете спосіб долучитися. ",
+          "Seeds": "Насіння"
         },
         "csd-apps for good-2": {
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Ще один спосіб заощадити воду - приймати коротший душ. Спробуйте встановити таймер на п'ять хвилин!",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Оберіть правильну пляшку з водою. Потім натисніть кран, щоб наповнити. ",
+          "Click on the timer": "Клацніть по таймеру",
+          "English": "Англійська",
+          "Home": "Головна",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Замість того, щоб купувати одноразові пляшки для води, використовуйте багаторазові. Одноразові пляшки з-під води заповнюють наші звалища і затримують цінну воду.",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "Важливо, щоб ми всі робили свій внесок у те, щоб використовувати менше води. Клацніть на цей застосунок, щоб отримати поради щодо ідей для збереження води. ",
           "Next": "Далі",
-          "Home": "Головна"
+          "Spanish": "Іспанська",
+          "Water Conservation Tips": "Поради щодо економії води"
         },
         "csd-apps for good-2_2022": {
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Ще один спосіб заощадити воду - приймати коротший душ. Спробуйте встановити таймер на п'ять хвилин!",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Оберіть правильну пляшку з водою. Потім натисніть кран, щоб наповнити. ",
+          "Click on the timer": "Клацніть по таймеру",
+          "English": "Англійська",
+          "Home": "Головна",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Замість того, щоб купувати одноразові пляшки для води, використовуйте багаторазові. Одноразові пляшки з-під води заповнюють наші звалища і затримують цінну воду.",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "Важливо, щоб ми всі робили свій внесок у те, щоб використовувати менше води. Клацніть на цей застосунок, щоб отримати поради щодо ідей для збереження води. ",
           "Next": "Далі",
-          "Home": "Головна"
+          "Spanish": "Іспанська",
+          "Water Conservation Tips": "Поради щодо економії води"
         },
         "csd-apps for good-3": {
           "1": "1",
           "2": "2",
           "3": "3",
-          "4": "4"
+          "4": "4",
+          "4-Square = 4 Times the Fun": "Квадрат = в 4 рази веселіше",
+          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "Ви давно хотіли навчитися грати в веселу, соціальну гру \"Квадрат\", але не знали, з чого почати? Цей застосунок для вас! ",
+          "How many players do you need to play 4-Square? Click to find out!": "Скільки гравців потрібно для гри у Квадрат? Клацніть, щоб дізнатися!",
+          "More Info": "Більше інформації",
+          "Start Again": "Почати заново",
+          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Для гри у Квадрат кожен гравець стає біля одного з чотирьох позначених на землі квадратів. Квадрати пронумеровані від 1 до 4, причому один з них є \"верхнім\". Гравець у 1--му квадраті починає гру, відбиваючи м'яч у своєму квадраті, а потім рукою або ногою переводить м'яч в інший квадрат. Після першого відскоку м'яч не повинен знову торкатися початкового квадрата гравця. Якщо м'яч відскочив у квадрат гравця, він повинен відбити м'яч в інший квадрат до того, як м'яч відскочить знову. Вдарити по м'ячу можна лише один раз. Але що робити, якщо м'яч потрапляє у лінію, запитаєте ви. Існує багато різних правил щодо того, що робити, якщо м'яч потрапляє у лінію - ви повинні домовитися з друзями про те, чи є це аутом. Якщо ви влучили м'ячем за лінію або він двічі відскочив у вашому квадраті, ви виходите з гри. Кожен переходить до наступного за висотою квадрата (мета - залишатися в першому квадраті якомога довше). Якщо ви вибули, ви стаєте в кінець черги, а новий гравець займає вільне місце у квадраті 4. "
         },
         "csd-apps for good-3_2022": {
           "1": "1",
           "2": "2",
           "3": "3",
-          "4": "4"
+          "4": "4",
+          "4-Square = 4 Times the Fun": "Квадрат = в 4 рази веселіше",
+          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "Ви давно хотіли навчитися грати в веселу, соціальну гру \"Квадрат\", але не знали, з чого почати? Цей застосунок для вас! ",
+          "How many players do you need to play 4-Square? Click to find out!": "Скільки гравців потрібно для гри у Квадрат? Клацніть, щоб дізнатися!",
+          "More Info": "Більше інформації",
+          "Start Again": "Почати заново",
+          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Для гри у Квадрат кожен гравець стає біля одного з чотирьох позначених на землі квадратів. Квадрати пронумеровані від 1 до 4, причому один з них є \"верхнім\". Гравець у 1--му квадраті починає гру, відбиваючи м'яч у своєму квадраті, а потім рукою або ногою переводить м'яч в інший квадрат. Після першого відскоку м'яч не повинен знову торкатися початкового квадрата гравця. Якщо м'яч відскочив у квадрат гравця, він повинен відбити м'яч в інший квадрат до того, як м'яч відскочить знову. Вдарити по м'ячу можна лише один раз. Але що робити, якщо м'яч потрапляє у лінію, запитаєте ви. Існує багато різних правил щодо того, що робити, якщо м'яч потрапляє у лінію - ви повинні домовитися з друзями про те, чи є це аутом. Якщо ви влучили м'ячем за лінію або він двічі відскочив у вашому квадраті, ви виходите з гри. Кожен переходить до наступного за висотою квадрата (мета - залишатися в першому квадраті якомога довше). Якщо ви вибули, ви стаєте в кінець черги, а новий гравець займає вільне місце у квадраті 4. "
+        },
+        "csd-explore ui-1": {
+          "$15": " 15 доларів",
+          "Breakfast": "Сніданки",
+          "Chinese": "Китайська кухня",
+          "Dollars per person": "Сума у доларах на людину",
+          "Italian": "Італійська кухня",
+          "Type of Restaurant": "Тип ресторану",
+          "Where Should I Eat?": "Де поїсти?"
+        },
+        "csd-explore ui-1_2022": {
+          "$15": " 15 доларів",
+          "Breakfast": "Сніданки",
+          "Chinese": "Китайська кухня",
+          "Dollars per person": "Сума у доларах на людину",
+          "Italian": "Італійська кухня",
+          "Type of Restaurant": "Тип ресторану",
+          "Where Should I Eat?": "Де поїсти?"
         },
         "csd-explore ui-2": {
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Ще один спосіб заощадити воду - приймати коротший душ. Спробуйте встановити таймер на п'ять хвилин!",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Оберіть правильну пляшку з водою. Потім натисніть кран, щоб наповнити. ",
+          "Click on the timer": "Клацніть по таймеру",
+          "English": "Англійська",
+          "Home": "Головна",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Замість того, щоб купувати одноразові пляшки для води, використовуйте багаторазові. Одноразові пляшки з-під води заповнюють наші звалища і затримують цінну воду.",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "Важливо, щоб ми всі робили свій внесок у те, щоб використовувати менше води. Клацніть на цей застосунок, щоб отримати поради щодо ідей для збереження води. ",
           "Next": "Далі",
-          "Home": "Головна"
+          "Spanish": "Іспанська",
+          "Water Conservation Tips": "Поради щодо економії води"
         },
         "csd-explore ui-2_2022": {
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Ще один спосіб заощадити воду - приймати коротший душ. Спробуйте встановити таймер на п'ять хвилин!",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Оберіть правильну пляшку з водою. Потім натисніть кран, щоб наповнити. ",
+          "Click on the timer": "Клацніть по таймеру",
+          "English": "Англійська",
+          "Home": "Головна",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Замість того, щоб купувати одноразові пляшки для води, використовуйте багаторазові. Одноразові пляшки з-під води заповнюють наші звалища і затримують цінну воду.",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "Важливо, щоб ми всі робили свій внесок у те, щоб використовувати менше води. Клацніть на цей застосунок, щоб отримати поради щодо ідей для збереження води. ",
           "Next": "Далі",
-          "Home": "Головна"
+          "Spanish": "Іспанська",
+          "Water Conservation Tips": "Поради щодо економії води"
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1375,18 +2445,35 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "April": "Квітень",
+          "August": "Серпень",
+          "Choose your Birthday!": "Обери свій день народження!",
+          "December": "Грудень",
+          "February": "Лютий",
+          "Find out if it's your birthday!": "Дізнайся, чи сьогодні твій день народження!",
+          "It was already your birthday this year!!": "Цього року у вас вже був День народження!!!",
+          "It's not your birthday yet this year!": "Ваш День народження цього року ще не наступив!",
+          "It's your birthday!": "Сьогодні ваш День народження!",
+          "January": "Січень",
+          "July": "Липень",
+          "June": "Червень",
+          "March": "Березень",
+          "May": "Травень",
+          "November": "Листопад",
+          "October": "Жовтень",
+          "September": "Вересень"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1397,24 +2484,91 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "April": "Квітень",
+          "August": "Серпень",
+          "Choose your Birthday!": "Обери свій день народження!",
+          "December": "Грудень",
+          "February": "Лютий",
+          "Find out if it's your birthday!": "Дізнайся, чи сьогодні твій день народження!",
+          "It was already your birthday this year!!": "Цього року у вас вже був День народження!!!",
+          "It's not your birthday yet this year!": "Ваш День народження цього року ще не наступив!",
+          "It's your birthday!": "Сьогодні ваш День народження!",
+          "January": "Січень",
+          "July": "Липень",
+          "June": "Червень",
+          "March": "Березень",
+          "May": "Травень",
+          "November": "Листопад",
+          "October": "Жовтень",
+          "September": "Вересень"
         },
         "csd-explore ui-4": {
-          "Sorry!": "Вибачте!"
+          "Acadia": "Акадія",
+          "Correct!": "Правильно!",
+          "Death Valley": "Долина Смерті",
+          "Denali": "Деналі",
+          "Grand Canyon": "Великий Каньйон",
+          "Great Smoky Mountains": " Грейт Смокі Маунтінс",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Найбільш відвідуваним є парк \"Грейт-Смокі-Маунтінс\", який щороку відвідують понад 11 мільйонів туристів.",
+          "National Park Quiz": "Вікторина \"Національні парки\"",
+          "Next Question": "Наступне питання",
+          "Olympic": "Олімпійський",
+          "Play Again": "Зіграти ще раз",
+          "Redwood": "Редвуд",
+          "Sequoia": "Секвойя",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Секвойя є домом для найбільшого дерева у світі - Дерева Генерала Шермана.",
+          "Shenandoah": "Шенандоа",
+          "Sorry!": "Вибачте!",
+          "Start!": "Почали!",
+          "What was the first national park?": "Назвіть перший національний парк.",
+          "Which is the largest national park?": "Який найбільший національний парк?",
+          "Which national park gets the most visitors?": "Який національний парк має найбільше відвідувачів?",
+          "Which national park has the largest tree in the world?": "У якому національному парку розташоване найбільше дерево у світі?",
+          "Wrangell-St. Elias": "Врангель-Сент-Еліас",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Врангель-Сент-Еліас - найбільший національний парк, він навіть більший за багато країн!",
+          "Yellowstone": "Йеллоустоун",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Йеллоустоун був першим національним парком, створеним президентом Улісом С. Грантом у 1872 році",
+          "Yosemite": "Йосеміті"
         },
         "csd-explore ui-4_2022": {
-          "Sorry!": "Вибачте!"
+          "Acadia": "Акадія",
+          "Correct!": "Правильно!",
+          "Death Valley": "Долина Смерті",
+          "Denali": "Деналі",
+          "Grand Canyon": "Великий Каньйон",
+          "Great Smoky Mountains": " Грейт Смокі Маунтінс",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Найбільш відвідуваним є парк \"Грейт-Смокі-Маунтінс\", який щороку відвідують понад 11 мільйонів туристів.",
+          "National Park Quiz": "Вікторина \"Національні парки\"",
+          "Next Question": "Наступне питання",
+          "Olympic": "Олімпійський",
+          "Play Again": "Зіграти ще раз",
+          "Redwood": "Редвуд",
+          "Sequoia": "Секвойя",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Секвойя є домом для найбільшого дерева у світі - Дерева Генерала Шермана.",
+          "Shenandoah": "Шенандоа",
+          "Sorry!": "Вибачте!",
+          "Start!": "Почали!",
+          "What was the first national park?": "Назвіть перший національний парк.",
+          "Which is the largest national park?": "Який найбільший національний парк?",
+          "Which national park gets the most visitors?": "Який національний парк має найбільше відвідувачів?",
+          "Which national park has the largest tree in the world?": "У якому національному парку розташоване найбільше дерево у світі?",
+          "Wrangell-St. Elias": "Врангель-Сент-Еліас",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Врангель-Сент-Еліас - найбільший національний парк, він навіть більший за багато країн!",
+          "Yellowstone": "Йеллоустоун",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Йеллоустоун був першим національним парком, створеним президентом Улісом С. Грантом у 1872 році",
+          "Yosemite": "Йосеміті"
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1425,18 +2579,73 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "1998": "1998",
+          "1999": "1999",
+          "2": "2",
+          "20": "20",
+          "2000": "2000",
+          "2001": "2001",
+          "2002": "2002",
+          "2003": "2003",
+          "2004": "2004",
+          "2005": "2005",
+          "2006": "2006",
+          "2007": "2007",
+          "2008": "2008",
+          "2009": "2009",
+          "2010": "2010",
+          "2011": "2011",
+          "2012": "2012",
+          "2013": "2013",
+          "2014": "2014",
+          "2015": "2015",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "Anchee Min": "Анчі Мін",
+          "April": "Квітень",
+          "August": "Серпень",
+          "December": "Грудень",
+          "Enter your Birthday!": "Введіть дату свого дня народження!",
+          "February": "Лютий",
+          "Find a writer!": "Знайти письменника!",
+          "Friday": "П'ятниця",
+          "Gabriel Garcia Marquez": "Габріель Гарсія Маркес",
+          "January": "Січень",
+          "July": "Липень",
+          "June": "Червень",
+          "Khaled Hosseini": "Халід Госсейні",
+          "Langston Hughes": "Ленгстон Г'юз",
+          "March": "Березень",
+          "Margaret Atwood": "Маргарет Етвуд",
+          "May": "Травень",
+          "Monday": "Понеділок",
+          "N. Scott Momaday": "Наварре Скотт Момадей ",
+          "November": "Листопад",
+          "October": "Жовтень",
+          "Public Domain": "З відкритих джерел",
+          "Public Domain Image": "Зображення з відкритих джерел",
+          "Saturday": "Субота",
+          "September": "Вересень",
+          "Sunday": "Неділя",
+          "Thursday": "Четвер",
+          "Toni Morrison": "Тоні Моррісон",
+          "Tuesday": "Вівторок",
+          "Wednesday": "Середа",
+          "You were born on a": "Ви народилися у",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "автор фото Джон Метью Сміт, CC-BY-SA 2.0",
+          "image by Jose Lara, CC-BY-SA": "автор Хосе Лара, CC-BY-SA",
+          "image by Slowking4, GFDL 1.2": "автор фото Slowking4, GFDL 1.2",
+          "image by Vanwaffle, CC BY-SA 3.0": "автор фото Vanwaffle, CC BY-SA 3.0",
+          "just like": "в один день з",
+          "public domain image": "зображення з відкритих джерел"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1447,20 +2656,99 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "1998": "1998",
+          "1999": "1999",
+          "2": "2",
+          "20": "20",
+          "2000": "2000",
+          "2001": "2001",
+          "2002": "2002",
+          "2003": "2003",
+          "2004": "2004",
+          "2005": "2005",
+          "2006": "2006",
+          "2007": "2007",
+          "2008": "2008",
+          "2009": "2009",
+          "2010": "2010",
+          "2011": "2011",
+          "2012": "2012",
+          "2013": "2013",
+          "2014": "2014",
+          "2015": "2015",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "Anchee Min": "Анчі Мін",
+          "April": "Квітень",
+          "August": "Серпень",
+          "December": "Грудень",
+          "Enter your Birthday!": "Введіть дату свого дня народження!",
+          "February": "Лютий",
+          "Find a writer!": "Знайти письменника!",
+          "Friday": "П'ятниця",
+          "Gabriel Garcia Marquez": "Габріель Гарсія Маркес",
+          "January": "Січень",
+          "July": "Липень",
+          "June": "Червень",
+          "Khaled Hosseini": "Халід Госсейні",
+          "Langston Hughes": "Ленгстон Г'юз",
+          "March": "Березень",
+          "Margaret Atwood": "Маргарет Етвуд",
+          "May": "Травень",
+          "Monday": "Понеділок",
+          "N. Scott Momaday": "Наварре Скотт Момадей ",
+          "November": "Листопад",
+          "October": "Жовтень",
+          "Public Domain": "З відкритих джерел",
+          "Public Domain Image": "Зображення з відкритих джерел",
+          "Saturday": "Субота",
+          "September": "Вересень",
+          "Sunday": "Неділя",
+          "Thursday": "Четвер",
+          "Toni Morrison": "Тоні Моррісон",
+          "Tuesday": "Вівторок",
+          "Wednesday": "Середа",
+          "You were born on a": "Ви народилися у",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "автор фото Джон Метью Сміт, CC-BY-SA 2.0",
+          "image by Jose Lara, CC-BY-SA": "автор Хосе Лара, CC-BY-SA",
+          "image by Slowking4, GFDL 1.2": "автор фото Slowking4, GFDL 1.2",
+          "image by Vanwaffle, CC BY-SA 3.0": "автор фото Vanwaffle, CC BY-SA 3.0",
+          "just like": "в один день з",
+          "public domain image": "зображення з відкритих джерел"
         },
         "csd-explore ui-6": {
-          "Next": "Далі"
+          "Learning to Drive": "Вчимося водити автомобіль",
+          "Mad Libs!": "Пропуски!",
+          "Next": "Далі",
+          "Noun": "Іменник",
+          "Play again": "Грати знову",
+          "Plural Noun": "Іменник у множині",
+          "Song": "Пісня",
+          "Verb": "Дієслово"
         },
         "csd-explore ui-6_2022": {
-          "Next": "Далі"
+          "Learning to Drive": "Вчимося водити автомобіль",
+          "Mad Libs!": "Пропуски!",
+          "Next": "Далі",
+          "Noun": "Іменник",
+          "Play again": "Грати знову",
+          "Plural Noun": "Іменник у множині",
+          "Song": "Пісня",
+          "Verb": "Дієслово"
         },
         "ml-L2 supervised - green glass door-2021": {
           "Accepted": "Прийнято",
+          "Green Glass Door": "Зелені скляні двері",
           "Rejected": "Відхилено"
         },
         "ml-L2 supervised - green glass door_2022": {
           "Accepted": "Прийнято",
+          "Green Glass Door": "Зелені скляні двері",
           "Rejected": "Відхилено"
         },
         "ml-L2 unsupervised - 1-2021": {
@@ -1470,12 +2758,16 @@
           "Next": "Далі"
         },
         "ml-customize-raspado-2021": {
-          "yes": "так",
-          "no": "ні"
+          "Predict": "Прогнозування",
+          "Raspado Recommender": "Рекомендатор десерту",
+          "no": "ні",
+          "yes": "так"
         },
         "ml-customize-raspado_2022": {
-          "yes": "так",
-          "no": "ні"
+          "Predict": "Прогнозування",
+          "Raspado Recommender": "Рекомендатор десерту",
+          "no": "ні",
+          "yes": "так"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Продовжити",
@@ -1485,117 +2777,145 @@
           "Continue": "Продовжити",
           "Loading...": "Завантаження..."
         },
+        "ml-intro app lab-book recommender demo-2021": {
+          "Predict": "Прогнозування",
+          "Silly": "Дурненька"
+        },
+        "ml-intro app lab-book recommender demo_2022": {
+          "Predict": "Прогнозування",
+          "Silly": "Дурненька"
+        },
         "ml-model card-medical app v2 2021-2": {
-          "W": "Зх",
           "A": "А",
-          "yes": "так",
+          "W": "Зх",
+          "head": "голова",
           "no": "ні",
-          "head": "голова"
+          "yes": "так"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "Зх",
           "A": "А",
-          "yes": "так",
+          "W": "Зх",
+          "head": "голова",
           "no": "ні",
-          "head": "голова"
+          "yes": "так"
+        },
+        "ml-model cards-book recommender model card": {
+          "Predict": "Прогнозування",
+          "Silly": "Дурненька"
+        },
+        "ml-model cards-book recommender model card_2022": {
+          "Predict": "Прогнозування",
+          "Silly": "Дурненька"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3",
+          "Predict": "Прогнозування"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3",
+          "Predict": "Прогнозування"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3",
+          "Predict": "Прогнозування"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3",
+          "Predict": "Прогнозування"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Back": "Назад"
+          "2": "2",
+          "3": "3",
+          "Back": "Назад",
+          "Predict": "Прогнозування"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Back": "Назад"
+          "2": "2",
+          "3": "3",
+          "Back": "Назад",
+          "Predict": "Прогнозування"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3",
+          "Predict": "Прогнозування"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3",
+          "Predict": "Прогнозування"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Так",
+          "B": "Б",
           "No": "Ні",
-          "B": "Б"
+          "Predict": "Прогнозування",
+          "Yes": "Так"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Так",
+          "B": "Б",
           "No": "Ні",
-          "B": "Б"
+          "Predict": "Прогнозування",
+          "Yes": "Так"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Так",
-          "No": "Ні"
+          "No": "Ні",
+          "Predict": "Прогнозування",
+          "Yes": "Так"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Так",
-          "No": "Ні"
+          "No": "Ні",
+          "Predict": "Прогнозування",
+          "Yes": "Так"
         },
         "ml-models-shoes decision tree-2021": {
+          "Improved Shoe Recommender": "Покращений Рекомендатор взуття",
           "Sports": "Спорт"
         },
         "ml-models-shoes decision tree_2022": {
+          "Improved Shoe Recommender": "Покращений Рекомендатор взуття",
           "Sports": "Спорт"
         },
+        "ml-models-shoes points-2021": {
+          "Ultimate Shoe Recommender": "Остаточний рекомендатор взуття"
+        },
+        "ml-models-shoes points_2022": {
+          "Ultimate Shoe Recommender": "Остаточний рекомендатор взуття"
+        },
+        "ml-models-shoes random-2021": {
+          "Shoe Recommender": "Рекомендатор взуття"
+        },
+        "ml-models-shoes random_2022": {
+          "Shoe Recommender": "Рекомендатор взуття"
+        },
         "ml-use model card-example3A-2021": {
-          "rain": "дощ",
-          "snow": "сніг",
+          "Driver Alert System": "Система оповіщення водія",
+          "Get Started": "Початок роботи",
+          "Predict": "Прогнозування",
           "cloudy": "хмарно",
-          "night": "ніч"
+          "night": "ніч",
+          "rain": "дощ",
+          "snow": "сніг"
         },
         "ml-use model card-example3A_2022": {
-          "rain": "дощ",
-          "snow": "сніг",
+          "Driver Alert System": "Система оповіщення водія",
+          "Get Started": "Початок роботи",
+          "Predict": "Прогнозування",
           "cloudy": "хмарно",
-          "night": "ніч"
-        },
-        "CSD U1 processing countries_2021": {
-          "How Many Countries...": "Скільки країн...",
-          "are bigger than Alaska?": "більші за Аляску?",
-          "have no land borders?": "не мають сухопутних кордонів?",
-          "are decreasing population?": "з населенням, що скорочується?",
-          "are land locked?": "не мають виходу до моря?",
-          "have won the World Cup?": "вигравали Чемпіонат світу?",
-          "have more than a billion people?": "мають населення понад мільярд людей?",
-          "have sent people to space?": "відправляли людей у космос?"
-        },
-        "CSD U1 processing countries_2022": {
-          "How Many Countries...": "Скільки країн...",
-          "are bigger than Alaska?": "більші за Аляску?",
-          "have no land borders?": "не мають сухопутних кордонів?",
-          "are decreasing population?": "з населенням, що скорочується?",
-          "are land locked?": "не мають виходу до моря?",
-          "have won the World Cup?": "вигравали Чемпіонат світу?",
-          "have more than a billion people?": "мають населення понад мільярд людей?",
-          "have sent people to space?": "відправляли людей у космос?"
+          "night": "ніч",
+          "rain": "дощ",
+          "snow": "сніг"
         }
       }
     }

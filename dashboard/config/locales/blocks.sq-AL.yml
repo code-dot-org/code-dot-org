@@ -5,21 +5,17 @@ sq:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': mesatar
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': mesatar
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
+          GROUP:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
           MOVE1:
             MOVES.Rest: Asnjë
           MOVE2:
@@ -30,6 +26,10 @@ sq:
             '"seconds"': sekondat
       Dancelab_changeMoveEachLR:
         options:
+          GROUP:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
           MOVE:
             MOVES.Rest: Asnjë
       Dancelab_changeMoveLR:
@@ -39,15 +39,23 @@ sq:
       Dancelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': madhësia
             '"height"': gjatësia
+            '"scale"': madhësia
       Dancelab_changePropEachBy:
         options:
+          GROUP:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
           PROPERTY:
-            '"scale"': madhësia
             '"height"': gjatësia
+            '"scale"': madhësia
       Dancelab_doMoveEachLR:
         options:
+          GROUP:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
           MOVE:
             MOVES.Rest: Asnjë
       Dancelab_doMoveLR:
@@ -61,8 +69,8 @@ sq:
       Dancelab_getProp:
         options:
           PROPERTY:
-            '"scale"': madhësia
             '"height"': gjatësia
+            '"scale"': madhësia
       Dancelab_getTime:
         options:
           UNIT:
@@ -83,6 +91,10 @@ sq:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zakonshëm
       Dancelab_jumpToEach:
         options:
+          GROUP:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
           LOCATION:
             "{x: 100, y: 200}": majtas
             "{x: 300, y: 200}": djathtas
@@ -91,16 +103,27 @@ sq:
         options:
           FORMAT:
             '"diamond"': diamant
-            '"row"': klasë
+            '"grid"': rrjet
             '"random"': zakonshëm
+            '"row"': klasë
+            '"spiral"': spirale
+          GROUP:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
             '"ALIEN"': alien
+            '"BEAR"': ariu
             '"CAT"': mace
             '"DOG"': qen
             '"DUCK"': rosë
+            '"FROG"': bretkocë
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': pineapple
             '"ROBOT"': Roboti
+            '"SHARK"': peshkaqen
             '"UNICORN"': njëbrirësh
           LOCATION:
             "{x: 100, y: 200}": majtas
@@ -110,10 +133,15 @@ sq:
         options:
           COSTUME:
             '"ALIEN"': alien
+            '"BEAR"': ariu
             '"CAT"': mace
             '"DOG"': qen
             '"DUCK"': rosë
+            '"FROG"': bretkocë
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': pineapple
             '"ROBOT"': Roboti
+            '"SHARK"': peshkaqen
             '"UNICORN"': njëbrirësh
           LOCATION:
             "{x: 100, y: 200}": majtas
@@ -121,50 +149,23 @@ sq:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zakonshëm
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
+          COSTUME:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
           LAYOUT:
             '"diamond"': diamant
-            '"row"': klasë
+            '"grid"': rrjet
             '"random"': zakonshëm
+            '"row"': klasë
+            '"spiral"': spirale
+          N:
+            '15': '15'
+            '17': '17'
+            '3': '3'
+            '5': '5'
+            '6': '6'
+            '8': '8'
       Dancelab_randomColor:
         text: ngjyrë e rastësishme
       Dancelab_setBackgroundEffect:
@@ -175,6 +176,12 @@ sq:
         options:
           EFFECT:
             '"none"': Asnjë
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -186,81 +193,414 @@ sq:
       Dancelab_setProp:
         options:
           PROPERTY:
-            '"scale"': madhësia
             '"height"': gjatësia
+            '"scale"': madhësia
       Dancelab_setPropEach:
         options:
+          GROUP:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
           PROPERTY:
-            '"scale"': madhësia
             '"height"': gjatësia
+            '"scale"': madhësia
       Dancelab_setPropRandom:
         options:
           PROPERTY:
-            '"scale"': madhësia
             '"height"': gjatësia
+            '"scale"': madhësia
       Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
           PROPERTY:
-            '"scale"': madhësia
             '"height"': gjatësia
+            '"scale"': madhësia
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
       Dancelab_setVisible:
         options:
           VISIBILITY:
             'true': e dukshme
       Dancelab_setVisibleEach:
         options:
+          THIS:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
           VISIBILITY:
             'true': e dukshme
       Dancelab_startMapping:
         options:
           PROPERTY:
-            '"scale"': madhësia
             '"height"': gjatësia
+            '"scale"': madhësia
       Dancelab_startMappingEach:
         options:
+          GROUP:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
           PROPERTY:
-            '"scale"': madhësia
             '"height"': gjatësia
+            '"scale"': madhësia
       Dancelab_stopMapping:
         options:
           PROPERTY:
-            '"scale"': madhësia
             '"height"': gjatësia
+            '"scale"': madhësia
       Dancelab_stopMappingEach:
         options:
+          GROUP:
+            '"ALIEN"': alienët
+            '"MOOSE"': Moose
+            '"ROBOT"': robotët
           PROPERTY:
-            '"scale"': madhësia
             '"height"': gjatësia
+            '"scale"': madhësia
       Dancelab_translateStrings:
         options:
           STRING:
-            '"diamond"': diamant
-            '"x"': x
             '"3"': '3'
             '"5"': '5'
             '"6"': '6'
             '"8"': '8'
+            '"diamond"': diamant
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
-            '"up"': lart
-            '"left"': majtas
-            '"down"': poshtë
-            '"right"': djathtas
-            '"space"': hapësirë
-            '"enter"': hyr
-            '"f"': f
-            '"g"': g
-            '"q"': q
-            '"x"': x
             '"3"': '3'
             '"5"': '5'
             '"6"': '6'
             '"8"': '8'
+            '"down"': poshtë
+            '"enter"': hyr
+            '"f"': f
+            '"g"': g
+            '"left"': majtas
+            '"q"': q
+            '"right"': djathtas
+            '"space"': hapësirë
+            '"up"': lart
+            '"x"': x
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
             '"hearts"': zemrat
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"x"': x pozicioni
+            '"y"': Pozicioni im
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": majtas
+            "{x: 300, y: 200}": djathtas
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"x"': x pozicioni
+            '"y"': Pozicioni im
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"x"': x pozicioni
+            '"y"': Pozicioni im
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": majtas
+            "{x: 300, y: 200}": djathtas
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"x"': x pozicioni
+            '"y"': Pozicioni im
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"x"': x pozicioni
+            '"y"': Pozicioni im
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Asnjë
+      Mikelab_randomColor:
+        text: ngjyrë e rastësishme
+      Mikelab_repeatUntilComplete:
+        text: përsërit përgjithmonë
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': qytet
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': i
+              nëndheshëm
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': fazë
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': livadh
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"x"': x pozicioni
+            '"y"': Pozicioni im
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"left"': majtas
+            '"right"': djathtas
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': poshte
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": majtas
+            "{x: 300, y: 200}": djathtas
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"a"': A
+            '"d"': D
+            '"down"': shigjetë drejtuar poshtë
+            '"left"': shigjetë drejtuar majtas
+            '"right"': shigjetë drejtuar djathtas
+            '"s"': J
+            '"up"': shigjetë drejtuar lart
+            '"w"': P
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"a"': A
+            '"d"': D
+            '"down"': shigjetë drejtuar poshtë
+            '"left"': shigjetë drejtuar majtas
+            '"right"': shigjetë drejtuar djathtas
+            '"s"': J
+            '"up"': shigjetë drejtuar lart
+            '"w"': P
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"no"': jo
+            '"yes"': po
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"down"': shigjetë drejtuar poshtë
+            '"left"': shigjetë drejtuar majtas
+            '"right"': shigjetë drejtuar djathtas
+            '"up"': shigjetë drejtuar lart
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"brick"': tullë
+            '"fire"': zjarr
+            '"flowers"': lule
+            '"hearts"': zemrat
+            '"leaves"': lë
+            '"rainbow"': ylber
+            '"stars"': yjet
+            '"waves"': valët
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': ia plas
+            '"spiral"': spirale
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_background/ocean_waves.mp3"': oqean
+            '"sound://category_background/rainforest_ambient_sound.mp3"': rainforest
+            '"sound://category_background/wavering_wind.mp3"': i përgjumur
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': pyll
+            '"sound://category_nature/steady_campfire_loop.mp3"': zjarr kampi
+            '"sound://category_nature/summer_night_loop.mp3"': natë
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': i
+              lehtë
+            '"sound://category_bell/long_bell_notification.mp3"': zile
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hidhu
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': flluskë
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': " re"
+            '"hearts"': zemrat
+          PALETTE:
+            '"ocean"': oqean
+            '"rainbow"': ylber
+            '"spring"': pranverë
+            '"winter"': dimër
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': zemrat
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': not
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': not
+      Poetry_whenLineShows:
+        options:
+          N:
+            '15': '15'
+            '3': '3'
+            '5': '5'
+            '6': '6'
+            '8': '8'
+      RyanLab_moveForward:
+        text: lëviz përpara
+      RyanLab_turnLeft:
+        text: kthehu majtas
+      RyanLab_turnRight:
+        text: kthehu djathtas
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": ngjyra
+      aalab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': rrjet
+            '"random"': zakonshëm
+            '"row"': klasë
+      binary_move:
+        options:
+          DIR:
+            '"down"': poshtë
+            '"left"': majtas
+            '"right"': djathtas
+            '"up"': lart
+      binary_whenKey:
+        options:
+          KEY:
+            '"down"': poshtë
+            '"left"': majtas
+            '"right"': djathtas
+            '"space"': hapësirë
+            '"up"': lart
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": përpara
+            "'left'": në të majtë
+            "'right'": në të djathtë
+        text: |-
+          nëse shtegu {DIR}
+          {STATEMENT}
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'blueCoralBlock'": korali blu
+            "'planksOak'": dru lisi
+            "'redCoralBlock'": korali i kuq
+            "'sand'": rërë
+            "'seaLantern'": fari i detit
+            "'wool_blue'": ujë i thellë
+        text: |-
+          nëse je ngritur {TYPE}
+          {STATEMENT}
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'darkPrismarine'": primarine e errët
+            "'sand'": rërë
+            "'seaLantern'": fari i detit
+        text: |-
+          nëse je ngritur {TYPE}
+          {STATEMENT}
+      craft_moveForward:
+        text: lëviz përpara
+      craft_placeBlock:
+        options:
+          blockType:
+            '"blackConcrete"': beton i zi
+            '"blueCoralBlock"': blloku i koraleve blu
+            '"blueDeadCoralBlock"': blloku i vdekur i koraleve blu
+            '"blueIce"': akull blu
+            '"chiseledStoneBricks"': tulla guri zbukuruese
+            '"crackedStoneBricks"': tulla guri të thyera
+            '"darkPrismarine"': primarine e errët
+            '"kelp"': leshterik
+            '"magentaCoralBlock"': blloku i koraleve të purpurta
+            '"magentaDeadCoralBlock"': blloku i vdekur i koraleve të purpurta
+            '"mossyStoneBricks"': tulla guri me myshk
+            '"packedIce"': akull i paketuar
+            '"pinkCoralBlock"': blloku i koraleve të kuqe
+            '"pinkDeadCoralBlock"': blloku i vdekur i koraleve rozë
+            '"polishedGranite"': granit i lëmuar
+            '"prismarine"': prismarine
+            '"readDeadCoralBlock"': blloku i vdekur i koraleve të kuqe
+            '"redCoralBlock"': blloku i koraleve të kuqe
+            '"seaGrass"': bar deti
+            '"seaLantern"': fari i detit
+            '"stoneBricks"': tulla guri
+            '"strippedDarkOak"': lis i i errët i zhveshur
+            '"strippedOak"': lis i zhveshur
+            '"yellowCoralBlock"': blloku i koraleve të verdha
+            '"yellowDeadCoralBlock"': blloku i vdekur i koralve të verdha
+        text: vendos {blockType}
+      craft_placePrismarine:
+        text: vendos prismarinen
+      craft_placeTorch:
+        text: vendos pishtarin
+      craft_repeatUntilConduit:
+        text: |-
+          përsërite deri sa tubi të mbarojë
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          përsërit deri te pikësynimi
+          {STATEMENT}
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"cod"': merluc
+            '"dolphin"': delfin
+            '"salmon"': salmon
+            '"seaTurtle"': breshkë deti
+            '"squid"': kallamar
+            '"tropicalFish"': peshk tropikal
+        text: vezë peshku {ENTITY}
+      craft_turn:
+        options:
+          DIR:
+            left: majtas ↺
+            right: djathtas ↻
+        text: kthehu {DIR}
+      ecosystems_int10:
+        options:
+          VALUE:
+            '3': '3'
+            '5': '5'
+            '6': '6'
+            '8': '8'
       gamelab_addTarget:
         options:
           OPT:
@@ -274,6 +614,8 @@ sq:
           PROPERTY:
             '"scale"': madhësia
             '"speed"': shpejtësia
+            '"x"': x pozicioni
+            '"y"': Pozicioni im
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -288,6 +630,8 @@ sq:
           PROPERTY:
             '"scale"': madhësia
             '"speed"': shpejtësia
+            '"x"': x pozicioni
+            '"y"': Pozicioni im
       gamelab_getTime:
         options:
           UNIT:
@@ -295,27 +639,21 @@ sq:
       gamelab_int10:
         options:
           VALUE:
-            '1': '1'
-            '2': '2'
             '3': '3'
-            '4': '4'
             '5': '5'
             '6': '6'
-            '7': '7'
             '8': '8'
-            '9': '9'
-            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
-            '"up"': lart
             '"down"': poshtë
-            '"left"': majtas
-            '"right"': djathtas
-            '"space"': hapësirë
             '"f"': f
             '"g"': g
+            '"left"': majtas
             '"q"': q
+            '"right"': djathtas
+            '"space"': hapësirë
+            '"up"': lart
             '"x"': x
       gamelab_keyPressed:
         options:
@@ -323,57 +661,74 @@ sq:
             '"when"': kur
             '"while"': ndërsa
           KEY:
-            '"up"': lart
             '"down"': poshtë
-            '"left"': majtas
-            '"right"': djathtas
-            '"space"': hapësirë
             '"f"': f
             '"g"': g
+            '"left"': majtas
             '"q"': q
+            '"right"': djathtas
+            '"space"': hapësirë
+            '"up"': lart
             '"x"': x
       gamelab_layoutSprites:
         options:
           FORMAT:
+            '"grid"': rrjet
             '"row"': klasë
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': ia plas
+            '"spiral"': spirale
       gamelab_makeNewSpriteGroup:
         options:
           FORMAT:
+            '"grid"': rrjet
             '"row"': klasë
       gamelab_makeProjectile:
         options:
           DIRECTION:
             '0': djathtas
-            '90': poshtë
             '180': majtas
             '270': lart
+            '90': poshtë
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': mesatar
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
-            '"right"': djathtas
             '"left"': majtas
+            '"right"': djathtas
       gamelab_playSoundOptions:
         options:
           SOUND:
-            "'sound://category_collect/clicky_crunch.mp3'": përtyp
+            "'sound://category_animals/bear.mp3'": ariu
             "'sound://category_animals/cat.mp3'": mace
-            "'sound://category_animals/cow.mp3'": lopë
-            "'sound://category_animals/pig.mp3'": derr
-            "'sound://category_animals/sheep.mp3'": dele
+            "'sound://category_animals/chick.mp3'": zogth
             "'sound://category_animals/chicken.mp3'": pulë
-            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/cow.mp3'": lopë
             "'sound://category_animals/dog.mp3'": qen
+            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/elephant.mp3'": elefant
+            "'sound://category_animals/goat.mp3'": dhi
+            "'sound://category_animals/pig.mp3'": derr
+            "'sound://category_animals/rooster.mp3'": gjel
+            "'sound://category_animals/sheep.mp3'": dele
+            "'sound://category_animals/tiger.mp3'": tigër
+            "'sound://category_app/app_button_1.mp3'": buton
+            "'sound://category_collect/clicky_crunch.mp3'": përtyp
             "'sound://category_digital/jump_7.mp3'": hidhu
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harpë
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": flluskë
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": zgjedh
       gamelab_playSoundOptionsSoccer:
         options:
           SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": brirë ajri
             "'sound://category_sports/Crowd_Applause_SFX.mp3'": duartrokit
+            "'sound://category_sports/One_Whistle_SFX.mp3'": bilbil
       gamelab_randColor:
         text: ngjyrë e rastësishme
       gamelab_randomColor:
@@ -383,10 +738,19 @@ sq:
       gamelab_setBackgroundImage:
         options:
           IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': shpellë
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': qytet
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': i
+              nëndheshëm
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': fazë
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': livadh
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': gjykatë
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': shpellë
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': shkretëtirë
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': rrjet
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ylber
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': yjet
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaktikë
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': nën
               ujë
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': dimër
@@ -394,29 +758,25 @@ sq:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': mesatar
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': madhësia
             '"speed"': shpejtësia
+            '"x"': x pozicioni
+            '"y"': Pozicioni im
       gamelab_setProp_dropdown:
         options:
           PROPERTY:
             '"scale"': madhësia
           SIZE:
-            '25': extra small
-            '50': small
             '75': mesatar
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
-            '"scale"': madhësia
             '"height"': gjatësia
+            '"scale"': madhësia
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -425,283 +785,24 @@ sq:
       gamelab_turn:
         options:
           DIRECTION:
-            '"right"': djathtas
             '"left"': majtas
+            '"right"': djathtas
       gamelab_whenKey:
         options:
           KEY:
-            '"up"': lart
             '"down"': poshtë
             '"left"': majtas
             '"right"': djathtas
             '"space"': hapësirë
+            '"up"': lart
       gamelab_whileKey:
         options:
           KEY:
-            '"up"': lart
             '"down"': poshtë
             '"left"': majtas
             '"right"': djathtas
             '"space"': hapësirë
-      Mikelab_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': madhësia
-      Mikelab_createNewSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": majtas
-            "{x: 300, y: 200}": djathtas
-      Mikelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': madhësia
-      Mikelab_groupChangePropBy:
-        options:
-          PROPERTY:
-            '"scale"': madhësia
-      Mikelab_groupCreateNewSprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": majtas
-            "{x: 300, y: 200}": djathtas
-      Mikelab_groupGetProp:
-        options:
-          PROPERTY:
-            '"scale"': madhësia
-      Mikelab_groupSetProp:
-        options:
-          PROPERTY:
-            '"scale"': madhësia
-      Mikelab_ifDanceIs:
-        options:
-          DANCE:
-            MOVES.Rest: Asnjë
-      Mikelab_randomColor:
-        text: ngjyrë e rastësishme
-      Mikelab_repeatUntilComplete:
-        text: përsërit përgjithmonë
-      Mikelab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': qytet
-      Mikelab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': madhësia
-      Mikelab_showScoreboard:
-        options:
-          CORNER:
-            '"right"': djathtas
-            '"left"': majtas
-      Mikelab_showText:
-        options:
-          PREPOSITION:
-            '"below"': poshte
-      Mikelab_sprite:
-        options:
-          LOCATION:
-            "{x: 100, y: 200}": majtas
-            "{x: 300, y: 200}": djathtas
-      Mikelab_whenKeyPressed:
-        options:
-          KEY:
-            '"up"': shigjetë drejtuar lart
-            '"down"': shigjetë drejtuar poshtë
-            '"left"': shigjetë drejtuar majtas
-            '"right"': shigjetë drejtuar djathtas
-            '"w"': P
-            '"a"': A
-            '"s"': J
-            '"d"': D
-      Mikelab_whenKeyReleased:
-        options:
-          KEY:
-            '"up"': shigjetë drejtuar lart
-            '"down"': shigjetë drejtuar poshtë
-            '"left"': shigjetë drejtuar majtas
-            '"right"': shigjetë drejtuar djathtas
-            '"w"': P
-            '"a"': A
-            '"s"': J
-            '"d"': D
-      Mikelab_whenYesNoClicked:
-        options:
-          KEY:
-            '"yes"': po
-            '"no"': jo
-      Mikelab_whileKeyPressed:
-        options:
-          KEY:
-            '"up"': shigjetë drejtuar lart
-            '"down"': shigjetë drejtuar poshtë
-            '"left"': shigjetë drejtuar majtas
-            '"right"': shigjetë drejtuar djathtas
-      Poetry_addFrame:
-        options:
-          BRUSH:
-            '"brick"': tullë
-            '"hearts"': zemrat
-            '"rainbow"': ylber
-      Poetry_playMusic:
-        options:
-          SOUND:
-            '"sound://category_nature/summer_night_loop.mp3"': natë
-      Poetry_playSound:
-        options:
-          SOUND:
-            '"sound://category_bell/long_bell_notification.mp3"': zile
-            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hidhu
-      Poetry_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"clouds"': " re"
-            '"hearts"': zemrat
-          PALETTE:
-            '"rainbow"': ylber
-            '"winter"': dimër
-      Poetry_setForegroundEffect:
-        options:
-          EFFECT:
-            '"hearts"': zemrat
-      Poetry_whenLineShows:
-        options:
-          N:
-            '0': "???"
-            '1': '1'
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-      RyanLab_moveForward:
-        text: lëviz përpara
-      RyanLab_turnLeft:
-        text: kthehu majtas
-      RyanLab_turnRight:
-        text: kthehu djathtas
-      Vector_where:
-        options:
-          PROPERTY:
-            "'shapeColor'": ngjyra
-      aalab_layoutSprites:
-        options:
-          FORMAT:
-            '"row"': klasë
-            '"random"': zakonshëm
-      binary_move:
-        options:
-          DIR:
             '"up"': lart
-            '"down"': poshtë
-            '"left"': majtas
-            '"right"': djathtas
-      binary_whenKey:
-        options:
-          KEY:
-            '"up"': lart
-            '"down"': poshtë
-            '"left"': majtas
-            '"right"': djathtas
-            '"space"': hapësirë
-      craft_ifPath:
-        text: |-
-          nëse shtegu {DIR}
-          {STATEMENT}
-        options:
-          DIR:
-            "'ahead'": përpara
-            "'right'": në të djathtë
-            "'left'": në të majtë
-      craft_ifStandingOn:
-        text: |-
-          nëse je ngritur {TYPE}
-          {STATEMENT}
-        options:
-          TYPE:
-            "'blueCoralBlock'": korali blu
-            "'redCoralBlock'": korali i kuq
-            "'sand'": rërë
-            "'wool_blue'": ujë i thellë
-            "'planksOak'": dru lisi
-            "'seaLantern'": fari i detit
-      craft_ifStandingOnLimit:
-        text: |-
-          nëse je ngritur {TYPE}
-          {STATEMENT}
-        options:
-          TYPE:
-            "'sand'": rërë
-            "'darkPrismarine'": primarine e errët
-            "'seaLantern'": fari i detit
-      craft_moveForward:
-        text: lëviz përpara
-      craft_placeBlock:
-        text: vendos {blockType}
-        options:
-          blockType:
-            '"strippedOak"': lis i zhveshur
-            '"strippedDarkOak"': lis i i errët i zhveshur
-            '"stoneBricks"': tulla guri
-            '"mossyStoneBricks"': tulla guri me myshk
-            '"crackedStoneBricks"': tulla guri të thyera
-            '"chiseledStoneBricks"': tulla guri zbukuruese
-            '"blueCoralBlock"': blloku i koraleve blu
-            '"pinkCoralBlock"': blloku i koraleve të kuqe
-            '"magentaCoralBlock"': blloku i koraleve të purpurta
-            '"redCoralBlock"': blloku i koraleve të kuqe
-            '"yellowCoralBlock"': blloku i koraleve të verdha
-            '"blueDeadCoralBlock"': blloku i vdekur i koraleve blu
-            '"pinkDeadCoralBlock"': blloku i vdekur i koraleve rozë
-            '"magentaDeadCoralBlock"': blloku i vdekur i koraleve të purpurta
-            '"readDeadCoralBlock"': blloku i vdekur i koraleve të kuqe
-            '"yellowDeadCoralBlock"': blloku i vdekur i koralve të verdha
-            '"prismarine"': prismarine
-            '"darkPrismarine"': primarine e errët
-            '"seaLantern"': fari i detit
-            '"packedIce"': akull i paketuar
-            '"blueIce"': akull blu
-            '"blackConcrete"': beton i zi
-            '"seaGrass"': bar deti
-            '"kelp"': leshterik
-            '"polishedGranite"': granit i lëmuar
-      craft_placePrismarine:
-        text: vendos prismarinen
-      craft_placeTorch:
-        text: vendos pishtarin
-      craft_repeatUntilConduit:
-        text: |-
-          përsërite deri sa tubi të mbarojë
-          {STATEMENT}
-      craft_repeatUntilGoal:
-        text: |-
-          përsërit deri te pikësynimi
-          {STATEMENT}
-      craft_spawnEntity:
-        text: vezë peshku {ENTITY}
-        options:
-          ENTITY:
-            '"cod"': merluc
-            '"dolphin"': delfin
-            '"salmon"': salmon
-            '"seaTurtle"': breshkë deti
-            '"squid"': kallamar
-            '"tropicalFish"': peshk tropikal
-      craft_turn:
-        text: kthehu {DIR}
-        options:
-          DIR:
-            right: djathtas ↻
-            left: majtas ↺
       storylab_setForegroundEffect2:
         options:
           EFFECT:

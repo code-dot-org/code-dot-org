@@ -1,6 +1,6 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import React from 'react';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '@cdo/apps/util/color';
 

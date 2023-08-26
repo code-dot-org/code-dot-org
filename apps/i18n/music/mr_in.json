@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "साऊंड प्ले करा",
   "blockly_blockPlaySoundAtMeasureTooltip": "साऊंड प्ले करा",
+  "blockly_blockPlaySoundTooltip": "साऊंड प्ले करा",
   "blockly_blockRepeatTooltip": "पुन्हा करा",
   "blockly_blockRestTooltip": "विश्रांती",
   "blockly_blockWhenRun": "रन केल्यावर",
@@ -10,9 +10,12 @@
   "blockly_toolboxCategoryEvents": "ईव्हेंट्स",
   "blockly_toolboxCategoryLogic": "लॉजिक",
   "blockly_toolboxCategoryMath": "गणित",
-  "blockly_toolboxCategoryPlay": "प्ले ",
+  "blockly_toolboxCategoryPlay": "ध्वनी",
   "blockly_toolboxCategoryVariables": "व्हेरीएबल्स",
+  "continue": "सुरू ठेवा",
   "feedback": "अभिप्राय",
+  "panelHeaderInstructions": "सूचना",
+  "panelHeaderWorkspace": "वर्कस्पेस: ",
   "share": "वाटा",
   "startOver": "पुन्हा सुरू करा",
   "upload": "अपलोड करा"

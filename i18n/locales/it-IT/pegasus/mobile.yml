@@ -529,6 +529,7 @@
   video_title_chris_bosh: "Chris Bosh a proposito dell'Informatica"
   video_title_my_name_is_aracely: "Mi chiamo Aracely"
   video_title_change_face_of_cs: "Cambia la faccia di Computer Science"
+  video_title_latam_hoc: "Ciò Che Manca Nelle Nostre Scuole"
   video_1min: "1 min"
   video_2min: "2 min"
   video_3min: "3 min"
@@ -1522,6 +1523,7 @@
   header_stats: "Statistiche"
   header_help_us: "Aiutaci"
   header_about: "Informazioni"
+  header_incubator: "Incubatrice"
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support'
   header_report_bug: "Segnala un errore"
@@ -1636,7 +1638,7 @@
   hoc2018_mc_download_adventurer: "Scarica la versione da usare <i>in locale</i> di \"Un'avventura con Minecraft\"."
   hoc2018_mc_educators: "Per gli insegnanti"
   hoc2018_mc_educators_box1_title: "Programma con Minicraft"
-  hoc2018_mc_educators_box1_desc: 'Su Minecraft Education Edition si trovano risorse per la programmazione in Minecraft.'
+  hoc2018_mc_educators_box1_desc: "Su Minecraft Education Edition si trovano risorse per la programmazione in Minecraft."
   hoc2018_mc_educators_box1_button: "Inizia"
   hoc2018_mc_educators_box2_title: "Scarica la Guida per l'insegnante"
   hoc2018_mc_educators_box2_desc: "Questi strumenti ti aiuteranno ad organizzare un'Ora del Codice per coinvolgere i tuoi studenti sui temi dell'informatica."
@@ -1742,7 +1744,7 @@
   hoc2018_mc_with_microsoft: "In collaborazione con"
   hoc2018_mc_thank_microsoft: "Ringraziamo Microsoft per il supporto che dà alla nostra missione per garantire che ogni bambino abbia l'opportunità di imparare l'informatica e le competenze per avere successo nel XXI secolo."
   hoc2019_mc_mee_title: "IA di Minecraft per Sempre"
-  hoc2019_mc_mee_description1: 'Il nuovo tutorial dell''Ora del Codice di Minecraft è ora disponibile in Minecraft: Education Edition per Windows, Mac e iPad. Impara i fondamenti della programmazione e esplora l''IA con i tuoi studenti!'
+  hoc2019_mc_mee_description1: "Il nuovo tutorial dell'Ora del Codice di Minecraft è ora disponibile in Minecraft: Education Edition per Windows, Mac e iPad. Impara i fondamenti della programmazione e esplora l'IA con i tuoi studenti!"
   hoc2019_mc_mee_description2: "Accedi alle risorse gratuite tra cui un piano di lezioni, video, curriculum di informatica e corsi di formazione per insegnanti."
   hoc2019_mc_more_coding_resources: "Altre Risorse di Programmazione"
   hoc2019_dance_previous_versions: "Cerchi una versione precedente di Dance Party?  \nClicca qui per iniziare la [Parte 1](%{dance_2018_link}) e la [Parte 2](%{dance_extras_2018_link}) dal 2018."
@@ -1755,18 +1757,18 @@
   page_not_available_description: "Ci dispiace, la pagina che stai cercando non è più disponibile a questo indirizzo. Se ne hai ancora bisogno, invia un'e-mail a <a href='mailto:support@code.org'>support@code.org</a>."
   page_not_available_button: "Ritorna alla homepage"
   hoc2020_mc_available_code_org: "Disponibile su Code.org"
-  hoc2020_mc_available_mee: 'Disponibile in Minecraft: Education Edition'
+  hoc2020_mc_available_mee: "Disponibile in Minecraft: Education Edition"
   hoc2020_mc_mee_title: "Minecraft Racconto di Due Villaggi"
-  hoc2020_mc_mee_description: 'Il nuovo tutorial dell''Ora del Codice di Minecraft è ora disponibile in Minecraft: Education Edition per Windows, Mac, Chromebook e iPad. Impara i fondamenti della programmazione e esplora la diversità e l''inclusione con i tuoi studenti! Accedi alle risorse gratuite tra cui un piano delle lezioni, video, curriculum di informatica, lezioni di equità e addestramenti degli insegnanti.'
+  hoc2020_mc_mee_description: "Il nuovo tutorial dell'Ora del Codice di Minecraft è ora disponibile in Minecraft: Education Edition per Windows, Mac, Chromebook e iPad. Impara i fondamenti della programmazione e esplora la diversità e l'inclusione con i tuoi studenti! Accedi alle risorse gratuite tra cui un piano delle lezioni, video, curriculum di informatica, lezioni di equità e addestramenti degli insegnanti."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Viaggia indietro nel tempo e impara a programmare! Il nuovo tutorial Minecraft Hour of Code è ora disponibile in Minecraft: Education Edition per Windows, Mac, Chromebook e iPad. Inizia con le risorse per gli educatori, i corsi di formazione e i video gratuiti.'
+  hoc2021_mc_mee_description: "Viaggia indietro nel tempo e impara a programmare! Il nuovo tutorial Minecraft Hour of Code è ora disponibile in Minecraft: Education Edition per Windows, Mac, Chromebook e iPad. Inizia con le risorse per gli educatori, i corsi di formazione e i video gratuiti."
   hoc2021_mc_mee_villages_title: "Racconto di due villaggi"
-  hoc2021_mc_mee_villages_description: 'Impara le basi del coding ed esplora la diversità e l''inclusione con i tuoi studenti in Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: "Impara le basi del coding ed esplora la diversità e l'inclusione con i tuoi studenti in Minecraft: Education Edition."
   hoc2021_mc_mee_ai_title: "AI per sempre"
-  hoc2021_mc_mee_ai_description: 'Esplora l''AI con i tuoi studenti e impara a codificare in Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: "Esplora l'AI con i tuoi studenti e impara a codificare in Minecraft: Education Edition."
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'Fuggi dalla misteriosa villa entro l''alba e guadagna un milione di smeraldi! Il nuovo tutorial di Minecraft Hour of Code è ora disponibile in Minecraft: Education Edition per Windows, Mac, Chromebook, Ipad e dispositivi mobili. Inizia con risorse, corsi di formazione e video gratuiti per i docenti. '
-  hoc2022_mc_mee_timecraft_description: 'Viaggia indietro nel tempo per salvare il futuro con questa lezione gratuita di programmazione in Minecraft: Education Edition.'
+  hoc2022_mc_mee_timecraft_description: "Viaggia indietro nel tempo per salvare il futuro con questa lezione gratuita di programmazione in Minecraft: Education Edition."
   footer_powered_by_aws: "Amazon Web Services e il logo “Powered by AWS” sono marchi registrati di Amazon.com, Inc. o delle sue consociate negli USA e/o in altri paesi."
   footer_built_on_github: "Progettato su GitHub da Microsoft"
   codebytes_skinny_banner_title: "Unisciti a noi dal 7 all'11 dicembre per le nostre mini-lezioni dal vivo CodeBytes!"
@@ -1804,7 +1806,7 @@
   imagine_cup_junior_tile_description: "Questa sfida globale AI for Good introduce gli studenti alle iniziative AI for Good di Microsoft, consentendo loro di risolvere un problema nel mondo con la potenza dell'IA."
   ai_activity: "Attività"
   ai_description: "Descrizione"
-  ai_seeing_ai: "Vedere l'IA"
+  ai_seeing_ai: "Vedere con l'IA"
   ai_seeing_ai_description: "Un'app gratuita che racconta il mondo che ti circonda in una varietà di lingue."
   ai_quick_draw: "Veloce, disegna!"
   ai_quick_draw_description: "Una rete neurale può imparare a riconoscere gli scarabocchiamenti?"
@@ -1815,7 +1817,7 @@
   ai_zooniverse: "Zooniverse - Snapshot Mountain Zebra"
   ai_zooniverse_description: "Aiuta a proteggere la Zebra di Cape Mountain in via di estinzione identificando i diversi animali nelle immagini."
   ai_audience: "Pubblico"
-  ai_minecraft_description: 'Accedi a risorse gratuite tra cui un programma di lezioni, video, curriculum di informatica e corsi di formazione per insegnanti. (Richiede Minecraft: Education Edition)'
+  ai_minecraft_description: "Accedi a risorse gratuite tra cui un programma di lezioni, video, curriculum di informatica e corsi di formazione per insegnanti. (Richiede Minecraft: Education Edition)"
   ai_k_12_audience: "K-12 (lettura richiesta)"
   ai_microsoft_workshop: "Workshop virtuali gratuiti di Microsoft"
   ai_microsoft_workshop_description: "Accendi la curiosità con workshop STEM e coding gratuiti."
@@ -1824,6 +1826,7 @@
   ai_ibm_machine_learning_for_kids: 'IBM: Machine Learning per bambini'
   ai_ecs: 'ECS: Intelligenza artificiale (AI)'
   ai_ecs_description: "Una nuova unità di curriculum alternativa per il curriculum Exploring Computer Science (ECS)."
+  ai_aiedu_intro: 'aiEDU: Introduzione all''Intelligenza Artificiale'
   ai_aiedu_intro_description: "Intro to AI è un curriculum gratuito, innovativo e culturalmente rilevante in cui gli studenti sviluppano conoscenze concettuali su cos'è l'IA e come viene utilizzata nel mondo reale."
   ai_elements: "Elementi di AI"
   ai_elements_description: "Una serie di corsi online gratuiti creati da Reaktor e dall'Università di Helsinki."
@@ -1851,5 +1854,7 @@
   try_it_yourself: "Mettiti alla prova!"
   try_an_activity: "Prova un'attività"
   see_more_activities: "Prova altre attività"
+  hoc2022_nasa_webb_alt_text: "Illustrazione del telescopio James Webb della NASA"
   hoc2022_nasa_banner_heading: "Unitevi alla NASA per uno speciale Ora del Codice sull'informatica nello spazio!"
   hoc2022_nasa_banner_description: "In anteprima alle 10AM ET del 5 dicembre sul canale YouTube di NASA STEM."
+  hoc2022_nasa_banner_heading_posthoc: "Dai un'occhiata alla funzionalità dell'Ora di Codice speciale della NASA, sull'informatica nello spazio!"

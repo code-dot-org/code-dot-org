@@ -60,6 +60,7 @@ it:
         reset_password_token: "Il link per la reimpostazione della password che hai usato"
         error:
           future: non può essere in futuro
+        us_state: 'Stato'
   beta: "versione provvisoria"
   hello: "Ciao mondo"
   welcome_back: "Bentornato, %{name}"
@@ -69,6 +70,7 @@ it:
   unsubmit: Annulla l'invio delle risposte
   previous_page: Pagina precedente
   next_page: Pagina successiva
+  next_level: Livello successivo
   next_resource: Risorsa successiva
   done_with_module: Lezione completata
   cancel: "Annulla"
@@ -199,6 +201,9 @@ it:
     parent_account_checkbox: "Sono un genitore/tutore e mi iscrivo per conto di mio figlio"
     parent_account_email_progress_permission: "Possiamo inviarti aggiornamenti occasionali sui progressi e sui progetti di tuo figlio e aggiornamenti sui corsi e sull'informatica?[(Vedi la nostra politica sulla privacy)](%{privacy_policy_url})"
     parent_account_email_label: "E-mail del genitore/tutore"
+    us_state: 'Stato'
+    us_state_dropdown_options:
+      other: "Vivo in un posto non elencato qui"
   school_info:
     title: 'Informazioni sulla scuola (opzionale)'
     school_country: 'Paese della Scuola'
@@ -267,9 +272,13 @@ it:
   parent_mailer:
     student_associated_subject: 'Informazioni di accesso per Code.org'
     parent_email_added_subject: 'Benvenuto su Code.org!'
+    parent_permission_request_subject: "È richiesto il consenso dei genitori per permettere ai propri figli l'accesso a Code.org"
+    parent_permission_reminder_subject: "Ricorda, è richiesto il consenso dei genitori per permettere ai propri figli l'accesso a Code.org"
+    parent_permission_confirmation_subject: "Grazie per aver approvato l'accesso a Code.org ai tuoi figli!"
   teacher_mailer:
     new_teacher_subject: 'Benvenuto su Code.org!'
     delete_teacher_subject: 'Notifica di Code.org: il tuo account è stato eliminato'
+    verified_teacher_subject: 'Verifica degli insegnanti su Code.org - Successo'
   section:
     your_section:
       one: 'La tua classe:'
@@ -301,6 +310,7 @@ it:
       cant_join_own_section: "Siamo spiacenti, non puoi far parte della tua classe."
       provider_managed_section: "Questa sezione è gestita da un altro provider e non può essere unita. Chiedi al tuo insegnante di aggiungerti via %{provider} e risincronizza la loro sezione."
       restricted_section: "Non siamo riusciti ad aggiungerti alla sezione %{section_code} perché é bloccata. Perfavore contatta il / la tua insegnante per aiuto."
+      full_section: "Non abbiamo potuto aggiungerti alla sezione %{section_code} perché ci sono già %{section_capacity} studente. Contatta il tuo insegnante per ricevere assistenza."
       not_participant_type: "Non siamo riusciti ad aggiungerti alla sezione %{section_code} perché non soddisfi la tipologia di partecipante per la sezione."
     mail:
       student_disassociated:
@@ -333,7 +343,7 @@ it:
       finished_hoc: "Ho finito!"
       sign_in_to_save: 'Accedi per salvare i progressi fatti'
       my_dashboard: "Controllo"
-      course_catalog: "Corsi"
+      course_catalog: "Catalogo Corsi"
       project_gallery: "Progetti"
       sections: "Classi"
       help_support: "Help and support"
@@ -350,6 +360,7 @@ it:
       sprite_lab_documentation: "Documentazione Sviluppo App"
       sprite_lab_tutorials: "Esercitazioni Sviluppo App"
       web_lab_documentation: "Documentazione Sviluppo Web"
+      project_beats_documentation: "Documentazione Project Beats"
       educate_overview: "Panoramica dei corsi"
       educate_elementary: "Scuola elementare"
       educate_middle: "Scuola media"
@@ -376,6 +387,7 @@ it:
       help_us: "Aiutaci"
       teach: "Insegna"
       about: "Informazioni"
+      incubator: "Incubatrice"
       legal: "Privacy & Legale"
       legal_privacy: "Informativa sulla privacy"
       legal_cookie_notice: "Informativa sui cookie"
@@ -428,6 +440,7 @@ it:
       starwars: 'Guerre Stellari'
       starwarsblocks: 'Guerre Stellari (Blocchi)'
       starwarsblocks_hour: 'Guerre Stellari (Blocchi)'
+      thebadguys: 'I cattivi'
       loading: 'Sto caricando...'
       weblab: 'Sviluppo Web'
       view_all: 'Guarda tutti i progetti...'
@@ -469,6 +482,7 @@ it:
       worked_with: 'Ha lavorato in coppia con'
       update_lock_settings: 'Aggiorna le impostazioni di blocco qui.'
       clear_response: 'Calcella risposta'
+    student_code_view_diabled: 'Il codice studente non può essere visualizzato per questa attività.'
   user:
     email_confirm_needed: 'L''indirizzo di posta elettronica non è stato confermato:'
     email_confirm_needed_required: 'Il tuo indirizzo di posta elettronica %{email} non è stato confermato:'
@@ -631,6 +645,8 @@ it:
       applab_unsupported_tablet: "Sviluppo App funziona meglio su un PC o un portatile con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo dispositivo attuale."
       gamelab_unsupported_tablet: "Sviluppo Giochi funziona meglio su un PC o un portatile con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo dispositivo attuale."
       weblab_unsupported_locale_storage: "Potrebbero verificarsi problemi utilizzando Sviluppo Web in modalità di navigazione privata. Ti preghiamo di ricaricare il progetto in modalità di navigazione normale. Ci scusiamo per l'inconveniente."
+  deprecation:
+    algebra_lab: "Il curriculum e i contenuti di CS in Algebra sono obsoleti. Nei prossimi mesi, questo laboratorio non sarà più disponibile. Controlla invece [Bootstrap: Algebra] (%{bootstrap_algebra_url}). [Ulteriori informazioni] (%{cs_algebra_url})."
   slow_loading: 'Questa operazione sta prendendo più tempo del solito...'
   try_reloading: 'Prova a ricaricare la pagina'
   next_stage: 'Finito! Vai alla lezione successiva'
@@ -669,67 +685,139 @@ it:
       body_short: "Progetta una App, programmala con i blocchi o con Javascript, e poi condividila."
       audience: 'Da 13 anni in su'
       cta: 'Scopri come'
+      image_alt: 'Un coniglietto viola che indossa uno zaino con motore a razzo.'
+    applab-intro:
+      image_alt: 'Una mano sta toccando il centro dello schermo di uno smartphone. Luci e scintille stanno uscendo dallo schermo.'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Steve e Alex di Minecraft ti stanno guardando.'
+    artist:
+      image_alt: 'Una persona da cartone animato che tiene in mano una matita enorme e disegna un triangolo.'
+    conditionals:
+      image_alt: 'Due mani che mescolano un mazzo di carte da gioco.'
+    course1:
+      image_alt: 'Il calabrone e il pesce arancione di Code.org in piedi davanti a un codice.'
+    course2:
+      image_alt: 'Un collage di puzzle di Code.org che mostra un mago verde, un artista e un pesce arancione.'
+    course3:
+      image_alt: 'Un collage di puzzle di Code.org che mostra un gioco, uno zombi e un ninja.'
+    course4:
+      image_alt: 'Un collage di puzzle di Code.org che mostra calcio, animali domestici e un artista.'
+    coursea:
+      image_alt: 'Un collage di puzzle di Code.org che mostra un elefante e uno scoiattolo.'
+    courseb:
+      image_alt: 'Un collage di puzzle di Code.org che mostra un esploratore, delle gemme e un fiore.'
+    coursec:
+      image_alt: 'Un collage di puzzle di Code.org che mostra uno scoiattolo, numeri binari e un uccello rosso del gioco Angry Birds.'
+    coursed:
+      image_alt: 'Un collage di puzzle di Code.org che mostra un''ape, fiori, miele e un maiale verde del gioco Angry Birds.'
+    coursee:
+      image_alt: 'Un collage di puzzle di Code.org che mostra una persona con in mano una pala, una zucca, un frutteto e una mucca.'
+    coursef:
+      image_alt: 'Un collage di puzzle di Code.org che mostra forme geometriche colorate, un pirata rosso e un artista.'
     dance-2019:
       title: 'Ballando col codice'
       image_alt: 'Un gatto felice, un bradipo e uno squalo che ballano.'
+    dance-2022:
+      image_alt: 'Un alieno verde e un robot che danzano con Saturno sullo sfondo.'
     dance:
       title: 'Ballando col codice'
+      image_alt: 'Un simpatico gatto e uno squalo felice che ballano a una festa.'
+    donate:
+      image_alt: 'Un bambino che indica lo schermo di un laptop che mostra un puzzle di Code.org.'
+    elementary:
+      image_alt: 'Un calabrone e uno scoiattolo in piedi in un campo davanti a un arcobaleno.'
+    express:
+      image_alt: 'Plants vs Zombies: zombie e piante in piedi accanto a Flappy Bird.'
     flappy:
       title: 'Flappy'
       body: 'Vuoi creare la tua versione del gioco "Flappy" in meno di 10 minuti? Prova questo corso!'
+      image_alt: 'Un uccello giallo che vola tra tubi verdi.'
     frozen:
       title: "Frozen"
+      image_alt: 'Anna ed Elsa del film Frozen. Tra di loro c''è un''immagine di Anna che disegna una bella forma nel ghiaccio usando i suoi pattini da ghiaccio.'
     gallery:
       title: "La tua collezione"
       body: "Guarda una collezione di app e immagini artistiche create dai nostri utenti"
+      image_alt: 'Un artista che disegna molti cerchi e un gatto, un pipistrello e un fantasma in piedi in una terra di vacanze invernali.'
     gamelab:
       title: "Sviluppo Giochi"
       body: "Sviluppo Giochi è un ambiente di programmazione in cui si possono realizzare semplici animazioni e giochi con oggetti e personaggi che interagiscono tra loro."
       audience: "Da 13 anni in su"
       cta: "Scopri come"
+      image_alt: 'Molte persone e animali dei cartoni animati stanno su un marciapiede e sorridono.'
+    hello-world-food:
+      image_alt: 'Molti animali, alieni ed emoji che orbitano attorno alla Terra.'
     hello-world:
       title: 'Ciao mondo'
       body: 'Scegli tra i seguenti quattro temi divertenti per programmare dei personaggi interattivi in un mondo creato da te.'
     hero:
       title: "Minecraft"
       body: "Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding."
+      image_alt: 'Un Golem di Ferro di Minecraft in piedi davanti a una vista dall''alto di Anna che risolve un puzzle.'
     hoc-encryption:
       title: "Crittografia semplice"
       body: "Gli studenti imparano delle tecniche per creare e decodificare un messaggio cifrato."
+      image_alt: 'Un grafico a barre delle frequenze delle lettere in lingua inglese.'
     hoc:
       title: 'Labirinto Classico'
       body: 'Impara i concetti base dell''informatica. Milioni di persone l''hanno già fatto.'
+      image_alt: 'Un collage di immagini che mostrano Code, Mark Zuckerberg e Angry Birds.'
+    hourofcode:
+      image_alt: 'Un collage di immagini che mostrano Code, Mark Zuckerberg e Angry Birds.'
     hoc2014:
       try_new_tutorial: 'Prova il nuovo corso dell''Ora del Codice in versione provvisoria'
       try_frozen: 'Artista con Anna ed Elsa, da Frozen'
     infinity:
       title: "Laboratorio con Disney Infinity"
       body: "Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity."
+      image_alt: 'Cinque personaggi di Froze, Tangled e Big Hero 6 in piedi insieme.'
+    map:
+      image_alt: 'Un''immagine grigia degli Stati Uniti con circa 20 stati evidenziati in viola.'
+    mc_escape:
+      image_alt: 'Un personaggio di Minecraft che indossa un cappello a cilindro e un monocolo mentre apre uno scrigno pieno di smeraldi.'
+    mc:
+      image_alt: 'Anna e Steve di Minecraft in piedi davanti a un puzzle Minecraft di Code.org.'
     minecraft:
       title: "Minecraft"
       body: "Esplora il mondo di Minecraft attraverso il codice."
+      image_alt: 'Anna e Steve di Minecraft in piedi davanti a un puzzle Minecraft di Code.org.'
     minecraft2016:
       title: "Minecraft"
       body: "Programma animali e altre creature di Minecraft nella tua versione di questo gioco."
+    oceans:
+      image_alt: 'Un robot nell''oceano che scansiona varie creature marine.'
+    playlab:
+      image_alt: 'Un collage di immagini che mostra un gatto blu, un cane buffo e una donnola preistorica.'
     poem-art:
       title: 'L''arte della poesia'
       body: 'Esprimiti! Usa il codice per animare le poesie.'
       image_alt: 'Un calamaro hipster che si esibisce su un palco.'
+    pre-express-2017:
+      image_alt: 'Un cane e un unicorno in piedi davanti a un albero fatto di pezzi di puzzle.'
+    pre-express-2018:
+      image_alt: 'Un cane e un unicorno in piedi davanti a un albero fatto di pezzi di puzzle.'
+    pre-express-2019:
+      image_alt: 'Un cane e un unicorno in piedi davanti a un albero fatto di pezzi di puzzle.'
+    pre-express:
+      image_alt: 'Un cane e un unicorno in piedi davanti a un albero fatto di pezzi di puzzle.'
     sports:
       title: "Sport"
       body: "Crea una partita di basket o abbina diversi sport."
+      image_alt: 'I loghi NBA e WNBA vengono visualizzati accanto a un disco da calcio, un pallone da calcio, un disco da hockey e un basket.'
     starwars:
       title: "Guerre Stellari"
+      image_alt: 'R2-D2, Leia, Rey e BB-8 in piedi in un deserto.'
     text-compression:
       title: "Compressione del testo"
       body: "In questa lezione impari come comprimere un testo, sostituendo sequenze di caratteri ripetuti con simboli."
+      image_alt: 'Testo compresso sostituendo parole intere con un singolo simbolo.'
     weblab:
       title: "Sviluppo Web"
       body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi."
       audience: "Da 13 anni in su"
       cta: "Scopri come"
+      image_alt: 'Lo schermo di un computer che mostra il codice HTML.'
     widgets:
       title: "Componenti"
       body: "Gli studenti possono esplorare concetti dal nostro corso Cs Principles usando questi strumenti digitali sul campo. Possono utilizzare i componenti per conto proprio o creare una lezione su un singolo concetto per la classe."
@@ -786,6 +874,8 @@ it:
     submit-incomplete-body: "Non hai risposto a tutte le domande. Non è possibile modificare le tue risposte dopo averle inviate.  Sei sicuro di volerle inviare?"
     submit-complete-title: "Invia le tue risposte"
     submit-complete-body: "Non puoi modificare la tue risposte dopo averle inviate.  Sei sicuro?"
+  level_summary:
+    correct_answer: "Risposta Corretta"
   match:
     wrong_title: "Riprova!"
     wrong_body: "La risposta che hai scelto non è corretta.  Per favore riprova!"
@@ -934,6 +1024,7 @@ it:
     instructor_feedback: 'Feedback dell''istruttore'
     peer_feedback: 'Riscontro tra pari'
     outdated: 'Questo commento è stato aggiunto per una versione precedentemente inviata'
+    review_count: 'È necessario completare %{review_count} recensioni per questa unità'
     peer_review: 'Valutazioni dei parigrado'
   external_links:
     disclaimer: Limiti di responsabilità
@@ -1000,6 +1091,11 @@ it:
   no_course_access_teacher: "Non hai accesso a questo corso. Se credi che dovresti avere accesso a questo corso, sei pregato di scrivere a support@code.org così che possiamo correggere la situazione."
   no_script_access_student: "Non hai accesso a questa unità. Perfavore chiedi al tuo insegnante in quale unità dovresti essere."
   no_script_access_teacher: "Non hai accesso a questa unità. Se credi che dovresti avere accesso a questa unità, sei pregato di scrivere a support@code.org così che possiamo correggere la situazione."
+  no_level_access_student: "Non hai accesso a questo livello. Chiedi al tuo insegnante a che livello dovresti essere."
+  no_level_access_teacher: "Non hai accesso a questo livello. Se ritieni di dover accedere a questo livello, scrivi a support@code.org in modo che possiamo risolvere la situazione."
+  no_exemplar: "Non esiste alcun esemplare per questo livello."
+  no_exemplar_access_student: "Gli studenti non possono accedere al codice esemplare. Chiedi al tuo insegnante a che livello dovresti essere."
+  no_exemplar_access_teacher: "Solo gli insegnanti verificati possono accedere al codice esemplare. Se vuoi diventare un insegnante verificato, scrivi a support@code.org."
   return_unit_overview: 'Vai alla panoramica della lezione'
   return_course_overview: 'Vai alla visualizzazione delle unità'
   view_all_units: 'Visualizza tutte le lezioni'
@@ -1017,9 +1113,12 @@ it:
       school_city: 'Città della scuola'
       school_city_district: 'Città/Quartiere della scuola'
       school_country: 'Paese della Scuola'
+      school_department_region: 'Dipartimento/Regione scolastica'
       colombian_school_city: 'Città della scuola'
+      colombian_chilean_school_department: 'Dipartimento/Regione scolastica'
       colombian_school_municipality: 'Provincia della Scuola'
       colombian_chilean_school_name: 'Nome della scuola'
+      chilean_school_commune: 'Comune'
       chilean_school_id: 'ID Scuola'
       ages: 'Qual è l''età degli studenti a cui insegni quest''anno?'
       subjects: 'Quali materie insegni quest''anno?'
@@ -1038,17 +1137,33 @@ it:
         not_listed: 'Termine preferito non in elenco'
         none: 'Preferisco non rispondere'
       school_country:
+        australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belize'
+        brazil: 'Brasile'
         canada: 'Canada'
         chile: 'Cile'
         colombia: 'Colombia'
+        dominican_republic: 'Repubblica Dominicana'
+        india: 'India'
+        indonesia: 'Indonesia'
         israel: 'Israele'
+        jamaica: 'Giamaica'
+        kenya: 'Kenya'
         malaysia: 'Malesia'
+        maldives: 'Maldive'
         mexico: 'Messico'
+        mongolia: 'Mongolia'
+        new_zealand: 'Nuova Zelanda'
         paraguay: 'Paraguay'
+        portugal: 'Portogallo'
+        slovakia: 'Slovacchia'
+        south_korea: 'Sud Corea'
+        spain: 'Spagna'
         thailand: 'Tailandia'
+        trinidad_and_tobago: 'Trinidad e Tobago'
         uzbekistan: 'Uzbekistan'
+        vietnam: 'Vietnam'
       ages:
         ages_under_6: 'Fino a 6 anni'
         ages_7_8: '7 -8 anni'
@@ -1096,6 +1211,7 @@ it:
         csf_express: 'Fondamenti di Informatica (Corsi rapidi)'
         csd: 'Alla scoperta dell''informatica'
         csp: 'Principi di informatica'
+        other: 'Altro'
         not_applicable: "Non applicabile"
       email_opt_in:
         opt_in_yes: 'Sì'
@@ -1119,11 +1235,23 @@ it:
   courses_category: 'Corsi Avanzati'
   course_offering:
     headers:
+      favorites: 'Preferiti'
+      labs_and_skills: 'Laboratori e competenze'
       minecraft: 'Minecraft'
       hello_world: 'Ciao mondo'
+      popular_media: 'Media popolari'
       sports: 'Sport'
+      express: 'Esprimi'
       csf: 'Corsi base'
       csc: 'Informatica interdisciplinare'
+      year_long: 'Per tutto l''anno'
+      csa_labs: 'Laboratori CSA'
+      self_paced: 'Autogestito'
+      teacher_led: 'Guidato dall''insegnante'
+      collections: 'Collezioni'
+      workshops_k5: 'Seminari K-5'
+      summer_workshops_612: '6-12 Workshop estivi'
+      virtual_academic_year_workshops_612: '6-12 Workshop virtuali per l''anno accademico'
   cookie_banner:
     message: 'Continuando a navigare nel nostro sito o cliccando su "Accetto", accetti la memorizzazione dei cookie sul tuo computer o dispositivo.'
     more_information: "Leggi l'informativa sulla privacy di Code.org."
@@ -1143,6 +1271,7 @@ it:
       error_wrong_provider: 'Fornitore errato. Sei pregato di assicurarti di star accedendo con Google.'
       error_invalid_user: 'Id utente non valido. Sei pregato di provare ad accedere di nuovo.'
       error_no_code: 'Sei pregato di inserire il tuo codice di accesso.'
+      confirm_login: 'Seleziona «Conferma» per accedere con il tuo account Google.'
   parent_email_banner:
     text: "**Sei un genitore o tutore?** Collega la tua email a questo account per rimanere aggiornato sui progressi e sui progetti di tuo figlio!"
     link_your_email: "Collega la tua email"
@@ -1160,15 +1289,22 @@ it:
       forbidden: "L'utente non può aggiornare lo stato bloccabile dello studente"
   reset_predict_progress_button: "Eliminare la risposta"
   pixelation:
-    raw_format: "Formato Raw"
+    raw_format: "Formato grezzo"
+    raw_format_alt: "Visualizza i bit senza alcuna formattazione"
+    readable_format: "Formato leggibile"
+    readable_format_alt: "Visualizza i bit separati da pixel"
     save_image: "Salva immagine"
     actual_size: "Dimensioni effettive"
     image_file_format_header: "Formato file immagine "
     image_file_format_width: "Larghezza: 1 byte"
     image_file_format_height: "Altezza: 1 byte"
     image_file_format_bits_per_pixel: "Bit per pixel: 1 byte"
+    image_file_format_data_a: "n bit di dati in pixel"
+    image_file_format_data_b: "n = larghezza* altezza* bit per pixel"
     image_width: "Larghezza immagine\n"
     image_height: "Altezza immagine"
+    bits_per_pixel_header: "Bit per pixel"
     binary: "Binario"
     hexadecimal: "Esadecimale"
     pixel_format_header: "Formato Pixel"
+

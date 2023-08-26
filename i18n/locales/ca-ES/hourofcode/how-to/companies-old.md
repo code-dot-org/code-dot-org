@@ -1,11 +1,11 @@
 ---
-title: How to host an Hour of Code - Companies
+title: Com allotjar una Hora del Codi - Empreses
 ---
 
 {{ signup_button }}
 
 # Com portar l'Hora del Codi a la teva empresa
-### Esbrineu com vosaltres i els vostres empleats poden inspirar els alumnes per provar les ciències informàtiques!
+### Descobriu com vosaltres i els vostres empleats podeu inspirar els alumnes perquè s'endinsin en la informàtica
 
 ***
 
@@ -31,8 +31,7 @@ For more instructions on encouraging employees and connecting your employees wit
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k
-" frameborder="0" allowfullscreen></iframe>
+## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})

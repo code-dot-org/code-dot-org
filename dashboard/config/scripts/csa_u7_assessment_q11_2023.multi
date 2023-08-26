@@ -25,3 +25,16 @@ Which of the following best describes the value returned by the method?
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The `mystery` method is a recursive method that operates on an `ArrayList` of integers.
+
+Here's what it does:
+
+1. If the `ArrayList` is empty (i.e., its size is `0`), it returns `0`. This is the base case for the recursion.
+
+2. If the `ArrayList` is not empty, it removes the first element from the `ArrayList`, then calls itself recursively on the updated `ArrayList`, and adds `1` to the result of this recursive call.
+
+This process continues until the `ArrayList` is empty. Each recursive call removes one element from the `ArrayList`, and adds `1` to the total count.
+
+So, the `mystery` method is essentially counting the number of elements in the `ArrayList`.
+MARKDOWN

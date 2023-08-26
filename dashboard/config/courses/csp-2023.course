@@ -13,23 +13,11 @@
     "csp10-2023",
     "csp-post-survey-2023"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "announcements": [
-      {
-        "key": "d0bf05c2-f7c9-4c95-98e7-e6a90252bff3",
-        "notice": "Units 7, 8, and 10 Still Under Construction",
-        "details": "The last three units covering course material (7, 8, and 10) will be under construction until later in May. Thanks for your understanding. Please click \"Learn More\" for information about updates to this year's version of the curriculum.",
-        "link": "https://docs.google.com/document/d/1o7UePZl4KIXImkHkgY0AKMU2SWyF9EW0IUw16TD5U7Q/edit?usp=sharing",
-        "type": "bullhorn_yellow",
-        "visibility": "Teacher-only",
-        "dismissible": true,
-        "buttonText": "Learn More"
-      }
-    ],
     "family_name": "csp",
     "has_numbered_units": true,
     "has_verified_resources": true,
@@ -176,6 +164,18 @@
       },
       "seeding_key": {
         "resource.key": "syllabus"
+      }
+    },
+    {
+      "name": "Tech Requirements and Required Materials",
+      "url": "https://docs.google.com/document/d/1bz9KZcgb92D2-DZZdfghQy_HyTG7FRkOE4us3pwpRHY/edit?usp=sharing",
+      "key": "tech_requirements_and_required_materials",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "tech_requirements_and_required_materials"
       }
     },
     {

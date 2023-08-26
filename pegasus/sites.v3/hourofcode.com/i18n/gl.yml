@@ -45,6 +45,8 @@ gl:
     play, and create with us.
   social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, music from Disney's "Encanto," and more!
+  social_hoc2023_dance: Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -146,18 +148,6 @@ gl:
     on the training data, the SVM separates the "space" of all possible fish into
     two parts, which correspond to the classes we are trying to learn (such as "blue"
     or "not blue").
-  heading_additional_resources: Additional resources
-  call_to_action_learn_more: Learn more
-  call_to_action_watch_now: Watch now
-  call_to_action_try_activity: Try activity
-  call_to_action_explore_unit: Explore unit
-  call_to_action_view_lesson_plan: View lesson plan
-  call_to_action_self_paced_pl: Start self-paced professional learning
-  call_to_action_watch_panel: Watch panel
-  call_to_action_learn_about_challenge: Learn about challenge
-  call_to_action_explore_website: Explore website
-  call_to_action_read_more: Read more
-  call_to_action_special_announcement: See special announcement
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
@@ -179,6 +169,416 @@ gl:
   teach_ai_homepage_banner_title: AI education for the world
   teach_ai_homepage_banner_desc: Code.org is part of TeachAI, dedicated to empowering
     educators everywhere to teach with AI and about AI.
+  curriculum_launch_2023_title: Introducing incredible updates to our curriculum
+  curriculum_launch_2023_desc: Updates to CSC, CSP, CSD, and more — plus a new Curriculum
+    Catalog and redesigned Teach page to help you find it all!
+  in_partnership_with: In partnership with
+  afe_partnership_logo_alt: Amazon Future Engineer logo
+  afe_partnership_thanks_desc: Amazon Future Engineer is a comprehensive childhood-to-career
+    program to inspire, educate, and train low-income and other disadvantaged children
+    and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url}).
+  grade_level: Grade level
+  grade_level_label_elementary: Elementary School
+  grade_level_label_middle: Middle School
+  grade_level_label_high: High School
+  students_label: Estudantes
+  teachers_label: Profesores
+  teacher_label_csf: CS Fundamentals Teacher
+  teacher_label_csd: CS Discoveries Teacher
+  teacher_label_csp: CS Principles Teacher
+  teacher_label_csc: CS Connections Teacher
+  teacher_label_csa: AP® Computer Science A Teacher
+  required_materials: 'Required Materials:'
+  optional_materials: 'Optional Materials:'
+  call_to_action_learn_more: Learn more
+  call_to_action_watch_now: Watch now
+  call_to_action_try_activity: Try activity
+  call_to_action_explore_unit: Explore unit
+  call_to_action_explore_curriculum: Explore curriculum
+  call_to_action_explore_curriculum_options: Explore curriculum options
+  call_to_action_explore_lessons: Explore lessons
+  call_to_action_explore_modules: Explore modules
+  call_to_action_explore_module: Explore module
+  call_to_action_explore_workshops: Explore workshops
+  call_to_action_explore_course: Explore course
+  call_to_action_explore_courses: Explore courses
+  call_to_action_explore_full_course: Explore full course
+  call_to_action_explore_widgets: Explore widgets
+  call_to_action_explore_choice_level: Explore example choice level
+  call_to_action_explore_collection: Explore collection
+  call_to_action_explore_unplugged_lesson: Explore unplugged lessons
+  call_to_action_try_app_lab: Try App Lab
+  call_to_action_view_lesson_plan: View lesson plan
+  call_to_action_self_paced_pl: Start self-paced professional learning
+  call_to_action_apply_for_pl: Apply for Professional Learning
+  call_to_action_watch_panel: Watch panel
+  call_to_action_learn_about_challenge: Learn about challenge
+  call_to_action_explore_website: Explore website
+  call_to_action_read_more: Read more
+  call_to_action_donate_online: Donate online
+  call_to_action_get_updates: Get updates
+  call_to_action_special_announcement: See special announcement
+  call_to_action_learning_opportunity: New Professional Learning Opportunity
+  call_to_action_start_pl: Start professional learning
+  call_to_action_contact_regional_partner: Contact your Regional Partner
+  call_to_action_join_csta: Join CSTA
+  call_to_action_support_farsi: Support Code.org in Farsi
+  call_to_action_resources_lesson_plan: Explore example lesson plan
+  call_to_action_resources_videos: Explore all videos
+  call_to_action_resources_slides: Explore example slide deck
+  call_to_action_resources_assessments: Explore an assessment lesson
+  call_to_action_resources_tools: Try out programming tools
+  call_to_action_sign_up_free: Sign up for free
+  call_to_action_explore_ai_resources: Explore AI resources
+  call_to_action_explore_curriculum_catalog: Explore the Curriculum Catalog
+  call_to_action_see_full_curriculum_catalog: See full Curriculum Catalog
+  call_to_action_find_self_paced_modules: Find self-paced modules
+  call_to_action_join_teacher_forums: Join teacher forums
+  call_to_action_explore_teacher_forums: Explore teacher forums
+  call_to_action_explore_career_resources: Explore career resources
+  call_to_action_watch_videos: Watch videos
+  call_to_action_download_posters: Download posters
+  call_to_action_contact_support: Contact Code.org support
+  call_to_action_pick_units: Pick units
+  call_to_action_focus_on_topic: Focus on a topic
+  call_to_action_teach_full_intro_course: Teach a full intro course
+  call_to_action_see_module_details: See module details
+  call_to_action_start_modules: Start modules
+  call_to_action_see_course_details: See course details
+  call_to_action_see_lesson_details: See lesson details
+  call_to_action_learn_about_approach: Learn more about our approach
+  call_to_action_try_java_lab: Try Java Lab
+  call_to_action_notify_available: Notify me when available
+  aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
+  aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
+    professional learning program
+  aria_label_call_to_action_teaching_csd: Start the Teaching Computer Science Discoveries
+    professional learning program
+  aria_label_call_to_action_teaching_csp: Start the Teaching Computer Science Principles
+    professional learning program
+  aria_label_call_to_action_teaching_csc: Start the Teaching Computer Science Connections
+    professional learning program
+  aria_label_call_to_action_teaching_ai: Start the Teaching AI and Machine Learning
+    professional learning program
+  aria_label_call_to_action_teaching_maker_cp: Start the Teaching Creating Apps with
+    Devices (Circuit Playground) professional learning program
+  aria_label_call_to_action_teaching_maker_microbit: Start the Teaching Creating Apps
+    with Devices (micro:bit) professional learning program
+  aria_label_call_to_action_curriculum_csf: Explore the Computer Science Fundamentals
+    curriculum
+  aria_label_call_to_action_curriculum_csf_express: Explore the Computer Science Fundamentals
+    Express course
+  aria_label_call_to_action_curriculum_csf_express_pre_reader: Explore the Computer
+    Science Fundamentals Pre-Reader Express course
+  aria_label_call_to_action_curriculum_csd: Explore the Computer Science Discoveries
+    curriculum
+  aria_label_call_to_action_curriculum_csp: Explore the Computer Science Principles
+    curriculum
+  aria_label_call_to_action_curriculum_csc: Explore the Computer Science Connections
+    curriculum
+  aria_label_call_to_action_curriculum_ai: Explore the AI and Machine Learning curriculum
+  aria_label_call_to_action_curriculum_maker_cp: Explore the Creating Apps with Devices
+    (Circuit Playground) curriculum
+  aria_label_call_to_action_curriculum_maker_microbit: Explore the Creating Apps with
+    Devices (micro:bit) curriculum
+  aria_label_call_to_action_curriculum_creating_apps_with_devices: Explore the Creating
+    Apps with Devices unit
+  aria_label_call_to_action_curriculum_problem_solving_computing: Explore the Problem
+    Solving and Computing unit
+  aria_label_call_to_action_curriculum_web_development: Explore the Web Development
+    unit
+  aria_label_call_to_action_curriculum_interactive_animations_games: Explore the Interactive
+    Animations and Games unit
+  aria_label_call_to_action_curriculum_design_process: Explore the Design Process
+    unit
+  aria_label_call_to_action_curriculum_data_society: Explore the Data and Society
+    unit
+  aria_label_call_to_action_collection_hardware: Explore the Hardware collection
+  aria_label_call_to_action_collection_design_purpose: Explore the Design with Purpose
+    collection
+  aria_label_call_to_action_collection_impact_society: Explore the Impact in Society
+    collection
+  aria_label_call_to_action_collection_creativity: Explore the Creativity collection
+  aria_label_call_to_action_collection_coding: Explore the Coding collection
+  aria_label_call_to_action_collection_data: Explore the Data collection
+  aria_label_call_to_action_module_coding_w_poetry: See the Coding with Poetry module
+    details
+  aria_label_call_to_action_module_coding_time_capsule: See the Coding a Time Capsule
+    module details
+  aria_label_call_to_action_module_simulating_marine_ecosystem: See the Simulating
+    a Marine Ecosystem module details
+  aria_label_call_to_action_module_coding_geometric_star_quilt: See the Coding a Geometric
+    Star Quilt module details
+  aria_label_call_to_action_module_modeling_animal_adaptations: See the Modeling Animal
+    Adaptations module details
+  aria_label_call_to_action_module_coding_book_covers: See the Coding Book Covers
+    module details
+  aria_label_call_to_action_module_coding_interactive_maps: See the Coding Interactive
+    Maps module details
+  aria_label_call_to_action_csf_course_a: See Course A details
+  aria_label_call_to_action_csf_course_b: See Course B details
+  aria_label_call_to_action_csf_course_c: See Course C details
+  aria_label_call_to_action_csf_course_d: See Course D details
+  aria_label_call_to_action_csf_course_e: See Course E details
+  aria_label_call_to_action_csf_course_f: See Course F details
+  aria_label_call_to_action_ai_pl_101_videos: Watch AI 101 for Teachers videos
+  aria_label_call_to_action_ai_teaching_module: Explore the Teaching AI and Machine
+    Learning module
+  aria_label_call_to_action_how_ai_works_lesson_01: See the Introduction to Machine
+    Learning lesson details
+  aria_label_call_to_action_how_ai_works_lesson_02: See the Computer Vision lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_03: See the Neural Networks lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_04: See the Chatbots and Large Language
+    Models lesson details
+  aria_label_call_to_action_how_ai_works_lesson_05: See the Generative Images lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_06: See the Algorithmic Bias lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_07: See the Our AI Code of Ethics
+    lesson details
+  video_title_professional_learning_program: Code.org's Professional Learning Program
+  curriculum_name_csf: Computer Science Fundamentals
+  curriculum_name_csf_02: Any CS Fundamentals (Course A-F)
+  curriculum_name_csf_a_f: CS Fundamentals A-F
+  curriculum_name_csf_express: Express
+  curriculum_name_csf_express_pre_reader: Pre-Reader Express
+  curriculum_name_csf_course_a: Course A
+  curriculum_name_csf_course_b: Course B
+  curriculum_name_csf_course_c: Course C
+  curriculum_name_csf_course_d: Course D
+  curriculum_name_csf_course_e: Course E
+  curriculum_name_csf_course_f: Course F
+  curriculum_name_csf_no_device: No Device/Unplugged
+  curriculum_name_csf_self_paced: Self-paced lesson
+  curriculum_name_csf_teacher_led: Teacher led lesson
+  curriculum_name_csd: Computer Science Discoveries
+  curriculum_name_csp: Computer Science Principles
+  curriculum_name_csc: Computer Science Connections
+  curriculum_name_csa: AP® Computer Science A
+  curriculum_name_csc_02: Any CS Connections Module
+  curriculum_name_ai: AI & Machine Learning
+  curriculum_name_maker_cp: Creating Apps with Devices (Circuit Playground)
+  curriculum_name_maker_microbit: Creating Apps with Devices (micro:bit)
+  curriculum_name_creating_apps_with_devices: Creating Apps with Devices
+  curriculum_name_poetry: Coding with Poetry
+  curriculum_name_dance_party: Dance Party
+  curriculum_name_problem_solving_computing: Problem Solving & Computing
+  curriculum_name_web_development: Web Development
+  curriculum_name_interactive_animations_games: Interactive Animations & Games
+  curriculum_name_design_process: The Design Process
+  curriculum_name_data_society: Data & Society
+  curriculum_desc_csf_express: Learn to create computer programs, develop problem-solving
+    skills, and work through fun challenges! Make games and creative projects to share
+    with friends, family, and teachers.
+  curriculum_desc_csf_express_pre_reader: Learn the basics of drag-and-drop block
+    coding by solving puzzles and creating animated scenes. Make art and simple games
+    to share with friends, family, and teachers.
+  curriculum_desc_csf_course_a: Program using commands like loops and events. Teach
+    students to collaborate with others, investigate different problem-solving techniques,
+    persist in the face of challenging tasks, and learn about internet safety.
+  curriculum_desc_csf_course_b: Through unplugged activities and a variety of puzzles,
+    students will learn the basics of programming, collaboration techniques, investigation
+    and critical thinking skills, persistence in the face of difficulty, and internet
+    safety.
+  curriculum_desc_csf_course_c: Create programs with sequencing, loops, and events.
+    Investigate problem-solving techniques and develop strategies for building positive
+    communities both online and offline. Create interactive games that students can
+    share.
+  curriculum_desc_csf_course_d: Review of the concepts found in earlier courses, including
+    loops and events. Afterward, students will develop their understanding of algorithms,
+    nested loops, while loops, conditionals, and more.
+  curriculum_desc_csf_course_e: Make fun, interactive projects that reinforce learning
+    about online safety. Engage in more complex coding such as nested loops, functions,
+    and conditionals.
+  curriculum_desc_csf_course_f: Look at how users make choices in the apps they use.
+    Make a variety of Sprite Lab apps that also offer choices for the user. Learn
+    more advanced concepts, including variables and “for” loops.
+  curriculum_desc_problem_solving_computing: Use a problem-solving process to tackle
+    puzzles, challenges, and real-world scenarios. Learn about computer input, output,
+    storage, and processing to aid in problem-solving.
+  curriculum_desc_web_development: Create and share content on web pages, exploring
+    the creative potential of the web. Develop critical consumption skills, problem-solving
+    abilities, and teamwork while programming.
+  curriculum_desc_interactive_animations_games: Create programmatic images, animations,
+    interactive art, and games. Gain familiarity with programming concepts and the
+    design process.
+  curriculum_desc_design_process: Focus on considering the societal impact of computing.
+    Through design challenges, students empathize with others' needs and develop solutions.
+  curriculum_desc_data_society: Emphasizes the role of data in problem-solving and
+    the assistance of computers in this process. Cover representation systems and
+    associated challenges. Discover how data collections aid problem-solving.
+  curriculum_desc_creating_apps_with_devices: Explore the role of physical devices
+    in computing. Develop programs that utilize hardware inputs and outputs. There
+    is a version of this unit for both the micro:bit and Circuit Playground.
+  collection_hardware: Focus on Hardware
+  collection_hardware_desc: Empowers students to use data and physical devices to
+    solve problems.
+  collection_design_purpose: Focus on Design with Purpose
+  collection_design_purpose_desc: Empowers students to think about the needs of users
+    while designing websites and apps for devices.
+  collection_impact_society: Focus on Impact in Society
+  collection_impact_society_desc: Empowers students to think about computer science
+    as a tool to solve problems while considering the broader social impacts.
+  collection_creativity: Focus on Creativity
+  collection_creativity_desc: Empowers students to be creative as they learn to create
+    websites, animations and games, and apps for devices.
+  collection_coding: Focus on Coding
+  collection_coding_desc: Empowers students to build their coding skills in web development,
+    games and animation, and creating apps for devices.
+  collection_data: Focus on Data
+  collection_data_desc: Empowers students to use data to solve problems.
+  module_label_ages: 'Ages:'
+  module_label_grades: 'Grades:'
+  module_label_curriculum: 'Curriculum:'
+  module_label_curriculum_pure: Curriculum
+  module_label_duration: 'Duration:'
+  module_label_prerequisites: 'Prerequisites:'
+  module_label_level: 'Level:'
+  module_label_topics: 'Topics:'
+  module_label_devices: 'Devices:'
+  module_label_tools: 'Programming Tools:'
+  module_label_professional_learning: 'Professional Learning:'
+  module_label_languages: 'Languages Supported:'
+  module_label_accessibility_features: 'Accessibility:'
+  module_label_educator_tool: Educator tool
+  module_label_educator_course: Educator course
+  module_label_student_tool: Student tool
+  module_label_student_product: Product
+  module_label_student_content_resources: Content & resources
+  module_label_new: New
+  module_label_coming_soon: Coming soon
+  module_label_video_series: Video series
+  module_label_self_paced: Self-paced module
+  module_ages_5_10: 5-10
+  module_ages_11_18: 11-18
+  module_ages_7_18: 7-18
+  module_grade_k_5: K-5
+  module_grade_k_1: K-1
+  module_grade_2_5: 2-5
+  module_grade_3_5: 3-5
+  module_grade_3_8: 3-8
+  module_grade_6_12: 6-12
+  module_grade_6_10: 6-10
+  module_grade_9_12: 9-12
+  module_grade_kindergarten: Kindergarten
+  module_grade_grade_01: Grade 1
+  module_grade_grade_02: Grade 2
+  module_grade_grade_03: Grade 3
+  module_grade_grade_04: Grade 4
+  module_grade_grade_05: Grade 5
+  module_grade_k_5_teachers: K-5 Teachers
+  module_grade_6_10_teachers: 6-10 Teachers
+  module_grade_9_12_teachers: 9-12 Teachers
+  module_level_beginner: Beginner
+  module_level_intermediate: Intermediate
+  module_duration_45_mins: 45 minutes
+  module_duration_1_hr: 1 hour
+  module_duration_2_hrs: 2 hours
+  module_duration_3_hrs: 3 hours
+  module_duration_5_hrs: 5 hours
+  module_duration_8_hrs: 8 hours
+  module_duration_20_hrs: 20 hours
+  module_duration_35_hrs: 35 hours
+  module_duration_lesson: Lesson
+  module_duration_week: Week
+  module_duration_month: Month
+  module_duration_quarter: Quarter
+  module_duration_semester: Semester
+  module_duration_school_year: School Year
+  module_duration_month_quarter: Month or Quarter
+  module_duration_month_semester_year: Month, Semester, or Year
+  module_prerequisites_none: None
+  module_prerequisites_maker_cp: Access to a Circuit Playground
+  module_prerequisites_maker_microbit: Access to a micro:bit
+  module_label_teaching_csf: Teaching Computer Science Fundamentals
+  module_label_teaching_csd: Teaching Computer Science Discoveries
+  module_label_teaching_csp: Teaching Computer Science Principles
+  module_label_teaching_csc: Teaching Computer Science Connections
+  module_label_teaching_ai: Teaching AI and Machine Learning
+  module_label_teaching_maker_cp: Teaching Creating Apps with Devices (Circuit Playground)
+  module_label_teaching_maker_microbit: Teaching Creating Apps with Devices (micro:bit)
+  module_subject_english_language_arts: English Language Arts
+  module_subject_social_studies: Social Studies
+  module_subject_science: Science
+  module_subject_math: Math
+  module_name_coding_w_poetry: Coding with Poetry
+  module_name_coding_time_capsule: Coding a Time Capsule
+  module_name_simulating_marine_ecosystem: Simulating a Marine Ecosystem
+  module_name_coding_geometric_star_quilt: Coding a Geometric Star Quilt
+  module_name_modeling_animal_adaptations: Modeling Animal Adaptations
+  module_name_coding_book_covers: Coding Book Covers
+  module_name_coding_interactive_maps: Coding Interactive Maps
+  module_desc_coding_w_poetry: Explore the intersection of coding and language arts
+    by creating interactive poems, illustrating the mood and tone with code.
+  module_desc_coding_time_capsule: Create a digital time capsule to capture and preserve
+    memories for the future.
+  module_desc_simulating_marine_ecosystem: Use coding to simulate a marine ecosystem,
+    exploring the interdependencies between different organisms and their environment.
+  module_desc_coding_geometric_star_quilt: Learn code to create geometric patterns
+    in stunning star quilts, blending mathematical concepts with creative expression.
+  module_desc_modeling_animal_adaptations: Use code to model animal adaptations, deepening
+    your understanding of how different species have evolved to survive in their environments.
+  module_desc_coding_book_covers: Use code to create an animated cover of a book,
+    using sprites and text to convey characters, setting, plot, and more.
+  module_desc_coding_interactive_maps: Use coding to develop a map that tells a story,
+    allowing you to explore geographic information in an engaging and interactive
+    way.
+  values_01: We believe computer science is foundational for all students
+  values_02: We are committed to equity, access, and opportunity
+  values_03: We believe in the power of a collaborative education community
+  values_04: We are agile and responsive to feedback
+  values_05: We act with integrity and transparency
+  values_06: We believe broad impact requires thinking big and acting holistically
+  heading_professional_learning: Professional learning that meets your needs
+  heading_additional_resources: Additional resources
+  heading_support_and_questions: Support and questions
+  heading_faq: Cuestións frecuentes
+  heading_curriculum_at_a_glance: Curriculum at a glance
+  heading_curricula_at_a_glance: Curricula at a glance
+  heading_engaging_projects: Engaging projects and activities that inspire learning
+  heading_build_apps: Build apps
+  heading_widgets: Widgets
+  heading_choice_levels: Choice levels
+  heading_year_long_intro_course: Year-long introductory course
+  heading_flexible_units: Flexible units
+  heading_collections: Collections
+  heading_find_a_module: Find a module for your classroom
+  heading_no_devices: No devices? We have you covered
+  heading_java_lab: Java Lab
+  heading_objects_first: Objects first
+  heading_these_lessons_will: 'These lessons will:'
+  professional_learning_section_desc: Get the support you need as you prepare to teach.
+    Teachers love it, with over 90% ranking it the best professional development ever!
+  professional_learning_section_desc_short: Get the support you need as you prepare
+    to teach.
+  professional_learning_section_desc_self_paced: Just in time support that allows
+    you to prepare to teach with confidence on your schedule.
+  professional_learning_section_block_facilitator_led_workshops: Our highly supportive
+    Professional Learning Program will bring you together with a group of teachers
+    to learn from each other as well as expert facilitators as you take on the first
+    year of teaching the free curriculum to your students. In-person and virtual workshops
+    are starting this summer.
+  professional_learning_section_block_facilitator_led_workshops_csf: Join local teachers
+    for inspiring and hands-on support to implement computer science in your classroom.
+    Our Regional Partners offer high-quality, one-day Code.org workshops for individual
+    teachers or for schoolwide PD. Sign up for a professional development workshop
+    near you!
+  professional_learning_section_block_csa: Our highly supportive Professional Learning
+    Program will bring you together with a group of teachers to learn from each other
+    as well as expert facilitators as you take on the first year of teaching the free
+    CSA curriculum to your students.
+  professional_learning_section_workshops_starting: In-person and virtual workshops
+    starting this summer.
+  no_devices_section_subhead: Go ahead, cut the cord (for a while)!
+  no_devices_section_desc: CS education does not always need to be in front of a screen
+    and device access shouldn't be a barrier to learning computer science concepts.
+  support_and_questions_section_subhead: Still have questions? Reach out to us! We
+    are here to help.
+  support_and_questions_section_desc: Our support team is here to answer any questions
+    you may have about starting teaching with Code.org. You can also ask other teachers
+    about their experience on our teacher forums.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -223,6 +623,18 @@ gl:
   teachai_launch_blog_desc_02: TeachAI aims to integrate AI education into primary
     and secondary curricula around the world through new reports, policy recommendations,
     and public engagement opportunities.
+  ai_pl_callout_title: AI 101 for Teachers
+  ai_pl_callout_desc_01: This is a free, foundational online learning series for any
+    teacher and educator interested in the groundbreaking world of artificial intelligence
+    (AI) and its transformative potential in education. Partners Code.org, ETS, ISTE
+    and Khan Academy are offering engaging sessions with renowned experts that will
+    demystify AI, explore responsible implementation, address bias, and showcase how
+    AI-powered learning can revolutionize student outcomes. Join us on this journey
+    of exploration and empowerment, and unlock the future of teaching with and about
+    AI.
+  ai_pl_callout_desc_02: Code.org, ETS, ISTE and Khan Academy are partnering to bring
+    educators a professional learning series that supports teachers as they adapt
+    to AI’s impacts on the classroom.
   ai_hero_heading: Artificial intelligence isn't magic… It's just code!
   ai_hero_desc: Demystify artificial intelligence (AI) by learning how it's changing
     the ways we live, work, and learn.
@@ -266,6 +678,11 @@ gl:
   ai_curriculum_grades_03: 'Grade Levels: 3-12'
   ai_curriculum_duration_03: 'Duration: 1 hour'
   ai_curriculum_btn_aria_label_03: Try the AI for Oceans activity
+  ai_curriculum_title_04: How AI Works
+  ai_curriculum_desc_04: These lessons supplement the How AI Works video series. Each
+    lesson is paired with a single video from the series, diving-deeper into the concepts
+    introduced in the videos.
+  ai_curriculum_btn_aria_label_04: Explore How AI Works lessons
   ai_carousel_heading: 'What teachers say about AI with Code.org:'
   ai_carousel_quote_01: This lesson also gave my students the opportunity to see that
     there is an element of opinion in classification systems. Later, when we started
@@ -282,11 +699,14 @@ gl:
   ai_pl_list_04: Consider real-world implications of AI and machine learning.
   ai_pl_list_05: Explore end of chapter projects.
   ai_pl_duration: 'Duration: 2 hours'
+  ai_pl_title: Teaching AI and Machine Learning
+  ai_pl_desc: Introduction to artificial intelligence and machine learning. Train
+    a machine learning model using AI Lab. and engage with machine learning apps.
+    Consider real-world implications of AI and machine learning.
   ai_video_series_title: How AI Works
-  ai_video_series_desc: With an introduction by Microsoft CEO Satya Nadella, this
-    series of short videos will introduce you to how artificial intelligence works
-    and why it matters. Then delve into issues like algorithmic bias and the ethics
-    of AI decision-making.
+  ai_video_series_desc: This series of short videos will introduce you to how artificial
+    intelligence works and why it matters. Then delve into issues like algorithmic
+    bias and the ethics of AI decision-making.
   ai_resources_heading: Additional resources
   ai_resources_desc: Interested in learning more about AI? Here are some additional
     resources that can help extend your students' learning.
@@ -305,6 +725,878 @@ gl:
     throughout K-12. Offer free professional development, webinars, conference presentations,
     and peer-to-peer learning opportunities.
   ai_resources_btn_aria_label_03: Explore the AI for Teachers website
+  ai_pl_101_hero_heading: AI 101 for Teachers
+  ai_pl_101_hero_desc: Discover the groundbreaking world of artificial intelligence
+    (AI) and its transformative potential in education with our foundational online
+    learning series for teachers.
+  ai_pl_101_hero_desc_02: A comprehensive online learning series for teachers.
+  ai_pl_101_hero_presented: Presented by
+  ai_pl_101_intro_heading: What is AI 101 for Teachers?
+  ai_pl_101_intro_text: AI 101 for Teachers is a free, foundational online professional
+    learning series for any teacher and educator interested in the groundbreaking
+    world of artificial intelligence (AI) and its transformative potential in education.
+    Partners Code.org, ETS, ISTE, Khan Academy are offering engaging sessions with
+    renowned experts that will demystify AI, explore responsible implementation, address
+    bias, and showcase how AI-powered learning can revolutionize student outcomes.
+    Join us on this journey of exploration and empowerment, and unlock the future
+    of teaching with and about AI.
+  ai_pl_101_partnership_between: A partnership between
+  ai_pl_101_join_email_title: Sign up for early access to AI 101 for Teachers
+  ai_pl_101_pro_join_email_desc: Be the first to hear when each session launches.
+    Get updates on AI resources from Code.org, ETS, ISTE and Khan Academy.
+  ai_pl_101_explore_title: AI-related resources
+  ai_pl_101_explore_desc: We have a variety of additional resources for you from Code.org,
+    ETS, ISTE and Khan Academy to support teachers in this new and growing field.
+    Check them out below.
+  ai_pl_101_explore_title_1: Khanmigo
+  ai_pl_101_explore__desc_1: Khan Academy’s AI-powered teaching aid allows teachers
+    to stop spending time on prep tasks they don’t love, and focus on what they do
+    love—teaching.
+  ai_pl_101_explore__button_1: Try Khanmigo
+  ai_pl_101_explore_title_2: AI Explorations for Educators
+  ai_pl_101_explore__desc_2: This 15-hour online course from ISTE guides K-12 educators
+    on the essentials of AI for teaching and learning. The course is offered three
+    times per year and is fully asynchronous with the ongoing support of an expert
+    instructor.
+  ai_pl_101_explore__button_2: Start the course
+  ai_pl_101_explore_title_3: AI Curricula
+  ai_pl_101_explore__desc_3: In Code.org’s How AI Works videos and lessons for grades
+    6-12, students learn basic principles about AI and use fun activities to see how
+    computers learn from data, while reflecting on the ethical implications of AI.
+  ai_pl_101_explore__button_3: Explore curricula
+  ai_pl_101_explore_title_4: ETS’s Criterion Interactive
+  ai_pl_101_explore__desc_4: 'This AI-powered writing platform coaches learners through
+    five critical phases of the writing process: Prepare/Plan, Write, Revise, Edit,
+    Reflect, providing iterative feedback throughout the writing experience.'
+  ai_pl_101_explore__button_4: Explore tool
+  ai_pl_101_video_title_1: Fireside Chat with Sal Khan and Hadi Partovi
+  ai_pl_101_video_desc_1: "Join Sal Khan (Khan Academy) and Hadi Partovi (Code.org)
+    for a fireside chat on embracing artificial intelligence in the classroom. Expect
+    a lively discussion including some of the most controversial topics \tsurrounding
+    AI today."
+  ai_pl_101_video_title_2: Demystifying AI for Educators
+  ai_pl_101_video_desc_2: Introduction to the fundamentals of Artificial Intelligence
+    which will equip you with the foundational knowledge to understand the profound
+    impact of AI in our society and its increasing relevance to the field of education.
+    You will gain practical insights into leveraging AI for tasks in the classroom,
+    and saving time on administrative tasks.
+  ai_pl_101_video_title_3: Transforming Learning with AI
+  ai_pl_101_video_desc_3: Explore the intersection of AI and education. This session
+    explores how AI can be combined with pedagogy to enhance student learning. It
+    is a must-attend for educators seeking to leverage AI to transform their teaching
+    practices to enrich their students’ learning experiences.
+  ai_pl_101_video_title_4: Ensuring a Responsible Approach to AI
+  ai_pl_101_video_desc_4: Explore the ethical considerations and best practices for
+    incorporating artificial intelligence in educational environments. This session
+    will provide concrete strategies, resources, and real-world examples, all aimed
+    at understanding the potential biases of AI, and the ethical considerations that
+    come with it.
+  ai_pl_101_video_title_5: Bringing AI to the Classroom
+  ai_pl_101_video_desc_5: This session focuses on teaching about AI, evaluating and
+    utilizing AI educational tools, and leveraging AI for student assessment. With
+    a rich blend of theory, practical examples, and resources, it aims to empower
+    educators to navigate the AI landscape and enhance student learning experiences.
+  ai_pl_101_video_desc_6: 'Learn more about the new technology driving the large changes
+    in AI, featuring two new videos on Large Language Models (like ChatGPT) and Generative
+    AI. Hear how these new technologies work directly from the experts: Mira Murati,
+    CTO of OpenAI, and Cristóbal Valenzuela, CEO of RunwayML.'
+  how_ai_works_hero_heading: How AI Works
+  how_ai_works_hero_desc: Dive into the world of AI with "How AI Works," our video
+    series and accompanying lessons!
+  how_ai_works_intro_desc: This series of short videos and accompanying in-classroom
+    lessons will introduce you and your students to how artificial intelligence works
+    and why it matters. You can choose individual lessons based on topic, explore
+    the whole series of topics in one class or teach all 7 lessons to give a deeper
+    dive.
+  how_ai_works_intro_list_01: Introduce you to artificial intelligence and machine
+    learning
+  how_ai_works_intro_list_02: Dive into how generative AI works, including large language
+    models (LLMs) and image generation
+  how_ai_works_intro_list_03: Explore bias, ethics, privacy and the responsible use
+    of AI
+  how_ai_works_intro_list_04: Touch on real world applications of AI, including computer
+    vision
+  how_ai_works_lessons_heading: AI lessons for your class
+  how_ai_works_lesson_title_01: Introduction to Machine Learning
+  how_ai_works_lesson_desc_01: Learn about a form of artificial intelligence called
+    machine learning and how they can use the Problem Solving Process to help train
+    a robot to solve problems. Participate in machine learning activities where a
+    robot is learning how to detect patterns in fish.
+  how_ai_works_lesson_title_02: Computer Vision
+  how_ai_works_lesson_desc_02: Learn how computer vision works. Watch a video explaining
+    computer vision and how a computer "sees". Then design an algorithm that uses
+    a network to decide what number the seven segment display is displaying and test
+    it.
+  how_ai_works_lesson_title_03: Neural Networks
+  how_ai_works_lesson_desc_03: Learn how neural networks work. Use a widgets to explore
+    neural networks in a hands on way. Watch a video explaining neural networks. Finally
+    discuss the need for diverse perspectives when creating recommendation systems.
+  how_ai_works_lesson_title_04: Chatbots and Large Language Models
+  how_ai_works_lesson_desc_04: Learn what an Large Language Model (LLM) is and how
+    it works, then use an LLM to co-create a text with AI. Finally, discuss about
+    whether or not LLMs are intelligent or creative.
+  how_ai_works_lesson_title_05: Generative Images
+  how_ai_works_lesson_desc_05: Learn how AI can generate images, then explore a diffusion
+    AI widget and discuss whether or not these models are creative.
+  how_ai_works_lesson_title_06: Algorithmic Bias
+  how_ai_works_lesson_desc_06: Practice cropping images to uncover the bias underlying
+    the Twitter cropping algorithm, then read and watch a video about the discovery
+    of this biased algorithm. Finally, discuss ways to recognize and reduce bias in
+    algorithms.
+  how_ai_works_lesson_title_07: Our AI Code of Ethics
+  how_ai_works_lesson_desc_07: Conduct research using articles and videos that expose
+    ethical pitfalls in an artificial intelligence area of their choice. Assemble
+    a class-wide "Our AI Code of Ethics" resource for AI creators and legislators
+    everywhere.
+  how_ai_works_lessons_in_a_day_title: How AI Works in a Day
+  how_ai_works_lessons_in_a_day_desc: Only have a day? There's also the option to
+    introduce the whole series to students in a single day. Perfect for any subject-area
+    teacher looking to introduce students to AI, or even for as a lesson for a guest
+    teacher.
+  how_ai_works_lessons_in_a_day_desc_02: Introduce all of the "How AI Works" videos
+    in one day. Students follow along with each video by matching vocabulary from
+    the video, then answering a reflection question about each video.
+  how_ai_works_resources_desc: Interested in learning more about AI? Here are some
+    additional resources that can help extend you and your students' learning.
+  ai_vid_intro_caption: Introducing How AI Works
+  ai_vid_chatbots_caption: How Chatbots and Large Language Models Work
+  ai_vid_creativity_caption: Does AI Have Creativity and Imagination?
+  ai_vid_mlintro_caption: What is Machine Learning?
+  ai_vid_trainingdata_caption: Training Data & Bias
+  ai_vid_neuralnetworks_caption: Neural Networks
+  ai_vid_computervision_caption: Computer Vision
+  ai_vid_ethics1_caption: 'Ethics & AI: Equal Access and Algorithmic Bias'
+  ai_vid_ethics2_caption: 'Ethics & AI: Privacy and the Future of Work'
+  self_paced_pl_hero_heading: Self-Paced Professional Learning For Educators
+  self_paced_pl_hero_desc: Professional learning offerings to support teachers in
+    every stage of their computer science teaching journey.
+  self_paced_pl_intro_heading: Professional learning on your timeline
+  self_paced_pl_intro_desc: Code.org is pleased to offer self-paced modules for teachers.
+    These modules are available at no cost to any educator with a Code.org account
+    worldwide!
+  self_paced_pl_intro_list_title_01: Flexibility and Convenience
+  self_paced_pl_intro_list_desc_01: Engage with the material at your own pace and
+    on your own time.
+  self_paced_pl_intro_list_title_02: Personalized Learning Experience
+  self_paced_pl_intro_list_desc_02: Focus on the areas that are most important to
+    your needs and teaching context.
+  self_paced_pl_intro_list_title_03: Access to High-Quality Content
+  self_paced_pl_intro_list_desc_03: Get the latest best practices, research, and strategies
+    for teaching computer science effectively.
+  self_paced_pl_callout: Looking for facilitator-led professional learning options?
+  self_paced_pl_callout_link: Check out our in-person and virtual workshops.
+  self_paced_pl_modules_heading: Self-paced professional learning modules
+  self_paced_pl_modules_desc: Through reading, viewing videos, completing interactive
+    puzzles, and reflecting on your learning, you will develop your own understanding
+    while preparing to teach computer science in your classroom.
+  self_paced_pl_modules_list_heading: 'After completing one of these modules, participants
+    will:'
+  self_paced_pl_modules_list_01: Learn how to navigate the Code.org website and teacher
+    tools.
+  self_paced_pl_modules_list_02: Gain a high level understanding of the content, tools,
+    and pedagogy.
+  self_paced_pl_modules_list_03: Prepare to begin teaching the curriculum with your
+    students.
+  self_paced_pl_facilitator_heading: Want to take your learning further?
+  self_paced_pl_facilitator_subheading: Facilitator-led workshops
+  self_paced_pl_facilitator_desc: In addition to the above self-paced online modules,
+    facilitator-led professional learning workshops are available for teachers. Join
+    the more than 100,000 teachers who have participated in our workshops. More than
+    90% of attendees would recommend our program to other teachers.
+  self_paced_pl_facilitator_call_to_action: Explore facilitator-led professional learning
+  self_paced_pl_resources_heading: Additional resources for teachers
+  self_paced_pl_resources_title_01: Code.org Regional Partner
+  self_paced_pl_resources_desc_01: Connect with your Code.org Regional Partner to
+    learn what's going on in your region. Your local Code.org Regional Partner provides
+    facilitator-led workshops to teachers, and can help guide your school or district
+    on implementation, certification, funding, and more.
+  self_paced_pl_resources_title_02: Computer Science Teachers Association
+  self_paced_pl_resources_desc_02: Join the world's largest Computer Science department!
+    Connect with over 19,000 CS teachers from around the globe, find strength in your
+    local community, and get support from other CS teachers.
+  self_paced_pl_resources_title_03: Amazon Future Engineer
+  self_paced_pl_resources_desc_03: Code.org has partnered with Amazon Future Engineer
+    to offer teachers at underserved schools a growing number of resources and benefits
+    at no cost! Find out if your school is eligible.
+  tenth_anniversary_homepage_blurb: Code.org is 10 years old!
+  tenth_anniversary_homepage_link: Check out the impact we've had.
+  tenth_anniversary_top_heading: Code.org celebrates 10 years!
+  tenth_anniversary_top_desc: We're celebrating a decade of empowering students to
+    explore computer science.
+  tenth_anniversary_timeline_heading: A decade of milestones
+  tenth_anniversary_timeline_scroll: Scroll for more!
+  tenth_anniversary_celebrate_heading: Celebrate with us
+  tenth_anniversary_began_video_heading: See where it all began
+  tenth_anniversary_began_video_title: What Most Schools Don't Teach
+  tenth_anniversary_testimonials_heading: What people are saying
+  tenth_anniversary_testimonials_01: I had a high school student come up to me four
+    years after I had her as an 8th grade middle schooler and she was excited that
+    she was going to study computer science in college. As a middle schooler she was
+    exposed to something new, and that planted a seed for her college years.
+  tenth_anniversary_testimonials_02: I joined Hour of Code in your inaugural year
+    and have been with you all the way! It has inspired me to seek out additional
+    coding opportunities for my students. Thanks for all you have done to get kids
+    engaged and excited about computer science! We wouldn't be where we are without
+    you!
+  tenth_anniversary_testimonials_03: I owe Code.org so much. I'm the teacher I am
+    today because of the tools you provide for educators like me. I've been using
+    Code.org since 2013 and I've been a facilitator since 2019. Thanks for making
+    me look good for these many years, Code.org. I really appreciate it.
+  farsi_page_top_heading: Code.org in Farsi
+  farsi_page_top_heading_02: Talent is everywhere, but opportunity is not. Code.org
+    in Farsi opens a door to an opportunity that would otherwise be closed.
+  farsi_page_top_desc: Today, there are over 110 million Farsi speakers worldwide.
+    While the majority of native speakers live in Iran, Afghanistan, and Tajikistan,
+    there are millions living as immigrants, migrants, and refugees around the world.
+    With the Code.org in Farsi initiative, Farsi-speaking students will have the same
+    access to our curricula that is already available to students in all other major
+    languages of the world.
+  farsi_page_global_heading: The Global Impact of Iranians in Education & Technology
+  farsi_page_global_desc_01: When you think of an algorithm, you may assume it's something
+    new, but the concept of an algorithm was discovered in Iran over 1300 years ago.
+    “Algorithm” is named after its inventor, the mathematician Al Khwarizmi, who lived
+    in the land formerly known as Persia and now known as Iran. Once the epicenter
+    of mathematics, science, philosophy, and medicine, Iran has made profound advances
+    and impacts in technology.
+  farsi_page_global_desc_02: Beyond the borders of the country itself, Iranians around
+    the world have contributed in countless ways to science and technology — as co-founders
+    or CEOs of technology companies such as Uber, eBay, Intuit, and Dropbox, or inventing
+    technologies such as LASIK surgery or JPEG compression, or in scientific, academic,
+    or engineering roles around the globe.
+  farsi_page_global_desc_03: Finally, Code.org is led by Iranian American Hadi Partovi
+    and has grown to become one of the largest education nonprofits globally.
+  farsi_timeline_heading: Our Projected Timeline
+  farsi_timeline_stage_title_01: Stage 1
+  farsi_timeline_stage_title_02: Stage 2
+  farsi_timeline_stage_title_03: Stage 3
+  farsi_timeline_stage_title_04: Stage 4
+  farsi_timeline_stage_title_05: Stage 5
+  farsi_timeline_stage_01_list_01: Translate the CS Fundamentals curriculum, intended
+    for primary school students.
+  farsi_timeline_stage_01_list_02: Translate two CS Fundamentals Express courses for
+    students ages 8 to 18 and pre-readers.
+  farsi_timeline_stage_01_list_03: Translate 16 Hour of Code tutorials.
+  farsi_timeline_stage_01_desc: Stage 1 includes more than 500,000 words and will
+    be completed by October 2023.
+  farsi_timeline_stage_02_heading: Localize Videos
+  farsi_timeline_stage_02_list_01: Subtitle 128 videos (75 videos for CS Fundamentals
+    and 53 videos for Hour of Code).
+  farsi_timeline_stage_02_list_02: Dub 98 videos.
+  farsi_timeline_stage_02_list_03: Recreate 30 videos and hire native speakers in
+    appropriate cultural dress to reshoot videos.
+  farsi_timeline_stage_02_desc: Stage 2 can take one year to complete and will begin
+    in August 2023.
+  farsi_timeline_stage_03_list_01: Translate CS Discoveries, our middle school curriculum.
+  farsi_timeline_stage_03_list_02: Subtitle and dub 47 videos for CS Discoveries.
+  farsi_timeline_stage_03_list_03: Recreate 29 videos and hire native speakers in
+    appropriate cultural dress to reshoot videos.
+  farsi_timeline_stage_03_desc: Stage 3 will begin in October 2023 and will likely
+    be completed by July 2024.
+  farsi_timeline_stage_04_list_01: Translate CS Principles & AP Computer Science A,
+    our high school curriculum.
+  farsi_timeline_stage_04_list_02: Subtitle and dub videos for CS Principles & AP
+    Computer Science A.
+  farsi_timeline_stage_04_list_03: Recreate videos with native speakers, in appropriate
+    cultural dress.
+  farsi_timeline_stage_04_desc: Stage 4 can take one year to complete, likely to begin
+    in late 2024.
+  farsi_timeline_stage_05_heading: Additional Content
+  farsi_timeline_stage_05_list_01: Translate remaining curriculum, including CS Connections.
+  farsi_timeline_stage_05_list_02: Subtitle, dub, and reshoot any remaining videos
+    from all courses.
+  farsi_timeline_stage_05_desc: Stage 5 can take one year to complete, likely to begin
+    in 2025.
+  farsi_page_supporters_heading: Iranian Americans for CS Education
+  farsi_page_supporters_desc: 'Thank you to the following prominent Iranian American
+    leaders who have come together to support computer science education, with a lead
+    gift to Code.org in Farsi:'
+  farsi_page_supporters_desc_02: We invite you to celebrate Iranian contributions
+    in technology by supporting Code.org and computer science education so that every
+    student in every school has the opportunity to learn computer science.
+  farsi_page_founders_heading: Our Founders' Story
+  farsi_page_founders_slide_01: Born in Iran, Hadi and Ali Partovi grew up during
+    the Iran-Iraq war. Their neighborhood in Tehran was bombed by Iraqi fighter jets.
+  farsi_page_founders_slide_02: When they were 9 years old, their father, a physics
+    professor, brought home a Commodore 64 computer from a trip abroad. This computer
+    was their escape from their surroundings – they learned how to code and create
+    apps, games, and music.
+  farsi_page_founders_slide_03: They immigrated to the United States at age 11. Soon
+    after they turned 15, they spent their summers working as software engineers to
+    help pay their way through high school and college.
+  farsi_page_founders_slide_04: Upon graduating from Harvard University with Masters
+    degrees in computer science, Hadi and Ali pursued careers in technology.
+  farsi_page_founders_slide_05: They attained success in the technology industry and
+    founded numerous tech businesses, accomplishing the American dream. Additionally,
+    they became prolific angel investors, backing companies such as Facebook, Uber,
+    Airbnb, and Dropbox, among others.
+  farsi_page_founders_slide_06: In 2013, Hadi and Ali launched the education nonprofit
+    Code.org, which Hadi continues to lead as CEO. Since its inception, Code.org has
+    started a massive movement to teach computer science and coding to K-12 students
+    globally. It is also the largest provider of computer  science curricula in the
+    world, with over 80 million student users in 180 countries.
+  farsi_page_support_heading: Your Support and Your Voice
+  farsi_page_support_heading_02: Thank you for your interest in Code.org in Farsi.
+  farsi_page_support_get_updates: "[Sign up](%{form_url}) to learn more about this
+    specific project and get updated on its staged release dates."
+  farsi_page_support_contact_us: If you'd like to support this initiative or learn
+    more, please [contact us](%{contact_link}) or donate below.
+  farsi_page_compliance_heading: Compliance In Support Of Farsi Translations
+  farsi_page_compliance_desc: As a U.S. nonprofit, Code.org is subject to laws regarding
+    sanctions with Iran. After consulting with U.S. legal counsel experienced in the
+    Iranian Sanctions and Translations Regulations (ITSR), Code.org believes that
+    it may fund, prepare, and distribute the Farsi Translations of CS Curriculum in
+    the United States and elsewhere around the world, including within Iran. The ITSR
+    provides an exemption for “information and informational materials” (the IIM Exemption)
+    and Code.org believes that this exemption will fully shield its funding, preparation,
+    and distribution of the Farsi Translations and thus enable its Farsi Translations
+    effort to proceed in full compliance with U.S. economic sanctions requirements.
+  resources_tabs_heading: Resources that support you every step of the way
+  resources_tabs_desc: "[Sign up for a Code.org account](%{sign_up_url}) to get access
+    to materials that will help you teach computer science with confidence. Code.org
+    has extensive resources designed to support educators, even those without prior
+    CS teaching experience."
+  resources_tabs_tab_label_lesson_plans: Lesson Plans
+  resources_tabs_tab_label_videos: Vídeos
+  resources_tabs_tab_label_slides: Slides
+  resources_tabs_tab_label_assessments: Assessments
+  resources_tabs_tab_label_tools: Programming Tools
+  resources_tabs_lesson_plans_subhead: Get step-by-step guidance, learning objectives,
+    and assessment strategies for effective teaching.
+  resources_tabs_lesson_plans_desc: Helpful resources include slide decks, activity
+    guides, rubrics, and more — all organized in one place. Each lesson plan is accompanied
+    by tips for classroom implementation, differentiation ideas, and extension activities
+    to cater to students of all abilities.
+  resources_tabs_videos_heading: Instructional Videos
+  resources_tabs_videos_subhead: Watch easy-to-understand overviews of computer science
+    and programming concepts.
+  resources_tabs_videos_desc: Code.org video series are designed specifically to support
+    your classroom and are engaging and fun to watch.
+  resources_tabs_slides_heading: Slide Decks
+  resources_tabs_slides_subhead: We offer educators an organized, visually engaging,
+    and pedagogically sound framework to deliver computer science lessons.
+  resources_tabs_slides_desc: Code.org slide decks provide step-by-step instructions,
+    examples, and interactive activities that align with curricular objectives.
+  resources_tabs_assessments_subhead: Our curricula includes a comprehensive system
+    of formative and summative assessment resources.
+  resources_tabs_assessments_desc: These include rubrics, checklists, mini-projects,
+    end-of-chapter projects, student-facing rubrics, sample projects, and post-project
+    tests — all designed to support teachers in measuring student growth, providing
+    feedback, and evaluating student understanding.
+  resources_tabs_tools_subhead: Code.org's integrated development environments (IDEs)
+    cater to students of all skill levels.
+  resources_tabs_tools_desc: We offer a versatile and user-friendly platform that
+    supports a variety of programming paradigms. This enables learners to seamlessly
+    transition from block-based coding to text-based languages, and fosters creativity
+    and innovation.
+  teach_page_top_heading: Teach computer science & ignite possibilities
+  teach_page_top_desc_01: Tap into your students' full potential with Code.org's free
+    Computer Science (CS) curriculum.
+  teach_page_top_desc_02: Join the global community of over 2 million educators empowering
+    the next generation of innovators, problem solvers, and digital citizens! Code.org
+    supports teachers the whole way with professional learning, comprehensive curricula,
+    and support when you need it.
+  teach_page_why_teach_cs_heading: Why teach computer science with Code.org?
+  teach_page_why_teach_cs_block_heading_01: Build foundational CS skills
+  teach_page_why_teach_cs_block_desc_01: Like reading, writing, or math, computer
+    science is foundational to other pursuits. It teaches problem solving and critical
+    thinking, and enables students to actively participate in an increasingly digital
+    society.
+  teach_page_why_teach_cs_block_heading_02: Leverage comprehensive teaching resources
+  teach_page_why_teach_cs_block_desc_02: In-depth lesson plans and flexible professional
+    learning options ensure teachers with diverse backgrounds can successfully teach
+    computer science.
+  teach_page_why_teach_cs_block_heading_03: Unlock pathways for all students
+  teach_page_why_teach_cs_block_desc_03: Computing occupations are the largest, fastest-growing,
+    and best-paying sector of all new wages in the U.S.
+  teach_page_why_teach_cs_block_heading_04: Understand a world changed by AI
+  teach_page_why_teach_cs_block_desc_04: Teach students how AI works and how to use
+    it safely. Our Professional Learning encourages curiosity and confidence with
+    this evolving technology.
+  teach_page_why_teach_cs_heading_02: Start teaching computer science with Code.org
+    today!
+  teach_page_quote: When you utilize Code.org's curriculum, you have everything there
+    for you. It has the questions that you need to ask your students. It has the lessons
+    that you need to teach and it gives you guidance on how to do it. So if you come
+    in without any experience in computer science, it's there for you. If you have
+    experience with computer science and teaching it before, it's going to give you
+    a new way of approaching how to teach your students.
+  teach_page_free_curriculum_heading: Free, engaging curriculum
+  teach_page_free_curriculum_desc: We want you to bring Computer Science to your school
+    without worrying about the cost. That's why we have committed to our curriculum
+    offerings being free forever!
+  teach_page_free_curriculum_list_heading_01: Engaging curriculum for every grade
+    level
+  teach_page_free_curriculum_list_desc_01: Free, flexible, and fun curriculum with
+    offerings in over 67 languages.
+  teach_page_free_curriculum_list_heading_02: Adaptable, innovative curriculum
+  teach_page_free_curriculum_list_desc_02: Code.org offers everything from full-year
+    curricula to single-unit activities. Plus, we update our curricula annually to
+    support best practices and areas of focus, and create new offerings that teach
+    current in-demand topics.
+  teach_page_free_curriculum_list_heading_03: Structured curriculum mapped to national
+    standards
+  teach_page_free_curriculum_list_desc_03: Each curriculum is mapped to at least one
+    set of national standards, including CSTA, Next Generation Science Standards,
+    and Common Core.
+  teach_page_free_curriculum_heading_02: 'Explore our curriculum offerings for different
+    grade levels:'
+  teach_page_resources_heading: Resources that support you every step of the way
+  teach_page_resources_desc: Signing up for a Code.org account gives you access to
+    materials that will help you teach computer science with confidence. Code.org
+    has extensive resources designed to support educators, even those without prior
+    CS teaching experience. Click the tabs to learn more about the resources.
+  teach_page_curriculum_heading: Curriculum offerings students love
+  teach_page_curriculum_desc: There are so many amazing offerings to explore. Here
+    are just a few of our new and popular offerings.
+  teach_page_pl_offerings_english_header: Professional learning offerings that meet
+    your needs
+  teach_page_pl_offerings_intl_header: Explore professional learning offerings
+  teach_page_pl_offerings_list_heading_self_paced: Self-Paced Online Modules
+  teach_page_pl_offerings_list_desc_self_paced: These modules allow you to engage
+    at your own pace and on your own time while focusing on areas most important to
+    your needs and teaching context.
+  teach_page_pl_offerings_list_heading_workshops_facilitator_led: Facilitator-led
+    Workshops
+  teach_page_pl_offerings_list_heading_workshops: Workshops
+  teach_page_pl_offerings_list_desc_workshops_en: With our Regional Partners as hosts
+    and our Code.org facilitators as guides, our workshops around the country focus
+    on reflection, discussion, and growth-oriented learning.
+  teach_page_pl_offerings_list_desc_workshops_intl: We are partnering with organizations
+    around the world to help bring Computer Science to all students. Learn more about
+    what professional learning opportunities may be available to teachers in your
+    country.
+  teach_page_pl_offerings_list_heading_forums: Teacher Community
+  teach_page_pl_offerings_list_desc_forums: A forum for teachers to ask questions
+    and share best practices, thoughts, ideas, and inspiration. Join a community of
+    amazing educators bringing computer science into classrooms around the world!
+  teach_page_additional_materials_heading: Additional supports and materials
+  teach_page_additional_materials_desc: Beyond curriculum and professional learning
+    we have many materials to support your classroom.
+  teach_page_additional_materials_list_heading_01: Career Education
+  teach_page_additional_materials_list_desc_01: Easy-to-use resources designed to
+    help you illuminate real-world connections and give students opportunities to
+    explore different career pathways.
+  teach_page_additional_materials_list_heading_02: Video Library
+  teach_page_additional_materials_list_desc_02: We offer a growing library of educational
+    videos for use by educators worldwide, online or in classrooms. Our goal is to
+    amplify our efforts beyond our own curriculum's reach.
+  teach_page_additional_materials_list_heading_03: Classroom Posters
+  teach_page_additional_materials_list_desc_03: Print these posters of diverse role
+    models to hang in your school and inspire your students to try computer science.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
+  csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
+  csp_page_intro_list_01: Culturally responsive pedagogy
+  csp_page_intro_list_02: Real-world problem investigation
+  csp_page_intro_list_03: Explainer videos with diverse presenters
+  csp_page_intro_list_04: Open-ended projects for more personalized learning
+  csp_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
+    Animation
+  csp_page_curriculum_glance_devices: Laptop, Chromebook
+  csp_page_curriculum_glance_tools: App Lab
+  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
+    Modules
+  csp_page_curriculum_glance_professional_languages: Galiza
+  csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
+    Closed captioning, Immersive reader
+  csp_page_quote: Can I just say I LOVE Code.org? It's my first year teaching AP CS
+    Principles (actually 1st year it is offered at our school) - and both the kids
+    and I are having a blast.
+  csp_page_projects_build_apps: Using the JavaScript language, students learn about
+    algorithms and program design as they create a series of real working, shareable
+    apps with App Lab.
+  csp_page_projects_widgets: Students get hands-on experience with concepts like binary
+    and pixels, text compression, cryptography, encoding and transmitting data through
+    computational widgets, which are directly integrated into the Code.org platform.
+  csp_page_projects_choice_levels: Students are offered the choice between a variety
+    of tasks that reinforce course objectives while allowing for differentiation and
+    customization, meeting students where they are at and encouraging them to go further.
+  csp_page_faq_question_01: Is CS Principles mapped to standards?
+  csp_page_faq_answer_01: CS Principles was written using the AP CS Principles Framework
+    and prepares students for the AP CS Principles exam. The curriculum has also been
+    aligned to the newly revised 2017 CSTA standards. [A summary of standards mappings
+    can be found here](%{standards_url}). A google sheet version of the standards
+    can be found at [CSP Standards](%{csp_standards_url}).
+  csp_page_faq_question_02: How much does it cost to teach CS Principles?
+  csp_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
+    for anyone, anywhere, to teach!
+  csp_page_faq_question_03: How/Where can I get professional development for CS Principles?
+  csp_page_faq_answer_03_01: Our Professional Learning Program offers year-round support.
+    The program kicks off with a 5-day summer workshop where you'll have an opportunity
+    to work hands-on with the curriculum and meet other teachers from your area. Throughout
+    the year, we offer forum support and follow-up workshops. You don't need any prior
+    computer science experience to get started. And teachers love it! 90% rank it
+    the best professional development ever. [Click here to apply and learn more](%{pl_url}).
+  csp_page_faq_answer_03_02: Have questions about professional development? [Provide
+    your contact information to a Regional Partner in your area](%{regional_partner_url}).
+  csp_page_faq_question_04: What is the recommended timing for teaching CS Principles?
+  csp_page_faq_answer_04_01: We recommend that CS Principles be taught as a full year
+    class, assuming that you meet with students daily or nearly daily for 45 or more
+    minutes.
+  csp_page_faq_answer_04_02: It is possible to teach CS Principles on a semester block
+    schedule, though we highly recommend this implementation only be used in the fall
+    semester. Since the AP Performance Tasks are due in late April and require 20
+    dedicated hours of class time to complete, most schools find there is not enough
+    time to complete the course on a block schedule in the spring.
+  csp_page_faq_question_05: What materials do I need for CS Principles?
+  csp_page_faq_answer_05_01: CS Principles requires that students have access to computers
+    with a modern web browser. At this time, our courses are not optimized for tablets
+    or mobile devices. For more details, [check out Code.org's technology requirements](%{it_url}).
+  csp_page_faq_answer_05_02: 'Many lessons have handouts that are designed to guide
+    students through activities. While these handouts are not required, we highly
+    recommend their use. In addition to handouts, several lessons call for specific
+    items. You can find these listed below as well as our suggestions for alternatives:'
+  csp_page_faq_answer_05_02_list_01: 'Unit 1, Lesson 2: Assortment of craft materials
+    for constructing physical devices. Recommendations: cups, string/yarn, construction
+    paper, flashlights, slinkies, noise makers, markers, and glue, etc. Alternative:
+    none.'
+  csp_page_faq_answer_05_02_list_02: 'Unit 2, Lesson 2: String for table groups to
+    build a network connecting them. Alternative: Students draw their network but
+    don''t actually build it.'
+  csp_page_faq_answer_05_02_list_03: 'Unit 3, Lesson 5: A handful of LEGO® blocks
+    for every pair of students. Alternative: Sticky notes, construction paper.'
+  csp_page_faq_answer_05_02_list_04: 'Unit 4, Lessons 1 & 5: Plastic bags, sticky
+    notes, dry erase markers. Alternative: Envelopes.'
+  csp_page_faq_answer_05_02_list_05: 'Unit 5, Lesson 1: Plastic bags, gallon-sized
+    plastic bags, sticky notes, dry erase markers, tape. Alternative: Envelopes.'
+  csp_page_faq_answer_05_02_list_06: 'Unit 6, Lessons 2 & 3: Sticky notes. Alternative:
+    Scraps of paper.'
+  csp_page_faq_answer_05_02_list_07: 'Unit 6, Lesson 4: Decks of cards. Alternative:
+    Any item that could be combined into two categories (e.g. change with even / odd
+    year).'
+  csp_page_faq_answer_05_02_list_08: 'Unit 7, Lessons 1 & 5: Sticky notes, envelopes,
+    plastic bags, file folders. Alternative: Scraps of paper, folders made of a folded
+    sheet of paper, etc.'
+  csp_page_faq_answer_05_03: The following supplies are completely optional but will
+    be useful to have on hand for various lessons.
+  csp_page_faq_answer_05_03_list_01: Graph paper
+  csp_page_faq_answer_05_03_list_02: Chart paper
+  csp_page_faq_answer_05_03_list_03: Markers
+  csp_page_faq_answer_05_03_list_04: Post-it notes
+  csp_page_faq_question_06: How can I access answer keys?
+  csp_page_faq_answer_06_01: With an approved teacher account, you can find answer
+    keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
+  csp_page_faq_answer_06_02: Teachers in our Professional Learning Program will automatically
+    be approved to view answer keys. If you need an approved teacher account, you
+    can apply for access to protected teacher-only materials (answer keys, etc) through
+    [this form](%{form_url}). Please keep in mind that it may take 3-5 business days
+    to verify your account.
+  csp_page_faq_question_07: How was the curriculum developed?
+  csp_page_faq_answer_07_01: Our CS Principles curriculum has always been designed
+    as part of a broader vision of supporting high quality, engaging, and equitable
+    computer science instruction in classrooms across the country. Our [Curriculum
+    Values](%{curriculum_url}) continue to guide us, and in particular our focus on
+    expanding access to those who historically have been denied opportunities to learn
+    about the exciting and impactful field of computing. While our vision and values
+    remain unchanged, the landscape of CS education is rapidly developing.
+  csp_page_faq_answer_07_02: For the 2020-21 school year the College Board has made
+    some significant updates to the CS Principles framework and AP assessment to ensure
+    that CS Principles remains relevant and aligned with equivalent university courses.
+    CS education research continues to reveal new insights on how students learn about
+    computing, and feedback from the thousands of classrooms now using our CS Principles
+    curriculum has identified opportunities to further improve our courses, tools,
+    and recommended pedagogy.
+  csp_page_faq_answer_07_03: The goal of the updates to our curriculum is to navigate
+    these developments in a way that remains committed to our vision and values and
+    supports the many teachers, schools, classrooms, and districts that are already
+    a part of our broader CS Principles community. We remain deeply thankful for you
+    joining us on this mission to make our collective vision a reality.
+  csp_page_faq_answer_07_04: For more information about our goals and approach to
+    our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional
+    Learning Values](%{pl_url}).
+  csd_page_top_desc: Code.org's most flexible course, allowing each unit to be taught
+    alone, combined into collections that focus on specific areas, or as a full year
+    course. The free curriculum introduces students to building their own websites,
+    apps, animations, games, and physical computing systems.
+  csd_page_intro_heading: Flexible curriculum to meet your needs
+  csd_page_intro_list_01: Flexible introductory curriculum
+  csd_page_intro_list_02: Breadth of topics
+  csd_page_intro_list_03: No prior experience needed
+  csd_page_intro_list_04: Build many different types of projects
+  csd_page_intro_list_05: Exciting and fun
+  csd_page_quote: This curriculum is all inclusive, well organized, and student centered!
+    The incredible organization in the curriculum is what makes me use it year after
+    year.
+  csd_page_curriculum_glance_topics: Artificial Intelligence, Data, Web Design, Physical
+    Computing, App Design, Games and Animations, Art and Design, Programming
+  csd_page_curriculum_glance_devices: Laptop, Chromebook
+  csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
+  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
+    Modules
+  csd_page_curriculum_glance_professional_languages: Galiza
+  csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
+    Closed captioning, Immersive reader
+  csd_page_pick_a_course_heading: Picking the right CS Discoveries course for your
+    classroom
+  csd_page_pick_a_course_desc: With the diverse set of options offered for CS Discoveries,
+    there is a course for all different needs.
+  csd_page_pick_a_course_heading_02: How do you want to pick the content?
+  csd_page_courses_year_desc: Through 7 units students explore a wide variety of topics.
+  csd_page_courses_year_action_block_desc: 'An introductory computer science course
+    that empowers students to create authentic artifacts and engage with computer
+    science as a medium for creativity, communication, problem solving, and fun. '
+  csd_page_courses_flexible_units_desc: Each unit of CS Discoveries can be used on
+    its own with no prior experience required, which allows you to pick the exact
+    units that work for your classroom.
+  csd_page_courses_collections_desc: Dive deeper into one area with a set of units
+    focused on a specific topic.
+  csd_page_faq_question_01: Is CS Discoveries mapped to standards?
+  csd_page_faq_answer_01: CS Discoveries was written using both the K-12 Framework
+    for Computer Science and the 2017 CSTA standards as guidance. Currently, every
+    lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
+    [A summary of standards mappings can be found here](%{mappings_url}). A Google
+    Sheets version of the standards can be found at [CSD Standards](%{csd_standards_url}).
+  csd_page_faq_question_02: How/Where can I get professional development for this
+    course?
+  csd_page_faq_answer_02: Our Professional Learning Program offers year-round support.
+    The program kicks off with a five-day summer workshop where you'll have an opportunity
+    to work hands-on with the curriculum and meet other teachers from your area. Throughout
+    the year, we offer follow up workshops and forum support. You don't need any prior
+    computer science experience to get started. And teachers love it! 90% rank it
+    the best professional development ever. [Click here to apply and learn more](%{apply_url}).
+  csd_page_faq_question_03: I'm teaching CS Discoveries but have less than one semester
+    with my students. What would you recommend?
+  csd_page_faq_answer_03_01: Teachers who have a restricted schedule, unable to teach
+    all units of CS Discoveries over the course of a school year, can now easily assign
+    a specific set of CS Discoveries units based on what they want to focus on. These
+    collections are still the same exact units found in CS Discoveries, simply grouped
+    together based on our recommendations below to dive deep in a specific area of
+    CS Discoveries. Each collection is approximately one semester or slightly less
+    than one semester. [Click here to see our Collections options](%{collections_url}).
+  csd_page_faq_answer_03_02: For teachers who have an even more restricted schedule,
+    they have the ability to assign just one unit at a time from CS Discoveries without
+    assigning the entire course. We hope this helps support classrooms that teach
+    units of CS Discoveries embedded as part of larger courses or when teaching computer
+    science on a limited schedule. [Click here to see our flexible units](%).
+  csd_page_faq_question_04: What materials and supplies are required for CS Discoveries?
+  csd_page_faq_answer_04_01: One potential cost to consider when teaching this course
+    is printing. Many lessons have handouts that are designed to guide students through
+    activities. While it is not required that all of these handouts be printed, many
+    were designed to be printed and we highly recommend printing when possible.
+  csd_page_faq_answer_04_02: 'Beyond printing, some lessons call for typical classroom
+    supplies and manipulatives such as: Student journals, poster paper, markers/colored
+    pencils, scissors, scrap paper, glue or tape, post-it notes or index cards (or
+    similar sized scrap paper), and rulers or a straight edge of some kind.'
+  csd_page_faq_answer_04_03: 'In addition to those general course materials, the following
+    items are called for in specific units:'
+  csd_page_faq_answer_04_04: Problem Solving and Computing
+  csd_page_faq_answer_04_05: Aluminum foil, container for water, pennies (note that
+    pennies can be replaced with some other kind of weight of the same size). Alternate
+    activities are available if you do not have access to these supplies.
+  csd_page_faq_answer_04_06: Creating Apps with Devices (Option A and Option B)
+  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
+    out [code.org/maker/circuitplayground](%{url}) for more details.'
+  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
+    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_09: Maker supplies, such as empty tissue boxes or cardboard
+    rolls or scratch paper
+  csd_page_faq_answer_04_10: "*Note: The Creating Apps with Devices unit has two implementation
+    options - one for those using circuit playgrounds and one for those using micro:bit.
+    Teachers should not buy both sets of devices or teach both unit options as they
+    are equivalent and cover the same content."
+  csd_page_faq_question_06: How does CS Discoveries fit with the other Code.org courses?
+  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
+    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
+    While each of these courses is designed to be an age-appropriate entry point to
+    computer science, students with previous experience will find many new topics
+    to explore, and they will revisit familiar topics in novel and more challenging
+    contexts.
+  csc_page_top_desc: Make connections between computer science (CS) and other subjects
+    like math, language arts, science, and social studies.
+  csc_page_intro_heading: Teach CS while covering core subject standards
+  csc_page_intro_list_01: Incorporate CS into other subjects
+  csc_page_intro_list_02: Reinforce learning in other subjects
+  csc_page_intro_list_03: Meet core subject standards
+  csc_page_intro_list_04: Fun way to teach students about computer science
+  csc_page_intro_list_05: Open-ended projects for more personalized learning
+  csc_page_intro_list_06: Easy for any teacher with any background
+  csc_page_curriculum_glance_topics: Interdisciplinary
+  csc_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
+  csc_page_curriculum_glance_tools: Sprite Lab
+  csc_page_curriculum_glance_professional_learning: Self-paced Modules
+  csc_page_curriculum_glance_professional_languages: Galiza
+  csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
+    Closed captioning, Immersive reader
+  csc_page_quote: I greatly appreciate how thorough and well paced the lessons are.
+    I am not familiar with computer science, but with the lessons you provide I feel
+    confident in helping my students grasp the concepts and tie them into our curriculum.
+  csc_page_find_a_module_desc: Our current CS Connections offerings are for 3rd to
+    5th grade classrooms and are designed to take 1 week of 45-minute lessons each
+    day.
+  csc_page_faq_question_01: Is CS Connections mapped to standards?
+  csc_page_faq_answer_01: Yes! CS Connections is mapped to the Common Core State Standards
+    (CCSS) for ELA and Math, the Next Generation Science Standards (NGSS), and the
+    Computer Science Teacher Association Standards (CSTA).
+  csc_page_faq_question_02: How much does it cost to teach CS Connections?
+  csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
+    for anyone, anywhere, to teach!
+  csc_page_faq_question_03: How/Where can I get professional development for CS Connections?
+  csc_page_faq_answer_03: We offer self-paced professional development for CS Connections.
+    Through reading, viewing videos, completing interactive puzzles, and reflecting
+    on your learning, you will develop your own understanding while preparing to teach
+    any of the CS Connections modules in your classroom. [Get started here](%{get_started_url}).
+  csc_page_faq_answer_03_coming_soon: Professional learning for CS Connections is
+    coming soon!
+  csc_page_faq_question_04: What is the recommended timing for teaching CS Connections?
+  csc_page_faq_answer_04: Each CS Connections module is designed to take a week.
+  csc_page_faq_question_05: What materials do I need for CS Connections?
+  csc_page_faq_answer_05: Ideally, each student will have their own computer and teachers
+    will have a projector to display the slideshow that corresponds with each lesson.
+  csf_page_top_desc: Free set of elementary curricula that introduces students to
+    the foundational concepts of computer science and challenges them to explore how
+    computing and technology can impact the world.
+  csf_page_intro_heading: Free, and fun, elementary courses for each grade
+  csf_page_intro_list_01: Six courses, one for each elementary grade
+  csf_page_intro_list_02: Equitable introductory CS courses
+  csf_page_intro_list_03: Use the same course for all students in the same grade,
+    regardless of their experience
+  csf_page_intro_list_04: All courses make suitable entry points for students
+  csf_page_quote: I've been teaching the course since the Monday after the workshop.
+    The students and I LOVE it (and so do their classroom teachers!!!)
+  csf_page_curriculum_glance_topics: Programming, Internet, Games and Animation, Art
+    and Design, App Design
+  csf_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
+  csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
+  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
+    Modules
+  csf_page_curriculum_glance_languages: Arabic, Bahasa Indonesian, Catalán, Chinese
+    Simplified, Chinese Traditional, Czech, French, German, Hindi, Italian, Japanese,
+    Korean, Kannada, Malay, Marathi, Mongolian, Polish, Portuguese-BR, Romanian, Russian,
+    Slovak, Tagalog, Tamil, Thai, Turkish, Ukrainian, Spanish Latam, Urdu, Spanish-ES,
+    Uzbek, Vietnamese
+  csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
+    Immersive reader
+  csf_page_pick_a_course_heading: Picking the right CS Fundamentals course for your
+    classroom
+  csf_page_pick_a_course_desc: With the diverse set of options offered for CS Fundamentals,
+    there is a course for all different needs.
+  csf_page_pick_a_course_heading_02: How will your students engage with the content?
+  csf_page_courses_heading: Courses specifically designed for your elementary classroom
+  csf_page_courses_desc: Find the course for the grade you teach. Each course is approximately
+    a month long.
+  csf_page_courses_self_paced_heading: Self-paced elementary curriculums
+  csf_page_courses_self_paced_desc: Teachers play a critical role in student learning
+    by teaching our unplugged activities and leading whole class discussions, however,
+    we recognize that CS Fundamentals isn't always taught in a traditional classroom
+    setting. We provide two self-paced express courses alongside Courses A-F. These
+    express courses are designed for situations where teachers allow each student
+    to work at their own pace independently.
+  csf_page_faq_question_01: Is CS Fundamentals mapped to standards?
+  csf_page_faq_answer_01_01: 'CS Fundamentals was written using both the K-12 Framework
+    for Computer Science and the CSTA standards as guidance. Currently, every lesson
+    in CS Fundamentals contains mappings to the relevant CSTA standards. The summary
+    of all CSTA mappings for each course can be found at:'
+  csf_page_faq_answer_01_list_01: "[Course A Standards](%{course_a_url})"
+  csf_page_faq_answer_01_list_02: "[Course B Standards](%{course_b_url})"
+  csf_page_faq_answer_01_list_03: "[Course C Standards](%{course_c_url})"
+  csf_page_faq_answer_01_list_04: "[Course D Standards](%{course_d_url})"
+  csf_page_faq_answer_01_list_05: "[Course E Standards](%{course_e_url})"
+  csf_page_faq_answer_01_list_06: "[Course F Standards](%{course_f_url})"
+  csf_page_faq_answer_01_02: A Google Sheets version of the standards can be found
+    at [CSF Standards](%{csf_standards_url}).
+  csf_page_faq_question_02: How can I bring CS Fundamentals to my whole school?
+  csf_page_faq_answer_02: The leading K-12 CS curriculum in the United States, our
+    elementary program has been proven effective in major urban school districts like
+    Dallas, as well as small rural districts in Iowa. There is no need to hire specialists
+    to teach CS. Our program is uniquely designed to support teachers new to CS while
+    offering the flexibility to evolve lessons to fit student needs. [Share this brochure](%{brochure_url})
+    with your school and district administrators, or [suggest they take a look at
+    our administrators page](%{admins_url}) specially designed to answer administrators'
+    most common questions.
+  csf_page_faq_question_03: How much does it cost to teach CS Fundamentals?
+  csf_page_faq_question_04: How/Where can I get professional development for CS Fundamentals?
+  csf_page_faq_answer_04_01: New to teaching computer science? No worries! Most of
+    our teachers have never taught computer science before. Join local teachers for
+    inspiring and hands-on support to implement computer science in your classroom.
+    Our Regional Partners offer high-quality, one-day Code.org workshops for individual
+    teachers or for schoolwide PD. [Sign up for a professional development workshop
+    near you](%{sign_up_url})!
+  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
+    workshops. The majority of our workshop attendees say, 'It's the best professional
+    development I've ever attended.' In fact, [90% of attendees would recommend our
+    program to other teachers](%{rec_url})!
+  csf_page_faq_question_05: What is the recommended timing for teaching CS Fundamentals?
+  csf_page_faq_answer_05: Each CSF course includes 13-17 lessons designed for 45-minute
+    periods. We recommend all students move from lesson to lesson at a pace set by
+    the teacher. There are many teacher-led project levels designed to be experienced
+    in unison while the skill-building lessons can be completed by students at their
+    own pace.
+  csf_page_faq_question_06: What materials do I need for CS Fundamentals?
+  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
+    These resources can be printed or assigned digitally. Some lessons call for typical
+    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csa_page_top_desc: Introduce students to software engineering and object-oriented
+    design while they learn the Java programming language in this free curriculum
+    for [AP® Computer Science A (AP® CSA)](%{csa_url}).
+  csa_page_intro_heading: A new approach to AP® CSA
+  csa_page_intro_list_01: Culturally responsive pedagogy
+  csa_page_intro_list_02: Real-world problem investigation
+  csa_page_intro_list_03: Explainer videos with diverse presenters
+  csa_page_intro_list_04: Open-ended projects for more personalized learning
+  csa_page_intro_list_05: Student-friendly code review tool
+  csa_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
+    Animation
+  csa_page_curriculum_glance_devices: Laptop, Chromebook
+  csa_page_curriculum_glance_tools: Java Lab
+  csa_page_curriculum_glance_professional_learning: Facilitator-led Workshops
+  csa_page_curriculum_glance_languages: Galiza
+  csa_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
+    Immersive reader
+  csa_page_quote: I could tell last year how different and better this curriculum
+    and resources were than anything else out there... but this year, these past few
+    weeks preparing students for the exam have been some of my most fun teaching.
+    And I'm hardly doing anything! Kids understand the material and are talking with
+    each other at such a high level and it's a direct reflection of the lessons and
+    activities throughout the year. Thank you, thank you.
+  csa_page_projects_java_lab: Java Lab is a programming environment where you can
+    make Java programs using The Neighborhood, The Theater, or the console.
+  csa_page_projects_objects_first: Students learn the fundamentals of object-oriented
+    programming (OOP) first, giving them a foundation for the rest of the course while
+    encouraging them to consider the overall design of their programs.
+  csa_page_faq_question_01: Is CSA mapped to standards?
+  csa_page_faq_answer_01: Yes, Code.org's CSA curriculum is mapped to the College
+    Board Course and Exam Description for AP® CSA.
+  csa_page_faq_question_02: How much does it cost to teach CSA?
+  csa_page_faq_question_03: How/Where can I get professional development for CSA?
+  csa_page_faq_answer_03: Professional learning workshops for Code.org's CSA curriculum
+    start each summer. [Click here to apply](%{apply_url}).
+  csa_page_faq_question_04: What is the recommended timing for teaching CSA?
+  csa_page_faq_answer_04: A minimum of 140 class hours; should be taught as a full-year
+    course. Contains nine units, which includes an AP® Exam Prep unit.
+  csa_page_faq_question_05: What materials do I need for this course?
+  csa_page_faq_answer_05: This curriculum requires that students have access to computers
+    with a modern web browser. At this time, our curriculum is not optimized for tablets
+    or mobile devices. For more details, [check out our technology requirements](%{it_url}).
+    In addition to technology, typical classroom supplies like scissors and sticky
+    notes will also be used throughout the curriculum.
+  csa_page_faq_question_06: Why do I need to become a verified teacher to teach CSA
+    and run code in Java Lab?
+  csa_page_faq_answer_06: Java Lab is a unique environment from all other Code.org
+    programming environments and requires additional measures to ensure network security
+    for all. [Read more about it here](%{read_more_url}).
+  csa_page_faq_question_07: How can I access answer keys?
+  csa_page_faq_answer_07_01: With an approved teacher account, you can find answer
+    keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
+  csa_page_faq_answer_07_02: Teachers in our Professional Learning Program will automatically
+    be approved to view answer keys. If you need an approved teacher account, you
+    can apply for access to protected teacher-only materials (answer keys, etc) through
+    [this form](%{form_url}). Please keep in mind that it may take 3-5 business days
+    to verify your account.
+  csa_page_faq_question_08: How was the curriculum developed?
+  csa_page_faq_answer_08_01: 'Our CSA curriculum was written by teachers, for teachers
+    and was designed with our Curriculum Values in mind. In particular, we focused
+    on expanding access to those who historically have been denied opportunities to
+    learn about the exciting and impactful field of computing. The following goals
+    guided the creation of the CSA curriculum:'
+  csa_page_faq_answer_08_list_01: 'Goal 1: Develop an Equitable Course'
+  csa_page_faq_answer_08_list_02: 'Goal 2: Prepare Students for Higher Ed and Industry'
+  csa_page_faq_answer_08_list_03: 'Goal 3: Design Relevant, Engaging Activities'
+  csa_page_faq_answer_08_list_04: 'Goal 4: Incorporate Best Practices from the Field'
+  csa_page_faq_answer_08_02: For more information about the values that guided our
+    work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
+    learning values](%{pl_values_url}).
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -367,7 +1659,7 @@ gl:
   ai_resource_cognimates_desc: An AI education platform for building games, programming
     robots and training.
   ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
+  ai_audience_hs: Secundaria
   ai_activity_header: Activities Powered by AI and ML
   ai_activity_seeing_ai: Seeing AI
   ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
@@ -444,6 +1736,7 @@ gl:
   not_found_desc: The requested page was not found
   not_found_instructions: Check the web address and resubmit or choose a link from
     the list below.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -496,6 +1789,7 @@ gl:
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
+  company_ets: ETS
   company_everettsd: Everette Public Schools
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County Public Schools
@@ -517,6 +1811,7 @@ gl:
   company_houstonisd: Houston Independent School District
   company_hcpss: Howard County Public Schools
   company_idla: Idaho Digital Learning Academy
+  company_iste: ISTE
   company_janesvilleschooldistrict: Janesville School District
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
@@ -737,10 +2032,11 @@ gl:
   signup_event_type_after_school: After school program
   signup_event_type_out_of_school: Fóra da Escola
   signup_event_type_at_home: Home
-  signup_submit_census_label: Submit
+  signup_submit_census_label: Enviar
   signup_submit_census_error_message: We're sorry. An error occurred. Please try submitting
     the form again.
   signup_submit_label: Inscribirme
+  signup_submit_explore: Explore sessions
   signup_submit_error_message: Produciuse un erro. Por favor, verifique que encheu
     correctamente tódolos campos requeridos.
   signup_submit_and_continue_label: Submit and Continue
@@ -1185,7 +2481,7 @@ gl:
   highlights_constant_athletes_heading: Champions and gold medalists Serena Williams,
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
-  footer_copyright_message: Copyright Code.org 2015. Tódolos dereitos reservados.
+  footer_copyright_message: Copyright Code.org %{current_year}. Tódolos dereitos reservados.
   footer_trademark_message: Hour of Code ™ é unha marca rexistrada de Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Socios
@@ -1340,7 +2636,7 @@ gl:
   tutorial_bbcla_name: Bitsbox Coding + Language Arts
   tutorial_bbcsci_name: Bitsbox Coding + Science
   tutorial_tlctour_name: Tour Guide Activity
-  tutorial_codesterstj_name: CS Tech Jam
+  tutorial_codesterstj_name: Eventos Especiais da CS Tech Jam
   tutorial_tlclocked_name: Locked-In
   tutorial_baubles_name: Binary Baubles
   tutorial_bbcart_name: Bitsbox Coding + Art
@@ -1776,7 +3072,7 @@ gl:
   tutorial_allcancodeapps_name: 'Allcancode Platform: Build web and mobile apps in
     Blockly'
   tutorial_n2y_name: Bitt Bott Explores Earth
-  tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
+  tutorial_microsoftarcade_name: Play, Design, & Code with MakeCode Arcade
   tutorial_csfirstunplugged_name: CS First Unplugged
   tutorial_toxicodepython_name: Discover Python with Silent Teacher
   tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
@@ -1795,7 +3091,7 @@ gl:
     Mickey'
   tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
   tutorial_codespeakbreathe_name: Code a Meditation Breathing App
-  tutorial_vidcodeface_name: Facetracking
+  tutorial_vidcodeface_name: Facetracker
   tutorial_educodemaze_name: Design Your Own Maze!
   tutorial_educoderace_name: Code your own racing game!
   tutorial_codespeakchatbot_name: Code a Chatbot with the Female CS Pioneers
@@ -1895,7 +3191,8 @@ gl:
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
   tutorial_meeempathy_name: A Minecraft Tale of Two Villages
   tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+    Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's
+    'Encanto', and more!
   tutorial_chibitronics_shortdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_shortdescription: Choose between making a basketball game or mix
@@ -1974,8 +3271,8 @@ gl:
   tutorial_hopgeo_shortdescription: 'Build your own Geometry Jumper game: dodge obstacles
     as they fly at you!'
   tutorial_tynkermult_shortdescription: Make a fun multiplication game!
-  tutorial_monster_shortdescription: A colorful self-guided programming adventure
-    for children.
+  tutorial_monster_shortdescription: Unha aventura de programación a cor e autodidacta
+    para os nenos.
   tutorial_tynkerapp_shortdescription: Program a custom version of your favorite game!
   tutorial_tynkerpup_shortdescription: Help Pixel the puppy get home!
   tutorial_livecode_shortdescription: Make some noise!
@@ -3053,10 +4350,11 @@ gl:
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
   tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
-    and many more!
+    Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's
+    'Encanto', and more!
   tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+    Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's
+    'Encanto', and more!
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_longdescription: Choose between making a basketball game or mix
@@ -3261,11 +4559,12 @@ gl:
     to escape the cave without getting hit by falling boulders. But the only way the
     character can run forward is by correctly answering math questions! You'll follow
     step-by-step instructions to program this fun multiplication quiz game.
-  tutorial_monster_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
+  tutorial_monster_longdescription: O Desafío de programación da Illa do Misterio
+    da Monster Coding ofrece unha aventura autodidacta chea de diversión que ensina
+    aos nenos varios conceptos importantes sobre programación. Cada actividade con
+    base en bloques é creada sobre a anterior, introducindo os nenos aos conceptos
+    de funcións, valores booleanos, bucles, instrucións "se/senón" (if-else) e arrays,
+    usando gráficos animados e a cor e instrucións en áudio.
   tutorial_tynkerapp_longdescription: Build your own version of your favorite game.
     Choose from tons of options, like platformer games, classic arcade games, racing
     games, programming art, storytelling projects, and more! You'll personalize your
@@ -3404,7 +4703,7 @@ gl:
     to address common misconceptions that new programmers have about these topics
     by offering many opportunities for practice, as well as targeted hints and feedback.
 
-'
+    '
   tutorial_zulama_longdescription: In this activity you will learn to edit JavaScript
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
@@ -3703,7 +5002,7 @@ gl:
     completely open-ended; kids can use them as a starting point for their own app
     creations. Beginners welcome!
 
-'
+    '
   tutorial_tlcemo_longdescription: Students create and program a 2D robot made of
     card to show different emotions. They create a table that can be used to translate
     emotions (high level commands) into low level machine instructions.
@@ -5875,7 +7174,7 @@ gl:
   tutorial_frzn_string_detail_grades: Grades 2+
   tutorial_cocom_string_detail_grades: Grades 2+
   tutorial_play-lab_string_detail_grades: Grades 2+
-  tutorial_boxisland_string_detail_grades: All ages
+  tutorial_boxisland_string_detail_grades: Todas as idades
   tutorial_textcomp_string_detail_grades: Grades 9+
   tutorial_encryption_string_detail_grades: Grades 9+
   tutorial_kanopixel_string_detail_grades: Grades 2+
@@ -5987,7 +7286,7 @@ gl:
   tutorial_flocond_string_detail_grades: Grades 2+
   tutorial_floloops_string_detail_grades: Grades 2+
   tutorial_pgts_string_detail_grades: Grades 6+
-  tutorial_ozo_string_detail_grades: All ages
+  tutorial_ozo_string_detail_grades: Todas as idades
   tutorial_bbcla_string_detail_grades: do-not-show
   tutorial_bbcsci_string_detail_grades: do-not-show
   tutorial_tlctour_string_detail_grades: Grades 2+
@@ -5997,7 +7296,7 @@ gl:
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: Grades 2+
   tutorial_fufafit_string_detail_grades: Grades 2-5
-  tutorial_ozodance_string_detail_grades: All ages
+  tutorial_ozodance_string_detail_grades: Todas as idades
   tutorial_codingrobotics_string_detail_grades: Pre-reader - Grade 5
   tutorial_box_string_detail_grades: do-not-show
   tutorial_hopgame_string_detail_grades: Grades 2-8
@@ -6016,7 +7315,7 @@ gl:
   tutorial_secretcodes_string_detail_grades: 6º-8º curso (11-13 anos)
   tutorial_tlchex_string_detail_grades: Grades 6+
   tutorial_tickles_string_detail_grades: Grades 2+
-  tutorial_ozogame_string_detail_grades: All ages
+  tutorial_ozogame_string_detail_grades: Todas as idades
   tutorial_vidcodeio_string_detail_grades: Grades 2+
   tutorial_tlcbrain_string_detail_grades: Grades 6+
   tutorial_hopquiz_string_detail_grades: 6º-8º curso (11-13 anos)
@@ -6030,7 +7329,7 @@ gl:
   tutorial_tlcjflap_string_detail_grades: Grades 6+
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
   tutorial_spiralsfinch_string_detail_grades: Grades 2+
-  tutorial_ozoi_string_detail_grades: All ages
+  tutorial_ozoi_string_detail_grades: Todas as idades
   tutorial_ticklel_string_detail_grades: Grades 2+
   tutorial_spiralsdash_string_detail_grades: Grades 2-8
   tutorial_ghdebug_string_detail_grades: Grades 2-8
@@ -6066,7 +7365,7 @@ gl:
   tutorial_app-inventor_string_detail_grades: Grades 6+
   tutorial_blockly_string_detail_grades: Grades 6+
   tutorial_tynker_string_detail_grades: do-not-show
-  tutorial_baypt_string_detail_grades: All ages
+  tutorial_baypt_string_detail_grades: Todas as idades
   tutorial_code-combat_string_detail_grades: do-not-show
   tutorial_mky_string_detail_grades: Grades 2+
   tutorial_pirates_string_detail_grades: Grades 2-8
@@ -6078,7 +7377,7 @@ gl:
   tutorial_sswb_string_detail_grades: do-not-show
   tutorial_kodable-unplugged_string_detail_grades: Grades 2-8
   tutorial_scratch_string_detail_grades: Grades 2-5
-  tutorial_bayes_string_detail_grades: All ages
+  tutorial_bayes_string_detail_grades: Todas as idades
   tutorial_gumball_string_detail_grades: do-not-show
   tutorial_hrm_string_detail_grades: Grades 6+
   tutorial_ice-age_string_detail_grades: do-not-show
@@ -6207,12 +7506,12 @@ gl:
   tutorial_ozoevo_string_detail_grades: Grades 6+
   tutorial_ozoexped_string_detail_grades: Grades 6+
   tutorial_ozojourney_string_detail_grades: Grades 2-8
-  tutorial_ozocodes_string_detail_grades: All ages
+  tutorial_ozocodes_string_detail_grades: Todas as idades
   tutorial_ozoeclipse_string_detail_grades: Grades 2+
   tutorial_ozosimulator_string_detail_grades: Grades 6+
   tutorial_ozoalgorithm_string_detail_grades: Grades 6+
   tutorial_ozotimer_string_detail_grades: Grades 6+
-  tutorial_ozohabits_string_detail_grades: All ages
+  tutorial_ozohabits_string_detail_grades: Todas as idades
   tutorial_ozoprogram_string_detail_grades: Grades 2-8
   tutorial_ozopair_string_detail_grades: Grades 2+
   tutorial_codesnoopy_string_detail_grades: Pre-reader - Grade 5
@@ -6697,28 +7996,28 @@ gl:
   tutorial_sjforest_string_platforms: iPad app
   tutorial_sjgreet_string_platforms: iPad app
   tutorial_sjsunset_string_platforms: iPad app
-  tutorial_fufafrenz_string_platforms: Unplugged
+  tutorial_fufafrenz_string_platforms: Actividades offline
   tutorial_bbcgeo_string_platforms: do-not-show
-  tutorial_chspixel_string_platforms: Unplugged
+  tutorial_chspixel_string_platforms: Actividades offline
   tutorial_hummingbird_string_platforms: PC, Mac, Linux, Chromebook downloadable,
     Hummingbird robot
   tutorial_recoloring_string_platforms: Navegadores modernos
   tutorial_bbcchem_string_platforms: do-not-show
-  tutorial_floalgo_string_platforms: Unplugged
-  tutorial_flocond_string_platforms: Unplugged
-  tutorial_floloops_string_platforms: Unplugged
-  tutorial_pgts_string_platforms: Unplugged
+  tutorial_floalgo_string_platforms: Actividades offline
+  tutorial_flocond_string_platforms: Actividades offline
+  tutorial_floloops_string_platforms: Actividades offline
+  tutorial_pgts_string_platforms: Actividades offline
   tutorial_ozo_string_platforms: All modern browsers, iPad, iPhone, Android tablet,
     Andriod phone, Ozobot robot
   tutorial_bbcla_string_platforms: do-not-show
   tutorial_bbcsci_string_platforms: do-not-show
-  tutorial_tlctour_string_platforms: Unplugged
+  tutorial_tlctour_string_platforms: Actividades offline
   tutorial_codesterstj_string_platforms: Navegadores modernos
-  tutorial_tlclocked_string_platforms: Unplugged
-  tutorial_baubles_string_platforms: Unplugged
+  tutorial_tlclocked_string_platforms: Actividades offline
+  tutorial_baubles_string_platforms: Actividades offline
   tutorial_bbcart_string_platforms: do-not-show
-  tutorial_tlcknight_string_platforms: Unplugged
-  tutorial_fufafit_string_platforms: Unplugged
+  tutorial_tlcknight_string_platforms: Actividades offline
+  tutorial_fufafit_string_platforms: Actividades offline
   tutorial_ozodance_string_platforms: All modern browsers, iPad, iPhone, Android tablet,
     Andriod phone, Ozobot robot
   tutorial_codingrobotics_string_platforms: iPad, Dash robot
@@ -6729,29 +8028,29 @@ gl:
   tutorial_bbcmathii_string_platforms: do-not-show
   tutorial_bbcphys_string_platforms: do-not-show
   tutorial_bitsbox_string_platforms: All modern browsers, iOS
-  tutorial_tlcemo_string_platforms: Unplugged
-  tutorial_crd_string_platforms: Unplugged
+  tutorial_tlcemo_string_platforms: Actividades offline
+  tutorial_crd_string_platforms: Actividades offline
   tutorial_bbcbio_string_platforms: do-not-show
   tutorial_ticklebb8_string_platforms: iPad, iPhone, BB-8 robot
   tutorial_grok_string_platforms: do-not-show
   tutorial_ijournalist_string_platforms: Navegadores modernos
   tutorial_bbcmusic_string_platforms: do-not-show
   tutorial_secretcodes_string_platforms: Navegadores modernos
-  tutorial_tlchex_string_platforms: Unplugged
+  tutorial_tlchex_string_platforms: Actividades offline
   tutorial_tickles_string_platforms: iPad, iPhone, Sphero robot
   tutorial_ozogame_string_platforms: All modern browsers, iPad, iPhone, Android tablet,
     Andriod phone, Ozobot robot
-  tutorial_vidcodeio_string_platforms: Unplugged
-  tutorial_tlcbrain_string_platforms: Unplugged
+  tutorial_vidcodeio_string_platforms: Actividades offline
+  tutorial_tlcbrain_string_platforms: Actividades offline
   tutorial_hopquiz_string_platforms: iPad and iPhone
   tutorial_unfortunate_string_platforms: Dash and Dot robot
   tutorial_cha_string_platforms: Navegadores modernos
   tutorial_elaseq_string_platforms: Unplugged, All modern browsers, iPad, Android
     tablet
   tutorial_bbcmathi_string_platforms: do-not-show
-  tutorial_tlcpixel_string_platforms: Unplugged
+  tutorial_tlcpixel_string_platforms: Actividades offline
   tutorial_introrobo_string_platforms: iPad, Android tablet, Dash and Dot robot
-  tutorial_tlcinvis_string_platforms: Unplugged
+  tutorial_tlcinvis_string_platforms: Actividades offline
   tutorial_tlcjflap_string_platforms: Navegadores modernos
   tutorial_procolor_string_platforms: Ozobot robot
   tutorial_spiralsfinch_string_platforms: PC, Mac, Linux, Chromebook downloadable,
@@ -6761,20 +8060,20 @@ gl:
     robot
   tutorial_spiralsdash_string_platforms: Android tablet, Android phone, Dash robot
   tutorial_ghdebug_string_platforms: Navegadores modernos
-  tutorial_tlckk_string_platforms: Unplugged
-  tutorial_firstcomp_string_platforms: Unplugged
+  tutorial_tlckk_string_platforms: Actividades offline
+  tutorial_firstcomp_string_platforms: Actividades offline
   tutorial_mazefinch_string_platforms: All modern browsers, Finch robot
-  tutorial_tlccc_string_platforms: Unplugged
-  tutorial_tlcdoodle_string_platforms: Unplugged
-  tutorial_tlcpunch_string_platforms: Unplugged
+  tutorial_tlccc_string_platforms: Actividades offline
+  tutorial_tlcdoodle_string_platforms: Actividades offline
+  tutorial_tlcpunch_string_platforms: Actividades offline
   tutorial_finchfract_string_platforms: PC, Mac, Linux, Chromebook downloadable, Finch
     robot
-  tutorial_tlcmind_string_platforms: Unplugged
-  tutorial_tlctelebot_string_platforms: Unplugged
-  tutorial_tlcaus_string_platforms: Unplugged
-  tutorial_tlcmicro_string_platforms: Unplugged
+  tutorial_tlcmind_string_platforms: Actividades offline
+  tutorial_tlctelebot_string_platforms: Actividades offline
+  tutorial_tlcaus_string_platforms: Actividades offline
+  tutorial_tlcmicro_string_platforms: Actividades offline
   tutorial_imathematician_string_platforms: Navegadores modernos
-  tutorial_tlcmagic_string_platforms: Unplugged
+  tutorial_tlcmagic_string_platforms: Actividades offline
   tutorial_scratchmus_string_platforms: Navegadores modernos
   tutorial_scratchanim_string_platforms: Navegadores modernos
   tutorial_scratchfly_string_platforms: Navegadores modernos
@@ -6813,7 +8112,7 @@ gl:
   tutorial_dswb_string_platforms: do-not-show
   tutorial_ssw_string_platforms: do-not-show
   tutorial_sswb_string_platforms: do-not-show
-  tutorial_kodable-unplugged_string_platforms: Unplugged
+  tutorial_kodable-unplugged_string_platforms: Actividades offline
   tutorial_scratch_string_platforms: Navegadores modernos
   tutorial_bayes_string_platforms: Navegadores modernos
   tutorial_gumball_string_platforms: do-not-show
@@ -6847,13 +8146,13 @@ gl:
   tutorial_itchstop_string_platforms: Navegadores modernos
   tutorial_tynkerpn_string_platforms: All modern browsers, iPad, Android tablet
   tutorial_tynkerpd_string_platforms: All modern browsers, iPad, Android tablet
-  tutorial_persistence_string_platforms: Unplugged
-  tutorial_getloopy_string_platforms: Unplugged
-  tutorial_createface_string_platforms: Unplugged
-  tutorial_happymaps_string_platforms: Unplugged
-  tutorial_moveit_string_platforms: Unplugged
-  tutorial_bigevent_string_platforms: Unplugged
-  tutorial_gpp_string_platforms: Unplugged
+  tutorial_persistence_string_platforms: Actividades offline
+  tutorial_getloopy_string_platforms: Actividades offline
+  tutorial_createface_string_platforms: Actividades offline
+  tutorial_happymaps_string_platforms: Actividades offline
+  tutorial_moveit_string_platforms: Actividades offline
+  tutorial_bigevent_string_platforms: Actividades offline
+  tutorial_gpp_string_platforms: Actividades offline
   tutorial_foosgame_string_platforms: Android tablet, iPad
   tutorial_solopython_string_platforms: All modern browsers, Android tablet, Android
     phone, iPad, iPhone
@@ -6977,7 +8276,7 @@ gl:
     Ozobot Bit or Evo robot
   tutorial_ozoeclipse_string_platforms: All modern browsers, Android tablets, iPads,
     Ozobot Bit or Evo robot
-  tutorial_ozosimulator_string_platforms: Unplugged
+  tutorial_ozosimulator_string_platforms: Actividades offline
   tutorial_ozoalgorithm_string_platforms: All modern browsers, Android tablets, iPads,
     Ozobot Bit or Evo robot
   tutorial_ozotimer_string_platforms: All modern browsers, Android tablets, iPads,
@@ -6990,20 +8289,20 @@ gl:
   tutorial_codesnoopy_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
   tutorial_applabintro_string_platforms: Navegadores modernos
-  tutorial_cslartist_string_platforms: Unplugged
-  tutorial_cslscratchjr_string_platforms: Unplugged
-  tutorial_floevents_string_platforms: Unplugged
-  tutorial_florobot_string_platforms: Unplugged
+  tutorial_cslartist_string_platforms: Actividades offline
+  tutorial_cslscratchjr_string_platforms: Actividades offline
+  tutorial_floevents_string_platforms: Actividades offline
+  tutorial_florobot_string_platforms: Actividades offline
   tutorial_isavesanta_string_platforms: Navegadores modernos
   tutorial_iorder_string_platforms: All modern borwsers
   tutorial_ianimate_string_platforms: All modern browsers, iPad
   tutorial_iloveada_string_platforms: All modern borwsers
-  tutorial_kodflash_string_platforms: Unplugged
-  tutorial_kodchoose_string_platforms: Unplugged
-  tutorial_kodpizzapre_string_platforms: Unplugged
-  tutorial_kodpizza_string_platforms: Unplugged
-  tutorial_kodwomen_string_platforms: Unplugged
-  tutorial_tfunplug_string_platforms: Unplugged
+  tutorial_kodflash_string_platforms: Actividades offline
+  tutorial_kodchoose_string_platforms: Actividades offline
+  tutorial_kodpizzapre_string_platforms: Actividades offline
+  tutorial_kodpizza_string_platforms: Actividades offline
+  tutorial_kodwomen_string_platforms: Actividades offline
+  tutorial_tfunplug_string_platforms: Actividades offline
   tutorial_lbvariables_string_platforms: All modern browsers, littleBits Code Kit
   tutorial_lbfunctions_string_platforms: All modern browsers, littleBits Code Kit
   tutorial_lblogic_string_platforms: All modern browsers, littleBits Code Kit
@@ -7126,7 +8425,7 @@ gl:
   tutorial_codehsart_string_platforms: Navegadores modernos
   tutorial_codehsbitcoin_string_platforms: Navegadores modernos
   tutorial_codehsblockchain_string_platforms: Navegadores modernos
-  tutorial_codehscipher_string_platforms: Unplugged
+  tutorial_codehscipher_string_platforms: Actividades offline
   tutorial_codehscollision_string_platforms: Navegadores modernos
   tutorial_codehsmath_string_platforms: Navegadores modernos
   tutorial_codehsmusic_string_platforms: Navegadores modernos
@@ -7136,7 +8435,7 @@ gl:
   tutorial_sushicards_string_platforms: Navegadores modernos
   tutorial_codesparkcreate_string_platforms: All modern browsers, Android tablet,
     iPad, Android phone, iPhone
-  tutorial_hardvsoft_string_platforms: Unplugged
+  tutorial_hardvsoft_string_platforms: Actividades offline
   tutorial_codestersecard_string_platforms: All modern browsers, Screen reader
   tutorial_codesterslogo_string_platforms: All modern browsers, Screen reader
   tutorial_codesterstshirt_string_platforms: All modern browsers, Screen reader
@@ -7156,10 +8455,10 @@ gl:
   tutorial_htmltimetravel_string_platforms: Navegadores modernos
   tutorial_hp_flappy_string_platforms: iPad
   tutorial_appytappin_string_platforms: Navegadores modernos
-  tutorial_icipher_string_platforms: Unplugged
+  tutorial_icipher_string_platforms: Actividades offline
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
-  tutorial_imake_string_platforms: Unplugged
-  tutorial_imorse_string_platforms: Unplugged
+  tutorial_imake_string_platforms: Actividades offline
+  tutorial_imorse_string_platforms: Actividades offline
   tutorial_kanohp_string_platforms: Chrome, Safari, Android, iOS
   tutorial_khanwebpages_string_platforms: Navegadores modernos
   tutorial_kibobowl_string_platforms: ''
@@ -7258,11 +8557,11 @@ gl:
   tutorial_googlerookie_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
   tutorial_tommyturtle_string_platforms: Android tablet, iPad, Android phone, iPhone
-  tutorial_mazyad_string_platforms: Unplugged
+  tutorial_mazyad_string_platforms: Actividades offline
   tutorial_gamemaker_string_platforms: All modern browsers, iPad
   tutorial_duckrace_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_allcancodeapps_string_platforms: Navegadores modernos
-  tutorial_n2y_string_platforms: Unplugged
+  tutorial_n2y_string_platforms: Actividades offline
   tutorial_microsoftarcade_string_platforms: All modern browsers, Screen reader
   tutorial_csfirstunplugged_string_platforms: All modern browsers, Unplugged
   tutorial_toxicodepython_string_platforms: Navegadores modernos
@@ -7349,25 +8648,25 @@ gl:
   tutorial_ozobotcolor2_string_platforms: Navegadores modernos
   tutorial_ozobotcolor3_string_platforms: Navegadores modernos
   tutorial_clcarbon_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_kodablebasics_string_platforms: Unplugged
-  tutorial_scigirlscc_string_platforms: Unplugged
-  tutorial_irobotpicture_string_platforms: Unplugged
+  tutorial_kodablebasics_string_platforms: Actividades offline
+  tutorial_scigirlscc_string_platforms: Actividades offline
+  tutorial_irobotpicture_string_platforms: Actividades offline
   tutorial_kcjmyself_string_platforms: Navegadores modernos
   tutorial_nearpodalgorithms_string_platforms: All modern browsers, Screen reader
-  tutorial_kibodrop_string_platforms: Unplugged
+  tutorial_kibodrop_string_platforms: Actividades offline
   tutorial_ozobotcolor1_string_platforms: Navegadores modernos
-  tutorial_scigirlspixels_string_platforms: Unplugged
+  tutorial_scigirlspixels_string_platforms: Actividades offline
   tutorial_kcjheroines_string_platforms: Navegadores modernos
   tutorial_ozobotvalue_string_platforms: Navegadores modernos
-  tutorial_icodebytes_string_platforms: Unplugged
+  tutorial_icodebytes_string_platforms: Actividades offline
   tutorial_clfashion2_string_platforms: Navegadores modernos
   tutorial_ai4all_string_platforms: Navegadores modernos
   tutorial_cldata_string_platforms: Navegadores modernos
-  tutorial_spheroinputs_string_platforms: Unplugged
+  tutorial_spheroinputs_string_platforms: Actividades offline
   tutorial_edisoncount_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_spheroloops_string_platforms: Unplugged
-  tutorial_kiboprogram_string_platforms: Unplugged
-  tutorial_hellorubycsin60_string_platforms: Unplugged
+  tutorial_spheroloops_string_platforms: Actividades offline
+  tutorial_kiboprogram_string_platforms: Actividades offline
+  tutorial_hellorubycsin60_string_platforms: Actividades offline
   tutorial_clfashion1_string_platforms: Navegadores modernos
   tutorial_irobottraffic_string_platforms: Chrome, Android tablet, Android phone
   tutorial_edisonmystery_string_platforms: All modern browsers, Android tablet, iPad
@@ -7513,26 +8812,26 @@ gl:
   tutorial_sjforest_string_detail_platforms: iPad app
   tutorial_sjgreet_string_detail_platforms: iPad app
   tutorial_sjsunset_string_detail_platforms: iPad app
-  tutorial_fufafrenz_string_detail_platforms: Unplugged
+  tutorial_fufafrenz_string_detail_platforms: Actividades offline
   tutorial_bbcgeo_string_detail_platforms: do-not-show
-  tutorial_chspixel_string_detail_platforms: Unplugged
+  tutorial_chspixel_string_detail_platforms: Actividades offline
   tutorial_hummingbird_string_detail_platforms: Hummingbird robot
   tutorial_recoloring_string_detail_platforms: ''
   tutorial_bbcchem_string_detail_platforms: do-not-show
-  tutorial_floalgo_string_detail_platforms: Unplugged
-  tutorial_flocond_string_detail_platforms: Unplugged
-  tutorial_floloops_string_detail_platforms: Unplugged
-  tutorial_pgts_string_detail_platforms: Unplugged
+  tutorial_floalgo_string_detail_platforms: Actividades offline
+  tutorial_flocond_string_detail_platforms: Actividades offline
+  tutorial_floloops_string_detail_platforms: Actividades offline
+  tutorial_pgts_string_detail_platforms: Actividades offline
   tutorial_ozo_string_detail_platforms: Ozobot robot
   tutorial_bbcla_string_detail_platforms: do-not-show
   tutorial_bbcsci_string_detail_platforms: do-not-show
-  tutorial_tlctour_string_detail_platforms: Unplugged
+  tutorial_tlctour_string_detail_platforms: Actividades offline
   tutorial_codesterstj_string_detail_platforms: ''
-  tutorial_tlclocked_string_detail_platforms: Unplugged
-  tutorial_baubles_string_detail_platforms: Unplugged
+  tutorial_tlclocked_string_detail_platforms: Actividades offline
+  tutorial_baubles_string_detail_platforms: Actividades offline
   tutorial_bbcart_string_detail_platforms: do-not-show
-  tutorial_tlcknight_string_detail_platforms: Unplugged
-  tutorial_fufafit_string_detail_platforms: Unplugged
+  tutorial_tlcknight_string_detail_platforms: Actividades offline
+  tutorial_fufafit_string_detail_platforms: Actividades offline
   tutorial_ozodance_string_detail_platforms: Ozobot robot
   tutorial_codingrobotics_string_detail_platforms: iPad app, Dash robot
   tutorial_box_string_detail_platforms: do-not-show
@@ -7542,27 +8841,27 @@ gl:
   tutorial_bbcmathii_string_detail_platforms: do-not-show
   tutorial_bbcphys_string_detail_platforms: do-not-show
   tutorial_bitsbox_string_detail_platforms: ''
-  tutorial_tlcemo_string_detail_platforms: Unplugged
-  tutorial_crd_string_detail_platforms: Unplugged
+  tutorial_tlcemo_string_detail_platforms: Actividades offline
+  tutorial_crd_string_detail_platforms: Actividades offline
   tutorial_bbcbio_string_detail_platforms: do-not-show
   tutorial_ticklebb8_string_detail_platforms: BB-8 robot
   tutorial_grok_string_detail_platforms: do-not-show
   tutorial_ijournalist_string_detail_platforms: ''
   tutorial_bbcmusic_string_detail_platforms: do-not-show
   tutorial_secretcodes_string_detail_platforms: ''
-  tutorial_tlchex_string_detail_platforms: Unplugged
+  tutorial_tlchex_string_detail_platforms: Actividades offline
   tutorial_tickles_string_detail_platforms: Sphero robot
   tutorial_ozogame_string_detail_platforms: Ozobot robot
-  tutorial_vidcodeio_string_detail_platforms: Unplugged
-  tutorial_tlcbrain_string_detail_platforms: Unplugged
+  tutorial_vidcodeio_string_detail_platforms: Actividades offline
+  tutorial_tlcbrain_string_detail_platforms: Actividades offline
   tutorial_hopquiz_string_detail_platforms: iOS app
   tutorial_unfortunate_string_detail_platforms: Dash and Dot robot
   tutorial_cha_string_detail_platforms: ''
-  tutorial_elaseq_string_detail_platforms: Unplugged
+  tutorial_elaseq_string_detail_platforms: Actividades offline
   tutorial_bbcmathi_string_detail_platforms: do-not-show
-  tutorial_tlcpixel_string_detail_platforms: Unplugged
+  tutorial_tlcpixel_string_detail_platforms: Actividades offline
   tutorial_introrobo_string_detail_platforms: Dash and Dot robot
-  tutorial_tlcinvis_string_detail_platforms: Unplugged
+  tutorial_tlcinvis_string_detail_platforms: Actividades offline
   tutorial_tlcjflap_string_detail_platforms: ''
   tutorial_procolor_string_detail_platforms: Ozobot robot
   tutorial_spiralsfinch_string_detail_platforms: Finch robot
@@ -7570,19 +8869,19 @@ gl:
   tutorial_ticklel_string_detail_platforms: LEGO WeDo robot
   tutorial_spiralsdash_string_detail_platforms: Dash robot
   tutorial_ghdebug_string_detail_platforms: ''
-  tutorial_tlckk_string_detail_platforms: Unplugged
-  tutorial_firstcomp_string_detail_platforms: Unplugged
+  tutorial_tlckk_string_detail_platforms: Actividades offline
+  tutorial_firstcomp_string_detail_platforms: Actividades offline
   tutorial_mazefinch_string_detail_platforms: Finch robot
-  tutorial_tlccc_string_detail_platforms: Unplugged
-  tutorial_tlcdoodle_string_detail_platforms: Unplugged
-  tutorial_tlcpunch_string_detail_platforms: Unplugged
+  tutorial_tlccc_string_detail_platforms: Actividades offline
+  tutorial_tlcdoodle_string_detail_platforms: Actividades offline
+  tutorial_tlcpunch_string_detail_platforms: Actividades offline
   tutorial_finchfract_string_detail_platforms: Finch robot
-  tutorial_tlcmind_string_detail_platforms: Unplugged
-  tutorial_tlctelebot_string_detail_platforms: Unplugged
-  tutorial_tlcaus_string_detail_platforms: Unplugged
-  tutorial_tlcmicro_string_detail_platforms: Unplugged
+  tutorial_tlcmind_string_detail_platforms: Actividades offline
+  tutorial_tlctelebot_string_detail_platforms: Actividades offline
+  tutorial_tlcaus_string_detail_platforms: Actividades offline
+  tutorial_tlcmicro_string_detail_platforms: Actividades offline
   tutorial_imathematician_string_detail_platforms: ''
-  tutorial_tlcmagic_string_detail_platforms: Unplugged
+  tutorial_tlcmagic_string_detail_platforms: Actividades offline
   tutorial_scratchmus_string_detail_platforms: ''
   tutorial_scratchanim_string_detail_platforms: ''
   tutorial_scratchfly_string_detail_platforms: ''
@@ -7612,7 +8911,7 @@ gl:
   tutorial_dswb_string_detail_platforms: do-not-show
   tutorial_ssw_string_detail_platforms: do-not-show
   tutorial_sswb_string_detail_platforms: do-not-show
-  tutorial_kodable-unplugged_string_detail_platforms: Unplugged
+  tutorial_kodable-unplugged_string_detail_platforms: Actividades offline
   tutorial_scratch_string_detail_platforms: ''
   tutorial_bayes_string_detail_platforms: ''
   tutorial_gumball_string_detail_platforms: do-not-show
@@ -7640,17 +8939,17 @@ gl:
   tutorial_itchstop_string_detail_platforms: ''
   tutorial_tynkerpn_string_detail_platforms: ''
   tutorial_tynkerpd_string_detail_platforms: ''
-  tutorial_persistence_string_detail_platforms: Unplugged
-  tutorial_getloopy_string_detail_platforms: Unplugged
-  tutorial_createface_string_detail_platforms: Unplugged
-  tutorial_happymaps_string_detail_platforms: Unplugged
-  tutorial_moveit_string_detail_platforms: Unplugged
-  tutorial_bigevent_string_detail_platforms: Unplugged
-  tutorial_gpp_string_detail_platforms: Unplugged
+  tutorial_persistence_string_detail_platforms: Actividades offline
+  tutorial_getloopy_string_detail_platforms: Actividades offline
+  tutorial_createface_string_detail_platforms: Actividades offline
+  tutorial_happymaps_string_detail_platforms: Actividades offline
+  tutorial_moveit_string_detail_platforms: Actividades offline
+  tutorial_bigevent_string_detail_platforms: Actividades offline
+  tutorial_gpp_string_detail_platforms: Actividades offline
   tutorial_foosgame_string_detail_platforms: ''
   tutorial_solopython_string_detail_platforms: ''
-  tutorial_kodableint_string_detail_platforms: Unplugged
-  tutorial_kodableadv_string_detail_platforms: Unplugged
+  tutorial_kodableint_string_detail_platforms: Actividades offline
+  tutorial_kodableadv_string_detail_platforms: Actividades offline
   tutorial_tynkertj_string_detail_platforms: ''
   tutorial_wolframa_string_detail_platforms: ''
   tutorial_wolframm_string_detail_platforms: ''
@@ -7745,7 +9044,7 @@ gl:
   tutorial_ozojourney_string_detail_platforms: Ozobot Bit or Evo robot
   tutorial_ozocodes_string_detail_platforms: Ozobot Bit or Evo robot
   tutorial_ozoeclipse_string_detail_platforms: Ozobot Bit or Evo robot
-  tutorial_ozosimulator_string_detail_platforms: Unplugged
+  tutorial_ozosimulator_string_detail_platforms: Actividades offline
   tutorial_ozoalgorithm_string_detail_platforms: Ozobot Bit or Evo robot
   tutorial_ozotimer_string_detail_platforms: Ozobot Bit or Evo robot
   tutorial_ozohabits_string_detail_platforms: Ozobot Bit or Evo robot
@@ -7753,20 +9052,20 @@ gl:
   tutorial_ozopair_string_detail_platforms: Ozobot Bit or Evo robot
   tutorial_codesnoopy_string_detail_platforms: ''
   tutorial_applabintro_string_detail_platforms: ''
-  tutorial_cslartist_string_detail_platforms: Unplugged
-  tutorial_cslscratchjr_string_detail_platforms: Unplugged
-  tutorial_floevents_string_detail_platforms: Unplugged
-  tutorial_florobot_string_detail_platforms: Unplugged
+  tutorial_cslartist_string_detail_platforms: Actividades offline
+  tutorial_cslscratchjr_string_detail_platforms: Actividades offline
+  tutorial_floevents_string_detail_platforms: Actividades offline
+  tutorial_florobot_string_detail_platforms: Actividades offline
   tutorial_isavesanta_string_detail_platforms: ''
   tutorial_iorder_string_detail_platforms: ''
   tutorial_ianimate_string_detail_platforms: ''
   tutorial_iloveada_string_detail_platforms: ''
-  tutorial_kodflash_string_detail_platforms: Unplugged
-  tutorial_kodchoose_string_detail_platforms: Unplugged
-  tutorial_kodpizzapre_string_detail_platforms: Unplugged
-  tutorial_kodpizza_string_detail_platforms: Unplugged
-  tutorial_kodwomen_string_detail_platforms: Unplugged
-  tutorial_tfunplug_string_detail_platforms: Unplugged
+  tutorial_kodflash_string_detail_platforms: Actividades offline
+  tutorial_kodchoose_string_detail_platforms: Actividades offline
+  tutorial_kodpizzapre_string_detail_platforms: Actividades offline
+  tutorial_kodpizza_string_detail_platforms: Actividades offline
+  tutorial_kodwomen_string_detail_platforms: Actividades offline
+  tutorial_tfunplug_string_detail_platforms: Actividades offline
   tutorial_lbvariables_string_detail_platforms: littleBits Code Kit
   tutorial_lbfunctions_string_detail_platforms: littleBits Code Kit
   tutorial_lblogic_string_detail_platforms: littleBits Code Kit
@@ -8596,7 +9895,7 @@ gl:
   tutorial_appytappin_string_detail_programming_languages: BitsBox
   tutorial_icipher_string_detail_programming_languages: ''
   tutorial_iguess_string_detail_programming_languages: ''
-  tutorial_imake_string_detail_programming_languages: Unplugged
+  tutorial_imake_string_detail_programming_languages: Actividades offline
   tutorial_imorse_string_detail_programming_languages: Blocks
   tutorial_kanohp_string_detail_programming_languages: Blocks, JavaScript
   tutorial_khanwebpages_string_detail_programming_languages: HTML/CSS
@@ -8679,7 +9978,7 @@ gl:
   tutorial_gamemaker_string_detail_programming_languages: JavaScript
   tutorial_duckrace_string_detail_programming_languages: Blocks
   tutorial_allcancodeapps_string_detail_programming_languages: Blocks
-  tutorial_n2y_string_detail_programming_languages: Unplugged
+  tutorial_n2y_string_detail_programming_languages: Actividades offline
   tutorial_microsoftarcade_string_detail_programming_languages: Blocks
   tutorial_csfirstunplugged_string_detail_programming_languages: Blocks, Unplugged,
     Scratch
@@ -8815,7 +10114,7 @@ gl:
   tutorial_catrobatembroidery_string_detail_programming_languages: Blocks
   tutorial_irobotphone_string_detail_programming_languages: Blocks, iOS/Swift
   tutorial_codeguppydraw_string_detail_programming_languages: JavaScript
-  tutorial_codejumper_string_detail_programming_languages: Unplugged
+  tutorial_codejumper_string_detail_programming_languages: Actividades offline
   tutorial_meeempathy_string_detail_programming_languages: Blocks, Python
   tutorial_scratchimagine_name: Imagine a World
   tutorial_codesterspsa_name: 'Codesters: Code Your Own PSA'
@@ -9444,11 +10743,11 @@ gl:
   tutorial_ozopopstar_string_platforms: Navegadores modernos
   tutorial_eddesign_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edshapeup_string_platforms: Navegadores modernos
-  tutorial_ozocolor_string_platforms: Unplugged
+  tutorial_ozocolor_string_platforms: Actividades offline
   tutorial_icomputeeggs_string_platforms: All modern browers, Android phone, Android
     tablet, iPad, iPhone
-  tutorial_rootunplugged_string_platforms: Unplugged
-  tutorial_rgtreasure_string_platforms: Unplugged
+  tutorial_rootunplugged_string_platforms: Actividades offline
+  tutorial_rgtreasure_string_platforms: Actividades offline
   tutorial_peblioportraits_string_platforms: Chrome
   tutorial_rootcodebreak_string_platforms: iPad
   tutorial_microbit14_string_platforms: Navegadores modernos
@@ -9469,7 +10768,7 @@ gl:
   tutorial_rpisensehat_string_platforms: Navegadores modernos
   tutorial_mee_string_platforms: All modern browsers, Mac, Windows, Chromebook, iPhone,
     iPad, Android phone, Android tablet
-  tutorial_kuborobo_string_platforms: Unplugged
+  tutorial_kuborobo_string_platforms: Actividades offline
   tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
     iPads, modern Android phones, iPhones
   tutorial_scratchimagine_string_detail_platforms: ''
@@ -9688,7 +10987,7 @@ gl:
   tutorial_cacloud_name: Operation Cloud
   tutorial_blocksmithbot_name: Bot is sus?!
   tutorial_hatchmario_name: 'Mario''s Secret Adventure: Build Your Own 3D Mario Game'
-  tutorial_microsoftforest_name: Save the Forest!
+  tutorial_microsoftforest_name: Save the Forest with MakeCode Arcade
   tutorial_blackbirdscreen_name: Screen Saver
   tutorial_toxicodecompute2_name: Discover Python with Compute it
   tutorial_minecrafttimecraft_name: Minecraft Timecraft
@@ -10214,7 +11513,7 @@ gl:
   tutorial_cacloud_string_detail_grades: Grades 6+
   tutorial_blocksmithbot_string_detail_grades: Grades 2-8
   tutorial_hatchmario_string_detail_grades: Grades 2+
-  tutorial_microsoftforest_string_detail_grades: Grades 2+
+  tutorial_microsoftforest_string_detail_grades: Grades 5+
   tutorial_blackbirdscreen_string_detail_grades: Grades 6+
   tutorial_toxicodecompute2_string_detail_grades: Grades 2+
   tutorial_minecrafttimecraft_string_detail_grades: Grades 2+
@@ -10371,29 +11670,30 @@ gl:
   tutorial_hopescape_string_platforms: iPad, iPhone
   tutorial_ozorace_string_platforms: Navegadores modernos
   tutorial_ozoequestrian_string_platforms: Navegadores modernos
-  tutorial_irobotpizza_string_platforms: Unplugged
+  tutorial_irobotpizza_string_platforms: Actividades offline
   tutorial_ai4alldance_string_platforms: Navegadores modernos
   tutorial_ai4allneural_string_platforms: Navegadores modernos
-  tutorial_spheroinout_string_platforms: Unplugged
-  tutorial_edisonblueprint_string_platforms: Navegadores modernos
-  tutorial_edisonmaze_string_platforms: Navegadores modernos
+  tutorial_spheroinout_string_platforms: Actividades offline
+  tutorial_edisonblueprint_string_platforms: All modern browsers, Android tablet,
+    iPad
+  tutorial_edisonmaze_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_milnefunctions_string_platforms: All modern browsers, Screen reader
   tutorial_sasmap_string_platforms: All modern browsers, iPad, Screen reader
   tutorial_firstrobotics_string_platforms: Navegadores modernos
   tutorial_sasdata_string_platforms: Navegadores modernos
   tutorial_carnegiesensabot_string_platforms: Navegadores modernos
   tutorial_robotical4_string_platforms: Navegadores modernos
-  tutorial_kinderadd_string_platforms: Unplugged
+  tutorial_kinderadd_string_platforms: Actividades offline
   tutorial_imagipython_string_platforms: Chrome, Firefox, Android tablet, iPad, Android
     phone, iPhone
-  tutorial_robotical2_string_platforms: Unplugged
+  tutorial_robotical2_string_platforms: Actividades offline
   tutorial_robotical3_string_platforms: Navegadores modernos
   tutorial_blockscadvirus_string_platforms: Navegadores modernos
-  tutorial_robotical1_string_platforms: Unplugged
-  tutorial_irobotshapes_string_platforms: Unplugged
-  tutorial_irobotparts_string_platforms: Unplugged
-  tutorial_irobottools_string_platforms: Unplugged
-  tutorial_kindercar_string_platforms: Unplugged
+  tutorial_robotical1_string_platforms: Actividades offline
+  tutorial_irobotshapes_string_platforms: Actividades offline
+  tutorial_irobotparts_string_platforms: Actividades offline
+  tutorial_irobottools_string_platforms: Actividades offline
+  tutorial_kindercar_string_platforms: Actividades offline
   tutorial_caavatar_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_hello_string_detail_platforms: ''
   tutorial_raspispace_string_detail_platforms: ''
@@ -11180,16 +12480,16 @@ gl:
     iPad, Windows phone, Android phone, iPhone
   tutorial_bsdrockpaper_string_platforms: Chrome, Firefox
   tutorial_microbitreaction_string_platforms: Navegadores modernos
-  tutorial_kinderanimal_string_platforms: Unplugged
-  tutorial_kindersinger_string_platforms: Unplugged
+  tutorial_kinderanimal_string_platforms: Actividades offline
+  tutorial_kindersinger_string_platforms: Actividades offline
   tutorial_microbitwwn_string_platforms: Navegadores modernos
   tutorial_grokcyberlive_string_platforms: Navegadores modernos
-  tutorial_codemojimaze_string_platforms: Unplugged
+  tutorial_codemojimaze_string_platforms: Actividades offline
   tutorial_codemojisnake_string_platforms: Chrome
   tutorial_carnegietoxibots_string_platforms: Navegadores modernos
   tutorial_carnegieiris_string_platforms: Navegadores modernos
   tutorial_carnegiespike_string_platforms: Navegadores modernos
-  tutorial_spheroincolor_string_platforms: Unplugged
+  tutorial_spheroincolor_string_platforms: Actividades offline
   tutorial_kcjdominos_string_platforms: Navegadores modernos
   tutorial_spherocolortheory_string_platforms: All modern browsers, Android tablet,
     iPad, Windows phone, Android phone, iPhone
@@ -11198,20 +12498,20 @@ gl:
     iPad, Windows phone, Android phone, iPhone
   tutorial_spherorvrincolor_string_platforms: All modern browsers, Android tablet,
     iPad, Windows phone, Android phone, iPhone
-  tutorial_clbinary_string_platforms: Unplugged
+  tutorial_clbinary_string_platforms: Actividades offline
   tutorial_sascollabcode_string_platforms: iPad
   tutorial_codecombatgoblins_string_platforms: Navegadores modernos
   tutorial_scratchstorytelling_string_platforms: Navegadores modernos
-  tutorial_crayolasymbols_string_platforms: Unplugged
-  tutorial_crayoladrawacode_string_platforms: Unplugged
-  tutorial_crayolafollowmycode_string_platforms: Unplugged
-  tutorial_madpicturethis_string_platforms: Unplugged
+  tutorial_crayolasymbols_string_platforms: Actividades offline
+  tutorial_crayoladrawacode_string_platforms: Actividades offline
+  tutorial_crayolafollowmycode_string_platforms: Actividades offline
+  tutorial_madpicturethis_string_platforms: Actividades offline
   tutorial_mindmakersmaps_string_platforms: Navegadores modernos
   tutorial_mindmakersjorel_string_platforms: Navegadores modernos
   tutorial_mindmakersroboland_string_platforms: Navegadores modernos
   tutorial_mindmakersrobolandjr_string_platforms: Navegadores modernos
-  tutorial_codehsdraw_string_platforms: Unplugged
-  tutorial_codehscamouflage_string_platforms: Unplugged
+  tutorial_codehsdraw_string_platforms: Actividades offline
+  tutorial_codehscamouflage_string_platforms: Actividades offline
   tutorial_firiapythoncodex_string_platforms: Chrome
   tutorial_bekidscoding_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone
@@ -11262,10 +12562,10 @@ gl:
     phone, iPhone
   tutorial_prstemalexa_string_platforms: Navegadores modernos
   tutorial_coderzfarm_string_platforms: Navegadores modernos
-  tutorial_intelinofield_string_platforms: Unplugged
+  tutorial_intelinofield_string_platforms: Actividades offline
   tutorial_cablockchain_string_platforms: Android tablet, iPad, Windows phone, Android
     phone, iPhone
-  tutorial_nasaparachute_string_platforms: Unplugged
+  tutorial_nasaparachute_string_platforms: Actividades offline
   tutorial_nasascratch_string_platforms: Android tablet, iPad, Windows phone, Android
     phone, iPhone
   tutorial_nasaorbit_string_platforms: Navegadores modernos
@@ -11395,8 +12695,8 @@ gl:
   tutorial_codemonkeydiglit_string_detail_programming_languages: Digital Literacy
   tutorial_bsdrockpaper_string_detail_programming_languages: Python
   tutorial_microbitreaction_string_detail_programming_languages: Blocks, Python, MakeCode
-  tutorial_kinderanimal_string_detail_programming_languages: Unplugged
-  tutorial_kindersinger_string_detail_programming_languages: Unplugged
+  tutorial_kinderanimal_string_detail_programming_languages: Actividades offline
+  tutorial_kindersinger_string_detail_programming_languages: Actividades offline
   tutorial_microbitwwn_string_detail_programming_languages: Blocks, Python, MakeCode
   tutorial_grokcyberlive_string_detail_programming_languages: Cybersecurity concepts
   tutorial_codemojimaze_string_detail_programming_languages: Unplugged, Sequences
@@ -11412,15 +12712,15 @@ gl:
     Lua, CoffeeScript
   tutorial_spherodigdisplay_string_detail_programming_languages: Blocks
   tutorial_spherorvrincolor_string_detail_programming_languages: Blocks
-  tutorial_clbinary_string_detail_programming_languages: Unplugged
+  tutorial_clbinary_string_detail_programming_languages: Actividades offline
   tutorial_sascollabcode_string_detail_programming_languages: Blocks, Tactile braille
     blocks
   tutorial_codecombatgoblins_string_detail_programming_languages: JavaScript, Python,
     Lua, CoffeeScript
   tutorial_scratchstorytelling_string_detail_programming_languages: Blocks
-  tutorial_crayolasymbols_string_detail_programming_languages: Unplugged
-  tutorial_crayoladrawacode_string_detail_programming_languages: Unplugged
-  tutorial_crayolafollowmycode_string_detail_programming_languages: Unplugged
+  tutorial_crayolasymbols_string_detail_programming_languages: Actividades offline
+  tutorial_crayoladrawacode_string_detail_programming_languages: Actividades offline
+  tutorial_crayolafollowmycode_string_detail_programming_languages: Actividades offline
   tutorial_madpicturethis_string_detail_programming_languages: Unplugged, HTML
   tutorial_mindmakersmaps_string_detail_programming_languages: Blocks
   tutorial_mindmakersjorel_string_detail_programming_languages: Blocks
@@ -11466,7 +12766,7 @@ gl:
   tutorial_codespeaksnake_string_detail_programming_languages: Blocks
   tutorial_prstemalexa_string_detail_programming_languages: Blocks
   tutorial_coderzfarm_string_detail_programming_languages: Blocks
-  tutorial_intelinofield_string_detail_programming_languages: Unplugged
+  tutorial_intelinofield_string_detail_programming_languages: Actividades offline
   tutorial_cablockchain_string_detail_programming_languages: Computational Thinking
   tutorial_nasaparachute_string_detail_programming_languages: Unplugged, Binary Code
   tutorial_nasascratch_string_detail_programming_languages: Blocks
@@ -11479,7 +12779,7 @@ gl:
   tutorial_msftwakanda_string_detail_programming_languages: Blocks
   tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: We couldn't find your school. Please enter more information.
-  school_name: School name
+  school_name: Nome da Escola
   school_name_error: School name is required.
   school_city: School city
   school_state: School state
@@ -11541,6 +12841,91 @@ gl:
     holding the ends of a Code.org-branded rainbow banner. Behind them, several people
     are wearing Code.org shirts and waving rainbow flags while walking alongside a
     multi-colored Volkswagen bug.
+  accessibility_hero_heading: Accessibility at Code.org
+  accessibility_hero_desc: We are dedicated to eliminating barriers that prevent the
+    inclusion and full participation of students and educators with disabilities,
+    ensuring that EVERY student has access to computer science.
+  accessibility_efforts_title: Our Efforts for 2023
+  accessibility_efforts_desc: 'To achieve our goal of a fully accessible platform,
+    we’re implementing a comprehensive action plan that includes:'
+  accessibility_efforts_card_title_1: Internal accessibility training
+  accessibility_efforts_card_desc_1: Our product and engineering teams will complete
+    comprehensive accessibility training by December 2023.
+  accessibility_efforts_card_title_2: VPAT Analysis
+  accessibility_efforts_card_desc_2: Completing [Voluntary Product Accessibility Template](%{voluntary_url})
+    to establish a baseline and measure progress annually. Results available on this
+    page by September 2023.
+  accessibility_efforts_card_title_3: Tools that support accessible design
+  accessibility_efforts_card_desc_3: 'Team members will have access to tools that
+    ensure all new features are designed and built with accessibility in mind. '
+  accessibility_efforts_card_title_4: Accessible curriculum
+  accessibility_efforts_card_desc_4: We will achieve [WCAG Level AA compliance](%{wcag_url})
+    for the first few units of Computer Science Principles and Computer Science Discoveries
+    by December 2023.
+  accessibility_explore_title: Explore Code.org’s accessibility resources
+  accessibility_explore_text: Our accessibility resources page provides comprehensive
+    documentation and guidance for our features and tools, including accessible Hour
+    of Code lessons, immersive readers, keyboard navigation, and customization options.
+  accessibility_explore_button: View accessibility resources page
+  accessibility_help_us_title: Help Us Improve
+  accessibility_help_us_text: At Code.org, we are agile and responsive to feedback.
+    If you have recommendations to help us improve the accessibility of our tools
+    and resources, please reach out. Thank you for helping us make computer science
+    available for all students!
+  accessibility_help_us_button: Tell us how we can improve
+  accessibility_commit_title: Code.org’s Commitment to Accessibility
+  accessibility_commit_text_1: Code.org believes that computer science is foundational
+    for all students and we're committed to ensuring equity, access, and opportunity
+    on our platform and in our curriculum.
+  accessibility_commit_text_2: We're taking a holistic approach to support the learning
+    needs of all students and working to close gaps in access to computer science
+    education for students with disabilities.
+  accessibility_commit_text_3: We’re starting small, but will measure our progress
+    and continuously iterate until we can address even the most complex accessibility
+    challenges.
+  accessibility_commit_text_4: At Code.org, we're committed to continually improving
+    the accessibility of our tools, and we're excited to take this important step
+    towards greater equity, access, and opportunity for all students and educators.
+  accessibility_partner_title: Our Partners and Recommendations
+  accessibility_partner_desc: We recommend the following resources for students and
+    teachers who are looking for more accessible computer science content.
+  accessibility_card_title_1: AccessCSForAll
+  accessibility_card_text_1: Resources for teachers to bring accessible computing
+    to secondary schools and for high school students with disabilities to connect
+    with mentors in the technology space.
+  accessibility_card_title_2: Blocks4All
+  accessibility_card_text_2: A block-based programming environment for iPad that teaches
+    basic programming concepts using the Dash robot. Accessible with VoiceOver, Switch
+    Control, and Voice Control.
+  accessibility_card_title_3: Code Jumper
+  accessibility_card_text_3: A physical coding aid/resource for students with visual
+    impairments.
+  accessibility_card_title_4: CSForAll
+  accessibility_card_text_4: An organization that coordinates projects and programs
+    with different organizations across the United States.
+  accessibility_card_title_5: Deaf Kids Code
+  accessibility_card_text_5: Promotes computer science and technology education to
+    empower students who are deaf or hard of hearing.
+  accessibility_card_title_6: Everyone Can Code
+  accessibility_card_text_6: A curriculum designed by Apple for Swift Playgrounds
+    that provides VoiceOver (modified TTS) and adapted curriculum for students with
+    accessibility needs.
+  accessibility_card_title_7: Khan Academy
+  accessibility_card_text_7: A curriculum provider with various accommodations, including
+    captions, transcripts, and the ability to reduce animation motion and hide visually
+    dependent content. Hosts some Code.org curricula, plus additional computing curricula.
+  accessibility_card_title_8: Snap Circuits
+  accessibility_card_text_8: An educational product that teaches electronics with
+    solderless snap-together electronic components. Can include an access pack for
+    students with visual impairments.
+  accessibility_card_title_9: Sphero
+  accessibility_card_text_9: An interactive coding robotic ball and STEM education
+    kit for students with intellectual disabilities. Needs to be paired with an appropriate
+    application.
+  accessibility_card_title_10: 'Quorum '
+  accessibility_card_text_10: An adaptation of Code.org’s AP Computer Science Principles
+    curriculum using Quorum, an evidence-based language originally designed to provide
+    accessibility for blind or visually-impaired students.
   language_code:
     ar: Arabic
     az: Azerbaijani

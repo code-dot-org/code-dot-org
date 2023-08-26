@@ -2,220 +2,37 @@
   "pl-PL": {
     "data": {
       "placeholder_texts": {
-        "Course 4 Play Lab Params 10": {
-          "46e888cc716ac8ec6fad01e85eb7c37c": "Poziom: ",
-          "013405bba4219ed238e87658786699b6": "Punkty:"
-        },
-        "CourseE_hoops": {
-          "498cd895eb5a102c5aeb977e2b928dee": "Dziękujemy!",
-          "40d7755b0c04b15ca69f0f8d8c510f91": "Nakarm króliczka!"
-        },
-        "courseC_data wizard": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Pies!",
-          "336ad881e37e713ba0325500a8fa1f00": " psy!",
-          "27944770529dd15319a983bee8951560": "Kot!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " koty!",
-          "1c64ef29c853587fbe94f69f05272b79": "Ptak!",
-          "5b402e6ea05e847a076e03ad74420c45": "ptaki!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Smok!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " smoki!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Policz wszystkie zwierzęta!",
-          "f62038e77820419cd978f7b722da560a": "Ile się pojawi?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Policz zwierzaki"
-        },
-        "courseC_data wizard_2020": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Pies!",
-          "336ad881e37e713ba0325500a8fa1f00": " psy!",
-          "27944770529dd15319a983bee8951560": "Kot!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " koty!",
-          "1c64ef29c853587fbe94f69f05272b79": "Ptak!",
-          "5b402e6ea05e847a076e03ad74420c45": "ptaki!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Smok!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " smoki!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Policz wszystkie zwierzęta!",
-          "f62038e77820419cd978f7b722da560a": "Ile się pojawi?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Policz zwierzaki"
-        },
-        "courseE_Dogger_2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!",
-          "8437002ea42b64a5fd68abfb2ab8dae0": "Koniec gry.",
-          "c865bfd8e0c78020ace8e1376d3cc9ad": "Przegrywasz."
-        },
-        "courseE_aboutme_3": {
-          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
-        },
-        "courseE_aboutme_3_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
-        },
-        "courseE_aboutme_4": {
-          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
-        },
-        "courseE_aboutme_4_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
-        },
-        "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hej!"
-        },
-        "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hej!"
-        },
-        "courseF_playlab_variables2b": {
-          "48d6215903dff56238e52e8891380c8f": "niebieski",
-          "f59f10539890569d3b1deb0e4352ab84": "Dzisiaj  mam na sobie",
-          "810f7026db2f96c4e654f4664e44be04": " jersey!",
+        "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "czerwony",
-          "ff800dc7251afead2cdf9c569ff5c9bc": "Jest całkiem  ",
-          "c30c9d9f51c03a6d42d66cea54206abd": " dzisiaj, nie?",
-          "b92274a5b4513e80f4bd6a8136581578": "To najdziwniejszy odcień ",
-          "f54929e86cc7510907895070d8b05979": "  Ja kiedykolwiek widziałem!",
-          "1df9f02f4866a1996ba55a14b80e4125": "Jaki jest kolor mojego kapelusza?",
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseF_project_1": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!",
-          "498cd895eb5a102c5aeb977e2b928dee": "Dziękujemy!",
-          "cbada13e4c1e0a4ce8a6778941fb48de": "Weź drobne. Don't Crash!",
-          "6b90c9823ff75e6a78aa63b392e7315a": "Wynik: "
-        },
-        "Find the Wizard": {
-          "22b45b2cf2d4a2a3d7b3faa522013b26": "Policz do trzech i zniknę. Sprobuj odgadnąć liczbę pomiędzy 1 a 400, żeby mnie odnaleźć.",
-          "74e3efe12b17fe00c01147733fad486d": "Zgadnij liczbę, by mnie odnaleźć!",
-          "3c5a6a6bfff469fd4c779912331f1049": "Bah!",
-          "0b895ef4c917e50663bc2a7327cbee3d": "Znalazłeś mnie!",
-          "0464d226582401370945003bc8850990": "Mwahahahaha!",
-          "765366ef0f68387ed2a6ca3a8d24182d": "Za wysoko!",
-          "cd4c7f8fdf063e832de1604e34dd4531": "Tee Hee!",
-          "0ceb38a3de45bf070e96e6657474f47d": "Za nisko!",
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "3b3d1f8225a16aac3f372c3062d8b194": "Jeśli się zasmuci, uszczęśliw go ponownie i za więcej punktów! ",
+          "66363f1551b4fdb85c85222c629013b2": "Broń obcego! ",
+          "66ca156974a9909af6aea88ad5cb915b": "Trzymaj zombie z dala od obcego, zasmucają go! "
         },
         "Choose Your Own Adventure": {
-          "73af7ec7b0065fb5eb15d6c0ca695ed3": "Naprawdę powinienem znaleźć właściciela tej różdżki!",
-          "c332bf82ea63d21d1d1b701a07ab9afd": "Dzięki za Twoją pomoc, ale musze już iść",
-          "ba57bb6df12b81e80f79eef5b1ca8fc7": "Hej, znalazłem jakąś różdżke!",
-          "c7323ea29d98d5cad8e0828f3f52ef0c": "O nie! To jest różdżka czarownicy! ",
-          "2cef5d66c57efe3994c85f4e1f312849": "Ah-ha! Znalazłem dwie różdżki! Za twoją pomoc, dam ci drugą!\t",
-          "24a124016e7eec7a8fef5bc228541533": "Nie martw się, na pewno ją znajdę",
-          "fe724bc07d1e8b57e53ebfd03c0ec4f5": "Nie martw się, na pewno ją znajdę.",
-          "9360086c2f9d62ba563c6fcbfbd9b402": "Zaraz go znajdę! Do widzenia!",
-          "6d411b45e39818da535ba9f8a2cf58e2": "To zmieniło mnie w czarownicę!",
-          "eb2a8486370211626bbcd04634b73593": "Cześć! Jak masz na imię?",
           "09c9b4915a77a37699140b52b86e4cad": "Wygląda na to, że zgubiłem różdżkę. Widziałeś ją gdzieś? 1. Tak, 2. Nie ",
-          "ede6020b3ffeeff2339ffbccaa0969df": "Nie? Hmm, czy chciałbyś mi pomóc ją znaleźć? 1. Tak, 2. Nie ",
-          "90a2bd046bc816f7d42c33d2a3b347d3": "Świetnie! Który to może być kierunek? 1. Prawo, 2. Lewo ",
-          "7222972741bf95c7d2bf97d1a104fbf0": "Wygląda na to, że zgubiłem różdżkę. Widziałeś ją gdzieś? 1. Tak, 2. Nie ",
-          "c499da20fd7c64b89860a41b61d2dd88": "Nie? Hmm, czy chciałbyś mi pomóc ją znaleźć? 1. Tak, 2. Nie ",
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "24a124016e7eec7a8fef5bc228541533": "Nie martw się, na pewno ją znajdę",
+          "2cef5d66c57efe3994c85f4e1f312849": "Ah-ha! Znalazłem dwie różdżki! Za twoją pomoc, dam ci drugą!\t",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
           "5282c58be05cdecc1308241480b66276": "Koniec gry",
+          "6d411b45e39818da535ba9f8a2cf58e2": "To zmieniło mnie w czarownicę!",
           "710ba29e2eed73bc74a520631d0ab520": "Koniec gry!",
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+          "7222972741bf95c7d2bf97d1a104fbf0": "Wygląda na to, że zgubiłem różdżkę. Widziałeś ją gdzieś? 1. Tak, 2. Nie ",
+          "73af7ec7b0065fb5eb15d6c0ca695ed3": "Naprawdę powinienem znaleźć właściciela tej różdżki!",
+          "90a2bd046bc816f7d42c33d2a3b347d3": "Świetnie! Który to może być kierunek? 1. Prawo, 2. Lewo ",
+          "9360086c2f9d62ba563c6fcbfbd9b402": "Zaraz go znajdę! Do widzenia!",
+          "ba57bb6df12b81e80f79eef5b1ca8fc7": "Hej, znalazłem jakąś różdżke!",
+          "c332bf82ea63d21d1d1b701a07ab9afd": "Dzięki za Twoją pomoc, ale musze już iść",
+          "c499da20fd7c64b89860a41b61d2dd88": "Nie? Hmm, czy chciałbyś mi pomóc ją znaleźć? 1. Tak, 2. Nie ",
+          "c7323ea29d98d5cad8e0828f3f52ef0c": "O nie! To jest różdżka czarownicy! ",
+          "eb2a8486370211626bbcd04634b73593": "Cześć! Jak masz na imię?",
+          "ede6020b3ffeeff2339ffbccaa0969df": "Nie? Hmm, czy chciałbyś mi pomóc ją znaleźć? 1. Tak, 2. Nie ",
+          "fe724bc07d1e8b57e53ebfd03c0ec4f5": "Nie martw się, na pewno ją znajdę."
         },
-        "courseF_playlab_variables3b_josh": {
-          "88789b154a4ffbbd84108b0c80f8c464": "Ile masz lat, Brian?",
-          "662722f1029078dad7a3683c64d8b922": "Wow! Jestem",
-          "ae096fbf24d913754b01a1601672bf62": "też!",
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseF_playlab_variables4b": {
-          "2e1749915d40abd8f43fc2b9dd13649c": "To jest przyjemność, ",
-          "ecb2903fb054395baf72ea1da127be32": "Jesteś bardzo wysoki jak na  ",
-          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": " lat, ",
-          "16e30dcbd70ec5a152eedded32c69476": "Jakie będzie Twoje imię?",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseF_playlab_variables4c_predictive1": {
-          "d065635d5fffcb3739555ae93006081c": "Miło cię spotkać, ",
-          "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?",
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseF_playlab_variables8c": {
-          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Gratulacje, ",
-          "cd0d7bbbbb604e524bfc25effa78095d": ", Myślałem o kolorze ",
-          "8460ae10541cf8ded22a4e899ddfc0bb": "Przepraszam, ",
-          "8622f69e8cf70458a82fc22d8e46372f": ", Nie myślałem o kolorze",
-          "105837607f006777512dc5b09322ea4f": "Wpisz swoje imię kodowe. ",
-          "c216de13cd615c884ff2cc5894324e17": "Wybierz kolor",
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "FoodFight": {
-          "62f1b3a41b5eef66a4b2382bb2ab24f4": "Wynik ",
-          "cc2ecba4e56986752892c0e68c8e32e0": "Poziom ",
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "Guess The Number": {
-          "015c8ae47c8964d793ddc123b7ba6b81": "Nikt nie jest tak młody.",
-          "56582da5c99c1bb46ab5dcda003f8c27": "Za młody.",
-          "781b7711244d030e4ed6e1bfa883364e": "Nie mam jeszcze 20 lat!",
-          "01bab55de9d3319f27c5213b4661c79f": "Nie tak stary!",
-          "5c95950acb6c51d88cc8869eb31f2bdf": "Zrozumiałeś/aś to!",
-          "214e809e9d24f40cc42fa2f04f59a1cf": "Zgadnij, ile mam lat, zanim pożrę tego pingwina!",
-          "919ba81fa27a3f187b7f51f1382c022f": "Ile mam lat? ",
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "Virtual Pet 1_2019": {
-          "22661453237feb87f1b00dd17bc39666": "Mniam! Energia wzrosła!",
-          "4ac000226dd5bc7fc14ecde063245731": "Fuj! Reset energii!"
-        },
-        "Virtual Pet 1_2020": {
-          "22661453237feb87f1b00dd17bc39666": "Mniam! Energia wzrosła!",
-          "4ac000226dd5bc7fc14ecde063245731": "Fuj! Reset energii!"
-        },
-        "courseE_aboutme_1": {
-          "b63151482630edd1589a9ac24d107c49": "To ja! Rikki! Lubię kodować, spotykać się z Thuy i jeść lody!",
-          "810896b14fc6615f0c76628b9b6a727e": "To mój najlepszy przyjaciel Thuy! Jest naprawdę dobra w sportach!",
-          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Lody to moja ulubiona uczta! Ale chyba nie powinienem jeść tego na kanapie ...",
-          "a50ec512bdd98483a7cdcd88cbe11933": "To mój królik, pani Lolipop! Nie mam pojęcia, dlaczego ją nazwałem!",
-          "6f97975a0bda0c9219915161149cbb26": "To mój komputer! Koduję na nim cały czas!",
-          "1c6636ce086fef9305c6e3d25e37d5b2": "Oto sekret: Thuy jest wyjątkowo łaskotliwy!",
-          "fce3b93eaa64a8869c47ba25daa8887f": "Yummy!",
-          "41a18649f969a00ec0b2feba20db997f": "Myślę, że bardziej mi się podoba ten kolor, Pani Lolipop!",
-          "756afb811df2eb3ec88a9e98f3dcaa8d": "Ten komputer nie poradzi sobie z moimi szalonymi umiejętnościami kodowania!"
-        },
-        "courseE_aboutme_1_2020": {
-          "b63151482630edd1589a9ac24d107c49": "To ja! Rikki! Lubię kodować, spotykać się z Thuy i jeść lody!",
-          "810896b14fc6615f0c76628b9b6a727e": "To mój najlepszy przyjaciel Thuy! Jest naprawdę dobra w sportach!",
-          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Lody to moja ulubiona uczta! Ale chyba nie powinienem jeść tego na kanapie ...",
-          "a50ec512bdd98483a7cdcd88cbe11933": "To mój królik, pani Lolipop! Nie mam pojęcia, dlaczego ją nazwałem!",
-          "6f97975a0bda0c9219915161149cbb26": "To mój komputer! Koduję na nim cały czas!",
-          "1c6636ce086fef9305c6e3d25e37d5b2": "Oto sekret: Thuy jest wyjątkowo łaskotliwy!",
-          "fce3b93eaa64a8869c47ba25daa8887f": "Yummy!",
-          "41a18649f969a00ec0b2feba20db997f": "Myślę, że bardziej mi się podoba ten kolor, Pani Lolipop!",
-          "756afb811df2eb3ec88a9e98f3dcaa8d": "Ten komputer nie poradzi sobie z moimi szalonymi umiejętnościami kodowania!"
-        },
-        "courseF_extras_sim": {
-          "a2e534e7e893bd7ddb5d2047ed29dc8e": "słoń zebrał "
-        },
-        "courseF_playlab_variables1a": {
-          "ea904c9d18bd602705f598372988aaa8": "Co mam krzyczeć?",
-          "97a97de7add5e8dcd9f70a407d56968e": "Cel!",
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseF_playlab_variables_challenge1": {
-          "b8bc42495234cdcdcd3ed49dad120a84": "Meg",
-          "8292c7cbebf598e875ccd0c008958922": "kto?",
-          "40f4f24106dde9234f43bf30465647e0": "Puk puk",
-          "3986de660e6560710c546cb2f22c12f3": "Kto tam?",
-          "812febf38bfe564d348136e1b9e71bcd": "Megabajty",
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseF_playlab_variables_challenge2": {
-          "6b90c9823ff75e6a78aa63b392e7315a": "Wynik: "
+        "Course 4 Play Lab Params 10": {
+          "013405bba4219ed238e87658786699b6": "Punkty:",
+          "46e888cc716ac8ec6fad01e85eb7c37c": "Poziom: "
         },
         "Course 4 Play Lab Vars 1": {
           "c469f9393f38213de6fcffa9fe48008d": " -wynik- "
@@ -223,29 +40,13 @@
         "Course 4 Play Lab Vars 2": {
           "c469f9393f38213de6fcffa9fe48008d": " -wynik- "
         },
-        "course4_playlab_variables_challenge1": {
-          "b8bc42495234cdcdcd3ed49dad120a84": "Meg",
-          "8292c7cbebf598e875ccd0c008958922": "kto?",
-          "40f4f24106dde9234f43bf30465647e0": "Puk puk",
-          "3986de660e6560710c546cb2f22c12f3": "Kto tam?",
-          "812febf38bfe564d348136e1b9e71bcd": "Megabajty",
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "Alien Defender": {
-          "66ca156974a9909af6aea88ad5cb915b": "Trzymaj zombie z dala od obcego, zasmucają go! ",
-          "66363f1551b4fdb85c85222c629013b2": "Broń obcego! ",
-          "3b3d1f8225a16aac3f372c3062d8b194": "Jeśli się zasmuci, uszczęśliw go ponownie i za więcej punktów! ",
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
         "Course 4 Play Lab Vars 6": {
-          "f2906a454b9ee96245db295d124807f9": "Naciśnij strzałkę w prawo, aby rzucić ciastem! ",
-          "38ef4db866aae5cb50ce847a505b95d1": "Walka na jedzenie!"
+          "38ef4db866aae5cb50ce847a505b95d1": "Walka na jedzenie!",
+          "f2906a454b9ee96245db295d124807f9": "Naciśnij strzałkę w prawo, aby rzucić ciastem! "
         },
         "Course 4 Play Lab Vars 7": {
-          "f2906a454b9ee96245db295d124807f9": "Naciśnij strzałkę w prawo, aby rzucić ciastem! ",
-          "38ef4db866aae5cb50ce847a505b95d1": "Walka na jedzenie!"
+          "38ef4db866aae5cb50ce847a505b95d1": "Walka na jedzenie!",
+          "f2906a454b9ee96245db295d124807f9": "Naciśnij strzałkę w prawo, aby rzucić ciastem! "
         },
         "Course 4 Playlab For Loop Freeplay": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
@@ -258,9 +59,92 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
+        "CourseE_hoops": {
+          "40d7755b0c04b15ca69f0f8d8c510f91": "Nakarm króliczka!",
+          "498cd895eb5a102c5aeb977e2b928dee": "Dziękujemy!"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
+        },
+        "CourseF_Project_SpriteLab_chatbot_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
+        },
+        "CourseF_Project_SpriteLab_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
+          "78d989e01047ba7043a38650d695abaa": "Wybierz gracza",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "Podniebny tancerz",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
+        },
+        "CourseF_outbreak8": {
+          "968c8b54671ab303d48320f86937c40b": "Maski pomagają spowolnić rozprzestrzenianie się wirusów! ",
+          "fac94901e68fc1dea6e749c012e3efc0": "Kliknij duszki, aby dać im maski."
+        },
+        "CourseF_outbreak8_-2022-2": {
+          "968c8b54671ab303d48320f86937c40b": "Maski pomagają spowolnić rozprzestrzenianie się wirusów! ",
+          "fac94901e68fc1dea6e749c012e3efc0": "Kliknij duszki, aby dać im maski."
+        },
+        "Find the Wizard": {
+          "0464d226582401370945003bc8850990": "Mwahahahaha!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "0b895ef4c917e50663bc2a7327cbee3d": "Znalazłeś mnie!",
+          "0ceb38a3de45bf070e96e6657474f47d": "Za nisko!",
+          "22b45b2cf2d4a2a3d7b3faa522013b26": "Policz do trzech i zniknę. Sprobuj odgadnąć liczbę pomiędzy 1 a 400, żeby mnie odnaleźć.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "3c5a6a6bfff469fd4c779912331f1049": "Bah!",
+          "74e3efe12b17fe00c01147733fad486d": "Zgadnij liczbę, by mnie odnaleźć!",
+          "765366ef0f68387ed2a6ca3a8d24182d": "Za wysoko!",
+          "cd4c7f8fdf063e832de1604e34dd4531": "Tee Hee!"
+        },
+        "FoodFight": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "Wynik ",
+          "cc2ecba4e56986752892c0e68c8e32e0": "Poziom "
+        },
+        "Guess The Number": {
+          "015c8ae47c8964d793ddc123b7ba6b81": "Nikt nie jest tak młody.",
+          "01bab55de9d3319f27c5213b4661c79f": "Nie tak stary!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "214e809e9d24f40cc42fa2f04f59a1cf": "Zgadnij, ile mam lat, zanim pożrę tego pingwina!",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "56582da5c99c1bb46ab5dcda003f8c27": "Za młody.",
+          "5c95950acb6c51d88cc8869eb31f2bdf": "Zrozumiałeś/aś to!",
+          "781b7711244d030e4ed6e1bfa883364e": "Nie mam jeszcze 20 lat!",
+          "919ba81fa27a3f187b7f51f1382c022f": "Ile mam lat? "
+        },
         "NEW Course 4 Play Lab Params 11": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "New Sprite Lab Project": {
+          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!",
+          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
         },
         "OPD-K5-projects-2": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
@@ -279,18 +163,39 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
         "OPD-K5-projects-6": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
         },
         "OPD-K5-projects-7": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
+        },
+        "Virtual Pet 1_2019": {
+          "22661453237feb87f1b00dd17bc39666": "Mniam! Energia wzrosła!",
+          "4ac000226dd5bc7fc14ecde063245731": "Fuj! Reset energii!"
+        },
+        "Virtual Pet 1_2020": {
+          "22661453237feb87f1b00dd17bc39666": "Mniam! Energia wzrosła!",
+          "4ac000226dd5bc7fc14ecde063245731": "Fuj! Reset energii!"
         },
         "course3_playLab_challenge1": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
+        },
+        "course4_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "3986de660e6560710c546cb2f22c12f3": "Kto tam?",
+          "40f4f24106dde9234f43bf30465647e0": "Puk puk",
+          "812febf38bfe564d348136e1b9e71bcd": "Megabajty",
+          "8292c7cbebf598e875ccd0c008958922": "kto?",
+          "b8bc42495234cdcdcd3ed49dad120a84": "Meg"
         },
         "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "courseC19_playLab_EOC12022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
@@ -298,7 +203,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
         "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "courseC19_playLab_EOC22022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
@@ -306,7 +219,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
         "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "courseC19_playLab_EOC32022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
@@ -314,7 +235,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
         "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "courseC19_playLab_EOC42022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
@@ -322,23 +251,75 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
         "courseC19_playLab_EOC5": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
+        },
+        "courseC19_playLab_EOC52022": {
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
         },
         "courseC19_playLab_EOC5_2020": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
         },
         "courseC19_playLab_EOC6": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
+        },
+        "courseC19_playLab_EOC62022": {
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
         },
         "courseC19_playLab_EOC6_2020": {
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
+        },
+        "courseC19_playLab_sample12022": {
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
+        },
+        "courseC19_playLab_sample1_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
+        },
+        "courseC19_playLab_sample22022": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila próbuje chronić swój dom przez kosmicznego robota - spacebota.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Inne stworzenia już się nie boją!",
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
           "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+          "83db90f8846d091d3532256816f105d9": "To jest Neila.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Udało się! Neila pokazała spacebotowi siłę uprzejmości.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila chce pomóc kosmicznemu robotowi - spacebotowi nauczyć się być miłym.",
+          "df8312187449c70820d7c58229a6b17e": "Kosmiczny robot odstrasza inne stworzenia."
+        },
+        "courseC19_playLab_sample2_2021": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila próbuje chronić swój dom przez kosmicznego robota - spacebota.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Inne stworzenia już się nie boją!",
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
+          "83db90f8846d091d3532256816f105d9": "To jest Neila.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Udało się! Neila pokazała spacebotowi siłę uprzejmości.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila chce pomóc kosmicznemu robotowi - spacebotowi nauczyć się być miłym.",
+          "df8312187449c70820d7c58229a6b17e": "Kosmiczny robot odstrasza inne stworzenia."
         },
         "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "courseC_PlayLab_eventsFP2022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
@@ -354,13 +335,143 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "courseC_data wizard": {
+          "1c64ef29c853587fbe94f69f05272b79": "Ptak!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " koty!",
+          "27944770529dd15319a983bee8951560": "Kot!",
+          "336ad881e37e713ba0325500a8fa1f00": " psy!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Smok!",
+          "5b402e6ea05e847a076e03ad74420c45": "ptaki!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Policz wszystkie zwierzęta!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " smoki!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Policz zwierzaki",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Pies!",
+          "f62038e77820419cd978f7b722da560a": "Ile się pojawi?"
+        },
+        "courseC_data wizard2022": {
+          "1c64ef29c853587fbe94f69f05272b79": "Ptak!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " koty!",
+          "27944770529dd15319a983bee8951560": "Kot!",
+          "336ad881e37e713ba0325500a8fa1f00": " psy!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Smok!",
+          "5b402e6ea05e847a076e03ad74420c45": "ptaki!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Policz wszystkie zwierzęta!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " smoki!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Policz zwierzaki",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Pies!",
+          "f62038e77820419cd978f7b722da560a": "Ile się pojawi?"
+        },
+        "courseC_data wizard_2020": {
+          "1c64ef29c853587fbe94f69f05272b79": "Ptak!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " koty!",
+          "27944770529dd15319a983bee8951560": "Kot!",
+          "336ad881e37e713ba0325500a8fa1f00": " psy!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Smok!",
+          "5b402e6ea05e847a076e03ad74420c45": "ptaki!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Policz wszystkie zwierzęta!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " smoki!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Policz zwierzaki",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Pies!",
+          "f62038e77820419cd978f7b722da560a": "Ile się pojawi?"
+        },
+        "courseC_data wizard_2021": {
+          "1c64ef29c853587fbe94f69f05272b79": "Ptak!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " koty!",
+          "27944770529dd15319a983bee8951560": "Kot!",
+          "336ad881e37e713ba0325500a8fa1f00": " psy!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Smok!",
+          "5b402e6ea05e847a076e03ad74420c45": "ptaki!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Policz wszystkie zwierzęta!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " smoki!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Policz zwierzaki",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Pies!",
+          "f62038e77820419cd978f7b722da560a": "Ile się pojawi?"
+        },
         "courseD_playLab_condFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
+        "courseE_Dogger_2": {
+          "8437002ea42b64a5fd68abfb2ab8dae0": "Koniec gry.",
+          "c865bfd8e0c78020ace8e1376d3cc9ad": "Przegrywasz.",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!"
+        },
+        "courseE_aboutme_1": {
+          "1c6636ce086fef9305c6e3d25e37d5b2": "Oto sekret: Thuy jest wyjątkowo łaskotliwy!",
+          "41a18649f969a00ec0b2feba20db997f": "Myślę, że bardziej mi się podoba ten kolor, Pani Lolipop!",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Lody to moja ulubiona uczta! Ale chyba nie powinienem jeść tego na kanapie ...",
+          "6f97975a0bda0c9219915161149cbb26": "To mój komputer! Koduję na nim cały czas!",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "Ten komputer nie poradzi sobie z moimi szalonymi umiejętnościami kodowania!",
+          "810896b14fc6615f0c76628b9b6a727e": "To mój najlepszy przyjaciel Thuy! Jest naprawdę dobra w sportach!",
+          "a50ec512bdd98483a7cdcd88cbe11933": "To mój królik, pani Lolipop! Nie mam pojęcia, dlaczego ją nazwałem!",
+          "b63151482630edd1589a9ac24d107c49": "To ja! Rikki! Lubię kodować, spotykać się z Thuy i jeść lody!",
+          "fce3b93eaa64a8869c47ba25daa8887f": "Yummy!"
+        },
+        "courseE_aboutme_1_2020": {
+          "1c6636ce086fef9305c6e3d25e37d5b2": "Oto sekret: Thuy jest wyjątkowo łaskotliwy!",
+          "41a18649f969a00ec0b2feba20db997f": "Myślę, że bardziej mi się podoba ten kolor, Pani Lolipop!",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Lody to moja ulubiona uczta! Ale chyba nie powinienem jeść tego na kanapie ...",
+          "6f97975a0bda0c9219915161149cbb26": "To mój komputer! Koduję na nim cały czas!",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "Ten komputer nie poradzi sobie z moimi szalonymi umiejętnościami kodowania!",
+          "810896b14fc6615f0c76628b9b6a727e": "To mój najlepszy przyjaciel Thuy! Jest naprawdę dobra w sportach!",
+          "a50ec512bdd98483a7cdcd88cbe11933": "To mój królik, pani Lolipop! Nie mam pojęcia, dlaczego ją nazwałem!",
+          "b63151482630edd1589a9ac24d107c49": "To ja! Rikki! Lubię kodować, spotykać się z Thuy i jeść lody!",
+          "fce3b93eaa64a8869c47ba25daa8887f": "Yummy!"
+        },
+        "courseE_aboutme_1_2021": {
+          "31ba97bb501bb1f5b448221be09bad32": "To jest moja suczka corgi, Lollipop! Nauczę ją kodowania!",
+          "6f97975a0bda0c9219915161149cbb26": "To mój komputer! Koduję na nim cały czas!",
+          "810896b14fc6615f0c76628b9b6a727e": "To mój najlepszy przyjaciel Thuy! Jest naprawdę dobra w sportach!",
+          "8e985f60f328934accd78e7649584840": "Mój ulubiony przysmak to lody!",
+          "b63151482630edd1589a9ac24d107c49": "To ja! Rikki! Lubię kodować, spotykać się z Thuy i jeść lody!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_5": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hej!",
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_52022": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hej!",
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_5_2020": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hej!",
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
+        "courseE_aboutme_5_2021": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hej!",
+          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
+        },
         "courseE_playLab_challenge1": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
         },
         "courseE_playLab_scaffold1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
@@ -379,16 +490,257 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
         "courseE_playLab_scaffold5": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać."
         },
         "courseE_playLab_scaffold6": {
           "2d3cdcfdd4061212e4d4930a183dad2d": "Spróbuj ponownie.",
           "af142a90df4becc2aa7ae0d3acb3cc90": "Koniec gry!"
         },
-        "courseF_playlab_variables6c": {
-          "105837607f006777512dc5b09322ea4f": "Wpisz swoje imię kodowe. ",
+        "courseF_apps_aquarium": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Która ryba?",
+          "78574118d153534fd0925a2f5ca25e79": "Która rzecz?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "inne",
+          "83e4a96aed96436c621b9809e258b309": "ryba",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "stworzenie",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Co dodasz?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Które stworzenie?",
+          "f655df68ec33643278de7e69794e8d76": "Wirtualne akwarium"
+        },
+        "courseF_apps_aquarium2022": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Która ryba?",
+          "78574118d153534fd0925a2f5ca25e79": "Która rzecz?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "inne",
+          "83e4a96aed96436c621b9809e258b309": "ryba",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "stworzenie",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Co dodasz?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Które stworzenie?",
+          "f655df68ec33643278de7e69794e8d76": "Wirtualne akwarium"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Która ryba?",
+          "78574118d153534fd0925a2f5ca25e79": "Która rzecz?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "inne",
+          "83e4a96aed96436c621b9809e258b309": "ryba",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "stworzenie",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Co dodasz?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Które stworzenie?",
+          "f655df68ec33643278de7e69794e8d76": "Wirtualne akwarium"
+        },
+        "courseF_apps_card": {
+          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?"
+        },
+        "courseF_apps_card2022": {
+          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?"
+        },
+        "courseF_apps_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?"
+        },
+        "courseF_apps_chatbot": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
+          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!",
+          "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
+          "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
+          "ae096fbf24d913754b01a1601672bf62": "też!",
+          "f0e5da70d264f312a1658d51c130b101": "Wprowadź swoje imię"
+        },
+        "courseF_apps_chatbot2022": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
+          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!",
+          "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
+          "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
+          "ae096fbf24d913754b01a1601672bf62": "też!",
+          "f0e5da70d264f312a1658d51c130b101": "Wprowadź swoje imię"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
+          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!",
+          "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
+          "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
+          "ae096fbf24d913754b01a1601672bf62": "też!",
+          "f0e5da70d264f312a1658d51c130b101": "Wprowadź swoje imię"
+        },
+        "courseF_apps_collector": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " sekund",
+          "41f2b2212de0105c2a942ebb4a44e449": "Gra \"Wielki kolekcjoner\"!",
+          "490082498449bd20ff0199737dfa4916": "Wybierz typ gry:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!"
+        },
+        "courseF_apps_collector2022": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " sekund",
+          "41f2b2212de0105c2a942ebb4a44e449": "Gra \"Wielki kolekcjoner\"!",
+          "490082498449bd20ff0199737dfa4916": "Wybierz typ gry:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " sekund",
+          "41f2b2212de0105c2a942ebb4a44e449": "Gra \"Wielki kolekcjoner\"!",
+          "490082498449bd20ff0199737dfa4916": "Wybierz typ gry:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!"
+        },
+        "courseF_apps_madlib": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
+          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy"
+        },
+        "courseF_apps_madlib2022": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
+          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy"
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
+          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy"
+        },
+        "courseF_editable_card": {
+          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?"
+        },
+        "courseF_editable_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?"
+        },
+        "courseF_editable_chatbot": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
+          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!",
+          "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
+          "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
+          "ae096fbf24d913754b01a1601672bf62": "też!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "f0e5da70d264f312a1658d51c130b101": "Wprowadź swoje imię"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
+          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!",
+          "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
+          "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
+          "ae096fbf24d913754b01a1601672bf62": "też!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "f0e5da70d264f312a1658d51c130b101": "Wprowadź swoje imię"
+        },
+        "courseF_editable_madlib": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
+          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy"
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
+          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy"
+        },
+        "courseF_extras_sim": {
+          "a2e534e7e893bd7ddb5d2047ed29dc8e": "słoń zebrał "
+        },
+        "courseF_label_predict": {
+          "937dc37c06cc5d89a7096eb048b73590": "już idzie!",
+          "f15045cb7e57652546d4a0b2c695356f": "Co będziesz jeść?"
+        },
+        "courseF_label_predict_-2022-2": {
+          "937dc37c06cc5d89a7096eb048b73590": "już idzie!",
+          "f15045cb7e57652546d4a0b2c695356f": "Co będziesz jeść?"
+        },
+        "courseF_playlab_variables1a": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "97a97de7add5e8dcd9f70a407d56968e": "Cel!",
+          "ea904c9d18bd602705f598372988aaa8": "Co mam krzyczeć?"
+        },
+        "courseF_playlab_variables2b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "48d6215903dff56238e52e8891380c8f": "niebieski",
+          "810f7026db2f96c4e654f4664e44be04": " jersey!",
+          "f59f10539890569d3b1deb0e4352ab84": "Dzisiaj  mam na sobie"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "662722f1029078dad7a3683c64d8b922": "Wow! Jestem",
+          "88789b154a4ffbbd84108b0c80f8c464": "Ile masz lat, Brian?",
+          "ae096fbf24d913754b01a1601672bf62": "też!"
+        },
+        "courseF_playlab_variables4b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
+          "16e30dcbd70ec5a152eedded32c69476": "Jakie będzie Twoje imię?",
+          "2e1749915d40abd8f43fc2b9dd13649c": "To jest przyjemność, ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "ecb2903fb054395baf72ea1da127be32": "Jesteś bardzo wysoki jak na  ",
+          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": " lat, "
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "d065635d5fffcb3739555ae93006081c": "Miło cię spotkać, ",
+          "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
+        },
+        "courseF_playlab_variables5c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "1df9f02f4866a1996ba55a14b80e4125": "Jaki jest kolor mojego kapelusza?",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "b92274a5b4513e80f4bd6a8136581578": "To najdziwniejszy odcień ",
+          "bda9643ac6601722a28f238714274da4": "czerwony",
+          "c30c9d9f51c03a6d42d66cea54206abd": " dzisiaj, nie?",
+          "f54929e86cc7510907895070d8b05979": "  Ja kiedykolwiek widziałem!",
+          "ff800dc7251afead2cdf9c569ff5c9bc": "Jest całkiem  "
+        },
+        "courseF_playlab_variables6c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "105837607f006777512dc5b09322ea4f": "Wpisz swoje imię kodowe. ",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
         "courseF_playlab_variables7b": {
@@ -396,196 +748,100 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
         },
         "courseF_playlab_variables7c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "105837607f006777512dc5b09322ea4f": "Wpisz swoje imię kodowe. ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "c216de13cd615c884ff2cc5894324e17": "Wybierz kolor"
+        },
+        "courseF_playlab_variables8c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "105837607f006777512dc5b09322ea4f": "Wpisz swoje imię kodowe. ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "8460ae10541cf8ded22a4e899ddfc0bb": "Przepraszam, ",
+          "8622f69e8cf70458a82fc22d8e46372f": ", Nie myślałem o kolorze",
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Gratulacje, ",
           "c216de13cd615c884ff2cc5894324e17": "Wybierz kolor",
+          "cd0d7bbbbb604e524bfc25effa78095d": ", Myślałem o kolorze "
+        },
+        "courseF_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł",
+          "3986de660e6560710c546cb2f22c12f3": "Kto tam?",
+          "40f4f24106dde9234f43bf30465647e0": "Puk puk",
+          "812febf38bfe564d348136e1b9e71bcd": "Megabajty",
+          "8292c7cbebf598e875ccd0c008958922": "kto?",
+          "b8bc42495234cdcdcd3ed49dad120a84": "Meg"
         },
-        "iceage_free_play": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        "courseF_playlab_variables_challenge2": {
+          "6b90c9823ff75e6a78aa63b392e7315a": "Wynik: "
         },
-        "CourseF_Project_SpriteLab_2021": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
-        },
-        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
-        },
-        "CourseF_Project_SpriteLab_examples_2021": {
-          "78d989e01047ba7043a38650d695abaa": "Wybierz gracza",
-          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3",
-          "8e7d34ed67fe4ec0910cefee2f5059cd": "Podniebny tancerz"
-        },
-        "courseC19_playLab_EOC1_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseC19_playLab_EOC2_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseC19_playLab_EOC4_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseC19_playLab_EOC5_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
-        },
-        "courseC19_playLab_EOC6_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
-        },
-        "courseC19_playLab_sample1_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
-        },
-        "courseC19_playLab_sample2_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
-          "83db90f8846d091d3532256816f105d9": "To jest Neila.",
-          "0192cdc04916ec27aa11738bb6e48d6e": "Neila próbuje chronić swój dom przez kosmicznego robota - spacebota.",
-          "df8312187449c70820d7c58229a6b17e": "Kosmiczny robot odstrasza inne stworzenia.",
-          "c084e152431f9116b9fdb3f7d465f13d": "Neila chce pomóc kosmicznemu robotowi - spacebotowi nauczyć się być miłym.",
-          "b2f02bf648ce32c4362afe1578d41f70": "Udało się! Neila pokazała spacebotowi siłę uprzejmości.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "Inne stworzenia już się nie boją!"
-        },
-        "courseC_PlayLab_eventsFP_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseC_data wizard_2021": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Pies!",
-          "336ad881e37e713ba0325500a8fa1f00": " psy!",
-          "27944770529dd15319a983bee8951560": "Kot!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " koty!",
-          "1c64ef29c853587fbe94f69f05272b79": "Ptak!",
-          "5b402e6ea05e847a076e03ad74420c45": "ptaki!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Smok!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " smoki!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Policz wszystkie zwierzęta!",
-          "f62038e77820419cd978f7b722da560a": "Ile się pojawi?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Policz zwierzaki"
-        },
-        "courseE_aboutme_1_2021": {
-          "b63151482630edd1589a9ac24d107c49": "To ja! Rikki! Lubię kodować, spotykać się z Thuy i jeść lody!",
-          "810896b14fc6615f0c76628b9b6a727e": "To mój najlepszy przyjaciel Thuy! Jest naprawdę dobra w sportach!",
-          "6f97975a0bda0c9219915161149cbb26": "To mój komputer! Koduję na nim cały czas!",
-          "8e985f60f328934accd78e7649584840": "Mój ulubiony przysmak to lody!",
-          "31ba97bb501bb1f5b448221be09bad32": "To jest moja suczka corgi, Lollipop! Nauczę ją kodowania!"
-        },
-        "courseE_aboutme_3_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
-        },
-        "courseE_aboutme_4_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
-        },
-        "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hej!"
-        },
-        "courseF_apps_aquarium": {
-          "83e4a96aed96436c621b9809e258b309": "ryba",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "stworzenie",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "inne",
-          "f655df68ec33643278de7e69794e8d76": "Wirtualne akwarium",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Co dodasz?",
-          "0d3e73168beb875063ea0f0302fe32bd": "Która ryba?",
-          "caaf8264ca397dba2d35ef902bbbd953": "Które stworzenie?",
-          "78574118d153534fd0925a2f5ca25e79": "Która rzecz?"
-        },
-        "courseF_apps_card": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?",
-          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?"
-        },
-        "courseF_apps_chatbot": {
-          "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
-          "f0e5da70d264f312a1658d51c130b101": "Wprowadź swoje imię",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
-          "ae096fbf24d913754b01a1601672bf62": "też!",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
-          "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
-          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!"
-        },
-        "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " sekund",
-          "490082498449bd20ff0199737dfa4916": "Wybierz typ gry:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Gra \"Wielki kolekcjoner\"!"
-        },
-        "courseF_apps_madlib": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
-          "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy",
-          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
-          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
-          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!"
-        },
-        "courseF_editable_card": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?",
-          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?"
-        },
-        "courseF_editable_chatbot": {
-          "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
-          "f0e5da70d264f312a1658d51c130b101": "Wprowadź swoje imię",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
-          "ae096fbf24d913754b01a1601672bf62": "też!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
-          "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
-          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!"
-        },
-        "courseF_editable_madlib": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
-          "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy",
-          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
-          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
-          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!"
+        "courseF_project_1": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Dziękujemy!",
+          "6b90c9823ff75e6a78aa63b392e7315a": "Wynik: ",
+          "cbada13e4c1e0a4ce8a6778941fb48de": "Weź drobne. Don't Crash!",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!"
         },
         "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_text_answer_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_text_choice_color": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
+        "courseF_text_choice_color_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
         "courseF_text_choice_conversation": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
+        "courseF_text_choice_conversation_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
         "courseF_text_choice_events": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "44506356d48394cd903b579df9de9117": ", mieszkańcu Ziemi!",
           "c529a06c3f8518b63ff6dfac482b335c": "Nazwij tę planetę:",
-          "44506356d48394cd903b579df9de9117": ", mieszkańcu Ziemi!"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_text_choice_events_-2022-2": {
+          "44506356d48394cd903b579df9de9117": ", mieszkańcu Ziemi!",
+          "c529a06c3f8518b63ff6dfac482b335c": "Nazwij tę planetę:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
+        "courseF_text_choice_freeplay_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_text_choice_interview": {
+          "34088af1fb721900963462375b3bbe23": "robot!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Nazwij robota."
+        },
+        "courseF_text_choice_interview_-2022-2": {
+          "34088af1fb721900963462375b3bbe23": "robot!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Nazwij robota."
+        },
+        "courseF_text_choice_multiprompt": {
+          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?"
+        },
+        "courseF_text_choice_multiprompt_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?"
+        },
         "courseF_text_choice_title": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
+        "courseF_text_choice_title_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
         "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
+        },
+        "courseF_text_concat_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
           "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
         },
@@ -593,34 +849,62 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
           "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
         },
+        "courseF_text_prompts_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
+        },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
+        "courseF_variables_card_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
-          "464a456e0747ec9b09fc9afc6fbd13ed": "co chcesz na swoje urodziny?"
+          "464a456e0747ec9b09fc9afc6fbd13ed": "co chcesz na swoje urodziny?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_variables_card_finish_-2022-2": {
+          "464a456e0747ec9b09fc9afc6fbd13ed": "co chcesz na swoje urodziny?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
+        "courseF_variables_chatbot_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
           "46463b2e9f71f2f15b7238f56f09ba30": "Koniec",
-          "c757766b0a7e2017c79e1c94f60e44f7": "Dzięki za rozmowę!"
+          "c757766b0a7e2017c79e1c94f60e44f7": "Dzięki za rozmowę!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_variables_chatbot_finish_-2022-2": {
+          "46463b2e9f71f2f15b7238f56f09ba30": "Koniec",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Dzięki za rozmowę!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
+        "courseF_variables_madlib_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
-          "50d489a15105b987ec6d4410900c95dd": "Wpisz słowo akcji:"
+          "50d489a15105b987ec6d4410900c95dd": "Wpisz słowo akcji:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+        },
+        "courseF_variables_madlib_finish_-2022-2": {
+          "50d489a15105b987ec6d4410900c95dd": "Wpisz słowo akcji:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
         },
-        "courseF_text_choice_multiprompt": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?",
-          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?"
+        "courseF_variables_predict_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
+        },
+        "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
         },
         "helloworld_animals_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
@@ -634,293 +918,9 @@
         "helloworld_retro_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
         },
-        "courseF_label_predict": {
-          "f15045cb7e57652546d4a0b2c695356f": "Co będziesz jeść?",
-          "937dc37c06cc5d89a7096eb048b73590": "już idzie!"
-        },
-        "courseF_text_choice_interview": {
-          "5bd698afd23bccde289bb0b4aa72a518": "Nazwij robota.",
-          "34088af1fb721900963462375b3bbe23": "robot!"
-        },
-        "CourseF_outbreak8": {
-          "fac94901e68fc1dea6e749c012e3efc0": "Kliknij duszki, aby dać im maski.",
-          "968c8b54671ab303d48320f86937c40b": "Maski pomagają spowolnić rozprzestrzenianie się wirusów! "
-        },
-        "New Play Lab Project": {
+        "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
           "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "New Sprite Lab Project": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3",
-          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
-        },
-        "CourseF_Project_SpriteLab_chatbot_examples_-2022-2": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
-        },
-        "CourseF_Project_SpriteLab_cupcake_examples_-2022-2": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
-        },
-        "CourseF_Project_SpriteLab_examples_-2022-2": {
-          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
-          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
-        },
-        "CourseF_outbreak8_-2022-2": {
-          "fac94901e68fc1dea6e749c012e3efc0": "Kliknij duszki, aby dać im maski.",
-          "968c8b54671ab303d48320f86937c40b": "Maski pomagają spowolnić rozprzestrzenianie się wirusów! "
-        },
-        "courseC19_playLab_EOC12022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseC19_playLab_EOC22022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseC19_playLab_EOC32022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseC19_playLab_EOC42022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseC19_playLab_EOC52022": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
-        },
-        "courseC19_playLab_EOC62022": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
-        },
-        "courseC19_playLab_sample12022": {
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
-        },
-        "courseC19_playLab_sample22022": {
-          "83db90f8846d091d3532256816f105d9": "To jest Neila.",
-          "0192cdc04916ec27aa11738bb6e48d6e": "Neila próbuje chronić swój dom przez kosmicznego robota - spacebota.",
-          "df8312187449c70820d7c58229a6b17e": "Kosmiczny robot odstrasza inne stworzenia.",
-          "c084e152431f9116b9fdb3f7d465f13d": "Neila chce pomóc kosmicznemu robotowi - spacebotowi nauczyć się być miłym.",
-          "b2f02bf648ce32c4362afe1578d41f70": "Udało się! Neila pokazała spacebotowi siłę uprzejmości.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "Inne stworzenia już się nie boją!",
-          "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
-        },
-        "courseC_PlayLab_eventsFP2022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
-          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
-        },
-        "courseC_data wizard2022": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Pies!",
-          "336ad881e37e713ba0325500a8fa1f00": " psy!",
-          "27944770529dd15319a983bee8951560": "Kot!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " koty!",
-          "1c64ef29c853587fbe94f69f05272b79": "Ptak!",
-          "5b402e6ea05e847a076e03ad74420c45": "ptaki!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Smok!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " smoki!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Policz wszystkie zwierzęta!",
-          "f62038e77820419cd978f7b722da560a": "Ile się pojawi?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Policz zwierzaki"
-        },
-        "courseE_aboutme_32022": {
-          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
-        },
-        "courseE_aboutme_42022": {
-          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
-        },
-        "courseE_aboutme_52022": {
-          "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hej!"
-        },
-        "courseF_apps_aquarium2022": {
-          "f655df68ec33643278de7e69794e8d76": "Wirtualne akwarium",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Co dodasz?",
-          "83e4a96aed96436c621b9809e258b309": "ryba",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "stworzenie",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "inne",
-          "0d3e73168beb875063ea0f0302fe32bd": "Która ryba?",
-          "caaf8264ca397dba2d35ef902bbbd953": "Które stworzenie?",
-          "78574118d153534fd0925a2f5ca25e79": "Która rzecz?"
-        },
-        "courseF_apps_aquarium_-2022-2": {
-          "f655df68ec33643278de7e69794e8d76": "Wirtualne akwarium",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Co dodasz?",
-          "83e4a96aed96436c621b9809e258b309": "ryba",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "stworzenie",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "inne",
-          "0d3e73168beb875063ea0f0302fe32bd": "Która ryba?",
-          "caaf8264ca397dba2d35ef902bbbd953": "Które stworzenie?",
-          "78574118d153534fd0925a2f5ca25e79": "Która rzecz?"
-        },
-        "courseF_apps_card2022": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?",
-          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_apps_card_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?",
-          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_apps_chatbot2022": {
-          "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
-          "f0e5da70d264f312a1658d51c130b101": "Wprowadź swoje imię",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
-          "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
-          "ae096fbf24d913754b01a1601672bf62": "też!",
-          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!"
-        },
-        "courseF_apps_chatbot_-2022-2": {
-          "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
-          "f0e5da70d264f312a1658d51c130b101": "Wprowadź swoje imię",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
-          "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
-          "ae096fbf24d913754b01a1601672bf62": "też!",
-          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!"
-        },
-        "courseF_apps_collector2022": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " sekund",
-          "490082498449bd20ff0199737dfa4916": "Wybierz typ gry:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Gra \"Wielki kolekcjoner\"!"
-        },
-        "courseF_apps_collector_-2022-2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " sekund",
-          "490082498449bd20ff0199737dfa4916": "Wybierz typ gry:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Gra \"Wielki kolekcjoner\"!"
-        },
-        "courseF_apps_madlib2022": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy",
-          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
-          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
-          "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
-          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_apps_madlib_-2022-2": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy",
-          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
-          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
-          "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
-          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_editable_card_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?",
-          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_editable_chatbot_-2022-2": {
-          "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
-          "f0e5da70d264f312a1658d51c130b101": "Wprowadź swoje imię",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
-          "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
-          "ae096fbf24d913754b01a1601672bf62": "też!",
-          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_editable_madlib_-2022-2": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy",
-          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
-          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
-          "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
-          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_label_predict_-2022-2": {
-          "f15045cb7e57652546d4a0b2c695356f": "Co będziesz jeść?",
-          "937dc37c06cc5d89a7096eb048b73590": "już idzie!"
-        },
-        "courseF_text_answer_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_text_choice_color_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_text_choice_conversation_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_text_choice_events_-2022-2": {
-          "c529a06c3f8518b63ff6dfac482b335c": "Nazwij tę planetę:",
-          "44506356d48394cd903b579df9de9117": ", mieszkańcu Ziemi!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_text_choice_freeplay_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_text_choice_interview_-2022-2": {
-          "34088af1fb721900963462375b3bbe23": "robot!",
-          "5bd698afd23bccde289bb0b4aa72a518": "Nazwij robota."
-        },
-        "courseF_text_choice_multiprompt_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?",
-          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?"
-        },
-        "courseF_text_choice_title_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_text_concat_-2022-2": {
-          "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_text_prompts_-2022-2": {
-          "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_variables_card_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_variables_card_finish_-2022-2": {
-          "464a456e0747ec9b09fc9afc6fbd13ed": "co chcesz na swoje urodziny?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_variables_chatbot_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_variables_chatbot_finish_-2022-2": {
-          "46463b2e9f71f2f15b7238f56f09ba30": "Koniec",
-          "c757766b0a7e2017c79e1c94f60e44f7": "Dzięki za rozmowę!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_variables_madlib_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_variables_madlib_finish_-2022-2": {
-          "50d489a15105b987ec6d4410900c95dd": "Wpisz słowo akcji:",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
-        },
-        "courseF_variables_predict_-2022-2": {
-          "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
-        },
-        "coursee_helloworld_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
         }
       }
     }

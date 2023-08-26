@@ -648,10 +648,88 @@ zh-TW:
         CSA-PL-debugging-22: 在 Java Lab 中除錯
         CSD_Unit6_InteractiveArtExemplar: 互動藝術範例
         CS_Changing_Everything: 計算機科學改變了一切
+        csa-alias-video: 等於和別名
         csa-equals-video: equals() 方法
         csa-user-stories: 軟件工程中的使用者故事
         csa-pl-vpl-m1-unit-3: 單元 3 中的軟件工程
+        csa-pl-intro-to-equality: 平等簡介
         csa-pl-intro-to-equals-method: .equals() 方法簡介
+        csa-pl-equals-book: 編寫等於（）圖書類方法
+        csa-multi-select-pl: Java 中的多重選取陳述式
+        csc_timecapsule_intro: 時光膠囊簡介
+        PL_Equity_in_CS_Education: CS 教育公平
+        csc_fm_pilot: 功能機
+        csc_fm_pilot_v2: '功能機介紹 '
+        csc-sprite-lab-pixel-editor: 繪製自己的精靈
+        csa-pl-intro-to-strings: Java 中的字符串簡介
+        csa-pl-compareTo: 比較至 () 方法
+        csc-event-short-intro: 活動簡介
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: 電路遊樂場單位概述
+        csa-day-in-pm-pl: 項目經理是做什麼的？
+        csa-pl-intro-to-pm: 專案管理簡介
+        PL_CSD_CircuitPlayground_Setup: 電路遊樂場設置
+        csa_object_oriented_programming: 'CSA: 面向對象編程'
+        csa_creating_objects: 'CSA：建立物件'
+        csa_calling_methods: 'CSA: 呼叫方法'
+        csa_while_loops: 'CSA: 雖然循環'
+        csa_inheritance: 'CSA: 繼承'
+        csa_writing_a_method: 'CSA: 編寫一個方法'
+        csa_software_engineering_code_reviews: 'CSA: 軟件工程-代碼評論'
+        csa_conditional_statements: 'CSA: 條件陳述式'
+        csa_printing_in_java: 'CSA: 在 Java 中列印'
+        csa_two_way_selection_and_not: 'CSA: 雙向選擇和非'
+        csa-pl-intro-to-oop: 物件導向程式設計簡介
+        csa-pl-welcome-to-Neighborhood: 歡迎來到鄰里
+        csa-pl-calling-methods: 在 Java 中調用方法
+        csa-pl-creating-objects: 建立物件
+        csa_accessor_methods: 'CSA: 存取子方法'
+        csa_constructors: 'CSA: 建構函式'
+        csa_creating_a_scanner_object: 'CSA: 建立掃描器物件'
+        csa_creating_variables: 'CSA: 建立變數'
+        csa_instance_variables_and_attributes: 'CSA：實例變量和屬性'
+        csa_mutator_methods: 'CSA: 變異方法'
+        csa_overloaded_constructors: 'CSA: 重載的建構函式'
+        csa_the_tostring_method: 'CSA: 該字符串 () 方法'
+        csa_scanner_class_methods: 'CSA: 掃描器類別方法'
+        csa_for_loops: 'CSA: 對於循環'
+        csa_enhanced_for_loops: 'CSA: 增強的循環'
+        csa_modifying_values_in_a_1d_array: 'CSA: 修改一維數組中的值'
+        csa_nested_loops: 'CSA: 嵌套循環'
+        csa_one_dimensional_arrays: 'CSA: 一維 (1D) 陣列'
+        csa_polymorphism: 'CSA: 多態性'
+        csa_casting: 'CSA: 鑄造'
+        csa_equals_and_aliases: 'CSA: 等於和別名'
+        csa_multi-selection_statements: 'CSA: 多重選取陳述式'
+        csa_random_numbers: 'CSA: 隨機數'
+        csa_static_methods: 'CSA: 靜態方法'
+        csa_static_variables: 'CSA: 靜態變數'
+        csa_the_equals_method: 'CSA: 等於 () 方法'
+        csa_welcome_to_the_theater: 'CSA: 歡迎來到劇院'
+        enter_your_own_poem: 輸入你自己的詩
+        csa-example-solution-1: '實時編碼示例解決方案 '
+        csa-pl-documentation: Java 實驗室中的文檔
+        csc-starquilts-intro: 'CSC: 星星被子'
+        csa-pl-vocab-pm: 專案管理詞彙
+        csc-ecosystems-intro: 生態系統簡介
+        PL_CSD_MicroBit_Intro: 微型:位元簡介
+        csc_animal_adaptations_intro: 動物適應簡介
+        csa_two_dimensional_arrays: 'CSA: 二維 (二維) 陣列'
+        csa_working_with_2d_array_elements: 'CSA: 使用二維陣列元素'
+        csa_row_major_traversal: 'CSA: 行-主要遍歷'
+        csa_column_major_traversal: 'CSA: 列主要遍歷'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: 增強的循環和二維陣列'
+        csa_images_and_pixels: 'CSA: 圖像和像素'
+        csa_wrapper_classes_part_1: 'CSA：包裝類第 1 部分'
+        csa_wrapper_classes_part_2: 'CSA：包裝類第 2 部分'
+        csa_the_arraylist_class: 'CSA: 在數組列表類'
+        csa_working_with_arraylist_data: 'CSA: 使用陣列清單資料'
+        csa_remving_data_from_an_arraylist: 'CSA: 從數組列表中刪除數據'
+        csa_private_methods: 'CSA: 私有方法'
+        csa_recursion: 'CSA: 遞歸'
+        csa_searching_algorithms: 'CSA: 搜尋演算法'
+        csa_sorting_algorithms: 'CSA: 排序演算法'
+        star_quilts_intro_to_artist: '明星被子：藝術家簡介'
+        upload_sprites_backgrounds: 上傳自定義精靈和背景
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

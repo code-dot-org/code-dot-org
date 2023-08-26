@@ -85,20 +85,22 @@ fa:
           title: بررسی دوره آموزشی "کشفیات علوم کامپیوتر"
         self-paced-pl-csd-2023:
           title: self-paced-pl-csd-2021
+        self-paced-pl-csp-2023:
+          title: self-paced-pl-csp-2021
     resources:
-      curriculum/csd/2020:
-        name: برنامه آموزشی
-      teacher_forum/csd/2020:
-        name: انجمن استادان
       curriculum/csd/2017:
         name: برنامه آموزشی
       teacher_forum_6/csd/2017:
+        name: انجمن استادان
+      curriculum/csd/2018:
+        name: برنامه آموزشی
+      teacher_forum_6/csd/2018:
         name: انجمن استادان
       curriculum/csd/2019:
         name: برنامه آموزشی
       teacher_forum/csd/2019:
         name: انجمن استادان
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: برنامه آموزشی
-      teacher_forum_6/csd/2018:
+      teacher_forum/csd/2020:
         name: انجمن استادان

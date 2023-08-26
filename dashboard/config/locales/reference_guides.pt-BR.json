@@ -183,7 +183,7 @@
           "display_name": "O laço de desenho"
         },
         "csd-2022/variables": {
-          "display_name": "variáveis"
+          "display_name": "Variáveis"
         },
         "csd-2022/velocity": {
           "display_name": "Velocidade"
@@ -195,7 +195,7 @@
           "display_name": "Laboratório Web"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+          "content": "[][0]"
         }
       }
     }

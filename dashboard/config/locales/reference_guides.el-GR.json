@@ -6,13 +6,16 @@
           "display_name": "Γεγονότα Επιταχυνσιόμετρου"
         },
         "csd-2022/app-lab": {
-          "display_name": "App Lab"
+          "display_name": "Εργαστήριο εφαρμογών"
         },
         "csd-2022/applab-overview": {
           "display_name": "Επισκόπηση"
         },
         "csd-2022/board-events": {
           "display_name": "Γεγονότα Πίνακα"
+        },
+        "csd-2022/circuit-playground": {
+          "display_name": "Επισκόπηση Παιδότοπου"
         },
         "csd-2022/css-overview": {
           "display_name": "Επισκόπηση"
@@ -41,6 +44,9 @@
         "csd-2022/hyperlinks": {
           "display_name": "Υπερσύνδεσμοι"
         },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
         "csd-2022/javascript": {
           "display_name": "JavaScript"
         },
@@ -59,6 +65,9 @@
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Επισκόπηση"
         },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Κάρτες Μοντέλων στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
         "csd-2022/naming-variables": {
           "display_name": "Ορίζοντας Μεταβλητές"
         },
@@ -73,6 +82,12 @@
         },
         "csd-2022/playing-notes": {
           "display_name": "Παίζοντας Νότες"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Η Διαδικασία Επίλυσης Προβλημάτων"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Η Διαδικασία Επίλυσης Προβλημάτων"
         },
         "csd-2022/random-numbers": {
           "display_name": "Τυχαίοι αριθμοί"
@@ -96,7 +111,7 @@
           "display_name": "Εργαστήρι Ιστού"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+          "content": "[][0]"
         }
       }
     }

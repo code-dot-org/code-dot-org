@@ -3,7 +3,6 @@ Feature: App Lab Versions
 
 Scenario: Script Level Versions
   Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I ensure droplet is in block mode
   And I switch to text mode
@@ -37,7 +36,6 @@ Scenario: Script Level Versions
 
 Scenario: Project Load and Reload
   Given I am on "http://studio.code.org/projects/applab/new"
-  And I rotate to landscape
   And I wait for the page to fully load
   # The initial load results in save only because this is a new project.
   And I wait for initial project save to complete
@@ -75,7 +73,6 @@ Scenario: Project Load and Reload
 @no_mobile
 Scenario: Project Version Checkpoints
   Given I am on "http://studio.code.org/projects/applab/new"
-  And I rotate to landscape
   And I wait for the page to fully load
   # The initial load results in save only because this is a new project.
   And I wait for initial project save to complete
@@ -108,7 +105,6 @@ Scenario: Project Version Checkpoints
 Scenario: Project page refreshes when other client adds a newer version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
-  And I rotate to landscape
   And I wait for the page to fully load
   And element ".project_updated_at" eventually contains text "Saved"
   And I ensure droplet is in block mode
@@ -146,7 +142,6 @@ Scenario: Project page refreshes when other client adds a newer version
 Scenario: Project page refreshes when other client replaces current version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
-  And I rotate to landscape
   And I wait for the page to fully load
   And element ".project_updated_at" eventually contains text "Saved"
   And I ensure droplet is in block mode

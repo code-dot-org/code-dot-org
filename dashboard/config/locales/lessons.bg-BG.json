@@ -2,267 +2,1794 @@
   "bg-BG": {
     "data": {
       "lessons": {
-        "minecraft/Minecraft Hour of Code Designer": {
-          "name": "Minecraft Hour of Code Дизайнер"
+        "csd1-2017/Intro to Problem Solving": {
+          "name": "Въведение в Решаването на Проблеми"
         },
-        "hero/Minecraft Hour of Code": {
-          "name": "Minecraft: Пътуването на героя"
+        "csd1-2017/The Problem Solving Process": {
+          "name": "Процеса за Решаване на Проблеми"
         },
-        "flappy/Flappy Code": {
-          "name": "Flappy код"
+        "csd1-2017/Exploring Problem Solving": {
+          "name": "Изследване на Решаването на Проблеми"
         },
-        "hourofcode/Maze": {
-          "name": "Лабиринт"
+        "csd1-2017/What is a Computer?": {
+          "name": "Какво е Компютър?"
         },
-        "frozen/Artist": {
-          "name": "Код с Анна и Елза"
+        "csd1-2017/Storage": {
+          "name": "Съхранение"
         },
-        "iceage/Ice Age Play Lab": {
-          "name": "Ледена епоха Play Lab",
-          "student_overview": "В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код."
+        "csd1-2017/Project - Propose an App": {
+          "name": "Проект - Предложете Приложение"
         },
-        "artist/Artist": {
-          "name": "Художник"
+        "csd2-2017/Websites for Expression ": {
+          "name": "Уебсайтове за Изразяване"
         },
-        "gumball/Gumball Play Lab": {
-          "name": "Гъмбол- игрална лаборатория"
+        "csd2-2017/Headings": {
+          "name": "Заглавия"
         },
-        "dance/Dance Party": {
-          "name": "Танцово Парти (2018)"
+        "csd2-2017/Lists": {
+          "name": "Списъци"
         },
-        "aquatic/Aquatic": {
-          "name": "Minecraft: Подводното пътешествие"
+        "csd2-2017/Intellectual Property and Images": {
+          "name": "Интелектуална Собственост и Изображения"
         },
-        "starwars/Hour of Code 2015": {
-          "name": "Междузвездни войни: Изграждане на галактика с код (JavaScript)"
+        "csd2-2017/Clean Code and Debugging": {
+          "name": "Чист Код и Дебъгване"
         },
-        "mc/Hour of Code 2015": {
-          "name": "Minecraft Hour of Code"
+        "csd2-2017/Project - Multi-Page Websites": {
+          "name": "Проект - Уебсайтове с Няколко Страници"
         },
-        "playlab/Play Lab": {
-          "name": "Театрална лаборатория",
-          "student_overview": "В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код."
+        "csd2-2017/Sources and Search Engines": {
+          "name": "Източници и Търсачки"
         },
-        "text-compression/Text Compression": {
-          "name": "Компресия на текста",
-          "overview": "По някое време стигаме до физически лимит на колко бързо може да изпращаме битове, и ако искаме да изпратим много информация по-бързо, ние трябва да намерим начин да представим същата информация с по-малко бита - трябва да **компресираме** данните. В този урок, учениците ще използват Widget за Компресиране на Текст, за да компресират части от текст на Английски, като търсят модели и заместващи символи за по-дълги модели текст."
+        "csd2-2017/RGB Colors and Classes": {
+          "name": "RGB Цветове и Класове"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd2-2017/Project - Personal Portfolio Website": {
+          "name": "Проект - Уебсайт за Лично Портфолио"
         },
-        "infinity/Infinity": {
-          "name": "Дисни Инфинити Игрална лаборатория",
-          "student_overview": "В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код."
+        "csd3-2017/Shapes and Randomization": {
+          "name": "Фигури и Рандомизация"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Час на кодирането 2013"
-        },
-        "dance-2019/Dance Party": {
-          "name": "Танцово Парти"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Повторения"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Събития"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Условия"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Функции"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "Променливи"
         },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "За циклите"
+        "csd3-2017/Sprites": {
+          "name": "Спрайт"
         },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "Основи на компютърните науки"
+        "csd3-2017/The Counter Pattern Unplugged": {
+          "name": "Модел на Брояча Ънплъгд"
         },
-        "K5-OnlinePD/Planning": {
-          "name": "Планиране"
+        "csd3-2017/Booleans Unplugged": {
+          "name": "Булеви Ънплъгд"
         },
-        "K5-OnlinePD/Next Steps": {
-          "name": "Следващи стъпки"
+        "csd3-2017/Conditionals": {
+          "name": "Условия"
         },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Преглед и инструкции за инсталиране"
+        "csd3-2017/Keyboard Input": {
+          "name": "Въвеждане от Клавиатурата"
         },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - изпращане на битове на споделена връзка"
+        "csd3-2017/Other Forms of Input": {
+          "name": "Други Форми на Вход"
         },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - изпращане на Ascii"
+        "csd3-2017/Velocity": {
+          "name": "Скорост"
         },
-        "netsim/Broadcasting messages": {
-          "name": "Съобщения за излъчване"
+        "csd3-2017/Collisions": {
+          "name": "Сблъсъци"
         },
-        "netsim/Routers and addresses": {
-          "name": "Маршрутизатори и адреси"
+        "csd3-2017/Functions": {
+          "name": "Функции"
         },
-        "netsim/Packets and Reliability": {
-          "name": "Пакети и надеждност"
+        "csd4-2017/Analysis of Design": {
+          "name": "Анализ на Дизайн"
         },
-        "netsim/Manual DNS": {
-          "name": "Ръчен DNS"
+        "csd4-2017/User-Centered Design Micro Activity": {
+          "name": "Микро Дейност за Дизайн, Ориентирана около Потребителя"
         },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Интернет симулатор ФрийПлей"
+        "csd4-2017/Digital Design": {
+          "name": "Дигитален Дизайн"
         },
-        "odometer/Odometer Widget": {
-          "name": "Крачкомер"
+        "csd4-2017/Improving and Iterating": {
+          "name": "Подобрение и Итерация"
         },
-        "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "Основи на компютърните науки"
+        "csd5-2017/Patterns and Representation": {
+          "name": "Модели и Представяне"
         },
-        "kodea-pd-2021/Planning": {
-          "name": "Планиране"
+        "csd5-2017/ASCII and Binary Representation": {
+          "name": "ASCII и Двоично Представяне"
         },
-        "kodea-pd-2021/Next Steps": {
-          "name": "Следващи стъпки"
+        "csd5-2017/Representing Images": {
+          "name": "Представяне на Изображения"
         },
-        "coursed-2022/Graph Paper Programming": {
+        "csd5-2017/Keeping Data Secret": {
+          "name": "Пазене на Тайни Данни"
+        },
+        "csd5-2017/Combining Representations": {
+          "name": "Комбиниране на Представяния"
+        },
+        "csd5-2017/Project - Create a Representation": {
+          "name": "Проект - Създайте Представяне"
+        },
+        "csd5-2017/Problem Solving and Data": {
+          "name": "Решаване на Проблеми и Данни"
+        },
+        "csd5-2017/Problem Solving with Big Data": {
+          "name": "Решаване ма Проблеми с Големи Данни"
+        },
+        "csd5-2017/Project - Solve a Data Problem": {
+          "name": "Проект - Създайте Проблем с Данни"
+        },
+        "csd6-2017/Getting Properties_": {
+          "name": "Получаване на Свойства"
+        },
+        "csd6-2017/Project: Make a Game__": {
+          "name": "Проект: Създайте Игра"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Функции с параметри"
+        },
+        "csd6-2017/Project: Prototype an Innovation_": {
+          "name": "Проект: Прототипирайте Изобретение"
+        },
+        "coursea-2017/Debugging: Unspotted Bugs": {
+          "name": "Отстраняване на Грешки: Ненамерени Грешки"
+        },
+        "coursea-2017/Persistence & Frustration: Stevie and the Marbles": {
+          "name": "Постоянство; Стиви и Големия Проект"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Реални алгоритми: Засадете семената"
+        },
+        "coursea-2017/Learn to Drag and Drop": {
+          "name": "Последователност с Плъзгане и Пускане"
+        },
+        "coursea-2017/Programming: Happy Maps": {
+          "name": "Програмиране: Щастливи Карти"
+        },
+        "coursea-2017/Programming in Maze": {
+          "name": "Програмиране в Лабиринт"
+        },
+        "coursea-2017/Going Places Safely": {
+          "name": "Цифров Гражданин: Безопасно Посещаване на Места"
+        },
+        "coursea-2017/Loops: Happy Loops": {
+          "name": "Цикли: Щастливи Цикли"
+        },
+        "coursea-2017/Loops in Collector": {
+          "name": "Цикли в Събирач"
+        },
+        "coursea-2017/Loops in Artist": {
+          "name": "Цикли в Художник"
+        },
+        "coursea-2017/Events: The Big Event": {
+          "name": "Събития: Голямото Събитие"
+        },
+        "coursea-2017/Events in Play Lab": {
+          "name": "Събития в Play Lab"
+        },
+        "courseb-2017/Debugging: Unspotted Bugs": {
+          "name": "Отстраняване на Грешки: Ненамерени Грешки"
+        },
+        "courseb-2017/Persistence & Frustration: Stevie and the Marbles": {
+          "name": "Постоянство; Стиви и Големия Проект"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Реални алгоритми: Засадете семената"
+        },
+        "courseb-2017/Learn to Drag and Drop": {
+          "name": "Последователност с Плъзгане и Пускане"
+        },
+        "courseb-2017/Your Digital Footprint": {
+          "name": "Цифров Гражданин: Моят Цифров Отпечатък"
+        },
+        "courseb-2017/Programming: My Robotic Friends": {
+          "name": "Програмиране: Моите Приятели Роботи"
+        },
+        "courseb-2017/Programming in Maze": {
+          "name": "Програмиране в Лабиринт"
+        },
+        "courseb-2017/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "courseb-2017/Loops: My Loopy Robotic Friends": {
+          "name": "Цикли: Моите Циклични Роботи Приятели"
+        },
+        "courseb-2017/Loops in Collector": {
+          "name": "Цикли в Събирач"
+        },
+        "courseb-2017/Loops in Artist": {
+          "name": "Цикли в Художник"
+        },
+        "courseb-2017/Events: The Big Event": {
+          "name": "Събития: Голямото Събитие"
+        },
+        "courseb-2017/Events in Play Lab": {
+          "name": "Събития в Play Lab"
+        },
+        "coursec-2017/Building a Foundation": {
+          "name": "Упоритост: Изграждане на Основа"
+        },
+        "coursec-2017/Programming in Maze": {
+          "name": "Програмиране в Лабиринт"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Реални алгоритми: Хартиени самолети"
+        },
+        "coursec-2017/Programming in Collector": {
+          "name": "Програмиране в Събирач"
+        },
+        "coursec-2017/Programming in Artist": {
+          "name": "Програмиране в Художник"
+        },
+        "coursec-2017/Loops: Getting Loopy": {
+          "name": "Цикли: Разцикляне"
+        },
+        "coursec-2017/Loops in Artist": {
+          "name": "Цикли в Художник"
+        },
+        "coursec-2017/Loops in Harvester": {
+          "name": "Цикли в Harvester"
+        },
+        "coursec-2017/Events: The Big Event": {
+          "name": "Събития: Голямото Събитие"
+        },
+        "coursec-2017/Events in Play Lab": {
+          "name": "Събития в Play Lab"
+        },
+        "coursec-2017/Screen Out the Mean": {
+          "name": "Цифров Гражданин: Премахване на Злобните"
+        },
+        "coursec-2017/Binary Bracelets": {
+          "name": "Извън Програмирането: Двоични Гривни"
+        },
+        "coursed-2017/Algorithms: Graph Paper Programming": {
+          "name": "Програмиране: Програмиране на Милиметрова Хартия"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Вмъкнати цикли"
+        },
+        "coursed-2017/Nested Loops in Artist": {
+          "name": "Вложени Цикли в Художник"
+        },
+        "coursed-2017/Nested Loops Project in Artist": {
+          "name": "Вложени Цикли в Замръзналото Кралство"
+        },
+        "coursed-2017/Algorithms: Relay Programming": {
+          "name": "Дебъгване: Щафетно Програмиране"
+        },
+        "coursed-2017/Debugging in Collector": {
+          "name": "Дебъгване в Събирач"
+        },
+        "coursed-2017/Conditionals with Cards": {
+          "name": "Ако/Иначе: Условия с Карти"
+        },
+        "coursed-2017/Conditionals in Bee": {
+          "name": "Условия в Пчела"
+        },
+        "coursed-2017/Conditionals & Loops in Maze": {
+          "name": "Условия & Цикли в Лабиринт"
+        },
+        "coursed-2017/Conditionals & Loops in Farmer": {
+          "name": "Условия & Цикли в Harvester"
+        },
+        "coursed-2017/Digital Citizenship": {
+          "name": "Цифров Гражданин: Практикуване на Цифрово Гражданство"
+        },
+        "coursed-2017/Build a Play Lab Game": {
+          "name": "Направи Play Lab Игра"
+        },
+        "coursed-2017/Unplugged: Binary": {
+          "name": "Извън Програмирането: Двоични Снимки"
+        },
+        "coursed-2017/Artist Binary": {
+          "name": "Двоично в Художник"
+        },
+        "coursee-2017/Programming: My Robotic Friends": {
+          "name": "Програмиране: Моите Приятели Роботи"
+        },
+        "coursee-2017/Sequence in Maze": {
+          "name": "Поредица в Лабиринт"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Изграждане на база"
+        },
+        "coursee-2017/Programming in Artist": {
+          "name": "Програмиране в Художник"
+        },
+        "coursee-2017/Loops: My Loopy Robotic Friends": {
+          "name": "Цикли: Моите Циклични Роботи Приятели"
+        },
+        "coursee-2017/Loops in Artist": {
+          "name": "Цикли в Художник"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Вмъкнати цикли"
+        },
+        "coursee-2017/Algorithms: Dice Race": {
+          "name": "Алгоритми: Състезание със Зарчета"
+        },
+        "coursee-2017/Conditionals": {
+          "name": "Условия във Фермер"
+        },
+        "coursee-2017/Private and Personal Information": {
+          "name": "Цифров Гражданин: Частна и Лична Информация"
+        },
+        "coursee-2017/Functions: Songwriting": {
+          "name": "Функции: Писане на Песни"
+        },
+        "coursee-2017/Functions in Artist": {
+          "name": "Функции в Художник"
+        },
+        "coursee-2017/Functions in Bee": {
+          "name": "Функции в Пчелата"
+        },
+        "coursee-2017/Functions in Harvester": {
+          "name": "Функции в Harvester"
+        },
+        "coursee-2017/Determine the Concept": {
+          "name": "Определяне на Концепцията"
+        },
+        "coursee-2017/Build a Play Lab Game": {
+          "name": "Направи Play Lab Игра"
+        },
+        "coursee-2017/Explore Project Ideas": {
+          "name": "Разглеждане на Проектни Идеи"
+        },
+        "coursee-2017/The Design Process": {
+          "name": "Процеса на Дизайн"
+        },
+        "coursee-2017/Build Your Project": {
+          "name": "Изградете Проекта си"
+        },
+        "coursee-2017/Present Your Project": {
+          "name": "Представете Проекта си"
+        },
+        "coursee-2017/Internet": {
+          "name": "Извън Програмирането: Интернетът"
+        },
+        "coursee-2017/Crowdsourcing": {
+          "name": "Извън Програмирането: Краудсорсинг"
+        },
+        "coursef-2017/Programming: My Robotic Friends": {
+          "name": "Програмиране: Моите Приятели Роботи"
+        },
+        "coursef-2017/Sequence in Maze": {
+          "name": "Поредица в Лабиринт"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Изграждане на база"
+        },
+        "coursef-2017/Programming in Artist": {
+          "name": "Програмиране в Художник"
+        },
+        "coursef-2017/Loops: My Loopy Robotic Friends": {
+          "name": "Цикли: Моите Циклични Роботи Приятели"
+        },
+        "coursef-2017/Loops in Artist": {
+          "name": "Цикли в Художник"
+        },
+        "coursef-2017/Nested Loops in Bee/Zombie": {
+          "name": "Вложени Цикли в Пчела/Зомби"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Алгоритми: Танграми"
+        },
+        "coursef-2017/The Power of Words": {
+          "name": "Цифров Гражданин: Силата на Думите"
+        },
+        "coursef-2017/Ice Age Play Lab": {
+          "name": "Събития в Ледена Епоха"
+        },
+        "coursef-2017/Conditionals in Minecraft": {
+          "name": "Условия в Minecraft"
+        },
+        "coursef-2017/Envelope Variables": {
+          "name": "Променливи: Променливи в Пликове"
+        },
+        "coursef-2017/Variables in Artist": {
+          "name": "Променливи в Художник"
+        },
+        "coursef-2017/Variables in Play Lab": {
+          "name": "Променливи в Play Lab"
+        },
+        "coursef-2017/For Loop Fun": {
+          "name": "Цикли За: Забава с Цикли За"
+        },
+        "coursef-2017/For Loops in Bee": {
+          "name": "Цикли За в Пчела"
+        },
+        "coursef-2017/For Loops in Artist": {
+          "name": "Цикли За в Художник"
+        },
+        "coursef-2017/Songwriting with Parameters": {
+          "name": "Функции: Писане на Песни с Параметри"
+        },
+        "coursef-2017/Functions in Bee": {
+          "name": "Функции в Пчелата"
+        },
+        "coursef-2017/Functions with Parameters in Artist": {
+          "name": "Функции с Параметри в Художник"
+        },
+        "coursef-2017/Functions with Parameters in Bee": {
+          "name": "Функции с Параметри в Пчела"
+        },
+        "coursef-2017/Explore Project Ideas": {
+          "name": "Разглеждане на Проектни Идеи"
+        },
+        "coursef-2017/The Design Process": {
+          "name": "Процеса на Дизайн"
+        },
+        "coursef-2017/Build Your Project": {
+          "name": "Изградете Проекта си"
+        },
+        "coursef-2017/Revise Your Project": {
+          "name": "Прегледайте Проекта си"
+        },
+        "coursef-2017/Present Your Project": {
+          "name": "Представете Проекта си"
+        },
+        "express-2017/Algorithms: Graph Paper Programming": {
+          "name": "Програмиране: Програмиране на Милиметрова Хартия"
+        },
+        "express-2017/Introduction": {
+          "name": "Въведение"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Изграждане на база"
+        },
+        "express-2017/Debugging in Collector": {
+          "name": "Въведение в Дебъгването"
+        },
+        "express-2017/Loops: My Loopy Robotic Friends": {
+          "name": "Цикли: Моите Циклични Роботи Приятели"
+        },
+        "express-2017/Loops in Artist": {
+          "name": "Цикли в Художник"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Вмъкнати цикли"
+        },
+        "express-2017/Nested Loops Project in Frozen": {
+          "name": "Вложени Цикли в Замръзналото Кралство"
+        },
+        "express-2017/How it Works: The Internet": {
+          "name": "Извън Програмирането: Интернетът"
+        },
+        "express-2017/Common Sense Education: Digital Citizenship": {
+          "name": "Цифров Гражданин: Практикуване на Цифрово Гражданство"
+        },
+        "express-2017/Common Sense Education: Screen Out the Mean": {
+          "name": "Цифров Гражданин: Премахване на Злобните"
+        },
+        "express-2017/Events: The Big Event": {
+          "name": "Събития: Голямото Събитие"
+        },
+        "express-2017/Events in Star Wars": {
+          "name": "Събития в Междузвездни Войни"
+        },
+        "express-2017/Events with Flappy": {
+          "name": "Събития с Флапи"
+        },
+        "express-2017/Conditionals: Conditionals with Cards": {
+          "name": "Условия: Условия с Карти"
+        },
+        "express-2017/Conditionals in Minecraft": {
+          "name": "Условия в Minecraft"
+        },
+        "express-2017/Conditionals & Loops in Harvester": {
+          "name": "Условия & Цикли в Harvester"
+        },
+        "express-2017/Variables: Envelope Variables": {
+          "name": "Променливи: Променливи в Пликове"
+        },
+        "express-2017/Variables in Artist": {
+          "name": "Променливи в Художник"
+        },
+        "express-2017/Variables in Play Lab": {
+          "name": "Променливи в Play Lab"
+        },
+        "express-2017/For Loops: For Loop Fun": {
+          "name": "Цикли За: Забава с Цикли За"
+        },
+        "express-2017/For Loops in Bee": {
+          "name": "Цикли За в Пчела"
+        },
+        "express-2017/For Loops in Artist": {
+          "name": "Цикли За в Художник"
+        },
+        "express-2017/Functions: Songwriting with Parameters": {
+          "name": "Функции: Писане на Песни с Параметри"
+        },
+        "express-2017/Functions in Bee": {
+          "name": "Функции в Пчелата"
+        },
+        "express-2017/Functions with Parameters in Artist": {
+          "name": "Функции с Параметри в Художник"
+        },
+        "express-2017/Functions with Parameters in Bee": {
+          "name": "Функции с Параметри в Пчела"
+        },
+        "express-2017/Explore Project Ideas": {
+          "name": "Разглеждане на Проектни Идеи"
+        },
+        "express-2017/The Design Process": {
+          "name": "Процеса на Дизайн"
+        },
+        "express-2017/Build Your Project": {
+          "name": "Изградете Проекта си"
+        },
+        "express-2017/Revise Your Project": {
+          "name": "Прегледайте Проекта си"
+        },
+        "express-2017/Present Your Project": {
+          "name": "Представете Проекта си"
+        },
+        "pre-express-2017/Debugging: Unspotted Bugs": {
+          "name": "Отстраняване на Грешки: Ненамерени Грешки"
+        },
+        "pre-express-2017/Persistence & Frustration: Stevie and the Marbles": {
+          "name": "Постоянство; Стиви и Големия Проект"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Реални алгоритми: Засадете семената"
+        },
+        "pre-express-2017/Learn to Drag and Drop": {
+          "name": "Последователност с Плъзгане и Пускане"
+        },
+        "pre-express-2017/Online Safety: Your Digital Footprint": {
+          "name": "Цифров Гражданин: Моят Цифров Отпечатък"
+        },
+        "pre-express-2017/Programming: My Robotic Friends": {
+          "name": "Програмиране: Моите Приятели Роботи"
+        },
+        "pre-express-2017/Programming in Maze": {
+          "name": "Програмиране в Лабиринт"
+        },
+        "pre-express-2017/Programming: Star Wars": {
+          "name": "Програмиране: Междузвездни Войни"
+        },
+        "pre-express-2017/Loops: My Loopy Robotic Friends": {
+          "name": "Цикли: Моите Циклични Роботи Приятели"
+        },
+        "pre-express-2017/Loops in Collector": {
+          "name": "Цикли в Събирач"
+        },
+        "pre-express-2017/Loops in Artist": {
+          "name": "Цикли в Художник"
+        },
+        "pre-express-2017/Events: The Big Event": {
+          "name": "Събития: Голямото Събитие"
+        },
+        "pre-express-2017/Events in Play Lab": {
+          "name": "Събития в Play Lab"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Правопис"
+        },
+        "csd1-2018/Intro to Problem Solving": {
+          "name": "Въведение в Решаването на Проблеми"
+        },
+        "csd1-2018/The Problem Solving Process": {
+          "name": "Процеса за Решаване на Проблеми"
+        },
+        "csd1-2018/Exploring Problem Solving": {
+          "name": "Изследване на Решаването на Проблеми"
+        },
+        "csd1-2018/What is a Computer?": {
+          "name": "Какво е Компютър?"
+        },
+        "csd1-2018/Apps and Storage": {
+          "name": "Приложения и Съхранение"
+        },
+        "csd1-2018/Project - Propose an App": {
+          "name": "Проект - Предложете Приложение"
+        },
+        "csd2-2018/Websites for Expression ": {
+          "name": "Уебсайтове за Изразяване"
+        },
+        "csd2-2018/Headings": {
+          "name": "Заглавия"
+        },
+        "csd2-2018/Lists": {
+          "name": "Списъци"
+        },
+        "csd2-2018/Intellectual Property and Images": {
+          "name": "Интелектуална Собственост и Изображения"
+        },
+        "csd2-2018/Clean Code and Debugging": {
+          "name": "Чист Код и Дебъгване"
+        },
+        "csd2-2018/Project - Multi-Page Websites": {
+          "name": "Проект - Уебсайтове с Няколко Страници"
+        },
+        "csd2-2018/Sources and Search Engines": {
+          "name": "Източници и Търсачки"
+        },
+        "csd2-2018/RGB Colors and Classes": {
+          "name": "RGB Цветове и Класове"
+        },
+        "csd2-2018/Project - Personal Portfolio Website": {
+          "name": "Проект - Уебсайт за Лично Портфолио"
+        },
+        "csd3-2018/Shapes and Randomization": {
+          "name": "Фигури и Рандомизация"
+        },
+        "csd3-2018/Variables": {
+          "name": "Променливи"
+        },
+        "csd3-2018/Sprites": {
+          "name": "Спрайт"
+        },
+        "csd3-2018/The Counter Pattern Unplugged": {
+          "name": "Модел на Брояча Ънплъгд"
+        },
+        "csd3-2018/Booleans Unplugged": {
+          "name": "Булеви Ънплъгд"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Условия"
+        },
+        "csd3-2018/Keyboard Input": {
+          "name": "Въвеждане от Клавиатурата"
+        },
+        "csd3-2018/Other Forms of Input": {
+          "name": "Други Форми на Вход"
+        },
+        "csd3-2018/Velocity": {
+          "name": "Скорост"
+        },
+        "csd3-2018/Collisions": {
+          "name": "Сблъсъци"
+        },
+        "csd3-2018/Functions": {
+          "name": "Функции"
+        },
+        "csd4-2018/Analysis of Design": {
+          "name": "Анализ на Дизайн"
+        },
+        "csd4-2018/User-Centered Design Micro Activity": {
+          "name": "Микро Дейност за Дизайн, Ориентирана около Потребителя"
+        },
+        "csd4-2018/Digital Design": {
+          "name": "Дигитален Дизайн"
+        },
+        "csd4-2018/Improving and Iterating": {
+          "name": "Подобрение и Итерация"
+        },
+        "csd5-2018/Patterns and Representation": {
+          "name": "Модели и Представяне"
+        },
+        "csd5-2018/ASCII and Binary Representation": {
+          "name": "ASCII и Двоично Представяне"
+        },
+        "csd5-2018/Representing Images": {
+          "name": "Представяне на Изображения"
+        },
+        "csd5-2018/Keeping Data Secret": {
+          "name": "Пазене на Тайни Данни"
+        },
+        "csd5-2018/Combining Representations": {
+          "name": "Комбиниране на Представяния"
+        },
+        "csd5-2018/Project - Create a Representation": {
+          "name": "Проект - Създайте Представяне"
+        },
+        "csd5-2018/Problem Solving and Data": {
+          "name": "Решаване на Проблеми и Данни"
+        },
+        "csd5-2018/Problem Solving with Big Data": {
+          "name": "Решаване ма Проблеми с Големи Данни"
+        },
+        "csd5-2018/Project - Solve a Data Problem": {
+          "name": "Проект - Създайте Проблем с Данни"
+        },
+        "csd6-2018/Getting Properties": {
+          "name": "Получаване на Свойства"
+        },
+        "csd6-2018/Project: Make a Game": {
+          "name": "Проект: Създайте Игра"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Функции с параметри"
+        },
+        "csd6-2018/Project: Prototype an Innovation": {
+          "name": "Проект: Прототипирайте Изобретение"
+        },
+        "coursea-2018/Debugging: Unspotted Bugs": {
+          "name": "Незабележивите бъгове"
+        },
+        "coursea-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Стив и Големият проект"
+        },
+        "coursea-2018/Real-life Algorithms: Plant a Seed": {
+          "name": "Засади Семе"
+        },
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "Щастливи карти"
+        },
+        "coursea-2018/Going Places Safely": {
+          "name": "Достигаме безопасно до места"
+        },
+        "coursea-2018/Events: The Big Event": {
+          "name": "Голямото Събитие Jr."
+        },
+        "courseb-2018/Move It, Move It": {
+          "name": "Преместете го, преместете го"
+        },
+        "courseb-2018/Sequencing with Scrat": {
+          "name": "Последователност със Скрат"
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Вашите дигитални отпечатъци"
+        },
+        "courseb-2018/Programming: My Robotic Friends": {
+          "name": "Моите Роботи Приятели Jr."
+        },
+        "courseb-2018/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "courseb-2018/Loops: My Loopy Robotic Friends": {
+          "name": "Моите Циклични Приятели Роботи Jr."
+        },
+        "courseb-2018/Loops in Ice Age": {
+          "name": "Цикли със Скрат"
+        },
+        "courseb-2018/Events: The Big Event": {
+          "name": "Голямото Събитие Jr."
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Изграждане на база"
+        },
+        "coursec-2018/Real-life Algorithms: Paper Planes": {
+          "name": "Хартиени Самолетчета"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Да повтаряме"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Голямото събитие"
+        },
+        "coursec-2018/Screen Out the Mean": {
+          "name": "Премахваме на Злобните"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Двоични гривни"
+        },
+        "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Програмиране на милиметрова хартия"
         },
-        "coursed-2022/Relay Programming": {
+        "coursed-2018/Relay Programming": {
           "name": "Повтори програмирането"
         },
-        "coursed-2022/Dance Party": {
-          "name": "Танцово Парти"
-        },
-        "coursed-2022/Loops in Ice Age": {
+        "coursed-2018/Loops in Ice Age": {
           "name": "Цикли в Ледена Епоха"
         },
-        "coursed-2022/Conditionals with Cards": {
+        "coursed-2018/Nested Loops in Artist": {
+          "name": "Готини Фигури използвайки Вложени Цикли"
+        },
+        "coursed-2018/Conditionals with Cards": {
           "name": "Условия с карти"
         },
-        "coursed-2022/End of Course Project": {
+        "coursed-2018/Digital Citizenship": {
+          "name": "Цифрови граждани"
+        },
+        "coursed-2018/Build a Play Lab Game": {
+          "name": "Нинджи срещу Пирати Игра"
+        },
+        "coursed-2018/Unplugged: Binary": {
+          "name": "Бинарни образи(картини)"
+        },
+        "coursed-2018/Artist Binary": {
+          "name": "Двоични Изображение с Художник"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Моите приятели роботи"
+        },
+        "coursee-2018/Sequence in Maze": {
+          "name": "Кодиране с Коментари"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Изграждане на база"
+        },
+        "coursee-2018/Loops: My Loopy Robotic Friends": {
+          "name": "Моите Циклични Приятели Роботи"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Условия с карти"
+        },
+        "coursee-2018/Private and Personal Information": {
+          "name": "Лична Информация"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Писане на песен"
+        },
+        "coursee-2018/Determine the Concept": {
+          "name": "Определяне на Концепцията"
+        },
+        "coursee-2018/Learning Sprites with Sprite Lab": {
+          "name": "Учене на Sprite Lab"
+        },
+        "coursee-2018/Alien Dance Party with Sprite Lab": {
+          "name": "Извънземно Танцово Парти"
+        },
+        "coursee-2018/Pet Giraffe with Sprite Lab": {
+          "name": "Жираф Домашен Любимец"
+        },
+        "coursee-2018/Explore Project Ideas": {
+          "name": "Разглеждане на Проектни Идеи"
+        },
+        "coursee-2018/The Design Process": {
+          "name": "Процеса на Дизайн"
+        },
+        "coursee-2018/Build Your Project": {
+          "name": "Изградете Проекта си"
+        },
+        "coursee-2018/Present Your Project": {
+          "name": "Представете Проекта си"
+        },
+        "coursee-2018/Internet": {
+          "name": "Интернет"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Crowdsourcing кампания"
+        },
+        "coursef-2018/Programming: My Robotic Friends": {
+          "name": "Моите приятели роботи"
+        },
+        "coursef-2018/Sequence in Maze": {
+          "name": "Кодиране с Коментари"
+        },
+        "coursef-2018/Building a Foundation": {
+          "name": "Изграждане на база"
+        },
+        "coursef-2018/Loops: My Loopy Robotic Friends": {
+          "name": "Моите Циклични Приятели Роботи"
+        },
+        "coursef-2018/Conditionals with Cards": {
+          "name": "Условия с карти"
+        },
+        "coursef-2018/Functions in Minecraft": {
+          "name": "Функции с Minecraft"
+        },
+        "coursef-2018/The Power of Words": {
+          "name": "Силата на Думите"
+        },
+        "coursef-2018/Envelope Variables": {
+          "name": "Плик с променливи"
+        },
+        "coursef-2018/Variables as Constant in Artist": {
+          "name": "Променливи с Художника"
+        },
+        "coursef-2018/Variables that Change in Bee": {
+          "name": "Променяне на Променливи с Пчелата"
+        },
+        "coursef-2018/Variables that Change in Artist": {
+          "name": "Променяне на Променливи с Художника"
+        },
+        "coursef-2018/For Loop Fun": {
+          "name": "Повторения за забавление"
+        },
+        "coursef-2018/For Loops in Bee": {
+          "name": "For Цикли с Пчелата"
+        },
+        "coursef-2018/Learning Sprites with Sprite Lab": {
+          "name": "Учене на Sprite Lab"
+        },
+        "coursef-2018/Alien Dance Party with Sprite Lab": {
+          "name": "Извънземно Танцово Парти"
+        },
+        "coursef-2018/Pet Giraffe with Sprite Lab": {
+          "name": "Жираф Домашен Любимец"
+        },
+        "coursef-2018/Explore Project Ideas": {
+          "name": "Разглеждане на Проектни Идеи"
+        },
+        "coursef-2018/The Design Process": {
+          "name": "Процеса на Дизайн"
+        },
+        "coursef-2018/Build Your Project": {
+          "name": "Изградете Проекта си"
+        },
+        "coursef-2018/Revise Your Project": {
+          "name": "Прегледайте Проекта си"
+        },
+        "coursef-2018/Present Your Project": {
+          "name": "Представете Проекта си"
+        },
+        "express-2018/Graph Paper Programming": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "express-2018/Programming in Maze": {
+          "name": "Кодиране с Angry Birds"
+        },
+        "express-2018/Relay Programming": {
+          "name": "Повтори програмирането"
+        },
+        "express-2018/Loops: Getting Loopy": {
+          "name": "Да повтаряме"
+        },
+        "express-2018/Copyright and Creativity": {
+          "name": "Авторски Права и Креативност"
+        },
+        "express-2018/Nested Loops in Bee": {
+          "name": "Вложени Цикли в Пчела"
+        },
+        "express-2018/Nested Loops in Frozen": {
+          "name": "Вложени Цикли с Анна и Елза"
+        },
+        "express-2018/Conditionals with Cards": {
+          "name": "Условия с карти"
+        },
+        "express-2018/Functions: Songwriting": {
+          "name": "Писане на песен"
+        },
+        "express-2018/Functions in Minecraft": {
+          "name": "Функции с Minecraft"
+        },
+        "express-2018/Functions in Harvester": {
+          "name": "Функции с Harvester"
+        },
+        "express-2018/Functions in Artist": {
+          "name": "Функции в Художник"
+        },
+        "express-2018/Screen Out the Mean": {
+          "name": "Премахваме на Злобните"
+        },
+        "express-2018/Determine the Concept": {
+          "name": "Определяне на Концепцията"
+        },
+        "express-2018/Events: The Big Event": {
+          "name": "Голямото събитие"
+        },
+        "express-2018/The Power of Words": {
+          "name": "Силата на Думите"
+        },
+        "express-2018/Envelope Variables": {
+          "name": "Плик с променливи"
+        },
+        "express-2018/Variables as Constant in Artist": {
+          "name": "Променливи с Художника"
+        },
+        "express-2018/Variables that Change in Bee": {
+          "name": "Променяне на Променливи с Пчелата"
+        },
+        "express-2018/Variables that Change in Artist": {
+          "name": "Променяне на Променливи с Художника"
+        },
+        "express-2018/For Loop Fun": {
+          "name": "Повторения за забавление"
+        },
+        "express-2018/For Loops in Bee": {
+          "name": "For Цикли с Пчелата"
+        },
+        "express-2018/Learning Sprites with Sprite Lab": {
+          "name": "Учене на Sprite Lab"
+        },
+        "express-2018/Alien Dance Party with Sprite Lab": {
+          "name": "Извънземно Танцово Парти"
+        },
+        "express-2018/Pet Giraffe with Sprite Lab": {
+          "name": "Жираф Домашен Любимец"
+        },
+        "express-2018/Explore Project Ideas": {
+          "name": "Разглеждане на Проектни Идеи"
+        },
+        "express-2018/The Design Process": {
+          "name": "Процеса на Дизайн"
+        },
+        "express-2018/Build Your Project": {
+          "name": "Изградете Проекта си"
+        },
+        "express-2018/Revise Your Project": {
+          "name": "Прегледайте Проекта си"
+        },
+        "express-2018/Present Your Project": {
+          "name": "Представете Проекта си"
+        },
+        "express-2018/Binary Bracelets": {
+          "name": "Двоични гривни"
+        },
+        "express-2018/Unplugged: Binary": {
+          "name": "Бинарни образи(картини)"
+        },
+        "express-2018/Artist Binary": {
+          "name": "Двоични Изображение с Художник"
+        },
+        "express-2018/Internet": {
+          "name": "Интернет"
+        },
+        "express-2018/Crowdsourcing": {
+          "name": "Crowdsourcing кампания"
+        },
+        "pre-express-2018/Debugging: Unspotted Bugs": {
+          "name": "Незабележивите бъгове"
+        },
+        "pre-express-2018/Persistence & Frustration: Stevie and the Big Project": {
+          "name": "Стив и Големият проект"
+        },
+        "pre-express-2018/Move It, Move It": {
+          "name": "Преместете го, преместете го"
+        },
+        "pre-express-2018/Sequencing with Scrat": {
+          "name": "Последователност със Скрат"
+        },
+        "pre-express-2018/Your Digital Footprint": {
+          "name": "Вашите дигитални отпечатъци"
+        },
+        "pre-express-2018/Programming: My Robotic Friends": {
+          "name": "Моите Роботи Приятели Jr."
+        },
+        "pre-express-2018/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "pre-express-2018/Loops: My Loopy Robotic Friends": {
+          "name": "Моите Циклични Приятели Роботи Jr."
+        },
+        "pre-express-2018/Loops in Ice Age": {
+          "name": "Цикли със Скрат"
+        },
+        "pre-express-2018/Events: The Big Event": {
+          "name": "Голямото Събитие Jr."
+        },
+        "pre-express-2018/Spelling Bee": {
+          "name": "Правопис"
+        },
+        "csd1-2019/Intro to Problem Solving": {
+          "name": "Въведение в Решаването на Проблеми"
+        },
+        "csd1-2019/The Problem Solving Process": {
+          "name": "Процеса за Решаване на Проблеми"
+        },
+        "csd1-2019/Exploring Problem Solving": {
+          "name": "Изследване на Решаването на Проблеми"
+        },
+        "csd1-2019/What is a Computer?": {
+          "name": "Какво е Компютър?"
+        },
+        "csd1-2019/Apps and Storage": {
+          "name": "Приложения и Съхранение"
+        },
+        "csd1-2019/Project - Propose an App": {
+          "name": "Проект - Предложете Приложение"
+        },
+        "csd2-2019/Websites for Expression ": {
+          "name": "Уебсайтове за Изразяване"
+        },
+        "csd2-2019/Headings": {
+          "name": "Заглавия"
+        },
+        "csd2-2019/Lists": {
+          "name": "Списъци"
+        },
+        "csd2-2019/Intellectual Property and Images": {
+          "name": "Интелектуална Собственост и Изображения"
+        },
+        "csd2-2019/Clean Code and Debugging": {
+          "name": "Чист Код и Дебъгване"
+        },
+        "csd2-2019/Project - Multi-Page Websites": {
+          "name": "Проект - Уебсайтове с Няколко Страници"
+        },
+        "csd2-2019/Sources and Search Engines": {
+          "name": "Източници и Търсачки"
+        },
+        "csd2-2019/RGB Colors and Classes": {
+          "name": "RGB Цветове и Класове"
+        },
+        "csd2-2019/Project - Personal Portfolio Website": {
+          "name": "Проект - Уебсайт за Лично Портфолио"
+        },
+        "csd3-2019/Shapes and Randomization": {
+          "name": "Фигури и Рандомизация"
+        },
+        "csd3-2019/Variables": {
+          "name": "Променливи"
+        },
+        "csd3-2019/Sprites": {
+          "name": "Спрайт"
+        },
+        "csd3-2019/The Counter Pattern Unplugged": {
+          "name": "Модел на Брояча Ънплъгд"
+        },
+        "csd3-2019/Booleans Unplugged": {
+          "name": "Булеви Ънплъгд"
+        },
+        "csd3-2019/Conditionals": {
+          "name": "Условия"
+        },
+        "csd3-2019/Keyboard Input": {
+          "name": "Въвеждане от Клавиатурата"
+        },
+        "csd3-2019/Other Forms of Input": {
+          "name": "Други Форми на Вход"
+        },
+        "csd3-2019/Velocity": {
+          "name": "Скорост"
+        },
+        "csd3-2019/Collisions": {
+          "name": "Сблъсъци"
+        },
+        "csd3-2019/Functions": {
+          "name": "Функции"
+        },
+        "csd4-2019/Analysis of Design": {
+          "name": "Анализ на Дизайн"
+        },
+        "csd4-2019/User-Centered Design Micro Activity": {
+          "name": "Микро Дейност за Дизайн, Ориентирана около Потребителя"
+        },
+        "csd4-2019/Digital Design": {
+          "name": "Дигитален Дизайн"
+        },
+        "csd4-2019/Improving and Iterating": {
+          "name": "Подобрение и Итерация"
+        },
+        "csd5-2019/Patterns and Representation": {
+          "name": "Модели и Представяне"
+        },
+        "csd5-2019/ASCII and Binary Representation": {
+          "name": "ASCII и Двоично Представяне"
+        },
+        "csd5-2019/Representing Images": {
+          "name": "Представяне на Изображения"
+        },
+        "csd5-2019/Keeping Data Secret": {
+          "name": "Пазене на Тайни Данни"
+        },
+        "csd5-2019/Combining Representations": {
+          "name": "Комбиниране на Представяния"
+        },
+        "csd5-2019/Project - Create a Representation": {
+          "name": "Проект - Създайте Представяне"
+        },
+        "csd5-2019/Problem Solving and Data": {
+          "name": "Решаване на Проблеми и Данни"
+        },
+        "csd5-2019/Problem Solving with Big Data": {
+          "name": "Решаване ма Проблеми с Големи Данни"
+        },
+        "csd5-2019/Project - Solve a Data Problem": {
+          "name": "Проект - Създайте Проблем с Данни"
+        },
+        "csd6-2019/Getting Properties": {
+          "name": "Получаване на Свойства"
+        },
+        "csd6-2019/Project: Make a Game": {
+          "name": "Проект: Създайте Игра"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "Функции с параметри"
+        },
+        "csd6-2019/Project: Prototype an Innovation": {
+          "name": "Проект: Прототипирайте Изобретение"
+        },
+        "coursea-2019/Going Places Safely": {
+          "name": "Достигаме безопасно до места"
+        },
+        "coursea-2019/Learn to Drag and Drop": {
+          "name": "Научете се да Плъзгате и Пускате"
+        },
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "Щастливи карти"
+        },
+        "coursea-2019/Sequencing with Scrat": {
+          "name": "Последователност със Скрат"
+        },
+        "coursea-2019/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "coursea-2019/Loops in Ice Age": {
+          "name": "Цикли със Скрат"
+        },
+        "coursea-2019/Events: The Big Event": {
+          "name": "Голямото Събитие Jr."
+        },
+        "courseb-2019/Your Digital Footprint": {
+          "name": "Вашите дигитални отпечатъци"
+        },
+        "courseb-2019/Move It, Move It": {
+          "name": "Преместете го, преместете го"
+        },
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "Да повтаряме"
+        },
+        "courseb-2019/The Right App": {
+          "name": "Правилното Приложение"
+        },
+        "courseb-2019/Events: The Big Event": {
+          "name": "Голямото Събитие Jr."
+        },
+        "coursec-2019/Screen Out the Mean": {
+          "name": "Премахваме на Злобните"
+        },
+        "coursec-2019/Programming: My Robotic Friends": {
+          "name": "Моите Роботи Приятели Jr."
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Двоични гривни"
+        },
+        "coursec-2019/Loops: My Loopy Robotic Friends": {
+          "name": "Моите Циклични Приятели Роботи Jr."
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "Голямото събитие"
+        },
+        "coursec-2019/End of Course Project: Create a Play Lab Game": {
           "name": "Проект за Края на Курса"
         },
-        "coursef-2022/Introducing Sprite Lab": {
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "Повтори програмирането"
+        },
+        "coursed-2019/Loops in Ice Age": {
+          "name": "Цикли в Ледена Епоха"
+        },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "Условия с карти"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "Бинарни образи(картини)"
+        },
+        "coursed-2019/Artist Binary": {
+          "name": "Двоични Изображение с Художник"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Цифрови граждани"
+        },
+        "coursed-2019/Dance Party": {
+          "name": "Танцово Парти"
+        },
+        "coursee-2019/Sequencing in the Maze": {
+          "name": "Последователност в Лабиринта"
+        },
+        "coursee-2019/Private and Personal Information": {
+          "name": "Лична Информация"
+        },
+        "coursee-2019/About Me": {
+          "name": "За Мен със Sprite Lab"
+        },
+        "coursee-2019/Access Ability": {
+          "name": "Проектиране за Достъпност"
+        },
+        "coursee-2019/Nested Loops in Artist": {
+          "name": "Готини Фигури използвайки Вложени Цикли"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Писане на песен"
+        },
+        "coursee-2019/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursef-2019/Envelope Variables": {
+          "name": "Плик с променливи"
+        },
+        "coursef-2019/Variables as Constant in Artist": {
+          "name": "Променливи с Художника"
+        },
+        "coursef-2019/Variables that Change in Bee": {
+          "name": "Променяне на Променливи с Пчелата"
+        },
+        "coursef-2019/Variables that Change in Artist": {
+          "name": "Променяне на Променливи с Художника"
+        },
+        "coursef-2019/Simulating Experiments": {
+          "name": "Симулиране на Експерименти"
+        },
+        "coursef-2019/For Loop Fun": {
+          "name": "Повторения за забавление"
+        },
+        "coursef-2019/For Loops in Bee": {
+          "name": "For Цикли с Пчелата"
+        },
+        "coursef-2019/Internet": {
+          "name": "Интернет"
+        },
+        "coursef-2019/Editing Behaviors": {
+          "name": "Поведения в Sprite Lab"
+        },
+        "coursef-2019/The Power of Words": {
+          "name": "Силата на Думите"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Crowdsourcing кампания"
+        },
+        "coursef-2019/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "express-2019/Dance Party": {
+          "name": "Танцово Парти"
+        },
+        "express-2019/Variables as Constant in Artist": {
+          "name": "Променливи с Художника"
+        },
+        "express-2019/Variables that Change in Bee": {
+          "name": "Променяне на Променливи с Пчелата"
+        },
+        "express-2019/Variables that Change in Artist": {
+          "name": "Променяне на Променливи с Художника"
+        },
+        "express-2019/For Loops in Bee": {
+          "name": "For Цикли с Пчелата"
+        },
+        "express-2019/Learning Sprites with Sprite Lab": {
+          "name": "Плуващи Риби в Sprite Lab"
+        },
+        "express-2019/Alien Dance Party with Sprite Lab": {
+          "name": "Извънземно Танцово Парти"
+        },
+        "express-2019/Editing Behaviors": {
+          "name": "Поведения в Sprite Lab"
+        },
+        "express-2019/Build A Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "pre-express-2019/Learn to Drag and Drop": {
+          "name": "Научете се да Плъзгате и Пускате"
+        },
+        "pre-express-2019/Sequencing with Scrat": {
+          "name": "Последователност със Скрат"
+        },
+        "pre-express-2019/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "pre-express-2019/Spelling Bee": {
+          "name": "Правопис"
+        },
+        "pre-express-2019/Loops in Ice Age": {
+          "name": "Цикли със Скрат"
+        },
+        "coursea-2020/Learn to Drag and Drop": {
+          "name": "Научете се да Плъзгате и Пускате"
+        },
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Щастливи карти"
+        },
+        "coursea-2020/Sequencing with Scrat": {
+          "name": "Последователност със Скрат"
+        },
+        "coursea-2020/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "coursea-2020/Loops in Ice Age": {
+          "name": "Цикли със Скрат"
+        },
+        "coursea-2020/Events: The Big Event": {
+          "name": "Голямото Събитие Jr."
+        },
+        "courseb-2020/Digital Trails": {
+          "name": "Цифрова Следа"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "Преместете го, преместете го"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Да повтаряме"
+        },
+        "courseb-2020/The Right App": {
+          "name": "Правилното Приложение"
+        },
+        "courseb-2020/Events: The Big Event": {
+          "name": "Голямото Събитие Jr."
+        },
+        "coursec-2020/Programming: My Robotic Friends": {
+          "name": "Моите Роботи Приятели Jr."
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Двоични гривни"
+        },
+        "coursec-2020/Loops: My Loopy Robotic Friends": {
+          "name": "Моите Циклични Приятели Роботи Jr."
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "Голямото събитие"
+        },
+        "coursec-2020/End of Course Project: Create a Play Lab Game": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Повтори програмирането"
+        },
+        "coursed-2020/Dance Party": {
+          "name": "Танцово Парти"
+        },
+        "coursed-2020/Loops in Ice Age": {
+          "name": "Цикли в Ледена Епоха"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Условия с карти"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Бинарни образи(картини)"
+        },
+        "coursed-2020/Artist Binary": {
+          "name": "Двоични Изображение с Художник"
+        },
+        "coursed-2020/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursee-2020/Sequencing in the Maze": {
+          "name": "Последователност в Лабиринта"
+        },
+        "coursee-2020/Private and Personal Information": {
+          "name": "Лична Информация"
+        },
+        "coursee-2020/About Me": {
+          "name": "За Мен със Sprite Lab"
+        },
+        "coursee-2020/Nested Loops in Artist": {
+          "name": "Готини Фигури използвайки Вложени Цикли"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Писане на песен"
+        },
+        "coursee-2020/Designing for Accessibility": {
+          "name": "Проектиране за Достъпност"
+        },
+        "coursee-2020/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursef-2020/The Power of Words": {
+          "name": "Силата на Думите"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Плик с променливи"
+        },
+        "coursef-2020/Variables as Constant in Artist": {
+          "name": "Променливи с Художника"
+        },
+        "coursef-2020/Variables that Change in Bee": {
+          "name": "Променяне на Променливи с Пчелата"
+        },
+        "coursef-2020/Variables that Change in Artist": {
+          "name": "Променяне на Променливи с Художника"
+        },
+        "coursef-2020/Simulating Experiments": {
+          "name": "Симулиране на Експерименти"
+        },
+        "coursef-2020/Internet": {
+          "name": "Интернет"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Повторения за забавление"
+        },
+        "coursef-2020/For Loops in Bee": {
+          "name": "For Цикли с Пчелата"
+        },
+        "coursef-2020/Editing Behaviors": {
+          "name": "Поведения в Sprite Lab"
+        },
+        "coursef-2020/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "express-2020/Dance Party": {
+          "name": "Танцово Парти"
+        },
+        "express-2020/Looking Ahead with Minecraft ": {
+          "name": "Гледане Напред с Minecraft! "
+        },
+        "express-2020/Variables with Artist": {
+          "name": "Променливи с Художника"
+        },
+        "express-2020/Changing Variables with Bee": {
+          "name": "Променяне на Променливи с Пчелата"
+        },
+        "express-2020/Changing Variables with Artist": {
+          "name": "Променяне на Променливи с Художника"
+        },
+        "express-2020/For Loops with Bee": {
+          "name": "For Цикли с Пчелата"
+        },
+        "express-2020/Swimming Fish in Sprite Lab": {
+          "name": "Плуващи Риби в Sprite Lab"
+        },
+        "express-2020/Alien Dance Party": {
+          "name": "Извънземно Танцово Парти"
+        },
+        "express-2020/Behaviors in Sprite Lab": {
+          "name": "Поведения в Sprite Lab"
+        },
+        "express-2020/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "pre-express-2020/Learn to Drag and Drop": {
+          "name": "Научете се да Плъзгате и Пускате"
+        },
+        "pre-express-2020/Sequencing with Scrat": {
+          "name": "Последователност със Скрат"
+        },
+        "pre-express-2020/Programming in with Angry Birds": {
+          "name": "Програмиране с Angry Birds"
+        },
+        "pre-express-2020/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "pre-express-2020/Programming in Harvester": {
+          "name": "Програмиране в Harvester"
+        },
+        "pre-express-2020/Loops with Scrat": {
+          "name": "Цикли със Скрат"
+        },
+        "csd1-2021/Intro to Problem Solving": {
+          "name": "Въведение в Решаването на Проблеми",
+          "preparation": "**За всяка група**\n\n-   2 листа алуминиево фолио, 13 на 13 см всяко\n-   1 контейнер, който може да съдържа 7-10 cm вода \n-   Няколко хартиени кърпи или парцали, които могат да бъдат сложени под контейнера \n-   15 монети(на стотинки)\n-   Едно копие на ръководството на дейността\n\n**За учителя**\n\n-   1 контейнер, който може да съдържа 7-10 см вода \n-   50 монети(на стотинки) \n-   Допълнителни хартиени кърпи или парцали "
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "Процеса за Решаване на Проблеми"
+        },
+        "csd1-2021/Exploring Problem Solving": {
+          "name": "Изследване на Решаването на Проблеми"
+        },
+        "csd1-2021/What is a Computer?": {
+          "name": "Какво е Компютър?"
+        },
+        "csd1-2021/Storage": {
+          "name": "Съхранение"
+        },
+        "csd1-2021/Project - Propose an App": {
+          "name": "Проект - Предложете Приложение"
+        },
+        "csd2-2021/Headings": {
+          "name": "Заглавия"
+        },
+        "csd3-2021/Variables": {
+          "name": "Променливи"
+        },
+        "csd3-2021/Sprites": {
+          "name": "Спрайт"
+        },
+        "csd3-2021/Sprite Properties": {
+          "name": "Свойства на Спрайта"
+        },
+        "csd3-2021/Text": {
+          "name": "Текст"
+        },
+        "csd3-2021/Conditionals": {
+          "name": "Условия"
+        },
+        "csd3-2021/Keyboard Input": {
+          "name": "Въвеждане от Клавиатурата"
+        },
+        "csd3-2021/Velocity": {
+          "name": "Скорост"
+        },
+        "csd3-2021/Collisions": {
+          "name": "Сблъсъци"
+        },
+        "csd3-2021/Functions": {
+          "name": "Функции"
+        },
+        "csd5-2021/Patterns and Representation": {
+          "name": "Модели и Представяне"
+        },
+        "csd5-2021/ASCII and Binary Representation": {
+          "name": "ASCII и Двоично Представяне"
+        },
+        "csd5-2021/Representing Images": {
+          "name": "Представяне на Изображения"
+        },
+        "csd5-2021/Combining Representations": {
+          "name": "Комбиниране на Представяния"
+        },
+        "csd5-2021/Keeping Data Secret": {
+          "name": "Пазене на Тайни Данни"
+        },
+        "csd5-2021/Problem Solving and Data": {
+          "name": "Решаване на Проблеми и Данни"
+        },
+        "csd5-2021/Problem Solving with Big Data": {
+          "name": "Решаване ма Проблеми с Големи Данни"
+        },
+        "csd6-2021/Getting Properties": {
+          "name": "Получаване на Свойства"
+        },
+        "csd6-2021/Functions with Parameters": {
+          "name": "Функции с параметри"
+        },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "Въведение в AI Lab"
+        },
+        "coursea-2021/Learn to Drag and Drop": {
+          "name": "Научете се да Плъзгате и Пускате"
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Щастливи карти"
+        },
+        "coursea-2021/Sequencing with Scrat": {
+          "name": "Последователност със Скрат",
+          "student_overview": "Прогеамирайте Скрат да стигне жълъда."
+        },
+        "coursea-2021/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "coursea-2021/Loops in Ice Age": {
+          "name": "Цикли със Скрат"
+        },
+        "coursea-2021/Events: The Big Event": {
+          "name": "Голямото Събитие Jr."
+        },
+        "coursea-2021/lesson-1": {
+          "name": "Проект за Края на Курса"
+        },
+        "courseb-2021/Digital Trails": {
+          "name": "Цифрова Следа"
+        },
+        "courseb-2021/Move It, Move It": {
+          "name": "Преместете го, преместете го"
+        },
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Да повтаряме"
+        },
+        "courseb-2021/The Right App": {
+          "name": "Правилното Приложение"
+        },
+        "courseb-2021/Events: The Big Event": {
+          "name": "Голямото Събитие Jr."
+        },
+        "courseb-2021/Events in Play Lab": {
+          "name": "Мини-Проект: Царска Битка със Събития"
+        },
+        "courseb-2021/lesson-1": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursec-2021/Programming: My Robotic Friends": {
+          "name": "Моите Роботи Приятели Jr."
+        },
+        "coursec-2021/Loops: My Loopy Robotic Friends": {
+          "name": "Моите Циклични Приятели Роботи Jr."
+        },
+        "coursec-2021/Sticker Art with Loops": {
+          "name": "Мини-Проект: Стикер Изкуство"
+        },
+        "coursec-2021/Events: The Big Event": {
+          "name": "Голямото събитие"
+        },
+        "coursec-2021/Events in Play Lab": {
+          "name": "Мини-Проект: Игра на Гоненица"
+        },
+        "coursec-2021/Binary Bracelets": {
+          "name": "Двоични гривни"
+        },
+        "coursec-2021/End of Course Project: Create a Play Lab Game": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "coursed-2021/Relay Programming": {
+          "name": "Повтори програмирането"
+        },
+        "coursed-2021/Dance Party": {
+          "name": "Танцово Парти"
+        },
+        "coursed-2021/Loops in Ice Age": {
+          "name": "Цикли в Ледена Епоха"
+        },
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Условия с карти"
+        },
+        "coursed-2021/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursee-2021/Private and Personal Information": {
+          "name": "Лична Информация"
+        },
+        "coursee-2021/About Me": {
+          "name": "Мини-Проект: За Мен"
+        },
+        "coursee-2021/Nested Loops in Artist": {
+          "name": "Готини Фигури използвайки Вложени Цикли"
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Писане на песен"
+        },
+        "coursee-2021/lesson-1": {
+          "name": "Проектиране за Достъпност"
+        },
+        "coursee-2021/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursef-2021/lesson-6": {
           "name": "Въведение в Sprite Lab",
           "purpose": "Първият урок е да ентусиазирате учениците за курса и те да свържат собствените си интереси с компютърните науки. "
         },
-        "coursef-2022/Sprites in Action": {
+        "coursef-2021/lesson-8": {
           "name": "Спрайтове в Действие",
           "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
         },
-        "coursef-2022/Mini-Project: Virtual Pet": {
+        "coursef-2021/Virtual Pet": {
           "name": "Мини-Проект: Виртуален Домашен Любимец"
         },
-        "coursef-2022/Text and Prompts": {
+        "coursef-2021/lesson-2": {
+          "name": "Силата на Думите"
+        },
+        "coursef-2021/lesson-10": {
           "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
         },
-        "coursef-2022/Mini-Project: User Input Programs": {
+        "coursef-2021/lesson-11": {
           "name": "Мини-Проект: Програми за Вход от Потребител"
         },
-        "coursef-2022/Outbreak": {
+        "coursef-2021/For Loop Fun": {
+          "name": "Повторения за забавление"
+        },
+        "coursef-2021/For Loops in Bee": {
+          "name": "For Цикли с Пчелата"
+        },
+        "coursef-2021/Simulating Experiments": {
+          "name": "Симулиране на Експерименти"
+        },
+        "coursef-2021/lesson-5": {
           "name": "Епидемия"
         },
-        "coursef-2022/AI For Oceans": {
+        "coursef-2021/AI for Oceans": {
           "name": "ИТ За Океани"
         },
-        "coursef-2022/The Internet": {
+        "coursef-2021/Internet": {
           "name": "Интернет"
         },
-        "coursef-2022/End of Course Project": {
+        "coursef-2021/End of Course Project": {
           "name": "Проект за Края на Курса"
         },
-        "coursee-2022/Private and Personal Information": {
-          "name": "Лична Информация"
+        "express-2021/Swimming Fish in Sprite Lab": {
+          "name": "Плуващи Риби в Sprite Lab"
         },
-        "coursee-2022/Mini-Project: About Me": {
-          "name": "Мини-Проект: За Мен"
-        },
-        "coursee-2022/Songwriting": {
-          "name": "Писане на песен"
-        },
-        "coursee-2022/Designing for Accessibility": {
-          "name": "Проектиране за Достъпност"
-        },
-        "coursee-2022/End of Course Project": {
-          "name": "Проект за Края на Курса"
-        },
-        "courseb-2022/Move It, Move It": {
-          "name": "Преместете го, преместете го"
-        },
-        "courseb-2022/Getting Loopy": {
-          "name": "Да повтаряме"
-        },
-        "courseb-2022/Mini-Project: A Royal Battle with Events": {
-          "name": "Мини-Проект: Царска Битка със Събития"
-        },
-        "courseb-2022/End of Course Project": {
-          "name": "Проект за Края на Курса"
-        },
-        "express-2022/Sprites in Action": {
+        "express-2021/lesson-3": {
           "name": "Спрайтове в Действие",
           "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
         },
-        "express-2022/Dance Party": {
+        "express-2021/lesson-1": {
           "name": "Танцово Парти"
         },
-        "express-2022/Mini-Project: Sticker Art": {
+        "express-2021/Sticker Art with Loops": {
           "name": "Мини-Проект: Стикер Изкуство"
         },
-        "express-2022/Text and Prompts": {
+        "express-2021/lesson-4": {
           "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
         },
-        "express-2022/End of Course Project": {
+        "express-2021/For Loops with Bee": {
+          "name": "For Цикли с Пчелата"
+        },
+        "express-2021/End of Course Project": {
           "name": "Проект за Края на Курса"
         },
-        "pre-express-2022/Programming with Rey and BB-8": {
+        "pre-express-2021/Learn to Drag and Drop": {
+          "name": "Научете се да Плъзгате и Пускате"
+        },
+        "pre-express-2021/Sequencing with Scrat": {
+          "name": "Последователност със Скрат",
+          "student_overview": "Прогеамирайте Скрат да стигне жълъда."
+        },
+        "pre-express-2021/Programming with Rey and BB-8": {
           "name": "Програмиране с Рей и BB-8"
         },
-        "coursea-2022/Happy Maps": {
-          "name": "Щастливи карти"
-        },
-        "coursea-2022/Programming with Rey and BB-8": {
-          "name": "Програмиране с Рей и BB-8"
-        },
-        "coursea-2022/End of Course Project": {
-          "name": "Проект за Края на Курса"
-        },
-        "coursec-2022/Mini-Project: Sticker Art": {
-          "name": "Мини-Проект: Стикер Изкуство"
-        },
-        "coursec-2022/The Big Event": {
-          "name": "Голямото събитие"
-        },
-        "coursec-2022/Mini-Project: Chase Game": {
-          "name": "Мини-Проект: Игра на Гоненица"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Двоични гривни"
-        },
-        "coursec-2022/End of Course Project": {
-          "name": "Проект за Края на Курса"
-        },
-        "csd5-2022/Representing Images": {
-          "name": "Представяне на Изображения"
-        },
-        "csd5-2022/Combining Representations": {
-          "name": "Комбиниране на Представяния"
-        },
-        "csd5-2022/Keeping Data Secret": {
-          "name": "Пазене на Тайни Данни"
+        "pre-express-2021/Loops with Scrat": {
+          "name": "Цикли със Скрат"
         },
         "csd1-2022/Intro to Problem Solving": {
-          "preparation": "**За всяка група**\n\n-   2 листа алуминиево фолио, 5х5 инча всяко\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   Няколко хартиени кърпи или парцали, които могат да бъдат поставени под контейнера \n-   15 стотинки\n-   Едн копие на ръководството на дейността\n\n**За учителя**\n\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   50 стотинки \n-   Допълнителни кърпи или парцали \n-   Проверете форума [\"Учителски салон\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) за проверени учители, за да намерите допълнителни стратегии или ресурси, споделени от колеги учители.\n-   Ако преподавате виртуално, разгледайте нашите [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+          "name": "Въведение в Решаването на Проблеми",
+          "preparation": "**За всяка група**\n\n-   2 листа алуминиево фолио, 5х5 инча всяко\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   Няколко хартиени кърпи или парцали, които могат да бъдат поставени под контейнера \n-   15 стотинки\n-   Едн копие на ръководството на дейността\n\n**За учителя**\n\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   50 стотинки \n-   Допълнителни кърпи или парцали \n-   Проверете форума [\"Учителски салон\"][0] за проверени учители, за да намерите допълнителни стратегии или ресурси, споделени от колеги учители.\n-   Ако преподавате виртуално, разгледайте нашите [Virtual Lesson Modifications][1]."
         },
         "csd1-2022/The Problem Solving Process": {
           "name": "Процеса за Решаване на Проблеми"
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "Изследване на Решаването на Проблеми"
         },
         "csd1-2022/What is a Computer?": {
           "name": "Какво е Компютър?"
         },
         "csd1-2022/Storage": {
           "name": "Съхранение"
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "Проект - Предложете Приложение"
+        },
+        "csd2-2022/Headings": {
+          "name": "Заглавия"
         },
         "csd3-2022/Variables": {
           "name": "Променливи"
@@ -291,8 +1818,26 @@
         "csd3-2022/Functions": {
           "name": "Функции"
         },
-        "csd2-2022/Headings": {
-          "name": "Заглавия"
+        "csd5-2022/Patterns and Representation": {
+          "name": "Модели и Представяне"
+        },
+        "csd5-2022/ASCII and Binary Representation": {
+          "name": "ASCII и Двоично Представяне"
+        },
+        "csd5-2022/Representing Images": {
+          "name": "Представяне на Изображения"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "Комбиниране на Представяния"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "Пазене на Тайни Данни"
+        },
+        "csd5-2022/Create a Representation": {
+          "name": "Проект - Създайте Представяне"
+        },
+        "csd5-2022/Problem Solving with Big Data": {
+          "name": "Решаване ма Проблеми с Големи Данни"
         },
         "csd6-2022/Color LEDs": {
           "name": "Цветни LEDs"
@@ -303,614 +1848,359 @@
         "csd7-2022/Introduction to AI Lab": {
           "name": "Въведение в AI Lab"
         },
-        "courseb-2018/Move It, Move It": {
-          "name": "Преместете го, преместете го"
+        "coursea-2022/Learn to Drag and Drop": {
+          "name": "Научете се да Плъзгате и Пускате"
         },
-        "courseb-2018/Your Digital Footprint": {
-          "name": "Вашите дигитални отпечатъци"
-        },
-        "courseb-2018/Programming with Rey and BB-8": {
-          "name": "Програмиране с Рей и BB-8"
-        },
-        "coursea-2018/Debugging: Unspotted Bugs": {
-          "name": "Незабележивите бъгове"
-        },
-        "coursea-2018/Persistence & Frustration: Stevie and the Big Project": {
-          "name": "Стив и Големият проект"
-        },
-        "coursea-2018/Programming: Happy Maps": {
+        "coursea-2022/Happy Maps": {
           "name": "Щастливи карти"
         },
-        "coursea-2018/Going Places Safely": {
-          "name": "Достигаме безопасно до места"
+        "coursea-2022/Sequencing with Scrat": {
+          "name": "Последователност със Скрат",
+          "student_overview": "Прогеамирайте Скрат да стигне жълъда."
         },
-        "coursed-2018/Algorithms: Graph Paper Programming": {
-          "name": "Програмиране на милиметрова хартия"
-        },
-        "coursed-2018/Relay Programming": {
-          "name": "Повтори програмирането"
-        },
-        "coursed-2018/Loops in Ice Age": {
-          "name": "Цикли в Ледена Епоха"
-        },
-        "coursed-2018/Conditionals with Cards": {
-          "name": "Условия с карти"
-        },
-        "coursed-2018/Digital Citizenship": {
-          "name": "Цифрови граждани"
-        },
-        "coursed-2018/Unplugged: Binary": {
-          "name": "Бинарни образи(картини)"
-        },
-        "coursef-2018/Programming: My Robotic Friends": {
-          "name": "Моите приятели роботи"
-        },
-        "coursef-2018/Building a Foundation": {
-          "name": "Изграждане на база"
-        },
-        "coursef-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Моите Циклични Приятели Роботи"
-        },
-        "coursef-2018/Conditionals with Cards": {
-          "name": "Условия с карти"
-        },
-        "coursef-2018/Envelope Variables": {
-          "name": "Плик с променливи"
-        },
-        "coursef-2018/For Loop Fun": {
-          "name": "Повторения за забавление"
-        },
-        "express-2018/Graph Paper Programming": {
-          "name": "Програмиране на милиметрова хартия"
-        },
-        "express-2018/Relay Programming": {
-          "name": "Повтори програмирането"
-        },
-        "express-2018/Loops: Getting Loopy": {
-          "name": "Да повтаряме"
-        },
-        "express-2018/Conditionals with Cards": {
-          "name": "Условия с карти"
-        },
-        "express-2018/Functions: Songwriting": {
-          "name": "Писане на песен"
-        },
-        "express-2018/Functions in Artist": {
-          "name": "Функции в Художник"
-        },
-        "express-2018/Events: The Big Event": {
-          "name": "Голямото събитие"
-        },
-        "express-2018/Envelope Variables": {
-          "name": "Плик с променливи"
-        },
-        "express-2018/For Loop Fun": {
-          "name": "Повторения за забавление"
-        },
-        "express-2018/Binary Bracelets": {
-          "name": "Двоични гривни"
-        },
-        "express-2018/Unplugged: Binary": {
-          "name": "Бинарни образи(картини)"
-        },
-        "express-2018/Internet": {
-          "name": "Интернет"
-        },
-        "express-2018/Crowdsourcing": {
-          "name": "Crowdsourcing кампания"
-        },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "Моите приятели роботи"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Изграждане на база"
-        },
-        "coursee-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Моите Циклични Приятели Роботи"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "Условия с карти"
-        },
-        "coursee-2018/Private and Personal Information": {
-          "name": "Лична Информация"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Писане на песен"
-        },
-        "coursee-2018/Internet": {
-          "name": "Интернет"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Crowdsourcing кампания"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Изграждане на база"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Да повтаряме"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "Голямото събитие"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Двоични гривни"
-        },
-        "pre-express-2018/Debugging: Unspotted Bugs": {
-          "name": "Незабележивите бъгове"
-        },
-        "pre-express-2018/Persistence & Frustration: Stevie and the Big Project": {
-          "name": "Стив и Големият проект"
-        },
-        "pre-express-2018/Move It, Move It": {
-          "name": "Преместете го, преместете го"
-        },
-        "pre-express-2018/Your Digital Footprint": {
-          "name": "Вашите дигитални отпечатъци"
-        },
-        "pre-express-2018/Programming with Rey and BB-8": {
+        "coursea-2022/Programming with Rey and BB-8": {
           "name": "Програмиране с Рей и BB-8"
         },
-        "pre-express-2018/Spelling Bee": {
-          "name": "Правопис"
+        "coursea-2022/Loops with Scrat": {
+          "name": "Цикли със Скрат"
         },
-        "csd3-2018/Shapes and Randomization": {
-          "name": "Фигури и Рандомизация"
+        "coursea-2022/The Big Event Jr": {
+          "name": "Голямото Събитие Jr."
         },
-        "csd3-2018/Variables": {
-          "name": "Променливи"
-        },
-        "csd3-2018/Sprites": {
-          "name": "Спрайт"
-        },
-        "csd3-2018/Conditionals": {
-          "name": "Условия"
-        },
-        "csd3-2018/Keyboard Input": {
-          "name": "Въвеждане от Клавиатурата"
-        },
-        "csd3-2018/Velocity": {
-          "name": "Скорост"
-        },
-        "csd3-2018/Collisions": {
-          "name": "Сблъсъци"
-        },
-        "csd3-2018/Functions": {
-          "name": "Функции"
-        },
-        "csd6-2018/Getting Properties": {
-          "name": "Получаване на Свойства"
-        },
-        "csd6-2018/Functions with Parameters": {
-          "name": "Функции с параметри"
-        },
-        "csd5-2018/Representing Images": {
-          "name": "Представяне на Изображения"
-        },
-        "csd5-2018/Keeping Data Secret": {
-          "name": "Пазене на Тайни Данни"
-        },
-        "csd5-2018/Combining Representations": {
-          "name": "Комбиниране на Представяния"
-        },
-        "csd2-2018/Headings": {
-          "name": "Заглавия"
-        },
-        "csd2-2018/Lists": {
-          "name": "Списъци"
-        },
-        "csd1-2018/The Problem Solving Process": {
-          "name": "Процеса за Решаване на Проблеми"
-        },
-        "csd1-2018/What is a Computer?": {
-          "name": "Какво е Компютър?"
-        },
-        "coursea-2019/Going Places Safely": {
-          "name": "Достигаме безопасно до места"
-        },
-        "coursea-2019/Programming: Happy Maps": {
-          "name": "Щастливи карти"
-        },
-        "coursea-2019/Programming with Rey and BB-8": {
-          "name": "Програмиране с Рей и BB-8"
-        },
-        "courseb-2019/Your Digital Footprint": {
-          "name": "Вашите дигитални отпечатъци"
-        },
-        "courseb-2019/Move It, Move It": {
-          "name": "Преместете го, преместете го"
-        },
-        "courseb-2019/Loops: Getting Loopy": {
-          "name": "Да повтаряме"
-        },
-        "coursed-2019/Algorithms: Graph Paper Programming": {
-          "name": "Програмиране на милиметрова хартия"
-        },
-        "coursed-2019/Relay Programming": {
-          "name": "Повтори програмирането"
-        },
-        "coursed-2019/Loops in Ice Age": {
-          "name": "Цикли в Ледена Епоха"
-        },
-        "coursed-2019/Conditionals with Cards": {
-          "name": "Условия с карти"
-        },
-        "coursed-2019/Unplugged: Binary": {
-          "name": "Бинарни образи(картини)"
-        },
-        "coursed-2019/Digital Citizenship": {
-          "name": "Цифрови граждани"
-        },
-        "coursed-2019/Dance Party": {
-          "name": "Танцово Парти"
-        },
-        "coursef-2019/Envelope Variables": {
-          "name": "Плик с променливи"
-        },
-        "coursef-2019/For Loop Fun": {
-          "name": "Повторения за забавление"
-        },
-        "coursef-2019/Internet": {
-          "name": "Интернет"
-        },
-        "coursef-2019/Crowdsourcing": {
-          "name": "Crowdsourcing кампания"
-        },
-        "coursef-2019/End of Course Project": {
+        "coursea-2022/End of Course Project": {
           "name": "Проект за Края на Курса"
         },
-        "coursee-2019/Private and Personal Information": {
+        "courseb-2022/Digital Trails": {
+          "name": "Цифрова Следа"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Преместете го, преместете го"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Да повтаряме"
+        },
+        "courseb-2022/The Right App": {
+          "name": "Правилното Приложение"
+        },
+        "courseb-2022/The Big Event Jr": {
+          "name": "Голямото Събитие Jr."
+        },
+        "courseb-2022/Mini-Project: A Royal Battle with Events": {
+          "name": "Мини-Проект: Царска Битка със Събития"
+        },
+        "courseb-2022/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursec-2022/My Robotic Friends Jr": {
+          "name": "Моите Роботи Приятели Jr."
+        },
+        "coursec-2022/Collecting Treasure with Laurel": {
+          "preparation": "-   Играйте през пъзелите, за да намерите потенциални проблемни области за вашия клас."
+        },
+        "coursec-2022/My Loopy Robotic Friends Jr": {
+          "name": "Моите Циклични Приятели Роботи Jr."
+        },
+        "coursec-2022/Mini-Project: Sticker Art": {
+          "name": "Мини-Проект: Стикер Изкуство"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Голямото събитие"
+        },
+        "coursec-2022/Mini-Project: Chase Game": {
+          "name": "Мини-Проект: Игра на Гоненица"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Двоични гривни"
+        },
+        "coursec-2022/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Повтори програмирането"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Танцово Парти"
+        },
+        "coursed-2022/Loops in Ice Age": {
+          "name": "Цикли в Ледена Епоха"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Условия с карти"
+        },
+        "coursed-2022/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursee-2022/Private and Personal Information": {
           "name": "Лична Информация"
         },
-        "coursee-2019/Access Ability": {
+        "coursee-2022/Mini-Project: About Me": {
+          "name": "Мини-Проект: За Мен"
+        },
+        "coursee-2022/Fancy Shapes using Nested Loops": {
+          "name": "Готини Фигури използвайки Вложени Цикли"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Писане на песен"
+        },
+        "coursee-2022/Designing for Accessibility": {
           "name": "Проектиране за Достъпност"
         },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Писане на песен"
-        },
-        "coursee-2019/End of Course Project": {
+        "coursee-2022/End of Course Project": {
           "name": "Проект за Края на Курса"
         },
-        "express-2019/Dance Party": {
+        "coursef-2022/The Power of Words": {
+          "name": "Силата на Думите"
+        },
+        "coursef-2022/Introducing Sprite Lab": {
+          "name": "Въведение в Sprite Lab",
+          "purpose": "Първият урок е да ентусиазирате учениците за курса и те да свържат собствените си интереси с компютърните науки. "
+        },
+        "coursef-2022/Sprites in Action": {
+          "name": "Спрайтове в Действие",
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "coursef-2022/Mini-Project: Virtual Pet": {
+          "name": "Мини-Проект: Виртуален Домашен Любимец"
+        },
+        "coursef-2022/Text and Prompts": {
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "coursef-2022/Mini-Project: User Input Programs": {
+          "name": "Мини-Проект: Програми за Вход от Потребител"
+        },
+        "coursef-2022/Simulating Experiments": {
+          "name": "Симулиране на Експерименти"
+        },
+        "coursef-2022/Outbreak": {
+          "name": "Епидемия"
+        },
+        "coursef-2022/AI For Oceans": {
+          "name": "ИТ За Океани"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Интернет"
+        },
+        "coursef-2022/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "express-2022/Swimming Fish in Sprite Lab": {
+          "name": "Плуващи Риби в Sprite Lab"
+        },
+        "express-2022/Sprites in Action": {
+          "name": "Спрайтове в Действие",
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "express-2022/Dance Party": {
           "name": "Танцово Парти"
         },
-        "express-2019/Build A Project": {
+        "express-2022/Mini-Project: Sticker Art": {
+          "name": "Мини-Проект: Стикер Изкуство"
+        },
+        "express-2022/Text and Prompts": {
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "express-2022/For Loops with Bee": {
+          "name": "For Цикли с Пчелата"
+        },
+        "express-2022/End of Course Project": {
           "name": "Проект за Края на Курса"
         },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Двоични гривни"
+        "pre-express-2022/Learn to Drag and Drop": {
+          "name": "Научете се да Плъзгате и Пускате"
         },
-        "coursec-2019/Events: The Big Event": {
-          "name": "Голямото събитие"
+        "pre-express-2022/Sequencing with Scrat": {
+          "name": "Последователност със Скрат",
+          "student_overview": "Прогеамирайте Скрат да стигне жълъда."
         },
-        "coursec-2019/End of Course Project: Create a Play Lab Game": {
-          "name": "Проект за Края на Курса"
-        },
-        "pre-express-2019/Programming with Rey and BB-8": {
+        "pre-express-2022/Programming with Rey and BB-8": {
           "name": "Програмиране с Рей и BB-8"
         },
-        "pre-express-2019/Spelling Bee": {
-          "name": "Правопис"
+        "pre-express-2022/Loops with Scrat": {
+          "name": "Цикли със Скрат"
         },
-        "csd3-2019/Shapes and Randomization": {
-          "name": "Фигури и Рандомизация"
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Час на кодирането 2013"
         },
-        "csd3-2019/Variables": {
-          "name": "Променливи"
+        "aquatic/Aquatic": {
+          "name": "Minecraft: Подводното пътешествие"
         },
-        "csd3-2019/Sprites": {
-          "name": "Спрайт"
-        },
-        "csd3-2019/Conditionals": {
-          "name": "Условия"
-        },
-        "csd3-2019/Keyboard Input": {
-          "name": "Въвеждане от Клавиатурата"
-        },
-        "csd3-2019/Velocity": {
-          "name": "Скорост"
-        },
-        "csd3-2019/Collisions": {
-          "name": "Сблъсъци"
-        },
-        "csd3-2019/Functions": {
-          "name": "Функции"
-        },
-        "csd6-2019/Getting Properties": {
-          "name": "Получаване на Свойства"
-        },
-        "csd6-2019/Functions with Parameters": {
-          "name": "Функции с параметри"
-        },
-        "csd5-2019/Representing Images": {
-          "name": "Представяне на Изображения"
-        },
-        "csd5-2019/Keeping Data Secret": {
-          "name": "Пазене на Тайни Данни"
-        },
-        "csd5-2019/Combining Representations": {
-          "name": "Комбиниране на Представяния"
-        },
-        "csd1-2019/The Problem Solving Process": {
-          "name": "Процеса за Решаване на Проблеми"
-        },
-        "csd1-2019/What is a Computer?": {
-          "name": "Какво е Компютър?"
-        },
-        "csd2-2019/Headings": {
-          "name": "Заглавия"
-        },
-        "csd2-2019/Lists": {
-          "name": "Списъци"
-        },
-        "coursef-2017/Building a Foundation": {
-          "name": "Изграждане на база"
-        },
-        "coursef-2017/Loops in Artist": {
-          "name": "Цикли в Художник"
-        },
-        "coursef-2017/Nested Loops in Bee/Zombie": {
-          "name": "Вложени Цикли в Пчела/Зомби"
-        },
-        "coursef-2017/Algorithms: Tangrams": {
-          "name": "Алгоритми: Танграми"
-        },
-        "coursef-2017/The Power of Words": {
-          "name": "Цифров Гражданин: Силата на Думите"
-        },
-        "coursef-2017/Ice Age Play Lab": {
-          "name": "Събития в Ледена Епоха"
-        },
-        "coursef-2017/Conditionals in Minecraft": {
-          "name": "Условия в Minecraft"
-        },
-        "coursef-2017/Variables in Artist": {
-          "name": "Променливи в Художник"
-        },
-        "coursef-2017/Variables in Play Lab": {
-          "name": "Променливи в Play Lab"
-        },
-        "coursef-2017/For Loop Fun": {
-          "name": "Цикли За: Забава с Цикли За"
-        },
-        "coursef-2017/For Loops in Bee": {
-          "name": "Цикли За в Пчела"
-        },
-        "coursef-2017/For Loops in Artist": {
-          "name": "Цикли За в Художник"
-        },
-        "coursea-2017/Debugging: Unspotted Bugs": {
-          "name": "Отстраняване на Грешки: Ненамерени Грешки"
-        },
-        "coursea-2017/Persistence & Frustration: Stevie and the Marbles": {
-          "name": "Постоянство; Стиви и Големия Проект"
-        },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Реални алгоритми: Засадете семената"
-        },
-        "coursea-2017/Programming: Happy Maps": {
-          "name": "Програмиране: Щастливи Карти"
-        },
-        "coursea-2017/Going Places Safely": {
-          "name": "Цифров Гражданин: Безопасно Посещаване на Места"
-        },
-        "coursea-2017/Loops: Happy Loops": {
-          "name": "Цикли: Щастливи Цикли"
-        },
-        "coursea-2017/Loops in Artist": {
-          "name": "Цикли в Художник"
-        },
-        "pre-express-2017/Debugging: Unspotted Bugs": {
-          "name": "Отстраняване на Грешки: Ненамерени Грешки"
-        },
-        "pre-express-2017/Persistence & Frustration: Stevie and the Marbles": {
-          "name": "Постоянство; Стиви и Големия Проект"
-        },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Реални алгоритми: Засадете семената"
-        },
-        "pre-express-2017/Loops in Artist": {
-          "name": "Цикли в Художник"
-        },
-        "pre-express-2017/Spelling Bee": {
-          "name": "Правопис"
-        },
-        "coursee-2017/Building a Foundation": {
-          "name": "Изграждане на база"
-        },
-        "coursee-2017/Loops in Artist": {
-          "name": "Цикли в Художник"
-        },
-        "coursee-2017/Nested Loops": {
-          "name": "Вмъкнати цикли"
-        },
-        "coursee-2017/Functions in Artist": {
-          "name": "Функции в Художник"
-        },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Реални алгоритми: Хартиени самолети"
-        },
-        "coursec-2017/Loops in Artist": {
-          "name": "Цикли в Художник"
-        },
-        "coursec-2017/Loops in Harvester": {
-          "name": "Цикли в Harvester"
-        },
-        "courseb-2017/Debugging: Unspotted Bugs": {
-          "name": "Отстраняване на Грешки: Ненамерени Грешки"
-        },
-        "courseb-2017/Persistence & Frustration: Stevie and the Marbles": {
-          "name": "Постоянство; Стиви и Големия Проект"
-        },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Реални алгоритми: Засадете семената"
-        },
-        "courseb-2017/Programming with Rey and BB-8": {
-          "name": "Програмиране с Рей и BB-8"
-        },
-        "courseb-2017/Loops in Artist": {
-          "name": "Цикли в Художник"
-        },
-        "coursed-2017/Nested Loops": {
-          "name": "Вмъкнати цикли"
-        },
-        "express-2017/Introduction": {
-          "name": "Въведение"
-        },
-        "express-2017/Building a Foundation": {
-          "name": "Изграждане на база"
-        },
-        "express-2017/Loops in Artist": {
-          "name": "Цикли в Художник"
-        },
-        "express-2017/Nested Loops": {
-          "name": "Вмъкнати цикли"
-        },
-        "express-2017/Conditionals in Minecraft": {
-          "name": "Условия в Minecraft"
-        },
-        "express-2017/Variables in Artist": {
-          "name": "Променливи в Художник"
-        },
-        "express-2017/Variables in Play Lab": {
-          "name": "Променливи в Play Lab"
-        },
-        "express-2017/For Loops: For Loop Fun": {
-          "name": "Цикли За: Забава с Цикли За"
-        },
-        "express-2017/For Loops in Bee": {
-          "name": "Цикли За в Пчела"
-        },
-        "express-2017/For Loops in Artist": {
-          "name": "Цикли За в Художник"
-        },
-        "csd3-2017/Shapes and Randomization": {
-          "name": "Фигури и Рандомизация"
-        },
-        "csd3-2017/Variables": {
-          "name": "Променливи"
-        },
-        "csd3-2017/Sprites": {
-          "name": "Спрайт"
-        },
-        "csd3-2017/Conditionals": {
-          "name": "Условия"
-        },
-        "csd3-2017/Keyboard Input": {
-          "name": "Въвеждане от Клавиатурата"
-        },
-        "csd3-2017/Velocity": {
-          "name": "Скорост"
-        },
-        "csd3-2017/Collisions": {
-          "name": "Сблъсъци"
-        },
-        "csd3-2017/Functions": {
-          "name": "Функции"
-        },
-        "csd6-2017/Getting Properties_": {
-          "name": "Получаване на Свойства"
-        },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "Функции с параметри"
-        },
-        "csd2-2017/Headings": {
-          "name": "Заглавия"
-        },
-        "csd2-2017/Lists": {
-          "name": "Списъци"
-        },
-        "csd1-2017/The Problem Solving Process": {
-          "name": "Процеса за Решаване на Проблеми"
-        },
-        "csd1-2017/What is a Computer?": {
-          "name": "Какво е Компютър?"
-        },
-        "csd1-2017/Storage": {
-          "name": "Съхранение"
-        },
-        "csd5-2017/Representing Images": {
-          "name": "Представяне на Изображения"
-        },
-        "csd5-2017/Keeping Data Secret": {
-          "name": "Пазене на Тайни Данни"
-        },
-        "csd5-2017/Combining Representations": {
-          "name": "Комбиниране на Представяния"
-        },
-        "pixelation/Black & White Pixelation Tutorial": {
-          "name": "Черно & бяла пикселизация урок"
-        },
-        "pixelation/Black & White Pixelation Freeplay": {
-          "name": "Черно & бяла пикселизация"
-        },
-        "pixelation/Color Pixelation Examples": {
-          "name": "Цветна пикселизация примери"
-        },
-        "course4/Unplugged: Tangrams": {
-          "name": "Ънплъгд: Танграмите"
-        },
-        "course4/Maze and Bee": {
-          "name": "Лабиринт и Пчела"
-        },
-        "course4/Artist": {
+        "artist/Artist": {
           "name": "Художник"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Ънплъгд: Плик с променливи"
+        "dance-2019/Dance Party": {
+          "name": "Танцово Парти"
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Ънплъгд: Madlibs"
+        "dance/Dance Party": {
+          "name": "Танцово Парти (2018)"
         },
-        "course4/Artist: Variables": {
-          "name": "Художник: променливи"
+        "flappy/Flappy Code": {
+          "name": "Flappy код"
         },
-        "course4/Play Lab: Variables": {
-          "name": "Театрална лаборатория: променливи"
+        "frozen/Artist": {
+          "name": "Код с Анна и Елза"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Ънплъгд: Повторение за забавление"
+        "gumball/Gumball Play Lab": {
+          "name": "Гъмбол- игрална лаборатория"
         },
-        "course4/Bee: For Loops": {
-          "name": "Пчела: За повторенията"
+        "hero/Minecraft Hour of Code": {
+          "name": "Minecraft: Пътуването на героя"
         },
-        "course4/Artist: For Loops": {
-          "name": "Художник - за циклите"
+        "hourofcode/Maze": {
+          "name": "Лабиринт"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Театрална лаборатория: За циклите"
+        "iceage/Ice Age Play Lab": {
+          "name": "Ледена епоха Play Lab",
+          "student_overview": "В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код."
         },
-        "course4/Artist: Functions": {
-          "name": "Художник: функции"
+        "infinity/Infinity": {
+          "name": "Дисни Инфинити Игрална лаборатория",
+          "student_overview": "В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код."
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Ънплъгд: Писане на песни с параметри"
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft Hour of Code"
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Художник - Функции с Параметри"
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Minecraft Hour of Code Дизайнер"
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Театрална лаборатория: Функции с параметри"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Пчела: Функции с параметри"
+        "playlab/Play Lab": {
+          "name": "Театрална лаборатория",
+          "student_overview": "В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код."
         },
-        "course4/Unplugged: Binary": {
-          "name": "Ънплъгд: двоичен код"
+        "starwars/Hour of Code 2015": {
+          "name": "Междузвездни войни: Изграждане на галактика с код (JavaScript)"
         },
-        "course4/Artist Binary": {
-          "name": "Художник: Бинарен код"
+        "text-compression/Text Compression": {
+          "name": "Компресия на текста",
+          "overview": "По някое време стигаме до физически лимит на колко бързо може да изпращаме битове, и ако искаме да изпратим много информация по-бързо, ние трябва да намерим начин да представим същата информация с по-малко бита - трябва да **компресираме** данните. В този урок, учениците ще използват Widget за Компресиране на Текст, за да компресират части от текст на Английски, като търсят модели и заместващи символи за по-дълги модели текст."
         },
-        "course4/Super Challenge - Variables": {
-          "name": "Супер предизвикателство - променливи"
+        "applab-2hour/Digital Design": {
+          "name": "Дигитален Дизайн"
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "Супер предизвикателство - за циклите"
+        "netsim/Overview and Setup Instructions": {
+          "name": "Преглед и инструкции за инсталиране"
         },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Супер предизвикателство - функции и параметри"
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - изпращане на битове на споделена връзка"
         },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Екстремно предизвикателство - подробности"
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - изпращане на Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Съобщения за излъчване"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Маршрутизатори и адреси"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Пакети и надеждност"
+        },
+        "netsim/Manual DNS": {
+          "name": "Ръчен DNS"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Интернет симулатор ФрийПлей"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Крачкомер"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Мозайка"
+        },
+        "allthethings/Maze": {
+          "name": "Лабиринт"
+        },
+        "allthethings/Artist": {
+          "name": "Художник"
+        },
+        "allthethings/Bee": {
+          "name": "Пчела"
+        },
+        "allthethings/PlayLab": {
+          "name": "PlayLab"
+        },
+        "allthethings/Farmer": {
+          "name": "Фермер"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Multi": {
+          "name": "Мулти"
+        },
+        "allthethings/Multi2": {
+          "name": "Мулти2"
+        },
+        "allthethings/Match": {
+          "name": "свързване"
+        },
+        "allthethings/Odometer": {
+          "name": "Километраж"
+        },
+        "allthethings/Text Compression": {
+          "name": "Компресия на текста"
+        },
+        "allthethings/Pixelation": {
+          "name": "Пикселизация"
+        },
+        "allthethings/AppLab": {
+          "name": "Лаборатория за приложения"
+        },
+        "allthethings/Online PD": {
+          "name": "Онлайн PD"
+        },
+        "allthethings/Studio": {
+          "name": "Студио"
+        },
+        "allthethings/Star wars": {
+          "name": "Междузвездни войни"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Free Response": {
+          "name": "Свободен отговор"
+        },
+        "allthethings/Swapped Levels": {
+          "name": "Сменение Нива"
+        },
+        "allthethings/Anonymous student survey": {
+          "name": "Анонимна ученическа анкета"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
+        },
+        "allthethings/Standalone video": {
+          "name": "Самостоятелно видео"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Dance Lab"
+        },
+        "allthethings/Mini Rubric": {
+          "name": "Кратка Рубрика"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java (Джава) Практически Урок"
+        },
+        "allthethings/lesson-48": {
+          "name": "Поезия"
+        },
+        "allthethings/lesson-49": {
+          "name": "Музика"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Въведение в компютърните науки"
@@ -971,6 +2261,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "Изводи"
+        },
+        "course1/Happy Maps": {
+          "name": "Щастливи карти"
+        },
+        "course1/Move it, Move it": {
+          "name": "Преместете го, Преместете го"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Мозайката: Научете се да плъзгате и пускате"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Лабиринт: последователност"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Лабиринт: отстраняване на грешки"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Реални алгоритми: Засадете семената"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Пчела: последователност"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Художник: последователност"
+        },
+        "course1/Building a Foundation": {
+          "name": "Изграждане на база"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Художник: фигури"
+        },
+        "course1/Spelling Bee": {
+          "name": "Правопис"
+        },
+        "course1/Getting Loopy": {
+          "name": "Да повтаряме"
+        },
+        "course1/Maze: Loops": {
+          "name": "Лабиринт: цикли"
+        },
+        "course1/Bee: Loops": {
+          "name": "Пчела: цикли"
+        },
+        "course1/The Big Event": {
+          "name": "Голямото събитие"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Театрална лаборатория: Създаване на история"
+        },
+        "course1/Going Places Safely": {
+          "name": "Достигаме безопасно до места"
+        },
+        "course1/Artist: Loops": {
+          "name": "Художник - цикли"
         },
         "course2/Graph Paper Programming": {
           "name": "Програмиране на милиметрова хартия"
@@ -1092,395 +2436,83 @@
         "course3/Artist: Patterns": {
           "name": "Художник: модели"
         },
-        "course1/Happy Maps": {
-          "name": "Щастливи карти"
+        "course4/Unplugged: Tangrams": {
+          "name": "Ънплъгд: Танграмите"
         },
-        "course1/Move it, Move it": {
-          "name": "Преместете го, Преместете го"
+        "course4/Maze and Bee": {
+          "name": "Лабиринт и Пчела"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Мозайката: Научете се да плъзгате и пускате"
+        "course4/Artist": {
+          "name": "Художник"
         },
-        "course1/Maze: Sequence": {
-          "name": "Лабиринт: последователност"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Ънплъгд: Плик с променливи"
         },
-        "course1/Maze: Debugging": {
-          "name": "Лабиринт: отстраняване на грешки"
+        "course4/Unplugged: Madlibs": {
+          "name": "Ънплъгд: Madlibs"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Реални алгоритми: Засадете семената"
+        "course4/Artist: Variables": {
+          "name": "Художник: променливи"
         },
-        "course1/Bee: Sequence": {
-          "name": "Пчела: последователност"
+        "course4/Play Lab: Variables": {
+          "name": "Театрална лаборатория: променливи"
         },
-        "course1/Artist: Sequence": {
-          "name": "Художник: последователност"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Ънплъгд: Повторение за забавление"
         },
-        "course1/Building a Foundation": {
-          "name": "Изграждане на база"
+        "course4/Bee: For Loops": {
+          "name": "Пчела: За повторенията"
         },
-        "course1/Artist: Shapes": {
-          "name": "Художник: фигури"
+        "course4/Artist: For Loops": {
+          "name": "Художник - за циклите"
         },
-        "course1/Spelling Bee": {
-          "name": "Правопис"
+        "course4/Play Lab: For Loops": {
+          "name": "Театрална лаборатория: За циклите"
         },
-        "course1/Getting Loopy": {
-          "name": "Да повтаряме"
+        "course4/Artist: Functions": {
+          "name": "Художник: функции"
         },
-        "course1/Maze: Loops": {
-          "name": "Лабиринт: цикли"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Ънплъгд: Писане на песни с параметри"
         },
-        "course1/Bee: Loops": {
-          "name": "Пчела: цикли"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Художник - Функции с Параметри"
         },
-        "course1/The Big Event": {
-          "name": "Голямото събитие"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Театрална лаборатория: Функции с параметри"
         },
-        "course1/Studio: Create a Story": {
-          "name": "Театрална лаборатория: Създаване на история"
+        "course4/Bee: Functions with Parameters": {
+          "name": "Пчела: Функции с параметри"
         },
-        "course1/Going Places Safely": {
-          "name": "Достигаме безопасно до места"
+        "course4/Unplugged: Binary": {
+          "name": "Ънплъгд: двоичен код"
         },
-        "course1/Artist: Loops": {
-          "name": "Художник - цикли"
+        "course4/Artist Binary": {
+          "name": "Художник: Бинарен код"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Супер предизвикателство - променливи"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Супер предизвикателство - за циклите"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Супер предизвикателство - функции и параметри"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Екстремно предизвикателство - подробности"
         },
         "jigsaw/Jigsaw": {
           "name": "Мозайка"
         },
-        "allthethings/Jigsaw": {
-          "name": "Мозайка"
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Черно & бяла пикселизация урок"
         },
-        "allthethings/Maze": {
-          "name": "Лабиринт"
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Черно & бяла пикселизация"
         },
-        "allthethings/Artist": {
-          "name": "Художник"
-        },
-        "allthethings/Bee": {
-          "name": "Пчела"
-        },
-        "allthethings/PlayLab": {
-          "name": "PlayLab"
-        },
-        "allthethings/Farmer": {
-          "name": "Фермер"
-        },
-        "allthethings/Flappy": {
-          "name": "Flappy"
-        },
-        "allthethings/Bounce": {
-          "name": "Bounce"
-        },
-        "allthethings/Multi": {
-          "name": "Мулти"
-        },
-        "allthethings/Match": {
-          "name": "свързване"
-        },
-        "allthethings/Odometer": {
-          "name": "Километраж"
-        },
-        "allthethings/Text Compression": {
-          "name": "Компресия на текста"
-        },
-        "allthethings/Pixelation": {
-          "name": "Пикселизация"
-        },
-        "allthethings/AppLab": {
-          "name": "Лаборатория за приложения"
-        },
-        "allthethings/Online PD": {
-          "name": "Онлайн PD"
-        },
-        "allthethings/Studio": {
-          "name": "Студио"
-        },
-        "allthethings/Star wars": {
-          "name": "Междузвездни войни"
-        },
-        "allthethings/Minecraft": {
-          "name": "Minecraft"
-        },
-        "allthethings/Free Response": {
-          "name": "Свободен отговор"
-        },
-        "allthethings/Swapped Levels": {
-          "name": "Сменение Нива"
-        },
-        "allthethings/Anonymous student survey": {
-          "name": "Анонимна ученическа анкета"
-        },
-        "allthethings/Web Lab": {
-          "name": "Web Lab"
-        },
-        "allthethings/Dance Lab": {
-          "name": "Dance Lab"
-        },
-        "allthethings/Java Lab": {
-          "name": "Java (Джава) Практически Урок"
-        },
-        "allthethings/lesson-48": {
-          "name": "Поезия"
-        },
-        "allthethings/lesson-49": {
-          "name": "Музика"
-        },
-        "coursef-2021/lesson-6": {
-          "name": "Въведение в Sprite Lab",
-          "purpose": "Първият урок е да ентусиазирате учениците за курса и те да свържат собствените си интереси с компютърните науки. "
-        },
-        "coursef-2021/lesson-8": {
-          "name": "Спрайтове в Действие",
-          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
-        },
-        "coursef-2021/Virtual Pet": {
-          "name": "Мини-Проект: Виртуален Домашен Любимец"
-        },
-        "coursef-2021/lesson-10": {
-          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
-        },
-        "coursef-2021/lesson-11": {
-          "name": "Мини-Проект: Програми за Вход от Потребител"
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "Повторения за забавление"
-        },
-        "coursef-2021/lesson-5": {
-          "name": "Епидемия"
-        },
-        "coursef-2021/AI for Oceans": {
-          "name": "ИТ За Океани"
-        },
-        "coursef-2021/Internet": {
-          "name": "Интернет"
-        },
-        "coursef-2021/End of Course Project": {
-          "name": "Проект за Края на Курса"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "Преместете го, преместете го"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Да повтаряме"
-        },
-        "courseb-2021/Events in Play Lab": {
-          "name": "Мини-Проект: Царска Битка със Събития"
-        },
-        "courseb-2021/lesson-1": {
-          "name": "Проект за Края на Курса"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "Щастливи карти"
-        },
-        "coursea-2021/Programming with Rey and BB-8": {
-          "name": "Програмиране с Рей и BB-8"
-        },
-        "coursea-2021/lesson-1": {
-          "name": "Проект за Края на Курса"
-        },
-        "coursec-2021/Sticker Art with Loops": {
-          "name": "Мини-Проект: Стикер Изкуство"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "Голямото събитие"
-        },
-        "coursec-2021/Events in Play Lab": {
-          "name": "Мини-Проект: Игра на Гоненица"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Двоични гривни"
-        },
-        "coursec-2021/End of Course Project: Create a Play Lab Game": {
-          "name": "Проект за Края на Курса"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Програмиране на милиметрова хартия"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Повтори програмирането"
-        },
-        "coursed-2021/Dance Party": {
-          "name": "Танцово Парти"
-        },
-        "coursed-2021/Loops in Ice Age": {
-          "name": "Цикли в Ледена Епоха"
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "Условия с карти"
-        },
-        "coursed-2021/End of Course Project": {
-          "name": "Проект за Края на Курса"
-        },
-        "express-2021/lesson-3": {
-          "name": "Спрайтове в Действие",
-          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
-        },
-        "express-2021/lesson-1": {
-          "name": "Танцово Парти"
-        },
-        "express-2021/Sticker Art with Loops": {
-          "name": "Мини-Проект: Стикер Изкуство"
-        },
-        "express-2021/lesson-4": {
-          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
-        },
-        "express-2021/End of Course Project": {
-          "name": "Проект за Края на Курса"
-        },
-        "pre-express-2021/Programming with Rey and BB-8": {
-          "name": "Програмиране с Рей и BB-8"
-        },
-        "coursee-2021/Private and Personal Information": {
-          "name": "Лична Информация"
-        },
-        "coursee-2021/About Me": {
-          "name": "Мини-Проект: За Мен"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "Писане на песен"
-        },
-        "coursee-2021/lesson-1": {
-          "name": "Проектиране за Достъпност"
-        },
-        "coursee-2021/End of Course Project": {
-          "name": "Проект за Края на Курса"
-        },
-        "csd7-2021/Introduction to AI Lab": {
-          "name": "Въведение в AI Lab"
-        },
-        "csd6-2021/Getting Properties": {
-          "name": "Получаване на Свойства"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Функции с параметри"
-        },
-        "csd5-2021/Representing Images": {
-          "name": "Представяне на Изображения"
-        },
-        "csd5-2021/Combining Representations": {
-          "name": "Комбиниране на Представяния"
-        },
-        "csd5-2021/Keeping Data Secret": {
-          "name": "Пазене на Тайни Данни"
-        },
-        "csd3-2021/Variables": {
-          "name": "Променливи"
-        },
-        "csd3-2021/Sprites": {
-          "name": "Спрайт"
-        },
-        "csd3-2021/Sprite Properties": {
-          "name": "Свойства на Спрайта"
-        },
-        "csd3-2021/Text": {
-          "name": "Текст"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "Условия"
-        },
-        "csd3-2021/Keyboard Input": {
-          "name": "Въвеждане от Клавиатурата"
-        },
-        "csd3-2021/Velocity": {
-          "name": "Скорост"
-        },
-        "csd3-2021/Collisions": {
-          "name": "Сблъсъци"
-        },
-        "csd3-2021/Functions": {
-          "name": "Функции"
-        },
-        "csd1-2021/Intro to Problem Solving": {
-          "preparation": "**За всяка група**\n\n-   2 листа алуминиево фолио, 13 на 13 см всяко\n-   1 контейнер, който може да съдържа 7-10 cm вода \n-   Няколко хартиени кърпи или парцали, които могат да бъдат сложени под контейнера \n-   15 монети(на стотинки)\n-   Едно копие на ръководството на дейността\n\n**За учителя**\n\n-   1 контейнер, който може да съдържа 7-10 см вода \n-   50 монети(на стотинки) \n-   Допълнителни хартиени кърпи или парцали "
-        },
-        "csd1-2021/The Problem Solving Process": {
-          "name": "Процеса за Решаване на Проблеми"
-        },
-        "csd1-2021/What is a Computer?": {
-          "name": "Какво е Компютър?"
-        },
-        "csd1-2021/Storage": {
-          "name": "Съхранение"
-        },
-        "csd2-2021/Headings": {
-          "name": "Заглавия"
-        },
-        "pre-express-2020/Programming with Rey and BB-8": {
-          "name": "Програмиране с Рей и BB-8"
-        },
-        "express-2020/Dance Party": {
-          "name": "Танцово Парти"
-        },
-        "express-2020/End of Course Project": {
-          "name": "Проект за Края на Курса"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "Преместете го, преместете го"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Да повтаряме"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Програмиране на милиметрова хартия"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Повтори програмирането"
-        },
-        "coursed-2020/Dance Party": {
-          "name": "Танцово Парти"
-        },
-        "coursed-2020/Loops in Ice Age": {
-          "name": "Цикли в Ледена Епоха"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "Условия с карти"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Бинарни образи(картини)"
-        },
-        "coursed-2020/End of Course Project": {
-          "name": "Проект за Края на Курса"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Двоични гривни"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "Голямото събитие"
-        },
-        "coursec-2020/End of Course Project: Create a Play Lab Game": {
-          "name": "Проект за Края на Курса"
-        },
-        "coursee-2020/Private and Personal Information": {
-          "name": "Лична Информация"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "Писане на песен"
-        },
-        "coursee-2020/Designing for Accessibility": {
-          "name": "Проектиране за Достъпност"
-        },
-        "coursee-2020/End of Course Project": {
-          "name": "Проект за Края на Курса"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Щастливи карти"
-        },
-        "coursea-2020/Programming with Rey and BB-8": {
-          "name": "Програмиране с Рей и BB-8"
-        },
-        "coursef-2020/Envelope Variables": {
-          "name": "Плик с променливи"
-        },
-        "coursef-2020/Internet": {
-          "name": "Интернет"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "Повторения за забавление"
-        },
-        "coursef-2020/End of Course Project": {
-          "name": "Проект за Края на Курса"
+        "pixelation/Color Pixelation Examples": {
+          "name": "Цветна пикселизация примери"
         }
       }
     }

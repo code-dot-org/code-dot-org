@@ -335,6 +335,7 @@
   homepage_slot_text_link_buy: "השתתף"
   homepage_slot_text_link_donate: "תרום"
   homepage_slot_text_link_shop: "חולצות, כובעים, & עוד"
+  homepage_slot_text_link_thebadguys: "קוד עם הרעים"
   homepage_slot_text_link_administrators: "הביאו את מדעי המחשב לבית הספר שלכם"
   homepage_gallery_header: "מעל %{project_count} מיליון פרויקטים של Code.org נוצרו"
   homepage_header_donors: "code.org מודה לתומכיו"
@@ -1270,7 +1271,7 @@
   hoc2018_mc_thank_microsoft: "אנו מודים למיקרוסופט על תמיכתה בחזון ובמשימה שלנו – להבטיח שלכל ילד תהיה ההזדמנות ללמוד מדעי המחשב ולרכוש את הכישורים הנדרשים כדי להצליח במאה ה־21."
   hoc2022_mc_mee_title: "מיינקראפט: אחוזת בריחה"
   hoc2022_mc_mee_description: 'ברחו מהטירה המסתורית עד עלות השחר וזכו במיליון אבני ברקת! מדריך מיינקראפט שעת קוד החדש זמין כעת במיינקראפט: מהדורת חינוך עבור ווינדווס, מאק, כרומבוק, אייפד, ומובייל. תתחילו עם משאבי מחנך חינם, הדרכות וסרטונים.'
-  hoc2022_mc_mee_timecraft_description: 'סעו אחורה בזמן כדי להציל את העתיד בשיעור קידוד חינם זה במיינקראפט: מהדורת חינוך.'
+  hoc2022_mc_mee_timecraft_description: "סעו אחורה בזמן כדי להציל את העתיד בשיעור קידוד חינם זה במיינקראפט: מהדורת חינוך."
   footer_powered_by_aws: "ממונע ע\"י Amazon Web Services"
   codebytes_skinny_banner_english_only: "אנגלית בלבד"
   footer_privacy_policy: "הצהרת פרטיות"

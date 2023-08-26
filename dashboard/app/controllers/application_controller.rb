@@ -3,6 +3,8 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
+require 'cpa'
+require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -13,6 +15,8 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+
+  before_action :assert_child_account_policy
 
   # this is needed to avoid devise breaking on email param
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -52,7 +56,7 @@ class ApplicationController < ActionController::Base
     # if params['dbg'] is 'off'.
     def configure_web_console
       if params[:dbg]
-        cookies[:dbg] = (params[:dbg] != 'off') ? 'on' : nil
+        cookies[:dbg] = (params[:dbg] == 'off') ? nil : 'on'
       end
       @use_web_console = cookies[:dbg]
     end
@@ -136,6 +140,8 @@ class ApplicationController < ActionController::Base
     :password_confirmation,
     :locale,
     :gender,
+    :gender_student_input,
+    :gender_teacher_input,
     :login,
     :remember_me,
     :age,
@@ -151,6 +157,8 @@ class ApplicationController < ActionController::Base
     :parent_email_preference_opt_in_required,
     :parent_email_preference_opt_in,
     :parent_email_preference_email,
+    :us_state,
+    :country_code,
     {school_info_attributes: SCHOOL_INFO_ATTRIBUTES},
   ]
 
@@ -208,11 +216,9 @@ class ApplicationController < ActionController::Base
       response[:share_failure] = response_for_share_failure(options[:share_failure])
     end
 
-    if HintViewRequest.enabled?
-      if script_level && current_user
-        response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, level, current_user)
-        response[:hint_view_request_url] = hint_view_requests_path
-      end
+    if HintViewRequest.enabled? && (script_level && current_user)
+      response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, level, current_user)
+      response[:hint_view_request_url] = hint_view_requests_path
     end
 
     if PuzzleRating.enabled?
@@ -277,7 +283,7 @@ class ApplicationController < ActionController::Base
     end
 
     # replace pairings
-    session[:pairings] = pairings_from_params[:pairings].map do |pairing_param|
+    session[:pairings] = pairings_from_params[:pairings].filter_map do |pairing_param|
       other_user = User.find(pairing_param[:id])
       if current_user.can_pair_with? other_user
         other_user.id
@@ -285,7 +291,7 @@ class ApplicationController < ActionController::Base
         # TODO: should this cause an error to be returned to the user?
         nil
       end
-    end.compact
+    end
 
     session[:pairing_section_id] = pairings_from_params[:section_id].to_i
   end
@@ -319,6 +325,32 @@ class ApplicationController < ActionController::Base
       session.delete(:sign_up_type)
       session.delete(:sign_up_tracking_expiration)
     end
+  end
+
+  # Check that the user is compliant with the Child Account Policy. If they
+  # are not compliant, then we need to send them to the lockout page.
+  def assert_child_account_policy
+    # Check that the child account policy is currently enabled.
+    return unless ::Cpa.cpa_experience(request)
+
+    # Anonymous users are NOT affected by our Child Account Policy
+    return unless current_user
+
+    # URLs we should not redirect.
+    return if Set[
+      # Don't block any user from signing out
+      destroy_user_session_path,
+      # Don't block any user from changing the language
+      locale_path,
+      # Avoid an infinite redirect loop to the lockout page
+      lockout_path,
+      # The locked out student needs access to the policy consent API's
+      policy_compliance_child_account_consent_path,
+      # The age interstitial when the age isn't known will block the lockout page
+      users_set_age_path,
+    ].include?(request.path)
+
+    redirect_to lockout_path unless Policies::ChildAccount.compliant?(current_user)
   end
 
   private def pairing_still_enabled

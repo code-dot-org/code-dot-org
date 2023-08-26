@@ -527,15 +527,185 @@ mn:
         hoc_dance_events_2019: Бүжгийн үдэшлэг 2019 - Үйл явдал
         hoc_dance_measures_2019: Бүжгийн үдэшлэг 2019 - Арга хэмжээ
         hoc_dance_properties_2019: Бүжгийн үдэшлэг 2019 - Шинж чанар
+        csd_what_computers_do: Компьютер юу хийдэг вэ?
         csf_my_online_neighborhood_2020: Миний онлайн хөрш
+        csf_follow_the_digital_trail: Дижитал мөрийг дагана уу
         csf_private_and_personal_information: Хувийн ба өөрийн мэдээлэл
         csd_what_computers_are: Компьютер гэж юу вэ?
+        csd_how_teamwork_works: Багаар ажиллах нь хэрхэн ажилладаг вэ
+        csd_teamwork_and_disagreement: Багаар ажиллах - санал зөрөлдөөнтэй харьцах
+        csf21pilot_events: 'Спрайт лаборатори: Үйл ажиллагааны спрайт'
+        csf21pilot_prompts: 'Sprite Lab: Текст ба сануулга'
+        csd_ml_intro_to_ai_lab: AI лабораторийн танилцуулга
+        csd_ml_import_model: AI загварыг импортлох
+        csf_lots_of_sprites: 'Спрайт лаборатори: Маш олон спрайт'
         playlab_2021: Тоглоомын лабораторийн танилцуулга
         playlab_2021_reader: Тоглоомын лабораторийн танилцуулга
+        csp_defining_calling_functions: Тодорхойлох ба дуудлага хийх функцууд
+        csp_tutorial_datatab: Апп Lab дахь өгөгдлийн таб
+        csp_tutorial_libraries: App Lab дахь номын сангууд
+        PL-Video-21: Code.org-ийн Мэргэжлийн сургалтанд тавтай морилно уу!
+        csp_tutorial_datavis1: Апп Лаб дахь өгөгдөл дүрслэгч - Хэсэг 1
+        csp_tutorial_datavis2: Апп Лаб дахь өгөгдлийн дүрслэл - Хэсэг 2
+        csd_ml_intro_ai_lab_july2021: AI лабораторийн танилцуулга
+        csd_ml_training_testing_ai_lan: AI Lab дахь сургалт, туршилт
+        csd_ml_model_cards_july2021: AI Lab дахь загвар картууд
+        csd_ml_numerical_ai_lab: AI лабораторийн тоон өгөгдөл
+        Gettting_Started_Progress: Ахиц дэвшил, санал хүсэлт, үнэлгээ
+        Gettting_Started_ClassSection: Ангийн хэсэг үүсгэх
+        Gettting_Started_StudentExperience: Оюутны туршлага
+        Getting_Started_BasicFeatures: Code.org-ийн үндсэн шинж чанарууд
+        PL_overview_CSD: Компьютерийн шинжлэх ухааны нээлт гэж юу вэ?
+        PL_CSD_TeacherTips_Advise: Багшийн зөвлөмж - Шинэ багш нарт өгөх зөвлөгөө
+        PL_CSD_TeacherTips_IntroToCSD: Багшийн зөвлөмжүүд - CS нээлтүүдийн танилцуулга
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Багшийн зөвлөмжүүд - Асуудлыг шийдвэрлэх үйл явц
+        PL_CSD_TeacherTips_PairProgramming: Багшийн зөвлөмжүүд - Pair програмчлал
+        PL_CSD_TeacherTips_Debugging: Багшийн зөвлөмжүүд - дибаг хийх
+        PL_CSD_TeacherTips_LeadLearner: Багшийн зөвлөмжүүд - Суралцагч хар тугалга
+        poembot-playtest-intro: PoemOt Playtest танилцуулга
+        poembot-playtest-sprites: PoemOt Playtest Спрайт
+        poembot-playtest-events: PoemBot Playtest арга хэмжээ
+        hello_world_intro: Сайн уу ертөнц - Sprite Lab-д тавтай морилно уу
+        hello_world_events: Hello World - Үйл явдлын програмчлал
+        hello_world_congrats: Сайн уу ертөнц - Хүссэнээ хий
+        csp_global_vs_local: Орон нутгийн хувьсагчууд ба Глобал дибаг хийх
+        rough_poemart_intro: v1 Шүлэг урлагийн танилцуулга
+        rough_poemart_events: v1 Шүлэг урлагийн үйл явдал
+        rough_poemart_imagery: v1 Шүлэг урлагийн зураглал
+        rough_poemart_congrats: v1 Шүлэг Урлаг Congrats
+        poetry_module_variables: Хувьсагчууд - Яруу найраг нь кодлох
+        poetry_module_textandvariables: Текст & Хувьсагч - Яруу найраг нь кодлох
+        poetry_module_planningapp: Таны шүлэг Generator App төлөвлөх - Яруу найраг нь кодлох
+        poetry_module_multichoiceprompts: Олон сонголттой сануулга - Яруу найраг ашиглан кодлох
+        poetry_module_conditionals: Нөхцөл байдал - Яруу найраг нь кодлох
+        poemart_intro: Шүлэг урлагийн танилцуулга
+        poemart_events: Шүлэг урлагийн арга хэмжээ
+        poemart_imagery: Шүлэг урлагийн зураглал
+        poemart_celebration: Шүлэг урлагийн баяр
+        csd_u6_variables_part2: Хувьсагчууд - эсрэг хэв маяг
+        csd_ml_ethics_ai: 'Ёс зүй ба AI '
+        outbreak_intro: 'Дэгдэлтийн симуляци: Танилцуулга'
+        outbreak_events: 'Дэгдэлтийн симулятор: Үйл явдал'
+        outbreak_scientist: 'Дэгдэлтийн симулятор: Эрдэмтэн шиг сэтгэх'
+        outbreak_outro: 'Дэгдэлтийн симулятор: Үнэгүй тоглох'
+        PL_overview_CSP: Компьютерийн шинжлэх ухааны зарчим гэж юу вэ?
+        PL_CSP_EIPMOverview: EIPM хичээлүүдийн гарын авлага
+        CSA-PL-debugging-temp: Java Lab-д дибаг хийх танилцуулга - temp
+        csd_app_lab_design_mode: CSD App лабораторийн дизайны горим
+        csd_app_lab_events: CSD App Lab арга хэмжээ
+        PL_CSD_Unit4_AppTesting: Цаасны анхны загвар тест
         csd_u6_circuit_playground: Биет тооцоолол
         csd_u6_input_output: Оролт ба гаралт
+        CSA-PL-for-loops: Java дахь гогцоонуудын хувьд
+        CSA-PL-variables: Java дээр хувьсагчуудыг үүсгэх
+        PL_CS_Journeys_Overview: CS аян
+        CSA-PL-intro-to-java-lab: Java Lab үндэс
+        CSA-PL-first-program: Хөтөлбөрийг Java дээр бичих
+        CSD_u6_variables_part1: 'CSD: Хувьсагчууд'
+        csd_u6_if_statements: 'CSD: Хэрэв мэдэгдэл бол'
+        csc-poem-art-intro: Видео танилцуулга
+        csc-poem-art-outro: Outro Видео
+        csd_u6_call_define_functions: 'CSD: Дуудлага болон чиг үүргийг тодорхойлох'
         csp_applab_parameters: Параметртэй функцүүд
+        starquilts_intro_artist: Оддын халхавчин дор танилцуулга
+        CSA-PL-intro-to-arrays: Нэг хэмжээст (1D) массивууд
+        CSA-PL-1d-arrays-new-values: 1D массив дахь утгыг оруулах
+        CSA-PL-conditionals: Жава дахь нөхцөлт мэдэгдлүүд
+        CSA-PL-two-way-selection: Хоёр талын сонголт
+        CSA-PL-Printing-in-Java: Java дээр хэвлэх
+        CSA-PL-multi-selection-statements: Олон сонгон шалгаруулалтын тайлан
+        PL_CSP_TeacherTips_Advice: 'Багшийн зөвлөмж: Шинэ CS багш нарт зөвлөгөө өгөх'
+        PL_CSP_TeacherTips_IntroToCSP: 'Багшийн зөвлөмжүүд: CS зарчмуудын танилцуулга'
+        PL_CSP_TeacherTips_Debugging: 'Багш зөвлөмжүүд: дибаг хийх нь тусал'
+        PL_CSP_TeacherTips_LeadLearner: 'Багшийн зөвлөмж: Хэрхэн суралцагч болох вэ'
+        PL_CSP_TeacherTips_APExam: 'Багшийн зөвлөмж: AP шалгалтанд бэлтгэх'
+        PL_CSP_TeacherTips_EIPM: 'Багшийн зөвлөмжүүд: EIPM үйл явц'
+        PL_CSD_CircuitPlayground_Overview: Хэлхээний тоглоомын талбайн тойм
+        CSA-PL-debugging-22: Java Lab-д дибаг хийх
+        CSD_Unit6_InteractiveArtExemplar: Интерактив урлагийн загвар
         CS_Changing_Everything: Компьютерийн шинжлэх ухаан бүх зүйлийг өөрчилж байна
+        csa-alias-video: Тэнцүү ба хуурамч дүр
+        csa-equals-video: Тэнцүү () арга
+        csa-user-stories: Програм хангамжийн инженерийн хэрэглэгчийн түүхүүд
+        csa-pl-vpl-m1-unit-3: 3-р хэсэг дэх програм хангамжийн инженерчлэл
+        csa-pl-intro-to-equality: Тэгш байдлын танилцуулга
+        csa-pl-intro-to-equals-method: .equals () аргын танилцуулга
+        csa-pl-equals-book: Ном ангийн хувьд тэнцүү () аргыг бичих
+        csa-multi-select-pl: Java дахь олон сонгон шалгаруулалтын тайлан
+        csc_timecapsule_intro: Капсул цаг танилцуулга
+        PL_Equity_in_CS_Education: CS боловсролын тэгш байдал
+        csc_fm_pilot: Чиг үүрэг Машин тоног төхөөрөмж (Pilot)
+        csc_fm_pilot_v2: 'Чиг үүрэг Машин тоног төхөөрөмж танилцуулга '
+        csc-sprite-lab-pixel-editor: Өөрийн Sprite зур
+        csa-pl-intro-to-strings: Java дахь мөрүүдийн танилцуулга
+        csa-pl-compareTo: Compareto () арга
+        csc-event-short-intro: Үйл явдлын богино танилцуулга
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Тоглоомын талбайн хэлхээний нэгжийн тойм
+        csa-day-in-pm-pl: Төслийн менежер юу хийдэг вэ?
+        csa-pl-intro-to-pm: Төслийн менежментийн танилцуулга
+        PL_CSD_CircuitPlayground_Setup: Тоглоомын талбайн Circuit Setup
+        csa_object_oriented_programming: 'CSA: Объект хандалтат програмчлал'
+        csa_creating_objects: 'CSA: Объектуудыг үүсгэх'
+        csa_calling_methods: 'CSA: Дуудлага хийх аргууд'
+        csa_while_loops: 'CSA: Гогцоонууд байхад'
+        csa_inheritance: 'CSA: Өв залгамжлал'
+        csa_writing_a_method: 'CSA: Арга бичих'
+        csa_software_engineering_code_reviews: 'CSA: Програм хангамжийн инженерчлэл - Код сэтгэгдэл'
+        csa_conditional_statements: 'CSA: Нөхцөлт мэдэгдэл'
+        csa_printing_in_java: 'CSA: Java дээр хэвлэх'
+        csa_two_way_selection_and_not: 'CSA: Хоёр талын сонголт биш'
+        csa-pl-intro-to-oop: Объект хандалтат програмчлалын танилцуулга
+        csa-pl-welcome-to-Neighborhood: Хөрш тавтай морилно уу
+        csa-pl-calling-methods: Жава дахь дуудлага хийх аргууд
+        csa-pl-creating-objects: Объект үүсгэх
+        csa_accessor_methods: 'CSA: Accessor арга'
+        csa_constructors: 'CSA: Байгуулагчид'
+        csa_creating_a_scanner_object: 'CSA: Сканнерын объект үүсгэх'
+        csa_creating_variables: 'CSA: Хувьсагчуудыг үүсгэх'
+        csa_instance_variables_and_attributes: 'CSA: Жишээ нь Хувьсагчууд болон Аттрибутууд'
+        csa_mutator_methods: 'CSA: Мутаторын аргууд'
+        csa_overloaded_constructors: 'CSA: Ачаалал ихтэй барилгачид'
+        csa_the_tostring_method: 'CSA: ToString () арга'
+        csa_scanner_class_methods: 'CSA: Скайнер ангиллын аргууд'
+        csa_for_loops: 'CSA: Гогцоонуудын хувьд'
+        csa_enhanced_for_loops: 'CSA: Гогцоонд зориулж сайжруулсан'
+        csa_modifying_values_in_a_1d_array: 'CSA: 1D массив дахь утгыг өөрчлөх'
+        csa_nested_loops: 'CSA: Түүвэрлэсэн гогцоо'
+        csa_one_dimensional_arrays: 'CSA: Нэг хэмжээст (1D) массивууд'
+        csa_polymorphism: 'CSA: Полиморфизм'
+        csa_casting: 'CSA: цутгамал'
+        csa_equals_and_aliases: 'CSA: Тэнцүү ба хуурамч дүр'
+        csa_multi-selection_statements: 'CSA: Олон сонгон шалгаруулалтын мэдэгдэл'
+        csa_random_numbers: 'CSA: Санамсаргүй тоо'
+        csa_static_methods: 'CSA: Статик аргууд'
+        csa_static_variables: 'CSA: Статик хувьсагчууд'
+        csa_the_equals_method: 'CSA: тэнцүү () арга'
+        csa_welcome_to_the_theater: 'CSA: Театрт тавтай морилно уу'
+        enter_your_own_poem: Өөрийн шүлэг оруулна уу
+        csa-example-solution-1: 'Жишээ шийдлийг шууд кодлох '
+        csa-pl-documentation: Java Lab дахь баримт бичиг
+        csc-starquilts-intro: 'CSC: Оддын хөнжил'
+        csa-pl-vocab-pm: Төслийн менежментийн тайлбар толь
+        csc-ecosystems-intro: Экосистемийн танилцуулга
+        PL_CSD_MicroBit_Intro: 'Бичил танилцуулга: бит'
+        csc_animal_adaptations_intro: Амьтны дасан зохицох танилцуулга
+        csa_two_dimensional_arrays: 'CSA: Хоёр хэмжээст (2D) массивууд'
+        csa_working_with_2d_array_elements: 'CSA: 2D массив элементүүдтэй ажиллах'
+        csa_row_major_traversal: 'CSA: Мөрний гол зам'
+        csa_column_major_traversal: 'CSA: Багана гол зам'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Гогцоонууд болон 2D массивын хувьд сайжруулсан'
+        csa_images_and_pixels: 'CSA: Зураг ба пиксел'
+        csa_wrapper_classes_part_1: 'CSA: Wrapper Ангиуд-р хэсэг 1'
+        csa_wrapper_classes_part_2: 'CSA: Wrapper Ангиуд 2-р хэсэг'
+        csa_the_arraylist_class: 'CSA: ArrayList анги'
+        csa_working_with_arraylist_data: 'CSA: ArrayList өгөгдөлтэй ажиллах'
+        csa_remving_data_from_an_arraylist: 'CSA: ArrayList-аас өгөгдлийг устгах'
+        csa_private_methods: 'CSA: Хувийн аргууд'
+        csa_recursion: 'CSA: Давуу'
+        csa_searching_algorithms: 'CSA: Алгоритмууд хайх'
+        csa_sorting_algorithms: 'CSA: Эрэмбэлэх алгоритмууд'
+        star_quilts_intro_to_artist: 'Оддын хөнжил: Зураачийн танилцуулга'
+        upload_sprites_backgrounds: Custom Sprites болон фон байршуулж байна
     callout:
       text:
         drag_blocks: '"Шилжих" хэсгийг чирж, нөгөө блокийн доор байрлуулна уу'

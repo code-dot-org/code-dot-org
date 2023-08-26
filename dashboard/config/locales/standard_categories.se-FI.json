@@ -2,11 +2,11 @@
   "se-FI": {
     "data": {
       "standard_categories": {
-        "L": {
-          "description": "Giella"
-        },
         "C": {
           "description": "Jorbbát"
+        },
+        "L": {
+          "description": "Giella"
         }
       }
     }

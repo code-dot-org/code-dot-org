@@ -75,7 +75,7 @@ class ChannelsApi < Sinatra::Base
 
     begin
       _, remix_parent_id = storage_decrypt_channel_id(request.GET['parent']) if request.GET['parent']
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
+    rescue ArgumentError, OpenSSL::Cipher::CipherError, Projects::ValidationError
       bad_request
     end
 
@@ -102,13 +102,17 @@ class ChannelsApi < Sinatra::Base
       data.delete('shouldPublish')
     end
 
-    id = project.create(
-      data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
-      ip: request.ip,
-      type: data['projectType'],
-      published_at: published_at,
-      remix_parent_id: remix_parent_id,
-    )
+    begin
+      id = project.create(
+        data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
+        ip: request.ip,
+        type: data['projectType'],
+        published_at: published_at,
+        remix_parent_id: remix_parent_id,
+        )
+    rescue Projects::ValidationError
+      bad_request
+    end
 
     redirect "/v3/channels/#{id}", 301
   end
@@ -169,12 +173,12 @@ class ChannelsApi < Sinatra::Base
 
     # Channels for project-backed levels are created without a project_type. The
     # type is then determined by client-side logic when the project is updated.
-    project_type = value.delete('projectType')
+    project_type = value["projectType"]
 
     begin
       value = Projects.new(get_storage_id).update(id, value, request.ip, locale: request.locale, project_type: project_type)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError => exception
-      if exception.class == ProfanityPrivacyError
+    rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError, Projects::ValidationError => exception
+      if exception.instance_of?(ProfanityPrivacyError)
         dont_cache
         status 422
         content_type :json

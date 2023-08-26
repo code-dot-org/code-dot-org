@@ -7,8 +7,8 @@ EMPTY_XML = '<xml></xml>'.freeze
 class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
-  before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric, :get_serialized_maze]
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :embed_level, :get_rubric, :get_serialized_maze]
+  before_action :authenticate_user!, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -17,6 +17,7 @@ class LevelsController < ApplicationController
 
   # All level types that can be requested via /levels/new
   LEVEL_CLASSES = [
+    Aichat,
     Ailab,
     Applab,
     Artist,
@@ -138,6 +139,12 @@ class LevelsController < ApplicationController
       has_i18n: @game.has_i18n?,
       blocklyVersion: params[:blocklyVersion]
     )
+  end
+
+  # Get a JSON summary of a level's properties, used in modern labs that don't
+  # reload the page between level views.
+  def level_properties
+    render json: @level.summarize_for_lab2_properties
   end
 
   # GET /levels/1/edit
@@ -286,7 +293,18 @@ class LevelsController < ApplicationController
       return
     end
 
-    @level.assign_attributes(level_params)
+    update_level_params = level_params.to_h
+
+    # Parse the incoming level_data JSON so that it's stored in the database as a
+    # first-order member of the properties JSON, rather than simply as a string of
+    # JSON belonging to a single property.
+    update_level_params[:level_data] = JSON.parse(level_params[:level_data]) if level_params[:level_data]
+    # Update level data with validations, and remove from level properties.
+    # We can remove this once validations are read from level properties directly.
+    update_level_params[:level_data]["validations"] = JSON.parse(update_level_params[:validations]) if update_level_params[:validations]
+    update_level_params[:validations] = nil if level_params[:validations]
+
+    @level.assign_attributes(update_level_params)
     @level.log_changes(current_user)
 
     if @level.save
@@ -428,6 +446,8 @@ class LevelsController < ApplicationController
         @game = Game.javalab
       elsif @type_class == Music
         @game = Game.music
+      elsif @type_class == Aichat
+        @game = Game.aichat
       end
       @level = @type_class.new
       render :edit
@@ -479,7 +499,7 @@ class LevelsController < ApplicationController
     @game = @level.game
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet, only allow the allow-list through.
   private def level_params
     permitted_params = [
       :name,

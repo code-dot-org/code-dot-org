@@ -2,848 +2,321 @@
   "ur-PK": {
     "data": {
       "vocabularies": {
-        "code/dance-extras/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        "computer/csd/2021": {
+          "word": "کمپیوٹر"
         },
-        "event/dance-extras/unversioned": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        "copyright/csd/2021": {
+          "word": "کاپی رائٹ",
+          "definition": "ادبی، آرٹسٹانہ یا موسیقی کے مواد کو پرنٹ کرنے، شائع کرنے، پرفارم کرنے، فلم کرنے، یا ریکارڈ کرنے اور دوسروں کو بھی ایسا کرنے کا اختیار دینے کا خصوصی قانونی حق"
         },
-        "program/dance-extras/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        "bug/csd/2021": {
+          "word": "بگ/نقص",
+          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
         },
-        "code/minecraft/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "debugging/minecraft/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "event/minecraft/unversioned": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "loop/minecraft/unversioned": {
-          "word": "لوپ",
-          "definition": "ایک عمل کو بار بار دہرانا."
-        },
-        "program/minecraft/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "code/hero/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "debugging/hero/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "function/hero/unversioned": {
-          "word": "فنکشن",
-          "definition": "کوڈ کا ایک ٹکڑا ہوتا ہے جسے آپ اپنے کوڈ میں بار بار کال یعنی استعمال کر سکتے ہیں."
-        },
-        "program/hero/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "code/poem-art/2021": {
-          "word": "ضابطہ کار(کوڈ)",
-          "definition": "(v) کمپیوٹر کے لیے ہدایات لکھنا۔"
-        },
-        "event/poem-art/2021": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "line/poem-art/2021": {
-          "word": "لائن",
-          "definition": "(شاعری) - نظم کی ایک ذیلی تقسیم جو ایک قطار میں ترتیب دی گئی ہے جو دائیں ہاتھ کے حاشیے پر ختم ہوتی ہے۔"
-        },
-        "mood/poem-art/2021": {
-          "word": "موڈ",
-          "definition": "آرٹ یا تحریر میں احساس، ماحول، یا جذبات کا اظہار۔"
-        },
-        "program/poem-art/2021": {
-          "word": "پروگرام",
-          "definition": "اقدامات کا ایک سلسلہ جو کسی ایسی چیز میں کوڈ کیا گیا ہے جسے مشین چلا سکتی ہے۔"
-        },
-        "code/flappy/unversioned": {
-          "word": "کوڈ",
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "debugging/flappy/unversioned": {
+        "debugging/csd/2021": {
           "word": "ڈیبگنگ",
           "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
         },
-        "program/flappy/unversioned": {
+        "program/csd/2021": {
           "word": "پروگرام",
           "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
         },
-        "code/hourofcode/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        "variable/csd/2021": {
+          "word": "متغیر",
+          "definition": "کسی پروگرام میں استعمال ہونے والی معلومات کے حصے کا لیبل۔"
         },
-        "debugging/hourofcode/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        "sprite/csd/2021": {
+          "word": "سپرائٹ"
         },
-        "program/hourofcode/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        "condition/csd/2021": {
+          "word": "شرط (Condition)"
         },
-        "code/frozen/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        "conditionals/csd/2021": {
+          "word": "شرائط"
         },
-        "debugging/frozen/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        "abstraction/csd/2021": {
+          "word": "تجرید"
         },
-        "program/frozen/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        "function/csd/2021": {
+          "word": "فنکشن"
         },
-        "code/iceage/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "debugging/iceage/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "program/iceage/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "code/artist/unversioned": {
-          "word": "ضابطہ کار(کوڈ)",
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "debugging/artist/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "program/artist/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "code/gumball/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "debugging/gumball/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "program/gumball/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "code/dance/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "event/dance/unversioned": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "program/dance/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "code/aquatic/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "condition/aquatic/unversioned": {
-          "word": "شرط (Condition)",
-          "definition": "کوڈ کا وہ ٹکڑا ہے جسے ایک پروگرام چیک کرتا ہے کہ آیا یہ درست یعنی سچ ہے، اس سے پہلے اس کے اندر عمل کے طے کیے جانے کی اجازت دے."
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "شرائط",
-          "definition": "بیانات جو صرف مخصوص شرائط کے تحت چلتے ہیں."
-        },
-        "debugging/aquatic/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "loops/aquatic/unversioned": {
-          "word": "لوپس",
-          "definition": "ایک عمل کو بار بار دہرانا."
-        },
-        "program/aquatic/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "سیزر سائفر",
-          "definition": "انکرپشن کی ایک تکنیک جو حروف تہجی کو چند حروف دور اور حروف سے بدلتی ہے"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "سائفر",
-          "definition": "ایک تکنیک (یا الگورتھم) کے لیے عام اصطلاح جو انکرپشن انجام دیتی ہے"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "انکرپشن توڑنا (کریک کرنا)",
-          "definition": "جب آپ سائفر کی تمام تفصیلات کو جانے بغیر کسی خفیہ پیغام کو ڈیکوڈ کرنے کی کوشش کرتے ہیں، تو آپ انکرپشن کو \"کریک\" کرنے کی کوشش کر رہے ہوتے ہیں."
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "ڈیکرپشن",
-          "definition": "ایک ایسا عمل جو انکرپشن کو ریورس کرتا ہے، ایک خفیہ پیغام لے کر اس کا اصل سادہ متن دوبارہ پیش کرتا ہے"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "انکرپشن",
-          "definition": "پیغامات کو خفیہ رکھنے کے لیے انکوڈنگ کا عمل، تاکہ صرف \"مجاز\" فریقین اسےےے پڑھ سکیں."
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "بے ترتیب متبادل سائفر",
-          "definition": "ایک انکرپشن تکنیک جو حروف تہجی کے ہر حرف کو تصادفی (بے ترتیب) طور پر منتخب کردہ حروف تہجی کے دوسرے حروف پر نقش کرتی ہے (یعنی ان کی جگہ پر مقرر کر لیتی ہے)."
-        },
-        "code/starwars/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "debugging/starwars/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "program/starwars/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "code/mc/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "debugging/mc/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "program/mc/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "code/playlab/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "debugging/playlab/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "program/playlab/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "code/starwarsblocks/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "بے ضیاع (Lossless) کمپریشن",
-          "definition": "ایک ڈیٹا کمپریشن الگورتھم جو اصل ڈیٹا کو کمپریسڈ ڈیٹا سے مکمل طور پر دوبارہ تشکیل دینے کی اجازت دیتا ہے۔ عام طور پر ٹیکسٹ کمپریشن کے لیے استعمال کیا جاتا ہے (مثلاً زپ کمپریشن)"
-        },
-        "event/outbreak/unversioned": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/sports/unversioned": {
-          "word": "ضابطہ کار(کوڈ)",
-          "definition": "(فعل) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "debugging/sports/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "event/sports/unversioned": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "program/sports/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "code/infinity/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "debugging/infinity/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "program/infinity/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "code/basketball/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "debugging/basketball/unversioned": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "event/basketball/unversioned": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "program/basketball/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "code/dance-2019/unversioned": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "machine_learning/oceans/unversioned": {
-          "definition": "کمپیوٹر کس طرح پیٹرن کو پہچانتے ہیں اور واضح طور پر پروگرام کیے جانے بغیر فیصلے کرتے ہیں۔"
-        },
-        "algorithm/coursed/2022": {
-          "word": "الگورتھم",
-          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
-        },
-        "program/coursed/2022": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "bug/coursed/2022": {
-          "word": "بگ/نقص",
-          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
-        },
-        "debugging/coursed/2022": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "loop/coursed/2022": {
-          "word": "لوپ",
-          "definition": "ایک عمل کو بار بار دہرانا."
-        },
-        "programming/coursed/2022": {
-          "definition": "پروگرام تخلیق کرنے کا فن۔"
-        },
-        "frustrated/coursed/2022": {
-          "word": "مایوس",
-          "definition": "غصہ یا غصہ محسوس کرنا کیونکہ کچھ ایسا نہیں ہے جیسا آپ چاہتے ہیں۔"
-        },
-        "persistence/coursed/2022": {
-          "word": "استقامت",
-          "definition": "دوبارہ اور دوبارہ کوشش کرنا، یہاں تک کہ جب کچھ بہت مشکل ہو۔"
-        },
-        "event/coursed/2022": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "code/coursed/2022": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "repeat/coursed/2022": {
-          "word": "دوہرائیں",
-          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
-        },
-        "command/coursed/2022": {
-          "word": "کمانڈ",
-          "definition": "کمپیوٹر کے لیے ایک ہدایت۔ بہت سی کمانڈز مل کر الگورتھم اور کمپیوٹر پروگرام بناتے ہیں۔ "
-        },
-        "conditionals/coursed/2022": {
-          "word": "شرائط",
-          "definition": "بیانات جو صرف مخصوص شرائط کے تحت چلتے ہیں."
-        },
-        "pseudocode/coursed/2022": {
-          "word": "سیوڈوکوڈ",
-          "definition": "الگورتھم میں اقدامات کی سادہ زبان میں وضاحت"
-        },
-        "condition/coursed/2022": {
-          "word": "شرط (Condition)",
-          "definition": "کوڈ کا وہ ٹکڑا ہے جسے ایک پروگرام چیک کرتا ہے کہ آیا یہ درست یعنی سچ ہے، اس سے پہلے اس کے اندر عمل کے طے کیے جانے کی اجازت دے."
-        },
-        "while_loop/coursed/2022": {
-          "word": "جبکہ لوپ",
-          "definition": "ایک لوپ جو ایک شرط کے درست ہونے کے دوران دہرتا رہتا ہے۔"
-        },
-        "until/coursed/2022": {
-          "word": "تک",
-          "definition": "ایک حکم جو آپ کو صرف اس مقام تک کچھ کرنے کو کہتا ہے کہ کچھ سچ ہو جائے۔"
-        },
-        "sprite/coursef/2022": {
-          "word": "سپرائٹ",
-          "definition": "مقام، سائز اور ظاہری شکل کے ساتھ اسکرین پر ایک گرافک۔"
-        },
-        "user/coursef/2022": {
+        "user/csd/2021": {
           "word": "صارف",
           "definition": "کوئی ایسا شخص جو سافٹ ویئر اور ہارڈ ویئر سمیت کسی چیز کا استعمال کرتا ہے۔"
         },
-        "algorithm/coursef/2022": {
-          "word": "الگورتھم",
-          "definition": "ایک ٹاسک کو مکمل کرنے کے لیے مراحل کی فہرست۔"
-        },
-        "behavior/coursef/2022": {
-          "word": "رویہ"
-        },
-        "program/coursef/2022": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "event/coursef/2022": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "variable/coursef/2022": {
-          "word": "متغیر",
-          "definition": "کسی پروگرام میں استعمال ہونے والی معلومات کے حصے کا لیبل۔"
-        },
-        "prompt/coursef/2022": {
-          "word": "پرامپٹ",
-          "definition": "کمپیوٹر اسکرین پر ایک پیغام جو صارف کے ان پٹ کا انتظار کرتا ہے۔"
-        },
-        "input/coursef/2022": {
-          "definition": "معلومات کمپیوٹر صارفین سے حاصل کرتے ہیں۔"
-        },
-        "machine_learning/coursef/2022": {
-          "definition": "کمپیوٹر کس طرح پیٹرن کو پہچانتے ہیں اور واضح طور پر پروگرام کیے جانے بغیر فیصلے کرتے ہیں۔"
-        },
-        "dns/coursef/2022": {
-          "word": "DNS",
-          "definition": "ڈومین نیم سسٹم کے لیے مختصر، یہ سسٹم ڈومین ناموں کا ترجمہ کرتا ہے (مثلاً example.com) IP ایڈریسز (مثلاً 93.184.216.34)"
-        },
-        "dsl_cable/coursef/2022": {
-          "word": "ڈی ایس ایل/کیبل",
-          "definition": "ٹیلی فون یا ٹیلی ویژن کیبلز استعمال کرتے ہوئے معلومات بھیجنے کا ایک طریقہ۔"
-        },
-        "fiber_optic_cable/coursef/2022": {
-          "word": "فائبر آپٹک کیبل",
-          "definition": "ایک ایسا کنکشن جو معلومات کی ترسیل کے لیے روشنی کا استعمال کرتا ہے"
-        },
-        "internet/coursef/2022": {
-          "definition": "کمپیوٹرز اور سرورز کا ایک گروپ جو ایک دوسرے سے جڑے ہوئے ہیں۔"
-        },
-        "ip_address/coursef/2022": {
-          "word": "  آئی پی ایڈریس",
-          "definition": "انٹرنیٹ سے منسلک کسی بھی آئٹم کو تفویض کردہ نمبر۔"
-        },
-        "packets/coursef/2022": {
-          "definition": "معلومات کے چھوٹے ٹکڑوں کو جو احتیاط سے معلومات کے بڑے حصوں سے تشکیل دیئے گئے ہے۔"
-        },
-        "servers/coursef/2022": {
-          "word": "سرورز",
-          "definition": "کمپیوٹر جو صرف دوسروں کو چیزیں فراہم کرنے کے لیے موجود ہیں۔"
-        },
-        "url/coursef/2022": {
-          "word": "یوآرایل",
-          "definition": "ویب صفحہ پر کال کرنے کے لیے یاد رکھنے میں آسان پتہ (مثلاً www.code.org)۔"
-        },
-        "wi_fi/coursef/2022": {
-          "word": "وائی-فائی",
-          "definition": "ریڈیو لہروں استعمال کرتے ہوئے معلومات بھیجنے کا ایک وائرلیس طریقہ۔"
-        },
-        "define/coursef/2022": {
-          "word": "واضح کرنا",
-          "definition": "ان مسائل کی تفصیلات معلوم کریں جنہیں آپ حل کرنے کی کوشش کر رہے ہیں"
-        },
-        "prepare/coursef/2022": {
-          "word": "تیار کریں",
-          "definition": "جو سرگرمی آپ کرنے جا رہے ہیں اس کے لیے تحقیق کریں، منصوبہ بنائیں اور مواد حاصل کریں"
-        },
-        "reflect/coursef/2022": {
-          "word": "سوچ و بچار کریں",
-          "definition": "مستقبل میں نتائج کو بہتر بنانے کے ارادے سے کسی چیز پر احتیاط سے سوچیں"
-        },
-        "try/coursef/2022": {
-          "word": "کوشش کریں",
-          "definition": "کچھ کرنے کی کوشش کریں"
-        },
-        "behavior/coursee/2022": {
-          "word": "رویہ",
-          "definition": "ایک ایسا عمل جو ایک سپرائٹ مسلسل انجام دیتا ہے جب تک کہ اسے ررک دینے کا نہ کہا جائے۔"
-        },
-        "sprite/coursee/2022": {
-          "word": "سپرائٹ",
-          "definition": "مقام، سائز اور ظاہری شکل کے ساتھ اسکرین پر ایک گرافک۔"
-        },
-        "loop/coursee/2022": {
-          "word": "لوپ",
-          "definition": "ایک عمل کو بار بار دہرانا."
-        },
-        "repeat/coursee/2022": {
-          "word": "دوہرائیں",
-          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
-        },
-        "function/coursee/2022": {
-          "word": "فنکشن"
-        },
-        "condition/coursee/2022": {
-          "word": "شرط (Condition)"
-        },
-        "conditionals/coursee/2022": {
-          "word": "شرائط",
-          "definition": "بیانات جو صرف مخصوص شرائط کے تحت چلتے ہیں."
-        },
-        "while_loop/coursee/2022": {
-          "word": "جبکہ لوپ",
-          "definition": "ایک لوپ جو ایک شرط کے درست ہونے کے دوران دہرتا رہتا ہے۔"
-        },
-        "copyright/coursee/2022": {
-          "word": "کاپی رائٹ",
-          "definition": "ادبی، آرٹسٹانہ یا موسیقی کے مواد کو پرنٹ کرنے، شائع کرنے، پرفارم کرنے، فلم کرنے، یا ریکارڈ کرنے اور دوسروں کو بھی ایسا کرنے کا اختیار دینے کا خصوصی قانونی حق"
-        },
-        "define/coursee/2022": {
-          "word": "واضح کرنا",
-          "definition": "ان مسائل کی تفصیلات معلوم کریں جنہیں آپ حل کرنے کی کوشش کر رہے ہیں"
-        },
-        "prepare/coursee/2022": {
-          "word": "تیار کریں",
-          "definition": "جو سرگرمی آپ کرنے جا رہے ہیں اس کے لیے تحقیق کریں، منصوبہ بنائیں اور مواد حاصل کریں"
-        },
-        "reflect/coursee/2022": {
-          "word": "سوچ و بچار کریں",
-          "definition": "مستقبل میں نتائج کو بہتر بنانے کے ارادے سے کسی چیز پر احتیاط سے سوچیں"
-        },
-        "try/coursee/2022": {
-          "word": "کوشش کریں",
-          "definition": "کچھ کرنے کی کوشش کریں"
-        },
-        "algorithm/courseb/2022": {
-          "word": "الگورتھم",
-          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
-        },
-        "bug/courseb/2022": {
-          "word": "بگ/نقص",
-          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
-        },
-        "debugging/courseb/2022": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "click/courseb/2022": {
-          "word": "کلک کریں",
-          "definition": "ماؤس کا بٹن دبائیں"
-        },
-        "double_click/courseb/2022": {
-          "word": "دوہرا کلک",
-          "definition": "ماؤس کا بٹن بہت تیزی سے دبائیں"
-        },
-        "drag/courseb/2022": {
-          "word": "ڈریگ کریں",
-          "definition": "اپنے ماؤس کے بٹن پر کلک کریں اور جب آپ ماؤس پوائنٹر کو نئی جگہ پر لے جائیں تو دبائے رکھیں"
-        },
-        "drop/courseb/2022": {
-          "word": "چھوڑیں",
-          "definition": "جس چیز کو آپ ڈریگ کر رہے ہیں اسے \"جانے دینے\" کے لیے اپنے ماؤس کا بٹن چھوڑ دیں"
-        },
-        "program/courseb/2022": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "programming/courseb/2022": {
-          "definition": "پروگرام تخلیق کرنے کا فن۔"
-        },
-        "persistence/courseb/2022": {
-          "word": "استقامت",
-          "definition": "دوبارہ اور دوبارہ کوشش کرنا، یہاں تک کہ جب کچھ بہت مشکل ہو۔"
-        },
-        "loop/courseb/2022": {
-          "word": "لوپ",
-          "definition": "ایک عمل کو بار بار دہرانا."
-        },
-        "repeat/courseb/2022": {
-          "word": "دوہرائیں",
-          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
-        },
-        "event/courseb/2022": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "algorithm/express/2022": {
-          "word": "الگورتھم",
-          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
-        },
-        "bug/express/2022": {
-          "word": "بگ/نقص",
-          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
-        },
-        "debugging/express/2022": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "sequencing/express/2022": {
-          "definition": "کمانڈز کو صحیح ترتیب میں ڈالنا تاکہ کمپیوٹر کمانڈز کو پڑھ سکیں۔"
-        },
-        "program/express/2022": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "programming/express/2022": {
-          "definition": "پروگرام تخلیق کرنے کا فن۔"
-        },
-        "behavior/express/2022": {
-          "word": "رویہ",
-          "definition": "ایک ایسا عمل جو ایک سپرائٹ مسلسل انجام دیتا ہے جب تک کہ اسے ررک دینے کا نہ کہا جائے۔"
-        },
-        "sprite/express/2022": {
-          "word": "سپرائٹ",
-          "definition": "مقام، سائز اور ظاہری شکل کے ساتھ اسکرین پر ایک گرافک۔"
-        },
-        "event/express/2022": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "code/express/2022": {
-          "definition": "کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "loop/express/2022": {
-          "word": "لوپ",
-          "definition": "ایک عمل کو بار بار دہرانا."
-        },
-        "repeat/express/2022": {
-          "word": "دوہرائیں",
-          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
-        },
-        "command/express/2022": {
-          "word": "کمانڈ",
-          "definition": "کمپیوٹر کے لیے ایک ہدایت۔ بہت سی کمانڈز مل کر الگورتھم اور کمپیوٹر پروگرام بناتے ہیں۔ "
-        },
-        "condition/express/2022": {
-          "word": "شرط (Condition)",
-          "definition": "کوڈ کا وہ ٹکڑا ہے جسے ایک پروگرام چیک کرتا ہے کہ آیا یہ درست یعنی سچ ہے، اس سے پہلے اس کے اندر عمل کے طے کیے جانے کی اجازت دے."
-        },
-        "conditionals/express/2022": {
-          "word": "شرائط",
-          "definition": "بیانات جو صرف مخصوص شرائط کے تحت چلتے ہیں."
-        },
-        "while_loop/express/2022": {
-          "word": "جبکہ لوپ",
-          "definition": "ایک لوپ جو ایک شرط کے درست ہونے کے دوران دہرتا رہتا ہے۔"
-        },
-        "until/express/2022": {
-          "word": "تک",
-          "definition": "ایک حکم جو آپ کو صرف اس مقام تک کچھ کرنے کو کہتا ہے کہ کچھ سچ ہو جائے۔"
-        },
-        "function/express/2022": {
-          "word": "فنکشن",
-          "definition": "کوڈ کا ایک ٹکڑا ہوتا ہے جسے آپ اپنے کوڈ میں بار بار کال یعنی استعمال کر سکتے ہیں."
-        },
-        "prompt/express/2022": {
-          "word": "پرامپٹ",
-          "definition": "کمپیوٹر اسکرین پر ایک پیغام جو صارف کے ان پٹ کا انتظار کرتا ہے۔"
-        },
-        "variable/express/2022": {
-          "word": "متغیر",
-          "definition": "کسی پروگرام میں استعمال ہونے والی معلومات کے حصے کا لیبل۔"
-        },
-        "for_loop/express/2022": {
+        "for_loop/csd/2021": {
           "word": "لوپ کیلیے",
           "definition": "ایسی لوپس جن کی ابتدا، اختتام، اور اضافہ (مرحلہ کا وقفہ) پہلے سے طے شدہ ہوتا ہے۔"
         },
-        "define/express/2022": {
-          "word": "واضح کرنا",
-          "definition": "ان مسائل کی تفصیلات معلوم کریں جنہیں آپ حل کرنے کی کوشش کر رہے ہیں"
+        "machine_learning/csd/2021": {
+          "word": "مشین لرننگ",
+          "definition": "کمپیوٹر کس طرح پیٹرن کو پہچانتے ہیں اور واضح طور پر پروگرام کیے جانے بغیر فیصلے کرتے ہیں۔"
         },
-        "prepare/express/2022": {
-          "word": "تیار کریں",
-          "definition": "جو سرگرمی آپ کرنے جا رہے ہیں اس کے لیے تحقیق کریں، منصوبہ بنائیں اور مواد حاصل کریں"
-        },
-        "reflect/express/2022": {
-          "word": "سوچ و بچار کریں",
-          "definition": "مستقبل میں نتائج کو بہتر بنانے کے ارادے سے کسی چیز پر احتیاط سے سوچیں"
-        },
-        "try/express/2022": {
-          "word": "کوشش کریں",
-          "definition": "کچھ کرنے کی کوشش کریں"
-        },
-        "click/pre-express/2022": {
-          "word": "کلک کریں",
-          "definition": "ماؤس کا بٹن دبائیں"
-        },
-        "double_click/pre-express/2022": {
-          "word": "دوہرا کلک",
-          "definition": "ماؤس کا بٹن بہت تیزی سے دبائیں"
-        },
-        "drag/pre-express/2022": {
-          "word": "ڈریگ کریں",
-          "definition": "اپنے ماؤس کے بٹن پر کلک کریں اور جب آپ ماؤس پوائنٹر کو نئی جگہ پر لے جائیں تو دبائے رکھیں"
-        },
-        "drop/pre-express/2022": {
-          "word": "چھوڑیں",
-          "definition": "جس چیز کو آپ ڈریگ کر رہے ہیں اسے \"جانے دینے\" کے لیے اپنے ماؤس کا بٹن چھوڑ دیں"
-        },
-        "algorithm/pre-express/2022": {
+        "algorithm/coursea/2021": {
           "word": "الگورتھم",
           "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
         },
-        "bug/pre-express/2022": {
-          "word": "بگ/نقص",
-          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
-        },
-        "debugging/pre-express/2022": {
+        "debugging/coursea/2021": {
+          "word": "ڈیبگنگ",
           "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
         },
-        "program/pre-express/2022": {
+        "program/coursea/2021": {
           "word": "پروگرام",
           "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
         },
-        "programming/pre-express/2022": {
+        "click/coursea/2021": {
+          "word": "کلک کریں",
+          "definition": "ماؤس کا بٹن دبائیں"
+        },
+        "double_click/coursea/2021": {
+          "word": "دوہرا کلک",
+          "definition": "ماؤس کا بٹن بہت تیزی سے دبائیں"
+        },
+        "drag/coursea/2021": {
+          "word": "ڈریگ کریں",
+          "definition": "اپنے ماؤس کے بٹن پر کلک کریں اور جب آپ ماؤس پوائنٹر کو نئی جگہ پر لے جائیں تو دبائے رکھیں"
+        },
+        "drop/coursea/2021": {
+          "word": "چھوڑیں",
+          "definition": "جس چیز کو آپ ڈریگ کر رہے ہیں اسے \"جانے دینے\" کے لیے اپنے ماؤس کا بٹن چھوڑ دیں"
+        },
+        "bug/coursea/2021": {
+          "word": "بگ/نقص",
+          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
+        },
+        "programming/coursea/2021": {
+          "word": "پروگرامنگ",
           "definition": "پروگرام تخلیق کرنے کا فن۔"
         },
-        "persistence/pre-express/2022": {
+        "loop/coursea/2021": {
+          "word": "لوپ",
+          "definition": "ایک عمل کو بار بار دہرانا."
+        },
+        "repeat/coursea/2021": {
+          "word": "دوہرائیں",
+          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
+        },
+        "event/coursea/2021": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "algorithm/courseb/2021": {
+          "word": "الگورتھم",
+          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
+        },
+        "bug/courseb/2021": {
+          "word": "بگ/نقص",
+          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
+        },
+        "debugging/courseb/2021": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "click/courseb/2021": {
+          "word": "کلک کریں",
+          "definition": "ماؤس کا بٹن دبائیں"
+        },
+        "double_click/courseb/2021": {
+          "word": "دوہرا کلک",
+          "definition": "ماؤس کا بٹن بہت تیزی سے دبائیں"
+        },
+        "drag/courseb/2021": {
+          "word": "ڈریگ کریں",
+          "definition": "اپنے ماؤس کے بٹن پر کلک کریں اور جب آپ ماؤس پوائنٹر کو نئی جگہ پر لے جائیں تو دبائے رکھیں"
+        },
+        "drop/courseb/2021": {
+          "word": "چھوڑیں",
+          "definition": "جس چیز کو آپ ڈریگ کر رہے ہیں اسے \"جانے دینے\" کے لیے اپنے ماؤس کا بٹن چھوڑ دیں"
+        },
+        "program/courseb/2021": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "programming/courseb/2021": {
+          "word": "پروگرامنگ",
+          "definition": "پروگرام تخلیق کرنے کا فن۔"
+        },
+        "persistence/courseb/2021": {
           "word": "استقامت",
           "definition": "دوبارہ اور دوبارہ کوشش کرنا، یہاں تک کہ جب کچھ بہت مشکل ہو۔"
         },
-        "loop/pre-express/2022": {
+        "loop/courseb/2021": {
           "word": "لوپ",
           "definition": "ایک عمل کو بار بار دہرانا."
         },
-        "repeat/pre-express/2022": {
+        "repeat/courseb/2021": {
           "word": "دوہرائیں",
           "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
         },
-        "event/pre-express/2022": {
+        "event/courseb/2021": {
           "word": "ایونٹ",
           "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
         },
-        "algorithm/coursea/2022": {
+        "algorithm/coursec/2021": {
           "word": "الگورتھم",
           "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
         },
-        "debugging/coursea/2022": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "program/coursea/2022": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "click/coursea/2022": {
-          "word": "کلک کریں",
-          "definition": "ماؤس کا بٹن دبائیں"
-        },
-        "double_click/coursea/2022": {
-          "word": "دوہرا کلک",
-          "definition": "ماؤس کا بٹن بہت تیزی سے دبائیں"
-        },
-        "drag/coursea/2022": {
-          "word": "ڈریگ کریں",
-          "definition": "اپنے ماؤس کے بٹن پر کلک کریں اور جب آپ ماؤس پوائنٹر کو نئی جگہ پر لے جائیں تو دبائے رکھیں"
-        },
-        "drop/coursea/2022": {
-          "word": "چھوڑیں",
-          "definition": "جس چیز کو آپ ڈریگ کر رہے ہیں اسے \"جانے دینے\" کے لیے اپنے ماؤس کا بٹن چھوڑ دیں"
-        },
-        "bug/coursea/2022": {
+        "bug/coursec/2021": {
           "word": "بگ/نقص",
           "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
         },
-        "programming/coursea/2022": {
-          "definition": "پروگرام تخلیق کرنے کا فن۔"
-        },
-        "loop/coursea/2022": {
-          "word": "لوپ",
-          "definition": "ایک عمل کو بار بار دہرانا."
-        },
-        "repeat/coursea/2022": {
-          "word": "دوہرائیں",
-          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
-        },
-        "event/coursea/2022": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "algorithm/coursec/2022": {
-          "word": "الگورتھم",
-          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
-        },
-        "bug/coursec/2022": {
-          "word": "بگ/نقص",
-          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
-        },
-        "debugging/coursec/2022": {
+        "debugging/coursec/2021": {
+          "word": "ڈیبگنگ",
           "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
         },
-        "program/coursec/2022": {
+        "program/coursec/2021": {
           "word": "پروگرام",
           "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
         },
-        "sequencing/coursec/2022": {
+        "sequencing/coursec/2021": {
           "definition": "کمانڈز کو صحیح ترتیب میں ڈالنا تاکہ کمپیوٹر کمانڈز کو پڑھ سکیں۔"
         },
-        "persistence/coursec/2022": {
-          "word": "استقامت"
-        },
-        "programming/coursec/2022": {
+        "programming/coursec/2021": {
+          "word": "پروگرامنگ",
           "definition": "پروگرام تخلیق کرنے کا فن۔"
         },
-        "loop/coursec/2022": {
+        "loop/coursec/2021": {
           "word": "لوپ",
           "definition": "ایک عمل کو بار بار دہرانا."
         },
-        "repeat/coursec/2022": {
+        "repeat/coursec/2021": {
           "word": "دوہرائیں",
           "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
         },
-        "event/coursec/2022": {
+        "event/coursec/2021": {
           "word": "ایونٹ",
           "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
         },
-        "data/coursec/2022": {
-          "word": "ڈیٹا"
-        },
-        "binary/coursec/2022": {
+        "binary/coursec/2021": {
+          "word": "ثنائی",
           "definition": "صرف دو اختیارات کا استعمال کرتے ہوئے معلومات کی نمائندگی کا ایک طریقہ."
         },
-        "bug/csd/2022": {
-          "word": "بگ/نقص",
-          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
+        "algorithm/coursed/2021": {
+          "word": "الگورتھم",
+          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
         },
-        "debugging/csd/2022": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "program/csd/2022": {
+        "program/coursed/2021": {
           "word": "پروگرام",
           "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
         },
-        "variable/csd/2022": {
-          "word": "متغیر",
-          "definition": "کسی پروگرام میں استعمال ہونے والی معلومات کے حصے کا لیبل۔"
+        "bug/coursed/2021": {
+          "word": "بگ/نقص",
+          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
         },
-        "sprite/csd/2022": {
-          "word": "سپرائٹ"
+        "debugging/coursed/2021": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
         },
-        "condition/csd/2022": {
-          "word": "شرط (Condition)"
+        "loop/coursed/2021": {
+          "word": "لوپ",
+          "definition": "ایک عمل کو بار بار دہرانا."
         },
-        "conditionals/csd/2022": {
-          "word": "شرائط"
+        "programming/coursed/2021": {
+          "word": "پروگرامنگ",
+          "definition": "پروگرام تخلیق کرنے کا فن۔"
         },
-        "function/csd/2022": {
-          "word": "فنکشن"
+        "frustrated/coursed/2021": {
+          "word": "مایوس",
+          "definition": "غصہ یا غصہ محسوس کرنا کیونکہ کچھ ایسا نہیں ہے جیسا آپ چاہتے ہیں۔"
         },
-        "copyright/csd/2022": {
+        "persistence/coursed/2021": {
+          "word": "استقامت",
+          "definition": "دوبارہ اور دوبارہ کوشش کرنا، یہاں تک کہ جب کچھ بہت مشکل ہو۔"
+        },
+        "event/coursed/2021": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "code/coursed/2021": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "repeat/coursed/2021": {
+          "word": "دوہرائیں",
+          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
+        },
+        "command/coursed/2021": {
+          "word": "کمانڈ",
+          "definition": "کمپیوٹر کے لیے ایک ہدایت۔ بہت سی کمانڈز مل کر الگورتھم اور کمپیوٹر پروگرام بناتے ہیں۔ "
+        },
+        "conditionals/coursed/2021": {
+          "word": "شرائط",
+          "definition": "بیانات جو صرف مخصوص شرائط کے تحت چلتے ہیں."
+        },
+        "pseudocode/coursed/2021": {
+          "word": "سیوڈوکوڈ",
+          "definition": "الگورتھم میں اقدامات کی سادہ زبان میں وضاحت"
+        },
+        "condition/coursed/2021": {
+          "word": "شرط (Condition)",
+          "definition": "کوڈ کا وہ ٹکڑا ہے جسے ایک پروگرام چیک کرتا ہے کہ آیا یہ درست یعنی سچ ہے، اس سے پہلے اس کے اندر عمل کے طے کیے جانے کی اجازت دے."
+        },
+        "while_loop/coursed/2021": {
+          "word": "جبکہ لوپ",
+          "definition": "ایک لوپ جو ایک شرط کے درست ہونے کے دوران دہرتا رہتا ہے۔"
+        },
+        "until/coursed/2021": {
+          "word": "تک",
+          "definition": "ایک حکم جو آپ کو صرف اس مقام تک کچھ کرنے کو کہتا ہے کہ کچھ سچ ہو جائے۔"
+        },
+        "algorithm/coursee/2021": {
+          "word": "الگورتھم",
+          "definition": "ایک کام ختم کرنے کے لئے اقدامات کی ایک فہرست"
+        },
+        "behavior/coursee/2021": {
+          "word": "رویہ",
+          "definition": "ایک ایسا عمل جو ایک سپرائٹ مسلسل انجام دیتا ہے جب تک کہ اسے ررک دینے کا نہ کہا جائے۔"
+        },
+        "sprite/coursee/2021": {
+          "word": "سپرائٹ",
+          "definition": "مقام، سائز اور ظاہری شکل کے ساتھ اسکرین پر ایک گرافک۔"
+        },
+        "event/coursee/2021": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "copyright/coursee/2021": {
           "word": "کاپی رائٹ",
           "definition": "ادبی، آرٹسٹانہ یا موسیقی کے مواد کو پرنٹ کرنے، شائع کرنے، پرفارم کرنے، فلم کرنے، یا ریکارڈ کرنے اور دوسروں کو بھی ایسا کرنے کا اختیار دینے کا خصوصی قانونی حق"
         },
-        "user/csd/2022": {
-          "word": "صارف",
-          "definition": "کوئی ایسا شخص جو سافٹ ویئر اور ہارڈ ویئر سمیت کسی چیز کا استعمال کرتا ہے۔"
+        "loop/coursee/2021": {
+          "word": "لوپ",
+          "definition": "ایک عمل کو بار بار دہرانا."
         },
-        "machine_learning/csd/2022": {
-          "definition": "کمپیوٹر کس طرح پیٹرن کو پہچانتے ہیں اور واضح طور پر پروگرام کیے جانے بغیر فیصلے کرتے ہیں۔"
+        "repeat/coursee/2021": {
+          "word": "دوہرائیں",
+          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
         },
-        "code/poem-art/unversioned": {
-          "word": "ضابطہ کار(کوڈ)",
-          "definition": "(v) کمپیوٹر کے لیے ہدایات لکھنا۔"
+        "function/coursee/2021": {
+          "word": "فنکشن",
+          "definition": "کوڈ کا ایک ٹکڑا ہوتا ہے جسے آپ اپنے کوڈ میں بار بار کال یعنی استعمال کر سکتے ہیں."
         },
-        "event/poem-art/unversioned": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        "condition/coursee/2021": {
+          "word": "شرط (Condition)",
+          "definition": "کوڈ کا وہ ٹکڑا ہے جسے ایک پروگرام چیک کرتا ہے کہ آیا یہ درست یعنی سچ ہے، اس سے پہلے اس کے اندر عمل کے طے کیے جانے کی اجازت دے."
         },
-        "program/poem-art/unversioned": {
-          "word": "پروگرام",
-          "definition": "اقدامات کا ایک سلسلہ جو کسی ایسی چیز میں کوڈ کیا گیا ہے جسے مشین چلا سکتی ہے۔"
+        "conditionals/coursee/2021": {
+          "word": "شرائط",
+          "definition": "بیانات جو صرف مخصوص شرائط کے تحت چلتے ہیں."
         },
-        "mood/poem-art/unversioned": {
-          "word": "موڈ",
-          "definition": "آرٹ یا تحریر میں احساس، ماحول، یا جذبات کا اظہار۔"
+        "while_loop/coursee/2021": {
+          "word": "جبکہ لوپ",
+          "definition": "ایک لوپ جو ایک شرط کے درست ہونے کے دوران دہرتا رہتا ہے۔"
         },
-        "line/poem-art/unversioned": {
-          "word": "لائن",
-          "definition": "(شاعری) - نظم کی ایک ذیلی تقسیم جو ایک قطار میں ترتیب دی گئی ہے جو دائیں ہاتھ کے حاشیے پر ختم ہوتی ہے۔"
+        "define/coursee/2021": {
+          "word": "واضح کرنا",
+          "definition": "ان مسائل کی تفصیلات معلوم کریں جنہیں آپ حل کرنے کی کوشش کر رہے ہیں"
+        },
+        "prepare/coursee/2021": {
+          "word": "تیار کریں",
+          "definition": "جو سرگرمی آپ کرنے جا رہے ہیں اس کے لیے تحقیق کریں، منصوبہ بنائیں اور مواد حاصل کریں"
+        },
+        "reflect/coursee/2021": {
+          "word": "سوچ و بچار کریں",
+          "definition": "مستقبل میں نتائج کو بہتر بنانے کے ارادے سے کسی چیز پر احتیاط سے سوچیں"
+        },
+        "try/coursee/2021": {
+          "word": "کوشش کریں",
+          "definition": "کچھ کرنے کی کوشش کریں"
         },
         "sprite/coursef/2021": {
           "word": "سپرائٹ",
@@ -893,6 +366,7 @@
           "definition": "ایسی لوپس جن کی ابتدا، اختتام، اور اضافہ (مرحلہ کا وقفہ) پہلے سے طے شدہ ہوتا ہے۔"
         },
         "machine_learning/coursef/2021": {
+          "word": "مشین لرننگ",
           "definition": "کمپیوٹر کس طرح پیٹرن کو پہچانتے ہیں اور واضح طور پر پروگرام کیے جانے بغیر فیصلے کرتے ہیں۔"
         },
         "dns/coursef/2021": {
@@ -908,6 +382,7 @@
           "definition": "ایک ایسا کنکشن جو معلومات کی ترسیل کے لیے روشنی کا استعمال کرتا ہے"
         },
         "internet/coursef/2021": {
+          "word": "انٹرنیٹ",
           "definition": "کمپیوٹرز اور سرورز کا ایک گروپ جو ایک دوسرے سے جڑے ہوئے ہیں۔"
         },
         "ip_address/coursef/2021": {
@@ -915,6 +390,7 @@
           "definition": "انٹرنیٹ سے منسلک کسی بھی آئٹم کو تفویض کردہ نمبر۔"
         },
         "packets/coursef/2021": {
+          "word": "پیکٹ",
           "definition": "معلومات کے چھوٹے ٹکڑوں کو جو احتیاط سے معلومات کے بڑے حصوں سے تشکیل دیئے گئے ہے۔"
         },
         "servers/coursef/2021": {
@@ -945,203 +421,6 @@
           "word": "کوشش کریں",
           "definition": "کچھ کرنے کی کوشش کریں"
         },
-        "algorithm/courseb/2021": {
-          "word": "الگورتھم",
-          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
-        },
-        "bug/courseb/2021": {
-          "word": "بگ/نقص",
-          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
-        },
-        "debugging/courseb/2021": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "click/courseb/2021": {
-          "word": "کلک کریں",
-          "definition": "ماؤس کا بٹن دبائیں"
-        },
-        "double_click/courseb/2021": {
-          "word": "دوہرا کلک",
-          "definition": "ماؤس کا بٹن بہت تیزی سے دبائیں"
-        },
-        "drag/courseb/2021": {
-          "word": "ڈریگ کریں",
-          "definition": "اپنے ماؤس کے بٹن پر کلک کریں اور جب آپ ماؤس پوائنٹر کو نئی جگہ پر لے جائیں تو دبائے رکھیں"
-        },
-        "drop/courseb/2021": {
-          "word": "چھوڑیں",
-          "definition": "جس چیز کو آپ ڈریگ کر رہے ہیں اسے \"جانے دینے\" کے لیے اپنے ماؤس کا بٹن چھوڑ دیں"
-        },
-        "program/courseb/2021": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "programming/courseb/2021": {
-          "definition": "پروگرام تخلیق کرنے کا فن۔"
-        },
-        "persistence/courseb/2021": {
-          "word": "استقامت",
-          "definition": "دوبارہ اور دوبارہ کوشش کرنا، یہاں تک کہ جب کچھ بہت مشکل ہو۔"
-        },
-        "loop/courseb/2021": {
-          "word": "لوپ",
-          "definition": "ایک عمل کو بار بار دہرانا."
-        },
-        "repeat/courseb/2021": {
-          "word": "دوہرائیں",
-          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
-        },
-        "event/courseb/2021": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "algorithm/coursea/2021": {
-          "word": "الگورتھم",
-          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
-        },
-        "debugging/coursea/2021": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "program/coursea/2021": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "click/coursea/2021": {
-          "word": "کلک کریں",
-          "definition": "ماؤس کا بٹن دبائیں"
-        },
-        "double_click/coursea/2021": {
-          "word": "دوہرا کلک",
-          "definition": "ماؤس کا بٹن بہت تیزی سے دبائیں"
-        },
-        "drag/coursea/2021": {
-          "word": "ڈریگ کریں",
-          "definition": "اپنے ماؤس کے بٹن پر کلک کریں اور جب آپ ماؤس پوائنٹر کو نئی جگہ پر لے جائیں تو دبائے رکھیں"
-        },
-        "drop/coursea/2021": {
-          "word": "چھوڑیں",
-          "definition": "جس چیز کو آپ ڈریگ کر رہے ہیں اسے \"جانے دینے\" کے لیے اپنے ماؤس کا بٹن چھوڑ دیں"
-        },
-        "bug/coursea/2021": {
-          "word": "بگ/نقص",
-          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
-        },
-        "programming/coursea/2021": {
-          "definition": "پروگرام تخلیق کرنے کا فن۔"
-        },
-        "loop/coursea/2021": {
-          "word": "لوپ",
-          "definition": "ایک عمل کو بار بار دہرانا."
-        },
-        "repeat/coursea/2021": {
-          "word": "دوہرائیں",
-          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
-        },
-        "event/coursea/2021": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "algorithm/coursec/2021": {
-          "word": "الگورتھم",
-          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
-        },
-        "bug/coursec/2021": {
-          "word": "بگ/نقص",
-          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
-        },
-        "debugging/coursec/2021": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "program/coursec/2021": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "sequencing/coursec/2021": {
-          "definition": "کمانڈز کو صحیح ترتیب میں ڈالنا تاکہ کمپیوٹر کمانڈز کو پڑھ سکیں۔"
-        },
-        "programming/coursec/2021": {
-          "definition": "پروگرام تخلیق کرنے کا فن۔"
-        },
-        "loop/coursec/2021": {
-          "word": "لوپ",
-          "definition": "ایک عمل کو بار بار دہرانا."
-        },
-        "repeat/coursec/2021": {
-          "word": "دوہرائیں",
-          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
-        },
-        "event/coursec/2021": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "binary/coursec/2021": {
-          "definition": "صرف دو اختیارات کا استعمال کرتے ہوئے معلومات کی نمائندگی کا ایک طریقہ."
-        },
-        "algorithm/coursed/2021": {
-          "word": "الگورتھم",
-          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
-        },
-        "program/coursed/2021": {
-          "word": "پروگرام",
-          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
-        },
-        "bug/coursed/2021": {
-          "word": "بگ/نقص",
-          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
-        },
-        "debugging/coursed/2021": {
-          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
-        },
-        "loop/coursed/2021": {
-          "word": "لوپ",
-          "definition": "ایک عمل کو بار بار دہرانا."
-        },
-        "programming/coursed/2021": {
-          "definition": "پروگرام تخلیق کرنے کا فن۔"
-        },
-        "frustrated/coursed/2021": {
-          "word": "مایوس",
-          "definition": "غصہ یا غصہ محسوس کرنا کیونکہ کچھ ایسا نہیں ہے جیسا آپ چاہتے ہیں۔"
-        },
-        "persistence/coursed/2021": {
-          "word": "استقامت",
-          "definition": "دوبارہ اور دوبارہ کوشش کرنا، یہاں تک کہ جب کچھ بہت مشکل ہو۔"
-        },
-        "event/coursed/2021": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "code/coursed/2021": {
-          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
-        },
-        "repeat/coursed/2021": {
-          "word": "دوہرائیں",
-          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
-        },
-        "command/coursed/2021": {
-          "word": "کمانڈ",
-          "definition": "کمپیوٹر کے لیے ایک ہدایت۔ بہت سی کمانڈز مل کر الگورتھم اور کمپیوٹر پروگرام بناتے ہیں۔ "
-        },
-        "conditionals/coursed/2021": {
-          "word": "شرائط",
-          "definition": "بیانات جو صرف مخصوص شرائط کے تحت چلتے ہیں."
-        },
-        "pseudocode/coursed/2021": {
-          "word": "سیوڈوکوڈ",
-          "definition": "الگورتھم میں اقدامات کی سادہ زبان میں وضاحت"
-        },
-        "condition/coursed/2021": {
-          "word": "شرط (Condition)",
-          "definition": "کوڈ کا وہ ٹکڑا ہے جسے ایک پروگرام چیک کرتا ہے کہ آیا یہ درست یعنی سچ ہے، اس سے پہلے اس کے اندر عمل کے طے کیے جانے کی اجازت دے."
-        },
-        "while_loop/coursed/2021": {
-          "word": "جبکہ لوپ",
-          "definition": "ایک لوپ جو ایک شرط کے درست ہونے کے دوران دہرتا رہتا ہے۔"
-        },
-        "until/coursed/2021": {
-          "word": "تک",
-          "definition": "ایک حکم جو آپ کو صرف اس مقام تک کچھ کرنے کو کہتا ہے کہ کچھ سچ ہو جائے۔"
-        },
         "algorithm/express/2021": {
           "word": "الگورتھم",
           "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
@@ -1151,6 +430,7 @@
           "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
         },
         "debugging/express/2021": {
+          "word": "ڈیبگنگ",
           "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
         },
         "sequencing/express/2021": {
@@ -1161,6 +441,7 @@
           "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
         },
         "programming/express/2021": {
+          "word": "پروگرامنگ",
           "definition": "پروگرام تخلیق کرنے کا فن۔"
         },
         "behavior/express/2021": {
@@ -1263,6 +544,7 @@
           "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
         },
         "debugging/pre-express/2021": {
+          "word": "ڈیبگنگ",
           "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
         },
         "program/pre-express/2021": {
@@ -1270,6 +552,7 @@
           "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
         },
         "programming/pre-express/2021": {
+          "word": "پروگرامنگ",
           "definition": "پروگرام تخلیق کرنے کا فن۔"
         },
         "persistence/pre-express/2021": {
@@ -1288,107 +571,888 @@
           "word": "ایونٹ",
           "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
         },
-        "algorithm/coursee/2021": {
-          "word": "الگورتھم",
-          "definition": "ایک کام ختم کرنے کے لئے اقدامات کی ایک فہرست"
+        "computer/csd/2022": {
+          "word": "کمپیوٹر"
         },
-        "behavior/coursee/2021": {
-          "word": "رویہ",
-          "definition": "ایک ایسا عمل جو ایک سپرائٹ مسلسل انجام دیتا ہے جب تک کہ اسے ررک دینے کا نہ کہا جائے۔"
-        },
-        "sprite/coursee/2021": {
-          "word": "سپرائٹ",
-          "definition": "مقام، سائز اور ظاہری شکل کے ساتھ اسکرین پر ایک گرافک۔"
-        },
-        "event/coursee/2021": {
-          "word": "ایونٹ",
-          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
-        },
-        "copyright/coursee/2021": {
+        "copyright/csd/2022": {
           "word": "کاپی رائٹ",
           "definition": "ادبی، آرٹسٹانہ یا موسیقی کے مواد کو پرنٹ کرنے، شائع کرنے، پرفارم کرنے، فلم کرنے، یا ریکارڈ کرنے اور دوسروں کو بھی ایسا کرنے کا اختیار دینے کا خصوصی قانونی حق"
         },
-        "loop/coursee/2021": {
-          "word": "لوپ",
-          "definition": "ایک عمل کو بار بار دہرانا."
-        },
-        "repeat/coursee/2021": {
-          "word": "دوہرائیں",
-          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
-        },
-        "function/coursee/2021": {
-          "word": "فنکشن",
-          "definition": "کوڈ کا ایک ٹکڑا ہوتا ہے جسے آپ اپنے کوڈ میں بار بار کال یعنی استعمال کر سکتے ہیں."
-        },
-        "condition/coursee/2021": {
-          "word": "شرط (Condition)",
-          "definition": "کوڈ کا وہ ٹکڑا ہے جسے ایک پروگرام چیک کرتا ہے کہ آیا یہ درست یعنی سچ ہے، اس سے پہلے اس کے اندر عمل کے طے کیے جانے کی اجازت دے."
-        },
-        "conditionals/coursee/2021": {
-          "word": "شرائط",
-          "definition": "بیانات جو صرف مخصوص شرائط کے تحت چلتے ہیں."
-        },
-        "while_loop/coursee/2021": {
-          "word": "جبکہ لوپ",
-          "definition": "ایک لوپ جو ایک شرط کے درست ہونے کے دوران دہرتا رہتا ہے۔"
-        },
-        "define/coursee/2021": {
-          "word": "واضح کرنا",
-          "definition": "ان مسائل کی تفصیلات معلوم کریں جنہیں آپ حل کرنے کی کوشش کر رہے ہیں"
-        },
-        "prepare/coursee/2021": {
-          "word": "تیار کریں",
-          "definition": "جو سرگرمی آپ کرنے جا رہے ہیں اس کے لیے تحقیق کریں، منصوبہ بنائیں اور مواد حاصل کریں"
-        },
-        "reflect/coursee/2021": {
-          "word": "سوچ و بچار کریں",
-          "definition": "مستقبل میں نتائج کو بہتر بنانے کے ارادے سے کسی چیز پر احتیاط سے سوچیں"
-        },
-        "try/coursee/2021": {
-          "word": "کوشش کریں",
-          "definition": "کچھ کرنے کی کوشش کریں"
-        },
-        "machine_learning/csd/2021": {
-          "definition": "کمپیوٹر کس طرح پیٹرن کو پہچانتے ہیں اور واضح طور پر پروگرام کیے جانے بغیر فیصلے کرتے ہیں۔"
-        },
-        "user/csd/2021": {
-          "word": "صارف",
-          "definition": "کوئی ایسا شخص جو سافٹ ویئر اور ہارڈ ویئر سمیت کسی چیز کا استعمال کرتا ہے۔"
-        },
-        "bug/csd/2021": {
+        "bug/csd/2022": {
           "word": "بگ/نقص",
           "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
         },
-        "for_loop/csd/2021": {
-          "word": "لوپ کیلیے",
-          "definition": "ایسی لوپس جن کی ابتدا، اختتام، اور اضافہ (مرحلہ کا وقفہ) پہلے سے طے شدہ ہوتا ہے۔"
-        },
-        "debugging/csd/2021": {
+        "debugging/csd/2022": {
+          "word": "ڈیبگنگ",
           "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
         },
-        "program/csd/2021": {
+        "program/csd/2022": {
           "word": "پروگرام",
           "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
         },
-        "variable/csd/2021": {
+        "variable/csd/2022": {
           "word": "متغیر",
           "definition": "کسی پروگرام میں استعمال ہونے والی معلومات کے حصے کا لیبل۔"
         },
-        "sprite/csd/2021": {
+        "sprite/csd/2022": {
           "word": "سپرائٹ"
         },
-        "condition/csd/2021": {
+        "condition/csd/2022": {
           "word": "شرط (Condition)"
         },
-        "conditionals/csd/2021": {
+        "conditionals/csd/2022": {
           "word": "شرائط"
         },
-        "function/csd/2021": {
+        "abstraction/csd/2022": {
+          "word": "تجرید"
+        },
+        "function/csd/2022": {
           "word": "فنکشن"
         },
-        "copyright/csd/2021": {
+        "user/csd/2022": {
+          "word": "صارف",
+          "definition": "کوئی ایسا شخص جو سافٹ ویئر اور ہارڈ ویئر سمیت کسی چیز کا استعمال کرتا ہے۔"
+        },
+        "machine_learning/csd/2022": {
+          "word": "مشین لرننگ",
+          "definition": "کمپیوٹر کس طرح پیٹرن کو پہچانتے ہیں اور واضح طور پر پروگرام کیے جانے بغیر فیصلے کرتے ہیں۔"
+        },
+        "algorithm/coursea/2022": {
+          "word": "الگورتھم",
+          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
+        },
+        "debugging/coursea/2022": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/coursea/2022": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "click/coursea/2022": {
+          "word": "کلک کریں",
+          "definition": "ماؤس کا بٹن دبائیں"
+        },
+        "double_click/coursea/2022": {
+          "word": "دوہرا کلک",
+          "definition": "ماؤس کا بٹن بہت تیزی سے دبائیں"
+        },
+        "drag/coursea/2022": {
+          "word": "ڈریگ کریں",
+          "definition": "اپنے ماؤس کے بٹن پر کلک کریں اور جب آپ ماؤس پوائنٹر کو نئی جگہ پر لے جائیں تو دبائے رکھیں"
+        },
+        "drop/coursea/2022": {
+          "word": "چھوڑیں",
+          "definition": "جس چیز کو آپ ڈریگ کر رہے ہیں اسے \"جانے دینے\" کے لیے اپنے ماؤس کا بٹن چھوڑ دیں"
+        },
+        "bug/coursea/2022": {
+          "word": "بگ/نقص",
+          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
+        },
+        "programming/coursea/2022": {
+          "word": "پروگرامنگ",
+          "definition": "پروگرام تخلیق کرنے کا فن۔"
+        },
+        "loop/coursea/2022": {
+          "word": "لوپ",
+          "definition": "ایک عمل کو بار بار دہرانا."
+        },
+        "repeat/coursea/2022": {
+          "word": "دوہرائیں",
+          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
+        },
+        "event/coursea/2022": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "algorithm/courseb/2022": {
+          "word": "الگورتھم",
+          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
+        },
+        "bug/courseb/2022": {
+          "word": "بگ/نقص",
+          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
+        },
+        "debugging/courseb/2022": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "click/courseb/2022": {
+          "word": "کلک کریں",
+          "definition": "ماؤس کا بٹن دبائیں"
+        },
+        "double_click/courseb/2022": {
+          "word": "دوہرا کلک",
+          "definition": "ماؤس کا بٹن بہت تیزی سے دبائیں"
+        },
+        "drag/courseb/2022": {
+          "word": "ڈریگ کریں",
+          "definition": "اپنے ماؤس کے بٹن پر کلک کریں اور جب آپ ماؤس پوائنٹر کو نئی جگہ پر لے جائیں تو دبائے رکھیں"
+        },
+        "drop/courseb/2022": {
+          "word": "چھوڑیں",
+          "definition": "جس چیز کو آپ ڈریگ کر رہے ہیں اسے \"جانے دینے\" کے لیے اپنے ماؤس کا بٹن چھوڑ دیں"
+        },
+        "program/courseb/2022": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "programming/courseb/2022": {
+          "word": "پروگرامنگ",
+          "definition": "پروگرام تخلیق کرنے کا فن۔"
+        },
+        "persistence/courseb/2022": {
+          "word": "استقامت",
+          "definition": "دوبارہ اور دوبارہ کوشش کرنا، یہاں تک کہ جب کچھ بہت مشکل ہو۔"
+        },
+        "loop/courseb/2022": {
+          "word": "لوپ",
+          "definition": "ایک عمل کو بار بار دہرانا."
+        },
+        "repeat/courseb/2022": {
+          "word": "دوہرائیں",
+          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
+        },
+        "event/courseb/2022": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "algorithm/coursec/2022": {
+          "word": "الگورتھم",
+          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
+        },
+        "bug/coursec/2022": {
+          "word": "بگ/نقص",
+          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
+        },
+        "debugging/coursec/2022": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/coursec/2022": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "sequencing/coursec/2022": {
+          "definition": "کمانڈز کو صحیح ترتیب میں ڈالنا تاکہ کمپیوٹر کمانڈز کو پڑھ سکیں۔"
+        },
+        "persistence/coursec/2022": {
+          "word": "استقامت"
+        },
+        "programming/coursec/2022": {
+          "word": "پروگرامنگ",
+          "definition": "پروگرام تخلیق کرنے کا فن۔"
+        },
+        "loop/coursec/2022": {
+          "word": "لوپ",
+          "definition": "ایک عمل کو بار بار دہرانا."
+        },
+        "repeat/coursec/2022": {
+          "word": "دوہرائیں",
+          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
+        },
+        "event/coursec/2022": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "data/coursec/2022": {
+          "word": "ڈیٹا"
+        },
+        "binary/coursec/2022": {
+          "word": "ثنائی",
+          "definition": "صرف دو اختیارات کا استعمال کرتے ہوئے معلومات کی نمائندگی کا ایک طریقہ."
+        },
+        "algorithm/coursed/2022": {
+          "word": "الگورتھم",
+          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
+        },
+        "program/coursed/2022": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "bug/coursed/2022": {
+          "word": "بگ/نقص",
+          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
+        },
+        "debugging/coursed/2022": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "loop/coursed/2022": {
+          "word": "لوپ",
+          "definition": "ایک عمل کو بار بار دہرانا."
+        },
+        "programming/coursed/2022": {
+          "word": "پروگرامنگ",
+          "definition": "پروگرام تخلیق کرنے کا فن۔"
+        },
+        "frustrated/coursed/2022": {
+          "word": "مایوس",
+          "definition": "غصہ یا غصہ محسوس کرنا کیونکہ کچھ ایسا نہیں ہے جیسا آپ چاہتے ہیں۔"
+        },
+        "persistence/coursed/2022": {
+          "word": "استقامت",
+          "definition": "دوبارہ اور دوبارہ کوشش کرنا، یہاں تک کہ جب کچھ بہت مشکل ہو۔"
+        },
+        "event/coursed/2022": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "code/coursed/2022": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "repeat/coursed/2022": {
+          "word": "دوہرائیں",
+          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
+        },
+        "command/coursed/2022": {
+          "word": "کمانڈ",
+          "definition": "کمپیوٹر کے لیے ایک ہدایت۔ بہت سی کمانڈز مل کر الگورتھم اور کمپیوٹر پروگرام بناتے ہیں۔ "
+        },
+        "conditionals/coursed/2022": {
+          "word": "شرائط",
+          "definition": "بیانات جو صرف مخصوص شرائط کے تحت چلتے ہیں."
+        },
+        "pseudocode/coursed/2022": {
+          "word": "سیوڈوکوڈ",
+          "definition": "الگورتھم میں اقدامات کی سادہ زبان میں وضاحت"
+        },
+        "condition/coursed/2022": {
+          "word": "شرط (Condition)",
+          "definition": "کوڈ کا وہ ٹکڑا ہے جسے ایک پروگرام چیک کرتا ہے کہ آیا یہ درست یعنی سچ ہے، اس سے پہلے اس کے اندر عمل کے طے کیے جانے کی اجازت دے."
+        },
+        "while_loop/coursed/2022": {
+          "word": "جبکہ لوپ",
+          "definition": "ایک لوپ جو ایک شرط کے درست ہونے کے دوران دہرتا رہتا ہے۔"
+        },
+        "until/coursed/2022": {
+          "word": "تک",
+          "definition": "ایک حکم جو آپ کو صرف اس مقام تک کچھ کرنے کو کہتا ہے کہ کچھ سچ ہو جائے۔"
+        },
+        "behavior/coursee/2022": {
+          "word": "رویہ",
+          "definition": "ایک ایسا عمل جو ایک سپرائٹ مسلسل انجام دیتا ہے جب تک کہ اسے ررک دینے کا نہ کہا جائے۔"
+        },
+        "sprite/coursee/2022": {
+          "word": "سپرائٹ",
+          "definition": "مقام، سائز اور ظاہری شکل کے ساتھ اسکرین پر ایک گرافک۔"
+        },
+        "loop/coursee/2022": {
+          "word": "لوپ",
+          "definition": "ایک عمل کو بار بار دہرانا."
+        },
+        "repeat/coursee/2022": {
+          "word": "دوہرائیں",
+          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
+        },
+        "function/coursee/2022": {
+          "word": "فنکشن"
+        },
+        "condition/coursee/2022": {
+          "word": "شرط (Condition)"
+        },
+        "conditionals/coursee/2022": {
+          "word": "شرائط",
+          "definition": "بیانات جو صرف مخصوص شرائط کے تحت چلتے ہیں."
+        },
+        "while_loop/coursee/2022": {
+          "word": "جبکہ لوپ",
+          "definition": "ایک لوپ جو ایک شرط کے درست ہونے کے دوران دہرتا رہتا ہے۔"
+        },
+        "copyright/coursee/2022": {
           "word": "کاپی رائٹ",
           "definition": "ادبی، آرٹسٹانہ یا موسیقی کے مواد کو پرنٹ کرنے، شائع کرنے، پرفارم کرنے، فلم کرنے، یا ریکارڈ کرنے اور دوسروں کو بھی ایسا کرنے کا اختیار دینے کا خصوصی قانونی حق"
+        },
+        "define/coursee/2022": {
+          "word": "واضح کرنا",
+          "definition": "ان مسائل کی تفصیلات معلوم کریں جنہیں آپ حل کرنے کی کوشش کر رہے ہیں"
+        },
+        "prepare/coursee/2022": {
+          "word": "تیار کریں",
+          "definition": "جو سرگرمی آپ کرنے جا رہے ہیں اس کے لیے تحقیق کریں، منصوبہ بنائیں اور مواد حاصل کریں"
+        },
+        "reflect/coursee/2022": {
+          "word": "سوچ و بچار کریں",
+          "definition": "مستقبل میں نتائج کو بہتر بنانے کے ارادے سے کسی چیز پر احتیاط سے سوچیں"
+        },
+        "try/coursee/2022": {
+          "word": "کوشش کریں",
+          "definition": "کچھ کرنے کی کوشش کریں"
+        },
+        "sprite/coursef/2022": {
+          "word": "سپرائٹ",
+          "definition": "مقام، سائز اور ظاہری شکل کے ساتھ اسکرین پر ایک گرافک۔"
+        },
+        "user/coursef/2022": {
+          "word": "صارف",
+          "definition": "کوئی ایسا شخص جو سافٹ ویئر اور ہارڈ ویئر سمیت کسی چیز کا استعمال کرتا ہے۔"
+        },
+        "algorithm/coursef/2022": {
+          "word": "الگورتھم",
+          "definition": "ایک ٹاسک کو مکمل کرنے کے لیے مراحل کی فہرست۔"
+        },
+        "behavior/coursef/2022": {
+          "word": "رویہ"
+        },
+        "program/coursef/2022": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "event/coursef/2022": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "variable/coursef/2022": {
+          "word": "متغیر",
+          "definition": "کسی پروگرام میں استعمال ہونے والی معلومات کے حصے کا لیبل۔"
+        },
+        "prompt/coursef/2022": {
+          "word": "پرامپٹ",
+          "definition": "کمپیوٹر اسکرین پر ایک پیغام جو صارف کے ان پٹ کا انتظار کرتا ہے۔"
+        },
+        "input/coursef/2022": {
+          "definition": "معلومات کمپیوٹر صارفین سے حاصل کرتے ہیں۔"
+        },
+        "machine_learning/coursef/2022": {
+          "word": "مشین لرننگ",
+          "definition": "کمپیوٹر کس طرح پیٹرن کو پہچانتے ہیں اور واضح طور پر پروگرام کیے جانے بغیر فیصلے کرتے ہیں۔"
+        },
+        "dns/coursef/2022": {
+          "word": "DNS",
+          "definition": "ڈومین نیم سسٹم کے لیے مختصر، یہ سسٹم ڈومین ناموں کا ترجمہ کرتا ہے (مثلاً example.com) IP ایڈریسز (مثلاً 93.184.216.34)"
+        },
+        "dsl_cable/coursef/2022": {
+          "word": "ڈی ایس ایل/کیبل",
+          "definition": "ٹیلی فون یا ٹیلی ویژن کیبلز استعمال کرتے ہوئے معلومات بھیجنے کا ایک طریقہ۔"
+        },
+        "fiber_optic_cable/coursef/2022": {
+          "word": "فائبر آپٹک کیبل",
+          "definition": "ایک ایسا کنکشن جو معلومات کی ترسیل کے لیے روشنی کا استعمال کرتا ہے"
+        },
+        "internet/coursef/2022": {
+          "word": "انٹرنیٹ",
+          "definition": "کمپیوٹرز اور سرورز کا ایک گروپ جو ایک دوسرے سے جڑے ہوئے ہیں۔"
+        },
+        "ip_address/coursef/2022": {
+          "word": "  آئی پی ایڈریس",
+          "definition": "انٹرنیٹ سے منسلک کسی بھی آئٹم کو تفویض کردہ نمبر۔"
+        },
+        "packets/coursef/2022": {
+          "word": "پیکٹ",
+          "definition": "معلومات کے چھوٹے ٹکڑوں کو جو احتیاط سے معلومات کے بڑے حصوں سے تشکیل دیئے گئے ہے۔"
+        },
+        "servers/coursef/2022": {
+          "word": "سرورز",
+          "definition": "کمپیوٹر جو صرف دوسروں کو چیزیں فراہم کرنے کے لیے موجود ہیں۔"
+        },
+        "url/coursef/2022": {
+          "word": "یوآرایل",
+          "definition": "ویب صفحہ پر کال کرنے کے لیے یاد رکھنے میں آسان پتہ (مثلاً www.code.org)۔"
+        },
+        "wi_fi/coursef/2022": {
+          "word": "وائی-فائی",
+          "definition": "ریڈیو لہروں استعمال کرتے ہوئے معلومات بھیجنے کا ایک وائرلیس طریقہ۔"
+        },
+        "define/coursef/2022": {
+          "word": "واضح کرنا",
+          "definition": "ان مسائل کی تفصیلات معلوم کریں جنہیں آپ حل کرنے کی کوشش کر رہے ہیں"
+        },
+        "prepare/coursef/2022": {
+          "word": "تیار کریں",
+          "definition": "جو سرگرمی آپ کرنے جا رہے ہیں اس کے لیے تحقیق کریں، منصوبہ بنائیں اور مواد حاصل کریں"
+        },
+        "reflect/coursef/2022": {
+          "word": "سوچ و بچار کریں",
+          "definition": "مستقبل میں نتائج کو بہتر بنانے کے ارادے سے کسی چیز پر احتیاط سے سوچیں"
+        },
+        "try/coursef/2022": {
+          "word": "کوشش کریں",
+          "definition": "کچھ کرنے کی کوشش کریں"
+        },
+        "algorithm/express/2022": {
+          "word": "الگورتھم",
+          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
+        },
+        "bug/express/2022": {
+          "word": "بگ/نقص",
+          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
+        },
+        "debugging/express/2022": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "sequencing/express/2022": {
+          "definition": "کمانڈز کو صحیح ترتیب میں ڈالنا تاکہ کمپیوٹر کمانڈز کو پڑھ سکیں۔"
+        },
+        "program/express/2022": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "programming/express/2022": {
+          "word": "پروگرامنگ",
+          "definition": "پروگرام تخلیق کرنے کا فن۔"
+        },
+        "behavior/express/2022": {
+          "word": "رویہ",
+          "definition": "ایک ایسا عمل جو ایک سپرائٹ مسلسل انجام دیتا ہے جب تک کہ اسے ررک دینے کا نہ کہا جائے۔"
+        },
+        "sprite/express/2022": {
+          "word": "سپرائٹ",
+          "definition": "مقام، سائز اور ظاہری شکل کے ساتھ اسکرین پر ایک گرافک۔"
+        },
+        "event/express/2022": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "code/express/2022": {
+          "definition": "کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "loop/express/2022": {
+          "word": "لوپ",
+          "definition": "ایک عمل کو بار بار دہرانا."
+        },
+        "repeat/express/2022": {
+          "word": "دوہرائیں",
+          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
+        },
+        "command/express/2022": {
+          "word": "کمانڈ",
+          "definition": "کمپیوٹر کے لیے ایک ہدایت۔ بہت سی کمانڈز مل کر الگورتھم اور کمپیوٹر پروگرام بناتے ہیں۔ "
+        },
+        "condition/express/2022": {
+          "word": "شرط (Condition)",
+          "definition": "کوڈ کا وہ ٹکڑا ہے جسے ایک پروگرام چیک کرتا ہے کہ آیا یہ درست یعنی سچ ہے، اس سے پہلے اس کے اندر عمل کے طے کیے جانے کی اجازت دے."
+        },
+        "conditionals/express/2022": {
+          "word": "شرائط",
+          "definition": "بیانات جو صرف مخصوص شرائط کے تحت چلتے ہیں."
+        },
+        "while_loop/express/2022": {
+          "word": "جبکہ لوپ",
+          "definition": "ایک لوپ جو ایک شرط کے درست ہونے کے دوران دہرتا رہتا ہے۔"
+        },
+        "until/express/2022": {
+          "word": "تک",
+          "definition": "ایک حکم جو آپ کو صرف اس مقام تک کچھ کرنے کو کہتا ہے کہ کچھ سچ ہو جائے۔"
+        },
+        "function/express/2022": {
+          "word": "فنکشن",
+          "definition": "کوڈ کا ایک ٹکڑا ہوتا ہے جسے آپ اپنے کوڈ میں بار بار کال یعنی استعمال کر سکتے ہیں."
+        },
+        "prompt/express/2022": {
+          "word": "پرامپٹ",
+          "definition": "کمپیوٹر اسکرین پر ایک پیغام جو صارف کے ان پٹ کا انتظار کرتا ہے۔"
+        },
+        "variable/express/2022": {
+          "word": "متغیر",
+          "definition": "کسی پروگرام میں استعمال ہونے والی معلومات کے حصے کا لیبل۔"
+        },
+        "for_loop/express/2022": {
+          "word": "لوپ کیلیے",
+          "definition": "ایسی لوپس جن کی ابتدا، اختتام، اور اضافہ (مرحلہ کا وقفہ) پہلے سے طے شدہ ہوتا ہے۔"
+        },
+        "define/express/2022": {
+          "word": "واضح کرنا",
+          "definition": "ان مسائل کی تفصیلات معلوم کریں جنہیں آپ حل کرنے کی کوشش کر رہے ہیں"
+        },
+        "prepare/express/2022": {
+          "word": "تیار کریں",
+          "definition": "جو سرگرمی آپ کرنے جا رہے ہیں اس کے لیے تحقیق کریں، منصوبہ بنائیں اور مواد حاصل کریں"
+        },
+        "reflect/express/2022": {
+          "word": "سوچ و بچار کریں",
+          "definition": "مستقبل میں نتائج کو بہتر بنانے کے ارادے سے کسی چیز پر احتیاط سے سوچیں"
+        },
+        "try/express/2022": {
+          "word": "کوشش کریں",
+          "definition": "کچھ کرنے کی کوشش کریں"
+        },
+        "click/pre-express/2022": {
+          "word": "کلک کریں",
+          "definition": "ماؤس کا بٹن دبائیں"
+        },
+        "double_click/pre-express/2022": {
+          "word": "دوہرا کلک",
+          "definition": "ماؤس کا بٹن بہت تیزی سے دبائیں"
+        },
+        "drag/pre-express/2022": {
+          "word": "ڈریگ کریں",
+          "definition": "اپنے ماؤس کے بٹن پر کلک کریں اور جب آپ ماؤس پوائنٹر کو نئی جگہ پر لے جائیں تو دبائے رکھیں"
+        },
+        "drop/pre-express/2022": {
+          "word": "چھوڑیں",
+          "definition": "جس چیز کو آپ ڈریگ کر رہے ہیں اسے \"جانے دینے\" کے لیے اپنے ماؤس کا بٹن چھوڑ دیں"
+        },
+        "algorithm/pre-express/2022": {
+          "word": "الگورتھم",
+          "definition": "کسی کام کو ختم کرنے کے لیے اقدامات کی فہرست۔ "
+        },
+        "bug/pre-express/2022": {
+          "word": "بگ/نقص",
+          "definition": "ایک پروگرام کا حصہ جو صحیح طریقے سے کام نہیں کرتا ہے۔"
+        },
+        "debugging/pre-express/2022": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/pre-express/2022": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "programming/pre-express/2022": {
+          "word": "پروگرامنگ",
+          "definition": "پروگرام تخلیق کرنے کا فن۔"
+        },
+        "persistence/pre-express/2022": {
+          "word": "استقامت",
+          "definition": "دوبارہ اور دوبارہ کوشش کرنا، یہاں تک کہ جب کچھ بہت مشکل ہو۔"
+        },
+        "loop/pre-express/2022": {
+          "word": "لوپ",
+          "definition": "ایک عمل کو بار بار دہرانا."
+        },
+        "repeat/pre-express/2022": {
+          "word": "دوہرائیں",
+          "definition": "کوئی کام دوبارہ کرنے کے لیے۔"
+        },
+        "event/pre-express/2022": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "condition/aquatic/unversioned": {
+          "word": "شرط (Condition)",
+          "definition": "کوڈ کا وہ ٹکڑا ہے جسے ایک پروگرام چیک کرتا ہے کہ آیا یہ درست یعنی سچ ہے، اس سے پہلے اس کے اندر عمل کے طے کیے جانے کی اجازت دے."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "شرائط",
+          "definition": "بیانات جو صرف مخصوص شرائط کے تحت چلتے ہیں."
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "loops/aquatic/unversioned": {
+          "word": "لوپس",
+          "definition": "ایک عمل کو بار بار دہرانا."
+        },
+        "program/aquatic/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/artist/unversioned": {
+          "word": "ضابطہ کار(کوڈ)",
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/artist/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/artist/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/basketball/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/basketball/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "event/basketball/unversioned": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "program/basketball/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/dance-extras/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/dance/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "event/dance/unversioned": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "program/dance/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/flappy/unversioned": {
+          "word": "کوڈ",
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/flappy/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/frozen/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/frozen/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/frozen/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/gumball/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/gumball/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/gumball/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/hero/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/hero/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "function/hero/unversioned": {
+          "word": "فنکشن",
+          "definition": "کوڈ کا ایک ٹکڑا ہوتا ہے جسے آپ اپنے کوڈ میں بار بار کال یعنی استعمال کر سکتے ہیں."
+        },
+        "program/hero/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "سیزر سائفر",
+          "definition": "انکرپشن کی ایک تکنیک جو حروف تہجی کو چند حروف دور اور حروف سے بدلتی ہے"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "سائفر",
+          "definition": "ایک تکنیک (یا الگورتھم) کے لیے عام اصطلاح جو انکرپشن انجام دیتی ہے"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "انکرپشن توڑنا (کریک کرنا)",
+          "definition": "جب آپ سائفر کی تمام تفصیلات کو جانے بغیر کسی خفیہ پیغام کو ڈیکوڈ کرنے کی کوشش کرتے ہیں، تو آپ انکرپشن کو \"کریک\" کرنے کی کوشش کر رہے ہوتے ہیں."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "ڈیکرپشن",
+          "definition": "ایک ایسا عمل جو انکرپشن کو ریورس کرتا ہے، ایک خفیہ پیغام لے کر اس کا اصل سادہ متن دوبارہ پیش کرتا ہے"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "انکرپشن",
+          "definition": "پیغامات کو خفیہ رکھنے کے لیے انکوڈنگ کا عمل، تاکہ صرف \"مجاز\" فریقین اسےےے پڑھ سکیں."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "بے ترتیب متبادل سائفر",
+          "definition": "ایک انکرپشن تکنیک جو حروف تہجی کے ہر حرف کو تصادفی (بے ترتیب) طور پر منتخب کردہ حروف تہجی کے دوسرے حروف پر نقش کرتی ہے (یعنی ان کی جگہ پر مقرر کر لیتی ہے)."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/iceage/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/iceage/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/infinity/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/infinity/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/infinity/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/mc/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/mc/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/mc/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "event/minecraft/unversioned": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "لوپ",
+          "definition": "ایک عمل کو بار بار دہرانا."
+        },
+        "program/minecraft/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "مشین لرننگ",
+          "definition": "کمپیوٹر کس طرح پیٹرن کو پہچانتے ہیں اور واضح طور پر پروگرام کیے جانے بغیر فیصلے کرتے ہیں۔"
+        },
+        "event/outbreak/unversioned": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/playlab/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/playlab/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/playlab/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/poem-art/2021": {
+          "word": "ضابطہ کار(کوڈ)",
+          "definition": "(v) کمپیوٹر کے لیے ہدایات لکھنا۔"
+        },
+        "event/poem-art/2021": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "line/poem-art/2021": {
+          "word": "لائن",
+          "definition": "(شاعری) - نظم کی ایک ذیلی تقسیم جو ایک قطار میں ترتیب دی گئی ہے جو دائیں ہاتھ کے حاشیے پر ختم ہوتی ہے۔"
+        },
+        "mood/poem-art/2021": {
+          "word": "موڈ",
+          "definition": "آرٹ یا تحریر میں احساس، ماحول، یا جذبات کا اظہار۔"
+        },
+        "program/poem-art/2021": {
+          "word": "پروگرام",
+          "definition": "اقدامات کا ایک سلسلہ جو کسی ایسی چیز میں کوڈ کیا گیا ہے جسے مشین چلا سکتی ہے۔"
+        },
+        "code/sports/unversioned": {
+          "word": "ضابطہ کار(کوڈ)",
+          "definition": "(فعل) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/sports/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "event/sports/unversioned": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "program/sports/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/starwars/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/starwars/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/starwars/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "ڈیبگنگ",
+          "definition": "الگورتھم یا پروگرام میں مسائل کو تلاش کرنا اور ان کو حل کرنا."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "پروگرام",
+          "definition": "یک الگورتھم جسے کسی شے میں کوڈ کیا گیا ہے جسے مشین کے ذریعہ چلایا جا سکتا ہے۔."
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "بے ضیاع (Lossless) کمپریشن",
+          "definition": "ایک ڈیٹا کمپریشن الگورتھم جو اصل ڈیٹا کو کمپریسڈ ڈیٹا سے مکمل طور پر دوبارہ تشکیل دینے کی اجازت دیتا ہے۔ عام طور پر ٹیکسٹ کمپریشن کے لیے استعمال کیا جاتا ہے (مثلاً زپ کمپریشن)"
+        },
+        "code/poem-art/unversioned": {
+          "word": "ضابطہ کار(کوڈ)",
+          "definition": "(v) کمپیوٹر کے لیے ہدایات لکھنا۔"
+        },
+        "event/poem-art/unversioned": {
+          "word": "ایونٹ",
+          "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
+        },
+        "program/poem-art/unversioned": {
+          "word": "پروگرام",
+          "definition": "اقدامات کا ایک سلسلہ جو کسی ایسی چیز میں کوڈ کیا گیا ہے جسے مشین چلا سکتی ہے۔"
+        },
+        "mood/poem-art/unversioned": {
+          "word": "موڈ",
+          "definition": "آرٹ یا تحریر میں احساس، ماحول، یا جذبات کا اظہار۔"
+        },
+        "line/poem-art/unversioned": {
+          "word": "لائن",
+          "definition": "(شاعری) - نظم کی ایک ذیلی تقسیم جو ایک قطار میں ترتیب دی گئی ہے جو دائیں ہاتھ کے حاشیے پر ختم ہوتی ہے۔"
         }
       }
     }

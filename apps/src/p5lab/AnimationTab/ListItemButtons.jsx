@@ -1,6 +1,6 @@
 /** @file controls below an animation thumbnail */
 import React from 'react';
-import {OverlayTrigger, Tooltip} from 'react-bootstrap';
+import {OverlayTrigger, Tooltip} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import PropTypes from 'prop-types';
 import SpeedSlider from '@cdo/apps/templates/SpeedSlider';

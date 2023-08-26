@@ -1,10 +1,15 @@
 <Artist>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 23,
+  "created_at": "2023-03-22T21:50:03.000Z",
+  "level_num": "custom",
+  "user_id": 16,
   "properties": {
     "skin": "artist",
     "is_k1": "false",
     "skip_instructions_popup": "true",
-    "slider_speed": "0.9",
+    "slider_speed": "0.6",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -44,19 +49,14 @@
     "long_instructions": "**Let’s move on to Row 2** \r\n\r\n<div style=\"float:right;padding:20px\">\r\n<img src=\"https://images.code.org/f2554464b2f58942368b3ffee50e3be8-image-1649371239864.40.36 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\r\n<p style=\"text-align: center\">\r\nexample\r\n</p>\r\n</div>\r\n\r\n\r\n- Add a new <code style=\"color:black; background-color:#c9c9c9\">comment</code> block for \"Row 2\"\r\n- The Artist needs to jump <code style=\"color:black; background-color:#61d19d\">diagonalRight</code> \r\n- Add a new <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block\r\n- Then use the <code style=\"color:black; background-color:#61d19d\">bumpLeft</code> block to nudge the Artist over\r\n- Add another <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block",
     "project_template_level_name": "csc-starquilts-template_2023",
     "name_suffix": "_2023",
+    "short_instructions": "Code Row 2 to have your artist draw two more rhombus shapes above Row 1.",
     "encrypted_examples": [
 
     ],
-    "short_instructions": "Code Row 2 to have your artist draw two more rhombus shapes above Row 1.",
     "preload_asset_list": null
   },
-  "game_id": 23,
-  "published": true,
-  "created_at": "2023-03-22T21:50:03.000Z",
-  "level_num": "custom",
-  "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-22T21:50:03.748+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-row2_2022\\\"\"],\"cloned_from\":\"csc-starquilts-row2_2022\"},{\"changed_at\":\"2023-04-12 20:12:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-12 20:28:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-03 22:57:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-03 23:01:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"short_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-22T21:50:03.748+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-row2_2022\\\"\"],\"cloned_from\":\"csc-starquilts-row2_2022\"},{\"changed_at\":\"2023-04-12 20:12:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-12 20:28:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-03 22:57:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-03 23:01:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"short_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-29 01:39:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"slider_speed\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

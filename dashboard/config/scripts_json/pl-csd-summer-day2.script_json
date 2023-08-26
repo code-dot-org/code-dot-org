@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-27 11:36:00 UTC",
+    "serialized_at": "2023-06-28 19:12:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -46,7 +46,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**Purpose:**\nReflect on the Gots and Needs from the previous day. Introduce the themes of the day.\n\n\n**Objectives:**\n* Participants are oriented to the day\n* Participants use a shared definition for equity and inclusion in the context of CS education\n\n**Suggested Time:** 15 minutes",
-        "student_overview": "**You will:**\n* Get orientated to the day\n* Use a shared definition for equity and inclusion in the context of CS education"
+        "student_overview": "**You will:**\n* Get oriented to the day\n* Use a shared definition for equity and inclusion in the context of CS education"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -62,8 +62,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThis session leads into a discussion around assessment in CS Discoveries. By the end of this session, participants should know how to locate and use both teacher facing and student facing resources alone. There is also time for participants to reflect on the role of assessment in their own classroom followed by a tour of assessment tools and resources.\n\n\n**Objectives:**\n* Participants have located the resources available to them to support student learning in their classrooms\n* Participants have reflected on the role assessment plays in their classroom\n* Participants are able to locate and use applicable assessment tools and resources\n\n**Suggested Time:** 45 minutes",
-        "student_overview": "**You will:**\n* Locate the resources available to teachers to support student learning in their classrooms\n* Reflect on the role assessment plays in your classroom\n* Locate and use applicable assessment tools and resources"
+        "overview": "**Purpose:**\nThis session leads into a discussion around assessment in CS Discoveries. By the end of this session, participants should know how to locate and use both teacher-facing and student-facing resources alone. There is also time for participants to reflect on the role of assessment in their own classroom followed by a tour of assessment tools and resources.\n\n\n**Objectives:**\n* Participants have located the resources available to them to support student learning in their classrooms\n* Participants have reflected on the role assessment plays in their classroom\n* Participants are able to locate and use applicable assessment tools and resources\n\n**Suggested Time:** 40 minutes",
+        "student_overview": "**You will:**\n* Locate the resources available to teachers to support student learning in your classrooms\n* Reflect on the role assessment plays in your classroom\n* Locate and use applicable assessment tools and resources"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -80,7 +80,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**Purpose:**\nOn Day 1, participants engaged in two model lessons: U2L2 Intro to HTML and U2L6 Styling Text with CSS. This session provides participants with space to review what they’ve learned and ask questions about Unit 2 - Web Development.\n\n\n**Objectives:**\n* Participants are aware of the content in Unit 2 - Web Development that has not been covered in the workshop\n* Participants are introduced to the Curriculum Investigation to continue practicing their HTML and CSS skills\n\n**Suggested Time:** 30 minutes",
-        "student_overview": "**You will:**\n* Get an overview of the content in Unit 2 - Web Development that has not been covered in the workshop\n* Get and introduction to the Curriculum Investigation to continue practicing their HTML and CSS skills"
+        "student_overview": "**You will:**\n* Get an overview of the content in Unit 2 - Web Development that has not been covered in the workshop\n* Get an introduction to the Curriculum Investigation to continue practicing your HTML and CSS skills"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -96,7 +96,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Purpose:**\nThis session is a preparation for the next two Model Lessons that participants will engage in: U3L3 Drawing in Game Lab and U3L5 Variables. This curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants are introduced to Unit 3 - Interactive Animations and Games.\n* Participants gain experience with Game Lab.\n* Participants prepare to engage in Unit 3 - Interactive Animations and Games Model Lessons and TLOs by previewing how to create and modify shapes in Game Lab.\n\n**Suggested Time:** 60 minutes",
+        "overview": "**Purpose:**\nThis session is a preparation for the next two Model Lessons that participants will engage in: U3L3 Drawing in Game Lab and U3L5 Variables. This curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants are introduced to Unit 3 - Interactive Animations and Games.\n* Participants gain experience with Game Lab.\n* Participants prepare to engage in Unit 3 - Interactive Animations and Games Model Lessons and TLOs by previewing how to create and modify shapes in Game Lab.\n\n**Suggested Time:** 55 minutes",
         "student_overview": "**You will:**\n* Get an introduction to Unit 3 - Interactive Animations and Games.\n* Gain experience with Game Lab.\n* Prepare to engage in Unit 3 - Interactive Animations and Games Model Lessons and TLOs by previewing how to create and modify shapes in Game Lab.\n"
       },
       "seeding_key": {
@@ -114,7 +114,7 @@
       "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** Teachers formatively assess student understanding throughout the lesson\n\n* **Lesson Decisions:**\n  * Use the videos as check-in points for participants using the discussion questions provided in the teacher notes as sensemaking opportunities.\n  * The teacher uses the assessment opportunities from the lesson plan to influence the probing questions asked while circulating through the room to check for understanding\n  * The teacher asks participants to explain how they think they should score on the mini rubrics in the assessment level\n  * The teacher uses a wrap up to assess understanding within the room\n\n\n* **Debrief Topic:** Formative Assessment\n\n\n**Objectives:**\n* Participants have reflected on ways to use formative assessment throughout the lesson to gauge the level of understanding within the room\n* Participants are comfortable with the basics of game lab\n* Participants have experimented with the grid in Game Lab\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2022/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n",
+        "overview": "**Purpose:**\n* **Essential Practice:** Teachers formatively assess student understanding throughout the lesson\n\n* **Lesson Decisions:**\n  * Use the videos as check-in points for participants using the discussion questions provided in the teacher notes as sensemaking opportunities.\n  * The teacher uses the assessment opportunities from the lesson plan to influence the probing questions asked while circulating through the room to check for understanding\n  * The teacher asks participants to explain how they think they should score on the mini rubrics in the assessment level\n  * The teacher uses a wrap up to assess understanding within the room\n\n\n* **Debrief Topic:** Formative Assessment\n\n\n**Objectives:**\n* Participants have reflected on ways to use formative assessment throughout the lesson to gauge the level of understanding within the room\n* Participants are comfortable with the basics of game lab\n* Participants have experimented with the grid in Game Lab\n\n**Suggested Time:** 55 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n",
         "preparation": "* Prepare projector or other means of showing videos if you wish to watch as a class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:** How can we communicate to a computer how to draw shapes on the screen?\n\nIn this lesson, you will begin to use Game Lab to position shapes on the screen while working through the concepts of sequencing and debugging. \n\n"
       },
@@ -133,7 +133,7 @@
       "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n\n* **Essential Practice:** Programming lessons are meant to have active teacher engagement with the teacher circulating to direct students to appropriate resources, guide them through the debugging process, assess understanding and help students determine when to move on and when to do more practice in choice levels.\n\n\n* **Lesson Decisions:**\n  * The teacher instructs participants to complete all choice level bubbles until they feel comfortable enough to move on to the assessment. If they are successful with the assessment (use the mini rubric to check) they can move on to the challenge choice levels.\n  * As participants are working in choice levels, ask to see their work in the assessment level. Ask participants to justify their score on the mini rubric.\n  * The teacher directs participants to the student version of the “Student Guide to Debugging” on page 24 of their Resource Packet and prompts them to use the debugging process when they encounter bugs.\n\n\n* **Debrief Topic:**\n  * Context setting\n  * Exploration\n  * Experimentation\n  * Assessment\n\n\n**Objectives:**\n* Participants understand how programming lessons are structured within the curriculum\n* Participants reinforce their understanding of the debugging process\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2022/lessons/4\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
+        "overview": "**Purpose:**\n\n* **Essential Practice:** Programming lessons are meant to have active teacher engagement with the teacher circulating to direct students to appropriate resources, guide them through the debugging process, assess understanding and help students determine when to move on and when to do more practice in choice levels.\n\n\n* **Lesson Decisions:**\n  * The teacher instructs participants to complete all choice level bubbles until they feel comfortable enough to move on to the assessment. If they are successful with the assessment (use the mini rubric to check) they can move on to the challenge choice levels.\n  * As participants are working in choice levels, ask to see their work in the assessment level. Ask participants to justify their score on the mini rubric.\n  * The teacher directs participants to the student version of the “Student Guide to Debugging” on page 24 of their Resource Packet and prompts them to use the debugging process when they encounter bugs.\n\n\n* **Debrief Topic:**\n  * Context setting\n  * Exploration\n  * Experimentation\n  * Assessment\n\n\n**Objectives:**\n* Participants understand how programming lessons are structured within the curriculum\n* Participants reinforce their understanding of the debugging process\n\n**Suggested Time:** 55 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/4\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
         "preparation": "* Review the level progression in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:**  How can we use variables to store information in our programs?\n\nIn this lesson, you will be introduced to variables - an important concept in programming used to store values for your programs!\n\n"
       },
@@ -151,8 +151,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**Purpose:** In this session, participants will learn more about what TLOs are and how they will be participating in them.\n\n\n**Objectives:**\n* Participants have their assigned lesson\n* Participants know how the lesson planning process will work\n* Participants have a shared definition for identity\n* Participants are able to describe how their identity, experiences, and beliefs shape how they see their role as a CS teacher\n\n**Suggested Time:** 30 minutes",
-        "student_overview": "**You will:**\n* Recieve your lesson assignment \n* Learn how the lesson planning process will work\n* Develop a shared definition for identity\n* Describe how your identity, experiences, and beliefs shape how you see their role as a CS teacher"
+        "overview": "**Purpose:** In this session, participants will learn more about what TLOs are and how they will be participating in them.\n\n\n**Objectives:**\n* Participants have their assigned lesson\n* Participants know how the lesson planning process will work\n* Participants have a shared definition for identity\n* Participants are able to describe how their identity, experiences, and beliefs shape how they see their role as a CS teacher\n\n**Suggested Time:** 20 minutes",
+        "student_overview": "**You will:**\n* Recieve your lesson assignment \n* Learn how the lesson planning process will work\n* Develop a shared definition for identity\n* Describe how your identity, experiences, and beliefs shape how you see your role as a CS teacher"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -185,7 +185,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:** Creating a plan for how to teach the lesson during a 40 minute period in the TLO session at the workshop.\n* Pick a Classroom Practice to Focus On\n* Write out a run of show\n* Make sure everyone in the teaching group has a role\n* Create additional materials needed (posters, etc)\n\n\n**Objectives:**\n* Prepare to deliver TLO lesson\n\n**Suggested Time:** 60 minutes",
+        "overview": "**Purpose:** Creating a plan for how to teach the lesson during a 40 minute period in the TLO session at the workshop.\n* Pick a Classroom Practice to focus on\n* Write out a run of show\n* Make sure everyone in the teaching group has a role\n* Create additional materials needed (posters, etc)\n\n\n**Objectives:**\n* Prepare to deliver TLO lesson\n\n**Suggested Time:** 60 minutes",
         "student_overview": "**You will:**\n* Prepare to deliver your TLO lesson"
       },
       "seeding_key": {
@@ -196,14 +196,14 @@
     },
     {
       "key": "lesson-10",
-      "name": "Wrap Up",
+      "name": "Day 2 Wrap Up",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "overview": "**Purpose:**\nThis session is intended to wrap up the theme and logistics of the day.\n\n\n**Objectives:**\n* Participants share an instructional strategy that they would like to try in their classroom\n* Participants articulate things they got from the workshop today and things they still need in the future\n* Participants complete the daily survey\n\n**Suggested Time:** 15 minutes",
-        "student_overview": "**You will:**\n*  Share an instructional strategy that you would like to try in their classroom\n* Articulate things you got from the workshop today and things you still need in the future\n* Complete the daily survey\n\n<a href=\"https://studio.code.org/pd/workshop_survey/day/2\" target=\"blank\" rel=\"noopener noreferrer\">Link to Survey</a> \n\n\n"
+        "student_overview": "**You will:**\n*  Share an instructional strategy that you would like to try in your classroom\n* Articulate things you got from the workshop today and things you still need in the future\n* Complete the daily survey\n\n<a href=\"https://studio.code.org/pd/workshop_survey/day/2\" target=\"blank\" rel=\"noopener noreferrer\">Link to Survey</a> \n\n\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -531,7 +531,7 @@
       "key": "e2e6ed24-b2b2-40c9-bef4-67e19057b0db",
       "position": 4,
       "properties": {
-        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd3/2023] video in the slides.\n",
+        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd/2023] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -582,7 +582,7 @@
       "key": "70bfcad6-fc93-43ef-8a71-19443e55d23b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_2/csd3/2023] video in the slides.\n**Questions to Consider with Video:**\n- What’s the difference between stroke and fill?\n\n**Discussion Goal:** Stroke controls the border color of the shape, and fill controls the color inside of it.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_2/csd/2023] video in the slides.\n**Questions to Consider with Video:**\n- What’s the difference between stroke and fill?\n\n**Discussion Goal:** Stroke controls the border color of the shape, and fill controls the color inside of it.\n"
       },
       "seeding_key": {
         "activity_section.key": "70bfcad6-fc93-43ef-8a71-19443e55d23b",
@@ -780,7 +780,7 @@
       "key": "b217aef2-434a-4b74-8d71-27c6724f2373",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_variables/csd3/2023] video in the slides.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_variables/csd/2023] video in the slides.\n\n",
         "tips": [
           {
             "type": "teachingTip",

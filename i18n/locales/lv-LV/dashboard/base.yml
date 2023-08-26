@@ -537,6 +537,8 @@ lv:
       robotics:
         kodable: 'Kodable'
         other: "Citi"
+      workshop_course:
+        other: 'Citi'
       email_opt_in:
         opt_in_yes: 'Jā'
         opt_in_no: 'Nē'
@@ -545,3 +547,4 @@ lv:
   copy: 'Kopija'
   pixelation:
     binary: "Binārie"
+

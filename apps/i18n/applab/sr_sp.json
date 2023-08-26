@@ -8,6 +8,13 @@
   "catText": "текст",
   "catVariables": "Променљиве",
   "confirmClearTable": "Да ли стварно желите да избришете податке из ове табеле? Подаци немогу бити враћени.",
+  "designElementEvent_input": "Унос",
+  "designElementProperty_text": "текст",
+  "designElementProperty_textAlignment_left": "лево",
+  "designElementProperty_textAlignment_right": "десно",
+  "designElementProperty_zOrder": "дубина",
+  "designElementTheme_classic": "Класично",
+  "designElementTheme_default": "Подразумеване вредности",
   "designWorkspaceHeader": "Радни простор: ",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param2": "у",
@@ -22,7 +29,7 @@
   "nextLevel": "Честитке! Завршили сте пузлу.",
   "no": "не",
   "numBlocksNeeded": "Ова слагалица се може решити са %1 блокова.",
-  "repeatForever": "понављај заувек",
   "repeatDo": "наредбе",
+  "repeatForever": "понављај заувек",
   "yes": "Да"
 }

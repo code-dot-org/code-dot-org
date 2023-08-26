@@ -58,7 +58,7 @@ module MultiFileSeeded
   end
 
   def delete_file
-    File.delete file_path_was if File.exist? file_path_was
+    FileUtils.rm_f file_path_was
     delete_additional_files if respond_to? :delete_additional_files
   end
 

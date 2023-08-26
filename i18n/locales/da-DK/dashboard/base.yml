@@ -60,6 +60,7 @@ da:
         reset_password_token: "Adgangskode linket du har brugt"
         error:
           future: kan ikke være i fremtiden
+        us_state: 'Region'
   beta: "beta"
   hello: "Hej verden"
   welcome_back: "Velkommen tilbage %{name}"
@@ -198,6 +199,7 @@ da:
     parent_account_checkbox: "Jeg er en forælder eller en værge, der tilmelder sig på vegne af mit barn"
     parent_account_email_progress_permission: "Kan vi sende dig e-mail lejligheds med opdateringer om dit barns fremskridt og projekter og opdateringer om deres kursus og datalogi? [(Se vores privatlivspolitik)] (%{privacy_policy_url})"
     parent_account_email_label: "Forælderens eller værgens e-mailadresse"
+    us_state: 'Region'
   school_info:
     title: 'Skoleoplysninger (valgfrit)'
     school_country: 'Skolens land'
@@ -983,6 +985,8 @@ da:
       robotics:
         kodable: 'Kodable'
         other: "Andre"
+      workshop_course:
+        other: 'Andre'
       email_opt_in:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nej'
@@ -1003,3 +1007,4 @@ da:
     this_sprite: "denne figur"
   pixelation:
     binary: "Binære"
+

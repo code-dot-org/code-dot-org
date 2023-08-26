@@ -1273,6 +1273,103 @@ ro:
         text: "Felicitări! Ai învăţat să utilizezi comenzi de tehnologia computerelor pentru a aduce lumea Minecraft la viaţă. Sunteţi dezvoltator web acum. Ai deblocat toate comenzile şi toate creaturile. Tu alegi ceea ce se întâmplă."
       2:
         text: "Cand ai terminat sa-ti realizezi jocul, alegi sa distribui un link pe care il poti da prietenilor sau sa joci tu propriul joc pe telefon. Distractie placuta! De abia astept sa joc versiunea ta de Minecraft."
+    applab_intro_welcome:
+      1:
+        text: "Numele meu este Mei'lani. Sunt stagiar la code.org și sunt, de asemenea, student la informatică. Îmi place informatica pentru că este foarte creativ. Ajungem să rezolv problemele. Ajungem să fac totul să funcționeze cum vreau. Dar, de asemenea, ajung să fiu designerul. Ajungem să fiu artistul și aleg totul pe partea creativă a acesteia."
+      2:
+        text: "Efectuarea propriilor aplicații este ușoară cu App Lab! Indiferent dacă sunteți nou la codificare sau aveți o experiență. App Lab este un instrument excelent pentru construirea de noi aplicații și partajarea lor cu prietenii tăi."
+      3:
+        text: "Acesta este un App Lab. În partea stângă se află aplicația. În partea dreaptă este codul care îl va face să ruleze. Vă construiți programul trăgând în blocuri din caseta de instrumente. Pentru a începe, veți avea doar un bloc numit „SetProperty”."
+      4:
+        text: "Blocul de proprietate setat modifică aspectul elementelor de pe ecran. La fel ca butoanele, etichetele sau chiar ecranul în sine. Mai întâi trebuie să decideți ce element doriți să schimbați. Dacă plasați cursorul peste un element din aplicație, puteți vedea numele sau ID-ul aici. Apoi mergeți selectați acel ID din primul drop-down."
+      5:
+        text: "Elementele au o mulțime de proprietăți pe care le puteți schimba cum ar fi culoarea textului, culoarea de fundal sau dimensiunea fontului. Puteți vedea lista completă și puteți alege proprietatea pe care doriți să o modificați în al doilea drop-down."
+      6:
+        text: "Ultimul drop-down este locul în care veți scrie valoarea pe care doriți să o utilizați valoarea pe care doriți să o utilizați. Blocul vă va face o sugestie. Dar puteți oricând să tastați în diferite culori sau numere."
+      7:
+        text: "După ce ați terminat, blocul citește un pic ca o propoziție: „Setați culoarea de fundal a butonului 1 la verde.” Apăsați Run pentru a vedea modificările pe care le construiți în cod. Dacă resetați, puteți trage în mai multe blocuri pentru a schimba alte lucruri despre aplicație. Ca și textul!"
+      8:
+        text: "Pentru acest tutorial vom lucra în modul bloc, dar App Lab acceptă, de asemenea, lucrul în text."
+      9:
+        text: "Oricum vei fi de programare în JavaScript, limba de web. Fiecare nivel are un scop, instrucțiuni și o imagine a ceea ce sunteți cu scopul de a crea."
+      10:
+        text: "Dacă sunteți blocat vreodată, faceți clic pe această imagine și vă va arăta exact cum să finalizați nivelul. Dar vezi dacă o poți face mai întâi pe cont propriu."
+      11:
+        text: "După ce ați finalizat obiectivul pentru acest nivel faceți clic pe Finish pentru a merge mai departe. Asta e tot ce este să-l! Apăsați butonul portocaliu „continua” pentru a merge la nivelul următor și pentru a începe aventura cu un App Lab!"
+    applab_intro_events:
+      1:
+        text: "Aplicațiile sunt foarte interesante pentru că este un fel de a începe propria afacere Vreau să spun, veți obține pentru a proiecta totul de la sol în sus, veți obține pentru a gestiona totul, și tu ești proprietarul acestei lucrări pe care tocmai ați creat cu cod."
+      2:
+        text: "Acum, că puteți schimba aspectul aplicației, să o facem interactivă răspunzând la evenimente! Evenimentele sunt acțiuni ale utilizatorilor, cum ar fi apăsarea unui buton, derularea printr-un meniu sau trecerea peste o imagine. Aplicațiile interactive au nevoie de modalități de a răspunde la evenimente, cum ar fi redarea unui sunet când fac clic pe acest buton. Pentru a face acest lucru în App Lab trebuie să utilizați un bloc nou numit „onEvent”."
+      3:
+        text: "Acest program setează ecranul la albastru. Vreau ca ecranul să devină verde când fac clic pe acest buton. Mai întâi va trebui să trag într-un bloc OnEvent. Prin hovering Știu că ID-ul butonului este „BigButton”, așa că voi selecta asta în primul drop-down."
+      4:
+        text: "În continuare voi alege tipul de eveniment. Există o mulțime de opțiuni pe care le puteți alege, dar acum o voi lăsa ca un clic vechi obișnuit."
+      5:
+        text: "În cele din urmă, voi adăuga cod în interiorul evenimentului care va schimba culoarea de fundal a ecranului. Puteți citi acest bloc ca o propoziție: „În cazul în care se face clic pe butonul rulați tot acest cod.”"
+      6:
+        text: "Să o testăm. Blocurile din afara unui OnEvent continuă să ruleze imediat, astfel încât ecranul să pornească albastru."
+      7:
+        text: "Și când fac clic pe butonul mare, codul din interiorul OnEvent rulează și ecranul meu devine verde."
+      8:
+        text: "Dacă doriți să schimbați mai multe lucruri după eveniment, cum ar fi textul de pe ecran, trebuie doar să adăugați mai mult cod la OnEvent"
+      9:
+        text: "Pentru ca programul dvs. să răspundă la mai multe evenimente, adăugați mai multe blocuri OnEvent. Doar asigurați-vă că nu le puneți unul în celălalt. Acum este timpul să-l încercați singur. Distreaza-te!"
+    applab_intro_sounds:
+      1:
+        text: "În continuare, veți afla despre adăugarea de imagini și sunete în aplicație. Să începem prin a verifica opțiunile de sunet."
+      2:
+        text: "În caseta de instrumente veți găsi un nou bloc numit „PlaySound”. Trageți-l în spațiul de lucru. Puteți alege un sunet de redat făcând clic pe meniul derulant, apoi făcând clic pe „Alegeți”."
+      3:
+        text: "De aici puteți încărca un fișier de sunet de pe computer sau puteți căuta un sunet din biblioteca de sunet. Biblioteca de sunet are o mulțime de categorii diferite, cum ar fi instrumente, muzică de fundal sau animale."
+      4:
+        text: "După ce ați primit sunetul dorit, faceți clic pe „Alegeți”. Când acest bloc rulează, acesta va reda sunetul pe care l-ați ales."
+      5:
+        text: "Pentru a adăuga imagini la elementele dvs., puteți utiliza doar blocul SetProperty. Selectați proprietatea imaginii în al doilea drop-down"
+      6:
+        text: "Apoi selectați „Alegeți” din al treilea drop-down."
+      7:
+        text: "De aici puteți încărca o imagine de pe computer sau puteți privi printr-o bibliotecă imensă de icoane din biblioteca de pictograme."
+      8:
+        text: "Înapoi în modul cod puteți utiliza blocul „SetProperty” pentru a schimba culoarea pictogramei pictogramei dvs. După ce ați ales ce imagine pictograma dvs. să utilizați, faceți clic pe „Executare” pentru a vedea cum arată."
+      9:
+        text: "Asta e tot ce este să-l! Acum puteți începe să adăugați imagini și sunete pentru a vă face aplicațiile și mai distractive și mai dinamice."
+    applab_intro_designmode:
+      1:
+        text: "Pentru a vă construi propriile aplicații, va trebui să începeți să proiectați ecrane și elemente de la zero. App Lab face acest lucru ușor de făcut cu modul de proiectare."
+      2:
+        text: "Utilizați comutatorul din partea de sus a aplicației pentru a intra în modul Design."
+      3:
+        text: "Puteți adăuga elemente noi trăgându-le pe ecran. Puteți să le mutați în diferite locații și să le modificați dimensiunea trăgând colțul din dreapta jos."
+      4:
+        text: "Pentru a schimba proprietățile unui element, utilizați comenzile din dreapta. De exemplu, este foarte ușor să modificați textul, culoarea și dimensiunea fontului acestui buton."
+      5:
+        text: "Când adăugați un element nou pe ecran, acesta va primi un ID generic, cum ar fi butonul1. Este o idee bună să schimbați ID-ul acestui buton în ceva mai semnificativ, cum ar fi „RightButton”. Așa că veți ști care dintre ele este atunci când te duci la program."
+      6:
+        text: "Dacă adăugați un element în aplicație din greșeală, trageți-l sau apăsați pe ștergere."
+      7:
+        text: "Puteți adăuga ecrane complet noi în aplicația dvs. trăgând într-un element de ecran"
+      8:
+        text: "Din meniul derulant din partea de sus puteți comuta rapid înainte și înapoi între ecranele pe care le creați."
+      9:
+        text: "În interiorul aplicației, veți avea nevoie de o modalitate de a comuta între toate aceste ecrane, astfel încât blocul SetScreen a fost adăugat în caseta de instrumente. Utilizați „setScreen” în interiorul blocului „OnEvent” pentru a schimba ecranele la un clic pe un buton."
+      10:
+        text: "În următoarele câteva niveluri veți lucra la un singur proiect. Mai întâi veți adăuga un buton, apoi veți adăuga un ecran nou și în cele din urmă veți scrie cod astfel încât butonul să comută la noul ecran."
+    applab_intro_share:
+      1:
+        text: "Acum că ați învățat câteva dintre elementele de bază ale App Lab, cum ar fi adăugarea de butoane, sunete, imagini, text și ecrane noi, puteți crea tot felul de aplicații."
+      2:
+        text: "În nivelul următor veți găsi aplicația pe care tocmai ați terminat de construit. Cu puțină creativitate, puteți transforma acest lucru într-un test de personalitate pentru prietenii dvs., o felicitare pe care o puteți împărtăși cu familia sau un joc de aventură alege-ta-propriu. Toate aceste aplicații sunt doar o combinație a abilităților pe care le-ați învățat deja și pun pariu că puteți veni cu și mai multe."
+      3:
+        text: "După ce ați terminat cu aplicația, o puteți trimite cu ușurință pe telefon pentru a vedea cum arată. Doar faceți clic pe „Share” și introduceți numărul dvs. de telefon aici."
+      4:
+        text: "Veți primi un mesaj text care vă va permite să vă deschideți aplicația instantaneu."
+      5:
+        text: "De asemenea, puteți partaja un link către aplicația dvs. prin intermediul rețelelor sociale sau îl puteți posta în galeria publică code.org pentru ca alte persoane să joace și să le distribuie."
+      6:
+        text: "Tocmai ai zgâriat suprafața a ceea ce poate face App Lab. Full App Lab oferă interacțiuni mai avansate cu utilizatorii, elemente noi de ecran și chiar o bază de date încorporată, astfel încât să puteți construi rapid aplicații complete. La „code.org/applab” veți găsi instrumentul complet și o mulțime de idei dacă doriți să continuați."
+      7:
+        text: "Vă mulțumim că ați venit de-a lungul călătoriei. Acum mergeți să construiți și să partajați prima aplicație și continuați să construiți aplicații cu App Lab!"
     mc_2017_agent_intro:
       1:
         text: "Stacy: Stampy, Lizzy, Preston - vă mulțumesc că ați venit cu mine. Ceea ce vreau să vă arăt se află imediat după acest platou. Cred că o să vă placă la nebunie!"
@@ -1347,6 +1444,142 @@ ro:
         text: "Stacy: M-am întors! Ok, băieți, acesta este Agentul! Să vă arăt ce poate face. Uite, face exact ce i-am spus. I-am spus să construiască o scară din aceste blocuri de teracotă, iar acum putem folosi scara ca să ieșim de aici. Și poate face mult mai mult, nu doar scări. Îi pot spune Agentului să facă ce vreau, iar el face."
       8:
         text: "Stampy: Cum ai făcut asta? Stacy: A fost foarte simplu. Tot ce a trebuit să fac a fost să folosesc codul!"
+    csd_concept_how_computers_work:
+      1:
+        text: "Oriunde te uiți, calculatoarele schimbă lumea. Fie că sunt pe desktopurile noastre, în casele noastre, în buzunare sau aproape oriunde altundeva. Dar, deși majoritatea dintre noi folosim zilnic această tehnologie revoluționară, nu ne întrebăm adesea: „Cum funcționează calculatoarele?” În această serie, veți afla cum funcționează într-adevăr computerele, începând cu ceea ce face un computer un computer. Apoi, veți analiza modul în care informațiile sunt reprezentate în interiorul computerului folosind semnale electrice minuscule care se desfășoară și se opresc la viteze uluitoare."
+      2:
+        text: "După aceea, veți afla cum computerele folosesc circuitele pentru a face totul, de la matematică simplă până la simularea lumilor virtuale întregi. Apoi, veți micșora și vă uitați la diferitele părți ale unui computer care de fapt de intrare, ieșire și stocați toate aceste informații. În cele din urmă, veți arunca o privire la ce cod este de fapt și modul în care software-ul controlează hardware-ul. Deci, indiferent dacă sunteți doar curioși de dispozitivele pe care le utilizați în fiecare zi sau doriți să proiectați inovațiile viitorului, primul pas este să învățați cum funcționează computerele."
+    csd_concept_computer:
+      1:
+        text: "Numele meu este Mai-Li Khoe și sunt designer și inventator. Așa că unele dintre lucrurile pe care le-am proiectat au fost la Apple, iar acum proiectez produse pe care copiii să le folosească astfel încât să se poată distra mai ușor la școală. Alte locuri de muncă mele includ DJ-ing și dans."
+      2:
+        text: "Calculatoarele sunt peste tot! Sunt în buzunarele oamenilor, sunt în mașinile oamenilor, oamenii le au pe încheieturi. S-ar putea să fie în rucsac chiar acum. Dar ce face un computer un computer? Ce face un computer un computer oricum? Și cum funcționează chiar?"
+      3:
+        text: "Bună, sunt Nat! Am fost unul dintre designerii originali ai Xbox. Lucrez cu calculatoare de când aveam șapte ani și acum lucrez la realitatea virtuală. Ca oameni, am construit întotdeauna instrumente care să ne ajute să rezolvăm problemele. Unelte precum o roabă, un ciocan sau o tipografie sau un tractor-remorcă."
+      4:
+        text: "Toate aceste invenții ne-au ajutat cu munca manuală. De-a lungul timpului, oamenii au început să se întrebe dacă o mașină ar putea fi proiectată și construită pentru a ne ajuta cu munca de gândire pe care o facem, cum ar fi rezolvarea ecuațiilor sau urmărirea stelelor de pe cer. În loc să miște sau să manipuleze lucruri fizice precum murdăria și piatra, aceste mașini ar trebui să fie proiectate pentru a manipula informațiile. Pe măsură ce pionierii informaticii au explorat cum să proiecteze o mașină de gândire, și-au dat seama că trebuie să îndeplinească patru sarcini diferite."
+      5:
+        text: "Ar trebui să ia de intrare, stoca informații proces-l și apoi de ieșire rezultatele. Acest lucru ar putea suna simplu, dar aceste patru lucruri sunt comune tuturor computerelor. Asta face ca un computer să fie un computer."
+      6:
+        text: "Calculatoarele au început ca calculatoare de bază, ceea ce era deja cu adevărat minunat la acea vreme și manipulau doar numere pe atunci. Dar acum le putem folosi pentru a vorbi unul cu celălalt, le putem folosi pentru a juca jocuri, a controla roboți și a face orice lucru nebun pe care probabil l-ați putea imagina. Calculatoarele moderne nu arată nimic ca acele mașini vechi greoaie, dar încă mai fac aceleași patru lucruri."
+      7:
+        text: "În primul rând, vom vorbi despre intrare. Puteți spune computerelor ce să facă cu tastatura, le puteți spune ce să facă cu mouse-ul, microfonul, camera foto. Toate aceste intrări diferite oferă informații despre computer, care sunt apoi stocate în memorie."
+      8:
+        text: "Procesorul unui computer preia informații din memorie. Îl manipulează sau îl schimbă folosind un algoritm, care este doar o serie de comenzi. Și apoi trimite informațiile procesate înapoi pentru a fi stocate în memorie din nou. Aceasta continuă până când informațiile procesate sunt gata de ieșire."
+      9:
+        text: "Modul în care un computer emite informații depinde de ceea ce computerul este proiectat să facă. Un afișaj de computer poate afișa text, fotografii, videoclipuri sau jocuri interactive - chiar și realitate virtuală! Ieșirea unui computer poate include chiar semnale pentru a controla un robot."
+      10:
+        text: "Și cine știe cum vor fi computerele de mâine? Speranța mea este că veți ajunge să vă ajutați să decideți cum doriți să arate calculatoarele de mâine. Dar pe toate computerele, indiferent de diferitele tipuri de tehnologie pe care le folosesc, ei întotdeauna fac aceleași patru lucruri. Ei iau informații, le stochează ca date, le procesează și apoi obțin rezultatele."
+    csd_concept_binary_data:
+      1:
+        text: "Bună! Numele meu este Limor Fried și sunt inginer aici la Adafruit Industries. Și aici fac inginerie și design și proiectez circuite pentru modă, muzică și tehnologie."
+      2:
+        text: "Numele meu este Federico Gomez Suarez, și eu sunt un dezvoltator de software cu Microsoft Hack for Good. Și mă uit în utilizarea tehnologiei pentru a ne ajuta să rezolvăm unele dintre marile probleme sociale ale vremurilor noastre."
+      3:
+        text: "Este posibil să fi auzit că computerele funcționează pe cele și zerouri. Dar aproape nimeni astăzi nu se ocupă direct de acestea și zerouri. Dar cele și zerourile joacă un rol important în modul în care computerele funcționează în interior."
+      4:
+        text: "În interiorul unui computer sunt fire electrice și circuite care transportă toate informațiile într-un computer. Cum stocați sau reprezentați informații utilizând energia electrică?"
+      5:
+        text: "Ei bine, dacă aveți un singur fir cu electricitate care curge prin el, semnalul ar putea fi pornit sau oprit. Nu sunt multe alegeri, dar este un început foarte important. Cu un fir, putem reprezenta un da sau nu, adevărat sau fals, unul sau zero sau orice altceva cu doar două opțiuni. Această stare de pornire/oprire a unui singur fir se numește un pic și este cea mai mică informație pe care o poate stoca un computer."
+      6:
+        text: "Dacă utilizați mai multe fire veți obține mai mulți biți: mai multe și zerouri. Cu mai mulți biți puteți reprezenta informații mai complexe. Dar pentru a înțelege asta, trebuie să învățăm despre ceva numit sistemul numeric binar."
+      7:
+        text: "În sistemul de numere zecimale, avem zece cifre de la zero la nouă, și asta e modul în care am învățat cu toții să numărăm. În sistemul numeric binar, avem doar două cifre: zero și una. Cu aceste două cifre, putem conta până la orice număr."
+      8:
+        text: "Iată cum funcționează acest lucru. Într-un sistem cu numere zecimale cu care suntem obișnuiți, fiecare poziție dintr-un număr are o valoare diferită. Există o poziție 1, poziția 10, poziția 100 și așa mai departe. De exemplu, un 9 în poziția 100 este un 900. În binar, fiecare poziție are, de asemenea, o valoare. Dar, în loc să se înmulțească cu 10 de fiecare dată, înmulțim cu 2. Deci, există poziția 1, poziția 2, poziția 4, poziția 8 și așa mai departe. De exemplu, numărul 9 în binar este 1001. Pentru a calcula valoarea, adăugăm 1 ori 8, plus 0 ori 4, plus 0 ori 2, plus 1 ori 1. Aproape nimeni nu face această matematică pentru că computerele o fac pentru noi. Ceea ce este important este că orice număr poate fi reprezentat doar cu cele și zerouri, sau printr-o grămadă de fire care sunt pornite sau oprite. Cu cât utilizați mai multe fire, cu atât sunt mai mari numerele pe care le puteți stoca. Cu 8 fire, puteți stoca numere între 0 și 255. Asta e 8. Cu doar 32 de fire, puteți stoca tot drumul de la 0 la peste 4 miliarde. Folosind sistemul numeric binar, puteți reprezenta orice număr doriți."
+      9:
+        text: "Dar cum rămâne cu alte tipuri de informații? Cum ar fi textul, imaginile sau sunetul? Se pare că toate aceste lucruri pot fi reprezentate și cu numere. Gândiți-vă la toate literele din alfabet. Ai putea atribui un număr pentru fiecare literă. A ar putea fi 1, B ar putea fi 2, și așa mai departe. Puteți reprezenta apoi orice cuvânt sau paragraf ca o secvență de numere. Și, după cum am văzut, aceste numere pot fi stocate ca pe sau în afara semnalelor electrice. Fiecare cuvânt pe care îl vedeți pe fiecare pagină web sau pe telefonul dvs. este reprezentat folosind un sistem ca acesta."
+      10:
+        text: "Acum, să luăm în considerare fotografiile, videoclipurile și toate graficele pe care le vedeți pe un ecran."
+      11:
+        text: "Toate aceste imagini sunt realizate din puncte teeny numite pixeli, și fiecare pixel are o culoare. Fiecare dintre culori poate fi reprezentată cu numere. Când considerați că imaginea tipică are milioane de acești pixeli, iar videoclipul tipic arată 30 de imagini pe secundă acum vorbim despre o mulțime de date aici."
+      12:
+        text: "Fiecare sunet este practic o serie de vibrații în aer. Vibrațiile pot fi reprezentate grafic ca o formă de undă. Orice punct de pe această formă de undă poate fi reprezentat de un număr. Și în acest fel, orice sunet poate fi împărțit într-o serie de numere. Dacă doriți un sunet de calitate superioară, veți alege audio pe 32 de biți sau un sunet pe 8 biți. Mai mulți biți înseamnă o gamă mai mare de numere."
+      13:
+        text: "Când utilizați un computer pentru a scrie cod sau pentru a crea propria aplicație, nu aveți de-a face direct cu acestea și zerouri. Dar veți avea de-a face cu imagini sau sunet sau video. Deci, dacă vrei să înțelegi cum funcționează calculatoarele în interior, totul se reduce pe cele simple și zerouri și semnalele electrice din circuitele din spatele lor."
+    csd_concept_circuits_logic:
+      1:
+        text: "Unul dintre cele mai tari lucruri pe care le-am descoperit despre circuite este că circuitele pot fi o formă de artă ca și cum aș avea o idee creativă, pot scoate acea idee creativă folosind circuite. Deci, dacă aveți idei, puteți folosi tehnologia pentru a face aceste idei să prindă viață."
+      2:
+        text: "Fiecare intrare sau ieșire a unui computer este efectiv un tip de informație, care poate fi reprezentată de semnale electrice sau de cele și zerouri."
+      3:
+        text: "Pentru a procesa informațiile care vin ca intrare și pentru a face informațiile care sunt transmise, un computer trebuie să modifice și să combine semnalele de intrare. Pentru a face acest lucru, un computer folosește milioane de componente electronice adolescente, care se reunesc pentru a forma circuite."
+      4:
+        text: "Să aruncăm o privire mai atentă la modul în care circuitele pot modifica și procesa informațiile care sunt reprezentate în unu și zerouri. Acesta este un circuit incredibil de simplu. Este nevoie de un semnal electric, pornit sau oprit și îl răstoarnă. Deci, dacă semnalul pe care îl dau este un 1, circuitul vă oferă un 0, și dacă da circuitul un 0, vă oferă un 1. Semnalul care intră nu este același cu semnalul care iese, așa numim acest circuit NU."
+      5:
+        text: "Circuitele mai complicate pot lua mai multe semnale și le pot combina și vă pot oferi un rezultat diferit. În acest exemplu, un circuit va lua două semnale electrice, acum fiecare ar putea fi un 1 sau un 0. Dacă oricare dintre semnalele care intră este un 0, atunci rezultatul este, de asemenea, un 0. Acest circuit vă va da doar un 1, în cazul în care primul semnal și al doilea semnal sunt atât un 1, și așa numim circuitul ȘI."
+      6:
+        text: "Există multe circuite mici ca acesta care efectuează calcule logice simple. Prin conectarea acestor circuite împreună, putem realiza circuite mai complexe care efectuează calcule mai complexe."
+      7:
+        text: "De exemplu, puteți face un circuit care adaugă 2 biți împreună numit un sumator. Acest circuit durează 2 biți individuali, fiecare câte un 1 sau 0 și le adaugă împreună pentru a calcula suma. Suma poate fi 0 plus 0 este egal cu 0, 0 plus 1 este egal cu 1 sau 1 plus 1 este egal cu 2. Aveți nevoie de două fire care ies, deoarece poate dura până la două cifre binare pentru a reprezenta suma. Odată ce aveți un singur sumator pentru adăugarea a două biți de informații, puteți pune împreună multipli ai acestor circuite de sumator una lângă alta pentru a adăuga numere mult mai mari."
+      8:
+        text: "De exemplu, iată cum un sumator pe 8 biți adaugă numerele 25 și 50. Fiecare număr este reprezentat folosind 8 biți, rezultând 16 semnale electrice diferite care intră în circuit. Circuitul pentru un sumator pe 8 biți are o mulțime de adăugatori mici în interiorul acestuia, care împreună calculează suma."
+      9:
+        text: "Diferite circuite electrice pot efectua alte calcule simple, cum ar fi scăderea sau multiplicarea. De fapt, toate informațiile de prelucrare a computerului nu este doar o mulțime și o mulțime de mici operații simple puse împreună. Fiecare operație individuală efectuată de un computer este atât de simplă încât ar putea fi făcută de un om, dar aceste circuite din interiorul computerelor sunt mult mai rapide."
+      10:
+        text: "În acea zi, aceste circuite erau mari și greoaie, iar un sumator de 8 biți ar putea fi la fel de mare ca un frigider și ar fi nevoie de câteva minute pentru a efectua un calcul simplu. Astăzi, circuitele de calculator sunt microscopice în dimensiune, și mult mai repede. De ce computerele mai mici sunt, de asemenea, mai rapide? Ei bine, pentru că cu cât circuitul este mai mic, cu atât este mai mică distanța semnalului electric. Electricitatea se mișcă cu aproape viteza luminii, motiv pentru care circuitele moderne pot efectua miliarde de calcule pe secundă."
+      11:
+        text: "Deci, indiferent dacă jucați un joc, înregistrați un videoclip sau explorați cosmosul, tot ceea ce ați putea face cu tehnologia necesită o mulțime de informații pentru a fi procesate extrem de rapid. Sub toată această complexitate se află doar o mulțime de circuite mici care transformă semnalele binare în site-uri web, videoclipuri, muzică și jocuri. Aceste circuite ne pot ajuta chiar să decodificăm ADN-ul pentru a diagnostica și vindeca bolile. Deci, ce ai vrea să faci cu toate aceste circuite?"
+    csd_concept_memory_cpu_input_output:
+      1:
+        text: "Bună, mă numesc Madison Maxey. Am o companie numită Loomia și ne concentrăm pe confecționarea țesăturilor inteligente pentru îmbrăcăminte inteligentă și produse inteligente moi. Cerul este limita când vine vorba de textile."
+      2:
+        text: "Numele meu este Danielle Applestone și sunt CEO al Othermachine Company. Construim o mașină de frezat desktop. O mașină de frezat ia o unealtă de tăiere rotativă și o deplasează prin material pentru a crea un obiect 3D."
+      3:
+        text: "Sub capotă, toate computerele fac aceleași patru lucruri de bază. Acestea introduc informații, stochează și procesează informațiile și apoi transmit informații. Fiecare dintre aceste lucruri se face printr-o altă parte a computerului."
+      4:
+        text: "Există dispozitive de intrare care iau intrare din lumea exterioară și o transformă în informații binare. Există memorie pentru a stoca aceste informații. Există o unitate centrală de procesare sau un procesor, unde se fac toate calculele. Și, în sfârșit, există dispozitive de ieșire care iau informații și le transformă într-o ieșire fizică."
+      5:
+        text: "Să vorbim mai întâi despre intrare. Calculatoarele pot lua mai multe tipuri diferite de intrare, cum ar fi tastatura unui computer, touchpad-ul unui telefon, o cameră, un microfon sau un GPS. Dar chiar și senzorii de pe o mașină, un termostat sau o dronă sunt, de asemenea, dispozitive de intrare diferite."
+      6:
+        text: "Acum, să ne uităm la un exemplu simplu despre modul în care intrarea se deplasează printr-un computer și devine ieșire. Când apăsați o tastă de pe tastatură - să spunem litera „B”. Tastatura convertește litera într-un număr. Acest număr este trimis ca binar, unu și zerouri, în computer."
+      7:
+        text: "Pornind de la acest număr, CPU calculează modul de afișare a literei „B” pixel cu pixel. CPU solicită instrucțiuni pas cu pas din memorie, care îi spun cum să deseneze litera „B”. CPU rulează aceste instrucțiuni și stochează rezultatele ca pixeli în memorie."
+      8:
+        text: "În cele din urmă, aceste informații despre pixeli sunt trimise în binar pe ecran. Ecranul este un dispozitiv de ieșire, care transformă semnalele binare în luminile mici și culorile care alcătuiesc ceea ce vedeți."
+      9:
+        text: "Acest lucru se întâmplă atât de repede încât se simte instantaneu, dar pentru a afișa fiecare literă, un computer rulează mii de instrucțiuni, începând din momentul în care degetul apasă punctul cheie."
+      10:
+        text: "În acest exemplu, dispozitivul de ieșire a fost ecranul, dar există multe tipuri diferite de ieșire care iau un semnal binar de la computer și fac ceva în lumea fizică. De exemplu, un difuzor va reda sunetul, iar o imprimantă 3D va imprima un obiect. Dispozitivele de ieșire pot controla, de asemenea, mișcarea fizică, cum ar fi un braț robotizat, motorul unei mașini sau unealta de tăiere a mașinii de frezat pe care compania mea o face. Noile tipuri de intrări și ieșiri permit computerelor să interacționeze cu lumea în moduri complet noi. Acest lucru a fost ajutat de îmbunătățiri ale vitezei și dimensiunii memoriei și procesorului."
+      11:
+        text: "Cu cât este mai complicată o sarcină și cu cât sunt mai multe informații care sunt de intrare sau ieșire, cu atât mai multă putere de procesare și memorie de care are nevoie un computer. Tastarea literelor pe un ecran poate fi ușoară, dar pentru a face grafică 3D complicată sau pentru a înregistra un film de înaltă definiție, computerele moderne au adesea mai multe procesoare pentru a procesa toate aceste informații și multe gigabyte de memorie pentru a le stoca."
+      12:
+        text: "Indiferent ce vrei să faci cu computerul, fiecare acțiune este despre: introducerea informațiilor din lumea fizică, stocarea și procesarea informațiilor respective și obținerea unor rezultate înapoi în lumea fizică."
+    csd_concept_hardware_software:
+      1:
+        text: "Bună, mă numesc Erica Gomez și sunt manager de inginerie la Amazon.com. Unul dintre cele mai bune lucruri despre lucrul în tehnologie, și în special la Amazon, este că ajung să-mi aduc câinele cu mine să lucreze în fiecare zi. Treaba mea este să vă asigurați că software-ul iese pe ușă și treaba ei este să pui de somn sub biroul meu și să sforăie foarte tare."
+      2:
+        text: "Numele meu este Jerome Holman și sunt manager de programe pe Team Xbox și am o slujbă foarte distractivă: practic aducând hardware-ul și software-ul împreună pentru a vă oferi toate jocurile pe care le iubiți pe Xbox."
+      3:
+        text: "Când priviți în interiorul unui dispozitiv de calcul, vedeți o grămadă de circuite, cipuri, fire, difuzoare, prize și tot felul de alte lucruri. Acesta este hardware-ul."
+      4:
+        text: "Dar ceea ce nu vedeți este software-ul. Software-ul este toate programele de calculator, sau codul, care rulează pe această mașină. Software-ul poate fi orice, de la aplicații și jocuri la pagini web și software-ul științei datelor pe care eu și echipele mele îl folosesc la Amazon pentru a înțelege cum se comportă clienții."
+      5:
+        text: "Dar cum interacționează hardware-ul și software-ul unul cu celălalt? Să începem să ne uităm la unitatea centrală de procesare a unui computer sau la CPU."
+      6:
+        text: "CPU-ul este cipul principal care controlează toate celelalte părți ale computerului. Un procesor trebuie să facă lucruri diferite, astfel încât în interior să aibă părți mai mici, mai simple, care se ocupă de sarcini specifice. Are circuite pentru a face matematică și logică simplă. Are alte circuite pentru a trimite și primi informații către și din diferite părți ale computerului."
+      7:
+        text: "Adevărata magie a procesorului este cum știe ce circuite să folosească și când să le folosească. Procesorul primește comenzi simple care îi spun ce circuit să folosească pentru a face o anumită treabă. De exemplu, o comandă „adăugați” îi spune procesorului să utilizeze circuitul exterior pentru a calcula un număr nou. Și apoi comanda „magazin” îi spune procesorului să utilizeze un circuit diferit pentru a salva acel rezultat în memorie."
+      8:
+        text: "La fel ca numerele, toate aceste comenzi simple pot fi reprezentate în cele binare și zerouri sau pe și în afara semnalelor electrice. Comenzile binare sunt stocate în memorie, iar procesorul le preia și le execută în ordine una după alta. Această secvență de comenzi este, de fapt, un program de calculator foarte simplu."
+      9:
+        text: "Codul binar este cea mai de bază formă de software și controlează tot hardware-ul unui computer. Aceste zile, nimeni nu scrie software în binar. Ar dura pentru totdeauna!"
+      10:
+        text: "Astăzi, software-ul pe care îl scriem arată mai mult ca acesta (Python), sau acest lucru (Ruby), sau chiar acest lucru (Blockly). Limbaje de programare ca acestea vă permit să tastați comenzi în ceva care seamănă foarte mult cu limba engleză."
+      11:
+        text: "Pentru a desena un dreptunghi pe ecran, aveți nevoie doar de o singură comandă. Această comandă la nivel înalt este transformată în sute sau mii de comenzi binare mai simple pe care CPU le înțelege. Software-ul spune procesorului ce să facă, dar când ascultați muzică și navigați pe web și discutați cu un prieten, computerul dvs. rulează mai multe bucăți de software simultan."
+      12:
+        text: "Deci, cum toate aceste programe ajung pe computer în primul rând și cum poate procesorul să le ruleze pe toate simultan? Pentru a afla, va trebui să aruncăm o privire asupra sistemului de operare."
+      13:
+        text: "Sistemul de operare al computerului este programul master care gestionează modul în care software-ul ajunge să utilizeze hardware-ul computerului. De exemplu, am ajutat la crearea sistemului de operare Windows care rulează pe majoritatea computerelor personale."
+      14:
+        text: "Sistemul de operare este un program cu abilități speciale care îl permit să controleze celălalt software de pe computer. Vă permite să instalați programe noi încărcându-le în memoria computerului. Acesta decide când un program este rulat de unitatea centrală de procesare și dacă acel program poate accesa dispozitivele de intrare și ieșire ale computerului. Și când credeți că computerul dvs. rulează mai multe programe simultan, în realitate, sistemul de operare este cel care comută rapid între programe care partajează procesorul pentru fracțiuni de secundă."
+      15:
+        text: "În interiorul fiecărui computer este un sistem de operare care gestionează software-ul care controlează hardware-ul computerului."
+      16:
+        text: "Software-ul este o serie de comenzi realizate din cod binar simplu, iar acel cod binar este doar semnale electrice care curg prin miliarde de circuite mici."
+      17:
+        text: "Calculatoarele au potențialul de a face tot felul de lucruri uimitoare. Dar singurul lucru care face computerul inteligent sau util ești tu. Când înveți să programezi, ajungi să definești problema pe care vrei să o rezolvi și să scrii software-ul care transformă acele idei în realitate."
     hoc_dance_warmup:
       1:
         text: "Ora de cod | Petrecere cu dans: Pregătire"
@@ -1431,6 +1664,151 @@ ro:
         text: "Sau orice altceva care să le cuprindă pe toate?"
       7:
         text: "La sfârşitul tutorialului poţi partaja link-ul creaţiei tale cu prietenii. Extindeţi imaginaţia şi distrează-te!"
+    mc_2018_intro:
+      1:
+        text: "Bună ziua! Ești la timp. Bine ați venit la Voyage Aquatic. Sunt pe punctul de a începe o căutare pentru a găsi comoara subacvatică ascunsă și sunt foarte bucuros să am ajutorul tău. Cine știe ce vom întâlni de-a lungul acestor căi navigabile misterioase? Suntem meniți să întâlnim primul nostru ghid undeva pe acest doc."
+      2:
+        text: "Bine ai venit, aventurieri! Pentru a finaliza Voyage Aquatic va trebui să rezolvați o serie de puzzle-uri folosind codul. Iată cum funcționează. Ecranul dvs. este împărțit în trei părți principale."
+      3:
+        text: "În stânga, veți vedea lumea Minecraft."
+      4:
+        text: "Zona de mijloc este caseta de instrumente unde puteți găsi comenzi de codificare."
+      5:
+        text: "Iar zona mare din dreapta este spațiul dvs. de lucru. Aici puteți stiva comenzi pentru a vă construi programul și pentru a vă controla mișcările."
+      6:
+        text: "Instrucțiunile de fiecare nivel sunt pe partea de sus a paginii. Faceți clic pe semnul plus pentru a schimba între instrucțiunile lungi și scurte."
+      7:
+        text: "Încercați să trageți blocuri din caseta de instrumente în spațiul de lucru, stivuiți-le, apoi faceți clic pe butonul Run pentru a executa comenzile."
+      8:
+        text: "S-ar putea să trebuiască să încercați de câteva ori să o faceți bine și unele dintre puzzle-uri au mai multe soluții, așa că experimentați pentru a vedea ce funcționează."
+      9:
+        text: "Dacă doriți să încercați din nou, faceți clic pe butonul de resetare pentru a reveni de unde ați început."
+      10:
+        text: "Dacă trebuie să ștergeți o comandă, trageți blocul din spațiul de lucru înapoi în caseta de instrumente. Amintiți-vă, faceți clic pe „Executare” pentru a vedea cum arată codul dvs. în acțiune."
+      11:
+        text: "Bine, destul de încurcat în jur, coleg aventurier. Să începem de codificare pentru a găsi unele comori subacvatice."
+    MC_2018_loops:
+      1:
+        text: "Grozav! Am prins un cod de pește! Știați că dacă hrăniți un pește de cod unui delfin, delfinul vă va îndruma către un naufragiu unde pot exista comori? Trebuie să ne apropiem. Următorul set de puzzle-uri sunt obligate să fie mai complicat, așa că mai bine învățăm mai multe abilități de codificare. Ce e asta? O peșteră?"
+      2:
+        text: "Bine ai venit, aventurieri! Numele meu este Squid. Am observat că utilizați același set de comenzi de peste si peste, în unele dintre ultimele puzzle-uri. Trebuie să fi fost un pic obositor. Îți dorești vreodată să ai o modalitate de a face ceva din nou și din nou, cum ar fi, știi, să speli vasele sau să te speli pe dinți fără să te obosești sau să te plictisești? Asta ar fi frumos."
+      3:
+        text: "Calculatoarele sunt foarte bune la a face același lucru de peste si peste din nou, folosind bucle de codificare. Când doriți ca programul dvs. să facă aceleași instrucțiuni de mai multe ori, puteți utiliza o buclă!"
+      4:
+        text: "Blocul de buclă conține instrucțiuni care se repetă până la atingerea obiectivului. Odată ce programul începe o buclă „Repetați până la obiectiv”, va continua să repete instrucțiunile din interior până când ajunge la obiectiv."
+      5:
+        text: "Încearcă asta pentru tine! Plasați comenzile pe care doriți să le repetați în interiorul blocului „Repetați până la obiectiv”, faceți clic pe „Run” și urmăriți-l!"
+      6:
+        text: "Ei bine, a fost un pic ciudat. Cine știa că calmarii ar putea codifica? Nici măcar nu credeam că au degete. Deci, acum știm despre bucle. Să le folosim pentru a ne geanta mai multă comoară."
+    mc_2018_conditionals:
+      1:
+        text: "Uau! Alte trei puzzle-uri rezolvate! Și am prins... un somon. Nu la fel de interesant ca grămezi de aur, dar vom lua ceea ce putem obține. Și am senzația că coaja de nautilus va veni la îndemână mai târziu. Mă întreb ce se ascunde în aceste ruine. Poate un alt indiciu! Să aruncăm o privire înăuntru."
+      2:
+        text: "Numele meu este Netty și bun venit la ruinele mele. Luăm decizii tot timpul în funcție de condiții. Dacă pare ploaie, atunci vom apuca o umbrelă. Dacă ne este foame, atunci vom mânca o gustare."
+      3:
+        text: "Dacă vedem un târâtor, atunci alergăm în direcția opusă. Calculatoarele iau și aceste tipuri de decizii. Ele pot răspunde de fapt la condiții folosind codul."
+      4:
+        text: "Pentru a programa un răspuns ca acesta utilizând comenzile de cod, selectați un bloc de cale if."
+      5:
+        text: "Selectați meniul derulant pentru a crea comanda."
+      6:
+        text: "De exemplu, dacă scrieți comanda „dacă calea spre dreapta” și plasați virați la dreapta în interiorul condițional, atunci când Steve ajunge la o cale deschisă spre dreapta, el se va întoarce întotdeauna la dreapta. Dacă nu există nici o deschidere spre dreapta, el nu se va întoarce la dreapta. Aceste comenzi condiționate dacă sunt utile atunci când executați cod în situații imprevizibile, cum ar fi ruinele misterioase din peșterile subacvatice."
+      7:
+        text: "Încercați să utilizați dacă blocuri și să ia codul pentru un spin."
+      8:
+        text: "Uau! Ruinele lui Netty au fost minunate. Chiar trebuie să mă mut din casa părinților mei. Deci, ce crezi? Sunt condițiile potrivite pentru noi pentru a finaliza puzzle-urile finale? Să mergem."
+    mc_2018_closing:
+      1:
+        text: "Amy Lee33: Felicitări! Ai făcut-o!"
+      2:
+        text: "Squid: Felicitări!"
+      3:
+        text: "Netty: Ai făcut-o! Felicitări!"
+      4:
+        text: "Tomohawk: Felicitări!"
+      5:
+        text: "Ce zi grozavă! Toată vânătoarea de comori ne-a determinat să construim o conductă Minecraft, să găsim cochilii Nautilus și să descoperim cufere cu comori. Îmi place doar culoarea prismarine. De asemenea, am învățat cum să codificăm cu bucle și condiționări."
+      6:
+        text: "Vorbind de codificare, există încă un nivel pentru această căutare. Ești pentru asta, aventurieri?"
+      7:
+        text: "Este un nivel de joc gratuit și vă puteți pune abilitățile de codificare pentru a utiliza și de a construi ceva incredibil."
+      8:
+        text: "Hmmm... un loc unde să vă ascundeți comoara, un monument subacvatic, un castel de corali? Ahhh... atâtea idei. Încercați să utilizați bucle pentru a crea o acțiune repetată și condiționări pentru a vă pregăti pentru toate acele scenarii imprevizibile."
+      9:
+        text: "Cu siguranță v-ați dovedit un programator îndrăzneț până acum și abia aștept să văd ce construiți. Și sperăm că aventurile tale cu cod nu se termină aici. Bon Voyage!"
+    teaching_csf_how_it_works:
+      1:
+        image: 'notes/teaching_cs_fundamentals_1.png'
+        text: "Acest curs este împărțit în etape."
+      2:
+        image: 'notes/teaching_cs_fundamentals_2.png'
+        text: "Primele câteva etape vor introduce ceea ce este știința calculatoarelor, precum și un vocabular cheie."
+      3:
+        image: 'notes/teaching_cs_fundamentals_3.png'
+        text: "În continuare, veți învăța cum să codificați în același mod în care elevii dvs. vor. Etapele finale ale cursului vă vor ajuta să faceți un plan de predare a informaticii în clasă. Pe tot parcursul cursului, veți vedea exemple de lecții conectate - sau online -, precum și lecții deconectate care se fac fără computer."
+      4:
+        image: 'notes/teaching_cs_fundamentals_4.png'
+        text: "Platforma de învățare vă va urmări progresul, astfel încât să puteți ridica de unde ați rămas în orice moment."
+    what_is_cs:
+      1:
+        image: 'notes/what_is_cs.png'
+        text: "Codificarea este setul de instrucțiuni pe care le dați unui computer. Informatica este un domeniu în care oamenii folosesc puterea calculatoarelor pentru a rezolva probleme mari. Informatica include codificarea, dar include și alte lucruri, cum ar fi modul în care funcționează internetul și impactul asupra societății, ce să facă cu volumele mari de date și cum să descompună problemele mari. Informatica se referă la rezolvarea problemelor, gândirea critică și persistența."
+    writing_first_program:
+      1:
+        image: 'notes/writing_first_program_1.png'
+        text: "Code.org folosește un limbaj de programare vizual, drag and drop numit Blockly. Blockly folosește instrucțiuni colorate numite blocuri pentru a construi programe și a rezolva puzzle-uri."
+      2:
+        image: 'notes/writing_first_program_2.png'
+        text: "Fiecare puzzle are patru părți."
+      3:
+        image: 'notes/writing_first_program_3.png'
+        text: "Zona de joacă este în partea stângă, unde rulează programul."
+      4:
+        image: 'notes/writing_first_program_4.png'
+        text: "Centrul are zona cutiei de instrumente, care are toate blocurile de care aveți nevoie."
+      5:
+        image: 'notes/writing_first_program_5.png'
+        text: "În dreapta este spațiul de lucru, unde veți trage blocuri pentru a vă construi programul."
+      6:
+        image: 'notes/writing_first_program_6.png'
+        text: "Deasupra spațiului de lucru sunt instrucțiunile pentru fiecare puzzle."
+      7:
+        image: 'notes/writing_first_program_7.png'
+        text: "Dacă trageți prea multe blocuri din caseta de instrumente, trageți blocul suplimentar înapoi în caseta de instrumente. Apăsați Alerga pentru a încerca programul dvs. și Resetați pentru a încerca din nou."
+    repeat_block:
+      1:
+        image: 'notes/repeat_block.png'
+        text: "Un bloc de repetare vă permite să bucla codul din interiorul acestuia ori de câte ori îi spuneți."
+    what_is_an_event:
+      1:
+        image: 'notes/what_is_an_event.png'
+        text: "Un eveniment spune programului dvs. să asculte pentru ceva să se întâmple. Când se întâmplă acest lucru, programul efectuează o acțiune. Un computer poate asculta un clic de mouse, poate apăsa pe un buton săgeată sau o atingere pe ecran."
+    lesson_planning:
+      1:
+        image: 'notes/lesson_planning_1.png'
+        text: "Lecțiile CS Fundamentele încep cu prezentări generale pentru a vă informa ce va acoperi lecția."
+      2:
+        image: 'notes/lesson_planning_2.png'
+        text: "Lecțiile au încălziri, activități și împachetări. Dacă doriți să vă creați propriile planuri de lecție, vă recomandăm să țineți cont de aceste sfaturi."
+      3:
+        image: 'notes/lesson_planning_3.png'
+        text: "1. Încercați să utilizați un design curriculum spiralat. Introduceți concepte o dată și apoi revizitează-le."
+      4:
+        image: 'notes/lesson_planning_4.png'
+        text: "2. Creați o experiență de învățare mixtă combinând lecțiile online cu lecțiile deconectate."
+      5:
+        image: 'notes/lesson_planning_5.png'
+        text: "3. Împărțiți-vă curriculum-ul în bucăți mai mici."
+      6:
+        image: 'notes/lesson_planning_6.png'
+        text: "4. Asigurați-vă că vă aliniați la standardele locale și abilitățile de pregătire a colegiului și carierei."
+    opd_closing:
+      1:
+        image: 'notes/opd_closing_1.png'
+        text: "Felicitări! Ați finalizat cursul online Teaching Computer Science Fundamentals. Acum faceți parte din comunitatea în creștere a profesorilor care își pregătesc elevii pentru viitor."
+      2:
+        image: 'notes/opd_closing_2.png'
+        text: "Check out aceste resurse, dacă aveți nevoie de mai mult sprijin: 1. forum.code.org 2. @teachcode pe Twitter 3. studio.code.org "
     hoc_dance_warmup_2019:
       1:
         text: "Ora de cod | Petrecere cu dans: Pregătire"
@@ -1451,6 +1829,7 @@ ro:
       9:
         text: "Instrucţiunile pentru fiecare nivel vor fi afişate aici în partea de sus a ecranului. Dacă doreşti o sugestie, apasă pe bec."
       10:
+        text: "Pentru a începe, haideți să facem un nou dansator cu acest bloc roșu. Mai întâi, trageți-l din caseta de instrumente și fixați-l sub acest bloc portocaliu „setup”. Acest dansator este o pisică."
       11:
         text: "Poţi să schimbi unde apare dansatorul în scena ta cu asta."
       12:
@@ -1461,20 +1840,28 @@ ro:
       1:
         text: "Ora de cod | Petrecere cu dans: Evenimente"
       2:
+        text: "Numele meu este Erin și sunt inginer software aici la Code.org și am ajutat la construirea Dance Party."
       3:
         text: "Pentru a face diverse mişcări de dans care să aibă loc la momentul potrivit din muzică, poţi folosi ceva numit evenimente (events). Un eveniment îi spune programului tău să urmărească ceva care o să se întâmple, după care să reacţioneze în modul potrivit."
       4:
         text: "Cateva exeple de evenimente sunt de ascultare pentru un clic de mouse, un buton segeata sau un robinet pe ecran."
       5:
+        text: "Aici vom programa un dansator pentru a efectua o mișcare atunci când apăsați butoanele săgeată de pe ecran sau tastele de pe tastatură."
       6:
+        text: "Putem folosi blocul de evenimente „când săgeata sus” și putem conecta un bloc „do once” la acesta. Când cineva apasă tasta săgeată sus, codul atașat la blocul „când săgeata sus” este rulat. Ce mișcare de dans vei alege?"
       7:
+        text: "Asigurați-vă că tipul de dansator pe care îl alegeți se potrivește cu unul dintre dansatorii pe care i-ați creat în blocul „setup” sau este posibil să nu vedeți nimic să se întâmple."
       8:
+        text: "În cele din urmă, puteți crea mai multe evenimente de acest gen pentru a face dansatorii dvs. să efectueze mișcări diferite cu fiecare tastă. Încercați și, cu câteva linii de cod, puteți face propriul dans interactiv."
     hoc_dance_measures_2019:
       1:
+        text: "Hour of Code | Dance Party: Măsuri"
       2:
         text: "Sunt Aloe Blacc. Sunt câtăreţ/scriitor de cântece şi comediant. Cred că este foarte important \nsă învăţăm ştiinţa calculatoarelor deoarece aceasta reprezintă viitorul, şi cred că este important pentru oameni să controleze tehnologia care le controlează literalmente viaţa."
       3:
+        text: "Evenimentul pe care îl vom folosi acum va asculta pentru o schimbare în melodie. Această schimbare vă va declanșa dansatorul să faceți un nou dans."
       4:
+        text: "Dansatorii profesioniști își practică coregrafia numărând bătăile cântecului. În muzică, o măsură se referă la un anumit număr de bătăi. În cele mai populare melodii, o măsură este de patru bătăi lungi."
       5:
         text: "Pentru a lăsa dansatorii liberi, ai nevoie de un bloc de tip eveniment verde. Acest bloc de tip eveniment spune \"după patru măsuri\"."
       6:
@@ -1491,12 +1878,15 @@ ro:
       3:
         text: "Iubesc ştiinţa calculatoarelor pentru că încorporează rezolvarea de probleme \nşi gîndirea critică şi după ce petreci multe ore de lucru pentru ceva, poţi obţine ceva foarte interesant şi profitabil din asta."
       4:
+        text: "Până acum ați avut șansa de a juca diferite tipuri de dansatori și le-ați programat să facă diferite tipuri de mișcări de dans. Dar cum funcționează aceste mișcări?"
       5:
         text: "Fiecare mişcare de dans este făcută dintr-o serie de imagini numite cadre (frames). Fiecare cadru este uşor diferit de cel anterior. Când programul tău se execută, calculatorul arată cadrele unul după altul. Ele sunt afişate atât de repede încât ţi se pare că dansatorul se mişcă. Acesta este secretul din spatele tuturor animaţiilor."
       6:
         text: "Pe lângă faptul că poţi schimba mişcările dansatorului, poţi schimba şi proprietăţile dansatorului. Proprietăţile descriu lucruri ca poziţia dansatorului pe ecran, dimensiunea dansatorului şi culoarea dansatorului."
       7:
+        text: "Pentru a schimba proprietățile unui dansator, veți folosi un bloc setat. Să folosim un bloc set pentru a face dansatorii noștri să pară mai mici. Mai întâi, trageți blocul setat în programul dvs."
       8:
+        text: "Apoi, selectați un dansator pe care doriți să îl modificați și tastați dimensiunea pe care o vor apărea pe ecran. Dimensiunea completă este de 100. Dacă alegeți un număr mai mic, acest lucru va face dansatorul mai mic. Cu cât dansatorul este mai mic, cu atât arată mai departe."
       9:
         text: "Utilizând un bloc \"setează\", poţi schimba dansatorului următoarele: dimensiunea, rotaţia, poziţia şi culoarea. Jucându-te cu aceste proprietăţi poţi face orice tip de modificări pe care\nsă le legi la diverse părţi din cântec."
       10:
@@ -1519,23 +1909,163 @@ ro:
     poemart_intro:
       1:
         image: 'notes/hoc_poem_art_2021_introduction_01.jpg'
+        text: "Numele meu este Caia și sunt poet și student la informatică. Am învățat atât de multe din codificare, care m-a făcut un poet mai bun, și atât de multe despre poezia mea m-a făcut mai bună la codificare, doar pentru că trebuie să te gândești cu adevărat la cuvintele pe care le alegi și la ce vei crea odată ce totul se va uni."
       2:
         image: 'notes/hoc_poem_art_2021_introduction_02.jpg'
+        text: "În următoarea oră, veți învăța despre informatică și poezie creând un poem animat. În esență, poezia înseamnă a face artă cu cuvinte. Creez poezie pentru a mă exprima; încerc să stârnesc imaginația și emoțiile publicului atunci când scriu folosind stilul și ritmul meu unic."
       3:
         image: 'notes/hoc_poem_art_2021_introduction_03.jpg'
+        text: "La fel ca arta, poemele pot fi interpretate în mai multe moduri diferite. Aceeași poezie ar putea însemna lucruri foarte diferite pentru oameni diferiți și fiecare poezie are propria dispoziție. Starea de spirit este sentimentul pe care îl obțineți dintr-o poezie. Uneori oamenii asociază anumite culori și imagini cu diferite stări de spirit."
       4:
         image: 'notes/hoc_poem_art_2021_introduction_04.jpg'
+        text: "De exemplu, culoarea galbenă mă face să mă simt vesel. Și când mă gândesc la o stare de spirit ca frica, îmi imaginez uneori o noapte întunecată și furtunoasă în capul meu. În această activitate veți avea ocazia să ilustrați și să animați starea de spirit a unui poem bazat pe modul în care vă face să vă simțiți."
       5:
         image: 'notes/hoc_poem_art_2021_introduction_05.jpg'
+        text: "Să aruncăm o privire la modul în care veți face acest lucru folosind codul. Veți vedea că ecranul dvs. este împărțit în trei părți principale. În stânga este spațiul de joc. Aici va apărea poemul tău animat. Fiecare poezie are un titlu și un autor."
       6:
         image: 'notes/hoc_poem_art_2021_introduction_06.jpg'
+        text: "Această zonă de mijloc este caseta de instrumente. Noile blocuri de cod vor deveni disponibile în acest spațiu pe măsură ce parcurgeți lecția."
       7:
         image: 'notes/hoc_poem_art_2021_introduction_07.jpg'
+        text: "Spațiul din dreapta este spațiul de lucru. Puteți trage blocuri din caseta de instrumente și în spațiul de lucru pentru a construi programul."
       8:
         image: 'notes/hoc_poem_art_2021_introduction_08.jpg'
+        text: "Instrucțiunile pentru fiecare nivel va fi aici, în partea de sus a ecranului. Dacă doriți un indiciu, faceți clic pe becul."
       9:
         image: 'notes/hoc_poem_art_2021_introduction_09.jpg'
+        text: "Mai întâi, selectați o poezie care vă place. Există tot felul de poezii și puteți alege unul nou la fiecare nivel."
       10:
         image: 'notes/hoc_poem_art_2021_introduction_10.jpg'
+        text: "Apoi, veți trage blocuri din caseta de instrumente în spațiul dvs. de lucru pentru a vă anima poezia. Puteți alege o culoare de fundal sau un efect care să se potrivească cu starea de spirit a poemului dvs., apoi faceți clic pe „Alerga” pentru a vedea poezia în acțiune."
       11:
         image: 'notes/hoc_poem_art_2021_introduction_11.jpg'
+        text: "Petreceți ceva timp citind diferitele poezii și găsiți una care vă stârnește emoție. Gândiți-vă cum vă simțiți și cum puteți comunica acest sentiment prin imagini și cod."
+    poemart_events:
+      1:
+        image: 'notes/hoc_poem_art_2021_events_01.jpg'
+        text: "Uneori starea de spirit a unei poezii se schimbă parțial prin poezie. Ceea ce ar putea începe ca o poezie cu sunet fericit devine trist, sau poate întunericul se transformă în lumină."
+      2:
+        image: 'notes/hoc_poem_art_2021_events_02.jpg'
+        text: "În această activitate veți lucra cu evenimente. Puteți utiliza acest bloc de evenimente pentru a schimba cursul programului dvs. atunci când apare o linie specifică din poezia dvs. Observați că blocurile de evenimente nu se fixează în programul principal. În schimb, ei creează mici programe proprii."
+      3:
+        image: 'notes/hoc_poem_art_2021_events_03.jpg'
+        text: "Citiți poezia dvs. și găsiți un moment în care starea de spirit se schimbă. Numărați ce linie se întâmplă: una, două, trei. În blocul de evenimente, introduceți numărul liniei."
+      4:
+        image: 'notes/hoc_poem_art_2021_events_04.jpg'
+        text: "Apoi programați ceva pentru a reflecta schimbarea stării de spirit atunci când linia apare pe ecran. Când apăsați „Alerga” puteți vedea ce ați codificat."
+    poemart_imagery:
+      1:
+        image: 'notes/hoc_poem_art_2021_imagery_01.jpg'
+        text: "În poezie, autorii folosesc imagini pentru a picta o imagine în mintea cititorului. Când vedem cuvântul crocodil, ne imaginăm automat un crocodil verde în mintea noastră. Pentru a obține o imagine ca aceasta într-o animație vom folosi sprite."
+      2:
+        image: 'notes/hoc_poem_art_2021_imagery_02.jpg'
+        text: "Acest lucru face un nou bloc sprite care vă permite să facă un sprite și alege un costum pentru ea. Alege un costum pentru Sprite care crezi că merge cu poezia."
+      3:
+        image: 'notes/hoc_poem_art_2021_imagery_03.jpg'
+        text: "Pentru a schimba locația sprite, aveți posibilitatea să faceți clic pe pictograma PIN în blocul de locație, și apoi faceți clic în cazul în care doriți să meargă în spațiul de redare."
+      4:
+        image: 'notes/hoc_poem_art_2021_imagery_04.jpg'
+        text: "În următoarele câteva niveluri veți vedea unele blocuri noi. Acest bloc vă permite să modificați dimensiunea sprite. Acest bloc vă permite să anima sprite cu comportamentul."
+      5:
+        image: 'notes/hoc_poem_art_2021_imagery_05.jpg'
+        text: "Dacă o poezie menționează nori rătăcitori, mai întâi face sprite nor, apoi selectați acest bloc de comportament, trageți-l afară, și alegeți rătăcire."
+      6:
+        image: 'notes/hoc_poem_art_2021_imagery_06.jpg'
+        text: "Asigurați-vă că costumele Sprite se potrivesc. Când apăsați run, veți citi și veți vedea un nor rătăcitor."
+      7:
+        image: 'notes/hoc_poem_art_2021_imagery_07.jpg'
+        text: "Acum puteți adăuga imagini literale pentru a ilustra cuvintele din poezie. Distreaza-te!"
+    poemart_celebration:
+      1:
+        image: 'notes/hoc_poem_art_2021_celebration_01.jpg'
+        text: "Felicitări! Tocmai ați învățat elementele de bază ale informaticii și cum să găsiți starea de spirit a unei poezii. Acum vă puteți crea propria poezie animată pe care să o împărtășiți prietenilor."
+      2:
+        image: 'notes/hoc_poem_art_2021_celebration_02.jpg'
+        text: "Veți alege cu atenție o scenă simplă pentru întreaga poezie?"
+      3:
+        image: 'notes/hoc_poem_art_2021_celebration_03.jpg'
+        text: "Sau vei folosi o mulțime de evenimente pentru a crea o nouă scenă pentru fiecare linie a poemului tău?"
+      4:
+        image: 'notes/hoc_poem_art_2021_celebration_04.jpg'
+        text: "La sfârșitul tutorialului puteți partaja un link către creația dvs. cu prietenii."
+      5:
+        image: 'notes/hoc_poem_art_2021_celebration_05.jpg'
+        text: "Întinde-ți imaginația și distrează-te!"
+    hello_world_intro:
+      1:
+        image: 'notes/hoc_hello_world_2021_introduction_01.jpg'
+        text: "Bună! Numele meu este Erin și sunt inginer software aici la Code.org. Sunt atât de entuziasmat, pentru că am ajuns să lucrez la tutorialul pe care urmează să îl faci! Noi o numim „Bună ziua lume”."
+      2:
+        image: 'notes/hoc_hello_world_2021_introduction_02.jpg'
+        text: "„Hello World” este o frază celebră în informatică, iar afișarea acestei fraze este un prim pas comun în învățarea informaticii. În următoarea oră, ai de gând pentru a începe cu informatică de programare în Sprite Lab."
+      3:
+        image: 'notes/hoc_hello_world_2021_introduction_03.jpg'
+        text: "Sprite Lab este un instrument pe care îl puteți utiliza pentru a construi proiecte imaginative și distractive. Veți vedea că ecranul dvs. este împărțit în trei părți principale. În stânga este spațiul de joc. Acest lucru este în cazul în care sprites dumneavoastră va apărea."
+      4:
+        image: 'notes/hoc_hello_world_2021_introduction_04.jpg'
+        text: "Sprites sunt obiecte de pe ecran cu care puteți interacționa, cum ar fi un personaj sau un element dintr-o poveste sau joc."
+      5:
+        image: 'notes/hoc_hello_world_2021_introduction_05.jpg'
+        text: "Această zonă de mijloc este caseta de instrumente. Noile blocuri de cod vor deveni disponibile în acest spațiu pe măsură ce parcurgeți lecția."
+      6:
+        image: 'notes/hoc_hello_world_2021_introduction_06.jpg'
+        text: "Spațiul din dreapta este spațiul de lucru. Puteți trage blocuri din caseta de instrumente și în spațiul de lucru pentru a vă construi programul."
+      7:
+        image: 'notes/hoc_hello_world_2021_introduction_07.jpg'
+        text: "Instrucțiunile pentru fiecare nivel va fi aici, în partea de sus a ecranului. Dacă doriți un indiciu, faceți clic pe becul."
+      8:
+        image: 'notes/hoc_hello_world_2021_introduction_08.jpg'
+        text: "Pentru a începe, să facem un sprite! Acest bloc vă permite să dea Sprite un costum și o locație. Costumul este cuvântul pe care îl folosim pentru a descrie aspectul unui sprite. Pentru a schimba locația sprite, puteți face clic pe pictograma PIN din blocul de locație, apoi faceți clic pe unde doriți să meargă."
+      9:
+        image: 'notes/hoc_hello_world_2021_introduction_09.jpg'
+        text: "Acum, haideți să aibă Sprite se introduce! Pentru a face sprite spune ceva, utilizați acest „Spune” bloc, și adăugați-l la programul. Asigurați-vă că costumul selectat în blocul dvs. „Spune” se potrivește cu costumul din Sprite."
+      10:
+        image: 'notes/hoc_hello_world_2021_introduction_10.jpg'
+        text: "Când apăsați „Alerga”, Sprite va spune orice text ai spune. Acum este timpul să începeți cu Sprite Lab și să vedeți unde vă conduce imaginația!"
+    hello_world_events:
+      1:
+        image: 'notes/hoc_hello_world_2021_events_01.jpg'
+        text: "Acum, că ați învățat cum să utilizați Sprite Lab, ai de gând să doriți să facă programul reacționează atunci când cineva joacă cu ea. Pentru a face acest lucru, ai de gând să utilizeze evenimente. Un eveniment spune programului dvs. să asculte ceva să se întâmple și apoi să reacționeze imediat."
+      2:
+        image: 'notes/hoc_hello_world_2021_events_02.jpg'
+        text: "Câteva exemple de evenimente sunt ascultarea unui clic de mouse, a unui buton săgeată sau a unei atingeri pe ecran. Blocuri precum „când se face clic” se numesc blocuri de evenimente. Codul conectat la un bloc de evenimente rulează atunci când este detectată acțiunea corespunzătoare."
+      3:
+        image: 'notes/hoc_hello_world_2021_events_03.jpg'
+        text: "De exemplu, dacă am atașa acest „spune” bloc la „atunci când a făcut clic” eveniment, Sprite mea va spune ceva atunci când utilizatorul face clic sau atinge pe ea. Observați că blocurile de evenimente nu se fixează în programul principal. În schimb, ei creează mici programe proprii."
+      4:
+        image: 'notes/hoc_hello_world_2021_events_04.jpg'
+        text: "Dacă aveți mai multe sprite, puteți utiliza evenimente suplimentare pentru a spune o poveste interactivă."
+      5:
+        image: 'notes/hoc_hello_world_2021_events_05.jpg'
+        text: "În curând veți învăța cum să faceți și mai mult în Sprite Lab, inclusiv schimbarea dimensiunii sau aspectului unui sprite, setarea diferitelor fundaluri, redarea sunetelor și multe altele. Ce vrei sprites dumneavoastră să facă atunci când cineva interacţionează cu ei? Este de până la tine!"
+    hello_world_congrats:
+      1:
+        image: 'notes/hoc_hello_world_2021_freeplay_01.jpg'
+        text: "Felicitări! Tocmai ați învățat elementele de bază ale informaticii. Acum puteți utiliza Sprite Lab pentru a crea tot ce vrei."
+      2:
+        image: 'notes/hoc_hello_world_2021_freeplay_02.jpg'
+        text: "Veți vedea un buton care spune Costume. Când faceți clic pe ea, puteți alege noi costume sprite dintr-o bibliotecă."
+      3:
+        image: 'notes/hoc_hello_world_2021_freeplay_03.jpg'
+        text: "De asemenea, puteți desena propriul dvs.! Odată ce ai un costum care îți place, reveniți la codul tău."
+      4:
+        image: 'notes/hoc_hello_world_2021_freeplay_04.jpg'
+        text: "Acum, selectați acel costum pentru Sprite dvs.."
+      5:
+        image: 'notes/hoc_hello_world_2021_freeplay_05.jpg'
+        text: "Dacă te uiți în caseta de instrumente, vei găsi câteva blocuri noi pe care nu le-ai mai văzut până acum. De exemplu, există o mulțime de blocuri de comportament care vă va permite să obțineți Sprite dvs. în mișcare în moduri distractive și interesante."
+      6:
+        image: 'notes/hoc_hello_world_2021_freeplay_06.jpg'
+        text: "Puteți utiliza blocul de evenimente „când atinge” pentru a controla ceea ce se întâmplă atunci când două sprite se ciocnesc unul în celălalt."
+      7:
+        image: 'notes/hoc_hello_world_2021_freeplay_07.jpg'
+        text: "Căutați blocul „creați efect”. Acest bloc puternic poate fi folosit pentru a face o grămadă de sprite care izbucnesc, sau pop, sau ploaie la comandă."
+      8:
+        image: 'notes/hoc_hello_world_2021_freeplay_08.jpg'
+        text: "Aruncați o privire în jur și încercați să experimentați aceste noi blocuri și caracteristici. La sfârșitul tutorialului, faceți clic pe butonul „Distribuiți” pentru a partaja cu prietenii un link către creația dvs."
+      9:
+        image: 'notes/hoc_hello_world_2021_freeplay_09.jpg'
+        text: "Aveți toate abilitățile puternice de care aveți nevoie pentru a începe să dezvoltați aplicații, jocuri și alte programe noi în Sprite Lab! Folosiți-vă noile puteri pentru totdeauna. Fii amabil și respectuos, la fel cum ai face dacă ai crea ceva pe hârtie sau ai vorbi cu un prieten."
+      10:
+        image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
+        text: "Deci, ce veți crea? Ai putea spune o poveste despre tine... sau să faci una cu propriile tale personaje speciale. Poate veți folosi chiar și noile abilități de informatică pentru următorul proiect școlar! Întinde-ți imaginația și distrează-te!"

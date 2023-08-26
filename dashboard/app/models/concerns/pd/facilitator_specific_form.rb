@@ -15,8 +15,8 @@ module Pd::FacilitatorSpecificForm
   def validate_required_fields
     hash = sanitized_form_data_hash
 
-    if get_facilitator_names.any?
-      add_key_error(:who_facilitated) unless hash.key?(:who_facilitated)
+    if get_facilitator_names.any? && !hash.key?(:who_facilitated)
+      add_key_error(:who_facilitated)
     end
 
     # validate facilitator required fields

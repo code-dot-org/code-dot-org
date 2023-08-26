@@ -47,6 +47,7 @@ pl:
           description_short: Twórz bardziej złożone programy wykorzystując pętle i funkcje z parametrami. To jest kontynuacja Kursu 3.
           description_audience: W wieku 10-18
           student_description: Kurs 4 przeznaczony jest dla uczniów, którzy ukończyli Kursy 2 i 3. Uczniowie nauczą się jak rozwiązywać bardziej złożone łamigłówki, nauczą się jak łączyć kilka pojęć przy rozwiązywaniu każdego wyzwania. Do czasu ukończenia tego Kursu, uczniowie utworzą programy, w których zademonstrują wiele umiejętności, w tym z wykorzystaniem pętli i funkcji z parametrami. Zalecany dla klas 4-8.
+          name: course4
         Course4pre:
           title: Wymagania wstępne dla Kursu 4
           description: Krótkie przypomnienie pojęć dla uczniów, którzy nie ukończyli Kursów 2 i 3.
@@ -68,12 +69,15 @@ pl:
           description: Dowiedz się, jak działa Internet.
           description_short: Dowiedz się, jak działa Internet.
           student_description: Dowiedz się, jak działa Internet.
+        pixelation:
+          title: Pikselacja
         20-hour:
           title: Przyspieszone wprowadzenie do kursu informatyki
           description: Ten 20-godzinny godzinny kurs pokrywa podstawowe pojęcia z zakresu informatyki i programowania z kursów 2-4. Kurs jest przeznaczony dla uczniów w wieku 10-18 lat. Przejrzyj bogatsze w doświadczenia kursy 2-4!
           description_short: Ten 20-godzinny kurs obejmuje podstawowe pojęcia z informatyki i programowania występujące w kursach 2-4.
           description_audience: W wieku 10-18
           student_description: Ten 20-godzinny godzinny kurs pokrywa podstawowe pojęcia z zakresu informatyki i programowania z kursów 2-4. Kurs jest przeznaczony dla uczniów w wieku 10-18 lat. Przejrzyj bogatsze w doświadczenia kursy 2-4!
+          name: 20 godzina
         edit-code:
           title: Edytuj kod
           description: Edytuj kod
@@ -143,6 +147,8 @@ pl:
           lessons:
             lesson-49:
               name: Muzyka
+            lesson-50:
+              name: Czat AI
         algebraPD2b:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -471,14 +477,19 @@ pl:
         flappy-impact-study:
           title: Kod Flappiego z ankietą
         coursea-draft:
+          title: 'Podstawy CS: Kurs A'
           description_short: Wprowadzenie do informatyki dla osób uczących się czytać.
         courseb-draft:
+          title: 'Podstawy CS: Kurs B'
           description_short: Wprowadzenie do informatyki dla osób uczących się czytać.
         coursec-draft:
+          title: 'Podstawy CS: Kurs C'
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
         coursed-draft:
+          title: 'Podstawy CS: Kurs D'
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
         coursee-draft:
+          title: 'Podstawy CS: Kurs E'
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           lesson_groups:
             content:
@@ -488,6 +499,7 @@ pl:
             extra_course_content:
               display_name: Dodatki do Kursu
         coursef-draft:
+          title: 'Podstawy CS: Kurs F'
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           lesson_groups:
             content:
@@ -576,6 +588,8 @@ pl:
           description_audience: Uczniowie gimnazjów i szkół średnich
           description: Ten warsztat służy zapewnieniu uczniom podstawowego wprowadzenia do App Lab w ciągu dwóch godzin. Uczniowie powinni móc dołączyć bez względu na stopień przygotowania informatycznego i dobrze się bawić, gdy coś tworzą.
           student_description: Ten warsztat służy zapewnieniu uczniom podstawowego wprowadzenia do App Lab w ciągu dwóch godzin. Uczniowie powinni móc dołączyć bez względu na stopień przygotowania informatycznego i dobrze się bawić, gdy coś tworzą.
+        coursed-ramp:
+          title: 'Podstawy CS: Kurs D'
         workshop-maker:
           title: Warsztat poświęcony przybornikowi twórcy
           description_audience: Nauczyciele osobiście uczestniczący w warsztacie poświęconym przybornikowi twórcy
@@ -1540,6 +1554,7 @@ pl:
           student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
         deepdive-debugging:
           title: Lekcje debudowania dla edukatorów
+          name: deepdive-debugging
         fit-test:
           title: Kurs "FIT praktyka szkoleniowa PLC"
           description_audience: " Prowadzący na szkoleniu"
@@ -2813,6 +2828,7 @@ pl:
               display_name: 'Rozdział 2: Budowanie gier'
         code-break:
           title: Code Break
+          name: code-break
         code-break-staging:
           title: Podział na etapy Code Break
         code-break-younger-staging:
@@ -2821,6 +2837,7 @@ pl:
           title: Code Break dla młodszych uczniów
           description: Z zamkniętymi szkołami i dziesiątkami milionów uczniów w domu, Code.org wprowadza Code Break - cotygodniową interaktywną klasę na żywo, w której nasz zespół będzie uczył Twoje dzieci w domu, gdy szkoła jest zamknięta, oraz cotygodniowe wyzwanie, aby zaangażować uczniów o różnych umiejętnościach, nawet tych bez komputerów.
           student_description: Z zamkniętymi szkołami i dziesiątkami milionów uczniów w domu, Code.org wprowadza Code Break - cotygodniową interaktywną klasę na żywo, w której nasz zespół będzie uczył Twoje dzieci w domu, gdy szkoła jest zamknięta, oraz cotygodniowe wyzwanie, aby zaangażować uczniów o różnych umiejętnościach, nawet tych bez komputerów.
+          name: code-break-younger
         csp5-virtual-part2:
           title: Wprowadzenie do App Lab we własnym tempie
           description_short: Poznaj fundamentalne pojęcia programowania komputerów w JavaScript poprzez tworzenie bogatych, interaktywnych aplikacji.
@@ -5147,6 +5164,8 @@ pl:
           title: Struktura klas i Projekt
         csa3-2023:
           lessons:
+            lesson-1:
+              name: Tablice jednowymiarowe (1D)
             lesson-2:
               name: Modyfikowanie elementów
             lesson-3:
@@ -5466,6 +5485,8 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
             lessonGroup-4:
               display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Ankieta
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5923,6 +5944,9 @@ pl:
         csc-particles-2023:
           name: csc-particles-2023
         csc-bookcovers-2023:
+          lessons:
+            lesson-4:
+              name: Zaprojektuj okładkę swojej interaktywnej książki
           name: csc-bookcovers-2023
         pre-express-2023:
           lesson_groups:
@@ -5962,6 +5986,7 @@ pl:
           student_description: Ucz się informatyki wypróbowując poniższe lekcje w swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności w zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
           description_short: 'Wprowadzenie do informatyki: łączy nasze najlepsze programy nauczania w szkole podstawowej dla starszych uczniów.'
           description_audience: W wieku 9-18
+          name: express-2023
         coursea-2023:
           lesson_groups:
             csf_digcit:
@@ -5977,6 +6002,7 @@ pl:
           student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
           description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
           description_audience: W wieku 4-7
+          name: coursea-2023
         courseb-2023:
           lesson_groups:
             csf_digcit:
@@ -5994,6 +6020,7 @@ pl:
           student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
           description_short: Wprowadzenie do informatyki dla nieumiejących jeszcze czytać. Podobne do Kursu A, ale z pogłębieniem pojęć.
           description_audience: W wieku 5-8
+          name: courseb-2023
         coursec-2023:
           lesson_groups:
             csf_digcit:
@@ -6011,6 +6038,7 @@ pl:
           student_description: Twórz programy z sekwencjami, pętlami i zdarzeniami. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           description_audience: W wieku 6-10
+          name: coursec-2023
         coursed-2023:
           lesson_groups:
             lessonGroup-6:
@@ -6028,6 +6056,7 @@ pl:
           title: Kurs D (2021)
           description_short: Ucz się o instrukcjach warunkowych. Twórz swoją własną grafikę, gry, a nawet potańcówkę.
           description_audience: W wieku 7-11
+          name: coursed-2023
         coursee-2023:
           lesson_groups:
             csf_digcit:
@@ -6046,6 +6075,7 @@ pl:
               display_name: Koniec projektu kursu
           title: Kurs E (2022)
           description_audience: W wieku 8-12
+          name: coursee-2023
         problem-solving-computing-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6117,6 +6147,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-creativity1-2023
         focus-on-creativity2-2023:
           lesson_groups:
@@ -6155,6 +6187,8 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
             lessonGroup-4:
               display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Ankieta
           name: focus-on-hardware1-2023
         focus-on-hardware2-2023:
           lesson_groups:
@@ -6180,6 +6214,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-data1-2023
         focus-on-data2:
           lesson_groups:
@@ -6217,6 +6253,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-design-with-purpose1-2023
         self-paced-pl-k5-getting-started:
           name: self-paced-pl-k5-getting-started
@@ -6254,6 +6292,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-coding1-2023
         focus-on-coding2-2023:
           lesson_groups:
@@ -6287,6 +6327,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-impact-in-society1-2023
         focus-on-impact-in-society2-2023:
           lesson_groups:
@@ -6345,6 +6387,7 @@ pl:
             lessonGroup-5:
               display_name: Ankieta
           name: mikrobit-2023
+          title: Tworzenie aplikacji z urządzeniami (micro:bit) ('23-'24)
           description: "W jednostce Tworzenie aplikacji na urządzenia uczniowie badają rolę urządzeń fizycznych w informatyce. Korzystając z App Lab i BBC micro:bit, uczniowie opracowują programy wykorzystujące te same wejścia i wyjścia sprzętowe, które widzisz w urządzeniach inteligentnych, patrząc na to, jak prosty prototyp może doprowadzić do gotowego produktu. Następnie badają, w jaki sposób można wykorzystać urządzenia fizyczne do reagowania na otaczający ich świat, używając sposobu myślenia „twórcy” do tworzenia prototypów z codziennych materiałów.\n\n⚠️ Ta jednostka wykorzystuje **micro:bit** do wprowadzenia informatyki z urzdzeniami fizycznymi i sposobu myślenia „twórcy”. Możesz także uczyć tych treści za pomocą urządzeń **circuit plac zabaw**, przypisując jednostkę [Tworzenie aplikacji z urządzeniami (Circuit Playground) unit](/s/devices-2022). Obie jednostki uczą tych samych treści i są równoważne - nie trzeba kupować obu zestawów urządzeń ani uczyć obu jednostek.\n\n::: szczegóły [**Przeglą Wejść i Wyjść**]\n**Opis:** Jednostka ta uwypukla interakcje między wejściami i wyjściami na ekranie micro:bita i aplikacji. Na swoich mikro:bitach uczniowie uczą się kontrolować wejścia, takie jak przyciski i wyjścia, takie jak ekran LED. Wchodzą również w interakcję z wejściami i wyjściami w App Lab, takimi jak przyciski i wejścia tekstowe i rozwijane. Do końca rozdziału, uczniowie będą mogli stworzyć aplikację sterującą urządzeniem, podobną do wielu „inteligentnego” sprzętu, z którego korzystają w codziennym życiu.\n\n**Cele:**\n\n-   Zaprojektuj i zbuduj fizyczne urządzenie obliczeniowe, które integruje fizyczne wejścia i wyjścia z aplikacjami cyfrowymi. \n-   Utwórzcie prototypy aplikacji, które używają fizycznego urządzenia do sterowania aplikacją cyfrową.\n\n**Wielkie pytania:**\n\n-   Jakie wejścia i wyjścia są dostępne na urządzeniu fizycznym?\n-   Jakie wejścia i wyjścia są dostępne w aplikacji?\n-   Jak możemy tworzyć aplikacje, które używają fizycznego urządzenia do sterowania aplikacją cyfrową?\n\n:::\n\n:: Szczegóły [**Przegląd budowania prototypów fizycznych**]\n**Opis:** W tym rozdziale uczniowie skupiają się na tym, jak ich fizyczne urządzenie może wchodzić w interakcje ze światem zewnętrznym. Uczą się, jak używać czujników i akcelerometru do reagowania na środowisko fizyczne. Uczą się dołączać zewnętrzne diody LED i przyciski, które rozszerzają typy urządzeń, które sami mogą wykonać. W całej jednostce uczniowie używają materiałów fizycznych, takich jak papier lub karton, aby rozszerzyć funkcjonalność swoich urządzeń. Pod koniec jednostki stworzą interaktywny projekt artystyczny i opracują prototyp urządzenia fizycznego, które rozwiązuje problem. \n\n**Cele:**\n\n-   Zaprojektuj i zbuduj fizyczne urządzenie obliczeniowe, które integruje czujniki z aplikacjami cyfrowymi. \n-   Utwórzcie prototypy aplikacji, które używają fizycznego urządzenia do rozwiązywania rzeczywistych problemów.\n-   Użyjcie fizycznych urządzeń, aby rozwiązywać problemy w zabawny i innowacyjny sposób.\n\n**Wielkie pytania:**\n\n-   W jaki sposób urządzenie fizyczne wykorzystuje czujniki do reagowania na środowisko fizyczne?\n-   W jaki sposób prosty sprzęt można wykorzystać do opracowywania innowacyjnych nowych produktów?\n\n:::\n\n:: szczegóły [**Wskazówki dotyczące tworzenia aplikacji z urządzeniami**]\n\n-   Ta jednostka wymaga, aby uczniowie mieli dostęp do płytek micro:bit - [kliknij tutaj, aby uzyskać więcej informacji na temat wykorzystania micro:bitów w klasie](https://code.org/maker/microbit)\n-   Wskazówki dotyczące wspierania uczniów na poziomach programowania i różnicowania zadań są dostępne w [Przewodniku po poziomach programowania](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) i [Przewodnik po różnicowaniu](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n    :::"
           student_description: Ta jednostka bada rolę platform sprzętowych w obliczeniach i jak różne czujniki mogą zapewnić bardziej efektywne wejście i wyjście danych niż tradycyjna klawiatura, mysz i monitor. Korzystając z App Lab i BBC micro:bita, opracujesz programy, które wykorzystują te same wejścia i wyjścia sprzętowe, które widzisz w inteligentnych urządzeniach, patrząc na to, jak prosty prototyp może doprowadzić do gotowego produktu. Jednostka kończy się wyzwaniem projektowym, aby użyć micro:bita jako bazy dla innowacji we własnym projekcie.
         vpl-csd-ci-1:
@@ -6448,6 +6491,9 @@ pl:
         self-paced-pl-physical-computing1-2023:
           name: self-paced-pl-physical-computing1-2023
         self-paced-pl-physical-computing2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przygotowanie do nauczania tworzenia aplikacji na urządzenia z Circuit Playgrounds
           name: self-paced-pl-physical-computing2-2023
         self-paced-pl-csd1-2023:
           lesson_groups:
@@ -6469,7 +6515,6 @@ pl:
             lessonGroup-2:
               display_name: Przygotowanie do uczenia Jednostki 1
           name: self-paced-pl-csd5-2023
-          title: self-paced-pl-csd5
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -6488,6 +6533,8 @@ pl:
               name: 'Dziennikarstwo i dykusja '
             lesson-10:
               name: 'Dzień 1 Podsumowanie '
+            lesson-11:
+              name: Proces rozwiązywania problemów w CSD
           lesson_groups:
             lessonGroup-2:
               display_name: Dzień 1
@@ -6530,6 +6577,8 @@ pl:
               name: Jednostka 3 Powiązania
             lesson-9:
               name: Kultura w klasie
+            lesson-11:
+              name: Dzień 3 Podsumowanie
           lesson_groups:
             lessonGroup-2:
               display_name: Dzień 3
@@ -6583,17 +6632,741 @@ pl:
               display_name: 'Dzień 5 '
           name: pl-csd-summer-day5
           title: 'Dzień 5 '
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Wstęp
+            lesson-2:
+              name: Przegląd CS Discoveries (Odkrycia informatyki)
+            lesson-3:
+              name: Poruszanie się po platformie Code.org
+            lesson-4:
+              name: Jednostka 1 - Rozwiązywanie problemów i informatyka
+            lesson-5:
+              name: Wprowadzenie do Async
+            lesson-6:
+              name: Praca asynchroniczna
+            lesson-7:
+              name: Podsumowanie asynchroniczne
+            lesson-8:
+              name: Wprowadzenie do Jednostki 2
+            lesson-9:
+              name: 'Modelowa lekcja 1: U2L2 Wprowadzenie do HTML'
+            lesson-10:
+              name: 'Modelowa lekcja 2: Tekst stylizacji U2L6 z CSS'
+            lesson-11:
+              name: Strategie instruktażowe
+            lesson-12:
+              name: Zakończenie
+            lesson-13:
+              name: Praca asynchroniczna
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csd-summer-day1
+          title: Dzień 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-1:
+              name: Wprowadzenie do Dnia 2
+            lesson-2:
+              name: Jednostka 2 Powiązania
+            lesson-3:
+              name: 'Jednostka 3 Badanie programu nauczania: kształty i zmienne'
+            lesson-4:
+              name: 'Modelowa lekcja 3: Rysunek U3L3 w Game Lab'
+            lesson-5:
+              name: Wprowadzenie do Async
+            lesson-6:
+              name: Praca asynchroniczna
+            lesson-7:
+              name: Podsumowanie asynchroniczne
+            lesson-8:
+              name: 'Modelowa lekcja 4: Zmienne U3L5'
+            lesson-9:
+              name: 'Planowanie lekcji: Zrób plan'
+            lesson-10:
+              name: Zakończenie
+            lesson-11:
+              name: Praca asynchroniczna
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csd-summer-day2
+          title: Dzień 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-1:
+              name: Wprowadzenie do Dnia 3
+            lesson-2:
+              name: Bycie wiodącym uczniem
+            lesson-3:
+              name: 'Część 3 Badanie programu nauczania: Duszki'
+            lesson-4:
+              name: 'TLO 1: U3L6 Liczby losowe'
+            lesson-5:
+              name: Wprowadzenie do Async
+            lesson-6:
+              name: Praca asynchroniczna
+            lesson-7:
+              name: Podsumowanie asynchroniczne
+            lesson-8:
+              name: 'TLO 2: U3L8 Duszki'
+            lesson-9:
+              name: Jednostka 3 Powiązania
+            lesson-10:
+              name: 'TLO 3: U4L3 Konstrukcja zorientowana na użytkownika Zdefiniuj i Przygotuj'
+            lesson-11:
+              name: Kultura w klasie
+            lesson-12:
+              name: Zakończenie
+            lesson-13:
+              name: Praca asynchroniczna
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csd-summer-day3
+          title: Dzień 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-1:
+              name: Wprowadzenie do Dnia 4
+            lesson-2:
+              name: Wstęp do Jednostki 5
+            lesson-3:
+              name: 'TLO 4: U5L1 Sprawy reprezentacji '
+            lesson-4:
+              name: Wprowadzenie do Jednostki 6
+            lesson-5:
+              name: 'TLO 5: U6L2 Projekty fizyczne'
+            lesson-6:
+              name: Wprowadzenie do Async
+            lesson-7:
+              name: Praca asynchroniczna
+            lesson-8:
+              name: Podsumowanie asynchroniczne
+            lesson-9:
+              name: Wprowadzenie do Jednostki 7
+            lesson-10:
+              name: 'TLO 6: U7L2 Wprowadzenie do uczenia maszynowego'
+            lesson-11:
+              name: Bariery, szanse i zobowiązania
+            lesson-12:
+              name: Różnicowanie
+            lesson-13:
+              name: Zakończenie
+            lesson-14:
+              name: Praca asynchroniczna
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csd-summer-day4
+          title: Dzień 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-1:
+              name: Wprowadzenie do Dnia 5
+            lesson-9:
+              name: Przygotowanie na rok
+            lesson-3:
+              name: Ocena
+            lesson-4:
+              name: Powracając do tematów z tygodnia
+            lesson-5:
+              name: Podgląd warsztatów roku akademickiego
+            lesson-6:
+              name: Wprowadzenie do Async
+            lesson-7:
+              name: Praca asynchroniczna
+            lesson-8:
+              name: Podsumowanie asynchroniczne
+            lesson-2:
+              name: Planowanie na rok
+            lesson-10:
+              name: Ceremonie zamknięcia
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+          name: virtual-pl-csd-letni-dzień5
+        self-paced-pl-microbit1:
+          name: self-paced-pl-microbit1
+        self-paced-pl-microbit2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przygotowanie do nauczania Tworzenie aplikacji dla urządzeń z micro:bitami
+          name: self-paced-pl-microbit2
+          title: Przygotowanie do nauczania Tworzenie aplikacji dla urządzeń z micro:bitami
+          description: "**Czeka Cię:**\n\n-   Wprowadzenie do tworzenia aplikacji dla urządzeń.\n-   Skonfigurowanie swojego micro:bita. \n-   Praktyczne przećwiczenie kluczowych pojęć zawartych w jednostce.\n-   Przejrzenie projektów na zakończenie rozdziału.\n-   Rozważenie roli nauczyciela podczas zajęć z informatyki.\n\n**Sugerowany czas:** 100 minut"
+          student_description: "**Czeka Cię:**\n\n-   Wprowadzenie do tworzenia aplikacji dla urządzeń.\n-   Skonfigurowanie swojego micro:bita. \n-   Praktyczne przećwiczenie kluczowych pojęć zawartych w jednostce.\n-   Przejrzenie projektów na zakończenie rozdziału.\n-   Rozważenie roli nauczyciela podczas zajęć z informatyki.\n\n**Sugerowany czas:** 100 minut"
+        seesaw-adaptations:
+          name: seesaw-adaptations
+          title: Huśtawka - adaptacje zwierząt
+        csp-bingo-2023:
+          lessons:
+            lesson-1:
+              name: Recenzja gry BINGO przez jednostkę
+          name: csp-bingo-2023
+          title: CSP Słownictwo BINGO
         csd-post-survey-2023:
+          name: csd-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-data-post-survey-2023:
+          name: focus-on-data-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-impact-in-society-post-survey-2023:
+          name: focus-on-impact-in-society-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-coding-post-survey-2023:
+          name: focus-on-coding-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-design-with-purpose-post-survey-2023:
+          name: focus-on-design-with-purpose-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-hardware-post-survey-2023:
+          name: focus-on-hardware-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
         focus-on-creativity-post-survey-2023:
+          name: focus-on-creativity-post-survey-2023
           title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Duszki
+            lessonGroup-4:
+              display_name: Zmienne
+            lessonGroup-6:
+              display_name: Koniec projektu kursu
+          name: coursef-2023
+          title: Kurs F (2023)
+          description_audience: W wieku 9-13
+          description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
+          description: Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna się od przyjrzenia się, w jaki sposób użytkownicy dokonują wyboru w aplikacjach, z których korzystają. Następnie uczniowie uczą się tworzyć różne aplikacje w Sprite Lab, które również oferują użytkownikowi wybór. Na późniejszych lekcjach kursu uczniowie poznają zmienne w różnych kontekstach. W trakcie tego kursu, mają większą autonomię i większy wybór. Pod koniec kursu uczniowie utworzą interaktywne projekty, którymi będą mogli dzielić się z przyjaciółmi i rodziną.
+          student_description: Naucz się kodować z duszkami i zmiennymi, oraz omów wpływ komputerów i internetu na społeczeństwo. Pod koniec tego kursu zaprojektuj i stwórz projekt, którym możesz podzielić się z przyjaciółmi i rodziną.
+        ey-ecosystems:
+          name: ey-ecosystems
+          title: EY Ecosystems (zapowiedź)
+        self-paced-pl-csp1-2023:
+          name: self-paced-pl-csp1-2023
+        self-paced-pl-csp2-2023:
+          name: self-paced-pl-csp2-2023
+        self-paced-pl-csp3-2023:
+          name: self-paced-pl-csp3-2023
+        self-paced-pl-csp4-2023:
+          name: self-paced-pl-csp4-2023
+        musiclab:
+          lessons:
+            lesson-1:
+              name: Remiksuj projekty
+            lesson-2:
+              name: SNAP - Rosa Linn
+          name: musiclab
+          title: Lekcje testowe w laboratorium muzycznym
+          description: |-
+            Cześć! Jest to specjalna jednostka, której Code.org używa do testowania Music Lab. Żadna z lekcji ani poziomów w tej jednostce nie jest przeznaczona do użytku w klasie!
+
+            Jeśli nie jesteś inżynierem code.org, ale udało Ci się odkryć tę jednostkę: gratulacje! To tak, jakbyś odkrył sekret na naszej stronie! Ale jeśli szukasz więcej informacji o naszych programach nauczania lub narzędziach, zalecamy sprawdzenie <https://code.org/educate/>.
+        csa-software-engineering:
+          lessons:
+            lesson-1:
+              name: Wprowadzenie do GitHub
+            lesson-2:
+              name: Wprowadzenie do Copilot
+            lesson-3:
+              name: Buduj z Copilot
+            lesson-4:
+              name: Wprowadzenie do modeli AI
+            lesson-5:
+              name: Trenuj swój model
+            lesson-6:
+              name: Korzystanie z Twojego modelu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: GitHub i Copilot'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wizja komputerowa'
+            lessonGroup-4:
+              display_name: Ankieta wstępna
+          name: csa-software-engineering
+          title: Inżynieria oprogramowania i wizja komputerowa
+        csa-frq-practice:
+          lessons:
+            lesson-1:
+              name: Symulacja żaby
+            lesson-2:
+              name: Ograniczniki
+            lesson-3:
+              name: ApCalendar
+            lesson-4:
+              name: StepTracker
+            lesson-5:
+              name: LightBoard
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Metody i struktury sterowania
+            lessonGroup-3:
+              display_name: Klasy
+            lessonGroup-4:
+              display_name: Tablice/ArrayLists
+          name: csa-frq-practice
+          title: Praktyka CSA FRQ 2019
+        hoc-amazon-poc:
+          lessons:
+            lesson-1:
+              name: Postępy w Godzinie kodowania
+            lesson-2:
+              name: Postępy w Godzinie eksploracji kariery
+          name: hoc-amazon-poc
+          title: Godzina kodowania (PoC)
+          description: |-
+            Dołączony dowód koncepcji postępu HoC z Amazon Career Tours.
+
+            Pierwsza „lekcja” to postęp HoC ([jak to, co zwykle mamy tutaj](https://levelbuilder-studio.code.org/s/hello-world-space-2022))
+
+            Druga „lekcja” to „post-roll”, w którym uczniowie mogą kontynuować „Godzinę kariery”, jeśli chcą
+        musiclab-2023:
+          lessons:
+            lesson-1:
+              name: Laboratorium muzyczne
+          name: musiclab-2023
+          title: Laboratorium muzyczne
+          description_short: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+          description: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+          student_description: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+        csa-frq-practice-2019:
+          lessons:
+            lesson-1:
+              name: FRQ 1
+            lesson-2:
+              name: FRQ 2
+            lesson-3:
+              name: FRQ 3
+            lesson-4:
+              name: FRQ 4
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Metody i struktury sterowania
+            lessonGroup-3:
+              display_name: Klasy
+            lessonGroup-4:
+              display_name: Tablice/ArrayLists
+          name: csa-frq-practice-2019
+          title: Praktyka CSA FRQ 2019
+        csa-frq-practice-2021:
+          lessons:
+            lesson-1:
+              name: WordMatch
+            lesson-2:
+              name: SingleTable
+            lesson-3:
+              name: ClubMembers
+            lesson-4:
+              name: ArrayResizer
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Metody i struktury sterowania
+            lessonGroup-3:
+              display_name: Klasy
+            lessonGroup-4:
+              display_name: Tablice/ArrayLists
+          name: csa-frq-practice-2021
+          title: Praktyka CSA FRQ 2021
+        csa-frq-practice-2022:
+          lessons:
+            lesson-1:
+              name: Gra
+            lesson-2:
+              name: Podręcznik
+            lesson-3:
+              name: ReviewAnalysis
+            lesson-4:
+              name: Dane
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Metody i struktury sterowania
+            lessonGroup-3:
+              display_name: Klasy
+            lessonGroup-4:
+              display_name: Tablice/ArrayLists
+          name: csa-frq-practice-2022
+          title: Praktyka CSA FRQ 2022
+        csa-frq-practice-2023:
+          lessons:
+            lesson-1:
+              name: Książka spotkań
+            lesson-2:
+              name: Podpis
+            lesson-3:
+              name: WeatherData
+            lesson-4:
+              name: BoxofCandy
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Metody i struktury sterowania
+            lessonGroup-3:
+              display_name: Klasy
+            lessonGroup-4:
+              display_name: Tablice/ArrayLists
+          name: csa-frq-practice-2023
+          title: Praktyka CSA FRQ 2023
+        csa-frq-practice-pre2019:
+          lessons:
+            lesson-2:
+              name: CSA-frq-2016-Crossword-PartA
+            lesson-3:
+              name: CSA-frq-2016-Crossword-PartB
+            lesson-1:
+              name: 2018 FRQ - FrogSimulation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Metody i struktury sterowania
+            lessonGroup-3:
+              display_name: Klasy
+            lessonGroup-4:
+              display_name: Tablice/ArrayLists
+          name: csa-frq-practice-pre2019
+          title: CSA FRQ Practice Pre-2019
+        self-paced-pl-aiml1:
+          name: self-paced-pl-aiml1
+          description: |-
+            \*\*Czeka Cię: \*\*
+
+            -   Wprowadzenie do misji Code.org.
+            -   Poznasz, jak poruszać się po witrynie Code.org i narzędziach nauczyciela.
+            -   Konfiguracja sekcji w klasie.
+            -   Znalezienie i korzystanie z planów lekcji kursu i zasobów dla nauczycieli.
+            -   Poznasz, jak uzyskać dostęp do wsparcia podczas nauczania Code.org.
+
+            \*\*Sugerowany czas: \*\* 80 minut
+          student_description: |-
+            \*\*Czeka Cię: \*\*
+
+            -   Wprowadzenie do misji Code.org.
+            -   Poznasz, jak poruszać się po witrynie Code.org i narzędziach nauczyciela.
+            -   Konfiguracja sekcji w klasie.
+            -   Znalezienie i korzystanie z planów lekcji kursu i zasobów dla nauczycieli.
+            -   Poznasz, jak uzyskać dostęp do wsparcia podczas nauczania Code.org.
+
+            \*\*Sugerowany czas: \*\* 80 minut
+        self-paced-pl-aiml2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Nauczanie sztucznej inteligencji i uczenia maszynowego '
+          name: self-paced-pl-aiml2
+          title: 'Nauczanie sztucznej inteligencji i uczenia maszynowego '
+          description: |-
+            **W tym module profesjonalnego rozwoju:**
+
+            -   Uzyskasz wprowadzenie do sztucznej inteligencji i uczenia maszynowego.
+            -   Poćwiczysz kluczowe pojęcia zawarte w jednostce.
+            -   Zaangażujesz się w AI Lab i App Lab.
+            -   Zapoznasz się z projektami z końca rozdziału.
+            -   Opracujesz plan realizacji jednostki ze swoimi uczniami.
+
+            **Sugerowany czas:** 100 minut
+          student_description: |-
+            **W tym module profesjonalnego rozwoju:**
+
+            -   Uzyskasz wprowadzenie do sztucznej inteligencji i uczenia maszynowego.
+            -   Poćwiczysz kluczowe pojęcia zawarte w jednostce.
+            -   Zaangażujesz się w AI Lab i App Lab.
+            -   Zapoznasz się z projektami z końca rozdziału.
+            -   Opracujesz plan realizacji jednostki ze swoimi uczniami.
+
+            **Sugerowany czas:** 100 minut
+        musiclab-pilot:
+          lessons:
+            lesson-1:
+              name: Laboratorium muzyczne
+          name: musiclab-pilot
+          title: Laboratorium muzyczne
+          description_short: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+          description: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+          student_description: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+        tesspltest23:
+          name: tesspltest23
+          title: 'Testowanie PL '
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Pętle
+            lessonGroup-5:
+              display_name: Wplywy informatyki
+          name: test-nv-coursea-2023
+          title: 'Nevada Kurs A '
+          description_audience: W wieku 4-7
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Dane
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Pętle
+            lessonGroup-5:
+              display_name: Wplywy informatyki
+            lessonGroup-6:
+              display_name: Dane
+          name: nevada-standards-aligned-kindergarten-2023
+          description_audience: W wieku 4-7
+          description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Dane
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Pętle
+            lessonGroup-5:
+              display_name: Wplywy informatyki
+            lessonGroup-6:
+              display_name: Zdarzenia
+            lessonGroup-7:
+              display_name: Koniec projektu kursu
+            lessonGroup-8:
+              display_name: Dane
+          name: nevada-standards-aligned-first-grade-2023
+          description_audience: W wieku 5-8
+          description_short: Wprowadzenie do informatyki dla nieumiejących jeszcze czytać. Podobne do Kursu A, ale z pogłębieniem pojęć.
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Systemy komputerowe
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Pętle
+            lessonGroup-5:
+              display_name: Zdarzenia
+            lessonGroup-6:
+              display_name: Dane
+            lessonGroup-8:
+              display_name: Systemy komputerowe
+          name: nevada-standards-aligned-second-grade-2023
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Wplywy informatyki
+            lessonGroup-5:
+              display_name: Zdarzenia i zmienne
+            lessonGroup-6:
+              display_name: Pętle
+            lessonGroup-7:
+              display_name: Dane
+            lessonGroup-8:
+              display_name: Koniec projektu kursu
+          name: nevada-standards-aligned-third-grade-2023
+          description_audience: W wieku 7-11
+          description_short: Ucz się o instrukcjach warunkowych. Twórz swoją własną grafikę, gry, a nawet potańcówkę.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Zdarzenia i duszki
+            lessonGroup-3:
+              display_name: Zagnieżdżające się  pętle
+            lessonGroup-4:
+              display_name: Funkcje
+            lessonGroup-6:
+              display_name: Koniec projektu kursu
+          name: nevada-standards-aligned-fourth-grade-2023
+          title: Kurs dla czwartej klasy dostosowany do standardów Nevady
+          description_audience: W wieku 8-12
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Duszki
+          name: nevada-standards-aligned-fifth-grade-2023-2023
+          title: Kurs dla piątej klasy dostosowany do standardów Nevady
+          description_audience: W wieku 9-13
+          description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
+          description: Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna się od przyjrzenia się, w jaki sposób użytkownicy dokonują wyboru w aplikacjach, z których korzystają. Następnie uczniowie uczą się tworzyć różne aplikacje w Sprite Lab, które również oferują użytkownikowi wybór. Na późniejszych lekcjach kursu uczniowie poznają zmienne w różnych kontekstach. W trakcie tego kursu, mają większą autonomię i większy wybór. Pod koniec kursu uczniowie utworzą interaktywne projekty, którymi będą mogli dzielić się z przyjaciółmi i rodziną.
+          student_description: Naucz się kodować z duszkami i zmiennymi, oraz omów wpływ komputerów i internetu na społeczeństwo. Pod koniec tego kursu zaprojektuj i stwórz projekt, którym możesz podzielić się z przyjaciółmi i rodziną.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Duszki
+            lessonGroup-3:
+              display_name: Zdania z warunkami
+            lessonGroup-5:
+              display_name: Zmienne
+            lessonGroup-6:
+              display_name: Wplywy informatyki
+            lessonGroup-7:
+              display_name: Koniec projektu kursu
+          name: nevada-standards-aligned-fifth-grade-2023
+          title: Kurs dla piątej klasy dostosowany do standardów Nevady
+          description_audience: W wieku 9-13
+          description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
+          description: Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna się od przyjrzenia się, w jaki sposób użytkownicy dokonują wyboru w aplikacjach, z których korzystają. Następnie uczniowie uczą się tworzyć różne aplikacje w Sprite Lab, które również oferują użytkownikowi wybór. Na późniejszych lekcjach kursu uczniowie poznają zmienne w różnych kontekstach. W trakcie tego kursu, mają większą autonomię i większy wybór. Pod koniec kursu uczniowie utworzą interaktywne projekty, którymi będą mogli dzielić się z przyjaciółmi i rodziną.
+        vpl-csp-2023-m1:
+          name: vpl-csp-2023-m1
+          title: Moduł 1
+        vpl-csp-2023-m2:
+          name: vpl-csp-2023-m2
+          title: Moduł 2
+        vpl-csp-2023-m3:
+          name: vpl-csp-2023-m3
+          title: Moduł 3
+        vpl-csp-2023-m4:
+          name: vpl-csp-2023-m4
+          title: Moduł 4
+        vpl-csp-2023-m5:
+          name: vpl-csp-2023-m5
+          title: Moduł 5
+        vpl-csp-2023-m6:
+          name: vpl-csp-2023-m6
+          title: Moduł 6
+        vpl-csp-2023-m7:
+          name: vpl-csp-2023-m7
+          title: Moduł 7
+        vpl-csp-2023-m8:
+          name: vpl-csp-2023-m8
+          title: Moduł 8
+        vpl-csa-2023-m1:
+          name: vpl-csa-2023-m1
+          title: Moduł 1
+        how-ai-works-2023:
+          name: how-ai-works-2023
+          title: Jak działa AI
+          student_description: |-
+            Dowiedz się, jak działa sztuczna inteligencja, uczestnicząc w różnych doświadczeniach i oglądając serię filmów [Jak działa AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) !
+
+            \*\*Chcesz uczyć tych lekcji? \*\* [Kliknij tutaj, aby wyświetlić plany lekcji dla tych lekcji](/s/how-ai-works-2023?viewAs=Instructor)
+        vpl-csa-2023-m2:
+          name: vpl-csa-2023-m2
+          title: Moduł 2
+        vpl-csa-2023-m3:
+          name: vpl-csa-2023-m3
+          title: Moduł 3
+        vpl-csa-2023-m4:
+          name: vpl-csa-2023-m4
+          title: Moduł 4
+        vpl-csa-2023-m5:
+          name: vpl-csa-2023-m5
+          title: Moduł 5
+        vpl-csa-2023-m6:
+          name: vpl-csa-2023-m6
+          title: Moduł 6
+        vpl-csa-2023-m7:
+          name: vpl-csa-2023-m7
+          title: Moduł 7
+        vpl-csa-2023-m8:
+          name: vpl-csa-2023-m8
+          title: Moduł 8
+        pl-csd-2023-m1:
+          name: pl-csd-2023-m1
+          title: 'Moduł 1 '
+        vpl-csd-2023-m1:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 1 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Lekcja modelu'
+            lesson-4:
+              name: 'Sesja synchroniczna 3: Podsumowanie'
+          name: vpl-csd-2023-m1
+          title: Moduł 1
+        vpl-csd-2023-m2:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 2 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 5: Przegląd badan dotyczących programu nauczania'
+            lesson-4:
+              name: 'Sesja synchroniczna 6: Ocenianie'
+            lesson-5:
+              name: 'Sesja synchroniczna 7: Scenariusze włączenia'
+            lesson-6:
+              name: 'Sesja synchroniczna 8: Podsumowanie'
+          name: vpl-csd-2023-m2
+          title: Moduł 2
+        vpl-csd-2023-m3:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 3 Synchroniczny
+          name: vpl-csd-2023-m3
+          title: Moduł 3
+        vpl-csd-2023-m4:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 4 Synchroniczny
+          name: vpl-csd-2023-m4
+          title: Moduł 4
+        vpl-csd-2023-m5:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 5 Synchroniczny
+          name: vpl-csd-2023-m5
+          title: Moduł 5
+        vpl-csd-2023-m6:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 6 Synchroniczny
+          name: vpl-csd-2023-m6
+          title: Moduł 6
+        vpl-csd-2023-m7:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 7 Synchroniczny
+          name: vpl-csd-2023-m7
+          title: Moduł 7
+        vpl-csd-2023-m8:
+          lessons:
+            lesson-2:
+              name: Moduł CSD 8 Synchroniczny
+          name: vpl-csd-2023-m8
+          title: Moduł 8

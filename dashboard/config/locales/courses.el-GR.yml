@@ -3,25 +3,30 @@ el:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Αρχές επιστήμης υπολογιστών
-          title: Αρχές επιστήμης υπολογιστών ('17-'18)
-          version_title: "'17-'18"
-        csd-2017:
-          assignment_family_title: Ανακαλύψεις στην επιστήμη υπολογιστών
-          title: Ανακαλύψεις στην επιστήμη υπολογιστών ('17-'18)
-          version_title: "'17-'18"
         allthethingscourse:
-          title: Allthethingscourse
           description_short: Αυτό είναι ένα μάθημα για Αllthethings
           description_student: Αυτό είναι ένα μάθημα για Αllthethings και έχει μια
             μεγαλύτερη περιγραφή για τους μαθητές
           description_teacher: Αυτό είναι ένα μάθημα για Αllthethings και έχει μια
             μεγαλύτερη περιγραφή για τους καθηγητές
+          title: Allthethingscourse
+        csd-2017:
+          assignment_family_title: Ανακαλύψεις στην επιστήμη υπολογιστών
+          title: Ανακαλύψεις στην επιστήμη υπολογιστών ('17-'18)
+          version_title: "'17-'18"
         csd-2018:
           assignment_family_title: Ανακαλύψεις στην επιστήμη υπολογιστών
           title: Ανακαλύψεις στην επιστήμη υπολογιστών ('18-'19)
           version_title: "'18-'19"
+        csd-2019:
+          title: Ανακαλύψεις στην επιστήμη υπολογιστών ('19-'20)
+          version_title: "'19-'20"
+        csd-2023:
+          title: Ανακαλύψεις στην επιστήμη υπολογιστών
+        csp-2017:
+          assignment_family_title: Αρχές επιστήμης υπολογιστών
+          title: Αρχές επιστήμης υπολογιστών ('17-'18)
+          version_title: "'17-'18"
         csp-2018:
           assignment_family_title: Αρχές επιστήμης υπολογιστών
           title: Αρχές επιστήμης υπολογιστών ('18-'19)
@@ -29,27 +34,30 @@ el:
         csp-2019:
           title: Αρχές επιστήμης υπολογιστών ('19-'20)
           version_title: "'19-'20"
-        csd-2019:
-          title: Ανακαλύψεις στην επιστήμη υπολογιστών ('19-'20)
-          version_title: "'19-'20"
         mike-test:
           title: Βασικές αρχές της επιστήμης υπολογιστών
-        csd-2023:
-          title: Ανακαλύψεις στην επιστήμη υπολογιστών
     resources:
-      curriculum/csd/2020:
-        name: Πρόγραμμα σπουδών
-      teacher_forum/csd/2020:
-        name: Φόρουμ Καθηγητών
+      all_standards_1/csd/2021:
+        name: Όλα τα Πρότυπα
+      all_standards_2/csd/2023:
+        name: Όλα τα Πρότυπα
+      all_standards_7/csd/2022:
+        name: Όλα τα Πρότυπα
       curriculum/csd/2017:
         name: Πρόγραμμα σπουδών
-      teacher_forum_6/csd/2017:
-        name: Φόρουμ Καθηγητών
-      curriculum/csd/2019:
-        name: Πρόγραμμα σπουδών
-      teacher_forum/csd/2019:
-        name: Φόρουμ Καθηγητών
       curriculum/csd/2018:
         name: Πρόγραμμα σπουδών
+      curriculum/csd/2019:
+        name: Πρόγραμμα σπουδών
+      curriculum/csd/2020:
+        name: Πρόγραμμα σπουδών
+      getting_started_with_csd/csd/2021:
+        name: Πρώτα βήματα με το CSD
+      teacher_forum/csd/2019:
+        name: Φόρουμ Καθηγητών
+      teacher_forum/csd/2020:
+        name: Φόρουμ Καθηγητών
+      teacher_forum_6/csd/2017:
+        name: Φόρουμ Καθηγητών
       teacher_forum_6/csd/2018:
         name: Φόρουμ Καθηγητών

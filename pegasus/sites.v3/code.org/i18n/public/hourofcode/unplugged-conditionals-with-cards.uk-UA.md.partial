@@ -1,33 +1,30 @@
 ---
-title: Teacher Resources - Conditionals with Cards
-nav: hoc_teacher_resources_nav
-theme: responsive
-video_player: true
+title: Ресурси для вчителя - Умовні оператори та картки
 ---
 
-# Conditionals With Cards: An Hour of Code Tutorial
+# Умовні оператори та картки: Підручник "Година коду"
 
 {{ hoc_unplugged_video }}
 
 [col-50]
 
-## Teacher Resources
+## Ресурси для вчителів
 
-### Lesson Plans:
+### Плани уроків:
 
-- [Conditionals with Cards](/files/ConditionalsHoC.pdf)
-- Video: [How to Facilitate Conditionals with Cards in Your Classroom](https://youtu.be/IcEL5ibSvTs)
+- [Умовні оператори та картки](/files/ConditionalsHoC.pdf)
+- Відео: [Як полегшити вивчення умовних операторів за допомогою карток у класі](https://youtu.be/IcEL5ibSvTs)
 
-### Extension Activities:
+### Завдання для поглиблення знань:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Поза Годиною коду](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Курс 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Інші ресурси для вчителів:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Година коду: Посібник для викладачів](https://hourofcode.com/how-to)
+- [Найкращі практики від успішних викладачів](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live Event: [Посібник для викладача до Години коду](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -35,12 +32,12 @@ video_player: true
 
 ## Огляд
 
-Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.
+Дізнайтеся про алгоритми та умовні оператори в цьому завданні "без комп'ютера" за допомогою набору карток. Учні виконують це завдання в командах, кожна з яких має по одному набору карток.
 
-**Recommended Age Range:** 8-12
+**Рекомендована вікова категорія:** 8-12
 
-**Technology Requirements:** None! This is an "unplugged" activity that can be taught with nothing more than a deck of cards.
+**Технологічні вимоги:** немає! Це завдання "без комп'ютера", яке можна виконати, не маючи нічого, окрім набору карток.
 
-<a href="/files/ConditionalsHoC.pdf"><button>Download the activity</button></a>
+<a href="/files/ConditionalsHoC.pdf"><button>Завантажте завдання</button></a>
 
 [/col-50]

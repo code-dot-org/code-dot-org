@@ -59,6 +59,7 @@ fi:
         reset_password_token: "Valitsemasi salasanan asetuslinkki"
         error:
           future: ei voi olla tulevaisuudessa
+        us_state: 'Osavaltio'
   beta: "beta"
   hello: "Hei maailma"
   welcome_back: "Tervetuloa takaisin, %{name}"
@@ -183,6 +184,7 @@ fi:
     parent_account_checkbox: "Olen lapseni puolesta ilmoittautuva vanhempi/huoltaja"
     parent_account_email_progress_permission: "Voimmeko lähettää sinulle satunnaisia päivityksiä sähköpostitse lapsesi edistymisestä ja projekteista sekä päivityksiä lapsesi kurssista ja tietotekniikasta? [(Katso tietosuojakäytäntömme)] (%{privacy_policy_url})"
     parent_account_email_label: "Vanhemman/Huoltajan sähköpostiosoite"
+    us_state: 'Osavaltio'
   school_info:
     title: 'Koulun tiedot (valinnainen)'
     school_country: 'Koulun maa'
@@ -870,6 +872,8 @@ fi:
       robotics:
         kodable: 'Kodable'
         other: "Muut"
+      workshop_course:
+        other: 'Muut'
       email_opt_in:
         opt_in_yes: 'Kyllä'
         opt_in_no: 'Ei'
@@ -889,3 +893,4 @@ fi:
     not_now: "Ei nyt"
   pixelation:
     binary: "Binääri"
+

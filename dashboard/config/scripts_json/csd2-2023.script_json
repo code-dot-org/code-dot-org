@@ -11,12 +11,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-06 16:21:54 UTC",
+    "serialized_at": "2023-08-24 19:32:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1472,7 +1473,7 @@
       "key": "77916118-5dbb-4594-9875-2039a4f9e2f4",
       "position": 4,
       "properties": {
-        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd2/2023] to each student, face down. Make sure students don't start the word search ahead of time.\n"
+        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time.\n"
       },
       "seeding_key": {
         "activity_section.key": "77916118-5dbb-4594-9875-2039a4f9e2f4",
@@ -1551,7 +1552,7 @@
       "key": "3e82967b-8d4f-401c-9dc5-21b4afa88d5b",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/csd2/2023]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/csd/2023]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
@@ -1746,7 +1747,7 @@
       "key": "304c8cc2-2414-445e-abc5-6a0edec43bd3",
       "position": 8,
       "properties": {
-        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic website design for, following the Problem Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their design.\n\n**Distribute:** Pass out copies of the \n[r problem_solving_and_design/csd2/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit."
+        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic website design for, following the Problem Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their design.\n\n**Distribute:** Pass out copies of the \n[r problem_solving_and_design/csd/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit."
       },
       "seeding_key": {
         "activity_section.key": "304c8cc2-2414-445e-abc5-6a0edec43bd3",
@@ -1918,7 +1919,7 @@
       "key": "bb7c079f-129c-4ef3-b3eb-111c99d8a495",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd2/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1939,7 +1940,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Practicing Communication:** Some classes may need more support in communicating and collaborating effectively.  If appropriate, consider having your students brainstorm a list of \"sentence stems\" that they can use for respectful and effective communication before they break into pairs (\"Have you considered...\"  \"What about...\" \"I think the problem might be...\").  As students move through the lesson, be attentive to how students are working together - understanding the norms of pair programming is just as important as learning the new HTML code in this lesson!"
+            "markdown": "**Practicing Communication:** Some classes may need more support in communicating and collaborating effectively.  If appropriate, consider having your students brainstorm a list of \"sentence stems\" that they can use for respectful and effective communication before they break into pairs (\"Have you considered...\"  \"What about...\" \"I think the problem might be...\").  As students move through the lesson, be attentive to how students are working together - understanding the norms of pair programming is just as important as learning the new HTML code in this lesson!\n\nTo read more about pair programming, see the **[Guide to Teaching and Learning Strategies](https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view)**."
           }
         ]
       },
@@ -2002,7 +2003,7 @@
       "key": "f566ffca-771e-42b0-9e36-aad04730db21",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_intro_to_web_lab_part_1/csd2/2023] video in the slides.\n\n**Question to consider with the video:**\n- What are the different parts of Web Lab, and what are they used for?\n\n**Discussion Goals:**\nWhile there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code. For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_intro_to_web_lab_part_1/csd/2023] video in the slides.\n\n**Question to consider with the video:**\n- What are the different parts of Web Lab, and what are they used for?\n\n**Discussion Goals:**\nWhile there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code. For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.\n",
         "progression_name": "Video: Intro to Web Lab - Part 1",
         "tips": [
           {
@@ -2049,7 +2050,7 @@
       "key": "6c66b77f-61b1-44cd-a5e4-409a807afd47",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_web_lab_part_2/csd2/2023] video in the slides\n\n**Questions to consider with the video:**\n- Why are HTML tags useful?\n- What does the paragraph tag do?\n\n**Discussion Goals**: As students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. Talking about the organization, structure, or role of the content in the page (heading, paragraph, list, etc.) is more accurate than talking about specific aspects of its appearance (such as size or spacing).\n\nFor the second prompt, there's a direct answer: the paragraph tag separates text into paragraphs. You may want to follow up this question by asking students how they think a web browser for the blind might deal with paragraphs. For example, while sighted people may use spacing and new lines to separate out paragraphs, what should a screen reader do?\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- HTML - Hypertext Markup Language, a language used to create web pages\n- HTML Element - A piece of a website, marked by a start tag and often closed with an end tag\n- HTML Tag - The special set of characters that indicates the start and end of an HTML element and that element's type\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_web_lab_part_2/csd/2023] video in the slides\n\n**Questions to consider with the video:**\n- Why are HTML tags useful?\n- What does the paragraph tag do?\n\n**Discussion Goals**: As students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. Talking about the organization, structure, or role of the content in the page (heading, paragraph, list, etc.) is more accurate than talking about specific aspects of its appearance (such as size or spacing).\n\nFor the second prompt, there's a direct answer: the paragraph tag separates text into paragraphs. You may want to follow up this question by asking students how they think a web browser for the blind might deal with paragraphs. For example, while sighted people may use spacing and new lines to separate out paragraphs, what should a screen reader do?\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- HTML - Hypertext Markup Language, a language used to create web pages\n- HTML Element - A piece of a website, marked by a start tag and often closed with an end tag\n- HTML Tag - The special set of characters that indicates the start and end of an HTML element and that element's type\n",
         "progression_name": "Video: Intro to Web Lab - Part 2"
       },
       "seeding_key": {
@@ -2410,7 +2411,7 @@
       "key": "05a83d63-0813-410e-8ede-4d9baecaff3d",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Have your students pause programming and bring the class back together at this point in order to watch the [r video_debugging/csd2/2023] video together.\n\n**Questions to consider with the video:**\n- What is debugging?\n- What are the four steps to debugging?\n\n**Discussion Goal:** Students should identify debugging as the process of finding and fixing problems in their code. The four steps of the debugging process are describing the bug, hunting for the bug, trying out small solutions (or changing your code), and documenting what you have learned.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Have your students pause programming and bring the class back together at this point in order to watch the [r video_debugging/csd/2023] video together.\n\n**Questions to consider with the video:**\n- What is debugging?\n- What are the four steps to debugging?\n\n**Discussion Goal:** Students should identify debugging as the process of finding and fixing problems in their code. The four steps of the debugging process are describing the bug, hunting for the bug, trying out small solutions (or changing your code), and documenting what you have learned.\n",
         "progression_name": "Video: Debugging",
         "tips": [
           {
@@ -2553,7 +2554,7 @@
       "key": "7366428e-49df-44d7-8482-22049b3a198e",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the [r html_web_page_2/csd2/2023]."
+        "description": "**Distribute:** Give each student a copy of the [r html_web_page_2/csd/2023]."
       },
       "seeding_key": {
         "activity_section.key": "7366428e-49df-44d7-8482-22049b3a198e",
@@ -2607,7 +2608,7 @@
       "key": "d9a90995-3525-4bcb-ab09-2c53b9662448",
       "position": 5,
       "properties": {
-        "description": "**Distribute:**  Hand out a copy of the [r problem_solving_process_with_programming/csd2/2023] to pairs of students. Encourage students to look over the guide.\n\n**Display:** Show the slide with the Problem Solving Process graphic\n"
+        "description": "**Distribute:**  Hand out a copy of the [r problem_solving_process_with_programming/csd/2023] to pairs of students. Encourage students to look over the guide.\n\n**Display:** Show the slide with the Problem Solving Process graphic\n"
       },
       "seeding_key": {
         "activity_section.key": "d9a90995-3525-4bcb-ab09-2c53b9662448",
@@ -2984,7 +2985,7 @@
       "key": "638ecf6c-33ff-4f35-8742-58e1fec1dfd5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_1/csd2/2023] video in the slides and discuss the CSS video as a class.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_1/csd/2023] video in the slides and discuss the CSS video as a class.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3046,7 +3047,7 @@
       "key": "caee3464-814a-48e1-82d6-bfaa3f62d73c",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_2/csd2/2023] video in the slides and discuss it as a class.\n\n**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?\n\n**Discussion Goal:** Make sure all the students understand how to link to their stylesheet from each web page.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_2/csd/2023] video in the slides and discuss it as a class.\n\n**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?\n\n**Discussion Goal:** Make sure all the students understand how to link to their stylesheet from each web page.",
         "progression_name": "Video: Intro to CSS - Part 2"
       },
       "seeding_key": {
@@ -3474,7 +3475,7 @@
       "key": "defee76c-2589-4644-9f10-87089825f834",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r creative_commons_overview/csd2/2023] video. This video is from the McLaughlin Library at the University of Guelph. \n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r creative_commons_overview/csd/2023] video. This video is from the McLaughlin Library at the University of Guelph. \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -4340,7 +4341,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Planning Checkpoint:** Check over student plans before allowing them to continue on the rest of the levels.\n\n**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd2/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**Planning Checkpoint:** Check over student plans before allowing them to continue on the rest of the levels.\n\n**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -4370,7 +4371,7 @@
       "key": "0b65c931-ec29-410f-b2af-94c3f760a26b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r publishing_your_website/csd2/2023] video in the slides.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r publishing_your_website/csd/2023] video in the slides.\n\n",
         "name": "Video: Publishing Your Website",
         "tips": [
           {
@@ -4790,7 +4791,7 @@
       "key": "0f4d1407-ccbb-40bf-ba00-9fdb47be9d5b",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in their project groups.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r video_teamwork/csd2/2023] video in the slides.\n",
+        "description": "**Group:** Place students in their project groups.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r video_teamwork/csd/2023] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -4890,7 +4891,7 @@
       "key": "a0169ba3-3d5a-42bc-a062-bb17560ca552",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_managing_disagreement/csd2/2023] video in the slides.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_managing_disagreement/csd/2023] video in the slides.\n"
       },
       "seeding_key": {
         "activity_section.key": "a0169ba3-3d5a-42bc-a062-bb17560ca552",
@@ -5120,7 +5121,7 @@
       "key": "909654ed-e8dd-4764-869a-2247139e7413",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_how_search_works/csd2/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_how_search_works/csd/2023] video in the slides.\n",
         "name": " How Search Works\r",
         "progression_name": "Video: How Search Works",
         "tips": [
@@ -5702,7 +5703,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd2/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -9299,7 +9300,7 @@
     },
     {
       "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/14hKTZSrP7tnghpJhTLYJNEPeb1CinUaa0KtzRPADji4/edit",
+      "url": "https://docs.google.com/document/d/1Mk9elfN5zVH2LLaY6Z5-c-97wt1k9qDCyMfxRBlB8qM/edit?usp=sharing",
       "key": "_warm_up_word_search",
       "properties": {
         "audience": "Student",
@@ -10464,8 +10465,8 @@
       }
     },
     {
-      "name": "Animation and Game Design Template ",
-      "url": "https://docs.google.com/presentation/d/1O1oWeMbIOetBbgmuwyXlUDmlr6L9ygQi0wLG89w_uq0/edit?usp=share_link",
+      "name": "Web Design Template ",
+      "url": "https://docs.google.com/presentation/d/1L7BgZu3XJVajibAfhK4c9o2R1_-nMC0ND_R3mXgN2wg/edit?usp=sharing",
       "key": "web_design_template",
       "properties": {
         "audience": "Student",
@@ -12665,6 +12666,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

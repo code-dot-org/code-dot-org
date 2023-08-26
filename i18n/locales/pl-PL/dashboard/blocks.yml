@@ -145,7 +145,6 @@ pl:
             MOVES.Rest: Żaden
           DIR:
             '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} rób {MOVE} {DIR} bez końca"
         options:
@@ -167,7 +166,6 @@ pl:
             MOVES.Rest: Żaden
           DIR:
             '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: zamień {SPRITE} {PROPERTY} przez {VAL}
         options:
@@ -2543,6 +2541,8 @@ pl:
             new Behavior(wobbling, []): chybotanie
             new Behavior(wandering, []): wędrowanie
             new Behavior(patrolling, []): patrolowanie
+      adaptations_location_picker:
+        text: w:{LOCATION}
       adaptations_makeNumSpritesNear:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       adaptations_spriteBirdSay:
@@ -2714,8 +2714,45 @@ pl:
             '"too much"': za dużo
             '"just right"': w sam raz
             '"too little"': za mało
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      ecosystems_location_picker:
+        text: w:{LOCATION}
+      ecosystems_makeNewSpriteBetween:
+        text: 'utwórz {N} nowe {GROUP} między lokalizacją x: {X} y: {Y}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki w {LOCATION_GENERATOR}
+      ecosystems_makeNumSpritesWithinRange:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki w {RANGE}
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Góra
+            "{x1:0, x2:400, y1:150, y2:250}": Środek
+            "{x1:0, x2:400, y1:0, y2:200}": Dół
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        text: "{RANGE}"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Góra
+            "{x1:0, x2:400, y1:0, y2:200}": Dół
       storylab_clearHeadings:
         text: wyczyść nagłówki
+      storylab_printText:
+        text: drukuj {TEXT}
       storylab_setForegroundEffect2:
         text: wykonaj efekt {EFFECT}
         options:

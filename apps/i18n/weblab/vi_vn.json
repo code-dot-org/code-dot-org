@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "Thêm CSS",
+  "addHTMLButton": "Thêm HTML",
+  "addImageButton": "Thêm ảnh",
+  "closeFullscreenPreview": "Đóng xem trước toàn màn hình",
+  "currentProjectCapacity": "{currentMegabytes}MB của {totalMegabytes}MB đã sử dụng",
+  "disallowedHtml": "Tệp \"{filename}\" chứa các phần tử HTML không được phép: `{disallowedTags}`. Chúng sẽ bị xóa khi hộp thoại này đóng lại.",
+  "errorSavingProject": "Một cái gì đó không hoạt động trong khi tự động lưu dự án của bạn. Kiểm tra kết nối internet của bạn và thử lưu thủ công. Nếu vấn đề này vẫn tiếp diễn, hãy thử tải lại trang để bắt đầu lại.",
+  "fatalError": "Lỗi gây tử vong: {message}. Nếu bạn đang ở chế độ Duyệt web riêng tư, không thể ghi dữ liệu.",
+  "loadFailure": "Chúng tôi rất tiếc, Web Lab không tải được vì lý do nào đó. Lỗi: {message}",
+  "openFullscreenPreview": "Mở xem trước toàn màn hình",
+  "refreshPreview": "Làm mới và lưu",
+  "reloading": "Đang tải lại...",
+  "reset": "Đặt lại Web Lab",
+  "resetComplete": "Hoàn tất thiết lập lại Web Lab",
+  "resetFailure": "Không thể đặt lại Web Lab: {message}.",
+  "toggleInspectorOff": "Thanh tra: On",
+  "toggleInspectorOn": "Thanh tra: Tắt",
+  "troubleshootingSupport": "Vui lòng xem bài viết hỗ trợ của chúng tôi [\"Khắc phục sự cố Web Lab\"]({url}) để biết thêm thông tin.",
+  "uploadError": "Lỗi tải lên"
 }

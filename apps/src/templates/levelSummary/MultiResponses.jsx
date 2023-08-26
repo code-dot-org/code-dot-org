@@ -6,32 +6,46 @@ import color from '@cdo/apps/util/color';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
-  const multiAnswerCounts = (responses, answerCount) => ({
-    // Default to a count of 0 for each answer.
-    ...Object.fromEntries([...LETTERS.slice(0, answerCount)].map(l => [l, 0])),
-    // Overwrite the count for any answers that have student responses.
-    ...responses.reduce((acc, curr) => {
-      const letter = LETTERS.at(curr.text);
+// Return an object hash, where the keys are letters representing an answer
+// and the values are the count of responses that chose that answer.
+// Example:
+//   {A: 1, B: 9, C: 2}
+const multiAnswerCounts = (responses, answerCount) => ({
+  // Default to a count of 0 for each answer.
+  ...Object.fromEntries([...LETTERS.slice(0, answerCount)].map(l => [l, 0])),
+  // Overwrite the count for any answers that have student responses.
+  ...responses.reduce((acc, curr) => {
+    // Each response can be an index or a comma-separated list of indices.
+    const indices = curr.text.split(',');
+    indices.forEach(index => {
+      const letter = LETTERS.charAt(index);
       acc[letter] = acc[letter] ? acc[letter] + 1 : 1;
-      return acc;
-    }, {}),
-  });
+    });
+    return acc;
+  }, {}),
+});
 
-  const multiChartData = (data, highlightCorrect = false) => [
-    ['Answer', 'Count', {role: 'annotation'}, {role: 'style'}],
-    ...Object.entries(data).map(row => [
-      ...row,
-      row[1] +
-        (highlightCorrect && highlightCorrect.includes(row[0]) ? '✔️' : ''),
-      highlightCorrect
-        ? highlightCorrect.includes(row[0])
-          ? color.brand_primary_default
-          : color.brand_primary_light
-        : null,
-    ]),
-  ];
+// Return row data in the format expected by Google Charts.
+// Param `data` is the output of `multiAnswerCounts`.
+// Optional param `highlightCorrect` is either false to render without
+// highlighting, or an Array of the letters representing correct
+// answers. Example:
+//   multiChartData({A: 2, B: 0, C: 6}, ['A'])
+const multiChartData = (data, highlightCorrect = false) => [
+  ['Answer', 'Count', {role: 'annotation'}, {role: 'style'}],
+  ...Object.entries(data).map(row => [
+    ...row,
+    row[1] +
+      (highlightCorrect && highlightCorrect.includes(row[0]) ? '✔️' : ''),
+    highlightCorrect
+      ? highlightCorrect.includes(row[0])
+        ? color.brand_primary_default
+        : color.brand_primary_light
+      : null,
+  ]),
+];
 
+const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
   const answers = scriptData.level.properties.answers;
   const answerData = useMemo(
     () => multiAnswerCounts(scriptData.responses, answers.length),
@@ -114,4 +128,5 @@ MultiResponses.propTypes = {
   showCorrectAnswer: PropTypes.bool,
 };
 
+export const exportedForTesting = {multiAnswerCounts, multiChartData};
 export default MultiResponses;

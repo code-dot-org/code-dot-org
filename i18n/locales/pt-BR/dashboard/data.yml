@@ -391,6 +391,9 @@ pt:
         csd_external_netflix_data: Como a Netflix faz sugestões para programas de TV e filmes?
         csd_external_waze_data: Por que tantos usuários são obcecados com Waze?
         csd_gamelab_animation_tab: A Guia de Animação
+        csd_gamelab_draw_1: Desenho no Game Lab - Parte 1
+        csd_gamelab_draw_2: Desenho no Game Lab - Parte 2
+        csd_gamelab_drawloop: Introdução ao Draw Loop
         csd_gamelab_velocity: Velocidade
         csd_weblab_intro_1: Introdução para o Laboratório Web - Parte 1
         csd_weblab_intro_2: Introdução para o Laboratório Web - Parte 2
@@ -672,7 +675,68 @@ pt:
         csa_object_oriented_programming: 'CSA: Programação orientada a objetos'
         csa_creating_objects: 'CSA: Criando objetos'
         csa_calling_methods: 'CSA: Métodos de chamada'
+        csa_while_loops: 'CSA: While Loops'
+        csa_inheritance: 'CSA: Herança'
+        csa_writing_a_method: 'CSA: Escrevendo um método'
+        csa_software_engineering_code_reviews: 'CSA: Engenharia de software - Revisões de código'
+        csa_conditional_statements: 'CSA: Declarações condicionais'
+        csa_printing_in_java: 'CSA: Impressão em Java'
+        csa_two_way_selection_and_not: 'CSA: Seleção bidirecional e NÃO'
+        csa-pl-intro-to-oop: Introdução à Programação Orientada a Objetos
+        csa-pl-welcome-to-Neighborhood: Bem-vindo ao The Neighborhood
+        csa-pl-calling-methods: Métodos de chamada em Java
+        csa-pl-creating-objects: Criando objetos
+        csa_accessor_methods: 'CSA: Métodos de acesso'
+        csa_constructors: 'CSA: Construtores'
+        csa_creating_a_scanner_object: 'CSA: Criando um objeto de scanner'
+        csa_creating_variables: 'CSA: Criando variáveis'
+        csa_instance_variables_and_attributes: 'CSA: variáveis e atributos de instância'
+        csa_mutator_methods: 'CSA: Métodos mutadores'
+        csa_overloaded_constructors: 'CSA: Construtores sobrecarregados'
+        csa_the_tostring_method: 'CSA: O método toString ()'
+        csa_scanner_class_methods: 'CSA: Métodos de classe de scanner'
+        csa_for_loops: 'CSA: Para loops'
+        csa_enhanced_for_loops: 'CSA: aprimorado para loops'
+        csa_modifying_values_in_a_1d_array: 'CSA: Modificando valores em uma matriz 1D'
+        csa_nested_loops: 'CSA: Loops aninhados'
+        csa_one_dimensional_arrays: 'CSA: matrizes unidimensionais (1D)'
+        csa_polymorphism: 'CSA: Polimorfismo'
+        csa_casting: 'CSA: Fundição'
+        csa_equals_and_aliases: 'CSA: Iguais e aliases'
+        csa_multi-selection_statements: 'CSA: Declarações de seleção múltipla'
+        csa_random_numbers: 'CSA: Números aleatórios'
+        csa_static_methods: 'CSA: Métodos estáticos'
+        csa_static_variables: 'CSA: Variáveis estáticas'
+        csa_the_equals_method: 'CSA: O método equals ()'
+        csa_welcome_to_the_theater: 'CSA: Bem-vindo ao The Theatre'
+        enter_your_own_poem: Insira seu próprio poema
+        csa-example-solution-1: 'Codificação ao vivo: um exemplo de solução '
         csd_sprite_properties: Propriedades do Sprite
+        csa-pl-documentation: Documentação no Java Lab
+        csc-starquilts-intro: 'CSC: Star Quilts'
+        csc-mapmakers-intro: Codificação de Mapas Interativos
+        csa-pl-vocab-pm: Vocabulário de gerenciamento de projetos
+        csc-ecosystems-intro: Introdução aos ecossistemas
+        PL_CSD_MicroBit_Intro: Introdução ao Micro:bit
+        csc_animal_adaptations_intro: Introdução às adaptações de animais
+        csa_two_dimensional_arrays: 'CSA: matrizes bidimensionais (2D)'
+        csa_working_with_2d_array_elements: 'CSA: Trabalhando com elementos de matriz 2D'
+        csa_row_major_traversal: 'CSA: Linha principal de travessia'
+        csa_column_major_traversal: 'CSA: Travessia principal da coluna'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: aprimorado para loops e matrizes 2D'
+        csa_images_and_pixels: 'CSA: imagens e pixels'
+        csa_wrapper_classes_part_1: 'CSA: Classes de embalagem, parte 1'
+        csa_wrapper_classes_part_2: 'CSA: Classes de embalagem, parte 2'
+        csa_the_arraylist_class: 'CSA: A classe ArrayList'
+        csa_working_with_arraylist_data: 'CSA: Trabalhando com dados da ArrayList'
+        csa_remving_data_from_an_arraylist: 'CSA: Removendo dados de uma lista de matrizes'
+        csa_private_methods: 'CSA: Métodos privados'
+        csa_recursion: 'CSA: Recursão'
+        csa_searching_algorithms: 'CSA: Algoritmos de busca'
+        csa_sorting_algorithms: 'CSA: Algoritmos de classificação'
+        star_quilts_intro_to_artist: 'Star Quilts: Introdução ao artista'
+        upload_sprites_backgrounds: Fazendo upload de sprites e planos de fundo personalizados
+        csc_bookcovers_intro: Codificando Capas de Livros
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

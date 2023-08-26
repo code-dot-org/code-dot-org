@@ -552,7 +552,8 @@ export default class CoreLibrary {
     const matchingInputEvents = this.inputEvents.filter(
       inputEvent =>
         inputEvent.type === 'whenSpriteCreated' &&
-        (inputEvent.args.name === newSprite.name ||
+        ((inputEvent.args.name !== undefined &&
+          inputEvent.args.name === newSprite.name) ||
           inputEvent.args.costume === newSprite.getAnimationLabel() ||
           inputEvent.args.costume === 'all')
     );

@@ -60,6 +60,7 @@ es-MX:
         reset_password_token: "El enlace para restablecer la contraseña que has seguido"
         error:
           future: no puede ser en el futuro
+        us_state: 'Estado/provincia'
   beta: "beta"
   hello: "Hola, mundo"
   welcome_back: "Bienvenido, %{name}"
@@ -69,6 +70,7 @@ es-MX:
   unsubmit: NO enviado
   previous_page: Página anterior
   next_page: Página siguiente
+  next_level: Siguiente nivel
   next_resource: Siguiente recurso
   done_with_module: Hecho con este Módulo de Aprendizaje
   cancel: "Cancelar"
@@ -199,6 +201,9 @@ es-MX:
     parent_account_checkbox: "Soy padre o tutor registrándose en lugar de mi hijo"
     parent_account_email_progress_permission: "¿Podemos enviarle emails con para contarle sobre el rendimiento y los proyectos de su hijo? Tambien mandaremos informacion sobre los cursos de ciencias computacionales [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
     parent_account_email_label: "Correo electrónico del padre o tutor"
+    us_state: 'Estado/provincia'
+    us_state_dropdown_options:
+      other: "El lugard donde vivo no está presente en esta lista"
   school_info:
     title: 'Información de la escuela (opcional)'
     school_country: 'País en el que está la escuela'
@@ -261,6 +266,9 @@ es-MX:
   parent_mailer:
     student_associated_subject: 'Información de inicio de sesión para Code.org'
     parent_email_added_subject: '¡Bienvenido a Code.org!'
+    parent_permission_request_subject: "Se requiere consentimiento paterno para que su estudiante obtenga acceso a Code.org"
+    parent_permission_reminder_subject: "Atención, requerimos consentimiento paterno para otorgarle acceso a su estudiante"
+    parent_permission_confirmation_subject: "¡Gracias por aprobar el acceso de su estudiante a Code.org!"
   teacher_mailer:
     new_teacher_subject: '¡Bienvenido a Code.org!'
     delete_teacher_subject: 'Aviso de Code.org: tu cuenta ha sido eliminada'
@@ -699,7 +707,7 @@ es-MX:
       cta: "Aprende cómo"
     hello-world:
       title: 'Hola Mundo'
-      body: 'Elige entre cuatro temas divertidos para codificar personajes interactivos en un mundo creado por ti.'
+      body: 'Elige entre cuatro temas divertidos para programar personajes interactivos en un mundo creado por ti.'
     hero:
       title: "Minecraft"
       body: "¡Minecraft está de vuelta para la Hora del Código con una actividad nueva! Viaja a través de Minecraft con códigos."
@@ -1054,17 +1062,33 @@ es-MX:
         not_listed: 'El término preferido no aparece'
         none: 'Prefiero no contestar'
       school_country:
+        australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belice'
+        brazil: 'Brasil'
         canada: 'Canadá'
         chile: 'Chile'
         colombia: 'Colombia'
+        dominican_republic: 'República Dominicana'
+        india: 'India'
+        indonesia: 'Indonesia'
         israel: 'Israel'
+        jamaica: 'Jamaica'
+        kenya: 'Kenia'
         malaysia: 'Malasia'
+        maldives: 'Maldivas'
         mexico: 'México'
+        mongolia: 'Mongolia'
+        new_zealand: 'Nueva Zelanda'
         paraguay: 'Paraguay'
+        portugal: 'Portugal'
+        slovakia: 'Eslovaquia'
+        south_korea: 'Corea del Sur'
+        spain: 'España'
         thailand: 'Tailandia'
+        trinidad_and_tobago: 'Trinidad y Tobago'
         uzbekistan: 'Uzbekistán'
+        vietnam: 'Vietnam'
       ages:
         ages_under_6: 'Hasta 6 años'
         ages_7_8: '7-8 años'
@@ -1113,6 +1137,7 @@ es-MX:
         csf_express: 'Fundamentos de Ciencias de la Computación (Pre-Express o Express)'
         csd: 'Descubrimientos de Ciencias de la Computación'
         csp: 'Principios de Ciencias de la Computación'
+        other: 'Otro'
         not_applicable: "No Aplicable"
       email_opt_in:
         opt_in_yes: 'Sí'
@@ -1189,3 +1214,4 @@ es-MX:
     image_width: "Ancho de imagen"
     image_height: "Altura de la imagen"
     binary: "Binario"
+

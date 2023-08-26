@@ -413,6 +413,8 @@ bn:
       robotics:
         kodable: 'কোডাবল'
         other: "অন্যান্য"
+      workshop_course:
+        other: 'অন্যান্য'
       email_opt_in:
         opt_in_yes: '"হ্যাঁ"'
         opt_in_no: 'না'
@@ -424,3 +426,4 @@ bn:
   copy: 'অনুলিপি'
   pixelation:
     binary: "দ্বি-আঙ্কিক"
+

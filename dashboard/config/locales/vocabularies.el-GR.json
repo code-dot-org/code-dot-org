@@ -2,469 +2,142 @@
   "el-GR": {
     "data": {
       "vocabularies": {
-        "code/dance-extras/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        "input/csd/2021": {
+          "word": "Είσοδος"
         },
-        "event/dance-extras/unversioned": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        "copyright/csd/2021": {
+          "word": "Πνευματικά δικαιώματα"
         },
-        "program/dance-extras/unversioned": {
+        "debugging/csd/2021": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/csd/2021": {
           "word": "Πρόγραμμα",
           "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
         },
-        "code/minecraft/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        "variable/csd/2021": {
+          "word": "Μεταβλητή"
         },
-        "debugging/minecraft/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
+        "conditionals/csd/2021": {
+          "word": "Συνθήκες"
         },
-        "event/minecraft/unversioned": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        "abstraction/csd/2021": {
+          "word": "Αφαίρεση"
         },
-        "program/minecraft/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/hero/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "function/hero/unversioned": {
+        "function/csd/2021": {
           "word": "Συνάρτηση"
         },
-        "program/hero/unversioned": {
+        "user_interface/csd/2021": {
+          "word": "Διεπαφή Χρήστη"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Εκμάθηση μηχανής"
+        },
+        "algorithm/coursea/2021": {
+          "word": "Αλγόριθμος"
+        },
+        "debugging/coursea/2021": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/coursea/2021": {
           "word": "Πρόγραμμα",
           "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
         },
-        "code/poem-art/2021": {
-          "word": "Κώδικας"
+        "drop/coursea/2021": {
+          "word": "Πέσιμο"
         },
-        "event/poem-art/2021": {
+        "programming/coursea/2021": {
+          "word": "Προγραμματισμός"
+        },
+        "event/coursea/2021": {
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
         },
-        "program/poem-art/2021": {
-          "word": "Πρόγραμμα"
+        "algorithm/courseb/2021": {
+          "word": "Αλγόριθμος"
         },
-        "code/flappy/unversioned": {
+        "debugging/courseb/2021": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "drop/courseb/2021": {
+          "word": "Πέσιμο"
+        },
+        "program/courseb/2021": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "programming/courseb/2021": {
+          "word": "Προγραμματισμός"
+        },
+        "event/courseb/2021": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "algorithm/coursec/2021": {
+          "word": "Αλγόριθμος"
+        },
+        "debugging/coursec/2021": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/coursec/2021": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "programming/coursec/2021": {
+          "word": "Προγραμματισμός"
+        },
+        "event/coursec/2021": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "binary/coursec/2021": {
+          "word": "Δυαδικό"
+        },
+        "algorithm/coursed/2021": {
+          "word": "Αλγόριθμος"
+        },
+        "program/coursed/2021": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "debugging/coursed/2021": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "programming/coursed/2021": {
+          "word": "Προγραμματισμός"
+        },
+        "event/coursed/2021": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "code/coursed/2021": {
           "word": "κώδικας",
           "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
         },
-        "debugging/flappy/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/flappy/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/hourofcode/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/frozen/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/frozen/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/iceage/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/iceage/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/artist/unversioned": {
-          "word": "Κώδικας",
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "debugging/artist/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/artist/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/gumball/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/gumball/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/dance/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "event/dance/unversioned": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "program/dance/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/aquatic/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "conditionals/aquatic/unversioned": {
+        "conditionals/coursed/2021": {
           "word": "Συνθήκες"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "loops/aquatic/unversioned": {
-          "word": "Βρόχοι"
-        },
-        "program/aquatic/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/starwars/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/starwars/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/mc/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "debugging/mc/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/mc/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/playlab/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/playlab/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/starwarsblocks/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "event/outbreak/unversioned": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Μοντέλα και Προσομοιώσεις",
-          "definition": "ένα πρόγραμμα που αντιγράφει ή μιμείται βασικά χαρακτηριστικά του πραγματικού κόσμου προκειμένου να ερευνηθεί η συμπεριφορά του χωρίς το κόστος, τον χρόνο ή τον κίνδυνο της εκτέλεσης ενός πειράματος στην πραγματική ζωή."
-        },
-        "code/sports/unversioned": {
-          "word": "Κώδικας"
-        },
-        "debugging/sports/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "event/sports/unversioned": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "program/sports/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/infinity/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/infinity/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/basketball/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "debugging/basketball/unversioned": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "event/basketball/unversioned": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "program/basketball/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/dance-2019/unversioned": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "Εκμάθηση μηχανής"
-        },
-        "program/coursed/2022": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "debugging/coursed/2022": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "programming/coursed/2022": {
-          "word": "Προγραμματισμός"
-        },
-        "event/coursed/2022": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "code/coursed/2022": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "conditionals/coursed/2022": {
-          "word": "Συνθήκες"
-        },
-        "behavior/coursef/2022": {
+        "behavior/coursee/2021": {
           "word": "Συμπεριφορά"
         },
-        "program/coursef/2022": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "event/coursef/2022": {
+        "event/coursee/2021": {
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
         },
-        "variable/coursef/2022": {
-          "word": "Μεταβλητή"
-        },
-        "input/coursef/2022": {
-          "word": "Είσοδος"
-        },
-        "models_and_simulations/coursef/2022": {
-          "word": "Μοντέλα και Προσομοιώσεις",
-          "definition": "ένα πρόγραμμα που αντιγράφει ή μιμείται βασικά χαρακτηριστικά του πραγματικού κόσμου προκειμένου να ερευνηθεί η συμπεριφορά του χωρίς το κόστος, τον χρόνο ή τον κίνδυνο της εκτέλεσης ενός πειράματος στην πραγματική ζωή."
-        },
-        "machine_learning/coursef/2022": {
-          "word": "Εκμάθηση μηχανής"
-        },
-        "internet/coursef/2022": {
-          "word": "Διαδίκτυο"
-        },
-        "define/coursef/2022": {
-          "word": "Όρισε"
-        },
-        "behavior/coursee/2022": {
-          "word": "Συμπεριφορά"
-        },
-        "function/coursee/2022": {
-          "word": "Συνάρτηση"
-        },
-        "conditionals/coursee/2022": {
-          "word": "Συνθήκες"
-        },
-        "copyright/coursee/2022": {
+        "copyright/coursee/2021": {
           "word": "Πνευματικά δικαιώματα"
         },
-        "define/coursee/2022": {
-          "word": "Όρισε"
-        },
-        "debugging/courseb/2022": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "drop/courseb/2022": {
-          "word": "Πέσιμο"
-        },
-        "program/courseb/2022": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "programming/courseb/2022": {
-          "word": "Προγραμματισμός"
-        },
-        "event/courseb/2022": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "debugging/express/2022": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/express/2022": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "programming/express/2022": {
-          "word": "Προγραμματισμός"
-        },
-        "behavior/express/2022": {
-          "word": "Συμπεριφορά"
-        },
-        "event/express/2022": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "conditionals/express/2022": {
-          "word": "Συνθήκες"
-        },
-        "function/express/2022": {
+        "function/coursee/2021": {
           "word": "Συνάρτηση"
         },
-        "variable/express/2022": {
-          "word": "Μεταβλητή"
-        },
-        "define/express/2022": {
-          "word": "Όρισε"
-        },
-        "drop/pre-express/2022": {
-          "word": "Πέσιμο"
-        },
-        "debugging/pre-express/2022": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/pre-express/2022": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "programming/pre-express/2022": {
-          "word": "Προγραμματισμός"
-        },
-        "event/pre-express/2022": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "debugging/coursea/2022": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/coursea/2022": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "drop/coursea/2022": {
-          "word": "Πέσιμο"
-        },
-        "programming/coursea/2022": {
-          "word": "Προγραμματισμός"
-        },
-        "event/coursea/2022": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "debugging/coursec/2022": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/coursec/2022": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "programming/coursec/2022": {
-          "word": "Προγραμματισμός"
-        },
-        "event/coursec/2022": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "data/coursec/2022": {
-          "word": "Δεδομένα"
-        },
-        "binary/coursec/2022": {
-          "word": "Δυαδικό"
-        },
-        "input/csd/2022": {
-          "word": "Είσοδος"
-        },
-        "debugging/csd/2022": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/csd/2022": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "variable/csd/2022": {
-          "word": "Μεταβλητή"
-        },
-        "conditionals/csd/2022": {
+        "conditionals/coursee/2021": {
           "word": "Συνθήκες"
         },
-        "abstraction/csd/2022": {
-          "word": "Αφαίρεση"
+        "define/coursee/2021": {
+          "word": "Όρισε"
         },
-        "function/csd/2022": {
-          "word": "Συνάρτηση"
-        },
-        "copyright/csd/2022": {
-          "word": "Πνευματικά δικαιώματα"
-        },
-        "user_interface/csd/2022": {
-          "word": "Διεπαφή Χρήστη"
-        },
-        "machine_learning/csd/2022": {
-          "word": "Εκμάθηση μηχανής"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Κώδικας",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "algorithm/coursef/2021": {
+          "word": "Αλγόριθμος"
         },
         "behavior/coursef/2021": {
           "word": "Συμπεριφορά"
@@ -496,76 +169,8 @@
         "define/coursef/2021": {
           "word": "Όρισε"
         },
-        "debugging/courseb/2021": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "drop/courseb/2021": {
-          "word": "Πέσιμο"
-        },
-        "program/courseb/2021": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "programming/courseb/2021": {
-          "word": "Προγραμματισμός"
-        },
-        "event/courseb/2021": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "debugging/coursea/2021": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/coursea/2021": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "drop/coursea/2021": {
-          "word": "Πέσιμο"
-        },
-        "programming/coursea/2021": {
-          "word": "Προγραμματισμός"
-        },
-        "event/coursea/2021": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "debugging/coursec/2021": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "program/coursec/2021": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "programming/coursec/2021": {
-          "word": "Προγραμματισμός"
-        },
-        "event/coursec/2021": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "binary/coursec/2021": {
-          "word": "Δυαδικό"
-        },
-        "program/coursed/2021": {
-          "word": "Πρόγραμμα",
-          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "debugging/coursed/2021": {
-          "word": "Εντοπισμός σφαλμάτων"
-        },
-        "programming/coursed/2021": {
-          "word": "Προγραμματισμός"
-        },
-        "event/coursed/2021": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "code/coursed/2021": {
-          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
-        },
-        "conditionals/coursed/2021": {
-          "word": "Συνθήκες"
+        "algorithm/express/2021": {
+          "word": "Αλγόριθμος"
         },
         "debugging/express/2021": {
           "word": "Εντοπισμός σφαλμάτων"
@@ -584,6 +189,9 @@
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
         },
+        "code/express/2021": {
+          "word": "κώδικας"
+        },
         "conditionals/express/2021": {
           "word": "Συνθήκες"
         },
@@ -599,6 +207,9 @@
         "drop/pre-express/2021": {
           "word": "Πέσιμο"
         },
+        "algorithm/pre-express/2021": {
+          "word": "Αλγόριθμος"
+        },
         "debugging/pre-express/2021": {
           "word": "Εντοπισμός σφαλμάτων"
         },
@@ -613,55 +224,517 @@
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
         },
-        "behavior/coursee/2021": {
-          "word": "Συμπεριφορά"
+        "input/csd/2022": {
+          "word": "Είσοδος"
         },
-        "event/coursee/2021": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "copyright/coursee/2021": {
+        "copyright/csd/2022": {
           "word": "Πνευματικά δικαιώματα"
         },
-        "function/coursee/2021": {
-          "word": "Συνάρτηση"
-        },
-        "conditionals/coursee/2021": {
-          "word": "Συνθήκες"
-        },
-        "define/coursee/2021": {
-          "word": "Όρισε"
-        },
-        "machine_learning/csd/2021": {
-          "word": "Εκμάθηση μηχανής"
-        },
-        "user_interface/csd/2021": {
-          "word": "Διεπαφή Χρήστη"
-        },
-        "debugging/csd/2021": {
+        "debugging/csd/2022": {
           "word": "Εντοπισμός σφαλμάτων"
         },
-        "program/csd/2021": {
+        "program/csd/2022": {
           "word": "Πρόγραμμα",
           "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
         },
-        "variable/csd/2021": {
+        "variable/csd/2022": {
           "word": "Μεταβλητή"
         },
-        "conditionals/csd/2021": {
+        "conditionals/csd/2022": {
           "word": "Συνθήκες"
         },
-        "abstraction/csd/2021": {
+        "abstraction/csd/2022": {
           "word": "Αφαίρεση"
         },
-        "function/csd/2021": {
+        "function/csd/2022": {
           "word": "Συνάρτηση"
         },
-        "input/csd/2021": {
+        "user_interface/csd/2022": {
+          "word": "Διεπαφή Χρήστη"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Εκμάθηση μηχανής"
+        },
+        "algorithm/coursea/2022": {
+          "word": "Αλγόριθμος"
+        },
+        "debugging/coursea/2022": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/coursea/2022": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "drop/coursea/2022": {
+          "word": "Πέσιμο"
+        },
+        "programming/coursea/2022": {
+          "word": "Προγραμματισμός"
+        },
+        "event/coursea/2022": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "algorithm/courseb/2022": {
+          "word": "Αλγόριθμος"
+        },
+        "debugging/courseb/2022": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "drop/courseb/2022": {
+          "word": "Πέσιμο"
+        },
+        "program/courseb/2022": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "programming/courseb/2022": {
+          "word": "Προγραμματισμός"
+        },
+        "event/courseb/2022": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "algorithm/coursec/2022": {
+          "word": "Αλγόριθμος"
+        },
+        "debugging/coursec/2022": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/coursec/2022": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "persistence/coursec/2022": {
+          "definition": "Δεν τα παρατάω."
+        },
+        "programming/coursec/2022": {
+          "word": "Προγραμματισμός"
+        },
+        "angle/coursec/2022": {
+          "word": "Γωνία"
+        },
+        "event/coursec/2022": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "data/coursec/2022": {
+          "word": "Δεδομένα"
+        },
+        "binary/coursec/2022": {
+          "word": "Δυαδικό"
+        },
+        "algorithm/coursed/2022": {
+          "word": "Αλγόριθμος"
+        },
+        "program/coursed/2022": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "debugging/coursed/2022": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "programming/coursed/2022": {
+          "word": "Προγραμματισμός"
+        },
+        "event/coursed/2022": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "code/coursed/2022": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "conditionals/coursed/2022": {
+          "word": "Συνθήκες"
+        },
+        "behavior/coursee/2022": {
+          "word": "Συμπεριφορά"
+        },
+        "function/coursee/2022": {
+          "word": "Συνάρτηση"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Συνθήκες"
+        },
+        "copyright/coursee/2022": {
+          "word": "Πνευματικά δικαιώματα"
+        },
+        "define/coursee/2022": {
+          "word": "Όρισε"
+        },
+        "algorithm/coursef/2022": {
+          "word": "Αλγόριθμος"
+        },
+        "behavior/coursef/2022": {
+          "word": "Συμπεριφορά"
+        },
+        "program/coursef/2022": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "event/coursef/2022": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "variable/coursef/2022": {
+          "word": "Μεταβλητή"
+        },
+        "input/coursef/2022": {
           "word": "Είσοδος"
         },
-        "copyright/csd/2021": {
-          "word": "Πνευματικά δικαιώματα"
+        "models_and_simulations/coursef/2022": {
+          "word": "Μοντέλα και Προσομοιώσεις",
+          "definition": "ένα πρόγραμμα που αντιγράφει ή μιμείται βασικά χαρακτηριστικά του πραγματικού κόσμου προκειμένου να ερευνηθεί η συμπεριφορά του χωρίς το κόστος, τον χρόνο ή τον κίνδυνο της εκτέλεσης ενός πειράματος στην πραγματική ζωή."
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Εκμάθηση μηχανής"
+        },
+        "internet/coursef/2022": {
+          "word": "Διαδίκτυο"
+        },
+        "define/coursef/2022": {
+          "word": "Όρισε"
+        },
+        "algorithm/express/2022": {
+          "word": "Αλγόριθμος"
+        },
+        "debugging/express/2022": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/express/2022": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "programming/express/2022": {
+          "word": "Προγραμματισμός"
+        },
+        "behavior/express/2022": {
+          "word": "Συμπεριφορά"
+        },
+        "event/express/2022": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "code/express/2022": {
+          "word": "κώδικας"
+        },
+        "conditionals/express/2022": {
+          "word": "Συνθήκες"
+        },
+        "function/express/2022": {
+          "word": "Συνάρτηση"
+        },
+        "variable/express/2022": {
+          "word": "Μεταβλητή"
+        },
+        "define/express/2022": {
+          "word": "Όρισε"
+        },
+        "drop/pre-express/2022": {
+          "word": "Πέσιμο"
+        },
+        "algorithm/pre-express/2022": {
+          "word": "Αλγόριθμος"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/pre-express/2022": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "programming/pre-express/2022": {
+          "word": "Προγραμματισμός"
+        },
+        "event/pre-express/2022": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "code/aquatic/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Συνθήκες"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Βρόχοι"
+        },
+        "program/aquatic/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/artist/unversioned": {
+          "word": "Κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/artist/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/artist/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/basketball/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "event/basketball/unversioned": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "program/basketball/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/dance-2019/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/dance-extras/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/dance/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "event/dance/unversioned": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "program/dance/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/flappy/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/flappy/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/frozen/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/frozen/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/gumball/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/gumball/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/hero/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/hero/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "function/hero/unversioned": {
+          "word": "Συνάρτηση"
+        },
+        "program/hero/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/hourofcode/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/iceage/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/iceage/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/infinity/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/infinity/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/mc/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/mc/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/mc/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/minecraft/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "event/minecraft/unversioned": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Εκμάθηση μηχανής"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Μοντέλα και Προσομοιώσεις",
+          "definition": "ένα πρόγραμμα που αντιγράφει ή μιμείται βασικά χαρακτηριστικά του πραγματικού κόσμου προκειμένου να ερευνηθεί η συμπεριφορά του χωρίς το κόστος, τον χρόνο ή τον κίνδυνο της εκτέλεσης ενός πειράματος στην πραγματική ζωή."
+        },
+        "code/playlab/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/playlab/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/poem-art/2021": {
+          "word": "Κώδικας"
+        },
+        "event/poem-art/2021": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "program/poem-art/2021": {
+          "word": "Πρόγραμμα"
+        },
+        "code/sports/unversioned": {
+          "word": "Κώδικας"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "event/sports/unversioned": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "program/sports/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/starwars/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/starwars/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/starwarsblocks/unversioned": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "code/poem-art/unversioned": {
+          "word": "Κώδικας",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Πρόγραμμα",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         }
       }
     }

@@ -60,6 +60,7 @@ zh-TW:
         reset_password_token: "你跟隨的重設密碼連結"
         error:
           future: 不能選擇將來的時間
+        us_state: '州 / 省'
   beta: "測試版"
   hello: "Hello world"
   welcome_back: "歡迎回來，%{name}"
@@ -69,6 +70,7 @@ zh-TW:
   unsubmit: 取消提交
   previous_page: 上一頁
   next_page: 下一頁
+  next_level: 下一個級別
   next_resource: 下一個資源
   done_with_module: 完成這個學習課程
   cancel: "取消"
@@ -199,6 +201,7 @@ zh-TW:
     parent_account_checkbox: "我是家長/監護人，協助我的孩子進行註冊"
     parent_account_email_progress_permission: "我們是否可以偶爾透過電子信箱向你發送關於你孩子進度和專案的最新資訊，以及關於其課程和電腦科學的最新資訊？[(參見我們的隱私政策)](%{privacy_policy_url})"
     parent_account_email_label: "家長/監護人電子信箱"
+    us_state: '州 / 省'
   school_info:
     title: '學校資訊（非必填）'
     school_country: '學校所屬國家'
@@ -378,6 +381,7 @@ zh-TW:
       help_us: "幫助我們"
       teach: "教育"
       about: "關於"
+      incubator: "孵化器"
       legal: "法律與隱私權"
       legal_privacy: "隱私政策"
       legal_cookie_notice: "Cookie通知"
@@ -675,65 +679,139 @@ zh-TW:
       body_short: "設計一個 App（應用程式），用積木或 JavaScript 來編程使它運作，然後在幾秒鐘內分享您的應用程式。 a"
       audience: '年齡 13+'
       cta: '學習如何做'
+      image_alt: '一隻穿著火箭動力背包的紫色兔子。'
+    applab-intro:
+      image_alt: '一隻手正在點擊智能手機屏幕的中央。光線和火花正在從屏幕上出來。'
     aquatic:
       title: "Minecraft"
+      image_alt: '史蒂夫和亞歷克斯從我的世界看著你.'
+    artist:
+      image_alt: '一個卡通人拿著一支巨大的鉛筆，畫一個三角形。'
+    conditionals:
+      image_alt: '兩只手洗牌一副撲克牌。'
+    course1:
+      image_alt: 'Code.org 大黃蜂和橙色魚站在一些代碼前面。'
+    course2:
+      image_alt: 'Code.org 拼圖的拼貼，顯示綠色巫師，藝術家和橙色魚。'
+    course3:
+      image_alt: 'Code.org 拼圖的拼貼，顯示遊戲，殭屍和忍者。'
+    course4:
+      image_alt: 'Code.org 拼圖的拼貼，展示了足球，寵物和藝術家。'
+    coursea:
+      image_alt: 'Code.org 拼圖拼貼顯示大象和松鼠。'
+    courseb:
+      image_alt: 'Code.org 拼圖的拼貼，顯示探險家，寶石和一朵花。'
+    coursec:
+      image_alt: 'Code.org 拼圖的拼貼顯示一隻松鼠，二進制數字和一隻紅色的鳥從遊戲憤怒的小鳥。'
+    coursed:
+      image_alt: 'Code.org 拼圖的拼貼，顯示了一隻蜜蜂，鮮花，蜂蜜和一隻綠豬遊戲憤怒的小鳥。'
+    coursee:
+      image_alt: 'Code.org 拼圖的拼貼，顯示一個拿著鏟子，南瓜，果園和牛的人。'
+    coursef:
+      image_alt: 'Code.org 拼圖的拼貼，顯示色彩繽紛的幾何形狀、紅色海盜和藝術家。'
     dance-2019:
       title: '舞蹈派對'
+      image_alt: '一隻快樂的貓，樹懶和鯊魚跳舞。'
+    dance-2022:
+      image_alt: '綠色外星人和機器人跳舞與土星在背景中。'
     dance:
       title: '舞蹈派對'
+      image_alt: '一隻酷貓和快樂的鯊魚在聚會上跳舞。'
+    donate:
+      image_alt: '一個孩子指著筆記本電腦屏幕上顯示 Code.org 拼圖。'
+    elementary:
+      image_alt: '站立在一個領域的大黃蜂和松鼠在彩虹前面。'
+    express:
+      image_alt: '植物大戰殭屍殭屍和植物站在旁邊飛揚的鳥。'
     flappy:
       title: '像素鳥程式'
       body: '想要在 10 分鐘內寫個你自己的遊戲嗎？試試我們的像素鳥程式教程！'
+      image_alt: '一隻黃色的鳥在綠色管道之間飛行。'
     frozen:
       title: "冰雪奇緣"
+      image_alt: '安娜和艾爾莎從電影冷凍。他們之間是安娜用她的溜冰鞋在冰上畫一個漂亮的形狀的形象。'
     gallery:
       title: "藝廊"
       body: "觀看由用戶建立的應用程式及藝術畫作"
+      image_alt: '一位藝術家畫了很多圈子和一隻貓，蝙蝠和鬼站在寒假的土地上。'
     gamelab:
       title: "Game Lab"
       body: "Game Lab 這個編程環境可以讓你利用現成的一些物件、角色創作簡單能互動的動畫、遊戲，。"
       audience: "年齡 13+"
       cta: "學習如何做"
+      image_alt: '許多卡通人和動物站在人行道上和微笑。'
+    hello-world-food:
+      image_alt: '許多動物，外星人和表情符號環繞地球。'
     hello-world:
       title: '你好世界'
       body: '從四個有趣的主題中選擇，在你創建的世界中為交互式角色編碼。'
     hero:
       title: "Minecraft"
       body: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
+      image_alt: '從我的世界鐵魔像站在安娜解決一個難題的頂視圖前面。'
     hoc-encryption:
       title: "簡單加密"
       body: "學生將會學習建立和破解加密訊息的技術。"
+      image_alt: '英語中字母頻率的條形圖。'
     hoc:
       title: '經典迷宮'
       body: '試試數百萬人已經體驗過的計算機科學基礎課程。'
+      image_alt: '顯示代碼，馬克·扎克伯格和憤怒的小鳥的圖像拼貼。'
+    hourofcode:
+      image_alt: '顯示代碼，馬克·扎克伯格和憤怒的小鳥的圖像拼貼。'
     hoc2014:
       try_new_tutorial: '試試我們新的一小時玩程式教程（測試版）'
       try_frozen: '來自冰雪奇緣的安娜及艾莎。'
     infinity:
       title: "迪士尼無限 Play Lab"
       body: "用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。"
+      image_alt: '來自「凍結」，「糾結」和「大英雄 6」的五個角色站在一起。'
+    map:
+      image_alt: '美國約 20 個州的灰色圖像以紫色突出顯示。'
+    mc_escape:
+      image_alt: '一個穿著高帽和單片眼鏡的 Minecraft 角色，打開一個裝滿綠寶石的寶箱。'
+    mc:
+      image_alt: '安娜和史蒂夫從我的世界站在 Code.org 我的世界拼圖前面。'
     minecraft:
       title: "Minecraft"
       body: "透過程式碼探索 Minecraft 世界。"
+      image_alt: '安娜和史蒂夫從我的世界站在 Code.org 我的世界拼圖前面。'
     minecraft2016:
       title: "Minecraft"
       body: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
+    oceans:
+      image_alt: '在海洋中掃描各種海洋生物的機器人。'
+    playlab:
+      image_alt: '顯示藍貓，愚蠢的狗和史前鼬鼠的圖像拼貼畫。'
     poem-art:
       title: '詩歌藝術'
       body: '表達自己！使用代碼創建動畫詩歌。'
+      image_alt: '在舞台上表演的時髦魷魚。'
+    pre-express-2017:
+      image_alt: 'a, 狗, 以及, 獨角獸, 站立, 前面, a, 樹, 做,... 的, 難題, pieces.'
+    pre-express-2018:
+      image_alt: 'a, 狗, 以及, 獨角獸, 站立, 前面, a, 樹, 做,... 的, 難題, pieces.'
+    pre-express-2019:
+      image_alt: 'a, 狗, 以及, 獨角獸, 站立, 前面, a, 樹, 做,... 的, 難題, pieces.'
+    pre-express:
+      image_alt: 'a, 狗, 以及, 獨角獸, 站立, 前面, a, 樹, 做,... 的, 難題, pieces.'
     sports:
       title: "運動"
       body: "製作一個籃球遊戲或是混合搭配多種不同的運動的遊戲。"
+      image_alt: 'NBA 和 WNBA 標誌顯示在足球，足球，曲棍球冰球和籃球旁邊。'
     starwars:
       title: "星際大戰"
+      image_alt: 'R2-D2，萊亞，雷伊和 BB-8 站在沙漠中。'
     text-compression:
       title: "文字壓縮"
       body: "在本節課，學生會利用文字壓縮小工具，將圖型替換成符號來壓縮文字。"
+      image_alt: '通過用單個符號替換整個單詞來壓縮文本。'
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab 是個編程環境，透過它，你可以用 HTML 和 CSS 來建立簡單的網頁，然後快速地把你設計好的網站發佈出去。"
       audience: "年齡 13+"
       cta: "學習如何做"
+      image_alt: '顯示 HTML 代碼的計算機屏幕。'
     widgets:
       title: "視窗元件"
       body: "學生可以親身使用這些電子工具，探索計算機科學原理課程中會學到的概念。讓他們使用那些元件去學習，又或者為你的班級建立「單一概念」的課堂。"
@@ -915,6 +993,7 @@ zh-TW:
           age: '請指定適用年齡'
           abuse_type: '請說明內容是如何違反服務條款。'
           abuse_detail: '請提供有關您所回報內容的詳細資訊'
+          captcha: '請填寫驗證碼以檢舉此內容。'
         abusive_url: '要檢舉的網址'
         abuse_type:
           question: '這個內容違反了什麼%{link_start}服務條款%{link_end}？'
@@ -1108,6 +1187,7 @@ zh-TW:
         csf_express: '計算機科學基礎（速學先修或速學）'
         csd: '計算機科學探索'
         csp: 'CS 原理'
+        other: '其它'
         not_applicable: "不適用"
       email_opt_in:
         opt_in_yes: '是'
@@ -1131,11 +1211,23 @@ zh-TW:
   courses_category: '完整課程'
   course_offering:
     headers:
+      favorites: '收藏夾'
+      labs_and_skills: '實驗室和技能'
       minecraft: 'Minecraft'
       hello_world: '你好世界'
+      popular_media: '熱門媒體'
       sports: '運動'
+      express: '快遞'
       csf: 'CS 基本原理'
       csc: '電腦科學聯繫'
+      year_long: '長達一年'
+      csa_labs: 'CSA 實驗室'
+      self_paced: '自定進度'
+      teacher_led: '教師主導'
+      collections: '收藏'
+      workshops_k5: 'K-5 工作坊'
+      summer_workshops_612: '6-12 年度暑期工作坊'
+      virtual_academic_year_workshops_612: '6—12 個虛擬學年工作坊'
   cookie_banner:
     message: '透過繼續瀏覽這個網站或點擊「我同意」按鈕，表示您同意在您的裝置上儲存 cookie。'
     more_information: "檢視 Code.org 的隱私政策。"
@@ -1191,3 +1283,4 @@ zh-TW:
     binary: "二進制（Binary）"
     hexadecimal: "十六進制"
     pixel_format_header: "像素格式"
+

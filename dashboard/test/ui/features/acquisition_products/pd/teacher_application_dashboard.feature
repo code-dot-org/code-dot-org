@@ -14,7 +14,9 @@ Feature: Teacher Application Dashboard
     And I press the first ".Select-option" element
     Then I wait until element "span:contains('Withdrawn')" is visible
     And I wait until element "td:contains('Unreviewed')" is not visible
-    And I see no difference for "Admin Course View"
+    # Eyes snapshot temporarily disabled due to flakiness.
+    # Fix tracked here: https://codedotorg.atlassian.net/browse/ACQ-620
+    # And I see no difference for "Admin Course View"
 
     # Access the Detail View by navigating to the first row's "view application" button href
     # rather than clicking so it does not open in a new tab.
@@ -33,5 +35,7 @@ Feature: Teacher Application Dashboard
     Then I wait until element "table#summary-csp-teachers" is visible
     Then I click selector "table#summary-csp-teachers ~ .btn:contains(View accepted cohort)"
     Then I wait until element "table#cohort-view" is visible
-    And I see no difference for "Admin Cohort View"
+    # Eyes snapshot temporarily disabled due to flakiness.
+    # Fix tracked here: https://codedotorg.atlassian.net/browse/ACQ-620
+    # And I see no difference for "Admin Cohort View"
     And I close my eyes

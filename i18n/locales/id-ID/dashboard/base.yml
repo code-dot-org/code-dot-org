@@ -45,6 +45,7 @@ id:
         personal_email_markdown: "Alamat email pribadi [(klik di sini jika Anda tidak memiliki sebuah alamat email)](%{url})"
         username: 'nama pengguna'
         password: 'Kata sandi'
+        verified_teacher: 'Guru Terverifikasi'
         password_confirmation: 'Konfirmasi sandi'
         current_password: 'Sandi saat ini'
         locale: 'Bahasa'
@@ -59,6 +60,7 @@ id:
         reset_password_token: "Tautan pengaturan ulang kata sandi yang telah Anda ikuti"
         error:
           future: tidak mungkin di masa depan
+        us_state: 'Provinsi'
   beta: "Percobaan"
   hello: "Halo dunia"
   welcome_back: "Selamat datang kembali, %{name}"
@@ -68,6 +70,7 @@ id:
   unsubmit: Tidak dikirim
   previous_page: Halaman sebelumnya
   next_page: Halamat berikutnya
+  next_level: Tingkat berikutnya
   next_resource: Sumber selanjutnya
   done_with_module: Selesaikan Module ini
   cancel: "Batalkan"
@@ -198,6 +201,7 @@ id:
     parent_account_checkbox: "Saya orang tua/wali yang mendaftar untuk anak saya"
     parent_account_email_progress_permission: "Dapatkah kami sesekali mengirimi Anda email tentang info terkini kemajuan dan proyek anak Anda, serta pembaruan kursus dan perkembangan ilmu komputer mereka? [(Lihat kebijakan privasi kami.)](%{privacy_policy_url})"
     parent_account_email_label: "Email Orang Tua/Wali"
+    us_state: 'Provinsi'
   school_info:
     title: 'Informasi Sekolah (opsional)'
     school_country: 'Negara Sekolah'
@@ -267,6 +271,7 @@ id:
   teacher_mailer:
     new_teacher_subject: 'Selamat datang di Code.org!'
     delete_teacher_subject: 'Notifikasi Code.org: Akun Anda telah dihapus'
+    verified_teacher_subject: 'Code.org Guru Verifikasi - Sukses'
   section:
     your_section:
       one: 'Bagian Anda:'
@@ -374,6 +379,7 @@ id:
       help_us: "Bantu Kami"
       teach: "Mengajar"
       about: "Tentang"
+      incubator: "Inkubator"
       legal: "Privasi & Hukum"
       legal_privacy: "Kebijakan privasi"
       legal_cookie_notice: "Informasi Cookie"
@@ -605,6 +611,8 @@ id:
     try_hour_of_code: 'Cobalah Hour of Code!'
     store: 'Toko'
     cookie_notice: 'Informasi Cookie'
+    view_code: 'Lihat Kode'
+    locale_select: "Pilih bahasa"
   reference_area:
     title: 'Perlu bantuan?'
     subtitle: 'Lihat video ini dan tips lainnya'
@@ -629,6 +637,8 @@ id:
       applab_unsupported_tablet: "App Lab sangat cocok di komputer atau laptop dengan mouse dan keyboard. Anda mungkin mengalami masalah menggunakan alat ini pada perangkat Anda saat ini."
       gamelab_unsupported_tablet: "Game Lab sangat cocok di komputer atau laptop dengan mouse dan keyboard. Anda mungkin mengalami masalah menggunakan alat ini di perangkat Anda saat ini."
       weblab_unsupported_locale_storage: "Mungkin Anda mengalami masalah menggunakan Web Lab dalam mode Penjelajahan Pribadi. Tolong muat ulang proyek Anda dalam mode normal. Mohon maaf atas ketidaknyamanannya."
+  deprecation:
+    algebra_lab: "CS dalam kurikulum Aljabar dan konten sedang usang. Dalam beberapa bulan ke depan, lab ini tidak akan tersedia lagi. Silakan periksa [Bootstrap: Aljabar] (%{bootstrap_algebra_url}) sebagai gantinya. [Pelajari Lebih Lanjut] (%{cs_algebra_url})."
   slow_loading: 'Harap sabar, Ternyata diperlukan waktu yang lebih lama dari biasanya...'
   try_reloading: 'Coba tampilkan halaman lagi'
   next_stage: 'Selesai! Lanjutkan untuk tahap berikutnya'
@@ -667,65 +677,139 @@ id:
       body_short: "Buat desain sebuah aplikasi, tulis codenya dengan blok atau JavaScript agar dapat bekerja, lalu bagikan aplikasi tersebut dalam hitungan detik."
       audience: 'Usia 13+'
       cta: 'Pelajari cara'
+      image_alt: 'Kelinci ungu mengenakan ransel bertenaga roket.'
+    applab-intro:
+      image_alt: 'Sebuah tangan mengetuk bagian tengah layar ponsel cerdas. Cahaya dan berkilau keluar dari layar.'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Steve dan Alex dari Minecraft sedang melihat Anda.'
+    artist:
+      image_alt: 'Orang kartun memegang pensil besar dan menggambar segitiga.'
+    conditionals:
+      image_alt: 'Dua tangan menyeret setumpuk kartu remi.'
+    course1:
+      image_alt: 'The Code.org bumble bee dan orange fish berdiri di depan beberapa kode.'
+    course2:
+      image_alt: 'Kolase teka-teki Code.org yang menunjukkan penyihir hijau, artis, dan ikan oranye.'
+    course3:
+      image_alt: 'Kolase teka-teki Code.org menunjukkan permainan, zombie, dan ninja.'
+    course4:
+      image_alt: 'Kolase teka-teki Code.org menunjukkan sepak bola, hewan peliharaan, dan seorang seniman.'
+    coursea:
+      image_alt: 'Kolase teka-teki Code.org menunjukkan gajah dan tupai.'
+    courseb:
+      image_alt: 'Kolase teka-teki Code.org yang menunjukkan penjelajah, permata, dan bunga.'
+    coursec:
+      image_alt: 'Kolase teka-teki Code.org menunjukkan tupai, bilangan biner, dan burung merah dari permainan Angry Birds.'
+    coursed:
+      image_alt: 'Kolase teka-teki Code.org menunjukkan lebah, bunga, madu, dan babi hijau dari permainan Angry Birds.'
+    coursee:
+      image_alt: 'Kolase teka-teki Code.org menunjukkan seseorang memegang sekop, labu, kebun, dan sapi.'
+    coursef:
+      image_alt: 'Kolase teka-teki Code.org menunjukkan bentuk geometris berwarna-warni, bajak laut merah, dan seorang seniman.'
     dance-2019:
       title: 'Pesta Tari'
+      image_alt: 'Kucing bahagia, kemalasan, dan menari hiu.'
+    dance-2022:
+      image_alt: 'Alien hijau dan robot menari dengan Saturnus di latar belakang.'
     dance:
       title: 'Pesta Tari'
+      image_alt: 'Seekor kucing keren dan hiu bahagia menari di sebuah pesta.'
+    donate:
+      image_alt: 'Seorang anak menunjuk ke layar laptop yang menunjukkan teka-teki Code.org.'
+    elementary:
+      image_alt: 'Seekor lebah dan tupai berdiri di ladang di depan pelangi.'
+    express:
+      image_alt: 'Tanaman vs zombie zombie dan tanaman berdiri di samping Flappy Bird.'
     flappy:
       title: 'Flappy Code'
       body: 'Ingin membuat game anda sendiri dalam waktu kurang dari 10 menit? Coba Tutorial Flappy code kami!'
+      image_alt: 'Seekor burung kuning terbang di antara pipa hijau.'
     frozen:
       title: "Frozen"
+      image_alt: 'Anna dan Elsa dari film Frozen. Di antara mereka adalah gambar Anna menggambar bentuk cantik di es menggunakan sepatu es nya.'
     gallery:
       title: "Galeri"
       body: "Lihat galeri aplikasi dan gambar artis yang dibuat oleh pengguna kami"
+      image_alt: 'Seorang seniman menggambar banyak lingkaran dan kucing, kelelawar, dan hantu berdiri di tanah liburan musim dingin.'
     gamelab:
       title: "Game Lab"
       body: "Game Lab adalah sebuah lingkungan pemrograman untuk membuat animasi dan permainan sederhana berisikan objek dan karakter yang berinteraksi satu sama lain."
       audience: "Usia 13+"
       cta: "Pelajari cara"
+      image_alt: 'Banyak orang kartun dan hewan berdiri di trotoar dan tersenyum.'
+    hello-world-food:
+      image_alt: 'Banyak hewan, alien, dan emoji yang mengorbit Bumi.'
     hello-world:
       title: 'Halo Dunia'
       body: 'Pilih dari empat tema seru untuk membuat kode dari karakter interaktif di dunia yang kamu ciptakan.'
     hero:
       title: "Minecraft"
       body: "Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code."
+      image_alt: 'Golem Besi dari Minecraft berdiri di depan pandangan overhead Anna memecahkan teka-teki.'
     hoc-encryption:
       title: "Enkripsi sederhana"
       body: "Murid akan mempelajari teknik membuat dan mengurai pesan terenkripsi."
+      image_alt: 'Sebuah grafik batang frekuensi huruf dalam bahasa Inggris.'
     hoc:
       title: 'Labirin Klasik'
       body: 'Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.'
+      image_alt: 'Kolase gambar yang menampilkan kode, Mark Zuckerberg, dan Angry Birds.'
+    hourofcode:
+      image_alt: 'Kolase gambar yang menampilkan kode, Mark Zuckerberg, dan Angry Birds.'
     hoc2014:
       try_new_tutorial: 'Coba tutorial Hour of Code baru kami dalam versi beta'
       try_frozen: 'Artis bersama Anna dan Elsa, dari Frozen'
     infinity:
       title: "Infinity Play Lab"
       body: "Gunakan Play Lab untuk membuat sebuah cerita atau permainan yang dibintangi karakter Disney tak terbatas."
+      image_alt: 'Lima karakter dari Froze, Tangled, dan Big Hero 6 berdiri bersama.'
+    map:
+      image_alt: 'Gambar abu-abu Amerika Serikat dengan sekitar 20 negara bagian disorot dalam warna ungu.'
+    mc_escape:
+      image_alt: 'Karakter Minecraft mengenakan topi dan monocle sambil membuka peti harta karun yang penuh dengan zamrud.'
+    mc:
+      image_alt: 'Anna dan Steve dari Minecraft berdiri di depan teka-teki Code.org Minecraft.'
     minecraft:
       title: "Minecraft"
       body: "Jelajahi dunia Minecraft melalui kode"
+      image_alt: 'Anna dan Steve dari Minecraft berdiri di depan teka-teki Code.org Minecraft.'
     minecraft2016:
       title: "Minecraft"
       body: "Program binatang dan makhluk Minecraft lainnya dalam Minecraft versi Anda sendiri."
+    oceans:
+      image_alt: 'Sebuah robot di laut memindai berbagai makhluk laut.'
+    playlab:
+      image_alt: 'Kolase gambar yang menunjukkan kucing biru, konyol, dan musang prasejarah.'
     poem-art:
       title: 'Seni Puisi'
       body: 'Ekspresikan dirimu! Gunakan kode untuk membuat animasi puisi.'
+      image_alt: 'Cumi-cumi hipster tampil di atas panggung.'
+    pre-express-2017:
+      image_alt: 'Seekor anjingnya dan unicorn berdiri di depan pohon yang terbuat dari potongan-potongan puzzle.'
+    pre-express-2018:
+      image_alt: 'Seekor anjingnya dan unicorn berdiri di depan pohon yang terbuat dari potongan-potongan puzzle.'
+    pre-express-2019:
+      image_alt: 'Seekor anjingnya dan unicorn berdiri di depan pohon yang terbuat dari potongan-potongan puzzle.'
+    pre-express:
+      image_alt: 'Seekor anjingnya dan unicorn berdiri di depan pohon yang terbuat dari potongan-potongan puzzle.'
     sports:
       title: "Olahraga"
       body: "Buat pertandingan basket atau padu dan padankan lintas olahraga."
+      image_alt: 'Logo NBA dan WNBA ditampilkan di samping sepak bola, bola sepak, keping hoki, dan bola basket.'
     starwars:
       title: "Star Wars"
+      image_alt: 'R2-D2, Leia, Rey, dan BB-8 berdiri di padang pasir.'
     text-compression:
       title: "kompresi Teks"
       body: "Dalam pelajaran ini, murid akan menggunakan Text Compression Widget untuk melakukan kompresi teks dengan mengganti pola dengan simbol."
+      image_alt: 'Teks dikompresi dengan mengganti seluruh kata dengan satu simbol.'
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab adalah lingkungan pemrograman untuk membuat halaman web sederhana menggunakan HTML dan CSS. Rancang halaman web Anda dan bagikan situs Anda dalam hitungan detik."
       audience: "Usia 13+"
       cta: "Pelajari cara"
+      image_alt: 'Layar komputer menampilkan kode HTML.'
     widgets:
       title: "Widget"
       body: "Murid dapat menjelajahi aneka konsep dari kursus Prinsip-Prinsip Ilmu Komputer kami secara langsung menggunakan alat-alat digital. Gunakan widget sendiri, atau buat pelajaran konsep tunggal untuk kelas Anda."
@@ -907,6 +991,7 @@ id:
           age: 'Beritahu usia Anda'
           abuse_type: 'Mohon jelaskan bentuk pelanggaran konten ini terhadap Ketentuan Layanan'
           abuse_detail: 'Mohon berikan rincian mengenai konten yang Anda laporkan'
+          captcha: 'Silakan isi CAPTCHA untuk melaporkan konten ini.'
         abusive_url: 'URL konten sudah dilaporkan'
         abuse_type:
           question: 'Bagaimana konten ini melanggar %{link_start} Ketentuan Layanan %{link_end}?'
@@ -1042,12 +1127,15 @@ id:
         not_listed: 'Istilah yang disukai tidak terdaftar'
         none: 'Memilih untuk tidak menjawab'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belize'
         canada: 'Kanada'
         chile: 'Cile'
         colombia: 'Colombia'
         israel: 'Israel'
         malaysia: 'Malaysia'
         mexico: 'Meksiko'
+        paraguay: 'Paraguai'
         thailand: 'Thailand'
         uzbekistan: 'Uzbekistan'
       ages:
@@ -1098,6 +1186,7 @@ id:
         csf_express: 'CS Fundamentals (Praekspres atau Ekspres)'
         csd: 'CS Discoveries'
         csp: 'CS Principles'
+        other: 'Lain'
         not_applicable: "Tidak dapat diterapkan"
       email_opt_in:
         opt_in_yes: 'Ya'
@@ -1121,11 +1210,23 @@ id:
   courses_category: 'Kursus Lengkap'
   course_offering:
     headers:
+      favorites: 'Favorit'
+      labs_and_skills: 'Lab dan Keterampilan'
       minecraft: 'Minecraft'
       hello_world: 'Halo Dunia'
+      popular_media: 'Media Populer'
       sports: 'Olahraga'
+      express: 'Ekspres'
       csf: 'Dasar dasar CS'
       csc: 'CS Connections'
+      year_long: 'Tahun Panjang'
+      csa_labs: 'Laboratorium CSA'
+      self_paced: 'Self-mondar-mandir'
+      teacher_led: 'Dipimpin Guru'
+      collections: 'Koleksi'
+      workshops_k5: 'Lokakarya K-5'
+      summer_workshops_612: '6-12 Lokakarya Musim Panas'
+      virtual_academic_year_workshops_612: '6—12 Lokakarya Virtual Tahun Akademik'
   cookie_banner:
     message: 'Dengan melanjutkan penelusuran situs kami atau mengklik "Saya setuju," Anda menyetujui penyimpanan cookies di komputer atau perangkat Anda.'
     more_information: "Lihat Kebijakan Privasi Code.org."
@@ -1163,4 +1264,22 @@ id:
       forbidden: "Pengguna tidak dapat memperbarui status siswa yang dapat dikunci"
   reset_predict_progress_button: "Hapus Jawaban"
   pixelation:
+    raw_format: "Format Mentah"
+    raw_format_alt: "Lihat bit tanpa format apa pun"
+    readable_format: "Format yang Dapat Dibaca"
+    readable_format_alt: "Lihat bit yang dipisahkan oleh piksel"
+    save_image: "Simpan Gambar"
+    actual_size: "Ukuran Aktual"
+    image_file_format_header: "Format File Gambar"
+    image_file_format_width: "Lebar: 1 byte"
+    image_file_format_height: "Tinggi: 1 byte"
+    image_file_format_bits_per_pixel: "Bit per Pixel: 1 byte"
+    image_file_format_data_a: "n bit data piksel"
+    image_file_format_data_b: "n = Lebar* Tinggi* Bit per Pixel"
+    image_width: "Lebar Gambar"
+    image_height: "Tinggi Gambar"
+    bits_per_pixel_header: "Bit Per Piksel"
     binary: "Binary"
+    hexadecimal: "Heksadesimal"
+    pixel_format_header: "Format Piksel"
+

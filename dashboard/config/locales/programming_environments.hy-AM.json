@@ -2,66 +2,11 @@
   "hy-AM": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "categories": {
-            "groups": {
-              "expressions": {
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Գույնը"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Գույնը"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Մաթեմատիկա",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Նվազագույն թիվը վերադարձել"
-                    },
-                    "max": {
-                      "description": "Առավելագույն թվով վերադարձել"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Նվազագույն թիվը վերադարձել"
-                    },
-                    "max": {
-                      "description": "Առավելագույն թվով վերադարձել"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "փոփոխականների"
-            },
-            "functions": {
-              "name": "գործառույթները"
-            }
-          }
-        },
         "applab": {
-          "name": "App Lab",
-          "description": "App Lab է ծրագրավորման միջավայրի, որտեղ դուք կարող եք կատարել պարզ apps. Նախագծել է ծրագիր, օրենսգրքի բլոկների կամ Javascript, որպեսզի այն աշխատի, ապա կիսվել ձեր ծրագիրը վայրկյաններով.",
           "categories": {
-            "ui_controls": {
+            "control": {
               "expressions": {
-                "onEvent": {
+                "timedLoop": {
                   "palette_params": {
                     "callback": {
                       "type": "Ֆունկցիա"
@@ -81,9 +26,37 @@
                 }
               }
             },
-            "control": {
+            "functions": {
+              "name": "գործառույթները"
+            },
+            "math": {
               "expressions": {
-                "timedLoop": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Առավելագույն թվով վերադարձել"
+                    },
+                    "min": {
+                      "description": "Նվազագույն թիվը վերադարձել"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Առավելագույն թվով վերադարձել"
+                    },
+                    "min": {
+                      "description": "Նվազագույն թիվը վերադարձել"
+                    }
+                  }
+                }
+              },
+              "name": "Մաթեմատիկա"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
                   "palette_params": {
                     "callback": {
                       "type": "Ֆունկցիա"
@@ -92,36 +65,63 @@
                 }
               }
             },
-            "math": {
-              "name": "Մաթեմատիկա",
+            "variables": {
+              "name": "փոփոխականների"
+            }
+          },
+          "description": "App Lab է ծրագրավորման միջավայրի, որտեղ դուք կարող եք կատարել պարզ apps. Նախագծել է ծրագիր, օրենսգրքի բլոկների կամ Javascript, որպեսզի այն աշխատի, ապա կիսվել ձեր ծրագիրը վայրկյաններով.",
+          "name": "App Lab"
+        },
+        "gamelab": {
+          "categories": {
+            "functions": {
+              "name": "գործառույթները"
+            },
+            "groups": {
               "expressions": {
-                "randomNumber_min_max": {
+                "setColorEach": {
                   "palette_params": {
-                    "min": {
-                      "description": "Նվազագույն թիվը վերադարձել"
-                    },
-                    "max": {
-                      "description": "Առավելագույն թվով վերադարձել"
+                    "color": {
+                      "type": "Գույնը"
                     }
                   }
                 },
-                "randomNumber": {
+                "setTintEach": {
                   "palette_params": {
-                    "min": {
-                      "description": "Նվազագույն թիվը վերադարձել"
-                    },
-                    "max": {
-                      "description": "Առավելագույն թվով վերադարձել"
+                    "color": {
+                      "type": "Գույնը"
                     }
                   }
                 }
               }
             },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Առավելագույն թվով վերադարձել"
+                    },
+                    "min": {
+                      "description": "Նվազագույն թիվը վերադարձել"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Առավելագույն թվով վերադարձել"
+                    },
+                    "min": {
+                      "description": "Նվազագույն թիվը վերադարձել"
+                    }
+                  }
+                }
+              },
+              "name": "Մաթեմատիկա"
+            },
             "variables": {
               "name": "փոփոխականների"
-            },
-            "functions": {
-              "name": "գործառույթները"
             }
           }
         },
@@ -133,23 +133,23 @@
             "events": {
               "name": "Իրադարձություններ"
             },
-            "loops": {
-              "name": "loops"
-            },
-            "variables": {
-              "name": "փոփոխականների"
-            },
-            "math": {
-              "name": "Մաթեմատիկա"
+            "functions": {
+              "name": "գործառույթները"
             },
             "logic": {
               "name": "տրամաբանություն"
             },
-            "functions": {
-              "name": "գործառույթները"
+            "loops": {
+              "name": "loops"
+            },
+            "math": {
+              "name": "Մաթեմատիկա"
             },
             "text": {
               "name": "տեքստ"
+            },
+            "variables": {
+              "name": "փոփոխականների"
             }
           }
         }
