@@ -1,10 +1,10 @@
-const AmiManager = require("../ami-manager");
+const VpcClassicLink = require("../src/vpcClassicLink");
 
-describe('AmiManager', () => {
+describe('VpcClassicLink', () => {
     describe('handler', () => {
         it.skip('is an untested function', async () => {
             try {
-                await AmiManager.handler();
+                await VpcClassicLink.handler();
             } catch (error) {
                 //
             }

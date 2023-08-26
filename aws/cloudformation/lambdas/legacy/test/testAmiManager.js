@@ -1,10 +1,10 @@
-const S3Object = require("../s3Object");
+const AmiManager = require("../src/ami-manager");
 
-describe('S3Object', () => {
+describe('AmiManager', () => {
     describe('handler', () => {
         it.skip('is an untested function', async () => {
             try {
-                await S3Object.handler();
+                await AmiManager.handler();
             } catch (error) {
                 //
             }
