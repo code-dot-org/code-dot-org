@@ -20,7 +20,7 @@ Resources:
       Code:
         ZipFile: <%=js 'ami-manager.js' %>
       Handler: index.handler
-      Runtime: nodejs14.x
+      Runtime: nodejs18.x
       Timeout: 300
       Role: !GetAtt AMIManagerRole.Arn
   AMIManagerRole:
@@ -61,7 +61,7 @@ Resources:
       Code:
         ZipFile: <%=js 'vpcClassicLink.js' %>
       Handler: index.handler
-      Runtime: nodejs14.x
+      Runtime: nodejs18.x
       Timeout: 300
       Role: !GetAtt VpcClassicLinkRole.Arn
   VpcClassicLinkRole:
@@ -95,7 +95,7 @@ Resources:
       Code:
         ZipFile: <%=js 'count_asg.js' %>
       Handler: index.handler
-      Runtime: nodejs14.x
+      Runtime: nodejs18.x
       Timeout: 30
       Role: !GetAtt CountASGRole.Arn
   CountASGRole:
@@ -127,7 +127,7 @@ Resources:
         Variables:
           SLACK_ENDPOINT: '{{resolve:secretsmanager:production/cdo/slack_endpoint}}'
       Handler: slackCloudWatchEvent.handler
-      Runtime: nodejs14.x
+      Runtime: nodejs18.x
       Timeout: 30
       Role: !GetAtt BasicLambdaRole.Arn
   BasicLambdaRole:
@@ -151,7 +151,7 @@ Resources:
         ZipFile: <%=js 's3Object.js' %>
       Handler: index.handler
       Timeout: 30
-      Runtime: nodejs14.x
+      Runtime: nodejs18.x
   S3ObjectRole:
     Type: AWS::IAM::Role
     Properties:
@@ -187,7 +187,7 @@ Resources:
       Code:
         ZipFile: <%=js 's3PartitionCloudFrontLog.js'%>
       Handler: index.handler
-      Runtime: nodejs14.x
+      Runtime: nodejs18.x
       Timeout: 30
       Role: !GetAtt S3LogsRole.Arn
   S3LogsRole:
@@ -244,7 +244,7 @@ Resources:
               .catch((e)=>respond());
           };
       Timeout: 30
-      Runtime: nodejs14.x
+      Runtime: nodejs18.x
   FastSnapshotRestore:
     Type: AWS::Lambda::Function
     Properties:
