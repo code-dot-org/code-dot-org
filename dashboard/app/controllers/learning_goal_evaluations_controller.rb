@@ -14,11 +14,12 @@ class LearningGoalEvaluationsController < ApplicationController
     params.require(:id)
     learning_goal_evaluation = LearningGoalEvaluation.find_by_id(params[:id])
 
-    if learning_goal_evaluation.teacher_id == current_user.id
+    if learning_goal_evaluation &&
+      learning_goal_evaluation.teacher_id == current_user.id &&
       learning_goal_evaluation.update(learning_goal_evaluation_params)
       render json: learning_goal_evaluation
     else
-      render status: :not_found, json: learning_goal_evaluation
+      render status: :not_found
     end
   end
 

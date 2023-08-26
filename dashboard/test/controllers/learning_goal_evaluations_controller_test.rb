@@ -78,11 +78,18 @@ class LearningGoalEvaluationsControllerTest < ActionController::TestCase
     assert_not_nil response_json['created_at']
   end
 
+  # Test create response for user not logged in
   test_user_gets_response_for :create, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+
+  # Test create response for student
   test_user_gets_response_for :create, user: :student, response: :forbidden
 
+  # Test update response for user not logged in
   test_user_gets_response_for :update, params: -> {{id: @learning_goal_evaluation.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+
+  # Test update response for student
   test_user_gets_response_for :update, params: -> {{id: @learning_goal_evaluation.id}}, user: :student, response: :forbidden
+
+  # Test update response for wrong teacher
   test_user_gets_response_for :update, params: -> {{id: @learning_goal_evaluation.id}}, user: :teacher, response: :not_found
-  #TODO: add tests: not a teacher and not the same teacher
 end
