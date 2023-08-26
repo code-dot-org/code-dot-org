@@ -22,28 +22,28 @@ const MovingBot: React.FunctionComponent<MovingBotProps> = ({
 
   let headX, headY;
 
-  pairwise(moves[0].steps, (move: any, nextMove: any) => {
-   /* if (move.type !== 'head') {
-      return;
-    }*/
+  for (const move of moves) {
+    pairwise(move.steps, (move: any, nextMove: any) => {
+      /* if (move.type !== 'head') {
+        return;
+      }*/
 
-    if (move.time <= currentTick && nextMove.time > currentTick) {
-      /*const firstStep = ticks < 250 ? move.steps[0] : move.steps[1];
-      const secondStep = ticks < 250 ? move.steps[1] : move.steps[0];*/
+      if (move.time <= currentTick && nextMove.time > currentTick) {
+        const startX = move.x;
+        const startY = move.y;
+        const endX = nextMove.x;
+        const endY = nextMove.y;
 
-      const startX = move.x;
-      const startY = move.y;
-      const endX = nextMove.x;
-      const endY = nextMove.y;
+        const progress =
+          (currentTick - move.time) / (nextMove.time - move.time);
 
-      const progress = (currentTick - move.time) / (nextMove.time - move.time);
+        const easedProgress = easeInExpo(progress, 0, 1, 1);
 
-      const easedProgress = easeInExpo(progress, 0, 1, 1);
-
-      headX = startX + (endX - startX) * easedProgress;
-      headY = startY + (endY - startY) * easedProgress;
-    }
-  });
+        headX = startX + (endX - startX) * easedProgress;
+        headY = startY + (endY - startY) * easedProgress;
+      }
+    });
+  }
 
   const botState = {
     head: [headX, headY],

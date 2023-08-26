@@ -3,7 +3,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import ChatMessage from './ChatMessage';
 import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
-import BehaviorBot from './bot/BehaviorBot';
+import DanceContainer from './bot/DanceContainer';
 import aichatI18n from '../locale';
 import {ChatCompletionMessage} from '../types';
 import {demoChatMessages} from './demoMessages'; // demo chat messages - remove when connected to backend
@@ -18,25 +18,6 @@ const ChatWorkspace: React.FunctionComponent = () => {
     shakeHands: false,
     tapFeet: false,
   });
-
-  const [startingTick, setStartingTick] = useState(new Date().getTime());
-  const [currentTick, setCurrentTick] = useState(0);
-
-  React.useEffect(() => {
-    console.log(`initializing interval`);
-    const interval = setInterval(() => {
-      updateTime();
-    }, 1000 / 60);
-
-    return () => {
-      console.log(`clearing interval`);
-      clearInterval(interval);
-    };
-  }, []); // has no dependency - this will be called on-component-mount
-
-  const updateTime = () => {
-    setCurrentTick(new Date().getTime());
-  };
 
   const onSubmit = async (message: string) => {
     const lastMessageId =
@@ -78,8 +59,6 @@ const ChatWorkspace: React.FunctionComponent = () => {
     }
   };
 
-  const tick = ((currentTick - startingTick) / 500) % 22;
-
   return (
     <ChatWorkspaceContext.Provider value={{onSubmit: onSubmit}}>
       <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
@@ -88,9 +67,8 @@ const ChatWorkspace: React.FunctionComponent = () => {
           headerText={aichatI18n.aichatWorkspaceHeader()}
         >
           <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-            <BehaviorBot currentTick={tick} danceState={danceState} />
+            <DanceContainer danceState={danceState} />
           </div>
-          <div>{tick}</div>
           <div
             id="chat-workspace-conversation"
             className={moduleStyles.conversationArea}
