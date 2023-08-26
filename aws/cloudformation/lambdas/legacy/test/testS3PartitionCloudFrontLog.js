@@ -48,7 +48,7 @@ describe("s3PartitionCloudFrontLog.handler", () => {
   };
 
   it("works", () => {
-    const myHandler = require("../s3PartitionCloudFrontLog").handler;
+    const myHandler = require("../src/s3PartitionCloudFrontLog").handler;
     s3.expects("copyObject")
       .withArgs({
         CopySource: `${bucket}/${prefix}/${filename}`,

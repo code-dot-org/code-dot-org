@@ -2,7 +2,7 @@
 // instance min, max and desired capacity counts in an Auto Scaling Group,
 // returning the outputs for use elsewhere in the stack.
 
-var response = require('cfn-response');
+var response = require('./common/cfn-response');
 var AWS = require('aws-sdk');
 
 function convertToAssocTags(tags) {

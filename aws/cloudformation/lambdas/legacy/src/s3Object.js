@@ -1,4 +1,4 @@
-const response = require("cfn-response");
+const response = require("./common/cfn-response");
 const AWS = require("aws-sdk");
 const s3 = new AWS.S3();
 

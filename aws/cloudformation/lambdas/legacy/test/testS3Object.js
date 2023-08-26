@@ -1,10 +1,10 @@
-const VpcClassicLink = require("../vpcClassicLink");
+const S3Object = require("../src/s3Object");
 
-describe('VpcClassicLink', () => {
+describe('S3Object', () => {
     describe('handler', () => {
         it.skip('is an untested function', async () => {
             try {
-                await VpcClassicLink.handler();
+                await S3Object.handler();
             } catch (error) {
                 //
             }

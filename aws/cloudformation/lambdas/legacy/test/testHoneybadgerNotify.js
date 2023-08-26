@@ -1,4 +1,4 @@
-const hbNotify = require("../honeybadgerNotify");
+const hbNotify = require("../src/honeybadgerNotify");
 const chai = require("chai");
 const sinon = require("sinon");
 const Honeybadger = require("honeybadger");

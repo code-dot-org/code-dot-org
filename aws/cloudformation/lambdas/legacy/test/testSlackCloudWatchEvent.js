@@ -2,7 +2,7 @@ process.env.SLACK_ENDPOINT = 'xyz';
 
 const LambdaTester = require( 'lambda-tester' );
 const nock = require('nock');
-const myHandler = require( '../slackCloudWatchEvent' ).handler;
+const myHandler = require( '../src/slackCloudWatchEvent' ).handler;
 
 describe( 'slackCloudWatchEvent.handler', ()=> {
   let from=10,
