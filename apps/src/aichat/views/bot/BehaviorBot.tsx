@@ -1,24 +1,25 @@
 import React from 'react';
 import MovingBot from './MovingBot';
+import DanceTimeline from './DanceTimeline';
 
 interface BehaviorBotProps {
   currentTick: number;
   danceState: any;
 }
 
-interface MoveBlockStep {
+export interface MoveBlockStep {
   x: number;
   y: number;
   time: number;
 }
 
-interface MoveBlock {
+export interface MoveBlock {
   id: string;
   part: string;
   steps: MoveBlockStep[];
 }
 
-const moveBlocks : MoveBlock[] = [
+const moveBlocks: MoveBlock[] = [
   {
     id: 'slowbop',
     part: 'head',
@@ -84,7 +85,7 @@ const timelineEntries = [
 ];
 
 const generateMoves = () => {
-  const timeline : {[index: string]: any} = {};
+  const timeline: {[index: string]: any} = {};
 
   for (const timelineEntry of timelineEntries) {
     const id = timelineEntry.blockId;
@@ -117,6 +118,11 @@ const BehaviorBot: React.FunctionComponent<BehaviorBotProps> = ({
   return (
     <div id="behavior-bot">
       <MovingBot currentTick={currentTick} moves={moves} />
+      <DanceTimeline
+        currentTick={currentTick}
+        moveBlocks={moveBlocks}
+        timelineEntries={timelineEntries}
+      />
     </div>
   );
 };
