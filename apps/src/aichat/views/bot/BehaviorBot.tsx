@@ -24,9 +24,9 @@ const moveBlocks: MoveBlock[] = [
     id: 'slowbop',
     part: 'head',
     steps: [
-      {x: 100, y: 0, time: 0},
+      {x: 110, y: 0, time: 0},
       {x: 130, y: 20, time: 1},
-      {x: 100, y: 0, time: 2},
+      {x: 110, y: 0, time: 2},
       {x: 130, y: 20, time: 3},
     ],
   },
@@ -45,14 +45,35 @@ const moveBlocks: MoveBlock[] = [
     id: 'fastbop',
     part: 'head',
     steps: [
-      {x: 100, y: 0, time: 0},
-      {x: 80, y: 30, time: 0.5},
-      {x: 100, y: 0, time: 1},
-      {x: 80, y: 30, time: 1.5},
-      {x: 100, y: 0, time: 2},
-      {x: 80, y: 30, time: 2.5},
-      {x: 100, y: 0, time: 3},
-      {x: 80, y: 30, time: 3.5},
+      {x: 110, y: 0, time: 0},
+      {x: 90, y: 30, time: 0.5},
+      {x: 110, y: 0, time: 1},
+      {x: 90, y: 30, time: 1.5},
+      {x: 110, y: 0, time: 2},
+    ],
+  },
+  {
+    id: 'wobblebody',
+    part: 'body',
+    steps: [
+      {x: 140, y: 150, time: 0},
+      {x: 150, y: 150, time: 0.5},
+      {x: 140, y: 150, time: 1},
+      {x: 130, y: 150, time: 1.5},
+      {x: 140, y: 150, time: 2},
+      {x: 150, y: 150, time: 2.5},
+      {x: 140, y: 150, time: 3},
+      {x: 130, y: 150, time: 3.5},
+      {x: 140, y: 150, time: 4},
+    ],
+  },
+  {
+    id: 'footslide',
+    part: 'foot1',
+    steps: [
+      {x: 210, y: 290, time: 0},
+      {x: 230, y: 290, time: 1},
+      {x: 210, y: 290, time: 2},
     ],
   },
 ];
@@ -81,6 +102,26 @@ const timelineEntries = [
   {
     blockId: 'fastbop',
     when: 16,
+  },
+  {
+    blockId: 'wobblebody',
+    when: 0,
+  },
+  {
+    blockId: 'wobblebody',
+    when: 4,
+  },
+  {
+    blockId: 'wobblebody',
+    when: 8,
+  },
+  {
+    blockId: 'wobblebody',
+    when: 12,
+  },
+  {
+    blockId: 'footslide',
+    when: 12,
   },
 ];
 

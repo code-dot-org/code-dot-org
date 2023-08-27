@@ -21,7 +21,8 @@ const MovingBot: React.FunctionComponent<MovingBotProps> = ({
   moves,
 }) => {
   let botState = {
-    head: [100, 0],
+    head: [110, 10],
+    body: [140, 150],
     hand0: [25, 130],
     hand1: [250, 130],
     foot0: [60, 290],
@@ -50,6 +51,10 @@ const MovingBot: React.FunctionComponent<MovingBotProps> = ({
           botState.head = [x, y];
         } else if (partKey === 'hand0') {
           botState.hand0 = [x, y];
+        } else if (partKey === 'body') {
+          botState.body = [x, y];
+        } else if (partKey === 'foot1') {
+          botState.foot1 = [x, y];
         }
       }
     });

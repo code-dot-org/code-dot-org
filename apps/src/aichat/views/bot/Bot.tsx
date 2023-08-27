@@ -10,6 +10,7 @@ const foot1ImagePath = `/blockly/media/aichat/ai-bot-foot-1.png`;
 
 export interface BotState {
   head: any;
+  body: any;
   hand0: any;
   hand1: any;
   foot0: any;
@@ -31,24 +32,57 @@ const Bot: React.FunctionComponent<BotProps> = ({botState}) => {
         <line
           x1={botState.hand0[0] + 35}
           y1={botState.hand0[1] + 30}
-          x2={botState.head[0] + 40}
-          y2={botState.head[1] + 180}
+          x2={botState.body[0] + 10}
+          y2={botState.body[1] + 30}
           stroke="black"
           strokeLinecap="round"
           strokeWidth="10px"
           strokeDasharray="4 1"
         ></line>
         <line
-          x1={botState.head[0] + 100}
-          y1={botState.head[1] + 180}
-          x2="300"
-          y2="160"
+          x1={botState.body[0] + 80}
+          y1={botState.body[1] + 30}
+          x2={botState.hand1[0] + 35}
+          y2={botState.hand1[1] + 30}
           stroke="black"
           strokeLinecap="round"
           strokeWidth="10px"
           strokeDasharray="4 1"
         ></line>
+
+        <line
+          x1={botState.foot0[0] + 35}
+          y1={botState.foot0[1] + 50}
+          x2={botState.body[0] + 10}
+          y2={botState.body[1] + 130}
+          stroke="black"
+          strokeLinecap="round"
+          strokeWidth="10px"
+          strokeDasharray="4 1"
+        ></line>
+        <line
+          x1={botState.body[0] + 80}
+          y1={botState.body[1] + 130}
+          x2={botState.foot1[0] + 35}
+          y2={botState.foot1[1] + 50}
+          stroke="black"
+          strokeLinecap="round"
+          strokeWidth="10px"
+          strokeDasharray="4 1"
+        ></line>
+
+        <rect
+          x={botState.body[0]}
+          y={botState.body[1]}
+          width="80"
+          height="160"
+          fill="white"
+          rx="35"
+          strokeWidth="3px"
+          stroke="black"
+        ></rect>
       </svg>
+
       <img
         src={botImagePath}
         style={{

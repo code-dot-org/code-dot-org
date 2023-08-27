@@ -29,7 +29,7 @@ const DanceTimeline: React.FunctionComponent<DanceTimelineProps> = ({
       <div
         style={{
           width: 1000,
-          height: 100,
+          height: 180,
           backgroundColor: '#505050',
           position: 'relative',
           padding: 4,
