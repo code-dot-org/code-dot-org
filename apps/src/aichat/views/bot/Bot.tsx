@@ -29,8 +29,8 @@ const Bot: React.FunctionComponent<BotProps> = ({botState}) => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <line
-          x1="60"
-          y1="160"
+          x1={botState.hand0[0] + 35}
+          y1={botState.hand0[1] + 30}
           x2={botState.head[0] + 40}
           y2={botState.head[1] + 180}
           stroke="black"

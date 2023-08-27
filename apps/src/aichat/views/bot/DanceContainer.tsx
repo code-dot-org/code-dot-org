@@ -8,7 +8,6 @@ interface DanceContainerProps {
 const DanceContainer: React.FunctionComponent<DanceContainerProps> = ({
   danceState,
 }) => {
-
   const [startingTick, setStartingTick] = useState(new Date().getTime());
   const [currentTick, setCurrentTick] = useState(0);
 
@@ -28,12 +27,12 @@ const DanceContainer: React.FunctionComponent<DanceContainerProps> = ({
     setCurrentTick(new Date().getTime());
   };
 
-  const tick = ((currentTick - startingTick) / 500) % 12;
+  const tick = ((currentTick - startingTick) / 500) % 20;
 
   return (
     <div id="dance-container">
       <BehaviorBot currentTick={tick} danceState={danceState} />
-      <div>{tick}</div>
+      <div>{Math.floor(tick)}</div>
     </div>
   );
 };
