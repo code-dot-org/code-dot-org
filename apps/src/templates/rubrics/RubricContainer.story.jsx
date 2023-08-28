@@ -75,7 +75,7 @@ const defaultRubric = {
 const defaultStudentLevelInfo = {
   name: 'Ada Lovelace',
   attempts: 2,
-  timeSpent: '7m 35s',
+  timeSpent: 404,
   lastAttempt: '5/26/23',
 };
 
@@ -83,7 +83,7 @@ const Template = args => (
   <RubricContainer
     rubric={defaultRubric}
     teacherHasEnabledAi={false}
-    studentLevelInfo={null}
+    studentLevelInfo={defaultStudentLevelInfo}
     {...args}
   />
 );
@@ -100,14 +100,32 @@ ViewingOwnWorkAiDisabled.args = {
   teacherHasEnabledAi: false,
 };
 
-export const ViewingStudentWorkAiEnabled = Template.bind({});
-ViewingStudentWorkAiEnabled.args = {
+export const ViewingStudentWorkOnNonAssessmentLevelAiEnabled = Template.bind(
+  {}
+);
+ViewingStudentWorkOnNonAssessmentLevelAiEnabled.args = {
   studentLevelInfo: {...defaultStudentLevelInfo, submitted: true},
   teacherHasEnabledAi: true,
 };
 
-export const ViewingStudentWorkAiDisabled = Template.bind({});
-ViewingStudentWorkAiDisabled.args = {
+export const ViewingStudentWorkOnNonAssessmentLevelAiDisabled = Template.bind(
+  {}
+);
+ViewingStudentWorkOnNonAssessmentLevelAiDisabled.args = {
   studentLevelInfo: {...defaultStudentLevelInfo, submitted: true},
   teacherHasEnabledAi: false,
+};
+
+export const ViewingStudentWorkOnAssessmentLevelAiEnabled = Template.bind({});
+ViewingStudentWorkOnAssessmentLevelAiEnabled.args = {
+  studentLevelInfo: {...defaultStudentLevelInfo, submitted: true},
+  teacherHasEnabledAi: true,
+  onLevelForEvaluation: true,
+};
+
+export const ViewingStudentWorkOnAssessmentLevelAiDisabled = Template.bind({});
+ViewingStudentWorkOnAssessmentLevelAiDisabled.args = {
+  studentLevelInfo: {...defaultStudentLevelInfo, submitted: true},
+  teacherHasEnabledAi: false,
+  onLevelForEvaluation: true,
 };
