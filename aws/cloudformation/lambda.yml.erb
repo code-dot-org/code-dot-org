@@ -343,7 +343,7 @@ Resources:
     Type: AWS::CloudFront::Function
     Properties:
       Name: AcceptLanguage
-      FunctionCode: <%=js_erb 'accept-language.js.erb', max: FUNCTION_MAX %>
+      FunctionCode: <%=inline_js_erb_lambda 'accept-language.js.erb', max: FUNCTION_MAX %>
       FunctionConfig:
         Comment: "Normalizes Accept-Language header from viewer requests"
         Runtime: cloudfront-js-1.0
