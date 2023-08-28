@@ -92,14 +92,14 @@ frontend_device_name ||= '/dev/sda1'
             || true
 
           shutdown -h now
-  AMI<%=ami%>: <%= lambda_fn 'AMIManager',
+  AMI<%=ami%>: <%= lambda_custom_resource 'AMIManager',
     DependsOn: "AMICreate#{ami}",
     InstanceId: {Ref: "WebServerAMI" } %>
-  FastSnapshotRestore: <%= lambda_fn 'FastSnapshotRestore',
+  FastSnapshotRestore: <%= lambda_custom_resource 'FastSnapshotRestore',
     ImageIds: [{Ref: "AMI#{ami}" }],
     AvailabilityZones: AVAILABILITY_ZONES
   %>
-  ASGCount: <%= lambda_fn 'CountASG',
+  ASGCount: <%= lambda_custom_resource 'CountASG',
     Default: {
       MinSize: 2,
       MaxSize: 20,

@@ -11,7 +11,7 @@ Resources:
     Properties:
       CidrBlock: 10.0.0.0/16
       EnableDnsHostnames: true
-  VpcClassicLink: <%= lambda_fn 'VpcClassicLink',
+  VpcClassicLink: <%= lambda_custom_resource 'VpcClassicLink',
     VpcId: {Ref: 'VPC'},
     DnsSupport: true %>
   S3Endpoint:
