@@ -62,7 +62,7 @@ class ExperimentTest < ActiveSupport::TestCase
     section_off = create :section, teacher: teacher_off
     create :follower, section: section_off, student_user: student_off
 
-    #assert_equal [experiment], Experiment.get_all_enabled(user: student_on)
+    assert_equal [experiment], Experiment.get_all_enabled(user: student_on)
     assert Experiment.enabled?(experiment_name: experiment.name, user: student_on)
     assert_empty Experiment.get_all_enabled(user: student_off)
     refute Experiment.enabled?(experiment_name: experiment.name, user: student_off)
