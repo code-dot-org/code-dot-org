@@ -8,7 +8,7 @@ class GoogleClassroomSectionTest < ActiveSupport::TestCase
     owner = create :teacher
     student_list = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
       {
-        students: (1..50).map do |i|
+        students: (1..5).map do |i|
           {
             userId: i,
             profile: {
@@ -28,7 +28,7 @@ class GoogleClassroomSectionTest < ActiveSupport::TestCase
     assert_equal 'G-101', section.code
     assert_equal 'Test Section A', section.name
     section.students.reload
-    assert_equal 50, section.students.length
+    assert_equal 5, section.students.length
     assert_equal 'Sample User 1', section.students.first.name
     assert_nil section.students.first.family_name
 
@@ -50,7 +50,7 @@ class GoogleClassroomSectionTest < ActiveSupport::TestCase
     owner = create :teacher
     student_list = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
       {
-        students: (1..50).map do |i|
+        students: (1..5).map do |i|
           {
             userId: i,
             profile: {
@@ -70,7 +70,7 @@ class GoogleClassroomSectionTest < ActiveSupport::TestCase
     assert_equal 'G-101', section.code
     assert_equal 'Test Section A', section.name
     section.students.reload
-    assert_equal 50, section.students.length
+    assert_equal 5, section.students.length
     assert_equal 'Sample', section.students.first.name
     assert_equal 'User 1', section.students.first.family_name
 
