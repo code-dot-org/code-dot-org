@@ -1,3 +1,13 @@
+// This is a local copy of the cfn-response module.
+//
+// When you use the ZipFile property to specify your function's source code and
+// that function interacts with an AWS CloudFormation custom resource, you can
+// load the cfn-response module to send responses to those resources. You must
+// include the module via `var response = require('cfn-response');` in order for
+// CloudFormation to correctly include the module.
+//
+// See: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html
+
 exports.SUCCESS = "SUCCESS";
 exports.FAILED = "FAILED";
 
