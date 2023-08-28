@@ -148,7 +148,9 @@ GoogleBlockly.Extensions.registerMutator(
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
  * @returns an array of XML block elements
  */
-export function flyoutCategory(workspace) {
+export function flyoutCategory(workspace, functionEditorOpen = false) {
+  const blockList = [];
+
   const newBehaviorButton = {
     kind: 'button',
     text: msg.createBlocklyBehavior(),
@@ -168,18 +170,16 @@ export function flyoutCategory(workspace) {
 
   // If the modal function editor is enabled, we render a button to open the editor
   // Otherwise, we render a "blank" behavior definition block
-  let newBehaviorOption;
-  if (useModalFunctionEditor) {
-    newBehaviorOption = newBehaviorButton;
+  if (functionEditorOpen) {
+    // No-op -- cannot create new behaviors while the modal editor is open
+  } else if (useModalFunctionEditor) {
     workspace.registerButtonCallback('createNewBehavior', createNewBehavior);
+    blockList.push(newBehaviorButton);
   } else {
-    newBehaviorOption = behaviorDefinitionBlock;
+    blockList.push(behaviorDefinitionBlock);
   }
 
-  const blockList = [
-    newBehaviorOption,
-    ...getCustomCategoryBlocksForFlyout('Behavior'),
-  ];
+  blockList.push(...getCustomCategoryBlocksForFlyout('Behavior'));
 
   const allWorkspaces = Blockly.Workspace.getAll().filter(
     workspace => !workspace.isFlyout

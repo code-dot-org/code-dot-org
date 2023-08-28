@@ -180,7 +180,7 @@ GoogleBlockly.Extensions.registerMutator(
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
  * @returns an array of block objects representing the flyout blocks
  */
-export function flyoutCategory(workspace) {
+export function flyoutCategory(workspace, functionEditorOpen = false) {
   const blockList = [];
 
   const newFunctionButton = {
@@ -205,7 +205,9 @@ export function flyoutCategory(workspace) {
     createNewDefinitionBlock(functionDefinitionBlock);
   };
 
-  if (useModalFunctionEditor) {
+  if (functionEditorOpen) {
+    // No-op - cannot create new functions while the modal editor is open
+  } else if (useModalFunctionEditor) {
     workspace.registerButtonCallback('createNewFunction', createNewFunction);
     blockList.push(newFunctionButton);
   } else {
