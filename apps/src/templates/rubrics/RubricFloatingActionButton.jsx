@@ -4,9 +4,9 @@ const icon = require('@cdo/static/AI-FAB.png');
 import RubricContainer from './RubricContainer';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {reportingDataShape} from './rubricShapes';
+import {rubricShape, reportingDataShape} from './rubricShapes';
 
-export default function RubricFloatingActionButton({reportingData}) {
+export default function RubricFloatingActionButton({rubric, reportingData}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -26,11 +26,14 @@ export default function RubricFloatingActionButton({reportingData}) {
         onClick={handleClick}
         type="button"
       />
-      {isOpen && <RubricContainer />}
+      {isOpen && (
+        <RubricContainer rubric={rubric} reportingData={reportingData} />
+      )}
     </div>
   );
 }
 
 RubricFloatingActionButton.propTypes = {
+  rubric: rubricShape,
   reportingData: reportingDataShape,
 };

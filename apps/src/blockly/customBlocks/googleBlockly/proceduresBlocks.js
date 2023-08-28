@@ -2,6 +2,7 @@ import * as GoogleBlockly from 'blockly/core';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
 import msg from '@cdo/locale';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
+import experiments from '@cdo/apps/util/experiments';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
@@ -94,21 +95,22 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
 
 // Respond to the click of a call block's edit button
 export const editButtonHandler = function () {
-  // Eventually, this will be where we create a modal function editor.
-  // For now, just find the function definition block and select it.
-  const workspace = this.getSourceBlock().workspace;
-  const name = this.getSourceBlock().getFieldValue('NAME');
-  const definition = GoogleBlockly.Procedures.getDefinition(name, workspace);
-  if (definition) {
-    workspace.centerOnBlock(definition.id);
-    definition.select();
+  if (experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)) {
+    const procedure = this.getSourceBlock().getProcedureModel();
+    if (procedure) {
+      Blockly.functionEditor.showForFunction(procedure);
+    }
+  } else {
+    // If we aren't using the new modal function editor yet, just center the block that
+    // was clicked.
+    const workspace = this.getSourceBlock().workspace;
+    const name = this.getSourceBlock().getFieldValue('NAME');
+    const definition = GoogleBlockly.Procedures.getDefinition(name, workspace);
+    if (definition) {
+      workspace.centerOnBlock(definition.id);
+      definition.select();
+    }
   }
-
-  // TODO: When we are ready, this is how we can open the modal function editor.
-  // const procedure = this.getSourceBlock().getProcedureModel();
-  // if (procedure) {
-  //   Blockly.functionEditor.showForFunction(procedure);
-  // }
 };
 
 // This extension adds an edit button to the end of a procedure call block.
