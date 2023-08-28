@@ -67,8 +67,10 @@ module Cdo::CloudFormation
     end
 
     # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.
-    def js_zip(files)
-      Dir.chdir(aws_dir('cloudformation')) do
+    # These fils were moved from the `cloudformation` folder to the `cloudformation/lambdas/legacy` folder.
+    # A potential refactor would be to put each lambda in it's own folder, with it's own package.json
+    def legacy_zip_js_lambda(files)
+      Dir.chdir(aws_dir('cloudformation/lambdas/legacy')) do
         RakeUtils.yarn_install '--production'
       end
       lambda_zip(*files, 'node_modules', key_prefix: 'lambdajs')

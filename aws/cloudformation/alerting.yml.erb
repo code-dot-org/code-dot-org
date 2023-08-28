@@ -31,7 +31,7 @@ Resources:
     Properties:
       Description: 'Publish an SNS notification to Honeybadger.'
       FunctionName: HoneybadgerNotify
-      Code: <%=js_zip ['honeybadgerNotify.js']%>
+      Code: <%=legacy_zip_js_lambda ['honeybadgerNotify.js']%>
       Environment:
         Variables:
           HONEYBADGER_API_KEY: !Ref HoneybadgerApiKey
