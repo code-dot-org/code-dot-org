@@ -115,15 +115,15 @@ const ExpandedCurriculumCatalogCard = ({
                       {i18n.availableResources()}
                     </Heading4>
                     <hr className={style.thickDivider} />
-                    <TextLink text={i18n.lessonPlans()} href="#" />
+                    <BodyTwoText>{i18n.lessonPlans()} </BodyTwoText>
                     <hr className={style.horizontalDivider} />
-                    <TextLink text={i18n.slideDecks()} href="#" />
+                    <BodyTwoText>{i18n.slideDecks()} </BodyTwoText>
                     <hr className={style.horizontalDivider} />
-                    <TextLink text={i18n.activityGuides()} href="#" />
+                    <BodyTwoText>{i18n.activityGuides()} </BodyTwoText>
                     <hr className={style.horizontalDivider} />
-                    <TextLink text={i18n.answerKeysExemplars()} href="#" />
+                    <BodyTwoText>{i18n.answerKeysExemplars()} </BodyTwoText>
                     <hr className={style.horizontalDivider} />
-                    <TextLink text={i18n.projectRubrics()} href="#" />
+                    <BodyTwoText>{i18n.projectRubrics()} </BodyTwoText>
                   </div>
                   {isInUS &&
                     (professionalLearningProgram ||
