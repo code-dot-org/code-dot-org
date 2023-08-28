@@ -192,6 +192,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   const newFunctionButton = {
     kind: 'button',
     text: msg.createBlocklyFunction(),
+    // TODO: Remove the alternate callback key once we're using the new function editor
     callbackKey: useNewFunctionEditor
       ? 'newProcedureCallback'
       : 'createNewFunction',
@@ -277,7 +278,6 @@ const getLowestBlockBottomY = () => {
 
 // Creates a new definition block under all existing blocks on the main workspace,
 // scrolls to the block, and selects it
-// TODO: Replace this with code to open the behavior editor with the new definition block
 export const createNewDefinitionBlock = blockState => {
   const newDefinitionBlock = Blockly.serialization.blocks.append(
     {...blockState, x: 16, y: getLowestBlockBottomY()},
