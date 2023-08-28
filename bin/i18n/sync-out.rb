@@ -495,7 +495,8 @@ module I18n
           end
           translations_with_fallback = sort_and_sanitize(translations_with_fallback)
 
-          # Original script `apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh`
+          # Replaced the original script `apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh`
+          # to generate js translation files right away only for the "changed files"
           js_translations = translations_with_fallback.each_with_object('') do |(i18n_key, i18n_val), js_string|
             js_string << %Q[Blockly.Msg.#{i18n_key} = "#{i18n_val}";\n]
           end
