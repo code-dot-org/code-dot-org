@@ -81,19 +81,19 @@ module Cdo::CloudFormation
     # Helper function to call a Lambda-function-based AWS::CloudFormation::CustomResource.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html
     def lambda_custom_resource(function_name, properties={})
+      # Extract properties that are not part of the CustomResource schema.
       depends_on = properties.delete(:DependsOn)
+
+      # Construct the CustomResource object.
       custom_resource = {
-        Type: properties.delete('Type') || "Custom::#{custom_type || function_name}",
+        Type: "Custom::#{function_name}",
         Properties: {
-          ServiceToken: {'Fn::Join' => [':', [
-            'arn:aws:lambda',
-            {Ref: 'AWS::Region'},
-            {Ref: 'AWS::AccountId'},
-            'function',
-            function_name
-          ]]}
+          ServiceToken: {
+            'Fn::Sub' => "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:#{function_name}"
+          }
         }.merge(properties)
       }
+
       custom_resource['DependsOn'] = depends_on if depends_on
       custom_resource.to_json
     end
