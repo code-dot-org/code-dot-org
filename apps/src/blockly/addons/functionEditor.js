@@ -313,16 +313,4 @@ export default class FunctionEditor {
     };
     return returnValue;
   }
-
-  createCallBlock(procedure) {
-    const name = procedure.getName();
-    return {
-      kind: 'block',
-      type: 'procedures_callnoreturn',
-      extraState: {
-        name: name,
-        id: procedure.getId(),
-      },
-    };
-  }
 }

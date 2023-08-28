@@ -1,8 +1,9 @@
 import * as GoogleBlockly from 'blockly/core';
-import BlockSvgFrame from '../../addons/blockSvgFrame';
 import msg from '@cdo/locale';
-import {procedureDefMutator} from './mutators/procedureDefMutator';
 import experiments from '@cdo/apps/util/experiments';
+import {nameComparator} from '@cdo/apps/util/sort';
+import BlockSvgFrame from '../../addons/blockSvgFrame';
+import {procedureDefMutator} from './mutators/procedureDefMutator';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
@@ -183,14 +184,22 @@ GoogleBlockly.Extensions.registerMutator(
  * @returns an array of block objects representing the flyout blocks
  */
 export function flyoutCategory(workspace, functionEditorOpen = false) {
+  const useNewFunctionEditor = experiments.isEnabled(
+    experiments.MODAL_FUNCTION_EDITOR
+  );
+  console.log(
+    'useModalFunctionEditor in flyoutCategory: ',
+    useNewFunctionEditor
+  );
   const blockList = [];
 
   const newFunctionButton = {
     kind: 'button',
     text: msg.createBlocklyFunction(),
-    callbackKey: 'createNewFunction',
+    callbackKey: useNewFunctionEditor
+      ? 'newProcedureCallback'
+      : 'createNewFunction',
   };
-
   const functionDefinitionBlock = {
     kind: 'block',
     type: 'procedures_defnoreturn',
@@ -211,31 +220,43 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
     // No-op - cannot create new functions while the modal editor is open
   } else if (useModalFunctionEditor) {
     workspace.registerButtonCallback('createNewFunction', createNewFunction);
+    workspace.registerButtonCallback(
+      'newProcedureCallback',
+      Blockly.functionEditor.newProcedureCallback
+    );
     blockList.push(newFunctionButton);
   } else {
     blockList.push(functionDefinitionBlock);
   }
 
-  const allWorkspaces = Blockly.Workspace.getAll().filter(
-    workspace => !workspace.isFlyout
-  );
-  const allFunctionNames = [];
-  allWorkspaces.forEach(workspace => {
+  // Workspaces to populate functions flyout category from
+  const workspaces = [
+    Blockly.getMainWorkspace(),
+    Blockly.getHiddenDefinitionWorkspace(),
+  ];
+
+  const allFunctions = [];
+  workspaces.forEach(workspace => {
+    console.log('workspace: ', workspace);
     const procedureBlocks = workspace
       .getTopBlocks()
       .filter(topBlock => topBlock.type === 'procedures_defnoreturn');
-    procedureBlocks.forEach(block =>
-      allFunctionNames.push(block.getFieldValue('NAME'))
-    );
+    console.log('procedureBlocks', procedureBlocks);
+    procedureBlocks.forEach(block => {
+      allFunctions.push({
+        name: block.getFieldValue('NAME'),
+        id: block.id,
+      });
+    });
   });
 
-  // TODO: Does this require case-insensitive sorting?
-  allFunctionNames.sort().forEach(name => {
+  allFunctions.sort(nameComparator).forEach(({name, id}) => {
     blockList.push({
       kind: 'block',
       type: 'procedures_callnoreturn',
       extraState: {
         name: name,
+        id: id,
       },
       fields: {
         NAME: name,

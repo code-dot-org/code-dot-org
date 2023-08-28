@@ -1,6 +1,7 @@
 import * as GoogleBlockly from 'blockly/core';
-import BlockSvgFrame from '../../addons/blockSvgFrame';
 import msg from '@cdo/locale';
+import {nameComparator} from '@cdo/apps/util/sort';
+import BlockSvgFrame from '../../addons/blockSvgFrame';
 import {createNewDefinitionBlock} from './proceduresBlocks';
 import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
@@ -181,26 +182,32 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
 
   blockList.push(...getCustomCategoryBlocksForFlyout('Behavior'));
 
-  const allWorkspaces = Blockly.Workspace.getAll().filter(
-    workspace => !workspace.isFlyout
-  );
-  const allBehaviorNames = [];
-  allWorkspaces.forEach(workspace => {
+  // Workspaces to populate behaviors flyout category from
+  const workspaces = [
+    Blockly.getMainWorkspace(),
+    Blockly.getHiddenDefinitionWorkspace(),
+  ];
+
+  const allBehaviors = [];
+  workspaces.forEach(workspace => {
     const behaviorBlocks = workspace
       .getTopBlocks()
       .filter(topBlock => topBlock.type === 'behavior_definition');
     behaviorBlocks.forEach(block =>
-      allBehaviorNames.push(block.getFieldValue('NAME'))
+      allBehaviors.push({
+        name: block.getFieldValue('NAME'),
+        id: block.id,
+      })
     );
   });
 
-  // TODO: Does this require case-insensitive sorting?
-  allBehaviorNames.sort().forEach(name => {
+  allBehaviors.sort(nameComparator).forEach(({name, id}) => {
     blockList.push({
       kind: 'block',
       type: 'gamelab_behavior_get',
       extraState: {
-        name: name,
+        name,
+        id,
       },
       fields: {
         NAME: name,
