@@ -11,8 +11,8 @@ export default function RubricFloatingActionButton({rubric, reportingData}) {
 
   const handleClick = () => {
     const eventName = isOpen
-      ? EVENTS.RUBRIC_CLOSED_FROM_FAB
-      : EVENTS.RUBRIC_OPENED_FROM_FAB;
+      ? EVENTS.RUBRIC_CLOSED_FROM_FAB_EVENT
+      : EVENTS.RUBRIC_OPENED_FROM_FAB_EVENT;
     analyticsReporter.sendEvent(eventName, reportingData);
     setIsOpen(!isOpen);
   };
