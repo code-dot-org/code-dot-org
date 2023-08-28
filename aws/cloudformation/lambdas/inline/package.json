@@ -1,0 +1,15 @@
+{
+  "name": "inline_lambdas",
+  "scripts": {
+    "lint": "eslint ./*.js",
+    "test": "mocha ./*Test.js"
+  },
+  "devDependencies": {
+    "aws-sdk": "*",
+    "aws-sdk-mock": "*",
+    "chai": "^4.3.8",
+    "eslint": "^8.48.0",
+    "mocha": "^10.2.0",
+    "sinon": "^15.2.0"
+  }
+}
