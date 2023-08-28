@@ -263,6 +263,8 @@ id:
   call_to_action_learn_about_approach: Ketahui selengkapnya tentang pendekatan kami
   call_to_action_try_java_lab: Coba Java Lab
   call_to_action_notify_available: Beri tahu saya bila tersedia
+  call_to_action_register_early_access: Daftar untuk akses awal
+  call_to_action_open_positions: Lihat posisi terbuka
   aria_label_call_to_action_afe: Pelajari selengkapnya tentang Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Mulai program pembelajaran profesional Pengajaran
     Ilmu Komputer Dasar-dasar
@@ -13486,6 +13488,124 @@ id:
   accessibility_card_text_10: Adaptasi dari kurikulum AP Computer Science Principles
     Code.org menggunakan Quorum, bahasa berbasis bukti yang awalnya dirancang untuk
     memberikan aksesibilitas bagi siswa tunanetra atau yang mengalami gangguan penglihatan.
+  engineering_hero_heading: Bergabunglah dengan tim teknik kami!
+  engineering_hero_desc: Seiring kami terus memperluas tim teknik kami, kami ingin
+    berbagi lebih banyak tentang organisasi teknik kami di Code.org dan beberapa aspek
+    unik dari bekerja di sini. Jika Anda tertarik untuk melamar salah satu peran kami,
+    kami akan senang mendengar dari Anda!
+  engineering_team_title: Temui tim teknik di Code.org
+  engineering_team_card_text_1: Ini adalah (sebagian besar) kita pada pertemuan tatap
+    muka kita selama musim panas 2023! Kerumunan ini dibagi menjadi empat sub-tim
+    dalam tim teknik kami yang bekerja sama untuk membangun dan melayani platform
+    untuk semua siswa dan guru kami.
+  engineering_team_card_text_2: Jika Anda tertarik untuk melamar salah satu peran
+    kami, kami akan senang mendengar dari Anda! Anda dapat menemukan daftar posisi
+    terbuka di halaman Karir kami.
+  engineering_our_team_title: Tim teknik kami
+  engineering_our_team_desc: 'Tim teknik di Code.org dibagi menjadi empat sub-tim
+    yang membangun dan mendukung berbagai area platform kami:'
+  engineering_our_team_sub_title_1: Tim Pembelajaran Mahasiswa
+  engineering_our_team_text_1: Tim Pembelajaran Siswa kami memiliki semua kegiatan
+    kami (kami menyebutnya laboratorium) yang digunakan siswa kami setiap hari. Tim
+    ini sebagian besar bekerja pada teknologi front-end (kami menggunakan React dan
+    banyak JS khusus) dan kami memiliki hubungan kerja yang hebat dengan banyak mitra
+    dan proyek open source. Misalnya, kami menggunakan [Google Blockly] (%{youtube_url})
+    untuk semua pemrograman berbasis blok kami. Kami mendukung siswa dalam perjalanan
+    belajar mereka dari TK hingga kelas 12.
+  engineering_our_team_sub_title_2: Tim Pengalaman Guru
+  engineering_our_team_text_2: Tim Pengalaman Guru kami membangun alat yang menarik
+    guru baru ke Code.org (kami menyebutnya produk akuisisi) dan mengembangkan platform
+    yang memberdayakan guru kami yang ada untuk mengajarkan kurikulum kami (alat guru
+    kami). Seperti halnya alat siswa kami, kami mengandalkan React untuk membangun
+    front-end kami dan komponen sisi server kami dilayani menggunakan Ruby on Rails.
+  engineering_our_team_sub_title_3: Tim Platform
+  engineering_our_team_text_3: Tim Platform kami memiliki komponen inti yang melayani
+    kebutuhan tim siswa dan guru kami (misalnya, otentikasi dan profil pengguna) dan
+    juga memiliki misi menjangkau siswa yang belum dapat kami jangkau. Ini termasuk
+    membangun integrasi yang menghubungkan kami dengan sekolah yang menggunakan Sistem
+    Manajemen Pembelajaran (LMS) yang berbeda dan mengemas kurikulum kami sehingga
+    dapat digunakan di sekolah terpencil yang tidak memiliki akses ke internet yang
+    dapat diandalkan.
+  engineering_our_team_sub_title_4: Tim Infrastruktur
+  engineering_our_team_text_4: Tim Infrastruktur kami menyediakan tulang punggung
+    untuk platform yang mendukung siswa dan guru kami. Ini termasuk infrastruktur
+    hosting dan layanan terkait kami (kami menggunakan AWS), manajemen data, program
+    keamanan, layanan pengembang dan penyebaran, dan banyak lagi. Tim ini juga memiliki
+    sistem penskalaan dan penyediaan kami, yang sangat penting selama Hour of Code,
+    di mana kami mengundang setiap siswa di dunia untuk menyelesaikan satu jam pengkodean
+    bersama kami.
+  engineering_faq_question_1: Apa yang Code.org lakukan?
+  engineering_faq_answer_1_a: Code.org adalah organisasi nirlaba inovasi pendidikan
+    yang didedikasikan untuk visi bahwa setiap siswa di setiap sekolah memiliki kesempatan
+    untuk belajar ilmu komputer sebagai bagian dari pendidikan inti K-12 mereka.
+  engineering_faq_answer_1_b: Kami memperluas akses ke ilmu komputer di sekolah, dengan
+    fokus pada peningkatan partisipasi oleh wanita muda dan siswa dari kelompok lain
+    yang kurang terwakili. Penyedia kurikulum ilmu komputer K-12 terkemuka di distrik
+    sekolah terbesar di Amerika Serikat, Code.org juga menyelenggarakan kampanye Hour
+    of Code tahunan, yang telah melibatkan lebih dari 15% dari semua siswa di dunia.
+  engineering_faq_answer_1_c: Code.org didukung oleh donor yang murah hati termasuk
+    Microsoft, Amazon, Google, dan banyak lainnya.
+  engineering_faq_question_2: Apa itu pengalaman dan perkakas pengembang Code.org?
+  engineering_faq_answer_2: Pengalaman pengembang kami mungkin berbeda dengan apa
+    yang Anda lihat di peran sebelumnya. Bekerja sama dengan tim produk kami, kami
+    mengirim ke produksi setiap hari kerja dan kami memiliki berbagai irama - terkadang
+    Anda menulis kode yang ditayangkan hari itu; di lain waktu Anda berada di proyek
+    jangka panjang - dan sementara kami mengikuti sprint 2 mingguan, kami melakukannya
+    dengan cara yang ringan. Kami mengindeks untuk menyelesaikan hal-hal yang benar
+    dengan cara yang benar vs. mengambil pandangan murni dari metodologi tertentu.
+    [Semua kode kami] (%{code_url}) adalah open source dan kami menggunakan permintaan
+    tarik JIRA dan GitHub untuk melacak semua item pekerjaan kami. Kami juga sangat
+    peduli dengan kualitas dan pengujian dan beruntung memiliki dukungan luar biasa
+    dari [SauceLabs](%{saucelabs_url}), yang membantu kami menjalankan rangkaian tes
+    UI kami di berbagai perangkat siswa (misalnya, iPad) di pertanian perangkat cloud
+    mereka.
+  engineering_faq_question_3: Apa rotasi panggilan insinyur di Code.org?
+  engineering_faq_answer_3: 30+ tim teknik kami berbagi tanggung jawab on-call. Setiap
+    insinyur mencakup shift 24 jam dan menggunakan jalur eskalasi dan buku pedoman
+    kami untuk menanggapi pemadaman situs atau masalah situs langsung lainnya. Kami
+    bangga dengan keandalan situs kami - rata-rata, setiap insinyur hanya dibangunkan
+    sekali setahun untuk masalah yang biasanya cepat diselesaikan. Sebaliknya, “Pengembang
+    Hari Ini” biasanya menghabiskan sebagian dari hari kerja mereka mengelola penyebaran
+    produksi dan mempriorisasikan masalah yang kurang mendesak.
+  engineering_faq_question_4: Apakah Anda organisasi yang ramah-jarak jauh/WFH?
+  engineering_faq_answer_4_a: Ya! Pada 2019, tak lama sebelum pandemi, Code.org menjadi
+    organisasi yang mengutamakan jarak jauh. Hari ini, kami memiliki insinyur di setiap
+    zona waktu AS dan mengakomodasi jam kerja yang sesuai. Sebagian besar pertemuan
+    kami terjadi antara jam 10 pagi dan 3 sore PT.
+  engineering_faq_answer_4_b: Kami juga mengenali nilai waktu tatap muka, dan setiap
+    kuartal kami berkumpul secara langsung, biasanya di Seattle. Dua dari acara ini
+    (kami menyebutnya Kick-off week dan “Codechella”) menyatukan semua orang di organisasi
+    pada bulan Januari dan Juni - dan tim teknik dan produk bertemu secara terpisah
+    pada bulan April dan Oktober.
+  engineering_faq_answer_4_c: Kami sangat percaya dalam menghabiskan waktu bersama
+    siswa dan guru kami, begitu banyak dari acara tatap muka ini termasuk perjalanan
+    ke sekolah dan ruang kelas untuk mengumpulkan umpan balik atau menguji produk
+    kami
+  engineering_faq_question_5: Apa yang membuat tim teknik di Code.org unik?
+  engineering_faq_answer_5_a: 'Selain memecahkan masalah teknis yang menantang, kami
+    memiliki beberapa hal yang membuat organisasi teknik kami berbeda dari orang lain
+    yang mungkin pernah Anda kerjakan:'
+  engineering_faq_answer_5_b_1: Kami semua berbagi semangat kami untuk misi kami.
+  engineering_faq_answer_5_b_2: Masing-masing dari kita ada di sini untuk mendukung
+    misi untuk memperluas akses ke ilmu komputer untuk setiap siswa di seluruh dunia.
+    Kita semua memiliki cerita dan perspektif unik tentang apa yang mendorong kita
+    menuju misi ini.
+  engineering_faq_answer_5_c_1: Kami sangat peduli satu sama lain.
+  engineering_faq_answer_5_c_2: Ketika para insinyur berjuang dengan suatu masalah,
+    kami turun tangan dan kami membantu. Salah satu prinsip kami adalah bahwa kami
+    sulit menghadapi masalah, tetapi baik satu sama lain. Kami mempromosikan insinyur
+    secara teratur, tetapi kami tidak meresepkan solusi yang direkayasa secara berlebihan
+    hanya untuk mendukung jalur promosi seseorang. Sebaliknya, kami berinvestasi pada
+    teknisi kami dengan anggaran pengembangan profesional yang murah hati dan akses
+    ke peluang belajar lainnya.
+  engineering_faq_answer_5_d_1: Kami bekerja keras, tetapi kami menetapkan batasan
+    yang jelas.
+  engineering_faq_answer_5_d_2: Sementara kami mendukung siswa di seluruh dunia, kami
+    menganggap diri kami bertanggung jawab atas batasan yang jelas antara pekerjaan
+    dan kehidupan rumah tangga. Kami menikmati hari Rabu tanpa pertemuan, mengambil
+    PTO kami (total 5 minggu, yang mencakup penutupan kantor 2 minggu di seluruh dunia
+    pada akhir tahun alias Liburan Musim Dingin), setengah hari kerja pada hari Jumat
+    selama musim panas alias Jumat Musim Panas, dan manfaat murah hati lainnya.
   language_code:
     ar: Arab
     az: Orang Azerbaijan

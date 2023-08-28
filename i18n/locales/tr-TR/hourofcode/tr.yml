@@ -263,6 +263,8 @@ tr:
   call_to_action_learn_about_approach: Yaklaşımımız hakkında daha fazla bilgi edinin
   call_to_action_try_java_lab: Java Lab'i deneyin
   call_to_action_notify_available: Uygun olduğunda bana haber ver
+  call_to_action_register_early_access: Erken erişim için kaydolun
+  call_to_action_open_positions: Açık pozisyonları görüntüleyin
   aria_label_call_to_action_afe: Amazon Future Engineer hakkında daha fazla bilgi
     edinin
   aria_label_call_to_action_teaching_csf: Bilgisayar Bilimi Temelleri Öğretimi profesyonel
@@ -13370,6 +13372,114 @@ tr:
   accessibility_card_text_10: Code.org'un AP Computer Science Principles müfredatının,
     başlangıçta görme engelli veya görme engelli öğrencilere erişilebilirlik sağlamak
     üzere tasarlanmış kanıta dayalı bir dil olan Quorum kullanılarak uyarlanması.
+  engineering_hero_heading: Mühendislik ekibimize katılın!
+  engineering_hero_desc: Mühendislik ekibimizi genişletmeye devam ederken, Code.org'daki
+    mühendislik organizasyonumuz ve burada çalışmanın bazı benzersiz yönleri hakkında
+    daha fazla bilgi paylaşmak istedik. Rollerimizden birine başvurmakla ilgileniyorsanız,
+    senden haber almak isteriz!
+  engineering_team_title: Code.org'da mühendislik ekibiyle tanışın
+  engineering_team_card_text_1: Bu (çoğumuz) 2023 yazında yüz yüze bir araya geliyoruz!
+    Bu kalabalık, tüm öğrencilerimiz ve öğretmenlerimiz için platform oluşturmak ve
+    hizmet etmek için birlikte çalışan mühendislik ekibimiz içinde dört alt takıma
+    ayrılmıştır..
+  engineering_team_card_text_2: Rollerimizden birine başvurmakla ilgileniyorsanız,
+    senden haber almak isteriz! Açık pozisyonların bir listesini Kariyer sayfamızda
+    bulabilirsiniz.
+  engineering_our_team_title: Mühendislik ekibimiz
+  engineering_our_team_desc: 'Code.org''daki mühendislik ekibi, platformumuzun farklı
+    alanlarını oluşturan ve destekleyen dört alt ekibe ayrılmıştır:'
+  engineering_our_team_sub_title_1: Öğrenci Öğrenme Ekibi
+  engineering_our_team_text_1: Öğrenci Öğrenme Ekibimiz, öğrencilerimizin her gün
+    kullandıkları tüm etkinliklerimizin (bunlara laboratuvar diyoruz) sahibidir. Bu
+    ekip çoğunlukla ön uç teknolojisinde çalışıyor (React ve çok sayıda özel JS kullanıyoruz)
+    ve birçok ortak ve açık kaynak projesiyle harika bir çalışma ilişkimiz var. Örneğin,
+    tüm blok tabanlı programlarımız için [Google'ın Blockly] (%{youtube_url}) 'ı kullanıyoruz.
+    Öğrencileri Anaokulundan 12. sınıfa kadar öğrenme yolculuklarında destekliyoruz.
+  engineering_our_team_sub_title_2: Öğretmen Deneyimi Ekibi
+  engineering_our_team_text_2: Öğretmen Deneyimi Ekibimiz, yeni öğretmenleri Code.org'a
+    çeken araçları oluşturur (bu satın alma ürünleri diyoruz) ve mevcut öğretmenlerimizi
+    müfredatımızı (öğretmen araçlarımız) öğretmeleri için güçlendiren platformu geliştirir.
+    Öğrenci araçlarımızda olduğu gibi, ön ucumuzu oluşturmak için React"e güveniyoruz
+    ve sunucu tarafı bileşenlerimiz Ruby on Rails kullanılarak sunuluyor.
+  engineering_our_team_sub_title_3: Platform Ekibi
+  engineering_our_team_text_3: Platform Ekibimiz, öğrenci ve öğretmen ekiplerimizin
+    ihtiyaçlarına (örneğin kimlik doğrulama ve kullanıcı profili) hizmet eden temel
+    bileşenlere sahiptir ve ayrıca henüz ulaşamadığımız öğrencilere ulaşma misyonuna
+    sahiptir. Bu, bizi farklı Öğrenme Yönetim Sistemleri (LMS) kullanan okullara bağlayan
+    entegrasyonlar oluşturmayı ve müfredatımızı güvenilir internete erişimi olmayan
+    uzak okullarda kullanılabilecek şekilde paketlemeyi içerir.
+  engineering_our_team_sub_title_4: Altyapı Ekibi
+  engineering_our_team_text_4: Altyapı Ekibimiz, öğrencilerimizi ve öğretmenlerimizi
+    destekleyen platformun omurgasını sağlar. Buna barındırma altyapımız ve ilgili
+    hizmetlerimiz (AWS kullanıyoruz), veri yönetimi, güvenlik programları, geliştirici
+    ve dağıtım hizmetleri ve çok daha fazlası dahildir. Bu ekip aynı zamanda, dünyadaki
+    her öğrenciyi bizimle bir saatlik kodlamayı tamamlamaya davet ettiğimiz Hour of
+    Code sırasında kritik olan ölçeklendirme ve sağlama sistemlerimize de sahiptir.
+  engineering_faq_question_1: Code.org ne yapıyor?
+  engineering_faq_answer_1_a: Code.org, her okuldaki her öğrencinin temel K-12 eğitiminin
+    bir parçası olarak bilgisayar bilimini öğrenme fırsatına sahip olduğu vizyonuna
+    adanmış, kar amacı gütmeyen bir eğitim inovasyonu kuruluşudur.
+  engineering_faq_answer_1_b: Okullarda bilgisayar bilimlerine erişimi genişletiyoruz,
+    genç kadınların ve yeterince temsil edilmeyen diğer gruplardan öğrencilerin katılımını
+    artırmaya odaklanarak. Amerika Birleşik Devletleri'nin en büyük okul bölgelerinde
+    K-12 bilgisayar bilimleri müfredatının lider sağlayıcısı olan Code.org, dünyadaki
+    tüm öğrencilerin% 15'inden fazlasını içeren yıllık Kod Saati kampanyasını da düzenlemektedir.
+  engineering_faq_answer_1_c: Code.org, Microsoft, Amazon, Google ve diğerleri dahil
+    olmak üzere cömert bağışçılar tarafından desteklenmektedir.
+  engineering_faq_question_2: Code.org'un geliştirici deneyimi ve araçları nedir?
+  engineering_faq_answer_2: Geliştirici deneyimimiz, geçmiş rollerinizde gördüklerinizden
+    farklı olabilir. Ürün ekibimizle yakın çalışarak, hafta içi her gün üretime gönderiyoruz
+    ve çeşitli kadanslarımız var - bazen o gün yayına giren kodlar yazıyorsunuz; diğer
+    zamanlarda daha uzun vadeli projelerdesiniz - ve 2 haftalık sprintleri takip ederken,
+    bunu hafif bir şekilde yapıyoruz. Doğru şeyleri doğru şekilde yapmaya ve herhangi
+    bir metodolojiye saf bir bakış açısına sahip olmaya yöneliyoruz. [Tüm kodumuz]
+    (%{code_url}) açık kaynak kodludur ve tüm iş öğelerimizi izlemek için JIRA ve
+    GitHub çekme isteklerini kullanıyoruz. Ayrıca kalite ve test konusunda da çok
+    önemsiyoruz ve bulut cihaz çiftliğindeki çeşitli öğrenci cihazlarında (örneğin
+    iPad'ler) UI testleri paketimizi çalıştırmamıza yardımcı olan [SauceLabs](%{saucelabs_url})
+    'den inanılmaz desteğe sahip olduğumuz için şanslıyız.
+  engineering_faq_question_3: Code.org'da mühendis nöbetçi rotasyonu nedir?
+  engineering_faq_answer_3: 30'dan fazla mühendislik ekibimiz nöbetçi sorumlulukları
+    paylaşır. Her mühendis 24 saatlik bir vardiyayı kapsar ve site kesintilerine veya
+    diğer canlı site sorunlarına yanıt vermek için yükseltme yollarımızı ve oyun kitaplarımızı
+    kullanır. Sitemizin güvenilirliğinden gurur duyuyoruz - ortalama olarak, her mühendis
+    genellikle çözülmesi hızlı olan sorunlar için yılda yalnızca bir kez uyanıyor.
+    Bunun yerine, “Günün Geliştiricisi” genellikle iş günlerinin bir bölümünü üretim
+    dağıtımını yöneterek ve daha az acil sorunları üç düzeye ayırarak geçirir.
+  engineering_faq_question_4: Uzaktan dostu/WFH organizasyonu musunuz?
+  engineering_faq_answer_4_a: Evet! 2019'da, pandemiden kısa bir süre önce, Code.org
+    uzaktan ilk kuruluş haline geldi. Bugün, her ABD saat diliminde mühendislerimiz
+    var ve çalışma saatlerini buna göre ayarlıyoruz. Toplantılarımızın çoğu sabah
+    10 ile 15:00 PT saatleri arasında gerçekleşir..
+  engineering_faq_answer_4_b: Yüz yüze zamanın değerini de biliyoruz, ve her çeyrekte
+    yüz yüze bir araya geliyoruz, tipik olarak Seattle"da. Bu etkinliklerden ikisi
+    (bunlara Başlangıç haftası ve “Codechella” diyoruz) organizasyondaki herkesi Ocak
+    ve Haziran aylarında bir araya getiriyor - mühendislik ve ürün ekipleri Nisan
+    ve Ekim aylarında ayrı ayrı toplanıyor.
+  engineering_faq_answer_4_c: Öğrencilerimiz ve öğretmenlerimizle zaman geçirmeye
+    şiddetle inanıyoruz, Bu yüz yüze etkinliklerin çoğu, geri bildirim toplamak veya
+    ürünlerimizi oyun testi yapmak için okullara ve sınıflara yapılan gezileri içerir.
+  engineering_faq_question_5: Code.org'daki mühendislik ekibini benzersiz kılan nedir?
+  engineering_faq_answer_5_a: 'Zorlu teknik problemleri çözmenin ötesinde, mühendislik
+    org''umuzu çalışmış olabileceğiniz diğerlerinden farklı kılan birkaç şeyimiz var:'
+  engineering_faq_answer_5_b_1: Hepimiz misyonumuza olan tutkumuzu paylaşıyoruz.
+  engineering_faq_answer_5_b_2: Her birimiz, dünyadaki her öğrenci için bilgisayar
+    bilimlerine erişimi genişletme misyonunu desteklemek için buradayız. Hepimizin
+    bizi bu misyona iten şeyin ne olduğuna dair benzersiz hikayemiz ve bakış açımız
+    var.
+  engineering_faq_answer_5_c_1: Birbirimizi derinden önemsiyoruz.
+  engineering_faq_answer_5_c_2: Mühendisler bir sorunla mücadele ederken, devreye
+    gireriz ve yardım ederiz. İlkelerimizden biri, problemlerde zor olmamız, ancak
+    birbirimize karşı nazik olmamızdır. Mühendisleri düzenli olarak tanıtıyoruz, ancak
+    yalnızca birinin tanıtım yolunu desteklemek için aşırı mühendislik çözümleri önermiyoruz.
+    Bunun yerine, cömert bir mesleki gelişim bütçesi ve diğer öğrenme fırsatlarına
+    erişim ile mühendislerimize yatırım yapıyoruz.
+  engineering_faq_answer_5_d_1: Çok çalışıyoruz, ama net sınırlar koyuyoruz.
+  engineering_faq_answer_5_d_2: Dünyanın her yerinden öğrencileri desteklerken, iş
+    ve ev hayatı arasındaki açık sınırlardan kendimizi sorumlu tutuyoruz. Çarşamba
+    günleri toplantısız, PTO'muzu (yıl sonunda, yani Winter Break olarak da bilinen
+    2 haftalık bir ofis kapatma dahil olmak üzere toplam 5 hafta), yaz aylarında Cuma
+    günleri yarım iş günü, yani Yaz Cuma günleri ve diğer cömert faydalar.
   language_code:
     ar: Arapça
     az: Azerice
