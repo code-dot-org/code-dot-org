@@ -14,15 +14,17 @@ module Cdo::CloudFormation
     # Raises an error if the minified file is too large.
     # Use UglifyJS to compress code if `uglify` parameter is set.
     def inline_js_lambda(filename, uglify: true, max: ZIPFILE_MAX)
+      filepath = "lambdas/inline/#{filename}"
+
       str =
         if uglify
           RakeUtils.yarn_install
-          `npx uglifyjs --compress --mangle -- #{filename}`
+          `npx uglifyjs --compress --mangle -- #{filepath}`
         else
-          File.read(filename)
+          File.read(filepath)
         end
       if str.bytesize > max
-        raise "Length of JavaScript file '#{filename}' (#{str.length}) cannot exceed #{max} bytes."
+        raise "Length of JavaScript file '#{filepath}' (#{str.length}) cannot exceed #{max} bytes."
       end
       str.to_json
     end

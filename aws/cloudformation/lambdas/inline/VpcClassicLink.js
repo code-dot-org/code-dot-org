@@ -6,7 +6,7 @@
 
 // This module is automatically provided to ZipFile-based Lambda functions.
 // Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-cfnresponsemodule
-var response = require('./common/cfn-response');
+var response = require('./cfn-response');
 
 /** Takes a VPC ID and enables ClassicLink. **/
 exports.handler = function (event, context) {

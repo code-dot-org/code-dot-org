@@ -1,9 +1,9 @@
 const {assert, expect} = require("chai");
 const sinon = require("sinon");
 const AWS = require('aws-sdk-mock');
-const CfnResponse = require('../src/common/cfn-response');
+const CfnResponse = require('./cfn-response');
 
-const CountAsg = require("../src/count_asg");
+const CountAsg = require("./CountAsg");
 
 describe('CountAsg', () => {
     const context = {};

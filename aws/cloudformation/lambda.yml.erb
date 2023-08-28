@@ -18,7 +18,7 @@ Resources:
       Description: 'Takes an AWS CloudFormation stack name and instance id and returns the AMI ID. Ref: https://blogs.aws.amazon.com/application-management/post/Tx38Z5CAM5WWRXW'
       FunctionName: AMIManager
       Code:
-        ZipFile: <%=inline_js_lambda 'ami-manager.js'%>
+        ZipFile: <%=inline_js_lambda 'AmiManager.js'%>
       Handler: index.handler
       Runtime: nodejs18.x
       Timeout: 300
@@ -59,7 +59,7 @@ Resources:
       Description: 'Enables a VPC for ClassicLink through the EnableVpcClassicLink API.'
       FunctionName: VpcClassicLink
       Code:
-        ZipFile: <%=inline_js_lambda 'vpcClassicLink.js'%>
+        ZipFile: <%=inline_js_lambda 'VpcClassicLink.js'%>
       Handler: index.handler
       Runtime: nodejs18.x
       Timeout: 300
@@ -93,7 +93,7 @@ Resources:
       Description: 'Returns the current number of InService instances in an Auto Scaling Group.'
       FunctionName: CountASG
       Code:
-        ZipFile: <%=inline_js_lambda 'count_asg.js'%>
+        ZipFile: <%=inline_js_lambda 'CountAsg.js'%>
       Handler: index.handler
       Runtime: nodejs18.x
       Timeout: 30
@@ -117,6 +117,7 @@ Resources:
               - Effect: Allow
                 Action: ["autoscaling:DescribeAutoScalingGroups"]
                 Resource: "*"
+  # TODO: Is used?
   SlackEvent:
     Type: AWS::Lambda::Function
     Properties:
@@ -176,6 +177,7 @@ Resources:
                 - 's3:PutObjectAcl'
                 - 'S3:DeleteObject'
               Resource: !Sub "arn:aws:s3:::*"
+  # TODO: is used?
   S3PartitionCloudFrontLog:
     Type: AWS::Lambda::Function
     Properties:
@@ -220,6 +222,7 @@ Resources:
             - "glue:CreatePartition"
             - "glue:GetPartition"
             Resource: '*'
+  # TODO: is used?
   S3BucketConfiguration:
     Type: AWS::Lambda::Function
     Properties:
@@ -279,6 +282,7 @@ Resources:
     Properties:
       GroupDescription: Security group for VPC-internal Lambda functions.
       VpcId: !ImportValue VPC
+  # TODO: is used?
   SSMSessionSlack:
     Type: AWS::Lambda::Function
     Properties:
@@ -334,6 +338,7 @@ Resources:
       Action: 'lambda:InvokeFunction'
       Principal: events.amazonaws.com
       SourceArn: !GetAtt SessionEvent.Arn
+  # TODO: is used?
   AcceptLanguageFunction:
     Type: AWS::CloudFront::Function
     Properties:
