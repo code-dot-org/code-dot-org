@@ -123,7 +123,7 @@ Resources:
     Properties:
       Description: 'Publish a CloudWatch Event to a Slack channel.'
       FunctionName: SlackEvent
-      Code: <%=js_zip ['slackCloudWatchEvent.js']%>
+      Code: <%=legacy_zip_js_lambda ['slackCloudWatchEvent.js']%>
       Environment:
         Variables:
           SLACK_ENDPOINT: '{{resolve:secretsmanager:production/cdo/slack_endpoint}}'

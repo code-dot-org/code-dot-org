@@ -1,5 +1,7 @@
 # /cloudformation
 
+TODO: update this readme for new lambda locations
+
 This directory contains CloudFormation stack templates, associated Custom Resource Lambda functions, and some other related scripts and configuration.
 
 To run lambda tests:
