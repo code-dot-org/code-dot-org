@@ -188,7 +188,8 @@ export default class FunctionEditor {
     return name;
   }
 
-  newProcedureCallback() {
+  newProcedureCallback = () => {
+    console.log('this', this);
     const name = this.getNameForNewFunction();
     const hiddenProcedure = new ObservableProcedureModel(
       Blockly.getHiddenDefinitionWorkspace(),
@@ -226,7 +227,7 @@ export default class FunctionEditor {
     Blockly.Events.enable();
 
     this.showForFunction(hiddenProcedure);
-  }
+  };
 
   handleDelete() {
     // delete all caller blocks from the procedure workspace
