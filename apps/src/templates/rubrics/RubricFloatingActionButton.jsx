@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 const icon = require('@cdo/static/AI-FAB.png');
 import RubricContainer from './RubricContainer';
@@ -13,6 +14,7 @@ import {
 export default function RubricFloatingActionButton({
   rubric,
   studentLevelInfo,
+  onLevelForEvaluation,
   reportingData,
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +42,7 @@ export default function RubricFloatingActionButton({
           rubric={rubric}
           studentLevelInfo={studentLevelInfo}
           reportingData={reportingData}
+          onLevelForEvaluation={onLevelForEvaluation}
           teacherHasEnabledAi
         />
       )}
@@ -50,5 +53,6 @@ export default function RubricFloatingActionButton({
 RubricFloatingActionButton.propTypes = {
   rubric: rubricShape,
   studentLevelInfo: studentLevelInfoShape,
+  onLevelForEvaluation: PropTypes.bool,
   reportingData: reportingDataShape,
 };

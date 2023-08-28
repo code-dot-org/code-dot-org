@@ -34,10 +34,10 @@ export default function RubricContainer({
   rubric,
   studentLevelInfo,
   teacherHasEnabledAi,
+  onLevelForEvaluation,
   reportingData,
 }) {
-  // TODO: [AITT-113] Also check if viewing the right level to give feedback
-  const canProvideFeedback = !!studentLevelInfo;
+  const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const {lesson} = rubric;
   return (
     <div className={style.rubricContainer}>
@@ -101,4 +101,5 @@ RubricContainer.propTypes = {
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
+  onLevelForEvaluation: PropTypes.bool,
 };

@@ -166,7 +166,10 @@ class ScriptLevelsController < ApplicationController
 
     @rubric = @script_level.lesson.rubric
     if @rubric
-      @rubric_data = {rubric: @rubric.summarize}
+      @rubric_data = {
+        rubric: @rubric.summarize,
+        onLevelForEvaluation: @level.id == @rubric.level_id
+      }
       if @script_level.lesson.rubric && view_as_other
         viewing_user_level = @view_as_user.user_levels.find_by(script: @script_level.script, level: @level)
         @rubric_data[:studentLevelInfo] = {
