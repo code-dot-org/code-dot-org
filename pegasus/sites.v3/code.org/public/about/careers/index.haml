@@ -1,91 +1,145 @@
 ---
 title: Careers at Code.org
+nav: about_nav
 video_player: true
 theme: responsive
 ---
 
+- link_path = ["https://boards.greenhouse.io/codeorg/jobs/4278601005", "https://boards.greenhouse.io/codeorg/jobs/4278598005", "https://boards.greenhouse.io/codeorg/jobs/4278601005", "https://boards.greenhouse.io/codeorg/jobs/4278590005", "https://boards.greenhouse.io/codeorg/jobs/4098657005", "https://boards.greenhouse.io/codeorg/jobs/4278601005", "https://boards.greenhouse.io/codeorg/jobs/4278596005", "https://boards.greenhouse.io/codeorg/jobs/4297102005", "https://boards.greenhouse.io/codeorg/jobs/4297421005"]
 
-%section.hero-banner-basic{style: "display: block !important"}
-  .wrapper
-    .text-wrapper.col-60
-      %h1=hoc_s(:careers_hero_title)
-      %p.body-one=hoc_s(:careers_hero_description)
-      %a.link-button{href: "#ai-pl-callout"}
-        =hoc_s(:call_to_action_learning_opportunity)
-    %figure.col-33{style: "float: right"}
-      %img{src: "/images/about/careers/hero-image.jpg", alt: "", style: "position: relative;"}
-    .clear
+%link{href: "/css/generated/career/career-page.css", rel: "stylesheet"}
 
-%section.accessibility-efforts.bg-neutral-light
-  .wrapper
-    .text-wrapper
-      %h2
-        = hoc_s(:accessibility_efforts_title)
-      %p.body-two
-        = hoc_s(:accessibility_efforts_desc)
-    .grid-container
-      - item_count = 4
-      - item_count.times do |index|
-        .flex-container
-          %figure
-            %img{src: "/images/accessibility/efforts_#{index + 1}.png",  alt: hoc_s("accessibility_efforts_card_title_#{index + 1}")}
-          .text-wrapper
-            %h3.heading-sm
-              =hoc_s("accessibility_efforts_card_title_#{index + 1}")
-            %p.body-three
-              - if index == 1
-                =hoc_s(:accessibility_efforts_card_desc_2, markdown: :inline, locals: {voluntary_url: "https://www.section508.gov/sell/vpat/"})
-              - elsif index == 3
-                =hoc_s(:accessibility_efforts_card_desc_4, markdown: :inline, locals: {wcag_url: "https://www.w3.org/TR/WCAG20/"})
-              - else
-                = hoc_s("accessibility_efforts_card_desc_#{index + 1}")
+%section.hero-banner-basic.career__hero
+  .text-wrapper.col-60
+    %h1
+      =hoc_s(:careers_hero_title)
+    %p
+      =hoc_s(:careers_hero_description)
+    %p.career__description--under
+      =hoc_s(:careers_hero_description_under)
+    %a.link-button.career__hero__button{href: "#openRoles"}
+      =hoc_s(:careers_hero_cta)
+  %figure.video.col-50
+    = view :career__team_vid
+%hr
 
-=hoc_s(:careers_hero_title)
-=hoc_s(:careers_hero_description)
-=hoc_s(:careers_hero_cta)
-=hoc_s(:careers_vision_title)
-=hoc_s(:careers_vision_decsription)
-=hoc_s(:careers_values_title)
-=hoc_s(:careers_values_text_1)
-=hoc_s(:careers_approach_section_title)
-=hoc_s(:careers_approach_section_description)
-=hoc_s(:careers_approach_section_button)
-=hoc_s(:careers_principle_section_title)
-=hoc_s(:careers_principle_title_1)
-=hoc_s(:careers_principle_description_1)
-=hoc_s(:careers_balance_section_title)
-=hoc_s(:careers_balance_section_description)
-=hoc_s(:careers_openroles_section_title)
-=hoc_s(:careers_openroles_section_description)
-=hoc_s(:careers_engineering_job_title_1)
-=hoc_s(:careers_engineering_job_description_1)
-=hoc_s(:careers_educational_title)
-=hoc_s(:careers_educational_job_title_1)
-=hoc_s(:careers_educational_job_description_1)
-=hoc_s(:careers_more_info_text)
-=hoc_s(:careers_approach_section_title)
-=hoc_s(:careers_approach_section_description)
+%section.career__vision
+  %img{src: "/images/about/careers/vision-section-image.jpg", alt: "Students"}
+  .text-wrapper.col-60 
+    %h2
+      =hoc_s(:careers_vision_title) 
+    %p
+      =hoc_s(:careers_vision_decsription) 
+    %p.career__description--under
+      =hoc_s(:careers_vision_description_under)
+%hr
 
-%img{src: "/images/about/careers/core-values-first-column-1.jpg", alt: "foundational"}
-%img{src: "/images/about/careers/core-values-first-column-2.jpg", alt: "equality"}
-%img{src: "/images/about/careers/core-values-first-column-3.jpg", alt: "community"}
-%img{src: "/images/about/careers/core-values-second-column-1.jpg", alt: "responsive-feedback"}
-%img{src: "/images/about/careers/core-values-second-column-2.jpg", alt: "integrity"}
-%img{src: "/images/about/careers/core-values-second-column-3.jpg", alt: "thinking big"}
-%img{src: "/images/about/careers/diversityJobsAward.jpg", alt: "Diversity Jobs award"}
-%img{src: "/images/about/careers/final-section-pride.jpg", alt: "Pride"}
-%img{src: "/images/about/careers/finall-section-team.jpg", alt: "Team"}
-%img{src: "/images/about/careers/hero-image.jpg", alt: "Hero"}
-%img{src: "/images/about/careers/principle-section-1.jpg", alt: "North Star"}
-%img{src: "/images/about/careers/principle-section-2.jpg", alt: "Hard on problems"}
-%img{src: "/images/about/careers/principle-section-3.jpg", alt: "Solutions"}
-%img{src: "/images/about/careers/principle-section-4.jpg", alt: "Mentality"}
-%img{src: "/images/about/careers/principle-section-5.jpg", alt: "Inovational skills"}
-%img{src: "/images/about/careers/principle-section-6.jpg", alt: "Anchor decisions"}
-%img{src: "/images/about/careers/principle-section-7.jpg", alt: "Growth mindset"}
-%img{src: "/images/about/careers/vision-section-image.jpg", alt: "Students"}
-%img{src: "/images/about/careers/work-life-balance-flexible.jpg", alt: "Flexible environment"}
-%img{src: "/images/about/careers/work-life-balance-growth.jpg", alt: "Learning opportunities"}
-%img{src: "/images/about/careers/work-life-balance-health.jpg", alt: "Health benefits"}
-%img{src: "/images/about/careers/work-life-balance-time.jpg", alt: "Paid time"}
+%section.career__values{style: "margin: 64px 0"}
+  .text-wrapper.col-60
+    %h2
+      =hoc_s(:careers_values_title)
+- item_count = 3
+- item_count.times do |index|
+  .career__values__list 
+    .career__values__item
+      %img{src: "/images/about/careers/core-values-first-column-#{index + 1}.jpg", alt: "careers_values_text_1", style:"width: 100px; height: 100px"}
+      %p.values__text{style: "display: flex; align-items:center"}
+        =hoc_s("careers_values_first_column_text_#{index + 1}")
+    .career__values__item 
+      %img{src: "/images/about/careers/core-values-second-column-#{index + 1}.jpg", alt: "careers_values_text_2", style:"width: 100px; height: 100px"}
+      %p.values__text{style: "display: flex; align-items:center"}
+        =hoc_s("careers_values_second_column_text_#{index + 1}") 
+%hr
 
+%section.career__approach
+  .text-wrapper.col-60
+    %h2
+      =hoc_s(:careers_approach_section_title)
+    %p.career__approach__description 
+      =hoc_s(:careers_approach_section_description)
+      %span.link
+        %a{href: "#careerDiversity"}
+          =hoc_s(:careers_aproach_section_description_link)
+    %a.link-button{href: "#openRoles"}
+      =hoc_s(:careers_approach_section_button)
+  %img{src: "/images/about/careers/diversityJobsAward.jpg", alt: "Diversity Jobs award", style: "width: 235px; height: 205px"}
+%hr
+
+%section.career__principal{style: "margin: 64px 0"}
+  .text-wrapper.col-60
+    %h2
+      =hoc_s(:careers_principle_section_title)
+  .career__principal__list
+    - item_count = 7
+    - item_count.times do |index|   
+      - if index % 2 === 0
+        .career__principal__item
+          %img{src: "/images/about/careers/principle-section-#{index + 1}.jpg", alt: "careers_values_text_1", style:"width: 100px; height: 100px"}
+          .career__principal__text
+            %p{style: "display: flex; align-items:center; font-weight: bold"}
+              =hoc_s("careers_principle_title_#{index + 1}")
+            %p
+              =hoc_s("careers_principle_description_#{index + 1}")
+      - if index % 2 != 0
+        .career__principal__item
+          .career__principal__text
+            %p{style: "display: flex; align-items:center; font-weight: bold"}
+              =hoc_s("careers_principle_title_#{index + 1}")
+            %p
+              =hoc_s("careers_principle_description_#{index + 1}")
+          %img{src: "/images/about/careers/principle-section-#{index + 1}.jpg", alt: "careers_values_text_1", style:"width: 100px; height: 100px"}
+%hr
+
+%section.career__balance{style: "margin: 64px 0 32px 0"}
+  %h2
+    =hoc_s(:careers_balance_section_title)
+  %p.career__balance__description 
+    =hoc_s(:careers_balance_section_description)
+  - item_count = 2
+  - item_count.times do |index|
+    .career__values__list 
+      .career__values__item
+        %img{src: "/images/about/careers/balance-first-column-#{index + 1}.jpg", alt: "careers_values_text_1", style:"width: 100px; height: 100px"}
+        %p.values__text{style: "display: flex; align-items:center"}
+          =hoc_s("careers_balance_first_column_text_#{index + 1}")
+      .career__values__item 
+        %img{src: "/images/about/careers/balance-second-column-#{index + 1}.jpg", alt: "careers_values_text_2", style:"width: 100px; height: 100px"}
+        %p.values__text{style: "display: flex; align-items:center"}
+          =hoc_s("careers_balance_second_column_text_#{index + 1}") 
+%hr
+
+%section.career__roles{style: "margin: 64px 0", id: "openRoles"}
+  %h2 
+    =hoc_s(:careers_openroles_section_title)
+  %p.career__roles__description
+    =hoc_s(:careers_openroles_section_description)
+  %h4 
+    =hoc_s(:careers__openroles__job_description)
+
+  .career__roles__link__list
+    - item_count = 9 
+    - item_count.times do |index|
+      %a{href: link_path[index]}
+        =hoc_s("careers_engineering_job_title_#{index + 1}")
+      %p.career__roles__job__description
+        =hoc_s("careers_engineering_job_description_#{index + 1}")
+  %h4
+    =hoc_s(:careers_educational_title)
+  %a{href: "#"}
+    =hoc_s(:careers_educational_job_title_1)
+  %p{style: "margin-bottom: 48px"}
+    =hoc_s(:careers_educational_job_description_1)
+  %p 
+    =hoc_s(:careers_more_info_text, markdown: :inline, locals: {support_url: "https://support.code.org/hc/en-us", help_url: "/help"})
+%hr
+
+%section.career__diversity{style: "margin: 64px 0", id:"careerDiversity"} 
+  %h2
+    =hoc_s(:careers_approach_section_title2)
+  .career__diversity__images
+    %img{src: "/images/about/careers/finall-section-team.jpg", alt: "Team"}
+    %img{src: "/images/about/careers/final-section-pride.jpg", alt: "Pride"}
+  %p{style: "margin-bottom: 16px"}
+    =hoc_s(:careers_approach_section_description_1)
+  %p 
+    =hoc_s(:careers_approach_section_description_2, markdown: :inline, locals: {mail_url: "mailto:accommodations@code.org."})
