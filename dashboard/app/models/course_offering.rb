@@ -63,6 +63,15 @@ class CourseOffering < ApplicationRecord
     semester: 5000,
     school_year: 525600,
   }
+
+  ACCEPTABLE_RESOURCE_TYPES = [
+    'Answer Key',
+    'Activity Guides',
+    'Slides',
+    'Exemplar',
+    'Slide Deck',
+    'Rubric'
+  ]
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
   #
@@ -460,33 +469,27 @@ class CourseOffering < ApplicationRecord
   end
 
   def get_available_resources(locale_code='en-us')
-    acceptable_types = ['Answer Key', 'Activity Guides', 'Slides', 'Exemplar', 'Slide Deck', 'Rubric']
     lessons = latest_published_version(locale_code).units.first.lessons
-    unless lessons.empty?
-      lesson_plan = lessons.first.lesson_plan_html_url
-      expanded_card_resources = {"Lesson Plan" => lesson_plan}
-      found_types = Set.new
-      lessons.each do |lesson|
-        break if expanded_card_resources.size >= 5
-        resources = lesson.resources
-        filtered_resources = resources.select do |resource|
-          properties = resource.properties
-          type = properties['type']
-          if properties.key?('type') && acceptable_types.include?(type) && found_types.exclude?(type)
-            found_types.add(type)
-            true
-          else
-            false
-          end
-        end
-        filtered_resources&.map do |resource|
-          type = resource["properties"]["type"]
-          type = "Slide Deck" if type == "Slides"
-          type = "Answer Key" if type == "Exemplar"
+
+    return nil if lessons.empty?
+    lesson_plan = lessons.first.lesson_plan_html_url
+    expanded_card_resources = {"Lesson Plan" => lesson_plan}
+
+    lessons.each do |lesson|
+      break if expanded_card_resources.size >= 5
+      resources = lesson.resources
+
+      resources.each do |resource|
+        properties = resource.properties
+        next unless properties.key?('type')
+        type = properties['type']
+        type = "Slide Deck" if type == "Slides"
+        type = "Answer Key" if type == "Exemplar"
+        if ACCEPTABLE_RESOURCE_TYPES.include?(type) && expanded_card_resources.exclude?(type)
           expanded_card_resources[type] ||= resource["url"]
         end
       end
-      return expanded_card_resources
     end
+    expanded_card_resources
   end
 end
