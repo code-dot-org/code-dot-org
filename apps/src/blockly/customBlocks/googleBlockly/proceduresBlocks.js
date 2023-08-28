@@ -187,10 +187,6 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   const useNewFunctionEditor = experiments.isEnabled(
     experiments.MODAL_FUNCTION_EDITOR
   );
-  console.log(
-    'useModalFunctionEditor in flyoutCategory: ',
-    useNewFunctionEditor
-  );
   const blockList = [];
 
   const newFunctionButton = {
@@ -237,11 +233,9 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
 
   const allFunctions = [];
   workspaces.forEach(workspace => {
-    console.log('workspace: ', workspace);
     const procedureBlocks = workspace
       .getTopBlocks()
       .filter(topBlock => topBlock.type === 'procedures_defnoreturn');
-    console.log('procedureBlocks', procedureBlocks);
     procedureBlocks.forEach(block => {
       allFunctions.push({
         name: block.getFieldValue('NAME'),

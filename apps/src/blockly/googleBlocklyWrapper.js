@@ -697,14 +697,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const hiddenDefinitionWorkspace = new Blockly.Workspace();
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
 
-    console.log(
-      'options.useModalFunctionEditor',
-      options.useModalFunctionEditor
-    );
-    console.log(
-      'experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR',
-      experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)
-    );
     if (
       options.useModalFunctionEditor &&
       experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)
