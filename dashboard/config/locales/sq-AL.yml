@@ -23,7 +23,7 @@ sq:
         gender: Gjinia
         locale: Gjuha
         name: Shfaq Emrin
-        name_example: Shfaq Emrin (Psh. Cool Coder or Jane S.)
+        name_example: Shfaq Emrin (Psh. Cool Coder ose Jane S.)
         parent_email: Prindi/ kujdestari email
         password: Fjalëkalimi
         password_confirmation: Konfirmimi i fjalëkalimit
@@ -38,9 +38,9 @@ sq:
     errors:
       messages:
         blank: E domosdoshme
-        blank_plural: kërkohen
+        blank_plural: janë të nevojshme
         invalid: është e pavlefshme
-        invalid_plural: janë pa vlerë
+        invalid_plural: janë të pavlefshme
       models:
         user:
           attributes:
@@ -430,7 +430,7 @@ sq:
       educate_hoc: Ora e Kodimit
       finished_hoc: Unë e mbarova Orën e Kodimit
       help_support: Ndihmë dhe mbështetje
-      help_us: Na Ndihmo
+      help_us: Na ndihmoni
       learn: Mëso
       legal: Privatësia & Ligjore
       legal_cookie_notice: Njoftim për Cookie
@@ -477,6 +477,7 @@ sq:
       minecraft_designer: Minecraft
       my_projects: Projektet e mia
       navigator: Lundrues
+      pair_programming: Programimi në ekip
       playlab: Play Lab
       settings: Llogaria ime
       signin: Futu
@@ -803,7 +804,7 @@ sq:
     valid_username: I disponueshëm!
   slow_loading: Kjo po zgjat më shumë seç duhet...
   stage: Fazë
-  stage_number: Faza %{number}
+  stage_number: Mësimi %{number}
   studio:
     all_courses: Të gjitha kurset
     completed_courses: Kurset e përfunduara
@@ -900,6 +901,7 @@ sq:
   try_hoc: 'Provo "Orën e Kodimit" kliko këtu >> '
   try_k8intro: Provo Hyrjen tonë K-8 tek Kursi i Shkencave Kompjuterike (15-25 orë)
   try_reloading: Provo të rifreskosh faqen
+  unit_prefix: Mësimi %{n}
   unplugged_activity: Aktiviteti Unplugged
   unsubmit: Mos dërgo
   upsell:

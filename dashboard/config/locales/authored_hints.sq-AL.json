@@ -933,6 +933,82 @@
         "courseC_starWars_loops7_dani": {
           "courseC_starWars_loops7_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
         },
+        "courseD_collector_debugging1a_2021": {
+          "courseD_collector_debugging1_a": "Përdor butonin “Hapi” për të parë nëse gjithçka është në rregull në hapin e parë.\n\nPo në lidhje me të dytën?\n\nKu shkon keq?",
+          "courseD_collector_debugging1_c": "Mos harro të përdorësh bllokun “mbledh” për të marrë thesarin pasi të keni lëviz tek ai."
+        },
+        "courseD_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "Kujdes, akulli i thyer! Scrat do të bjerë në ujë!",
+          "courseB_iceage_loops10_b": "Provo të thuash hapat me zë të lartë ose t'i shkruash ato në një copë letër. A sheh ndonjë model?",
+          "courseB_iceage_loops10_c": "Ky është një enigmë e gjatë! Ndiqe këtë rrugë."
+        },
+        "courseD_iceage_loops1_2021": {
+          "courseD_iceage_loops1_a": "Kujdes, akulli i thyer! Scrat do të bjerë drejtë në të!",
+          "courseD_iceage_loops1_b": "Do të të duhet t'a përdorësh këtë bllok:\n\n<xml><block type=\"maze_moveForward\"/></xml>"
+        },
+        "courseD_iceage_loops2_2021": {
+          "courseD_iceage_loops2_a": "Ndaje këtë enigmë në dy pjesë, një para këndit dhe një pas këndit.",
+          "courseD_iceage_loops2_b": "Nëse ngec, provo të thuash hapat me zë të lartë.",
+          "courseD_iceage_loops2_c": "Ndiqe këtë rrugë për t'a dërgu Scrat në acorn."
+        },
+        "courseD_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Përdor këtë bllok të ri!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
+          "courseB_iceage_loops3_b": "Për të përsëritur kodin, tërhiq një loop `përsërit`, pastaj vendos bllokun që dëshiron të përsëritet brenda."
+        },
+        "courseD_iceage_loops4_2021": {
+          "courseD_iceage_loops4_a": "Mos ke frikë të ekzekutosh kodin tënd dhe shiko se çfarë ndodh!",
+          "courseD_iceage_loops4_b": "Provo të shkruash hapat që Scrat do të ndërmarrë për të arritur në acorn. A sheh një model?",
+          "courseD_iceage_loops4_c": "Kjo është rruga që Scrat duhet të marrë."
+        },
+        "courseD_iceage_loops6_2021": {
+          "courseD_iceage_loops6_a": "Kodi juaj përfundimtar do të ketë **tre** `lëviz përpara` blloqe.",
+          "courseD_iceage_loops6_b": "Ju vetëm duhet të shtoni **një** loop më shumë!",
+          "courseD_iceage_loops6_c": "Rruga jote përfundimtare duhet të duket kështu."
+        },
+        "courseD_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "Nëse ngec, provo të shkruani hapat poshtë në një copë letër. A sheh një model?",
+          "courseB_iceage_loops7_b": "Kjo është rruga që duhet të marrë Scrat për të arritur në acorn."
+        },
+        "courseD_iceage_loops8_2021": {
+          "courseD_iceage_loops8_a": "A janë blloqet e “kthesës” në rregull? Çfarë tjetër mund të ndryshosh?",
+          "courseD_iceage_loops8_b": "Loop i parë duhet të përsëritet **3** herë, e dyta duhet të përsëritet **5** herë, loop i tretë duhet të përsëritet**4** herë dhe loop i fundit duhet të përsëritet**4** herë.",
+          "courseD_iceage_loops8_c": "Përdor loops për të ndihmuar Scrat të ndjekë këtë rrugë."
+        },
+        "courseD_iceage_loops9_2021": {
+          "courseD_iceage_loops9_a": "Keni probleme? Provoni ta thyeni këtë enigmë në copa më të vogla. Mos keni frikë të ekzekutoni enigmën tuaj ndërsa kodoni!",
+          "courseD_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops.",
+          "courseD_iceage_loops9_c": "Scrat duhet të ndjekë këtë rrugë për të arritë tek acorn."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_a": "Ti mund të kthehesh djathtas ose majtas nga këndvështrimi i Kuq. Nëse po përballesh me të djathtën, kthimi në të djathtë do të të bëjë të marrësh drejtimin poshtë.",
+          "courseC_maze_programming4_b": "Për të ndjekur rrugën ec përpara dhe kthehu në një mënyrë, pastaj lëviz përsëri dhe kthehu në rrugën e kundërt. Lëviz përpara edhe një herë për të arritur acorn."
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_a": "Provo të përdorësh butonin “Hapi” për të ekzekutuar kodin tënd rresht pas rreshti. A e kupton se çfarë duhet të bësh më pas?",
+          "courseC_maze_programming5_b": "Mos harro se kthesat janë nga perspektiva e zogut.",
+          "courseC_maze_programming5_c": "Mos keni frikë të gaboni! Provo të shtoni blloqe dhe të ekzekutoni kodin për të parë se çfarë do të ndodhë edhe nëse nuk mendon se e ke zgjidhur enigmën akoma."
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "Nëse zogu nuk po shkon te derri sigurohuni që të tre blloqet të jenë klikuar plotësisht së bashku, pastaj klikoni përsëri “Run”.",
+          "courseC_maze_programming1_b": "Mos keni frikë të gaboni! Provoni të shtoni blloqe dhe të ekzekutoni kodin për të parë se çfarë do të ndodhë edhe nëse nuk mendoni se e keni zgjidhur enigmën akoma."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_a": "Për të përdorur një bllok “lëviz përpara”, tërhiqe atë nga kutia e veglave jashtë në hapësirën e punës dhe lidhe atë me bllokun “when run”.",
+          "courseC_maze_programming2_b": "Sigurohu që të 3 blloqet të klikohen së bashku dhe të bashkangjiten në bllokun “when run”."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPër t'a fshirë një bllok nga mesi i kodit tënd tërhiq të gjitha blloqet nën atë larg në të djathtë dhe le të ulen në hapësirën e punës për një kohë.  \n\nKliko në bllokun që dëshiron t'a fshish dhe tërhiqe përsëri në kutinë e veglave.\n\nMë në fund vendos blloqet tuaja të tjera përsëri në vendin ku përkasin."
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_a": "Provo të përdorësh butonin “Hapi” për të ekzekutuar kodin tënd rresht pas rreshti. A e kupton se çfarë duhet të bësh më pas?",
+          "courseC_maze_programming5_b": "Mos harro se kthesat janë nga perspektiva e zogut.",
+          "courseC_maze_programming5_c": "Mos keni frikë të gaboni! Provo të shtoni blloqe dhe të ekzekutoni kodin për të parë se çfarë do të ndodhë edhe nëse nuk mendon se e ke zgjidhur enigmën akoma."
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_a": "Provo të përdorësh butonin “Hapi” për të ekzekutuar kodin tënd rresht pas rreshti. A e kupton se çfarë duhet të bësh më pas?",
+          "courseC_maze_programming5_b": "Mos harro se kthesat janë nga perspektiva e zogut.",
+          "courseC_maze_programming5_c": "Mos keni frikë të gaboni! Provo të shtoni blloqe dhe të ekzekutoni kodin për të parë se çfarë do të ndodhë edhe nëse nuk mendon se e ke zgjidhur enigmën akoma."
+        },
         "coursee_helloworld_events": {
           "hello_world_click": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
