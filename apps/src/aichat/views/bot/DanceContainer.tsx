@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import BehaviorBot from './BehaviorBot';
+import SequenceBot from './SequenceBot';
 
 interface DanceContainerProps {
   danceState: any;
@@ -31,7 +31,7 @@ const DanceContainer: React.FunctionComponent<DanceContainerProps> = ({
 
   return (
     <div id="dance-container">
-      <BehaviorBot currentTick={tick} danceState={danceState} />
+      <SequenceBot currentTick={tick} danceState={danceState} />
       <div>{Math.floor(tick)}</div>
     </div>
   );

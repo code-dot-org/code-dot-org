@@ -2,7 +2,7 @@ import React from 'react';
 import MovingBot from './MovingBot';
 import DanceTimeline from './DanceTimeline';
 
-interface BehaviorBotProps {
+interface SequenceBotProps {
   currentTick: number;
   danceState: any;
 }
@@ -149,7 +149,7 @@ const generateMoves = () => {
   return timeline;
 };
 
-const BehaviorBot: React.FunctionComponent<BehaviorBotProps> = ({
+const SequenceBot: React.FunctionComponent<SequenceBotProps> = ({
   currentTick,
   danceState,
 }) => {
@@ -157,7 +157,7 @@ const BehaviorBot: React.FunctionComponent<BehaviorBotProps> = ({
   const moves = generateMoves();
 
   return (
-    <div id="behavior-bot">
+    <div id="sequence-bot">
       <MovingBot currentTick={currentTick} moves={moves} />
       <DanceTimeline
         currentTick={currentTick}
@@ -168,4 +168,4 @@ const BehaviorBot: React.FunctionComponent<BehaviorBotProps> = ({
   );
 };
 
-export default BehaviorBot;
+export default SequenceBot;

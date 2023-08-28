@@ -1,5 +1,5 @@
 import React from 'react';
-import {MoveBlockStep, MoveBlock} from './BehaviorBot';
+import {MoveBlockStep, MoveBlock} from './SequenceBot';
 
 interface DanceTimelineProps {
   currentTick: number;
@@ -61,7 +61,7 @@ const DanceTimeline: React.FunctionComponent<DanceTimelineProps> = ({
           style={{
             left: padding + currentTick * measureWidth,
             top: padding + 0,
-            height: 100,
+            height: 180,
             width: 4,
             backgroundColor: 'yellow',
             position: 'absolute',
