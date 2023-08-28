@@ -81,7 +81,6 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
 
   const orderedBlocks = reorderBlocks(topBlocks, blockOrderMap);
   // Handles a rare case when immovable setup/when run blocks are not at the top of the workspace
-  console.log('ordered blocks', orderedBlocks);
   const orderedBlocksSetupFirst = partitionBlocksByType(
     orderedBlocks,
     SETUP_TYPES,
