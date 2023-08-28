@@ -1094,35 +1094,56 @@
           "type": "Vídeo"
         },
         "user-centered-design-reflect-2021/csd/2021": {
+          "name": "Design Centrado no Usuário (Experimente & Reflita) 2021",
           "type": "Guia de atividades"
         },
         "user-interface-screens/csd/2021": {
+          "name": "Telas de Interface do Usuário",
           "type": "Recurso"
         },
         "user-experience-computer/csd/2021": {
+          "name": "Teste do Usuário (Computador)",
           "type": "Guia de atividades"
         },
         "user-experience-user/csd/2021": {
+          "name": "Teste do Usuário (Usuário)",
           "type": "Guia de atividades"
         },
+        "improve-a-screen-exemplar-19/csd/2021": {
+          "name": "Melhore uma Tela"
+        },
         "paper-prototype-sample-feedback/csd/2021": {
+          "name": "Feedback do Protótipo",
           "type": "Recurso"
         },
         "improve-a-screen/csd/2021": {
+          "name": "Melhore uma Tela",
           "type": "Guia de atividades"
         },
         "user-interviews-1/csd/2021": {
+          "name": "Entrevistas com Usuários",
           "type": "Guia de atividades"
         },
         "user-interviews/csd/2021": {
+          "name": "Exemplos de Entrevistas com Usuários",
           "type": "Recurso"
         },
+        "paper-prototype-2021/csd/2021": {
+          "name": "Guia do Projeto Protótipo em Papel"
+        },
         "paper-prototypes/csd/2021": {
-          "name": "Protótipos de papel",
+          "name": "Protótipos em Papel",
           "type": "Rubrica"
         },
+        "paper_prototype_-_student_checklist/csd/2021": {
+          "name": "Protótipo de Papel - Lista de Verificação do Aluno"
+        },
         "app-design-kickoff-2019/csd/2021": {
+          "name": "Pontapé para o Design de Aplicativos",
           "type": "Guia de atividades"
+        },
+        "app_design_kickoff/csd/2021": {
+          "name": "Pontapé para o Design de Aplicativos"
         },
         "market-research/csd/2021": {
           "name": "Pesquisa de mercado",
@@ -1132,10 +1153,18 @@
           "name": "Pesquisa de mercado"
         },
         "explore-ui-elements/csd/2021": {
+          "name": "Explore os Elementos de Interface com o Usuário (IU)",
           "type": "Guia de atividades"
         },
+        "explore_ui_elements/csd/2021": {
+          "name": "Explore os Elementos de Interface com o Usuário (IU)"
+        },
         "paper-prototype-planning/csd/2021": {
+          "name": "Planejamento do Protótipo em Papel",
           "type": "Guia de atividades"
+        },
+        "phone-paper-prototype/csd/2021": {
+          "name": "Protótipo de Telefone em Papel"
         },
         "design_mode/csd/2021": {
           "name": "Modo de Design",
@@ -1145,22 +1174,37 @@
           "name": "Modo de Design de Elementos",
           "type": "Recurso"
         },
+        "paper_prototype_planning/csd/2021": {
+          "name": "Planejamento do Protótipo em Papel"
+        },
         "user-test-cases/csd/2021": {
+          "name": "Casos de Testes de Usuários",
           "type": "Guia de atividades"
         },
         "paper-prototype-user-testing-1-2/csd/2021": {
+          "name": "Teste de Usuários dos Protótipos em Papel",
           "type": "Guia de atividades"
         },
         "whats-for-lunch-testing/csd/2021": {
+          "name": "Teste do \"O que tem para o almoço\"",
           "type": "Vídeo"
         },
+        "paper_prototype_user_testing/csd/2021": {
+          "name": "Teste de Usuários dos Protótipos em Papel"
+        },
+        "user_test_cases/csd/2021": {
+          "name": "Casos de Testes de Usuários"
+        },
         "screen-ownership-2021/csd/2021": {
+          "name": "Propriedade da Tela (2021)",
           "type": "Guia de atividades"
         },
         "screen-design-1/csd/2021": {
+          "name": "Design de Tela (2021)",
           "type": "Guia de atividades"
         },
         "model-screen-design/csd/2021": {
+          "name": "Design de Tela do Modelo",
           "type": "Recurso"
         },
         "intro_to_design_mode/csd/2021": {
@@ -1192,6 +1236,7 @@
           "type": "Recurso"
         },
         "digital-prototype-user-testing/csd/2021": {
+          "name": "Teste do Usuário do Protótipo Digital",
           "type": "Guia de atividades"
         },
         "bugs-and-features-planning/csd/2021": {
@@ -1206,11 +1251,17 @@
           "type": "Guia de atividades"
         },
         "app-presentation/csd/2021": {
-          "name": "Apresentação de aplicativos",
+          "name": "Apresentação do Aplicativo",
           "type": "Rubrica"
         },
+        "app-presentation-template/csd/2021": {
+          "name": "Modelo de Apresentação do Aplicativo"
+        },
         "app-presentation-exemplar/csd/2021": {
-          "name": "Apresentação de aplicativos"
+          "name": "Apresentação do Aplicativo"
+        },
+        "app_presentation_-_student_checklist/csd/2021": {
+          "name": "Apresentação do Aplicativo - Lista de Verificação do Aluno"
         },
         "unit-5-data-society/csd/2021": {
           "type": "Slides"
@@ -4095,6 +4146,7 @@
           "type": "Slides"
         },
         "user_centered_design_try_reflect_2021/csd/2022": {
+          "name": "Design Centrado no Usuário (Experimente & Reflita) 2021",
           "type": "Guia de atividades"
         },
         "user_centered_design_-_try_and_reflect/csd/2022": {
@@ -4102,22 +4154,30 @@
           "type": "Slides"
         },
         "user_interface_screens/csd/2022": {
+          "name": "Telas de Interface do Usuário",
           "type": "Recurso"
         },
         "user_testing_computer_/csd/2022": {
+          "name": "Teste do Usuário (Computador)",
           "type": "Guia de atividades"
         },
         "user_testing_user_/csd/2022": {
+          "name": "Teste do Usuário (Usuário)",
           "type": "Guia de atividades"
         },
         "user_interfaces/csd/2022": {
           "name": "Interfaces de Usuário",
           "type": "Slides"
         },
+        "improve_a_screen/csd/2022": {
+          "name": "Melhore uma Tela"
+        },
         "improve_a_screen_1/csd/2022": {
+          "name": "Melhore uma Tela",
           "type": "Guia de atividades"
         },
         "prototype_feedback/csd/2022": {
+          "name": "Feedback do Protótipo",
           "type": "Recurso"
         },
         "feedback_and_testing/csd/2022": {
@@ -4125,17 +4185,25 @@
           "type": "Slides"
         },
         "example_user_interviews/csd/2022": {
+          "name": "Exemplos de Entrevistas com Usuários",
           "type": "Recurso"
         },
         "user_interviews/csd/2022": {
+          "name": "Entrevistas com Usuários",
           "type": "Guia de atividades"
         },
         "identifying_user_needs/csd/2022": {
           "name": "Identificando Necessidades do Usuário",
           "type": "Slides"
         },
+        "paper_prototype_-_student_checklist/csd/2022": {
+          "name": "Protótipo de Papel - Lista de Verificação do Aluno"
+        },
+        "paper_prototype_project_guide/csd/2022": {
+          "name": "Guia do Projeto Protótipo em Papel"
+        },
         "paper_prototypes/csd/2022": {
-          "name": "Protótipos de papel",
+          "name": "Protótipos em Papel",
           "type": "Rubrica"
         },
         "project_-_paper_prototype/csd/2022": {
@@ -4143,10 +4211,14 @@
           "type": "Slides"
         },
         "app_design_kickoff/csd/2022": {
+          "name": "Pontapé para o Design de Aplicativos",
           "type": "Guia de atividades"
         },
+        "app_design_kickoff_1/csd/2022": {
+          "name": "Pontapé para o Design de Aplicativos"
+        },
         "designing_apps_for_good/csd/2022": {
-          "name": "Criando aplicativos para o bem",
+          "name": "Criando Apps for Good",
           "type": "Slides"
         },
         "market_research/csd/2022": {
@@ -4161,7 +4233,11 @@
           "type": "Slides"
         },
         "explore_ui_elements/csd/2022": {
+          "name": "Explore os Elementos de Interface com o Usuário (IU)",
           "type": "Guia de atividades"
+        },
+        "explore_ui_elements_1/csd/2022": {
+          "name": "Explore os Elementos de Interface com o Usuário (IU)"
         },
         "exploring_ui_elements/csd/2022": {
           "name": "Explorando Elementos de Interface UI",
@@ -4176,19 +4252,35 @@
           "type": "Recurso"
         },
         "paper_prototype_planning/csd/2022": {
+          "name": "Planejamento do Protótipo em Papel",
           "type": "Guia de atividades"
+        },
+        "paper_prototype_planning_1/csd/2022": {
+          "name": "Planejamento do Protótipo em Papel"
+        },
+        "phone_paper_prototype/csd/2022": {
+          "name": "Protótipo de Telefone em Papel"
         },
         "build_a_paper_prototype/csd/2022": {
           "name": "Crie um Protótipo de Papel",
           "type": "Slides"
         },
         "paper_prototype_user_testing/csd/2022": {
+          "name": "Teste de Usuários dos Protótipos em Papel",
           "type": "Guia de atividades"
+        },
+        "paper_prototype_user_testing_1/csd/2022": {
+          "name": "Teste de Usuários dos Protótipos em Papel"
         },
         "user_test_cases/csd/2022": {
+          "name": "Casos de Testes de Usuários",
           "type": "Guia de atividades"
         },
+        "user_test_cases_1/csd/2022": {
+          "name": "Casos de Testes de Usuários"
+        },
         "what_s_for_lunch_testing/csd/2022": {
+          "name": "Teste do \"O que tem para o almoço\"",
           "type": "Vídeo"
         },
         "prototype_testing/csd/2022": {
@@ -4200,12 +4292,15 @@
           "type": "Vídeo"
         },
         "model_screen_design/csd/2022": {
+          "name": "Design de Tela do Modelo",
           "type": "Recurso"
         },
         "screen_design_2021_/csd/2022": {
+          "name": "Design de Tela (2021)",
           "type": "Guia de atividades"
         },
         "screen_ownership_2021_/csd/2022": {
+          "name": "Propriedade da Tela (2021)",
           "type": "Guia de atividades"
         },
         "design_mode_in_app_lab/csd/2022": {
@@ -4245,6 +4340,7 @@
           "type": "Slides"
         },
         "digital_prototype_user_testing/csd/2022": {
+          "name": "Teste do Usuário do Protótipo Digital",
           "type": "Guia de atividades"
         },
         "testing_the_app/csd/2022": {
@@ -4271,11 +4367,17 @@
           "type": "Slides"
         },
         "app_presentation/csd/2022": {
-          "name": "Apresentação de aplicativos",
+          "name": "Apresentação do Aplicativo",
           "type": "Rubrica"
         },
+        "app_presentation_-_student_checklist/csd/2022": {
+          "name": "Apresentação do Aplicativo - Lista de Verificação do Aluno"
+        },
         "app_presentation_1/csd/2022": {
-          "name": "Apresentação de aplicativos"
+          "name": "Apresentação do Aplicativo"
+        },
+        "app_presentation_template/csd/2022": {
+          "name": "Modelo de Apresentação do Aplicativo"
         },
         "project_-_app_presentation/csd/2022": {
           "name": "Projeto - Apresentação do App",
@@ -4977,6 +5079,9 @@
           "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
           "type": "Cartaz de poema"
         },
+        "csf_course_a_lesson_slides/coursea/2022": {
+          "type": "Slides"
+        },
         "20_20_20_rule/coursea/2022": {
           "name": "Regra 20/20/20",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
@@ -4996,6 +5101,9 @@
           "name": "Macarrão Wiggles-Go",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vídeo"
+        },
+        "csf_course_a_lesson_slides_1/coursea/2022": {
+          "type": "Slides"
         },
         "feeling_faces_-_emotion_image/coursea/2022": {
           "name": "Rostos Sentidos - Imagem Emotiva",
@@ -5022,6 +5130,9 @@
           "url": "https://youtu.be/hrnhiKAQ1_k",
           "type": "Vídeo desconectado"
         },
+        "csf_course_a_lesson_slides_2/coursea/2022": {
+          "type": "Slides"
+        },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
           "name": "Blocos Blocky desconectados (jardim da infância e primeiro ano)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
@@ -5031,6 +5142,9 @@
           "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vídeo"
+        },
+        "csf_course_a_lesson_slides_3/coursea/2022": {
+          "type": "Slides"
         },
         "debugging_with_the_step_button/coursea/2022": {
           "name": "Depuração com o botão Step",
@@ -5042,10 +5156,16 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurso"
         },
+        "csf_course_a_lesson_slides_4/coursea/2022": {
+          "type": "Slides"
+        },
         "feeling_faces_-_emotion_image_1/coursea/2022": {
           "name": "Rostos Sentidos - Imagem Emotiva",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurso"
+        },
+        "csf_course_a_lesson_slides_5/coursea/2022": {
+          "type": "Slides"
         },
         "happy_map_cards_xl/coursea/2022": {
           "name": "Cartões de Mapas Divertidos GG",
@@ -5057,6 +5177,9 @@
           "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
           "type": "Manipulativos"
         },
+        "csf_course_a_lesson_slides_6/coursea/2022": {
+          "type": "Slides"
+        },
         "feeling_faces/coursea/2022": {
           "name": "Rostos sentimentais",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
@@ -5067,15 +5190,24 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Vídeo"
         },
+        "csf_course_a_lesson_slides_7/coursea/2022": {
+          "type": "Slides"
+        },
         "csf_lesson_recommendations/coursea/2022": {
           "name": "Recomendações da lição CSF",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
           "type": "Recurso"
         },
+        "csf_course_a_lesson_slides_8/coursea/2022": {
+          "type": "Slides"
+        },
         "pause_and_think_online/coursea/2022": {
           "name": "Pare e pense on-line",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Vídeo"
+        },
+        "csf_course_a_lesson_slides_9/coursea/2022": {
+          "type": "Slides"
         },
         "the_big_event/coursea/2022": {
           "name": "O grande evento",
@@ -5097,9 +5229,15 @@
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
           "type": "Imagem do controlador"
         },
+        "csf_course_a_lesson_slides_10/coursea/2022": {
+          "type": "Slides"
+        },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
           "name": "Principais dicas de atividades de Fundamentos da Ciência da Computação",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "csf_course_a_lesson_slides_11/coursea/2022": {
+          "type": "Slides"
         },
         "artist_project_planning_guide/coursea/2022": {
           "name": "Guia de planejamento de projetos de artistas",
@@ -5110,6 +5248,9 @@
           "name": "Guia de planejamento de projetos de artistas",
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
           "type": "Chave de resposta"
+        },
+        "csf_course_a_lesson_slides_12/coursea/2022": {
+          "type": "Slides"
         },
         "common_core_and_ngss_guidance/courseb/2022": {
           "name": "Orientação do Common Core e NGSS",
@@ -5165,6 +5306,9 @@
         "digital_trails_lesson_slides/courseb/2022": {
           "name": "Trilhas digitais: Slides de aula",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "csf_course_b_lesson_slides/courseb/2022": {
+          "type": "Slides"
         },
         "feeling_faces_emotion_image/courseb/2022": {
           "name": "Sentimento Rostos Emoção Imagem",
