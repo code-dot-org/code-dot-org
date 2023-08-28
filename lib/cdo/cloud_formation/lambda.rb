@@ -29,10 +29,12 @@ module Cdo::CloudFormation
       str.to_json
     end
 
-    def js_erb(filename, **args)
+    def inline_js_erb_lambda(filename, **args)
+      filepath = "lambdas/inline/#{filename}"
+
       Tempfile.open do |tmp|
-        File.write(tmp, erb_file(filename))
-        js(tmp.path, **args)
+        File.write(tmp, erb_file(filepath))
+        inline_js_lambda(tmp.path, **args)
       end
     end
 
