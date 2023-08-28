@@ -24,7 +24,7 @@ class I18n::Resources::Dashboard::CurriculumContent::SyncInTest < Minitest::Test
 
     ::Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.expects(:new).with(script, scope: {only_numbered_lessons: true}).in_sequence(exec_seq).returns(script_serializer_mock)
     I18n::Resources::Dashboard::CurriculumContent::SyncIn.expects(:get_script_subdirectory).with(script).in_sequence(exec_seq).returns('expected_script_subdirectory')
-    I18nScriptUtils.expects(:unit_directory_change?).with('expected_script_name.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
+    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/curriculum_content'), 'expected_script_name.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
 
     FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/curriculum_content/expected_script_subdirectory')).in_sequence(exec_seq)
     File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_data": "expected_data"\n}]).in_sequence(exec_seq)
@@ -65,7 +65,7 @@ class I18n::Resources::Dashboard::CurriculumContent::SyncInTest < Minitest::Test
     ::Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.expects(:new).with(script, scope: {only_numbered_lessons: true}).in_sequence(exec_seq).returns(script_serializer_mock)
 
     I18n::Resources::Dashboard::CurriculumContent::SyncIn.expects(:get_script_subdirectory).with(script).never.returns('expected_script_subdirectory')
-    I18nScriptUtils.expects(:unit_directory_change?).with('expected_script_name.json', expected_i18n_source_file_path).never.returns(false)
+    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/curriculum_content'), 'expected_script_name.json', expected_i18n_source_file_path).never.returns(false)
     FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/curriculum_content/expected_script_subdirectory')).never
     File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_data": "expected_data"\n}]).never
 
@@ -85,7 +85,7 @@ class I18n::Resources::Dashboard::CurriculumContent::SyncInTest < Minitest::Test
 
     ::Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.expects(:new).with(script, scope: {only_numbered_lessons: true}).in_sequence(exec_seq).returns(script_serializer_mock)
     I18n::Resources::Dashboard::CurriculumContent::SyncIn.expects(:get_script_subdirectory).with(script).in_sequence(exec_seq).returns('expected_script_subdirectory')
-    I18nScriptUtils.expects(:unit_directory_change?).with('expected_script_name.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(true)
+    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/curriculum_content'), 'expected_script_name.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(true)
 
     FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/curriculum_content/expected_script_subdirectory')).never
     File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_data": "expected_data"\n}]).never

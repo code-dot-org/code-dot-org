@@ -44,8 +44,8 @@ module I18n
 
               # write data to path
               name = "#{script.name}.json"
-              path = File.join(I18N_SOURCE_FILE_PATH, get_script_subdirectory(script), name)
-              next if I18nScriptUtils.unit_directory_change?(name, path)
+              path = File.join(I18N_SOURCE_DIR_PATH, get_script_subdirectory(script), name)
+              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, name, path)
 
               FileUtils.mkdir_p(File.dirname(path))
               File.write(path, JSON.pretty_generate(data))
@@ -55,7 +55,7 @@ module I18n
           def self.redact
             originals_dir = I18N_SOURCE_DIR.sub('source', 'original')
 
-            Dir[File.join(I18N_SOURCE_FILE_PATH, '**/*.json')].each do |file|
+            Dir[File.join(I18N_SOURCE_DIR_PATH, '**/*.json')].each do |file|
               original_file = file.sub(I18N_SOURCE_DIR, originals_dir)
               FileUtils.mkdir_p(File.dirname(original_file))
               FileUtils.cp(file, original_file)

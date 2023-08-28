@@ -702,6 +702,7 @@ sq-AL:
     tuaj <b>Flappy</b>. Kodo rregullat e tua dhe ndaji ato me shoket e tu!
   footer_about: Rreth
   footer_built_on_github: E ndërtuar në GitHub nga Microsoft
+  footer_cookie_notice: Njoftim për Cookie
   footer_donate: Dhuro
   footer_powered_by_aws: Mundësuar nga Amazon Web Services
   footer_privacy_policy: Rregullat e Privatësisë
@@ -767,6 +768,7 @@ sq-AL:
   header_educate_hoc: Ora e Kodimit
   header_help_us: Na Ndihmo
   header_learn: Mëso
+  header_legal: Privatësia & Ligjore
   header_legal_privacy: Rregullat e Privatësisë
   header_legal_tos: Kushtet e shërbimit
   header_my_dashboard: Paneli im
@@ -794,7 +796,9 @@ sq-AL:
   hoc2018_creativity_create: Krijo
   hoc2018_creativity_hoc_coming: Ora e kodimit po vjen…
   hoc2018_dance_amazon_about_future_engineer_button: Mëso më shumë
+  hoc2018_dance_party_box_title: Festë vallëzimi
   hoc2018_dance_party_button: Fillo
+  hoc2018_dance_party_main_heading: Festë vallëzimi
   hoc2018_dance_teacher_resources_tile1_button: Plani Mësimor
   hoc2018_dance_teacher_resources_tile2_button: Aktiviteti Unplugged
   hoc2018_mc_adventurer_description: Përdorni kodin për të marrë Alex apo Steve në
@@ -807,6 +811,7 @@ sq-AL:
   hoc2018_mc_designer_title: Dizenjuesi i Minecraft
   hoc2018_mc_details: Shumë gjuhë | Browserët modern dhe tabletat | Klasat 2+
   hoc2018_mc_download_adventurer: 'Shkarko versionin offline të Aventurave Minecraft '
+  hoc2018_mc_educators_box2_button: Shkarko
   hoc2018_mc_homepage_join_us: Na u bashko!
   hoc2018_mc_homepage_try_it: Provoje
   hoc2018_mc_page_title: Tutorialet e Orës së Kodimit Minecraft
@@ -826,6 +831,7 @@ sq-AL:
   hoc2022_landing_page_play_title: Luaj
   hoc_is_here: Ora e kodimit është duke ardhur përsëri në 5-11 Dhjetor. https://youtu.be/KsOIlDT145A.
   hoc_leaderboards: Tabela e udheheqësve të Orës Së Kodimit
+  hoc_overview_dance_title: Festë vallëzimi
   hoc_overview_start_tutorial: Fillo
   homepage_action_text_codevideo: Ndiq videon
   homepage_action_text_girlvideo: Frymëzo një vajzë
@@ -1202,6 +1208,7 @@ sq-AL:
   older_systems_subheading: Këto duhet të punojnë në shfletuesit e vjetër. Për të
     aksesuar të gjitha tutorialet, përmirsohu me një <a href="http://browsehappy.com/"
     target="_blank">shfletues modern.</a>
+  outbreak_tile_title: Shpërthimi
   participant_educator: Mësues
   participant_engineer: Inxhinier Softuerik
   participant_other: Asnjë prej atyre lart
@@ -1382,6 +1389,7 @@ sq-AL:
     - Mariana Alzate, nxënëse e klasës së 5-të'
   students_and_lines: "%{students} studente kane kryer Oren e Kodimit dhe jane shkruar
     %{lines} rrjeshta me kode."
+  studiobar_dance_title: Festë vallëzimi
   studiobar_donate_body: Një fëmijë mëson për çdo dollar që ti dhuron
   studiobar_donate_title: Dhuro
   studiobar_elementary_body: Tre kurset tona të reja për K&#8209;5
@@ -1632,14 +1640,18 @@ sq-AL:
   user_header_applab: 'Laboratori i Aplikacioneve '
   user_header_artist: 'Artisti '
   user_header_create: 'Krijo '
+  user_header_dance: Festë vallëzimi
   user_header_flappy: Flappy
   user_header_label: Përshëndetje %{username}
   user_header_logout: Dil
   user_header_minecraft: Minecraft
+  user_header_my_projects: Projektet e mia
   user_header_playlab: Play Lab
   user_header_settings: Llogaria ime
   user_header_signin: Futu
+  user_header_spritelab: Sprite Lab
   user_header_team: Skuadra
+  user_header_view_all: Shiko të gjitha projektet...
   video_1min: 1 minutë
   video_2min: 2 minutë
   video_5min: 5 minutë

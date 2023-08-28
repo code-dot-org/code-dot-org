@@ -38,6 +38,7 @@ sq:
         NetSim: Imitues Interneti
         Custom: Artisti
         CustomStudio: Play Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Bronx
@@ -397,8 +398,10 @@ sq:
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites në veprim
         csd_pair_programming: Programim në çift
         csd_applab_parameters: Funksionet me parametra
+        CSF_SpriteLab_Intro_v2: Prezantimi i Sprite Lab
         CSF_SpriteLab_SpritesInAction_v2: Sprites në veprim
         csd_debugging: Rregullimi
+        oceans_machine_learning: Mësimi i Makinave
         playlab_2021: Hyrje në Play Lab
         playlab_2021_reader: Hyrje në Play Lab
         csp_applab_parameters: Funksionet me parametra

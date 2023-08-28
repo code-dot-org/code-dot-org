@@ -244,7 +244,7 @@
   },
   "dependencies": {
     "@amplitude/analytics-browser": "^1.5.4",
-    "@blockly/block-shareable-procedures": "^1.2.10",
+    "@blockly/block-shareable-procedures": "~1.2.11",
     "@blockly/field-grid-dropdown": "~2.0.2",
     "@blockly/keyboard-navigation": "0.3.6",
     "@blockly/plugin-cross-tab-copy-paste": "^2.0.7",

@@ -51,10 +51,44 @@ class StudentTable extends React.Component {
       isSortedByFamilyName,
     } = this.props;
 
+    // Sort using system default locale.
+    const collator = new Intl.Collator();
+
+    // Returns a comparator function that sorts objects a and b by the given
+    // keys, in order of priority.
+    // Example: comparator(['familyName', 'name']) will sort by familyName
+    // first, looking at name if necessary to break ties.
+    const comparator = keys => (a, b) =>
+      keys.reduce(
+        (result, key) => result || letterCompare(a[key] || '', b[key] || ''),
+        0
+      );
+
+    const letterCompare = (a, b) => {
+      // Strip out any non-alphabetic characters from the strings before sorting
+      // (https://unicode.org/reports/tr44/#Alphabetic)
+      const aLetters = a.replace(/[^\p{Alphabetic}]/gu, '');
+      const bLetters = b.replace(/[^\p{Alphabetic}]/gu, '');
+
+      const initialCompare = collator.compare(aLetters, bLetters);
+
+      // Sort strings with letters before strings without
+      if (initialCompare > 0 && !!aLetters && !bLetters) {
+        return -1;
+      }
+      if (initialCompare < 0 && !aLetters && !!bLetters) {
+        return 1;
+      }
+
+      // Use original strings as a fallback if the special-character-stripped
+      // version compares as equal.
+      return initialCompare || collator.compare(a, b);
+    };
+
     // Sort students, in-place.
     isSortedByFamilyName
-      ? students.sort((a, b) => a.familyName.localeCompare(b.familyName))
-      : students.sort((a, b) => a.name.localeCompare(b.name));
+      ? students.sort(comparator(['familyName', 'name']))
+      : students.sort(comparator(['name', 'familyName']));
 
     return (
       <table style={styles.table} className="student-table">
@@ -86,7 +120,7 @@ class StudentTable extends React.Component {
                   <div style={styles.name}>
                     {student.name}
                     {!!DCDO.get('family-name-features', false) &&
-                      ` ${student.familyName}`}
+                      ` ${student.familyName || ''}`}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"

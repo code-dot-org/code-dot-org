@@ -8,44 +8,44 @@ style_min: true
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'major') %>
 
-<HR>
+<hr>
 <a name="regionalpartners"></a>
 
-# Regional Partners
+## Regional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'pl-partner') %>
 
-<HR>
+<hr>
 <a name="schooldistricts"></a>
 
-# School District Partners
+## School District Partners
 
 Code.org has over 100 historical partnerships with school districts around the USA. [See the full list here](/educate/partner-districts).
 
-<HR>
+<hr>
 <a name="infrastructure"></a>
 
-# Infrastructure Partners and Tools
+## Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'infrastructure') %>
 
-<HR>
+<hr>
 <a name="international"></a>
 
-# International Partners
+## International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'international') %>
 
-<HR>
+<hr>
 <a name="activity"></a>
 
-# Curriculum and Tutorial Partners
+## Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'tutorial') %>
 
-<HR>
+<hr>
 <a name="additional"></a>
 
-# Additional Partners
+## Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'additional') %>
