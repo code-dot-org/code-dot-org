@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:53:04.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -75,20 +80,16 @@
     "display_name": "Left and Right Arrows",
     "bubble_choice_description": "Create arrows that point to external LEDs when you press the A and B buttons",
     "thumbnail_url": "https://images.code.org/6e48d333c2a750f2038147fd373a046a-mb-Practice.png",
-    "preload_asset_list": null,
     "encrypted_examples": "FYUZ/NTg8dt8ORuSLiKAfuSMbSlUVk9YdP+OFQaJq4Th+atbmrp7xn1IJu5c\nmN5aJhRD7RVmcIwQs4UvA/5/7Q==\n",
     "reference_links": [
       "/courses/csd-2022/guides/microbit-circuits-leds",
-      "/courses/csd-2022/guides/board-events"
-    ]
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:53:04.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:53:04.183+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - PB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - PB_2222\"},{\"changed_at\":\"2023-02-21 23:45:19 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"map_reference\",\"start_html\",\"start_blocks\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-22 02:03:16 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:13:08 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"start_html\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:13:42 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:16:59 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:53:04.183+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - PB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - PB_2222\"},{\"changed_at\":\"2023-02-21 23:45:19 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"map_reference\",\"start_html\",\"start_blocks\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-22 02:03:16 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:13:08 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"start_html\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:13:42 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 23:16:59 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:18:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

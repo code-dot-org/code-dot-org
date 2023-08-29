@@ -1,8 +1,10 @@
-import React, {useState, useContext, useCallback} from 'react';
+import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './userChatMessageEditor.module.scss';
-import {ChatWorkspaceContext} from './ChatWorkspace';
 import aichatI18n from '../locale';
+import {AichatState, submitChatMessage} from '../redux/aichatRedux';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useSelector} from 'react-redux';
 
 /**
  * Renders the AI Chat Lab user chat message editor component.
@@ -10,11 +12,18 @@ import aichatI18n from '../locale';
 const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
 
-  const onSubmit = useContext(ChatWorkspaceContext)?.onSubmit;
+  const isWaitingForChatResponse = useSelector(
+    (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
+  );
+
+  // TODO: If systemPrompt is undefined, handle this error case.
+  const dispatch = useAppDispatch();
   const handleSubmit = useCallback(() => {
-    onSubmit?.(userMessage);
-    setUserMessage('');
-  }, [onSubmit, userMessage]);
+    if (!isWaitingForChatResponse) {
+      dispatch(submitChatMessage(userMessage));
+      setUserMessage('');
+    }
+  }, [userMessage, dispatch, isWaitingForChatResponse]);
 
   return (
     <div className={moduleStyles.UserChatMessageEditor}>
@@ -30,6 +39,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
         icon="arrow-up"
         onClick={() => handleSubmit()}
         color={Button.ButtonColor.brandSecondaryDefault}
+        disabled={isWaitingForChatResponse}
       />
     </div>
   );

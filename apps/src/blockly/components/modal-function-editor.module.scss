@@ -1,0 +1,12 @@
+.modalEditor {
+  display: none;
+  position: absolute;
+  // TODO: Calculate these values based on the size of the workspace
+  top: 30px;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%,
+  // border: '10px solid green',
+  // borderRadius: '15px',
+}

@@ -2,8 +2,15 @@ import React from 'react';
 import moduleStyles from './chatMessage.module.scss';
 import classNames from 'classnames';
 import aichatI18n from '../locale';
-import {ChatCompletionMessage, Role, Status} from '../types';
+import {
+  AichatLevelProperties,
+  ChatCompletionMessage,
+  Role,
+  Status,
+} from '../types';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import {useSelector} from 'react-redux';
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
 
 interface ChatMessageProps {
   message: ChatCompletionMessage;
@@ -11,7 +18,6 @@ interface ChatMessageProps {
 
 const INAPPROPRIATE_MESSAGE = aichatI18n.inappropriateUserMessage();
 const TOO_PERSONAL_MESSAGE = aichatI18n.tooPersonalUserMessage();
-const EDUBOT_NAME = 'Edubot'; // TODO: Replace with name from levelbuilder.
 
 const isAssistant = (role: string) => {
   return role === Role.ASSISTANT;
@@ -22,7 +28,7 @@ const isUser = (role: string) => {
 };
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
-  if (status === Status.OK) {
+  if (status === Status.OK || status === Status.UNKNOWN) {
     return (
       <div
         className={classNames(moduleStyles.message, moduleStyles.userMessage)}
@@ -74,6 +80,12 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
 };
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
+  const botTitle =
+    useSelector(
+      (state: {lab: LabState}) =>
+        (state.lab.levelProperties as AichatLevelProperties | undefined)
+          ?.botTitle
+    ) || 'EduBot';
   return (
     <div id={`ChatMessage id: ${message.id}`}>
       {isUser(message.role) && (
@@ -89,7 +101,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
             semanticTag="h5"
             visualAppearance="heading-xs"
           >
-            {EDUBOT_NAME} ({message.role})
+            {botTitle} ({message.role})
           </Typography>
           {displayAssistantMessage(message.status, message.chatMessageText)}
         </div>
