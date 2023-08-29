@@ -1,6 +1,6 @@
 {
   "key": "kodea-pd-2021",
-  "display_name": "kodea-pd-2021",
+  "display_name": "Enseñando Fundamentos de la Computación",
   "category": "other",
   "is_featured": false,
   "assignable": true,
@@ -13,8 +13,8 @@
   "school_subject": null,
   "device_compatibility": null,
   "description": null,
-  "self_paced_professional_learning": null,
   "professional_learning_program": null,
   "video": null,
-  "published_date": null
+  "published_date": null,
+  "self_paced_pl_course_offering_id": null
 }

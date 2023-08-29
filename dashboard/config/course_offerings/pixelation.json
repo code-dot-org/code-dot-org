@@ -5,16 +5,16 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",
-  "marketing_initiative": null,
+  "marketing_initiative": "HOC",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "self_paced",
   "image": "https://images.code.org/bf8e51399e71e4f42c020cf88f77c461-Pixelation.png",
   "cs_topic": "art_and_design",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
-  "description": null,
-  "self_paced_professional_learning": null,
+  "description": "Encode images with bits and bytes! Type out the binary yourself to create your own pixel masterpiece.",
   "professional_learning_program": null,
-  "video": null,
-  "published_date": null
+  "video": "https://www.youtube-nocookie.com/embed/rJOa5Q5a1WM/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rJOa5Q5a1WM&wmode=transparent",
+  "published_date": "2015-10-02 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": null
 }

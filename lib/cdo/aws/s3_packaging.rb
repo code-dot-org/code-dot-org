@@ -93,7 +93,7 @@ class S3Packaging
     regenerate_commit_hash
 
     if expected_commit_hash && expected_commit_hash != commit_hash
-      raise "#{@package_name} contents changed unexpectedly. "\
+      raise "#{@package_name} contents changed unexpectedly. " \
         "Expected commit hash #{expected_commit_hash}, got #{commit_hash}"
     end
 

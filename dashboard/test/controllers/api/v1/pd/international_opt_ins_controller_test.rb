@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::InternationalOptInsControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::InternationalOptInsControllerTest < ActionController::TestCase
   SAMPLE_FORM_DATA = {
     first_name: 'First',
     first_name_preferred: 'Preferred',

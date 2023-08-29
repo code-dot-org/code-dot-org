@@ -37,6 +37,7 @@ const TimelineElement = ({
   const isSkipSound = isPlaying && skipContext?.skipSound;
 
   const isCurrentlyPlaying =
+    isPlaying &&
     !isSkipSound &&
     currentPlayheadPosition !== 0 &&
     currentPlayheadPosition >= when &&

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-03 15:19:06 UTC",
+    "serialized_at": "2023-08-16 12:49:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -781,7 +781,6 @@
       "key": "cd69e094-b99d-4d3f-8b66-78df270bd18a",
       "position": 2,
       "properties": {
-        "duration": 2,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -809,7 +808,7 @@
       "key": "87f99d24-5fbf-4557-b881-963819694aca",
       "position": 4,
       "properties": {
-        "duration": 3,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -905,8 +904,25 @@
       }
     },
     {
-      "key": "d6c3dc09-0593-4955-a17a-1a57c4eb025a",
+      "key": "554e2345-ec8d-493a-8474-1fdf2e1f2685",
       "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the Unit 7 Journal ([Digital](https://docs.google.com/presentation/d/1AwWl-xkDJJ2tWWa2d73pV5FLTt8lFMHl1Hr0b8p3Idg/edit?usp=drive_link)/[Interactive Notebook](https://docs.google.com/presentation/d/1GgOsS_xBqZ1Q4_a8o957hbMZHy817MKEOw1VBa1Dvdk/edit?usp=drive_link)) or have students set up this unit's section in their CSP journals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. \n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "554e2345-ec8d-493a-8474-1fdf2e1f2685",
+        "lesson_activity.key": "af9b5fa0-cd63-450a-aae2-6b9598ef3a28"
+      }
+    },
+    {
+      "key": "d6c3dc09-0593-4955-a17a-1a57c4eb025a",
+      "position": 2,
       "properties": {
         "description": "Up to this point, we've learned the basics of programming: variables, conditionals, functions, lists, loops, and traversals. As you grow in your programming skills, you'll start to notice ways that you can organize your code so that it is easier to work with. That's what this unit is all about!",
         "name": "Preview Parameterized Functions\r",
@@ -919,7 +935,7 @@
     },
     {
       "key": "f5049b84-0ca8-44d2-9c8d-6bb54c111277",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why would you want to make your code easier to work with or read?*\n\n**Discussion Goal:** This is a good time to remind students that when we write code, we aren't just writing for a computer - we are also writing for humans who will need to understand our code. Better organization can help others quickly understand our code so they can help debug or build upon the code. \n"
       },
@@ -1302,7 +1318,13 @@
       "position": 4,
       "properties": {
         "description": "**Distribute:** Give students copies of [r csp_parameters_and_return_make_-_rock_paper_scissors_app/csp/2023] if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level two where they complete the Rock Paper Scissors App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
-        "progression_name": "Make the Rock Paper Scissors App"
+        "progression_name": "Make the Rock Paper Scissors App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Adapting Make Lessons** - You may decide that you'd like to have your students write the code for a modified or entirely different app using the same skills. This might help you differentiate your instruction or provide you with a way to reassess students. Check out the [r customize_make_lessons_how-to-guide/csp/2023] for guidance on how to get started with this."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5690fb1b-cf43-4e59-b9ca-da20537405ee",
@@ -2148,8 +2170,42 @@
       }
     },
     {
-      "key": "ea8d26a6-aee5-4447-8056-f959e17ad3cb",
+      "key": "1e6364bd-55a9-4a6b-954c-dd4cc9bb889c",
       "position": 2,
+      "properties": {
+        "description": "#### CSP Vocabulary Bingo"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e6364bd-55a9-4a6b-954c-dd4cc9bb889c",
+        "lesson_activity.key": "87f99d24-5fbf-4557-b881-963819694aca"
+      }
+    },
+    {
+      "key": "cc1acbfb-8d9b-4ca3-a0b6-ae79865c2896",
+      "position": 3,
+      "properties": {
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cc1acbfb-8d9b-4ca3-a0b6-ae79865c2896",
+        "lesson_activity.key": "87f99d24-5fbf-4557-b881-963819694aca"
+      }
+    },
+    {
+      "key": "29e125a4-63ad-4579-86fe-cf0eb6571097",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Seven in order to generate clues for the students.\n\n----"
+      },
+      "seeding_key": {
+        "activity_section.key": "29e125a4-63ad-4579-86fe-cf0eb6571097",
+        "lesson_activity.key": "87f99d24-5fbf-4557-b881-963819694aca"
+      }
+    },
+    {
+      "key": "ea8d26a6-aee5-4447-8056-f959e17ad3cb",
+      "position": 5,
       "properties": {
         "description": "**Rubric:** Evaluate the projects using the provided rubric in the Project Guide",
         "name": "Assessment\r"
@@ -2161,7 +2217,7 @@
     },
     {
       "key": "e3e4dc15-9739-47e6-943a-a0991665778a",
-      "position": 3,
+      "position": 6,
       "properties": {
         "progression_name": "End-of-Unit Survey"
       },
@@ -3515,24 +3571,24 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csp7-2022/resources",
-      "key": "all_resources_6",
+      "url": "/s/csp7-2023/resources",
+      "key": "all_resources_18",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_6"
+        "resource.key": "all_resources_18"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp7-2022/standards",
-      "key": "all_standards_6",
+      "url": "/s/csp7-2023/standards",
+      "key": "all_standards_18",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_6"
+        "resource.key": "all_standards_18"
       }
     },
     {
@@ -3549,14 +3605,36 @@
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "CSP Bingo Cards - Unit 6 & 7",
+      "url": "https://docs.google.com/presentation/d/1nkBhCExqdR0DbT28N1x5oEEkn4PGbPl7zaNZZNXqsF8/edit?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_6_7",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_6_7"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
       "properties": {
         "audience": "Teacher",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "course_vocabulary"
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
@@ -3677,6 +3755,18 @@
       }
     },
     {
+      "name": "Customize Make Lessons: How-To-Guide",
+      "url": "https://docs.google.com/document/d/1K33HqvpPwb8BYX7mvFD7m2d17RSGD7ASEG4UUA0ajOM/edit?usp=sharing",
+      "key": "customize_make_lessons_how-to-guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "customize_make_lessons_how-to-guide"
+      }
+    },
+    {
       "name": "Functions with Parameters",
       "url": "https://youtu.be/M17C4rBwstE",
       "key": "functions_with_parameters",
@@ -3712,6 +3802,18 @@
       },
       "seeding_key": {
         "resource.key": "libraries_in_app_lab"
+      }
+    },
+    {
+      "name": "Parameters, Returns, and Libraries",
+      "url": "https://docs.google.com/presentation/d/1P9JATX2RDE9TJZ4_Iqx_cSxv-NMhTXYSatrHMlUrRXw/edit?usp=sharing",
+      "key": "parameters_returns_and_libraries",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "parameters_returns_and_libraries"
       }
     },
     {
@@ -3798,6 +3900,30 @@
       "seeding_key": {
         "resource.key": "u7_high_score_sample_planning_guide_rubric"
       }
+    },
+    {
+      "name": "Unit 7 Journal (Digital)",
+      "url": "https://docs.google.com/presentation/d/1AwWl-xkDJJ2tWWa2d73pV5FLTt8lFMHl1Hr0b8p3Idg/edit?usp=drive_link",
+      "key": "unit_7_journal_digital_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_journal_digital_"
+      }
+    },
+    {
+      "name": "Unit 7 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1GgOsS_xBqZ1Q4_a8o957hbMZHy817MKEOw1VBa1Dvdk/edit?usp=drive_link",
+      "key": "unit_7_journal_interactive_notebook_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_journal_interactive_notebook_"
+      }
     }
   ],
   "lessons_resources": [
@@ -3851,6 +3977,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "resource.key": "parameters_returns_and_libraries"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "resource.key": "unit_7_journal_digital_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "resource.key": "unit_7_journal_interactive_notebook_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Parameters and Return Investigate",
         "resource.key": "csp_unit_7_-_lesson_2_-_parameters_and_return_investigate"
       }
@@ -3865,6 +4009,12 @@
       "seeding_key": {
         "lesson.key": "Parameters and Return Make",
         "resource.key": "csp_unit_7_-_lesson_4_-_parameters_and_return_make"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "resource.key": "customize_make_lessons_how-to-guide"
       }
     },
     {
@@ -3912,6 +4062,18 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Make a Library Part 3",
+        "resource.key": "csp_bingo_cards_-_unit_6_7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Make a Library Part 3",
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Make a Library Part 3",
         "resource.key": "csp_unit_7_-_lesson_8-11_-_project_assessment"
       }
     },
@@ -3937,13 +4099,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_6",
+        "resource.key": "all_resources_18",
         "script.name": "csp7-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_6",
+        "resource.key": "all_standards_18",
         "script.name": "csp7-2023"
       }
     },
@@ -3976,16 +4138,138 @@
         "resource.key": "teacher_forum",
         "script.name": "csp7-2023"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_7_journal_digital_",
+        "script.name": "csp7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_7_journal_interactive_notebook_",
+        "script.name": "csp7-2023"
+      }
     }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "api",
+      "word": "API",
+      "definition": "Application Program Interface - specifications for how functions in a library behave and can be used",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "api"
+      }
+    },
+    {
+      "key": "argument",
+      "word": "Argument",
+      "definition": "the value passed to the parameter",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "argument"
+      }
+    },
+    {
+      "key": "library",
+      "word": "Library",
+      "definition": "a group of functions (procedures) that may be used in creating new programs",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "library"
+      }
+    },
+    {
+      "key": "modularity",
+      "word": "Modularity",
+      "definition": "the subdivision of a computer program into separate subprograms",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "modularity"
+      }
+    },
+    {
+      "key": "parameter",
+      "word": "Parameter",
+      "definition": "a variable in a function definition. Used as a placeholder for values that will be passed through the function",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "key": "procedural_abstraction",
+      "word": "Procedural Abstraction",
+      "definition": "a process and allows a procedure to be used only knowing what it does, not how it does it. Procedural abstraction allows a solution to a large problem to be based on the solution of smaller subproblems. This is accomplished by creating procedures to solve each of the subproblems.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "procedural_abstraction"
+      }
+    },
+    {
+      "key": "return",
+      "word": "Return",
+      "definition": "used to return the flow of control to the point where the procedure (also known as a function) was called and to return the value of expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "return"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "vocabulary.key": "api"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "vocabulary.key": "library"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "vocabulary.key": "modularity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "vocabulary.key": "argument"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "vocabulary.key": "return"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "vocabulary.key": "procedural_abstraction"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -4727,6 +5011,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

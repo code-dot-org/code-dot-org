@@ -1,0 +1,88 @@
+// Custom styles for code.org/educate/csa
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
+// Hero banner
+.hero-banner-basic {
+
+  &.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(125deg, #292F36 45%, #7F8286 100%);
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/images/banners/banner-bg-simple-dot.png');
+      background-repeat: repeat;
+      background-size: contain;
+      z-index: 2;
+    }
+  }
+
+  @media screen and (max-width: $width-sm) {
+    background-size: 50%;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 10;
+  }
+
+  .text-wrapper {
+    width: 58%;
+
+    p a {
+      color: $neutral-white;
+
+      &:hover {
+        color: $neutral-dark10;
+      }
+    }
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+    }
+  }
+
+  figure {
+    width: 35%;
+
+    @media screen and (max-width: $width-sm) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.csa-page-projects {
+
+  .content-wrapper {
+    gap: 2rem;
+  }
+
+  .image-wrapper {
+    img {
+      width: 45%;
+    }
+  }
+}

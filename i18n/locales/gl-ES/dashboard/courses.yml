@@ -35,11 +35,11 @@ gl:
         csd-2023:
           title: Descubrimentos da informática
     resources:
-      curriculum/csd/2020:
-        name: Currículo
       curriculum/csd/2017:
+        name: Currículo
+      curriculum/csd/2018:
         name: Currículo
       curriculum/csd/2019:
         name: Currículo
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Currículo

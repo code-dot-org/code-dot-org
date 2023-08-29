@@ -1,4 +1,6 @@
 import GoogleBlockly from 'blockly/core';
+import {PROCEDURE_DEFINITION_TYPES} from '../constants';
+import {partitionBlocksByType} from './cdoUtils';
 
 const unknownBlockState = {type: 'unknown', enabled: false};
 
@@ -13,7 +15,13 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
    * @param {Blockly.Workspace} workspace - The workspace to deserialize into.
    */
   load(stateToLoad, workspace) {
-    const blockStates = stateToLoad['blocks'];
+    // Procedure definitions should be loaded ahead of call blocks, so that the
+    // procedures map is updated correctly.
+    const blockStates = partitionBlocksByType(
+      stateToLoad['blocks'],
+      PROCEDURE_DEFINITION_TYPES,
+      false
+    );
 
     for (const blockState of blockStates) {
       try {

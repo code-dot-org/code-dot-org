@@ -67,10 +67,10 @@ module UserPermissionGrantee
 
   private def log_admin_save
     ChatClient.message 'infra-security',
-      "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
-      "environment: #{rack_env}, "\
-      "user ID: #{id}, "\
-      "email: #{email}, "\
+      "#{admin ? 'Granting' : 'Revoking'} UserPermission: " \
+      "environment: #{rack_env}, " \
+      "user ID: #{id}, " \
+      "email: #{email}, " \
       "permission: ADMIN",
       color: 'yellow'
   end

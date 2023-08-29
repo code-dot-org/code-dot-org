@@ -5,15 +5,33 @@
         "CourseD_Dance_2020_01": {
           "validation": "**Me pewhea te oti i tenei taumata?**\n\n-   Kia puta he kaihopu kanikani ki te ataata.\n\n_Ka oti te taumata nei amuri i te ineine e wha._"
         },
+        "CourseD_Dance_2020_012022": {
+          "validation": "**Me pewhea te oti i tenei taumata?**\n\n-   Kia puta he kaihopu kanikani ki te ataata.\n\n_Ka oti te taumata nei amuri i te ineine e wha._"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "**Me pewhea te oti i tenei taumata?**\n\n-   Kia puta he kaihopu kanikani ki te ataata.\n\n_Ka oti te taumata nei amuri i te ineine e wha._"
+        },
         "CourseD_Dance_2020_04": {
+          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   Me īni te kaikanikani ki ona nekehanga a muri i nga wāhanga e 4.\n\n_Ka mutu te taumata a muri nga wāhanga e 7._"
+        },
+        "CourseD_Dance_2020_042022": {
+          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   Me īni te kaikanikani ki ona nekehanga a muri i nga wāhanga e 4.\n\n_Ka mutu te taumata a muri nga wāhanga e 7._"
+        },
+        "CourseD_Dance_2020_04_2021": {
           "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   Me īni te kaikanikani ki ona nekehanga a muri i nga wāhanga e 4.\n\n_Ka mutu te taumata a muri nga wāhanga e 7._"
         },
         "CourseD_Dance_2020_05": {
           "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   ka timata te to nekehanga a muri i te wahanga tua4. A muri i te wahanga tua6 me tini tana nekehanga ki tetahi mea hou\n\n_Ka mutu tenei taumata a muri nga wahanga e 11._"
         },
+        "CourseD_Dance_2020_052022": {
+          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   ka timata te to nekehanga a muri i te wahanga tua4. A muri i te wahanga tua6 me tini tana nekehanga ki tetahi mea hou\n\n_Ka mutu tenei taumata a muri nga wahanga e 11._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   ka timata te to nekehanga a muri i te wahanga tua4. A muri i te wahanga tua6 me tini tana nekehanga ki tetahi mea hou\n\n_Ka mutu tenei taumata a muri nga wahanga e 11._"
+        },
         "CourseD_Dance_Party_01": {
-          "validation": "**Me pewhea te oti i tenei taumata?**\n\n-   Kia puta he kaihopu kanikani ki te ataata.\n\n_Ka oti te taumata nei amuri i te ineine e wha._",
-          "challenges": "**He wero ano**\n\n-   Whiriwhiria he waiata ano māu.\n-   Whakaingoatia to kaikanikani."
+          "challenges": "**He wero ano**\n\n-   Whiriwhiria he waiata ano māu.\n-   Whakaingoatia to kaikanikani.",
+          "validation": "**Me pewhea te oti i tenei taumata?**\n\n-   Kia puta he kaihopu kanikani ki te ataata.\n\n_Ka oti te taumata nei amuri i te ineine e wha._"
         },
         "CourseD_Dance_Party_02": {
           "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   Me īni te kaikanikani ki ona nekehanga a muri i nga wāhanga e 4.\n\n_Ka mutu te taumata a muri nga wāhanga e 7._"
@@ -22,16 +40,16 @@
           "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   ka timata te to nekehanga a muri i te wahanga tua4. A muri i te wahanga tua6 me tini tana nekehanga ki tetahi mea hou\n\n_Ka mutu tenei taumata a muri nga wahanga e 11._"
         },
         "CourseD_Dance_Party_04": {
-          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   Me tinihia te papamuri i mua o te wahanga 7 o te waiata.\n\n_Ka mutu tenei taumata a muri i nga wahanga  e 9._",
-          "challenges": "**He Wero Ano**\n\nTapiri atu he paraka hou ki raro i te paraka takunetanga[blocky block] [0] ki te tīni te papamuri kia rereke ki etahi wahanga o te waiata."
+          "challenges": "**He Wero Ano**\n\nTapiri atu he paraka hou ki raro i te paraka takunetanga[blocky block] [0] ki te tīni te papamuri kia rereke ki etahi wahanga o te waiata.",
+          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   Me tinihia te papamuri i mua o te wahanga 7 o te waiata.\n\n_Ka mutu tenei taumata a muri i nga wahanga  e 9._"
         },
         "CourseD_Dance_Party_06": {
-          "validation": "**Me pwhea ka oti i tenei taumata?**\n\n-   Kia maha ake i nga kaikanikani e rua.\n\n_Ka mutu tenei taumata a muri i nga whahanga e 5._",
-          "challenges": "**He Wero Ano**\n\n-   Tapiri atu he kaikanikani tuatoru (maha ake i te toru mena e pirangi ana!)\n-   Kia rereke katoa nga nekehanga o nga kaikanikani ki etahi whahanga o te waiata."
+          "challenges": "**He Wero Ano**\n\n-   Tapiri atu he kaikanikani tuatoru (maha ake i te toru mena e pirangi ana!)\n-   Kia rereke katoa nga nekehanga o nga kaikanikani ki etahi whahanga o te waiata.",
+          "validation": "**Me pwhea ka oti i tenei taumata?**\n\n-   Kia maha ake i nga kaikanikani e rua.\n\n_Ka mutu tenei taumata a muri i nga whahanga e 5._"
         },
         "CourseD_Dance_Party_08": {
-          "validation": "**Me pewhea te oti i tēnei taumata**\n\n-   Kia rereke atu i te 100 te rahi mo e rua o ngā kaikanikani.\n\n_Ka mutu a muri i ngā wāhanga e 5._",
-          "challenges": "**He Wero ano**\n\n-   Me tinihia ngā ahuatanga kia rereke (te rahi, te whānui, era atu momo mea.) kei a koe"
+          "challenges": "**He Wero ano**\n\n-   Me tinihia ngā ahuatanga kia rereke (te rahi, te whānui, era atu momo mea.) kei a koe",
+          "validation": "**Me pewhea te oti i tēnei taumata**\n\n-   Kia rereke atu i te 100 te rahi mo e rua o ngā kaikanikani.\n\n_Ka mutu a muri i ngā wāhanga e 5._"
         },
         "CourseD_Dance_Party_09": {
           "validation": "**Me pewhea te oti i tēnei taumata?**\n\n-   Me tinihia te tae mo etahi kaikanikani.\n\n_Ka mutu tēnei taumata a muri ngā wāhanga e 7._"
@@ -51,19 +69,37 @@
         "CourseE_HOC 2018 Level_10": {
           "voyage_aquatic_10a": "Ka kite nga  **Rama Moana** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Ka pewhea te whakamahia i nga tikanga kia whakawhiti i te Whakamaharatanga Moana?  "
         },
+        "CourseE_HOC 2018 Level_102022": {
+          "voyage_aquatic_10a": "Ka kite nga  **Rama Moana** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Ka pewhea te whakamahia i nga tikanga kia whakawhiti i te Whakamaharatanga Moana?  "
+        },
         "CourseE_HOC 2018 Level_10_2020": {
+          "voyage_aquatic_10a": "Ka kite nga  **Rama Moana** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Ka pewhea te whakamahia i nga tikanga kia whakawhiti i te Whakamaharatanga Moana?  "
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
           "voyage_aquatic_10a": "Ka kite nga  **Rama Moana** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Ka pewhea te whakamahia i nga tikanga kia whakawhiti i te Whakamaharatanga Moana?  "
         },
         "CourseE_HOC 2018 Level_7a": {
           "aquatic7": "whakamahia te paraka ara hei awhina ki te ara tika."
         },
+        "CourseE_HOC 2018 Level_7a2022": {
+          "aquatic7": "whakamahia te paraka ara hei awhina ki te ara tika."
+        },
         "CourseE_HOC 2018 Level_7a_2020": {
+          "aquatic7": "whakamahia te paraka ara hei awhina ki te ara tika."
+        },
+        "CourseE_HOC 2018 Level_7a_2021": {
           "aquatic7": "whakamahia te paraka ara hei awhina ki te ara tika."
         },
         "CourseE_HOC 2018 Level_9b": {
           "voyage_aquatic_9a": "Tirohia nga paraka punga moana whero me te kikorangi? Whakamahia era hei pou kia huri  maui, huri matau ranei kia whakawhiti pai ai i te ākau."
         },
+        "CourseE_HOC 2018 Level_9b2022": {
+          "voyage_aquatic_9a": "Tirohia nga paraka punga moana whero me te kikorangi? Whakamahia era hei pou kia huri  maui, huri matau ranei kia whakawhiti pai ai i te ākau."
+        },
         "CourseE_HOC 2018 Level_9b_2020": {
+          "voyage_aquatic_9a": "Tirohia nga paraka punga moana whero me te kikorangi? Whakamahia era hei pou kia huri  maui, huri matau ranei kia whakawhiti pai ai i te ākau."
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
           "voyage_aquatic_9a": "Tirohia nga paraka punga moana whero me te kikorangi? Whakamahia era hei pou kia huri  maui, huri matau ranei kia whakawhiti pai ai i te ākau."
         },
         "Dance_2019_01": {
@@ -76,8 +112,8 @@
           "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   ka timata te to nekehanga a muri i te wahanga tua4. A muri i te wahanga tua6 me tini tana nekehanga ki tetahi mea hou\n\n_Ka mutu tenei taumata a muri nga wahanga e 11._"
         },
         "Dance_Party_01": {
-          "validation": "**Me pewhea te oti i tenei taumata?**\n\n-   Kia puta he kaihopu kanikani ki te ataata.\n\n_Ka oti te taumata nei amuri i te ineine e wha._",
-          "challenges": "**He wero ano**\n\n-   Whiriwhiria he waiata ano māu.\n-   Whakaingoatia to kaikanikani."
+          "challenges": "**He wero ano**\n\n-   Whiriwhiria he waiata ano māu.\n-   Whakaingoatia to kaikanikani.",
+          "validation": "**Me pewhea te oti i tenei taumata?**\n\n-   Kia puta he kaihopu kanikani ki te ataata.\n\n_Ka oti te taumata nei amuri i te ineine e wha._"
         },
         "Dance_Party_02": {
           "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   Me īni te kaikanikani ki ona nekehanga a muri i nga wāhanga e 4.\n\n_Ka mutu te taumata a muri nga wāhanga e 7._"
@@ -86,19 +122,19 @@
           "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   ka timata te to nekehanga a muri i te wahanga tua4. A muri i te wahanga tua6 me tini tana nekehanga ki tetahi mea hou\n\n_Ka mutu tenei taumata a muri nga wahanga e 11._"
         },
         "Dance_Party_04": {
-          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   Me tinihia te papamuri i mua o te wahanga 7 o te waiata.\n\n_Ka mutu tenei taumata a muri i nga wahanga  e 9._",
-          "challenges": "**He Wero Ano**\n\nTapiri atu he paraka hou ki raro i te paraka takunetanga[blocky block] [0] ki te tīni te papamuri kia rereke ki etahi wahanga o te waiata."
+          "challenges": "**He Wero Ano**\n\nTapiri atu he paraka hou ki raro i te paraka takunetanga[blocky block] [0] ki te tīni te papamuri kia rereke ki etahi wahanga o te waiata.",
+          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   Me tinihia te papamuri i mua o te wahanga 7 o te waiata.\n\n_Ka mutu tenei taumata a muri i nga wahanga  e 9._"
         },
         "Dance_Party_05": {
           "validation": "**Me pewhea te oti i tēnei taumata?**\n\n-   I mua te mutunga o tēnei taumata me māhia to kaikanikani kia e 4 ngā nekehanga rereke.\n\n_Ka mutu tēnei taumata a muri ng a wāhanga 12._"
         },
         "Dance_Party_06": {
-          "validation": "**Me pwhea ka oti i tenei taumata?**\n\n-   Kia maha ake i nga kaikanikani e rua.\n\n_Ka mutu tenei taumata a muri i nga whahanga e 5._",
-          "challenges": "**He Wero Ano**\n\n-   Tapiri atu he kaikanikani tuatoru (maha ake i te toru mena e pirangi ana!)\n-   Kia rereke katoa nga nekehanga o nga kaikanikani ki etahi whahanga o te waiata."
+          "challenges": "**He Wero Ano**\n\n-   Tapiri atu he kaikanikani tuatoru (maha ake i te toru mena e pirangi ana!)\n-   Kia rereke katoa nga nekehanga o nga kaikanikani ki etahi whahanga o te waiata.",
+          "validation": "**Me pwhea ka oti i tenei taumata?**\n\n-   Kia maha ake i nga kaikanikani e rua.\n\n_Ka mutu tenei taumata a muri i nga whahanga e 5._"
         },
         "Dance_Party_08": {
-          "validation": "**Me pewhea te oti i tēnei taumata**\n\n-   Kia rereke atu i te 100 te rahi mo e rua o ngā kaikanikani.\n\n_Ka mutu a muri i ngā wāhanga e 5._",
-          "challenges": "**He Wero ano**\n\n-   Me tinihia ngā ahuatanga kia rereke (te rahi, te whānui, era atu momo mea.) kei a koe"
+          "challenges": "**He Wero ano**\n\n-   Me tinihia ngā ahuatanga kia rereke (te rahi, te whānui, era atu momo mea.) kei a koe",
+          "validation": "**Me pewhea te oti i tēnei taumata**\n\n-   Kia rereke atu i te 100 te rahi mo e rua o ngā kaikanikani.\n\n_Ka mutu a muri i ngā wāhanga e 5._"
         },
         "Dance_Party_09": {
           "validation": "**Me pewhea te oti i tēnei taumata?**\n\n-   Me tinihia te tae mo etahi kaikanikani.\n\n_Ka mutu tēnei taumata a muri ngā wāhanga e 7._"
@@ -123,42 +159,6 @@
         },
         "HOC 2018 Level_9b": {
           "voyage_aquatic_9a": "Tirohia nga paraka punga moana whero me te kikorangi? Whakamahia era hei pou kia huri  maui, huri matau ranei kia whakawhiti pai ai i te ākau."
-        },
-        "CourseD_Dance_2020_01_2021": {
-          "validation": "**Me pewhea te oti i tenei taumata?**\n\n-   Kia puta he kaihopu kanikani ki te ataata.\n\n_Ka oti te taumata nei amuri i te ineine e wha._"
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   Me īni te kaikanikani ki ona nekehanga a muri i nga wāhanga e 4.\n\n_Ka mutu te taumata a muri nga wāhanga e 7._"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   ka timata te to nekehanga a muri i te wahanga tua4. A muri i te wahanga tua6 me tini tana nekehanga ki tetahi mea hou\n\n_Ka mutu tenei taumata a muri nga wahanga e 11._"
-        },
-        "CourseE_HOC 2018 Level_10_2021": {
-          "voyage_aquatic_10a": "Ka kite nga  **Rama Moana** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Ka pewhea te whakamahia i nga tikanga kia whakawhiti i te Whakamaharatanga Moana?  "
-        },
-        "CourseE_HOC 2018 Level_7a_2021": {
-          "aquatic7": "whakamahia te paraka ara hei awhina ki te ara tika."
-        },
-        "CourseE_HOC 2018 Level_9b_2021": {
-          "voyage_aquatic_9a": "Tirohia nga paraka punga moana whero me te kikorangi? Whakamahia era hei pou kia huri  maui, huri matau ranei kia whakawhiti pai ai i te ākau."
-        },
-        "CourseE_HOC 2018 Level_102022": {
-          "voyage_aquatic_10a": "Ka kite nga  **Rama Moana** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Ka pewhea te whakamahia i nga tikanga kia whakawhiti i te Whakamaharatanga Moana?  "
-        },
-        "CourseE_HOC 2018 Level_7a2022": {
-          "aquatic7": "whakamahia te paraka ara hei awhina ki te ara tika."
-        },
-        "CourseE_HOC 2018 Level_9b2022": {
-          "voyage_aquatic_9a": "Tirohia nga paraka punga moana whero me te kikorangi? Whakamahia era hei pou kia huri  maui, huri matau ranei kia whakawhiti pai ai i te ākau."
-        },
-        "CourseD_Dance_2020_012022": {
-          "validation": "**Me pewhea te oti i tenei taumata?**\n\n-   Kia puta he kaihopu kanikani ki te ataata.\n\n_Ka oti te taumata nei amuri i te ineine e wha._"
-        },
-        "CourseD_Dance_2020_042022": {
-          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   Me īni te kaikanikani ki ona nekehanga a muri i nga wāhanga e 4.\n\n_Ka mutu te taumata a muri nga wāhanga e 7._"
-        },
-        "CourseD_Dance_2020_052022": {
-          "validation": "**Me pewhea ka oti i tenei taumata?**\n\n-   ka timata te to nekehanga a muri i te wahanga tua4. A muri i te wahanga tua6 me tini tana nekehanga ki tetahi mea hou\n\n_Ka mutu tenei taumata a muri nga wahanga e 11._"
         }
       }
     }

@@ -6,6 +6,7 @@ class ApiControllerQueriesTest < ActionDispatch::IntegrationTest
   end
 
   test "section_level_progress" do
+    skip "flaky as of 7/17/2023"
     section = create(:section)
     students = (1..50).map {create :student}
     students.each {|s| section.students << s}

@@ -115,6 +115,9 @@ function showHomepage() {
             hasFeedback={homepageData.hasFeedback}
             showIncubatorBanner={homepageData.showIncubatorBanner}
             currentUserId={homepageData.currentUserId}
+            showDeprecatedCalcAndEvalWarning={
+              homepageData.showDeprecatedCalcAndEvalWarning
+            }
           />
         )}
         {!isTeacher && (
@@ -128,6 +131,9 @@ function showHomepage() {
             isEnglish={isEnglish}
             showVerifiedTeacherWarning={
               homepageData.showStudentAsVerifiedTeacherWarning
+            }
+            showDeprecatedCalcAndEvalWarning={
+              homepageData.showDeprecatedCalcAndEvalWarning
             }
           />
         )}

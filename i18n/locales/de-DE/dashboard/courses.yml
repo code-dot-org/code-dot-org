@@ -97,22 +97,25 @@ de:
         virtual-pl-csd-summer-2023: {}
         self-paced-pl-csp-2023: {}
         self-paced-pl-aiml-2023: {}
+        vpl-csp-2023: {}
+        vpl-csa-2023: {}
+        vpl-csd-2023: {}
     resources:
-      curriculum/csd/2020:
-        name: Lehrplan
-      teacher_forum/csd/2020:
-        name: Lehrer Forum
       curriculum/csd/2017:
         name: Lehrplan
       teacher_forum_6/csd/2017:
+        name: Lehrer Forum
+      curriculum/csd/2018:
+        name: Lehrplan
+      teacher_forum_6/csd/2018:
         name: Lehrer Forum
       curriculum/csd/2019:
         name: Lehrplan
       teacher_forum/csd/2019:
         name: Lehrer Forum
+      curriculum/csd/2020:
+        name: Lehrplan
+      teacher_forum/csd/2020:
+        name: Lehrer Forum
       getting_started_with_csd/csd/2021:
         name: Erste Schritte der Informatik
-      curriculum/csd/2018:
-        name: Lehrplan
-      teacher_forum_6/csd/2018:
-        name: Lehrer Forum

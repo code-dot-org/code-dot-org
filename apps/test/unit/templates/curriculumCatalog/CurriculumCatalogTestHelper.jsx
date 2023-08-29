@@ -9,6 +9,13 @@ const makerCurriculum = {
   cs_topic: 'art_and_design,app_design,physical_computing,programming',
   school_subject: null,
   course_version_path: '/s/course',
+  is_translated: false,
+  device_compatibility: null,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const countingCurriculum = {
@@ -23,6 +30,12 @@ const countingCurriculum = {
   device_compatibility:
     '{"computer":"ideal","chromebook":"ideal","tablet":"not_recommended","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
+  is_translated: false,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const poemArtCurriculum = {
@@ -37,6 +50,12 @@ const poemArtCurriculum = {
   device_compatibility:
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
+  is_translated: false,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const danceUnpluggedCurriculum = {
@@ -52,6 +71,12 @@ const danceUnpluggedCurriculum = {
   device_compatibility:
     '{"computer":"incompatible","chromebook":"incompatible","tablet":"incompatible","mobile":"incompatible","no_device":"ideal"}',
   course_version_path: '/s/course',
+  is_translated: false,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const course1Curriculum = {
@@ -66,6 +91,12 @@ const course1Curriculum = {
   device_compatibility:
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
+  is_translated: true,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const course2Curriculum = {
@@ -80,6 +111,12 @@ const course2Curriculum = {
   device_compatibility:
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
+  is_translated: true,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const course3Curriculum = {
@@ -94,6 +131,12 @@ const course3Curriculum = {
   device_compatibility:
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
+  is_translated: true,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const course4Curriculum = {
@@ -108,6 +151,12 @@ const course4Curriculum = {
   device_compatibility:
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
+  is_translated: true,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const noGradesCurriculum = {
@@ -122,6 +171,12 @@ const noGradesCurriculum = {
   device_compatibility:
     '{"computer":"not_recommended","chromebook":"not_recommended","tablet":"not_recommended","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: '/s/course',
+  is_translated: false,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 const noPathCurriculum = {
@@ -136,6 +191,12 @@ const noPathCurriculum = {
   device_compatibility:
     '{"computer":"not_recommended","chromebook":"not_recommended","tablet":"not_recommended","mobile":"not_recommended","no_device":"incompatible"}',
   course_version_path: null,
+  is_translated: false,
+  description: null,
+  professional_learning_program: null,
+  video: null,
+  published_date: null,
+  self_paced_pl_course_offering_path: null,
 };
 
 // Curricula groups
@@ -188,6 +249,13 @@ const tabletAndNoDeviceShownCurricula = [
   course4Curriculum,
 ];
 
+const translatedCurricula = [
+  course1Curriculum,
+  course2Curriculum,
+  course3Curriculum,
+  course4Curriculum,
+];
+
 // Filters for grades 2 or 3, physical computing or interdisciplinary, and tablet or no device curricula.
 const multipleFiltersAppliedShownCurricula = [poemArtCurriculum];
 
@@ -211,6 +279,7 @@ export default {
   physicalCompShownCurricula,
   nonNullSchoolSubjectShownCurricula,
   tabletAndNoDeviceShownCurricula,
+  translatedCurricula,
   multipleFiltersAppliedShownCurricula,
   allFiltersAppliedShownCurricula,
   noGradesCurriculum,

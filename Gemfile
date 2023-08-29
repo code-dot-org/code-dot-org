@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 
-# Temporarily support both Ruby 2.7 and 3.0 until we've fully transitioned from
-# the former to the latter
-# TODO infra: pin us to ruby 3 once all persistent managed servers get updated
-ruby '>= 2.7', '< 3.1'
+ruby '3.0.5'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
@@ -101,7 +98,6 @@ group :development, :test do
 
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'sqlite3'
   gem 'timecop'
 
   # For UI testing.
@@ -110,6 +106,7 @@ group :development, :test do
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
+  gem 'minitest-stub-const', '~> 0.6'
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
@@ -245,7 +242,7 @@ gem 'aws-sdk-secretsmanager'
 # Lint tools
 group :development, :staging, :levelbuilder do
   gem 'haml_lint', require: false
-  gem 'rubocop', '1.28', require: false
+  gem 'rubocop', '~> 1.28', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rails-accessibility', require: false

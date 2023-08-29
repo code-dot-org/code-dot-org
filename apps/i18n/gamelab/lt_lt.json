@@ -1,8 +1,8 @@
 {
   "dropletBlock_createSprite_param3": "aukštis",
-  "dropletBlock_setCollider_param0": "tipas",
-  "dropletBlock_setCollider_param4": "aukštis",
   "dropletBlock_setColliderEach_param0": "tipas",
   "dropletBlock_setColliderEach_param4": "aukštis",
+  "dropletBlock_setCollider_param0": "tipas",
+  "dropletBlock_setCollider_param4": "aukštis",
   "shareGame": "Bendrink savo žaidimą:"
 }

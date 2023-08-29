@@ -240,8 +240,8 @@ class ExpiredDeletedAccountPurger
   end
 
   def prefixed(message)
-    "*ExpiredDeletedAccountPurger*#{@dry_run ? ' (dry-run)' : ''}" \
-    " <https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/expired_deleted_account_purger.rb|(source)>" \
+    "*ExpiredDeletedAccountPurger*#{@dry_run ? ' (dry-run)' : ''} " \
+    "<https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/expired_deleted_account_purger.rb|(source)>" \
     "\n#{message}"
   end
 end

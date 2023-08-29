@@ -1,114 +1,506 @@
 ---
 sl:
-  errors:
-    messages:
-      not_saved: 'Prosim popravite sledeče napake:'
-      too_young: Ta vsebina ima starostno omejitev in ni na voljo za mlajše učence.
-      teacher_must_accept_terms: Ta vsebina ima starostno omejitev in ni na voljo
-        za mlajše učence. Vprašaj učitelja naj sprejme posodobljene Pogoje uporabe,
-        da ti omogoči dostop. Učitelj lahko to naredi z vpisom v Code Studio in klikne
-        "Preberi posodobljene pogoje" gumb blizu vrha domače spletne strani Code Studia.
   activerecord:
+    attributes:
+      user:
+        age: Starost
+        current_password: Trenutno geslo
+        edit_header: Uredi podrobnosti računa
+        email: Elektronska pošta
+        error:
+          future: ne more biti v prihodnosti
+        finish_sign_up_header: Dokončaj registracijo
+        gender: Spol
+        locale: Jezik
+        name: Prikazno ime
+        parent_email: Elektronska pošta staršev/skrbnikov
+        password: Geslo
+        password_confirmation: Potrditev gesla
+        username: Uporabniško ime
     errors:
       messages:
         blank: se zahtevan(o)
         blank_plural: so potrebni
         invalid: je nepravilno
         invalid_plural: so nepravilni
-    attributes:
-      user:
-        name: Prikazno ime
-        email: Elektronska pošta
-        parent_email: Elektronska pošta staršev/skrbnikov
-        username: Uporabniško ime
-        password: Geslo
-        password_confirmation: Potrditev gesla
-        current_password: Trenutno geslo
-        locale: Jezik
-        age: Starost
-        gender: Spol
-        edit_header: Uredi podrobnosti računa
-        finish_sign_up_header: Dokončaj registracijo
-        error:
-          future: ne more biti v prihodnosti
-  beta: beta
-  hello: Pozdravljen svet
-  welcome_back: Dobrodošel/a nazaj, %{name}
-  your_professional_learning_plan: Tvoj osebni načrt učenja
-  see_your_learning_plan: Poglej učni načrt
-  submit: Pošlji
-  previous_page: Prejšnja stran
-  next_page: Naslednja stran
-  next_resource: Naslednji vir
-  cancel: Prekliči
-  okay: V redu
-  or: ali
-  heading_x_of_y: "%{heading} (stran %{x} od %{y})"
-  join_section:
-    code:
-      placeholder: Koda razdelka (ABCDEF)
   add_hint_form:
     placeholder: Prosim vnesite vaš namig tukaj
     submit: Dodaj namig
-  appname: Code.org
-  stage: Stopnja
-  stage_number: Stopnja %{number}
-  puzzle: Uganka
-  trophies: Trofeje
-  courses: Predavanja
-  courses_page:
-    title_student: Spoznaj Računalništvo
-    title_teacher: Poučuj s studio Code
-  unplugged_activity: Dejavnost brez prijave
-  of: od
-  more: VEČ
-  less: MANJ
-  try_hoc: 'Poskusi Ura programiranja, klikni tu >> '
-  try_k8intro: Poizkusi naš K-8 tečaj Uvod v računalništvo (15-25 ur)
-  k8intro: Uvod v računalništvo (15-25 ur) za osnovno šolo (ZDA)
+  age_interstitial:
+    age: Tvoja starost
+    header: Posodobitev podatkov o računu
   already_started: 'Si že začel? Nadaljuj tukaj >> '
-  demos: 'Administrator: Vse demonstracije'
-  continue: Nadaljuj
-  prize: nagrada
-  more_info: Več informacij
+  appname: Code.org
   auth:
-    sign_in_with: Vpiši se z %{provider}
-    signed_in: Vpisan si!
     already_signedup: Si se že vpisal?
-    notyet_signedup: Se nam še nisi pridružil?
-    google_oauth2: Google račun
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Microsoft račun
-    microsoft_v2_auth: Microsoft račun
     clever: Pameten račun
+    facebook: Facebook
     forgot_password: Si pozabil/a svoje geslo?
+    google_oauth2: Google račun
+    microsoft_v2_auth: Microsoft račun
     need_confirmation: Nisi prejel/a navodil za potrditev?
     need_unlock: Nisi prejel/a navodil za odklepanje?
     not_linked: Žal, tvoj Code.org račun ni povezan s tvojim %{provider}. Žal se morate
       prijaviti z vnosom gesla spodaj.
+    notyet_signedup: Se nam še nisi pridružil?
+    sign_in_with: Vpiši se z %{provider}
+    signed_in: Vpisan si!
+    twitter: Twitter
+    windowslive: Microsoft račun
+  beta: beta
+  builder:
+    back: Nazaj na skripte
+    created: Ustvarili ste nov skript.
+    destroyed: Zbrisali ste skript.
+    level:
+      create: Ustvari novo stopnjo
+      current: Trenutna stopnja
+      unused: Neuporabljene stopnje
+    manage: Ustvari nivoje
+    success: Uspešno si uredil bloke.
+    view: Prikaži
+  cancel: Prekliči
+  certificate_hour_of_code: Ura kode
+  compatibility:
+    upgrade:
+      link: Več o tem
+  continue: Nadaljuj
+  contract_match:
+    badname: Vaša pogodba ima napačno ime.
+    badname_case: Imena funkcij so občutljiva na velike začetnice. Poskusite spremeniti
+      začetnico imena vaše pogodbe.
+    badrange: Vaša pogodba ima napačno ime.
+    wrong_title: Nepravilen odgovor
+  cookie_banner:
+    accept: Strinjam se
+  copy: Kopiraj
+  course_offering:
+    headers:
+      minecraft: Minecraft
+  courses: Predavanja
+  courses_page:
+    title_student: Spoznaj Računalništvo
+    title_teacher: Poučuj s studio Code
+  crud:
+    access_denied: Nimaš dostopa do tega %{model}.
+    back: Nazaj
+    confirm: Si prepričan/a?
+    created: "%{model} je bil usprešno ustvarjen."
+    destroy: Uniči
+    destroyed: "%{model} je bil uspešno izbrisan."
+    edit: Uredi
+    edit_model: Uredi %{model}
+    new_model: Nov %{model}
+    show: Pokaži
+    submit: Pošlji
+    update: Posodobi
+    updated: "%{model} je bil uspešno posodobljen."
+  demos: 'Administrator: Vse demonstracije'
+  dialog:
+    ok: Vredu
+    startover_cancel: Prekliči
+    startover_ok: Začni znova
+    startover_title: Si prepričan, da želiš začeti znova?
+  download_coming_soon: Aktivnosti, ki jih boste lahko naložili na vaš računalnik,
+    pridejo pozneje.
+  download_pdf: Odpri načrt lekcije
+  errors:
+    messages:
+      not_saved: 'Prosim popravite sledeče napake:'
+      teacher_must_accept_terms: Ta vsebina ima starostno omejitev in ni na voljo
+        za mlajše učence. Vprašaj učitelja naj sprejme posodobljene Pogoje uporabe,
+        da ti omogoči dostop. Učitelj lahko to naredi z vpisom v Code Studio in klikne
+        "Preberi posodobljene pogoje" gumb blizu vrha domače spletne strani Code Studia.
+      too_young: Ta vsebina ima starostno omejitev in ni na voljo za mlajše učence.
+  follower:
+    added_teacher: "%{name} dodan/a kot tvoj/a učitelj/ica"
+    error:
+      blank_code: Vnesite šifro razdelka
+      cant_join_own_section: Žal se ne morete pridružiti svojemu razdelku.
+      no_teacher: Ni vpisanega nikogar z '%{teacher_email_or_code}'. Prosi jih za
+        prijavo tukaj in jih potem poskusi ponovno dodati
+      section_not_found: Odseka s kodo "%{section_code}" ni bilo mogoče najti.
+      signed_in: Prosim, izpiši se pred nadaljevanjem
+      username_in_use: "%{username} že obstaja, prosim izberi drugo"
+      username_not_found: Uporabniško ime %{username} ne obstaja
+    invite_sent: Povabilo poslano
+    mail:
+      student_disassociated:
+        subject: 'Code.org obvestilo: %{student_name} ni več tvoj učenec.'
+    registered: Registriral si se za %{section_name}.
+  footer:
+    copyright: Avtorska pravice
+    feedback: Povratne informacije
+    help_from_html: Inženirji iz podjetij Google, Microsoft, Facebook in Twitter so
+      nam pomagali ustvariti ta priročnik.
+    help_from_html_old: Inženirji iz podjetij Google, Microsoft, Facebook in Twitter
+      so nam pomagali ustvariti to gradivo.
+    how_it_works: Kako deluje
+    make_my_own_app: Ustvari svojo lastno aplikacijo
+    more: Več
+    powered_by_aws: Podprto s strani Amazon Web Services
+    privacy: Izjava o zasebnosti
+    report_abuse: Prijavi zlorabo
+    secure: Varna različica
+    support: Pomoč in Skupnosti
+    support_url: http://support.code.org/
+    tos: Pogoje storitve
+    tos_short: Pravila
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, logotip CODE in Hour
+      of Code&reg; sta blagovni znamki Code.org."
+    translate: Pomagajte nam prevesti v vaš jezik
+    try_hour_of_code: Poizkusi Uro za kodo!
+  free_response:
+    placeholder: Vnesite vaš odgovor tukaj
+  gender:
+    female: Ženska
+    male: Moški
+    none: Raje ne bi odgovoril
+  heading_x_of_y: "%{heading} (stran %{x} od %{y})"
+  hello: Pozdravljen svet
+  hidden_stage: Tvoj učitelj ni pričakoval, da boš tukaj. Vprašaj svojega učitelja
+    katero vajo moraš delati.
+  hoc_download:
+    download_in_Albanian: 'Prenesi v albanskem jeziku:'
+    download_in_Arabic: 'Prenesi v arabskem jeziku:'
+    download_in_Bosnian: 'Prenesi v bosanskem jeziku:'
+    mac: Mac OS X
+    minecraft_name: Minecraft Ura za kodo
+    windows: Windows (64-bit)
+  home:
+    20hour_overview: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov
+      programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven
+      za učenje v vseh starostih.
+    add_hint_help: Prosimo, pomagajte nam dodati bistre namige v vaje na Code.org
+    all_courses: Pregled tečajev 1, 2 in 3
+    choose_next_course: Poskusi Code Studio tečaj z izbiro enga spodaj
+    classroom: Vaša učilnica
+    lesson_plans: Učni načrti
+    local_school: lokalna šola
+    no_primary_course: Poskusite Code Studio smer
+    online: na spletu
+    print_certificate: Natisni certifikat
+    prize_info: 'Nagrade za sodelovanje (le za učitelje v ameriških javnih šolah):
+      do 1.000 $ v obliki nagrad razredu.'
+    see_details: Glej podrobnosti
+    signin_directions: Uporabi račun za sledenje napredka.<br/> Učitelji pa sledite
+      celotnemu razredu.
+    signin_message: Že registrirani? %{link}
+    student_finished: Dokončali ste vse vaje, izberite drug razred na %{online_link}
+      ali %{local_school_link}
+    student_left_off: 'Kjer ste končali:'
+    student_progress: Vaš napredek učenja
+    student_reg_link: Vpis študenta
+    student_stats: Dosegel si %{trophy_count} od %{trophy_max} "Koncept obvladanja"
+      trofej.
+    teacher_averages: V povprečju so vaši dijaki dosegli %{trophy_average} od %{trophy_max}
+      "Koncept obvladanja" trofej.
+    teacher_dashboard: Poglej napredek
+    teacher_print_certificates: Tiskanje potrdila za študente ki so opravili tečaj
+    teacher_read_blog: Preberi o novicah in posodobitvah našega gradiva na našem blogu
+      Izobraževalcev
+    teacher_reg_link: Vpis učitelja
+    teacher_student_count: Imaš %{count} učenca/k.
+    teacher_student_count_one: Imaš %{count} učenca/k.
+    test_videos_help: Preizkusite naš novi video predvajalnik na vaši šoli
+    title: Studio za kodiranje
+    try_beta_courses: Novo! Poskusite naše beta tečaje za učence prvih dveh triad
+      na ameriških šolah
+    tryfirst: 'Ali pa takoj poskusite in se registrirate kasneje:'
+    trynow: Poskusite zdaj
+    use_as_teacher: Uporabi to stran kot učitelj
+    view_course: Ogled predmeta
+    your_gallery: Galerija
+  join_section:
+    code:
+      placeholder: Koda razdelka (ABCDEF)
+  k8intro: Uvod v računalništvo (15-25 ur) za osnovno šolo (ZDA)
+  landing:
+    report_bug: Sporoči napako
+    support: Pomoč
+    support_url: "//support.code.org"
+  less: MANJ
+  lesson_plan: Učni načrt
+  level_group:
+    correct_title: Hvala
+    wrong_title: Hvala
+  level_group-submittable:
+    correct_title: Hvala
+    wrong_title: Hvala
+  match:
+    correct_body: To je pravilen odgovor.
+    correct_title: Pravilno
+    wrong_body: Rešitev, ki si jo vnesel, ni pravilna.  Prosim, poskusi znova!
+    wrong_title: Nepravilna rešitev
+  more: VEČ
+  more_info: Več informacij
+  move_students:
+    all_students_must_be_in_current_section: Vsi učenci morajo trenutno biti vključeni
+      v vaš odsek.
+    already_enrolled_in_new_section: Teh učencev ne more premakniti, ker jih ta učitelj
+      že ima v drugem odseku.
+    current_section_dne: Žal, oddelek %{current_section_code} ne obstaja. Prosimo
+      vnesite drugo šifro odseka.
+    new_section_dne: Žal, oddelek %{new_section_code} ne obstaja. Prosimo vnesite
+      drugo šifro odseka.
+    section_code_cant_be_current_section: Trenutni odsek ne more biti enak kot nov
+      odsek.
+    student_ids_not_entered: Prosimo vnesite student_ids.
+    student_not_found: Eden ali več učencev ni bilo najdenih.
+  multi:
+    correct_body: To je pravilen odgovor.
+    correct_title: Pravilno
+    wrong_body: Odgovor, ki ste ga vnesli, ni pravilen.  Prosimo, poskusite znova!
+    wrong_title: Nepravilen odgovor
+  multi-submittable:
+    correct_title: Hvala
+    wrong_title: Hvala
+  nav:
+    header:
+      about: O programu
+      about_contact: Kontaktirajte nas
+      about_donors: Donatorji
+      about_evaluation: Vrednotenje
+      about_faqs: Pogosta vprašanja
+      about_jobs: Delovna mesta
+      about_leadership: Vodstvo
+      about_news: Novinarsko središče
+      about_partners: Partnerji
+      about_team: Celotna ekipa
+      about_us: O nas
+      course_catalog: Katalog tečajev
+      educate_beyond: Po Code.org
+      educate_community: Spletna skupnost
+      educate_elementary: Od 1. do 5. razreda
+      educate_high: Srednja šola
+      educate_hoc: Ura kode
+      educate_inspire: Navduši učenca
+      educate_middle: Od 6. do 9. razreda
+      educate_overview: Vzgojiteljev pregled
+      educate_partner: Postanite naš partner
+      educate_tools: Orodja in video posnetki
+      finished_hoc: Končal sem mojo uro za programiranje
+      help_us: Pomagaj nam
+      learn: Učenje
+      legal_privacy: Izjava o zasebnosti
+      legal_tos: Pogoje storitve
+      my_dashboard: Moja nadzorna plošča
+      project_gallery: Projekti
+      sign_in_to_save: Vpiši se, da shraniš napredek
+      stats: Pokaži statistiko
+      teach: Predavaj
+    popup:
+      close: ZAPRI
+      mastery: Koncepti
+      prize_earned: Vse %{total_trophies} trofeje zbrane. Osvojena nagrada!
+      prize_us_only: "(samo ameriški učenci)"
+      prizes: Zberi vse %{total_trophies} trofeje in osvoji nagrade!
+      prizes_link: več informacij
+      progress: Tvoj napredek
+      progress_for_user: Napredek od %{name}
+      puzzle_map: Stopnje
+    user:
+      already_registered: Že registrirani?
+      artist: Umetnik
+      bounce: Skokica
+      classroom: Učiteljeva domača stran
+      create: Ustvari
+      district_dashboard: Nadzorna plošča za okrožje
+      driver: Voznik
+      flappy: Flappy
+      frozen: Zmrznjenka (Frozen)
+      gumball: Gumballov fantastični svet
+      iceage: Ledena doba
+      infinity: Neskončnost
+      label: Živjo %{username}
+      loading: Nalaganje...
+      logout: Izpis
+      minecraft_adventurer: Minecraft Pustolovec
+      minecraft_aquatic: Minecraft Aquatic
+      minecraft_designer: Minecraft
+      navigator: Navigator
+      playlab: Play Lab
+      settings: Moj račun
+      signin: Prijava
+      signup: Ustvari račun
+      starwars: Star Wars
+      starwarsblocks: Vojna Zvezd (Kocke)
+      starwarsblocks_hour: Vojna Zvezd (Kocke)
+      stats: Studio za kodiranje
+      team: Ekipa
+  next_page: Naslednja stran
+  next_resource: Naslednji vir
+  next_stage: Končano! Nadaljujte na naslednjo stopnjo
+  of: od
+  okay: V redu
+  or: ali
+  password:
+    change_form:
+      confirm_password: Potrdi novo geslo
+      new_password: Novo geslo
+      submit: Spremeni moje geslo
+      title: Spremeni geslo
+    reset_form:
+      email: Elektronska pošta
+      instructions: Vpišite vaš e-poštni naslov in poslali vam bomo navodila za ponastavitev
+        gesla.
+      submit: Pošlji
+      title: Si pozabil/a svoje geslo?
+  pd:
+    form_entries:
+      email_opt_in:
+        opt_in_no: Ne
+        opt_in_yes: Da
+      gender:
+        female: Ženska
+        male: Moški
+        none: Raje ne bi odgovoril
+      resources:
+        kodable: Kodable
+        other: Drugi
+      robotics:
+        kodable: Kodable
+        other: Drugi
+      subjects:
+        cs: računalniška znanost, računalništvo
+        la: Jezikoslovje
+        math: Matematika
+        other: Drugi
+        science: Znanost
+      workshop_course:
+        other: Drugi
+    form_labels:
+      colombian_chilean_school_name: Ime šole
+      email: Elektronska pošta
+      school: Šola
+      school_name: Ime šole
+  pdf_download: Snemi PDF
+  pixelation:
+    binary: Binarno
+  previous_page: Prejšnja stran
+  prize: nagrada
+  progress:
+    assessment: ocenjevanje
+    completed_perfect: dokončano, odlično
+    completed_too_many_blocks: dokončano, imate preveč blokov
+    furthest_level_attempted: poskusili ste najvišji nivo
+    in_progress: v teku
+    not_started: ni začeto
+  project:
+    abuse:
+      contact_us: Če menite, da je prišlo do napake, prosimo <a href='https://code.org/contact'>kontaktirajte
+        nas.</a>
+      go_to_code_studio: Pojdi v Code studio
+      report_abuse_form:
+        abuse_type:
+          harassment: Grožnje, ustrahovanje, nadlegovanje
+          infringement: Kršitev avtorskih pravic
+          offensive: Žaljiva vsebina
+          other: Drugi
+          question: Kako ta vsebina krši %{link_start}Pogoje storitve%{link_end}?
+        abusive_url: URL vsebine, ki jo prijavljate
+        detail: Prosimo, navedite čim več podrobnosti glede vsebine, ki jo prijavljate.
+        validation:
+          abuse_detail: Prosimo, navedite podrobnosti glede vsebine, ki jo prijavljate
+          abuse_type: Prosimo, odgovorite, kako ta vsebina krši Pravila storitve
+          age: Prosimo, navedite starost
+          email: Prosimo, navedite e-poštni naslov
+      tos: Ta projekt so prijavili, da je kršil <a href='http://code.org/tos'>Pogoje
+        storitve</a> spletne strani Code.org in zato ga ni mogoče deliti z drugimi.
+    advanced_share: Prikaz dodatnih možnosti
+    create: Ustvari projekt
+    create_a_project: 'Ustvari nov projekt:'
+    edit_project: Uredi projekt
+    exit: Vrni se na tečaj
+    help_text: Klikni spodaj na <strong>Ustvari App</strong> ali <strong>Nariši kaj</strong>,
+      da začneš nov projekt!<br/>Kadarkoli lahko prideš nazaj in delaš na svojih projektih.
+    name: Ime
+    need_help: Potrebujete pomoč za začetek?
+    new: Ustvari novo
+    not_saved: Ni shranjeno
+    project_gallery: Projekti
+    project_type: Vrsta projekta
+    projects: Projekti
+    saved: Shranjeno
+    share_copy_link: 'Kopiraj povezavo:'
+    share_title: Deli svoj projekt
+    updated: Posodobljeno
+    view_all: Poglej si Moji projekti
+  puzzle: Uganka
+  race_interstitial:
+    decline: Zapri
+    races:
+      american_indian: Ameriški indijanec/Alaskin domorodec
+      asian: Azijske
+      black: Črna ali Afroameričan
+      hawaiian: Domorodec Havajev ali drugega Pacifiškega otoka
+      hispanic: Hispanic ali Latino
+      opt_out: Raje ne bi odgovoril
+      other: Drugi
+      white: Bela
+    submit: Pošlji
+  reference_area:
+    auth_error: Niste pooblaščeni za ogled rešitev.
+    direction: Začetna smer (v stopinjah)
+    submit: Posodobi mesto umetnika
+    subtitle: Poglejte si naslednje videe in namige
+    teacher: Poglejte rešitev
+    title: Potrebujete pomoč?
+  reports:
+    error:
+      access_denied: Nimaš dostopa do statistike te osebe
+  school_info:
+    other: Drugi
+    private: zasebna
+    school: Šola
+    school_address: Naslov šole
+    school_name: Ime šole
+  school_info_interstitial:
+    save: Shrani
+  section:
+    type:
+      clever: Clever
+      email: Elektronska pošta
+      word: Skrivna beseda
+  see_your_learning_plan: Poglej učni načrt
+  share:
+    description: Kdorkoli se lahko nauči računalništva. S kodo ustvari igre, aplikacije
+      in umetnost.
+    try_hour_of_code: Poizkusi Uro za kodo!
+  share_code:
+    address_not_allowed: Izgleda, da je naslov v njem. Poskusite spremeniti besedilo.
+    bounce_og_title: Oglejte si moje igro Skokica
+    check_out_what_i_made: Poglej, kaj sem naredil
+    email_not_allowed: Izgleda, da je v besedilu e-pošta. Poskusite spremeniti besedilo.
+    flappy_og_title: Oglejte si mojo Flappy igro
+    og_description: Sam sem napisal kodo s Code.org
+    phone_number_not_allowed: Izgleda, da imate telefonsko številko v njej. Poskusite
+      spremeniti besedilo.
+    profanity_not_allowed: Izgleda, da vsebuje kletvico. Poskusite spremeniti besedilo.
+    studio_og_title: Oglejte si moj Play Lab App
+    title: Klikni 'Zaženi', da vidiš svoj program v akciji
+  signin:
+    try_20hours: Poizkusite naš 20 urni Uvod v računalništvo
+    try_heading: Želiš poskusiti kodirati brez prijave?
+    try_hoc: Poizkusite najprej eno Uro kode
+  signin_form:
+    login: Elektronska pošta
+    password: Geslo
+    remember: Zapomni si me
+    submit: Vpis
+    title: Že imate račun? Vpišite se
+  signinsection:
+    invalid_login: Neuspešna prijava, poskusi ponovno
+    login: Prijava
+    name: Izberite svoje ime
+    pair_programming: Imam partnerja pri računalniku
+    picture: Zdaj poišči svojo skrivno sliko
+    welcome: Dobrodošli v %{section_name}
+    words: Sedaj vnesite skrivne besede
   signup_form:
-    student_count: "%{count} študentov se je že prijavilo."
-    teacher_count: "%{count} učiteljev se je že prijavilo."
-    hoc_already_signed_up_heading: Začni brez vpisa
-    teacher_educator_guide: Poglej učiteljev vodič
-    title: Registriraj se na Code.org
-    school_name: Ime šole (po izbiri)
-    school_address: Naslov šole (po izbiri)
+    accept_terms: Moraš se strinjati, če želiš ustvariti račun
     address_placeholder: naslov, mesto, država, poštna številka
-    gender: Spol (po izbiri)
-    birthday: Rojstni datum (po izbiri)
     age: Starost
-    user_type: Ste učenec ali učitelj?
-    submit: Prijava
-    go_to_account: Pojdi na moj uporabniški račun
-    teacher: Ste učitelj/ica?
-    valid_username: Na voljo!
-    invalid_username: Uporabniško ime mora imeti vsaj 5 znakov
-    taken_username: Uporabniško ime že obstaja
-    valid_password: Veljavno geslo!
-    invalid_password: Geslo mora imeti vsaj 6 znakov
-    mismatch_password: Vneseni gesli nista enaki
     agree_us_data_transfer_student: "**Strinjam se, da lahko Code.org prenese podatke
       (vključno z osebnimi podatki) iz moje uporabe tega spletnega mesta v Združene
       države Amerike** za namen gostovanja in obdelovanja teh podatkov."
@@ -116,57 +508,176 @@ sl:
       (vključno z osebnimi podatki) iz moje uporabe (in uporabe mojih študentov) tega
       spletnega mesta v Združene države Amerike** za namen gostovanja in obdelovanja
       teh podatkov."
+    birthday: Rojstni datum (po izbiri)
     data_collection_us: Razumem, da je Code.org neprofitno spletno mesto iz ZDA in
       da se lahko zakoni glede zbiranja podatkov v ZDA razlikujejo od zakonov v moji
       državi.
-    visit_privacy: Obiščite [Privacy Policy](%{privacy_url}) Code.org za več informacij.
+    email_preference_no: Ne
+    email_preference_yes: Da
+    error: Prišlo je do napake.
+    field_is_required: se zahtevan(o)
+    gender: Spol (po izbiri)
+    go_to_account: Pojdi na moj uporabniški račun
+    hoc_already_signed_up_heading: Začni brez vpisa
+    invalid_password: Geslo mora imeti vsaj 6 znakov
+    invalid_username: Uporabniško ime mora imeti vsaj 5 znakov
+    mismatch_password: Vneseni gesli nista enaki
+    school_address: Naslov šole (po izbiri)
+    school_name: Ime šole (po izbiri)
+    share_teacher_email_reg_partner_preference_no: Ne
+    share_teacher_email_reg_partner_preference_yes: Da
+    student_count: "%{count} študentov se je že prijavilo."
+    submit: Prijava
+    taken_username: Uporabniško ime že obstaja
+    teacher: Ste učitelj/ica?
+    teacher_count: "%{count} učiteljev se je že prijavilo."
+    teacher_educator_guide: Poglej učiteljev vodič
+    title: Registriraj se na Code.org
+    user_type: Ste učenec ali učitelj?
     user_type_student: Učenec
     user_type_teacher: Učitelj/ica
-    field_is_required: se zahtevan(o)
-    accept_terms: Moraš se strinjati, če želiš ustvariti račun
-    error: Prišlo je do napake.
-    email_preference_yes: Da
-    email_preference_no: Ne
-    share_teacher_email_reg_partner_preference_yes: Da
-    share_teacher_email_reg_partner_preference_no: Ne
-  school_info:
-    private: zasebna
-    other: Drugi
-    school: Šola
-    school_name: Ime šole
-    school_address: Naslov šole
-  signin_form:
-    title: Že imate račun? Vpišite se
-    login: Elektronska pošta
-    password: Geslo
-    remember: Zapomni si me
-    submit: Vpis
-  signin:
-    try_heading: Želiš poskusiti kodirati brez prijave?
-    try_hoc: Poizkusite najprej eno Uro kode
-    try_20hours: Poizkusite naš 20 urni Uvod v računalništvo
-  signinsection:
-    welcome: Dobrodošli v %{section_name}
-    name: Izberite svoje ime
-    picture: Zdaj poišči svojo skrivno sliko
-    words: Sedaj vnesite skrivne besede
-    login: Prijava
-    invalid_login: Neuspešna prijava, poskusi ponovno
-    pair_programming: Imam partnerja pri računalniku
-  password:
-    reset_form:
-      title: Si pozabil/a svoje geslo?
-      instructions: Vpišite vaš e-poštni naslov in poslali vam bomo navodila za ponastavitev
-        gesla.
-      email: Elektronska pošta
-      submit: Pošlji
-    change_form:
-      title: Spremeni geslo
-      new_password: Novo geslo
-      confirm_password: Potrdi novo geslo
-      submit: Spremeni moje geslo
+    valid_password: Veljavno geslo!
+    valid_username: Na voljo!
+    visit_privacy: Obiščite [Privacy Policy](%{privacy_url}) Code.org za več informacij.
+  slow_loading: To traja dlje kot običajno...
+  stage: Stopnja
+  stage_number: Stopnja %{number}
+  studio:
+    all_courses: Vsi tečaji
+    completed_courses: Tečaji, ki si jih dokončal/a
+    courses_working_on: Tečaji, ki jih še nisi dokončal/a
+  submit: Pošlji
+  teacher:
+    answer: Odgovor
+    confirm:
+      remove: Ali ste prepričani da želite odstraniti tega učitelja?
+    for_teachers_only: Samo za učitelje
+    panel:
+      answer_viewer: Učiteljeva plošča
+      example: Primer rešitve
+      example_with_number: Primer rešitve %{solution_number}
+      last_updated: 'Nazadnje posodobljeno:'
+      section: Razdelek
+      student: Učenec
+      try_it_yourself: Poskusi sam
+      update_lock_settings: Posodobite nastavitve zaklepanja tukaj.
+      viewing_solution: Gledanje rešitve
+      worked_with: Delal z
+    remove: "(odstrani učitelja/ico)"
+    student_teacher_disassociated: Odstranil si %{teacher_name}, kot tvojega učitelja.
+    students:
+      dashboard: K nadzorni plošči za učitelje
+    title:
+      one: 'Vaš učitelj:'
+      other: 'Tvoji učitelji:'
+    user_not_found: Učitelj ni bil najden.
+  terms_interstitial:
+    print: Natisni
+    privacy: Izjava o zasebnosti
+    review_terms: Preberi posodobljene pogoje
+    tos: Pogoje storitve
+  text_match:
+    correct_body: To je pravilen odgovor.
+    correct_title: Pravilno
+    open_response_body: Hvala za vaš odgovor!
+    open_response_title: Hvala
+    placeholder: Vnesite vaš odgovor tukaj
+  time:
+    day: dan
+    hour: 1 ura
+    week: teden
+  trophies: Trofeje
+  try_hoc: 'Poskusi Ura programiranja, klikni tu >> '
+  try_k8intro: Poizkusi naš K-8 tečaj Uvod v računalništvo (15-25 ur)
+  try_reloading: Poskusite znova naložiti stran
+  unplugged_activity: Dejavnost brez prijave
+  upsell:
+    20-hour:
+      body: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja.
+        Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v
+        vseh starostih.
+      body_short: Naučite se osnov računalništva v pospešeni različici predavanj 2-4.
+      title: Pospešeni Tečaj
+    applab:
+      audience: Starost 13+
+      body: App Lab je okolje za programiranje, kjer lahko narediš enostavne aplikacije.
+        Oblikuješ izgled aplikacije, kodiraš z bloki ali JavaScriptom. Ko aplikacijo
+        dokončaš jo lahko deliš z ostalimi v nekaj sekundah.
+      body_short: Oblikuj izgled aplikacije, kodiraj z bloki ali JavaScriptom. Ko
+        aplikacijo dokončaš jo lahko deliš z ostalimi v nekaj sekundah.
+    aquatic:
+      title: Minecraft
+    flappy:
+      body: Bi hotel/a svojo igrico izdelati v manj kot 10 minutah? Pomagaj si z priročnikom
+        za Plahutača (Flappy-ja)!
+      title: Program za Plahutača (Flappyja)
+    frozen:
+      title: Zmrznjenka (Frozen)
+    gallery:
+      body: Poglej si galerijo slik iz igric in aplikacij, ki so jih ustvarili naši
+        uporabniki
+      title: Galerija
+    gamelab:
+      audience: Starost 13+
+    hero:
+      title: Minecraft
+    hoc:
+      body: Preizkusite se v osnovah računalništva. Milijonom je že uspelo.
+      title: Klasičen labirint
+    hoc2014:
+      try_frozen: Umetnik z Anno in Elsa (iz Disney-eve risanke Frozen)
+      try_new_tutorial: Uporabite naš nov priročnik za Uro kodiranja
+    infinity:
+      title: Neskončen igralni laboratorij
+    minecraft:
+      body: Razišči svet Minecraft-a s pomočjo kode
+      title: Minecraft
+    minecraft2016:
+      body: Sprogramiraj živali in druga Minecraft bitja v svoji lastni različici
+        Minecrafta.
+      title: Minecraft
+    starwars:
+      title: Star Wars
+    unplugged:
+      audience: Starost 4+
+      title: Lekcije brez prijave
+    unplugged_conditionals:
+      title: Pogoji
+    weblab:
+      audience: Starost 13+
+    widgets:
+      audience: Starost 14+
+  user:
+    current_password_hint: "(potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)"
+    delete: Izbriši svoj račun
+    delete_confirm: Ali ste prepričani, da želite izbrisati svoj račun?
+    delete_text: S klikom na gumb boste izbrisali svoj račun.
+    delete_text_teacher_note: 'Prosimo pomnite: brisanje vašega računa ne bo izbrisalo
+      računov vaših študentov.'
+    email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
+    email_confirm_needed_required: 'Vaš email naslov %{email} ni bil potrjen:'
+    email_confirm_wrong_email: "(Napačen email naslov?)"
+    email_resend_confirm: Ponovno pošlji potrditvena navodila
+    new_password_hint: "(pusti prazno, če tega nočeš spremeniti)"
+    parent_guardian_email_label: Elektronska pošta staršev/skrbnikov
+    remove_parent_email_label: Odstrani
+    update_email: Posodobi
+  user_level:
+    completed: Zaključeno
+    tried: Poskus
+  user_type:
+    student: Učenec
+    teacher: Učitelj/ica
+  video:
+    autoplay_option: Samodejno predvajanje videoposnetkov
+    download: Prenos videa
+    notes: Ni video posnetka? Prikaži zapiske.
+    notes_coming_soon: Opombe za ta video, kmalu.
+    tab: Video posnetek.
+  video_coming_soon: Video pride pozneje!
+  view_lesson_plan: Oglej si učni načrt
+  welcome_back: Dobrodošel/a nazaj, %{name}
   welcome_email:
-    subject: Pridruži se mojemu razredu (na Code.org)
     body: |
       Klikni spodnji link za prijavo na začetni tečaj računalništva na Code.org (z menoj kot tvojim 'učiteljem'):
 
@@ -175,522 +686,11 @@ sl:
       Začetni tečaji so zabavni, vizualno zanimivi in učijo osnovne koncepte računalništva z usporabo preprostih, vodenih izkušenj kot v računalniški igri. Nauči se programirati od Billa Gatesa, Marka Zuckenberga, Angry Birds in Plants Vs. Zombies! :-)
 
       %{name}
-  section:
-    type:
-      word: Skrivna beseda
-      email: Elektronska pošta
-      clever: Clever
-  follower:
-    invite_sent: Povabilo poslano
-    added_teacher: "%{name} dodan/a kot tvoj/a učitelj/ica"
-    registered: Registriral si se za %{section_name}.
-    error:
-      signed_in: Prosim, izpiši se pred nadaljevanjem
-      username_not_found: Uporabniško ime %{username} ne obstaja
-      username_in_use: "%{username} že obstaja, prosim izberi drugo"
-      no_teacher: Ni vpisanega nikogar z '%{teacher_email_or_code}'. Prosi jih za
-        prijavo tukaj in jih potem poskusi ponovno dodati
-      section_not_found: Odseka s kodo "%{section_code}" ni bilo mogoče najti.
-      blank_code: Vnesite šifro razdelka
-      cant_join_own_section: Žal se ne morete pridružiti svojemu razdelku.
-    mail:
-      student_disassociated:
-        subject: 'Code.org obvestilo: %{student_name} ni več tvoj učenec.'
-  reports:
-    error:
-      access_denied: Nimaš dostopa do statistike te osebe
-  crud:
-    new_model: Nov %{model}
-    show: Pokaži
-    edit: Uredi
-    edit_model: Uredi %{model}
-    update: Posodobi
-    submit: Pošlji
-    destroy: Uniči
-    back: Nazaj
-    confirm: Si prepričan/a?
-    created: "%{model} je bil usprešno ustvarjen."
-    updated: "%{model} je bil uspešno posodobljen."
-    destroyed: "%{model} je bil uspešno izbrisan."
-    access_denied: Nimaš dostopa do tega %{model}.
-  nav:
-    header:
-      finished_hoc: Končal sem mojo uro za programiranje
-      sign_in_to_save: Vpiši se, da shraniš napredek
-      my_dashboard: Moja nadzorna plošča
-      course_catalog: Katalog tečajev
-      project_gallery: Projekti
-      educate_overview: Vzgojiteljev pregled
-      educate_elementary: Od 1. do 5. razreda
-      educate_middle: Od 6. do 9. razreda
-      educate_high: Srednja šola
-      educate_hoc: Ura kode
-      educate_partner: Postanite naš partner
-      educate_beyond: Po Code.org
-      educate_inspire: Navduši učenca
-      educate_community: Spletna skupnost
-      educate_tools: Orodja in video posnetki
-      about_us: O nas
-      about_leadership: Vodstvo
-      about_donors: Donatorji
-      about_partners: Partnerji
-      about_team: Celotna ekipa
-      about_news: Novinarsko središče
-      about_evaluation: Vrednotenje
-      about_jobs: Delovna mesta
-      about_contact: Kontaktirajte nas
-      about_faqs: Pogosta vprašanja
-      learn: Učenje
-      stats: Pokaži statistiko
-      help_us: Pomagaj nam
-      teach: Predavaj
-      about: O programu
-      legal_privacy: Izjava o zasebnosti
-      legal_tos: Pogoje storitve
-    user:
-      classroom: Učiteljeva domača stran
-      district_dashboard: Nadzorna plošča za okrožje
-      label: Živjo %{username}
-      stats: Studio za kodiranje
-      settings: Moj račun
-      logout: Izpis
-      signin: Prijava
-      signup: Ustvari račun
-      already_registered: Že registrirani?
-      team: Ekipa
-      driver: Voznik
-      navigator: Navigator
-      create: Ustvari
-      artist: Umetnik
-      bounce: Skokica
-      flappy: Flappy
-      frozen: Zmrznjenka (Frozen)
-      gumball: Gumballov fantastični svet
-      iceage: Ledena doba
-      infinity: Neskončnost
-      minecraft_adventurer: Minecraft Pustolovec
-      minecraft_aquatic: Minecraft Aquatic
-      minecraft_designer: Minecraft
-      playlab: Play Lab
-      starwars: Star Wars
-      starwarsblocks: Vojna Zvezd (Kocke)
-      starwarsblocks_hour: Vojna Zvezd (Kocke)
-      loading: Nalaganje...
-    popup:
-      progress_for_user: Napredek od %{name}
-      progress: Tvoj napredek
-      close: ZAPRI
-      mastery: Koncepti
-      puzzle_map: Stopnje
-      prizes: Zberi vse %{total_trophies} trofeje in osvoji nagrade!
-      prize_earned: Vse %{total_trophies} trofeje zbrane. Osvojena nagrada!
-      prize_us_only: "(samo ameriški učenci)"
-      prizes_link: več informacij
-  teacher:
-    answer: Odgovor
-    for_teachers_only: Samo za učitelje
-    title:
-      one: 'Vaš učitelj:'
-      other: 'Tvoji učitelji:'
-    remove: "(odstrani učitelja/ico)"
-    confirm:
-      remove: Ali ste prepričani da želite odstraniti tega učitelja?
-    students:
-      dashboard: K nadzorni plošči za učitelje
-    user_not_found: Učitelj ni bil najden.
-    student_teacher_disassociated: Odstranil si %{teacher_name}, kot tvojega učitelja.
-    panel:
-      answer_viewer: Učiteljeva plošča
-      student: Učenec
-      viewing_solution: Gledanje rešitve
-      try_it_yourself: Poskusi sam
-      section: Razdelek
-      example: Primer rešitve
-      example_with_number: Primer rešitve %{solution_number}
-      last_updated: 'Nazadnje posodobljeno:'
-      worked_with: Delal z
-      update_lock_settings: Posodobite nastavitve zaklepanja tukaj.
-  user:
-    email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
-    email_confirm_needed_required: 'Vaš email naslov %{email} ni bil potrjen:'
-    email_confirm_wrong_email: "(Napačen email naslov?)"
-    email_resend_confirm: Ponovno pošlji potrditvena navodila
-    new_password_hint: "(pusti prazno, če tega nočeš spremeniti)"
-    current_password_hint: "(potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)"
-    delete: Izbriši svoj račun
-    delete_text: S klikom na gumb boste izbrisali svoj račun.
-    delete_text_teacher_note: 'Prosimo pomnite: brisanje vašega računa ne bo izbrisalo
-      računov vaših študentov.'
-    delete_confirm: Ali ste prepričani, da želite izbrisati svoj račun?
-    update_email: Posodobi
-    parent_guardian_email_label: Elektronska pošta staršev/skrbnikov
-    remove_parent_email_label: Odstrani
-  user_level:
-    completed: Zaključeno
-    tried: Poskus
-  home:
-    title: Studio za kodiranje
-    all_courses: Pregled tečajev 1, 2 in 3
-    lesson_plans: Učni načrti
-    signin_message: Že registrirani? %{link}
-    student_reg_link: Vpis študenta
-    teacher_reg_link: Vpis učitelja
-    signin_directions: Uporabi račun za sledenje napredka.<br/> Učitelji pa sledite
-      celotnemu razredu.
-    teacher_dashboard: Poglej napredek
-    teacher_student_count_one: Imaš %{count} učenca/k.
-    teacher_student_count: Imaš %{count} učenca/k.
-    teacher_averages: V povprečju so vaši dijaki dosegli %{trophy_average} od %{trophy_max}
-      "Koncept obvladanja" trofej.
-    teacher_print_certificates: Tiskanje potrdila za študente ki so opravili tečaj
-    teacher_read_blog: Preberi o novicah in posodobitvah našega gradiva na našem blogu
-      Izobraževalcev
-    classroom: Vaša učilnica
-    student_progress: Vaš napredek učenja
-    student_stats: Dosegel si %{trophy_count} od %{trophy_max} "Koncept obvladanja"
-      trofej.
-    student_left_off: 'Kjer ste končali:'
-    student_finished: Dokončali ste vse vaje, izberite drug razred na %{online_link}
-      ali %{local_school_link}
-    local_school: lokalna šola
-    online: na spletu
-    see_details: Glej podrobnosti
-    view_course: Ogled predmeta
-    prize_info: 'Nagrade za sodelovanje (le za učitelje v ameriških javnih šolah):
-      do 1.000 $ v obliki nagrad razredu.'
-    tryfirst: 'Ali pa takoj poskusite in se registrirate kasneje:'
-    trynow: Poskusite zdaj
-    add_hint_help: Prosimo, pomagajte nam dodati bistre namige v vaje na Code.org
-    20hour_overview: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov
-      programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven
-      za učenje v vseh starostih.
-    test_videos_help: Preizkusite naš novi video predvajalnik na vaši šoli
-    try_beta_courses: Novo! Poskusite naše beta tečaje za učence prvih dveh triad
-      na ameriških šolah
-    use_as_teacher: Uporabi to stran kot učitelj
-    your_gallery: Galerija
-    no_primary_course: Poskusite Code Studio smer
-    choose_next_course: Poskusi Code Studio tečaj z izbiro enga spodaj
-    print_certificate: Natisni certifikat
-  certificate_hour_of_code: Ura kode
-  move_students:
-    new_section_dne: Žal, oddelek %{new_section_code} ne obstaja. Prosimo vnesite
-      drugo šifro odseka.
-    section_code_cant_be_current_section: Trenutni odsek ne more biti enak kot nov
-      odsek.
-    current_section_dne: Žal, oddelek %{current_section_code} ne obstaja. Prosimo
-      vnesite drugo šifro odseka.
-    student_ids_not_entered: Prosimo vnesite student_ids.
-    student_not_found: Eden ali več učencev ni bilo najdenih.
-    all_students_must_be_in_current_section: Vsi učenci morajo trenutno biti vključeni
-      v vaš odsek.
-    already_enrolled_in_new_section: Teh učencev ne more premakniti, ker jih ta učitelj
-      že ima v drugem odseku.
-  share:
-    description: Kdorkoli se lahko nauči računalništva. S kodo ustvari igre, aplikacije
-      in umetnost.
-    try_hour_of_code: Poizkusi Uro za kodo!
-  gender:
-    male: Moški
-    female: Ženska
-    none: Raje ne bi odgovoril
-  user_type:
-    student: Učenec
-    teacher: Učitelj/ica
-  footer:
-    help_from_html: Inženirji iz podjetij Google, Microsoft, Facebook in Twitter so
-      nam pomagali ustvariti ta priročnik.
-    help_from_html_old: Inženirji iz podjetij Google, Microsoft, Facebook in Twitter
-      so nam pomagali ustvariti to gradivo.
-    powered_by_aws: Podprto s strani Amazon Web Services
-    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, logotip CODE in Hour
-      of Code&reg; sta blagovni znamki Code.org."
-    copyright: Avtorska pravice
-    more: Več
-    feedback: Povratne informacije
-    translate: Pomagajte nam prevesti v vaš jezik
-    support: Pomoč in Skupnosti
-    support_url: http://support.code.org/
-    tos_short: Pravila
-    tos: Pogoje storitve
-    privacy: Izjava o zasebnosti
-    secure: Varna različica
-    report_abuse: Prijavi zlorabo
-    make_my_own_app: Ustvari svojo lastno aplikacijo
-    how_it_works: Kako deluje
-    try_hour_of_code: Poizkusi Uro za kodo!
-  reference_area:
-    title: Potrebujete pomoč?
-    subtitle: Poglejte si naslednje videe in namige
-    teacher: Poglejte rešitev
-    auth_error: Niste pooblaščeni za ogled rešitev.
-    submit: Posodobi mesto umetnika
-    direction: Začetna smer (v stopinjah)
-  video:
-    tab: Video posnetek.
-    notes: Ni video posnetka? Prikaži zapiske.
-    notes_coming_soon: Opombe za ta video, kmalu.
-    autoplay_option: Samodejno predvajanje videoposnetkov
-    download: Prenos videa
-  compatibility:
-    upgrade:
-      link: Več o tem
-  slow_loading: To traja dlje kot običajno...
-  try_reloading: Poskusite znova naložiti stran
-  next_stage: Končano! Nadaljujte na naslednjo stopnjo
-  download_pdf: Odpri načrt lekcije
-  lesson_plan: Učni načrt
-  view_lesson_plan: Oglej si učni načrt
-  pdf_download: Snemi PDF
-  download_coming_soon: Aktivnosti, ki jih boste lahko naložili na vaš računalnik,
-    pridejo pozneje.
-  video_coming_soon: Video pride pozneje!
-  share_code:
-    title: Klikni 'Zaženi', da vidiš svoj program v akciji
-    bounce_og_title: Oglejte si moje igro Skokica
-    flappy_og_title: Oglejte si mojo Flappy igro
-    studio_og_title: Oglejte si moj Play Lab App
-    check_out_what_i_made: Poglej, kaj sem naredil
-    og_description: Sam sem napisal kodo s Code.org
-    phone_number_not_allowed: Izgleda, da imate telefonsko številko v njej. Poskusite
-      spremeniti besedilo.
-    address_not_allowed: Izgleda, da je naslov v njem. Poskusite spremeniti besedilo.
-    email_not_allowed: Izgleda, da je v besedilu e-pošta. Poskusite spremeniti besedilo.
-    profanity_not_allowed: Izgleda, da vsebuje kletvico. Poskusite spremeniti besedilo.
-  builder:
-    created: Ustvarili ste nov skript.
-    destroyed: Zbrisali ste skript.
-    manage: Ustvari nivoje
-    view: Prikaži
-    back: Nazaj na skripte
-    success: Uspešno si uredil bloke.
-    level:
-      create: Ustvari novo stopnjo
-      current: Trenutna stopnja
-      unused: Neuporabljene stopnje
-  upsell:
-    applab:
-      body: App Lab je okolje za programiranje, kjer lahko narediš enostavne aplikacije.
-        Oblikuješ izgled aplikacije, kodiraš z bloki ali JavaScriptom. Ko aplikacijo
-        dokončaš jo lahko deliš z ostalimi v nekaj sekundah.
-      body_short: Oblikuj izgled aplikacije, kodiraj z bloki ali JavaScriptom. Ko
-        aplikacijo dokončaš jo lahko deliš z ostalimi v nekaj sekundah.
-      audience: Starost 13+
-    aquatic:
-      title: Minecraft
-    flappy:
-      title: Program za Plahutača (Flappyja)
-      body: Bi hotel/a svojo igrico izdelati v manj kot 10 minutah? Pomagaj si z priročnikom
-        za Plahutača (Flappy-ja)!
-    frozen:
-      title: Zmrznjenka (Frozen)
-    gallery:
-      title: Galerija
-      body: Poglej si galerijo slik iz igric in aplikacij, ki so jih ustvarili naši
-        uporabniki
-    gamelab:
-      audience: Starost 13+
-    hero:
-      title: Minecraft
-    hoc:
-      title: Klasičen labirint
-      body: Preizkusite se v osnovah računalništva. Milijonom je že uspelo.
-    hoc2014:
-      try_new_tutorial: Uporabite naš nov priročnik za Uro kodiranja
-      try_frozen: Umetnik z Anno in Elsa (iz Disney-eve risanke Frozen)
-    infinity:
-      title: Neskončen igralni laboratorij
-    minecraft:
-      title: Minecraft
-      body: Razišči svet Minecraft-a s pomočjo kode
-    minecraft2016:
-      title: Minecraft
-      body: Sprogramiraj živali in druga Minecraft bitja v svoji lastni različici
-        Minecrafta.
-    starwars:
-      title: Star Wars
-    weblab:
-      audience: Starost 13+
-    widgets:
-      audience: Starost 14+
-    unplugged_conditionals:
-      title: Pogoji
-    unplugged:
-      title: Lekcije brez prijave
-      audience: Starost 4+
-    20-hour:
-      title: Pospešeni Tečaj
-      body: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja.
-        Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v
-        vseh starostih.
-      body_short: Naučite se osnov računalništva v pospešeni različici predavanj 2-4.
-  landing:
-    report_bug: Sporoči napako
-    support: Pomoč
-    support_url: "//support.code.org"
-  free_response:
-    placeholder: Vnesite vaš odgovor tukaj
-  multi:
-    wrong_title: Nepravilen odgovor
-    wrong_body: Odgovor, ki ste ga vnesli, ni pravilen.  Prosimo, poskusite znova!
-    correct_title: Pravilno
-    correct_body: To je pravilen odgovor.
-  multi-submittable:
-    wrong_title: Hvala
-    correct_title: Hvala
-  level_group:
-    wrong_title: Hvala
-    correct_title: Hvala
-  level_group-submittable:
-    wrong_title: Hvala
-    correct_title: Hvala
-  match:
-    wrong_title: Nepravilna rešitev
-    wrong_body: Rešitev, ki si jo vnesel, ni pravilna.  Prosim, poskusi znova!
-    correct_title: Pravilno
-    correct_body: To je pravilen odgovor.
-  contract_match:
-    wrong_title: Nepravilen odgovor
-    badname: Vaša pogodba ima napačno ime.
-    badname_case: Imena funkcij so občutljiva na velike začetnice. Poskusite spremeniti
-      začetnico imena vaše pogodbe.
-    badrange: Vaša pogodba ima napačno ime.
-  text_match:
-    placeholder: Vnesite vaš odgovor tukaj
-    open_response_title: Hvala
-    open_response_body: Hvala za vaš odgovor!
-    correct_title: Pravilno
-    correct_body: To je pravilen odgovor.
-  dialog:
-    ok: Vredu
-    startover_title: Si prepričan, da želiš začeti znova?
-    startover_ok: Začni znova
-    startover_cancel: Prekliči
-  time:
-    hour: 1 ura
-    day: dan
-    week: teden
-  age_interstitial:
-    age: Tvoja starost
-    header: Posodobitev podatkov o računu
-  terms_interstitial:
-    tos: Pogoje storitve
-    privacy: Izjava o zasebnosti
-    print: Natisni
-    review_terms: Preberi posodobljene pogoje
-  school_info_interstitial:
-    save: Shrani
-  race_interstitial:
-    races:
-      white: Bela
-      black: Črna ali Afroameričan
-      hispanic: Hispanic ali Latino
-      asian: Azijske
-      hawaiian: Domorodec Havajev ali drugega Pacifiškega otoka
-      american_indian: Ameriški indijanec/Alaskin domorodec
-      other: Drugi
-      opt_out: Raje ne bi odgovoril
-    submit: Pošlji
-    decline: Zapri
+    subject: Pridruži se mojemu razredu (na Code.org)
+  your_professional_learning_plan: Tvoj osebni načrt učenja
   zendesk_too_young_message: Žal se mlajši uporabniki ne morejo prijaviti. Lahko pa
     brez prijave brskate po <a href="http://support.code.org">support.code.org</a>,
     ali pa zaprosite starše ali učitelje, da nas kontaktirajo.
   zendesk_too_young_message_markdown: Žal se mlajši uporabniki ne morejo prijaviti.
     Lahko pa brez prijave brskate po [support.code.org](http://support.code.org),
     ali pa zaprosite starše ali učitelje, da nas kontaktirajo.
-  progress:
-    not_started: ni začeto
-    in_progress: v teku
-    completed_too_many_blocks: dokončano, imate preveč blokov
-    completed_perfect: dokončano, odlično
-    furthest_level_attempted: poskusili ste najvišji nivo
-    assessment: ocenjevanje
-  studio:
-    courses_working_on: Tečaji, ki jih še nisi dokončal/a
-    completed_courses: Tečaji, ki si jih dokončal/a
-    all_courses: Vsi tečaji
-  project:
-    projects: Projekti
-    create: Ustvari projekt
-    create_a_project: 'Ustvari nov projekt:'
-    new: Ustvari novo
-    exit: Vrni se na tečaj
-    project_gallery: Projekti
-    share_title: Deli svoj projekt
-    share_copy_link: 'Kopiraj povezavo:'
-    advanced_share: Prikaz dodatnih možnosti
-    name: Ime
-    updated: Posodobljeno
-    project_type: Vrsta projekta
-    help_text: Klikni spodaj na <strong>Ustvari App</strong> ali <strong>Nariši kaj</strong>,
-      da začneš nov projekt!<br/>Kadarkoli lahko prideš nazaj in delaš na svojih projektih.
-    need_help: Potrebujete pomoč za začetek?
-    saved: Shranjeno
-    not_saved: Ni shranjeno
-    view_all: Poglej si Moji projekti
-    edit_project: Uredi projekt
-    abuse:
-      tos: Ta projekt so prijavili, da je kršil <a href='http://code.org/tos'>Pogoje
-        storitve</a> spletne strani Code.org in zato ga ni mogoče deliti z drugimi.
-      contact_us: Če menite, da je prišlo do napake, prosimo <a href='https://code.org/contact'>kontaktirajte
-        nas.</a>
-      go_to_code_studio: Pojdi v Code studio
-      report_abuse_form:
-        validation:
-          email: Prosimo, navedite e-poštni naslov
-          age: Prosimo, navedite starost
-          abuse_type: Prosimo, odgovorite, kako ta vsebina krši Pravila storitve
-          abuse_detail: Prosimo, navedite podrobnosti glede vsebine, ki jo prijavljate
-        abusive_url: URL vsebine, ki jo prijavljate
-        abuse_type:
-          question: Kako ta vsebina krši %{link_start}Pogoje storitve%{link_end}?
-          harassment: Grožnje, ustrahovanje, nadlegovanje
-          offensive: Žaljiva vsebina
-          infringement: Kršitev avtorskih pravic
-          other: Drugi
-        detail: Prosimo, navedite čim več podrobnosti glede vsebine, ki jo prijavljate.
-  hoc_download:
-    minecraft_name: Minecraft Ura za kodo
-    download_in_Albanian: 'Prenesi v albanskem jeziku:'
-    download_in_Arabic: 'Prenesi v arabskem jeziku:'
-    download_in_Bosnian: 'Prenesi v bosanskem jeziku:'
-    windows: Windows (64-bit)
-    mac: Mac OS X
-  hidden_stage: Tvoj učitelj ni pričakoval, da boš tukaj. Vprašaj svojega učitelja
-    katero vajo moraš delati.
-  pd:
-    form_labels:
-      email: Elektronska pošta
-      school: Šola
-      school_name: Ime šole
-      colombian_chilean_school_name: Ime šole
-    form_entries:
-      gender:
-        male: Moški
-        female: Ženska
-        none: Raje ne bi odgovoril
-      subjects:
-        cs: računalniška znanost, računalništvo
-        math: Matematika
-        science: Znanost
-        la: Jezikoslovje
-        other: Drugi
-      resources:
-        kodable: Kodable
-        other: Drugi
-      robotics:
-        kodable: Kodable
-        other: Drugi
-      workshop_course:
-        other: Drugi
-      email_opt_in:
-        opt_in_yes: Da
-        opt_in_no: Ne
-  course_offering:
-    headers:
-      minecraft: Minecraft
-  cookie_banner:
-    accept: Strinjam se
-  copy: Kopiraj
-  pixelation:
-    binary: Binarno

@@ -27,8 +27,12 @@ import {
   SignInToAssignSectionsDialog,
   UpgradeAccountToAssignSectionsDialog,
 } from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
 
 const CurriculumCatalogCard = ({
+  courseKey,
   courseDisplayName,
   duration,
   gradesArray,
@@ -38,9 +42,20 @@ const CurriculumCatalogCard = ({
   topics = [],
   pathToCourse,
   onAssignSuccess,
+  quickViewDisplayed,
+  deviceCompatibility,
+  description,
+  professionalLearningProgram,
+  video,
+  publishedDate,
+  selfPacedPlCourseOfferingPath,
+  isExpanded,
+  onQuickViewClick,
+  isInUS,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
+    courseKey={courseKey}
     assignButtonText={i18n.assign()}
     assignButtonDescription={i18n.assignDescription({
       course_name: courseDisplayName,
@@ -62,16 +77,27 @@ const CurriculumCatalogCard = ({
     quickViewButtonDescription={i18n.quickViewDescription({
       course_name: courseDisplayName,
     })}
-    quickViewButtonText={i18n.learnMore()}
+    quickViewButtonText={i18n.quickView()}
     imageAltText={imageAltText}
     translationIconTitle={i18n.courseInYourLanguage()}
     pathToCourse={pathToCourse + '?viewAs=Instructor'}
     onAssignSuccess={onAssignSuccess}
+    quickViewDisplayed={quickViewDisplayed}
+    deviceCompatibility={deviceCompatibility}
+    description={description}
+    professionalLearningProgram={professionalLearningProgram}
+    video={video}
+    publishedDate={publishedDate}
+    selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
+    isExpanded={isExpanded}
+    onQuickViewClick={onQuickViewClick}
+    isInUS={isInUS}
     {...props}
   />
 );
 
 CurriculumCatalogCard.propTypes = {
+  courseKey: PropTypes.string,
   courseDisplayName: PropTypes.string.isRequired,
   courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
@@ -94,9 +120,20 @@ CurriculumCatalogCard.propTypes = {
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
   onAssignSuccess: PropTypes.func,
+  quickViewDisplayed: PropTypes.bool,
+  deviceCompatibility: PropTypes.string,
+  description: PropTypes.string,
+  professionalLearningProgram: PropTypes.string,
+  video: PropTypes.string,
+  publishedDate: PropTypes.string,
+  selfPacedPlCourseOfferingPath: PropTypes.string,
+  isExpanded: PropTypes.bool,
+  onQuickViewClick: PropTypes.func,
+  isInUS: PropTypes.bool,
 };
 
 const CustomizableCurriculumCatalogCard = ({
+  courseKey,
   assignButtonDescription,
   assignButtonText,
   courseDisplayName,
@@ -117,9 +154,31 @@ const CustomizableCurriculumCatalogCard = ({
   isSignedOut,
   onAssignSuccess,
   courseId,
+  quickViewDisplayed,
+  deviceCompatibility,
+  description,
+  professionalLearningProgram,
+  video,
+  publishedDate,
+  selfPacedPlCourseOfferingPath,
+  isExpanded,
+  onQuickViewClick,
+  isInUS,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
+
+  const handleClickAssign = () => {
+    setIsAssignDialogOpen(true);
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
+      {
+        curriculum_offering: courseKey,
+        has_sections: sectionsForDropdown.length > 0,
+        is_signed_in: !isSignedOut,
+      }
+    );
+  };
 
   const renderAssignDialog = () => {
     if (isSignedOut) {
@@ -159,72 +218,106 @@ const CustomizableCurriculumCatalogCard = ({
   };
 
   return (
-    <div>
-      <div
-        className={classNames(
-          style.curriculumCatalogCardContainer,
-          isEnglish
-            ? style.curriculumCatalogCardContainer_english
-            : style.curriculumCatalogCardContainer_notEnglish
-        )}
-      >
-        <img src={imageSrc} alt={imageAltText} />
-        <div className={style.curriculumInfoContainer}>
-          <div className={style.labelsAndTranslatabilityContainer}>
-            <div className={style.labelsContainer}>
-              <CardLabels subjectsAndTopics={subjectsAndTopics} />
+    <div className={style.cardsContainer}>
+      <div>
+        <div
+          className={classNames(
+            style.curriculumCatalogCardContainer,
+            isEnglish
+              ? style.curriculumCatalogCardContainer_english
+              : style.curriculumCatalogCardContainer_notEnglish
+          )}
+        >
+          <img src={imageSrc} alt={imageAltText} />
+          <div className={style.curriculumInfoContainer}>
+            <div className={style.labelsAndTranslatabilityContainer}>
+              <div className={style.labelsContainer}>
+                <CardLabels subjectsAndTopics={subjectsAndTopics} />
+              </div>
+              {!isEnglish && isTranslated && (
+                <FontAwesome
+                  icon="language"
+                  className="fa-solid"
+                  title={translationIconTitle}
+                />
+              )}
             </div>
-            {!isEnglish && isTranslated && (
-              <FontAwesome
-                icon="language"
-                className="fa-solid"
-                title={translationIconTitle}
+            <h4>{courseDisplayName}</h4>
+            <div className={style.iconWithDescription}>
+              <FontAwesome icon="user" className="fa-solid" />
+              <p>{gradeRange}</p>
+            </div>
+            <div className={style.iconWithDescription}>
+              <FontAwesome icon="clock" className="fa-solid" />
+              <p>{duration}</p>
+            </div>
+            <div
+              className={classNames(
+                style.buttonsContainer,
+                isEnglish
+                  ? style.buttonsContainer_english
+                  : style.buttonsContainer_notEnglish
+              )}
+            >
+              {quickViewDisplayed ? (
+                <Button
+                  color={Button.ButtonColor.neutralDark}
+                  type="button"
+                  onClick={onQuickViewClick}
+                  aria-label={quickViewButtonDescription}
+                  text={'Quick View'}
+                />
+              ) : (
+                <Button
+                  __useDeprecatedTag
+                  color={Button.ButtonColor.neutralDark}
+                  type="button"
+                  href={pathToCourse}
+                  aria-label={i18n.quickViewDescription({
+                    course_name: courseDisplayName,
+                  })}
+                  text={i18n.learnMore()}
+                />
+              )}
+              <Button
+                color={Button.ButtonColor.brandSecondaryDefault}
+                type="button"
+                onClick={handleClickAssign}
+                aria-label={assignButtonDescription}
+                text={assignButtonText}
               />
-            )}
-          </div>
-          <h4>{courseDisplayName}</h4>
-          <div className={style.iconWithDescription}>
-            <FontAwesome icon="user" className="fa-solid" />
-            <p>{gradeRange}</p>
-          </div>
-          <div className={style.iconWithDescription}>
-            <FontAwesome icon="clock" className="fa-solid" />
-            <p>{duration}</p>
-          </div>
-          <div
-            className={classNames(
-              style.buttonsContainer,
-              isEnglish
-                ? style.buttonsContainer_english
-                : style.buttonsContainer_notEnglish
-            )}
-          >
-            <Button
-              __useDeprecatedTag
-              color={Button.ButtonColor.neutralDark}
-              type="button"
-              href={pathToCourse}
-              aria-label={quickViewButtonDescription}
-              text={quickViewButtonText}
-            />
-            <Button
-              color={Button.ButtonColor.brandSecondaryDefault}
-              type="button"
-              onClick={() => {
-                setIsAssignDialogOpen(true);
-              }}
-              aria-label={assignButtonDescription}
-              text={assignButtonText}
-            />
+            </div>
           </div>
         </div>
+        {isAssignDialogOpen && renderAssignDialog()}
       </div>
-      {isAssignDialogOpen && renderAssignDialog()}
+      {isExpanded && (
+        <ExpandedCurriculumCatalogCard
+          courseDisplayName={courseDisplayName}
+          duration={duration}
+          gradeRange={gradeRange}
+          subjectsAndTopics={subjectsAndTopics}
+          deviceCompatibility={deviceCompatibility}
+          description={description}
+          professionalLearningProgram={professionalLearningProgram}
+          video={video}
+          publishedDate={publishedDate}
+          selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
+          pathToCourse={pathToCourse}
+          assignButtonOnClick={handleClickAssign}
+          assignButtonDescription={assignButtonDescription}
+          onClose={onQuickViewClick}
+          isInUS={isInUS}
+          imageSrc={imageSrc}
+          imageAltText={imageAltText}
+        />
+      )}
     </div>
   );
 };
 
 CustomizableCurriculumCatalogCard.propTypes = {
+  courseKey: PropTypes.string,
   courseDisplayName: PropTypes.string.isRequired,
   courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
@@ -250,6 +343,17 @@ CustomizableCurriculumCatalogCard.propTypes = {
   imageAltText: PropTypes.string,
   quickViewButtonDescription: PropTypes.string.isRequired,
   assignButtonDescription: PropTypes.string.isRequired,
+  // for expanded card
+  quickViewDisplayed: PropTypes.bool,
+  deviceCompatibility: PropTypes.string,
+  description: PropTypes.string,
+  professionalLearningProgram: PropTypes.string,
+  video: PropTypes.string,
+  publishedDate: PropTypes.string,
+  selfPacedPlCourseOfferingPath: PropTypes.string,
+  isExpanded: PropTypes.bool,
+  onQuickViewClick: PropTypes.func,
+  isInUS: PropTypes.bool,
 };
 
 export default connect(

@@ -32,10 +32,22 @@
         "CSD U3 Variables Predict Where XY_2019": {
           "grid": "Klik di sini untuk menampilkan grid."
         },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Klik di sini untuk menampilkan grid."
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Klik di sini untuk menampilkan grid."
+        },
         "CSD U3 Variables Predict Where X_2018": {
           "CSD_U3_variables": "Ubah nomornya disini"
         },
         "CSD U3 Variables Predict Where X_2019": {
+          "CSD_U3_variables": "Ubah nomornya disini"
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Ubah nomornya disini"
+        },
+        "CSD U3 Variables Predict Where X_2022": {
           "CSD_U3_variables": "Ubah nomornya disini"
         },
         "CSD U3 debug": {
@@ -47,6 +59,54 @@
           "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
         },
         "CSD U3 debug_2019": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing practice 3_2022": {
           "CSD_U3_rect_c1": "Inilah kodenya",
           "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
         },
@@ -62,6 +122,14 @@
           "CSD_U3_rect_c1": "Inilah kodenya",
           "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
         },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
         "CSD U3 fill": {
           "CSD_U3_rect_c1": "Inilah kodenya",
           "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
@@ -74,6 +142,30 @@
           "CSD_U3_rect_c1": "Inilah kodenya",
           "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
         },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
         "CSD U3 rect": {
           "CSD_U3_rect_c1": "Inilah kodenya",
           "CSD_U3_rect_c2": "Berikut ini adalah tombol \"Jalankan\"."
@@ -82,6 +174,12 @@
           "CSD_U3_rect_c1": "Inilah kodenya"
         },
         "CSD U3 rect_2019": {
+          "CSD_U3_rect_c1": "Inilah kodenya"
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya"
+        },
+        "CSD U3 rect_2022": {
           "CSD_U3_rect_c1": "Inilah kodenya"
         },
         "CSD U3 sequence": {
@@ -96,6 +194,73 @@
           "CSD_U3_rect_c1": "Inilah kodenya",
           "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
         },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "CSDU6L10_rainbow": "Tambahkan kode anda disini"
+        },
         "CSD U6 colorLeds intensity": {
           "CSDU6L10_rainbow": "Tambahkan kode anda disini"
         },
@@ -103,6 +268,9 @@
           "CSDU6L10_rainbow": "Tambahkan kode anda disini"
         },
         "CSD U6 colorLeds intensity_2019": {
+          "CSDU6L10_rainbow": "Tambahkan kode anda disini"
+        },
+        "CSD U6 colorLeds intensity_2021": {
           "CSDU6L10_rainbow": "Tambahkan kode anda disini"
         },
         "CSD U6 light show": {
@@ -114,6 +282,9 @@
         "CSD U6 light show_2019": {
           "CSDUDL03P09": "Apa kegunaan garis ini?"
         },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Apa kegunaan garis ini?"
+        },
         "CSD U6 tugowar variables 1": {
           "CSD_U6_startGame": "Menentukan memulai permainan di sini"
         },
@@ -121,6 +292,9 @@
           "CSD_U6_startGame": "Menentukan memulai permainan di sini"
         },
         "CSD U6 tugowar variables 1_2019": {
+          "CSD_U6_startGame": "Menentukan memulai permainan di sini"
+        },
+        "CSD U6 tugowar variables 1_2021": {
           "CSD_U6_startGame": "Menentukan memulai permainan di sini"
         },
         "CSD U6 tugowar variables 2": {
@@ -132,6 +306,9 @@
         "CSD U6 tugowar variables 2_2019": {
           "CSD_U6_movePlayer": "Tentukan Pemain yang bisa dipindahkan() disini"
         },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Tentukan Pemain yang bisa dipindahkan() disini"
+        },
         "CSD U6 tugowar variables 3": {
           "CSD_U6_checkWin": "Periksa apakah pemain telah menang"
         },
@@ -140,6 +317,15 @@
         },
         "CSD U6 tugowar variables 3_2019": {
           "CSD_U6_checkWin": "Periksa apakah pemain telah menang"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Periksa apakah pemain telah menang"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Ubah nomornya disini"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Ubah nomornya disini"
         },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Masukkan frekuensi gerakan zombie untuk membuat lingkaran penuh"
@@ -205,23 +391,69 @@
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "Add this block to your program!"
         },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Add this block to your program!"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Add this block to your program!"
+        },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "Tambahkan blok ini ke program Anda.",
-          "arrow_buttons": "Tekan tombol panah untuk mengontrol penari Anda."
+          "arrow_buttons": "Tekan tombol panah untuk mengontrol penari Anda.",
+          "dance_callout_11_a": "Tambahkan blok ini ke program Anda."
+        },
+        "CourseD_Dance_2020_022022": {
+          "arrow_buttons": "Tekan tombol panah untuk mengontrol penari Anda.",
+          "dance_callout_11_a": "Tambahkan blok ini ke program Anda."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "arrow_buttons": "Tekan tombol panah untuk mengontrol penari Anda.",
+          "dance_callout_11_a": "Tambahkan blok ini ke program Anda."
         },
         "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Tambahkan blok ini ke program Anda!"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Tambahkan blok ini ke program Anda!"
+        },
+        "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "Tambahkan blok ini ke program Anda!"
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "Tambahkan event baru ke program Anda."
         },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Tambahkan event baru ke program Anda."
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Tambahkan event baru ke program Anda."
+        },
         "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Blok baru!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Blok baru!"
+        },
+        "CourseD_Dance_2020_06_2021": {
           "dance_party_11_5_groups": "Blok baru!"
         },
         "CourseD_Dance_2020_07": {
           "setprop_hint": "Blok baru!"
         },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Blok baru!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Blok baru!"
+        },
         "CourseD_Dance_2020_09": {
+          "new_block_3": "Blok baru!",
+          "new_block_4": "Blok baru!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Blok baru!",
+          "new_block_4": "Blok baru!"
+        },
+        "CourseD_Dance_2020_09_2021": {
           "new_block_3": "Blok baru!",
           "new_block_4": "Blok baru!"
         },
@@ -244,12 +476,26 @@
         "CourseD_Dance_Party_11_5": {
           "dance_party_11_5_groups": "Lihat di sini untuk blok \"semua bebek\""
         },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Klik di sini untuk memperluas blok.",
+          "pointerlocation": "Tarik blok subject ke sini."
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Klik di sini untuk memperluas blok.",
+          "pointerlocation": "Tarik blok subject ke sini."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Klik untuk membuat kostum baru"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
+        },
         "Dance_2019_01": {
           "dance_callout_01": "Add this block to your program!"
         },
         "Dance_2019_02": {
-          "dance_callout_11_a": "Tambahkan blok ini ke program Anda.",
-          "arrow_buttons": "Tekan tombol panah untuk mengontrol penari Anda."
+          "arrow_buttons": "Tekan tombol panah untuk mengontrol penari Anda.",
+          "dance_callout_11_a": "Tambahkan blok ini ke program Anda."
         },
         "Dance_2019_04": {
           "dance_callout_02": "Tambahkan blok ini ke program Anda!"
@@ -286,19 +532,31 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "Lihat di sini untuk blok \"semua bebek\""
         },
+        "Fish Tank 3-validated2022": {
+          "spritelab_comment": "Gunakan blok ini untuk membuat catatan untuk Anda atau guru Anda tentang cara kerja kode."
+        },
         "Fish Tank 3-validated_2019": {
           "spritelab_comment": "Gunakan blok ini untuk membuat catatan untuk Anda atau guru Anda tentang cara kerja kode."
         },
         "Fish Tank 3-validated_2020": {
           "spritelab_comment": "Gunakan blok ini untuk membuat catatan untuk Anda atau guru Anda tentang cara kerja kode."
         },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Gunakan blok ini untuk membuat catatan untuk Anda atau guru Anda tentang cara kerja kode."
+        },
         "Function intro Ryan": {
+          "Function_intro_Ryan_1": "Instruksi kecil ini memberi tahu komputer untuk menjalankan sebagian BESAR kode dengan nama yang sama di ruang kerja."
+        },
+        "Function intro Ryan2022": {
           "Function_intro_Ryan_1": "Instruksi kecil ini memberi tahu komputer untuk menjalankan sebagian BESAR kode dengan nama yang sama di ruang kerja."
         },
         "Function intro Ryan_2019": {
           "Function_intro_Ryan_1": "Instruksi kecil ini memberi tahu komputer untuk menjalankan sebagian BESAR kode dengan nama yang sama di ruang kerja."
         },
         "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "Instruksi kecil ini memberi tahu komputer untuk menjalankan sebagian BESAR kode dengan nama yang sama di ruang kerja."
+        },
+        "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "Instruksi kecil ini memberi tahu komputer untuk menjalankan sebagian BESAR kode dengan nama yang sama di ruang kerja."
         },
         "Geometric Sun": {
@@ -335,13 +593,22 @@
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_1": "Ini adalah loop `repeat`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
         },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Ini adalah loop `repeat`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
+        },
         "MC_HOC_2017_03_Cole_2019": {
           "MC_HOC_2017_03_Cole_1": "Ini adalah loop `repeat`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
         },
         "MC_HOC_2017_03_Cole_2020": {
           "MC_HOC_2017_03_Cole_1": "Ini adalah loop `repeat`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
         },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Ini adalah loop `repeat`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
+        },
         "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Agent dapat mengapung di atas air, tapi pemain tidak dapat!"
+        },
+        "MC_HOC_2017_04_Cole2022": {
           "MC_HOC_2017_04_Cole_a": "Agent dapat mengapung di atas air, tapi pemain tidak dapat!"
         },
         "MC_HOC_2017_04_Cole_2019": {
@@ -350,7 +617,13 @@
         "MC_HOC_2017_04_Cole_2020": {
           "MC_HOC_2017_04_Cole_a": "Agent dapat mengapung di atas air, tapi pemain tidak dapat!"
         },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent dapat mengapung di atas air, tapi pemain tidak dapat!"
+        },
         "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "Anda tidak dapat membuang blok ini, tapi Anda dapat menyuntingnya!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
           "MC_HOC_2017_06_Cole_1": "Anda tidak dapat membuang blok ini, tapi Anda dapat menyuntingnya!"
         },
         "MC_HOC_2017_06_Cole_2019": {
@@ -359,13 +632,22 @@
         "MC_HOC_2017_06_Cole_2020": {
           "MC_HOC_2017_06_Cole_1": "Anda tidak dapat membuang blok ini, tapi Anda dapat menyuntingnya!"
         },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Anda tidak dapat membuang blok ini, tapi Anda dapat menyuntingnya!"
+        },
         "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "Agent dapat mengapung di atas lahar, tetapi Steve dan Alex tidak dapat!"
+        },
+        "MC_HOC_2017_Ali2022": {
           "MC_HOC_2017_08_RY_1": "Agent dapat mengapung di atas lahar, tetapi Steve dan Alex tidak dapat!"
         },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_1": "Agent dapat mengapung di atas lahar, tetapi Steve dan Alex tidak dapat!"
         },
         "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_1": "Agent dapat mengapung di atas lahar, tetapi Steve dan Alex tidak dapat!"
+        },
+        "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Agent dapat mengapung di atas lahar, tetapi Steve dan Alex tidak dapat!"
         },
         "NEW Course 4 Artist Functions 3": {
@@ -381,8 +663,8 @@
           "create_function": "Klik di sini untuk membuka flyout \"Functions\", lalu klik tombol \"Create a Function\"."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Klik edit untuk menambahkan parameter ke dalam fungsi Anda",
-          "add_and_drag_parameter": "Tulis nama parameter Anda di sini, klik add, lalu tarik ke definisi function Anda"
+          "add_and_drag_parameter": "Tulis nama parameter Anda di sini, klik add, lalu tarik ke definisi function Anda",
+          "edit_add_parameter": "Klik edit untuk menambahkan parameter ke dalam fungsi Anda"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Tariklah variabel panjang ke sini untuk mengganti tanda tanya"
@@ -393,8 +675,22 @@
         "NEW Course 4 Bee For Loops 5": {
           "actions_category": "Toolbox punya tampilan baru! Blok \"Actions\" ada di sini sekarang."
         },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Klik kategori untuk melihat blok di kotak alat anda! Seret blok ke ruang kerja untuk menambahkannya ke program anda",
+          "New Artist Project_callout2": "Tekan \"Run\" untuk menyimpan dan menjalankan program Anda",
+          "sign_in_to_save_project": "Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan proyek ini ke akun anda!"
+        },
         "New Frozen Project": {
           "snowflake_dropdown": "Gunakan drop-down untuk membuat kepingan salju yang berbeda!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Klik kategori untuk melihat blok di kotak peralatan Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda",
+          "New Play Lab Project_callout2": "Tekan \"Run\" untuk menyimpan dan menjalankan program Anda",
+          "sign_in_to_save_project": "Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan proyek ini ke akun anda!"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu.",
+          "make_sprite": "Gunakan blok di sini untuk membuat sprite!"
         },
         "OPD-K5-forloops-5": {
           "courseF_bee_for4_1": "Anda akan menemukan loop 'for` di sini!"
@@ -414,13 +710,22 @@
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Kami meletakkan beberapa balok di sini agar kamu dapat memulainya dengan mudah"
         },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Kami meletakkan beberapa balok di sini agar kamu dapat memulainya dengan mudah"
+        },
         "Overworld Chop Trees_2019": {
           "craft_callout_preplaced": "Kami meletakkan beberapa balok di sini agar kamu dapat memulainya dengan mudah"
         },
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Kami meletakkan beberapa balok di sini agar kamu dapat memulainya dengan mudah"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Kami meletakkan beberapa balok di sini agar kamu dapat memulainya dengan mudah"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Kode ini akan mulai membangun rumah kamu. Dapatkah kamu menyelesaikannya?"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Kode ini akan mulai membangun rumah kamu. Dapatkah kamu menyelesaikannya?"
         },
         "Overworld House Frame Chosen_2019": {
@@ -429,25 +734,42 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Kode ini akan mulai membangun rumah kamu. Dapatkah kamu menyelesaikannya?"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Kode ini akan mulai membangun rumah kamu. Dapatkah kamu menyelesaikannya?"
+        },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Klik \"Run\" untuk mencoba program kamu",
-          "craft_drag_block_callout": "Tarik blok \"move forward\" dan pasang di bawah blok lain"
+          "craft_drag_block_callout": "Tarik blok \"move forward\" dan pasang di bawah blok lain",
+          "craft_run_button_callout": "Klik \"Run\" untuk mencoba program kamu"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_drag_block_callout": "Tarik blok \"move forward\" dan pasang di bawah blok lain",
+          "craft_run_button_callout": "Klik \"Run\" untuk mencoba program kamu"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Klik \"Run\" untuk mencoba program kamu",
-          "craft_drag_block_callout": "Tarik blok \"move forward\" dan pasang di bawah blok lain"
+          "craft_drag_block_callout": "Tarik blok \"move forward\" dan pasang di bawah blok lain",
+          "craft_run_button_callout": "Klik \"Run\" untuk mencoba program kamu"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Klik \"Run\" untuk mencoba program kamu",
-          "craft_drag_block_callout": "Tarik blok \"move forward\" dan pasang di bawah blok lain"
+          "craft_drag_block_callout": "Tarik blok \"move forward\" dan pasang di bawah blok lain",
+          "craft_run_button_callout": "Klik \"Run\" untuk mencoba program kamu"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_drag_block_callout": "Tarik blok \"move forward\" dan pasang di bawah blok lain",
+          "craft_run_button_callout": "Klik \"Run\" untuk mencoba program kamu"
         },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Ulangi tindakan dengan menempatkan balok di dalam sini"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Ulangi tindakan dengan menempatkan balok di dalam sini"
         },
         "Overworld Place Wall_2019": {
           "craft_inside_repeat": "Ulangi tindakan dengan menempatkan balok di dalam sini"
         },
         "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "Ulangi tindakan dengan menempatkan balok di dalam sini"
+        },
+        "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Ulangi tindakan dengan menempatkan balok di dalam sini"
         },
         "Robot Doodle": {
@@ -459,13 +781,22 @@
         "Underground Avoiding Lava": {
           "craft_callout_moveforward": "Kode ini akan memeriksa lava, dapatkah kamu menambahkan perintah untuk maju?"
         },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Kode ini akan memeriksa lava, dapatkah kamu menambahkan perintah untuk maju?"
+        },
         "Underground Avoiding Lava_2019": {
           "craft_callout_moveforward": "Kode ini akan memeriksa lava, dapatkah kamu menambahkan perintah untuk maju?"
         },
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Kode ini akan memeriksa lava, dapatkah kamu menambahkan perintah untuk maju?"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Kode ini akan memeriksa lava, dapatkah kamu menambahkan perintah untuk maju?"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Tambang besi ini!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Tambang besi ini!"
         },
         "Underground Iron_2019": {
@@ -474,11 +805,26 @@
         "Underground Iron_2020": {
           "craft_what_is_iron": "Tambang besi ini!"
         },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Tambang besi ini!"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "Klik di sini untuk menambahkan kostum baru ke proyek Anda!"
+        },
         "Virtual Pet 2_2019": {
           "": "Klik disini!"
         },
         "Virtual Pet 2_2020": {
           "": "Klik disini!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Klik di sini untuk menambahkan kostum baru ke proyek Anda!"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "Klik di sini untuk menambahkan kostum baru ke proyek Anda!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Klik di sini untuk menambahkan kostum baru ke proyek Anda!"
         },
         "behaviors 1": {
           "behaviors_edit": "Klik di sini untuk mengetahui cara kerja perilaku ini."
@@ -542,7 +888,28 @@
         "course4_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_callout1": "Function ini akan cocok sekali dengan jagung, tapi bagaimana dengan sayuran lainnya?"
         },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "Angka ini memberitahu anda seberapa banyak blok yang dapat anda gunakan dalam puzzle ini."
+        },
+        "courseA_artist_loops42022": {
           "courseA_artist_loops4_1": "Angka ini memberitahu anda seberapa banyak blok yang dapat anda gunakan dalam puzzle ini."
         },
         "courseA_artist_loops4_2018": {
@@ -554,7 +921,13 @@
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_1": "Angka ini memberitahu anda seberapa banyak blok yang dapat anda gunakan dalam puzzle ini."
         },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Angka ini memberitahu anda seberapa banyak blok yang dapat anda gunakan dalam puzzle ini."
+        },
         "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "Angka ini berarti bahwa hanya satu dari jenis blok ini yang dapat digunakan di jawaban akhir."
+        },
+        "courseA_artist_loops72022": {
           "courseA_artist_loops7_1": "Angka ini berarti bahwa hanya satu dari jenis blok ini yang dapat digunakan di jawaban akhir."
         },
         "courseA_artist_loops7_2018": {
@@ -566,7 +939,13 @@
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_1": "Angka ini berarti bahwa hanya satu dari jenis blok ini yang dapat digunakan di jawaban akhir."
         },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Angka ini berarti bahwa hanya satu dari jenis blok ini yang dapat digunakan di jawaban akhir."
+        },
         "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "Apakah anda tahu bahwa anda bisa menggambar ulang sebuah garis kapan pun anda perlu?"
+        },
+        "courseA_artist_loops82022": {
           "courseA_artist_loops8_1": "Apakah anda tahu bahwa anda bisa menggambar ulang sebuah garis kapan pun anda perlu?"
         },
         "courseA_artist_loops8_2018": {
@@ -578,8 +957,14 @@
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_1": "Apakah anda tahu bahwa anda bisa menggambar ulang sebuah garis kapan pun anda perlu?"
         },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "Apakah anda tahu bahwa anda bisa menggambar ulang sebuah garis kapan pun anda perlu?"
+        },
         "courseA_collector_loops1": {
           "courseA_collector_loops1_1": "Apakah anda melihat beberapa blok baru di kotak alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam tahapan."
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "Gunakan blok ini untuk mengumpulkan harta karun."
         },
         "courseA_collector_loops1_2019": {
           "courseA_collector_loops1_1": "Gunakan blok ini untuk mengumpulkan harta karun."
@@ -587,7 +972,13 @@
         "courseA_collector_loops1_2020": {
           "courseA_collector_loops1_1": "Gunakan blok ini untuk mengumpulkan harta karun."
         },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Gunakan blok ini untuk mengumpulkan harta karun."
+        },
         "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "Angka ini memberitahu anda seberapa banyak blok yang dapat anda gunakan dalam puzzle ini."
+        },
+        "courseA_collector_loops32022": {
           "gradek_adventurer_loops2_1": "Angka ini memberitahu anda seberapa banyak blok yang dapat anda gunakan dalam puzzle ini."
         },
         "courseA_collector_loops3_2018": {
@@ -598,6 +989,12 @@
         },
         "courseA_collector_loops3_2020": {
           "gradek_adventurer_loops2_1": "Angka ini memberitahu anda seberapa banyak blok yang dapat anda gunakan dalam puzzle ini."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Angka ini memberitahu anda seberapa banyak blok yang dapat anda gunakan dalam puzzle ini."
+        },
+        "courseA_collector_preLoops1": {
+          "courseA_collector_preLoops1_1": "Klik disini untuk melihat kodenya bekerja!"
         },
         "courseA_collector_preLoops2": {
           "courseA_collector_loops1_1": "Apakah anda melihat beberapa blok baru di kotak alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam tahapan."
@@ -614,16 +1011,25 @@
         "courseA_collector_preLoops6": {
           "courseA_collector_loops1_1": "Apakah anda melihat beberapa blok baru di kotak alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam tahapan."
         },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
+        },
         "courseA_maze_ramp2_2019": {
           "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
         },
         "courseA_maze_ramp2_2020": {
           "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
         },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
+        },
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
         },
         "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "Klik icon bola lampu saat anda membutuhkan petunjuk!"
+        },
+        "courseA_maze_seq12022": {
           "courseA_maze_seq1_1": "Klik icon bola lampu saat anda membutuhkan petunjuk!"
         },
         "courseA_maze_seq1_2018": {
@@ -635,6 +1041,9 @@
         "courseA_maze_seq1_2020": {
           "courseA_maze_seq1_1": "Klik icon bola lampu saat anda membutuhkan petunjuk!"
         },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Klik icon bola lampu saat anda membutuhkan petunjuk!"
+        },
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "Gunakan tombol langkah agar dituntun langkah demi langkah dalam menjalankan programnya. Hal ini akan membantu anda menemukan bug!"
         },
@@ -642,6 +1051,9 @@
           "made_of_stone": "Blok-blok tersebut terbuat dari batu. Anda bisa memindahkannya, tetapi anda tidak beloh menghapusnya!"
         },
         "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "Ini merupakan satu seruan"
+        },
+        "courseA_playLab_events42022": {
           "courseA_playlab_events4_callout1": "Ini merupakan satu seruan"
         },
         "courseA_playLab_events4_2018": {
@@ -653,7 +1065,13 @@
         "courseA_playLab_events4_2020": {
           "courseA_playlab_events4_callout1": "Ini merupakan satu seruan"
         },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Ini merupakan satu seruan"
+        },
         "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "Klik disini untuk mengubah arah panah event."
+        },
+        "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "Klik disini untuk mengubah arah panah event."
         },
         "courseA_playLab_events5_2018": {
@@ -665,7 +1083,13 @@
         "courseA_playLab_events5_2020": {
           "courseA_playLab_events5_1": "Klik disini untuk mengubah arah panah event."
         },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Klik disini untuk mengubah arah panah event."
+        },
         "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "Hal ini akan memungkinkan anda untuk memilih sebuah suara secara \"acak\", yang berarti anda tidak akan tahu suara apa yang akan anda dapatkan sampai anda mendengarnya!"
+        },
+        "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "Hal ini akan memungkinkan anda untuk memilih sebuah suara secara \"acak\", yang berarti anda tidak akan tahu suara apa yang akan anda dapatkan sampai anda mendengarnya!"
         },
         "courseA_playLab_events6_2018": {
@@ -677,6 +1101,12 @@
         "courseA_playLab_events6_2020": {
           "courseA_playLab_events6_1": "Hal ini akan memungkinkan anda untuk memilih sebuah suara secara \"acak\", yang berarti anda tidak akan tahu suara apa yang akan anda dapatkan sampai anda mendengarnya!"
         },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Hal ini akan memungkinkan anda untuk memilih sebuah suara secara \"acak\", yang berarti anda tidak akan tahu suara apa yang akan anda dapatkan sampai anda mendengarnya!"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
+        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
         },
@@ -686,13 +1116,25 @@
         "courseB_Scrat_ramp1_2020": {
           "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
         },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
+        },
         "courseB_Scrat_ramp3a_2019": {
           "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
         },
         "courseB_Scrat_ramp3a_2020": {
           "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
         },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
+        },
         "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut di dalam toolbox. Bagaimana cara Anda menggunakannya?"
+        },
+        "courseB_artist_loops32022": {
           "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut di dalam toolbox. Bagaimana cara Anda menggunakannya?"
         },
         "courseB_artist_loops3_2018": {
@@ -704,11 +1146,17 @@
         "courseB_artist_loops3_2020": {
           "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut di dalam toolbox. Bagaimana cara Anda menggunakannya?"
         },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut di dalam toolbox. Bagaimana cara Anda menggunakannya?"
+        },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "Angka ini berarti bahwa tidak ada lagi blok yang tersedia di dalam kotak peralatan."
         },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_1": "Apakah anda melihat beberapa blok baru di kotak alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam tahapan."
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "Gunakan blok ini untuk mengumpulkan harta karun."
         },
         "courseB_collector_loops1_2018": {
           "courseB_collector_loops1_1": "Gunakan blok ini untuk mengumpulkan harta karun."
@@ -719,7 +1167,13 @@
         "courseB_collector_loops1_2020": {
           "courseB_collector_loops1_1": "Gunakan blok ini untuk mengumpulkan harta karun."
         },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Gunakan blok ini untuk mengumpulkan harta karun."
+        },
         "courseB_maze_seq1": {
+          "courseB_maze_seq1": "Klik icon bola lampu saat anda membutuhkan petunjuk!"
+        },
+        "courseB_maze_seq12022": {
           "courseB_maze_seq1": "Klik icon bola lampu saat anda membutuhkan petunjuk!"
         },
         "courseB_maze_seq1_2018": {
@@ -731,6 +1185,9 @@
         "courseB_maze_seq1_2020": {
           "courseB_maze_seq1": "Klik icon bola lampu saat anda membutuhkan petunjuk!"
         },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Klik icon bola lampu saat anda membutuhkan petunjuk!"
+        },
         "courseB_maze_seq2": {
           "courseB_maze_seq2_callout1": "Gunakan tombol langkah agar dituntun langkah demi langkah dalam menjalankan programnya. Hal ini akan membantu anda menemukan bug!"
         },
@@ -738,6 +1195,9 @@
           "courseB_maze_seq3_1": "Blok-blok yang warna abu-abu terbuat dari batu dan tidak bisa dibuang."
         },
         "courseB_playlab_events6": {
+          "courseB_playlab_events6_a": "Gunakan panah warna hijau untuk merubah arah."
+        },
+        "courseB_playlab_events62022": {
           "courseB_playlab_events6_a": "Gunakan panah warna hijau untuk merubah arah."
         },
         "courseB_playlab_events6_2018": {
@@ -749,13 +1209,25 @@
         "courseB_playlab_events6_2020": {
           "courseB_playlab_events6_a": "Gunakan panah warna hijau untuk merubah arah."
         },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Gunakan panah warna hijau untuk merubah arah."
+        },
         "courseC19_playLab_EOC3": {
+          "courseE_playLab_scaffold3_1": "Bawalah aktor ke bendera ini untuk maju ke tahap selanjutnya."
+        },
+        "courseC19_playLab_EOC32022": {
           "courseE_playLab_scaffold3_1": "Bawalah aktor ke bendera ini untuk maju ke tahap selanjutnya."
         },
         "courseC19_playLab_EOC3_2020": {
           "courseE_playLab_scaffold3_1": "Bawalah aktor ke bendera ini untuk maju ke tahap selanjutnya."
         },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Bawalah aktor ke bendera ini untuk maju ke tahap selanjutnya."
+        },
         "courseC_PlayLab_events8": {
+          "courseC_PlayLab_events8_callout1": "Gunakan blok ini ketika Waddles dan Chomp bersentuhan!"
+        },
+        "courseC_PlayLab_events82022": {
           "courseC_PlayLab_events8_callout1": "Gunakan blok ini ketika Waddles dan Chomp bersentuhan!"
         },
         "courseC_PlayLab_events8_2018": {
@@ -767,7 +1239,13 @@
         "courseC_PlayLab_events8_2020": {
           "courseC_PlayLab_events8_callout1": "Gunakan blok ini ketika Waddles dan Chomp bersentuhan!"
         },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Gunakan blok ini ketika Waddles dan Chomp bersentuhan!"
+        },
         "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Blok ini memungkinkan Anda memindahkan aktor kebagian yang berbeda di dalam ruang permainan."
+        },
+        "courseC_PlayLab_events_challenge12022": {
           "courseC_PlayLab_events_challenge1_1": "Blok ini memungkinkan Anda memindahkan aktor kebagian yang berbeda di dalam ruang permainan."
         },
         "courseC_PlayLab_events_challenge1_2018": {
@@ -779,16 +1257,34 @@
         "courseC_PlayLab_events_challenge1_2020": {
           "courseC_PlayLab_events_challenge1_1": "Blok ini memungkinkan Anda memindahkan aktor kebagian yang berbeda di dalam ruang permainan."
         },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Blok ini memungkinkan Anda memindahkan aktor kebagian yang berbeda di dalam ruang permainan."
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Blok ini memungkinkan Anda memindahkan aktor kebagian yang berbeda di dalam ruang permainan."
+        },
+        "courseC_artist_loops1a2022": {
+          "jumpto_callout": "Blok ini sangat penting untuk proyek ini. Pastikan untuk menggunakannya!"
+        },
         "courseC_artist_loops1a_2019": {
           "jumpto_callout": "Blok ini sangat penting untuk proyek ini. Pastikan untuk menggunakannya!"
         },
         "courseC_artist_loops1a_2020": {
           "jumpto_callout": "Blok ini sangat penting untuk proyek ini. Pastikan untuk menggunakannya!"
         },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Blok ini sangat penting untuk proyek ini. Pastikan untuk menggunakannya!"
+        },
+        "courseC_artist_loops1b2022": {
+          "sticker2": "Tambahkan ini di tengah program Anda."
+        },
         "courseC_artist_loops1b_2019": {
           "sticker2": "Tambahkan ini di tengah program Anda."
         },
         "courseC_artist_loops1b_2020": {
+          "sticker2": "Tambahkan ini di tengah program Anda."
+        },
+        "courseC_artist_loops1b_2021": {
           "sticker2": "Tambahkan ini di tengah program Anda."
         },
         "courseC_artist_loopsPrePre1a": {
@@ -803,8 +1299,17 @@
         "courseC_artist_loopsPrePre1a_2020": {
           "courseC_artist_loopsPrePre1a_1": "Mulailah dengan menggunakan blok ini untuk menempatkan artis ke tengah layar."
         },
+        "courseC_artist_prog22022": {
+          "slider": "Anda dapat memperlambat program di sini."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Anda dapat memperlambat program di sini."
+        },
         "courseC_collector_prog1": {
           "courseC_collector_prog1_1": "Apakah anda melihat beberapa blok baru di kotak alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam tahapan."
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "Apakah Anda melihat beberapa blok baru di toolbox? Jangan khawatir, kami akan tunjukkan cara menggunakannya dalam pelajaran lain."
         },
         "courseC_collector_prog1_2018": {
           "courseC_collector_prog1_1": "Apakah Anda melihat beberapa blok baru di toolbox? Jangan khawatir, kami akan tunjukkan cara menggunakannya dalam pelajaran lain."
@@ -815,7 +1320,13 @@
         "courseC_collector_prog1_2020": {
           "courseC_collector_prog1_1": "Apakah Anda melihat beberapa blok baru di toolbox? Jangan khawatir, kami akan tunjukkan cara menggunakannya dalam pelajaran lain."
         },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Apakah Anda melihat beberapa blok baru di toolbox? Jangan khawatir, kami akan tunjukkan cara menggunakannya dalam pelajaran lain."
+        },
         "courseC_collector_prog7": {
+          "courseC_collector_prog7_1": "Anda bisa mengambil lebih banyak blok dari dalam toolbox jika anda membutuhkannya!"
+        },
+        "courseC_collector_prog72022": {
           "courseC_collector_prog7_1": "Anda bisa mengambil lebih banyak blok dari dalam toolbox jika anda membutuhkannya!"
         },
         "courseC_collector_prog7_2018": {
@@ -827,7 +1338,13 @@
         "courseC_collector_prog7_2020": {
           "courseC_collector_prog7_1": "Anda bisa mengambil lebih banyak blok dari dalam toolbox jika anda membutuhkannya!"
         },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Anda bisa mengambil lebih banyak blok dari dalam toolbox jika anda membutuhkannya!"
+        },
         "courseC_harvester_loops1": {
+          "courseC_harvester_loops1_callout1": "Angka empat pada labu menandakan bahwa ada empat labu yang bisa diambil."
+        },
+        "courseC_harvester_loops12022": {
           "courseC_harvester_loops1_callout1": "Angka empat pada labu menandakan bahwa ada empat labu yang bisa diambil."
         },
         "courseC_harvester_loops1_2018": {
@@ -839,8 +1356,14 @@
         "courseC_harvester_loops1_2020": {
           "courseC_harvester_loops1_callout1": "Angka empat pada labu menandakan bahwa ada empat labu yang bisa diambil."
         },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Angka empat pada labu menandakan bahwa ada empat labu yang bisa diambil."
+        },
         "courseC_maze_debugging5": {
           "courseC_maze_debugging5_1": "Blok-blok abu-abu tidak dapat dihapus!"
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "Blok-blok tersebut terkunci dan tidak dapat dihapus!"
         },
         "courseC_maze_debugging5_2018": {
           "courseC_maze_debugging5_1": "Blok abu-abu itu terkunci dan tidak dapat dihapus!"
@@ -851,16 +1374,28 @@
         "courseC_maze_debugging5_2020": {
           "courseC_maze_debugging5_1": "Blok-blok tersebut terkunci dan tidak dapat dihapus!"
         },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Blok-blok tersebut terkunci dan tidak dapat dihapus!"
+        },
+        "courseC_maze_debugging92022": {
+          "courseC_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
+        },
         "courseC_maze_debugging9_2019": {
           "courseC_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
         },
         "courseC_maze_debugging9_2020": {
           "courseC_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
         },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
+        },
         "courseC_maze_debugging9_copy_2020": {
           "courseC_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
         },
         "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
+        },
+        "courseC_maze_programming12022": {
           "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
         },
         "courseC_maze_programming1_2018": {
@@ -872,7 +1407,13 @@
         "courseC_maze_programming1_2020": {
           "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
         },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
+        },
         "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
+        },
+        "courseC_maze_programming22022": {
           "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
         },
         "courseC_maze_programming2_2018": {
@@ -884,7 +1425,14 @@
         "courseC_maze_programming2_2020": {
           "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
         },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
+        },
         "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
+          "courseC_maze_programming3_3": "Blok-blok tersebut adalah batu dan tidak bisa dibuang."
+        },
+        "courseC_maze_programming32022": {
           "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
           "courseC_maze_programming3_3": "Blok-blok tersebut adalah batu dan tidak bisa dibuang."
         },
@@ -900,7 +1448,14 @@
           "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
           "courseC_maze_programming3_3": "Blok-blok tersebut adalah batu dan tidak bisa dibuang."
         },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
+          "courseC_maze_programming3_3": "Blok-blok tersebut adalah batu dan tidak bisa dibuang."
+        },
         "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
+        },
+        "courseC_maze_programming42022": {
           "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
         },
         "courseC_maze_programming4_2018": {
@@ -912,7 +1467,13 @@
         "courseC_maze_programming4_2020": {
           "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
         },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
+        },
         "courseC_maze_programming5": {
+          "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
+        },
+        "courseC_maze_programming52022": {
           "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
         },
         "courseC_maze_programming5_2018": {
@@ -924,7 +1485,14 @@
         "courseC_maze_programming5_2020": {
           "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
         },
+        "courseC_maze_programming5_2021": {
+          "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
+        },
         "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "Ini merupakan tantangan puzzle kamu yang pertama! Puzzle ini sulit dan mungkin perlu dicoba beberapa kali sebelum berhasil.",
+          "courseC_maze_programming7_2": "Blok-blok tersebut terbuat dari batu dan tidak bisa dibuang."
+        },
+        "courseC_maze_programming72022": {
           "courseC_maze_programming7_1": "Ini merupakan tantangan puzzle kamu yang pertama! Puzzle ini sulit dan mungkin perlu dicoba beberapa kali sebelum berhasil.",
           "courseC_maze_programming7_2": "Blok-blok tersebut terbuat dari batu dan tidak bisa dibuang."
         },
@@ -940,7 +1508,14 @@
           "courseC_maze_programming7_1": "Ini merupakan tantangan puzzle kamu yang pertama! Puzzle ini sulit dan mungkin perlu dicoba beberapa kali sebelum berhasil.",
           "courseC_maze_programming7_2": "Blok-blok tersebut terbuat dari batu dan tidak bisa dibuang."
         },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "Ini merupakan tantangan puzzle kamu yang pertama! Puzzle ini sulit dan mungkin perlu dicoba beberapa kali sebelum berhasil.",
+          "courseC_maze_programming7_2": "Blok-blok tersebut terbuat dari batu dan tidak bisa dibuang."
+        },
         "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "Anda hanya punya satu blok yang tersedia di dalam puzzle ini."
+        },
+        "courseC_starWars_loops22022": {
           "courseC_starWars_loops2": "Anda hanya punya satu blok yang tersedia di dalam puzzle ini."
         },
         "courseC_starWars_loops2_2018": {
@@ -952,10 +1527,22 @@
         "courseC_starWars_loops2_2020": {
           "courseC_starWars_loops2": "Anda hanya punya satu blok yang tersedia di dalam puzzle ini."
         },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Anda hanya punya satu blok yang tersedia di dalam puzzle ini."
+        },
         "courseC_starWars_loops2_copy": {
           "courseC_starWars_loops2": "Anda hanya punya satu blok yang tersedia di dalam puzzle ini."
         },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "Anda hanya punya satu blok yang tersedia di dalam puzzle ini."
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Apa pun kode yang Anda masukkan di sini akan mengulang sebanyak perintah Anda, kemudian melanjutkan untuk menyelesaikan program itu."
+        },
         "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "Anda tidak harus menggunakan warna agar puzzle ini benar. Namun jika Anda mau, blok `random color` membuatnya lebih mudah!"
+        },
+        "courseD_artist_nestedLoops1a2022": {
           "courseD_artist_nestedLoops1a_1": "Anda tidak harus menggunakan warna agar puzzle ini benar. Namun jika Anda mau, blok `random color` membuatnya lebih mudah!"
         },
         "courseD_artist_nestedLoops1a_2018": {
@@ -967,6 +1554,9 @@
         "courseD_artist_nestedLoops1a_2020": {
           "courseD_artist_nestedLoops1a_1": "Anda tidak harus menggunakan warna agar puzzle ini benar. Namun jika Anda mau, blok `random color` membuatnya lebih mudah!"
         },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "Anda tidak harus menggunakan warna agar puzzle ini benar. Namun jika Anda mau, blok `random color` membuatnya lebih mudah!"
+        },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11_1": "Anda bisa merubah angka ini.",
           "courseD_artist_ramp11_2": "Klik di sini untuk mengetik berapa kali kode Anda berulang."
@@ -974,6 +1564,9 @@
         "courseD_bee_conditionals2": {
           "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan yang memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.",
           "4_5_Bee_Conditionals_2_2": "Butuh bantuan? Klik disini untuk VIDEO petunjuk!"
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan yang memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang."
         },
         "courseD_bee_conditionals2_2018": {
           "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan yang memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang."
@@ -984,11 +1577,21 @@
         "courseD_bee_conditionals2_2020": {
           "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan yang memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang."
         },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan yang memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang."
+        },
         "courseD_bee_conditionals2_copy": {
           "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan yang memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.",
           "4_5_Bee_Conditionals_2_2": "Butuh bantuan? Klik disini untuk VIDEO petunjuk!"
         },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan yang memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.",
+          "4_5_Bee_Conditionals_2_2": "Butuh bantuan? Klik disini untuk VIDEO petunjuk!"
+        },
         "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Gunakan loop ini untuk mengumpulkan semua nektar (atau madu) dari satu bunga (atau sarang lebah)."
+        },
+        "courseD_bee_conditionals_challenge22022": {
           "courseD_bee_conditionals_challenge2_1": "Gunakan loop ini untuk mengumpulkan semua nektar (atau madu) dari satu bunga (atau sarang lebah)."
         },
         "courseD_bee_conditionals_challenge2_2018": {
@@ -1000,14 +1603,26 @@
         "courseD_bee_conditionals_challenge2_2020": {
           "courseD_bee_conditionals_challenge2_1": "Gunakan loop ini untuk mengumpulkan semua nektar (atau madu) dari satu bunga (atau sarang lebah)."
         },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Gunakan loop ini untuk mengumpulkan semua nektar (atau madu) dari satu bunga (atau sarang lebah)."
+        },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "Gunakan perintah ini untuk memundurkan lebah."
         },
         "courseD_bee_debugging_challenge1a": {
           "courseD_bee_debugging_challenge1_callout1": "Gunakan perintah ini untuk memundurkan lebah."
         },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "Coba sisiri code Anda satu blok sekali tempo."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Coba sisiri code Anda satu blok sekali tempo."
+        },
         "courseD_collector_ramp8": {
           "courseD_collector_ramp8_1": "Gunakan blok ini untuk mengumpulkan satu buah harta karun.  "
+        },
+        "courseD_farmer_while72022": {
+          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `while path ahead` untuk menyelesaikan puzzle ini."
         },
         "courseD_farmer_while7_2018": {
           "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `while path ahead` untuk menyelesaikan puzzle ini."
@@ -1018,11 +1633,23 @@
         "courseD_farmer_while7_2020": {
           "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `while path ahead` untuk menyelesaikan puzzle ini."
         },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `while path ahead` untuk menyelesaikan puzzle ini."
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
+        },
         "courseD_maze_intro4_2019": {
           "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
         },
         "courseD_maze_intro4_2020": {
           "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
+        },
+        "courseD_maze_intro5a2022": {
+          "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
         },
         "courseD_maze_intro5a_2019": {
           "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
@@ -1030,7 +1657,13 @@
         "courseD_maze_intro5a_2020": {
           "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
         },
+        "courseD_maze_intro5a_2021": {
+          "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
+        },
         "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
+        },
+        "courseD_maze_ramp12022": {
           "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
         },
         "courseD_maze_ramp1_2018": {
@@ -1042,7 +1675,13 @@
         "courseD_maze_ramp1_2020": {
           "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
         },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
+        },
         "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
+        },
+        "courseD_maze_ramp22022": {
           "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
         },
         "courseD_maze_ramp2_2018": {
@@ -1054,9 +1693,16 @@
         "courseD_maze_ramp2_2020": {
           "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
         },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
+        },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
           "stone_block_2": "Blok-blok warna abu-abu terbuat dari batu dan tidak bisa dibuang."
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
+          "stone_block_2": "Blok warna abu-abu tidak bisa dibuang."
         },
         "courseD_maze_ramp3_2018": {
           "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
@@ -1067,6 +1713,10 @@
           "stone_block_2": "Blok warna abu-abu tidak bisa dibuang."
         },
         "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
+          "stone_block_2": "Blok warna abu-abu tidak bisa dibuang."
+        },
+        "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
           "stone_block_2": "Blok warna abu-abu tidak bisa dibuang."
         },
@@ -1085,6 +1735,9 @@
         "courseD_maze_ramp5": {
           "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
         },
+        "courseD_maze_ramp52022": {
+          "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
+        },
         "courseD_maze_ramp5_2018": {
           "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
         },
@@ -1092,6 +1745,9 @@
           "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
         },
         "courseD_maze_ramp5_2020": {
+          "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
+        },
+        "courseD_maze_ramp5_2021": {
           "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
         },
         "courseD_maze_ramp5a": {
@@ -1139,10 +1795,20 @@
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_1": "Ini merupakan tantangan puzzle kamu yang pertama! Puzzle ini sulit dan mungkin perlu dicoba beberapa kali sebelum berhasil."
         },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Anda bisa merubah angka ini.",
+          "courseE_artist_ramp8_2": "Klik di sini untuk mengetik berapa kali kode Anda berulang."
+        },
         "courseE_aboutme_2": {
           "": "Klik disini!"
         },
+        "courseE_aboutme_22022": {
+          "": "Klik di sini untuk menambahkan kostum ke proyekmu."
+        },
         "courseE_aboutme_2_2020": {
+          "": "Klik disini!"
+        },
+        "courseE_aboutme_2_2021": {
           "": "Klik disini!"
         },
         "courseE_artist_functions1": {
@@ -1151,7 +1817,13 @@
         "courseE_artist_functions1_copy": {
           "courseD_artist_functions1_1": "Ayo kita mulai dengan menggunakan blok ini untuk membantu membuat segi empat pertama."
         },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "Ayo kita mulai dengan menggunakan blok ini untuk membantu membuat segi empat pertama."
+        },
         "courseE_artist_functions2": {
+          "courseD_artist_functions2_1": "Ketika blok hijau ini bekerja, semua kode yang berfungsi akan bekerja. Apa yang harus dikerjakan oleh artis setelah menggambar kotak pertama?"
+        },
+        "courseE_artist_functions22022": {
           "courseD_artist_functions2_1": "Ketika blok hijau ini bekerja, semua kode yang berfungsi akan bekerja. Apa yang harus dikerjakan oleh artis setelah menggambar kotak pertama?"
         },
         "courseE_artist_functions2_2018": {
@@ -1163,10 +1835,19 @@
         "courseE_artist_functions2_2020": {
           "courseD_artist_functions2_1": "Ketika blok hijau ini bekerja, semua kode yang berfungsi akan bekerja. Apa yang harus dikerjakan oleh artis setelah menggambar kotak pertama?"
         },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Ketika blok hijau ini bekerja, semua kode yang berfungsi akan bekerja. Apa yang harus dikerjakan oleh artis setelah menggambar kotak pertama?"
+        },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_1": "Ketika blok hijau ini bekerja, semua kode yang berfungsi akan bekerja. Apa yang harus dikerjakan oleh artis setelah menggambar kotak pertama?"
         },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "Ketika blok hijau ini bekerja, semua kode yang berfungsi akan bekerja. Apa yang harus dikerjakan oleh artis setelah menggambar kotak pertama?"
+        },
         "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "Blok-blok kamu untuk membuat fungsi telah dipindahkan dengan label ini di dalam kotak perlengkapan."
+        },
+        "courseE_artist_functions8a2022": {
           "courseD_artist_functions8_1": "Blok-blok kamu untuk membuat fungsi telah dipindahkan dengan label ini di dalam kotak perlengkapan."
         },
         "courseE_artist_functions8a_2018": {
@@ -1178,7 +1859,14 @@
         "courseE_artist_functions8a_2020": {
           "courseD_artist_functions8_1": "Blok-blok kamu untuk membuat fungsi telah dipindahkan dengan label ini di dalam kotak perlengkapan."
         },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Blok-blok kamu untuk membuat fungsi telah dipindahkan dengan label ini di dalam kotak perlengkapan."
+        },
         "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "Lanjutkan program ini dengan menambahkan lebih banyak kode di bagian bawah.",
+          "courseE_artist_functions_challenge1_callout2": "Jika Anda tidak menyukai desain ini, ubah desain ini menjadi apapun yang Anda inginkan!"
+        },
+        "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_callout1": "Lanjutkan program ini dengan menambahkan lebih banyak kode di bagian bawah.",
           "courseE_artist_functions_challenge1_callout2": "Jika Anda tidak menyukai desain ini, ubah desain ini menjadi apapun yang Anda inginkan!"
         },
@@ -1194,7 +1882,15 @@
           "courseE_artist_functions_challenge1_callout1": "Lanjutkan program ini dengan menambahkan lebih banyak kode di bagian bawah.",
           "courseE_artist_functions_challenge1_callout2": "Jika Anda tidak menyukai desain ini, ubah desain ini menjadi apapun yang Anda inginkan!"
         },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Lanjutkan program ini dengan menambahkan lebih banyak kode di bagian bawah.",
+          "courseE_artist_functions_challenge1_callout2": "Jika Anda tidak menyukai desain ini, ubah desain ini menjadi apapun yang Anda inginkan!"
+        },
         "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Lanjutkan program ini dengan menambahkan lebih banyak kode di bagian bawah.",
+          "courseE_artist_functions_challenge2_callout2": "Jika Anda tidak menyukai desain ini, ubah desain ini menjadi apapun yang Anda inginkan!"
+        },
+        "courseE_artist_functions_challenge22022": {
           "courseE_artist_functions_challenge2_callout1": "Lanjutkan program ini dengan menambahkan lebih banyak kode di bagian bawah.",
           "courseE_artist_functions_challenge2_callout2": "Jika Anda tidak menyukai desain ini, ubah desain ini menjadi apapun yang Anda inginkan!"
         },
@@ -1210,6 +1906,10 @@
           "courseE_artist_functions_challenge2_callout1": "Lanjutkan program ini dengan menambahkan lebih banyak kode di bagian bawah.",
           "courseE_artist_functions_challenge2_callout2": "Jika Anda tidak menyukai desain ini, ubah desain ini menjadi apapun yang Anda inginkan!"
         },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Lanjutkan program ini dengan menambahkan lebih banyak kode di bagian bawah.",
+          "courseE_artist_functions_challenge2_callout2": "Jika Anda tidak menyukai desain ini, ubah desain ini menjadi apapun yang Anda inginkan!"
+        },
         "courseE_artist_ramp8": {
           "courseE_artist_ramp8_1": "Anda bisa merubah angka ini.",
           "courseE_artist_ramp8_2": "Klik di sini untuk mengetik berapa kali kode Anda berulang."
@@ -1221,6 +1921,12 @@
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_2": "Kali ini kotak peralatan disusun agak sedikit berbeda! Klik pada kategori-kategori yang berbeda untuk melihat blok apa yang kamu miliki."
         },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "Kali ini kotak peralatan disusun agak sedikit berbeda! Klik pada kategori-kategori yang berbeda untuk melihat blok apa yang kamu miliki."
+        },
+        "courseE_farmer_functions132022": {
+          "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
+        },
         "courseE_farmer_functions13_2018": {
           "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
         },
@@ -1228,6 +1934,9 @@
           "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
         },
         "courseE_farmer_functions13_2020": {
+          "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
+        },
+        "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
         },
         "courseE_farmer_functions1_2018": {
@@ -1239,7 +1948,13 @@
         "courseE_farmer_functions1_2020": {
           "courseE_farmer_functions1_2": "Kali ini kotak peralatan disusun agak sedikit berbeda! Klik pada kategori-kategori yang berbeda untuk melihat blok apa yang kamu miliki."
         },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Kali ini kotak peralatan disusun agak sedikit berbeda! Klik pada kategori-kategori yang berbeda untuk melihat blok apa yang kamu miliki."
+        },
         "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
+        },
+        "courseE_farmer_functions1a2022": {
           "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
         },
         "courseE_farmer_functions1a_2018": {
@@ -1251,7 +1966,13 @@
         "courseE_farmer_functions1a_2020": {
           "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
         },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
+        },
         "courseE_farmer_functions2b": {
+          "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
+        },
+        "courseE_farmer_functions2b2022": {
           "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
         },
         "courseE_farmer_functions2b_2018": {
@@ -1263,13 +1984,97 @@
         "courseE_farmer_functions2b_2020": {
           "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
         },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
+        },
         "courseE_playLab_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Blok ini memungkinkan Anda memindahkan aktor kebagian yang berbeda di dalam ruang permainan."
         },
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "Bawalah aktor ke bendera ini untuk maju ke tahap selanjutnya."
         },
+        "courseF_apps_aquarium": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
         "courseF_artist_for1": {
+          "courseF_artist_for1_1": "Toolbox berada di mode \"category\" untuk memberi ruang lebih besar bagi kode Anda. Loop`for` ada di sini."
+        },
+        "courseF_artist_for12022": {
           "courseF_artist_for1_1": "Toolbox berada di mode \"category\" untuk memberi ruang lebih besar bagi kode Anda. Loop`for` ada di sini."
         },
         "courseF_artist_for1_2018": {
@@ -1279,6 +2084,9 @@
           "courseF_artist_for1_1": "Toolbox berada di mode \"category\" untuk memberi ruang lebih besar bagi kode Anda. Loop`for` ada di sini."
         },
         "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "Toolbox berada di mode \"category\" untuk memberi ruang lebih besar bagi kode Anda. Loop`for` ada di sini."
+        },
+        "courseF_artist_for1_2021": {
           "courseF_artist_for1_1": "Toolbox berada di mode \"category\" untuk memberi ruang lebih besar bagi kode Anda. Loop`for` ada di sini."
         },
         "courseF_artist_fwp1": {
@@ -1335,6 +2143,9 @@
         "courseF_bee_for4": {
           "courseF_bee_for4_1": "Anda akan menemukan loop 'for` di sini!"
         },
+        "courseF_bee_for42022": {
+          "courseF_bee_for4_1": "Anda akan menemukan loop 'for` di sini!"
+        },
         "courseF_bee_for4_2018": {
           "courseF_bee_for4_1": "Anda akan menemukan loop 'for` di sini!"
         },
@@ -1344,7 +2155,13 @@
         "courseF_bee_for4_2020": {
           "courseF_bee_for4_1": "Anda akan menemukan loop 'for` di sini!"
         },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Anda akan menemukan loop 'for` di sini!"
+        },
         "courseF_bee_for9": {
+          "courseF_bee_for9_1": "Anda akan menemukan blok `math` disini."
+        },
+        "courseF_bee_for92022": {
           "courseF_bee_for9_1": "Anda akan menemukan blok `math` disini."
         },
         "courseF_bee_for9_2018": {
@@ -1354,6 +2171,9 @@
           "courseF_bee_for9_1": "Anda akan menemukan blok `math` disini."
         },
         "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "Anda akan menemukan blok `math` disini."
+        },
+        "courseF_bee_for9_2021": {
           "courseF_bee_for9_1": "Anda akan menemukan blok `math` disini."
         },
         "courseF_bee_functions2": {
@@ -1390,6 +2210,72 @@
         "courseF_bee_variables_1_2020": {
           "courseF_bee_functions_1_2018_1": "Anda dapat menemukan variabel Anda di bawah sini!"
         },
+        "courseF_bee_variables_1a2022": {
+          "courseF_bee_functions_1_2018_1": "Anda dapat menemukan variabel Anda di bawah sini!"
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Anda dapat menemukan variabel Anda di bawah sini!"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Coba ubah ketika ke selagi."
+        },
+        "courseF_events_choice_penguin_-2022-2": {
+          "whenToWhile": "Coba ubah ketika ke selagi."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Blok-blok baru di sini!"
+        },
+        "courseF_events_conflict_-2022-2": {
+          "stops_block": "Blok-blok baru di sini!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Gunakan blok event baru yang ada di sini."
+        },
+        "courseF_events_key_-2022-2": {
+          "whenKey": "Gunakan blok event baru yang ada di sini."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Blok ini salah urutannya."
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Blok ini salah urutannya."
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Klik di sini untuk mengetahui cara kerja perilaku ini."
+        },
+        "courseF_events_predict_-2022-2": {
+          "behaviors_edit": "Klik di sini untuk mengetahui cara kerja perilaku ini."
+        },
+        "courseF_events_time": {
+          "events_category": "Klik di sini untuk membuka kategori Event."
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "Klik di sini untuk membuka kategori Event."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
+        },
+        "courseF_label_predict_-2022-2": {
+          "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
+        },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_1": "Toolbox telah disusun ke dalam kategori untuk mempermudah menemukan blok yang Anda butuhkan."
         },
@@ -1402,6 +2288,94 @@
         "courseF_playlab_variables7c": {
           "courseF_playlab_variables7c_1": "Temukan blok `ask` di sini!"
         },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Klik di sini untuk membuka kategori Perilaku."
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "Klik di sini untuk membuka kategori Perilaku."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Klik di sini untuk membuka kategori Sprite."
+        },
+        "courseF_sprites_make_-2022-2": {
+          "sprites_category": "Klik di sini untuk membuka kategori Sprite."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Klik di sini untuk membuka kategori Lokasi."
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "Klik di sini untuk membuka kategori Lokasi."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Cari blok baru di sini."
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "Cari blok baru di sini."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Cari blok baru di sini!"
+        },
+        "courseF_text_answer_-2022-2": {
+          "answered_block": "Cari blok baru di sini!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Apakah latar belakang berubah warna ketika Anda menjawab pertanyaan? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "text_color_finish": "Apakah latar belakang berubah warna ketika Anda menjawab pertanyaan? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Apakah Anda sudah selesai? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "Apakah Anda sudah selesai? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
+        },
+        "courseF_text_choice_title": {
+          "text_answer_finish": "Apakah layar judul muncul selama 3 detik? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi.",
+          "title_block": "Cari dua blok baru di sini!"
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "text_answer_finish": "Apakah layar judul muncul selama 3 detik? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi.",
+          "title_block": "Cari dua blok baru di sini!"
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Cari blok-blok baru di sini!"
+        },
+        "courseF_text_concat_-2022-2": {
+          "join_blocks": "Cari blok-blok baru di sini!"
+        },
+        "courseF_text_events": {
+          "events_category": "Klik di sini untuk membuka kategori Event."
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "Klik di sini untuk membuka kategori Event."
+        },
+        "courseF_text_print": {
+          "print_block": "Temukan blok print di sini!",
+          "text_print_finish": "Apakah pesan Anda tampil di atas? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
+        },
+        "courseF_text_print_-2022-2": {
+          "print_block": "Temukan blok print di sini!",
+          "text_print_finish": "Apakah pesan Anda tampil di atas? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Temukan blok prompt di sini!"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "prompt_block": "Temukan blok prompt di sini!"
+        },
+        "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
+        },
+        "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
+        },
+        "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Setelah menggabungkan semua blok, tekan \"Jalankan\" untuk memulai program Anda."
+        },
         "coursea_maze_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Setelah menggabungkan semua blok, tekan \"Jalankan\" untuk memulai program Anda."
         },
@@ -1411,10 +2385,29 @@
         "coursea_maze_ramp1_2020": {
           "grade2_CaringForNewPet_0_1": "Setelah menggabungkan semua blok, tekan \"Jalankan\" untuk memulai program Anda."
         },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Setelah menggabungkan semua blok, tekan \"Jalankan\" untuk memulai program Anda."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite.",
+          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara."
+        },
+        "express_maze_debugging92022": {
+          "express_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
+        },
         "express_maze_debugging9_2019": {
           "express_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
         },
         "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
+        },
+        "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
         },
         "frozen circle function with parameter": {
@@ -1437,8 +2430,8 @@
           "snowflake_dropdown": "Gunakan drop-down untuk membuat kepingan salju yang berbeda!"
         },
         "frozen line": {
-          "run": "Tekan \"Jalankan\" untuk mencoba program anda!",
-          "move_elsa_forward": "Tarik blok \"Move Forward\" dan pasang di bawah blok \"When Run\" untuk membuat Elsa maju"
+          "move_elsa_forward": "Tarik blok \"Move Forward\" dan pasang di bawah blok \"When Run\" untuk membuat Elsa maju",
+          "run": "Tekan \"Jalankan\" untuk mencoba program anda!"
         },
         "frozen perpendicular": {
           "turn_elsa": "Gunakan block \"Turn\" untuk membuat Elsa berputar. Angka dalam drop-down menentukan jumlah putaran Elsa"
@@ -1470,347 +2463,6 @@
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "Perhatikan bahwa kini blok memiliki cara baru untuk memasukkan bilangan. Blok `math` tersebut bisa ditarik dan dipindah-pindahkan!"
         },
-        "courseC_video_angles": {
-          "courseD_maze_ramp6_1": "Apa pun kode yang Anda masukkan di sini akan mengulang sebanyak perintah Anda, kemudian melanjutkan untuk menyelesaikan program itu."
-        },
-        "courseD_video_nestedLoopsArtist": {
-          "courseE_artist_ramp8_1": "Anda bisa merubah angka ini.",
-          "courseE_artist_ramp8_2": "Klik di sini untuk mengetik berapa kali kode Anda berulang."
-        },
-        "outbreak2": {
-          "minitoolbox": "Klik di sini untuk memperluas blok.",
-          "pointerlocation": "Tarik blok subject ke sini."
-        },
-        "outbreak7": {
-          "costumes_callout": "Klik untuk membuat kostum baru"
-        },
-        "CourseD_Dance_2020_01_2021": {
-          "dance_callout_01": "Add this block to your program!"
-        },
-        "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "Tambahkan blok ini ke program Anda.",
-          "arrow_buttons": "Tekan tombol panah untuk mengontrol penari Anda."
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "Tambahkan blok ini ke program Anda!"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "dance_callout_05": "Tambahkan event baru ke program Anda."
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "dance_party_11_5_groups": "Blok baru!"
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "setprop_hint": "Blok baru!"
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "new_block_3": "Blok baru!",
-          "new_block_4": "Blok baru!"
-        },
-        "CourseF_outbreak2": {
-          "minitoolbox": "Klik di sini untuk memperluas blok.",
-          "pointerlocation": "Tarik blok subject ke sini."
-        },
-        "CourseF_outbreak7": {
-          "costumes_callout": "Klik untuk membuat kostum baru"
-        },
-        "Fish Tank 3-validated_2021": {
-          "spritelab_comment": "Gunakan blok ini untuk membuat catatan untuk Anda atau guru Anda tentang cara kerja kode."
-        },
-        "Function intro Ryan_2021": {
-          "Function_intro_Ryan_1": "Instruksi kecil ini memberi tahu komputer untuk menjalankan sebagian BESAR kode dengan nama yang sama di ruang kerja."
-        },
-        "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "Ini adalah loop `repeat`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
-        },
-        "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Agent dapat mengapung di atas air, tapi pemain tidak dapat!"
-        },
-        "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "Anda tidak dapat membuang blok ini, tapi Anda dapat menyuntingnya!"
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_1": "Agent dapat mengapung di atas lahar, tetapi Steve dan Alex tidak dapat!"
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Kami meletakkan beberapa balok di sini agar kamu dapat memulainya dengan mudah"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Kode ini akan mulai membangun rumah kamu. Dapatkah kamu menyelesaikannya?"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Klik \"Run\" untuk mencoba program kamu",
-          "craft_drag_block_callout": "Tarik blok \"move forward\" dan pasang di bawah blok lain"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Ulangi tindakan dengan menempatkan balok di dalam sini"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Kode ini akan memeriksa lava, dapatkah kamu menambahkan perintah untuk maju?"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "Tambang besi ini!"
-        },
-        "courseA_artist_loops4_2021": {
-          "courseA_artist_loops4_1": "Angka ini memberitahu anda seberapa banyak blok yang dapat anda gunakan dalam puzzle ini."
-        },
-        "courseA_artist_loops7_2021": {
-          "courseA_artist_loops7_1": "Angka ini berarti bahwa hanya satu dari jenis blok ini yang dapat digunakan di jawaban akhir."
-        },
-        "courseA_artist_loops8_2021": {
-          "courseA_artist_loops8_1": "Apakah anda tahu bahwa anda bisa menggambar ulang sebuah garis kapan pun anda perlu?"
-        },
-        "courseA_collector_loops1_2021": {
-          "courseA_collector_loops1_1": "Gunakan blok ini untuk mengumpulkan harta karun."
-        },
-        "courseA_collector_loops3_2021": {
-          "gradek_adventurer_loops2_1": "Angka ini memberitahu anda seberapa banyak blok yang dapat anda gunakan dalam puzzle ini."
-        },
-        "courseA_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
-        },
-        "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_1": "Klik icon bola lampu saat anda membutuhkan petunjuk!"
-        },
-        "courseA_playLab_events4_2021": {
-          "courseA_playlab_events4_callout1": "Ini merupakan satu seruan"
-        },
-        "courseA_playLab_events5_2021": {
-          "courseA_playLab_events5_1": "Klik disini untuk mengubah arah panah event."
-        },
-        "courseA_playLab_events6_2021": {
-          "courseA_playLab_events6_1": "Hal ini akan memungkinkan anda untuk memilih sebuah suara secara \"acak\", yang berarti anda tidak akan tahu suara apa yang akan anda dapatkan sampai anda mendengarnya!"
-        },
-        "courseB_Scrat_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
-        },
-        "courseB_Scrat_ramp3a_2021": {
-          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
-        },
-        "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut di dalam toolbox. Bagaimana cara Anda menggunakannya?"
-        },
-        "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_1": "Gunakan blok ini untuk mengumpulkan harta karun."
-        },
-        "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1": "Klik icon bola lampu saat anda membutuhkan petunjuk!"
-        },
-        "courseB_playlab_events6_2021": {
-          "courseB_playlab_events6_a": "Gunakan panah warna hijau untuk merubah arah."
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "courseE_playLab_scaffold3_1": "Bawalah aktor ke bendera ini untuk maju ke tahap selanjutnya."
-        },
-        "courseC_PlayLab_events8_2021": {
-          "courseC_PlayLab_events8_callout1": "Gunakan blok ini ketika Waddles dan Chomp bersentuhan!"
-        },
-        "courseC_PlayLab_events_challenge1_2021": {
-          "courseC_PlayLab_events_challenge1_1": "Blok ini memungkinkan Anda memindahkan aktor kebagian yang berbeda di dalam ruang permainan."
-        },
-        "courseC_artist_loops1a_2021": {
-          "jumpto_callout": "Blok ini sangat penting untuk proyek ini. Pastikan untuk menggunakannya!"
-        },
-        "courseC_artist_loops1b_2021": {
-          "sticker2": "Tambahkan ini di tengah program Anda."
-        },
-        "courseC_collector_prog1_2021": {
-          "courseC_collector_prog1_1": "Apakah Anda melihat beberapa blok baru di toolbox? Jangan khawatir, kami akan tunjukkan cara menggunakannya dalam pelajaran lain."
-        },
-        "courseC_collector_prog7_2021": {
-          "courseC_collector_prog7_1": "Anda bisa mengambil lebih banyak blok dari dalam toolbox jika anda membutuhkannya!"
-        },
-        "courseC_harvester_loops1_2021": {
-          "courseC_harvester_loops1_callout1": "Angka empat pada labu menandakan bahwa ada empat labu yang bisa diambil."
-        },
-        "courseC_maze_debugging5_2021": {
-          "courseC_maze_debugging5_1": "Blok-blok tersebut terkunci dan tidak dapat dihapus!"
-        },
-        "courseC_maze_debugging9_2021": {
-          "courseC_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
-        },
-        "courseC_maze_programming1_2021": {
-          "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
-        },
-        "courseC_maze_programming2_2021": {
-          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
-        },
-        "courseC_maze_programming3_2021": {
-          "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
-          "courseC_maze_programming3_3": "Blok-blok tersebut adalah batu dan tidak bisa dibuang."
-        },
-        "courseC_maze_programming4_2021": {
-          "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
-        },
-        "courseC_maze_programming5_2021": {
-          "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
-        },
-        "courseC_maze_programming7_2021": {
-          "courseC_maze_programming7_1": "Ini merupakan tantangan puzzle kamu yang pertama! Puzzle ini sulit dan mungkin perlu dicoba beberapa kali sebelum berhasil.",
-          "courseC_maze_programming7_2": "Blok-blok tersebut terbuat dari batu dan tidak bisa dibuang."
-        },
-        "courseC_starWars_loops2_2021": {
-          "courseC_starWars_loops2": "Anda hanya punya satu blok yang tersedia di dalam puzzle ini."
-        },
-        "courseC_starWars_loops2_dani": {
-          "courseC_starWars_loops2": "Anda hanya punya satu blok yang tersedia di dalam puzzle ini."
-        },
-        "courseD_artist_nestedLoops1a_2021": {
-          "courseD_artist_nestedLoops1a_1": "Anda tidak harus menggunakan warna agar puzzle ini benar. Namun jika Anda mau, blok `random color` membuatnya lebih mudah!"
-        },
-        "courseD_bee_conditionals2_2021": {
-          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan yang memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang."
-        },
-        "courseD_bee_conditionals2_dani": {
-          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan yang memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.",
-          "4_5_Bee_Conditionals_2_2": "Butuh bantuan? Klik disini untuk VIDEO petunjuk!"
-        },
-        "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge2_1": "Gunakan loop ini untuk mengumpulkan semua nektar (atau madu) dari satu bunga (atau sarang lebah)."
-        },
-        "courseD_farmer_while7_2021": {
-          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `while path ahead` untuk menyelesaikan puzzle ini."
-        },
-        "courseD_maze_intro4_2021": {
-          "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
-        },
-        "courseD_maze_intro5a_2021": {
-          "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
-        },
-        "courseD_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
-        },
-        "courseD_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
-        },
-        "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
-          "stone_block_2": "Blok warna abu-abu tidak bisa dibuang."
-        },
-        "courseD_maze_ramp5_2021": {
-          "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
-        },
-        "courseE_aboutme_2_2021": {
-          "": "Klik disini!"
-        },
-        "courseE_artist_functions1_dani": {
-          "courseD_artist_functions1_1": "Ayo kita mulai dengan menggunakan blok ini untuk membantu membuat segi empat pertama."
-        },
-        "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_1": "Ketika blok hijau ini bekerja, semua kode yang berfungsi akan bekerja. Apa yang harus dikerjakan oleh artis setelah menggambar kotak pertama?"
-        },
-        "courseE_artist_functions2_dani": {
-          "courseD_artist_functions2_1": "Ketika blok hijau ini bekerja, semua kode yang berfungsi akan bekerja. Apa yang harus dikerjakan oleh artis setelah menggambar kotak pertama?"
-        },
-        "courseE_artist_functions8a_2021": {
-          "courseD_artist_functions8_1": "Blok-blok kamu untuk membuat fungsi telah dipindahkan dengan label ini di dalam kotak perlengkapan."
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "courseE_artist_functions_challenge1_callout1": "Lanjutkan program ini dengan menambahkan lebih banyak kode di bagian bawah.",
-          "courseE_artist_functions_challenge1_callout2": "Jika Anda tidak menyukai desain ini, ubah desain ini menjadi apapun yang Anda inginkan!"
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "courseE_artist_functions_challenge2_callout1": "Lanjutkan program ini dengan menambahkan lebih banyak kode di bagian bawah.",
-          "courseE_artist_functions_challenge2_callout2": "Jika Anda tidak menyukai desain ini, ubah desain ini menjadi apapun yang Anda inginkan!"
-        },
-        "courseE_farmer_functions13_2021": {
-          "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
-        },
-        "courseE_farmer_functions1_2021": {
-          "courseE_farmer_functions1_2": "Kali ini kotak peralatan disusun agak sedikit berbeda! Klik pada kategori-kategori yang berbeda untuk melihat blok apa yang kamu miliki."
-        },
-        "courseE_farmer_functions1a_2021": {
-          "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
-        },
-        "courseE_farmer_functions2b_2021": {
-          "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
-        },
-        "courseF_artist_for1_2021": {
-          "courseF_artist_for1_1": "Toolbox berada di mode \"category\" untuk memberi ruang lebih besar bagi kode Anda. Loop`for` ada di sini."
-        },
-        "courseF_bee_for4_2021": {
-          "courseF_bee_for4_1": "Anda akan menemukan loop 'for` di sini!"
-        },
-        "courseF_bee_for9_2021": {
-          "courseF_bee_for9_1": "Anda akan menemukan blok `math` disini."
-        },
-        "courseF_bee_variables_1a_2021": {
-          "courseF_bee_functions_1_2018_1": "Anda dapat menemukan variabel Anda di bawah sini!"
-        },
-        "courseF_events_predict": {
-          "behaviors_edit": "Klik di sini untuk mengetahui cara kerja perilaku ini."
-        },
-        "coursea_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Setelah menggabungkan semua blok, tekan \"Jalankan\" untuk memulai program Anda."
-        },
-        "express_maze_debugging9_2021": {
-          "express_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
-        },
-        "helloworld_animals_costumes": {
-          "hello_world_new": "Blok baru!"
-        },
-        "helloworld_animals_sizes": {
-          "hello_world_new": "Blok baru!",
-          "hello_world_new_block": "Blok baru!!!!"
-        },
-        "helloworld_animals_sounds": {
-          "hello_world_new": "Blok baru!"
-        },
-        "helloworld_emoji_costumes": {
-          "hello_world_new": "Blok baru!"
-        },
-        "helloworld_emoji_sizes": {
-          "hello_world_new": "Blok baru!",
-          "hello_world_new_block": "Blok baru!"
-        },
-        "helloworld_emoji_sounds": {
-          "hello_world_new": "Blok baru!"
-        },
-        "helloworld_food_costumes": {
-          "hello_world_new": "Blok baru!"
-        },
-        "helloworld_food_sizes": {
-          "hello_world_new": "Blok baru!",
-          "hello_world_new_block": "Blok baru!"
-        },
-        "helloworld_food_sounds": {
-          "hello_world_new": "Blok baru!"
-        },
-        "helloworld_retro_costumes": {
-          "hello_world_new": "Blok baru!"
-        },
-        "helloworld_retro_sizes": {
-          "hello_world_new": "Blok baru!",
-          "hello_world_new_block": "Blok baru!"
-        },
-        "helloworld_retro_sounds": {
-          "hello_world_new": "Blok baru!"
-        },
-        "poetry_hoc_addSprites": {
-          "poetry_sprite": "Blok baru!"
-        },
-        "poetry_hoc_events1": {
-          "poetry_event": "Blok baru!",
-          "poetry_foreground": "Blok baru!"
-        },
-        "poetry_hoc_freeplay": {
-          "poetry_burst": "Blok baru!",
-          "poetry_multiple_sprites": "Blok baru!",
-          "poetry_new_block": "Blok baru!",
-          "poetry_selector": "Pilih puisi apapun, atau masukkan puisimu sendiri!"
-        },
-        "poetry_hoc_sounds": {
-          "poetry_sound": "Blok baru!",
-          "poetry_music": "Blok baru!"
-        },
-        "poetry_hoc_spriteBehaviors": {
-          "poetry_sprite_begins": "Blok baru!",
-          "poetry_sprite_stops": "Blok baru!"
-        },
-        "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "Blok baru!",
-          "poetry_remove_sprite": "Blok baru!"
-        },
         "helloworld_animals_backgrounds": {
           "hw_background_location": "Gunakan blok ini untuk mengatur latar belakang baru."
         },
@@ -1819,6 +2471,9 @@
         },
         "helloworld_animals_click": {
           "hw_Run": "Klik di sini untuk menjalankan kodenya."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Blok baru!"
         },
         "helloworld_animals_events": {
           "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
@@ -1833,8 +2488,15 @@
           "pin": "pin"
         },
         "helloworld_animals_say": {
-          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara.",
-          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite."
+          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite.",
+          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara."
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Blok baru!",
+          "hello_world_new_block": "Blok baru!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Blok baru!"
         },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "Gunakan blok ini untuk mengatur latar belakang baru."
@@ -1844,6 +2506,9 @@
         },
         "helloworld_emoji_click": {
           "hw_Run": "Klik di sini untuk menjalankan kodenya."
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Blok baru!"
         },
         "helloworld_emoji_events": {
           "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
@@ -1858,33 +2523,120 @@
           "pin": "pin"
         },
         "helloworld_emoji_say": {
-          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara.",
-          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite."
+          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite.",
+          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara."
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Blok baru!",
+          "hello_world_new_block": "Blok baru!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Blok baru!"
         },
         "helloworld_food_backgrounds": {
+          "hw_background_location": "Gunakan blok ini untuk mengatur latar belakang baru."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Gunakan blok ini untuk mengatur latar belakang baru."
+        },
+        "helloworld_food_backgrounds_space-2022": {
           "hw_background_location": "Gunakan blok ini untuk mengatur latar belakang baru."
         },
         "helloworld_food_behaviors": {
           "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu perilaku berikut."
         },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu perilaku berikut."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu perilaku berikut."
+        },
         "helloworld_food_click": {
           "hw_Run": "Klik di sini untuk menjalankan kodenya."
         },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Klik di sini untuk menjalankan kodenya."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Klik di sini dulu!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Blok baru!"
+        },
         "helloworld_food_events": {
+          "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
+        },
+        "helloworld_food_events_space-2022": {
           "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
         },
         "helloworld_food_freeplay": {
           "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
         },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
+        },
         "helloworld_food_location": {
+          "pin": "pin"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_location_space-2022": {
           "pin": "pin"
         },
         "helloworld_food_multi": {
           "pin": "pin"
         },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "pin"
+        },
         "helloworld_food_say": {
-          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara.",
-          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite."
+          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite.",
+          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara."
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite.",
+          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite.",
+          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara."
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Blok baru!",
+          "hello_world_new_block": "Blok baru!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Blok baru!",
+          "hello_world_new_block": "Blok baru!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Blok baru!",
+          "hello_world_new_block": "Blok baru!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Blok baru!"
         },
         "helloworld_retro_backgrounds": {
           "hw_background_location": "Gunakan blok ini untuk mengatur latar belakang baru."
@@ -1894,6 +2646,9 @@
         },
         "helloworld_retro_click": {
           "hw_Run": "Klik di sini untuk menjalankan kodenya."
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Blok baru!"
         },
         "helloworld_retro_events": {
           "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
@@ -1908,807 +2663,52 @@
           "pin": "pin"
         },
         "helloworld_retro_say": {
-          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara.",
-          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite."
+          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite.",
+          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara."
         },
-        "poetry_hoc_backgroundEffects": {
-          "poetry_background": "Temukan blok kode di sini. ",
-          "pause_button": "Tes animasimu dengan tombol ini.",
-          "run_button": "Tes animasimu dengan tombol ini."
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Blok baru!",
+          "hello_world_new_block": "Blok baru!"
         },
-        "Virtual Pet 2_2021": {
-          "vp_costumes": "Klik di sini untuk menambahkan kostum baru ke proyek Anda!"
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Blok baru!"
         },
-        "Virtual Pet 6_2021": {
-          "vp_costumes": "Klik di sini untuk menambahkan kostum baru ke proyek Anda!"
-        },
-        "courseA_EOC_playlab_animals": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people": {
-          "question_mark": "?"
-        },
-        "courseC_artist_prog2_2021": {
-          "slider": "Anda dapat memperlambat program di sini."
-        },
-        "courseD_bee_nestedLoops1a_2021": {
-          "stepButton": "Coba sisiri code Anda satu blok sekali tempo."
-        },
-        "courseF_apps_aquarium": {
-          "run_button": "Pertama kali tekan tombol run!",
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_card": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_chatbot": {
-          "run_button": "Pertama kali tekan tombol run!",
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_collector": {
-          "run_button": "Pertama kali tekan tombol run!",
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_madlib": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_pet": {
-          "run_button": "Pertama kali tekan tombol run!",
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_editable_card": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_editable_chatbot": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_editable_madlib": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_events_choice_penguin": {
-          "whenToWhile": "Coba ubah ketika ke selagi."
-        },
-        "courseF_events_conflict": {
-          "stops_block": "Blok-blok baru di sini!"
-        },
-        "courseF_events_key": {
-          "whenKey": "Gunakan blok event baru yang ada di sini."
-        },
-        "courseF_events_practice_reorder": {
-          "stopAllBug": "Blok ini salah urutannya."
-        },
-        "courseF_events_time": {
-          "events_category": "Klik di sini untuk membuka kategori Event."
-        },
-        "courseF_label_predict": {
-          "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
-        },
-        "courseF_sprites_behaviors": {
-          "behaviors_category": "Klik di sini untuk membuka kategori Perilaku."
-        },
-        "courseF_sprites_make": {
-          "sprites_category": "Klik di sini untuk membuka kategori Sprite."
-        },
-        "courseF_sprites_positioning": {
-          "locations_category": "Klik di sini untuk membuka kategori Lokasi."
-        },
-        "courseF_sprites_properties": {
-          "sprites_category2": "Cari blok baru di sini."
-        },
-        "courseF_text_answer": {
-          "answered_block": "Cari blok baru di sini!"
-        },
-        "courseF_text_choice_color": {
-          "text_color_finish": "Apakah latar belakang berubah warna ketika Anda menjawab pertanyaan? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
-        },
-        "courseF_text_choice_conversation": {
-          "text_generic_finish": "Apakah Anda sudah selesai? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
-        },
-        "courseF_text_choice_title": {
-          "title_block": "Cari dua blok baru di sini!",
-          "text_answer_finish": "Apakah layar judul muncul selama 3 detik? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
-        },
-        "courseF_text_concat": {
-          "join_blocks": "Cari blok-blok baru di sini!"
-        },
-        "courseF_text_events": {
-          "events_category": "Klik di sini untuk membuka kategori Event."
-        },
-        "courseF_text_print": {
-          "print_block": "Temukan blok print di sini!",
-          "text_print_finish": "Apakah pesan Anda tampil di atas? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
-        },
-        "courseF_text_prompts": {
-          "prompt_block": "Temukan blok prompt di sini!"
-        },
-        "courseF_variables_predict": {
-          "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
-        },
-        "CSD U3 Variables Predict Where XY_2021": {
-          "grid": "Klik di sini untuk menampilkan grid."
-        },
-        "CSD U3 Variables Predict Where X_2021": {
-          "CSD_U3_variables": "Ubah nomornya disini"
-        },
-        "CSD U3 debug_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 drawing challenge 2_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 drawing challenge 3_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 drawing practice 1_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 drawing practice 2_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 drawing practice 3_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 ellipse_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 fill_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 properties depth_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 properties tint_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 rect_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya"
-        },
-        "CSD U3 sequence_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes arc_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes behind_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes line_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes missing_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes polygon_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes scene_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes_2021": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U6 colorLeds intensity_2021": {
-          "CSDU6L10_rainbow": "Tambahkan kode anda disini"
-        },
-        "CSD U6 light show_2021": {
-          "CSDUDL03P09": "Apa kegunaan garis ini?"
-        },
-        "CSD U6 tugowar variables 1_2021": {
-          "CSD_U6_startGame": "Menentukan memulai permainan di sini"
-        },
-        "CSD U6 tugowar variables 2_2021": {
-          "CSD_U6_movePlayer": "Tentukan Pemain yang bisa dipindahkan() disini"
-        },
-        "CSD U6 tugowar variables 3_2021": {
-          "CSD_U6_checkWin": "Periksa apakah pemain telah menang"
-        },
-        "CSD web text explore_2021": {
-          "CSD_U3_variables": "Ubah nomornya disini"
-        },
-        "New Artist Project": {
-          "New Artist Project_callout1": "Klik kategori untuk melihat blok di kotak alat anda! Seret blok ke ruang kerja untuk menambahkannya ke program anda",
-          "New Artist Project_callout2": "Tekan \"Run\" untuk menyimpan dan menjalankan program Anda",
-          "sign_in_to_save_project": "Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan proyek ini ke akun anda!"
-        },
-        "New Play Lab Project": {
-          "New Play Lab Project_callout1": "Klik kategori untuk melihat blok di kotak peralatan Anda! Pindahkan blok ke ruang kerja untuk menambahkannya ke program Anda",
-          "New Play Lab Project_callout2": "Tekan \"Run\" untuk menyimpan dan menjalankan program Anda",
-          "sign_in_to_save_project": "Anda Ingin mengakses proyek nanti? Masuk untuk menyimpan proyek ini ke akun anda!"
-        },
-        "courseA_collector_preLoops1": {
-          "courseA_collector_preLoops1_1": "Klik disini untuk melihat kodenya bekerja!"
-        },
-        "New Sprite Lab Project": {
-          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu.",
-          "make_sprite": "Gunakan blok di sini untuk membuat sprite!"
-        },
-        "CSD U3 Variables Predict Where XY_2022": {
-          "grid": "Klik di sini untuk menampilkan grid."
-        },
-        "CSD U3 Variables Predict Where X_2022": {
-          "CSD_U3_variables": "Ubah nomornya disini"
-        },
-        "CSD U3 debug_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 drawing challenge 2_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 drawing challenge 3_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 drawing practice 1_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 drawing practice 2_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 drawing practice 3_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 ellipse_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 fill_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 properties depth_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 properties tint_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 rect_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya"
-        },
-        "CSD U3 sequence_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes arc_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes behind_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes line_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes missing_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes polygon_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes scene_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 shapes_2022": {
-          "CSD_U3_rect_c1": "Inilah kodenya",
-          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U6 - Color LEDs - SB4_2222": {
-          "CSDU6L10_rainbow": "Tambahkan kode anda disini"
-        },
-        "CSD web text explore_2022": {
-          "CSD_U3_variables": "Ubah nomornya disini"
-        },
-        "CourseD_Dance_2020_012022": {
-          "dance_callout_01": "Add this block to your program!"
-        },
-        "CourseD_Dance_2020_022022": {
-          "dance_callout_11_a": "Tambahkan blok ini ke program Anda.",
-          "arrow_buttons": "Tekan tombol panah untuk mengontrol penari Anda."
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "Tambahkan blok ini ke program Anda!"
-        },
-        "CourseD_Dance_2020_052022": {
-          "dance_callout_05": "Tambahkan event baru ke program Anda."
-        },
-        "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "Blok baru!"
-        },
-        "CourseD_Dance_2020_072022": {
-          "setprop_hint": "Blok baru!"
-        },
-        "CourseD_Dance_2020_092022": {
-          "new_block_3": "Blok baru!",
-          "new_block_4": "Blok baru!"
-        },
-        "CourseF_outbreak2_-2022-2": {
+        "outbreak2": {
           "minitoolbox": "Klik di sini untuk memperluas blok.",
           "pointerlocation": "Tarik blok subject ke sini."
         },
-        "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
-        },
-        "Fish Tank 3-validated2022": {
-          "spritelab_comment": "Gunakan blok ini untuk membuat catatan untuk Anda atau guru Anda tentang cara kerja kode."
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_1": "Instruksi kecil ini memberi tahu komputer untuk menjalankan sebagian BESAR kode dengan nama yang sama di ruang kerja."
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_1": "Ini adalah loop `repeat`!  Klik untuk memasukkannya ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali."
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "Agent dapat mengapung di atas air, tapi pemain tidak dapat!"
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_1": "Anda tidak dapat membuang blok ini, tapi Anda dapat menyuntingnya!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_1": "Agent dapat mengapung di atas lahar, tetapi Steve dan Alex tidak dapat!"
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Kami meletakkan beberapa balok di sini agar kamu dapat memulainya dengan mudah"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Kode ini akan mulai membangun rumah kamu. Dapatkah kamu menyelesaikannya?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Klik \"Run\" untuk mencoba program kamu",
-          "craft_drag_block_callout": "Tarik blok \"move forward\" dan pasang di bawah blok lain"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Ulangi tindakan dengan menempatkan balok di dalam sini"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Kode ini akan memeriksa lava, dapatkah kamu menambahkan perintah untuk maju?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Tambang besi ini!"
-        },
-        "Virtual Pet 2_-2022-2": {
-          "vp_costumes": "Klik di sini untuk menambahkan kostum baru ke proyek Anda!"
-        },
-        "Virtual Pet 6_-2022-2": {
-          "vp_costumes": "Klik di sini untuk menambahkan kostum baru ke proyek Anda!"
-        },
-        "courseA_EOC_playlab_animals2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people2022": {
-          "question_mark": "?"
-        },
-        "courseA_artist_loops42022": {
-          "courseA_artist_loops4_1": "Angka ini memberitahu anda seberapa banyak blok yang dapat anda gunakan dalam puzzle ini."
-        },
-        "courseA_artist_loops72022": {
-          "courseA_artist_loops7_1": "Angka ini berarti bahwa hanya satu dari jenis blok ini yang dapat digunakan di jawaban akhir."
-        },
-        "courseA_artist_loops82022": {
-          "courseA_artist_loops8_1": "Apakah anda tahu bahwa anda bisa menggambar ulang sebuah garis kapan pun anda perlu?"
-        },
-        "courseA_collector_loops12022": {
-          "courseA_collector_loops1_1": "Gunakan blok ini untuk mengumpulkan harta karun."
-        },
-        "courseA_collector_loops32022": {
-          "gradek_adventurer_loops2_1": "Angka ini memberitahu anda seberapa banyak blok yang dapat anda gunakan dalam puzzle ini."
-        },
-        "courseA_maze_ramp22022": {
-          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
-        },
-        "courseA_maze_seq12022": {
-          "courseA_maze_seq1_1": "Klik icon bola lampu saat anda membutuhkan petunjuk!"
-        },
-        "courseA_playLab_events42022": {
-          "courseA_playlab_events4_callout1": "Ini merupakan satu seruan"
-        },
-        "courseA_playLab_events52022": {
-          "courseA_playLab_events5_1": "Klik disini untuk mengubah arah panah event."
-        },
-        "courseA_playLab_events62022": {
-          "courseA_playLab_events6_1": "Hal ini akan memungkinkan anda untuk memilih sebuah suara secara \"acak\", yang berarti anda tidak akan tahu suara apa yang akan anda dapatkan sampai anda mendengarnya!"
-        },
-        "courseB_Scrat_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
-        },
-        "courseB_Scrat_ramp3a2022": {
-          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
-        },
-        "courseB_artist_loops32022": {
-          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut di dalam toolbox. Bagaimana cara Anda menggunakannya?"
-        },
-        "courseB_collector_loops12022": {
-          "courseB_collector_loops1_1": "Gunakan blok ini untuk mengumpulkan harta karun."
-        },
-        "courseB_maze_seq12022": {
-          "courseB_maze_seq1": "Klik icon bola lampu saat anda membutuhkan petunjuk!"
-        },
-        "courseB_playlab_events62022": {
-          "courseB_playlab_events6_a": "Gunakan panah warna hijau untuk merubah arah."
-        },
-        "courseC19_playLab_EOC32022": {
-          "courseE_playLab_scaffold3_1": "Bawalah aktor ke bendera ini untuk maju ke tahap selanjutnya."
-        },
-        "courseC_PlayLab_events82022": {
-          "courseC_PlayLab_events8_callout1": "Gunakan blok ini ketika Waddles dan Chomp bersentuhan!"
-        },
-        "courseC_PlayLab_events_challenge12022": {
-          "courseC_PlayLab_events_challenge1_1": "Blok ini memungkinkan Anda memindahkan aktor kebagian yang berbeda di dalam ruang permainan."
-        },
-        "courseC_PlayLab_events_lesson_extras": {
-          "courseC_PlayLab_events_challenge1_1": "Blok ini memungkinkan Anda memindahkan aktor kebagian yang berbeda di dalam ruang permainan."
-        },
-        "courseC_artist_loops1a2022": {
-          "jumpto_callout": "Blok ini sangat penting untuk proyek ini. Pastikan untuk menggunakannya!"
-        },
-        "courseC_artist_loops1b2022": {
-          "sticker2": "Tambahkan ini di tengah program Anda."
-        },
-        "courseC_artist_prog22022": {
-          "slider": "Anda dapat memperlambat program di sini."
-        },
-        "courseC_collector_prog12022": {
-          "courseC_collector_prog1_1": "Apakah Anda melihat beberapa blok baru di toolbox? Jangan khawatir, kami akan tunjukkan cara menggunakannya dalam pelajaran lain."
-        },
-        "courseC_collector_prog72022": {
-          "courseC_collector_prog7_1": "Anda bisa mengambil lebih banyak blok dari dalam toolbox jika anda membutuhkannya!"
-        },
-        "courseC_harvester_loops12022": {
-          "courseC_harvester_loops1_callout1": "Angka empat pada labu menandakan bahwa ada empat labu yang bisa diambil."
-        },
-        "courseC_maze_debugging52022": {
-          "courseC_maze_debugging5_1": "Blok-blok tersebut terkunci dan tidak dapat dihapus!"
-        },
-        "courseC_maze_debugging92022": {
-          "courseC_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
-        },
-        "courseC_maze_programming12022": {
-          "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
-        },
-        "courseC_maze_programming22022": {
-          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
-        },
-        "courseC_maze_programming32022": {
-          "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
-          "courseC_maze_programming3_3": "Blok-blok tersebut adalah batu dan tidak bisa dibuang."
-        },
-        "courseC_maze_programming42022": {
-          "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
-        },
-        "courseC_maze_programming52022": {
-          "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
-        },
-        "courseC_maze_programming72022": {
-          "courseC_maze_programming7_1": "Ini merupakan tantangan puzzle kamu yang pertama! Puzzle ini sulit dan mungkin perlu dicoba beberapa kali sebelum berhasil.",
-          "courseC_maze_programming7_2": "Blok-blok tersebut terbuat dari batu dan tidak bisa dibuang."
-        },
-        "courseC_starWars_loops22022": {
-          "courseC_starWars_loops2": "Anda hanya punya satu blok yang tersedia di dalam puzzle ini."
-        },
-        "courseD_artist_nestedLoops1a2022": {
-          "courseD_artist_nestedLoops1a_1": "Anda tidak harus menggunakan warna agar puzzle ini benar. Namun jika Anda mau, blok `random color` membuatnya lebih mudah!"
-        },
-        "courseD_bee_conditionals22022": {
-          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan yang memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang."
-        },
-        "courseD_bee_conditionals_challenge22022": {
-          "courseD_bee_conditionals_challenge2_1": "Gunakan loop ini untuk mengumpulkan semua nektar (atau madu) dari satu bunga (atau sarang lebah)."
-        },
-        "courseD_bee_nestedLoops1a2022": {
-          "stepButton": "Coba sisiri code Anda satu blok sekali tempo."
-        },
-        "courseD_farmer_while72022": {
-          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `while path ahead` untuk menyelesaikan puzzle ini."
-        },
-        "courseD_maze_intro42022": {
-          "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
-        },
-        "courseD_maze_intro5a2022": {
-          "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
-        },
-        "courseD_maze_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
-        },
-        "courseD_maze_ramp22022": {
-          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
-        },
-        "courseD_maze_ramp32022": {
-          "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
-          "stone_block_2": "Blok warna abu-abu tidak bisa dibuang."
-        },
-        "courseD_maze_ramp52022": {
-          "": "Blok ini tidak memiliki angka. Anda dapat menggunakan sebanyak mungkin!"
-        },
-        "courseE_aboutme_22022": {
-          "": "Klik di sini untuk menambahkan kostum ke proyekmu."
-        },
-        "courseE_artist_functions22022": {
-          "courseD_artist_functions2_1": "Ketika blok hijau ini bekerja, semua kode yang berfungsi akan bekerja. Apa yang harus dikerjakan oleh artis setelah menggambar kotak pertama?"
-        },
-        "courseE_artist_functions8a2022": {
-          "courseD_artist_functions8_1": "Blok-blok kamu untuk membuat fungsi telah dipindahkan dengan label ini di dalam kotak perlengkapan."
-        },
-        "courseE_artist_functions_challenge12022": {
-          "courseE_artist_functions_challenge1_callout1": "Lanjutkan program ini dengan menambahkan lebih banyak kode di bagian bawah.",
-          "courseE_artist_functions_challenge1_callout2": "Jika Anda tidak menyukai desain ini, ubah desain ini menjadi apapun yang Anda inginkan!"
-        },
-        "courseE_artist_functions_challenge22022": {
-          "courseE_artist_functions_challenge2_callout1": "Lanjutkan program ini dengan menambahkan lebih banyak kode di bagian bawah.",
-          "courseE_artist_functions_challenge2_callout2": "Jika Anda tidak menyukai desain ini, ubah desain ini menjadi apapun yang Anda inginkan!"
-        },
-        "courseE_farmer_functions12022": {
-          "courseE_farmer_functions1_2": "Kali ini kotak peralatan disusun agak sedikit berbeda! Klik pada kategori-kategori yang berbeda untuk melihat blok apa yang kamu miliki."
-        },
-        "courseE_farmer_functions132022": {
-          "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
-        },
-        "courseE_farmer_functions1a2022": {
-          "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
-        },
-        "courseE_farmer_functions2b2022": {
-          "courseE_farmer_functions1a_1": "Sayuran ini tidak dikenal. Dia berubah setiap kali kamu menjalankan program."
-        },
-        "courseF_apps_aquarium2022": {
-          "run_button": "Pertama kali tekan tombol run!",
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_aquarium_-2022-2": {
-          "run_button": "Pertama kali tekan tombol run!",
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_card2022": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_card_-2022-2": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_chatbot2022": {
-          "run_button": "Pertama kali tekan tombol run!",
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_chatbot_-2022-2": {
-          "run_button": "Pertama kali tekan tombol run!",
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_collector2022": {
-          "run_button": "Pertama kali tekan tombol run!",
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_collector_-2022-2": {
-          "run_button": "Pertama kali tekan tombol run!",
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_collector_drag_-2022-2": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_collector_drive_-2022-2": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_collector_move2_-2022-2": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_collector_move_-2022-2": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_madlib2022": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_madlib_-2022-2": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_pet2022": {
-          "run_button": "Pertama kali tekan tombol run!",
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_apps_pet_-2022-2": {
-          "run_button": "Pertama kali tekan tombol run!",
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_artist_for12022": {
-          "courseF_artist_for1_1": "Toolbox berada di mode \"category\" untuk memberi ruang lebih besar bagi kode Anda. Loop`for` ada di sini."
-        },
-        "courseF_bee_for42022": {
-          "courseF_bee_for4_1": "Anda akan menemukan loop 'for` di sini!"
-        },
-        "courseF_bee_for92022": {
-          "courseF_bee_for9_1": "Anda akan menemukan blok `math` disini."
-        },
-        "courseF_bee_variables_1a2022": {
-          "courseF_bee_functions_1_2018_1": "Anda dapat menemukan variabel Anda di bawah sini!"
-        },
-        "courseF_editable_card_-2022-2": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_editable_chatbot_-2022-2": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_editable_madlib_-2022-2": {
-          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
-        },
-        "courseF_events_choice_penguin_-2022-2": {
-          "whenToWhile": "Coba ubah ketika ke selagi."
-        },
-        "courseF_events_conflict_-2022-2": {
-          "stops_block": "Blok-blok baru di sini!"
-        },
-        "courseF_events_key_-2022-2": {
-          "whenKey": "Gunakan blok event baru yang ada di sini."
-        },
-        "courseF_events_practice_reorder_-2022-2": {
-          "stopAllBug": "Blok ini salah urutannya."
-        },
-        "courseF_events_predict_-2022-2": {
-          "behaviors_edit": "Klik di sini untuk mengetahui cara kerja perilaku ini."
-        },
-        "courseF_events_time_-2022-2": {
-          "events_category": "Klik di sini untuk membuka kategori Event."
-        },
-        "courseF_label_predict_-2022-2": {
-          "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
-        },
-        "courseF_sprites_behaviors_-2022-2": {
-          "behaviors_category": "Klik di sini untuk membuka kategori Perilaku."
-        },
-        "courseF_sprites_make_-2022-2": {
-          "sprites_category": "Klik di sini untuk membuka kategori Sprite."
-        },
-        "courseF_sprites_positioning_-2022-2": {
-          "locations_category": "Klik di sini untuk membuka kategori Lokasi."
-        },
-        "courseF_sprites_properties_-2022-2": {
-          "sprites_category2": "Cari blok baru di sini."
-        },
-        "courseF_text_answer_-2022-2": {
-          "answered_block": "Cari blok baru di sini!"
-        },
-        "courseF_text_choice_color_-2022-2": {
-          "text_color_finish": "Apakah latar belakang berubah warna ketika Anda menjawab pertanyaan? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
-        },
-        "courseF_text_choice_conversation_-2022-2": {
-          "text_generic_finish": "Apakah Anda sudah selesai? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
-        },
-        "courseF_text_choice_title_-2022-2": {
-          "title_block": "Cari dua blok baru di sini!",
-          "text_answer_finish": "Apakah layar judul muncul selama 3 detik? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
-        },
-        "courseF_text_concat_-2022-2": {
-          "join_blocks": "Cari blok-blok baru di sini!"
-        },
-        "courseF_text_events_-2022-2": {
-          "events_category": "Klik di sini untuk membuka kategori Event."
-        },
-        "courseF_text_print_-2022-2": {
-          "print_block": "Temukan blok print di sini!",
-          "text_print_finish": "Apakah pesan Anda tampil di atas? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
-        },
-        "courseF_text_prompts_-2022-2": {
-          "prompt_block": "Temukan blok prompt di sini!"
-        },
-        "courseF_variables2_predict_-2022-2": {
-          "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
-        },
-        "courseF_variables_predict_-2022-2": {
-          "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
-        },
-        "coursea_maze_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "Setelah menggabungkan semua blok, tekan \"Jalankan\" untuk memulai program Anda."
-        },
-        "coursee_helloworld_events": {
-          "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
-        },
-        "coursee_helloworld_freeplay": {
-          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
-        },
-        "coursee_helloworld_say": {
-          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara.",
-          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite."
-        },
-        "express_maze_debugging92022": {
-          "express_maze_debugging9_2019_1": "Pindahkan blok dari kotak peralatan ke ruang kerja Anda."
-        },
-        "helloworld_food_backgrounds_soccer-2022": {
-          "hw_background_location": "Gunakan blok ini untuk mengatur latar belakang baru."
-        },
-        "helloworld_food_backgrounds_space-2022": {
-          "hw_background_location": "Gunakan blok ini untuk mengatur latar belakang baru."
-        },
-        "helloworld_food_behaviors_soccer-2022": {
-          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu perilaku berikut."
-        },
-        "helloworld_food_behaviors_space-2022": {
-          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu perilaku berikut."
-        },
-        "helloworld_food_click_soccer-2022": {
-          "hw_Run": "Klik di sini untuk menjalankan kodenya."
-        },
-        "helloworld_food_costumes_soccer-2022": {
-          "hello_world_new": "Blok baru!"
-        },
-        "helloworld_food_costumes_space-2022": {
-          "hello_world_new": "Blok baru!"
-        },
-        "helloworld_food_events_soccer-2022": {
-          "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
-        },
-        "helloworld_food_events_space-2022": {
-          "hello_world_click_hint": "Tambahkan event ini ke ruang kerjamu."
-        },
-        "helloworld_food_freeplay_soccer-2022": {
-          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
-        },
-        "helloworld_food_freeplay_space-2022": {
-          "costumes_tab": "Klik di sini untuk menambahkan kostum ke proyekmu."
-        },
-        "helloworld_food_location_soccer-2022": {
-          "pin": "pin"
-        },
-        "helloworld_food_location_space-2022": {
-          "pin": "pin"
-        },
-        "helloworld_food_multi_soccer-2022": {
-          "pin": "pin"
-        },
-        "helloworld_food_multi_space-2022": {
-          "pin": "pin"
-        },
-        "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara.",
-          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite."
-        },
-        "helloworld_food_say_space-2022": {
-          "hello_world_say": "Gunakan blok ini untuk membuat sprite berbicara.",
-          "hello_world_make_sprite": "Gunakan blok ini untuk membuat sprite."
-        },
-        "helloworld_food_sizes_soccer-2022": {
-          "hello_world_new": "Blok baru!",
-          "hello_world_new_block": "Blok baru!"
-        },
-        "helloworld_food_sizes_space-2022": {
-          "hello_world_new": "Blok baru!",
-          "hello_world_new_block": "Blok baru!"
-        },
-        "helloworld_food_sounds_soccer-2022": {
-          "hello_world_new": "Blok baru!"
-        },
-        "helloworld_food_sounds_space-2022": {
-          "hello_world_new": "Blok baru!"
-        },
-        "helloworld_food_click_space-2022": {
-          "hw_Run": "Klik di sini dulu!"
+        "outbreak7": {
+          "costumes_callout": "Klik untuk membuat kostum baru"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Blok baru!"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "pause_button": "Tes animasimu dengan tombol ini.",
+          "poetry_background": "Temukan blok kode di sini. ",
+          "run_button": "Tes animasimu dengan tombol ini."
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Blok baru!",
+          "poetry_foreground": "Blok baru!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Blok baru!",
+          "poetry_multiple_sprites": "Blok baru!",
+          "poetry_new_block": "Blok baru!",
+          "poetry_selector": "Pilih puisi apapun, atau masukkan puisimu sendiri!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_music": "Blok baru!",
+          "poetry_sound": "Blok baru!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Blok baru!",
+          "poetry_sprite_stops": "Blok baru!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Blok baru!",
+          "poetry_set_sprite": "Blok baru!"
         }
       }
     }

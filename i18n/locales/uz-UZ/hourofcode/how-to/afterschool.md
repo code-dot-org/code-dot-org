@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: Dasturlash soatini maktabdan tashqari o'qitish bo'yicha qo'llanma
 ---
 
 {{ signup_button }}
@@ -10,81 +10,81 @@ title: Hour of Code How-to Guide for After-school
 
 Hisobiy fikrlash muammoni hal qilish mahoratini o'rgatishga, mantiq va ijodkorlikni rivojlantirishga yordam beradi. Texnologiya esa sayyoradagi barcha sohalarni o'zgartirmoqda. Bugungi kunda talabalar texnologiyadan foydalanishni emas, balki uni yaratishni o'rganishlari kerak. Erta boshlash orqali ular 21-asrdagi har qanday karyera yo'lida muvaffaqiyatga erishish uchun poydevorga ega bo'ladilar.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Dasturlash soatini sinab ko'rish - bu o'quvchilarni kompyuter fanlari bilan tanishtirishning oddiy va qiziqarli, ehtimol birinchi marta sodir bo'layotgan usuli. Agar sizga qoʻshimcha yordam kerak bo'lsa, maktabdan tashqari yoki to'garakdagi Dasturlash soatini oʻtkazishga yordam berich uchun [mahalliy koʻngillilarni]({{ urls/volunteer_local }}) topishingiz mumkin.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Dasturlash soatini masofadan turib ham o'tkazilishi mumkin! Boshlash uchun [Virtual Dasturlash soati tadbirini o‘tkazish bo‘yicha maslahatlarimizni](https://hourofcode.com/us/how-to/virtual) ko‘rib chiqing.
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Ushbu video-qo'llanmani tomosha qiling <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-## 2. Choose a tutorial
+## 2. O'quv qo'llanmani tanlang
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Biz turli yoshdagi ishtirokchilar uchun turli hamkorlar tomonidan yaratilgan [qiziqarli, bir soatlik o'quv mashgulotlari]({{ urls/learn }}) bilan ta'minlaymiz. [Ularni sinab ko‘ring!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Barcha Dasturlash soati o'qiv mashg'ulotlarini o'tkazishga** tashkilotchilar uchun minimal tayyorgarlik vaqti talab etiladi va o'z-o'zini boshqarishni amalga ishoradi - bu bolalarga o'z tezligi va mahorat darajasiga ko'ra ishlash imkonini beradi.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Maktabdan tashqari Dasturlash soatingiz uchun dars rejasi kerakmi?** Ushbu [shablonni](/files/AfterschoolEducatorLessonPlanOutline.docx) ko‘rib chiqing!
 
-## 3. Promote your Hour of Code
+## 3. Dasturlash soatingizni targ‘ib qiling
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Dasturlash soatini [ushbu vositalar yordamida]({{ urls/promote }}) targ‘ib qiling va boshqalarni ham o‘z tadbirlarini o‘tkazishini qo'llab-quvvatlang.
 
-## 4. Plan your technology needs - computers are optional
+## 4. Texnologik ehtiyojlaringizni rejalashtiring - kompyuterlar mavjudligi ixtiyoriy
 
 The best Hour of Code experience includes Internet-connected computers. Har bir bola uchun kompyuter **shart emas**, Bir soat kod yozish loyihasida kompyutersiz ham ishtirok etish mumkin.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Internet tezligi pastmi?** Har bir talaba o‘z videolarini yuklab olmasligi uchun videolarni sinf oldida ko‘rsatishni rejalashtiring. Yoki kompyutersiz/oflayn o'quv mashg'ulotlarini sinab ko'ring.
 
 Agar siz tanlagan o‘quv qo‘llanma ovoz bilan yaxshi ishlasa, sinfingiz uchun naushnik bilan ta'minlang yoki talabalardan o‘zlari olib kelishini so‘rang.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+**Yetarlicha qurilmalarga ega emasmisiz?** [juftlikda dasturlash](https://www.youtube.com/watch?v=vgkahOzFH2Q)dan foydalaning. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. Dasturlash soatini ilhomlantiruvchi video bilan boshlang
 
 Ishtirokchilarni ilhomlantirish va kompyuter fanlari hayotimizning har bir qismiga qanday ta'sir qilishini muhokama qilish orqali "Kod soati"ni boshlang.
 
 **Ilhomlantiruvchi videoni ko‘rsating:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Bill Geyts, Mark Sukerberg va NBA yulduzi Kris Bosh ishtirokidagi Code.org saytining ishga tushirishdagi asl videosining - [1 daqiqa](https://www.youtube.com/watch?v=qYZF6oIZtfc) , [5 daqiqa](https://www.youtube.com/watch?v=nKIu9yen5nc) va [9 daqiqali](https://www.youtube.com/watch?v = dU1xS07N-FA) versiyalari mavjud.
+- Dasturlash soati[dunyo bo'ylab videosi](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Prezident Obama barcha o'quvchilarni kompyuter fanlarini o‘rganishga chaqirmoqda](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Ko'proq ilhomlantiruvchi videolarni [bu yerdan](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) toping.
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Agar siz kompyuter fanlarini o'rganishda hali yangi bo'lsangiz bu yomon emas. Sizning Dasturlash Soati o'quv mashg'ulotlaringiz bilan tanishtirish uchun bir nechta fikrlar quyidagicha:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
-- List things that use code in everyday life.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Texnologiyaning hayotimizga qanday ta'sir qilish yo'llarini, o'g'il va qiz bolalarni qiziqtiradigan misollar bilan tushuntiring (Hayotni saqlab qolish, odamlarga yordam berish, odamlarni bir-biriga bog'lash va hokazolar uchun ishlatiladigan ilovalar va texnologiyalar haqida gapirib o'ting).
+- Kundalik hayotda dasturdan foydalanuvchi narsalarni sanab bering.
+- Qiz bolalarni kompyuter fanlariga qiziqtirish bo‘yicha maslahatlarni [bu yerdan]({{ urls/girls }}) ko‘rib chiqing.
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Qo'shimcha ko'rsatmalar kerakmi?** Ushbu [dars shablonini](/files/AfterschoolEducatorLessonPlanOutline.docx) yuklab oling.
 
-## 6. Code!
+## 6. Dastur!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Mashg'ulotning bevosita ishtirokchilari** - Doskaga qo'llanma havolasini yozing. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Keling, buni birgalikda aniqlab olaylik”. - "Texnologiya har doim ham biz xohlagan tarzda ishlamaydi." - “Dasturlashni o‘rganish, bu yangi tilni o‘rganishga o‘xshaydi; Siz darhol ravon gapira olmaysiz."
+**Kimdir qiyinchilikka duch kelsa, quyidagicha javob berishi odatiy hol:** - "Bilmadim. Keling, buni birgalikda aniqlab olaylik”. - "Texnologiya har doim ham biz xohlagan tarzda ishlamaydi." - “Dasturlashni o‘rganish, bu yangi tilni o‘rganishga o‘xshaydi; Siz darhol ravon gapira olmaysiz."
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Agar kimdir ertaroq vazifani tugatsa nima qilish kerak?** - Ishtirokchilarni [hourofcode.com/learn]({{ urls/learn }}) sahifasida yana bir Dasturlash soati mashg'ulotini sinab ko‘rishga undang. - Yoki erta tugatganlardan muammoga duch kelganlarga yordam berishlarini so'rang.
 
-## 7. Celebrate
+## 7. Nishonlang
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- O'quvchilaringiz uchun [sertifikatlarni chop eting]({{ urls/certificates }}).
+- [ O'quvchilaringiz uchun “Men Dasturlash soatini bajardim!”]({{ promote/resources_stickers }}) stikerlarini chop eting.
+- [Ishtirokchilar uchun maxsus futbolkalarga buyurtma bering](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
+- Ijtimoiy tarmoqlarda Dasturlash soati tadbiringizning fotosuratlari va videolarini baham ko'ring. Sizning muvaffaqiyatingizni namoish qila olishimiz uchun #HourOfCode va @codeorg xeshtegidan foydalaning.
 
-## Other Hour of Code resources for educators
+## O'qituvchilar uchun boshqa Dasturlash soati manbalari
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Oldingiz Dasturlash soati tashkilotchilarining [eng yaxshi amaliyotlari](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) bilan tanishing.
+- [Dasturlash soati bo'yicha o'qituvchi uchun qo'llanma vebinari](https://youtu.be/EJeMeSW2-Mw) yozuvini tomosha qiling.
+- Boshqa tashkilotchilardan maslahat, muhim ma'lumot va yordam olish uchun [Dasturlash soati forumi](http://forum.code.org/c/plc/hour-of-code) ga kiring.
+- Dasturlash soati haqidagi tez-tez so'raladigan savollar [Kod soati haqida FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) bilan tanishib chiqing.
 
-## What comes after the Hour of Code?
+## Dasturlash soatidan keyin nima bo'ladi?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+Dasturlash soati bu texnologiyaning qanday ishlashi va dasturiy ilovalarni qanday yaratish haqida ko'proq ma'lumot olish yo'lining birinchi bosqichi. O'quvchilarga o'z yo'llarini davom ettirishga yordam bering va ularni [ko'proq onlayn o'rganishiga](/beyond) undang!
 
 {{ signup_button }}

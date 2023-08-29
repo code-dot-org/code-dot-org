@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:51:42.000Z",
+  "level_num": "custom",
+  "user_id": 568,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -92,7 +97,6 @@
     "display_name": "Number Tilting Game",
     "bubble_choice_description": "Tilt the micro:bit to get as close as you can to a target number",
     "thumbnail_url": "https://images.code.org/429ac67f817ec2079e549c9c53e100c2-image-1648866380294.png",
-    "preload_asset_list": null,
     "encrypted_examples": "hKAhGRzp7aMKZrVFlybNBS2/0DY+gpE59IS7+MJ6DQjN0QX1SCwS4EDfREQG\nFhYbL60LpcTB7XM8yLHu0dgOsg==\n",
     "reference_links": [
       "/courses/csd-2022/guides/the-accelerometer",
@@ -107,16 +111,13 @@
       "/courses/csd-2022/guides/if-statements-2",
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/counter-patterns-with-event"
-    ]
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:51:42.000Z",
-  "level_num": "custom",
-  "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:42.118+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PF_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PF_2222\"},{\"changed_at\":\"2023-02-10 20:40:05 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"bubble_choice_description\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-10 20:42:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-10 20:43:50 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-10 20:44:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:44:03 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:42.118+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PF_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PF_2222\"},{\"changed_at\":\"2023-02-10 20:40:05 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"bubble_choice_description\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-10 20:42:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-10 20:43:50 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-10 20:44:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:44:03 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:13:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

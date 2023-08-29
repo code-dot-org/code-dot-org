@@ -2,125 +2,92 @@
   "hr-HR": {
     "data": {
       "lessons": {
-        "poem-art-2021/Poem Art": {
-          "overview": "U ovoj integriranoj lekciji CS i ELA učenici će animirati pjesmu s kodom kako bi ilustrirali raspoloženje pjesme. Učenici će pročitati i otkriti raspoloženje pjesme. Zatim će pronaći odgovarajuće efekte i slike koje će im pomoći ilustrirati raspoloženje pjesme. Konačno, učenici će koristiti događaje (šifru) kako bi ilustrirali promjenu raspoloženja ili animirali uvođenje novih slika u pjesmu.\n\nOva lekcija se može završiti kao samostalna lekcija od 1 sata. Također postoji mogućnost korištenja ove lekcije kao prve lekcije modula od 5 lekcija pod nazivom [Kodiranje s poezijom](http://studio.code.org/s/poetry-2021). Do kraja modula Kodiranje s poezijom, učenici će pisati vlastite pjesme i izraditi aplikaciju za generator pjesama koju će podijeliti s prijateljima.\n\nKodiranje s poezijom dio je Code.org-ovog kurikuluma CS Connections, koji je namijenjen integraciji CS-a u druga predmetna područja kao što su matematika, ELA i znanost uz usklađivanje sa standardima CCSS, NGSS i CSTA."
-        },
-        "flappy/Flappy Code": {
-          "name": "Flappy kôd"
-        },
-        "hello-world-soccer-2022/Hello World: Food": {
-          "name": "Pozdrav svijetu: Nogomet"
-        },
-        "hourofcode/Maze": {
-          "name": "Labirint"
-        },
-        "frozen/Artist": {
-          "name": "Kodiraj s Annom i Elsom"
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "Ice Age Play Lab"
-        },
-        "artist/Artist": {
-          "name": "Umjetnik"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "Gumball Play Lab"
-        },
-        "hello-world-space-2022/Hello World: Food": {
-          "name": "Hello World: Prostor"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Minecraft Sat Kodiranja"
-        },
-        "playlab/Play Lab": {
-          "name": "Laboratorij igara"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "Disney Infinity Laboratorij igara"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Sat programiranja 2013"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Petlje"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Događaji"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Uvjeti"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Funkcije"
-        },
-        "k5-onlinepd-2019/Variables": {
-          "name": "Varijable"
-        },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "Petlja brojača"
-        },
-        "k5-onlinepd-2019/Sprite Lab": {
-          "name": "Lab likova"
-        },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "Grafičko programiranje"
-        },
-        "coursed-2022/Relay Programming": {
-          "name": "Odnosno programiranje"
-        },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "Uvjeti s kartama"
-        },
-        "coursef-2022/The Internet": {
-          "name": "Internet"
-        },
-        "coursee-2022/Songwriting": {
-          "name": "Pisanje pjesama"
-        },
-        "courseb-2022/Move It, Move It": {
-          "name": "Pomakni, pomakni"
-        },
-        "courseb-2022/Getting Loopy": {
-          "name": "Zapetljancije"
-        },
-        "coursea-2022/Happy Maps": {
-          "name": "Vesele karte"
-        },
-        "coursec-2022/The Big Event": {
-          "name": "Veliki događaj"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Binarne narukvice"
-        },
-        "csd1-2022/What is a Computer?": {
+        "csd1-2017/What is a Computer?": {
           "name": "Što je računalo?"
         },
-        "csd3-2022/Variables": {
+        "csd2-2017/Lists": {
+          "name": "Liste"
+        },
+        "csd3-2017/Variables": {
           "name": "Varijable"
         },
-        "csd3-2022/Sprites": {
+        "csd3-2017/Sprites": {
           "name": "Likovi"
         },
-        "csd3-2022/Text": {
-          "name": "tekst"
-        },
-        "csd3-2022/Conditionals": {
+        "csd3-2017/Conditionals": {
           "name": "Uvjeti"
         },
-        "csd3-2022/Functions": {
+        "csd3-2017/Functions": {
           "name": "Funkcije"
         },
-        "csd6-2022/Functions": {
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Funkcije s parametrima"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmi u stvarnom životu: Posadi sjeme"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmi u stvarnom životu: Posadi sjeme"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Algoritmi iz stvarnog života: Papirnati avioni"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Ugniježđene petlje"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Izrada temelja"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Ugniježđene petlje"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Izrada temelja"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algoritmi: Tangrami"
+        },
+        "express-2017/Introduction": {
+          "name": "Uvod"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Izrada temelja"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Ugniježđene petlje"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmi u stvarnom životu: Posadi sjeme"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Slovkanje"
+        },
+        "csd1-2018/What is a Computer?": {
+          "name": "Što je računalo?"
+        },
+        "csd2-2018/Lists": {
+          "name": "Liste"
+        },
+        "csd3-2018/Variables": {
+          "name": "Varijable"
+        },
+        "csd3-2018/Sprites": {
+          "name": "Likovi"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Uvjeti"
+        },
+        "csd3-2018/Functions": {
           "name": "Funkcije"
         },
-        "csd7-2022/Introduction to AI Lab": {
-          "name": "Uvod u AI laboratorij"
+        "csd6-2018/Functions with Parameters": {
+          "name": "Funkcije s parametrima"
+        },
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "Vesele karte"
+        },
+        "coursea-2018/Going Places Safely": {
+          "name": "Sigurna putovanja"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Pomakni, pomakni"
@@ -128,11 +95,17 @@
         "courseb-2018/Your Digital Footprint": {
           "name": "Tvoj digitalni trag"
         },
-        "coursea-2018/Programming: Happy Maps": {
-          "name": "Vesele karte"
+        "coursec-2018/Building a Foundation": {
+          "name": "Izrada temelja"
         },
-        "coursea-2018/Going Places Safely": {
-          "name": "Sigurna putovanja"
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Zapetljancije"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Veliki događaj"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Binarne narukvice"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Grafičko programiranje"
@@ -145,6 +118,24 @@
         },
         "coursed-2018/Digital Citizenship": {
           "name": "Digitalno građanstvo"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Moji robotski prijatelji"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Izrada temelja"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Uvjeti s kartama"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Pisanje pjesama"
+        },
+        "coursee-2018/Internet": {
+          "name": "Internet"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "Moji robotski prijatelji"
@@ -188,36 +179,6 @@
         "express-2018/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "Moji robotski prijatelji"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Izrada temelja"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "Uvjeti s kartama"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Pisanje pjesama"
-        },
-        "coursee-2018/Internet": {
-          "name": "Internet"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Crowdsourcing"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Izrada temelja"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Zapetljancije"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "Veliki događaj"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Binarne narukvice"
-        },
         "pre-express-2018/Move It, Move It": {
           "name": "Pomakni, pomakni"
         },
@@ -227,74 +188,11 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Slovkanje"
         },
-        "csd3-2018/Variables": {
-          "name": "Varijable"
-        },
-        "csd3-2018/Sprites": {
-          "name": "Likovi"
-        },
-        "csd3-2018/Conditionals": {
-          "name": "Uvjeti"
-        },
-        "csd3-2018/Functions": {
-          "name": "Funkcije"
-        },
-        "csd6-2018/Functions with Parameters": {
-          "name": "Funkcije s parametrima"
-        },
-        "csd2-2018/Lists": {
-          "name": "Liste"
-        },
-        "csd1-2018/What is a Computer?": {
+        "csd1-2019/What is a Computer?": {
           "name": "Što je računalo?"
         },
-        "coursea-2019/Going Places Safely": {
-          "name": "Sigurna putovanja"
-        },
-        "coursea-2019/Programming: Happy Maps": {
-          "name": "Vesele karte"
-        },
-        "courseb-2019/Your Digital Footprint": {
-          "name": "Tvoj digitalni trag"
-        },
-        "courseb-2019/Move It, Move It": {
-          "name": "Pomakni, pomakni"
-        },
-        "courseb-2019/Loops: Getting Loopy": {
-          "name": "Zapetljancije"
-        },
-        "coursed-2019/Algorithms: Graph Paper Programming": {
-          "name": "Grafičko programiranje"
-        },
-        "coursed-2019/Relay Programming": {
-          "name": "Odnosno programiranje"
-        },
-        "coursed-2019/Conditionals with Cards": {
-          "name": "Uvjeti s kartama"
-        },
-        "coursed-2019/Digital Citizenship": {
-          "name": "Digitalno građanstvo"
-        },
-        "coursef-2019/For Loop Fun": {
-          "name": "For Petlja Zabava"
-        },
-        "coursef-2019/Internet": {
-          "name": "Internet"
-        },
-        "coursef-2019/Crowdsourcing": {
-          "name": "Crowdsourcing"
-        },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Pisanje pjesama"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Binarne narukvice"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "Veliki događaj"
-        },
-        "pre-express-2019/Spelling Bee": {
-          "name": "Slovkanje"
+        "csd2-2019/Lists": {
+          "name": "Liste"
         },
         "csd3-2019/Variables": {
           "name": "Varijable"
@@ -311,137 +209,275 @@
         "csd6-2019/Functions with Parameters": {
           "name": "Funkcije s parametrima"
         },
-        "csd1-2019/What is a Computer?": {
-          "name": "Što je računalo?"
+        "coursea-2019/Going Places Safely": {
+          "name": "Sigurna putovanja"
         },
-        "csd2-2019/Lists": {
-          "name": "Liste"
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "Vesele karte"
         },
-        "coursef-2017/Building a Foundation": {
-          "name": "Izrada temelja"
+        "courseb-2019/Your Digital Footprint": {
+          "name": "Tvoj digitalni trag"
         },
-        "coursef-2017/Algorithms: Tangrams": {
-          "name": "Algoritmi: Tangrami"
+        "courseb-2019/Move It, Move It": {
+          "name": "Pomakni, pomakni"
         },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmi u stvarnom životu: Posadi sjeme"
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "Zapetljancije"
         },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmi u stvarnom životu: Posadi sjeme"
+        "coursec-2019/Binary Bracelets": {
+          "name": "Binarne narukvice"
         },
-        "pre-express-2017/Spelling Bee": {
+        "coursec-2019/Events: The Big Event": {
+          "name": "Veliki događaj"
+        },
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "Grafičko programiranje"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "Odnosno programiranje"
+        },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "Uvjeti s kartama"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Digitalno građanstvo"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Pisanje pjesama"
+        },
+        "coursef-2019/For Loop Fun": {
+          "name": "For Petlja Zabava"
+        },
+        "coursef-2019/Internet": {
+          "name": "Internet"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "pre-express-2019/Spelling Bee": {
           "name": "Slovkanje"
         },
-        "coursee-2017/Building a Foundation": {
-          "name": "Izrada temelja"
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Vesele karte"
         },
-        "coursee-2017/Nested Loops": {
-          "name": "Ugniježđene petlje"
+        "courseb-2020/Move It, Move It": {
+          "name": "Pomakni, pomakni"
         },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Algoritmi iz stvarnog života: Papirnati avioni"
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Zapetljancije"
         },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmi u stvarnom životu: Posadi sjeme"
+        "coursec-2020/Binary Bracelets": {
+          "name": "Binarne narukvice"
         },
-        "coursed-2017/Nested Loops": {
-          "name": "Ugniježđene petlje"
+        "coursec-2020/Events: The Big Event": {
+          "name": "Veliki događaj"
         },
-        "express-2017/Introduction": {
-          "name": "Uvod"
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Grafičko programiranje"
         },
-        "express-2017/Building a Foundation": {
-          "name": "Izrada temelja"
+        "coursed-2020/Relay Programming": {
+          "name": "Odnosno programiranje"
         },
-        "express-2017/Nested Loops": {
-          "name": "Ugniježđene petlje"
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Uvjeti s kartama"
         },
-        "csd3-2017/Variables": {
-          "name": "Varijable"
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Pisanje pjesama"
         },
-        "csd3-2017/Sprites": {
-          "name": "Likovi"
+        "coursef-2020/Internet": {
+          "name": "Internet"
         },
-        "csd3-2017/Conditionals": {
-          "name": "Uvjeti"
+        "coursef-2020/For Loop Fun": {
+          "name": "For Petlja Zabava"
         },
-        "csd3-2017/Functions": {
-          "name": "Funkcije"
-        },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "Funkcije s parametrima"
-        },
-        "csd2-2017/Lists": {
-          "name": "Liste"
-        },
-        "csd1-2017/What is a Computer?": {
+        "csd1-2021/What is a Computer?": {
           "name": "Što je računalo?"
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "Izvanmrežno: Tangrami"
+        "csd3-2021/Variables": {
+          "name": "Varijable"
         },
-        "course4/Maze and Bee": {
-          "name": "Labirint i Pčela"
+        "csd3-2021/Sprites": {
+          "name": "Likovi"
         },
-        "course4/Artist": {
+        "csd3-2021/Text": {
+          "name": "tekst"
+        },
+        "csd3-2021/Conditionals": {
+          "name": "Uvjeti"
+        },
+        "csd3-2021/Functions": {
+          "name": "Funkcije"
+        },
+        "csd6-2021/Functions with Parameters": {
+          "name": "Funkcije s parametrima"
+        },
+        "csd7-2021/Introduction to AI Lab": {
+          "name": "Uvod u AI laboratorij"
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Vesele karte"
+        },
+        "courseb-2021/Move It, Move It": {
+          "name": "Pomakni, pomakni"
+        },
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Zapetljancije"
+        },
+        "coursec-2021/Events: The Big Event": {
+          "name": "Veliki događaj"
+        },
+        "coursec-2021/Binary Bracelets": {
+          "name": "Binarne narukvice"
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Grafičko programiranje"
+        },
+        "coursed-2021/Relay Programming": {
+          "name": "Odnosno programiranje"
+        },
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Uvjeti s kartama"
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Pisanje pjesama"
+        },
+        "coursef-2021/For Loop Fun": {
+          "name": "For Petlja Zabava"
+        },
+        "coursef-2021/Internet": {
+          "name": "Internet"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Što je računalo?"
+        },
+        "csd3-2022/Variables": {
+          "name": "Varijable"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Likovi"
+        },
+        "csd3-2022/Text": {
+          "name": "tekst"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Uvjeti"
+        },
+        "csd3-2022/Functions": {
+          "name": "Funkcije"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funkcije"
+        },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Uvod u AI laboratorij"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Vesele karte"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Pomakni, pomakni"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Zapetljancije"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Veliki događaj"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binarne narukvice"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Grafičko programiranje"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Odnosno programiranje"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Uvjeti s kartama"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Pisanje pjesama"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internet"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Sat programiranja 2013"
+        },
+        "artist/Artist": {
           "name": "Umjetnik"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Izvanmrežno: Varijable omotnice"
+        "flappy/Flappy Code": {
+          "name": "Flappy kôd"
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Izvanmrežno: Madlibs"
+        "frozen/Artist": {
+          "name": "Kodiraj s Annom i Elsom"
         },
-        "course4/Artist: Variables": {
-          "name": "Umjetnik: Varijable"
+        "gumball/Gumball Play Lab": {
+          "name": "Gumball Play Lab"
         },
-        "course4/Play Lab: Variables": {
-          "name": "Laboratorij igara: Varijable"
+        "hello-world-soccer-2022/Hello World: Food": {
+          "name": "Pozdrav svijetu: Nogomet"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Izvanmrežno: Zabava s brojačem"
+        "hello-world-space-2022/Hello World: Food": {
+          "name": "Hello World: Prostor"
         },
-        "course4/Bee: For Loops": {
-          "name": "Pčela: Petlje brojača"
+        "hourofcode/Maze": {
+          "name": "Labirint"
         },
-        "course4/Artist: For Loops": {
-          "name": "Umjetnik: Petlje brojača"
+        "iceage/Ice Age Play Lab": {
+          "name": "Ice Age Play Lab"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Laboratorij igara: Petlje brojača"
+        "infinity/Infinity": {
+          "name": "Disney Infinity Laboratorij igara"
         },
-        "course4/Artist: Functions": {
-          "name": "Umjetnik: Funkcije"
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft Sat Kodiranja"
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Izvanmrežno: Pisanje pjesama s parametrima"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Umjetnik: Funkcije s parametrima"
+        "playlab/Play Lab": {
+          "name": "Laboratorij igara"
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Laboratorij igara: Funkcije s parametrima"
+        "poem-art-2021/Poem Art": {
+          "overview": "U ovoj integriranoj lekciji CS i ELA učenici će animirati pjesmu s kodom kako bi ilustrirali raspoloženje pjesme. Učenici će pročitati i otkriti raspoloženje pjesme. Zatim će pronaći odgovarajuće efekte i slike koje će im pomoći ilustrirati raspoloženje pjesme. Konačno, učenici će koristiti događaje (šifru) kako bi ilustrirali promjenu raspoloženja ili animirali uvođenje novih slika u pjesmu.\n\nOva lekcija se može završiti kao samostalna lekcija od 1 sata. Također postoji mogućnost korištenja ove lekcije kao prve lekcije modula od 5 lekcija pod nazivom [Kodiranje s poezijom](http://studio.code.org/s/poetry-2021). Do kraja modula Kodiranje s poezijom, učenici će pisati vlastite pjesme i izraditi aplikaciju za generator pjesama koju će podijeliti s prijateljima.\n\nKodiranje s poezijom dio je Code.org-ovog kurikuluma CS Connections, koji je namijenjen integraciji CS-a u druga predmetna područja kao što su matematika, ELA i znanost uz usklađivanje sa standardima CCSS, NGSS i CSTA."
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Pčela: Funkcije s parametrima"
+        "allthethings/Jigsaw": {
+          "name": "Slagalica"
         },
-        "course4/Unplugged: Binary": {
-          "name": "Izvanmrežno: Logički operatori"
+        "allthethings/Maze": {
+          "name": "Labirint"
         },
-        "course4/Artist Binary": {
-          "name": "Umjetnik binarno"
+        "allthethings/Artist": {
+          "name": "Umjetnik"
         },
-        "course4/Super Challenge - Variables": {
-          "name": "Super izazov - Varijable"
+        "allthethings/Bee": {
+          "name": "Pčela"
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "Super izazov - For petlja"
+        "allthethings/Flappy": {
+          "name": "Flappy"
         },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Super izazov - funkcije i parametri"
+        "allthethings/Bounce": {
+          "name": "Odskok"
         },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Ekstremni izazov - sveobuhvatno"
+        "allthethings/Multi": {
+          "name": "Višestruki izbor"
+        },
+        "allthethings/Match": {
+          "name": "Spoji parove"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Lab likova"
+        },
+        "allthethings/lesson-49": {
+          "name": "Glazba"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Uvod u Informatiku"
@@ -502,6 +538,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "Zamotavanje"
+        },
+        "course1/Happy Maps": {
+          "name": "Vesele karte"
+        },
+        "course1/Move it, Move it": {
+          "name": "Pomakni, pomakni"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Slagalica: Nauči vući i ispustiti"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Labirint: Slijed"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Labirint: Ispravljanje grešaka"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmi u stvarnom životu: Posadi sjeme"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Pčela: Slijed"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Umjetnik: Slijed"
+        },
+        "course1/Building a Foundation": {
+          "name": "Izrada temelja"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Umjetnik: Oblici"
+        },
+        "course1/Spelling Bee": {
+          "name": "Slovkanje"
+        },
+        "course1/Getting Loopy": {
+          "name": "Zapetljancije"
+        },
+        "course1/Maze: Loops": {
+          "name": "Labirint: Petlje"
+        },
+        "course1/Bee: Loops": {
+          "name": "Pčela: Petlje"
+        },
+        "course1/The Big Event": {
+          "name": "Veliki događaj"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Laboratorij igara: Napravi priču"
+        },
+        "course1/Going Places Safely": {
+          "name": "Sigurna putovanja"
+        },
+        "course1/Artist: Loops": {
+          "name": "Umjetnik: Petlje"
         },
         "course2/Graph Paper Programming": {
           "name": "Grafičko programiranje"
@@ -623,185 +713,74 @@
         "course3/Artist: Patterns": {
           "name": "Umjetnik: Uzorci"
         },
-        "course1/Happy Maps": {
-          "name": "Vesele karte"
+        "course4/Unplugged: Tangrams": {
+          "name": "Izvanmrežno: Tangrami"
         },
-        "course1/Move it, Move it": {
-          "name": "Pomakni, pomakni"
+        "course4/Maze and Bee": {
+          "name": "Labirint i Pčela"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Slagalica: Nauči vući i ispustiti"
+        "course4/Artist": {
+          "name": "Umjetnik"
         },
-        "course1/Maze: Sequence": {
-          "name": "Labirint: Slijed"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Izvanmrežno: Varijable omotnice"
         },
-        "course1/Maze: Debugging": {
-          "name": "Labirint: Ispravljanje grešaka"
+        "course4/Unplugged: Madlibs": {
+          "name": "Izvanmrežno: Madlibs"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmi u stvarnom životu: Posadi sjeme"
+        "course4/Artist: Variables": {
+          "name": "Umjetnik: Varijable"
         },
-        "course1/Bee: Sequence": {
-          "name": "Pčela: Slijed"
+        "course4/Play Lab: Variables": {
+          "name": "Laboratorij igara: Varijable"
         },
-        "course1/Artist: Sequence": {
-          "name": "Umjetnik: Slijed"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Izvanmrežno: Zabava s brojačem"
         },
-        "course1/Building a Foundation": {
-          "name": "Izrada temelja"
+        "course4/Bee: For Loops": {
+          "name": "Pčela: Petlje brojača"
         },
-        "course1/Artist: Shapes": {
-          "name": "Umjetnik: Oblici"
+        "course4/Artist: For Loops": {
+          "name": "Umjetnik: Petlje brojača"
         },
-        "course1/Spelling Bee": {
-          "name": "Slovkanje"
+        "course4/Play Lab: For Loops": {
+          "name": "Laboratorij igara: Petlje brojača"
         },
-        "course1/Getting Loopy": {
-          "name": "Zapetljancije"
+        "course4/Artist: Functions": {
+          "name": "Umjetnik: Funkcije"
         },
-        "course1/Maze: Loops": {
-          "name": "Labirint: Petlje"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Izvanmrežno: Pisanje pjesama s parametrima"
         },
-        "course1/Bee: Loops": {
-          "name": "Pčela: Petlje"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Umjetnik: Funkcije s parametrima"
         },
-        "course1/The Big Event": {
-          "name": "Veliki događaj"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Laboratorij igara: Funkcije s parametrima"
         },
-        "course1/Studio: Create a Story": {
-          "name": "Laboratorij igara: Napravi priču"
+        "course4/Bee: Functions with Parameters": {
+          "name": "Pčela: Funkcije s parametrima"
         },
-        "course1/Going Places Safely": {
-          "name": "Sigurna putovanja"
+        "course4/Unplugged: Binary": {
+          "name": "Izvanmrežno: Logički operatori"
         },
-        "course1/Artist: Loops": {
-          "name": "Umjetnik: Petlje"
+        "course4/Artist Binary": {
+          "name": "Umjetnik binarno"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Super izazov - Varijable"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Super izazov - For petlja"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Super izazov - funkcije i parametri"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Ekstremni izazov - sveobuhvatno"
         },
         "jigsaw/Jigsaw": {
           "name": "Slagalica"
-        },
-        "allthethings/Jigsaw": {
-          "name": "Slagalica"
-        },
-        "allthethings/Maze": {
-          "name": "Labirint"
-        },
-        "allthethings/Artist": {
-          "name": "Umjetnik"
-        },
-        "allthethings/Bee": {
-          "name": "Pčela"
-        },
-        "allthethings/Flappy": {
-          "name": "Flappy"
-        },
-        "allthethings/Bounce": {
-          "name": "Odskok"
-        },
-        "allthethings/Multi": {
-          "name": "Višestruki izbor"
-        },
-        "allthethings/Match": {
-          "name": "Spoji parove"
-        },
-        "allthethings/Minecraft": {
-          "name": "Minecraft"
-        },
-        "allthethings/Sprite Lab": {
-          "name": "Lab likova"
-        },
-        "allthethings/lesson-49": {
-          "name": "Glazba"
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "For Petlja Zabava"
-        },
-        "coursef-2021/Internet": {
-          "name": "Internet"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "Pomakni, pomakni"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Zapetljancije"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "Vesele karte"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "Veliki događaj"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Binarne narukvice"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Grafičko programiranje"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Odnosno programiranje"
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "Uvjeti s kartama"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "Pisanje pjesama"
-        },
-        "csd7-2021/Introduction to AI Lab": {
-          "name": "Uvod u AI laboratorij"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Funkcije s parametrima"
-        },
-        "csd3-2021/Variables": {
-          "name": "Varijable"
-        },
-        "csd3-2021/Sprites": {
-          "name": "Likovi"
-        },
-        "csd3-2021/Text": {
-          "name": "tekst"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "Uvjeti"
-        },
-        "csd3-2021/Functions": {
-          "name": "Funkcije"
-        },
-        "csd1-2021/What is a Computer?": {
-          "name": "Što je računalo?"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "Pomakni, pomakni"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Zapetljancije"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Grafičko programiranje"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Odnosno programiranje"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "Uvjeti s kartama"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Binarne narukvice"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "Veliki događaj"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "Pisanje pjesama"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Vesele karte"
-        },
-        "coursef-2020/Internet": {
-          "name": "Internet"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "For Petlja Zabava"
         }
       }
     }

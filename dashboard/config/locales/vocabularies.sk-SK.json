@@ -2,1156 +2,240 @@
   "sk-SK": {
     "data": {
       "vocabularies": {
-        "code/dance-extras/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "event/dance-extras/unversioned": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "program/dance-extras/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/minecraft/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/minecraft/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "event/minecraft/unversioned": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "loop/minecraft/unversioned": {
-          "word": "Cyklus",
-          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
-        },
-        "program/minecraft/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/hero/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "function/hero/unversioned": {
-          "word": "Funkcia",
-          "definition": "Sled príkazov, ktorý sa dá ľahko využívať opakovane."
-        },
-        "program/hero/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/poem-art/2021": {
-          "word": "Kód",
-          "definition": "(sloveso) zapísať pokyny pre počítač."
-        },
-        "event/poem-art/2021": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "line/poem-art/2021": {
-          "word": "Verš",
-          "definition": "(poézia) - členenie básne usporiadané v riadku, ktorý končí na pravom okraji. "
-        },
-        "mood/poem-art/2021": {
-          "word": "Nálada",
-          "definition": "vyjadrenie pocitu, atmosféry alebo emócie v umení alebo písanom diele."
-        },
-        "program/poem-art/2021": {
-          "word": "Program",
-          "definition": "Postupnosť krokov, ktoré boli zakódované do niečoho, čo sa môže spustiť v počítači."
-        },
-        "code/flappy/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/flappy/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/hourofcode/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/frozen/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/frozen/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/iceage/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/iceage/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/artist/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/artist/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/artist/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/gumball/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/gumball/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/dance/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "event/dance/unversioned": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "program/dance/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/aquatic/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "condition/aquatic/unversioned": {
-          "word": "Podmienka",
-          "definition": "Miesto, kde program pred vykonaním akcie kontroluje splnenie nejakej požiadavky."
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "Podmienené príkazy",
-          "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "loops/aquatic/unversioned": {
-          "word": "Cykly",
-          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
-        },
-        "program/aquatic/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "Cézarova šifra ",
-          "definition": "technika šifrovania, ktorá posúva abecedu o určitý počet znakov."
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "Šifra",
-          "definition": "všeobecný výraz pre techniku (alebo algoritmus), ktorá vykonáva šifrovanie"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "Prelomenie šifrovania",
-          "definition": "Keď sa pokúšate dekódovať tajnú správu bez toho, aby ste poznali všetky špecifiká šifry, snažíte sa „prelomiť“ šifrovanie. "
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "Dešifrovanie",
-          "definition": "proces, ktorý zvráti šifrovanie a tajnú správu prevedie späť na pôvodný jednoduchý text."
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "definition": "proces kódovania správ s cieľom udržať ich v tajnosti, aby ich mohli čítať len „oprávnené“ strany."
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "Šifra s náhodnou substitúciou",
-          "definition": "technika šifrovania, ktorá mapuje každé písmeno abecedy na náhodne vybrané iné písmená abecedy."
-        },
-        "code/starwars/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/starwars/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/mc/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/mc/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/mc/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/playlab/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/playlab/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "definition": "algoritmus kompresie údajov, ktorý umožňuje dokonalú rekonštrukciu pôvodných údajov z komprimovaných údajov.  Najčastejšie sa používa na kompresiu textu (napr. kompresia ZIP)"
-        },
-        "event/outbreak/unversioned": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Modely a simulácie",
-          "definition": "program, ktorý odráža alebo napodobňuje kľúčové vlastnosti udalosti v reálnom svete s cieľom preskúmať jej správanie bez nákladov, času alebo nebezpečenstva, ktoré by bolo potrebné na uskutočnenie experimentu v reálnom živote."
-        },
-        "code/sports/unversioned": {
-          "word": "Kódovať",
-          "definition": "(sloveso) Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/sports/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "event/sports/unversioned": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "program/sports/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/infinity/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/infinity/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/basketball/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "debugging/basketball/unversioned": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "event/basketball/unversioned": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "program/basketball/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/dance-2019/unversioned": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "Strojové učenie",
-          "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
-        },
-        "algorithm/coursed/2022": {
-          "word": "Algoritmus",
-          "definition": "Zoznam krokov na dokončenie úlohy. "
-        },
-        "program/coursed/2022": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "bug/coursed/2022": {
-          "word": "Chyba",
-          "definition": "Časť programu, ktorá nefunguje správne."
-        },
-        "debugging/coursed/2022": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "loop/coursed/2022": {
-          "word": "Cyklus",
-          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
-        },
-        "programming/coursed/2022": {
-          "word": "Programovanie",
-          "definition": "Činnosť, ktorou sa vytvára program."
-        },
-        "frustrated/coursed/2022": {
-          "word": "Frustrácia",
-          "definition": "Pocit hnevu alebo podráždenosti spôsobený tým, že niečo nie je podľa mojich predstáv."
-        },
-        "persistence/coursed/2022": {
-          "word": "Vytrvalosť",
-          "definition": "Odhodlanie skúšať niečo znova a znova, aj keď je to veľmi ťažké. "
-        },
-        "event/coursed/2022": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "code/coursed/2022": {
-          "word": "Kódovanie",
-          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "repeat/coursed/2022": {
-          "word": "Opakovať",
-          "definition": "Urobiť niečo znova."
-        },
-        "command/coursed/2022": {
-          "word": "Príkaz",
-          "definition": "Pokyn pre počítač. Veľké množstvo príkazov spolu tvorí algoritmy a počítačové programy."
-        },
-        "conditionals/coursed/2022": {
-          "word": "Podmienené príkazy",
-          "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
-        },
-        "pseudocode/coursed/2022": {
-          "word": "pseudokód",
-          "definition": "Opis krokov v algoritme písaný jednoduchým jazykom"
-        },
-        "condition/coursed/2022": {
-          "word": "Podmienka",
-          "definition": "Miesto, kde program pred vykonaním akcie kontroluje splnenie nejakej požiadavky."
-        },
-        "while_loop/coursed/2022": {
-          "word": "Cyklus „pokiaľ“",
-          "definition": "Cyklus, ktorý sa opakuje, kým je splnená podmienka."
-        },
-        "until/coursed/2022": {
-          "word": "Až kým",
-          "definition": "Príkaz, ktorý niečo vykonáva až dovtedy, kým sa nesplní nejaká podmienka."
-        },
-        "sprite/coursef/2022": {
-          "word": "Sprajt",
-          "definition": "Grafický objekt na obrazovke, ktorý má svoju polohu, veľkosť a vzhľad."
-        },
-        "user/coursef/2022": {
-          "word": "Používateľ",
-          "definition": "Niekto, kto používa objekt vrátane softvéru a hardvéru."
-        },
-        "algorithm/coursef/2022": {
-          "word": "Algoritmus",
-          "definition": "Zoznam krokov na dokončenie úlohy."
-        },
-        "behavior/coursef/2022": {
-          "word": "Správanie"
-        },
-        "program/coursef/2022": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "event/coursef/2022": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "variable/coursef/2022": {
-          "word": "Premenná",
-          "definition": "Označenie pre nejaké informácie, ktoré sa využívajú v programe."
-        },
-        "prompt/coursef/2022": {
-          "word": "Výzva",
-          "definition": "Správa na obrazovke počítača, ktorá čaká, kým používateľ zadá nejaké údaje."
-        },
-        "input/coursef/2022": {
-          "word": "Vstup",
-          "definition": "Informácie, ktoré počítač dostane od používateľov."
-        },
-        "models_and_simulations/coursef/2022": {
-          "word": "Modely a simulácie",
-          "definition": "program, ktorý odráža alebo napodobňuje kľúčové vlastnosti udalosti v reálnom svete s cieľom preskúmať jej správanie bez nákladov, času alebo nebezpečenstva, ktoré by bolo potrebné na uskutočnenie experimentu v reálnom živote."
-        },
-        "machine_learning/coursef/2022": {
-          "word": "Strojové učenie",
-          "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
-        },
-        "dns/coursef/2022": {
-          "word": "DNS",
-          "definition": "skratka pre Domain Name System, tento systém prekladá názvy domén (napríklad example.com) na IP adresy (napríklad 93.184.216.34)."
-        },
-        "dsl_cable/coursef/2022": {
-          "word": "DSL/káblové pripojenie",
-          "definition": "Spôsob prenosu informácií pomocou telefónnych alebo televíznych káblov."
-        },
-        "fiber_optic_cable/coursef/2022": {
-          "word": "Optický kábel",
-          "definition": "Pripojenie, ktoré na prenos informácií využíva svetlo."
-        },
-        "internet/coursef/2022": {
-          "word": "Internet",
-          "definition": "Skupina počítačov a serverov, ktoré sú navzájom prepojené."
-        },
-        "ip_address/coursef/2022": {
-          "word": "IP adresa",
-          "definition": "Číslo priradené každej veci, ktorá sa pripojí na internet."
-        },
-        "packets/coursef/2022": {
-          "word": "Pakety",
-          "definition": "Malé časti informácií, ktoré boli starostlivo vytvorené z väčších častí informácií."
-        },
-        "servers/coursef/2022": {
-          "word": "Servery",
-          "definition": "Počítače, ktoré existujú len preto, aby poskytovali veci iným počítačom."
-        },
-        "url/coursef/2022": {
-          "word": "URL",
-          "definition": "Ľahko zapamätateľná adresa na vyvolanie webovej stránky (napríklad www.code.org)."
-        },
-        "wi_fi/coursef/2022": {
-          "word": "Wi-Fi",
-          "definition": "Metóda bezdrôtového odosielania informácií pomocou rádiových vĺn."
-        },
-        "define/coursef/2022": {
-          "word": "Definuj",
-          "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."
-        },
-        "prepare/coursef/2022": {
-          "word": "Príprava",
-          "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
-        },
-        "reflect/coursef/2022": {
-          "word": "Reflexia",
-          "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
-        },
-        "try/coursef/2022": {
-          "word": "Pokus",
-          "definition": "Pokus urobiť niečo"
-        },
-        "behavior/coursee/2022": {
-          "word": "Správanie",
-          "definition": "Akcia, ktorú postava neustále vykonáva, kým nedostane príkaz, aby prestala. "
-        },
-        "sprite/coursee/2022": {
-          "word": "Sprajt",
-          "definition": "Grafický objekt na obrazovke, ktorý má svoju polohu, veľkosť a vzhľad."
-        },
-        "loop/coursee/2022": {
-          "word": "Cyklus",
-          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
-        },
-        "repeat/coursee/2022": {
-          "word": "Opakovať",
-          "definition": "Urobiť niečo znova."
-        },
-        "function/coursee/2022": {
-          "word": "Funkcia"
-        },
-        "condition/coursee/2022": {
-          "word": "Podmienka"
-        },
-        "conditionals/coursee/2022": {
-          "word": "Podmienené príkazy",
-          "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
-        },
-        "while_loop/coursee/2022": {
-          "word": "Cyklus „pokiaľ“",
-          "definition": "Cyklus, ktorý sa opakuje, kým je splnená podmienka."
-        },
-        "copyright/coursee/2022": {
-          "word": "Autorské práva",
-          "definition": "výhradné zákonné právo tlačiť, publikovať, prezentovať, filmovať alebo nahrávať literárne, umelecké alebo hudobné materiály a dávať iným ľuďom súhlas na vykonávanie týchto aktivít"
-        },
-        "define/coursee/2022": {
-          "word": "Definuj",
-          "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."
-        },
-        "prepare/coursee/2022": {
-          "word": "Príprava",
-          "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
-        },
-        "reflect/coursee/2022": {
-          "word": "Reflexia",
-          "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
-        },
-        "try/coursee/2022": {
-          "word": "Pokus",
-          "definition": "Pokus urobiť niečo"
-        },
-        "algorithm/courseb/2022": {
-          "word": "Algoritmus",
-          "definition": "Zoznam krokov na dokončenie úlohy. "
-        },
-        "bug/courseb/2022": {
-          "word": "Chyba",
-          "definition": "Časť programu, ktorá nefunguje správne."
-        },
-        "debugging/courseb/2022": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "click/courseb/2022": {
-          "word": "Klikni",
-          "definition": "Stlač tlačidlo myši"
-        },
-        "double_click/courseb/2022": {
-          "word": "Klikni dvakrát",
-          "definition": "Stlač tlačidlo myši veľmi rýchlo"
-        },
-        "drag/courseb/2022": {
-          "word": "Potiahni",
-          "definition": "Klikni tlačidlo myši a drž ho, kým kurzor myši presunieš na iné miesto. "
-        },
-        "drop/courseb/2022": {
-          "word": "Špagát",
-          "definition": "Uvoľni tlačidlo myši, čím pustíš ťahaný predmet."
-        },
-        "program/courseb/2022": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "programming/courseb/2022": {
-          "word": "Programovanie",
-          "definition": "Činnosť, ktorou sa vytvára program."
-        },
-        "persistence/courseb/2022": {
-          "word": "Vytrvalosť",
-          "definition": "Odhodlanie skúšať niečo znova a znova, aj keď je to veľmi ťažké. "
-        },
-        "loop/courseb/2022": {
-          "word": "Cyklus",
-          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
-        },
-        "repeat/courseb/2022": {
-          "word": "Opakovať",
-          "definition": "Urobiť niečo znova."
-        },
-        "event/courseb/2022": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "algorithm/express/2022": {
-          "word": "Algoritmus",
-          "definition": "Zoznam krokov na dokončenie úlohy. "
-        },
-        "bug/express/2022": {
-          "word": "Chyba",
-          "definition": "Časť programu, ktorá nefunguje správne."
-        },
-        "debugging/express/2022": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "sequencing/express/2022": {
-          "word": "Postupnosť",
-          "definition": "Usporiadanie príkazov do správneho poradia tak, aby ich dokázal prečítať počítač."
-        },
-        "program/express/2022": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "programming/express/2022": {
-          "word": "Programovanie",
-          "definition": "Činnosť, ktorou sa vytvára program."
-        },
-        "behavior/express/2022": {
-          "word": "Správanie",
-          "definition": "Akcia, ktorú postava neustále vykonáva, kým nedostane príkaz, aby prestala. "
-        },
-        "sprite/express/2022": {
-          "word": "Sprajt",
-          "definition": "Grafický objekt na obrazovke, ktorý má svoju polohu, veľkosť a vzhľad."
-        },
-        "event/express/2022": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "code/express/2022": {
-          "word": "Kódovanie",
-          "definition": "písanie kódu/písanie inštrukcií pre počítač."
-        },
-        "loop/express/2022": {
-          "word": "Cyklus",
-          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
-        },
-        "repeat/express/2022": {
-          "word": "Opakovať",
-          "definition": "Urobiť niečo znova."
-        },
-        "command/express/2022": {
-          "word": "Príkaz",
-          "definition": "Pokyn pre počítač. Veľké množstvo príkazov spolu tvorí algoritmy a počítačové programy."
-        },
-        "condition/express/2022": {
-          "word": "Podmienka",
-          "definition": "Miesto, kde program pred vykonaním akcie kontroluje splnenie nejakej požiadavky."
-        },
-        "conditionals/express/2022": {
-          "word": "Podmienené príkazy",
-          "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
-        },
-        "while_loop/express/2022": {
-          "word": "Cyklus „pokiaľ“",
-          "definition": "Cyklus, ktorý sa opakuje, kým je splnená podmienka."
-        },
-        "until/express/2022": {
-          "word": "Až kým",
-          "definition": "Príkaz, ktorý niečo vykonáva až dovtedy, kým sa nesplní nejaká podmienka."
-        },
-        "function/express/2022": {
-          "word": "Funkcia",
-          "definition": "Sled príkazov, ktorý sa dá ľahko využívať opakovane."
-        },
-        "prompt/express/2022": {
-          "word": "výzva",
-          "definition": "Správa na obrazovke počítača, ktorá čaká, kým používateľ zadá nejaké údaje."
-        },
-        "variable/express/2022": {
-          "word": "Premenná",
-          "definition": "Označenie pre nejaké informácie, ktoré sa využívajú v programe."
-        },
-        "for_loop/express/2022": {
-          "word": "Cyklus „for“",
-          "definition": "Cykly, ktoré majú vopred určený začiatok, koniec a prírastok."
-        },
-        "define/express/2022": {
-          "word": "Definuj",
-          "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."
-        },
-        "prepare/express/2022": {
-          "word": "Príprava",
-          "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
-        },
-        "reflect/express/2022": {
-          "word": "Reflexia",
-          "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
-        },
-        "try/express/2022": {
-          "word": "Pokus",
-          "definition": "Pokus urobiť niečo"
-        },
-        "click/pre-express/2022": {
-          "word": "Klikni",
-          "definition": "Stlač tlačidlo myši"
-        },
-        "double_click/pre-express/2022": {
-          "word": "Klikni dvakrát",
-          "definition": "Stlač tlačidlo myši veľmi rýchlo"
-        },
-        "drag/pre-express/2022": {
-          "word": "Potiahni",
-          "definition": "Klikni tlačidlo myši a drž ho, kým kurzor myši presunieš na iné miesto. "
-        },
-        "drop/pre-express/2022": {
-          "word": "Špagát",
-          "definition": "Uvoľni tlačidlo myši, čím pustíš ťahaný predmet."
-        },
-        "algorithm/pre-express/2022": {
-          "word": "Algoritmus",
-          "definition": "Zoznam krokov na dokončenie úlohy. "
-        },
-        "bug/pre-express/2022": {
-          "word": "Chyba",
-          "definition": "Časť programu, ktorá nefunguje správne."
-        },
-        "debugging/pre-express/2022": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/pre-express/2022": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "programming/pre-express/2022": {
-          "word": "Programovanie",
-          "definition": "Činnosť, ktorou sa vytvára program."
-        },
-        "persistence/pre-express/2022": {
-          "word": "Vytrvalosť",
-          "definition": "Odhodlanie skúšať niečo znova a znova, aj keď je to veľmi ťažké. "
-        },
-        "loop/pre-express/2022": {
-          "word": "Cyklus",
-          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
-        },
-        "repeat/pre-express/2022": {
-          "word": "Opakovať",
-          "definition": "Urobiť niečo znova."
-        },
-        "event/pre-express/2022": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "algorithm/coursea/2022": {
-          "word": "Algoritmus",
-          "definition": "Zoznam krokov na dokončenie úlohy. "
-        },
-        "debugging/coursea/2022": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/coursea/2022": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "click/coursea/2022": {
-          "word": "Klikni",
-          "definition": "Stlač tlačidlo myši"
-        },
-        "double_click/coursea/2022": {
-          "word": "Klikni dvakrát",
-          "definition": "Stlač tlačidlo myši veľmi rýchlo"
-        },
-        "drag/coursea/2022": {
-          "word": "Potiahni",
-          "definition": "Klikni tlačidlo myši a drž ho, kým kurzor myši presunieš na iné miesto. "
-        },
-        "drop/coursea/2022": {
-          "word": "Špagát",
-          "definition": "Uvoľni tlačidlo myši, čím pustíš ťahaný predmet."
-        },
-        "bug/coursea/2022": {
-          "word": "Chyba",
-          "definition": "Časť programu, ktorá nefunguje správne."
-        },
-        "programming/coursea/2022": {
-          "word": "Programovanie",
-          "definition": "Činnosť, ktorou sa vytvára program."
-        },
-        "loop/coursea/2022": {
-          "word": "Cyklus",
-          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
-        },
-        "repeat/coursea/2022": {
-          "word": "Opakovať",
-          "definition": "Urobiť niečo znova."
-        },
-        "event/coursea/2022": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "algorithm/coursec/2022": {
-          "word": "Algoritmus",
-          "definition": "Zoznam krokov na dokončenie úlohy. "
-        },
-        "bug/coursec/2022": {
-          "word": "Chyba",
-          "definition": "Časť programu, ktorá nefunguje správne."
-        },
-        "debugging/coursec/2022": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/coursec/2022": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "sequencing/coursec/2022": {
-          "word": "Postupnosť",
-          "definition": "Usporiadanie príkazov do správneho poradia tak, aby ich dokázal prečítať počítač."
-        },
-        "persistence/coursec/2022": {
-          "word": "Vytrvalosť"
-        },
-        "programming/coursec/2022": {
-          "word": "Programovanie",
-          "definition": "Činnosť, ktorou sa vytvára program."
-        },
-        "loop/coursec/2022": {
-          "word": "Cyklus",
-          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
-        },
-        "repeat/coursec/2022": {
-          "word": "Opakovať",
-          "definition": "Urobiť niečo znova."
-        },
-        "event/coursec/2022": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "data/coursec/2022": {
-          "word": "Dáta"
-        },
-        "binary/coursec/2022": {
-          "word": "Binárny",
-          "definition": "Spôsob vyjadrenia informácií pomocou iba dvoch možností."
-        },
-        "computer/csd/2022": {
+        "computer/csd/2021": {
           "word": "Počítač",
           "definition": "Stroj, ktorý pracuje s informáciami"
         },
-        "input/csd/2022": {
+        "input/csd/2021": {
           "word": "Vstup",
           "definition": "informácie, ktoré počítače získavajú od používateľov, zariadení alebo iných počítačov"
         },
-        "output/csd/2022": {
+        "output/csd/2021": {
           "word": "Výstup",
           "definition": "informácie, ktoré počítače poskytujú používateľom, zariadeniam alebo iným počítačom"
         },
-        "processing/csd/2022": {
+        "processing/csd/2021": {
           "word": "Spracúvanie",
           "definition": "Myšlienková práca, v rámci ktorej počítače premieňajú vstup na výstup."
         },
-        "storage/csd/2022": {
+        "storage/csd/2021": {
           "word": "pamäť",
           "definition": "schopnosť ukladať informácie na neskoršie použitie"
         },
-        "bug/csd/2022": {
-          "word": "Chyba",
-          "definition": "Časť programu, ktorá nefunguje správne."
-        },
-        "debugging/csd/2022": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/csd/2022": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "parameter/csd/2022": {
-          "word": "Parameter"
-        },
-        "variable/csd/2022": {
-          "word": "Premenná",
-          "definition": "Označenie pre nejaké informácie, ktoré sa využívajú v programe."
-        },
-        "dot_notation/csd/2022": {
-          "word": "Zápis s bodkou",
-          "definition": "spôsob, akým sa vlastnosti sprajtov používajú v Game Labe, teda spojenie názvu sprajtu a vlastnosti bodkou."
-        },
-        "property/csd/2022": {
-          "word": "Vlastnosť",
-          "definition": "Označenie charakteristiky sprajtu, napríklad jeho umiestnenia a vzhľadu"
-        },
-        "sprite/csd/2022": {
-          "word": "Sprajt",
-          "definition": "Postava na obrazovke s vlastnosťami, ktoré opisujú jej polohu, pohyb a vzhľad."
-        },
-        "boolean_expression/csd/2022": {
-          "word": "Logický výraz",
-          "definition": "v programovaní je to výraz, ktorý sa vyhodnotí ako true (pravda) alebo false (nepravda). "
-        },
-        "condition/csd/2022": {
-          "word": "Podmienka",
-          "definition": "Niečo, čo program pred rozhodnutím o vykonaní akcie skontroluje, či je to pravda."
-        },
-        "conditionals/csd/2022": {
-          "word": "Podmienené príkazy",
-          "definition": "Príkazy, ktoré sa spustia len vtedy, keď sú splnené určité podmienky."
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstrakcia",
-          "definition": "zjednodušené vyjadrenie niečoho zložitejšieho. Abstrakcie vám umožňujú skryť detaily, aby ste zvládli zložitosť, sústredili sa na dôležité koncepty a uvažovali o problémoch na vyššej úrovni."
-        },
-        "function/csd/2022": {
-          "word": "Funkcia",
-          "definition": "Pomenovaná časť programových pokynov."
-        },
-        "html/csd/2022": {
+        "html/csd/2021": {
           "word": "HTML",
           "definition": "Hypertextový značkovací jazyk, ktorý sa používa na vytváranie webových stránok"
         },
-        "html_element/csd/2022": {
+        "html_element/csd/2021": {
           "word": "HTML prvok",
           "definition": "časť webovej stránky, ktorá je označená otváracou značkou a často uzatvorená ukončovacou značkou"
         },
-        "html_tag/csd/2022": {
+        "html_tag/csd/2021": {
           "word": "HTML značka",
           "definition": "špeciálny súbor znakov, ktorý označuje začiatok a koniec HTML prvku, ako aj jeho typ"
         },
-        "website_content/csd/2022": {
+        "website_content/csd/2021": {
           "word": "Obsah webu",
           "definition": "text a obrázky na webe"
         },
-        "website_structure/csd/2022": {
+        "website_structure/csd/2021": {
           "word": "Štruktúra webu",
           "definition": "spôsob, ako je obsah webu usporiadaný"
         },
-        "heading/csd/2022": {
+        "heading/csd/2021": {
           "word": "Nadpis",
           "definition": "Názov alebo zhrnutie dokumentu alebo jeho sekcie"
         },
-        "digital_footprint/csd/2022": {
+        "digital_footprint/csd/2021": {
           "word": "Digitálna stopa",
           "definition": "Informácie o jednotlivcovi, ktoré sa dajú zozbierať naprieč celým internetom."
         },
-        "css/csd/2022": {
+        "css/csd/2021": {
           "word": "CSS",
           "definition": "Kaskádové štýly – jazyk, ktorý opisuje, aký štýl by mali HTML prvky mať"
         },
-        "css_selector/csd/2022": {
+        "css_selector/csd/2021": {
           "word": "CSS selektor",
           "definition": "časť CSS kódu, ktorá určuje, na ktorý HTML prvok sa má daný štýl použiť"
         },
-        "copyright/csd/2022": {
+        "copyright/csd/2021": {
           "word": "Autorské práva",
           "definition": "výhradné zákonné právo tlačiť, publikovať, prezentovať, filmovať alebo nahrávať literárne, umelecké alebo hudobné materiály a dávať iným ľuďom súhlas na vykonávanie týchto aktivít"
         },
-        "relevant/csd/2022": {
+        "relevant/csd/2021": {
           "word": "Relevantné",
           "definition": "úzko súvisiace s témou"
         },
-        "search_engine/csd/2022": {
-          "word": "Vyhľadávač",
-          "definition": " Program, ktorý vyhľadáva položky na internete."
-        },
-        "trustworthy/csd/2022": {
+        "trustworthy/csd/2021": {
           "word": "Dôveryhodný",
           "definition": "Spoľahlivý, úprimný a pravdovravný"
         },
-        "css_class/csd/2022": {
+        "search_engine/csd/2021": {
+          "word": "Vyhľadávač",
+          "definition": " Program, ktorý vyhľadáva položky na internete."
+        },
+        "css_class/csd/2021": {
           "word": "CSS trieda",
           "definition": "Identifikátor, ktorý umožňuje priradiť rovnaký štýl viacerým prvkom v HTML dokumente"
         },
-        "user/csd/2022": {
-          "word": "Používateľ",
-          "definition": "Niekto, kto používa objekt vrátane softvéru a hardvéru."
+        "bug/csd/2021": {
+          "word": "Chyba",
+          "definition": "Časť programu, ktorá nefunguje správne."
         },
-        "user_interface/csd/2022": {
-          "word": "Užívateľské prostredie"
+        "debugging/csd/2021": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
-        "machine_learning/csd/2022": {
-          "word": "Strojové učenie",
-          "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
-        },
-        "features/csd/2022": {
-          "word": "Vlastnosti",
-          "definition": "vstupy, ktoré model používa na rozhodovanie"
-        },
-        "label/csd/2022": {
-          "word": "Označenie",
-          "definition": "výstup, ktorý sa snažíte pomocou modelu vybrať alebo predpovedať"
-        },
-        "model/csd/2022": {
-          "word": "Model",
-          "definition": "počítačový program navrhnutý tak, aby prijímal rozhodnutia"
-        },
-        "supervised_learning/csd/2022": {
-          "word": "Učenie pod dohľadom",
-          "definition": "keď človek trénuje model, aby sa učil pomocou príkladov"
-        },
-        "training/csd/2022": {
-          "word": "Trénovanie",
-          "definition": "poskytovanie príkladov modelu, aby sa mohol učiť"
-        },
-        "unsupervised_learning/csd/2022": {
-          "word": "Učenie bez dohľadu",
-          "definition": "hľadanie vzorov v údajoch, ktoré nemajú žiadne označenia"
-        },
-        "categorical_data/csd/2022": {
-          "word": "Kategorické údaje",
-          "definition": "údaje, ktoré možno zadeliť do skupín"
-        },
-        "classification/csd/2022": {
-          "word": "Klasifikácia",
-          "definition": "predpovedanie kategórie na základe iných vlastností"
-        },
-        "bias/csd/2022": {
-          "word": "Skreslenie",
-          "definition": "Keď sa pri rozhodovaní uprednostňujú niektoré veci a iné sa znevýhodňujú alebo vylučujú"
-        },
-        "numerical_data/csd/2022": {
-          "word": "Číselné údaje",
-          "definition": "údaje, ktoré sa dajú spočítať alebo zmerať"
-        },
-        "ethics/csd/2022": {
-          "word": "Etika",
-          "definition": "zásady dobrého správania."
-        },
-        "code/poem-art/unversioned": {
-          "word": "Kód",
-          "definition": "(sloveso) zapísať pokyny pre počítač."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Program",
-          "definition": "Postupnosť krokov, ktoré boli zakódované do niečoho, čo sa môže spustiť v počítači."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Nálada",
-          "definition": "vyjadrenie pocitu, atmosféry alebo emócie v umení alebo písanom diele."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Verš",
-          "definition": "(poézia) - členenie básne usporiadané v riadku, ktorý končí na pravom okraji. "
-        },
-        "sprite/coursef/2021": {
-          "word": "Sprajt",
-          "definition": "Grafický objekt na obrazovke, ktorý má svoju polohu, veľkosť a vzhľad."
-        },
-        "user/coursef/2021": {
-          "word": "Používateľ",
-          "definition": "Niekto, kto používa objekt vrátane softvéru a hardvéru."
-        },
-        "algorithm/coursef/2021": {
-          "word": "Algoritmus",
-          "definition": "Zoznam krokov na dokončenie úlohy."
-        },
-        "behavior/coursef/2021": {
-          "word": "Správanie",
-          "definition": "Akcia, ktorú postava neustále vykonáva, kým nedostane príkaz, aby prestala. "
-        },
-        "program/coursef/2021": {
+        "program/csd/2021": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
-        "event/coursef/2021": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        "parameter/csd/2021": {
+          "word": "Parameter",
+          "definition": "Dodatočné informácie poskytované ako vstup do bloku na prispôsobenie jeho fungovania"
         },
-        "variable/coursef/2021": {
+        "variable/csd/2021": {
           "word": "Premenná",
           "definition": "Označenie pre nejaké informácie, ktoré sa využívajú v programe."
         },
-        "prompt/coursef/2021": {
-          "word": "Výzva",
-          "definition": "Správa na obrazovke počítača, ktorá čaká, kým používateľ zadá nejaké údaje."
+        "property/csd/2021": {
+          "word": "Vlastnosť",
+          "definition": "Označenie charakteristiky sprajtu, napríklad jeho umiestnenia a vzhľadu"
         },
-        "input/coursef/2021": {
-          "word": "Vstup",
-          "definition": "Informácie, ktoré počítač dostane od používateľov."
+        "sprite/csd/2021": {
+          "word": "Sprajt",
+          "definition": "Postava na obrazovke s vlastnosťami, ktoré opisujú jej polohu, pohyb a vzhľad."
         },
-        "loop/coursef/2021": {
-          "word": "Cyklus",
-          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        "dot_notation/csd/2021": {
+          "word": "Zápis s bodkou",
+          "definition": "spôsob, akým sa vlastnosti sprajtov používajú v Game Labe, teda spojenie názvu sprajtu a vlastnosti bodkou."
         },
-        "repeat/coursef/2021": {
-          "word": "Opakovať",
-          "definition": "Urobiť niečo znova."
+        "condition/csd/2021": {
+          "word": "Podmienka",
+          "definition": "Niečo, čo program pred rozhodnutím o vykonaní akcie skontroluje, či je to pravda."
         },
-        "for_loop/coursef/2021": {
+        "conditionals/csd/2021": {
+          "word": "Podmienené príkazy",
+          "definition": "Príkazy, ktoré sa spustia len vtedy, keď sú splnené určité podmienky."
+        },
+        "boolean_expression/csd/2021": {
+          "word": "Logický výraz",
+          "definition": "v programovaní je to výraz, ktorý sa vyhodnotí ako true (pravda) alebo false (nepravda). "
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstrakcia",
+          "definition": "zjednodušené vyjadrenie niečoho zložitejšieho. Abstrakcie vám umožňujú skryť detaily, aby ste zvládli zložitosť, sústredili sa na dôležité koncepty a uvažovali o problémoch na vyššej úrovni."
+        },
+        "function/csd/2021": {
+          "word": "Funkcia",
+          "definition": "Pomenovaná časť programových pokynov."
+        },
+        "user/csd/2021": {
+          "word": "Používateľ",
+          "definition": "Niekto, kto používa objekt vrátane softvéru a hardvéru."
+        },
+        "user_interface/csd/2021": {
+          "word": "Užívateľské prostredie"
+        },
+        "for_loop/csd/2021": {
           "word": "Cyklus „for“",
           "definition": "Cykly, ktoré majú vopred určený začiatok, koniec a prírastok."
         },
-        "models_and_simulations/coursef/2021": {
-          "word": "Modely a simulácie",
-          "definition": "program, ktorý odráža alebo napodobňuje kľúčové vlastnosti udalosti v reálnom svete s cieľom preskúmať jej správanie bez nákladov, času alebo nebezpečenstva, ktoré by bolo potrebné na uskutočnenie experimentu v reálnom živote."
-        },
-        "machine_learning/coursef/2021": {
+        "machine_learning/csd/2021": {
           "word": "Strojové učenie",
           "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
         },
-        "dns/coursef/2021": {
-          "word": "DNS",
-          "definition": "skratka pre Domain Name System, tento systém prekladá názvy domén (napríklad example.com) na IP adresy (napríklad 93.184.216.34)."
+        "features/csd/2021": {
+          "word": "Vlastnosti",
+          "definition": "vstupy, ktoré model používa na rozhodovanie"
         },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/káblové pripojenie",
-          "definition": "Spôsob prenosu informácií pomocou telefónnych alebo televíznych káblov."
+        "label/csd/2021": {
+          "word": "Označenie",
+          "definition": "výstup, ktorý sa snažíte pomocou modelu vybrať alebo predpovedať"
         },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Optický kábel",
-          "definition": "Pripojenie, ktoré na prenos informácií využíva svetlo."
+        "model/csd/2021": {
+          "word": "Model",
+          "definition": "počítačový program navrhnutý tak, aby prijímal rozhodnutia"
         },
-        "internet/coursef/2021": {
-          "word": "Internet",
-          "definition": "Skupina počítačov a serverov, ktoré sú navzájom prepojené."
+        "supervised_learning/csd/2021": {
+          "word": "Učenie pod dohľadom",
+          "definition": "keď človek trénuje model, aby sa učil pomocou príkladov"
         },
-        "ip_address/coursef/2021": {
-          "word": "IP adresa",
-          "definition": "Číslo priradené každej veci, ktorá sa pripojí na internet."
+        "training/csd/2021": {
+          "word": "Trénovanie",
+          "definition": "poskytovanie príkladov modelu, aby sa mohol učiť"
         },
-        "packets/coursef/2021": {
-          "word": "Pakety",
-          "definition": "Malé časti informácií, ktoré boli starostlivo vytvorené z väčších častí informácií."
+        "unsupervised_learning/csd/2021": {
+          "word": "Učenie bez dohľadu",
+          "definition": "hľadanie vzorov v údajoch, ktoré nemajú žiadne označenia"
         },
-        "servers/coursef/2021": {
-          "word": "Servery",
-          "definition": "Počítače, ktoré existujú len preto, aby poskytovali veci iným počítačom."
+        "categorical_data/csd/2021": {
+          "word": "Kategorické údaje",
+          "definition": "údaje, ktoré možno zadeliť do skupín"
         },
-        "url/coursef/2021": {
-          "word": "URL",
-          "definition": "Ľahko zapamätateľná adresa na vyvolanie webovej stránky (napríklad www.code.org)."
+        "classification/csd/2021": {
+          "word": "Klasifikácia",
+          "definition": "predpovedanie kategórie na základe iných vlastností"
         },
-        "wi_fi/coursef/2021": {
-          "word": "Wi-Fi",
-          "definition": "Metóda bezdrôtového odosielania informácií pomocou rádiových vĺn."
+        "bias/csd/2021": {
+          "word": "Skreslenie",
+          "definition": "Keď sa pri rozhodovaní uprednostňujú niektoré veci a iné sa znevýhodňujú alebo vylučujú"
         },
-        "define/coursef/2021": {
-          "word": "Definuj",
-          "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."
+        "numerical_data/csd/2021": {
+          "word": "Číselné údaje",
+          "definition": "údaje, ktoré sa dajú spočítať alebo zmerať"
         },
-        "prepare/coursef/2021": {
-          "word": "Príprava",
-          "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
+        "ethics/csd/2021": {
+          "word": "Etika",
+          "definition": "zásady dobrého správania."
         },
-        "reflect/coursef/2021": {
-          "word": "Reflexia",
-          "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
+        "algorithm/coursea/2021": {
+          "word": "Algoritmus",
+          "definition": "Zoznam krokov na dokončenie úlohy. "
         },
-        "try/coursef/2021": {
-          "word": "Pokus",
-          "definition": "Pokus urobiť niečo"
+        "debugging/coursea/2021": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/coursea/2021": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "click/coursea/2021": {
+          "word": "Klikni",
+          "definition": "Stlač tlačidlo myši"
+        },
+        "double_click/coursea/2021": {
+          "word": "Klikni dvakrát",
+          "definition": "Stlač tlačidlo myši veľmi rýchlo"
+        },
+        "drag/coursea/2021": {
+          "word": "Potiahni",
+          "definition": "Klikni tlačidlo myši a drž ho, kým kurzor myši presunieš na iné miesto. "
+        },
+        "drop/coursea/2021": {
+          "word": "Špagát",
+          "definition": "Uvoľni tlačidlo myši, čím pustíš ťahaný predmet."
+        },
+        "bug/coursea/2021": {
+          "word": "Chyba",
+          "definition": "Časť programu, ktorá nefunguje správne."
+        },
+        "programming/coursea/2021": {
+          "word": "Programovanie",
+          "definition": "Činnosť, ktorou sa vytvára program."
+        },
+        "loop/coursea/2021": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/coursea/2021": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "event/coursea/2021": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
         "algorithm/courseb/2021": {
           "word": "Algoritmus",
@@ -1202,54 +286,6 @@
           "definition": "Urobiť niečo znova."
         },
         "event/courseb/2021": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "algorithm/coursea/2021": {
-          "word": "Algoritmus",
-          "definition": "Zoznam krokov na dokončenie úlohy. "
-        },
-        "debugging/coursea/2021": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/coursea/2021": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "click/coursea/2021": {
-          "word": "Klikni",
-          "definition": "Stlač tlačidlo myši"
-        },
-        "double_click/coursea/2021": {
-          "word": "Klikni dvakrát",
-          "definition": "Stlač tlačidlo myši veľmi rýchlo"
-        },
-        "drag/coursea/2021": {
-          "word": "Potiahni",
-          "definition": "Klikni tlačidlo myši a drž ho, kým kurzor myši presunieš na iné miesto. "
-        },
-        "drop/coursea/2021": {
-          "word": "Špagát",
-          "definition": "Uvoľni tlačidlo myši, čím pustíš ťahaný predmet."
-        },
-        "bug/coursea/2021": {
-          "word": "Chyba",
-          "definition": "Časť programu, ktorá nefunguje správne."
-        },
-        "programming/coursea/2021": {
-          "word": "Programovanie",
-          "definition": "Činnosť, ktorou sa vytvára program."
-        },
-        "loop/coursea/2021": {
-          "word": "Cyklus",
-          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
-        },
-        "repeat/coursea/2021": {
-          "word": "Opakovať",
-          "definition": "Urobiť niečo znova."
-        },
-        "event/coursea/2021": {
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
@@ -1360,6 +396,174 @@
         "until/coursed/2021": {
           "word": "Až kým",
           "definition": "Príkaz, ktorý niečo vykonáva až dovtedy, kým sa nesplní nejaká podmienka."
+        },
+        "algorithm/coursee/2021": {
+          "word": "algoritmus",
+          "definition": "Zoznam krokov na dokončenie úlohy."
+        },
+        "behavior/coursee/2021": {
+          "word": "Správanie",
+          "definition": "Akcia, ktorú postava neustále vykonáva, kým nedostane príkaz, aby prestala. "
+        },
+        "sprite/coursee/2021": {
+          "word": "Sprajt",
+          "definition": "Grafický objekt na obrazovke, ktorý má svoju polohu, veľkosť a vzhľad."
+        },
+        "event/coursee/2021": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "copyright/coursee/2021": {
+          "word": "Autorské práva",
+          "definition": "výhradné zákonné právo tlačiť, publikovať, prezentovať, filmovať alebo nahrávať literárne, umelecké alebo hudobné materiály a dávať iným ľuďom súhlas na vykonávanie týchto aktivít"
+        },
+        "loop/coursee/2021": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/coursee/2021": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "function/coursee/2021": {
+          "word": "Funkcia",
+          "definition": "Sled príkazov, ktorý sa dá ľahko využívať opakovane."
+        },
+        "condition/coursee/2021": {
+          "word": "Podmienka",
+          "definition": "Miesto, kde program pred vykonaním akcie kontroluje splnenie nejakej požiadavky."
+        },
+        "conditionals/coursee/2021": {
+          "word": "Podmienené príkazy",
+          "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
+        },
+        "while_loop/coursee/2021": {
+          "word": "Cyklus „pokiaľ“",
+          "definition": "Cyklus, ktorý sa opakuje, kým je splnená podmienka."
+        },
+        "define/coursee/2021": {
+          "word": "Definuj",
+          "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."
+        },
+        "prepare/coursee/2021": {
+          "word": "Príprava",
+          "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
+        },
+        "reflect/coursee/2021": {
+          "word": "Reflexia",
+          "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
+        },
+        "try/coursee/2021": {
+          "word": "Pokus",
+          "definition": "Pokus urobiť niečo"
+        },
+        "sprite/coursef/2021": {
+          "word": "Sprajt",
+          "definition": "Grafický objekt na obrazovke, ktorý má svoju polohu, veľkosť a vzhľad."
+        },
+        "user/coursef/2021": {
+          "word": "Používateľ",
+          "definition": "Niekto, kto používa objekt vrátane softvéru a hardvéru."
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algoritmus",
+          "definition": "Zoznam krokov na dokončenie úlohy."
+        },
+        "behavior/coursef/2021": {
+          "word": "Správanie",
+          "definition": "Akcia, ktorú postava neustále vykonáva, kým nedostane príkaz, aby prestala. "
+        },
+        "program/coursef/2021": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "event/coursef/2021": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "variable/coursef/2021": {
+          "word": "Premenná",
+          "definition": "Označenie pre nejaké informácie, ktoré sa využívajú v programe."
+        },
+        "prompt/coursef/2021": {
+          "word": "Výzva",
+          "definition": "Správa na obrazovke počítača, ktorá čaká, kým používateľ zadá nejaké údaje."
+        },
+        "input/coursef/2021": {
+          "word": "Vstup",
+          "definition": "Informácie, ktoré počítač dostane od používateľov."
+        },
+        "loop/coursef/2021": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/coursef/2021": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "for_loop/coursef/2021": {
+          "word": "Cyklus „for“",
+          "definition": "Cykly, ktoré majú vopred určený začiatok, koniec a prírastok."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modely a simulácie",
+          "definition": "program, ktorý odráža alebo napodobňuje kľúčové vlastnosti udalosti v reálnom svete s cieľom preskúmať jej správanie bez nákladov, času alebo nebezpečenstva, ktoré by bolo potrebné na uskutočnenie experimentu v reálnom živote."
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Strojové učenie",
+          "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
+        },
+        "dns/coursef/2021": {
+          "word": "DNS",
+          "definition": "skratka pre Domain Name System, tento systém prekladá názvy domén (napríklad example.com) na IP adresy (napríklad 93.184.216.34)."
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/káblové pripojenie",
+          "definition": "Spôsob prenosu informácií pomocou telefónnych alebo televíznych káblov."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Optický kábel",
+          "definition": "Pripojenie, ktoré na prenos informácií využíva svetlo."
+        },
+        "internet/coursef/2021": {
+          "word": "Internet",
+          "definition": "Skupina počítačov a serverov, ktoré sú navzájom prepojené."
+        },
+        "ip_address/coursef/2021": {
+          "word": "IP adresa",
+          "definition": "Číslo priradené každej veci, ktorá sa pripojí na internet."
+        },
+        "packets/coursef/2021": {
+          "word": "Pakety",
+          "definition": "Malé časti informácií, ktoré boli starostlivo vytvorené z väčších častí informácií."
+        },
+        "servers/coursef/2021": {
+          "word": "Servery",
+          "definition": "Počítače, ktoré existujú len preto, aby poskytovali veci iným počítačom."
+        },
+        "url/coursef/2021": {
+          "word": "URL",
+          "definition": "Ľahko zapamätateľná adresa na vyvolanie webovej stránky (napríklad www.code.org)."
+        },
+        "wi_fi/coursef/2021": {
+          "word": "Wi-Fi",
+          "definition": "Metóda bezdrôtového odosielania informácií pomocou rádiových vĺn."
+        },
+        "define/coursef/2021": {
+          "word": "Definuj",
+          "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."
+        },
+        "prepare/coursef/2021": {
+          "word": "Príprava",
+          "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
+        },
+        "reflect/coursef/2021": {
+          "word": "Reflexia",
+          "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
+        },
+        "try/coursef/2021": {
+          "word": "Pokus",
+          "definition": "Pokus urobiť niečo"
         },
         "algorithm/express/2021": {
           "word": "Algoritmus",
@@ -1513,252 +717,1048 @@
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
-        "algorithm/coursee/2021": {
-          "word": "algoritmus",
-          "definition": "Zoznam krokov na dokončenie úlohy."
-        },
-        "behavior/coursee/2021": {
-          "word": "Správanie",
-          "definition": "Akcia, ktorú postava neustále vykonáva, kým nedostane príkaz, aby prestala. "
-        },
-        "sprite/coursee/2021": {
-          "word": "Sprajt",
-          "definition": "Grafický objekt na obrazovke, ktorý má svoju polohu, veľkosť a vzhľad."
-        },
-        "event/coursee/2021": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "copyright/coursee/2021": {
-          "word": "Autorské práva",
-          "definition": "výhradné zákonné právo tlačiť, publikovať, prezentovať, filmovať alebo nahrávať literárne, umelecké alebo hudobné materiály a dávať iným ľuďom súhlas na vykonávanie týchto aktivít"
-        },
-        "loop/coursee/2021": {
-          "word": "Cyklus",
-          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
-        },
-        "repeat/coursee/2021": {
-          "word": "Opakovať",
-          "definition": "Urobiť niečo znova."
-        },
-        "function/coursee/2021": {
-          "word": "Funkcia",
-          "definition": "Sled príkazov, ktorý sa dá ľahko využívať opakovane."
-        },
-        "condition/coursee/2021": {
-          "word": "Podmienka",
-          "definition": "Miesto, kde program pred vykonaním akcie kontroluje splnenie nejakej požiadavky."
-        },
-        "conditionals/coursee/2021": {
-          "word": "Podmienené príkazy",
-          "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
-        },
-        "while_loop/coursee/2021": {
-          "word": "Cyklus „pokiaľ“",
-          "definition": "Cyklus, ktorý sa opakuje, kým je splnená podmienka."
-        },
-        "define/coursee/2021": {
-          "word": "Definuj",
-          "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."
-        },
-        "prepare/coursee/2021": {
-          "word": "Príprava",
-          "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
-        },
-        "reflect/coursee/2021": {
-          "word": "Reflexia",
-          "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
-        },
-        "try/coursee/2021": {
-          "word": "Pokus",
-          "definition": "Pokus urobiť niečo"
-        },
-        "machine_learning/csd/2021": {
-          "word": "Strojové učenie",
-          "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
-        },
-        "features/csd/2021": {
-          "word": "Vlastnosti",
-          "definition": "vstupy, ktoré model používa na rozhodovanie"
-        },
-        "label/csd/2021": {
-          "word": "Označenie",
-          "definition": "výstup, ktorý sa snažíte pomocou modelu vybrať alebo predpovedať"
-        },
-        "model/csd/2021": {
-          "word": "Model",
-          "definition": "počítačový program navrhnutý tak, aby prijímal rozhodnutia"
-        },
-        "supervised_learning/csd/2021": {
-          "word": "Učenie pod dohľadom",
-          "definition": "keď človek trénuje model, aby sa učil pomocou príkladov"
-        },
-        "training/csd/2021": {
-          "word": "Trénovanie",
-          "definition": "poskytovanie príkladov modelu, aby sa mohol učiť"
-        },
-        "unsupervised_learning/csd/2021": {
-          "word": "Učenie bez dohľadu",
-          "definition": "hľadanie vzorov v údajoch, ktoré nemajú žiadne označenia"
-        },
-        "categorical_data/csd/2021": {
-          "word": "Kategorické údaje",
-          "definition": "údaje, ktoré možno zadeliť do skupín"
-        },
-        "classification/csd/2021": {
-          "word": "Klasifikácia",
-          "definition": "predpovedanie kategórie na základe iných vlastností"
-        },
-        "bias/csd/2021": {
-          "word": "Skreslenie",
-          "definition": "Keď sa pri rozhodovaní uprednostňujú niektoré veci a iné sa znevýhodňujú alebo vylučujú"
-        },
-        "numerical_data/csd/2021": {
-          "word": "Číselné údaje",
-          "definition": "údaje, ktoré sa dajú spočítať alebo zmerať"
-        },
-        "ethics/csd/2021": {
-          "word": "Etika",
-          "definition": "zásady dobrého správania."
-        },
-        "user/csd/2021": {
-          "word": "Používateľ",
-          "definition": "Niekto, kto používa objekt vrátane softvéru a hardvéru."
-        },
-        "user_interface/csd/2021": {
-          "word": "Užívateľské prostredie"
-        },
-        "bug/csd/2021": {
-          "word": "Chyba",
-          "definition": "Časť programu, ktorá nefunguje správne."
-        },
-        "for_loop/csd/2021": {
-          "word": "Cyklus „for“",
-          "definition": "Cykly, ktoré majú vopred určený začiatok, koniec a prírastok."
-        },
-        "parameter/csd/2021": {
-          "word": "Parameter",
-          "definition": "Dodatočné informácie poskytované ako vstup do bloku na prispôsobenie jeho fungovania"
-        },
-        "debugging/csd/2021": {
-          "word": "Ladenie",
-          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
-        },
-        "program/csd/2021": {
-          "word": "Program",
-          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "variable/csd/2021": {
-          "word": "Premenná",
-          "definition": "Označenie pre nejaké informácie, ktoré sa využívajú v programe."
-        },
-        "property/csd/2021": {
-          "word": "Vlastnosť",
-          "definition": "Označenie charakteristiky sprajtu, napríklad jeho umiestnenia a vzhľadu"
-        },
-        "sprite/csd/2021": {
-          "word": "Sprajt",
-          "definition": "Postava na obrazovke s vlastnosťami, ktoré opisujú jej polohu, pohyb a vzhľad."
-        },
-        "dot_notation/csd/2021": {
-          "word": "Zápis s bodkou",
-          "definition": "spôsob, akým sa vlastnosti sprajtov používajú v Game Labe, teda spojenie názvu sprajtu a vlastnosti bodkou."
-        },
-        "condition/csd/2021": {
-          "word": "Podmienka",
-          "definition": "Niečo, čo program pred rozhodnutím o vykonaní akcie skontroluje, či je to pravda."
-        },
-        "conditionals/csd/2021": {
-          "word": "Podmienené príkazy",
-          "definition": "Príkazy, ktoré sa spustia len vtedy, keď sú splnené určité podmienky."
-        },
-        "boolean_expression/csd/2021": {
-          "word": "Logický výraz",
-          "definition": "v programovaní je to výraz, ktorý sa vyhodnotí ako true (pravda) alebo false (nepravda). "
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstrakcia",
-          "definition": "zjednodušené vyjadrenie niečoho zložitejšieho. Abstrakcie vám umožňujú skryť detaily, aby ste zvládli zložitosť, sústredili sa na dôležité koncepty a uvažovali o problémoch na vyššej úrovni."
-        },
-        "function/csd/2021": {
-          "word": "Funkcia",
-          "definition": "Pomenovaná časť programových pokynov."
-        },
-        "computer/csd/2021": {
+        "computer/csd/2022": {
           "word": "Počítač",
           "definition": "Stroj, ktorý pracuje s informáciami"
         },
-        "input/csd/2021": {
+        "input/csd/2022": {
           "word": "Vstup",
           "definition": "informácie, ktoré počítače získavajú od používateľov, zariadení alebo iných počítačov"
         },
-        "output/csd/2021": {
+        "output/csd/2022": {
           "word": "Výstup",
           "definition": "informácie, ktoré počítače poskytujú používateľom, zariadeniam alebo iným počítačom"
         },
-        "processing/csd/2021": {
+        "processing/csd/2022": {
           "word": "Spracúvanie",
           "definition": "Myšlienková práca, v rámci ktorej počítače premieňajú vstup na výstup."
         },
-        "storage/csd/2021": {
+        "storage/csd/2022": {
           "word": "pamäť",
           "definition": "schopnosť ukladať informácie na neskoršie použitie"
         },
-        "html/csd/2021": {
+        "html/csd/2022": {
           "word": "HTML",
           "definition": "Hypertextový značkovací jazyk, ktorý sa používa na vytváranie webových stránok"
         },
-        "html_element/csd/2021": {
+        "html_element/csd/2022": {
           "word": "HTML prvok",
           "definition": "časť webovej stránky, ktorá je označená otváracou značkou a často uzatvorená ukončovacou značkou"
         },
-        "html_tag/csd/2021": {
+        "html_tag/csd/2022": {
           "word": "HTML značka",
           "definition": "špeciálny súbor znakov, ktorý označuje začiatok a koniec HTML prvku, ako aj jeho typ"
         },
-        "website_content/csd/2021": {
+        "website_content/csd/2022": {
           "word": "Obsah webu",
           "definition": "text a obrázky na webe"
         },
-        "website_structure/csd/2021": {
+        "website_structure/csd/2022": {
           "word": "Štruktúra webu",
           "definition": "spôsob, ako je obsah webu usporiadaný"
         },
-        "heading/csd/2021": {
+        "heading/csd/2022": {
           "word": "Nadpis",
           "definition": "Názov alebo zhrnutie dokumentu alebo jeho sekcie"
         },
-        "digital_footprint/csd/2021": {
+        "digital_footprint/csd/2022": {
           "word": "Digitálna stopa",
           "definition": "Informácie o jednotlivcovi, ktoré sa dajú zozbierať naprieč celým internetom."
         },
-        "css/csd/2021": {
+        "css/csd/2022": {
           "word": "CSS",
           "definition": "Kaskádové štýly – jazyk, ktorý opisuje, aký štýl by mali HTML prvky mať"
         },
-        "css_selector/csd/2021": {
+        "css_selector/csd/2022": {
           "word": "CSS selektor",
           "definition": "časť CSS kódu, ktorá určuje, na ktorý HTML prvok sa má daný štýl použiť"
         },
-        "copyright/csd/2021": {
+        "copyright/csd/2022": {
           "word": "Autorské práva",
           "definition": "výhradné zákonné právo tlačiť, publikovať, prezentovať, filmovať alebo nahrávať literárne, umelecké alebo hudobné materiály a dávať iným ľuďom súhlas na vykonávanie týchto aktivít"
         },
-        "relevant/csd/2021": {
+        "relevant/csd/2022": {
           "word": "Relevantné",
           "definition": "úzko súvisiace s témou"
         },
-        "trustworthy/csd/2021": {
-          "word": "Dôveryhodný",
-          "definition": "Spoľahlivý, úprimný a pravdovravný"
-        },
-        "search_engine/csd/2021": {
+        "search_engine/csd/2022": {
           "word": "Vyhľadávač",
           "definition": " Program, ktorý vyhľadáva položky na internete."
         },
-        "css_class/csd/2021": {
+        "trustworthy/csd/2022": {
+          "word": "Dôveryhodný",
+          "definition": "Spoľahlivý, úprimný a pravdovravný"
+        },
+        "css_class/csd/2022": {
           "word": "CSS trieda",
           "definition": "Identifikátor, ktorý umožňuje priradiť rovnaký štýl viacerým prvkom v HTML dokumente"
+        },
+        "bug/csd/2022": {
+          "word": "Chyba",
+          "definition": "Časť programu, ktorá nefunguje správne."
+        },
+        "debugging/csd/2022": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/csd/2022": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "parameter/csd/2022": {
+          "word": "Parameter"
+        },
+        "variable/csd/2022": {
+          "word": "Premenná",
+          "definition": "Označenie pre nejaké informácie, ktoré sa využívajú v programe."
+        },
+        "dot_notation/csd/2022": {
+          "word": "Zápis s bodkou",
+          "definition": "spôsob, akým sa vlastnosti sprajtov používajú v Game Labe, teda spojenie názvu sprajtu a vlastnosti bodkou."
+        },
+        "property/csd/2022": {
+          "word": "Vlastnosť",
+          "definition": "Označenie charakteristiky sprajtu, napríklad jeho umiestnenia a vzhľadu"
+        },
+        "sprite/csd/2022": {
+          "word": "Sprajt",
+          "definition": "Postava na obrazovke s vlastnosťami, ktoré opisujú jej polohu, pohyb a vzhľad."
+        },
+        "boolean_expression/csd/2022": {
+          "word": "Logický výraz",
+          "definition": "v programovaní je to výraz, ktorý sa vyhodnotí ako true (pravda) alebo false (nepravda). "
+        },
+        "condition/csd/2022": {
+          "word": "Podmienka",
+          "definition": "Niečo, čo program pred rozhodnutím o vykonaní akcie skontroluje, či je to pravda."
+        },
+        "conditionals/csd/2022": {
+          "word": "Podmienené príkazy",
+          "definition": "Príkazy, ktoré sa spustia len vtedy, keď sú splnené určité podmienky."
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstrakcia",
+          "definition": "zjednodušené vyjadrenie niečoho zložitejšieho. Abstrakcie vám umožňujú skryť detaily, aby ste zvládli zložitosť, sústredili sa na dôležité koncepty a uvažovali o problémoch na vyššej úrovni."
+        },
+        "function/csd/2022": {
+          "word": "Funkcia",
+          "definition": "Pomenovaná časť programových pokynov."
+        },
+        "user/csd/2022": {
+          "word": "Používateľ",
+          "definition": "Niekto, kto používa objekt vrátane softvéru a hardvéru."
+        },
+        "user_interface/csd/2022": {
+          "word": "Užívateľské prostredie"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Strojové učenie",
+          "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
+        },
+        "features/csd/2022": {
+          "word": "Vlastnosti",
+          "definition": "vstupy, ktoré model používa na rozhodovanie"
+        },
+        "label/csd/2022": {
+          "word": "Označenie",
+          "definition": "výstup, ktorý sa snažíte pomocou modelu vybrať alebo predpovedať"
+        },
+        "model/csd/2022": {
+          "word": "Model",
+          "definition": "počítačový program navrhnutý tak, aby prijímal rozhodnutia"
+        },
+        "supervised_learning/csd/2022": {
+          "word": "Učenie pod dohľadom",
+          "definition": "keď človek trénuje model, aby sa učil pomocou príkladov"
+        },
+        "training/csd/2022": {
+          "word": "Trénovanie",
+          "definition": "poskytovanie príkladov modelu, aby sa mohol učiť"
+        },
+        "unsupervised_learning/csd/2022": {
+          "word": "Učenie bez dohľadu",
+          "definition": "hľadanie vzorov v údajoch, ktoré nemajú žiadne označenia"
+        },
+        "categorical_data/csd/2022": {
+          "word": "Kategorické údaje",
+          "definition": "údaje, ktoré možno zadeliť do skupín"
+        },
+        "classification/csd/2022": {
+          "word": "Klasifikácia",
+          "definition": "predpovedanie kategórie na základe iných vlastností"
+        },
+        "bias/csd/2022": {
+          "word": "Skreslenie",
+          "definition": "Keď sa pri rozhodovaní uprednostňujú niektoré veci a iné sa znevýhodňujú alebo vylučujú"
+        },
+        "numerical_data/csd/2022": {
+          "word": "Číselné údaje",
+          "definition": "údaje, ktoré sa dajú spočítať alebo zmerať"
+        },
+        "ethics/csd/2022": {
+          "word": "Etika",
+          "definition": "zásady dobrého správania."
+        },
+        "algorithm/coursea/2022": {
+          "word": "Algoritmus",
+          "definition": "Zoznam krokov na dokončenie úlohy. "
+        },
+        "debugging/coursea/2022": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/coursea/2022": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "click/coursea/2022": {
+          "word": "Klikni",
+          "definition": "Stlač tlačidlo myši"
+        },
+        "double_click/coursea/2022": {
+          "word": "Klikni dvakrát",
+          "definition": "Stlač tlačidlo myši veľmi rýchlo"
+        },
+        "drag/coursea/2022": {
+          "word": "Potiahni",
+          "definition": "Klikni tlačidlo myši a drž ho, kým kurzor myši presunieš na iné miesto. "
+        },
+        "drop/coursea/2022": {
+          "word": "Špagát",
+          "definition": "Uvoľni tlačidlo myši, čím pustíš ťahaný predmet."
+        },
+        "bug/coursea/2022": {
+          "word": "Chyba",
+          "definition": "Časť programu, ktorá nefunguje správne."
+        },
+        "programming/coursea/2022": {
+          "word": "Programovanie",
+          "definition": "Činnosť, ktorou sa vytvára program."
+        },
+        "loop/coursea/2022": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/coursea/2022": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "event/coursea/2022": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "algorithm/courseb/2022": {
+          "word": "Algoritmus",
+          "definition": "Zoznam krokov na dokončenie úlohy. "
+        },
+        "bug/courseb/2022": {
+          "word": "Chyba",
+          "definition": "Časť programu, ktorá nefunguje správne."
+        },
+        "debugging/courseb/2022": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "click/courseb/2022": {
+          "word": "Klikni",
+          "definition": "Stlač tlačidlo myši"
+        },
+        "double_click/courseb/2022": {
+          "word": "Klikni dvakrát",
+          "definition": "Stlač tlačidlo myši veľmi rýchlo"
+        },
+        "drag/courseb/2022": {
+          "word": "Potiahni",
+          "definition": "Klikni tlačidlo myši a drž ho, kým kurzor myši presunieš na iné miesto. "
+        },
+        "drop/courseb/2022": {
+          "word": "Špagát",
+          "definition": "Uvoľni tlačidlo myši, čím pustíš ťahaný predmet."
+        },
+        "program/courseb/2022": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "programming/courseb/2022": {
+          "word": "Programovanie",
+          "definition": "Činnosť, ktorou sa vytvára program."
+        },
+        "persistence/courseb/2022": {
+          "word": "Vytrvalosť",
+          "definition": "Odhodlanie skúšať niečo znova a znova, aj keď je to veľmi ťažké. "
+        },
+        "loop/courseb/2022": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/courseb/2022": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "event/courseb/2022": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "algorithm/coursec/2022": {
+          "word": "Algoritmus",
+          "definition": "Zoznam krokov na dokončenie úlohy. "
+        },
+        "bug/coursec/2022": {
+          "word": "Chyba",
+          "definition": "Časť programu, ktorá nefunguje správne."
+        },
+        "debugging/coursec/2022": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/coursec/2022": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "sequencing/coursec/2022": {
+          "word": "Postupnosť",
+          "definition": "Usporiadanie príkazov do správneho poradia tak, aby ich dokázal prečítať počítač."
+        },
+        "persistence/coursec/2022": {
+          "word": "Vytrvalosť"
+        },
+        "programming/coursec/2022": {
+          "word": "Programovanie",
+          "definition": "Činnosť, ktorou sa vytvára program."
+        },
+        "loop/coursec/2022": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/coursec/2022": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "event/coursec/2022": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "data/coursec/2022": {
+          "word": "Dáta"
+        },
+        "binary/coursec/2022": {
+          "word": "Binárny",
+          "definition": "Spôsob vyjadrenia informácií pomocou iba dvoch možností."
+        },
+        "algorithm/coursed/2022": {
+          "word": "Algoritmus",
+          "definition": "Zoznam krokov na dokončenie úlohy. "
+        },
+        "program/coursed/2022": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "bug/coursed/2022": {
+          "word": "Chyba",
+          "definition": "Časť programu, ktorá nefunguje správne."
+        },
+        "debugging/coursed/2022": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "loop/coursed/2022": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "programming/coursed/2022": {
+          "word": "Programovanie",
+          "definition": "Činnosť, ktorou sa vytvára program."
+        },
+        "frustrated/coursed/2022": {
+          "word": "Frustrácia",
+          "definition": "Pocit hnevu alebo podráždenosti spôsobený tým, že niečo nie je podľa mojich predstáv."
+        },
+        "persistence/coursed/2022": {
+          "word": "Vytrvalosť",
+          "definition": "Odhodlanie skúšať niečo znova a znova, aj keď je to veľmi ťažké. "
+        },
+        "event/coursed/2022": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "code/coursed/2022": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "repeat/coursed/2022": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "command/coursed/2022": {
+          "word": "Príkaz",
+          "definition": "Pokyn pre počítač. Veľké množstvo príkazov spolu tvorí algoritmy a počítačové programy."
+        },
+        "conditionals/coursed/2022": {
+          "word": "Podmienené príkazy",
+          "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
+        },
+        "pseudocode/coursed/2022": {
+          "word": "pseudokód",
+          "definition": "Opis krokov v algoritme písaný jednoduchým jazykom"
+        },
+        "condition/coursed/2022": {
+          "word": "Podmienka",
+          "definition": "Miesto, kde program pred vykonaním akcie kontroluje splnenie nejakej požiadavky."
+        },
+        "while_loop/coursed/2022": {
+          "word": "Cyklus „pokiaľ“",
+          "definition": "Cyklus, ktorý sa opakuje, kým je splnená podmienka."
+        },
+        "until/coursed/2022": {
+          "word": "Až kým",
+          "definition": "Príkaz, ktorý niečo vykonáva až dovtedy, kým sa nesplní nejaká podmienka."
+        },
+        "behavior/coursee/2022": {
+          "word": "Správanie",
+          "definition": "Akcia, ktorú postava neustále vykonáva, kým nedostane príkaz, aby prestala. "
+        },
+        "sprite/coursee/2022": {
+          "word": "Sprajt",
+          "definition": "Grafický objekt na obrazovke, ktorý má svoju polohu, veľkosť a vzhľad."
+        },
+        "loop/coursee/2022": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/coursee/2022": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "function/coursee/2022": {
+          "word": "Funkcia"
+        },
+        "condition/coursee/2022": {
+          "word": "Podmienka"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Podmienené príkazy",
+          "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
+        },
+        "while_loop/coursee/2022": {
+          "word": "Cyklus „pokiaľ“",
+          "definition": "Cyklus, ktorý sa opakuje, kým je splnená podmienka."
+        },
+        "copyright/coursee/2022": {
+          "word": "Autorské práva",
+          "definition": "výhradné zákonné právo tlačiť, publikovať, prezentovať, filmovať alebo nahrávať literárne, umelecké alebo hudobné materiály a dávať iným ľuďom súhlas na vykonávanie týchto aktivít"
+        },
+        "define/coursee/2022": {
+          "word": "Definuj",
+          "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."
+        },
+        "prepare/coursee/2022": {
+          "word": "Príprava",
+          "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
+        },
+        "reflect/coursee/2022": {
+          "word": "Reflexia",
+          "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
+        },
+        "try/coursee/2022": {
+          "word": "Pokus",
+          "definition": "Pokus urobiť niečo"
+        },
+        "sprite/coursef/2022": {
+          "word": "Sprajt",
+          "definition": "Grafický objekt na obrazovke, ktorý má svoju polohu, veľkosť a vzhľad."
+        },
+        "user/coursef/2022": {
+          "word": "Používateľ",
+          "definition": "Niekto, kto používa objekt vrátane softvéru a hardvéru."
+        },
+        "algorithm/coursef/2022": {
+          "word": "Algoritmus",
+          "definition": "Zoznam krokov na dokončenie úlohy."
+        },
+        "behavior/coursef/2022": {
+          "word": "Správanie"
+        },
+        "program/coursef/2022": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "event/coursef/2022": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "variable/coursef/2022": {
+          "word": "Premenná",
+          "definition": "Označenie pre nejaké informácie, ktoré sa využívajú v programe."
+        },
+        "prompt/coursef/2022": {
+          "word": "Výzva",
+          "definition": "Správa na obrazovke počítača, ktorá čaká, kým používateľ zadá nejaké údaje."
+        },
+        "input/coursef/2022": {
+          "word": "Vstup",
+          "definition": "Informácie, ktoré počítač dostane od používateľov."
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "Modely a simulácie",
+          "definition": "program, ktorý odráža alebo napodobňuje kľúčové vlastnosti udalosti v reálnom svete s cieľom preskúmať jej správanie bez nákladov, času alebo nebezpečenstva, ktoré by bolo potrebné na uskutočnenie experimentu v reálnom živote."
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Strojové učenie",
+          "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
+        },
+        "dns/coursef/2022": {
+          "word": "DNS",
+          "definition": "skratka pre Domain Name System, tento systém prekladá názvy domén (napríklad example.com) na IP adresy (napríklad 93.184.216.34)."
+        },
+        "dsl_cable/coursef/2022": {
+          "word": "DSL/káblové pripojenie",
+          "definition": "Spôsob prenosu informácií pomocou telefónnych alebo televíznych káblov."
+        },
+        "fiber_optic_cable/coursef/2022": {
+          "word": "Optický kábel",
+          "definition": "Pripojenie, ktoré na prenos informácií využíva svetlo."
+        },
+        "internet/coursef/2022": {
+          "word": "Internet",
+          "definition": "Skupina počítačov a serverov, ktoré sú navzájom prepojené."
+        },
+        "ip_address/coursef/2022": {
+          "word": "IP adresa",
+          "definition": "Číslo priradené každej veci, ktorá sa pripojí na internet."
+        },
+        "packets/coursef/2022": {
+          "word": "Pakety",
+          "definition": "Malé časti informácií, ktoré boli starostlivo vytvorené z väčších častí informácií."
+        },
+        "servers/coursef/2022": {
+          "word": "Servery",
+          "definition": "Počítače, ktoré existujú len preto, aby poskytovali veci iným počítačom."
+        },
+        "url/coursef/2022": {
+          "word": "URL",
+          "definition": "Ľahko zapamätateľná adresa na vyvolanie webovej stránky (napríklad www.code.org)."
+        },
+        "wi_fi/coursef/2022": {
+          "word": "Wi-Fi",
+          "definition": "Metóda bezdrôtového odosielania informácií pomocou rádiových vĺn."
+        },
+        "define/coursef/2022": {
+          "word": "Definuj",
+          "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."
+        },
+        "prepare/coursef/2022": {
+          "word": "Príprava",
+          "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
+        },
+        "reflect/coursef/2022": {
+          "word": "Reflexia",
+          "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
+        },
+        "try/coursef/2022": {
+          "word": "Pokus",
+          "definition": "Pokus urobiť niečo"
+        },
+        "algorithm/express/2022": {
+          "word": "Algoritmus",
+          "definition": "Zoznam krokov na dokončenie úlohy. "
+        },
+        "bug/express/2022": {
+          "word": "Chyba",
+          "definition": "Časť programu, ktorá nefunguje správne."
+        },
+        "debugging/express/2022": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "sequencing/express/2022": {
+          "word": "Postupnosť",
+          "definition": "Usporiadanie príkazov do správneho poradia tak, aby ich dokázal prečítať počítač."
+        },
+        "program/express/2022": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "programming/express/2022": {
+          "word": "Programovanie",
+          "definition": "Činnosť, ktorou sa vytvára program."
+        },
+        "behavior/express/2022": {
+          "word": "Správanie",
+          "definition": "Akcia, ktorú postava neustále vykonáva, kým nedostane príkaz, aby prestala. "
+        },
+        "sprite/express/2022": {
+          "word": "Sprajt",
+          "definition": "Grafický objekt na obrazovke, ktorý má svoju polohu, veľkosť a vzhľad."
+        },
+        "event/express/2022": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "code/express/2022": {
+          "word": "Kódovanie",
+          "definition": "písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "loop/express/2022": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/express/2022": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "command/express/2022": {
+          "word": "Príkaz",
+          "definition": "Pokyn pre počítač. Veľké množstvo príkazov spolu tvorí algoritmy a počítačové programy."
+        },
+        "condition/express/2022": {
+          "word": "Podmienka",
+          "definition": "Miesto, kde program pred vykonaním akcie kontroluje splnenie nejakej požiadavky."
+        },
+        "conditionals/express/2022": {
+          "word": "Podmienené príkazy",
+          "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
+        },
+        "while_loop/express/2022": {
+          "word": "Cyklus „pokiaľ“",
+          "definition": "Cyklus, ktorý sa opakuje, kým je splnená podmienka."
+        },
+        "until/express/2022": {
+          "word": "Až kým",
+          "definition": "Príkaz, ktorý niečo vykonáva až dovtedy, kým sa nesplní nejaká podmienka."
+        },
+        "function/express/2022": {
+          "word": "Funkcia",
+          "definition": "Sled príkazov, ktorý sa dá ľahko využívať opakovane."
+        },
+        "prompt/express/2022": {
+          "word": "výzva",
+          "definition": "Správa na obrazovke počítača, ktorá čaká, kým používateľ zadá nejaké údaje."
+        },
+        "variable/express/2022": {
+          "word": "Premenná",
+          "definition": "Označenie pre nejaké informácie, ktoré sa využívajú v programe."
+        },
+        "for_loop/express/2022": {
+          "word": "Cyklus „for“",
+          "definition": "Cykly, ktoré majú vopred určený začiatok, koniec a prírastok."
+        },
+        "define/express/2022": {
+          "word": "Definuj",
+          "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."
+        },
+        "prepare/express/2022": {
+          "word": "Príprava",
+          "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
+        },
+        "reflect/express/2022": {
+          "word": "Reflexia",
+          "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
+        },
+        "try/express/2022": {
+          "word": "Pokus",
+          "definition": "Pokus urobiť niečo"
+        },
+        "click/pre-express/2022": {
+          "word": "Klikni",
+          "definition": "Stlač tlačidlo myši"
+        },
+        "double_click/pre-express/2022": {
+          "word": "Klikni dvakrát",
+          "definition": "Stlač tlačidlo myši veľmi rýchlo"
+        },
+        "drag/pre-express/2022": {
+          "word": "Potiahni",
+          "definition": "Klikni tlačidlo myši a drž ho, kým kurzor myši presunieš na iné miesto. "
+        },
+        "drop/pre-express/2022": {
+          "word": "Špagát",
+          "definition": "Uvoľni tlačidlo myši, čím pustíš ťahaný predmet."
+        },
+        "algorithm/pre-express/2022": {
+          "word": "Algoritmus",
+          "definition": "Zoznam krokov na dokončenie úlohy. "
+        },
+        "bug/pre-express/2022": {
+          "word": "Chyba",
+          "definition": "Časť programu, ktorá nefunguje správne."
+        },
+        "debugging/pre-express/2022": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/pre-express/2022": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "programming/pre-express/2022": {
+          "word": "Programovanie",
+          "definition": "Činnosť, ktorou sa vytvára program."
+        },
+        "persistence/pre-express/2022": {
+          "word": "Vytrvalosť",
+          "definition": "Odhodlanie skúšať niečo znova a znova, aj keď je to veľmi ťažké. "
+        },
+        "loop/pre-express/2022": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/pre-express/2022": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "event/pre-express/2022": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "code/aquatic/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Podmienka",
+          "definition": "Miesto, kde program pred vykonaním akcie kontroluje splnenie nejakej požiadavky."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Podmienené príkazy",
+          "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Cykly",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/artist/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/artist/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/artist/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/basketball/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "event/basketball/unversioned": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "program/basketball/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/dance-2019/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/dance-extras/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/dance/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "event/dance/unversioned": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "program/dance/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/flappy/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/flappy/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/frozen/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/frozen/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/gumball/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/gumball/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/hero/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/hero/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "function/hero/unversioned": {
+          "word": "Funkcia",
+          "definition": "Sled príkazov, ktorý sa dá ľahko využívať opakovane."
+        },
+        "program/hero/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Cézarova šifra ",
+          "definition": "technika šifrovania, ktorá posúva abecedu o určitý počet znakov."
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Šifra",
+          "definition": "všeobecný výraz pre techniku (alebo algoritmus), ktorá vykonáva šifrovanie"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Prelomenie šifrovania",
+          "definition": "Keď sa pokúšate dekódovať tajnú správu bez toho, aby ste poznali všetky špecifiká šifry, snažíte sa „prelomiť“ šifrovanie. "
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Dešifrovanie",
+          "definition": "proces, ktorý zvráti šifrovanie a tajnú správu prevedie späť na pôvodný jednoduchý text."
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "definition": "proces kódovania správ s cieľom udržať ich v tajnosti, aby ich mohli čítať len „oprávnené“ strany."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Šifra s náhodnou substitúciou",
+          "definition": "technika šifrovania, ktorá mapuje každé písmeno abecedy na náhodne vybrané iné písmená abecedy."
+        },
+        "code/hourofcode/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/iceage/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/iceage/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/infinity/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/infinity/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/mc/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/mc/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/mc/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/minecraft/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Strojové učenie",
+          "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modely a simulácie",
+          "definition": "program, ktorý odráža alebo napodobňuje kľúčové vlastnosti udalosti v reálnom svete s cieľom preskúmať jej správanie bez nákladov, času alebo nebezpečenstva, ktoré by bolo potrebné na uskutočnenie experimentu v reálnom živote."
+        },
+        "code/playlab/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/playlab/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/poem-art/2021": {
+          "word": "Kód",
+          "definition": "(sloveso) zapísať pokyny pre počítač."
+        },
+        "event/poem-art/2021": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "line/poem-art/2021": {
+          "word": "Verš",
+          "definition": "(poézia) - členenie básne usporiadané v riadku, ktorý končí na pravom okraji. "
+        },
+        "mood/poem-art/2021": {
+          "word": "Nálada",
+          "definition": "vyjadrenie pocitu, atmosféry alebo emócie v umení alebo písanom diele."
+        },
+        "program/poem-art/2021": {
+          "word": "Program",
+          "definition": "Postupnosť krokov, ktoré boli zakódované do niečoho, čo sa môže spustiť v počítači."
+        },
+        "code/sports/unversioned": {
+          "word": "Kódovať",
+          "definition": "(sloveso) Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/sports/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "event/sports/unversioned": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "program/sports/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/starwars/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/starwars/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/starwarsblocks/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "definition": "algoritmus kompresie údajov, ktorý umožňuje dokonalú rekonštrukciu pôvodných údajov z komprimovaných údajov.  Najčastejšie sa používa na kompresiu textu (napr. kompresia ZIP)"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kód",
+          "definition": "(sloveso) zapísať pokyny pre počítač."
+        },
+        "event/poem-art/unversioned": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Program",
+          "definition": "Postupnosť krokov, ktoré boli zakódované do niečoho, čo sa môže spustiť v počítači."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Nálada",
+          "definition": "vyjadrenie pocitu, atmosféry alebo emócie v umení alebo písanom diele."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Verš",
+          "definition": "(poézia) - členenie básne usporiadané v riadku, ktorý končí na pravom okraji. "
         }
       }
     }

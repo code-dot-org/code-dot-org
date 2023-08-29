@@ -61,6 +61,28 @@ id:
         menerima email berisi instruksi cara membuka akun.
       unlocked: Akun anda telah berhasil dibuka. Silakan masuk untuk melanjutkan.
   errors:
+    invitations:
+      edit:
+        header: Atur kata sandi Anda
+        submit_button: Mengatur sandi saya
+      invitation_removed: Undangan Anda telah dihapus.
+      invitation_token_invalid: Token undangan yang disediakan tidak valid!
+      new:
+        header: Kirim undangan
+        submit_button: Kirim sebuah undangan
+      no_invitations_remaining: Tidak ada undangan yang tersisa
+      send_instructions: Email undangan telah dikirim ke %{email}.
+      updated: Kata sandi berhasil diubah. Anda sekarang telah masuk.
+    mailer:
+      invitation_instructions:
+        accept: Terima undangan
+        hello: Halo %{email}
+        ignore: Jika Anda tidak ingin menerima undangan, harap abaikan email ini.
+          <br /> Akun Anda tidak akan dibuat sampai Anda mengakses link di atas dan
+          mengatur sandi Anda.
+        someone_invited_you: Seseorang telah mengundang Anda untuk %{url}, Anda dapat
+          menerimanya melalui link di bawah ini.
+        subject: petunjuk Undangan
     messages:
       already_confirmed: sudah dikonfirmasi, silahkan coba login
       confirmation_period_expired: perlu dikonfirmasikan dalam %{period}, silakan
@@ -68,25 +90,3 @@ id:
       expired: telah kadarluarsa, silakan meminta yang baru
       not_found: Tidak ditemukan
       not_locked: tidak terkunci
-    invitations:
-      send_instructions: Email undangan telah dikirim ke %{email}.
-      invitation_token_invalid: Token undangan yang disediakan tidak valid!
-      updated: Kata sandi berhasil diubah. Anda sekarang telah masuk.
-      no_invitations_remaining: Tidak ada undangan yang tersisa
-      invitation_removed: Undangan Anda telah dihapus.
-      new:
-        header: Kirim undangan
-        submit_button: Kirim sebuah undangan
-      edit:
-        header: Atur kata sandi Anda
-        submit_button: Mengatur sandi saya
-    mailer:
-      invitation_instructions:
-        subject: petunjuk Undangan
-        hello: Halo %{email}
-        someone_invited_you: Seseorang telah mengundang Anda untuk %{url}, Anda dapat
-          menerimanya melalui link di bawah ini.
-        accept: Terima undangan
-        ignore: Jika Anda tidak ingin menerima undangan, harap abaikan email ini.
-          <br /> Akun Anda tidak akan dibuat sampai Anda mengakses link di atas dan
-          mengatur sandi Anda.

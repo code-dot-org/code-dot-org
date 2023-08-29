@@ -5,11 +5,11 @@
         "CT": {
           "description": "Компјутерско Размишљање"
         },
-        "L": {
-          "description": "Језик"
-        },
         "F": {
           "description": "Функције"
+        },
+        "L": {
+          "description": "Језик"
         }
       }
     }

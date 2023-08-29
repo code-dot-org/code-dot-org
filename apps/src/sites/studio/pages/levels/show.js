@@ -2,6 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import getScriptData from '@cdo/apps/util/getScriptData';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
 import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
@@ -9,6 +10,8 @@ import instructions, {
   setTtsAutoplayEnabledForLevel,
   setCodeReviewEnabledForLevel,
 } from '@cdo/apps/redux/instructions';
+import experiments from '@cdo/apps/util/experiments';
+import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 
 $(document).ready(initPage);
 
@@ -48,6 +51,23 @@ function initPage() {
     ReactDOM.render(
       <UnversionedScriptRedirectDialog />,
       unversionedRedirectDialogMountPoint
+    );
+  }
+
+  const rubricFabMountPoint = document.getElementById('rubric-fab-mount-point');
+  if (rubricFabMountPoint && experiments.isEnabled('ai-rubrics')) {
+    const rubricData = getScriptData('rubric');
+    const reportingData = {
+      unitName: config.script_name,
+      courseName: config.course_name,
+      levelName: config.level_name,
+    };
+    ReactDOM.render(
+      <RubricFloatingActionButton
+        rubric={rubricData}
+        reportingData={reportingData}
+      />,
+      rubricFabMountPoint
     );
   }
 }

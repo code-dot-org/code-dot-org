@@ -8,7 +8,7 @@ namespace :firebase do
   desc 'Compile firebase security rules and store them in the apps package.'
   timed_task_with_logging :compile_rules do
     if rack_env?(:production)
-      raise "Cannot compile firebase security rules on production, because npm is not installed.\n"\
+      raise "Cannot compile firebase security rules on production, because npm is not installed.\n" \
         "Instead, upload security rules from the apps package which was downloaded from s3."
     end
     Dir.chdir(apps_dir) {RakeUtils.system 'grunt compile-firebase-rules'}
@@ -20,17 +20,18 @@ namespace :firebase do
       ChatClient.log 'Uploading security rules to firebase...'
       Dir.chdir(dashboard_dir) do
         if rack_env?(:development) && !`readlink public/blockly`.include?('apps/build/package')
-          warn "\nWARNING: you are uploading firebase rules from the precompiled apps package.\n"\
-            "To upload the firebase rules you built using `rake firebase:compile_rules`, you will need to\n"\
+          warn "\nWARNING: you are uploading firebase rules from the precompiled apps package.\n" \
+            "To upload the firebase rules you built using `rake firebase:compile_rules`, you will need to\n" \
             "set `use_my_apps: true` in locals.yml and then run `rake package:apps:symlink`.\n\n"
         end
         if !File.exist?('public/blockly')
-          raise 'Could not upload firebase security rules because an apps package was not found at dashboard/public/blockly.'
+          ChatClient.log 'Could not upload firebase security rules because an apps package was not found at dashboard/public/blockly. Skipping upload.', color: 'yellow'
         elsif !File.exist?('public/blockly/firebase/rules.json')
-          raise 'Could not upload firebase security rules because the apps package does not contain firebase/rules.json.'
+          ChatClient.log 'Could not upload firebase security rules because the apps package does not contain firebase/rules.json. Skipping upload.', color: 'yellow'
+        else
+          url = "https://#{CDO.firebase_name}.firebaseio.com/.settings/rules.json?auth=#{CDO.firebase_secret}"
+          RakeUtils.system("curl -X PUT -T ./public/blockly/firebase/rules.json '#{url}'")
         end
-        url = "https://#{CDO.firebase_name}.firebaseio.com/.settings/rules.json?auth=#{CDO.firebase_secret}"
-        RakeUtils.system("curl -X PUT -T ./public/blockly/firebase/rules.json '#{url}'")
       end
     end
   end

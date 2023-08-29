@@ -5,7 +5,7 @@
 // they will get an older-style level implemented with a HAML page and some
 // non-React JS code.
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import Video from './Video';
@@ -20,9 +20,22 @@ import styles from './video.module.scss';
 
 const StandaloneVideo: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-  const levelVideo: VideoLevelData = useSelector(
-    (state: {lab: LabState}) => state.lab.levelData
-  ) as VideoLevelData;
+  const levelData = useSelector(
+    (state: {lab: LabState}) => state.lab.levelProperties?.levelData
+  );
+  const currentAppName = useSelector(
+    (state: {lab: LabState}) => state.lab.levelProperties?.appName
+  );
+
+  const [levelVideo, setLevelVideo] = React.useState<VideoLevelData | null>(
+    null
+  );
+
+  useEffect(() => {
+    if (currentAppName === 'standalone_video' && levelData) {
+      setLevelVideo(levelData as VideoLevelData);
+    }
+  }, [currentAppName, levelData]);
 
   const nextButtonPressed = () => {
     const appType = 'standalone_video';

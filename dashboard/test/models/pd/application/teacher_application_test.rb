@@ -103,7 +103,7 @@ module Pd::Application
 
     test 'accepted_at updates times' do
       today = Time.zone.today.to_time
-      tomorrow = Date.tomorrow.to_time
+      tomorrow = Time.zone.tomorrow.to_time
       application = create :pd_teacher_application
       assert_nil application.accepted_at
 

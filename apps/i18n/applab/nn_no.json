@@ -7,7 +7,6 @@
   "catProcedures": "Funksjonar",
   "catText": "Tekst",
   "catVariables": "Variablar",
-  "designWorkspaceHeader": "Arbeidsområde: ",
   "designElementEvent_input": "Inngang",
   "designElementProperty_fitImage_none": "ingen",
   "designElementProperty_image": "bilete",
@@ -18,6 +17,7 @@
   "designElementProperty_zOrder": "djupne",
   "designElementTheme_classic": "Klassisk",
   "designElementTheme_default": "Standard",
+  "designWorkspaceHeader": "Arbeidsområde: ",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param2": "y",
   "dropletBlock_drawImage_param3": "breidde",
@@ -32,7 +32,7 @@
   "nextLevel": "Gratulerer! Du har fullført denne oppgåva.",
   "no": "Nei",
   "numBlocksNeeded": "Denne oppgåva kan løysast med %1 blokker.",
-  "repeatForever": "gjenta for alltid",
   "repeatDo": "gjer",
+  "repeatForever": "gjenta for alltid",
   "yes": "Ja"
 }

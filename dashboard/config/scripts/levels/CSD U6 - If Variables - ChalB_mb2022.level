@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:47:11.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -72,7 +77,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
@@ -90,7 +95,8 @@
       "/courses/csd-2022/guides/if-statements-2",
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/counter-patterns-with-event"
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/maker/setup"
     ],
     "callout_json": "[]",
     "display_name": "Water Level App",
@@ -101,16 +107,11 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img src=\"/level_starter_assets/CSD U6 - If Variables - ChalB_2022/water-rising.png\" data-canonical-image-url=\"image://water-rising.png\" data-image-type=\"file\" data-object-fit=\"cover\" id=\"waterImage\" style=\"height: 315px; width: 320px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 1.66533e-16px; margin: 0px; top: 400px;\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgb(0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; padding: 2px 15px; width: 320px; position: absolute; left: 0px; top: 275px; height: 5px;\" id=\"line\"></label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; padding: 2px 15px; width: 320px; height: 95px; position: absolute; left: 0px; top: 10px; text-align: center;\" id=\"directionsLabel\">Press the left and right buttons to raise and lower the water in the bath tub. If the water gets too close to the edge, the app will buzz to warn you!</label></div></div>",
     "bubble_choice_description": "Create an app that simulates an automatic bathtub filler, where the water level rises to a set point.",
     "start_blocks": "var waterY = 400;\r\nonBoardEvent(buttonA, \"down\", function() {\r\n  //1) When the A button is pressed, the water rises up the screen\r\n  \r\n  //2) If the water gets to the black line, the circuit playground should buzz\r\n  \r\n});\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  //3) When the B button is pressed, the water lowers on the screen\r\n  \r\n});\r\n",
-    "preload_asset_list": null,
-    "encrypted_examples": "yAQZOjOk/mCeyxU2FvdtdUHwXwfBkw+XBkSKuU0sphaiJfuwv3H1ggfKtxkN\nIAaqBBGcD3kkhgg1ZF1PnznSVg==\n"
+    "encrypted_examples": "yAQZOjOk/mCeyxU2FvdtdUHwXwfBkw+XBkSKuU0sphaiJfuwv3H1ggfKtxkN\nIAaqBBGcD3kkhgg1ZF1PnznSVg==\n",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:47:11.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:11.765+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalB_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalB_2222\"},{\"changed_at\":\"2023-02-07 22:31:04 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-07 22:32:09 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 16:26:39 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:11.765+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalB_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalB_2222\"},{\"changed_at\":\"2023-02-07 22:31:04 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-07 22:32:09 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 16:26:39 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-17 23:21:24 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-21 23:03:08 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

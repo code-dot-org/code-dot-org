@@ -2,40 +2,6 @@
   "sl-SI": {
     "data": {
       "placeholder_texts": {
-        "CourseE_hoops": {
-          "498cd895eb5a102c5aeb977e2b928dee": "Hvala!"
-        },
-        "courseE_aboutme_3": {
-          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
-        },
-        "courseE_aboutme_3_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
-        },
-        "courseE_aboutme_4": {
-          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
-        },
-        "courseE_aboutme_4_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
-        },
-        "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
-        },
-        "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
-        },
-        "courseF_playlab_variables2b": {
-          "48d6215903dff56238e52e8891380c8f": "modra",
-          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "rdeča",
-          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseF_project_1": {
-          "498cd895eb5a102c5aeb977e2b928dee": "Hvala!"
-        },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
@@ -52,9 +18,12 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Hvala!"
+        },
         "Find the Wizard": {
-          "0b895ef4c917e50663bc2a7327cbee3d": "Našel si me!",
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "0b895ef4c917e50663bc2a7327cbee3d": "Našel si me!",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
         "FoodFight": {
@@ -66,6 +35,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
         "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
+        },
+        "New Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
@@ -93,7 +66,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
+        "courseC19_playLab_EOC12022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
+        },
         "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
+        },
+        "courseC19_playLab_EOC1_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
@@ -101,7 +82,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
+        "courseC19_playLab_EOC22022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
+        },
         "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
+        },
+        "courseC19_playLab_EOC2_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
@@ -109,7 +98,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
+        "courseC19_playLab_EOC32022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
+        },
         "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
+        },
+        "courseC19_playLab_EOC3_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
@@ -117,11 +114,53 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
+        "courseC19_playLab_EOC42022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
+        },
         "courseC19_playLab_EOC4_2020": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Besedilo tukaj",
+          "5cec903c4d41c49412a70a94d54999ee": "Nekaj lahko napišete."
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Besedilo tukaj",
+          "5cec903c4d41c49412a70a94d54999ee": "Nekaj lahko napišete."
+        },
+        "courseC19_playLab_sample1_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Besedilo tukaj",
+          "5cec903c4d41c49412a70a94d54999ee": "Nekaj lahko napišete."
+        },
+        "courseC19_playLab_sample22022": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila poskuša zaščititi svoj dom pred vesoljskim botom.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Druga bitja se ne bojijo več!",
+          "83db90f8846d091d3532256816f105d9": "To je Neila.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Delalo je! Neila je vesoljskobotu pokazala moč prijaznosti.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila želi pomagati vesoljskemu botu, da bo prijazen.",
+          "df8312187449c70820d7c58229a6b17e": "Vesoljski bot prestraši druga bitja."
+        },
+        "courseC19_playLab_sample2_2021": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila poskuša zaščititi svoj dom pred vesoljskim botom.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Druga bitja se ne bojijo več!",
+          "3e11a2dc6edb909c47778bed75a81769": "Besedilo tukaj",
+          "5cec903c4d41c49412a70a94d54999ee": "Nekaj lahko napišete.",
+          "83db90f8846d091d3532256816f105d9": "To je Neila.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Delalo je! Neila je vesoljskobotu pokazala moč prijaznosti.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila želi pomagati vesoljskemu botu, da bo prijazen.",
+          "df8312187449c70820d7c58229a6b17e": "Vesoljski bot prestraši druga bitja."
+        },
         "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
+        },
+        "courseC_PlayLab_eventsFP2022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
@@ -137,9 +176,101 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
+        },
+        "courseC_data wizard": {
+          "1c64ef29c853587fbe94f69f05272b79": "Ptica!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " mačke!",
+          "27944770529dd15319a983bee8951560": "Mačka!",
+          "336ad881e37e713ba0325500a8fa1f00": " psi!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Zmaj!",
+          "5b402e6ea05e847a076e03ad74420c45": " ptice!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Preštej vse živali!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " zmaji!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Preštej hišne ljubljenčke.",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Pes!",
+          "f62038e77820419cd978f7b722da560a": "Koliko se jih pojavi?"
+        },
+        "courseC_data wizard2022": {
+          "1c64ef29c853587fbe94f69f05272b79": "Ptica!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " mačke!",
+          "27944770529dd15319a983bee8951560": "Mačka!",
+          "336ad881e37e713ba0325500a8fa1f00": " psi!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Zmaj!",
+          "5b402e6ea05e847a076e03ad74420c45": " ptice!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Preštej vse živali!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " zmaji!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Preštej hišne ljubljenčke.",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Pes!",
+          "f62038e77820419cd978f7b722da560a": "Koliko se jih pojavi?"
+        },
+        "courseC_data wizard_2020": {
+          "1c64ef29c853587fbe94f69f05272b79": "Ptica!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " mačke!",
+          "27944770529dd15319a983bee8951560": "Mačka!",
+          "336ad881e37e713ba0325500a8fa1f00": " psi!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Zmaj!",
+          "5b402e6ea05e847a076e03ad74420c45": " ptice!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Preštej vse živali!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " zmaji!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Preštej hišne ljubljenčke.",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Pes!",
+          "f62038e77820419cd978f7b722da560a": "Koliko se jih pojavi?"
+        },
+        "courseC_data wizard_2021": {
+          "1c64ef29c853587fbe94f69f05272b79": "Ptica!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " mačke!",
+          "27944770529dd15319a983bee8951560": "Mačka!",
+          "336ad881e37e713ba0325500a8fa1f00": " psi!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Zmaj!",
+          "5b402e6ea05e847a076e03ad74420c45": " ptice!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Preštej vse živali!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " zmaji!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Preštej hišne ljubljenčke.",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Pes!",
+          "f62038e77820419cd978f7b722da560a": "Koliko se jih pojavi?"
+        },
         "courseD_playLab_condFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
+        },
+        "courseE_aboutme_52022": {
+          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
         },
         "courseE_playLab_scaffold1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
@@ -161,6 +292,11 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
+        "courseF_playlab_variables2b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj",
+          "48d6215903dff56238e52e8891380c8f": "modra"
+        },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
@@ -172,6 +308,11 @@
         "courseF_playlab_variables4c_predictive1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
+        },
+        "courseF_playlab_variables5c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj",
+          "bda9643ac6601722a28f238714274da4": "rdeča"
         },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
@@ -193,153 +334,12 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
         },
+        "courseF_project_1": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Hvala!"
+        },
         "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
           "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseC19_playLab_EOC1_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseC19_playLab_EOC2_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseC19_playLab_EOC4_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseC_PlayLab_eventsFP_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseE_aboutme_3_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
-        },
-        "courseE_aboutme_4_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
-        },
-        "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
-        },
-        "New Play Lab Project": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseC19_playLab_EOC12022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseC19_playLab_EOC22022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseC19_playLab_EOC32022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseC19_playLab_EOC42022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseC_PlayLab_eventsFP2022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Vnesite besedilo tukaj",
-          "30fcc1693fa8402931d13ac3a5f396fd": "Natipkaj naslov tukaj"
-        },
-        "courseE_aboutme_32022": {
-          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
-        },
-        "courseE_aboutme_42022": {
-          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
-        },
-        "courseE_aboutme_52022": {
-          "ed076287532e86365e841e92bfc50d8c": "Pozdravljen svet!"
-        },
-        "courseC_data wizard": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Pes!",
-          "336ad881e37e713ba0325500a8fa1f00": " psi!",
-          "27944770529dd15319a983bee8951560": "Mačka!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " mačke!",
-          "1c64ef29c853587fbe94f69f05272b79": "Ptica!",
-          "5b402e6ea05e847a076e03ad74420c45": " ptice!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Zmaj!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " zmaji!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Preštej vse živali!",
-          "f62038e77820419cd978f7b722da560a": "Koliko se jih pojavi?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Preštej hišne ljubljenčke."
-        },
-        "courseC_data wizard2022": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Pes!",
-          "336ad881e37e713ba0325500a8fa1f00": " psi!",
-          "27944770529dd15319a983bee8951560": "Mačka!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " mačke!",
-          "1c64ef29c853587fbe94f69f05272b79": "Ptica!",
-          "5b402e6ea05e847a076e03ad74420c45": " ptice!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Zmaj!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " zmaji!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Preštej vse živali!",
-          "f62038e77820419cd978f7b722da560a": "Koliko se jih pojavi?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Preštej hišne ljubljenčke."
-        },
-        "courseC_data wizard_2020": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Pes!",
-          "336ad881e37e713ba0325500a8fa1f00": " psi!",
-          "27944770529dd15319a983bee8951560": "Mačka!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " mačke!",
-          "1c64ef29c853587fbe94f69f05272b79": "Ptica!",
-          "5b402e6ea05e847a076e03ad74420c45": " ptice!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Zmaj!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " zmaji!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Preštej vse živali!",
-          "f62038e77820419cd978f7b722da560a": "Koliko se jih pojavi?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Preštej hišne ljubljenčke."
-        },
-        "courseC_data wizard_2021": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Pes!",
-          "336ad881e37e713ba0325500a8fa1f00": " psi!",
-          "27944770529dd15319a983bee8951560": "Mačka!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " mačke!",
-          "1c64ef29c853587fbe94f69f05272b79": "Ptica!",
-          "5b402e6ea05e847a076e03ad74420c45": " ptice!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Zmaj!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " zmaji!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Preštej vse živali!",
-          "f62038e77820419cd978f7b722da560a": "Koliko se jih pojavi?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Preštej hišne ljubljenčke."
-        },
-        "courseC19_playLab_EOC5_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Nekaj lahko napišete.",
-          "3e11a2dc6edb909c47778bed75a81769": "Besedilo tukaj"
-        },
-        "courseC19_playLab_EOC6_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Nekaj lahko napišete.",
-          "3e11a2dc6edb909c47778bed75a81769": "Besedilo tukaj"
-        },
-        "courseC19_playLab_sample1_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Nekaj lahko napišete.",
-          "3e11a2dc6edb909c47778bed75a81769": "Besedilo tukaj"
-        },
-        "courseC19_playLab_sample22022": {
-          "83db90f8846d091d3532256816f105d9": "To je Neila.",
-          "0192cdc04916ec27aa11738bb6e48d6e": "Neila poskuša zaščititi svoj dom pred vesoljskim botom.",
-          "df8312187449c70820d7c58229a6b17e": "Vesoljski bot prestraši druga bitja.",
-          "c084e152431f9116b9fdb3f7d465f13d": "Neila želi pomagati vesoljskemu botu, da bo prijazen.",
-          "b2f02bf648ce32c4362afe1578d41f70": "Delalo je! Neila je vesoljskobotu pokazala moč prijaznosti.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "Druga bitja se ne bojijo več!"
-        },
-        "courseC19_playLab_sample2_2021": {
-          "83db90f8846d091d3532256816f105d9": "To je Neila.",
-          "0192cdc04916ec27aa11738bb6e48d6e": "Neila poskuša zaščititi svoj dom pred vesoljskim botom.",
-          "df8312187449c70820d7c58229a6b17e": "Vesoljski bot prestraši druga bitja.",
-          "c084e152431f9116b9fdb3f7d465f13d": "Neila želi pomagati vesoljskemu botu, da bo prijazen.",
-          "b2f02bf648ce32c4362afe1578d41f70": "Delalo je! Neila je vesoljskobotu pokazala moč prijaznosti.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "Druga bitja se ne bojijo več!",
-          "5cec903c4d41c49412a70a94d54999ee": "Nekaj lahko napišete.",
-          "3e11a2dc6edb909c47778bed75a81769": "Besedilo tukaj"
         }
       }
     }

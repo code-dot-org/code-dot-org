@@ -4,8 +4,9 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import * as utils from '../../../utils';
 import {refreshProjectName} from '../../projectRedux';
-import {styles} from './EditableProjectName';
+import styles from './project-header.module.scss';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import classNames from 'classnames';
 
 class ProjectRemix extends React.Component {
   static propTypes = {
@@ -50,7 +51,12 @@ class ProjectRemix extends React.Component {
   };
 
   remixLab2Project = () => {
-    Lab2Registry.getInstance().getProjectManager()?.redirectToRemix();
+    const projectManager = Lab2Registry.getInstance().getProjectManager();
+    if (projectManager) {
+      projectManager.flushSave().then(() => {
+        projectManager.redirectToRemix();
+      });
+    }
   };
 
   render() {
@@ -62,9 +68,8 @@ class ProjectRemix extends React.Component {
     return !inRestrictedShareMode ? (
       <button
         type="button"
-        className={className}
+        className={classNames(styles.buttonSpacing, className)}
         onClick={this.remixProject}
-        style={styles.buttonSpacing}
       >
         {i18n.remix()}
       </button>

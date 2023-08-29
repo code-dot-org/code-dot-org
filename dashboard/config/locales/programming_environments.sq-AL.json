@@ -2,158 +2,8 @@
   "sq-AL": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "categories": {
-            "game_lab": {
-              "expressions": {
-                "showMobileControls": {
-                  "content": "Ndryshon kontrollet celular të dukshme nën hapësirën e luajtjes.",
-                  "short_description": "Ndryshon kontrollet celular të dukshme nën hapësirën e luajtjes."
-                }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "sprite.height": {
-                  "return_value": "Lartësia e sprite."
-                },
-                "sprite.width": {
-                  "return_value": "Gjerësia e sprite."
-                }
-              }
-            },
-            "groups": {
-              "expressions": {
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Ngjyra"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Ngjyra"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Numri i milisekondave midis secilit ekzekutim të funksionit."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Numri i milisekondave për të pritur para ekzekutimit të funksionit."
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematikë",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Numri minimal i kthyer"
-                    },
-                    "max": {
-                      "description": "Numri maksimal i kthyer"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Numri minimal i kthyer"
-                    },
-                    "max": {
-                      "description": "Numri maksimal i kthyer"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "variabla",
-              "expressions": {
-                "assign_x": {
-                  "short_description": "Përcaktoji një vlerë variablës së deklaruar më përpara"
-                },
-                "declareNoAssign_x": {
-                  "short_description": "Deklaron një variabël dhe emrin përkatës"
-                },
-                "declareAssign_x": {
-                  "short_description": "Deklaron dhe i cakton një vlerë fillestare një vektori."
-                },
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "Vargu për të kërkuar."
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "Vargu për të kërkuar."
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "Gjatësia e vargut"
-                }
-              }
-            },
-            "functions": {
-              "name": "funksione"
-            }
-          }
-        },
         "applab": {
-          "name": "Laboratori i Aplikacioneve",
-          "description": "Laboratori i Aplikacioneve është një mjedis programimi ku ju mund të bëni aplikacione të thjeshta. Dizenjo një aplikacioni, kodo me blloqe ose Javascript për ta bërë funksionale dhe shpërndaje aplikacionin tuaj në sekond.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "button": {
-                  "short_description": "Krijon një buton në ekran që shfaq tekstin e dhënë dhe referuar nga id dhënë në vendndodhjen e paracaktuar (0,0)."
-                },
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funksion"
-                    }
-                  }
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "property": {
-                      "description": "Prona për të ndryshuar."
-                    }
-                  },
-                  "short_description": "Vendos një pronë në një vlerë të re për elementin e specifikuar."
-                },
-                "setScreen": {
-                  "short_description": "Vendos ekranin në ScreenID të dhënë."
-                },
-                "showElement": {
-                  "short_description": "Tregon elementin me id-në e dhënë."
-                },
-                "textLabel": {
-                  "short_description": "Krijon një etiketë teksti në ekran duke shfaqur tekstin e dhënë dhe referuar nga id dhënë në vendndodhjen e paracaktuar (0,0)."
-                }
-              }
-            },
             "canvas": {
               "expressions": {
                 "circle": {
@@ -209,17 +59,17 @@
                 },
                 "getImageData": {
                   "palette_params": {
+                    "height": {
+                      "description": "Lartësia e drejtkëndëshit kufijor për të kapur të dhënat e imazhit."
+                    },
+                    "width": {
+                      "description": "Gjerësia e drejtkëndëshit kufijor për të kapur të dhënat e imazhit."
+                    },
                     "x": {
                       "description": "Pozicioni x në piksele për të filluar kapjen."
                     },
                     "y": {
                       "description": "Pozicioni y në piksele për të filluar kapjen."
-                    },
-                    "width": {
-                      "description": "Gjerësia e drejtkëndëshit kufijor për të kapur të dhënat e imazhit."
-                    },
-                    "height": {
-                      "description": "Lartësia e drejtkëndëshit kufijor për të kapur të dhënat e imazhit."
                     }
                   }
                 },
@@ -245,102 +95,133 @@
                 },
                 "rect": {
                   "palette_params": {
+                    "height": {
+                      "description": "Lartësia vertikale në piksele të drejtkëndëshit."
+                    },
+                    "width": {
+                      "description": "Gjerësia horizontale në piksele të drejtkëndëshit."
+                    },
                     "x": {
                       "description": "Pozicioni x në piksele të këndit të sipërm të majtë të drejtkëndëshit."
                     },
                     "y": {
                       "description": "Pozicioni y në piksele të këndit të sipërm të majtë të drejtkëndëshit."
-                    },
-                    "width": {
-                      "description": "Gjerësia horizontale në piksele të drejtkëndëshit."
-                    },
-                    "height": {
-                      "description": "Lartësia vertikale në piksele të drejtkëndëshit."
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
+                    "alphaValue": {
+                      "description": "Sasia e alfa (errësirës) (nga 0 në 255) për të vendosur në pixel."
+                    },
                     "x": {
                       "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
                     },
                     "y": {
                       "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
-                    },
-                    "alphaValue": {
-                      "description": "Sasia e alfa (errësirës) (nga 0 në 255) për të vendosur në pixel."
                     }
                   },
                   "short_description": "Vendos sasinë e alfa (errësirë) (duke filluar nga 0 në 255) në ngjyrën e pikselit të vendosur në pozicionin e dhënë x dhe y në të dhënat e dhëna të imazhit."
                 },
                 "setBlue": {
                   "palette_params": {
+                    "blueValue": {
+                      "description": "Sasia e blu (nga 0 në 255) për të vendosur në pixel."
+                    },
                     "x": {
                       "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
                     },
                     "y": {
                       "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
-                    },
-                    "blueValue": {
-                      "description": "Sasia e blu (nga 0 në 255) për të vendosur në pixel."
                     }
                   },
                   "short_description": "Vendos sasinë e blu (duke filluar nga 0 në 255) në ngjyrën e pikselit të vendosur në pozicionin e dhënë x dhe y në të dhënat e imazhit të dhënë në sasinë e hyrjes BlueVlue."
                 },
                 "setGreen": {
                   "palette_params": {
+                    "greenValue": {
+                      "description": "Sasia e gjelbër (nga 0 në 255) për të vendosur në pixel."
+                    },
                     "x": {
                       "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
                     },
                     "y": {
                       "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
-                    },
-                    "greenValue": {
-                      "description": "Sasia e gjelbër (nga 0 në 255) për të vendosur në pixel."
                     }
                   },
                   "short_description": "Vendos sasinë e gjelbër (duke filluar nga 0 në 255) në ngjyrën e pikselit të vendosur në pozicionin e dhënë x dhe y në të dhënat e imazhit të dhënë në sasinë e hyrjes së GreenValue."
                 },
                 "setRGB": {
                   "palette_params": {
+                    "alpha": {
+                      "description": "Opsionale. Sasia e errësirës (nga 0 në 255) për të vendosur në pixel. Defaults në 255 (errësirë e plotë)."
+                    },
+                    "blue": {
+                      "description": "Sasia e blu (nga 0 në 255) për të vendosur në pixel."
+                    },
+                    "green": {
+                      "description": "Sasia e gjelbër (nga 0 në 255) për të vendosur në pixel."
+                    },
+                    "red": {
+                      "description": "Sasia e kuqe (nga 0 në 255) për të vendosur në pixel."
+                    },
                     "x": {
                       "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
                     },
                     "y": {
                       "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
-                    },
-                    "red": {
-                      "description": "Sasia e kuqe (nga 0 në 255) për të vendosur në pixel."
-                    },
-                    "green": {
-                      "description": "Sasia e gjelbër (nga 0 në 255) për të vendosur në pixel."
-                    },
-                    "blue": {
-                      "description": "Sasia e blu (nga 0 në 255) për të vendosur në pixel."
-                    },
-                    "alpha": {
-                      "description": "Opsionale. Sasia e errësirës (nga 0 në 255) për të vendosur në pixel. Defaults në 255 (errësirë e plotë)."
                     }
                   }
                 },
                 "setRed": {
                   "palette_params": {
+                    "redValue": {
+                      "description": "Sasia e kuqe (nga 0 në 255) për të vendosur në pixel."
+                    },
                     "x": {
                       "description": "Pozicioni x në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
                     },
                     "y": {
                       "description": "Pozicioni y në piksele duke filluar nga këndi i sipërm i majtë i imazhit."
-                    },
-                    "redValue": {
-                      "description": "Sasia e kuqe (nga 0 në 255) për të vendosur në pixel."
                     }
                   },
                   "short_description": "Vendos sasinë e kuqe (duke filluar nga 0 në 255) në ngjyrën e pikselit të vendosur në pozicionin e dhënë x dhe y në të dhënat e imazhit të dhënë në sasinë e hyrjes RedValue."
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Vlera e kthyer nga funksioni SetTimeOut për të anuluar."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numri i milisekondave midis secilit ekzekutim të funksionit."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numri i milisekondave për të pritur para ekzekutimit të funksionit."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksion"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "të dhëna",
               "expressions": {
                 "drawChartFromRecords": {
                   "palette_params": {
@@ -391,7 +272,36 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "të dhëna"
+            },
+            "functions": {
+              "name": "funksione"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Numri maksimal i kthyer"
+                    },
+                    "min": {
+                      "description": "Numri minimal i kthyer"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Numri maksimal i kthyer"
+                    },
+                    "min": {
+                      "description": "Numri minimal i kthyer"
+                    }
+                  }
+                }
+              },
+              "name": "Matematikë"
             },
             "turtle": {
               "expressions": {
@@ -458,74 +368,50 @@
                 }
               }
             },
-            "control": {
+            "ui_controls": {
               "expressions": {
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "description": "Vlera e kthyer nga funksioni SetTimeOut për të anuluar."
-                    }
-                  }
+                "button": {
+                  "short_description": "Krijon një buton në ekran që shfaq tekstin e dhënë dhe referuar nga id dhënë në vendndodhjen e paracaktuar (0,0)."
                 },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Numri i milisekondave midis secilit ekzekutim të funksionit."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Numri i milisekondave për të pritur para ekzekutimit të funksionit."
-                    }
-                  }
-                },
-                "timedLoop": {
+                "onEvent": {
                   "palette_params": {
                     "callback": {
                       "type": "Funksion"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematikë",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Numri minimal i kthyer"
-                    },
-                    "max": {
-                      "description": "Numri maksimal i kthyer"
-                    }
-                  }
                 },
-                "randomNumber": {
+                "setProperty": {
                   "palette_params": {
-                    "min": {
-                      "description": "Numri minimal i kthyer"
-                    },
-                    "max": {
-                      "description": "Numri maksimal i kthyer"
+                    "property": {
+                      "description": "Prona për të ndryshuar."
                     }
-                  }
+                  },
+                  "short_description": "Vendos një pronë në një vlerë të re për elementin e specifikuar."
+                },
+                "setScreen": {
+                  "short_description": "Vendos ekranin në ScreenID të dhënë."
+                },
+                "showElement": {
+                  "short_description": "Tregon elementin me id-në e dhënë."
+                },
+                "textLabel": {
+                  "short_description": "Krijon një etiketë teksti në ekran duke shfaqur tekstin e dhënë dhe referuar nga id dhënë në vendndodhjen e paracaktuar (0,0)."
                 }
               }
             },
             "variables": {
-              "name": "variabla",
               "expressions": {
-                "declareNoAssign_x": {
-                  "short_description": "Deklaron një variabël dhe emrin përkatës"
+                "addPair": {
+                  "return_value": "Asnjë"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "Deklaroni dhe caktoni një grup në një ndryshore"
                 },
                 "declareAssign_x": {
                   "short_description": "Deklaron dhe i cakton një vlerë fillestare një vektori."
                 },
-                "declareAssign_list_123": {
-                  "short_description": "Deklaroni dhe caktoni një grup në një ndryshore"
+                "declareNoAssign_x": {
+                  "short_description": "Deklaron një variabël dhe emrin përkatës"
                 },
                 "includes": {
                   "palette_params": {
@@ -541,16 +427,166 @@
                     }
                   }
                 },
-                "addPair": {
-                  "return_value": "Asnjë"
-                },
                 "length": {
                   "return_value": "Gjatësia e vargut"
+                }
+              },
+              "name": "variabla"
+            }
+          },
+          "description": "Laboratori i Aplikacioneve është një mjedis programimi ku ju mund të bëni aplikacione të thjeshta. Dizenjo një aplikacioni, kodo me blloqe ose Javascript për ta bërë funksionale dhe shpërndaje aplikacionin tuaj në sekond.",
+          "name": "Laboratori i Aplikacioneve"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numri i milisekondave midis secilit ekzekutim të funksionit."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numri i milisekondave për të pritur para ekzekutimit të funksionit."
+                    }
+                  }
                 }
               }
             },
             "functions": {
               "name": "funksione"
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "showMobileControls": {
+                  "content": "Ndryshon kontrollet celular të dukshme nën hapësirën e luajtjes.",
+                  "short_description": "Ndryshon kontrollet celular të dukshme nën hapësirën e luajtjes."
+                }
+              }
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Ngjyra"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Ngjyra"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Numri maksimal i kthyer"
+                    },
+                    "min": {
+                      "description": "Numri minimal i kthyer"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Numri maksimal i kthyer"
+                    },
+                    "min": {
+                      "description": "Numri minimal i kthyer"
+                    }
+                  }
+                }
+              },
+              "name": "Matematikë"
+            },
+            "sprites": {
+              "expressions": {
+                "sprite.height": {
+                  "return_value": "Lartësia e sprite."
+                },
+                "sprite.width": {
+                  "return_value": "Gjerësia e sprite."
+                }
+              },
+              "name": "Sprites"
+            },
+            "variables": {
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Përcaktoji një vlerë variablës së deklaruar më përpara"
+                },
+                "declareAssign_x": {
+                  "short_description": "Deklaron dhe i cakton një vlerë fillestare një vektori."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "Deklaron një variabël dhe emrin përkatës"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Vargu për të kërkuar."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Vargu për të kërkuar."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Gjatësia e vargut"
+                }
+              },
+              "name": "variabla"
             }
           }
         },
@@ -562,23 +598,23 @@
             "events": {
               "name": "Ngjarje"
             },
-            "loops": {
-              "name": "cikle "
-            },
-            "variables": {
-              "name": "variabla"
-            },
-            "math": {
-              "name": "Matematikë"
+            "functions": {
+              "name": "funksione"
             },
             "logic": {
               "name": "Logjikë"
             },
-            "functions": {
-              "name": "funksione"
+            "loops": {
+              "name": "cikle "
+            },
+            "math": {
+              "name": "Matematikë"
             },
             "text": {
               "name": "Tekst"
+            },
+            "variables": {
+              "name": "variabla"
             }
           }
         }

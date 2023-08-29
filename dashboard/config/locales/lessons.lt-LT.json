@@ -2,122 +2,86 @@
   "lt-LT": {
     "data": {
       "lessons": {
-        "minecraft/Minecraft Hour of Code Designer": {
-          "name": "Minecraft „Programavimo valandos“ projektavimo aplinka"
+        "csd2-2017/Lists": {
+          "name": "Sąrašai"
         },
-        "flappy/Flappy Code": {
-          "name": "Flappy Kodas"
-        },
-        "hourofcode/Maze": {
-          "name": "Labirintas"
-        },
-        "frozen/Artist": {
-          "name": "Programuokite kartu su Ana ir Elze"
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "Ledynmečio laboratorija"
-        },
-        "artist/Artist": {
-          "name": "Menininkas"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "Gumball laboratorija"
-        },
-        "aquatic/Aquatic": {
-          "name": "Minecraft: Kelionės vandeniu"
-        },
-        "starwars/Hour of Code 2015": {
-          "name": "Žvaigždžių karai: Programuojame galaktiką (JavaScript kalba)"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Minecraft programavimo valanda"
-        },
-        "playlab/Play Lab": {
-          "name": "Laboratorija"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "Disnėjaus Infinity laboratorija"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Programavimo valanda 2013"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Kartojimas"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Įvykiai"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Sąlyginiai sakiniai"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Komandų kūrimas"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "Kintamieji"
         },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "Kartojimas"
-        },
-        "K5-OnlinePD/Next Steps": {
-          "name": "Kiti žingsniai"
-        },
-        "kodea-pd-2021/Next Steps": {
-          "name": "Kiti žingsniai"
-        },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "Programavimas ant languoto popieriaus"
-        },
-        "coursed-2022/Relay Programming": {
-          "name": "Programavimas komandoje"
-        },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "Sąlyginiai sakiniai su kortomis"
-        },
-        "coursef-2022/The Internet": {
-          "name": "Internetas"
-        },
-        "coursee-2022/Songwriting": {
-          "name": "Dainų rašymas"
-        },
-        "courseb-2022/Move It, Move It": {
-          "name": "Judėk, judėk"
-        },
-        "courseb-2022/Getting Loopy": {
-          "name": "Kartojimo supratimas"
-        },
-        "coursea-2022/Happy Maps": {
-          "name": "Laimingieji žemėlapiai"
-        },
-        "coursec-2022/The Big Event": {
-          "name": "Didelis įvykis"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Dvejetainės apyrankės"
-        },
-        "csd3-2022/Variables": {
-          "name": "Kintamieji"
-        },
-        "csd3-2022/Text": {
-          "name": "Tekstas"
-        },
-        "csd3-2022/Conditionals": {
+        "csd3-2017/Conditionals": {
           "name": "Sąlyginiai sakiniai"
         },
-        "csd3-2022/Velocity": {
+        "csd3-2017/Velocity": {
           "name": "Greitis"
         },
-        "csd3-2022/Functions": {
+        "csd3-2017/Functions": {
           "name": "Komandų kūrimas"
         },
-        "csd6-2022/Functions": {
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Komandos su parametrais"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmai realiame gyvenime: sėklos sodinimas"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmai realiame gyvenime: sėklos sodinimas"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Algoritmai realiame gyvenime: popieriniai lėktuvėliai"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Kartojimas kartojime"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Laiptuota piramidė"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Kartojimas kartojime"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Laiptuota piramidė"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algoritmai: tanagramos"
+        },
+        "express-2017/Introduction": {
+          "name": "Įvadas"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Laiptuota piramidė"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Kartojimas kartojime"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmai realiame gyvenime: sėklos sodinimas"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Rašanti bitė"
+        },
+        "csd2-2018/Lists": {
+          "name": "Sąrašai"
+        },
+        "csd3-2018/Variables": {
+          "name": "Kintamieji"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Sąlyginiai sakiniai"
+        },
+        "csd3-2018/Velocity": {
+          "name": "Greitis"
+        },
+        "csd3-2018/Functions": {
           "name": "Komandų kūrimas"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Komandos su parametrais"
+        },
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "Laimingieji žemėlapiai"
+        },
+        "coursea-2018/Going Places Safely": {
+          "name": "Saugus naršymas internete"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Judėk, judėk"
@@ -125,11 +89,17 @@
         "courseb-2018/Your Digital Footprint": {
           "name": "Virtualūs pirštų antspaudai"
         },
-        "coursea-2018/Programming: Happy Maps": {
-          "name": "Laimingieji žemėlapiai"
+        "coursec-2018/Building a Foundation": {
+          "name": "Laiptuota piramidė"
         },
-        "coursea-2018/Going Places Safely": {
-          "name": "Saugus naršymas internete"
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Kartojimo supratimas"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Didelis įvykis"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Dvejetainės apyrankės"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Programavimas ant languoto popieriaus"
@@ -145,6 +115,24 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "Dvejetainiai vaizdai"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Mano draugai robotai"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Laiptuota piramidė"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Sąlyginiai sakiniai su kortomis"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Dainų rašymas"
+        },
+        "coursee-2018/Internet": {
+          "name": "Internetas"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Komandinis programavimas"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "Mano draugai robotai"
@@ -185,36 +173,6 @@
         "express-2018/Crowdsourcing": {
           "name": "Komandinis programavimas"
         },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "Mano draugai robotai"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Laiptuota piramidė"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "Sąlyginiai sakiniai su kortomis"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Dainų rašymas"
-        },
-        "coursee-2018/Internet": {
-          "name": "Internetas"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Komandinis programavimas"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Laiptuota piramidė"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Kartojimo supratimas"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "Didelis įvykis"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Dvejetainės apyrankės"
-        },
         "pre-express-2018/Move It, Move It": {
           "name": "Judėk, judėk"
         },
@@ -224,71 +182,8 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Rašanti bitė"
         },
-        "csd3-2018/Variables": {
-          "name": "Kintamieji"
-        },
-        "csd3-2018/Conditionals": {
-          "name": "Sąlyginiai sakiniai"
-        },
-        "csd3-2018/Velocity": {
-          "name": "Greitis"
-        },
-        "csd3-2018/Functions": {
-          "name": "Komandų kūrimas"
-        },
-        "csd6-2018/Functions with Parameters": {
-          "name": "Komandos su parametrais"
-        },
-        "csd2-2018/Lists": {
+        "csd2-2019/Lists": {
           "name": "Sąrašai"
-        },
-        "coursea-2019/Going Places Safely": {
-          "name": "Saugus naršymas internete"
-        },
-        "coursea-2019/Programming: Happy Maps": {
-          "name": "Laimingieji žemėlapiai"
-        },
-        "courseb-2019/Your Digital Footprint": {
-          "name": "Virtualūs pirštų antspaudai"
-        },
-        "courseb-2019/Move It, Move It": {
-          "name": "Judėk, judėk"
-        },
-        "courseb-2019/Loops: Getting Loopy": {
-          "name": "Kartojimo supratimas"
-        },
-        "coursed-2019/Algorithms: Graph Paper Programming": {
-          "name": "Programavimas ant languoto popieriaus"
-        },
-        "coursed-2019/Relay Programming": {
-          "name": "Programavimas komandoje"
-        },
-        "coursed-2019/Conditionals with Cards": {
-          "name": "Sąlyginiai sakiniai su kortomis"
-        },
-        "coursed-2019/Unplugged: Binary": {
-          "name": "Dvejetainiai vaizdai"
-        },
-        "coursed-2019/Digital Citizenship": {
-          "name": "Virtuali pilietybė"
-        },
-        "coursef-2019/Internet": {
-          "name": "Internetas"
-        },
-        "coursef-2019/Crowdsourcing": {
-          "name": "Komandinis programavimas"
-        },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Dainų rašymas"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Dvejetainės apyrankės"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "Didelis įvykis"
-        },
-        "pre-express-2019/Spelling Bee": {
-          "name": "Rašanti bitė"
         },
         "csd3-2019/Variables": {
           "name": "Kintamieji"
@@ -305,131 +200,260 @@
         "csd6-2019/Functions with Parameters": {
           "name": "Komandos su parametrais"
         },
-        "csd2-2019/Lists": {
-          "name": "Sąrašai"
+        "coursea-2019/Going Places Safely": {
+          "name": "Saugus naršymas internete"
         },
-        "coursef-2017/Building a Foundation": {
-          "name": "Laiptuota piramidė"
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "Laimingieji žemėlapiai"
         },
-        "coursef-2017/Algorithms: Tangrams": {
-          "name": "Algoritmai: tanagramos"
+        "courseb-2019/Your Digital Footprint": {
+          "name": "Virtualūs pirštų antspaudai"
         },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmai realiame gyvenime: sėklos sodinimas"
+        "courseb-2019/Move It, Move It": {
+          "name": "Judėk, judėk"
         },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmai realiame gyvenime: sėklos sodinimas"
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "Kartojimo supratimas"
         },
-        "pre-express-2017/Spelling Bee": {
+        "coursec-2019/Binary Bracelets": {
+          "name": "Dvejetainės apyrankės"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "Didelis įvykis"
+        },
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "Programavimas ant languoto popieriaus"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "Programavimas komandoje"
+        },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "Sąlyginiai sakiniai su kortomis"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "Dvejetainiai vaizdai"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Virtuali pilietybė"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Dainų rašymas"
+        },
+        "coursef-2019/Internet": {
+          "name": "Internetas"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Komandinis programavimas"
+        },
+        "pre-express-2019/Spelling Bee": {
           "name": "Rašanti bitė"
         },
-        "coursee-2017/Building a Foundation": {
-          "name": "Laiptuota piramidė"
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Laimingieji žemėlapiai"
         },
-        "coursee-2017/Nested Loops": {
-          "name": "Kartojimas kartojime"
+        "courseb-2020/Move It, Move It": {
+          "name": "Judėk, judėk"
         },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Algoritmai realiame gyvenime: popieriniai lėktuvėliai"
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Kartojimo supratimas"
         },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmai realiame gyvenime: sėklos sodinimas"
+        "coursec-2020/Binary Bracelets": {
+          "name": "Dvejetainės apyrankės"
         },
-        "coursed-2017/Nested Loops": {
-          "name": "Kartojimas kartojime"
+        "coursec-2020/Events: The Big Event": {
+          "name": "Didelis įvykis"
         },
-        "express-2017/Introduction": {
-          "name": "Įvadas"
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Programavimas ant languoto popieriaus"
         },
-        "express-2017/Building a Foundation": {
-          "name": "Laiptuota piramidė"
+        "coursed-2020/Relay Programming": {
+          "name": "Programavimas komandoje"
         },
-        "express-2017/Nested Loops": {
-          "name": "Kartojimas kartojime"
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Sąlyginiai sakiniai su kortomis"
         },
-        "csd3-2017/Variables": {
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Dvejetainiai vaizdai"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Dainų rašymas"
+        },
+        "coursef-2020/Internet": {
+          "name": "Internetas"
+        },
+        "csd3-2021/Variables": {
           "name": "Kintamieji"
         },
-        "csd3-2017/Conditionals": {
+        "csd3-2021/Text": {
+          "name": "Tekstas"
+        },
+        "csd3-2021/Conditionals": {
           "name": "Sąlyginiai sakiniai"
         },
-        "csd3-2017/Velocity": {
+        "csd3-2021/Velocity": {
           "name": "Greitis"
         },
-        "csd3-2017/Functions": {
+        "csd3-2021/Functions": {
           "name": "Komandų kūrimas"
         },
-        "csd6-2017/Functions with Parameters_": {
+        "csd6-2021/Functions with Parameters": {
           "name": "Komandos su parametrais"
         },
-        "csd2-2017/Lists": {
-          "name": "Sąrašai"
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Laimingieji žemėlapiai"
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "Be kompiuterio: tanagramos"
+        "courseb-2021/Move It, Move It": {
+          "name": "Judėk, judėk"
         },
-        "course4/Maze and Bee": {
-          "name": "Labirintas ir bitė"
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Kartojimo supratimas"
         },
-        "course4/Artist": {
+        "coursec-2021/Events: The Big Event": {
+          "name": "Didelis įvykis"
+        },
+        "coursec-2021/Binary Bracelets": {
+          "name": "Dvejetainės apyrankės"
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Programavimas ant languoto popieriaus"
+        },
+        "coursed-2021/Relay Programming": {
+          "name": "Programavimas komandoje"
+        },
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Sąlyginiai sakiniai su kortomis"
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Dainų rašymas"
+        },
+        "coursef-2021/Internet": {
+          "name": "Internetas"
+        },
+        "csd3-2022/Variables": {
+          "name": "Kintamieji"
+        },
+        "csd3-2022/Text": {
+          "name": "Tekstas"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Sąlyginiai sakiniai"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Greitis"
+        },
+        "csd3-2022/Functions": {
+          "name": "Komandų kūrimas"
+        },
+        "csd6-2022/Functions": {
+          "name": "Komandų kūrimas"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Laimingieji žemėlapiai"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Judėk, judėk"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Kartojimo supratimas"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Didelis įvykis"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Dvejetainės apyrankės"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Programavimas ant languoto popieriaus"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Programavimas komandoje"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Sąlyginiai sakiniai su kortomis"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Dainų rašymas"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internetas"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Programavimo valanda 2013"
+        },
+        "aquatic/Aquatic": {
+          "name": "Minecraft: Kelionės vandeniu"
+        },
+        "artist/Artist": {
           "name": "Menininkas"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Be kompiuterių: Vokų kintamieji"
+        "flappy/Flappy Code": {
+          "name": "Flappy Kodas"
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Be kompiuterių: Madlibs žodžių žaidimas"
+        "frozen/Artist": {
+          "name": "Programuokite kartu su Ana ir Elze"
         },
-        "course4/Artist: Variables": {
-          "name": "Menininkas: kintamieji"
+        "gumball/Gumball Play Lab": {
+          "name": "Gumball laboratorija"
         },
-        "course4/Play Lab: Variables": {
-          "name": "Žaidimų laboratorija: kintamieji"
+        "hourofcode/Maze": {
+          "name": "Labirintas"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Be kompiuterio: kartojimai"
+        "iceage/Ice Age Play Lab": {
+          "name": "Ledynmečio laboratorija"
         },
-        "course4/Bee: For Loops": {
-          "name": "Bitė: kartojimai"
+        "infinity/Infinity": {
+          "name": "Disnėjaus Infinity laboratorija"
         },
-        "course4/Artist: For Loops": {
-          "name": "Menininkas: kartojimai"
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft programavimo valanda"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Žaidimų laboratorija: kartojimai"
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Minecraft „Programavimo valandos“ projektavimo aplinka"
         },
-        "course4/Artist: Functions": {
-          "name": "Menininkas: komandų kūrimas"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Be kompiuterio: dainų rašymas pagal parametrus"
+        "playlab/Play Lab": {
+          "name": "Laboratorija"
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Menininkas: komandos su parametrais"
+        "starwars/Hour of Code 2015": {
+          "name": "Žvaigždžių karai: Programuojame galaktiką (JavaScript kalba)"
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Žaidimų laboratorija: komandos su parametrais"
+        "allthethings/Jigsaw": {
+          "name": "Dėlionės"
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Bitė: komandos su parametrais"
+        "allthethings/Maze": {
+          "name": "Labirintas"
         },
-        "course4/Unplugged: Binary": {
-          "name": "Be kompiuterio: dvejetainiai skaičiai"
+        "allthethings/Artist": {
+          "name": "Menininkas"
         },
-        "course4/Artist Binary": {
-          "name": "Meninkas: dvejetainis"
+        "allthethings/Bee": {
+          "name": "Bitė"
         },
-        "course4/Super Challenge - Variables": {
-          "name": "Super iššūkis - Kintamieji"
+        "allthethings/Flappy": {
+          "name": "Flappy"
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "Super iššūkis - Ciklai"
+        "allthethings/Bounce": {
+          "name": "Bounce"
         },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Super iššūkis - funkcijos ir parametrai"
+        "allthethings/Multi": {
+          "name": "Variantai"
         },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Ekstremalus iššūkis - Visapusiškumas"
+        "allthethings/Match": {
+          "name": "Sujungimas"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pikseliavimas"
+        },
+        "allthethings/Studio": {
+          "name": "Studija"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Informatikos įvadas"
@@ -490,6 +514,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "Apibendrinimas"
+        },
+        "course1/Happy Maps": {
+          "name": "Laimingieji žemėlapiai"
+        },
+        "course1/Move it, Move it": {
+          "name": "Judėk, judėk"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Dėlionės: sudėk paveikslėlius"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Labirintas: seka"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Labirintas: klaidų ieškojimas"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmai realiame gyvenime: sėklos sodinimas"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Bitė: seka"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Menininkas: seka"
+        },
+        "course1/Building a Foundation": {
+          "name": "Laiptuota piramidė"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Menininkas: formos"
+        },
+        "course1/Spelling Bee": {
+          "name": "Rašanti bitė"
+        },
+        "course1/Getting Loopy": {
+          "name": "Kartojimo supratimas"
+        },
+        "course1/Maze: Loops": {
+          "name": "Labirintas: kartojimas"
+        },
+        "course1/Bee: Loops": {
+          "name": "Bitė: kartojimas"
+        },
+        "course1/The Big Event": {
+          "name": "Didelis įvykis"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Žaidimų laboratorija: sukurk istoriją"
+        },
+        "course1/Going Places Safely": {
+          "name": "Saugus naršymas internete"
+        },
+        "course1/Artist: Loops": {
+          "name": "Menininkas: kartojimas"
         },
         "course2/Graph Paper Programming": {
           "name": "Programavimas ant languoto popieriaus"
@@ -611,176 +689,74 @@
         "course3/Artist: Patterns": {
           "name": "Menininkas: raštai"
         },
-        "course1/Happy Maps": {
-          "name": "Laimingieji žemėlapiai"
+        "course4/Unplugged: Tangrams": {
+          "name": "Be kompiuterio: tanagramos"
         },
-        "course1/Move it, Move it": {
-          "name": "Judėk, judėk"
+        "course4/Maze and Bee": {
+          "name": "Labirintas ir bitė"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Dėlionės: sudėk paveikslėlius"
+        "course4/Artist": {
+          "name": "Menininkas"
         },
-        "course1/Maze: Sequence": {
-          "name": "Labirintas: seka"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Be kompiuterių: Vokų kintamieji"
         },
-        "course1/Maze: Debugging": {
-          "name": "Labirintas: klaidų ieškojimas"
+        "course4/Unplugged: Madlibs": {
+          "name": "Be kompiuterių: Madlibs žodžių žaidimas"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmai realiame gyvenime: sėklos sodinimas"
+        "course4/Artist: Variables": {
+          "name": "Menininkas: kintamieji"
         },
-        "course1/Bee: Sequence": {
-          "name": "Bitė: seka"
+        "course4/Play Lab: Variables": {
+          "name": "Žaidimų laboratorija: kintamieji"
         },
-        "course1/Artist: Sequence": {
-          "name": "Menininkas: seka"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Be kompiuterio: kartojimai"
         },
-        "course1/Building a Foundation": {
-          "name": "Laiptuota piramidė"
+        "course4/Bee: For Loops": {
+          "name": "Bitė: kartojimai"
         },
-        "course1/Artist: Shapes": {
-          "name": "Menininkas: formos"
+        "course4/Artist: For Loops": {
+          "name": "Menininkas: kartojimai"
         },
-        "course1/Spelling Bee": {
-          "name": "Rašanti bitė"
+        "course4/Play Lab: For Loops": {
+          "name": "Žaidimų laboratorija: kartojimai"
         },
-        "course1/Getting Loopy": {
-          "name": "Kartojimo supratimas"
+        "course4/Artist: Functions": {
+          "name": "Menininkas: komandų kūrimas"
         },
-        "course1/Maze: Loops": {
-          "name": "Labirintas: kartojimas"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Be kompiuterio: dainų rašymas pagal parametrus"
         },
-        "course1/Bee: Loops": {
-          "name": "Bitė: kartojimas"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Menininkas: komandos su parametrais"
         },
-        "course1/The Big Event": {
-          "name": "Didelis įvykis"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Žaidimų laboratorija: komandos su parametrais"
         },
-        "course1/Studio: Create a Story": {
-          "name": "Žaidimų laboratorija: sukurk istoriją"
+        "course4/Bee: Functions with Parameters": {
+          "name": "Bitė: komandos su parametrais"
         },
-        "course1/Going Places Safely": {
-          "name": "Saugus naršymas internete"
+        "course4/Unplugged: Binary": {
+          "name": "Be kompiuterio: dvejetainiai skaičiai"
         },
-        "course1/Artist: Loops": {
-          "name": "Menininkas: kartojimas"
+        "course4/Artist Binary": {
+          "name": "Meninkas: dvejetainis"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Super iššūkis - Kintamieji"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Super iššūkis - Ciklai"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Super iššūkis - funkcijos ir parametrai"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Ekstremalus iššūkis - Visapusiškumas"
         },
         "jigsaw/Jigsaw": {
           "name": "Dėlionės"
-        },
-        "allthethings/Jigsaw": {
-          "name": "Dėlionės"
-        },
-        "allthethings/Maze": {
-          "name": "Labirintas"
-        },
-        "allthethings/Artist": {
-          "name": "Menininkas"
-        },
-        "allthethings/Bee": {
-          "name": "Bitė"
-        },
-        "allthethings/Flappy": {
-          "name": "Flappy"
-        },
-        "allthethings/Bounce": {
-          "name": "Bounce"
-        },
-        "allthethings/Multi": {
-          "name": "Variantai"
-        },
-        "allthethings/Match": {
-          "name": "Sujungimas"
-        },
-        "allthethings/Pixelation": {
-          "name": "Pikseliavimas"
-        },
-        "allthethings/Studio": {
-          "name": "Studija"
-        },
-        "allthethings/Minecraft": {
-          "name": "Minecraft"
-        },
-        "coursef-2021/Internet": {
-          "name": "Internetas"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "Judėk, judėk"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Kartojimo supratimas"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "Laimingieji žemėlapiai"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "Didelis įvykis"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Dvejetainės apyrankės"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Programavimas ant languoto popieriaus"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Programavimas komandoje"
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "Sąlyginiai sakiniai su kortomis"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "Dainų rašymas"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Komandos su parametrais"
-        },
-        "csd3-2021/Variables": {
-          "name": "Kintamieji"
-        },
-        "csd3-2021/Text": {
-          "name": "Tekstas"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "Sąlyginiai sakiniai"
-        },
-        "csd3-2021/Velocity": {
-          "name": "Greitis"
-        },
-        "csd3-2021/Functions": {
-          "name": "Komandų kūrimas"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "Judėk, judėk"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Kartojimo supratimas"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Programavimas ant languoto popieriaus"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Programavimas komandoje"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "Sąlyginiai sakiniai su kortomis"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Dvejetainiai vaizdai"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Dvejetainės apyrankės"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "Didelis įvykis"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "Dainų rašymas"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Laimingieji žemėlapiai"
-        },
-        "coursef-2020/Internet": {
-          "name": "Internetas"
         }
       }
     }

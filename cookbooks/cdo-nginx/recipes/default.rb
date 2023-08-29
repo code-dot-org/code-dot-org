@@ -12,7 +12,7 @@ apt_package 'nginx'
   # (in case OS doesn't automatically remove them, e.g., due to an aborted process)
   file socket_path do
     action :delete
-    not_if {::File.socket?(socket_path)}
+    not_if {File.socket?(socket_path)}
   end
   node.override['cdo-secrets']["#{app}_sock"] = socket_path
 end

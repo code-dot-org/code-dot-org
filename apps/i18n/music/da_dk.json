@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "afspil lyd",
   "blockly_blockPlaySoundAtMeasureTooltip": "afspil lyd",
+  "blockly_blockPlaySoundTooltip": "afspil lyd",
   "blockly_blockRepeatTooltip": "gentag",
   "blockly_blockWhenRun": "når programmet kører",
   "blockly_blockWhenRunTooltip": "når programmet kører",
@@ -10,9 +10,9 @@
   "blockly_toolboxCategoryLogic": "Logik",
   "blockly_toolboxCategoryMath": "Matematik",
   "blockly_toolboxCategoryVariables": "Variabler",
-  "share": "Del",
-  "startOver": "Start forfra",
+  "continue": "Fortsæt",
   "panelHeaderInstructions": "Instruktioner",
   "panelHeaderWorkspace": "Arbejdsområde: ",
-  "continue": "Fortsæt"
+  "share": "Del",
+  "startOver": "Start forfra"
 }

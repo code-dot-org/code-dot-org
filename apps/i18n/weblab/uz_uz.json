@@ -1,7 +1,7 @@
 {
   "addCSSButton": "CSS qo'shish",
-  "addImageButton": "Rasm qo'shish",
   "addHTMLButton": "HTML qo'shish",
+  "addImageButton": "Rasm qo'shish",
   "closeFullscreenPreview": "To'liq ekranni oldindan ko'rishni yoping",
   "currentProjectCapacity": "{currentMegabytes}MB dan {totalMegabytes}MB ishlatilgan",
   "disallowedHtml": "“{filename}\" faylida ruxsat berilmagan HTML elementlari mavjud: `{disallowedTags}`. Ushbu dialog yopilganda ular o'chiriladi.",
@@ -14,8 +14,8 @@
   "reset": "Veb laboratoriyasini tiklash",
   "resetComplete": "Veb laboratoriyasini tiklash tugallandi",
   "resetFailure": "Web Laboratoriyani qayta tiklab bo'lmadi: {message}.",
-  "toggleInspectorOn": "Inspektor: O'chirilgan",
   "toggleInspectorOff": "Inspektor: yoqilgan",
+  "toggleInspectorOn": "Inspektor: O'chirilgan",
   "troubleshootingSupport": "Qo'shimcha ma'lumot olish uchun bizning qo'llab -quvvatlash maqolamizga qarang [\"Veb -laboratoriya muammolarini bartaraf etish\"]({url}) .",
   "uploadError": "Yuklash xatosi"
 }

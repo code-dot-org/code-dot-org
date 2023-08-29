@@ -12,9 +12,9 @@
   "cs_topic": "digital_literacy",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
-  "description": null,
-  "self_paced_professional_learning": null,
+  "description": "Give students an idea of what to expect — mouse skills, lab manners, completing puzzles, and more — when they head to the computer lab.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null
+  "published_date": "2015-01-01 05:00:00 UTC",
+  "self_paced_pl_course_offering_id": null
 }

@@ -3,7 +3,7 @@ title: Teach Computer Science
 theme: responsive_full_width
 ---
 
-%link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/teach-styles.css", rel: "stylesheet"}
 
 -# FontAwesome icons
@@ -16,13 +16,15 @@ theme: responsive_full_width
     .text-wrapper.col-50
       %h1=hoc_s(:teach_page_top_heading)
       %p=hoc_s(:teach_page_top_desc_01)
-      %p.body-two
+      %p.body-three
         =hoc_s(:teach_page_top_desc_02)
       %a{href: CDO.studio_url("/users/sign_up"), class: "link-button"}
         =hoc_s(:call_to_action_sign_up_free)
     %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
       %img.rounded-corners.box-shadow-primary{src: "/images/teach-page-top.png", alt: "", style: "position: relative; width: 100%;"}
     .clear
+
+= view :ai_pl_skinny_banner
 
 %section.why-teach-cs.bg-neutral-light
   .wrapper

@@ -644,7 +644,7 @@ it:
         csd_u6_if_statements: 'CSD: Istruzioni if'
         csc-poem-art-intro: Video introduttivo
         csc-poem-art-outro: Video finale
-        csd_u6_call_define_functions: 'CSD: Chiamare e Definire Funzioni'
+        csd_u6_call_define_functions: 'Chiamata e definizione di funzioni'
         csp_applab_parameters: Funzioni con parametri
         starquilts_intro_artist: Introduzione a Star Quilts
         CSA-PL-intro-to-arrays: Array unidimensionale (1D)
@@ -747,6 +747,12 @@ it:
         star_quilts_intro_to_artist: 'Star Quilts: Introduzione all''artista'
         upload_sprites_backgrounds: Caricamento di sprite e sfondi personalizzati
         PL_CSD_EquityBlindSpotsvid: Pregiudizi e Responsabilità
+        how-ai-works-llms-full: Come funzionano i Chatbot e i Modelli Linguistici
+        how-ai-works-creativity-full: Le Intelligenze artificiali hanno creatività o immaginazione?
+        how-ai-works-llms-part1: Chatbot e Modelli Linguistici parte 1
+        how-ai-works-llms-part2: Chatbot e Modelli Linguistici parte 2
+        what-is-creativity: Cos'è la creatività?
+        code-break: Prenditi una Pausa Codice
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

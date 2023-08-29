@@ -1,7 +1,7 @@
 {
   "addCSSButton": "CSS hinzufügen",
-  "addImageButton": "Bild hinzufügen",
   "addHTMLButton": "HTML hinzufügen",
+  "addImageButton": "Bild hinzufügen",
   "closeFullscreenPreview": "Vollbildvorschau schließen",
   "currentProjectCapacity": "{currentMegabytes}MB von {totalMegabytes}MB verwendet",
   "disallowedHtml": "Die Datei \"{filename}\" enthält HTML-Elemente, die nicht erlaubt sind: `{disallowedTags}`. Sie werden entfernt, wenn dieser Dialog geschlossen wird.",
@@ -14,8 +14,8 @@
   "reset": "Web Lab zurücksetzen",
   "resetComplete": "Web Lab Reset abgeschlossen",
   "resetFailure": "Web Lab konnte nicht zurückgesetzt werden: {message}.",
-  "toggleInspectorOn": "Inspektor: Aus",
   "toggleInspectorOff": "Inspektor: An",
+  "toggleInspectorOn": "Inspektor: Aus",
   "troubleshootingSupport": "Weitere Informationen finden Sie in unserem Support-Artikel [\"Beheben von Web Lab-Problemen\"]({url}) .",
   "uploadError": "Fehler beim Hochladen"
 }

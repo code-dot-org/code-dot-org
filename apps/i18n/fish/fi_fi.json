@@ -1,12 +1,12 @@
 {
-  "continue": "Jatka",
   "areYouSure": "Oletko varma?",
-  "cancel": "Peru",
-  "yes": "Kyllä",
-  "no": "Ei",
-  "run": "Suorita",
-  "finish": "Valmis",
   "blue": "Sininen",
+  "cancel": "Peru",
+  "continue": "Jatka",
+  "finish": "Valmis",
   "green": "Vihreä",
-  "red": "Punainen"
+  "no": "Ei",
+  "red": "Punainen",
+  "run": "Suorita",
+  "yes": "Kyllä"
 }

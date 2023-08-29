@@ -2,26 +2,114 @@
   "ur-PK": {
     "data": {
       "callouts": {
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "کیا اسکرین سبز ہوگئی؟ اگر ایسا ہے تو ، 'Fisnish' کو دبائیں۔ اگر نہیں تو ، 'Reset' کو دبائیں ، اپنا کوڈ تبدیل کریں ، اور 'Run' کو دوبارہ دبائیں۔"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "اب آپ ڈیزائن موڈ میں ہیں۔"
+        },
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "زومبی ایک مکمل دائرے بنانے کے لئے منتقل کرنے کے لئے ہے اوقات کی تعداد میں درج کریں"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "“دہرائیں” بلاک کا استعمال کریں اور اسے ورک اسپیس میں بلاکس کے ارد گرد لپیٹ دیں"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "اس بلاک کے اندر اپنے انسداد متغیر گھسیٹیں"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "“دہرائیں” بلاک کا استعمال کریں اور اسے ورک اسپیس میں بلاکس کے ارد گرد لپیٹ دیں"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "اس بلاک کو “لمبائی” کو درست قدر پر متعین کرنے کے لیے استعمال کریں۔"
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "اس بلاک کو “لمبائی” کو درست قدر پر متعین کرنے کے لیے استعمال کریں۔"
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "ڈگری میں ہر زاویہ کا سائز حاصل کرنے کے لیے فریقوں کی تعداد سے 360 تقسیم کریں۔"
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "فنکشن میں ترمیم کرنے اور اس سمت کو تبدیل کرنے کے لئے اس بٹن کا استعمال کریں جو مکھی امرت حاصل کرنے کے لئے بدل جائے گی."
+        },
+        "Course 4 Maze 4": {
+          "repeat": "حکموں کو دہرانے کے لئے لوپ کے اندر بلاکس رکھو"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "اپنی تقریب میں ترمیم کرنے کے لئے یہاں کلک کریں."
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "اپنی فنکشن میں پیرامیٹر شامل کرنے کے لئے ترمیم کریں پر کلک کریں"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "اداکار منتقل کرنے کے لئے تیر کا استعمال کریں"
+        },
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "ڈانسر کی قسم یہاں منتخب کریں."
         },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "ڈانسر کی قسم یہاں منتخب کریں."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "ڈانسر کی قسم یہاں منتخب کریں."
+        },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "اس بلاک کو اپنے پروگرام میں شامل کریں۔.",
-          "arrow_buttons": "اپنے ڈانسر کو کنٹرول کرنے کے لئے ایرو کے بٹن دبائیں۔."
+          "arrow_buttons": "اپنے ڈانسر کو کنٹرول کرنے کے لئے ایرو کے بٹن دبائیں۔.",
+          "dance_callout_11_a": "اس بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "CourseD_Dance_2020_022022": {
+          "arrow_buttons": "اپنے ڈانسر کو کنٹرول کرنے کے لئے ایرو کے بٹن دبائیں۔.",
+          "dance_callout_11_a": "اس بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "arrow_buttons": "اپنے ڈانسر کو کنٹرول کرنے کے لئے ایرو کے بٹن دبائیں۔.",
+          "dance_callout_11_a": "اس بلاک کو اپنے پروگرام میں شامل کریں۔."
         },
         "CourseD_Dance_2020_04": {
+          "dance_callout_02": "اس بلاک کو اپنے پروگرام میں شامل کریں!"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "اس بلاک کو اپنے پروگرام میں شامل کریں!"
+        },
+        "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "اس بلاک کو اپنے پروگرام میں شامل کریں!"
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "اپنے پروگرام میں ایک نیا ایونٹ شامل کریں۔."
         },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "اپنے پروگرام میں ایک نیا ایونٹ شامل کریں۔."
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "اپنے پروگرام میں ایک نیا ایونٹ شامل کریں۔."
+        },
         "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "نیا بلاک!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "نیا بلاک!"
+        },
+        "CourseD_Dance_2020_06_2021": {
           "dance_party_11_5_groups": "نیا بلاک!"
         },
         "CourseD_Dance_2020_07": {
           "setprop_hint": "نیا بلاک!"
         },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "نیا بلاک!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "نیا بلاک!"
+        },
         "CourseD_Dance_2020_09": {
+          "new_block_3": "نیا بلاک!",
+          "new_block_4": "نیا بلاک!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "نیا بلاک!",
+          "new_block_4": "نیا بلاک!"
+        },
+        "CourseD_Dance_2020_09_2021": {
           "new_block_3": "نیا بلاک!",
           "new_block_4": "نیا بلاک!"
         },
@@ -44,12 +132,26 @@
         "CourseD_Dance_Party_11_5": {
           "dance_party_11_5_groups": "\"تمام بطخیں\" بلاکس کے لئے یہاں دیکھیں"
         },
+        "CourseF_outbreak2": {
+          "minitoolbox": "بلاک کھولنے کے لئے یہاں کلک کر لیں۔",
+          "pointerlocation": "یہاں پر سبجکٹ بلاک گھسیٹ کر لے آئیں۔"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "بلاک کھولنے کے لئے یہاں کلک کر لیں۔",
+          "pointerlocation": "یہاں پر سبجکٹ بلاک گھسیٹ کر لے آئیں۔"
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "نیا کاسٹیوم بنانے کے لئے کلک کریں"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
         "Dance_2019_01": {
           "dance_callout_01": "ڈانسر کی قسم یہاں منتخب کریں."
         },
         "Dance_2019_02": {
-          "dance_callout_11_a": "اس بلاک کو اپنے پروگرام میں شامل کریں۔.",
-          "arrow_buttons": "اپنے ڈانسر کو کنٹرول کرنے کے لئے ایرو کے بٹن دبائیں۔."
+          "arrow_buttons": "اپنے ڈانسر کو کنٹرول کرنے کے لئے ایرو کے بٹن دبائیں۔.",
+          "dance_callout_11_a": "اس بلاک کو اپنے پروگرام میں شامل کریں۔."
         },
         "Dance_2019_04": {
           "dance_callout_02": "اس بلاک کو اپنے پروگرام میں شامل کریں!"
@@ -86,102 +188,13 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "\"تمام بطخیں\" بلاکس کے لئے یہاں دیکھیں"
         },
-        "frozen circle function with parameter": {
-          "frozen_circle_function_with_parameter_circle": "\"کری-ایٹ اے سرکل\" بلاک استعمال کریں اور سائز تبدیل کریں۔"
-        },
-        "frozen diamond": {
-          "frozen_diamond_repeat": "اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔"
-        },
-        "frozen diamond snowflake": {
-          "frozen_diamond_repeat": "اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔"
-        },
-        "frozen snowflake branch": {
-          "frozen_snowflake_branch": "\"ایک سنوفلیک برانچ بنائیں\" بلاک استعمال کریں"
-        },
-        "frozen square iterative": {
-          "frozen_create_square": "ایک مربع بنانے کے لیے یہاں مزید بلاک منسلک کریں"
-        },
-        "outbreak2": {
-          "minitoolbox": "بلاک کھولنے کے لئے یہاں کلک کر لیں۔",
-          "pointerlocation": "یہاں پر سبجکٹ بلاک گھسیٹ کر لے آئیں۔"
-        },
-        "outbreak7": {
-          "costumes_callout": "نیا کاسٹیوم بنانے کے لئے کلک کریں"
-        },
-        "AppLab Intro 7 - Change Screen Color": {
-          "applab_hoc_finish": "کیا اسکرین سبز ہوگئی؟ اگر ایسا ہے تو ، 'Fisnish' کو دبائیں۔ اگر نہیں تو ، 'Reset' کو دبائیں ، اپنا کوڈ تبدیل کریں ، اور 'Run' کو دوبارہ دبائیں۔"
-        },
-        "CourseD_Dance_2020_01_2021": {
-          "dance_callout_01": "ڈانسر کی قسم یہاں منتخب کریں."
-        },
-        "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "اس بلاک کو اپنے پروگرام میں شامل کریں۔.",
-          "arrow_buttons": "اپنے ڈانسر کو کنٹرول کرنے کے لئے ایرو کے بٹن دبائیں۔."
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "اس بلاک کو اپنے پروگرام میں شامل کریں!"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "dance_callout_05": "اپنے پروگرام میں ایک نیا ایونٹ شامل کریں۔."
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "dance_party_11_5_groups": "نیا بلاک!"
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "setprop_hint": "نیا بلاک!"
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "new_block_3": "نیا بلاک!",
-          "new_block_4": "نیا بلاک!"
-        },
-        "CourseF_outbreak2": {
-          "minitoolbox": "بلاک کھولنے کے لئے یہاں کلک کر لیں۔",
-          "pointerlocation": "یہاں پر سبجکٹ بلاک گھسیٹ کر لے آئیں۔"
-        },
-        "CourseF_outbreak7": {
-          "costumes_callout": "نیا کاسٹیوم بنانے کے لئے کلک کریں"
-        },
-        "helloworld_animals_costumes": {
-          "hello_world_new": "نیا بلاک!"
-        },
-        "helloworld_animals_sizes": {
-          "hello_world_new": "نیا بلاک!",
-          "hello_world_new_block": "نیا بلاک!!!!"
-        },
-        "helloworld_animals_sounds": {
-          "hello_world_new": "نیا بلاک!"
-        },
-        "helloworld_emoji_costumes": {
-          "hello_world_new": "نیا بلاک!"
-        },
-        "helloworld_emoji_sizes": {
-          "hello_world_new": "نیا بلاک!",
-          "hello_world_new_block": "نیا بلاک!"
-        },
-        "helloworld_emoji_sounds": {
-          "hello_world_new": "نیا بلاک!"
-        },
-        "helloworld_food_costumes": {
-          "hello_world_new": "نیا بلاک!"
-        },
-        "helloworld_food_sizes": {
-          "hello_world_new": "نیا بلاک!",
-          "hello_world_new_block": "نیا بلاک!"
-        },
-        "helloworld_food_sounds": {
-          "hello_world_new": "نیا بلاک!"
-        },
-        "helloworld_retro_costumes": {
-          "hello_world_new": "نیا بلاک!"
-        },
-        "helloworld_retro_sizes": {
-          "hello_world_new": "نیا بلاک!",
-          "hello_world_new_block": "نیا بلاک!"
-        },
-        "helloworld_retro_sounds": {
-          "hello_world_new": "نیا بلاک!"
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "اپنے آپ کو یا آپ کے استاد کو چھوڑنے کے لئے اس بلاک کا استعمال کریں کہ آپ کا کوڈ کیسے کام کرتا ہے."
         },
         "Function intro Ryan": {
+          "Function_intro_Ryan_1": "یہ چھوٹی سی ہدایت کمپیوٹر کو کام کی جگہ پر اسی نام کے ساتھ کوڈ کا بڑا حصہ چلانے کا کہتی ہے۔"
+        },
+        "Function intro Ryan2022": {
           "Function_intro_Ryan_1": "یہ چھوٹی سی ہدایت کمپیوٹر کو کام کی جگہ پر اسی نام کے ساتھ کوڈ کا بڑا حصہ چلانے کا کہتی ہے۔"
         },
         "Function intro Ryan_2019": {
@@ -193,7 +206,29 @@
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "یہ چھوٹی سی ہدایت کمپیوٹر کو کام کی جگہ پر اسی نام کے ساتھ کوڈ کا بڑا حصہ چلانے کا کہتی ہے۔"
         },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "جب یہ واقعہ ہوتا ہے تو آواز چلائیں."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "کون سا بلاک Baymax اپ تیر دبایا جاتا ہے جب منتقل کر دے گا؟",
+          "Infinity_move_directions_callout_arrow": "نقصان پہنچانا کرنے کے لئے ان تیر کا استعمال"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "یہاں اقدام بلاک شامل کریں"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "یہاں کے اندر بلاکس منتقل کریں"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "جب آپ تیار ہوں، تو اپنے پروگرام کو آزمانے کے لیے \"چلائیں\" دبائیں۔"
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "چلنا شروع کرنے کے لیے \"چلائیں\" دبائیں۔"
+        },
         "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_1": "یہ ایک 'دہرائیں' لوپ ہے! اسے کام کی جگہ پر کلک کریں اور کوڈ شامل کریں جسے آپ بار بار چلانا چاہتے ہیں۔"
+        },
+        "MC_HOC_2017_03_Cole2022": {
           "MC_HOC_2017_03_Cole_1": "یہ ایک 'دہرائیں' لوپ ہے! اسے کام کی جگہ پر کلک کریں اور کوڈ شامل کریں جسے آپ بار بار چلانا چاہتے ہیں۔"
         },
         "MC_HOC_2017_03_Cole_2019": {
@@ -208,6 +243,9 @@
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "ایجنٹ پانی پر منڈلا سکتا ہے، لیکن کھلاڑی ایسا نہیں کر سکتا!"
         },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "ایجنٹ پانی پر منڈلا سکتا ہے، لیکن کھلاڑی ایسا نہیں کر سکتا!"
+        },
         "MC_HOC_2017_04_Cole_2019": {
           "MC_HOC_2017_04_Cole_a": "ایجنٹ پانی پر منڈلا سکتا ہے، لیکن کھلاڑی ایسا نہیں کر سکتا!"
         },
@@ -218,6 +256,9 @@
           "MC_HOC_2017_04_Cole_a": "ایجنٹ پانی پر منڈلا سکتا ہے، لیکن کھلاڑی ایسا نہیں کر سکتا!"
         },
         "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "آپ ان بلاکس کو پھینک نہیں سکتے ہیں، لیکن آپ ان کی تدوین کر سکتے ہیں!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
           "MC_HOC_2017_06_Cole_1": "آپ ان بلاکس کو پھینک نہیں سکتے ہیں، لیکن آپ ان کی تدوین کر سکتے ہیں!"
         },
         "MC_HOC_2017_06_Cole_2019": {
@@ -232,6 +273,9 @@
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "ایجنٹ آتش فشاں مادے پر منڈلا سکتا ہے، لیکن اسٹیو اور ایلیکس ایسا نہیں کر سکتے!"
         },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "ایجنٹ آتش فشاں مادے پر منڈلا سکتا ہے، لیکن اسٹیو اور ایلیکس ایسا نہیں کر سکتے!"
+        },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_1": "ایجنٹ آتش فشاں مادے پر منڈلا سکتا ہے، لیکن اسٹیو اور ایلیکس ایسا نہیں کر سکتے!"
         },
@@ -241,7 +285,66 @@
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "ایجنٹ آتش فشاں مادے پر منڈلا سکتا ہے، لیکن اسٹیو اور ایلیکس ایسا نہیں کر سکتے!"
         },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "اپنی تقریب میں ترمیم کرنے کے لئے یہاں کلک کریں."
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "اپنی تقریب میں ترمیم کرنے کے لئے یہاں کلک کریں."
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "“افعال” فلائی آؤٹ کھولنے کے لئے یہاں کلک کریں، پھر “ایک فنکشن بنائیں” کے بٹن پر کلک کریں."
+        },
+        "NEW Course 4 Artist Params 9": {
+          "add_and_drag_parameter": "یہاں اپنے پیرامیٹر کے نام پر لکھیں، شامل کریں پر کلک کریں، اور پھر اسے اپنی فنکشن تعریف میں گھسیٹیں",
+          "edit_add_parameter": "اپنی فنکشن میں پیرامیٹر شامل کرنے کے لئے ترمیم کریں پر کلک کریں"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "سوال کے نشانات کو تبدیل کرنے کے لئے لمبائی متغیر کو یہاں گھسیٹیں"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "آلے کے باکس کو ایک نیا نظر مل گیا! “اعمال” کے بلاکس اب یہاں موجود ہیں."
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "مختلف snowflakes کے پیدا کرنے کے لئے اس ڈراپ ڈاؤن کا استعمال کریں!"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
+        },
         "Overworld Move to Sheep": {
+          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔",
+          "craft_run_button_callout": "اپنے پروگرام کی کوشش کرنے کے لئے “چلائیں” مارو"
+        },
+        "Overworld Move to Sheep2022": {
           "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔",
           "craft_run_button_callout": "اپنے پروگرام کی کوشش کرنے کے لئے “چلائیں” مارو"
         },
@@ -257,330 +360,50 @@
           "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔",
           "craft_run_button_callout": "اپنے پروگرام کو آزمانے کے لیے \"Run\" دبائیں"
         },
-        "courseC_starWars_loops2_2018": {
-          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "یہاں بلاکس رکھ کر اعمال کو دہرائیں"
         },
-        "courseC_starWars_loops2_2019": {
-          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "یہاں بلاکس رکھ کر اعمال کو دہرائیں"
         },
-        "courseC_starWars_loops2_2020": {
-          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "یہاں بلاکس رکھ کر اعمال کو دہرائیں"
         },
-        "courseC_starWars_loops2_2021": {
-          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
-        },
-        "poetry_hoc_addSprites": {
-          "poetry_sprite": "نیا بلاک!"
-        },
-        "poetry_hoc_events1": {
-          "poetry_event": "نیا بلاک!",
-          "poetry_foreground": "نیا بلاک!"
-        },
-        "poetry_hoc_freeplay": {
-          "poetry_burst": "نیا بلاک!",
-          "poetry_multiple_sprites": "نیا بلاک!",
-          "poetry_new_block": "نیا بلاک!",
-          "poetry_selector": "کوئی بھی نظم منتخب کریں، یا اپنی نظم درج کریں!"
-        },
-        "poetry_hoc_sounds": {
-          "poetry_sound": "نیا بلاک!",
-          "poetry_music": "نیا بلاک!"
-        },
-        "poetry_hoc_spriteBehaviors": {
-          "poetry_sprite_begins": "نیا بلاک!",
-          "poetry_sprite_stops": "نیا بلاک!"
-        },
-        "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "نیا بلاک!",
-          "poetry_remove_sprite": "نیا بلاک!"
-        },
-        "courseC_starWars_loops2": {
-          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
-        },
-        "courseC_starWars_loops2_copy": {
-          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
-        },
-        "courseC_starWars_loops2_dani": {
-          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
-        },
-        "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "جب آپ تیار ہوں، تو اپنے پروگرام کو آزمانے کے لیے \"چلائیں\" دبائیں۔"
-        },
-        "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "چلنا شروع کرنے کے لیے \"چلائیں\" دبائیں۔"
-        },
-        "helloworld_animals_backgrounds": {
-          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
-        },
-        "helloworld_animals_behaviors": {
-          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
-        },
-        "helloworld_animals_click": {
-          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
-        },
-        "helloworld_animals_events": {
-          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
-        },
-        "helloworld_animals_freeplay": {
-          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
-        },
-        "helloworld_animals_location": {
-          "pin": "پن"
-        },
-        "helloworld_animals_multi": {
-          "pin": "پن"
-        },
-        "helloworld_animals_say": {
-          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
-          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
-        },
-        "helloworld_emoji_backgrounds": {
-          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
-        },
-        "helloworld_emoji_behaviors": {
-          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
-        },
-        "helloworld_emoji_click": {
-          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
-        },
-        "helloworld_emoji_events": {
-          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
-        },
-        "helloworld_emoji_freeplay": {
-          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
-        },
-        "helloworld_emoji_location": {
-          "pin": "پن"
-        },
-        "helloworld_emoji_multi": {
-          "pin": "پن"
-        },
-        "helloworld_emoji_say": {
-          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
-          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
-        },
-        "helloworld_food_backgrounds": {
-          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
-        },
-        "helloworld_food_behaviors": {
-          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
-        },
-        "helloworld_food_click": {
-          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
-        },
-        "helloworld_food_events": {
-          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
-        },
-        "helloworld_food_freeplay": {
-          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
-        },
-        "helloworld_food_location": {
-          "pin": "پن"
-        },
-        "helloworld_food_multi": {
-          "pin": "پن"
-        },
-        "helloworld_food_say": {
-          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
-          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
-        },
-        "helloworld_retro_backgrounds": {
-          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
-        },
-        "helloworld_retro_behaviors": {
-          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
-        },
-        "helloworld_retro_click": {
-          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
-        },
-        "helloworld_retro_events": {
-          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
-        },
-        "helloworld_retro_freeplay": {
-          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
-        },
-        "helloworld_retro_location": {
-          "pin": "پن"
-        },
-        "helloworld_retro_multi": {
-          "pin": "پن"
-        },
-        "helloworld_retro_say": {
-          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
-          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
-        },
-        "poetry_hoc_backgroundEffects": {
-          "poetry_background": "یہاں کوڈ بلاکس تلاش کریں.",
-          "run_button": "اپنے اینیمیشن کو اس بٹن کے ساتھ آزمائیں."
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-          "AppLabHoCFinal11": "اب آپ ڈیزائن موڈ میں ہیں۔"
-        },
-        "frozen line": {
-          "run": "اپنے پروگرام کو آزمانے کے لیے \"Run\" دبائیں!",
-          "move_elsa_forward": "ایلسا کو آگے کی جانب حرکت دینے کے لیے ایک \"Move Forward\" بلاک کو \"When Run\" بلاک کے نیچے رکھ لیں۔"
-        },
-        "frozen perpendicular": {
-          "turn_elsa": "ایلسا کو موڑنے کے لیے \"Turn\" بلاک استعمال کریں۔ ڈراپ ڈاون فہرست میں نمبر متعین کرتا ہے کہ ایلسا کتنا مڑے گی۔"
-        },
-        "frozen square loop": {
-          "replace_questions": "ڈراپ ڈاؤن فہرست استعمال کرتے ہوئے \"???\" کی جگہ ایک نمبر لگائیں"
-        },
-        "frozen square loop 3x": {
-          "replace_questions": "ڈراپ ڈاؤن فہرست استعمال کرتے ہوئے \"???\" کی جگہ ایک نمبر لگائیں"
-        },
-        "New Sprite Lab Project": {
-          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
-        },
-        "CourseD_Dance_2020_012022": {
-          "dance_callout_01": "ڈانسر کی قسم یہاں منتخب کریں."
-        },
-        "CourseD_Dance_2020_022022": {
-          "dance_callout_11_a": "اس بلاک کو اپنے پروگرام میں شامل کریں۔.",
-          "arrow_buttons": "اپنے ڈانسر کو کنٹرول کرنے کے لئے ایرو کے بٹن دبائیں۔."
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "اس بلاک کو اپنے پروگرام میں شامل کریں!"
-        },
-        "CourseD_Dance_2020_052022": {
-          "dance_callout_05": "اپنے پروگرام میں ایک نیا ایونٹ شامل کریں۔."
-        },
-        "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "نیا بلاک!"
-        },
-        "CourseD_Dance_2020_072022": {
-          "setprop_hint": "نیا بلاک!"
-        },
-        "CourseD_Dance_2020_092022": {
-          "new_block_3": "نیا بلاک!",
-          "new_block_4": "نیا بلاک!"
-        },
-        "CourseF_outbreak2_-2022-2": {
-          "minitoolbox": "بلاک کھولنے کے لئے یہاں کلک کر لیں۔",
-          "pointerlocation": "یہاں پر سبجکٹ بلاک گھسیٹ کر لے آئیں۔"
-        },
-        "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_1": "یہ چھوٹی سی ہدایت کمپیوٹر کو کام کی جگہ پر اسی نام کے ساتھ کوڈ کا بڑا حصہ چلانے کا کہتی ہے۔"
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_1": "یہ ایک 'دہرائیں' لوپ ہے! اسے کام کی جگہ پر کلک کریں اور کوڈ شامل کریں جسے آپ بار بار چلانا چاہتے ہیں۔"
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "ایجنٹ پانی پر منڈلا سکتا ہے، لیکن کھلاڑی ایسا نہیں کر سکتا!"
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_1": "آپ ان بلاکس کو پھینک نہیں سکتے ہیں، لیکن آپ ان کی تدوین کر سکتے ہیں!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_1": "ایجنٹ آتش فشاں مادے پر منڈلا سکتا ہے، لیکن اسٹیو اور ایلیکس ایسا نہیں کر سکتے!"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔",
-          "craft_run_button_callout": "اپنے پروگرام کی کوشش کرنے کے لئے “چلائیں” مارو"
-        },
-        "courseC_starWars_loops22022": {
-          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
-        },
-        "courseE_aboutme_22022": {
-          "": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
-        },
-        "coursee_helloworld_events": {
-          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
-        },
-        "coursee_helloworld_freeplay": {
-          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
-        },
-        "coursee_helloworld_say": {
-          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
-          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
-        },
-        "helloworld_food_backgrounds_soccer-2022": {
-          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
-        },
-        "helloworld_food_backgrounds_space-2022": {
-          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
-        },
-        "helloworld_food_behaviors_soccer-2022": {
-          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
-        },
-        "helloworld_food_behaviors_space-2022": {
-          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
-        },
-        "helloworld_food_click_soccer-2022": {
-          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
-        },
-        "helloworld_food_costumes_soccer-2022": {
-          "hello_world_new": "نیا بلاک!"
-        },
-        "helloworld_food_costumes_space-2022": {
-          "hello_world_new": "نیا بلاک!"
-        },
-        "helloworld_food_events_soccer-2022": {
-          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
-        },
-        "helloworld_food_events_space-2022": {
-          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
-        },
-        "helloworld_food_freeplay_soccer-2022": {
-          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
-        },
-        "helloworld_food_freeplay_space-2022": {
-          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
-        },
-        "helloworld_food_location_soccer-2022": {
-          "pin": "پن"
-        },
-        "helloworld_food_location_space-2022": {
-          "pin": "پن"
-        },
-        "helloworld_food_multi_soccer-2022": {
-          "pin": "پن"
-        },
-        "helloworld_food_multi_space-2022": {
-          "pin": "پن"
-        },
-        "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
-          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
-        },
-        "helloworld_food_say_space-2022": {
-          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
-          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
-        },
-        "helloworld_food_sizes_soccer-2022": {
-          "hello_world_new": "نیا بلاک!",
-          "hello_world_new_block": "نیا بلاک!"
-        },
-        "helloworld_food_sizes_space-2022": {
-          "hello_world_new": "نیا بلاک!",
-          "hello_world_new_block": "نیا بلاک!"
-        },
-        "helloworld_food_sounds_soccer-2022": {
-          "hello_world_new": "نیا بلاک!"
-        },
-        "helloworld_food_sounds_space-2022": {
-          "hello_world_new": "نیا بلاک!"
-        },
-        "helloworld_food_click_space-2022": {
-          "hw_Run": "سب سے پہلے یہاں کلک کریں!"
-        },
-        "Fish Tank 3-validated_2021": {
-          "spritelab_comment": "اپنے آپ کو یا آپ کے استاد کو چھوڑنے کے لئے اس بلاک کا استعمال کریں کہ آپ کا کوڈ کیسے کام کرتا ہے."
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "یہاں بلاکس رکھ کر اعمال کو دہرائیں"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "یہاں بلاکس رکھ کر اعمال کو دہرائیں"
         },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "یہ کوڈ لاوا کی جانچ پڑتال کرے گا، کیا آپ آگے بڑھنے کے لئے ایک کمانڈ شامل کر سکتے ہیں؟"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "یہ کوڈ لاوا کی جانچ پڑتال کرے گا، کیا آپ آگے بڑھنے کے لئے ایک کمانڈ شامل کر سکتے ہیں؟"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "یہ کوڈ لاوا کی جانچ پڑتال کرے گا، کیا آپ آگے بڑھنے کے لئے ایک کمانڈ شامل کر سکتے ہیں؟"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "یہ کوڈ لاوا کی جانچ پڑتال کرے گا، کیا آپ آگے بڑھنے کے لئے ایک کمانڈ شامل کر سکتے ہیں؟"
+        },
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "یہ کوڈ لاوا کی جانچ پڑتال کرے گا، کیا آپ آگے بڑھنے کے لئے ایک کمانڈ شامل کر سکتے ہیں؟"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "یہ لوہا میرا!"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "یہ لوہا میرا!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "یہ لوہا میرا!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "یہ لوہا میرا!"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "یہ لوہا میرا!"
         },
         "Virtual Pet 2_-2022-2": {
           "vp_costumes": "اپنے منصوبے میں نئے ملبوسات شامل کرنے کے لئے یہاں کلک کریں!"
@@ -716,6 +539,30 @@
           "courseC_maze_programming7_1": "یہ آپ کی پہلی چیلنج پہیلی ہے! ان سے مراد مشکل ہے اور کئی کوششیں بھی ہوسکتی ہیں۔",
           "courseC_maze_programming7_2": "یہ بلاک پتھر کے بنے ہوئے ہیں اور انہیں پھینکا نہیں جا سکتا۔"
         },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        },
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "آپ کو اس پہیلی حق حاصل کرنے کے لئے رنگ استعمال کرنے کی ضرورت نہیں ہے. اگر آپ چاہتے ہیں، تو یہ `بے ترتیب رنگ` بلاک آسان بناتا ہے!"
         },
@@ -752,6 +599,9 @@
         },
         "courseD_maze_ramp5_2021": {
           "": "ان بلاکس میں ان پر نمبر نہیں ہوتے۔ آپ چاہتے ہیں کے طور پر کئی کے طور پر استعمال کر سکتے ہیں!"
+        },
+        "courseE_aboutme_22022": {
+          "": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
         },
         "courseE_aboutme_2_2021": {
           "": "یہاں کلک کریں!"
@@ -981,12 +831,12 @@
           "text_generic_finish": "کیا آپ ختم ہو گئے ہیں؟ اگر ایسا ہے تو، 'ختم' مارا. اگر نہیں، تو 'ری سیٹ' کو مارو، اپنا کوڈ تبدیل کریں، اور دوبارہ 'چلائیں' کو ماریں."
         },
         "courseF_text_choice_title": {
-          "title_block": "یہاں دو نئے بلاکس کے لئے دیکھو!",
-          "text_answer_finish": "کیا 3 سیکنڈ کے لئے ایک عنوان اسکرین دکھایا گیا تھا؟ اگر ایسا ہے تو، 'ختم' مارا. اگر نہیں، تو 'ری سیٹ' کو مارو، اپنا کوڈ تبدیل کریں، اور دوبارہ 'چلائیں' کو ماریں."
+          "text_answer_finish": "کیا 3 سیکنڈ کے لئے ایک عنوان اسکرین دکھایا گیا تھا؟ اگر ایسا ہے تو، 'ختم' مارا. اگر نہیں، تو 'ری سیٹ' کو مارو، اپنا کوڈ تبدیل کریں، اور دوبارہ 'چلائیں' کو ماریں.",
+          "title_block": "یہاں دو نئے بلاکس کے لئے دیکھو!"
         },
         "courseF_text_choice_title_-2022-2": {
-          "title_block": "یہاں دو نئے بلاکس کے لئے دیکھو!",
-          "text_answer_finish": "کیا 3 سیکنڈ کے لئے ایک عنوان اسکرین دکھایا گیا تھا؟ اگر ایسا ہے تو، 'ختم' مارا. اگر نہیں، تو 'ری سیٹ' کو مارو، اپنا کوڈ تبدیل کریں، اور دوبارہ 'چلائیں' کو ماریں."
+          "text_answer_finish": "کیا 3 سیکنڈ کے لئے ایک عنوان اسکرین دکھایا گیا تھا؟ اگر ایسا ہے تو، 'ختم' مارا. اگر نہیں، تو 'ری سیٹ' کو مارو، اپنا کوڈ تبدیل کریں، اور دوبارہ 'چلائیں' کو ماریں.",
+          "title_block": "یہاں دو نئے بلاکس کے لئے دیکھو!"
         },
         "courseF_text_concat": {
           "join_blocks": "یہاں نئے بلاکس کے لئے دیکھو!"
@@ -1026,142 +876,21 @@
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "تمام بلاکس کو ایک ساتھ سنیپ کرنے کے بعد، اپنے پروگرام کو شروع کرنے کیلئے “چلائیں” دبائیں."
         },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "coursee_helloworld_say": {
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "ٹول باکس سے اپنے ورک اسپیس میں بلاکس کو ڈریگ کریں."
         },
-        "Course 4 Artist 4": {
-          "repeat_full_circle": "زومبی ایک مکمل دائرے بنانے کے لئے منتقل کرنے کے لئے ہے اوقات کی تعداد میں درج کریں"
-        },
-        "Course 4 Artist 7": {
-          "repeat_blocks": "“دہرائیں” بلاک کا استعمال کریں اور اسے ورک اسپیس میں بلاکس کے ارد گرد لپیٹ دیں"
-        },
-        "Course 4 Artist For Loops 4": {
-          "place_counter_variable": "اس بلاک کے اندر اپنے انسداد متغیر گھسیٹیں"
-        },
-        "Course 4 Artist Vars 1": {
-          "repeat_blocks": "“دہرائیں” بلاک کا استعمال کریں اور اسے ورک اسپیس میں بلاکس کے ارد گرد لپیٹ دیں"
-        },
-        "Course 4 Artist Vars 12": {
-          "set_length": "اس بلاک کو “لمبائی” کو درست قدر پر متعین کرنے کے لیے استعمال کریں۔"
-        },
-        "Course 4 Artist Vars 2": {
-          "set_length": "اس بلاک کو “لمبائی” کو درست قدر پر متعین کرنے کے لیے استعمال کریں۔"
-        },
-        "Course 4 Artist Vars 6": {
-          "degrees_per_side": "ڈگری میں ہر زاویہ کا سائز حاصل کرنے کے لیے فریقوں کی تعداد سے 360 تقسیم کریں۔"
-        },
-        "Course 4 Bee Params 2": {
-          "edit_get_nectar": "فنکشن میں ترمیم کرنے اور اس سمت کو تبدیل کرنے کے لئے اس بٹن کا استعمال کریں جو مکھی امرت حاصل کرنے کے لئے بدل جائے گی."
-        },
-        "Course 4 Maze 4": {
-          "repeat": "حکموں کو دہرانے کے لئے لوپ کے اندر بلاکس رکھو"
-        },
-        "Course 4 Play Lab Params 3": {
-          "edit_function": "اپنی تقریب میں ترمیم کرنے کے لئے یہاں کلک کریں."
-        },
-        "Course 4 Play Lab Params 6": {
-          "edit_add_parameter": "اپنی فنکشن میں پیرامیٹر شامل کرنے کے لئے ترمیم کریں پر کلک کریں"
-        },
-        "Course 4 Play Lab Vars 1": {
-          "arrows_move_actor": "اداکار منتقل کرنے کے لئے تیر کا استعمال کریں"
-        },
-        "Infinity_move_collide": {
-          "Infinity_move_collide_callout": "جب یہ واقعہ ہوتا ہے تو آواز چلائیں."
-        },
-        "Infinity_move_directions": {
-          "Infinity_move_directions_callout": "کون سا بلاک Baymax اپ تیر دبایا جاتا ہے جب منتقل کر دے گا؟",
-          "Infinity_move_directions_callout_arrow": "نقصان پہنچانا کرنے کے لئے ان تیر کا استعمال"
-        },
-        "Infinity_move_right": {
-          "Infinity_move_right_runbutton": "یہاں اقدام بلاک شامل کریں"
-        },
-        "Infinity_repeat": {
-          "Infinity_repeat_callout": "یہاں کے اندر بلاکس منتقل کریں"
-        },
-        "NEW Course 4 Artist Functions 7": {
-          "edit_function": "اپنی تقریب میں ترمیم کرنے کے لئے یہاں کلک کریں."
-        },
-        "NEW Course 4 Artist Functions 8": {
-          "edit_function": "اپنی تقریب میں ترمیم کرنے کے لئے یہاں کلک کریں."
-        },
-        "NEW Course 4 Artist Params 10": {
-          "create_function": "“افعال” فلائی آؤٹ کھولنے کے لئے یہاں کلک کریں، پھر “ایک فنکشن بنائیں” کے بٹن پر کلک کریں."
-        },
-        "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "اپنی فنکشن میں پیرامیٹر شامل کرنے کے لئے ترمیم کریں پر کلک کریں",
-          "add_and_drag_parameter": "یہاں اپنے پیرامیٹر کے نام پر لکھیں، شامل کریں پر کلک کریں، اور پھر اسے اپنی فنکشن تعریف میں گھسیٹیں"
-        },
-        "NEW Course 4 Artist Vars 6": {
-          "place_length_variable": "سوال کے نشانات کو تبدیل کرنے کے لئے لمبائی متغیر کو یہاں گھسیٹیں"
-        },
-        "NEW Course 4 Bee For Loops 5": {
-          "actions_category": "آلے کے باکس کو ایک نیا نظر مل گیا! “اعمال” کے بلاکس اب یہاں موجود ہیں."
-        },
-        "New Frozen Project": {
-          "snowflake_dropdown": "مختلف snowflakes کے پیدا کرنے کے لئے اس ڈراپ ڈاؤن کا استعمال کریں!"
-        },
-        "Overworld Chop Trees": {
-          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
-        },
-        "Overworld Chop Trees_2019": {
-          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
-        },
-        "Overworld Chop Trees_2020": {
-          "craft_callout_preplaced": "ہم نے آپ کو شروع کرنے کے لئے یہاں کچھ بلاکس ڈال دیا ہے"
-        },
-        "Overworld House Frame Chosen": {
-          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
-        },
-        "Overworld House Frame Chosen_2019": {
-          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
-        },
-        "Overworld House Frame Chosen_2020": {
-          "craft_callout_preplaced_house": "یہ کوڈ آپ کے گھر کی تعمیر شروع کر دے گا. کیا آپ اسے ختم کر سکتے ہیں؟"
-        },
-        "Overworld Place Wall": {
-          "craft_inside_repeat": "یہاں بلاکس رکھ کر اعمال کو دہرائیں"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "یہاں بلاکس رکھ کر اعمال کو دہرائیں"
-        },
-        "Overworld Place Wall_2019": {
-          "craft_inside_repeat": "یہاں بلاکس رکھ کر اعمال کو دہرائیں"
-        },
-        "Overworld Place Wall_2020": {
-          "craft_inside_repeat": "یہاں بلاکس رکھ کر اعمال کو دہرائیں"
-        },
-        "Underground Avoiding Lava": {
-          "craft_callout_moveforward": "یہ کوڈ لاوا کی جانچ پڑتال کرے گا، کیا آپ آگے بڑھنے کے لئے ایک کمانڈ شامل کر سکتے ہیں؟"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "یہ کوڈ لاوا کی جانچ پڑتال کرے گا، کیا آپ آگے بڑھنے کے لئے ایک کمانڈ شامل کر سکتے ہیں؟"
-        },
-        "Underground Avoiding Lava_2019": {
-          "craft_callout_moveforward": "یہ کوڈ لاوا کی جانچ پڑتال کرے گا، کیا آپ آگے بڑھنے کے لئے ایک کمانڈ شامل کر سکتے ہیں؟"
-        },
-        "Underground Avoiding Lava_2020": {
-          "craft_callout_moveforward": "یہ کوڈ لاوا کی جانچ پڑتال کرے گا، کیا آپ آگے بڑھنے کے لئے ایک کمانڈ شامل کر سکتے ہیں؟"
-        },
-        "Underground Iron": {
-          "craft_what_is_iron": "یہ لوہا میرا!"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "یہ لوہا میرا!"
-        },
-        "Underground Iron_2019": {
-          "craft_what_is_iron": "یہ لوہا میرا!"
-        },
-        "Underground Iron_2020": {
-          "craft_what_is_iron": "یہ لوہا میرا!"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "یہ لوہا میرا!"
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "\"کری-ایٹ اے سرکل\" بلاک استعمال کریں اور سائز تبدیل کریں۔"
         },
         "frozen cross": {
           "repeat_blocks_1": "(1) اس بلاک کا استعمال کریں اور اسے ورکشاپ میں سرمئی بلاکس کے ارد گرد ڈال دیں",
@@ -1170,11 +899,282 @@
         "frozen cross rotate": {
           "replace_questions_degree": "تبدیل کرنے کے لئے ڈراپ ڈاؤن کا استعمال کریں “???” ایک عدد کے ساتھ"
         },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔"
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔"
+        },
         "frozen freeplay": {
           "snowflake_dropdown": "مختلف snowflakes کے پیدا کرنے کے لئے اس ڈراپ ڈاؤن کا استعمال کریں!"
         },
+        "frozen line": {
+          "move_elsa_forward": "ایلسا کو آگے کی جانب حرکت دینے کے لیے ایک \"Move Forward\" بلاک کو \"When Run\" بلاک کے نیچے رکھ لیں۔",
+          "run": "اپنے پروگرام کو آزمانے کے لیے \"Run\" دبائیں!"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "ایلسا کو موڑنے کے لیے \"Turn\" بلاک استعمال کریں۔ ڈراپ ڈاون فہرست میں نمبر متعین کرتا ہے کہ ایلسا کتنا مڑے گی۔"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "\"ایک سنوفلیک برانچ بنائیں\" بلاک استعمال کریں"
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "ایک مربع بنانے کے لیے یہاں مزید بلاک منسلک کریں"
+        },
+        "frozen square loop": {
+          "replace_questions": "ڈراپ ڈاؤن فہرست استعمال کرتے ہوئے \"???\" کی جگہ ایک نمبر لگائیں"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "ڈراپ ڈاؤن فہرست استعمال کرتے ہوئے \"???\" کی جگہ ایک نمبر لگائیں"
+        },
         "frozen square snowflake": {
           "replace_questions": "تبدیل کرنے کے لئے ڈراپ ڈاؤن کا استعمال کریں “???” ایک عدد کے ساتھ"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_animals_location": {
+          "pin": "پن"
+        },
+        "helloworld_animals_multi": {
+          "pin": "پن"
+        },
+        "helloworld_animals_say": {
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "نیا بلاک!",
+          "hello_world_new_block": "نیا بلاک!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_emoji_location": {
+          "pin": "پن"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "پن"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "نیا بلاک!",
+          "hello_world_new_block": "نیا بلاک!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
+        },
+        "helloworld_food_click": {
+          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "سب سے پہلے یہاں کلک کریں!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_food_location": {
+          "pin": "پن"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "پن"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "پن"
+        },
+        "helloworld_food_multi": {
+          "pin": "پن"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "پن"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "پن"
+        },
+        "helloworld_food_say": {
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "نیا بلاک!",
+          "hello_world_new_block": "نیا بلاک!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "نیا بلاک!",
+          "hello_world_new_block": "نیا بلاک!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "نیا بلاک!",
+          "hello_world_new_block": "نیا بلاک!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_retro_location": {
+          "pin": "پن"
+        },
+        "helloworld_retro_multi": {
+          "pin": "پن"
+        },
+        "helloworld_retro_say": {
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "نیا بلاک!",
+          "hello_world_new_block": "نیا بلاک!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "outbreak2": {
+          "minitoolbox": "بلاک کھولنے کے لئے یہاں کلک کر لیں۔",
+          "pointerlocation": "یہاں پر سبجکٹ بلاک گھسیٹ کر لے آئیں۔"
+        },
+        "outbreak7": {
+          "costumes_callout": "نیا کاسٹیوم بنانے کے لئے کلک کریں"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "نیا بلاک!"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "یہاں کوڈ بلاکس تلاش کریں.",
+          "run_button": "اپنے اینیمیشن کو اس بٹن کے ساتھ آزمائیں."
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "نیا بلاک!",
+          "poetry_foreground": "نیا بلاک!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "نیا بلاک!",
+          "poetry_multiple_sprites": "نیا بلاک!",
+          "poetry_new_block": "نیا بلاک!",
+          "poetry_selector": "کوئی بھی نظم منتخب کریں، یا اپنی نظم درج کریں!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_music": "نیا بلاک!",
+          "poetry_sound": "نیا بلاک!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "نیا بلاک!",
+          "poetry_sprite_stops": "نیا بلاک!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "نیا بلاک!",
+          "poetry_set_sprite": "نیا بلاک!"
         }
       }
     }

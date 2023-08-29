@@ -11,11 +11,12 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 import {
+  AppName,
   Channel,
-  LevelData,
   LevelProperties,
   ProjectManagerStorageType,
   ProjectSources,
+  ProjectLevelData,
 } from './types';
 import Lab2Registry from './Lab2Registry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
@@ -27,11 +28,11 @@ import {
 } from '../code-studio/projectRedux';
 import ProjectManager from './projects/ProjectManager';
 import HttpClient from '../util/HttpClient';
-import {convertOptionalStringToBoolean} from '../types/utils';
 import {
-  initialValidationState,
+  getInitialValidationState,
   ValidationState,
 } from './progress/ProgressManager';
+import {LevelPropertiesValidator} from './responseValidators';
 
 export interface LabState {
   // If we are currently loading common data for a project or level. Should only be used internally
@@ -39,34 +40,34 @@ export interface LabState {
   isLoadingProjectOrLevel: boolean;
   // If the lab is loading. Can be updated by lab-specific components.
   isLoading: boolean;
-  isPageError: boolean;
+  // Error currently on the page, if present.
+  pageError:
+    | {
+        errorMessage: string;
+        error?: Error;
+        details?: object;
+      }
+    | undefined;
   // channel for the current project, or undefined if there is no current project.
   channel: Channel | undefined;
-  // last saved source for the current project, or undefined if we have not loaded or saved yet.
-  sources: ProjectSources | undefined;
-  // Level data for the current level
-  levelData: LevelData | undefined;
-  // Whether the lab is ready for a reload.  This is used to manage the case where multiple loads
-  // happen in a row, and we only want to reload the lab when we are done.
-  labReadyForReload: boolean;
-  hideShareAndRemix: boolean;
-  isProjectLevel: boolean;
+  // Initial sources for the current level, as loaded from the server. Subsequent changes to sources
+  // while the project is being edited are managed by the Lab and Project Manager directly.
+  initialSources: ProjectSources | undefined;
   // Validation status for the current level. This is used by the progress system to determine
   // what instructions to display and if the user has satisfied the validation conditions, if present.
   validationState: ValidationState;
+  // Level properties for the current level.
+  levelProperties: LevelProperties | undefined;
 }
 
 const initialState: LabState = {
   isLoadingProjectOrLevel: false,
   isLoading: false,
-  isPageError: false,
+  pageError: undefined,
   channel: undefined,
-  sources: undefined,
-  levelData: undefined,
-  labReadyForReload: false,
-  hideShareAndRemix: true,
-  isProjectLevel: false,
-  validationState: {...initialValidationState},
+  initialSources: undefined,
+  validationState: getInitialValidationState(),
+  levelProperties: undefined,
 };
 
 // Thunks
@@ -93,14 +94,8 @@ export const setUpWithLevel = createAsyncThunk(
     const levelProperties = await loadLevelProperties(
       payload.levelPropertiesPath
     );
-    const isProjectLevel = convertOptionalStringToBoolean(
-      levelProperties.isProjectLevel,
-      false
-    );
-    const disableProjects = convertOptionalStringToBoolean(
-      levelProperties.disableProjects,
-      false
-    );
+
+    const {isProjectLevel, disableProjects} = levelProperties;
 
     if (disableProjects) {
       // If projects are disabled on this level, we can skip loading projects data.
@@ -138,14 +133,14 @@ export const setUpWithLevel = createAsyncThunk(
       thunkAPI.dispatch
     );
     setProjectAndLevelData(
-      {sources, channel, levelProperties},
+      {initialSources: sources, channel, levelProperties},
       thunkAPI.signal.aborted,
       thunkAPI.dispatch
     );
   }
 );
 
-// Given a channel id as the payload, set up the lab for that channel id.
+// Given a channel id and app name as the payload, set up the lab for that channel id.
 // This consists of cleaning up the existing project manager (if applicable), then
 // creating a project manager and loading the project data.
 // This method is used for loading a lab that is not associated with a level
@@ -153,13 +148,13 @@ export const setUpWithLevel = createAsyncThunk(
 // If we get an aborted signal, we will exit early.
 export const setUpWithoutLevel = createAsyncThunk(
   'lab/setUpWithoutLevel',
-  async (payload: string, thunkAPI) => {
+  async (payload: {channelId: string; appName: AppName}, thunkAPI) => {
     await cleanUpProjectManager();
 
     // Create the new project manager.
     const projectManager = ProjectManagerFactory.getProjectManager(
       ProjectManagerStorageType.REMOTE,
-      payload
+      payload.channelId
     );
     Lab2Registry.getInstance().setProjectManager(projectManager);
 
@@ -169,7 +164,11 @@ export const setUpWithoutLevel = createAsyncThunk(
       thunkAPI.dispatch
     );
     setProjectAndLevelData(
-      {sources, channel},
+      {
+        initialSources: sources,
+        channel,
+        levelProperties: {appName: payload.appName},
+      },
       thunkAPI.signal.aborted,
       thunkAPI.dispatch
     );
@@ -187,6 +186,18 @@ export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
   return !state.lab.channel?.isOwner;
 };
 
+// If there is an error present on the page.
+export const hasPageError = (state: {lab: LabState}) => {
+  return state.lab.pageError !== undefined;
+};
+
+// If the share and remix buttons should be hidden for the lab. Defaults to true (hidden)
+// if not specified.
+export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
+  const hideShareAndRemix = state.lab.levelProperties?.hideShareAndRemix;
+  return hideShareAndRemix === undefined ? true : hideShareAndRemix;
+};
+
 const labSlice = createSlice({
   name: 'lab',
   initialState,
@@ -194,29 +205,38 @@ const labSlice = createSlice({
     setIsLoading(state, action: PayloadAction<boolean>) {
       state.isLoading = action.payload;
     },
-    setIsPageError(state, action: PayloadAction<boolean>) {
-      state.isPageError = action.payload;
+    setPageError(
+      state,
+      action: PayloadAction<{
+        errorMessage: string;
+        error?: Error;
+        details?: object;
+      }>
+    ) {
+      state.pageError = action.payload;
+    },
+    clearPageError(state) {
+      state.pageError = undefined;
     },
     setChannel(state, action: PayloadAction<Channel | undefined>) {
       state.channel = action.payload;
     },
-    setSources(state, action: PayloadAction<ProjectSources | undefined>) {
-      state.sources = action.payload;
-    },
-    setLevelData(state, action: PayloadAction<LevelData | undefined>) {
-      state.levelData = action.payload;
-    },
-    setLabReadyForReload(state, action: PayloadAction<boolean>) {
-      state.labReadyForReload = action.payload;
-    },
-    setHideShareAndRemix(state, action: PayloadAction<boolean>) {
-      state.hideShareAndRemix = action.payload;
-    },
-    setIsProjectLevel(state, action: PayloadAction<boolean>) {
-      state.isProjectLevel = action.payload;
-    },
     setValidationState(state, action: PayloadAction<ValidationState>) {
       state.validationState = {...action.payload};
+    },
+    // Update the level properties, initial sources, and channel simultaneously when the level changes.
+    // These fields are updated together so that labs receive all updates at once.
+    onLevelChange(
+      state,
+      action: PayloadAction<{
+        channel?: Channel;
+        levelProperties: LevelProperties;
+        initialSources?: ProjectSources;
+      }>
+    ) {
+      state.channel = action.payload.channel;
+      state.levelProperties = action.payload.levelProperties;
+      state.initialSources = action.payload.initialSources;
     },
   },
   extraReducers: builder => {
@@ -229,6 +249,10 @@ const labSlice = createSlice({
       // action was not aborted.
       if (!action.meta.aborted) {
         state.isLoadingProjectOrLevel = false;
+        state.pageError = {
+          errorMessage: 'setUpWithLevel failed',
+          error: action.error as Error,
+        };
       }
     });
     builder.addCase(setUpWithLevel.pending, state => {
@@ -243,6 +267,10 @@ const labSlice = createSlice({
       // action was not aborted.
       if (!action.meta.aborted) {
         state.isLoadingProjectOrLevel = false;
+        state.pageError = {
+          errorMessage: 'setUpWithoutLevel failed',
+          error: action.error as Error,
+        };
       }
     });
     builder.addCase(setUpWithoutLevel.pending, state => {
@@ -262,9 +290,8 @@ async function setUpAndLoadProject(
   projectManager.addSaveStartListener(() =>
     dispatch(setProjectUpdatedSaving())
   );
-  projectManager.addSaveSuccessListener((channel, source) => {
+  projectManager.addSaveSuccessListener(channel => {
     dispatch(setProjectUpdatedAt(channel.updatedAt));
-    dispatch(setSources(source));
     dispatch(setChannel(channel));
   });
   projectManager.addSaveNoopListener(channel => {
@@ -286,9 +313,9 @@ async function setUpAndLoadProject(
 // thunk dispatch method.
 function setProjectAndLevelData(
   data: {
+    levelProperties: LevelProperties;
     channel?: Channel;
-    sources?: ProjectSources;
-    levelProperties?: LevelProperties;
+    initialSources?: ProjectSources;
   },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
@@ -297,35 +324,18 @@ function setProjectAndLevelData(
   if (aborted) {
     return;
   }
-  const {channel, sources, levelProperties} = data;
-  dispatch(setChannel(channel));
-  dispatch(setSources(sources));
-  if (levelProperties) {
-    dispatch(setLevelData(levelProperties.levelData));
-    const hideShareAndRemix = convertOptionalStringToBoolean(
-      levelProperties.hideShareAndRemix,
-      /* defaultValue*/ true
-    );
-    dispatch(setHideShareAndRemix(hideShareAndRemix));
-    const isProjectLevel = convertOptionalStringToBoolean(
-      levelProperties.isProjectLevel,
-      /* defaultValue*/ false
-    );
-    dispatch(setIsProjectLevel(isProjectLevel));
-  } else {
-    // set default values to clear out any previous values
-    dispatch(setLevelData(undefined));
-    dispatch(setHideShareAndRemix(true));
-    dispatch(setIsProjectLevel(false));
-  }
-  dispatch(setLabReadyForReload(true));
+  // Dispatch level change last so labs can react to the new level data
+  // and new initial sources at once.
+  dispatch(onLevelChange(data));
 }
 
 async function loadLevelProperties(
   levelPropertiesPath: string
 ): Promise<LevelProperties> {
   const response = await HttpClient.fetchJson<LevelProperties>(
-    levelPropertiesPath
+    levelPropertiesPath,
+    {},
+    LevelPropertiesValidator
   );
   return response.value;
 }
@@ -339,17 +349,10 @@ async function cleanUpProjectManager() {
   Lab2Registry.getInstance().clearProjectManager();
 }
 
-export const {
-  setIsLoading,
-  setIsPageError,
-  setChannel,
-  setSources,
-  setLevelData,
-  setLabReadyForReload,
-  setValidationState,
-} = labSlice.actions;
+export const {setIsLoading, setPageError, clearPageError, setValidationState} =
+  labSlice.actions;
 
 // These should not be set outside of the lab slice.
-const {setHideShareAndRemix, setIsProjectLevel} = labSlice.actions;
+const {setChannel, onLevelChange} = labSlice.actions;
 
 export default labSlice.reducer;

@@ -3,7 +3,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
-import Notification from '../Notification';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
@@ -55,6 +55,7 @@ export const UnconnectedTeacherHomepage = ({
   hasFeedback,
   showIncubatorBanner,
   currentUserId,
+  showDeprecatedCalcAndEvalWarning,
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
@@ -172,11 +173,19 @@ export const UnconnectedTeacherHomepage = ({
     <div>
       <HeaderBanner
         headingText={i18n.homepageHeading()}
-        short={true}
         backgroundUrl={backgroundUrl}
+        backgroundImageStyling={{backgroundPosition: '90% 30%'}}
       />
       <div className={'container main'}>
         <ProtectedStatefulDiv ref={flashes} />
+        {showDeprecatedCalcAndEvalWarning && (
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.deprecatedCalcAndEvalWarning()}
+            details={i18n.deprecatedCalcAndEvalDetails()}
+            dismissible={false}
+          />
+        )}
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}
         {isEnglish && specialAnnouncement && (
@@ -206,7 +215,7 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Finish applying for our Professional Learning Program"
             buttonText="Finish Application"
-            buttonColor={Button.ButtonColor.orange}
+            buttonColor={Button.ButtonColor.brandSecondaryDefault}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
@@ -217,7 +226,7 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
             buttonText="Return to Application"
-            buttonColor={Button.ButtonColor.orange}
+            buttonColor={Button.ButtonColor.brandSecondaryDefault}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
@@ -325,6 +334,7 @@ UnconnectedTeacherHomepage.propTypes = {
   hasFeedback: PropTypes.bool,
   showIncubatorBanner: PropTypes.bool,
   currentUserId: PropTypes.number,
+  showDeprecatedCalcAndEvalWarning: PropTypes.bool,
 };
 
 const styles = {

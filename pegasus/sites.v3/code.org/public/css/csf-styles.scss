@@ -1,4 +1,4 @@
-// Custom styles for code.org/educate/csp
+// Custom styles for code.org/educate/csf
 // — supplemental to shared/css/design-system-pegasus.scss
 
 @import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
@@ -63,12 +63,6 @@
     img {
       width: 100%;
     }
-  }
-
-  a.link-button {
-    background-color: $neutral-white;
-    border-color: $neutral-white;
-    color: $neutral-dark;
   }
 }
 

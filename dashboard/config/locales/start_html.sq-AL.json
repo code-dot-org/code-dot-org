@@ -3,72 +3,82 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Po",
           "No": "Jo",
+          "Yes": "Po",
           "cute": "e lezetshme"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Po",
           "No": "Jo",
+          "Yes": "Po",
           "cute": "e lezetshme"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Po",
           "No": "Jo",
+          "Yes": "Po",
           "cute": "e lezetshme"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Po",
           "No": "Jo",
+          "Yes": "Po",
           "cute": "e lezetshme"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Emri",
+          "City": "Qyteti",
           "Color": "Ngjyra",
           "Food": "Ushqimi",
-          "City": "Qyteti",
+          "Name": "Emri",
           "text": "tekst"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Emri",
+          "City": "Qyteti",
           "Color": "Ngjyra",
           "Food": "Ushqimi",
-          "City": "Qyteti",
+          "Name": "Emri",
           "text": "tekst"
         },
         "CSD U1 processing bday_2021": {
-          "3": "3",
-          "5": "5",
-          "6": "6",
-          "8": "8",
-          "15": "15",
-          "17": "17"
-        },
-        "CSD U1 processing bday_2022": {
-          "3": "3",
-          "5": "5",
-          "6": "6",
-          "8": "8",
-          "15": "15",
-          "17": "17"
-        },
-        "CSD U1 processing guess_2021": {
-          "3": "3",
-          "5": "5",
-          "6": "6",
-          "8": "8",
           "15": "15",
           "17": "17",
+          "3": "3",
+          "5": "5",
+          "6": "6",
+          "8": "8"
+        },
+        "CSD U1 processing bday_2022": {
+          "15": "15",
+          "17": "17",
+          "3": "3",
+          "5": "5",
+          "6": "6",
+          "8": "8"
+        },
+        "CSD U1 processing guess_2021": {
+          "15": "15",
+          "17": "17",
+          "3": "3",
+          "5": "5",
+          "6": "6",
+          "8": "8",
           "text": "tekst"
         },
         "CSD U1 processing guess_2022": {
+          "15": "15",
+          "17": "17",
           "3": "3",
           "5": "5",
           "6": "6",
           "8": "8",
-          "15": "15",
-          "17": "17",
           "text": "tekst"
+        },
+        "CSD U1 processing live_2021": {
+          "bear": "ariu",
+          "rat": "miu",
+          "walking": "në këmbë"
+        },
+        "CSD U1 processing live_2022": {
+          "bear": "ariu",
+          "rat": "miu",
+          "walking": "në këmbë"
         },
         "CSD U1 processing npark_2021": {
           "Sorry!": "Më fal!"
@@ -77,20 +87,20 @@
           "Sorry!": "Më fal!"
         },
         "CSD U1 processing writers_2021": {
+          "15": "15",
+          "17": "17",
           "3": "3",
           "5": "5",
           "6": "6",
-          "8": "8",
-          "15": "15",
-          "17": "17"
+          "8": "8"
         },
         "CSD U1 processing writers_2022": {
+          "15": "15",
+          "17": "17",
           "3": "3",
           "5": "5",
           "6": "6",
-          "8": "8",
-          "15": "15",
-          "17": "17"
+          "8": "8"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Kthehu"
@@ -99,30 +109,30 @@
           "Back": "Kthehu"
         },
         "CSD U1 storage movies_2021": {
+          "No": "Jo",
           "Star Wars": "Lufta e Yjeve",
           "Yes": "Po",
-          "No": "Jo",
           "text": "tekst"
         },
         "CSD U1 storage movies_2022": {
+          "No": "Jo",
           "Star Wars": "Lufta e Yjeve",
           "Yes": "Po",
-          "No": "Jo",
           "text": "tekst"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "jeshile",
           "black": "e zezë",
-          "white": "e bardhë",
+          "green": "jeshile",
           "pink": "rozë",
-          "purple": "vjollcë"
+          "purple": "vjollcë",
+          "white": "e bardhë"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "jeshile",
           "black": "e zezë",
-          "white": "e bardhë",
+          "green": "jeshile",
           "pink": "rozë",
-          "purple": "vjollcë"
+          "purple": "vjollcë",
+          "white": "e bardhë"
         },
         "CSD U2 RGB intro": {
           "3": "3",
@@ -148,38 +158,41 @@
           "Medium": "Mesatare"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "majtas",
-          "right": "djathtas",
-          "red": "e kuqe",
           "green": "jeshile",
-          "yellow": "zverdh",
-          "purple": "vjollcë"
+          "left": "majtas",
+          "purple": "vjollcë",
+          "red": "e kuqe",
+          "right": "djathtas",
+          "yellow": "zverdh"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "majtas",
           "right": "djathtas"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "jeshile",
           "blue": "blu",
-          "yellow": "zverdh",
-          "orange": "portokalli"
+          "green": "jeshile",
+          "orange": "portokalli",
+          "yellow": "zverdh"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "i qetë"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
@@ -198,41 +211,41 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
           "G": "G",
-          "A": "A",
-          "B": "B",
           "Note:": "Shënim:"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "rezultati"
@@ -255,10 +268,10 @@
           "White": "E bardhë"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "lart",
           "down": "poshtë",
           "left": "majtas",
-          "right": "djathtas"
+          "right": "djathtas",
+          "up": "lart"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "emri"
@@ -266,8 +279,44 @@
         "CSD U6 - Sensors - P_2222": {
           "text": "tekst"
         },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "vlerë"
+        },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "Përditëso",
+          "value": "vlerë"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "vlerë"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "vlerë"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog change": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog data": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog data_2021": {
           "value": "vlerë"
         },
         "CSD U6 analog light": {
@@ -286,41 +335,53 @@
           "Update": "Përditëso",
           "value": "vlerë"
         },
+        "CSD U6 analog sound": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "vlerë"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "vlerë"
+        },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "e para"
@@ -335,20 +396,20 @@
           "first": "e para"
         },
         "CSD U6 change": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 change_2018": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 change_2019": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 change_2021": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Mesatare"
@@ -363,36 +424,36 @@
           "Medium": "Mesatare"
         },
         "CSD U6 frequency": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 frequency_2018": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 frequency_2019": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 frequency_2021": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 get toggle": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 get toggle_2018": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 get toggle_2019": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 get toggle_2021": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 getProperty Demo": {
           "Save": "Ruaj"
@@ -419,36 +480,36 @@
           "Submit": "Dorëzo"
         },
         "CSD U6 getters debug": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 getters debug_2018": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 getters debug_2019": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 getters debug_2021": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 interval": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 interval_2018": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 interval_2019": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 interval_2021": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 sensor experiment embedded": {
           "text": "tekst"
@@ -475,72 +536,87 @@
           "title": "titull"
         },
         "CSD U6 slider intro": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 slider intro_2018": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 slider intro_2019": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSD U6 slider intro_2021": {
-          "short": "i shkurtër",
-          "long": "i gjatë"
+          "long": "i gjatë",
+          "short": "i shkurtër"
         },
         "CSDU4 Crowdsource App Demo": {
+          "About": "Rreth",
           "Cancel": "Anulo",
-          "Yes": "Po",
           "No": "Jo",
-          "Save": "Ruaj"
+          "Save": "Ruaj",
+          "User": "Përdorues",
+          "Yes": "Po"
         },
         "CSDU4 Crowdsource App Demo_2018": {
+          "About": "Rreth",
           "Cancel": "Anulo",
-          "Yes": "Po",
           "No": "Jo",
-          "Save": "Ruaj"
+          "Save": "Ruaj",
+          "User": "Përdorues",
+          "Yes": "Po"
         },
         "CSDU4 Crowdsource App Demo_2019": {
+          "About": "Rreth",
           "Cancel": "Anulo",
-          "Yes": "Po",
           "No": "Jo",
-          "Save": "Ruaj"
+          "Save": "Ruaj",
+          "User": "Përdorues",
+          "Yes": "Po"
         },
         "CSDU4 Decision App Demo": {
+          "About": "Rreth",
           "When?": "Kur?"
         },
         "CSDU4 Decision App Demo_2018": {
+          "About": "Rreth",
           "When?": "Kur?"
         },
         "CSDU4 Decision App Demo_2019": {
+          "About": "Rreth",
           "When?": "Kur?"
         },
         "CSDU4 Functionality visible": {
           "Show": "Shfaq"
         },
         "CSDU4 List App Demo": {
-          "Done": "Përfunduar",
-          "Cancel": "Anulo"
+          "About": "Rreth",
+          "Cancel": "Anulo",
+          "Done": "Përfunduar"
         },
         "CSDU4 List App Demo_2018": {
-          "Done": "Përfunduar",
-          "Cancel": "Anulo"
+          "About": "Rreth",
+          "Cancel": "Anulo",
+          "Done": "Përfunduar"
         },
         "CSDU4 List App Demo_2019": {
-          "Done": "Përfunduar",
-          "Cancel": "Anulo"
+          "About": "Rreth",
+          "Cancel": "Anulo",
+          "Done": "Përfunduar"
         },
         "CSDU4 Quiz App Demo": {
+          "About": "Rreth",
           "Submit": "Dorëzo",
           "When?": "Kur?"
         },
         "CSDU4 Quiz App Demo_2018": {
+          "About": "Rreth",
           "Submit": "Dorëzo",
           "When?": "Kur?"
         },
         "CSDU4 Quiz App Demo_2019": {
+          "About": "Rreth",
           "Submit": "Dorëzo",
           "When?": "Kur?"
         },
@@ -551,76 +627,76 @@
           "Back": "Kthehu"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "tekst"
@@ -659,20 +735,20 @@
           "Next": "Tjetër"
         },
         "csd-explore ui-3": {
+          "15": "15",
+          "17": "17",
           "3": "3",
           "5": "5",
           "6": "6",
-          "8": "8",
-          "15": "15",
-          "17": "17"
+          "8": "8"
         },
         "csd-explore ui-3_2022": {
+          "15": "15",
+          "17": "17",
           "3": "3",
           "5": "5",
           "6": "6",
-          "8": "8",
-          "15": "15",
-          "17": "17"
+          "8": "8"
         },
         "csd-explore ui-4": {
           "Sorry!": "Më fal!"
@@ -681,20 +757,20 @@
           "Sorry!": "Më fal!"
         },
         "csd-explore ui-5": {
+          "15": "15",
+          "17": "17",
           "3": "3",
           "5": "5",
           "6": "6",
-          "8": "8",
-          "15": "15",
-          "17": "17"
+          "8": "8"
         },
         "csd-explore ui-5_2022": {
+          "15": "15",
+          "17": "17",
           "3": "3",
           "5": "5",
           "6": "6",
-          "8": "8",
-          "15": "15",
-          "17": "17"
+          "8": "8"
         },
         "csd-explore ui-6": {
           "Next": "Tjetër"
@@ -717,12 +793,12 @@
           "Next": "Tjetër"
         },
         "ml-customize-raspado-2021": {
-          "yes": "po",
-          "no": "jo"
+          "no": "jo",
+          "yes": "po"
         },
         "ml-customize-raspado_2022": {
-          "yes": "po",
-          "no": "jo"
+          "no": "jo",
+          "yes": "po"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Vazhdo ",
@@ -733,18 +809,18 @@
           "Loading...": "Në ngarkim..."
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "P",
           "A": "A",
-          "yes": "po",
+          "W": "P",
+          "head": "koka",
           "no": "jo",
-          "head": "koka"
+          "yes": "po"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "P",
           "A": "A",
-          "yes": "po",
+          "W": "P",
+          "head": "koka",
           "no": "jo",
-          "head": "koka"
+          "yes": "po"
         },
         "ml-models in applab-choice if quotes": {
           "3": "3"
@@ -773,22 +849,22 @@
           "3": "3"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Po",
+          "B": "B",
           "No": "Jo",
-          "B": "B"
+          "Yes": "Po"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Po",
+          "B": "B",
           "No": "Jo",
-          "B": "B"
+          "Yes": "Po"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Po",
-          "No": "Jo"
+          "No": "Jo",
+          "Yes": "Po"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Po",
-          "No": "Jo"
+          "No": "Jo",
+          "Yes": "Po"
         },
         "ml-use model card-example3A-2021": {
           "cloudy": " re",
@@ -797,67 +873,6 @@
         "ml-use model card-example3A_2022": {
           "cloudy": " re",
           "night": "natë"
-        },
-        "CSD U1 processing live_2021": {
-          "walking": "në këmbë",
-          "bear": "ariu",
-          "rat": "miu"
-        },
-        "CSD U1 processing live_2022": {
-          "walking": "në këmbë",
-          "bear": "ariu",
-          "rat": "miu"
-        },
-        "CSD U6 - Combine Inputs - PracD_2222": {
-          "quiet": "i qetë"
-        },
-        "CSD U6 - Sensors - SB1_2222": {
-          "value": "vlerë"
-        },
-        "CSD U6 - Sensors - SB3_2222": {
-          "value": "vlerë"
-        },
-        "CSD U6 - Sensors - SB4.1_2222": {
-          "value": "vlerë"
-        },
-        "CSD U6 - Sensors - SB4_2222": {
-          "value": "vlerë"
-        },
-        "CSD U6 analog change": {
-          "value": "vlerë"
-        },
-        "CSD U6 analog change_2018": {
-          "value": "vlerë"
-        },
-        "CSD U6 analog change_2019": {
-          "value": "vlerë"
-        },
-        "CSD U6 analog change_2021": {
-          "value": "vlerë"
-        },
-        "CSD U6 analog data": {
-          "value": "vlerë"
-        },
-        "CSD U6 analog data_2018": {
-          "value": "vlerë"
-        },
-        "CSD U6 analog data_2019": {
-          "value": "vlerë"
-        },
-        "CSD U6 analog data_2021": {
-          "value": "vlerë"
-        },
-        "CSD U6 analog sound": {
-          "value": "vlerë"
-        },
-        "CSD U6 analog sound_2018": {
-          "value": "vlerë"
-        },
-        "CSD U6 analog sound_2019": {
-          "value": "vlerë"
-        },
-        "CSD U6 analog sound_2021": {
-          "value": "vlerë"
         }
       }
     }

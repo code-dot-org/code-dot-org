@@ -89,21 +89,21 @@ ru:
         self-paced-pl-csp-2023:
           title: self-paced-pl-csp-2021
     resources:
-      curriculum/csd/2020:
-        name: Учебная программа
-      teacher_forum/csd/2020:
-        name: Форум учителей
       curriculum/csd/2017:
         name: Учебная программа
       teacher_forum_6/csd/2017:
+        name: Форум учителей
+      curriculum/csd/2018:
+        name: Учебная программа
+      teacher_forum_6/csd/2018:
         name: Форум учителей
       curriculum/csd/2019:
         name: Учебная программа
       teacher_forum/csd/2019:
         name: Форум учителей
+      curriculum/csd/2020:
+        name: Учебная программа
+      teacher_forum/csd/2020:
+        name: Форум учителей
       getting_started_with_csd/csd/2021:
         name: Начало работы с «Открытия в информатике»
-      curriculum/csd/2018:
-        name: Учебная программа
-      teacher_forum_6/csd/2018:
-        name: Форум учителей

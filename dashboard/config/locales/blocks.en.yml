@@ -1058,6 +1058,8 @@ en:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_borderGPT:
+        text: Generate Border {DESCRIPTION}
       DansBlocks_getMicroscope:
         text: Microscope has {INPUT1}
         options:
@@ -1952,7 +1954,7 @@ en:
       Mikelab_groupWhileClicked:
         text: 'while clicking on {COSTUME}
 
-'
+          '
       Mikelab_groupWhileTouchingAny:
         text: |-
           while{COSTUME} is touching {COSTUME2}
@@ -2037,7 +2039,7 @@ en:
       Mikelab_repeatUntilComplete:
         text: 'repeat forever
 
-'
+          '
       Mikelab_sendBad:
         text: move object left
       Mikelab_sendGood:
@@ -2164,7 +2166,7 @@ en:
       Mikelab_whileClicked:
         text: 'while clicking on{SPRITE}
 
-'
+          '
       Mikelab_whileKeyPressed:
         text: while {KEY} stays pressed
         options:

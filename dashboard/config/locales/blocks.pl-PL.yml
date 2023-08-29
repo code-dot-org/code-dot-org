@@ -3,20 +3,20 @@ pl:
   data:
     blocks:
       AmysBlocks_addTarget:
-        text: "{TARGET} {OPT} {SPRITE} "
         options:
           OPT:
-            '"follows"': następuje
             '"avoids"': unika
+            '"follows"': następuje
+        text: "{TARGET} {OPT} {SPRITE} "
       AmysBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': w sam raz
+            '"too little"': za mało
+            '"too much"': za dużo
         text: |2-
            jeśli {CONDITION}{SPRITE}
           {STATEMENT}
-        options:
-          CONDITION:
-            '"too much"': za dużo
-            '"just right"': w sam raz
-            '"too little"': za mało
       AmysBlocks_goldilocksElse:
         text: |2-
            jeśli za dużo{SPRITE}
@@ -26,11 +26,11 @@ pl:
       AmysBlocks_makeNumSprites:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki {LOCATION}
       AmysBlocks_playerBehaviors:
-        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): przenoszenie NSEW za pomocą
               klawiszy strzałek
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -38,16 +38,15 @@ pl:
       BadGuys_makeNewBadGuysSprite:
         text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': ekstra mały
+            '0.75': mały
+            '1.00': średni
+            '2.00': duży
+            '3.00': bardzo duży
         text: ustaw wiekość wszystkich duszków na  {SIZE}
-        options:
-          SIZE:
-            '0.50': ekstra mały
-            '0.75': mały
-            '1.00': średni
-            '2.00': duży
-            '3.00': bardzo duży
       BadGuys_setSize_dropdown:
-        text: ustaw {SPRITE} woelkość na {SIZE}
         options:
           SIZE:
             '0.50': ekstra mały
@@ -55,11 +54,10 @@ pl:
             '1.00': średni
             '2.00': duży
             '3.00': bardzo duży
+        text: ustaw {SPRITE} woelkość na {SIZE}
       Dancelab_alternateMoves:
-        text: "{GROUP} zmienia się co {N} takty \nmiędzy {MOVE1} i {MOVE2}"
         options:
           GROUP:
-            sprites: wszystkie
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
             '"CAT"': koty
@@ -72,118 +70,116 @@ pl:
             '"SHARK"': rekiny
             '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
+            sprites: wszystkie
           MOVE1:
-            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Clap high
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double Down
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Clown: Gangnam
             MOVES.Kick: Star
+            MOVES.Rest: Żaden
+            MOVES.Roll: Body Roll
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
-            MOVES.Rest: Żaden
           MOVE2:
-            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Clap high
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double Down
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Clown: Gangnam
             MOVES.Kick: Star
+            MOVES.Rest: Żaden
+            MOVES.Roll: Body Roll
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
-            MOVES.Rest: Żaden
+        text: "{GROUP} zmienia się co {N} takty \nmiędzy {MOVE1} i {MOVE2}"
       Dancelab_atTimestamp:
-        text: po {TIMESTAMP} taktach {UNIT}
         options:
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
+        text: po {TIMESTAMP} taktach {UNIT}
       Dancelab_changeColorBy:
-        text: zmień {COLOR} {METHOD} o {AMOUNT}
         options:
           METHOD:
+            '"brightness"': jasność
             '"hue"': zabarwienie
             '"saturation"': nasycenie
-            '"brightness"': jasność
+        text: zmień {COLOR} {METHOD} o {AMOUNT}
       Dancelab_changeMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+          GROUP:
+            '"ALIEN"': obcy
+            '"BEAR"': niedźwiedzie
+            '"CAT"': koty
+            '"DOG"': psy
+            '"DUCK"': kaczki
+            '"FROG"': żaby
+            '"MOOSE"': łosie
+            '"PINEAPPLE"': ananasy
+            '"ROBOT"': roboty
+            '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
+            '"UNICORN"': jednorożce
+            sprites: wszystkie
+          MOVE:
+            '"next"': "(Następny)"
+            '"prev"': "(Poprzedni)"
+            '"rand"': "(Losowy)"
+            MOVES.ClapHigh: Clap high
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Star
+            MOVES.Rest: Żaden
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
         text: "{GROUP} wykonuje {MOVE} {DIR} bez końca"
-        options:
-          GROUP:
-            sprites: wszystkie
-            '"ALIEN"': obcy
-            '"BEAR"': niedźwiedzie
-            '"CAT"': koty
-            '"DOG"': psy
-            '"DUCK"': kaczki
-            '"FROG"': żaby
-            '"MOOSE"': łosie
-            '"PINEAPPLE"': ananasy
-            '"ROBOT"': roboty
-            '"SHARK"': rekiny
-            '"SLOTH"': leniuchy
-            '"UNICORN"': jednorożce
-          MOVE:
-            '"next"': "(Następny)"
-            '"prev"': "(Poprzedni)"
-            '"rand"': "(Losowy)"
-            MOVES.Roll: Body Roll
-            MOVES.ClapHigh: Clap high
-            MOVES.Dab: Dab
-            MOVES.DoubleJam: Double Down
-            MOVES.Drop: Drop
-            MOVES.Floss: Floss
-            MOVES.Fresh: Fresh
-            MOVES.Clown: Gangnam
-            MOVES.Kick: Star
-            MOVES.ThisOrThat: This or That
-            MOVES.Thriller: Zombie
-            MOVES.Rest: Żaden
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} rób {MOVE} {DIR} bez końca"
         options:
+          DIR:
+            '1': "→"
           MOVE:
             '"next"': "(Następny)"
             '"prev"': "(Poprzedni)"
             '"rand"': "(Losowy)"
-            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Clap High
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double Down
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Clown: Gangnam
             MOVES.Kick: Star
+            MOVES.Rest: Żaden
+            MOVES.Roll: Body Roll
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
-            MOVES.Rest: Żaden
-          DIR:
-            '1': "→"
-            "-1": "←"
+        text: "{SPRITE} rób {MOVE} {DIR} bez końca"
       Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"height"': wysokość
+            '"rotation"': obrót
+            '"scale"': rozmiar
+            '"width"': szerokość
+            '"x"': pozycja pozioma
+            '"y"': pozycja pionowa
         text: zamień {SPRITE} {PROPERTY} przez {VAL}
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"width"': szerokość
-            '"height"': wysokość
-            '"rotation"': obrót
-            '"x"': pozycja pozioma
-            '"y"': pozycja pionowa
       Dancelab_changePropEachBy:
-        text: zamień {GROUP} {PROPERTY} przez {VAL}
         options:
           GROUP:
-            sprites: wszystkie
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
             '"CAT"': koty
@@ -196,18 +192,21 @@ pl:
             '"SHARK"': rekiny
             '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
+            sprites: wszystkie
           PROPERTY:
-            '"scale"': rozmiar
-            '"width"': szerokość
             '"height"': wysokość
             '"rotation"': obrót
+            '"scale"': rozmiar
+            '"width"': szerokość
             '"x"': pozycja pozioma
             '"y"': pozycja pionowa
+        text: zamień {GROUP} {PROPERTY} przez {VAL}
       Dancelab_doMoveEachLR:
-        text: "{GROUP} zrób {MOVE} {DIR} raz"
         options:
+          DIR:
+            "-1": "←"
+            '1': "→"
           GROUP:
-            sprites: wszystkie
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
             '"CAT"': koty
@@ -220,109 +219,105 @@ pl:
             '"SHARK"': rekiny
             '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
+            sprites: wszystkie
           MOVE:
             '"rand"': "(Losowy)"
-            MOVES.XBend: Bend
-            MOVES.Roll: Body Roll
-            MOVES.XClapSide: Clap
             MOVES.ClapHigh: Clap high
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
-            MOVES.XFever: Disco
             MOVES.DoubleJam: Double Down
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.Rest: Żaden
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.XArmsSide: Reach
+            MOVES.XArmsUp: Stretch
+            MOVES.XBend: Bend
+            MOVES.XClapSide: Clap
+            MOVES.XFever: Disco
             MOVES.XHeadHips: Head + Hips
-            MOVES.XHop: Hop
             MOVES.XHighKick: Kick
+            MOVES.XHop: Hop
             MOVES.XKnee: Knee
             MOVES.XKneel: Kneel
             MOVES.XOle: Ole
-            MOVES.XArmsSide: Reach
             MOVES.XSlide: Slide
-            MOVES.Kick: Star
-            MOVES.XArmsUp: Stretch
-            MOVES.ThisOrThat: This or That
-            MOVES.Thriller: Zombie
-            MOVES.Rest: Żaden
-          DIR:
-            '1': "→"
-            "-1": "←"
+        text: "{GROUP} zrób {MOVE} {DIR} raz"
       Dancelab_doMoveLR:
-        text: "{SPRITE} zrób {MOVE} {DIR} raz"
         options:
+          DIR:
+            "-1": "←"
+            '1': "→"
           MOVE:
             '"rand"': "(Losowy)"
-            MOVES.XBend: Bend
-            MOVES.Roll: Body Roll
-            MOVES.XClapSide: Clap
             MOVES.ClapHigh: Clap high
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
-            MOVES.XFever: Disco
             MOVES.DoubleJam: Double Down
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.Rest: Żaden
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.XArmsSide: Reach
+            MOVES.XArmsUp: Stretch
+            MOVES.XBend: Bend
+            MOVES.XClapSide: Clap
+            MOVES.XFever: Disco
             MOVES.XHeadHips: Head + Hips
-            MOVES.XHop: Hop
             MOVES.XHighKick: Kick
+            MOVES.XHop: Hop
             MOVES.XKnee: Knee
             MOVES.XKneel: Kneel
             MOVES.XOle: Ole
-            MOVES.XArmsSide: Reach
             MOVES.XSlide: Slide
-            MOVES.Kick: Star
-            MOVES.XArmsUp: Stretch
-            MOVES.ThisOrThat: This or That
-            MOVES.Thriller: Zombie
-            MOVES.Rest: Żaden
-          DIR:
-            '1': "→"
-            "-1": "←"
+        text: "{SPRITE} zrób {MOVE} {DIR} raz"
       Dancelab_eval:
         text: oceń {CODE}
       Dancelab_everySeconds:
-        text: 'powtarzaj co {N} {UNIT} '
         options:
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
+        text: 'powtarzaj co {N} {UNIT} '
       Dancelab_everyVerseChorus:
-        text: 'co {UNIT} '
         options:
           UNIT:
-            '"verse"': zwrotka
             '"chorus"': chór
+            '"verse"': zwrotka
+        text: 'co {UNIT} '
       Dancelab_getEnergy:
-        text: uzyskaj {RANGE}
         options:
           RANGE:
+            '"high"': wysoki ton
             '"low"': niski ton
             '"mid"': średni ton
-            '"high"': wysoki ton
+        text: uzyskaj {RANGE}
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
-            '"scale"': rozmiar
-            '"width"': szerokość
             '"height"': wysokość
             '"rotation"': obrót
+            '"scale"': rozmiar
+            '"tint"': odcień
+            '"width"': szerokość
             '"x"': pozycja pozioma
             '"y"': pozycja pionowa
-            '"tint"': odcień
+        text: "{SPRITE} {PROPERTY}"
       Dancelab_getTime:
-        text: aktualny czas {UNIT}
         options:
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
+        text: aktualny czas {UNIT}
       Dancelab_ifDanceIs:
-        text: |-
-          jeśli {SPRITE} wykonuje {DANCE}
-          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Clap high
@@ -332,42 +327,43 @@ pl:
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Roll: Body Roll
             MOVES.Kick: Star
+            MOVES.Rest: Żaden
+            MOVES.Roll: Body Roll
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
-            MOVES.Rest: Żaden
-      Dancelab_ifTime:
         text: |-
-          jeśli {UNIT} jest {OP} {N}
+          jeśli {SPRITE} wykonuje {DANCE}
           {DO1} {DO2}
+      Dancelab_ifTime:
         options:
+          OP:
+            '"<"': "<"
+            '"="': "="
+            '">"': ">"
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
-          OP:
-            '">"': ">"
-            '"<"': "<"
-            '"="': "="
+        text: |-
+          jeśli {UNIT} jest {OP} {N}
+          {DO1} {DO2}
       Dancelab_jumpTo:
-        text: "{SPRITE} skocz do {LOCATION}"
         options:
           LOCATION:
-            "{x: 200, y: 100}": u góry
-            "{x: 200, y: 300}": na dole
-            "{x: 100, y: 200}": w lewo
-            "{x: 300, y: 200}": w prawo
-            "{x: 200, y: 200}": środek
             "{x: 100, y: 100}": górny lewy róg
-            "{x: 300, y: 100}": górny prawy róg
+            "{x: 100, y: 200}": w lewo
             "{x: 100, y: 300}": dolny lewy róg
+            "{x: 200, y: 100}": u góry
+            "{x: 200, y: 200}": środek
+            "{x: 200, y: 300}": na dole
+            "{x: 300, y: 100}": górny prawy róg
+            "{x: 300, y: 200}": w prawo
             "{x: 300, y: 300}": dolny prawy róg
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": losowy
+        text: "{SPRITE} skocz do {LOCATION}"
       Dancelab_jumpToEach:
-        text: skocz {GROUP} do {LOCATION}
         options:
           GROUP:
-            sprites: wszystkie
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
             '"CAT"': koty
@@ -380,22 +376,39 @@ pl:
             '"SHARK"': rekiny
             '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
+            sprites: wszystkie
           LOCATION:
-            "{x: 200, y: 100}": u góry
-            "{x: 200, y: 300}": na dole
-            "{x: 100, y: 200}": w lewo
-            "{x: 300, y: 200}": w prawo
-            "{x: 200, y: 200}": środek
             "{x: 100, y: 100}": górny lewy róg
-            "{x: 300, y: 100}": górny prawy róg
+            "{x: 100, y: 200}": w lewo
             "{x: 100, y: 300}": dolny lewy róg
+            "{x: 200, y: 100}": u góry
+            "{x: 200, y: 200}": środek
+            "{x: 200, y: 300}": na dole
+            "{x: 300, y: 100}": górny prawy róg
+            "{x: 300, y: 200}": w prawo
             "{x: 300, y: 300}": dolny prawy róg
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": losowy
+        text: skocz {GROUP} do {LOCATION}
       Dancelab_layoutSprites:
-        text: formacja {GROUP} jako {FORMAT}
         options:
+          FORMAT:
+            '"border"': brzeg
+            '"bottom"': dolny wiersz
+            '"circle"': koło
+            '"column"': kolumna
+            '"diamond"': diament
+            '"grid"': siatka
+            '"infinity"': nieskończona linia
+            '"inner"': wewnątrz kwadratu
+            '"left"': lewa kolumna
+            '"plus"': plus
+            '"random"': losowy
+            '"right"': prawa kolumna
+            '"row"': wiersz
+            '"spiral"': spirala
+            '"top"': górny wiersz
+            '"x"': krzyż
           GROUP:
-            sprites: wszystkie
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
             '"CAT"': koty
@@ -408,25 +421,9 @@ pl:
             '"SHARK"': rekiny
             '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
-          FORMAT:
-            '"border"': brzeg
-            '"inner"': wewnątrz kwadratu
-            '"diamond"': diament
-            '"circle"': koło
-            '"grid"': siatka
-            '"top"': górny wiersz
-            '"row"': wiersz
-            '"bottom"': dolny wiersz
-            '"left"': lewa kolumna
-            '"column"': kolumna
-            '"right"': prawa kolumna
-            '"x"': krzyż
-            '"plus"': plus
-            '"spiral"': spirala
-            '"infinity"': nieskończona linia
-            '"random"': losowy
+            sprites: wszystkie
+        text: formacja {GROUP} jako {FORMAT}
       Dancelab_makeAnonymousDanceSprite:
-        text: utwórz nowy {COSTUME} w {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': obcy
@@ -442,90 +439,48 @@ pl:
             '"SLOTH"': leniuch
             '"UNICORN"': jednorożec
           LOCATION:
-            "{x: 200, y: 100}": u góry
-            "{x: 200, y: 300}": na dole
-            "{x: 100, y: 200}": w lewo
-            "{x: 300, y: 200}": w prawo
-            "{x: 200, y: 200}": środek
             "{x: 100, y: 100}": górny lewy róg
-            "{x: 300, y: 100}": górny prawy róg
+            "{x: 100, y: 200}": w lewo
             "{x: 100, y: 300}": dolny lewy róg
+            "{x: 200, y: 100}": u góry
+            "{x: 200, y: 200}": środek
+            "{x: 200, y: 300}": na dole
+            "{x: 300, y: 100}": górny prawy róg
+            "{x: 300, y: 200}": w prawo
             "{x: 300, y: 300}": dolny prawy róg
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": losowy
+        text: utwórz nowy {COSTUME} w {LOCATION}
       Dancelab_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': obcy
+            '"BEAR"': niedźwiedź
+            '"CAT"': kot
+            '"DOG"': pies
+            '"DUCK"': kaczka
+            '"FROG"': żaba
+            '"MOOSE"': łosie
+            '"PINEAPPLE"': ananas
+            '"ROBOT"': robot
+            '"SHARK"': rekin
+            '"SLOTH"': leniuch
+            '"UNICORN"': jednorożec
+          LOCATION:
+            "{x: 100, y: 100}": górny lewy róg
+            "{x: 100, y: 200}": w lewo
+            "{x: 100, y: 300}": dolny lewy róg
+            "{x: 200, y: 100}": u góry
+            "{x: 200, y: 200}": środek
+            "{x: 200, y: 300}": u dołu
+            "{x: 300, y: 100}": górny prawy róg
+            "{x: 300, y: 200}": w prawo
+            "{x: 300, y: 300}": dolny prawy róg
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": losowy
         text: |-
           zrób nowy {COSTUME}
           nazywany {NAME} w {LOCATION}
-        options:
-          COSTUME:
-            '"ALIEN"': obcy
-            '"BEAR"': niedźwiedź
-            '"CAT"': kot
-            '"DOG"': pies
-            '"DUCK"': kaczka
-            '"FROG"': żaba
-            '"MOOSE"': łosie
-            '"PINEAPPLE"': ananas
-            '"ROBOT"': robot
-            '"SHARK"': rekin
-            '"SLOTH"': leniuch
-            '"UNICORN"': jednorożec
-          LOCATION:
-            "{x: 200, y: 100}": u góry
-            "{x: 200, y: 300}": u dołu
-            "{x: 100, y: 200}": w lewo
-            "{x: 300, y: 200}": w prawo
-            "{x: 200, y: 200}": środek
-            "{x: 100, y: 100}": górny lewy róg
-            "{x: 300, y: 100}": górny prawy róg
-            "{x: 100, y: 300}": dolny lewy róg
-            "{x: 300, y: 300}": dolny prawy róg
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": losowy
       Dancelab_makeNewDanceSpriteGroup:
-        text: |-
-          zrób {N} nowy {COSTUME}
-          w {LAYOUT}
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
@@ -541,21 +496,64 @@ pl:
             '"UNICORN"': jednorożce
           LAYOUT:
             '"border"': brzeg
-            '"inner"': wewnątrz kwadratu
-            '"diamond"': diament
-            '"circle"': koło
-            '"grid"': siatka
-            '"top"': górny wiersz
-            '"row"': wiersz
             '"bottom"': dolny wiersz
-            '"left"': lewa kolumna
+            '"circle"': koło
             '"column"': kolumna
-            '"right"': prawa kolumna
-            '"x"': krzyż
-            '"plus"': plus
-            '"spiral"': spirala
+            '"diamond"': diament
+            '"grid"': siatka
             '"infinity"': nieskończona linia
+            '"inner"': wewnątrz kwadratu
+            '"left"': lewa kolumna
+            '"plus"': plus
             '"random"': losowy
+            '"right"': prawa kolumna
+            '"row"': wiersz
+            '"spiral"': spirala
+            '"top"': górny wiersz
+            '"x"': krzyż
+          N:
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '2': '2'
+            '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '3': '3'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '4': '4'
+            '40': '40'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+        text: |-
+          zrób {N} nowy {COSTUME}
+          w {LAYOUT}
       Dancelab_mixColors:
         text: zmieszaj {COLOR1} z {COLOR2}
       Dancelab_nMeasures:
@@ -571,92 +569,90 @@ pl:
       Dancelab_setBackground:
         text: ustaw kolor tła {COLOR}
       Dancelab_setBackgroundEffect:
-        text: ustaw efekt tła {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"none"': Żaden
             '"circles"': Kółka
             '"color_cycle"': Kolory
             '"diamonds"': Diamenty
+            '"disco"': Kwadraty
             '"disco_ball"': Kula dyskotekowa
             '"fireworks"': Fajerwerki
-            '"swirl"': Hypno
+            '"galaxy"': Przestrzeń
             '"kaleidoscope"': Kalejdoskop
             '"lasers"': Laserowy parkiet
-            '"splatter"': Rozpryski farby
+            '"none"': Żaden
             '"rainbow"': Tęcza
             '"snowflakes"': Śnieg
-            '"text"': Tytuły piosenek
-            '"galaxy"': Przestrzeń
             '"sparkles"': Migotanie
             '"spiral"': Spirala
-            '"disco"': Kwadraty
+            '"splatter"': Rozpryski farby
             '"stars"': Gwiazdy
+            '"swirl"': Hypno
+            '"text"': Tytuły piosenek
           PALETTE:
-            '"rave"': Czarno-białe
             '"cool"': Chłodny
+            '"default"': Jasne
             '"electronic"': Elektroniczny
             '"iceCream"': Lody
-            '"default"': Jasne
             '"neon"': Neon
+            '"rave"': Czarno-białe
             '"tropical"': Tropikalne
             '"vintage"': Starocie
             '"warm"': Ciepły
+        text: ustaw efekt tła {EFFECT} {PALETTE}
       Dancelab_setBackgroundEffectWithPalette:
-        text: ustaw efekt tła {PALETTE} {EFFECT}
         options:
           EFFECT:
-            '"none"': Żaden
-            '"rand"': "(Losowy)"
             '"circles"': Kółka
-            '"quads"': Kąty
             '"color_cycle"': Kolory
             '"diamonds"': Diamenty
+            '"disco"': Kwadraty
             '"disco_ball"': Kula dyskotekowa
             '"fireworks"': Fajerwerki
             '"flowers"': Kwiaty
+            '"galaxy"': Przestrzeń
             '"growing_stars"': Powiększające się gwiazdy
             '"higher_power"': Higher Power
-            '"swirl"': Hypno
             '"kaleidoscope"': Kalejdoskop
             '"lasers"': Laserowy parkiet
-            '"splatter"': Rozpryski farby
+            '"music_wave"': Fale
+            '"none"': Żaden
+            '"quads"': Kąty
             '"rainbow"': Tęcza
-            '"ripples_random"': Losowe fale
+            '"rand"': "(Losowy)"
             '"ripples"': Fale
+            '"ripples_random"': Losowe fale
             '"snowflakes"': Śnieg
-            '"text"': Tytuły piosenek
-            '"squiggles"': Pokręcone linie
-            '"galaxy"': Przestrzeń
             '"sparkles"': Migotanie
             '"spiral"': Spirala
-            '"disco"': Kwadraty
+            '"splatter"': Rozpryski farby
+            '"squiggles"': Pokręcone linie
             '"stars"': Gwiazdy
-            '"music_wave"': Fale
+            '"swirl"': Hypno
+            '"text"': Tytuły piosenek
           PALETTE:
-            '"rave"': Czarno-białe
             '"cool"': Chłodny
+            '"default"': Jasne
             '"electronic"': Elektroniczny
             '"iceCream"': Lody
-            '"default"': Jasne
             '"neon"': Neon
+            '"rave"': Czarno-białe
             '"tropical"': Tropikalne
             '"vintage"': Starocie
             '"warm"': Ciepły
+        text: ustaw efekt tła {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
-        text: ustaw prędkość tańca {SPRITE} na {SPEED}
         options:
           SPEED:
+            '0.25': bardzo powoli
+            '0.5': powoli
             '1': normalny
             '2': szybko
             '4': bardzo szybki
-            '0.5': powoli
-            '0.25': bardzo powoli
+        text: ustaw prędkość tańca {SPRITE} na {SPEED}
       Dancelab_setDanceSpeedEach:
-        text: ustaw prędkość tańca {GROUP} na {SPEED}
         options:
           GROUP:
-            sprites: wszystkie
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
             '"CAT"': koty
@@ -669,104 +665,104 @@ pl:
             '"SHARK"': rekiny
             '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
+            sprites: wszystkie
           SPEED:
+            '0.25': bardzo powoli
+            '0.5': powoli
             '1': normalny
             '2': szybko
             '4': bardzo szybki
-            '0.5': powoli
-            '0.25': bardzo powoli
+        text: ustaw prędkość tańca {GROUP} na {SPEED}
       Dancelab_setForegroundEffect:
-        text: ustaw efekt pierwszego planu {EFFECT}
         options:
           EFFECT:
-            '"none"': Żaden
             '"bubbles"': Bąbelki
+            '"color_lights"': Światła rampy
             '"confetti"': Konfetti
+            '"floating_rainbows"': Tęcze
             '"hearts_red"': Serca
             '"music_notes"': Nuty
+            '"none"': Żaden
             '"pineapples"': Ananasy
             '"pizzas"': Pizze
-            '"smiling_poop"': Kupa
             '"rain"': Deszcz
-            '"floating_rainbows"': Tęcze
-            '"smile_face"': Uśmiechy
-            '"spotlight"': Reflektor
-            '"color_lights"': Światła rampy
             '"raining_tacos"': Tacos
-      Dancelab_setForegroundEffectExtended:
+            '"smile_face"': Uśmiechy
+            '"smiling_poop"': Kupa
+            '"spotlight"': Reflektor
         text: ustaw efekt pierwszego planu {EFFECT}
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
-            '"none"': Żaden
-            '"rand"': "(Losowy)"
             '"bubbles"': Bąbelki
-            '"hearts_colorful"': Kolorowe Serca
+            '"color_lights"': Światła rampy
             '"confetti"': Konfetti
             '"emojis"': Emotikony
+            '"exploding_stars"': Rozprysk
+            '"floating_rainbows"': Tęcze
+            '"hearts_colorful"': Kolorowe Serca
             '"hearts_red"': Serca
             '"music_notes"': Nuty
+            '"none"': Żaden
             '"paint_drip"': Pipeta do farby
             '"pineapples"': Ananasy
             '"pizzas"': Pizze
-            '"smiling_poop"': Kupa
             '"rain"': Deszcz
-            '"floating_rainbows"': Tęcze
-            '"smile_face"': Uśmiechy
-            '"spotlight"': Reflektor
-            '"color_lights"': Światła rampy
-            '"exploding_stars"': Rozprysk
             '"raining_tacos"': Tacos
+            '"rand"': "(Losowy)"
+            '"smile_face"': Uśmiechy
+            '"smiling_poop"': Kupa
+            '"spotlight"': Reflektor
+        text: ustaw efekt pierwszego planu {EFFECT}
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': wysokość
+            '"rotation"': obrót
+            '"scale"': rozmiar
+            '"width"': szerokość
+            '"x"': pozycja pozioma
+            '"y"': pozycja pionowa
         text: 'ustaw {SPRITE} {PROPERTY} na {VAL} '
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"width"': szerokość
-            '"height"': wysokość
-            '"rotation"': obrót
-            '"x"': pozycja pozioma
-            '"y"': pozycja pionowa
       Dancelab_setPropEach:
+        options:
+          GROUP:
+            '"ALIEN"': obcy
+            '"BEAR"': niedźwiedzie
+            '"CAT"': koty
+            '"DOG"': psy
+            '"DUCK"': kaczki
+            '"FROG"': żaby
+            '"MOOSE"': łosie
+            '"PINEAPPLE"': ananasy
+            '"ROBOT"': roboty
+            '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
+            '"UNICORN"': jednorożce
+            sprites: wszystkie
+          PROPERTY:
+            '"height"': wysokość
+            '"rotation"': obrót
+            '"scale"': rozmiar
+            '"tint"': odcień
+            '"width"': szerokość
+            '"x"': pozycja pozioma
+            '"y"': pozycja pionowa
         text: ustaw {GROUP} {PROPERTY} na {VAL}
-        options:
-          GROUP:
-            sprites: wszystkie
-            '"ALIEN"': obcy
-            '"BEAR"': niedźwiedzie
-            '"CAT"': koty
-            '"DOG"': psy
-            '"DUCK"': kaczki
-            '"FROG"': żaby
-            '"MOOSE"': łosie
-            '"PINEAPPLE"': ananasy
-            '"ROBOT"': roboty
-            '"SHARK"': rekiny
-            '"SLOTH"': leniuchy
-            '"UNICORN"': jednorożce
-          PROPERTY:
-            '"scale"': rozmiar
-            '"width"': szerokość
-            '"height"': wysokość
-            '"rotation"': obrót
-            '"x"': pozycja pozioma
-            '"y"': pozycja pionowa
-            '"tint"': odcień
       Dancelab_setPropRandom:
-        text: losuj {SPRITE} {PROPERTY}
         options:
           PROPERTY:
-            '"scale"': rozmiar
-            '"width"': szerokość
             '"height"': wysokość
             '"rotation"': obrót
+            '"scale"': rozmiar
+            '"tint"': odcień
+            '"width"': szerokość
             '"x"': pozycja pozioma
             '"y"': pozycja pionowa
-            '"tint"': odcień
+        text: losuj {SPRITE} {PROPERTY}
       Dancelab_setPropRandomEach:
-        text: losuj {GROUP} {PROPERTY}
         options:
           GROUP:
-            sprites: wszystkie
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
             '"CAT"': koty
@@ -779,21 +775,21 @@ pl:
             '"SHARK"': rekiny
             '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
+            sprites: wszystkie
           PROPERTY:
-            '"scale"': rozmiar
-            '"width"': szerokość
             '"height"': wysokość
             '"rotation"': obrót
+            '"scale"': rozmiar
+            '"tint"': odcień
+            '"width"': szerokość
             '"x"': pozycja pozioma
             '"y"': pozycja pionowa
-            '"tint"': odcień
+        text: losuj {GROUP} {PROPERTY}
       Dancelab_setTint:
         text: ustaw {SPRITE} odcień na {VAL}
       Dancelab_setTintEach:
-        text: ustaw odcień {THIS} na {VAL}
         options:
           THIS:
-            sprites: wszystkie
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
             '"CAT"': koty
@@ -806,11 +802,11 @@ pl:
             '"SHARK"': rekiny
             '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
+            sprites: wszystkie
+        text: ustaw odcień {THIS} na {VAL}
       Dancelab_setTintEachInline:
-        text: ustaw odcień {THIS} na {VAL}
         options:
           THIS:
-            sprites: wszystkie
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
             '"CAT"': koty
@@ -823,19 +819,19 @@ pl:
             '"SHARK"': rekiny
             '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
+            sprites: wszystkie
+        text: ustaw odcień {THIS} na {VAL}
       Dancelab_setTintInline:
         text: ustaw {SPRITE} odcień na {VAL}
       Dancelab_setVisible:
-        text: ustaw widoczność {SPRITE} na {VISIBILITY}
         options:
           VISIBILITY:
-            'true': widoczny
             'false': niewidoczny
+            'true': widoczny
+        text: ustaw widoczność {SPRITE} na {VISIBILITY}
       Dancelab_setVisibleEach:
-        text: ustaw widoczność {THIS} na {VISIBILITY}
         options:
           THIS:
-            sprites: wszystkie
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
             '"CAT"': koty
@@ -848,74 +844,74 @@ pl:
             '"SHARK"': rekiny
             '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
+            sprites: wszystkie
           VISIBILITY:
-            'true': widoczny
             'false': niewidoczny
+            'true': widoczny
+        text: ustaw widoczność {THIS} na {VISIBILITY}
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': wysokość
+            '"rotation"': obrót
+            '"scale"': rozmiar
+            '"tint"': odcień
+            '"width"': szerokość
+            '"x"': pozycja pozioma
+            '"y"': pozycja pionowa
+          RANGE:
+            '"bass"': niski ton
+            '"mid"': średni ton
+            '"treble"': wysoki ton
         text: "{SPRITE} zaczyna {PROPERTY} po {RANGE}"
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"width"': szerokość
-            '"height"': wysokość
-            '"rotation"': obrót
-            '"x"': pozycja pozioma
-            '"y"': pozycja pionowa
-            '"tint"': odcień
-          RANGE:
-            '"bass"': niski ton
-            '"mid"': średni ton
-            '"treble"': wysoki ton
       Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': obcy
+            '"BEAR"': niedźwiedzie
+            '"CAT"': koty
+            '"DOG"': psy
+            '"DUCK"': kaczki
+            '"FROG"': żaby
+            '"MOOSE"': łosie
+            '"PINEAPPLE"': ananasy
+            '"ROBOT"': roboty
+            '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
+            '"UNICORN"': jednorożce
+            sprites: wszystkie
+          PROPERTY:
+            '"height"': wysokość
+            '"rotation"': obrót
+            '"scale"': rozmiar
+            '"tint"': odcień
+            '"width"': szerokość
+            '"x"': pozycja pozioma
+            '"y"': pozycja pionowa
+          RANGE:
+            '"bass"': niski ton
+            '"mid"': średni ton
+            '"treble"': wysoki ton
         text: "{GROUP} zaczyna {PROPERTY} po {RANGE}"
-        options:
-          GROUP:
-            sprites: wszystkie
-            '"ALIEN"': obcy
-            '"BEAR"': niedźwiedzie
-            '"CAT"': koty
-            '"DOG"': psy
-            '"DUCK"': kaczki
-            '"FROG"': żaby
-            '"MOOSE"': łosie
-            '"PINEAPPLE"': ananasy
-            '"ROBOT"': roboty
-            '"SHARK"': rekiny
-            '"SLOTH"': leniuchy
-            '"UNICORN"': jednorożce
-          PROPERTY:
-            '"scale"': rozmiar
-            '"width"': szerokość
-            '"height"': wysokość
-            '"rotation"': obrót
-            '"x"': pozycja pozioma
-            '"y"': pozycja pionowa
-            '"tint"': odcień
-          RANGE:
-            '"bass"': niski ton
-            '"mid"': średni ton
-            '"treble"': wysoki ton
       Dancelab_stopMapping:
-        text: "{SPRITE} zatrzymuje {PROPERTY} po {RANGE}"
         options:
           PROPERTY:
-            '"scale"': rozmiar
-            '"width"': szerokość
+            '"direction"': kierunek ruchu
             '"height"': wysokość
             '"rotation"': obrót
+            '"scale"': rozmiar
+            '"tint"': odcień
+            '"width"': szerokość
             '"x"': pozycja pozioma
             '"y"': pozycja pionowa
-            '"direction"': kierunek ruchu
-            '"tint"': odcień
           RANGE:
             '"bass"': niski ton
             '"mid"': średni ton
             '"treble"': wysoki ton
+        text: "{SPRITE} zatrzymuje {PROPERTY} po {RANGE}"
       Dancelab_stopMappingEach:
-        text: "{GROUP} zatrzymuje {PROPERTY} po {RANGE}"
         options:
           GROUP:
-            sprites: wszystkie
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
             '"CAT"': koty
@@ -928,55 +924,24 @@ pl:
             '"SHARK"': rekiny
             '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
+            sprites: wszystkie
           PROPERTY:
-            '"scale"': rozmiar
-            '"width"': szerokość
+            '"direction"': kierunek ruchu
             '"height"': wysokość
             '"rotation"': obrót
+            '"scale"': rozmiar
+            '"tint"': odcień
+            '"width"': szerokość
             '"x"': pozycja pozioma
             '"y"': pozycja pionowa
-            '"direction"': kierunek ruchu
-            '"tint"': odcień
           RANGE:
             '"bass"': niski ton
             '"mid"': średni ton
             '"treble"': wysoki ton
+        text: "{GROUP} zatrzymuje {PROPERTY} po {RANGE}"
       Dancelab_translateStrings:
-        text: przetłumacz {STRING}
         options:
           STRING:
-            '"music_wave"': Fale
-            '"ripples"': Fale
-            '"ripples_random"': Losowe fale
-            '"quads"': Kąty
-            '"flowers"': Kwiaty
-            '"popsicles"': Lody na patyku
-            '"squiggles"': Pokręcone linie
-            '"growing_stars"': Powiększające się gwiazdy
-            '"emojis"': Emotikony
-            '"hearts_colorful"': Serca
-            '"paint_drio"': Pipeta do farby
-            '"exploding_stars"': Rozprysk
-            '"row_top"': górny wiersz
-            '"row_bottom"': dolny wiersz
-            '"column_left"': lewa kolumna
-            '"column_right"': prawa kolumna
-            '"diamond"': diament
-            '"mural"': Mural
-            '"safari"': Safari
-            '"network"': Sieć
-            '"highway"': Autostrada
-            '"stream"': Strumień
-            '"tile"': Płytka
-            '"shadow"': Cień
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"x"': x
-            '"y"': y
-            '"z"': z
             '"0"': '0'
             '"1"': '1'
             '"2"': '2'
@@ -987,21 +952,59 @@ pl:
             '"7"': '7'
             '"8"': '8'
             '"9"': '9'
+            '"column_left"': lewa kolumna
+            '"column_right"': prawa kolumna
+            '"diamond"': diament
+            '"emojis"': Emotikony
+            '"exploding_stars"': Rozprysk
+            '"flowers"': Kwiaty
+            '"growing_stars"': Powiększające się gwiazdy
+            '"hearts_colorful"': Serca
+            '"highway"': Autostrada
+            '"mural"': Mural
+            '"music_wave"': Fale
+            '"network"': Sieć
+            '"paint_drio"': Pipeta do farby
+            '"popsicles"': Lody na patyku
+            '"quads"': Kąty
+            '"ripples"': Fale
+            '"ripples_random"': Losowe fale
+            '"row_bottom"': dolny wiersz
+            '"row_top"': górny wiersz
+            '"s"': s
+            '"safari"': Safari
+            '"shadow"': Cień
+            '"squiggles"': Pokręcone linie
+            '"stream"': Strumień
+            '"t"': t
+            '"tile"': Płytka
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+        text: przetłumacz {STRING}
       Dancelab_whenKey:
-        text: po naciśnięciu {KEY}
         options:
           KEY:
-            '"up"': do góry
-            '"left"': w lewo
-            '"down"': do dołu
-            '"right"': w prawo
-            '"space"': przestrzeń
-            '"enter"': wprowadź
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
             '"a"': a
             '"b"': b
             '"c"': c
             '"d"': d
+            '"down"': do dołu
             '"e"': e
+            '"enter"': wprowadź
             '"f"': f
             '"g"': g
             '"h"': h
@@ -1009,74 +1012,71 @@ pl:
             '"j"': j
             '"k"': k
             '"l"': l
+            '"left"': w lewo
             '"m"': m
             '"n"': n
             '"o"': o
             '"p"': p
             '"q"': q
             '"r"': r
+            '"right"': w prawo
             '"s"': s
+            '"space"': przestrzeń
             '"t"': t
             '"u"': u
+            '"up"': do góry
             '"v"': v
             '"w"': w
             '"x"': x
             '"y"': y
             '"z"': z
-            '"0"': '0'
-            '"1"': '1'
-            '"2"': '2'
-            '"3"': '3'
-            '"4"': '4'
-            '"5"': '5'
-            '"6"': '6'
-            '"7"': '7'
-            '"8"': '8'
-            '"9"': '9'
+        text: po naciśnięciu {KEY}
       Dancelab_whenPeak:
-        text: podczas szczytu {RANGE}
         options:
           RANGE:
             '0': niski ton
             '1': średni ton
             '2': wysoki ton
+        text: podczas szczytu {RANGE}
       Dancelab_whenSetup:
         text: układ
       Dancelab_whenSetup2:
         text: układ
       Dancelab_whenSetupSong:
-        text: 'ustaw {SONG} '
         options:
           SONG:
-            '"macklemore90"': Macklemore - Nie może nas zatrzymać
             '"hammer"': MC Hammer - Nie możesz tego dotknąć
+            '"macklemore90"': Macklemore - Nie może nas zatrzymać
             '"peas"': The Black Eyed Peas - Mam przeczucie
+        text: 'ustaw {SONG} '
+      DansBlocks_borderGPT:
+        text: Generuj obramowanie {DESCRIPTION}
       DansBlocks_getMicroscope:
-        text: Mikroskop ma {INPUT1}
         options:
           INPUT1:
             '1': sok cytrynowy
             '3': proszek do pieczenia
             '5': oba
+        text: Mikroskop ma {INPUT1}
       DansBlocks_setForegroundEffect2:
-        text: wykonaj efekt {EFFECT}
         options:
           EFFECT:
             '"bubbles"': Bąbelki
             '"confetti"': Konfetti
-            '"hearts"': serca
             '"emojis"': Szczęśliwe emotikony
+            '"glass"': Rozbijające się szkło
+            '"hearts"': serca
             '"rain"': deszcz
             '"starburst"': Rozprysk
-            '"glass"': Rozbijające się szkło
             '"twinkling"': Migotliwy
+        text: wykonaj efekt {EFFECT}
       DansBlocks_setMicroscope:
-        text: Ustaw mikroskop na {INPUT1}
         options:
           INPUT1:
             '1': sok cytrynowy
             '3': proszek do pieczenia
             '5': oba
+        text: Ustaw mikroskop na {INPUT1}
       DansBlocks_testRectangle:
         text: 'utwórz prostokąt x: {X} y: {Y} w: {W} h: {H} kolor: {COLOR}'
       FunctionBlocks_addEightBlock:
@@ -1107,722 +1107,33 @@ pl:
         text: "[testing] reprezentują {NUM} nowe {ANIMATION_NAME} duszki"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}powiedz {TEXT1}"
-      gamelab_addBehaviorSimple:
-        text: duszek {SPRITE} rozpoczyna {BEHAVIOR}
-      gamelab_addTarget:
-        text: "{SPRITE} osiąga cel {TARGET}"
-        options:
-          OPT:
-            '"follow"': podążaj
-            '"avoid"': unikaj
-      gamelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
-      gamelab_atTime:
-        text: w {N} {UNIT}
-        options:
-          UNIT:
-            '"seconds"': sekundy
-            '"frames"': ramki
-      gamelab_avoidingTargets:
-        text: unikając celów
-      gamelab_beginCollectingData:
-        text: rozpocznij zbierać dane {BREAK} wartości {VALUE} z etykietami {LABEL}
-      gamelab_behaviorPicker:
-        text: "{BEHAVIOR}"
-      gamelab_bounceOff:
-        text: "{SPRITE} odbija się od {TARGET}"
-      gamelab_changePropBy:
-        text: zamień {SPRITE} {PROPERTY} przez {VAL}
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"rotation"': obrót
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-            '"direction"': kierunek ruchu
-            '"speed"': prędkość
-      gamelab_changeVarBy:
-        text: zastąp {VARIABLE} przez {VAL}
-      gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} dotyka {SPRITE2}"
-        options:
-          CONDITION:
-            '"when"': kiedy
-            '"while"': dopóki
-      gamelab_clickedOn:
-        text: kiedy {SPRITE} kliknął
-      gamelab_clickedSpritePointer:
-        text: "{SPRITE}"
-      gamelab_collectibleBehaviors:
-        text: "{BEHAVIOR}"
-        options:
-          BEHAVIOR:
-            new Behavior(spinning_right, []): obracanie się w prawo
-            new Behavior(spinning_left, []): obracanie się w lewo
-            new Behavior(fluttering, []): trzepotanie
-            new Behavior(jittering, []): trzęsienie się
-            new Behavior(wobbling, []): chybotanie
-            new Behavior(wandering, []): wędrowanie
-            new Behavior(patrolling, []): patrolowanie
-            new Behavior(moving_west_and_looping, []): przechodząc na zachód i powtarzając
-              w pętli
-            new Behavior(moving_east_and_looping, []): przechodząc na wschód i powtarzając
-              w pętli
-            new Behavior(moving_north_and_looping, []): poruszanie się na północ i
-              w pętli
-            new Behavior(moving_south_and_looping, []): poruszanie się na południe
-              i w pętli
-      gamelab_comment:
-        text: 'komentarz: {COMMENT}'
-      gamelab_costumeImage:
-        text: "{COSTUME}"
-      gamelab_countByAnimation:
-        text: liczba {SPRITE}
-      gamelab_createNewSprite:
-        text: "utwórz nowego duszka \n o nazwie {NAME} \n w kostiumie {COSTUME} \n
-          w {LOCATION}"
-      gamelab_destroy:
-        text: usuń {THIS}
-      gamelab_draggable:
-        text: będąc przeciągalnym
-      gamelab_drawLine:
-        text: narysuj linię {COLOR}  {LOC1}  {LOC2}
-      gamelab_edgesDisplace:
-        text: krawędzie bloku {SPRITE} z ruchu
-      gamelab_everyInterval:
-        text: 'powtarzaj co {N} {UNIT} '
-        options:
-          UNIT:
-            '"seconds"': sekundy
-            '"frames"': ramki
-      gamelab_followingTargets:
-        text: idąc za celami
-      gamelab_getAllSprites:
-        text: wszystkie duszki
-      gamelab_getCostume:
-        text: duszki z kostiumem {SPRITE}
-      gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"rotation"': obrót
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-            '"direction"': kierunek ruchu
-            '"tint"': odcień
-            '"speed"': prędkość
-      gamelab_getThisSprite:
-        text: duszek {CHOICE}
-        options:
-          CHOICE:
-            '"this"': to
-            '"other"': inne
-      gamelab_getTime:
-        text: czas w {UNIT}
-        options:
-          UNIT:
-            '"seconds"': sekundy
-            '"frames"': ramki
-      gamelab_glideTo:
-        text: "{SPRITE} skocz do {LOCATION}"
-      gamelab_hideTitleScreen:
-        text: ukryj ekran tytułowy
-      gamelab_ifVarEquals:
-        text: |-
-          jeśli {NUM} ={VAL}
-          {STATEMENT}
-      gamelab_int10:
-        text: "{VALUE}"
-        options:
-          VALUE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-      gamelab_isCostumeEqual:
-        text: kostium {SPRITE} jest {COSTUME}
-      gamelab_isKeyPressed:
-        text: czy {KEY} został naciśnięty
-        options:
-          KEY:
-            '"up"': do góry
-            '"down"': do dołu
-            '"left"': w lewo
-            '"right"': w prawo
-            '"space"': przestrzeń
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
-            '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"x"': x
-            '"y"': y
-            '"z"': z
-      gamelab_isTouchingEdges:
-        text: "{SPRITE} dotyka krawędzi"
-      gamelab_isTouchingSprite:
-        text: "{SPRITE} dotyka {TARGET}"
-      gamelab_jumpTo:
-        text: "{SPRITE} skocz do {LOCATION}"
-      gamelab_keyPressed:
-        text: "{CONDITION} {KEY} naciśnięty"
-        options:
-          CONDITION:
-            '"when"': kiedy
-            '"while"': dopóki
-          KEY:
-            '"up"': do góry
-            '"down"': do dołu
-            '"left"': w lewo
-            '"right"': w prawo
-            '"space"': przestrzeń
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
-            '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"x"': x
-            '"y"': y
-            '"z"': z
-      gamelab_layoutGrid:
-        text: układ duszków jako siatka
-      gamelab_layoutSprites:
-        text: formacja {GROUP} jako {FORMAT}
-        options:
-          FORMAT:
-            '"border"': brzeg
-            '"circle"': koło
-            '"grid"': siatka
-            '"top"': górny wiersz
-            '"row"': wiersz
-            '"bottom"': dolny wiersz
-            '"left"': lewa kolumna
-            '"column"': kolumna
-            '"right"': prawa kolumna
-      gamelab_locationAt:
-        text: 'pozycja x: {X} y: {Y}'
-      gamelab_locationModifier:
-        text: "{DISTANCE} pikseli {DIRECTION} od {LOCATION}"
-        options:
-          DIRECTION:
-            '"North"': Północ
-            '"East"': Wschód
-            '"South"': Południe
-            '"West"': Zachód
-      gamelab_locationMouse:
-        text: pozycja myszy
-      gamelab_locationOf:
-        text: pozycja {SPRITE}
-      gamelab_location_picker:
-        text: "{LOCATION}"
-      gamelab_makeBurst:
-        text: utwórz {EFFECT} efekt z {NUM} {ANIMATION_NAME} duszkami
-        options:
-          EFFECT:
-            '"burst"': wybuch
-            '"pop"': popularny
-            '"rain"': deszcz
-            '"spiral"': spirala
-      gamelab_makeNewSpriteAnon:
-        text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
-      gamelab_makeNewSpriteGroup:
-        text: zrób {N} nową {GROUP} w {FORMAT}
-        options:
-          FORMAT:
-            '"border"': brzeg
-            '"circle"': koło
-            '"grid"': siatka
-            '"top"': górny wiersz
-            '"row"': wiersz
-            '"bottom"': dolny wiersz
-            '"left"': lewa kolumna
-            '"column"': kolumna
-            '"right"': prawa kolumna
-      gamelab_makeNumSprites:
-        text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
-      gamelab_makeNumSpritesNear:
-        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
-      gamelab_makeProjectile:
-        text: |-
-          utworzyć pocisk
-          {ANIMATION_NAME} z {LOCATION} z szybkością {SPEED}kierunkiem{DIRECTION}
-        options:
-          DIRECTION:
-            '0': w prawo
-            '90': do dołu
-            '180': w lewo
-            '270': do góry
-      gamelab_makeSpritesWithSize:
-        text: utwórz {NUM} nowych {SIZE} {COSTUME} duszków
-        options:
-          SIZE:
-            '30': mały
-            '50': średni
-            '100': duży
-      gamelab_mirrorSprite:
-        text: "{SPRITE} skierowany {DIRECTION}"
-        options:
-          DIRECTION:
-            '"right"': w prawo
-            '"left"': w lewo
-      gamelab_mouseLocation:
-        text: pozycja myszy
-      gamelab_moveBackward:
-        text: przemieść {SPRITE} o {DISTANCE} pikseli do tyłu
-      gamelab_moveForward:
-        text: przemieść {SPRITE} o {DISTANCE} pikseli do przodu
-      gamelab_moveInDirection:
-        text: przemieść {SPRITE} o {DISTANCE} pikseli {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Północ
-            '"East"': Wschód
-            '"South"': Południe
-            '"West"': Zachód
-      gamelab_moveToward:
-        text: przemieść {SPRITE} o {DISTANCE} pikseli w kierunku {TARGET}
-      gamelab_newSpritePointer:
-        text: "{SPRITE}"
-      gamelab_objectSpritePointer:
-        text: "{SPRITE}"
-      gamelab_patrollingUpDown:
-        text: patrolowanie w górę i w dół
-      gamelab_playSound:
-        text: zagraj {SOUND}
-      gamelab_playSoundOptions:
-        text: zagraj {SOUND}
-        options:
-          SOUND:
-            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": akcent
-            "'sound://category_digital/boing_2.mp3'": boing
-            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": popularny
-            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": migotanie
-            "'sound://category_app/app_button_1.mp3'": przycisk
-            "'sound://category_collect/clicky_crunch.mp3'": chrzęst
-            "'sound://category_swish/quick_swing.mp3'": huśtać się
-            "'sound://category_nature/summer_night_loop.mp3'": letnia noc
-            "'sound://category_background/ocean_waves.mp3'": fale oceanu
-            "'sound://category_nature/south_carolina_beach_ripple.mp3'": fala na plaży
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bąbel
-            "'sound://category_animals/bear.mp3'": niedźwiedź
-            "'sound://category_animals/cat.mp3'": kot
-            "'sound://category_animals/cow.mp3'": krowa
-            "'sound://category_animals/pig.mp3'": świnka
-            "'sound://category_animals/sheep.mp3'": owca
-            "'sound://category_animals/goat.mp3'": koza
-            "'sound://category_animals/chicken.mp3'": kurczak
-            "'sound://category_animals/rooster.mp3'": kogut
-            "'sound://category_animals/elephant.mp3'": słoń
-            "'sound://category_animals/dolphin.mp3'": kliknięcia delfina
-            "'sound://category_nature/thunderstorm_1.mp3'": burza z piorunami
-            "'sound://category_animals/chick.mp3'": ćwierkanie ptaszka
-            "'sound://category_animals/dog.mp3'": szczekanie psa
-            "'sound://category_animals/tiger.mp3'": ryk tygrysa
-            "'sound://category_collect/trill_stings.mp3'": trill
-            "'sound://category_instrumental/harpe_pluck_1.mp3'": harfa
-            "'sound://category_tap/vibrant_positive_tap_1.mp3'": tap
-            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": uderzenie
-              tonalne
-            "'sound://category_transition/trippy_robotic_transition.mp3'": głos robota
-            "'sound://category_transition/star_dust_particle_10.mp3'": gwiezdny pył
-            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": statek
-              kosmiczny
-            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magiczne
-              zaklęcie
-            "'sound://category_retro/retro_game_ui_select_6.mp3'": ping
-            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": dziwaczny
-              bas
-            "'sound://category_digital/jump_7.mp3'": skocz
-      gamelab_playSoundOptionsSoccer:
-        text: zagraj {SOUND}
-        options:
-          SOUND:
-            "'sound://category_sports/Airhorn_SFX.mp3'": klakson powietrzny
-            "'sound://category_sports/Crowd_Applause_SFX.mp3'": oklaski
-            "'sound://category_sports/Crowd_Chant_SFX.mp3'": chant
-            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": radosne okrzyki
-            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": kopnięcie
-            "'sound://category_sports/Double_Whistle_SFX.mp3'": dwa gwizdki
-            "'sound://category_sports/One_Whistle_SFX.mp3'": gwizdek
-      gamelab_playSoundOptionsSpace:
-        text: zagraj {SOUND}
-        options:
-          SOUND:
-            "'sound://category_space/Blackhole_SFX.mp3'": czarna dziura
-            "'sound://category_space/Bullet_cluster_SFX.mp3'": Gromada galaktyk 1E0657-558
-            "'sound://category_space/Carina_SFX.mp3'": Carina
-            "'sound://category_space/Cassiopeia_SFX.mp3'": Kasjopeja
-            "'sound://category_space/Crab_nebula_SFX.mp3'": Mgławica Kraba
-            "'sound://category_space/Galactic_center_SFX.mp3'": centrum galaktyczne
-            "'sound://category_space/Launch_SFX.mp3'": wystrzelenie
-            "'sound://category_space/Lift_Off.mp3'": wystartowanie
-            "'sound://category_space/Pillars_SFX.mp3'": filary
-            "'sound://category_space/Southern_ring_SFX.mp3'": Mgławica NGC 3132
-            "'sound://category_space/Supernova_SFX.mp3'": Supernowa
-            "'sound://category_space/Tycho_SFX.mp3'": tycho
-            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": galaktyka jacuzzi
-      gamelab_playSpeech:
-        text: odtwórz mowę {SOUND}
-      gamelab_playerBehaviors:
-        text: "{BEHAVIOR}"
-        options:
-          BEHAVIOR:
-            new Behavior(moving_with_arrow_keys, []): poruszanie się za pomocą klawiszy
-              strzałek
-            new Behavior(driving_with_arrow_keys, []): poruszanie się za pomocą klawiszy
-              strzałek
-            draggable(): będąc przeciągalnym
-      gamelab_pointInDirection:
-        text: punkt {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Północ
-            '"East"': Wschód
-            '"South"': Południe
-            '"West"': Zachód
-      gamelab_printText:
-        text: drukuj {TEXT}
-      gamelab_randColor:
-        text: losowy kolor
-      gamelab_randomColor:
-        text: losowy kolor
-      gamelab_randomLocation:
-        text: losowa pozycja
-      gamelab_removeAllBehaviors:
-        text: "{SPRITE} zatrzymuje wszystko"
-      gamelab_removeBehaviorSimple:
-        text: duszek {SPRITE} zatrzymuje {BEHAVIOR}
-      gamelab_removeTint:
-        text: usuń kolor z {THIS}
-      gamelab_repeatForever:
-        text: powtarzaj w nieskończoność
-      gamelab_resetTimer:
-        text: zresetuj czasomierz
-      gamelab_setAnimation:
-        text: zmień {THIS} kostium na {ANIMATION}
-      gamelab_setBackground:
-        text: ustaw kolor tła {COLOR}
-      gamelab_setBackgroundImage:
-        text: ustaw tło na {IMG}
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': jaskinia
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miasto
-            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': ciągła
-              trawa
-            '"https://studio.code.org/blockly/media/skins/studio/background.png"': sąd
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': pustynia
-            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': pustynna
-              droga
-            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': pole
-              uprawne
-            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': pływająca
-              trawa
-            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': przód
-              domu
-            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaktyki
-            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': siatka
-            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kuchnia '
-            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': salon
-            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': widok
-              parku
-            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': sosny
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': tęcza
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': SF
-            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': boisko
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etap
-            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': gwiazdy
-            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
-            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': słońce
-              i tęcza
-            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': prysznice
-              słoneczne
-            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': kort
-              tenicowy
-            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': wyspa
-              drzew
-            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': podziemny
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': podwodny
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
-            undefined: żaden
-      gamelab_setBackgroundImageAs:
-        text: ustaw tło na {IMG}
-      gamelab_setDefaultSpriteSize:
-        text: ustaw nowy domyślny rozmiar duszka na {SIZE}
-        options:
-          SIZE:
-            '25': ekstra mały
-            '50': mały
-            '75': średni
-            '100': duży
-      gamelab_setPrompt:
-        text: poproś użytkownika {QUESTION} o zmienne {VAR}
-      gamelab_setPromptWith2Choices:
-        text: poproś użytkownika {QUESTION} o zmienną {VAR} z wyborami {A}{B}
-      gamelab_setPromptWithChoices:
-        text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
-      gamelab_setProp:
-        text: ustaw {SPRITE} {PROPERTY} na {VAL}
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"rotation"': obrót
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-            '"direction"': kierunek ruchu
-            '"speed"': prędkość
-      gamelab_setProp_dropdown:
-        text: ustaw {SPRITE} {PROPERTY} na {SIZE}
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-          SIZE:
-            '25': ekstra mały
-            '50': mały
-            '75': średni
-            '100': duży
-      gamelab_setSizes:
-        text: ustaw {SPRITE} {PROPERTY} na {N}%
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"width"': szerokość
-            '"height"': wysokość
-      gamelab_setSpeed_dropdown:
-        text: ustaw prędkość {SPRITE} na {SIZE}
-        options:
-          SIZE:
-            '1': bardzo powoli
-            '3': powoli
-            '5': normalny
-            '7': szybko
-            '9': bardzo szybko
-      gamelab_setTint:
-        text: zmień kolor {THIS} na {COLOR}
-      gamelab_setupScoreboard:
-        text: |-
-          narysuj tablicę wyników
-          {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
-      gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
-          z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
-      gamelab_showTitleScreen:
-        text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
-      gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} kliknięty"
-        options:
-          CONDITION:
-            '"when"': kiedy
-            '"while"': dopóki
-      gamelab_spriteSay:
-        text: "{SPRITE} powiedz {SPEECH}"
-      gamelab_spriteSayTime:
-        text: "{SPRITE}mówi{TEXT1}przez{NUM}sekundy"
-      gamelab_spriteThink:
-        text: "{SPRITE} myśl {SPEECH}"
-      gamelab_spriteThinkTime:
-        text: "{SPRITE}myśl{TEXT1}przez{NUM}sekundy"
-      gamelab_spriteThink_fables2:
-        text: "{SPRITE} myśl {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"Time to make friends with the sheep."': Czas zaprzyjaźnić się z owcami.
-            '"She''ll never recognize me now."': Ona mnie teraz nie rozpozna.
-            '"This costume keeps me warm."': Ten kostium mnie ogrzewa.
-            '"I am actually a wolf."': Właściwie jestem wilkiem.
-      gamelab_spriteThink_fables3:
-        text: "{SPRITE} myśl {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I''m feeling sleepy."': Czuję się śpiący.
-            '"No one could ever beat me."': Nikt nigdy nie mógł mnie pokonać.
-            '"I''ve done this race before."': Uczestniczyłem w tym wyścigu już wcześniej.
-            '"My feet are bigger than Turtle''s feet."': Moje stopy są większe niż
-              stopy Żółwia.
-      gamelab_spriteThink_fables4:
-        text: "{SPRITE} myśl {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I''m so hungry."': Jestem bardzo głodny!
-            '"I''m a visitor in this town."': Jestem gościem w tym mieście.
-            '"If we share, we''ll all have something to eat. "': Jeśli się podzielimy,
-              wszyscy będziemy mieli coś do jedzenia.
-            '"I''ll trick everyone into giving me their food."': Oszukam wszystkich,
-              żeby dali mi swoje jedzenie.
-      gamelab_startAvoiding:
-        text: "{SPRITE} zaczyna unikać {TARGET}"
-      gamelab_startFollowing:
-        text: "{SPRITE} zaczyna podążać {TARGET}"
-      gamelab_startGliding:
-        text: "{SPRITE} zaczyna przesuwać się "
-      gamelab_stopAvoiding:
-        text: "{SPRITE} przestaje unikać inne duszki"
-      gamelab_stopCollectingData:
-        text: zatrzymaj zbieranie danych
-      gamelab_stopFollowing:
-        text: "{SPRITE} przestaje podążać za innymi duszkami "
-      gamelab_stopGliding:
-        text: "{SPRITE} zaczyna przesuwać się "
-      gamelab_subjectSpritePointer:
-        text: "{SPRITE}"
-      gamelab_textJoin:
-        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
-      gamelab_textVariableJoin:
-        text: "{VAR}{TEXT2}"
-      gamelab_tumbling:
-        text: gimnastykowanie się
-      gamelab_turn:
-        text: skręć {SPRITE} {DIRECTION} {N} stopni
-        options:
-          DIRECTION:
-            '"right"': w prawo
-            '"left"': w lewo
-      gamelab_updateTitleWithColor:
-        text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} kolor {COLOR}
-      gamelab_whenAllPromptsAnswered:
-        text: gdy odpowiedzą na wszystkie monity
-      gamelab_whenDownArrow:
-        text: po naciśnięciu strzałki w dół
-      gamelab_whenKey:
-        text: po naciśnięciu {KEY}
-        options:
-          KEY:
-            '"up"': do góry
-            '"down"': do dołu
-            '"left"': w lewo
-            '"right"': w prawo
-            '"space"': przestrzeń
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      gamelab_whenLeftArrow:
-        text: po naciśnięciu strzałki w lewo
-      gamelab_whenPromptAnswered:
-        text: gdy {VAR} uzyskała odpowiedź
-      gamelab_whenRightArrow:
-        text: po naciśnięciu strzałki w prawo
-      gamelab_whenSpriteCreated:
-        text: kiedy {SPRITE} utworzony
-      gamelab_whenTouching:
-        text: kiedy {SPRITE1} dotyka {SPRITE2}
-      gamelab_whenUpArrow:
-        text: po naciśnięciu strzałki w górę
-      gamelab_whileDownArrow:
-        text: po naciśnięciu strzałki w dół
-      gamelab_whileKey:
-        text: po naciśnięciu {KEY}
-        options:
-          KEY:
-            '"up"': do góry
-            '"down"': do dołu
-            '"left"': w lewo
-            '"right"': w prawo
-            '"space"': przestrzeń
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      gamelab_whileLeftArrow:
-        text: po naciśnięciu strzałki w lewo
-      gamelab_whileRightArrow:
-        text: po naciśnięciu strzałki w prawo
-      gamelab_whileTouching:
-        text: dopóki {SPRITE1} dotyka {SPRITE2}
-      gamelab_whileUpArrow:
-        text: po naciśnięciu strzałki w górę
-      gamelab_withPercentChance:
-        text: |-
-          jeśli {NUM}% szansa
-          {STATEMENT}
-      gamelab_withPercentChanceDropdown:
-        text: |2-
-           {NUM} szansa
-           {STATEMENT}
-        options:
-          NUM:
-            '10': bardzo niski
-            '25': niski
-            '50': 50/50
-            '75': wysoki
-            '90': bardzo wysoki
-      gamelab_xLocationOf:
-        text: x współrzędna {SPRITE}
-      gamelab_yLocationOf:
-        text: współrzędna y {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} skocz do {LOCATION}"
       KatiesBlocks_makeNumSpritesNear:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       KatiesBlocks_spriteBirdSay:
-        text: "{SPRITE} mówi {SPEECH}"
         options:
           SPEECH:
-            '"My beak is pointy and strong to find insects in tree bark."': Mój dziób
-              jest spiczasty i silny, aby znaleźć owady w korze drzewa.
             '"I have a beak like a scoop to catch fish."': Mam dziób jak czerpak do
               łowienia ryb.
+            '"My beak is pointy and strong to find insects in tree bark."': Mój dziób
+              jest spiczasty i silny, aby znaleźć owady w korze drzewa.
+        text: "{SPRITE} mówi {SPEECH}"
       KatiesBlocks_tumbling:
         text: gimnastykowanie się
       Mikelab_addBehaviorSimple:
         text: duszek {SPRITE} rozpoczyna {BEHAVIOR}
       Mikelab_addTrainingData:
-        text: 'dodaj dane treningowe: {NAME},{LOCATION}'
         options:
-          NAME:
-            "{x: 201, y: 100}": obiekt
-            "{x: 200, y: 100}": ryba
           LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": moja etykieta
             "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": ryba
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": nie ryba
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": moja etykieta
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": nie moja etykieta
+          NAME:
+            "{x: 200, y: 100}": ryba
+            "{x: 201, y: 100}": obiekt
+        text: 'dodaj dane treningowe: {NAME},{LOCATION}'
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       Mikelab_beginDataCollection:
@@ -1830,22 +1141,22 @@ pl:
       Mikelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': rozmiar
+            '"direction"': kierunek ruchu
             '"rotation"': obrót
+            '"scale"': rozmiar
             '"x"': współrzędna x
             '"y"': współrzędna y
-            '"direction"': kierunek ruchu
       Mikelab_createNewSprite:
         options:
           LOCATION:
-            "{x: 200, y: 100}": u góry
-            "{x: 200, y: 300}": na dole
-            "{x: 100, y: 200}": w lewo
-            "{x: 300, y: 200}": w prawo
-            "{x: 200, y: 200}": środek
             "{x: 100, y: 100}": górny lewy róg
-            "{x: 300, y: 100}": górny prawy róg
+            "{x: 100, y: 200}": w lewo
             "{x: 100, y: 300}": dolny lewy róg
+            "{x: 200, y: 100}": u góry
+            "{x: 200, y: 200}": środek
+            "{x: 200, y: 300}": na dole
+            "{x: 300, y: 100}": górny prawy róg
+            "{x: 300, y: 200}": w prawo
             "{x: 300, y: 300}": dolny prawy róg
       Mikelab_eval:
         text: oceń {CODE}
@@ -1854,100 +1165,100 @@ pl:
       Mikelab_getProp:
         options:
           PROPERTY:
-            '"scale"': rozmiar
+            '"direction"': kierunek ruchu
             '"rotation"': obrót
+            '"scale"': rozmiar
             '"x"': współrzędna x
             '"y"': współrzędna y
-            '"direction"': kierunek ruchu
       Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': wszystkie
+            '"this"': to
         text: zmień {SELECT} {COSTUME} na {COSTUME2}
-        options:
-          SELECT:
-            '"all"': wszystkie
-            '"this"': to
       Mikelab_groupChangePropBy:
-        text: zmień {PROPERTY} {SELECT} {COSTUME} na {VAL}
         options:
-          SELECT:
-            '"all"': wszystkie
-            '"this"': to
           PROPERTY:
-            '"scale"': rozmiar
+            '"direction"': kierunek ruchu
             '"rotation"': obrót
+            '"scale"': rozmiar
             '"x"': współrzędna x
             '"y"': współrzędna y
-            '"direction"': kierunek ruchu
+          SELECT:
+            '"all"': wszystkie
+            '"this"': to
+        text: zmień {PROPERTY} {SELECT} {COSTUME} na {VAL}
       Mikelab_groupCreateNewSprite:
-        text: utwórz nowy {COSTUME} w {LOCATION}
         options:
           LOCATION:
-            "{x: 200, y: 100}": u góry
-            "{x: 200, y: 300}": na dole
-            "{x: 100, y: 200}": w lewo
-            "{x: 300, y: 200}": w prawo
-            "{x: 200, y: 200}": środek
             "{x: 100, y: 100}": górny lewy róg
-            "{x: 300, y: 100}": górny prawy róg
+            "{x: 100, y: 200}": w lewo
             "{x: 100, y: 300}": dolny lewy róg
+            "{x: 200, y: 100}": u góry
+            "{x: 200, y: 200}": środek
+            "{x: 200, y: 300}": na dole
+            "{x: 300, y: 100}": górny prawy róg
+            "{x: 300, y: 200}": w prawo
             "{x: 300, y: 300}": dolny prawy róg
+        text: utwórz nowy {COSTUME} w {LOCATION}
       Mikelab_groupDestroy:
-        text: usuń {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': wszystkie
             '"this"': to
+        text: usuń {SELECT} {COSTUME}
       Mikelab_groupDisplace:
         text: wszystkie {COSTUME} bloki {COSTUME2} z ruchu
       Mikelab_groupEdgesDisplace:
         text: blok krawędzi {COSTUME} z ruchu
       Mikelab_groupGetProp:
-        text: "{SELECT} {COSTUME} {PROPERTY}"
         options:
+          PROPERTY:
+            '"direction"': kierunek ruchu
+            '"rotation"': obrót
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
           SELECT:
             '"average"': średnia
             '"this"': to
-          PROPERTY:
-            '"scale"': rozmiar
-            '"rotation"': obrót
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-            '"direction"': kierunek ruchu
+        text: "{SELECT} {COSTUME} {PROPERTY}"
       Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': wszystkie
+            '"this"': to
         text: zatrzymaj {SELECT} {COSTUME} zachowania
-        options:
-          SELECT:
-            '"all"': wszystkie
-            '"this"': to
       Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': wszystkie
+            '"this"': to
         text: "{SELECT} {COSTUME} zatrzymuje {BEHAVIOR}"
-        options:
-          SELECT:
-            '"all"': wszystkie
-            '"this"': to
       Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': wszystkie
+            '"this"': to
         text: usuń kolor z {SELECT} {COSTUME}
-        options:
-          SELECT:
-            '"all"': wszystkie
-            '"this"': to
       Mikelab_groupSetProp:
-        text: ustaw {PROPERTY} {SELECT} {COSTUME} na  {VAL}
         options:
-          SELECT:
-            '"all"': wszystkie
-            '"this"': to
           PROPERTY:
-            '"scale"': rozmiar
+            '"direction"': kierunek ruchu
             '"rotation"': obrót
+            '"scale"': rozmiar
             '"x"': współrzędna x
             '"y"': współrzędna y
-            '"direction"': kierunek ruchu
+          SELECT:
+            '"all"': wszystkie
+            '"this"': to
+        text: ustaw {PROPERTY} {SELECT} {COSTUME} na  {VAL}
       Mikelab_groupSetTint:
-        text: zmień kolor {SELECT} {COSTUME} na {COLOR}
         options:
           SELECT:
             '"all"': wszystkie
             '"this"': to
+        text: zmień kolor {SELECT} {COSTUME} na {COLOR}
       Mikelab_groupWhenClickedOn:
         text: kiedy {COSTUME} kliknięty
       Mikelab_groupWhenXTouchesY:
@@ -1961,15 +1272,12 @@ pl:
       Mikelab_hasBehavior:
         text: "{SPRITE} jest obecnie {BEHAVIOR}"
       Mikelab_hideFish:
-        text: usuń {TRASH}
         options:
           TRASH:
-            object: obiekt
             fish: ryba
+            object: obiekt
+        text: usuń {TRASH}
       Mikelab_ifDanceIs:
-        text: |-
-          jeśli {SPRITE} wykonuje {DANCE}
-          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Clap high
@@ -1979,35 +1287,38 @@ pl:
             MOVES.Drop: Drop
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Roll: Body Roll
             MOVES.Kick: Star
+            MOVES.Rest: Żaden
+            MOVES.Roll: Body Roll
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
-            MOVES.Rest: Żaden
+        text: |-
+          jeśli {SPRITE} wykonuje {DANCE}
+          {DO1} {DO2}
       Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: ryba
+            MOVES.Clown: moja etykieta
         text: |-
           jeśli {DANCE}
           wykonaj {DO1} w przeciwnym razie {DO2}
+      Mikelab_ifRecognizeLabel:
         options:
           DANCE:
             MOVES.ClapHigh: ryba
             MOVES.Clown: moja etykieta
-      Mikelab_ifRecognizeLabel:
         text: |-
           jeśli wykryty obiekt to {DANCE}
           wykonaj {DO1} w przeciwnym razie {DO2}
-        options:
-          DANCE:
-            MOVES.ClapHigh: ryba
-            MOVES.Clown: moja etykieta
       Mikelab_ifRecognizeLabelOnly:
-        text: |-
-          jeśli wykryty obiekt to {DANCE}
-          wykonaj {DO1}
         options:
           DANCE:
             MOVES.ClapHigh: ryba
             MOVES.Clown: nie moja etykieta
+        text: |-
+          jeśli wykryty obiekt to {DANCE}
+          wykonaj {DO1}
       Mikelab_joinText:
         text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
@@ -2015,16 +1326,16 @@ pl:
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_poemTextJoin:
-        text: "{TEXT1} {VAR} {TEXT2}"
         options:
           TEXT1:
-            '"Balancing on the "': "'Balansując na'"
             '"A chubby cat "': '"Pucołowaty kot"'
+            '"Balancing on the "': "'Balansując na'"
             '"The "': '"The "'
           TEXT2:
+            '" breeze blows"': "„wieje wiatr” "
             '" fence"': '" płot"'
             '""': '""'
-            '" breeze blows"': "„wieje wiatr” "
+        text: "{TEXT1} {VAR} {TEXT2}"
       Mikelab_randomColor:
         text: losowy kolor
       Mikelab_removeBehaviorSimple:
@@ -2038,116 +1349,116 @@ pl:
       Mikelab_setBG:
         options:
           BG:
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': boisko
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': kort
+              tenicowy
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miasto
-            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': ciągła
-              trawa
-            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': pustynna
-              droga
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kuchnia '
             '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': pole
               uprawne
-            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': pływająca
-              trawa
-            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': przód
-              domu
-            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kuchnia '
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': salon
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': widok
               parku
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': sosny
-            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': boisko
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etap
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': podziemny
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etap
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': ciągła
+              trawa
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': słońce
               i tęcza
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': przód
+              domu
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': prysznice
               słoneczne
-            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': kort
-              tenicowy
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': pustynna
+              droga
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': pływająca
+              trawa
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': wyspa
               drzew
-            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': podziemny
       Mikelab_setProp:
         options:
           PROPERTY:
-            '"scale"': rozmiar
+            '"direction"': kierunek ruchu
             '"rotation"': obrót
+            '"scale"': rozmiar
             '"x"': współrzędna x
             '"y"': współrzędna y
-            '"direction"': kierunek ruchu
       Mikelab_setupOutbreak:
         text: |-
           konfiguracja epidemii
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': w prawo
             '"left"': w lewo
+            '"right"': w prawo
       Mikelab_showText:
         options:
           PREPOSITION:
             '"above"': powyżej
             '"below"': poniżej
       Mikelab_sprite:
-        text: nowy {COSTUME} duszek w {LOCATION}
         options:
           LOCATION:
-            "{x: 200, y: 100}": u góry
-            "{x: 200, y: 300}": na dole
-            "{x: 100, y: 200}": w lewo
-            "{x: 300, y: 200}": w prawo
-            "{x: 200, y: 200}": środek
             "{x: 100, y: 100}": górny lewy róg
-            "{x: 300, y: 100}": górny prawy róg
+            "{x: 100, y: 200}": w lewo
             "{x: 100, y: 300}": dolny lewy róg
+            "{x: 200, y: 100}": u góry
+            "{x: 200, y: 200}": środek
+            "{x: 200, y: 300}": na dole
+            "{x: 300, y: 100}": górny prawy róg
+            "{x: 300, y: 200}": w prawo
             "{x: 300, y: 300}": dolny prawy róg
+        text: nowy {COSTUME} duszek w {LOCATION}
       Mikelab_whenClickedOn:
         text: kiedy {SPRITE} kliknął
       Mikelab_whenKeyPressed:
-        text: po naciśnięciu {KEY}
         options:
           KEY:
-            '"up"': strzałka w górę
+            '"a"': A
+            '"d"': R
             '"down"': strzałka w dół
             '"left"': strzałka w lewo
             '"right"': strzałka w prawo
-            '"space"': spacja
-            '"w"': W
-            '"a"': A
             '"s"': S
-            '"d"': R
+            '"space"': spacja
+            '"up"': strzałka w górę
+            '"w"': W
+        text: po naciśnięciu {KEY}
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': strzałka w górę
+            '"a"': A
+            '"d"': R
             '"down"': strzałka w dół
             '"left"': strzałka w lewo
             '"right"': strzałka w prawo
-            '"space"': spacja
-            '"w"': W
-            '"a"': A
             '"s"': S
-            '"d"': R
+            '"space"': spacja
+            '"up"': strzałka w górę
+            '"w"': W
       Mikelab_whenMouseClicked:
         text: kiedy kliknięto myszką
       Mikelab_whenYesNoClicked:
-        text: kiedy {KEY} kliknięty
         options:
           KEY:
-            '"yes"': tak
             '"no"': nie
+            '"yes"': tak
+        text: kiedy {KEY} kliknięty
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': strzałka w górę
             '"down"': strzałka w dół
             '"left"': strzałka w lewo
             '"right"': strzałka w prawo
             '"space"': spacja
+            '"up"': strzałka w górę
       Mikelab_xLocationOf:
         text: x współrzędna {SPRITE}
       Mikelab_yLocationOf:
@@ -2177,42 +1488,41 @@ pl:
       Outbreak_stopMoving:
         text: potwory zatrzymują się
       ParticlesBlocks_getMicroscope:
+        options:
+          INPUT1:
+            '1': sok cytrynowy
+            '3': proszek do pieczenia
+            '5': oba
         text: Mikroskop ma {INPUT1}
-        options:
-          INPUT1:
-            '1': sok cytrynowy
-            '3': proszek do pieczenia
-            '5': oba
       ParticlesBlocks_setMicroscope:
-        text: Ustaw mikroskop na {INPUT1}
         options:
           INPUT1:
             '1': sok cytrynowy
             '3': proszek do pieczenia
             '5': oba
+        text: Ustaw mikroskop na {INPUT1}
       ParticlesBlocks_statesOfMatter:
-        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
-            new Behavior(solid, []): trwały
             new Behavior(liquid, []): ciecz
+            new Behavior(solid, []): trwały
             new Behavior(wandering, []): gaz
+        text: "{BEHAVIOR}"
       ParticlesBlocks_statesOfMatter2:
+        options:
+          BEHAVIOR:
+            '"gas"': gazowa cząstka
+            '"liquid"': płynna cząstka
+            '"solid"': stała cząstka
         text: Ustaw {COSTUME} na zachowanie {BEHAVIOR}
-        options:
-          BEHAVIOR:
-            '"solid"': stała cząstka
-            '"liquid"': płynna cząstka
-            '"gas"': gazowa cząstka
       ParticlesBlocks_statesOfMatter_testing:
-        text: "[Testing] Ustaw {COSTUME} na zachowanie {BEHAVIOR}"
         options:
           BEHAVIOR:
-            '"solid"': stała cząstka
-            '"liquid"': płynna cząstka
             '"gas"': gazowa cząstka
+            '"liquid"': płynna cząstka
+            '"solid"': stała cząstka
+        text: "[Testing] Ustaw {COSTUME} na zachowanie {BEHAVIOR}"
       Poetry_addFrame:
-        text: dodaj zarys {BRUSH}
         options:
           BRUSH:
             '"bamboo"': Bambus
@@ -2234,6 +1544,7 @@ pl:
             '"waves"': fale
             '"wood"': Drewniana ramka
             '"zigzag"': Zig-Zag
+        text: dodaj zarys {BRUSH}
       Poetry_addLine:
         text: dodaj linię {LINE}
       Poetry_addTextHighlight:
@@ -2247,64 +1558,63 @@ pl:
       Poetry_hideText:
         text: ukryj tekst
       Poetry_makeBurst:
-        text: utwórz {EFFECT} efekt z {NUM} {ANIMATION_NAME} duszkami
         options:
           EFFECT:
             '"burst"': wybuch
             '"pop"': popularny
             '"rain"': deszcz
             '"spiral"': spirala
+        text: utwórz {EFFECT} efekt z {NUM} {ANIMATION_NAME} duszkami
       Poetry_makeNewSpriteAnon:
         text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       Poetry_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
       Poetry_playMusic:
-        text: graj muzykę {SOUND}
         options:
           SOUND:
-            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Jasny
-            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Spokojny
-            '"sound://category_nature/steady_campfire_loop.mp3"': Ognisko
-            '"sound://category_nature/rain_loop.mp3"': Mżawka
             '"sound://category_background/fire_burning.mp3"': Kominek
-            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Las
-            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': Harfy
-            '"sound://category_loops/faultering_desicion_loop1.mp3"': Nawiedzany
             '"sound://category_background/inside_plane.mp3"': Szum
-            '"sound://category_loops/red_flag_loop1.mp3"': Misja
-            '"sound://category_nature/summer_night_loop.mp3"': Noc
             '"sound://category_background/ocean_waves.mp3"': ocean
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Deszczowy
             '"sound://category_background/rainforest_ambient_sound.mp3"': Deszczowy
               las
             '"sound://category_background/repitition.mp3"': Jazda konna
-            '"sound://category_background/wavering_wind.mp3"': Senny
-            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Powoli
             '"sound://category_background/waterfall.mp3"': Wodospad
+            '"sound://category_background/wavering_wind.mp3"': Senny
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Nawiedzany
+            '"sound://category_loops/red_flag_loop1.mp3"': Misja
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Powoli
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': Harfy
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Spokojny
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Jasny
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Las
+            '"sound://category_nature/rain_loop.mp3"': Mżawka
+            '"sound://category_nature/steady_campfire_loop.mp3"': Ognisko
+            '"sound://category_nature/summer_night_loop.mp3"': Noc
+        text: graj muzykę {SOUND}
       Poetry_playSound:
-        text: zagraj {SOUND}
         options:
           SOUND:
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Gadać
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': światło
+            '"sound://category_achievements/peaceful_win_1.mp3"': Zwycięstwo
+            '"sound://category_achievements/peaceful_win_6.mp3"': Dzwonki wietrzne
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Skan
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Drgania
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Trzepot
+            '"sound://category_background/typewriter.mp3"': Maszyna do pisania
             '"sound://category_bell/long_bell_notification.mp3"': Dzwon
             '"sound://category_digital/boing_2.mp3"': Dźwięk odbicia
-            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bąbelki
-            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Gadać
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Wir
             '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Spuszczenie
               powietrza
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Porażka
-            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Trzepot
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Skok
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': światło
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Dźwięk niewielkiego
               wybuchu
-            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Skan
-            '"sound://category_background/typewriter.mp3"': Maszyna do pisania
-            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Drgania
-            '"sound://category_achievements/peaceful_win_1.mp3"': Zwycięstwo
-            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Wir
-            '"sound://category_achievements/peaceful_win_6.mp3"': Dzwonki wietrzne
-      Poetry_playSoundOptionsSpace:
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bąbelki
         text: zagraj {SOUND}
+      Poetry_playSoundOptionsSpace:
         options:
           SOUND:
             "'sound://category_space/Blackhole_SFX.mp3'": czarna dziura
@@ -2320,31 +1630,29 @@ pl:
             "'sound://category_space/Supernova_SFX.mp3'": Supernowa
             "'sound://category_space/Tycho_SFX.mp3'": tycho
             "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": galaktyka jacuzzi
+        text: zagraj {SOUND}
       Poetry_setAuthor:
         text: ustaw autora {AUTHOR}
       Poetry_setBackground:
         text: ustaw kolor tła {COLOR}
       Poetry_setBackgroundEffect:
-        text: ustaw efekt tła {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"blooming"': Rozkwiecony
             '"bubbles"': Bąbelki
             '"clouds"': Pochmurno
+            '"colors"': Kolory
             '"confetti"': Konfetti
             '"darkCircles"': Zblakły
             '"fadeColors"': Oszroniony
             '"hearts"': serca
-            '"space"': Przestrzeń
             '"rain"': deszcz
             '"ripples"': Fale
-            '"colors"': Kolory
-            '"stars"': Gwiazdy
+            '"space"': Przestrzeń
             '"squiggles"': Pokręcone linie
+            '"stars"': Gwiazdy
           PALETTE:
             '"autumn"': Jesień
-            '"sunrise"': Świt
-            '"sunset"': Zmierzch
             '"grayscale"': Szarości
             '"ocean"': Ocean
             '"rainbow"': tęcza
@@ -2352,34 +1660,37 @@ pl:
             '"sky"': Niebo
             '"spring"': Wiosna
             '"summer"': Lato
+            '"sunrise"': Świt
+            '"sunset"': Zmierzch
             '"winter"': Zima
+        text: ustaw efekt tła {EFFECT} {PALETTE}
       Poetry_setBackgroundImageAs:
         text: ustaw tło na {IMG}
       Poetry_setFont:
-        text: ustaw czcionkę {FONT}
         options:
           FONT:
-            '"Arial"': Arial
             '"Arial Black"': Arial Black
+            '"Arial"': Arial
             '"Courier"': Courier
             '"Cursive"': Pismo odręczne
-            '"Impact"': Impact
             '"Georgia"': Georgia
+            '"Impact"': Impact
             '"Times"': Times
+        text: ustaw czcionkę {FONT}
       Poetry_setFontColor:
         text: ustaw kolor czcionki {FILL}
       Poetry_setForegroundEffect:
-        text: wykonaj efekt {EFFECT}
         options:
           EFFECT:
             '"bubbles"': Bąbelki
             '"confetti"': Konfetti
-            '"hearts"': serca
             '"emojis"': Szczęśliwe emotikony
+            '"glass"': Rozbijające się szkło
+            '"hearts"': serca
             '"rain"': deszcz
             '"starburst"': Rozprysk
-            '"glass"': Rozbijające się szkło
             '"twinkling"': Migotliwy
+        text: wykonaj efekt {EFFECT}
       Poetry_setPrompt:
         text: monituj użytkownika {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} o zmienną {VAR}
       Poetry_setPromptWithChoices:
@@ -2389,46 +1700,46 @@ pl:
       Poetry_setSize:
         text: ustaw {SPRITE} rozmiar na {VAL}
       Poetry_setTextEffect:
-        text: ustaw efekt tekstu {EFFECT}
         options:
           EFFECT:
             '"fade"': znikać
+            '"flyBottom"': lecieć z dołu
             '"flyLeft"': lecieć z lewa
             '"flyRight"': lecieć z prawa
             '"flyTop"': lecieć z góry
-            '"flyBottom"': lecieć z dołu
             '"typewriter"': maszyna do pisania
+        text: ustaw efekt tekstu {EFFECT}
       Poetry_setTitle:
         text: ustaw tytuł {TITLE}
       Poetry_showText:
         text: pokaż tekst
       Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            '"fluttering"': trzepotanie
+            '"growing"': rośnięcie
+            '"jittering"': trzęsienie się
+            '"moving_east_and_looping"': pętla na wschód
+            '"moving_north_and_looping"': pętla na północ
+            '"moving_south_and_looping"': pętla na południe
+            '"moving_west_and_looping"': pętla na zachód
+            '"shrinking"': zwężenie
+            '"spinning_left"': obracanie się w lewo
+            '"spinning_right"': obracanie się w prawo
+            '"swimming_left_and_right"': pływanie
+            '"wandering"': wędrowanie
+            '"wobbling"': chybotanie
         text: 'duszek {ANIMATION_NAME} rozpoczyna {BEHAVIOR} '
-        options:
-          BEHAVIOR:
-            '"fluttering"': trzepotanie
-            '"growing"': rośnięcie
-            '"jittering"': trzęsienie się
-            '"moving_north_and_looping"': pętla na północ
-            '"moving_south_and_looping"': pętla na południe
-            '"moving_east_and_looping"': pętla na wschód
-            '"moving_west_and_looping"': pętla na zachód
-            '"shrinking"': zwężenie
-            '"spinning_left"': obracanie się w lewo
-            '"spinning_right"': obracanie się w prawo
-            '"swimming_left_and_right"': pływanie
-            '"wandering"': wędrowanie
-            '"wobbling"': chybotanie
       Poetry_stopBehavior:
-        text: 'duszek {ANIMATION_NAME} zatrzymuje {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"all"': "--wszystkie zachowania--"
             '"fluttering"': trzepotanie
             '"growing"': rośnięcie
             '"jittering"': trzęsienie się
+            '"moving_east_and_looping"': pętla na wschód
             '"moving_north_and_looping"': pętla na północ
             '"moving_south_and_looping"': pętla na południe
-            '"moving_east_and_looping"': pętla na wschód
             '"moving_west_and_looping"': pętla na zachód
             '"shrinking"': zwężenie
             '"spinning_left"': obracanie się w lewo
@@ -2436,7 +1747,7 @@ pl:
             '"swimming_left_and_right"': pływanie
             '"wandering"': wędrowanie
             '"wobbling"': chybotanie
-            '"all"': "--wszystkie zachowania--"
+        text: 'duszek {ANIMATION_NAME} zatrzymuje {BEHAVIOR} '
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       Poetry_textConcat:
@@ -2444,11 +1755,16 @@ pl:
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
-        text: gdy linia {N} pokazuje
         options:
           N:
             '0': "???"
             '1': '1'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2457,12 +1773,7 @@ pl:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
+        text: gdy linia {N} pokazuje
       Poetry_whenPromptAnswered:
         text: gdy {VAR} uzyskała odpowiedź
       RyanLab_moveForward:
@@ -2492,135 +1803,135 @@ pl:
       Vector_vectorNorth:
         text: północ
       Vector_where:
-        text: każdy duszek, gdzie {PROPERTY} ma warość {VALUE} wykonuje {STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": kolor
+        text: każdy duszek, gdzie {PROPERTY} ma warość {VALUE} wykonuje {STATEMENT}
       aalab_layoutSprites:
-        text: układ potworów jako {FORMAT}
         options:
           FORMAT:
-            '"grid"': siatka
             '"border"': brzeg
-            '"row"': wiersz
+            '"grid"': siatka
             '"random"': losowy
+            '"row"': wiersz
+        text: układ potworów jako {FORMAT}
       aalab_levelFailure:
-        text: uczeń {STATE} z kluczem {KEY}
         options:
           STATE:
             '0': przechodzi
             '3': nie udaje się
+        text: uczeń {STATE} z kluczem {KEY}
       aalab_setSpeed:
         text: ustaw prędkość potwora na {VAL}
       aalab_setupSim:
         text: załóż Miasto Potworów z [COUNT] [0] potworami
       aalab_someGraduallyStartIntervention:
-        text: "{PORTION} potwory {RATE} zaczynają  {BEHAVIOR}"
         options:
+          BEHAVIOR:
+            '"avoiding"': dystans społeczny
+            '"congregating"': gromadzenie się
+            '"none"': nie ruszać się
+            '"quarantining"': poddaje się kwarantannie, gdy jest chory
+            '"wandering"': wędrując losowo
           PORTION:
-            '1': wszystkie
-            '0.75': większość
-            '0.5': połowa z
             '0.25': kilka
+            '0.5': połowa z
+            '0.75': większość
+            '1': wszystkie
           RATE:
+            '"gradually"': stopniowo
             '"immediately"': natychmiast
             '"quickly"': szybko
-            '"gradually"': stopniowo
             '"slowly"': powoli
-          BEHAVIOR:
-            '"wandering"': wędrując losowo
-            '"congregating"': gromadzenie się
-            '"quarantining"': poddaje się kwarantannie, gdy jest chory
-            '"avoiding"': dystans społeczny
-            '"none"': nie ruszać się
+        text: "{PORTION} potwory {RATE} zaczynają  {BEHAVIOR}"
       aalab_someStartIntervention:
-        text: "{PORTION} potwory zaczynają  {BEHAVIOR}"
         options:
-          PORTION:
-            '1': wszystkie
-            '0.75': większość
-            '0.5': połowa z
-            '0.25': kilka
           BEHAVIOR:
-            '"wandering"': wędrując losowo
-            '"congregating"': gromadzenie się
-            '"quarantining"': poddaje się kwarantannie, gdy jest chory
             '"avoiding"': dystans społeczny
+            '"congregating"': gromadzenie się
             '"none"': nie ruszać się
+            '"quarantining"': poddaje się kwarantannie, gdy jest chory
+            '"wandering"': wędrując losowo
+          PORTION:
+            '0.25': kilka
+            '0.5': połowa z
+            '0.75': większość
+            '1': wszystkie
+        text: "{PORTION} potwory zaczynają  {BEHAVIOR}"
       aalab_spriteSayChoices:
-        text: "{SPRITE} powiedz {SPEECH}"
         options:
           SPEECH:
-            '"I have spoken."': Rozmawiałam.
             '"Bounty hunting is a complicated profession."': Polowanie na nagrody
               to skomplikowany zawód.
+            '"Everything small is just a smaller version of something big."': Wszystko,
+              co małe, jest tylko mniejszą wersją czegoś dużego.
+            '"I have spoken."': Rozmawiałam.
             '"I will initiate self-destruct."': Zainicjuję samozniszczenie.
-            '"This is the way."': To jest sposób.
+            '"Life happens wherever you are, whether you make it or not."': Życie
+              jest gdziekolwiek jesteś, czy ci się uda, czy nie.
+            '"My first girlfriend turned into the moon."': Moja pierwsza dziewczyna
+              zamieniła się w księżyc.
             '"People get built different. We don’t need to figure it out, we just need to respect it."': Ludzie
               są formowani w różny sposób. Nie musimy tego zrozumieć, po prostu musimy
               to szanować.
-            '"You don’t need a mirror to look good. You’re beautiful on the inside."': Nie
-              potrzebujesz lustra, żeby dobrze wyglądać. Jesteś piękna w środku.
+            '"Roar!"': Wrzask!
             '"Sometimes life is scary and dark. That is why we must find the light."': Czasami
               życie jest przerażające i ciemne. Dlatego musimy znaleźć jasne jego
               strony.
-            '"Everything small is just a smaller version of something big."': Wszystko,
-              co małe, jest tylko mniejszą wersją czegoś dużego.
             '"Suckin’ at something is the first step to being sorta good at something."': Zachłystywanie
               się czymś to pierwszy krok do bycia w czymś dobrym.
-            '"Life happens wherever you are, whether you make it or not."': Życie
-              jest gdziekolwiek jesteś, czy ci się uda, czy nie.
-            '"You can’t knock me down!"': Nie możesz mnie powalić!
-            '"Roar!"': Wrzask!
-            '"My first girlfriend turned into the moon."': Moja pierwsza dziewczyna
-              zamieniła się w księżyc.
+            '"This is the way."': To jest sposób.
             '"True humility is the only antidote to shame."': Prawdziwa pokora jest
               jedynym antidotum na wstyd.
             '"You are stronger and wiser and freer than you have ever been."': Jesteś
               silniejszy, mądrzejszy i swobodniejszy niż kiedykolwiek.
+            '"You can’t knock me down!"': Nie możesz mnie powalić!
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': Nie
+              potrzebujesz lustra, żeby dobrze wyglądać. Jesteś piękna w środku.
             '"You have to try every time. You can''t quit because you''re afraid you might fail."': Musisz
               próbować za każdym razem. Nie możesz zrezygnować bojąc się, że możesz
               ponieść porażkę.
+        text: "{SPRITE} powiedz {SPEECH}"
       aalab_startIntervention:
-        text: potwory zaczynają {BEHAVIOR}
         options:
           BEHAVIOR:
-            wandering: wędrując losowo
-            '"congregating"': gromadzenie się
-            '"quarantining"': poddaje się kwarantannie, gdy jest chory
             '"avoiding"': dystans społeczny
+            '"congregating"': gromadzenie się
             '"none"': nie ruszać się
+            '"quarantining"': poddaje się kwarantannie, gdy jest chory
+            wandering: wędrując losowo
+        text: potwory zaczynają {BEHAVIOR}
       adaptations_adaptationBehaviors:
-        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
-            new Behavior(spinning_right, []): obracanie się w prawo
-            new Behavior(spinning_left, []): obracanie się w lewo
             new Behavior(fluttering, []): trzepotanie
             new Behavior(jittering, []): trzęsienie się
-            new Behavior(wobbling, []): chybotanie
-            new Behavior(wandering, []): wędrowanie
             new Behavior(patrolling, []): patrolowanie
+            new Behavior(spinning_left, []): obracanie się w lewo
+            new Behavior(spinning_right, []): obracanie się w prawo
+            new Behavior(wandering, []): wędrowanie
+            new Behavior(wobbling, []): chybotanie
+        text: "{BEHAVIOR}"
       adaptations_location_picker:
         text: w:{LOCATION}
       adaptations_makeNumSpritesNear:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       adaptations_spriteBirdSay:
-        text: "{SPRITE} mówi {SPEECH}"
         options:
           SPEECH:
-            '"My beak is pointy and strong to find insects in tree bark."': Mój dziób
-              jest spiczasty i silny, aby znaleźć owady w korze drzewa.
             '"I have a beak like a scoop to catch fish."': Mam dziób jak czerpak do
               łowienia ryb.
+            '"My beak is pointy and strong to find insects in tree bark."': Mój dziób
+              jest spiczasty i silny, aby znaleźć owady w korze drzewa.
+        text: "{SPRITE} mówi {SPEECH}"
       adaptations_startFollowing:
         text: "{SPRITE} zaczyna podążać {TARGET}"
       adaptations_toggleBehaviorSimple:
-        text: duszek {SPRITE} {TOGGLE} {BEHAVIOR}
         options:
           TOGGLE:
             '"begins"': zaczyna się
             '"stops"': zatrzymuje się
+        text: duszek {SPRITE} {TOGGLE} {BEHAVIOR}
       binary_drawBin:
         text: narysuj binarny {BIN}
       binary_drawBinScreen:
@@ -2637,12 +1948,12 @@ pl:
       binary_drawDec:
         text: narysuj dziesiętne {DEC}
       binary_drawPixelHere:
-        text: ustaw piksel {VAL}
         options:
           VAL:
+            '"toggle"': przełącz
             '0': 'off'
             '1': na
-            '"toggle"': przełącz
+        text: ustaw piksel {VAL}
       binary_drawString:
         text: narysuj łańcuch {STR}
       binary_goTo:
@@ -2652,89 +1963,89 @@ pl:
       binary_gridSize:
         text: ustal wielkość siatki {SIZE}
       binary_move:
-        text: idź {DIR}
         options:
           DIR:
-            '"up"': do góry
             '"down"': do dołu
             '"left"': w lewo
             '"right"': w prawo
+            '"up"': do góry
+        text: idź {DIR}
       binary_whenKey:
-        text: po naciśnięciu {KEY}
         options:
           KEY:
-            '"up"': do góry
+            '"a"': a
+            '"d"': d
             '"down"': do dołu
             '"left"': w lewo
             '"right"': w prawo
-            '"space"': przestrzeń
-            '"a"': a
-            '"w"': w
             '"s"': s
-            '"d"': d
+            '"space"': przestrzeń
+            '"up"': do góry
+            '"w"': w
+        text: po naciśnięciu {KEY}
       craft_ifPath:
-        text: |-
-          jeśli jest ścieżka {DIR}
-          {STATEMENT}
         options:
           DIR:
             "'ahead'": z przodu jest
-            "'right'": w prawo
             "'left'": w lewo
-      craft_ifStandingOn:
+            "'right'": w prawo
         text: |-
-          jeśli stojąc na {TYPE}
+          jeśli jest ścieżka {DIR}
           {STATEMENT}
+      craft_ifStandingOn:
         options:
           TYPE:
             "'blueCoralBlock'": niebieski koral
+            "'planksOak'": deski dębowe
             "'redCoralBlock'": czerwony koral
             "'sand'": piasek
-            "'wool_blue'": głęboka woda
-            "'planksOak'": deski dębowe
             "'seaLantern'": latarnia morska
-      craft_ifStandingOnLimit:
+            "'wool_blue'": głęboka woda
         text: |-
           jeśli stojąc na {TYPE}
           {STATEMENT}
+      craft_ifStandingOnLimit:
         options:
           TYPE:
-            "'sand'": piasek
             "'darkPrismarine'": ciemny pryzmaryn
+            "'sand'": piasek
             "'seaLantern'": latarnia morska
+        text: |-
+          jeśli stojąc na {TYPE}
+          {STATEMENT}
       craft_log:
         text: zaloguj wiadomości {MESSAGE}
       craft_moveForward:
         text: idź do przodu
       craft_placeBlock:
-        text: umieść {blockType}
         options:
           blockType:
-            '"strippedOak"': okorowany dąb
-            '"strippedDarkOak"': okorowany ciemny dąb
-            '"stoneBricks"': kamienne cegły
-            '"mossyStoneBricks"': omszałe cegły z kamienia
-            '"crackedStoneBricks"': popękane cegły z kamienia
-            '"chiseledStoneBricks"': dekoracyjne kamienne cegły
-            '"blueCoralBlock"': blok niebieskiego koralu
-            '"pinkCoralBlock"': blok różowego koralu
-            '"magentaCoralBlock"': blok fioletowego koralu
-            '"redCoralBlock"': blok czerwonego koralu
-            '"yellowCoralBlock"': blok żółtego koralu
-            '"blueDeadCoralBlock"': blok martwego niebieskiego koralu
-            '"pinkDeadCoralBlock"': blok martwego różowego koralu
-            '"magentaDeadCoralBlock"': blok martwego fioletowego koralu
-            '"readDeadCoralBlock"': blok martwego czerwonego koralu
-            '"yellowDeadCoralBlock"': blok martwego żółtego koralu
-            '"prismarine"': pryzmaryn
-            '"darkPrismarine"': ciemny pryzmaryn
-            '"seaLantern"': latarnia morska
-            '"packedIce"': upakowany lód
-            '"blueIce"': niebieski lód
             '"blackConcrete"': czarny beton
-            '"seaGrass"': trawa morska
+            '"blueCoralBlock"': blok niebieskiego koralu
+            '"blueDeadCoralBlock"': blok martwego niebieskiego koralu
+            '"blueIce"': niebieski lód
+            '"chiseledStoneBricks"': dekoracyjne kamienne cegły
+            '"crackedStoneBricks"': popękane cegły z kamienia
+            '"darkPrismarine"': ciemny pryzmaryn
             '"kelp"': wodorosty
+            '"magentaCoralBlock"': blok fioletowego koralu
+            '"magentaDeadCoralBlock"': blok martwego fioletowego koralu
+            '"mossyStoneBricks"': omszałe cegły z kamienia
+            '"packedIce"': upakowany lód
+            '"pinkCoralBlock"': blok różowego koralu
+            '"pinkDeadCoralBlock"': blok martwego różowego koralu
             '"polishedGranite"': wypolerowany granit
+            '"prismarine"': pryzmaryn
+            '"readDeadCoralBlock"': blok martwego czerwonego koralu
+            '"redCoralBlock"': blok czerwonego koralu
+            '"seaGrass"': trawa morska
+            '"seaLantern"': latarnia morska
+            '"stoneBricks"': kamienne cegły
+            '"strippedDarkOak"': okorowany ciemny dąb
+            '"strippedOak"': okorowany dąb
+            '"yellowCoralBlock"': blok żółtego koralu
+            '"yellowDeadCoralBlock"': blok martwego żółtego koralu
+        text: umieść {blockType}
       craft_placePrismarine:
         text: umieść pryzmaryn
       craft_placeTorch:
@@ -2748,7 +2059,6 @@ pl:
           powtarzaj do osiągnięcia celu
           {STATEMENT}
       craft_spawnEntity:
-        text: tarło {ENTITY}
         options:
           ENTITY:
             '"cod"': dorsz
@@ -2757,31 +2067,31 @@ pl:
             '"seaTurtle"': żółw morski
             '"squid"': kałamarnica
             '"tropicalFish"': ryba tropikalna
+        text: tarło {ENTITY}
       craft_turn:
-        text: skręt {DIR}
         options:
           DIR:
-            right: w prawo ↻
             left: w lewo ↺
+            right: w prawo ↻
+        text: skręt {DIR}
       ecosystems_catchMe:
         text: złap {THIS}
       ecosystems_eat:
         text: jedz {THIS}
       ecosystems_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': w sam raz
+            '"too little"': za mało
+            '"too much"': za dużo
         text: |2-
            jeśli {CONDITION}{SPRITE}
           {STATEMENT}
-        options:
-          CONDITION:
-            '"too much"': za dużo
-            '"just right"': w sam raz
-            '"too little"': za mało
       ecosystems_int10:
-        text: "{VALUE}"
         options:
           VALUE:
-            '0': '0'
             '1': '1'
+            '10': '10'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2790,7 +2100,7 @@ pl:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
+        text: "{VALUE}"
       ecosystems_location_picker:
         text: w:{LOCATION}
       ecosystems_makeNewSpriteBetween:
@@ -2798,26 +2108,714 @@ pl:
       ecosystems_makeNumSpritesAtLocation:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki w {LOCATION_GENERATOR}
       ecosystems_makeNumSpritesWithinRange:
-        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki w {RANGE}
         options:
           RANGE:
-            "{x1:0, x2:400, y1:200, y2:400}": Góra
-            "{x1:0, x2:400, y1:150, y2:250}": Środek
             "{x1:0, x2:400, y1:0, y2:200}": Dół
+            "{x1:0, x2:400, y1:150, y2:250}": Środek
+            "{x1:0, x2:400, y1:200, y2:400}": Góra
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki w {RANGE}
       ecosystems_randomLocationWithinRange:
         text: x min{X1}x max{X2}y min{Y1}y max{Y2}
       ecosystems_randomLocationWithinSelectedRange:
-        text: "{RANGE}"
         options:
           RANGE:
-            "{x1:0, x2:400, y1:200, y2:400}": Góra
             "{x1:0, x2:400, y1:0, y2:200}": Dół
+            "{x1:0, x2:400, y1:200, y2:400}": Góra
+        text: "{RANGE}"
+      gamelab_addBehaviorSimple:
+        text: duszek {SPRITE} rozpoczyna {BEHAVIOR}
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': unikaj
+            '"follow"': podążaj
+        text: "{SPRITE} osiąga cel {TARGET}"
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"frames"': ramki
+            '"seconds"': sekundy
+        text: w {N} {UNIT}
+      gamelab_avoidingTargets:
+        text: unikając celów
+      gamelab_beginCollectingData:
+        text: rozpocznij zbierać dane {BREAK} wartości {VALUE} z etykietami {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
+      gamelab_bounceOff:
+        text: "{SPRITE} odbija się od {TARGET}"
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"direction"': kierunek ruchu
+            '"rotation"': obrót
+            '"scale"': rozmiar
+            '"speed"': prędkość
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+        text: zamień {SPRITE} {PROPERTY} przez {VAL}
+      gamelab_changeVarBy:
+        text: zastąp {VARIABLE} przez {VAL}
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kiedy
+            '"while"': dopóki
+        text: "{CONDITION} {SPRITE1} dotyka {SPRITE2}"
+      gamelab_clickedOn:
+        text: kiedy {SPRITE} kliknął
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(fluttering, []): trzepotanie
+            new Behavior(jittering, []): trzęsienie się
+            new Behavior(moving_east_and_looping, []): przechodząc na wschód i powtarzając
+              w pętli
+            new Behavior(moving_north_and_looping, []): poruszanie się na północ i
+              w pętli
+            new Behavior(moving_south_and_looping, []): poruszanie się na południe
+              i w pętli
+            new Behavior(moving_west_and_looping, []): przechodząc na zachód i powtarzając
+              w pętli
+            new Behavior(patrolling, []): patrolowanie
+            new Behavior(spinning_left, []): obracanie się w lewo
+            new Behavior(spinning_right, []): obracanie się w prawo
+            new Behavior(wandering, []): wędrowanie
+            new Behavior(wobbling, []): chybotanie
+        text: "{BEHAVIOR}"
+      gamelab_comment:
+        text: 'komentarz: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: liczba {SPRITE}
+      gamelab_createNewSprite:
+        text: "utwórz nowego duszka \n o nazwie {NAME} \n w kostiumie {COSTUME} \n
+          w {LOCATION}"
+      gamelab_destroy:
+        text: usuń {THIS}
+      gamelab_draggable:
+        text: będąc przeciągalnym
+      gamelab_drawLine:
+        text: narysuj linię {COLOR}  {LOC1}  {LOC2}
+      gamelab_edgesDisplace:
+        text: krawędzie bloku {SPRITE} z ruchu
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"frames"': ramki
+            '"seconds"': sekundy
+        text: 'powtarzaj co {N} {UNIT} '
+      gamelab_followingTargets:
+        text: idąc za celami
+      gamelab_getAllSprites:
+        text: wszystkie duszki
+      gamelab_getCostume:
+        text: duszki z kostiumem {SPRITE}
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"direction"': kierunek ruchu
+            '"rotation"': obrót
+            '"scale"': rozmiar
+            '"speed"': prędkość
+            '"tint"': odcień
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+        text: "{SPRITE} {PROPERTY}"
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': inne
+            '"this"': to
+        text: duszek {CHOICE}
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"frames"': ramki
+            '"seconds"': sekundy
+        text: czas w {UNIT}
+      gamelab_glideTo:
+        text: "{SPRITE} skocz do {LOCATION}"
+      gamelab_hideTitleScreen:
+        text: ukryj ekran tytułowy
+      gamelab_ifVarEquals:
+        text: |-
+          jeśli {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '10': '10'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+        text: "{VALUE}"
+      gamelab_isCostumeEqual:
+        text: kostium {SPRITE} jest {COSTUME}
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"down"': do dołu
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"left"': w lewo
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"right"': w prawo
+            '"s"': s
+            '"space"': przestrzeń
+            '"t"': t
+            '"u"': u
+            '"up"': do góry
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+        text: czy {KEY} został naciśnięty
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} dotyka krawędzi"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} dotyka {TARGET}"
+      gamelab_jumpTo:
+        text: "{SPRITE} skocz do {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kiedy
+            '"while"': dopóki
+          KEY:
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"down"': do dołu
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"left"': w lewo
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"right"': w prawo
+            '"s"': s
+            '"space"': przestrzeń
+            '"t"': t
+            '"u"': u
+            '"up"': do góry
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+        text: "{CONDITION} {KEY} naciśnięty"
+      gamelab_layoutGrid:
+        text: układ duszków jako siatka
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': brzeg
+            '"bottom"': dolny wiersz
+            '"circle"': koło
+            '"column"': kolumna
+            '"grid"': siatka
+            '"left"': lewa kolumna
+            '"right"': prawa kolumna
+            '"row"': wiersz
+            '"top"': górny wiersz
+        text: formacja {GROUP} jako {FORMAT}
+      gamelab_locationAt:
+        text: 'pozycja x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"East"': Wschód
+            '"North"': Północ
+            '"South"': Południe
+            '"West"': Zachód
+        text: "{DISTANCE} pikseli {DIRECTION} od {LOCATION}"
+      gamelab_locationMouse:
+        text: pozycja myszy
+      gamelab_locationOf:
+        text: pozycja {SPRITE}
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': wybuch
+            '"pop"': popularny
+            '"rain"': deszcz
+            '"spiral"': spirala
+        text: utwórz {EFFECT} efekt z {NUM} {ANIMATION_NAME} duszkami
+      gamelab_makeNewSpriteAnon:
+        text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': brzeg
+            '"bottom"': dolny wiersz
+            '"circle"': koło
+            '"column"': kolumna
+            '"grid"': siatka
+            '"left"': lewa kolumna
+            '"right"': prawa kolumna
+            '"row"': wiersz
+            '"top"': górny wiersz
+        text: zrób {N} nową {GROUP} w {FORMAT}
+      gamelab_makeNumSprites:
+        text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
+      gamelab_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': w prawo
+            '180': w lewo
+            '270': do góry
+            '90': do dołu
+        text: |-
+          utworzyć pocisk
+          {ANIMATION_NAME} z {LOCATION} z szybkością {SPEED}kierunkiem{DIRECTION}
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '100': duży
+            '30': mały
+            '50': średni
+        text: utwórz {NUM} nowych {SIZE} {COSTUME} duszków
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': w lewo
+            '"right"': w prawo
+        text: "{SPRITE} skierowany {DIRECTION}"
+      gamelab_mouseLocation:
+        text: pozycja myszy
+      gamelab_moveBackward:
+        text: przemieść {SPRITE} o {DISTANCE} pikseli do tyłu
+      gamelab_moveForward:
+        text: przemieść {SPRITE} o {DISTANCE} pikseli do przodu
+      gamelab_moveInDirection:
+        options:
+          DIRECTION:
+            '"East"': Wschód
+            '"North"': Północ
+            '"South"': Południe
+            '"West"': Zachód
+        text: przemieść {SPRITE} o {DISTANCE} pikseli {DIRECTION}
+      gamelab_moveToward:
+        text: przemieść {SPRITE} o {DISTANCE} pikseli w kierunku {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_patrollingUpDown:
+        text: patrolowanie w górę i w dół
+      gamelab_playSound:
+        text: zagraj {SOUND}
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": akcent
+            "'sound://category_animals/bear.mp3'": niedźwiedź
+            "'sound://category_animals/cat.mp3'": kot
+            "'sound://category_animals/chick.mp3'": ćwierkanie ptaszka
+            "'sound://category_animals/chicken.mp3'": kurczak
+            "'sound://category_animals/cow.mp3'": krowa
+            "'sound://category_animals/dog.mp3'": szczekanie psa
+            "'sound://category_animals/dolphin.mp3'": kliknięcia delfina
+            "'sound://category_animals/elephant.mp3'": słoń
+            "'sound://category_animals/goat.mp3'": koza
+            "'sound://category_animals/pig.mp3'": świnka
+            "'sound://category_animals/rooster.mp3'": kogut
+            "'sound://category_animals/sheep.mp3'": owca
+            "'sound://category_animals/tiger.mp3'": ryk tygrysa
+            "'sound://category_app/app_button_1.mp3'": przycisk
+            "'sound://category_background/ocean_waves.mp3'": fale oceanu
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": migotanie
+            "'sound://category_collect/clicky_crunch.mp3'": chrzęst
+            "'sound://category_collect/trill_stings.mp3'": trill
+            "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_digital/jump_7.mp3'": skocz
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harfa
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": dziwaczny
+              bas
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": fala na plaży
+            "'sound://category_nature/summer_night_loop.mp3'": letnia noc
+            "'sound://category_nature/thunderstorm_1.mp3'": burza z piorunami
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": uderzenie
+              tonalne
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bąbel
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": popularny
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magiczne
+              zaklęcie
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": ping
+            "'sound://category_swish/quick_swing.mp3'": huśtać się
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": tap
+            "'sound://category_transition/star_dust_particle_10.mp3'": gwiezdny pył
+            "'sound://category_transition/trippy_robotic_transition.mp3'": głos robota
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": statek
+              kosmiczny
+        text: zagraj {SOUND}
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": klakson powietrzny
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": oklaski
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": chant
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": radosne okrzyki
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dwa gwizdki
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": kopnięcie
+            "'sound://category_sports/One_Whistle_SFX.mp3'": gwizdek
+        text: zagraj {SOUND}
+      gamelab_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": czarna dziura
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Gromada galaktyk 1E0657-558
+            "'sound://category_space/Carina_SFX.mp3'": Carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Kasjopeja
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Mgławica Kraba
+            "'sound://category_space/Galactic_center_SFX.mp3'": centrum galaktyczne
+            "'sound://category_space/Launch_SFX.mp3'": wystrzelenie
+            "'sound://category_space/Lift_Off.mp3'": wystartowanie
+            "'sound://category_space/Pillars_SFX.mp3'": filary
+            "'sound://category_space/Southern_ring_SFX.mp3'": Mgławica NGC 3132
+            "'sound://category_space/Supernova_SFX.mp3'": Supernowa
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": galaktyka jacuzzi
+        text: zagraj {SOUND}
+      gamelab_playSpeech:
+        text: odtwórz mowę {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): będąc przeciągalnym
+            new Behavior(driving_with_arrow_keys, []): poruszanie się za pomocą klawiszy
+              strzałek
+            new Behavior(moving_with_arrow_keys, []): poruszanie się za pomocą klawiszy
+              strzałek
+        text: "{BEHAVIOR}"
+      gamelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"East"': Wschód
+            '"North"': Północ
+            '"South"': Południe
+            '"West"': Zachód
+        text: punkt {SPRITE} {DIRECTION}
+      gamelab_printText:
+        text: drukuj {TEXT}
+      gamelab_randColor:
+        text: losowy kolor
+      gamelab_randomColor:
+        text: losowy kolor
+      gamelab_randomLocation:
+        text: losowa pozycja
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} zatrzymuje wszystko"
+      gamelab_removeBehaviorSimple:
+        text: duszek {SPRITE} zatrzymuje {BEHAVIOR}
+      gamelab_removeTint:
+        text: usuń kolor z {THIS}
+      gamelab_repeatForever:
+        text: powtarzaj w nieskończoność
+      gamelab_resetTimer:
+        text: zresetuj czasomierz
+      gamelab_setAnimation:
+        text: zmień {THIS} kostium na {ANIMATION}
+      gamelab_setBackground:
+        text: ustaw kolor tła {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': boisko
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': kort
+              tenicowy
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miasto
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kuchnia '
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': pole
+              uprawne
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': salon
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': widok
+              parku
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': sosny
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': podziemny
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etap
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': ciągła
+              trawa
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': słońce
+              i tęcza
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': przód
+              domu
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': prysznice
+              słoneczne
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': pustynna
+              droga
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': pływająca
+              trawa
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': wyspa
+              drzew
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': sąd
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': jaskinia
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': pustynia
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': siatka
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': tęcza
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': gwiazdy
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': SF
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaktyki
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': podwodny
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
+            undefined: żaden
+        text: ustaw tło na {IMG}
+      gamelab_setBackgroundImageAs:
+        text: ustaw tło na {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '100': duży
+            '25': ekstra mały
+            '50': mały
+            '75': średni
+        text: ustaw nowy domyślny rozmiar duszka na {SIZE}
+      gamelab_setPrompt:
+        text: poproś użytkownika {QUESTION} o zmienne {VAR}
+      gamelab_setPromptWith2Choices:
+        text: poproś użytkownika {QUESTION} o zmienną {VAR} z wyborami {A}{B}
+      gamelab_setPromptWithChoices:
+        text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"direction"': kierunek ruchu
+            '"rotation"': obrót
+            '"scale"': rozmiar
+            '"speed"': prędkość
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+        text: ustaw {SPRITE} {PROPERTY} na {VAL}
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+          SIZE:
+            '100': duży
+            '25': ekstra mały
+            '50': mały
+            '75': średni
+        text: ustaw {SPRITE} {PROPERTY} na {SIZE}
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': wysokość
+            '"scale"': rozmiar
+            '"width"': szerokość
+        text: ustaw {SPRITE} {PROPERTY} na {N}%
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': bardzo powoli
+            '3': powoli
+            '5': normalny
+            '7': szybko
+            '9': bardzo szybko
+        text: ustaw prędkość {SPRITE} na {SIZE}
+      gamelab_setTint:
+        text: zmień kolor {THIS} na {COLOR}
+      gamelab_setupScoreboard:
+        text: |-
+          narysuj tablicę wyników
+          {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
+      gamelab_setupSim:
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
+          z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
+      gamelab_showTitleScreen:
+        text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kiedy
+            '"while"': dopóki
+        text: "{CONDITION} {SPRITE} kliknięty"
+      gamelab_spriteSay:
+        text: "{SPRITE} powiedz {SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}mówi{TEXT1}przez{NUM}sekundy"
+      gamelab_spriteThink:
+        text: "{SPRITE} myśl {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}myśl{TEXT1}przez{NUM}sekundy"
+      gamelab_spriteThink_fables2:
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I am actually a wolf."': Właściwie jestem wilkiem.
+            '"She''ll never recognize me now."': Ona mnie teraz nie rozpozna.
+            '"This costume keeps me warm."': Ten kostium mnie ogrzewa.
+            '"Time to make friends with the sheep."': Czas zaprzyjaźnić się z owcami.
+        text: "{SPRITE} myśl {THOUGHT}"
+      gamelab_spriteThink_fables3:
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': Czuję się śpiący.
+            '"I''ve done this race before."': Uczestniczyłem w tym wyścigu już wcześniej.
+            '"My feet are bigger than Turtle''s feet."': Moje stopy są większe niż
+              stopy Żółwia.
+            '"No one could ever beat me."': Nikt nigdy nie mógł mnie pokonać.
+        text: "{SPRITE} myśl {THOUGHT}"
+      gamelab_spriteThink_fables4:
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''ll trick everyone into giving me their food."': Oszukam wszystkich,
+              żeby dali mi swoje jedzenie.
+            '"I''m a visitor in this town."': Jestem gościem w tym mieście.
+            '"I''m so hungry."': Jestem bardzo głodny!
+            '"If we share, we''ll all have something to eat. "': Jeśli się podzielimy,
+              wszyscy będziemy mieli coś do jedzenia.
+        text: "{SPRITE} myśl {THOUGHT}"
+      gamelab_startAvoiding:
+        text: "{SPRITE} zaczyna unikać {TARGET}"
+      gamelab_startFollowing:
+        text: "{SPRITE} zaczyna podążać {TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE} zaczyna przesuwać się "
+      gamelab_stopAvoiding:
+        text: "{SPRITE} przestaje unikać inne duszki"
+      gamelab_stopCollectingData:
+        text: zatrzymaj zbieranie danych
+      gamelab_stopFollowing:
+        text: "{SPRITE} przestaje podążać za innymi duszkami "
+      gamelab_stopGliding:
+        text: "{SPRITE} zaczyna przesuwać się "
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      gamelab_tumbling:
+        text: gimnastykowanie się
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': w lewo
+            '"right"': w prawo
+        text: skręć {SPRITE} {DIRECTION} {N} stopni
+      gamelab_updateTitleWithColor:
+        text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} kolor {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: gdy odpowiedzą na wszystkie monity
+      gamelab_whenDownArrow:
+        text: po naciśnięciu strzałki w dół
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"a"': a
+            '"d"': d
+            '"down"': do dołu
+            '"left"': w lewo
+            '"right"': w prawo
+            '"s"': s
+            '"space"': przestrzeń
+            '"up"': do góry
+            '"w"': w
+        text: po naciśnięciu {KEY}
+      gamelab_whenLeftArrow:
+        text: po naciśnięciu strzałki w lewo
+      gamelab_whenPromptAnswered:
+        text: gdy {VAR} uzyskała odpowiedź
+      gamelab_whenRightArrow:
+        text: po naciśnięciu strzałki w prawo
+      gamelab_whenSpriteCreated:
+        text: kiedy {SPRITE} utworzony
+      gamelab_whenTouching:
+        text: kiedy {SPRITE1} dotyka {SPRITE2}
+      gamelab_whenUpArrow:
+        text: po naciśnięciu strzałki w górę
+      gamelab_whileDownArrow:
+        text: po naciśnięciu strzałki w dół
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"a"': a
+            '"d"': d
+            '"down"': do dołu
+            '"left"': w lewo
+            '"right"': w prawo
+            '"s"': s
+            '"space"': przestrzeń
+            '"up"': do góry
+            '"w"': w
+        text: po naciśnięciu {KEY}
+      gamelab_whileLeftArrow:
+        text: po naciśnięciu strzałki w lewo
+      gamelab_whileRightArrow:
+        text: po naciśnięciu strzałki w prawo
+      gamelab_whileTouching:
+        text: dopóki {SPRITE1} dotyka {SPRITE2}
+      gamelab_whileUpArrow:
+        text: po naciśnięciu strzałki w górę
+      gamelab_withPercentChance:
+        text: |-
+          jeśli {NUM}% szansa
+          {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        options:
+          NUM:
+            '10': bardzo niski
+            '25': niski
+            '50': 50/50
+            '75': wysoki
+            '90': bardzo wysoki
+        text: |2-
+           {NUM} szansa
+           {STATEMENT}
+      gamelab_xLocationOf:
+        text: x współrzędna {SPRITE}
+      gamelab_yLocationOf:
+        text: współrzędna y {SPRITE}
       storylab_clearHeadings:
         text: wyczyść nagłówki
       storylab_printText:
         text: drukuj {TEXT}
       storylab_setForegroundEffect2:
-        text: wykonaj efekt {EFFECT}
         options:
           EFFECT:
             '"bubbles"': Bąbelki
@@ -2826,6 +2824,7 @@ pl:
             '"rain"': deszcz
             '"starburst"': Rozprysk
             '"twinkling"': Migotliwy
+        text: wykonaj efekt {EFFECT}
       storylab_setHeading:
         text: ustaw tytuł {HEADING}
       storylab_setPromptWithChoice:

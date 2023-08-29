@@ -9,12 +9,12 @@
           "green": "زرغون"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "red": "سور",
-          "green": "زرغون"
+          "green": "زرغون",
+          "red": "سور"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "زرغون",
-          "blue": "ابي"
+          "blue": "ابي",
+          "green": "زرغون"
         }
       }
     }

@@ -313,7 +313,7 @@ class SetupChecklist extends Component {
       <div>
         <Button
           text={applabI18n.makerSetupUpdateMBFirmata()}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           size={Button.ButtonSize.medium}
           style={downloadButtonStyle}
           onClick={() => this.updateMBFirmata()}

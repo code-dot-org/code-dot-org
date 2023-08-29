@@ -2,29 +2,32 @@
   "nl-NL": {
     "data": {
       "objectives": {
-        "008a40f4-a5ee-42aa-862e-670f19129694": {
+        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
+          "description": "Een variabele declareren"
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        },
+        "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
+          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
+        },
+        "884d4f4c-abd4-493c-8029-cde7399519f4": {
+          "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        },
+        "8805bb75-452c-4778-9cd2-6df020a13216": {
+          "description": "Een variabele declareren"
+        },
+        "586fecaa-52c0-4889-adaf-cc11a172d4a7": {
           "description": "Definieer „codering” en „informatica”"
         },
-        "a4ad4a3c-f2b2-4675-90e5-626ce70c2764": {
+        "e2745118-9d93-4e33-a607-c1927403c0c3": {
           "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
         },
-        "343631be-830a-44f6-a249-a6aa96ea38f0": {
+        "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
           "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
-        },
-        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
-          "description": "Definieer „codering” en „informatica”"
-        },
-        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
-          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
-        },
-        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
-          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
-        },
-        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
-          "description": "Veranderingen in de stemming van een gedicht illustreren."
-        },
-        "6da037be-d0be-4f41-a1e5-10b24a247190": {
-          "description": "Figuurlijke en letterlijke taal in een tekst weergeven."
         },
         "6394fdc5-50c3-423e-8135-a64594824db3": {
           "description": "Definieer „codering” en „informatica”"
@@ -33,21 +36,6 @@
           "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
         },
         "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
-          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
-        },
-        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
-          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
-        },
-        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
-          "description": "Creëer een interactieve animatie met behulp van sprites en events."
-        },
-        "3e5eebcd-2140-4152-8654-410468108ab6": {
-          "description": "Definieer „codering” en „informatica”"
-        },
-        "fcb92339-9036-46ec-b5ab-d8d252651e2d": {
-          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
-        },
-        "0a56ebd1-4df4-492c-b630-2a6b1f43e3c4": {
           "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
         },
         "e23f32e6-7d12-41e6-a601-bcf0825f0e30": {
@@ -59,21 +47,6 @@
         "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
           "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
         },
-        "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa": {
-          "description": "Definieer „codering” en „informatica”"
-        },
-        "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
-          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
-        },
-        "59992d8c-d194-4063-82fa-001a0b6482d9": {
-          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
-        },
-        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
-          "description": "Creëer een interactieve animatie met behulp van sprites en events."
-        },
-        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
-          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
-        },
         "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
           "description": "Definieer „codering” en „informatica”"
         },
@@ -83,59 +56,23 @@
         "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
           "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
         },
-        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
-          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
-        },
-        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
-          "description": "Creëer een interactieve animatie met behulp van sprites en events."
-        },
-        "586fecaa-52c0-4889-adaf-cc11a172d4a7": {
-          "description": "Definieer „codering” en „informatica”"
-        },
-        "e2745118-9d93-4e33-a607-c1927403c0c3": {
-          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
-        },
-        "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
-          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
-        },
-        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
-          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
-        },
-        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
-          "description": "Creëer een interactieve animatie met behulp van sprites en events."
-        },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Creëer een interactieve animatie met behulp van sprites en events."
         },
         "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
           "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
         },
-        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
-          "description": "Definieer „codering” en „informatica”"
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Creëer een interactieve animatie met behulp van sprites en events."
         },
-        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
-          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
         },
-        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
-          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
         },
-        "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
-          "description": "Definieer „codering” en „informatica”"
-        },
-        "74f6b7a3-df1b-4f98-9619-30b2c2118c14": {
-          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
-        },
-        "d1660224-18b1-4e70-b7fc-b0fce29c8cd6": {
-          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
-        },
-        "ef08539f-6652-4fb9-a0ec-781dfec114f8": {
-          "description": "Definieer „codering” en „informatica”"
-        },
-        "b1e4a88d-565b-4d95-a6d7-129869cff301": {
-          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
-        },
-        "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
-          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Creëer een interactieve animatie met behulp van sprites en events."
         },
         "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
           "description": "Creëer een interactieve animatie met behulp van sprites en events."
@@ -143,13 +80,43 @@
         "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
           "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
         },
-        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
+        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
+          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
+        },
+        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
+          "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        },
+        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
+          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
+        },
+        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
+          "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        },
+        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
           "description": "Definieer „codering” en „informatica”"
         },
-        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
+        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
           "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
         },
-        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
+        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
+          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
+        },
+        "3e5eebcd-2140-4152-8654-410468108ab6": {
+          "description": "Definieer „codering” en „informatica”"
+        },
+        "fcb92339-9036-46ec-b5ab-d8d252651e2d": {
+          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
+        },
+        "0a56ebd1-4df4-492c-b630-2a6b1f43e3c4": {
+          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
+        },
+        "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa": {
+          "description": "Definieer „codering” en „informatica”"
+        },
+        "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
+          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
+        },
+        "59992d8c-d194-4063-82fa-001a0b6482d9": {
           "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
         },
         "63be9575-1232-47a5-991c-8bd03ac7c949": {
@@ -161,20 +128,56 @@
         "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
           "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
+        "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
+          "description": "Definieer „codering” en „informatica”"
         },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        "74f6b7a3-df1b-4f98-9619-30b2c2118c14": {
+          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
         },
-        "8805bb75-452c-4778-9cd2-6df020a13216": {
-          "description": "Een variabele declareren"
+        "d1660224-18b1-4e70-b7fc-b0fce29c8cd6": {
+          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
         },
-        "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
-          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
+        "008a40f4-a5ee-42aa-862e-670f19129694": {
+          "description": "Definieer „codering” en „informatica”"
         },
-        "884d4f4c-abd4-493c-8029-cde7399519f4": {
-          "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        "a4ad4a3c-f2b2-4675-90e5-626ce70c2764": {
+          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
+        },
+        "343631be-830a-44f6-a249-a6aa96ea38f0": {
+          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
+        },
+        "ef08539f-6652-4fb9-a0ec-781dfec114f8": {
+          "description": "Definieer „codering” en „informatica”"
+        },
+        "b1e4a88d-565b-4d95-a6d7-129869cff301": {
+          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
+        },
+        "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
+          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
+        },
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Veranderingen in de stemming van een gedicht illustreren."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Figuurlijke en letterlijke taal in een tekst weergeven."
+        },
+        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
+          "description": "Definieer „codering” en „informatica”"
+        },
+        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
+          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
+        },
+        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
+          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
+        },
+        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
+          "description": "Definieer „codering” en „informatica”"
+        },
+        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
+          "description": "Identificeer de belangrijkste woordenschat op het gebied van informatica"
+        },
+        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
+          "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": ""
@@ -184,9 +187,6 @@
         },
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
           "description": "Figuurlijke en letterlijke taal in een tekst weergeven."
-        },
-        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
-          "description": "Een variabele declareren"
         }
       }
     }

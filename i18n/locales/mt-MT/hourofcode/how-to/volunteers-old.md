@@ -1,5 +1,5 @@
 ---
-title: How-to guide for Hour of Code volunteers
+title: Gwida dwar kif għas-Siegħa tal-voluntiera tal-Kodiċi
 ---
 
 {{ signup_button }}

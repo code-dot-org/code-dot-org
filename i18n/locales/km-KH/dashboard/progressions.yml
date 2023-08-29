@@ -5,6 +5,7 @@ km:
       Artist Project: គំរោងអ្នកសិល្បៈ
       Back and Forth: ទៅហើយមកវិញ
       Bass, Mid, and Treble: ទាប កណ្ដាល និង ខ្ពស់
+      Challenge: ឧបសគ្គ
       'Challenge: Draw an Image': 'ល្បែងសាកល្បង៖ គូរគំនូសរូបភាពមួយ'
       'Challenge: Extend Your Scene': 'ការប្រកួតប្រជែង: ពង្រីកឈុតឆាករបស់អ្នក'
       'Challenge: Updating Variables': "ចំនោទបញ្ហា: កែប្រែអថេរ\nhttps://studio.code.org/s/csd3-2017/stage/5/puzzle/12 -> display_name"
@@ -27,22 +28,30 @@ km:
       Get In Formation: សម្រាក! ប្រុង! តម្រង់ជួរ!
       Hardware and Software: ផ្នែក​រឹង(គ្រឿងឧបករណ៍) និង​ផ្នែក​ទន់​(កម្មវិធី)
       Headings in HTML: "ចំណងជើងក្នុង HTML\n\n"
-      Introducing Sprite Lab: សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍
+      How to Make a Sprite: របៀបបង្កើត SPRITE
+      Introducing Sprite Lab: សេចក្ដីណែនាំពី Sprite Lab
       Introduction to Game Lab: ការណែនាំទៅកាន់បន្ទប់ពិសោធន៍ហ្គេម
       Lesson Extras: មេរៀនបន្ថែម
       Lesson Overview: ទិដ្ឋភាព​ទូទៅ​របស់​មេរៀន
+      Levels: កម្រិត
       Lists: បញ្ជី
       Make a Prediction: សូម​ធ្វើការ​ប៉ាន់ស្មាន
       'Minecraft: Hero''s Journey': 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
-      'Mini-Project: Royal Battle': 'គម្រោងខ្នាតតូច៖ Royal Battle'
+      'Mini-Project: Royal Battle': 'គម្រោងខ្នាតតូច៖ សមរភូមិក្សត្រ'
+      'Mini-Project: Sticker Art': 'គម្រោងខ្នាតតូច៖ សិល្បៈស្ទីគ័រ'
+      'Mini-project: Jorge the Dog': 'គម្រោងខ្នាតតូច៖ Jorge (ឆ្កែ)'
       More Buttons: ប៊ូតុងបន្ថែម
       Naming Variables: ការដាក់ឈ្មោះអថេរ
       Overview: ទិដ្ឋភាពទូទៅ 
+      Pair Programming: ការសរសេរកម្មវិធីជាគូ
       Plotting Shapes in Game Lab: គម្រោងរូបភាពនៅក្នុងបន្ទប់ល្បែងពិសោធន៍
+      Practice: អនុវត្តន៍
+      Prediction: ការទស្សន៍ទាយ
       Programming with Rey and BB-8: សរសេរកម្មវិធីជាមួយ Rey និង BB-8
       Properties: ធាតុ
       Quarter Notes: រង្វាស់ ១ ភាគ ៤
       Random Numbers: លេខចៃដន្យ
+      Reflection: ការឆ្លុះបញ្ចាំង
       Sample Game: ល្បែងគំរូ
       Shapes and Parameters: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
       Skill Building: ការកសាងជំនាញ
@@ -58,14 +67,28 @@ km:
       Velocity and the Counter Pattern: ល្បឿននិងលំនាំរាប់
       Velocity and the Counter Pattern Review: ល្បឿននិងការពិនិត្យឡើងវិញនៃគំរូរាប់
       Video: វីដេអូ
+      'Video: Dance Party Events': 'វីដេអូ៖ ពិធីជប់លៀងរាំកម្តៅសាច់ដុំ'
+      'Video: Dance Party Warm Up': 'វីដេអូ៖ ពិធីជប់លៀងរាំកម្តៅសាច់ដុំ'
+      'Video: Debugging with the Step Button': 'វីដេអូ: ការបំបាត់កំហុសដោយប្រើ ប៊ូតុងជំហាន'
       'Video: Drawing in Game Lab - Part 1': 'វីដេអូ: គំនូរនៅក្នុងបន្ទប់ពិសោធន៍នៃហ្គេម- ផ្នែកទី១'
       'Video: Drawing in Game Lab - Part 2': 'វីដេអូ: គំនូរគំនូរនៅក្នុងបន្ទប់ពិសោធន៍នៃហ្គេម-ផ្នែកទី២'
+      'Video: How to Make a Sprite': 'របៀបបង្កើតអាង (Sprite)'
+      'Video: Ice Age Loops': 'វីដេអូ: ប្រតិបត្តិដដែលៗក្នុង Ice Age'
       'Video: Intro to Web Lab - Part 1': 'វីដេអូ: ការណែនាំមកកាន់ Web Lab - ផ្នែកទី ១'
+      'Video: Introducing Sprite Lab': 'វីដេអូ៖ ការណែនាំ អាង(Sprite)'
+      'Video: Introduction to Play Lab': 'វីដេអូ៖​ ការណែនាំអំពី Play Lab'
       'Video: Introduction to Sprites': 'វីដេអូ: ការណែនាំមកកាន់ Sprites'
       'Video: Introduction to the Draw Loop': 'វីដេអូ: សេចក្តីណែនាំអំពីការគូររង្វិលជុំដដែលៗ'
+      'Video: Loops in Artist': 'វីដេអូ៖ប្រតិបត្តិដដែលៗជាមួយវិចិត្រករ'
       'Video: Problem Solving Process': 'វីដេអូ៖ របៀបដោះស្រាយបញ្ហា'
+      'Video: Programming with Blocks': 'វីដេអូ: សរសេរកម្មវិធីដោយប្រើ កូដប្លុក'
+      'Video: Programming with Rey and BB-8': 'វីដេអូ: សរសេរកម្មវិធីជាមួយ Rey និង BB-8'
+      'Video: Sprites in Action': 'កំណត់សកម្មភាពឱ្យតួរអង្គ'
       'Video: The Animation Tab': 'វីដេអូ: ផ្ទាំងគំនូរជីវចល'
+      'Video: The Artist in Code Studio': 'វីដេអូ៖ វិចិត្រករក្នុង Code Studio'
       'Video: The Collector': 'វីដេអូ៖ អ្នកប្រមូល'
+      'Video: The Harvester': 'វីដេអូ៖ អ្នកប្រមូលផល'
       'Video: Velocity': 'វីដេអូ៖ ល្បឿន'
       'Video: What Makes a Computer, a Computer?': 'វីដេអូ: តើអ្វីទៅដែលធ្វើអោយកុំព្យូរទ័រទៅជាកុំព្យូរទ័រ?'
+      Warm Up: ការចាប់ផ្តើម
       Where'd They Go?: តើគេទៅណាអស់ទៅ?

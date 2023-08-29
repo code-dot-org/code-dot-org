@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Pd::ApplicationDashboardControllerTest < ::ActionController::TestCase
+class Pd::ApplicationDashboardControllerTest < ActionController::TestCase
   test_redirect_to_sign_in_for :index
   test_user_gets_response_for :index, user: :teacher, response: :forbidden
 

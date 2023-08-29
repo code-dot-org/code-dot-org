@@ -2,291 +2,122 @@
   "nl-NL": {
     "data": {
       "lessons": {
-        "dance-extras/Dance Party - Go Further": {
-          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
-          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren."
-        },
-        "minecraft/Minecraft Hour of Code Designer": {
-          "name": "Minecraft Code Uur Code Ontwerper",
-          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
-          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen."
-        },
-        "hero/Minecraft Hour of Code": {
-          "name": "Minecraft: Heldenreis",
-          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
-          "preparation": "### Een week voor je Hour of Code\n\n-   Bekijk de [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) en [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) om te beginnen met het plannen van je Hour of Code-evenement. \n-   [Registreer je Hour of Code-evenement](http://hourofcode.com) als je ondersteuning in de klas wilt ontvangen.\n-   Bekijk en voltooi de online handleiding zelf: [Minecraft: Hero's Journey](studio.code.org/s/hero/lessons/1/levels/1)\n-   Zorg ervoor dat je hem eerst test voordat je je leerlingen vraagt om hem af te maken. Controleer je technologie en beslis of je iets moet oplossen voordat je Hour of Code begint.\n\n### De dag voor de Hour of Code\n\n-   Druk een of meer van de [Exit Ticket-voorbeelden](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) aan het einde van dit lesplan af, of maak er zelf een. \n-   Elke student die de activiteit voltooit, krijgt een [certificate](https://studio.code.org/certificates/batch?course=bWM=). Print er van tevoren een voor elke student om dit makkelijker te maken aan het einde van je Hour of Code.",
-          "purpose": "Deze les introduceert de belangrijkste informatica concepten van coderen en programmeren (met behulp van blokken), evenals eenvoudige debugging technieken en hoe functies nuttig kunnen zijn."
-        },
-        "poem-art-2021/Poem Art": {
-          "name": "Poëzie",
-          "overview": "In deze geïntegreerde CS en ELA les gaan leerlingen een gedicht animeren met code om de stemming van een gedicht te illustreren. Studenten zullen leerlingen een gedicht lezen en detecteren ze de stemming ervan. Vervolgens moeten ze bijbehorende effecten en beelden vinden om de stemming van het gedicht te helpen illustreren. Ten slotte gaan de leerlingen gebeurtenissen (code) gebruiken om een verandering in stemming te illustreren of de introductie van nieuwe beelden in een gedicht te animeren. \n\nDeze les kan worden voltooid als een 1 uur durende op zichzelf staande les. Er is ook een optie om deze les te gebruiken als eerste les van de uit meerdere lessen bestaande module genaamd [Coderen met poëzie](http://studio.code.org/s/poetry-2021).",
-          "preparation": "-   Bekijk en voltooi de online handleiding zelf: [Poem Art](http://studio.code.org/s/poem-art).\n\n-   Probeer de activiteiten eerst uit voordat je de leerlingen vraagt ze uit te voeren. \n\n-   Controleer je technologie en bepaal of je van tevoren iets moet oplossen.\n\n-   Sommige niveaus vereisen geluid om te spelen. Deel van tevoren koptelefoons uit. \n\n-   [Optioneel] 2 post-it’s per leerling voor de beoordeling."
-        },
-        "flappy/Flappy Code": {
-          "name": "Flappy Code"
-        },
-        "hello-world-soccer-2022/Hello World: Food": {
-          "name": "Hello World: Voetbal",
-          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
-          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
-          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
-        },
-        "hourofcode/Maze": {
-          "name": "Doolhof",
-          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is ontworpen voor jonge studenten in de leeftijd van 4 tot 10 jaar, maar kan tevens worden aangepast aan oudere studenten door gebruik te maken van de onderscheidende suggesties. ",
-          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is ontworpen voor jonge studenten in de leeftijd van 4 tot 10 jaar, maar kan tevens worden aangepast aan oudere studenten door gebruik te maken van de onderscheidende suggesties. "
-        },
-        "frozen/Artist": {
-          "name": "Code met Anna en Elsa",
-          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met programmeren en informatica. Deze les werd ontworpen voor studenten op de lagere school in de leeftijd van 10 tot 13 jaar, maar kan tevens wordne aangepast voor jongere of oudere studenten met door gebruik te maken van de onderscheidende suggesties. Studenten dienen basiskennis te hebben van eenvoudige geometrie en het tekenen in hoeken. ",
-          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met programmeren en informatica. Deze les werd ontworpen voor studenten op de lagere school in de leeftijd van 10 tot 13 jaar, maar kan tevens wordne aangepast voor jongere of oudere studenten met door gebruik te maken van de onderscheidende suggesties. Studenten dienen basiskennis te hebben van eenvoudige geometrie en het tekenen in hoeken. "
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "Ijs tijd Speel Lab",
-          "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode."
-        },
-        "hello-world-emoji-2021/Hello World": {
-          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
-          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
-          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
-        },
-        "artist/Artist": {
-          "name": "Kunstenaar"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "Kauwgom Speel Lab"
-        },
-        "dance/Dance Party": {
-          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
-          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren."
-        },
-        "hello-world-food-2021/Hello World": {
-          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
-          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
-          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
-        },
-        "aquatic/Aquatic": {
-          "name": "Minecraft: Aquatische reis",
-          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen."
-        },
-        "hoc-encryption/Simple Encryption": {
-          "name": "Eenvoudige versleuteling",
-          "overview": "In deze les maken studenten kennis met de noodzaak voor codering en eenvoudige technieken voor het breken (of kraken) van geheime berichten. De studenten proberen zelf een bericht dat met de klassieke Caesar Cipher en tevens een Random Substitution Cipher werd gecodeerd, te kraken. Studenten dienen goed vertrouwd te raken met het idee dat in een tijd van krachtige rekenprogramma's, de technieken van codering veel geavanceerder moeten zijn. Het belangrijkste aspect van deze les is te begrijpen hoe en waarom codering een rol speelt in al onze levens dagelijks op het Internet, en dat het creëren van een goede codering niet iets triviaals is. Studenten zullen langzaam kennis opdoen van de overwegingen die er zijn bij het creëren van een sterke codering in relatie tot krachtige rekenprogramma's die gebruikt kunnen worden om deze te kraken. De noodzaak tot geheimhouding bij het overzenden van bits is belangrijk voor iedereen die gebruik maakt van het Internet.   ",
-          "student_overview": "In deze les maken studenten kennis met de noodzaak voor codering en eenvoudige technieken voor het breken (of kraken) van geheime berichten. De studenten proberen zelf een bericht dat met de klassieke Caesar Cipher en tevens een Random Substitution Cipher werd gecodeerd, te kraken. Studenten dienen goed vertrouwd te raken met het idee dat in een tijd van krachtige rekenprogramma's, de technieken van codering veel geavanceerder moeten zijn. Het belangrijkste aspect van deze les is te begrijpen hoe en waarom codering een rol speelt in al onze levens dagelijks op het Internet, en dat het creëren van een goede codering niet iets triviaals is. Studenten zullen langzaam kennis opdoen van de overwegingen die er zijn bij het creëren van een sterke codering in relatie tot krachtige rekenprogramma's die gebruikt kunnen worden om deze te kraken. De noodzaak tot geheimhouding bij het overzenden van bits is belangrijk voor iedereen die gebruik maakt van het Internet.   "
-        },
-        "hello-world-space-2022/Hello World: Food": {
-          "name": "Hallo World: Space",
-          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
-          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
-          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
-        },
-        "hello-world-animals-2021/Hello World": {
-          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
-          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
-          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
-        },
-        "starwars/Hour of Code 2015": {
-          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgving kennis met informatica en programmeren. Deze les bestaat uit twee versies. "
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Minecraft programmeer uur",
-          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
-          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen."
-        },
-        "playlab/Play Lab": {
-          "name": "Speel Lab",
-          "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode."
-        },
-        "applab-intro/Intro to App Lab": {
-          "student_overview": "Aan het einde van deze tutorial bent u in staat een project uit te breiden dat u begon met opbouwen tot een \"Kies uw eigen avontuur\", \"Wenskaart\" of \"Karakterquiz\" app. Tevens kunt u verder gaan met het creëren van meer project die te vinden zijn op de code.org/applab-pagina. "
-        },
-        "hello-world-retro-2021/Hello World": {
-          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
-          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
-          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
-        },
-        "starwarsblocks/Hour of Code 2015": {
-          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgving kennis met informatica en programmeren. Deze les bestaat uit twee versies. "
-        },
-        "text-compression/Text Compression": {
-          "name": "Tekstcompressie",
-          "student_overview": "Op een bepaald moment bereiken we een fysieke limiet wat betreft de snelheid van het verzenden van bits, en als we een grote hoeveelheid informatie sneller willen verzenden, dan moeten we een manier vinden om dezelfde informatie weer te geven in minder bits - we moeten de data comprimeren.  "
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "Disney Infinity Play Lab",
-          "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode."
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Uur van Code 2013"
-        },
-        "dance-2019/Dance Party": {
-          "name": "Dansfeest",
-          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
-          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren."
-        },
-        "oceans/Oceans": {
-          "name": "AI voor oceanen",
-          "overview": "In deze les maken In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Eerst classificeren studenten objecten als \"vis' of \"niet vis\" in een poging het vuil uit de oceaan te verwijderen. Daarna moeten studenten hun dataset voor de training uitbreiden zodat ook andere zeedieren die in het water thuishoren worden inbegrepen. In het tweede deel van de activiteit, kiezen studenten hun eigen etiketten om toe te passen op willekeurig gegenereerde vissen. Deze data van de training wordt gebruik voor een model voor machinaal leren dat tegen die tijd in staat moet zijn om zelf etiketten op afbeeldingen te plakken. "
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Lussen"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Gebeurtenissen"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Voorwaardelijke instructies"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Functies"
-        },
-        "k5-onlinepd-2019/Variables": {
-          "name": "Variabelen"
-        },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "For-lussen"
-        },
-        "k5-onlinepd-2019/Sprite Lab": {
-          "name": "Sprite Lab"
-        },
-        "k5-onlinepd-2019/Next steps": {
-          "name": "Volgende stappen"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Stemmingsonderzoek"
-        },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "Basisbegrippen Informatica"
-        },
-        "K5-OnlinePD/Planning": {
-          "name": "Plannen"
-        },
-        "K5-OnlinePD/Next Steps": {
-          "name": "Volgende stappen"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - Verzend Bits op een Gedeelde Lijn"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - Verzend Getallen"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - Verzend Ascii"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Routers en Adressen"
-        },
-        "netsim/Manual DNS": {
-          "name": "Manuele DNS"
-        },
-        "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "Basisbegrippen Informatica"
-        },
-        "kodea-pd-2021/Planning": {
-          "name": "Plannen"
-        },
-        "kodea-pd-2021/Next Steps": {
-          "name": "Volgende stappen"
-        },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "Programmeren op Ruitjespapier"
-        },
-        "coursed-2022/Relay Programming": {
-          "name": "Estafette Programmeren"
-        },
-        "coursed-2022/Build a Star Wars Game": {
-          "name": "Bouw een Star Wars Spel!"
-        },
-        "coursed-2022/Dance Party": {
-          "name": "Dansfeest"
-        },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "Statements met Kaarten"
-        },
-        "coursef-2022/Outbreak": {
-          "name": "Uitbraak"
-        },
-        "coursef-2022/The Internet": {
-          "name": "Het Internet"
-        },
-        "coursee-2022/Hello World: Food": {
-          "name": "Hallo Wereld"
-        },
-        "coursee-2022/Songwriting": {
-          "name": "Songwriting",
-          "overview": "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  "
-        },
-        "courseb-2022/Move It, Move It": {
-          "name": "verplaats het, verplaats het"
-        },
-        "courseb-2022/Getting Loopy": {
-          "name": "Rondjes lopen"
-        },
-        "express-2022/Dance Party": {
-          "name": "Dansfeest"
-        },
-        "coursea-2022/Happy Maps": {
-          "name": "Vrolijke Routes"
-        },
-        "coursec-2022/The Big Event": {
-          "name": "De grote gebeurtenis"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Binaire armbanden"
-        },
-        "csd5-2022/Representing Images": {
-          "name": "Het voorstellen van afbeeldingen"
-        },
-        "csd5-2022/Representing Numbers": {
-          "name": "Het voorstellen van getallen"
-        },
-        "csd1-2022/Storage": {
+        "csd1-2017/Storage": {
           "name": "Opslag"
         },
-        "csd3-2022/Variables": {
-          "name": "Variabelen"
-        },
-        "csd3-2022/Sprites": {
-          "name": "Sprites"
-        },
-        "csd3-2022/Text": {
-          "name": "Tekst"
-        },
-        "csd3-2022/Conditionals": {
-          "name": "Voorwaardelijke instructies"
-        },
-        "csd3-2022/Velocity": {
-          "name": "Snelheid"
-        },
-        "csd3-2022/Collision Detection": {
-          "name": "Botsingdetectie"
-        },
-        "csd3-2022/Functions": {
-          "name": "Functies"
-        },
-        "csd2-2022/Headings": {
+        "csd2-2017/Headings": {
           "name": "Headings"
         },
-        "csd2-2022/Intellectual Property": {
-          "name": "Intellectuele Eigendom"
+        "csd2-2017/Lists": {
+          "name": "Lijsten"
         },
-        "csd2-2022/Using Images": {
-          "name": "Afbeeldingen gebruiken"
+        "csd2-2017/Intellectual Property and Images": {
+          "name": "Intellectuele Eigendom en Afbeeldingen"
         },
-        "csd6-2022/Functions": {
+        "csd3-2017/Variables": {
+          "name": "Variabelen"
+        },
+        "csd3-2017/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2017/Conditionals": {
+          "name": "Voorwaardelijke instructies"
+        },
+        "csd3-2017/Velocity": {
+          "name": "Snelheid"
+        },
+        "csd3-2017/Collision Detection": {
+          "name": "Botsingdetectie"
+        },
+        "csd3-2017/Functions": {
           "name": "Functies"
         },
-        "courseb-2018/Move It, Move It": {
-          "name": "verplaats het, verplaats het"
+        "csd5-2017/Representing Images": {
+          "name": "Het voorstellen van afbeeldingen"
         },
-        "courseb-2018/Your Digital Footprint": {
-          "name": "Jouw Digitale Voetafdruk"
+        "csd5-2017/Representing Numbers": {
+          "name": "Het voorstellen van getallen"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Functies met Parameters"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmen in het echte leven: Plant een zaadje"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmen in het echte leven: Plant een zaadje"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Algoritmen in het echt: Papieren Vliegtuigjes"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Genestelde lussen"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Een Basis Bouwen"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Genestelde lussen"
+        },
+        "coursee-2017/Build a Star Wars Game": {
+          "name": "Bouw een Star Wars Spel!"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Een Basis Bouwen"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algoritmen: Tangrams"
+        },
+        "express-2017/Introduction": {
+          "name": "Introductie"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Een Basis Bouwen"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Genestelde lussen"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmen in het echte leven: Plant een zaadje"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Spellingswedstrijd"
+        },
+        "csd2-2018/Headings": {
+          "name": "Headings"
+        },
+        "csd2-2018/Lists": {
+          "name": "Lijsten"
+        },
+        "csd2-2018/Intellectual Property and Images": {
+          "name": "Intellectuele Eigendom en Afbeeldingen"
+        },
+        "csd3-2018/Variables": {
+          "name": "Variabelen"
+        },
+        "csd3-2018/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Voorwaardelijke instructies"
+        },
+        "csd3-2018/Velocity": {
+          "name": "Snelheid"
+        },
+        "csd3-2018/Collision Detection": {
+          "name": "Botsingdetectie"
+        },
+        "csd3-2018/Functions": {
+          "name": "Functies"
+        },
+        "csd5-2018/Representing Images": {
+          "name": "Het voorstellen van afbeeldingen"
+        },
+        "csd5-2018/Representing Numbers": {
+          "name": "Het voorstellen van getallen"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Functies met Parameters"
         },
         "coursea-2018/Debugging: Unspotted Bugs": {
           "name": "Onbekende bugs"
@@ -303,6 +134,24 @@
         "coursea-2018/Going Places Safely": {
           "name": "Veilig Reizen"
         },
+        "courseb-2018/Move It, Move It": {
+          "name": "verplaats het, verplaats het"
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Jouw Digitale Voetafdruk"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Een Basis Bouwen"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Rondjes lopen"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "De grote gebeurtenis"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Binaire armbanden"
+        },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Programmeren op Ruitjespapier"
         },
@@ -317,6 +166,27 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "Binaire afbeeldingen"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "My Robotic Friends"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Een Basis Bouwen"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Statements met Kaarten"
+        },
+        "coursee-2018/Build a Star Wars Game": {
+          "name": "Bouw een Star Wars Spel!"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Songwriting"
+        },
+        "coursee-2018/Internet": {
+          "name": "Het Internet"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "My Robotic Friends"
@@ -369,39 +239,6 @@
         "express-2018/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "My Robotic Friends"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Een Basis Bouwen"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "Statements met Kaarten"
-        },
-        "coursee-2018/Build a Star Wars Game": {
-          "name": "Bouw een Star Wars Spel!"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Songwriting"
-        },
-        "coursee-2018/Internet": {
-          "name": "Het Internet"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Crowdsourcing"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Een Basis Bouwen"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Rondjes lopen"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "De grote gebeurtenis"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Binaire armbanden"
-        },
         "pre-express-2018/Debugging: Unspotted Bugs": {
           "name": "Onbekende bugs"
         },
@@ -417,41 +254,41 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Spellingswedstrijd"
         },
-        "csd3-2018/Variables": {
-          "name": "Variabelen"
-        },
-        "csd3-2018/Sprites": {
-          "name": "Sprites"
-        },
-        "csd3-2018/Conditionals": {
-          "name": "Voorwaardelijke instructies"
-        },
-        "csd3-2018/Velocity": {
-          "name": "Snelheid"
-        },
-        "csd3-2018/Collision Detection": {
-          "name": "Botsingdetectie"
-        },
-        "csd3-2018/Functions": {
-          "name": "Functies"
-        },
-        "csd6-2018/Functions with Parameters": {
-          "name": "Functies met Parameters"
-        },
-        "csd5-2018/Representing Images": {
-          "name": "Het voorstellen van afbeeldingen"
-        },
-        "csd5-2018/Representing Numbers": {
-          "name": "Het voorstellen van getallen"
-        },
-        "csd2-2018/Headings": {
+        "csd2-2019/Headings": {
           "name": "Headings"
         },
-        "csd2-2018/Lists": {
+        "csd2-2019/Lists": {
           "name": "Lijsten"
         },
-        "csd2-2018/Intellectual Property and Images": {
+        "csd2-2019/Intellectual Property and Images": {
           "name": "Intellectuele Eigendom en Afbeeldingen"
+        },
+        "csd3-2019/Variables": {
+          "name": "Variabelen"
+        },
+        "csd3-2019/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2019/Conditionals": {
+          "name": "Voorwaardelijke instructies"
+        },
+        "csd3-2019/Velocity": {
+          "name": "Snelheid"
+        },
+        "csd3-2019/Collision Detection": {
+          "name": "Botsingdetectie"
+        },
+        "csd3-2019/Functions": {
+          "name": "Functies"
+        },
+        "csd5-2019/Representing Images": {
+          "name": "Het voorstellen van afbeeldingen"
+        },
+        "csd5-2019/Representing Numbers": {
+          "name": "Het voorstellen van getallen"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "Functies met Parameters"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Veilig Reizen"
@@ -467,6 +304,12 @@
         },
         "courseb-2019/Loops: Getting Loopy": {
           "name": "Rondjes lopen"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Binaire armbanden"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "De grote gebeurtenis"
         },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "Programmeren op Ruitjespapier"
@@ -489,6 +332,9 @@
         "coursed-2019/Dance Party": {
           "name": "Dansfeest"
         },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Songwriting"
+        },
         "coursef-2019/Envelope Variables": {
           "name": "Envelop variabelen"
         },
@@ -501,203 +347,472 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Songwriting"
-        },
         "express-2019/Dance Party": {
           "name": "Dansfeest"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Binaire armbanden"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "De grote gebeurtenis"
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Spellingswedstrijd"
         },
-        "csd3-2019/Variables": {
-          "name": "Variabelen"
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Vrolijke Routes"
         },
-        "csd3-2019/Sprites": {
-          "name": "Sprites"
+        "courseb-2020/Move It, Move It": {
+          "name": "verplaats het, verplaats het"
         },
-        "csd3-2019/Conditionals": {
-          "name": "Voorwaardelijke instructies"
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Rondjes lopen"
         },
-        "csd3-2019/Velocity": {
-          "name": "Snelheid"
+        "coursec-2020/Binary Bracelets": {
+          "name": "Binaire armbanden"
         },
-        "csd3-2019/Collision Detection": {
-          "name": "Botsingdetectie"
+        "coursec-2020/Events: The Big Event": {
+          "name": "De grote gebeurtenis"
         },
-        "csd3-2019/Functions": {
-          "name": "Functies"
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Programmeren op Ruitjespapier"
         },
-        "csd6-2019/Functions with Parameters": {
-          "name": "Functies met Parameters"
+        "coursed-2020/Relay Programming": {
+          "name": "Estafette Programmeren"
         },
-        "csd5-2019/Representing Images": {
-          "name": "Het voorstellen van afbeeldingen"
-        },
-        "csd5-2019/Representing Numbers": {
-          "name": "Het voorstellen van getallen"
-        },
-        "csd2-2019/Headings": {
-          "name": "Headings"
-        },
-        "csd2-2019/Lists": {
-          "name": "Lijsten"
-        },
-        "csd2-2019/Intellectual Property and Images": {
-          "name": "Intellectuele Eigendom en Afbeeldingen"
-        },
-        "coursef-2017/Building a Foundation": {
-          "name": "Een Basis Bouwen"
-        },
-        "coursef-2017/Algorithms: Tangrams": {
-          "name": "Algoritmen: Tangrams"
-        },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmen in het echte leven: Plant een zaadje"
-        },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmen in het echte leven: Plant een zaadje"
-        },
-        "pre-express-2017/Spelling Bee": {
-          "name": "Spellingswedstrijd"
-        },
-        "coursee-2017/Building a Foundation": {
-          "name": "Een Basis Bouwen"
-        },
-        "coursee-2017/Nested Loops": {
-          "name": "Genestelde lussen"
-        },
-        "coursee-2017/Build a Star Wars Game": {
+        "coursed-2020/Build a Star Wars Game": {
           "name": "Bouw een Star Wars Spel!"
         },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Algoritmen in het echt: Papieren Vliegtuigjes"
+        "coursed-2020/Dance Party": {
+          "name": "Dansfeest"
         },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmen in het echte leven: Plant een zaadje"
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Statements met Kaarten"
         },
-        "coursed-2017/Nested Loops": {
-          "name": "Genestelde lussen"
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Binaire afbeeldingen"
         },
-        "express-2017/Introduction": {
-          "name": "Introductie"
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Songwriting"
         },
-        "express-2017/Building a Foundation": {
-          "name": "Een Basis Bouwen"
+        "coursef-2020/Envelope Variables": {
+          "name": "Envelop variabelen"
         },
-        "express-2017/Nested Loops": {
-          "name": "Genestelde lussen"
+        "coursef-2020/AI for Oceans": {
+          "name": "AI voor oceanen"
         },
-        "csd3-2017/Variables": {
-          "name": "Variabelen"
+        "coursef-2020/Internet": {
+          "name": "Het Internet"
         },
-        "csd3-2017/Sprites": {
-          "name": "Sprites"
+        "coursef-2020/For Loop Fun": {
+          "name": "For Lus fun"
         },
-        "csd3-2017/Conditionals": {
-          "name": "Voorwaardelijke instructies"
+        "express-2020/Dance Party": {
+          "name": "Dansfeest"
         },
-        "csd3-2017/Velocity": {
-          "name": "Snelheid"
-        },
-        "csd3-2017/Collision Detection": {
-          "name": "Botsingdetectie"
-        },
-        "csd3-2017/Functions": {
-          "name": "Functies"
-        },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "Functies met Parameters"
-        },
-        "csd2-2017/Headings": {
-          "name": "Headings"
-        },
-        "csd2-2017/Lists": {
-          "name": "Lijsten"
-        },
-        "csd2-2017/Intellectual Property and Images": {
-          "name": "Intellectuele Eigendom en Afbeeldingen"
-        },
-        "csd1-2017/Storage": {
+        "csd1-2021/Storage": {
           "name": "Opslag"
         },
-        "csd5-2017/Representing Images": {
+        "csd2-2021/Headings": {
+          "name": "Headings"
+        },
+        "csd2-2021/Intellectual Property": {
+          "name": "Intellectuele Eigendom"
+        },
+        "csd2-2021/Using Images": {
+          "name": "Afbeeldingen gebruiken"
+        },
+        "csd3-2021/Variables": {
+          "name": "Variabelen"
+        },
+        "csd3-2021/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2021/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2021/Conditionals": {
+          "name": "Voorwaardelijke instructies"
+        },
+        "csd3-2021/Velocity": {
+          "name": "Snelheid"
+        },
+        "csd3-2021/Collision Detection": {
+          "name": "Botsingdetectie"
+        },
+        "csd3-2021/Functions": {
+          "name": "Functies"
+        },
+        "csd5-2021/Representing Images": {
           "name": "Het voorstellen van afbeeldingen"
         },
-        "csd5-2017/Representing Numbers": {
+        "csd5-2021/Representing Numbers": {
           "name": "Het voorstellen van getallen"
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "Unplugged: Tangrams"
+        "csd6-2021/Functions with Parameters": {
+          "name": "Functies met Parameters"
         },
-        "course4/Maze and Bee": {
-          "name": "Maze en Bee"
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Vrolijke Routes"
         },
-        "course4/Artist": {
+        "courseb-2021/Move It, Move It": {
+          "name": "verplaats het, verplaats het"
+        },
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Rondjes lopen"
+        },
+        "coursec-2021/Events: The Big Event": {
+          "name": "De grote gebeurtenis"
+        },
+        "coursec-2021/Binary Bracelets": {
+          "name": "Binaire armbanden"
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "coursed-2021/Relay Programming": {
+          "name": "Estafette Programmeren"
+        },
+        "coursed-2021/Build a Star Wars Game": {
+          "name": "Bouw een Star Wars Spel!"
+        },
+        "coursed-2021/Dance Party": {
+          "name": "Dansfeest"
+        },
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Statements met Kaarten"
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Songwriting",
+          "overview": "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  "
+        },
+        "coursef-2021/For Loop Fun": {
+          "name": "For Lus fun"
+        },
+        "coursef-2021/lesson-5": {
+          "name": "Uitbraak"
+        },
+        "coursef-2021/Internet": {
+          "name": "Het Internet"
+        },
+        "express-2021/lesson-1": {
+          "name": "Dansfeest"
+        },
+        "csd1-2022/Storage": {
+          "name": "Opslag"
+        },
+        "csd2-2022/Headings": {
+          "name": "Headings"
+        },
+        "csd2-2022/Intellectual Property": {
+          "name": "Intellectuele Eigendom"
+        },
+        "csd2-2022/Using Images": {
+          "name": "Afbeeldingen gebruiken"
+        },
+        "csd3-2022/Variables": {
+          "name": "Variabelen"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2022/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Voorwaardelijke instructies"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Snelheid"
+        },
+        "csd3-2022/Collision Detection": {
+          "name": "Botsingdetectie"
+        },
+        "csd3-2022/Functions": {
+          "name": "Functies"
+        },
+        "csd5-2022/Representing Images": {
+          "name": "Het voorstellen van afbeeldingen"
+        },
+        "csd5-2022/Representing Numbers": {
+          "name": "Het voorstellen van getallen"
+        },
+        "csd6-2022/Functions": {
+          "name": "Functies"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Vrolijke Routes"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "verplaats het, verplaats het"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Rondjes lopen"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "De grote gebeurtenis"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binaire armbanden"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Estafette Programmeren"
+        },
+        "coursed-2022/Build a Star Wars Game": {
+          "name": "Bouw een Star Wars Spel!"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Dansfeest"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Statements met Kaarten"
+        },
+        "coursee-2022/Hello World: Food": {
+          "name": "Hallo Wereld"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Songwriting",
+          "overview": "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  "
+        },
+        "coursef-2022/Outbreak": {
+          "name": "Uitbraak"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Het Internet"
+        },
+        "express-2022/Dance Party": {
+          "name": "Dansfeest"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Uur van Code 2013"
+        },
+        "applab-intro/Intro to App Lab": {
+          "student_overview": "Aan het einde van deze tutorial bent u in staat een project uit te breiden dat u begon met opbouwen tot een \"Kies uw eigen avontuur\", \"Wenskaart\" of \"Karakterquiz\" app. Tevens kunt u verder gaan met het creëren van meer project die te vinden zijn op de code.org/applab-pagina. "
+        },
+        "aquatic/Aquatic": {
+          "name": "Minecraft: Aquatische reis",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen."
+        },
+        "artist/Artist": {
           "name": "Kunstenaar"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Unplugged: Envelop variabelen"
+        "dance-2019/Dance Party": {
+          "name": "Dansfeest",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren."
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Unplugged:Madlibs"
+        "dance-extras/Dance Party - Go Further": {
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren."
         },
-        "course4/Artist: Variables": {
-          "name": "Artiest: variabelen"
+        "dance/Dance Party": {
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren."
         },
-        "course4/Play Lab: Variables": {
-          "name": "Speel Lab: variabelen"
+        "flappy/Flappy Code": {
+          "name": "Flappy Code"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Unplugged: Voor-Lus plezier"
+        "frozen/Artist": {
+          "name": "Code met Anna en Elsa",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met programmeren en informatica. Deze les werd ontworpen voor studenten op de lagere school in de leeftijd van 10 tot 13 jaar, maar kan tevens wordne aangepast voor jongere of oudere studenten met door gebruik te maken van de onderscheidende suggesties. Studenten dienen basiskennis te hebben van eenvoudige geometrie en het tekenen in hoeken. ",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met programmeren en informatica. Deze les werd ontworpen voor studenten op de lagere school in de leeftijd van 10 tot 13 jaar, maar kan tevens wordne aangepast voor jongere of oudere studenten met door gebruik te maken van de onderscheidende suggesties. Studenten dienen basiskennis te hebben van eenvoudige geometrie en het tekenen in hoeken. "
         },
-        "course4/Bee: For Loops": {
-          "name": "Bij : For-lussen"
+        "gumball/Gumball Play Lab": {
+          "name": "Kauwgom Speel Lab"
         },
-        "course4/Artist: For Loops": {
-          "name": "Artiest: For-lussen"
+        "hello-world-animals-2021/Hello World": {
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.][0]",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections][0] om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections][0] voor ideeén over hoe informatica in andere vakken te integreren."
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Speel Lab: For-lussen"
+        "hello-world-emoji-2021/Hello World": {
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.][0]",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections][0] om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections][0] voor ideeén over hoe informatica in andere vakken te integreren."
         },
-        "course4/Artist: Functions": {
-          "name": "Kunstenaar: Functies"
+        "hello-world-food-2021/Hello World": {
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.][0]",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections][0] om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections][0] voor ideeén over hoe informatica in andere vakken te integreren."
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Unplugged: Liedjes schrijven met Parameters"
+        "hello-world-retro-2021/Hello World": {
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.][0]",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections][0] om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections][0] voor ideeén over hoe informatica in andere vakken te integreren."
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Artiest: Functies met Parameters"
+        "hello-world-soccer-2022/Hello World: Food": {
+          "name": "Hello World: Voetbal",
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.][0]",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections][0] om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections][0] voor ideeén over hoe informatica in andere vakken te integreren."
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Speel Lab: Functies met Parameters"
+        "hello-world-space-2022/Hello World: Food": {
+          "name": "Hallo World: Space",
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.][0]",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections][0] om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections][0] voor ideeén over hoe informatica in andere vakken te integreren."
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Bij: Functies met Parameters"
+        "hero/Minecraft Hour of Code": {
+          "name": "Minecraft: Heldenreis",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
+          "preparation": "### Een week voor je Hour of Code\n\n-   Bekijk de [Hour of Code Educator Guide][0] en [Best Practices from Successful Educators][1] om te beginnen met het plannen van je Hour of Code-evenement. \n-   [Registreer je Hour of Code-evenement][2] als je ondersteuning in de klas wilt ontvangen.\n-   Bekijk en voltooi de online handleiding zelf: [Minecraft: Hero's Journey][3]\n-   Zorg ervoor dat je hem eerst test voordat je je leerlingen vraagt om hem af te maken. Controleer je technologie en beslis of je iets moet oplossen voordat je Hour of Code begint.\n\n### De dag voor de Hour of Code\n\n-   Druk een of meer van de [Exit Ticket-voorbeelden][4] aan het einde van dit lesplan af, of maak er zelf een. \n-   Elke student die de activiteit voltooit, krijgt een [certificate][5]. Print er van tevoren een voor elke student om dit makkelijker te maken aan het einde van je Hour of Code.",
+          "purpose": "Deze les introduceert de belangrijkste informatica concepten van coderen en programmeren (met behulp van blokken), evenals eenvoudige debugging technieken en hoe functies nuttig kunnen zijn."
         },
-        "course4/Unplugged: Binary": {
-          "name": "Unplugged: binair"
+        "hoc-encryption/Simple Encryption": {
+          "name": "Eenvoudige versleuteling",
+          "overview": "In deze les maken studenten kennis met de noodzaak voor codering en eenvoudige technieken voor het breken (of kraken) van geheime berichten. De studenten proberen zelf een bericht dat met de klassieke Caesar Cipher en tevens een Random Substitution Cipher werd gecodeerd, te kraken. Studenten dienen goed vertrouwd te raken met het idee dat in een tijd van krachtige rekenprogramma's, de technieken van codering veel geavanceerder moeten zijn. Het belangrijkste aspect van deze les is te begrijpen hoe en waarom codering een rol speelt in al onze levens dagelijks op het Internet, en dat het creëren van een goede codering niet iets triviaals is. Studenten zullen langzaam kennis opdoen van de overwegingen die er zijn bij het creëren van een sterke codering in relatie tot krachtige rekenprogramma's die gebruikt kunnen worden om deze te kraken. De noodzaak tot geheimhouding bij het overzenden van bits is belangrijk voor iedereen die gebruik maakt van het Internet.   ",
+          "student_overview": "In deze les maken studenten kennis met de noodzaak voor codering en eenvoudige technieken voor het breken (of kraken) van geheime berichten. De studenten proberen zelf een bericht dat met de klassieke Caesar Cipher en tevens een Random Substitution Cipher werd gecodeerd, te kraken. Studenten dienen goed vertrouwd te raken met het idee dat in een tijd van krachtige rekenprogramma's, de technieken van codering veel geavanceerder moeten zijn. Het belangrijkste aspect van deze les is te begrijpen hoe en waarom codering een rol speelt in al onze levens dagelijks op het Internet, en dat het creëren van een goede codering niet iets triviaals is. Studenten zullen langzaam kennis opdoen van de overwegingen die er zijn bij het creëren van een sterke codering in relatie tot krachtige rekenprogramma's die gebruikt kunnen worden om deze te kraken. De noodzaak tot geheimhouding bij het overzenden van bits is belangrijk voor iedereen die gebruik maakt van het Internet.   "
         },
-        "course4/Artist Binary": {
-          "name": "Kunstenaar Binary"
+        "hourofcode/Maze": {
+          "name": "Doolhof",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is ontworpen voor jonge studenten in de leeftijd van 4 tot 10 jaar, maar kan tevens worden aangepast aan oudere studenten door gebruik te maken van de onderscheidende suggesties. ",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is ontworpen voor jonge studenten in de leeftijd van 4 tot 10 jaar, maar kan tevens worden aangepast aan oudere studenten door gebruik te maken van de onderscheidende suggesties. "
         },
-        "course4/Super Challenge - Variables": {
-          "name": "Super Uitdaging - Variabelen"
+        "iceage/Ice Age Play Lab": {
+          "name": "Ijs tijd Speel Lab",
+          "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode."
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "Grote uitdaging - herhalingen"
+        "infinity/Infinity": {
+          "name": "Disney Infinity Play Lab",
+          "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode."
         },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Grote uitdaging - functies en parameters"
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft programmeer uur",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen."
         },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Extreme uitdaging - Omvangrijk"
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Minecraft Code Uur Code Ontwerper",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen."
+        },
+        "oceans/Oceans": {
+          "name": "AI voor oceanen",
+          "overview": "In deze les maken In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Eerst classificeren studenten objecten als \"vis' of \"niet vis\" in een poging het vuil uit de oceaan te verwijderen. Daarna moeten studenten hun dataset voor de training uitbreiden zodat ook andere zeedieren die in het water thuishoren worden inbegrepen. In het tweede deel van de activiteit, kiezen studenten hun eigen etiketten om toe te passen op willekeurig gegenereerde vissen. Deze data van de training wordt gebruik voor een model voor machinaal leren dat tegen die tijd in staat moet zijn om zelf etiketten op afbeeldingen te plakken. "
+        },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "playlab/Play Lab": {
+          "name": "Speel Lab",
+          "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode."
+        },
+        "poem-art-2021/Poem Art": {
+          "name": "Poëzie",
+          "overview": "In deze geïntegreerde CS en ELA les gaan leerlingen een gedicht animeren met code om de stemming van een gedicht te illustreren. Studenten zullen leerlingen een gedicht lezen en detecteren ze de stemming ervan. Vervolgens moeten ze bijbehorende effecten en beelden vinden om de stemming van het gedicht te helpen illustreren. Ten slotte gaan de leerlingen gebeurtenissen (code) gebruiken om een verandering in stemming te illustreren of de introductie van nieuwe beelden in een gedicht te animeren. \n\nDeze les kan worden voltooid als een 1 uur durende op zichzelf staande les. Er is ook een optie om deze les te gebruiken als eerste les van de uit meerdere lessen bestaande module genaamd [Coderen met poëzie](http://studio.code.org/s/poetry-2021).",
+          "preparation": "-   Bekijk en voltooi de online handleiding zelf: [Poem Art](http://studio.code.org/s/poem-art).\n\n-   Probeer de activiteiten eerst uit voordat je de leerlingen vraagt ze uit te voeren. \n\n-   Controleer je technologie en bepaal of je van tevoren iets moet oplossen.\n\n-   Sommige niveaus vereisen geluid om te spelen. Deel van tevoren koptelefoons uit. \n\n-   [Optioneel] 2 post-it’s per leerling voor de beoordeling."
+        },
+        "starwars/Hour of Code 2015": {
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgving kennis met informatica en programmeren. Deze les bestaat uit twee versies. "
+        },
+        "starwarsblocks/Hour of Code 2015": {
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgving kennis met informatica en programmeren. Deze les bestaat uit twee versies. "
+        },
+        "text-compression/Text Compression": {
+          "name": "Tekstcompressie",
+          "student_overview": "Op een bepaald moment bereiken we een fysieke limiet wat betreft de snelheid van het verzenden van bits, en als we een grote hoeveelheid informatie sneller willen verzenden, dan moeten we een manier vinden om dezelfde informatie weer te geven in minder bits - we moeten de data comprimeren.  "
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Verzend Bits op een Gedeelde Lijn"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Verzend Getallen"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Verzend Ascii"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routers en Adressen"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manuele DNS"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Stemmingsonderzoek"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Legpuzzel"
+        },
+        "allthethings/Maze": {
+          "name": "Doolhof"
+        },
+        "allthethings/Artist": {
+          "name": "Kunstenaar"
+        },
+        "allthethings/Bee": {
+          "name": "Bee"
+        },
+        "allthethings/PlayLab": {
+          "name": "SpeelLab"
+        },
+        "allthethings/Farmer": {
+          "name": "Boer"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Stuiter"
+        },
+        "allthethings/Multi": {
+          "name": "meerdere"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Overeenkomst"
+        },
+        "allthethings/CSinA": {
+          "name": "CSinA"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Odometer": {
+          "name": "Kilometerteller"
+        },
+        "allthethings/Text Compression": {
+          "name": "Tekstcompressie"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pixelachtig"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Gamelab": {
+          "name": "Gamelab"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Star wars": {
+          "name": "Star Wars"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Public Key Cryptography": {
+          "name": "Publieke Sleutel Cryptografie"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
+        },
+        "allthethings/Standalone video": {
+          "name": "Alleenstaande video"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "allthethings/ML Fish": {
+          "name": "ML Vis"
+        },
+        "allthethings/lesson-48": {
+          "name": "Poëzie"
+        },
+        "allthethings/lesson-49": {
+          "name": "Muziek"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Inleiding Informatica"
@@ -758,6 +873,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "Einde"
+        },
+        "course1/Happy Maps": {
+          "name": "Vrolijke Routes"
+        },
+        "course1/Move it, Move it": {
+          "name": "Beweeg, Beweeg"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Puzzel: Leer hoe je kan knippen en plakken"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Doolhof: Nummering"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Doolhof: foutopsporing"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmen in het echte leven: Plant een zaadje"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Bij: volgorde"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Kunstenaar: volgorde"
+        },
+        "course1/Building a Foundation": {
+          "name": "Een Basis Bouwen"
+        },
+        "course1/Artist: Shapes": {
+          "name": "kunstenaar: Vormen"
+        },
+        "course1/Spelling Bee": {
+          "name": "Spellingswedstrijd"
+        },
+        "course1/Getting Loopy": {
+          "name": "Rondjes lopen"
+        },
+        "course1/Maze: Loops": {
+          "name": "Doolhof: lussen"
+        },
+        "course1/Bee: Loops": {
+          "name": "Bij: lussen"
+        },
+        "course1/The Big Event": {
+          "name": "De grote gebeurtenis"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Speel Lab: Maak een Verhaal"
+        },
+        "course1/Going Places Safely": {
+          "name": "Veilig Reizen"
+        },
+        "course1/Artist: Loops": {
+          "name": "Kunstenaar: lussen"
         },
         "course2/Graph Paper Programming": {
           "name": "Programmeren op Ruitjespapier"
@@ -879,285 +1048,74 @@
         "course3/Artist: Patterns": {
           "name": "Kunstenaar: Patronen"
         },
-        "course1/Happy Maps": {
-          "name": "Vrolijke Routes"
+        "course4/Unplugged: Tangrams": {
+          "name": "Unplugged: Tangrams"
         },
-        "course1/Move it, Move it": {
-          "name": "Beweeg, Beweeg"
+        "course4/Maze and Bee": {
+          "name": "Maze en Bee"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Puzzel: Leer hoe je kan knippen en plakken"
+        "course4/Artist": {
+          "name": "Kunstenaar"
         },
-        "course1/Maze: Sequence": {
-          "name": "Doolhof: Nummering"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Unplugged: Envelop variabelen"
         },
-        "course1/Maze: Debugging": {
-          "name": "Doolhof: foutopsporing"
+        "course4/Unplugged: Madlibs": {
+          "name": "Unplugged:Madlibs"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmen in het echte leven: Plant een zaadje"
+        "course4/Artist: Variables": {
+          "name": "Artiest: variabelen"
         },
-        "course1/Bee: Sequence": {
-          "name": "Bij: volgorde"
+        "course4/Play Lab: Variables": {
+          "name": "Speel Lab: variabelen"
         },
-        "course1/Artist: Sequence": {
-          "name": "Kunstenaar: volgorde"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Unplugged: Voor-Lus plezier"
         },
-        "course1/Building a Foundation": {
-          "name": "Een Basis Bouwen"
+        "course4/Bee: For Loops": {
+          "name": "Bij : For-lussen"
         },
-        "course1/Artist: Shapes": {
-          "name": "kunstenaar: Vormen"
+        "course4/Artist: For Loops": {
+          "name": "Artiest: For-lussen"
         },
-        "course1/Spelling Bee": {
-          "name": "Spellingswedstrijd"
+        "course4/Play Lab: For Loops": {
+          "name": "Speel Lab: For-lussen"
         },
-        "course1/Getting Loopy": {
-          "name": "Rondjes lopen"
+        "course4/Artist: Functions": {
+          "name": "Kunstenaar: Functies"
         },
-        "course1/Maze: Loops": {
-          "name": "Doolhof: lussen"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Unplugged: Liedjes schrijven met Parameters"
         },
-        "course1/Bee: Loops": {
-          "name": "Bij: lussen"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Artiest: Functies met Parameters"
         },
-        "course1/The Big Event": {
-          "name": "De grote gebeurtenis"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Speel Lab: Functies met Parameters"
         },
-        "course1/Studio: Create a Story": {
-          "name": "Speel Lab: Maak een Verhaal"
+        "course4/Bee: Functions with Parameters": {
+          "name": "Bij: Functies met Parameters"
         },
-        "course1/Going Places Safely": {
-          "name": "Veilig Reizen"
+        "course4/Unplugged: Binary": {
+          "name": "Unplugged: binair"
         },
-        "course1/Artist: Loops": {
-          "name": "Kunstenaar: lussen"
+        "course4/Artist Binary": {
+          "name": "Kunstenaar Binary"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Super Uitdaging - Variabelen"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Grote uitdaging - herhalingen"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Grote uitdaging - functies en parameters"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Extreme uitdaging - Omvangrijk"
         },
         "jigsaw/Jigsaw": {
           "name": "Legpuzzel"
-        },
-        "allthethings/Jigsaw": {
-          "name": "Legpuzzel"
-        },
-        "allthethings/Maze": {
-          "name": "Doolhof"
-        },
-        "allthethings/Artist": {
-          "name": "Kunstenaar"
-        },
-        "allthethings/Bee": {
-          "name": "Bee"
-        },
-        "allthethings/PlayLab": {
-          "name": "SpeelLab"
-        },
-        "allthethings/Farmer": {
-          "name": "Boer"
-        },
-        "allthethings/Flappy": {
-          "name": "Flappy"
-        },
-        "allthethings/Bounce": {
-          "name": "Stuiter"
-        },
-        "allthethings/Multi": {
-          "name": "meerdere"
-        },
-        "allthethings/Multi2": {
-          "name": "Multi2"
-        },
-        "allthethings/Match": {
-          "name": "Overeenkomst"
-        },
-        "allthethings/CSinA": {
-          "name": "CSinA"
-        },
-        "allthethings/Netsim": {
-          "name": "Netsim"
-        },
-        "allthethings/Odometer": {
-          "name": "Kilometerteller"
-        },
-        "allthethings/Text Compression": {
-          "name": "Tekstcompressie"
-        },
-        "allthethings/Pixelation": {
-          "name": "Pixelachtig"
-        },
-        "allthethings/AppLab": {
-          "name": "AppLab"
-        },
-        "allthethings/Gamelab": {
-          "name": "Gamelab"
-        },
-        "allthethings/Studio": {
-          "name": "Studio"
-        },
-        "allthethings/Star wars": {
-          "name": "Star Wars"
-        },
-        "allthethings/Minecraft": {
-          "name": "Minecraft"
-        },
-        "allthethings/Public Key Cryptography": {
-          "name": "Publieke Sleutel Cryptografie"
-        },
-        "allthethings/Web Lab": {
-          "name": "Web Lab"
-        },
-        "allthethings/Standalone video": {
-          "name": "Alleenstaande video"
-        },
-        "allthethings/Sprite Lab": {
-          "name": "Sprite Lab"
-        },
-        "allthethings/ML Fish": {
-          "name": "ML Vis"
-        },
-        "allthethings/lesson-48": {
-          "name": "Poëzie"
-        },
-        "allthethings/lesson-49": {
-          "name": "Muziek"
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "For Lus fun"
-        },
-        "coursef-2021/lesson-5": {
-          "name": "Uitbraak"
-        },
-        "coursef-2021/Internet": {
-          "name": "Het Internet"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "verplaats het, verplaats het"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Rondjes lopen"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "Vrolijke Routes"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "De grote gebeurtenis"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Binaire armbanden"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Programmeren op Ruitjespapier"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Estafette Programmeren"
-        },
-        "coursed-2021/Build a Star Wars Game": {
-          "name": "Bouw een Star Wars Spel!"
-        },
-        "coursed-2021/Dance Party": {
-          "name": "Dansfeest"
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "Statements met Kaarten"
-        },
-        "express-2021/lesson-1": {
-          "name": "Dansfeest"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "Songwriting",
-          "overview": "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  "
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Functies met Parameters"
-        },
-        "csd5-2021/Representing Images": {
-          "name": "Het voorstellen van afbeeldingen"
-        },
-        "csd5-2021/Representing Numbers": {
-          "name": "Het voorstellen van getallen"
-        },
-        "csd3-2021/Variables": {
-          "name": "Variabelen"
-        },
-        "csd3-2021/Sprites": {
-          "name": "Sprites"
-        },
-        "csd3-2021/Text": {
-          "name": "Tekst"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "Voorwaardelijke instructies"
-        },
-        "csd3-2021/Velocity": {
-          "name": "Snelheid"
-        },
-        "csd3-2021/Collision Detection": {
-          "name": "Botsingdetectie"
-        },
-        "csd3-2021/Functions": {
-          "name": "Functies"
-        },
-        "csd1-2021/Storage": {
-          "name": "Opslag"
-        },
-        "csd2-2021/Headings": {
-          "name": "Headings"
-        },
-        "csd2-2021/Intellectual Property": {
-          "name": "Intellectuele Eigendom"
-        },
-        "csd2-2021/Using Images": {
-          "name": "Afbeeldingen gebruiken"
-        },
-        "express-2020/Dance Party": {
-          "name": "Dansfeest"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "verplaats het, verplaats het"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Rondjes lopen"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Programmeren op Ruitjespapier"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Estafette Programmeren"
-        },
-        "coursed-2020/Build a Star Wars Game": {
-          "name": "Bouw een Star Wars Spel!"
-        },
-        "coursed-2020/Dance Party": {
-          "name": "Dansfeest"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "Statements met Kaarten"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Binaire afbeeldingen"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Binaire armbanden"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "De grote gebeurtenis"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "Songwriting"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Vrolijke Routes"
-        },
-        "coursef-2020/Envelope Variables": {
-          "name": "Envelop variabelen"
-        },
-        "coursef-2020/AI for Oceans": {
-          "name": "AI voor oceanen"
-        },
-        "coursef-2020/Internet": {
-          "name": "Het Internet"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "For Lus fun"
         }
       }
     }

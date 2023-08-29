@@ -10,13 +10,8 @@ $border-radius: 4px;
 }
 
 // Start styles
-html {
-  scroll-behavior: smooth;
-  font-size: 100%;
-}
-
-body {
-  color: $neutral-dark;
+p {
+  @include body-two;
 }
 
 // Use these classes to change a section's background color
@@ -29,8 +24,8 @@ section.bg-primary-light {
   p {
     @include strong;
 
-    &.body-two {
-      @include body-two;
+    &.body-three {
+      @include body-three;
     }
   }
 
@@ -145,33 +140,6 @@ hr {
     border-top: 1px solid $neutral_dark60;
   }
 }
-// Text links
-p a,
-p a:visited,
-p a:link,
-a,
-a:visited,
-a:link {
-  font-family: $gotham-bold, sans-serif;
-  color: $brand_secondary_default;
-  text-decoration: underline;
-  transition: color ease-in-out .2s;
-
-  &:hover {
-    color: $brand_secondary_dark;
-    text-decoration: underline;
-  }
-}
-
-// Footer links
-a.whitefooterlink {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-    color: $neutral_white;
-  }
-}
 
 // Buttons
 a.link-button,
@@ -220,11 +188,22 @@ input[type=submit] {
 a.link-button {
   &.secondary {
     background: none;
-    border-color: $neutral-dark;
-    color: $neutral-dark;
+    border-color: $neutral_dark;
+    color: $neutral_dark;
 
     &:hover {
       background: $neutral_dark10;
+    }
+  }
+
+  &.white {
+    background-color: $neutral_white;
+    border-color: $neutral_white;
+    color: $neutral_dark;
+
+    &:hover {
+      background: $neutral_dark10;
+      border-color: $neutral_dark10;
     }
   }
 
@@ -253,6 +232,10 @@ a.link-button {
 // Unordered lists
 ul {
   margin: 1rem;
+
+  li p {
+    @include body-three;
+  }
 
   // Lists that use icons next to content
   &.icon-bullet-list {
@@ -295,7 +278,7 @@ ul {
       }
 
       p {
-        @include body-two;
+        @include body-three;
       }
     }
   }
@@ -329,10 +312,6 @@ ul {
 
       h3 {
         @include heading-sm;
-      }
-
-      p {
-        @include body-two;
       }
 
       &:after {
@@ -521,7 +500,7 @@ ol.steps-list {
   }
 
   p {
-    @include body-two;
+    @include body-three;
   }
 }
 
@@ -572,7 +551,7 @@ details {
   }
 
   p {
-    @include body-two;
+    @include body-three;
   }
 }
 
@@ -626,6 +605,12 @@ form {
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
+  &.action-block__wrapper--four-col {
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
 
 // Action blocks shared styles
@@ -642,21 +627,25 @@ form {
   }
 
   p {
-    @include body-two;
+    @include body-three;
 
     &.overline {
-      @include overline;
+      @include overline-two;
       color: $brand_primary_default;
       width: 100%;
     }
   }
 
-  figure.video-responsive {
-    margin-bottom: 1rem;
+  figure {
+
+    &.video-responsive {
+      margin-bottom: 1rem;
+    }
   }
 
   ul {
     margin: 0 1rem 1rem;
+    @include body-three;
   }
 
   &.secondary {
@@ -664,6 +653,12 @@ form {
     h3 {
       @include heading-sm;
     }
+  }
+
+  // Hides the unused caption div from the
+  // display_video_thumbnail partial
+  .video_caption_link {
+    display: none;
   }
 }
 
@@ -787,6 +782,10 @@ form {
 
       &.selected {
         background: $brand_primary_default;
+      }
+
+      &:focus {
+        @include focus-outline;
       }
     }
   }
@@ -1002,12 +1001,6 @@ section.quote {
   }
 }
 
-// Overrides styles on the
-// display_video_thumbnail partial
-.video_caption_link {
-  @include figcaption;
-}
-
 // Blog post callout
 .blog-post-callout {
 
@@ -1156,6 +1149,7 @@ section.quote {
       }
 
       p {
+        @include body-two;
         margin-bottom: 0;
         width: 100%;
       }

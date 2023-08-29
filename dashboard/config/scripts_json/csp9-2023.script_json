@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "9664ad65-66f4-46d1-b0dd-14f7d74dcf80",
+          "notice": "Unit Under Construction",
+          "details": "In response to the changes to the Create Performance Task the College Board announced on Aug 28, we will be updating this unit during the Fall 2023. Until these updates are complete, some lessons, activities, and resources will be out of date with the new format of the Create Performance Task.",
+          "link": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 22:44:31 UTC",
+    "serialized_at": "2023-08-29 04:35:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1161,11 +1173,9 @@
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -1775,6 +1785,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

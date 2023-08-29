@@ -1,56 +1,17 @@
 {
-  "navigateForward": "Continuar",
-  "navigateBack": "Anterior",
-  "tryAgain": "Voltar a tentar",
-  "navigateDone": "Terminar",
-  "saveProgress": "Guardar",
-  "correctAnswer": "Certo",
-  "incorrectAnswer": "Incorreto",
-  "modelCardPossibleValuesMinimum": "mín",
-  "modelCardPossibleValuesMaximum": "máx",
-  "columnInspectorDescription": "Descrição",
-  "columnDetailsMinimumValue": "mín",
   "columnDetailsMaximumValue": "máx",
+  "columnDetailsMinimumValue": "mín",
+  "columnInspectorDescription": "Descrição",
+  "correctAnswer": "Certo",
   "dataCardLastUpdated": "Última atualização",
-  "predictButton": "Previsão",
-  "uniqueOptionsWarningNotice": "Nota",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "idade"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "clima"
+        "Height": {
+          "id": "Altura"
         },
-        "day": {
-          "id": "dia"
-        },
-        "shoe": {
-          "id": "sapato"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "cebola"
-        },
-        "avocado": {
-          "id": "abacate"
-        },
-        "corn": {
-          "id": "milho"
-        },
-        "beans": {
-          "id": "feijão"
-        },
-        "lime": {
-          "id": "lima"
+        "Length": {
+          "id": "Comprimento"
         }
       }
     },
@@ -58,97 +19,6 @@
       "fields": {
         "index": {
           "id": "índice"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "cogumelos"
-        },
-        "lobster": {
-          "id": "lagosta"
-        },
-        "bacon": {
-          "id": "bacon"
-        },
-        "cheese": {
-          "id": "queijo"
-        },
-        "meat": {
-          "id": "carne"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "cor"
-        },
-        "music": {
-          "id": "música"
-        },
-        "food": {
-          "id": "comida"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "idade"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Categoria"
-        },
-        "Description": {
-          "id": "Descrição"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "morango"
-        },
-        "lime": {
-          "id": "lima"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "lados"
-        },
-        "size": {
-          "id": "tamanho"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "tomate"
-        },
-        "avocado": {
-          "id": "abacate"
-        },
-        "chicken": {
-          "id": "galinha"
-        },
-        "fruit": {
-          "id": "fruta"
-        },
-        "beans": {
-          "id": "feijão"
-        },
-        "cheese": {
-          "id": "queijo"
         }
       }
     },
@@ -162,36 +32,41 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "escola"
-        },
-        "age": {
-          "id": "idade"
-        },
-        "health": {
-          "id": "saúde"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "galinha"
-        },
-        "lamb": {
-          "id": "cordeiro"
-        },
-        "onion": {
-          "id": "cebola"
-        },
-        "cheese": {
-          "id": "queijo"
+        "banana": {
+          "id": "banana"
         }
       }
     },
     "census_part": {
+      "fields": {
+        "age": {
+          "id": "idade"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "cor"
+        },
+        "food": {
+          "id": "comida"
+        },
+        "music": {
+          "id": "música"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Idade  "
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "idade"
@@ -208,63 +83,65 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "País"
+        },
+        "Dance": {
+          "id": "Dançar"
+        },
+        "Music": {
+          "id": "Música"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "idade"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Pontuação"
-        },
         "Country": {
           "id": "País"
         },
         "Name": {
           "id": "Nome"
         },
+        "Score": {
+          "id": "Pontuação"
+        },
         "Star": {
           "id": "Estrela"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Artista"
+        "cheese": {
+          "id": "queijo"
+        },
+        "chicken": {
+          "id": "galinha"
+        },
+        "lamb": {
+          "id": "cordeiro"
+        },
+        "onion": {
+          "id": "cebola"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "pessoas"
+        "Category": {
+          "id": "Categoria"
         },
-        "rhino": {
-          "id": "rinoceronte"
-        },
-        "elephant": {
-          "id": "elefante"
-        },
-        "alligator": {
-          "id": "jacaré"
-        },
-        "trees": {
-          "id": "árvores"
-        }
-      },
-      "name": "Safári"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Comprimento"
-        },
-        "Height": {
-          "id": "Altura"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Aquático"
+        "Description": {
+          "id": "Descrição"
         }
       }
     },
@@ -273,59 +150,101 @@
         "avocado": {
           "id": "abacate"
         },
-        "onion": {
-          "id": "cebola"
-        },
         "ginger": {
           "id": "ruivo"
+        },
+        "onion": {
+          "id": "cebola"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Música"
+        "bacon": {
+          "id": "bacon"
         },
-        "Dance": {
-          "id": "Dançar"
+        "cheese": {
+          "id": "queijo"
         },
-        "Country": {
-          "id": "País"
+        "lobster": {
+          "id": "lagosta"
         },
-        "Internet": {
-          "id": "Internet"
+        "meat": {
+          "id": "carne"
         },
-        "Writing": {
-          "id": "Escrevendo"
-        },
-        "Achievements": {
-          "id": "Conquistas"
-        },
-        "Age": {
-          "id": "Idade  ",
-          "description": "Idade  "
-        },
-        "Height": {
-          "id": "Altura",
-          "description": "Altura"
-        },
-        "Gender": {
-          "id": "Género",
-          "description": "Género"
+        "mushrooms": {
+          "id": "cogumelos"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "banana"
+        "lime": {
+          "id": "lima"
+        },
+        "strawberry": {
+          "id": "morango"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Idade  "
+        "alligator": {
+          "id": "jacaré"
+        },
+        "elephant": {
+          "id": "elefante"
+        },
+        "people": {
+          "id": "pessoas"
+        },
+        "rhino": {
+          "id": "rinoceronte"
+        },
+        "trees": {
+          "id": "árvores"
+        }
+      },
+      "name": "Safári"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "abacate"
+        },
+        "beans": {
+          "id": "feijão"
+        },
+        "cheese": {
+          "id": "queijo"
+        },
+        "chicken": {
+          "id": "galinha"
+        },
+        "fruit": {
+          "id": "fruta"
+        },
+        "tomato": {
+          "id": "tomate"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "abacate"
+        },
+        "beans": {
+          "id": "feijão"
+        },
+        "corn": {
+          "id": "milho"
+        },
+        "lime": {
+          "id": "lima"
+        },
+        "onion": {
+          "id": "cebola"
         }
       }
     },
@@ -339,18 +258,99 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Música"
+        "sides": {
+          "id": "lados"
+        },
+        "size": {
+          "id": "tamanho"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "dia"
+        },
+        "shoe": {
+          "id": "sapato"
+        },
+        "weather": {
+          "id": "clima"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Artista"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "idade"
+        },
+        "health": {
+          "id": "saúde"
+        },
+        "school": {
+          "id": "escola"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Conquistas"
+        },
+        "Age": {
+          "description": "Idade  ",
+          "id": "Idade  "
+        },
+        "Country": {
+          "id": "País"
         },
         "Dance": {
           "id": "Dançar"
         },
-        "Country": {
-          "id": "País"
+        "Gender": {
+          "description": "Género",
+          "id": "Género"
+        },
+        "Height": {
+          "description": "Altura",
+          "id": "Altura"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Music": {
+          "id": "Música"
+        },
+        "Writing": {
+          "id": "Escrevendo"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Aquático"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Incorreto",
+  "modelCardPossibleValuesMaximum": "máx",
+  "modelCardPossibleValuesMinimum": "mín",
+  "navigateBack": "Anterior",
+  "navigateDone": "Terminar",
+  "navigateForward": "Continuar",
+  "predictButton": "Previsão",
+  "saveProgress": "Guardar",
+  "tryAgain": "Voltar a tentar",
+  "uniqueOptionsWarningNotice": "Nota"
 }

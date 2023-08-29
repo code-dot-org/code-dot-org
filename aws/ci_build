@@ -216,9 +216,9 @@ def check_hoc_mode
   if hoc_mode != CDO.default_hoc_mode
     # The test machine cannot remember DCDO params, so its hoc_mode is controlled by
     # CDO.default_hoc_mode.
-    msg = "<!here> #{rack_env} hoc_mode (#{hoc_mode.inspect}) and default_hoc_mode "\
-      "(#{CDO.default_hoc_mode.inspect}) are out of sync. Please update CDO.default_hoc_mode in "\
-      "github, DCDO hoc_mode in staging, and DCDO hoc_mode in production to the same values, so "\
+    msg = "<!here> #{rack_env} hoc_mode (#{hoc_mode.inspect}) and default_hoc_mode " \
+      "(#{CDO.default_hoc_mode.inspect}) are out of sync. Please update CDO.default_hoc_mode in " \
+      "github, DCDO hoc_mode in staging, and DCDO hoc_mode in production to the same values, so " \
       "that our staging, test and production environments all show the same version of our site."
     ChatClient.log msg
   end
@@ -229,9 +229,9 @@ def check_hoc_launch
   if hoc_launch != CDO.default_hoc_launch
     # The test machine cannot remember DCDO params, so its hoc_launch is controlled by
     # CDO.default_hoc_launch.
-    msg = "<!here> #{rack_env} hoc_launch (#{hoc_launch.inspect}) and default_hoc_launch "\
-      "(#{CDO.default_hoc_launch.inspect}) are out of sync. Please update CDO.default_hoc_launch in "\
-      "github, DCDO hoc_launch in staging, and DCDO hoc_launch in production to the same values, so "\
+    msg = "<!here> #{rack_env} hoc_launch (#{hoc_launch.inspect}) and default_hoc_launch " \
+      "(#{CDO.default_hoc_launch.inspect}) are out of sync. Please update CDO.default_hoc_launch in " \
+      "github, DCDO hoc_launch in staging, and DCDO hoc_launch in production to the same values, so " \
       "that our staging, test and production environments all show the same version of our site."
     ChatClient.log msg
   end

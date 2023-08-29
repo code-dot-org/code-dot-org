@@ -71,7 +71,6 @@
   "hello-world-retro": "你好世界：復古",
   "alltheselfpacedplthings": "所有自我進度 PL 的東西",
   "csd6-pilot": "物理計算試驗（2022 年）",
-  "vpl-csp": "CS 原則虛擬專業學習",
   "edit-code": "編輯程式碼",
   "tesstest921": "tesstest921",
   "coursef-2022-pilot": "第二十二期飛行員課程",
@@ -101,7 +100,7 @@
   "halloween": "萬聖節",
   "step": "點",
   "pl-playground": "PL-遊樂場",
-  "kodea-pd-2021": "科蒂亞電子 -2021",
+  "kodea-pd-2021": "CSF 在線 PD-科迪亞",
   "csa-backpack-2022": "澳大利亞加拿大海民主教背包",
   "csa-u6-dev": "CSA-開發",
   "kaitie-test-script": "凱蒂測試腳本",
@@ -120,7 +119,6 @@
   "csc-starquilts": "編碼幾何星形被子",
   "alltheblocklythings": "全封鎖的",
   "csc-fables": "講故事模組",
-  "vpl-csa": "CSA 虛擬專業學習",
   "soccer": "足球",
   "csa-data-lab": "亞太 CSA 數據實驗室",
   "csa-celebrity-lab": "亞太 CSA 消費者評論實驗室",
@@ -147,5 +145,6 @@
   "focus-on-impact-in-society": "聚焦社會影響（計算機科學探索）",
   "focus-on-data": "聚焦數據（計算機科學探索）",
   "focus-on-creativity": "聚集創造力（計算機科學探索）",
-  "ai-temp": "艾溫度"
+  "ai-temp": "艾溫度",
+  "how-ai-works": "人工智慧是如何運作的"
 }

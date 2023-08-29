@@ -11,7 +11,7 @@ export interface Channel {
   name: string;
   isOwner: boolean;
   projectType: ProjectType;
-  publishedAt: string;
+  publishedAt: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -81,16 +81,21 @@ export interface Level {
   isAquaticLevel: boolean;
 }
 
+/**
+ * Labs may extend this type to add lab-specific properties.
+ */
 export interface LevelProperties {
   // Not a complete list; add properties as needed.
-  isProjectLevel?: 'true' | 'false';
-  hideShareAndRemix?: 'true' | 'false';
+  isProjectLevel?: boolean;
+  hideShareAndRemix?: boolean;
   // TODO: Rework this field into an "enableProjects" or more complex list of
   // "enabledFeatures" that is calculated on the back end. For now, since
   // the only labs we support have projects enabled, it's easier to make this a
   // disabled flag for specific exceptions.
-  disableProjects?: 'true' | 'false';
-  levelData: LevelData;
+  disableProjects?: boolean;
+  levelData?: LevelData;
+  appName: AppName;
+  longInstructions?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -108,6 +113,8 @@ export interface VideoLevelData {
   download: string;
 }
 
+// TODO: Add AichatLevelData.
+
 export type LevelData = ProjectLevelData | VideoLevelData;
 
 // A validation condition.
@@ -116,11 +123,18 @@ export interface Condition {
   value?: string | number;
 }
 
+export interface ConditionType {
+  name: string;
+  hasValue: boolean;
+  valueType?: 'string' | 'number';
+}
+
 // Validation in the level.
 export interface Validation {
   conditions: Condition[];
   message: string;
   next: boolean;
+  key: string;
 }
 
 // TODO: these are not all the properties of app options.
@@ -156,6 +170,7 @@ export type ProjectType =
   | 'basketball';
 
 export type AppName =
+  | 'aichat'
   | 'applab'
   | 'calc'
   | 'dance'
@@ -171,7 +186,8 @@ export type AppName =
   | 'studio'
   | 'bounce'
   | 'poetry'
-  | 'spritelab';
+  | 'spritelab'
+  | 'standalone_video';
 
 export type StandaloneAppName =
   | 'spritelab'

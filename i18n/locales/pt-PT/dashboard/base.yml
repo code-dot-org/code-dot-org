@@ -1108,11 +1108,11 @@ pt:
       subjects: 'Qual(is) disciplina(s) você ensina este ano?'
       resources: 'Quais dos seguintes recursos de educação de Ciência da Computação você utiliza?'
       robotics: 'Quais dos seguintes recursos de robótica você utiliza?'
-      workshop_organizer: 'Organizador de Oficina'
+      workshop_organizer: 'Organizador da formação'
       workshop_facilitator: 'Facilitador de Oficina'
-      workshop_course: 'Curso de Oficina'
+      workshop_course: 'Formação'
       email_opt_in: 'Podemos enviar um e-mail sobre o programa internacional da Code.org, atualizações para nossos cursos ou outras notícias de ciência da computação?'
-      legal_opt_in: 'Ao enviar este formulário, você concorda em permitir que o Code.org compartilhe informações sobre como você utiliza o Code.org e os recursos de Aprendizagem Profissional com o Parceiro Internacional do Code.org em seu país, distrito escolar, e facilitadores. Nós vamos compartilhar suas informações de contato, quais cursos/unidades você está utilizando e dados agregados sobre suas aulas com estes parceiros. Isto inclui o número de estudantes nas suas turmas, a repartição demográfica de sua sala de aula, e o nome e distrito de sua escola. Nós não vamos compartilhar nenhuma informação sobre alunos individuais com nossos parceiros: todas as informações dos alunos terá sua identidade removida e será agregada. Nossos Parceiros Internacionais e facilitadores são contratualmente obrigados a tratar esta informação com o mesmo nível de confidencialidade que o Code.org.'
+      legal_opt_in: 'Ao enviar este formulário, você concorda que o Code.org partilhe informações sobre como utiliza o Code.org e os recursos de Aprendizagem Profissional com o Parceiro Internacional do Code.org no seu país e região. Nós vamos partilhar as suas informações de contato, quais os cursos/unidades que está a utilizar e os dados agregados sobre as suas aulas com estes parceiros. Isto inclui o número de alunos das suas turmas, a distribuição demográfica na sua sala de aula, o nome da sua escola e a respetiva localização. Nós não vamos partilhar nenhuma informação sobre os seus alunos com os nossos parceiros: todas as informações dos alunos terá a sua identidade removida e será agregada. Os nossos Parceiros Internacionais e facilitadores são contratualmente obrigados a tratar esta informação com o mesmo nível de confidencialidade que o Code.org'
     form_entries:
       gender:
         male: 'Masculino'
@@ -1185,9 +1185,9 @@ pt:
         opt_in_yes: 'Sim'
         opt_in_no: 'Não'
     international_opt_in:
-      title: 'Presença da Oficina'
-      intro: "Obrigado por tomar tempo para receber formação sobre o currículo do Code.org. Nossa missão para trazer oportunidades de educação em ciência da computação para todas as crianças em todas as escolas de todo o mundo não seria possível sem você."
-      instructions: "Por favor preencha o formulário abaixo para indicar que 1) você participou de um workshop dirigido por um dos parceiros internacionais do Code.org, e 2) você concorda em compartilhar suas informações com o nosso parceiro international em seu país para que nós possamos ajudar a apoiar a sua jornada como um professor de ciência da computação."
+      title: 'Presença na formação'
+      intro: "Obrigado pelo seu tempo para participar na formação sobre o currículo do Code.org. A nossa missão em trazer oportunidades educativas no âmbito das ciências da computação a todas as crianças de todas as escolas de todo o mundo não seria possível sem a sua ajuda."
+      instructions: "Por favor preencha o seguinte formulário para indicar que 1) você participou num workshop dinamizado por um dos parceiros internacionais do Code.org, e 2) você concorda em partilhar as suas informações com o nosso parceiro internacional do seu país, para que possamos ajudar e apoiar esta sua caminhada nas ciências da computação."
       thanks_markdown: "Obrigado por enviar! Estamos ansiosos para atendê-lo conforme você se familiariza com os currículos e as ferramentas do Code.org. Continue compartilhando suas perguntas e feedback conosco escrevendo para [support@code.org](%{support_email_url}) ou postando no [fórum de professores](%{teacher_forum_url})!"
       facilitator_not_listed: "Meu facilitador não está listado"
       facilitator_not_applicable: "Não aplicável"
@@ -1275,3 +1275,4 @@ pt:
     binary: "Binário"
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Formato de pixel"
+

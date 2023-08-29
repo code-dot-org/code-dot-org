@@ -1,0 +1,20 @@
+{
+  "key": "nevada-standards-aligned-first-grade",
+  "display_name": "Nevada Standards Aligned: Beta - CSF Course B",
+  "category": "other",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Course",
+  "marketing_initiative": "CSF",
+  "grade_levels": "1",
+  "header": "teacher_led",
+  "image": "https://images.code.org/45684a55edefbdd47e3605e0d18c36d9-NevadaBetaCatalogCard.png",
+  "cs_topic": null,
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_id": null
+}

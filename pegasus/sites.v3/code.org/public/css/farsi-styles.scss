@@ -7,7 +7,7 @@
   margin: 3em 0 0;
 
   span {
-    @include overline;
+    @include overline-two;
     color: $brand_primary_default;
     vertical-align: top;
   }

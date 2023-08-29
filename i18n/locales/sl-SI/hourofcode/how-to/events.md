@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To
+title: Ura kode Dogodek Kako-To
 ---
 
 {{ signup_button }}

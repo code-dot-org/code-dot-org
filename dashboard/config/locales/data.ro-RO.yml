@@ -1,82 +1,200 @@
 ---
 ro:
   data:
-    game:
-      name:
-        Unplug1: Introducere în Informatică
-        Maze: Labirintul
-        Multi: Opțiuni Multiple
-        Unplug2: Gândire Computațională
-        Unplug3: Programare pe Hârtie Milimetrică
-        Artist: Artistul
-        Unplug4: Algoritmi
-        Artist2: Artistul 2
-        Unplug5: Funcţii
-        Farmer: Fermierul
-        Unplug6: Condiţionale
-        Artist3: Artistul 3
-        Unplug7: Compunere muzicală
-        Farmer2: Fermierul 2
-        Unplug8: Abstractizare
-        Artist4: Artistul 4
-        Unplug9: Programare de releu
-        Farmer3: Fermierul 3
-        Unplug10: Internetul
-        Artist5: Artistul 5
-        Unplug11: Încheiere
-        MazeEC: Labirintul
-        Bounce: Săritură
-        Flappy: Pasărea Flappy
-        Jigsaw: Puzzle
-        MazeStep: Modul Pas Labirint
-        Wordsearch: Cautare de cuvinte
-        Webapp: Laboratului Aplicației
-        ArtistEC: Artistul
-        TextMatch: Potrivire de text
-        StudioEC: Laborator de Joacă
-        Applab: Laboratului Aplicației
-        NetSim: Simulator Internet
-        Custom: Artist
-        CustomStudio: Laborator de Joacă
-        Gamelab: Game Lab
-        Spritelab: Laborator Sprite
-    trophy:
-      name:
-        Bronze: Bronz
-        Silver: Argint
-        Gold: Aur
+    callout:
+      text:
+        Infinity_move_collide_callout: Emite un sunet când se produce acest eveniment.
+        Infinity_move_directions_callout: Care bloc îl va face pe Baymax să se mute
+          în sus când săgeata în sus este apăsată?
+        Infinity_move_directions_callout_arrow: Utilizează aceste săgeți pentru a
+          pune în mișcare
+        Infinity_move_right_runbutton: Adaugă bloc de mutare aici
+        Infinity_repeat_callout: Plasează blocuri de mutare în interior aici
+        actions_category: Caseta de instrumente are acum un nou aspect! Blocurile
+          "Acţiuni" sunt aici acum.
+        add_and_drag_parameter: Scrie numele parametrului tău aici, fă click pe "adaugă",
+          iar apoi trage-l în definiția funcției tale
+        arrows_move_actor: Utilizează săgețile pentru a muta actorul
+        bee_for_loop: Trage cel mai mare număr de nectar pe care îl doriți ca albina
+          să îl colecteze aici
+        category_explanation: Ai toate aceleaşi blocuri, dar acum au fost aranjate
+          pe categorii
+        change_here: Face modificarea aici
+        craft_callout_moveforward: Acest cod va cauta lava, poti adauga o comanda
+          pentru a inainta?
+        craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
+        craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta.
+          Il poti termina?
+        craft_drag_block_callout: Trageţi un bloc "muta inainte();" şi fixaţi-l sub
+          alt bloc
+        craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
+        craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
+        craft_what_is_iron: Extrage acest fier!
+        create_function: Click aici pentru a deschide bara de instrumente "Funcţii",
+          apoi faceţi clic pe butonul "Creează o funcţie".
+        degrees_per_side: Împărțiți 360 la numărul de laturi pentru a obține mărimea
+          în grade a fiecărui unghi.
+        drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
+        draw_square_hint: 'Sugestie: Utilizaţi exact repetiția pe care tocmai aţi
+          făcut-o în ultimul puzzle.'
+        edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
+        edit_draw_square: Utilizaţi acest buton pentru a edita funcţia şi pentru a
+          adăuga repetiția.
+        edit_function: Click aici pentru a edita funcţia dumneavoastră.
+        edit_get_nectar: Utilizaţi acest buton pentru a edita funcţia şi pentru a
+          schimba direcţia spre care se va întoarce albina ca să obţină nectarul.
+        fill_in_actor: Completează ??? cu numere care corespund fiecărui actor (1,
+          2 și 3)
+        frozen_circle_function_in_circle_turn: Nu uita să rotești după crearea fiecărui
+          cerc.
+        frozen_circle_function_with_parameter_circle: Utilizaţi blocul "crează un
+          cerc" şi modificaţi dimensiunea.
+        frozen_create_square: Ataşează aici mai multe blocuri pentru a crea un pătrat
+        frozen_diamond_repeat: Utilizaţi blocul se repetă pentru a crea această formă.
+        frozen_snowflake_branch: Utilizaţi blocul "creaţi o ramură de fulg de Nea"
+        function_editor_draw_square: ' Acesta este definiția funcției dumneavoastră.
+          Aceste blocuri rulează în tot timpul în care dumneavoastră utilizați blocul
+          "desenează un pătrat". '
+        get_nectar: Utilizaţi noul bloc "obţine nectar".
+        gray_block_explanation: Blocurile cu gri nu pot fi șterse. Puteți, totuși,
+          să rezolvați puzzle-ul?
+        house_hint: Este ok, chiar dacă imaginea nu arată ca o casă încă. O vom repara
+          în puzzle-ul următor.
+        if_bee_nectar: Folosește blocul "dacă" pentru a decide dacă albina ar trebui
+          să ia nectarul
+        if_else_bee: Utilizaţi blocul "dacă/altfel", astfel încât albina ia nectar
+          de la o floare şi face miere dacă aceasta nu este o floare
+        instructions_repeat_explanation: Instrucţiunile pentru fiecare puzzle sunt
+          repetate aici
+        jigsaw_click: Faceţi clic pe acest bloc!
+        length_parameter: Puteţi actualiza această funcţie, astfel încât ea să folosească
+          parametrul "lungime"?
+        logic_category: Deschideți bara de instrumente "Logică" pentru a găsi blocul
+          "dacă/altfel".
+        move_elsa_forward: Trageţi un bloc de "Mutare înainte" şi fixaţi-l sub blocul
+          "Atunci când rulaţi" pentru a o face pe Elsa să avanseze
+        name_function: Scrie numele funcției aici
+        place_counter_variable: Trageți variabila contor înăuntrul acestui block
+        place_length_variable: Muta variabila length aici pentru a înlocui semnul
+          de interogație
+        place_variable: Trage variabila ta în interiorul acestui block
+        playlab_add_blocks: Adaugă blocurile tale aici
+        playlab_add_move: Adaugă  blocuri "mută" în interiorul acestui bloc se repetă
+        playlab_add_score: Adăugaţi block-uri pentru scor aici
+        playlab_arrow_keys: Amintiți-vă să utilizați acestea pentru a muta vrăjitoarea
+          după ce faceți click pe Rulează
+        playlab_drag_say: Trageți blocul "spun" aici şi tastaţi "Bună ziua"
+        playlab_move_girl: Folosește blocul ”mută la dreapta” pentru a muta Fata Tenis
+        playlab_play_sound: Adăugaţi blocul "sunet joc" aici
+        playlab_use_twice: Folosește acest bloc de două ori și ține minte să schimbi
+          numărul actorului
+        repeat: Pune blocuri în interiorul buclei pentru a repeta comenzi
+        repeat_blocks: Utilizaţi blocul "Repetă" şi aduceți-l lângă blocurile din
+          spațiul de lucru
+        repeat_blocks_1: "(1) Folosește acest bloc și pune-l în jurul blocurilor gri
+          în spațiul de lucru"
+        repeat_blocks_2: "(2) Mută blocul ”Repetă” aici, și plasează blocurile gri
+          în interior"
+        repeat_full_circle: Introdu numărul necesar de mișcări ale zombie-ului astfel
+          încât acesta să facă un cerc complet
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+        replace_questions_degree: Utilizaţi meniul derulant pentru a înlocui "???"
+          cu măsura corectă în grade pentru întoarcere
+        right_arrow_fireball: Utilizează săgeata dreapta pentru a trage mingiile de
+          foc
+        run: Apasă "Run" pentru a încerca programul tău
+        set_length: Utilizaţi acest bloc pentru a seta "lungime" la valoarea corectă.
+        set_sides: Utilizaţi acest bloc ca să setați "laturi" la numărul necesar pentru
+          a finaliza puzzle-ul.
+        set_sprite_image: Leagă blocul "setează actorul la imagine" la blocul "când
+          povestea începe" pentru a seta un actor pentru această poveste
+        set_variable: Trage numărul tău aici pentru a da o valoare variabilei
+        show_code_explanation: Click aici pentru a vedea codul pentru programul pe
+          care îl faci
+        snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
+          fulgi de zăpadă!
+        studio_say_text: Tastează ceea ce dorești să spună actorul în aceste citate
+        turn_elsa: Utilizaţi blocul "Întoarce" pentru a o face pe Elsa să se întoarcă.
+          Numărul din listă determină de câte ori se întoarce Elsa
+        watch_again: Click aici pentru a viziona video din nou
+        which_equation: Ce ecuația face fiecare latură mai scurtă pentru forme cu
+          mai multe laturi?
+        write_draw_square_function: Trageți blocuri din caseta de instrumente în aici
+          pentru a desena un pătrat
+        write_draw_triangle_function: Mutați blocurile din caseta de instrumente aici,
+          pentru a desena un triughi
     concept:
       description:
-        sequence: Secvenţă
+        function: Funcţii
         if: Bloc Dacă
         if_else: bloc Dacă-altfel
+        loop_for: Bloc Contor
         loop_times: Bloc Repetă ori
         loop_until: Bloc Repetă Până La
         loop_while: Bloc În timp ce
-        loop_for: Bloc Contor
-        function: Funcţii
         parameters: Funcții cu Parametrii
+        sequence: Secvenţă
+    game:
+      name:
+        Applab: Laboratului Aplicației
+        Artist: Artistul
+        Artist2: Artistul 2
+        Artist3: Artistul 3
+        Artist4: Artistul 4
+        Artist5: Artistul 5
+        ArtistEC: Artistul
+        Bounce: Săritură
+        Custom: Artist
+        CustomStudio: Laborator de Joacă
+        Farmer: Fermierul
+        Farmer2: Fermierul 2
+        Farmer3: Fermierul 3
+        Flappy: Pasărea Flappy
+        Gamelab: Game Lab
+        Jigsaw: Puzzle
+        Maze: Labirintul
+        MazeEC: Labirintul
+        MazeStep: Modul Pas Labirint
+        Multi: Opțiuni Multiple
+        NetSim: Simulator Internet
+        Spritelab: Laborator Sprite
+        StudioEC: Laborator de Joacă
+        TextMatch: Potrivire de text
+        Unplug1: Introducere în Informatică
+        Unplug10: Internetul
+        Unplug11: Încheiere
+        Unplug2: Gândire Computațională
+        Unplug3: Programare pe Hârtie Milimetrică
+        Unplug4: Algoritmi
+        Unplug5: Funcţii
+        Unplug6: Condiţionale
+        Unplug7: Compunere muzicală
+        Unplug8: Abstractizare
+        Unplug9: Programare de releu
+        Webapp: Laboratului Aplicației
+        Wordsearch: Cautare de cuvinte
     level:
       instructions:
-        maze_2_2: 'Mă poți ajuta să prind porcușorul buclucaș? Grupează o pereche
-          de blocuri "mută înainte" şi apasă "Rulează" pentru a mă ajuta să ajung
-          acolo. '
+        Custom_builder: Folosește blocuri din caseta de instrumente în spațiul de
+          lucru pentru a putea desena nivelul dorit. Apasă "Rulează Programul" atunci
+          când ești gata.
+        applab_ec_simple: Crează-ți propria aplicație folosind blocurile din bara
+          de unelte.
+        jigsaw_1: Fă clic pe bloc
+        jigsaw_10: Aranjează blocurile pentru a forma imaginea
+        jigsaw_11: Aranjează blocurile pentru a forma imaginea
+        jigsaw_12: Aranjează blocurile pentru a forma imaginea
+        jigsaw_13: Rezolva puzzle-ul!
+        jigsaw_2: Trage blocul către ţintă
+        jigsaw_3: Aranjează blocurile pentru a forma imaginea
+        jigsaw_4: Aranjează blocurile pentru a forma imaginea
+        jigsaw_5: Aranjează blocurile pentru a forma imaginea
+        jigsaw_6: Aranjează blocurile pentru a forma imaginea
+        jigsaw_7: Aranjează blocurile pentru a forma imaginea
+        jigsaw_8: Aranjează blocurile pentru a forma imaginea
+        jigsaw_9: Aranjează blocurile pentru a forma imaginea
         maze_2_1: Acest porcușor îmi zburlește penele. Ajută-mă să-l găsesc!
-        maze_2_2_5: Trasează calea și du-mă la porcușorul nătâng. Evită TNT-ul sau
-          penele-mi vor zbura!
-        maze_2_3: Ghidează-mă la răutatea verde! (Ferește-te de TNT)
-        maze_2_4: Păstrează-ți calmul și ajută-mă să găsesc porcușorul rău. Altfel
-          s-ar putea să mă enervez!
-        maze_2_5: Există o modalitate prin care pot ajunge la porcușorul nătâng folosind
-          doar 2 blocuri. Poți să-ți dai seama cum?
-        maze_2_6: Încearcă să mă duci la intrusul verde folosind doar trei blocuri.
-        maze_2_7: Ajută-mă să alung acest purceluş rău folosind cel mai mic număr
-          de blocuri. Încearcă să folosești mai mult de un bloc "repetă ori".
-        maze_2_8: 'Când un bloc este gri, inseamnă că nu poți să-l ștergi. Rezolvă
-          acest puzzle utilizând blocul ”repetă” care repetă de 3 ori. Încearcă să
-          pui aceste 3 blocuri în interiorul blocului gri ”repetă”: mută, mută, întoarce.'
-        maze_2_9: Ok, încearcă noul bloc "repetă până la" - va repeta până când am
-          ajuns la porcușorul enervant.
         maze_2_10: OK, ultima dată pentru practică - poți rezolva acest lucru folosind
           doar 4 blocuri?
         maze_2_11: Dragă persoană. Eu zombie. Mie foame. Trebuie... să ajung... la
@@ -100,64 +218,40 @@ ro:
         maze_2_19: Poţi adăuga doar 3 blocuri pentru a mă ajuta să rezolv un labirint
           mai complex? Dacă o faci corect, eu pot merge pe orice cale curbată indiferent
           de lungime.
-        turtle_1_1: Bună, eu sunt un artist. Poți scrie un cod care să mă facă să
-          desenez aproape orice. Folosește câteva blocuri care să mă facă sa desenez
-          peste liniile gri din imagine.
-        turtle_1_2: 'Acum, desenează un pătrat. NOTĂ: utilizează culoarea ta preferată
-          selectând-o în noul bloc "setează culoare".'
-        turtle_1_3: Fă un pătrat utilizând doar 3 blocuri.
-        turtle_1_4: 'Desenează un triunghi ale cărui laturi sunt toate în culori diferite,
-          folosind opţiunea "culoare aleatoare" care selectează o culoare diferită
-          de fiecare dată. Sugestie: va trebui să-ți dai seama cât de departe să te
-          întorci făcând clic pe numărul în blocul de întoarcere.'
-        turtle_1_5: Acum, pentru antrenament , desenează un triunghi, pe urmă un pătrat
-          pentru a obține un plic.
-        turtle_1_6: 'Îți poți da seama cum să desenezi acest triunghi și acest pătrat?
-          Indiciu: Desenează mai întâi triunghiul, apoi dă-ți seama cât de mult să
-          întorci înainte de a desena pătratul.'
-        turtle_1_7: În regulă, hai să facem lucrurile un pic mai complicate - vezi
-          dacă poți desena acești ochelari verzi. Pătratele au 100 de pixeli pe fiecare
-          parte, și sunt la 50 de pixeli între ele. Nu uita să desenezi cu verde!
-        turtle_1_8: Ok, încearcă să îți dai seama ce se întamplă dacă rulezi acest
-          cod (sau apasă "Rulează" pentru a-l încerca). Apoi repetă-l de câte ori
-          e nevoie ca să completezi desenul. Culorile vor fi diferite de fiecare dată.
-        turtle_1_9: Poți să îți dai seama cu ce număr să înlocuiești semnele de întrebare
-          pentru a desena un cerc?
-        turtle_1_10: 'Ai reușit! Acum, desenează orice vrei. Câteva idei nostime:
-          un om din 5 bețe si un cerc , fulg de zăpadă sau spirală. Încearcă, de asemenea,
-          și noul bloc "setează lățimea". Distrează-te!'
-        turtle_4_1: 'Poţi desena un triunghi (cu margini de 100 pixeli) cu numai 3
-          blocuri? Sugestie: utilizează un bloc "repetă".'
-        turtle_4_2: Adaugă un bloc "întoarce la dreapta cu 90 de grade" undeva în
-          mijlocul programului din spațiul de lucru pentru a desena aceste triunghiuri.
-        turtle_4_3: OK, aici ai codul pe care l-ai scris așa încât să traseze un singur
-          triunghi. Poți să adăugi un bloc "repetă" şi unul "întoarce" pentru a face
-          o floricică drăguță?
-        turtle_4_4: 'Aici ai acelaşi cod de la puzzle-ul anterior, dar cu o întoarcere
-          de numai 36 de grade după trasarea fiecărui triunghi. De câte ori trebuie
-          să se repete acesta? (Sugestie: după o întoarcere de 360 de grade desenul
-          va deveni cerc complet)'
-        turtle_4_5: 'Aici ai acelaşi cod de la puzzle-ul anterior, dar repetarea cotiturilor
-          se va face de 36 de ori. La câte grade trebuie să fie întoarcerile? (Sugestie:
-          după o întoarcere de 360 de grade desenul va deveni cerc complet)'
-        turtle_4_6: Folosind numai 3 blocuri, ai putea desena un pătrat cu muchii
-          de 20 de pixeli?
-        turtle_4_7: 'Aici este codul pentru desenul pătrat din ultimul puzzle. Poți
-          să-l repeți astfel încât să trasezi 10 pătrate adiacente cum ar fi o scară?
-          Sugestie: ai nevoie doar de încă 2 blocuri.'
-        turtle_4_8: Aici este soluţia pentru puzzle-ul anterior. Mai poți adăuga doar
-          2 blocuri pentru a finaliza desenul?
-        turtle_4_9: Aici este soluţia de la puzzle-ul precedent. Cu câte grade ar
-          trebui să cotești pentru a finaliza desenul? (Probabil vei avea nevoie să
-          ghicești de câteva ori)
-        turtle_4_10: Aici ai soluţia de la puzzle-ul anterior. De câte ori trebuie
-          să repeţi pentru a finaliza desenul?
-        turtle_4_11: Încearcă să schimbi numerele în blocurile "întoarce" şi "repetă"
-          pentru a crea modele diferite. Sau, experimentează schimbarea restului de
-          cod pentru a desena orice ce vrei tu.
+        maze_2_2: 'Mă poți ajuta să prind porcușorul buclucaș? Grupează o pereche
+          de blocuri "mută înainte" şi apasă "Rulează" pentru a mă ajuta să ajung
+          acolo. '
+        maze_2_2_5: Trasează calea și du-mă la porcușorul nătâng. Evită TNT-ul sau
+          penele-mi vor zbura!
+        maze_2_3: Ghidează-mă la răutatea verde! (Ferește-te de TNT)
+        maze_2_4: Păstrează-ți calmul și ajută-mă să găsesc porcușorul rău. Altfel
+          s-ar putea să mă enervez!
+        maze_2_5: Există o modalitate prin care pot ajunge la porcușorul nătâng folosind
+          doar 2 blocuri. Poți să-ți dai seama cum?
+        maze_2_6: Încearcă să mă duci la intrusul verde folosind doar trei blocuri.
+        maze_2_7: Ajută-mă să alung acest purceluş rău folosind cel mai mic număr
+          de blocuri. Încearcă să folosești mai mult de un bloc "repetă ori".
+        maze_2_8: 'Când un bloc este gri, inseamnă că nu poți să-l ștergi. Rezolvă
+          acest puzzle utilizând blocul ”repetă” care repetă de 3 ori. Încearcă să
+          pui aceste 3 blocuri în interiorul blocului gri ”repetă”: mută, mută, întoarce.'
+        maze_2_9: Ok, încearcă noul bloc "repetă până la" - va repeta până când am
+          ajuns la porcușorul enervant.
+        maze_3_1: Am nevoie să ajung la acel porcușor! Tastează două chemări de mutare();
+          să-mi recuperez ouălele.
+        maze_3_2: Scrie-mi un program, ca să reușesc să ajung până la porcușor.
+        maze_3_3: Cum să ajung la porcușor? Asigură-te că nu intru în cutia cu TNT!
+        maze_3_4: Argh! Scrie-mi un program care mă duce de jur împrejurul minelor
+          de TNT şi până la porcușor.
         maze_karel_1_1: Bună, eu sunt un fermier. Am nevoie de ajutorul tău să netezesc
           terenul fermei mele ca să fie gata de plantare. Mută-mă la o stivă de pământ
           şi folosește blocul "elimină" pentru a o înlătura.
+        maze_karel_1_10: Lucrez până târziu, așa că e întuneric afară, și nu-mi pot
+          da seama cât de mari sunt grămezile. Acum nu mai am toate opțiunile pe care
+          le aveam la blocul "în timp ce". Mută-mă de-a lungul câmpului și dacă există
+          pe-acolo vreo gramadă, înlătur-o.
+        maze_karel_1_11: 'Încă e întuneric afară. Mută-mă de-a lungul câmpului. Dacă
+          găsești o grămadă, înlătur-o și dacă găsești o groapă, umple-o. Indiciu:
+          folosește meniul vertical de opțiuni din blocul "dacă".'
         maze_karel_1_2: Apoi, mută-mă la groapă si umple-o cu DOUĂ lopeţi de pământ
           folosind blocul "umple".
         maze_karel_1_3: Mută-mă lângă o stivă de pământ și spune-mi de cât de multe
@@ -178,16 +272,277 @@ ro:
         maze_karel_1_9: 'Fă-mă să înlătur toate aceste mormane de pământ. Încearcă
           să utilizezi cât mai puţine blocuri posibil. Sugestie: încearcă să utilizezi
           un bloc de "în timp ce".'
-        maze_karel_1_10: Lucrez până târziu, așa că e întuneric afară, și nu-mi pot
-          da seama cât de mari sunt grămezile. Acum nu mai am toate opțiunile pe care
-          le aveam la blocul "în timp ce". Mută-mă de-a lungul câmpului și dacă există
-          pe-acolo vreo gramadă, înlătur-o.
-        maze_karel_1_11: 'Încă e întuneric afară. Mută-mă de-a lungul câmpului. Dacă
-          găsești o grămadă, înlătur-o și dacă găsești o groapă, umple-o. Indiciu:
-          folosește meniul vertical de opțiuni din blocul "dacă".'
+        maze_karel_2_1: 'Încearcă să folosești blocurile ca să mă ajuţi să elimin
+          toate grămezile şi să umplu toate gropile din pământ. Încearcă să folosești
+          bucle în loc să utilizezi prea multe blocuri. Sugestie: poți amplasa o buclă
+          în interiorul altei bucle.'
+        maze_karel_2_10: Mişcă-mă de-a lungul câmpului şi folosește aceste două funcţii
+          ca să mă ajuţi să elimin toate grămezile şi să umplu gropile.
+        maze_karel_2_2: Ne-am definit propriul nostru bloc numit "umple 5", care este
+          acum în categoria Funcţiilor. Foloseşte-l ca să mă ajuţi să umplu această
+          groapă.
+        maze_karel_2_3: Utilizează din nou blocul-funcţie "umple 5" ca să mă faci
+          să umplu toate gropile. Vei avea de tras înafară blocul "umple 5" din categoria
+          Funcţiilor.
+        maze_karel_2_4: Definește o nouă funcție ce înlătură 7 lopeți. Apoi folosește-o
+          pentru a scrie un program ce mă poate ajuta să elimin toate grămezile.
+        maze_karel_2_5: Creează o nouă funcție ce înlătură 6 lopeți pline dintr-o
+          grămadă, și folosește-o pentru a mă ajuta să nivelez mormanele.
+        maze_karel_2_6: Folosește două funcţii noi, "umple 8" şi "elimină 8", pentru
+          a mă ajuta să nivelez grămada şi să umplu groapa.
+        maze_karel_2_7: E o vacă pe câmpul meu! Scrie o funcţie nouă care mă ajută
+          să evit vaca şi să elimin grămada. Pune toate blocurile tale în interiorul
+          noii funcţii.
+        maze_karel_2_8: Folosește această funcţie nouă, "evită vaca și elimină 1",
+          ca să mă ajuți să elimin toate grămezile.
+        maze_karel_2_9: Ok, iată aici o funcţie care elimină 4 grămezi de pământ diferite
+          în coloana verticală. Încearcă să pui această funcţie într-o buclă, astfel
+          încât să elimini toate mormanele de pământ folosind doar câteva blocuri.
+        maze_karel_debug_function_1: Ce ar trebui să modifici la acest program pentru
+          a mă ajuta să elimin toate grămezile?
+        maze_karel_debug_function_2: Poți depana acest program pentru mine ca să pot
+          să-mi fac câmpul plat?
+        maze_karel_debug_function_3: 'Editează acest program, astfel incât să elimin
+          toate grămezile de pe domeniul meu. '
+        maze_karel_debug_if: Ajutor! Repară programul în aşa mod încât câmpul meu
+          va fi complet plan.
+        maze_karel_debug_if_else: Găsește erorile în acest program, astfel încât să
+          pot umple găurile şi elimina toate grămezile.
+        maze_karel_debug_repeat: Depanează acest program pentru mine în aşa fel încât
+          terenul va fi frumos şi plat.
+        maze_karel_debug_seq_1: Bine ai venit la depanare! Codul meu nu funcţionează
+          corect. Poţi descoperi problema şi să o repari astfel încât să pot obţine
+          un teren plat şi gata de plantare?
+        maze_karel_debug_seq_2: Ce e în neregulă cu acest program? Cum ar trebui să
+          îl repari ca eu să pot elimina acea grămadă?
+        maze_karel_debug_while: Cum ar trebui să schimbi acest program ca să mă ajute
+          să umplu groapa?
+        maze_wordsearch_k_1: Mutați-mă ca să spun literele cuvântului EST
+        maze_wordsearch_k_13: Mișcați-mă într-un sens, apoi în celălalt ca să spun
+          literele cuvântului DEPANARE
+        maze_wordsearch_k_15: Mișcați-mă într-un sens, apoi în celălalt ca să spun
+          literele cuvântului DEASUPRA
+        maze_wordsearch_k_16: Mișcați-mă într-un sens, apoi în celălalt ca să spun
+          literele cuvântului DEDESUBT
+        maze_wordsearch_k_2: Mutați-mă ca să spun literele cuvântului SUD
+        maze_wordsearch_k_20: Acesta este un test! Mișcați-mă într-un sens, apoi în
+          celălalt ca să spun literele cuvântului POVESTE
+        maze_wordsearch_k_3: Mutați-mă ca să spun literele cuvântului VEST
+        maze_wordsearch_k_4: Mutați-mă ca să spun literele cuvântului NORD
+        maze_wordsearch_k_6: Mutați-mă spre Est, apoi spre Sud ca să spun literele
+          cuvântului SALT
+        maze_wordsearch_k_9: Mișcați-mă într-un sens, apoi în celălalt ca să spun
+          literele cuvântului COD
+        mazestep_1: Pas Labirint descriere
+        mazestep_2: Pas Labirint descriere
+        mazestep_3: Pas Labirint descriere
+        mazestep_4: Pas Labirint descriere
+        mazestep_5: Pas Labirint descriere
+        studio_c2_1: Poți face acest câine să spună "Bună ziua lume"?
+        studio_c2_10: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza lui
+          Waddles, şi apoi să îl mutaţi cu săgeţile până când marcați?
+        studio_c2_11: Creați-vă propria poveste. Când ați terminat, faceți click pe
+          Terminare pentru a permite prietenilor să vă încerce povestea pe telefoanele
+          lor.
+        studio_c2_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa
+          continue sa spuna altceva?
+        studio_c2_3: Puteți scrie un program pentru a face acest câine să se miște
+          către pisică?
+        studio_c2_4: Poți scrie un program care să îl facă pe câine să meargă către
+          pisică, iar atunci când o ajunge, aceasta să spună "Bună"?
+        studio_c2_5: Puteţi scrie un program pentru a face caracatiţa să spună "Bună",
+          atunci când se dă clic pe ea?
+        studio_c2_6: Acum, scrie un program care să îl facă pe Waddles să se miște
+          de jur împrejur folosind tastele săgeată sus / jos / stânga / dreapta pentru
+          a atinge toate obiectivele?
+        studio_c2_7: Blocul "repetă pentru totdeauna" vă permite să rulaţi cod continuu.
+          Puteți ataşa blocuri pentru a muta acest dinozaur în sus şi în jos în mod
+          repetat?
+        studio_c2_8: Puteți să îl faceți pe Waddles să spună "Au!" şi să redea un
+          sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile
+          pentru a face să se întâmple asta?
+        studio_c2_9: Puteţi adăuga un bloc pentru a înscrie un punct când Waddles
+          aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți
+          puncte?
+        studio_c3_game_1: Puteţi scrie un program pentru a face caracatiţa să spună
+          "Bună", atunci când se dă clic pe ea?
+        studio_c3_game_2: Acum, scrie un program care să îl facă pe Waddles să se
+          miște de jur împrejur folosind tastele săgeată sus / jos / stânga / dreapta
+          pentru a atinge toate obiectivele?
+        studio_c3_game_3: Blocul "repetă pentru totdeauna" vă permite să rulaţi cod
+          continuu. Puteți ataşa blocuri pentru a muta acest dinozaur în sus şi în
+          jos în mod repetat?
+        studio_c3_game_4: Puteți să îl faceți pe Waddles să spună "Au!" şi să redea
+          un sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile
+          pentru a face să se întâmple asta?
+        studio_c3_game_5: Puteţi adăuga un bloc pentru a înscrie un punct când Waddles
+          aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți
+          puncte?
+        studio_c3_game_6: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza
+          lui Waddles, şi apoi să îl mutaţi cu săgeţile până când marcați?
+        studio_c3_game_7: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe
+          Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
+          lor.
+        studio_c3_story_1: Poți face acest câine să spună "Bună ziua lume"?
+        studio_c3_story_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica
+          sa continue sa spuna altceva?
+        studio_c3_story_3: Puteți scrie un program pentru a face acest câine să se
+          miște către pisică?
+        studio_c3_story_4: Poți scrie un program care să îl facă pe câine să meargă
+          către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?
+        studio_c3_story_5: Puteţi să adăugaţi un bloc pentru a face caracatiţa fericită?
+        studio_c3_story_6: Creați-vă propria poveste. Când ați terminat, faceți click
+          pe Terminare pentru a permite prietenilor să vă încerce povestea pe telefoanele
+          lor.
+        studio_ec_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic
+          pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
+          lor.
+        studio_full_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic
+          pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
+          lor.
+        studio_gumball_click_hello: Poti sa il ajuti pe Anton sa anunte start-ul cursei
+          spunand "Pe locuri, fiti gata, start!"? Pentru a-ti testa programul, nu
+          uita sa apesi pe Anton dupa de apesi "ruleaza"!
+        studio_gumball_free_play: Creeaza-ti propria poveste a jocului. Cand e gata,
+          apasa "terminare"si spune-le prietenilor tai sa incerce jocul pe telefoane,
+          tablete sau calculatoare!
+        studio_gumball_hello1: Anais vrea sa isi faca noi prieteni. O poti ajuta sa
+          spuna "buna" folosind blocul "spune" in spatiul de lucru si scriind inauntru
+          cuvantul "buna"?
+        studio_gumball_hello2: Darwin (actorul 1) și fratele său, Gumball (actorul
+          2), se îndreaptă către școală. Ajută-i să se salute reciproc folosind blocul
+          "actorul spune" de două ori.
+        studio_gumball_join_food_fight: Alaturati-va luptei cu mancare! Foloseste
+          comanda "actorul arunca elementul in dreapta" pentru ca Banana Joe (actorul
+          1) sa arunce cu mancare in Anton (actorul 2)! Seteaza-l pe Anton sa fie
+          nervos cand este lovit.
+        studio_gumball_move_events: Darwin este la concursul de strans steaguri! Ajuta-l
+          sa alerge de colo colo atasand blocul "mergi" la fiecare eveniment. Cand
+          esti gata, apasa ruleaza si incearca sa strangi toate stegurile.
+        studio_gumball_move_to_actor: Gumball (actorul 1) si Darwin (actorul 2) au
+          intarziat la ora! Ajuta-l pe Gumball sa mearga 200 de pixeli in jos catre
+          Darwin folosind blocul "muta actor". Apoi, conecteaza un bloc la evenimentul
+          "cand actorul" pentru a rula un sunet de cate ori se gasesc unul pe altul.
+        studio_gumball_move_to_flag: Banana Joe este cat pe ce sa castige o cursa!
+          Ajuta-l sa mearga cel putin 200 de pixeli folosind blocul "mergi".
+        studio_gumball_repeat: Blocul "repeta mereu" iti permite sa rulezi continuu.
+          Poti atasa blocuri la el ca sa il ajuti pe Gumball sa faca incalzirea pentru
+          cursa lui miscandu-se in stanga si in dreapta continuu?
+        studio_gumball_sound_and_points: Am notat majoritatea codului care il tine
+          pe Anton ( actorul 2) sa alerge din stanga in dreapta, la fel ca si codul
+          care il muta pe Banana Joe (actorul 1) de-a lungul ecranului. Poti termina
+          codul si adauga blocuri la evenimentul "cand actorii se ating" pentru a-i
+          face sa ruleze un sunet apoi sa inscrie cate un punct cand Banana Joe si
+          Anton se lovesc? Apasa Ruleaza pentru a juca jocul.
+        studio_gumball_warn_food_fight: Darvin a scapat de o lupta cu alimente! Schimba
+          fundalul la "caractere" si seteaza viteza lui Darwin la rapid, apoi apasa
+          Ruleaza si muta-l catre Penny pentru a o avertiza.
+        studio_iceage_click_hello: Poți să îl ajuți pe Sid să facă o ultimă strigare
+          pentru prieteni când faci click pe el? Nu uita să faci click pe el după
+          ce ai apăsat 'Rulează'.
+        studio_iceage_free_play: E timpul să îți creezi propriul joc sau poveste!
+          Când termini, apasă 'Terminat' pentru a-i lăsa pe prietenii tăi să testeze
+          jocul tău pe telefoanele, tabletele sau calculatoarele lor!
+        studio_iceage_hello1: Sid vrea să adune pe toată lumea pentru o nouă aventură.
+          Poți să îl ajuți să spună "Bună ziua" glisând blocul "spune" în zona de
+          lucru şi tastând cuvintele "Bună ziua" în interiorul lui?
+        studio_iceage_hello2: Sid (actorul 1) l-a găsit pe Manny (actorul 2) şi vrea
+          să-l invite într-o aventură.  Ajută-i să se salute reciproc folosind blocul
+          "actorul spune" de două ori.
+        studio_iceage_move_events: Scrat caută încă ghinde! Ajută-l să alerge prin
+          zonă atașând blocul "mută" la fiecare eveniment și schimbând direcția pentru
+          fiecare săgeată. Când ai terminat, fă clic pe 'Rulează' și încearcă să aduni
+          toate ghindele.
+        studio_iceage_move_to_actor: Diego (actorul 1) este în căutarea lui Manny
+          (actorul 2). Ajută-l pe Diego să meargă 200 pixeli în jos către Manny folosind
+          blocul "mutare actor". Apoi, conectează un bloc la evenimentul "când actorul
+          atinge" pentru a reda un sunet atunci când se vor găsi unul pe celălalt.
+        studio_iceage_move_to_flag: Scrat este în căutarea ghindei lui! Ajută-l să
+          parcurgă ultimii 200 de pixeli folosind blocul "mergi".
+        studio_iceage_repeat: Blocul "repetă la nesfârșit" iți permite să rulezi codul
+          în mod continuu. Poți atașa blocuri pentru a-l ajuta pe Granny să se antreneze
+          mișcându-se la stânga și la dreapta în mod repetat?
+        studio_iceage_sound_and_points: Am furnizat deja cea mai mare parte din codul
+          ce o menține pe Granny să se miște la stânga și dreapta, precum și codul
+          care îl mișcă pe Sid de-a lungul ecranului. Poți termina codul și adăuga
+          blocuri evenimentului "cand actorul atinge" pentru ca amandoi să emită un
+          sunet și să marcheze un punct atunci când Sid și Granny se lovesc? Apasă
+          'Rulează' pentru a juca jocul.
+        studio_iceage_throw_hearts: Sid vrea ca bunica lui, Granny, să știe că o iubește.
+          Folosește comanda "actorul aruncă" pentru a-l face pe Sid (actorul 1) să
+          arunce inimi către Granny (actorul 2)! Setează starea lui Granny la fericită
+          când este lovită cu inimi.
+        studio_iceage_warn_ice_age: Toată lumea trebuie să se mişte mai repede, pentru
+          că vine o epocă de gheaţă! Schimbă fundalul cu "ghețari" şi setează-i viteza
+          lui Sid la rapid, apoi apasă Rulează şi mută-l lângă Diego pentru a-l avertiza.
+        studio_k1_1: Poți face acest câine să spună "Bună ziua lume"?
+        studio_k1_2: Puteți face câinele să spună ceva și apoi pisica să continue
+          spunând altceva?
+        studio_k1_3: Puteți scrie un program pentru a face acest câine să se miște
+          către pisică?
+        studio_k1_4: Faceți câinele să se miște spre pisică și pe aceasta să spună
+          "hello", atunci când el ajunge acolo.
+        studio_k1_5: Puteţi să adăugaţi un bloc pentru a face caracatiţa fericită?
+        studio_k1_6: Creați-vă propria poveste! Deplasați împrejur pisica şi câinele
+          şi făceți-le să spună ceva.
+        studio_playlab_1: Pinguinul vrea să spună "Bună ziua" - îl puteți ajuta?
+        studio_playlab_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic
+          pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
+          lor.
+        studio_playlab_2: Băiatul din peşteră (actor 1) şi Fata din peşteră (actor
+          2) ar dori să-și spună "hello". Îi puteți ajuta folosind blocul "spune"
+          de două ori?
+        studio_playlab_3: O puteți ajuta pe tenismenă să ajungă la pavilion?
+        studio_playlab_4: Îl puteți ajuta pe băiatul tenisman (actor 1) să ajungă
+          la fata de tenis (actor 2) și să lansați un sunet când ajunge acolo?
+        studio_playlab_5: Îl puteți ajuta pe Spacebot să spună "Salutări earthlings"
+          când se dă clic pe el? Nu uitaţi să daţi clic pe el după ce daţi clic pe
+          Rulare
+        studio_playlab_6: O puteți ajuta pe Vrăjitoare să se miște împrejur folosind
+          tastele săgeți sus/jos/dreapta/stânga pentru a prinde toate mingile de foc
+          magice?
+        studio_playlab_7: Blocul "repetă pentru totdeauna" vă permite să rulaţi cod
+          continuu. Puteți ataşa blocuri pentru a ajuta Expertul să se miște la dreapta
+          şi la stânga în mod repetat?
+        studio_playlab_8: Puteţi adăuga un bloc pentru a marca un punct și un bloc
+          pentru a reda un sunet când unicornul îl lovește pe expert şi apoi să îl
+          mutaţi cu săgeţile până când marcați?
+        studio_playlab_9: Setați fundalul pentru această invazie extraterestră şi
+          ajutați-l pe Spacebot să ajungă mai repede la extraterestru, prin schimbarea
+          vitezei sale. Apoi, mutaţi-l cu tastele săgeată să ajungă la Spacebot şi  să-i
+          alerteze pe toți ceilalți
+        turtle_1_1: Bună, eu sunt un artist. Poți scrie un cod care să mă facă să
+          desenez aproape orice. Folosește câteva blocuri care să mă facă sa desenez
+          peste liniile gri din imagine.
+        turtle_1_10: 'Ai reușit! Acum, desenează orice vrei. Câteva idei nostime:
+          un om din 5 bețe si un cerc , fulg de zăpadă sau spirală. Încearcă, de asemenea,
+          și noul bloc "setează lățimea". Distrează-te!'
+        turtle_1_2: 'Acum, desenează un pătrat. NOTĂ: utilizează culoarea ta preferată
+          selectând-o în noul bloc "setează culoare".'
+        turtle_1_3: Fă un pătrat utilizând doar 3 blocuri.
+        turtle_1_4: 'Desenează un triunghi ale cărui laturi sunt toate în culori diferite,
+          folosind opţiunea "culoare aleatoare" care selectează o culoare diferită
+          de fiecare dată. Sugestie: va trebui să-ți dai seama cât de departe să te
+          întorci făcând clic pe numărul în blocul de întoarcere.'
+        turtle_1_5: Acum, pentru antrenament , desenează un triunghi, pe urmă un pătrat
+          pentru a obține un plic.
+        turtle_1_6: 'Îți poți da seama cum să desenezi acest triunghi și acest pătrat?
+          Indiciu: Desenează mai întâi triunghiul, apoi dă-ți seama cât de mult să
+          întorci înainte de a desena pătratul.'
+        turtle_1_7: În regulă, hai să facem lucrurile un pic mai complicate - vezi
+          dacă poți desena acești ochelari verzi. Pătratele au 100 de pixeli pe fiecare
+          parte, și sunt la 50 de pixeli între ele. Nu uita să desenezi cu verde!
+        turtle_1_8: Ok, încearcă să îți dai seama ce se întamplă dacă rulezi acest
+          cod (sau apasă "Rulează" pentru a-l încerca). Apoi repetă-l de câte ori
+          e nevoie ca să completezi desenul. Culorile vor fi diferite de fiecare dată.
+        turtle_1_9: Poți să îți dai seama cu ce număr să înlocuiești semnele de întrebare
+          pentru a desena un cerc?
         turtle_2_1: 'Salut. Eu artist zombie. Eu iubesc desenez! Ajută-mă să desenez
           un pătrat într-o culoare specială. Notă importantă: ai aceleași blocuri
           dar acum sunt aranjate pe categorii.'
+        turtle_2_10: Aici ai un cod ca să încerci să experimentezi cu diferite spirale.
+          Ce se întamplă dacă schimbi cu cât se face întoarcerea? Sau dacă setezi
+          o culoare la întâmplare în buclă? Desenează orice îți place.
         turtle_2_2: Bine ai venit la utilizarea funcțiilor, care te lasă să definești
           blocuri noi! Încearcă noul bloc "desenează un pătrat" care se găsește în
           categoria "Funcții", ca să desenezi un pătrat mic verde de dimensiuni 50x50.
@@ -216,39 +571,13 @@ ro:
         turtle_2_9: Folosește o buclă "numără cu" pentru a desena o familie de oameni
           de zăpadă cu înălțimi de 110, 100, 90, 80 și 70. Oamenii de zăpadă ar trebui
           să fie la 60 de pixeli distanță unul de altul.
-        turtle_2_10: Aici ai un cod ca să încerci să experimentezi cu diferite spirale.
-          Ce se întamplă dacă schimbi cu cât se face întoarcerea? Sau dacă setezi
-          o culoare la întâmplare în buclă? Desenează orice îți place.
-        maze_karel_2_1: 'Încearcă să folosești blocurile ca să mă ajuţi să elimin
-          toate grămezile şi să umplu toate gropile din pământ. Încearcă să folosești
-          bucle în loc să utilizezi prea multe blocuri. Sugestie: poți amplasa o buclă
-          în interiorul altei bucle.'
-        maze_karel_2_2: Ne-am definit propriul nostru bloc numit "umple 5", care este
-          acum în categoria Funcţiilor. Foloseşte-l ca să mă ajuţi să umplu această
-          groapă.
-        maze_karel_2_3: Utilizează din nou blocul-funcţie "umple 5" ca să mă faci
-          să umplu toate gropile. Vei avea de tras înafară blocul "umple 5" din categoria
-          Funcţiilor.
-        maze_karel_2_4: Definește o nouă funcție ce înlătură 7 lopeți. Apoi folosește-o
-          pentru a scrie un program ce mă poate ajuta să elimin toate grămezile.
-        maze_karel_2_5: Creează o nouă funcție ce înlătură 6 lopeți pline dintr-o
-          grămadă, și folosește-o pentru a mă ajuta să nivelez mormanele.
-        maze_karel_2_6: Folosește două funcţii noi, "umple 8" şi "elimină 8", pentru
-          a mă ajuta să nivelez grămada şi să umplu groapa.
-        maze_karel_2_7: E o vacă pe câmpul meu! Scrie o funcţie nouă care mă ajută
-          să evit vaca şi să elimin grămada. Pune toate blocurile tale în interiorul
-          noii funcţii.
-        maze_karel_2_8: Folosește această funcţie nouă, "evită vaca și elimină 1",
-          ca să mă ajuți să elimin toate grămezile.
-        maze_karel_2_9: Ok, iată aici o funcţie care elimină 4 grămezi de pământ diferite
-          în coloana verticală. Încearcă să pui această funcţie într-o buclă, astfel
-          încât să elimini toate mormanele de pământ folosind doar câteva blocuri.
-        maze_karel_2_10: Mişcă-mă de-a lungul câmpului şi folosește aceste două funcţii
-          ca să mă ajuţi să elimin toate grămezile şi să umplu gropile.
         turtle_3_1: Acest puzzle îți arată cum funcţiile "desenează un pătrat" şi
           "desenează un cerc" sunt definite.  Definirea unei funcţii nu execută blocurile
           sale. Trebuie să tragi afară blocul "desenează un pătrat" pentru a desena
           în fapt un pătrat.
+        turtle_3_10: Ai învăţat o mulţime! Acum folosește-ți cunoștințele pentru a
+          desena tot ce vrei. Încercă să deseni o stea, sau o spirală sau un fulg
+          de nea sofisticat.
         turtle_3_2: Folosind drept exemplu funcţia "desenează un pătrat", creează
           o funcţie "desenează un triunghi" şi folosește-o.
         turtle_3_3: 'Desenează garduri triungulare în jurul pisicilor şi un gard pătrat
@@ -269,28 +598,35 @@ ro:
           modificată pentru a desena trei case.
         turtle_3_9: Poţi re-crea funcţia "desenează o casă" fără ajutor? Încearc-o,
           și apoi desenează un rând de case.
-        turtle_3_10: Ai învăţat o mulţime! Acum folosește-ți cunoștințele pentru a
-          desena tot ce vrei. Încercă să deseni o stea, sau o spirală sau un fulg
-          de nea sofisticat.
-        maze_karel_debug_seq_1: Bine ai venit la depanare! Codul meu nu funcţionează
-          corect. Poţi descoperi problema şi să o repari astfel încât să pot obţine
-          un teren plat şi gata de plantare?
-        maze_karel_debug_seq_2: Ce e în neregulă cu acest program? Cum ar trebui să
-          îl repari ca eu să pot elimina acea grămadă?
-        maze_karel_debug_repeat: Depanează acest program pentru mine în aşa fel încât
-          terenul va fi frumos şi plat.
-        maze_karel_debug_while: Cum ar trebui să schimbi acest program ca să mă ajute
-          să umplu groapa?
-        maze_karel_debug_if: Ajutor! Repară programul în aşa mod încât câmpul meu
-          va fi complet plan.
-        maze_karel_debug_if_else: Găsește erorile în acest program, astfel încât să
-          pot umple găurile şi elimina toate grămezile.
-        maze_karel_debug_function_1: Ce ar trebui să modifici la acest program pentru
-          a mă ajuta să elimin toate grămezile?
-        maze_karel_debug_function_2: Poți depana acest program pentru mine ca să pot
-          să-mi fac câmpul plat?
-        maze_karel_debug_function_3: 'Editează acest program, astfel incât să elimin
-          toate grămezile de pe domeniul meu. '
+        turtle_4_1: 'Poţi desena un triunghi (cu margini de 100 pixeli) cu numai 3
+          blocuri? Sugestie: utilizează un bloc "repetă".'
+        turtle_4_10: Aici ai soluţia de la puzzle-ul anterior. De câte ori trebuie
+          să repeţi pentru a finaliza desenul?
+        turtle_4_11: Încearcă să schimbi numerele în blocurile "întoarce" şi "repetă"
+          pentru a crea modele diferite. Sau, experimentează schimbarea restului de
+          cod pentru a desena orice ce vrei tu.
+        turtle_4_2: Adaugă un bloc "întoarce la dreapta cu 90 de grade" undeva în
+          mijlocul programului din spațiul de lucru pentru a desena aceste triunghiuri.
+        turtle_4_3: OK, aici ai codul pe care l-ai scris așa încât să traseze un singur
+          triunghi. Poți să adăugi un bloc "repetă" şi unul "întoarce" pentru a face
+          o floricică drăguță?
+        turtle_4_4: 'Aici ai acelaşi cod de la puzzle-ul anterior, dar cu o întoarcere
+          de numai 36 de grade după trasarea fiecărui triunghi. De câte ori trebuie
+          să se repete acesta? (Sugestie: după o întoarcere de 360 de grade desenul
+          va deveni cerc complet)'
+        turtle_4_5: 'Aici ai acelaşi cod de la puzzle-ul anterior, dar repetarea cotiturilor
+          se va face de 36 de ori. La câte grade trebuie să fie întoarcerile? (Sugestie:
+          după o întoarcere de 360 de grade desenul va deveni cerc complet)'
+        turtle_4_6: Folosind numai 3 blocuri, ai putea desena un pătrat cu muchii
+          de 20 de pixeli?
+        turtle_4_7: 'Aici este codul pentru desenul pătrat din ultimul puzzle. Poți
+          să-l repeți astfel încât să trasezi 10 pătrate adiacente cum ar fi o scară?
+          Sugestie: ai nevoie doar de încă 2 blocuri.'
+        turtle_4_8: Aici este soluţia pentru puzzle-ul anterior. Mai poți adăuga doar
+          2 blocuri pentru a finaliza desenul?
+        turtle_4_9: Aici este soluţia de la puzzle-ul precedent. Cu câte grade ar
+          trebui să cotești pentru a finaliza desenul? (Probabil vei avea nevoie să
+          ghicești de câteva ori)
         turtle_5_1: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
           înlocuiește-l cu ceva total diferit)
@@ -309,246 +645,182 @@ ro:
         turtle_5_6: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
           înlocuiește-l cu ceva total diferit)
-        maze_3_1: Am nevoie să ajung la acel porcușor! Tastează două chemări de mutare();
-          să-mi recuperez ouălele.
-        maze_3_2: Scrie-mi un program, ca să reușesc să ajung până la porcușor.
-        maze_3_3: Cum să ajung la porcușor? Asigură-te că nu intru în cutia cu TNT!
-        maze_3_4: Argh! Scrie-mi un program care mă duce de jur împrejurul minelor
-          de TNT şi până la porcușor.
-        Custom_builder: Folosește blocuri din caseta de instrumente în spațiul de
-          lucru pentru a putea desena nivelul dorit. Apasă "Rulează Programul" atunci
-          când ești gata.
-        jigsaw_1: Fă clic pe bloc
-        jigsaw_2: Trage blocul către ţintă
-        jigsaw_3: Aranjează blocurile pentru a forma imaginea
-        jigsaw_4: Aranjează blocurile pentru a forma imaginea
-        jigsaw_5: Aranjează blocurile pentru a forma imaginea
-        jigsaw_6: Aranjează blocurile pentru a forma imaginea
-        jigsaw_7: Aranjează blocurile pentru a forma imaginea
-        jigsaw_8: Aranjează blocurile pentru a forma imaginea
-        jigsaw_9: Aranjează blocurile pentru a forma imaginea
-        jigsaw_10: Aranjează blocurile pentru a forma imaginea
-        jigsaw_11: Aranjează blocurile pentru a forma imaginea
-        jigsaw_12: Aranjează blocurile pentru a forma imaginea
-        jigsaw_13: Rezolva puzzle-ul!
-        mazestep_1: Pas Labirint descriere
-        mazestep_2: Pas Labirint descriere
-        mazestep_3: Pas Labirint descriere
-        mazestep_4: Pas Labirint descriere
-        mazestep_5: Pas Labirint descriere
-        studio_c2_1: Poți face acest câine să spună "Bună ziua lume"?
-        studio_c2_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa
-          continue sa spuna altceva?
-        studio_c2_3: Puteți scrie un program pentru a face acest câine să se miște
-          către pisică?
-        studio_c2_4: Poți scrie un program care să îl facă pe câine să meargă către
-          pisică, iar atunci când o ajunge, aceasta să spună "Bună"?
-        studio_c2_5: Puteţi scrie un program pentru a face caracatiţa să spună "Bună",
-          atunci când se dă clic pe ea?
-        studio_c2_6: Acum, scrie un program care să îl facă pe Waddles să se miște
-          de jur împrejur folosind tastele săgeată sus / jos / stânga / dreapta pentru
-          a atinge toate obiectivele?
-        studio_c2_7: Blocul "repetă pentru totdeauna" vă permite să rulaţi cod continuu.
-          Puteți ataşa blocuri pentru a muta acest dinozaur în sus şi în jos în mod
-          repetat?
-        studio_c2_8: Puteți să îl faceți pe Waddles să spună "Au!" şi să redea un
-          sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile
-          pentru a face să se întâmple asta?
-        studio_c2_9: Puteţi adăuga un bloc pentru a înscrie un punct când Waddles
-          aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți
-          puncte?
-        studio_c2_10: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza lui
-          Waddles, şi apoi să îl mutaţi cu săgeţile până când marcați?
-        studio_c2_11: Creați-vă propria poveste. Când ați terminat, faceți click pe
-          Terminare pentru a permite prietenilor să vă încerce povestea pe telefoanele
-          lor.
-        studio_c3_story_1: Poți face acest câine să spună "Bună ziua lume"?
-        studio_c3_story_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica
-          sa continue sa spuna altceva?
-        studio_c3_story_3: Puteți scrie un program pentru a face acest câine să se
-          miște către pisică?
-        studio_c3_story_4: Poți scrie un program care să îl facă pe câine să meargă
-          către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?
-        studio_c3_story_5: Puteţi să adăugaţi un bloc pentru a face caracatiţa fericită?
-        studio_c3_story_6: Creați-vă propria poveste. Când ați terminat, faceți click
-          pe Terminare pentru a permite prietenilor să vă încerce povestea pe telefoanele
-          lor.
-        studio_c3_game_1: Puteţi scrie un program pentru a face caracatiţa să spună
-          "Bună", atunci când se dă clic pe ea?
-        studio_c3_game_2: Acum, scrie un program care să îl facă pe Waddles să se
-          miște de jur împrejur folosind tastele săgeată sus / jos / stânga / dreapta
-          pentru a atinge toate obiectivele?
-        studio_c3_game_3: Blocul "repetă pentru totdeauna" vă permite să rulaţi cod
-          continuu. Puteți ataşa blocuri pentru a muta acest dinozaur în sus şi în
-          jos în mod repetat?
-        studio_c3_game_4: Puteți să îl faceți pe Waddles să spună "Au!" şi să redea
-          un sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile
-          pentru a face să se întâmple asta?
-        studio_c3_game_5: Puteţi adăuga un bloc pentru a înscrie un punct când Waddles
-          aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți
-          puncte?
-        studio_c3_game_6: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza
-          lui Waddles, şi apoi să îl mutaţi cu săgeţile până când marcați?
-        studio_c3_game_7: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe
-          Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
-          lor.
-        studio_playlab_1: Pinguinul vrea să spună "Bună ziua" - îl puteți ajuta?
-        studio_playlab_2: Băiatul din peşteră (actor 1) şi Fata din peşteră (actor
-          2) ar dori să-și spună "hello". Îi puteți ajuta folosind blocul "spune"
-          de două ori?
-        studio_playlab_3: O puteți ajuta pe tenismenă să ajungă la pavilion?
-        studio_playlab_4: Îl puteți ajuta pe băiatul tenisman (actor 1) să ajungă
-          la fata de tenis (actor 2) și să lansați un sunet când ajunge acolo?
-        studio_playlab_5: Îl puteți ajuta pe Spacebot să spună "Salutări earthlings"
-          când se dă clic pe el? Nu uitaţi să daţi clic pe el după ce daţi clic pe
-          Rulare
-        studio_playlab_6: O puteți ajuta pe Vrăjitoare să se miște împrejur folosind
-          tastele săgeți sus/jos/dreapta/stânga pentru a prinde toate mingile de foc
-          magice?
-        studio_playlab_7: Blocul "repetă pentru totdeauna" vă permite să rulaţi cod
-          continuu. Puteți ataşa blocuri pentru a ajuta Expertul să se miște la dreapta
-          şi la stânga în mod repetat?
-        studio_playlab_8: Puteţi adăuga un bloc pentru a marca un punct și un bloc
-          pentru a reda un sunet când unicornul îl lovește pe expert şi apoi să îl
-          mutaţi cu săgeţile până când marcați?
-        studio_playlab_9: Setați fundalul pentru această invazie extraterestră şi
-          ajutați-l pe Spacebot să ajungă mai repede la extraterestru, prin schimbarea
-          vitezei sale. Apoi, mutaţi-l cu tastele săgeată să ajungă la Spacebot şi  să-i
-          alerteze pe toți ceilalți
-        studio_playlab_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic
-          pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
-          lor.
-        studio_iceage_hello1: Sid vrea să adune pe toată lumea pentru o nouă aventură.
-          Poți să îl ajuți să spună "Bună ziua" glisând blocul "spune" în zona de
-          lucru şi tastând cuvintele "Bună ziua" în interiorul lui?
-        studio_iceage_hello2: Sid (actorul 1) l-a găsit pe Manny (actorul 2) şi vrea
-          să-l invite într-o aventură.  Ajută-i să se salute reciproc folosind blocul
-          "actorul spune" de două ori.
-        studio_iceage_move_to_flag: Scrat este în căutarea ghindei lui! Ajută-l să
-          parcurgă ultimii 200 de pixeli folosind blocul "mergi".
-        studio_iceage_move_to_actor: Diego (actorul 1) este în căutarea lui Manny
-          (actorul 2). Ajută-l pe Diego să meargă 200 pixeli în jos către Manny folosind
-          blocul "mutare actor". Apoi, conectează un bloc la evenimentul "când actorul
-          atinge" pentru a reda un sunet atunci când se vor găsi unul pe celălalt.
-        studio_iceage_repeat: Blocul "repetă la nesfârșit" iți permite să rulezi codul
-          în mod continuu. Poți atașa blocuri pentru a-l ajuta pe Granny să se antreneze
-          mișcându-se la stânga și la dreapta în mod repetat?
-        studio_iceage_click_hello: Poți să îl ajuți pe Sid să facă o ultimă strigare
-          pentru prieteni când faci click pe el? Nu uita să faci click pe el după
-          ce ai apăsat 'Rulează'.
-        studio_iceage_move_events: Scrat caută încă ghinde! Ajută-l să alerge prin
-          zonă atașând blocul "mută" la fiecare eveniment și schimbând direcția pentru
-          fiecare săgeată. Când ai terminat, fă clic pe 'Rulează' și încearcă să aduni
-          toate ghindele.
-        studio_iceage_sound_and_points: Am furnizat deja cea mai mare parte din codul
-          ce o menține pe Granny să se miște la stânga și dreapta, precum și codul
-          care îl mișcă pe Sid de-a lungul ecranului. Poți termina codul și adăuga
-          blocuri evenimentului "cand actorul atinge" pentru ca amandoi să emită un
-          sunet și să marcheze un punct atunci când Sid și Granny se lovesc? Apasă
-          'Rulează' pentru a juca jocul.
-        studio_iceage_warn_ice_age: Toată lumea trebuie să se mişte mai repede, pentru
-          că vine o epocă de gheaţă! Schimbă fundalul cu "ghețari" şi setează-i viteza
-          lui Sid la rapid, apoi apasă Rulează şi mută-l lângă Diego pentru a-l avertiza.
-        studio_iceage_throw_hearts: Sid vrea ca bunica lui, Granny, să știe că o iubește.
-          Folosește comanda "actorul aruncă" pentru a-l face pe Sid (actorul 1) să
-          arunce inimi către Granny (actorul 2)! Setează starea lui Granny la fericită
-          când este lovită cu inimi.
-        studio_iceage_free_play: E timpul să îți creezi propriul joc sau poveste!
-          Când termini, apasă 'Terminat' pentru a-i lăsa pe prietenii tăi să testeze
-          jocul tău pe telefoanele, tabletele sau calculatoarele lor!
-        studio_gumball_hello1: Anais vrea sa isi faca noi prieteni. O poti ajuta sa
-          spuna "buna" folosind blocul "spune" in spatiul de lucru si scriind inauntru
-          cuvantul "buna"?
-        studio_gumball_hello2: Darwin (actorul 1) și fratele său, Gumball (actorul
-          2), se îndreaptă către școală. Ajută-i să se salute reciproc folosind blocul
-          "actorul spune" de două ori.
-        studio_gumball_move_to_flag: Banana Joe este cat pe ce sa castige o cursa!
-          Ajuta-l sa mearga cel putin 200 de pixeli folosind blocul "mergi".
-        studio_gumball_move_to_actor: Gumball (actorul 1) si Darwin (actorul 2) au
-          intarziat la ora! Ajuta-l pe Gumball sa mearga 200 de pixeli in jos catre
-          Darwin folosind blocul "muta actor". Apoi, conecteaza un bloc la evenimentul
-          "cand actorul" pentru a rula un sunet de cate ori se gasesc unul pe altul.
-        studio_gumball_repeat: Blocul "repeta mereu" iti permite sa rulezi continuu.
-          Poti atasa blocuri la el ca sa il ajuti pe Gumball sa faca incalzirea pentru
-          cursa lui miscandu-se in stanga si in dreapta continuu?
-        studio_gumball_click_hello: Poti sa il ajuti pe Anton sa anunte start-ul cursei
-          spunand "Pe locuri, fiti gata, start!"? Pentru a-ti testa programul, nu
-          uita sa apesi pe Anton dupa de apesi "ruleaza"!
-        studio_gumball_move_events: Darwin este la concursul de strans steaguri! Ajuta-l
-          sa alerge de colo colo atasand blocul "mergi" la fiecare eveniment. Cand
-          esti gata, apasa ruleaza si incearca sa strangi toate stegurile.
-        studio_gumball_sound_and_points: Am notat majoritatea codului care il tine
-          pe Anton ( actorul 2) sa alerge din stanga in dreapta, la fel ca si codul
-          care il muta pe Banana Joe (actorul 1) de-a lungul ecranului. Poti termina
-          codul si adauga blocuri la evenimentul "cand actorii se ating" pentru a-i
-          face sa ruleze un sunet apoi sa inscrie cate un punct cand Banana Joe si
-          Anton se lovesc? Apasa Ruleaza pentru a juca jocul.
-        studio_gumball_warn_food_fight: Darvin a scapat de o lupta cu alimente! Schimba
-          fundalul la "caractere" si seteaza viteza lui Darwin la rapid, apoi apasa
-          Ruleaza si muta-l catre Penny pentru a o avertiza.
-        studio_gumball_join_food_fight: Alaturati-va luptei cu mancare! Foloseste
-          comanda "actorul arunca elementul in dreapta" pentru ca Banana Joe (actorul
-          1) sa arunce cu mancare in Anton (actorul 2)! Seteaza-l pe Anton sa fie
-          nervos cand este lovit.
-        studio_gumball_free_play: Creeaza-ti propria poveste a jocului. Cand e gata,
-          apasa "terminare"si spune-le prietenilor tai sa incerce jocul pe telefoane,
-          tablete sau calculatoare!
-        studio_full_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic
-          pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
-          lor.
-        studio_k1_1: Poți face acest câine să spună "Bună ziua lume"?
-        studio_k1_2: Puteți face câinele să spună ceva și apoi pisica să continue
-          spunând altceva?
-        studio_k1_3: Puteți scrie un program pentru a face acest câine să se miște
-          către pisică?
-        studio_k1_4: Faceți câinele să se miște spre pisică și pe aceasta să spună
-          "hello", atunci când el ajunge acolo.
-        studio_k1_5: Puteţi să adăugaţi un bloc pentru a face caracatiţa fericită?
-        studio_k1_6: Creați-vă propria poveste! Deplasați împrejur pisica şi câinele
-          şi făceți-le să spună ceva.
-        maze_wordsearch_k_1: Mutați-mă ca să spun literele cuvântului EST
-        maze_wordsearch_k_2: Mutați-mă ca să spun literele cuvântului SUD
-        maze_wordsearch_k_3: Mutați-mă ca să spun literele cuvântului VEST
-        maze_wordsearch_k_4: Mutați-mă ca să spun literele cuvântului NORD
-        maze_wordsearch_k_6: Mutați-mă spre Est, apoi spre Sud ca să spun literele
-          cuvântului SALT
-        maze_wordsearch_k_9: Mișcați-mă într-un sens, apoi în celălalt ca să spun
-          literele cuvântului COD
-        maze_wordsearch_k_13: Mișcați-mă într-un sens, apoi în celălalt ca să spun
-          literele cuvântului DEPANARE
-        maze_wordsearch_k_15: Mișcați-mă într-un sens, apoi în celălalt ca să spun
-          literele cuvântului DEASUPRA
-        maze_wordsearch_k_16: Mișcați-mă într-un sens, apoi în celălalt ca să spun
-          literele cuvântului DEDESUBT
-        maze_wordsearch_k_20: Acesta este un test! Mișcați-mă într-un sens, apoi în
-          celălalt ca să spun literele cuvântului POVESTE
-        applab_ec_simple: Crează-ți propria aplicație folosind blocurile din bara
-          de unelte.
-        turtle_ec_1_2: 'Acum, desenează un pătrat. NOTĂ: utilizează culoarea ta preferată
-          selectând-o în noul bloc "penColor".'
         turtle_ec_1_10: 'Ați reușit! Acum, desenați orice doriți. Unele idei distractive:
           o figură băţ, fulg de nea sau spirală. Încercați, de asemenea, noul bloc
           "penWidth". Distracţie plăcută!'
-        studio_ec_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic
-          pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
-          lor.
+        turtle_ec_1_2: 'Acum, desenează un pătrat. NOTĂ: utilizează culoarea ta preferată
+          selectând-o în noul bloc "penColor".'
+    trophy:
+      name:
+        Bronze: Bronz
+        Gold: Aur
+        Silver: Argint
     video:
       name:
-        maze_intro: Intro Labirint
-        artist_intro: Intro Artist
-        farmer_intro: Intro Fermier
-        flappy_intro: Introducere Flappy
-        loop_times: Bloc Repetă ori
-        loop_until: Bloc Repetă Până La
-        if: Bloc Dacă
-        if_else: Bloc Dacă/Altfel
-        if_else_scrat: Bloc Dacă/Altfel
-        function: Funcţii
-        loop_while: Bloc În timp ce
-        loop_for: Bloc Contor
-        parameters: Funcții cu Parametrii
-        hoc_wrapup: Încheierea Orei de Programare
+        C1_artist_intro: Intro Artist
+        C1_bee_level_intro: Albină Nivel - Introducere
+        C1_bee_loops: Bucle de Ortografie
+        C1_bigevent_unplugged: Marele eveniment
+        C1_building_foundation: Construirea unei Fundaţii
+        C1_getting_loopy: Transformând în Buclă
+        C1_going_places_safely: Mergând în locuri în siguranţă
+        C1_happy_maps_unplugged: Hărţi Fericite
+        C1_maze_debugging: Labirint Depanare
+        C1_maze_intro_sequencing: Introducere în secvențierea unui labirint
+        C1_maze_loops: Bucle de Labirint
+        C1_moveitmoveit_unplugged: Mutaţi-l, mutați-l
+        C1_pair_programming: Programare în perechi
+        C1_planting_seed: Plantarea unei semințe
+        C1_playlab_storytelling: Rulare laborator - Creează o poveste
+        C1_spelling_bee_intro: Introducere în Albina ortografiind
+        C1_zuck_repeat_loop: Bucle de Labirint
+        C2_artist_debugging: Depanare Artist
+        C2_artist_intro: Intro Artist
+        C2_artist_loops: Bucle de Artist
+        C2_bee_conditionals: Condiţii de Ortografie
+        C2_bee_debugging: Depanarea Ortografiei
+        C2_bee_loops: Bucle de Ortografie
+        C2_binary_bracelets: Brăţări Binare
+        C2_conditionals_with_cards: Condiţionale
+        C2_digital_footprint: Amprenta ta Digitală
+        C2_digital_footprint_v2: Amprenta ta Digitală
+        C2_graph_paper: Programare pe Hârtie Milimetrică
+        C2_maze_intro: Intro Labirint
+        C2_paper_airplanes: Avioane de hârtie
+        C2_playlab_createstory: Rulare laborator - Creează o poveste
+        C2_relay_programming: Programare de releu
+        C2_zuck_repeat_loop: Bucle de Labirint
+        C3_artist_functions: Funcţii de Artist
+        C3_artist_intro: Intro Artist
+        C3_artist_nested_loops: Repetiții imbricate
+        C3_bee_conditionals: Condiţii de Ortografie
+        C3_bee_debugging: Depanarea Ortografiei
+        C3_bee_functions: Funcţii de Ortografie
+        C3_bee_nested_loops: Repetiții imbricate
+        C3_bounce: Săritură
+        C3_computational_thinking: Gândire de Calcul
+        C3_crowdsourcing: Obţinând Informaţii/Critici
+        C3_dice_race: Cursă de Zaruri
+        C3_farmer_while: Repetiții While
+        C3_functional_suncatchers: Prinzători ai Soarelui Funcţionali
+        C3_internet: Internet
+        C3_maze_conditionals: Condiţionale de Labirint
+        C3_maze_level_4: Bucle de Labirint
+        C3_playlab_create_game: Rulare laborator - Creează un joc
+        C3_songwriting_with_parameters: Compozitie cu parametri
+        C4_bee_conditional: Condiţii de Ortografie
+        C4_conditionals: Condiţionale
+        C4_for_loops: Bucle Pentru
+        C4_for_loops_bee: Bucle Pentru
+        C4_for_loops_no_bee: Bucle Pentru
+        C4_function_create: Crearea de funcții
+        C4_function_edit: Editare de funcții
+        C4_function_parameters: Funcții cu Parametrii
+        C4_intro: Introducere
+        C4_loops_zombie: Bucle
+        C4_math_artist: Programarea Artistului cu matematică
+        C4_unplugged_algorithms: Algoritmi cu Tangrame
+        C4_unplugged_binary: Binar
+        C4_unplugged_forloops: Bucle Pentru
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_parameters: Compoziții muzicale cu parametri
+        C4_unplugged_variables: Variabile în plicuri
+        C4_variables_artist: Variabile - Artist
+        C4_variables_playlab: Variabile - Joc Laborator
+        CDEF_Video_SpritesInAction: Spiriduși în acțiune
+        CSA-PL-1d-arrays-new-values: Introducerea valorilor în matricele 1D
+        CSA-PL-Printing-in-Java: Imprimarea în Java
+        CSA-PL-conditionals: Declarații condiționale în Java
+        CSA-PL-debugging-22: Depanare în Java Lab
+        CSA-PL-debugging-temp: Introducere în Debugging în Java Lab - temp
+        CSA-PL-first-program: Scrierea unui program în Java
+        CSA-PL-for-loops: Pentru bucle în Java
+        CSA-PL-intro-to-arrays: Matrice Uni-Dimensionale (1D)
+        CSA-PL-intro-to-java-lab: Bazele Java Lab
+        CSA-PL-multi-selection-statements: Declarații de selecție multiplă
+        CSA-PL-two-way-selection: Selecție bidirecțională
+        CSA-PL-variables: Crearea variabilelor în Java
+        CSD_Unit6_InteractiveArtExemplar: Interactive Art Exemplu
+        CSD_u6_variables_part1: 'CSD: Variabile'
+        CSF-Teaching-Problem-Solving: Soluționarea Problemei de Învățare CSF
+        CSF_EF_cs_matters: Probleme de informatică
+        CSF_Going_Places_Safely: Cartierul meu online
+        CSF_Power_of_Words: Puterea cuvintelor
+        CSF_SpriteLabIntro_CDEF: Acesta este Laboratorul cu sprite-uri
+        CSF_SpriteLab_Intro_v2: Prezentând Laboratorul de Desen
+        CSF_SpriteLab_SpritesInAction_CDEF: Spiriduși în acțiune
+        CSF_SpriteLab_SpritesInAction_v2: Spiriduși în acțiune
+        CSF_Spritelab_MakeSprite_CDEF: Cum să faci un spiriduș în Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: Cum se creează un Sprite
+        CSF_StarWars_ProjectIntro: Introducere în proiectul Războiul Stelelor
+        CSF_Super_Digital_Citizen: Super Cetățean Digital
+        CSF_a_b_artist_loops: Cicluri cu Artistul
+        CSF_artist_angles: Unghiuri în Artist
+        CSF_bb8_loops_C-F: Cicluri cu BB-8
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_collector_k1_blocks: 'Fundamente informatice: Colectorul'
+        CSF_collector_repeat_loops: Colector bucle de repetiție
+        CSF_collector_text_blocks: 'Fundamente informatice: Colectorul'
+        CSF_create_functions: Creează funcții
+        CSF_debugging_k1_blocks: Corectare erori
+        CSF_debugging_text_blocks: Corectare erori
+        CSF_harvester_loops_K1: Cicluri în Harvester
+        CSF_harvester_skinOverview_K-1: Culegătorul
+        CSF_if_allskins: Blocul `dacă` (if)
+        CSF_ifelse_allskins: Utilizarea blocurilor Dacă/Altfel (if/else)
+        CSF_ifelseifelse_allskins: Utilizarea blocurilor Dacă/Altfel Dacă/Altfel (if/elseif/else)
+        CSF_loops_AB: Bucle
+        CSF_maze_intro_k1_blocks: Introducere la Studio-ul Code
+        CSF_maze_intro_text_blocks: Introducere la Studio-ul Code
+        CSF_my_robotic_friends: Amicii mei roboți
+        CSF_scrat_loops_CF: Bucle în Ice Age
+        CSF_scrat_loops_K1: Bucle în Ice Age
+        CSF_skinOverview_Harvester: Culegătorul
+        CSF_stevie_big_project: Stevie şi marele proiect
+        CSF_unspotted_bugs: Bug-uri neidentificate
+        CSF_zuck_loops_short: Bucle de repetiție
+        CS_Changing_Everything: Știința calculatoarelor schimbă totul
+        Getting_Started_BasicFeatures: Caracteristici de bază ale Code.org
+        Gettting_Started_ClassSection: Crearea unei secțiuni de clasă
+        Gettting_Started_Progress: Progres, Feedback și Evaluare
+        Gettting_Started_StudentExperience: Experiența studenților
+        MC_2018_loops: 'Minecraft: Repetă până când (repeat until) în aventura acvatică'
+        PL-Video-21: Bine ați venit la Învățarea Profesională a Code.org!
+        PL_CSD_CircuitPlayground_Overview: Prezentare generală a terenului de joacă
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Prezentare generală a unității
+          de joacă pentru circuite
+        PL_CSD_CircuitPlayground_Setup: Configurarea locului de joacă pentru circuit
+        PL_CSD_MicroBit_Intro: Introducere în micro:bit
+        PL_CSD_TeacherTips_Advise: Sfaturi pentru Profesor - Recomandare pentru Noii
+          Profesori
+        PL_CSD_TeacherTips_Debugging: Sfaturi pentru Profesor - Depanarea unui program
+        PL_CSD_TeacherTips_IntroToCSD: Sfaturi pentru Profesor - Introducere în Descoperirile
+          Informaticii
+        PL_CSD_TeacherTips_LeadLearner: Sfaturi pentru Profesor - Cursantul Principal
+        PL_CSD_TeacherTips_PairProgramming: Sfaturi pentru Profesor - Programare în
+          Pereche
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Sfaturi pentru Profesor - Procesul
+          de Soluționare a Problemei
+        PL_CSD_Unit4_AppTesting: Testarea prototipului de hârtie
+        PL_CSP_EIPMOverview: Ghid pentru lecțiile EIPM
+        PL_CSP_TeacherTips_APExam: 'Sfaturi pentru profesori: Pregătirea pentru examenul
+          AP'
+        PL_CSP_TeacherTips_Advice: 'Sfaturi pentru profesori: Sfaturi pentru noii
+          profesori CS'
+        PL_CSP_TeacherTips_Debugging: 'Sfaturi pentru profesori: Ajutor cu depanarea'
+        PL_CSP_TeacherTips_EIPM: 'Sfaturi pentru profesori: Procesul EIPM'
+        PL_CSP_TeacherTips_IntroToCSP: 'Sfaturi pentru profesori: Introducere în principiile
+          CS'
+        PL_CSP_TeacherTips_LeadLearner: 'Sfaturi pentru profesori: Cum să fii un elev
+          principal'
+        PL_CS_Journeys_Overview: Călătorii CS
+        PL_Equity_in_CS_Education: Echitate în educaţia CS
+        PL_overview_CSD: Ce este descoperirile de informatică?
+        PL_overview_CSP: Ce este principiile de informatică?
         Unplug1: Ce este informatica?
+        Unplug10: Internet
+        Unplug11: Încheiere
         Unplug2: Gândire de Calcul
         Unplug3: Programare pe Hârtie Milimetrică
         Unplug4: Algoritmi
@@ -557,168 +829,206 @@ ro:
         Unplug7: Compunând Cântece
         Unplug8: Abstractizare
         Unplug9: Programare de releu
-        Unplug10: Internet
-        Unplug11: Încheiere
-        C1_happy_maps_unplugged: Hărţi Fericite
-        C1_moveitmoveit_unplugged: Mutaţi-l, mutați-l
-        C1_bigevent_unplugged: Marele eveniment
-        C1_getting_loopy: Transformând în Buclă
-        C1_pair_programming: Programare în perechi
-        C1_maze_intro_sequencing: Introducere în secvențierea unui labirint
-        C1_maze_debugging: Labirint Depanare
-        C1_bee_level_intro: Albină Nivel - Introducere
-        C1_artist_intro: Intro Artist
-        C1_spelling_bee_intro: Introducere în Albina ortografiind
-        C1_zuck_repeat_loop: Bucle de Labirint
-        C1_bee_loops: Bucle de Ortografie
-        C1_maze_loops: Bucle de Labirint
-        C1_playlab_storytelling: Rulare laborator - Creează o poveste
-        C1_planting_seed: Plantarea unei semințe
-        C1_building_foundation: Construirea unei Fundaţii
-        C1_going_places_safely: Mergând în locuri în siguranţă
-        C2_maze_intro: Intro Labirint
-        C2_artist_intro: Intro Artist
-        C2_zuck_repeat_loop: Bucle de Labirint
-        C2_artist_loops: Bucle de Artist
-        C2_artist_debugging: Depanare Artist
-        C2_bee_loops: Bucle de Ortografie
-        C2_bee_debugging: Depanarea Ortografiei
-        C2_bee_conditionals: Condiţii de Ortografie
-        C2_playlab_createstory: Rulare laborator - Creează o poveste
-        C2_graph_paper: Programare pe Hârtie Milimetrică
-        C2_conditionals_with_cards: Condiţionale
-        C2_binary_bracelets: Brăţări Binare
-        C2_relay_programming: Programare de releu
-        C2_paper_airplanes: Avioane de hârtie
-        C2_digital_footprint: Amprenta ta Digitală
-        C2_digital_footprint_v2: Amprenta ta Digitală
-        C3_maze_level_4: Bucle de Labirint
-        C3_artist_intro: Intro Artist
-        C3_artist_functions: Funcţii de Artist
-        C3_bee_functions: Funcţii de Ortografie
-        C3_bee_conditionals: Condiţii de Ortografie
-        C3_maze_conditionals: Condiţionale de Labirint
-        C3_artist_nested_loops: Repetiții imbricate
-        C3_farmer_while: Repetiții While
-        C3_bee_nested_loops: Repetiții imbricate
-        C3_bee_debugging: Depanarea Ortografiei
-        C3_bounce: Săritură
-        C3_playlab_create_game: Rulare laborator - Creează un joc
-        C3_computational_thinking: Gândire de Calcul
-        C3_dice_race: Cursă de Zaruri
-        C3_internet: Internet
-        C3_crowdsourcing: Obţinând Informaţii/Critici
-        C3_functional_suncatchers: Prinzători ai Soarelui Funcţionali
-        C3_songwriting_with_parameters: Compozitie cu parametri
-        C4_intro: Introducere
-        C4_loops_zombie: Bucle
-        C4_bee_conditional: Condiţii de Ortografie
-        C4_variables_artist: Variabile - Artist
-        C4_variables_playlab: Variabile - Joc Laborator
-        C4_for_loops: Bucle Pentru
-        C4_for_loops_bee: Bucle Pentru
-        C4_for_loops_no_bee: Bucle Pentru
-        C4_math_artist: Programarea Artistului cu matematică
-        C4_function_edit: Editare de funcții
-        C4_function_create: Crearea de funcții
-        C4_function_parameters: Funcții cu Parametrii
-        C4_conditionals: Condiţionale
-        C4_unplugged_algorithms: Algoritmi cu Tangrame
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variabile în plicuri
-        C4_unplugged_forloops: Bucle Pentru
-        C4_unplugged_parameters: Compoziții muzicale cu parametri
-        C4_unplugged_binary: Binar
-        CSF_a_b_artist_loops: Cicluri cu Artistul
-        CSF_artist_angles: Unghiuri în Artist
-        CSF_collector_k1_blocks: 'Fundamente informatice: Colectorul'
-        CSF_collector_repeat_loops: Colector bucle de repetiție
-        CSF_collector_text_blocks: 'Fundamente informatice: Colectorul'
-        CSF_create_functions: Creează funcții
-        CSF_debugging_k1_blocks: Corectare erori
-        CSF_debugging_text_blocks: Corectare erori
-        CSF_EF_cs_matters: Probleme de informatică
-        CSF_maze_intro_k1_blocks: Introducere la Studio-ul Code
-        CSF_maze_intro_text_blocks: Introducere la Studio-ul Code
-        CSF_my_robotic_friends: Amicii mei roboți
-        CSF_Power_of_Words: Puterea cuvintelor
-        CSF_Super_Digital_Citizen: Super Cetățean Digital
-        CSF_stevie_big_project: Stevie şi marele proiect
-        CSF_unspotted_bugs: Bug-uri neidentificate
-        CSF_zuck_loops_short: Bucle de repetiție
-        frozen_intro: Introducere în Ora de Programare
-        frozen_loops: Introducere în Bucle
-        frozen_functions: Introducere în Funcții
-        playlab_intro: Introducere in Play Lab
-        playlab_events: Joaca Lab Events
-        playlab_repeat_forever: 'Laboratorul de joacă: Repetă la nesfârșit'
-        tutorial_puzzle_challenge: Tutorial Puzzle de provocare
-        infinity_playlab_intro: Atelier de Joacă - Introducere
-        infinity_playlab_events: Atelier de Joacă - Evenimente
-        infinity_playlab_repeat_forever: Atelier de Joacă - Repetare la nesfârșit
-        csd_concept_how_computers_work: 'Introducere: cum funcționează calculatoarele'
-        csd_concept_computer: 'Cum funcţionează calculatoarele: Ce face calculatorul,
-          calculator?'
+        applab_hoc_designmode: Laboratorul de Aplicații Ora de Cod - mod de proiectare
+        applab_hoc_onevent: App Lab și Ora de cod - onEvent
+        applab_hoc_setproperty: App Lab și Ora de cod - setProperty
+        applab_hoc_share: Laboratorul de Aplicații Ora de Cod - Distribuire
+        applab_hoc_welcome: Laboratorul de Aplicații Ora de Cod - Bine ați venit
+        applab_intro_designmode: Laborator de aplicații - mod de proiectare
+        applab_intro_events: Laborator de applicații - fă-le interactive
+        applab_intro_share: Laborator de applicații - Distribuie applicația ta
+        applab_intro_sounds: Laborator de applicații - imagini şi sunete
+        applab_intro_welcome: Laborator de aplicații - Noţiuni de bază
+        artist_intro: Intro Artist
+        c_and_c_digital_sharing: Partajare digitală
+        c_and_c_great_to_create: Este minunat să creezi și să joci corect
+        codebreak_e01: Code Break 1.0 Algoritmuri cu Hill Harper
+        codebreak_e02: Code Break 2.0 Prototipuri cu Mark Cuban și Lyndsey Scott
+        codebreak_e03: 'Code Break 3.0: Criptare cu Ashton Kutcher și Mia Gil Epner'
+        codebreak_e04: Code Break 4.0 Informații Digitale cu Mike Krieger și Alice
+          Keeler
+        codebreak_e05: 'Code Break 5.0: Simulări & Date cu Bill Gates'
+        codebreak_e06: 'Code Break 6.0: Internetul cu Keegan-Michael Scott & Vint
+          Cerf'
+        codebreak_e07: 'Code Break 7.0: Condiționale cu Sal Khan și Flo Vaughn'
+        codebreak_e08: 'Code Break 8.0: Variabile cu Yara Shahidi și Fuzzy Khosrowshahi'
+        codebreak_e09: 'Code Break 9.0: Evenimente cu Macklemore & Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: IA cu Kat Graham și Kate Park'
+        codebreak_e11: 'Code Break 11.0: Teorii cu Susan Wojcicki și China Anne McClain'
+        codebreak_e12: 'Code Break 12.0: Hardware cu Aloe Blacc, Bret Taylor, & Paula
+          Mejia'
+        conditionals_with_cards: Lecție fără conectare în acțiune - Condiționale cu
+          carduri
+        cs-principles-intro-to-objects: 'Principii Informatice: Introducere la Obiecte'
+        csa-alias-video: Egal și Aliasuri
+        csa-day-in-pm-pl: Ce face un manager de proiect?
+        csa-equals-video: Metoda egals ()
+        csa-example-solution-1: 'Codificarea live a unui exemplu de soluție '
+        csa-multi-select-pl: Declarații de selecție multiplă în Java
+        csa-pl-calling-methods: Metode de apelare în Java
+        csa-pl-compareTo: Metoda CompareTo ()
+        csa-pl-creating-objects: Crearea obiectelor
+        csa-pl-documentation: Documentație în Java Lab
+        csa-pl-equals-book: Scrierea metodei equals () pentru clasa Book
+        csa-pl-intro-to-equality: Introducere în egalitate
+        csa-pl-intro-to-equals-method: Introducere în metoda .equals ()
+        csa-pl-intro-to-oop: Introducere în programarea orientată pe obiecte
+        csa-pl-intro-to-pm: Introducere în Managementul Proiectelor
+        csa-pl-intro-to-strings: Introducere în șiruri de caractere în Java
+        csa-pl-vocab-pm: Vocabularul managementului de proiect
+        csa-pl-vpl-m1-unit-3: Inginerie Software în Unitatea 3
+        csa-pl-welcome-to-Neighborhood: Bine ați venit la Cartier
+        csa-user-stories: Povestiri ale utilizatorilor în ingineria software
+        csa_accessor_methods: 'CSA: Metode de accesor'
+        csa_calling_methods: 'CSA: Metode de apelare'
+        csa_casting: 'CSA: Turnare'
+        csa_column_major_traversal: 'CSA: Coloana-majore traversare'
+        csa_conditional_statements: 'CSA: Declaraţii condiţionale'
+        csa_constructors: 'CSA: Constructori'
+        csa_creating_a_scanner_object: 'CSA: Crearea unui obiect Scanner'
+        csa_creating_objects: 'CSA: Crearea de obiecte'
+        csa_creating_variables: 'CSA: Crearea variabilelor'
+        csa_enhanced_for_loops: 'CSA: Îmbunătăţită pentru bucle'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Îmbunătăţită pentru bucle şi matrice
+          2D'
+        csa_equals_and_aliases: 'CSA: Este egală cu şi pseudonime'
+        csa_for_loops: 'CSA: Pentru bucle'
+        csa_images_and_pixels: 'CSA: Imagini şi pixeli'
+        csa_inheritance: 'CSA: Moştenire'
+        csa_instance_variables_and_attributes: 'CSA: Variabile de instanţă şi atribute'
+        csa_modifying_values_in_a_1d_array: 'CSA: Modificarea valorilor într-o matrice
+          1D'
+        csa_multi-selection_statements: 'CSA: Declaraţii de selecţie multiplă'
+        csa_mutator_methods: 'CSA: Metode de mutator'
+        csa_nested_loops: 'CSA: Bucle imbricate'
+        csa_object_oriented_programming: 'CSA: Orientate pe obiecte de programare'
+        csa_one_dimensional_arrays: 'CSA: Une-dimensionale (1D) Arrays'
+        csa_overloaded_constructors: 'CSA: Supraîncărcat constructori'
+        csa_polymorphism: 'CSA: Polimorfismul'
+        csa_printing_in_java: 'CSA: Imprimarea în Java'
+        csa_private_methods: 'CSA: Metode de privat'
+        csa_random_numbers: 'CSA: Numere aleatoare'
+        csa_recursion: 'CSA: Recursivitate'
+        csa_remving_data_from_an_arraylist: 'CSA: Eliminarea datelor dintr-o listă
+          de arrayList'
+        csa_row_major_traversal: 'CSA: Rand-majore traversare'
+        csa_scanner_class_methods: 'CSA: Metode de clasa Scanner'
+        csa_searching_algorithms: 'CSA: Algoritmi de căutare'
+        csa_software_engineering_code_reviews: 'CSA: Inginerie software - Codul clienţilor'
+        csa_sorting_algorithms: 'CSA: Algoritmi de sortare'
+        csa_static_methods: 'CSA: Metode statice'
+        csa_static_variables: 'CSA: Variabile statice'
+        csa_the_arraylist_class: 'CSA: Clasa ArrayList'
+        csa_the_equals_method: 'CSA: Este egal () Metoda'
+        csa_the_tostring_method: 'CSA: ToString () Metoda'
+        csa_two_dimensional_arrays: 'CSA: Două dimensionale (2D) Arrays'
+        csa_two_way_selection_and_not: 'CSA: Două sensuri de selecţie şi nu'
+        csa_welcome_to_the_theater: 'CSA: Bine aţi venit la teatru'
+        csa_while_loops: 'CSA: În timp ce buclele'
+        csa_working_with_2d_array_elements: 'CSA: Lucrul cu elemente de matrice 2D'
+        csa_working_with_arraylist_data: 'CSA: Lucrul cu datele arrayList'
+        csa_wrapper_classes_part_1: 'CSA: Clase de ambalaj partea 1'
+        csa_wrapper_classes_part_2: 'CSA: Clase de ambalaj partea 2'
+        csa_writing_a_method: 'CSA: Scrierea o metodă'
+        csc-ecosystems-intro: Ecosisteme Intro
+        csc-event-short-intro: Evenimente Scurt Intro
+        csc-poem-art-intro: Intro Video
+        csc-poem-art-outro: Outro Video
+        csc-sprite-lab-pixel-editor: Desenați propriul Sprite
+        csc-starquilts-intro: 'CSC: Stele pilote'
+        csc_animal_adaptations_intro: Adaptări Animale Intro
+        csc_fm_pilot: Mașini funcționale (pilot)
+        csc_fm_pilot_v2: 'Funcție Mașini Intro '
+        csc_timecapsule_intro: Introducerea capsulei timpului
+        csd_app_lab_design_mode: Modul de proiectare a laboratorului de aplicații
+          CSD
+        csd_app_lab_events: CSD App Lab Evenimente
+        csd_applab_arrays: Introducere în matrice
+        csd_applab_designmode: 'Descoperiri informatice: Laboratorul de Aplicaţii
+          - Modul de Proiectare'
+        csd_applab_designmode_short: Laborator de aplicații - mod de proiectare
+        csd_applab_loops: Bucle în laboratorul de aplicaţii
+        csd_applab_parameters: Funcții cu Parametrii
         csd_concept_binary_data: 'Cum funcţionează calculatoare: Binar & date'
         csd_concept_circuits_logic: 'Cum funcționează calculatoarele: Circuite și
           logică'
-        csd_concept_memory_cpu_input_output: 'Cum funcționează calculatoarele: Memorie,
-          CPU, intrare și ieșire'
+        csd_concept_computer: 'Cum funcţionează calculatoarele: Ce face calculatorul,
+          calculator?'
         csd_concept_hardware_software: 'Cum funcționează calculatoarele: Hardware
           și Software (aparatură și programe)'
+        csd_concept_how_computers_work: 'Introducere: cum funcționează calculatoarele'
+        csd_concept_memory_cpu_input_output: 'Cum funcționează calculatoarele: Memorie,
+          CPU, intrare și ieșire'
         csd_concept_search: Cum funcţionează căutarea
+        csd_debugging: Corectare erori
         csd_external_amazon_data: Cum se utilizează cantitățile mari de date în sistemele
           de recomandare Amazon pentru a ne schimba viaţa
         csd_external_netflix_data: Cum realizează Netflix desfășurarea de programe
           TV și sugestiile pentru filme?
         csd_external_waze_data: De ce sunt atât de mulţi utilizatori obsedați de Waze?
         csd_gamelab_animation_tab: Fila de animație
+        csd_gamelab_booleans: Expresii booleene
+        csd_gamelab_conditional_statements: Declarații condiționale
+        csd_gamelab_functions: Apelând şi definind funcţii
+        csd_gamelab_if_else: Declarațiile Dacă/Altfel (if/else)
         csd_gamelab_velocity: Viteza
-        csd_weblab_intro_1: Intro la Laboratorul de Web - partea 1
-        csd_weblab_intro_2: Intro la Laboratorul de Web - partea 2
+        csd_how_teamwork_works: Cum Funcționează Lucrul În Echipă?
+        csd_ml_ethics_ai: 'Etică și AI '
+        csd_ml_import_model: Importul unui model AI
+        csd_ml_intro_ai_lab_july2021: Introducere în AI Lab
+        csd_ml_intro_to_ai_lab: Introducere în AI Lab
+        csd_ml_model_cards_july2021: Carduri model în AI Lab
+        csd_ml_numerical_ai_lab: Date numerice în laboratorul AI
+        csd_ml_training_testing_ai_lan: Instruire și testare în laboratorul AI
+        csd_pair_programming: Programare în perechi
+        csd_problem_solving_process: Procesul de Rezolvare a Problemei
+        csd_sprite_properties: Proprietăți spiriduș
+        csd_teamwork_and_disagreement: Lucrul în Echipă - Cum te Ocupi de Dezacord
+        csd_u6_call_define_functions: 'CSD: Apelarea şi definirea funcţiilor'
+        csd_u6_circuit_playground: Calcul fizic
+        csd_u6_if_statements: 'CSD: În cazul în care declaraţiile'
+        csd_u6_variables_part2: Variabile - Modelul contorului
         csd_weblab_css_1: Introducere în CSS - partea 1
         csd_weblab_css_2: Introducere în CSS - partea 2
+        csd_weblab_intro_1: Intro la Laboratorul de Web - partea 1
+        csd_weblab_intro_2: Intro la Laboratorul de Web - partea 2
         csd_weblab_intro_3: Intro la Laboratorul de Web - partea 3
+        csd_what_computers_are: Ce Este un Computer?
+        csd_what_computers_do: Ce Fac Computerele?
+        csf21pilot_events: 'Sprite Lab: Sprite în acțiune'
+        csf21pilot_prompts: 'Sprite Lab: Text și instrucțiuni'
+        csf_follow_the_digital_trail: Urmărește Indiciul Digital
+        csf_lots_of_sprites: 'Sprite Lab: O mulțime de sprite'
+        csf_my_online_neighborhood_2020: Cartierul meu online
+        csf_private_and_personal_information: Informații private și personale
+        csp-pd-welcome: Bine ai venit în Familie!
         csp_applab_functions: Introducere în Funcții
         csp_applab_functions_parameters: Funcții cu Parametrii
         csp_applab_loops: Bucle
+        csp_applab_parameters: Funcții cu Parametrii
         csp_cs_is_changing_everything: Știința calculatoarelor schimbă totul
-        starwars_intro: 'Star Wars: Programarea unei galaxii - Introducere'
-        starwars_typing: 'Star Wars: Programarea unei galaxii - JavaScript'
-        starwars_events: 'Star Wars: Programarea unei galaxii - Evenimente'
-        starwars_congrats: 'Star Wars: Programarea unei galaxii - Felicitări'
-        starwars_blocks_intro: 'Star Wars: Programarea unei galaxii - Introducere'
-        starwars_blocks_events: 'Star Wars: Programarea unei galaxii - Evenimente'
-        starwars_blocks_congrats: 'Star Wars: Programarea unei galaxii - Felicitări'
-        mc_intro: Minecraft - introducere
-        mc_repeat: Minecraft - Structuri repetitive
-        mc_if_statements: Minecraft - Structuri de decizie
-        mc_congrats_share: Minecraft - Felicitari
-        mc_congrats_no_share: Minecraft - Felicitari
-        gumball_intro: Gumball Hour of Code - Introducere
+        csp_defining_calling_functions: Definirea și apelarea funcțiilor
+        csp_global_vs_local: Depanarea variabilelor globale vs. locale
+        csp_tutorial_datatab: Fila de date în App Lab
+        csp_tutorial_datavis1: Vizualizator de date în App Lab - Partea 1
+        csp_tutorial_datavis2: Vizualizator de date în App Lab - Partea 2
+        csp_tutorial_libraries: Biblioteci în App Lab
+        elem_pd_2: Știința calculatoarelor în școala elementară - PD film 2/2
+        enter_your_own_poem: Introduceți propria poezie
+        farmer_intro: Intro Fermier
+        flappy_intro: Introducere Flappy
+        frozen_functions: Introducere în Funcții
+        frozen_intro: Introducere în Ora de Programare
+        frozen_loops: Introducere în Bucle
+        function: Funcţii
         gumball_events: Gumball Hour of Code - Evenimente
+        gumball_intro: Gumball Hour of Code - Introducere
         gumball_repeat: Gumball Hour of Code - Declaratiile de repetare
-        iceage_intro: Ora de programare Epoca de Gheata - Introducere
-        iceage_events: Ora de programare Epoca de Gheata - Evenimente
-        iceage_repeat: Ora de cod Epoca de Gheata - Repetarea declaratiilor
-        mc_2016_intro: Ora de Programare Minecraft - Introducere
-        mc_2016_loops: Ora de Programare Minecraft - Bucle
-        mc_2016_events: Ora de Programare Minecraft - Evenimente
-        mc_2016_spawn: Ora de Programare Minecraft - Generare
-        mc_2016_congrats: Ora de Programare Minecraft - Felicitari
-        applab_hoc_welcome: Laboratorul de Aplicații Ora de Cod - Bine ați venit
-        applab_hoc_setproperty: App Lab și Ora de cod - setProperty
-        applab_hoc_onevent: App Lab și Ora de cod - onEvent
-        applab_hoc_designmode: Laboratorul de Aplicații Ora de Cod - mod de proiectare
-        applab_hoc_share: Laboratorul de Aplicații Ora de Cod - Distribuire
-        mc_2017_agent_intro: Hour of Code în Minecraft - Agentul
-        mc_2017_repeat: Hour of Code în Minecraft - Bucle „repetă”
-        mc_2017_functions: Hour of Code în Minecraft - Funcții
-        mc_2017_congratulations: Ora de Programare Minecraft - Felicitari
-        mc_2017_puzzle_1: Hour of Code în Minecraft - Agentul
-        mc_2017_puzzle_3: Hour of Code în Minecraft - Bucle „repetă”
-        mc_2017_puzzle_8: Hour of Code în Minecraft - Funcții
-        mc_2017_puzzle_12: Ora de Programare Minecraft - Joacă la alegere
+        hello_world_congrats: Hello World - Fă Ce Dorești
+        hello_world_events: Hello World - Programare cu Evenimente
+        hello_world_intro: Hello World - Bun Venit în Laboratorul Spiritelor
+        hint_videos_d_11_11_first: 'Videoclipuri indiciu: D.11.11 primul'
+        hint_videos_d_11_11_last: 'Videoclipuri indiciu: D.11.11 ultimul'
         hint_videos_d_11_3_first: 'Videoclipuri indiciu: D.11.3 primul'
         hint_videos_d_11_3_last: 'Videoclipuri indiciu: D.11.3 ultimul'
         hint_videos_d_11_4_first: 'Videoclipuri indiciu: D.11.4 primul'
@@ -731,425 +1041,116 @@ ro:
         hint_videos_d_11_7_last: 'Videoclipuri indiciu: D.11.7 ultimul'
         hint_videos_d_11_9_first: 'Videoclipuri indiciu: D.11.9 primul'
         hint_videos_d_11_9_last: 'Videoclipuri indiciu: D.11.9 ultimul'
-        hint_videos_d_11_11_first: 'Videoclipuri indiciu: D.11.11 primul'
-        hint_videos_d_11_11_last: 'Videoclipuri indiciu: D.11.11 ultimul'
-        applab_intro_welcome: Laborator de aplicații - Noţiuni de bază
-        applab_intro_events: Laborator de applicații - fă-le interactive
-        applab_intro_sounds: Laborator de applicații - imagini şi sunete
-        applab_intro_designmode: Laborator de aplicații - mod de proiectare
-        applab_intro_share: Laborator de applicații - Distribuie applicația ta
-        csd_applab_arrays: Introducere în matrice
-        CSF_skinOverview_Harvester: Culegătorul
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Cicluri cu BB-8
-        CSF_harvester_skinOverview_K-1: Culegătorul
-        CSF_harvester_loops_K1: Cicluri în Harvester
-        CSF_scrat_loops_K1: Bucle în Ice Age
-        CSF_scrat_loops_CF: Bucle în Ice Age
-        CSF_if_allskins: Blocul `dacă` (if)
-        CSF_ifelse_allskins: Utilizarea blocurilor Dacă/Altfel (if/else)
-        CSF_ifelseifelse_allskins: Utilizarea blocurilor Dacă/Altfel Dacă/Altfel (if/elseif/else)
-        CSF_loops_AB: Bucle
-        csd_gamelab_booleans: Expresii booleene
-        csd_gamelab_conditional_statements: Declarații condiționale
-        csd_gamelab_if_else: Declarațiile Dacă/Altfel (if/else)
-        CSF_SpriteLabIntro_CDEF: Acesta este Laboratorul cu sprite-uri
-        CSF_Spritelab_MakeSprite_CDEF: Cum să faci un spiriduș în Sprite Lab
-        CDEF_Video_SpritesInAction: Spiriduși în acțiune
-        CSF_SpriteLab_SpritesInAction_CDEF: Spiriduși în acțiune
-        CSF_StarWars_ProjectIntro: Introducere în proiectul Războiul Stelelor
-        mc_2018_intro: 'Minecraft: Introducere în aventura acvatică'
-        MC_2018_loops: 'Minecraft: Repetă până când (repeat until) în aventura acvatică'
-        mc_2018_conditionals: 'Minecraft: Condiționale în aventura acvatică'
-        mc_2018_closing: 'Minecraft: Felicitări pentru aventura acvatică'
-        hoc_dance_warmup: Petrecere cu dans - Pregătire
-        hoc_dance_events: Petrecere cu dans - Evenimente
-        hoc_dance_properties: Petrecere cu dans - Proprietăţi
         hoc_dance_congrats: Petrecere dansantă - Să înceapă petrecerea!
-        c_and_c_great_to_create: Este minunat să creezi și să joci corect
-        c_and_c_digital_sharing: Partajare digitală
-        teaching_csf_how_it_works: 'Predarea cursului Fundamentele CS: Cum funcționează
-          cursul'
-        elem_pd_2: Știința calculatoarelor în școala elementară - PD film 2/2
-        what_is_cs: Ce este știința calculatoarelor?
-        repeat_block: Utilizarea blocului ”repetă” (repeat)
+        hoc_dance_congrats_2019: Petrecere dansantă 2019 - Să înceapă petrecerea!
+        hoc_dance_events: Petrecere cu dans - Evenimente
+        hoc_dance_events_2019: Petrecere dansantă 2019 - Evenimente
+        hoc_dance_measures_2019: Petrecere dansantă 2019 - Măsuri
+        hoc_dance_properties: Petrecere cu dans - Proprietăţi
+        hoc_dance_properties_2019: Petrecere dansantă 2019 - Proprietăți
+        hoc_dance_warmup: Petrecere cu dans - Pregătire
+        hoc_dance_warmup_2019: Petrecere dansantă 2019 - Încălzire
+        hoc_wrapup: Încheierea Orei de Programare
+        how-to-k5-workshops: Code.org - Fundamente de Informatică:Testate de Copii,
+          Aprobate de Profesori
+        iceage_events: Ora de programare Epoca de Gheata - Evenimente
+        iceage_intro: Ora de programare Epoca de Gheata - Introducere
+        iceage_repeat: Ora de cod Epoca de Gheata - Repetarea declaratiilor
+        if: Bloc Dacă
+        if_else: Bloc Dacă/Altfel
+        if_else_scrat: Bloc Dacă/Altfel
+        infinity_playlab_events: Atelier de Joacă - Evenimente
+        infinity_playlab_intro: Atelier de Joacă - Introducere
+        infinity_playlab_repeat_forever: Atelier de Joacă - Repetare la nesfârșit
         lesson_planning: Planificare lecție
+        loop_for: Bloc Contor
+        loop_times: Bloc Repetă ori
+        loop_until: Bloc Repetă Până La
+        loop_while: Bloc În timp ce
+        maze_intro: Intro Labirint
+        mc_2016_congrats: Ora de Programare Minecraft - Felicitari
+        mc_2016_events: Ora de Programare Minecraft - Evenimente
+        mc_2016_intro: Ora de Programare Minecraft - Introducere
+        mc_2016_loops: Ora de Programare Minecraft - Bucle
+        mc_2016_spawn: Ora de Programare Minecraft - Generare
+        mc_2017_agent_intro: Hour of Code în Minecraft - Agentul
+        mc_2017_congratulations: Ora de Programare Minecraft - Felicitari
+        mc_2017_functions: Hour of Code în Minecraft - Funcții
+        mc_2017_puzzle_1: Hour of Code în Minecraft - Agentul
+        mc_2017_puzzle_12: Ora de Programare Minecraft - Joacă la alegere
+        mc_2017_puzzle_3: Hour of Code în Minecraft - Bucle „repetă”
+        mc_2017_puzzle_8: Hour of Code în Minecraft - Funcții
+        mc_2017_repeat: Hour of Code în Minecraft - Bucle „repetă”
+        mc_2018_closing: 'Minecraft: Felicitări pentru aventura acvatică'
+        mc_2018_conditionals: 'Minecraft: Condiționale în aventura acvatică'
+        mc_2018_intro: 'Minecraft: Introducere în aventura acvatică'
+        mc_congrats_no_share: Minecraft - Felicitari
+        mc_congrats_share: Minecraft - Felicitari
+        mc_if_statements: Minecraft - Structuri de decizie
+        mc_intro: Minecraft - introducere
+        mc_repeat: Minecraft - Structuri repetitive
+        oceans_machine_learning: Învățare Automată
+        oceans_societal_implications: Implicații Societale
+        oceans_training_data: Date de Instructaj
         opd_closing: 'Predarea cursului Fundamentele CS: Închiderea & Pasul următor'
-        why_unplugged_lessons: Pregătire pentru activități fără conectare
-        writing_first_program: Scrierea primului program de calculator
-        conditionals_with_cards: Lecție fără conectare în acțiune - Condiționale cu
-          carduri
+        outbreak_events: 'Outbreak Simulator: Evenimente'
+        outbreak_intro: 'Simularea focarului: Introducere'
+        outbreak_outro: 'Outbreak Simulator: Joc gratuit'
+        outbreak_scientist: 'Simulator de focar: gândirea ca un om de știință'
+        parameters: Funcții cu Parametrii
+        playlab_2021: Introducere in Play Lab
+        playlab_2021_reader: Introducere in Play Lab
+        playlab_events: Joaca Lab Events
+        playlab_intro: Introducere in Play Lab
+        playlab_repeat_forever: 'Laboratorul de joacă: Repetă la nesfârșit'
+        poemart_celebration: Poem Arta Celebrare
+        poemart_events: Poem Arta Evenimente
+        poemart_imagery: Poem Art Imagery
+        poemart_intro: Introducere În Arta Poemului
+        poembot-playtest-events: Evenimente PoemBot Playtest
+        poembot-playtest-intro: Introducere în PoemBot Playtest
+        poembot-playtest-sprites: Spiritele PoemBot Playtest
+        poetry_module_conditionals: Relații de condiționalitate - Programare cu ajutorul
+          poeziei
+        poetry_module_multichoiceprompts: Întrebări cu răspunsuri multiple - Programare
+          cu ajutorul poeziei
+        poetry_module_planningapp: Planificarea aplicației dvs. de generare de poezii
+          - Programare cu ajutorul poeziei
+        poetry_module_textandvariables: Text și variabile - Programare cu ajutorul
+          poeziei
+        poetry_module_variables: Variabile - Programare cu ajutorul poeziei
+        repeat_block: Utilizarea blocului ”repetă” (repeat)
+        rough_poemart_congrats: Arta poeziei v1 - Felicitări
+        rough_poemart_events: Arta poeziei v1 - Evenimente
+        rough_poemart_imagery: Arta poeziei v1 - Imagini folosite
+        rough_poemart_intro: Arta poeziei v1 - Introducere
         songwriting_with_functions: Lecție fără conectare în acțiune - Scrierea de
           cântece cu funcții
-        what_is_an_event: Ce este un eveniment?
+        star_quilts_intro_to_artist: 'Stele Quilts: Introducere în artist'
+        starquilts_intro_artist: Introducere în Steaua Quilts
+        starwars_blocks_congrats: 'Star Wars: Programarea unei galaxii - Felicitări'
+        starwars_blocks_events: 'Star Wars: Programarea unei galaxii - Evenimente'
+        starwars_blocks_intro: 'Star Wars: Programarea unei galaxii - Introducere'
+        starwars_congrats: 'Star Wars: Programarea unei galaxii - Felicitări'
+        starwars_events: 'Star Wars: Programarea unei galaxii - Evenimente'
+        starwars_intro: 'Star Wars: Programarea unei galaxii - Introducere'
+        starwars_typing: 'Star Wars: Programarea unei galaxii - JavaScript'
         teaching_cs_pair_programming: 'Predarea cursului Fundamentele CS: Programarea
           pe perechi'
+        teaching_csf_how_it_works: 'Predarea cursului Fundamentele CS: Cum funcționează
+          cursul'
         teaching_problem_solving: 'Predarea cursului Fundamentele CS: Predarea modalităților
           de rezolvare a problemelor'
-        csd_applab_designmode: 'Descoperiri informatice: Laboratorul de Aplicaţii
-          - Modul de Proiectare'
-        csd_pair_programming: Programare în perechi
-        csd_gamelab_functions: Apelând şi definind funcţii
-        csd_applab_parameters: Funcții cu Parametrii
-        csd_applab_loops: Bucle în laboratorul de aplicaţii
-        csd_problem_solving_process: Procesul de Rezolvare a Problemei
-        CSF_Going_Places_Safely: Cartierul meu online
-        CSF_SpriteLab_Intro_v2: Prezentând Laboratorul de Desen
-        CSF_Spritelab_MakeSprite_v2: Cum se creează un Sprite
-        CSF_SpriteLab_SpritesInAction_v2: Spiriduși în acțiune
-        csd_debugging: Corectare erori
-        csd_applab_designmode_short: Laborator de aplicații - mod de proiectare
-        csp-pd-welcome: Bine ai venit în Familie!
-        CSF-Teaching-Problem-Solving: Soluționarea Problemei de Învățare CSF
+        tutorial_puzzle_challenge: Tutorial Puzzle de provocare
         u5-traversals-get-list-explanation: Code.org [levelbuilder] - Video Pilot
           - Bloc de date
         u7-libraries-explanation: 'App Lab: Formează-ți Propriile Blocuri - Cum se
           Utilizează Bibliotecile'
-        how-to-k5-workshops: Code.org - Fundamente de Informatică:Testate de Copii,
-          Aprobate de Profesori
+        upload_sprites_backgrounds: Încărcarea Sprites personalizate și fundaluri
+        what-is-creativity: Ce este creativitatea?
+        what_is_an_event: Ce este un eveniment?
+        what_is_cs: Ce este știința calculatoarelor?
         why-should-teach-unplugged-activities: 'FAQ: De ce trebuie să predau activități
           „neconectate”?'
-        cs-principles-intro-to-objects: 'Principii Informatice: Introducere la Obiecte'
-        oceans_machine_learning: Învățare Automată
-        oceans_training_data: Date de Instructaj
-        oceans_societal_implications: Implicații Societale
-        hoc_dance_congrats_2019: Petrecere dansantă 2019 - Să înceapă petrecerea!
-        hoc_dance_warmup_2019: Petrecere dansantă 2019 - Încălzire
-        hoc_dance_events_2019: Petrecere dansantă 2019 - Evenimente
-        hoc_dance_measures_2019: Petrecere dansantă 2019 - Măsuri
-        hoc_dance_properties_2019: Petrecere dansantă 2019 - Proprietăți
-        csd_what_computers_do: Ce Fac Computerele?
-        csf_my_online_neighborhood_2020: Cartierul meu online
-        csf_follow_the_digital_trail: Urmărește Indiciul Digital
-        csf_private_and_personal_information: Informații private și personale
-        csd_what_computers_are: Ce Este un Computer?
-        codebreak_e01: Code Break 1.0 Algoritmuri cu Hill Harper
-        codebreak_e02: Code Break 2.0 Prototipuri cu Mark Cuban și Lyndsey Scott
-        codebreak_e03: 'Code Break 3.0: Criptare cu Ashton Kutcher și Mia Gil Epner'
-        codebreak_e04: Code Break 4.0 Informații Digitale cu Mike Krieger și Alice
-          Keeler
-        codebreak_e05: 'Code Break 5.0: Simulări & Date cu Bill Gates'
-        csd_how_teamwork_works: Cum Funcționează Lucrul În Echipă?
-        csd_teamwork_and_disagreement: Lucrul în Echipă - Cum te Ocupi de Dezacord
-        codebreak_e06: 'Code Break 6.0: Internetul cu Keegan-Michael Scott & Vint
-          Cerf'
-        codebreak_e07: 'Code Break 7.0: Condiționale cu Sal Khan și Flo Vaughn'
-        codebreak_e08: 'Code Break 8.0: Variabile cu Yara Shahidi și Fuzzy Khosrowshahi'
-        codebreak_e09: 'Code Break 9.0: Evenimente cu Macklemore & Scott Forstall'
-        codebreak_e10: 'Code Break 10.0: IA cu Kat Graham și Kate Park'
-        codebreak_e11: 'Code Break 11.0: Teorii cu Susan Wojcicki și China Anne McClain'
-        codebreak_e12: 'Code Break 12.0: Hardware cu Aloe Blacc, Bret Taylor, & Paula
-          Mejia'
-        csf21pilot_events: 'Sprite Lab: Sprite în acțiune'
-        csf21pilot_prompts: 'Sprite Lab: Text și instrucțiuni'
-        csd_ml_intro_to_ai_lab: Introducere în AI Lab
-        csd_ml_import_model: Importul unui model AI
-        csf_lots_of_sprites: 'Sprite Lab: O mulțime de sprite'
-        playlab_2021: Introducere in Play Lab
-        playlab_2021_reader: Introducere in Play Lab
-        csp_defining_calling_functions: Definirea și apelarea funcțiilor
-        csp_tutorial_datatab: Fila de date în App Lab
-        csp_tutorial_libraries: Biblioteci în App Lab
-        PL-Video-21: Bine ați venit la Învățarea Profesională a Code.org!
-        csp_tutorial_datavis1: Vizualizator de date în App Lab - Partea 1
-        csp_tutorial_datavis2: Vizualizator de date în App Lab - Partea 2
-        csd_ml_intro_ai_lab_july2021: Introducere în AI Lab
-        csd_ml_training_testing_ai_lan: Instruire și testare în laboratorul AI
-        csd_ml_model_cards_july2021: Carduri model în AI Lab
-        csd_ml_numerical_ai_lab: Date numerice în laboratorul AI
-        Gettting_Started_Progress: Progres, Feedback și Evaluare
-        Gettting_Started_ClassSection: Crearea unei secțiuni de clasă
-        Gettting_Started_StudentExperience: Experiența studenților
-        Getting_Started_BasicFeatures: Caracteristici de bază ale Code.org
-        PL_overview_CSD: Ce este descoperirile de informatică?
-        PL_CSD_TeacherTips_Advise: Sfaturi pentru Profesor - Recomandare pentru Noii
-          Profesori
-        PL_CSD_TeacherTips_IntroToCSD: Sfaturi pentru Profesor - Introducere în Descoperirile
-          Informaticii
-        PL_CSD_TeacherTips_ProblemSolvingProcess: Sfaturi pentru Profesor - Procesul
-          de Soluționare a Problemei
-        PL_CSD_TeacherTips_PairProgramming: Sfaturi pentru Profesor - Programare în
-          Pereche
-        PL_CSD_TeacherTips_Debugging: Sfaturi pentru Profesor - Depanarea unui program
-        PL_CSD_TeacherTips_LeadLearner: Sfaturi pentru Profesor - Cursantul Principal
-        poembot-playtest-intro: Introducere în PoemBot Playtest
-        poembot-playtest-sprites: Spiritele PoemBot Playtest
-        poembot-playtest-events: Evenimente PoemBot Playtest
-        hello_world_intro: Hello World - Bun Venit în Laboratorul Spiritelor
-        hello_world_events: Hello World - Programare cu Evenimente
-        hello_world_congrats: Hello World - Fă Ce Dorești
-        csp_global_vs_local: Depanarea variabilelor globale vs. locale
-        rough_poemart_intro: Arta poeziei v1 - Introducere
-        rough_poemart_events: Arta poeziei v1 - Evenimente
-        rough_poemart_imagery: Arta poeziei v1 - Imagini folosite
-        rough_poemart_congrats: Arta poeziei v1 - Felicitări
-        poetry_module_variables: Variabile - Programare cu ajutorul poeziei
-        poetry_module_textandvariables: Text și variabile - Programare cu ajutorul
-          poeziei
-        poetry_module_planningapp: Planificarea aplicației dvs. de generare de poezii
-          - Programare cu ajutorul poeziei
-        poetry_module_multichoiceprompts: Întrebări cu răspunsuri multiple - Programare
-          cu ajutorul poeziei
-        poetry_module_conditionals: Relații de condiționalitate - Programare cu ajutorul
-          poeziei
-        poemart_intro: Introducere În Arta Poemului
-        poemart_events: Poem Arta Evenimente
-        poemart_imagery: Poem Art Imagery
-        poemart_celebration: Poem Arta Celebrare
-        csd_u6_variables_part2: Variabile - Modelul contorului
-        csd_ml_ethics_ai: 'Etică și AI '
-        outbreak_intro: 'Simularea focarului: Introducere'
-        outbreak_events: 'Outbreak Simulator: Evenimente'
-        outbreak_scientist: 'Simulator de focar: gândirea ca un om de știință'
-        outbreak_outro: 'Outbreak Simulator: Joc gratuit'
-        PL_overview_CSP: Ce este principiile de informatică?
-        PL_CSP_EIPMOverview: Ghid pentru lecțiile EIPM
-        CSA-PL-debugging-temp: Introducere în Debugging în Java Lab - temp
-        csd_app_lab_design_mode: Modul de proiectare a laboratorului de aplicații
-          CSD
-        csd_app_lab_events: CSD App Lab Evenimente
-        PL_CSD_Unit4_AppTesting: Testarea prototipului de hârtie
-        csd_u6_circuit_playground: Calcul fizic
-        CSA-PL-for-loops: Pentru bucle în Java
-        CSA-PL-variables: Crearea variabilelor în Java
-        PL_CS_Journeys_Overview: Călătorii CS
-        CSA-PL-intro-to-java-lab: Bazele Java Lab
-        CSA-PL-first-program: Scrierea unui program în Java
-        CSD_u6_variables_part1: 'CSD: Variabile'
-        csd_u6_if_statements: 'CSD: În cazul în care declaraţiile'
-        csc-poem-art-intro: Intro Video
-        csc-poem-art-outro: Outro Video
-        csd_u6_call_define_functions: 'CSD: Apelarea şi definirea funcţiilor'
-        csp_applab_parameters: Funcții cu Parametrii
-        starquilts_intro_artist: Introducere în Steaua Quilts
-        CSA-PL-intro-to-arrays: Matrice Uni-Dimensionale (1D)
-        CSA-PL-1d-arrays-new-values: Introducerea valorilor în matricele 1D
-        CSA-PL-conditionals: Declarații condiționale în Java
-        CSA-PL-two-way-selection: Selecție bidirecțională
-        CSA-PL-Printing-in-Java: Imprimarea în Java
-        CSA-PL-multi-selection-statements: Declarații de selecție multiplă
-        PL_CSP_TeacherTips_Advice: 'Sfaturi pentru profesori: Sfaturi pentru noii
-          profesori CS'
-        PL_CSP_TeacherTips_IntroToCSP: 'Sfaturi pentru profesori: Introducere în principiile
-          CS'
-        PL_CSP_TeacherTips_Debugging: 'Sfaturi pentru profesori: Ajutor cu depanarea'
-        PL_CSP_TeacherTips_LeadLearner: 'Sfaturi pentru profesori: Cum să fii un elev
-          principal'
-        PL_CSP_TeacherTips_APExam: 'Sfaturi pentru profesori: Pregătirea pentru examenul
-          AP'
-        PL_CSP_TeacherTips_EIPM: 'Sfaturi pentru profesori: Procesul EIPM'
-        PL_CSD_CircuitPlayground_Overview: Prezentare generală a terenului de joacă
-        CSA-PL-debugging-22: Depanare în Java Lab
-        CSD_Unit6_InteractiveArtExemplar: Interactive Art Exemplu
-        CS_Changing_Everything: Știința calculatoarelor schimbă totul
-        csa-alias-video: Egal și Aliasuri
-        csa-equals-video: Metoda egals ()
-        csa-user-stories: Povestiri ale utilizatorilor în ingineria software
-        csa-pl-vpl-m1-unit-3: Inginerie Software în Unitatea 3
-        csa-pl-intro-to-equality: Introducere în egalitate
-        csa-pl-intro-to-equals-method: Introducere în metoda .equals ()
-        csa-pl-equals-book: Scrierea metodei equals () pentru clasa Book
-        csa-multi-select-pl: Declarații de selecție multiplă în Java
-        csc_timecapsule_intro: Introducerea capsulei timpului
-        PL_Equity_in_CS_Education: Echitate în educaţia CS
-        csc_fm_pilot: Mașini funcționale (pilot)
-        csc_fm_pilot_v2: 'Funcție Mașini Intro '
-        csc-sprite-lab-pixel-editor: Desenați propriul Sprite
-        csa-pl-intro-to-strings: Introducere în șiruri de caractere în Java
-        csa-pl-compareTo: Metoda CompareTo ()
-        csc-event-short-intro: Evenimente Scurt Intro
-        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Prezentare generală a unității
-          de joacă pentru circuite
-        csa-day-in-pm-pl: Ce face un manager de proiect?
-        csa-pl-intro-to-pm: Introducere în Managementul Proiectelor
-        PL_CSD_CircuitPlayground_Setup: Configurarea locului de joacă pentru circuit
-        csa_object_oriented_programming: 'CSA: Orientate pe obiecte de programare'
-        csa_creating_objects: 'CSA: Crearea de obiecte'
-        csa_calling_methods: 'CSA: Metode de apelare'
-        csa_while_loops: 'CSA: În timp ce buclele'
-        csa_inheritance: 'CSA: Moştenire'
-        csa_writing_a_method: 'CSA: Scrierea o metodă'
-        csa_software_engineering_code_reviews: 'CSA: Inginerie software - Codul clienţilor'
-        csa_conditional_statements: 'CSA: Declaraţii condiţionale'
-        csa_printing_in_java: 'CSA: Imprimarea în Java'
-        csa_two_way_selection_and_not: 'CSA: Două sensuri de selecţie şi nu'
-        csa-pl-intro-to-oop: Introducere în programarea orientată pe obiecte
-        csa-pl-welcome-to-Neighborhood: Bine ați venit la Cartier
-        csa-pl-calling-methods: Metode de apelare în Java
-        csa-pl-creating-objects: Crearea obiectelor
-        csa_accessor_methods: 'CSA: Metode de accesor'
-        csa_constructors: 'CSA: Constructori'
-        csa_creating_a_scanner_object: 'CSA: Crearea unui obiect Scanner'
-        csa_creating_variables: 'CSA: Crearea variabilelor'
-        csa_instance_variables_and_attributes: 'CSA: Variabile de instanţă şi atribute'
-        csa_mutator_methods: 'CSA: Metode de mutator'
-        csa_overloaded_constructors: 'CSA: Supraîncărcat constructori'
-        csa_the_tostring_method: 'CSA: ToString () Metoda'
-        csa_scanner_class_methods: 'CSA: Metode de clasa Scanner'
-        csa_for_loops: 'CSA: Pentru bucle'
-        csa_enhanced_for_loops: 'CSA: Îmbunătăţită pentru bucle'
-        csa_modifying_values_in_a_1d_array: 'CSA: Modificarea valorilor într-o matrice
-          1D'
-        csa_nested_loops: 'CSA: Bucle imbricate'
-        csa_one_dimensional_arrays: 'CSA: Une-dimensionale (1D) Arrays'
-        csa_polymorphism: 'CSA: Polimorfismul'
-        csa_casting: 'CSA: Turnare'
-        csa_equals_and_aliases: 'CSA: Este egală cu şi pseudonime'
-        csa_multi-selection_statements: 'CSA: Declaraţii de selecţie multiplă'
-        csa_random_numbers: 'CSA: Numere aleatoare'
-        csa_static_methods: 'CSA: Metode statice'
-        csa_static_variables: 'CSA: Variabile statice'
-        csa_the_equals_method: 'CSA: Este egal () Metoda'
-        csa_welcome_to_the_theater: 'CSA: Bine aţi venit la teatru'
-        enter_your_own_poem: Introduceți propria poezie
-        csa-example-solution-1: 'Codificarea live a unui exemplu de soluție '
-        csd_sprite_properties: Proprietăți spiriduș
-        csa-pl-documentation: Documentație în Java Lab
-        csc-starquilts-intro: 'CSC: Stele pilote'
-        csa-pl-vocab-pm: Vocabularul managementului de proiect
-        csc-ecosystems-intro: Ecosisteme Intro
-        PL_CSD_MicroBit_Intro: Introducere în micro:bit
-        csc_animal_adaptations_intro: Adaptări Animale Intro
-        csa_two_dimensional_arrays: 'CSA: Două dimensionale (2D) Arrays'
-        csa_working_with_2d_array_elements: 'CSA: Lucrul cu elemente de matrice 2D'
-        csa_row_major_traversal: 'CSA: Rand-majore traversare'
-        csa_column_major_traversal: 'CSA: Coloana-majore traversare'
-        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Îmbunătăţită pentru bucle şi matrice
-          2D'
-        csa_images_and_pixels: 'CSA: Imagini şi pixeli'
-        csa_wrapper_classes_part_1: 'CSA: Clase de ambalaj partea 1'
-        csa_wrapper_classes_part_2: 'CSA: Clase de ambalaj partea 2'
-        csa_the_arraylist_class: 'CSA: Clasa ArrayList'
-        csa_working_with_arraylist_data: 'CSA: Lucrul cu datele arrayList'
-        csa_remving_data_from_an_arraylist: 'CSA: Eliminarea datelor dintr-o listă
-          de arrayList'
-        csa_private_methods: 'CSA: Metode de privat'
-        csa_recursion: 'CSA: Recursivitate'
-        csa_searching_algorithms: 'CSA: Algoritmi de căutare'
-        csa_sorting_algorithms: 'CSA: Algoritmi de sortare'
-        star_quilts_intro_to_artist: 'Stele Quilts: Introducere în artist'
-        upload_sprites_backgrounds: Încărcarea Sprites personalizate și fundaluri
-    callout:
-      text:
-        drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
-        run: Apasă "Run" pentru a încerca programul tău
-        watch_again: Click aici pentru a viziona video din nou
-        gray_block_explanation: Blocurile cu gri nu pot fi șterse. Puteți, totuși,
-          să rezolvați puzzle-ul?
-        show_code_explanation: Click aici pentru a vedea codul pentru programul pe
-          care îl faci
-        instructions_repeat_explanation: Instrucţiunile pentru fiecare puzzle sunt
-          repetate aici
-        category_explanation: Ai toate aceleaşi blocuri, dar acum au fost aranjate
-          pe categorii
-        set_sprite_image: Leagă blocul "setează actorul la imagine" la blocul "când
-          povestea începe" pentru a seta un actor pentru această poveste
-        studio_say_text: Tastează ceea ce dorești să spună actorul în aceste citate
-        jigsaw_click: Faceţi clic pe acest bloc!
-        move_elsa_forward: Trageţi un bloc de "Mutare înainte" şi fixaţi-l sub blocul
-          "Atunci când rulaţi" pentru a o face pe Elsa să avanseze
-        turn_elsa: Utilizaţi blocul "Întoarce" pentru a o face pe Elsa să se întoarcă.
-          Numărul din listă determină de câte ori se întoarce Elsa
-        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
-          număr
-        replace_questions_degree: Utilizaţi meniul derulant pentru a înlocui "???"
-          cu măsura corectă în grade pentru întoarcere
-        repeat_blocks: Utilizaţi blocul "Repetă" şi aduceți-l lângă blocurile din
-          spațiul de lucru
-        repeat_blocks_1: "(1) Folosește acest bloc și pune-l în jurul blocurilor gri
-          în spațiul de lucru"
-        repeat_blocks_2: "(2) Mută blocul ”Repetă” aici, și plasează blocurile gri
-          în interior"
-        snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
-          fulgi de zăpadă!
-        degrees_per_side: Împărțiți 360 la numărul de laturi pentru a obține mărimea
-          în grade a fiecărui unghi.
-        set_sides: Utilizaţi acest bloc ca să setați "laturi" la numărul necesar pentru
-          a finaliza puzzle-ul.
-        set_length: Utilizaţi acest bloc pentru a seta "lungime" la valoarea corectă.
-        which_equation: Ce ecuația face fiecare latură mai scurtă pentru forme cu
-          mai multe laturi?
-        get_nectar: Utilizaţi noul bloc "obţine nectar".
-        actions_category: Caseta de instrumente are acum un nou aspect! Blocurile
-          "Acţiuni" sunt aici acum.
-        draw_square_hint: 'Sugestie: Utilizaţi exact repetiția pe care tocmai aţi
-          făcut-o în ultimul puzzle.'
-        edit_function: Click aici pentru a edita funcţia dumneavoastră.
-        create_function: Click aici pentru a deschide bara de instrumente "Funcţii",
-          apoi faceţi clic pe butonul "Creează o funcţie".
-        house_hint: Este ok, chiar dacă imaginea nu arată ca o casă încă. O vom repara
-          în puzzle-ul următor.
-        edit_draw_square: Utilizaţi acest buton pentru a edita funcţia şi pentru a
-          adăuga repetiția.
-        edit_get_nectar: Utilizaţi acest buton pentru a edita funcţia şi pentru a
-          schimba direcţia spre care se va întoarce albina ca să obţină nectarul.
-        logic_category: Deschideți bara de instrumente "Logică" pentru a găsi blocul
-          "dacă/altfel".
-        length_parameter: Puteţi actualiza această funcţie, astfel încât ea să folosească
-          parametrul "lungime"?
-        frozen_diamond_repeat: Utilizaţi blocul se repetă pentru a crea această formă.
-        frozen_circle_function_in_circle_turn: Nu uita să rotești după crearea fiecărui
-          cerc.
-        frozen_circle_function_with_parameter_circle: Utilizaţi blocul "crează un
-          cerc" şi modificaţi dimensiunea.
-        frozen_snowflake_branch: Utilizaţi blocul "creaţi o ramură de fulg de Nea"
-        frozen_create_square: Ataşează aici mai multe blocuri pentru a crea un pătrat
-        playlab_drag_say: Trageți blocul "spun" aici şi tastaţi "Bună ziua"
-        playlab_use_twice: Folosește acest bloc de două ori și ține minte să schimbi
-          numărul actorului
-        playlab_move_girl: Folosește blocul ”mută la dreapta” pentru a muta Fata Tenis
-        playlab_play_sound: Adăugaţi blocul "sunet joc" aici
-        playlab_arrow_keys: Amintiți-vă să utilizați acestea pentru a muta vrăjitoarea
-          după ce faceți click pe Rulează
-        playlab_add_move: Adaugă  blocuri "mută" în interiorul acestui bloc se repetă
-        playlab_add_score: Adăugaţi block-uri pentru scor aici
-        playlab_add_blocks: Adaugă blocurile tale aici
-        set_variable: Trage numărul tău aici pentru a da o valoare variabilei
-        place_variable: Trage variabila ta în interiorul acestui block
-        bee_for_loop: Trage cel mai mare număr de nectar pe care îl doriți ca albina
-          să îl colecteze aici
-        place_counter_variable: Trageți variabila contor înăuntrul acestui block
-        function_editor_draw_square: ' Acesta este definiția funcției dumneavoastră.
-          Aceste blocuri rulează în tot timpul în care dumneavoastră utilizați blocul
-          "desenează un pătrat". '
-        change_here: Face modificarea aici
-        write_draw_square_function: Trageți blocuri din caseta de instrumente în aici
-          pentru a desena un pătrat
-        write_draw_triangle_function: Mutați blocurile din caseta de instrumente aici,
-          pentru a desena un triughi
-        edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
-        add_and_drag_parameter: Scrie numele parametrului tău aici, fă click pe "adaugă",
-          iar apoi trage-l în definiția funcției tale
-        fill_in_actor: Completează ??? cu numere care corespund fiecărui actor (1,
-          2 și 3)
-        repeat: Pune blocuri în interiorul buclei pentru a repeta comenzi
-        if_bee_nectar: Folosește blocul "dacă" pentru a decide dacă albina ar trebui
-          să ia nectarul
-        if_else_bee: Utilizaţi blocul "dacă/altfel", astfel încât albina ia nectar
-          de la o floare şi face miere dacă aceasta nu este o floare
-        repeat_full_circle: Introdu numărul necesar de mișcări ale zombie-ului astfel
-          încât acesta să facă un cerc complet
-        place_length_variable: Muta variabila length aici pentru a înlocui semnul
-          de interogație
-        arrows_move_actor: Utilizează săgețile pentru a muta actorul
-        right_arrow_fireball: Utilizează săgeata dreapta pentru a trage mingiile de
-          foc
-        name_function: Scrie numele funcției aici
-        Infinity_move_right_runbutton: Adaugă bloc de mutare aici
-        Infinity_move_directions_callout: Care bloc îl va face pe Baymax să se mute
-          în sus când săgeata în sus este apăsată?
-        Infinity_move_directions_callout_arrow: Utilizează aceste săgeți pentru a
-          pune în mișcare
-        Infinity_move_collide_callout: Emite un sunet când se produce acest eveniment.
-        Infinity_repeat_callout: Plasează blocuri de mutare în interior aici
-        craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
-        craft_drag_block_callout: Trageţi un bloc "muta inainte();" şi fixaţi-l sub
-          alt bloc
-        craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
-        craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
-        craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta.
-          Il poti termina?
-        craft_what_is_iron: Extrage acest fier!
-        craft_callout_moveforward: Acest cod va cauta lava, poti adauga o comanda
-          pentru a inainta?
+        why_unplugged_lessons: Pregătire pentru activități fără conectare
+        writing_first_program: Scrierea primului program de calculator

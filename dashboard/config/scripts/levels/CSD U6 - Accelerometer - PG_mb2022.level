@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:51:42.000Z",
+  "level_num": "custom",
+  "user_id": 568,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -98,7 +103,6 @@
     "display_name": "Four Corners",
     "bubble_choice_description": "Tilt the micro:bit to select one of four possible animals",
     "thumbnail_url": "https://images.code.org/83e8dcaea5a284a09419f58e65a25c52-image-1648867468404.png",
-    "preload_asset_list": null,
     "encrypted_examples": "LrCnD3wPLXZzYZaZVxYR4HCvqvVodQ4InkQBvhfS/6zUDXJH9ysuRDSyRcNT\nWtOVjr+5hyyH0y5wrMfiS+T2hw==\n",
     "reference_links": [
       "/courses/csd-2022/guides/the-accelerometer",
@@ -113,16 +117,13 @@
       "/courses/csd-2022/guides/if-statements-2",
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/counter-patterns-with-event"
-    ]
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:51:42.000Z",
-  "level_num": "custom",
-  "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:42.303+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PG_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PG_2222\"},{\"changed_at\":\"2023-02-10 20:47:11 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"bubble_choice_description\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:44:11 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:42.303+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PG_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PG_2222\"},{\"changed_at\":\"2023-02-10 20:47:11 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"bubble_choice_description\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:44:11 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:13:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

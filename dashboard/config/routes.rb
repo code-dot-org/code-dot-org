@@ -41,6 +41,7 @@ Dashboard::Application.routes.draw do
     get "/musiclab", to: redirect("/projectbeats", status: 302)
     get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
+    get "/musiclab/gallery", to: "musiclab#gallery"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
     resources :activity_hints, only: [:update]
@@ -334,6 +335,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :rubrics, only: [:edit, :new]
+
     resources :course_offerings, only: [:edit, :update], param: 'key' do
       collection do
         get 'quick_assign_course_offerings'
@@ -596,6 +599,9 @@ Dashboard::Application.routes.draw do
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
     post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
+
+    # OAuth endpoints
+    get '/oauth/jwks', to: 'oauth_jwks#jwks'
 
     get '/notes/:key', to: 'notes#index'
 
@@ -1034,6 +1040,8 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
+    resources :learning_goal_evaluations, only: [:create, :update]
+
     get '/backpacks/channel', to: 'backpacks#get_channel'
 
     resources :project_commits, only: [:create]
@@ -1058,6 +1066,8 @@ Dashboard::Application.routes.draw do
     post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'
 
     get '/get_token', to: 'authenticity_token#get_token'
+
+    post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:

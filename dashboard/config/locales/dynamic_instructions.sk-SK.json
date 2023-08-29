@@ -3,8 +3,8 @@
     "data": {
       "dynamic_instructions": {
         "ml-intro ai lab-shapes v1": {
-          "selectedFeatureCategorical": "Keď vyberieš stĺpec, na pravom paneli sa zobrazia ďalšie informácie. To ti môže pomôcť rozhodnúť sa, či je to užitočná vlastnosť na predpovedanie označenia. Viac informácií sa dozvieš v časti Pomoc a tipy v týchto pokynoch.\n\n**Urob toto:** Rozhodni sa, či chceš tento stĺpec použiť ako vlastnosť. Ak áno, stlač tlačidlo „Add Feature“ (Pridať vlastnosť). Ak nie, vyber si nový stĺpec, ktorý chceš preskúmať. Tento postup opakuj, kým si nevyberieš niekoľko stĺpcov, ktoré sa použijú ako vlastnosti.",
-          "results": "Na tejto obrazovke môžeš vidieť, aké presné sú predpovede AI Bota pri porovnaní s testovacími údajmi, na ktoré už poznáme odpovede. \n\n**Urob toto:** Vytrénuj svoj model, kým nedosiahne aspoň 100 % presnosť."
+          "results": "Na tejto obrazovke môžeš vidieť, aké presné sú predpovede AI Bota pri porovnaní s testovacími údajmi, na ktoré už poznáme odpovede. \n\n**Urob toto:** Vytrénuj svoj model, kým nedosiahne aspoň 100 % presnosť.",
+          "selectedFeatureCategorical": "Keď vyberieš stĺpec, na pravom paneli sa zobrazia ďalšie informácie. To ti môže pomôcť rozhodnúť sa, či je to užitočná vlastnosť na predpovedanie označenia. Viac informácií sa dozvieš v časti Pomoc a tipy v týchto pokynoch.\n\n**Urob toto:** Rozhodni sa, či chceš tento stĺpec použiť ako vlastnosť. Ak áno, stlač tlačidlo „Add Feature“ (Pridať vlastnosť). Ak nie, vyber si nový stĺpec, ktorý chceš preskúmať. Tento postup opakuj, kým si nevyberieš niekoľko stĺpcov, ktoré sa použijú ako vlastnosti."
         }
       }
     }

@@ -3,118 +3,118 @@
     "data": {
       "dynamic_instructions": {
         "ml-bad data-club investigations": {
-          "uploadedDataset": " ",
+          "modelSummary": " ",
           "saveModel": " ",
-          "modelSummary": " "
+          "uploadedDataset": " "
         },
         "ml-bad data-club investigations_2022": {
-          "uploadedDataset": " ",
+          "modelSummary": " ",
           "saveModel": " ",
-          "modelSummary": " "
+          "uploadedDataset": " "
         },
         "ml-bad data-loneliness all": {
-          "uploadedDataset": " ",
+          "modelSummary": " ",
           "saveModel": " ",
-          "modelSummary": " "
+          "uploadedDataset": " "
         },
         "ml-bad data-loneliness all_2022": {
-          "uploadedDataset": " ",
+          "modelSummary": " ",
           "saveModel": " ",
-          "modelSummary": " "
+          "uploadedDataset": " "
         },
         "ml-data decisions-zoo1-2021": {
           "selectDataset": " ",
-          "uploadedDataset": " ",
           "selectedDataset": " ",
-          "selectedFeatureNumerical": " "
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
         },
         "ml-data decisions-zoo1_2022": {
           "selectDataset": " ",
-          "uploadedDataset": " ",
           "selectedDataset": " ",
-          "selectedFeatureNumerical": " "
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
         },
         "ml-data decisions-zoo2-2021": {
           "selectDataset": " ",
-          "uploadedDataset": " ",
           "selectedDataset": " ",
-          "selectedFeatureNumerical": " "
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
         },
         "ml-data decisions-zoo2_2022": {
           "selectDataset": " ",
-          "uploadedDataset": " ",
           "selectedDataset": " ",
-          "selectedFeatureNumerical": " "
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
         },
         "ml-data decisions-zoo3-2021": {
           "selectDataset": " ",
-          "uploadedDataset": " ",
           "selectedDataset": " ",
-          "selectedFeatureNumerical": " "
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
         },
         "ml-data decisions-zoo3_2022": {
           "selectDataset": " ",
-          "uploadedDataset": " ",
           "selectedDataset": " ",
-          "selectedFeatureNumerical": " "
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
         },
         "ml-good data-upload isaac csv": {
-          "saveModel": " ",
-          "modelSummary": " "
+          "modelSummary": " ",
+          "saveModel": " "
         },
         "ml-good data-upload isaac csv_2022": {
-          "saveModel": " ",
-          "modelSummary": " "
+          "modelSummary": " ",
+          "saveModel": " "
         },
         "ml-intro ai lab-shapes v1": {
-          "selectDataset": " ",
-          "uploadedDataset": " ",
-          "selectedDataset": " ",
           "dataDisplayLabel": " ",
-          "selectedFeatureNumerical": " ",
+          "modelSummary": " ",
           "saveModel": " ",
-          "modelSummary": " "
+          "selectDataset": " ",
+          "selectedDataset": " ",
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
         },
         "ml-intro ai lab-shapes v1_2022": {
-          "selectDataset": " ",
-          "uploadedDataset": " ",
-          "selectedDataset": " ",
           "dataDisplayLabel": " ",
-          "selectedFeatureNumerical": " ",
+          "modelSummary": " ",
           "saveModel": " ",
-          "modelSummary": " "
+          "selectDataset": " ",
+          "selectedDataset": " ",
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
         },
         "ml-intro categorical-food choices-2021": {
-          "uploadedDataset": " ",
           "dataDisplayLabel": " ",
-          "selectedFeatureNumerical": " ",
+          "modelSummary": " ",
           "saveModel": " ",
-          "modelSummary": " "
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
         },
         "ml-intro categorical-food choices_2022": {
-          "uploadedDataset": " ",
           "dataDisplayLabel": " ",
-          "selectedFeatureNumerical": " ",
+          "modelSummary": " ",
           "saveModel": " ",
-          "modelSummary": " "
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
         },
         "ml-intro categorical-pizza-2021": {
-          "selectDataset": " ",
-          "uploadedDataset": " ",
-          "selectedDataset": " ",
           "dataDisplayLabel": " ",
-          "selectedFeatureNumerical": " ",
+          "modelSummary": " ",
           "saveModel": " ",
-          "modelSummary": " "
+          "selectDataset": " ",
+          "selectedDataset": " ",
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
         },
         "ml-intro categorical-pizza_2022": {
-          "selectDataset": " ",
-          "uploadedDataset": " ",
-          "selectedDataset": " ",
           "dataDisplayLabel": " ",
-          "selectedFeatureNumerical": " ",
+          "modelSummary": " ",
           "saveModel": " ",
-          "modelSummary": " "
+          "selectDataset": " ",
+          "selectedDataset": " ",
+          "selectedFeatureNumerical": " ",
+          "uploadedDataset": " "
         },
         "ml-mini project-ai lab 2": {
           "uploadedDataset": " "
@@ -123,16 +123,16 @@
           "uploadedDataset": " "
         },
         "ml-numerical ai lab-safari 1-2021": {
+          "dataDisplayLabel": " ",
           "selectDataset": " ",
-          "uploadedDataset": " ",
           "selectedDataset": " ",
-          "dataDisplayLabel": " "
+          "uploadedDataset": " "
         },
         "ml-numerical ai lab-safari 1_2022": {
+          "dataDisplayLabel": " ",
           "selectDataset": " ",
-          "uploadedDataset": " ",
           "selectedDataset": " ",
-          "dataDisplayLabel": " "
+          "uploadedDataset": " "
         }
       }
     }

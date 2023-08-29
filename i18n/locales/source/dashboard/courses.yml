@@ -440,19 +440,82 @@ en:
           description_student: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating AI and Machine Learning unit** with your students.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Ai and Machine Learning unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to AI an Machine Learning. "
           description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating AI and Machine Learning unit** with your students.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Ai and Machine Learning unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to AI an Machine Learning. "
           version_title: ''
+        vpl-csp-2023:
+          title: CS Principles Virtual PL Workshop Course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        vpl-csa-2023:
+          title: CSA Virtual Professional Learning
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        vpl-csd-2023:
+          title: CSD Virtual Professional Learning
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
     resources:
-      curriculum/csd/2020:
-        name: Curriculum
-        url: https://curriculum.code.org/csd-20/
-      teacher_forum/csd/2020:
-        name: Teacher Forum
-        url: https://forum.code.org/c/csd
       curriculum/csd/2017:
         name: Curriculum
         url: https://curriculum.code.org/csd-1718/
       teacher_forum_6/csd/2017:
         name: Teacher Forum
         url: https://forum.code.org/c/csd
+      curriculum/csd/2018:
+        name: Curriculum
+        url: https://curriculum.code.org/csd-18/
+      teacher_forum_6/csd/2018:
+        name: Teacher Forum
+        url: https://forum.code.org/c/csd
+      curriculum/csd/2019:
+        name: Curriculum
+        url: https://curriculum.code.org/csd-19/
+      teacher_forum/csd/2019:
+        name: Teacher Forum
+        url: https://forum.code.org/c/csd
+      curriculum/csd/2020:
+        name: Curriculum
+        url: https://curriculum.code.org/csd-20/
+      teacher_forum/csd/2020:
+        name: Teacher Forum
+        url: https://forum.code.org/c/csd
+      all_code/csd/2021:
+        name: All Code
+        url: "/courses/csd-2021/code"
+      all_resources_1/csd/2021:
+        name: All Resources
+        url: "/courses/csd-2021/resources"
+      all_standards_1/csd/2021:
+        name: All Standards
+        url: "/courses/csd-2021/standards"
+      all_vocabulary_1/csd/2021:
+        name: All Vocabulary
+        url: "/courses/csd-2021/vocab"
+      csd_curriculum_guide/csd/2021:
+        name: CSD Curriculum Guide
+        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
+      csd_guide_to_assessment/csd/2021:
+        name: CSD Guide to Assessment
+        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
+      csd_guide_to_debugging/csd/2021:
+        name: CSD Guide to Debugging
+        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
+      csd_guide_to_differentiation/csd/2021:
+        name: CSD Guide to Differentiation
+        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
+      csd_guide_to_using_resources/csd/2021:
+        name: CSD Guide to Using Resources
+        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
+      csd_implementation_guide/csd/2021:
+        name: CSD Implementation Guide
+        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
+      getting_started_with_csd/csd/2021:
+        name: Getting Started with CSD
+        url: https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview
       all_code_5/csd/2022:
         name: All Code
         url: "/courses/csd-2022/code"
@@ -492,12 +555,6 @@ en:
       csd_programming_levels_guide/csd/2022:
         name: CSD Programming Levels Guide
         url: https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview
-      curriculum/csd/2019:
-        name: Curriculum
-        url: https://curriculum.code.org/csd-19/
-      teacher_forum/csd/2019:
-        name: Teacher Forum
-        url: https://forum.code.org/c/csd
       all_code_2/csd/2023:
         name: All Code
         url: "/courses/csd-2023/code"
@@ -513,6 +570,9 @@ en:
       csd_changelog_23-_24/csd/2023:
         name: CSD Changelog '23-'24
         url: https://docs.google.com/document/d/1p5wN0AlEUoKZ0WpcBryjkxLyQKsAr4k6zWqI91faksI/view
+      csd_course_standards_csta_alignment/csd/2023:
+        name: CSD Course Standards CSTA Alignment
+        url: https://docs.google.com/spreadsheets/d/1mSkUykxhOhSviA7wmo5Ejh3vYgLJDtG46rCm_92607g/edit?usp=sharing
       csd_guide_to_assessment/csd/2023:
         name: CSD Guide to Assessment
         url: https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view
@@ -546,42 +606,3 @@ en:
       csd_syllabus/csd/2023:
         name: CSD Syllabus
         url: https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view
-      all_code/csd/2021:
-        name: All Code
-        url: "/courses/csd-2021/code"
-      all_resources_1/csd/2021:
-        name: All Resources
-        url: "/courses/csd-2021/resources"
-      all_standards_1/csd/2021:
-        name: All Standards
-        url: "/courses/csd-2021/standards"
-      all_vocabulary_1/csd/2021:
-        name: All Vocabulary
-        url: "/courses/csd-2021/vocab"
-      csd_curriculum_guide/csd/2021:
-        name: CSD Curriculum Guide
-        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
-      csd_guide_to_assessment/csd/2021:
-        name: CSD Guide to Assessment
-        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
-      csd_guide_to_debugging/csd/2021:
-        name: CSD Guide to Debugging
-        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
-      csd_guide_to_differentiation/csd/2021:
-        name: CSD Guide to Differentiation
-        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
-      csd_guide_to_using_resources/csd/2021:
-        name: CSD Guide to Using Resources
-        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
-      csd_implementation_guide/csd/2021:
-        name: CSD Implementation Guide
-        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
-      getting_started_with_csd/csd/2021:
-        name: Getting Started with CSD
-        url: https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview
-      curriculum/csd/2018:
-        name: Curriculum
-        url: https://curriculum.code.org/csd-18/
-      teacher_forum_6/csd/2018:
-        name: Teacher Forum
-        url: https://forum.code.org/c/csd

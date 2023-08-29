@@ -532,6 +532,7 @@ ga:
         csp_applab_parameters: Feidhmeanna a ghlacann le Paraiméadair
         CS_Changing_Everything: Tá an Ríomheolaíocht ag athrú an domhain
         csd_sprite_properties: Airíonna na Spride
+        what-is-creativity: Cad is Cruthaitheacht ann?
     callout:
       text:
         drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile é

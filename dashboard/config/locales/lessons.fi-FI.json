@@ -2,149 +2,80 @@
   "fi-FI": {
     "data": {
       "lessons": {
-        "dance-extras/Dance Party - Go Further": {
-          "name": "Jatka tanssimista (2018)"
+        "csd2-2017/Lists": {
+          "name": "Listat"
         },
-        "minecraft/Minecraft Hour of Code Designer": {
-          "name": "Koodaustunti Minecraft Suunnittelija"
-        },
-        "flappy/Flappy Code": {
-          "name": "Flappy Code"
-        },
-        "hourofcode/Maze": {
-          "name": "Sokkelo"
-        },
-        "frozen/Artist": {
-          "name": "Koodaa Annan ja Elsan kanssa"
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "Ice Age Pelilabra"
-        },
-        "artist/Artist": {
-          "name": "Taiteilija"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "Gumball Pelilabra"
-        },
-        "aquatic/Aquatic": {
-          "name": "Minecraft: Merellinen matka"
-        },
-        "starwars/Hour of Code 2015": {
-          "name": "Tähtien sota: Rakenna galaksi koodaten (JavaScript)"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Minecraft Koodaustunti"
-        },
-        "playlab/Play Lab": {
-          "name": "Pelilabra"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "Disneyn Infinity-Pelilabra"
-        },
-        "dance-extras-2019/Dance Party - Go Further": {
-          "name": "Jatka tanssimista"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Kooditunti 2013"
-        },
-        "dance-2019/Dance Party": {
-          "name": "Tanssibileet"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Silmukat"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Tapahtumat"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Ehtolausekkeet"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Funktiot"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "Muuttujat"
         },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "Silmukat"
-        },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "Tietojenkäsittelyn Perusteet"
-        },
-        "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "Tietojenkäsittelyn Perusteet"
-        },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "Ruutupaperiohjelmointi"
-        },
-        "coursed-2022/Relay Programming": {
-          "name": "Releohjelmointi"
-        },
-        "coursed-2022/Dance Party": {
-          "name": "Tanssibileet"
-        },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "Ehtolauseet pelikorteilla"
-        },
-        "coursef-2022/The Internet": {
-          "name": "Internetti"
-        },
-        "coursee-2022/Songwriting": {
-          "name": "Säveltäminen"
-        },
-        "coursee-2022/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
-        },
-        "courseb-2022/Move It, Move It": {
-          "name": "Liikuta, liikuta"
-        },
-        "courseb-2022/Getting Loopy": {
-          "name": "Mennään silmukoille"
-        },
-        "express-2022/Dance Party": {
-          "name": "Tanssibileet"
-        },
-        "express-2022/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
-        },
-        "coursea-2022/Happy Maps": {
-          "name": "Iloiset kartat"
-        },
-        "coursec-2022/The Big Event": {
-          "name": "Suuri tapahtuma"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Binäärikorut"
-        },
-        "csd3-2022/Variables": {
-          "name": "Muuttujat"
-        },
-        "csd3-2022/Text": {
-          "name": "teksti"
-        },
-        "csd3-2022/Conditionals": {
+        "csd3-2017/Conditionals": {
           "name": "Ehtolausekkeet"
         },
-        "csd3-2022/Velocity": {
+        "csd3-2017/Velocity": {
           "name": "Nopeus"
         },
-        "csd3-2022/Functions": {
+        "csd3-2017/Functions": {
           "name": "Funktiot"
         },
-        "csd6-2022/Functions": {
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Parametrilliset funktiot"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Tosielämän algoritmit: kylvä siemen"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Tosielämän algoritmit: kylvä siemen"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Tosielämän algoritmit: paperilentokoneet"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Sisäkkäiset silmukat"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Rakennetaan perustus"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Sisäkkäiset silmukat"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Rakennetaan perustus"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algoritmit: tantagrammit"
+        },
+        "express-2017/Introduction": {
+          "name": "Johdanto"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Rakennetaan perustus"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Sisäkkäiset silmukat"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Tosielämän algoritmit: kylvä siemen"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Kirjurimehiläinen"
+        },
+        "csd2-2018/Lists": {
+          "name": "Listat"
+        },
+        "csd3-2018/Variables": {
+          "name": "Muuttujat"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Ehtolausekkeet"
+        },
+        "csd3-2018/Velocity": {
+          "name": "Nopeus"
+        },
+        "csd3-2018/Functions": {
           "name": "Funktiot"
         },
-        "courseb-2018/Move It, Move It": {
-          "name": "Liikuta, liikuta"
-        },
-        "courseb-2018/Your Digital Footprint": {
-          "name": "Digitaalinen jalanjälkesi"
+        "csd6-2018/Functions with Parameters": {
+          "name": "Parametrilliset funktiot"
         },
         "coursea-2018/Debugging: Unspotted Bugs": {
           "name": "Huomaamattomia vikoja"
@@ -157,6 +88,24 @@
         },
         "coursea-2018/Going Places Safely": {
           "name": "Menossa turvallisesti"
+        },
+        "courseb-2018/Move It, Move It": {
+          "name": "Liikuta, liikuta"
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Digitaalinen jalanjälkesi"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Rakennetaan perustus"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Mennään silmukoille"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Suuri tapahtuma"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Binäärikorut"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Ruutupaperiohjelmointi"
@@ -172,6 +121,24 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "Binäärikuvat"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Robottiystäväni"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Rakennetaan perustus"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Säveltäminen"
+        },
+        "coursee-2018/Internet": {
+          "name": "Internetti"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Joukkoistaminen"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "Robottiystäväni"
@@ -224,36 +191,6 @@
         "express-2018/Crowdsourcing": {
           "name": "Joukkoistaminen"
         },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "Robottiystäväni"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Rakennetaan perustus"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "Ehtolauseet pelikorteilla"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Säveltäminen"
-        },
-        "coursee-2018/Internet": {
-          "name": "Internetti"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Joukkoistaminen"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Rakennetaan perustus"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Mennään silmukoille"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "Suuri tapahtuma"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Binäärikorut"
-        },
         "pre-express-2018/Debugging: Unspotted Bugs": {
           "name": "Huomaamattomia vikoja"
         },
@@ -269,23 +206,23 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Kirjurimehiläinen"
         },
-        "csd3-2018/Variables": {
+        "csd2-2019/Lists": {
+          "name": "Listat"
+        },
+        "csd3-2019/Variables": {
           "name": "Muuttujat"
         },
-        "csd3-2018/Conditionals": {
+        "csd3-2019/Conditionals": {
           "name": "Ehtolausekkeet"
         },
-        "csd3-2018/Velocity": {
+        "csd3-2019/Velocity": {
           "name": "Nopeus"
         },
-        "csd3-2018/Functions": {
+        "csd3-2019/Functions": {
           "name": "Funktiot"
         },
-        "csd6-2018/Functions with Parameters": {
+        "csd6-2019/Functions with Parameters": {
           "name": "Parametrilliset funktiot"
-        },
-        "csd2-2018/Lists": {
-          "name": "Listat"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Menossa turvallisesti"
@@ -301,6 +238,12 @@
         },
         "courseb-2019/Loops: Getting Loopy": {
           "name": "Mennään silmukoille"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Binäärikorut"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "Suuri tapahtuma"
         },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "Ruutupaperiohjelmointi"
@@ -320,6 +263,12 @@
         "coursed-2019/Dance Party": {
           "name": "Tanssibileet"
         },
+        "coursee-2019/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Säveltäminen"
+        },
         "coursef-2019/Envelope Variables": {
           "name": "Kirjekuorimuuttujat"
         },
@@ -332,167 +281,281 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Joukkoistaminen"
         },
-        "coursee-2019/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
-        },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Säveltäminen"
-        },
         "express-2019/Dance Party": {
           "name": "Tanssibileet"
         },
         "express-2019/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
         },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Binäärikorut"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "Suuri tapahtuma"
-        },
         "pre-express-2019/Spelling Bee": {
           "name": "Kirjurimehiläinen"
         },
-        "csd3-2019/Variables": {
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Iloiset kartat"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "Liikuta, liikuta"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Mennään silmukoille"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Binäärikorut"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "Suuri tapahtuma"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Releohjelmointi"
+        },
+        "coursed-2020/Dance Party": {
+          "name": "Tanssibileet"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Binäärikuvat"
+        },
+        "coursee-2020/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Säveltäminen"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Kirjekuorimuuttujat"
+        },
+        "coursef-2020/Internet": {
+          "name": "Internetti"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Silmukkahupia"
+        },
+        "express-2020/Dance Party": {
+          "name": "Tanssibileet"
+        },
+        "express-2020/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
+        },
+        "csd3-2021/Variables": {
           "name": "Muuttujat"
         },
-        "csd3-2019/Conditionals": {
+        "csd3-2021/Text": {
+          "name": "teksti"
+        },
+        "csd3-2021/Conditionals": {
           "name": "Ehtolausekkeet"
         },
-        "csd3-2019/Velocity": {
+        "csd3-2021/Velocity": {
           "name": "Nopeus"
         },
-        "csd3-2019/Functions": {
+        "csd3-2021/Functions": {
           "name": "Funktiot"
         },
-        "csd6-2019/Functions with Parameters": {
+        "csd6-2021/Functions with Parameters": {
           "name": "Parametrilliset funktiot"
         },
-        "csd2-2019/Lists": {
-          "name": "Listat"
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Iloiset kartat"
         },
-        "coursef-2017/Building a Foundation": {
-          "name": "Rakennetaan perustus"
+        "courseb-2021/Move It, Move It": {
+          "name": "Liikuta, liikuta"
         },
-        "coursef-2017/Algorithms: Tangrams": {
-          "name": "Algoritmit: tantagrammit"
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Mennään silmukoille"
         },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Tosielämän algoritmit: kylvä siemen"
+        "coursec-2021/Events: The Big Event": {
+          "name": "Suuri tapahtuma"
         },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Tosielämän algoritmit: kylvä siemen"
+        "coursec-2021/Binary Bracelets": {
+          "name": "Binäärikorut"
         },
-        "pre-express-2017/Spelling Bee": {
-          "name": "Kirjurimehiläinen"
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Ruutupaperiohjelmointi"
         },
-        "coursee-2017/Building a Foundation": {
-          "name": "Rakennetaan perustus"
+        "coursed-2021/Relay Programming": {
+          "name": "Releohjelmointi"
         },
-        "coursee-2017/Nested Loops": {
-          "name": "Sisäkkäiset silmukat"
+        "coursed-2021/Dance Party": {
+          "name": "Tanssibileet"
         },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Tosielämän algoritmit: paperilentokoneet"
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Ehtolauseet pelikorteilla"
         },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Tosielämän algoritmit: kylvä siemen"
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Säveltäminen"
         },
-        "coursed-2017/Nested Loops": {
-          "name": "Sisäkkäiset silmukat"
+        "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
         },
-        "express-2017/Introduction": {
-          "name": "Johdanto"
+        "coursef-2021/For Loop Fun": {
+          "name": "Silmukkahupia"
         },
-        "express-2017/Building a Foundation": {
-          "name": "Rakennetaan perustus"
+        "coursef-2021/Internet": {
+          "name": "Internetti"
         },
-        "express-2017/Nested Loops": {
-          "name": "Sisäkkäiset silmukat"
+        "express-2021/lesson-1": {
+          "name": "Tanssibileet"
         },
-        "csd3-2017/Variables": {
+        "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
+        },
+        "csd3-2022/Variables": {
           "name": "Muuttujat"
         },
-        "csd3-2017/Conditionals": {
+        "csd3-2022/Text": {
+          "name": "teksti"
+        },
+        "csd3-2022/Conditionals": {
           "name": "Ehtolausekkeet"
         },
-        "csd3-2017/Velocity": {
+        "csd3-2022/Velocity": {
           "name": "Nopeus"
         },
-        "csd3-2017/Functions": {
+        "csd3-2022/Functions": {
           "name": "Funktiot"
         },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "Parametrilliset funktiot"
+        "csd6-2022/Functions": {
+          "name": "Funktiot"
         },
-        "csd2-2017/Lists": {
-          "name": "Listat"
+        "coursea-2022/Happy Maps": {
+          "name": "Iloiset kartat"
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "Tietokoneeton tekeminen: tantagrammit"
+        "courseb-2022/Move It, Move It": {
+          "name": "Liikuta, liikuta"
         },
-        "course4/Maze and Bee": {
-          "name": "Sokkelo ja mehiläinen"
+        "courseb-2022/Getting Loopy": {
+          "name": "Mennään silmukoille"
         },
-        "course4/Artist": {
+        "coursec-2022/The Big Event": {
+          "name": "Suuri tapahtuma"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binäärikorut"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Releohjelmointi"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Tanssibileet"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Säveltäminen"
+        },
+        "coursee-2022/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internetti"
+        },
+        "express-2022/Dance Party": {
+          "name": "Tanssibileet"
+        },
+        "express-2022/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kooditunti 2013"
+        },
+        "aquatic/Aquatic": {
+          "name": "Minecraft: Merellinen matka"
+        },
+        "artist/Artist": {
           "name": "Taiteilija"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Tietokoneeton tekeminen: Kirjekuorimuuttujat"
+        "dance-2019/Dance Party": {
+          "name": "Tanssibileet"
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Tietokoneeton tekeminen: Madlibs"
+        "dance-extras-2019/Dance Party - Go Further": {
+          "name": "Jatka tanssimista"
         },
-        "course4/Artist: Variables": {
-          "name": "Taiteilija: muuttujat"
+        "dance-extras/Dance Party - Go Further": {
+          "name": "Jatka tanssimista (2018)"
         },
-        "course4/Play Lab: Variables": {
-          "name": "Pelilabra: muuttujat"
+        "flappy/Flappy Code": {
+          "name": "Flappy Code"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Tietokoneeton tekeminen: silmukkahauskaa"
+        "frozen/Artist": {
+          "name": "Koodaa Annan ja Elsan kanssa"
         },
-        "course4/Bee: For Loops": {
-          "name": "Mehiläinen: silmukat"
+        "gumball/Gumball Play Lab": {
+          "name": "Gumball Pelilabra"
         },
-        "course4/Artist: For Loops": {
-          "name": "Taiteilija: silmukat"
+        "hourofcode/Maze": {
+          "name": "Sokkelo"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Pelilabra: silmukat"
+        "iceage/Ice Age Play Lab": {
+          "name": "Ice Age Pelilabra"
         },
-        "course4/Artist: Functions": {
-          "name": "Taiteilija: funktiot"
+        "infinity/Infinity": {
+          "name": "Disneyn Infinity-Pelilabra"
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Tietokoneeton tekeminen: parametroitu sävellys"
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft Koodaustunti"
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Taiteilija: parametrilliset funktiot"
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Koodaustunti Minecraft Suunnittelija"
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Pelilabra: parametrilliset funktiot"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Mehiläinen: parametrilliset funktiot"
+        "playlab/Play Lab": {
+          "name": "Pelilabra"
         },
-        "course4/Unplugged: Binary": {
-          "name": "Tietokoneeton tekeminen: binääri"
+        "starwars/Hour of Code 2015": {
+          "name": "Tähtien sota: Rakenna galaksi koodaten (JavaScript)"
         },
-        "course4/Artist Binary": {
-          "name": "Taiteilija: binääri"
+        "allthethings/Jigsaw": {
+          "name": "Palapeli"
         },
-        "course4/Super Challenge - Variables": {
-          "name": "Superhaaste - muuttujat"
+        "allthethings/Maze": {
+          "name": "Sokkelo"
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "Superhaaste - For-silmukat"
+        "allthethings/Artist": {
+          "name": "Taiteilija"
         },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Superhaaste - Funktioita ja parametreja"
+        "allthethings/Bee": {
+          "name": "Mehiläinen"
         },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Äärimmäinen haaste - Kokonaisuus"
+        "allthethings/Farmer": {
+          "name": "Maanviljelijä"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Multi": {
+          "name": "Moni"
+        },
+        "allthethings/Match": {
+          "name": "Vastaavat"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pikselöityminen"
+        },
+        "allthethings/Star wars": {
+          "name": "Tähtien Sota"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Web Lab": {
+          "name": "Nettilabra"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Johdanto tietotekniikkaan"
@@ -553,6 +616,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "Yhteenveto"
+        },
+        "course1/Happy Maps": {
+          "name": "Iloiset kartat"
+        },
+        "course1/Move it, Move it": {
+          "name": "Liikuta, liikuta"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Palapeli: Opettele \"vedä ja pudota\""
+        },
+        "course1/Maze: Sequence": {
+          "name": "Sokkelo: komentosarja"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Sokkelo: virheenkorjaus"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Tosielämän algoritmit: kylvä siemen"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Mehiläinen: komentosarja"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Taiteilija: komentosarja"
+        },
+        "course1/Building a Foundation": {
+          "name": "Rakennetaan perustus"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Taiteilija: muodot"
+        },
+        "course1/Spelling Bee": {
+          "name": "Kirjurimehiläinen"
+        },
+        "course1/Getting Loopy": {
+          "name": "Mennään silmukoille"
+        },
+        "course1/Maze: Loops": {
+          "name": "Sokkelo: silmukat"
+        },
+        "course1/Bee: Loops": {
+          "name": "Mehiläinen: silmukoita"
+        },
+        "course1/The Big Event": {
+          "name": "Suuri tapahtuma"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Pelilabra: Luo tarina"
+        },
+        "course1/Going Places Safely": {
+          "name": "Menossa turvallisesti"
+        },
+        "course1/Artist: Loops": {
+          "name": "Taiteilija: silmukat"
         },
         "course2/Graph Paper Programming": {
           "name": "Ruutupaperiohjelmointi"
@@ -674,215 +791,74 @@
         "course3/Artist: Patterns": {
           "name": "Taiteilija: kuviot"
         },
-        "course1/Happy Maps": {
-          "name": "Iloiset kartat"
+        "course4/Unplugged: Tangrams": {
+          "name": "Tietokoneeton tekeminen: tantagrammit"
         },
-        "course1/Move it, Move it": {
-          "name": "Liikuta, liikuta"
+        "course4/Maze and Bee": {
+          "name": "Sokkelo ja mehiläinen"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Palapeli: Opettele \"vedä ja pudota\""
+        "course4/Artist": {
+          "name": "Taiteilija"
         },
-        "course1/Maze: Sequence": {
-          "name": "Sokkelo: komentosarja"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Tietokoneeton tekeminen: Kirjekuorimuuttujat"
         },
-        "course1/Maze: Debugging": {
-          "name": "Sokkelo: virheenkorjaus"
+        "course4/Unplugged: Madlibs": {
+          "name": "Tietokoneeton tekeminen: Madlibs"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Tosielämän algoritmit: kylvä siemen"
+        "course4/Artist: Variables": {
+          "name": "Taiteilija: muuttujat"
         },
-        "course1/Bee: Sequence": {
-          "name": "Mehiläinen: komentosarja"
+        "course4/Play Lab: Variables": {
+          "name": "Pelilabra: muuttujat"
         },
-        "course1/Artist: Sequence": {
-          "name": "Taiteilija: komentosarja"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Tietokoneeton tekeminen: silmukkahauskaa"
         },
-        "course1/Building a Foundation": {
-          "name": "Rakennetaan perustus"
+        "course4/Bee: For Loops": {
+          "name": "Mehiläinen: silmukat"
         },
-        "course1/Artist: Shapes": {
-          "name": "Taiteilija: muodot"
-        },
-        "course1/Spelling Bee": {
-          "name": "Kirjurimehiläinen"
-        },
-        "course1/Getting Loopy": {
-          "name": "Mennään silmukoille"
-        },
-        "course1/Maze: Loops": {
-          "name": "Sokkelo: silmukat"
-        },
-        "course1/Bee: Loops": {
-          "name": "Mehiläinen: silmukoita"
-        },
-        "course1/The Big Event": {
-          "name": "Suuri tapahtuma"
-        },
-        "course1/Studio: Create a Story": {
-          "name": "Pelilabra: Luo tarina"
-        },
-        "course1/Going Places Safely": {
-          "name": "Menossa turvallisesti"
-        },
-        "course1/Artist: Loops": {
+        "course4/Artist: For Loops": {
           "name": "Taiteilija: silmukat"
+        },
+        "course4/Play Lab: For Loops": {
+          "name": "Pelilabra: silmukat"
+        },
+        "course4/Artist: Functions": {
+          "name": "Taiteilija: funktiot"
+        },
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Tietokoneeton tekeminen: parametroitu sävellys"
+        },
+        "course4/Artist: Functions with Parameters": {
+          "name": "Taiteilija: parametrilliset funktiot"
+        },
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Pelilabra: parametrilliset funktiot"
+        },
+        "course4/Bee: Functions with Parameters": {
+          "name": "Mehiläinen: parametrilliset funktiot"
+        },
+        "course4/Unplugged: Binary": {
+          "name": "Tietokoneeton tekeminen: binääri"
+        },
+        "course4/Artist Binary": {
+          "name": "Taiteilija: binääri"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Superhaaste - muuttujat"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Superhaaste - For-silmukat"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Superhaaste - Funktioita ja parametreja"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Äärimmäinen haaste - Kokonaisuus"
         },
         "jigsaw/Jigsaw": {
           "name": "Palapeli"
-        },
-        "allthethings/Jigsaw": {
-          "name": "Palapeli"
-        },
-        "allthethings/Maze": {
-          "name": "Sokkelo"
-        },
-        "allthethings/Artist": {
-          "name": "Taiteilija"
-        },
-        "allthethings/Bee": {
-          "name": "Mehiläinen"
-        },
-        "allthethings/Farmer": {
-          "name": "Maanviljelijä"
-        },
-        "allthethings/Flappy": {
-          "name": "Flappy"
-        },
-        "allthethings/Bounce": {
-          "name": "Bounce"
-        },
-        "allthethings/Multi": {
-          "name": "Moni"
-        },
-        "allthethings/Match": {
-          "name": "Vastaavat"
-        },
-        "allthethings/Pixelation": {
-          "name": "Pikselöityminen"
-        },
-        "allthethings/Star wars": {
-          "name": "Tähtien Sota"
-        },
-        "allthethings/Minecraft": {
-          "name": "Minecraft"
-        },
-        "allthethings/Web Lab": {
-          "name": "Nettilabra"
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "Silmukkahupia"
-        },
-        "coursef-2021/Internet": {
-          "name": "Internetti"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "Liikuta, liikuta"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Mennään silmukoille"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "Iloiset kartat"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "Suuri tapahtuma"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Binäärikorut"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Ruutupaperiohjelmointi"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Releohjelmointi"
-        },
-        "coursed-2021/Dance Party": {
-          "name": "Tanssibileet"
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "Ehtolauseet pelikorteilla"
-        },
-        "express-2021/lesson-1": {
-          "name": "Tanssibileet"
-        },
-        "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "Säveltäminen"
-        },
-        "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Parametrilliset funktiot"
-        },
-        "csd3-2021/Variables": {
-          "name": "Muuttujat"
-        },
-        "csd3-2021/Text": {
-          "name": "teksti"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "Ehtolausekkeet"
-        },
-        "csd3-2021/Velocity": {
-          "name": "Nopeus"
-        },
-        "csd3-2021/Functions": {
-          "name": "Funktiot"
-        },
-        "express-2020/Dance Party": {
-          "name": "Tanssibileet"
-        },
-        "express-2020/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "Liikuta, liikuta"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Mennään silmukoille"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Ruutupaperiohjelmointi"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Releohjelmointi"
-        },
-        "coursed-2020/Dance Party": {
-          "name": "Tanssibileet"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "Ehtolauseet pelikorteilla"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Binäärikuvat"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Binäärikorut"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "Suuri tapahtuma"
-        },
-        "coursee-2020/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "Säveltäminen"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Iloiset kartat"
-        },
-        "coursef-2020/Envelope Variables": {
-          "name": "Kirjekuorimuuttujat"
-        },
-        "coursef-2020/Internet": {
-          "name": "Internetti"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "Silmukkahupia"
         }
       }
     }

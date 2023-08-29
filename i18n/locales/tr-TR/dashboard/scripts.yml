@@ -5942,6 +5942,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-5:
               display_name: Alternatif Dersler
+            lessonGroup-7:
+              display_name: Sandbox'lar
         csa2-2023:
           lessons:
             lesson-4:
@@ -5953,6 +5955,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
         csa3-2023:
           lessons:
             lesson-1:
@@ -5966,6 +5970,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
         csa4-2023:
           lessons:
             lesson-9:
@@ -5977,6 +5983,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
         csa5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5985,6 +5993,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
         csa6-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5993,6 +6003,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           description: "Bu ünite, öğrencilere 'ArrayList' sınıfını kullanarak liste oluşturmayı öğretmek için veri yapılarını genişletmeye devam ediyor. Bu süreçte öğrenciler \"Tamsayı\" ve \"Double\" sınıflarını öğrenirler ve yöntemlerini metin dosyalarından verileri ayrıştırmak ve tamsayı değerlerinin sınırlarını keşfetmek için kullanırlar. Öğrenciler, bir \"ArrayList\"in yapısını ve işlevselliğini öğrenirken, her bir veri yapısının ne zaman kullanılacağını ayırt eder. Öğrenciler, sayısal ve nesne verilerinden oluşan bir \"ArrayList\" içindeki verileri bulmak ve işlemek için standart algoritmaları uygular. Ünite boyunca öğrenciler, temel doğal dil işleme tekniklerini ve uygulamalarını öğrenirken, bir kullanıcıdan ve dosya girişinden elde edilen metni analiz etmek ve işlemek için 'String' sınıfını kullanmayı öğrenirler. Ayrıca öğrenciler, programları için API belgeleri oluşturmak üzere Javadoc yorumları yazarak yazılım mühendisliği becerilerini daha da geliştirirler.\n\n### AP Classroom Kişisel İlerleme Kontrolleri\n\nAP Classroom Soru Bankasından bu üniteyle uyumlu sorular atamak için, ünitenin [\\*\\*Standartlar\\*\\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=6) sayfasındaki Temel Bilgi ifadeleri için Soru Bankasında arama yaparak AP Classroom'da özel bir sınav oluşturun. [**AP Central**][1]'da bunu yapmak için talimatlar ve video gösterileri bulabilirsiniz.\n\nAP Classroom'da aşağıdaki Kişisel İlerleme Kontrolleri, Bildiğinizi Gösterin haftasında atanabilir:\n\n-   Kişisel İlerleme Kontrolü 2\n-   Kişisel İlerleme Kontrolü 7\n\n**_Not:_** _Önerilen Kişisel İlerleme Kontrollerindeki Bazı Öğrenme Hedefleri ve Temel Bilgi ifadeleri sonraki ünitelerde ele alınmaktadır._\n\n## Bu Üniteyi Öğretmeyi Bitirdiniz mi?\n\nCode.org müfredat ekibinin ünitenin nasıl gittiğini öğrenmesi için bu [**kısa anketi**][2] yanıtlayın."
           student_description: Bu ünite, sizi 'ArrayList' sınıfını kullanarak listeler oluşturmaya alıştırmak için veri yapılarını genişletmeye devam ediyor. Bu süreçte, "Tamsayı" ve "Duble" sınıflarını öğrenir ve metin dosyalarından verileri ayrıştırmak için yöntemlerini kullanır ve tamsayı değerlerinin sınırlarını keşfedersiniz. Bir "ArrayList"in yapısı ve işlevselliği hakkında bilgi edinirken, her tür veri yapısının ne zaman kullanılacağını ayırt edersiniz. Sayısal ve nesne verilerinden oluşan bir "ArrayList" içindeki verileri bulmak ve işlemek için standart algoritmalar uygularsınız. Ünite boyunca, temel doğal dil işleme tekniklerini ve uygulamalarını öğrenirken, bir kullanıcıdan ve dosya girişinden elde edilen metni analiz etmek ve işlemek için 'String' sınıfını kullanmayı öğrenirsiniz. Ayrıca, programlarınız için API belgeleri oluşturmak üzere Javadoc yorumları yazarak yazılım mühendisliği becerilerinizi daha da geliştirirsiniz.
         csa7-2023:
@@ -6006,6 +6018,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-5:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           description: "Bu ünite, öğrencilerin The Theatre'ı kullanarak kişisel bir ilgi alanını veya hikayeyi iletmek için yaratıcı bir kodlama projesi planlayıp geliştirirken, müfredat boyunca öğrendikleri becerileri kullanarak yazılım tasarımı ve geliştirme pratiği yapmalarına olanak tanır. Öğrenciler, projelerinin belirtilen gereksinimleri karşılamasını sağlarken fikirlerini planlamak ve uygulamak için ayrıştırma stratejilerini ve nesne yönelimli ilkeleri kullanır. Bu süreçte öğrenciler \"özel\", aşırı yüklenmiş ve geçersiz kılınan yöntemleri yazmayı ve yöntemlerin ve parametrelerinin işlevselliğini keşfederken bir üst sınıf yöntemini çağırmak için bir alt sınıf yönteminde \"super\" anahtar sözcüğünü kullanmayı öğrenirler. Ünite boyunca öğrenciler, yinelemeli yöntemleri izleme ve yazma ve bu yöntemleri yinelemeli çözümlerle karşılaştırma alıştırmaları yapar. Yıl boyunca edinilen bilgi ve becerilerle öğrenciler, mevcut programlardaki hataları ve sorunları keşfederken sistem güvenilirliğini en üst düzeye çıkarma ihtiyacını göz önünde bulundururlar.\n\n### AP Classroom Kişisel İlerleme Kontrolleri\n\nAP Classroom Soru Bankasından bu üniteyle uyumlu sorular atamak için, ünitenin [\\*\\*Standartlar\\*\\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7) sayfasındaki Temel Bilgi ifadeleri için Soru Bankasında arama yaparak AP Classroom'da özel bir sınav oluşturun. [**AP Central**][1]'da bunu yapmak için talimatlar ve video gösterileri bulabilirsiniz.\n\n## Bu Üniteyi Öğretmeyi Bitirdiniz mi?\n\nCode.org müfredat ekibinin ünitenin nasıl gittiğini öğrenmesi için bu [**kısa anketi**][2] yanıtlayın."
           student_description: Bu ünite, The Theatre'ı kullanarak kişisel bir ilgi alanınızı veya hikayenizi iletmek için yaratıcı bir kodlama projesi planlayıp geliştirirken, müfredat boyunca öğrendiğiniz becerileri kullanarak yazılım tasarımı ve geliştirme pratiği yapmanızı sağlar. Projenizin belirtilen gereksinimleri karşılamasını sağlarken fikirlerinizi planlamak ve uygulamak için ayrıştırma stratejilerini ve nesne yönelimli ilkeleri kullanırsınız. Bu süreçte, "özel", aşırı yüklenmiş ve geçersiz kılınan yöntemleri yazmayı ve yöntemlerin ve parametrelerinin işlevselliğini keşfederken bir üst sınıf yöntemini çağırmak için bir alt sınıf yönteminde "super" anahtar sözcüğünü kullanmayı öğrenirsiniz. Ünite boyunca, özyinelemeli yöntemleri izleme ve yazma ve bu yöntemleri yinelemeli çözümlerle karşılaştırma alıştırması yapacaksınız. Yıl boyunca edinilen bilgi ve becerilerle, mevcut programlardaki hataları ve sorunları keşfederken sistem güvenilirliğini en üst düzeye çıkarma ihtiyacını düşünürsünüz.
         csa8-2023:
@@ -6018,6 +6032,8 @@ tr:
               display_name: Anket
             lessonGroup-5:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           description: "Bu ünite, öğrencilerin 1D ve 2D dizileri ve `ArrayList`leri arama ve sıralamaya yönelik ortak yaklaşımları tanıtmayı öğrendikleri algoritmaları genişletir. Bu süreçte öğrenciler, ifade yürütme sayılarını kullanarak bu algoritmaların verimliliklerini analiz eder ve karşılaştırır ve karmaşık sorunları ayrıştırmak için problem çözme becerilerini daha da geliştirir. Ünite boyunca öğrenciler, nesne yönelimli tasarım, veri yapıları ve algoritmik düşünme içeren konsolu kullanarak yaratıcı bir kodlama projesi planlamak ve geliştirmek için programlama ve yazılım mühendisliği becerilerini kullanırlar. Yıl boyunca edinilen bilgi ve becerilerle öğrenciler, programların ve kullanıcıların gizliliğini ve güvenliğini göz önünde bulundurur.\n\n### AP Classroom Kişisel İlerleme Kontrolleri\n\nAP Classroom Soru Bankasından bu üniteyle uyumlu sorular atamak için, ünitenin [\\*\\*Standartlar\\*\\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=8) sayfasındaki Temel Bilgi ifadeleri için Soru Bankasında arama yaparak AP Classroom'da özel bir sınav oluşturun. [**AP Central**][1]'da bunu yapmak için talimatlar ve video gösterileri bulabilirsiniz.\n\nAP Classroom'da aşağıdaki Kişisel İlerleme Kontrolleri, Bildiğinizi Gösterin haftasında atanabilir:\n\n-   Kişisel İlerleme Kontrolü 10\n\n**_Not:_** _Önerilen Kişisel İlerleme Kontrollerindeki Bazı Öğrenme Hedefleri ve Temel Bilgi ifadeleri sonraki ünitelerde ele alınmaktadır._\n\n## Bu Üniteyi Öğretmeyi Bitirdiniz mi?\n\nCode.org müfredat ekibinin ünitenin nasıl gittiğini öğrenmesi için bu [**kısa anketi**][2] yanıtlayın."
           student_description: Bu ünitede, 1D ve 2D dizileri ve `ArrayList`leri aramaya ve sıralamaya yönelik yaygın yaklaşımları keşfetmek için öğrendiğiniz algoritmaları genişleteceksiniz. Bu süreçte, ifade yürütme sayılarını kullanarak bu algoritmaların verimliliklerini analiz edip karşılaştırır ve karmaşık sorunları ayrıştırmak için problem çözme becerilerini daha da geliştirirsiniz. Ünite boyunca, nesne yönelimli tasarım, veri yapıları ve algoritmik düşünme içeren konsolu kullanarak yaratıcı bir kodlama projesi planlamak ve geliştirmek için programlama ve yazılım mühendisliği becerilerinizi uygularsınız. Yıl boyunca edindiğiniz bilgi ve becerilerle, programların ve kullanıcıların gizliliğini ve güvenliğini düşünürsünüz.
         hello-world-space-2022:
@@ -6030,6 +6046,8 @@ tr:
               display_name: 'Bölüm 1: Problem çözme süreci'
             lessonGroup-3:
               display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+            lessonGroup-5:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         csd2-2023:
           lesson_groups:
@@ -6477,6 +6495,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-creativity2-2023:
           lesson_groups:
@@ -6504,6 +6524,8 @@ tr:
               display_name: 'Bölüm 1: Problem çözme süreci'
             lessonGroup-3:
               display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+            lessonGroup-5:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-hardware2-2023:
           lesson_groups:
@@ -6522,6 +6544,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-data2:
           lesson_groups:
@@ -6564,6 +6588,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-design-with-purpose2-2023:
           lesson_groups:
@@ -6589,6 +6615,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-coding2-2023:
           lesson_groups:
@@ -6614,6 +6642,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-impact-in-society2-2023:
           lesson_groups:
@@ -6651,6 +6681,8 @@ tr:
               display_name: İnceleme ve Uygulama
             lessonGroup-3:
               display_name: Deneme Sınavları
+            lessonGroup-4:
+              display_name: Sandbox'lar
         microbit-2023:
           lesson_groups:
             lessonGroup-3:
@@ -7003,6 +7035,10 @@ tr:
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description: Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs, kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde, öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli projeler oluşturmuş olacaklardır.
           student_description: Hareketli karakterler ve değişkenlerle kodlamayı öğrenin ve bilgisayar ve internetin toplumsal etkilerini tartışın. Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz bir proje tasarlayın ve oluşturun.
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Kurulum
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -7030,3 +7066,177 @@ tr:
           lesson_groups:
             lessonGroup-3:
               display_name: Sınıflar
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sayısal Vatandaşlık
+            lessonGroup-3:
+              display_name: Sıralama
+            lessonGroup-4:
+              display_name: Döngüler
+            lessonGroup-5:
+              display_name: Bilişimin Etkileri
+          description_audience: 'Yaş: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Veri
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sayısal Vatandaşlık
+            lessonGroup-3:
+              display_name: Sıralama
+            lessonGroup-4:
+              display_name: Döngüler
+            lessonGroup-5:
+              display_name: Bilişimin Etkileri
+            lessonGroup-6:
+              display_name: Veri
+          description_audience: 'Yaş: 4-7'
+          description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
+          description: Kurs A, Anaokulu öğrencileri de dahil olmak üzere yeni başlayan okuyucular için bir bilgisayar bilimi müfredatı sunar. Öğrenciler, döngüler ve olaylar gibi komutları kullanarak programlamayı öğreneceklerdir. Bu kursta yer alan dersler ayrıca öğrencilere başkalarıyla anlamlı bir şekilde işbirliği yapmayı, farklı problem çözme tekniklerini araştırmayı, zorlu görevler karşısında ısrar etmeyi ve internet güvenliği hakkında bilgi edinmeyi öğretir.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Veri
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sayısal Vatandaşlık
+            lessonGroup-3:
+              display_name: Sıralama
+            lessonGroup-4:
+              display_name: Döngüler
+            lessonGroup-5:
+              display_name: Bilişimin Etkileri
+            lessonGroup-6:
+              display_name: Olaylar
+            lessonGroup-7:
+              display_name: Ders Projesinin Sonu
+            lessonGroup-8:
+              display_name: Veri
+          description_audience: 'Yaş: 5-8'
+          description_short: Okul öncesi çocuklar için bilgisayar bilimine giriş. Kurs A ile benzer ancak ilave kavram derinliği vardır.
+          description: Kurs B'yi birinci sınıf öğrencilerini düşünerek geliştirdik. Kurs B'deki kavramlar Kurs A'dakilerle paralel olsa da, öğrenciler daha karmaşık, bağlantısız etkinlikler öğrenir ve çok çeşitli bulmacalar üzerinde çalışır. Öğrenciler programlamanın temellerini, işbirliği tekniklerini, araştırma ve eleştirel düşünme becerilerini, zorluklar karşısında direnmeyi ve internet güvenliğini öğreneceklerdir. Bu dersin sonunda öğrenciler Play Lab programlama ortamında oyunlar oluştururlar.
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Bilişim Sistemleri
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sayısal Vatandaşlık
+            lessonGroup-3:
+              display_name: Sıralama
+            lessonGroup-4:
+              display_name: Döngüler
+            lessonGroup-5:
+              display_name: Olaylar
+            lessonGroup-6:
+              display_name: Veri
+            lessonGroup-8:
+              display_name: Bilişim Sistemleri
+          description: Kurs C'yi ikinci sınıftaki öğrenciler için geliştirdik. Öğrenciler sıralama, döngüler ve olaylar içeren programlar oluşturacaktır. Problem çözme tekniklerini araştıracaklar ve hem çevrimiçi hem de çevrimdışı pozitif topluluklar oluşturmak için stratejiler geliştirecekler. Kursun sonunda öğrenciler paylaşabilecekleri etkileşimli oyunlar oluşturacaklar.
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sayısal Vatandaşlık
+            lessonGroup-3:
+              display_name: Sıralama
+            lessonGroup-4:
+              display_name: Bilişimin Etkileri
+            lessonGroup-6:
+              display_name: Döngüler
+            lessonGroup-7:
+              display_name: Veri
+            lessonGroup-8:
+              display_name: Ders Projesinin Sonu
+          description_audience: 'Yaş: 7-11'
+          description_short: Koşullu ifadeleri öğrenin. Kendi sanatını, oyunlarını ve hatta bir dans partisi oluştur.
+          description: Üçüncü sınıftaki öğrenciler için D kursu oluşturduk. Kurs, döngüler ve olaylar da dahil olmak üzere önceki kurslarda bulunan kavramların gözden geçirilmesiyle başlar. Daha sonra, öğrenciler algoritmalar, iç içe döngüler, while döngüleri, koşullu ifadeler ve daha fazlası hakkındaki anlayışlarını geliştireceklerdir.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: İç İçe Döngüler
+            lessonGroup-4:
+              display_name: Fonksiyonlar
+            lessonGroup-5:
+              display_name: Veri ve simülasyonlar
+            lessonGroup-6:
+              display_name: Ders Projesinin Sonu
+          description_audience: 8-12 yaş grubu
+          description_short: Hareketli nesne, iç içe döngüler, ve fonksiyonların temellerini öğrenin.
+          description: Dördüncü sınıftaki öğrenciler için Kurs E'yi oluşturduk. Kurs, Sprite Lab programlama aracına giriş ile başlar. Öğrenciler, çevrimiçi güvenlik hakkında öğreneceklerini pekiştiren eğlenceli, etkileşimli projeler yapmayı öğrenecekler. Bu derslerin ardından, öğrenciler daha karmaşık kodlama ile meşgul olacaklar. Öğrenciler iç içe döngüler, işlevler ve koşullu ifadeler hakkında bilgi edinecekler. Kursun sonunda öğrenciler zorlu bulmacaları çözmek için bu kavramları birleştirecekler. Kurs, öğrencilerin bir oyun veya çizim yaptıkları açık uçlu bir proje ile sona erer.
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hareketli Nesneler
+          description_audience: 'Yaş: 9-13'
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+          description: Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs, kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde, öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli projeler oluşturmuş olacaklardır.
+          student_description: Hareketli karakterler ve değişkenlerle kodlamayı öğrenin ve bilgisayar ve internetin toplumsal etkilerini tartışın. Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz bir proje tasarlayın ve oluşturun.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hareketli Nesneler
+            lessonGroup-3:
+              display_name: Koşullar
+            lessonGroup-4:
+              display_name: Veri ve simülasyonlar
+            lessonGroup-5:
+              display_name: Değişkenler
+            lessonGroup-6:
+              display_name: Bilişimin Etkileri
+            lessonGroup-7:
+              display_name: Ders Projesinin Sonu
+          description_audience: 'Yaş: 9-13'
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+          description: Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs, kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde, öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli projeler oluşturmuş olacaklardır.
+        vpl-csp-2023-m1:
+          title: Modül 1
+        vpl-csp-2023-m2:
+          title: Modül 2
+        vpl-csp-2023-m3:
+          title: Modül 3
+        vpl-csp-2023-m4:
+          title: Modül 4
+        vpl-csp-2023-m5:
+          title: Modül 5
+        vpl-csp-2023-m6:
+          title: Modül 6
+        vpl-csp-2023-m7:
+          title: Modül 7
+        vpl-csp-2023-m8:
+          title: Modül 8
+        vpl-csa-2023-m1:
+          title: Modül 1
+        how-ai-works-2023:
+          title: Yapay Zeka Nasıl Çalışır?
+        vpl-csa-2023-m2:
+          title: Modül 2
+        vpl-csa-2023-m3:
+          title: Modül 3
+        vpl-csa-2023-m4:
+          title: Modül 4
+        vpl-csa-2023-m5:
+          title: Modül 5
+        vpl-csa-2023-m6:
+          title: Modül 6
+        vpl-csa-2023-m7:
+          title: Modül 7
+        vpl-csa-2023-m8:
+          title: Modül 8
+        vpl-csd-2023-m1:
+          title: Modül 1
+        vpl-csd-2023-m2:
+          title: Modül 2
+        vpl-csd-2023-m3:
+          title: Modül 3
+        vpl-csd-2023-m4:
+          title: Modül 4
+        vpl-csd-2023-m5:
+          title: Modül 5
+        vpl-csd-2023-m6:
+          title: Modül 6
+        vpl-csd-2023-m7:
+          title: Modül 7
+        vpl-csd-2023-m8:
+          title: Modül 8

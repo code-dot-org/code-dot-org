@@ -76,10 +76,10 @@ class UserPermission < ApplicationRecord
     return if SILENCED_PERMISSIONS.include? permission
 
     ChatClient.message 'infra-security',
-      'Updating UserPermission: '\
-        "environment: #{rack_env}, "\
-        "user ID: #{user.id}, "\
-        "email: #{user.email}, "\
+      'Updating UserPermission: ' \
+        "environment: #{rack_env}, " \
+        "user ID: #{user.id}, " \
+        "email: #{user.email}, " \
         "permission: #{permission}",
       color: 'yellow'
   end
@@ -92,10 +92,10 @@ class UserPermission < ApplicationRecord
     return if SILENCED_PERMISSIONS.include? permission
 
     ChatClient.message 'infra-security',
-      'Deleting UserPermission: '\
-        "environment: #{rack_env}, "\
-        "user ID: #{user.id}, "\
-        "email: #{user.email}, "\
+      'Deleting UserPermission: ' \
+        "environment: #{rack_env}, " \
+        "user ID: #{user.id}, " \
+        "email: #{user.email}, " \
         "permission: #{permission}",
       color: 'yellow'
   end

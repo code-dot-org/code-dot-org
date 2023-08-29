@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:57:38.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -31,7 +36,7 @@
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "palette_category_at_start": "variables",
     "code_functions": {
@@ -116,13 +121,8 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"4dcde3f9-46e1-4bbe-bd1c-4fe1c4ba94b5\",\r\n    \"e301c398-4f5f-4a18-b876-70fd6f3f17e4\",\r\n    \"f76bda92-9458-4f06-b5f3-19b60de3a367\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"4dcde3f9-46e1-4bbe-bd1c-4fe1c4ba94b5\": {\r\n      \"name\": \"tyrannosaurus\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/AdAtNcT4HtjRs6_JBE8hjyvhfkvJ69o0/category_animals/tyrannosaurus.png\",\r\n      \"frameSize\": {\r\n        \"x\": 345,\r\n        \"y\": 364\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"AdAtNcT4HtjRs6_JBE8hjyvhfkvJ69o0\"\r\n    },\r\n    \"e301c398-4f5f-4a18-b876-70fd6f3f17e4\": {\r\n      \"name\": \"pterodactyl\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/T82VGzsfgoMACn2kSWURSeh98Vjj_sHH/category_animals/pterodactyl.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 229\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"T82VGzsfgoMACn2kSWURSeh98Vjj_sHH\"\r\n    },\r\n    \"f76bda92-9458-4f06-b5f3-19b60de3a367\": {\r\n      \"name\": \"sci_fi\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/6R1r6_thyaqHGORcm3JlEVMzjsWX0mFI/category_backgrounds/background_scifi.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"6R1r6_thyaqHGORcm3JlEVMzjsWX0mFI\"\r\n    }\r\n  }\r\n}",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:57:38.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:38.077+00:00\",\"changed\":[\"cloned from \\\"CSD web conditionals assessment_2022\\\"\"],\"cloned_from\":\"CSD web conditionals assessment_2022\"},{\"changed_at\":\"2023-01-14 18:34:24 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 18:37:36 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:38.077+00:00\",\"changed\":[\"cloned from \\\"CSD web conditionals assessment_2022\\\"\"],\"cloned_from\":\"CSD web conditionals assessment_2022\"},{\"changed_at\":\"2023-01-14 18:34:24 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 18:37:36 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:33:59 +0000\",\"changed\":[\"all_animations_single_frame\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

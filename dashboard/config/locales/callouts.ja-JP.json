@@ -17,6 +17,9 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "画面は緑に変わりましたか？もしそうならば「終了」を押してください。そうでなければ「リセット」を押して、プログラムを変更した後、もう一度「実行」を押してください。\n"
         },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "デザイン・モードです。"
+        },
         "CSD U3 rect": {
           "CSD_U3_rect_c2": "「実行」ボタンはここにあります。"
         },
@@ -68,23 +71,69 @@
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "プログラムにこのブロックを追加！"
         },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "プログラムにこのブロックを追加！"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "プログラムにこのブロックを追加！"
+        },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "このブロックをプログラムに追加します。",
-          "arrow_buttons": "矢印ボタンを押してダンサーをコントロールします。"
+          "arrow_buttons": "矢印ボタンを押してダンサーをコントロールします。",
+          "dance_callout_11_a": "このブロックをプログラムに追加します。"
+        },
+        "CourseD_Dance_2020_022022": {
+          "arrow_buttons": "矢印ボタンを押してダンサーをコントロールします。",
+          "dance_callout_11_a": "このブロックをプログラムに追加します。"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "arrow_buttons": "矢印ボタンを押してダンサーをコントロールします。",
+          "dance_callout_11_a": "このブロックをプログラムに追加します。"
         },
         "CourseD_Dance_2020_04": {
+          "dance_callout_02": "プログラムにこのブロックを追加！"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "プログラムにこのブロックを追加！"
+        },
+        "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "プログラムにこのブロックを追加！"
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "プログラムに新しいイベントを追加します。"
         },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "プログラムに新しいイベントを追加します。"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "プログラムに新しいイベントを追加します。"
+        },
         "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "新しいブロック！"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "新しいブロック！"
+        },
+        "CourseD_Dance_2020_06_2021": {
           "dance_party_11_5_groups": "新しいブロック！"
         },
         "CourseD_Dance_2020_07": {
           "setprop_hint": "新しいブロック！"
         },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "新しいブロック！"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "新しいブロック！"
+        },
         "CourseD_Dance_2020_09": {
+          "new_block_3": "新しいブロック！",
+          "new_block_4": "新しいブロック！"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "新しいブロック！",
+          "new_block_4": "新しいブロック！"
+        },
+        "CourseD_Dance_2020_09_2021": {
           "new_block_3": "新しいブロック！",
           "new_block_4": "新しいブロック！"
         },
@@ -107,12 +156,26 @@
         "CourseD_Dance_Party_11_5": {
           "dance_party_11_5_groups": "`すべてのアヒル`ブロックを探してください"
         },
+        "CourseF_outbreak2": {
+          "minitoolbox": "ブロックを展開するには、ここをクリック。",
+          "pointerlocation": "「主語」ブロックをここにドラッグする。"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "ブロックを展開するには、ここをクリック。",
+          "pointerlocation": "「主語」ブロックをここにドラッグする。"
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "クリックして新しいコスチュームを追加"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
+        },
         "Dance_2019_01": {
           "dance_callout_01": "プログラムにこのブロックを追加！"
         },
         "Dance_2019_02": {
-          "dance_callout_11_a": "このブロックをプログラムに追加します。",
-          "arrow_buttons": "矢印ボタンを押してダンサーをコントロールします。"
+          "arrow_buttons": "矢印ボタンを押してダンサーをコントロールします。",
+          "dance_callout_11_a": "このブロックをプログラムに追加します。"
         },
         "Dance_2019_04": {
           "dance_callout_02": "プログラムにこのブロックを追加！"
@@ -149,19 +212,31 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "`すべてのアヒル`ブロックを探してください"
         },
+        "Fish Tank 3-validated2022": {
+          "spritelab_comment": "このブロックを使って、プログラムがどのように動くか あなたや先生のメモを 残すことができます。"
+        },
         "Fish Tank 3-validated_2019": {
           "spritelab_comment": "このブロックを使って、プログラムがどのように動くか あなたや先生のメモを 残すことができます。"
         },
         "Fish Tank 3-validated_2020": {
           "spritelab_comment": "このブロックを使って、プログラムがどのように動くか あなたや先生のメモを 残すことができます。"
         },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "このブロックを使って、プログラムがどのように動くか あなたや先生のメモを 残すことができます。"
+        },
         "Function intro Ryan": {
+          "Function_intro_Ryan_1": "このほんの小さな命令が、ワークスペースにある同じ名前をもったぼう大なコードを実行するようコンピューターに命令します。"
+        },
+        "Function intro Ryan2022": {
           "Function_intro_Ryan_1": "このほんの小さな命令が、ワークスペースにある同じ名前をもったぼう大なコードを実行するようコンピューターに命令します。"
         },
         "Function intro Ryan_2019": {
           "Function_intro_Ryan_1": "このほんの小さな命令が、ワークスペースにある同じ名前をもったぼう大なコードを実行するようコンピューターに命令します。"
         },
         "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "このほんの小さな命令が、ワークスペースにある同じ名前をもったぼう大なコードを実行するようコンピューターに命令します。"
+        },
+        "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "このほんの小さな命令が、ワークスペースにある同じ名前をもったぼう大なコードを実行するようコンピューターに命令します。"
         },
         "Geometric Sun": {
@@ -198,13 +273,22 @@
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_1": "これが「繰り返す」ループです!  ワークスペースにあるこれをクリックして、繰り返し実行したいコードを追加しましょう。"
         },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "これが「繰り返す」ループです!  ワークスペースにあるこれをクリックして、繰り返し実行したいコードを追加しましょう。"
+        },
         "MC_HOC_2017_03_Cole_2019": {
           "MC_HOC_2017_03_Cole_1": "これが「繰り返す」ループです!  ワークスペースにあるこれをクリックして、繰り返し実行したいコードを追加しましょう。"
         },
         "MC_HOC_2017_03_Cole_2020": {
           "MC_HOC_2017_03_Cole_1": "これが「繰り返す」ループです!  ワークスペースにあるこれをクリックして、繰り返し実行したいコードを追加しましょう。"
         },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "これが「繰り返す」ループです!  ワークスペースにあるこれをクリックして、繰り返し実行したいコードを追加しましょう。"
+        },
         "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Agent は水の上に立つことができますが、プレイヤーはできません!"
+        },
+        "MC_HOC_2017_04_Cole2022": {
           "MC_HOC_2017_04_Cole_a": "Agent は水の上に立つことができますが、プレイヤーはできません!"
         },
         "MC_HOC_2017_04_Cole_2019": {
@@ -213,7 +297,13 @@
         "MC_HOC_2017_04_Cole_2020": {
           "MC_HOC_2017_04_Cole_a": "Agent は水の上に立つことができますが、プレイヤーはできません!"
         },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent は水の上に立つことができますが、プレイヤーはできません!"
+        },
         "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "これらのブロックは削除できませんが、変更することはできます!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
           "MC_HOC_2017_06_Cole_1": "これらのブロックは削除できませんが、変更することはできます!"
         },
         "MC_HOC_2017_06_Cole_2019": {
@@ -222,13 +312,22 @@
         "MC_HOC_2017_06_Cole_2020": {
           "MC_HOC_2017_06_Cole_1": "これらのブロックは削除できませんが、変更することはできます!"
         },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "これらのブロックは削除できませんが、変更することはできます!"
+        },
         "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "Agent は溶岩の上に立つことができますが、プレイヤーはできません!  "
+        },
+        "MC_HOC_2017_Ali2022": {
           "MC_HOC_2017_08_RY_1": "Agent は溶岩の上に立つことができますが、プレイヤーはできません!  "
         },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_1": "Agent は溶岩の上に立つことができますが、プレイヤーはできません!  "
         },
         "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_1": "Agent は溶岩の上に立つことができますが、プレイヤーはできません!  "
+        },
+        "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Agent は溶岩の上に立つことができますが、プレイヤーはできません!  "
         },
         "NEW Course 4 Artist Functions 7": {
@@ -241,8 +340,8 @@
           "create_function": "ここをクリックして「関数」ポップアップを開き、「関数の作成」ボタンをクリックします。"
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "編集をクリックして関数にパラメーターを追加します",
-          "add_and_drag_parameter": "ここにパラメーターの名前を書いて、追加をクリックし、関数定義内にドラッグしてください。"
+          "add_and_drag_parameter": "ここにパラメーターの名前を書いて、追加をクリックし、関数定義内にドラッグしてください。",
+          "edit_add_parameter": "編集をクリックして関数にパラメーターを追加します"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "長さ変数をドラッグして\"???\"を置きかえてください。"
@@ -250,8 +349,22 @@
         "NEW Course 4 Bee For Loops 5": {
           "actions_category": "ツール ボックスが新しくなりました！「アクション」ブロックがここにあります。"
         },
+        "New Artist Project": {
+          "New Artist Project_callout1": "カテゴリをクリックして、ツールボックスのブロックを見てみましょう！ブロックをワークスペースにドラッグすると、プログラムに追加できます。",
+          "New Artist Project_callout2": "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。",
+          "sign_in_to_save_project": "後でプロジェクトにアクセスしたいと考えていますか？ サインインすると、このプロジェクトをアカウントに保存できます！"
+        },
         "New Frozen Project": {
           "snowflake_dropdown": "このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "カテゴリをクリックして、ツールボックスのブロックを見てみましょう！ブロックをワークスペースにドラッグすると、プログラムに追加できます。",
+          "New Play Lab Project_callout2": "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。",
+          "sign_in_to_save_project": "後でプロジェクトにアクセスしたいと考えていますか？ サインインすると、このプロジェクトをアカウントに保存できます！"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。",
+          "make_sprite": "Spriteを作成するには、ここのブロックを使用します！"
         },
         "OPD-K5-forloops-5": {
           "courseF_bee_for4_1": "`まで`は、ここにあります。"
@@ -271,13 +384,22 @@
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "用意されたブロックを使って始めましょう"
         },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "用意されたブロックを使って始めましょう"
+        },
         "Overworld Chop Trees_2019": {
           "craft_callout_preplaced": "用意されたブロックを使って始めましょう"
         },
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "用意されたブロックを使って始めましょう"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "用意されたブロックを使って始めましょう"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "このコードで家を建ててみましょう"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "このコードで家を建ててみましょう"
         },
         "Overworld House Frame Chosen_2019": {
@@ -286,25 +408,42 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "このコードで家を建ててみましょう"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "このコードで家を建ててみましょう"
+        },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "「実行」ボタンをおして、プログラムを動かしてください。",
-          "craft_drag_block_callout": "`前に すすむ` の下に もうひとつ`前に すすむ`を引っ付けよう。"
+          "craft_drag_block_callout": "`前に すすむ` の下に もうひとつ`前に すすむ`を引っ付けよう。",
+          "craft_run_button_callout": "「実行」ボタンをおして、プログラムを動かしてください。"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_drag_block_callout": "`前に すすむ` の下に もうひとつ`前に すすむ`を引っ付けよう。",
+          "craft_run_button_callout": "「実行」ボタンをおして、プログラムを動かしてください。"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "「実行」ボタンをおして、プログラムを動かしてください。",
-          "craft_drag_block_callout": "`前に すすむ` の下に もうひとつ`前に すすむ`を引っ付けよう。"
+          "craft_drag_block_callout": "`前に すすむ` の下に もうひとつ`前に すすむ`を引っ付けよう。",
+          "craft_run_button_callout": "「実行」ボタンをおして、プログラムを動かしてください。"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "「実行」ボタンをおして、プログラムを動かしてください。",
-          "craft_drag_block_callout": "`前に すすむ` の下に もうひとつ`前に すすむ`を引っ付けよう。"
+          "craft_drag_block_callout": "`前に すすむ` の下に もうひとつ`前に すすむ`を引っ付けよう。",
+          "craft_run_button_callout": "「実行」ボタンをおして、プログラムを動かしてください。"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_drag_block_callout": "`前に すすむ` の下に もうひとつ`前に すすむ`を引っ付けよう。",
+          "craft_run_button_callout": "「実行」ボタンをおして、プログラムを動かしてください。"
         },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "ここにブロックを置いて繰り返しましょう"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "ここにブロックを置いて繰り返しましょう"
         },
         "Overworld Place Wall_2019": {
           "craft_inside_repeat": "ここにブロックを置いて繰り返しましょう"
         },
         "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "ここにブロックを置いて繰り返しましょう"
+        },
+        "Overworld Place Wall_2021": {
           "craft_inside_repeat": "ここにブロックを置いて繰り返しましょう"
         },
         "Robot Doodle": {
@@ -316,13 +455,22 @@
         "Underground Avoiding Lava": {
           "craft_callout_moveforward": "溶岩を調べるコードに前進のコマンドを追加しましょう"
         },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "溶岩を調べるコードに前進のコマンドを追加しましょう"
+        },
         "Underground Avoiding Lava_2019": {
           "craft_callout_moveforward": "溶岩を調べるコードに前進のコマンドを追加しましょう"
         },
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "溶岩を調べるコードに前進のコマンドを追加しましょう"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "溶岩を調べるコードに前進のコマンドを追加しましょう"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "鉄を掘りましょう！"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "鉄を掘りましょう！"
         },
         "Underground Iron_2019": {
@@ -331,11 +479,26 @@
         "Underground Iron_2020": {
           "craft_what_is_iron": "鉄を掘りましょう！"
         },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "鉄を掘りましょう！"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "ここをクリックして新しいコスチュームをプロジェクトにつけ足しましょう。"
+        },
         "Virtual Pet 2_2019": {
           "": "ここクリック！"
         },
         "Virtual Pet 2_2020": {
           "": "ここクリック！"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "ここをクリックして新しいコスチュームをプロジェクトにつけ足しましょう。"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "ここをクリックして新しいコスチュームをプロジェクトにつけ足しましょう。"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "ここをクリックして新しいコスチュームをプロジェクトにつけ足しましょう。"
         },
         "behaviors 1": {
           "behaviors_edit": "クリックして どうなっているのか見てみよう。"
@@ -399,7 +562,28 @@
         "course4_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_callout1": "関数でトウモロコシをとることはできますが、他の作物はどうですか？"
         },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
+        },
+        "courseA_artist_loops42022": {
           "courseA_artist_loops4_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
         },
         "courseA_artist_loops4_2018": {
@@ -411,7 +595,13 @@
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
         },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
+        },
         "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "ブロックの左上のかずは このブロックをつかう かいすうです。"
+        },
+        "courseA_artist_loops72022": {
           "courseA_artist_loops7_1": "ブロックの左上のかずは このブロックをつかう かいすうです。"
         },
         "courseA_artist_loops7_2018": {
@@ -423,7 +613,13 @@
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_1": "ブロックの左上のかずは このブロックをつかう かいすうです。"
         },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "ブロックの左上のかずは このブロックをつかう かいすうです。"
+        },
         "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "ライン上を いったり きたりすることが できます。"
+        },
+        "courseA_artist_loops82022": {
           "courseA_artist_loops8_1": "ライン上を いったり きたりすることが できます。"
         },
         "courseA_artist_loops8_2018": {
@@ -435,8 +631,14 @@
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_1": "ライン上を いったり きたりすることが できます。"
         },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "ライン上を いったり きたりすることが できます。"
+        },
         "courseA_collector_loops1": {
           "courseA_collector_loops1_1": "ツールボックスに あたらしい ブロックが あるよ。あとで せつめいを するので、まっててね。"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "このブロックで たからものを あつめます。"
         },
         "courseA_collector_loops1_2019": {
           "courseA_collector_loops1_1": "このブロックで たからものを あつめます。"
@@ -444,7 +646,13 @@
         "courseA_collector_loops1_2020": {
           "courseA_collector_loops1_1": "このブロックで たからものを あつめます。"
         },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "このブロックで たからものを あつめます。"
+        },
         "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
+        },
+        "courseA_collector_loops32022": {
           "gradek_adventurer_loops2_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
         },
         "courseA_collector_loops3_2018": {
@@ -455,6 +663,12 @@
         },
         "courseA_collector_loops3_2020": {
           "gradek_adventurer_loops2_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
+        },
+        "courseA_collector_preLoops1": {
+          "courseA_collector_preLoops1_1": "ここをクリックしてプログラムが動くのを見てみよう！"
         },
         "courseA_collector_preLoops2": {
           "courseA_collector_loops1_1": "ツールボックスに あたらしい ブロックが あるよ。あとで せつめいを するので、まっててね。"
@@ -471,16 +685,25 @@
         "courseA_collector_preLoops6": {
           "courseA_collector_loops1_1": "ツールボックスに あたらしい ブロックが あるよ。あとで せつめいを するので、まっててね。"
         },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
+        },
         "courseA_maze_ramp2_2019": {
           "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseA_maze_ramp2_2020": {
           "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
+        },
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "ヒントが ほしいときは、でんきゅうを クリック！"
+        },
+        "courseA_maze_seq12022": {
           "courseA_maze_seq1_1": "ヒントが ほしいときは、でんきゅうを クリック！"
         },
         "courseA_maze_seq1_2018": {
@@ -492,6 +715,9 @@
         "courseA_maze_seq1_2020": {
           "courseA_maze_seq1_1": "ヒントが ほしいときは、でんきゅうを クリック！"
         },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "ヒントが ほしいときは、でんきゅうを クリック！"
+        },
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "ステップ ボタンを つかうと プログラムが ひとつずつ うごきます。これで バグを みつけよう！"
         },
@@ -499,6 +725,9 @@
           "made_of_stone": "このブロックは うごかす ことは できるけど、けす ことは できません！"
         },
         "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "これは吹き出し"
+        },
+        "courseA_playLab_events42022": {
           "courseA_playlab_events4_callout1": "これは吹き出し"
         },
         "courseA_playLab_events4_2018": {
@@ -510,7 +739,13 @@
         "courseA_playLab_events4_2020": {
           "courseA_playlab_events4_callout1": "これは吹き出し"
         },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "これは吹き出し"
+        },
         "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "やじるしのほうこうをかえるには、やじるしをおしてください。"
+        },
+        "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "やじるしのほうこうをかえるには、やじるしをおしてください。"
         },
         "courseA_playLab_events5_2018": {
@@ -522,7 +757,13 @@
         "courseA_playLab_events5_2020": {
           "courseA_playLab_events5_1": "やじるしのほうこうをかえるには、やじるしをおしてください。"
         },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "やじるしのほうこうをかえるには、やじるしをおしてください。"
+        },
         "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "\"ランダム\"をえらぶと おとが ランダムに かわります。"
+        },
+        "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "\"ランダム\"をえらぶと おとが ランダムに かわります。"
         },
         "courseA_playLab_events6_2018": {
@@ -534,6 +775,12 @@
         "courseA_playLab_events6_2020": {
           "courseA_playLab_events6_1": "\"ランダム\"をえらぶと おとが ランダムに かわります。"
         },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "\"ランダム\"をえらぶと おとが ランダムに かわります。"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
+        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
         },
@@ -543,13 +790,25 @@
         "courseB_Scrat_ramp1_2020": {
           "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
         },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
+        },
         "courseB_Scrat_ramp3a_2019": {
           "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseB_Scrat_ramp3a_2020": {
           "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
+        },
         "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "このブロックをつかえるのは、1回だけです。どうやって つかいますか？\n"
+        },
+        "courseB_artist_loops32022": {
           "courseB_artist_loops3_1": "このブロックをつかえるのは、1回だけです。どうやって つかいますか？\n"
         },
         "courseB_artist_loops3_2018": {
@@ -561,11 +820,17 @@
         "courseB_artist_loops3_2020": {
           "courseB_artist_loops3_1": "このブロックをつかえるのは、1回だけです。どうやって つかいますか？\n"
         },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "このブロックをつかえるのは、1回だけです。どうやって つかいますか？\n"
+        },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "数字は、このブロックを ツールボックスから とりだすことが できる回数です。\n"
         },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_1": "ツールボックスに あたらしい ブロックが あるよ。あとで せつめいを するので、まっててね。"
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "このブロックで たからものを あつめます。"
         },
         "courseB_collector_loops1_2018": {
           "courseB_collector_loops1_1": "このブロックで たからものを あつめます。"
@@ -576,7 +841,13 @@
         "courseB_collector_loops1_2020": {
           "courseB_collector_loops1_1": "このブロックで たからものを あつめます。"
         },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "このブロックで たからものを あつめます。"
+        },
         "courseB_maze_seq1": {
+          "courseB_maze_seq1": "ヒントが ほしいときは、でんきゅうを クリック！"
+        },
+        "courseB_maze_seq12022": {
           "courseB_maze_seq1": "ヒントが ほしいときは、でんきゅうを クリック！"
         },
         "courseB_maze_seq1_2018": {
@@ -588,6 +859,9 @@
         "courseB_maze_seq1_2020": {
           "courseB_maze_seq1": "ヒントが ほしいときは、でんきゅうを クリック！"
         },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "ヒントが ほしいときは、でんきゅうを クリック！"
+        },
         "courseB_maze_seq2": {
           "courseB_maze_seq2_callout1": "ステップ ボタンを つかうと プログラムが ひとつずつ うごきます。これで バグを みつけよう！"
         },
@@ -595,6 +869,9 @@
           "courseB_maze_seq3_1": "灰色のブロックは、消すことができません。\n"
         },
         "courseB_playlab_events6": {
+          "courseB_playlab_events6_a": "やじるしのほうこう は、ドロップダウンで かわります。\n"
+        },
+        "courseB_playlab_events62022": {
           "courseB_playlab_events6_a": "やじるしのほうこう は、ドロップダウンで かわります。\n"
         },
         "courseB_playlab_events6_2018": {
@@ -606,13 +883,25 @@
         "courseB_playlab_events6_2020": {
           "courseB_playlab_events6_a": "やじるしのほうこう は、ドロップダウンで かわります。\n"
         },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "やじるしのほうこう は、ドロップダウンで かわります。\n"
+        },
         "courseC19_playLab_EOC3": {
+          "courseE_playLab_scaffold3_1": "はたを目指して 主人公を動かそう。"
+        },
+        "courseC19_playLab_EOC32022": {
           "courseE_playLab_scaffold3_1": "はたを目指して 主人公を動かそう。"
         },
         "courseC19_playLab_EOC3_2020": {
           "courseE_playLab_scaffold3_1": "はたを目指して 主人公を動かそう。"
         },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "はたを目指して 主人公を動かそう。"
+        },
         "courseC_PlayLab_events8": {
+          "courseC_PlayLab_events8_callout1": "ペンギンが きょうりゅうに さわったとき につかうのは、このブロックです。"
+        },
+        "courseC_PlayLab_events82022": {
           "courseC_PlayLab_events8_callout1": "ペンギンが きょうりゅうに さわったとき につかうのは、このブロックです。"
         },
         "courseC_PlayLab_events8_2018": {
@@ -624,7 +913,13 @@
         "courseC_PlayLab_events8_2020": {
           "courseC_PlayLab_events8_callout1": "ペンギンが きょうりゅうに さわったとき につかうのは、このブロックです。"
         },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "ペンギンが きょうりゅうに さわったとき につかうのは、このブロックです。"
+        },
         "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。"
+        },
+        "courseC_PlayLab_events_challenge12022": {
           "courseC_PlayLab_events_challenge1_1": "このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。"
         },
         "courseC_PlayLab_events_challenge1_2018": {
@@ -636,16 +931,34 @@
         "courseC_PlayLab_events_challenge1_2020": {
           "courseC_PlayLab_events_challenge1_1": "このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。"
         },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。"
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。"
+        },
+        "courseC_artist_loops1a2022": {
+          "jumpto_callout": "このブロックはたいせつです。かならず、これを使います。"
+        },
         "courseC_artist_loops1a_2019": {
           "jumpto_callout": "このブロックはたいせつです。かならず、これを使います。"
         },
         "courseC_artist_loops1a_2020": {
           "jumpto_callout": "このブロックはたいせつです。かならず、これを使います。"
         },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "このブロックはたいせつです。かならず、これを使います。"
+        },
+        "courseC_artist_loops1b2022": {
+          "sticker2": "プログラムに これを ついかしよう。"
+        },
         "courseC_artist_loops1b_2019": {
           "sticker2": "プログラムに これを ついかしよう。"
         },
         "courseC_artist_loops1b_2020": {
+          "sticker2": "プログラムに これを ついかしよう。"
+        },
+        "courseC_artist_loops1b_2021": {
           "sticker2": "プログラムに これを ついかしよう。"
         },
         "courseC_artist_loopsPrePre1a": {
@@ -660,8 +973,17 @@
         "courseC_artist_loopsPrePre1a_2020": {
           "courseC_artist_loopsPrePre1a_1": "さいしょに このブロックを つかって、プレイエリアの まん中に 行きます。"
         },
+        "courseC_artist_prog22022": {
+          "slider": "ここでプログラムのスピードを落とせます。"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "ここでプログラムのスピードをゆっくりにできます。"
+        },
         "courseC_collector_prog1": {
           "courseC_collector_prog1_1": "ツールボックスに あたらしい ブロックが あるよ。あとで せつめいを するので、まっててね。"
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "ツールボックスに 新しいブロックが あるのが わかるかな？つかい方は、つぎの パズルで せつめいします。"
         },
         "courseC_collector_prog1_2018": {
           "courseC_collector_prog1_1": "ツールボックスに 新しいブロックが あるのが わかるかな？つかい方は、つぎの パズルで せつめいします。"
@@ -672,7 +994,13 @@
         "courseC_collector_prog1_2020": {
           "courseC_collector_prog1_1": "ツールボックスに 新しいブロックが あるのが わかるかな？つかい方は、つぎの パズルで せつめいします。"
         },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "ツールボックスに 新しいブロックが あるのが わかるかな？つかい方は、つぎの パズルで せつめいします。"
+        },
         "courseC_collector_prog7": {
+          "courseC_collector_prog7_1": "ひつようなブロックがあれば、ツールボックスからとり出そう。"
+        },
+        "courseC_collector_prog72022": {
           "courseC_collector_prog7_1": "ひつようなブロックがあれば、ツールボックスからとり出そう。"
         },
         "courseC_collector_prog7_2018": {
@@ -684,7 +1012,13 @@
         "courseC_collector_prog7_2020": {
           "courseC_collector_prog7_1": "ひつようなブロックがあれば、ツールボックスからとり出そう。"
         },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "ひつようなブロックがあれば、ツールボックスからとり出そう。"
+        },
         "courseC_harvester_loops1": {
+          "courseC_harvester_loops1_callout1": "カボチャは、カボチャの右下に 書いてある数だけ あります。"
+        },
+        "courseC_harvester_loops12022": {
           "courseC_harvester_loops1_callout1": "カボチャは、カボチャの右下に 書いてある数だけ あります。"
         },
         "courseC_harvester_loops1_2018": {
@@ -696,8 +1030,14 @@
         "courseC_harvester_loops1_2020": {
           "courseC_harvester_loops1_callout1": "カボチャは、カボチャの右下に 書いてある数だけ あります。"
         },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "カボチャは、カボチャの右下に 書いてある数だけ あります。"
+        },
         "courseC_maze_debugging5": {
           "courseC_maze_debugging5_1": "灰色のブロックは消せません！"
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "灰色のブロックは、消すことができません。"
         },
         "courseC_maze_debugging5_2018": {
           "courseC_maze_debugging5_1": "はい色のブロックは、けすことができません。"
@@ -708,16 +1048,28 @@
         "courseC_maze_debugging5_2020": {
           "courseC_maze_debugging5_1": "灰色のブロックは、消すことができません。"
         },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "灰色のブロックは、消すことができません。"
+        },
+        "courseC_maze_debugging92022": {
+          "courseC_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
+        },
         "courseC_maze_debugging9_2019": {
           "courseC_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
         },
         "courseC_maze_debugging9_2020": {
           "courseC_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
         },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
+        },
         "courseC_maze_debugging9_copy_2020": {
           "courseC_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
         },
         "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
+        },
+        "courseC_maze_programming12022": {
           "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
         },
         "courseC_maze_programming1_2018": {
@@ -729,7 +1081,13 @@
         "courseC_maze_programming1_2020": {
           "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
         },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
+        },
         "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
+        },
+        "courseC_maze_programming22022": {
           "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseC_maze_programming2_2018": {
@@ -741,7 +1099,14 @@
         "courseC_maze_programming2_2020": {
           "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
+        },
         "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
+          "courseC_maze_programming3_3": "はい色のブロックは けすことが できません。"
+        },
+        "courseC_maze_programming32022": {
           "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
           "courseC_maze_programming3_3": "はい色のブロックは けすことが できません。"
         },
@@ -757,7 +1122,14 @@
           "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
           "courseC_maze_programming3_3": "はい色のブロックは けすことが できません。"
         },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
+          "courseC_maze_programming3_3": "はい色のブロックは けすことが できません。"
+        },
         "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
+        },
+        "courseC_maze_programming42022": {
           "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
         "courseC_maze_programming4_2018": {
@@ -769,7 +1141,13 @@
         "courseC_maze_programming4_2020": {
           "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
+        },
         "courseC_maze_programming5": {
+          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
+        },
+        "courseC_maze_programming52022": {
           "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
         },
         "courseC_maze_programming5_2018": {
@@ -781,7 +1159,14 @@
         "courseC_maze_programming5_2020": {
           "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
         },
+        "courseC_maze_programming5_2021": {
+          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
+        },
         "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。",
+          "courseC_maze_programming7_2": "はい色のブロックは、けすことが できません。"
+        },
+        "courseC_maze_programming72022": {
           "courseC_maze_programming7_1": "これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。",
           "courseC_maze_programming7_2": "はい色のブロックは、けすことが できません。"
         },
@@ -797,7 +1182,14 @@
           "courseC_maze_programming7_1": "これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。",
           "courseC_maze_programming7_2": "はい色のブロックは、けすことが できません。"
         },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。",
+          "courseC_maze_programming7_2": "はい色のブロックは、けすことが できません。"
+        },
         "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "１つだけブロックを入れます。"
+        },
+        "courseC_starWars_loops22022": {
           "courseC_starWars_loops2": "１つだけブロックを入れます。"
         },
         "courseC_starWars_loops2_2018": {
@@ -809,10 +1201,22 @@
         "courseC_starWars_loops2_2020": {
           "courseC_starWars_loops2": "１つだけブロックを入れます。"
         },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "１つだけブロックを入れます。"
+        },
         "courseC_starWars_loops2_copy": {
           "courseC_starWars_loops2": "１つだけブロックを入れます。"
         },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "１つだけブロックを入れます。"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "ここに書いた回数だけ、中に書いた命令を実行してから、次の命令を実行します。"
+        },
         "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみよう。"
+        },
+        "courseD_artist_nestedLoops1a2022": {
           "courseD_artist_nestedLoops1a_1": "パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみよう。"
         },
         "courseD_artist_nestedLoops1a_2018": {
@@ -824,6 +1228,9 @@
         "courseD_artist_nestedLoops1a_2020": {
           "courseD_artist_nestedLoops1a_1": "パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみよう。"
         },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみよう。"
+        },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11_1": "この数字は かえることができます。",
           "courseD_artist_ramp11_2": "ここをクリックして、くりかえしの回数をかえてみよう。"
@@ -831,6 +1238,9 @@
         "courseD_bee_conditionals2": {
           "4_5_Bee_Conditionals_2_1": "すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。",
           "4_5_Bee_Conditionals_2_2": "わからないときは、ここをクリックしてビデオを見てみよう。"
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。"
         },
         "courseD_bee_conditionals2_2018": {
           "4_5_Bee_Conditionals_2_1": "すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。"
@@ -841,11 +1251,21 @@
         "courseD_bee_conditionals2_2020": {
           "4_5_Bee_Conditionals_2_1": "すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。"
         },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。"
+        },
         "courseD_bee_conditionals2_copy": {
           "4_5_Bee_Conditionals_2_1": "すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。",
           "4_5_Bee_Conditionals_2_2": "わからないときは、ここをクリックしてビデオを見てみよう。"
         },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。",
+          "4_5_Bee_Conditionals_2_2": "わからないときは、ここをクリックしてビデオを見てみよう。"
+        },
         "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。"
+        },
+        "courseD_bee_conditionals_challenge22022": {
           "courseD_bee_conditionals_challenge2_1": "花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。"
         },
         "courseD_bee_conditionals_challenge2_2018": {
@@ -857,14 +1277,26 @@
         "courseD_bee_conditionals_challenge2_2020": {
           "courseD_bee_conditionals_challenge2_1": "花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。"
         },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。"
+        },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "ハチを後ろに進ませるコマンドを使おう。"
         },
         "courseD_bee_debugging_challenge1a": {
           "courseD_bee_debugging_challenge1_callout1": "ハチを後ろに進ませるコマンドを使おう。"
         },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "一度に1ブロックずつコードをすすめてみましょう。"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "一度に1ブロックずつコードをすすめてみましょう。"
+        },
         "courseD_collector_ramp8": {
           "courseD_collector_ramp8_1": "このブロックを使えば、たからものを１つ集めることができます。  "
+        },
+        "courseD_farmer_while72022": {
+          "courseD_farmer_while7_2018_PathAhead": "このパズルでは、`前に道がある間` を使います。"
         },
         "courseD_farmer_while7_2018": {
           "courseD_farmer_while7_2018_PathAhead": "このパズルでは、`前に道がある間` を使います。"
@@ -875,11 +1307,23 @@
         "courseD_farmer_while7_2020": {
           "courseD_farmer_while7_2018_PathAhead": "このパズルでは、`前に道がある間` を使います。"
         },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "このパズルでは、`前に道がある間` を使います。"
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
+        },
         "courseD_maze_intro4_2019": {
           "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
         },
         "courseD_maze_intro4_2020": {
           "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
+        },
+        "courseD_maze_intro5a2022": {
+          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
         },
         "courseD_maze_intro5a_2019": {
           "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
@@ -887,7 +1331,13 @@
         "courseD_maze_intro5a_2020": {
           "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
         },
+        "courseD_maze_intro5a_2021": {
+          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
+        },
         "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
+        },
+        "courseD_maze_ramp12022": {
           "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
         },
         "courseD_maze_ramp1_2018": {
@@ -899,7 +1349,13 @@
         "courseD_maze_ramp1_2020": {
           "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
         },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
+        },
         "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
+        },
+        "courseD_maze_ramp22022": {
           "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
         "courseD_maze_ramp2_2018": {
@@ -911,9 +1367,16 @@
         "courseD_maze_ramp2_2020": {
           "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
         },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
+        },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
           "stone_block_2": "灰色のブロックは消せません。"
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
+          "stone_block_2": "灰色のブロックは、消すことができません。"
         },
         "courseD_maze_ramp3_2018": {
           "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
@@ -924,6 +1387,10 @@
           "stone_block_2": "灰色のブロックは、消すことができません。"
         },
         "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
+          "stone_block_2": "灰色のブロックは、消すことができません。"
+        },
+        "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
           "stone_block_2": "灰色のブロックは、消すことができません。"
         },
@@ -942,6 +1409,9 @@
         "courseD_maze_ramp5": {
           "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
         },
+        "courseD_maze_ramp52022": {
+          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
+        },
         "courseD_maze_ramp5_2018": {
           "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
         },
@@ -949,6 +1419,9 @@
           "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
         },
         "courseD_maze_ramp5_2020": {
+          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
+        },
+        "courseD_maze_ramp5_2021": {
           "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
         },
         "courseD_maze_ramp5a": {
@@ -996,10 +1469,20 @@
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_1": "これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。"
         },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "この数字は かえることができます。",
+          "courseE_artist_ramp8_2": "ここをクリックして、くりかえしの回数をかえてみよう。"
+        },
         "courseE_aboutme_2": {
           "": "ここクリック！"
         },
+        "courseE_aboutme_22022": {
+          "": "ここをクリックして、作品に新しいコスチュームを追加します。"
+        },
         "courseE_aboutme_2_2020": {
+          "": "ここクリック！"
+        },
+        "courseE_aboutme_2_2021": {
           "": "ここクリック！"
         },
         "courseE_artist_functions1": {
@@ -1008,7 +1491,13 @@
         "courseE_artist_functions1_copy": {
           "courseD_artist_functions1_1": "この命令で正方形をかくことから始めよう。"
         },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "この命令で正方形をかくことから始めよう。"
+        },
         "courseE_artist_functions2": {
+          "courseD_artist_functions2_1": "緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？"
+        },
+        "courseE_artist_functions22022": {
           "courseD_artist_functions2_1": "緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？"
         },
         "courseE_artist_functions2_2018": {
@@ -1020,10 +1509,19 @@
         "courseE_artist_functions2_2020": {
           "courseD_artist_functions2_1": "緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？"
         },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？"
+        },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_1": "緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？"
         },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？"
+        },
         "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "関数を作る命令は、ここをクリックすると出てきます。"
+        },
+        "courseE_artist_functions8a2022": {
           "courseD_artist_functions8_1": "関数を作る命令は、ここをクリックすると出てきます。"
         },
         "courseE_artist_functions8a_2018": {
@@ -1035,7 +1533,14 @@
         "courseE_artist_functions8a_2020": {
           "courseD_artist_functions8_1": "関数を作る命令は、ここをクリックすると出てきます。"
         },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "関数を作る命令は、ここをクリックすると出てきます。"
+        },
         "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "この下にプログラムを書きたそう。",
+          "courseE_artist_functions_challenge1_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
+        },
+        "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_callout1": "この下にプログラムを書きたそう。",
           "courseE_artist_functions_challenge1_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
         },
@@ -1051,7 +1556,15 @@
           "courseE_artist_functions_challenge1_callout1": "この下にプログラムを書きたそう。",
           "courseE_artist_functions_challenge1_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
         },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "この下にプログラムを書きたそう。",
+          "courseE_artist_functions_challenge1_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
+        },
         "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "この下にプログラムを書きたそう。",
+          "courseE_artist_functions_challenge2_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
+        },
+        "courseE_artist_functions_challenge22022": {
           "courseE_artist_functions_challenge2_callout1": "この下にプログラムを書きたそう。",
           "courseE_artist_functions_challenge2_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
         },
@@ -1067,6 +1580,10 @@
           "courseE_artist_functions_challenge2_callout1": "この下にプログラムを書きたそう。",
           "courseE_artist_functions_challenge2_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
         },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "この下にプログラムを書きたそう。",
+          "courseE_artist_functions_challenge2_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
+        },
         "courseE_artist_ramp8": {
           "courseE_artist_ramp8_1": "この数字は かえることができます。",
           "courseE_artist_ramp8_2": "ここをクリックして、くりかえしの回数をかえてみよう。"
@@ -1078,6 +1595,12 @@
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_2": "こんどのツールボックスは前とちょっとちがいます。クリックすると そのカテゴリに ある命令が 出てきます。"
         },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "こんどのツールボックスは前とちょっとちがいます。クリックすると そのカテゴリに ある命令が 出てきます。"
+        },
+        "courseE_farmer_functions132022": {
+          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
+        },
         "courseE_farmer_functions13_2018": {
           "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
         },
@@ -1085,6 +1608,9 @@
           "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
         },
         "courseE_farmer_functions13_2020": {
+          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
+        },
+        "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
         },
         "courseE_farmer_functions1_2018": {
@@ -1096,7 +1622,13 @@
         "courseE_farmer_functions1_2020": {
           "courseE_farmer_functions1_2": "こんどのツールボックスは前とちょっとちがいます。クリックすると そのカテゴリに ある命令が 出てきます。"
         },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "こんどのツールボックスは前とちょっとちがいます。クリックすると そのカテゴリに ある命令が 出てきます。"
+        },
         "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
+        },
+        "courseE_farmer_functions1a2022": {
           "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
         },
         "courseE_farmer_functions1a_2018": {
@@ -1108,7 +1640,13 @@
         "courseE_farmer_functions1a_2020": {
           "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
         },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
+        },
         "courseE_farmer_functions2b": {
+          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
+        },
+        "courseE_farmer_functions2b2022": {
           "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
         },
         "courseE_farmer_functions2b_2018": {
@@ -1120,13 +1658,97 @@
         "courseE_farmer_functions2b_2020": {
           "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
         },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
+        },
         "courseE_playLab_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。"
         },
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "はたを目指して 主人公を動かそう。"
         },
+        "courseF_apps_aquarium": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_collector": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_pet": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
         "courseF_artist_for1": {
+          "courseF_artist_for1_1": "ツールボックスは、\"カテゴリー\"モードです。`まで` は、ここにあります。"
+        },
+        "courseF_artist_for12022": {
           "courseF_artist_for1_1": "ツールボックスは、\"カテゴリー\"モードです。`まで` は、ここにあります。"
         },
         "courseF_artist_for1_2018": {
@@ -1136,6 +1758,9 @@
           "courseF_artist_for1_1": "ツールボックスは、\"カテゴリー\"モードです。`まで` は、ここにあります。"
         },
         "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "ツールボックスは、\"カテゴリー\"モードです。`まで` は、ここにあります。"
+        },
+        "courseF_artist_for1_2021": {
           "courseF_artist_for1_1": "ツールボックスは、\"カテゴリー\"モードです。`まで` は、ここにあります。"
         },
         "courseF_artist_fwp1": {
@@ -1192,6 +1817,9 @@
         "courseF_bee_for4": {
           "courseF_bee_for4_1": "`まで`は、ここにあります。"
         },
+        "courseF_bee_for42022": {
+          "courseF_bee_for4_1": "`まで`は、ここにあります。"
+        },
         "courseF_bee_for4_2018": {
           "courseF_bee_for4_1": "`まで`は、ここにあります。"
         },
@@ -1201,7 +1829,13 @@
         "courseF_bee_for4_2020": {
           "courseF_bee_for4_1": "`まで`は、ここにあります。"
         },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "`まで`は、ここにあります。"
+        },
         "courseF_bee_for9": {
+          "courseF_bee_for9_1": "`計算 (けいさん)` ブロックは、ここにあります。"
+        },
+        "courseF_bee_for92022": {
           "courseF_bee_for9_1": "`計算 (けいさん)` ブロックは、ここにあります。"
         },
         "courseF_bee_for9_2018": {
@@ -1211,6 +1845,9 @@
           "courseF_bee_for9_1": "`計算 (けいさん)` ブロックは、ここにあります。"
         },
         "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "`計算 (けいさん)` ブロックは、ここにあります。"
+        },
+        "courseF_bee_for9_2021": {
           "courseF_bee_for9_1": "`計算 (けいさん)` ブロックは、ここにあります。"
         },
         "courseF_bee_functions2": {
@@ -1247,6 +1884,72 @@
         "courseF_bee_variables_1_2020": {
           "courseF_bee_functions_1_2018_1": "変数は、ここにあります。"
         },
+        "courseF_bee_variables_1a2022": {
+          "courseF_bee_functions_1_2018_1": "変数は、ここにあります。"
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "変数は、ここにあります。"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "「とき」を「あいだ」に変えてみましょう。"
+        },
+        "courseF_events_choice_penguin_-2022-2": {
+          "whenToWhile": "「とき」を「あいだ」に変えてみましょう。"
+        },
+        "courseF_events_conflict": {
+          "stops_block": "新しいブロックです！"
+        },
+        "courseF_events_conflict_-2022-2": {
+          "stops_block": "新しいブロックです！"
+        },
+        "courseF_events_key": {
+          "whenKey": "ここにある新しいイベントブロックを使いましょう。"
+        },
+        "courseF_events_key_-2022-2": {
+          "whenKey": "ここにある新しいイベントブロックを使いましょう。"
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "このブロックのじゅんばんは正しくありません。"
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "このブロックのじゅんばんは正しくありません。"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "クリックして どうなっているのか見てみよう。"
+        },
+        "courseF_events_predict_-2022-2": {
+          "behaviors_edit": "クリックして どうなっているのか見てみよう。"
+        },
+        "courseF_events_time": {
+          "events_category": "ここをクリックして、イベントのカテゴリを開きましょう。"
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "ここをクリックして、イベントのカテゴリを開きましょう。"
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
+        },
+        "courseF_label_predict_-2022-2": {
+          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
+        },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_1": "ツールボックスは、必要なブロックを見つけやすいように まとめられています。"
         },
@@ -1259,6 +1962,94 @@
         "courseF_playlab_variables7c": {
           "courseF_playlab_variables7c_1": "`しつもん`ブロックは、ここにあります。"
         },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "ここをクリックして、動きのカテゴリを開きましょう。"
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "ここをクリックして、動きのカテゴリを開きましょう。"
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "ここをクリックして、スプライトのカテゴリを開きましょう。"
+        },
+        "courseF_sprites_make_-2022-2": {
+          "sprites_category": "ここをクリックして、スプライトのカテゴリを開きましょう。"
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "ここをクリックして、場所のカテゴリを開きましょう。"
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "ここをクリックして、場所のカテゴリを開きましょう。"
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "ここで新しいブロックをさがしましょう。"
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "ここで新しいブロックをさがしましょう。"
+        },
+        "courseF_text_answer": {
+          "answered_block": "ここで新しいブロックをさがしましょう。"
+        },
+        "courseF_text_answer_-2022-2": {
+          "answered_block": "ここで新しいブロックをさがしましょう。"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "質問に答えたときに背景の色は変わりましたか？ そうであれば「おわり」をクリックします。 そうでなければ「リセット」を押してコードを変更し、もう一度「実行」を押します。"
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "text_color_finish": "質問に答えたときに背景の色が変わりましたか？ そうであれば「おわり」をクリックします。 そうでないければ「リセット」を押してコードを変更し、もう一度「実行」を押します。"
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "終わりましたか？そうであれば「おわり」を押してください。そうでなければ「リセット」を押して、コードを変更した後、もう一度「実行」を押してください。\n"
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "終わりましたか？そうであれば「おわり」を押してください。そうでなければ「リセット」を押して、コードを変更した後、もう一度「実行」を押してください。\n"
+        },
+        "courseF_text_choice_title": {
+          "text_answer_finish": "タイトル画面が3秒間表示されましたか？ そうであれば、「おわり」をクリックします。 そうでなければ、「リセット」を押してコードを変更し、もう一度「実行」を押します。",
+          "title_block": "ここで2つの新しいブロックを探しましょう！"
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "text_answer_finish": "タイトル画面が3秒間表示されましたか？ そうであれば、「おわり」をクリックします。 そうでなければ、「リセット」を押してコードを変更し、もう一度「実行」を押します。",
+          "title_block": "ここで2つの新しいブロックを探しましょう！"
+        },
+        "courseF_text_concat": {
+          "join_blocks": "ここで新しいブロックをさがしましょう。"
+        },
+        "courseF_text_concat_-2022-2": {
+          "join_blocks": "ここで新しいブロックをさがしましょう。"
+        },
+        "courseF_text_events": {
+          "events_category": "ここをクリックして、イベントのカテゴリを開きましょう。"
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "ここをクリックして、イベントのカテゴリを開きましょう。"
+        },
+        "courseF_text_print": {
+          "print_block": "ここでプリントブロックを見つけましょう！",
+          "text_print_finish": "メッセージが上にプリントされましたか？もしそうならば「おわり」を押してください。そうでなければ「リセット」を押して、コードを変更した後、もう一度「実行」を押してください。\n"
+        },
+        "courseF_text_print_-2022-2": {
+          "print_block": "ここでプリントブロックを見つけましょう！",
+          "text_print_finish": "メッセージが上にプリントされましたか？もしそうならば「おわり」を押してください。そうでなければ「リセット」を押して、コードを変更した後、もう一度「実行」を押してください。\n"
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "ここでプロンプトブロックを見つけましょう！"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "prompt_block": "ここでプロンプトブロックを見つけましょう！"
+        },
+        "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
+        },
+        "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
+        },
+        "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "すべてのブロックを つなげたら、\"実行（じっこう）\" を おしてみよう。"
+        },
         "coursea_maze_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "すべてのブロックを つなげたら、\"実行（じっこう）\" を おしてみよう。"
         },
@@ -1268,10 +2059,29 @@
         "coursea_maze_ramp1_2020": {
           "grade2_CaringForNewPet_0_1": "すべてのブロックを つなげたら、\"実行（じっこう）\" を おしてみよう。"
         },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "すべてのブロックを つなげたら、\"実行（じっこう）\" を おしてみよう。"
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
+        },
+        "coursee_helloworld_say": {
+          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。",
+          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。"
+        },
+        "express_maze_debugging92022": {
+          "express_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
+        },
         "express_maze_debugging9_2019": {
           "express_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
         },
         "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
+        },
+        "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
         },
         "frozen circle function with parameter": {
@@ -1294,8 +2104,8 @@
           "snowflake_dropdown": "このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!"
         },
         "frozen line": {
-          "run": "「実行」ボタンを押してプログラムを試してみてください！",
-          "move_elsa_forward": "エルサをまえにすすませるために、\"まえにうごく\"ブロックをドラッグして\"実行時\"ブロックにくっつけてください。"
+          "move_elsa_forward": "エルサをまえにすすませるために、\"まえにうごく\"ブロックをドラッグして\"実行時\"ブロックにくっつけてください。",
+          "run": "「実行」ボタンを押してプログラムを試してみてください！"
         },
         "frozen perpendicular": {
           "turn_elsa": "\"回転\"ブロックを使ってエルサの向きを変えてください。ドロップダウンの数字でどれくらいエルサを回転させるかを決めます。"
@@ -1327,451 +2137,6 @@
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "注意 数字を入れるだけのブロックがあります。数字のブロックは、他のブロックに入れて使います。"
         },
-        "courseC_video_angles": {
-          "courseD_maze_ramp6_1": "ここに書いた回数だけ、中に書いた命令を実行してから、次の命令を実行します。"
-        },
-        "courseD_video_nestedLoopsArtist": {
-          "courseE_artist_ramp8_1": "この数字は かえることができます。",
-          "courseE_artist_ramp8_2": "ここをクリックして、くりかえしの回数をかえてみよう。"
-        },
-        "CourseD_Dance_2020_01_2021": {
-          "dance_callout_01": "プログラムにこのブロックを追加！"
-        },
-        "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "このブロックをプログラムに追加します。",
-          "arrow_buttons": "矢印ボタンを押してダンサーをコントロールします。"
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "プログラムにこのブロックを追加！"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "dance_callout_05": "プログラムに新しいイベントを追加します。"
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "dance_party_11_5_groups": "新しいブロック！"
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "setprop_hint": "新しいブロック！"
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "new_block_3": "新しいブロック！",
-          "new_block_4": "新しいブロック！"
-        },
-        "Fish Tank 3-validated_2021": {
-          "spritelab_comment": "このブロックを使って、プログラムがどのように動くか あなたや先生のメモを 残すことができます。"
-        },
-        "Function intro Ryan_2021": {
-          "Function_intro_Ryan_1": "このほんの小さな命令が、ワークスペースにある同じ名前をもったぼう大なコードを実行するようコンピューターに命令します。"
-        },
-        "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "これが「繰り返す」ループです!  ワークスペースにあるこれをクリックして、繰り返し実行したいコードを追加しましょう。"
-        },
-        "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Agent は水の上に立つことができますが、プレイヤーはできません!"
-        },
-        "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "これらのブロックは削除できませんが、変更することはできます!"
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_1": "Agent は溶岩の上に立つことができますが、プレイヤーはできません!  "
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "用意されたブロックを使って始めましょう"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "このコードで家を建ててみましょう"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "「実行」ボタンをおして、プログラムを動かしてください。",
-          "craft_drag_block_callout": "`前に すすむ` の下に もうひとつ`前に すすむ`を引っ付けよう。"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "ここにブロックを置いて繰り返しましょう"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "溶岩を調べるコードに前進のコマンドを追加しましょう"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "鉄を掘りましょう！"
-        },
-        "courseA_artist_loops4_2021": {
-          "courseA_artist_loops4_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
-        },
-        "courseA_artist_loops7_2021": {
-          "courseA_artist_loops7_1": "ブロックの左上のかずは このブロックをつかう かいすうです。"
-        },
-        "courseA_artist_loops8_2021": {
-          "courseA_artist_loops8_1": "ライン上を いったり きたりすることが できます。"
-        },
-        "courseA_collector_loops1_2021": {
-          "courseA_collector_loops1_1": "このブロックで たからものを あつめます。"
-        },
-        "courseA_collector_loops3_2021": {
-          "gradek_adventurer_loops2_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
-        },
-        "courseA_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
-        },
-        "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_1": "ヒントが ほしいときは、でんきゅうを クリック！"
-        },
-        "courseA_playLab_events4_2021": {
-          "courseA_playlab_events4_callout1": "これは吹き出し"
-        },
-        "courseA_playLab_events5_2021": {
-          "courseA_playLab_events5_1": "やじるしのほうこうをかえるには、やじるしをおしてください。"
-        },
-        "courseA_playLab_events6_2021": {
-          "courseA_playLab_events6_1": "\"ランダム\"をえらぶと おとが ランダムに かわります。"
-        },
-        "courseB_Scrat_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
-        },
-        "courseB_Scrat_ramp3a_2021": {
-          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
-        },
-        "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_1": "このブロックをつかえるのは、1回だけです。どうやって つかいますか？\n"
-        },
-        "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_1": "このブロックで たからものを あつめます。"
-        },
-        "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1": "ヒントが ほしいときは、でんきゅうを クリック！"
-        },
-        "courseB_playlab_events6_2021": {
-          "courseB_playlab_events6_a": "やじるしのほうこう は、ドロップダウンで かわります。\n"
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "courseE_playLab_scaffold3_1": "はたを目指して 主人公を動かそう。"
-        },
-        "courseC_PlayLab_events8_2021": {
-          "courseC_PlayLab_events8_callout1": "ペンギンが きょうりゅうに さわったとき につかうのは、このブロックです。"
-        },
-        "courseC_PlayLab_events_challenge1_2021": {
-          "courseC_PlayLab_events_challenge1_1": "このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。"
-        },
-        "courseC_artist_loops1a_2021": {
-          "jumpto_callout": "このブロックはたいせつです。かならず、これを使います。"
-        },
-        "courseC_artist_loops1b_2021": {
-          "sticker2": "プログラムに これを ついかしよう。"
-        },
-        "courseC_collector_prog1_2021": {
-          "courseC_collector_prog1_1": "ツールボックスに 新しいブロックが あるのが わかるかな？つかい方は、つぎの パズルで せつめいします。"
-        },
-        "courseC_collector_prog7_2021": {
-          "courseC_collector_prog7_1": "ひつようなブロックがあれば、ツールボックスからとり出そう。"
-        },
-        "courseC_harvester_loops1_2021": {
-          "courseC_harvester_loops1_callout1": "カボチャは、カボチャの右下に 書いてある数だけ あります。"
-        },
-        "courseC_maze_debugging5_2021": {
-          "courseC_maze_debugging5_1": "灰色のブロックは、消すことができません。"
-        },
-        "courseC_maze_debugging9_2021": {
-          "courseC_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
-        },
-        "courseC_maze_programming1_2021": {
-          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
-        },
-        "courseC_maze_programming2_2021": {
-          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
-        },
-        "courseC_maze_programming3_2021": {
-          "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
-          "courseC_maze_programming3_3": "はい色のブロックは けすことが できません。"
-        },
-        "courseC_maze_programming4_2021": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
-        },
-        "courseC_maze_programming5_2021": {
-          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
-        },
-        "courseC_maze_programming7_2021": {
-          "courseC_maze_programming7_1": "これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。",
-          "courseC_maze_programming7_2": "はい色のブロックは、けすことが できません。"
-        },
-        "courseC_starWars_loops2_2021": {
-          "courseC_starWars_loops2": "１つだけブロックを入れます。"
-        },
-        "courseC_starWars_loops2_dani": {
-          "courseC_starWars_loops2": "１つだけブロックを入れます。"
-        },
-        "courseD_artist_nestedLoops1a_2021": {
-          "courseD_artist_nestedLoops1a_1": "パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみよう。"
-        },
-        "courseD_bee_conditionals2_2021": {
-          "4_5_Bee_Conditionals_2_1": "すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。"
-        },
-        "courseD_bee_conditionals2_dani": {
-          "4_5_Bee_Conditionals_2_1": "すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。",
-          "4_5_Bee_Conditionals_2_2": "わからないときは、ここをクリックしてビデオを見てみよう。"
-        },
-        "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge2_1": "花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。"
-        },
-        "courseD_farmer_while7_2021": {
-          "courseD_farmer_while7_2018_PathAhead": "このパズルでは、`前に道がある間` を使います。"
-        },
-        "courseD_maze_intro4_2021": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
-        },
-        "courseD_maze_intro5a_2021": {
-          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
-        },
-        "courseD_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
-        },
-        "courseD_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
-        },
-        "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
-          "stone_block_2": "灰色のブロックは、消すことができません。"
-        },
-        "courseD_maze_ramp5_2021": {
-          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
-        },
-        "courseE_aboutme_2_2021": {
-          "": "ここクリック！"
-        },
-        "courseE_artist_functions1_dani": {
-          "courseD_artist_functions1_1": "この命令で正方形をかくことから始めよう。"
-        },
-        "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_1": "緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？"
-        },
-        "courseE_artist_functions2_dani": {
-          "courseD_artist_functions2_1": "緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？"
-        },
-        "courseE_artist_functions8a_2021": {
-          "courseD_artist_functions8_1": "関数を作る命令は、ここをクリックすると出てきます。"
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "courseE_artist_functions_challenge1_callout1": "この下にプログラムを書きたそう。",
-          "courseE_artist_functions_challenge1_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "courseE_artist_functions_challenge2_callout1": "この下にプログラムを書きたそう。",
-          "courseE_artist_functions_challenge2_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
-        },
-        "courseE_farmer_functions13_2021": {
-          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
-        },
-        "courseE_farmer_functions1_2021": {
-          "courseE_farmer_functions1_2": "こんどのツールボックスは前とちょっとちがいます。クリックすると そのカテゴリに ある命令が 出てきます。"
-        },
-        "courseE_farmer_functions1a_2021": {
-          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
-        },
-        "courseE_farmer_functions2b_2021": {
-          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
-        },
-        "courseF_artist_for1_2021": {
-          "courseF_artist_for1_1": "ツールボックスは、\"カテゴリー\"モードです。`まで` は、ここにあります。"
-        },
-        "courseF_bee_for4_2021": {
-          "courseF_bee_for4_1": "`まで`は、ここにあります。"
-        },
-        "courseF_bee_for9_2021": {
-          "courseF_bee_for9_1": "`計算 (けいさん)` ブロックは、ここにあります。"
-        },
-        "courseF_bee_variables_1a_2021": {
-          "courseF_bee_functions_1_2018_1": "変数は、ここにあります。"
-        },
-        "courseF_events_predict": {
-          "behaviors_edit": "クリックして どうなっているのか見てみよう。"
-        },
-        "coursea_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "すべてのブロックを つなげたら、\"実行（じっこう）\" を おしてみよう。"
-        },
-        "express_maze_debugging9_2021": {
-          "express_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
-        },
-        "courseF_apps_aquarium": {
-          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_card": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_chatbot": {
-          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_collector": {
-          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_madlib": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_pet": {
-          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_editable_card": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_editable_chatbot": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_editable_madlib": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_sprites_behaviors": {
-          "behaviors_category": "ここをクリックして、動きのカテゴリを開きましょう。"
-        },
-        "courseA_EOC_playlab_animals": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people": {
-          "question_mark": "?"
-        },
-        "courseF_sprites_make": {
-          "sprites_category": "ここをクリックして、スプライトのカテゴリを開きましょう。"
-        },
-        "courseF_sprites_positioning": {
-          "locations_category": "ここをクリックして、場所のカテゴリを開きましょう。"
-        },
-        "courseF_sprites_properties": {
-          "sprites_category2": "ここで新しいブロックをさがしましょう。"
-        },
-        "courseC_artist_prog2_2021": {
-          "slider": "ここでプログラムのスピードをゆっくりにできます。"
-        },
-        "courseF_events_time": {
-          "events_category": "ここをクリックして、イベントのカテゴリを開きましょう。"
-        },
-        "courseF_text_events": {
-          "events_category": "ここをクリックして、イベントのカテゴリを開きましょう。"
-        },
-        "courseF_events_conflict": {
-          "stops_block": "新しいブロックです！"
-        },
-        "courseF_events_key": {
-          "whenKey": "ここにある新しいイベントブロックを使いましょう。"
-        },
-        "courseF_text_print": {
-          "print_block": "ここでプリントブロックを見つけましょう！",
-          "text_print_finish": "メッセージが上にプリントされましたか？もしそうならば「おわり」を押してください。そうでなければ「リセット」を押して、コードを変更した後、もう一度「実行」を押してください。\n"
-        },
-        "courseF_text_prompts": {
-          "prompt_block": "ここでプロンプトブロックを見つけましょう！"
-        },
-        "CourseF_outbreak2": {
-          "minitoolbox": "ブロックを展開するには、ここをクリック。",
-          "pointerlocation": "「主語」ブロックをここにドラッグする。"
-        },
-        "CourseF_outbreak7": {
-          "costumes_callout": "クリックして新しいコスチュームを追加"
-        },
-        "Virtual Pet 2_2021": {
-          "vp_costumes": "ここをクリックして新しいコスチュームをプロジェクトにつけ足しましょう。"
-        },
-        "Virtual Pet 6_2021": {
-          "vp_costumes": "ここをクリックして新しいコスチュームをプロジェクトにつけ足しましょう。"
-        },
-        "courseD_bee_nestedLoops1a_2021": {
-          "stepButton": "一度に1ブロックずつコードをすすめてみましょう。"
-        },
-        "courseF_events_choice_penguin": {
-          "whenToWhile": "「とき」を「あいだ」に変えてみましょう。"
-        },
-        "courseF_events_practice_reorder": {
-          "stopAllBug": "このブロックのじゅんばんは正しくありません。"
-        },
-        "courseF_label_predict": {
-          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
-        },
-        "courseF_text_answer": {
-          "answered_block": "ここで新しいブロックをさがしましょう。"
-        },
-        "courseF_text_choice_color": {
-          "text_color_finish": "質問に答えたときに背景の色は変わりましたか？ そうであれば「おわり」をクリックします。 そうでなければ「リセット」を押してコードを変更し、もう一度「実行」を押します。"
-        },
-        "courseF_text_choice_conversation": {
-          "text_generic_finish": "終わりましたか？そうであれば「おわり」を押してください。そうでなければ「リセット」を押して、コードを変更した後、もう一度「実行」を押してください。\n"
-        },
-        "courseF_text_choice_title": {
-          "title_block": "ここで2つの新しいブロックを探しましょう！",
-          "text_answer_finish": "タイトル画面が3秒間表示されましたか？ そうであれば、「おわり」をクリックします。 そうでなければ、「リセット」を押してコードを変更し、もう一度「実行」を押します。"
-        },
-        "courseF_text_concat": {
-          "join_blocks": "ここで新しいブロックをさがしましょう。"
-        },
-        "courseF_variables_predict": {
-          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
-        },
-        "helloworld_animals_costumes": {
-          "hello_world_new": "新しいブロック！"
-        },
-        "helloworld_animals_sizes": {
-          "hello_world_new": "新しいブロック！",
-          "hello_world_new_block": "新しいブロック!!!!"
-        },
-        "helloworld_animals_sounds": {
-          "hello_world_new": "新しいブロック！"
-        },
-        "helloworld_emoji_costumes": {
-          "hello_world_new": "新しいブロック！"
-        },
-        "helloworld_emoji_sizes": {
-          "hello_world_new": "新しいブロック！",
-          "hello_world_new_block": "新しいブロック！"
-        },
-        "helloworld_emoji_sounds": {
-          "hello_world_new": "新しいブロック！"
-        },
-        "helloworld_food_costumes": {
-          "hello_world_new": "新しいブロック！"
-        },
-        "helloworld_food_sizes": {
-          "hello_world_new": "新しいブロック！",
-          "hello_world_new_block": "新しいブロック！"
-        },
-        "helloworld_food_sounds": {
-          "hello_world_new": "新しいブロック！"
-        },
-        "helloworld_retro_costumes": {
-          "hello_world_new": "新しいブロック！"
-        },
-        "helloworld_retro_sizes": {
-          "hello_world_new": "新しいブロック！",
-          "hello_world_new_block": "新しいブロック！"
-        },
-        "helloworld_retro_sounds": {
-          "hello_world_new": "新しいブロック！"
-        },
-        "poetry_hoc_addSprites": {
-          "poetry_sprite": "新しいブロック！"
-        },
-        "poetry_hoc_events1": {
-          "poetry_event": "新しいブロック！",
-          "poetry_foreground": "新しいブロック！"
-        },
-        "poetry_hoc_freeplay": {
-          "poetry_burst": "新しいブロック！",
-          "poetry_multiple_sprites": "新しいブロック！",
-          "poetry_new_block": "新しいブロック！",
-          "poetry_selector": "任意の詩を選ぶか、自分の詩を入力しましょう。"
-        },
-        "poetry_hoc_sounds": {
-          "poetry_sound": "新しいブロック！",
-          "poetry_music": "新しいブロック！"
-        },
-        "poetry_hoc_spriteBehaviors": {
-          "poetry_sprite_begins": "新しいブロック！",
-          "poetry_sprite_stops": "新しいブロック！"
-        },
-        "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "新しいブロック！",
-          "poetry_remove_sprite": "新しいブロック！"
-        },
         "helloworld_animals_backgrounds": {
           "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
         },
@@ -1780,6 +2145,9 @@
         },
         "helloworld_animals_click": {
           "hw_Run": "コードを実行するには、ここをクリックします。"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "新しいブロック！"
         },
         "helloworld_animals_events": {
           "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
@@ -1794,8 +2162,15 @@
           "pin": "ピン"
         },
         "helloworld_animals_say": {
-          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。",
-          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。"
+          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。",
+          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "新しいブロック！"
         },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
@@ -1805,6 +2180,9 @@
         },
         "helloworld_emoji_click": {
           "hw_Run": "コードを実行するには、ここをクリックします。"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "新しいブロック！"
         },
         "helloworld_emoji_events": {
           "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
@@ -1819,33 +2197,120 @@
           "pin": "ピン"
         },
         "helloworld_emoji_say": {
-          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。",
-          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。"
+          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。",
+          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック！"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "新しいブロック！"
         },
         "helloworld_food_backgrounds": {
+          "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
+        },
+        "helloworld_food_backgrounds_space-2022": {
           "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
         },
         "helloworld_food_behaviors": {
           "hello_world_behavior_blocks": "下のビヘイビアの1つを含むこのブロックを使います。"
         },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "下のビヘイビアの1つを含むこのブロックを使います。"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "下のビヘイビアの1つを含むこのブロックを使います。"
+        },
         "helloworld_food_click": {
           "hw_Run": "コードを実行するには、ここをクリックします。"
         },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "コードを実行するには、ここをクリックします。"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "まずはここをクリック！"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "新しいブロック！"
+        },
         "helloworld_food_events": {
+          "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
+        },
+        "helloworld_food_events_space-2022": {
           "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
         },
         "helloworld_food_freeplay": {
           "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
         },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
+        },
         "helloworld_food_location": {
+          "pin": "ピン"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "ピン"
+        },
+        "helloworld_food_location_space-2022": {
           "pin": "ピン"
         },
         "helloworld_food_multi": {
           "pin": "ピン"
         },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "ピン"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "ピン"
+        },
         "helloworld_food_say": {
-          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。",
-          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。"
+          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。",
+          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。",
+          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。",
+          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック！"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック！"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック！"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "新しいブロック！"
         },
         "helloworld_retro_backgrounds": {
           "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
@@ -1855,6 +2320,9 @@
         },
         "helloworld_retro_click": {
           "hw_Run": "コードを実行するには、ここをクリックします。"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "新しいブロック！"
         },
         "helloworld_retro_events": {
           "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
@@ -1869,513 +2337,45 @@
           "pin": "ピン"
         },
         "helloworld_retro_say": {
-          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。",
-          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。"
+          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。",
+          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック！"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "新しいブロック！"
         },
         "poetry_hoc_backgroundEffects": {
-          "poetry_background": "こちらでコードブロックを探します。",
           "pause_button": "このボタンでアニメーションをテストします。",
+          "poetry_background": "こちらでコードブロックを探します。",
           "run_button": "このボタンでアニメーションをテストします。"
         },
-        "New Artist Project": {
-          "New Artist Project_callout1": "カテゴリをクリックして、ツールボックスのブロックを見てみましょう！ブロックをワークスペースにドラッグすると、プログラムに追加できます。",
-          "New Artist Project_callout2": "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。",
-          "sign_in_to_save_project": "後でプロジェクトにアクセスしたいと考えていますか？ サインインすると、このプロジェクトをアカウントに保存できます！"
-        },
-        "New Play Lab Project": {
-          "New Play Lab Project_callout1": "カテゴリをクリックして、ツールボックスのブロックを見てみましょう！ブロックをワークスペースにドラッグすると、プログラムに追加できます。",
-          "New Play Lab Project_callout2": "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。",
-          "sign_in_to_save_project": "後でプロジェクトにアクセスしたいと考えていますか？ サインインすると、このプロジェクトをアカウントに保存できます！"
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-          "AppLabHoCFinal11": "デザイン・モードです。"
-        },
-        "courseA_collector_preLoops1": {
-          "courseA_collector_preLoops1_1": "ここをクリックしてプログラムが動くのを見てみよう！"
-        },
-        "New Sprite Lab Project": {
-          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。",
-          "make_sprite": "Spriteを作成するには、ここのブロックを使用します！"
-        },
-        "CourseD_Dance_2020_012022": {
-          "dance_callout_01": "プログラムにこのブロックを追加！"
-        },
-        "CourseD_Dance_2020_022022": {
-          "dance_callout_11_a": "このブロックをプログラムに追加します。",
-          "arrow_buttons": "矢印ボタンを押してダンサーをコントロールします。"
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "プログラムにこのブロックを追加！"
-        },
-        "CourseD_Dance_2020_052022": {
-          "dance_callout_05": "プログラムに新しいイベントを追加します。"
-        },
-        "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "新しいブロック！"
-        },
-        "CourseD_Dance_2020_072022": {
-          "setprop_hint": "新しいブロック！"
-        },
-        "CourseD_Dance_2020_092022": {
-          "new_block_3": "新しいブロック！",
-          "new_block_4": "新しいブロック！"
-        },
-        "CourseF_outbreak2_-2022-2": {
-          "minitoolbox": "ブロックを展開するには、ここをクリック。",
-          "pointerlocation": "「主語」ブロックをここにドラッグする。"
-        },
-        "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
-        },
-        "Fish Tank 3-validated2022": {
-          "spritelab_comment": "このブロックを使って、プログラムがどのように動くか あなたや先生のメモを 残すことができます。"
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_1": "このほんの小さな命令が、ワークスペースにある同じ名前をもったぼう大なコードを実行するようコンピューターに命令します。"
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_1": "これが「繰り返す」ループです!  ワークスペースにあるこれをクリックして、繰り返し実行したいコードを追加しましょう。"
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "Agent は水の上に立つことができますが、プレイヤーはできません!"
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_1": "これらのブロックは削除できませんが、変更することはできます!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_1": "Agent は溶岩の上に立つことができますが、プレイヤーはできません!  "
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "用意されたブロックを使って始めましょう"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "このコードで家を建ててみましょう"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "「実行」ボタンをおして、プログラムを動かしてください。",
-          "craft_drag_block_callout": "`前に すすむ` の下に もうひとつ`前に すすむ`を引っ付けよう。"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "ここにブロックを置いて繰り返しましょう"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "溶岩を調べるコードに前進のコマンドを追加しましょう"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "鉄を掘りましょう！"
-        },
-        "Virtual Pet 2_-2022-2": {
-          "vp_costumes": "ここをクリックして新しいコスチュームをプロジェクトにつけ足しましょう。"
-        },
-        "Virtual Pet 6_-2022-2": {
-          "vp_costumes": "ここをクリックして新しいコスチュームをプロジェクトにつけ足しましょう。"
-        },
-        "courseA_EOC_playlab_animals2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people2022": {
-          "question_mark": "?"
-        },
-        "courseA_artist_loops42022": {
-          "courseA_artist_loops4_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
-        },
-        "courseA_artist_loops72022": {
-          "courseA_artist_loops7_1": "ブロックの左上のかずは このブロックをつかう かいすうです。"
-        },
-        "courseA_artist_loops82022": {
-          "courseA_artist_loops8_1": "ライン上を いったり きたりすることが できます。"
-        },
-        "courseA_collector_loops12022": {
-          "courseA_collector_loops1_1": "このブロックで たからものを あつめます。"
-        },
-        "courseA_collector_loops32022": {
-          "gradek_adventurer_loops2_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
-        },
-        "courseA_maze_ramp22022": {
-          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
-        },
-        "courseA_maze_seq12022": {
-          "courseA_maze_seq1_1": "ヒントが ほしいときは、でんきゅうを クリック！"
-        },
-        "courseA_playLab_events42022": {
-          "courseA_playlab_events4_callout1": "これは吹き出し"
-        },
-        "courseA_playLab_events52022": {
-          "courseA_playLab_events5_1": "やじるしのほうこうをかえるには、やじるしをおしてください。"
-        },
-        "courseA_playLab_events62022": {
-          "courseA_playLab_events6_1": "\"ランダム\"をえらぶと おとが ランダムに かわります。"
-        },
-        "courseB_Scrat_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
-        },
-        "courseB_Scrat_ramp3a2022": {
-          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
-        },
-        "courseB_artist_loops32022": {
-          "courseB_artist_loops3_1": "このブロックをつかえるのは、1回だけです。どうやって つかいますか？\n"
-        },
-        "courseB_collector_loops12022": {
-          "courseB_collector_loops1_1": "このブロックで たからものを あつめます。"
-        },
-        "courseB_maze_seq12022": {
-          "courseB_maze_seq1": "ヒントが ほしいときは、でんきゅうを クリック！"
-        },
-        "courseB_playlab_events62022": {
-          "courseB_playlab_events6_a": "やじるしのほうこう は、ドロップダウンで かわります。\n"
-        },
-        "courseC19_playLab_EOC32022": {
-          "courseE_playLab_scaffold3_1": "はたを目指して 主人公を動かそう。"
-        },
-        "courseC_PlayLab_events82022": {
-          "courseC_PlayLab_events8_callout1": "ペンギンが きょうりゅうに さわったとき につかうのは、このブロックです。"
-        },
-        "courseC_PlayLab_events_challenge12022": {
-          "courseC_PlayLab_events_challenge1_1": "このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。"
-        },
-        "courseC_PlayLab_events_lesson_extras": {
-          "courseC_PlayLab_events_challenge1_1": "このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。"
-        },
-        "courseC_artist_loops1a2022": {
-          "jumpto_callout": "このブロックはたいせつです。かならず、これを使います。"
-        },
-        "courseC_artist_loops1b2022": {
-          "sticker2": "プログラムに これを ついかしよう。"
-        },
-        "courseC_artist_prog22022": {
-          "slider": "ここでプログラムのスピードを落とせます。"
-        },
-        "courseC_collector_prog12022": {
-          "courseC_collector_prog1_1": "ツールボックスに 新しいブロックが あるのが わかるかな？つかい方は、つぎの パズルで せつめいします。"
-        },
-        "courseC_collector_prog72022": {
-          "courseC_collector_prog7_1": "ひつようなブロックがあれば、ツールボックスからとり出そう。"
-        },
-        "courseC_harvester_loops12022": {
-          "courseC_harvester_loops1_callout1": "カボチャは、カボチャの右下に 書いてある数だけ あります。"
-        },
-        "courseC_maze_debugging52022": {
-          "courseC_maze_debugging5_1": "灰色のブロックは、消すことができません。"
-        },
-        "courseC_maze_debugging92022": {
-          "courseC_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
-        },
-        "courseC_maze_programming12022": {
-          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
-        },
-        "courseC_maze_programming22022": {
-          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
-        },
-        "courseC_maze_programming32022": {
-          "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
-          "courseC_maze_programming3_3": "はい色のブロックは けすことが できません。"
-        },
-        "courseC_maze_programming42022": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
-        },
-        "courseC_maze_programming52022": {
-          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
-        },
-        "courseC_maze_programming72022": {
-          "courseC_maze_programming7_1": "これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。",
-          "courseC_maze_programming7_2": "はい色のブロックは、けすことが できません。"
-        },
-        "courseC_starWars_loops22022": {
-          "courseC_starWars_loops2": "１つだけブロックを入れます。"
-        },
-        "courseD_artist_nestedLoops1a2022": {
-          "courseD_artist_nestedLoops1a_1": "パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみよう。"
-        },
-        "courseD_bee_conditionals22022": {
-          "4_5_Bee_Conditionals_2_1": "すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。"
-        },
-        "courseD_bee_conditionals_challenge22022": {
-          "courseD_bee_conditionals_challenge2_1": "花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。"
-        },
-        "courseD_bee_nestedLoops1a2022": {
-          "stepButton": "一度に1ブロックずつコードをすすめてみましょう。"
-        },
-        "courseD_farmer_while72022": {
-          "courseD_farmer_while7_2018_PathAhead": "このパズルでは、`前に道がある間` を使います。"
-        },
-        "courseD_maze_intro42022": {
-          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
-        },
-        "courseD_maze_intro5a2022": {
-          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
-        },
-        "courseD_maze_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
-        },
-        "courseD_maze_ramp22022": {
-          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
-        },
-        "courseD_maze_ramp32022": {
-          "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
-          "stone_block_2": "灰色のブロックは、消すことができません。"
-        },
-        "courseD_maze_ramp52022": {
-          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
-        },
-        "courseE_aboutme_22022": {
-          "": "ここをクリックして、作品に新しいコスチュームを追加します。"
-        },
-        "courseE_artist_functions22022": {
-          "courseD_artist_functions2_1": "緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？"
-        },
-        "courseE_artist_functions8a2022": {
-          "courseD_artist_functions8_1": "関数を作る命令は、ここをクリックすると出てきます。"
-        },
-        "courseE_artist_functions_challenge12022": {
-          "courseE_artist_functions_challenge1_callout1": "この下にプログラムを書きたそう。",
-          "courseE_artist_functions_challenge1_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
-        },
-        "courseE_artist_functions_challenge22022": {
-          "courseE_artist_functions_challenge2_callout1": "この下にプログラムを書きたそう。",
-          "courseE_artist_functions_challenge2_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
-        },
-        "courseE_farmer_functions12022": {
-          "courseE_farmer_functions1_2": "こんどのツールボックスは前とちょっとちがいます。クリックすると そのカテゴリに ある命令が 出てきます。"
-        },
-        "courseE_farmer_functions132022": {
-          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
-        },
-        "courseE_farmer_functions1a2022": {
-          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
-        },
-        "courseE_farmer_functions2b2022": {
-          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
-        },
-        "courseF_apps_aquarium2022": {
-          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_aquarium_-2022-2": {
-          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_card2022": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_card_-2022-2": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_chatbot2022": {
-          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_chatbot_-2022-2": {
-          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_collector2022": {
-          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_collector_-2022-2": {
-          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_collector_drag_-2022-2": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_collector_drive_-2022-2": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_collector_move2_-2022-2": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_collector_move_-2022-2": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_madlib2022": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_madlib_-2022-2": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_pet2022": {
-          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_apps_pet_-2022-2": {
-          "run_button": "まず実行（じっこう）ボタンをクリックしてみましょう！",
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_artist_for12022": {
-          "courseF_artist_for1_1": "ツールボックスは、\"カテゴリー\"モードです。`まで` は、ここにあります。"
-        },
-        "courseF_bee_for42022": {
-          "courseF_bee_for4_1": "`まで`は、ここにあります。"
-        },
-        "courseF_bee_for92022": {
-          "courseF_bee_for9_1": "`計算 (けいさん)` ブロックは、ここにあります。"
-        },
-        "courseF_bee_variables_1a2022": {
-          "courseF_bee_functions_1_2018_1": "変数は、ここにあります。"
-        },
-        "courseF_editable_card_-2022-2": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_editable_chatbot_-2022-2": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_editable_madlib_-2022-2": {
-          "visualizationResizeBar": "3つのドットをドラッグして、プレイエリアのサイズを変更しましょう。"
-        },
-        "courseF_events_choice_penguin_-2022-2": {
-          "whenToWhile": "「とき」を「あいだ」に変えてみましょう。"
-        },
-        "courseF_events_conflict_-2022-2": {
-          "stops_block": "新しいブロックです！"
-        },
-        "courseF_events_key_-2022-2": {
-          "whenKey": "ここにある新しいイベントブロックを使いましょう。"
-        },
-        "courseF_events_practice_reorder_-2022-2": {
-          "stopAllBug": "このブロックのじゅんばんは正しくありません。"
-        },
-        "courseF_events_predict_-2022-2": {
-          "behaviors_edit": "クリックして どうなっているのか見てみよう。"
-        },
-        "courseF_events_time_-2022-2": {
-          "events_category": "ここをクリックして、イベントのカテゴリを開きましょう。"
-        },
-        "courseF_label_predict_-2022-2": {
-          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
-        },
-        "courseF_sprites_behaviors_-2022-2": {
-          "behaviors_category": "ここをクリックして、動きのカテゴリを開きましょう。"
-        },
-        "courseF_sprites_make_-2022-2": {
-          "sprites_category": "ここをクリックして、スプライトのカテゴリを開きましょう。"
-        },
-        "courseF_sprites_positioning_-2022-2": {
-          "locations_category": "ここをクリックして、場所のカテゴリを開きましょう。"
-        },
-        "courseF_sprites_properties_-2022-2": {
-          "sprites_category2": "ここで新しいブロックをさがしましょう。"
-        },
-        "courseF_text_answer_-2022-2": {
-          "answered_block": "ここで新しいブロックをさがしましょう。"
-        },
-        "courseF_text_choice_color_-2022-2": {
-          "text_color_finish": "質問に答えたときに背景の色が変わりましたか？ そうであれば「おわり」をクリックします。 そうでないければ「リセット」を押してコードを変更し、もう一度「実行」を押します。"
-        },
-        "courseF_text_choice_conversation_-2022-2": {
-          "text_generic_finish": "終わりましたか？そうであれば「おわり」を押してください。そうでなければ「リセット」を押して、コードを変更した後、もう一度「実行」を押してください。\n"
-        },
-        "courseF_text_choice_title_-2022-2": {
-          "title_block": "ここで2つの新しいブロックを探しましょう！",
-          "text_answer_finish": "タイトル画面が3秒間表示されましたか？ そうであれば、「おわり」をクリックします。 そうでなければ、「リセット」を押してコードを変更し、もう一度「実行」を押します。"
-        },
-        "courseF_text_concat_-2022-2": {
-          "join_blocks": "ここで新しいブロックをさがしましょう。"
-        },
-        "courseF_text_events_-2022-2": {
-          "events_category": "ここをクリックして、イベントのカテゴリを開きましょう。"
-        },
-        "courseF_text_print_-2022-2": {
-          "print_block": "ここでプリントブロックを見つけましょう！",
-          "text_print_finish": "メッセージが上にプリントされましたか？もしそうならば「おわり」を押してください。そうでなければ「リセット」を押して、コードを変更した後、もう一度「実行」を押してください。\n"
-        },
-        "courseF_text_prompts_-2022-2": {
-          "prompt_block": "ここでプロンプトブロックを見つけましょう！"
-        },
-        "courseF_variables2_predict_-2022-2": {
-          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
-        },
-        "courseF_variables_predict_-2022-2": {
-          "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
-        },
-        "coursea_maze_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "すべてのブロックを つなげたら、\"実行（じっこう）\" を おしてみよう。"
-        },
-        "coursee_helloworld_events": {
-          "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
-        },
-        "coursee_helloworld_freeplay": {
-          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
-        },
-        "coursee_helloworld_say": {
-          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。",
-          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。"
-        },
-        "express_maze_debugging92022": {
-          "express_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
-        },
-        "helloworld_food_backgrounds_soccer-2022": {
-          "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
-        },
-        "helloworld_food_backgrounds_space-2022": {
-          "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
-        },
-        "helloworld_food_behaviors_soccer-2022": {
-          "hello_world_behavior_blocks": "下のビヘイビアの1つを含むこのブロックを使います。"
-        },
-        "helloworld_food_behaviors_space-2022": {
-          "hello_world_behavior_blocks": "下のビヘイビアの1つを含むこのブロックを使います。"
-        },
-        "helloworld_food_click_soccer-2022": {
-          "hw_Run": "コードを実行するには、ここをクリックします。"
-        },
-        "helloworld_food_costumes_soccer-2022": {
-          "hello_world_new": "新しいブロック！"
-        },
-        "helloworld_food_costumes_space-2022": {
-          "hello_world_new": "新しいブロック！"
-        },
-        "helloworld_food_events_soccer-2022": {
-          "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
-        },
-        "helloworld_food_events_space-2022": {
-          "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
-        },
-        "helloworld_food_freeplay_soccer-2022": {
-          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
-        },
-        "helloworld_food_freeplay_space-2022": {
-          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
-        },
-        "helloworld_food_location_soccer-2022": {
-          "pin": "ピン"
-        },
-        "helloworld_food_location_space-2022": {
-          "pin": "ピン"
-        },
-        "helloworld_food_multi_soccer-2022": {
-          "pin": "ピン"
-        },
-        "helloworld_food_multi_space-2022": {
-          "pin": "ピン"
-        },
-        "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。",
-          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。"
-        },
-        "helloworld_food_say_space-2022": {
-          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。",
-          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。"
-        },
-        "helloworld_food_sizes_soccer-2022": {
-          "hello_world_new": "新しいブロック！",
-          "hello_world_new_block": "新しいブロック！"
-        },
-        "helloworld_food_sizes_space-2022": {
-          "hello_world_new": "新しいブロック！",
-          "hello_world_new_block": "新しいブロック！"
-        },
-        "helloworld_food_sounds_soccer-2022": {
-          "hello_world_new": "新しいブロック！"
-        },
-        "helloworld_food_sounds_space-2022": {
-          "hello_world_new": "新しいブロック！"
-        },
-        "helloworld_food_click_space-2022": {
-          "hw_Run": "まずはここをクリック！"
+        "poetry_hoc_events1": {
+          "poetry_event": "新しいブロック！",
+          "poetry_foreground": "新しいブロック！"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "新しいブロック！",
+          "poetry_multiple_sprites": "新しいブロック！",
+          "poetry_new_block": "新しいブロック！",
+          "poetry_selector": "任意の詩を選ぶか、自分の詩を入力しましょう。"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_music": "新しいブロック！",
+          "poetry_sound": "新しいブロック！"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "新しいブロック！",
+          "poetry_sprite_stops": "新しいブロック！"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "新しいブロック！",
+          "poetry_set_sprite": "新しいブロック！"
         }
       }
     }

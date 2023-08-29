@@ -2,31 +2,19 @@
   "ko-KR": {
     "data": {
       "announcements": {
-        "8f212dd2-169f-4a3d-9880-f76d3372b6c1": {
-          "buttonText": "더 알아보기"
-        },
-        "a3109564-513f-47c8-bdf3-d69a19f5149e": {
-          "buttonText": "더 알아보기"
-        },
-        "9b45f4aa-6b0a-44d7-9813-8e724baca343": {
-          "buttonText": "더 알아보기"
-        },
-        "26f29937-fd4e-4738-8dfe-459f286636f4": {
-          "buttonText": "더 알아보기"
-        },
-        "b7bff9e1-22bd-4f95-bb95-68e91fd5b3a3": {
-          "buttonText": "더 알아보기"
-        },
         "79a249d7-fb90-4e9c-bd8b-e7884ad2034b": {
-          "buttonText": "더 알아보기"
-        },
-        "b5b0c936-3bc6-4e69-8796-e205d103151f": {
           "buttonText": "더 알아보기"
         },
         "f1160bfc-3ae9-41a1-8ac9-1c9e7de4afeb": {
           "buttonText": "더 알아보기"
         },
+        "b5b0c936-3bc6-4e69-8796-e205d103151f": {
+          "buttonText": "더 알아보기"
+        },
         "2e1b13ae-2ab8-4996-bf23-ca3e0fa1f8be": {
+          "buttonText": "더 알아보기"
+        },
+        "b7bff9e1-22bd-4f95-bb95-68e91fd5b3a3": {
           "buttonText": "더 알아보기"
         },
         "cd936bbe-e57c-4568-aad1-832ee483d149": {
@@ -35,6 +23,18 @@
         "ed6a61e5-23b1-4249-a182-874156f2d135": {
           "notice": "AI 및 머신 러닝 교육 지원",
           "details": "이 과정을 가르치는 데 관심이 있으면, 무료 AI 및 머신 러닝 자습형 전문 학습 모듈을 완료할 것을 추천드립니다. 이 모듈은 완료하는 데 2시간이 걸리도록 설계되었습니다. 코딩이나 AI에 대한 이전 경험은 없어도 됩니다.",
+          "buttonText": "더 알아보기"
+        },
+        "26f29937-fd4e-4738-8dfe-459f286636f4": {
+          "buttonText": "더 알아보기"
+        },
+        "8f212dd2-169f-4a3d-9880-f76d3372b6c1": {
+          "buttonText": "더 알아보기"
+        },
+        "9b45f4aa-6b0a-44d7-9813-8e724baca343": {
+          "buttonText": "더 알아보기"
+        },
+        "a3109564-513f-47c8-bdf3-d69a19f5149e": {
           "buttonText": "더 알아보기"
         }
       }

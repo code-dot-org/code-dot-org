@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: Valanda kodo How-To rajonams
 ---
 
 {{ signup_button }}

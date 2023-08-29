@@ -8,7 +8,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    Level.any_instance.stubs(:write_to_file?).returns(false) # don't write to level files
+    Policies::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
 
     @level = create(:level)
     @partner_level = create :level, editor_experiment: 'platformization-partners'
@@ -83,7 +83,7 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     body = JSON.parse(response.body)
-    assert_equal({"levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze"}, body)
+    assert_equal({"levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze"}, body)
   end
 
   test "should get filtered levels with just page param" do
@@ -494,7 +494,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should create and destroy custom level with level file" do
     # Enable writing custom level to file for this specific test only
-    Level.any_instance.stubs(:write_to_file?).returns(true)
+    Policies::LevelFiles.stubs(:write_to_file?).returns(true)
 
     level_name = 'TestCustomLevel'
     begin
@@ -504,12 +504,11 @@ class LevelsControllerTest < ActionController::TestCase
         program: @program
       }
       level = Level.find_by(name: level_name)
-      file_path = Level.level_file_path(level.name)
+      file_path = Policies::LevelFiles.level_file_path(level)
       assert_equal true, file_path && File.exist?(file_path)
       delete :destroy, params: {id: level}
       assert_equal false, file_path && File.exist?(file_path)
     ensure
-      file_path = Level.level_file_path(level_name)
       File.delete(file_path) if file_path && File.exist?(file_path)
     end
   end

@@ -76,6 +76,7 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
    * `getText` due to ellipsis, and other formatting.
    *
    * @returns Text to display.
+   * @override
    */
   getDisplayText_() {
     return '';

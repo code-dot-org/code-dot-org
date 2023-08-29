@@ -3,28 +3,52 @@ tg:
   data:
     script:
       name:
-        course1:
-          title: Дарси 1
-          description_audience: 'Синну сол: 4-6'
-        course2:
-          title: Дарси 2
-          description_audience: 'Синну сол: 6-18'
-        course3:
-          title: Дарси 3
-          description_audience: 'Синну сол: 8-18'
-        course4:
-          title: Дарси 4
-          description_audience: 'Синну сол: 9-18'
         20-hour:
           description_audience: 'Синну сол: 10-18'
-        asUnplugged:
-          description_audience: 'Синну сол: 6-13'
-        afterschool1:
-          description_audience: 'Синну сол: 7-13'
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Соати рамз
+        CSF_Secret_Sample:
+          description_audience: 'Синну сол: 8-18'
+        CSF_Secret_Sample_Story:
+          description_audience: 'Синну сол: 8-18+'
+        MikeTest:
+          description_audience: 'Синну сол: 8-98'
         Special Fun:
           description_audience: 'Синну сол: 10-18'
         SpecialSeries:
           description_audience: 'Синну сол: 10-18'
+        afterschool1:
+          description_audience: 'Синну сол: 7-13'
+        artistExemplar:
+          description_audience: 'Синну сол: 8-18'
+        asUnplugged:
+          description_audience: 'Синну сол: 6-13'
+        course1:
+          description_audience: 'Синну сол: 4-6'
+          title: Дарси 1
+        course2:
+          description_audience: 'Синну сол: 6-18'
+          title: Дарси 2
+        course3:
+          description_audience: 'Синну сол: 8-18'
+          title: Дарси 3
+        course4:
+          description_audience: 'Синну сол: 9-18'
+          title: Дарси 4
+        grade1:
+          description_audience: 'Синну сол: 5-18'
+        grade2:
+          description_audience: 'Синну сол: 5-18'
+        grade3:
+          description_audience: 'Синну сол: 5-18'
+        grade4:
+          description_audience: 'Синну сол: 9-99'
+        grade5:
+          description_audience: 'Синну сол: 10-110'
+        gradeKinder:
+          description_audience: 'Синну сол: 5-18'
         starwars:
           description: Барномарезии дройдро омӯзед ва бозии "Ҷанги ситораҳо дар галактикаи
             дур"-ро эҷод намоед.
@@ -39,27 +63,3 @@ tg:
             дар галактикаи дур"-ро эҷод намоед.
           student_description: Барномарезии дройдро омӯзед ва бозии "Ҷанги ситораҳо
             дар галактикаи дур"-ро эҷод намоед.
-        CSF_Secret_Sample:
-          description_audience: 'Синну сол: 8-18'
-        CSF_Secret_Sample_Story:
-          description_audience: 'Синну сол: 8-18+'
-        MikeTest:
-          description_audience: 'Синну сол: 8-98'
-        artistExemplar:
-          description_audience: 'Синну сол: 8-18'
-        gradeKinder:
-          description_audience: 'Синну сол: 5-18'
-        grade4:
-          description_audience: 'Синну сол: 9-99'
-        grade1:
-          description_audience: 'Синну сол: 5-18'
-        grade5:
-          description_audience: 'Синну сол: 10-110'
-        grade3:
-          description_audience: 'Синну сол: 5-18'
-        grade2:
-          description_audience: 'Синну сол: 5-18'
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Соати рамз

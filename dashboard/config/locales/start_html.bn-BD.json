@@ -3,31 +3,31 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "\"হ্যাঁ\"",
-          "No": "না"
+          "No": "না",
+          "Yes": "\"হ্যাঁ\""
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "\"হ্যাঁ\"",
-          "No": "না"
+          "No": "না",
+          "Yes": "\"হ্যাঁ\""
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "\"হ্যাঁ\"",
-          "No": "না"
+          "No": "না",
+          "Yes": "\"হ্যাঁ\""
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "\"হ্যাঁ\"",
-          "No": "না"
+          "No": "না",
+          "Yes": "\"হ্যাঁ\""
         },
         "CSD U1 IO Story_2021": {
-          "Name": "নাম",
-          "Color": "রং",
           "City": "শহর",
+          "Color": "রং",
+          "Name": "নাম",
           "text": "পাঠ"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "নাম",
-          "Color": "রং",
           "City": "শহর",
+          "Color": "রং",
+          "Name": "নাম",
           "text": "পাঠ"
         },
         "CSD U1 processing guess_2021": {
@@ -49,47 +49,47 @@
           "Back": "পেছনে"
         },
         "CSD U1 storage movies_2021": {
+          "No": "না",
           "Star Wars": "স্টার ওয়ার্স",
           "Yes": "\"হ্যাঁ\"",
-          "No": "না",
           "text": "পাঠ"
         },
         "CSD U1 storage movies_2022": {
+          "No": "না",
           "Star Wars": "স্টার ওয়ার্স",
           "Yes": "\"হ্যাঁ\"",
-          "No": "না",
           "text": "পাঠ"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "সবুজ\n",
           "black": "কালো",
+          "green": "সবুজ\n",
           "purple": "বেগুনি"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "সবুজ\n",
           "black": "কালো",
+          "green": "সবুজ\n",
           "purple": "বেগুনি"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "মাঝারি"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "বামে",
-          "right": "ডানে",
-          "red": "লাল",
-          "yellow": "হলুদ",
           "green": "সবুজ\n",
-          "purple": "বেগুনি"
+          "left": "বামে",
+          "purple": "বেগুনি",
+          "red": "লাল",
+          "right": "ডানে",
+          "yellow": "হলুদ"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "বামে",
           "right": "ডানে"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "হলুদ",
-          "green": "সবুজ\n",
           "blue": "নীল",
-          "orange": "কমলা"
+          "green": "সবুজ\n",
+          "orange": "কমলা",
+          "yellow": "হলুদ"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
@@ -126,10 +126,10 @@
           "title": "শিরোনাম"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "উপরে",
           "down": "নিচে",
           "left": "বামে",
-          "right": "ডানে"
+          "right": "ডানে",
+          "up": "উপরে"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "নাম"
@@ -238,21 +238,21 @@
         },
         "CSDU4 Crowdsource App Demo": {
           "Cancel": "বাতিল করুন",
-          "Yes": "\"হ্যাঁ\"",
           "No": "না",
-          "Save": "সংরক্ষন করন"
+          "Save": "সংরক্ষন করন",
+          "Yes": "\"হ্যাঁ\""
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "Cancel": "বাতিল করুন",
-          "Yes": "\"হ্যাঁ\"",
           "No": "না",
-          "Save": "সংরক্ষন করন"
+          "Save": "সংরক্ষন করন",
+          "Yes": "\"হ্যাঁ\""
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "Cancel": "বাতিল করুন",
-          "Yes": "\"হ্যাঁ\"",
           "No": "না",
-          "Save": "সংরক্ষন করন"
+          "Save": "সংরক্ষন করন",
+          "Yes": "\"হ্যাঁ\""
         },
         "CSDU4 Decision App Demo": {
           "When?": "কখন?"
@@ -268,16 +268,16 @@
           "Show": "প্রদর্শন করুন"
         },
         "CSDU4 List App Demo": {
-          "Done": "হয়ে গেছে",
-          "Cancel": "বাতিল করুন"
+          "Cancel": "বাতিল করুন",
+          "Done": "হয়ে গেছে"
         },
         "CSDU4 List App Demo_2018": {
-          "Done": "হয়ে গেছে",
-          "Cancel": "বাতিল করুন"
+          "Cancel": "বাতিল করুন",
+          "Done": "হয়ে গেছে"
         },
         "CSDU4 List App Demo_2019": {
-          "Done": "হয়ে গেছে",
-          "Cancel": "বাতিল করুন"
+          "Cancel": "বাতিল করুন",
+          "Done": "হয়ে গেছে"
         },
         "CSDU4 Quiz App Demo": {
           "Submit": "জমা করুন",
@@ -367,12 +367,12 @@
           "Next": "পরবর্তী"
         },
         "ml-customize-raspado-2021": {
-          "yes": "\"হ্যাঁ\"",
-          "no": "না"
+          "no": "না",
+          "yes": "\"হ্যাঁ\""
         },
         "ml-customize-raspado_2022": {
-          "yes": "\"হ্যাঁ\"",
-          "no": "না"
+          "no": "না",
+          "yes": "\"হ্যাঁ\""
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "চালিয়ে যান",
@@ -384,13 +384,13 @@
         },
         "ml-model card-medical app v2 2021-2": {
           "W": "W",
-          "yes": "\"হ্যাঁ\"",
-          "no": "না"
+          "no": "না",
+          "yes": "\"হ্যাঁ\""
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "W": "W",
-          "yes": "\"হ্যাঁ\"",
-          "no": "না"
+          "no": "না",
+          "yes": "\"হ্যাঁ\""
         },
         "ml-models in applab-choice intended warnings": {
           "Back": "পেছনে"
@@ -399,20 +399,20 @@
           "Back": "পেছনে"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "\"হ্যাঁ\"",
-          "No": "না"
+          "No": "না",
+          "Yes": "\"হ্যাঁ\""
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "\"হ্যাঁ\"",
-          "No": "না"
+          "No": "না",
+          "Yes": "\"হ্যাঁ\""
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "\"হ্যাঁ\"",
-          "No": "না"
+          "No": "না",
+          "Yes": "\"হ্যাঁ\""
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "\"হ্যাঁ\"",
-          "No": "না"
+          "No": "না",
+          "Yes": "\"হ্যাঁ\""
         },
         "ml-use model card-example3A-2021": {
           "cloudy": "মেঘাচ্ছন্ন",

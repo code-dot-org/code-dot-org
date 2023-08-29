@@ -3,517 +3,91 @@ he:
   data:
     script:
       name:
-        course1:
-          title: מסלול 1
-          description: התחל עם קורס 1 עבור קוראים מתחילים. התלמידים ייצרו תוכנות מחשב
-            אשר יעזרו להם ללמוד איך לשתף פעולה עם אחרים, לפתח יכולות פתרון בעיות ולהתמיד
-            לפתור בעיות קשות. עד סוף הקורס, התלמידים ייצרו משחק או סיפור משלהם אשר
-            יהיה אפשר לשתף אותו עם אחרים. מומלץ עבור תלמידי כיתות א׳.
-          description_short: מבוא למדעי המחשב לקוראים מתחילים.
-          description_audience: גילאי 4-6
-          student_description: התחל עם קורס 1 עבור קוראים מתחילים. התלמידים ייצרו
-            תוכנות מחשב אשר יעזרו להם ללמוד איך לשתף פעולה עם אחרים, לפתח יכולות פתרון
-            בעיות ולהתמיד לפתור בעיות קשות. עד סוף הקורס, התלמידים ייצרו משחק או סיפור
-            משלהם אשר יהיה אפשר לשתף אותו עם אחרים. מומלץ עבור תלמידי כיתות א׳.
-        course2:
-          title: מסלול 2
-          description: קורס 2 מתאים לסטונדטים קוראים ללא ניסיון קודם בתכנות. בקורס
-            זה הסטונדטים יצרו תוכניות על מנת לפתור בעיות ויפתחו משחקים אינטראקטיביים
-            וסיפורים אותם יוכלו לשתף. מומלץ לילדים בכיתה ב עד ה.
-          description_short: מבוא למדעי המחשב לתלמידים שיכולים לקרוא.
-          description_audience: גילאי 6+ (קריאה נדרשת)
-          student_description: קורס 2 מתאים לסטונדטים קוראים ללא ניסיון קודם בתכנות.
-            בקורס זה הסטונדטים יצרו תוכניות על מנת לפתור בעיות ויפתחו משחקים אינטראקטיביים
-            וסיפורים אותם יוכלו לשתף. מומלץ לילדים בכיתה ב עד ה.
-        course3:
-          title: מסלול 3
-          description: קורס 3 מיועד לתלמידים אשר למדור את קורס 2. תלמידים יצללו עמוק
-            אל תוך נושאים בתכנות אשר הוצגו בקורסים הקודמים כדי ליצור פתרונות דינמיים
-            לבעיות מורכבות עוד יותר. עד סוף הקורס, תלמידים יצרו סיפורים אינטראקטיביים
-            ומשחקים אשר יכולים לשתף עם כולם. מומלץ כיתות ד-ה.
-          description_short: קורס 3 הינו המשך לקורס 2.
-          description_audience: גילאי 8-18
-          student_description: קורס 3 מיועד לתלמידים אשר למדור את קורס 2. תלמידים
-            יצללו עמוק אל תוך נושאים בתכנות אשר הוצגו בקורסים הקודמים כדי ליצור פתרונות
-            דינמיים לבעיות מורכבות עוד יותר. עד סוף הקורס, תלמידים יצרו סיפורים אינטראקטיביים
-            ומשחקים אשר יכולים לשתף עם כולם. מומלץ כיתות ד-ה.
-        playlab:
-          title: מעבדת הצעצועים
-          description: צור סיפור או משחק בעזרת מעבדת הצעצועים!
-          description_short: צור סיפור או משחק בעזרת מעבדת הצעצועים!
-          student_description: צור סיפור או משחק בעזרת מעבדת הצעצועים!
-        artist:
-          title: אומן
-          description: ציירו תמונות מגניבות ועיצובים עם האומן!
-          description_short: ציירו תמונות מגניבות ועיצובים עם האומן!
-          student_description: ציירו תמונות מגניבות ועיצובים עם האומן!
-        hourofcode:
-          title: מבוך קלאסי
-          description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד
-            זומבים וסקראט מעידן הקרח!
-          description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
-          student_description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים
-            נגד זומבים וסקראט מעידן הקרח!
-        frozen:
-          title: לתכנת עם אנה ואלזה
-          description: השתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי
-            שבקרח. אנו עומדים ליצור פתיתי שלג וצורות בקרח ואז תוכלו לשתף את זה עם
-            חבריכם!
-          description_short: בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם
-            והיופי של קרח.
-          student_description: השתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם
-            והיופי שבקרח. אנו עומדים ליצור פתיתי שלג וצורות בקרח ואז תוכלו לשתף את
-            זה עם חבריכם!
-        course4:
-          title: מסלול 4
-          description: קורס 4 מיועד עבור תלמידים אשר למדו את קורס 2 ו-3. תלמידים ילמדו
-            לפתור חידות עם מורכבות מוגברת כאשר ילמדו איך לשלב מספר עקרונות כשפותרים
-            כל אתגר. כאשר הקורס יסתיים, התלמידים יצרו תוכניות אשר יאפשרו להם לתרגל
-            מספר מיומנויות הכוללים בין היתר לולאות ופונקציות עם פרמטרים. מומלץ לכיתות
-            ד-ו.
-          description_short: בנה תוכניות מורכבות יותר עם עקרונות כמו לולאות "for"
-            ופונקציות עם פרמטרים. זהו קורס המשך לקורס 3.
-          description_audience: גילאי 9-18
-          student_description: קורס 4 מיועד עבור תלמידים אשר למדו את קורס 2 ו-3. תלמידים
-            ילמדו לפתור חידות עם מורכבות מוגברת כאשר ילמדו איך לשלב מספר עקרונות כשפותרים
-            כל אתגר. כאשר הקורס יסתיים, התלמידים יצרו תוכניות אשר יאפשרו להם לתרגל
-            מספר מיומנויות הכוללים בין היתר לולאות ופונקציות עם פרמטרים. מומלץ לכיתות
-            ד-ו.
-        algebra:
-          title: מדעי המחשב באלגברה
-        infinity:
-          title: מעבדת הצעצועים עם דיסני אינסוף
-          description: בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות דמויות מתוך
-            "דיסני אינסוף".
-          description_short: בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות דמויות
-            מתוך "דיסני אינסוף".
-          student_description: בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות
-            דמויות מתוך "דיסני אינסוף".
-        netsim:
-          title: מדמה אינטרנט
         20-hour:
           description: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות.
             הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
           description_audience: גילאי 10-18
+          name: 20 שעות
           student_description: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות
             בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
-          name: 20 שעות
-        edit-code:
-          title: עריכת קוד
-          description: עריכת קוד
-          description_short: עריכת קוד
-          student_description: עריכת קוד
-        events:
-          title: אירועים
-          description: אירועים
-          description_short: אירועים
-          student_description: אירועים
-        flappy:
-          title: צרו משחק עם פלאפי
-          description: רוצים לכתוב משחק משלכם בפחות מעשר דקות? נסו את מדריך קוד ההתעופפות
-            שלנו!
-          description_short: כתוב משחק פלאפי משלך תוך פחות מ-10 דקות!
-          student_description: רוצים לכתוב משחק משלכם בפחות מעשר דקות? נסו את מדריך
-            קוד ההתעופפות שלנו!
-        jigsaw:
-          title: פאזל
-        step:
-          title: צעד
-        Hour of Code:
-          title: שעת קוד 2013
-          description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
-        allthethings:
-          lessons:
-            lesson-49:
-              name: מוסיקה
-        asUnplugged:
-          description_audience: גילאי 6-13
-        afterschool1:
-          description_audience: גילאי 7-13
-        cspunit4draft:
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: מציאת טעויות
+            introduction:
+              display_name: מבוא
+            lessonGroup-3:
+              display_name: משתנים
+            outbreak:
+              display_name: לנצח את הקורונה
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: שעת הקוד
+        CSDU5-Draft:
           description_short: נתונים
+        CSF_Secret_Sample:
+          description_audience: גילאי 8-18
+        CSF_Secret_Sample_Story:
+          description_audience: גילאי 8-18+
+        Hour of Code:
+          description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
+          title: שעת קוד 2013
+        MikeTest:
+          description_audience: גילאי 8-98
         Special Fun:
           description_audience: גילאי 10-18
         SpecialSeries:
           description_audience: גילאי 10-18
-        iceage:
-          title: עידן הקרח Play Lab
-          description: צרו סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
-          description_short: צרו סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
-          student_description: צרו סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
-        gumball:
-          title: מעבדת הצעצועים עם גמבול
-          description: צור סיפור או משחק עם מעבדת הצעצועים גמבול!
-          description_short: צור סיפור או משחק עם מעבדת הצעצועים גמבול!
-          student_description: צור סיפור או משחק עם מעבדת הצעצועים גמבול!
-        starwars:
-          title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)'
-          description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים" הפרטי
-            שלכם, בגלקסיה רחוקה רחוקה...
-          description_short: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים"
-            הפרטי שלכם, בגלקסיה רחוקה רחוקה...
-          student_description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים"
-            הפרטי שלכם, בגלקסיה רחוקה רחוקה...
-        starwarsblocks:
-          title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)'
-          description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים" הפרטי
-            שלכם, בגלקסיה רחוקה רחוקה...
-          description_short: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים"
-            הפרטי שלכם, בגלקסיה רחוקה רחוקה...
-          student_description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים"
-            הפרטי שלכם, בגלקסיה רחוקה רחוקה...
-        mc:
-          title: 'מיינקראפט: יוצאים להרפתקה'
-          description: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם
-            של מיינקראפט.
-          description_short: גלה את העולם של מיינקראפט באמצעות קוד
-          student_description: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה
-            בעולם של מיינקראפט.
-        csp1-2017:
+        afterschool1:
+          description_audience: גילאי 7-13
+        ai-ethics-2021:
+          description_audience: כיתות ו-י"ב
+        aiml-2021:
           lesson_groups:
-            cspSurvey:
+            lessonGroup-4:
               display_name: סקר
-            csp1_1:
-              display_name: 'פרק 1: ייצוג ושליחת מידע'
-            csp1_2:
-              display_name: 'פרק 2: המצאת האינטרנט'
-        csp2-2017:
+        aiml-2023:
           lesson_groups:
-            csp2_1:
-              display_name: 'פרק 1: קידוד וכיווץ מידע מורכב'
-            cspSurvey:
+            lessonGroup-5:
               display_name: סקר
-        csp3-2017:
-          lesson_groups:
-            csp3_1:
-              display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
-            cspAssessment:
-              display_name: הערכה לפרק
-            cspSurvey:
-              display_name: סקר
-        csp4-2017:
-          lesson_groups:
-            cspAssessment:
-              display_name: הערכה לפרק
-            cspSurvey:
-              display_name: סקר
-        csp5-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        CSF_Secret_Sample:
-          description_audience: גילאי 8-18
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        CSDU5-Draft:
-          description_short: נתונים
-        CSF_Secret_Sample_Story:
-          description_audience: גילאי 8-18+
-        MikeTest:
-          description_audience: גילאי 8-98
-        artistExemplar:
-          description_audience: גילאי 8-18
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        gradeKinder:
-          description_audience: גילאי 5-18
-        grade4:
-          description_audience: גילאי 10-99
-        grade1:
-          description_audience: גילאי 5-18
-        grade5:
-          description_audience: גילאי 10-110
-        grade3:
-          description_audience: גילאי 5-18
+        algebra:
+          title: מדעי המחשב באלגברה
         alltheplcthings:
           lesson_groups:
             required:
               display_name: סקירה
-        csd3-2017:
-          lesson_groups:
-            csd3_1:
-              display_name: 'פרק 1: תמונות ואנימציות'
-            csd3_2:
-              display_name: 'פרק 2: יצירת משחקים'
-            cspSurvey:
-              display_name: סקר
-            csd_survey:
-              display_name: סקר שלאחר הקורס
-        grade2:
-          description_audience: גילאי 5-18
-        csd1-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-            csd1_1:
-              display_name: 'פרק 1: הדרך לפתרון תהליך'
-            csd1_2:
-              display_name: 'פרק 2: מחשבים ופתרון בעיות'
-        csp-online-test:
+        allthethings:
+          lessons:
+            lesson-49:
+              name: מוסיקה
+        andrea-test:
           lesson_groups:
             required:
               display_name: סקירה
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: סקירה
+        aquatic:
+          description_short: השתמש ביצירתיות ובכישורי פתרון בעיות כדי לגלות ולבנות
+            עולמות תת-ימיים עם קוד!
+          name: ימי
+          title: 'מיינקראפט: מסע ימי'
+        artist:
+          description: ציירו תמונות מגניבות ועיצובים עם האומן!
+          description_short: ציירו תמונות מגניבות ועיצובים עם האומן!
+          student_description: ציירו תמונות מגניבות ועיצובים עם האומן!
+          title: אומן
+        artistExemplar:
+          description_audience: גילאי 8-18
+        asUnplugged:
+          description_audience: גילאי 6-13
         basketball:
           name: כדורסל
-        csd2-2017:
-          lesson_groups:
-            csd2_1:
-              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
-            csd2_2:
-              display_name: 'פרק 2: עיצוב ו-CSS'
-            csd_survey:
-              display_name: סקר שלאחר הקורס
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd4-2017:
-          lesson_groups:
-            csd4_1:
-              display_name: 'פרק 1: עיצוב מכוון משתמש'
-            csd4_2:
-              display_name: 'פרק 2: תכנון אפליקציה'
-            csd_survey:
-              display_name: סקר שלאחר הקורס
-        minecraft:
-          title: מעצבי מיינקראפט
-          description_short: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
-          description: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
-          student_description: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
-        coursee-draft:
-          lesson_groups:
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-            extra_course_content:
-              display_name: תוכן נוסף של הקורס
-        coursef-draft:
-          lesson_groups:
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
         classic-hoc-impact-study:
           description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
-        hoc-impact-study:
-          description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
-        sports:
-          name: ספורט
-        csp3-support:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp4-support:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csf2harvey:
-          lesson_groups:
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        csp5-support:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csppostap-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        csd6-draft:
-          lesson_groups:
-            csd6_1:
-              display_name: 'פרק 1: תכנות עם חומרה'
-            csd6_2:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-        csd5-draft:
-          lesson_groups:
-            csd5_1:
-              display_name: 'פרק 1: ייצוג מידע'
-            csd5_2:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-        csd6-2017:
-          lesson_groups:
-            csd6_1:
-              display_name: 'פרק 1: תכנות עם חומרה'
-            csd6_2:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-            csd_survey:
-              display_name: סקר שלאחר הקורס
-        csd5-2017:
-          lesson_groups:
-            csd5_1:
-              display_name: 'פרק 1: ייצוג מידע'
-            csd5_2:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-            csd_survey:
-              display_name: סקר שלאחר הקורס
-        csp-post-survey:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        coursed-2017:
-          title: קורס ד'
-          assignment_family_title: קורס ד'
-        coursee-2017:
-          lesson_groups:
-            csf_e_1:
-              display_name: המשך אל קורס ה (רשות)
-            csf_e_2:
-              display_name: תכני קורס ה
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-            extra_course_content:
-              display_name: תוכן נוסף של הקורס
-        coursef-2017:
-          lesson_groups:
-            csf_f_1:
-              display_name: המשך אל קורס ו (רשות)
-            csf_f_2:
-              display_name: תכני קורס ו
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        cspnovice:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp1-dlp:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp2-dlp:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp3-dlp:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp4-dlp:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp5-dlp:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd1-dlp:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd6-dlp:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd5-dlp:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd4-dlp:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd3-dlp:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd2-dlp:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        express-2017:
-          lesson_groups:
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        csp3-research-mxghyt:
-          lesson_groups:
-            csp3_1:
-              display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
-            cspAssessment:
-              display_name: הערכה לפרק
-            cspSurvey:
-              display_name: סקר
-        csd4-draft:
-          lesson_groups:
-            csd4_1:
-              display_name: 'פרק 1: עיצוב מכוון משתמש'
-            csd4_2:
-              display_name: 'פרק 2: תכנון אפליקציה'
-        e-f-ramp:
-          lesson_groups:
-            csf_e_1:
-              display_name: המשך אל קורס ה (רשות)
-            csf_e_2:
-              display_name: תכני קורס ה
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-            extra_course_content:
-              display_name: תוכן נוסף של הקורס
-        new-d:
-          title: קוד חדש לקורס ד'
-        csp3-a:
-          lesson_groups:
-            csp3_1:
-              display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
-        new-express:
-          lesson_groups:
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        new-e:
-          lesson_groups:
-            csf_e_1:
-              display_name: המשך אל קורס ה (רשות)
-            csf_e_2:
-              display_name: תכני קורס ה
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-            extra_course_content:
-              display_name: תוכן נוסף של הקורס
-        new-f:
-          lesson_groups:
-            csf_f_1:
-              display_name: המשך אל קורס ו (רשות)
-            csf_f_2:
-              display_name: תכני קורס ו
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        csd5-old:
-          lesson_groups:
-            csd5_1:
-              display_name: 'פרק 1: ייצוג מידע'
-            csd5_2:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-        csd4-old:
-          lesson_groups:
-            csd4_1:
-              display_name: 'פרק 1: עיצוב מכוון משתמש'
-            csd4_2:
-              display_name: 'פרק 2: תכנון אפליקציה'
-        csp3-staging:
-          lesson_groups:
-            csp3_1:
-              display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
-            cspAssessment:
-              display_name: הערכה לפרק
-        hero:
-          title: 'מיינקראפט: המסע של הירו'
-          name: גיבור
-        csp-explore-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        csp-create-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
+        contagion-pilot:
+          description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
+          description_short: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
+          student_description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות
+            וירוסים.
         course-e-2018:
           lesson_groups:
             csf_e_1:
@@ -532,52 +106,275 @@ he:
               display_name: תכני קורס ו
             end_of_course_project:
               display_name: פרויקט סיום קורס
-        csd6-old:
+        course1:
+          description: התחל עם קורס 1 עבור קוראים מתחילים. התלמידים ייצרו תוכנות מחשב
+            אשר יעזרו להם ללמוד איך לשתף פעולה עם אחרים, לפתח יכולות פתרון בעיות ולהתמיד
+            לפתור בעיות קשות. עד סוף הקורס, התלמידים ייצרו משחק או סיפור משלהם אשר
+            יהיה אפשר לשתף אותו עם אחרים. מומלץ עבור תלמידי כיתות א׳.
+          description_audience: גילאי 4-6
+          description_short: מבוא למדעי המחשב לקוראים מתחילים.
+          student_description: התחל עם קורס 1 עבור קוראים מתחילים. התלמידים ייצרו
+            תוכנות מחשב אשר יעזרו להם ללמוד איך לשתף פעולה עם אחרים, לפתח יכולות פתרון
+            בעיות ולהתמיד לפתור בעיות קשות. עד סוף הקורס, התלמידים ייצרו משחק או סיפור
+            משלהם אשר יהיה אפשר לשתף אותו עם אחרים. מומלץ עבור תלמידי כיתות א׳.
+          title: מסלול 1
+        course2:
+          description: קורס 2 מתאים לסטונדטים קוראים ללא ניסיון קודם בתכנות. בקורס
+            זה הסטונדטים יצרו תוכניות על מנת לפתור בעיות ויפתחו משחקים אינטראקטיביים
+            וסיפורים אותם יוכלו לשתף. מומלץ לילדים בכיתה ב עד ה.
+          description_audience: גילאי 6+ (קריאה נדרשת)
+          description_short: מבוא למדעי המחשב לתלמידים שיכולים לקרוא.
+          student_description: קורס 2 מתאים לסטונדטים קוראים ללא ניסיון קודם בתכנות.
+            בקורס זה הסטונדטים יצרו תוכניות על מנת לפתור בעיות ויפתחו משחקים אינטראקטיביים
+            וסיפורים אותם יוכלו לשתף. מומלץ לילדים בכיתה ב עד ה.
+          title: מסלול 2
+        course3:
+          description: קורס 3 מיועד לתלמידים אשר למדור את קורס 2. תלמידים יצללו עמוק
+            אל תוך נושאים בתכנות אשר הוצגו בקורסים הקודמים כדי ליצור פתרונות דינמיים
+            לבעיות מורכבות עוד יותר. עד סוף הקורס, תלמידים יצרו סיפורים אינטראקטיביים
+            ומשחקים אשר יכולים לשתף עם כולם. מומלץ כיתות ד-ה.
+          description_audience: גילאי 8-18
+          description_short: קורס 3 הינו המשך לקורס 2.
+          student_description: קורס 3 מיועד לתלמידים אשר למדור את קורס 2. תלמידים
+            יצללו עמוק אל תוך נושאים בתכנות אשר הוצגו בקורסים הקודמים כדי ליצור פתרונות
+            דינמיים לבעיות מורכבות עוד יותר. עד סוף הקורס, תלמידים יצרו סיפורים אינטראקטיביים
+            ומשחקים אשר יכולים לשתף עם כולם. מומלץ כיתות ד-ה.
+          title: מסלול 3
+        course4:
+          description: קורס 4 מיועד עבור תלמידים אשר למדו את קורס 2 ו-3. תלמידים ילמדו
+            לפתור חידות עם מורכבות מוגברת כאשר ילמדו איך לשלב מספר עקרונות כשפותרים
+            כל אתגר. כאשר הקורס יסתיים, התלמידים יצרו תוכניות אשר יאפשרו להם לתרגל
+            מספר מיומנויות הכוללים בין היתר לולאות ופונקציות עם פרמטרים. מומלץ לכיתות
+            ד-ו.
+          description_audience: גילאי 9-18
+          description_short: בנה תוכניות מורכבות יותר עם עקרונות כמו לולאות "for"
+            ופונקציות עם פרמטרים. זהו קורס המשך לקורס 3.
+          student_description: קורס 4 מיועד עבור תלמידים אשר למדו את קורס 2 ו-3. תלמידים
+            ילמדו לפתור חידות עם מורכבות מוגברת כאשר ילמדו איך לשלב מספר עקרונות כשפותרים
+            כל אתגר. כאשר הקורס יסתיים, התלמידים יצרו תוכניות אשר יאפשרו להם לתרגל
+            מספר מיומנויות הכוללים בין היתר לולאות ופונקציות עם פרמטרים. מומלץ לכיתות
+            ד-ו.
+          title: מסלול 4
+        coursea-2019:
           lesson_groups:
-            csd6_1:
-              display_name: 'פרק 1: תכנות עם חומרה'
-            csd6_2:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-        csd3-1819draft:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+        coursea-2020:
           lesson_groups:
-            csd3_1:
-              display_name: 'פרק 1: תמונות ואנימציות'
-            csd3_2:
-              display_name: 'פרק 2: יצירת משחקים'
-            cspSurvey:
-              display_name: סקר
-        csd3-2018:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+        coursea-2021:
           lesson_groups:
-            csd3_1:
-              display_name: 'פרק 1: תמונות ואנימציות'
-            csd3_2:
-              display_name: 'פרק 2: יצירת משחקים'
-            cspSurvey:
-              display_name: סקר
-        csd2-2018:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            lessonGroup-5:
+              display_name: פרויקט סיום קורס
+        coursea-2022:
           lesson_groups:
-            csd2_1:
-              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
-            csd2_2:
-              display_name: 'פרק 2: עיצוב ו-CSS'
-            cspSurvey:
-              display_name: סקר
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            lessonGroup-5:
+              display_name: פרויקט סיום קורס
+        coursea-2023:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            lessonGroup-5:
+              display_name: פרויקט סיום קורס
+        courseb-2019:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+        courseb-2020:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+        courseb-2021:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
+        courseb-2022:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
+        courseb-2023:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
+        coursec-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: בינארי
+            csf_data:
+              display_name: נתונים
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursec-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: בינארי
+            csf_data:
+              display_name: נתונים
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursec-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: בינארי
+            csf_data:
+              display_name: נתונים
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursec-2022:
+          lesson_groups:
+            csf_data:
+              display_name: נתונים
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursec-2023:
+          lesson_groups:
+            csf_data:
+              display_name: נתונים
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursed-2017:
+          assignment_family_title: קורס ד'
+          title: קורס ד'
         coursed-2018:
-          title: קורס ד' (2018)
           assignment_family_title: קורס ד'
           description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות
             "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
           student_description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות,
             לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות
             דיגיטלית.
-        csd6-2018:
+          title: קורס ד' (2018)
+        coursed-2019:
+          description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות
+            "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
           lesson_groups:
-            csd6_1:
-              display_name: 'פרק 1: תכנות עם חומרה'
-            csd6_2:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-            cspSurvey:
-              display_name: סקר
+            csf_binary:
+              display_name: בינארי
+            csf_conditionals:
+              display_name: תנאים
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+          student_description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות,
+            לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות
+            דיגיטלית.
+          title: קורס ד' (2019)
+        coursed-2020:
+          description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות
+            "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
+          lesson_groups:
+            csf_binary:
+              display_name: בינארי
+            csf_conditionals:
+              display_name: תנאים
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+          student_description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות,
+            לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות
+            דיגיטלית.
+          title: קורס ד' (2020)
+        coursed-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: בינארי
+            csf_conditionals:
+              display_name: תנאים
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+          title: קורס ד' (2021)
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: תנאים
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+          title: קורס ד' (2021)
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: תנאים
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+          title: קורס ד' (2021)
+        coursee-2017:
+          lesson_groups:
+            csf_e_1:
+              display_name: המשך אל קורס ה (רשות)
+            csf_e_2:
+              display_name: תכני קורס ה
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+            extra_course_content:
+              display_name: תוכן נוסף של הקורס
         coursee-2018:
           lesson_groups:
             csf_e_1:
@@ -588,6 +385,70 @@ he:
               display_name: פרויקט סיום קורס
             extra_course_content:
               display_name: תוכן נוסף של הקורס
+        coursee-2019:
+          lesson_groups:
+            csf_functions:
+              display_name: פונקציות
+            csf_sprites:
+              display_name: דמויות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+            ramp_up:
+              display_name: העלה רמה
+        coursee-2020:
+          lesson_groups:
+            csf_functions:
+              display_name: פונקציות
+            csf_sprites:
+              display_name: דמויות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+            ramp_up:
+              display_name: העלה רמה
+        coursee-2021:
+          lesson_groups:
+            csf_functions:
+              display_name: פונקציות
+            csf_nested_loops:
+              display_name: תנאים
+            csf_sprites:
+              display_name: דמויות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursee-2022:
+          lesson_groups:
+            csf_functions:
+              display_name: פונקציות
+            csf_nested_loops:
+              display_name: תנאים
+            csf_sprites:
+              display_name: דמויות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursee-2023:
+          lesson_groups:
+            csf_functions:
+              display_name: פונקציות
+            csf_nested_loops:
+              display_name: תנאים
+            csf_sprites:
+              display_name: דמויות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursee-draft:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+            extra_course_content:
+              display_name: תוכן נוסף של הקורס
+        coursef-2017:
+          lesson_groups:
+            csf_f_1:
+              display_name: המשך אל קורס ו (רשות)
+            csf_f_2:
+              display_name: תכני קורס ו
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
         coursef-2018:
           lesson_groups:
             csf_f_1:
@@ -596,180 +457,8 @@ he:
               display_name: תכני קורס ו
             end_of_course_project:
               display_name: פרויקט סיום קורס
-        csp1-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-            csp1_1:
-              display_name: 'פרק 1: ייצוג ושליחת מידע'
-            csp1_2:
-              display_name: 'פרק 2: המצאת האינטרנט'
-        csd1-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-            csd1_1:
-              display_name: 'פרק 1: הדרך לפתרון תהליך'
-            csd1_2:
-              display_name: 'פרק 2: מחשבים ופתרון בעיות'
-        csd4-2018:
-          lesson_groups:
-            csd4_1:
-              display_name: 'פרק 1: עיצוב מכוון משתמש'
-            csd4_2:
-              display_name: 'פרק 2: תכנון אפליקציה'
-            cspSurvey:
-              display_name: סקר
-        csd5-2018:
-          lesson_groups:
-            csd5_1:
-              display_name: 'פרק 1: ייצוג מידע'
-            csd5_2:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-            cspSurvey:
-              display_name: סקר
-        csp2-2018:
-          lesson_groups:
-            cspAssessment:
-              display_name: הערכה לפרק
-        csp3-2018:
-          lesson_groups:
-            csp3_1_2018:
-              display_name: 'יחידה 3: מבוא לתכנות'
-            cspAssessment:
-              display_name: הערכה לפרק
-            cspSurvey:
-              display_name: סקר
-        csp-explore-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        csp-create-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        csp4-2018:
-          lesson_groups:
-            cspAssessment:
-              display_name: הערכה לפרק
-            cspSurvey:
-              display_name: סקר
-        csp5-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        csppostap-2018:
-          lesson_groups:
-            csp_postap_2:
-              display_name: 'פרק 2: אפליקציות ומסדי נתונים'
-            cspSurvey:
-              display_name: סקר
-        csd1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd6-dlp-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp-explore-dlp-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp-create-dlp-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd-post-survey:
-          lesson_groups:
-            csd_survey:
-              display_name: סקר שלאחר הקורס
-        csd-novice-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp-novice-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        fit-test:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        dance:
-          title: מסיבת ריקודים (2018)
-          description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
-          student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
-          name: ריקוד
-        aquatic:
-          title: 'מיינקראפט: מסע ימי'
-          description_short: השתמש ביצירתיות ובכישורי פתרון בעיות כדי לגלות ולבנות
-            עולמות תת-ימיים עם קוד!
-          name: ימי
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: משתנים
-            csp_conditionals:
-              display_name: תנאים
-            csp_functions:
-              display_name: פונקציות
-            csp_project:
-              display_name: פּרוֹיֶקט
-        dance-extras:
-          title: המשיכו לרקוד (2018)
-          description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
-          student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         coursef-2019:
           lesson_groups:
-            ramp_up:
-              display_name: העלה רמה
-            csf_variables:
-              display_name: משתנים
             csf_data:
               display_name: נתונים
             csf_for_loops:
@@ -778,104 +467,245 @@ he:
               display_name: אינטרנט
             csf_sprites:
               display_name: דמויות
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        coursed-2019:
-          title: קורס ד' (2019)
-          description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות
-            "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
-          lesson_groups:
-            csf_events:
-              display_name: אירועים
-            csf_loops:
-              display_name: חזרות
-            csf_conditionals:
-              display_name: תנאים
-            csf_binary:
-              display_name: בינארי
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-          student_description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות,
-            לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות
-            דיגיטלית.
-        coursee-2019:
-          lesson_groups:
-            ramp_up:
-              display_name: העלה רמה
-            csf_sprites:
-              display_name: דמויות
-            csf_functions:
-              display_name: פונקציות
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        express-2019:
-          lesson_groups:
-            csf_warmup:
-              display_name: חימום
-            csf_loops:
-              display_name: חזרות
-            csf_conditionals:
-              display_name: תנאים
-            csf_functions:
-              display_name: פונקציות
             csf_variables:
               display_name: משתנים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+            ramp_up:
+              display_name: העלה רמה
+        coursef-2020:
+          lesson_groups:
+            csf_data:
+              display_name: נתונים
             csf_for_loops:
               display_name: בשביל לולאות
             csf_sprites:
               display_name: דמויות
-        csd1-2019:
+            csf_variables:
+              display_name: משתנים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+            ramp_up:
+              display_name: העלה רמה
+        coursef-2021:
+          lesson_groups:
+            csf_for_loops:
+              display_name: בשביל לולאות
+            csf_variables:
+              display_name: בשביל לולאות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+            lessonGroup-8:
+              display_name: משתנים
+            lessonGroup-9:
+              display_name: הסר
+            ramp_up:
+              display_name: דמויות
+        coursef-2022:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+            lessonGroup-8:
+              display_name: משתנים
+            ramp_up:
+              display_name: דמויות
+        coursef-2022-pilot:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+            lessonGroup-8:
+              display_name: משתנים
+            ramp_up:
+              display_name: דמויות
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: דמויות
+            lessonGroup-4:
+              display_name: משתנים
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
+        coursef-draft:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: נתונים
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: שיעורים
+            lessonGroup-3:
+              display_name: פּרוֹיֶקט
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: שיעורים
+            lessonGroup-3:
+              display_name: פּרוֹיֶקט
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: יחידה 1
+            lessonGroup-3:
+              display_name: משאבים
+            lessonGroup-4:
+              display_name: יחידה 2
+            lessonGroup-5:
+              display_name: יחידה 3
+            lessonGroup-6:
+              display_name: יחידה 4
+            lessonGroup-7:
+              display_name: יחידה 5
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        csa1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
+          lessons:
+            lesson-2:
+              name: מעבדת ג'אווה
+            lesson-6:
+              name: חזרות
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: משתנים
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: בשביל לולאות
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: מה הצליל הזה?
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: סקר שלאחר הקורס
+        csd-post-survey-2018:
           lesson_groups:
             cspSurvey:
               display_name: סקר
+        csd-post-survey-2023:
+          title: סקר שלאחר הקורס
+        csd1-2017:
+          lesson_groups:
             csd1_1:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
             csd1_2:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
-        andrea-test:
+            cspSurvey:
+              display_name: סקר
+        csd1-2018:
+          lesson_groups:
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+            cspSurvey:
+              display_name: סקר
+        csd1-2019:
+          lesson_groups:
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+            cspSurvey:
+              display_name: סקר
+        csd1-2020:
+          lesson_groups:
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+            cspSurvey:
+              display_name: סקר
+        csd1-2021:
+          lesson_groups:
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+            cspSurvey:
+              display_name: סקר
+        csd1-2022:
+          lesson_groups:
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+            cspSurvey:
+              display_name: סקר
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-3:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+            lessonGroup-5:
+              display_name: סקר
+        csd1-dlp:
           lesson_groups:
             required:
               display_name: סקירה
-        dance-extras-gallery:
-          title: המשיכו לרקוד
-          description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
-          student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
-        coursec-2019:
+        csd1-dlp-18:
           lesson_groups:
-            csf_binary:
-              display_name: בינארי
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-            csf_data:
-              display_name: נתונים
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        csp-mid-survey:
+            required:
+              display_name: סקירה
+        csd1-pilot:
           lesson_groups:
+            csd1_1:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
             cspSurvey:
               display_name: סקר
-        gamelab:
-          title: מעבדת המשחקים
-        coursea-2019:
+        csd2-2017:
           lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-        courseb-2019:
+            csd2_1:
+              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
+            csd2_2:
+              display_name: 'פרק 2: עיצוב ו-CSS'
+            csd_survey:
+              display_name: סקר שלאחר הקורס
+        csd2-2018:
           lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
+            csd2_1:
+              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
+            csd2_2:
+              display_name: 'פרק 2: עיצוב ו-CSS'
+            cspSurvey:
+              display_name: סקר
         csd2-2019:
           lesson_groups:
             csd2_1:
@@ -884,12 +714,138 @@ he:
               display_name: 'פרק 2: עיצוב ו-CSS'
             cspSurvey:
               display_name: סקר
+        csd2-2020:
+          lesson_groups:
+            csd2_1:
+              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
+            csd2_2:
+              display_name: 'פרק 2: עיצוב ו-CSS'
+            cspSurvey:
+              display_name: סקר
+        csd2-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csd2-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd2-pilot:
+          lesson_groups:
+            csd2_1:
+              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
+            csd2_2:
+              display_name: 'פרק 2: עיצוב ו-CSS'
+            cspSurvey:
+              display_name: סקר
+        csd2-virtual:
+          lesson_groups:
+            csd2_1:
+              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
+            csd2_2:
+              display_name: 'פרק 2: עיצוב ו-CSS'
+        csd3-1819draft:
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+        csd3-2017:
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            csd_survey:
+              display_name: סקר שלאחר הקורס
+            cspSurvey:
+              display_name: סקר
+        csd3-2018:
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
         csd3-2019:
           lesson_groups:
             csd3_1:
               display_name: 'פרק 1: תמונות ואנימציות'
             csd3_2:
               display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+        csd3-2020:
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+        csd3-2021:
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+        csd3-2022:
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            lessonGroup-3:
+              display_name: 'פרק 2: יצירת משחקים'
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd3-pilot:
+          lesson_groups:
+            csd3_1:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
+            cspSurvey:
+              display_name: סקר
+        csd4-2017:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            csd_survey:
+              display_name: סקר שלאחר הקורס
+        csd4-2018:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
             cspSurvey:
               display_name: סקר
         csd4-2019:
@@ -902,12 +858,172 @@ he:
               display_name: 'פרק 2: פתרון בעיות נתונים'
             cspSurvey:
               display_name: סקר
+        csd4-2020:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+        csd4-2021:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+        csd4-2022:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            cspSurvey:
+              display_name: סקר
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            lessonGroup-3:
+              display_name: 'פרק 2: תכנון אפליקציה'
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd4-draft:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+        csd4-old:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+        csd4-pilot:
+          lesson_groups:
+            csd1_2:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        csd4-preview-2021:
+          lesson_groups:
+            csd4_1:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            csd4_2:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            csdSurvey:
+              display_name: סקר
+            cspSurvey:
+              display_name: סקר
+        csd5-2017:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            csd_survey:
+              display_name: סקר שלאחר הקורס
+        csd5-2018:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
         csd5-2019:
           lesson_groups:
             csd5_1:
               display_name: 'פרק 1: ייצוג מידע'
             csd5_2:
               display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+        csd5-2020:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+        csd5-2021:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+        csd5-2022:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd5-draft:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        csd5-old:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        csd5-preview-2021:
+          lesson_groups:
+            csd5_1:
+              display_name: 'פרק 1: ייצוג מידע'
+            csd5_2:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            cspSurvey:
+              display_name: סקר
+        csd6-2017:
+          lesson_groups:
+            csd6_1:
+              display_name: 'פרק 1: תכנות עם חומרה'
+            csd6_2:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            csd_survey:
+              display_name: סקר שלאחר הקורס
+        csd6-2018:
+          lesson_groups:
+            csd6_1:
+              display_name: 'פרק 1: תכנות עם חומרה'
+            csd6_2:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
             cspSurvey:
               display_name: סקר
         csd6-2019:
@@ -918,28 +1034,312 @@ he:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
             cspSurvey:
               display_name: סקר
-        csp4-pilot:
+        csd6-2020:
           lesson_groups:
-            csp_variables:
+            csd6_1:
+              display_name: 'פרק 1: תכנות עם חומרה'
+            csd6_2:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            cspSurvey:
+              display_name: סקר
+        csd6-2021:
+          lesson_groups:
+            csd6_1:
+              display_name: 'פרק 1: תכנות עם חומרה'
+            csd6_2:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            cspSurvey:
+              display_name: סקר
+        csd6-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            lessonGroup-4:
+              display_name: סקר
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csd6-draft:
+          lesson_groups:
+            csd6_1:
+              display_name: 'פרק 1: תכנות עם חומרה'
+            csd6_2:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        csd6-old:
+          lesson_groups:
+            csd6_1:
+              display_name: 'פרק 1: תכנות עם חומרה'
+            csd6_2:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
+        csf-2021-pilot:
+          lesson_groups:
+            Sprites:
+              display_name: דמויות
+            lessonGroup-3:
               display_name: משתנים
+            outbreak:
+              display_name: סימולציית התפרצות
+            ramp_up:
+              display_name: מבוא
+            variables:
+              display_name: משתנים
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: דמויות
+            lessonGroup-3:
+              display_name: משתנים
+            lessonGroup-4:
+              display_name: פרויקט סיום קורס
+        csf2harvey:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp-create-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp-create-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp-create-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp-explore-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp-explore-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp-explore-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: סקר
+        csp1-2017:
+          lesson_groups:
+            csp1_1:
+              display_name: 'פרק 1: ייצוג ושליחת מידע'
+            csp1_2:
+              display_name: 'פרק 2: המצאת האינטרנט'
+            cspSurvey:
+              display_name: סקר
+        csp1-2018:
+          lesson_groups:
+            csp1_1:
+              display_name: 'פרק 1: ייצוג ושליחת מידע'
+            csp1_2:
+              display_name: 'פרק 2: המצאת האינטרנט'
+            cspSurvey:
+              display_name: סקר
+        csp1-2019:
+          lesson_groups:
+            csp1_1:
+              display_name: 'פרק 1: ייצוג ושליחת מידע'
+            csp1_2:
+              display_name: 'פרק 2: המצאת האינטרנט'
+            cspSurvey:
+              display_name: סקר
+        csp1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            cspSurvey2020:
+              display_name: סקר שלאחר הקורס
+        csp1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            required:
+              display_name: סקירה
+        csp1-pilot-staging:
+          lesson_groups:
             csp_conditionals:
               display_name: תנאים
             csp_functions:
               display_name: פונקציות
             csp_project:
               display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+        csp1-support:
+          lesson_groups:
             required:
               display_name: סקירה
-        csp1-2019:
+        csp10-2020:
           lesson_groups:
+            cspSurvey2020:
+              display_name: סקר שלאחר הקורס
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
+        csp10-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+        csp2-2017:
+          lesson_groups:
+            csp2_1:
+              display_name: 'פרק 1: קידוד וכיווץ מידע מורכב'
             cspSurvey:
               display_name: סקר
-            csp1_1:
-              display_name: 'פרק 1: ייצוג ושליחת מידע'
-            csp1_2:
-              display_name: 'פרק 2: המצאת האינטרנט'
+        csp2-2018:
+          lesson_groups:
+            cspAssessment:
+              display_name: הערכה לפרק
         csp2-2019:
           lesson_groups:
+            cspAssessment:
+              display_name: הערכה לפרק
+            cspSurvey:
+              display_name: סקר
+        csp2-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: סקר שלאחר הקורס
+        csp2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp3-2017:
+          lesson_groups:
+            csp3_1:
+              display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
+            cspAssessment:
+              display_name: הערכה לפרק
+            cspSurvey:
+              display_name: סקר
+        csp3-2018:
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'יחידה 3: מבוא לתכנות'
             cspAssessment:
               display_name: הערכה לפרק
             cspSurvey:
@@ -952,73 +1352,175 @@ he:
               display_name: הערכה לפרק
             cspSurvey:
               display_name: סקר
+        csp3-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: סקר שלאחר הקורס
+        csp3-a:
+          lesson_groups:
+            csp3_1:
+              display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp3-research-mxghyt:
+          lesson_groups:
+            csp3_1:
+              display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
+            cspAssessment:
+              display_name: הערכה לפרק
+            cspSurvey:
+              display_name: סקר
+        csp3-staging:
+          lesson_groups:
+            csp3_1:
+              display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
+            cspAssessment:
+              display_name: הערכה לפרק
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp3-virtual:
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'יחידה 3: מבוא לתכנות'
+        csp4-2017:
+          lesson_groups:
+            cspAssessment:
+              display_name: הערכה לפרק
+            cspSurvey:
+              display_name: סקר
+        csp4-2018:
+          lesson_groups:
+            cspAssessment:
+              display_name: הערכה לפרק
+            cspSurvey:
+              display_name: סקר
         csp4-2019:
           lesson_groups:
             cspAssessment:
               display_name: הערכה לפרק
             cspSurvey:
               display_name: סקר
+        csp4-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: סקר שלאחר הקורס
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+            required:
+              display_name: סקירה
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp5-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp5-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
         csp5-2019:
           lesson_groups:
             cspSurvey:
               display_name: סקר
-        csp-explore-2019:
+        csp5-2020:
           lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        csp-create-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        csppostap-2019:
-          lesson_groups:
-            csp_postap_2:
-              display_name: 'פרק 2: אפליקציות ומסדי נתונים'
-            cspSurvey:
-              display_name: סקר
-        csp1-pilot:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-            required:
-              display_name: סקירה
-        time4csdemo:
-          lesson_groups:
-            ramp_up:
-              display_name: העלה רמה
-            csf_sprites:
-              display_name: דמויות
-        csp1-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: משתנים
-            csp_conditionals:
-              display_name: תנאים
-            csp_functions:
-              display_name: פונקציות
+            cspSurvey2020:
+              display_name: סקר שלאחר הקורס
+            csp_lists:
+              display_name: רשימות
+            csp_loops:
+              display_name: חזרות
             csp_project:
               display_name: פּרוֹיֶקט
-        csp2-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: משתנים
-            csp_conditionals:
-              display_name: תנאים
-            csp_functions:
-              display_name: פונקציות
-            csp_project:
-              display_name: פּרוֹיֶקט
-        csp4-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: משתנים
-            csp_conditionals:
-              display_name: תנאים
-            csp_functions:
-              display_name: פונקציות
-            csp_project:
-              display_name: פּרוֹיֶקט
-        csp5-pilot-staging:
+        csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: רשימות
@@ -1026,54 +1528,36 @@ he:
               display_name: חזרות
             csp_project:
               display_name: פּרוֹיֶקט
-        csp6-pilot-staging:
+            lessonGroup-5:
+              display_name: סקר שלאחר הקורס
+        csp5-2022:
           lesson_groups:
-            csp_variables:
-              display_name: משתנים
-            csp_conditionals:
-              display_name: תנאים
-            csp_functions:
-              display_name: פונקציות
+            csp_lists:
+              display_name: רשימות
+            csp_loops:
+              display_name: חזרות
             csp_project:
               display_name: פּרוֹיֶקט
-        csp8-pilot-staging:
+            lessonGroup-5:
+              display_name: סקר שלאחר הקורס
+        csp5-2023:
           lesson_groups:
-            csp_variables:
-              display_name: משתנים
-            csp_conditionals:
-              display_name: תנאים
-            csp_functions:
-              display_name: פונקציות
+            csp_lists:
+              display_name: נתונים
+            csp_loops:
+              display_name: חזרות
             csp_project:
               display_name: פּרוֹיֶקט
-        csp9-pilot-staging:
+            lessonGroup-5:
+              display_name: סקר שלאחר הקורס
+        csp5-dlp:
           lesson_groups:
-            csp_variables:
-              display_name: משתנים
-            csp_conditionals:
-              display_name: תנאים
-            csp_functions:
-              display_name: פונקציות
-            csp_project:
-              display_name: פּרוֹיֶקט
-        csp10-pilot-staging:
+            required:
+              display_name: סקירה
+        csp5-dlp-18:
           lesson_groups:
-            csp_variables:
-              display_name: משתנים
-            csp_conditionals:
-              display_name: תנאים
-            csp_functions:
-              display_name: פונקציות
-            csp_project:
-              display_name: פּרוֹיֶקט
-        csd-post-survey-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        csp-post-survey-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
+            required:
+              display_name: סקירה
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -1084,53 +1568,215 @@ he:
               display_name: פּרוֹיֶקט
             required:
               display_name: סקירה
-        fit2019-novice:
+        csp5-pilot-staging:
           lesson_groups:
-            required:
-              display_name: סקירה
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csd1-pilot:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-            csd1_1:
-              display_name: 'פרק 1: הדרך לפתרון תהליך'
-            csd1_2:
-              display_name: 'פרק 2: מחשבים ופתרון בעיות'
-        csd2-pilot:
-          lesson_groups:
-            csd2_1:
-              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
-            csd2_2:
-              display_name: 'פרק 2: עיצוב ו-CSS'
-            cspSurvey:
-              display_name: סקר
-        csd3-pilot:
-          lesson_groups:
-            csd3_1:
-              display_name: 'פרק 1: תמונות ואנימציות'
-            csd3_2:
-              display_name: 'פרק 2: יצירת משחקים'
-            cspSurvey:
-              display_name: סקר
-        csp3-pilot:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csl-vn:
-          lesson_groups:
-            csf_loops:
+            csp_lists:
+              display_name: רשימות
+            csp_loops:
               display_name: חזרות
-            csf_events:
-              display_name: אירועים
-        dlp19-csd-mod-fit:
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp5-support:
           lesson_groups:
             required:
               display_name: סקירה
-        dlp19-csp-mod-fit:
+        csp6-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: סקר שלאחר הקורס
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: אלגוריתמים
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: רשימות
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+            lessonGroup-3:
+              display_name: חזרות
+            lessonGroup-5:
+              display_name: פּרוֹיֶקט
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+        csp7-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: סקר שלאחר הקורס
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר
+        csp7-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר
+        csp8-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+        csp9-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: סקר שלאחר הקורס
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
+        csp9-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            csp_variables:
+              display_name: משתנים
+        csppostap-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csppostap-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            csp_postap_2:
+              display_name: 'פרק 2: אפליקציות ומסדי נתונים'
+        csppostap-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+            csp_postap_2:
+              display_name: 'פרק 2: אפליקציות ומסדי נתונים'
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        cspunit4draft:
+          description_short: נתונים
+        dance:
+          description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
+          name: ריקוד
+          student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
+          title: מסיבת ריקודים (2018)
+        dance-2019:
+          description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
+          description_short: קוד מסיבת ריקודים לחלוק עם חברים ובני משפחה. אמנים משתתפים
+            ביונסה, הארי סטיילס, ליזו, ליל נס X, סלינה גומז, מוסיקה מתוך "Encanto"
+            של דיסני ועוד!
+          student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
+          title: מסיבת ריקודים (2019)
+        dance-extras:
+          description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
+          student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
+          title: המשיכו לרקוד (2018)
+        dance-extras-2019:
+          description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
+          student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
+          title: המשיכו לרקוד (2019)
+        dance-extras-gallery:
+          description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
+          student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
+          title: המשיכו לרקוד
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            lessonGroup-4:
+              display_name: סקר
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            lessonGroup-3:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            lessonGroup-4:
+              display_name: סקר
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            lessonGroup-5:
+              display_name: סקר
+        dlp19-csd-mod-fit:
           lesson_groups:
             required:
               display_name: סקירה
@@ -1150,6 +1796,10 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: סקירה
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
@@ -1166,1134 +1816,157 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
-        csd4-pilot:
-          lesson_groups:
-            csd1_2:
-              display_name: 'פרק 2: מחשבים ופתרון בעיות'
-        csp2-pilot:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp6-pilot:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        dance-2019:
-          title: מסיבת ריקודים (2019)
-          description_short: קוד מסיבת ריקודים לחלוק עם חברים ובני משפחה. אמנים משתתפים
-            ביונסה, הארי סטיילס, ליזו, ליל נס X, סלינה גומז, מוסיקה מתוך "Encanto"
-            של דיסני ועוד!
-          description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
-          student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
-        k5-onlinepd-2019:
-          lesson_groups:
-            k5_next_steps:
-              display_name: השלבים הבאים
-        dance-extras-2019:
-          title: המשיכו לרקוד (2019)
-          description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
-          student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: משתנים
-            csp_conditionals:
-              display_name: תנאים
-            csp_functions:
-              display_name: פונקציות
-            csp_project:
-              display_name: פּרוֹיֶקט
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_conditionals:
-              display_name: תנאים
-            csf_functions:
-              display_name: פונקציות
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_conditionals:
-              display_name: תנאים
-            csf_events:
-              display_name: אירועים
-            csf_sprites:
-              display_name: דמויות
-            ramp_up:
-              display_name: העלה רמה
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_conditionals:
-              display_name: תנאים
-            csf_events:
-              display_name: אירועים
-            csf_sprites:
-              display_name: דמויות
-            ramp_up:
-              display_name: העלה רמה
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: סקירה
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: משתנים
-            csp_conditionals:
-              display_name: תנאים
-            csp_functions:
-              display_name: פונקציות
-            csp_project:
-              display_name: פּרוֹיֶקט
-            cspSurvey2020:
-              display_name: סקר שלאחר הקורס
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: רשימות
-            csp_loops:
-              display_name: חזרות
-            csp_project:
-              display_name: פּרוֹיֶקט
-            cspSurvey2020:
-              display_name: סקר שלאחר הקורס
-        csp7-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: סקר שלאחר הקורס
-        csd2-2020:
-          lesson_groups:
-            csd2_1:
-              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
-            csd2_2:
-              display_name: 'פרק 2: עיצוב ו-CSS'
-            cspSurvey:
-              display_name: סקר
-        csd1-2020:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-            csd1_1:
-              display_name: 'פרק 1: הדרך לפתרון תהליך'
-            csd1_2:
-              display_name: 'פרק 2: מחשבים ופתרון בעיות'
-        csd4-2020:
-          lesson_groups:
-            csd4_1:
-              display_name: 'פרק 1: עיצוב מכוון משתמש'
-            csd4_2:
-              display_name: 'פרק 2: תכנון אפליקציה'
-            csd5_2:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-            cspSurvey:
-              display_name: סקר
-        csd5-2020:
-          lesson_groups:
-            csd5_1:
-              display_name: 'פרק 1: ייצוג מידע'
-            csd5_2:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-            cspSurvey:
-              display_name: סקר
-        csd6-2020:
-          lesson_groups:
-            csd6_1:
-              display_name: 'פרק 1: תכנות עם חומרה'
-            csd6_2:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-            cspSurvey:
-              display_name: סקר
-        csd3-2020:
-          lesson_groups:
-            csd3_1:
-              display_name: 'פרק 1: תמונות ואנימציות'
-            csd3_2:
-              display_name: 'פרק 2: יצירת משחקים'
-            cspSurvey:
-              display_name: סקר
-        coursea-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-        courseb-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-        coursec-2020:
-          lesson_groups:
-            csf_binary:
-              display_name: בינארי
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-            csf_data:
-              display_name: נתונים
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        coursed-2020:
-          title: קורס ד' (2020)
-          description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות
-            "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
-          lesson_groups:
-            csf_events:
-              display_name: אירועים
-            csf_loops:
-              display_name: חזרות
-            csf_conditionals:
-              display_name: תנאים
-            csf_binary:
-              display_name: בינארי
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-          student_description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות,
-            לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות
-            דיגיטלית.
-        coursee-2020:
-          lesson_groups:
-            ramp_up:
-              display_name: העלה רמה
-            csf_sprites:
-              display_name: דמויות
-            csf_functions:
-              display_name: פונקציות
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        coursef-2020:
-          lesson_groups:
-            ramp_up:
-              display_name: העלה רמה
-            csf_variables:
-              display_name: משתנים
-            csf_data:
-              display_name: נתונים
-            csf_for_loops:
-              display_name: בשביל לולאות
-            csf_sprites:
-              display_name: דמויות
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        express-2020:
-          lesson_groups:
-            csf_warmup:
-              display_name: חימום
-            csf_loops:
-              display_name: חזרות
-            csf_conditionals:
-              display_name: תנאים
-            csf_functions:
-              display_name: פונקציות
-            csf_variables:
-              display_name: משתנים
-            csf_for_loops:
-              display_name: בשביל לולאות
-            csf_sprites:
-              display_name: דמויות
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-        csp1-2020:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-            cspSurvey2020:
-              display_name: סקר שלאחר הקורס
-        csp2-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: סקר שלאחר הקורס
-        csp3-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: סקר שלאחר הקורס
-        csp6-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: סקר שלאחר הקורס
-        csp9-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: סקר שלאחר הקורס
-        csp10-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: סקר שלאחר הקורס
-        csp3-virtual:
-          lesson_groups:
-            csp3_1_2018:
-              display_name: 'יחידה 3: מבוא לתכנות'
-        csd2-virtual:
-          lesson_groups:
-            csd2_1:
-              display_name: 'פרק 1: תוכן אינטרנט ו-HTML'
-            csd2_2:
-              display_name: 'פרק 2: עיצוב ו-CSS'
-        virtual-holding-place:
-          lesson_groups:
-            csd3_2:
-              display_name: 'פרק 2: יצירת משחקים'
-        k5-onlinepd-2020:
-          lesson_groups:
-            k5_next_steps_1:
-              display_name: השלבים הבאים
-        dani-june-2020-test:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        virustest:
-          title: הדמיה של התפרצות
-          description_short: השתמשו במעבדת הדמויות כדי ליצור סימולציה מתוך התפרצות
-            וירוסים.
-        outbreak:
-          lesson_groups:
-            outbreak:
-              display_name: סימולציית התפרצות
-          title: לנצח את הקורונה
-          description_short: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
-          description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
-          name: התפרצות
-          student_description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות
-            וירוסים.
-        2021drafting:
-          lesson_groups:
-            introduction:
-              display_name: מבוא
-            lessonGroup-3:
-              display_name: משתנים
-            outbreak:
-              display_name: לנצח את הקורונה
-            debugging:
-              display_name: מציאת טעויות
-        csd1-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-            csd1_1:
-              display_name: 'פרק 1: הדרך לפתרון תהליך'
-            csd1_2:
-              display_name: 'פרק 2: מחשבים ופתרון בעיות'
-        csd2-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        csd3-2021:
-          lesson_groups:
-            csd3_1:
-              display_name: 'פרק 1: תמונות ואנימציות'
-            csd3_2:
-              display_name: 'פרק 2: יצירת משחקים'
-            cspSurvey:
-              display_name: סקר
-        csd4-2021:
-          lesson_groups:
-            csd4_1:
-              display_name: 'פרק 1: עיצוב מכוון משתמש'
-            csd4_2:
-              display_name: 'פרק 2: תכנון אפליקציה'
-            csd5_2:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-            cspSurvey:
-              display_name: סקר
-        csd5-2021:
-          lesson_groups:
-            csd5_1:
-              display_name: 'פרק 1: ייצוג מידע'
-            csd5_2:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-            cspSurvey:
-              display_name: סקר
-        csd6-2021:
-          lesson_groups:
-            csd6_1:
-              display_name: 'פרק 1: תכנות עם חומרה'
-            csd6_2:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-            cspSurvey:
-              display_name: סקר
-        csp1-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        csp2-2021:
+        dlp21-csd:
           lesson_groups:
             lessonGroup-2:
-              display_name: סקר
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: משתנים
-            csp_conditionals:
-              display_name: תנאים
-            csp_functions:
-              display_name: פונקציות
-            csp_project:
-              display_name: פּרוֹיֶקט
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: רשימות
-            csp_loops:
-              display_name: חזרות
-            csp_project:
-              display_name: פּרוֹיֶקט
-            lessonGroup-5:
-              display_name: סקר שלאחר הקורס
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: אלגוריתמים
-            lessonGroup-2:
-              display_name: סקר שלאחר הקורס
-        csp7-2021:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: סקר
-        csp8-2021:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: סקר
-        csp9-2021:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: סקר
-        csp10-2021:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: סקר
-        coursea-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-            lessonGroup-5:
-              display_name: פרויקט סיום קורס
-        courseb-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-            lessonGroup-6:
-              display_name: פרויקט סיום קורס
-        coursec-2021:
-          lesson_groups:
-            csf_binary:
-              display_name: בינארי
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-            csf_data:
-              display_name: נתונים
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        coursed-2021:
-          title: קורס ד' (2021)
-          lesson_groups:
-            csf_events:
-              display_name: אירועים
-            csf_loops:
-              display_name: חזרות
-            csf_conditionals:
-              display_name: תנאים
-            csf_binary:
-              display_name: בינארי
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        coursee-2021:
-          lesson_groups:
-            csf_sprites:
-              display_name: דמויות
-            csf_nested_loops:
-              display_name: תנאים
-            csf_functions:
-              display_name: פונקציות
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        coursef-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: דמויות
-            csf_variables:
-              display_name: בשביל לולאות
-            csf_for_loops:
-              display_name: בשביל לולאות
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-            lessonGroup-8:
-              display_name: משתנים
-            lessonGroup-9:
-              display_name: הסר
-        express-2021:
-          lesson_groups:
-            csf_warmup:
-              display_name: חימום
-            csf_loops:
-              display_name: חזרות
-            csf_conditionals:
-              display_name: תנאים
-            csf_functions:
-              display_name: פונקציות
-            csf_variables:
-              display_name: משתנים
-            csf_for_loops:
-              display_name: בשביל לולאות
-            csf_sprites:
-              display_name: דמויות
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-            lessonGroup-9:
-              display_name: אירועים
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: מבוא
-            outbreak:
-              display_name: סימולציית התפרצות
-            lessonGroup-3:
-              display_name: משתנים
-            Sprites:
-              display_name: דמויות
-            variables:
-              display_name: משתנים
-        csd4-preview-2021:
-          lesson_groups:
-            csd4_1:
-              display_name: 'פרק 1: עיצוב מכוון משתמש'
-            csd4_2:
-              display_name: 'פרק 2: תכנון אפליקציה'
-            csd5_2:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-            cspSurvey:
-              display_name: סקר
-            csdSurvey:
-              display_name: סקר
-        csd5-preview-2021:
-          lesson_groups:
-            csd5_1:
-              display_name: 'פרק 1: ייצוג מידע'
-            csd5_2:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-            cspSurvey:
-              display_name: סקר
-        contagion-pilot:
-          description_short: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
-          description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
-          student_description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות
-            וירוסים.
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: מבוא
-            Introduction:
-              display_name: מבוא
-        csp-post-survey-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: סקר
-        aiml-2021:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: סקר
-        csd7-2021:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: סקר
-        outbreak-module:
-          title: התפרצות
-        csa-videos:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: משאבים
-            lessonGroup-2:
-              display_name: יחידה 1
-            lessonGroup-4:
-              display_name: יחידה 2
-            lessonGroup-5:
-              display_name: יחידה 3
-            lessonGroup-6:
-              display_name: יחידה 4
-            lessonGroup-7:
-              display_name: יחידה 5
+              description: בדיקה
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
               display_name: שלב 1
             lessonGroup-3:
               display_name: שלב 2
-        dlp21-csd:
+        e-f-ramp:
           lesson_groups:
-            lessonGroup-2:
-              description: בדיקה
-        csa-u6-dev:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: שיעורים
-            lessonGroup-3:
-              display_name: פּרוֹיֶקט
-        hello-world-food:
-          title: 'שלום, עולם: אוכל'
-        csa-u7-dev:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: שיעורים
-            lessonGroup-3:
-              display_name: פּרוֹיֶקט
-        hello-world-animals:
-          title: 'שלום, עולם: חיות'
-        hello-world-emoji:
-          title: 'שלום, עולם: אמוג''י'
-        hello-world-retro:
-          name: 'שלום, עולם: רטרו'
-          title: 'שלום, עולם: רטרו'
-        poetry-hoc3:
-          name: שירה - שעת הקוד 3
-          title: שירה - שעת הקוד גרסה 3
-        poem-art:
-          title: אומנות השירה
-        spelling-bee:
-          title: תחרות איות
-        outbreak-csc:
-          title: התפרצות
-        ai-ethics-2021:
-          description_audience: כיתות ו-י"ב
-        poem-art-2021:
-          title: אומנות השירה
-        hello-world-food-2021:
-          title: 'שלום, עולם: אוכל'
-        hello-world-emoji-2021:
-          title: 'שלום, עולם: אמוג''י'
-        hello-world-animals-2021:
-          title: 'שלום, עולם: חיות'
-        hello-world-retro-2021:
-          title: 'שלום, עולם: רטרו'
-          name: 'שלום, עולם: רטרו 2021'
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: שעת הקוד
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: דמויות
-            lessonGroup-3:
-              display_name: משתנים
-            lessonGroup-4:
+            csf_e_1:
+              display_name: המשך אל קורס ה (רשות)
+            csf_e_2:
+              display_name: תכני קורס ה
+            end_of_course_project:
               display_name: פרויקט סיום קורס
-        coursea-2022:
+            extra_course_content:
+              display_name: תוכן נוסף של הקורס
+        edit-code:
+          description: עריכת קוד
+          description_short: עריכת קוד
+          student_description: עריכת קוד
+          title: עריכת קוד
+        events:
+          description: אירועים
+          description_short: אירועים
+          student_description: אירועים
+          title: אירועים
+        express-2017:
           lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-            lessonGroup-5:
+            end_of_course_project:
               display_name: פרויקט סיום קורס
-        express-2022:
+        express-2019:
           lesson_groups:
-            csf_sprites:
-              display_name: דמויות
-            lessonGroup-9:
-              display_name: אירועים
-            csf_loops:
-              display_name: חזרות
             csf_conditionals:
               display_name: תנאים
-            csf_functions:
-              display_name: פונקציות
-            csf_variables:
-              display_name: משתנים
             csf_for_loops:
               display_name: בשביל לולאות
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        csp1-2022:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: משתנים
-            csp_conditionals:
-              display_name: תנאים
-            csp_functions:
-              display_name: פונקציות
-            csp_project:
-              display_name: פּרוֹיֶקט
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: רשימות
-            csp_loops:
-              display_name: חזרות
-            csp_project:
-              display_name: פּרוֹיֶקט
-            lessonGroup-5:
-              display_name: סקר שלאחר הקורס
-        courseb-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-            lessonGroup-6:
-              display_name: פרויקט סיום קורס
-        coursec-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-            csf_data:
-              display_name: נתונים
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        csp6-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: סקר שלאחר הקורס
-        csp7-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: סקר שלאחר הקורס
-        csp8-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: סקר שלאחר הקורס
-        csp9-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: סקר שלאחר הקורס
-        csp10-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: סקר שלאחר הקורס
-        coursed-2022:
-          lesson_groups:
-            csf_events:
-              display_name: אירועים
-            csf_loops:
-              display_name: חזרות
-            csf_conditionals:
-              display_name: תנאים
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-          title: קורס ד' (2021)
-        coursee-2022:
-          lesson_groups:
-            csf_sprites:
-              display_name: דמויות
             csf_functions:
               display_name: פונקציות
-            csf_nested_loops:
-              display_name: תנאים
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        coursef-2022:
-          lesson_groups:
-            ramp_up:
-              display_name: דמויות
-            lessonGroup-8:
-              display_name: משתנים
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        csa1-2022:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: סקר
-        pre-express-2022:
-          lesson_groups:
             csf_loops:
               display_name: חזרות
-            csf_events:
-              display_name: אירועים
-        coursef-2022-pilot:
-          lesson_groups:
-            ramp_up:
+            csf_sprites:
               display_name: דמויות
-            lessonGroup-8:
+            csf_variables:
               display_name: משתנים
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        csa8-2022:
+            csf_warmup:
+              display_name: חימום
+        express-2020:
           lesson_groups:
-            lessonGroup-5:
-              display_name: סקר
-        csd1-2022:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-            csd1_1:
-              display_name: 'פרק 1: הדרך לפתרון תהליך'
-            csd1_2:
-              display_name: 'פרק 2: מחשבים ופתרון בעיות'
-        csd2-2022:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        csd3-2022:
-          lesson_groups:
-            csd3_1:
-              display_name: 'פרק 1: תמונות ואנימציות'
-            csd3_2:
-              display_name: 'פרק 2: יצירת משחקים'
-            cspSurvey:
-              display_name: סקר
-        csd4-2022:
-          lesson_groups:
-            csd4_1:
-              display_name: 'פרק 1: עיצוב מכוון משתמש'
-            csd4_2:
-              display_name: 'פרק 2: תכנון אפליקציה'
-            cspSurvey:
-              display_name: סקר
-        csd5-2022:
-          lesson_groups:
-            csd5_1:
-              display_name: 'פרק 1: ייצוג מידע'
-            csd5_2:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-            cspSurvey:
-              display_name: סקר
-        csd7-2022:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: סקר
-        csd6-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-            lessonGroup-4:
-              display_name: סקר
-        vpl-csd1-ayw-pilot-2022:
-          lessons:
-            lesson-6:
-              name: הרחבת איתור באגים אסינכרונית
-        vpl-csd2-ayw-pilot-2022:
-          lessons:
-            lesson-6:
-              name: מודול 2 עבודה אסינכרונית
-        soccer:
-          name: כדורגל
-          title: קודדו משחק כדורגל משלכם
-          description_short: צרו משחק כדורגל
-          description: צרו משחק כדורגל
-        csa1-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: סקר
-        csa8-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: סקר
-        csa1-2023:
-          lessons:
-            lesson-2:
-              name: מעבדת ג'אווה
-            lesson-6:
-              name: חזרות
-          lesson_groups:
-            lessonGroup-2:
-              display_name: סקר
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: משתנים
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: בשביל לולאות
-        csa8-2023:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: סקר
-        hello-world-space-2022:
-          title: 'שלום, עולם: שטח'
-        csd1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: הדרך לפתרון תהליך'
-            lessonGroup-3:
-              display_name: 'פרק 2: מחשבים ופתרון בעיות'
-        csd4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: עיצוב מכוון משתמש'
-            lessonGroup-3:
-              display_name: 'פרק 2: תכנון אפליקציה'
-        csd5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: ייצוג מידע'
-            lessonGroup-3:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-        csd3-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: תמונות ואנימציות'
-            lessonGroup-3:
-              display_name: 'פרק 2: יצירת משחקים'
-        csd6-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-        physcomp-temp:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-        csc-function-machines-pilot:
-          lessons:
-            lesson-1:
-              name: מה הצליל הזה?
-        csp1-2023:
-          lesson_groups:
-            cspSurvey:
-              display_name: סקר
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: משתנים
-            csp_conditionals:
+            csf_conditionals:
               display_name: תנאים
-            csp_functions:
+            csf_for_loops:
+              display_name: בשביל לולאות
+            csf_functions:
               display_name: פונקציות
-            csp_project:
-              display_name: פּרוֹיֶקט
-        csp5-2023:
-          lesson_groups:
-            csp_lists:
-              display_name: נתונים
-            csp_loops:
-              display_name: חזרות
-            csp_project:
-              display_name: פּרוֹיֶקט
-            lessonGroup-5:
-              display_name: סקר שלאחר הקורס
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: רשימות
-            lessonGroup-2:
-              display_name: סקר שלאחר הקורס
-            lessonGroup-3:
-              display_name: חזרות
-            lessonGroup-5:
-              display_name: פּרוֹיֶקט
-        csp7-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: סקר שלאחר הקורס
-        csp8-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: סקר שלאחר הקורס
-        csp9-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: סקר שלאחר הקורס
-        csp10-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: סקר שלאחר הקורס
-        devices-2022:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-        microbit-2022:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-        pre-express-2023:
-          lesson_groups:
             csf_loops:
               display_name: חזרות
-            csf_events:
+            csf_sprites:
+              display_name: דמויות
+            csf_variables:
+              display_name: משתנים
+            csf_warmup:
+              display_name: חימום
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: תנאים
+            csf_for_loops:
+              display_name: בשביל לולאות
+            csf_functions:
+              display_name: פונקציות
+            csf_loops:
+              display_name: חזרות
+            csf_sprites:
+              display_name: דמויות
+            csf_variables:
+              display_name: משתנים
+            csf_warmup:
+              display_name: חימום
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+            lessonGroup-9:
+              display_name: אירועים
+        express-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: תנאים
+            csf_for_loops:
+              display_name: בשביל לולאות
+            csf_functions:
+              display_name: פונקציות
+            csf_loops:
+              display_name: חזרות
+            csf_sprites:
+              display_name: דמויות
+            csf_variables:
+              display_name: משתנים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+            lessonGroup-9:
               display_name: אירועים
         express-2023:
           lesson_groups:
-            csf_sprites:
-              display_name: דמויות
-            lessonGroup-9:
-              display_name: אירועים
-            csf_loops:
-              display_name: חזרות
             csf_conditionals:
               display_name: תנאים
-            csf_functions:
-              display_name: פונקציות
-            csf_variables:
-              display_name: משתנים
             csf_for_loops:
               display_name: בשביל לולאות
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        coursea-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-            lessonGroup-5:
-              display_name: פרויקט סיום קורס
-        courseb-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-            lessonGroup-6:
-              display_name: פרויקט סיום קורס
-        coursec-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: חזרות
-            csf_events:
-              display_name: אירועים
-            csf_data:
-              display_name: נתונים
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-        coursed-2023:
-          lesson_groups:
-            csf_events:
-              display_name: אירועים
-            csf_loops:
-              display_name: חזרות
-            csf_conditionals:
-              display_name: תנאים
-            end_of_course_project:
-              display_name: פרויקט סיום קורס
-          title: קורס ד' (2021)
-        coursee-2023:
-          lesson_groups:
-            csf_sprites:
-              display_name: דמויות
             csf_functions:
               display_name: פונקציות
-            csf_nested_loops:
-              display_name: תנאים
+            csf_loops:
+              display_name: חזרות
+            csf_sprites:
+              display_name: דמויות
+            csf_variables:
+              display_name: משתנים
             end_of_course_project:
               display_name: פרויקט סיום קורס
-        problem-solving-computing-2023:
+            lessonGroup-9:
+              display_name: אירועים
+        fit-test:
           lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: הדרך לפתרון תהליך'
-            lessonGroup-3:
-              display_name: 'פרק 2: מחשבים ופתרון בעיות'
-        web-development-2023:
+            required:
+              display_name: סקירה
+        fit2019-apprentice:
           lesson_groups:
-            lessonGroup-4:
-              display_name: סקר
-        interactive-games-animations-2023:
+            required:
+              display_name: סקירה
+        fit2019-novice:
           lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: תמונות ואנימציות'
-            lessonGroup-3:
-              display_name: 'פרק 2: יצירת משחקים'
-            lessonGroup-4:
-              display_name: סקר
-        design-process-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: עיצוב מכוון משתמש'
-            lessonGroup-3:
-              display_name: 'פרק 2: תכנון אפליקציה'
-            lessonGroup-4:
-              display_name: סקר
-        data-society-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: ייצוג מידע'
-            lessonGroup-3:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-            lessonGroup-4:
-              display_name: סקר
-        aiml-2023:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: סקר
-        focus-on-creativity1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: הדרך לפתרון תהליך'
-        focus-on-creativity3-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: תמונות ואנימציות'
-            lessonGroup-3:
-              display_name: 'פרק 2: יצירת משחקים'
-        focus-on-creativity4a-2023:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-        focus-on-hardware1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: הדרך לפתרון תהליך'
-            lessonGroup-3:
-              display_name: 'פרק 2: מחשבים ופתרון בעיות'
-        focus-on-hardware2-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: ייצוג מידע'
-            lessonGroup-3:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-        focus-on-hardware3a-2023:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-        focus-on-data1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: הדרך לפתרון תהליך'
-        focus-on-data2:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: ייצוג מידע'
-        focus-on-data2-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: ייצוג מידע'
-            lessonGroup-3:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-        focus-on-design-with-purpose1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: הדרך לפתרון תהליך'
-        focus-on-design-with-purpose3-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: עיצוב מכוון משתמש'
-            lessonGroup-3:
-              display_name: 'פרק 2: תכנון אפליקציה'
-        focus-on-design-with-purpose4a-2023:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            required:
+              display_name: סקירה
+        flappy:
+          description: רוצים לכתוב משחק משלכם בפחות מעשר דקות? נסו את מדריך קוד ההתעופפות
+            שלנו!
+          description_short: כתוב משחק פלאפי משלך תוך פחות מ-10 דקות!
+          student_description: רוצים לכתוב משחק משלכם בפחות מעשר דקות? נסו את מדריך
+            קוד ההתעופפות שלנו!
+          title: צרו משחק עם פלאפי
+        focus-on-coding-post-survey-2023:
+          title: סקר שלאחר הקורס
         focus-on-coding1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2304,10 +1977,88 @@ he:
           lesson_groups:
             lessonGroup-4:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        focus-on-creativity-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            lessonGroup-3:
+              display_name: 'פרק 2: יצירת משחקים'
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        focus-on-data-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        focus-on-design-with-purpose-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            lessonGroup-3:
+              display_name: 'פרק 2: תכנון אפליקציה'
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        focus-on-hardware-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-3:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+            lessonGroup-5:
+              display_name: סקר
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        focus-on-impact-in-society-post-survey-2023:
+          title: סקר שלאחר הקורס
         focus-on-impact-in-society1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2320,24 +2071,364 @@ he:
               display_name: 'פרק 1: ייצוג מידע'
             lessonGroup-3:
               display_name: 'פרק 2: פתרון בעיות נתונים'
-        csd6a-2023:
+        frozen:
+          description: השתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי
+            שבקרח. אנו עומדים ליצור פתיתי שלג וצורות בקרח ואז תוכלו לשתף את זה עם
+            חבריכם!
+          description_short: בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם
+            והיופי של קרח.
+          student_description: השתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם
+            והיופי שבקרח. אנו עומדים ליצור פתיתי שלג וצורות בקרח ואז תוכלו לשתף את
+            זה עם חבריכם!
+          title: לתכנת עם אנה ואלזה
+        gamelab:
+          title: מעבדת המשחקים
+        grade1:
+          description_audience: גילאי 5-18
+        grade2:
+          description_audience: גילאי 5-18
+        grade3:
+          description_audience: גילאי 5-18
+        grade4:
+          description_audience: גילאי 10-99
+        grade5:
+          description_audience: גילאי 10-110
+        gradeKinder:
+          description_audience: גילאי 5-18
+        gumball:
+          description: צור סיפור או משחק עם מעבדת הצעצועים גמבול!
+          description_short: צור סיפור או משחק עם מעבדת הצעצועים גמבול!
+          student_description: צור סיפור או משחק עם מעבדת הצעצועים גמבול!
+          title: מעבדת הצעצועים עם גמבול
+        hello-world-animals:
+          title: 'שלום, עולם: חיות'
+        hello-world-animals-2021:
+          title: 'שלום, עולם: חיות'
+        hello-world-emoji:
+          title: 'שלום, עולם: אמוג''י'
+        hello-world-emoji-2021:
+          title: 'שלום, עולם: אמוג''י'
+        hello-world-food:
+          title: 'שלום, עולם: אוכל'
+        hello-world-food-2021:
+          title: 'שלום, עולם: אוכל'
+        hello-world-retro:
+          name: 'שלום, עולם: רטרו'
+          title: 'שלום, עולם: רטרו'
+        hello-world-retro-2021:
+          name: 'שלום, עולם: רטרו 2021'
+          title: 'שלום, עולם: רטרו'
+        hello-world-space-2022:
+          title: 'שלום, עולם: שטח'
+        hero:
+          name: גיבור
+          title: 'מיינקראפט: המסע של הירו'
+        hoc-impact-study:
+          description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
+        hourofcode:
+          description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד
+            זומבים וסקראט מעידן הקרח!
+          description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
+          student_description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים
+            נגד זומבים וסקראט מעידן הקרח!
+          title: מבוך קלאסי
+        iceage:
+          description: צרו סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
+          description_short: צרו סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
+          student_description: צרו סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
+          title: עידן הקרח Play Lab
+        infinity:
+          description: בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות דמויות מתוך
+            "דיסני אינסוף".
+          description_short: בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות דמויות
+            מתוך "דיסני אינסוף".
+          student_description: בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות
+            דמויות מתוך "דיסני אינסוף".
+          title: מעבדת הצעצועים עם דיסני אינסוף
+        interactive-games-animations-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: תמונות ואנימציות'
             lessonGroup-3:
+              display_name: 'פרק 2: יצירת משחקים'
+            lessonGroup-4:
+              display_name: סקר
+        jigsaw:
+          title: פאזל
+        k5-onlinepd-2019:
+          lesson_groups:
+            k5_next_steps:
+              display_name: השלבים הבאים
+        k5-onlinepd-2020:
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: השלבים הבאים
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: מבוא
+            k5_getting_started_1:
+              display_name: מבוא
+        mc:
+          description: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם
+            של מיינקראפט.
+          description_short: גלה את העולם של מיינקראפט באמצעות קוד
+          student_description: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה
+            בעולם של מיינקראפט.
+          title: 'מיינקראפט: יוצאים להרפתקה'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
         microbit-2023:
           lesson_groups:
             lessonGroup-5:
               display_name: סקר
-        devices-2023:
+        minecraft:
+          description: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
+          description_short: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
+          student_description: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
+          title: מעצבי מיינקראפט
+        netsim:
+          title: מדמה אינטרנט
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: דמויות
+            lessonGroup-3:
+              display_name: תנאים
+            lessonGroup-5:
+              display_name: משתנים
+            lessonGroup-7:
+              display_name: פרויקט סיום קורס
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: דמויות
+        nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-4:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+              display_name: חזרות
+            lessonGroup-6:
+              display_name: אירועים
+            lessonGroup-7:
+              display_name: פרויקט סיום קורס
+            lessonGroup-8:
+              display_name: נתונים
+          lessons:
+            lesson-1:
+              name: נתונים
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: פונקציות
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: חזרות
+            lessonGroup-6:
+              display_name: נתונים
+          lessons:
+            lesson-1:
+              name: נתונים
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: חזרות
             lessonGroup-5:
-              display_name: סקר
+              display_name: אירועים
+            lessonGroup-6:
+              display_name: נתונים
+            lessonGroup-8:
+              display_name: מערכות מחשוב
+          lessons:
+            lesson-1:
+              name: מערכות מחשוב
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: חזרות
+            lessonGroup-7:
+              display_name: נתונים
+            lessonGroup-8:
+              display_name: פרויקט סיום קורס
+        new-d:
+          title: קוד חדש לקורס ד'
+        new-e:
+          lesson_groups:
+            csf_e_1:
+              display_name: המשך אל קורס ה (רשות)
+            csf_e_2:
+              display_name: תכני קורס ה
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+            extra_course_content:
+              display_name: תוכן נוסף של הקורס
+        new-express:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        new-f:
+          lesson_groups:
+            csf_f_1:
+              display_name: המשך אל קורס ו (רשות)
+            csf_f_2:
+              display_name: תכני קורס ו
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        outbreak:
+          description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
+          description_short: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
+          lesson_groups:
+            outbreak:
+              display_name: סימולציית התפרצות
+          name: התפרצות
+          student_description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות
+            וירוסים.
+          title: לנצח את הקורונה
+        outbreak-csc:
+          title: התפרצות
+        outbreak-module:
+          title: התפרצות
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
         pl-csd-summer-day1:
           lessons:
             lesson-3:
               name: מבוא
+        playlab:
+          description: צור סיפור או משחק בעזרת מעבדת הצעצועים!
+          description_short: צור סיפור או משחק בעזרת מעבדת הצעצועים!
+          student_description: צור סיפור או משחק בעזרת מעבדת הצעצועים!
+          title: מעבדת הצעצועים
+        poem-art:
+          title: אומנות השירה
+        poem-art-2021:
+          title: אומנות השירה
+        poetry-hoc3:
+          name: שירה - שעת הקוד 3
+          title: שירה - שעת הקוד גרסה 3
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-3:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        soccer:
+          description: צרו משחק כדורגל
+          description_short: צרו משחק כדורגל
+          name: כדורגל
+          title: קודדו משחק כדורגל משלכם
+        spelling-bee:
+          title: תחרות איות
+        sports:
+          name: ספורט
+        starwars:
+          description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים" הפרטי
+            שלכם, בגלקסיה רחוקה רחוקה...
+          description_short: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים"
+            הפרטי שלכם, בגלקסיה רחוקה רחוקה...
+          student_description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים"
+            הפרטי שלכם, בגלקסיה רחוקה רחוקה...
+          title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)'
+        starwarsblocks:
+          description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים" הפרטי
+            שלכם, בגלקסיה רחוקה רחוקה...
+          description_short: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים"
+            הפרטי שלכם, בגלקסיה רחוקה רחוקה...
+          student_description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים"
+            הפרטי שלכם, בגלקסיה רחוקה רחוקה...
+          title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)'
+        step:
+          title: צעד
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: חזרות
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: סקירה
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: תנאים
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_sprites:
+              display_name: דמויות
+            ramp_up:
+              display_name: העלה רמה
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: תנאים
+            csf_functions:
+              display_name: פונקציות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: תנאים
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_sprites:
+              display_name: דמויות
+            ramp_up:
+              display_name: העלה רמה
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: דמויות
+            ramp_up:
+              display_name: העלה רמה
+        virtual-holding-place:
+          lesson_groups:
+            csd3_2:
+              display_name: 'פרק 2: יצירת משחקים'
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -2346,29 +2437,19 @@ he:
           lessons:
             lesson-3:
               name: הערכה
-        csd-post-survey-2023:
-          title: סקר שלאחר הקורס
-        focus-on-data-post-survey-2023:
-          title: סקר שלאחר הקורס
-        focus-on-impact-in-society-post-survey-2023:
-          title: סקר שלאחר הקורס
-        focus-on-coding-post-survey-2023:
-          title: סקר שלאחר הקורס
-        focus-on-design-with-purpose-post-survey-2023:
-          title: סקר שלאחר הקורס
-        focus-on-hardware-post-survey-2023:
-          title: סקר שלאחר הקורס
-        focus-on-creativity-post-survey-2023:
-          title: סקר שלאחר הקורס
-        coursef-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: דמויות
-            lessonGroup-4:
-              display_name: משתנים
-            lessonGroup-6:
-              display_name: פרויקט סיום קורס
-        csa-frq-practice-2022:
+        virustest:
+          description_short: השתמשו במעבדת הדמויות כדי ליצור סימולציה מתוך התפרצות
+            וירוסים.
+          title: הדמיה של התפרצות
+        vpl-csd1-ayw-pilot-2022:
           lessons:
-            lesson-4:
-              name: נתונים
+            lesson-6:
+              name: הרחבת איתור באגים אסינכרונית
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: מודול 2 עבודה אסינכרונית
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר

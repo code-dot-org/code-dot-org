@@ -740,6 +740,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
     'levels/editors/fields/_validation_code':
       './src/sites/studio/pages/levels/editors/fields/_validation_code.js',
+    'levels/editors/fields/_validations':
+      './src/sites/studio/pages/levels/editors/fields/_validations.js',
     'levels/editors/fields/_video':
       './src/sites/studio/pages/levels/editors/fields/_video.js',
     'levels/editors/_gamelab':
@@ -770,6 +772,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/reference_guides/edit_all.js',
     'programming_expressions/index':
       './src/sites/studio/pages/programming_expressions/index.js',
+    'rubrics/new': './src/sites/studio/pages/rubrics/new.js',
+    'rubrics/edit': './src/sites/studio/pages/rubrics/edit.js',
     'sections/new': './src/sites/studio/pages/sections/new.js',
     'sections/edit': './src/sites/studio/pages/sections/edit.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
@@ -792,8 +796,6 @@ describe('entry tests', () => {
   var pegasusEntries = {
     // code.org
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
-    'code.org/public/educate/curriculum/courses':
-      './src/sites/code.org/pages/public/educate/curriculum/courses.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
     'code.org/public/teacher-dashboard/index':

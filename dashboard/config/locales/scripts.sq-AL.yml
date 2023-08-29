@@ -3,70 +3,1675 @@ sq:
   data:
     script:
       name:
+        20-hour:
+          description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike
+            dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat
+            e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
+          description_audience: Moshat 10-18
+          description_short: Ky kurs 20 oresh mbulon te gjithe berthamen e shkencave
+            kompjuterike dhe konceptet e programimit ne kurset 2-4.
+          student_description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës
+            kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret
+            nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha
+            moshat.
+          title: Hyrje e pershpejtuar ne kurset e shkencave kompjuterike
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: Debugging
+            introduction:
+              display_name: Hyrje
+            lessonGroup-3:
+              display_name: variabla
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Ora e Kodimit
+        AlgebraA:
+          description: Mëso Programimin Funksional nëpërmjet Algjebrës
+          description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
+          student_description: Mëso Programimin Funksional nëpërmjet Algjebrës
+        AlgebraB:
+          description: Mëso Programimin Funksional nëpërmjet Algjebrës
+          description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
+          student_description: Mëso Programimin Funksional nëpërmjet Algjebrës
+        CSDU5-Draft:
+          description_short: të dhëna
+        CSF_Secret_Sample:
+          description_audience: Moshat 8-18
+        CSF_Secret_Sample_Story:
+          description_audience: Moshat 8-18+
+        Course4pre:
+          description: Një përmbledhje e shkurtër e koncepteve për studentët që nuk
+            kanë bërë Kurset 2 dhe 3.
+          description_short: Një përmbledhje e shkurtër e koncepteve për studentët
+            që nuk kanë bërë Kurset 2 dhe 3.
+          student_description: Një përmbledhje e shkurtër e koncepteve për studentët
+            që nuk kanë bërë Kurset 2 dhe 3.
+          title: Kushtet paraprake të Kursit 4
+        ECSPD2:
+          description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+          description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+        ECSPD2-NexTech:
+          description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+          description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+        ECSPD2-iZone:
+          description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+          description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+        Hour of Code:
+          description: Provoni elementet baze te shkencave kompjuterike me personazhe
+            nga Angry Birds dhe Plants vs. Zombies!
+          description_short: Provo bazat e shkencës kompjuterike me shumë karaktere
+            zbavitëse!
+          student_description: Provoni elementet baze te shkencave kompjuterike me
+            personazhe nga Angry Birds dhe Plants vs. Zombies!
+          title: Ora e Kodit 2013
+        MikeTest:
+          description_audience: Moshat 8-98
+        Special Fun:
+          description_audience: Moshat 10-18
+        SpecialSeries:
+          description_audience: Moshat 10-18
+        afterschool1:
+          description_audience: Moshat 7-13
+        algebra:
+          description: Mëso Programimin Funksional nëpërmjet Algjebrës.
+          description_short: Mëso Programimin Funksional nëpërmjet Algjebrës.
+          student_description: Mëso Programimin Funksional nëpërmjet Algjebrës.
+          title: Shkenëa Kompjuterike në Algjebër
+        algebraPD2a:
+          description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+          description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+        algebraPD2b:
+          description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+          description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+        algebrademo:
+          description: Një dorë puzzle-ash për të demonstruar mjedisin dhe gjuhën
+            e programimit të përdorur në Code.org CS në Algjebër
+          description_short: Një dorë puzzle-ash për të demonstruar mjedisin dhe gjuhën
+            e programimit të përdorur në Code.org CS në Algjebër
+          student_description: Një dorë puzzle-ash për të demonstruar mjedisin dhe
+            gjuhën e programimit të përdorur në Code.org CS në Algjebër
+          title: Demo e Algjebrës
+        alltheplcthings:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
+            required:
+              display_name: Përmbledhja
+        andrea-test:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Vlerësimet
+        aquatic:
+          name: ujor
+          title: 'Minecraft: Udhëtimi ujor'
+        artist:
+          description: Vizato figura të hatashme dhe dizenjo me Artistin!
+          description_short: Vizato figura të hatashme dhe dizenjo me Artistin!
+          student_description: Vizato figura të hatashme dhe dizenjo me Artistin!
+          title: Artisti
+        artistExemplar:
+          description_audience: Moshat 8-18
+        asUnplugged:
+          description_audience: Moshat 6-13
+        basketball:
+          description: Realizo një lojë basketbolli
+          description_short: Realizo një lojë basketbolli
+          name: basketboll
+          student_description: Realizo një lojë basketbolli
+          title: Realizo një lojë basketbolli
+        classic-hoc-impact-study:
+          description_short: Provo bazat e shkencës kompjuterike me shumë karaktere
+            zbavitëse!
+        contagion-pilot:
+          description_audience: Klasat 5
+        course-e-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        course-f-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         course1:
-          title: Kursi 1
           description: Kursi 1 është dizenjuar për të lejuar lexuesit të krijojnë
             programe kompjuerike që do i ndihmojnë ata të mësojnë të bashkëpunojnë
             me të tjerët, të zhvillojnë aftësitë për zgjidhjen e problemeve, dhe të
             këmbëngulin në detyra të vështira. Në fund të këtij kursi, studentët krijojnë
             lojën e tyre ose ngjarjen që ata mund ta shpërndajnë. Rekomanduar për
             klasën e parë.
-          description_short: Kursi 1 është dizenjuar për lexuesit e hershëm.
           description_audience: Moshat 4-6
+          description_short: Kursi 1 është dizenjuar për lexuesit e hershëm.
           student_description: Kursi 1 është dizenjuar për të lejuar lexuesit të krijojnë
             programe kompjuerike që do i ndihmojnë ata të mësojnë të bashkëpunojnë
             me të tjerët, të zhvillojnë aftësitë për zgjidhjen e problemeve, dhe të
             këmbëngulin në detyra të vështira. Në fund të këtij kursi, studentët krijojnë
             lojën e tyre ose ngjarjen që ata mund ta shpërndajnë. Rekomanduar për
             klasën e parë.
+          title: Kursi 1
         course2:
-          title: Kursi 2
           description: Kursi 2 është dizenjuar për studentët që mund të lexojnë dhe
             nuk kanë si prioritet programimin. Në këtë kurs, studentët do të krijojnë
             programe për të zgjidhur problemet dhe të zhvillojnë lojëra interaktive
             ose ngjarje që ata të mund ti shpërndajnë. Rekomanduar për klasat 2-5.
-          description_short: Kursi 2 është dizenjuar për studentët, që mund të lexojnë.
           description_audience: Moshat 6+ (lexim i kërkuar )
+          description_short: Kursi 2 është dizenjuar për studentët, që mund të lexojnë.
           student_description: Kursi 2 është dizenjuar për studentët që mund të lexojnë
             dhe nuk kanë si prioritet programimin. Në këtë kurs, studentët do të krijojnë
             programe për të zgjidhur problemet dhe të zhvillojnë lojëra interaktive
             ose ngjarje që ata të mund ti shpërndajnë. Rekomanduar për klasat 2-5.
+          title: Kursi 2
         course3:
-          title: Kursi 3
           description: Kursi 3 është dizenjuar për studentët, të cilët kanë marrë
             Kursin 2. Studentët do futen më thellë në temat e programimit, që janë
             prezantuar në kurset e mëparshme, për të krijuar zgjidhje fleksibile për
             problemet më të ndërlikuara. Në fund të këtij kursi, studentët krijojnë
             histori interaktive dhe lojëra që mund ti shpërndajnë me këdo. Rekomanduar
             për klasën 4-5.
-          description_short: Kursi 3 është një përforcim njohurish i Kursit 2.
           description_audience: Moshat 8-18
+          description_short: Kursi 3 është një përforcim njohurish i Kursit 2.
           student_description: Kursi 3 është dizenjuar për studentët, të cilët kanë
             marrë Kursin 2. Studentët do futen më thellë në temat e programimit, që
             janë prezantuar në kurset e mëparshme, për të krijuar zgjidhje fleksibile
             për problemet më të ndërlikuara. Në fund të këtij kursi, studentët krijojnë
             histori interaktive dhe lojëra që mund ti shpërndajnë me këdo. Rekomanduar
             për klasën 4-5.
-        playlab:
-          title: Play Lab
-          description: Krijo një histori ose bëj një lojë me Play Lab!
-          description_short: Krijo një histori ose bëj një lojë me Play Lab!
-          student_description: Krijo një histori ose bëj një lojë me Play Lab!
-        artist:
-          title: Artisti
-          description: Vizato figura të hatashme dhe dizenjo me Artistin!
-          description_short: Vizato figura të hatashme dhe dizenjo me Artistin!
-          student_description: Vizato figura të hatashme dhe dizenjo me Artistin!
-        hourofcode:
-          title: Labirint Klasik
-          description: Provo bazat e shkencës kompjuterike me karaktere nga Angry
-            Birds, Plants vs. Zombies dhe Ketrit nga Ice Age!
-          description_short: Provo bazat e shkencës kompjuterike me shumë karaktere
-            zbavitëse!
-          student_description: Provo bazat e shkencës kompjuterike me karaktere nga
-            Angry Birds, Plants vs. Zombies dhe Ketrit nga Ice Age!
+          title: Kursi 3
+        course4:
+          description: Kursi 4 është dizejnuar për studentët të cilët kanë marrë Kursin
+            2 dhe 3. Nxënësit do të mësojnë se si të merren me puzzles me rritjen
+            e kompleksitetit që ata të mësojnë si të kombinojnë disa koncepte, kur
+            bëjnë çdo sfidë. Në kohën kur ky kurs është përfunduar, studentët do të  krijojnë
+            programe që lejojnë ata të shfaqin aftësi të shumta,  përfshirë ciklet
+            dhe funksionet me parametra. Rekomandohet për klasat 4-8.
+          description_audience: Moshat 10-18
+          description_short: Studentët që marrin Kursin 4 duhet të kenë marrë tashmë
+            Kursin 2 dhe 3.
+          student_description: Kursi 4 është dizejnuar për studentët të cilët kanë
+            marrë Kursin 2 dhe 3. Nxënësit do të mësojnë se si të merren me puzzles
+            me rritjen e kompleksitetit që ata të mësojnë si të kombinojnë disa koncepte,
+            kur bëjnë çdo sfidë. Në kohën kur ky kurs është përfunduar, studentët
+            do të  krijojnë programe që lejojnë ata të shfaqin aftësi të shumta,  përfshirë
+            ciklet dhe funksionet me parametra. Rekomandohet për klasat 4-8.
+          title: Kursi 4
+        coursea-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+        coursea-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+        coursea-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            lessonGroup-5:
+              display_name: Përfundimi i projektit të kursit
+        coursea-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            lessonGroup-5:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi A (2022)
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            lessonGroup-5:
+              display_name: Përfundimi i projektit të kursit
+        courseb-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+        courseb-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+        courseb-2021:
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë.
+            Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit
+            mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes
+            një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit,
+            teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit
+            kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në
+            fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit
+            Play Lab.
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi B (2021)
+        courseb-2022:
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë.
+            Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit
+            mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes
+            një larmie më të madhe enigmash. Nxënësit do të mësojnë bazat e programimit,
+            teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit
+            kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në
+            fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit
+            Play Lab.
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Digjitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: Loops
+            csf_sequencing:
+              display_name: Renditje
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi B (2022)
+        courseb-2023:
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë.
+            Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit
+            mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes
+            një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit,
+            teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit
+            kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në
+            fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit
+            Play Lab.
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
+        coursec-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Binare
+            csf_data:
+              display_name: të dhëna
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursec-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: Binare
+            csf_data:
+              display_name: të dhëna
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursec-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: Binare
+            csf_data:
+              display_name: Të dhënat
+            csf_digcit:
+              display_name: Shtetësia digjitale
+            csf_events:
+              display_name: Events
+            csf_loops:
+              display_name: Loops
+            csf_sequencing:
+              display_name: Sekuencimi
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi C (2021)
+        coursec-2022:
+          lesson_groups:
+            csf_data:
+              display_name: të dhëna
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi C (2022)
+        coursec-2023:
+          lesson_groups:
+            csf_data:
+              display_name: të dhëna
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursed-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Binare
+            csf_conditionals:
+              display_name: Kushtet
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursed-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: Binare
+            csf_conditionals:
+              display_name: Kushtet
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursed-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: Binare
+            csf_conditionals:
+              display_name: Kushtet
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+            lessonGroup-6:
+              display_name: Shtetësi Dixhitale
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Kushtet
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+            lessonGroup-6:
+              display_name: Shtetësi Dixhitale
+          title: Kursi D (2022)
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Kushtet
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+            lessonGroup-6:
+              display_name: Shtetësi Dixhitale
+        coursee-2017:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursee-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_functions:
+              display_name: funksione
+            csf_nested_loops:
+              display_name: Përsëritjet e Mbivendosura
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_functions:
+              display_name: funksione
+            csf_nested_loops:
+              display_name: Përsëritjet e Mbivendosura
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursee-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_functions:
+              display_name: funksione
+            csf_nested_loops:
+              display_name: Kushtet
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+            ramp_up:
+              display_name: Përsëritjet e Mbivendosura
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_functions:
+              display_name: funksione
+            csf_nested_loops:
+              display_name: Kushtet
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+            ramp_up:
+              display_name: Përsëritjet e Mbivendosura
+          title: Kursi E (2022)
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_functions:
+              display_name: funksione
+            csf_nested_loops:
+              display_name: Kushtet
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+            ramp_up:
+              display_name: Përsëritjet e Mbivendosura
+        coursee-draft:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursef-2017:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursef-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursef-2019:
+          lesson_groups:
+            csf_data:
+              display_name: të dhëna
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_for_loops:
+              display_name: Për Ciklet
+            csf_internet:
+              display_name: Internet
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: variabla
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursef-2020:
+          lesson_groups:
+            csf_data:
+              display_name: të dhëna
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_for_loops:
+              display_name: Për Ciklet
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: variabla
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursef-2021:
+          lesson_groups:
+            csf_data:
+              display_name: Të dhënat dhe simulimet
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_for_loops:
+              display_name: Për Ciklet
+            csf_variables:
+              display_name: Për Ciklet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+            lessonGroup-7:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-8:
+              display_name: variabla
+            lessonGroup-9:
+              display_name: Largo
+            ramp_up:
+              display_name: Sprites
+          title: Kursi F (2021)
+        coursef-2022:
+          lesson_groups:
+            csf_data:
+              display_name: Të dhënat dhe simulimet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+            lessonGroup-7:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-8:
+              display_name: variabla
+            ramp_up:
+              display_name: Sprites
+          title: Kursi F (2022)
+        coursef-2022-pilot:
+          lesson_groups:
+            csf_data:
+              display_name: Të dhënat dhe simulimet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+            lessonGroup-7:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-8:
+              display_name: variabla
+            ramp_up:
+              display_name: Sprites
+          title: Kursi F (2022)
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: variabla
+            lessonGroup-5:
+              display_name: Të dhënat dhe simulimet
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
+        coursef-draft:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: të dhëna
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Projekt
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Projekt
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitulli 1
+            lessonGroup-4:
+              display_name: Kapitulli 2
+            lessonGroup-5:
+              display_name: Kapitulli 3
+            lessonGroup-6:
+              display_name: Kapitulli 4
+            lessonGroup-7:
+              display_name: Kapitulli 5
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa1-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa1-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Përmbajtja
+          lessons:
+            lesson-6:
+              name: cikle
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa2-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+          lessons:
+            lesson-4:
+              name: variabla
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Përmbajtja
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Përmbajtja
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+          lessons:
+            lesson-3:
+              name: Për Ciklet
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa4-exemplars:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            lesson group:
+              display_name: Përmbajtja
+            lessonGroup-2:
+              display_name: Përmbajtja
+            lesson_group:
+              display_name: Përmbajtja
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csc-bookcover:
+          lessons:
+            lesson-1:
+              name: Okładka
+          name: csc-bookcover
+          title: Okładka CSC
+        csd-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csd-novice-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csd1-2022:
+          title: Zgjidhja e problemeve dhe Informatika ('22-'23)
+        csd1-dlp:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csd1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csd2-dlp:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csd2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csd3-dlp:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csd3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csd3-virtual:
+          lesson_groups:
+            csd3_1:
+              display_name: Përmbajtja
+            csd3_2:
+              display_name: Përmbajtja
+            cspSurvey:
+              display_name: Përmbajtja
+        csd4-dlp:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csd4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csd5-dlp:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csd5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csd6-dlp:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csd6-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csf-2021-pilot:
+          lesson_groups:
+            Sprites:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: variabla
+            ramp_up:
+              display_name: Hyrje
+            variables:
+              display_name: variabla
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: variabla
+            lessonGroup-4:
+              display_name: Përfundimi i projektit të kursit
+        csf2harvey:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+        csp-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp-create-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp-explore-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp-novice-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp-online-test:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
+            required:
+              display_name: Përmbledhja
+        csp1-dlp:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+        csp1-support:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
+            required:
+              display_name: Përmbledhja
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+        csp2-dlp:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+        csp2-support:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
+            required:
+              display_name: Përmbledhja
+        csp3-dlp:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp3-support:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
+            required:
+              display_name: Përmbledhja
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+        csp4-dlp:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+            required:
+              display_name: Përmbledhja
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+        csp4-support:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
+            required:
+              display_name: Përmbledhja
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: cikle
+            csp_project:
+              display_name: Projekt
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: cikle
+            csp_project:
+              display_name: Projekt
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: cikle
+            csp_project:
+              display_name: Projekt
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: të dhëna
+            csp_loops:
+              display_name: cikle
+            csp_project:
+              display_name: Projekt
+        csp5-dlp:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: cikle
+            csp_project:
+              display_name: Projekt
+            required:
+              display_name: Përmbledhja
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: cikle
+            csp_project:
+              display_name: Projekt
+        csp5-support:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
+            required:
+              display_name: Përmbledhja
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmet
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listat
+            lessonGroup-3:
+              display_name: cikle
+            lessonGroup-5:
+              display_name: Projekt
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+        cspnovice:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabla
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+        cspunit1-support:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
+            required:
+              display_name: Përmbledhja
+        cspunit4draft:
+          description_short: të dhëna
+        dance:
+          name: valle
+        dance-2019:
+          title: Festë vallëzimi
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Faza 1
+            lessonGroup-3:
+              display_name: Faza 2
+        e-f-ramp:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        edit-code:
+          description: Ndrysho kodin
+          description_short: Ndrysho kodin
+          student_description: Ndrysho kodin
+          title: Ndrysho kodin
+        events:
+          description: Ngjarje
+          description_short: Ngjarje
+          student_description: Ngjarje
+          title: Ngjarje
+        express-2017:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        express-2019:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Kushtet
+            csf_for_loops:
+              display_name: Për Ciklet
+            csf_functions:
+              display_name: funksione
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: variabla
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Kushtet
+            csf_for_loops:
+              display_name: Për Ciklet
+            csf_functions:
+              display_name: funksione
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: variabla
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        express-2021:
+          description: Mësoni shkenca kompjuterike duke provuar mësimet më poshtë
+            me ritmin tuaj! Mësoni të krijoni programe kompjuterike, të zhvilloni
+            aftësi për zgjidhjen e problemeve dhe të punoni përmes sfidave argëtuese!
+            Bëni lojëra dhe projekte krijuese për t'i ndarë me miqtë, familjen dhe
+            mësimdhënësit.
+          lesson_groups:
+            csf_conditionals:
+              display_name: Kushtet
+            csf_for_loops:
+              display_name: Për Loops
+            csf_functions:
+              display_name: Funksionet
+            csf_loops:
+              display_name: Loops
+            csf_sequencing:
+              display_name: Sekuencimi
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: Variablat
+            csf_warmup:
+              display_name: Parapërgatitje
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+            lessonGroup-9:
+              display_name: Eventet
+          title: Kursi Express (2021)
+        express-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Kushtet
+            csf_for_loops:
+              display_name: Për Ciklet
+            csf_functions:
+              display_name: funksione
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: variabla
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+            lessonGroup-9:
+              display_name: Ngjarje
+          title: Kursi Express (2022)
+        express-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Kushtet
+            csf_for_loops:
+              display_name: Për Ciklet
+            csf_functions:
+              display_name: funksione
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: variabla
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+            lessonGroup-9:
+              display_name: Ngjarje
+        fit-test:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        fit2019-apprentice:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        fit2019-novice:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        flappy:
+          description: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo
+            tutorialin tonë Flappy Code!
+          description_short: Pergatisni lojen tuaj Flappy në më pak se 10 minuta!
+          student_description: Dëshiron të shkruash lojën tënde në më pak se 10 minuta?
+            Provo tutorialin tonë Flappy Code!
+          title: Kodi Flappy
         frozen:
-          title: Kodo me Ann-en dhe Elsa-n
           description: Le të përdorim kodin për të lidhur Anën dhe Elsën ndërsa ato
             eksplorojnë magjinë dhe bukurinë e akullit. Ti do të krijosh flokë dëbore
             dhe modele ndërkohë që bën patinazh në akull dhe bën një magji dimërore
@@ -77,123 +1682,270 @@ sq:
             ato eksplorojnë magjinë dhe bukurinë e akullit. Ti do të krijosh flokë
             dëbore dhe modele ndërkohë që bën patinazh në akull dhe bën një magji
             dimërore që mund ta ndash me shokët e tu!
-        course4:
-          title: Kursi 4
-          description: Kursi 4 është dizejnuar për studentët të cilët kanë marrë Kursin
-            2 dhe 3. Nxënësit do të mësojnë se si të merren me puzzles me rritjen
-            e kompleksitetit që ata të mësojnë si të kombinojnë disa koncepte, kur
-            bëjnë çdo sfidë. Në kohën kur ky kurs është përfunduar, studentët do të  krijojnë
-            programe që lejojnë ata të shfaqin aftësi të shumta,  përfshirë ciklet
-            dhe funksionet me parametra. Rekomandohet për klasat 4-8.
-          description_short: Studentët që marrin Kursin 4 duhet të kenë marrë tashmë
-            Kursin 2 dhe 3.
-          description_audience: Moshat 10-18
-          student_description: Kursi 4 është dizejnuar për studentët të cilët kanë
-            marrë Kursin 2 dhe 3. Nxënësit do të mësojnë se si të merren me puzzles
-            me rritjen e kompleksitetit që ata të mësojnë si të kombinojnë disa koncepte,
-            kur bëjnë çdo sfidë. Në kohën kur ky kurs është përfunduar, studentët
-            do të  krijojnë programe që lejojnë ata të shfaqin aftësi të shumta,  përfshirë
-            ciklet dhe funksionet me parametra. Rekomandohet për klasat 4-8.
-        Course4pre:
-          title: Kushtet paraprake të Kursit 4
-          description: Një përmbledhje e shkurtër e koncepteve për studentët që nuk
-            kanë bërë Kurset 2 dhe 3.
-          description_short: Një përmbledhje e shkurtër e koncepteve për studentët
-            që nuk kanë bërë Kurset 2 dhe 3.
-          student_description: Një përmbledhje e shkurtër e koncepteve për studentët
-            që nuk kanë bërë Kurset 2 dhe 3.
-        usability:
-          title: Testimi i përdorueshmërisë
-          description: Një përzgjedhje e niveleve të Kursit 4 për testimin e përdorueshmërisë.
-          student_description: Një përzgjedhje e niveleve të Kursit 4 për testimin
-            e përdorueshmërisë.
-        algebra:
-          title: Shkenëa Kompjuterike në Algjebër
-          description: Mëso Programimin Funksional nëpërmjet Algjebrës.
-          description_short: Mëso Programimin Funksional nëpërmjet Algjebrës.
-          student_description: Mëso Programimin Funksional nëpërmjet Algjebrës.
+          title: Kodo me Ann-en dhe Elsa-n
+        grade1:
+          description_audience: Moshat 5-18
+          title: Klasat 1
+        grade2:
+          description_audience: Moshat 5-18
+        grade3:
+          description_audience: Moshat 5-18
+          title: Klasat 3
+        grade4:
+          description_audience: Moshat 10-99
+          title: Klasat 4
+        grade5:
+          description_audience: Moshat 10-110
+          title: Klasat 5
+        gradeKinder:
+          description_audience: Moshat 5-18
+        gumball:
+          description: Krijo një histori ose një lojë me laboratorin e Gumball!
+          description_short: Krijo një histori ose një lojë me laboratorin e Gumball!
+          student_description: Krijo një histori ose një lojë me laboratorin e Gumball!
+          title: Laboratori i Lojës Gumball
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Lekcioni 3
+            Lesson 4:
+              display_name: Lekcioni 4
+            Lesson 5:
+              display_name: Lekcioni 5
+        hello-world-soccer-2022:
+          title: 'Përshëndetje Botërore: futboll'
+        hero:
+          name: hero
+        hoc-impact-study:
+          description_short: Provo bazat e shkencës kompjuterike me shumë karaktere
+            zbavitëse!
+        hourofcode:
+          description: Provo bazat e shkencës kompjuterike me karaktere nga Angry
+            Birds, Plants vs. Zombies dhe Ketrit nga Ice Age!
+          description_short: Provo bazat e shkencës kompjuterike me shumë karaktere
+            zbavitëse!
+          student_description: Provo bazat e shkencës kompjuterike me karaktere nga
+            Angry Birds, Plants vs. Zombies dhe Ketrit nga Ice Age!
+          title: Labirint Klasik
+        iceage:
+          description: Krijo një histori ose një lojë me laboratorin e Epokës së Akullnajave!
+          description_short: Krijo një histori ose një lojë me laboratorin e Epokës
+            së Akullnajave!
+          student_description: Krijo një histori ose një lojë me laboratorin e Epokës
+            së Akullnajave!
+          title: Laboratori i lojës Epoka e Akullnajave
         infinity:
-          title: Larmishmeria e lojrave ne laboratorin e Disney
           description: Perdorni laboratorin e lojrave per te krijuar nje histori ose
             pafundesi personazhesh Disney.
           description_short: Perdorni laboratorin e lojrave per te krijuar nje histori
             ose pafundesi personazhesh Disney.
           student_description: Perdorni laboratorin e lojrave per te krijuar nje histori
             ose pafundesi personazhesh Disney.
-        algebrademo:
-          title: Demo e Algjebrës
-          description: Një dorë puzzle-ash për të demonstruar mjedisin dhe gjuhën
-            e programimit të përdorur në Code.org CS në Algjebër
-          description_short: Një dorë puzzle-ash për të demonstruar mjedisin dhe gjuhën
-            e programimit të përdorur në Code.org CS në Algjebër
-          student_description: Një dorë puzzle-ash për të demonstruar mjedisin dhe
-            gjuhën e programimit të përdorur në Code.org CS në Algjebër
-        netsim:
-          title: Imitues Interneti
-        pixelation:
-          title: Pixelation
-          description: Krijo imazhe me bite dhe bajte.
-          description_short: Krijo imazhe me bite dhe bajte.
-          student_description: Krijo imazhe me bite dhe bajte.
-        20-hour:
-          title: Hyrje e pershpejtuar ne kurset e shkencave kompjuterike
-          description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike
-            dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat
-            e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
-          description_short: Ky kurs 20 oresh mbulon te gjithe berthamen e shkencave
-            kompjuterike dhe konceptet e programimit ne kurset 2-4.
-          description_audience: Moshat 10-18
-          student_description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës
-            kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret
-            nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha
-            moshat.
-        edit-code:
-          title: Ndrysho kodin
-          description: Ndrysho kodin
-          description_short: Ndrysho kodin
-          student_description: Ndrysho kodin
-        events:
-          title: Ngjarje
-          description: Ngjarje
-          description_short: Ngjarje
-          student_description: Ngjarje
-        flappy:
-          title: Kodi Flappy
-          description: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo
-            tutorialin tonë Flappy Code!
-          description_short: Pergatisni lojen tuaj Flappy në më pak se 10 minuta!
-          student_description: Dëshiron të shkruash lojën tënde në më pak se 10 minuta?
-            Provo tutorialin tonë Flappy Code!
+          title: Larmishmeria e lojrave ne laboratorin e Disney
         jigsaw:
-          title: Jigsaw
           description: Provoni tutorialet tona Jigsaw.
           description_short: Provoni tutorialet tona Jigsaw.
           student_description: Provoni tutorialet tona Jigsaw.
-        step:
-          title: Një hap
-          description: Pasoje tutorialin
-          description_short: Pasoje tutorialin
-          student_description: Pasoje tutorialin
-        Hour of Code:
-          title: Ora e Kodit 2013
-          description: Provoni elementet baze te shkencave kompjuterike me personazhe
-            nga Angry Birds dhe Plants vs. Zombies!
-          description_short: Provo bazat e shkencës kompjuterike me shumë karaktere
-            zbavitëse!
-          student_description: Provoni elementet baze te shkencave kompjuterike me
-            personazhe nga Angry Birds dhe Plants vs. Zombies!
-        algebraPD2a:
-          description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-        algebraPD2b:
-          description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-        ECSPD2:
-          description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
+          title: Jigsaw
+        k5-onlinepd-2019:
+          lesson_groups:
+            k5_next_steps:
+              display_name: Hapat e ardhshme
+        k5-onlinepd-2020:
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Hapat e ardhshme
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: Hyrje
+            k5_getting_started_1:
+              display_name: Hyrje
+        mc:
+          description: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një
+            aventurë nëpër këtë botë Minecraft.
+          description_short: Eksploro  një botë Minecraft nëpërmjet kodit.
+          student_description: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex
+            në një aventurë nëpër këtë botë Minecraft.
+          title: Ora e Kodimit Minecraft
+        minecraft:
+          description: Kafshët e programit dhe krijesa të tjera Minecraft në versionin
+            tuaj të Minecraft.
+          description_short: Kafshët e programit dhe krijesa të tjera Minecraft në
+            versionin tuaj të Minecraft.
+          student_description: Kafshët e programit dhe krijesa të tjera Minecraft
+            në versionin tuaj të Minecraft.
+          title: Dizenjo Minecraft-in e Orës së Kodimit
+        netsim:
+          title: Imitues Interneti
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Kushtet
+            lessonGroup-4:
+              display_name: Të dhënat dhe simulimet
+            lessonGroup-5:
+              display_name: variabla
+            lessonGroup-7:
+              display_name: Përfundimi i projektit të kursit
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+        nevada-standards-aligned-first-grade-2023:
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë.
+            Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit
+            mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes
+            një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit,
+            teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit
+            kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në
+            fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit
+            Play Lab.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
+            lessonGroup-4:
+              display_name: cikle
+            lessonGroup-6:
+              display_name: Ngjarje
+            lessonGroup-7:
+              display_name: Përfundimi i projektit të kursit
+            lessonGroup-8:
+              display_name: të dhëna
+          lessons:
+            lesson-1:
+              name: të dhëna
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Përsëritjet e Mbivendosura
+            lessonGroup-4:
+              display_name: funksione
+            lessonGroup-5:
+              display_name: Të dhënat dhe simulimet
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
+            lessonGroup-4:
+              display_name: cikle
+            lessonGroup-6:
+              display_name: të dhëna
+          lessons:
+            lesson-1:
+              name: të dhëna
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
+            lessonGroup-4:
+              display_name: cikle
+            lessonGroup-5:
+              display_name: Ngjarje
+            lessonGroup-6:
+              display_name: të dhëna
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
+            lessonGroup-6:
+              display_name: cikle
+            lessonGroup-7:
+              display_name: të dhëna
+            lessonGroup-8:
+              display_name: Përfundimi i projektit të kursit
+        new-e:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        new-express:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        new-f:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        outbreak-csc:
+          title: Shpërthimi
+        outbreak-module:
+          title: Shpërthimi
+        pixelation:
+          description: Krijo imazhe me bite dhe bajte.
+          description_short: Krijo imazhe me bite dhe bajte.
+          student_description: Krijo imazhe me bite dhe bajte.
+          title: Pixelation
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Hyrje
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Përmbledhje
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Përmbledhje
+        playlab:
+          description: Krijo një histori ose bëj një lojë me Play Lab!
+          description_short: Krijo një histori ose bëj një lojë me Play Lab!
+          student_description: Krijo një histori ose bëj një lojë me Play Lab!
+          title: Play Lab
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
         sciencePD2b:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
@@ -202,36 +1954,16 @@ sq:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-        ECSPD2-iZone:
-          description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-        ECSPD2-NexTech:
-          description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-        asUnplugged:
-          description_audience: Moshat 6-13
-        afterschool1:
-          description_audience: Moshat 7-13
-        cspunit4draft:
-          description_short: të dhëna
-        Special Fun:
-          description_audience: Moshat 10-18
-        SpecialSeries:
-          description_audience: Moshat 10-18
-        iceage:
-          title: Laboratori i lojës Epoka e Akullnajave
-          description: Krijo një histori ose një lojë me laboratorin e Epokës së Akullnajave!
-          description_short: Krijo një histori ose një lojë me laboratorin e Epokës
-            së Akullnajave!
-          student_description: Krijo një histori ose një lojë me laboratorin e Epokës
-            së Akullnajave!
-        gumball:
-          title: Laboratori i Lojës Gumball
-          description: Krijo një histori ose një lojë me laboratorin e Gumball!
-          description_short: Krijo një histori ose një lojë me laboratorin e Gumball!
-          student_description: Krijo një histori ose një lojë me laboratorin e Gumball!
+        soccer:
+          name: futboll
+        spelling-bee:
+          title: Bleta Gërmëzuese
+        sports:
+          description: Përziej dhe përshtat sportet
+          description_short: Përziej dhe përshtat sportet
+          name: sportet
+          student_description: Përziej dhe përshtat sportet
+          title: Krijo lojën tënde sportive
         starwars:
           description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars
             në një galaksi shumë, shumë larg.
@@ -239,6 +1971,7 @@ sq:
             Wars në një galaksi shumë, shumë larg.
           student_description: Mësoni të programoni robotë, dhe krijoni lojën tuaj
             Star Wars në një galaksi shumë, shumë larg.
+          title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (JavaScript)'
         starwarsblocks:
           description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars
             në një galaksi shumë, shumë larg.
@@ -246,788 +1979,79 @@ sq:
             Wars në një galaksi shumë, shumë larg.
           student_description: Mësoni të programoni robotë, dhe krijoni lojën tuaj
             Star Wars në një galaksi shumë, shumë larg.
-        mc:
-          title: Ora e Kodimit Minecraft
-          description: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një
-            aventurë nëpër këtë botë Minecraft.
-          description_short: Eksploro  një botë Minecraft nëpërmjet kodit.
-          student_description: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex
-            në një aventurë nëpër këtë botë Minecraft.
-        AlgebraA:
-          description: Mëso Programimin Funksional nëpërmjet Algjebrës
-          description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
-          student_description: Mëso Programimin Funksional nëpërmjet Algjebrës
-        AlgebraB:
-          description: Mëso Programimin Funksional nëpërmjet Algjebrës
-          description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
-          student_description: Mëso Programimin Funksional nëpërmjet Algjebrës
-        CSF_Secret_Sample:
-          description_audience: Moshat 8-18
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-            practice:
-              display_name: Praktikat mësimore
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-            practice:
-              display_name: Praktikat mësimore
-        CSDU5-Draft:
-          description_short: të dhëna
-        CSF_Secret_Sample_Story:
-          description_audience: Moshat 8-18+
-        MikeTest:
-          description_audience: Moshat 8-98
-        artistExemplar:
-          description_audience: Moshat 8-18
+        step:
+          description: Pasoje tutorialin
+          description_short: Pasoje tutorialin
+          student_description: Pasoje tutorialin
+          title: Hapi
         teachercon:
           lesson_groups:
-            required:
-              display_name: Përmbledhja
             content:
               display_name: Përmbajtja
             practice:
               display_name: Praktikat mësimore
-        gradeKinder:
-          description_audience: Moshat 5-18
-        grade4:
-          title: Klasat 4
-          description_audience: Moshat 10-99
-        grade1:
-          title: Klasat 1
-          description_audience: Moshat 5-18
-        grade5:
-          title: Klasat 5
-          description_audience: Moshat 10-110
-        grade3:
-          title: Klasat 3
-          description_audience: Moshat 5-18
-        alltheplcthings:
-          lesson_groups:
             required:
               display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-            practice:
-              display_name: Praktikat mësimore
-        grade2:
-          description_audience: Moshat 5-18
-        csp-online-test:
+        test-nv-coursea-2023:
           lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-            practice:
-              display_name: Praktikat mësimore
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-            practice:
-              display_name: Praktikat mësimore
-        basketball:
-          title: Realizo një lojë basketbolli
-          description_short: Realizo një lojë basketbolli
-          description: Realizo një lojë basketbolli
-          student_description: Realizo një lojë basketbolli
-          name: basketboll
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-            practice:
-              display_name: Praktikat mësimore
-        minecraft:
-          title: Dizenjo Minecraft-in e Orës së Kodimit
-          description_short: Kafshët e programit dhe krijesa të tjera Minecraft në
-            versionin tuaj të Minecraft.
-          description: Kafshët e programit dhe krijesa të tjera Minecraft në versionin
-            tuaj të Minecraft.
-          student_description: Kafshët e programit dhe krijesa të tjera Minecraft
-            në versionin tuaj të Minecraft.
-        coursee-draft:
-          lesson_groups:
-            content:
-              display_name: Përmbajtja
-        coursef-draft:
-          lesson_groups:
-            content:
-              display_name: Përmbajtja
-        classic-hoc-impact-study:
-          description_short: Provo bazat e shkencës kompjuterike me shumë karaktere
-            zbavitëse!
-        hoc-impact-study:
-          description_short: Provo bazat e shkencës kompjuterike me shumë karaktere
-            zbavitëse!
-        sports:
-          title: Krijo lojën tënde sportive
-          description_short: Përziej dhe përshtat sportet
-          description: Përziej dhe përshtat sportet
-          student_description: Përziej dhe përshtat sportet
-          name: sportet
-        csp3-support:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-            practice:
-              display_name: Praktikat mësimore
-        csp4-support:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-            practice:
-              display_name: Praktikat mësimore
-        csf2harvey:
-          lesson_groups:
-            content:
-              display_name: Përmbajtja
-        csp5-support:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-            practice:
-              display_name: Praktikat mësimore
-        csppostap-2017:
-          lesson_groups:
-            content:
-              display_name: Përmbajtja
-        cspnovice:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp1-dlp:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp2-dlp:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp3-dlp:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp4-dlp:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp5-dlp:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csd1-dlp:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csd6-dlp:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csd5-dlp:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csd4-dlp:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csd3-dlp:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csd2-dlp:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        express-2017:
-          lesson_groups:
-            content:
-              display_name: Përmbajtja
-        new-express:
-          lesson_groups:
-            content:
-              display_name: Përmbajtja
-        hero:
-          name: hero
-        csd1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csd2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csd3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csd4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csd5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csd6-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp-explore-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp-create-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csd-novice-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csd-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp-novice-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        fit-test:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        dance:
-          name: valle
-        aquatic:
-          title: 'Minecraft: Udhëtimi ujor'
-          name: ujor
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
-              display_name: funksione
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: variabla
-            csf_data:
-              display_name: të dhëna
-            csf_for_loops:
-              display_name: Për Ciklet
-            csf_internet:
-              display_name: Internet
-            csf_digcit:
+            lessonGroup-2:
               display_name: Shtetësi Dixhitale
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Ngjarje
-            csf_loops:
+            lessonGroup-3:
+              display_name: Sekuencimi
+            lessonGroup-4:
               display_name: cikle
-            csf_conditionals:
-              display_name: Kushtet
-            csf_binary:
-              display_name: Binare
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-        coursee-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_nested_loops:
-              display_name: Përsëritjet e Mbivendosura
-            csf_functions:
-              display_name: funksione
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: cikle
-            csf_conditionals:
-              display_name: Kushtet
-            csf_functions:
-              display_name: funksione
-            csf_variables:
-              display_name: variabla
-            csf_for_loops:
-              display_name: Për Ciklet
-        andrea-test:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_binary:
-              display_name: Binare
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-            csf_data:
-              display_name: të dhëna
-        coursea-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
-              display_name: funksione
-            required:
-              display_name: Përmbledhja
-        csp1-pilot:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-        csp1-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
-              display_name: funksione
-        csp2-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
-              display_name: funksione
-        csp4-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
-              display_name: funksione
-        csp5-pilot-staging:
-          lesson_groups:
-            csp_lists:
-              display_name: Listat
-            csp_loops:
-              display_name: cikle
-        csp6-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
-              display_name: funksione
-        csp8-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
-              display_name: funksione
-        csp9-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
-              display_name: funksione
-        csp10-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
-              display_name: funksione
-        csp5-pilot:
-          lesson_groups:
-            csp_lists:
-              display_name: Listat
-            csp_loops:
-              display_name: cikle
-            required:
-              display_name: Përmbledhja
-        fit2019-novice:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp3-pilot:
+        test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:
               display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
             required:
               display_name: Përmbledhja
-        csl-vn:
-          lesson_groups:
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        dlp19-csd-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        dlp19-csp-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        dlp19-csd-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        dlp19-csd-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        dlp19-csd-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        dlp19-csd-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        dlp19-csp-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        dlp19-csp-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        dlp19-csp-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        dlp19-csp-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-            content:
-              display_name: Përmbajtja
-        csp2-pilot:
-          lesson_groups:
-            content:
-              display_name: Përmbajtja
-            required:
-              display_name: Përmbledhja
-        csp6-pilot:
-          lesson_groups:
-            content:
-              display_name: Përmbajtja
-            required:
-              display_name: Përmbledhja
-        k5-onlinepd-2019:
-          lesson_groups:
-            k5_next_steps:
-              display_name: Hapat e ardhshme
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
-              display_name: funksione
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_conditionals:
-              display_name: Kushtet
-            csf_nested_loops:
-              display_name: Përsëritjet e Mbivendosura
-            csf_functions:
-              display_name: funksione
         time4cs-control-unit-1:
           lesson_groups:
-            csf_loops:
-              display_name: cikle
             csf_conditionals:
               display_name: Kushtet
-            csf_events:
-              display_name: Ngjarje
             csf_digcit:
               display_name: Shtetësi Dixhitale
-        time4cs-experiment-unit-1:
-          lesson_groups:
+            csf_events:
+              display_name: Ngjarje
             csf_loops:
               display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            csf_sprites:
+              display_name: Sprites
+        time4cs-control-unit-2:
+          lesson_groups:
             csf_conditionals:
               display_name: Kushtet
-            csf_events:
-              display_name: Ngjarje
             csf_digcit:
               display_name: Shtetësi Dixhitale
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: Përmbledhja
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
+            csf_functions:
               display_name: funksione
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Listat
-            csp_loops:
-              display_name: cikle
-        coursea-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        courseb-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        coursec-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_binary:
-              display_name: Binare
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-            csf_data:
-              display_name: të dhëna
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Ngjarje
-            csf_loops:
-              display_name: cikle
-            csf_conditionals:
-              display_name: Kushtet
-            csf_binary:
-              display_name: Binare
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-        coursee-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
             csf_nested_loops:
               display_name: Përsëritjet e Mbivendosura
-            csf_functions:
-              display_name: funksione
-        coursef-2020:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        time4cs-experiment-unit-1:
           lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_variables:
-              display_name: variabla
-            csf_data:
-              display_name: të dhëna
-            csf_for_loops:
-              display_name: Për Ciklet
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: cikle
             csf_conditionals:
               display_name: Kushtet
-            csf_functions:
-              display_name: funksione
-            csf_variables:
-              display_name: variabla
-            csf_for_loops:
-              display_name: Për Ciklet
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: cikle
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
             csf_events:
               display_name: Ngjarje
-        virtual-holding-place:
+            csf_loops:
+              display_name: cikle
+            csf_sequencing:
+              display_name: Sekuencimi
+            csf_sprites:
+              display_name: Sprites
+        time4csdemo:
           lesson_groups:
-            content:
-              display_name: Përmbajtja
-        k5-onlinepd-2020:
-          lesson_groups:
-            k5_next_steps_1:
-              display_name: Hapat e ardhshme
-        csd3-virtual:
-          lesson_groups:
-            csd3_1:
-              display_name: Përmbajtja
-            csd3_2:
-              display_name: Përmbajtja
-            cspSurvey:
-              display_name: Përmbajtja
+            csf_sprites:
+              display_name: Sprites
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -1044,626 +2068,34 @@ sq:
           lesson_groups:
             lg_1:
               display_name: Përmbajtja
-        2021drafting:
+        usability:
+          description: Një përzgjedhje e niveleve të Kursit 4 për testimin e përdorueshmërisë.
+          student_description: Një përzgjedhje e niveleve të Kursit 4 për testimin
+            e përdorueshmërisë.
+          title: Testimi i përdorueshmërisë
+        virtual-holding-place:
           lesson_groups:
-            introduction:
-              display_name: Hyrja
-            lessonGroup-3:
-              display_name: variabla
-            debugging:
-              display_name: Rregullimi
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
-              display_name: funksione
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Listat
-            csp_loops:
-              display_name: cikle
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Algoritmet
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_binary:
-              display_name: Binare
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-            csf_data:
-              display_name: të dhëna
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Ngjarje
-            csf_loops:
-              display_name: cikle
-            csf_conditionals:
-              display_name: Kushtet
-            csf_binary:
-              display_name: Binare
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            lessonGroup-6:
-              display_name: Shtetësi Dixhitale
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Përsëritjet e Mbivendosura
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_nested_loops:
-              display_name: Kushtet
-            csf_functions:
-              display_name: funksione
-        coursef-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_variables:
-              display_name: Për Ciklet
-            csf_for_loops:
-              display_name: Për Ciklet
-            lessonGroup-8:
-              display_name: variabla
-            lessonGroup-9:
-              display_name: Largo
-            lessonGroup-7:
-              display_name: Shtetësi Dixhitale
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: cikle
-            csf_conditionals:
-              display_name: Kushtet
-            csf_functions:
-              display_name: funksione
-            csf_variables:
-              display_name: variabla
-            csf_for_loops:
-              display_name: Për Ciklet
-            lessonGroup-9:
-              display_name: Ngjarje
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: Hyrja
-            lessonGroup-3:
-              display_name: variabla
-            variables:
-              display_name: variabla
-        contagion-pilot:
-          description_audience: Klasat 5
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa2-pilot:
-          lesson_groups:
-            lesson group:
-              display_name: Përmbajtja
-        csa3-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa4-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa5-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa6-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa8-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: Hyrja
-            Introduction:
-              display_name: Hyrja
-        haikubot-pilot:
-          lesson_groups:
-            Lesson 3:
-              display_name: Lekcioni 3
-            Lesson 4:
-              display_name: Lekcioni 4
-            Lesson 5:
-              display_name: Lekcioni 5
-        csa1-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa2-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa-videos:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Kapitulli 1
-            lessonGroup-4:
-              display_name: Kapitulli 2
-            lessonGroup-5:
-              display_name: Kapitulli 3
-            lessonGroup-6:
-              display_name: Kapitulli 4
-            lessonGroup-7:
-              display_name: Kapitulli 5
-        csa3-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        dlp21-csp-mod4:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Faza 1
-            lessonGroup-3:
-              display_name: Faza 2
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              description: test
-        csa1-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa2-pilot-facilitator:
-          lesson_groups:
-            lesson group:
-              display_name: Përmbajtja
-        csa3-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa4-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa5-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa4-exemplars:
-          lesson_groups:
-            lesson group:
-              display_name: Përmbajtja
             content:
               display_name: Përmbajtja
-            lesson_group:
-              display_name: Përmbajtja
-            lessonGroup-2:
-              display_name: Përmbajtja
-        spelling-bee:
-          title: Bleta Gërmëzuese
-        csa5-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa6-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa6-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Ora e Kodimit
-        csa7-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: variabla
-        csa8-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa7-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa8-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        express-2022:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: Ngjarje
-            csf_loops:
-              display_name: cikle
-            csf_conditionals:
-              display_name: Kushtet
-            csf_functions:
-              display_name: funksione
-            csf_variables:
-              display_name: variabla
-            csf_for_loops:
-              display_name: Për Ciklet
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
-              display_name: funksione
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Listat
-            csp_loops:
-              display_name: cikle
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-            csf_data:
-              display_name: të dhëna
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Shtetësi Dixhitale
-            csf_events:
-              display_name: Ngjarje
-            csf_loops:
-              display_name: cikle
-            csf_conditionals:
-              display_name: Kushtet
-        coursee-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            ramp_up:
-              display_name: Përsëritjet e Mbivendosura
-            csf_functions:
-              display_name: funksione
-            csf_nested_loops:
-              display_name: Kushtet
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Shtetësi Dixhitale
-            lessonGroup-8:
-              display_name: variabla
-        csa1-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        csa2-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa3-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa4-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa5-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa1-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa7-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa8-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Shtetësi Dixhitale
-            lessonGroup-8:
-              display_name: variabla
-        csa6-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa7-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa8-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa2-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        soccer:
-          name: futboll
-        csa1-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa2-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa3-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa4-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa5-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa6-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa7-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa8-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: cikle
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Përmbajtja
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: variabla
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: Për Ciklet
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        csa8-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Përmbajtja
-        hello-world-soccer-2022:
-          title: 'Përshëndetje Botërore: futboll'
-        csc-bookcover:
-          lessons:
-            lesson-1:
-              name: Okładka
-          name: csc-bookcover
-          title: Okładka CSC
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: variabla
-            csp_conditionals:
-              display_name: Kushtet
-            csp_functions:
-              display_name: funksione
-        csp5-2023:
-          lesson_groups:
-            csp_lists:
-              display_name: të dhëna
-            csp_loops:
-              display_name: cikle
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Listat
-            lessonGroup-3:
-              display_name: cikle
-        angelina-playground:
-          lessons:
-            lesson-5:
-              name: Vlerësimet
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        express-2023:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: Ngjarje
-            csf_loops:
-              display_name: cikle
-            csf_conditionals:
-              display_name: Kushtet
-            csf_functions:
-              display_name: funksione
-            csf_variables:
-              display_name: variabla
-            csf_for_loops:
-              display_name: Për Ciklet
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            csf_loops:
-              display_name: cikle
-            csf_events:
-              display_name: Ngjarje
-            csf_data:
-              display_name: të dhëna
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Shtetësi Dixhitale
-            csf_events:
-              display_name: Ngjarje
-            csf_loops:
-              display_name: cikle
-            csf_conditionals:
-              display_name: Kushtet
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Shtetësi Dixhitale
-            ramp_up:
-              display_name: Përsëritjet e Mbivendosura
-            csf_functions:
-              display_name: funksione
-            csf_nested_loops:
-              display_name: Kushtet
-        pl-csd-summer-day1:
-          lessons:
-            lesson-3:
-              name: Hyrja
-        pl-csd-summer-day2:
-          lessons:
-            lesson-10:
-              name: Mbyll
-        pl-csd-summer-day4:
-          lessons:
-            lesson-12:
-              name: Mbyll
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
-              name: Hyrja
+              name: Hyrje
             lesson-12:
-              name: Mbyll
+              name: Përmbledhje
         virtual-pl-csd-summer-day2:
           lessons:
             lesson-10:
-              name: Mbyll
+              name: Përmbledhje
         virtual-pl-csd-summer-day3:
           lessons:
             lesson-12:
-              name: Mbyll
+              name: Përmbledhje
         virtual-pl-csd-summer-day4:
           lessons:
             lesson-13:
-              name: Mbyll
-        coursef-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Shtetësi Dixhitale
-            lessonGroup-4:
-              display_name: variabla
-        csa-frq-practice-2022:
+              name: Përmbledhje
+        virtual-pl-csd-summer-day5:
           lessons:
-            lesson-4:
-              name: të dhëna
+            lesson-3:
+              name: Vlerësim

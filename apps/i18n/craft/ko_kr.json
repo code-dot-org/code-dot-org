@@ -1,9 +1,9 @@
 {
   "absolute": "절댓값",
+  "agentDiamondPathCongrats": "다이아몬드 광맥을 찾았어요! 지금까지 수집한 다이아몬드는 총 {count, plural, one {1 diamond} other {# diamonds}}개입니다!",
   "agentGenericFailureMessage": "계속 코딩을 연습하세요! 도움말이 필요하면 에이전트를 활용하세요.",
   "agentTooFewBlocksFailureMessage": "블록을 한 번에 하나씩 추가하면서 Agent를 원하는 위치로 이동해 보세요.",
   "at": "다음 장소에서 : ",
-  "agentDiamondPathCongrats": "다이아몬드 광맥을 찾았어요! 지금까지 수집한 다이아몬드는 총 {count, plural, one {1 diamond} other {# diamonds}}개입니다!",
   "blockActionAdd": "추가",
   "blockActionAttack": "공격",
   "blockActionClone": "블록 복제",

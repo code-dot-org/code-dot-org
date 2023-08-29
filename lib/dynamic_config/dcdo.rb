@@ -47,6 +47,11 @@ class DCDOBase < DynamicConfigBase
       'csta-form-extension': DCDO.get('csta-form-extension', false),
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
       'curriculum-launch-hero-banner': DCDO.get('curriculum-launch-hero-banner', false),
+      'curriculum-launch-skinny-banner': DCDO.get('curriculum-launch-skinny-banner', false),
+      'ai-pl-launch-banners': DCDO.get('ai-pl-launch-banners', false),
+      'family-name-features': DCDO.get('family-name-features', false),
+      cpa_experience: DCDO.get('cpa_experience', false),
+      gender: DCDO.get('gender', false),
     }
   end
 end

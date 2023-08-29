@@ -5,19 +5,11 @@ lt:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': šiek tiek
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': šiek tiek
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -43,15 +35,15 @@ lt:
       Dancelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': dydis
             '"height"': aukštis
+            '"scale"': dydis
       Dancelab_changePropEachBy:
         options:
           GROUP:
             '"ALIEN"': ateiviai
           PROPERTY:
-            '"scale"': dydis
             '"height"': aukštis
+            '"scale"': dydis
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -69,8 +61,8 @@ lt:
       Dancelab_getProp:
         options:
           PROPERTY:
-            '"scale"': dydis
             '"height"': aukštis
+            '"scale"': dydis
       Dancelab_getTime:
         options:
           UNIT:
@@ -99,11 +91,11 @@ lt:
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": atsitiktinis
       Dancelab_layoutSprites:
         options:
-          GROUP:
-            '"ALIEN"': ateiviai
           FORMAT:
             '"diamond"': deimantą
             '"random"': atsitiktinis
+          GROUP:
+            '"ALIEN"': ateiviai
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
@@ -162,27 +154,27 @@ lt:
       Dancelab_setProp:
         options:
           PROPERTY:
-            '"scale"': dydis
             '"height"': aukštis
+            '"scale"': dydis
       Dancelab_setPropEach:
         options:
           GROUP:
             '"ALIEN"': ateiviai
           PROPERTY:
-            '"scale"': dydis
             '"height"': aukštis
+            '"scale"': dydis
       Dancelab_setPropRandom:
         options:
           PROPERTY:
-            '"scale"': dydis
             '"height"': aukštis
+            '"scale"': dydis
       Dancelab_setPropRandomEach:
         options:
           GROUP:
             '"ALIEN"': ateiviai
           PROPERTY:
-            '"scale"': dydis
             '"height"': aukštis
+            '"scale"': dydis
       Dancelab_setTintEach:
         options:
           THIS:
@@ -204,27 +196,27 @@ lt:
       Dancelab_startMapping:
         options:
           PROPERTY:
-            '"scale"': dydis
             '"height"': aukštis
+            '"scale"': dydis
       Dancelab_startMappingEach:
         options:
           GROUP:
             '"ALIEN"': ateiviai
           PROPERTY:
-            '"scale"': dydis
             '"height"': aukštis
+            '"scale"': dydis
       Dancelab_stopMapping:
         options:
           PROPERTY:
-            '"scale"': dydis
             '"height"': aukštis
+            '"scale"': dydis
       Dancelab_stopMappingEach:
         options:
           GROUP:
             '"ALIEN"': ateiviai
           PROPERTY:
-            '"scale"': dydis
             '"height"': aukštis
+            '"scale"': dydis
       Dancelab_translateStrings:
         options:
           STRING:
@@ -233,169 +225,17 @@ lt:
       Dancelab_whenKey:
         options:
           KEY:
-            '"up"': aukštyn
-            '"left"': kairėn
             '"down"': žemyn
+            '"enter"': įveskite
+            '"left"': kairėn
             '"right"': dešinėn
             '"space"': kosmosas
-            '"enter"': įveskite
+            '"up"': aukštyn
             '"x"': x
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
             '"hearts"': širdelės
-      gamelab_atTime:
-        options:
-          UNIT:
-            '"seconds"': sekundes
-      gamelab_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-            '"speed"': greitis
-      gamelab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': kol
-      gamelab_everyInterval:
-        options:
-          UNIT:
-            '"seconds"': sekundes
-      gamelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-            '"speed"': greitis
-      gamelab_getTime:
-        options:
-          UNIT:
-            '"seconds"': sekundes
-      gamelab_isKeyPressed:
-        options:
-          KEY:
-            '"up"': aukštyn
-            '"down"': žemyn
-            '"left"': kairėn
-            '"right"': dešinėn
-            '"space"': kosmosas
-            '"x"': x
-      gamelab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': kol
-          KEY:
-            '"up"': aukštyn
-            '"down"': žemyn
-            '"left"': kairėn
-            '"right"': dešinėn
-            '"space"': kosmosas
-            '"x"': x
-      gamelab_makeProjectile:
-        options:
-          DIRECTION:
-            '0': dešinėn
-            '90': žemyn
-            '180': kairėn
-            '270': aukštyn
-      gamelab_makeSpritesWithSize:
-        options:
-          SIZE:
-            '30': small
-            '50': šiek tiek
-            '100': large
-      gamelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': dešinėn
-            '"left"': kairėn
-      gamelab_playSoundOptions:
-        options:
-          SOUND:
-            "'sound://category_collect/clicky_crunch.mp3'": trakšt
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Burbulas
-            "'sound://category_animals/cat.mp3'": katė
-            "'sound://category_animals/cow.mp3'": karvė
-            "'sound://category_animals/sheep.mp3'": avis
-            "'sound://category_animals/chicken.mp3'": viščiukas
-            "'sound://category_animals/dog.mp3'": šuo
-            "'sound://category_digital/jump_7.mp3'": šok
-      gamelab_randColor:
-        text: Atsitiktinė spalva
-      gamelab_randomColor:
-        text: Atsitiktinė spalva
-      gamelab_repeatForever:
-        text: kartok visada
-      gamelab_setBackgroundImage:
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': uola
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miestas
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': dykuma
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': vaivorykštė
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': po
-              vandeniu
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': žiema
-            undefined: joks (registruojasi patys)
-      gamelab_setDefaultSpriteSize:
-        options:
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': šiek tiek
-            '100': large
-      gamelab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-            '"speed"': greitis
-      gamelab_setProp_dropdown:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': šiek tiek
-            '100': large
-      gamelab_setSizes:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"height"': aukštis
-      gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': kol
-      gamelab_turn:
-        options:
-          DIRECTION:
-            '"right"': dešinėn
-            '"left"': kairėn
-      gamelab_whenKey:
-        options:
-          KEY:
-            '"up"': aukštyn
-            '"down"': žemyn
-            '"left"': kairėn
-            '"right"': dešinėn
-            '"space"': kosmosas
-      gamelab_whileKey:
-        options:
-          KEY:
-            '"up"': aukštyn
-            '"down"': žemyn
-            '"left"': kairėn
-            '"right"': dešinėn
-            '"space"': kosmosas
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -457,8 +297,8 @@ lt:
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': dešinėn
             '"left"': kairėn
+            '"right"': dešinėn
       Mikelab_sprite:
         options:
           LOCATION:
@@ -467,37 +307,37 @@ lt:
       Mikelab_whenKeyPressed:
         options:
           KEY:
-            '"up"': rodyklė į viršų
+            '"a"': A
+            '"d"': D
             '"down"': rodyklė į apačią
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
-            '"w"': V
-            '"a"': A
             '"s"': P
-            '"d"': D
+            '"up"': rodyklė į viršų
+            '"w"': V
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': rodyklė į viršų
+            '"a"': A
+            '"d"': D
             '"down"': rodyklė į apačią
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
-            '"w"': V
-            '"a"': A
             '"s"': P
-            '"d"': D
+            '"up"': rodyklė į viršų
+            '"w"': V
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': taip
             '"no"': ne
+            '"yes"': taip
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': rodyklė į viršų
             '"down"': rodyklė į apačią
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
+            '"up"': rodyklė į viršų
       Poetry_addFrame:
         options:
           BRUSH:
@@ -511,8 +351,8 @@ lt:
       Poetry_playSound:
         options:
           SOUND:
-            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Burbulas
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': šok
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Burbulas
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -542,18 +382,18 @@ lt:
       binary_move:
         options:
           DIR:
-            '"up"': aukštyn
             '"down"': žemyn
             '"left"': kairėn
             '"right"': dešinėn
+            '"up"': aukštyn
       binary_whenKey:
         options:
           KEY:
-            '"up"': aukštyn
             '"down"': žemyn
             '"left"': kairėn
             '"right"': dešinėn
             '"space"': kosmosas
+            '"up"': aukštyn
       craft_ifPath:
         options:
           DIR:
@@ -561,8 +401,8 @@ lt:
       craft_ifStandingOn:
         options:
           TYPE:
-            "'sand'": smėlį
             "'planksOak'": ąžuolo lentas
+            "'sand'": smėlį
       craft_ifStandingOnLimit:
         options:
           TYPE:
@@ -571,6 +411,150 @@ lt:
         text: judėk į priekį
       craft_placeTorch:
         text: padėk deglą
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekundes
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"speed"': greitis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': sekundes
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"speed"': greitis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekundes
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"down"': žemyn
+            '"left"': kairėn
+            '"right"': dešinėn
+            '"space"': kosmosas
+            '"up"': aukštyn
+            '"x"': x
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
+          KEY:
+            '"down"': žemyn
+            '"left"': kairėn
+            '"right"': dešinėn
+            '"space"': kosmosas
+            '"up"': aukštyn
+            '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': dešinėn
+            '180': kairėn
+            '270': aukštyn
+            '90': žemyn
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '50': šiek tiek
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': kairėn
+            '"right"': dešinėn
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_animals/cat.mp3'": katė
+            "'sound://category_animals/chicken.mp3'": viščiukas
+            "'sound://category_animals/cow.mp3'": karvė
+            "'sound://category_animals/dog.mp3'": šuo
+            "'sound://category_animals/sheep.mp3'": avis
+            "'sound://category_collect/clicky_crunch.mp3'": trakšt
+            "'sound://category_digital/jump_7.mp3'": šok
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Burbulas
+      gamelab_randColor:
+        text: Atsitiktinė spalva
+      gamelab_randomColor:
+        text: Atsitiktinė spalva
+      gamelab_repeatForever:
+        text: kartok visada
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miestas
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': uola
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': dykuma
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': vaivorykštė
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': po
+              vandeniu
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': žiema
+            undefined: joks (registruojasi patys)
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '75': šiek tiek
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"speed"': greitis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+          SIZE:
+            '75': šiek tiek
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': aukštis
+            '"scale"': dydis
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': kairėn
+            '"right"': dešinėn
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"down"': žemyn
+            '"left"': kairėn
+            '"right"': dešinėn
+            '"space"': kosmosas
+            '"up"': aukštyn
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"down"': žemyn
+            '"left"': kairėn
+            '"right"': dešinėn
+            '"space"': kosmosas
+            '"up"': aukštyn
       storylab_setForegroundEffect2:
         options:
           EFFECT:

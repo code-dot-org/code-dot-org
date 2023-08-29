@@ -6102,6 +6102,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-6:
               display_name: 单位结束调查
+            lessonGroup-7:
+              display_name: 沙箱
           title: 面向对象编程
           description: "本单元向学生介绍面向对象的编程原理，让他们探索邻里并发现自己作为软件工程师的身份。学生在使用 `Painter` 对象在邻里导航和绘画时学习基本的 Java 概念，并扩展 `Painter` 类以扩展其程序的功能。学生练习预测程序代码的结果和开发算法，使用排序、选择和迭代来浏览迷宫和绘制壁画。学生还学会使用注释来记录程序代码以描述特定代码段的行为，并进行代码审查以接收来自同行的反馈。\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF 单元目标</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>在本单元结束之前，学生将能够。</em></strong></p>\n\n\\-使用继承来创建扩展现有类的子类\n\n\\-编写带有和不带参数的方法来执行特定任务\n\n\\-实现算法排序、选择和迭代\n\n\\-使用方法、控制结构和注释编写清晰易读的代码\n\n\\-通过基于反馈的迭代开发来改进程序\n    </div>\n    </details>\n\n## 完成本单元的教学了吗？\n\n回答此 [\\*\\*简短的调查\\*\\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=1) 即可让 Code.org 课程团队知道该单元进展如何。"
         csa2-2023:
@@ -6136,6 +6138,8 @@ zh-CN:
               name: 这个关键字
             lesson-15:
               name: 第 2 单元调查
+            lesson-17:
+              name: 沥青艺术项目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -6145,6 +6149,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           title: 班级结构和设计
         csa3-2023:
           lessons:
@@ -6176,6 +6182,8 @@ zh-CN:
               name: 社会公益项目数据 [1 天版]
             lesson-14:
               name: 第 3 单元调查
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -6185,6 +6193,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           title: 数组和算法
         csa4-2023:
           lessons:
@@ -6218,6 +6228,8 @@ zh-CN:
               name: 多选声明
             lesson-15:
               name: 第 4 单元调查
+            lesson-17:
+              name: 沥青艺术项目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -6227,6 +6239,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           title: 条件和逻辑
         csa5-2023:
           lessons:
@@ -6258,6 +6272,8 @@ zh-CN:
               name: 个人叙事项目 [1 天版]
             lesson-14:
               name: 第 5 单元调查
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -6267,6 +6283,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           title: 二维数组
         csa6-2023:
           lessons:
@@ -6298,6 +6316,8 @@ zh-CN:
               name: 自然语言处理项目 [1 天版]
             lesson-14:
               name: 第 6 单元调查
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -6307,6 +6327,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           title: 数组列表和字符串方法
         csa7-2023:
           lessons:
@@ -6338,6 +6360,8 @@ zh-CN:
               name: 第 7 单元调查
             lesson-14:
               name: 剧院项目中的创意编程 [1 天版]
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -6347,6 +6371,8 @@ zh-CN:
               display_name: 单位结束调查
             lessonGroup-5:
               display_name: 替补课程
+            lessonGroup-6:
+              display_name: 沙箱
           title: 方法分解和递归
           student_description: "本单元允许你使用在整个课程中学到的技能来练习软件设计和开发，同时规划和开发一个创造性的编程项目，用The Theatre传达个人兴趣或故事。您可以使用分解策略和面向对象的原则来计划和实现您的想法，同时确保您的项目满足特定要求。在此过程中，您将学会编写 `private`、重载和重载方法，并在子类方法中使用 `super` 关键字调用超类方法，同时探索方法及其参数的功能。在整个单元中，您将练习跟踪和编写递归方法，并将这些方法与迭代解进行比较。凭借全年获得的知识和技能，在探索现有程序中的错误和问题时，您认为需要最大限度地提高系统的可靠性。\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF 单位目标</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>到这个单位结束时，你就能做到。</em></strong></p>\n\n\\-区分将原始值和对象引用作为参数传递\n\n\\-编写和调用重载、`private`和重写方法\n\n\\-解释创建 AI 生成图像的程序的法律问题和知识产权问题\n\n\\-跟踪递归方法以确定其结果\n\n\\-确定最大限度地提高系统可靠性的策略\n    </div>\n    </details>"
         csa8-2023:
@@ -6377,6 +6403,8 @@ zh-CN:
               name: 第 8 单元评估
             lesson-13:
               name: 使用控制台项目进行创意编程 [1 天版]
+            lesson-15:
+              name: 沥青艺术项目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -6386,6 +6414,8 @@ zh-CN:
               display_name: 调查
             lessonGroup-5:
               display_name: 替补课程
+            lessonGroup-6:
+              display_name: 沙箱
           title: 搜索和排序
         vpl-csd3-ayw-pilot-2022:
           lessons:
@@ -6500,6 +6530,8 @@ zh-CN:
               display_name: 第 2 章︰ 计算机和解决问题的能力
             lessonGroup-4:
               display_name: 另类课程
+            lessonGroup-5:
+              display_name: 调查
           title: 单元 1-问题解决与计算 ('23'24)
           student_description: 问题解决与计算是计算机科学领域的一篇高度互动和协作性的入门课程，其框架是更广泛地追求解决问题。你将练习使用问题解决过程来解决一系列难题、挑战和现实世界场景。接下来，您将学习计算机如何输入、输出、存储和处理信息以帮助人类解决问题。本单元以一个项目结束，在该项目中，你设计了一个帮助解决你选择的问题的应用程序。
         csd2-2023:
@@ -6552,7 +6584,6 @@ zh-CN:
               display_name: 新课程
           title: "（选项 A）使用设备创建应用程序——Circuit Playground ('23'24)"
           description_short: 学习使用物理设备编程。
-          student_description: 本单元探讨了硬件平台在计算中的作用，以及不同的传感器如何提供比传统的键盘、鼠标和显示器更有效的输入和输出。使用 App Lab 和 Adafruit 的 Circuit Playground，你将开发使用与智能设备相同的硬件输入和输出的程序，研究一个简单的粗略原型如何形成成品。本单元最后提出了一项设计挑战，即使用 Circuit Playground 作为你自己设计创新的基础。
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7220,6 +7251,8 @@ zh-CN:
               display_name: 第 1 章︰ 解决问题的流程
             lessonGroup-3:
               display_name: 另类课程
+            lessonGroup-4:
+              display_name: 调查
           name: 专注于创造力 1-2023
           title: 单元 1-问题解决与计算 ('23'24)
           student_description: 问题解决与计算是计算机科学领域的一篇高度互动和协作性的入门课程，其框架是更广泛地追求解决问题。你将练习使用问题解决过程来解决一系列难题、挑战和现实世界场景。接下来，您将学习计算机如何输入、输出、存储和处理信息以帮助人类解决问题。本单元以一个项目结束，在该项目中，你设计了一个帮助解决你选择的问题的应用程序。
@@ -7264,6 +7297,8 @@ zh-CN:
               display_name: 第 2 章︰ 计算机和解决问题的能力
             lessonGroup-4:
               display_name: 另类课程
+            lessonGroup-5:
+              display_name: 调查
           name: 专注于硬件 1-2023
           title: 单元 1-问题解决与计算 ('23'24)
           student_description: 问题解决与计算是计算机科学领域的一篇高度互动和协作性的入门课程，其框架是更广泛地追求解决问题。你将练习使用问题解决过程来解决一系列难题、挑战和现实世界场景。接下来，您将学习计算机如何输入、输出、存储和处理信息以帮助人类解决问题。本单元以一个项目结束，在该项目中，你设计了一个帮助解决你选择的问题的应用程序。
@@ -7296,6 +7331,8 @@ zh-CN:
               display_name: 第 1 章︰ 解决问题的流程
             lessonGroup-3:
               display_name: 另类课程
+            lessonGroup-4:
+              display_name: 调查
           name: focus-on-data1-2023
           title: 问题解决与计算 ('23'24)
           student_description: 问题解决与计算是计算机科学领域的一篇高度互动和协作性的入门课程，其框架是更广泛地追求解决问题。你将练习使用问题解决过程来解决一系列难题、挑战和现实世界场景。接下来，您将学习计算机如何输入、输出、存储和处理信息以帮助人类解决问题。本单元以一个项目结束，在该项目中，你设计了一个帮助解决你选择的问题的应用程序。
@@ -7349,6 +7386,8 @@ zh-CN:
               display_name: 第 1 章︰ 解决问题的流程
             lessonGroup-3:
               display_name: 另类课程
+            lessonGroup-4:
+              display_name: 调查
           name: 专注于有目的的设计 1-2023
           title: 单元 1-问题解决与计算 ('23'24)
           student_description: 问题解决与计算是计算机科学领域的一篇高度互动和协作性的入门课程，其框架是更广泛地追求解决问题。你将练习使用问题解决过程来解决一系列难题、挑战和现实世界场景。接下来，您将学习计算机如何输入、输出、存储和处理信息以帮助人类解决问题。本单元以一个项目结束，在该项目中，你设计了一个帮助解决你选择的问题的应用程序。
@@ -7394,6 +7433,8 @@ zh-CN:
               display_name: 第 1 章︰ 解决问题的流程
             lessonGroup-3:
               display_name: 另类课程
+            lessonGroup-4:
+              display_name: 调查
           name: 专注于编码 1-2023
           title: 单元 1-问题解决与计算 ('23'24)
           student_description: 问题解决与计算是计算机科学领域的一篇高度互动和协作性的入门课程，其框架是更广泛地追求解决问题。你将练习使用问题解决过程来解决一系列难题、挑战和现实世界场景。接下来，您将学习计算机如何输入、输出、存储和处理信息以帮助人类解决问题。本单元以一个项目结束，在该项目中，你设计了一个帮助解决你选择的问题的应用程序。
@@ -7433,6 +7474,8 @@ zh-CN:
               display_name: 第 1 章︰ 解决问题的流程
             lessonGroup-3:
               display_name: 另类课程
+            lessonGroup-4:
+              display_name: 调查
           name: 关注社会影响1-2023
           title: 问题解决与计算 ('23'24)
           student_description: 问题解决与计算是计算机科学领域的一篇高度互动和协作性的入门课程，其框架是更广泛地追求解决问题。你将练习使用问题解决过程来解决一系列难题、挑战和现实世界场景。接下来，您将学习计算机如何输入、输出、存储和处理信息以帮助人类解决问题。本单元以一个项目结束，在该项目中，你设计了一个帮助解决你选择的问题的应用程序。
@@ -7480,11 +7523,16 @@ zh-CN:
           description_short: 学习使用物理设备编程。
           name: csd6a-2023
         csa9-2023:
+          lessons:
+            lesson-2:
+              name: 沥青艺术项目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 复习与练习
             lessonGroup-3:
               display_name: 模拟考试
+            lessonGroup-4:
+              display_name: 沙箱
           description_short: 学生通过练习多选题和自由答题的策略来为 AP CSA 考试做准备。
           description: 本单元通过复习关键概念、练习多选题和自由答题以及强化应试策略，为学生准备 AP CSA 考试。学生确定优势和需要改进的领域，制定个性化的学习计划，集中精力进行练习并自我评估自己的进度。
           student_description: 本单元通过复习关键概念、练习多选题和自由答题以及强化应试策略，为你准备 AP CSA 考试做好准备。您可以确定优势和需要改进的领域，从而制定个性化的学习计划，集中精力练习并自我评估自己的进度。
@@ -7969,6 +8017,10 @@ zh-CN:
             \-了解与更广泛的 CS 社区建立联系的机会。
 
             **建议时间**：70 分钟
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: 设置
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -8008,3 +8060,177 @@ zh-CN:
               display_name: 班级
             lessonGroup-5:
               display_name: 二维数组
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 数字公民
+            lessonGroup-3:
+              display_name: 序列
+            lessonGroup-4:
+              display_name: 循环
+            lessonGroup-5:
+              display_name: 计算的影响
+          description_audience: 年龄：4-7
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: 数据
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 数字公民
+            lessonGroup-3:
+              display_name: 序列
+            lessonGroup-4:
+              display_name: 循环
+            lessonGroup-5:
+              display_name: 计算的影响
+            lessonGroup-6:
+              display_name: 数据
+          description_audience: 年龄：4-7
+          description_short: 为学前学生准备的计算机科学介绍
+          description: 课程 A 为包括幼儿园学生在内的初学者提供计算机科学课程。学生将学习使用循环和事件等命令进行编程。本课程中的课程还教会学生与他人进行有意义的合作，研究不同的问题解决技巧，坚持面对具有挑战性的任务，并学习互联网安全知识。
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: 数据
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 数字公民
+            lessonGroup-3:
+              display_name: 序列
+            lessonGroup-4:
+              display_name: 循环
+            lessonGroup-5:
+              display_name: 计算的影响
+            lessonGroup-6:
+              display_name: 事件
+            lessonGroup-7:
+              display_name: 课程项目结束
+            lessonGroup-8:
+              display_name: 数据
+          description_audience: 年龄： 5-8
+          description_short: 为学前学生准备的计算机科学介绍。类似于课程A，但是增加了概念的深度。
+          description: 我们在开发课程B时考虑到了一年级学生。虽然课程 B 中的概念与课程 A 中的概念相似，但学生可以学习更复杂的不插手活动并完成更多种类的谜题。学生将学习编程、协作技巧、调查和批判性思维能力、面对困难的毅力以及互联网安全的基础知识。在本课程结束时，学生在 Play Lab 编程环境中创建游戏。
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: 计算系统
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 数字公民
+            lessonGroup-3:
+              display_name: 序列
+            lessonGroup-4:
+              display_name: 循环
+            lessonGroup-5:
+              display_name: 事件
+            lessonGroup-6:
+              display_name: 数据
+            lessonGroup-8:
+              display_name: 计算系统
+          description: 我们为二年级的学生开发了课程 C。学生将创建包含排序、循环和事件的节目。他们将研究解决问题的技巧，并制定在网上和线下建立积极社区的策略。在课程结束时，学生将创建可以分享的互动游戏。
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 数字公民
+            lessonGroup-3:
+              display_name: 序列
+            lessonGroup-4:
+              display_name: 计算的影响
+            lessonGroup-6:
+              display_name: 循环
+            lessonGroup-7:
+              display_name: 数据
+            lessonGroup-8:
+              display_name: 课程项目结束
+          description_audience: 年龄：7-11
+          description_short: 了解条件语句。创作自己的艺术、游戏，甚至是舞会。
+          description: 我们为三年级的学生创建了课程 D。本课程首先回顾了早期课程中的概念，包括循环和事件。之后，学生将加深对算法、嵌套循环以及循环、条件等的理解。
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 循环嵌套
+            lessonGroup-4:
+              display_name: 函数
+            lessonGroup-5:
+              display_name: 数据和模拟
+            lessonGroup-6:
+              display_name: 课程项目结束
+          description_audience: 年龄：8-12
+          description_short: 学习精灵、嵌套循环和函数的基础知识。
+          description: 我们为四年级的学生创建了课程 E。本课程首先介绍了 Sprite Lab 编程工具。学生将学会制作有趣的互动项目，以强化他们将学到的有关在线安全的知识。完成这些课程后，学生将参与更复杂的编程。学生将学习嵌套循环、函数和条件。在课程结束时，学生将结合这些概念来解决具有挑战性的难题。课程以开放式项目结束，学生可以在该项目中创建游戏或绘画。
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 精灵图
+          description_audience: 年龄：9-13
+          description_short: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
+          description: 我们为五年级的学生创建了课程 F。本课程首先研究用户如何在他们使用的应用程序中做出选择。然后，学生学习制作各种 Sprite Lab 应用程序，这些应用程序还为用户提供选择。在本课程的后面的课程中，学生将学习各种环境中的变量。在整个课程中，学生有更大的自主权和更多的选择。在课程结束时，学生将创建互动项目，与朋友和家人分享。
+          student_description: 学习使用精灵和变量编程，讨论计算和互联网的社会影响。在本课程结束时，设计和创建一个可以与朋友和家人分享的项目。
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 精灵图
+            lessonGroup-3:
+              display_name: 条件语句
+            lessonGroup-4:
+              display_name: 数据和模拟
+            lessonGroup-5:
+              display_name: 变量
+            lessonGroup-6:
+              display_name: 计算的影响
+            lessonGroup-7:
+              display_name: 课程项目结束
+          description_audience: 年龄：9-13
+          description_short: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
+          description: 我们为五年级的学生创建了课程 F。本课程首先研究用户如何在他们使用的应用程序中做出选择。然后，学生学习制作各种 Sprite Lab 应用程序，这些应用程序还为用户提供选择。在本课程的后面的课程中，学生将学习各种环境中的变量。在整个课程中，学生有更大的自主权和更多的选择。在课程结束时，学生将创建互动项目，与朋友和家人分享。
+        vpl-csp-2023-m1:
+          title: 模块 1
+        vpl-csp-2023-m2:
+          title: 模块 2
+        vpl-csp-2023-m3:
+          title: 模块 3
+        vpl-csp-2023-m4:
+          title: 模块 4
+        vpl-csp-2023-m5:
+          title: 模块 5
+        vpl-csp-2023-m6:
+          title: 模块 6
+        vpl-csp-2023-m7:
+          title: 模块 7
+        vpl-csp-2023-m8:
+          title: 模块 8
+        vpl-csa-2023-m1:
+          title: 模块 1
+        how-ai-works-2023:
+          title: AI 的工作原理
+        vpl-csa-2023-m2:
+          title: 模块 2
+        vpl-csa-2023-m3:
+          title: 模块 3
+        vpl-csa-2023-m4:
+          title: 模块 4
+        vpl-csa-2023-m5:
+          title: 模块 5
+        vpl-csa-2023-m6:
+          title: 模块 6
+        vpl-csa-2023-m7:
+          title: 模块 7
+        vpl-csa-2023-m8:
+          title: 模块 8
+        vpl-csd-2023-m1:
+          title: 模块 1
+        vpl-csd-2023-m2:
+          title: 模块 2
+        vpl-csd-2023-m3:
+          title: 模块 3
+        vpl-csd-2023-m4:
+          title: 模块 4
+        vpl-csd-2023-m5:
+          title: 模块 5
+        vpl-csd-2023-m6:
+          title: 模块 6
+        vpl-csd-2023-m7:
+          title: 模块 7
+        vpl-csd-2023-m8:
+          title: 模块 8

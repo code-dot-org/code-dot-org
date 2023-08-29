@@ -56,8 +56,7 @@ def main
       page.levels.each_with_index do |contained_level, position_index|
         next unless contained_level.type == 'Multi'
         next if contained_levels.
-          select {|existing_contained_level| existing_contained_level[:level_id] == contained_level.id}.
-          any?
+          any? {|existing_contained_level| existing_contained_level[:level_id] == contained_level.id}
 
         contained_question = get_contained_question(contained_level)
         contained_levels << {
@@ -303,24 +302,22 @@ def pd_applications_status_logs_row(row_hash)
 end
 
 def insert_pd_applications_status_logs_rows(rows)
-  begin
-    ActiveRecord::Base.connection.execute <<~SQL
-      INSERT INTO pd_applications_status_logs (
-        pd_application_id,
-        status,
-        timestamp,
-        position
-      )
-      VALUES
-      #{rows.map {|row| pd_applications_status_logs_row(row)}.join(",\n")}
-    SQL
-  rescue => exception
-    puts exception
-    Honeybadger.notify(
-      exception,
-      error_message: "Error when writing pd_applications_status_logs"
+  ActiveRecord::Base.connection.execute <<~SQL
+    INSERT INTO pd_applications_status_logs (
+      pd_application_id,
+      status,
+      timestamp,
+      position
     )
-  end
+    VALUES
+    #{rows.map {|row| pd_applications_status_logs_row(row)}.join(",\n")}
+  SQL
+rescue => exception
+  puts exception
+  Honeybadger.notify(
+    exception,
+    error_message: "Error when writing pd_applications_status_logs"
+  )
 end
 
 main

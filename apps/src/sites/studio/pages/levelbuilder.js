@@ -69,10 +69,7 @@ window.levelbuilder.pasteBlocksToWorkspace = function () {
     return;
   }
 
-  Blockly.cdoUtils.loadBlocksToWorkspace(
-    Blockly.mainBlockSpace,
-    Blockly.Xml.textToDom(str)
-  );
+  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, str);
 };
 
 // TODO: Remove when global `CodeMirror` is no longer required.

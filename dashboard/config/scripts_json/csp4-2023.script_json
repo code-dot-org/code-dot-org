@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-03 14:59:52 UTC",
+    "serialized_at": "2023-08-07 22:28:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -127,7 +127,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students spend most of their time practicing using the skills and processes they have learned about variables. At the conclusion of the lesson students discuss the main things they realized and still have questions about at the conclusion of this lesson.",
-        "preparation": "* Review the video in the level progression that covers global vs. local variables. This is a tricky topic.\n* Review other programming levels to be better prepared to support students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Review the video in the level progression that covers global vs. local variables. This is a tricky topic.\n* Review other programming levels to be better prepared to support students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1CCrKtFHF5qGRxGCjO4xV98V4Q3e_hal78I3uS4DHlwE/edit?usp=sharing)",
         "purpose": "This lesson is students primary opportunity to get hands on with variables in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
         "student_overview": "Practice programming with variables through a set of programming puzzles."
       },
@@ -147,7 +147,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Photo Liker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "* Review the different steps students will be asked to complete as they build the app\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Review the different steps students will be asked to complete as they build the app\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1bPkVDFdJsQyphT29OOotUXa0lsZ7YHwXKQJhDfH3KZo/edit?usp=sharing)",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
         "student_overview": "Practice making an app that uses variables and programming patterns with variables."
       },
@@ -470,21 +470,8 @@
       }
     },
     {
-      "key": "d83d7840-156e-43e5-834c-667be3d94a74",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d83d7840-156e-43e5-834c-667be3d94a74",
-        "lesson.key": "Variables Practice",
-        "lesson_group.key": "csp_variables",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "f2acdca7-f694-43de-98ac-25c48985d017",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Set Up"
       },
@@ -497,7 +484,7 @@
     },
     {
       "key": "33bd48b4-f6e4-4d4e-b6d5-5b44cd9facaf",
-      "position": 3,
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -510,7 +497,7 @@
     },
     {
       "key": "e7fe7be7-a1e8-4eda-ba93-e6ca7852be4b",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 40,
         "name": "Activity"
@@ -524,7 +511,7 @@
     },
     {
       "key": "a7199ea7-0e60-4cc4-b324-e7e143b4a0eb",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -537,21 +524,8 @@
       }
     },
     {
-      "key": "3b4fd522-04c5-4bb4-877e-6f1706b6d405",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "3b4fd522-04c5-4bb4-877e-6f1706b6d405",
-        "lesson.key": "Variables Make",
-        "lesson_group.key": "csp_variables",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "763a3d42-92ab-4a07-b3eb-af4bd622fd3e",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Set Up"
       },
@@ -564,7 +538,7 @@
     },
     {
       "key": "8f1c99a6-2da6-4502-b6ff-aaab619011a4",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -578,7 +552,7 @@
     },
     {
       "key": "e7e34cb1-db76-4a9b-b812-ee1c92b7aaa8",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 38,
         "name": "Activity"
@@ -592,7 +566,7 @@
     },
     {
       "key": "65e8edcc-6550-4491-b1cd-896f1abdf83e",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1024,8 +998,25 @@
       }
     },
     {
-      "key": "461c2038-2a59-4d56-8532-6bce5868cbb1",
+      "key": "56e2a5d6-bfdc-43e2-ad5d-d08fbdc22441",
       "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the Unit 4 Journal ([Digital](https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit?usp=drive_link)/[Interactive Notebook](https://docs.google.com/presentation/d/1bo-M9Oh7lb9u_YzfacvZwNn25yKMrOtAsI8Bs-0Dymw/edit?usp=drive_link)) or have students set up this unit's section in their CSP journals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. \n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "56e2a5d6-bfdc-43e2-ad5d-d08fbdc22441",
+        "lesson_activity.key": "64fc8a32-7181-4f50-849d-7bc4aefa320e"
+      }
+    },
+    {
+      "key": "461c2038-2a59-4d56-8532-6bce5868cbb1",
+      "position": 2,
       "properties": {
         "description": "**Group:** Place students in pairs"
       },
@@ -1036,7 +1027,7 @@
     },
     {
       "key": "f23982d1-616f-4f18-a9e6-e8705b0d18b7",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 3-5). Students can explore one or more depending on time.",
         "progression_name": "Explore Sample Apps"
@@ -1048,7 +1039,7 @@
     },
     {
       "key": "b93fc763-df6e-4875-a006-4790c072ea76",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *These are samples of the kinds of apps you'll be able to build by the end of this unit. As you go through them, write down at least two examples where the app seems to be keeping track of a piece of information or using it to make decisions.*\n\n**Discussion Goal:** Have volunteers share what they noticed with the room. Some ideas include:\n\n* The Pet Rock App keeps track of clicks and uses it to decide when the pet rock will \"evolve\"\n* The Poem App keeps track of the poem as you write it\n* The Thermostat App keeps track of temperature and uses it to change the color of the text\n\n"
       },
@@ -1059,7 +1050,7 @@
     },
     {
       "key": "3aaa9f68-5ab9-4428-87b5-f5bd779313e0",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "Last unit we built apps that mostly focus on input and output. For example\n\n* When button clicked → show picture\n* When button clicked → change screen\n* When button clicked → play a sound\n\nBut we all want our programs to do more than that! In this unit we’re going to learn how to build apps that keep track of information and use to make decisions and perform calculations. This is going to let us build much more powerful apps! So let's get started by diving in deep on what's involved with programming with information.",
         "remarks": true
@@ -1464,17 +1455,6 @@
       }
     },
     {
-      "key": "ff77df46-ee30-411b-b6fa-4fe519be6ac4",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1CCrKtFHF5qGRxGCjO4xV98V4Q3e_hal78I3uS4DHlwE/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "ff77df46-ee30-411b-b6fa-4fe519be6ac4",
-        "lesson_activity.key": "d83d7840-156e-43e5-834c-667be3d94a74"
-      }
-    },
-    {
       "key": "242d06f0-2256-4775-acad-f2f12ae46715",
       "position": 1,
       "properties": {
@@ -1680,17 +1660,6 @@
       }
     },
     {
-      "key": "005a1a11-f8a3-4006-8a72-6a9295c7a735",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1bPkVDFdJsQyphT29OOotUXa0lsZ7YHwXKQJhDfH3KZo/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "005a1a11-f8a3-4006-8a72-6a9295c7a735",
-        "lesson_activity.key": "3b4fd522-04c5-4bb4-877e-6f1706b6d405"
-      }
-    },
-    {
       "key": "dd591afc-cc6e-4b81-9aa8-7ca4e8e41e78",
       "position": 1,
       "properties": {
@@ -1797,7 +1766,13 @@
       "position": 6,
       "properties": {
         "description": "**Distribute:** Give students copies of [CSP Variables Make - Photo Liker App - Activity Guide](https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit) if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level three where they complete the Photo Liker App. Given this is students first Make project, it is highly recommended that students practice with this guide the first time. In future Make lessons they may opt not to use this guide. For students who need more detailed guidance once they've started programming, Step 3 includes step by step instructions that the student can follow.\n\nBased on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
-        "progression_name": "Make the Photo Liker app"
+        "progression_name": "Make the Photo Liker app",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Adapting Make Lessons** - You may decide that you'd like to have your students write the code for a modified or entirely different app using the same skills. This might help you differentiate your instruction or provide you with a way to reassess students. Check out the [r customize_make_lessons_how-to-guide/csp/2023] for guidance on how to get started with this."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "09ee2ee3-3053-45f3-996a-ca4750ffb759",
@@ -2453,7 +2428,13 @@
       "position": 5,
       "properties": {
         "description": "**Distribute:** Give students copies of [Conditionals Make Activity Guide](https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit) if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level two where they complete the Museum Ticket Generator App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
-        "progression_name": "Make the Museum Ticket Generator App"
+        "progression_name": "Make the Museum Ticket Generator App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Adapting Make Lessons** - You may decide that you'd like to have your students write the code for a modified or entirely different app using the same skills. This might help you differentiate your instruction or provide you with a way to reassess students. Check out the [r customize_make_lessons_how-to-guide/csp/2023] for guidance on how to get started with this."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4554f495-ef93-4e73-ba99-b00574527efe",
@@ -2952,7 +2933,13 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level two where they complete the Quote Maker App. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
-        "progression_name": "Make the Quote Maker App"
+        "progression_name": "Make the Quote Maker App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Adapting Make Lessons** - You may decide that you'd like to have your students write the code for a modified or entirely different app using the same skills. This might help you differentiate your instruction or provide you with a way to reassess students. Check out the [r customize_make_lessons_how-to-guide/csp/2023] for guidance on how to get started with this."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "48d53ed5-5158-492f-b3de-de5452f61621",
@@ -3154,7 +3141,6 @@
       "position": 1,
       "properties": {
         "description": "Today we are continuing work on the Decision Maker App. Each level in Code Studio contains a step to think through while constructing your app.",
-        "duration": "2",
         "name": "Warm Up",
         "remarks": true,
         "tips": [
@@ -3174,7 +3160,7 @@
       "position": 2,
       "properties": {
         "description": "####Build the Decision Maker App",
-        "duration": "43",
+        "duration": "40",
         "name": "Activity",
         "tips": [
           {
@@ -3262,11 +3248,24 @@
       "key": "77feeee2-5ee2-4482-8b5e-7b5da1b7e0ce",
       "position": 9,
       "properties": {
-        "description": "No wrap-up today. All time is spent on the project.",
-        "name": "Wrap Up"
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "77feeee2-5ee2-4482-8b5e-7b5da1b7e0ce",
+        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
+      }
+    },
+    {
+      "key": "e0a4e96d-b318-4dbd-b748-e9b6372b623b",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Four in order to generate clues for the students."
+      },
+      "seeding_key": {
+        "activity_section.key": "e0a4e96d-b318-4dbd-b748-e9b6372b623b",
         "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
       }
     },
@@ -6155,33 +6154,79 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp4-2022/resources",
-      "key": "all_resources_3",
+      "url": "/s/csp4-2023/resources",
+      "key": "all_resources_15",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_3"
+        "resource.key": "all_resources_15"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp4-2022/standards",
-      "key": "all_standards_3",
+      "url": "/s/csp4-2023/standards",
+      "key": "all_standards_15",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_3"
+        "resource.key": "all_standards_15"
+      }
+    },
+    {
+      "name": "Conditionals Explore",
+      "url": "https://docs.google.com/presentation/d/1S4xbbUjsoyT2l39oqS6a65bF4nD9e1Tx6kZr3QNETFE/template/preview",
+      "key": "conditionals_explore",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "conditionals_explore"
+      }
+    },
+    {
+      "name": "Conditionals Investigate",
+      "url": "https://docs.google.com/presentation/d/1ONSphcHDrBvZYoWZAcs2FaQ4FCuL3nQRVg1BAzkvmLE/template/preview",
+      "key": "conditionals_investigate",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "conditionals_investigate"
+      }
+    },
+    {
+      "name": "Conditionals Make",
+      "url": "https://docs.google.com/presentation/d/1UfeT6m4TX0o5FKVkrGB0ve7FIUdVKcvpCQoFFHM460k/template/preview",
+      "key": "conditionals_make",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "conditionals_make"
+      }
+    },
+    {
+      "name": "Conditionals Practice",
+      "url": "https://docs.google.com/presentation/d/1o6leQrNxM6ggnxS9AIfKFemTsSdTjLYAfu7tRH3uevg/template/preview",
+      "key": "conditionals_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "conditionals_practice"
       }
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -6198,6 +6243,31 @@
       },
       "seeding_key": {
         "resource.key": "cs_principles_conditionals_-_part_1_boolean_expressions"
+      }
+    },
+    {
+      "name": "CSP Bingo Cards - Unit Four",
+      "url": "https://drive.google.com/file/d/1RAuE7kkU9BKxKL3vB4-_udp9jD7Msj4I/view?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_four",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1RAuE7kkU9BKxKL3vB4-_udp9jD7Msj4I",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_four"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
@@ -6290,8 +6360,20 @@
       }
     },
     {
-      "name": "CSP Unit 4 Lesson 1 - Variables",
-      "url": "https://docs.google.com/presentation/d/14ZTJvYahmAM-tDM3CfY7n6dALBCUuUsw0jXYkstn_vw/template",
+      "name": "CSP Unit 4 -Variables, Conditionals, and Functions",
+      "url": "https://docs.google.com/presentation/d/1PN_NJEC3mwa7-Ii1OP_6AV4Fle1CgXd26RIWZqH-Ip8/template/preview",
+      "key": "csp_unit_4_-variables_conditionals_and_functions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_4_-variables_conditionals_and_functions"
+      }
+    },
+    {
+      "name": "CSP Unit 4 Lesson 1 - Variables Explore",
+      "url": "https://docs.google.com/presentation/d/11KzYhEMmug6IQJarTkZwV5SDndmn9M1VhKSxEaWhgfU/template/preview",
       "key": "csp_unit_4_lesson_1_-_variables",
       "properties": {
         "audience": "Teacher",
@@ -6312,6 +6394,18 @@
       },
       "seeding_key": {
         "resource.key": "csp_variables_make_-_photo_liker_app"
+      }
+    },
+    {
+      "name": "Customize Make Lessons: How-To-Guide",
+      "url": "https://docs.google.com/document/d/1K33HqvpPwb8BYX7mvFD7m2d17RSGD7ASEG4UUA0ajOM/edit?usp=sharing",
+      "key": "customize_make_lessons_how-to-guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "customize_make_lessons_how-to-guide"
       }
     },
     {
@@ -6364,6 +6458,42 @@
       },
       "seeding_key": {
         "resource.key": "eipm_a_short_introduction"
+      }
+    },
+    {
+      "name": "Functions Explore/Investigate",
+      "url": "https://docs.google.com/presentation/d/16ha3j5a_Ls-SBiWDdGQed8W0S8bTQgYdXbRPx2rpNGE/template/preview",
+      "key": "functions_explore_investigate",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_explore_investigate"
+      }
+    },
+    {
+      "name": "Functions Make",
+      "url": "https://docs.google.com/presentation/d/1irMNTLJTsa8zmG0tBL9rqZwzCgq02jzfp6SZweMozcU/template/preview",
+      "key": "functions_make",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_make"
+      }
+    },
+    {
+      "name": "Functions Practice",
+      "url": "https://docs.google.com/presentation/d/110DZOIETnGqaeEDwRIxPQTRPscrFlQo4K4SMB7ZPuZ0/template/preview",
+      "key": "functions_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_practice"
       }
     },
     {
@@ -6623,6 +6753,66 @@
       "seeding_key": {
         "resource.key": "u4_mid_score_sample_planning_guide_rubric"
       }
+    },
+    {
+      "name": "Unit 4 Journal (Digital)",
+      "url": "https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit?usp=drive_link",
+      "key": "unit_4_journal_digital_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_4_journal_digital_"
+      }
+    },
+    {
+      "name": "Unit 4 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1bo-M9Oh7lb9u_YzfacvZwNn25yKMrOtAsI8Bs-0Dymw/edit?usp=drive_link",
+      "key": "unit_4_journal_interactive_notebook_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_4_journal_interactive_notebook_"
+      }
+    },
+    {
+      "name": "Variables Investigate",
+      "url": "https://docs.google.com/presentation/d/1bcGSedBhAq2isVnGHakQT8eXR1Zz3fpPU6kg37Z6jz0/template/preview",
+      "key": "variables_investigate",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "variables_investigate"
+      }
+    },
+    {
+      "name": "Variables Make",
+      "url": "https://docs.google.com/presentation/d/1FFll2GB0Qwkqaxf6KNEbYKY_nuDCmBNNl4pKm6r5reo/template/preview",
+      "key": "variables_make",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "variables_make"
+      }
+    },
+    {
+      "name": "Variables Practice",
+      "url": "https://docs.google.com/presentation/d/1_N6J1Tzt4Hmf2NzL3aba5U_K4zjSE5crAJJeNW-aQdo/template/preview",
+      "key": "variables_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "variables_practice"
+      }
     }
   ],
   "lessons_resources": [
@@ -6635,13 +6825,13 @@
     {
       "seeding_key": {
         "lesson.key": "Conditionals Explore",
-        "resource.key": "cs_principles_conditionals_-_part_1_boolean_expressions"
+        "resource.key": "conditionals_explore"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals Explore",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+        "resource.key": "cs_principles_conditionals_-_part_1_boolean_expressions"
       }
     },
     {
@@ -6659,7 +6849,7 @@
     {
       "seeding_key": {
         "lesson.key": "Conditionals Investigate",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+        "resource.key": "conditionals_investigate"
       }
     },
     {
@@ -6695,25 +6885,31 @@
     {
       "seeding_key": {
         "lesson.key": "Conditionals Make",
+        "resource.key": "conditionals_make"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Make",
         "resource.key": "csp_conditionals_make_-_museum_ticket_generator_app"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals Make",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+        "resource.key": "customize_make_lessons_how-to-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "resource.key": "conditionals_practice"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals Practice",
         "resource.key": "csp_debugging_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -6743,13 +6939,13 @@
     {
       "seeding_key": {
         "lesson.key": "Functions Explore / Investigate",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+        "resource.key": "defining_and_calling_functions"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions Explore / Investigate",
-        "resource.key": "defining_and_calling_functions"
+        "resource.key": "functions_explore_investigate"
       }
     },
     {
@@ -6791,7 +6987,13 @@
     {
       "seeding_key": {
         "lesson.key": "Functions Make",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+        "resource.key": "customize_make_lessons_how-to-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Make",
+        "resource.key": "functions_make"
       }
     },
     {
@@ -6815,7 +7017,25 @@
     {
       "seeding_key": {
         "lesson.key": "Functions Practice",
+        "resource.key": "functions_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Practice",
         "resource.key": "guide_to_practice_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Decision Maker App Part 1",
+        "resource.key": "csp_bingo_cards_-_unit_four"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Decision Maker App Part 1",
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
@@ -6869,6 +7089,12 @@
     {
       "seeding_key": {
         "lesson.key": "Variables Explore",
+        "resource.key": "csp_unit_4_-variables_conditionals_and_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
         "resource.key": "csp_unit_4_lesson_1_-_variables"
       }
     },
@@ -6898,8 +7124,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+        "lesson.key": "Variables Explore",
+        "resource.key": "unit_4_journal_digital_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "resource.key": "unit_4_journal_interactive_notebook_"
       }
     },
     {
@@ -6922,14 +7154,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables Make",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+        "lesson.key": "Variables Investigate",
+        "resource.key": "variables_investigate"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables Make",
         "resource.key": "csp_variables_make_-_photo_liker_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "resource.key": "customize_make_lessons_how-to-guide"
       }
     },
     {
@@ -6946,14 +7184,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "resource.key": "csp_debugging_guide_1"
+        "lesson.key": "Variables Make",
+        "resource.key": "variables_make"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables Practice",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+        "resource.key": "csp_debugging_guide_1"
       }
     },
     {
@@ -6979,18 +7217,24 @@
         "lesson.key": "Variables Practice",
         "resource.key": "guide_to_practice_lessons"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "resource.key": "variables_practice"
+      }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_3",
+        "resource.key": "all_resources_15",
         "script.name": "csp4-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_3",
+        "resource.key": "all_standards_15",
         "script.name": "csp4-2023"
       }
     },
@@ -7023,16 +7267,192 @@
         "resource.key": "teacher_forum",
         "script.name": "csp4-2023"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_4_journal_digital_",
+        "script.name": "csp4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_4_journal_interactive_notebook_",
+        "script.name": "csp4-2023"
+      }
     }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "assignment_operator",
+      "word": "Assignment Operator",
+      "definition": "allows a program to change the value represented by a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "assignment_operator"
+      }
+    },
+    {
+      "key": "boolean_value",
+      "word": "Boolean Value",
+      "definition": "a data type that is either true or false",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean_value"
+      }
+    },
+    {
+      "key": "comparison_operator",
+      "word": "Comparison Operator",
+      "definition": "<, >, <=, >=, ==, != indicate a Boolean expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "comparison_operator"
+      }
+    },
+    {
+      "key": "conditional_statement",
+      "word": "Conditional Statement",
+      "definition": "affects the sequential flow of control by executing different statements based on the value of a Boolean expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conditional_statement"
+      }
+    },
+    {
+      "key": "expression",
+      "word": "Expression",
+      "definition": "a combination of operators and values that evaluates to a single value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "expression"
+      }
+    },
+    {
+      "key": "function",
+      "word": "Function",
+      "definition": "a named group of programming instructions. Also referred to as a “procedure”.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "key": "function_call",
+      "word": "Function Call",
+      "definition": "a command that executes the code within a function",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "function_call"
+      }
+    },
+    {
+      "key": "logical_operator",
+      "word": "Logical Operator",
+      "definition": "NOT, AND, and OR, which evaluate to a Boolean value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "logical_operator"
+      }
+    },
+    {
+      "key": "string",
+      "word": "String",
+      "definition": "an ordered sequence of characters",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "string"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "a named reference to a value that can be used repeatedly throughout a program",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "vocabulary.key": "boolean_value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "vocabulary.key": "comparison_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "vocabulary.key": "logical_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "vocabulary.key": "conditional_statement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "vocabulary.key": "logical_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "vocabulary.key": "function_call"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "vocabulary.key": "assignment_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "vocabulary.key": "expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "vocabulary.key": "string"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "vocabulary.key": "variable"
+      }
+    }
   ],
   "lessons_programming_expressions": [
     {
@@ -8003,6 +8423,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

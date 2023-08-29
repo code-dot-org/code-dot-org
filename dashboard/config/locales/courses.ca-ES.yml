@@ -3,52 +3,44 @@ ca:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Principis de la Informàtica
-          title: Principis de la Informàtica ('17-'18)
-          version_title: "'17-'18"
-          description_student: A la tardor de 2016, College Board va llançar un curs
-            nou d'AP®, AP Computer Science Principles. Aquest curs ensenya els alumnes
-            els fonaments de la informàtica i els anima a explorar els impactes que
-            poden tenir la informàtica i la tecnologia en el món. El Programa AP va
-            dissenyar el curs de Principis de la Informàtica AP amb l'objectiu de
-            crear líders en els camps de les ciències de la computació i atraure i
-            involucrar a aquells que tradicionalment estan poc representats amb eines
-            informàtiques bàsiques i oportunitats multidisciplinàries.
-          description_teacher: A la tardor de 2016, College Board va llançar un curs
-            nou d'AP®, AP Computer Science Principles. Aquest curs ensenya els alumnes
-            els fonaments de la informàtica i els anima a explorar els impactes que
-            poden tenir la informàtica i la tecnologia en el món. El Programa AP va
-            dissenyar el curs de Principis de la Informàtica AP amb l'objectiu de
-            crear líders en els camps de les ciències de la computació i atraure i
-            involucrar a aquells que tradicionalment estan poc representats amb eines
-            informàtiques bàsiques i oportunitats multidisciplinàries.
-          description_short: Aprèn els fonaments de la informàtica.
-        csd-2017:
-          assignment_family_title: Descobriments Informàtics
-          title: Descobriments Informàtics ('17-'18)
-          version_title: "'17-'18"
-          description_student: Es tracta d'un curs d'introducció a la informàtica
-            que permet als alumnes per crear artefactes autèntics i endinsar-se a
-            la informàtica com a mitjà per expressar la creativitat, comunicar-se,
-            resoldre problemes i passar-s'ho d'allò més bé.
-          description_teacher: Es tracta d'un curs d'introducció a la informàtica
-            que permet als alumnes per crear artefactes autèntics i endinsar-se a
-            la informàtica com a mitjà per expressar la creativitat, comunicar-se,
-            resoldre problemes i passar-s'ho d'allò més bé.
-          description_short: Es tracta d'un curs d'introducció a la informàtica que
-            permet als alumnes per crear artefactes autèntics.
         allthethingscourse:
-          title: Curs de totes les coses
           description_short: Aquest és un curs de totes les coses
           description_student: Aquest és un curs de totes les cosese i té una descripció
             més llarga per als alumnes
           description_teacher: Aquest és un curs de totes les cosese i té una descripció
             més llarga per als professors
+          title: Curs de totes les coses
+        csa-pilot-facilitator:
+          title: Facilitadors del Projecte Pilot CSA
+        csd-2017:
+          assignment_family_title: Descobriments Informàtics
+          description_short: Es tracta d'un curs d'introducció a la informàtica que
+            permet als alumnes per crear artefactes autèntics.
+          description_student: Es tracta d'un curs d'introducció a la informàtica
+            que permet als alumnes per crear artefactes autèntics i endinsar-se a
+            la informàtica com a mitjà per expressar la creativitat, comunicar-se,
+            resoldre problemes i passar-s'ho d'allò més bé.
+          description_teacher: Es tracta d'un curs d'introducció a la informàtica
+            que permet als alumnes per crear artefactes autèntics i endinsar-se a
+            la informàtica com a mitjà per expressar la creativitat, comunicar-se,
+            resoldre problemes i passar-s'ho d'allò més bé.
+          title: Descobriments Informàtics ('17-'18)
+          version_title: "'17-'18"
         csd-2018:
           assignment_family_title: Descobriments Informàtics
+          description_short: Es tracta d'un curs d'introducció a la informàtica que
+            permet als alumnes per crear artefactes autèntics.
+          description_student: Es tracta d'un curs d'introducció a la informàtica
+            que permet als alumnes per crear artefactes autèntics i endinsar-se a
+            la informàtica com a mitjà per expressar la creativitat, comunicar-se,
+            resoldre problemes i passar-s'ho d'allò més bé.
+          description_teacher: Es tracta d'un curs d'introducció a la informàtica
+            que permet als alumnes per crear artefactes autèntics i endinsar-se a
+            la informàtica com a mitjà per expressar la creativitat, comunicar-se,
+            resoldre problemes i passar-s'ho d'allò més bé.
           title: Descobriments Informàtics ('18-'19)
           version_title: "'18-'19"
+        csd-2019:
           description_short: Es tracta d'un curs d'introducció a la informàtica que
             permet als alumnes per crear artefactes autèntics.
           description_student: Es tracta d'un curs d'introducció a la informàtica
@@ -59,68 +51,8 @@ ca:
             que permet als alumnes per crear artefactes autèntics i endinsar-se a
             la informàtica com a mitjà per expressar la creativitat, comunicar-se,
             resoldre problemes i passar-s'ho d'allò més bé.
-        csp-2018:
-          assignment_family_title: Principis de la Informàtica
-          title: Principis de la Informàtica ('18-'19)
-          version_title: "'18-'19"
-          description_short: Aprèn els fonaments de la informàtica.
-          description_student: A la tardor de 2016, College Board va llançar un curs
-            nou d'AP®, AP Computer Science Principles. Aquest curs ensenya els alumnes
-            els fonaments de la informàtica i els anima a explorar els impactes que
-            poden tenir la informàtica i la tecnologia en el món. El Programa AP va
-            dissenyar el curs de Principis de la Informàtica AP amb l'objectiu de
-            crear líders en els camps de les ciències de la computació i atraure i
-            involucrar a aquells que tradicionalment estan poc representats amb eines
-            informàtiques bàsiques i oportunitats multidisciplinàries.
-          description_teacher: A la tardor de 2016, College Board va llançar un curs
-            nou d'AP®, AP Computer Science Principles. Aquest curs ensenya els alumnes
-            els fonaments de la informàtica i els anima a explorar els impactes que
-            poden tenir la informàtica i la tecnologia en el món. El Programa AP va
-            dissenyar el curs de Principis de la Informàtica AP amb l'objectiu de
-            crear líders en els camps de les ciències de la computació i atraure i
-            involucrar a aquells que tradicionalment estan poc representats amb eines
-            informàtiques bàsiques i oportunitats multidisciplinàries.
-        csp-2019:
-          title: Principis de la Informàtica ('19-'20)
-          version_title: "'19-'20"
-          description_short: Aprèn els fonaments de la informàtica.
-          description_student: A la tardor de 2016, College Board va llançar un curs
-            nou d'AP®, AP Computer Science Principles. Aquest curs ensenya els alumnes
-            els fonaments de la informàtica i els anima a explorar els impactes que
-            poden tenir la informàtica i la tecnologia en el món. El Programa AP va
-            dissenyar el curs de Principis de la Informàtica AP amb l'objectiu de
-            crear líders en els camps de les ciències de la computació i atraure i
-            involucrar a aquells que tradicionalment estan poc representats amb eines
-            informàtiques bàsiques i oportunitats multidisciplinàries.
-          description_teacher: A la tardor de 2016, College Board va llançar un curs
-            nou d'AP®, AP Computer Science Principles. Aquest curs ensenya els alumnes
-            els fonaments de la informàtica i els anima a explorar els impactes que
-            poden tenir la informàtica i la tecnologia en el món. El Programa AP va
-            dissenyar el curs de Principis de la Informàtica AP amb l'objectiu de
-            crear líders en els camps de les ciències de la computació i atraure i
-            involucrar a aquells que tradicionalment estan poc representats amb eines
-            informàtiques bàsiques i oportunitats multidisciplinàries.
-        csd-2019:
           title: Descobriments Informàtics ('19-'20)
           version_title: "'19-'20"
-          description_short: Es tracta d'un curs d'introducció a la informàtica que
-            permet als alumnes per crear artefactes autèntics.
-          description_student: Es tracta d'un curs d'introducció a la informàtica
-            que permet als alumnes per crear artefactes autèntics i endinsar-se a
-            la informàtica com a mitjà per expressar la creativitat, comunicar-se,
-            resoldre problemes i passar-s'ho d'allò més bé.
-          description_teacher: Es tracta d'un curs d'introducció a la informàtica
-            que permet als alumnes per crear artefactes autèntics i endinsar-se a
-            la informàtica com a mitjà per expressar la creativitat, comunicar-se,
-            resoldre problemes i passar-s'ho d'allò més bé.
-        csd-pilot:
-          title: Curs Pilot CSD
-          description_student: Es tracta d'un curs d'introducció a la informàtica
-            que permet als alumnes per crear artefactes autèntics i endinsar-se a
-            la informàtica com a mitjà per expressar la creativitat, comunicar-se,
-            resoldre problemes i passar-s'ho d'allò més bé.
-        csp-2020:
-          description_short: Aprèn els fonaments de la informàtica.
         csd-2020:
           description_short: Es tracta d'un curs d'introducció a la informàtica que
             permet als alumnes per crear artefactes autèntics.
@@ -132,46 +64,116 @@ ca:
             que permet als alumnes per crear artefactes autèntics i endinsar-se a
             la informàtica com a mitjà per expressar la creativitat, comunicar-se,
             resoldre problemes i passar-s'ho d'allò més bé.
+        csd-2023:
+          title: Descobriments Informàtics
+        csd-pilot:
+          description_student: Es tracta d'un curs d'introducció a la informàtica
+            que permet als alumnes per crear artefactes autèntics i endinsar-se a
+            la informàtica com a mitjà per expressar la creativitat, comunicar-se,
+            resoldre problemes i passar-s'ho d'allò més bé.
+          title: Curs Pilot CSD
+        csp-2017:
+          assignment_family_title: Principis de la Informàtica
+          description_short: Aprèn els fonaments de la informàtica.
+          description_student: A la tardor de 2016, College Board va llançar un curs
+            nou d'AP®, AP Computer Science Principles. Aquest curs ensenya els alumnes
+            els fonaments de la informàtica i els anima a explorar els impactes que
+            poden tenir la informàtica i la tecnologia en el món. El Programa AP va
+            dissenyar el curs de Principis de la Informàtica AP amb l'objectiu de
+            crear líders en els camps de les ciències de la computació i atraure i
+            involucrar a aquells que tradicionalment estan poc representats amb eines
+            informàtiques bàsiques i oportunitats multidisciplinàries.
+          description_teacher: A la tardor de 2016, College Board va llançar un curs
+            nou d'AP®, AP Computer Science Principles. Aquest curs ensenya els alumnes
+            els fonaments de la informàtica i els anima a explorar els impactes que
+            poden tenir la informàtica i la tecnologia en el món. El Programa AP va
+            dissenyar el curs de Principis de la Informàtica AP amb l'objectiu de
+            crear líders en els camps de les ciències de la computació i atraure i
+            involucrar a aquells que tradicionalment estan poc representats amb eines
+            informàtiques bàsiques i oportunitats multidisciplinàries.
+          title: Principis de la Informàtica ('17-'18)
+          version_title: "'17-'18"
+        csp-2018:
+          assignment_family_title: Principis de la Informàtica
+          description_short: Aprèn els fonaments de la informàtica.
+          description_student: A la tardor de 2016, College Board va llançar un curs
+            nou d'AP®, AP Computer Science Principles. Aquest curs ensenya els alumnes
+            els fonaments de la informàtica i els anima a explorar els impactes que
+            poden tenir la informàtica i la tecnologia en el món. El Programa AP va
+            dissenyar el curs de Principis de la Informàtica AP amb l'objectiu de
+            crear líders en els camps de les ciències de la computació i atraure i
+            involucrar a aquells que tradicionalment estan poc representats amb eines
+            informàtiques bàsiques i oportunitats multidisciplinàries.
+          description_teacher: A la tardor de 2016, College Board va llançar un curs
+            nou d'AP®, AP Computer Science Principles. Aquest curs ensenya els alumnes
+            els fonaments de la informàtica i els anima a explorar els impactes que
+            poden tenir la informàtica i la tecnologia en el món. El Programa AP va
+            dissenyar el curs de Principis de la Informàtica AP amb l'objectiu de
+            crear líders en els camps de les ciències de la computació i atraure i
+            involucrar a aquells que tradicionalment estan poc representats amb eines
+            informàtiques bàsiques i oportunitats multidisciplinàries.
+          title: Principis de la Informàtica ('18-'19)
+          version_title: "'18-'19"
+        csp-2019:
+          description_short: Aprèn els fonaments de la informàtica.
+          description_student: A la tardor de 2016, College Board va llançar un curs
+            nou d'AP®, AP Computer Science Principles. Aquest curs ensenya els alumnes
+            els fonaments de la informàtica i els anima a explorar els impactes que
+            poden tenir la informàtica i la tecnologia en el món. El Programa AP va
+            dissenyar el curs de Principis de la Informàtica AP amb l'objectiu de
+            crear líders en els camps de les ciències de la computació i atraure i
+            involucrar a aquells que tradicionalment estan poc representats amb eines
+            informàtiques bàsiques i oportunitats multidisciplinàries.
+          description_teacher: A la tardor de 2016, College Board va llançar un curs
+            nou d'AP®, AP Computer Science Principles. Aquest curs ensenya els alumnes
+            els fonaments de la informàtica i els anima a explorar els impactes que
+            poden tenir la informàtica i la tecnologia en el món. El Programa AP va
+            dissenyar el curs de Principis de la Informàtica AP amb l'objectiu de
+            crear líders en els camps de les ciències de la computació i atraure i
+            involucrar a aquells que tradicionalment estan poc representats amb eines
+            informàtiques bàsiques i oportunitats multidisciplinàries.
+          title: Principis de la Informàtica ('19-'20)
+          version_title: "'19-'20"
+        csp-2020:
+          description_short: Aprèn els fonaments de la informàtica.
         csp-2021:
+          description_short: Aprèn els fonaments de la informàtica.
+        csp-2022:
+          description_short: Aprèn els fonaments de la informàtica.
+        csp-2023:
           description_short: Aprèn els fonaments de la informàtica.
         mike-test:
           title: Fonaments de la informàtica
-        self-paced-pl-csp-2021:
-          title: Ensenyar els principis bàsics de la informàtica
-        csa-pilot-facilitator:
-          title: Facilitadors del Projecte Pilot CSA
-        csp-2022:
-          description_short: Aprèn els fonaments de la informàtica.
-        vpl-csd-summer-pilot-ci-2022:
-          title: Investigació del pla d'estudis de CS Discoveries
         self-paced-pl-csa-2022:
           title: Mòduls introductoris de CSA
-        self-paced-pl-csp-2022:
-          title: Ensenyar els principis bàsics de la informàtica
-        csp-2023:
-          description_short: Aprèn els fonaments de la informàtica.
         self-paced-pl-csa-2023:
           title: Mòduls introductoris de CSA
-        csd-2023:
-          title: Descobriments Informàtics
-        vpl-csd-summer-ci-2023:
-          title: Investigació del pla d'estudis de CS Discoveries
+        self-paced-pl-csp-2021:
+          title: Ensenyar els principis bàsics de la informàtica
+        self-paced-pl-csp-2022:
+          title: Ensenyar els principis bàsics de la informàtica
         self-paced-pl-csp-2023:
           title: Ensenyar els principis bàsics de la informàtica
+        vpl-csa-2023:
+          title: Aprenentatge Professional Virtual CSA
+        vpl-csd-summer-ci-2023:
+          title: Investigació del pla d'estudis de CS Discoveries
+        vpl-csd-summer-pilot-ci-2022:
+          title: Investigació del pla d'estudis de CS Discoveries
     resources:
-      curriculum/csd/2020:
-        name: Pla d'estudis
-      teacher_forum/csd/2020:
-        name: Fòrum del professor
       curriculum/csd/2017:
         name: Pla d'estudis
-      teacher_forum_6/csd/2017:
-        name: Fòrum del professor
+      curriculum/csd/2018:
+        name: Pla d'estudis
       curriculum/csd/2019:
+        name: Pla d'estudis
+      curriculum/csd/2020:
         name: Pla d'estudis
       teacher_forum/csd/2019:
         name: Fòrum del professor
-      curriculum/csd/2018:
-        name: Pla d'estudis
+      teacher_forum/csd/2020:
+        name: Fòrum del professor
+      teacher_forum_6/csd/2017:
+        name: Fòrum del professor
       teacher_forum_6/csd/2018:
         name: Fòrum del professor

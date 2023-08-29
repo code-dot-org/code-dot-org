@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "відтворити звук",
   "blockly_blockPlaySoundAtMeasureTooltip": "відтворити звук",
+  "blockly_blockPlaySoundTooltip": "відтворити звук",
   "blockly_blockRepeatTooltip": "повторити",
   "blockly_blockWhenRun": "коли гра починається",
   "blockly_blockWhenRunTooltip": "коли гра починається",
@@ -12,10 +12,10 @@
   "blockly_toolboxCategoryMath": "Математика",
   "blockly_toolboxCategoryPlay": "Звуки",
   "blockly_toolboxCategoryVariables": "Змінні",
+  "continue": "Продовжити",
   "feedback": "Зворотний зв'язок",
-  "share": "Поділитися",
-  "startOver": "Почати спочатку",
   "panelHeaderInstructions": "Інструкції",
   "panelHeaderWorkspace": "Робоча область: ",
-  "continue": "Продовжити"
+  "share": "Поділитися",
+  "startOver": "Почати спочатку"
 }

@@ -21,9 +21,14 @@ class Pd::SessionAttendanceController < ApplicationController
     enrollment = enrollments.find_by(user: current_user) || enrollments.find_by(email: current_user.email)
 
     unless enrollment
-      @safe_names = @session.workshop.unattended_enrollments.get_safe_names
-      render :match_registration
-      return
+      # If signed out, user must sign in then is redirected back. If signed in to an account not associated
+      # with an enrollment in this workshop, user must switch to an account enrolled in this workshop.
+      if current_user
+        render :no_enrollment_match
+        return
+      else
+        redirect_to "/users/sign_in?user_return_to=/pd/attend/#{@session.code}"
+      end
     end
 
     attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: current_user
@@ -82,7 +87,7 @@ class Pd::SessionAttendanceController < ApplicationController
   private def render_own_workshop
     attend_url = CDO.code_org_url "/pd/#{@session.code}", CDO.default_scheme
 
-    flash[:notice] = "You can't attend this workshop because you organized it. "\
+    flash[:notice] = "You can't attend this workshop because you organized it. " \
       "If your attendees go to the link #{attend_url} they will see a success message here."
 
     redirect_to CDO.studio_url('/', CDO.default_scheme)

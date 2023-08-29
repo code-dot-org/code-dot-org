@@ -202,6 +202,8 @@ it:
     parent_account_email_progress_permission: "Possiamo inviarti aggiornamenti occasionali sui progressi e sui progetti di tuo figlio e aggiornamenti sui corsi e sull'informatica?[(Vedi la nostra politica sulla privacy)](%{privacy_policy_url})"
     parent_account_email_label: "E-mail del genitore/tutore"
     us_state: 'Stato'
+    us_state_dropdown_options:
+      other: "Vivo in un posto non elencato qui"
   school_info:
     title: 'Informazioni sulla scuola (opzionale)'
     school_country: 'Paese della Scuola'
@@ -270,6 +272,9 @@ it:
   parent_mailer:
     student_associated_subject: 'Informazioni di accesso per Code.org'
     parent_email_added_subject: 'Benvenuto su Code.org!'
+    parent_permission_request_subject: "È richiesto il consenso dei genitori per permettere ai propri figli l'accesso a Code.org"
+    parent_permission_reminder_subject: "Ricorda, è richiesto il consenso dei genitori per permettere ai propri figli l'accesso a Code.org"
+    parent_permission_confirmation_subject: "Grazie per aver approvato l'accesso a Code.org ai tuoi figli!"
   teacher_mailer:
     new_teacher_subject: 'Benvenuto su Code.org!'
     delete_teacher_subject: 'Notifica di Code.org: il tuo account è stato eliminato'
@@ -338,7 +343,7 @@ it:
       finished_hoc: "Ho finito!"
       sign_in_to_save: 'Accedi per salvare i progressi fatti'
       my_dashboard: "Controllo"
-      course_catalog: "Corsi"
+      course_catalog: "Catalogo Corsi"
       project_gallery: "Progetti"
       sections: "Classi"
       help_support: "Help and support"
@@ -355,6 +360,7 @@ it:
       sprite_lab_documentation: "Documentazione Sviluppo App"
       sprite_lab_tutorials: "Esercitazioni Sviluppo App"
       web_lab_documentation: "Documentazione Sviluppo Web"
+      project_beats_documentation: "Documentazione Project Beats"
       educate_overview: "Panoramica dei corsi"
       educate_elementary: "Scuola elementare"
       educate_middle: "Scuola media"
@@ -1131,17 +1137,33 @@ it:
         not_listed: 'Termine preferito non in elenco'
         none: 'Preferisco non rispondere'
       school_country:
+        australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belize'
+        brazil: 'Brasile'
         canada: 'Canada'
         chile: 'Cile'
         colombia: 'Colombia'
+        dominican_republic: 'Repubblica Dominicana'
+        india: 'India'
+        indonesia: 'Indonesia'
         israel: 'Israele'
+        jamaica: 'Giamaica'
+        kenya: 'Kenya'
         malaysia: 'Malesia'
+        maldives: 'Maldive'
         mexico: 'Messico'
+        mongolia: 'Mongolia'
+        new_zealand: 'Nuova Zelanda'
         paraguay: 'Paraguay'
+        portugal: 'Portogallo'
+        slovakia: 'Slovacchia'
+        south_korea: 'Sud Corea'
+        spain: 'Spagna'
         thailand: 'Tailandia'
+        trinidad_and_tobago: 'Trinidad e Tobago'
         uzbekistan: 'Uzbekistan'
+        vietnam: 'Vietnam'
       ages:
         ages_under_6: 'Fino a 6 anni'
         ages_7_8: '7 -8 anni'
@@ -1285,3 +1307,4 @@ it:
     binary: "Binario"
     hexadecimal: "Esadecimale"
     pixel_format_header: "Formato Pixel"
+

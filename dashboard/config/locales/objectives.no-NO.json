@@ -2,6 +2,9 @@
   "no-NO": {
     "data": {
       "objectives": {
+        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
+          "description": "Lag en variabel"
+        },
         "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
           "description": ""
         },
@@ -19,9 +22,6 @@
         },
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
           "description": ""
-        },
-        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
-          "description": "Lag en variabel"
         }
       }
     }

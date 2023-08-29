@@ -255,7 +255,7 @@
   studiobar_title_nolink: "ស្វែង​រក​មេរៀនរបស់ Code.org"
   studiobar_elementary_title: "មេរៀនកម្រិតបឋម"
   studiobar_elementary_body: "មេរៀនថ្មីទាំងបីរបស់យើងសម្រាប់ថ្នាក់មត្តេយ្យទី&#8209;៥"
-  studiobar_dance_title: "Dance Party"
+  studiobar_dance_title: "កម្មវិធីរាំ"
   studiobar_dance_body: "បង្កើត និងចែករំលែកពិធីរាំរែកផ្ទាល់ខ្លួនរបស់អ្នក"
   studiobar_hoc_title: "កម្មវិធី Hour of Code"
   studiobar_hoc_body: "រៀនសរសេរកូដជាមួយ Angry Birds"
@@ -688,6 +688,7 @@
   dashboard_sections_table_secret: "ប្រភេទ ចូលគណនី"
   dashboard_sections_table_grade: "ថ្នាក់"
   dashboard_sections_table_course: "វគ្គសិក្សា"
+  dashboard_sections_table_pairing_allowed: "ការសរសេរកម្មវិធីជាគូ"
   dashboard_sections_table_stage_extras: "ដំណាក់កាលផ្សេងទៀត"
   dashboard_sections_table_students: "សិស្ស"
   dashboard_sections_table_code: "លេខកូដផ្នែក"
@@ -903,7 +904,7 @@
   appinventor_name: "AppInventor Hour of Code"
   blockly_name: "Blockly"
   projguts_name: "ក្តាប់ លាត កន្ត្រៃ"
-  artist_name: "សិល្បករ"
+  artist_name: "វិចិត្រករ"
   monstercoding_name: "ដំណើរផ្សងព្រេងសរសេរកូដនៅលើកោះអាថ៌កំបាំង "
   allcancode_name: "រត់ Marco រត់! "
   csfirst_name: "CS First"
@@ -932,6 +933,7 @@
   pre-express-2018_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០១៨)
   pre-express-2019_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០១៩)
   pre-express-2020_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០២០)
+  express-2022_name: Express Course (2022)
   csd2_name: 'មេរៀនទី២៖ ការអភិវឌ្ឍគេហទំព័រ'
   csd3_name: 'មេរៀនទី៣៖ ស្វែងយល់អំពីចលនានិងល្បែង'
   pre-express_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
@@ -1420,13 +1422,13 @@
   user_header_applab: 'App Lab'
   user_header_artist: 'សិល្បករ'
   user_header_gamelab: "មន្ទីរពិសោធន៍ហ្គេម"
-  user_header_dance: "Dance Party"
+  user_header_dance: "កម្មវិធីរាំ"
   user_header_spritelab: "មន្ទីរពិសោធន៍ Sprite "
   user_header_minecraft: "ម៉ាញក្រាស់"
   user_header_view_all: "មើលគម្រោងទាំងអស់"
   user_header_view_project_gallery: "មើលបណ្តុំនៃគម្រោង"
   user_header_view_my_projects: "មើលគម្រោងរបស់ខ្ញុំ"
-  view_all_sections: "មើលផ្នែកទាំងអស់"
+  view_all_sections: "មើលថ្នាក់ទាំងអស់"
   view_section: "មើលផ្នែក"
   view_named_section: "មើល %{section_name}"
   privacy_doc_explanation: "សូមចុចនៅទីនេះសម្រាប់ឯកសារឯកជនភាពរបស់យើង ដែលអាចចែករំលែក ឬបោះពុម្ពសម្រាប់សិស្សរបស់អ្នកបាន។"
@@ -1459,7 +1461,7 @@
   applab_tile_subtitle: "បង្កើតកម្មវិធីផ្ទាល់ខ្លួនរបស់អ្នក ជាមួយ JavaScript ដោយប្រើកម្មវិធីដែលផ្អែកលើប្លុក។ ឬអភិវឌ្ឍជំនាញរបស់អ្នកទៅកម្រិតបន្ទាប់ទៀត ជាមួយនឹងការសរសេរប្រូក្រាមដែលមានអត្ថបទជាគោល។ (ជាភាសាអង់គ្លេស)"
   applab_tile_start_tutorial: "ចាប់​ផ្ដើម"
   applab_tile_teacher_guide: "បង្ហាញការណែនាំសម្រាប់គ្រូ"
-  hoc_overview_dance_title: "Dance Party"
+  hoc_overview_dance_title: "កម្មវិធីរាំ"
   hoc_overview_dance_subtitle: "សរសេរកូដបង្កើត Dace Party ដើម្បីចែករំលែកជាមួយមិត្ដភក្តិ ដោយមានតួអង្គសម្ដែង Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara និង ២៥ រូបផ្សេងទៀត!"
   hoc_overview_dance_2019_subtitle: "សរសេរកូដបង្កើត Dace Party ដើម្បីចែករំលែកជាមួយមិត្ដភក្តិ ដែលមានតួអង្គសម្ដែង Katy Perry, Shawn Mendes, Panic! នៅក្នុងឌីស្កូ Lil Nas X, Jonas Brothers, Nicki Minaj និង ៣៤ រូបផ្សេងទៀត!"
   hoc_overview_title: "សកម្មភាពនៃកម្មវិធី Hour of Code របស់ Code.org"
@@ -1498,7 +1500,7 @@
   hoc2018_mc_download_adventurer: "ទាញយក Minecraft Adventurer ដែលជាប្រភេទមិនត្រូវការអ៊ីនធើណែត។"
   hoc2018_mc_educators: "សម្រាប់អ្នកបង្រៀន"
   hoc2018_mc_educators_box1_title: "សរសេរកូដជាមួយ Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition ផ្តល់នូវកម្មវិធីសិក្សាស្របតាមក្រមស្តង់ដារការបណ្តុះបណ្តាល និងការសរសេរកូដជាមួយ Minecraft។'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Education Edition ផ្តល់នូវកម្មវិធីសិក្សាស្របតាមក្រមស្តង់ដារការបណ្តុះបណ្តាល និងការសរសេរកូដជាមួយ Minecraft។"
   hoc2018_mc_educators_box1_button: "ចាប់ផ្ដើម"
   hoc2018_mc_educators_box2_title: "ទាញយកមគ្គុទេសក៍អ្នកសម្របសម្រួល"
   hoc2018_mc_educators_box2_desc: "ប្រអប់ឧបករណ៍នេះនឹងជួយអ្នកឲ្យធ្វើជាបង្កើត Hour of Code និងចូលរួមជាមួយសិស្សអ្នកក្នុងផ្នែកវិទ្យាសាស្ត្រកុំព្យូទ័រ។"
@@ -1537,15 +1539,15 @@
   hoc2018_mc_short_description: "ប្រើជំនាញច្នៃប្រឌិត និងជំនាញដោះស្រាយបញ្ហារបស់អ្នក ដើម្បីស្វែងរកកំណប់ និងរុករកពិភពក្រោមទឹកដោយថាមពលនៃការសរសេរកូដ។"
   hoc2018_mc_short_description_shorter: "ប្រើជំនាញច្នៃប្រឌិត និងជំនាញដោះស្រាយបញ្ហារបស់អ្នក ដើម្បីរុករក និងបង្កើតពិភពក្រោមទឹកដោយថាមពលនៃការសរសេរកូដ។"
   hoc2018_mc_journey: "ធ្វើដំណើរផ្សងព្រេងជាមួយ Minecraft ដោយការសរសេរកូដ។"
-  hoc2018_dance_party_main_heading: "Dance Party"
+  hoc2018_dance_party_main_heading: "កម្មវិធីរាំ"
   hoc2018_dance_party_landing_title: "រាំ"
   hoc2018_dance_party_subheading: "ជួយបកប្រែ Dance Party"
   hoc2018_dance_create_your_own_dance_title: "បង្កើត Dance Party ដោយខ្លួនអ្នក"
-  hoc2018_dance_party_box_title: "Dance Party"
+  hoc2018_dance_party_box_title: "កម្មវិធីរាំ"
   hoc2018_dance_party_box_description: "សរសេរកូដ Dance Party ដើម្បីចែករំលែកជាមួយមិត្ដភក្កិ"
   hoc2018_dance_party_specs: "ភាសា | ទម្រង់ | អាយុ ៦-១០៦"
   hoc2018_dance_party_button: "ចាប់​ផ្ដើម"
-  hoc2018_dance_keep_on_dancing_box_title: "Keep On Dancing"
+  hoc2018_dance_keep_on_dancing_box_title: "បន្តបង្កើតក្បាច់រាំ"
   hoc2018_dance_keep_on_dancing_description: "បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។"
   hoc2018_dance_keep_on_dancing_specs: "ភាសា | ទម្រង់ | អាយុ ១៣ ឆ្នាំឡើង"
   hoc2018_dance_keep_on_dancing_button: "ចាប់ផ្តើមវគ្គ ២"
@@ -1585,8 +1587,8 @@
   hoc2018_aquatic_video3: "លក្ខខណ្ឌ - Minecraft Voyage Aquatic"
   hoc2018_aquatic_video4: "សូមអបអរសាទរ - Minecraft Voyage Aquatic"
   hoc2018_dance_video1: "កាណែនាំ - Dance Party"
-  hoc2018_dance_video2: "ព្រឹត្ដិការណ៍ - Dance Party"
-  hoc2018_dance_video3: "លក្ខណៈសម្បត្តិ - Dance Party"
+  hoc2018_dance_video2: "ព្រឹត្ដិការណ៍ - ពិធីជប់លៀងរាំកំសាន្ត"
+  hoc2018_dance_video3: "ជប់លៀងរាំ - លក្ខណៈសម្បត្តិ "
   hoc2018_dance_video4: "សូមអបអរសារទរ - Dance Party"
   page_not_found_title: "រកទំព័រពុំឃើញ"
   page_not_found_header: '៤០៤៖ រកទំព័រពុំឃើញ'
@@ -1595,7 +1597,7 @@
   hoc2018_mc_with_microsoft: "ជាដៃគូសហការជាមួយ"
   hoc2018_mc_thank_microsoft: "យើងសូមថ្លែងអំណរគុណដល់ក្រុមហ៊ុន Microsoft ដែលគាំទ្រទស្សនវិស័យ និងបេសកកម្មរបស់យើង ដើម្បីធានាថាកុមារគ្រប់រូបមានឱកាសរៀនវិទ្យាសាស្ត្រកុំព្យូទ័រ និងជំនាញនេះ ដើម្បីទទួលបានជោគជ័យនៅសតវត្សរ៍ទី ២១ ។"
   hoc2019_mc_mee_title: "ប្រើប្រាស់ភាពវៃឆ្លាតសិប្បនិម្មិតរបស់ Minecraft ក្នុងគោលបំណងល្អ"
-  hoc2019_mc_mee_description1: 'មេរៀនថ្មី Minecraft Hour of Code ឥឡូវនេះ មាននៅក្នុង Minecraft: Education Edition សម្រាប់ Windows, Mac និង iPad។ សិក្សាមូលដ្ឋានគ្រឹះនៃការសរសេរកូដ និងស្វែងយល់អំពីAI ជាមួយសិស្សអ្នក!'
+  hoc2019_mc_mee_description1: "មេរៀនថ្មី Minecraft Hour of Code ឥឡូវនេះ មាននៅក្នុង Minecraft: Education Edition សម្រាប់ Windows, Mac និង iPad។ សិក្សាមូលដ្ឋានគ្រឹះនៃការសរសេរកូដ និងស្វែងយល់អំពីAI ជាមួយសិស្សអ្នក!"
   hoc2019_mc_mee_description2: "ទាញយកបានធនធានឥតគិតថ្លៃរួមមាន ផែនការមេរៀន វីដេអូ កម្មវិធីសិក្សាវិទ្យាសាស្ត្រកុំព្យូទ័រ និងការបណ្តុះបណ្តាលគ្រូ។"
   hoc2019_mc_more_coding_resources: "ធនធានច្រើនទៀតសម្រាប់ការរៀនសរសេរកូដ"
   hoc2019_dance_previous_versions: "រកមើលកំណែមុនរបស់ Dance Party? ចុចទីនេះដើម្បីចាប់ផ្ដើម [ផ្នែកទី១]%{dance_2018_link}និង[ផ្នែកទី២]%{dance_extras_2018_link}ចាប់ពីឆ្នាំ ២០១៨។"
@@ -1608,9 +1610,9 @@
   page_not_available_description: "យើងសូមអភ័យទោស ទំព័រដែលអ្នកបានស្នើលែងមាននៅក្នុងអាសយដ្ឋាននេះទៀតហើយ។ ប្រសិនបើអ្នកនៅតែត្រូវការចូលវា សូមអ៊ីម៉ែលមកកាន់  [support@code.org]%{support_email_link}"
   page_not_available_button: "ត្រឡប់ទៅទំព័រដើម"
   hoc2020_mc_available_code_org: "អាចរកបានលើគេហទំព័រ Code.org"
-  hoc2020_mc_available_mee: 'អាចរកបាននៅក្នុង Minecraft: Education Edition'
+  hoc2020_mc_available_mee: "អាចរកបាននៅក្នុង Minecraft: Education Edition"
   hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"
-  hoc2020_mc_mee_description: 'មេរៀនថ្មី Minecraft Hour of Code ឥឡូវនេះ មាននៅក្នុង Minecraft: Education Edition សម្រាប់ Windows, Mac និង iPad។ សិក្សាមូលដ្ឋានគ្រឹះនៃការសរសេរកូដ និងស្វែងយល់ពីភាពចម្រុះ និងការដាក់បញ្ចូលជាមួយសិស្សរបស់អ្នក! សូមទាញយកធនធានដោយឥតគិតថ្លៃរួមមាន ផែនការមេរៀន វីដេអូ កម្មវិធីសិក្សាវិទ្យាសាស្ត្រកុំព្យូទ័រ មេរៀនសមធម៌ និងការបណ្តុះបណ្តាលសម្រាប់គ្រូ។'
+  hoc2020_mc_mee_description: "មេរៀនថ្មី Minecraft Hour of Code ឥឡូវនេះ មាននៅក្នុង Minecraft: Education Edition សម្រាប់ Windows, Mac និង iPad។ សិក្សាមូលដ្ឋានគ្រឹះនៃការសរសេរកូដ និងស្វែងយល់ពីភាពចម្រុះ និងការដាក់បញ្ចូលជាមួយសិស្សរបស់អ្នក! សូមទាញយកធនធានដោយឥតគិតថ្លៃរួមមាន ផែនការមេរៀន វីដេអូ កម្មវិធីសិក្សាវិទ្យាសាស្ត្រកុំព្យូទ័រ មេរៀនសមធម៌ និងការបណ្តុះបណ្តាលសម្រាប់គ្រូ។"
   footer_powered_by_aws: "Amazon Web Services ដែល “Powered by AWS” គឺជាពាណិជ្ជសញ្ញារបស់ Amazon.com, Inc. ឬសាខារបស់ខ្លួន នៅសហរដ្ឋអាមេរិក និង ប្រទេសផ្សេងទៀត។"
   footer_built_on_github: "បង្កើតឡើងលើ GitHub ដោយ Microsoft"
   codebytes_skinny_banner_title: "ចូលរួមជាមួយយើងនៅថ្ងៃទី ៧-១១ ខែធ្នូសម្រាប់មេរៀនខ្លីៗរបស់ CodeBytes!"

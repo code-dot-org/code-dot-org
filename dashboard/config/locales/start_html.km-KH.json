@@ -3,31 +3,31 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "យល់ព្រម",
-          "No": "ទេ"
+          "No": "ទេ",
+          "Yes": "យល់ព្រម"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "យល់ព្រម",
-          "No": "ទេ"
+          "No": "ទេ",
+          "Yes": "យល់ព្រម"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "យល់ព្រម",
-          "No": "ទេ"
+          "No": "ទេ",
+          "Yes": "យល់ព្រម"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "យល់ព្រម",
-          "No": "ទេ"
+          "No": "ទេ",
+          "Yes": "យល់ព្រម"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "ឈ្មោះ",
-          "Color": "ពណ៌",
           "City": "ទីក្រុង",
+          "Color": "ពណ៌",
+          "Name": "ឈ្មោះ",
           "text": "អត្ថបទ"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "ឈ្មោះ",
-          "Color": "ពណ៌",
           "City": "ទីក្រុង",
+          "Color": "ពណ៌",
+          "Name": "ឈ្មោះ",
           "text": "អត្ថបទ"
         },
         "CSD U1 processing guess_2021": {
@@ -51,22 +51,22 @@
           "Back": "ត្រលប់ក្រោយ"
         },
         "CSD U1 storage movies_2021": {
-          "Yes": "យល់ព្រម",
           "No": "ទេ",
+          "Yes": "យល់ព្រម",
           "text": "អត្ថបទ"
         },
         "CSD U1 storage movies_2022": {
-          "Yes": "យល់ព្រម",
           "No": "ទេ",
+          "Yes": "យល់ព្រម",
           "text": "អត្ថបទ"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "ពណ៌​បៃតង",
-          "black": "ខ្មៅ"
+          "black": "ខ្មៅ",
+          "green": "ពណ៌​បៃតង"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "ពណ៌​បៃតង",
-          "black": "ខ្មៅ"
+          "black": "ខ្មៅ",
+          "green": "ពណ៌​បៃតង"
         },
         "CSD U6 - Accelerometer - PA_2222": {
           "Game Over": "ល្បែងកម្សាន្តបានបញ្ចប់"
@@ -114,44 +114,44 @@
           "Medium": "មធ្យម"
         },
         "CSD U6 - Combine Inputs - A_2222": {
+          "green": "ពណ៌​បៃតង",
           "left": "ឆ្វេង",
-          "right": "ស្តាំ",
           "red": "ពណ៌ក្រហម",
-          "green": "ពណ៌​បៃតង"
+          "right": "ស្តាំ"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "លឿន",
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "ក្រហម",
+          "Blue": "ខៀវ",
           "Green": "បៃតង",
-          "Blue": "ខៀវ"
+          "Red": "ក្រហម"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "ឆ្វេង",
           "right": "ស្តាំ"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "ពណ៌​បៃតង",
-          "blue": "ពណ៌​ខៀវ"
+          "blue": "ពណ៌​ខៀវ",
+          "green": "ពណ៌​បៃតង"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "ក្រហម",
-          "Blue": "ខៀវ"
+          "Blue": "ខៀវ",
+          "Red": "ក្រហម"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
@@ -173,40 +173,40 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "ជោគជ័យ!"
@@ -263,15 +263,15 @@
           "Name:": "ឈ្មោះ"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "ក្រហម",
+          "Blue": "ខៀវ",
           "Green": "បៃតង",
-          "Blue": "ខៀវ"
+          "Red": "ក្រហម"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "ខៀវ",
+          "Green": "បៃតង",
           "Name:": "ឈ្មោះ",
           "Red": "ក្រហម",
-          "Green": "បៃតង",
-          "Blue": "ខៀវ",
           "Save": "រក្សា​ទុក"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
@@ -287,15 +287,15 @@
           "title": "ចំ​ណង​ជើង"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "Red": "ក្រហម",
+          "Blue": "ខៀវ",
           "Green": "បៃតង",
-          "Blue": "ខៀវ"
+          "Red": "ក្រហម"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "ឡើង",
           "down": "ចុះ",
           "left": "ឆ្វេង",
-          "right": "ស្តាំ"
+          "right": "ស្តាំ",
+          "up": "ឡើង"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "ឈ្មោះ"
@@ -367,40 +367,40 @@
           "Update": "កែលម្អរ"
         },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "ដំបូង"
@@ -415,20 +415,20 @@
           "first": "ដំបូង"
         },
         "CSD U6 change": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 change_2018": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 change_2019": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 change_2021": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "មធ្យម"
@@ -455,63 +455,63 @@
           "Happy": "សប្បាយ"
         },
         "CSD U6 frequency": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 frequency_2018": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 frequency_2019": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 frequency_2021": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 get toggle": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 get toggle_2018": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 get toggle_2019": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 get toggle_2021": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "ខៀវ",
+          "Green": "បៃតង",
           "Name:": "ឈ្មោះ",
           "Red": "ក្រហម",
-          "Green": "បៃតង",
-          "Blue": "ខៀវ",
           "Save": "រក្សា​ទុក"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "ខៀវ",
+          "Green": "បៃតង",
           "Name:": "ឈ្មោះ",
           "Red": "ក្រហម",
-          "Green": "បៃតង",
-          "Blue": "ខៀវ",
           "Save": "រក្សា​ទុក"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "ខៀវ",
+          "Green": "បៃតង",
           "Name:": "ឈ្មោះ",
           "Red": "ក្រហម",
-          "Green": "បៃតង",
-          "Blue": "ខៀវ",
           "Save": "រក្សា​ទុក"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "ខៀវ",
+          "Green": "បៃតង",
           "Name:": "ឈ្មោះ",
           "Red": "ក្រហម",
-          "Green": "បៃតង",
-          "Blue": "ខៀវ",
           "Save": "រក្សា​ទុក"
         },
         "CSD U6 getProperty input": {
@@ -528,55 +528,55 @@
         },
         "CSD U6 getters debug": {
           "fast": "លឿន",
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 getters debug_2018": {
           "fast": "លឿន",
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 getters debug_2019": {
           "fast": "លឿន",
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 getters debug_2021": {
           "fast": "លឿន",
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 interval": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 interval_2018": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 interval_2019": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 interval_2021": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 params create colors": {
-          "Red": "ក្រហម",
-          "Blue": "ខៀវ"
+          "Blue": "ខៀវ",
+          "Red": "ក្រហម"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "ក្រហម",
-          "Blue": "ខៀវ"
+          "Blue": "ខៀវ",
+          "Red": "ក្រហម"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "ក្រហម",
-          "Blue": "ខៀវ"
+          "Blue": "ខៀវ",
+          "Red": "ក្រហម"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "ក្រហម",
-          "Blue": "ខៀវ"
+          "Blue": "ខៀវ",
+          "Red": "ក្រហម"
         },
         "CSD U6 predict LED button": {
           "Success!": "ជោគជ័យ!"
@@ -615,20 +615,20 @@
           "title": "ចំ​ណង​ជើង"
         },
         "CSD U6 slider intro": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 slider intro_2018": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 slider intro_2019": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 slider intro_2021": {
-          "short": "ខ្លី",
-          "long": "វែង"
+          "long": "វែង",
+          "short": "ខ្លី"
         },
         "CSD U6 stillness game predict code": {
           "Game Over": "ល្បែងកម្សាន្តបានបញ្ចប់"
@@ -655,71 +655,71 @@
           "Success!": "ជោគជ័យ!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "ក្រហម",
+          "Blue": "ខៀវ",
           "Green": "បៃតង",
-          "Blue": "ខៀវ"
+          "Red": "ក្រហម"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "ក្រហម",
+          "Blue": "ខៀវ",
           "Green": "បៃតង",
-          "Blue": "ខៀវ"
+          "Red": "ក្រហម"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "អំពី",
           "About Us": "អំពីយើង",
-          "Cancel": "បោះបង់",
-          "Name:": "ឈ្មោះ",
-          "Red": "ក្រហម",
-          "Green": "បៃតង",
           "Blue": "ខៀវ",
-          "Yes": "យល់ព្រម",
+          "Cancel": "បោះបង់",
+          "Green": "បៃតង",
+          "Name:": "ឈ្មោះ",
           "No": "ទេ",
-          "Save": "រក្សា​ទុក"
+          "Red": "ក្រហម",
+          "Save": "រក្សា​ទុក",
+          "Yes": "យល់ព្រម"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "អំពី",
           "About Us": "អំពីយើង",
-          "Cancel": "បោះបង់",
-          "Name:": "ឈ្មោះ",
-          "Red": "ក្រហម",
-          "Green": "បៃតង",
           "Blue": "ខៀវ",
-          "Yes": "យល់ព្រម",
+          "Cancel": "បោះបង់",
+          "Green": "បៃតង",
+          "Name:": "ឈ្មោះ",
           "No": "ទេ",
-          "Save": "រក្សា​ទុក"
+          "Red": "ក្រហម",
+          "Save": "រក្សា​ទុក",
+          "Yes": "យល់ព្រម"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "អំពី",
           "About Us": "អំពីយើង",
-          "Cancel": "បោះបង់",
-          "Name:": "ឈ្មោះ",
-          "Red": "ក្រហម",
-          "Green": "បៃតង",
           "Blue": "ខៀវ",
-          "Yes": "យល់ព្រម",
+          "Cancel": "បោះបង់",
+          "Green": "បៃតង",
+          "Name:": "ឈ្មោះ",
           "No": "ទេ",
-          "Save": "រក្សា​ទុក"
+          "Red": "ក្រហម",
+          "Save": "រក្សា​ទុក",
+          "Yes": "យល់ព្រម"
         },
         "CSDU4 Decision App Demo": {
           "About": "អំពី",
-          "Why?": "ហេតុអ្វី?",
+          "About Us": "អំពីយើង",
           "I don't know": "ខ្ញុំមិនដឹងទេ",
           "When?": "ពេលណា?",
-          "About Us": "អំពីយើង"
+          "Why?": "ហេតុអ្វី?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "អំពី",
-          "Why?": "ហេតុអ្វី?",
+          "About Us": "អំពីយើង",
           "I don't know": "ខ្ញុំមិនដឹងទេ",
           "When?": "ពេលណា?",
-          "About Us": "អំពីយើង"
+          "Why?": "ហេតុអ្វី?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "អំពី",
-          "Why?": "ហេតុអ្វី?",
+          "About Us": "អំពីយើង",
           "I don't know": "ខ្ញុំមិនដឹងទេ",
           "When?": "ពេលណា?",
-          "About Us": "អំពីយើង"
+          "Why?": "ហេតុអ្វី?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "លាក់",
@@ -728,44 +728,44 @@
         "CSDU4 List App Demo": {
           "About": "អំពី",
           "About Us": "អំពីយើង",
-          "Done": "រួចរាល់",
-          "Cancel": "បោះបង់"
+          "Cancel": "បោះបង់",
+          "Done": "រួចរាល់"
         },
         "CSDU4 List App Demo_2018": {
           "About": "អំពី",
           "About Us": "អំពីយើង",
-          "Done": "រួចរាល់",
-          "Cancel": "បោះបង់"
+          "Cancel": "បោះបង់",
+          "Done": "រួចរាល់"
         },
         "CSDU4 List App Demo_2019": {
           "About": "អំពី",
           "About Us": "អំពីយើង",
-          "Done": "រួចរាល់",
-          "Cancel": "បោះបង់"
+          "Cancel": "បោះបង់",
+          "Done": "រួចរាល់"
         },
         "CSDU4 Quiz App Demo": {
           "About": "អំពី",
-          "Submit": "ដាក់ស្នើ",
-          "Why?": "ហេតុអ្វី?",
-          "When?": "ពេលណា?",
           "About Us": "អំពីយើង",
-          "Correct!": "ត្រឹមត្រូវ!"
+          "Correct!": "ត្រឹមត្រូវ!",
+          "Submit": "ដាក់ស្នើ",
+          "When?": "ពេលណា?",
+          "Why?": "ហេតុអ្វី?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "អំពី",
-          "Submit": "ដាក់ស្នើ",
-          "Why?": "ហេតុអ្វី?",
-          "When?": "ពេលណា?",
           "About Us": "អំពីយើង",
-          "Correct!": "ត្រឹមត្រូវ!"
+          "Correct!": "ត្រឹមត្រូវ!",
+          "Submit": "ដាក់ស្នើ",
+          "When?": "ពេលណា?",
+          "Why?": "ហេតុអ្វី?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "អំពី",
-          "Submit": "ដាក់ស្នើ",
-          "Why?": "ហេតុអ្វី?",
-          "When?": "ពេលណា?",
           "About Us": "អំពីយើង",
-          "Correct!": "ត្រឹមត្រូវ!"
+          "Correct!": "ត្រឹមត្រូវ!",
+          "Submit": "ដាក់ស្នើ",
+          "When?": "ពេលណា?",
+          "Why?": "ហេតុអ្វី?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+"
@@ -789,76 +789,76 @@
           "Success!": "ជោគជ័យ!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "ខាងកើត",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "អត្ថបទ"
@@ -876,20 +876,20 @@
           "Start": "ចាប់​ផ្ដើម"
         },
         "csd-apps for good-2": {
-          "Next": "បន្ទាប់",
-          "Home": "ទំព័រដើម"
+          "Home": "ទំព័រដើម",
+          "Next": "បន្ទាប់"
         },
         "csd-apps for good-2_2022": {
-          "Next": "បន្ទាប់",
-          "Home": "ទំព័រដើម"
+          "Home": "ទំព័រដើម",
+          "Next": "បន្ទាប់"
         },
         "csd-explore ui-2": {
-          "Next": "បន្ទាប់",
-          "Home": "ទំព័រដើម"
+          "Home": "ទំព័រដើម",
+          "Next": "បន្ទាប់"
         },
         "csd-explore ui-2_2022": {
-          "Next": "បន្ទាប់",
-          "Home": "ទំព័រដើម"
+          "Home": "ទំព័រដើម",
+          "Next": "បន្ទាប់"
         },
         "csd-explore ui-4": {
           "Correct!": "ត្រឹមត្រូវ!",
@@ -912,12 +912,12 @@
           "Next": "បន្ទាប់"
         },
         "ml-customize-raspado-2021": {
-          "yes": "យល់ព្រម",
-          "no": "ទេ"
+          "no": "ទេ",
+          "yes": "យល់ព្រម"
         },
         "ml-customize-raspado_2022": {
-          "yes": "យល់ព្រម",
-          "no": "ទេ"
+          "no": "ទេ",
+          "yes": "យល់ព្រម"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "បន្ត",
@@ -934,16 +934,16 @@
           "Silly": "ឆ្កួត ៗ"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "ខាងលិច",
           "A": "A",
-          "yes": "យល់ព្រម",
-          "no": "ទេ"
+          "W": "ខាងលិច",
+          "no": "ទេ",
+          "yes": "យល់ព្រម"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "ខាងលិច",
           "A": "A",
-          "yes": "យល់ព្រម",
-          "no": "ទេ"
+          "W": "ខាងលិច",
+          "no": "ទេ",
+          "yes": "យល់ព្រម"
         },
         "ml-model cards-book recommender model card": {
           "Silly": "ឆ្កួត ៗ"
@@ -958,34 +958,34 @@
           "Back": "ត្រលប់ក្រោយ"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "យល់ព្រម",
+          "B": "B",
           "No": "ទេ",
-          "B": "B"
+          "Yes": "យល់ព្រម"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "យល់ព្រម",
+          "B": "B",
           "No": "ទេ",
-          "B": "B"
+          "Yes": "យល់ព្រម"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "យល់ព្រម",
-          "No": "ទេ"
+          "No": "ទេ",
+          "Yes": "យល់ព្រម"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "យល់ព្រម",
-          "No": "ទេ"
+          "No": "ទេ",
+          "Yes": "យល់ព្រម"
         },
         "ml-use model card-example3A-2021": {
-          "rain": "ភ្លៀង",
-          "snow": "ព្រិល",
           "cloudy": "ពពក",
-          "night": "យប់"
+          "night": "យប់",
+          "rain": "ភ្លៀង",
+          "snow": "ព្រិល"
         },
         "ml-use model card-example3A_2022": {
-          "rain": "ភ្លៀង",
-          "snow": "ព្រិល",
           "cloudy": "ពពក",
-          "night": "យប់"
+          "night": "យប់",
+          "rain": "ភ្លៀង",
+          "snow": "ព្រិល"
         }
       }
     }

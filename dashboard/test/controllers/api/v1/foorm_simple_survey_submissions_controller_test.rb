@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::FoormSimpleSurveySubmissionsControllerTest < ::ActionController::TestCase
+class Api::V1::FoormSimpleSurveySubmissionsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
   setup do
     @user = create :user

@@ -2,270 +2,146 @@
   "he-IL": {
     "data": {
       "lessons": {
-        "minecraft/Minecraft Hour of Code Designer": {
-          "name": "מעצבי מיינקראפט"
+        "csd2-2017/Lists": {
+          "name": "רשימות"
         },
-        "hero/Minecraft Hour of Code": {
-          "name": "מיינקראפט: המסע של הירו"
-        },
-        "poem-art-2021/Poem Art": {
-          "name": "אומנות השירה"
-        },
-        "flappy/Flappy Code": {
-          "name": "קוד מעופף"
-        },
-        "hourofcode/Maze": {
-          "name": "מבוך"
-        },
-        "frozen/Artist": {
-          "name": "תכנתו עם אנה ואלזה"
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "עידן הקרח Play Lab"
-        },
-        "hello-world-emoji-2021/Hello World": {
-          "name": "שלום, עולם: אמוג'י"
-        },
-        "artist/Artist": {
-          "name": "אומן"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "מעבדת הצעצועים עם גמבול"
-        },
-        "dance/Dance Party": {
-          "name": "מסיבת ריקודים (2018)"
-        },
-        "hello-world-food-2021/Hello World": {
-          "name": "שלום, עולם: אוכל"
-        },
-        "aquatic/Aquatic": {
-          "name": "מיינקראפט: מסע ימי"
-        },
-        "hello-world-space-2022/Hello World: Food": {
-          "name": "שלום, עולם: שטח"
-        },
-        "hello-world-animals-2021/Hello World": {
-          "name": "שלום, עולם: חיות"
-        },
-        "starwars/Hour of Code 2015": {
-          "name": "מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (JavaScript)"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "שעת הקוד: גרסת מיינקראפט"
-        },
-        "playlab/Play Lab": {
-          "name": "מעבדת הצעצועים"
-        },
-        "hello-world-retro-2021/Hello World": {
-          "name": "שלום, עולם: רטרו"
-        },
-        "starwarsblocks/Hour of Code 2015": {
-          "name": "מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "מעבדת הצעצועים עם דיסני אינסוף"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "שעת קוד 2013"
-        },
-        "dance-2019/Dance Party": {
-          "name": "מסיבת ריקודים"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "חזרות"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "אירועים"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "תנאים"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "פונקציות"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "משתנים"
         },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "בשביל לולאות"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "אווירת לימוד"
-        },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "יסודות מדעי המחשב"
-        },
-        "K5-OnlinePD/Next Steps": {
-          "name": "השלבים הבאים"
-        },
-        "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "יסודות מדעי המחשב"
-        },
-        "kodea-pd-2021/Next Steps": {
-          "name": "השלבים הבאים"
-        },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "תכנות לנייר משבצות"
-        },
-        "coursed-2022/Introduction to Online Puzzles": {
-          "name": "היכרות עם חידות מבוכים",
-          "overview": "בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או חזרה על החומר, תלוי בניסיון הכיתה שלך) עם סביבת הפיתוח של Code.org. יהיו סרטונים המציגים את הפונקציונלית הבסיסית של סביבת העבודה כולל הכפתורים \"הרץ\", \"אפס\", ו-\"צעד\". עוד יעלה בסרטונים: גרירת הבלוקים, מחיקת בלוקים וחיבור בלוקים. לאחר מכן, תלמידים יתרגלו את כישוריהם ב _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_."
-        },
-        "coursed-2022/Relay Programming": {
-          "name": "הרץ פעולה בשנית"
-        },
-        "coursed-2022/Debugging with Laurel": {
-          "name": "ניפוי שגיאות עם לורל"
-        },
-        "coursed-2022/Dance Party": {
-          "name": "מסיבת ריקודים"
-        },
-        "coursed-2022/Loops in Ice Age": {
-          "name": "לולאות בעידן הקרח"
-        },
-        "coursed-2022/Nested Loops in Maze": {
-          "name": "לולאות מקוננות במבוך"
-        },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "התניות עם כרטיסים"
-        },
-        "coursed-2022/Until Loops in Maze": {
-          "name": "לולאות \"עד\" במבוך"
-        },
-        "coursed-2022/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "coursef-2022/Outbreak": {
-          "name": "התפרצות"
-        },
-        "coursef-2022/AI For Oceans": {
-          "name": "בינה מלאכותית למען האוקיינוסים"
-        },
-        "coursef-2022/The Internet": {
-          "name": "האינטרנט"
-        },
-        "coursef-2022/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "coursee-2022/Songwriting": {
-          "name": "כתיבת שירים"
-        },
-        "coursee-2022/Conditionals with the Farmer": {
-          "overview": "שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר."
-        },
-        "coursee-2022/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "courseb-2022/Move It, Move It": {
-          "name": "זוזו, זוזו"
-        },
-        "courseb-2022/Sequencing with Angry Birds": {
-          "name": "יצירת רצפים עם ציפורים כועסות"
-        },
-        "courseb-2022/Programming with Angry Birds": {
-          "name": "תכנות עם ציפורים כועסות"
-        },
-        "courseb-2022/Getting Loopy": {
-          "name": "עוברים ללולאות"
-        },
-        "courseb-2022/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "express-2022/Programming with Angry Birds": {
-          "name": "תכנות עם ציפורים כועסות"
-        },
-        "express-2022/Debugging in Maze": {
-          "name": "איתור באגים במבוך"
-        },
-        "express-2022/Dance Party": {
-          "name": "מסיבת ריקודים"
-        },
-        "express-2022/Nested Loops in Maze": {
-          "name": "לולאות מקוננות במבוך"
-        },
-        "express-2022/Until Loops in Maze": {
-          "name": "לולאות \"עד\" במבוך"
-        },
-        "express-2022/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "pre-express-2022/Programming with Angry Birds": {
-          "name": "תכנות עם ציפורים כועסות"
-        },
-        "pre-express-2022/Loops with Scrat": {
-          "name": "לולאות עם סקראט"
-        },
-        "pre-express-2022/Ocean Scene with Loops": {
-          "overview": "בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות."
-        },
-        "pre-express-2022/On the Move with Events": {
-          "overview": "בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!"
-        },
-        "coursea-2022/Happy Maps": {
-          "name": "מפות שמחות"
-        },
-        "coursea-2022/Loops with Scrat": {
-          "name": "לולאות עם סקראט"
-        },
-        "coursea-2022/Ocean Scene with Loops": {
-          "overview": "בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות."
-        },
-        "coursea-2022/Mini-Project: On the Move with Play Lab": {
-          "overview": "בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!"
-        },
-        "coursea-2022/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "coursec-2022/Programming with Angry Birds": {
-          "name": "תכנות עם ציפורים כועסות"
-        },
-        "coursec-2022/Debugging in Maze": {
-          "name": "איתור באגים במבוך"
-        },
-        "coursec-2022/The Big Event": {
-          "name": "האירוע הגדול"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "צמידים בינארים"
-        },
-        "coursec-2022/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "csd5-2022/ASCII and Binary Representation": {
-          "name": "ייצוג ASCII וייצוג בינארי"
-        },
-        "csd3-2022/Variables": {
-          "name": "משתנים"
-        },
-        "csd3-2022/Sprites": {
+        "csd3-2017/Sprites": {
           "name": "דמויות"
         },
-        "csd3-2022/Sprite Properties": {
-          "name": "מאפייני ספרייט"
-        },
-        "csd3-2022/Text": {
-          "name": "טקסט"
-        },
-        "csd3-2022/Conditionals": {
+        "csd3-2017/Conditionals": {
           "name": "תנאים"
         },
-        "csd3-2022/Functions": {
+        "csd3-2017/Functions": {
           "name": "פונקציות"
         },
-        "csd6-2022/Functions": {
+        "csd5-2017/ASCII and Binary Representation": {
+          "name": "ייצוג ASCII וייצוג בינארי"
+        },
+        "csd6-2017/Arrays and For Loops_": {
+          "name": "מערכים ולולאות עבור"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "פונקציות ופרמטרים"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "אלגוריתמים מהחיים: שתול זרעון"
+        },
+        "coursea-2017/Programming in Maze": {
+          "name": "תכנות במבוך"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "אלגוריתמים מהחיים: שתול זרעון"
+        },
+        "courseb-2017/Programming in Maze": {
+          "name": "תכנות במבוך"
+        },
+        "coursec-2017/Programming in Maze": {
+          "name": "תכנות במבוך"
+        },
+        "coursec-2017/Debugging in Maze": {
+          "name": "איתור באגים במבוך"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "אלגוריתמים מהחיים: מטוסי נייר"
+        },
+        "coursec-2017/Binary Bracelets": {
+          "name": "מעבר לתכנות: צמידים בינארים"
+        },
+        "coursed-2017/Introduction": {
+          "name": "היכרות עם חידות מבוכים"
+        },
+        "coursed-2017/Conditionals & Loops in Maze": {
+          "name": "התניות & לולאות במבוך"
+        },
+        "coursed-2017/Build a Play Lab Game": {
+          "name": "צור משחק במעבדת הצעצועים"
+        },
+        "coursed-2017/Unplugged: Binary": {
+          "name": "מעבר לתכנות: תמונות בינאריות"
+        },
+        "coursed-2017/Artist Binary": {
+          "name": "אומן בינארי"
+        },
+        "coursee-2017/Sequence in Maze": {
+          "name": "רצף במבוך"
+        },
+        "coursee-2017/Debugging with Scrat": {
+          "name": "ניפוי שגיאות עם סקראט"
+        },
+        "coursee-2017/Introduction": {
+          "name": "היכרות עם חידות מבוכים"
+        },
+        "coursee-2017/Build a Play Lab Game": {
+          "name": "צור משחק במעבדת הצעצועים"
+        },
+        "coursef-2017/Sequence in Maze": {
+          "name": "רצף במבוך"
+        },
+        "coursef-2017/Debugging with Scrat": {
+          "name": "ניפוי שגיאות עם סקראט"
+        },
+        "coursef-2017/Introduction": {
+          "name": "היכרות עם חידות מבוכים"
+        },
+        "coursef-2017/Variables in Play Lab": {
+          "name": "משתנים במעבדת הצעצועים"
+        },
+        "coursef-2017/For Loops in Bee": {
+          "name": "לולאות עבור עם הדבורה"
+        },
+        "coursef-2017/For Loops in Artist": {
+          "name": "לולאות עבור עם האומן"
+        },
+        "express-2017/Introduction": {
+          "name": "מבוא"
+        },
+        "express-2017/Until Loops in Maze": {
+          "name": "לולאות \"עד\" במבוך"
+        },
+        "express-2017/Variables in Play Lab": {
+          "name": "משתנים במעבדת הצעצועים"
+        },
+        "express-2017/For Loops in Bee": {
+          "name": "לולאות עבור עם הדבורה"
+        },
+        "express-2017/For Loops in Artist": {
+          "name": "לולאות עבור עם האומן"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "אלגוריתמים מהחיים: שתול זרעון"
+        },
+        "pre-express-2017/Programming in Maze": {
+          "name": "תכנות במבוך"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "תחרות איות"
+        },
+        "csd2-2018/Lists": {
+          "name": "רשימות"
+        },
+        "csd3-2018/Variables": {
+          "name": "משתנים"
+        },
+        "csd3-2018/Sprites": {
+          "name": "דמויות"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "תנאים"
+        },
+        "csd3-2018/Functions": {
           "name": "פונקציות"
         },
-        "courseb-2018/Move It, Move It": {
-          "name": "זוזו, זוזו"
+        "csd5-2018/ASCII and Binary Representation": {
+          "name": "ייצוג ASCII וייצוג בינארי"
         },
-        "courseb-2018/Loops in Ice Age": {
-          "name": "לולאות עם סקראט"
+        "csd6-2018/Arrays and For Loops": {
+          "name": "מערכים ולולאות עבור"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "פונקציות ופרמטרים"
         },
         "coursea-2018/Sequencing in Maze": {
           "name": "יצירת רצפים עם ציפורים כועסות"
@@ -275,6 +151,30 @@
         },
         "coursea-2018/Programming in Maze": {
           "name": "תכנות עם ציפורים כועסות"
+        },
+        "courseb-2018/Move It, Move It": {
+          "name": "זוזו, זוזו"
+        },
+        "courseb-2018/Loops in Ice Age": {
+          "name": "לולאות עם סקראט"
+        },
+        "coursec-2018/Programming in Maze": {
+          "name": "תכנות עם ציפורים כועסות"
+        },
+        "coursec-2018/Debugging in Maze": {
+          "name": "איתור באגים במבוך"
+        },
+        "coursec-2018/Real-life Algorithms: Paper Planes": {
+          "name": "מטוסי נייר"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "עוברים ללולאות"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "האירוע הגדול"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "צמידים בינארים"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "תכנות לנייר משבצות"
@@ -302,6 +202,27 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "תמונות בינאריות"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "חברי הרובוטיים"
+        },
+        "coursee-2018/Sequence in Maze": {
+          "name": "קידוד עם הערות"
+        },
+        "coursee-2018/Debugging with Scrat": {
+          "name": "ניפוי שגיאות עם סקראט"
+        },
+        "coursee-2018/Nested Loops": {
+          "name": "לולאות מקוננות במבוך"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "התניות עם כרטיסים"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "כתיבת שירים"
+        },
+        "coursee-2018/Internet": {
+          "name": "האינטרנט"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "חברי הרובוטיים"
@@ -357,45 +278,6 @@
         "express-2018/Internet": {
           "name": "האינטרנט"
         },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "חברי הרובוטיים"
-        },
-        "coursee-2018/Sequence in Maze": {
-          "name": "קידוד עם הערות"
-        },
-        "coursee-2018/Debugging with Scrat": {
-          "name": "ניפוי שגיאות עם סקראט"
-        },
-        "coursee-2018/Nested Loops": {
-          "name": "לולאות מקוננות במבוך"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "התניות עם כרטיסים"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "כתיבת שירים"
-        },
-        "coursee-2018/Internet": {
-          "name": "האינטרנט"
-        },
-        "coursec-2018/Programming in Maze": {
-          "name": "תכנות עם ציפורים כועסות"
-        },
-        "coursec-2018/Debugging in Maze": {
-          "name": "איתור באגים במבוך"
-        },
-        "coursec-2018/Real-life Algorithms: Paper Planes": {
-          "name": "מטוסי נייר"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "עוברים ללולאות"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "האירוע הגדול"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "צמידים בינארים"
-        },
         "pre-express-2018/Move It, Move It": {
           "name": "זוזו, זוזו"
         },
@@ -405,29 +287,29 @@
         "pre-express-2018/Spelling Bee": {
           "name": "תחרות איות"
         },
-        "csd3-2018/Variables": {
+        "csd2-2019/Lists": {
+          "name": "רשימות"
+        },
+        "csd3-2019/Variables": {
           "name": "משתנים"
         },
-        "csd3-2018/Sprites": {
+        "csd3-2019/Sprites": {
           "name": "דמויות"
         },
-        "csd3-2018/Conditionals": {
+        "csd3-2019/Conditionals": {
           "name": "תנאים"
         },
-        "csd3-2018/Functions": {
+        "csd3-2019/Functions": {
           "name": "פונקציות"
         },
-        "csd6-2018/Arrays and For Loops": {
-          "name": "מערכים ולולאות עבור"
-        },
-        "csd6-2018/Functions with Parameters": {
-          "name": "פונקציות ופרמטרים"
-        },
-        "csd5-2018/ASCII and Binary Representation": {
+        "csd5-2019/ASCII and Binary Representation": {
           "name": "ייצוג ASCII וייצוג בינארי"
         },
-        "csd2-2018/Lists": {
-          "name": "רשימות"
+        "csd6-2019/Arrays and For Loops": {
+          "name": "מערכים ולולאות עבור"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "פונקציות ופרמטרים"
         },
         "coursea-2019/Programming: Happy Maps": {
           "name": "מפות שמחות"
@@ -446,6 +328,21 @@
         },
         "courseb-2019/Loops: Getting Loopy": {
           "name": "עוברים ללולאות"
+        },
+        "coursec-2019/Programming in Maze": {
+          "name": "תכנות עם ציפורים כועסות"
+        },
+        "coursec-2019/Debugging in Maze": {
+          "name": "איתור באגים במבוך"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "צמידים בינארים"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "האירוע הגדול"
+        },
+        "coursec-2019/End of Course Project: Create a Play Lab Game": {
+          "name": "פרויקט סיום קורס"
         },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "תכנות לנייר משבצות"
@@ -477,6 +374,15 @@
         "coursed-2019/Dance Party": {
           "name": "מסיבת ריקודים"
         },
+        "coursee-2019/Nested Loops in Bee": {
+          "name": "לולאות מקוננות במבוך"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "כתיבת שירים"
+        },
+        "coursee-2019/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
         "coursef-2019/Nested Loops in the Maze": {
           "name": "לולאות מקוננות במבוך"
         },
@@ -487,15 +393,6 @@
           "name": "האינטרנט"
         },
         "coursef-2019/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "coursee-2019/Nested Loops in Bee": {
-          "name": "לולאות מקוננות במבוך"
-        },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "כתיבת שירים"
-        },
-        "coursee-2019/End of Course Project": {
           "name": "פרויקט סיום קורס"
         },
         "express-2019/Dance Party": {
@@ -516,21 +413,6 @@
         "express-2019/Build A Project": {
           "name": "פרויקט סיום קורס"
         },
-        "coursec-2019/Programming in Maze": {
-          "name": "תכנות עם ציפורים כועסות"
-        },
-        "coursec-2019/Debugging in Maze": {
-          "name": "איתור באגים במבוך"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "צמידים בינארים"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "האירוע הגדול"
-        },
-        "coursec-2019/End of Course Project: Create a Play Lab Game": {
-          "name": "פרויקט סיום קורס"
-        },
         "pre-express-2019/Programming in Maze": {
           "name": "תכנות עם ציפורים כועסות"
         },
@@ -540,191 +422,541 @@
         "pre-express-2019/Loops in Ice Age": {
           "name": "לולאות עם סקראט"
         },
-        "csd3-2019/Variables": {
-          "name": "משתנים"
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "מפות שמחות"
         },
-        "csd3-2019/Sprites": {
-          "name": "דמויות"
+        "coursea-2020/Loops in Ice Age": {
+          "name": "לולאות עם סקראט"
         },
-        "csd3-2019/Conditionals": {
-          "name": "תנאים"
+        "courseb-2020/Move It, Move It": {
+          "name": "זוזו, זוזו"
         },
-        "csd3-2019/Functions": {
-          "name": "פונקציות"
+        "courseb-2020/Sequencing in Maze": {
+          "name": "יצירת רצפים עם ציפורים כועסות"
         },
-        "csd6-2019/Arrays and For Loops": {
-          "name": "מערכים ולולאות עבור"
+        "courseb-2020/Programming in Maze": {
+          "name": "תכנות עם ציפורים כועסות"
         },
-        "csd6-2019/Functions with Parameters": {
-          "name": "פונקציות ופרמטרים"
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "עוברים ללולאות"
         },
-        "csd5-2019/ASCII and Binary Representation": {
-          "name": "ייצוג ASCII וייצוג בינארי"
+        "coursec-2020/Programming in Maze": {
+          "name": "תכנות עם ציפורים כועסות"
         },
-        "csd2-2019/Lists": {
-          "name": "רשימות"
-        },
-        "coursef-2017/Sequence in Maze": {
-          "name": "רצף במבוך"
-        },
-        "coursef-2017/Debugging with Scrat": {
-          "name": "ניפוי שגיאות עם סקראט"
-        },
-        "coursef-2017/Introduction": {
-          "name": "היכרות עם חידות מבוכים"
-        },
-        "coursef-2017/Variables in Play Lab": {
-          "name": "משתנים במעבדת הצעצועים"
-        },
-        "coursef-2017/For Loops in Bee": {
-          "name": "לולאות עבור עם הדבורה"
-        },
-        "coursef-2017/For Loops in Artist": {
-          "name": "לולאות עבור עם האומן"
-        },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "אלגוריתמים מהחיים: שתול זרעון"
-        },
-        "coursea-2017/Programming in Maze": {
-          "name": "תכנות במבוך"
-        },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "אלגוריתמים מהחיים: שתול זרעון"
-        },
-        "pre-express-2017/Programming in Maze": {
-          "name": "תכנות במבוך"
-        },
-        "pre-express-2017/Spelling Bee": {
-          "name": "תחרות איות"
-        },
-        "coursee-2017/Sequence in Maze": {
-          "name": "רצף במבוך"
-        },
-        "coursee-2017/Debugging with Scrat": {
-          "name": "ניפוי שגיאות עם סקראט"
-        },
-        "coursee-2017/Introduction": {
-          "name": "היכרות עם חידות מבוכים"
-        },
-        "coursee-2017/Build a Play Lab Game": {
-          "name": "צור משחק במעבדת הצעצועים"
-        },
-        "coursec-2017/Programming in Maze": {
-          "name": "תכנות במבוך"
-        },
-        "coursec-2017/Debugging in Maze": {
+        "coursec-2020/Debugging in Maze": {
           "name": "איתור באגים במבוך"
         },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "אלגוריתמים מהחיים: מטוסי נייר"
+        "coursec-2020/Binary Bracelets": {
+          "name": "צמידים בינארים"
         },
-        "coursec-2017/Binary Bracelets": {
-          "name": "מעבר לתכנות: צמידים בינארים"
+        "coursec-2020/Events: The Big Event": {
+          "name": "האירוע הגדול"
         },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "אלגוריתמים מהחיים: שתול זרעון"
+        "coursec-2020/End of Course Project: Create a Play Lab Game": {
+          "name": "פרויקט סיום קורס"
         },
-        "courseb-2017/Programming in Maze": {
-          "name": "תכנות במבוך"
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "תכנות לנייר משבצות"
         },
-        "coursed-2017/Introduction": {
+        "coursed-2020/Introduction to Online Puzzles": {
           "name": "היכרות עם חידות מבוכים"
         },
-        "coursed-2017/Conditionals & Loops in Maze": {
-          "name": "התניות & לולאות במבוך"
+        "coursed-2020/Relay Programming": {
+          "name": "הרץ פעולה בשנית"
         },
-        "coursed-2017/Build a Play Lab Game": {
-          "name": "צור משחק במעבדת הצעצועים"
+        "coursed-2020/Debugging in Collector": {
+          "name": "ניפוי שגיאות עם לורל"
         },
-        "coursed-2017/Unplugged: Binary": {
-          "name": "מעבר לתכנות: תמונות בינאריות"
+        "coursed-2020/Dance Party": {
+          "name": "מסיבת ריקודים"
         },
-        "coursed-2017/Artist Binary": {
-          "name": "אומן בינארי"
+        "coursed-2020/Loops in Ice Age": {
+          "name": "לולאות בעידן הקרח"
         },
-        "express-2017/Introduction": {
-          "name": "מבוא"
+        "coursed-2020/Nested Loops in Bee": {
+          "name": "לולאות מקוננות במבוך"
         },
-        "express-2017/Until Loops in Maze": {
+        "coursed-2020/Conditionals with Cards": {
+          "name": "התניות עם כרטיסים"
+        },
+        "coursed-2020/Until Loops in Maze": {
           "name": "לולאות \"עד\" במבוך"
         },
-        "express-2017/Variables in Play Lab": {
-          "name": "משתנים במעבדת הצעצועים"
+        "coursed-2020/Unplugged: Binary": {
+          "name": "תמונות בינאריות"
         },
-        "express-2017/For Loops in Bee": {
-          "name": "לולאות עבור עם הדבורה"
+        "coursed-2020/End of Course Project": {
+          "name": "פרויקט סיום קורס"
         },
-        "express-2017/For Loops in Artist": {
-          "name": "לולאות עבור עם האומן"
+        "coursee-2020/Nested Loops in Bee": {
+          "name": "לולאות מקוננות במבוך"
         },
-        "csd3-2017/Variables": {
+        "coursee-2020/Functions: Songwriting": {
+          "name": "כתיבת שירים"
+        },
+        "coursee-2020/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "coursef-2020/Nested Loops in the Maze": {
+          "name": "לולאות מקוננות במבוך"
+        },
+        "coursef-2020/Internet": {
+          "name": "האינטרנט"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "כיף עם לולאת \"עבור\""
+        },
+        "coursef-2020/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "express-2020/Dance Party": {
+          "name": "מסיבת ריקודים"
+        },
+        "express-2020/Programming with Angry Birds": {
+          "name": "תכנות עם ציפורים כועסות"
+        },
+        "express-2020/Debugging with Scrat": {
+          "name": "ניפוי שגיאות עם סקראט"
+        },
+        "express-2020/Nested Loops in Maze": {
+          "name": "לולאות מקוננות במבוך"
+        },
+        "express-2020/Until Loops in Maze": {
+          "name": "לולאות \"עד\" במבוך"
+        },
+        "express-2020/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "pre-express-2020/Loops with Scrat": {
+          "name": "לולאות עם סקראט"
+        },
+        "csd3-2021/Variables": {
           "name": "משתנים"
         },
-        "csd3-2017/Sprites": {
+        "csd3-2021/Sprites": {
           "name": "דמויות"
         },
-        "csd3-2017/Conditionals": {
+        "csd3-2021/Sprite Properties": {
+          "name": "מאפייני ספרייט"
+        },
+        "csd3-2021/Text": {
+          "name": "טקסט"
+        },
+        "csd3-2021/Conditionals": {
           "name": "תנאים"
         },
-        "csd3-2017/Functions": {
+        "csd3-2021/Functions": {
           "name": "פונקציות"
         },
-        "csd6-2017/Arrays and For Loops_": {
-          "name": "מערכים ולולאות עבור"
-        },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "פונקציות ופרמטרים"
-        },
-        "csd2-2017/Lists": {
-          "name": "רשימות"
-        },
-        "csd5-2017/ASCII and Binary Representation": {
+        "csd5-2021/ASCII and Binary Representation": {
           "name": "ייצוג ASCII וייצוג בינארי"
         },
-        "course4/Maze and Bee": {
-          "name": "מבוך ודבורה"
+        "csd6-2021/Arrays and For Loops": {
+          "name": "מערכים ולולאות עבור"
         },
-        "course4/Artist": {
+        "csd6-2021/Functions with Parameters": {
+          "name": "פונקציות ופרמטרים"
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "מפות שמחות"
+        },
+        "coursea-2021/Loops in Ice Age": {
+          "name": "לולאות עם סקראט"
+        },
+        "coursea-2021/Ocean Scene with Loops": {
+          "overview": "בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות."
+        },
+        "coursea-2021/Events in Play Lab": {
+          "overview": "בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!"
+        },
+        "coursea-2021/lesson-1": {
+          "name": "פרויקט סיום קורס"
+        },
+        "courseb-2021/Move It, Move It": {
+          "name": "זוזו, זוזו"
+        },
+        "courseb-2021/Sequencing in Maze": {
+          "name": "יצירת רצפים עם ציפורים כועסות"
+        },
+        "courseb-2021/Programming in Maze": {
+          "name": "תכנות עם ציפורים כועסות"
+        },
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "עוברים ללולאות"
+        },
+        "courseb-2021/lesson-1": {
+          "name": "פרויקט סיום קורס"
+        },
+        "coursec-2021/Programming in Maze": {
+          "name": "תכנות עם ציפורים כועסות"
+        },
+        "coursec-2021/Debugging in Maze": {
+          "name": "איתור באגים במבוך"
+        },
+        "coursec-2021/Events: The Big Event": {
+          "name": "האירוע הגדול"
+        },
+        "coursec-2021/Binary Bracelets": {
+          "name": "צמידים בינארים"
+        },
+        "coursec-2021/End of Course Project: Create a Play Lab Game": {
+          "name": "פרויקט סיום קורס"
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "תכנות לנייר משבצות"
+        },
+        "coursed-2021/Introduction to Online Puzzles": {
+          "name": "היכרות עם חידות מבוכים",
+          "overview": "בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או חזרה על החומר, תלוי בניסיון הכיתה שלך) עם סביבת הפיתוח של Code.org. יהיו סרטונים המציגים את הפונקציונלית הבסיסית של סביבת העבודה כולל הכפתורים \"הרץ\", \"אפס\", ו-\"צעד\". עוד יעלה בסרטונים: גרירת הבלוקים, מחיקת בלוקים וחיבור בלוקים. לאחר מכן, תלמידים יתרגלו את כישוריהם ב _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_."
+        },
+        "coursed-2021/Relay Programming": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "coursed-2021/Debugging in Collector": {
+          "name": "ניפוי שגיאות עם לורל"
+        },
+        "coursed-2021/Dance Party": {
+          "name": "מסיבת ריקודים"
+        },
+        "coursed-2021/Loops in Ice Age": {
+          "name": "לולאות בעידן הקרח"
+        },
+        "coursed-2021/Nested Loops in Bee": {
+          "name": "לולאות מקוננות במבוך"
+        },
+        "coursed-2021/Conditionals with Cards": {
+          "name": "התניות עם כרטיסים"
+        },
+        "coursed-2021/Until Loops in Maze": {
+          "name": "לולאות \"עד\" במבוך"
+        },
+        "coursed-2021/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "name": "כתיבת שירים"
+        },
+        "coursee-2021/Conditionals": {
+          "overview": "שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר."
+        },
+        "coursee-2021/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "coursef-2021/Nested Loops in the Maze": {
+          "name": "לולאות מקוננות במבוך"
+        },
+        "coursef-2021/For Loop Fun": {
+          "name": "כיף עם לולאת \"עבור\""
+        },
+        "coursef-2021/lesson-5": {
+          "name": "התפרצות"
+        },
+        "coursef-2021/AI for Oceans": {
+          "name": "בינה מלאכותית למען האוקיינוסים"
+        },
+        "coursef-2021/Internet": {
+          "name": "האינטרנט"
+        },
+        "coursef-2021/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "express-2021/Programming with Angry Birds": {
+          "name": "תכנות עם ציפורים כועסות"
+        },
+        "express-2021/Debugging with Scrat": {
+          "name": "איתור באגים במבוך"
+        },
+        "express-2021/lesson-1": {
+          "name": "מסיבת ריקודים"
+        },
+        "express-2021/Nested Loops in Maze": {
+          "name": "לולאות מקוננות במבוך"
+        },
+        "express-2021/Until Loops in Maze": {
+          "name": "לולאות \"עד\" במבוך"
+        },
+        "express-2021/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "pre-express-2021/Programming in with Angry Birds": {
+          "name": "תכנות עם ציפורים כועסות"
+        },
+        "pre-express-2021/Loops with Scrat": {
+          "name": "לולאות עם סקראט"
+        },
+        "pre-express-2021/Ocean Scene with Loops": {
+          "overview": "בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות."
+        },
+        "pre-express-2021/On the Move with Events": {
+          "overview": "בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!"
+        },
+        "csd3-2022/Variables": {
+          "name": "משתנים"
+        },
+        "csd3-2022/Sprites": {
+          "name": "דמויות"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "מאפייני ספרייט"
+        },
+        "csd3-2022/Text": {
+          "name": "טקסט"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "תנאים"
+        },
+        "csd3-2022/Functions": {
+          "name": "פונקציות"
+        },
+        "csd5-2022/ASCII and Binary Representation": {
+          "name": "ייצוג ASCII וייצוג בינארי"
+        },
+        "csd6-2022/Functions": {
+          "name": "פונקציות"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "מפות שמחות"
+        },
+        "coursea-2022/Loops with Scrat": {
+          "name": "לולאות עם סקראט"
+        },
+        "coursea-2022/Ocean Scene with Loops": {
+          "overview": "בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות."
+        },
+        "coursea-2022/Mini-Project: On the Move with Play Lab": {
+          "overview": "בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!"
+        },
+        "coursea-2022/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "זוזו, זוזו"
+        },
+        "courseb-2022/Sequencing with Angry Birds": {
+          "name": "יצירת רצפים עם ציפורים כועסות"
+        },
+        "courseb-2022/Programming with Angry Birds": {
+          "name": "תכנות עם ציפורים כועסות"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "עוברים ללולאות"
+        },
+        "courseb-2022/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "coursec-2022/Programming with Angry Birds": {
+          "name": "תכנות עם ציפורים כועסות"
+        },
+        "coursec-2022/Debugging in Maze": {
+          "name": "איתור באגים במבוך"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "האירוע הגדול"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "צמידים בינארים"
+        },
+        "coursec-2022/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "תכנות לנייר משבצות"
+        },
+        "coursed-2022/Introduction to Online Puzzles": {
+          "name": "היכרות עם חידות מבוכים",
+          "overview": "בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או חזרה על החומר, תלוי בניסיון הכיתה שלך) עם סביבת הפיתוח של Code.org. יהיו סרטונים המציגים את הפונקציונלית הבסיסית של סביבת העבודה כולל הכפתורים \"הרץ\", \"אפס\", ו-\"צעד\". עוד יעלה בסרטונים: גרירת הבלוקים, מחיקת בלוקים וחיבור בלוקים. לאחר מכן, תלמידים יתרגלו את כישוריהם ב _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_."
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "coursed-2022/Debugging with Laurel": {
+          "name": "ניפוי שגיאות עם לורל"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "מסיבת ריקודים"
+        },
+        "coursed-2022/Loops in Ice Age": {
+          "name": "לולאות בעידן הקרח"
+        },
+        "coursed-2022/Nested Loops in Maze": {
+          "name": "לולאות מקוננות במבוך"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "התניות עם כרטיסים"
+        },
+        "coursed-2022/Until Loops in Maze": {
+          "name": "לולאות \"עד\" במבוך"
+        },
+        "coursed-2022/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "כתיבת שירים"
+        },
+        "coursee-2022/Conditionals with the Farmer": {
+          "overview": "שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר."
+        },
+        "coursee-2022/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "coursef-2022/Outbreak": {
+          "name": "התפרצות"
+        },
+        "coursef-2022/AI For Oceans": {
+          "name": "בינה מלאכותית למען האוקיינוסים"
+        },
+        "coursef-2022/The Internet": {
+          "name": "האינטרנט"
+        },
+        "coursef-2022/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "express-2022/Programming with Angry Birds": {
+          "name": "תכנות עם ציפורים כועסות"
+        },
+        "express-2022/Debugging in Maze": {
+          "name": "איתור באגים במבוך"
+        },
+        "express-2022/Dance Party": {
+          "name": "מסיבת ריקודים"
+        },
+        "express-2022/Nested Loops in Maze": {
+          "name": "לולאות מקוננות במבוך"
+        },
+        "express-2022/Until Loops in Maze": {
+          "name": "לולאות \"עד\" במבוך"
+        },
+        "express-2022/End of Course Project": {
+          "name": "פרויקט סיום קורס"
+        },
+        "pre-express-2022/Programming with Angry Birds": {
+          "name": "תכנות עם ציפורים כועסות"
+        },
+        "pre-express-2022/Loops with Scrat": {
+          "name": "לולאות עם סקראט"
+        },
+        "pre-express-2022/Ocean Scene with Loops": {
+          "overview": "בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות."
+        },
+        "pre-express-2022/On the Move with Events": {
+          "overview": "בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "שעת קוד 2013"
+        },
+        "aquatic/Aquatic": {
+          "name": "מיינקראפט: מסע ימי"
+        },
+        "artist/Artist": {
           "name": "אומן"
         },
-        "course4/Artist: Variables": {
-          "name": "אמן: משתנים"
+        "dance-2019/Dance Party": {
+          "name": "מסיבת ריקודים"
         },
-        "course4/Play Lab: Variables": {
-          "name": "מעבדת הצעצועים: משתנים"
+        "dance/Dance Party": {
+          "name": "מסיבת ריקודים (2018)"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "ללא מחשב: כיף עם לולאות עבור"
+        "flappy/Flappy Code": {
+          "name": "קוד מעופף"
         },
-        "course4/Bee: For Loops": {
-          "name": "דבורה: לולאות For"
+        "frozen/Artist": {
+          "name": "תכנתו עם אנה ואלזה"
         },
-        "course4/Artist: For Loops": {
-          "name": "אומן: לולאות For"
+        "gumball/Gumball Play Lab": {
+          "name": "מעבדת הצעצועים עם גמבול"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "מעבדת הצעצועים: לולאות עבור"
+        "hello-world-animals-2021/Hello World": {
+          "name": "שלום, עולם: חיות"
         },
-        "course4/Artist: Functions": {
-          "name": "אומן: פונקציות"
+        "hello-world-emoji-2021/Hello World": {
+          "name": "שלום, עולם: אמוג'י"
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "אומן: פונקציות עם פרמטרים"
+        "hello-world-food-2021/Hello World": {
+          "name": "שלום, עולם: אוכל"
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "מעבדת הצעצועים: פונקציות עם פרמטרים"
+        "hello-world-retro-2021/Hello World": {
+          "name": "שלום, עולם: רטרו"
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "דבורה: פונקציות עם פרמטרים"
+        "hello-world-space-2022/Hello World: Food": {
+          "name": "שלום, עולם: שטח"
         },
-        "course4/Artist Binary": {
-          "name": "אומן בינארי"
+        "hero/Minecraft Hour of Code": {
+          "name": "מיינקראפט: המסע של הירו"
         },
-        "course4/Super Challenge - Variables": {
-          "name": "אתגר מיוחד - משתנים"
+        "hourofcode/Maze": {
+          "name": "מבוך"
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "אתגר מיוחד - לולאות עבור"
+        "iceage/Ice Age Play Lab": {
+          "name": "עידן הקרח Play Lab"
+        },
+        "infinity/Infinity": {
+          "name": "מעבדת הצעצועים עם דיסני אינסוף"
+        },
+        "mc/Hour of Code 2015": {
+          "name": "שעת הקוד: גרסת מיינקראפט"
+        },
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "מעצבי מיינקראפט"
+        },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "playlab/Play Lab": {
+          "name": "מעבדת הצעצועים"
+        },
+        "poem-art-2021/Poem Art": {
+          "name": "אומנות השירה"
+        },
+        "starwars/Hour of Code 2015": {
+          "name": "מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (JavaScript)"
+        },
+        "starwarsblocks/Hour of Code 2015": {
+          "name": "מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "אווירת לימוד"
+        },
+        "allthethings/Jigsaw": {
+          "name": "פאזל"
+        },
+        "allthethings/Maze": {
+          "name": "מבוך"
+        },
+        "allthethings/Artist": {
+          "name": "אומן"
+        },
+        "allthethings/Bee": {
+          "name": "דבורה"
+        },
+        "allthethings/Farmer": {
+          "name": "חקלאי"
+        },
+        "allthethings/Flappy": {
+          "name": "פלאפי"
+        },
+        "allthethings/Bounce": {
+          "name": "להקפיץ"
+        },
+        "allthethings/Studio": {
+          "name": "סטודיו"
+        },
+        "allthethings/Minecraft": {
+          "name": "מיינקראפט"
+        },
+        "allthethings/Web Lab": {
+          "name": "מעבדת האתרים"
+        },
+        "allthethings/Java Lab": {
+          "name": "מעבדת ג'אווה"
+        },
+        "allthethings/lesson-48": {
+          "name": "שירה"
+        },
+        "allthethings/lesson-49": {
+          "name": "מוסיקה"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "היכרות למדעי המחשב"
@@ -785,6 +1017,54 @@
         },
         "20-hour/Wrap-up": {
           "name": "סיום"
+        },
+        "course1/Happy Maps": {
+          "name": "מפות שמחות"
+        },
+        "course1/Move it, Move it": {
+          "name": "זוזו, זוזו"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "מסור: למד לגרור ולשחרר"
+        },
+        "course1/Maze: Sequence": {
+          "name": "מבוך: רצף"
+        },
+        "course1/Maze: Debugging": {
+          "name": "מבוך: איתור באגים"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "אלגוריתמים מהחיים: שתול זרעון"
+        },
+        "course1/Bee: Sequence": {
+          "name": "דבורה: רצף"
+        },
+        "course1/Artist: Sequence": {
+          "name": "אומן: רצף"
+        },
+        "course1/Artist: Shapes": {
+          "name": "אומן: צורות"
+        },
+        "course1/Spelling Bee": {
+          "name": "תחרות איות"
+        },
+        "course1/Getting Loopy": {
+          "name": "עוברים ללולאות"
+        },
+        "course1/Maze: Loops": {
+          "name": "מבוך: לולאות"
+        },
+        "course1/Bee: Loops": {
+          "name": "דבורה: לולאות"
+        },
+        "course1/The Big Event": {
+          "name": "האירוע הגדול"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "מעבדת הצעצועים: צור סיפור"
+        },
+        "course1/Artist: Loops": {
+          "name": "אומן: לולאות"
         },
         "course2/Graph Paper Programming": {
           "name": "תכנות לנייר משבצות"
@@ -891,363 +1171,53 @@
         "course3/Artist: Patterns": {
           "name": "אומן: תבניות"
         },
-        "course1/Happy Maps": {
-          "name": "מפות שמחות"
+        "course4/Maze and Bee": {
+          "name": "מבוך ודבורה"
         },
-        "course1/Move it, Move it": {
-          "name": "זוזו, זוזו"
+        "course4/Artist": {
+          "name": "אומן"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "מסור: למד לגרור ולשחרר"
+        "course4/Artist: Variables": {
+          "name": "אמן: משתנים"
         },
-        "course1/Maze: Sequence": {
-          "name": "מבוך: רצף"
+        "course4/Play Lab: Variables": {
+          "name": "מעבדת הצעצועים: משתנים"
         },
-        "course1/Maze: Debugging": {
-          "name": "מבוך: איתור באגים"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "ללא מחשב: כיף עם לולאות עבור"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "אלגוריתמים מהחיים: שתול זרעון"
+        "course4/Bee: For Loops": {
+          "name": "דבורה: לולאות For"
         },
-        "course1/Bee: Sequence": {
-          "name": "דבורה: רצף"
+        "course4/Artist: For Loops": {
+          "name": "אומן: לולאות For"
         },
-        "course1/Artist: Sequence": {
-          "name": "אומן: רצף"
+        "course4/Play Lab: For Loops": {
+          "name": "מעבדת הצעצועים: לולאות עבור"
         },
-        "course1/Artist: Shapes": {
-          "name": "אומן: צורות"
+        "course4/Artist: Functions": {
+          "name": "אומן: פונקציות"
         },
-        "course1/Spelling Bee": {
-          "name": "תחרות איות"
+        "course4/Artist: Functions with Parameters": {
+          "name": "אומן: פונקציות עם פרמטרים"
         },
-        "course1/Getting Loopy": {
-          "name": "עוברים ללולאות"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "מעבדת הצעצועים: פונקציות עם פרמטרים"
         },
-        "course1/Maze: Loops": {
-          "name": "מבוך: לולאות"
+        "course4/Bee: Functions with Parameters": {
+          "name": "דבורה: פונקציות עם פרמטרים"
         },
-        "course1/Bee: Loops": {
-          "name": "דבורה: לולאות"
+        "course4/Artist Binary": {
+          "name": "אומן בינארי"
         },
-        "course1/The Big Event": {
-          "name": "האירוע הגדול"
+        "course4/Super Challenge - Variables": {
+          "name": "אתגר מיוחד - משתנים"
         },
-        "course1/Studio: Create a Story": {
-          "name": "מעבדת הצעצועים: צור סיפור"
-        },
-        "course1/Artist: Loops": {
-          "name": "אומן: לולאות"
+        "course4/Super Challenge - For Loops": {
+          "name": "אתגר מיוחד - לולאות עבור"
         },
         "jigsaw/Jigsaw": {
           "name": "פאזל"
-        },
-        "allthethings/Jigsaw": {
-          "name": "פאזל"
-        },
-        "allthethings/Maze": {
-          "name": "מבוך"
-        },
-        "allthethings/Artist": {
-          "name": "אומן"
-        },
-        "allthethings/Bee": {
-          "name": "דבורה"
-        },
-        "allthethings/Farmer": {
-          "name": "חקלאי"
-        },
-        "allthethings/Flappy": {
-          "name": "פלאפי"
-        },
-        "allthethings/Bounce": {
-          "name": "להקפיץ"
-        },
-        "allthethings/Studio": {
-          "name": "סטודיו"
-        },
-        "allthethings/Minecraft": {
-          "name": "מיינקראפט"
-        },
-        "allthethings/Web Lab": {
-          "name": "מעבדת האתרים"
-        },
-        "allthethings/Java Lab": {
-          "name": "מעבדת ג'אווה"
-        },
-        "allthethings/lesson-48": {
-          "name": "שירה"
-        },
-        "allthethings/lesson-49": {
-          "name": "מוסיקה"
-        },
-        "coursef-2021/Nested Loops in the Maze": {
-          "name": "לולאות מקוננות במבוך"
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "כיף עם לולאת \"עבור\""
-        },
-        "coursef-2021/lesson-5": {
-          "name": "התפרצות"
-        },
-        "coursef-2021/AI for Oceans": {
-          "name": "בינה מלאכותית למען האוקיינוסים"
-        },
-        "coursef-2021/Internet": {
-          "name": "האינטרנט"
-        },
-        "coursef-2021/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "זוזו, זוזו"
-        },
-        "courseb-2021/Sequencing in Maze": {
-          "name": "יצירת רצפים עם ציפורים כועסות"
-        },
-        "courseb-2021/Programming in Maze": {
-          "name": "תכנות עם ציפורים כועסות"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "עוברים ללולאות"
-        },
-        "courseb-2021/lesson-1": {
-          "name": "פרויקט סיום קורס"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "מפות שמחות"
-        },
-        "coursea-2021/Loops in Ice Age": {
-          "name": "לולאות עם סקראט"
-        },
-        "coursea-2021/Ocean Scene with Loops": {
-          "overview": "בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות."
-        },
-        "coursea-2021/Events in Play Lab": {
-          "overview": "בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!"
-        },
-        "coursea-2021/lesson-1": {
-          "name": "פרויקט סיום קורס"
-        },
-        "coursec-2021/Programming in Maze": {
-          "name": "תכנות עם ציפורים כועסות"
-        },
-        "coursec-2021/Debugging in Maze": {
-          "name": "איתור באגים במבוך"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "האירוע הגדול"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "צמידים בינארים"
-        },
-        "coursec-2021/End of Course Project: Create a Play Lab Game": {
-          "name": "פרויקט סיום קורס"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "תכנות לנייר משבצות"
-        },
-        "coursed-2021/Introduction to Online Puzzles": {
-          "name": "היכרות עם חידות מבוכים",
-          "overview": "בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או חזרה על החומר, תלוי בניסיון הכיתה שלך) עם סביבת הפיתוח של Code.org. יהיו סרטונים המציגים את הפונקציונלית הבסיסית של סביבת העבודה כולל הכפתורים \"הרץ\", \"אפס\", ו-\"צעד\". עוד יעלה בסרטונים: גרירת הבלוקים, מחיקת בלוקים וחיבור בלוקים. לאחר מכן, תלמידים יתרגלו את כישוריהם ב _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_."
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "הרץ פעולה בשנית"
-        },
-        "coursed-2021/Debugging in Collector": {
-          "name": "ניפוי שגיאות עם לורל"
-        },
-        "coursed-2021/Dance Party": {
-          "name": "מסיבת ריקודים"
-        },
-        "coursed-2021/Loops in Ice Age": {
-          "name": "לולאות בעידן הקרח"
-        },
-        "coursed-2021/Nested Loops in Bee": {
-          "name": "לולאות מקוננות במבוך"
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "התניות עם כרטיסים"
-        },
-        "coursed-2021/Until Loops in Maze": {
-          "name": "לולאות \"עד\" במבוך"
-        },
-        "coursed-2021/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "express-2021/Programming with Angry Birds": {
-          "name": "תכנות עם ציפורים כועסות"
-        },
-        "express-2021/Debugging with Scrat": {
-          "name": "איתור באגים במבוך"
-        },
-        "express-2021/lesson-1": {
-          "name": "מסיבת ריקודים"
-        },
-        "express-2021/Nested Loops in Maze": {
-          "name": "לולאות מקוננות במבוך"
-        },
-        "express-2021/Until Loops in Maze": {
-          "name": "לולאות \"עד\" במבוך"
-        },
-        "express-2021/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "pre-express-2021/Programming in with Angry Birds": {
-          "name": "תכנות עם ציפורים כועסות"
-        },
-        "pre-express-2021/Loops with Scrat": {
-          "name": "לולאות עם סקראט"
-        },
-        "pre-express-2021/Ocean Scene with Loops": {
-          "overview": "בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות."
-        },
-        "pre-express-2021/On the Move with Events": {
-          "overview": "בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "כתיבת שירים"
-        },
-        "coursee-2021/Conditionals": {
-          "overview": "שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר."
-        },
-        "coursee-2021/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "csd6-2021/Arrays and For Loops": {
-          "name": "מערכים ולולאות עבור"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "פונקציות ופרמטרים"
-        },
-        "csd5-2021/ASCII and Binary Representation": {
-          "name": "ייצוג ASCII וייצוג בינארי"
-        },
-        "csd3-2021/Variables": {
-          "name": "משתנים"
-        },
-        "csd3-2021/Sprites": {
-          "name": "דמויות"
-        },
-        "csd3-2021/Sprite Properties": {
-          "name": "מאפייני ספרייט"
-        },
-        "csd3-2021/Text": {
-          "name": "טקסט"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "תנאים"
-        },
-        "csd3-2021/Functions": {
-          "name": "פונקציות"
-        },
-        "pre-express-2020/Loops with Scrat": {
-          "name": "לולאות עם סקראט"
-        },
-        "express-2020/Dance Party": {
-          "name": "מסיבת ריקודים"
-        },
-        "express-2020/Programming with Angry Birds": {
-          "name": "תכנות עם ציפורים כועסות"
-        },
-        "express-2020/Debugging with Scrat": {
-          "name": "ניפוי שגיאות עם סקראט"
-        },
-        "express-2020/Nested Loops in Maze": {
-          "name": "לולאות מקוננות במבוך"
-        },
-        "express-2020/Until Loops in Maze": {
-          "name": "לולאות \"עד\" במבוך"
-        },
-        "express-2020/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "זוזו, זוזו"
-        },
-        "courseb-2020/Sequencing in Maze": {
-          "name": "יצירת רצפים עם ציפורים כועסות"
-        },
-        "courseb-2020/Programming in Maze": {
-          "name": "תכנות עם ציפורים כועסות"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "עוברים ללולאות"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "תכנות לנייר משבצות"
-        },
-        "coursed-2020/Introduction to Online Puzzles": {
-          "name": "היכרות עם חידות מבוכים"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "הרץ פעולה בשנית"
-        },
-        "coursed-2020/Debugging in Collector": {
-          "name": "ניפוי שגיאות עם לורל"
-        },
-        "coursed-2020/Dance Party": {
-          "name": "מסיבת ריקודים"
-        },
-        "coursed-2020/Loops in Ice Age": {
-          "name": "לולאות בעידן הקרח"
-        },
-        "coursed-2020/Nested Loops in Bee": {
-          "name": "לולאות מקוננות במבוך"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "התניות עם כרטיסים"
-        },
-        "coursed-2020/Until Loops in Maze": {
-          "name": "לולאות \"עד\" במבוך"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "תמונות בינאריות"
-        },
-        "coursed-2020/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "coursec-2020/Programming in Maze": {
-          "name": "תכנות עם ציפורים כועסות"
-        },
-        "coursec-2020/Debugging in Maze": {
-          "name": "איתור באגים במבוך"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "צמידים בינארים"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "האירוע הגדול"
-        },
-        "coursec-2020/End of Course Project: Create a Play Lab Game": {
-          "name": "פרויקט סיום קורס"
-        },
-        "coursee-2020/Nested Loops in Bee": {
-          "name": "לולאות מקוננות במבוך"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "כתיבת שירים"
-        },
-        "coursee-2020/End of Course Project": {
-          "name": "פרויקט סיום קורס"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "מפות שמחות"
-        },
-        "coursea-2020/Loops in Ice Age": {
-          "name": "לולאות עם סקראט"
-        },
-        "coursef-2020/Nested Loops in the Maze": {
-          "name": "לולאות מקוננות במבוך"
-        },
-        "coursef-2020/Internet": {
-          "name": "האינטרנט"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "כיף עם לולאת \"עבור\""
-        },
-        "coursef-2020/End of Course Project": {
-          "name": "פרויקט סיום קורס"
         }
       }
     }

@@ -3,8 +3,6 @@
     "data": {
       "course_offerings": {
         "20-hour": "20-ties valandų įvadiniai kursai",
-        "flappy": "Flappy Kodas",
-        "jigsaw": "Dėlionės",
         "algebra": "Informatika algebroje",
         "aquatic": "Minecraft: Kelionės vandeniu",
         "artist": "Menininkas",
@@ -12,18 +10,21 @@
         "course2": "Kursas 2",
         "course3": "Kursas 3",
         "course4": "Kursas 4",
+        "edit-code": "Redaguoti kodą",
+        "flappy": "Flappy Kodas",
         "frozen": "Programuokite kartu su Ana ir Elze",
         "gumball": "Gumball laboratorija",
         "hourofcode": "Klasikinis labirintas",
         "iceage": "Ledynmečio laboratorija",
         "infinity": "Disnėjaus Infinity laboratorija",
+        "jigsaw": "Dėlionės",
         "mc": "Minecraft programavimo valanda",
         "minecraft": "Minecraft „Programavimo valandos“ projektavimo aplinka",
         "pixelation": "Pikseliavimas",
         "playlab": "Laboratorija",
-        "edit-code": "Redaguoti kodą",
-        "step": "žingsnis",
-        "soccer": "futbolas"
+        "soccer": "futbolas",
+        "starwars": "Žvaigždžių karai: Programuojame galaktiką (JavaScript kalba)",
+        "step": "žingsnis"
       }
     }
   }

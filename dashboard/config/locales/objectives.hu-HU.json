@@ -2,142 +2,10 @@
   "hu-HU": {
     "data": {
       "objectives": {
-        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
-          "description": "Egy vers hangulatváltozásának illusztrálása."
-        },
-        "6da037be-d0be-4f41-a1e5-10b24a247190": {
-          "description": "Átvitt és szó szerinti nyelvezet ábrázolása egy szövegben."
-        },
-        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
-          "description": "Időzített eseményekre reagáló programok fejlesztése"
-        },
-        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
-          "description": "Felhasználói bevitelre reagáló programok fejlesztése"
-        },
-        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
-          "description": "Táncanimációk készítése kóddal"
-        },
-        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "f9486b57-7160-4b3b-b327-b311239d5d26": {
-          "description": "Időzített eseményekre reagáló programok fejlesztése"
-        },
-        "251fe027-d9b3-4384-99f6-53505275e4ce": {
-          "description": "Felhasználói bevitelre reagáló programok fejlesztése"
-        },
-        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
-          "description": "Táncanimációk készítése kóddal"
-        },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "4ed9cede-cc9a-409d-b433-781185b454b6": {
-          "description": "Táncanimációk készítése kóddal"
-        },
-        "4fa04785-108a-4cea-831b-8078658ea413": {
-          "description": "Felhasználói bevitelre reagáló programok fejlesztése"
-        },
-        "7728246b-7582-4624-a2b1-229b998fc2ae": {
-          "description": "Időzített eseményekre reagáló programok fejlesztése"
-        },
-        "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "884d4f4c-abd4-493c-8029-cde7399519f4": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
-          "description": "Annak megtanulása, hogy a diákok azzal, hogy online információt osztanak meg magukról, digitális lábnyomot vagy „nyomvonalat” hagynak."
-        },
-        "1fb2f469-060b-4caf-ab67-28747acc0f00": {
-          "description": "Fordítsd le a lépések listáját egy sor fizikai cselekvésre"
-        },
-        "ab239024-3c6d-4db1-8c7c-2572c316dc75": {
-          "description": "Azonosítsd és javítsd ki az algoritmus végrehajtásának hibáit"
-        },
-        "ae6f9158-191c-458c-9850-331faf94b567": {
-          "description": "Azonosítsd és keresd meg a hibákat egy programban."
-        },
-        "7279e4aa-2ccc-49b2-b912-e4e4d680e15b": {
-          "description": "Azonosítsd és keresd meg a hibákat egy programban."
-        },
-        "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
-          "description": "Időzített eseményekre reagáló programok fejlesztése"
-        },
-        "f4427747-3b3f-43ac-b124-2ed1856ab5be": {
-          "description": "Táncanimációk készítése kóddal"
-        },
-        "f6a45c87-6f01-4df0-8020-0a9be77f0d10": {
-          "description": "Felhasználói bevitelre reagáló programok fejlesztése"
-        },
-        "8d8fffd3-6411-4778-95f5-76953d066786": {
+        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
         },
-        "d62cb1ce-6c5d-4893-ba48-3f8a844f0670": {
-          "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
-        },
-        "21d90a6a-f1ea-4d0b-ba17-f2e6a53cf78c": {
-          "description": "Azonosítsd és keresd meg a hibákat egy programban."
-        },
-        "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
-          "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
-        },
-        "d386bcb1-393c-46bc-8524-7380583d6ebb": {
-          "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
-        },
-        "1e020282-115c-4c09-877d-5003b8eb49a6": {
-          "description": "Azonosítsd és keresd meg a hibákat egy programban."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": ""
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Egy vers hangulatváltozásának illusztrálása."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Átvitt és szó szerinti nyelvezet ábrázolása egy szövegben."
-        },
-        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
-          "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
-        },
-        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
           "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
         },
         "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
@@ -151,12 +19,6 @@
         },
         "d5f927b9-727a-423e-90d3-80faad21aa34": {
           "description": "Azonosítsd és keresd meg a hibákat egy programban."
-        },
-        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
-          "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
-        },
-        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
-          "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
         },
         "5ced3389-52c6-4f9c-a8da-2e997e0008da": {
           "description": "Azonosítsd és keresd meg a hibákat egy programban."
@@ -190,6 +52,144 @@
         },
         "adabe26f-78e0-47f4-92b2-535a38f53f15": {
           "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
+        },
+        "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
+          "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
+        },
+        "d386bcb1-393c-46bc-8524-7380583d6ebb": {
+          "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
+        },
+        "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
+          "description": "Annak megtanulása, hogy a diákok azzal, hogy online információt osztanak meg magukról, digitális lábnyomot vagy „nyomvonalat” hagynak."
+        },
+        "1fb2f469-060b-4caf-ab67-28747acc0f00": {
+          "description": "Fordítsd le a lépések listáját egy sor fizikai cselekvésre"
+        },
+        "ab239024-3c6d-4db1-8c7c-2572c316dc75": {
+          "description": "Azonosítsd és javítsd ki az algoritmus végrehajtásának hibáit"
+        },
+        "ae6f9158-191c-458c-9850-331faf94b567": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
+        "1e020282-115c-4c09-877d-5003b8eb49a6": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
+        "4ed9cede-cc9a-409d-b433-781185b454b6": {
+          "description": "Táncanimációk készítése kóddal"
+        },
+        "4fa04785-108a-4cea-831b-8078658ea413": {
+          "description": "Felhasználói bevitelre reagáló programok fejlesztése"
+        },
+        "7728246b-7582-4624-a2b1-229b998fc2ae": {
+          "description": "Időzített eseményekre reagáló programok fejlesztése"
+        },
+        "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
+          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
+        },
+        "884d4f4c-abd4-493c-8029-cde7399519f4": {
+          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
+        },
+        "7279e4aa-2ccc-49b2-b912-e4e4d680e15b": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
+        "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
+          "description": "Időzített eseményekre reagáló programok fejlesztése"
+        },
+        "f4427747-3b3f-43ac-b124-2ed1856ab5be": {
+          "description": "Táncanimációk készítése kóddal"
+        },
+        "f6a45c87-6f01-4df0-8020-0a9be77f0d10": {
+          "description": "Felhasználói bevitelre reagáló programok fejlesztése"
+        },
+        "8d8fffd3-6411-4778-95f5-76953d066786": {
+          "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
+        },
+        "d62cb1ce-6c5d-4893-ba48-3f8a844f0670": {
+          "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
+        },
+        "21d90a6a-f1ea-4d0b-ba17-f2e6a53cf78c": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
+        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+          "description": "Időzített eseményekre reagáló programok fejlesztése"
+        },
+        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+          "description": "Felhasználói bevitelre reagáló programok fejlesztése"
+        },
+        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+          "description": "Táncanimációk készítése kóddal"
+        },
+        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+          "description": "Időzített eseményekre reagáló programok fejlesztése"
+        },
+        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+          "description": "Felhasználói bevitelre reagáló programok fejlesztése"
+        },
+        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+          "description": "Táncanimációk készítése kóddal"
+        },
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
+        },
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
+        },
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
+        },
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
+        },
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
+        },
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
+        },
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
+        },
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
+        },
+        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
+          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
+        },
+        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
+          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
+        },
+        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
+          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
+        },
+        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
+          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
+        },
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Egy vers hangulatváltozásának illusztrálása."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Átvitt és szó szerinti nyelvezet ábrázolása egy szövegben."
+        },
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
+        },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": ""
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Egy vers hangulatváltozásának illusztrálása."
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Átvitt és szó szerinti nyelvezet ábrázolása egy szövegben."
         }
       }
     }

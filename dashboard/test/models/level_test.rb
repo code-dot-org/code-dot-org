@@ -403,7 +403,7 @@ class LevelTest < ActiveSupport::TestCase
     level_xml = n.to_xml
 
     # Import level XML
-    LevelLoader.load_custom_level_xml level_xml, level
+    Services::LevelFiles.load_custom_level_xml(level_xml, level)
 
     assert_nil level.embed
   end
@@ -695,8 +695,7 @@ class LevelTest < ActiveSupport::TestCase
 
     custom_i18n = {
       'data' => {
-        'callouts' => {
-        }
+        'callouts' => {}
       }
     }
 
@@ -1242,7 +1241,7 @@ class LevelTest < ActiveSupport::TestCase
   test "get search options" do
     search_options = Level.search_options
     assert_equal search_options[:levelOptions].map {|option| option[0]}, [
-      "All types", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
+      "All types", "Aichat", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
       "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
       "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",

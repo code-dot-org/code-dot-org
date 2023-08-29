@@ -4,7 +4,7 @@ km:
     script:
       name:
         artist:
-          title: សិល្បករ
+          title: វិចិត្រករ
         frozen:
           description_short: តោះប្រើកូដ ដើម្បីចូលរួមជាមួយ Anna និងElsa នៅពេលពួកគេស្វែងយល់ពីវេទមន្តនិងសម្រស់នៃទឹកកក។
         events:
@@ -13,7 +13,7 @@ km:
           description_short: ព្រឹត្តិការណ៍
           student_description: ព្រឹត្តិការណ៍
         flappy:
-          title: Flappy កូដ
+          title: បង្កើតហ្គេម Flappy
           description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
           student_description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
         step:
@@ -22,6 +22,10 @@ km:
           title: Minecraft Hour of Code
           description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព Minecraft នេះ។
           student_description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព Minecraft នេះ។
+        CSDU3-Draft:
+          description_short: ការសរសេរប្រូក្រាម (Programming)
+        TEMP CSD Unit 3:
+          description_short: ការសរសេរប្រូក្រាម (Programming)
         cspunit1-support:
           lesson_groups:
             required:
@@ -358,6 +362,8 @@ km:
           lesson_groups:
             csf_variables:
               display_name: អ​ថេរ
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursed-2019:
@@ -374,11 +380,16 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            csf_nested_loops:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             csf_functions:
               display_name: អនុ​គមន៍
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         express-2019:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
           lesson_groups:
@@ -392,13 +403,16 @@ km:
               display_name: អនុ​គមន៍
             csf_variables:
               display_name: អ​ថេរ
+            csf_sprites:
+              display_name: Sprites
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           name: អុិចប្រេស-2019
         andrea-test:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
         dance-extras-gallery:
-          title: Keep On Dancing
+          title: បន្តបង្កើតក្បាច់រាំ
           description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
           student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
         coursec-2019:
@@ -431,6 +445,7 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         pre-express-2019:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           description_audience: 'អាយុ: ៤-៨'
           lesson_groups:
@@ -440,6 +455,7 @@ km:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           name: ព្រី-អុិចប្រេស-2019
         csp4-pilot:
           lesson_groups:
@@ -455,6 +471,10 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -594,9 +614,9 @@ km:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
         dance-2019:
-          title: Dance Party
+          title: កម្មវិធីរាំ
         dance-extras-2019:
-          title: Keep On Dancing
+          title: បន្តបង្កើតក្បាច់រាំ
           description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
           student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
         csp4-preview:
@@ -611,6 +631,8 @@ km:
           lesson_groups:
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
+            csf_nested_loops:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             csf_functions:
               display_name: អនុ​គមន៍
             end_of_course_project:
@@ -625,6 +647,8 @@ km:
               display_name: លក្ខខណ្ឌ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            csf_sprites:
+              display_name: Sprites
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -635,6 +659,8 @@ km:
               display_name: លក្ខខណ្ឌ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            csf_sprites:
+              display_name: Sprites
         csp7-pilot:
           lesson_groups:
             required:
@@ -694,6 +720,10 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            csf_nested_loops:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             csf_functions:
               display_name: អនុ​គមន៍
             end_of_course_project:
@@ -703,9 +733,12 @@ km:
           lesson_groups:
             csf_variables:
               display_name: អ​ថេរ
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         express-2020:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
           lesson_groups:
@@ -719,9 +752,13 @@ km:
               display_name: អនុ​គមន៍
             csf_variables:
               display_name: អ​ថេរ
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         pre-express-2020:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           description_audience: 'អាយុ: ៤-៨'
           lesson_groups:
@@ -731,8 +768,11 @@ km:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         2021drafting:
           lesson_groups:
+            introduction:
+              display_name: ការណែនាំ
             lessonGroup-3:
               display_name: អ​ថេរ
             debugging:
@@ -797,6 +837,10 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2021:
           lesson_groups:
+            ramp_up:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
+            csf_sprites:
+              display_name: Sprites
             csf_nested_loops:
               display_name: លក្ខខណ្ឌ
             csf_functions:
@@ -806,6 +850,8 @@ km:
         coursef-2021:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
             lessonGroup-8:
@@ -813,9 +859,12 @@ km:
             lessonGroup-9:
               display_name: ដក​ចេញ
         express-2021:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
           lesson_groups:
+            csf_warmup:
+              display_name: ការចាប់ផ្តើម
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
@@ -826,11 +875,15 @@ km:
               display_name: អនុ​គមន៍
             csf_variables:
               display_name: អ​ថេរ
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         pre-express-2021:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           description_audience: 'អាយុ: ៤-៨'
           lesson_groups:
@@ -840,12 +893,23 @@ km:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         csf-2021-pilot:
           lesson_groups:
+            ramp_up:
+              display_name: ការណែនាំ
             lessonGroup-3:
               display_name: អ​ថេរ
+            Sprites:
+              display_name: Sprites
             variables:
               display_name: អ​ថេរ
+        k5-onlinepd-2021:
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: ការណែនាំ
+            Introduction:
+              display_name: ការណែនាំ
         csa-videos:
           lesson_groups:
             lessonGroup-3:
@@ -860,6 +924,14 @@ km:
           lesson_groups:
             lessonGroup-2:
               description: សាក​ល្បង
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: មេរៀន
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: មេរៀន
         ai-ethics-2021:
           description_audience: ថ្នាក់ទី ៦ដល់ទី១២
         2022drafting:
@@ -868,6 +940,8 @@ km:
               display_name: កម្មវិធី Hour of Code
         csf-2022-pilot:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
             lessonGroup-3:
               display_name: អ​ថេរ
             lessonGroup-4:
@@ -887,6 +961,8 @@ km:
           lesson_groups:
             csf_sequencing:
               display_name: លំដាប់
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -899,6 +975,9 @@ km:
               display_name: អ​ថេរ
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+          title: Express Course (2022)
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
         csp4-2022:
@@ -949,6 +1028,10 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2022:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             csf_functions:
               display_name: អនុ​គមន៍
             csf_nested_loops:
@@ -957,6 +1040,8 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursef-2022:
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             lessonGroup-8:
               display_name: អ​ថេរ
             end_of_course_project:
@@ -972,8 +1057,12 @@ km:
               display_name: ព្រឹត្តិការណ៍
           description_audience: 'អាយុ: ៤-៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         coursef-2022-pilot:
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             lessonGroup-8:
               display_name: អ​ថេរ
             end_of_course_project:
@@ -989,6 +1078,10 @@ km:
           lessons:
             lesson-4:
               name: អ​ថេរ
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: ចៃដន្យ
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -1019,12 +1112,16 @@ km:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           description_audience: 'អាយុ: ៤-៨'
         express-2023:
           lesson_groups:
             csf_sequencing:
               display_name: លំដាប់
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -1037,6 +1134,8 @@ km:
               display_name: អ​ថេរ
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក! រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
         coursea-2023:
@@ -1084,16 +1183,115 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2023:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             csf_functions:
               display_name: អនុ​គមន៍
             csf_nested_loops:
               display_name: លក្ខខណ្ឌ
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: ការណែនាំ
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: សរុបសេចក្តី
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: សរុបសេចក្តី
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: ការណែនាំ
+            lesson-12:
+              name: សរុបសេចក្តី
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: សរុបសេចក្តី
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: សរុបសេចក្តី
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: សរុបសេចក្តី
         coursef-2023:
           lesson_groups:
+            lessonGroup-3:
+              display_name: Sprites
             lessonGroup-4:
               display_name: អ​ថេរ
             lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+            lessonGroup-6:
+              display_name: ព្រឹត្តិការណ៍
+            lessonGroup-7:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+            lessonGroup-5:
+              display_name: ព្រឹត្តិការណ៍
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-6:
+              display_name: ប្រតិបត្តិដដែលៗ
+            lessonGroup-8:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
+            lessonGroup-4:
+              display_name: អនុ​គមន៍
+            lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: លក្ខខណ្ឌ
+            lessonGroup-5:
+              display_name: អ​ថេរ
+            lessonGroup-7:
               display_name: ចុងបញ្ចប់នៃគម្រោង
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។

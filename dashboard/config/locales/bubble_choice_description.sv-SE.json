@@ -2,14 +2,13 @@
   "sv-SE": {
     "data": {
       "bubble_choice_description": {
-        "courseD_bee_nestedLoops8_2021": "Samla all nektar från varje blomma och gör honung vid varje bivaxkaka. Använd en nästlad loop. ",
         "CourseF_outbreak6": "Ett virus överförs inte alltid, och masker kan inte stoppa smittan perfekt heller.\nFörbättra din simulering genom att få infektioner att hända genom slumpartad chans.",
-        "CourseF_outbreak7": "Förhindra att dina sprites någonsin blir sjuka genom att ge dem immunitet.",
-        "international_outbreak_freeplay": "Fortsätt med samma block som du redan har sett!",
         "CourseF_outbreak6_-2022-2": "Ett virus överförs inte alltid, och masker kan inte stoppa smittan perfekt heller.\nFörbättra din simulering genom att få infektioner att hända genom slumpartad chans.",
+        "CourseF_outbreak7": "Förhindra att dina sprites någonsin blir sjuka genom att ge dem immunitet.",
         "CourseF_outbreak7_-2022-2": "Förhindra att dina sprites någonsin blir sjuka genom att ge dem immunitet.",
         "courseD_artist_nestedLoops92022": "Kan du klura ut hur du kan göra en sådan här bild?",
         "courseD_bee_nestedLoops82022": "Samla all nektar från varje blomma och gör honung vid varje bivaxkaka. Använd en nästlad loop. ",
+        "courseD_bee_nestedLoops8_2021": "Samla all nektar från varje blomma och gör honung vid varje bivaxkaka. Använd en nästlad loop. ",
         "helloworld_animals_costumes": "Lär dig att ändra utseendet på sprites.",
         "helloworld_animals_sounds": "Lär dig hur du spelar ljud.",
         "helloworld_emoji_costumes": "Lär dig att ändra utseendet på sprites.",
@@ -21,7 +20,8 @@
         "helloworld_food_sounds_soccer-2022": "Lär dig hur du spelar ljud.",
         "helloworld_food_sounds_space-2022": "Lär dig hur du spelar ljud.",
         "helloworld_retro_costumes": "Lär dig att ändra utseendet på sprites.",
-        "helloworld_retro_sounds": "Lär dig hur du spelar ljud."
+        "helloworld_retro_sounds": "Lär dig hur du spelar ljud.",
+        "international_outbreak_freeplay": "Fortsätt med samma block som du redan har sett!"
       }
     }
   }

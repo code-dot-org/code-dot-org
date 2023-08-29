@@ -73,7 +73,6 @@
   "alltheselfpacedplthings": "所有自定进度 PL 的东西",
   "csd6-pilot": "物理计算试点计划 (2022)",
   "peru": "秘鲁",
-  "vpl-csp": "CS 原理虚拟专业学习",
   "edit-code": "编辑代码",
   "tesstest921": "tesstest921",
   "coursef-2022-pilot": "coursef-2022-飞行员",
@@ -103,7 +102,7 @@
   "halloween": "万圣节",
   "step": "步进：",
   "pl-playground": "pl-playd",
-  "kodea-pd-2021": "kodea-pd-2021",
+  "kodea-pd-2021": "CSF Online PD-韩国",
   "csa-backpack-2022": "csa-back-2022",
   "csa-u6-dev": "csa-u6-dev",
   "kaitie-test-script": "kaitie 测试脚本",
@@ -122,7 +121,6 @@
   "csc-starquilts": "编码几何星形被子",
   "alltheblocklythings": "所有的 blockly 东西",
   "csc-fables": "讲故事模块",
-  "vpl-csa": "CSA 虚拟专业学习",
   "soccer": "足球",
   "csa-data-lab": "美联社 CSA 数据实验室",
   "csa-celebrity-lab": "AP CSA 消费者评论实验室",
@@ -149,5 +147,6 @@
   "focus-on-impact-in-society": "聚焦社会影响（计算机科学探索）",
   "focus-on-data": "聚焦数据（计算机科学探索）",
   "focus-on-creativity": "聚焦创造力（计算机科学探索）",
-  "ai-temp": "a-temp"
+  "ai-temp": "a-temp",
+  "how-ai-works": "AI 的工作原理"
 }

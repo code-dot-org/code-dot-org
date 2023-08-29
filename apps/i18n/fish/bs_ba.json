@@ -1,9 +1,9 @@
 {
-  "continue": "Nastavi",
   "areYouSure": "Jeste li sigurni?",
   "cancel": "Poništi",
-  "yes": "Da",
+  "continue": "Nastavi",
+  "finish": "Završi",
   "no": "Ne",
   "run": "Pokreni",
-  "finish": "Završi"
+  "yes": "Da"
 }

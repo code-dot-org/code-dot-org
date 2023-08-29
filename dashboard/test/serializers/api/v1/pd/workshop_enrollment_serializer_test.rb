@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopEnrollmentSerializerTest < ::ActionController::TestCase
+class Api::V1::Pd::WorkshopEnrollmentSerializerTest < ActionController::TestCase
   include Pd::Application::ActiveApplicationModels
   include Pd::EnrollmentConstants
 

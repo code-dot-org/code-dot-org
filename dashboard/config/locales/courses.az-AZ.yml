@@ -3,50 +3,44 @@ az:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: İnformatikanın Əsasları
-          title: İnformatikanın Əsasları ('17-'18)
-          version_title: "'17-'18"
-          description_student: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu,
-            AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın
-            əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya
-            necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika
-            sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri
-            və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini
-            hazırlamışdır.
-          description_teacher: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu,
-            AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın
-            əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya
-            necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika
-            sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri
-            və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini
-            hazırlamışdır.
-          description_short: Əsas informatika anlayışlarını öyrənin.
-        csd-2017:
-          assignment_family_title: İnformatika Kəşfləri
-          title: İnformatika Kəşfləri ('17-'18)
-          version_title: "'17-'18"
-          description_student: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət,
-            problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq
-            və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika
-            kursudur.
-          description_teacher: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət,
-            problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq
-            və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika
-            kursudur.
-          description_short: Tələbələrə əsl əsərlər yaratmaq üçün imkan verən bir
-            giriş informatika kursu.
         allthethingscourse:
-          title: bütübhərşeyinkursu
           description_short: Bu bütünhərşey üçün kursdur
           description_student: Bu bütünhərşey üçün bir kursdur və tələbələr üçün daha
             uzun təsvirə malikdir
           description_teacher: Bu bütünhərşey üçün bir kursdur və müəllimlər üçün
             daha uzun təsvirə malikdir
+          title: bütübhərşeyinkursu
+        csa-pilot-facilitator:
+          title: CSA təcrübi vasitəçilər
+        csd-2017:
+          assignment_family_title: İnformatika Kəşfləri
+          description_short: Tələbələrə əsl əsərlər yaratmaq üçün imkan verən bir
+            giriş informatika kursu.
+          description_student: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət,
+            problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq
+            və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika
+            kursudur.
+          description_teacher: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət,
+            problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq
+            və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika
+            kursudur.
+          title: İnformatika Kəşfləri ('17-'18)
+          version_title: "'17-'18"
         csd-2018:
           assignment_family_title: İnformatika Kəşfləri
+          description_short: Tələbələrə əsl əsərlər yaratmaq üçün imkan verən bir
+            giriş informatika kursu.
+          description_student: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət,
+            problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq
+            və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika
+            kursudur.
+          description_teacher: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət,
+            problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq
+            və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika
+            kursudur.
           title: İnformatika Kəşfləri ('18-'19)
           version_title: "'18-'19"
+        csd-2019:
           description_short: Tələbələrə əsl əsərlər yaratmaq üçün imkan verən bir
             giriş informatika kursu.
           description_student: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət,
@@ -57,63 +51,8 @@ az:
             problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq
             və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika
             kursudur.
-        csp-2018:
-          assignment_family_title: İnformatikanın Əsasları
-          title: İnformatikanın Əsasları ('18-'19)
-          version_title: "'18-'19"
-          description_short: Əsas informatika anlayışlarını öyrənin.
-          description_student: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu,
-            AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın
-            əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya
-            necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika
-            sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri
-            və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini
-            hazırlamışdır.
-          description_teacher: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu,
-            AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın
-            əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya
-            necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika
-            sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri
-            və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini
-            hazırlamışdır.
-        csp-2019:
-          title: Kompüter Elmləri Prinsipləri ('19 -'20)
-          version_title: "'19-'20"
-          description_short: Əsas informatika anlayışlarını öyrənin.
-          description_student: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu,
-            AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın
-            əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya
-            necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika
-            sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri
-            və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini
-            hazırlamışdır.
-          description_teacher: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu,
-            AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın
-            əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya
-            necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika
-            sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri
-            və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini
-            hazırlamışdır.
-        csd-2019:
           title: Kompüter Elmləri Kəşfləri ('19 -'20)
           version_title: "'19-'20"
-          description_short: Tələbələrə əsl əsərlər yaratmaq üçün imkan verən bir
-            giriş informatika kursu.
-          description_student: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət,
-            problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq
-            və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika
-            kursudur.
-          description_teacher: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət,
-            problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq
-            və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika
-            kursudur.
-        csd-pilot:
-          description_student: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət,
-            problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq
-            və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika
-            kursudur.
-        csp-2020:
-          description_short: Əsas informatika anlayışlarını öyrənin.
         csd-2020:
           description_short: Tələbələrə əsl əsərlər yaratmaq üçün imkan verən bir
             giriş informatika kursu.
@@ -125,70 +64,131 @@ az:
             problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq
             və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika
             kursudur.
+        csd-2023:
+          title: İnformatika Kəşfləri
+        csd-pilot:
+          description_student: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət,
+            problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq
+            və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika
+            kursudur.
+        csp-2017:
+          assignment_family_title: İnformatikanın Əsasları
+          description_short: Əsas informatika anlayışlarını öyrənin.
+          description_student: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu,
+            AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın
+            əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya
+            necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika
+            sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri
+            və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini
+            hazırlamışdır.
+          description_teacher: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu,
+            AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın
+            əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya
+            necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika
+            sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri
+            və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini
+            hazırlamışdır.
+          title: İnformatikanın Əsasları ('17-'18)
+          version_title: "'17-'18"
+        csp-2018:
+          assignment_family_title: İnformatikanın Əsasları
+          description_short: Əsas informatika anlayışlarını öyrənin.
+          description_student: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu,
+            AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın
+            əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya
+            necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika
+            sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri
+            və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini
+            hazırlamışdır.
+          description_teacher: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu,
+            AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın
+            əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya
+            necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika
+            sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri
+            və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini
+            hazırlamışdır.
+          title: İnformatikanın Əsasları ('18-'19)
+          version_title: "'18-'19"
+        csp-2019:
+          description_short: Əsas informatika anlayışlarını öyrənin.
+          description_student: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu,
+            AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın
+            əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya
+            necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika
+            sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri
+            və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini
+            hazırlamışdır.
+          description_teacher: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu,
+            AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın
+            əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya
+            necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika
+            sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri
+            və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini
+            hazırlamışdır.
+          title: Kompüter Elmləri Prinsipləri ('19 -'20)
+          version_title: "'19-'20"
+        csp-2020:
+          description_short: Əsas informatika anlayışlarını öyrənin.
         csp-2021:
+          description_short: Əsas informatika anlayışlarını öyrənin.
+        csp-2022:
+          description_short: Əsas informatika anlayışlarını öyrənin.
+        csp-2023:
           description_short: Əsas informatika anlayışlarını öyrənin.
         mike-test:
           title: Kompüter Elmləri Əsasları.
+        self-paced-pl-csa-2022:
+          title: CSA Başlanğıc Modulları
+        self-paced-pl-csa-2023:
+          title: CSA Başlanğıc Modulları
         self-paced-pl-csd-2021:
+          title: öz templi-pl-csd-2021
+        self-paced-pl-csd-2022:
+          title: öz templi-pl-csd-2021
+        self-paced-pl-csd-2023:
           title: öz templi-pl-csd-2021
         self-paced-pl-csp-2021:
           title: öz templi-pl-csp-2021
-        csa-pilot-facilitator:
-          title: CSA təcrübi vasitəçilər
-        csp-2022:
-          description_short: Əsas informatika anlayışlarını öyrənin.
-        vpl-csd-summer-pilot-ci-2022:
-          title: CS Discoveries Kurikulum Araşdırması
-        self-paced-pl-csa-2022:
-          title: CSA Başlanğıc Modulları
-        self-paced-pl-csd-2022:
-          title: öz templi-pl-csd-2021
         self-paced-pl-csp-2022:
           title: öz templi-pl-csp-2021
-        csp-2023:
-          description_short: Əsas informatika anlayışlarını öyrənin.
-        self-paced-pl-csa-2023:
-          title: CSA Başlanğıc Modulları
-        csd-2023:
-          title: İnformatika Kəşfləri
-        vpl-csd-summer-ci-2023:
-          title: CS Discoveries Kurikulum Araşdırması
-        self-paced-pl-csd-2023:
-          title: öz templi-pl-csd-2021
         self-paced-pl-csp-2023:
           title: öz templi-pl-csp-2021
+        vpl-csd-summer-ci-2023:
+          title: CS Discoveries Kurikulum Araşdırması
+        vpl-csd-summer-pilot-ci-2022:
+          title: CS Discoveries Kurikulum Araşdırması
     resources:
-      curriculum/csd/2020:
-        name: Kurikulum
-      teacher_forum/csd/2020:
-        name: Müəllim Forumu
-      curriculum/csd/2017:
-        name: Kurikulum
-      teacher_forum_6/csd/2017:
-        name: Müəllim Forumu
-      all_resources_7/csd/2022:
+      all_resources_1/csd/2021:
         name: Bütün Resurslar
-      all_standards_7/csd/2022:
-        name: Bütün Standartlar
-      all_vocabulary_7/csd/2022:
-        name: Bütün Lüğət
-      curriculum/csd/2019:
-        name: Kurikulum
-      teacher_forum/csd/2019:
-        name: Müəllim Forumu
       all_resources_2/csd/2023:
         name: Bütün Resurslar
-      all_standards_2/csd/2023:
-        name: Bütün Standartlar
-      all_vocabulary_2/csd/2023:
-        name: Bütün Lüğət
-      all_resources_1/csd/2021:
+      all_resources_7/csd/2022:
         name: Bütün Resurslar
       all_standards_1/csd/2021:
         name: Bütün Standartlar
+      all_standards_2/csd/2023:
+        name: Bütün Standartlar
+      all_standards_7/csd/2022:
+        name: Bütün Standartlar
       all_vocabulary_1/csd/2021:
         name: Bütün Lüğət
+      all_vocabulary_2/csd/2023:
+        name: Bütün Lüğət
+      all_vocabulary_7/csd/2022:
+        name: Bütün Lüğət
+      curriculum/csd/2017:
+        name: Kurikulum
       curriculum/csd/2018:
         name: Kurikulum
+      curriculum/csd/2019:
+        name: Kurikulum
+      curriculum/csd/2020:
+        name: Kurikulum
+      teacher_forum/csd/2019:
+        name: Müəllim Forumu
+      teacher_forum/csd/2020:
+        name: Müəllim Forumu
+      teacher_forum_6/csd/2017:
+        name: Müəllim Forumu
       teacher_forum_6/csd/2018:
         name: Müəllim Forumu

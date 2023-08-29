@@ -41,6 +41,16 @@ module ProjectsList
       personal_projects_list
     end
 
+    def user_has_project_type(user_id, types)
+      storage_id = storage_id_for_user_id(user_id)
+      Projects.new(storage_id).get_active_projects.each do |project|
+        if types.include?(project[:project_type])
+          return true
+        end
+      end
+      false
+    end
+
     # Look up every project associated with the provided user_id, and project state, excluding those that are hidden.
     # Return a set of metadata which can be used to display a table of personal projects in the admin UI.
     # @param user_id

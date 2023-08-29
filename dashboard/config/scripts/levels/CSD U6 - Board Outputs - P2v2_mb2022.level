@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-14T00:20:09.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -41,7 +46,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
@@ -54,7 +59,8 @@
     "name_suffix": "_mb2022",
     "reference_links": [
       "/courses/csd-2022/guides/microbit-overview",
-      "/courses/csd-2022/guides/microbit-display"
+      "/courses/csd-2022/guides/microbit-display",
+      "/maker/setup"
     ],
     "mini_rubric": "false",
     "text_mode_at_start": "false",
@@ -71,13 +77,8 @@
 
     ]
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-14T00:20:09.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-14T00:20:09.682+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - SB4v2_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - SB4v2_mb2022\"},{\"changed_at\":\"2023-02-14 00:31:20 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-14 00:32:35 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:43:19 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-14T00:20:09.682+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - SB4v2_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - SB4v2_mb2022\"},{\"changed_at\":\"2023-02-14 00:31:20 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-14 00:32:35 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:43:19 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-17 22:54:44 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-21 22:56:28 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -1,35 +1,30 @@
 {
-  "navigateForward": "Շարունակել",
-  "navigateBack": "Վերադառնալ",
-  "tryAgain": "Կրկին փորձել",
-  "navigateDone": "Finish",
-  "saveProgress": "Save",
-  "correctAnswer": "ճիշտ",
-  "incorrectAnswer": "Incorrect",
-  "modelCardPossibleValuesMinimum": "րոպե",
-  "modelCardPossibleValuesMaximum": "Max",
-  "columnInspectorDescription": "Նկարագիր",
-  "columnDetailsMinimumValue": "րոպե",
   "columnDetailsMaximumValue": "Max",
+  "columnDetailsMinimumValue": "րոպե",
+  "columnInspectorDescription": "Նկարագիր",
+  "correctAnswer": "ճիշտ",
   "datasets": {
-    "medical_priority": {
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Տարիք"
+        },
+        "Gender": {
+          "id": "Սեռ"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "բանան"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "տարիք"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "օր"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "lime": {
-          "id": "լայմ"
         }
       }
     },
@@ -43,10 +38,58 @@
         }
       }
     },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Տարիք"
+        }
+      }
+    },
     "insurance_cost": {
       "fields": {
         "age": {
           "id": "տարիք"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Երկիր"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "տարիք"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "Երկիր"
+        },
+        "Name": {
+          "id": "Անուն"
+        },
+        "Score": {
+          "id": "Հաշիվ"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "ճուտիկ"
         }
       }
     },
@@ -64,10 +107,10 @@
         }
       }
     },
-    "shapes_v2_toy": {
+    "safari_toy": {
       "fields": {
-        "size": {
-          "id": "չափ"
+        "elephant": {
+          "id": "փիղ"
         }
       }
     },
@@ -81,100 +124,10 @@
         }
       }
     },
-    "billionaires": {
+    "salsa_toy": {
       "fields": {
-        "Age": {
-          "id": "Տարիք"
-        },
-        "Gender": {
-          "id": "Սեռ"
-        }
-      }
-    },
-    "student_alcohol_consumption": {
-      "fields": {
-        "age": {
-          "id": "տարիք"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ճուտիկ"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "տարիք"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        }
-      }
-    },
-    "movies": {
-      "fields": {
-        "Score": {
-          "id": "Հաշիվ"
-        },
-        "Country": {
-          "id": "Երկիր"
-        },
-        "Name": {
-          "id": "Անուն"
-        }
-      }
-    },
-    "songs": {
-      "fields": {
-        "Artist": {
-          "id": "Արտիստ"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "elephant": {
-          "id": "փիղ"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Country": {
-          "id": "Երկիր"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Age": {
-          "id": "Տարիք",
-          "description": "Տարիք"
-        },
-        "Gender": {
-          "id": "Սեռ",
-          "description": "Սեռ"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "բանան"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "Տարիք"
+        "lime": {
+          "id": "լայմ"
         }
       }
     },
@@ -185,12 +138,59 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "size": {
+          "id": "չափ"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "օր"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Արտիստ"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "տարիք"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Age": {
+          "description": "Տարիք",
+          "id": "Տարիք"
+        },
         "Country": {
           "id": "Երկիր"
+        },
+        "Gender": {
+          "description": "Սեռ",
+          "id": "Սեռ"
+        },
+        "Internet": {
+          "id": "Internet"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Incorrect",
+  "modelCardPossibleValuesMaximum": "Max",
+  "modelCardPossibleValuesMinimum": "րոպե",
+  "navigateBack": "Վերադառնալ",
+  "navigateDone": "Finish",
+  "navigateForward": "Շարունակել",
+  "saveProgress": "Save",
+  "tryAgain": "Կրկին փորձել"
 }

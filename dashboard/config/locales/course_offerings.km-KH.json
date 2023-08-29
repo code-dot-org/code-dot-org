@@ -2,12 +2,12 @@
   "km-KH": {
     "data": {
       "course_offerings": {
+        "artist": "វិចិត្រករ",
         "flappy": "Flappy កូដ",
-        "artist": "សិល្បករ",
         "hero": "Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស",
         "mc": "Minecraft Hour of Code",
-        "step": "ជំហាន",
-        "soccer": "បាល់ទាត់"
+        "soccer": "បាល់ទាត់",
+        "step": "ជំហាន"
       }
     }
   }

@@ -53,16 +53,16 @@
         "courseB_unplugged_MRF": "线下的活动",
         "courseB_unplugged_MRF_2018": "我的机器人朋友",
         "courseB_unplugged_loopyMRF": "线下的活动",
+        "courseB_unplugged_loopyMRF_2018": "翻译不存在: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title",
         "courseC_Unplugged_ScreenOutTheMean": "线下的活动",
         "courseC_Unplugged_ScreenOutTheMean_2018": "线下的活动",
         "courseD_unplugged_digitalCitizenship": "线下的活动",
         "courseD_unplugged_digitalCitizenship_2018": "线下的活动",
         "courseE_unplugged_CnC_2018": "数字共享",
         "courseE_unplugged_privateInformation": "常识教育： 私人和个人信息 ",
+        "courseE_unplugged_privateInformation_2018": "翻译丢失：en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title",
         "courseF_unplugged_powerOfWords": "线下的活动",
-        "courseF_unplugged_powerOfWords_2018": "翻译丢失: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title",
-        "courseB_unplugged_loopyMRF_2018": "翻译不存在: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title",
-        "courseE_unplugged_privateInformation_2018": "翻译丢失：en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title"
+        "courseF_unplugged_powerOfWords_2018": "翻译丢失: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
       }
     }
   }

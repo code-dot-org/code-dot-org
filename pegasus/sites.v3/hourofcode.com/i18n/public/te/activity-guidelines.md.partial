@@ -9,271 +9,276 @@ layout: wide
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# అవర్ ఆఫ్ కోడ్™ మరియు కంప్యూటర్ సైన్స్ ఎడ్యుకేషన్ వీక్ కోసం ట్యుటోరియల్స్ మరియు పాఠాలను సృష్టించడం మరియు సమర్పించడం కోసం మార్గదర్శకాలు
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org Code.org మరియు అవర్ ఆఫ్ కోడ్ వెబ్సైట్లలో వివిధ రకాల అవర్ ఆఫ్ కోడ్™ కార్యకలాపాలు, పాఠాలు మరియు వీడియోలను హోస్ట్ చేస్తుంది. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+కంప్యూటర్ సైన్స్ సూత్రాన్ని వివరించే మీ స్వంత స్వీయ-గైడెడ్ ట్యుటోరియల్, టీచర్-నేతృత్వంలోని పాఠం లేదా రోబోటిక్స్/మేకర్ కార్యాచరణను సమర్పించాలనుకుంటున్నారా? ఈ ప్రపంచ ఉద్యమంలో చేరండి మరియు ప్రపంచవ్యాప్తంగా పాల్గొనేవారికి ఒక గంట కోడ్తో ప్రారంభించడానికి సహాయపడండి లేదా బహుళ-పాఠం, రోజు లేదా వారపు కార్యకలాపాలతో మరింత ముందుకు సాగండి.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2023, will not be listed for 2023's Hour of Code.)** If you have any questions about your activity submission, please reach out to us at support@code.org.
+**మార్గదర్శకాలను చదివిన తరువాత, మీరు మా [అవర్ కోడ్™ కార్యాచరణ సమర్పణ పేజీ](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform)ద్వారా మీ కార్యాచరణను సమర్పించవచ్చు. మీరు ఎప్పుడైనా ఒక కార్యాచరణను సమర్పించవచ్చు, కానీ ఏదైనా క్యాలెండర్ సంవత్సరంలో చేర్చడానికి గడువు అక్టోబర్ 1. (ఉదాహరణకు, అక్టోబర్ 1, 2023 తర్వాత స్వీకరించబడిన ఏదైనా కార్యకలాపాలు 2023 యొక్క అవర్ ఆఫ్ కోడ్ కోసం జాబితా చేయబడవు.)** మీ కార్యాచరణ సమర్పణ గురించి మీకు ఏవైనా ప్రశ్నలు ఉంటే, దయచేసి మమ్మల్ని సంప్రదించండి support@code.org.
 
-A few tips:
+కొన్ని చిట్కాలు:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **ఒకటి కంటే ఎక్కువ కార్యాచరణలను సమర్పించండి**: మీరు వివిధ స్థాయిలు, వివిధ వయసుల లేదా ఇతర వర్గాల కోసం కార్యకలాపాలను నిర్మించినట్లయితే, మేము మీ కార్యకలాపాలను విడిగా జాబితా చేస్తాము, తద్వారా ప్రతి ఉపాధ్యాయుడు వారి తరగతి గదికి సరైనదాన్ని కనుగొనవచ్చు. ప్రతి ట్యుటోరియల్ లేదా కార్యాచరణను ఒక్కొక్కటిగా సమర్పించండి. ఇటీవలి సంవత్సరాలలో మేము చూసిన సమర్పణల సంఖ్యను బట్టి, భాగస్వామికి **5 కార్యకలాపాలను** వరకు సమీక్షించడానికి మాకు సమయం ఉంటుంది. ఆ తరువాత, అవర్ ఆఫ్ కోడ్ ప్రారంభమయ్యే ముందు వీలైనన్ని సమీక్షించడానికి మేము ఉత్తమ ప్రయత్నం చేస్తాము.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **బియాండ్ బిగినర్స్ పాఠాలు**: మొదటిసారి కంప్యూటర్ సైన్స్ నేర్చుకుంటున్న ఉపాధ్యాయులు మరియు విద్యార్థులకు పాఠాలతో పాటు, కొంచెం ముందుకు వెళ్లాలనుకునే కంప్యూటర్ సైన్స్-అవగాహన తరగతి గదుల కోసం అభ్యాస అనుభవాలను మేము జాబితా చేస్తాము! ప్రాథమిక విషయాలతో ఇప్పటికే సౌకర్యవంతంగా ఉన్న తరగతుల కోసం పాఠాలను సమర్పించడం ద్వారా మాకు సహాయం చేయండి.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **విషయ ప్రాంతాలు**: కంప్యూటర్ సైన్స్ను గణితంలో అనుసంధానించే గొప్ప పాఠ్య ఆలోచన ఉందా? చరిత్ర? భాషా కళలు? సైన్స్? కళ? లేదా మరొక విషయం? అవర్ ఆఫ్ కోడ్ను వారి విషయ ప్రాంతానికి కనెక్ట్ చేయాలనుకునే ఉపాధ్యాయుల నుండి మాకు అనేక అభ్యర్థనలు ఉన్నాయి. ఉపాధ్యాయులు వారి తరగతి గది రకం (గ్రేడ్ బ్యాండ్ లేదా సబ్జెక్ట్ ఏరియా) కోసం ఫిల్టర్ చేయవచ్చు, కాబట్టి తరగతి గది కార్యకలాపాలు లేదా వివిధ గ్రేడ్ బ్యాండ్ల కోసం ప్రతి ప్రధాన విషయ ప్రాంతానికి CS కి సంబంధించిన పాఠ్య ప్రణాళికలను అందించడానికి అంతరాలను పూరించడానికి మాకు మీ సహాయం అవసరం. సాధారణ సిఎస్ కార్యకలాపాల కోసం చూస్తున్న ఉపాధ్యాయుల కోసం మేము “కంప్యూటర్ సైన్స్” వర్గాన్ని కూడా కొనసాగిస్తున్నాము.
 
 <a id="top"></a>
 
-## Index:
+## ఇండెక్స్:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [ఏమి సమర్పించాలి](#whatsubmit)
+- [అవర్ ఆఫ్ కోడ్™ కార్యాచరణను రూపొందించడానికి సాధారణ మార్గదర్శకాలు](#guidelines)
+- [ఎలా సమర్పించాలి](#submit)
+- [కార్యకలాపాలు ఎలా అంచనా వేయబడతాయి](#inclusion)
+- [మీ కార్యాచరణ రూపకల్పనకు సూచనలు](#design)
+- [ట్రేడ్మార్క్ మార్గదర్శకాలు](#tm)
+- [పిక్సెల్ ట్రాకింగ్](#pixel)
+- [మీ కార్యాచరణను ప్రోత్సహించడం, CSEDWeek మరియు అవర్ ఆఫ్ కోడ్](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## ఏమి సమర్పించాలి
 
 **Self-guided puzzle or game ([example](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+ఈ కార్యకలాపాలు ట్యుటోరియల్ ద్వారా విద్యార్థులు స్వీయ-దర్శకత్వం కోసం రూపొందించబడ్డాయి. వారికి ఉపాధ్యాయుడు లేదా ఉపాధ్యాయ ప్రిపరేషన్ పని నుండి ఎక్కువ సూచనలు అవసరం లేదు.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**ఉపాధ్యాయుడు సులభతరం చేసిన పాఠం ([ఉదాహరణ](https://studio.code.org/s/course1/lessons/2/levels/1), [టెంప్లేట్](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+ఇప్పుడు వందల వేల మంది అధ్యాపకులు అవర్ ఆఫ్ కోడ్ను ప్రయత్నించారు, కంప్యూటర్ సైన్స్ యొక్క ప్రాథమికాలను బోధించే మరింత సృజనాత్మక కార్యకలాపాలకు చాలా తరగతి గదులు సిద్ధంగా ఉన్నాయి. మరింత ఆధునిక ఉపాధ్యాయులకు ప్రేరణను కనుగొనడంలో సహాయపడటానికి, మేము అవర్ ఆఫ్ కోడ్ అనుభవజ్ఞుల కోసం “ఉపాధ్యాయ-నేతృత్వంలోని” పాఠాలు మరియు కార్యాచరణ ప్రణాళికలను సేకరించి క్యూరేట్ చేస్తాము.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+అనుభవజ్ఞులైన ఉపాధ్యాయుల కోసం మేము ఫీచర్ చేసే ఒక రకమైన కార్యాచరణ “ఓపెన్ శాండ్బాక్స్” సృష్టి ప్రాజెక్టులు. వారి స్వంత అనువర్తనం, ఆట, వెబ్సైట్ లేదా ఇతర ప్రాజెక్ట్ను రూపొందించడానికి విద్యార్థులను ప్రోత్సహించే చర్యలు. సరిగ్గా సులభతరం చేయబడితే, మరింత ఓపెన్-ఎండ్ కార్యకలాపాలు కంప్యూటర్ సైన్స్ యొక్క సృజనాత్మక స్వభావాన్ని బాగా ప్రదర్శిస్తాయి.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+కొంతమంది విద్యావేత్తలు గైడ్-పజిల్/గేమ్ అనుభవం కంటే సాంప్రదాయ పాఠ ఆకృతిని అనుసరించే అవర్ ఆఫ్ కోడ్ కార్యకలాపాలను హోస్ట్ చేయడానికి కూడా ఇష్టపడవచ్చు.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+మీ పాఠ్య ప్రణాళిక కోసం మీరు ఈ [టెంప్లేట్](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) తో ప్రారంభించవచ్చు.
 
-**Activities for teachers in other subjects/fields**
+**ఇతర విషయాలు/రంగాలలో ఉపాధ్యాయుల కోసం చర్యలు**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+మేము వేర్వేరు విషయ ప్రాంతాల కోసం రూపొందించిన పాఠ్య ప్రణాళికలను కూడా కలిగి ఉన్నాము. ఉదాహరణకు, జ్యామితి తరగతిలో బోధనా కోడ్ కోసం ఒక గంట పాఠ్య ప్రణాళిక. లేదా ఇంగ్లీష్ క్లాస్ కోసం మ్యాడ్-లిబ్ వ్యాయామం. లేదా చరిత్ర తరగతి కోసం సృజనాత్మక క్విజ్-సృష్టి కార్యాచరణ. CS అనేక విభిన్న విషయ ప్రాంతాలను ఎలా ప్రభావితం చేయగలదో మరియు మెరుగుపరుస్తుందో చూపిస్తూ, వారి రంగానికి ప్రత్యేకమైన అవర్ ఆఫ్ కోడ్ కార్యాచరణకు మార్గనిర్దేశం చేయడానికి ఇవి ఇతర సబ్జెక్టులలో ఉపాధ్యాయులను నియమించడంలో సహాయపడతాయి.
 
-Examples:
+ఉదాహరణలు:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- మిర్రర్ ఇమేజెస్ (ఆర్ట్ టీచర్ కోసం ఒక కార్యాచరణ)
+- భౌతిక ఉపాధ్యాయుడికి ఆర్డునో కార్యాచరణ
+- చరిత్ర ఉపాధ్యాయుడి కోసం సాంకేతిక కార్యకలాపాల చరిత్ర
+- మరియు [చూడండి ఈ జాబితా](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) అధ్యాపకుల నుండి మరిన్ని ఆలోచనల కోసం (లేదా ఇతరులను ప్రేరేపించడానికి జాబితాకు మీ స్వంతంగా జోడించండి)
 
-**For students with special needs**
+**ప్రత్యేక అవసరాలున్న విద్యార్థుల కోసం**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+మీరు ప్రత్యేక అవసరాల విద్యార్థుల కోసం రూపొందించిన కార్యాచరణ లేదా ట్యుటోరియల్ను సృష్టిస్తే, దయచేసి వివరణలో కాల్ చేయండి. ముఖ్యంగా, దృష్టి లోపం ఉన్నవారికి చాలా తక్కువ ఎంపికలు ఉన్నాయి. మీ కార్యాచరణ ఈ ప్రేక్షకుల కోసం రూపొందించబడితే, దయచేసి మాకు తెలియజేయండి.
 
-[**Back to the top**](#top)
+[**తిరిగి పైకి**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## గంట కోడ్ కార్యాచరణను రూపొందించడానికి సాధారణ మార్గదర్శకాలు
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+కంప్యూటర్ సైన్స్ లేదా ప్రోగ్రామింగ్ యొక్క మొదటి రుచిని ప్రారంభకులకు ఇవ్వడం అవర్ ఆఫ్ కోడ్ యొక్క లక్ష్యం. స్వరం ఇలా ఉండాలి:
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability.
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online.
+- వయస్సు, లింగం, జాతి లేదా సామర్థ్యం/వైకల్యంతో సంబంధం లేకుండా ఎవరైనా కంప్యూటర్ సైన్స్ నేర్చుకోవచ్చు.
+- కంప్యూటర్ సైన్స్ అనేక రకాల రంగాలు మరియు ఆసక్తులకు అనుసంధానించబడి ఉంది. అందరూ నేర్చుకోవాలి!
+- తల్లిదండ్రులు/స్నేహితులతో లేదా ఆన్లైన్లో భాగస్వామ్యం చేయగల ప్రత్యేకమైనదాన్ని సృష్టించడానికి విద్యార్థులను ప్రోత్సహించండి.
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+కార్యకలాపాలు ఉచ్చులు, షరతులు, గుప్తీకరణ లేదా ఇంటర్నెట్ ఎలా పనిచేస్తుందో కంప్యూటర్ సైన్స్ భావనను నేర్పించాలి. కంప్యూటర్ సైన్స్ వాస్తవ ప్రపంచ వృత్తులు, సంఘటనలు లేదా చరిత్రకు ఎలా కనెక్ట్ అవుతుందనే దాని గురించి కూడా ఒక కార్యాచరణ బోధిస్తుంది. ఉదాహరణకు, ప్రేక్షకులకు లేదా కారణం కోసం అర్ధవంతమైన అనువర్తనాలను తయారు చేయడానికి UX రూపకల్పనను బోధించడం. భావనల కంటే ప్రోగ్రామింగ్ యొక్క వాక్యనిర్మాణంపై దృష్టి సారించే కార్యకలాపాలను మేము నిరుత్సాహపరుస్తాము. ఉదాహరణకు, మేము HTML ను బోధించే కార్యకలాపాలను జాబితా చేస్తాము, కాని హైలైట్ చేయము. అదేవిధంగా, అల్గోరిథం లేదా ప్రాసెస్ను ఎలా మోడల్ చేయాలో నేర్చుకోవడం కంటే కాన్ఫిగరేషన్ ఎంపికలను సెట్టింగ్/మార్చడంపై దృష్టి సారించే బ్లాక్ ప్రోగ్రామింగ్ పాఠాలను మేము నిరుత్సాహపరుస్తాము.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). అనువర్తన-ఇన్స్టాల్, డెస్క్టాప్ అనువర్తనం లేదా గేమ్-కన్సోల్ అనుభవాలు అవసరమయ్యే చర్యలు సరే కాని అనువైనవి కావు. సైన్ అప్ లేదా చెల్లింపు అవసరమయ్యే కార్యకలాపాలను మేము జాబితా చేయము. (రోబోటిక్స్ కార్యకలాపాలకు రోబోటిక్స్ కొనుగోలు అవసరం.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*విద్యార్థి-నేతృత్వంలోని (సెల్ఫ్-గైడెడ్) ఫార్మాట్:* అసలు అవర్ ఆఫ్ కోడ్ ఎక్కువగా స్వీయ-గైడెడ్ ట్యుటోరియల్స్ లేదా పాఠాల విజయంపై నిర్మించబడింది, ఐచ్ఛికంగా ఉపాధ్యాయుడిచే సులభతరం చేయబడింది. ఇప్పటికే ఉన్న ఎంపికలు పుష్కలంగా ఉన్నాయి, కానీ మీరు క్రొత్తదాన్ని సృష్టించాలనుకుంటే, ఈ కార్యకలాపాలు రూపొందించబడాలి, తద్వారా అవి ఒంటరిగా పనిచేసే విద్యార్థికి సరదాగా ఉంటాయి లేదా ఉపాధ్యాయుడికి కనీస ప్రిపరేషన్ లేదా సిఎస్ నేపథ్యం ఉన్న తరగతి గదిలో ఉంటాయి. ఓపెన్-ఎండ్ గంటసేపు సవాలుకు విరుద్ధంగా వారు విద్యార్థులకు ఆదేశాలు అందించాలి. ఆదర్శవంతంగా, ట్యుటోరియల్ మరియు ప్రోగ్రామింగ్ ప్లాట్ఫామ్ మధ్య ట్యాబ్లు లేదా విండోలను మార్చకుండా ఉండటానికి సూచనలు మరియు ట్యుటోరియల్స్ నేరుగా ప్రోగ్రామింగ్ ప్లాట్ఫామ్లో విలీనం చేయబడతాయి.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+మీరు సృష్టించగల అనేక రకాల ట్యుటోరియల్స్ మరియు పాఠ ప్రణాళికల యొక్క భావాన్ని పొందడానికి, [అవర్ ఆఫ్ కోడ్ యాక్టివిటీస్ పేజీ](https://hourofcode.com/us/learn)ని సందర్శించండి.
 
-[**Back to the top**](#top)
+[**తిరిగి పైకి**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## ఎలా సమర్పించాలి
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+[గంటల కోడ్™ కార్యాచరణ సమర్పణ పేజీ](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) ని సందర్శించండి మరియు మీ కార్యాచరణను సమర్పించడానికి ప్రశ్నలను పూర్తి చేయండి.
 
-What you’ll need:
+మీకు ఏమి కావాలి:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* సమర్పించిన కార్యాచరణకు ప్రాతినిధ్యం వహించే ప్రాధమిక పరిచయం యొక్క పేరు మరియు ఇమెయిల్
+* కార్యాచరణ పేరు (పేరులో “అవర్ ఆఫ్ కోడ్” ను చేర్చలేము)
+* కార్యాచరణకు URL లింక్
+* ఈ కార్యాచరణలో AI ఉందా: అవును లేదా లేదు
+* కార్యాచరణ వివరణ (గరిష్ట అక్షర గణన: 400) 
+    * దయచేసి ఇది ప్రధానంగా విద్యార్థి-గైడెడ్ లేదా టీచర్-సులభతరం కాదా అని వివరణలో చేర్చండి. అదనంగా, కొన్ని పాఠశాలలు అవర్ ఆఫ్ కోడ్ కార్యకలాపాలు కామన్ కోర్ లేదా నెక్స్ట్ జనరేషన్ సైన్స్ ప్రమాణాలను పరిష్కరిస్తాయో లేదో తెలుసుకోవడానికి ఆసక్తి చూపుతాయి. కార్యాచరణ నిర్దిష్ట ప్రమాణాలను పరిష్కరిస్తే, ఈ సమాచారంతో సహా పరిగణించండి.
+* ఉద్దేశించిన వినియోగదారుల కోసం సిఫార్సు చేసిన గ్రేడ్ స్థాయి (లు). గ్రేడ్-తగిన కంప్యూటర్ సైన్స్ భావనల కోసం మీరు \[కంప్యూటర్ సైన్స్ టీచర్స్ అసోసియేషన్ యొక్క K-12 స్టాండర్డ్స్\] (https://k12cs.org/framework-statements-by-grade-band/) ను సూచించవచ్చు. ఉదాహరణ గ్రేడ్ స్థాయిలలో ఇవి ఉన్నాయి: 
+    * కిండర్ గార్టెన్ - గ్రేడ్ 1 (వయస్సు 4-6)
+    * తరగతులు 2-5 (వయస్సు 7-10)
+    * 6-8 తరగతులు (వయస్సు 11-13)
+    * 9+ తరగతులు (వయస్సు 14+)
+* మీ కార్యాచరణ బోధించే ప్రోగ్రామింగ్ భాషల జాబితా. అంటే సి/సి ++, జావా, జావాస్క్రిప్ట్ మొదలైనవి. లేదా భాషా స్వతంత్ర (బహుళ భాషలలో బోధించగల పాఠ్య ప్రణాళికల కోసం) భాషా కళలను ఎంచుకోండి.
+* మద్దతు ఉన్న సహజ భాషల జాబితా. గమనిక: భాష-గుర్తింపు అనేది కార్యాచరణ ప్రదాత యొక్క బాధ్యత; మేము అందించిన ఒకే URL కు వినియోగదారులందరినీ మళ్ళిస్తాము. లేదా భాషా స్వతంత్ర (బహుళ భాషలలో బోధించగల పాఠ్య ప్రణాళికల కోసం)
+* మీ కార్యాచరణను విద్యావేత్త ఏ స్థాయి అనుభవాన్ని ఉపయోగించాలి? (ఉదా. బిగినర్స్ లేదా కంఫర్టబుల్.) మరియు, విద్యార్థులకు ఏ స్థాయి అనుభవం ఉండాలి?
+* మీ కార్యాచరణను విద్యావేత్త ఏ స్థాయి అనుభవాన్ని ఉపయోగించాలి? (ఉదా. బిగినర్స్ లేదా కంఫర్టబుల్.) మరియు, విద్యార్థులకు ఏ స్థాయి అనుభవం ఉండాలి? మీరు మరింత అధునాతన అవర్ ఆఫ్ కోడ్™ యాక్టివిటీలను సిద్ధం చేయాలనుకుంటే, దయచేసి మీ కార్యాచరణ వివరణలో అవసరమైన ముందస్తు జ్ఞానాన్ని చేర్చండి.
+* మీ కార్యాచరణ యొక్క పొడవు 
+    * 1 గంట మాత్రమే
+    * ఫాలో-ఆన్ కోర్సుతో 1 గంట
+    * 2-6 గంటలు (బహుళ పాఠాలు కావచ్చు)
+* ప్రాప్యత వసతుల జాబితా, మీ కార్యాచరణ వాటిని కలిగి ఉంటే. వీటిలో స్క్రీన్ రీడర్ అనుకూలత, టెక్స్ట్-టు-స్పీచ్ సామర్థ్యాలు, అధిక-కాంట్రాస్ట్ రంగుల వాడకం లేదా వైకల్యాలున్న అభ్యాసకుల కోసం చేసిన ఇతర వసతులు ఉన్నాయి.
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### పాఠ్య ప్రణాళికలను సమర్పించేటప్పుడు మీకు అవసరమైన అదనపు విషయాలు
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service.
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* మీ పాఠ్య ప్రణాళికకు లింక్ చేయండి. ఇది వెబ్ పేజీ, డ్రాప్బాక్స్ లింక్, గూగుల్ డ్రైవ్ లేదా ఇలాంటి సేవ కావచ్చు.
+* మీ పాఠ్య ప్రణాళికను ఉపాధ్యాయుడు ఏ సాఫ్ట్వేర్ మరియు/లేదా హార్డ్వేర్ చేయాలి (స్క్రాచ్? రోబోట్లు? ఏమీ లేదు?)
 
-#### Additional things you’ll need when submitting Online Activities
+#### ఆన్లైన్ కార్యకలాపాలను సమర్పించేటప్పుడు మీకు అవసరమైన అదనపు విషయాలు
 
-* Name and logo of your organization
-* Whether it is COPPA compliant or not
-* A URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
+* మీ సంస్థ పేరు మరియు లోగో
+* ఇది COPPA కంప్లైంట్ కాదా
+* ఉపాధ్యాయ గమనికలకు URL లింక్ (ఐచ్ఛికం)
+* పరీక్షించిన/అనుకూల ప్లాట్ఫారమ్ల జాబితా: 
+    * వెబ్ ఆధారిత: మీరు ఏ ప్లాట్ఫారమ్లను పరీక్షించారు? 
+        * OS - Mac, Win మరియు ఇతర వెర్షన్లు
+        * బ్రౌజర్లు - IE11, ఎడ్జ్, ఫైర్ఫాక్స్, క్రోమ్, సఫారి
+        * iOS మొబైల్ సఫారి (మొబైల్-ఆప్టిమైజ్ చేయబడింది)
+        * Android Chrome (మొబైల్-ఆప్టిమైజ్ చేయబడింది)
+    * నాన్ వెబ్ ఆధారిత: స్థానిక కోడ్ కోసం వేదిక పేర్కొనండి (Mac, Win, iOS, Android, Xbox, ఇతర)
+    * అన్ప్లగ్డ్
+* అవర్ ఆఫ్ కోడ్ కార్యాచరణ యొక్క స్క్రీన్ షాట్ లేదా మార్కెటింగ్ చిత్రం. దయచేసి 4:3 కొలతలతో కనీసం ఒక చిత్రాన్ని పంపండి. ఇది 390px ద్వారా కనీసం 520px ఉండాలి. ఆంగ్లేతర మాట్లాడేవారికి మరింత ప్రాప్యత చేయడానికి ఈ చిత్రం దానిపై (మీ లోగో కాకుండా) వచనాన్ని కలిగి ఉండాలి. తగిన చిత్రం అందించకపోతే, మేము మీ ట్యుటోరియల్ యొక్క మా స్వంత స్క్రీన్ షాట్ తీసుకోవచ్చు లేదా దానిని జాబితా చేయకూడదని మేము ఎంచుకోవచ్చు. అన్ని చిత్రాలు.jpg, .jpeg లేదా .png కు URL లింక్గా సమర్పించాలి.
+* పాల్గొనడాన్ని మరింత ఖచ్చితంగా ట్రాక్ చేయడానికి, మూడవ పార్టీ ట్యుటోరియల్ భాగస్వాములు వారి అవర్ ఆఫ్ కోడ్ ట్యుటోరియల్స్ యొక్క మొదటి పేజీలో 1-పిక్సెల్ ట్రాకింగ్ చిత్రాలను చేర్చాలి. మరిన్ని వివరాల కోసం దిగువ [ట్రాకింగ్ పిక్సెల్](#pixel) విభాగాన్ని చూడండి.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+    * వారు అవర్ ఆఫ్ కోడ్ పూర్తి చేసిన సోషల్ మీడియాలో షేర్ చేయండి
+    * వారు అవర్ ఆఫ్ కోడ్ను పూర్తి చేసినట్లు ధృవీకరణ పత్రాన్ని స్వీకరించండి
+    * అవర్ ఆఫ్ కోడ్ కార్యకలాపాలలో ఏ దేశాలు/నగరాలు అత్యధిక భాగస్వామ్య రేట్లు కలిగి ఉన్నాయో లీడర్బోర్డ్లను చూడండి
     * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* (ఐచ్ఛికం) కింది కార్యాచరణ కొలమానాల నివేదికను కోరుతూ మేము ఆన్లైన్ సర్వే/ఫారమ్ లింక్తో అనుసరించవచ్చు: 
+    * ఆన్లైన్ కార్యకలాపాల కోసం (ముఖ్యంగా స్మార్ట్ఫోన్/టాబ్లెట్ అనువర్తనాలు): 
+        * వినియోగదారుల సంఖ్య
+        * ఎన్ని పని పూర్తి
+        * పనిలో సగటు సమయం
+        * వినియోగదారులందరి కంటే వ్రాయబడిన కోడ్ యొక్క మొత్తం పంక్తుల సంఖ్య
+        * ఎంతమంది తదుపరి అభ్యాసానికి కొనసాగించారు (పనిని పూర్తి చేసి, మీ సైట్లో అదనపు పనులపైకి వెళ్ళే వినియోగదారుగా కొలుస్తారు)
+    * ఆఫ్లైన్ కార్యకలాపాల కోసం 
+        * కార్యాచరణ యొక్క కాగితపు సంస్కరణ యొక్క డౌన్లోడ్ల సంఖ్య (వర్తిస్తే)
 
-#### Additional things you’ll need when submitting Robotics
+#### రోబోటిక్స్ సమర్పించేటప్పుడు మీకు అవసరమైన అదనపు విషయాలు
 
-* If you submit a robotics activity, we need to know the cost per student for robotics.
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* మీరు రోబోటిక్స్ కార్యాచరణను సమర్పించినట్లయితే, రోబోటిక్స్ కోసం విద్యార్థికి అయ్యే ఖర్చును మేము తెలుసుకోవాలి.
+* వెబ్సైట్లో చేర్చడానికి రోబోటిక్స్ కార్యకలాపాలను అంచనా వేయడానికి, మీరు సమీక్షకులకు నమూనా వస్తు సామగ్రిని పంపాలి.
 
-[**Back to the top**](#top)
+[**తిరిగి పైకి**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## కార్యకలాపాలు ఎలా అంచనా వేయబడతాయి
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+కంప్యూటర్ సైన్స్ అధ్యాపకుల విభిన్న కమిటీ గుణాత్మక మరియు పరిమాణాత్మక ప్రమాణాల ఆధారంగా సమర్పణలను ర్యాంక్ చేస్తుంది. ప్రాథమిక ప్రమాణాలకు సరిపోయే అన్ని కార్యకలాపాలు జాబితా చేయబడతాయి.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+సాంప్రదాయ కోడింగ్ కార్యకలాపాల కోసం, కంప్యూటర్ సైన్స్ అధ్యాపకుల విభిన్న కమిటీ గుణాత్మక మరియు పరిమాణాత్మక ప్రమాణాల ఆధారంగా సమర్పణలను ర్యాంక్ చేస్తుంది. ప్రాథమిక ప్రమాణాలకు సరిపోయే అన్ని కార్యకలాపాలు జాబితా చేయబడతాయి. ఉపాధ్యాయులు తమ తరగతి గదికి ఉత్తమమైన కార్యకలాపాలను కనుగొనడానికి ఫిల్టర్ చేయగలరు మరియు క్రమబద్ధీకరించగలరు.
 
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+సమీక్ష కమిటీ కార్యాచరణను ఉత్పత్తి నాణ్యతలో సున్నాగా రేట్ చేస్తే (చెడు దోషాలు లేదా ఉపయోగించడం చాలా కష్టతరం చేసే సూచనల కారణంగా), తక్కువ ప్రాతినిధ్యం లేని సమూహాలలో (జాత్యహంకార/సెక్సిస్ట్ పదార్థం కారణంగా), విద్యా విలువలో (బోధించదు CS భావనలు), లేదా సరదాగా పాల్గొనడం (విద్యార్థులు పనిచేయడం కష్టం/నిరుత్సాహపరచడం వల్ల), కార్యాచరణ జాబితా చేయబడదు.
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+- అధిక ఉత్పత్తి నాణ్యత
+- అన్ని జనాభా సమూహాల అభ్యాసాన్ని ప్రోత్సహించండి (esp. సిఎస్ లో తక్కువ ప్రాతినిధ్యం వహించిన విద్యార్థులు, యువతులు, అట్టడుగు జాతి మరియు జాతి సమూహాల విద్యార్థులు మరియు వైకల్యాలున్న విద్యార్థులు)
+- విద్య (కంప్యూటర్ సైన్స్ భావనలను బాగా బోధిస్తుంది)
+- ఆహ్లాదకరమైన మరియు ఆకర్షణీయంగా
+- వారు పంచుకోగలిగే ప్రత్యేకమైనదాన్ని సృష్టించమని విద్యార్థులను ప్రోత్సహిస్తుంది (చిన్న విద్యార్థుల కోసం: తల్లిదండ్రులు మరియు క్లాస్మేట్స్తో. పాత విద్యార్థుల కోసం: ఇంటర్నెట్లో)
 
-In addition, in order to be listed, all activities must:
+అదనంగా, జాబితా చేయడానికి, అన్ని కార్యకలాపాలు తప్పక:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up
-- Require no payment (exception for robotics activities these can require robot/kit purchase)
+కొత్త ఉపాధ్యాయులు మరియు విద్యార్థుల కోసం స్వీయ-నిర్దేశిత కార్యకలాపాల కోసం సమీక్ష కమిటీ వెతుకుతుంది:
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+- ప్రభుత్వ పాఠశాల తరగతి గదికి తగినదిగా ఉండండి (తుపాకులు లేవు, స్పష్టమైన/పరిపక్వ కంటెంట్ లేదు, మతపరమైన కంటెంట్ మొదలైనవి లేవు)
+- సైన్ అప్ అవసరం లేదు
+- చెల్లింపు అవసరం లేదు (రోబోటిక్స్ కార్యకలాపాలకు మినహాయింపు వీటికి రోబోట్/కిట్ కొనుగోలు అవసరం)
 
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+కొత్త ఉపాధ్యాయులు మరియు విద్యార్థుల కోసం స్వీయ-నిర్దేశిత కార్యకలాపాల కోసం సమీక్ష కమిటీ వెతుకుతుంది:
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+- కంప్యూటర్ సైన్స్లో నేపథ్యం లేకుండా ఉపాధ్యాయులు ట్యుటోరియల్ లేదా కార్యాచరణను ఉపయోగించవచ్చు
+- కంప్యూటర్ సైన్స్లో నేపథ్యం లేకుండా విద్యార్థులు విజయవంతమవుతారు
+- తల్లిదండ్రుల లేదా ఉపాధ్యాయ మార్గదర్శకత్వం లేకుండా విద్యార్థులు ట్యుటోరియల్ ద్వారా తమను తాము నిర్దేశించుకోవచ్చు
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+ఉపాధ్యాయులు మరియు విద్యార్థులు గ్రేడ్, అనుభవ స్థాయి, విషయం, హార్డ్వేర్ మొదలైన ఫిల్టర్ల ఆధారంగా మా కార్యకలాపాల జాబితాను శోధించగలరు మరియు ఫిల్టర్ చేయగలరు. అప్రమేయంగా, మేము మొదట పాఠ ప్రణాళికలు మరియు కార్యకలాపాలను చూపుతాము:
 
-[**Back to the top**](#top)
+- రివ్యూ కమిటీ నుండి అత్యధిక రేటింగ్స్ పొందండి
+- ప్రారంభకులకు (విద్యార్థులు మరియు ఉపాధ్యాయులు) రూపొందించిన ఒక గంట స్వీయ-నిర్దేశిత కార్యకలాపాలు
+- విస్తృత శ్రేణి వినియోగదారులకు విజ్ఞప్తి చేయండి (ప్లాట్ఫారమ్లు, భాషలు మరియు యుగాలలో)
+- సంస్థాపన అవసరం లేదు
+- ఈ సంవత్సరం కొత్తవి
+
+[**తిరిగి పైకి**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## ఒక గంట సెల్ఫ్ గైడెడ్ ట్యుటోరియల్స్ రూపకల్పనకు సూచనలు
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+కార్యకలాపాలు AI ని చేర్చవలసిన అవసరం లేదు, అయినప్పటికీ మేము మరిన్ని AI సంబంధిత కార్యకలాపాలను అందించాలని చూస్తున్నాము.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**ఉపాధ్యాయ గమనికలను చేర్చండి.** . చాలా కార్యకలాపాలు విద్యార్థి-నిర్దేశించబడాలి, కానీ ఒక కార్యాచరణను ఉపాధ్యాయుడు సులభతరం చేస్తే లేదా నిర్వహించినట్లయితే, దయచేసి మీ కార్యాచరణతో సమర్పించిన ప్రత్యేక URL వద్ద ఉపాధ్యాయుడు-గమనికల రూపంలో ఉపాధ్యాయునికి స్పష్టమైన మరియు సరళమైన దిశలను చేర్చండి. విద్యార్థులు ఆరంభకులు మాత్రమే కాదు, కొంతమంది ఉపాధ్యాయులు కూడా ఉన్నారు. వంటి సమాచారాన్ని చేర్చండి:
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**కార్యాచరణ చివరిలో అభిప్రాయాన్ని చేర్చండి.** (ఉదా. “మీరు 10 స్థాయిలను పూర్తి చేసి ఉచ్చులు గురించి తెలుసుకున్నారు! గొప్ప ఉద్యోగం!”)
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming?
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+**విద్యార్థులు పూర్తి చేసినప్పుడు సోషల్ మీడియాకు (తగిన చోట) పోస్ట్ చేయమని ప్రోత్సహించండి.** ఉదాహరణకు “నేను ________ తో గంట కోడ్ చేశాను మీరు? #HourOfCode” లేదా “నేను #CSEdWeek లో భాగంగా #HourOfCode చేశాను. మీరు ఉన్నారా?
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+- ట్యుటోరియల్ ఏ ప్లాట్ఫారమ్లు మరియు బ్రౌజర్లలో ఉత్తమంగా పని చేస్తుంది?
+- ఇది స్మార్ట్ఫోన్లలో పనిచేస్తుందా? మాత్రలు?
+- మీరు జత ప్రోగ్రామింగ్ను సిఫార్సు చేస్తున్నారా?
+- తరగతి గదిలో ఉపయోగం కోసం పరిగణనలు? ఉదా. వీడియోలు ఉంటే, మొత్తం తరగతి గది కలిసి చూడటానికి వీడియోలను అంచనా వేసిన తెరపై చూపించమని ఉపాధ్యాయులకు సలహా ఇవ్వండి
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**కార్యాచరణ చివరిలో అభిప్రాయాన్ని చేర్చండి.** (ఉదా. “మీరు 10 స్థాయిలను పూర్తి చేసి ఉచ్చులు గురించి తెలుసుకున్నారు! గొప్ప ఉద్యోగం!”)
 
-**Create your activity in Spanish or in other languages besides English.**
+**విద్యార్థులు పూర్తి చేసినప్పుడు సోషల్ మీడియాకు (తగిన చోట) పోస్ట్ చేయమని ప్రోత్సహించండి.** ఉదాహరణకు “నేను ________ తో గంట కోడ్ చేశాను మీరు? #HourOfCode” లేదా “నేను #CSEdWeek లో భాగంగా #HourOfCode చేశాను. మీరు ఉన్నారా? @Scratch.” **#HourOfCode** అనే హ్యాష్ట్యాగ్ను ఉపయోగించండి (పెద్ద అక్షరాలతో H, O, C)
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**మీ కార్యాచరణను స్పానిష్లో లేదా ఇంగ్లీషుతో పాటు ఇతర భాషలలో సృష్టించండి.**
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**సామాజికంగా ముఖ్యమైన సందర్భానికి కార్యాచరణను వివరించండి లేదా కనెక్ట్ చేయండి.** కంప్యూటర్ ప్రోగ్రామింగ్ ప్రపంచాన్ని ఎలా మార్చగలదో విద్యార్థులు చూసినప్పుడు సూపర్ పవర్ అవుతుంది!
 
-[**Back to the top**](#top)
+**మీ ట్యుటోరియల్ [పెయిర్ ప్రోగ్రామింగ్](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) ఉదాహరణలో ఉపయోగించవచ్చని నిర్ధారించుకోండి.** . ఇది అవర్ ఆఫ్ కోడ్కు ప్రత్యేకంగా ఉపయోగపడుతుంది ఎందుకంటే చాలా తరగతి గదులలో విద్యార్థులందరికీ 1:1 హార్డ్వేర్ లేదు.
+
+[**తిరిగి పైకి**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## ట్రేడ్మార్క్ మార్గదర్శకాలు
 
-Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+అవర్ ఆఫ్ కోడ్® మరియు హోరా డెల్ కాడిగో® కోడ్. ఆర్గ్ యొక్క రిజిస్టర్డ్ ట్రేడ్మార్క్లు. మా ట్యుటోరియల్ భాగస్వాములు చాలా మంది వారి వెబ్ సైట్లలో మా “అవర్ ఆఫ్ కోడ్” ట్రేడ్మార్క్లను వారి అవర్ ఆఫ్ కోడ్ కార్యకలాపాలకు సంబంధించి ఉపయోగించారు. మేము ఈ వాడకాన్ని నిరోధించాలనుకోవడం లేదు, కాని వినియోగం కొన్ని పరిమితులలోకి వస్తుందని మేము నిర్ధారించుకోవాలనుకుంటున్నాము:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. కోడ్ ప్రచారం యొక్క అవర్ సందర్భంలో వాణిజ్యేతర CS విద్య కార్యకలాపాలకు సంబంధించి మాత్రమే “అవర్ ఆఫ్ కోడ్” ఉపయోగించండి, మరియు ఏ ఇతర ప్రయోజనం కోసం.
+2. “అవర్ ఆఫ్ కోడ్” కు సంబంధించిన ఏదైనా సూచన మీ స్వంత బ్రాండ్ పేరు అని సూచించని ఫ్యాషన్లో ఉపయోగించాలి, కానీ ఇది అవర్ ఆఫ్ కోడ్ను అట్టడుగు కదలికగా సూచిస్తుంది. మంచి ఉదాహరణ: “Acmecorp.com లో కోడ్ యొక్క అవర్® లో పాల్గొనండి”. చెడ్డ ఉదాహరణ: “ACME కార్ప్ చేత అవర్ ఆఫ్ కోడ్ని ప్రయత్నించండి”.
+3. మీ వెబ్సైట్లో మరియు అనువర్తన వివరణలలో “అవర్ ఆఫ్ కోడ్” ను మీరు పేర్కొన్న ప్రముఖ ప్రదేశాలలో “®” సూపర్స్క్రిప్ట్ను ఉపయోగించండి.
+4. అవర్ ఆఫ్ కోడ్, CSEDWeek మరియు Code.org వెబ్ సైట్లకు లింక్లతో సహా పేజీలో (లేదా ఫుటరులో) భాషను చేర్చండి, ఈ క్రింది రెండింటినీ బహిర్గతం చేస్తుంది: a. అవర్ ఆఫ్ కోడ్® మరియు హోరా డెల్ కాడిగో® కోడ్. ఆర్గ్ యొక్క రిజిస్టర్డ్ ట్రేడ్మార్క్లు; మరియు బి. “[అవర్ ఆఫ్ కోడ్](http://hourofcode.com/) ® అనేది [Code.org](http://code.org/) చేత దేశవ్యాప్తంగా చొరవ, ఇది మిలియన్ల మంది విద్యార్థులను ఒక గంట కంప్యూటర్ సైన్స్ మరియు కంప్యూటర్ ప్రోగ్రామింగ్కు పరిచయం చేస్తుంది.”
+5. అనువర్తన పేర్లలో “అవర్ ఆఫ్ కోడ్” ఉపయోగించవద్దు.
+6. ఏదైనా వాణిజ్య ఉపయోగం లేదా ప్రయోజనానికి సంబంధించి “అవర్ ఆఫ్ కోడ్” ను ఉపయోగించవద్దు (ఉదా., మీ అవర్ ఆఫ్ కోడ్ కార్యాచరణను పేవాల్ వెనుక ఉంచడం; మీ అవర్ ఆఫ్ కోడ్ కార్యాచరణలో భాగంగా మరొక చెల్లింపు సేవను ప్రోత్సహించడం; అవర్ ఆఫ్ కోడ్ సరుకుల అమ్మకం).
+7. లాగిన్ లేదా ఖాతా సృష్టి అవసరమయ్యే ఏదైనా కార్యాచరణకు సంబంధించి “అవర్ ఆఫ్ కోడ్” ను ఉపయోగించవద్దు.
 
-[**Back to the top**](#top)
+[**తిరిగి పైకి**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## పిక్సెల్ ట్రాకింగ్
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+మీ ట్యుటోరియల్ ఆమోదించబడి, తుది ట్యుటోరియల్ పేజీలో చేర్చబడితే, Code.org మీ ట్యుటోరియల్లో కలిసిపోవడానికి మీకు ప్రత్యేకమైన ట్రాకింగ్ పిక్సెల్ను అందిస్తుంది. క్రింద ఉదాహరణ చూడండి. మీ ట్యుటోరియల్ యొక్క ఏ మధ్యంతర పేజీలలో చేర్చవద్దు.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+ఇది మీ అవర్ ఆఫ్ కోడ్ ట్యుటోరియల్ చేసే వినియోగదారులను లెక్కించడానికి మాకు అనుమతిస్తుంది. ఇది మీ ట్యుటోరియల్ కోసం మరింత ఖచ్చితమైన పాల్గొనే గణనకు దారి తీస్తుంది.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+మీ ట్యుటోరియల్ ఆమోదించబడి, తుది ట్యుటోరియల్ పేజీలో చేర్చబడితే, Code.org మీ ట్యుటోరియల్లో కలిసిపోవడానికి మీకు ప్రత్యేకమైన ట్రాకింగ్ పిక్సెల్ను అందిస్తుంది. క్రింద ఉదాహరణ చూడండి.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+గమనిక: ఇన్స్టాల్ చేయదగిన అనువర్తనాల కోసం ఇది ముఖ్యం కాదు (iOS/Android అనువర్తనాలు లేదా డెస్క్టాప్-ఇన్స్టాల్ అనువర్తనాలు)
 
-Example tracking pixels for Dance Party:
+డాన్స్ పార్టీ కోసం ఉదాహరణ ట్రాకింగ్ పిక్సెల్లు:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**తిరిగి పైకి**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## మీ కార్యకలాపాలను ప్రోత్సహించడం, CSEDWeek మరియు అవర్ ఆఫ్ కోడ్
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+దయచేసి మీ కార్యాచరణను మీ నెట్వర్క్కు ప్రచారం చేయండి! వాటిని మీ అవర్ ఆఫ్ కోడ్ పేజీకి మళ్ళించండి. మీ కార్యాచరణ గురించి మీ వినియోగదారులు మీ నుండి మెయిలింగ్కు ప్రతిస్పందించే అవకాశం ఉంది. కంప్యూటర్ సైన్స్ ఎడ్యుకేషన్ వీక్ సందర్భంగా అంతర్జాతీయ అవర్ ఆఫ్ కోడ్ ప్రచారాన్ని ఉపయోగించుకోండి, ఇతరులను చేరడానికి ఆహ్వానించమని వినియోగదారులను ప్రోత్సహించడానికి మరియు ఎక్కువ మంది విద్యార్థులను చేరుకోవడంలో మాకు సహాయపడండి!
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- మీ వెబ్సైట్లో ఫీచర్ అవర్ ఆఫ్ కోడ్ మరియు CSEDWeek. ఉదా: <http://www.tynker.com/hour-of-code>
+- #HourOfCode అనే హ్యాష్ట్యాగ్ను ఉపయోగించి సోషల్ మీడియా, సాంప్రదాయ మీడియా, మెయిలింగ్ జాబితాలు మొదలైనవాటిని ఉపయోగించి అవర్ ఆఫ్ కోడ్ను ప్రోత్సహించండి (H, O, C పెద్ద అక్షరాలతో)
+- స్థానిక ఈవెంట్ను హోస్ట్ చేయండి లేదా స్థానిక పాఠశాలలు లేదా కమ్యూనిటీ గ్రూపులలో ఈవెంట్ను హోస్ట్ చేయమని మీ ఉద్యోగులను అడగండి.
+- మరింత సమాచారం కోసం మా [రిసోర్స్ కిట్](https://hourofcode.com/us/promote) చూడండి.
 
-[**Back to the top**](#top)
+[**తిరిగి పైకి**](#top)
 
 {{ signup_button }}

@@ -61,7 +61,7 @@ module Services
           pdfs << script_path
 
           # Include PDF for the lesson in our set of PDFs to merge.
-          script.lessons.each do |lesson|
+          script.lessons.select(&:has_lesson_plan).each do |lesson|
             ChatClient.log("Finding/generating PDF for #{lesson.key.inspect}") if DEBUG
             # 1. If we already have a version of the PDF on the local
             #    filesystem, grab it from there.

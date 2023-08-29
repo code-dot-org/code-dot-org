@@ -2,360 +2,272 @@
   "km-KH": {
     "data": {
       "lessons": {
-        "hero/Minecraft Hour of Code": {
-          "name": "Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស"
+        "csd2-2017/Lists": {
+          "name": "បញ្ជី"
         },
-        "flappy/Flappy Code": {
-          "name": "Flappy កូដ"
-        },
-        "artist/Artist": {
-          "name": "សិល្បករ"
-        },
-        "hoc-encryption/Simple Encryption": {
-          "name": "ការអ៉ីនគ្រីបធម្មតា"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Minecraft Hour of Code"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "sports/Sports": {
-          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងដឹងថាតើព្រឹត្តិការណ៍មានអ្វីខ្លះ ហើយនិងការប្រេីកុំព្យូទ័រដុចនៅក្នុងកម្មវិធីដូចជាហ្គេមវីដេអូ។ សិស្សនឹងធ្វើការតាមរយៈល្បែងផ្គុំរូបដែលធ្វើឱ្យកម្មវិធីមានប្រតិកម្មទៅនឹងព្រឹត្តិការណ៍ (ដូចជាប៊ូតុងព្រួញត្រូវបានចុច។ ) នៅចុងបញ្ចប់នៃល្បែងផ្គុំរូបសិស្សនឹងមានឱកាសប្តូរហ្គេមរបស់ពួកគេតាមល្បឿននិងសំឡេងខុសៗគ្នា។",
-          "student_overview": "ធ្លាប់សង្ឃឹមថាអ្នកអាចលេងហ្គេមវីដេអូនៅសាលាបានទេ? នៅក្នុងមេរៀននេះអ្នកនឹងត្រូវបង្កើតដោយខ្លួនឯង!"
-        },
-        "basketball/Bounce": {
-          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងដឹងថាតើព្រឹត្តិការណ៍មានអ្វីខ្លះ ហើយនិងការប្រេីកុំព្យូទ័រដុចនៅក្នុងកម្មវិធីដូចជាហ្គេមវីដេអូ។ សិស្សនឹងធ្វើការតាមរយៈល្បែងផ្គុំរូបដែលធ្វើឱ្យកម្មវិធីមានប្រតិកម្មទៅនឹងព្រឹត្តិការណ៍ (ដូចជាប៊ូតុងព្រួញត្រូវបានចុច។ ) នៅចុងបញ្ចប់នៃល្បែងផ្គុំរូបសិស្សនឹងមានឱកាសប្តូរហ្គេមរបស់ពួកគេតាមល្បឿននិងសំឡេងខុសៗគ្នា។",
-          "student_overview": "ធ្លាប់សង្ឃឹមថាអ្នកអាចលេងហ្គេមវីដេអូនៅសាលាបានទេ? នៅក្នុងមេរៀននេះអ្នកនឹងត្រូវបង្កើតដោយខ្លួនឯង!"
-        },
-        "dance-2019/Dance Party": {
-          "name": "Dance Party"
-        },
-        "k5-onlinepd-2019/Sequencing": {
-          "name": "លំដាប់"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "ប្រតិបត្តិដដែលៗ"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "ព្រឹត្តិការណ៍"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "លក្ខខណ្ឌ"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "អនុ​គមន៍"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "អ​ថេរ"
         },
-        "k5-onlinepd-2019/Sprite Lab": {
-          "name": "មន្ទីរពិសោធន៍ Sprite "
+        "csd3-2017/Sprites": {
+          "name": "Sprites"
         },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ"
-        },
-        "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ"
-        },
-        "coursed-2022/Introduction to Online Puzzles": {
-          "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត",
-          "overview": "នៅក្នុងល្បែងផ្គុំរូបនេះសិស្សនឹងចាប់ផ្តើមជាមួយនឹងការណែនាំ (ឬពិនិត្យឡើងវិញដោយផ្អែកលើបទពិសោធន៍នៃថ្នាក់របស់អ្នក) នៃកន្លែងធ្វើការតាមអ៊ិនធឺរណែតរបស់ Code.org ។ វានឹងមានវីដេអូដែលបង្ហាញពីមុខងារមូលដ្ឋាននៃកន្លែងធ្វើការរួមមាន `ប៊ូតុងរត់` `ប៊ូតុងកំណត់ឡើងវិញ` និង `ប៊ូតុងជំហាន`។ បន្ទាប់ពីបានពិភាក្សាផងដែរនៅក្នុងវីដេអូទាំងនេះ: ការអូសប្លុកប្លុក លុបប្លុកប្លុក និងភ្ជាប់ប្លុកប្លុក។ បន្ទាប់មកទៀតនិស្សិតនឹងអនុវត្តជំនាញ \\_ បន្តបន្ទាប់និង \\_ ជំនាញបំបាត់កំហុសរបស់ពួកគេក្នុងការស្វែងរក។ ពីទីនោះសិស្សនឹងឃើញល្បែងផ្គុំរូបថ្មីៗដូចជាអ្នកប្រមូល សិល្បករ និងអ្នកប្រមូលផលពេលពួកគេរៀនមូលដ្ឋានគ្រឹះ _loops_ ។",
-          "student_overview": "មេរៀននេះនឹងផ្តល់ឱ្យអ្នកអនុវត្តនូវជំនាញដែលអ្នកនឹងត្រូវការសម្រាប់វគ្គសិក្សានេះ។"
-        },
-        "coursed-2022/Relay Programming": {
-          "student_overview": "ចងចាំនៅដើមវគ្គសិក្សានៅពេលអ្នកធ្វើគំនូរដោយប្រើកូដ? នៅក្នុងមេរៀននេះអ្នកនឹងធ្វើការជាមួយក្រុមដើម្បីធ្វើអ្វីដែលស្រដៀងគ្នា!"
-        },
-        "coursed-2022/Debugging with Laurel": {
-          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងអនុវត្តការបំបាត់កំហុសនៅក្នុងបរិយាកាស“ អ្នកប្រមូល” ។ និស្សិតនឹងទទួលបានការអនុវត្តការអាននិងកែលេខកូដដើម្បីជួសជុលល្បែងផ្គុំរូបដែលមានក្បួនដោះស្រាយរង្វិលជុំនិងរង្វិលជុំដែលនៅជាប់គ្នា។",
-          "student_overview": "តើអ្នកធ្លាប់មានបញ្ហាទេពេលកំពុងសរសេរកូដដែរឬទេ? នៅក្នុងមេរៀននេះអ្នកនឹងរៀនអំពីអាថ៌កំបាំងនៃការបំបាត់កំហុស។ ការបំបាត់កំហុសគឺជាដំណើរការនៃការស្វែងរកនិងដោះស្រាយបញ្ហានៅក្នុងលេខកូដរបស់អ្នក។"
-        },
-        "coursed-2022/Events in Bounce": {
-          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងដឹងថាតើព្រឹត្តិការណ៍មានអ្វីខ្លះ ហើយនិងការប្រេីកុំព្យូទ័រដុចនៅក្នុងកម្មវិធីដូចជាហ្គេមវីដេអូ។ សិស្សនឹងធ្វើការតាមរយៈល្បែងផ្គុំរូបដែលធ្វើឱ្យកម្មវិធីមានប្រតិកម្មទៅនឹងព្រឹត្តិការណ៍ (ដូចជាប៊ូតុងព្រួញត្រូវបានចុច។ ) នៅចុងបញ្ចប់នៃល្បែងផ្គុំរូបសិស្សនឹងមានឱកាសប្តូរហ្គេមរបស់ពួកគេតាមល្បឿននិងសំឡេងខុសៗគ្នា។",
-          "student_overview": "ធ្លាប់សង្ឃឹមថាអ្នកអាចលេងហ្គេមវីដេអូនៅសាលាបានទេ? នៅក្នុងមេរៀននេះអ្នកនឹងត្រូវបង្កើតដោយខ្លួនឯង!"
-        },
-        "coursed-2022/Build a Star Wars Game": {
-          "overview": "នៅក្នុងមេរៀននេះសិស្សនឹងអនុវត្តការប្រើប្រាស់ព្រឹត្តិការណ៍ដើម្បីបង្កើតហ្គេមដែលពួកគេអាចចែករំលែកតាមអ៊ិនធរណេត។  ​ចូលរួមដោយ R2-D2 និងតួអង្គ Star Wars ផ្សេងទៀត  សិស្សនឹងត្រូវបានដឹកនាំឆ្លងកាត់ព្រឹត្តិការណ៍នានាបន្ទាប់មកផ្តល់កន្លែងអនុវត្ដដើម្បីបង្កើតហ្គេមដោយខ្លួនឯង។",
-          "student_overview": "ត្រៀមកម្លាំងរបស់អ្នកដោយ អ្នកនឹងបង្កើតហ្គេម Start Wars​ ដោយខ្លួនអ្នកនៅក្នុងមេរៀននេះ។"
-        },
-        "coursed-2022/Dance Party": {
-          "name": "Dance Party"
-        },
-        "coursed-2022/Loops in Ice Age": {
-          "name": "ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក"
-        },
-        "coursed-2022/Nested Loops in Maze": {
-          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងមានឱកាសជំរុញការយល់ដឹងអំពីរង្វិលជុំដល់កំរិតថ្មីទាំងមូល។ លេងជាមួយឃ្មុំនិងរុក្ខជាតិទល់នឹង Zombies សិស្សនឹងរៀនពីរបៀបសរសេររង្វិលជុំដើម្បីឱ្យស្ថិតនៅក្នុងរង្វិលជុំមួយទៀត។ ពួកគេក៏នឹងត្រូវបានលើកទឹកចិត្តឱ្យរកមើលថាតើការផ្លាស់ប្តូរតិចតួចនៅក្នុងរង្វិលជុំទាំងពីរនឹងប៉ះពាល់ដល់កម្មវិធីរបស់ពួកគេយ៉ាងដូចម្តេចនៅពេលពួកគេចុច `រត់` ។"
-        },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត",
-          "student_overview": "វាដល់ពេលហើយដើម្បីលេងល្បែងដែលអ្នករកពិន្ទុបានតែក្រោមលក្ខខណ្ឌជាក់លាក់ប៉ុណ្ណោះ!"
-        },
-        "coursed-2022/If/Else with Bee": {
-          "overview": "រហូតមកដល់ចំណុចនេះសិស្សបានសរសេរកូដដែលប្រតិបត្តិតាមវិធីដូចគ្នារាល់ពេលដែលដំណើរការ - អាចទុកចិត្តបាន ប៉ុន្តែមិនមានភាពបត់បែនខ្លាំងទេ។ នៅក្នុងមេរៀននេះថ្នាក់របស់អ្នកនឹងចាប់ផ្តើមសរសេរកូដដោយមានលក្ខខណ្ឌដែលអនុញ្ញាតឱ្យពួកគេសរសេរកូដដែលមានមុខងារខុសគ្នាអាស្រ័យលើលក្ខខណ្ឌជាក់លាក់ដែលកម្មវិធីជួប។",
-          "student_overview": "ឥឡូវអ្នកយល់ពីលក្ខខណ្ឌវាដល់ពេលត្រូវសរសេរកម្មវិធីឃ្មុំដើម្បីប្រើវានៅពេលប្រមូលទឹកឃ្មុំនិងទឹកដម។"
-        },
-        "coursed-2022/While Loops in Farmer": {
-          "student_overview": "រង្វិលជុំមានប្រយោជន៍ណាស់ក្នុងការសរសេរកូដ។ មេរៀននេះនឹងបង្រៀនអ្នកអំពីរង្វិលជុំប្រភេទថ្មីមួយ: ខណៈរង្វិលជុំ!"
-        },
-        "coursed-2022/Until Loops in Maze": {
-          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
-        },
-        "coursed-2022/End of Course Project": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង",
-          "student_overview": "ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។"
-        },
-        "coursef-2022/The Power of Words": {
-          "student_overview": "ការគំរាមកំហែង គឺមិនដែលត្រឹមត្រូវទេ។ មេរៀននេះ នឹងបង្រៀនអ្នកពីអ្វីដែលត្រឹមត្រូវ និងមិនត្រឹមត្រូវ ក្នុងការនិយាយអនឡាញ។"
-        },
-        "coursef-2022/Introducing Sprite Lab": {
-          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍"
-        },
-        "coursef-2022/The Internet": {
-          "name": "អ៊ីនធឺណិត",
-          "overview": "ទោះបីជាមនុស្សជាច្រើនប្រើអ៊ិនធឺរណែតជារៀងរាល់ថ្ងៃក៏ដោយក៏មិនមានមនុស្សជាច្រើនដែរដឹងថាវាដំណើរការយ៉ាងដូចម្តេច។ នៅក្នុងមេរៀននេះសិស្សនឹងរៀនអំពីបណ្ដាញ URLs អាសយដ្ឋាន IP និង DNS ។",
-          "student_overview": "ធ្លាប់ឆ្ងល់ទេថាតើព័ត៌មានធ្វើដំណើរឆ្លងកាត់អ៊ីនធឺណិតយ៉ាងដូចម្តេច? វាមិនមែនជាវេទមន្តទេ! មេរៀននេះនឹងបង្រៀនអ្នកអំពីរបៀបដំណើរការអ៊ីនធឺណិត។"
-        },
-        "coursef-2022/End of Course Project": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង"
-        },
-        "coursee-2022/Private and Personal Information": {
-          "student_overview": "អ៊ីនធឺណិតផ្ដល់នូវភាពសប្បាយ និងរំភើបប៉ុន្ដែការរក្សាសុវត្ថិភាពនៅលើអ៊ីនធឺណិតក៏សំខាន់ដែរ។ មេរៀននេះបង្រៀនអ្នកពីភាពខុសគ្នារវាងព័ត៌មានដែលមានសុវត្ថិភាពក្នុងការចែករំលែកនិងព័ត៌មានឯកជន។"
-        },
-        "coursee-2022/Fancy Shapes using Nested Loops": {
-          "student_overview": "សំបុករង្វិលជុំច្រើនទៀត! លើកនេះអ្នកត្រូវធ្វើគំនូរ AMAZING មួយចំនួនដែលមានរង្វិលជុំនៅខាងចុង។"
-        },
-        "coursee-2022/Songwriting": {
-          "overview": "រចនាសម្ព័ន្ធដ៏អស្ចារ្យបំផុតមួយនៅក្នុងពិភពវិទ្យាសាស្ត្រកុំព្យូទ័រគឺអនុគមន៍។ អនុគមន៍​(ដែលពេលខ្លះត្រូវបានហៅថា នីតិវិធី) គឺជាប្រូក្រាមតូចដែលអ្នកអាចប្រើនៅក្នុងប្រូក្រាមធំ។ មេរៀននេះនឹងជួយសិស្សយល់កាន់តែសុីជម្រៅថាតើហេតុអ្វីបានជាការរួមបញ្ចូលគ្នានៃបណ្ដុំកូដអោយទៅជាអនុគមន៍អាចជាការអនុវត្ដមួយដ៏មានប្រយោជន៍។",
-          "student_overview": "សម្បីតែ Rockstar ក៏ត្រូវការជំនាញសរសេរកូដដែរ។ មេរៀននេះនឹងបង្រៀនអ្នកអំពីអនុគមន៍ដោយប្រើប្រាស់អត្ថបទចម្រៀងពីចម្រៀង។"
-        },
-        "coursee-2022/Functions with Artist": {
-          "student_overview": "ធ្វើឱ្យគំនូរស្មុគស្មាញកាន់តែងាយស្រួលដោយប្រើអនុគមន៍!"
-        },
-        "coursee-2022/Conditionals with the Farmer": {
-          "overview": "មេរៀននេះណែនាំសិស្សមកកាន់ឃ្លានៃកូដ `while` loops និង `if / else` ។ _While loops_ គឺជារង្វល់ជុំដែលបន្ដការងារដដែលៗដរាបណាលក្ខខណ្ឌពិត។ While loops ត្រូវបានប្រើប្រាស់នៅពេលដែលអ្នកសរសេរកូដមិនដឹងច្បាស់អំពីចំនួនដងនៃការបញ្ជាកូដអោយធ្វើឡើងម្ដងទៀត ប៉ុន្ដែអ្នកសរសេរកូដដឹងពីលក្ខខណ្ឌពិតដើម្បីអោយ loop បន្ដរង្វល់ជុំ។ `If / Else` គឺជាឃ្លាកូដដែលផ្ដល់នូវភាពបត់បែននៅក្នុងការសរសេរកូដដោយដំណើរការផ្នែកណាមួយនៃកូដនៅពេលដែលលក្ខខណ្ឌអ្វីមួយពិតតែប៉ុណ្ណោះ បើមិនដូច្នេះទេវានឹងធ្វើការងារអ្វីផ្សេង។",
-          "student_overview": "អ្នកនឹងត្រូវប្រាប់កុំព្យូទ័រនូវអ្វីដែលត្រូវធ្វើក្រោមល័ក្ខខ័ណ្ឌជាក់លាក់មួយចំនួននៅក្នុងស៊េរីដ៏សប្បាយនិងឧបសគ្គនេះ។"
-        },
-        "coursee-2022/Functions with Harvester": {
-          "student_overview": "អនុគមន៍នឹងជួយការងារជាច្រើននៅពេលអ្នកជួយ farmer ជាមួយនឹងការប្រមូលផលរបស់គាត់!"
-        },
-        "coursee-2022/End of Course Project": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង"
-        },
-        "courseb-2022/Programming with Angry Birds": {
-          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
-        },
-        "courseb-2022/Programming with Harvester": {
-          "name": "សរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល"
-        },
-        "courseb-2022/Loops with Laurel": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel"
-        },
-        "courseb-2022/Drawing Gardens with Loops": {
-          "name": "គូរសួនច្បារជាមួយប្រតិបត្តិដដែលៗ"
-        },
-        "courseb-2022/The Big Event Jr": {
-          "overview": "ព្រឹត្តិការណ៍គឺជាវិធីដ៏ល្អដើម្បីបន្ថែមភាពខុសគ្នាទៅនឹងក្បួនដោះស្រាយដែលបានសរសេរជាហើយ។  ពេលខ្លះអ្នកចង់អោយកម្មវិធីរបស់អ្នកអាចឆ្លើយតបទៅអ្នកប្រើអោយបានច្បាស់នៅពេលអ្នកប្រើចង់អោយវាធ្វើ។  នោះគឺជាអ្វីដែលព្រឹត្តិការណ៍ដែលគេចង់បាន។"
-        },
-        "courseb-2022/Mini-Project: A Royal Battle with Events": {
-          "overview": "នៅក្នុង **គម្រោងខ្នាតតូច** នេះ សិស្សនឹងមានឱកាសរៀនពីរបៀបប្រើប្រាស់ព្រឹត្តិការណ៍នៅក្នុង Play Lab និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀន ដើម្បីបង្កើតហ្គេមដែលមានចលនា។",
-          "student_overview": "ប្រើព្រឹត្តិការណ៍ដើម្បីបង្កើតរឿង ឬបង្កើតហ្គេមដែលអាចលេងបាន។"
-        },
-        "courseb-2022/End of Course Project": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង"
-        },
-        "express-2022/Programming with Angry Birds": {
-          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
-        },
-        "express-2022/Debugging in Maze": {
-          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
-        },
-        "express-2022/Swimming Fish in Sprite Lab": {
-          "name": "ត្រីហែលទឹកនៅក្នុង មន្ទីរពិសោធន៍"
-        },
-        "express-2022/Dance Party": {
-          "name": "Dance Party"
-        },
-        "express-2022/Loops with Rey and BB-8": {
-          "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
-        },
-        "express-2022/Nested Loops in Maze": {
-          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងមានឱកាសជំរុញការយល់ដឹងអំពីរង្វិលជុំដល់កំរិតថ្មីទាំងមូល។ លេងជាមួយឃ្មុំនិងរុក្ខជាតិទល់នឹង Zombies សិស្សនឹងរៀនពីរបៀបសរសេររង្វិលជុំដើម្បីឱ្យស្ថិតនៅក្នុងរង្វិលជុំមួយទៀត។ ពួកគេក៏នឹងត្រូវបានលើកទឹកចិត្តឱ្យរកមើលថាតើការផ្លាស់ប្តូរតិចតួចនៅក្នុងរង្វិលជុំទាំងពីរនឹងប៉ះពាល់ដល់កម្មវិធីរបស់ពួកគេយ៉ាងដូចម្តេចនៅពេលពួកគេចុច `រត់` ។"
-        },
-        "express-2022/If/Else with Bee": {
-          "overview": "រហូតមកដល់ចំណុចនេះសិស្សបានសរសេរកូដដែលប្រតិបត្តិតាមវិធីដូចគ្នារាល់ពេលដែលដំណើរការ - អាចទុកចិត្តបាន ប៉ុន្តែមិនមានភាពបត់បែនខ្លាំងទេ។ នៅក្នុងមេរៀននេះថ្នាក់របស់អ្នកនឹងចាប់ផ្តើមសរសេរកូដដោយមានលក្ខខណ្ឌដែលអនុញ្ញាតឱ្យពួកគេសរសេរកូដដែលមានមុខងារខុសគ្នាអាស្រ័យលើលក្ខខណ្ឌជាក់លាក់ដែលកម្មវិធីជួប។",
-          "student_overview": "ឥឡូវអ្នកយល់ពីលក្ខខណ្ឌវាដល់ពេលត្រូវសរសេរកម្មវិធីឃ្មុំដើម្បីប្រើវានៅពេលប្រមូលទឹកឃ្មុំនិងទឹកដម។"
-        },
-        "express-2022/While Loops in Farmer": {
-          "student_overview": "រង្វិលជុំមានប្រយោជន៍ណាស់ក្នុងការសរសេរកូដ។ មេរៀននេះនឹងបង្រៀនអ្នកអំពីរង្វិលជុំប្រភេទថ្មីមួយ: ខណៈរង្វិលជុំ!"
-        },
-        "express-2022/Until Loops in Maze": {
-          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
-        },
-        "express-2022/Harvesting with Conditionals": {
-          "overview": "សិស្សនឹងអនុវត្ត `ខណៈរង្វិលជុំ`  `រហូតដល់រង្វិលជុំ` `ប្រសិនបើ / ផ្សេងទៀត សេចក្តីថ្លែង` ។ ប្លុកទាំងអស់នេះប្រើលក្ខខណ្ឌ។ តាមរយៈការអនុវត្តទាំងបីសិស្សនឹងរៀនពីការសរសេរកូដដែលមានភាពស្មុគស្មាញនិងបត់បែន។",
-          "student_overview": "វាមិនច្បាស់ទេថាពេលណាត្រូវប្រើលក្ខខណ្ឌនីមួយៗ។ មេរៀននេះនឹងជួយអ្នកឱ្យមានទម្លាប់សំរេចថាត្រូវធ្វើអ្វី។"
-        },
-        "express-2022/Functions with Harvester": {
-          "student_overview": "អនុគមន៍នឹងជួយការងារជាច្រើននៅពេលអ្នកជួយ farmer ជាមួយនឹងការប្រមូលផលរបស់គាត់!"
-        },
-        "express-2022/Functions with Artist": {
-          "student_overview": "ធ្វើឱ្យគំនូរស្មុគស្មាញកាន់តែងាយស្រួលដោយប្រើអនុគមន៍!"
-        },
-        "express-2022/Using Variables with the Artist": {
-          "name": "ការប្រើប្រាស់អថេរជាមួយសិល្បករ",
-          "overview": "នៅក្នុងមេរៀននេះ សិស្សនឹងអាចធ្វើការសិក្សាស្វែងយល់កាន់តែស៊ីជម្រៅទាក់ទងនឹងការបង្កើតការឌីសាញដោយប្រើប្រាស់អញ្ញត្តិនៅក្នុងបរិយាកាស​បែបអ្នកសិល្បៈ ។ សិស្សនឹងអាចដឹងពីរបៀបដែលគេអាចប្រើអញ្ញត្តិនៅក្នុងការបង្កើតកូដបានកាន់តែងាយស្រួលនៅក្នុងការសរសេរនិងការអាន។\nបន្ទាប់ពីបានធ្វើការណែនាំនូវល្បែងរូបផ្គុំ សិស្សនឹងអាចធ្វើការបញ្ចប់កម្រិតមូលដ្ឋាន ដើម្បីបង្ហាញនូវអ្វីដែលគេបានរៀននិងធ្វើការបង្កើតឌីសាញរបស់ខ្លួន។ "
-        },
-        "express-2022/For Loops with Bee": {
-          "student_overview": "ប៊ូសៗ នៅក្នុងល្បែងរូបផ្គុំនេះ សិស្សនឹងអាចអាចធ្វើការនាំផ្លូវឃ្មុំទៅកាន់ទឹកដេលមានរសជាតិផ្អែម ហើយនិងទឹកឃ្មុំ ដោយការប្រើប្រាស់ \"for loops\"! "
-        },
-        "express-2022/For Loops with Artist": {
-          "name": "For loops ជាមួយវិចិត្រករ",
-          "student_overview": "ត្រៀមខ្លួនរួចជាស្រេចដើម្បីស្នាដៃឯករបស់អ្នកបន្តទៀត។​ អ្នកនឹងប្រើ \"for​​ loops\" ដដែលៗ ដើម្បីបង្កើតជា រូបភាពJaw Dropping "
-        },
-        "express-2022/End of Course Project": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង",
-          "student_overview": "ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។"
-        },
-        "pre-express-2022/Learn to Drag and Drop": {
-          "name": "រៀនពីការអូស និងទម្លាក់​",
-          "overview": "មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។"
-        },
-        "pre-express-2022/Sequencing with Scrat": {
-          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក "
-        },
-        "pre-express-2022/Programming with Angry Birds": {
-          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
-        },
-        "pre-express-2022/Programming with Rey and BB-8": {
-          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
-        },
-        "pre-express-2022/Programming with Harvester": {
-          "name": "ការសរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល"
-        },
-        "pre-express-2022/Loops with Scrat": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក"
-        },
-        "pre-express-2022/Loops with Laurel": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel"
-        },
-        "pre-express-2022/Ocean Scene with Loops": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយទិដ្ឋភាពសមុទ្រ",
-          "overview": "ត្រលប់ទៅរង្វិលជុំសិស្សរៀនគូររូបភាពដោយគូសលំដាប់លំដោយនៃការណែនាំសាមញ្ញ ៗ ។  នៅក្នុង មេរៀនដោត មុន ៗ រង្វិលជុំត្រូវបានប្រើដើម្បីឆ្លងកាត់ផ្ទាំងគំនូរនិងប្រមូលកំណប់។  នៅទីនេះរង្វិលជុំកំពុងបង្កើតលំនាំ។  នៅចុងបញ្ចប់នៃដំណាក់កាលនេះនិស្សិតនឹងត្រូវបានផ្តល់ឱកាសដើម្បីបង្កើតរូបភាពផ្ទាល់ខ្លួនដោយប្រើរង្វិលជុំ។"
-        },
-        "pre-express-2022/Drawing Gardens with Loops": {
-          "name": "គូរសួនច្បារជាមួយប្រតិបត្តិដដែលៗ"
-        },
-        "pre-express-2022/On the Move with Events": {
-          "name": "ការផ្លាស់ប្ដូរចលនាដោយប្រើកូដប្លុកព្រឹត្តិការណ៍",
-          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ិនធើណេតនេះនិស្សិតនឹងមានឱកាសរៀនពីរបៀបប្រើព្រឹត្តិការណ៍នានានៅក្នុង ផ្លេ លេប និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀនបង្កើតហ្គេមមានចលនា។  ដល់ពេលដែលត្រូវច្នៃប្រឌិតហើយបង្កើតរឿងនៅក្នុងបន្ទប់ពិសោធន៍!"
-        },
-        "pre-express-2022/A Royal Battle with Events": {
-          "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍",
-          "overview": "នៅក្នុង **គម្រោងខ្នាតតូច** នេះ សិស្សនឹងមានឱកាសរៀនពីរបៀបប្រើប្រាស់ព្រឹត្តិការណ៍នៅក្នុង Play Lab និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀន ដើម្បីបង្កើតហ្គេមដែលមានចលនា។",
-          "student_overview": "ប្រើព្រឹត្តិការណ៍ដើម្បីបង្កើតរឿង ឬបង្កើតហ្គេមដែលអាចលេងបាន។"
-        },
-        "coursea-2022/Learn to Drag and Drop": {
-          "name": "រៀនអំពីការអូស និងទម្លាក់",
-          "overview": "មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។"
-        },
-        "coursea-2022/Happy Maps": {
-          "purpose": "ស្ពានពីក្បួនដោះស្រាយទៅការសរសេរកម្មវិធីអាចជារយៈពេលខ្លីប្រសិនបើសិស្សយល់ពីភាពខុសគ្នារវាងការធ្វើផែនការ​ និងការសរសេរអ៊ិនកូដលំដាប់នោះទៅជាភាសាដែលសមរម្យ។  សកម្មភាពនេះនឹងជួយឱ្យសិស្សទទួលបានបទពិសោធន៍ក្នុងការអាននិងសរសេរជាកូដខ្លីៗ។"
-        },
-        "coursea-2022/Sequencing with Scrat": {
-          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក "
-        },
-        "coursea-2022/Programming with Rey and BB-8": {
-          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
-        },
-        "coursea-2022/Loops with Scrat": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក"
-        },
-        "coursea-2022/Loops with Laurel": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel"
-        },
-        "coursea-2022/Ocean Scene with Loops": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយទិដ្ឋភាពសមុទ្រ",
-          "overview": "ត្រលប់ទៅរង្វិលជុំសិស្សរៀនគូររូបភាពដោយគូសលំដាប់លំដោយនៃការណែនាំសាមញ្ញ ៗ ។  នៅក្នុង មេរៀនដោត មុន ៗ រង្វិលជុំត្រូវបានប្រើដើម្បីឆ្លងកាត់ផ្ទាំងគំនូរនិងប្រមូលកំណប់។  នៅទីនេះរង្វិលជុំកំពុងបង្កើតលំនាំ។  នៅចុងបញ្ចប់នៃដំណាក់កាលនេះនិស្សិតនឹងត្រូវបានផ្តល់ឱកាសដើម្បីបង្កើតរូបភាពផ្ទាល់ខ្លួនដោយប្រើរង្វិលជុំ។"
-        },
-        "coursea-2022/The Big Event Jr": {
-          "overview": "ព្រឹត្តិការណ៍គឺជាវិធីដ៏ល្អដើម្បីបន្ថែមភាពខុសគ្នាទៅនឹងក្បួនដោះស្រាយដែលបានសរសេរជាហើយ។  ពេលខ្លះអ្នកចង់អោយកម្មវិធីរបស់អ្នកអាចឆ្លើយតបទៅអ្នកប្រើអោយបានច្បាស់នៅពេលអ្នកប្រើចង់អោយវាធ្វើ។  នោះគឺជាអ្វីដែលព្រឹត្តិការណ៍ដែលគេចង់បាន។"
-        },
-        "coursea-2022/Mini-Project: On the Move with Play Lab": {
-          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ិនធើណេតនេះនិស្សិតនឹងមានឱកាសរៀនពីរបៀបប្រើព្រឹត្តិការណ៍នានានៅក្នុង ផ្លេ លេប និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀនបង្កើតហ្គេមមានចលនា។  ដល់ពេលដែលត្រូវច្នៃប្រឌិតហើយបង្កើតរឿងនៅក្នុងបន្ទប់ពិសោធន៍!"
-        },
-        "coursea-2022/End of Course Project": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង"
-        },
-        "coursec-2022/Programming with Angry Birds": {
-          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
-        },
-        "coursec-2022/Debugging in Maze": {
-          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
-        },
-        "coursec-2022/Loops with Rey and BB-8": {
-          "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
-        },
-        "coursec-2022/The Big Event": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "coursec-2022/End of Course Project": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង",
-          "student_overview": "ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។"
-        },
-        "csd3-2022/Shapes and Parameters": {
-          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
-        },
-        "csd3-2022/Variables": {
-          "name": "អ​ថេរ"
-        },
-        "csd3-2022/Random Numbers": {
-          "name": "លេខចៃដន្យ"
-        },
-        "csd3-2022/Sprite Properties": {
-          "name": "លក្ខណៈសម្បត្តិនៃ sprite"
-        },
-        "csd3-2022/Text": {
-          "name": "អត្ថ​​បទ"
-        },
-        "csd3-2022/The Draw Loop": {
+        "csd3-2017/The Draw Loop": {
           "name": "ការគូររង្វិលជុំដដែលៗ"
         },
-        "csd3-2022/Conditionals": {
+        "csd3-2017/Conditionals": {
           "name": "លក្ខខណ្ឌ"
         },
-        "csd3-2022/Collision Detection": {
+        "csd3-2017/Collision Detection": {
           "name": "ការរកឃើញការប៉ះទង្គិច"
         },
-        "csd3-2022/Functions": {
+        "csd3-2017/Functions": {
           "name": "អនុ​គមន៍"
         },
-        "csd6-2022/Functions": {
-          "name": "អនុ​គមន៍"
+        "csd6-2017/Designing Screens with Code_": {
+          "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
         },
-        "courseb-2018/Sequencing with Scrat": {
-          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក "
+        "coursea-2017/Persistence & Frustration: Stevie and the Marbles": {
+          "name": "ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ"
         },
-        "courseb-2018/Your Digital Footprint": {
-          "name": "Your Digital Footprint"
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ"
         },
-        "courseb-2018/Programming with Rey and BB-8": {
+        "coursea-2017/Learn to Drag and Drop": {
+          "name": "ការតម្រៀបតាមអូសនិងទម្លាក់"
+        },
+        "coursea-2017/Going Places Safely": {
+          "name": "ពលរដ្ឋឌីជីថល៖ ធ្វើដំណើរទៅកន្លែងដោយសុវត្ថិភាព"
+        },
+        "coursea-2017/Loops in Artist": {
+          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
+        },
+        "courseb-2017/Persistence & Frustration: Stevie and the Marbles": {
+          "name": "ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ"
+        },
+        "courseb-2017/Learn to Drag and Drop": {
+          "name": "ការតម្រៀបតាមអូសនិងទម្លាក់"
+        },
+        "courseb-2017/Your Digital Footprint": {
+          "name": "ពលរដ្ឋឌីជីថល៖ ស្នាមជើងឌីជីថលរបស់ខ្ញុំ"
+        },
+        "courseb-2017/Programming with Rey and BB-8": {
           "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
         },
-        "courseb-2018/Loops in Ice Age": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក"
+        "courseb-2017/Loops in Artist": {
+          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
         },
-        "courseb-2018/Loops in Collector": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel"
+        "coursec-2017/Building a Foundation": {
+          "name": "ការជម្នះ ៖ ការកសាងគ្រឹះ"
         },
-        "courseb-2018/Loops in Artist": {
-          "name": "គូរសួនច្បារជាមួយប្រតិបត្តិដដែលៗ"
+        "coursec-2017/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
-        "courseb-2018/Events in Play Lab": {
-          "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
+        "coursec-2017/Loops with Rey and BB-8": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
+        },
+        "coursec-2017/Loops in Artist": {
+          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
+        },
+        "coursec-2017/Screen Out the Mean": {
+          "name": "ពលរដ្ឋឌីជីថល ៖ ដកស្រង់បង្ហាញនូវអត្ថន័យ"
+        },
+        "coursec-2017/Binary Bracelets": {
+          "name": "លើសពីការសរសេរកម្មវិធី៖ ខ្សែដៃគោលពីរ"
+        },
+        "coursed-2017/Algorithms: Graph Paper Programming": {
+          "name": "ការសរសេរកម្មវិធី: កម្មវិធីក្រដាស់ក្រាហ្វិច"
+        },
+        "coursed-2017/Introduction": {
+          "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "បណ្ដុំប្រតិបត្តិដដែលៗ"
+        },
+        "coursed-2017/Nested Loops Project in Artist": {
+          "name": "សំបុករង្វិលជុំនៅទឹកកក"
+        },
+        "coursed-2017/Algorithms: Relay Programming": {
+          "name": "ការបំបាត់កំហុស៖ ការសរសេរកម្មវិធីបញ្ជូនបន្ត"
+        },
+        "coursed-2017/Debugging in Collector": {
+          "name": "បំបាត់កំហុសនៅក្នុងអ្នកប្រមូល"
+        },
+        "coursed-2017/Conditionals with Cards": {
+          "name": "ប្រសិនបើ / ផ្សេងទៀត: លក្ខខណ្ឌជាមួយកាត"
+        },
+        "coursed-2017/Digital Citizenship": {
+          "name": "សញ្ជាតិឌីជីថល៖ ការអនុវត្តសញ្ជាតិឌីជីថល"
+        },
+        "coursed-2017/Unplugged: Binary": {
+          "name": "លើសពីការសរសេរកម្មវិធី: រូបភាពរបាប់គោលពីរ"
+        },
+        "coursed-2017/Artist Binary": {
+          "name": "សិល្បកររបាប់គោលពីរ"
+        },
+        "coursee-2017/Sequence in Maze": {
+          "name": "លំដាប់លំដោយនៅក្នុង Maze"
+        },
+        "coursee-2017/Debugging with Scrat": {
+          "name": "ការបំបាត់កំហុសជាមួយ Scrat"
+        },
+        "coursee-2017/Loops in Artist": {
+          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "បណ្ដុំប្រតិបត្តិដដែលៗ"
+        },
+        "coursee-2017/Nested Loops with Frozen": {
+          "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
+        },
+        "coursee-2017/Introduction": {
+          "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត"
+        },
+        "coursee-2017/Conditionals": {
+          "name": "លក្ខខណ្ឌនៅក្នុង Farmer"
+        },
+        "coursee-2017/Private and Personal Information": {
+          "name": "សញ្ជាតិឌីជីថល៖ ព័ត៌មានឯកជននិងផ្ទាល់ខ្លួន"
+        },
+        "coursee-2017/Functions in Harvester": {
+          "name": "អនុគមន៍នៅក្នុង Harvester"
+        },
+        "coursee-2017/Internet": {
+          "name": "លើសពីការសរសេរកម្មវិធី៖ អ៊ីនធឺណិត"
+        },
+        "coursee-2017/Crowdsourcing": {
+          "name": "លើសពីការសរសេរកម្មវិធី: Crowdsourcing"
+        },
+        "coursef-2017/Sequence in Maze": {
+          "name": "លំដាប់លំដោយនៅក្នុង Maze"
+        },
+        "coursef-2017/Debugging with Scrat": {
+          "name": "ការបំបាត់កំហុសជាមួយ Scrat"
+        },
+        "coursef-2017/Loops in Artist": {
+          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
+        },
+        "coursef-2017/Nested Loops in Bee/Zombie": {
+          "name": "រង្វិលជុំសំបុកក្នុង សត្វឃ្មុំ/បីសាចហ្សីប៊ី"
+        },
+        "coursef-2017/Nested Loops with Frozen": {
+          "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
+        },
+        "coursef-2017/Introduction": {
+          "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត"
+        },
+        "coursef-2017/The Power of Words": {
+          "name": "ភាពជាឌីជីថល: អំណាចនៃពាក្យ"
+        },
+        "coursef-2017/Ice Age Play Lab": {
+          "name": "ព្រឹត្តិការណ៍ក្នុងយុគសម័យទឹកកក"
+        },
+        "coursef-2017/Conditionals in Minecraft": {
+          "name": "លក្ខខណ្ឌនៅក្នុង Minecraft"
+        },
+        "coursef-2017/Envelope Variables": {
+          "name": "កម្មវិធីអថេរ: កម្មវិធីសំបុត្រអថេរ "
+        },
+        "coursef-2017/For Loop Fun": {
+          "name": "For Loop៖ For Loop កំសាន្ត"
+        },
+        "coursef-2017/Songwriting with Parameters": {
+          "name": "អនុគមន៍ ៖ ការនិពន្ធចម្រៀងជាមួយនឹងប៉ារ៉ាម៉ែត្រ "
+        },
+        "express-2017/Algorithms: Graph Paper Programming": {
+          "name": "ការសរសេរកម្មវិធី: កម្មវិធីក្រដាស់ក្រាហ្វិច"
+        },
+        "express-2017/Introduction": {
+          "name": "ការណែនាំ"
+        },
+        "express-2017/Debugging in Collector": {
+          "name": "សេចក្តីផ្តើមពីការបំបាត់កំហុស"
+        },
+        "express-2017/Loops in Artist": {
+          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
+        },
+        "express-2017/Nested Loops": {
+          "name": "បណ្ដុំប្រតិបត្តិដដែលៗ"
+        },
+        "express-2017/Nested Loops Project in Frozen": {
+          "name": "សំបុករង្វិលជុំនៅទឹកកក"
+        },
+        "express-2017/How it Works: The Internet": {
+          "name": "លើសពីការសរសេរកម្មវិធី៖ អ៊ីនធឺណិត"
+        },
+        "express-2017/Common Sense Education: Digital Citizenship": {
+          "name": "សញ្ជាតិឌីជីថល៖ ការអនុវត្តសញ្ជាតិឌីជីថល"
+        },
+        "express-2017/Common Sense Education: Screen Out the Mean": {
+          "name": "ពលរដ្ឋឌីជីថល ៖ ដកស្រង់បង្ហាញនូវអត្ថន័យ"
+        },
+        "express-2017/Events in Star Wars": {
+          "name": "ព្រឹត្តិការណ៍ក្នុងសង្គ្រាមភពផ្កាយ "
+        },
+        "express-2017/Events with Flappy": {
+          "name": "ព្រឹត្តិការណ៍ជាមួយហ្វ្លេបពី "
+        },
+        "express-2017/Conditionals: Conditionals with Cards": {
+          "name": "លក្ខខណ្ឌ: លក្ខខណ្ឌជាមួយសន្លឹកកាត"
+        },
+        "express-2017/Until Loops in Maze": {
+          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
+        },
+        "express-2017/Conditionals in Minecraft": {
+          "name": "លក្ខខណ្ឌនៅក្នុង Minecraft"
+        },
+        "express-2017/Variables: Envelope Variables": {
+          "name": "កម្មវិធីអថេរ: កម្មវិធីសំបុត្រអថេរ "
+        },
+        "express-2017/For Loops: For Loop Fun": {
+          "name": "For Loop៖ For Loop កំសាន្ត"
+        },
+        "express-2017/Functions: Songwriting with Parameters": {
+          "name": "អនុគមន៍ ៖ ការនិពន្ធចម្រៀងជាមួយនឹងប៉ារ៉ាម៉ែត្រ "
+        },
+        "pre-express-2017/Persistence & Frustration: Stevie and the Marbles": {
+          "name": "ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ"
+        },
+        "pre-express-2017/Learn to Drag and Drop": {
+          "name": "ការតម្រៀបតាមអូសនិងទម្លាក់"
+        },
+        "pre-express-2017/Online Safety: Your Digital Footprint": {
+          "name": "ពលរដ្ឋឌីជីថល៖ ស្នាមជើងឌីជីថលរបស់ខ្ញុំ"
+        },
+        "pre-express-2017/Programming: Star Wars": {
+          "name": "ការសរសេរកូដ៖ សង្គ្រាមភពផ្កាយ "
+        },
+        "pre-express-2017/Loops in Artist": {
+          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
+        },
+        "csd2-2018/Lists": {
+          "name": "បញ្ជី"
+        },
+        "csd3-2018/Variables": {
+          "name": "អ​ថេរ"
+        },
+        "csd3-2018/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2018/The Draw Loop": {
+          "name": "ការគូររង្វិលជុំដដែលៗ"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "លក្ខខណ្ឌ"
+        },
+        "csd3-2018/Collision Detection": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "csd3-2018/Functions": {
+          "name": "អនុ​គមន៍"
+        },
+        "csd6-2018/Designing Screens with Code": {
+          "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
         },
         "coursea-2018/Debugging: Unspotted Bugs": {
           "name": "កំហុសដែលមិនបានគ្រោងទុក"
@@ -378,11 +290,56 @@
         "coursea-2018/Events in Play Lab": {
           "name": "ការផ្លាស់ប្ដូរចលនាដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
         },
+        "courseb-2018/Sequencing with Scrat": {
+          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក "
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Your Digital Footprint"
+        },
+        "courseb-2018/Programming with Rey and BB-8": {
+          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
+        },
+        "courseb-2018/Loops in Ice Age": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក"
+        },
+        "courseb-2018/Loops in Collector": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel"
+        },
+        "courseb-2018/Loops in Artist": {
+          "name": "គូរសួនច្បារជាមួយប្រតិបត្តិដដែលៗ"
+        },
+        "courseb-2018/Events in Play Lab": {
+          "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
+        },
+        "coursec-2018/Programming in Maze": {
+          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "coursec-2018/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
+        },
+        "coursec-2018/Programming in Collector": {
+          "name": "ប្រមូលកំណប់ជាមួយតួអង្គ Laurel"
+        },
+        "coursec-2018/Programming in Artist": {
+          "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
+        },
+        "coursec-2018/Loops with Rey and BB-8": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
         "coursed-2018/Introduction to Online Puzzles": {
           "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត"
         },
         "coursed-2018/Loops in Ice Age": {
           "name": "ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក"
+        },
+        "coursed-2018/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
+        "coursed-2018/Nested Loops in Frozen": {
+          "name": "ផ្កាព្រិលជាមួយ Anna និង Elsa"
         },
         "coursed-2018/Until Loops in Maze": {
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
@@ -390,11 +347,47 @@
         "coursed-2018/Conditionals with Cards": {
           "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
+        "coursed-2018/Conditionals in Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
+        },
+        "coursed-2018/Conditionals & Loops in Harvester": {
+          "name": "ប្រើលក្ខខណ្ឌ ដើម្បីប្រមូលផល"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "coursee-2018/Debugging with Scrat": {
+          "name": "ការបំបាត់កំហុសជាមួយ Scrat"
+        },
+        "coursee-2018/Programming in Artist": {
+          "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
+        },
+        "coursee-2018/Nested Loops": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
+        "coursee-2018/Nested Loops with Frozen": {
+          "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "coursee-2018/Functions in Artist": {
+          "name": "មុខងារជាមួយវិចិត្រករ"
+        },
+        "coursee-2018/Internet": {
+          "name": "អ៊ីនធឺណិត"
+        },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
         },
         "coursef-2018/Debugging with Scrat": {
           "name": "ការបំបាត់កំហុសជាមួយ Scrat"
+        },
+        "coursef-2018/Programming in Artist": {
+          "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
+        },
+        "coursef-2018/Nested Loops in Bee/Zombie": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
         },
         "coursef-2018/Nested Loops with Frozen": {
           "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
@@ -408,14 +401,26 @@
         "express-2018/Debugging in Maze": {
           "name": "ការបំបាត់កំហុសជាមួយ Scrat"
         },
+        "express-2018/Programming in Collector": {
+          "name": "ប្រមូលកំណប់ជាមួយតួអង្គ Laurel"
+        },
+        "express-2018/Programming in Artist": {
+          "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
+        },
         "express-2018/Loops with Rey and BB-8": {
-          "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
         },
         "express-2018/Until Loops in Maze": {
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
         },
         "express-2018/Conditionals with Cards": {
           "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "express-2018/Conditionals in Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
+        },
+        "express-2018/Conditionals & Loops in Harvester": {
+          "name": "ប្រើលក្ខខណ្ឌ ដើម្បីប្រមូលផល"
         },
         "express-2018/Events: The Big Event": {
           "name": "ព្រឹត្តិការណ៍ធំ"
@@ -425,33 +430,6 @@
         },
         "express-2018/Internet": {
           "name": "អ៊ីនធឺណិត"
-        },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
-        },
-        "coursee-2018/Debugging with Scrat": {
-          "name": "ការបំបាត់កំហុសជាមួយ Scrat"
-        },
-        "coursee-2018/Nested Loops with Frozen": {
-          "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
-        },
-        "coursee-2018/Internet": {
-          "name": "អ៊ីនធឺណិត"
-        },
-        "coursec-2018/Programming in Maze": {
-          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
-        },
-        "coursec-2018/Debugging in Maze": {
-          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
-        },
-        "coursec-2018/Loops with Rey and BB-8": {
-          "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
         },
         "pre-express-2018/Debugging: Unspotted Bugs": {
           "name": "កំហុសដែលមិនបានគ្រោងទុក"
@@ -480,26 +458,29 @@
         "pre-express-2018/Events in Play Lab": {
           "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
         },
-        "csd3-2018/Variables": {
+        "csd2-2019/Lists": {
+          "name": "បញ្ជី"
+        },
+        "csd3-2019/Variables": {
           "name": "អ​ថេរ"
         },
-        "csd3-2018/The Draw Loop": {
+        "csd3-2019/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2019/The Draw Loop": {
           "name": "ការគូររង្វិលជុំដដែលៗ"
         },
-        "csd3-2018/Conditionals": {
+        "csd3-2019/Conditionals": {
           "name": "លក្ខខណ្ឌ"
         },
-        "csd3-2018/Collision Detection": {
+        "csd3-2019/Collision Detection": {
           "name": "ការរកឃើញការប៉ះទង្គិច"
         },
-        "csd3-2018/Functions": {
+        "csd3-2019/Functions": {
           "name": "អនុ​គមន៍"
         },
-        "csd6-2018/Designing Screens with Code": {
+        "csd6-2019/Designing Screens with Code": {
           "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
-        },
-        "csd2-2018/Lists": {
-          "name": "បញ្ជី"
         },
         "coursea-2019/Learn to Drag and Drop": {
           "name": "រៀនអំពីការអូស និងទម្លាក់"
@@ -540,20 +521,68 @@
         "courseb-2019/Events in Play Lab": {
           "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
         },
+        "coursec-2019/Programming in Maze": {
+          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "coursec-2019/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
+        },
+        "coursec-2019/Programming in Collector": {
+          "name": "ប្រមូលកំណប់ជាមួយតួអង្គ Laurel"
+        },
+        "coursec-2019/Programming in Artist": {
+          "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
+        },
+        "coursec-2019/Loops with Rey and BB-8": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "coursec-2019/End of Course Project: Create a Play Lab Game": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
         "coursed-2019/Introduction to Online Puzzles": {
           "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត"
         },
         "coursed-2019/Loops in Ice Age": {
           "name": "ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក"
         },
+        "coursed-2019/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
         "coursed-2019/Conditionals with Cards": {
           "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "coursed-2019/Conditionals in Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
         },
         "coursed-2019/Until Loops in Maze": {
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
         },
+        "coursed-2019/Conditionals & Loops in Harvester": {
+          "name": "ប្រើលក្ខខណ្ឌ ដើម្បីប្រមូលផល"
+        },
         "coursed-2019/Dance Party": {
-          "name": "Dance Party"
+          "name": "កម្មវិធីរាំ"
+        },
+        "coursee-2019/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "លក្ខខណ្ឌនៅក្នុង Minecraft: នាវាមុជទឹក"
+        },
+        "coursee-2019/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
+        "coursee-2019/Nested Loops in Frozen": {
+          "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
+        },
+        "coursee-2019/Functions in Artist": {
+          "name": "មុខងារជាមួយវិចិត្រករ"
+        },
+        "coursee-2019/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
+        "coursef-2019/Nested Loops in the Maze": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
         },
         "coursef-2019/For Loops in Artist": {
           "name": "For loops ជាមួយវិចិត្រករ"
@@ -561,17 +590,14 @@
         "coursef-2019/Internet": {
           "name": "អ៊ីនធឺណិត"
         },
+        "coursef-2019/Virtual Pet": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
+        },
         "coursef-2019/End of Course Project": {
           "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
-        "coursee-2019/Nested Loops in Frozen": {
-          "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
-        },
-        "coursee-2019/End of Course Project": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង"
-        },
         "express-2019/Dance Party": {
-          "name": "Dance Party"
+          "name": "កម្មវិធីរាំ"
         },
         "express-2019/Programming in Maze": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
@@ -579,34 +605,46 @@
         "express-2019/Debugging in Maze": {
           "name": "ការបំបាត់កំហុសជាមួយ Scrat"
         },
+        "express-2019/Programming in Collector": {
+          "name": "ប្រមូលកំណប់ជាមួយតួអង្គ Laurel"
+        },
+        "express-2019/Programming in Artist": {
+          "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
+        },
         "express-2019/Loops with Rey and BB-8": {
-          "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
+        },
+        "express-2019/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
+        "express-2019/Nested Loops in Frozen": {
+          "name": "ផ្កាព្រិលជាមួយ Anna និង Elsa"
+        },
+        "express-2019/Conditionals in Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
+        },
+        "express-2019/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "លក្ខខណ្ឌនៅក្នុង Minecraft: នាវាមុជទឹក"
         },
         "express-2019/Until Loops in Maze": {
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
+        },
+        "express-2019/Conditionals & Loops in Harvester": {
+          "name": "ប្រើលក្ខខណ្ឌ ដើម្បីប្រមូលផល"
+        },
+        "express-2019/Functions in Artist": {
+          "name": "មុខងារជាមួយវិចិត្រករ"
         },
         "express-2019/For Loops in Artist": {
           "name": "For loops ជាមួយវិចិត្រករ"
         },
         "express-2019/Learning Sprites with Sprite Lab": {
-          "name": "ត្រីហែលទឹកនៅក្នុង មន្ទីរពិសោធន៍"
+          "name": "តួអង្គត្រីក្នុង Sprite Lab"
+        },
+        "express-2019/Virtual Pet with Sprite Lab": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
         },
         "express-2019/Build A Project": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង"
-        },
-        "coursec-2019/Programming in Maze": {
-          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
-        },
-        "coursec-2019/Debugging in Maze": {
-          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
-        },
-        "coursec-2019/Loops with Rey and BB-8": {
-          "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "coursec-2019/End of Course Project: Create a Play Lab Game": {
           "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
         "pre-express-2019/Learn to Drag and Drop": {
@@ -642,388 +680,247 @@
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
         },
-        "csd3-2019/Variables": {
-          "name": "អ​ថេរ"
+        "coursea-2020/Learn to Drag and Drop": {
+          "name": "រៀនអំពីការអូស និងទម្លាក់"
         },
-        "csd3-2019/The Draw Loop": {
-          "name": "ការគូររង្វិលជុំដដែលៗ"
+        "coursea-2020/Sequencing with Scrat": {
+          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក "
         },
-        "csd3-2019/Conditionals": {
-          "name": "លក្ខខណ្ឌ"
-        },
-        "csd3-2019/Collision Detection": {
-          "name": "ការរកឃើញការប៉ះទង្គិច"
-        },
-        "csd3-2019/Functions": {
-          "name": "អនុ​គមន៍"
-        },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
-        },
-        "csd2-2019/Lists": {
-          "name": "បញ្ជី"
-        },
-        "coursef-2017/Sequence in Maze": {
-          "name": "លំដាប់លំដោយនៅក្នុង Maze"
-        },
-        "coursef-2017/Debugging with Scrat": {
-          "name": "ការបំបាត់កំហុសជាមួយ Scrat"
-        },
-        "coursef-2017/Loops in Artist": {
-          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
-        },
-        "coursef-2017/Nested Loops in Bee/Zombie": {
-          "name": "រង្វិលជុំសំបុកក្នុង សត្វឃ្មុំ/បីសាចហ្សីប៊ី"
-        },
-        "coursef-2017/Nested Loops with Frozen": {
-          "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
-        },
-        "coursef-2017/Introduction": {
-          "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត"
-        },
-        "coursef-2017/The Power of Words": {
-          "name": "ភាពជាឌីជីថល: អំណាចនៃពាក្យ"
-        },
-        "coursef-2017/Ice Age Play Lab": {
-          "name": "ព្រឹត្តិការណ៍ក្នុងយុគសម័យទឹកកក"
-        },
-        "coursef-2017/Conditionals in Minecraft": {
-          "name": "លក្ខខណ្ឌនៅក្នុង Minecraft"
-        },
-        "coursef-2017/Envelope Variables": {
-          "name": "កម្មវិធីអថេរ: កម្មវិធីសំបុត្រអថេរ "
-        },
-        "coursef-2017/For Loop Fun": {
-          "name": "For Loop៖ For Loop កំសាន្ត"
-        },
-        "coursef-2017/Songwriting with Parameters": {
-          "name": "អនុគមន៍ ៖ ការនិពន្ធចម្រៀងជាមួយនឹងប៉ារ៉ាម៉ែត្រ "
-        },
-        "coursea-2017/Persistence & Frustration: Stevie and the Marbles": {
-          "name": "ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ"
-        },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ"
-        },
-        "coursea-2017/Learn to Drag and Drop": {
-          "name": "ការតម្រៀបតាមអូសនិងទម្លាក់"
-        },
-        "coursea-2017/Going Places Safely": {
-          "name": "ពលរដ្ឋឌីជីថល៖ ធ្វើដំណើរទៅកន្លែងដោយសុវត្ថិភាព"
-        },
-        "coursea-2017/Loops in Artist": {
-          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
-        },
-        "pre-express-2017/Persistence & Frustration: Stevie and the Marbles": {
-          "name": "ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ"
-        },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ"
-        },
-        "pre-express-2017/Learn to Drag and Drop": {
-          "name": "ការតម្រៀបតាមអូសនិងទម្លាក់"
-        },
-        "pre-express-2017/Online Safety: Your Digital Footprint": {
-          "name": "ពលរដ្ឋឌីជីថល៖ ស្នាមជើងឌីជីថលរបស់ខ្ញុំ"
-        },
-        "pre-express-2017/Programming: Star Wars": {
-          "name": "ការសរសេរកូដ៖ សង្គ្រាមភពផ្កាយ "
-        },
-        "pre-express-2017/Loops in Artist": {
-          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
-        },
-        "coursee-2017/Sequence in Maze": {
-          "name": "លំដាប់លំដោយនៅក្នុង Maze"
-        },
-        "coursee-2017/Debugging with Scrat": {
-          "name": "ការបំបាត់កំហុសជាមួយ Scrat"
-        },
-        "coursee-2017/Loops in Artist": {
-          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
-        },
-        "coursee-2017/Nested Loops with Frozen": {
-          "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
-        },
-        "coursee-2017/Introduction": {
-          "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត"
-        },
-        "coursee-2017/Conditionals": {
-          "name": "លក្ខខណ្ឌនៅក្នុង Farmer"
-        },
-        "coursee-2017/Private and Personal Information": {
-          "name": "សញ្ជាតិឌីជីថល៖ ព័ត៌មានឯកជននិងផ្ទាល់ខ្លួន"
-        },
-        "coursee-2017/Functions in Harvester": {
-          "name": "អនុគមន៍នៅក្នុង Harvester"
-        },
-        "coursee-2017/Internet": {
-          "name": "លើសពីការសរសេរកម្មវិធី៖ អ៊ីនធឺណិត"
-        },
-        "coursee-2017/Crowdsourcing": {
-          "name": "លើសពីការសរសេរកម្មវិធី: Crowdsourcing"
-        },
-        "coursec-2017/Building a Foundation": {
-          "name": "ការជម្នះ ៖ ការកសាងគ្រឹះ"
-        },
-        "coursec-2017/Debugging in Maze": {
-          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
-        },
-        "coursec-2017/Loops with Rey and BB-8": {
-          "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
-        },
-        "coursec-2017/Loops in Artist": {
-          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
-        },
-        "coursec-2017/Screen Out the Mean": {
-          "name": "ពលរដ្ឋឌីជីថល ៖ ដកស្រង់បង្ហាញនូវអត្ថន័យ"
-        },
-        "coursec-2017/Binary Bracelets": {
-          "name": "លើសពីការសរសេរកម្មវិធី៖ ខ្សែដៃគោលពីរ"
-        },
-        "courseb-2017/Persistence & Frustration: Stevie and the Marbles": {
-          "name": "ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ"
-        },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ"
-        },
-        "courseb-2017/Learn to Drag and Drop": {
-          "name": "ការតម្រៀបតាមអូសនិងទម្លាក់"
-        },
-        "courseb-2017/Your Digital Footprint": {
-          "name": "ពលរដ្ឋឌីជីថល៖ ស្នាមជើងឌីជីថលរបស់ខ្ញុំ"
-        },
-        "courseb-2017/Programming with Rey and BB-8": {
+        "coursea-2020/Programming with Rey and BB-8": {
           "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
         },
-        "courseb-2017/Loops in Artist": {
-          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
+        "coursea-2020/Loops in Ice Age": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក"
         },
-        "coursed-2017/Algorithms: Graph Paper Programming": {
-          "name": "ការសរសេរកម្មវិធី: កម្មវិធីក្រដាស់ក្រាហ្វិច"
-        },
-        "coursed-2017/Introduction": {
-          "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត"
-        },
-        "coursed-2017/Nested Loops Project in Artist": {
-          "name": "សំបុករង្វិលជុំនៅទឹកកក"
-        },
-        "coursed-2017/Algorithms: Relay Programming": {
-          "name": "ការបំបាត់កំហុស៖ ការសរសេរកម្មវិធីបញ្ជូនបន្ត"
-        },
-        "coursed-2017/Debugging in Collector": {
-          "name": "បំបាត់កំហុសនៅក្នុងអ្នកប្រមូល"
-        },
-        "coursed-2017/Conditionals with Cards": {
-          "name": "ប្រសិនបើ / ផ្សេងទៀត: លក្ខខណ្ឌជាមួយកាត"
-        },
-        "coursed-2017/Digital Citizenship": {
-          "name": "សញ្ជាតិឌីជីថល៖ ការអនុវត្តសញ្ជាតិឌីជីថល"
-        },
-        "coursed-2017/Unplugged: Binary": {
-          "name": "លើសពីការសរសេរកម្មវិធី: រូបភាពរបាប់គោលពីរ"
-        },
-        "coursed-2017/Artist Binary": {
-          "name": "សិល្បកររបាប់គោលពីរ"
-        },
-        "express-2017/Algorithms: Graph Paper Programming": {
-          "name": "ការសរសេរកម្មវិធី: កម្មវិធីក្រដាស់ក្រាហ្វិច"
-        },
-        "express-2017/Debugging in Collector": {
-          "name": "សេចក្តីផ្តើមពីការបំបាត់កំហុស"
-        },
-        "express-2017/Loops in Artist": {
-          "name": "សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)"
-        },
-        "express-2017/Nested Loops Project in Frozen": {
-          "name": "សំបុករង្វិលជុំនៅទឹកកក"
-        },
-        "express-2017/How it Works: The Internet": {
-          "name": "លើសពីការសរសេរកម្មវិធី៖ អ៊ីនធឺណិត"
-        },
-        "express-2017/Common Sense Education: Digital Citizenship": {
-          "name": "សញ្ជាតិឌីជីថល៖ ការអនុវត្តសញ្ជាតិឌីជីថល"
-        },
-        "express-2017/Common Sense Education: Screen Out the Mean": {
-          "name": "ពលរដ្ឋឌីជីថល ៖ ដកស្រង់បង្ហាញនូវអត្ថន័យ"
-        },
-        "express-2017/Events in Star Wars": {
-          "name": "ព្រឹត្តិការណ៍ក្នុងសង្គ្រាមភពផ្កាយ "
-        },
-        "express-2017/Events with Flappy": {
-          "name": "ព្រឹត្តិការណ៍ជាមួយហ្វ្លេបពី "
-        },
-        "express-2017/Conditionals: Conditionals with Cards": {
-          "name": "លក្ខខណ្ឌ: លក្ខខណ្ឌជាមួយសន្លឹកកាត"
-        },
-        "express-2017/Until Loops in Maze": {
-          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
-        },
-        "express-2017/Conditionals in Minecraft": {
-          "name": "លក្ខខណ្ឌនៅក្នុង Minecraft"
-        },
-        "express-2017/Variables: Envelope Variables": {
-          "name": "កម្មវិធីអថេរ: កម្មវិធីសំបុត្រអថេរ "
-        },
-        "express-2017/For Loops: For Loop Fun": {
-          "name": "For Loop៖ For Loop កំសាន្ត"
-        },
-        "express-2017/Functions: Songwriting with Parameters": {
-          "name": "អនុគមន៍ ៖ ការនិពន្ធចម្រៀងជាមួយនឹងប៉ារ៉ាម៉ែត្រ "
-        },
-        "csd3-2017/Variables": {
-          "name": "អ​ថេរ"
-        },
-        "csd3-2017/The Draw Loop": {
-          "name": "ការគូររង្វិលជុំដដែលៗ"
-        },
-        "csd3-2017/Conditionals": {
-          "name": "លក្ខខណ្ឌ"
-        },
-        "csd3-2017/Collision Detection": {
-          "name": "ការរកឃើញការប៉ះទង្គិច"
-        },
-        "csd3-2017/Functions": {
-          "name": "អនុ​គមន៍"
-        },
-        "csd6-2017/Designing Screens with Code_": {
-          "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
-        },
-        "csd2-2017/Lists": {
-          "name": "បញ្ជី"
-        },
-        "course4/Artist": {
-          "name": "សិល្បករ"
-        },
-        "20-hour/Introduction to Computer Science": {
-          "name": "សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
-        },
-        "20-hour/Computational Thinking": {
-          "name": "ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ"
-        },
-        "20-hour/The Artist": {
-          "name": "វិចិត្រករ"
-        },
-        "20-hour/Functions": {
-          "name": "អនុ​គមន៍"
-        },
-        "20-hour/The Farmer": {
-          "name": "កសិករ"
-        },
-        "20-hour/Conditionals": {
-          "name": "លក្ខខណ្ឌ"
-        },
-        "20-hour/The Internet": {
-          "name": "អ៊ីនធឺណិត"
-        },
-        "course2/Conditionals": {
-          "name": "លក្ខខណ្ឌ"
-        },
-        "course2/The Big Event": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "course2/Your Digital Footprint": {
-          "name": "Your Digital Footprint"
-        },
-        "course3/Computational Thinking": {
-          "name": "ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ"
-        },
-        "course3/Artist": {
-          "name": "សិល្បករ"
-        },
-        "course3/Bounce": {
-          "name": "បាល់​លោត"
-        },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ"
-        },
-        "course1/The Big Event": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "jigsaw/Jigsaw": {
-          "overview": "មេរៀននេះនឹងផ្តល់ឱ្យសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។"
-        },
-        "allthethings/Artist": {
-          "name": "សិល្បករ"
-        },
-        "allthethings/Bounce": {
-          "name": "បាល់​លោត"
-        },
-        "allthethings/Minecraft": {
-          "name": "ម៉ាញក្រាស់"
-        },
-        "allthethings/Web Lab": {
-          "name": "បន្ទប់វេប"
-        },
-        "allthethings/Sprite Lab": {
-          "name": "មន្ទីរពិសោធន៍ Sprite "
-        },
-        "allthethings/lesson-48": {
-          "name": "កំណាព្យ"
-        },
-        "coursef-2021/lesson-6": {
-          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍"
-        },
-        "coursef-2021/lesson-2": {
-          "student_overview": "ការគំរាមកំហែង គឺមិនដែលត្រឹមត្រូវទេ។ មេរៀននេះ នឹងបង្រៀនអ្នកពីអ្វីដែលត្រឹមត្រូវ និងមិនត្រឹមត្រូវ ក្នុងការនិយាយអនឡាញ។"
-        },
-        "coursef-2021/Variables that Change in Artist": {
-          "name": "ការប្រើប្រាស់អថេរជាមួយសិល្បករ",
-          "overview": "នៅក្នុងមេរៀននេះ សិស្សនឹងអាចធ្វើការសិក្សាស្វែងយល់កាន់តែស៊ីជម្រៅទាក់ទងនឹងការបង្កើតការឌីសាញដោយប្រើប្រាស់អញ្ញត្តិនៅក្នុងបរិយាកាស​បែបអ្នកសិល្បៈ ។ សិស្សនឹងអាចដឹងពីរបៀបដែលគេអាចប្រើអញ្ញត្តិនៅក្នុងការបង្កើតកូដបានកាន់តែងាយស្រួលនៅក្នុងការសរសេរនិងការអាន។\nបន្ទាប់ពីបានធ្វើការណែនាំនូវល្បែងរូបផ្គុំ សិស្សនឹងអាចធ្វើការបញ្ចប់កម្រិតមូលដ្ឋាន ដើម្បីបង្ហាញនូវអ្វីដែលគេបានរៀននិងធ្វើការបង្កើតឌីសាញរបស់ខ្លួន។ "
-        },
-        "coursef-2021/Nested Loops in the Maze": {
-          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងមានឱកាសជំរុញការយល់ដឹងអំពីរង្វិលជុំដល់កំរិតថ្មីទាំងមូល។ លេងជាមួយឃ្មុំនិងរុក្ខជាតិទល់នឹង Zombies សិស្សនឹងរៀនពីរបៀបសរសេររង្វិលជុំដើម្បីឱ្យស្ថិតនៅក្នុងរង្វិលជុំមួយទៀត។ ពួកគេក៏នឹងត្រូវបានលើកទឹកចិត្តឱ្យរកមើលថាតើការផ្លាស់ប្តូរតិចតួចនៅក្នុងរង្វិលជុំទាំងពីរនឹងប៉ះពាល់ដល់កម្មវិធីរបស់ពួកគេយ៉ាងដូចម្តេចនៅពេលពួកគេចុច `រត់` ។",
-          "student_overview": "រង្វិលជុំនៅខាងក្នុងរង្វិលជុំនៅខាងក្នុងរង្វិលជុំ។ តើ​នេះ​មានន័យថា​ម៉េច​? មេរៀននេះនឹងបង្រៀនអ្នកពីអ្វីដែលកើតឡើងនៅពេលអ្នកដាក់រង្វិលជុំមួយនៅក្នុងរង្វិលជុំផ្សេងទៀត។"
-        },
-        "coursef-2021/For Loop Fun": {
-          "overview": "ដូចដែលយើងបានដឹងហើយថា រង្វិលជុំ អនុញ្ញាតអោយយើងធ្វើម្តងហើយម្តងទៀតដដែលៗ   ក៏ប៉ុន្តែឥឡូវនេះយើងនឹងធ្វើការសិក្សាពីរបៀបនៅក្នុងការធ្វើរង្វិលជុំដដែលៗ ដើម្បីអាចបង្កើននូវរចនាសម្ព័ន្ធបន្ថែមទៀត។ រចនាសម្ព័ន្ធថ្មីទាំងនេះនឹងធ្វើអោយសិស្សអាចបង្កើតកូដដែលមានប្រសិទ្ធភាព និង​ឌីណាមិចជាងមុន។​",
-          "student_overview": "អ្នកទាំងអស់គ្នានឹងទទួលបាននូវភាពសប្បាយរីករាយនៅក្នុងការសិក្សាពីមេរៀន For Loop !​"
-        },
-        "coursef-2021/For Loops in Bee": {
-          "student_overview": "ប៊ូសៗ នៅក្នុងល្បែងរូបផ្គុំនេះ សិស្សនឹងអាចអាចធ្វើការនាំផ្លូវឃ្មុំទៅកាន់ទឹកដេលមានរសជាតិផ្អែម ហើយនិងទឹកឃ្មុំ ដោយការប្រើប្រាស់ \"for loops\"! "
-        },
-        "coursef-2021/For Loops in Artist": {
-          "name": "For loops ជាមួយវិចិត្រករ",
-          "student_overview": "ត្រៀមខ្លួនរួចជាស្រេចដើម្បីស្នាដៃឯករបស់អ្នកបន្តទៀត។​ អ្នកនឹងប្រើ \"for​​ loops\" ដដែលៗ ដើម្បីបង្កើតជា រូបភាពJaw Dropping "
-        },
-        "coursef-2021/Internet": {
-          "name": "អ៊ីនធឺណិត",
-          "overview": "ទោះបីជាមនុស្សជាច្រើនប្រើអ៊ិនធឺរណែតជារៀងរាល់ថ្ងៃក៏ដោយក៏មិនមានមនុស្សជាច្រើនដែរដឹងថាវាដំណើរការយ៉ាងដូចម្តេច។ នៅក្នុងមេរៀននេះសិស្សនឹងរៀនអំពីបណ្ដាញ URLs អាសយដ្ឋាន IP និង DNS ។",
-          "student_overview": "ធ្លាប់ឆ្ងល់ទេថាតើព័ត៌មានធ្វើដំណើរឆ្លងកាត់អ៊ីនធឺណិតយ៉ាងដូចម្តេច? វាមិនមែនជាវេទមន្តទេ! មេរៀននេះនឹងបង្រៀនអ្នកអំពីរបៀបដំណើរការអ៊ីនធឺណិត។"
-        },
-        "coursef-2021/End of Course Project": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង"
-        },
-        "courseb-2021/Programming in Maze": {
-          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
-        },
-        "courseb-2021/Programming in Harvester": {
-          "name": "សរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល"
-        },
-        "courseb-2021/Loops in Collector": {
+        "coursea-2020/Loops in Collector": {
           "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel"
         },
-        "courseb-2021/Loops in Artist": {
+        "coursea-2020/Ocean Scene with Loops": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយទិដ្ឋភាពសមុទ្រ"
+        },
+        "coursea-2020/Events in Play Lab": {
+          "name": "ការផ្លាស់ប្ដូរចលនាដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
+        },
+        "courseb-2020/Programming in Maze": {
+          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "courseb-2020/Programming in Harvester": {
+          "name": "សរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល"
+        },
+        "courseb-2020/Loops in Collector": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel"
+        },
+        "courseb-2020/Loops in Artist": {
           "name": "គូរសួនច្បារជាមួយប្រតិបត្តិដដែលៗ"
         },
-        "courseb-2021/Events: The Big Event": {
-          "overview": "ព្រឹត្តិការណ៍គឺជាវិធីដ៏ល្អដើម្បីបន្ថែមភាពខុសគ្នាទៅនឹងក្បួនដោះស្រាយដែលបានសរសេរជាហើយ។  ពេលខ្លះអ្នកចង់អោយកម្មវិធីរបស់អ្នកអាចឆ្លើយតបទៅអ្នកប្រើអោយបានច្បាស់នៅពេលអ្នកប្រើចង់អោយវាធ្វើ។  នោះគឺជាអ្វីដែលព្រឹត្តិការណ៍ដែលគេចង់បាន។"
+        "courseb-2020/Events in Play Lab": {
+          "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
         },
-        "courseb-2021/Events in Play Lab": {
-          "overview": "នៅក្នុង **គម្រោងខ្នាតតូច** នេះ សិស្សនឹងមានឱកាសរៀនពីរបៀបប្រើប្រាស់ព្រឹត្តិការណ៍នៅក្នុង Play Lab និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀន ដើម្បីបង្កើតហ្គេមដែលមានចលនា។",
-          "student_overview": "ប្រើព្រឹត្តិការណ៍ដើម្បីបង្កើតរឿង ឬបង្កើតហ្គេមដែលអាចលេងបាន។"
+        "coursec-2020/Programming in Maze": {
+          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
         },
-        "courseb-2021/lesson-1": {
+        "coursec-2020/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
+        },
+        "coursec-2020/Programming in Collector": {
+          "name": "ប្រមូលកំណប់ជាមួយតួអង្គ Laurel"
+        },
+        "coursec-2020/Programming in Artist": {
+          "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
+        },
+        "coursec-2020/Loops with Rey and BB-8": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "coursec-2020/End of Course Project: Create a Play Lab Game": {
           "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
+        "coursed-2020/Introduction to Online Puzzles": {
+          "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត"
+        },
+        "coursed-2020/Dance Party": {
+          "name": "កម្មវិធីរាំ"
+        },
+        "coursed-2020/Loops in Ice Age": {
+          "name": "ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក"
+        },
+        "coursed-2020/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "coursed-2020/Conditionals in Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
+        },
+        "coursed-2020/Until Loops in Maze": {
+          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
+        },
+        "coursed-2020/Conditionals & Loops in Harvester": {
+          "name": "ប្រើលក្ខខណ្ឌ ដើម្បីប្រមូលផល"
+        },
+        "coursed-2020/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
+        "coursee-2020/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "លក្ខខណ្ឌនៅក្នុង Minecraft: នាវាមុជទឹក"
+        },
+        "coursee-2020/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
+        "coursee-2020/Nested Loops in Frozen": {
+          "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
+        },
+        "coursee-2020/Functions in Artist": {
+          "name": "មុខងារជាមួយវិចិត្រករ"
+        },
+        "coursee-2020/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
+        "coursef-2020/Nested Loops in the Maze": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
+        "coursef-2020/Internet": {
+          "name": "អ៊ីនធឺណិត"
+        },
+        "coursef-2020/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
+        },
+        "coursef-2020/Virtual Pet": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
+        },
+        "coursef-2020/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
+        "express-2020/Dance Party": {
+          "name": "កម្មវិធីរាំ"
+        },
+        "express-2020/Programming with Angry Birds": {
+          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "express-2020/Debugging with Scrat": {
+          "name": "ការបំបាត់កំហុសជាមួយ Scrat"
+        },
+        "express-2020/Collecting Treasure with Laurel": {
+          "name": "ប្រមូលកំណប់ជាមួយតួអង្គ Laurel"
+        },
+        "express-2020/Creating Art with Code": {
+          "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
+        },
+        "express-2020/Loops with Rey and BB-8": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
+        },
+        "express-2020/Nested Loops in Maze": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze"
+        },
+        "express-2020/Snowflakes with Anna and Elsa": {
+          "name": "ផ្កាព្រិលជាមួយ Anna និង Elsa"
+        },
+        "express-2020/If/Else with Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ"
+        },
+        "express-2020/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "លក្ខខណ្ឌនៅក្នុង Minecraft: នាវាមុជទឹក"
+        },
+        "express-2020/Until Loops in Maze": {
+          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
+        },
+        "express-2020/Harvesting with Conditionals": {
+          "name": "ប្រើលក្ខខណ្ឌ ដើម្បីប្រមូលផល"
+        },
+        "express-2020/Functions with Artist": {
+          "name": "មុខងារជាមួយវិចិត្រករ"
+        },
+        "express-2020/For Loops with Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
+        },
+        "express-2020/Swimming Fish in Sprite Lab": {
+          "name": "តួអង្គត្រីក្នុង Sprite Lab"
+        },
+        "express-2020/Virtual Pet with Sprite Lab": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
+        },
+        "express-2020/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
+        "pre-express-2020/Learn to Drag and Drop": {
+          "name": "រៀនអំពីការអូស និងទម្លាក់"
+        },
+        "pre-express-2020/Sequencing with Scrat": {
+          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក "
+        },
+        "pre-express-2020/Programming with Rey and BB-8": {
+          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
+        },
+        "pre-express-2020/Loops with Scrat": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក"
+        },
+        "pre-express-2020/Loops with Laurel": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel"
+        },
+        "pre-express-2020/Ocean Scene with Loops": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយទិដ្ឋភាពសមុទ្រ"
+        },
+        "pre-express-2020/Drawing Gardens with Loops": {
+          "name": "គូរសួនច្បារជាមួយប្រតិបត្តិដដែលៗ"
+        },
+        "pre-express-2020/On the Move with Events": {
+          "name": "ការផ្លាស់ប្ដូរចលនាដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
+        },
+        "pre-express-2020/A Royal Battle with Events": {
+          "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
+        },
+        "csd3-2021/Shapes and Parameters": {
+          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        },
+        "csd3-2021/Variables": {
+          "name": "អ​ថេរ"
+        },
+        "csd3-2021/Random Numbers": {
+          "name": "លេខចៃដន្យ"
+        },
+        "csd3-2021/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2021/Sprite Properties": {
+          "name": "លក្ខណៈសម្បត្តិនៃ sprite"
+        },
+        "csd3-2021/Text": {
+          "name": "អត្ថ​​បទ"
+        },
+        "csd3-2021/The Draw Loop": {
+          "name": "ការគូររង្វិលជុំដដែលៗ"
+        },
+        "csd3-2021/Conditionals": {
+          "name": "លក្ខខណ្ឌ"
+        },
+        "csd3-2021/Collision Detection": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "csd3-2021/Functions": {
+          "name": "អនុ​គមន៍"
+        },
+        "csd6-2021/Designing Screens with Code": {
+          "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
         },
         "coursea-2021/Learn to Drag and Drop": {
           "name": "រៀនអំពីការអូស និងទម្លាក់",
-          "overview": "មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។"
+          "overview": "មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វី ដែលពួកគេត្រូវគិតទុកជាមុនប្រើប្រាស់បន្ទប់កុំព្យូទ័រ។  សិស្សចាប់ផ្ដើមពីការពិភាក្សាក្រុមដើម្បីបញ្ចេញមតិ​នឹងស្វែងយល់អំពី  អាកប្បកិរិយាគួរ ឬមិន​គួរធ្វើនៅ​ក្នុងបន្ទប់កុំព្យូទ័រ។ ដើម្បីឱ្យមានភាពស្ទាត់ជំនាញក្នុង ការប្រើប្រាស់កុំព្យូទ័រ សិស្សនឹងអនុវត្តជាមួយល្បែងផ្គុំរូបនៅលើអ៊ីនធឺណិត។",
+          "purpose": "គោលដៅសំខាន់នៃមេរៀននេះគឺ បង្កើតបទពិសោធន៍របស់សិស្សជាមួយ និងកុំព្យូទ័រ លើមុខងារមូលដ្ឋានបំផុតដូចជាការចុច អូស និងទម្លាក់ ដោយអនុវត្តជាមួយល្បែងផ្គុំរូប។ មេរៀននេះក៏ផ្តល់នូវឱកាសដ៏ល្អមួយដើម្បីណែនាំ វាក្យស័ព្ទផ្នែករឹងកុំព្យូទ័ ដូចជា \"mouse\" \"trackpad\" ឬ \"touchscreen\" អាស្រ័យលើ ឧបករណ៍របស់អ្នក។"
         },
         "coursea-2021/Programming: Happy Maps": {
           "purpose": "ស្ពានពីក្បួនដោះស្រាយទៅការសរសេរកម្មវិធីអាចជារយៈពេលខ្លីប្រសិនបើសិស្សយល់ពីភាពខុសគ្នារវាងការធ្វើផែនការ​ និងការសរសេរអ៊ិនកូដលំដាប់នោះទៅជាភាសាដែលសមរម្យ។  សកម្មភាពនេះនឹងជួយឱ្យសិស្សទទួលបានបទពិសោធន៍ក្នុងការអាននិងសរសេរជាកូដខ្លីៗ។"
         },
         "coursea-2021/Sequencing with Scrat": {
-          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក "
+          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក ",
+          "overview": "នៅក្នុងមេរៀននេះ សិស្សនឹងបង្កើតក្បួនដោះស្រាយបញ្ហា ដោយអនុវត្ត តាមការ កសាងជំនាញ (skill-building) ដោយតម្រៀបកូដប្លុក តាមលំដាប់លំដោយ ដើម្បីផ្លាស់ទីតួអង្គកំប្រុក ទៅរកផ្លែផ្លេសេនក្នុងចំណោទបញ្ហានីមួយៗ។ ដើម្បីធ្វើបានពួកគេត្រូវភ្ជាប់កូដប្លុកតាមលំដាប់លំដោយជាជួរ។",
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងរៀនពីការសរសេរកម្មវិធី និងការកែកំហុសនៅក្នុងកម្មវិធី។ ទម្រង់មូលដ្ឋានកូដប្លុកនៃល្បែងផ្គុំរូបទាំង​នេះអាចជួយសិស្សឱ្យរៀនអំពីលំដាប់លំដោយ និងបណ្ដុះគោលគំនិត ដោយមិនចាំបាច់ព្រួយបារម្ភអំពីការសរសេរកូដជា ល្អឥតខ្ចោះនៃវាក្យសម្ព័ន្ធ (syntax). "
+        },
+        "coursea-2021/Programming in Ice Age": {
+          "overview": "ក្នុងមេរៀន **ការកសាងជំនាញ** នេះសិស្សនឹងបន្តអភិវឌ្ឍ លំដាប់លំដោយនៃក្បួនដោះស្រាយបញ្ហា។ ",
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងរៀនពីការសរសេរកម្មវិធី និងការកែកំហុសនៅក្នុងកម្មវិធី។ ទម្រង់មូលដ្ឋានកូដប្លុកនៃល្បែងផ្គុំរូបទាំង​នេះអាចជួយសិស្សឱ្យរៀនអំពីលំដាប់លំដោយ និងបណ្ដុះគោលគំនិត ដោយមិនចាំបាច់ព្រួយបារម្ភអំពីការសរសេរកូដជា ល្អឥតខ្ចោះនៃវាក្យសម្ព័ន្ធ (syntax). "
         },
         "coursea-2021/Programming with Rey and BB-8": {
           "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
@@ -1042,19 +939,60 @@
           "overview": "ព្រឹត្តិការណ៍គឺជាវិធីដ៏ល្អដើម្បីបន្ថែមភាពខុសគ្នាទៅនឹងក្បួនដោះស្រាយដែលបានសរសេរជាហើយ។  ពេលខ្លះអ្នកចង់អោយកម្មវិធីរបស់អ្នកអាចឆ្លើយតបទៅអ្នកប្រើអោយបានច្បាស់នៅពេលអ្នកប្រើចង់អោយវាធ្វើ។  នោះគឺជាអ្វីដែលព្រឹត្តិការណ៍ដែលគេចង់បាន។"
         },
         "coursea-2021/Events in Play Lab": {
-          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ិនធើណេតនេះនិស្សិតនឹងមានឱកាសរៀនពីរបៀបប្រើព្រឹត្តិការណ៍នានានៅក្នុង ផ្លេ លេប និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀនបង្កើតហ្គេមមានចលនា។  ដល់ពេលដែលត្រូវច្នៃប្រឌិតហើយបង្កើតរឿងនៅក្នុងបន្ទប់ពិសោធន៍!"
+          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ិនធើណេតនេះនិស្សិតនឹងមានឱកាសរៀនពីរបៀបប្រើព្រឹត្តិការណ៍នានានៅក្នុង ផ្លេ លេប និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀនបង្កើតហ្គេមមានចលនា។  ដល់ពេលដែលត្រូវច្នៃប្រឌិតហើយបង្កើតរឿងនៅក្នុងបន្ទប់ពិសោធន៍!",
+          "purpose": "សិស្សនឹងអភិវឌ្ឍការយល់ដឹងរបស់ពួកគេបន្ថែមទៀតអំពីព្រឹត្តិការណ៍ដោយប្រើ Play Lab។ ព្រឹត្តិការណ៍គឺជារឿងធម្មតាណាស់ដែលប្រើនៅក្នុងកម្មវិធីកុំព្យូទ័រភាគច្រើន។ នៅក្នុងសកម្មភាពនេះ សិស្សនឹងប្រើព្រឹត្តិការណ៍ដើម្បីធ្វើចលនាតួអក្សរជុំវិញអេក្រង់ បង្កើតសំឡេង និងផ្លាស់ប្តូរផ្ទៃខាងក្រោយដោយផ្អែកលើព្រឹត្តិការណ៍ដែលបង្កើតឡើងដោយអ្នកប្រើប្រាស់។"
         },
         "coursea-2021/lesson-1": {
           "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
+        "courseb-2021/Sequencing in Maze": {
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងរៀនពីការសរសេរកម្មវិធី និងការកែកំហុសនៅក្នុងកម្មវិធី។ ទម្រង់មូលដ្ឋានកូដប្លុកនៃល្បែងផ្គុំរូបទាំង​នេះអាចជួយសិស្សឱ្យរៀនអំពីលំដាប់លំដោយ និងបណ្ដុះគោលគំនិត ដោយមិនចាំបាច់ព្រួយបារម្ភអំពីការសរសេរកូដជា ល្អឥតខ្ចោះនៃវាក្យសម្ព័ន្ធ (syntax). "
+        },
+        "courseb-2021/Programming in Maze": {
+          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី",
+          "overview": "ក្នុងមេរៀន **ការកសាងជំនាញ** នេះសិស្សនឹងបន្តអភិវឌ្ឍ លំដាប់លំដោយនៃក្បួនដោះស្រាយបញ្ហា។ "
+        },
+        "courseb-2021/Programming in Harvester": {
+          "name": "សរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល",
+          "purpose": "នៅក្នុងមេរៀននេះសិស្សនឹងអភិវឌ្ឍជំនាញដោះស្រាយបញ្ហាហើយនឹងបន្តអភិវឌ្ឍជំនាញសរសេរកម្មវិធីរបស់ពួកគេ។"
+        },
+        "courseb-2021/Loops in Collector": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel",
+          "purpose": "មេរៀននេះផ្តល់ឱ្យសិស្សនូវការអនុវត្តបន្ថែមទៀតជាមួយនឹងប្រតិបត្តិដដែលៗ និងលើកទឹកចិត្តពួកគេឱ្យដាក់បណ្ដុំនៃកូដប្លុកចូលទៅក្នុងប្រតិបត្តិដដែលៗ (repeat) បើកូដអាចដាក់បាន។"
+        },
+        "courseb-2021/Loops in Artist": {
+          "name": "គូរសួនច្បារជាមួយប្រតិបត្តិដដែលៗ",
+          "purpose": "មេរៀននេះផ្តល់នូវទស្សនៈខុសៗគ្នាអំពីប្រតិបត្តិដដែលៗ (loops) អាចបង្កើតអ្វីមួយ ក្នុងការបង្កើតកម្មវិធី។ សិស្សនឹងសាកល្បងលើការ​ត្រិះរិះ​ពិចារណាជ្រៅៗដើម្បីវាយ តម្លៃកូដដែលបានផ្តល់ឱ្យ និងកំណត់នូវអ្វីដែលត្រូវបន្ថែម ដើម្បីដោះស្រាយល្បែងផ្គុំរូប។\nសិស្សក៏អាចឆ្លុះបញ្ចាំងពីភាពលំបាកនៃការសរសេរកម្មវិធីដោយមិនប្រើប្រតិបត្តិដដែលៗ"
+        },
+        "courseb-2021/Events: The Big Event": {
+          "overview": "ព្រឹត្តិការណ៍គឺជាវិធីដ៏ល្អដើម្បីបន្ថែមភាពខុសគ្នាទៅនឹងក្បួនដោះស្រាយដែលបានសរសេរជាហើយ។  ពេលខ្លះអ្នកចង់អោយកម្មវិធីរបស់អ្នកអាចឆ្លើយតបទៅអ្នកប្រើអោយបានច្បាស់នៅពេលអ្នកប្រើចង់អោយវាធ្វើ។  នោះគឺជាអ្វីដែលព្រឹត្តិការណ៍ដែលគេចង់បាន។"
+        },
+        "courseb-2021/Events in Play Lab": {
+          "overview": "នៅក្នុង **គម្រោងខ្នាតតូច** នេះ សិស្សនឹងមានឱកាសរៀនពីរបៀបប្រើប្រាស់ព្រឹត្តិការណ៍នៅក្នុង Play Lab និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀន ដើម្បីបង្កើតហ្គេមដែលមានចលនា។",
+          "purpose": "នៅក្នុងសកម្មភាពអនឡាញនេះ សិស្សនឹងរៀនពីរបៀបប្រើប្រាស់ព្រឹត្តិការណ៍នៅក្នុង Play Lab ។ ពួកគេនឹងចាប់ផ្តើមដោយការបង្ហាត់ មេទ័ពឱ្យផ្លាស់ទីនៅពេលដែលចុចគ្រាប់ចុចព្រួញ បន្ទាប់មកបញ្ចប់ដោយការថែមអ្វីផ្សេងៗទៀតដោយប្រើជំនាញដែលពួកគេបានរៀនក្នុងវគ្គសិក្សានេះ រួមទាំងលំដាប់ និង loops ដែលជាផ្នែកមួយនៃល្បែងផ្គុំរូបបង្កើតដោយសេរីនៅចុងក្រោយនៃអនុវត្ត។",
+          "student_overview": "ប្រើព្រឹត្តិការណ៍ដើម្បីបង្កើតរឿង ឬបង្កើតហ្គេមដែលអាចលេងបាន។"
+        },
+        "courseb-2021/lesson-1": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
         "coursec-2021/Programming in Maze": {
-          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី",
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងរៀនពីការសរសេរកម្មវិធី និងការកែកំហុសនៅក្នុងកម្មវិធី។ ទម្រង់មូលដ្ឋានកូដប្លុកនៃល្បែងផ្គុំរូបទាំង​នេះអាចជួយសិស្សឱ្យរៀនអំពីលំដាប់លំដោយ និងបណ្ដុះគោលគំនិត ដោយមិនចាំបាច់ព្រួយបារម្ភអំពីការសរសេរកូដជា ល្អឥតខ្ចោះនៃវាក្យសម្ព័ន្ធ (syntax). "
         },
         "coursec-2021/Debugging in Maze": {
           "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
+        "coursec-2021/Programming in Collector": {
+          "name": "ប្រមូលកំណប់ជាមួយតួអង្គ Laurel"
+        },
+        "coursec-2021/Programming in Artist": {
+          "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
+        },
         "coursec-2021/Loops with Rey and BB-8": {
-          "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
+        },
+        "coursec-2021/Sticker Art with Loops": {
+          "name": "គម្រោងខ្នាតតូច៖ សិល្បៈស្ទីគ័រ"
         },
         "coursec-2021/Events: The Big Event": {
           "name": "ព្រឹត្តិការណ៍ធំ"
@@ -1084,12 +1022,13 @@
           "student_overview": "ត្រៀមកម្លាំងរបស់អ្នកដោយ អ្នកនឹងបង្កើតហ្គេម Start Wars​ ដោយខ្លួនអ្នកនៅក្នុងមេរៀននេះ។"
         },
         "coursed-2021/Dance Party": {
-          "name": "Dance Party"
+          "name": "កម្មវិធីរាំ"
         },
         "coursed-2021/Loops in Ice Age": {
           "name": "រង្វិលជុំក្នុងយុគសម័យទឹកកក"
         },
         "coursed-2021/Nested Loops in Bee": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze",
           "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងមានឱកាសជំរុញការយល់ដឹងអំពីរង្វិលជុំដល់កំរិតថ្មីទាំងមូល។ លេងជាមួយឃ្មុំនិងរុក្ខជាតិទល់នឹង Zombies សិស្សនឹងរៀនពីរបៀបសរសេររង្វិលជុំដើម្បីឱ្យស្ថិតនៅក្នុងរង្វិលជុំមួយទៀត។ ពួកគេក៏នឹងត្រូវបានលើកទឹកចិត្តឱ្យរកមើលថាតើការផ្លាស់ប្តូរតិចតួចនៅក្នុងរង្វិលជុំទាំងពីរនឹងប៉ះពាល់ដល់កម្មវិធីរបស់ពួកគេយ៉ាងដូចម្តេចនៅពេលពួកគេចុច `រត់` ។"
         },
         "coursed-2021/Conditionals with Cards": {
@@ -1097,6 +1036,7 @@
           "student_overview": "វាដល់ពេលហើយដើម្បីលេងល្បែងដែលអ្នករកពិន្ទុបានតែក្រោមលក្ខខណ្ឌជាក់លាក់ប៉ុណ្ណោះ!"
         },
         "coursed-2021/Conditionals in Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ",
           "overview": "រហូតមកដល់ចំណុចនេះសិស្សបានសរសេរកូដដែលប្រតិបត្តិតាមវិធីដូចគ្នារាល់ពេលដែលដំណើរការ - អាចទុកចិត្តបាន ប៉ុន្តែមិនមានភាពបត់បែនខ្លាំងទេ។ នៅក្នុងមេរៀននេះថ្នាក់របស់អ្នកនឹងចាប់ផ្តើមសរសេរកូដដោយមានលក្ខខណ្ឌដែលអនុញ្ញាតឱ្យពួកគេសរសេរកូដដែលមានមុខងារខុសគ្នាអាស្រ័យលើលក្ខខណ្ឌជាក់លាក់ដែលកម្មវិធីជួប។",
           "student_overview": "ឥឡូវអ្នកយល់ពីលក្ខខណ្ឌវាដល់ពេលត្រូវសរសេរកម្មវិធីឃ្មុំដើម្បីប្រើវានៅពេលប្រមូលទឹកឃ្មុំនិងទឹកដម។"
         },
@@ -1110,46 +1050,141 @@
           "name": "ចុងបញ្ចប់នៃគម្រោង",
           "student_overview": "ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។"
         },
+        "coursee-2021/Private and Personal Information": {
+          "student_overview": "អ៊ីនធឺណិតផ្ដល់នូវភាពសប្បាយ និងរំភើបប៉ុន្ដែការរក្សាសុវត្ថិភាពនៅលើអ៊ីនធឺណិតក៏សំខាន់ដែរ។ មេរៀននេះបង្រៀនអ្នកពីភាពខុសគ្នារវាងព័ត៌មានដែលមានសុវត្ថិភាពក្នុងការចែករំលែកនិងព័ត៌មានឯកជន។"
+        },
+        "coursee-2021/Nested Loops in Artist": {
+          "student_overview": "សំបុករង្វិលជុំច្រើនទៀត! លើកនេះអ្នកត្រូវធ្វើគំនូរ AMAZING មួយចំនួនដែលមានរង្វិលជុំនៅខាងចុង។"
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "overview": "រចនាសម្ព័ន្ធដ៏អស្ចារ្យបំផុតមួយនៅក្នុងពិភពវិទ្យាសាស្ត្រកុំព្យូទ័រគឺអនុគមន៍។ អនុគមន៍​(ដែលពេលខ្លះត្រូវបានហៅថា នីតិវិធី) គឺជាប្រូក្រាមតូចដែលអ្នកអាចប្រើនៅក្នុងប្រូក្រាមធំ។ មេរៀននេះនឹងជួយសិស្សយល់កាន់តែសុីជម្រៅថាតើហេតុអ្វីបានជាការរួមបញ្ចូលគ្នានៃបណ្ដុំកូដអោយទៅជាអនុគមន៍អាចជាការអនុវត្ដមួយដ៏មានប្រយោជន៍។",
+          "student_overview": "សម្បីតែ Rockstar ក៏ត្រូវការជំនាញសរសេរកូដដែរ។ មេរៀននេះនឹងបង្រៀនអ្នកអំពីអនុគមន៍ដោយប្រើប្រាស់អត្ថបទចម្រៀងពីចម្រៀង។"
+        },
+        "coursee-2021/Functions in Artist": {
+          "name": "មុខងារជាមួយវិចិត្រករ",
+          "student_overview": "ធ្វើឱ្យគំនូរស្មុគស្មាញកាន់តែងាយស្រួលដោយប្រើអនុគមន៍!"
+        },
+        "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "លក្ខខណ្ឌនៅក្នុង Minecraft: នាវាមុជទឹក"
+        },
+        "coursee-2021/Conditionals": {
+          "overview": "មេរៀននេះណែនាំសិស្សមកកាន់ឃ្លានៃកូដ `while` loops និង `if / else` ។ _While loops_ គឺជារង្វល់ជុំដែលបន្ដការងារដដែលៗដរាបណាលក្ខខណ្ឌពិត។ While loops ត្រូវបានប្រើប្រាស់នៅពេលដែលអ្នកសរសេរកូដមិនដឹងច្បាស់អំពីចំនួនដងនៃការបញ្ជាកូដអោយធ្វើឡើងម្ដងទៀត ប៉ុន្ដែអ្នកសរសេរកូដដឹងពីលក្ខខណ្ឌពិតដើម្បីអោយ loop បន្ដរង្វល់ជុំ។ `If / Else` គឺជាឃ្លាកូដដែលផ្ដល់នូវភាពបត់បែននៅក្នុងការសរសេរកូដដោយដំណើរការផ្នែកណាមួយនៃកូដនៅពេលដែលលក្ខខណ្ឌអ្វីមួយពិតតែប៉ុណ្ណោះ បើមិនដូច្នេះទេវានឹងធ្វើការងារអ្វីផ្សេង។",
+          "student_overview": "អ្នកនឹងត្រូវប្រាប់កុំព្យូទ័រនូវអ្វីដែលត្រូវធ្វើក្រោមល័ក្ខខ័ណ្ឌជាក់លាក់មួយចំនួននៅក្នុងស៊េរីដ៏សប្បាយនិងឧបសគ្គនេះ។"
+        },
+        "coursee-2021/Functions in Harvester": {
+          "student_overview": "អនុគមន៍នឹងជួយការងារជាច្រើននៅពេលអ្នកជួយ farmer ជាមួយនឹងការប្រមូលផលរបស់គាត់!"
+        },
+        "coursee-2021/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
+        "coursef-2021/lesson-6": {
+          "name": "សេចក្ដីណែនាំពី Sprite Lab"
+        },
+        "coursef-2021/lesson-7": {
+          "name": "ការបង្កើត Sprites"
+        },
+        "coursef-2021/lesson-8": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
+        },
+        "coursef-2021/lesson-2": {
+          "student_overview": "ការគំរាមកំហែង គឺមិនដែលត្រឹមត្រូវទេ។ មេរៀននេះ នឹងបង្រៀនអ្នកពីអ្វីដែលត្រឹមត្រូវ និងមិនត្រឹមត្រូវ ក្នុងការនិយាយអនឡាញ។"
+        },
+        "coursef-2021/Variables that Change in Artist": {
+          "name": "ការប្រើប្រាស់អថេរជាមួយនិងវិចិត្រករ",
+          "overview": "នៅក្នុងមេរៀននេះ សិស្សនឹងអាចធ្វើការសិក្សាស្វែងយល់កាន់តែស៊ីជម្រៅទាក់ទងនឹងការបង្កើតការឌីសាញដោយប្រើប្រាស់អញ្ញត្តិនៅក្នុងបរិយាកាស​បែបអ្នកសិល្បៈ ។ សិស្សនឹងអាចដឹងពីរបៀបដែលគេអាចប្រើអញ្ញត្តិនៅក្នុងការបង្កើតកូដបានកាន់តែងាយស្រួលនៅក្នុងការសរសេរនិងការអាន។\nបន្ទាប់ពីបានធ្វើការណែនាំនូវល្បែងរូបផ្គុំ សិស្សនឹងអាចធ្វើការបញ្ចប់កម្រិតមូលដ្ឋាន ដើម្បីបង្ហាញនូវអ្វីដែលគេបានរៀននិងធ្វើការបង្កើតឌីសាញរបស់ខ្លួន។ "
+        },
+        "coursef-2021/Nested Loops in the Maze": {
+          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងមានឱកាសជំរុញការយល់ដឹងអំពីរង្វិលជុំដល់កំរិតថ្មីទាំងមូល។ លេងជាមួយឃ្មុំនិងរុក្ខជាតិទល់នឹង Zombies សិស្សនឹងរៀនពីរបៀបសរសេររង្វិលជុំដើម្បីឱ្យស្ថិតនៅក្នុងរង្វិលជុំមួយទៀត។ ពួកគេក៏នឹងត្រូវបានលើកទឹកចិត្តឱ្យរកមើលថាតើការផ្លាស់ប្តូរតិចតួចនៅក្នុងរង្វិលជុំទាំងពីរនឹងប៉ះពាល់ដល់កម្មវិធីរបស់ពួកគេយ៉ាងដូចម្តេចនៅពេលពួកគេចុច `រត់` ។",
+          "student_overview": "រង្វិលជុំនៅខាងក្នុងរង្វិលជុំនៅខាងក្នុងរង្វិលជុំ។ តើ​នេះ​មានន័យថា​ម៉េច​? មេរៀននេះនឹងបង្រៀនអ្នកពីអ្វីដែលកើតឡើងនៅពេលអ្នកដាក់រង្វិលជុំមួយនៅក្នុងរង្វិលជុំផ្សេងទៀត។"
+        },
+        "coursef-2021/For Loop Fun": {
+          "overview": "ដូចដែលយើងបានដឹងហើយថា រង្វិលជុំ អនុញ្ញាតអោយយើងធ្វើម្តងហើយម្តងទៀតដដែលៗ   ក៏ប៉ុន្តែឥឡូវនេះយើងនឹងធ្វើការសិក្សាពីរបៀបនៅក្នុងការធ្វើរង្វិលជុំដដែលៗ ដើម្បីអាចបង្កើននូវរចនាសម្ព័ន្ធបន្ថែមទៀត។ រចនាសម្ព័ន្ធថ្មីទាំងនេះនឹងធ្វើអោយសិស្សអាចបង្កើតកូដដែលមានប្រសិទ្ធភាព និង​ឌីណាមិចជាងមុន។​",
+          "student_overview": "អ្នកទាំងអស់គ្នានឹងទទួលបាននូវភាពសប្បាយរីករាយនៅក្នុងការសិក្សាពីមេរៀន For Loop !​"
+        },
+        "coursef-2021/For Loops in Bee": {
+          "student_overview": "ប៊ូសៗ នៅក្នុងល្បែងរូបផ្គុំនេះ សិស្សនឹងអាចអាចធ្វើការនាំផ្លូវឃ្មុំទៅកាន់ទឹកដេលមានរសជាតិផ្អែម ហើយនិងទឹកឃ្មុំ ដោយការប្រើប្រាស់ \"for loops\"! "
+        },
+        "coursef-2021/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ",
+          "student_overview": "ត្រៀមខ្លួនរួចជាស្រេចដើម្បីស្នាដៃឯករបស់អ្នកបន្តទៀត។​ អ្នកនឹងប្រើ \"for​​ loops\" ដដែលៗ ដើម្បីបង្កើតជា រូបភាពJaw Dropping "
+        },
+        "coursef-2021/Internet": {
+          "name": "អ៊ីនធឺណិត",
+          "overview": "ទោះបីជាមនុស្សជាច្រើនប្រើអ៊ិនធឺរណែតជារៀងរាល់ថ្ងៃក៏ដោយក៏មិនមានមនុស្សជាច្រើនដែរដឹងថាវាដំណើរការយ៉ាងដូចម្តេច។ នៅក្នុងមេរៀននេះសិស្សនឹងរៀនអំពីបណ្ដាញ URLs អាសយដ្ឋាន IP និង DNS ។",
+          "student_overview": "ធ្លាប់ឆ្ងល់ទេថាតើព័ត៌មានធ្វើដំណើរឆ្លងកាត់អ៊ីនធឺណិតយ៉ាងដូចម្តេច? វាមិនមែនជាវេទមន្តទេ! មេរៀននេះនឹងបង្រៀនអ្នកអំពីរបៀបដំណើរការអ៊ីនធឺណិត។"
+        },
+        "coursef-2021/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
         "express-2021/Programming with Angry Birds": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
         },
         "express-2021/Debugging with Scrat": {
           "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
+        "express-2021/Collecting Treasure with Laurel": {
+          "name": "ប្រមូលកំណប់ជាមួយតួអង្គ Laurel"
+        },
+        "express-2021/Creating Art with Code": {
+          "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
+        },
         "express-2021/Swimming Fish in Sprite Lab": {
-          "name": "ត្រីហែលទឹកនៅក្នុង មន្ទីរពិសោធន៍"
+          "name": "តួអង្គត្រីក្នុង Sprite Lab"
+        },
+        "express-2021/lesson-2": {
+          "name": "ការបង្កើត Sprites"
+        },
+        "express-2021/lesson-3": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
+        },
+        "express-2021/Virtual Pet with Sprite Lab": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
         },
         "express-2021/lesson-1": {
-          "name": "Dance Party"
+          "name": "កម្មវិធីរាំ"
         },
         "express-2021/Loops with Rey and BB-8": {
-          "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
+        },
+        "express-2021/Sticker Art with Loops": {
+          "name": "គម្រោងខ្នាតតូច៖ សិល្បៈស្ទីគ័រ"
         },
         "express-2021/Nested Loops in Maze": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze",
           "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងមានឱកាសជំរុញការយល់ដឹងអំពីរង្វិលជុំដល់កំរិតថ្មីទាំងមូល។ លេងជាមួយឃ្មុំនិងរុក្ខជាតិទល់នឹង Zombies សិស្សនឹងរៀនពីរបៀបសរសេររង្វិលជុំដើម្បីឱ្យស្ថិតនៅក្នុងរង្វិលជុំមួយទៀត។ ពួកគេក៏នឹងត្រូវបានលើកទឹកចិត្តឱ្យរកមើលថាតើការផ្លាស់ប្តូរតិចតួចនៅក្នុងរង្វិលជុំទាំងពីរនឹងប៉ះពាល់ដល់កម្មវិធីរបស់ពួកគេយ៉ាងដូចម្តេចនៅពេលពួកគេចុច `រត់` ។"
         },
+        "express-2021/Snowflakes with Anna and Elsa": {
+          "name": "ផ្កាព្រិលជាមួយ Anna និង Elsa"
+        },
         "express-2021/If/Else with Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ",
           "overview": "រហូតមកដល់ចំណុចនេះសិស្សបានសរសេរកូដដែលប្រតិបត្តិតាមវិធីដូចគ្នារាល់ពេលដែលដំណើរការ - អាចទុកចិត្តបាន ប៉ុន្តែមិនមានភាពបត់បែនខ្លាំងទេ។ នៅក្នុងមេរៀននេះថ្នាក់របស់អ្នកនឹងចាប់ផ្តើមសរសេរកូដដោយមានលក្ខខណ្ឌដែលអនុញ្ញាតឱ្យពួកគេសរសេរកូដដែលមានមុខងារខុសគ្នាអាស្រ័យលើលក្ខខណ្ឌជាក់លាក់ដែលកម្មវិធីជួប។",
           "student_overview": "ឥឡូវអ្នកយល់ពីលក្ខខណ្ឌវាដល់ពេលត្រូវសរសេរកម្មវិធីឃ្មុំដើម្បីប្រើវានៅពេលប្រមូលទឹកឃ្មុំនិងទឹកដម។"
         },
         "express-2021/While Loops with the Farmer": {
           "student_overview": "រង្វិលជុំមានប្រយោជន៍ណាស់ក្នុងការសរសេរកូដ។ មេរៀននេះនឹងបង្រៀនអ្នកអំពីរង្វិលជុំប្រភេទថ្មីមួយ: ខណៈរង្វិលជុំ!"
         },
+        "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "លក្ខខណ្ឌនៅក្នុង Minecraft: នាវាមុជទឹក"
+        },
         "express-2021/Until Loops in Maze": {
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
         },
         "express-2021/Harvesting with Conditionals": {
+          "name": "ប្រើលក្ខខណ្ឌ ដើម្បីប្រមូលផល",
           "overview": "សិស្សនឹងអនុវត្ត `ខណៈរង្វិលជុំ`  `រហូតដល់រង្វិលជុំ` `ប្រសិនបើ / ផ្សេងទៀត សេចក្តីថ្លែង` ។ ប្លុកទាំងអស់នេះប្រើលក្ខខណ្ឌ។ តាមរយៈការអនុវត្តទាំងបីសិស្សនឹងរៀនពីការសរសេរកូដដែលមានភាពស្មុគស្មាញនិងបត់បែន។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានទិនានុប្បវត្តិឆ្លុះបញ្ចាំង។",
           "student_overview": "វាមិនច្បាស់ទេថាពេលណាត្រូវប្រើលក្ខខណ្ឌនីមួយៗ។ មេរៀននេះនឹងជួយអ្នកឱ្យមានទម្លាប់សំរេចថាត្រូវធ្វើអ្វី។"
         },
         "express-2021/Functions with Artist": {
+          "name": "មុខងារជាមួយវិចិត្រករ",
           "student_overview": "ធ្វើឱ្យគំនូរស្មុគស្មាញកាន់តែងាយស្រួលដោយប្រើអនុគមន៍!"
         },
         "express-2021/Functions with Harvester": {
           "student_overview": "អនុគមន៍នឹងជួយការងារជាច្រើននៅពេលអ្នកជួយ farmer ជាមួយនឹងការប្រមូលផលរបស់គាត់!"
         },
         "express-2021/Variables with Artist": {
-          "name": "ការប្រើប្រាស់អថេរជាមួយសិល្បករ",
+          "name": "ការប្រើប្រាស់អថេរជាមួយនិងវិចិត្រករ",
           "overview": "នៅក្នុងមេរៀននេះ សិស្សនឹងអាចធ្វើការសិក្សាស្វែងយល់កាន់តែស៊ីជម្រៅទាក់ទងនឹងការបង្កើតការឌីសាញដោយប្រើប្រាស់អញ្ញត្តិនៅក្នុងបរិយាកាស​បែបអ្នកសិល្បៈ ។ សិស្សនឹងអាចដឹងពីរបៀបដែលគេអាចប្រើអញ្ញត្តិនៅក្នុងការបង្កើតកូដបានកាន់តែងាយស្រួលនៅក្នុងការសរសេរនិងការអាន។\nបន្ទាប់ពីបានធ្វើការណែនាំនូវល្បែងរូបផ្គុំ សិស្សនឹងអាចធ្វើការបញ្ចប់កម្រិតមូលដ្ឋាន ដើម្បីបង្ហាញនូវអ្វីដែលគេបានរៀននិងធ្វើការបង្កើតឌីសាញរបស់ខ្លួន។ "
         },
         "express-2021/For Loops with Bee": {
@@ -1165,229 +1200,554 @@
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "name": "រៀនអំពីការអូស និងទម្លាក់",
-          "overview": "មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។"
+          "overview": "មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វី ដែលពួកគេត្រូវគិតទុកជាមុនប្រើប្រាស់បន្ទប់កុំព្យូទ័រ។  សិស្សចាប់ផ្ដើមពីការពិភាក្សាក្រុមដើម្បីបញ្ចេញមតិ​នឹងស្វែងយល់អំពី  អាកប្បកិរិយាគួរ ឬមិន​គួរធ្វើនៅ​ក្នុងបន្ទប់កុំព្យូទ័រ។ ដើម្បីឱ្យមានភាពស្ទាត់ជំនាញក្នុង ការប្រើប្រាស់កុំព្យូទ័រ សិស្សនឹងអនុវត្តជាមួយល្បែងផ្គុំរូបនៅលើអ៊ីនធឺណិត។",
+          "preparation": "-   មើល **\\*របៀបបង្កើតថ្នាក់នៅលើ Code.org** - វីដេអូគ្រូ។ បង្កើតថ្នាក់ផ្ទាល់ខ្លួនរបស់អ្នកនៅលើ Code.org ហើយត្រូវប្រាកដថាសិស្សគ្រប់រូបមានកាតដែលមាន **ពាក្យសម្ងាត់** របស់ពួកគេនៅលើវា។\n-   ត្រូវប្រាកដថាសិស្សនឹងអាចចូលប្រើមេរៀនទី 2 ពីឧបករណ៍របស់ពួកគេ។ ពិចារណាថាតើអ្នកចង់លាក់មេរៀននាពេលអនាគតដើម្បីការពារសិស្សពីការឈានទៅមុខលឿនពេកដែរឬទេ។\n-   បង្កើតតំណភ្ជាប់រហ័ស សម្រាប់ថ្នាក់របស់អ្នកទៅអេក្រង់កុំព្យូទ័ររបស់សិស្ស។\n-   ពិនិត្យមើលគេហទំព័រ Common Sense Education សម្រាប់សុវត្ថិភាពអនឡាញបន្ថែមទៀត។",
+          "purpose": "គោលដៅសំខាន់នៃមេរៀននេះគឺ បង្កើតបទពិសោធន៍របស់សិស្សជាមួយ និងកុំព្យូទ័រ លើមុខងារមូលដ្ឋានបំផុតដូចជាការចុច អូស និងទម្លាក់ ដោយអនុវត្តជាមួយល្បែងផ្គុំរូប។ មេរៀននេះក៏ផ្តល់នូវឱកាសដ៏ល្អមួយដើម្បីណែនាំ វាក្យស័ព្ទផ្នែករឹងកុំព្យូទ័ ដូចជា \"mouse\" \"trackpad\" ឬ \"touchscreen\" អាស្រ័យលើ ឧបករណ៍របស់អ្នក។"
         },
         "pre-express-2021/Sequencing with Scrat": {
-          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក "
+          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក ",
+          "overview": "នៅក្នុងមេរៀននេះ សិស្សនឹងបង្កើតក្បួនដោះស្រាយបញ្ហា ដោយអនុវត្ត តាមការ កសាងជំនាញ (skill-building) ដោយតម្រៀបកូដប្លុក តាមលំដាប់លំដោយ ដើម្បីផ្លាស់ទីតួអង្គកំប្រុក ទៅរកផ្លែផ្លេសេនក្នុងចំណោទបញ្ហានីមួយៗ។ ដើម្បីធ្វើបានពួកគេត្រូវភ្ជាប់កូដប្លុកតាមលំដាប់លំដោយជាជួរ។",
+          "preparation": "-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានទិនានុប្បវត្តិឆ្លុះបញ្ចាំង។",
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងរៀនពីការសរសេរកម្មវិធី និងការកែកំហុសនៅក្នុងកម្មវិធី។ ទម្រង់មូលដ្ឋានកូដប្លុកនៃល្បែងផ្គុំរូបទាំង​នេះអាចជួយសិស្សឱ្យរៀនអំពីលំដាប់លំដោយ និងបណ្ដុះគោលគំនិត ដោយមិនចាំបាច់ព្រួយបារម្ភអំពីការសរសេរកូដជា ល្អឥតខ្ចោះនៃវាក្យសម្ព័ន្ធ (syntax). "
         },
         "pre-express-2021/Programming in with Angry Birds": {
-          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី",
+          "overview": "ក្នុងមេរៀន **ការកសាងជំនាញ** នេះសិស្សនឹងបន្តអភិវឌ្ឍ លំដាប់លំដោយនៃក្បួនដោះស្រាយបញ្ហា។ ",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   (មិនតម្រូវ) ជ្រើសរើសល្បែងផ្គុំរូបពីរបីដើម្បីធ្វើជាក្រុមជាមួយថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានសៀវភៅកត់ត្រា (ទិនានុប្បវត្តិឆ្លុះបញ្ចាំង)។",
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងរៀនពីការសរសេរកម្មវិធី និងការកែកំហុសនៅក្នុងកម្មវិធី។ ទម្រង់មូលដ្ឋានកូដប្លុកនៃល្បែងផ្គុំរូបទាំង​នេះអាចជួយសិស្សឱ្យរៀនអំពីលំដាប់លំដោយ និងបណ្ដុះគោលគំនិត ដោយមិនចាំបាច់ព្រួយបារម្ភអំពីការសរសេរកូដជា ល្អឥតខ្ចោះនៃវាក្យសម្ព័ន្ធ (syntax). "
         },
         "pre-express-2021/Programming with Rey and BB-8": {
-          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
+          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8",
+          "overview": "នៅក្នុង **ការកសាងជំនាញ** នៃមេរៀននេះ, សិស្សនិងធ្វើការប្រើប្រាស់នូវចំនេះដឹងថ្មីៗ ដែលបានរៀននៅក្នុងមេរៀន ដើម្បីដោះស្រាយបញ្ហាស្មុគស្មាញ ដោយរិះរកមធ្យោបាយ ជាមួយការអនុវត្ត BB-8។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានទិនានុប្បវត្តិឆ្លុះបញ្ចាំង។",
+          "purpose": "នៅក្នុងមេរៀននេះបានផ្ដល់ឱ្យសិស្សនូវបរិកាសថ្មីក្នុងការអនុវត្ត​ជំនាញ ដែលពួកគេកំពុងបណ្ដុះបណ្ដាល។ សម្រាប់សិស្សជាអ្នកគាំទ្ររឿង Star Wars នឹង​មាន​ភាព​រីករាយក្នុងការសិក្សា ហើយឆាប់ យល់ពីរបៀបលេង​ល្បែង​ផ្គុំ​រូប (puzzle) ។ ហើយលំហាត់នីមួយៗនៅក្នុងលំដាប់បន្ដបន្ទាប់ ដែលបានផ្ដល់ទៅ​សិស្ស គឺជួយសិស្សឱ្យមានការយល់ដឹងកាន់តែស៊ីជម្រៅអំពីគោល គំនិតជាមូលដ្ឋាន ដែលពួកគេនឹង​ ប្រើប្រាស់ពេញមួយមេរៀននេះ ។"
         },
         "pre-express-2021/Programming in Harvester": {
-          "name": "សរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល"
+          "name": "សរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល",
+          "overview": "នៅក្នុង **ការកសាងជំនាញ** នៃមេរៀននេះ, សិស្ស​នឹង​អនុវត្ត​គោល​គំនិត​នៃ​ការ​សរសេរ​កម្មវិធី ​ដែល​ពួកគេ​បាន​រៀន​ទៅ​និង​បរិស្ថាន​អ្នក​ប្រមូល​ផល។សិស្សនឹងបន្តអភិវឌ្ឍជំនាញក្បួនដោះស្រាយជាបន្តបន្ទាប់ហើយចាប់ផ្តើមប្រើប្រាស់ដំណើរការកែកំហុស។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានទិនានុប្បវត្តិឆ្លុះបញ្ចាំង។",
+          "purpose": "នៅក្នុងមេរៀននេះសិស្សនឹងអភិវឌ្ឍជំនាញដោះស្រាយបញ្ហាហើយនឹងបន្តអភិវឌ្ឍជំនាញសរសេរកម្មវិធីរបស់ពួកគេ។"
         },
         "pre-express-2021/Loops with Scrat": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក"
+          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក",
+          "overview": "នៅក្នុង **ការកសាងជំនាញ** នៃមេរៀននេះ, សិស្សនឹងអនុវត្តពីការប្រើប្រាស់ប្រតិបត្តិដដែលៗ (loop) នៅក្នុងល្បែងផ្គុំរូប (puzzles) ដើម្បីជួយឱ្យកំប្រុក (squirrel) អាចទៅយកផ្លែ ផ្លេសេន (acorn)។",
+          "preparation": "-   (មិនតម្រូវ) ជ្រើសរើសល្បែងផ្គុំរូបពីរបីដើម្បីធ្វើជាក្រុមជាមួយថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានសៀវភៅកត់ត្រា (ទិនានុប្បវត្តិឆ្លុះបញ្ចាំង)។",
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងសិក្សាបន្ថែមអំពី loop និងរបៀបអនុវត្តវានៅក្នុងកូដប្លុក។ ការប្រើ loop គឺជាជំនាញសំខាន់មួយក្នុងការសរសេរកម្មវិធី ពីព្រោះ ការសរសេរកូដ ដដែលៗច្រើនដង គឺចំនាយពេលច្រើន និងស្មុគស្មាញហើយមិនសូវមានប្រសិទ្ធភាព។ ជាមួយ និងល្បែងផ្គុំរូបក្នុង Code.org ទាំងនេះ សិស្សនឹងរៀនពីរបៀប បំលែងកូដដដែលៗ ដែលមានស្រាប់ទៅជា loop នឹងជួយឱ្យសិស្សឆាប់ចាប់បាននៅទម្រង់កូដដែលអាច សរសេរជា loop បាន។"
         },
         "pre-express-2021/Loops with Laurel": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel"
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel",
+          "overview": "នៅក្នុងមេរៀននេះសិស្សបន្តរៀនគំនិតនៃប្រតិបត្តិដដែលៗ (loop)។ ហើយការធ្វើដំណើរផ្សងព្រេង របស់ Laurel ដោយប្រើប្រាស់ប្រតិបត្តិ ដដែលៗដើម្បីប្រមូលកំណប់នៅក្នុងរូងភ្នំ។ មានកូដប្លុកថ្មី 'get treasure' គឺបានណែនាំ ដើម្បីជួយក្នុងការធ្វើដំណើររបស់នាង ។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   (មិនតម្រូវ) ជ្រើសរើសល្បែងផ្គុំរូបពីរបីដើម្បីធ្វើជាក្រុមជាមួយថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានសៀវភៅកត់ត្រា (ទិនានុប្បវត្តិឆ្លុះបញ្ចាំង)។",
+          "purpose": "មេរៀននេះផ្តល់ឱ្យសិស្សនូវការអនុវត្តបន្ថែមទៀតជាមួយនឹងប្រតិបត្តិដដែលៗ និងលើកទឹកចិត្តពួកគេឱ្យដាក់បណ្ដុំនៃកូដប្លុកចូលទៅក្នុងប្រតិបត្តិដដែលៗ (repeat) បើកូដអាចដាក់បាន។"
         },
         "pre-express-2021/Ocean Scene with Loops": {
           "name": "ប្រតិបត្តិដដែលៗជាមួយទិដ្ឋភាពសមុទ្រ",
-          "overview": "ត្រលប់ទៅរង្វិលជុំសិស្សរៀនគូររូបភាពដោយគូសលំដាប់លំដោយនៃការណែនាំសាមញ្ញ ៗ ។  នៅក្នុង មេរៀនដោត មុន ៗ រង្វិលជុំត្រូវបានប្រើដើម្បីឆ្លងកាត់ផ្ទាំងគំនូរនិងប្រមូលកំណប់។  នៅទីនេះរង្វិលជុំកំពុងបង្កើតលំនាំ។  នៅចុងបញ្ចប់នៃដំណាក់កាលនេះនិស្សិតនឹងត្រូវបានផ្តល់ឱកាសដើម្បីបង្កើតរូបភាពផ្ទាល់ខ្លួនដោយប្រើរង្វិលជុំ។"
+          "overview": "នៅក្នុង ​​**ការកសាងជំនាញ** នៃមេរៀននេះ, សិស្សរៀនពីរបៀបប្រើប្រាស់ប្រតិបត្តិដដែលៗ ដើម្បីគូររូបភាពសាមញ្ញៗ​ទៅតាម​លំដាប់នៃការណែនាំនៅក្នុងកម្មវិធី។នៅចុងបញ្ចប់នៃមេរៀននេះសិស្សនឹងមានឱកាសអាចបង្កើតរូបភាពដោយផ្ទាល់ខ្លួនបាន។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានទិនានុប្បវត្តិឆ្លុះបញ្ចាំង។",
+          "purpose": "មេរៀននេះផ្តល់នូវទស្សនៈផ្សេងទៀតអំពីប្រតិបត្តិដដែលៗ (loops) អាចបង្កើតអ្វីមួយ ក្នុងការបង្កើតកម្មវិធី។ សិស្សក៏អាចឆ្លុះបញ្ចាំងពីភាពលំបាកនៃការសរសេរកម្មវិធី ដោយមិនប្រើប្រតិបត្តិដដែលៗ។"
         },
         "pre-express-2021/Drawing Gardens with Loops": {
-          "name": "គូរសួនច្បារជាមួយប្រតិបត្តិដដែលៗ"
+          "name": "គូរសួនច្បារជាមួយប្រតិបត្តិដដែលៗ",
+          "overview": "នៅក្នុង **ការកសាងជំនាញ** នៃមេរៀននេះ, សិស្សរៀនពីរបៀបប្រើប្រាស់ប្រតិបត្តិដដែលៗ ដើម្បីគូររូបភាពសាមញ្ញៗ​ទៅតាម​លំដាប់នៃការណែនាំនៅក្នុងកម្មវិធី។នៅក្នុងមេរៀននេះមានការបង្កើតប្រតិបត្តិដដែលៗជាគំរូផងដែរហើយនៅចុងបញ្ចប់នៃមេរៀននេះសិស្សនឹងត្រូវបានផ្ដល់​ឱកាសដើម្បី​​ បង្កើតរូបភាពផ្ទាល់ខ្លួន។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានទិនានុប្បវត្តិឆ្លុះបញ្ចាំង។",
+          "purpose": "មេរៀននេះផ្តល់នូវទស្សនៈខុសៗគ្នាអំពីប្រតិបត្តិដដែលៗ (loops) អាចបង្កើតអ្វីមួយ ក្នុងការបង្កើតកម្មវិធី។ សិស្សនឹងសាកល្បងលើការ​ត្រិះរិះ​ពិចារណាជ្រៅៗដើម្បីវាយ តម្លៃកូដដែលបានផ្តល់ឱ្យ និងកំណត់នូវអ្វីដែលត្រូវបន្ថែម ដើម្បីដោះស្រាយល្បែងផ្គុំរូប។\nសិស្សក៏អាចឆ្លុះបញ្ចាំងពីភាពលំបាកនៃការសរសេរកម្មវិធីដោយមិនប្រើប្រតិបត្តិដដែលៗ"
         },
         "pre-express-2021/On the Move with Events": {
           "name": "ការផ្លាស់ប្ដូរចលនាដោយប្រើកូដប្លុកព្រឹត្តិការណ៍",
-          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ិនធើណេតនេះនិស្សិតនឹងមានឱកាសរៀនពីរបៀបប្រើព្រឹត្តិការណ៍នានានៅក្នុង ផ្លេ លេប និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀនបង្កើតហ្គេមមានចលនា។  ដល់ពេលដែលត្រូវច្នៃប្រឌិតហើយបង្កើតរឿងនៅក្នុងបន្ទប់ពិសោធន៍!"
+          "overview": "នៅក្នុង **ការងារគម្រោងខ្នាតតូចនេះ(mini-project)**, សិស្សនឹងមានឱកាសរៀនពីរបៀបប្រើ ប្រាស់​ កូដប្លុកព្រឹត្តិការណ៍ (Event) នៅក្នុងចំណោទបែបបង្កើតព្រឹត្តិការណ៍(Play Lab) នឹងអនុវត្តពីជំនាញសរសេរកូដទាំងអស់ដែលបានរៀនដើម្បីបង្កើត ហ្គេម​ ឬរឿងដែលមាន ចលនា។ នេះជាពេលដែលសិស្សត្រូវធ្វើការរៀបចំនឹងបង្កើតគំនិតច្នៃប្រឌិត ដើម្បីបង្កើតជា រឿង ឬហ្គេមមួយនៅក្នុង Play Lab ។  ",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   (មិនតម្រូវ) ជ្រើសរើសល្បែងផ្គុំរូបពីរបីដើម្បីធ្វើជាក្រុមជាមួយថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានសៀវភៅកត់ត្រា (ទិនានុប្បវត្តិឆ្លុះបញ្ចាំង)។",
+          "purpose": "សិស្សនឹងអភិវឌ្ឍការយល់ដឹងរបស់ពួកគេបន្ថែមទៀតអំពីព្រឹត្តិការណ៍ដោយប្រើ Play Lab។ ព្រឹត្តិការណ៍គឺជារឿងធម្មតាណាស់ដែលប្រើនៅក្នុងកម្មវិធីកុំព្យូទ័រភាគច្រើន។ នៅក្នុងសកម្មភាពនេះ សិស្សនឹងប្រើព្រឹត្តិការណ៍ដើម្បីធ្វើចលនាតួអក្សរជុំវិញអេក្រង់ បង្កើតសំឡេង និងផ្លាស់ប្តូរផ្ទៃខាងក្រោយដោយផ្អែកលើព្រឹត្តិការណ៍ដែលបង្កើតឡើងដោយអ្នកប្រើប្រាស់។"
         },
         "pre-express-2021/A Royal Battle with Events": {
           "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍",
           "overview": "នៅក្នុង **គម្រោងខ្នាតតូច** នេះ សិស្សនឹងមានឱកាសរៀនពីរបៀបប្រើប្រាស់ព្រឹត្តិការណ៍នៅក្នុង Play Lab និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀន ដើម្បីបង្កើតហ្គេមដែលមានចលនា។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   (មិនតម្រូវ) ជ្រើសរើសល្បែងផ្គុំរូបពីរបីដើម្បីធ្វើជាក្រុមជាមួយថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានសៀវភៅកត់ត្រា (ទិនានុប្បវត្តិឆ្លុះបញ្ចាំង)។",
+          "purpose": "នៅក្នុងសកម្មភាពអនឡាញនេះ សិស្សនឹងរៀនពីរបៀបប្រើប្រាស់ព្រឹត្តិការណ៍នៅក្នុង Play Lab ។ ពួកគេនឹងចាប់ផ្តើមដោយការបង្ហាត់ មេទ័ពឱ្យផ្លាស់ទីនៅពេលដែលចុចគ្រាប់ចុចព្រួញ បន្ទាប់មកបញ្ចប់ដោយការថែមអ្វីផ្សេងៗទៀតដោយប្រើជំនាញដែលពួកគេបានរៀនក្នុងវគ្គសិក្សានេះ រួមទាំងលំដាប់ និង loops ដែលជាផ្នែកមួយនៃល្បែងផ្គុំរូបបង្កើតដោយសេរីនៅចុងក្រោយនៃអនុវត្ត។",
           "student_overview": "ប្រើព្រឹត្តិការណ៍ដើម្បីបង្កើតរឿង ឬបង្កើតហ្គេមដែលអាចលេងបាន។"
         },
-        "coursee-2021/Private and Personal Information": {
+        "csd3-2022/Shapes and Parameters": {
+          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        },
+        "csd3-2022/Variables": {
+          "name": "អ​ថេរ"
+        },
+        "csd3-2022/Random Numbers": {
+          "name": "លេខចៃដន្យ"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "លក្ខណៈសម្បត្តិនៃ sprite"
+        },
+        "csd3-2022/Text": {
+          "name": "អត្ថ​​បទ"
+        },
+        "csd3-2022/The Draw Loop": {
+          "name": "ការគូររង្វិលជុំដដែលៗ"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "លក្ខខណ្ឌ"
+        },
+        "csd3-2022/Collision Detection": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "csd3-2022/Functions": {
+          "name": "អនុ​គមន៍"
+        },
+        "csd6-2022/Functions": {
+          "name": "អនុ​គមន៍"
+        },
+        "coursea-2022/Learn to Drag and Drop": {
+          "name": "រៀនអំពីការអូស និងទម្លាក់",
+          "overview": "មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វី ដែលពួកគេត្រូវគិតទុកជាមុនប្រើប្រាស់បន្ទប់កុំព្យូទ័រ។  សិស្សចាប់ផ្ដើមពីការពិភាក្សាក្រុមដើម្បីបញ្ចេញមតិ​នឹងស្វែងយល់អំពី  អាកប្បកិរិយាគួរ ឬមិន​គួរធ្វើនៅ​ក្នុងបន្ទប់កុំព្យូទ័រ។ ដើម្បីឱ្យមានភាពស្ទាត់ជំនាញក្នុង ការប្រើប្រាស់កុំព្យូទ័រ សិស្សនឹងអនុវត្តជាមួយល្បែងផ្គុំរូបនៅលើអ៊ីនធឺណិត។",
+          "purpose": "គោលដៅសំខាន់នៃមេរៀននេះគឺ បង្កើតបទពិសោធន៍របស់សិស្សជាមួយ និងកុំព្យូទ័រ លើមុខងារមូលដ្ឋានបំផុតដូចជាការចុច អូស និងទម្លាក់ ដោយអនុវត្តជាមួយល្បែងផ្គុំរូប។ មេរៀននេះក៏ផ្តល់នូវឱកាសដ៏ល្អមួយដើម្បីណែនាំ វាក្យស័ព្ទផ្នែករឹងកុំព្យូទ័ ដូចជា \"mouse\" \"trackpad\" ឬ \"touchscreen\" អាស្រ័យលើ ឧបករណ៍របស់អ្នក។"
+        },
+        "coursea-2022/Happy Maps": {
+          "purpose": "ស្ពានពីក្បួនដោះស្រាយទៅការសរសេរកម្មវិធីអាចជារយៈពេលខ្លីប្រសិនបើសិស្សយល់ពីភាពខុសគ្នារវាងការធ្វើផែនការ​ និងការសរសេរអ៊ិនកូដលំដាប់នោះទៅជាភាសាដែលសមរម្យ។  សកម្មភាពនេះនឹងជួយឱ្យសិស្សទទួលបានបទពិសោធន៍ក្នុងការអាននិងសរសេរជាកូដខ្លីៗ។"
+        },
+        "coursea-2022/Sequencing with Scrat": {
+          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក ",
+          "overview": "នៅក្នុងមេរៀននេះ សិស្សនឹងបង្កើតក្បួនដោះស្រាយបញ្ហា ដោយអនុវត្ត តាមការ កសាងជំនាញ (skill-building) ដោយតម្រៀបកូដប្លុក តាមលំដាប់លំដោយ ដើម្បីផ្លាស់ទីតួអង្គកំប្រុក ទៅរកផ្លែផ្លេសេនក្នុងចំណោទបញ្ហានីមួយៗ។ ដើម្បីធ្វើបានពួកគេត្រូវភ្ជាប់កូដប្លុកតាមលំដាប់លំដោយជាជួរ។",
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងរៀនពីការសរសេរកម្មវិធី និងការកែកំហុសនៅក្នុងកម្មវិធី។ ទម្រង់មូលដ្ឋានកូដប្លុកនៃល្បែងផ្គុំរូបទាំង​នេះអាចជួយសិស្សឱ្យរៀនអំពីលំដាប់លំដោយ និងបណ្ដុះគោលគំនិត ដោយមិនចាំបាច់ព្រួយបារម្ភអំពីការសរសេរកូដជា ល្អឥតខ្ចោះនៃវាក្យសម្ព័ន្ធ (syntax). "
+        },
+        "coursea-2022/Programming with Scrat": {
+          "overview": "ក្នុងមេរៀន **ការកសាងជំនាញ** នេះសិស្សនឹងបន្តអភិវឌ្ឍ លំដាប់លំដោយនៃក្បួនដោះស្រាយបញ្ហា។ ",
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងរៀនពីការសរសេរកម្មវិធី និងការកែកំហុសនៅក្នុងកម្មវិធី។ ទម្រង់មូលដ្ឋានកូដប្លុកនៃល្បែងផ្គុំរូបទាំង​នេះអាចជួយសិស្សឱ្យរៀនអំពីលំដាប់លំដោយ និងបណ្ដុះគោលគំនិត ដោយមិនចាំបាច់ព្រួយបារម្ភអំពីការសរសេរកូដជា ល្អឥតខ្ចោះនៃវាក្យសម្ព័ន្ធ (syntax). "
+        },
+        "coursea-2022/Programming with Rey and BB-8": {
+          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
+        },
+        "coursea-2022/Loops with Scrat": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក"
+        },
+        "coursea-2022/Loops with Laurel": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel"
+        },
+        "coursea-2022/Ocean Scene with Loops": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយទិដ្ឋភាពសមុទ្រ",
+          "overview": "ត្រលប់ទៅរង្វិលជុំសិស្សរៀនគូររូបភាពដោយគូសលំដាប់លំដោយនៃការណែនាំសាមញ្ញ ៗ ។  នៅក្នុង មេរៀនដោត មុន ៗ រង្វិលជុំត្រូវបានប្រើដើម្បីឆ្លងកាត់ផ្ទាំងគំនូរនិងប្រមូលកំណប់។  នៅទីនេះរង្វិលជុំកំពុងបង្កើតលំនាំ។  នៅចុងបញ្ចប់នៃដំណាក់កាលនេះនិស្សិតនឹងត្រូវបានផ្តល់ឱកាសដើម្បីបង្កើតរូបភាពផ្ទាល់ខ្លួនដោយប្រើរង្វិលជុំ។"
+        },
+        "coursea-2022/The Big Event Jr": {
+          "overview": "ព្រឹត្តិការណ៍គឺជាវិធីដ៏ល្អដើម្បីបន្ថែមភាពខុសគ្នាទៅនឹងក្បួនដោះស្រាយដែលបានសរសេរជាហើយ។  ពេលខ្លះអ្នកចង់អោយកម្មវិធីរបស់អ្នកអាចឆ្លើយតបទៅអ្នកប្រើអោយបានច្បាស់នៅពេលអ្នកប្រើចង់អោយវាធ្វើ។  នោះគឺជាអ្វីដែលព្រឹត្តិការណ៍ដែលគេចង់បាន។"
+        },
+        "coursea-2022/Mini-Project: On the Move with Play Lab": {
+          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ិនធើណេតនេះនិស្សិតនឹងមានឱកាសរៀនពីរបៀបប្រើព្រឹត្តិការណ៍នានានៅក្នុង ផ្លេ លេប និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀនបង្កើតហ្គេមមានចលនា។  ដល់ពេលដែលត្រូវច្នៃប្រឌិតហើយបង្កើតរឿងនៅក្នុងបន្ទប់ពិសោធន៍!",
+          "purpose": "សិស្សនឹងអភិវឌ្ឍការយល់ដឹងរបស់ពួកគេបន្ថែមទៀតអំពីព្រឹត្តិការណ៍ដោយប្រើ Play Lab។ ព្រឹត្តិការណ៍គឺជារឿងធម្មតាណាស់ដែលប្រើនៅក្នុងកម្មវិធីកុំព្យូទ័រភាគច្រើន។ នៅក្នុងសកម្មភាពនេះ សិស្សនឹងប្រើព្រឹត្តិការណ៍ដើម្បីធ្វើចលនាតួអក្សរជុំវិញអេក្រង់ បង្កើតសំឡេង និងផ្លាស់ប្តូរផ្ទៃខាងក្រោយដោយផ្អែកលើព្រឹត្តិការណ៍ដែលបង្កើតឡើងដោយអ្នកប្រើប្រាស់។"
+        },
+        "coursea-2022/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
+        "courseb-2022/Sequencing with Angry Birds": {
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងរៀនពីការសរសេរកម្មវិធី និងការកែកំហុសនៅក្នុងកម្មវិធី។ ទម្រង់មូលដ្ឋានកូដប្លុកនៃល្បែងផ្គុំរូបទាំង​នេះអាចជួយសិស្សឱ្យរៀនអំពីលំដាប់លំដោយ និងបណ្ដុះគោលគំនិត ដោយមិនចាំបាច់ព្រួយបារម្ភអំពីការសរសេរកូដជា ល្អឥតខ្ចោះនៃវាក្យសម្ព័ន្ធ (syntax). "
+        },
+        "courseb-2022/Programming with Angry Birds": {
+          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី",
+          "overview": "ក្នុងមេរៀន **ការកសាងជំនាញ** នេះសិស្សនឹងបន្តអភិវឌ្ឍ លំដាប់លំដោយនៃក្បួនដោះស្រាយបញ្ហា។ "
+        },
+        "courseb-2022/Programming with Harvester": {
+          "name": "សរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល",
+          "purpose": "នៅក្នុងមេរៀននេះសិស្សនឹងអភិវឌ្ឍជំនាញដោះស្រាយបញ្ហាហើយនឹងបន្តអភិវឌ្ឍជំនាញសរសេរកម្មវិធីរបស់ពួកគេ។"
+        },
+        "courseb-2022/Loops with Laurel": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel",
+          "purpose": "មេរៀននេះផ្តល់ឱ្យសិស្សនូវការអនុវត្តបន្ថែមទៀតជាមួយនឹងប្រតិបត្តិដដែលៗ និងលើកទឹកចិត្តពួកគេឱ្យដាក់បណ្ដុំនៃកូដប្លុកចូលទៅក្នុងប្រតិបត្តិដដែលៗ (repeat) បើកូដអាចដាក់បាន។"
+        },
+        "courseb-2022/Drawing Gardens with Loops": {
+          "name": "គូរសួនច្បារជាមួយប្រតិបត្តិដដែលៗ",
+          "purpose": "មេរៀននេះផ្តល់នូវទស្សនៈខុសៗគ្នាអំពីប្រតិបត្តិដដែលៗ (loops) អាចបង្កើតអ្វីមួយ ក្នុងការបង្កើតកម្មវិធី។ សិស្សនឹងសាកល្បងលើការ​ត្រិះរិះ​ពិចារណាជ្រៅៗដើម្បីវាយ តម្លៃកូដដែលបានផ្តល់ឱ្យ និងកំណត់នូវអ្វីដែលត្រូវបន្ថែម ដើម្បីដោះស្រាយល្បែងផ្គុំរូប។\nសិស្សក៏អាចឆ្លុះបញ្ចាំងពីភាពលំបាកនៃការសរសេរកម្មវិធីដោយមិនប្រើប្រតិបត្តិដដែលៗ"
+        },
+        "courseb-2022/The Big Event Jr": {
+          "overview": "ព្រឹត្តិការណ៍គឺជាវិធីដ៏ល្អដើម្បីបន្ថែមភាពខុសគ្នាទៅនឹងក្បួនដោះស្រាយដែលបានសរសេរជាហើយ។  ពេលខ្លះអ្នកចង់អោយកម្មវិធីរបស់អ្នកអាចឆ្លើយតបទៅអ្នកប្រើអោយបានច្បាស់នៅពេលអ្នកប្រើចង់អោយវាធ្វើ។  នោះគឺជាអ្វីដែលព្រឹត្តិការណ៍ដែលគេចង់បាន។"
+        },
+        "courseb-2022/Mini-Project: A Royal Battle with Events": {
+          "overview": "នៅក្នុង **គម្រោងខ្នាតតូច** នេះ សិស្សនឹងមានឱកាសរៀនពីរបៀបប្រើប្រាស់ព្រឹត្តិការណ៍នៅក្នុង Play Lab និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀន ដើម្បីបង្កើតហ្គេមដែលមានចលនា។",
+          "purpose": "នៅក្នុងសកម្មភាពអនឡាញនេះ សិស្សនឹងរៀនពីរបៀបប្រើប្រាស់ព្រឹត្តិការណ៍នៅក្នុង Play Lab ។ ពួកគេនឹងចាប់ផ្តើមដោយការបង្ហាត់ មេទ័ពឱ្យផ្លាស់ទីនៅពេលដែលចុចគ្រាប់ចុចព្រួញ បន្ទាប់មកបញ្ចប់ដោយការថែមអ្វីផ្សេងៗទៀតដោយប្រើជំនាញដែលពួកគេបានរៀនក្នុងវគ្គសិក្សានេះ រួមទាំងលំដាប់ និង loops ដែលជាផ្នែកមួយនៃល្បែងផ្គុំរូបបង្កើតដោយសេរីនៅចុងក្រោយនៃអនុវត្ត។",
+          "student_overview": "ប្រើព្រឹត្តិការណ៍ដើម្បីបង្កើតរឿង ឬបង្កើតហ្គេមដែលអាចលេងបាន។"
+        },
+        "courseb-2022/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
+        "coursec-2022/Programming with Angry Birds": {
+          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី",
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងរៀនពីការសរសេរកម្មវិធី និងការកែកំហុសនៅក្នុងកម្មវិធី។ ទម្រង់មូលដ្ឋានកូដប្លុកនៃល្បែងផ្គុំរូបទាំង​នេះអាចជួយសិស្សឱ្យរៀនអំពីលំដាប់លំដោយ និងបណ្ដុះគោលគំនិត ដោយមិនចាំបាច់ព្រួយបារម្ភអំពីការសរសេរកូដជា ល្អឥតខ្ចោះនៃវាក្យសម្ព័ន្ធ (syntax). "
+        },
+        "coursec-2022/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
+        },
+        "coursec-2022/Collecting Treasure with Laurel": {
+          "name": "ប្រមូលកំណប់ជាមួយតួអង្គ Laurel"
+        },
+        "coursec-2022/Creating Art with Code": {
+          "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
+        },
+        "coursec-2022/Loops with Rey and BB-8": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
+        },
+        "coursec-2022/Mini-Project: Sticker Art": {
+          "name": "គម្រោងខ្នាតតូច៖ សិល្បៈស្ទីគ័រ"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "coursec-2022/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង",
+          "student_overview": "ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។"
+        },
+        "coursed-2022/Introduction to Online Puzzles": {
+          "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត",
+          "overview": "នៅក្នុងល្បែងផ្គុំរូបនេះសិស្សនឹងចាប់ផ្តើមជាមួយនឹងការណែនាំ (ឬពិនិត្យឡើងវិញដោយផ្អែកលើបទពិសោធន៍នៃថ្នាក់របស់អ្នក) នៃកន្លែងធ្វើការតាមអ៊ិនធឺរណែតរបស់ Code.org ។ វានឹងមានវីដេអូដែលបង្ហាញពីមុខងារមូលដ្ឋាននៃកន្លែងធ្វើការរួមមាន `ប៊ូតុងរត់` `ប៊ូតុងកំណត់ឡើងវិញ` និង `ប៊ូតុងជំហាន`។ បន្ទាប់ពីបានពិភាក្សាផងដែរនៅក្នុងវីដេអូទាំងនេះ: ការអូសប្លុកប្លុក លុបប្លុកប្លុក និងភ្ជាប់ប្លុកប្លុក។ បន្ទាប់មកទៀតនិស្សិតនឹងអនុវត្តជំនាញ \\_ បន្តបន្ទាប់និង \\_ ជំនាញបំបាត់កំហុសរបស់ពួកគេក្នុងការស្វែងរក។ ពីទីនោះសិស្សនឹងឃើញល្បែងផ្គុំរូបថ្មីៗដូចជាអ្នកប្រមូល សិល្បករ និងអ្នកប្រមូលផលពេលពួកគេរៀនមូលដ្ឋានគ្រឹះ _loops_ ។",
+          "student_overview": "មេរៀននេះនឹងផ្តល់ឱ្យអ្នកអនុវត្តនូវជំនាញដែលអ្នកនឹងត្រូវការសម្រាប់វគ្គសិក្សានេះ។"
+        },
+        "coursed-2022/Relay Programming": {
+          "student_overview": "ចងចាំនៅដើមវគ្គសិក្សានៅពេលអ្នកធ្វើគំនូរដោយប្រើកូដ? នៅក្នុងមេរៀននេះអ្នកនឹងធ្វើការជាមួយក្រុមដើម្បីធ្វើអ្វីដែលស្រដៀងគ្នា!"
+        },
+        "coursed-2022/Debugging with Laurel": {
+          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងអនុវត្តការបំបាត់កំហុសនៅក្នុងបរិយាកាស“ អ្នកប្រមូល” ។ និស្សិតនឹងទទួលបានការអនុវត្តការអាននិងកែលេខកូដដើម្បីជួសជុលល្បែងផ្គុំរូបដែលមានក្បួនដោះស្រាយរង្វិលជុំនិងរង្វិលជុំដែលនៅជាប់គ្នា។",
+          "student_overview": "តើអ្នកធ្លាប់មានបញ្ហាទេពេលកំពុងសរសេរកូដដែរឬទេ? នៅក្នុងមេរៀននេះអ្នកនឹងរៀនអំពីអាថ៌កំបាំងនៃការបំបាត់កំហុស។ ការបំបាត់កំហុសគឺជាដំណើរការនៃការស្វែងរកនិងដោះស្រាយបញ្ហានៅក្នុងលេខកូដរបស់អ្នក។"
+        },
+        "coursed-2022/Events in Bounce": {
+          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងដឹងថាតើព្រឹត្តិការណ៍មានអ្វីខ្លះ ហើយនិងការប្រេីកុំព្យូទ័រដុចនៅក្នុងកម្មវិធីដូចជាហ្គេមវីដេអូ។ សិស្សនឹងធ្វើការតាមរយៈល្បែងផ្គុំរូបដែលធ្វើឱ្យកម្មវិធីមានប្រតិកម្មទៅនឹងព្រឹត្តិការណ៍ (ដូចជាប៊ូតុងព្រួញត្រូវបានចុច។ ) នៅចុងបញ្ចប់នៃល្បែងផ្គុំរូបសិស្សនឹងមានឱកាសប្តូរហ្គេមរបស់ពួកគេតាមល្បឿននិងសំឡេងខុសៗគ្នា។",
+          "student_overview": "ធ្លាប់សង្ឃឹមថាអ្នកអាចលេងហ្គេមវីដេអូនៅសាលាបានទេ? នៅក្នុងមេរៀននេះអ្នកនឹងត្រូវបង្កើតដោយខ្លួនឯង!"
+        },
+        "coursed-2022/Build a Star Wars Game": {
+          "overview": "នៅក្នុងមេរៀននេះសិស្សនឹងអនុវត្តការប្រើប្រាស់ព្រឹត្តិការណ៍ដើម្បីបង្កើតហ្គេមដែលពួកគេអាចចែករំលែកតាមអ៊ិនធរណេត។  ​ចូលរួមដោយ R2-D2 និងតួអង្គ Star Wars ផ្សេងទៀត  សិស្សនឹងត្រូវបានដឹកនាំឆ្លងកាត់ព្រឹត្តិការណ៍នានាបន្ទាប់មកផ្តល់កន្លែងអនុវត្ដដើម្បីបង្កើតហ្គេមដោយខ្លួនឯង។",
+          "student_overview": "ត្រៀមកម្លាំងរបស់អ្នកដោយ អ្នកនឹងបង្កើតហ្គេម Start Wars​ ដោយខ្លួនអ្នកនៅក្នុងមេរៀននេះ។"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "កម្មវិធីរាំ"
+        },
+        "coursed-2022/Loops in Ice Age": {
+          "name": "ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក"
+        },
+        "coursed-2022/Nested Loops in Maze": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze",
+          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងមានឱកាសជំរុញការយល់ដឹងអំពីរង្វិលជុំដល់កំរិតថ្មីទាំងមូល។ លេងជាមួយឃ្មុំនិងរុក្ខជាតិទល់នឹង Zombies សិស្សនឹងរៀនពីរបៀបសរសេររង្វិលជុំដើម្បីឱ្យស្ថិតនៅក្នុងរង្វិលជុំមួយទៀត។ ពួកគេក៏នឹងត្រូវបានលើកទឹកចិត្តឱ្យរកមើលថាតើការផ្លាស់ប្តូរតិចតួចនៅក្នុងរង្វិលជុំទាំងពីរនឹងប៉ះពាល់ដល់កម្មវិធីរបស់ពួកគេយ៉ាងដូចម្តេចនៅពេលពួកគេចុច `រត់` ។"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត",
+          "student_overview": "វាដល់ពេលហើយដើម្បីលេងល្បែងដែលអ្នករកពិន្ទុបានតែក្រោមលក្ខខណ្ឌជាក់លាក់ប៉ុណ្ណោះ!"
+        },
+        "coursed-2022/If/Else with Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ",
+          "overview": "រហូតមកដល់ចំណុចនេះសិស្សបានសរសេរកូដដែលប្រតិបត្តិតាមវិធីដូចគ្នារាល់ពេលដែលដំណើរការ - អាចទុកចិត្តបាន ប៉ុន្តែមិនមានភាពបត់បែនខ្លាំងទេ។ នៅក្នុងមេរៀននេះថ្នាក់របស់អ្នកនឹងចាប់ផ្តើមសរសេរកូដដោយមានលក្ខខណ្ឌដែលអនុញ្ញាតឱ្យពួកគេសរសេរកូដដែលមានមុខងារខុសគ្នាអាស្រ័យលើលក្ខខណ្ឌជាក់លាក់ដែលកម្មវិធីជួប។",
+          "student_overview": "ឥឡូវអ្នកយល់ពីលក្ខខណ្ឌវាដល់ពេលត្រូវសរសេរកម្មវិធីឃ្មុំដើម្បីប្រើវានៅពេលប្រមូលទឹកឃ្មុំនិងទឹកដម។"
+        },
+        "coursed-2022/While Loops in Farmer": {
+          "student_overview": "រង្វិលជុំមានប្រយោជន៍ណាស់ក្នុងការសរសេរកូដ។ មេរៀននេះនឹងបង្រៀនអ្នកអំពីរង្វិលជុំប្រភេទថ្មីមួយ: ខណៈរង្វិលជុំ!"
+        },
+        "coursed-2022/Until Loops in Maze": {
+          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
+        },
+        "coursed-2022/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង",
+          "student_overview": "ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។"
+        },
+        "coursee-2022/Private and Personal Information": {
           "student_overview": "អ៊ីនធឺណិតផ្ដល់នូវភាពសប្បាយ និងរំភើបប៉ុន្ដែការរក្សាសុវត្ថិភាពនៅលើអ៊ីនធឺណិតក៏សំខាន់ដែរ។ មេរៀននេះបង្រៀនអ្នកពីភាពខុសគ្នារវាងព័ត៌មានដែលមានសុវត្ថិភាពក្នុងការចែករំលែកនិងព័ត៌មានឯកជន។"
         },
-        "coursee-2021/Nested Loops in Artist": {
+        "coursee-2022/Fancy Shapes using Nested Loops": {
           "student_overview": "សំបុករង្វិលជុំច្រើនទៀត! លើកនេះអ្នកត្រូវធ្វើគំនូរ AMAZING មួយចំនួនដែលមានរង្វិលជុំនៅខាងចុង។"
         },
-        "coursee-2021/Functions: Songwriting": {
+        "coursee-2022/Songwriting": {
           "overview": "រចនាសម្ព័ន្ធដ៏អស្ចារ្យបំផុតមួយនៅក្នុងពិភពវិទ្យាសាស្ត្រកុំព្យូទ័រគឺអនុគមន៍។ អនុគមន៍​(ដែលពេលខ្លះត្រូវបានហៅថា នីតិវិធី) គឺជាប្រូក្រាមតូចដែលអ្នកអាចប្រើនៅក្នុងប្រូក្រាមធំ។ មេរៀននេះនឹងជួយសិស្សយល់កាន់តែសុីជម្រៅថាតើហេតុអ្វីបានជាការរួមបញ្ចូលគ្នានៃបណ្ដុំកូដអោយទៅជាអនុគមន៍អាចជាការអនុវត្ដមួយដ៏មានប្រយោជន៍។",
           "student_overview": "សម្បីតែ Rockstar ក៏ត្រូវការជំនាញសរសេរកូដដែរ។ មេរៀននេះនឹងបង្រៀនអ្នកអំពីអនុគមន៍ដោយប្រើប្រាស់អត្ថបទចម្រៀងពីចម្រៀង។"
         },
-        "coursee-2021/Functions in Artist": {
+        "coursee-2022/Functions with Artist": {
+          "name": "មុខងារជាមួយវិចិត្រករ",
           "student_overview": "ធ្វើឱ្យគំនូរស្មុគស្មាញកាន់តែងាយស្រួលដោយប្រើអនុគមន៍!"
         },
-        "coursee-2021/Conditionals": {
+        "coursee-2022/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "លក្ខខណ្ឌនៅក្នុង Minecraft: នាវាមុជទឹក"
+        },
+        "coursee-2022/Conditionals with the Farmer": {
           "overview": "មេរៀននេះណែនាំសិស្សមកកាន់ឃ្លានៃកូដ `while` loops និង `if / else` ។ _While loops_ គឺជារង្វល់ជុំដែលបន្ដការងារដដែលៗដរាបណាលក្ខខណ្ឌពិត។ While loops ត្រូវបានប្រើប្រាស់នៅពេលដែលអ្នកសរសេរកូដមិនដឹងច្បាស់អំពីចំនួនដងនៃការបញ្ជាកូដអោយធ្វើឡើងម្ដងទៀត ប៉ុន្ដែអ្នកសរសេរកូដដឹងពីលក្ខខណ្ឌពិតដើម្បីអោយ loop បន្ដរង្វល់ជុំ។ `If / Else` គឺជាឃ្លាកូដដែលផ្ដល់នូវភាពបត់បែននៅក្នុងការសរសេរកូដដោយដំណើរការផ្នែកណាមួយនៃកូដនៅពេលដែលលក្ខខណ្ឌអ្វីមួយពិតតែប៉ុណ្ណោះ បើមិនដូច្នេះទេវានឹងធ្វើការងារអ្វីផ្សេង។",
           "student_overview": "អ្នកនឹងត្រូវប្រាប់កុំព្យូទ័រនូវអ្វីដែលត្រូវធ្វើក្រោមល័ក្ខខ័ណ្ឌជាក់លាក់មួយចំនួននៅក្នុងស៊េរីដ៏សប្បាយនិងឧបសគ្គនេះ។"
         },
-        "coursee-2021/Functions in Harvester": {
+        "coursee-2022/Functions with Harvester": {
           "student_overview": "អនុគមន៍នឹងជួយការងារជាច្រើននៅពេលអ្នកជួយ farmer ជាមួយនឹងការប្រមូលផលរបស់គាត់!"
         },
-        "coursee-2021/End of Course Project": {
+        "coursee-2022/End of Course Project": {
           "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
-        "csd6-2021/Designing Screens with Code": {
-          "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
+        "coursef-2022/The Power of Words": {
+          "student_overview": "ការគំរាមកំហែង គឺមិនដែលត្រឹមត្រូវទេ។ មេរៀននេះ នឹងបង្រៀនអ្នកពីអ្វីដែលត្រឹមត្រូវ និងមិនត្រឹមត្រូវ ក្នុងការនិយាយអនឡាញ។"
         },
-        "csd3-2021/Shapes and Parameters": {
-          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        "coursef-2022/Introducing Sprite Lab": {
+          "name": "សេចក្ដីណែនាំពី Sprite Lab"
         },
-        "csd3-2021/Variables": {
-          "name": "អ​ថេរ"
+        "coursef-2022/Making Sprites": {
+          "name": "ការបង្កើត Sprites"
         },
-        "csd3-2021/Random Numbers": {
-          "name": "លេខចៃដន្យ"
+        "coursef-2022/Sprites in Action": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
         },
-        "csd3-2021/Sprite Properties": {
-          "name": "លក្ខណៈសម្បត្តិនៃ sprite"
+        "coursef-2022/[New] Counting with Variables": {
+          "name": "ការរាប់ជាមួយអថេរ"
         },
-        "csd3-2021/Text": {
-          "name": "អត្ថ​​បទ"
+        "coursef-2022/The Internet": {
+          "name": "អ៊ីនធឺណិត",
+          "overview": "ទោះបីជាមនុស្សជាច្រើនប្រើអ៊ិនធឺរណែតជារៀងរាល់ថ្ងៃក៏ដោយក៏មិនមានមនុស្សជាច្រើនដែរដឹងថាវាដំណើរការយ៉ាងដូចម្តេច។ នៅក្នុងមេរៀននេះសិស្សនឹងរៀនអំពីបណ្ដាញ URLs អាសយដ្ឋាន IP និង DNS ។",
+          "student_overview": "ធ្លាប់ឆ្ងល់ទេថាតើព័ត៌មានធ្វើដំណើរឆ្លងកាត់អ៊ីនធឺណិតយ៉ាងដូចម្តេច? វាមិនមែនជាវេទមន្តទេ! មេរៀននេះនឹងបង្រៀនអ្នកអំពីរបៀបដំណើរការអ៊ីនធឺណិត។"
         },
-        "csd3-2021/The Draw Loop": {
-          "name": "ការគូររង្វិលជុំដដែលៗ"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "លក្ខខណ្ឌ"
-        },
-        "csd3-2021/Collision Detection": {
-          "name": "ការរកឃើញការប៉ះទង្គិច"
-        },
-        "csd3-2021/Functions": {
-          "name": "អនុ​គមន៍"
-        },
-        "pre-express-2020/Learn to Drag and Drop": {
-          "name": "រៀនអំពីការអូស និងទម្លាក់"
-        },
-        "pre-express-2020/Sequencing with Scrat": {
-          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក "
-        },
-        "pre-express-2020/Programming with Rey and BB-8": {
-          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
-        },
-        "pre-express-2020/Loops with Scrat": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក"
-        },
-        "pre-express-2020/Loops with Laurel": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel"
-        },
-        "pre-express-2020/Ocean Scene with Loops": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយទិដ្ឋភាពសមុទ្រ"
-        },
-        "pre-express-2020/Drawing Gardens with Loops": {
-          "name": "គូរសួនច្បារជាមួយប្រតិបត្តិដដែលៗ"
-        },
-        "pre-express-2020/On the Move with Events": {
-          "name": "ការផ្លាស់ប្ដូរចលនាដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
-        },
-        "pre-express-2020/A Royal Battle with Events": {
-          "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
-        },
-        "express-2020/Dance Party": {
-          "name": "Dance Party"
-        },
-        "express-2020/Programming with Angry Birds": {
-          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
-        },
-        "express-2020/Debugging with Scrat": {
-          "name": "ការបំបាត់កំហុសជាមួយ Scrat"
-        },
-        "express-2020/Loops with Rey and BB-8": {
-          "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
-        },
-        "express-2020/Until Loops in Maze": {
-          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
-        },
-        "express-2020/For Loops with Artist": {
-          "name": "For loops ជាមួយវិចិត្រករ"
-        },
-        "express-2020/Swimming Fish in Sprite Lab": {
-          "name": "ត្រីហែលទឹកនៅក្នុង មន្ទីរពិសោធន៍"
-        },
-        "express-2020/End of Course Project": {
+        "coursef-2022/End of Course Project": {
           "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
-        "courseb-2020/Programming in Maze": {
+        "express-2022/Programming with Angry Birds": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
         },
-        "courseb-2020/Programming in Harvester": {
-          "name": "សរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល"
-        },
-        "courseb-2020/Loops in Collector": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel"
-        },
-        "courseb-2020/Loops in Artist": {
-          "name": "គូរសួនច្បារជាមួយប្រតិបត្តិដដែលៗ"
-        },
-        "courseb-2020/Events in Play Lab": {
-          "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
-        },
-        "coursed-2020/Introduction to Online Puzzles": {
-          "name": "សេចក្តីណែនាំអំពីល្បែងផ្គុំរូបលើអ៊ីនធឺណិត"
-        },
-        "coursed-2020/Dance Party": {
-          "name": "Dance Party"
-        },
-        "coursed-2020/Loops in Ice Age": {
-          "name": "ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
-        },
-        "coursed-2020/Until Loops in Maze": {
-          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
-        },
-        "coursed-2020/End of Course Project": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង"
-        },
-        "coursec-2020/Programming in Maze": {
-          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
-        },
-        "coursec-2020/Debugging in Maze": {
+        "express-2022/Debugging in Maze": {
           "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
-        "coursec-2020/Loops with Rey and BB-8": {
-          "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
+        "express-2022/Collecting Treasure with Laurel": {
+          "name": "ប្រមូលកំណប់ជាមួយតួអង្គ Laurel"
         },
-        "coursec-2020/Events: The Big Event": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
+        "express-2022/Creating Art with Code": {
+          "name": "បង្កើតសិល្បៈដោយប្រើកូដ"
         },
-        "coursec-2020/End of Course Project: Create a Play Lab Game": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        "express-2022/Swimming Fish in Sprite Lab": {
+          "name": "តួអង្គត្រីក្នុង Sprite Lab"
         },
-        "coursee-2020/Nested Loops in Frozen": {
-          "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
+        "express-2022/Making Sprites": {
+          "name": "ការបង្កើត Sprites"
         },
-        "coursee-2020/End of Course Project": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        "express-2022/Sprites in Action": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
         },
-        "coursea-2020/Learn to Drag and Drop": {
-          "name": "រៀនអំពីការអូស និងទម្លាក់"
+        "express-2022/Virtual Pet with Sprite Lab": {
+          "name": "សត្វចិញ្ចឹមសិប្បនិម្មិត ក្នុង Sprite Lab"
         },
-        "coursea-2020/Sequencing with Scrat": {
-          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក "
+        "express-2022/Dance Party": {
+          "name": "សរសេរកម្មវិធី បង្កើតក្បាច់រាំក្នុងពិធីជប់លៀង"
         },
-        "coursea-2020/Programming with Rey and BB-8": {
-          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8"
+        "express-2022/Loops with Rey and BB-8": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Rey និង​ BB-8"
         },
-        "coursea-2020/Loops in Ice Age": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក"
+        "express-2022/Mini-Project: Sticker Art": {
+          "name": "គម្រោងខ្នាតតូច៖ សិល្បៈស្ទីគ័រ"
         },
-        "coursea-2020/Loops in Collector": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel"
+        "express-2022/Nested Loops in Maze": {
+          "name": "ប្រើបណ្ដុំប្រតិបត្តិដដែលៗក្នុង Maze",
+          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងមានឱកាសជំរុញការយល់ដឹងអំពីរង្វិលជុំដល់កំរិតថ្មីទាំងមូល។ លេងជាមួយឃ្មុំនិងរុក្ខជាតិទល់នឹង Zombies សិស្សនឹងរៀនពីរបៀបសរសេររង្វិលជុំដើម្បីឱ្យស្ថិតនៅក្នុងរង្វិលជុំមួយទៀត។ ពួកគេក៏នឹងត្រូវបានលើកទឹកចិត្តឱ្យរកមើលថាតើការផ្លាស់ប្តូរតិចតួចនៅក្នុងរង្វិលជុំទាំងពីរនឹងប៉ះពាល់ដល់កម្មវិធីរបស់ពួកគេយ៉ាងដូចម្តេចនៅពេលពួកគេចុច `រត់` ។"
         },
-        "coursea-2020/Ocean Scene with Loops": {
-          "name": "ប្រតិបត្តិដដែលៗជាមួយទិដ្ឋភាពសមុទ្រ"
+        "express-2022/Snowflakes with Anna and Elsa": {
+          "name": "ផ្កាព្រិលជាមួយ Anna និង Elsa"
         },
-        "coursea-2020/Events in Play Lab": {
-          "name": "ការផ្លាស់ប្ដូរចលនាដោយប្រើកូដប្លុកព្រឹត្តិការណ៍"
+        "express-2022/If/Else with Bee": {
+          "name": "លក្ខខណ្ឌ If/Else ជាមួយតួអង្គឃ្មុំ",
+          "overview": "រហូតមកដល់ចំណុចនេះសិស្សបានសរសេរកូដដែលប្រតិបត្តិតាមវិធីដូចគ្នារាល់ពេលដែលដំណើរការ - អាចទុកចិត្តបាន ប៉ុន្តែមិនមានភាពបត់បែនខ្លាំងទេ។ នៅក្នុងមេរៀននេះថ្នាក់របស់អ្នកនឹងចាប់ផ្តើមសរសេរកូដដោយមានលក្ខខណ្ឌដែលអនុញ្ញាតឱ្យពួកគេសរសេរកូដដែលមានមុខងារខុសគ្នាអាស្រ័យលើលក្ខខណ្ឌជាក់លាក់ដែលកម្មវិធីជួប។",
+          "student_overview": "ឥឡូវអ្នកយល់ពីលក្ខខណ្ឌវាដល់ពេលត្រូវសរសេរកម្មវិធីឃ្មុំដើម្បីប្រើវានៅពេលប្រមូលទឹកឃ្មុំនិងទឹកដម។"
         },
-        "coursef-2020/Internet": {
+        "express-2022/While Loops in Farmer": {
+          "student_overview": "រង្វិលជុំមានប្រយោជន៍ណាស់ក្នុងការសរសេរកូដ។ មេរៀននេះនឹងបង្រៀនអ្នកអំពីរង្វិលជុំប្រភេទថ្មីមួយ: ខណៈរង្វិលជុំ!"
+        },
+        "express-2022/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "លក្ខខណ្ឌនៅក្នុង Minecraft:​​ដំណើរកម្សាន្តក្នុងទឹក"
+        },
+        "express-2022/Until Loops in Maze": {
+          "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
+        },
+        "express-2022/Harvesting with Conditionals": {
+          "name": "ប្រើលក្ខខណ្ឌ ដើម្បីប្រមូលផល",
+          "overview": "សិស្សនឹងអនុវត្ត `ខណៈរង្វិលជុំ`  `រហូតដល់រង្វិលជុំ` `ប្រសិនបើ / ផ្សេងទៀត សេចក្តីថ្លែង` ។ ប្លុកទាំងអស់នេះប្រើលក្ខខណ្ឌ។ តាមរយៈការអនុវត្តទាំងបីសិស្សនឹងរៀនពីការសរសេរកូដដែលមានភាពស្មុគស្មាញនិងបត់បែន។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានទិនានុប្បវត្តិឆ្លុះបញ្ចាំង។",
+          "student_overview": "វាមិនច្បាស់ទេថាពេលណាត្រូវប្រើលក្ខខណ្ឌនីមួយៗ។ មេរៀននេះនឹងជួយអ្នកឱ្យមានទម្លាប់សំរេចថាត្រូវធ្វើអ្វី។"
+        },
+        "express-2022/Functions with Harvester": {
+          "student_overview": "អនុគមន៍នឹងជួយការងារជាច្រើននៅពេលអ្នកជួយ farmer ជាមួយនឹងការប្រមូលផលរបស់គាត់!"
+        },
+        "express-2022/Functions with Artist": {
+          "name": "មុខងារជាមួយវិចិត្រករ",
+          "student_overview": "ធ្វើឱ្យគំនូរស្មុគស្មាញកាន់តែងាយស្រួលដោយប្រើអនុគមន៍!"
+        },
+        "express-2022/[New] Counting with Variables": {
+          "name": "ការរាប់ជាមួយអថេរ"
+        },
+        "express-2022/Using Variables with the Artist": {
+          "name": "ការប្រើប្រាស់អថេរជាមួយនិងវិចិត្រករ",
+          "overview": "នៅក្នុងមេរៀននេះ សិស្សនឹងអាចធ្វើការសិក្សាស្វែងយល់កាន់តែស៊ីជម្រៅទាក់ទងនឹងការបង្កើតការឌីសាញដោយប្រើប្រាស់អញ្ញត្តិនៅក្នុងបរិយាកាស​បែបអ្នកសិល្បៈ ។ សិស្សនឹងអាចដឹងពីរបៀបដែលគេអាចប្រើអញ្ញត្តិនៅក្នុងការបង្កើតកូដបានកាន់តែងាយស្រួលនៅក្នុងការសរសេរនិងការអាន។\nបន្ទាប់ពីបានធ្វើការណែនាំនូវល្បែងរូបផ្គុំ សិស្សនឹងអាចធ្វើការបញ្ចប់កម្រិតមូលដ្ឋាន ដើម្បីបង្ហាញនូវអ្វីដែលគេបានរៀននិងធ្វើការបង្កើតឌីសាញរបស់ខ្លួន។ "
+        },
+        "express-2022/Variables with the Bee": {
+          "name": "អថេរជាមួយសត្វឃ្មុំ"
+        },
+        "express-2022/For Loops with Bee": {
+          "student_overview": "ប៊ូសៗ នៅក្នុងល្បែងរូបផ្គុំនេះ សិស្សនឹងអាចអាចធ្វើការនាំផ្លូវឃ្មុំទៅកាន់ទឹកដេលមានរសជាតិផ្អែម ហើយនិងទឹកឃ្មុំ ដោយការប្រើប្រាស់ \"for loops\"! "
+        },
+        "express-2022/For Loops with Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ",
+          "student_overview": "ត្រៀមខ្លួនរួចជាស្រេចដើម្បីស្នាដៃឯករបស់អ្នកបន្តទៀត។​ អ្នកនឹងប្រើ \"for​​ loops\" ដដែលៗ ដើម្បីបង្កើតជា រូបភាពJaw Dropping "
+        },
+        "express-2022/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង",
+          "student_overview": "ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។"
+        },
+        "pre-express-2022/Learn to Drag and Drop": {
+          "name": "រៀនពីការអូស និងទម្លាក់​",
+          "overview": "មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វី ដែលពួកគេត្រូវគិតទុកជាមុនប្រើប្រាស់បន្ទប់កុំព្យូទ័រ។  សិស្សចាប់ផ្ដើមពីការពិភាក្សាក្រុមដើម្បីបញ្ចេញមតិ​នឹងស្វែងយល់អំពី  អាកប្បកិរិយាគួរ ឬមិន​គួរធ្វើនៅ​ក្នុងបន្ទប់កុំព្យូទ័រ។ ដើម្បីឱ្យមានភាពស្ទាត់ជំនាញក្នុង ការប្រើប្រាស់កុំព្យូទ័រ សិស្សនឹងអនុវត្តជាមួយល្បែងផ្គុំរូបនៅលើអ៊ីនធឺណិត។",
+          "preparation": "-   មើល **\\*របៀបបង្កើតថ្នាក់នៅលើ Code.org** - វីដេអូគ្រូ។ បង្កើតថ្នាក់ផ្ទាល់ខ្លួនរបស់អ្នកនៅលើ Code.org ហើយត្រូវប្រាកដថាសិស្សគ្រប់រូបមានកាតដែលមាន **ពាក្យសម្ងាត់** របស់ពួកគេនៅលើវា។\n-   ត្រូវប្រាកដថាសិស្សនឹងអាចចូលប្រើមេរៀនទី 2 ពីឧបករណ៍របស់ពួកគេ។ ពិចារណាថាតើអ្នកចង់លាក់មេរៀននាពេលអនាគតដើម្បីការពារសិស្សពីការឈានទៅមុខលឿនពេកដែរឬទេ។\n-   បង្កើតតំណភ្ជាប់រហ័ស សម្រាប់ថ្នាក់របស់អ្នកទៅអេក្រង់កុំព្យូទ័ររបស់សិស្ស។\n-   ពិនិត្យមើលគេហទំព័រ Common Sense Education សម្រាប់សុវត្ថិភាពអនឡាញបន្ថែមទៀត។",
+          "purpose": "គោលដៅសំខាន់នៃមេរៀននេះគឺ បង្កើតបទពិសោធន៍របស់សិស្សជាមួយ និងកុំព្យូទ័រ លើមុខងារមូលដ្ឋានបំផុតដូចជាការចុច អូស និងទម្លាក់ ដោយអនុវត្តជាមួយល្បែងផ្គុំរូប។ មេរៀននេះក៏ផ្តល់នូវឱកាសដ៏ល្អមួយដើម្បីណែនាំ វាក្យស័ព្ទផ្នែករឹងកុំព្យូទ័ ដូចជា \"mouse\" \"trackpad\" ឬ \"touchscreen\" អាស្រ័យលើ ឧបករណ៍របស់អ្នក។"
+        },
+        "pre-express-2022/Sequencing with Scrat": {
+          "name": "លំដាប់លំដោយជាមួយតួអង្គកំប្រុក ",
+          "overview": "នៅក្នុងមេរៀននេះ សិស្សនឹងបង្កើតក្បួនដោះស្រាយបញ្ហា ដោយអនុវត្ត តាមការ កសាងជំនាញ (skill-building) ដោយតម្រៀបកូដប្លុក តាមលំដាប់លំដោយ ដើម្បីផ្លាស់ទីតួអង្គកំប្រុក ទៅរកផ្លែផ្លេសេនក្នុងចំណោទបញ្ហានីមួយៗ។ ដើម្បីធ្វើបានពួកគេត្រូវភ្ជាប់កូដប្លុកតាមលំដាប់លំដោយជាជួរ។",
+          "preparation": "-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានទិនានុប្បវត្តិឆ្លុះបញ្ចាំង។",
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងរៀនពីការសរសេរកម្មវិធី និងការកែកំហុសនៅក្នុងកម្មវិធី។ ទម្រង់មូលដ្ឋានកូដប្លុកនៃល្បែងផ្គុំរូបទាំង​នេះអាចជួយសិស្សឱ្យរៀនអំពីលំដាប់លំដោយ និងបណ្ដុះគោលគំនិត ដោយមិនចាំបាច់ព្រួយបារម្ភអំពីការសរសេរកូដជា ល្អឥតខ្ចោះនៃវាក្យសម្ព័ន្ធ (syntax). "
+        },
+        "pre-express-2022/Programming with Angry Birds": {
+          "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី",
+          "overview": "ក្នុងមេរៀន **ការកសាងជំនាញ** នេះសិស្សនឹងបន្តអភិវឌ្ឍ លំដាប់លំដោយនៃក្បួនដោះស្រាយបញ្ហា។ ",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   (មិនតម្រូវ) ជ្រើសរើសល្បែងផ្គុំរូបពីរបីដើម្បីធ្វើជាក្រុមជាមួយថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានសៀវភៅកត់ត្រា (ទិនានុប្បវត្តិឆ្លុះបញ្ចាំង)។",
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងរៀនពីការសរសេរកម្មវិធី និងការកែកំហុសនៅក្នុងកម្មវិធី។ ទម្រង់មូលដ្ឋានកូដប្លុកនៃល្បែងផ្គុំរូបទាំង​នេះអាចជួយសិស្សឱ្យរៀនអំពីលំដាប់លំដោយ និងបណ្ដុះគោលគំនិត ដោយមិនចាំបាច់ព្រួយបារម្ភអំពីការសរសេរកូដជា ល្អឥតខ្ចោះនៃវាក្យសម្ព័ន្ធ (syntax). "
+        },
+        "pre-express-2022/Programming with Rey and BB-8": {
+          "name": "សរសេរកម្មវិធីជាមួយ Rey និង BB-8",
+          "overview": "នៅក្នុង **ការកសាងជំនាញ** នៃមេរៀននេះ, សិស្សនិងធ្វើការប្រើប្រាស់នូវចំនេះដឹងថ្មីៗ ដែលបានរៀននៅក្នុងមេរៀន ដើម្បីដោះស្រាយបញ្ហាស្មុគស្មាញ ដោយរិះរកមធ្យោបាយ ជាមួយការអនុវត្ត BB-8។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានទិនានុប្បវត្តិឆ្លុះបញ្ចាំង។",
+          "purpose": "នៅក្នុងមេរៀននេះបានផ្ដល់ឱ្យសិស្សនូវបរិកាសថ្មីក្នុងការអនុវត្ត​ជំនាញ ដែលពួកគេកំពុងបណ្ដុះបណ្ដាល។ សម្រាប់សិស្សជាអ្នកគាំទ្ររឿង Star Wars នឹង​មាន​ភាព​រីករាយក្នុងការសិក្សា ហើយឆាប់ យល់ពីរបៀបលេង​ល្បែង​ផ្គុំ​រូប (puzzle) ។ ហើយលំហាត់នីមួយៗនៅក្នុងលំដាប់បន្ដបន្ទាប់ ដែលបានផ្ដល់ទៅ​សិស្ស គឺជួយសិស្សឱ្យមានការយល់ដឹងកាន់តែស៊ីជម្រៅអំពីគោល គំនិតជាមូលដ្ឋាន ដែលពួកគេនឹង​ ប្រើប្រាស់ពេញមួយមេរៀននេះ ។"
+        },
+        "pre-express-2022/Programming with Harvester": {
+          "name": "ការសរសេរកម្មវិធីជាមួយ​ អ្នកប្រមូលផល",
+          "overview": "នៅក្នុង **ការកសាងជំនាញ** នៃមេរៀននេះ, សិស្ស​នឹង​អនុវត្ត​គោល​គំនិត​នៃ​ការ​សរសេរ​កម្មវិធី ​ដែល​ពួកគេ​បាន​រៀន​ទៅ​និង​បរិស្ថាន​អ្នក​ប្រមូល​ផល។សិស្សនឹងបន្តអភិវឌ្ឍជំនាញក្បួនដោះស្រាយជាបន្តបន្ទាប់ហើយចាប់ផ្តើមប្រើប្រាស់ដំណើរការកែកំហុស។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានទិនានុប្បវត្តិឆ្លុះបញ្ចាំង។",
+          "purpose": "នៅក្នុងមេរៀននេះសិស្សនឹងអភិវឌ្ឍជំនាញដោះស្រាយបញ្ហាហើយនឹងបន្តអភិវឌ្ឍជំនាញសរសេរកម្មវិធីរបស់ពួកគេ។"
+        },
+        "pre-express-2022/Loops with Scrat": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយតួអង្គកំប្រុក",
+          "overview": "នៅក្នុង **ការកសាងជំនាញ** នៃមេរៀននេះ, សិស្សនឹងអនុវត្តពីការប្រើប្រាស់ប្រតិបត្តិដដែលៗ (loop) នៅក្នុងល្បែងផ្គុំរូប (puzzles) ដើម្បីជួយឱ្យកំប្រុក (squirrel) អាចទៅយកផ្លែ ផ្លេសេន (acorn)។",
+          "preparation": "-   (មិនតម្រូវ) ជ្រើសរើសល្បែងផ្គុំរូបពីរបីដើម្បីធ្វើជាក្រុមជាមួយថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានសៀវភៅកត់ត្រា (ទិនានុប្បវត្តិឆ្លុះបញ្ចាំង)។",
+          "purpose": "នៅក្នុងមេរៀននេះ សិស្សនឹងសិក្សាបន្ថែមអំពី loop និងរបៀបអនុវត្តវានៅក្នុងកូដប្លុក។ ការប្រើ loop គឺជាជំនាញសំខាន់មួយក្នុងការសរសេរកម្មវិធី ពីព្រោះ ការសរសេរកូដ ដដែលៗច្រើនដង គឺចំនាយពេលច្រើន និងស្មុគស្មាញហើយមិនសូវមានប្រសិទ្ធភាព។ ជាមួយ និងល្បែងផ្គុំរូបក្នុង Code.org ទាំងនេះ សិស្សនឹងរៀនពីរបៀប បំលែងកូដដដែលៗ ដែលមានស្រាប់ទៅជា loop នឹងជួយឱ្យសិស្សឆាប់ចាប់បាននៅទម្រង់កូដដែលអាច សរសេរជា loop បាន។"
+        },
+        "pre-express-2022/Loops with Laurel": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយ Laurel",
+          "overview": "នៅក្នុងមេរៀននេះសិស្សបន្តរៀនគំនិតនៃប្រតិបត្តិដដែលៗ (loop)។ ហើយការធ្វើដំណើរផ្សងព្រេង របស់ Laurel ដោយប្រើប្រាស់ប្រតិបត្តិ ដដែលៗដើម្បីប្រមូលកំណប់នៅក្នុងរូងភ្នំ។ មានកូដប្លុកថ្មី 'get treasure' គឺបានណែនាំ ដើម្បីជួយក្នុងការធ្វើដំណើររបស់នាង ។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   (មិនតម្រូវ) ជ្រើសរើសល្បែងផ្គុំរូបពីរបីដើម្បីធ្វើជាក្រុមជាមួយថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានសៀវភៅកត់ត្រា (ទិនានុប្បវត្តិឆ្លុះបញ្ចាំង)។",
+          "purpose": "មេរៀននេះផ្តល់ឱ្យសិស្សនូវការអនុវត្តបន្ថែមទៀតជាមួយនឹងប្រតិបត្តិដដែលៗ និងលើកទឹកចិត្តពួកគេឱ្យដាក់បណ្ដុំនៃកូដប្លុកចូលទៅក្នុងប្រតិបត្តិដដែលៗ (repeat) បើកូដអាចដាក់បាន។"
+        },
+        "pre-express-2022/Ocean Scene with Loops": {
+          "name": "ប្រតិបត្តិដដែលៗជាមួយទិដ្ឋភាពសមុទ្រ",
+          "overview": "នៅក្នុង ​​**ការកសាងជំនាញ** នៃមេរៀននេះ, សិស្សរៀនពីរបៀបប្រើប្រាស់ប្រតិបត្តិដដែលៗ ដើម្បីគូររូបភាពសាមញ្ញៗ​ទៅតាម​លំដាប់នៃការណែនាំនៅក្នុងកម្មវិធី។នៅចុងបញ្ចប់នៃមេរៀននេះសិស្សនឹងមានឱកាសអាចបង្កើតរូបភាពដោយផ្ទាល់ខ្លួនបាន។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានទិនានុប្បវត្តិឆ្លុះបញ្ចាំង។",
+          "purpose": "មេរៀននេះផ្តល់នូវទស្សនៈផ្សេងទៀតអំពីប្រតិបត្តិដដែលៗ (loops) អាចបង្កើតអ្វីមួយ ក្នុងការបង្កើតកម្មវិធី។ សិស្សក៏អាចឆ្លុះបញ្ចាំងពីភាពលំបាកនៃការសរសេរកម្មវិធី ដោយមិនប្រើប្រតិបត្តិដដែលៗ។"
+        },
+        "pre-express-2022/Drawing Gardens with Loops": {
+          "name": "គូរសួនច្បារជាមួយប្រតិបត្តិដដែលៗ",
+          "overview": "នៅក្នុង **ការកសាងជំនាញ** នៃមេរៀននេះ, សិស្សរៀនពីរបៀបប្រើប្រាស់ប្រតិបត្តិដដែលៗ ដើម្បីគូររូបភាពសាមញ្ញៗ​ទៅតាម​លំដាប់នៃការណែនាំនៅក្នុងកម្មវិធី។នៅក្នុងមេរៀននេះមានការបង្កើតប្រតិបត្តិដដែលៗជាគំរូផងដែរហើយនៅចុងបញ្ចប់នៃមេរៀននេះសិស្សនឹងត្រូវបានផ្ដល់​ឱកាសដើម្បី​​ បង្កើតរូបភាពផ្ទាល់ខ្លួន។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានទិនានុប្បវត្តិឆ្លុះបញ្ចាំង។",
+          "purpose": "មេរៀននេះផ្តល់នូវទស្សនៈខុសៗគ្នាអំពីប្រតិបត្តិដដែលៗ (loops) អាចបង្កើតអ្វីមួយ ក្នុងការបង្កើតកម្មវិធី។ សិស្សនឹងសាកល្បងលើការ​ត្រិះរិះ​ពិចារណាជ្រៅៗដើម្បីវាយ តម្លៃកូដដែលបានផ្តល់ឱ្យ និងកំណត់នូវអ្វីដែលត្រូវបន្ថែម ដើម្បីដោះស្រាយល្បែងផ្គុំរូប។\nសិស្សក៏អាចឆ្លុះបញ្ចាំងពីភាពលំបាកនៃការសរសេរកម្មវិធីដោយមិនប្រើប្រតិបត្តិដដែលៗ"
+        },
+        "pre-express-2022/On the Move with Events": {
+          "name": "ការផ្លាស់ប្ដូរចលនាដោយប្រើកូដប្លុកព្រឹត្តិការណ៍",
+          "overview": "នៅក្នុង **ការងារគម្រោងខ្នាតតូចនេះ(mini-project)**, សិស្សនឹងមានឱកាសរៀនពីរបៀបប្រើ ប្រាស់​ កូដប្លុកព្រឹត្តិការណ៍ (Event) នៅក្នុងចំណោទបែបបង្កើតព្រឹត្តិការណ៍(Play Lab) នឹងអនុវត្តពីជំនាញសរសេរកូដទាំងអស់ដែលបានរៀនដើម្បីបង្កើត ហ្គេម​ ឬរឿងដែលមាន ចលនា។ នេះជាពេលដែលសិស្សត្រូវធ្វើការរៀបចំនឹងបង្កើតគំនិតច្នៃប្រឌិត ដើម្បីបង្កើតជា រឿង ឬហ្គេមមួយនៅក្នុង Play Lab ។  ",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   (មិនតម្រូវ) ជ្រើសរើសល្បែងផ្គុំរូបពីរបីដើម្បីធ្វើជាក្រុមជាមួយថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានសៀវភៅកត់ត្រា (ទិនានុប្បវត្តិឆ្លុះបញ្ចាំង)។",
+          "purpose": "សិស្សនឹងអភិវឌ្ឍការយល់ដឹងរបស់ពួកគេបន្ថែមទៀតអំពីព្រឹត្តិការណ៍ដោយប្រើ Play Lab។ ព្រឹត្តិការណ៍គឺជារឿងធម្មតាណាស់ដែលប្រើនៅក្នុងកម្មវិធីកុំព្យូទ័រភាគច្រើន។ នៅក្នុងសកម្មភាពនេះ សិស្សនឹងប្រើព្រឹត្តិការណ៍ដើម្បីធ្វើចលនាតួអក្សរជុំវិញអេក្រង់ បង្កើតសំឡេង និងផ្លាស់ប្តូរផ្ទៃខាងក្រោយដោយផ្អែកលើព្រឹត្តិការណ៍ដែលបង្កើតឡើងដោយអ្នកប្រើប្រាស់។"
+        },
+        "pre-express-2022/A Royal Battle with Events": {
+          "name": "សមរភូមិក្សត្រ ដោយប្រើកូដប្លុកព្រឹត្តិការណ៍",
+          "overview": "នៅក្នុង **គម្រោងខ្នាតតូច** នេះ សិស្សនឹងមានឱកាសរៀនពីរបៀបប្រើប្រាស់ព្រឹត្តិការណ៍នៅក្នុង Play Lab និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀន ដើម្បីបង្កើតហ្គេមដែលមានចលនា។",
+          "preparation": "-   ធ្វើលំហាត់មេរៀនដើម្បីស្វែងរកកន្លែងមានបញ្ហាដែលអាចកើតមានសម្រាប់ថ្នាក់របស់អ្នក។\n-   (មិនតម្រូវ) ជ្រើសរើសល្បែងផ្គុំរូបពីរបីដើម្បីធ្វើជាក្រុមជាមួយថ្នាក់របស់អ្នក។\n-   ត្រូវប្រាកដថាសិស្សម្នាក់ៗមានសៀវភៅកត់ត្រា (ទិនានុប្បវត្តិឆ្លុះបញ្ចាំង)។",
+          "purpose": "នៅក្នុងសកម្មភាពអនឡាញនេះ សិស្សនឹងរៀនពីរបៀបប្រើប្រាស់ព្រឹត្តិការណ៍នៅក្នុង Play Lab ។ ពួកគេនឹងចាប់ផ្តើមដោយការបង្ហាត់ មេទ័ពឱ្យផ្លាស់ទីនៅពេលដែលចុចគ្រាប់ចុចព្រួញ បន្ទាប់មកបញ្ចប់ដោយការថែមអ្វីផ្សេងៗទៀតដោយប្រើជំនាញដែលពួកគេបានរៀនក្នុងវគ្គសិក្សានេះ រួមទាំងលំដាប់ និង loops ដែលជាផ្នែកមួយនៃល្បែងផ្គុំរូបបង្កើតដោយសេរីនៅចុងក្រោយនៃអនុវត្ត។",
+          "student_overview": "ប្រើព្រឹត្តិការណ៍ដើម្បីបង្កើតរឿង ឬបង្កើតហ្គេមដែលអាចលេងបាន។"
+        },
+        "artist/Artist": {
+          "name": "វិចិត្រករ"
+        },
+        "basketball/Bounce": {
+          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងដឹងថាតើព្រឹត្តិការណ៍មានអ្វីខ្លះ ហើយនិងការប្រេីកុំព្យូទ័រដុចនៅក្នុងកម្មវិធីដូចជាហ្គេមវីដេអូ។ សិស្សនឹងធ្វើការតាមរយៈល្បែងផ្គុំរូបដែលធ្វើឱ្យកម្មវិធីមានប្រតិកម្មទៅនឹងព្រឹត្តិការណ៍ (ដូចជាប៊ូតុងព្រួញត្រូវបានចុច។ ) នៅចុងបញ្ចប់នៃល្បែងផ្គុំរូបសិស្សនឹងមានឱកាសប្តូរហ្គេមរបស់ពួកគេតាមល្បឿននិងសំឡេងខុសៗគ្នា។",
+          "student_overview": "ធ្លាប់សង្ឃឹមថាអ្នកអាចលេងហ្គេមវីដេអូនៅសាលាបានទេ? នៅក្នុងមេរៀននេះអ្នកនឹងត្រូវបង្កើតដោយខ្លួនឯង!"
+        },
+        "dance-2019/Dance Party": {
+          "name": "កម្មវិធីរាំ"
+        },
+        "flappy/Flappy Code": {
+          "name": "Flappy កូដ"
+        },
+        "hero/Minecraft Hour of Code": {
+          "name": "Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស"
+        },
+        "hoc-encryption/Simple Encryption": {
+          "name": "ការអ៉ីនគ្រីបធម្មតា"
+        },
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft Hour of Code"
+        },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "sports/Sports": {
+          "overview": "នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងដឹងថាតើព្រឹត្តិការណ៍មានអ្វីខ្លះ ហើយនិងការប្រេីកុំព្យូទ័រដុចនៅក្នុងកម្មវិធីដូចជាហ្គេមវីដេអូ។ សិស្សនឹងធ្វើការតាមរយៈល្បែងផ្គុំរូបដែលធ្វើឱ្យកម្មវិធីមានប្រតិកម្មទៅនឹងព្រឹត្តិការណ៍ (ដូចជាប៊ូតុងព្រួញត្រូវបានចុច។ ) នៅចុងបញ្ចប់នៃល្បែងផ្គុំរូបសិស្សនឹងមានឱកាសប្តូរហ្គេមរបស់ពួកគេតាមល្បឿននិងសំឡេងខុសៗគ្នា។",
+          "student_overview": "ធ្លាប់សង្ឃឹមថាអ្នកអាចលេងហ្គេមវីដេអូនៅសាលាបានទេ? នៅក្នុងមេរៀននេះអ្នកនឹងត្រូវបង្កើតដោយខ្លួនឯង!"
+        },
+        "allthethings/Artist": {
+          "name": "វិចិត្រករ"
+        },
+        "allthethings/Bounce": {
+          "name": "បាល់​លោត"
+        },
+        "allthethings/Minecraft": {
+          "name": "ម៉ាញក្រាស់"
+        },
+        "allthethings/Web Lab": {
+          "name": "បន្ទប់វេប"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "មន្ទីរពិសោធន៍ Sprite "
+        },
+        "allthethings/lesson-48": {
+          "name": "កំណាព្យ"
+        },
+        "20-hour/Introduction to Computer Science": {
+          "name": "សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
+        },
+        "20-hour/Computational Thinking": {
+          "name": "ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ"
+        },
+        "20-hour/The Artist": {
+          "name": "វិចិត្រករ"
+        },
+        "20-hour/Functions": {
+          "name": "អនុ​គមន៍"
+        },
+        "20-hour/The Farmer": {
+          "name": "កសិករ"
+        },
+        "20-hour/Conditionals": {
+          "name": "លក្ខខណ្ឌ"
+        },
+        "20-hour/The Internet": {
           "name": "អ៊ីនធឺណិត"
         },
-        "coursef-2020/For Loops in Artist": {
-          "name": "For loops ជាមួយវិចិត្រករ"
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ"
         },
-        "coursef-2020/End of Course Project": {
-          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        "course1/The Big Event": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "course2/Conditionals": {
+          "name": "លក្ខខណ្ឌ"
+        },
+        "course2/The Big Event": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "course2/Your Digital Footprint": {
+          "name": "Your Digital Footprint"
+        },
+        "course3/Computational Thinking": {
+          "name": "ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ"
+        },
+        "course3/Artist": {
+          "name": "វិចិត្រករ"
+        },
+        "course3/Bounce": {
+          "name": "បាល់​លោត"
+        },
+        "course4/Artist": {
+          "name": "វិចិត្រករ"
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "មេរៀននេះនឹងផ្តល់ឱ្យសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។"
         }
       }
     }

@@ -3,49 +3,41 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Sim",
           "No": "Não",
+          "Yes": "Sim",
           "cute": "fofo"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Sim",
           "No": "Não",
+          "Yes": "Sim",
           "cute": "fofo"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Sim",
           "No": "Não",
+          "Yes": "Sim",
           "cute": "fofo"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Sim",
           "No": "Não",
+          "Yes": "Sim",
           "cute": "fofo"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Nome",
+          "City": "Cidade",
           "Color": "Cor",
           "Food": "Comida",
-          "City": "Cidade",
+          "Name": "Nome",
           "text": "texto"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Nome",
+          "City": "Cidade",
           "Color": "Cor",
           "Food": "Comida",
-          "City": "Cidade",
+          "Name": "Nome",
           "text": "texto"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -56,35 +48,35 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
-          "Choose your Birthday!": "Escolha seu aniversário!",
-          "Find out if it's your birthday!": "Descubra se é seu aniversário!",
-          "January": "Janeiro",
-          "February": "Fevereiro",
-          "March": "Março",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
           "April": "Abril",
-          "May": "Maio",
-          "June": "Junho",
-          "July": "Julho",
           "August": "Agosto",
-          "September": "Setembro",
-          "October": "Outubro",
-          "November": "Novembro",
+          "Choose your Birthday!": "Escolha seu aniversário!",
           "December": "Dezembro",
-          "It's your birthday!": "É seu aniversário!",
+          "February": "Fevereiro",
+          "Find out if it's your birthday!": "Descubra se é seu aniversário!",
+          "It was already your birthday this year!!": "Esse ano já foi seu aniversário!!",
           "It's not your birthday yet this year!": "Este ano ainda não é seu aniversário!",
-          "It was already your birthday this year!!": "Esse ano já foi seu aniversário!!"
+          "It's your birthday!": "É seu aniversário!",
+          "January": "Janeiro",
+          "July": "Julho",
+          "June": "Junho",
+          "March": "Março",
+          "May": "Maio",
+          "November": "Novembro",
+          "October": "Outubro",
+          "September": "Setembro"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -95,46 +87,47 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
-          "Choose your Birthday!": "Escolha seu aniversário!",
-          "Find out if it's your birthday!": "Descubra se é seu aniversário!",
-          "January": "Janeiro",
-          "February": "Fevereiro",
-          "March": "Março",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
           "April": "Abril",
-          "May": "Maio",
-          "June": "Junho",
-          "July": "Julho",
           "August": "Agosto",
-          "September": "Setembro",
-          "October": "Outubro",
-          "November": "Novembro",
+          "Choose your Birthday!": "Escolha seu aniversário!",
           "December": "Dezembro",
-          "It's your birthday!": "É seu aniversário!",
+          "February": "Fevereiro",
+          "Find out if it's your birthday!": "Descubra se é seu aniversário!",
+          "It was already your birthday this year!!": "Esse ano já foi seu aniversário!!",
           "It's not your birthday yet this year!": "Este ano ainda não é seu aniversário!",
-          "It was already your birthday this year!!": "Esse ano já foi seu aniversário!!"
+          "It's your birthday!": "É seu aniversário!",
+          "January": "Janeiro",
+          "July": "Julho",
+          "June": "Junho",
+          "March": "Março",
+          "May": "Maio",
+          "November": "Novembro",
+          "October": "Outubro",
+          "September": "Setembro"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
+          "100": "100",
           "11": "11",
           "12": "12",
           "13": "13",
@@ -144,21 +137,22 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
-          "text": "texto",
-          "?": "?"
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "texto"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
+          "100": "100",
           "11": "11",
           "12": "12",
           "13": "13",
@@ -168,19 +162,27 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
-          "text": "texto",
-          "?": "?"
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "texto"
         },
         "CSD U1 processing live_2021": {
-          "walking": "caminhando",
           "bear": "Urso",
-          "rat": "rato"
+          "rat": "rato",
+          "walking": "caminhando"
         },
         "CSD U1 processing live_2022": {
-          "walking": "caminhando",
           "bear": "Urso",
-          "rat": "rato"
+          "rat": "rato",
+          "walking": "caminhando"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "Correto!",
@@ -192,14 +194,6 @@
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -210,50 +204,50 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
-          "January": "Janeiro",
-          "February": "Fevereiro",
-          "March": "Março",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
           "April": "Abril",
-          "May": "Maio",
-          "June": "Junho",
-          "July": "Julho",
           "August": "Agosto",
-          "September": "Setembro",
-          "October": "Outubro",
-          "November": "Novembro",
           "December": "Dezembro",
-          "Monday": "Segunda-feira",
-          "just like": "assim como",
-          "N. Scott Momaday": "N. Scott Momaday",
-          "public domain image": "imagem de domínio público",
-          "Tuesday": "Terça-feira",
-          "Toni Morrison": "Toni Morrison",
-          "image by John Mathew Smith, CC-BY-SA 2.0": "imagem de John Mathew Smith, CC-BY-SA 2.0",
-          "Wednesday": "Quarta-feira",
-          "Khaled Hosseini": "Khaled Hosseini",
-          "Public Domain Image": "Imagem de domínio público",
-          "Thursday": "Quinta-feira",
-          "Langston Hughes": "Langston Hughes",
-          "Public Domain": "Domínio público",
+          "February": "Fevereiro",
           "Friday": "Sexta-feira",
-          "Margaret Atwood": "Margaret Atwood",
-          "image by Vanwaffle, CC BY-SA 3.0": "imagem de Vanwaffle, CC BY-SA 3.0",
-          "Saturday": "Sábado",
           "Gabriel Garcia Marquez": "Gabriel García Márquez",
+          "January": "Janeiro",
+          "July": "Julho",
+          "June": "Junho",
+          "Khaled Hosseini": "Khaled Hosseini",
+          "Langston Hughes": "Langston Hughes",
+          "March": "Março",
+          "Margaret Atwood": "Margaret Atwood",
+          "May": "Maio",
+          "Monday": "Segunda-feira",
+          "N. Scott Momaday": "N. Scott Momaday",
+          "November": "Novembro",
+          "October": "Outubro",
+          "Public Domain": "Domínio público",
+          "Public Domain Image": "Imagem de domínio público",
+          "Saturday": "Sábado",
+          "September": "Setembro",
+          "Sunday": "Domingo",
+          "Thursday": "Quinta-feira",
+          "Toni Morrison": "Toni Morrison",
+          "Tuesday": "Terça-feira",
+          "Wednesday": "Quarta-feira",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "imagem de John Mathew Smith, CC-BY-SA 2.0",
           "image by Jose Lara, CC-BY-SA": "imagem de Jose Lara, CC-BY-SA",
-          "Sunday": "Domingo"
+          "image by Vanwaffle, CC BY-SA 3.0": "imagem de Vanwaffle, CC BY-SA 3.0",
+          "just like": "assim como",
+          "public domain image": "imagem de domínio público"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -264,73 +258,85 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
-          "January": "Janeiro",
-          "February": "Fevereiro",
-          "March": "Março",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
           "April": "Abril",
-          "May": "Maio",
-          "June": "Junho",
-          "July": "Julho",
           "August": "Agosto",
-          "September": "Setembro",
-          "October": "Outubro",
-          "November": "Novembro",
           "December": "Dezembro",
-          "Monday": "Segunda-feira",
-          "just like": "assim como",
-          "N. Scott Momaday": "N. Scott Momaday",
-          "public domain image": "imagem de domínio público",
-          "Tuesday": "Terça-feira",
-          "Toni Morrison": "Toni Morrison",
-          "image by John Mathew Smith, CC-BY-SA 2.0": "imagem de John Mathew Smith, CC-BY-SA 2.0",
-          "Wednesday": "Quarta-feira",
-          "Khaled Hosseini": "Khaled Hosseini",
-          "Public Domain Image": "Imagem de domínio público",
-          "Thursday": "Quinta-feira",
-          "Langston Hughes": "Langston Hughes",
-          "Public Domain": "Domínio público",
+          "February": "Fevereiro",
           "Friday": "Sexta-feira",
-          "Margaret Atwood": "Margaret Atwood",
-          "image by Vanwaffle, CC BY-SA 3.0": "imagem de Vanwaffle, CC BY-SA 3.0",
-          "Saturday": "Sábado",
           "Gabriel Garcia Marquez": "Gabriel García Márquez",
+          "January": "Janeiro",
+          "July": "Julho",
+          "June": "Junho",
+          "Khaled Hosseini": "Khaled Hosseini",
+          "Langston Hughes": "Langston Hughes",
+          "March": "Março",
+          "Margaret Atwood": "Margaret Atwood",
+          "May": "Maio",
+          "Monday": "Segunda-feira",
+          "N. Scott Momaday": "N. Scott Momaday",
+          "November": "Novembro",
+          "October": "Outubro",
+          "Public Domain": "Domínio público",
+          "Public Domain Image": "Imagem de domínio público",
+          "Saturday": "Sábado",
+          "September": "Setembro",
+          "Sunday": "Domingo",
+          "Thursday": "Quinta-feira",
+          "Toni Morrison": "Toni Morrison",
+          "Tuesday": "Terça-feira",
+          "Wednesday": "Quarta-feira",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "imagem de John Mathew Smith, CC-BY-SA 2.0",
           "image by Jose Lara, CC-BY-SA": "imagem de Jose Lara, CC-BY-SA",
-          "Sunday": "Domingo"
+          "image by Vanwaffle, CC BY-SA 3.0": "imagem de Vanwaffle, CC BY-SA 3.0",
+          "just like": "assim como",
+          "public domain image": "imagem de domínio público"
         },
         "CSD U1 storage friends_2021": {
-          "Back": "Voltar"
+          "Back": "Voltar",
+          "Friend Finder": "Localizador de Amigos"
         },
         "CSD U1 storage friends_2022": {
-          "Back": "Voltar"
+          "Back": "Voltar",
+          "Friend Finder": "Localizador de Amigos"
         },
         "CSD U1 storage movies_2021": {
+          "No": "Não",
           "Star Wars": "Star Wars",
           "Yes": "Sim",
-          "No": "Não",
           "text": "texto"
         },
         "CSD U1 storage movies_2022": {
+          "No": "Não",
           "Star Wars": "Star Wars",
           "Yes": "Sim",
-          "No": "Não",
           "text": "texto"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "Limpar",
-          "white": "branco",
-          "pink": "rosa",
-          "green": "verde",
+          "Outfit Picker": "Selecionador de Look",
           "black": "preto",
-          "purple": "Roxo"
+          "green": "verde",
+          "pink": "rosa",
+          "purple": "Roxo",
+          "white": "branco"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Limpar",
-          "white": "branco",
-          "pink": "rosa",
-          "green": "verde",
+          "Outfit Picker": "Selecionador de Look",
           "black": "preto",
-          "purple": "Roxo"
+          "green": "verde",
+          "pink": "rosa",
+          "purple": "Roxo",
+          "white": "branco"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -380,103 +386,142 @@
           "0": "0"
         },
         "CSD U6 - Board Inputs - SB1_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Board Inputs - SB3_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Feliz"
         },
+        "CSD U6 - Board Outputs - P2_2222": {
+          "High": "Alto",
+          "Low": "Baixo",
+          "Mid": "Médio"
+        },
         "CSD U6 - Board Outputs - P_2222": {
-          "Success!": "Sucesso!"
+          "Click Me": "Clique aqui",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Outputs - PracB_2222": {
+          "Click the mouse to make it squeak!": "Clique com o mouse para fazer o barulho!"
+        },
+        "CSD U6 - Board Outputs - PracD_2222": {
+          "100": "100",
+          "200": "200",
+          "300": "300",
+          "400": "400",
+          "700": "700",
+          "800": "800",
+          "900": "900"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - SB2_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup",
+          "change the light": "mude a luz"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Peixe"
         },
         "CSD U6 - Board Outputs - Setup_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "Leste",
           "North": "Norte",
           "South": "Sul",
-          "East": "Leste",
           "West": "Oeste"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB3_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Médio"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "para esquerda",
-          "right": "para direita",
-          "red": "vermelho",
-          "yellow": "amarelo",
           "green": "verde",
-          "purple": "Roxo"
+          "left": "para esquerda",
+          "purple": "Roxo",
+          "red": "vermelho",
+          "right": "para direita",
+          "yellow": "amarelo"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "ligado",
           "fast": "rápido",
-          "slow": "devagar",
-          "short": "curto",
+          "high": "alta",
           "long": "longo",
           "low": "baixa",
-          "high": "alta"
+          "on": "ligado",
+          "short": "curto",
+          "slow": "devagar"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "Vermelho",
+          "Blue": "Azul",
           "Green": "Verde",
-          "Blue": "Azul"
+          "Red": "Vermelho"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "para esquerda",
           "right": "para direita"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "amarelo",
-          "green": "verde",
           "blue": "azul",
-          "orange": "Laranja"
+          "green": "verde",
+          "orange": "Laranja",
+          "yellow": "amarelo"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "quiet": "Silêncio",
-          "Test": "Teste"
+          "Test": "Teste",
+          "quiet": "Silêncio"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "curto",
-          "long": "longo"
+          "long": "longo",
+          "short": "curto"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "curto",
+          "high": "alta",
           "long": "longo",
           "low": "baixa",
-          "high": "alta"
+          "short": "curto"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "curto",
-          "long": "longo"
+          "long": "longo",
+          "short": "curto"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "Vermelho",
-          "Blue": "Azul"
+          "Blue": "Azul",
+          "Red": "Vermelho"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -485,9 +530,9 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Nome"
@@ -508,111 +553,143 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
           "G": "G",
-          "A": "A",
-          "B": "B",
           "Note:": "Nota:"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "L",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB4_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
         "CSD U6 - Physical Input - ChalA_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - ChalC_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "Placar",
-          "0": "0"
+          "0": "0",
+          "Score": "Placar"
         },
         "CSD U6 - Physical Input - PC_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - PD_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - SB1_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalB_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - PB_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - PC_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - P_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB1_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB2.2_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB2_2222": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Nome:"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "Vermelho",
+          "Blue": "Azul",
           "Green": "Verde",
-          "Blue": "Azul"
+          "Red": "Vermelho"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "Azul",
+          "Green": "Verde",
           "Name:": "Nome:",
           "Red": "Vermelho",
-          "Green": "Verde",
-          "Blue": "Azul",
           "Save": "Salvar"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
@@ -630,25 +707,27 @@
           "white": "branco"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "Feliz",
-          "?": "?"
+          "?": "?",
+          "Emotion Machine": "Máquina de Emoção",
+          "Happy": "Feliz"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "título"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "Branco",
-          "Red": "Vermelho",
+          "Blue": "Azul",
           "Green": "Verde",
-          "Blue": "Azul"
+          "Red": "Vermelho",
+          "White": "Branco"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "para cima",
           "down": "para baixo",
           "left": "para esquerda",
-          "right": "para direita"
+          "right": "para direita",
+          "up": "para cima"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "Hello": "Olá",
           "name": "nome"
         },
         "CSD U6 - Sensors - A_2222": {
@@ -659,12 +738,24 @@
           "on": "ligado"
         },
         "CSD U6 - Sensors - P_2222": {
-          "text": "texto",
           "high": "alta",
-          "low": "baixa"
+          "low": "baixa",
+          "text": "texto"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "valor"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "Atualizar",
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
           "value": "valor"
         },
         "CSD U6 Driver pt 2": {
@@ -704,16 +795,28 @@
           "on": "ligado"
         },
         "CSD U6 LED toggle": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup",
+          "change the light": "mude a luz"
         },
         "CSD U6 LED toggle_2018": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup",
+          "change the light": "mude a luz"
         },
         "CSD U6 LED toggle_2019": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup",
+          "change the light": "mude a luz"
         },
         "CSD U6 LED toggle_2021": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup",
+          "change the light": "mude a luz"
         },
         "CSD U6 Pedometer": {
           "0": "0"
@@ -728,1110 +831,24 @@
           "0": "0"
         },
         "CSD U6 add LED button": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2018": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2019": {
-          "Success!": "Sucesso!"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2021": {
-          "Success!": "Sucesso!"
-        },
-        "CSD U6 analog light": {
-          "Update": "Atualizar",
-          "value": "valor"
-        },
-        "CSD U6 analog light_2018": {
-          "Update": "Atualizar",
-          "value": "valor"
-        },
-        "CSD U6 analog light_2019": {
-          "Update": "Atualizar",
-          "value": "valor"
-        },
-        "CSD U6 analog light_2021": {
-          "Update": "Atualizar",
-          "value": "valor"
-        },
-        "CSD U6 array piano": {
-          "C": "C",
-          "D": "D",
-          "E": "L",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
-        },
-        "CSD U6 array piano_2018": {
-          "C": "C",
-          "D": "D",
-          "E": "L",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
-        },
-        "CSD U6 array piano_2019": {
-          "C": "C",
-          "D": "D",
-          "E": "L",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
-        },
-        "CSD U6 array piano_2021": {
-          "C": "C",
-          "D": "D",
-          "E": "L",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
-        },
-        "CSD U6 arrays select predict": {
-          "first": "primeiro"
-        },
-        "CSD U6 arrays select predict_2018": {
-          "first": "primeiro"
-        },
-        "CSD U6 arrays select predict_2019": {
-          "first": "primeiro"
-        },
-        "CSD U6 arrays select predict_2021": {
-          "first": "primeiro"
-        },
-        "CSD U6 change": {
-          "short": "curto",
-          "long": "longo"
-        },
-        "CSD U6 change_2018": {
-          "short": "curto",
-          "long": "longo"
-        },
-        "CSD U6 change_2019": {
-          "short": "curto",
-          "long": "longo"
-        },
-        "CSD U6 change_2021": {
-          "short": "curto",
-          "long": "longo"
-        },
-        "CSD U6 colorLeds intensity": {
-          "Medium": "Médio"
-        },
-        "CSD U6 colorLeds intensity_2018": {
-          "Medium": "Médio"
-        },
-        "CSD U6 colorLeds intensity_2019": {
-          "Medium": "Médio"
-        },
-        "CSD U6 colorLeds intensity_2021": {
-          "Medium": "Médio"
-        },
-        "CSD U6 emotion machine example": {
-          "Happy": "Feliz",
-          "?": "?"
-        },
-        "CSD U6 emotion machine example_2018": {
-          "Happy": "Feliz",
-          "?": "?"
-        },
-        "CSD U6 emotion machine example_2019": {
-          "Happy": "Feliz",
-          "?": "?"
-        },
-        "CSD U6 emotion machine example_2021": {
-          "Happy": "Feliz",
-          "?": "?"
-        },
-        "CSD U6 frequency": {
-          "short": "curto",
-          "long": "longo",
-          "low": "baixa",
-          "high": "alta"
-        },
-        "CSD U6 frequency_2018": {
-          "short": "curto",
-          "long": "longo",
-          "low": "baixa",
-          "high": "alta"
-        },
-        "CSD U6 frequency_2019": {
-          "short": "curto",
-          "long": "longo",
-          "low": "baixa",
-          "high": "alta"
-        },
-        "CSD U6 frequency_2021": {
-          "short": "curto",
-          "long": "longo",
-          "low": "baixa",
-          "high": "alta"
-        },
-        "CSD U6 get toggle": {
-          "short": "curto",
-          "long": "longo",
-          "low": "baixa",
-          "high": "alta"
-        },
-        "CSD U6 get toggle_2018": {
-          "short": "curto",
-          "long": "longo",
-          "low": "baixa",
-          "high": "alta"
-        },
-        "CSD U6 get toggle_2019": {
-          "short": "curto",
-          "long": "longo",
-          "low": "baixa",
-          "high": "alta"
-        },
-        "CSD U6 get toggle_2021": {
-          "short": "curto",
-          "long": "longo",
-          "low": "baixa",
-          "high": "alta"
-        },
-        "CSD U6 getProperty Demo": {
-          "Name:": "Nome:",
-          "Red": "Vermelho",
-          "Green": "Verde",
-          "Blue": "Azul",
-          "Save": "Salvar"
-        },
-        "CSD U6 getProperty Demo_2018": {
-          "Name:": "Nome:",
-          "Red": "Vermelho",
-          "Green": "Verde",
-          "Blue": "Azul",
-          "Save": "Salvar"
-        },
-        "CSD U6 getProperty Demo_2019": {
-          "Name:": "Nome:",
-          "Red": "Vermelho",
-          "Green": "Verde",
-          "Blue": "Azul",
-          "Save": "Salvar"
-        },
-        "CSD U6 getProperty Demo_2021": {
-          "Name:": "Nome:",
-          "Red": "Vermelho",
-          "Green": "Verde",
-          "Blue": "Azul",
-          "Save": "Salvar"
-        },
-        "CSD U6 getProperty input": {
-          "Submit": "Enviar"
-        },
-        "CSD U6 getProperty input_2018": {
-          "Submit": "Enviar"
-        },
-        "CSD U6 getProperty input_2019": {
-          "Submit": "Enviar"
-        },
-        "CSD U6 getProperty input_2021": {
-          "Submit": "Enviar"
-        },
-        "CSD U6 getters debug": {
-          "slow": "devagar",
-          "fast": "rápido",
-          "short": "curto",
-          "long": "longo",
-          "low": "baixa",
-          "high": "alta"
-        },
-        "CSD U6 getters debug_2018": {
-          "fast": "rápido",
-          "slow": "devagar",
-          "short": "curto",
-          "long": "longo",
-          "low": "baixa",
-          "high": "alta"
-        },
-        "CSD U6 getters debug_2019": {
-          "fast": "rápido",
-          "slow": "devagar",
-          "short": "curto",
-          "long": "longo",
-          "low": "baixa",
-          "high": "alta"
-        },
-        "CSD U6 getters debug_2021": {
-          "fast": "rápido",
-          "slow": "devagar",
-          "short": "curto",
-          "long": "longo",
-          "low": "baixa",
-          "high": "alta"
-        },
-        "CSD U6 interval": {
-          "short": "curto",
-          "long": "longo"
-        },
-        "CSD U6 interval_2018": {
-          "short": "curto",
-          "long": "longo"
-        },
-        "CSD U6 interval_2019": {
-          "short": "curto",
-          "long": "longo"
-        },
-        "CSD U6 interval_2021": {
-          "short": "curto",
-          "long": "longo"
-        },
-        "CSD U6 light show": {
-          "on": "ligado",
-          "off": "desligado"
-        },
-        "CSD U6 light show_2018": {
-          "on": "ligado",
-          "off": "desligado"
-        },
-        "CSD U6 light show_2019": {
-          "on": "ligado",
-          "off": "desligado"
-        },
-        "CSD U6 light show_2021": {
-          "on": "ligado",
-          "off": "desligado"
-        },
-        "CSD U6 params create colors": {
-          "Red": "Vermelho",
-          "Blue": "Azul"
-        },
-        "CSD U6 params create colors_2018": {
-          "Red": "Vermelho",
-          "Blue": "Azul"
-        },
-        "CSD U6 params create colors_2019": {
-          "Red": "Vermelho",
-          "Blue": "Azul"
-        },
-        "CSD U6 params create colors_2021": {
-          "Red": "Vermelho",
-          "Blue": "Azul"
-        },
-        "CSD U6 params starchaser intro": {
-          "0": "0"
-        },
-        "CSD U6 params starchaser intro_2018": {
-          "0": "0"
-        },
-        "CSD U6 params starchaser intro_2019": {
-          "0": "0"
-        },
-        "CSD U6 params starchaser intro_2021": {
-          "0": "0"
-        },
-        "CSD U6 predict LED button": {
-          "Success!": "Sucesso!"
-        },
-        "CSD U6 predict LED button_2018": {
-          "Success!": "Sucesso!"
-        },
-        "CSD U6 predict LED button_2019": {
-          "Success!": "Sucesso!"
-        },
-        "CSD U6 predict LED button_2021": {
-          "Success!": "Sucesso!"
-        },
-        "CSD U6 sensor experiment embedded": {
-          "text": "texto",
-          "high": "alta",
-          "low": "baixa"
-        },
-        "CSD U6 sensor experiment embedded_2018": {
-          "text": "texto",
-          "high": "alta",
-          "low": "baixa"
-        },
-        "CSD U6 sensor experiment embedded_2019": {
-          "text": "texto",
-          "high": "alta",
-          "low": "baixa"
-        },
-        "CSD U6 sensor experiment embedded_2021": {
-          "text": "texto",
-          "high": "alta",
-          "low": "baixa"
-        },
-        "CSD U6 setProperty predict app": {
-          "title": "título"
-        },
-        "CSD U6 setProperty predict app_2018": {
-          "title": "título"
-        },
-        "CSD U6 setProperty predict app_2019": {
-          "title": "título"
-        },
-        "CSD U6 setProperty predict app_2021": {
-          "title": "título"
-        },
-        "CSD U6 slider intro": {
-          "short": "curto",
-          "long": "longo"
-        },
-        "CSD U6 slider intro_2018": {
-          "short": "curto",
-          "long": "longo"
-        },
-        "CSD U6 slider intro_2019": {
-          "short": "curto",
-          "long": "longo"
-        },
-        "CSD U6 slider intro_2021": {
-          "short": "curto",
-          "long": "longo"
-        },
-        "CSD U6 stillness game predict code": {
-          "Game Over": "Fim de jogo"
-        },
-        "CSD U6 stillness game predict code_2018": {
-          "Game Over": "Fim de jogo"
-        },
-        "CSD U6 stillness game predict code_2019": {
-          "Game Over": "Fim de jogo"
-        },
-        "CSD U6 stillness game predict code_2021": {
-          "Game Over": "Fim de jogo"
-        },
-        "CSD U6 test LED": {
-          "Success!": "Sucesso!"
-        },
-        "CSD U6 test LED_2018": {
-          "Success!": "Sucesso!"
-        },
-        "CSD U6 test LED_2019": {
-          "Success!": "Sucesso!"
-        },
-        "CSD U6 test LED_2021": {
-          "Success!": "Sucesso!"
-        },
-        "CSDU4 Connecting Screens": {
-          "Red": "Vermelho",
-          "Green": "Verde",
-          "Blue": "Azul"
-        },
-        "CSDU4 Connecting Screens Getting Back": {
-          "Red": "Vermelho",
-          "Green": "Verde",
-          "Blue": "Azul"
-        },
-        "CSDU4 Crowdsource App Demo": {
-          "About": "Sobre",
-          "About Us": "Quem Somos",
-          "User": "Usuário",
-          "Cancel": "Cancelar",
-          "Name:": "Nome:",
-          "Red": "Vermelho",
-          "Green": "Verde",
-          "Blue": "Azul",
-          "Yes": "Sim",
-          "No": "Não",
-          "Save": "Salvar"
-        },
-        "CSDU4 Crowdsource App Demo_2018": {
-          "About": "Sobre",
-          "About Us": "Quem Somos",
-          "User": "Usuário",
-          "Cancel": "Cancelar",
-          "Name:": "Nome:",
-          "Red": "Vermelho",
-          "Green": "Verde",
-          "Blue": "Azul",
-          "Yes": "Sim",
-          "No": "Não",
-          "Save": "Salvar"
-        },
-        "CSDU4 Crowdsource App Demo_2019": {
-          "About": "Sobre",
-          "About Us": "Quem Somos",
-          "User": "Usuário",
-          "Cancel": "Cancelar",
-          "Name:": "Nome:",
-          "Red": "Vermelho",
-          "Green": "Verde",
-          "Blue": "Azul",
-          "Yes": "Sim",
-          "No": "Não",
-          "Save": "Salvar"
-        },
-        "CSDU4 Decision App Demo": {
-          "About": "Sobre",
-          "Why?": "Por quê?",
-          "I don't know": "Eu não sei",
-          "When?": "Quando?",
-          "About Us": "Quem Somos"
-        },
-        "CSDU4 Decision App Demo_2018": {
-          "About": "Sobre",
-          "Why?": "Por quê?",
-          "I don't know": "Eu não sei",
-          "When?": "Quando?",
-          "About Us": "Quem Somos"
-        },
-        "CSDU4 Decision App Demo_2019": {
-          "About": "Sobre",
-          "Why?": "Por quê?",
-          "I don't know": "Eu não sei",
-          "When?": "Quando?",
-          "About Us": "Quem Somos"
-        },
-        "CSDU4 Functionality visible": {
-          "Hide": "Ocultar",
-          "Show": "Mostrar"
-        },
-        "CSDU4 List App Demo": {
-          "About": "Sobre",
-          "About Us": "Quem Somos",
-          "Done": "Feito",
-          "Cancel": "Cancelar"
-        },
-        "CSDU4 List App Demo_2018": {
-          "About": "Sobre",
-          "About Us": "Quem Somos",
-          "Done": "Feito",
-          "Cancel": "Cancelar"
-        },
-        "CSDU4 List App Demo_2019": {
-          "About": "Sobre",
-          "About Us": "Quem Somos",
-          "Done": "Feito",
-          "Cancel": "Cancelar"
-        },
-        "CSDU4 Quiz App Demo": {
-          "About": "Sobre",
-          "Submit": "Enviar",
-          "Why?": "Por quê?",
-          "When?": "Quando?",
-          "About Us": "Quem Somos",
-          "Correct!": "Correto!"
-        },
-        "CSDU4 Quiz App Demo_2018": {
-          "About": "Sobre",
-          "Submit": "Enviar",
-          "Why?": "Por quê?",
-          "When?": "Quando?",
-          "About Us": "Quem Somos",
-          "Correct!": "Correto!"
-        },
-        "CSDU4 Quiz App Demo_2019": {
-          "About": "Sobre",
-          "Submit": "Enviar",
-          "Why?": "Por quê?",
-          "When?": "Quando?",
-          "About Us": "Quem Somos",
-          "Correct!": "Correto!"
-        },
-        "CSDU6 - UI and Inputs - getNumber": {
-          "+": "+",
-          "=": "="
-        },
-        "CSDU6 - UI and Inputs - setScreen": {
-          "Back": "Voltar"
-        },
-        "CSDU6 Circuit Playground Test": {
-          "Success!": "Sucesso!"
-        },
-        "CSDU6 Circuit Playground Test_2018": {
-          "Success!": "Sucesso!"
-        },
-        "CSDU6 Circuit Playground Test_2019": {
-          "Success!": "Sucesso!"
-        },
-        "CSDU6 Circuit Playground Test_2021": {
-          "Success!": "Sucesso!"
-        },
-        "CSDU6 Circuit Playground Test_2222": {
-          "Success!": "Sucesso!"
-        },
-        "CSDU6 circuit playground piano": {
-          "C": "C",
-          "D": "D",
-          "E": "L",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
-        },
-        "CSDU6 circuit playground piano_2018": {
-          "C": "C",
-          "D": "D",
-          "E": "L",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
-        },
-        "CSDU6 circuit playground piano_2019": {
-          "C": "C",
-          "D": "D",
-          "E": "L",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
-        },
-        "CSDU6 circuit playground piano_2021": {
-          "C": "C",
-          "D": "D",
-          "E": "L",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
-        },
-        "CSDU6 piano with notes": {
-          "C": "C",
-          "D": "D",
-          "E": "L",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
-        },
-        "CSDU6 piano with notes_2018": {
-          "C": "C",
-          "D": "D",
-          "E": "L",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
-        },
-        "CSDU6 piano with notes_2019": {
-          "C": "C",
-          "D": "D",
-          "E": "L",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
-        },
-        "CSDU6 piano with notes_2021": {
-          "C": "C",
-          "D": "D",
-          "E": "L",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
-        },
-        "allthethings design mode elements": {
-          "text": "texto"
-        },
-        "csa widget test2": {
-          "8": "8"
-        },
-        "csd u5 recommender sample": {
-          "Start": "Começar",
-          "flying": "voando"
-        },
-        "csd u5 recommender sample_2019": {
-          "Start": "Começar",
-          "flying": "voando"
-        },
-        "csd u5 recommender sample_2021": {
-          "Start": "Começar",
-          "flying": "voando"
-        },
-        "csd u5 recommender sample_2022": {
-          "Start": "Começar",
-          "flying": "voando"
-        },
-        "csd-apps for good-2": {
-          "Next": "Próximo",
-          "Home": "Início",
-          "Water Conservation Tips": "Dicas de conservação de água",
-          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "É importante que todos façamos nossa parte para usar menos água. Clique neste aplicativo para obter dicas sobre ideias de conservação. ",
-          "English": "Inglês",
-          "Spanish": "Espanhol",
-          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Em vez de comprar garrafas de água descartáveis, use uma garrafa recarregável. Garrafas de água usadas enchem nossos aterros e retêm água valiosa.",
-          "Choose the correct water bottle. Then click the faucet to fill. ": "Escolha a garrafa de água correta. Em seguida, clique na torneira para encher. ",
-          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Outra forma de economizar água é tomar banhos mais curtos. Tente ajustar um cronômetro para cinco minutos!",
-          "Click on the timer": "Clique no cronômetro"
-        },
-        "csd-apps for good-2_2022": {
-          "Next": "Próximo",
-          "Home": "Início",
-          "Water Conservation Tips": "Dicas de conservação de água",
-          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "É importante que todos façamos nossa parte para usar menos água. Clique neste aplicativo para obter dicas sobre ideias de conservação. ",
-          "English": "Inglês",
-          "Spanish": "Espanhol",
-          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Em vez de comprar garrafas de água descartáveis, use uma garrafa recarregável. Garrafas de água usadas enchem nossos aterros e retêm água valiosa.",
-          "Choose the correct water bottle. Then click the faucet to fill. ": "Escolha a garrafa de água correta. Em seguida, clique na torneira para encher. ",
-          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Outra forma de economizar água é tomar banhos mais curtos. Tente ajustar um cronômetro para cinco minutos!",
-          "Click on the timer": "Clique no cronômetro"
-        },
-        "csd-apps for good-3": {
-          "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "4-Square = 4 Times the Fun": "4 quadrados = 4 vezes mais diversão",
-          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "Você queria aprender a jogar o divertido jogo social de 4 quadrados, mas não sabia por onde começar? Este é o aplicativo para você! ",
-          "More Info": "Mais informações",
-          "How many players do you need to play 4-Square? Click to find out!": "Quantos jogadores você precisa para jogar 4-Square? Clique para descobrir!",
-          "Start Again": "Comece de novo",
-          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Para jogar 4-square, cada jogador fica perto de uma das quatro caixas marcadas no chão. As caixas são ordenadas de 1 a 4, sendo uma a caixa “superior”. O jogador na caixa 1 começa a jogar quicando a bola em seu quadrado e depois dando um tapa ou batendo a bola em outro quadrado. A bola não deve tocar na caixa original do jogador novamente após o salto inicial. Se a bola quicar no quadrado de um jogador, ele deve então bater a bola em outro quadrado antes que a bola salte novamente. Eles só podem bater na bola uma vez. Mas e se atingir a linha, você pode perguntar? Existem muitas regras diferentes sobre o que fazer se a bola atingir a linha - você deve concordar com seus amigos se as linhas estão dentro ou fora. Se você acertar a bola fora dos limites ou ela saltar duas vezes no seu quadrado, você está fora. Todos passam para a próxima caixa mais alta disponível (o objetivo é ficar na primeira caixa o maior tempo possível). Se você estiver fora, você vai para o final da linha e um novo jogador ocupa a vaga vazia na caixa 4. "
-        },
-        "csd-apps for good-3_2022": {
-          "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "4-Square = 4 Times the Fun": "4 quadrados = 4 vezes mais diversão",
-          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "Você queria aprender a jogar o divertido jogo social de 4 quadrados, mas não sabia por onde começar? Este é o aplicativo para você! ",
-          "More Info": "Mais informações",
-          "How many players do you need to play 4-Square? Click to find out!": "Quantos jogadores você precisa para jogar 4-Square? Clique para descobrir!",
-          "Start Again": "Comece de novo",
-          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Para jogar 4-square, cada jogador fica perto de uma das quatro caixas marcadas no chão. As caixas são ordenadas de 1 a 4, sendo uma a caixa “superior”. O jogador na caixa 1 começa a jogar quicando a bola em seu quadrado e depois dando um tapa ou batendo a bola em outro quadrado. A bola não deve tocar na caixa original do jogador novamente após o salto inicial. Se a bola quicar no quadrado de um jogador, ele deve então bater a bola em outro quadrado antes que a bola salte novamente. Eles só podem bater na bola uma vez. Mas e se atingir a linha, você pode perguntar? Existem muitas regras diferentes sobre o que fazer se a bola atingir a linha - você deve concordar com seus amigos se as linhas estão dentro ou fora. Se você acertar a bola fora dos limites ou ela saltar duas vezes no seu quadrado, você está fora. Todos passam para a próxima caixa mais alta disponível (o objetivo é ficar na primeira caixa o maior tempo possível). Se você estiver fora, você vai para o final da linha e um novo jogador ocupa a vaga vazia na caixa 4. "
-        },
-        "csd-explore ui-2": {
-          "Next": "Próximo",
-          "Home": "Início",
-          "Water Conservation Tips": "Dicas de conservação de água",
-          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "É importante que todos façamos nossa parte para usar menos água. Clique neste aplicativo para obter dicas sobre ideias de conservação. ",
-          "English": "Inglês",
-          "Spanish": "Espanhol",
-          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Em vez de comprar garrafas de água descartáveis, use uma garrafa recarregável. Garrafas de água usadas enchem nossos aterros e retêm água valiosa.",
-          "Choose the correct water bottle. Then click the faucet to fill. ": "Escolha a garrafa de água correta. Em seguida, clique na torneira para encher. ",
-          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Outra forma de economizar água é tomar banhos mais curtos. Tente ajustar um cronômetro para cinco minutos!",
-          "Click on the timer": "Clique no cronômetro"
-        },
-        "csd-explore ui-2_2022": {
-          "Next": "Próximo",
-          "Home": "Início",
-          "Water Conservation Tips": "Dicas de conservação de água",
-          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "É importante que todos façamos nossa parte para usar menos água. Clique neste aplicativo para obter dicas sobre ideias de conservação. ",
-          "English": "Inglês",
-          "Spanish": "Espanhol",
-          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Em vez de comprar garrafas de água descartáveis, use uma garrafa recarregável. Garrafas de água usadas enchem nossos aterros e retêm água valiosa.",
-          "Choose the correct water bottle. Then click the faucet to fill. ": "Escolha a garrafa de água correta. Em seguida, clique na torneira para encher. ",
-          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Outra forma de economizar água é tomar banhos mais curtos. Tente ajustar um cronômetro para cinco minutos!",
-          "Click on the timer": "Clique no cronômetro"
-        },
-        "csd-explore ui-3": {
-          "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
-          "10": "10",
-          "11": "11",
-          "12": "12",
-          "13": "13",
-          "14": "14",
-          "15": "15",
-          "16": "16",
-          "17": "17",
-          "18": "18",
-          "19": "19",
-          "20": "20",
-          "Choose your Birthday!": "Escolha seu aniversário!",
-          "Find out if it's your birthday!": "Descubra se é seu aniversário!",
-          "January": "Janeiro",
-          "February": "Fevereiro",
-          "March": "Março",
-          "April": "Abril",
-          "May": "Maio",
-          "June": "Junho",
-          "July": "Julho",
-          "August": "Agosto",
-          "September": "Setembro",
-          "October": "Outubro",
-          "November": "Novembro",
-          "December": "Dezembro",
-          "It's your birthday!": "É seu aniversário!",
-          "It's not your birthday yet this year!": "Este ano ainda não é seu aniversário!",
-          "It was already your birthday this year!!": "Esse ano já foi seu aniversário!!"
-        },
-        "csd-explore ui-3_2022": {
-          "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
-          "10": "10",
-          "11": "11",
-          "12": "12",
-          "13": "13",
-          "14": "14",
-          "15": "15",
-          "16": "16",
-          "17": "17",
-          "18": "18",
-          "19": "19",
-          "20": "20",
-          "Choose your Birthday!": "Escolha seu aniversário!",
-          "Find out if it's your birthday!": "Descubra se é seu aniversário!",
-          "January": "Janeiro",
-          "February": "Fevereiro",
-          "March": "Março",
-          "April": "Abril",
-          "May": "Maio",
-          "June": "Junho",
-          "July": "Julho",
-          "August": "Agosto",
-          "September": "Setembro",
-          "October": "Outubro",
-          "November": "Novembro",
-          "December": "Dezembro",
-          "It's your birthday!": "É seu aniversário!",
-          "It's not your birthday yet this year!": "Este ano ainda não é seu aniversário!",
-          "It was already your birthday this year!!": "Esse ano já foi seu aniversário!!"
-        },
-        "csd-explore ui-4": {
-          "Correct!": "Correto!",
-          "Sorry!": "Desculpe!"
-        },
-        "csd-explore ui-4_2022": {
-          "Correct!": "Correto!",
-          "Sorry!": "Desculpe!"
-        },
-        "csd-explore ui-5": {
-          "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
-          "10": "10",
-          "11": "11",
-          "12": "12",
-          "13": "13",
-          "14": "14",
-          "15": "15",
-          "16": "16",
-          "17": "17",
-          "18": "18",
-          "19": "19",
-          "20": "20",
-          "January": "Janeiro",
-          "February": "Fevereiro",
-          "March": "Março",
-          "April": "Abril",
-          "May": "Maio",
-          "June": "Junho",
-          "July": "Julho",
-          "August": "Agosto",
-          "September": "Setembro",
-          "October": "Outubro",
-          "November": "Novembro",
-          "December": "Dezembro",
-          "Monday": "Segunda-feira",
-          "just like": "assim como",
-          "N. Scott Momaday": "N. Scott Momaday",
-          "public domain image": "imagem de domínio público",
-          "Tuesday": "Terça-feira",
-          "Toni Morrison": "Toni Morrison",
-          "image by John Mathew Smith, CC-BY-SA 2.0": "imagem de John Mathew Smith, CC-BY-SA 2.0",
-          "Wednesday": "Quarta-feira",
-          "Khaled Hosseini": "Khaled Hosseini",
-          "Public Domain Image": "Imagem de domínio público",
-          "Thursday": "Quinta-feira",
-          "Langston Hughes": "Langston Hughes",
-          "Public Domain": "Domínio público",
-          "Friday": "Sexta-feira",
-          "Margaret Atwood": "Margaret Atwood",
-          "image by Vanwaffle, CC BY-SA 3.0": "imagem de Vanwaffle, CC BY-SA 3.0",
-          "Saturday": "Sábado",
-          "Gabriel Garcia Marquez": "Gabriel García Márquez",
-          "image by Jose Lara, CC-BY-SA": "imagem de Jose Lara, CC-BY-SA",
-          "Sunday": "Domingo"
-        },
-        "csd-explore ui-5_2022": {
-          "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
-          "10": "10",
-          "11": "11",
-          "12": "12",
-          "13": "13",
-          "14": "14",
-          "15": "15",
-          "16": "16",
-          "17": "17",
-          "18": "18",
-          "19": "19",
-          "20": "20",
-          "January": "Janeiro",
-          "February": "Fevereiro",
-          "March": "Março",
-          "April": "Abril",
-          "May": "Maio",
-          "June": "Junho",
-          "July": "Julho",
-          "August": "Agosto",
-          "September": "Setembro",
-          "October": "Outubro",
-          "November": "Novembro",
-          "December": "Dezembro",
-          "Monday": "Segunda-feira",
-          "just like": "assim como",
-          "N. Scott Momaday": "N. Scott Momaday",
-          "public domain image": "imagem de domínio público",
-          "Tuesday": "Terça-feira",
-          "Toni Morrison": "Toni Morrison",
-          "image by John Mathew Smith, CC-BY-SA 2.0": "imagem de John Mathew Smith, CC-BY-SA 2.0",
-          "Wednesday": "Quarta-feira",
-          "Khaled Hosseini": "Khaled Hosseini",
-          "Public Domain Image": "Imagem de domínio público",
-          "Thursday": "Quinta-feira",
-          "Langston Hughes": "Langston Hughes",
-          "Public Domain": "Domínio público",
-          "Friday": "Sexta-feira",
-          "Margaret Atwood": "Margaret Atwood",
-          "image by Vanwaffle, CC BY-SA 3.0": "imagem de Vanwaffle, CC BY-SA 3.0",
-          "Saturday": "Sábado",
-          "Gabriel Garcia Marquez": "Gabriel García Márquez",
-          "image by Jose Lara, CC-BY-SA": "imagem de Jose Lara, CC-BY-SA",
-          "Sunday": "Domingo"
-        },
-        "csd-explore ui-6": {
-          "Next": "Próximo",
-          "Mad Libs!": "Libs loucos!",
-          "Learning to Drive": "Aprendendo a dirigir",
-          "Plural Noun": "Substantivo plural",
-          "Noun": "Substantivo",
-          "Song": "Canção",
-          "Verb": "Verbo",
-          "Play again": "Jogue novamente"
-        },
-        "csd-explore ui-6_2022": {
-          "Next": "Próximo",
-          "Mad Libs!": "Libs loucos!",
-          "Learning to Drive": "Aprendendo a dirigir",
-          "Plural Noun": "Substantivo plural",
-          "Noun": "Substantivo",
-          "Song": "Canção",
-          "Verb": "Verbo",
-          "Play again": "Jogue novamente"
-        },
-        "ml-L2 supervised - green glass door-2021": {
-          "Accepted": "Aceito",
-          "Rejected": "Rejeitado"
-        },
-        "ml-L2 supervised - green glass door_2022": {
-          "Accepted": "Aceito",
-          "Rejected": "Rejeitado"
-        },
-        "ml-L2 unsupervised - 1-2021": {
-          "Next": "Próximo"
-        },
-        "ml-L2 unsupervised - 1_2022": {
-          "Next": "Próximo"
-        },
-        "ml-customize-raspado-2021": {
-          "yes": "sim",
-          "no": "não",
-          "Predict": "Previsão"
-        },
-        "ml-customize-raspado_2022": {
-          "yes": "sim",
-          "no": "não",
-          "Predict": "Previsão"
-        },
-        "ml-intro ai lab- fruit veggie widget": {
-          "Continue": "Avançar",
-          "Loading...": "Carregando..."
-        },
-        "ml-intro ai lab- fruit veggie widget_2022": {
-          "Continue": "Avançar",
-          "Loading...": "Carregando..."
-        },
-        "ml-intro app lab-book recommender demo-2021": {
-          "Silly": "Bobo",
-          "Predict": "Previsão"
-        },
-        "ml-intro app lab-book recommender demo_2022": {
-          "Silly": "Bobo",
-          "Predict": "Previsão"
-        },
-        "ml-model card-medical app v2 2021-2": {
-          "W": "O",
-          "A": "A",
-          "yes": "sim",
-          "no": "não",
-          "head": "cabeça"
-        },
-        "ml-model card-medical app v2 2021-2_2022": {
-          "W": "O",
-          "A": "A",
-          "yes": "sim",
-          "no": "não",
-          "head": "cabeça"
-        },
-        "ml-model cards-book recommender model card": {
-          "Silly": "Bobo",
-          "Predict": "Previsão"
-        },
-        "ml-model cards-book recommender model card_2022": {
-          "Silly": "Bobo",
-          "Predict": "Previsão"
-        },
-        "ml-models in applab-choice if quotes": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Predict": "Previsão"
-        },
-        "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Predict": "Previsão"
-        },
-        "ml-models in applab-choice if wrong place": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Predict": "Previsão"
-        },
-        "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Predict": "Previsão"
-        },
-        "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Predict": "Previsão",
-          "Back": "Voltar"
-        },
-        "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Predict": "Previsão",
-          "Back": "Voltar"
-        },
-        "ml-models in applab-choice predict typos": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Predict": "Previsão"
-        },
-        "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "Predict": "Previsão"
-        },
-        "ml-models in applab-zoo assessment": {
-          "Yes": "Sim",
-          "No": "Não",
-          "B": "B",
-          "Predict": "Previsão"
-        },
-        "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Sim",
-          "No": "Não",
-          "B": "B",
-          "Predict": "Previsão"
-        },
-        "ml-models in applab-zoo model embed": {
-          "Yes": "Sim",
-          "No": "Não",
-          "Predict": "Previsão"
-        },
-        "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Sim",
-          "No": "Não",
-          "Predict": "Previsão"
-        },
-        "ml-models-shoes decision tree-2021": {
-          "Sports": "Esportes"
-        },
-        "ml-models-shoes decision tree_2022": {
-          "Sports": "Esportes"
-        },
-        "ml-use model card-example3A-2021": {
-          "rain": "chuva",
-          "snow": "neve",
-          "cloudy": "nublado",
-          "night": "noite",
-          "dusk": "Crepúsculo",
-          "Predict": "Previsão"
-        },
-        "ml-use model card-example3A_2022": {
-          "rain": "chuva",
-          "snow": "neve",
-          "cloudy": "nublado",
-          "night": "noite",
-          "dusk": "Crepúsculo",
-          "Predict": "Previsão"
-        },
-        "csd-apps for good-1": {
-          "Do More Durham": "Faça mais Durham",
-          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Envolva-se nos espaços ajardinados de Durham. Você pode cultivar sua própria comida e contribuir para o estilo de vida saudável de Durham. ",
-          "Seeds": "Sementes",
-          "Briggs Avenue Community Garden": "Jardim Comunitário da Avenida Briggs",
-          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "Gosta do ar livre? Você pode ajudar a limpar nossos parques ou guiar outras pessoas em caminhadas. Quaisquer que sejam seus interesses, há uma maneira de se envolver. ",
-          "Eno River Association": "Associação do Rio Eno",
-          "Durham Central Park": "Parque Central de Durham"
-        },
-        "csd-apps for good-1_2022": {
-          "Do More Durham": "Faça mais Durham",
-          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Envolva-se nos espaços ajardinados de Durham. Você pode cultivar sua própria comida e contribuir para o estilo de vida saudável de Durham. ",
-          "Seeds": "Sementes",
-          "Briggs Avenue Community Garden": "Jardim Comunitário da Avenida Briggs",
-          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "Gosta do ar livre? Você pode ajudar a limpar nossos parques ou guiar outras pessoas em caminhadas. Quaisquer que sejam seus interesses, há uma maneira de se envolver. ",
-          "Eno River Association": "Associação do Rio Eno",
-          "Durham Central Park": "Parque Central de Durham"
-        },
-        "csd-explore ui-1": {
-          "Chinese": "Chinês",
-          "Italian": "Italiano",
-          "Breakfast": "Café da manhã",
-          "Type of Restaurant": "Tipo de restaurante",
-          "Dollars per person": "Dólares por pessoa",
-          "Where Should I Eat?": "Onde devo comer?",
-          "$15": "$15"
-        },
-        "csd-explore ui-1_2022": {
-          "Chinese": "Chinês",
-          "Italian": "Italiano",
-          "Breakfast": "Café da manhã",
-          "Type of Restaurant": "Tipo de restaurante",
-          "Dollars per person": "Dólares por pessoa",
-          "Where Should I Eat?": "Onde devo comer?",
-          "$15": "$15"
-        },
-        "CSD U6 - Sensors - SB1_2222": {
-          "value": "valor"
-        },
-        "CSD U6 - Sensors - SB3_2222": {
-          "value": "valor"
-        },
-        "CSD U6 - Sensors - SB4.1_2222": {
-          "value": "valor"
-        },
-        "CSD U6 - Sensors - SB4_2222": {
-          "value": "valor"
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 analog change": {
           "value": "valor"
@@ -1857,6 +874,22 @@
         "CSD U6 analog data_2021": {
           "value": "valor"
         },
+        "CSD U6 analog light": {
+          "Update": "Atualizar",
+          "value": "valor"
+        },
+        "CSD U6 analog light_2018": {
+          "Update": "Atualizar",
+          "value": "valor"
+        },
+        "CSD U6 analog light_2019": {
+          "Update": "Atualizar",
+          "value": "valor"
+        },
+        "CSD U6 analog light_2021": {
+          "Update": "Atualizar",
+          "value": "valor"
+        },
         "CSD U6 analog sound": {
           "value": "valor"
         },
@@ -1868,6 +901,1162 @@
         },
         "CSD U6 analog sound_2021": {
           "value": "valor"
+        },
+        "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 arrays select predict": {
+          "first": "primeiro"
+        },
+        "CSD U6 arrays select predict_2018": {
+          "first": "primeiro"
+        },
+        "CSD U6 arrays select predict_2019": {
+          "first": "primeiro"
+        },
+        "CSD U6 arrays select predict_2021": {
+          "first": "primeiro"
+        },
+        "CSD U6 change": {
+          "long": "longo",
+          "short": "curto"
+        },
+        "CSD U6 change_2018": {
+          "long": "longo",
+          "short": "curto"
+        },
+        "CSD U6 change_2019": {
+          "long": "longo",
+          "short": "curto"
+        },
+        "CSD U6 change_2021": {
+          "long": "longo",
+          "short": "curto"
+        },
+        "CSD U6 colorLeds intensity": {
+          "Medium": "Médio"
+        },
+        "CSD U6 colorLeds intensity_2018": {
+          "Medium": "Médio"
+        },
+        "CSD U6 colorLeds intensity_2019": {
+          "Medium": "Médio"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "Medium": "Médio"
+        },
+        "CSD U6 emotion machine example": {
+          "?": "?",
+          "Emotion Machine": "Máquina de Emoção",
+          "Happy": "Feliz"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "?": "?",
+          "Emotion Machine": "Máquina de Emoção",
+          "Happy": "Feliz"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "?": "?",
+          "Emotion Machine": "Máquina de Emoção",
+          "Happy": "Feliz"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "?": "?",
+          "Emotion Machine": "Máquina de Emoção",
+          "Happy": "Feliz"
+        },
+        "CSD U6 frequency": {
+          "high": "alta",
+          "long": "longo",
+          "low": "baixa",
+          "short": "curto"
+        },
+        "CSD U6 frequency_2018": {
+          "high": "alta",
+          "long": "longo",
+          "low": "baixa",
+          "short": "curto"
+        },
+        "CSD U6 frequency_2019": {
+          "high": "alta",
+          "long": "longo",
+          "low": "baixa",
+          "short": "curto"
+        },
+        "CSD U6 frequency_2021": {
+          "high": "alta",
+          "long": "longo",
+          "low": "baixa",
+          "short": "curto"
+        },
+        "CSD U6 get toggle": {
+          "high": "alta",
+          "long": "longo",
+          "low": "baixa",
+          "short": "curto"
+        },
+        "CSD U6 get toggle_2018": {
+          "high": "alta",
+          "long": "longo",
+          "low": "baixa",
+          "short": "curto"
+        },
+        "CSD U6 get toggle_2019": {
+          "high": "alta",
+          "long": "longo",
+          "low": "baixa",
+          "short": "curto"
+        },
+        "CSD U6 get toggle_2021": {
+          "high": "alta",
+          "long": "longo",
+          "low": "baixa",
+          "short": "curto"
+        },
+        "CSD U6 getProperty Demo": {
+          "Blue": "Azul",
+          "Green": "Verde",
+          "Name:": "Nome:",
+          "Red": "Vermelho",
+          "Save": "Salvar"
+        },
+        "CSD U6 getProperty Demo_2018": {
+          "Blue": "Azul",
+          "Green": "Verde",
+          "Name:": "Nome:",
+          "Red": "Vermelho",
+          "Save": "Salvar"
+        },
+        "CSD U6 getProperty Demo_2019": {
+          "Blue": "Azul",
+          "Green": "Verde",
+          "Name:": "Nome:",
+          "Red": "Vermelho",
+          "Save": "Salvar"
+        },
+        "CSD U6 getProperty Demo_2021": {
+          "Blue": "Azul",
+          "Green": "Verde",
+          "Name:": "Nome:",
+          "Red": "Vermelho",
+          "Save": "Salvar"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "Enviar"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "Enviar"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "Enviar"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "Enviar"
+        },
+        "CSD U6 getters debug": {
+          "fast": "rápido",
+          "high": "alta",
+          "long": "longo",
+          "low": "baixa",
+          "short": "curto",
+          "slow": "devagar"
+        },
+        "CSD U6 getters debug_2018": {
+          "fast": "rápido",
+          "high": "alta",
+          "long": "longo",
+          "low": "baixa",
+          "short": "curto",
+          "slow": "devagar"
+        },
+        "CSD U6 getters debug_2019": {
+          "fast": "rápido",
+          "high": "alta",
+          "long": "longo",
+          "low": "baixa",
+          "short": "curto",
+          "slow": "devagar"
+        },
+        "CSD U6 getters debug_2021": {
+          "fast": "rápido",
+          "high": "alta",
+          "long": "longo",
+          "low": "baixa",
+          "short": "curto",
+          "slow": "devagar"
+        },
+        "CSD U6 interval": {
+          "long": "longo",
+          "short": "curto"
+        },
+        "CSD U6 interval_2018": {
+          "long": "longo",
+          "short": "curto"
+        },
+        "CSD U6 interval_2019": {
+          "long": "longo",
+          "short": "curto"
+        },
+        "CSD U6 interval_2021": {
+          "long": "longo",
+          "short": "curto"
+        },
+        "CSD U6 light show": {
+          "off": "desligado",
+          "on": "ligado"
+        },
+        "CSD U6 light show_2018": {
+          "off": "desligado",
+          "on": "ligado"
+        },
+        "CSD U6 light show_2019": {
+          "off": "desligado",
+          "on": "ligado"
+        },
+        "CSD U6 light show_2021": {
+          "off": "desligado",
+          "on": "ligado"
+        },
+        "CSD U6 params create colors": {
+          "Blue": "Azul",
+          "Red": "Vermelho"
+        },
+        "CSD U6 params create colors_2018": {
+          "Blue": "Azul",
+          "Red": "Vermelho"
+        },
+        "CSD U6 params create colors_2019": {
+          "Blue": "Azul",
+          "Red": "Vermelho"
+        },
+        "CSD U6 params create colors_2021": {
+          "Blue": "Azul",
+          "Red": "Vermelho"
+        },
+        "CSD U6 params starchaser intro": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2018": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2019": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2021": {
+          "0": "0"
+        },
+        "CSD U6 predict LED button": {
+          "Click Me": "Clique aqui",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Click Me": "Clique aqui",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Click Me": "Clique aqui",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Click Me": "Clique aqui",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSD U6 sensor experiment embedded": {
+          "high": "alta",
+          "low": "baixa",
+          "text": "texto"
+        },
+        "CSD U6 sensor experiment embedded_2018": {
+          "high": "alta",
+          "low": "baixa",
+          "text": "texto"
+        },
+        "CSD U6 sensor experiment embedded_2019": {
+          "high": "alta",
+          "low": "baixa",
+          "text": "texto"
+        },
+        "CSD U6 sensor experiment embedded_2021": {
+          "high": "alta",
+          "low": "baixa",
+          "text": "texto"
+        },
+        "CSD U6 setProperty predict app": {
+          "title": "título"
+        },
+        "CSD U6 setProperty predict app_2018": {
+          "title": "título"
+        },
+        "CSD U6 setProperty predict app_2019": {
+          "title": "título"
+        },
+        "CSD U6 setProperty predict app_2021": {
+          "title": "título"
+        },
+        "CSD U6 slider intro": {
+          "long": "longo",
+          "short": "curto"
+        },
+        "CSD U6 slider intro_2018": {
+          "long": "longo",
+          "short": "curto"
+        },
+        "CSD U6 slider intro_2019": {
+          "long": "longo",
+          "short": "curto"
+        },
+        "CSD U6 slider intro_2021": {
+          "long": "longo",
+          "short": "curto"
+        },
+        "CSD U6 stillness game predict code": {
+          "Game Over": "Fim de jogo"
+        },
+        "CSD U6 stillness game predict code_2018": {
+          "Game Over": "Fim de jogo"
+        },
+        "CSD U6 stillness game predict code_2019": {
+          "Game Over": "Fim de jogo"
+        },
+        "CSD U6 stillness game predict code_2021": {
+          "Game Over": "Fim de jogo"
+        },
+        "CSD U6 test LED": {
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSD U6 test LED_2018": {
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSD U6 test LED_2019": {
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSD U6 test LED_2021": {
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSDU4 Connecting Screens": {
+          "Blue": "Azul",
+          "Green": "Verde",
+          "Red": "Vermelho"
+        },
+        "CSDU4 Connecting Screens Getting Back": {
+          "Blue": "Azul",
+          "Green": "Verde",
+          "Red": "Vermelho"
+        },
+        "CSDU4 Crowdsource App Demo": {
+          "About": "Sobre",
+          "About Us": "Quem Somos",
+          "Blue": "Azul",
+          "Cancel": "Cancelar",
+          "Green": "Verde",
+          "Name:": "Nome:",
+          "No": "Não",
+          "Red": "Vermelho",
+          "Save": "Salvar",
+          "User": "Usuário",
+          "User Profile": "Perfil do Usuário",
+          "Yes": "Sim"
+        },
+        "CSDU4 Crowdsource App Demo_2018": {
+          "About": "Sobre",
+          "About Us": "Quem Somos",
+          "Blue": "Azul",
+          "Cancel": "Cancelar",
+          "Green": "Verde",
+          "Name:": "Nome:",
+          "No": "Não",
+          "Red": "Vermelho",
+          "Save": "Salvar",
+          "User": "Usuário",
+          "User Profile": "Perfil do Usuário",
+          "Yes": "Sim"
+        },
+        "CSDU4 Crowdsource App Demo_2019": {
+          "About": "Sobre",
+          "About Us": "Quem Somos",
+          "Blue": "Azul",
+          "Cancel": "Cancelar",
+          "Green": "Verde",
+          "Name:": "Nome:",
+          "No": "Não",
+          "Red": "Vermelho",
+          "Save": "Salvar",
+          "User": "Usuário",
+          "User Profile": "Perfil do Usuário",
+          "Yes": "Sim"
+        },
+        "CSDU4 Decision App Demo": {
+          "About": "Sobre",
+          "About Us": "Quem Somos",
+          "I don't know": "Eu não sei",
+          "When?": "Quando?",
+          "Why?": "Por quê?"
+        },
+        "CSDU4 Decision App Demo_2018": {
+          "About": "Sobre",
+          "About Us": "Quem Somos",
+          "I don't know": "Eu não sei",
+          "When?": "Quando?",
+          "Why?": "Por quê?"
+        },
+        "CSDU4 Decision App Demo_2019": {
+          "About": "Sobre",
+          "About Us": "Quem Somos",
+          "I don't know": "Eu não sei",
+          "When?": "Quando?",
+          "Why?": "Por quê?"
+        },
+        "CSDU4 Functionality visible": {
+          "Hide": "Ocultar",
+          "Show": "Mostrar"
+        },
+        "CSDU4 List App Demo": {
+          "About": "Sobre",
+          "About Us": "Quem Somos",
+          "Cancel": "Cancelar",
+          "Done": "Feito"
+        },
+        "CSDU4 List App Demo_2018": {
+          "About": "Sobre",
+          "About Us": "Quem Somos",
+          "Cancel": "Cancelar",
+          "Done": "Feito"
+        },
+        "CSDU4 List App Demo_2019": {
+          "About": "Sobre",
+          "About Us": "Quem Somos",
+          "Cancel": "Cancelar",
+          "Done": "Feito"
+        },
+        "CSDU4 Quiz App Demo": {
+          "About": "Sobre",
+          "About Us": "Quem Somos",
+          "Correct!": "Correto!",
+          "Submit": "Enviar",
+          "When?": "Quando?",
+          "Why?": "Por quê?"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "About": "Sobre",
+          "About Us": "Quem Somos",
+          "Correct!": "Correto!",
+          "Submit": "Enviar",
+          "When?": "Quando?",
+          "Why?": "Por quê?"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "About": "Sobre",
+          "About Us": "Quem Somos",
+          "Correct!": "Correto!",
+          "Submit": "Enviar",
+          "When?": "Quando?",
+          "Why?": "Por quê?"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+",
+          "=": "="
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "Voltar"
+        },
+        "CSDU6 Circuit Playground Test": {
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Success!": "Sucesso!",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
+        },
+        "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G"
+        },
+        "allthethings design mode elements": {
+          "text": "texto"
+        },
+        "csa widget test2": {
+          "8": "8"
+        },
+        "csd u5 recommender sample": {
+          "Start": "Começar",
+          "flying": "voando"
+        },
+        "csd u5 recommender sample_2019": {
+          "Start": "Começar",
+          "flying": "voando"
+        },
+        "csd u5 recommender sample_2021": {
+          "Start": "Começar",
+          "flying": "voando"
+        },
+        "csd u5 recommender sample_2022": {
+          "Start": "Começar",
+          "flying": "voando"
+        },
+        "csd-apps for good-1": {
+          "Briggs Avenue Community Garden": "Jardim Comunitário da Avenida Briggs",
+          "Do More Durham": "Faça mais Durham",
+          "Durham Central Park": "Parque Central de Durham",
+          "Eno River Association": "Associação do Rio Eno",
+          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Envolva-se nos espaços ajardinados de Durham. Você pode cultivar sua própria comida e contribuir para o estilo de vida saudável de Durham. ",
+          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "Gosta do ar livre? Você pode ajudar a limpar nossos parques ou guiar outras pessoas em caminhadas. Quaisquer que sejam seus interesses, há uma maneira de se envolver. ",
+          "Seeds": "Sementes"
+        },
+        "csd-apps for good-1_2022": {
+          "Briggs Avenue Community Garden": "Jardim Comunitário da Avenida Briggs",
+          "Do More Durham": "Faça mais Durham",
+          "Durham Central Park": "Parque Central de Durham",
+          "Eno River Association": "Associação do Rio Eno",
+          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Envolva-se nos espaços ajardinados de Durham. Você pode cultivar sua própria comida e contribuir para o estilo de vida saudável de Durham. ",
+          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "Gosta do ar livre? Você pode ajudar a limpar nossos parques ou guiar outras pessoas em caminhadas. Quaisquer que sejam seus interesses, há uma maneira de se envolver. ",
+          "Seeds": "Sementes"
+        },
+        "csd-apps for good-2": {
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Outra forma de economizar água é tomar banhos mais curtos. Tente ajustar um cronômetro para cinco minutos!",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Escolha a garrafa de água correta. Em seguida, clique na torneira para encher. ",
+          "Click on the timer": "Clique no cronômetro",
+          "English": "Inglês",
+          "Home": "Início",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Em vez de comprar garrafas de água descartáveis, use uma garrafa recarregável. Garrafas de água usadas enchem nossos aterros e retêm água valiosa.",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "É importante que todos façamos nossa parte para usar menos água. Clique neste aplicativo para obter dicas sobre ideias de conservação. ",
+          "Next": "Próximo",
+          "Spanish": "Espanhol",
+          "Water Conservation Tips": "Dicas de conservação de água"
+        },
+        "csd-apps for good-2_2022": {
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Outra forma de economizar água é tomar banhos mais curtos. Tente ajustar um cronômetro para cinco minutos!",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Escolha a garrafa de água correta. Em seguida, clique na torneira para encher. ",
+          "Click on the timer": "Clique no cronômetro",
+          "English": "Inglês",
+          "Home": "Início",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Em vez de comprar garrafas de água descartáveis, use uma garrafa recarregável. Garrafas de água usadas enchem nossos aterros e retêm água valiosa.",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "É importante que todos façamos nossa parte para usar menos água. Clique neste aplicativo para obter dicas sobre ideias de conservação. ",
+          "Next": "Próximo",
+          "Spanish": "Espanhol",
+          "Water Conservation Tips": "Dicas de conservação de água"
+        },
+        "csd-apps for good-3": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "4-Square = 4 Times the Fun": "4 quadrados = 4 vezes mais diversão",
+          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "Você queria aprender a jogar o divertido jogo social de 4 quadrados, mas não sabia por onde começar? Este é o aplicativo para você! ",
+          "How many players do you need to play 4-Square? Click to find out!": "Quantos jogadores você precisa para jogar 4-Square? Clique para descobrir!",
+          "More Info": "Mais informações",
+          "Start Again": "Comece de novo",
+          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Para jogar 4-square, cada jogador fica perto de uma das quatro caixas marcadas no chão. As caixas são ordenadas de 1 a 4, sendo uma a caixa “superior”. O jogador na caixa 1 começa a jogar quicando a bola em seu quadrado e depois dando um tapa ou batendo a bola em outro quadrado. A bola não deve tocar na caixa original do jogador novamente após o salto inicial. Se a bola quicar no quadrado de um jogador, ele deve então bater a bola em outro quadrado antes que a bola salte novamente. Eles só podem bater na bola uma vez. Mas e se atingir a linha, você pode perguntar? Existem muitas regras diferentes sobre o que fazer se a bola atingir a linha - você deve concordar com seus amigos se as linhas estão dentro ou fora. Se você acertar a bola fora dos limites ou ela saltar duas vezes no seu quadrado, você está fora. Todos passam para a próxima caixa mais alta disponível (o objetivo é ficar na primeira caixa o maior tempo possível). Se você estiver fora, você vai para o final da linha e um novo jogador ocupa a vaga vazia na caixa 4. "
+        },
+        "csd-apps for good-3_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "4-Square = 4 Times the Fun": "4 quadrados = 4 vezes mais diversão",
+          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "Você queria aprender a jogar o divertido jogo social de 4 quadrados, mas não sabia por onde começar? Este é o aplicativo para você! ",
+          "How many players do you need to play 4-Square? Click to find out!": "Quantos jogadores você precisa para jogar 4-Square? Clique para descobrir!",
+          "More Info": "Mais informações",
+          "Start Again": "Comece de novo",
+          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Para jogar 4-square, cada jogador fica perto de uma das quatro caixas marcadas no chão. As caixas são ordenadas de 1 a 4, sendo uma a caixa “superior”. O jogador na caixa 1 começa a jogar quicando a bola em seu quadrado e depois dando um tapa ou batendo a bola em outro quadrado. A bola não deve tocar na caixa original do jogador novamente após o salto inicial. Se a bola quicar no quadrado de um jogador, ele deve então bater a bola em outro quadrado antes que a bola salte novamente. Eles só podem bater na bola uma vez. Mas e se atingir a linha, você pode perguntar? Existem muitas regras diferentes sobre o que fazer se a bola atingir a linha - você deve concordar com seus amigos se as linhas estão dentro ou fora. Se você acertar a bola fora dos limites ou ela saltar duas vezes no seu quadrado, você está fora. Todos passam para a próxima caixa mais alta disponível (o objetivo é ficar na primeira caixa o maior tempo possível). Se você estiver fora, você vai para o final da linha e um novo jogador ocupa a vaga vazia na caixa 4. "
+        },
+        "csd-explore ui-1": {
+          "$15": "$15",
+          "Breakfast": "Café da manhã",
+          "Chinese": "Chinês",
+          "Dollars per person": "Dólares por pessoa",
+          "Italian": "Italiano",
+          "Type of Restaurant": "Tipo de restaurante",
+          "Where Should I Eat?": "Onde devo comer?"
+        },
+        "csd-explore ui-1_2022": {
+          "$15": "$15",
+          "Breakfast": "Café da manhã",
+          "Chinese": "Chinês",
+          "Dollars per person": "Dólares por pessoa",
+          "Italian": "Italiano",
+          "Type of Restaurant": "Tipo de restaurante",
+          "Where Should I Eat?": "Onde devo comer?"
+        },
+        "csd-explore ui-2": {
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Outra forma de economizar água é tomar banhos mais curtos. Tente ajustar um cronômetro para cinco minutos!",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Escolha a garrafa de água correta. Em seguida, clique na torneira para encher. ",
+          "Click on the timer": "Clique no cronômetro",
+          "English": "Inglês",
+          "Home": "Início",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Em vez de comprar garrafas de água descartáveis, use uma garrafa recarregável. Garrafas de água usadas enchem nossos aterros e retêm água valiosa.",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "É importante que todos façamos nossa parte para usar menos água. Clique neste aplicativo para obter dicas sobre ideias de conservação. ",
+          "Next": "Próximo",
+          "Spanish": "Espanhol",
+          "Water Conservation Tips": "Dicas de conservação de água"
+        },
+        "csd-explore ui-2_2022": {
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Outra forma de economizar água é tomar banhos mais curtos. Tente ajustar um cronômetro para cinco minutos!",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "Escolha a garrafa de água correta. Em seguida, clique na torneira para encher. ",
+          "Click on the timer": "Clique no cronômetro",
+          "English": "Inglês",
+          "Home": "Início",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "Em vez de comprar garrafas de água descartáveis, use uma garrafa recarregável. Garrafas de água usadas enchem nossos aterros e retêm água valiosa.",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "É importante que todos façamos nossa parte para usar menos água. Clique neste aplicativo para obter dicas sobre ideias de conservação. ",
+          "Next": "Próximo",
+          "Spanish": "Espanhol",
+          "Water Conservation Tips": "Dicas de conservação de água"
+        },
+        "csd-explore ui-3": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "April": "Abril",
+          "August": "Agosto",
+          "Choose your Birthday!": "Escolha seu aniversário!",
+          "December": "Dezembro",
+          "February": "Fevereiro",
+          "Find out if it's your birthday!": "Descubra se é seu aniversário!",
+          "It was already your birthday this year!!": "Esse ano já foi seu aniversário!!",
+          "It's not your birthday yet this year!": "Este ano ainda não é seu aniversário!",
+          "It's your birthday!": "É seu aniversário!",
+          "January": "Janeiro",
+          "July": "Julho",
+          "June": "Junho",
+          "March": "Março",
+          "May": "Maio",
+          "November": "Novembro",
+          "October": "Outubro",
+          "September": "Setembro"
+        },
+        "csd-explore ui-3_2022": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "April": "Abril",
+          "August": "Agosto",
+          "Choose your Birthday!": "Escolha seu aniversário!",
+          "December": "Dezembro",
+          "February": "Fevereiro",
+          "Find out if it's your birthday!": "Descubra se é seu aniversário!",
+          "It was already your birthday this year!!": "Esse ano já foi seu aniversário!!",
+          "It's not your birthday yet this year!": "Este ano ainda não é seu aniversário!",
+          "It's your birthday!": "É seu aniversário!",
+          "January": "Janeiro",
+          "July": "Julho",
+          "June": "Junho",
+          "March": "Março",
+          "May": "Maio",
+          "November": "Novembro",
+          "October": "Outubro",
+          "September": "Setembro"
+        },
+        "csd-explore ui-4": {
+          "Correct!": "Correto!",
+          "Sorry!": "Desculpe!"
+        },
+        "csd-explore ui-4_2022": {
+          "Correct!": "Correto!",
+          "Sorry!": "Desculpe!"
+        },
+        "csd-explore ui-5": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "April": "Abril",
+          "August": "Agosto",
+          "December": "Dezembro",
+          "February": "Fevereiro",
+          "Friday": "Sexta-feira",
+          "Gabriel Garcia Marquez": "Gabriel García Márquez",
+          "January": "Janeiro",
+          "July": "Julho",
+          "June": "Junho",
+          "Khaled Hosseini": "Khaled Hosseini",
+          "Langston Hughes": "Langston Hughes",
+          "March": "Março",
+          "Margaret Atwood": "Margaret Atwood",
+          "May": "Maio",
+          "Monday": "Segunda-feira",
+          "N. Scott Momaday": "N. Scott Momaday",
+          "November": "Novembro",
+          "October": "Outubro",
+          "Public Domain": "Domínio público",
+          "Public Domain Image": "Imagem de domínio público",
+          "Saturday": "Sábado",
+          "September": "Setembro",
+          "Sunday": "Domingo",
+          "Thursday": "Quinta-feira",
+          "Toni Morrison": "Toni Morrison",
+          "Tuesday": "Terça-feira",
+          "Wednesday": "Quarta-feira",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "imagem de John Mathew Smith, CC-BY-SA 2.0",
+          "image by Jose Lara, CC-BY-SA": "imagem de Jose Lara, CC-BY-SA",
+          "image by Vanwaffle, CC BY-SA 3.0": "imagem de Vanwaffle, CC BY-SA 3.0",
+          "just like": "assim como",
+          "public domain image": "imagem de domínio público"
+        },
+        "csd-explore ui-5_2022": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "April": "Abril",
+          "August": "Agosto",
+          "December": "Dezembro",
+          "February": "Fevereiro",
+          "Friday": "Sexta-feira",
+          "Gabriel Garcia Marquez": "Gabriel García Márquez",
+          "January": "Janeiro",
+          "July": "Julho",
+          "June": "Junho",
+          "Khaled Hosseini": "Khaled Hosseini",
+          "Langston Hughes": "Langston Hughes",
+          "March": "Março",
+          "Margaret Atwood": "Margaret Atwood",
+          "May": "Maio",
+          "Monday": "Segunda-feira",
+          "N. Scott Momaday": "N. Scott Momaday",
+          "November": "Novembro",
+          "October": "Outubro",
+          "Public Domain": "Domínio público",
+          "Public Domain Image": "Imagem de domínio público",
+          "Saturday": "Sábado",
+          "September": "Setembro",
+          "Sunday": "Domingo",
+          "Thursday": "Quinta-feira",
+          "Toni Morrison": "Toni Morrison",
+          "Tuesday": "Terça-feira",
+          "Wednesday": "Quarta-feira",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "imagem de John Mathew Smith, CC-BY-SA 2.0",
+          "image by Jose Lara, CC-BY-SA": "imagem de Jose Lara, CC-BY-SA",
+          "image by Vanwaffle, CC BY-SA 3.0": "imagem de Vanwaffle, CC BY-SA 3.0",
+          "just like": "assim como",
+          "public domain image": "imagem de domínio público"
+        },
+        "csd-explore ui-6": {
+          "Learning to Drive": "Aprendendo a dirigir",
+          "Mad Libs!": "Libs loucos!",
+          "Next": "Próximo",
+          "Noun": "Substantivo",
+          "Play again": "Jogue novamente",
+          "Plural Noun": "Substantivo plural",
+          "Song": "Canção",
+          "Verb": "Verbo"
+        },
+        "csd-explore ui-6_2022": {
+          "Learning to Drive": "Aprendendo a dirigir",
+          "Mad Libs!": "Libs loucos!",
+          "Next": "Próximo",
+          "Noun": "Substantivo",
+          "Play again": "Jogue novamente",
+          "Plural Noun": "Substantivo plural",
+          "Song": "Canção",
+          "Verb": "Verbo"
+        },
+        "ml-L2 supervised - green glass door-2021": {
+          "Accepted": "Aceito",
+          "Check Your Word": "Verifique sua palavra",
+          "Decision:": "Decisão",
+          "Green Glass Door": "Porta de vidro verde",
+          "I'm Ready To Try Myself!": "Estou pronto para tentar!",
+          "In the next screen, a wise wizard will show us how to play the game": "Na próxima tela, um mago sábio nos mostrará como jogar o jogo",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "Neste Jogo, estaremos tentando aprender quais palavras são aceitas na Porta de Vidro Verde",
+          "New Example Word": "Novo exemplo de palavra",
+          "On this screen, the wizard can show you example words. See if you notice any patterns": "Nessa tela, o mago mostrará exemplos de palavras. Veja se você percebe algum padrão",
+          "Rejected": "Rejeitado",
+          "See All Results": "Ver todos os resultados",
+          "Some words are accepted and others are rejected": "Algumas palavras são aceitas e outras são rejeitadas",
+          "Start Playing": "Comece a jogar",
+          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "Então teremos a chance de jogar e adivinhar quais palavras são aceitas ou rejeitadas pela porta",
+          "Word:": "Palavra:"
+        },
+        "ml-L2 supervised - green glass door_2022": {
+          "Accepted": "Aceito",
+          "Check Your Word": "Verifique sua palavra",
+          "Decision:": "Decisão",
+          "Green Glass Door": "Porta de vidro verde",
+          "I'm Ready To Try Myself!": "Estou pronto para tentar!",
+          "In the next screen, a wise wizard will show us how to play the game": "Na próxima tela, um mago sábio nos mostrará como jogar o jogo",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "Neste Jogo, estaremos tentando aprender quais palavras são aceitas na Porta de Vidro Verde",
+          "New Example Word": "Novo exemplo de palavra",
+          "On this screen, the wizard can show you example words. See if you notice any patterns": "Nessa tela, o mago mostrará exemplos de palavras. Veja se você percebe algum padrão",
+          "Rejected": "Rejeitado",
+          "See All Results": "Ver todos os resultados",
+          "Some words are accepted and others are rejected": "Algumas palavras são aceitas e outras são rejeitadas",
+          "Start Playing": "Comece a jogar",
+          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "Então teremos a chance de jogar e adivinhar quais palavras são aceitas ou rejeitadas pela porta",
+          "Word:": "Palavra:"
+        },
+        "ml-L2 unsupervised - 1-2021": {
+          "Next": "Próximo"
+        },
+        "ml-L2 unsupervised - 1_2022": {
+          "Next": "Próximo"
+        },
+        "ml-customize-raspado-2021": {
+          "Predict": "Previsão",
+          "Raspado Recommender": "Recomendador Raspado",
+          "no": "não",
+          "yes": "sim"
+        },
+        "ml-customize-raspado_2022": {
+          "Predict": "Previsão",
+          "Raspado Recommender": "Recomendador Raspado",
+          "no": "não",
+          "yes": "sim"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "Continue": "Avançar",
+          "Loading...": "Carregando..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Avançar",
+          "Loading...": "Carregando..."
+        },
+        "ml-intro app lab-book recommender demo-2021": {
+          "Predict": "Previsão",
+          "Silly": "Bobo"
+        },
+        "ml-intro app lab-book recommender demo_2022": {
+          "Predict": "Previsão",
+          "Silly": "Bobo"
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "A": "A",
+          "W": "O",
+          "head": "cabeça",
+          "no": "não",
+          "yes": "sim"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "A": "A",
+          "W": "O",
+          "head": "cabeça",
+          "no": "não",
+          "yes": "sim"
+        },
+        "ml-model cards-book recommender model card": {
+          "Predict": "Previsão",
+          "Silly": "Bobo"
+        },
+        "ml-model cards-book recommender model card_2022": {
+          "Predict": "Previsão",
+          "Silly": "Bobo"
+        },
+        "ml-models in applab-choice if quotes": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Previsão"
+        },
+        "ml-models in applab-choice if quotes_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Previsão"
+        },
+        "ml-models in applab-choice if wrong place": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Previsão"
+        },
+        "ml-models in applab-choice if wrong place_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Previsão"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Voltar",
+          "Predict": "Previsão"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Voltar",
+          "Predict": "Previsão"
+        },
+        "ml-models in applab-choice predict typos": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Previsão"
+        },
+        "ml-models in applab-choice predict typos_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Previsão"
+        },
+        "ml-models in applab-zoo assessment": {
+          "B": "B",
+          "No": "Não",
+          "Predict": "Previsão",
+          "Yes": "Sim"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "B": "B",
+          "No": "Não",
+          "Predict": "Previsão",
+          "Yes": "Sim"
+        },
+        "ml-models in applab-zoo model embed": {
+          "No": "Não",
+          "Predict": "Previsão",
+          "Yes": "Sim"
+        },
+        "ml-models in applab-zoo model embed_2022": {
+          "No": "Não",
+          "Predict": "Previsão",
+          "Yes": "Sim"
+        },
+        "ml-models-shoes decision tree-2021": {
+          "Improved Shoe Recommender": "Recomendador de calçado aprimorado",
+          "Sports": "Esportes"
+        },
+        "ml-models-shoes decision tree_2022": {
+          "Improved Shoe Recommender": "Recomendador de calçado aprimorado",
+          "Sports": "Esportes"
+        },
+        "ml-models-shoes points-2021": {
+          "Ultimate Shoe Recommender": "Recomendador definitivo de calçado"
+        },
+        "ml-models-shoes points_2022": {
+          "Ultimate Shoe Recommender": "Recomendador definitivo de calçado"
+        },
+        "ml-models-shoes random-2021": {
+          "Shoe Recommender": "Recomendador de sapato"
+        },
+        "ml-models-shoes random_2022": {
+          "Shoe Recommender": "Recomendador de sapato"
+        },
+        "ml-use model card-example3A-2021": {
+          "Driver Alert System": "Sistema de alerta de motorista",
+          "Predict": "Previsão",
+          "cloudy": "nublado",
+          "dusk": "Crepúsculo",
+          "night": "noite",
+          "rain": "chuva",
+          "snow": "neve"
+        },
+        "ml-use model card-example3A_2022": {
+          "Driver Alert System": "Sistema de alerta de motorista",
+          "Predict": "Previsão",
+          "cloudy": "nublado",
+          "dusk": "Crepúsculo",
+          "night": "noite",
+          "rain": "chuva",
+          "snow": "neve"
         }
       }
     }

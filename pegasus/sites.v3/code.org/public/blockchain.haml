@@ -10,7 +10,7 @@ theme: responsive_full_width
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
       %h1{style: "color: white"}=hoc_s(:blockchain_hero_heading)
-      %p{style: "color: white"}=hoc_s(:blockchain_hero_desc)
+      %p.body-one{style: "color: white"}=hoc_s(:blockchain_hero_desc)
     %figure
       %img{src: "/images/banners/blockchain-laptop-silver.png", alt: ""}
     .clear
@@ -30,27 +30,13 @@ theme: responsive_full_width
       %img{src: "/images/blockchain-works-logo.png", alt: "", style: "width: 100%"}
     .clear
     .video-series
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/MjibPL4tGqo", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_01)}
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/10wYLCnDHao", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_02)}
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/It_Ivgm5wQA", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_03)}
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/3EwkfUz_BPs", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_04)}
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/d9rKkk3oVdY", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_05)}
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/WzxbwEQRJPo", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_06)}
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/C3C_JfG8cNg", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_07)}
+      = view :"blockchain/blockchain_vid_01_intro"
+      = view :"blockchain/blockchain_vid_02_why"
+      = view :"blockchain/blockchain_vid_03_hood"
+      = view :"blockchain/blockchain_vid_04_beyond"
+      = view :"blockchain/blockchain_vid_05_marketplace"
+      = view :"blockchain/blockchain_vid_06_scam"
+      = view :"blockchain/blockchain_vid_07_impact"
 
 = view :section_divider_line
 

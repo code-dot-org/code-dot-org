@@ -67,19 +67,19 @@ uz:
         csd-2023:
           title: Informatika kashfiyotlari
     resources:
-      curriculum/csd/2020:
-        name: Curriculum
-      teacher_forum/csd/2020:
-        name: O‘qituvchilar forumi
       curriculum/csd/2017:
         name: Curriculum
       teacher_forum_6/csd/2017:
+        name: O‘qituvchilar forumi
+      curriculum/csd/2018:
+        name: Curriculum
+      teacher_forum_6/csd/2018:
         name: O‘qituvchilar forumi
       curriculum/csd/2019:
         name: Curriculum
       teacher_forum/csd/2019:
         name: O‘qituvchilar forumi
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Curriculum
-      teacher_forum_6/csd/2018:
+      teacher_forum/csd/2020:
         name: O‘qituvchilar forumi

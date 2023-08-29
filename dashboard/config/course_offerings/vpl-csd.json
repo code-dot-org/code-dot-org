@@ -1,6 +1,6 @@
 {
   "key": "vpl-csd",
-  "display_name": "CS Discoveries Virtual Professional Learning",
+  "display_name": "CS Discoveries Virtual Professional Learning 23-24",
   "category": "pl_virtual",
   "is_featured": false,
   "assignable": true,
@@ -13,8 +13,8 @@
   "school_subject": null,
   "device_compatibility": null,
   "description": null,
-  "self_paced_professional_learning": null,
   "professional_learning_program": null,
   "video": null,
-  "published_date": null
+  "published_date": null,
+  "self_paced_pl_course_offering_id": null
 }

@@ -5,11 +5,11 @@
         "CT": {
           "description": "Algoritmiska domāšana"
         },
-        "L": {
-          "description": "Valoda"
-        },
         "F": {
           "description": "Funkcijas"
+        },
+        "L": {
+          "description": "Valoda"
         }
       }
     }

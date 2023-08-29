@@ -19,10 +19,10 @@
 #  school_subject                   :string(255)
 #  device_compatibility             :string(255)
 #  description                      :string(255)
-#  self_paced_professional_learning :string(255)
 #  professional_learning_program    :string(255)
 #  video                            :string(255)
 #  published_date                   :datetime
+#  self_paced_pl_course_offering_id :integer
 #
 # Indexes
 #
@@ -33,10 +33,11 @@ class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
 
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
+  belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
-  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}
-  validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}
+  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
+  validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
   validate :grade_levels_format
 
   KEY_CHAR_RE = /[a-z0-9\-]/
@@ -48,6 +49,11 @@ class CourseOffering < ApplicationRecord
   ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
   HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
+  PROFESSIONAL_LEARNING_PROGRAM_PATHS = {
+    'K5 Workshops': 'code.org/professional-development-workshops',
+    '6-12 Workshops': 'code.org/apply',
+  }
+  validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}, allow_nil: true
 
   DURATION_LABEL_TO_MINUTES_CAP = {
     lesson: 90,
@@ -57,7 +63,6 @@ class CourseOffering < ApplicationRecord
     semester: 5000,
     school_year: 525600,
   }
-
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
   #
@@ -194,6 +199,16 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
+  def self.professional_learning_and_self_paced_course_offerings
+    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}.map do |co|
+      {
+        id: co.id,
+        key: co.key,
+        display_name: co.display_name,
+      }
+    end
+  end
+
   def self.single_unit_course_offerings_containing_units_info(unit_ids)
     single_unit_course_offerings_containing_units(unit_ids).map {|co| co.summarize_for_unit_selector(unit_ids)}
   end
@@ -279,17 +294,17 @@ class CourseOffering < ApplicationRecord
       school_subject: school_subject,
       device_compatibility: device_compatibility,
       description: description,
-      self_paced_professional_learning: self_paced_professional_learning,
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
     }
   end
 
   def summarize_for_catalog(locale_code = 'en-us')
     {
       key: key,
-      display_name: display_name,
+      display_name: localized_display_name,
       display_name_with_latest_year: display_name_with_latest_year(locale_code),
       grade_levels: grade_levels,
       duration: duration,
@@ -303,7 +318,12 @@ class CourseOffering < ApplicationRecord
       course_offering_id: id,
       script_id: script_id,
       is_standalone_unit: standalone_unit?,
-      is_translated: translated?(locale_code)
+      is_translated: translated?(locale_code),
+      description: description,
+      professional_learning_program: professional_learning_program,
+      video: video,
+      published_date: published_date,
+      self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
     }
   end
 
@@ -323,10 +343,10 @@ class CourseOffering < ApplicationRecord
       school_subject: school_subject,
       device_compatibility: device_compatibility,
       description: description,
-      self_paced_professional_learning: self_paced_professional_learning,
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
     }
   end
 
@@ -382,6 +402,10 @@ class CourseOffering < ApplicationRecord
 
   def get_participant_audience
     course_versions&.first&.content_root&.participant_audience
+  end
+
+  def instruction_type
+    course_versions&.first&.content_root&.instruction_type
   end
 
   def grade_levels_list

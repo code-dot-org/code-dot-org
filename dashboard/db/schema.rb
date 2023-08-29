@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_10_182706) do
+ActiveRecord::Schema.define(version: 2023_07_20_231439) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -410,10 +410,10 @@ ActiveRecord::Schema.define(version: 2023_07_10_182706) do
     t.string "school_subject"
     t.string "device_compatibility"
     t.string "description"
-    t.string "self_paced_professional_learning"
     t.string "professional_learning_program"
     t.string "video"
     t.datetime "published_date"
+    t.integer "self_paced_pl_course_offering_id"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
@@ -635,6 +635,28 @@ ActiveRecord::Schema.define(version: 2023_07_10_182706) do
     t.text "context"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "learning_goal_evidence_levels", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "learning_goal_id", null: false
+    t.integer "understanding", null: false
+    t.text "teacher_description"
+    t.text "ai_prompt"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["learning_goal_id", "understanding"], name: "index_learning_goal_evidence_levels_on_lg_id_and_understanding", unique: true
+  end
+
+  create_table "learning_goals", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.string "key", null: false
+    t.integer "position"
+    t.integer "rubric_id", null: false
+    t.string "learning_goal"
+    t.boolean "ai_enabled"
+    t.text "tips"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["rubric_id", "key"], name: "index_learning_goals_on_rubric_id_and_key", unique: true
   end
 
   create_table "lesson_activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -1594,6 +1616,14 @@ ActiveRecord::Schema.define(version: 2023_07_10_182706) do
     t.integer "course_version_id", null: false
     t.index ["course_version_id", "key"], name: "index_resources_on_course_version_id_and_key", unique: true
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
+  end
+
+  create_table "rubrics", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "lesson_id", null: false
+    t.integer "level_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["lesson_id", "level_id"], name: "index_rubrics_on_lesson_id_and_level_id", unique: true
   end
 
   create_table "school_districts", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|

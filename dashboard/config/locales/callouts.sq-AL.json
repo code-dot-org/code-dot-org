@@ -2,6 +2,12 @@
   "sq-AL": {
     "data": {
       "callouts": {
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "A u be ekrani ne ngjyre te gjelber? Nese po, shtypni 'Finish'. Nese jo, shtypni 'Reset', ndryshoni kodin, dhe shtypni 'Run' perseri."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Ju jeni tani në Modalitetin e Dizajnit."
+        },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Fut numrin e herëve që zombi duhet të lëvizë për të bërë një rreth të plotë"
         },
@@ -38,183 +44,6 @@
         "Course 4 Play Lab Vars 1": {
           "arrows_move_actor": "Përdor shigjetat për të lëvizur aktorin"
         },
-        "Infinity_move_collide": {
-          "Infinity_move_collide_callout": "Vendos një tingull kur të ndodhi ky event."
-        },
-        "Infinity_move_directions": {
-          "Infinity_move_directions_callout": "Cili bllok do e bëjë Baymax-in të lëvizi sipër kur shigjeta e sipërme është e shtypur?",
-          "Infinity_move_directions_callout_arrow": "Përdor këto shigjeta për orientim"
-        },
-        "Infinity_move_right": {
-          "Infinity_move_right_runbutton": "Shto lëviz bllokun këtu"
-        },
-        "Infinity_repeat": {
-          "Infinity_repeat_callout": "Vendos bllogjet e Lëvizjes këtu brënda"
-        },
-        "NEW Course 4 Artist Functions 7": {
-          "edit_function": "Kliko këtu për të redaktuar funksionin tënd."
-        },
-        "NEW Course 4 Artist Functions 8": {
-          "edit_function": "Kliko këtu për të redaktuar funksionin tënd."
-        },
-        "NEW Course 4 Artist Params 10": {
-          "create_function": "Kliko këtu për të hapur \"Funksionet\", më pas kliko butonin \"Krijo një Funksion\"."
-        },
-        "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Kliko redakto për të shtuar një parametër në funksionin tënd",
-          "add_and_drag_parameter": "Shkruaj emrin e parametrit tënd këtu, kliko shto, dhe më pas zhvendos atë në përcaktimin e funksionit tënd"
-        },
-        "NEW Course 4 Artist Vars 6": {
-          "place_length_variable": "Zhvendos ndryshorin e gjatësisë këtu për të rivendosur pikëpyetjet"
-        },
-        "NEW Course 4 Bee For Loops 5": {
-          "actions_category": "Shiriti i mjeteve mori një pamje të re! Blloqet \"Actions\" janë këtu tani."
-        },
-        "New Frozen Project": {
-          "snowflake_dropdown": "Përdor këtë listë për të krijuar flokë të ndryshme dëbore!"
-        },
-        "Overworld Chop Trees": {
-          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
-        },
-        "Overworld Chop Trees_2019": {
-          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
-        },
-        "Overworld Chop Trees_2020": {
-          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
-        },
-        "Overworld House Frame Chosen": {
-          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
-        },
-        "Overworld House Frame Chosen_2019": {
-          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
-        },
-        "Overworld House Frame Chosen_2020": {
-          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
-        },
-        "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd",
-          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër"
-        },
-        "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd",
-          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër"
-        },
-        "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd",
-          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër"
-        },
-        "Overworld Place Wall": {
-          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
-        },
-        "Overworld Place Wall_2019": {
-          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
-        },
-        "Overworld Place Wall_2020": {
-          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
-        },
-        "Underground Avoiding Lava": {
-          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
-        },
-        "Underground Avoiding Lava_2019": {
-          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
-        },
-        "Underground Avoiding Lava_2020": {
-          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
-        },
-        "Underground Iron": {
-          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
-        },
-        "Underground Iron_2019": {
-          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
-        },
-        "Underground Iron_2020": {
-          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
-        },
-        "frozen circle function with parameter": {
-          "frozen_circle_function_with_parameter_circle": "Përdor bllokun \"create a circle\" dhe ndrysho madhësinë."
-        },
-        "frozen cross": {
-          "repeat_blocks_1": "(1) Përdor këtë bllok dhe vendose rreth blloqeve gri në vendin tënd të punës",
-          "repeat_blocks_2": "(2) Lëviz bllokun \"Repeat\" këtu dhe vendosi blloqet gri brenda"
-        },
-        "frozen cross rotate": {
-          "replace_questions_degree": "Përdor listën drop-down për të zëvendësuar \"???\" me një numër"
-        },
-        "frozen diamond": {
-          "frozen_diamond_repeat": "Përdor bllokun përsërit për të krijuar këtë formë."
-        },
-        "frozen diamond snowflake": {
-          "frozen_diamond_repeat": "Përdor bllokun përsërit për të krijuar këtë formë."
-        },
-        "frozen freeplay": {
-          "snowflake_dropdown": "Përdor këtë listë për të krijuar flokë të ndryshme dëbore!"
-        },
-        "frozen line": {
-          "move_elsa_forward": "Lëviz një bllok \"Move Forward\" dhe vendose poshtë bllokut \"When Run\" për ta bërë Elsën të ecë përpara",
-          "run": "Shtyp \"Run\" për të provuar programin tënd!"
-        },
-        "frozen perpendicular": {
-          "turn_elsa": "Përdor bllokun \"turn\" për ta bërë Elsën të kthehet. Numri në listën drop down përcakton sa herë kthehet Elsa"
-        },
-        "frozen snowflake branch": {
-          "frozen_snowflake_branch": "Përdor bllokun \"create a snowflake\""
-        },
-        "frozen square iterative": {
-          "frozen_create_square": "Bashko më shumë blloqe këtu për të krijuar një katror"
-        },
-        "frozen square loop": {
-          "replace_questions": "Përdor listën drop-down për të zëvendësuar \"???\" me një numër"
-        },
-        "frozen square loop 3x": {
-          "replace_questions": "Përdor listën drop-down për të zëvendësuar \"???\" me një numër"
-        },
-        "frozen square snowflake": {
-          "replace_questions": "Përdor listën drop-down për të zëvendësuar \"???\" me një numër"
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd",
-          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd",
-          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
-        },
-        "AppLab Intro 7 - Change Screen Color": {
-          "applab_hoc_finish": "A u be ekrani ne ngjyre te gjelber? Nese po, shtypni 'Finish'. Nese jo, shtypni 'Reset', ndryshoni kodin, dhe shtypni 'Run' perseri."
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-          "AppLabHoCFinal11": "Ju jeni tani në Modalitetin e Dizajnit."
-        },
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "Zgjidhni llojin e vallezuesit këtu."
         },
@@ -225,16 +54,16 @@
           "dance_callout_01": "Zgjidhni llojin e vallezuesit këtu."
         },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj.",
-          "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj."
+          "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj.",
+          "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj."
         },
         "CourseD_Dance_2020_022022": {
-          "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj.",
-          "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj."
+          "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj.",
+          "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj."
         },
         "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj.",
-          "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj."
+          "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj.",
+          "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj."
         },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Shtoni këtë bllok në programin tuaj!"
@@ -310,8 +139,8 @@
           "dance_callout_01": "Zgjidhni llojin e vallezuesit këtu."
         },
         "Dance_2019_02": {
-          "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj.",
-          "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj."
+          "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj.",
+          "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj."
         },
         "Dance_2019_04": {
           "dance_callout_02": "Shtoni këtë bllok në programin tuaj!"
@@ -362,6 +191,19 @@
         },
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "Ky udhëzim i vogël i tregon kompjuterit për të drejtuar copën BIG të kodit me të njëjtin emër në hapësirën e punës."
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "Vendos një tingull kur të ndodhi ky event."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "Cili bllok do e bëjë Baymax-in të lëvizi sipër kur shigjeta e sipërme është e shtypur?",
+          "Infinity_move_directions_callout_arrow": "Përdor këto shigjeta për orientim"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "Shto lëviz bllokun këtu"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "Vendos bllogjet e Lëvizjes këtu brënda"
         },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "Kur të jeni gati, goditni “Run” për të provuar programin tuaj."
@@ -429,8 +271,164 @@
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!  "
         },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "Kliko këtu për të redaktuar funksionin tënd."
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "Kliko këtu për të redaktuar funksionin tënd."
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "Kliko këtu për të hapur \"Funksionet\", më pas kliko butonin \"Krijo një Funksion\"."
+        },
+        "NEW Course 4 Artist Params 9": {
+          "add_and_drag_parameter": "Shkruaj emrin e parametrit tënd këtu, kliko shto, dhe më pas zhvendos atë në përcaktimin e funksionit tënd",
+          "edit_add_parameter": "Kliko redakto për të shtuar një parametër në funksionin tënd"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "Zhvendos ndryshorin e gjatësisë këtu për të rivendosur pikëpyetjet"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "Shiriti i mjeteve mori një pamje të re! Blloqet \"Actions\" janë këtu tani."
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "Përdor këtë listë për të krijuar flokë të ndryshme dëbore!"
+        },
         "New Sprite Lab Project": {
           "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
+        },
+        "Overworld Move to Sheep": {
+          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër",
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër",
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër",
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër",
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër",
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
+        },
+        "courseC_PlayLab_events82022": {
+          "courseC_PlayLab_events8_callout1": "Përdoreni këtë bllok kur prekin Waddles dhe Chomp!"
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Pasi të keni lidhur të gjitha blloqet, shtypni \"Ekzekuto\" për të nisur programin tuaj."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Kjo është kutia e veglave. Është vendi ku do të gjeni blloqe shtesë për të përfunduar enigmat tuaja."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Mund të tërheqësh blloqe shtesë te kutia e veglave për t'i hedhur ato larg.",
+          "courseC_maze_programming3_3": "Këto blloqe janë guri dhe nuk mund të hidhen larg."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Ky është kufiri juaj i bllokimit. Ai ju tregon se sa nga këto blloqe ju kanë mbetur për të përdorur."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Këto blloqe nuk kanë numra në to. Mund të përdorni sa të doni!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "Kjo është enigma juaj e parë sfiduese! Këto janë menduar të jenë të vështira dhe mund të kërkojnë disa përpjekje.",
+          "courseC_maze_programming7_2": "Këto blloqe janë guri dhe nuk mund të hidhen larg."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Këto blloqe nuk kanë numra në to. Ti mund të përdorësh aq shumë sa i dëshiron!"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Pas lidhjes së të gjitha blloqeve shtypni “Run” për të filluar programin tuaj."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Kjo është kutia e veglave. Është vendi ku do të gjeni blloqe shtesë për të përfunduar enigmat tuaja."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Mund të tërheqësh blloqe shtesë te kutia e veglave për t'i hedhur ato larg.",
+          "stone_block_2": "Blloqet hiri nuk mund të hidhen larg."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Këto blloqe nuk kanë numra në to. Ti mund të përdorësh aq shumë sa i dëshiron!"
         },
         "courseE_aboutme_22022": {
           "": "Kliko këtu për të shtuar kostume në projektin tuaj."
@@ -442,8 +440,49 @@
           "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
         },
         "coursee_helloworld_say": {
-          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. ",
-          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. "
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. ",
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. "
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "Përdor bllokun \"create a circle\" dhe ndrysho madhësinë."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) Përdor këtë bllok dhe vendose rreth blloqeve gri në vendin tënd të punës",
+          "repeat_blocks_2": "(2) Lëviz bllokun \"Repeat\" këtu dhe vendosi blloqet gri brenda"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "Përdor listën drop-down për të zëvendësuar \"???\" me një numër"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "Përdor bllokun përsërit për të krijuar këtë formë."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "Përdor bllokun përsërit për të krijuar këtë formë."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "Përdor këtë listë për të krijuar flokë të ndryshme dëbore!"
+        },
+        "frozen line": {
+          "move_elsa_forward": "Lëviz një bllok \"Move Forward\" dhe vendose poshtë bllokut \"When Run\" për ta bërë Elsën të ecë përpara",
+          "run": "Shtyp \"Run\" për të provuar programin tënd!"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "Përdor bllokun \"turn\" për ta bërë Elsën të kthehet. Numri në listën drop down përcakton sa herë kthehet Elsa"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "Përdor bllokun \"create a snowflake\""
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "Bashko më shumë blloqe këtu për të krijuar një katror"
+        },
+        "frozen square loop": {
+          "replace_questions": "Përdor listën drop-down për të zëvendësuar \"???\" me një numër"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "Përdor listën drop-down për të zëvendësuar \"???\" me një numër"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "Përdor listën drop-down për të zëvendësuar \"???\" me një numër"
         },
         "helloworld_animals_backgrounds": {
           "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
@@ -470,8 +509,8 @@
           "pin": "Pin"
         },
         "helloworld_animals_say": {
-          "hello_world_say": "Përdoreni këtë bllok për të bërë sprites te flasin.",
-          "hello_world_make_sprite": "Përdoreni këtë bllok për të krijuar një sprite."
+          "hello_world_make_sprite": "Përdoreni këtë bllok për të krijuar një sprite.",
+          "hello_world_say": "Përdoreni këtë bllok për të bërë sprites te flasin."
         },
         "helloworld_animals_sizes": {
           "hello_world_new": "Bllok i Ri!",
@@ -505,8 +544,8 @@
           "pin": "Pin"
         },
         "helloworld_emoji_say": {
-          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. ",
-          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. "
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. ",
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. "
         },
         "helloworld_emoji_sizes": {
           "hello_world_new": "Bllok i Ri!",
@@ -588,16 +627,16 @@
           "pin": "Pin"
         },
         "helloworld_food_say": {
-          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. ",
-          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. "
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. ",
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. "
         },
         "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. ",
-          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. "
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. ",
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. "
         },
         "helloworld_food_say_space-2022": {
-          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. ",
-          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. "
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. ",
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. "
         },
         "helloworld_food_sizes": {
           "hello_world_new": "Bllok i Ri!",
@@ -645,8 +684,8 @@
           "pin": "Pin"
         },
         "helloworld_retro_say": {
-          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. ",
-          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. "
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. ",
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. "
         },
         "helloworld_retro_sizes": {
           "hello_world_new": "Bllok i Ri!",
@@ -669,16 +708,16 @@
           "poetry_new_block": "Bllok i Ri!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Bllok i Ri!",
-          "poetry_music": "Bllok i Ri!"
+          "poetry_music": "Bllok i Ri!",
+          "poetry_sound": "Bllok i Ri!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Bllok i Ri!",
           "poetry_sprite_stops": "Bllok i Ri!"
         },
         "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "Bllok i Ri!",
-          "poetry_remove_sprite": "Bllok i Ri!"
+          "poetry_remove_sprite": "Bllok i Ri!",
+          "poetry_set_sprite": "Bllok i Ri!"
         }
       }
     }

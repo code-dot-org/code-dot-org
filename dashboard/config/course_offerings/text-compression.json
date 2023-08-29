@@ -12,9 +12,9 @@
   "cs_topic": "data",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
-  "description": null,
-  "self_paced_professional_learning": null,
+  "description": "Decode the compression puzzle! Shrink data, swap symbols, and uncover the secrets of lightning-fast info transfer. Let's compress and conquer!",
   "professional_learning_program": null,
-  "video": null,
-  "published_date": null
+  "video": "https://www.youtube-nocookie.com/embed/LCGkcn1f-ms/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=LCGkcn1f-ms&wmode=transparent",
+  "published_date": "2021-08-09 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": null
 }

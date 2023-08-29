@@ -9,7 +9,7 @@
     "encrypted": "false",
     "level_data": {
       "library": "happy",
-      "text": "Okay, you've got your beat going. A cool trick with Music Lab is that you can take a set of blocks and put them into your own block - in coding, this is called making a \"function\". You'll see that there's a \"bass\" function in your workspace. If you open the \"Functions\" category in the toolbox, you'll also see a new block called \"bass\".\n## Do This\n1. Drag this bass block into your code, and press \"Run\" to play the sounds in the \"bass\" function.\n2. Can you make a function that plays a beat?",
+      "text": "Okay, you've got your beat going. A cool trick with Music Lab is that you can take a set of blocks and put them into your own block - in coding, this is called making a \"function\". You'll see that there's a group of blocks inside a block called `bass `(#509919) in your workspace - that's a function! If you open the `Functions`(#999999) category in the toolbox, you'll find a new block called `bass`(#509919).\n## Do This\n1. Drag this block into your code, and press `Run`(#fca401) to play the sounds in the `bass`(#509919) function.\n2. Can you make a function that plays a beat?",
       "startSources": {
         "variables": [
           {
@@ -126,20 +126,25 @@
         }
       },
       "toolbox": {
-        "Play": [
-          "play_sound_at_current_location_simple2"
-        ],
-        "Control": [
-          "repeat_simple2"
-        ],
-        "Functions": [
-          "procedures_defnoreturn"
-        ]
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "repeat_simple2"
+          ],
+          "Functions": [
+            "procedures_defnoreturn"
+          ]
+        }
       },
       "validations": [
         {
           "conditions": [
-            {"name": "played_sounds_together", "value": 1}
+            {
+              "name": "played_sounds_together",
+              "value": 1
+            }
           ],
           "message": "Next, we'll put these two parts together!",
           "next": "true"
@@ -151,7 +156,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2023-06-21 00:04:55 +0000\",\"changed\":[\"published\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 00:06:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 00:07:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 00:10:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 00:13:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 00:15:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 22:44:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:01:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:05:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:06:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-06-21 00:04:55 +0000\",\"changed\":[\"published\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 00:06:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 00:07:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 00:10:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 00:13:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 00:15:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 22:44:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:01:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:05:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:06:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:11:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:14:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

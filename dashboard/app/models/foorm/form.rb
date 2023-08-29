@@ -81,9 +81,9 @@ class Foorm::Form < ApplicationRecord
     if write_to_file? && saved_changes?
       file_path = Rails.root.join("config/foorm/forms/#{name}.#{version}.json")
       file_directory = File.dirname(file_path)
-      unless Dir.exist?(file_directory)
-        FileUtils.mkdir_p(file_directory)
-      end
+
+      FileUtils.mkdir_p(file_directory)
+
       File.write(file_path, questions)
     end
   end
@@ -117,8 +117,8 @@ class Foorm::Form < ApplicationRecord
             question_name: element["name"]
           ).first
           unless library_question
-            raise InvalidFoormConfigurationError, "cannot find library item with library name #{element['library_name']},"\
-                                        " version: #{element['library_version']} and question name #{element['name']}."
+            raise InvalidFoormConfigurationError, "cannot find library item with library name #{element['library_name']}, " \
+                                        "version: #{element['library_version']} and question name #{element['name']}."
           end
           JSON.parse(library_question.question)
         else
@@ -190,17 +190,17 @@ class Foorm::Form < ApplicationRecord
   def self.validate_choices(choices, question_name)
     choice_values = Set.new
     choices.each do |choice|
-      if choice.class == Hash && choice.key?(:value) && choice.key?(:text)
+      if choice.instance_of?(Hash) && choice.key?(:value) && choice.key?(:text)
         if choice_values.include?(choice[:value])
           raise InvalidFoormConfigurationError, "Duplicate choice value #{choice[:value]} in question #{question_name}."
         end
         choice_values.add(choice[:value])
-      elsif choice.class == Hash
+      elsif choice.instance_of?(Hash)
         unless choice.key?(:value)
           error_msg = "Foorm configuration contains question '#{question_name}' without a  value for a choice. Choice text is '#{choice[:text]}'."
           raise InvalidFoormConfigurationError, error_msg
         end
-      elsif choice.class == String
+      elsif choice.instance_of?(String)
         error_msg = "Foorm configuration contains question '#{question_name}' without key-value choice. Choice is '#{choice}'."
         raise InvalidFoormConfigurationError,  error_msg
       end

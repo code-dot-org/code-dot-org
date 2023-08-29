@@ -1,83 +1,205 @@
 ---
 it:
   data:
-    game:
-      name:
-        Unplug1: Cos'è l'informatica
-        Maze: Il Labirinto
-        Multi: Materiale con Risposte Multiple
-        Unplug2: Pensiero computazionale
-        Unplug3: Programmazione su carta a quadretti
-        Artist: L'artista
-        Unplug4: Algoritmi
-        Artist2: L'artista 2
-        Unplug5: Funzioni
-        Farmer: La contadina
-        Unplug6: Istruzioni condizionali
-        Artist3: L'artista 3
-        Unplug7: Composizione di canzoni
-        Farmer2: La contadina 2
-        Unplug8: Astrazione
-        Artist4: L'artista 4
-        Unplug9: Programmazione a staffetta
-        Farmer3: La contadina 3
-        Unplug10: Internet
-        Artist5: L'artista 5
-        Unplug11: Conclusione
-        MazeEC: Il Labirinto
-        Bounce: Ping-Pong
-        Flappy: Flappy Bird
-        Jigsaw: Puzzle
-        MazeStep: Modalità "a passi" del Labirinto
-        Wordsearch: Ricerca di parole
-        Webapp: Sviluppo App
-        ArtistEC: L'artista
-        TextMatch: Esercizio di Verifica (Associazioni)
-        StudioEC: Laboratorio
-        Applab: Sviluppo App
-        NetSim: Simulatore di Internet
-        Custom: Artista
-        CustomStudio: Laboratorio
-        Gamelab: Sviluppo Giochi
-        Spritelab: Laboratorio dei Personaggi
-    trophy:
-      name:
-        Bronze: Bronzo
-        Silver: Argento
-        Gold: Oro
+    callout:
+      text:
+        Infinity_move_collide_callout: Riproduci un suono quando si verifica questo
+          evento.
+        Infinity_move_directions_callout: Quale blocco farà spostare Baymax verso
+          l'alto quando viene premuta la freccia verso l'alto?
+        Infinity_move_directions_callout_arrow: Usa le frecce per muovere il personaggio
+        Infinity_move_right_runbutton: Aggiungi qui il blocco "sposta il personaggio"
+        Infinity_repeat_callout: Aggiungi i blocchi "sposta" all'interno di questo
+          blocco di ripetizione
+        actions_category: La "cassetta degli attrezzi" ha un nuovo aspetto! I blocchi
+          "Azioni" ora sono qui.
+        add_and_drag_parameter: Scrivi qui il nome del tuo parametro, clicca su "Aggiungi",
+          e poi spostalo nella definizione della tua funzione
+        arrows_move_actor: Usa le frecce per muovere il personaggio
+        bee_for_loop: Scrivi qui la massima quantità di nettare che desideri l'ape
+          raccolga
+        category_explanation: Ci sono tutti i blocchi di prima, ma adesso sono organizzati
+          in categorie
+        change_here: Fai qui il tuo cambio
+        craft_callout_moveforward: Questo codice controlla se c'è lava, sai aggiungere
+          un comando per andare avanti?
+        craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
+        craft_callout_preplaced_house: Questo codice inizia la costruzione della tua
+          casa. Riesci a finirla tu?
+        craft_drag_block_callout: Prendi il blocco "vai avanti" e attaccalo sotto
+          l'altro blocco
+        craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
+        craft_run_button_callout: Clicca su "Esegui" per provare il tuo programma
+        craft_what_is_iron: Estrai il ferro!
+        create_function: Clicca qui per aprire il riquadro "Funzioni", quindi clicca
+          sul pulsante "Crea una funzione".
+        degrees_per_side: Dividi 360 per il numero di lati per ottenere la grandezza
+          di ogni angolo in gradi.
+        drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto
+          l'altro blocco qua sopra
+        draw_square_hint: 'Suggerimento: usa il ciclo del quadrato che hai appena
+          creato nell''esercizio precedente.'
+        edit_add_parameter: Clicca su "Modifica" per aggiungere un parametro alla
+          tua funzione
+        edit_draw_square: Usa questo pulsante per modificare la funzione e aggiungere
+          il ciclo.
+        edit_function: Clicca qui per modificare la tua funzione.
+        edit_get_nectar: Usa questo pulsante per modificare la funzione e cambiare
+          la direzione così che l'Ape possa girarsi e raggiungere il nettare.
+        fill_in_actor: Sostituisci a ??? il numero che corrisponde ad ogni personaggio
+          (1, 2, e 3)
+        frozen_circle_function_in_circle_turn: Non dimenticarti di girare dopo aver
+          disegnato ogni cerchio.
+        frozen_circle_function_with_parameter_circle: Usa il blocco "disegna un cerchio"
+          e modifica le dimensioni.
+        frozen_create_square: Attacca più blocchi qui per creare un quadrato
+        frozen_diamond_repeat: Usa il blocco di ripetizione per creare questa forma.
+        frozen_snowflake_branch: Usa il blocco "disegna un ramo di un fiocco di neve"
+        function_editor_draw_square: Questa è la definizione della tua funzione. Questi
+          blocchi verranno eseguiti ogni volta che si utilizza il blocco "disegna
+          un quadrato"
+        get_nectar: Usa il nuovo blocco "prendi il nettare".
+        gray_block_explanation: I blocchi grigi non possono essere eliminati. Riesci
+          lo stesso a risolvere l'esercizio?
+        house_hint: Va bene se il disegno non assomiglia ancora a una casa. Lo sistemeremo
+          nel prossimo esercizio.
+        if_bee_nectar: Usa il blocco "se" per decidere se l'ape deve prendere il nettare
+        if_else_bee: Usa il blocco "se-altrimenti" in modo che l'ape prenda il nettare
+          dal fiore, ma faccia il miele se non c'è un fiore
+        instructions_repeat_explanation: Le istruzioni di ogni esercizio sono ripetute
+          qua
+        jigsaw_click: Clicca su questo blocco!
+        length_parameter: Riesci a modificare questa funzione così che utilizzi il
+          parametro "lunghezza"?
+        logic_category: Apri il riquadro "Logica" per trovare il blocco "se-altrimenti".
+        move_elsa_forward: Per far muovere Elsa in avanti prendi il blocco "vai avanti"
+          ed attaccalo sotto il blocco "quando si clicca su 'Esegui' "
+        name_function: Scrivi qui il nome della tua funzione
+        place_counter_variable: Sposta la variabile "contatore" all'interno di questo
+          blocco
+        place_length_variable: Sposta qui la variabile "lunghezza" a rimpiazzare i
+          punti interrogativi
+        place_variable: Sposta la variabile all'interno di questo blocco
+        playlab_add_blocks: Aggiungi qui i tuoi blocchi
+        playlab_add_move: Aggiungi i blocchi  "sposta" all'interno di questo blocco
+          di ripetizione
+        playlab_add_score: Aggiungi qui i blocchi di punteggio
+        playlab_arrow_keys: Ricorda di usare questi per spostare la strega dopo aver
+          cliccato su "Esegui"
+        playlab_drag_say: Sposta qui il blocco "il personaggio dice ..." e scrivi
+          "ciao" al posto di "scrivi qua"
+        playlab_move_girl: Usa il blocco "sposta a destra" per spostare la tennista
+        playlab_play_sound: Aggiungi qui il blocco "riproduci un suono"
+        playlab_use_twice: Usa questo blocco due volte e ricordati di cambiare il
+          numero del personaggio
+        repeat: Inserisci i blocchi all'interno del ciclo per ripetere le istruzioni
+        repeat_blocks: Usa il blocco "ripeti" ed includi in esso gli altri blocchi
+          nell'area di lavoro
+        repeat_blocks_1: "(1) Usa questo blocco e mettilo intorno ai blocchi grigi
+          nell'area di lavoro"
+        repeat_blocks_2: (2) Sposta qui  il blocco "ripeti" e posiziona i blocchi
+          grigi al suo interno
+        repeat_full_circle: Scrivi il numero di volte che lo zombie si deve spostare
+          per creare un cerchio intero
+        replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
+          numero
+        replace_questions_degree: Clicca sull'elenco a discesa per sostituire "???"
+          con il valore corretto di gradi di cui girare
+        right_arrow_fireball: Usa la freccia a destra per lanciare le palle di fuoco
+        run: Clicca su "Esegui" per provare il tuo programma
+        set_length: Usa questo blocco per impostare la "lunghezza" al valore corretto.
+        set_sides: Utilizza questo blocco per impostare i "lati" al numero necessario
+          per completare l'esercizio.
+        set_sprite_image: Attacca un blocco "imposta l'immagine per il personaggio"
+          al blocco "quando la storia inizia" per abilitare un personaggio per questa
+          storia
+        set_variable: Sposta qui un blocco col numero per impostare la variabile
+        show_code_explanation: Clicca qui per vedere il codice del programma che stai
+          scrivendo
+        snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
+          di varie forme!
+        studio_say_text: Scrivi all'interno di queste virgolette quello che vuoi il
+          tuo personaggio dica
+        turn_elsa: Usa il blocco "gira a ..." per far girare Elsa. Il numero nell'elenco
+          a discesa determina di quanto Elsa deve girare
+        watch_again: Clicca qui per guardare di nuovo il video
+        which_equation: Quale equazione rende ogni lato più corto per le forme con
+          più lati?
+        write_draw_square_function: Sposta i blocchi dalla cassetta degli attrezzi
+          all'area di lavoro per disegnare un quadrato
+        write_draw_triangle_function: Sposta qui i blocchi, prendendoli dalla "cassetta
+          degli attrezzi", per disegnare un triangolo
     concept:
       description:
-        sequence: Sequenza
+        function: Funzioni
         if: Blocco "se"
         if_else: Blocco "se-altrimenti"
+        loop_for: Blocco "ripeti con contatore"
         loop_times: Blocco "ripeti ... volte"
         loop_until: Blocco "ripeti fino a che"
         loop_while: Blocco "mentre"
-        loop_for: Blocco "ripeti con contatore"
-        function: Funzioni
         parameters: Funzioni con parametri
+        sequence: Sequenza
+    game:
+      name:
+        Applab: Sviluppo App
+        Artist: L'artista
+        Artist2: L'artista 2
+        Artist3: L'artista 3
+        Artist4: L'artista 4
+        Artist5: L'artista 5
+        ArtistEC: L'artista
+        Bounce: Ping-Pong
+        Custom: Artista
+        CustomStudio: Laboratorio
+        Farmer: La contadina
+        Farmer2: La contadina 2
+        Farmer3: La contadina 3
+        Flappy: Flappy Bird
+        Gamelab: Sviluppo Giochi
+        Jigsaw: Puzzle
+        Maze: Il Labirinto
+        MazeEC: Il Labirinto
+        MazeStep: Modalità "a passi" del Labirinto
+        Multi: Materiale con Risposte Multiple
+        NetSim: Simulatore di Internet
+        Spritelab: Laboratorio dei Personaggi
+        StudioEC: Laboratorio
+        TextMatch: Esercizio di Verifica (Associazioni)
+        Unplug1: Cos'è l'informatica
+        Unplug10: Internet
+        Unplug11: Conclusione
+        Unplug2: Pensiero computazionale
+        Unplug3: Programmazione su carta a quadretti
+        Unplug4: Algoritmi
+        Unplug5: Funzioni
+        Unplug6: Istruzioni condizionali
+        Unplug7: Composizione di canzoni
+        Unplug8: Astrazione
+        Unplug9: Programmazione a staffetta
+        Webapp: Sviluppo App
+        Wordsearch: Ricerca di parole
     level:
       instructions:
-        maze_2_2: 'Puoi aiutarmi a catturare il maialino cattivo? Accosta due blocchi
-          "vai avanti" uno sopra l''altro e poi premi "Esegui" per aiutarmi a raggiungerlo. '
+        Custom_builder: Sposta i blocchi dalla cassetta degli attrezzi all'area di
+          lavoro per disegnare il livello che vuoi creare. Premi "Esegui" quando hai
+          fatto.
+        applab_ec_simple: Crea la tua App usando i blocchi nella cassetta degli attrezzi.
+        jigsaw_1: Clicca sul blocco
+        jigsaw_10: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_11: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_12: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_13: Questo è un esercizio di riepilogo -- Sistema i blocchi nell'ordine
+          corretto per formare l'immagine indicata.
+        jigsaw_2: Sposta il blocco verso la destinazione
+        jigsaw_3: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_4: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_5: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_6: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_7: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_8: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
+        jigsaw_9: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
         maze_2_1: Questo maialino mi fa arricciare le penne. Aiutami a prenderlo!
-        maze_2_2_5: Fammi fare il percorso per arrivare a quello sciocco maialino.
-          Evita la dinamite (TNT) o le mie piume salteranno in aria!
-        maze_2_3: Guidami verso quel cattivone verde! Fai attenzione alla dinamite
-          (TNT)
-        maze_2_4: Mantieni la calma e aiutami a trovare quel cattivone di un maialino.
-          Altrimenti potrei arrabbiarmi!
-        maze_2_5: C'è un modo per arrivare a quello sciocco maialino aggiungendo solo
-          due blocchi. Riesci a trovarlo?
-        maze_2_6: Prova a farmi arrivare all'intruso verde utilizzando solo tre blocchi.
-        maze_2_7: Aiutami a catturare il maialino cattivo utilizzando il minor numero
-          possibile di blocchi. Prova a utilizzare più di un blocco "ripeti ... volte".
-        maze_2_8: 'Quando un blocco è grigio, significa che non puoi eliminarlo. In
-          questo esercizio il blocco grigio "ripeti 3 volte" fa ripetere per 3 volte
-          le azioni che contiene. Prova ad inserire in esso questi blocchi: "vai avanti",
-          "vai avanti", "gira a destra".'
-        maze_2_9: Ok, prova ad usare il nuovo blocco "ripeti fino a che". Esso mi
-          farà "ripetere" le azioni "fino a che"  raggiungo quel fastidioso maialino.
         maze_2_10: 'Ok, un''ultima volta per fare pratica: riesci a risolvere questo
           esercizio aggiungendo solo 4 blocchi?'
         maze_2_11: Caro umano. Io zombie. Io affamato. Devo ... arrivare ... al girasole.
@@ -102,9 +224,325 @@ it:
         maze_2_19: Riesci ad aggiungere solo 3 blocchi per farmi uscire da un labirinto
           più complesso? Se lo fai correttamente, riuscirò a camminare lungo un percorso
           tortuoso di qualsiasi lunghezza.
+        maze_2_2: 'Puoi aiutarmi a catturare il maialino cattivo? Accosta due blocchi
+          "vai avanti" uno sopra l''altro e poi premi "Esegui" per aiutarmi a raggiungerlo. '
+        maze_2_2_5: Fammi fare il percorso per arrivare a quello sciocco maialino.
+          Evita la dinamite (TNT) o le mie piume salteranno in aria!
+        maze_2_3: Guidami verso quel cattivone verde! Fai attenzione alla dinamite
+          (TNT)
+        maze_2_4: Mantieni la calma e aiutami a trovare quel cattivone di un maialino.
+          Altrimenti potrei arrabbiarmi!
+        maze_2_5: C'è un modo per arrivare a quello sciocco maialino aggiungendo solo
+          due blocchi. Riesci a trovarlo?
+        maze_2_6: Prova a farmi arrivare all'intruso verde utilizzando solo tre blocchi.
+        maze_2_7: Aiutami a catturare il maialino cattivo utilizzando il minor numero
+          possibile di blocchi. Prova a utilizzare più di un blocco "ripeti ... volte".
+        maze_2_8: 'Quando un blocco è grigio, significa che non puoi eliminarlo. In
+          questo esercizio il blocco grigio "ripeti 3 volte" fa ripetere per 3 volte
+          le azioni che contiene. Prova ad inserire in esso questi blocchi: "vai avanti",
+          "vai avanti", "gira a destra".'
+        maze_2_9: Ok, prova ad usare il nuovo blocco "ripeti fino a che". Esso mi
+          farà "ripetere" le azioni "fino a che"  raggiungo quel fastidioso maialino.
+        maze_3_1: Ho bisogno di arrivare a quel maiale! Digita un paio di volte l'istruzione
+          "avanza()" in modo da riprendere le mie uova.
+        maze_3_2: Scrivi un programma che mi fa fare tutta la strada verso il maialino.
+        maze_3_3: Come posso arrivare al maiale? Assicurati che non vada a sbattere
+          contro la cassetta di dinamite (TNT)!
+        maze_3_4: Argh! Scrivi un programma che mi faccia girare alla larga della
+          dinamite (TNT) ed arrivare al maiale.
+        maze_karel_1_1: Ciao, io sono una contadina. Ho bisogno del tuo aiuto per
+          livellare il terreno nella mia fattoria, in modo che sia pronto per la semina.
+          Spostami verso i mucchi di terra e usa il blocco "rimuovi 1" per rimuoverli.
+        maze_karel_1_10: Sto lavorando di sera, fuori è buio e non posso dire quanto
+          grandi sono i mucchi. Questa volta non ho a disposizione le opzioni che
+          avevo prima sul blocco "mentre". Spostami lungo il campo e se c'è un mucchio
+          rimuovilo.
+        maze_karel_1_11: 'È ancora buio fuori. Spostami lungo il terreno. Se c''è
+          un mucchio, rimuovilo e se c''è una buca, riempila. Suggerimento: usa il
+          menù a discesa (▼) delle opzioni del blocco "se".'
+        maze_karel_1_2: Adesso, spostami verso la buca e riempila con 2 palate di
+          terra, usando il blocco "riempi 1".
+        maze_karel_1_3: Spostami verso il mucchio di terra e fammelo rimuovere usando
+          il minor numero possibile di blocchi.
+        maze_karel_1_4: 'Riesci ad aiutarmi a rimuovere tutti e quattro i mucchi di
+          terra? Suggerimento: prova ad usare un blocco "ripeti".'
+        maze_karel_1_5: 'Aiutami a riempire ognuna di queste buche con 5 palate di
+          terra. Suggerimento: puoi mettere un blocco "ripeti" all''interno del blocco
+          "mentre".'
+        maze_karel_1_6: 'Rimuovi tutti i mucchi di terra, usando il minor numero possibile
+          di blocchi. Nota: la nuova versione del blocco "mentre" permette di sapere
+          se sto sopra un mucchio.'
+        maze_karel_1_7: 'Wow, ho trovato una buca davvero profonda! Non so quante
+          palate di terra saranno necessarie per riempirla completamente. Riesci a
+          scrivere un programma che la riempie fino a quando il terreno è livellato?
+          Suggerimento: usa le opzioni nel menù a discesa (▼) del blocco "mentre".'
+        maze_karel_1_8: Aiutami a riempire la buca alla fine del mio terreno, utilizzando
+          il minor numero possibile di blocchi.
+        maze_karel_1_9: Fammi rimuovere tutti questi mucchi di terra. Prova ad usare
+          il minor numero possibile di blocchi. Ce la fai usando il blocco "mentre"
+          e senza usare il blocco "ripeti"?
+        maze_karel_2_1: 'Prova ad usare dei blocchi per rimuovere tutti i mucchi e
+          riempire tutte le buche del terreno. Prova ad usare dei blocchi di ripetizione
+          invece di usare molti blocchi. Suggerimento: si può mettere un blocco di
+          ripetizione all''interno di un altro blocco di ripetizione.'
+        maze_karel_2_10: Spostami attraverso il campo e usa queste due funzioni per
+          rimuovere tutti i mucchi e riempire tutte le buche.
+        maze_karel_2_2: Abbiamo definito il nuovo blocco "riempi 5", che ora è nella
+          categoria "Funzioni". Usalo per aiutarmi a riempire questa buca.
+        maze_karel_2_3: Usa il nuovo blocco "riempi 5" per farmi riempire tutte le
+          buche. E' stato inserito nella categoria "Funzioni" e devi quindi prenderlo
+          da là.
+        maze_karel_2_4: Definisci una nuova funzione che rimuove 7 palate di terra.
+          Quindi usala per scrivere un programma che rimuove tutti i mucchi.
+        maze_karel_2_5: Definisci una nuova funzione che rimuove 6 palate da un mucchio
+          di terra e usala per rimuovere tutti i mucchi.
+        maze_karel_2_6: Usa le due nuove funzioni, "rimuovi 8" e "riempi 8", per rimuovere
+          il mucchio e riempire la buca.
+        maze_karel_2_7: C'è una mucca nel mio campo! Scrivi una nuova funzione per
+          evitare la mucca e rimuovere il mucchio. Metti tutti i blocchi all'interno
+          della nuova funzione.
+        maze_karel_2_8: Usa questa nuova funzione, "evita la mucca e rimuovi 1", per
+          rimuovere tutti i mucchi.
+        maze_karel_2_9: Qui trovi una nuova funzione che rimuove una colonna verticale
+          di 4 mucchi di terra. Prova a metterla all'interno di un blocco di ripetizione,
+          in modo da rimuovere tutti i mucchi di terra usando pochi blocchi.
+        maze_karel_debug_function_1: Cosa dovresti cambiare in questo programma per
+          rimuovere tutti i mucchi?
+        maze_karel_debug_function_2: Riesci a correggere questo programma in modo
+          da livellare il mio terreno?
+        maze_karel_debug_function_3: 'Modifica questo programma in modo da rimuovere
+          tutti i mucchi sul mio terreno. '
+        maze_karel_debug_if: Aiuto! Correggi il programma in modo che il mio campo
+          sia completamente livellato.
+        maze_karel_debug_if_else: Correggi questo programma in modo da riempire le
+          buche e rimuovere tutti i mucchi.
+        maze_karel_debug_repeat: Correggi questo programma, in modo che il mio campo
+          sia livellato e pronto.
+        maze_karel_debug_seq_1: Benvenuto alla "correzione di errori" (<i>debugging</i>)!
+          Il mio codice non funziona correttamente. Riesci ad individuare il problema
+          e a risolverlo in modo da livellare il campo e prepararlo per la semina?
+        maze_karel_debug_seq_2: Che cosa c'è di sbagliato in questo programma? Come
+          dovresti sistemarlo in modo da riuscire a rimuovere quel mucchio?
+        maze_karel_debug_while: Come dovresti cambiare questo programma per riempire
+          la buca?
+        maze_wordsearch_k_1: |-
+          Spostami per scrivere le lettere della parola EAST.<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-11#VIDEO" target="_blank">Video doppiato in italiano</a>
+        maze_wordsearch_k_13: Spostami in una direzione e poi in un'altra per scrivere
+          le lettere della parola DEBUG.
+        maze_wordsearch_k_15: Spostami in una direzione e poi in un'altra per scrivere
+          le lettere della parola ABOVE.
+        maze_wordsearch_k_16: Spostami in una direzione e poi in un'altra per scrivere
+          le lettere della parola BELOW.
+        maze_wordsearch_k_2: Spostami per scrivere le lettere della parola SOUTH.
+        maze_wordsearch_k_20: Questo è un esercizio di riepilogo -- Spostami in una
+          direzione e poi in un'altra per scrivere le lettere della parola STORY.
+        maze_wordsearch_k_3: Spostami per scrivere le lettere della parola WEST.
+        maze_wordsearch_k_4: Spostami per scrivere le lettere della parola NORTH.
+        maze_wordsearch_k_6: Spostami a Est e poi a Sud per scrivere le lettere della
+          parola JUMP.
+        maze_wordsearch_k_9: Spostami in una direzione e poi in un'altra per scrivere
+          le lettere della parola CODE.
+        mazestep_1: Qui c'è la descrizione del passo del labirinto
+        mazestep_2: Qui c'è la descrizione del passo del labirinto
+        mazestep_3: Qui c'è la descrizione del passo del labirinto
+        mazestep_4: Qui c'è la descrizione del passo del labirinto
+        mazestep_5: Qui c'è la descrizione del passo del labirinto
+        studio_c2_1: |-
+          Riesci a far dire a questo cane "Ciao a tutti"?<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
+        studio_c2_10: Aggiungi dei blocchi per cambiare lo sfondo e la velocità del
+          pinguino (personaggio 1). Poi spostalo con i tasti freccia fino a che fai
+          un punto.
+        studio_c2_11: Crea una storia come vuoi tu. Quando hai fatto, clicca su "Condividi"
+          per far provare la storia ai tuoi amici sui loro smartphone.
+        studio_c2_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
+          al gatto?
+        studio_c2_3: Riesci a scrivere un programma che fa arrivare questo cane fino
+          al gatto?
+        studio_c2_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto
+          dica "Ciao" quando il cane lo raggiunge.
+        studio_c2_5: |-
+          Riesci a scrivere un programma per far dire "Ciao" al polpo quando viene cliccato?<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
+        studio_c2_6: Riesci a scrivere un programma per spostare questo pinguino in
+          tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra
+          / a destra in modo da fargli raggiungere tutte le bandierine?
+        studio_c2_7: Il blocco `ripeti per sempre`, aggiunto in fondo all'area di
+          lavoro, permette di eseguire il codice senza fermarsi mai. Puoi attaccare
+          ad esso dei blocchi per spostare il dinosauro (personaggio 2) in continuazione
+          in su e in giù?
+        studio_c2_8: Riesci a far dire "Ahi!" al pinguino (personaggio 1) e a `riprodurre
+          il suono di un colpo` se esso sbatte contro il dinosauro (personaggio 2),
+          e poi a spostarlo con i tasti freccia per far sì che questo accada?
+        studio_c2_9: Aggiungi un blocco che segna un punto quando il pinguino (personaggio
+          1) sbatte contro il polpo (personaggio 3). Poi sposta il pinguino con i
+          tasti freccia fino a che fai un punto.
+        studio_c3_game_1: |-
+          Riesci a scrivere un programma per far dire "Ciao" al polpo quando viene cliccato?<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
+        studio_c3_game_2: Riesci a scrivere un programma per spostare questo pinguino
+          in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra
+          / a destra in modo da fargli raggiungere tutte le bandierine?
+        studio_c3_game_3: Il blocco `ripeti per sempre`, aggiunto in fondo all'area
+          di lavoro, permette di eseguire il codice senza fermarsi mai. Puoi attaccare
+          ad esso dei blocchi per spostare il dinosauro (personaggio 2) in continuazione
+          in su e in giù?
+        studio_c3_game_4: Riesci a far dire "Ahi!" al pinguino e a riprodurre il suono
+          di "un colpo" se esso sbatte contro il dinosauro, e poi a spostarlo con
+          i tasti freccia per far sì che questo accada?
+        studio_c3_game_5: Aggiungi un blocco che segna un punto quando il pinguino
+          (personaggio 1) sbatte contro il polpo (personaggio 3). Poi sposta il pinguino
+          con i tasti freccia fino a che fai un punto.
+        studio_c3_game_6: Aggiungi dei blocchi per cambiare lo sfondo e la velocità
+          del pinguino (personaggio 1). Poi spostalo con i tasti freccia fino a che
+          fai un punto.
+        studio_c3_game_7: Crea un gioco per conto tuo. Quando hai fatto, clicca su
+          "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
+        studio_c3_story_1: |-
+          Riesci a far dire a questo cane "Ciao a tutti"?<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
+        studio_c3_story_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
+          al gatto?
+        studio_c3_story_3: Riesci a scrivere un programma che fa arrivare questo cane
+          fino al gatto?
+        studio_c3_story_4: Fai arrivare il cane fino al gatto e fai in modo che il
+          gatto dica "Ciao" quando il cane lo raggiunge.
+        studio_c3_story_5: Riesci ad aggiungere un blocco per far sì che il polpo
+          sia felice?
+        studio_c3_story_6: Crea una storia come vuoi tu. Quando hai fatto, clicca
+          su "Condividi" per far provare la storia ai tuoi amici sui loro smartphone.
+        studio_ec_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca su
+          "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
+        studio_full_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca
+          su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
+        studio_gumball_click_hello: Puoi aiutare Anton a dare inizio alla gara dicendo
+          le parole "Ai posti, pronti, via!"? Non dimenticarti di cliccare su Anton
+          dopo aver cliccato su "Esegui", altrimenti non riuscirai a provare il tuo
+          programma!
+        studio_gumball_free_play: Crea un gioco o una storia per conto tuo. Quando
+          hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici
+          sui loro smartphone, tablet o computer!
+        studio_gumball_hello1: Anais vuole farsi nuovi amici. Puoi aiutarla a dire
+          "Ciao" trascinando il blocco "il personaggio dice ..." nell'area di lavoro
+          e digitando la parola "Ciao" al suo interno?
+        studio_gumball_hello2: Darwin (personaggio 1) e suo fratello Gumball (personaggio
+          2) stanno andando a scuola. Puoi aiutarli a salutarsi usando due volte il
+          blocco "il personaggio ... dice"?
+        studio_gumball_join_food_fight: Unisciti alla battaglia del cibo! Usa l'istruzione
+          "il personaggio lancia l'oggetto a destra" per far buttare a Banana Joe
+          (il personaggio 1) del cibo verso Anton (il personaggio 2). Imposta l'umore
+          di Anton ad arrabbiato quando viene colpito.
+        studio_gumball_move_events: Darwin partecipa alla gara di raccolta delle bandierine.
+          Aiutalo a correre in tutte le direzioni attaccando il blocco "sposta ..."
+          a ciascuno degli eventi. Quando hai fatto, clicca su "Esegui" per collezionare
+          tutte le bandierine.
+        studio_gumball_move_to_actor: Gumball (personaggio 1) e Darwin (personaggio
+          2) sono in ritardo per una giornata di gare all'aperto. Aiuta Gumball ad
+          avvicinarsi a Darwin di 200 pixel usando il blocco "sposta il personaggio".
+          Poi unisci un blocco all'evento "quando un personaggio tocca ..." per riprodurre
+          un suono quando si incontrano.
+        studio_gumball_move_to_flag: Banana Joe sta per vincere in una giornata di
+          gare all'aperto! Aiutalo a percorrere gli ultimi 200 pixel usando il blocco
+          "sposta".
+        studio_gumball_repeat: Il blocco "ripeti per sempre" permette di eseguire
+          il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per aiutare
+          Gumball a riscaldarsi per la sua corsa muovendosi in continuazione a destra
+          e a sinistra?
+        studio_gumball_sound_and_points: Ti abbiamo dato del codice già scritto che
+          permette ad Anton (il personaggio 2) di muoversi a destra e a sinistra,
+          e permette a Banana Joe (il personaggio 1) di muoversi sullo schermo. Puoi
+          completare questo codice aggiungendo dei blocchi all'evento "quando il personaggio
+          ... tocca" per fare in modo che entrambi i personaggi riproducano un suono
+          e guadagnino un punto quando Banana Joe e Anton si scontrano? Clicca su
+          "Esegui" per lanciare il gioco.
+        studio_gumball_warn_food_fight: Darwin è appena sfuggito a una battaglia del
+          cibo! Cambia lo sfondo impostando quello con personaggi e imposta la velocità
+          di Darwin a veloce, quindi premi "Esegui" per farlo correre da Penny ad
+          avvertirla.
+        studio_iceage_click_hello: Puoi aiutare Sid a fare un ultimo invito ai suoi
+          amici quando si clicca su di lui? Non dimenticarti di cliccare su di lui
+          dopo aver premuto "Esegui".
+        studio_iceage_free_play: È il momento di creare un gioco o una storia per
+          conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco
+          ai tuoi amici sui loro smartphone, tablet o computer!
+        studio_iceage_hello1: Sid vuole riunire tutti per una nuova avventura. Puoi
+          aiutarlo a dire "Ciao" trascinando il blocco "il personaggio dice ..." nell'area
+          di lavoro e digitando la parola "Ciao" al suo interno?
+        studio_iceage_hello2: Sid (il personaggio 1) incontra Manny (il personaggio
+          2) e vuole invitarlo ad unirsi all'avventura. Puoi aiutarli a salutarsi
+          usando due volte il blocco "il personaggio ... dice"?
+        studio_iceage_move_events: Scrat è ancora alla ricerca di ghiande! Aiutalo
+          a scorrazzare in giro attaccando il blocco "sposta ..." a ciascuno degli
+          eventi e cambiando la direzione di marcia in base al tasto freccia. Quando
+          hai finito, clicca su "Esegui" per raccogliere tutte le ghiande.
+        studio_iceage_move_to_actor: Diego (il personaggio 1) è alla ricerca di Manny
+          (il personaggio 2). Aiuta Diego ad avvicinarsi a Manny di 200 pixel usando
+          il blocco "sposta il personaggio". Poi unisci un blocco all'evento "quando
+          un personaggio tocca ..." per riprodurre un suono quando si incontrano.
+        studio_iceage_move_to_flag: Scrat è alla ricerca della sua ghianda! Aiutalo
+          a percorrere gli ultimi 200 pixel usando il blocco "sposta".
+        studio_iceage_repeat: Il blocco "ripeti per sempre" permette di eseguire il
+          codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per aiutare
+          la Nonnina a fare un po' di esercizio muovendosi in continuazione a destra
+          e a sinistra?
+        studio_iceage_sound_and_points: Ti abbiamo dato del codice già scritto che
+          permette alla Nonnina di muoversi a destra e a sinistra, e permette a Sid
+          di muoversi sullo schermo. Puoi completare questo codice aggiungendo dei
+          blocchi all'evento "quando i personaggi si toccano" per fare in modo che
+          entrambi i personaggi riproducano un suono e guadagnino un punto quando
+          Sid e la Nonnina si scontrano? Clicca su "Esegui" per lanciare il gioco.
+        studio_iceage_throw_hearts: Sid vuol far sapere a sua nonna, la Nonnina, che
+          la ama. Usa l'istruzione "il personaggio lancia" per far lanciare a Sid
+          (il personaggio 1) dei cuori alla Nonnina (il personaggio 2)! Imposta l'umore
+          della Nonnina a felice quando viene colpita dai cuori.
+        studio_iceage_warn_ice_age: Tutti devono muoversi più velocemente perché l'era
+          glaciale sta arrivando! Cambia lo sfondo impostando uno sfondo con ghiaccio
+          e imposta la velocità di Sid a veloce, quindi premi "Esegui" per farlo correre
+          da Diego ad avvertirlo.
+        studio_k1_1: |-
+          Riesci a far dire a questo cane "Ciao a tutti"?<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
+        studio_k1_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
+          al gatto?
+        studio_k1_3: Riesci a scrivere un programma che fa arrivare questo cane fino
+          al gatto?
+        studio_k1_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto
+          dica "ciao" quando il cane arriva là.
+        studio_k1_5: Riesci ad aggiungere un blocco per far sì che il polpo sia felice?
+        studio_k1_6: Crea una storia tutta tua! Sposta il cane e il gatto in tutte
+          le direzioni e fai dire loro ciò che desideri.
+        studio_playlab_1: Il pinguino vuole dire "ciao" - puoi aiutarlo?
+        studio_playlab_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
+          "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
+        studio_playlab_2: Il Cavernicolo (personaggio 1) e la Cavernicola (personaggio
+          2) vorrebbero dirsi "ciao". Puoi aiutarli usando due volte il blocco "il
+          personaggio ... dice"?
+        studio_playlab_3: Puoi aiutare la tennista a raggiungere la bandierina?
+        studio_playlab_4: Puoi aiutare il tennista (personaggio 1) a raggiungere la
+          tennista (personaggio 2) e a riprodurre un suono quando la raggiunge?
+        studio_playlab_5: Puoi aiutare il robot spaziale a dire "salve terrestri"
+          quando clicchi su di lui? Dopo aver cliccato su "Esegui", ricordati di cliccare
+          sul robot spaziale!
+        studio_playlab_6: Puoi aiutare la Strega a muoversi usando i tasti freccia
+          in alto / in basso / a sinistra / a destra per raggiungere le palle di fuoco
+          magiche?
+        studio_playlab_7: Il blocco "ripeti per sempre" permette di eseguire il codice
+          senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il mago
+          in continuazione a destra e a sinistra?
+        studio_playlab_8: Aggiungi dei blocchi in modo che quando l'unicorno incontra
+          il mago si segna un punto e si riproduce un suono. Poi usa le frecce per
+          spostare l'unicorno fino a che fai un punto.
+        studio_playlab_9: Imposta lo sfondo per questa invasione aliena e aiuta il
+          robot spaziale a raggiungere più velocemente l'alieno modificando la propria
+          velocità. Poi sposta il robot spaziale con i tasti freccia per arrivare
+          fino all'alieno ed avvisare tutti.
         turtle_1_1: Ciao, io sono un artista. Puoi scrivere del codice per farmi disegnare
           quasi qualunque cosa. Usa i blocchi per farmi disegnare lungo le linee grigie
           dell'immagine.
+        turtle_1_10: 'Ce l''hai fatta! Ora, disegna qualcosa a piacere. Ecco alcune
+          idee divertenti: una figura stilizzata, un fiocco di neve o una spirale.
+          Prova anche il nuovo blocco "imposta la larghezza". Buon divertimento!'
         turtle_1_2: 'Ora, disegna un quadrato. Suggerimento: usa il tuo colore preferito
           scegliendolo col nuovo blocco "imposta colore".'
         turtle_1_3: 'Disegna un quadrato usando solo 3 blocchi. Nota: puoi farmi andare
@@ -128,72 +566,12 @@ it:
           diversi ogni volta.
         turtle_1_9: Riesci a capire con quale numero devi sostituire i punti interrogativi
           per disegnare un cerchio?
-        turtle_1_10: 'Ce l''hai fatta! Ora, disegna qualcosa a piacere. Ecco alcune
-          idee divertenti: una figura stilizzata, un fiocco di neve o una spirale.
-          Prova anche il nuovo blocco "imposta la larghezza". Buon divertimento!'
-        turtle_4_1: 'Riesci a disegnare un triangolo (con lati di 100 pixel) usando
-          solo 3 blocchi? Suggerimento: usa il blocco "ripeti". Ricorda che puoi usare
-          il cursore qua sopra per variare la velocità di disegno.'
-        turtle_4_2: Per disegnare questi triangoli aggiungi un blocco "gira a destra
-          di 90 gradi" in qualche punto del programma già presente nell'area di lavoro.
-        turtle_4_3: Ok, ecco il codice che serve per disegnare un singolo triangolo.
-          Riesci ad aggiungere i blocchi "ripeti" e "gira" per disegnare un bel fiore?
-        turtle_4_4: 'Ecco lo stesso codice dell''esercizio precedente, ma girando
-          solo di 36 gradi dopo aver disegnato ogni triangolo. Quante volte lo devi
-          ripetere? Suggerimento: dopo 360 gradi di rotazione il disegno diventerà
-          un cerchio completo.'
-        turtle_4_5: 'Ecco lo stesso codice dell''esercizio precedente, ma ripetendo
-          i giri 36 volte. Di quanti gradi dovrebbe essere ogni giro? Suggerimento:
-          dopo 360 gradi di rotazione il disegno diventerà un cerchio completo.'
-        turtle_4_6: Usando solo 3 blocchi, riesci a disegnare un quadratino con i
-          lati lunghi 20 pixel?
-        turtle_4_7: 'Ecco il codice dell''esercizio precedente per disegnare il quadratino
-          da 20 pixel. Come puoi "ripeterlo" per disegnare 10 quadratini vicini che
-          formano una scaletta? Suggerimento: hai bisogno solo di altri 2 blocchi.'
-        turtle_4_8: Questa era la soluzione dell'esercizio precedente. Riesci ad aggiungere
-          solo 2 blocchi in più per completare il disegno?
-        turtle_4_9: Questa era la soluzione dell'esercizio precedente. Di quanti gradi
-          devi girare adesso dopo aver disegnato una scaletta per completare il disegno?
-          (Probabilmente devi provare ad indovinare un paio di volte)
-        turtle_4_10: Questa era la soluzione dell'esercizio precedente. Inserisci
-          il numero giusto di ripetizioni per eseguire tutto il disegno.
-        turtle_4_11: Prova a cambiare i numeri nei blocchi "gira" e "ripeti" per disegnare
-          forme diverse. Oppure, prova a cambiare il resto del codice per disegnare
-          tutto ciò che vuoi.
-        maze_karel_1_1: Ciao, io sono una contadina. Ho bisogno del tuo aiuto per
-          livellare il terreno nella mia fattoria, in modo che sia pronto per la semina.
-          Spostami verso i mucchi di terra e usa il blocco "rimuovi 1" per rimuoverli.
-        maze_karel_1_2: Adesso, spostami verso la buca e riempila con 2 palate di
-          terra, usando il blocco "riempi 1".
-        maze_karel_1_3: Spostami verso il mucchio di terra e fammelo rimuovere usando
-          il minor numero possibile di blocchi.
-        maze_karel_1_4: 'Riesci ad aiutarmi a rimuovere tutti e quattro i mucchi di
-          terra? Suggerimento: prova ad usare un blocco "ripeti".'
-        maze_karel_1_5: 'Aiutami a riempire ognuna di queste buche con 5 palate di
-          terra. Suggerimento: puoi mettere un blocco "ripeti" all''interno del blocco
-          "mentre".'
-        maze_karel_1_6: 'Rimuovi tutti i mucchi di terra, usando il minor numero possibile
-          di blocchi. Nota: la nuova versione del blocco "mentre" permette di sapere
-          se sto sopra un mucchio.'
-        maze_karel_1_7: 'Wow, ho trovato una buca davvero profonda! Non so quante
-          palate di terra saranno necessarie per riempirla completamente. Riesci a
-          scrivere un programma che la riempie fino a quando il terreno è livellato?
-          Suggerimento: usa le opzioni nel menù a discesa (▼) del blocco "mentre".'
-        maze_karel_1_8: Aiutami a riempire la buca alla fine del mio terreno, utilizzando
-          il minor numero possibile di blocchi.
-        maze_karel_1_9: Fammi rimuovere tutti questi mucchi di terra. Prova ad usare
-          il minor numero possibile di blocchi. Ce la fai usando il blocco "mentre"
-          e senza usare il blocco "ripeti"?
-        maze_karel_1_10: Sto lavorando di sera, fuori è buio e non posso dire quanto
-          grandi sono i mucchi. Questa volta non ho a disposizione le opzioni che
-          avevo prima sul blocco "mentre". Spostami lungo il campo e se c'è un mucchio
-          rimuovilo.
-        maze_karel_1_11: 'È ancora buio fuori. Spostami lungo il terreno. Se c''è
-          un mucchio, rimuovilo e se c''è una buca, riempila. Suggerimento: usa il
-          menù a discesa (▼) delle opzioni del blocco "se".'
         turtle_2_1: 'Ciao. Io artista zombie. Mi piace disegnare! Aiutami a disegnare
           un quadrato con un colore speciale. Attenzione: ci sono sempre gli stessi
           blocchi, ma ora sono stati organizzati in categorie.'
+        turtle_2_10: Ecco del codice per sperimentare con il disegno di diverse spirali.  Cosa
+          succede se modifichi quanto gira? O se imposti la scelta di un colore a
+          caso all'interno del blocco di ripetizione?  Disegna qualcosa che ti piace.
         turtle_2_2: Benvenuto all'uso di funzioni che consentono di definire nuovi
           blocchi! Prova il nuovo blocco "disegna un quadrato", che si trova nella
           categoria "Funzioni", per disegnare un quadratino verde con 50 pixel per
@@ -225,38 +603,13 @@ it:
           di pupazzi di neve con altezze di 110, 100, 90, 80, 70 pixel. I pupazzi
           di neve dovranno essere distanti tra loro 60 pixel. Suggerimento: si può
           contare anche con numeri negativi.'
-        turtle_2_10: Ecco del codice per sperimentare con il disegno di diverse spirali.  Cosa
-          succede se modifichi quanto gira? O se imposti la scelta di un colore a
-          caso all'interno del blocco di ripetizione?  Disegna qualcosa che ti piace.
-        maze_karel_2_1: 'Prova ad usare dei blocchi per rimuovere tutti i mucchi e
-          riempire tutte le buche del terreno. Prova ad usare dei blocchi di ripetizione
-          invece di usare molti blocchi. Suggerimento: si può mettere un blocco di
-          ripetizione all''interno di un altro blocco di ripetizione.'
-        maze_karel_2_2: Abbiamo definito il nuovo blocco "riempi 5", che ora è nella
-          categoria "Funzioni". Usalo per aiutarmi a riempire questa buca.
-        maze_karel_2_3: Usa il nuovo blocco "riempi 5" per farmi riempire tutte le
-          buche. E' stato inserito nella categoria "Funzioni" e devi quindi prenderlo
-          da là.
-        maze_karel_2_4: Definisci una nuova funzione che rimuove 7 palate di terra.
-          Quindi usala per scrivere un programma che rimuove tutti i mucchi.
-        maze_karel_2_5: Definisci una nuova funzione che rimuove 6 palate da un mucchio
-          di terra e usala per rimuovere tutti i mucchi.
-        maze_karel_2_6: Usa le due nuove funzioni, "rimuovi 8" e "riempi 8", per rimuovere
-          il mucchio e riempire la buca.
-        maze_karel_2_7: C'è una mucca nel mio campo! Scrivi una nuova funzione per
-          evitare la mucca e rimuovere il mucchio. Metti tutti i blocchi all'interno
-          della nuova funzione.
-        maze_karel_2_8: Usa questa nuova funzione, "evita la mucca e rimuovi 1", per
-          rimuovere tutti i mucchi.
-        maze_karel_2_9: Qui trovi una nuova funzione che rimuove una colonna verticale
-          di 4 mucchi di terra. Prova a metterla all'interno di un blocco di ripetizione,
-          in modo da rimuovere tutti i mucchi di terra usando pochi blocchi.
-        maze_karel_2_10: Spostami attraverso il campo e usa queste due funzioni per
-          rimuovere tutti i mucchi e riempire tutte le buche.
         turtle_3_1: Questo esercizio ti mostra come definire le funzioni "disegna
           un quadrato" e "disegna un cerchio".  Definire una funzione non vuol dire
           eseguire i suoi blocchi. Per disegnare effettivamente un quadrato devi prendere
           il blocco "disegna un quadrato" e spostarlo nell'area di lavoro.
+        turtle_3_10: Hai imparato molto! Ora utilizza ciò che hai imparato per disegnare
+          quello che vuoi. Prova a disegnare una stella, o una spirale o un fiocco
+          di neve stravagante.
         turtle_3_2: Usando la funzione "disegna un quadrato" come esempio, crea una
           funzione "disegna un triangolo" e usala per disegnare un triangolo.
         turtle_3_3: 'Disegna delle recinzioni triangolari intorno ai gatti e un recinto
@@ -280,28 +633,35 @@ it:
           per disegnare tre case.
         turtle_3_9: Riesci a ricreare la funzione "disegna una casa" senza aiuto?
           Provaci e poi disegna una fila di case.
-        turtle_3_10: Hai imparato molto! Ora utilizza ciò che hai imparato per disegnare
-          quello che vuoi. Prova a disegnare una stella, o una spirale o un fiocco
-          di neve stravagante.
-        maze_karel_debug_seq_1: Benvenuto alla "correzione di errori" (<i>debugging</i>)!
-          Il mio codice non funziona correttamente. Riesci ad individuare il problema
-          e a risolverlo in modo da livellare il campo e prepararlo per la semina?
-        maze_karel_debug_seq_2: Che cosa c'è di sbagliato in questo programma? Come
-          dovresti sistemarlo in modo da riuscire a rimuovere quel mucchio?
-        maze_karel_debug_repeat: Correggi questo programma, in modo che il mio campo
-          sia livellato e pronto.
-        maze_karel_debug_while: Come dovresti cambiare questo programma per riempire
-          la buca?
-        maze_karel_debug_if: Aiuto! Correggi il programma in modo che il mio campo
-          sia completamente livellato.
-        maze_karel_debug_if_else: Correggi questo programma in modo da riempire le
-          buche e rimuovere tutti i mucchi.
-        maze_karel_debug_function_1: Cosa dovresti cambiare in questo programma per
-          rimuovere tutti i mucchi?
-        maze_karel_debug_function_2: Riesci a correggere questo programma in modo
-          da livellare il mio terreno?
-        maze_karel_debug_function_3: 'Modifica questo programma in modo da rimuovere
-          tutti i mucchi sul mio terreno. '
+        turtle_4_1: 'Riesci a disegnare un triangolo (con lati di 100 pixel) usando
+          solo 3 blocchi? Suggerimento: usa il blocco "ripeti". Ricorda che puoi usare
+          il cursore qua sopra per variare la velocità di disegno.'
+        turtle_4_10: Questa era la soluzione dell'esercizio precedente. Inserisci
+          il numero giusto di ripetizioni per eseguire tutto il disegno.
+        turtle_4_11: Prova a cambiare i numeri nei blocchi "gira" e "ripeti" per disegnare
+          forme diverse. Oppure, prova a cambiare il resto del codice per disegnare
+          tutto ciò che vuoi.
+        turtle_4_2: Per disegnare questi triangoli aggiungi un blocco "gira a destra
+          di 90 gradi" in qualche punto del programma già presente nell'area di lavoro.
+        turtle_4_3: Ok, ecco il codice che serve per disegnare un singolo triangolo.
+          Riesci ad aggiungere i blocchi "ripeti" e "gira" per disegnare un bel fiore?
+        turtle_4_4: 'Ecco lo stesso codice dell''esercizio precedente, ma girando
+          solo di 36 gradi dopo aver disegnato ogni triangolo. Quante volte lo devi
+          ripetere? Suggerimento: dopo 360 gradi di rotazione il disegno diventerà
+          un cerchio completo.'
+        turtle_4_5: 'Ecco lo stesso codice dell''esercizio precedente, ma ripetendo
+          i giri 36 volte. Di quanti gradi dovrebbe essere ogni giro? Suggerimento:
+          dopo 360 gradi di rotazione il disegno diventerà un cerchio completo.'
+        turtle_4_6: Usando solo 3 blocchi, riesci a disegnare un quadratino con i
+          lati lunghi 20 pixel?
+        turtle_4_7: 'Ecco il codice dell''esercizio precedente per disegnare il quadratino
+          da 20 pixel. Come puoi "ripeterlo" per disegnare 10 quadratini vicini che
+          formano una scaletta? Suggerimento: hai bisogno solo di altri 2 blocchi.'
+        turtle_4_8: Questa era la soluzione dell'esercizio precedente. Riesci ad aggiungere
+          solo 2 blocchi in più per completare il disegno?
+        turtle_4_9: Questa era la soluzione dell'esercizio precedente. Di quanti gradi
+          devi girare adesso dopo aver disegnato una scaletta per completare il disegno?
+          (Probabilmente devi provare ad indovinare un paio di volte)
         turtle_5_1: Prova ad eseguire questo programma e ad apportare modifiche per
           vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e
           sostituiscilo con qualcosa di totalmente diverso)
@@ -320,265 +680,187 @@ it:
         turtle_5_6: Prova ad eseguire questo programma e ad apportare modifiche per
           vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e
           sostituiscilo con qualcosa di totalmente diverso)
-        maze_3_1: Ho bisogno di arrivare a quel maiale! Digita un paio di volte l'istruzione
-          "avanza()" in modo da riprendere le mie uova.
-        maze_3_2: Scrivi un programma che mi fa fare tutta la strada verso il maialino.
-        maze_3_3: Come posso arrivare al maiale? Assicurati che non vada a sbattere
-          contro la cassetta di dinamite (TNT)!
-        maze_3_4: Argh! Scrivi un programma che mi faccia girare alla larga della
-          dinamite (TNT) ed arrivare al maiale.
-        Custom_builder: Sposta i blocchi dalla cassetta degli attrezzi all'area di
-          lavoro per disegnare il livello che vuoi creare. Premi "Esegui" quando hai
-          fatto.
-        jigsaw_1: Clicca sul blocco
-        jigsaw_2: Sposta il blocco verso la destinazione
-        jigsaw_3: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
-        jigsaw_4: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
-        jigsaw_5: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
-        jigsaw_6: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
-        jigsaw_7: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
-        jigsaw_8: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
-        jigsaw_9: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
-        jigsaw_10: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
-        jigsaw_11: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
-        jigsaw_12: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
-        jigsaw_13: Questo è un esercizio di riepilogo -- Sistema i blocchi nell'ordine
-          corretto per formare l'immagine indicata.
-        mazestep_1: Qui c'è la descrizione del passo del labirinto
-        mazestep_2: Qui c'è la descrizione del passo del labirinto
-        mazestep_3: Qui c'è la descrizione del passo del labirinto
-        mazestep_4: Qui c'è la descrizione del passo del labirinto
-        mazestep_5: Qui c'è la descrizione del passo del labirinto
-        studio_c2_1: |-
-          Riesci a far dire a questo cane "Ciao a tutti"?<br>
-          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
-        studio_c2_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
-          al gatto?
-        studio_c2_3: Riesci a scrivere un programma che fa arrivare questo cane fino
-          al gatto?
-        studio_c2_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto
-          dica "Ciao" quando il cane lo raggiunge.
-        studio_c2_5: |-
-          Riesci a scrivere un programma per far dire "Ciao" al polpo quando viene cliccato?<br>
-          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
-        studio_c2_6: Riesci a scrivere un programma per spostare questo pinguino in
-          tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra
-          / a destra in modo da fargli raggiungere tutte le bandierine?
-        studio_c2_7: Il blocco `ripeti per sempre`, aggiunto in fondo all'area di
-          lavoro, permette di eseguire il codice senza fermarsi mai. Puoi attaccare
-          ad esso dei blocchi per spostare il dinosauro (personaggio 2) in continuazione
-          in su e in giù?
-        studio_c2_8: Riesci a far dire "Ahi!" al pinguino (personaggio 1) e a `riprodurre
-          il suono di un colpo` se esso sbatte contro il dinosauro (personaggio 2),
-          e poi a spostarlo con i tasti freccia per far sì che questo accada?
-        studio_c2_9: Aggiungi un blocco che segna un punto quando il pinguino (personaggio
-          1) sbatte contro il polpo (personaggio 3). Poi sposta il pinguino con i
-          tasti freccia fino a che fai un punto.
-        studio_c2_10: Aggiungi dei blocchi per cambiare lo sfondo e la velocità del
-          pinguino (personaggio 1). Poi spostalo con i tasti freccia fino a che fai
-          un punto.
-        studio_c2_11: Crea una storia come vuoi tu. Quando hai fatto, clicca su "Condividi"
-          per far provare la storia ai tuoi amici sui loro smartphone.
-        studio_c3_story_1: |-
-          Riesci a far dire a questo cane "Ciao a tutti"?<br>
-          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
-        studio_c3_story_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
-          al gatto?
-        studio_c3_story_3: Riesci a scrivere un programma che fa arrivare questo cane
-          fino al gatto?
-        studio_c3_story_4: Fai arrivare il cane fino al gatto e fai in modo che il
-          gatto dica "Ciao" quando il cane lo raggiunge.
-        studio_c3_story_5: Riesci ad aggiungere un blocco per far sì che il polpo
-          sia felice?
-        studio_c3_story_6: Crea una storia come vuoi tu. Quando hai fatto, clicca
-          su "Condividi" per far provare la storia ai tuoi amici sui loro smartphone.
-        studio_c3_game_1: |-
-          Riesci a scrivere un programma per far dire "Ciao" al polpo quando viene cliccato?<br>
-          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
-        studio_c3_game_2: Riesci a scrivere un programma per spostare questo pinguino
-          in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra
-          / a destra in modo da fargli raggiungere tutte le bandierine?
-        studio_c3_game_3: Il blocco `ripeti per sempre`, aggiunto in fondo all'area
-          di lavoro, permette di eseguire il codice senza fermarsi mai. Puoi attaccare
-          ad esso dei blocchi per spostare il dinosauro (personaggio 2) in continuazione
-          in su e in giù?
-        studio_c3_game_4: Riesci a far dire "Ahi!" al pinguino e a riprodurre il suono
-          di "un colpo" se esso sbatte contro il dinosauro, e poi a spostarlo con
-          i tasti freccia per far sì che questo accada?
-        studio_c3_game_5: Aggiungi un blocco che segna un punto quando il pinguino
-          (personaggio 1) sbatte contro il polpo (personaggio 3). Poi sposta il pinguino
-          con i tasti freccia fino a che fai un punto.
-        studio_c3_game_6: Aggiungi dei blocchi per cambiare lo sfondo e la velocità
-          del pinguino (personaggio 1). Poi spostalo con i tasti freccia fino a che
-          fai un punto.
-        studio_c3_game_7: Crea un gioco per conto tuo. Quando hai fatto, clicca su
-          "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_playlab_1: Il pinguino vuole dire "ciao" - puoi aiutarlo?
-        studio_playlab_2: Il Cavernicolo (personaggio 1) e la Cavernicola (personaggio
-          2) vorrebbero dirsi "ciao". Puoi aiutarli usando due volte il blocco "il
-          personaggio ... dice"?
-        studio_playlab_3: Puoi aiutare la tennista a raggiungere la bandierina?
-        studio_playlab_4: Puoi aiutare il tennista (personaggio 1) a raggiungere la
-          tennista (personaggio 2) e a riprodurre un suono quando la raggiunge?
-        studio_playlab_5: Puoi aiutare il robot spaziale a dire "salve terrestri"
-          quando clicchi su di lui? Dopo aver cliccato su "Esegui", ricordati di cliccare
-          sul robot spaziale!
-        studio_playlab_6: Puoi aiutare la Strega a muoversi usando i tasti freccia
-          in alto / in basso / a sinistra / a destra per raggiungere le palle di fuoco
-          magiche?
-        studio_playlab_7: Il blocco "ripeti per sempre" permette di eseguire il codice
-          senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il mago
-          in continuazione a destra e a sinistra?
-        studio_playlab_8: Aggiungi dei blocchi in modo che quando l'unicorno incontra
-          il mago si segna un punto e si riproduce un suono. Poi usa le frecce per
-          spostare l'unicorno fino a che fai un punto.
-        studio_playlab_9: Imposta lo sfondo per questa invasione aliena e aiuta il
-          robot spaziale a raggiungere più velocemente l'alieno modificando la propria
-          velocità. Poi sposta il robot spaziale con i tasti freccia per arrivare
-          fino all'alieno ed avvisare tutti.
-        studio_playlab_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
-          "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_iceage_hello1: Sid vuole riunire tutti per una nuova avventura. Puoi
-          aiutarlo a dire "Ciao" trascinando il blocco "il personaggio dice ..." nell'area
-          di lavoro e digitando la parola "Ciao" al suo interno?
-        studio_iceage_hello2: Sid (il personaggio 1) incontra Manny (il personaggio
-          2) e vuole invitarlo ad unirsi all'avventura. Puoi aiutarli a salutarsi
-          usando due volte il blocco "il personaggio ... dice"?
-        studio_iceage_move_to_flag: Scrat è alla ricerca della sua ghianda! Aiutalo
-          a percorrere gli ultimi 200 pixel usando il blocco "sposta".
-        studio_iceage_move_to_actor: Diego (il personaggio 1) è alla ricerca di Manny
-          (il personaggio 2). Aiuta Diego ad avvicinarsi a Manny di 200 pixel usando
-          il blocco "sposta il personaggio". Poi unisci un blocco all'evento "quando
-          un personaggio tocca ..." per riprodurre un suono quando si incontrano.
-        studio_iceage_repeat: Il blocco "ripeti per sempre" permette di eseguire il
-          codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per aiutare
-          la Nonnina a fare un po' di esercizio muovendosi in continuazione a destra
-          e a sinistra?
-        studio_iceage_click_hello: Puoi aiutare Sid a fare un ultimo invito ai suoi
-          amici quando si clicca su di lui? Non dimenticarti di cliccare su di lui
-          dopo aver premuto "Esegui".
-        studio_iceage_move_events: Scrat è ancora alla ricerca di ghiande! Aiutalo
-          a scorrazzare in giro attaccando il blocco "sposta ..." a ciascuno degli
-          eventi e cambiando la direzione di marcia in base al tasto freccia. Quando
-          hai finito, clicca su "Esegui" per raccogliere tutte le ghiande.
-        studio_iceage_sound_and_points: Ti abbiamo dato del codice già scritto che
-          permette alla Nonnina di muoversi a destra e a sinistra, e permette a Sid
-          di muoversi sullo schermo. Puoi completare questo codice aggiungendo dei
-          blocchi all'evento "quando i personaggi si toccano" per fare in modo che
-          entrambi i personaggi riproducano un suono e guadagnino un punto quando
-          Sid e la Nonnina si scontrano? Clicca su "Esegui" per lanciare il gioco.
-        studio_iceage_warn_ice_age: Tutti devono muoversi più velocemente perché l'era
-          glaciale sta arrivando! Cambia lo sfondo impostando uno sfondo con ghiaccio
-          e imposta la velocità di Sid a veloce, quindi premi "Esegui" per farlo correre
-          da Diego ad avvertirlo.
-        studio_iceage_throw_hearts: Sid vuol far sapere a sua nonna, la Nonnina, che
-          la ama. Usa l'istruzione "il personaggio lancia" per far lanciare a Sid
-          (il personaggio 1) dei cuori alla Nonnina (il personaggio 2)! Imposta l'umore
-          della Nonnina a felice quando viene colpita dai cuori.
-        studio_iceage_free_play: È il momento di creare un gioco o una storia per
-          conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco
-          ai tuoi amici sui loro smartphone, tablet o computer!
-        studio_gumball_hello1: Anais vuole farsi nuovi amici. Puoi aiutarla a dire
-          "Ciao" trascinando il blocco "il personaggio dice ..." nell'area di lavoro
-          e digitando la parola "Ciao" al suo interno?
-        studio_gumball_hello2: Darwin (personaggio 1) e suo fratello Gumball (personaggio
-          2) stanno andando a scuola. Puoi aiutarli a salutarsi usando due volte il
-          blocco "il personaggio ... dice"?
-        studio_gumball_move_to_flag: Banana Joe sta per vincere in una giornata di
-          gare all'aperto! Aiutalo a percorrere gli ultimi 200 pixel usando il blocco
-          "sposta".
-        studio_gumball_move_to_actor: Gumball (personaggio 1) e Darwin (personaggio
-          2) sono in ritardo per una giornata di gare all'aperto. Aiuta Gumball ad
-          avvicinarsi a Darwin di 200 pixel usando il blocco "sposta il personaggio".
-          Poi unisci un blocco all'evento "quando un personaggio tocca ..." per riprodurre
-          un suono quando si incontrano.
-        studio_gumball_repeat: Il blocco "ripeti per sempre" permette di eseguire
-          il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per aiutare
-          Gumball a riscaldarsi per la sua corsa muovendosi in continuazione a destra
-          e a sinistra?
-        studio_gumball_click_hello: Puoi aiutare Anton a dare inizio alla gara dicendo
-          le parole "Ai posti, pronti, via!"? Non dimenticarti di cliccare su Anton
-          dopo aver cliccato su "Esegui", altrimenti non riuscirai a provare il tuo
-          programma!
-        studio_gumball_move_events: Darwin partecipa alla gara di raccolta delle bandierine.
-          Aiutalo a correre in tutte le direzioni attaccando il blocco "sposta ..."
-          a ciascuno degli eventi. Quando hai fatto, clicca su "Esegui" per collezionare
-          tutte le bandierine.
-        studio_gumball_sound_and_points: Ti abbiamo dato del codice già scritto che
-          permette ad Anton (il personaggio 2) di muoversi a destra e a sinistra,
-          e permette a Banana Joe (il personaggio 1) di muoversi sullo schermo. Puoi
-          completare questo codice aggiungendo dei blocchi all'evento "quando il personaggio
-          ... tocca" per fare in modo che entrambi i personaggi riproducano un suono
-          e guadagnino un punto quando Banana Joe e Anton si scontrano? Clicca su
-          "Esegui" per lanciare il gioco.
-        studio_gumball_warn_food_fight: Darwin è appena sfuggito a una battaglia del
-          cibo! Cambia lo sfondo impostando quello con personaggi e imposta la velocità
-          di Darwin a veloce, quindi premi "Esegui" per farlo correre da Penny ad
-          avvertirla.
-        studio_gumball_join_food_fight: Unisciti alla battaglia del cibo! Usa l'istruzione
-          "il personaggio lancia l'oggetto a destra" per far buttare a Banana Joe
-          (il personaggio 1) del cibo verso Anton (il personaggio 2). Imposta l'umore
-          di Anton ad arrabbiato quando viene colpito.
-        studio_gumball_free_play: Crea un gioco o una storia per conto tuo. Quando
-          hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici
-          sui loro smartphone, tablet o computer!
-        studio_full_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca
-          su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_k1_1: |-
-          Riesci a far dire a questo cane "Ciao a tutti"?<br>
-          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
-        studio_k1_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
-          al gatto?
-        studio_k1_3: Riesci a scrivere un programma che fa arrivare questo cane fino
-          al gatto?
-        studio_k1_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto
-          dica "ciao" quando il cane arriva là.
-        studio_k1_5: Riesci ad aggiungere un blocco per far sì che il polpo sia felice?
-        studio_k1_6: Crea una storia tutta tua! Sposta il cane e il gatto in tutte
-          le direzioni e fai dire loro ciò che desideri.
-        maze_wordsearch_k_1: |-
-          Spostami per scrivere le lettere della parola EAST.<br>
-          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-11#VIDEO" target="_blank">Video doppiato in italiano</a>
-        maze_wordsearch_k_2: Spostami per scrivere le lettere della parola SOUTH.
-        maze_wordsearch_k_3: Spostami per scrivere le lettere della parola WEST.
-        maze_wordsearch_k_4: Spostami per scrivere le lettere della parola NORTH.
-        maze_wordsearch_k_6: Spostami a Est e poi a Sud per scrivere le lettere della
-          parola JUMP.
-        maze_wordsearch_k_9: Spostami in una direzione e poi in un'altra per scrivere
-          le lettere della parola CODE.
-        maze_wordsearch_k_13: Spostami in una direzione e poi in un'altra per scrivere
-          le lettere della parola DEBUG.
-        maze_wordsearch_k_15: Spostami in una direzione e poi in un'altra per scrivere
-          le lettere della parola ABOVE.
-        maze_wordsearch_k_16: Spostami in una direzione e poi in un'altra per scrivere
-          le lettere della parola BELOW.
-        maze_wordsearch_k_20: Questo è un esercizio di riepilogo -- Spostami in una
-          direzione e poi in un'altra per scrivere le lettere della parola STORY.
-        applab_ec_simple: Crea la tua App usando i blocchi nella cassetta degli attrezzi.
-        turtle_ec_1_2: 'Ora, disegna un quadrato. Suggerimento: usa il tuo colore
-          preferito scegliendolo col nuovo blocco "imposta colore".'
         turtle_ec_1_10: 'Ce l''hai fatta! Ora, disegna qualcosa a piacere. Ecco alcune
           idee divertenti: una figura stilizzata, un fiocco di neve o una spirale.
           Prova anche il nuovo blocco "larghezza della penna". Buon divertimento!'
-        studio_ec_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca su
-          "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
+        turtle_ec_1_2: 'Ora, disegna un quadrato. Suggerimento: usa il tuo colore
+          preferito scegliendolo col nuovo blocco "imposta colore".'
+    trophy:
+      name:
+        Bronze: Bronzo
+        Gold: Oro
+        Silver: Argento
     video:
       name:
-        maze_intro: 'Labirinto - Corso 2: Introduzione'
-        artist_intro: Artista - Introduzione
-        farmer_intro: Introduzione a "La contadina"
-        flappy_intro: Introduzione a "Flappy"
-        loop_times: Blocco "ripeti ... volte"
-        loop_until: Blocco "ripeti fino a che"
-        if: Blocco "se"
-        if_else: Blocco "se-altrimenti"
-        if_else_scrat: Blocco "se-altrimenti"
-        function: Funzioni
-        loop_while: Blocco "mentre"
-        loop_for: Blocco "ripeti con contatore"
-        parameters: Funzioni con parametri
-        hoc_wrapup: Conclusione dell'Ora del Codice
+        C1_artist_intro: Artista - Introduzione
+        C1_bee_level_intro: 'Ape: Introduzione'
+        C1_bee_loops: 'Ape: Cicli'
+        C1_bigevent_unplugged: Il grande evento
+        C1_building_foundation: Costruire le fondamenta
+        C1_getting_loopy: Diventare ripetitivi
+        C1_going_places_safely: Cittadinanza digitale - Il mio quartiere digitale
+        C1_happy_maps_unplugged: Mappe Felici
+        C1_maze_debugging: 'Labirinto: correzione di errori'
+        C1_maze_intro_sequencing: 'Labirinto - Corso 1: Introduzione'
+        C1_maze_loops: 'Labirinto: Cicli'
+        C1_moveitmoveit_unplugged: Muovilo, muovilo
+        C1_pair_programming: Programmazione in coppia
+        C1_planting_seed: Piantare un seme
+        C1_playlab_storytelling: 'Laboratorio: crea una storia'
+        C1_spelling_bee_intro: 'Ape Sapiente: Introduzione'
+        C1_zuck_repeat_loop: 'Labirinto: Cicli'
+        C2_artist_debugging: 'Artista: Correzione di Errori'
+        C2_artist_intro: Artista - Introduzione
+        C2_artist_loops: 'Artista: Cicli'
+        C2_bee_conditionals: 'Ape: Istruzioni Condizionali'
+        C2_bee_debugging: 'Ape: Correzione di Errori'
+        C2_bee_loops: 'Ape: Cicli'
+        C2_binary_bracelets: Braccialetti Binari
+        C2_conditionals_with_cards: Istruzioni condizionali
+        C2_digital_footprint: Segui le tracce digitali
+        C2_digital_footprint_v2: Segui le tracce digitali
+        C2_graph_paper: Programmazione su carta a quadretti
+        C2_maze_intro: 'Labirinto - Corso 2: Introduzione'
+        C2_paper_airplanes: Aeroplani di carta
+        C2_playlab_createstory: 'Laboratorio: Crea una Storia'
+        C2_relay_programming: Programmazione a staffetta
+        C2_zuck_repeat_loop: 'Labirinto: Cicli'
+        C3_artist_functions: 'Artista: Funzioni'
+        C3_artist_intro: Artista - Introduzione
+        C3_artist_nested_loops: Cicli annidati
+        C3_bee_conditionals: 'Ape: Istruzioni Condizionali'
+        C3_bee_debugging: 'Ape: Correzione di Errori'
+        C3_bee_functions: 'Ape: Funzioni'
+        C3_bee_nested_loops: Cicli annidati
+        C3_bounce: Ping-Pong
+        C3_computational_thinking: Pensiero computazionale
+        C3_crowdsourcing: Intelligenza collettiva
+        C3_dice_race: Gara con i Dadi
+        C3_farmer_while: Cicli "mentre"
+        C3_functional_suncatchers: Acchiappa-sole Funzionale
+        C3_internet: Internet
+        C3_maze_conditionals: 'Labirinto: Istruzioni Condizionali'
+        C3_maze_level_4: 'Labirinto: Cicli'
+        C3_playlab_create_game: 'Laboratorio: Crea un Gioco'
+        C3_songwriting_with_parameters: Scrittura musicale di un programma - Parametri
+        C4_bee_conditional: 'Ape: Istruzioni Condizionali'
+        C4_conditionals: Istruzioni condizionali
+        C4_for_loops: Cicli con contatore
+        C4_for_loops_bee: Cicli con contatore
+        C4_for_loops_no_bee: Cicli con contatore
+        C4_function_create: Creazione di funzioni
+        C4_function_edit: Modifica di funzioni
+        C4_function_parameters: Funzioni con parametri
+        C4_intro: Introduzione
+        C4_loops_zombie: Cicli
+        C4_math_artist: Programmare l'artista usando la matematica
+        C4_unplugged_algorithms: Algoritmi per il Tangram
+        C4_unplugged_binary: Binario
+        C4_unplugged_forloops: Cicli con contatore
+        C4_unplugged_madlibs: Mad-Libs
+        C4_unplugged_parameters: Composizione di Canzoni - Parametri
+        C4_unplugged_variables: Variabili e buste
+        C4_variables_artist: 'Artista: Variabili'
+        C4_variables_playlab: 'Laboratorio: Variabili'
+        CDEF_Video_SpritesInAction: Personaggi in azione
+        CSA-PL-1d-arrays-new-values: Immissione di valori in matrici 1D
+        CSA-PL-Printing-in-Java: Stampa in Java
+        CSA-PL-conditionals: Istruzioni Condizionali in Java
+        CSA-PL-debugging-22: Esegui il debug in Java Lab
+        CSA-PL-debugging-temp: Introduzione al Debugging in Sviluppo Java - temp
+        CSA-PL-first-program: Scrivere un programma in Java
+        CSA-PL-for-loops: Per i loop in Java
+        CSA-PL-intro-to-arrays: Array unidimensionale (1D)
+        CSA-PL-intro-to-java-lab: Nozioni di base su Java Lab
+        CSA-PL-multi-selection-statements: Dichiarazioni di selezione multipla
+        CSA-PL-two-way-selection: Selezione bidirezionale
+        CSA-PL-variables: Creazione di variabili in Java
+        CSD_Unit6_InteractiveArtExemplar: Esemplare d'arte interattivo
+        CSD_u6_variables_part1: 'CSD: Variabili'
+        CSF-Teaching-Problem-Solving: Fondamenti di informatica - Insegnare a risolvere
+          i problemi (Problem Solving)
+        CSF_EF_cs_matters: L'informatica è importante
+        CSF_Going_Places_Safely: Il mio quartiere digitale
+        CSF_Power_of_Words: Cittadinanza digitale - Il potere delle parole
+        CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei personaggi
+        CSF_SpriteLab_Intro_v2: Introduzione al Laboratorio dei personaggi
+        CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in azione
+        CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
+        CSF_Spritelab_MakeSprite_CDEF: Come creare un personaggio nel Laboratorio
+          dei personaggi
+        CSF_Spritelab_MakeSprite_v2: Come creare un personaggio
+        CSF_StarWars_ProjectIntro: Introduzione al progetto Star Wars
+        CSF_Super_Digital_Citizen: Cittadinanza digitale - Super cittadino digitale
+        CSF_a_b_artist_loops: Cicli con l'artista
+        CSF_artist_angles: Angoli con l'Artista
+        CSF_bb8_loops_C-F: Cicli con BB-8
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_collector_k1_blocks: La collezionista
+        CSF_collector_repeat_loops: La collezionista - Cicli (istruzioni di ripetizione)
+        CSF_collector_text_blocks: La collezionista
+        CSF_create_functions: Creazione di funzioni
+        CSF_debugging_k1_blocks: Correzione errori (debugging)
+        CSF_debugging_text_blocks: Correzione errori (debugging)
+        CSF_harvester_loops_K1: Cicli con la contadina
+        CSF_harvester_skinOverview_K-1: La contadina
+        CSF_if_allskins: Il blocco "se"
+        CSF_ifelse_allskins: Uso dei blocchi se/altrimenti
+        CSF_ifelseifelse_allskins: Uso dei blocchi se/altrimenti-se/altrimenti
+        CSF_loops_AB: Cicli
+        CSF_maze_intro_k1_blocks: Introduzione a Code Studio
+        CSF_maze_intro_text_blocks: Introduzione a Code Studio
+        CSF_my_robotic_friends: I miei amici robotici
+        CSF_scrat_loops_CF: Cicli con l'Era glaciale
+        CSF_scrat_loops_K1: Cicli con l'Era glaciale
+        CSF_skinOverview_Harvester: La contadina
+        CSF_stevie_big_project: Stefi e il grande progetto
+        CSF_unspotted_bugs: Quei fastidiosi insetti nascosti
+        CSF_zuck_loops_short: Cicli (istruzioni di ripetizione)
+        CS_Changing_Everything: L'informatica sta cambiando ogni cosa
+        Getting_Started_BasicFeatures: Caratteristiche di base di Code.org
+        Gettting_Started_ClassSection: Creazione di una sezione di classe
+        Gettting_Started_Progress: Progresso, feedback e valutazione
+        Gettting_Started_StudentExperience: L'esperienza degli studenti
+        MC_2018_loops: 'Minecraft: Viaggio Acquatico - Ripeti fino a che'
+        PL-Video-21: Benvenuto nella sezione Professional Learning di Code.org!
+        PL_CSD_CircuitPlayground_Overview: Panoramica del Circuit Playground
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Panoramica dell'unità Circuit
+          Playground
+        PL_CSD_CircuitPlayground_Setup: Configurazione del circuito Playground
+        PL_CSD_EquityBlindSpotsvid: Pregiudizi e Responsabilità
+        PL_CSD_MicroBit_Intro: Introduzione al Micro:bit
+        PL_CSD_TeacherTips_Advise: 'Suggerimenti per gli insegnanti: consigli per
+          i nuovi insegnanti'
+        PL_CSD_TeacherTips_Debugging: 'Suggerimenti per gli insegnanti: debugging'
+        PL_CSD_TeacherTips_IntroToCSD: 'Suggerimenti per gli insegnanti: introduzione
+          al corso Alla scoperta dell''informatica'
+        PL_CSD_TeacherTips_LeadLearner: 'Suggerimenti per gli insegnanti: potenziale
+          studente'
+        PL_CSD_TeacherTips_PairProgramming: 'Suggerimenti per gli insegnanti: programmazione
+          in coppia'
+        PL_CSD_TeacherTips_ProblemSolvingProcess: 'Suggerimenti per gli insegnanti:
+          la procedura di risoluzione dei problemi'
+        PL_CSD_Unit4_AppTesting: Test di prototipi cartacei
+        PL_CSP_EIPMOverview: Guida alle lezioni EIPM
+        PL_CSP_TeacherTips_APExam: 'Suggerimenti per gli insegnanti: preparazione
+          per l''esame AP'
+        PL_CSP_TeacherTips_Advice: 'Suggerimenti per gli insegnanti: consigli per
+          i nuovi insegnanti CS'
+        PL_CSP_TeacherTips_Debugging: 'Suggerimenti per gli insegnanti: aiuto con
+          il debug'
+        PL_CSP_TeacherTips_EIPM: 'Suggerimenti per gli insegnanti: il processo EIPM'
+        PL_CSP_TeacherTips_IntroToCSP: 'Suggerimenti per gli insegnanti: introduzione
+          ai principi del CS'
+        PL_CSP_TeacherTips_LeadLearner: 'Suggerimenti per gli insegnanti: come diventare
+          un Lead Learner'
+        PL_CS_Journeys_Overview: CS Journeys
+        PL_Equity_in_CS_Education: Equità nella formazione CS
+        PL_overview_CSD: Cos'è Alla scoperta dell'informatica?
+        PL_overview_CSP: Cosa sono i principi dell'informatica?
         Unplug1: Cos'è l'Informatica?
+        Unplug10: Internet
+        Unplug11: Conclusione
         Unplug2: Pensiero computazionale
         Unplug3: Programmazione su carta a quadretti
         Unplug4: Algoritmi
@@ -587,149 +869,6 @@ it:
         Unplug7: Composizione di canzoni
         Unplug8: Astrazione
         Unplug9: Programmazione a staffetta
-        Unplug10: Internet
-        Unplug11: Conclusione
-        C1_happy_maps_unplugged: Mappe Felici
-        C1_moveitmoveit_unplugged: Muovilo, muovilo
-        C1_bigevent_unplugged: Il grande evento
-        C1_getting_loopy: Diventare ripetitivi
-        C1_pair_programming: Programmazione in coppia
-        C1_maze_intro_sequencing: 'Labirinto - Corso 1: Introduzione'
-        C1_maze_debugging: 'Labirinto: correzione di errori'
-        C1_bee_level_intro: 'Ape: Introduzione'
-        C1_artist_intro: Artista - Introduzione
-        C1_spelling_bee_intro: 'Ape Sapiente: Introduzione'
-        C1_zuck_repeat_loop: 'Labirinto: Cicli'
-        C1_bee_loops: 'Ape: Cicli'
-        C1_maze_loops: 'Labirinto: Cicli'
-        C1_playlab_storytelling: 'Laboratorio: crea una storia'
-        C1_planting_seed: Piantare un seme
-        C1_building_foundation: Costruire le fondamenta
-        C1_going_places_safely: Cittadinanza digitale - Il mio quartiere digitale
-        C2_maze_intro: 'Labirinto - Corso 2: Introduzione'
-        C2_artist_intro: Artista - Introduzione
-        C2_zuck_repeat_loop: 'Labirinto: Cicli'
-        C2_artist_loops: 'Artista: Cicli'
-        C2_artist_debugging: 'Artista: Correzione di Errori'
-        C2_bee_loops: 'Ape: Cicli'
-        C2_bee_debugging: 'Ape: Correzione di Errori'
-        C2_bee_conditionals: 'Ape: Istruzioni Condizionali'
-        C2_playlab_createstory: 'Laboratorio: Crea una Storia'
-        C2_graph_paper: Programmazione su carta a quadretti
-        C2_conditionals_with_cards: Istruzioni condizionali
-        C2_binary_bracelets: Braccialetti Binari
-        C2_relay_programming: Programmazione a staffetta
-        C2_paper_airplanes: Aeroplani di carta
-        C2_digital_footprint: Segui le tracce digitali
-        C2_digital_footprint_v2: Segui le tracce digitali
-        C3_maze_level_4: 'Labirinto: Cicli'
-        C3_artist_intro: Artista - Introduzione
-        C3_artist_functions: 'Artista: Funzioni'
-        C3_bee_functions: 'Ape: Funzioni'
-        C3_bee_conditionals: 'Ape: Istruzioni Condizionali'
-        C3_maze_conditionals: 'Labirinto: Istruzioni Condizionali'
-        C3_artist_nested_loops: Cicli annidati
-        C3_farmer_while: Cicli "mentre"
-        C3_bee_nested_loops: Cicli annidati
-        C3_bee_debugging: 'Ape: Correzione di Errori'
-        C3_bounce: Ping-Pong
-        C3_playlab_create_game: 'Laboratorio: Crea un Gioco'
-        C3_computational_thinking: Pensiero computazionale
-        C3_dice_race: Gara con i Dadi
-        C3_internet: Internet
-        C3_crowdsourcing: Intelligenza collettiva
-        C3_functional_suncatchers: Acchiappa-sole Funzionale
-        C3_songwriting_with_parameters: Scrittura musicale di un programma - Parametri
-        C4_intro: Introduzione
-        C4_loops_zombie: Cicli
-        C4_bee_conditional: 'Ape: Istruzioni Condizionali'
-        C4_variables_artist: 'Artista: Variabili'
-        C4_variables_playlab: 'Laboratorio: Variabili'
-        C4_for_loops: Cicli con contatore
-        C4_for_loops_bee: Cicli con contatore
-        C4_for_loops_no_bee: Cicli con contatore
-        C4_math_artist: Programmare l'artista usando la matematica
-        C4_function_edit: Modifica di funzioni
-        C4_function_create: Creazione di funzioni
-        C4_function_parameters: Funzioni con parametri
-        C4_conditionals: Istruzioni condizionali
-        C4_unplugged_algorithms: Algoritmi per il Tangram
-        C4_unplugged_madlibs: Mad-Libs
-        C4_unplugged_variables: Variabili e buste
-        C4_unplugged_forloops: Cicli con contatore
-        C4_unplugged_parameters: Composizione di Canzoni - Parametri
-        C4_unplugged_binary: Binario
-        CSF_a_b_artist_loops: Cicli con l'artista
-        CSF_artist_angles: Angoli con l'Artista
-        CSF_collector_k1_blocks: La collezionista
-        CSF_collector_repeat_loops: La collezionista - Cicli (istruzioni di ripetizione)
-        CSF_collector_text_blocks: La collezionista
-        CSF_create_functions: Creazione di funzioni
-        CSF_debugging_k1_blocks: Correzione errori (debugging)
-        CSF_debugging_text_blocks: Correzione errori (debugging)
-        CSF_EF_cs_matters: L'informatica è importante
-        CSF_maze_intro_k1_blocks: Introduzione a Code Studio
-        CSF_maze_intro_text_blocks: Introduzione a Code Studio
-        CSF_my_robotic_friends: I miei amici robotici
-        CSF_Power_of_Words: Cittadinanza digitale - Il potere delle parole
-        CSF_Super_Digital_Citizen: Cittadinanza digitale - Super cittadino digitale
-        CSF_stevie_big_project: Stefi e il grande progetto
-        CSF_unspotted_bugs: Quei fastidiosi insetti nascosti
-        CSF_zuck_loops_short: Cicli (istruzioni di ripetizione)
-        frozen_intro: Introduzione all'Ora del Codice
-        frozen_loops: Introduzione ai Cicli
-        frozen_functions: Introduzione alle Funzioni
-        playlab_intro: Introduzione al Laboratorio
-        playlab_events: 'Laboratorio: Eventi'
-        playlab_repeat_forever: 'Laboratorio: Ripeti per Sempre'
-        tutorial_puzzle_challenge: Corso "Esercitazione Puzzle"
-        infinity_playlab_intro: Laboratorio - Introduzione
-        infinity_playlab_events: Laboratorio - Eventi
-        infinity_playlab_repeat_forever: Laboratorio - Ripeti per sempre
-        csd_concept_how_computers_work: Come Funzionano i Computer - Introduzione
-        csd_concept_computer: 'Come Funzionano i Computer: Cosa rende un Computer,
-          un Computer?'
-        csd_concept_binary_data: 'Come Funzionano i Computer: Dati e Sistema Binari'
-        csd_concept_circuits_logic: 'Come Funzionano i Computer: Circuiti e Logica'
-        csd_concept_memory_cpu_input_output: 'Come Funzionano i Computer: Memoria,
-          CPU, Ingressi e Uscite'
-        csd_concept_hardware_software: 'Come Funzionano i Computer: Hardware e Software'
-        csd_concept_search: Come Funziona la Ricerca
-        csd_external_amazon_data: Come vengono utilizzati i big data nei sistemi di
-          suggerimento di Amazon per cambiare le nostre vite
-        csd_external_netflix_data: In che modo Netflix crea show televisivi e suggerimenti
-          sui film?
-        csd_external_waze_data: Perché così tanti utenti sono fissati con Waze?
-        csd_gamelab_animation_tab: The Animation Tab
-        csd_gamelab_drawloop: Introduzione alla funzione ciclica draw
-        csd_gamelab_sprites_1: Introduzione ai personaggi
-        csd_gamelab_velocity: Velocità
-        csd_weblab_intro_1: Introduzione a Sviluppo Web - Parte 1
-        csd_weblab_intro_2: Introduzione a Sviluppo Web - Parte 2
-        csd_weblab_css_1: Introduzione a CSS - Parte 1
-        csd_weblab_css_2: Introduzione a CSS - Parte 2
-        csd_weblab_intro_3: Introduzione a Sviluppo Web - Parte 3
-        csp_applab_functions: Introduzione alle Funzioni
-        csp_applab_functions_parameters: Funzioni con parametri
-        csp_applab_loops: Cicli
-        csp_concept_rgb: Un po ' sui pixel
-        csp_cs_is_changing_everything: L'informatica sta cambiando ogni cosa
-        csp_pixelation_color_1: Color pixelation widget - parte 1
-        csp_pixelation_color_2: Color pixelation widget - parte 2
-        csp_pixelation_color_3: Color pixelation widget - parte 3
-        csp_pixelation_bw: Bianco e nero pixelation widget
-        csp_U1L14_tipstricks: Unità 1 Lezione 14 consigli per l'insegnante
-        csp_textcompression: Widget di compressione del testo
-        csp_textcompression_new: Widget di compressione del testo
-        alg_1_intro: CS in Algebra - introduzione
-        alg_2_eval_block: CS in Algebra - -Blocchi di valutazione
-        alg_3_pemdas: CS in Algebra - ordine delle operazioni
-        alg_4_data_types: CS in Algebra - Tipi di dato
-        alg_5_contracts: CS in Algebra - Contratti
-        alg_6_variables: CS in Algebra - Variabili
-        alg_7_function: CS in Algebra - Funzioni
-        alg_8_design_recipe: CS in Algebra - ricetta di Design
-        alg_9_booleans: CS in Algebra - Valori booleani
         alg_10_conditionals: CS in Algebra - Condizioni
         alg_11_coordinate_plane: CS in Algebra - Piano Cartesiano
         alg_12_biggame_variables: CS in Algebra - Big Game Variabili
@@ -739,49 +878,224 @@ it:
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Rilevamento delle
           collisioni
         alg_17_sambat_compound_booleans: CS in Algebra - Booleani composti
-        starwars_intro: 'Guerre Stellari: Costruisci una galassia con il codice -
-          Introduzione'
-        starwars_typing: 'Guerre Stellari: Costruisci una galassia con il codice -
-          JavaScript'
-        starwars_events: 'Guerre Stellari: Costruisci una galassia con il codice -
-          Eventi'
-        starwars_congrats: 'Guerre Stellari: Costruisci una galassia con il codice
-          - Complimenti'
-        starwars_blocks_intro: 'Guerre Stellari: Costruisci una galassia con il codice
-          - Introduzione'
-        starwars_blocks_events: 'Guerre Stellari: Costruisci una galassia con il codice
-          - Eventi'
-        starwars_blocks_congrats: 'Guerre Stellari: Costruisci una galassia con il
-          codice - Complimenti'
-        mc_intro: Minecraft - Introduzione
-        mc_repeat: Minecraft - Ripetizione
-        mc_if_statements: Minecraft - Istruzione "se"
-        mc_congrats_share: Minecraft - Complimenti
-        mc_congrats_no_share: Minecraft - Complimenti
-        gumball_intro: L'Ora del Codice di Gumball - introduzione
-        gumball_events: L'Ora del Codice di Gumball - Eventi
-        gumball_repeat: L'Ora del Codice di Gumball - Ripetizione
-        iceage_intro: L'Ora del Codice con L'Era Glaciale - Introduzione
-        iceage_events: L'Ora del Codice con L'Era Glaciale - Eventi
-        iceage_repeat: L'Ora del Codice con L'Era Glaciale - Ripetizione
-        mc_2016_intro: L'Ora del Codice con Minecraft - Introduzione
-        mc_2016_loops: L'Ora del Codice con Minecraft - Cicli
-        mc_2016_events: L'Ora del Codice con Minecraft - Eventi
-        mc_2016_spawn: L'Ora del Codice con Minecraft - Creare
-        mc_2016_congrats: L'Ora del Codice con Minecraft - Complimenti
-        applab_hoc_welcome: L'ora del codice in Sviluppo App - Benvenuto
-        applab_hoc_setproperty: L'ora del codice in Sviluppo App - setProperty
-        applab_hoc_onevent: L'ora del codice in Sviluppo App - onEvent
+        alg_1_intro: CS in Algebra - introduzione
+        alg_2_eval_block: CS in Algebra - -Blocchi di valutazione
+        alg_3_pemdas: CS in Algebra - ordine delle operazioni
+        alg_4_data_types: CS in Algebra - Tipi di dato
+        alg_5_contracts: CS in Algebra - Contratti
+        alg_6_variables: CS in Algebra - Variabili
+        alg_7_function: CS in Algebra - Funzioni
+        alg_8_design_recipe: CS in Algebra - ricetta di Design
+        alg_9_booleans: CS in Algebra - Valori booleani
         applab_hoc_designmode: L'Ora del Codice Sviluppo App - Modalità Interfaccia
+        applab_hoc_onevent: L'ora del codice in Sviluppo App - onEvent
+        applab_hoc_setproperty: L'ora del codice in Sviluppo App - setProperty
         applab_hoc_share: L'ora del codice in Sviluppo App - condivisione
-        mc_2017_agent_intro: L'Ora del Codice con Minecraft - L'Agente
-        mc_2017_repeat: L'Ora del Codice con Minecraft - Cicli
-        mc_2017_functions: L'Ora del Codice con Minecraft - Funzioni
-        mc_2017_congratulations: L'Ora del Codice con Minecraft - Complimenti
-        mc_2017_puzzle_1: L'Ora del Codice con Minecraft - L'Agente
-        mc_2017_puzzle_3: L'Ora del Codice con Minecraft - Cicli
-        mc_2017_puzzle_8: L'Ora del Codice con Minecraft - Funzioni
-        mc_2017_puzzle_12: L'Ora del Codice con Minecraft - Tempo di giocare
+        applab_hoc_welcome: L'ora del codice in Sviluppo App - Benvenuto
+        applab_intro_designmode: Sviluppo App - Modalità Interfaccia
+        applab_intro_events: Sviluppo App - Rendila interattiva
+        applab_intro_share: Sviluppo App - Condividi la tua app
+        applab_intro_sounds: Sviluppo App - Immagini e suoni
+        applab_intro_welcome: Sviluppo App - Per cominciare
+        artist_intro: Artista - Introduzione
+        c_and_c_digital_sharing: Condivisione digitale
+        c_and_c_great_to_create: È fantastico creare e comportarsi lealmente
+        code-break: Prenditi una Pausa Codice
+        codebreak_e01: 'Code Break 1.0: Algoritmi con Hill Harper'
+        codebreak_e02: 'Code Break 2.0: Prototipi con Mark Cuban e Lyndsey Scott'
+        codebreak_e03: 'Code Break 3.0: Crittografia con Ashton Kutcher e Mia Gil
+          Epner'
+        codebreak_e04: 'Code Break 4.0: Informazione Digitale con Mike Krieger e Alice
+          Keeler'
+        codebreak_e05: 'Code Break 5.0: Simulazioni e Dati con Bill Gates'
+        codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott e Vint Cerf'
+        codebreak_e07: 'Code Break 7.0: Condizionali con Sal Khan e Flo Vaughn'
+        codebreak_e08: 'Code Break 8.0: Variabili con Yara Shahidi e Fuzzy Khosrowshahi '
+        codebreak_e09: 'Code Break 9.0: Eventi con Macklemore e Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: IA con Kat Graham e Kate Park'
+        codebreak_e11: 'Code Break 11.0: Astrazione con Susan Wojcicki e China Anne
+          McClain'
+        codebreak_e12: 'Code Break 12.0: Hardware con Aloe Blacc, Bret Taylor e Paula
+          Mejia'
+        conditionals_with_cards: Lezione Scollegata in Azione - Condizionali con Carte
+        cs-principles-intro-to-objects: 'Principi di Informatica: Introduzione agli
+          Oggetti'
+        csa-alias-video: Uguali e alias
+        csa-day-in-pm-pl: Cosa fa un project manager?
+        csa-equals-video: Il metodo equals ()
+        csa-example-solution-1: 'Live Coding: una soluzione di esempio '
+        csa-multi-select-pl: Dichiarazioni di selezione multipla in Java
+        csa-pl-calling-methods: Metodi di chiamata in Java
+        csa-pl-compareTo: Il metodo compareTo ()
+        csa-pl-creating-objects: Creazione di oggetti
+        csa-pl-documentation: Documentazione in Java Lab
+        csa-pl-equals-book: Scrivere il metodo equals () per la classe Book
+        csa-pl-intro-to-equality: Introduzione all'uguaglianza
+        csa-pl-intro-to-equals-method: Introduzione al metodo .equals ()
+        csa-pl-intro-to-oop: Introduzione alla programmazione orientata agli oggetti
+        csa-pl-intro-to-pm: Introduzione alla gestione dei progetti
+        csa-pl-intro-to-strings: Introduzione alle stringhe in Java
+        csa-pl-vocab-pm: Vocabolario per la gestione dei progetti
+        csa-pl-vpl-m1-unit-3: Ingegneria del software nell'Unità 3
+        csa-pl-welcome-to-Neighborhood: Benvenuto in The Neighborhood
+        csa-user-stories: Storie di utenti in ingegneria del software
+        csa_accessor_methods: 'CSA: metodi di accesso'
+        csa_calling_methods: 'CSA: metodi di chiamata'
+        csa_casting: 'CSA: Casting'
+        csa_column_major_traversal: 'CSA: Attraversamento della colonna maggiore'
+        csa_conditional_statements: 'CSA: dichiarazioni condizionali'
+        csa_constructors: 'CSA: Costruttori'
+        csa_creating_a_scanner_object: 'CSA: creazione di un oggetto scanner'
+        csa_creating_objects: 'CSA: creazione di oggetti'
+        csa_creating_variables: 'CSA: creazione di variabili'
+        csa_enhanced_for_loops: 'CSA: migliorato per i loop'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: migliorato per loop e array 2D'
+        csa_equals_and_aliases: 'CSA: Uguali e alias'
+        csa_for_loops: 'CSA: per Loops'
+        csa_images_and_pixels: 'CSA: immagini e pixel'
+        csa_inheritance: 'CSA: Eredità'
+        csa_instance_variables_and_attributes: 'CSA: variabili e attributi dell''istanza'
+        csa_modifying_values_in_a_1d_array: 'CSA: modifica dei valori in un array
+          1D'
+        csa_multi-selection_statements: 'CSA: dichiarazioni di selezione multipla'
+        csa_mutator_methods: 'CSA: metodi mutatori'
+        csa_nested_loops: 'CSA: loop annidati'
+        csa_object_oriented_programming: 'CSA: programmazione orientata agli oggetti'
+        csa_one_dimensional_arrays: 'CSA: matrici monodimensionali (1D)'
+        csa_overloaded_constructors: 'CSA: Costruttori sovraccaricati'
+        csa_polymorphism: 'CSA: polimorfismo'
+        csa_printing_in_java: 'CSA: stampa in Java'
+        csa_private_methods: 'CSA: metodi privati'
+        csa_random_numbers: 'CSA: numeri casuali'
+        csa_recursion: 'CSA: ricorsione'
+        csa_remving_data_from_an_arraylist: 'CSA: rimozione di dati da un ArrayList'
+        csa_row_major_traversal: 'CSA: Attraversamento in fila maggiore'
+        csa_scanner_class_methods: 'CSA: metodi delle classi di scanner'
+        csa_searching_algorithms: 'CSA: algoritmi di ricerca'
+        csa_software_engineering_code_reviews: 'CSA: Ingegneria del software - Recensioni
+          del codice'
+        csa_sorting_algorithms: 'CSA: algoritmi di ordinamento'
+        csa_static_methods: 'CSA: metodi statici'
+        csa_static_variables: 'CSA: variabili statiche'
+        csa_the_arraylist_class: 'CSA: la classe ArrayList'
+        csa_the_equals_method: 'CSA: il metodo equals ()'
+        csa_the_tostring_method: 'CSA: il metodo toString ()'
+        csa_two_dimensional_arrays: 'CSA: matrici bidimensionali (2D)'
+        csa_two_way_selection_and_not: 'CSA: selezione bidirezionale e NON'
+        csa_welcome_to_the_theater: 'CSA: Benvenuto a teatro'
+        csa_while_loops: 'CSA: While Loops'
+        csa_working_with_2d_array_elements: 'CSA: utilizzo di elementi di array 2D'
+        csa_working_with_arraylist_data: 'CSA: utilizzo dei dati ArrayList'
+        csa_wrapper_classes_part_1: 'CSA: classi Wrapper, parte 1'
+        csa_wrapper_classes_part_2: 'CSA: classi Wrapper, parte 2'
+        csa_writing_a_method: 'CSA: scrivere un metodo'
+        csc-ecosystems-intro: Introduzione agli ecosistemi
+        csc-event-short-intro: Breve introduzione agli eventi
+        csc-poem-art-intro: Video introduttivo
+        csc-poem-art-outro: Video finale
+        csc-sprite-lab-pixel-editor: Disegna il tuo sprite
+        csc-starquilts-intro: 'CSC: Trapunte Star'
+        csc_animal_adaptations_intro: Introduzione agli adattamenti degli animali
+        csc_fm_pilot: Macchine funzionali (pilota)
+        csc_fm_pilot_v2: 'Introduzione alle macchine funzionali '
+        csc_timecapsule_intro: Introduzione a Time Capsule
+        csd_app_lab_design_mode: Modalità di progettazione CSD App Lab
+        csd_app_lab_events: Eventi CSD App Lab
+        csd_applab_arrays: Introduzione alle matrici (array)
+        csd_applab_designmode: 'Alla scoperta dell''informatica: Sviluppo App - Modalità
+          Interfaccia'
+        csd_applab_designmode_short: Sviluppo App - Modalità Interfaccia
+        csd_applab_loops: Loop in Sviluppo App
+        csd_applab_parameters: Funzioni con parametri
+        csd_concept_binary_data: 'Come Funzionano i Computer: Dati e Sistema Binari'
+        csd_concept_circuits_logic: 'Come Funzionano i Computer: Circuiti e Logica'
+        csd_concept_computer: 'Come Funzionano i Computer: Cosa rende un Computer,
+          un Computer?'
+        csd_concept_hardware_software: 'Come Funzionano i Computer: Hardware e Software'
+        csd_concept_how_computers_work: Come Funzionano i Computer - Introduzione
+        csd_concept_memory_cpu_input_output: 'Come Funzionano i Computer: Memoria,
+          CPU, Ingressi e Uscite'
+        csd_concept_search: Come Funziona la Ricerca
+        csd_debugging: Correzione errori (debugging)
+        csd_external_amazon_data: Come vengono utilizzati i big data nei sistemi di
+          suggerimento di Amazon per cambiare le nostre vite
+        csd_external_netflix_data: In che modo Netflix crea show televisivi e suggerimenti
+          sui film?
+        csd_external_waze_data: Perché così tanti utenti sono fissati con Waze?
+        csd_gamelab_animation_tab: The Animation Tab
+        csd_gamelab_booleans: Espressioni Booleane
+        csd_gamelab_conditional_statements: Istruzioni Condizionali
+        csd_gamelab_drawloop: Introduzione alla funzione ciclica draw
+        csd_gamelab_functions: Richiamare e definire funzioni
+        csd_gamelab_if_else: Istruzioni condizionali Se/altrimenti
+        csd_gamelab_sprites_1: Introduzione ai personaggi
+        csd_gamelab_velocity: Velocità
+        csd_how_teamwork_works: Come funziona il lavoro di squadra
+        csd_ml_ethics_ai: 'Etica e Intelligenza Artificiale '
+        csd_ml_import_model: Importazione di un modello AI
+        csd_ml_intro_ai_lab_july2021: Introduzione al Laboratorio IA
+        csd_ml_intro_to_ai_lab: Introduzione al Laboratorio IA
+        csd_ml_model_cards_july2021: Schede modello in Laboratorio IA
+        csd_ml_numerical_ai_lab: Dati numerici in Laboratorio IA
+        csd_ml_training_testing_ai_lan: Addestramento e verifica in Laboratorio IA
+        csd_pair_programming: Programmazione in coppia
+        csd_problem_solving_process: Il processo di risoluzione dei problemi
+        csd_sprite_properties: Proprietà del personaggio
+        csd_teamwork_and_disagreement: Lavoro di squadra - Gestire i disaccordi
+        csd_u6_call_define_functions: Chiamata e definizione di funzioni
+        csd_u6_circuit_playground: Elaborazione fisica
+        csd_u6_if_statements: 'CSD: Istruzioni if'
+        csd_u6_input_output: Ingressi e uscite
+        csd_u6_variables_part2: Variabili - Lo schema a contatore
+        csd_weblab_css_1: Introduzione a CSS - Parte 1
+        csd_weblab_css_2: Introduzione a CSS - Parte 2
+        csd_weblab_intro_1: Introduzione a Sviluppo Web - Parte 1
+        csd_weblab_intro_2: Introduzione a Sviluppo Web - Parte 2
+        csd_weblab_intro_3: Introduzione a Sviluppo Web - Parte 3
+        csd_what_computers_are: Cos'è un computer?
+        csd_what_computers_do: Cosa fanno i computer?
+        csf21pilot_events: 'Laboratorio dei personaggi: personaggi in azione'
+        csf21pilot_prompts: 'Laboratorio dei personaggi:  testo  e richieste all''utente'
+        csf_follow_the_digital_trail: Segui le tue tracce digitali
+        csf_lots_of_sprites: 'Sprite Lab: Un sacco di sprite'
+        csf_my_online_neighborhood_2020: Il mio quartiere digitale
+        csf_private_and_personal_information: Dati personali e altri dati
+        csp-pd-welcome: Benvenuto in Famiglia!
+        csp_U1L14_tipstricks: Unità 1 Lezione 14 consigli per l'insegnante
+        csp_applab_functions: Introduzione alle Funzioni
+        csp_applab_functions_parameters: Funzioni con parametri
+        csp_applab_loops: Cicli
+        csp_applab_parameters: Funzioni con parametri
+        csp_concept_rgb: Un po ' sui pixel
+        csp_cs_is_changing_everything: L'informatica sta cambiando ogni cosa
+        csp_defining_calling_functions: Definizione e chiamata delle funzioni
+        csp_global_vs_local: Debug di variabili globali e locali
+        csp_pixelation_bw: Bianco e nero pixelation widget
+        csp_pixelation_color_1: Color pixelation widget - parte 1
+        csp_pixelation_color_2: Color pixelation widget - parte 2
+        csp_pixelation_color_3: Color pixelation widget - parte 3
+        csp_textcompression: Widget di compressione del testo
+        csp_textcompression_new: Widget di compressione del testo
+        csp_tutorial_datatab: Scheda Dati in App Lab
+        csp_tutorial_datavis1: Visualizzatore di dati in App Lab - Parte 1
+        csp_tutorial_datavis2: Visualizzatore di dati in App Lab - Parte 2
+        csp_tutorial_libraries: Librerie in App Lab
+        elem_pd_2: Informatica per Scuole Elementari - PD video 2/2
+        enter_your_own_poem: Inserisci la tua poesia
+        farmer_intro: Introduzione a "La contadina"
+        flappy_intro: Introduzione a "Flappy"
+        frozen_functions: Introduzione alle Funzioni
+        frozen_intro: Introduzione all'Ora del Codice
+        frozen_loops: Introduzione ai Cicli
+        function: Funzioni
+        gumball_events: L'Ora del Codice di Gumball - Eventi
+        gumball_intro: L'Ora del Codice di Gumball - introduzione
+        gumball_repeat: L'Ora del Codice di Gumball - Ripetizione
+        hello_world_congrats: 'Ciao a tutto: cosa desiderate'
+        hello_world_events: Ciao mondo - Programmare con gli eventi
+        hello_world_intro: Ciao mondo - Benvenuti nel Laboratorio dei personaggi
+        hint_videos_d_11_11_first: 'Video suggerimenti: D.11.11 Prima di tutto'
+        hint_videos_d_11_11_last: 'Video suggerimenti: D.11.11 Infine'
         hint_videos_d_11_3_first: 'Video suggerimenti: D.11.3 Prima di tutto'
         hint_videos_d_11_3_last: 'Video suggerimenti: D.11.3 Infine'
         hint_videos_d_11_4_first: 'Video suggerimenti: D.11.4 Prima di tutto'
@@ -794,432 +1108,125 @@ it:
         hint_videos_d_11_7_last: 'Video suggerimenti: D.11.7 Infine'
         hint_videos_d_11_9_first: 'Video suggerimenti: D.11.9 Prima di tutto'
         hint_videos_d_11_9_last: 'Video suggerimenti: D.11.9 Infine'
-        hint_videos_d_11_11_first: 'Video suggerimenti: D.11.11 Prima di tutto'
-        hint_videos_d_11_11_last: 'Video suggerimenti: D.11.11 Infine'
-        applab_intro_welcome: Sviluppo App - Per cominciare
-        applab_intro_events: Sviluppo App - Rendila interattiva
-        applab_intro_sounds: Sviluppo App - Immagini e suoni
-        applab_intro_designmode: Sviluppo App - Modalità Interfaccia
-        applab_intro_share: Sviluppo App - Condividi la tua app
-        csd_applab_arrays: Introduzione alle matrici (array)
-        CSF_skinOverview_Harvester: La contadina
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Cicli con BB-8
-        CSF_harvester_skinOverview_K-1: La contadina
-        CSF_harvester_loops_K1: Cicli con la contadina
-        CSF_scrat_loops_K1: Cicli con l'Era glaciale
-        CSF_scrat_loops_CF: Cicli con l'Era glaciale
-        CSF_if_allskins: Il blocco "se"
-        CSF_ifelse_allskins: Uso dei blocchi se/altrimenti
-        CSF_ifelseifelse_allskins: Uso dei blocchi se/altrimenti-se/altrimenti
-        CSF_loops_AB: Cicli
-        csd_gamelab_booleans: Espressioni Booleane
-        csd_gamelab_conditional_statements: Istruzioni Condizionali
-        csd_gamelab_if_else: Istruzioni condizionali Se/altrimenti
-        CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei personaggi
-        CSF_Spritelab_MakeSprite_CDEF: Come creare un personaggio nel Laboratorio
-          dei personaggi
-        CDEF_Video_SpritesInAction: Personaggi in azione
-        CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in azione
-        CSF_StarWars_ProjectIntro: Introduzione al progetto Star Wars
-        mc_2018_intro: 'Minecraft: Viaggio Acquatico - Introduzione'
-        MC_2018_loops: 'Minecraft: Viaggio Acquatico - Ripeti fino a che'
-        mc_2018_conditionals: 'Minecraft: Viaggio Acquatico - Istruzioni condizionali'
-        mc_2018_closing: 'Minecraft: Viaggio Acquatico - Congratulazioni'
-        hoc_dance_warmup: Ballando col codice - Preparazione
-        hoc_dance_events: Ballando col codice - Eventi
-        hoc_dance_properties: Ballando col codice - Proprietà
         hoc_dance_congrats: Ballando col codice - Parte la festa!
-        c_and_c_great_to_create: È fantastico creare e comportarsi lealmente
-        c_and_c_digital_sharing: Condivisione digitale
-        teaching_csf_how_it_works: Introduzione ai corsi di fondamenti di informatica
-        elem_pd_2: Informatica per Scuole Elementari - PD video 2/2
-        what_is_cs: Cos'è l'informatica?
-        repeat_block: Uso del blocco Ripeti
+        hoc_dance_congrats_2019: Dance Party - Via al party!
+        hoc_dance_events: Ballando col codice - Eventi
+        hoc_dance_events_2019: Dance Party - Eventi
+        hoc_dance_measures_2019: Ballando col codice - Battute
+        hoc_dance_properties: Ballando col codice - Proprietà
+        hoc_dance_properties_2019: Dance Party - Proprietà
+        hoc_dance_warmup: Ballando col codice - Preparazione
+        hoc_dance_warmup_2019: Dance Party - Warm up
+        hoc_wrapup: Conclusione dell'Ora del Codice
+        how-ai-works-creativity-full: Le Intelligenze artificiali hanno creatività
+          o immaginazione?
+        how-ai-works-llms-full: Come funzionano i Chatbot e i Modelli Linguistici
+        how-ai-works-llms-part1: Chatbot e Modelli Linguistici parte 1
+        how-ai-works-llms-part2: Chatbot e Modelli Linguistici parte 2
+        how-to-k5-workshops: 'Code.org - Fondamenti di informatica: provato dai bambini,
+          approvato dagli insegnanti'
+        iceage_events: L'Ora del Codice con L'Era Glaciale - Eventi
+        iceage_intro: L'Ora del Codice con L'Era Glaciale - Introduzione
+        iceage_repeat: L'Ora del Codice con L'Era Glaciale - Ripetizione
+        if: Blocco "se"
+        if_else: Blocco "se-altrimenti"
+        if_else_scrat: Blocco "se-altrimenti"
+        infinity_playlab_events: Laboratorio - Eventi
+        infinity_playlab_intro: Laboratorio - Introduzione
+        infinity_playlab_repeat_forever: Laboratorio - Ripeti per sempre
         lesson_planning: Pianificazione Lezione
+        loop_for: Blocco "ripeti con contatore"
+        loop_times: Blocco "ripeti ... volte"
+        loop_until: Blocco "ripeti fino a che"
+        loop_while: Blocco "mentre"
+        maze_intro: 'Labirinto - Corso 2: Introduzione'
+        mc_2016_congrats: L'Ora del Codice con Minecraft - Complimenti
+        mc_2016_events: L'Ora del Codice con Minecraft - Eventi
+        mc_2016_intro: L'Ora del Codice con Minecraft - Introduzione
+        mc_2016_loops: L'Ora del Codice con Minecraft - Cicli
+        mc_2016_spawn: L'Ora del Codice con Minecraft - Creare
+        mc_2017_agent_intro: L'Ora del Codice con Minecraft - L'Agente
+        mc_2017_congratulations: L'Ora del Codice con Minecraft - Complimenti
+        mc_2017_functions: L'Ora del Codice con Minecraft - Funzioni
+        mc_2017_puzzle_1: L'Ora del Codice con Minecraft - L'Agente
+        mc_2017_puzzle_12: L'Ora del Codice con Minecraft - Tempo di giocare
+        mc_2017_puzzle_3: L'Ora del Codice con Minecraft - Cicli
+        mc_2017_puzzle_8: L'Ora del Codice con Minecraft - Funzioni
+        mc_2017_repeat: L'Ora del Codice con Minecraft - Cicli
+        mc_2018_closing: 'Minecraft: Viaggio Acquatico - Congratulazioni'
+        mc_2018_conditionals: 'Minecraft: Viaggio Acquatico - Istruzioni condizionali'
+        mc_2018_intro: 'Minecraft: Viaggio Acquatico - Introduzione'
+        mc_congrats_no_share: Minecraft - Complimenti
+        mc_congrats_share: Minecraft - Complimenti
+        mc_if_statements: Minecraft - Istruzione "se"
+        mc_intro: Minecraft - Introduzione
+        mc_repeat: Minecraft - Ripetizione
+        oceans_machine_learning: Cos'è l'Apprendimento Automatico (Machine Learning)
+        oceans_societal_implications: Ripercussioni sociali
+        oceans_training_data: Dati di apprendimento e distorsioni
         opd_closing: 'Fondamenti di Informatica - Corso per insegnanti: Conclusione
           & Passi successivi'
-        why_unplugged_lessons: Essere "scollegato"
-        writing_first_program: Scrivi il tuo primo programma per computer
-        conditionals_with_cards: Lezione Scollegata in Azione - Condizionali con Carte
+        outbreak_events: Simulatore di focolaio - Eventi
+        outbreak_intro: Simulatore di focolaio - Introduzione
+        outbreak_outro: Simulatore di focolaio - Gioco libero
+        outbreak_scientist: Simulatore di focolaio - Pensa come uno scienziato
+        parameters: Funzioni con parametri
+        playlab_2021: Introduzione al Laboratorio
+        playlab_2021_reader: Introduzione al Laboratorio
+        playlab_events: 'Laboratorio: Eventi'
+        playlab_intro: Introduzione al Laboratorio
+        playlab_repeat_forever: 'Laboratorio: Ripeti per Sempre'
+        poemart_celebration: L'arte della poesia  - Celebrazione
+        poemart_events: L'arte della poesia - Eventi
+        poemart_imagery: L'arte della poesia  - Metafore
+        poemart_intro: L'arte della poesia - Introduzione
+        poembot-playtest-events: Eventi del test di gioco di PoemBot
+        poembot-playtest-intro: Introduzione al test di gioco di PoemBot
+        poembot-playtest-sprites: Personaggi del test di gioco di PoemBot
+        poetry_module_conditionals: Condizionali - Coding con la poesia
+        poetry_module_multichoiceprompts: Prompt a scelta multipla - Coding con la
+          poesia
+        poetry_module_planningapp: Pianifica la tua app generatrice di poesie - Coding
+          con la poesia
+        poetry_module_textandvariables: Testo e variabili - Coding con la poesia
+        poetry_module_variables: Variabili - Coding con la poesia
+        repeat_block: Uso del blocco Ripeti
+        rough_poemart_congrats: L'arte della poesia - Congratulazioni
+        rough_poemart_events: L'arte della poesia - Eventi
+        rough_poemart_imagery: L'arte della poesia  - Metafore
+        rough_poemart_intro: L'arte della poesia - Introduzione
         songwriting_with_functions: Lezione Scollegata in Azione - Composizione di
           Canzoni con le Funzioni
-        what_is_an_event: Cos'è un evento?
+        star_quilts_intro_to_artist: 'Star Quilts: Introduzione all''artista'
+        starquilts_intro_artist: Introduzione a Star Quilts
+        starwars_blocks_congrats: 'Guerre Stellari: Costruisci una galassia con il
+          codice - Complimenti'
+        starwars_blocks_events: 'Guerre Stellari: Costruisci una galassia con il codice
+          - Eventi'
+        starwars_blocks_intro: 'Guerre Stellari: Costruisci una galassia con il codice
+          - Introduzione'
+        starwars_congrats: 'Guerre Stellari: Costruisci una galassia con il codice
+          - Complimenti'
+        starwars_events: 'Guerre Stellari: Costruisci una galassia con il codice -
+          Eventi'
+        starwars_intro: 'Guerre Stellari: Costruisci una galassia con il codice -
+          Introduzione'
+        starwars_typing: 'Guerre Stellari: Costruisci una galassia con il codice -
+          JavaScript'
         teaching_cs_pair_programming: 'Insegnare i Fondamenti di CS: Programmazione
           in Pari'
+        teaching_csf_how_it_works: Introduzione ai corsi di fondamenti di informatica
         teaching_problem_solving: 'Insegnare i Fondamenti di CS: Insegnare la Risoluzione
           dei Problemi'
-        csd_applab_designmode: 'Alla scoperta dell''informatica: Sviluppo App - Modalità
-          Interfaccia'
-        csd_pair_programming: Programmazione in coppia
-        csd_gamelab_functions: Richiamare e definire funzioni
-        csd_applab_parameters: Funzioni con parametri
-        csd_applab_loops: Loop in Sviluppo App
-        csd_problem_solving_process: Il processo di risoluzione dei problemi
-        CSF_Going_Places_Safely: Il mio quartiere digitale
-        CSF_SpriteLab_Intro_v2: Introduzione al Laboratorio dei personaggi
-        CSF_Spritelab_MakeSprite_v2: Come creare un personaggio
-        CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
-        csd_debugging: Correzione errori (debugging)
-        csd_applab_designmode_short: Sviluppo App - Modalità Interfaccia
-        csp-pd-welcome: Benvenuto in Famiglia!
-        CSF-Teaching-Problem-Solving: Fondamenti di informatica - Insegnare a risolvere
-          i problemi (Problem Solving)
+        tutorial_puzzle_challenge: Corso "Esercitazione Puzzle"
         u5-traversals-get-list-explanation: Code.org [levelbuilder] - Video Pilota
           - Blocco dei dati
         u7-libraries-explanation: 'App Lab: Crea i Tuoi Blocchi - Come Usare le Librerie'
-        how-to-k5-workshops: 'Code.org - Fondamenti di informatica: provato dai bambini,
-          approvato dagli insegnanti'
+        upload_sprites_backgrounds: Caricamento di sprite e sfondi personalizzati
+        what-is-creativity: Cos'è la creatività?
+        what_is_an_event: Cos'è un evento?
+        what_is_cs: Cos'è l'informatica?
         why-should-teach-unplugged-activities: FAQ - Perché proporre lezioni tradizionali
           (unplugged)?
-        cs-principles-intro-to-objects: 'Principi di Informatica: Introduzione agli
-          Oggetti'
-        oceans_machine_learning: Cos'è l'Apprendimento Automatico (Machine Learning)
-        oceans_training_data: Dati di apprendimento e distorsioni
-        oceans_societal_implications: Ripercussioni sociali
-        hoc_dance_congrats_2019: Dance Party - Via al party!
-        hoc_dance_warmup_2019: Dance Party - Warm up
-        hoc_dance_events_2019: Dance Party - Eventi
-        hoc_dance_measures_2019: Ballando col codice - Battute
-        hoc_dance_properties_2019: Dance Party - Proprietà
-        csd_what_computers_do: Cosa fanno i computer?
-        csf_my_online_neighborhood_2020: Il mio quartiere digitale
-        csf_follow_the_digital_trail: Segui le tue tracce digitali
-        csf_private_and_personal_information: Dati personali e altri dati
-        csd_what_computers_are: Cos'è un computer?
-        codebreak_e01: 'Code Break 1.0: Algoritmi con Hill Harper'
-        codebreak_e02: 'Code Break 2.0: Prototipi con Mark Cuban e Lyndsey Scott'
-        codebreak_e03: 'Code Break 3.0: Crittografia con Ashton Kutcher e Mia Gil
-          Epner'
-        codebreak_e04: 'Code Break 4.0: Informazione Digitale con Mike Krieger e Alice
-          Keeler'
-        codebreak_e05: 'Code Break 5.0: Simulazioni e Dati con Bill Gates'
-        csd_how_teamwork_works: Come funziona il lavoro di squadra
-        csd_teamwork_and_disagreement: Lavoro di squadra - Gestire i disaccordi
-        codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott e Vint Cerf'
-        codebreak_e07: 'Code Break 7.0: Condizionali con Sal Khan e Flo Vaughn'
-        codebreak_e08: 'Code Break 8.0: Variabili con Yara Shahidi e Fuzzy Khosrowshahi '
-        codebreak_e09: 'Code Break 9.0: Eventi con Macklemore e Scott Forstall'
-        codebreak_e10: 'Code Break 10.0: IA con Kat Graham e Kate Park'
-        codebreak_e11: 'Code Break 11.0: Astrazione con Susan Wojcicki e China Anne
-          McClain'
-        codebreak_e12: 'Code Break 12.0: Hardware con Aloe Blacc, Bret Taylor e Paula
-          Mejia'
-        csf21pilot_events: 'Laboratorio dei personaggi: personaggi in azione'
-        csf21pilot_prompts: 'Laboratorio dei personaggi:  testo  e richieste all''utente'
-        csd_ml_intro_to_ai_lab: Introduzione al Laboratorio IA
-        csd_ml_import_model: Importazione di un modello AI
-        csf_lots_of_sprites: 'Sprite Lab: Un sacco di sprite'
-        playlab_2021: Introduzione al Laboratorio
-        playlab_2021_reader: Introduzione al Laboratorio
-        csp_defining_calling_functions: Definizione e chiamata delle funzioni
-        csp_tutorial_datatab: Scheda Dati in App Lab
-        csp_tutorial_libraries: Librerie in App Lab
-        PL-Video-21: Benvenuto nella sezione Professional Learning di Code.org!
-        csp_tutorial_datavis1: Visualizzatore di dati in App Lab - Parte 1
-        csp_tutorial_datavis2: Visualizzatore di dati in App Lab - Parte 2
-        csd_ml_intro_ai_lab_july2021: Introduzione al Laboratorio IA
-        csd_ml_training_testing_ai_lan: Addestramento e verifica in Laboratorio IA
-        csd_ml_model_cards_july2021: Schede modello in Laboratorio IA
-        csd_ml_numerical_ai_lab: Dati numerici in Laboratorio IA
-        Gettting_Started_Progress: Progresso, feedback e valutazione
-        Gettting_Started_ClassSection: Creazione di una sezione di classe
-        Gettting_Started_StudentExperience: L'esperienza degli studenti
-        Getting_Started_BasicFeatures: Caratteristiche di base di Code.org
-        PL_overview_CSD: Cos'è Alla scoperta dell'informatica?
-        PL_CSD_TeacherTips_Advise: 'Suggerimenti per gli insegnanti: consigli per
-          i nuovi insegnanti'
-        PL_CSD_TeacherTips_IntroToCSD: 'Suggerimenti per gli insegnanti: introduzione
-          al corso Alla scoperta dell''informatica'
-        PL_CSD_TeacherTips_ProblemSolvingProcess: 'Suggerimenti per gli insegnanti:
-          la procedura di risoluzione dei problemi'
-        PL_CSD_TeacherTips_PairProgramming: 'Suggerimenti per gli insegnanti: programmazione
-          in coppia'
-        PL_CSD_TeacherTips_Debugging: 'Suggerimenti per gli insegnanti: debugging'
-        PL_CSD_TeacherTips_LeadLearner: 'Suggerimenti per gli insegnanti: potenziale
-          studente'
-        poembot-playtest-intro: Introduzione al test di gioco di PoemBot
-        poembot-playtest-sprites: Personaggi del test di gioco di PoemBot
-        poembot-playtest-events: Eventi del test di gioco di PoemBot
-        hello_world_intro: Ciao mondo - Benvenuti nel Laboratorio dei personaggi
-        hello_world_events: Ciao mondo - Programmare con gli eventi
-        hello_world_congrats: 'Ciao a tutto: cosa desiderate'
-        csp_global_vs_local: Debug di variabili globali e locali
-        rough_poemart_intro: L'arte della poesia - Introduzione
-        rough_poemart_events: L'arte della poesia - Eventi
-        rough_poemart_imagery: L'arte della poesia  - Metafore
-        rough_poemart_congrats: L'arte della poesia - Congratulazioni
-        poetry_module_variables: Variabili - Coding con la poesia
-        poetry_module_textandvariables: Testo e variabili - Coding con la poesia
-        poetry_module_planningapp: Pianifica la tua app generatrice di poesie - Coding
-          con la poesia
-        poetry_module_multichoiceprompts: Prompt a scelta multipla - Coding con la
-          poesia
-        poetry_module_conditionals: Condizionali - Coding con la poesia
-        poemart_intro: L'arte della poesia - Introduzione
-        poemart_events: L'arte della poesia - Eventi
-        poemart_imagery: L'arte della poesia  - Metafore
-        poemart_celebration: L'arte della poesia  - Celebrazione
-        csd_u6_variables_part2: Variabili - Lo schema a contatore
-        csd_ml_ethics_ai: 'Etica e Intelligenza Artificiale '
-        outbreak_intro: Simulatore di focolaio - Introduzione
-        outbreak_events: Simulatore di focolaio - Eventi
-        outbreak_scientist: Simulatore di focolaio - Pensa come uno scienziato
-        outbreak_outro: Simulatore di focolaio - Gioco libero
-        PL_overview_CSP: Cosa sono i principi dell'informatica?
-        PL_CSP_EIPMOverview: Guida alle lezioni EIPM
-        CSA-PL-debugging-temp: Introduzione al Debugging in Sviluppo Java - temp
-        csd_app_lab_design_mode: Modalità di progettazione CSD App Lab
-        csd_app_lab_events: Eventi CSD App Lab
-        PL_CSD_Unit4_AppTesting: Test di prototipi cartacei
-        csd_u6_circuit_playground: Elaborazione fisica
-        csd_u6_input_output: Ingressi e uscite
-        CSA-PL-for-loops: Per i loop in Java
-        CSA-PL-variables: Creazione di variabili in Java
-        PL_CS_Journeys_Overview: CS Journeys
-        CSA-PL-intro-to-java-lab: Nozioni di base su Java Lab
-        CSA-PL-first-program: Scrivere un programma in Java
-        CSD_u6_variables_part1: 'CSD: Variabili'
-        csd_u6_if_statements: 'CSD: Istruzioni if'
-        csc-poem-art-intro: Video introduttivo
-        csc-poem-art-outro: Video finale
-        csd_u6_call_define_functions: 'CSD: Chiamare e Definire Funzioni'
-        csp_applab_parameters: Funzioni con parametri
-        starquilts_intro_artist: Introduzione a Star Quilts
-        CSA-PL-intro-to-arrays: Array unidimensionale (1D)
-        CSA-PL-1d-arrays-new-values: Immissione di valori in matrici 1D
-        CSA-PL-conditionals: Istruzioni Condizionali in Java
-        CSA-PL-two-way-selection: Selezione bidirezionale
-        CSA-PL-Printing-in-Java: Stampa in Java
-        CSA-PL-multi-selection-statements: Dichiarazioni di selezione multipla
-        PL_CSP_TeacherTips_Advice: 'Suggerimenti per gli insegnanti: consigli per
-          i nuovi insegnanti CS'
-        PL_CSP_TeacherTips_IntroToCSP: 'Suggerimenti per gli insegnanti: introduzione
-          ai principi del CS'
-        PL_CSP_TeacherTips_Debugging: 'Suggerimenti per gli insegnanti: aiuto con
-          il debug'
-        PL_CSP_TeacherTips_LeadLearner: 'Suggerimenti per gli insegnanti: come diventare
-          un Lead Learner'
-        PL_CSP_TeacherTips_APExam: 'Suggerimenti per gli insegnanti: preparazione
-          per l''esame AP'
-        PL_CSP_TeacherTips_EIPM: 'Suggerimenti per gli insegnanti: il processo EIPM'
-        PL_CSD_CircuitPlayground_Overview: Panoramica del Circuit Playground
-        CSA-PL-debugging-22: Esegui il debug in Java Lab
-        CSD_Unit6_InteractiveArtExemplar: Esemplare d'arte interattivo
-        CS_Changing_Everything: L'informatica sta cambiando ogni cosa
-        csa-alias-video: Uguali e alias
-        csa-equals-video: Il metodo equals ()
-        csa-user-stories: Storie di utenti in ingegneria del software
-        csa-pl-vpl-m1-unit-3: Ingegneria del software nell'Unità 3
-        csa-pl-intro-to-equality: Introduzione all'uguaglianza
-        csa-pl-intro-to-equals-method: Introduzione al metodo .equals ()
-        csa-pl-equals-book: Scrivere il metodo equals () per la classe Book
-        csa-multi-select-pl: Dichiarazioni di selezione multipla in Java
-        csc_timecapsule_intro: Introduzione a Time Capsule
-        PL_Equity_in_CS_Education: Equità nella formazione CS
-        csc_fm_pilot: Macchine funzionali (pilota)
-        csc_fm_pilot_v2: 'Introduzione alle macchine funzionali '
-        csc-sprite-lab-pixel-editor: Disegna il tuo sprite
-        csa-pl-intro-to-strings: Introduzione alle stringhe in Java
-        csa-pl-compareTo: Il metodo compareTo ()
-        csc-event-short-intro: Breve introduzione agli eventi
-        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Panoramica dell'unità Circuit
-          Playground
-        csa-day-in-pm-pl: Cosa fa un project manager?
-        csa-pl-intro-to-pm: Introduzione alla gestione dei progetti
-        PL_CSD_CircuitPlayground_Setup: Configurazione del circuito Playground
-        csa_object_oriented_programming: 'CSA: programmazione orientata agli oggetti'
-        csa_creating_objects: 'CSA: creazione di oggetti'
-        csa_calling_methods: 'CSA: metodi di chiamata'
-        csa_while_loops: 'CSA: While Loops'
-        csa_inheritance: 'CSA: Eredità'
-        csa_writing_a_method: 'CSA: scrivere un metodo'
-        csa_software_engineering_code_reviews: 'CSA: Ingegneria del software - Recensioni
-          del codice'
-        csa_conditional_statements: 'CSA: dichiarazioni condizionali'
-        csa_printing_in_java: 'CSA: stampa in Java'
-        csa_two_way_selection_and_not: 'CSA: selezione bidirezionale e NON'
-        csa-pl-intro-to-oop: Introduzione alla programmazione orientata agli oggetti
-        csa-pl-welcome-to-Neighborhood: Benvenuto in The Neighborhood
-        csa-pl-calling-methods: Metodi di chiamata in Java
-        csa-pl-creating-objects: Creazione di oggetti
-        csa_accessor_methods: 'CSA: metodi di accesso'
-        csa_constructors: 'CSA: Costruttori'
-        csa_creating_a_scanner_object: 'CSA: creazione di un oggetto scanner'
-        csa_creating_variables: 'CSA: creazione di variabili'
-        csa_instance_variables_and_attributes: 'CSA: variabili e attributi dell''istanza'
-        csa_mutator_methods: 'CSA: metodi mutatori'
-        csa_overloaded_constructors: 'CSA: Costruttori sovraccaricati'
-        csa_the_tostring_method: 'CSA: il metodo toString ()'
-        csa_scanner_class_methods: 'CSA: metodi delle classi di scanner'
-        csa_for_loops: 'CSA: per Loops'
-        csa_enhanced_for_loops: 'CSA: migliorato per i loop'
-        csa_modifying_values_in_a_1d_array: 'CSA: modifica dei valori in un array
-          1D'
-        csa_nested_loops: 'CSA: loop annidati'
-        csa_one_dimensional_arrays: 'CSA: matrici monodimensionali (1D)'
-        csa_polymorphism: 'CSA: polimorfismo'
-        csa_casting: 'CSA: Casting'
-        csa_equals_and_aliases: 'CSA: Uguali e alias'
-        csa_multi-selection_statements: 'CSA: dichiarazioni di selezione multipla'
-        csa_random_numbers: 'CSA: numeri casuali'
-        csa_static_methods: 'CSA: metodi statici'
-        csa_static_variables: 'CSA: variabili statiche'
-        csa_the_equals_method: 'CSA: il metodo equals ()'
-        csa_welcome_to_the_theater: 'CSA: Benvenuto a teatro'
-        enter_your_own_poem: Inserisci la tua poesia
-        csa-example-solution-1: 'Live Coding: una soluzione di esempio '
-        csd_sprite_properties: Proprietà del personaggio
-        csa-pl-documentation: Documentazione in Java Lab
-        csc-starquilts-intro: 'CSC: Trapunte Star'
-        csa-pl-vocab-pm: Vocabolario per la gestione dei progetti
-        csc-ecosystems-intro: Introduzione agli ecosistemi
-        PL_CSD_MicroBit_Intro: Introduzione al Micro:bit
-        csc_animal_adaptations_intro: Introduzione agli adattamenti degli animali
-        csa_two_dimensional_arrays: 'CSA: matrici bidimensionali (2D)'
-        csa_working_with_2d_array_elements: 'CSA: utilizzo di elementi di array 2D'
-        csa_row_major_traversal: 'CSA: Attraversamento in fila maggiore'
-        csa_column_major_traversal: 'CSA: Attraversamento della colonna maggiore'
-        csa_enhanced_for_loops_and_2d_arrays: 'CSA: migliorato per loop e array 2D'
-        csa_images_and_pixels: 'CSA: immagini e pixel'
-        csa_wrapper_classes_part_1: 'CSA: classi Wrapper, parte 1'
-        csa_wrapper_classes_part_2: 'CSA: classi Wrapper, parte 2'
-        csa_the_arraylist_class: 'CSA: la classe ArrayList'
-        csa_working_with_arraylist_data: 'CSA: utilizzo dei dati ArrayList'
-        csa_remving_data_from_an_arraylist: 'CSA: rimozione di dati da un ArrayList'
-        csa_private_methods: 'CSA: metodi privati'
-        csa_recursion: 'CSA: ricorsione'
-        csa_searching_algorithms: 'CSA: algoritmi di ricerca'
-        csa_sorting_algorithms: 'CSA: algoritmi di ordinamento'
-        star_quilts_intro_to_artist: 'Star Quilts: Introduzione all''artista'
-        upload_sprites_backgrounds: Caricamento di sprite e sfondi personalizzati
-        PL_CSD_EquityBlindSpotsvid: Pregiudizi e Responsabilità
-    callout:
-      text:
-        drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto
-          l'altro blocco qua sopra
-        run: Clicca su "Esegui" per provare il tuo programma
-        watch_again: Clicca qui per guardare di nuovo il video
-        gray_block_explanation: I blocchi grigi non possono essere eliminati. Riesci
-          lo stesso a risolvere l'esercizio?
-        show_code_explanation: Clicca qui per vedere il codice del programma che stai
-          scrivendo
-        instructions_repeat_explanation: Le istruzioni di ogni esercizio sono ripetute
-          qua
-        category_explanation: Ci sono tutti i blocchi di prima, ma adesso sono organizzati
-          in categorie
-        set_sprite_image: Attacca un blocco "imposta l'immagine per il personaggio"
-          al blocco "quando la storia inizia" per abilitare un personaggio per questa
-          storia
-        studio_say_text: Scrivi all'interno di queste virgolette quello che vuoi il
-          tuo personaggio dica
-        jigsaw_click: Clicca su questo blocco!
-        move_elsa_forward: Per far muovere Elsa in avanti prendi il blocco "vai avanti"
-          ed attaccalo sotto il blocco "quando si clicca su 'Esegui' "
-        turn_elsa: Usa il blocco "gira a ..." per far girare Elsa. Il numero nell'elenco
-          a discesa determina di quanto Elsa deve girare
-        replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
-          numero
-        replace_questions_degree: Clicca sull'elenco a discesa per sostituire "???"
-          con il valore corretto di gradi di cui girare
-        repeat_blocks: Usa il blocco "ripeti" ed includi in esso gli altri blocchi
-          nell'area di lavoro
-        repeat_blocks_1: "(1) Usa questo blocco e mettilo intorno ai blocchi grigi
-          nell'area di lavoro"
-        repeat_blocks_2: (2) Sposta qui  il blocco "ripeti" e posiziona i blocchi
-          grigi al suo interno
-        snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
-          di varie forme!
-        degrees_per_side: Dividi 360 per il numero di lati per ottenere la grandezza
-          di ogni angolo in gradi.
-        set_sides: Utilizza questo blocco per impostare i "lati" al numero necessario
-          per completare l'esercizio.
-        set_length: Usa questo blocco per impostare la "lunghezza" al valore corretto.
-        which_equation: Quale equazione rende ogni lato più corto per le forme con
-          più lati?
-        get_nectar: Usa il nuovo blocco "prendi il nettare".
-        actions_category: La "cassetta degli attrezzi" ha un nuovo aspetto! I blocchi
-          "Azioni" ora sono qui.
-        draw_square_hint: 'Suggerimento: usa il ciclo del quadrato che hai appena
-          creato nell''esercizio precedente.'
-        edit_function: Clicca qui per modificare la tua funzione.
-        create_function: Clicca qui per aprire il riquadro "Funzioni", quindi clicca
-          sul pulsante "Crea una funzione".
-        house_hint: Va bene se il disegno non assomiglia ancora a una casa. Lo sistemeremo
-          nel prossimo esercizio.
-        edit_draw_square: Usa questo pulsante per modificare la funzione e aggiungere
-          il ciclo.
-        edit_get_nectar: Usa questo pulsante per modificare la funzione e cambiare
-          la direzione così che l'Ape possa girarsi e raggiungere il nettare.
-        logic_category: Apri il riquadro "Logica" per trovare il blocco "se-altrimenti".
-        length_parameter: Riesci a modificare questa funzione così che utilizzi il
-          parametro "lunghezza"?
-        frozen_diamond_repeat: Usa il blocco di ripetizione per creare questa forma.
-        frozen_circle_function_in_circle_turn: Non dimenticarti di girare dopo aver
-          disegnato ogni cerchio.
-        frozen_circle_function_with_parameter_circle: Usa il blocco "disegna un cerchio"
-          e modifica le dimensioni.
-        frozen_snowflake_branch: Usa il blocco "disegna un ramo di un fiocco di neve"
-        frozen_create_square: Attacca più blocchi qui per creare un quadrato
-        playlab_drag_say: Sposta qui il blocco "il personaggio dice ..." e scrivi
-          "ciao" al posto di "scrivi qua"
-        playlab_use_twice: Usa questo blocco due volte e ricordati di cambiare il
-          numero del personaggio
-        playlab_move_girl: Usa il blocco "sposta a destra" per spostare la tennista
-        playlab_play_sound: Aggiungi qui il blocco "riproduci un suono"
-        playlab_arrow_keys: Ricorda di usare questi per spostare la strega dopo aver
-          cliccato su "Esegui"
-        playlab_add_move: Aggiungi i blocchi  "sposta" all'interno di questo blocco
-          di ripetizione
-        playlab_add_score: Aggiungi qui i blocchi di punteggio
-        playlab_add_blocks: Aggiungi qui i tuoi blocchi
-        set_variable: Sposta qui un blocco col numero per impostare la variabile
-        place_variable: Sposta la variabile all'interno di questo blocco
-        bee_for_loop: Scrivi qui la massima quantità di nettare che desideri l'ape
-          raccolga
-        place_counter_variable: Sposta la variabile "contatore" all'interno di questo
-          blocco
-        function_editor_draw_square: Questa è la definizione della tua funzione. Questi
-          blocchi verranno eseguiti ogni volta che si utilizza il blocco "disegna
-          un quadrato"
-        change_here: Fai qui il tuo cambio
-        write_draw_square_function: Sposta i blocchi dalla cassetta degli attrezzi
-          all'area di lavoro per disegnare un quadrato
-        write_draw_triangle_function: Sposta qui i blocchi, prendendoli dalla "cassetta
-          degli attrezzi", per disegnare un triangolo
-        edit_add_parameter: Clicca su "Modifica" per aggiungere un parametro alla
-          tua funzione
-        add_and_drag_parameter: Scrivi qui il nome del tuo parametro, clicca su "Aggiungi",
-          e poi spostalo nella definizione della tua funzione
-        fill_in_actor: Sostituisci a ??? il numero che corrisponde ad ogni personaggio
-          (1, 2, e 3)
-        repeat: Inserisci i blocchi all'interno del ciclo per ripetere le istruzioni
-        if_bee_nectar: Usa il blocco "se" per decidere se l'ape deve prendere il nettare
-        if_else_bee: Usa il blocco "se-altrimenti" in modo che l'ape prenda il nettare
-          dal fiore, ma faccia il miele se non c'è un fiore
-        repeat_full_circle: Scrivi il numero di volte che lo zombie si deve spostare
-          per creare un cerchio intero
-        place_length_variable: Sposta qui la variabile "lunghezza" a rimpiazzare i
-          punti interrogativi
-        arrows_move_actor: Usa le frecce per muovere il personaggio
-        right_arrow_fireball: Usa la freccia a destra per lanciare le palle di fuoco
-        name_function: Scrivi qui il nome della tua funzione
-        Infinity_move_right_runbutton: Aggiungi qui il blocco "sposta il personaggio"
-        Infinity_move_directions_callout: Quale blocco farà spostare Baymax verso
-          l'alto quando viene premuta la freccia verso l'alto?
-        Infinity_move_directions_callout_arrow: Usa le frecce per muovere il personaggio
-        Infinity_move_collide_callout: Riproduci un suono quando si verifica questo
-          evento.
-        Infinity_repeat_callout: Aggiungi i blocchi "sposta" all'interno di questo
-          blocco di ripetizione
-        craft_run_button_callout: Clicca su "Esegui" per provare il tuo programma
-        craft_drag_block_callout: Prendi il blocco "vai avanti" e attaccalo sotto
-          l'altro blocco
-        craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
-        craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
-        craft_callout_preplaced_house: Questo codice inizia la costruzione della tua
-          casa. Riesci a finirla tu?
-        craft_what_is_iron: Estrai il ferro!
-        craft_callout_moveforward: Questo codice controlla se c'è lava, sai aggiungere
-          un comando per andare avanti?
+        why_unplugged_lessons: Essere "scollegato"
+        writing_first_program: Scrivi il tuo primo programma per computer

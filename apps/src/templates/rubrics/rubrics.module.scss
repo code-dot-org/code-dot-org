@@ -1,0 +1,206 @@
+@import 'color.scss';
+@import 'font.scss';
+
+.floatingActionButton {
+  position: fixed;
+  left: 10px;
+  bottom: 48px;
+
+  height: 60px;
+  width: 60px;
+  padding: 0;
+
+  border-width: 0;
+  border-radius: 30px;
+}
+
+.rubricContainer {
+  position: fixed;
+  left: 10px;
+  bottom: 116px;
+  z-index: 400;
+  width: 760px;
+}
+
+.rubricContent {
+  border-radius: 0 0 4px 4px;
+  border: 1px solid $neutral_dark;
+  background: $neutral_light;
+  box-shadow: 4px 4px 6px 0 rgba(0 0 0 / 0.25);
+
+  height: 408px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.learningGoalContainer {
+  display: flex;
+  // padding: 0px 1px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  border-radius: 4px;
+  border: 1px solid var(--light-gray-400, #a9acaf);
+  background: var(--light-white, #fff);
+}
+
+.rubricHeader {
+  height: 21px;
+  border-radius: 4px 4px 0 0;
+  background: $neutral_dark;
+  color: $neutral_white;
+  padding: 9px 15px 8px;
+
+  h6 {
+    color: $neutral_white;
+    line-height: 1.1875;
+  }
+}
+
+.learningGoalRow {
+  display: flex;
+  align-self: stretch;
+  border-bottom: 1px solid $neutral_dark40;
+  min-height: 40px;
+  summary:hover {
+    background: none;
+  }
+}
+
+.learningGoalHeader {
+  display: flex;
+  height: 40px;
+  padding: 0 16px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  line-height: 154%;
+}
+
+.learningGoalHeaderLeftSide {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: $gotham-bold;
+
+  // TODO: [DES-321] remove span styles
+  span {
+    font-size: 14px;
+    font-weight: 350;
+  }
+
+  .arrowIcon {
+    font-weight: 900;
+    font-size: 16px;
+  }
+}
+
+.learningGoalHeaderRightSide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  font-weight: 325;
+  line-height: 154%;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.aiToken {
+  display: flex;
+  height: 20px;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  border-radius: 30px;
+  border: 1px solid $product_affirmative_default;
+  background: $light_affirmative_100;
+}
+
+p.aiTokenText {
+  color: $product_affirmative_default;
+  margin-bottom: 0;
+}
+
+
+.aiTokenText {
+  color: $product_affirmative_default;
+}
+
+.learningGoalExpanded {
+  border-top: 1px solid $neutral_dark40;
+  padding: 1.25rem 1rem;
+
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-self: stretch;
+}
+
+.learningGoalTips {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid $neutral_dark50;
+  background: $neutral_dark10;
+
+  // This is body three styles but the typography components don't work well with markdown support
+  // SafeMarkdown also wraps everything in its own div so explicitly apply this style to the div
+  div {
+    color: $neutral-dark;
+    font-family: $gotham-regular, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.54;
+  }
+}
+
+.evidenceLevelSet {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: stretch;
+}
+
+.evidenceLevelOption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  align-self: stretch;
+
+  span {
+    font-size: 0.875rem;
+    font-family: $gotham-bold;
+    line-height: 154%;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
+.evidenceLevelLabel {
+  font-family: $gotham-bold;
+  font-size: 0.875rem;
+  line-height: 154%;
+  margin-bottom: 0;
+}
+
+.evidenceLevelDescriptionIndented {
+  padding-left: 2rem;
+}
+

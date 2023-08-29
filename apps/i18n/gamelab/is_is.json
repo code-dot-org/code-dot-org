@@ -1,10 +1,10 @@
 {
   "dropletBlock_createSprite_param2": "breidd",
   "dropletBlock_createSprite_param3": "hæð",
-  "dropletBlock_setCollider_param0": "gerð",
-  "dropletBlock_setCollider_param4": "hæð",
   "dropletBlock_setColliderEach_param0": "gerð",
   "dropletBlock_setColliderEach_param4": "hæð",
+  "dropletBlock_setCollider_param0": "gerð",
+  "dropletBlock_setCollider_param4": "hæð",
   "reinfFeedbackMsg": "Þú hefur lokið þessu! Smelltu á \"Áfram\" til að fara í næsta áfanga.",
   "shareGame": "Deildu leiknum þínum:"
 }

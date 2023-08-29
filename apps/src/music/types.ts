@@ -13,10 +13,11 @@ export type MusicLocale = {
 
 // TODO: Use this interface when converting MusicView to TypeScript
 export interface MusicLevelData extends ProjectLevelData {
-  toolbox: {
-    [key: string]: string;
+  toolbox?: {
+    [key: string]: string[];
   };
-  sounds: {
-    [key: string]: string;
+  sounds?: {
+    [key: string]: string[];
   };
+  library?: string;
 }

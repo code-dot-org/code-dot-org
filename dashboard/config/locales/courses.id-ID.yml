@@ -3,52 +3,44 @@ id:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Computer Science Principles
-          title: Computer Science Principles ('17-'18)
-          version_title: "'17-'18"
-          description_student: Pada musim gugur 2016, College Board meluncurkan kursus
-            AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan
-            konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk
-            menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP
-            merancang AP Computer Science Principles untuk menghasilkan para pemimpin
-            di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya
-            kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi
-            pokok dan peluang multidisipliner.
-          description_teacher: Pada musim gugur 2016, College Board meluncurkan kursus
-            AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan
-            konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk
-            menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP
-            merancang AP Computer Science Principles untuk menghasilkan para pemimpin
-            di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya
-            kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi
-            pokok dan peluang multidisipliner.
-          description_short: Pelajari konsep-konsep ilmu komputer dasar.
-        csd-2017:
-          assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries ('17-'18)
-          version_title: "'17-'18"
-          description_student: Computer Science Discoveries (CS Discoveries) adalah
-            kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil
-            karya autentik dan menggeluti ilmu komputer sebagai media kreativitas,
-            komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
-          description_teacher: Computer Science Discoveries (CS Discoveries) adalah
-            kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil
-            karya autentik dan menggeluti ilmu komputer sebagai media kreativitas,
-            komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
-          description_short: Kursus pengantar ilmu komputer yang memacu murid untuk
-            menciptakan hasil karya yang autentik.
         allthethingscourse:
-          title: kursussemuabidang
           description_short: Ini adalah kursus untuk semua bidang
           description_student: Ini adalah kursus untuk semua bidang dan memiliki penjelasan
             yang lebih panjang bagi murid
           description_teacher: Ini adalah kursus untuk semua bidang dan memiliki penjelasan
             yang lebih panjang bagi guru
+          title: kursussemuabidang
+        csa-pilot-facilitator:
+          title: CSA Pilot Facilitators
+        csd-2017:
+          assignment_family_title: Computer Science Discoveries
+          description_short: Kursus pengantar ilmu komputer yang memacu murid untuk
+            menciptakan hasil karya yang autentik.
+          description_student: Computer Science Discoveries (CS Discoveries) adalah
+            kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil
+            karya autentik dan menggeluti ilmu komputer sebagai media kreativitas,
+            komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+          description_teacher: Computer Science Discoveries (CS Discoveries) adalah
+            kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil
+            karya autentik dan menggeluti ilmu komputer sebagai media kreativitas,
+            komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+          title: Computer Science Discoveries ('17-'18)
+          version_title: "'17-'18"
         csd-2018:
           assignment_family_title: Computer Science Discoveries
+          description_short: Kursus pengantar ilmu komputer yang memacu murid untuk
+            menciptakan hasil karya yang autentik.
+          description_student: Computer Science Discoveries (CS Discoveries) adalah
+            kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil
+            karya autentik dan menggeluti ilmu komputer sebagai media kreativitas,
+            komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+          description_teacher: Computer Science Discoveries (CS Discoveries) adalah
+            kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil
+            karya autentik dan menggeluti ilmu komputer sebagai media kreativitas,
+            komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
           title: Computer Science Discoveries ('18-'19)
           version_title: "'18-'19"
+        csd-2019:
           description_short: Kursus pengantar ilmu komputer yang memacu murid untuk
             menciptakan hasil karya yang autentik.
           description_student: Computer Science Discoveries (CS Discoveries) adalah
@@ -59,68 +51,8 @@ id:
             kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil
             karya autentik dan menggeluti ilmu komputer sebagai media kreativitas,
             komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
-        csp-2018:
-          assignment_family_title: Computer Science Principles
-          title: Computer Science Principles ('18-'19)
-          version_title: "'18-'19"
-          description_short: Pelajari konsep-konsep ilmu komputer dasar.
-          description_student: Pada musim gugur 2016, College Board meluncurkan kursus
-            AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan
-            konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk
-            menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP
-            merancang AP Computer Science Principles untuk menghasilkan para pemimpin
-            di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya
-            kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi
-            pokok dan peluang multidisipliner.
-          description_teacher: Pada musim gugur 2016, College Board meluncurkan kursus
-            AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan
-            konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk
-            menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP
-            merancang AP Computer Science Principles untuk menghasilkan para pemimpin
-            di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya
-            kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi
-            pokok dan peluang multidisipliner.
-        csp-2019:
-          title: Computer Science Principles ('19-'20)
-          version_title: "'19-'20"
-          description_short: Pelajari konsep-konsep ilmu komputer dasar.
-          description_student: Pada musim gugur 2016, College Board meluncurkan kursus
-            AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan
-            konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk
-            menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP
-            merancang AP Computer Science Principles untuk menghasilkan para pemimpin
-            di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya
-            kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi
-            pokok dan peluang multidisipliner.
-          description_teacher: Pada musim gugur 2016, College Board meluncurkan kursus
-            AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan
-            konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk
-            menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP
-            merancang AP Computer Science Principles untuk menghasilkan para pemimpin
-            di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya
-            kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi
-            pokok dan peluang multidisipliner.
-        csd-2019:
           title: Computer Science Discoveries ('19-'20)
           version_title: "'19-'20"
-          description_short: Kursus pengantar ilmu komputer yang memacu murid untuk
-            menciptakan hasil karya yang autentik.
-          description_student: Computer Science Discoveries (CS Discoveries) adalah
-            kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil
-            karya autentik dan menggeluti ilmu komputer sebagai media kreativitas,
-            komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
-          description_teacher: Computer Science Discoveries (CS Discoveries) adalah
-            kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil
-            karya autentik dan menggeluti ilmu komputer sebagai media kreativitas,
-            komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
-        csd-pilot:
-          title: Kursus Percontohan CSD
-          description_student: Computer Science Discoveries (CS Discoveries) adalah
-            kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil
-            karya autentik dan menggeluti ilmu komputer sebagai media kreativitas,
-            komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
-        csp-2020:
-          description_short: Pelajari konsep-konsep ilmu komputer dasar.
         csd-2020:
           description_short: Kursus pengantar ilmu komputer yang memacu murid untuk
             menciptakan hasil karya yang autentik.
@@ -132,34 +64,102 @@ id:
             kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil
             karya autentik dan menggeluti ilmu komputer sebagai media kreativitas,
             komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+        csd-2023:
+          title: Computer Science Discoveries
+        csd-pilot:
+          description_student: Computer Science Discoveries (CS Discoveries) adalah
+            kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil
+            karya autentik dan menggeluti ilmu komputer sebagai media kreativitas,
+            komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+          title: Kursus Percontohan CSD
+        csp-2017:
+          assignment_family_title: Computer Science Principles
+          description_short: Pelajari konsep-konsep ilmu komputer dasar.
+          description_student: Pada musim gugur 2016, College Board meluncurkan kursus
+            AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan
+            konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk
+            menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP
+            merancang AP Computer Science Principles untuk menghasilkan para pemimpin
+            di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya
+            kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi
+            pokok dan peluang multidisipliner.
+          description_teacher: Pada musim gugur 2016, College Board meluncurkan kursus
+            AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan
+            konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk
+            menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP
+            merancang AP Computer Science Principles untuk menghasilkan para pemimpin
+            di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya
+            kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi
+            pokok dan peluang multidisipliner.
+          title: Computer Science Principles ('17-'18)
+          version_title: "'17-'18"
+        csp-2018:
+          assignment_family_title: Computer Science Principles
+          description_short: Pelajari konsep-konsep ilmu komputer dasar.
+          description_student: Pada musim gugur 2016, College Board meluncurkan kursus
+            AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan
+            konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk
+            menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP
+            merancang AP Computer Science Principles untuk menghasilkan para pemimpin
+            di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya
+            kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi
+            pokok dan peluang multidisipliner.
+          description_teacher: Pada musim gugur 2016, College Board meluncurkan kursus
+            AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan
+            konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk
+            menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP
+            merancang AP Computer Science Principles untuk menghasilkan para pemimpin
+            di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya
+            kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi
+            pokok dan peluang multidisipliner.
+          title: Computer Science Principles ('18-'19)
+          version_title: "'18-'19"
+        csp-2019:
+          description_short: Pelajari konsep-konsep ilmu komputer dasar.
+          description_student: Pada musim gugur 2016, College Board meluncurkan kursus
+            AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan
+            konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk
+            menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP
+            merancang AP Computer Science Principles untuk menghasilkan para pemimpin
+            di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya
+            kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi
+            pokok dan peluang multidisipliner.
+          description_teacher: Pada musim gugur 2016, College Board meluncurkan kursus
+            AP® terbaru, AP Computer Science Principles. Kursus tersebut mengenalkan
+            konsep-konsep dasar ilmu komputer kepada murid dan menantang mereka untuk
+            menjelajahi pengaruh teknologi dan komputasi terhadap dunia. Program AP
+            merancang AP Computer Science Principles untuk menghasilkan para pemimpin
+            di bidang ilmu komputer dan menarik serta melibatkan masyarakat yang lazimnya
+            kerap dipandang sebelah mata untuk bisa mumpuni dengan peralatan komputasi
+            pokok dan peluang multidisipliner.
+          title: Computer Science Principles ('19-'20)
+          version_title: "'19-'20"
+        csp-2020:
+          description_short: Pelajari konsep-konsep ilmu komputer dasar.
         csp-2021:
           description_short: Pelajari konsep-konsep ilmu komputer dasar.
-        mike-test:
-          title: Computer Science Fundamentals
-        csa-pilot-facilitator:
-          title: CSA Pilot Facilitators
         csp-2022:
           description_short: Pelajari konsep-konsep ilmu komputer dasar.
         csp-2023:
           description_short: Pelajari konsep-konsep ilmu komputer dasar.
-        csd-2023:
-          title: Computer Science Discoveries
+        mike-test:
+          title: Computer Science Fundamentals
     resources:
-      curriculum/csd/2020:
-        name: Kurikulum
-      teacher_forum/csd/2020:
-        name: Forum guru
       curriculum/csd/2017:
         name: Kurikulum
-      teacher_forum_6/csd/2017:
-        name: Forum guru
-      curriculum/csd/2019:
-        name: Kurikulum
-      teacher_forum/csd/2019:
-        name: Forum guru
-      getting_started_with_csd/csd/2021:
-        name: Memulai CSD
       curriculum/csd/2018:
         name: Kurikulum
+      curriculum/csd/2019:
+        name: Kurikulum
+      curriculum/csd/2020:
+        name: Kurikulum
+      getting_started_with_csd/csd/2021:
+        name: Memulai CSD
+      teacher_forum/csd/2019:
+        name: Forum guru
+      teacher_forum/csd/2020:
+        name: Forum guru
+      teacher_forum_6/csd/2017:
+        name: Forum guru
       teacher_forum_6/csd/2018:
         name: Forum guru

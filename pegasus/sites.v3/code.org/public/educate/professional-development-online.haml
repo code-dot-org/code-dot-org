@@ -15,7 +15,7 @@ theme: responsive_full_width
   .wrapper.flex-container.align-items-center
     .text-wrapper
       %h1{style: "color: white"}=hoc_s(:self_paced_pl_hero_heading)
-      %p{style: "color: white"}=hoc_s(:self_paced_pl_hero_desc)
+      %p.body-one{style: "color: white"}=hoc_s(:self_paced_pl_hero_desc)
     %img{src: "../shared/images/banners/self-paced-pl-hero.png", alt: ""}
 
 %section
@@ -80,7 +80,7 @@ theme: responsive_full_width
             %strong=hoc_s(:module_label_prerequisites)
             =hoc_s(:module_prerequisites_none)
         .content-footer
-          %a.link-button{href: CDO.studio_url("/s/k5-onlinepd"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csf)}}
+          %a.link-button{href: CDO.studio_url("/s/k5-onlinepd-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csf)}}
             =hoc_s(:call_to_action_start_pl)
           %a.link-button.secondary{href: "/csf", aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csf)}}
             =hoc_s(:call_to_action_explore_curriculum)
@@ -204,7 +204,7 @@ theme: responsive_full_width
     %div.col-50{style: "margin-bottom: 1rem;"}
       %h2=hoc_s(:self_paced_pl_facilitator_heading)
       %h3.heading-sm=hoc_s(:self_paced_pl_facilitator_subheading)
-      %p.body-two
+      %p.body-three
         =hoc_s(:self_paced_pl_facilitator_desc)
       %a.link-button{href: "/professional-learning"}=hoc_s(:self_paced_pl_facilitator_call_to_action)
     %div.col-45{style: "float:right; margin-top: 0.5em"}

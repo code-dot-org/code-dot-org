@@ -46,31 +46,31 @@ ko:
       send_paranoid_instructions: 계정이 있는 경우, 계정 잠김 해제 메일이 전송됩니다.
       unlocked: 계정 잠김이 해제 되었습니다. 다시 로그인 하세요.
   errors:
+    invitations:
+      edit:
+        header: 당신의 비밀번호 설정
+        submit_button: 내 비밀번호 설정
+      invitation_removed: 당신의 초대가 제거되었습니다.
+      invitation_token_invalid: 제공된 초대 토큰은 유효하지 않습니다!
+      new:
+        header: 초대장 보내기
+        submit_button: 초대장을 보내다
+      no_invitations_remaining: 남은 초대장이 없음
+      send_instructions: "%{email}에 초대 이메일을 보냈습니다."
+      updated: 비밀번호가 성공적으로 설정되었습니다. 지금 로그인하세요.
+    mailer:
+      invitation_instructions:
+        accept: 초대 수락
+        hello: 안녕하세요 %{email}
+        ignore: '초대를 수락 하지 않으려면 무시 하시기 바랍니다이 이메일. < br /> &gt;위의 링크에 액세스 비밀 번호 설정까지
+          귀하 계정은 만들어지지 않습니다.
+
+          '
+        someone_invited_you: 누군가 %{url}에 당신을 초대 했습니다, 당신은 아래 링크를 통해 그것을 받아들일 수 있습니다.
+        subject: 초대 지침
     messages:
       already_confirmed: 이미 확인되었습니다. 다시 로그인 하세요.
       confirmation_period_expired: " %{period} 이내에 확인 되어야 합니다. 다시 시도해 주세요."
       expired: 만료 되었습니다. 다시 요청하세요
       not_found: 찾을 수 없음
       not_locked: 잠기지 않음
-    invitations:
-      send_instructions: "%{email}에 초대 이메일을 보냈습니다."
-      invitation_token_invalid: 제공된 초대 토큰은 유효하지 않습니다!
-      updated: 비밀번호가 성공적으로 설정되었습니다. 지금 로그인하세요.
-      no_invitations_remaining: 남은 초대장이 없음
-      invitation_removed: 당신의 초대가 제거되었습니다.
-      new:
-        header: 초대장 보내기
-        submit_button: 초대장을 보내다
-      edit:
-        header: 당신의 비밀번호 설정
-        submit_button: 내 비밀번호 설정
-    mailer:
-      invitation_instructions:
-        subject: 초대 지침
-        hello: 안녕하세요 %{email}
-        someone_invited_you: 누군가 %{url}에 당신을 초대 했습니다, 당신은 아래 링크를 통해 그것을 받아들일 수 있습니다.
-        accept: 초대 수락
-        ignore: '초대를 수락 하지 않으려면 무시 하시기 바랍니다이 이메일. < br /> &gt;위의 링크에 액세스 비밀 번호 설정까지
-          귀하 계정은 만들어지지 않습니다.
-
-'

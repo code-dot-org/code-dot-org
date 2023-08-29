@@ -25,6 +25,7 @@ import {
   physicalCompShownCurricula,
   nonNullSchoolSubjectShownCurricula,
   tabletAndNoDeviceShownCurricula,
+  translatedCurricula,
   multipleFiltersAppliedShownCurricula,
   allFiltersAppliedShownCurricula,
   noGradesCurriculum,
@@ -41,6 +42,7 @@ describe('CurriculumCatalog', () => {
     isEnglish: false,
     languageNativeName: 'sampleLanguageNativeName',
     isSignedOut: true,
+    isInUS: true,
   };
   let store;
 
@@ -261,6 +263,32 @@ describe('CurriculumCatalog', () => {
       }).length
     ).to.equal(tabletAndNoDeviceShownCurricula.length);
     tabletAndNoDeviceShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
+  });
+
+  it('filtering by translated shows any course translated in the users locale', () => {
+    renderDefault();
+
+    const numTotalCurriculumCards = screen.getAllByText('Learn more', {
+      exact: false,
+    }).length;
+    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+
+    // Toggle translated filter
+    const translatedToggle = screen.getByLabelText(
+      'Only show curricula available in sampleLanguageNativeName'
+    );
+    fireEvent.click(translatedToggle);
+    assert(translatedToggle.checked);
+
+    // Filters for all courses translated in the users locale
+    expect(
+      screen.getAllByText('Learn more', {
+        exact: false,
+      }).length
+    ).to.equal(translatedCurricula.length);
+    translatedCurricula.forEach(curriculum => {
       expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
     });
   });
@@ -529,6 +557,23 @@ describe('CurriculumCatalog', () => {
 
       assert(!replacedLocation.includes('lesson'));
       assert(replacedLocation.includes('duration=week'));
+    });
+
+    it('params update when translated toggle is flipped', () => {
+      renderWithUrlParams('');
+      const translatedToggle = screen.getByLabelText(
+        'Only show curricula available in sampleLanguageNativeName'
+      );
+
+      // Toggle "translated" on
+      fireEvent.click(translatedToggle);
+      assert(translatedToggle.checked);
+      assert(replacedLocation.includes('translated=true'));
+
+      // Toggle "translated" off
+      fireEvent.click(translatedToggle);
+      assert(!translatedToggle.checked);
+      assert(replacedLocation.includes('translated=false'));
     });
   });
 });

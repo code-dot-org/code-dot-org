@@ -3,80 +3,223 @@ sm:
   data:
     script:
       name:
-        events:
-          title: events
-          description: events
-          description_short: events
-          student_description: events
-        step:
-          title: sitepu
-        cspunit4draft:
-          description_short: Faamaumauga
+        2021drafting:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Fuainumera lasi
         CSDU5-Draft:
           description_short: Faamaumauga
-        basketball:
-          name: paseketipolo
-        sports:
-          name: taaloga
-        hero:
-          name: toa
-        dance:
-          name: siva
+        ai-ethics-2021:
+          description_audience: Tausaga 6-12
         aquatic:
           name: mea tau sami
-        cspplayground:
+        basketball:
+          name: paseketipolo
+        coursea-2019:
           lesson_groups:
-            csp_variables:
-              display_name: Fuainumera lasi
-        coursef-2019:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        coursea-2020:
           lesson_groups:
-            csf_variables:
-              display_name: Fuainumera lasi
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        coursea-2021:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        coursea-2022:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        coursea-2023:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        courseb-2019:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        courseb-2020:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        courseb-2021:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        courseb-2022:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        courseb-2023:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        coursec-2019:
+          lesson_groups:
             csf_data:
               display_name: Faamaumauga
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        coursec-2020:
+          lesson_groups:
+            csf_data:
+              display_name: Faamaumauga
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        coursec-2021:
+          lesson_groups:
+            csf_data:
+              display_name: Faamaumauga
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        coursec-2022:
+          lesson_groups:
+            csf_data:
+              display_name: Faamaumauga
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        coursec-2023:
+          lesson_groups:
+            csf_data:
+              display_name: Faamaumauga
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
         coursed-2019:
           lesson_groups:
             csf_events:
               display_name: events
             csf_loops:
               display_name: taamiloga
-        express-2019:
+        coursed-2020:
           lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_variables:
-              display_name: Fuainumera lasi
-        coursec-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
             csf_events:
               display_name: events
+            csf_loops:
+              display_name: taamiloga
+        coursed-2021:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        coursed-2022:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        coursef-2019:
+          lesson_groups:
             csf_data:
               display_name: Faamaumauga
-        coursea-2019:
+            csf_variables:
+              display_name: Fuainumera lasi
+        coursef-2020:
           lesson_groups:
-            csf_loops:
-              display_name: taamiloga
+            csf_data:
+              display_name: Faamaumauga
+            csf_variables:
+              display_name: Fuainumera lasi
+        coursef-2021:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Fuainumera lasi
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Fuainumera lasi
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Fuainumera lasi
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Fuainumera lasi
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Faamaumauga
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: o lesona
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: o lesona
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Alagaoa
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: taamiloga
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Fuainumera lasi
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Fuainumera lasi
+            variables:
+              display_name: Fuainumera lasi
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Fuainumera lasi
+        csl-vn:
+          lesson_groups:
             csf_events:
               display_name: events
-        courseb-2019:
-          lesson_groups:
             csf_loops:
               display_name: taamiloga
-            csf_events:
-              display_name: events
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-        csp4-pilot:
+        csp1-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: Fuainumera lasi
-        csp1-pilot-staging:
+        csp10-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: Fuainumera lasi
@@ -84,15 +227,75 @@ sm:
           lesson_groups:
             csp_variables:
               display_name: Fuainumera lasi
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Fuainumera lasi
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Fuainumera lasi
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Fuainumera lasi
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Fuainumera lasi
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Fuainumera lasi
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: Fuainumera lasi
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Fuainumera lasi
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Lisi
+            csp_loops:
+              display_name: taamiloga
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Lisi
+            csp_loops:
+              display_name: taamiloga
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Lisi
+            csp_loops:
+              display_name: taamiloga
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Faamaumauga
+            csp_loops:
+              display_name: taamiloga
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Lisi
+            csp_loops:
+              display_name: taamiloga
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Lisi
             csp_loops:
+              display_name: taamiloga
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lisi
+            lessonGroup-3:
               display_name: taamiloga
         csp6-pilot-staging:
           lesson_groups:
@@ -106,135 +309,34 @@ sm:
           lesson_groups:
             csp_variables:
               display_name: Fuainumera lasi
-        csp10-pilot-staging:
+        cspplayground:
           lesson_groups:
             csp_variables:
               display_name: Fuainumera lasi
-        csp5-pilot:
+        cspunit4draft:
+          description_short: Faamaumauga
+        dance:
+          name: siva
+        dlp21-csd:
           lesson_groups:
-            csp_lists:
-              display_name: Lisi
-            csp_loops:
-              display_name: taamiloga
-        csl-vn:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: Fuainumera lasi
-        time4cs-control-unit-1:
+            lessonGroup-2:
+              description: suega
+        events:
+          description: events
+          description_short: events
+          student_description: events
+          title: events
+        express-2019:
           lesson_groups:
             csf_loops:
               display_name: taamiloga
-            csf_events:
-              display_name: events
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Fuainumera lasi
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Lisi
-            csp_loops:
-              display_name: taamiloga
-        coursea-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-        courseb-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-        coursec-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-            csf_data:
-              display_name: Faamaumauga
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: events
-            csf_loops:
-              display_name: taamiloga
-        coursef-2020:
-          lesson_groups:
             csf_variables:
               display_name: Fuainumera lasi
-            csf_data:
-              display_name: Faamaumauga
         express-2020:
           lesson_groups:
             csf_loops:
               display_name: taamiloga
             csf_variables:
-              display_name: Fuainumera lasi
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-        2021drafting:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Fuainumera lasi
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Fuainumera lasi
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Lisi
-            csp_loops:
-              display_name: taamiloga
-        coursea-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-        courseb-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-        coursec-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-            csf_data:
-              display_name: Faamaumauga
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: events
-            csf_loops:
-              display_name: taamiloga
-        coursef-2021:
-          lesson_groups:
-            lessonGroup-8:
               display_name: Fuainumera lasi
         express-2021:
           lesson_groups:
@@ -244,161 +346,109 @@ sm:
               display_name: Fuainumera lasi
             lessonGroup-9:
               display_name: events
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-        csf-2021-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Fuainumera lasi
-            variables:
-              display_name: Fuainumera lasi
-        csa-videos:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Alagaoa
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              description: suega
-        csa-u6-dev:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: o lesona
-        csa-u7-dev:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: o lesona
-        ai-ethics-2021:
-          description_audience: Tausaga 6-12
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Fuainumera lasi
-        coursea-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
         express-2022:
           lesson_groups:
-            lessonGroup-9:
-              display_name: events
             csf_loops:
               display_name: taamiloga
             csf_variables:
               display_name: Fuainumera lasi
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Fuainumera lasi
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Lisi
-            csp_loops:
-              display_name: taamiloga
-        courseb-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-        coursec-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-            csf_data:
-              display_name: Faamaumauga
-        coursed-2022:
-          lesson_groups:
-            csf_events:
-              display_name: events
-            csf_loops:
-              display_name: taamiloga
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Fuainumera lasi
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Fuainumera lasi
-        soccer:
-          name: soka
-        csa1-2023:
-          lessons:
-            lesson-2:
-              name: Java Lab
-            lesson-6:
-              name: taamiloga
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Fuainumera lasi
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Fuainumera lasi
-        csp5-2023:
-          lesson_groups:
-            csp_lists:
-              display_name: Faamaumauga
-            csp_loops:
-              display_name: taamiloga
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Lisi
-            lessonGroup-3:
-              display_name: taamiloga
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
+            lessonGroup-9:
               display_name: events
         express-2023:
           lesson_groups:
-            lessonGroup-9:
-              display_name: events
             csf_loops:
               display_name: taamiloga
             csf_variables:
               display_name: Fuainumera lasi
-        coursea-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
+            lessonGroup-9:
               display_name: events
-        courseb-2023:
+        hero:
+          name: toa
+        nevada-standards-aligned-fifth-grade-2023:
           lesson_groups:
-            csf_loops:
-              display_name: taamiloga
-            csf_events:
-              display_name: events
-        coursec-2023:
+            lessonGroup-5:
+              display_name: Fuainumera lasi
+        nevada-standards-aligned-first-grade-2023:
           lesson_groups:
-            csf_loops:
+            lessonGroup-4:
               display_name: taamiloga
-            csf_events:
+            lessonGroup-6:
               display_name: events
-            csf_data:
+            lessonGroup-8:
               display_name: Faamaumauga
-        coursed-2023:
+          lessons:
+            lesson-1:
+              name: Faamaumauga
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: taamiloga
+            lessonGroup-6:
+              display_name: Faamaumauga
+          lessons:
+            lesson-1:
+              name: Faamaumauga
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: taamiloga
+            lessonGroup-5:
+              display_name: events
+            lessonGroup-6:
+              display_name: Faamaumauga
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: taamiloga
+            lessonGroup-7:
+              display_name: Faamaumauga
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        soccer:
+          name: soka
+        sports:
+          name: taaloga
+        step:
+          title: sitepu
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: taamiloga
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_events:
+              display_name: events
+            csf_loops:
+              display_name: taamiloga
+        time4cs-experiment-unit-1:
           lesson_groups:
             csf_events:
               display_name: events
@@ -408,11 +458,3 @@ sm:
           lessons:
             lesson-3:
               name: Suega
-        coursef-2023:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Fuainumera lasi
-        csa-frq-practice-2022:
-          lessons:
-            lesson-4:
-              name: Faamaumauga

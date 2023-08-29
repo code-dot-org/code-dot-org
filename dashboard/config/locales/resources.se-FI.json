@@ -2,92 +2,174 @@
   "se-FI": {
     "data": {
       "resources": {
-        "exploring_apps/coursef/2022": {
-          "name": "Suokkardala App:aid"
+        "input-and-output-2020/csd/2021": {
+          "name": "Input ja Output"
         },
-        "exploring_apps_1/coursef/2022": {
-          "name": "Suokkardala App:aid"
+        "input-and-output-1/csd/2021": {
+          "name": "Input ja Output"
         },
-        "internet/coursef/2022": {
-          "name": "Interneahtta"
+        "app-proposal-project/csd/2021": {
+          "name": "App:at ja ČuolbmaČoavdin"
         },
-        "internet_1/coursef/2022": {
-          "name": "Interneahtta"
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "App:at ja ČuolbmaČoavdin",
+          "type": "Eará Oahppi Árvvoštallan"
         },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "Sirdde, Sirdde"
-        },
-        "getting_loopy/courseb/2022": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "getting_loopy_1/courseb/2022": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "getting_loopy_2/courseb/2022": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "getting_loopy_3/courseb/2022": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "Movttegis Kárttat"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "binary_bracelets/coursec/2022": {
-          "name": "Binára Giehtabáttit"
-        },
-        "binary_bracelets_1/coursec/2022": {
-          "name": "Binára Giehtabáttit"
-        },
-        "binary_bracelets_2/coursec/2022": {
-          "name": "Binára Giehtabáttit"
-        },
-        "binary_bracelets_3/coursec/2022": {
-          "name": "Binára Giehtabáttit"
-        },
-        "binary_bracelets_4/coursec/2022": {
-          "name": "Binára Giehtabáttit"
-        },
-        "computer_science_practices/csd/2022": {
+        "computer-science-practices/csd/2021": {
           "type": "Reflekšuvdna"
         },
-        "data_in_the_real_world/csd/2022": {
+        "apps_and_problem_solving/csd/2021": {
+          "name": "App:at ja ČuolbmaČoavdin"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Digitála Luodda"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
+        "classes/csd/2021": {
+          "name": "Klássat"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Sprite:at"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "Sprite Lihkadeapmi"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "BáberPrototyhpat"
+        },
+        "market-research/csd/2021": {
+          "name": "MárkanIskkadeapmi"
+        },
+        "market_research/csd/2021": {
+          "name": "MárkanIskkadeapmi"
+        },
+        "design_mode/csd/2021": {
+          "name": "Designa Modus"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Designa Modus"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
           "name": "Dáta Duohta Máilmmis"
         },
-        "data_in_the_real_world_1/csd/2022": {
+        "data-in-the-real-world/csd/2021": {
           "name": "Dáta Duohta Máilmmis"
         },
-        "video_machine_learning/csd/2022": {
+        "video_machine_learning/csd/2021": {
           "name": "Video: Oahpahit Mašiinna"
         },
-        "make_a_recommendation/csd/2022": {
+        "make-a-recommendation-peer-review-2019/csd/2021": {
           "type": "Eará Oahppi Árvvoštallan"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Láidehus Matrisaide"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Designe Data Čoakkaldaga"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Movttegis Kárttat"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Sirdde, Sirdde"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Binára Giehtabáttit"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Binára Giehtabáttit"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Binára Giehtabáttit"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Binára Giehtabáttit"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binára Giehtabáttit"
+        },
+        "exploring_apps/coursef/2021": {
+          "name": "Suokkardala App:aid"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "Suokkardala App:aid"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Suohttasat Mohkiid váste"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Suohttasat Mohkiid váste"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Suohttasat Mohkiid váste"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Suohttasat Mohkiid váste"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Suohttasat Mohkiid váste"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Interneahtta"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Interneahtta"
         },
         "intro_to_problem_solving/csd/2022": {
           "name": "Láidehus ČuolbmaČoavdimii"
@@ -114,8 +196,41 @@
         "apps_and_problem_solving_2/csd/2022": {
           "name": "App:at ja ČuolbmaČoavdin"
         },
+        "computer_science_practices/csd/2022": {
+          "type": "Reflekšuvdna"
+        },
         "project_-_propose_an_app/csd/2022": {
           "name": "Prošeakta - Evttohit App:a"
+        },
+        "intro_to_html/csd/2022": {
+          "name": "Láidehus HTML:ii"
+        },
+        "headings/csd/2022": {
+          "name": "Bajilčállagat"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
+        "digital_footprint/csd/2022": {
+          "name": "Digitála Luodda"
+        },
+        "styling_text_with_css/csd/2022": {
+          "name": "Stylet Teavstta CSS:ain"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
+        "styling_elements_with_css/csd/2022": {
+          "name": "Stylet Elemeanttaid CSS:ain"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
+        "classes/csd/2022": {
+          "name": "Klássat"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Eará Oahppi Árvvoštallan"
         },
         "programming_for_entertainment/csd/2022": {
           "name": "Programmere Guoimmuheami"
@@ -165,36 +280,6 @@
         "project_-_design_a_game/csd/2022": {
           "name": "Prošeakta  - Designe Spealu"
         },
-        "intro_to_html/csd/2022": {
-          "name": "Láidehus HTML:ii"
-        },
-        "headings/csd/2022": {
-          "name": "Bajilčállagat"
-        },
-        "html_web_page_2/csd/2022": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "digital_footprint/csd/2022": {
-          "name": "Digitála Luodda"
-        },
-        "styling_text_with_css/csd/2022": {
-          "name": "Stylet Teavstta CSS:ain"
-        },
-        "your_personal_style_1/csd/2022": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "styling_elements_with_css/csd/2022": {
-          "name": "Stylet Elemeanttaid CSS:ain"
-        },
-        "personal_web_page/csd/2022": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "classes/csd/2022": {
-          "name": "Klássat"
-        },
-        "website_for_a_purpose_1/csd/2022": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
         "understanding_your_user/csd/2022": {
           "name": "Ipmirdit Du Geavaheaddji"
         },
@@ -219,6 +304,18 @@
         "prototype_testing/csd/2022": {
           "name": "Prototyhpa Teasten"
         },
+        "data_in_the_real_world/csd/2022": {
+          "name": "Dáta Duohta Máilmmis"
+        },
+        "data_in_the_real_world_1/csd/2022": {
+          "name": "Dáta Duohta Máilmmis"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Video: Oahpahit Mašiinna"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
         "introduction_to_arrays/csd/2022": {
           "name": "Láidehus Matrisaide"
         },
@@ -228,179 +325,82 @@
         "survey_planning/csd/2022": {
           "name": "Designe Data Čoakkaldaga"
         },
+        "happy_maps/coursea/2022": {
+          "name": "Movttegis Kárttat"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Sirdde, Sirdde"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binára Giehtabáttit"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binára Giehtabáttit"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binára Giehtabáttit"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binára Giehtabáttit"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binára Giehtabáttit"
+        },
+        "exploring_apps/coursef/2022": {
+          "name": "Suokkardala App:aid"
+        },
+        "exploring_apps_1/coursef/2022": {
+          "name": "Suokkardala App:aid"
+        },
+        "internet/coursef/2022": {
+          "name": "Interneahtta"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Interneahtta"
+        },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "",
           "url": "",
           "type": ""
-        },
-        "exploring_apps/coursef/2021": {
-          "name": "Suokkardala App:aid"
-        },
-        "exploring_apps_1/coursef/2021": {
-          "name": "Suokkardala App:aid"
-        },
-        "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Suohttasat Mohkiid váste"
-        },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Suohttasat Mohkiid váste"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Suohttasat Mohkiid váste"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Suohttasat Mohkiid váste"
-        },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Suohttasat Mohkiid váste"
-        },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Interneahtta"
-        },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "Interneahtta"
-        },
-        "teacher-video-move-it/courseb/2021": {
-          "name": "Sirdde, Sirdde"
-        },
-        "assessment-answer-getting-loopy/courseb/2021": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "csf-getting-loopy-activity-worksheet/courseb/2021": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "csf-getting-loopy-assessment/courseb/2021": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "unplugged-video-getting-loopy/courseb/2021": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "csf-the-big-event-assessment/courseb/2021": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Movttegis Kárttat"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "unplugged-video-big-event/coursea/2021": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "assessment-answer-big-event/coursec/2021": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "csf-the-big-event-assessment/coursec/2021": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "unplugged-video-big-event/coursec/2021": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "assessment-answer-binary-bracelets/coursec/2021": {
-          "name": "Binára Giehtabáttit"
-        },
-        "csf-binary-bracelets-activity/coursec/2021": {
-          "name": "Binára Giehtabáttit"
-        },
-        "csf-binary-bracelets-assessment/coursec/2021": {
-          "name": "Binára Giehtabáttit"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
-          "name": "Binára Giehtabáttit"
-        },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Binára Giehtabáttit"
-        },
-        "survey_planning/csd/2021": {
-          "name": "Designe Data Čoakkaldaga"
-        },
-        "computer-science-practices/csd/2021": {
-          "type": "Reflekšuvdna"
-        },
-        "paper-prototypes/csd/2021": {
-          "name": "BáberPrototyhpat"
-        },
-        "market-research/csd/2021": {
-          "name": "MárkanIskkadeapmi"
-        },
-        "market_research/csd/2021": {
-          "name": "MárkanIskkadeapmi"
-        },
-        "design_mode/csd/2021": {
-          "name": "Designa Modus"
-        },
-        "design_mode_1/csd/2021": {
-          "name": "Designa Modus"
-        },
-        "introduction_to_arrays/csd/2021": {
-          "name": "Láidehus Matrisaide"
-        },
-        "data-in-the-real-world-exemplar-2019/csd/2021": {
-          "name": "Dáta Duohta Máilmmis"
-        },
-        "data-in-the-real-world/csd/2021": {
-          "name": "Dáta Duohta Máilmmis"
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "Video: Oahpahit Mašiinna"
-        },
-        "make-a-recommendation-peer-review-2019/csd/2021": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "sprites_1/csd/2021": {
-          "name": "Sprite:at"
-        },
-        "animating-sprites/csd/2021": {
-          "name": "Sprite Lihkadeapmi"
-        },
-        "interactive-card-1-2-3-4/csd/2021": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "make-your-own-game-1-2-3/csd/2021": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "input-and-output-2020/csd/2021": {
-          "name": "Input ja Output"
-        },
-        "input-and-output-1/csd/2021": {
-          "name": "Input ja Output"
-        },
-        "app-proposal-project/csd/2021": {
-          "name": "App:at ja ČuolbmaČoavdin"
-        },
-        "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "name": "App:at ja ČuolbmaČoavdin",
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "apps_and_problem_solving/csd/2021": {
-          "name": "App:at ja ČuolbmaČoavdin"
-        },
-        "html-web-page/csd/2021": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "digital-footprint/csd/2021": {
-          "name": "Digitála Luodda"
-        },
-        "your-personal-style-1/csd/2021": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "personal-web-page-1/csd/2021": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "classes/csd/2021": {
-          "name": "Klássat"
-        },
-        "website-for-a-purpose/csd/2021": {
-          "type": "Eará Oahppi Árvvoštallan"
         }
       }
     }
