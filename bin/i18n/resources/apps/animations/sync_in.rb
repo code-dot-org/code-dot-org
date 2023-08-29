@@ -37,10 +37,7 @@ module I18n
           end
 
           def progress_bar
-            @progress_bar ||= ProgressBar.create(
-              title: 'Apps/animations sync-in',
-              format: I18nScriptUtils::PROGRESS_BAR_FORMAT,
-            )
+            @progress_bar ||= I18nScriptUtils.create_progress_bar(title: 'Apps/animations sync-in')
           end
         end
       end
