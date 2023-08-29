@@ -260,6 +260,8 @@ az:
     əldə edin
   call_to_action_try_java_lab: Java Laboratoriyasını sınayın
   call_to_action_notify_available: Mövcud olduqda mənə bildirin
+  call_to_action_register_early_access: Erkən giriş üçün qeydiyyatdan keçin
+  call_to_action_open_positions: Açıq mövqelərə baxın
   aria_label_call_to_action_afe: Amazon Future Engineer haqqında daha çox məlumat
     əldə edin
   aria_label_call_to_action_teaching_csf: Tədris Kompüter Elmlərinin Əsasları peşəkar
@@ -13330,6 +13332,118 @@ az:
   accessibility_card_text_10: Code.org-un AP Kompüter Elmləri Prinsipləri kurikulumunun
     uyğunlaşdırılması, əvvəlcə kor və ya görmə qüsurlu tələbələr üçün əlçatanlığı
     təmin etmək üçün hazırlanmış sübuta əsaslanan bir dil olan Quorum istifadə edir.
+  engineering_hero_heading: Mühəndislik komandamıza qoşulun!
+  engineering_hero_desc: Mühəndislik komandamızı genişləndirməyə davam edərkən, Code.org
+    saytındakı mühəndislik təşkilatımız və burada işləməyin bəzi unikal aspektləri
+    haqqında daha çox məlumat vermək istədik. Rollarımızdan birinə müraciət etmək
+    istəyirsinizsə, sizdən eşitmək istərdik!
+  engineering_team_title: Code.org saytında mühəndislik qrupu ilə tanış olun
+  engineering_team_card_text_1: Bu (əksəriyyəti) 2023-cü ilin yayında şəxsən bir araya
+    gəlirik! Bu izdiham bütün tələbələrimiz və müəllimlərimiz üçün platforma qurmaq
+    və xidmət etmək üçün birlikdə çalışan mühəndislik komandamız daxilində dörd alt
+    komandaya bölünür.
+  engineering_team_card_text_2: Rollarımızdan birinə müraciət etmək istəyirsinizsə,
+    sizdən eşitmək istərdik! Açıq vəzifələrin siyahısını Karyera səhifəmizdə tapa
+    bilərsiniz.
+  engineering_our_team_title: Mühəndislik komandamız
+  engineering_our_team_desc: 'Code.org-dakı mühəndislik qrupu platformamızın müxtəlif
+    sahələrini quran və dəstəkləyən dörd alt komandaya bölünür:'
+  engineering_our_team_sub_title_1: Tələbə Öyrənmə Komandası
+  engineering_our_team_text_1: Tələbə Öyrənmə Komandamız tələbələrimizin hər gün istifadə
+    etdiyi bütün fəaliyyətlərimizə (laboratoriyalar deyirik) sahibdir. Bu komanda
+    əsasən ön texnologiyalar üzərində işləyir (React və bir çox xüsusi JS istifadə
+    edirik) və bir çox tərəfdaşlarla və açıq mənbəli layihələrlə əla iş əlaqəmiz var.
+    Məsələn, bütün blok əsaslı proqramlarımız üçün [Google-un Blockly] (%{youtube_url})
+    istifadə edirik. Biz şagirdləri Uşaq bağçasından 12-ci sinifə qədər öyrənmə səyahətlərində
+    dəstəkləyirik.
+  engineering_our_team_sub_title_2: Müəllim Təcrübə Komandası
+  engineering_our_team_text_2: Müəllim Təcrübə Komandamız Code.org saytına yeni müəllimləri
+    cəlb edən vasitələr qurur (biz bu satınalma məhsulları adlandırırıq) və mövcud
+    müəllimlərimizə tədris proqramımızı (müəllim alətlərimizi) öyrətmək imkanı verən
+    platforma hazırlayır. Tələbə alətlərimizdə olduğu kimi, ön hissəmizi qurmaq üçün
+    React-ə etibar edirik və server tərəfindəki komponentlərimiz Ruby on Rails istifadə
+    edərək xidmət göstərir.
+  engineering_our_team_sub_title_3: Platforma Komandası
+  engineering_our_team_text_3: Platforma Komandamız tələbə və müəllim komandalarımızın
+    ehtiyaclarına xidmət edən əsas komponentlərə (məsələn, identifikasiya və istifadəçi
+    profili) sahibdir və eyni zamanda hələ çata bilmədiyimiz tələbələrə çatmaq missiyasına
+    malikdir. Buraya bizi fərqli Öyrənmə İdarəetmə Sistemlərindən (LMS) istifadə edən
+    məktəblərlə əlaqələndirən inteqrasiya qurmaq və tədris proqramımızı etibarlı internetə
+    çıxışı olmayan uzaq məktəblərdə istifadə etmək üçün qablaşdırmaq daxildir.
+  engineering_our_team_sub_title_4: İnfrastruktur Komandası
+  engineering_our_team_text_4: İnfrastruktur Komandamız tələbələrimizi və müəllimlərimizi
+    dəstəkləyən platforma üçün onurğa sütunu təmin edir. Buraya hosting infrastrukturumuz
+    və əlaqəli xidmətlərimiz (AWS istifadə edirik), məlumatların idarə edilməsi, təhlükəsizlik
+    proqramları, geliştirici və yerləşdirmə xidmətləri və daha çox şey daxildir. Bu
+    komanda həmçinin Kod Saatı zamanı kritik olan miqyaslandırma və təminat sistemlərimizə
+    sahibdir və burada dünyanın hər bir tələbəni bizimlə bir saatlıq kodlaşdırmanı
+    tamamlamağa dəvət edirik.
+  engineering_faq_question_1: Code.org nə edir?
+  engineering_faq_answer_1_a: Code.org, hər məktəbdəki hər bir tələbənin əsas K-12
+    təhsilinin bir hissəsi olaraq kompüter elmlərini öyrənmək imkanına sahib olduğu
+    vizyonuna həsr olunmuş bir təhsil innovasiyası qeyri-kommersiya təşkilatıdır.
+  engineering_faq_answer_1_b: Gənc qadınların və digər az təmsil olunan qruplardan
+    olan tələbələrin iştirakını artırmağa diqqət yetirməklə məktəblərdə kompüter elmlərinə
+    çıxışı genişləndiririk. ABŞ-ın ən böyük məktəb bölgələrində K-12 kompüter elmləri
+    kurikulumunun aparıcı provayderi olan Code.org, dünyanın bütün tələbələrinin 15%
+    -dən çoxunu cəlb edən illik Kod Saatı kampaniyasını da təşkil edir.
+  engineering_faq_answer_1_c: Code.org Microsoft, Amazon, Google və digərləri daxil
+    olmaqla səxavətli donorlar tərəfindən dəstəklənir.
+  engineering_faq_question_2: Code.org-un geliştirici təcrübəsi və alətləri nədir?
+  engineering_faq_answer_2: Geliştirici təcrübəmiz keçmiş rollarınızda gördüklərinizdən
+    fərqli ola bilər. Məhsul komandamızla sıx əməkdaşlıq edərək, biz hər iş günü istehsala
+    göndəririk və müxtəlif kadanslarımız var - bəzən o gün canlı yayımlanan kod yazırsınız;
+    digər vaxtlarda daha uzunmüddətli layihələrdəsiniz - və biz 2 həftəlik qaçışları
+    izləyərkən bunu yüngül şəkildə edirik. Hər hansı bir xüsusi metodologiyaya təmiz
+    bir fikir verməklə düzgün işlərin düzgün şəkildə yerinə yetirilməsini indeksləşdiririk.
+    [Bütün kodumuz] (%{code_url}) açıq mənbədir və bütün iş maddələrimizi izləmək
+    üçün JIRA və GitHub çəkmə istəklərindən istifadə edirik. Keyfiyyət və test mövzusunda
+    da çox əhəmiyyət veririk və bulud cihaz təsərrüfatında müxtəlif tələbə cihazlarında
+    (məsələn, iPad) UI testlərimizi aparmağımıza kömək edən [SauceLabs](%{saucelabs_url})
+    -dən inanılmaz dəstəyə sahib olduğumuz üçün şanslıyıq.
+  engineering_faq_question_3: Code.org-da mühəndis zəng rotasiyası nədir?
+  engineering_faq_answer_3: 30+ mühəndislik komandamız çağırış məsuliyyətlərini bölüşür.
+    Hər bir mühəndis 24 saatlıq bir növbəni əhatə edir və saytın kəsilməsinə və ya
+    digər canlı sayt problemlərinə cavab vermək üçün eskalasiya yollarımızdan və oyun
+    kitablarımızdan istifadə edir. Saytımızın etibarlılığı ilə fəxr edirik - orta
+    hesabla, hər bir mühəndis adətən tez həll olunan məsələlər üçün ildə yalnız bir
+    dəfə oyandı. Bunun əvəzinə, “Günün İnkişaf etdiricisi” ümumiyyətlə iş gününün
+    bir hissəsini istehsalın yerləşdirilməsini idarə etməyə və daha az təcili məsələləri
+    sınaqdan keçirməyə sərf edir.
+  engineering_faq_question_4: Uzaqdan dost/WFH təşkilatısınız?
+  engineering_faq_answer_4_a: Bəli! 2019-cu ildə, pandemiyadan bir az əvvəl, Code.org
+    uzaqdan ilk təşkilat oldu. Bu gün ABŞ-ın hər saat qurşağında mühəndislərimiz var
+    və buna uyğun olaraq iş saatlarını yerləşdiririk. Görüşlərimizin əksəriyyəti PT
+    saat 10:00 -dan 15:00 -a qədər baş verir.
+  engineering_faq_answer_4_b: Şəxsən vaxtın dəyərini də tanıyırıq və hər rübdə şəxsən
+    bir araya gəlirik, adətən Seattle-da. Bu tədbirlərdən ikisi (bunları Başlanğıc
+    həftəsi və “Codechella” adlandırırıq) təşkilatdakı hər kəsi yanvar və iyun aylarında
+    bir araya gətirir - mühəndislik və məhsul qrupları aprel və oktyabr aylarında
+    ayrıca görüşür.
+  engineering_faq_answer_4_c: Tələbələrimiz və müəllimlərimizlə vaxt keçirəcəyimizə
+    inanırıq, buna görə də bu fərdi tədbirlərin bir çoxuna rəy toplamaq və ya məhsullarımızı
+    sınamaq üçün məktəblərə və sinif otaqlarına səfərlər daxildir.
+  engineering_faq_question_5: Code.org saytındakı mühəndislik qrupunu unikal edən
+    nədir?
+  engineering_faq_answer_5_a: 'Çətin texniki problemləri həll etməkdən başqa, mühəndislik
+    təşkilatımızı işlədiyiniz digərlərindən fərqləndirən bir neçə şeyimiz var:'
+  engineering_faq_answer_5_b_1: Hamımız missiyamıza olan ehtirasımızı bölüşürük.
+  engineering_faq_answer_5_b_2: Hər birimiz dünyanın hər bir tələbə üçün kompüter
+    elminə çıxışı genişləndirmək missiyasını dəstəkləmək üçün buradayıq. Bizi bu missiyaya
+    aparan şeylər haqqında hamımızın özünəməxsus hekayəmiz və perspektivimiz var.
+  engineering_faq_answer_5_c_1: Bir-birimizə dərindən əhəmiyyət veririk.
+  engineering_faq_answer_5_c_2: Mühəndislər bir problemlə mübarizə apararkən, biz
+    addım atırıq və kömək edirik. Prinsiplərimizdən biri odur ki, biz problemlərə
+    qarşı sərt, amma bir-birimizə qarşı mehribanıq. Mühəndisləri mütəmadi olaraq təbliğ
+    edirik, ancaq kiminsə tanıtım yolunu dəstəkləmək üçün həddindən artıq mühəndis
+    həllər təyin etmirik. Bunun əvəzinə mühəndislərimizə səxavətli peşəkar inkişaf
+    büdcəsi və digər öyrənmə imkanlarına çıxış imkanı ilə sərmayə qoyuruq.
+  engineering_faq_answer_5_d_1: Çox çalışırıq, amma aydın sərhədlər qoyuruq.
+  engineering_faq_answer_5_d_2: Dünyadakı tələbələri dəstəkləsək də, iş və ev həyatı
+    arasındakı aydın sərhədlərə görə özümüzü məsuliyyət daşıyırıq. Çərşənbə günləri
+    PTO-nu (ilin sonunda org-geniş 2 həftəlik ofisin bağlanması daxil olmaqla cəmi
+    5 həftə), yay aka Yay Cümə günlərində cümə günləri yarım iş günü və digər səxavətli
+    faydalar.
   language_code:
     ar: Ərəb
     az: Azərbaycan

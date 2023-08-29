@@ -264,6 +264,8 @@ ga:
   call_to_action_learn_about_approach: Níos mó a fhoghlaim faoinár gcur chuige
   call_to_action_try_java_lab: Bain Triail As Java Lab
   call_to_action_notify_available: Cuir in iúl dom nuair atá sé ar fáil
+  call_to_action_register_early_access: Cláraigh le haghaidh rochtain luath
+  call_to_action_open_positions: Féach ar phoist oscailte
   aria_label_call_to_action_afe: Níos mó a fhoghlaim faoi Innealtóir Todhchaí Amazon
   aria_label_call_to_action_teaching_csf: Tosaigh an Teagasc Eolaíocht Ríomhaireachta
     Bunúsaigh clár foghlama gairmiúla
@@ -13735,6 +13737,128 @@ ga:
   accessibility_card_text_10: Oiriúnú ar churaclam AP Prionsabail Eolaíochta Ríomhaireachta
     Code.org ag baint úsáide as Córam, teanga fianaise-bhunaithe a ceapadh ar dtús
     chun inrochtaineacht a chur ar fáil do mhic léinn dall nó lagamhairc.
+  engineering_hero_heading: Bí inár bhfoireann innealtóireachta!
+  engineering_hero_desc: De réir mar a leanaimid orainn ag leathnú ár bhfoireann innealtóireachta,
+    theastaigh uainn níos mó a roinnt faoinár n-eagraíocht innealtóireachta ag Code.org
+    agus cuid de na gnéithe uathúla a bhaineann le bheith ag obair anseo. Má tá suim
+    agat iarratas a dhéanamh ar cheann dár róil, ba bhreá linn cloisteáil uait!
+  engineering_team_title: Téigh in aithne ar an bhfoireann innealtóireachta ag Code.org
+  engineering_team_card_text_1: Tá sé seo (an chuid is mó de) dúinn ag ár n-duine
+    teacht le chéile i rith samhradh na bliana 2023! Tá an slua seo roinnte ina cheithre
+    fho-fhoireann laistigh dár bhfoireann innealtóireachta a oibríonn le chéile chun
+    an t-ardán a thógáil agus a sheirbheáil dár mic léinn agus dár múinteoirí go léir.
+  engineering_team_card_text_2: Má tá suim agat iarratas a dhéanamh ar cheann dár
+    róil, ba bhreá linn cloisteáil uait! Is féidir leat liosta de na poist oscailte
+    a fháil ar ár leathanach Gairmeacha.
+  engineering_our_team_title: Ár bhfoireann innealtóireachta
+  engineering_our_team_desc: 'Tá an fhoireann innealtóireachta ag Code.org roinnte
+    i gceithre fho-fhoireann a thógann agus a thacaíonn le réimsí éagsúla dár n-ardán:'
+  engineering_our_team_sub_title_1: Foireann Foghlama na Mac Léinn
+  engineering_our_team_text_1: Is leis ár bhFoireann Foghlama Mac Léinn ár ngníomhaíochtaí
+    go léir (tugaimid saotharlanna orthu) a úsáideann ár gcuid mac léinn gach lá.
+    Oibríonn an fhoireann seo den chuid is mó ar theicneolaíocht tosaigh (úsáidimid
+    React agus a lán JS saincheaptha) agus tá caidreamh iontach oibre againn le go
+    leor comhpháirtithe agus tionscadail foinse oscailte. Mar shampla, úsáidimid [Google
+    Blockly] (%{youtube_url}) le haghaidh gach ceann dár gcláir blocbhunaithe. Tacaímid
+    le mic léinn ina dturas foghlama an bealach ar fad ó Kindergarten trí 12ú grád.
+  engineering_our_team_sub_title_2: Foireann Taithí Múinteoirí
+  engineering_our_team_text_2: Tógann ár bhFoireann Taithí Múinteoirí na huirlisí
+    a mheallann múinteoirí nua chuig Code.org (tugaimid na táirgí fála seo) agus forbraíonn
+    sé an t-ardán a thugann cumhacht dár múinteoirí reatha ár gcuraclam (ár n-uirlisí
+    múinteoirí) a mhúineadh. Mar is amhlaidh le ár n-uirlisí mac léinn, táimid ag
+    brath ar React a thógáil ar ár tosaigh deireadh agus ár bhfreastalaí-taobh comhpháirteanna
+    a sheirbheáil ag baint úsáide as Ruby ar Rails.
+  engineering_our_team_sub_title_3: Foireann Ardáin
+  engineering_our_team_text_3: Tá croí-chomhpháirteanna ag ár bhFoireann Ardáin a
+    fhreastalaíonn ar riachtanais ár bhfoirne mac léinn agus múinteoirí (mar shampla,
+    fíordheimhniú agus próifíl úsáideora) agus tá sé de mhisean aici mic léinn a bhaint
+    amach nach féidir linn a bhaint amach go fóill. Áirítear leis seo comhtháthú tógála
+    a nascann linn le scoileanna a úsáideann Córais Bainistíochta Foghlama éagsúla
+    (LMS) agus ár gcuraclam a phacáistiú ionas gur féidir é a úsáid i scoileanna iargúlta
+    nach bhfuil rochtain acu ar an idirlíon iontaofa.
+  engineering_our_team_sub_title_4: Foireann Bonneagair
+  engineering_our_team_text_4: Soláthraíonn ár bhFoireann Bonneagair cnámh droma don
+    ardán a thacaíonn lenár mic léinn agus lenár múinteoirí. Áirítear leis seo ár
+    mbonneagar óstála agus seirbhísí gaolmhara (úsáidimid AWS), bainistíocht sonraí,
+    cláir slándála, seirbhísí forbróra agus imlonnaithe agus go leor eile. Úinéireacht
+    an fhoireann freisin ar ár gcórais scálú agus soláthar, atá ríthábhachtach le
+    linn Uair an Chóid, i gcás ina tugaimid cuireadh do gach mac léinn ar fud an domhain
+    a chur i gcrích uair an chloig de códaithe le linn.
+  engineering_faq_question_1: Cad a dhéanann Code.org?
+  engineering_faq_answer_1_a: Is Code.org neamhbhrabúis nuálaíocht oideachais tiomanta
+    do fhís go bhfuil an deis a fhoghlaim eolaíocht ríomhaireachta mar chuid dá n-oideachas
+    K-12 lárnach gach mac léinn i ngach scoil.
+  engineering_faq_answer_1_b: Leathnaímid an rochtain ar an ríomheolaíocht i scoileanna,
+    agus dírímid ar rannpháirtíocht na mban óg agus na mac léinn ó ghrúpaí eile nach
+    bhfuil ionadaíocht acu a mhéadú. An soláthraí na príomhchúiseanna le K-12 curaclam
+    eolaíocht ríomhaireachta sna ceantair scoil is mó sna Stáit Aontaithe, Eagraíonn
+    Code.org freisin ar an Uair bliantúil d'fheachtas Cód, a bhfuil ag gabháil níos
+    mó ná 15% de na mic léinn ar fud an domhain.
+  engineering_faq_answer_1_c: Code.org Tacaíonn deontóirí flaithiúla lena n-áirítear
+    Microsoft, Amazon, Google agus go leor eile.
+  engineering_faq_question_2: Cad é taithí forbróir Code.org agus tooling?
+  engineering_faq_answer_2: D'fhéadfadh ár dtaithí forbróir a bheith difriúil leis
+    an méid atá tú ag feiceáil i do róil roimhe seo. Ag obair go dlúth lenár bhfoireann
+    táirgí, long muid a tháirgeadh gach lá den tseachtain agus ní mór dúinn éagsúla
+    cadences - uaireanta tá tú ag scríobh cód a théann beo an lá sin; amanna eile
+    go bhfuil tú ar thionscadail níos fadtéarmaí - agus cé a dhéanann muid a leanúint
+    ráibeanna 2-seachtainiúil, a dhéanann muid amhlaidh ar bhealach lightweight. Innéacs
+    againn i dtreo dul ar na rudaí ceart a dhéanamh ar an mbealach ceart vs cur d'fhonn
+    purist aon mhodheolaíocht ar leith. [Gach ár cód] (%{code_url}) Is foinse oscailte
+    agus úsáidimid JIRA agus GitHub iarratais tarraingt a rianú i ngach ceann dár
+    míreanna oibre. Táimid cúram chomh maith go leor faoi chaighdeán agus tástáil
+    agus tá an t-ádh go bhfuil tacaíocht dochreidte ó [SauceLabs](%{saucelabs_url}),
+    a cabhrú linn a reáchtáil ár sraith tástálacha Chomhéadain ar feistí mac léinn
+    éagsúla (m.sh., iPads) ina bhfeirm gléas scamall.
+  engineering_faq_question_3: Cad é uainíocht ar-ghlao-innealtóir ag Code.org?
+  engineering_faq_answer_3: Roinneann ár bhfoireann innealtóireachta 30+ freagrachtaí
+    ar ghlao-dhualgas. Clúdaíonn gach innealtóir athrú 24 uair an chloig agus úsáideann
+    sé ár gcosáin ardaithe agus ár leabhair súgartha chun freagra a thabhairt ar bhristeacha
+    láithreáin nó ar shaincheisteanna eile ar an láthair beo. Táimid bródúil as iontaofacht
+    ár láithreáin - ar an meán, ní dhúisítear gach innealtóir ach uair sa bhliain
+    le haghaidh saincheisteanna a bhíonn gasta le réiteach de ghnáth. Ina áit sin,
+    is gnách go gcaitheann “Forbróir an Lae” cuid dá lá oibre ag bainistiú imscaradh
+    táirgeachta agus ag triail saincheisteanna nach bhfuil chomh práinneach.
+  engineering_faq_question_4: An eagraíocht iargúlta-chairdiúil/WFH tú?
+  engineering_faq_answer_4_a: Is ea! In 2019, go gairid roimh an bpaindéim, tháinig
+    Code.org chun bheith ina eagraíocht iargúlta ar dtús. Sa lá atá inniu ann, tá
+    innealtóirí againn i ngach crios ama de chuid na SA agus déanaimid freastal ar
+    uaireanta oibre dá réir. Tarlaíonn an chuid is mó dár gcruinnithe idir na huaireanta
+    10am agus 3pm PT.
+  engineering_faq_answer_4_b: Aithnímid freisin an luach in-duine am, agus gach ráithe
+    a fháil againn le chéile go pearsanta, de ghnáth i Seattle. Dhá cheann de na himeachtaí
+    seo (tugaimid orthu Ciceáil-uaire seachtain agus “Codechella”) gach duine san
+    eagraíocht a thabhairt le chéile i mí Eanáir agus Meitheamh - agus na foirne innealtóireachta
+    agus táirge le chéile ar leithligh i mí Aibreáin agus Deireadh Fómhair.
+  engineering_faq_answer_4_c: Creidimid go láidir agus muid ag caitheamh ama lenár
+    gcuid mac léinn agus lenár múinteoirí, cuimsíonn an oiread sin de na himeachtaí
+    pearsanta seo turais isteach i scoileanna agus i seomraí ranga chun aiseolas a
+    bhailiú nó chun ár gcuid táirgí a thástáil
+  engineering_faq_question_5: Cad a dhéanann an fhoireann innealtóireachta ag Code.org
+    uathúil?
+  engineering_faq_answer_5_a: 'Seachas fadhbanna teicniúla dúshlánacha a réiteach,
+    tá cúpla rud againn a fhágann go bhfuil ár n-orgán innealtóireachta difriúil ó
+    dhaoine eile ar oibrigh tú iontu:'
+  engineering_faq_answer_5_b_1: Táimid go léir a roinnt ár paisean le haghaidh ár
+    misean.
+  engineering_faq_answer_5_b_2: Tá gach duine againn anseo chun tacú leis an misean
+    rochtain ar ríomheolaíocht a leathnú do gach mac léinn ar fud an domhain. Tá ár
+    scéal agus ár bpeirspictíocht uathúil againn go léir faoi na rudaí a spreagann
+    sinn i dtreo an mhisin seo.
+  engineering_faq_answer_5_c_1: Tá cúram mór orainn faoina chéile.
+  engineering_faq_answer_5_c_2: Nuair a bhíonn innealtóirí ag streachailt le saincheist,
+    déanaimid céim isteach agus cabhraímid. Ceann de na prionsabail atá againn ná
+    go bhfuilimid deacair ar fhadhbanna, ach cineálta lena chéile. Cuirimid innealtóirí
+    chun cinn go rialta, ach ní fhorordaímid réitigh ró-innealtóireachta chun tacú
+    le cosán ardú céime duine. Ina áit sin, infheistímid inár n-innealtóirí le buiséad
+    forbartha gairmiúil flaithiúil agus rochtain ar dheiseanna foghlama eile.
+  engineering_faq_answer_5_d_1: Oibrímid go crua, ach leagamar teorainneacha soiléire.
+  engineering_faq_answer_5_d_2: Cé go dtacaímid le mic léinn ar fud an domhain, tá
+    muid freagrach as teorainneacha soiléire idir an obair agus saol an bhaile. Taitneamh
+    a bhaint as aon-chruinnithe Dé Céadaoin, ag cur ár PTO (5 seachtaine san iomlán,
+    lena n-áirítear dúnadh oifige org-leathan 2 seachtaine ag deireadh na bliana aka
+    Sos Gheimhridh), leath lá oibre ar an Aoine i rith an tsamhraidh aka Aoine an
+    tSamhraidh, agus sochair flaithiúla eile.
   language_code:
     ar: Araibis
     az: Asarbaiseáinis
