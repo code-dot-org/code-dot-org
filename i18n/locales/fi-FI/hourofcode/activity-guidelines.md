@@ -103,6 +103,7 @@ Mitä tarvitset:
 * Lähetettyä toimintaa edustavan ensisijaisen yhteyshenkilön nimi ja sähköpostiosoite
 * Toiminnan nimi (nimessä ei voi olla ”Hour of Code”)
 * URL-linkki aktiviteettiin
+* Sisältääkö tämä toiminta AI: Kyllä vai Ei
 * Aktiviteetin kuvaus (merkkien enimmäismäärä: 400) 
     * Liitä kuvaukseen myös tieto siitä, onko se lähinnä opiskelija-ohjattu vai opettaja-helpotettava. Lisäksi jotkut koulut ovat kiinnostuneita tietämään, käsittelevätkö Koodaustunnin toiminnat yhteisiä perustietoja vai seuraavan sukupolven tiedestandardeja. Jos toiminta käsittelee erityisiä standardeja, harkitse tämän tiedon lisäämistä.
 * Suositeltu arvosanataso (t) tarkoitetuille käyttäjille. Voit viitata \[Computer Science Teachers' Associationin K-12-standardeihin\] (https://k12cs.org/framework-statements-by-grade-band/) luokelle sopivista tietojenkäsittelytieteen käsitteistä. Esimerkkejä arvosanoista ovat: 
@@ -110,9 +111,9 @@ Mitä tarvitset:
     * Luokat 2-5 (iät 7-10)
     * Luokat 6-8 (11—13-vuotiaat)
     * Arvosanat 9+ (ikä 14+)
-* Luettelo aihealueista, joita toimintasi kattaa (tietojenkäsittelytieteen lisäksi). Esimerkiksi, jos matematiikan opettaja voi käyttää toimintaasi opettamaan kulmista tai paraboloista, listaa matematiikkana. Jos sinulla on hullu libs toimintaa, joka opettaa verbejä/substantiiveja/jne. Valitse kielitaide.
-* Luettelo ohjelmointikielistä, joita aktiviteettisi opettaa. Eli C/C ++, Java, JavaScript jne. tai kielestä riippumaton (tuntisuunnitelmille, joita voidaan opettaa useilla kielillä)
-* Luettelo tuetuista luonnollisista kielistä. Huomautus: Kielen tunnistus on toiminnan tarjoajan vastuulla; ohjaamme kaikki käyttäjät annettuun yhteen URL-osoitteeseen.
+* Luettelo ohjelmointikielistä, joita aktiviteettisi opettaa. Eli C/C ++, Java, JavaScript jne. tai kielestä riippumaton (tuntisuunnitelmille, joita voidaan opettaa useilla kielillä) Valitse kielitaide.
+* Luettelo tuetuista luonnollisista kielistä. Huomautus: Kielen tunnistus on toiminnan tarjoajan vastuulla; ohjaamme kaikki käyttäjät annettuun yhteen URL-osoitteeseen. tai kielestä riippumaton (tuntisuunnitelmille, joita voidaan opettaa useilla kielillä)
+* Minkä tason kokemusta kouluttajalla tulisi olla käyttääkseen toimintaasi? (esim. Aloittelija tai Mukava.) Ja mikä kokemus opiskelijoilla pitäisi olla?
 * Minkä tason kokemusta kouluttajalla tulisi olla käyttääkseen toimintaasi? (esim. Aloittelija tai Mukava.) Ja mikä kokemus opiskelijoilla pitäisi olla? Jos haluat valmistella edistyneempiä Hour of Code™ -aktiviteetteja, sisällytä tarvittavat tiedot toiminnan kuvaukseen.
 * Toimintasi pituus 
     * Vain 1 tunti
@@ -166,9 +167,11 @@ Mitä tarvitset:
 
 ## Miten toimintaa arvioidaan
 
-Monipuolinen tietojenkäsittelytieteen opettajien komitea luokittelee ehdotukset laadullisten ja määrällisten kriteerien perusteella. Kaikki toiminnot, jotka sopivat peruskriteereihin, luetellaan. Opettajat voivat suodattaa ja lajitella löytääkseen parhaat aktiviteetit luokkahuoneelleen.
+Monipuolinen tietojenkäsittelytieteen opettajien komitea luokittelee ehdotukset laadullisten ja määrällisten kriteerien perusteella. Kaikki toiminnot, jotka sopivat peruskriteereihin, luetellaan.
 
-Toimintojen ja tuntisuunnitelmien arviointirubriikissa etsitään seuraavat kriteerit kaikille toiminnoille ja luokitetaan ne vastaavasti:
+Perinteiseen koodaustoimintaan, monipuolinen tietojenkäsittelytieteen opettajien komitea luokittelee ehdotukset laadullisten ja määrällisten kriteerien perusteella. Kaikki toiminnot, jotka sopivat peruskriteereihin, luetellaan. Opettajat voivat suodattaa ja lajitella löytääkseen parhaat aktiviteetit luokkahuoneelleen.
+
+Jos arviointikomitea arvioi toiminnan nollaksi tuotannon laadussa (huonojen virheiden tai ohjeiden vuoksi, jotka vaikeuttavat sen käyttöä), oppimisen edistämisessä aliedustetuissa ryhmissä (rasistisen/seksistisen materiaalin vuoksi), koulutusarvossa (ei opeta CS -käsitteitä) tai hauskaa/kiinnostavaa (koska opiskelijat ovat vaikeita/lannistavia työskennellä läpi), toimintaa ei luetella.
 
 - Korkea tuotannon laatu
 - Edistetään kaikkien väestöryhmien oppimista (esp. CS: ssä aliedustettuina olevat opiskelijat, kuten nuoret naiset, syrjäytyneiden rotu- ja etnisten ryhmien opiskelijat sekä vammaiset opiskelijat)
@@ -176,9 +179,9 @@ Toimintojen ja tuntisuunnitelmien arviointirubriikissa etsitään seuraavat krit
 - Hauskaa ja mukaansatempaavaa
 - Kannustaa oppilaita luomaan jotain ainutlaatuista, jota he voivat jakaa (Nuoremmille opiskelijoille: vanhempien ja luokkatovereiden kanssa. Iäisille opiskelijoille: Internetissä)
 
-Jos arviointikomitea arvioi toiminnan nollaksi tuotannon laadussa (huonojen virheiden tai ohjeiden vuoksi, jotka vaikeuttavat sen käyttöä), oppimisen edistämisessä aliedustetuissa ryhmissä (rasistisen/seksistisen materiaalin vuoksi), koulutusarvossa (ei opeta CS -käsitteitä) tai hauskaa/kiinnostavaa (koska opiskelijat ovat vaikeita/lannistavia työskennellä läpi), toimintaa ei luetella.
-
 Lisäksi, jotta kaikki toiminnot voidaan luetella, on:
+
+Uusien opettajien ja opiskelijoiden itseohjautuvaa toimintaa varten arviointikomitea etsii, onko:
 
 - Ole sopiva julkisen koulun luokkahuoneeseen (ei aseita, ei selkeä/aikuisille suunnattua sisältöä, ei uskonnollista sisältöä jne.)
 - Ei vaadi rekisteröitymistä
@@ -204,11 +207,13 @@ Opettajat ja opiskelijat voivat etsiä ja suodattaa toimintaluettelomme suodatti
 
 ## Ehdotuksia yhden tunnin itseohjattujen opetusohjelmien suunnitteluun
 
-Voit sisällyttää [Hour of Code -logon](https://hourofcode.com/us/promote/resources#logo) opetusohjelmaasi, mutta tätä ei vaadita. Jos käytät Hour of Code -logoa, katso alla olevat tavaramerkkiohjeet. <u>Ei missään tapauksessa saa käyttää Code.org-logoa ja nimeä.</u> Molemmat ovat tavaramerkkejä, eikä niitä voida sekoittaa kolmannen osapuolen tuotemerkkiin ilman nimenomaista kirjallista lupaa.
-
-**Varmista, että keskimääräinen opiskelija voi lopettaa mukavasti tunnissa.** Harkitse avoimen toiminnan lisäämistä lopussa opiskelijoille, jotka liikkuvat nopeammin oppitunnin läpi. Muista, että useimmat lapset ovat täysin aloittelijoita tietotekniikassa ja koodaamisessa.
+Aktiviteetteihin ei tarvitse sisältyä tekoälyä, vaikka pyrimme tarjoamaan enemmän tekoälyyn liittyviä toimintoja.
 
 **Sisällytä opettajan materiaalia.** Useimmat toiminnat tulisi olla opiskelija-ohjattuja, mutta jos toiminnan täytyy olla helpotettu tai johdettu opettajan toimesta, sisällytä selkeät ja yksinkertaiset ohjeet opettajalle opettaja-muistiinpanojen muodossa erillisessä linkissä toiminnassasi. Eivät ainoastaan opiskelijat ole aloittelijoita, jotkut opettajat ovat myös. Sisällytä tietoa kuten:
+
+**Sisällytä palaute toiminnan loppuun.** (Esim. ”Olet suorittanut 10 tasoa ja oppinut silmukoista! Hienoa työtä!”)
+
+**Kannusta oppilaita julkaisemaan sosiaaliseen mediaan (tarvittaessa), kun he ovat lopettaneet.** Esimerkiksi ”Olen tehnyt Hour of Code ________ : n kanssa Oletko? #HourOfCode ”tai ”Olen tehnyt #HourOfCode osana #CSEdWeek. Oletko sinä?
 
 - Millä alustoilla ja selaimilla opetusohjelma toimii parhaiten?
 - Toimiiko se älypuhelimissa? Tabletit?
@@ -247,7 +252,7 @@ Hour of Code® ja Hora del Código® ovat Code.orgin rekisteröityjä tavaramerk
 
 ## Pikselin seuraaminen
 
-Osallistumisen seuraamiseksi tarkemmin pyydämme jokaista opetuskumppania sisällyttämään 1 pikselin seurantakuvan Hour of Code -opetusohjelmiensa ensimmäiselle sivulle. Pikselikuvan on oltava vain aloitussivulla. Älä sisällytä opetusohjelmasi väliaikaisille sivuille.
+Jos opetusohjelmasi on hyväksytty ja sisällytetty viimeiseen opetusohjelmasivulle, Code.org tarjoaa sinulle ainutlaatuisen seurantapikselin, jonka voit integroida opetusohjelmaasi. Katso esimerkki alla. Älä sisällytä opetusohjelmasi väliaikaisille sivuille.
 
 Tämän avulla voimme laskea käyttäjät, jotka tekevät Hour of Code -opetusohjelmasi. Se johtaa tarkempiin osallistumismääriin opetusohjelmassasi.
 

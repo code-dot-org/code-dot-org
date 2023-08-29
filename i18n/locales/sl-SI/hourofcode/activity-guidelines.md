@@ -103,6 +103,7 @@ Kaj boste potrebovali:
 * Ime in e-poštni naslov primarnega stika, ki predstavlja predloženo dejavnost
 * Ime dejavnosti (v imenu ni mogoče vključiti »Ura kode«)
 * URL povezava do dejavnosti
+* Ali ta dejavnost vključuje AI: Da ali Ne
 * Opis dejavnosti (največje število znakov: 400) 
     * V opis vključite, ali je v glavnem voden učenec ali učitelj. Poleg tega nekatere šole zanima, ali dejavnosti Hour of Code obravnavajo skupne jedre ali znanstvene standarde naslednje generacije. Če dejavnost obravnava posebne standarde, razmislite o vključitvi teh informacij.
 * Priporočena raven (-e) razreda (-e) za predvidene uporabnike. Lahko se nanašajo na \[Computer Science Teachers' Association je K-12 Standardi\] (https://k12cs.org/framework-statements-by-grade-band/) za razred primerne računalniške znanosti konceptov. Primer stopnje stopnje vključujejo: 
@@ -110,9 +111,9 @@ Kaj boste potrebovali:
     * 2. do 5. stopnje (7-10 let)
     * 6. in 8. stopnje (11-13 let)
     * 9+ razredov (14+ let)
-* Seznam področij, ki jih zajema vaša dejavnost (poleg računalništva). Če lahko učitelj matematike na primer uporabi vašo dejavnost za poučevanje o kotih ali parabolah, navedite kot matematiko. Če imate noro libs dejavnost, ki uči glagole/samostalnike/etc. izberite jezikovne umetnosti.
-* Seznam programskih jezikov, ki jih vaša dejavnost uči. Tj C/C ++, Java, JavaScript itd. ali jezik neodvisen (za učne načrte, ki jih je mogoče poučevati v več jezikih)
-* Seznam podprtih naravnih jezikov. Opomba: Odkrivanje jezika je odgovoren ponudnik dejavnosti; vse uporabnike bomo preusmerili na en sam URL.
+* Seznam programskih jezikov, ki jih vaša dejavnost uči. Tj C/C ++, Java, JavaScript itd. ali jezik neodvisen (za učne načrte, ki jih je mogoče poučevati v več jezikih) izberite jezikovne umetnosti.
+* Seznam podprtih naravnih jezikov. Opomba: Odkrivanje jezika je odgovoren ponudnik dejavnosti; vse uporabnike bomo preusmerili na en sam URL. ali jezik neodvisen (za učne načrte, ki jih je mogoče poučevati v več jezikih)
+* Kakšno raven izkušenj mora imeti vzgojitelj za uporabo vaše dejavnosti? (npr. Začetnik ali Udobno.) In kakšno raven izkušenj bi morali imeti študenti?
 * Kakšno raven izkušenj mora imeti vzgojitelj za uporabo vaše dejavnosti? (npr. Začetnik ali Udobno.) In kakšno raven izkušenj bi morali imeti študenti? Če želite pripraviti naprednejše dejavnosti Hour of Code™, v opis svoje dejavnosti vključite predhodno znanje.
 * Dolžina vaše dejavnosti 
     * Samo 1 ura
@@ -166,9 +167,11 @@ Kaj boste potrebovali:
 
 ## Kako bodo ocenjene dejavnosti
 
-Raznolik odbor vzgojiteljev računalništva bo uvrstil vloge na podlagi kvalitativnih in kvantitativnih meril. Navedene bodo vse dejavnosti, ki ustrezajo osnovnim merilom. Učitelji bodo lahko filtrirali in razvrstili, da bi našli najboljše dejavnosti za svojo učilnico.
+Raznolik odbor vzgojiteljev računalništva bo uvrstil vloge na podlagi kvalitativnih in kvantitativnih meril. Navedene bodo vse dejavnosti, ki ustrezajo osnovnim merilom.
 
-Rubrika za ocenjevanje dejavnosti in učnih načrtov bo iskala naslednja merila za vse dejavnosti in jih ustrezno razvrstila:
+Za tradicionalne dejavnosti kodiranja bo raznolik odbor vzgojiteljev računalništva razvrstil prispevke na podlagi kvalitativnih in kvantitativnih meril. Navedene bodo vse dejavnosti, ki ustrezajo osnovnim merilom. Učitelji bodo lahko filtrirali in razvrstili, da bi našli najboljše dejavnosti za svojo učilnico.
+
+Če odbor za pregled oceni dejavnost nič v kakovosti proizvodnje (zaradi slabih napak ali navodil, zaradi katerih je zelo težko uporabljati), pri spodbujanju učenja v premalo zastopanih skupinah (zaradi rasističnega/seksističnega gradiva), izobraževalne vrednosti (ne uči konceptov CS) ali zabava/vključevanje (zaradi težko/odvračanja študentov za delo skozi), dejavnost ne bo navedena.
 
 - Visoka kakovost proizvodnje
 - Spodbujati učenje vseh demografskih skupin (esp. študenti premalo zastopani v CS, kot so mlade ženske, študentje iz marginaliziranih rasnih in etničnih skupin ter študentje s posebnimi potrebami)
@@ -176,9 +179,9 @@ Rubrika za ocenjevanje dejavnosti in učnih načrtov bo iskala naslednja merila 
 - Zabavno in privlačno
 - Spodbuja študente, da ustvarijo nekaj edinstvenega, kar lahko delijo (Za mlajše študente: s starši in sošolci. Za starejše študente: na internetu)
 
-Če odbor za pregled oceni dejavnost nič v kakovosti proizvodnje (zaradi slabih napak ali navodil, zaradi katerih je zelo težko uporabljati), pri spodbujanju učenja v premalo zastopanih skupinah (zaradi rasističnega/seksističnega gradiva), izobraževalne vrednosti (ne uči konceptov CS) ali zabava/vključevanje (zaradi težko/odvračanja študentov za delo skozi), dejavnost ne bo navedena.
-
 Poleg tega morajo za uvrstitev na seznam vse dejavnosti:
+
+Za samousmerjene dejavnosti za nove učitelje in študente bo pregledna komisija iskala, ali:
 
 - Bodite primerni za učilnico javne šole (brez pušk, brez eksplicitne/zrele vsebine, brez verskih vsebin itd.)
 - Ne zahtevajte prijave
@@ -204,11 +207,13 @@ Učitelji in učenci bodo lahko iskali in filtrirali naš seznam dejavnosti na p
 
 ## Predlogi za oblikovanje eno uro samo vodene vaje
 
-V vadnico lahko vključite logotip [Hour of Code](https://hourofcode.com/us/promote/resources#logo) , vendar to ni potrebno. Če uporabljate logotip Ura kode, glejte spodnje smernice za blagovno znamko. <u>V nobenem primeru ni mogoče uporabiti logotipa in imena Code.org.</u> Oba sta blagovna znamka in ju ni mogoče združiti z blagovno znamko tretje osebe brez izrecnega pisnega dovoljenja.
-
-**Prepričajte se, da lahko povprečni študent udobno konča v eni uri.** Razmislite o dodajanju odprte dejavnosti na koncu za študente, ki se hitreje premikajo skozi lekcijo. Ne pozabite, da bo večina otrok absolutni začetniki računalništva in kodiranja.
+Dejavnosti ni treba vključevati AI, čeprav želimo ponuditi več dejavnosti, povezanih z umetno inteligenco.
 
 **Vključi zapiske učiteljev.** Večina dejavnosti mora biti usmerjena v študente, če pa učitelj olajša ali upravlja dejavnost, vključite jasna in preprosta navodila za učitelja v obliki zapiskov učitelja na ločenem URL-ju, ki je bil predložen z vašo dejavnostjo. Ne samo, da so študenti novinci, nekateri učitelji so tudi. Vključi informacije, kot so:
+
+**Vključi povratne informacije na koncu dejavnosti.** (Npr. »Končali ste 10 stopenj in se naučili zank! Odlično delo!«)
+
+**Spodbujajte študente, da objavijo na socialnih medijih (kjer je to primerno), ko končajo.** Na primer »Naredil sem uro kode z ________ Ali ste? #HourOfCode« ali »Sem naredil #HourOfCode kot del #CSEdWeek. Ali ste?
 
 - Na katerih platformah in brskalnikih vadnica najbolje deluje?
 - Ali deluje na pametnih telefonih? Tablete?
@@ -247,7 +252,7 @@ Hour of Code® in Hora del Código® sta registrirani blagovni znamki Code.org. 
 
 ## Sledenje Pixel
 
-Da bi natančneje spremljali udeležbo, prosimo vsakega partnerja za vadnice, da na prvo stran svojih vadnic Hour of Code vključi sliko za sledenje 1 slikovnih pik. Slika slikovnih pik mora biti samo na začetni strani. Ne vključujte na vseh vmesnih straneh vadnice.
+Če je vaša vadnica odobrena in vključena na končno stran z vadnicami, vam bo Code.org zagotovil edinstven slikovni pik za sledenje, ki ga boste lahko vključili v vašo vadnico. Glej primer spodaj. Ne vključujte na vseh vmesnih straneh vadnice.
 
 To nam bo omogočilo, da štejemo uporabnike, ki delajo vašo vadnico Hour of Code. To bo privedlo do natančnejših števila udeležbe za vašo vadnico.
 

@@ -266,6 +266,8 @@ hu:
   call_to_action_learn_about_approach: Tudjon meg többet megközelítésünkről
   call_to_action_try_java_lab: Próbálja ki a Java Lab-ot
   call_to_action_notify_available: Értesítsen, ha elérhető
+  call_to_action_register_early_access: Regisztráljon a korai hozzáféréshez
+  call_to_action_open_positions: Nyitott pozíciók megtekintése
   aria_label_call_to_action_afe: Tudjon meg többet az Amazon Future Engineer-ről
   aria_label_call_to_action_teaching_csf: Indítsa el a Számítástudomány alapjainak
     oktatása szakmai tanulási programot
@@ -13408,6 +13410,119 @@ hu:
     adaptációja a Quorum használatával, egy bizonyítékokon alapuló nyelv, amelyet
     eredetileg a vak vagy látássérült hallgatók hozzáférhetőségének biztosítására
     terveztek.
+  engineering_hero_heading: Csatlakozzon mérnöki csapatunkhoz!
+  engineering_hero_desc: Ahogy tovább bővítjük mérnöki csapatunkat, szerettünk volna
+    többet megosztani a Code.org mérnöki szervezetünkről és az itt végzett munka néhány
+    egyedi aspektusáról. Ha érdekel, hogy jelentkezzen valamelyik szerepünkre, szívesen
+    hallanánk rólad!
+  engineering_team_title: Ismerje meg a mérnöki csapatot a Code.org oldalon
+  engineering_team_card_text_1: Ez (legtöbben) a személyes találkozónkon 2023 nyarán!
+    Ez a tömeg négy alcsoportra oszlik mérnöki csapatunkon belül, akik együtt dolgoznak
+    azon, hogy felépítsék és kiszolgálják a platformot minden hallgatónk és tanárunk
+    számára.
+  engineering_team_card_text_2: Ha érdekel, hogy jelentkezzen valamelyik szerepünkre,
+    szívesen hallanánk rólad! A nyitott pozíciók listáját a Karrier oldalon találja.
+  engineering_our_team_title: Mérnöki csapatunk
+  engineering_our_team_desc: 'A Code.org mérnöki csapata négy alcsoportra oszlik,
+    amelyek platformunk különböző területeit építik és támogatják:'
+  engineering_our_team_sub_title_1: Hallgatói tanulási csapat
+  engineering_our_team_text_1: Hallgatói tanulási csapatunk birtokolja minden tevékenységünket
+    (laboratóriumoknak hívjuk őket), amelyeket diákjaink minden nap használnak. Ez
+    a csapat többnyire front-end technológián dolgozik (React-et és sok egyedi JS-t
+    használunk), és nagyszerű munkakapcsolatot ápolunk számos partnerrel és nyílt
+    forráskódú projekttel. Például a [Google's Blockly] (%{youtube_url}) -t használjuk
+    minden blokk alapú programozásunkhoz. Támogatjuk a tanulókat tanulási útjukban
+    az óvodától a 12. osztályig.
+  engineering_our_team_sub_title_2: Tanári tapasztalati csapat
+  engineering_our_team_text_2: Tanári tapasztalati csapatunk felépíti azokat az eszközöket,
+    amelyek új tanárokat vonzanak a Code.org-hoz (ezeket beszerzési termékeknek nevezzük),
+    és kifejleszti azt a platformot, amely felhatalmazza meglévő tanárainkat tantervünk
+    (tanári eszközeink) tanítására. Mint a hallgatói eszközeinknél, a React-re támaszkodunk
+    a front-end felépítésében, és szerveroldali komponenseinket a Ruby on Rails segítségével
+    szolgálják fel.
+  engineering_our_team_sub_title_3: Platform csapat
+  engineering_our_team_text_3: Platform csapatunk olyan alapvető összetevőkkel rendelkezik,
+    amelyek kiszolgálják hallgatói és tanáraink igényeit (például hitelesítés és felhasználói
+    profil), és küldetése az is, hogy elérje azokat a hallgatókat, akiket még nem
+    tudunk elérni. Ez magában foglalja az olyan integrációk építését, amelyek összekapcsolnak
+    minket a különböző tanulási menedzsment rendszereket (LMS) használó iskolákkal,
+    és csomagolják tantervünket, hogy távoli iskolákban is használható legyen, akik
+    nem férnek hozzá megbízható internethez.
+  engineering_our_team_sub_title_4: Infrastruktúra csapat
+  engineering_our_team_text_4: Infrastruktúra csapatunk biztosítja a gerincét annak
+    a platformnak, amely támogatja hallgatóinkat és tanárainkat. Ez magában foglalja
+    a tárhely-infrastruktúránkat és a kapcsolódó szolgáltatásokat (az AWS-t használjuk),
+    az adatkezelést, a biztonsági programokat, a fejlesztői és telepítési szolgáltatásokat
+    és még sok minden mást. Ez a csapat birtokolja skálázási és ellátási rendszereinket
+    is, amelyek kritikusak a Kódolás Órája során, ahol meghívjuk a világ minden hallgatóját,
+    hogy töltsön be egy órás kódolást velünk.
+  engineering_faq_question_1: Mit csinál a Code.org?
+  engineering_faq_answer_1_a: A Code.org egy oktatási innovációs nonprofit szervezet,
+    amely arra a vízióra törekszik, hogy minden iskolában minden tanulónak lehetősége
+    legyen számítástechnikát tanulni a K-12 alapoktatás részeként.
+  engineering_faq_answer_1_b: Bővítjük a számítástechnikához való hozzáférést az iskolákban,
+    különös tekintettel a fiatal nők és más alulreprezentált csoportok diákjainak
+    növekvő részvételére. A K-12 számítástechnikai tanterv vezető szolgáltatója az
+    Egyesült Államok legnagyobb iskolai körzeteiben, a Code.org szervezi az éves Kódolás
+    Órája kampányt is, amely a világ összes hallgatójának több mint 15% -át foglalkoztatta.
+  engineering_faq_answer_1_c: A Code.org-ot nagylelkű adományozók támogatják, köztük
+    a Microsoft, az Amazon, a Google és még sokan mások.
+  engineering_faq_question_2: Mi a Code.org fejlesztői tapasztalata és eszközei?
+  engineering_faq_answer_2: Fejlesztői tapasztalatunk eltérhet attól, amit a korábbi
+    szerepeiben látott. Szorosan együttműködve termékcsapatunkkal, minden hétköznap
+    szállítunk a gyártásba, és különféle kadenciáink vannak - néha olyan kódot ír,
+    amely aznap életbe lép; máskor hosszabb távú projekteken vesz részt - és bár követjük
+    a heti 2 heti sprintet, ezt könnyű módon tesszük. Arra mutatunk, hogy a helyes
+    dolgokat a megfelelő módon végezzük el, szemben az adott módszertan purista nézetével.
+    [Minden kódunk] (%{code_url}) nyílt forráskódú, és JIRA és GitHub pull kéréseket
+    használunk az összes munkadarab nyomon követésére. Sokat törődünk a minőséggel
+    és a teszteléssel is, és szerencsések vagyunk, hogy hihetetlen támogatást kapunk
+    az [SauceLabs](%{saucelabs_url}) -től, akik segítenek nekünk a felhasználói felület
+    tesztcsomagjának futtatásában különböző hallgatói eszközökön (pl. iPads) a felhőeszköz-farmjukon.
+  engineering_faq_question_3: Mi a mérnök ügyeleti rotációja a Code.org-on?
+  engineering_faq_answer_3: 30+ mérnöki csapatunk megosztja az ügyeleti feladatokat.
+    Minden mérnök 24 órás műszakot fed le, és eszkalációs útjainkat és játékkönyveinket
+    használja a webhely leállására vagy más élő webhely problémákra való reagáláshoz.
+    Büszkék vagyunk webhelyünk megbízhatóságára - átlagosan minden mérnököt évente
+    csak egyszer ébresztenek fel olyan problémák miatt, amelyek általában gyorsan
+    megoldhatók. Helyette, a „Nap Fejlesztője” általában munkanapjának egy részét
+    a termelés telepítésének irányításával és a kevésbé sürgős kérdések osztályozásával
+    tölti.
+  engineering_faq_question_4: Ön egy távoli barát/WFH szervezet?
+  engineering_faq_answer_4_a: Igen! 2019-ben, röviddel a járvány előtt, a Code.org
+    távoli szervezet lett. Ma minden amerikai időzónában mérnökeink vannak, és ennek
+    megfelelően fogadják el a munkaidőt. Találkozóink többsége PT 10 és 15 óra között
+    zajlik.
+  engineering_faq_answer_4_b: Felismerjük a személyes idő értékét is, és minden negyedévben
+    személyesen gyűlünk össze, jellemzően Seattle-ben. Ezen események közül kettő
+    (Kick-off Week és „Codechella”) januárban és júniusban mindenkit összehoz a szervezetben
+    - és a mérnöki és termékcsapatok külön találkoznak áprilisban és októberben.
+  engineering_faq_answer_4_c: Határozottan hiszünk abban, hogy időt töltünk diákjainkkal
+    és tanárainkkal, sok ilyen személyes esemény magában foglalja az iskolákba és
+    az osztálytermekbe tett kirándulásokat, hogy visszajelzéseket gyűjtsenek vagy
+    teszteljék termékeinket
+  engineering_faq_question_5: Mi teszi egyedivé a Code.org mérnöki csapatát?
+  engineering_faq_answer_5_a: 'A kihívást jelentő technikai problémák megoldásán túl,
+    van néhány dolog, ami különbözővé teszi mérnöki szervezetünket másoktól, amelyekben
+    esetleg dolgozott:'
+  engineering_faq_answer_5_b_1: Mindannyian osztozunk küldetésünk iránti szenvedélyünkben.
+  engineering_faq_answer_5_b_2: Mindannyian azért vagyunk itt, hogy támogassuk azt
+    a küldetést, hogy kiterjesszük a számítástechnikához való hozzáférést minden hallgató
+    számára szerte a világon. Mindannyiunknak megvan az egyedi története és perspektívája
+    arról, hogy mi vezet minket e küldetés felé.
+  engineering_faq_answer_5_c_1: Mélyen törődünk egymással.
+  engineering_faq_answer_5_c_2: Amikor a mérnökök egy problémával küzdenek, lépünk
+    és segítünk. Az egyik alapelvünk az, hogy kemények vagyunk a problémákkal, de
+    kedvesek egymáshoz. Rendszeresen népszerűsítjük a mérnököket, de nem írunk elő
+    túltervezett megoldásokat csak azért, hogy támogassuk valaki promóciós útját.
+    Ehelyett mérnökeinkbe fektetünk nagyvonalú szakmai fejlesztési költségvetéssel
+    és más tanulási lehetőségekhez való hozzáféréssel.
+  engineering_faq_answer_5_d_1: Keményen dolgozunk, de világos határokat szabunk.
+  engineering_faq_answer_5_d_2: Miközben támogatjuk a diákokat szerte a világon, felelősségre
+    vonjuk magunkat a munka és az otthoni élet közötti egyértelmű határokért. Élvezzük
+    a megbeszélések nélküli szerdákat, a PTO (összesen 5 hét, amely magában foglalja
+    az egész org-szintű 2 hetes irodabezárást az év végén, más néven téli szünetet),
+    fél munkanap pénteken nyáron, más néven nyári péntek, és egyéb nagylelkű előnyök.
   language_code:
     ar: arab
     az: azerbajdzsáni

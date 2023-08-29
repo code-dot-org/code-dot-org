@@ -103,6 +103,7 @@ Những gì bạn cần:
 * Tên và email của người liên hệ chính đại diện cho hoạt động đã gửi
 * Tên hoạt động (không thể bao gồm “Giờ mã” trong tên)
 * Liên kết URL đến hoạt động
+* Hoạt động này có bao gồm AI: Có hay Không
 * Mô tả hoạt động (số ký tự tối đa: 400) 
     * Xin vui lòng bao gồm trong các mô tả cho dù đó là chủ yếu là hướng dẫn sinh viên hoặc giáo viên tạo điều kiện. Ngoài ra, một số trường quan tâm đến việc biết nếu hoạt động giờ Mã địa chỉ phổ biến cốt lõi hoặc tiếp theo thế hệ khoa học tiêu chuẩn. Nếu các hoạt động địa chỉ tiêu chuẩn cụ thể, hãy xem xét bao gồm thông tin này.
 * (Các) cấp lớp được đề xuất cho người dùng dự định. Bạn có thể tham khảo \[Tiêu chuẩn K-12 của Hiệp hội Giáo viên Khoa học Máy tính\] (https://k12cs.org/framework-statements-by-grade-band/) để biết các khái niệm khoa học máy tính phù hợp với lớp. Các cấp lớp ví dụ bao gồm: 
@@ -110,9 +111,9 @@ Những gì bạn cần:
     * Lớp 2-5 (7-10 tuổi)
     * Lớp 6-8 (lứa tuổi 11-13)
     * Lớp 9+ (từ 14 tuổi trở lên)
-* Danh sách các lĩnh vực chủ đề mà hoạt động của bạn bao gồm (ngoài Khoa học Máy tính). Ví dụ: nếu một giáo viên toán có thể sử dụng hoạt động của bạn để dạy về các góc hoặc parabol, hãy liệt kê là toán học. Nếu bạn có một hoạt động libs điên dạy động từ/danh từ/v.v. Chọn ngôn ngữ nghệ thuật.
-* Một danh sách các ngôn ngữ lập trình mà hoạt động của bạn dạy. Tức là C/C ++, Java, JavaScript, v.v. hoặc ngôn ngữ độc lập (đối với các kế hoạch bài học có thể được dạy bằng nhiều ngôn ngữ)
-* Một danh sách các ngôn ngữ tự nhiên được hỗ trợ. Lưu ý: Phát hiện ngôn ngữ là trách nhiệm của nhà cung cấp hoạt động; chúng tôi sẽ chuyển hướng tất cả người dùng đến URL duy nhất được cung cấp.
+* Một danh sách các ngôn ngữ lập trình mà hoạt động của bạn dạy. Tức là C/C ++, Java, JavaScript, v.v. hoặc ngôn ngữ độc lập (đối với các kế hoạch bài học có thể được dạy bằng nhiều ngôn ngữ) Chọn ngôn ngữ nghệ thuật.
+* Một danh sách các ngôn ngữ tự nhiên được hỗ trợ. Lưu ý: Phát hiện ngôn ngữ là trách nhiệm của nhà cung cấp hoạt động; chúng tôi sẽ chuyển hướng tất cả người dùng đến URL duy nhất được cung cấp. hoặc ngôn ngữ độc lập (đối với các kế hoạch bài học có thể được dạy bằng nhiều ngôn ngữ)
+* Một nhà giáo dục nên có mức độ kinh nghiệm nào để sử dụng hoạt động của bạn? (Ví dụ: Người mới bắt đầu hoặc Thoải mái.) Và, học sinh nên có mức độ kinh nghiệm nào?
 * Một nhà giáo dục nên có mức độ kinh nghiệm nào để sử dụng hoạt động của bạn? (Ví dụ: Người mới bắt đầu hoặc Thoải mái.) Và, học sinh nên có mức độ kinh nghiệm nào? Nếu bạn muốn chuẩn bị các Hoạt động Hour of Code™ nâng cao hơn, vui lòng bao gồm kiến thức trước cần thiết trong phần mô tả hoạt động của bạn.
 * Độ dài hoạt động của bạn 
     * Chỉ 1 giờ
@@ -166,9 +167,11 @@ Những gì bạn cần:
 
 ## Các hoạt động sẽ được đánh giá như thế nào
 
-Một ủy ban đa dạng của các nhà giáo dục khoa học máy tính sẽ xếp hạng các bài nộp dựa trên các tiêu chí định tính và định lượng. Tất cả các hoạt động phù hợp với các tiêu chí cơ bản sẽ được liệt kê. Giáo viên sẽ có thể lọc và sắp xếp để tìm các hoạt động tốt nhất cho lớp học của họ.
+Một ủy ban đa dạng của các nhà giáo dục khoa học máy tính sẽ xếp hạng các bài nộp dựa trên các tiêu chí định tính và định lượng. Tất cả các hoạt động phù hợp với các tiêu chí cơ bản sẽ được liệt kê.
 
-Phiếu đánh giá để đánh giá các hoạt động và giáo án sẽ tìm kiếm các tiêu chí sau cho tất cả các hoạt động và xếp hạng chúng cho phù hợp:
+Đối với các hoạt động mã hóa truyền thống, một ủy ban đa dạng của các nhà giáo dục khoa học máy tính sẽ xếp hạng các bài nộp dựa trên các tiêu chí định tính và định lượng. Tất cả các hoạt động phù hợp với các tiêu chí cơ bản sẽ được liệt kê. Giáo viên sẽ có thể lọc và sắp xếp để tìm các hoạt động tốt nhất cho lớp học của họ.
+
+Nếu ủy ban đánh giá hoạt động bằng 0 về chất lượng sản xuất (do lỗi hoặc hướng dẫn xấu khiến nó rất khó sử dụng), trong việc thúc đẩy việc học ở các nhóm ít được đại diện (do tài liệu phân biệt chủng tộc/phân biệt giới tính), về giá trị giáo dục (không dạy các khái niệm CS) hoặc vui vẻ/hấp dẫn (do khó khăn/không khuyến khích học sinh làm việc), hoạt động sẽ không được liệt kê.
 
 - Chất lượng sản xuất cao
 - Thúc đẩy việc học của tất cả các nhóm nhân khẩu học (đặc biệt là. học sinh không được đại diện trong CS, như phụ nữ trẻ, học sinh từ các nhóm chủng tộc và dân tộc bị thiệt thòi, và học sinh khuyết tật)
@@ -176,9 +179,9 @@ Phiếu đánh giá để đánh giá các hoạt động và giáo án sẽ tì
 - Vui vẻ và hấp dẫn
 - Khuyến khích học sinh tạo ra một cái gì đó độc đáo mà họ có thể chia sẻ (Đối với học sinh nhỏ tuổi: với phụ huynh và bạn cùng lớp. Dành cho sinh viên lớn tuổi: trên Internet)
 
-Nếu ủy ban đánh giá hoạt động bằng 0 về chất lượng sản xuất (do lỗi hoặc hướng dẫn xấu khiến nó rất khó sử dụng), trong việc thúc đẩy việc học ở các nhóm ít được đại diện (do tài liệu phân biệt chủng tộc/phân biệt giới tính), về giá trị giáo dục (không dạy các khái niệm CS) hoặc vui vẻ/hấp dẫn (do khó khăn/không khuyến khích học sinh làm việc), hoạt động sẽ không được liệt kê.
-
 Ngoài ra, để được liệt kê, tất cả các hoạt động phải:
+
+Đối với các hoạt động tự định hướng cho giáo viên và học sinh mới, ủy ban đánh giá sẽ tìm kiếm liệu:
 
 - Thích hợp cho một lớp học ở trường công lập (không có súng, không có nội dung rõ ràng, không có nội dung tôn giáo, v.v.)
 - Không cần đăng ký
@@ -204,11 +207,13 @@ Giáo viên và học sinh sẽ có thể tìm kiếm và lọc danh sách các 
 
 ## Những đề xuất để thiết kế hoạt động của bạn
 
-Bạn có thể bao gồm logo [Hour of Code](https://hourofcode.com/us/promote/resources#logo) trong hướng dẫn của bạn, nhưng điều này là không bắt buộc. Nếu bạn sử dụng logo Hour of Code, hãy xem hướng dẫn về nhãn hiệu bên dưới. <u>Trong mọi trường hợp, logo và tên Code.org không thể được sử dụng.</u> Cả hai đều được đăng ký nhãn hiệu và không thể được kết hợp với tên thương hiệu của bên thứ 3 mà không có sự cho phép rõ ràng bằng văn bản.
-
-**Hãy chắc chắn rằng học sinh ở mức trung bình có thể hoàn thành dễ dàng trong khoảng một giờ.** Bổ sung thêm hoạt động mở dành cho những sinh viên hoàn thành trước thời gian. Hãy nhớ rằng hầu hết trẻ em đều là lần đầu tiếp cận với máy tính và mã hóa.
+Các hoạt động không nhất thiết phải bao gồm AI, mặc dù chúng tôi đang tìm cách cung cấp nhiều hoạt động liên quan đến AI hơn.
 
 **Bao gồm giáo viên ghi chú.** Phần lớn các hoạt động tập trung vào học sinh, nhưng nếu hoạt động được tạo ra và quản lý bởi giáo viên, xin vui lòng thêm vào các chỉ dẫn đơn giản theo cấu trúc giáo viên-ghi chú trong URL riêng biệt gửi cùng hoạt động của bạn. Không chỉ có học sinh mới là người chưa có kinh nghiệm, một số giáo viên cũng vậy. Bao gồm thông tin như:
+
+**Kết hợp phản hồi vào cuối hoạt động.** (Ví dụ: “Bạn đã hoàn thành 10 cấp độ và tìm hiểu về các vòng lặp! Làm tốt lắm!”)
+
+**Khuyến khích sinh viên đăng lên phương tiện truyền thông xã hội (nếu thích hợp) khi họ đã hoàn thành.** Ví dụ: “Tôi đã thực hiện một Giờ Lập trình với ________ Bạn có không? #HourOfCode” hoặc “Tôi đã thực hiện #HourOfCode như một phần của #CSEdWeek. Phải không?
 
 - Hướng dẫn hoạt động tốt nhất trên nền tảng và trình duyệt nào?
 - Nó có hoạt động trên điện thoại thông minh không? Máy tính bảng?
@@ -247,7 +252,7 @@ Hour of Code® và Hora del Código® là các nhãn hiệu đã đăng ký củ
 
 ## Theo dõi Pixel
 
-Để theo dõi chính xác hơn sự tham gia, chúng tôi yêu cầu mọi đối tác hướng dẫn đưa hình ảnh theo dõi 1 pixel vào trang đầu tiên của hướng dẫn Hour of Code của họ. Hình ảnh pixel chỉ được đặt trên trang bắt đầu. Không bao gồm trên bất kỳ trang tạm thời nào của hướng dẫn của bạn.
+Nếu hướng dẫn của bạn được chấp thuận và đưa vào trang hướng dẫn cuối cùng, Code.org sẽ cung cấp cho bạn một pixel theo dõi duy nhất để bạn tích hợp vào hướng dẫn của mình. Xem ví dụ dưới đây. Không bao gồm trên bất kỳ trang tạm thời nào của hướng dẫn của bạn.
 
 Điều này sẽ cho phép chúng tôi đếm số người dùng thực hiện hướng dẫn Hour of Code của bạn. Nó sẽ dẫn đến số lượng tham gia chính xác hơn cho hướng dẫn của bạn.
 

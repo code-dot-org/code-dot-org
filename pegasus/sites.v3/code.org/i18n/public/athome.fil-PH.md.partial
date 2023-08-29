@@ -38,7 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Mag-code ng Pagtitipong Sayawan para ibahagi sa mga kaibigan at pamilya. Itinatampok sina Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, musika sa "Encanto" ng Disney, at higit pa!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code a Dance Party to share with friends and family. Itinatampok sina Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, musika sa "Encanto" ng Disney, at higit pa!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Subukan ang aktibidad</button></a>
     </span>
   </div>
@@ -52,7 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Nagbabalik ang Minecraft para sa Hour of Code na may bagong aktibidad! Paglalakbay sa Minecraft na may code.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Subukan ang aktibidad</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft is back for the Hour of Code with a brand new activity! Paglalakbay sa Minecraft na may code.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Subukan ang aktibidad</button></a>
     </span>
   </div>
 </div>
@@ -65,7 +67,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tulungan ang A.I. na linisin ang mga dagat sa pamamagitan ng pagsanay nito na tuklasin ang basura! Matuto pa tungkol sa data at bias, at kung paano ang AI ay kayang tugunan ang problema ng mundo. Tingnan ang <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Subukan ang aktibidad</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Help A.I. clean the oceans by training it to detect trash! Matuto pa tungkol sa data at bias, at kung paano ang AI ay kayang tugunan ang problema ng mundo. Tingnan ang <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Subukan ang aktibidad</button></a>
     </span>
   </div>
 </div>
@@ -90,7 +93,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>How Computers Work</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Kasama ang introduksyon ni Bill Gates, ipinaliliwanag ng seryeng ito ng maiikling video kung ano ang nagpapaandar sa computer at paano umaandar ang mga circuit ng computer.</div>        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Panoorin ang serye ng video</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>How Computers Work</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">With an introduction by Bill Gates, this series of six short videos explains what makes a computer a computer and how computer circuits work.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Watch the video series</button></a>
     </span>
   </div>
 </div>
@@ -103,7 +108,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong></strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Sa serye ng walong mabababang video na ito, matututunan mo kung paano nilikha ang internet, ano ang HTML, at kung paano gumagana ang mga search engine tulad ng Google.</div>        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Panoorin ang mga serye ng video</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How the Internet Works</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">In this series of eight short videos, you’ll learn how the internet was invented, what HTML is, and how search engines like Google work.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Watch the video series</button></a>
     </span>
   </div>
 </div>
@@ -116,7 +123,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How AI Works</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Matuto kung paano gumagana ang AI at bakit kailangan ito sa mga serye ng mabababang video na ito. Featuring Microsoft CEO Satya Nadella and a diverse cast of experts.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Panoorin ang mga serye ng video</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How AI Works</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Learn about how AI works and why it matters with this series of short videos. Featuring Microsoft CEO Satya Nadella and a diverse cast of experts.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Panoorin ang mga serye ng video</button></a>
     </span>
   </div>
 </div>
@@ -164,7 +172,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduction to Game Lab</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Mga program animation, interactive na art, at mga laro sa Game Lab. Magsimula sa mga simpleng hugis at bumuo ng hanggang sa mas sopistikadong sprite-based na mga animation at mga laro.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Subukan ang module</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduction to Game Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Program animations, interactive art, and games in Game Lab. Magsimula sa mga simpleng hugis at bumuo ng hanggang sa mas sopistikadong sprite-based na mga animation at mga laro.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Subukan ang module</button></a>
     </span>
   </div>
 </div>
@@ -177,7 +186,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programming sa App Lab</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Gumamit ng mga simpleng command ng JavaScript para gumuhit ng mga hugis at larawan gamit ang isang virtual na "turtle." Idisenyo at i-programa ang iyong sariling digital na eksena!</div>        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Subukan ang module</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programming in App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Use simple JavaScript commands to draw shapes and images using a virtual “turtle.” Design and program your own digital scene!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Try the module</button></a>
     </span>
   </div>
 </div>
@@ -190,7 +201,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programming na Batay sa Kaganapan sa App Lab</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Matutong magdisenyo ng mga app na tumutugon sa mga pag-click at pagpindot sa key. Gumawa ng serye ng mga simpleng application (apps) na nagtatagal sa web!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Subukan ang module</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Event-Driven Programming in App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Learn to design apps that respond to clicks and key presses. Gumawa ng serye ng mga simpleng application (apps) na nagtatagal sa web!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Subukan ang module</button></a>
     </span>
   </div>
 </div>
@@ -294,7 +306,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>        <div class="smalltext" style="color: dimgray;">Ang CodeBytes ay madaling-i-digest, 20 minutong interactive na mga aralin na pinaghahalo ang computer science sa mga paksa sa totoong mundo. Magsanay ang isang AI na magbasa ng sign language, magdisenyo ng app para sa kabutihan, galugarin ang mundo ng Minecraft, at higit pa!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Tingnan ang mga episode</button></a>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes are easy-to-digest, 20 minute interactive lessons blending computer science with real-world topics. Magsanay ang isang AI na magbasa ng sign language, magdisenyo ng app para sa kabutihan, galugarin ang mundo ng Minecraft, at higit pa!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Tingnan ang mga episode</button></a>
     </span>
   </div>
 </div>
@@ -307,7 +320,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Code Break</strong></h3>        <div class="smalltext" style="color: dimgray; ">Panatilihing masaya ang computer science sa pamamagitan ng pagkuha ng Code Break! Pwede kang lumikha ng isang cypher kasama si Ashton Kutcher, alamin ang tungkol sa mga variable kasama si Yara Shahidi, at tuklasin din kung paano gumagana ang Internet kasama ang aktwal na imbentor ng Internet, si Vint Cerf!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Kumonekta</button></a>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
+        <div class="smalltext" style="">Keep computer science fun by taking a Code Break! Pwede kang lumikha ng isang cypher kasama si Ashton Kutcher, alamin ang tungkol sa mga variable kasama si Yara Shahidi, at tuklasin din kung paano gumagana ang Internet kasama ang aktwal na imbentor ng Internet, si Vint Cerf!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Kumonekta</button></a>
     </span>
   </div>
 </div>

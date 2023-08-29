@@ -267,6 +267,8 @@ uz:
     oling
   call_to_action_try_java_lab: Java Labbni sinab ko'ring
   call_to_action_notify_available: Mavjud bo'lganda menga xabar bering
+  call_to_action_register_early_access: Erta kirish uchun ro'yxatdan o'ting
+  call_to_action_open_positions: Ochiq pozitsiyalarni ko'rish
   aria_label_call_to_action_afe: Amazon Future Engineer haqida ko'proq bilib oling
   aria_label_call_to_action_teaching_csf: Kompyuter fanlari asoslarini o'qitish professional
     ta'lim dasturini boshlang
@@ -14046,6 +14048,129 @@ uz:
     o'rganish o'quv dasturini Kvorum yordamida moslashtirish, dastlab ko'zi ojiz yoki
     ko'rish qobiliyati zaif o'quvchilar uchun foydalanish imkoniyatini ta'minlash
     uchun mo'ljallangan ilmiy dalillarga asoslangan til.
+  engineering_hero_heading: Bizning muhandislik guruhimizga qo'shiling!
+  engineering_hero_desc: Muhandislik guruhimizni kengaytirishda davom etar ekanmiz,
+    Code.org saytidagi muhandislik tashkilotimiz va bu erda ishlashning o'ziga xos
+    jihatlari haqida ko'proq ma'lumot berishni xohladik. Agar siz bizning rollarimizdan
+    biriga ariza berishni xohlasangiz, biz sizdan xabar olishni xohlaymiz!
+  engineering_team_title: Code.org da muhandislik jamoasi bilan tanishing
+  engineering_team_card_text_1: Bu (ko'pchiligimiz) 2023 yilning yozida shaxsan yig'ilishimiz!
+    Bu olomon bizning muhandislik guruhimizdagi to'rtta kichik guruhga bo'lingan bo'lib,
+    ular barcha talabalarimiz va o'qituvchilarimiz uchun platformani qurish va xizmat
+    qilish uchun birgalikda ishlaydi.
+  engineering_team_card_text_2: Agar siz bizning rollarimizdan biriga ariza berishni
+    xohlasangiz, biz sizdan xabar olishni xohlaymiz! Ochiq lavozimlar ro'yxatini bizning
+    Karyera sahifamizda topishingiz mumkin.
+  engineering_our_team_title: Bizning muhandislik guruhimiz
+  engineering_our_team_desc: 'Code.org saytidagi muhandislik jamoasi bizning platformamizning
+    turli sohalarini quradigan va qo''llab-quvvatlaydigan to''rtta kichik guruhga
+    bo''lingan:'
+  engineering_our_team_sub_title_1: Talabalarni o'rganish guruhi
+  engineering_our_team_text_1: Talabalarni o'rganish bo'yicha guruhimiz talabalarimiz
+    har kuni foydalanadigan barcha tadbirlarimizga (biz ularni laboratoriya deb ataymiz)
+    egalik qiladi. Ushbu jamoa asosan oldingi texnologiyada ishlaydi (biz React va
+    ko'plab maxsus JS-dan foydalanamiz) va biz ko'plab sheriklar va ochiq manbali
+    loyihalar bilan yaxshi ish munosabatlariga egamiz. Masalan, biz blokka asoslangan
+    barcha dasturlarimiz uchun [Google-ning Blockly] (%{youtube_url}) dan foydalanamiz.
+    Biz o'quvchilarni bolalar bog'chasidan 12-sinfgacha bo'lgan o'quv sayohatlarida
+    qo'llab-quvvatlaymiz.
+  engineering_our_team_sub_title_2: O'qituvchilar tajribasi jamoasi
+  engineering_our_team_text_2: O'qituvchilar tajribasi jamoasi Code.org saytiga yangi
+    o'qituvchilarni jalb qiladigan vositalarni yaratadi (biz ularni sotib olish mahsulotlari
+    deb ataymiz) va mavjud o'qituvchilarimizga o'quv dasturimizni (o'qituvchi asboblarimizni)
+    o'rgatish imkoniyatini beradigan platformani ishlab chiqadi. Talaba vositalarimizda
+    bo'lgani kabi, biz ham oldingi uchimizni yaratish uchun React-ga tayanamiz va
+    server tomonidagi komponentlarimiz Ruby on Rails yordamida xizmat qiladi.
+  engineering_our_team_sub_title_3: Platforma jamoasi
+  engineering_our_team_text_3: Bizning platforma jamoasi talabalar va o'qituvchilar
+    jamoalarining ehtiyojlariga xizmat qiladigan asosiy tarkibiy qismlarga ega (masalan,
+    autentifikatsiya va foydalanuvchi profili), shuningdek, biz hali erisha olmaydigan
+    talabalarga erishish missiyasiga ega. Bunga bizni turli xil ta'limni boshqarish
+    tizimlaridan (LMS) foydalanadigan maktablar bilan bog'laydigan integratsiyani
+    o'rnatish va o'quv dasturimizni ishonchli Internetga ega bo'lmagan uzoq maktablarda
+    ishlatish uchun qadoqlash kiradi.
+  engineering_our_team_sub_title_4: Infratuzilma jamoasi
+  engineering_our_team_text_4: Bizning infratuzilma guruhimiz talabalarimiz va o'qituvchilarimizni
+    qo'llab-quvvatlaydigan platforma uchun tayanch bo'lib xizmat qiladi. Bunga bizning
+    hosting infratuzilmamiz va tegishli xizmatlar (biz AWS-dan foydalanamiz), ma'lumotlarni
+    boshqarish, xavfsizlik dasturlari, ishlab chiquvchi va tarqatish xizmatlari va
+    boshqalar kiradi. Bu jamoa, shuningdek, Kod soati davomida juda muhim bo'lgan
+    masshtablash va ta'minlash tizimlarimizga ega, bu erda biz dunyodagi har bir talabani
+    biz bilan bir soatlik kodlashni yakunlashga taklif qilamiz.
+  engineering_faq_question_1: Code.org nima qiladi?
+  engineering_faq_answer_1_a: Code.org - bu har bir maktabdagi har bir o'quvchi asosiy
+    K-12 ta'limining bir qismi sifatida informatika fanini o'rganish imkoniyatiga
+    ega degan tasavvurga bag'ishlangan ta'lim innovatsion notijorat tashkiloti.
+  engineering_faq_answer_1_b: Biz maktablarda informatika fanlaridan foydalanish imkoniyatini
+    kengaytiramiz, bunda yosh ayollar va boshqa kam vakillik guruhlari talabalari
+    ishtirokini oshirishga e'tibor qaratamiz. Qo'shma Shtatlarning eng yirik maktab
+    tumanlarida K-12 informatika o'quv dasturining etakchi provayderi Code.org, shuningdek,
+    dunyodagi barcha o'quvchilarning 15% dan ortig'ini jalb qilgan har yili “Kod soati”
+    kampaniyasini tashkil qiladi.
+  engineering_faq_answer_1_c: Code.org Microsoft, Amazon, Google va boshqa ko'plab
+    donorlar tomonidan qo'llab-quvvatlanadi.
+  engineering_faq_question_2: Code.org saytining ishlab chiquvchi tajribasi va asboblari
+    nima?
+  engineering_faq_answer_2: Bizning ishlab chiquvchi tajribamiz sizning oldingi rollaringizda
+    ko'rganingizdan farq qilishi mumkin. Mahsulot jamoamiz bilan yaqindan hamkorlik
+    qilib, biz har ish kunida ishlab chiqarishga jo'natamiz va bizda turli xil kadrlar
+    mavjud - ba'zida siz o'sha kuni jonli efirga uzatiladigan kod yozasiz; boshqa
+    paytlarda siz uzoq muddatli loyihalarda bo'lasiz - va biz 2 haftalik sprintlarga
+    amal qilsak ham, biz buni engil usulda qilamiz. Biz to'g'ri ishlarni to'g'ri bajarish
+    va har qanday metodologiyaga purist nuqtai nazar bilan qarashni indekslaymiz.
+    [Bizning barcha kodimiz] (%{code_url}) ochiq manba bo'lib, biz barcha ish elementlarimizni
+    kuzatish uchun JIRA va GitHub tortish so'rovlaridan foydalanamiz. Shuningdek,
+    biz sifat va sinovlar haqida juda qayg'uramiz va [SauceLabs](%{saucelabs_url})
+    dan ajoyib yordamga ega bo'lish baxtiga muyassar bo'lamiz, ular bizga bulutli
+    qurilmalar fermasida turli xil talabalar qurilmalarida (masalan, iPad) UI testlarini
+    o'tkazishda yordam beradi.
+  engineering_faq_question_3: Code.org saytida muhandis qo'ng'iroqda aylanish nima?
+  engineering_faq_answer_3: Bizning 30+ muhandislik guruhimiz chaqiruv bo'yicha majburiyatlarni
+    baham ko'radi. Har bir muhandis 24 soatlik smenani qamrab oladi va saytdagi uzilishlar
+    yoki boshqa jonli sayt muammolariga javob berish uchun bizning eskalatsiya yo'llari
+    va o'yin daftarlarimizdan foydalanadi. Biz saytimizning ishonchliligi bilan faxrlanamiz
+    - o'rtacha hisobda har bir muhandis odatda tez hal qilinadigan muammolar uchun
+    yiliga bir marta uyg'onadi. Buning o'rniga, “Kunni ishlab chiquvchi” odatda ish
+    kunining bir qismini ishlab chiqarishni joylashtirishni boshqarishga va unchalik
+    dolzarb bo'lmagan muammolarni hal qilishga sarflaydi.
+  engineering_faq_question_4: Siz masofadan turib do'st/WFH tashkilotisiz?
+  engineering_faq_answer_4_a: Ha! 2019 yilda, pandemiyadan biroz oldin, Code.org uzoqdan
+    birinchi tashkilotga aylandi. Bugungi kunda biz AQShning har bir vaqt zonasida
+    muhandislarimiz bor va shunga mos ravishda ish vaqtini joylashtiramiz. Uchrashuvlarimizning
+    aksariyati PT soat 10:00 dan 15:00 gacha davom etadi.
+  engineering_faq_answer_4_b: Shuningdek, biz shaxsiy vaqtning qadrini tan olamiz
+    va har chorakda biz shaxsan, odatda Sietlda yig'amiz. Ushbu tadbirlardan ikkitasi
+    (biz ularni Kick-off haftasi va “Codechella” deb ataymiz) yanvar va iyun oylarida
+    tashkilotdagi barchani birlashtiradi - va muhandislik va mahsulot guruhlari aprel
+    va oktyabr oylarida alohida yig'ilishadi.
+  engineering_faq_answer_4_c: Biz o'quvchilarimiz va o'qituvchilarimiz bilan vaqt
+    o'tkazishga qat'iy ishonamiz, shuning uchun ushbu shaxsiy tadbirlarning aksariyati
+    fikr-mulohazalarni to'plash yoki mahsulotimizni sinab ko'rish uchun maktablar
+    va sinflarga sayohatlarni o'z ichiga oladi.
+  engineering_faq_question_5: Code.org muhandislik guruhini nima noyob qiladi?
+  engineering_faq_answer_5_a: 'Qiyin texnik muammolarni hal qilishdan tashqari, bizda
+    muhandislik orgimizni siz ishlagan boshqalardan farq qiladigan bir nechta narsalar
+    mavjud:'
+  engineering_faq_answer_5_b_1: Biz hammamiz missiyamizga bo'lgan ishtiyoqimizni baham
+    ko'ramiz.
+  engineering_faq_answer_5_b_2: Har birimiz butun dunyo bo'ylab har bir talaba uchun
+    informatika fanlaridan foydalanish imkoniyatini kengaytirish missiyasini qo'llab-quvvatlash
+    uchun shu yerdamiz. Hammamizning o'ziga xos hikoyamiz va bizni ushbu missiyaga
+    nima undayotgani haqida nuqtai nazarimiz bor.
+  engineering_faq_answer_5_c_1: Biz bir-birimizga chuqur g'amxo'rlik qilamiz.
+  engineering_faq_answer_5_c_2: Muhandislar muammo bilan kurashayotganda, biz qadam
+    tashlaymiz va yordam beramiz. Bizning printsiplarimizdan biri shundaki, biz muammolarga
+    qiynalamiz, lekin bir-birimizga mehribonmiz. Biz muhandislarni muntazam ravishda
+    targ'ib qilamiz, lekin biz kimningdir reklama yo'lini qo'llab-quvvatlash uchun
+    haddan tashqari ishlab chiqilgan echimlarni buyurmaymiz. Buning o'rniga, biz muhandislarimizga
+    saxovatli kasbiy rivojlanish byudjeti va boshqa ta'lim imkoniyatlaridan foydalanish
+    imkoniyati bilan sarmoya kiritamiz.
+  engineering_faq_answer_5_d_1: Biz qattiq ishlaymiz, lekin aniq chegaralarni belgilaymiz.
+  engineering_faq_answer_5_d_2: Biz butun dunyo bo'ylab talabalarni qo'llab -quvvatlasak
+    -da, biz ish va uy hayoti o'rtasidagi aniq chegaralar uchun o'zimizni javobgarlikka
+    tortamiz. Biz chorshanba kunlari yig'ilishlarsiz zavqlanamiz, PTO-ni olamiz (jami
+    5 hafta, bu yil oxirida org bo'ylab 2 haftalik ofis yopilishini o'z ichiga oladi),
+    yozda juma kunlari yarim ish kuni aka yozgi juma kunlari, va boshqa saxiy imtiyozlar.
   language_code:
     ar: Arab
     az: Ozarbayjoncha

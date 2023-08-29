@@ -706,6 +706,7 @@ mn:
         csa_sorting_algorithms: 'CSA: Эрэмбэлэх алгоритмууд'
         star_quilts_intro_to_artist: 'Оддын хөнжил: Зураачийн танилцуулга'
         upload_sprites_backgrounds: Custom Sprites болон фон байршуулж байна
+        what-is-creativity: Бүтээлч байдал гэж юу вэ?
     callout:
       text:
         drag_blocks: '"Шилжих" хэсгийг чирж, нөгөө блокийн доор байрлуулна уу'
