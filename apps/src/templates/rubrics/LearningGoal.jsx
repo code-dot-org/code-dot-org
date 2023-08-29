@@ -8,6 +8,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   BodyThreeText,
   BodyFourText,
+  ExtraStrongText,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -95,7 +96,9 @@ const AiToken = () => {
     <div>
       {' '}
       <BodyFourText className={classnames(style.aiToken, style.aiTokenText)}>
-        {i18n.artificialIntelligenceAbbreviation()}
+        <ExtraStrongText>
+          {i18n.artificialIntelligenceAbbreviation()}
+        </ExtraStrongText>
 
         <FontAwesome icon="check" title={i18n.aiAssessmentEnabled()} />
       </BodyFourText>
