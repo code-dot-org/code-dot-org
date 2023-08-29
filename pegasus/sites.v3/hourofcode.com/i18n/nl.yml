@@ -259,6 +259,8 @@ nl:
   call_to_action_learn_about_approach: Meer informatie over onze aanpak
   call_to_action_try_java_lab: Probeer Java Lab
   call_to_action_notify_available: Laat het me weten als het beschikbaar is
+  call_to_action_register_early_access: Registreer voor vroege toegang
+  call_to_action_open_positions: Bekijk openstaande vacatures
   aria_label_call_to_action_afe: Meer informatie over Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start het professionele leerprogramma Teaching
     Computer Science Fundamentals
@@ -13361,6 +13363,123 @@ nl:
   accessibility_card_text_10: Een aanpassing van het AP Computer Science Principles-curriculum
     van Code.org met behulp van Quorum, een op bewijzen gebaseerde taal die oorspronkelijk
     is ontworpen om blinde of slechtziende studenten toegankelijk te maken.
+  engineering_hero_heading: Sluit je aan bij ons technische team!
+  engineering_hero_desc: Terwijl we ons engineeringteam blijven uitbreiden, wilden
+    we meer vertellen over onze technische organisatie op Code.org en enkele van de
+    unieke aspecten van het werken hier. Als je geïnteresseerd bent om te solliciteren
+    voor een van onze functies, dan horen we graag van je!
+  engineering_team_title: Ontmoet het technische team op Code.org
+  engineering_team_card_text_1: Dit zijn (de meesten van) ons tijdens onze persoonlijke
+    bijeenkomst in de zomer van 2023! Dit publiek is verdeeld in vier subteams binnen
+    ons ingenieursteam die samenwerken om het platform voor al onze studenten en docenten
+    te bouwen en te bedienen.
+  engineering_team_card_text_2: Als je geïnteresseerd bent om te solliciteren voor
+    een van onze functies, dan horen we graag van je! Je vindt een lijst met openstaande
+    vacatures op onze carrièrepagina.
+  engineering_our_team_title: Ons ingenieursteam
+  engineering_our_team_desc: 'Het engineeringteam van Code.org is verdeeld in vier
+    subteams die verschillende onderdelen van ons platform bouwen en ondersteunen:'
+  engineering_our_team_sub_title_1: Leerteam voor studenten
+  engineering_our_team_text_1: Ons leerteam voor studenten is eigenaar van al onze
+    activiteiten (we noemen ze labs) die onze studenten elke dag gebruiken. Dit team
+    werkt voornamelijk aan front-end technologie (we gebruiken React en veel aangepaste
+    JS) en we hebben een goede werkrelatie met veel partners en open source-projecten.
+    We gebruiken bijvoorbeeld [Google's Blockly] (%{youtube_url}) voor al onze blokgebaseerde
+    programmering. We ondersteunen leerlingen tijdens hun leertraject van de kleuterschool
+    tot de 12e klas.
+  engineering_our_team_sub_title_2: Ervaringsteam voor docenten
+  engineering_our_team_text_2: Ons Teacher Experience-team ontwikkelt de tools die
+    nieuwe leraren naar Code.org lokken (we noemen dit acquisitieproducten) en ontwikkelt
+    het platform dat onze bestaande leraren in staat stelt om ons curriculum te onderwijzen
+    (onze tools voor leerkrachten). Net als bij onze tools voor studenten vertrouwen
+    we op React om onze front-end te bouwen en onze servercomponenten worden bediend
+    met Ruby on Rails.
+  engineering_our_team_sub_title_3: Platformteam
+  engineering_our_team_text_3: Ons platformteam bezit kerncomponenten die voldoen
+    aan de behoeften van onze studenten- en docententeams (bijvoorbeeld authenticatie
+    en gebruikersprofiel) en heeft ook de missie om studenten te bereiken die we nog
+    niet kunnen bereiken. Dit omvat het bouwen van integraties die ons verbinden met
+    scholen die verschillende Learning Management Systems (LMS) gebruiken en het verpakken
+    van ons curriculum zodat het kan worden gebruikt op afgelegen scholen die geen
+    toegang hebben tot betrouwbaar internet.
+  engineering_our_team_sub_title_4: Infrastructuurteam
+  engineering_our_team_text_4: Ons infrastructuurteam vormt de ruggengraat van het
+    platform dat onze studenten en docenten ondersteunt. Dit omvat onze hostinginfrastructuur
+    en gerelateerde services (we gebruiken AWS), gegevensbeheer, beveiligingsprogramma's,
+    ontwikkelaars- en implementatieservices en nog veel meer. Dit team is ook eigenaar
+    van onze schaal- en bevoorradingssystemen, die cruciaal zijn tijdens Hour of Code,
+    waarbij we elke student ter wereld uitnodigen om een uur met ons te coderen.
+  engineering_faq_question_1: Wat doet Code.org?
+  engineering_faq_answer_1_a: Code.org is een non-profitorganisatie zonder winstoogmerk
+    die zich inzet voor de visie dat elke student op elke school de mogelijkheid heeft
+    om informatica te leren als onderdeel van hun basisonderwijs in het basisonderwijs
+    in het basisonderwijs.
+  engineering_faq_answer_1_b: We breiden de toegang tot informatica op scholen uit,
+    met een focus op het vergroten van de participatie van jonge vrouwen en studenten
+    uit andere ondervertegenwoordigde groepen. Code.org is de toonaangevende leverancier
+    van K-12-informatica-leerplannen in de grootste schooldistricten van de Verenigde
+    Staten en organiseert ook de jaarlijkse Hour of Code-campagne, waarbij meer dan
+    15% van alle studenten in de wereld betrokken is.
+  engineering_faq_answer_1_c: Code.org wordt ondersteund door gulle donateurs, waaronder
+    Microsoft, Amazon, Google en vele anderen.
+  engineering_faq_question_2: Wat is de ontwikkelaarservaring en tools van Code.org?
+  engineering_faq_answer_2: Onze ontwikkelaarservaring kan anders zijn dan wat je
+    in je vorige functies hebt gezien. In nauwe samenwerking met ons productteam verzenden
+    we elke werkdag naar de productie en we hebben verschillende cadans - soms schrijf
+    je code die die dag live gaat; soms ben je bezig met projecten voor de langere
+    termijn - en hoewel we tweewekelijkse sprints volgen, doen we dat op een eenvoudige
+    manier. We zetten ons in om de juiste dingen op de juiste manier gedaan te krijgen
+    in plaats van een puristische kijk op een bepaalde methodologie. [Al onze code]
+    (%{code_url}) is open source en we gebruiken pull-aanvragen van JIRA en GitHub
+    om al onze werkitems bij te houden. We geven ook veel om kwaliteit en testen en
+    hebben het geluk dat we geweldige ondersteuning krijgen van [SauceLabs](%{saucelabs_url}),
+    die ons helpt onze reeks UI-tests uit te voeren op verschillende apparaten van
+    studenten (bijvoorbeeld iPads) in hun cloud device farm.
+  engineering_faq_question_3: Wat is de oproepfunctie voor technici bij Code.org?
+  engineering_faq_answer_3: Ons technische team van meer dan 30 jaar deelt de verantwoordelijkheden
+    op afroep. Elke technicus werkt 24 uur per dag en gebruikt onze escalatiepaden
+    en draaiboeken om te reageren op uitval van de site of andere problemen op de
+    locatie. We zijn trots op de betrouwbaarheid van onze site - gemiddeld wordt elke
+    technicus maar één keer per jaar wakker gemaakt voor problemen die doorgaans snel
+    worden opgelost. In plaats daarvan besteedt de „Developer of the Day” gewoonlijk
+    een deel van zijn werkdag aan het beheren van de productie-implementatie en het
+    oplossen van minder urgente problemen.
+  engineering_faq_question_4: Bent u een afstandsvriendelijke/WFH-organisatie?
+  engineering_faq_answer_4_a: Ja! In 2019, kort voor de pandemie, werd Code.org een
+    organisatie op afstand. Tegenwoordig hebben we ingenieurs in elke Amerikaanse
+    tijdzone en passen we de werkuren dienovereenkomstig aan. De meeste van onze bijeenkomsten
+    vinden plaats tussen 10.00 en 15.00 uur PT.
+  engineering_faq_answer_4_b: We erkennen ook de waarde van persoonlijke tijd, en
+    elk kwartaal komen we persoonlijk bij elkaar, meestal in Seattle. Twee van deze
+    evenementen (we noemen ze Kick-off week en „Codechella”) brengen iedereen in de
+    organisatie samen in januari en juni - en de engineering- en productteams komen
+    afzonderlijk bijeen in april en oktober.
+  engineering_faq_answer_4_c: We geloven er sterk in om tijd door te brengen met onze
+    leerlingen en docenten, dus veel van deze persoonlijke evenementen omvatten uitstapjes
+    naar scholen en klaslokalen om feedback te verzamelen of onze producten te testen
+  engineering_faq_question_5: Wat maakt het technische team van Code.org uniek?
+  engineering_faq_answer_5_a: 'Naast het oplossen van uitdagende technische problemen,
+    hebben we een aantal dingen die onze technische organisatie anders maken dan andere
+    waar je misschien hebt gewerkt:'
+  engineering_faq_answer_5_b_1: We delen allemaal onze passie voor onze missie.
+  engineering_faq_answer_5_b_2: Ieder van ons is hier om de missie te ondersteunen
+    om de toegang tot informatica voor elke student over de hele wereld uit te breiden.
+    We hebben allemaal ons unieke verhaal en perspectief over wat ons naar deze missie
+    drijft.
+  engineering_faq_answer_5_c_1: We geven veel om elkaar.
+  engineering_faq_answer_5_c_2: Als ingenieurs met een probleem worstelen, komen we
+    tussenbeide en helpen we. Een van onze uitgangspunten is dat we hard omgaan met
+    problemen, maar vriendelijk voor elkaar zijn. We promoten regelmatig ingenieurs,
+    maar we schrijven geen overontwikkelde oplossingen voor om iemands promotietraject
+    te ondersteunen. In plaats daarvan investeren we in onze ingenieurs met een royaal
+    budget voor professionele ontwikkeling en toegang tot andere leermogelijkheden.
+  engineering_faq_answer_5_d_1: We werken hard, maar we stellen duidelijke grenzen.
+  engineering_faq_answer_5_d_2: Hoewel we studenten over de hele wereld ondersteunen,
+    houden we onszelf verantwoordelijk voor duidelijke grenzen tussen werk en privéleven.
+    We houden ervan om op woensdag niet te vergaderen, waarbij we onze PTO nemen (in
+    totaal 5 weken, inclusief een kantoorsluiting van 2 weken aan het einde van het
+    jaar, oftewel Winter Break), een halve werkdag op vrijdag in de zomer, oftewel
+    zomervrijdagen, en andere genereuze voordelen.
   language_code:
     ar: Arabisch
     az: Azerbeidzjaans

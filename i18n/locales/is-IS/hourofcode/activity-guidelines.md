@@ -103,6 +103,7 @@ Farðu á [Hour of Code™ Activity Uppgjöf síðu](https://docs.google.com/for
 * Nafn og tölvupóstur aðaltengiliðar sem táknar framlagða starfsemi
 * Virkni Nafn (getur ekki innihaldið “Klukkustund kóðans” í nafninu)
 * URL tengill á virkni
+* Felur þessi starfsemi í sér AI: Já eða Nei
 * Virkni lýsing (max stafafjöldi: 400) 
     * Vinsamlegast láttu fylgja lýsingunni hvort það er aðallega nemenda-leiðsögn eða kennara-auðveldað. Auk, sumir skólar hafa áhuga á að vita hvort Hour of Code starfsemi fjallar Common Core eða Next Generation Science Standards. Ef starfsemin fjallar tiltekna staðla, íhuga þar á meðal þessar upplýsingar.
 * Mælt er með stig/stigum fyrir ætlaða notendur. Þú getur vísað til \[Tölvunarfræði Kennarasambands K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) fyrir bekk viðeigandi tölvunarfræði hugtök. Dæmi bekk stigum eru: 
@@ -110,9 +111,9 @@ Farðu á [Hour of Code™ Activity Uppgjöf síðu](https://docs.google.com/for
     * Einkunnir 2-5 (aldur 7-10)
     * Einkunnir 6-8 (aldur 11-13 ára)
     * Einkunnir 9+ (aldur 14+)
-* Listi yfir efnissvið sem starfsemin nær yfir (auk tölvunarfræði). Til dæmis, ef stærðfræðikennari getur notað virkni þína til að kenna um horn eða fleygboga skaltu skrá sem stærðfræði. Ef þú ert með vitlausa libs starfsemi sem kennir sagnir/nafnorð/etc. velja tungumál listir.
-* Listi yfir forritunarmál sem virkni þín kennir. þ.e. C/C ++, Java, JavaScript osfrv. eða tungumál óháð (fyrir kennsluáætlanir sem hægt er að kenna á mörgum tungumálum)
-* Listi yfir studd náttúruleg tungumál. Athugaðu: Tungumál uppgötvun er á ábyrgð athafnaveitunnar; við munum beina öllum notendum á eina vefslóðina sem gefin er upp.
+* Listi yfir forritunarmál sem virkni þín kennir. þ.e. C/C ++, Java, JavaScript osfrv. eða tungumál óháð (fyrir kennsluáætlanir sem hægt er að kenna á mörgum tungumálum) velja tungumál listir.
+* Listi yfir studd náttúruleg tungumál. Athugaðu: Tungumál uppgötvun er á ábyrgð athafnaveitunnar; við munum beina öllum notendum á eina vefslóðina sem gefin er upp. eða tungumál óháð (fyrir kennsluáætlanir sem hægt er að kenna á mörgum tungumálum)
+* Hvaða reynslu ætti kennari að hafa til að nota virkni þína? (td byrjandi eða þægilegt.) Og, hvaða stigi reynslu ættu nemendur að hafa?
 * Hvaða reynslu ætti kennari að hafa til að nota virkni þína? (td byrjandi eða þægilegt.) Og, hvaða stigi reynslu ættu nemendur að hafa? Ef þú vilt undirbúa fleiri háþróaður Hour of Code™ Starfsemi, vinsamlegast láttu fyrirfram þekkingu sem þörf er á í lýsingu á starfsemi þinni.
 * Lengd starfsemi þinnar 
     * Aðeins 1 klukkustund
@@ -166,9 +167,11 @@ Farðu á [Hour of Code™ Activity Uppgjöf síðu](https://docs.google.com/for
 
 ## Hvernig starfsemi verður metin
 
-Fjölbreytt nefnd tölvunarfræðikennara mun raða framtölum út frá eigindlegum og megindlegum forsendum. Öll starfsemi sem passar við grunnviðmiðanir verður skráð. Kennarar geta síað og flokkað til að finna bestu starfsemina fyrir kennslustofuna sína.
+Fjölbreytt nefnd tölvunarfræðikennara mun raða framtölum út frá eigindlegum og megindlegum forsendum. Öll starfsemi sem passar við grunnviðmiðanir verður skráð.
 
-The rubrik til að meta starfsemi og kennslustund áætlanir mun leita að eftirfarandi forsendum um alla starfsemi og staða þá í samræmi við það:
+Fyrir hefðbundna kóðunarstarfsemi mun fjölbreytt nefnd tölvunarfræðikennara raða framtölum út frá eigindlegum og megindlegum forsendum. Öll starfsemi sem passar við grunnviðmiðanir verður skráð. Kennarar geta síað og flokkað til að finna bestu starfsemina fyrir kennslustofuna sína.
+
+Ef endurskoðunarnefndin metur starfsemina núll í framleiðslugæðum (vegna slæmra galla eða leiðbeininga sem gera það mjög erfitt að nota), til að stuðla að námi í undirfulltrúum hópa (vegna kynþáttahaturs/kynlífsfræðilegs efnis), í menntunargildi (kennir ekki CS hugtök) eða gaman/grípandi (vegna þess að vera erfið/letjandi fyrir nemendur að vinna í gegnum), verður starfsemin ekki skráð.
 
 - Hár framleiðslu gæði
 - Efla nám allra lýðfræðilegra hópa (ESP. nemendur sem eru undirfulltrúar í CS, eins og ungar konur, nemendur frá jaðarsettum kynþátta- og þjóðernishópum og fötluðum nemendum)
@@ -176,9 +179,9 @@ The rubrik til að meta starfsemi og kennslustund áætlanir mun leita að eftir
 - Skemmtilegt og grípandi
 - Hvetur nemendur til að búa til eitthvað einstakt sem þeir geta deilt (Fyrir yngri nemendur: með foreldrum og bekkjarfélögum. Fyrir eldri nemendur: á Netinu)
 
-Ef endurskoðunarnefndin metur starfsemina núll í framleiðslugæðum (vegna slæmra galla eða leiðbeininga sem gera það mjög erfitt að nota), til að stuðla að námi í undirfulltrúum hópa (vegna kynþáttahaturs/kynlífsfræðilegs efnis), í menntunargildi (kennir ekki CS hugtök) eða gaman/grípandi (vegna þess að vera erfið/letjandi fyrir nemendur að vinna í gegnum), verður starfsemin ekki skráð.
-
 Að auki, til þess að vera skráð, skal öll starfsemi:
+
+Fyrir sjálf-beint starfsemi fyrir nýja kennara og nemendur endurskoðun nefndarinnar verður að leita að því hvort:
 
 - Vertu viðeigandi fyrir opinbera skólastofu (engar byssur, ekkert skýrt/þroskað efni, ekkert trúarlegt efni osfrv.)
 - Krefjast ekki skrá sig
@@ -204,11 +207,13 @@ Kennarar og nemendur munu geta leitað í gegnum og síað lista okkar yfir atha
 
 ## Tillögur um að hanna einnar klukkustundar sjálfsleiðsögn námskeið
 
-Þú getur falið í sér [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) í kennslunni þinni, en þetta er ekki krafist. Ef þú notar merki Hour of Code, sjá leiðbeiningar um vörumerki hér að neðan. <u>Undir engum kringumstæðum er hægt að nota merkið og nafnið Code.org.</u> Báðir eru vörumerktir og ekki er hægt að blanda þeim saman við vörumerki þriðja aðila án skriflegs leyfis.
+Starfsemi þarf ekki að fela í sér AI, þó að við séum að leita að því að bjóða upp á fleiri AI tengda starfsemi.
 
-**Gakktu úr skugga um að meðalnemandinn geti klárað þægilega á klukkutíma.** Íhugaðu að bæta við opinni virkni í lokin fyrir nemendur sem fara hraðar í gegnum kennslustundina. Mundu að flestir krakkarnir verða alger byrjendur í tölvunarfræði og erfðaskrá.
+Þú getur falið í sér [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) í kennslunni þinni, en þetta er ekki krafist. Ekki aðeins eru nemendur nýliði, sumir kennarar eru eins og heilbrigður. Hafa upplýsingar eins og:
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Ekki aðeins eru nemendur nýliði, sumir kennarar eru eins og heilbrigður. Hafa upplýsingar eins og:
+**Fella inn endurgjöf í lok starfseminnar.** (td “Þú lauk 10 stigum og lært um lykkjur! Frábært starf!”)
+
+**Hvetja nemendur til að senda á samfélagsmiðla (þar sem við á) þegar þeir hafa lokið.** Til dæmis “Ég hef gert klukkutíma af kóða með ________ Hefur þú? #HourOfCode” eða “Ég hef gert #HourOfCode sem hluta af #CSEdWeek. Hefur þú?
 
 - Hvaða kerfum og vöfrum virkar einkatími best á?
 - Virkar það á smartphones? Töflur?
@@ -247,7 +252,7 @@ Klukkustund Code® og Hora del Código® eru skráð vörumerki Code.org. Margir
 
 ## Pixel mælingar
 
-Til þess að fylgjast betur með þátttöku biðjum við alla einkatími samstarfsaðila að láta 1-pixla rekja mynd á fyrstu síðu Hour of Code námskeiðanna. Pixel-myndin verður aðeins að vera á upphafssíðunni. Ekki taka með á neinum tímabundnum síðum námskeiðsins.
+Ef einkatími þinn er samþykktur og innifalinn á lokatími síðunni, Code.org mun veita þér einstakt rekja pixla fyrir þig til að samþætta í kennsluefni þínu. Sjá dæmi hér að neðan. Ekki taka með á neinum tímabundnum síðum námskeiðsins.
 
 Þetta mun leyfa okkur að telja notendur sem gera þinn Hour of Code einkatími. Það mun leiða til nákvæmari þátttökutalningar fyrir námskeiðið þitt.
 
