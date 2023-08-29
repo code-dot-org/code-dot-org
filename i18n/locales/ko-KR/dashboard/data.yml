@@ -650,6 +650,8 @@ ko:
         csd_sprite_properties: 스프라이트 속성
         csc-starquilts-intro: 기하학적 별무늬 퀼트 코딩
         csc-ecosystems-intro: 해양생태계 시뮬레이션
+        what-is-creativity: 창의력이란?
+        code-break: 코드 브레이크 선택
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'
