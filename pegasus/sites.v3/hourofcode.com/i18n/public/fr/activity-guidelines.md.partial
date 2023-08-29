@@ -104,6 +104,7 @@ Vous aurez besoin :
 * Nom et e-mail du contact principal représentant l'activité soumise
 * Nom de l'activité (ne peut pas inclure « Heure de code » dans le nom)
 * Lien URL vers l'activité
+* Cette activité inclut-elle l'IA : Oui ou Non
 * Une description de l'activité (nombre maximum de caractères : 400) 
     * S'il vous plait, inclure dans la description si le tutoriel peut-être fait par un étudiant seul ou s'il est plus simple d'être s'il est réalisé avec l'aide d'un enseignant. En outre, certaines écoles souhaitent savoir si les activités Une Heure de Code portent sur le programme éducatif actuel ou sur les standards de la prochaine génération des sciences informatiques . Si l'activité répond à des normes spécifiques, nous vous invitons à inclure ces informations.
 * Niveau (s) scolaire (s) recommandé (s) pour les utilisateurs visés. Vous pouvez consulter les \[Normes de la maternelle à la 12e année de la Computer Science Teachers' Association\] (https://k12cs.org/framework-statements-by-grade-band/) pour les concepts informatiques adaptés à votre niveau scolaire. Les exemples de niveaux scolaires incluent : 
@@ -111,9 +112,9 @@ Vous aurez besoin :
     * Niveaux 2 à 5 (7 à 10 ans)
     * 6e à 8e année (11 à 13 ans)
     * 9e année et plus (14 ans et plus)
-* Une liste des domaines couverts par votre activité (en plus de l'informatique). Par exemple, si un professeur de mathématiques peut utiliser votre activité pour enseigner les angles ou les paraboles, listez-la comme mathématiques. Si vous avez une activité Mad Libs qui enseigne les verbes/les noms/etc. choisissez les arts du langage.
-* Une liste des langages de programmation que votre activité enseigne. C'est-à-dire C/C++, Java, JavaScript, etc. ou indépendant de la langue (pour les plans de cours pouvant être enseignés en plusieurs langues)
-* Liste des langages naturels pris en charge. Remarque : La détection de la langue est de la responsabilité du fournisseur d'activité ; nous redirigerons tous les utilisateurs vers l'URL unique fournie.
+* Une liste des langages de programmation que votre activité enseigne. C'est-à-dire C/C++, Java, JavaScript, etc. ou indépendant de la langue (pour les plans de cours pouvant être enseignés en plusieurs langues) choisissez les arts du langage.
+* Liste des langages naturels pris en charge. Remarque : La détection de la langue est de la responsabilité du fournisseur d'activité ; nous redirigerons tous les utilisateurs vers l'URL unique fournie. ou indépendant de la langue (pour les plans de cours pouvant être enseignés en plusieurs langues)
+* Quel niveau d'expérience doit avoir un enseignant pour utiliser votre activité ? (Par exemple, débutant ou confortable.) Et quel niveau d'expérience les étudiants devraient-ils avoir ?
 * Quel niveau d'expérience doit avoir un enseignant pour utiliser votre activité ? (Par exemple, débutant ou confortable.) Et quel niveau d'expérience les étudiants devraient-ils avoir ? Si vous souhaitez préparer des activités Hour of Code™ plus avancées, veuillez inclure les connaissances préalables requises dans la description de votre activité.
 * La durée de votre activité 
     * 1 heure seulement
@@ -167,9 +168,11 @@ Vous aurez besoin :
 
 ## Comment les activités seront-elles évaluées
 
-Un comité diversifié de professeurs d'informatique classera les soumissions en fonction de critères qualitatifs et quantitatifs. Toutes les activités répondant aux critères de base seront répertoriées. Les enseignants pourront filtrer et trier les activités pour trouver les meilleures activités pour leur classe.
+Un comité diversifié de professeurs d'informatique classera les soumissions en fonction de critères qualitatifs et quantitatifs. Toutes les activités répondant aux critères de base seront répertoriées.
 
-La rubrique d'évaluation des activités et des plans de cours recherchera les critères suivants pour toutes les activités et les classera en conséquence :
+Pour les activités de codage traditionnelles, un comité diversifié de professeurs d'informatique classera les soumissions en fonction de critères qualitatifs et quantitatifs. Toutes les activités répondant aux critères de base seront répertoriées. Les enseignants pourront filtrer et trier les activités pour trouver les meilleures activités pour leur classe.
+
+Si le comité d'évaluation estime que l'activité est nulle en termes de qualité de production (en raison de bugs ou d'instructions qui la rendent très difficile à utiliser), de promouvoir l'apprentissage auprès de groupes sous-représentés (en raison de matériel raciste/sexiste), de valeur éducative (n'enseigne pas les concepts de CS) ou de divertissante (parce qu'elle est difficile/décourageante pour les étudiants), l'activité ne sera pas répertoriée.
 
 - Haute qualité de production
 - Promouvoir l'apprentissage auprès de tous les groupes démographiques (en particulier étudiants sous-représentés dans les écoles secondaires, comme les jeunes femmes, les étudiants issus de groupes raciaux et ethniques marginalisés et les étudiants handicapés)
@@ -177,9 +180,9 @@ La rubrique d'évaluation des activités et des plans de cours recherchera les c
 - Amusant et engageant
 - Encourage les élèves à créer quelque chose d'unique qu'ils peuvent partager (pour les plus jeunes : avec leurs parents et leurs camarades de classe). (Pour les étudiants plus âgés : sur Internet)
 
-Si le comité d'évaluation estime que l'activité est nulle en termes de qualité de production (en raison de bugs ou d'instructions qui la rendent très difficile à utiliser), de promouvoir l'apprentissage auprès de groupes sous-représentés (en raison de matériel raciste/sexiste), de valeur éducative (n'enseigne pas les concepts de CS) ou de divertissante (parce qu'elle est difficile/décourageante pour les étudiants), l'activité ne sera pas répertoriée.
-
 En outre, pour être répertoriées, toutes les activités doivent :
+
+En ce qui concerne les activités autogérées destinées aux nouveaux enseignants et aux étudiants, le comité d'évaluation vérifiera si :
 
 - Être adapté à une classe d'école publique (pas d'armes à feu, pas de contenu explicit/mature, pas de contenu religieux, etc.)
 - Ne nécessite aucune inscription
@@ -205,11 +208,13 @@ Les enseignants et les élèves pourront rechercher et filtrer notre liste d'act
 
 ## Suggestions pour concevoir des tutoriels autoguidés d'une heure
 
-Vous pouvez inclure le logo [Hour of Code](https://hourofcode.com/us/promote/resources#logo) dans votre didacticiel, mais cela n'est pas obligatoire. Si vous utilisez le logo Une Heure de Code, consultez la charte graphique de la marque disponible ci-dessous. <u>Le logo et le nom de Code.org ne peuvent en aucun cas être utilisés.</u> Les deux sont des marques déposées et ne peuvent pas être associées à un nom de marque tiers sans autorisation écrite expresse.
-
-**S'assurer qu'un étudiant moyen est en mesure de finir en une heure simplement.** Envisagez d'ajouter une activité ouverte à la fin pour les étudiants qui iraient plus vite dans la leçon. N'oubliez pas que la plupart des enfants seront débutants en informatique et en code.
+Les activités ne doivent pas nécessairement inclure l'IA, bien que nous cherchions à proposer davantage d'activités liées à l'IA.
 
 **Inclure des notes pour l'enseignant.** La plupart des activités devraient être axés sur l'étudiant, mais si une activité est plus simple si elle est gérée par un enseignant, veuillez inclure des instructions claires et simples pour l'enseignant sous la forme de note pour l'enseignant via une URL distincte accompagnant votre activité. Non seulement les étudiants seront novices, mais la plupart des professeurs également. Inclure des infos telles que :
+
+**Incorporez les commentaires à la fin de l'activité.** (Par exemple, « Vous avez terminé 10 niveaux et découvert les boucles ! Excellent travail ! »)
+
+**Encouragez les étudiants à partagez leur expérience sur les médias sociaux (quand c'est possible) quand ils ont fini.** Par exemple "J'ai fait Une Heure de Code avec ________, et vous ? #HourOfCode » ou « J'ai créé un #HourOfCode dans le cadre de #CSEdWeek. Et vous ?
 
 - Sur quelles plateformes et quels navigateurs le didacticiel fonctionne-t-il le mieux ?
 - Est-ce que cela fonctionne sur les smartphones ? Des tablettes ?
@@ -248,7 +253,7 @@ Hour of Code® et Hora del Código® sont des marques déposées de Code.org. No
 
 ## Pixel de suivi
 
-Afin de suivre plus précisément la participation, nous demandons à chaque partenaire de didacticiel d'inclure une image de suivi d'un pixel sur la première page de ses didacticiels Hour of Code. L'image en pixels ne doit figurer que sur la page d'accueil. Ne l'incluez sur aucune page intermédiaire de votre didacticiel.
+Si votre didacticiel est approuvé et inclus sur la page finale du didacticiel, Code.org vous fournira un pixel de suivi unique que vous pourrez intégrer à votre didacticiel. Voir l'exemple ci-dessous. Ne l'incluez sur aucune page intermédiaire de votre didacticiel.
 
 Cela nous permettra de compter les utilisateurs qui suivent votre tutoriel Hour of Code. Cela permettra d'obtenir un décompte de participation plus précis pour votre tutoriel.
 

@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ಡ್ಯಾನ್ಸ್‌ ಪಾರ್ಟಿ</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ಸ್ನೇಹಿತರು ಮತ್ತು ಕುಟುಂಬದೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲು ಒಂದು ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ ಅನ್ನು ಕೋಡ್ ಮಾಡಿ. ಬಿಯಾನ್ಸೆ, ಹ್ಯಾರಿ ಸ್ಟೈಲ್ಸ್, ಲಿಝೋ, ಲಿಲ್ ನಾಸ್ ಎಕ್ಸ್, ಸೆಲೆನಾ ಗೊಮೆಜ್, ಡಿಸ್ನಿಯ “ಎನ್ಕಾಂಟೊ” ಸಂಗೀತ ಮತ್ತು ಹೆಚ್ಚಿನದನ್ನು ಒಳಗೊಂಡಿದೆ!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ಸ್ನೇಹಿತರು ಮತ್ತು ಕುಟುಂಬದೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲು ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿಯನ್ನು ಕೋಡ್ ಮಾಡಿ. ಬಿಯಾನ್ಸೆ, ಹ್ಯಾರಿ ಸ್ಟೈಲ್ಸ್, ಲಿಝೋ, ಲಿಲ್ ನಾಸ್ ಎಕ್ಸ್, ಸೆಲೆನಾ ಗೊಮೆಜ್, ಡಿಸ್ನಿಯ “ಎನ್ಕಾಂಟೊ” ಸಂಗೀತ ಮತ್ತು ಹೆಚ್ಚಿನದನ್ನು ಒಳಗೊಂಡಿದೆ!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>ಚಟುವಟಿಕೆಯನ್ನು ಪ್ರಯತ್ನಿಸಿ</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಅವರ್ ಆಫ್ ಕೋಡ್‌</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ಹೊಚ್ಚ ಹೊಸ ಚಟುವಟಿಕೆಯೊಂದಿಗೆ ಅವರ್ ಆಫ್ ಕೋಡ್‌ಗಾಗಿ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಪುನಃ ಬಂದಿದೆ! ಕೋಡ್ ಜೊತೆಗೆ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಮೂಲಕ ಪಯಣ.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft ಅವರ್ ಆಫ್ ಕೋಡ್</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft ಹೊಚ್ಚ ಹೊಸ ಚಟುವಟಿಕೆಯೊಂದಿಗೆ ಕೋಡ್ ಅವರ್ ಆಫ್ ಕೋಡ್ಗೆ ಮರಳಿದೆ! ಕೋಡ್ ಜೊತೆಗೆ ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಮೂಲಕ ಪಯಣ.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>ಚಟುವಟಿಕೆ ಟ್ರೈ ಮಾಡಿ</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ಎಐ ಫಾರ್ ಓಶಿಯನ್ಸ್‌</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ಕಸವನ್ನು ಗುರುತಿಸುವ ಮೂಲಕ ಸಮುದ್ರವನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಲು ಎಐ ಗೆ ತರಬೇತಿ ನೀಡಲು ಸಹಾಯ ಮಾಡಿ! ಟ್ರೇನಿಂಗ್ ಡೇಟಾ ಮತ್ತು ಬಯಾಸ್‌ ಬಗ್ಗೆ ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ವಿಶ್ವದ ಸಮಸ್ಯೆಗಳನ್ನು ಹೇಗೆ ಪರಿಹರಿಸುವುದು ಎಂದು ತಿಳಿದುಕೊಳ್ಳಿ. <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">ಪಠ್ಯಯೋಜನೆ</a> ನೋಡಿ.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>ಸಾಗರಗಳಿಗೆ AI</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ಕಸವನ್ನು ಪತ್ತೆಹಚ್ಚಲು ತರಬೇತಿ ನೀಡುವ ಮೂಲಕ ಸಾಗರಗಳನ್ನು ಸ್ವಚ್ clean ಗೊಳಿಸಲು AI ಸಹಾಯ ಮಾಡಿ! ಟ್ರೇನಿಂಗ್ ಡೇಟಾ ಮತ್ತು ಬಯಾಸ್‌ ಬಗ್ಗೆ ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ವಿಶ್ವದ ಸಮಸ್ಯೆಗಳನ್ನು ಹೇಗೆ ಪರಿಹರಿಸುವುದು ಎಂದು ತಿಳಿದುಕೊಳ್ಳಿ. <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">ಪಠ್ಯಯೋಜನೆ</a> ನೋಡಿ.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>ಚಟುವಟಿಕೆ ಟ್ರೈ ಮಾಡಿ</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ಕಂಪ್ಯೂಟರ್‌ಗಳು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತವೆ</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ಬಿಲ್ ಗೇಟ್ಸ್ ಅವರ ಪರಿಚಯದ ಜೊತೆಗೆ ಈ ಆರು ಸಣ್ಣ ವೀಡಿಯೋಗಳಲ್ಲಿ, ಕಂಪ್ಯೂಟರ್ ಎಂದರೇನು ಮತ್ತು ಕಂಪ್ಯೂಟರ್ ಸರ್ಕ್ಯೂಟ್ಸ್ ಕೆಲಸ ಮಾಡುತ್ತದೆ ಎಂಬುದು ತಿಳಿಯುತ್ತದೆ.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>ವೀಡಿಯೋ ಸರಣಿಗಳನ್ನು ವೀಕ್ಷಿಸಿ</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>ಕಂಪ್ಯೂಟರ್ಗಳು ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ಬಿಲ್ ಗೇಟ್ಸ್ ಅವರ ಪರಿಚಯದೊಂದಿಗೆ, ಆರು ಕಿರು ವೀಡಿಯೊಗಳ ಈ ಸರಣಿಯು ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಕಂಪ್ಯೂಟರ್ ಆಗಿ ಮಾಡುತ್ತದೆ ಮತ್ತು ಕಂಪ್ಯೂಟರ್ ಸರ್ಕ್ಯೂಟ್ಗಳು ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ ಎಂಬುದನ್ನು ವಿವರಿಸುತ್ತದೆ.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>ವೀಡಿಯೊ ಸರಣಿಯನ್ನು ವೀಕ್ಷಿಸಿ</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ಇಂಟರ್ನೆಟ್ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ಈ ಎಂಟು ಸಣ್ಣ ವೀಡಿಯೋಗಳ ಸರಣಿಯಲ್ಲಿ, ಇಂಟರ್ನೆಟ್ ಅನ್ನು ಹೇಗೆ ಸಂಶೋಧಿಸಲಾಯಿತು, ಎಚ್‌ಟಿಎಂಲ್‌ ಎಂದರೇನು ಮತ್ತು ಗೂಗಲ್‌ನಂತಹ ಸರ್ಚ್‌ ಇಂಜಿನ್‌ಗಳು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತವೆ ಎಂಬುದನ್ನು ನೀವು ಕಲಿಯುತ್ತೀರಿ.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>ವೀಡಿಯೋ ಸರಣಿಗಳನ್ನು ವೀಕ್ಷಿಸಿ</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ಇಂಟರ್ನೆಟ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ಎಂಟು ಸಣ್ಣ ವೀಡಿಯೊಗಳ ಈ ಸರಣಿಯಲ್ಲಿ, ಇಂಟರ್ನೆಟ್ ಅನ್ನು ಹೇಗೆ ಕಂಡುಹಿಡಿಯಲಾಯಿತು, HTML ಎಂದರೇನು ಮತ್ತು Google ನಂತಹ ಸರ್ಚ್ ಇಂಜಿನ್ಗಳು ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ ಎಂಬುದನ್ನು ನೀವು ಕಲಿಯುವಿರಿ.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>ವೀಡಿಯೊ ಸರಣಿಯನ್ನು ವೀಕ್ಷಿಸಿ</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ಎಐ ಕೆಲಸ ಮಾಡುವುದು ಹೇಗೆ</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ಎಐ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ ಮತ್ತು ಯಾಕೆ ಇದು ಪ್ರಮುಖ ಎಂಬುದನ್ನು ಈ ಸಣ್ಣ ವೀಡಿಯೋಗಳ ಸರಣಿಯಲ್ಲಿ ತಿಳಿದುಕೊಳ್ಳಿ. ಮೈಕ್ರೋಸಾಫ್ಟ್ ಸಿಇಒ ಸತ್ಯ ನಾದೆಳ್ಲ ಹಾಗೂ ಹಲವು ಪರಿಣಿತರನ್ನು ಇದು ಒಳಗೊಂಡಿದೆ.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">AI ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಮತ್ತು ಈ ಸಣ್ಣ ವೀಡಿಯೊಗಳ ಸರಣಿಯೊಂದಿಗೆ ಅದು ಏಕೆ ಮುಖ್ಯವಾಗಿದೆ ಎಂಬುದರ ಕುರಿತು ತಿಳಿಯಿರಿ. ಮೈಕ್ರೋಸಾಫ್ಟ್ ಸಿಇಒ ಸತ್ಯ ನಾದೆಳ್ಲ ಹಾಗೂ ಹಲವು ಪರಿಣಿತರನ್ನು ಇದು ಒಳಗೊಂಡಿದೆ.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>ವೀಡಿಯೋ ಸರಣಿಗಳನ್ನು ವೀಕ್ಷಿಸಿ</button></a>
     </span>
   </div>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ಗೇಮ್ ಲ್ಯಾಬ್‌ ಪರಿಚಯ</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ಗೇಮ್ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಪ್ರೋಗ್ರಾಮ್ ಆನಿಮೇಶನ್‌ಗಳು, ಇಂಟರ್‍ಯಾಕ್ಟಿವ್ ಆರ್ಟ್‌ ಮತ್ತು ಗೇಮ್‌ಗಳು. ಸರಳ ಆಕಾರಗಳೊಂದಿಗೆ ಆರಂಭಿಸಿ ಮತ್ತು ಹೆಚ್ಚು ಸುಸ್ಥಿರವಾದ ಮತ್ತು ಸ್ಪ್ರೈಟ್ ಆಧರಿತ ಆನಿಮೇಶನ್‌ಗಳು ಮತ್ತು ಗೇಮ್‌ಗಳೊಂದಿಗೆ ಆರಂಭಿಸಿ.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>ಗೇಮ್ ಲ್ಯಾಬ್ನ ಪರಿಚಯ</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ಗೇಮ್ ಲ್ಯಾಬ್ನಲ್ಲಿ ಪ್ರೋಗ್ರಾಂ ಅನಿಮೇಷನ್ಗಳು, ಸಂವಾದಾತ್ಮಕ ಕಲೆ ಮತ್ತು ಆಟಗಳು. ಸರಳ ಆಕಾರಗಳೊಂದಿಗೆ ಆರಂಭಿಸಿ ಮತ್ತು ಹೆಚ್ಚು ಸುಸ್ಥಿರವಾದ ಮತ್ತು ಸ್ಪ್ರೈಟ್ ಆಧರಿತ ಆನಿಮೇಶನ್‌ಗಳು ಮತ್ತು ಗೇಮ್‌ಗಳೊಂದಿಗೆ ಆರಂಭಿಸಿ.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>ಮಾಡ್ಯೂಲ್‌ ಟ್ರೈ ಮಾಡಿ</button></a>
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ಆಪ್‌ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಟರ್ಟಲ್‌ ಪ್ರೋಗ್ರಾಮಿಂಗ್‌</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ವರ್ಚುವಲ್‌ "ಟರ್ಟಲ್‌" ಬಳಸಿ ಆಕಾರಗಳು ಮತ್ತು ಚಿತ್ರಗಳನ್ನು ರಚಿಸಲು ಸರಳ ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್ ಕಮಾಂಡ್‌ಗಳನ್ನು ಬಳಸಿ. ನಿಮ್ಮದೇ ಡಿಜಿಟಲ್ ದೃಶ್ಯವನ್ನು ವಿನ್ಯಾಸ ಮಾಡಿ ಮತ್ತು ಪ್ರೋಗ್ರಾಮ್‌ ಮಾಡಿ!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>ಮಾಡ್ಯೂಲ್ ಟ್ರೈ ಮಾಡಿ</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್ನಲ್ಲಿ ಆಮೆ ಪ್ರೋಗ್ರಾಮಿಂಗ್</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ವರ್ಚುವಲ್ “ಆಮೆ” ಬಳಸಿ ಆಕಾರಗಳು ಮತ್ತು ಚಿತ್ರಗಳನ್ನು ಸೆಳೆಯಲು ಸರಳ ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್ ಆಜ್ಞೆಗಳನ್ನು ಬಳಸಿ. ನಿಮ್ಮ ಸ್ವಂತ ಡಿಜಿಟಲ್ ದೃಶ್ಯವನ್ನು ವಿನ್ಯಾಸಗೊಳಿಸಿ ಮತ್ತು ಪ್ರೋಗ್ರಾಂ ಮಾಡಿ!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>ಮಾಡ್ಯೂಲ್ ಪ್ರಯತ್ನಿಸಿ</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ಆಪ್ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಈವೆಂಟ್ ಆಧರಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್‌</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ಕ್ಲಿಕ್ ಮತ್ತು ಕೀ ಪ್ರೆಸ್‌ಗಳಿಗೆ ಪ್ರತಿಕ್ರಿಯಿಸುವ ಆಪ್‌ಗಳನ್ನು ವಿನ್ಯಾಸ ಮಾಡಲು ಕಲಿಯಿರಿ. ವೆಬ್‌ನಲ್ಲಿ ಲಯವ್ ಆಗುವ ಸರಳ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ (ಆಪ್‌ಗಳ) ಸರಣಿಯನ್ನು ರಚಿಸಿ!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್ನಲ್ಲಿ ಈವೆಂಟ್-ಡ್ರೈವನ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ಕ್ಲಿಕ್ಗಳು ಮತ್ತು ಕೀ ಪ್ರೆಸ್ಗಳಿಗೆ ಪ್ರತಿಕ್ರಿಯಿಸುವ ಅಪ್ಲಿಕೇಶನ್ಗಳನ್ನು ವಿನ್ಯಾಸಗೊಳಿಸಲು ಕಲಿಯಿರಿ. ವೆಬ್‌ನಲ್ಲಿ ಲಯವ್ ಆಗುವ ಸರಳ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ (ಆಪ್‌ಗಳ) ಸರಣಿಯನ್ನು ರಚಿಸಿ!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>ಮಾಡ್ಯೂಲ್ ಟ್ರೈ ಮಾಡಿ</button></a>
     </span>
   </div>
@@ -312,8 +312,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>ಕೋಡ್‌ಬೈಟ್ಸ್‌</strong></h3>
-        <div class="smalltext" style="color: dimgray;">ಕೋಡ್‌ಬೈಟ್ಸ್ ಅನ್ನು ಅರ್ಥ ಮಾಡಿಕೊಳ್ಳುವುದು ಸುಲಭ. 20 ನಿಮಿಷದ ಇಂಟರ್‍ಯಾಕ್ಟಿವ್ ಅಧ್ಯಾಯಗಳು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಅನ್ನು ನೈಜ ಜಗತ್ತಿನ ವಿಷಯಗಳೊಂದಿಗೆ ಮಿಶ್ರಗೊಳಿಸುತ್ತದೆ. ಆಂಗಿಕ ಭಾಷೆಯನ್ನು ಓದಲು ಎಐ ಗೆ ತರಬೇತಿ ನೀಡಿ, ಒಳ್ಳೆಯದಕ್ಕಾಗಿ ಒಂದು ಆಪ್‌ ವಿನ್ಯಾಸ ಮಾಡಿ, ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ವಿಶ್ವವನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡಿ ಮತ್ತು ಇನ್ನಷ್ಟನ್ನು ಮಾಡಿ!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>ಕೋಡ್ಬೈಟ್ಗಳು</strong></h3>
+        <div class="smalltext" style="color: dimgray;">ಕೋಡ್ಬೈಟ್ಗಳು ಜೀರ್ಣಿಸಿಕೊಳ್ಳಲು ಸುಲಭವಾಗಿದೆ, ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ನೈಜ-ಪ್ರಪಂಚದ ವಿಷಯಗಳೊಂದಿಗೆ ಬೆರೆಸುವ 20 ನಿಮಿಷಗಳ ಸಂವಾದಾತ್ಮಕ ಪಾಠಗಳು. ಆಂಗಿಕ ಭಾಷೆಯನ್ನು ಓದಲು ಎಐ ಗೆ ತರಬೇತಿ ನೀಡಿ, ಒಳ್ಳೆಯದಕ್ಕಾಗಿ ಒಂದು ಆಪ್‌ ವಿನ್ಯಾಸ ಮಾಡಿ, ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ವಿಶ್ವವನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡಿ ಮತ್ತು ಇನ್ನಷ್ಟನ್ನು ಮಾಡಿ!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>ಎಪಿಸೋಡ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ</button></a>
@@ -329,8 +329,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>ಕೋಡ್‌ ಬ್ರೇಕ್‌</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">ಕೋಡ್ ಬ್ರೇಕ್ ಬಳಸಿಕೊಂಡು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಅನ್ನು ಮೋಜಿನದಾಗಿಸಿ! ಆಶ್ಟನ್ ಕಚರ್ ಜೊತೆಗೆ ನೀವು ಸೈಫರ್ ರಚನೆ ಮಾಡಬಹುದು, ಯಾರಾ ಶಹೀದಿ ಜೊತೆಗೆ ವೇರಿಯಬಲ್‌ಗಳ ಬಗ್ಗೆ ಕಲಯಬಹುದು ಮತ್ತು ಇಂಟರ್ನೆಟ್‌ನ ನಿಜವಾದ ಶೋಧಕ ವಿಂಟ್‌ ಸೆರ್ಫ್‌ ಮೂಲಕ ಇಂಟರ್ನೆಟ್‌ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ ಎಂದು ಕೂಡಾ ತಿಳಿದುಕೊಳ್ಳಿ!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>ಕೋಡ್ ಬ್ರೇಕ್</strong></h3>
+        <div class="smalltext" style="">ಕೋಡ್ ಬ್ರೇಕ್ ತೆಗೆದುಕೊಳ್ಳುವ ಮೂಲಕ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಮೋಜು ಮಾಡಿ! ಆಶ್ಟನ್ ಕಚರ್ ಜೊತೆಗೆ ನೀವು ಸೈಫರ್ ರಚನೆ ಮಾಡಬಹುದು, ಯಾರಾ ಶಹೀದಿ ಜೊತೆಗೆ ವೇರಿಯಬಲ್‌ಗಳ ಬಗ್ಗೆ ಕಲಯಬಹುದು ಮತ್ತು ಇಂಟರ್ನೆಟ್‌ನ ನಿಜವಾದ ಶೋಧಕ ವಿಂಟ್‌ ಸೆರ್ಫ್‌ ಮೂಲಕ ಇಂಟರ್ನೆಟ್‌ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ ಎಂದು ಕೂಡಾ ತಿಳಿದುಕೊಳ್ಳಿ!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>ಸಂಪರ್ಕ ಹೊಂದಿರಿ</button></a>
     </span>
