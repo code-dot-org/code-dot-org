@@ -90,7 +90,7 @@ Full accessibility checklist is following:
 
 We do have a set of checks in storybook that might help you with some of those steps. (e.g. color contrast check)
 To see them - visit storybook's 'devTools' Accessibility tab.
-![alt text](https://user-images.githubusercontent.com/22244040/264050042-dae78e34-5b7c-49ef-b53f-4b5dd5986845.png)
+![Screenshot of storybook's 'devTools' Accessibility tab (with hints)](https://user-images.githubusercontent.com/22244040/264050042-dae78e34-5b7c-49ef-b53f-4b5dd5986845.png)
 
 
 If you're interested in getting more info on accessibility topic - here's a
