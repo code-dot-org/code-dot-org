@@ -688,6 +688,7 @@
   dashboard_sections_table_secret: "ប្រភេទ ចូលគណនី"
   dashboard_sections_table_grade: "ថ្នាក់"
   dashboard_sections_table_course: "វគ្គសិក្សា"
+  dashboard_sections_table_pairing_allowed: "ការសរសេរកម្មវិធីជាគូ"
   dashboard_sections_table_stage_extras: "ដំណាក់កាលផ្សេងទៀត"
   dashboard_sections_table_students: "សិស្ស"
   dashboard_sections_table_code: "លេខកូដផ្នែក"
@@ -903,7 +904,7 @@
   appinventor_name: "AppInventor Hour of Code"
   blockly_name: "Blockly"
   projguts_name: "ក្តាប់ លាត កន្ត្រៃ"
-  artist_name: "សិល្បករ"
+  artist_name: "វិចិត្រករ"
   monstercoding_name: "ដំណើរផ្សងព្រេងសរសេរកូដនៅលើកោះអាថ៌កំបាំង "
   allcancode_name: "រត់ Marco រត់! "
   csfirst_name: "CS First"
@@ -932,7 +933,7 @@
   pre-express-2018_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០១៨)
   pre-express-2019_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០១៩)
   pre-express-2020_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០២០)
-  express-2022_name: វគ្គសិក្សារហ័ស (2022)
+  express-2022_name: Express Course (2022)
   csd2_name: 'មេរៀនទី២៖ ការអភិវឌ្ឍគេហទំព័រ'
   csd3_name: 'មេរៀនទី៣៖ ស្វែងយល់អំពីចលនានិងល្បែង'
   pre-express_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
@@ -1427,7 +1428,7 @@
   user_header_view_all: "មើលគម្រោងទាំងអស់"
   user_header_view_project_gallery: "មើលបណ្តុំនៃគម្រោង"
   user_header_view_my_projects: "មើលគម្រោងរបស់ខ្ញុំ"
-  view_all_sections: "មើលផ្នែកទាំងអស់"
+  view_all_sections: "មើលថ្នាក់ទាំងអស់"
   view_section: "មើលផ្នែក"
   view_named_section: "មើល %{section_name}"
   privacy_doc_explanation: "សូមចុចនៅទីនេះសម្រាប់ឯកសារឯកជនភាពរបស់យើង ដែលអាចចែករំលែក ឬបោះពុម្ពសម្រាប់សិស្សរបស់អ្នកបាន។"
@@ -1546,7 +1547,7 @@
   hoc2018_dance_party_box_description: "សរសេរកូដ Dance Party ដើម្បីចែករំលែកជាមួយមិត្ដភក្កិ"
   hoc2018_dance_party_specs: "ភាសា | ទម្រង់ | អាយុ ៦-១០៦"
   hoc2018_dance_party_button: "ចាប់​ផ្ដើម"
-  hoc2018_dance_keep_on_dancing_box_title: "Keep On Dancing"
+  hoc2018_dance_keep_on_dancing_box_title: "បន្តបង្កើតក្បាច់រាំ"
   hoc2018_dance_keep_on_dancing_description: "បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។"
   hoc2018_dance_keep_on_dancing_specs: "ភាសា | ទម្រង់ | អាយុ ១៣ ឆ្នាំឡើង"
   hoc2018_dance_keep_on_dancing_button: "ចាប់ផ្តើមវគ្គ ២"
