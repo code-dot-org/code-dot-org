@@ -143,6 +143,7 @@ module SharedConstants
       "setNumber": null,
       "checkbox": null,
       "radioButton": null,
+      "slider": null,
       "getChecked": null,
       "setChecked": null,
       "image": null,

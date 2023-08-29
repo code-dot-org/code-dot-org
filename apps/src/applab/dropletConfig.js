@@ -183,6 +183,13 @@ export var blocks = [
     dropdown: {1: ['true', 'false']},
   },
   {
+    func: 'slider',
+    parent: api,
+    category: 'UI controls',
+    paletteParams: ['id', 'min', 'max', 'value', 'step'],
+    params: ['"id"', '0', '100', '50', '1'],
+  },
+  {
     func: 'getChecked',
     parent: api,
     category: 'UI controls',

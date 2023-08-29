@@ -977,6 +977,31 @@ applabCommands.radioButton = function (opts) {
   return Boolean(Applab.activeScreen().appendChild(newRadio));
 };
 
+applabCommands.slider = function (opts) {
+  console.log('opts', opts);
+  // PARAMNAME: slider: id vs. sliderId
+  apiValidateDomIdExistence(opts, 'slider', 'id', opts.elementId, false);
+
+  var newSlider = document.createElement('input');
+  newSlider.setAttribute('type', 'range');
+
+  newSlider.id = opts.elementId;
+  newSlider.min = opts.min;
+  newSlider.max = opts.max;
+  newSlider.value = opts.value;
+  newSlider.step = opts.step;
+  newSlider.style.position = 'relative';
+  newSlider.style.borderStyle = 'solid';
+  newSlider.style.width = 50;
+  newSlider.style.height = 24;
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newSlider,
+    Applab.activeScreen()
+  );
+
+  return Boolean(Applab.activeScreen().appendChild(newSlider));
+};
+
 applabCommands.dropdown = function (opts) {
   // PARAMNAME: dropdown: id vs. dropdownId
   apiValidateDomIdExistence(opts, 'dropdown', 'id', opts.elementId, false);

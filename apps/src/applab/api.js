@@ -218,6 +218,16 @@ export function radioButton(elementId, checked, name) {
   });
 }
 
+export function slider(elementId, min, max, value, step) {
+  return Applab.executeCmd(null, 'slider', {
+    elementId: elementId,
+    min: min,
+    max: max,
+    value: value,
+    step: step,
+  });
+}
+
 export function getChecked(elementId) {
   return Applab.executeCmd(null, 'getChecked', {elementId: elementId});
 }
