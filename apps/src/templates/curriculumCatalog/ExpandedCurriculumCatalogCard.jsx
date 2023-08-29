@@ -136,7 +136,7 @@ const ExpandedCurriculumCatalogCard = ({
                         {professionalLearningProgram && (
                           <TextLink
                             text={i18n.facilitatorLedWorkshops()}
-                            href={`https://${professionalLearningProgram}`}
+                            href={professionalLearningProgram}
                             icon={
                               <FontAwesome
                                 icon="arrow-up-right-from-square"
