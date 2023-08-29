@@ -15,6 +15,7 @@ import {parseElement as parseXmlElement} from '../../xml';
 import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
 import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
 import experiments from '@cdo/apps/util/experiments';
+import _ from 'lodash';
 
 /**
  * Loads blocks to a workspace.
@@ -33,19 +34,20 @@ export function loadBlocksToWorkspace(workspace, source, hiddenDefinitions) {
 
 /**
  * Load hidden definition blocks to the hidden definition workspace, if it exists.
- * @param {Object} source Blockly serialization of hidden definition blocks.
+ * @param {Object} hiddenDefinitionSource Blockly serialization of hidden definition blocks.
  */
-function loadHiddenDefinitionBlocksToWorkspace(source) {
+function loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource) {
+  if (!Blockly.getHiddenDefinitionWorkspace() || !hiddenDefinitionSource) {
+    return;
+  }
+  Blockly.serialization.workspaces.load(
+    hiddenDefinitionSource,
+    Blockly.getHiddenDefinitionWorkspace()
+  );
   if (
     experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR) &&
-    Blockly.getHiddenDefinitionWorkspace() &&
-    source &&
     Blockly.functionEditor
   ) {
-    Blockly.serialization.workspaces.load(
-      source,
-      Blockly.getHiddenDefinitionWorkspace()
-    );
     Blockly.functionEditor.setUpEditorWorkspaceProcedures();
   }
 }
@@ -62,7 +64,7 @@ function loadHiddenDefinitionBlocksToWorkspace(source) {
  * @returns {parsedSource: Object, parsedHiddenDefinitions: Object, blockOrderMap: Object}
  *  parsedSource and parsedHiddenDefinitions are Blockly serialization objects.
  *  blockOrderMap is only used when source is XML,
- *  and is an map of blocks to their positions on the workspace.
+ *  and is a map of blocks to their positions on the workspace.
  */
 function prepareSourcesForWorkspaces(source, hiddenDefinitions) {
   let {parsedSource, parsedHiddenDefinitions, blockOrderMap} =
@@ -129,28 +131,27 @@ function moveHiddenProcedures(source, hiddenDefinitions, procedureTypesToHide) {
   }
   const blocksToHide = [];
   const otherBlocks = [];
+  const sourceProcedures = source.procedures;
+  hiddenDefinitions.procedures ||= [];
   source.blocks.blocks.forEach(block => {
     if (procedureTypesToHide.includes(block.type)) {
+      console.log('moving block ', block);
       blocksToHide.push(block);
+      // If we found a block to hide, also copy the procedure model
+      // for that block to the hidden definitions workspace.
+      const sourceProcedureModel = sourceProcedures.filter(
+        p => p.id === block.extraState.procedureId
+      );
+      if (sourceProcedureModel.length > 0) {
+        console.log(`moving source procedure `, sourceProcedureModel[0]);
+        hiddenDefinitions.procedures.push(sourceProcedureModel[0]);
+      }
     } else {
       otherBlocks.push(block);
     }
   });
   source.blocks.blocks = otherBlocks;
-  hiddenDefinitions.blocks ||= {};
-  hiddenDefinitions.blocks.blocks ||= [];
-  hiddenDefinitions.blocks.blocks.push(...blocksToHide);
-  if (source.procedures && source.procedures.length > 0) {
-    hiddenDefinitions.procedures ||= [];
-    source.procedures.forEach(sourceProcedure => {
-      if (
-        hiddenDefinitions.procedures.filter(p => p.id === sourceProcedure.id)
-          .length === 0
-      ) {
-        hiddenDefinitions.procedures.push(sourceProcedure);
-      }
-    });
-  }
+  _.set(hiddenDefinitions, 'blocks.blocks', blocksToHide);
 }
 
 export function setHSV(block, h, s, v) {
