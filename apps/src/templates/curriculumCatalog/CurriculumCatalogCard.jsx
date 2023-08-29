@@ -267,7 +267,6 @@ const CustomizableCurriculumCatalogCard = ({
                   onClick={onQuickViewClick}
                   aria-label={quickViewButtonDescription}
                   text={'Quick View'}
-                  className={style.secondaryButton}
                 />
               ) : (
                 <Button
@@ -279,7 +278,6 @@ const CustomizableCurriculumCatalogCard = ({
                     course_name: courseDisplayName,
                   })}
                   text={i18n.learnMore()}
-                  className={style.secondaryButton}
                 />
               )}
               <Button
