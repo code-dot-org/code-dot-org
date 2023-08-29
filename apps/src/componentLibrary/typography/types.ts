@@ -28,6 +28,7 @@ type VisualAppearance =
   | 'overline-two'
   | 'overline-three'
   | 'strong'
+  | 'extra-strong'
   | 'em'
   | 'figcaption';
 
