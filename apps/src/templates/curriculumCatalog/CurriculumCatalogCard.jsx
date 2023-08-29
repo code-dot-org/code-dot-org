@@ -223,6 +223,7 @@ const CustomizableCurriculumCatalogCard = ({
         <div
           className={classNames(
             style.curriculumCatalogCardContainer,
+            isExpanded ? style.expandedCard : '',
             isEnglish
               ? style.curriculumCatalogCardContainer_english
               : style.curriculumCatalogCardContainer_notEnglish
