@@ -6124,6 +6124,8 @@ cs:
               display_name: Alternativní lekce
             lessonGroup-6:
               display_name: Konec zjišťování jednotek
+            lessonGroup-7:
+              display_name: Pískoviště
           title: Objektově orientované programování
         csa2-2023:
           lessons:
@@ -6157,6 +6159,8 @@ cs:
               name: Toto klíčové slovo
             lesson-15:
               name: Průzkum jednotky 2
+            lesson-17:
+              name: Projekt asfaltového umění - den 2
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -6166,6 +6170,8 @@ cs:
               display_name: Alternativní lekce
             lessonGroup-5:
               display_name: Konec zjišťování jednotek
+            lessonGroup-6:
+              display_name: Pískoviště
           title: Struktura a design třídy
         csa3-2023:
           lessons:
@@ -6197,6 +6203,8 @@ cs:
               name: Data pro projekt sociálního dobra [1-denní verze]
             lesson-14:
               name: Průzkum jednotky 3
+            lesson-16:
+              name: Projekt asfaltového umění - den 2
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -6206,6 +6214,8 @@ cs:
               display_name: Alternativní lekce
             lessonGroup-5:
               display_name: Konec zjišťování jednotek
+            lessonGroup-6:
+              display_name: Pískoviště
           title: Pole a algoritmy
         csa4-2023:
           lessons:
@@ -6237,6 +6247,8 @@ cs:
               name: Příkazy pro více výběrů
             lesson-15:
               name: Průzkum jednotky 4
+            lesson-17:
+              name: Projekt asfaltového umění - den 2
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -6246,6 +6258,8 @@ cs:
               display_name: Alternativní lekce
             lessonGroup-5:
               display_name: Konec zjišťování jednotek
+            lessonGroup-6:
+              display_name: Pískoviště
           title: Podmínky a logika
         csa5-2023:
           lessons:
@@ -6277,6 +6291,8 @@ cs:
               name: Projekt osobního vyprávění [1-denní verze]
             lesson-14:
               name: Průzkum jednotky 5
+            lesson-16:
+              name: Projekt asfaltového umění - den 2
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -6286,6 +6302,8 @@ cs:
               display_name: Alternativní lekce
             lessonGroup-5:
               display_name: Konec zjišťování jednotek
+            lessonGroup-6:
+              display_name: Pískoviště
           title: Dvourozměrná pole
         csa6-2023:
           lessons:
@@ -6317,6 +6335,8 @@ cs:
               name: Projekt zpracování přirozeného jazyka [1-denní verze]
             lesson-14:
               name: Průzkum jednotky 6
+            lesson-16:
+              name: Projekt asfaltového umění - den 2
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -6326,6 +6346,8 @@ cs:
               display_name: Alternativní lekce
             lessonGroup-5:
               display_name: Konec zjišťování jednotek
+            lessonGroup-6:
+              display_name: Pískoviště
           title: ArrayLists a String metody
         csa7-2023:
           lessons:
@@ -6355,6 +6377,8 @@ cs:
               name: Průzkum jednotky 7
             lesson-14:
               name: Kreativní kódování s divadelním projektem [1-denní verze]
+            lesson-16:
+              name: Projekt asfaltového umění - den 2
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -6364,6 +6388,8 @@ cs:
               display_name: Konec zjišťování jednotek
             lessonGroup-5:
               display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
           title: Metoda rozkladu a rekurze
         csa8-2023:
           lessons:
@@ -6393,6 +6419,8 @@ cs:
               name: Posuzování jednotky 8
             lesson-13:
               name: Kreativní kódování pomocí projektu Console [1-Day Version]
+            lesson-15:
+              name: Projekt asfaltového umění - den 2
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -6402,6 +6430,8 @@ cs:
               display_name: Průzkum
             lessonGroup-5:
               display_name: Alternativní lekce
+            lessonGroup-6:
+              display_name: Pískoviště
           title: Vyhledávání a třídění
         vpl-csd3-ayw-pilot-2022:
           lessons:
@@ -7527,11 +7557,16 @@ cs:
           description_short: Naučte se programovat s fyzickými zařízeními.
           name: csd6a-2023
         csa9-2023:
+          lessons:
+            lesson-2:
+              name: Projekt asfaltového umění - den 2
           lesson_groups:
             lessonGroup-2:
               display_name: Přezkoumání a praxe
             lessonGroup-3:
               display_name: Vysmívat se zkouškám
+            lessonGroup-4:
+              display_name: Pískoviště
           description_short: Studenti se připravují na zkoušku AP CSA procvičováním strategií pro otázky s výběrem odpovědí a bezplatnou odpovědí.
           description: Tato jednotka připravuje studenty na zkoušku AP CSA přezkoumáním klíčových konceptů, procvičování otázek s výběrem odpovědí a bezplatnou odpovědí, a posílení strategií přijímání testů. Studenti identifikují silné stránky a oblasti zlepšování, aby vytvořili individualizované studijní plány, aby zaměřili svou praxi a sebehodnotili svůj pokrok.
           student_description: Tato jednotka vás připraví na zkoušku AP CSA přezkoumáním klíčových konceptů, procvičování otázek s výběrem odpovědí a bezplatnou odpovědí, a posílení strategií přijímání testů. Identifikujete silné stránky a oblasti zlepšování, abyste vytvořili individualizované studijní plány, které vás zaměří na procvičování a sebehodnocení vašeho pokroku.
