@@ -215,7 +215,7 @@ const ExpandedCurriculumCatalogCard = ({
                   iconClassName="fa-solid"
                 />
               </div>
-              <div className={style.relatedContainer}>
+              <div className={style.relatedContainer} style={{display: 'none'}}>
                 <Heading4 visualAppearance="heading-xs">
                   {i18n.relatedCurricula()}
                 </Heading4>
