@@ -58,9 +58,9 @@ class Experiment < ApplicationRecord
       update_cache
     end
     @@experiments.select do |experiment|
-      experiment.enabled?(user: user) &&
+      (experiment_name.nil? || experiment.name == experiment_name) &&
         (experiment.script_id.nil? || experiment.script_id == script.try(:id)) &&
-        (experiment_name.nil? || experiment.name == experiment_name)
+        experiment.enabled?(user: user)
     end
   rescue => exception
     Honeybadger.notify(
