@@ -105,6 +105,8 @@ module Services
         # the given script
         def script_resources_pdf_exists_for?(script)
           pathname = get_script_resources_pathname(script).to_s
+          return false if pathname.blank?
+
           cache_key = "CurriculumPdfs/Resources/pdf_exists/#{pathname}"
           return CDO.shared_cache.read(cache_key) if CDO.shared_cache.exist?(cache_key)
 

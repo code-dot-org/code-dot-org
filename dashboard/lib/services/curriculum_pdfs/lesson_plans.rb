@@ -40,6 +40,8 @@ module Services
         # Check S3 to see if we've already generated a PDF for the given lesson.
         def lesson_plan_pdf_exists_for?(lesson, student_facing=false)
           pathname = get_lesson_plan_pathname(lesson, student_facing).to_s
+          return false if pathname.blank?
+
           cache_key = "CurriculumPdfs/LessonPlans/pdf_exists/#{pathname}"
           return CDO.shared_cache.read(cache_key) if CDO.shared_cache.exist?(cache_key)
 
