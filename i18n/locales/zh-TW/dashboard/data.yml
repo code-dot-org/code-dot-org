@@ -730,6 +730,8 @@ zh-TW:
         csa_sorting_algorithms: 'CSA: 排序演算法'
         star_quilts_intro_to_artist: '明星被子：藝術家簡介'
         upload_sprites_backgrounds: 上傳自定義精靈和背景
+        what-is-creativity: 什麼是創意？
+        code-break: 來場程式休憩時刻
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

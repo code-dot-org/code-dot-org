@@ -50,8 +50,8 @@ class CourseOffering < ApplicationRecord
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
   HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
   PROFESSIONAL_LEARNING_PROGRAM_PATHS = {
-    'K5 Workshops': 'code.org/professional-development-workshops',
-    '6-12 Workshops': 'code.org/apply',
+    'K5 Workshops': 'https://code.org/professional-development-workshops',
+    '6-12 Workshops': 'https://code.org/apply',
   }
   validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}, allow_nil: true
 

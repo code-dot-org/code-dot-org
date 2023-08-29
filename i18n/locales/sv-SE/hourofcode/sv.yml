@@ -240,6 +240,8 @@ sv:
   call_to_action_learn_about_approach: Läs mer om vårt förhållningssätt
   call_to_action_try_java_lab: Prova Java Lab
   call_to_action_notify_available: Meddela mig när det är tillgängligt
+  call_to_action_register_early_access: Registrera dig för tidig åtkomst
+  call_to_action_open_positions: Visa öppna positioner
   aria_label_call_to_action_afe: Läs mer om Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Starta programmet Undervisning Datavetenskap
     Fundamentals professionellt lärande
@@ -13051,6 +13053,111 @@ sv:
   accessibility_card_text_10: 'En anpassning av Code.org: s AP Computer Science Principles
     läroplan med Quorum, ett evidensbaserat språk som ursprungligen utformades för
     att ge tillgänglighet för blinda eller synskadade studenter.'
+  engineering_hero_heading: Gå med i vårt ingenjörsteam!
+  engineering_hero_desc: När vi fortsätter att utöka vårt ingenjörsteam ville vi dela
+    mer om vår ingenjörsorganisation på Code.org och några av de unika aspekterna
+    av att arbeta här. Om du är intresserad av att söka en av våra roller, vi vill
+    gärna höra från dig!
+  engineering_team_title: Möt ingenjörsteamet på Code.org
+  engineering_team_card_text_1: Det här är (de flesta) oss på vår personliga sammanträffning
+    sommaren 2023! Denna publik är indelad i fyra undergrupper inom vårt ingenjörsteam
+    som arbetar tillsammans för att bygga och tjäna plattformen för alla våra studenter
+    och lärare.
+  engineering_team_card_text_2: Om du är intresserad av att söka en av våra roller,
+    vi vill gärna höra från dig! Du hittar en lista över lediga tjänster på vår karriärsida.
+  engineering_our_team_title: Vårt ingenjörsteam
+  engineering_our_team_desc: 'Ingenjörsteamet på Code.org är indelat i fyra undergrupper
+    som bygger och stödjer olika delar av vår plattform:'
+  engineering_our_team_sub_title_1: Studentens inlärningsteam
+  engineering_our_team_text_1: 'Vårt Student Learning Team äger alla våra aktiviteter
+    (vi kallar dem laboratorier) som våra elever använder varje dag. Detta team arbetar
+    mest med front-end tech (vi använder React och många anpassade JS) och vi har
+    ett bra samarbete med många partners och open source-projekt. Till exempel använder
+    vi [Googles Blockly] (%{youtube_url}) för all vår blockbaserade programmering.
+    Vi stöder eleverna i deras inlärningsresa hela vägen från dagis till 12: e klass.'
+  engineering_our_team_sub_title_2: Teamet för lärares erfarenhet
+  engineering_our_team_text_2: Vårt Teacher Experience Team bygger verktygen som lockar
+    nya lärare till Code.org (vi kallar dessa förvärvsprodukter) och utvecklar plattformen
+    som ger våra befintliga lärare möjlighet att lära ut vår läroplan (våra lärarverktyg).
+    Som med våra studentverktyg, vi litar på React för att bygga vår front-end och
+    våra komponenter på serversidan serveras med Ruby on Rails.
+  engineering_our_team_sub_title_3: Plattform Team
+  engineering_our_team_text_3: Vårt plattformsteam äger kärnkomponenter som tillgodoser
+    behoven hos våra student- och lärarteam (till exempel autentisering och användarprofil)
+    och har också uppdraget att nå studenter som vi ännu inte kan nå. Detta inkluderar
+    byggnadsintegrationer som förbinder oss med skolor som använder olika Learning
+    Management Systems (LMS) och paketerar vår läroplan så att den kan användas i
+    avlägsna skolor som inte har tillgång till pålitligt internet.
+  engineering_our_team_sub_title_4: Infrastruktur Team
+  engineering_our_team_text_4: Vårt infrastrukturteam ger ryggraden för plattformen
+    som stöder våra elever och lärare. Detta inkluderar vår värdinfrastruktur och
+    relaterade tjänster (vi använder AWS), datahantering, säkerhetsprogram, utvecklare
+    och distributionstjänster och mycket mer. Detta team äger också våra skalnings-
+    och provisioneringssystem, som är kritiska under Hour of Code, där vi bjuder in
+    alla studenter i världen att slutföra en timmes kodning med oss.
+  engineering_faq_question_1: Vad gör Code.org?
+  engineering_faq_answer_1_a: Code.org är en ideell utbildningsorganisation som ägnar
+    sig åt visionen att varje elev i varje skola har möjlighet att lära sig datavetenskap
+    som en del av sin grundläggande K-12-utbildning.
+  engineering_faq_answer_1_b: Vi utökar tillgången till datavetenskap i skolor, med
+    fokus på att öka deltagandet av unga kvinnor och studenter från andra underrepresenterade
+    grupper. Den ledande leverantören av K-12 datavetenskapliga läroplan i de största
+    skoldistrikten i USA, Code.org organiserar också den årliga Hour of Code-kampanjen,
+    som har engagerat mer än 15% av alla studenter i världen.
+  engineering_faq_answer_1_c: Code.org stöds av generösa givare inklusive Microsoft,
+    Amazon, Google och många andra.
+  engineering_faq_question_2: Vad är Code.orgs utvecklarupplevelse och verktyg?
+  engineering_faq_answer_2: Vår utvecklarupplevelse kan skilja sig från vad du har
+    sett i dina tidigare roller. I nära samarbete med vårt produktteam skickar vi
+    till produktion varje vardag och vi har en mängd olika kadenser - ibland skriver
+    du kod som går live den dagen; andra gånger är du på längre sikt projekt - och
+    medan vi följer 2-veckors sprint gör vi det på ett lätt sätt. Vi indexerar mot
+    att få rätt saker gjorda på rätt sätt jämfört med att ta en puristisk syn på en
+    viss metod. [All vår kod] (%{code_url}) är öppen källkod och vi använder JIRA-
+    och GitHub pull-förfrågningar för att spåra alla våra arbetsobjekt. Vi bryr oss
+    också mycket om kvalitet och testning och har turen att ha otroligt stöd från
+    [SauceLabs](%{saucelabs_url}), som hjälper oss att köra vår svit med UI-tester
+    på olika studentenheter (t.ex. iPads) i deras molnenhetsgård.
+  engineering_faq_question_3: Vad är ingenjörens jourrotation på Code.org?
+  engineering_faq_answer_3: Vårt 30+ ingenjörsteam delar jouransvar. Varje ingenjör
+    täcker ett 24-timmarsskift och använder våra eskaleringsvägar och spelböcker för
+    att svara på webbplatsavbrott eller andra live-webbplatsproblem. Vi är stolta
+    över vår webbplats tillförlitlighet - i genomsnitt väcks varje ingenjör bara en
+    gång per år för problem som vanligtvis är snabba att lösa. Istället spenderar
+    ”Dagens utvecklare” vanligtvis en del av sin arbetsdag med att hantera produktionsdistributionen
+    och trista mindre brådskande problem.
+  engineering_faq_question_4: Är du en fjärrvän/WFH-organisation?
+  engineering_faq_answer_4_a: Ja! År 2019, strax före pandemin, blev Code.org en fjärrstyrd
+    organisation. Idag har vi ingenjörer i varje amerikansk tidszon och rymmer arbetstid
+    därefter. De flesta av våra möten sker mellan klockan 10:00 och 15:00 PT.
+  engineering_faq_answer_4_b: Vi inser också värdet av personlig tid, och varje kvartal
+    träffas vi personligen, vanligtvis i Seattle. Två av dessa evenemang (vi kallar
+    dem Kick-off week och ”Codechella”) samlar alla i organisationen i januari och
+    juni - och ingenjörs- och produktteamen möts separat i april och oktober.
+  engineering_faq_answer_4_c: Vi tror starkt på att spendera tid med våra elever och
+    lärare, så många av dessa personliga evenemang inkluderar resor till skolor och
+    klassrum för att samla in feedback eller testa våra produkter
+  engineering_faq_question_5: Vad gör ingenjörsteamet på Code.org unikt?
+  engineering_faq_answer_5_a: 'Utöver att lösa utmanande tekniska problem har vi några
+    saker som gör vår tekniska organisation annorlunda än andra du kanske har arbetat
+    med:'
+  engineering_faq_answer_5_b_1: Vi delar alla vår passion för vårt uppdrag.
+  engineering_faq_answer_5_b_2: Var och en av oss är här för att stödja uppdraget
+    att utöka tillgången till datavetenskap för varje student över hela världen. Vi
+    har alla vår unika historia och perspektiv på vad som driver oss mot detta uppdrag.
+  engineering_faq_answer_5_c_1: Vi bryr oss djupt om varandra.
+  engineering_faq_answer_5_c_2: När ingenjörer kämpar med ett problem, går vi in och
+    vi hjälper. En av våra principer är att vi är hårda mot problem, men snälla mot
+    varandra. Vi marknadsför ingenjörer regelbundet, men vi föreskriver inte överkonstruerade
+    lösningar bara för att stödja någons marknadsföringsväg. Istället investerar vi
+    i våra ingenjörer med en generös professionell utvecklingsbudget och tillgång
+    till andra inlärningsmöjligheter.
+  engineering_faq_answer_5_d_1: Vi arbetar hårt, men vi sätter tydliga gränser.
+  engineering_faq_answer_5_d_2: Medan vi stöder studenter över hela världen, vi håller
+    oss ansvariga för tydliga gränser mellan arbete och hemliv. Vi njuter av inga
+    möten onsdagar, tar vår PTO (totalt 5 veckor, vilket inkluderar en organisationsomfattande
+    2-veckors kontorsstängning i slutet av året aka Winter Break), halv arbetsdag
+    på fredagar under sommaren aka sommarfredagar och andra generösa förmåner.
   language_code:
     ar: arabiska
     az: azerbajdzjanska

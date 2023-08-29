@@ -13,7 +13,7 @@
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
   "description": "How does code impact the world around us? In this unit, students are challenged to consider the broader social impacts of various aspects of computer science.",
-  "professional_learning_program": "code.org/apply",
+  "professional_learning_program": "https://code.org/apply",
   "video": "https://www.youtube-nocookie.com/embed/QvyTEx1wyOY/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=QvyTEx1wyOY&wmode=transparent",
   "published_date": "2023-07-10 04:00:00 UTC",
   "self_paced_pl_course_offering_id": 443

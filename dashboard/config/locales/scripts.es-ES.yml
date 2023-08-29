@@ -2402,6 +2402,8 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-5:
               display_name: Lecciones alternativas
+            lessonGroup-7:
+              display_name: Encuesta Piloto
           lessons:
             lesson-1:
               name: Bienvenido a CSA
@@ -2533,6 +2535,8 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
             lesson-1:
               name: Atributos
@@ -2540,6 +2544,8 @@ es:
               name: Práctica FRQ
             lesson-12:
               name: Evaluación de la unidad 2
+            lesson-17:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-4:
               name: Variables
             lesson-9:
@@ -2652,11 +2658,15 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
             lesson-1:
               name: Arrays Unidimensionales (1D)
             lesson-11:
               name: Práctica FRQ
+            lesson-16:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-3:
               name: Bucles Para
           title: Arrays y Algoritmos
@@ -2745,7 +2755,11 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
+            lesson-17:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-9:
               name: Aleatorio
           title: Condiciones y Lógica
@@ -2862,6 +2876,11 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
+          lessons:
+            lesson-16:
+              name: Proyecto Arte en el Asfalto - Día 2
           title: Arrays Bidimensionales
         csa5-exemplars:
           lesson_groups:
@@ -2972,6 +2991,11 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
+          lessons:
+            lesson-16:
+              name: Proyecto Arte en el Asfalto - Día 2
           student_description: Esta unidad continúa ampliando las estructuras de datos
             para introducirte en la creación de listas utilizando la clase `ArrayList`.
             En el proceso, aprenderás sobre las clases `Integer` y `Double` y utilizarás
@@ -3112,7 +3136,11 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-5:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
+            lesson-16:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-6:
               name: Propiedad intelectual
           student_description: En esta unidad, se practica el diseño y el desarrollo
@@ -3263,9 +3291,13 @@ es:
               display_name: Encuesta
             lessonGroup-5:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
             lesson-11:
               name: Práctica FRQ
+            lesson-15:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-7:
               name: Buscando y Ordenando
           student_description: En esta unidad, ampliarás los algoritmos que has aprendido
@@ -3407,6 +3439,11 @@ es:
               display_name: Revisión y Práctica
             lessonGroup-3:
               display_name: Simulacros de Exámenes
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+          lessons:
+            lesson-2:
+              name: Proyecto Arte en el Asfalto - Día 2
           student_description: Esta unidad te prepara para el examen AP CSA repasando
             los conceptos clave, practicando las preguntas de opción múltiple y de
             respuesta libre, y reforzando las estrategias para realizar el examen.

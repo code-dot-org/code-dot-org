@@ -14,7 +14,7 @@ Code.org bietet eine Vielzahl von Hour of Code™ -Aktivitäten, Lektionen und V
 
 Möchtest du dein eigenes selbstgeführtes Tutorial, eine von einem Lehrer geleitete Lektion oder eine Robotik-/Maker-Aktivität einreichen, in der ein Informatik-Prinzip erklärt wird? Schließen Sie sich dieser globalen Bewegung an und helfen Sie Teilnehmern auf der ganzen Welt, mit einer Stunde Code zu beginnen oder mit Aktivitäten, die mehrere Lektionen, einen Tag oder eine Woche dauern, noch weiter zu gehen.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Sie können eine Aktivität jederzeit einreichen, die Frist für die Aufnahme in ein bestimmtes Kalenderjahr ist jedoch der 1. Oktober. (Beispielsweise werden Aktivitäten, die nach dem 1. Oktober 2023 eingehen, nicht für die Hour of Code 2023 aufgeführt.)** Wenn du Fragen zu deiner Einreichung von Aktivitäten hast, kontaktiere uns bitte unter support@code.org.
+**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity and AI Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Sie können eine Aktivität jederzeit einreichen, die Frist für die Aufnahme in ein bestimmtes Kalenderjahr ist jedoch der 1. Oktober. (Beispielsweise werden Aktivitäten, die nach dem 1. Oktober 2023 eingehen, nicht für die Hour of Code 2023 aufgeführt.)** Wenn du Fragen zu deiner Einreichung von Aktivitäten hast, kontaktiere uns bitte unter support@code.org.
 
 Ein paar Tipps:
 
@@ -45,7 +45,7 @@ Ein paar Tipps:
 
 Diese Aktivitäten sind so konzipiert, dass sich die Schüler anhand eines Tutorials selbst steuern können. Sie benötigen nicht viel Unterricht von einem Lehrer oder eine Lehrervorbereitung.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Von Lehrern moderierter Unterricht ([Beispiel](https://studio.code.org/s/course1/lessons/2/levels/1), [Vorlage](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Hunderttausende von Pädagogen haben die Hour of Code ausprobiert und viele Klassenzimmer sind bereit für kreativere Aktivitäten, bei denen die Grundlagen der Informatik vermittelt werden. Um fortgeschrittenen Lehrern zu helfen, sich inspirieren zu lassen, sammeln und kuratieren wir „von Lehrern geleitete“ Lektionen und Aktivitätspläne für Hour of Code-Veteranen.
 
@@ -88,7 +88,7 @@ Die Aktivitäten sollten ein Informatikkonzept wie Schleifen, Bedingungen, Versc
 
 *Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. Es gibt viele bestehende Optionen, aber wenn Sie eine neue erstellen möchten, sollten diese Aktivitäten so konzipiert sein, dass sie einem Schüler Spaß machen, der alleine oder in einem Klassenzimmer arbeitet, dessen Lehrer nur über minimale Vorbereitungskenntnisse oder Computerkenntnisse verfügt. Sie sollten den Studierenden Anweisungen geben und nicht eine unbefristete einstündige Herausforderung. Idealerweise werden die Anweisungen und Tutorials direkt in die Programmierplattform integriert, um zu vermeiden, dass zwischen dem Tutorial und der Programmierplattform zwischen Tabs oder Fenstern gewechselt werden muss.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+Um einen Eindruck von der Vielzahl der Arten von Tutorials und Unterrichtsplänen zu bekommen, die Sie erstellen können, besuchen Sie die Seite</a>der Hour of Code-Aktivitäten.</p> 
 
 [**Zurück zum Seitenanfang**](#top)
 
@@ -103,6 +103,7 @@ Was Sie brauchen:
 * Name und E-Mail des Hauptansprechpartners, der die eingereichte Aktivität vertritt
 * Name der Aktivität (darf nicht „Hour of Code“ im Namen enthalten)
 * URL-Link zur Aktivität
+* Beinhaltet diese Aktivität KI: Ja oder Nein
 * Eine Beschreibung der Aktivität (maximale Zeichenanzahl: 400) 
     * Bitte geben Sie in der Beschreibung an, ob es hauptsächlich von Schülern oder von Lehrern geleitet wird. Darüber hinaus sind einige Schulen daran interessiert zu erfahren, ob die Hour of Code-Aktivitäten den Common Core- oder Next Generation Science Standards entsprechen. Wenn die Aktivität bestimmte Standards berücksichtigt, sollten Sie erwägen, diese Informationen einzubeziehen.
 * Empfohlene Klassenstufe (n) für vorgesehene Benutzer. Sie können die K-12-Standards der \[Computer Science Teachers' Association\] (https://k12cs.org/framework-statements-by-grade-band/) für klassengerechte Informatikkonzepte konsultieren. Beispiele für Klassenstufen sind: 
@@ -110,9 +111,9 @@ Was Sie brauchen:
     * Klassen 2-5 (7—10 Jahre)
     * Klassen 6-8 (11-13 Jahre)
     * Klassen 9+ (ab 14 Jahren)
-* Eine Liste der Fachbereiche, die Ihre Tätigkeit abdeckt (zusätzlich zur Informatik). Wenn beispielsweise ein Mathematiklehrer deine Aktivität nutzen kann, um etwas über Winkel oder Parabeln zu unterrichten, liste sie als Mathematik auf. Wenn du eine Mad Libs-Aktivität hast, die Verben/Substantive/etc unterrichtet. wähle Sprachkunst.
-* Eine Liste der Programmiersprachen, die in Ihrer Aktivität unterrichtet werden. D.h. C/C++, Java, JavaScript usw. oder sprachunabhängig (für Unterrichtspläne, die in mehreren Sprachen unterrichtet werden können)
-* Eine Liste der unterstützten natürlichen Sprachen. Hinweis: Die Spracherkennung liegt in der Verantwortung des Anbieters der Aktivität. Wir leiten alle Benutzer auf die angegebene einzige URL weiter.
+* Eine Liste der Programmiersprachen, die in Ihrer Aktivität unterrichtet werden. D.h. C/C++, Java, JavaScript usw. oder sprachunabhängig (für Unterrichtspläne, die in mehreren Sprachen unterrichtet werden können) wähle Sprachkunst.
+* Eine Liste der unterstützten natürlichen Sprachen. Hinweis: Die Spracherkennung liegt in der Verantwortung des Anbieters der Aktivität. Wir leiten alle Benutzer auf die angegebene einzige URL weiter. oder sprachunabhängig (für Unterrichtspläne, die in mehreren Sprachen unterrichtet werden können)
+* Welche Erfahrung sollte ein Pädagoge haben, um Ihre Aktivität nutzen zu können? (z. B. Beginner oder Comfortable.) Und wie viel Erfahrung sollten die Studierenden haben?
 * Welche Erfahrung sollte ein Pädagoge haben, um Ihre Aktivität nutzen zu können? (z. B. Beginner oder Comfortable.) Und wie viel Erfahrung sollten die Studierenden haben? Wenn Sie fortgeschrittenere Hour of Code™ -Aktivitäten vorbereiten möchten, geben Sie bitte die erforderlichen Vorkenntnisse in der Beschreibung Ihrer Aktivität an.
 * Die Dauer Ihrer Aktivität 
     * Nur 1 Stunde
@@ -166,9 +167,11 @@ Was Sie brauchen:
 
 ## Wie werden die Aktivitäten bewertet
 
-Ein bunt zusammengesetztes Komitee von Informatikpädagogen bewertet die Beiträge anhand qualitativer und quantitativer Kriterien. Alle Aktivitäten, die die grundlegenden Kriterien erfüllen, werden aufgelistet. Die Lehrer können filtern und sortieren, um die besten Aktivitäten für ihren Unterricht zu finden.
+Ein bunt zusammengesetztes Komitee von Informatikpädagogen bewertet die Beiträge anhand qualitativer und quantitativer Kriterien. Alle Aktivitäten, die die grundlegenden Kriterien erfüllen, werden aufgelistet.
 
-Die Rubrik für die Bewertung von Aktivitäten und Unterrichtsplänen sucht bei allen Aktivitäten nach den folgenden Kriterien und ordnet sie entsprechend ein:
+Für traditionelle Programmieraktivitäten wird ein breit gefächertes Komitee von Informatikpädagogen die Beiträge nach qualitativen und quantitativen Kriterien bewerten. Alle Aktivitäten, die die grundlegenden Kriterien erfüllen, werden aufgelistet. Die Lehrer können filtern und sortieren, um die besten Aktivitäten für ihren Unterricht zu finden.
+
+Wenn der Prüfungsausschuss die Aktivität in Bezug auf die Produktionsqualität (aufgrund fehlerhafter Fehler oder Anweisungen, die die Bedienung sehr erschweren), was die Förderung des Lernens in unterrepräsentierten Gruppen (aufgrund rassistischer/sexistischer Materialien), ihren pädagogischen Wert (vermittelt keine Informatikkonzepte) oder unterhaltsam/ansprechend (weil sie für die Schüler schwierig/entmutigend zu bearbeiten ist) mit Null bewertet, wird die Aktivität nicht aufgeführt.
 
 - Hohe Produktionsqualität
 - Förderung des Lernens aller demografischen Gruppen (insb. Studierende, die in der Informatik unterrepräsentiert sind, wie junge Frauen, Studierende aus marginalisierten ethnischen und ethnischen Gruppen und Studierende mit Behinderungen)
@@ -176,9 +179,9 @@ Die Rubrik für die Bewertung von Aktivitäten und Unterrichtsplänen sucht bei 
 - Unterhaltsam und fesselnd
 - Ermutigt die Schüler, etwas Einzigartiges zu schaffen, das sie teilen können (Für jüngere Schüler: mit Eltern und Klassenkameraden). (Für ältere Studierende: im Internet)
 
-Wenn der Prüfungsausschuss die Aktivität in Bezug auf die Produktionsqualität (aufgrund fehlerhafter Fehler oder Anweisungen, die die Bedienung sehr erschweren), was die Förderung des Lernens in unterrepräsentierten Gruppen (aufgrund rassistischer/sexistischer Materialien), ihren pädagogischen Wert (vermittelt keine Informatikkonzepte) oder unterhaltsam/ansprechend (weil sie für die Schüler schwierig/entmutigend zu bearbeiten ist) mit Null bewertet, wird die Aktivität nicht aufgeführt.
-
 Um in die Liste aufgenommen zu werden, müssen alle Aktivitäten außerdem:
+
+Bei selbstgesteuerten Aktivitäten für neue Lehrer und Schüler wird der Prüfungsausschuss prüfen, ob:
 
 - Für den Unterricht an öffentlichen Schulen geeignet sein (keine Waffen, keine expliziten/für Erwachsene bestimmten Inhalte, keine religiösen Inhalte usw.)
 - Keine Anmeldung erforderlich
@@ -204,11 +207,13 @@ Lehrer und Schüler können unsere Liste der Aktivitäten anhand von Filtern wie
 
 ## Vorschläge für die Gestaltung einstündiger selbstgeführter Tutorials
 
-Sie können das [Hour of Code-Logo](https://hourofcode.com/us/promote/resources#logo) in Ihr Tutorial aufnehmen, dies ist jedoch nicht erforderlich. Wenn Sie das Hour of Code-Logo verwenden, beachten Sie die nachfolgenden Markenrichtlinien. <u>Unter keinen Umständen dürfen das Logo und der Name Code.org verwendet werden.</u> Beide sind markenrechtlich geschützt und dürfen ohne ausdrückliche schriftliche Genehmigung nicht mit einem Markennamen Dritter kombiniert werden.
+Die Aktivitäten müssen keine KI beinhalten, obwohl wir versuchen, mehr KI-bezogene Aktivitäten anzubieten.
 
-**Stellen Sie sicher, dass der durchschnittliche Student bequem in einer Stunde fertig ist.** Erwägen Sie, am Ende eine unbefristete Aktivität für Schüler hinzuzufügen, die schneller durch die Lektion kommen. Denken Sie daran, dass die meisten Kinder absolute Anfänger in Informatik und Programmieren sein werden.
+Sie können das [Hour of Code-Logo](https://hourofcode.com/us/promote/resources#logo) in Ihr Tutorial aufnehmen, dies ist jedoch nicht erforderlich. Nicht nur die Schüler sind Anfänger, auch einige der Lehrer sind es. Fügen Sie Informationen hinzu wie:
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Nicht nur die Schüler sind Anfänger, auch einige der Lehrer sind es. Fügen Sie Informationen hinzu wie:
+**Integrieren Sie Feedback am Ende der Aktivität.** (Z.B. „Du hast 10 Level abgeschlossen und etwas über Loops gelernt! Tolle Arbeit!“)
+
+**Ermutigen Sie die Schüler, Beiträge in sozialen Netzwerken zu posten (sofern angemessen), wenn sie fertig sind.** Zum Beispiel: „Ich habe eine Hour of Code mit ________ gemacht, und du? #HourOfCode“ oder „Ich habe ein #HourOfCode als Teil von #CSEdWeek gemacht. Haben Sie?
 
 - Auf welchen Plattformen und Browsern funktioniert das Tutorial am besten?
 - Funktioniert es auf Smartphones? Tabletten?
@@ -247,7 +252,7 @@ Hour of Code® und Hora del Código® sind eingetragene Marken von Code.org. Vie
 
 ## Zählpixel
 
-Um die Teilnahme genauer verfolgen zu können, bitten wir alle Tutorial-Partner, auf der ersten Seite ihrer Hour of Code-Tutorials ein 1-Pixel-Tracking-Bild einzufügen. Das Pixelbild darf nur auf der Startseite sein. Fügen Sie es nicht auf irgendwelchen Zwischenseiten Ihres Tutorials ein.
+Wenn Ihr Tutorial genehmigt und auf der letzten Tutorialseite enthalten ist, stellt Code.org Ihnen ein einzigartiges Tracking-Pixel zur Verfügung, das Sie in Ihr Tutorial integrieren können. Siehe Beispiel unten. Fügen Sie es nicht auf irgendwelchen Zwischenseiten Ihres Tutorials ein.
 
 Auf diese Weise können wir die Benutzer zählen, die Ihr Hour of Code-Tutorial machen. Dies wird zu genaueren Teilnehmerzahlen für Ihr Tutorial führen.
 
