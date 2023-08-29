@@ -265,6 +265,8 @@ ro:
   call_to_action_learn_about_approach: Aflați mai multe despre abordarea noastră
   call_to_action_try_java_lab: Încercați Java Lab
   call_to_action_notify_available: Anunță-mă când este disponibil
+  call_to_action_register_early_access: Înregistrați-vă pentru acces anticipat
+  call_to_action_open_positions: Vizualizați pozițiile deschise
   aria_label_call_to_action_afe: Aflați mai multe despre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Începeți programul de învățare profesională
     Predarea informaticii Fundamentals
@@ -13590,6 +13592,126 @@ ro:
     Principles de la Code.org folosind Quorum, un limbaj bazat pe dovezi, conceput
     inițial pentru a oferi accesibilitate pentru cursanții nevăzători sau cu deficiențe
     de vedere.
+  engineering_hero_heading: Alăturați-vă echipei noastre de ingineri!
+  engineering_hero_desc: Pe măsură ce continuăm să ne extindem echipa de ingineri,
+    am dorit să împărtășim mai multe despre organizația noastră de inginerie la Code.org
+    și câteva dintre aspectele unice ale muncii aici. Dacă sunteți interesat să aplicați
+    pentru unul dintre rolurile noastre, ne-ar plăcea să auzim de la dvs.!
+  engineering_team_title: Faceți cunoștință cu echipa de ingineri la Code.org
+  engineering_team_card_text_1: Acesta este (majoritatea) dintre noi la reunirea noastră
+    personală în vara anului 2023! Această mulțime este împărțită în patru sub-echipe
+    din cadrul echipei noastre de inginerie care lucrează împreună pentru a construi
+    și a servi platforma pentru toți studenții și profesorii noștri.
+  engineering_team_card_text_2: Dacă sunteți interesat să aplicați pentru unul dintre
+    rolurile noastre, ne-ar plăcea să auzim de la dvs.! Puteți găsi o listă de posturi
+    deschise pe pagina noastră Cariere.
+  engineering_our_team_title: Echipa noastră de ingineri
+  engineering_our_team_desc: 'Echipa de ingineri de la Code.org este împărțită în
+    patru sub-echipe care construiesc și susțin diferite domenii ale platformei noastre:'
+  engineering_our_team_sub_title_1: Echipa de învățare a studenților
+  engineering_our_team_text_1: Echipa noastră de învățare a studenților deține toate
+    activitățile noastre (le numim laboratoare) pe care elevii noștri le folosesc
+    în fiecare zi. Această echipă lucrează mai ales pe tehnologie front-end (folosim
+    React și o mulțime de JS personalizate) și avem o relație de lucru excelentă cu
+    mulți parteneri și proiecte open source. De exemplu, folosim [Google Blockly]
+    (%{youtube_url}) pentru toată programarea noastră bazată pe blocuri. Sprijinim
+    elevii în călătoria lor de învățare de la grădiniță până la clasa a XII-a.
+  engineering_our_team_sub_title_2: Echipa de experiență a profesorilor
+  engineering_our_team_text_2: Echipa noastră de experiență pentru profesori construiește
+    instrumentele care atrag noi profesori la Code.org (numim aceste produse de achiziție)
+    și dezvoltă platforma care le permite profesorilor noștri existenți să predea
+    curriculum-ul nostru (instrumentele noastre pentru profesori). Ca și în cazul
+    instrumentelor noastre pentru studenți, ne bazăm pe React pentru a construi front-end-ul
+    nostru, iar componentele noastre de pe server sunt servite folosind Ruby on Rails.
+  engineering_our_team_sub_title_3: Echipa Platformei
+  engineering_our_team_text_3: Echipa noastră de platformă deține componente de bază
+    care servesc nevoilor echipelor noastre de studenți și profesori (de exemplu,
+    autentificare și profil de utilizator) și are, de asemenea, misiunea de a ajunge
+    la studenți la care nu putem ajunge încă. Aceasta include construirea de integrări
+    care ne conectează cu școlile care utilizează diferite sisteme de management al
+    învățării (LMS) și ambalarea curriculum-ului nostru astfel încât să poată fi utilizat
+    în școli îndepărtate care nu au acces la internet fiabil.
+  engineering_our_team_sub_title_4: Echipa Infrastructură
+  engineering_our_team_text_4: Echipa noastră de infrastructură oferă coloana vertebrală
+    pentru platforma care sprijină studenții și profesorii noștri. Aceasta include
+    infrastructura noastră de găzduire și serviciile conexe (folosim AWS), gestionarea
+    datelor, programele de securitate, serviciile de dezvoltare și implementare și
+    multe altele. Această echipă deține, de asemenea, sistemele noastre de scalare
+    și aprovizionare, care sunt esențiale în timpul Hour of Code, unde invităm fiecare
+    student din lume să finalizeze o oră de programare cu noi.
+  engineering_faq_question_1: Ce face Code.org?
+  engineering_faq_answer_1_a: Code.org este o organizație non-profit de inovare educațională
+    dedicată viziunii conform căreia fiecare elev din fiecare școală are posibilitatea
+    de a învăța informatica ca parte a educației lor de bază K-12.
+  engineering_faq_answer_1_b: Extindem accesul la informatică în școli, cu accent
+    pe creșterea participării femeilor tinere și a studenților din alte grupuri subreprezentate.
+    Cel mai important furnizor de curriculum K-12 în cele mai mari districte școlare
+    din Statele Unite, Code.org organizează, de asemenea, campania anuală Hour of
+    Code, care a implicat mai mult de 15% din toți studenții din lume.
+  engineering_faq_answer_1_c: Code.org este susținut de donatori generoși, inclusiv
+    Microsoft, Amazon, Google și mulți alții.
+  engineering_faq_question_2: Ce este experiența și instrumentele pentru dezvoltatori
+    Code.org?
+  engineering_faq_answer_2: Experiența noastră de dezvoltator poate fi diferită de
+    ceea ce ați văzut în rolurile anterioare. Lucrând îndeaproape cu echipa noastră
+    de produse, livrăm la producție în fiecare zi a săptămânii și avem o varietate
+    de cadențe - uneori scrieți cod care intră în direct în acea zi; alteori sunteți
+    pe proiecte pe termen lung - și în timp ce urmăm sprinturi de 2 săptămâni, facem
+    acest lucru într-un mod ușor. Ne orientăm spre a face lucrurile corecte în mod
+    corect față de a lua o viziune puristă asupra oricărei metodologii particulare.
+    [Tot codul nostru] (%{code_url}) este open source și folosim cererile de tragere
+    JIRA și GitHub pentru a urmări toate articolele noastre de lucru. De asemenea,
+    ne pasă foarte mult de calitate și testare și suntem norocoși să avem asistență
+    incredibilă de la [SauceLabs](%{saucelabs_url}), care ne ajută să rulăm suita
+    noastră de teste UI pe diverse dispozitive pentru studenți (de exemplu, iPad-uri)
+    în ferma lor de dispozitive cloud.
+  engineering_faq_question_3: Ce este rotația inginerului de gardă la Code.org?
+  engineering_faq_answer_3: Echipa noastră de peste 30 de ingineri împarte responsabilitățile
+    de gardă. Fiecare inginer acoperă o schimbare de 24 de ore și folosește căile
+    noastre de escaladare și caietele de joc pentru a răspunde la întreruperile site-ului
+    sau la alte probleme ale site-ului live. Suntem mândri de fiabilitatea site-ului
+    nostru - în medie, fiecare inginer este trezit doar o dată pe an pentru probleme
+    care sunt de obicei rapid de rezolvat. În schimb, „Dezvoltatorul zilei” își petrece
+    de obicei o parte din ziua de lucru gestionând implementarea producției și triind
+    probleme mai puțin urgente.
+  engineering_faq_question_4: Sunteți o organizație prietenoasă cu distanța/WFH?
+  engineering_faq_answer_4_a: Da! În 2019, cu puțin înainte de pandemie, Code.org
+    a devenit o organizație de la distanță. Astăzi, avem ingineri în fiecare fus orar
+    din SUA și acomodăm programul de lucru în consecință. Majoritatea întâlnirilor
+    noastre au loc între orele 10:00 și 15:00 PT.
+  engineering_faq_answer_4_b: Recunoaștem, de asemenea, valoarea timpului în persoană
+    și în fiecare trimestru ne reunim personal, de obicei în Seattle. Două dintre
+    aceste evenimente (le numim Kick-off week și „Codechella”) reunesc pe toți cei
+    din organizație în ianuarie și iunie - iar echipele de inginerie și produse se
+    întâlnesc separat în aprilie și octombrie.
+  engineering_faq_answer_4_c: Credem cu tărie în petrecerea timpului cu elevii și
+    profesorii noștri, astfel încât multe dintre aceste evenimente în persoană includ
+    excursii în școli și săli de clasă pentru a aduna feedback sau a testa produsele
+    noastre.
+  engineering_faq_question_5: Ce face echipa de ingineri de la Code.org unică?
+  engineering_faq_answer_5_a: 'Dincolo de rezolvarea problemelor tehnice provocatoare,
+    avem câteva lucruri care fac ca organizația noastră de inginerie să fie diferită
+    de altele în care ați lucrat:'
+  engineering_faq_answer_5_b_1: Cu toții împărtășim pasiunea noastră pentru misiunea
+    noastră.
+  engineering_faq_answer_5_b_2: Fiecare dintre noi este aici pentru a sprijini misiunea
+    de a extinde accesul la informatică pentru fiecare student din întreaga lume.
+    Cu toții avem povestea și perspectiva noastră unică despre ceea ce ne conduce
+    spre această misiune.
+  engineering_faq_answer_5_c_1: Ne pasă profund unul de celălalt.
+  engineering_faq_answer_5_c_2: Când inginerii se luptă cu o problemă, intrăm și ajutăm.
+    Unul dintre principiile noastre este că suntem duri în probleme, dar amabili unul
+    cu celălalt. Promovăm inginerii în mod regulat, dar nu prescriem soluții supra-proiectate
+    doar pentru a sprijini calea de promovare a cuiva. În schimb, investim în inginerii
+    noștri cu un buget generos de dezvoltare profesională și acces la alte oportunități
+    de învățare.
+  engineering_faq_answer_5_d_1: Muncim din greu, dar stabilim limite clare.
+  engineering_faq_answer_5_d_2: În timp ce sprijinim studenții din întreaga lume,
+    ne asumăm responsabilitatea pentru granițele clare dintre muncă și viața de acasă.
+    Ne bucurăm de miercurea fără întâlniri, luând PTO (5 săptămâni în total, care
+    include o închidere a biroului de 2 săptămâni la sfârșitul anului, aka Winter
+    Break), jumătate de zi lucrătoare vinerea în timpul verii alias vinerea de vară,
+    și alte beneficii generoase.
   language_code:
     ar: arabic
     az: azeră

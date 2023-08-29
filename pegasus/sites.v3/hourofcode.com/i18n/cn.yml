@@ -194,6 +194,8 @@ cn:
   call_to_action_learn_about_approach: 详细了解我们的方法
   call_to_action_try_java_lab: 尝试Java实验室
   call_to_action_notify_available: 有货时通知我
+  call_to_action_register_early_access: 注册抢先体验
+  call_to_action_open_positions: 查看未平仓头寸
   aria_label_call_to_action_afe: 了解有关亚马逊未来工程师的更多信息
   aria_label_call_to_action_teaching_csf: 启动 “计算机科学基础知识教学” 专业学习计划
   aria_label_call_to_action_teaching_csd: 启动 “计算机科学发现” 教学专业学习计划
@@ -8833,6 +8835,49 @@ cn:
   accessibility_card_text_9: 专为智力障碍学生设计的交互式编程机器人球和STEM教育套件。需要与相应的应用程序配对。
   accessibility_card_title_10: 'Quorum '
   accessibility_card_text_10: 使用Quorum对Code.org的AP计算机科学原理课程进行的改编。Quorum是一种基于证据的语言，最初旨在为盲人或视障学生提供无障碍环境。
+  engineering_hero_heading: 加入我们的工程团队！
+  engineering_hero_desc: 随着我们工程团队的不断扩大，我们想在 Code.org 上更多地分享我们的工程组织以及在这里工作的一些独特方面。如果你有兴趣申请我们的某个职位，我们很乐意听取你的意见！
+  engineering_team_title: 在 Code.org 上认识工程团队
+  engineering_team_card_text_1: 这是（大多数）我们（大多数）在 2023 年夏天举行的面对面聚会！这群人分为我们的工程团队中的四个分组，他们共同努力，为我们所有的学生和教师搭建平台并为其提供服务。
+  engineering_team_card_text_2: 如果你有兴趣申请我们的某个职位，我们很乐意听取你的意见！您可以在我们的招聘页面上找到空缺职位列表。
+  engineering_our_team_title: 我们的工程团队
+  engineering_our_team_desc: Code.org 的工程团队分为四个子团队，负责构建和支持我们平台的不同领域：
+  engineering_our_team_sub_title_1: 学生学习小组
+  engineering_our_team_text_1: 我们的学生学习团队拥有学生每天使用的所有活动（我们称之为实验室）。这个团队主要研究前端技术（我们使用
+    React 和很多自定义 JS），我们与许多合作伙伴和开源项目有着良好的工作关系。例如，我们在所有基于区块的编程中都使用 [谷歌的 Blockly] (%{youtube_url})。我们支持学生从幼儿园到十二年级的学习之旅。
+  engineering_our_team_sub_title_2: 教师体验小组
+  engineering_our_team_text_2: 我们的教师体验团队开发了吸引新教师加入Code.org的工具（我们称之为收购产品），并开发了一个平台，使我们现有的教师能够教授我们的课程（我们的教师工具）。与我们的学生工具一样，我们依靠
+    React 来构建我们的前端，我们的服务器端组件是使用 Ruby on Rails 提供的。
+  engineering_our_team_sub_title_3: 平台团队
+  engineering_our_team_text_3: 我们的平台团队拥有满足学生和教师团队需求的核心组件（例如身份验证和用户个人资料），其使命是覆盖我们还无法联系到的学生。这包括构建集成，将我们与使用不同学习管理系统
+    (LMS) 的学校联系起来，并打包我们的课程，以便在无法访问可靠互联网的偏远学校中使用。
+  engineering_our_team_sub_title_4: 基础设施小组
+  engineering_our_team_text_4: 我们的基础设施团队为支持我们的学生和教师的平台提供了支柱。这包括我们的托管基础设施和相关服务（我们使用
+    AWS）、数据管理、安全计划、开发人员和部署服务等等。该团队还拥有我们的扩展和配置系统，这在 “编程一小时” 中至关重要，我们邀请世界上每位学生与我们一起完成一个小时的编程。
+  engineering_faq_question_1: Code.org 是做什么的？
+  engineering_faq_answer_1_a: Code.org是一家教育创新非营利组织，其愿景是每所学校的每个学生都有机会学习计算机科学，这是其K-12核心教育的一部分。
+  engineering_faq_answer_1_b: 我们扩大学校对计算机科学的普及，重点是提高年轻女性和来自其他代表性不足群体的学生的参与度。作为美国最大的学区K-12计算机科学课程的领先提供商，Code.org还组织了一年一度的编程一小时活动，该活动吸引了全球超过15％的学生。
+  engineering_faq_answer_1_c: Code.org得到了包括微软、亚马逊、谷歌等在内的慷慨捐助者的支持。
+  engineering_faq_question_2: Code.org 的开发者体验和工具是什么？
+  engineering_faq_answer_2: 我们的开发者体验可能与您在过去的职位中看到的有所不同。与我们的产品团队密切合作，我们每个工作日都投入生产，节奏各不相同
+    —— 有时候你在编写当天上线的代码；其他时候你在做长期项目 —— 虽然我们确实遵循每两周一次的冲刺，但我们以轻量级的方式这样做。我们倾向于以正确的方式完成正确的事情，而不是对任何特定的方法采取纯粹主义的看法。[我们所有的代码]
+    (%{code_url}) 都是开源的，我们使用 JIRA 和 GitHub 拉取请求来跟踪所有工作项目。我们还非常关心质量和测试，很幸运能得到 [SauceLabs]（%{saucelabs_url}）的大力支持，他们帮助我们在云设备群中的各种学生设备（例如iPad）上运行我们的用户界面测试套件。
+  engineering_faq_question_3: Code.org 的待命工程师轮换是多少？
+  engineering_faq_answer_3: 我们的 30 多名工程团队分担待命责任。每位工程师轮班 24 小时，并使用我们的升级路径和行动手册来应对现场中断或其他现场问题。我们为我们网站的可靠性感到自豪——平均而言，每位工程师每年只因通常可以快速解决的问题而被叫醒一次。取而代之的是，“每日开发人员”
+    通常在工作日中花一部分时间来管理生产部署，并对不太紧急的问题进行分类。
+  engineering_faq_question_4: 你是一个适合远程办公/WFH 的组织吗？
+  engineering_faq_answer_4_a: 是的！2019年，在疫情爆发前不久，Code.org成为一个远程优先组织。如今，我们在美国每个时区都有工程师，并相应地调整了工作时间。我们的大多数会议都是在太平洋时间上午10点至下午3点之间举行的。
+  engineering_faq_answer_4_b: 我们还认识到面对面时间的价值，每个季度我们都会面对面聚会，通常是在西雅图。其中两场活动（我们称之为启动周和
+    “Codechella”）将组织中的所有人聚集在1月和6月，工程和产品团队分别在4月和10月举行会议。
+  engineering_faq_answer_4_c: 我们坚信与学生和老师共度时光，因此许多面对面的活动都包括前往学校和教室收集反馈或试玩我们的产品
+  engineering_faq_question_5: 是什么让 Code.org 的工程团队与众不同？
+  engineering_faq_answer_5_a: 除了解决具有挑战性的技术问题外，我们还有一些因素可以使我们的工程组织与您可能从事的其他组织有所不同：
+  engineering_faq_answer_5_b_1: 我们都对我们的使命充满热情。
+  engineering_faq_answer_5_b_2: 我们每个人都在这里支持这一使命，即扩大全球每个学生获得计算机科学的机会。关于推动我们实现这一使命的原因，我们都有自己独特的故事和视角。
+  engineering_faq_answer_5_c_1: 我们非常关心彼此。
+  engineering_faq_answer_5_c_2: 当工程师为问题而苦苦挣扎时，我们会介入并提供帮助。我们的原则之一是，我们对问题持严谨态度，但要善待彼此。我们定期晋升工程师，但我们不会仅仅为了支持某人的晋升道路而开出过度设计的解决方案。相反，我们投资于拥有充足的专业发展预算并有机会获得其他学习机会的工程师。
+  engineering_faq_answer_5_d_1: 我们努力工作，但我们设定了明确的界限。
+  engineering_faq_answer_5_d_2: 在我们为世界各地的学生提供支持的同时，我们也要求自己对工作和家庭生活之间的明确界限负责。我们享受星期三不开会，包括我们的PTO（总共5周，其中包括年底全组织关闭2周的办公室，又名寒假），夏季的星期五（也就是夏季星期五）半个工作日，以及其他丰厚的福利。
   language_code:
     ar: 阿拉伯语
     az: 阿塞拜疆人

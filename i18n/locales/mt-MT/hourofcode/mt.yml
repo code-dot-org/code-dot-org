@@ -257,6 +257,8 @@ mt:
   call_to_action_learn_about_approach: Tgħallem aktar dwar l-approċċ tagħna
   call_to_action_try_java_lab: Ipprova Java Lab
   call_to_action_notify_available: Jinnotifikaw me meta disponibbli
+  call_to_action_register_early_access: Reġistru għal aċċess bikri
+  call_to_action_open_positions: Ara l-pożizzjonijiet miftuħa
   aria_label_call_to_action_afe: Tgħallem aktar dwar Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Ibda l-programm ta 'tagħlim professjonali
     tal-Fundamentali tax-Xjenza tal-Kompjuter tat-Tagħlim
@@ -13495,6 +13497,125 @@ mt:
   accessibility_card_text_10: Adattament tal-kurrikulu AP tal-Prinċipji tax-Xjenza
     tal-Kompjuter Code.org bl-użu ta 'Quorum, lingwa bbażata fuq l-evidenza oriġinarjament
     iddisinjata biex tipprovdi aċċessibilità għal studenti għomja jew neqsin mid-dawl.
+  engineering_hero_heading: Ingħaqad mat-tim tal-inġinerija tagħna!
+  engineering_hero_desc: Hekk kif inkomplu nespandu t-tim tal-inġinerija tagħna, ridna
+    naqsmu aktar dwar l-organizzazzjoni tal-inġinerija tagħna fuq Code.org u wħud
+    mill-aspetti uniċi tax-xogħol hawn. Jekk inti interessat li tapplika għal wieħed
+    mir-rwoli tagħna, aħna nħobbu nisimgħu mingħandek!
+  engineering_team_title: Iltaqa 'mat-tim tal-inġinerija fuq Code.org
+  engineering_team_card_text_1: Dan huwa (ħafna mill) magħna fil-persuna tagħna jiltaqgħu
+    flimkien matul is-sajf ta '2023! Din il-folla hija maqsuma f'erba 'sub-timijiet
+    fi ħdan it-tim tal-inġinerija tagħna li jaħdmu flimkien biex jibnu u jservu l-pjattaforma
+    għall-istudenti u l-għalliema kollha tagħna.
+  engineering_team_card_text_2: Jekk inti interessat li tapplika għal wieħed mir-rwoli
+    tagħna, aħna nħobbu nisimgħu mingħandek! Tista 'ssib lista ta' pożizzjonijiet
+    miftuħa fuq tagħna Karrieri paġna.
+  engineering_our_team_title: It-tim tal-inġinerija tagħna
+  engineering_our_team_desc: 'It-tim tal-inġinerija f''Code.org huwa maqsum f''erba
+    ''sub-timijiet li jibnu u jappoġġjaw oqsma differenti tal-pjattaforma tagħna:'
+  engineering_our_team_sub_title_1: Tim tat-Tagħlim tal-Istudenti
+  engineering_our_team_text_1: Tagħna Student Tagħlim Tim tippossjedi attivitajiet
+    kollha tagħna (aħna jsejħulhom laboratorji) li l-istudenti tagħna jużaw kull jum.
+    Dan it-tim jaħdem l-aktar fuq teknoloġija front-end (nużaw React u ħafna JS tad-dwana)
+    u għandna relazzjoni ta 'ħidma kbira ma' bosta msieħba u proġetti ta 'sors miftuħ.
+    Pereżempju, nużaw [Blockly tal-Google] (%{youtube_url}) għall-ipprogrammar kollu
+    tagħna bbażat fuq il-blokka. Aħna nappoġġjaw lill-istudenti fil-vjaġġ ta 'tagħlim
+    tagħhom fit-triq kollha mill-Kindergarten sat-12-il grad.
+  engineering_our_team_sub_title_2: Tim tal-Esperjenza tal-Għalliema
+  engineering_our_team_text_2: It-Tim tal-Esperjenza tal-Għalliema tagħna jibni l-għodod
+    li jattiraw għalliema ġodda lejn Code.org (aħna nsejħu dawn il-prodotti ta 'akkwist)
+    u jiżviluppa l-pjattaforma li tagħti s-setgħa lill-għalliema eżistenti tagħna
+    biex jgħallmu l-kurrikulu tagħna (l-għodod tal-għalliema tagħna). Bħal fl-għodod
+    tal-istudenti tagħna, aħna niddependu fuq React biex nibnu l-front-end tagħna
+    u l-komponenti tan-naħa tas-server tagħna huma servuti bl-użu ta 'Ruby on Rails.
+  engineering_our_team_sub_title_3: Tim tal-Pjattaforma
+  engineering_our_team_text_3: It-Tim tal-Pjattaforma tagħna għandu komponenti ewlenin
+    li jaqdu l-ħtiġijiet tat-timijiet tal-istudenti u l-għalliema tagħna (pereżempju,
+    l-awtentikazzjoni u l-profil tal-utent) u għandu wkoll il-missjoni li jilħaq studenti
+    li għadna ma nistgħux nilħqu. Dan jinkludi integrazzjonijiet tal-bini li jgħaqqduna
+    ma 'skejjel li jużaw Sistemi ta' Ġestjoni tat-Tagħlim differenti (LMS) u l-ippakkjar
+    tal-kurrikulu tagħna sabiex ikun jista 'jintuża fi skejjel remoti li m'għandhomx
+    aċċess għal internet affidabbli.
+  engineering_our_team_sub_title_4: Tim tal-Infrastruttura
+  engineering_our_team_text_4: It-Tim tal-Infrastruttura tagħna jipprovdi s-sinsla
+    għall-pjattaforma li tappoġġja lill-istudenti u l-għalliema tagħna. Dan jinkludi
+    l-infrastruttura ta 'akkoljenza tagħna u s-servizzi relatati (nużaw AWS), ġestjoni
+    tad-dejta, programmi ta' sigurtà, żviluppaturi u servizzi ta 'skjerament u ħafna
+    aktar. Dan it-tim jippossjedi wkoll is-sistemi ta 'skalar u proviżjonament tagħna,
+    li huma kritiċi matul Hour of Code, fejn nistiednu lil kull student fid-dinja
+    biex itemm siegħa ta' kodifikazzjoni magħna.
+  engineering_faq_question_1: X'jagħmel Code.org?
+  engineering_faq_answer_1_a: Code.org huwa Nonprofit innovazzjoni edukazzjoni ddedikata
+    għall-viżjoni li kull student f'kull skola għandu l-opportunità li jitgħallmu
+    xjenza tal-kompjuter bħala parti mill-qalba tagħhom K-12 edukazzjoni.
+  engineering_faq_answer_1_b: Aħna nwessgħu l-aċċess għax-xjenza tal-kompjuter fl-iskejjel,
+    b'enfasi fuq iż-żieda fil-parteċipazzjoni minn nisa żgħażagħ u studenti minn gruppi
+    oħra sottorappreżentati. Il-fornitur ewlieni tal-kurrikulu tax-xjenza tal-kompjuter
+    K-12 fid-distretti skolastiċi akbar fl-Istati Uniti, Code.org torganizza wkoll
+    il-kampanja annwali Hour of Code, li involviet aktar minn 15% tal-istudenti kollha
+    fid-dinja.
+  engineering_faq_answer_1_c: Code.org huwa appoġġjat minn donaturi ġenerużi inklużi
+    Microsoft, Amazon, Google u ħafna oħrajn.
+  engineering_faq_question_2: X'inhi l-esperjenza u l-għodda tal-iżviluppatur ta 'Code.org?
+  engineering_faq_answer_2: L-esperjenza tal-iżviluppatur tagħna tista 'tkun differenti
+    minn dak li rajt fir-rwoli tal-passat tiegħek. Naħdmu mill-qrib mat-tim tal-prodott
+    tagħna, aħna nibgħatu għall-produzzjoni kull ġimgħa u għandna varjetà ta 'kadenzi
+    - xi kultant qed tikteb kodiċi li jmur ħaj dak il-jum; drabi oħra tkun fuq proġetti
+    aktar fit-tul - u filwaqt li aħna nsegwu sprints ta 'ġimagħtejn, nagħmlu dan b'mod
+    ħafif. Aħna indiċi lejn jkollna l-affarijiet dritt isir il-mod id-dritt vs tieħu
+    ħsieb purist ta 'kwalunkwe metodoloġija partikolari. [Il-kodiċi kollha tagħna]
+    (%{code_url}) huwa sors miftuħ u nużaw JIRA u GitHub talbiet biex jintraċċaw l-oġġetti
+    kollha tax-xogħol tagħna. Aħna wkoll kura ħafna dwar il-kwalità u l-ittestjar
+    u huma xorti li jkollhom appoġġ inkredibbli mill [SauceLabs](%{saucelabs_url}),
+    li tgħinna run suite tagħna ta 'testijiet UI fuq diversi apparati student (eż,
+    iPads) fir-razzett apparat sħaba tagħhom.
+  engineering_faq_question_3: X'inhu l-inġinier on-call rotazzjoni fuq Code.org?
+  engineering_faq_answer_3: It-tim tal-inġinerija 30+ tagħna jaqsam ir-responsabbiltajiet
+    on-call. Kull inġinier ikopri bidla ta '24 siegħa u juża l-mogħdijiet ta' eskalazzjoni
+    u l-playbooks tagħna biex jirrispondi għal qtugħ tas-sit jew kwistjonijiet oħra
+    ta 'live-site. Aħna kburin bl-affidabbiltà tas-sit tagħna - bħala medja, kull
+    inġinier huwa biss woken up darba fis-sena għal kwistjonijiet li huma tipikament
+    malajr biex isolvu. Minflok, l- “Iżviluppatur tal-Jum” normalment jonfoq porzjon
+    mill-ġurnata tax-xogħol tagħhom jimmaniġġja l-iskjerament tal-produzzjoni u jqanqal
+    kwistjonijiet inqas urġenti.
+  engineering_faq_question_4: Int organizzazzjoni li tiffavorixxi l-remota/WFH?
+  engineering_faq_answer_4_a: Iva! Fl-2019, ftit qabel il-pandemija, Code.org saret
+    organizzazzjoni remota-ewwel. Illum, għandna inġiniera f'kull żona ta 'ħin ta'
+    l-Istati Uniti u nakkomodaw il-ħinijiet tax-xogħol kif xieraq. Ħafna mill-laqgħat
+    tagħna jseħħu bejn il-ħinijiet tal-10am u t-3pm PT.
+  engineering_faq_answer_4_b: Aħna nirrikonoxxu wkoll il-valur tal-ħin in-person,
+    u kull kwart niltaqgħu flimkien personalment, tipikament f'Seattle. Tnejn minn
+    dawn l-avvenimenti (aħna nsejħulhom ġimgħa Kick-off u “Codechella”) iġibu lil
+    kulħadd fl-organizzazzjoni flimkien f'Jannar u f'Ġunju - u t-timijiet tal-inġinerija
+    u tal-prodott jiltaqgħu separatament f'April u f'Ottubru.
+  engineering_faq_answer_4_c: Aħna nemmnu bis-sħiħ fl-infiq tal-ħin mal-istudenti
+    u l-għalliema tagħna, u għalhekk ħafna minn dawn l-avvenimenti personalment jinkludu
+    vjaġġi fl-iskejjel u l-klassijiet biex jiġbru feedback jew jilgħabu jittestjaw
+    il-prodotti tagħna
+  engineering_faq_question_5: X'jagħmel it-tim tal-inġinerija fuq Code.org uniku?
+  engineering_faq_answer_5_a: 'Lil hinn mis-soluzzjoni ta ''problemi tekniċi ta''
+    sfida, għandna ftit affarijiet li jagħmlu l-org tal-inġinerija tagħna differenti
+    minn oħrajn li forsi ħdimt fihom:'
+  engineering_faq_answer_5_b_1: Aħna lkoll naqsmu l-passjoni tagħna għall-missjoni
+    tagħna.
+  engineering_faq_answer_5_b_2: Kull wieħed minna huwa hawn biex tappoġġja l-missjoni
+    biex jespandu l-aċċess għax-xjenza tal-kompjuter għal kull student madwar id-dinja.
+    Aħna lkoll għandna l-istorja u l-perspettiva unika tagħna dwar dak li jmexxina
+    lejn din il-missjoni.
+  engineering_faq_answer_5_c_1: Aħna kura profondament dwar xulxin.
+  engineering_faq_answer_5_c_2: Meta l-inġiniera qed jitħabtu ma 'kwistjoni, aħna
+    nidħlu u ngħinu. Wieħed mill-prinċipji tagħna huwa li aħna diffiċli fuq il-problemi,
+    iżda tip lil xulxin. Aħna nippromwovu inġiniera regolarment, imma ma nippreskrivux
+    soluzzjonijiet ta 'inġinerija żejda biss biex nappoġġjaw it-triq ta' promozzjoni
+    ta 'xi ħadd. Minflok, ninvestu fl-inġiniera tagħna b'baġit ġeneruż ta 'żvilupp
+    professjonali u aċċess għal opportunitajiet oħra ta' tagħlim.
+  engineering_faq_answer_5_d_1: Naħdmu iebes, imma waqqafna konfini ċari.
+  engineering_faq_answer_5_d_2: Filwaqt li nappoġġjaw lill-istudenti madwar id-dinja,
+    inżommu lilna nfusna responsabbli għal konfini ċari bejn ix-xogħol u l-ħajja tad-dar.
+    Aħna ngawdu l-ebda laqgħat l-Erbgħa, billi nieħdu l-PTO tagħna (5 ġimgħat totali,
+    li jinkludi għeluq tal-uffiċċju ta '2 ġimgħat kollha fl-aħħar tas-sena magħruf
+    ukoll bħala Winter Break), nofs ġurnata tax-xogħol nhar ta' Ġimgħa matul is-sajf
+    magħruf ukoll bħala Ġimgħa tas-Sajf, u benefiċċji ġenerużi oħra.
   language_code:
     ar: Għarbi
     az: Ażerbajġan

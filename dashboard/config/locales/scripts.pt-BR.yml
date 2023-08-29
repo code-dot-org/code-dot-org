@@ -249,26 +249,26 @@ pt:
             de base de dados do mundo real para treinar modelos de machine learning
             e para criar um aplicativo. \n\n**Objetivos:**\n\n-   Criar um modelos
             de machine learning no AI Lab para solucionar um problema, e usar o App
-            Lab para criar um aplicativo que use esses modelo.\n-   Entender como
-            os modelos de machine learning tomam decisões a partir dos dados.\n\n**Questões
+            Lab para criar um aplicativo que use esse modelo.\n-   Entender como os
+            modelos de machine learning tomam decisões a partir dos dados.\n\n**Questões
             Norteadoras:**\n\n-   Como o machine learning identifica padrões nos dados
-            para tomar decisões?\n-   Como podemos evitar o viés quando treinando
-            com um modelo de machine learning?\n\n:::\n\n::: details [**Capítulo 2
-            - Visão Geral**]\n**Descrição:** Este capítulo prepara os alunos para
-            serem cientistas de machine learning e criarem um aplicativo que solucione
-            um problema em suas comunidades. Os alunos acompanham um grupo fictício
-            de alunos enquanto definem um problema, formulam uma pesquisa para a coleta
-            de dados, analisam seus dados no AI Lab, criam um cartão modelo, e criam
-            um aplicativo para solucionar seu problema. Então, no projeto final, os
-            alunos repetem os mesmo passos com um problema em sua comunidade. \n\n**Objetivo:**\n\n-
-            \  Criar um modelo de machine learning no AI Lab a partir de seus próprios
-            dados e usar o App Lab para criar um aplicativo que utiliza de seu modelo
-            para solucionar problemas em suas comunidades.\n\n**Questão Norteadora:**\n\n-
-            \  Como o machine learning pode ser usado para resolver problemas em nossas
-            comunidades?\n\n:::\n\n::: details [**Orientação de Implementação para
-            a Unidade de IA e Machine Learning**]\n\n-   Orientações sobre como auxiliar
-            os alunos nos níveis de programação e como personalizar as atividades
-            estão disponíveis no [Guia dos Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)
+            para tomar decisões?\n-   Como podemos evitar o viés ao treinar um modelo
+            de machine learning?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:**
+            Este capítulo prepara os alunos para serem cientistas de machine learning
+            e criarem um aplicativo que solucione um problema em suas comunidades.
+            Os alunos acompanham um grupo fictício de alunos enquanto definem um problema,
+            formulam uma pesquisa para a coleta de dados, analisam seus dados no AI
+            Lab, criam um cartão modelo, e criam um aplicativo para solucionar seu
+            problema. Então, no projeto final, os alunos repetem os mesmo passos com
+            um problema em sua comunidade. \n\n**Objetivo:**\n\n-   Criar um modelo
+            de machine learning no AI Lab a partir de seus próprios dados e usar o
+            App Lab para criar um aplicativo que utiliza de seu modelo para solucionar
+            problemas em suas comunidades.\n\n**Questão Norteadora:**\n\n-   Como
+            o machine learning pode ser usado para resolver problemas em nossas comunidades?\n\n:::\n\n:::
+            details [**Orientação de Implementação para a Unidade de IA e Machine
+            Learning**]\n\n-   Orientações sobre como auxiliar os alunos nos níveis
+            de programação e como personalizar as atividades estão disponíveis no
+            [Guia dos Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)
             e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n-
             \  Você pode conferir o [Guia de implementação] completo [2] para mais
             informações sobre esta unidade.\n    :::\n\n::: details [**Desenvolvimento
@@ -2553,14 +2553,14 @@ pt:
             **Objetivos:**
 
             -   Criar uma animação interativa que inclua conceitos básicos da programação como estruturas de controles, variáveis, inputs do usuário e randomização.
-            -   Dar e responder construtivamente aos feebacks dos colegas e trabalhar junto deles para concluirem um projeto.
-            -   Ver a si prórpio como um progamador, e ver a programação como uma forma divertida e criativa de expressão.
+            -   Dar e responder construtivamente aos feedbacks dos colegas e trabalhar junto deles para concluírem um projeto.
+            -   Ver a si próprio como um programador, e ver a programação como uma forma divertida e criativa de expressão.
 
             **Questões Norteadoras:**
 
             -   O que é um programa de computador?
             -   Quais são os principais recursos da maioria das linguagens de programação?
-            -   Como a programação estimula a creatividade e a expressão individual?
+            -   Como a programação estimula a criatividade e a expressão individual?
             -   Quais práticas e estratégias irão me auxiliar na criação de programas?
                 :::
 
@@ -2570,7 +2570,7 @@ pt:
             **Objetivos:**
 
             -   Criar um jogo interativo que inclua conceitos básicos da programação como estruturas de controles, variáveis, inputs do usuário e randomização.
-            -   Dar e responder construtivamente aos feebacks dos colegas e trabalhar junto deles para concluirem um projeto.
+            -   Dar e responder construtivamente aos feedbacks dos colegas e trabalhar junto deles para concluírem um projeto.
             -   Trabalhar com outras pessoas para compartilharem projetos de programação usando sprites e funções.
 
             **Questões Norteadoras:**
@@ -2863,7 +2863,7 @@ pt:
             \n\n-   Ver o processo de design como uma forma de resolução de problemas
             que prioriza as necessidades de um usuário. \n-   Identificar as necessidades
             do usuário e avaliar o quão bem os diferentes designs as atendem. \n-
-            \  Desenvolva protótipos em papel, absorver e responder aos feedbacks
+            \  Desenvolver protótipos em papel, absorver e responder aos feedbacks
             sobre um protótipo e considerar como diferentes interfaces de usuário
             afetam ou não a usabilidade de seus aplicativos. \n\n**Questões Norteadoras:**\n\n-
             \  Como os designers identificam as necessidades de seus usuários?\n-
@@ -3539,7 +3539,7 @@ pt:
             um dispositivo, similar a muitos hardwares \"inteligentes\" com quais
             possuem contato no dia a dia.\n\n**Objetivos:**\n\n-   Projetar e construir
             um dispositivo de computação físico que integre as entradas e saídas físicas
-            com aplicativos digitais.\n-   Criar um protótipo de aplicativo que use
+            com aplicativos digitais.\n-   Criar protótipos de aplicativos que usem
             um dispositivo físico para controlar um aplicativo digital.\n\n**Questões
             Norteadoras:**\n\n-   Quais entradas e saídas estão disponíveis em um
             dispositivo físico?\n-   Quais entradas e saídas estão disponíveis em
@@ -3690,26 +3690,26 @@ pt:
             de base de dados do mundo real para treinar modelos de machine learning
             e para criar um aplicativo. \n\n**Objetivos:**\n\n-   Criar um modelos
             de machine learning no AI Lab para solucionar um problema, e usar o App
-            Lab para criar um aplicativo que use esses modelo.\n-   Entender como
-            os modelos de machine learning tomam decisões a partir dos dados.\n\n**Questões
+            Lab para criar um aplicativo que use esse modelo.\n-   Entender como os
+            modelos de machine learning tomam decisões a partir dos dados.\n\n**Questões
             Norteadoras:**\n\n-   Como o machine learning identifica padrões nos dados
-            para tomar decisões?\n-   Como podemos evitar o viés quando treinando
-            com um modelo de machine learning?\n\n:::\n\n::: details [**Capítulo 2
-            - Visão Geral**]\n**Descrição:** Este capítulo prepara os alunos para
-            serem cientistas de machine learning e criarem um aplicativo que solucione
-            um problema em suas comunidades. Os alunos acompanham um grupo fictício
-            de alunos enquanto definem um problema, formulam uma pesquisa para a coleta
-            de dados, analisam seus dados no AI Lab, criam um cartão modelo, e criam
-            um aplicativo para solucionar seu problema. Então, no projeto final, os
-            alunos repetem os mesmo passos com um problema em sua comunidade. \n\n**Objetivo:**\n\n-
-            \  Criar um modelo de machine learning no AI Lab a partir de seus próprios
-            dados e usar o App Lab para criar um aplicativo que utiliza de seu modelo
-            para solucionar problemas em suas comunidades.\n\n**Questão Norteadora:**\n\n-
-            \  Como o machine learning pode ser usado para resolver problemas em nossas
-            comunidades?\n\n:::\n\n::: details [**Orientação de Implementação para
-            a Unidade de IA e Machine Learning**]\n\n-   Orientações sobre como auxiliar
-            os alunos nos níveis de programação e como personalizar as atividades
-            estão disponíveis no [Guia dos Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)
+            para tomar decisões?\n-   Como podemos evitar o viés ao treinar um modelo
+            de machine learning?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:**
+            Este capítulo prepara os alunos para serem cientistas de machine learning
+            e criarem um aplicativo que solucione um problema em suas comunidades.
+            Os alunos acompanham um grupo fictício de alunos enquanto definem um problema,
+            formulam uma pesquisa para a coleta de dados, analisam seus dados no AI
+            Lab, criam um cartão modelo, e criam um aplicativo para solucionar seu
+            problema. Então, no projeto final, os alunos repetem os mesmo passos com
+            um problema em sua comunidade. \n\n**Objetivo:**\n\n-   Criar um modelo
+            de machine learning no AI Lab a partir de seus próprios dados e usar o
+            App Lab para criar um aplicativo que utiliza de seu modelo para solucionar
+            problemas em suas comunidades.\n\n**Questão Norteadora:**\n\n-   Como
+            o machine learning pode ser usado para resolver problemas em nossas comunidades?\n\n:::\n\n:::
+            details [**Orientação de Implementação para a Unidade de IA e Machine
+            Learning**]\n\n-   Orientações sobre como auxiliar os alunos nos níveis
+            de programação e como personalizar as atividades estão disponíveis no
+            [Guia dos Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)
             e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n-
             \  Você pode conferir o [Guia de implementação] completo [2] para mais
             informações sobre esta unidade.\n    :::\n\n::: details [**Desenvolvimento
@@ -5657,7 +5657,7 @@ pt:
             \n\n-   Ver o processo de design como uma forma de resolução de problemas
             que prioriza as necessidades de um usuário. \n-   Identificar as necessidades
             do usuário e avaliar o quão bem os diferentes designs as atendem. \n-
-            \  Desenvolva protótipos em papel, absorver e responder aos feedbacks
+            \  Desenvolver protótipos em papel, absorver e responder aos feedbacks
             sobre um protótipo e considerar como diferentes interfaces de usuário
             afetam ou não a usabilidade de seus aplicativos. \n\n**Questões Norteadoras:**\n\n-
             \  Como os designers identificam as necessidades de seus usuários?\n-
@@ -5719,39 +5719,38 @@ pt:
             \n\n⚠️ Esta unidade utiliza o **Circuito Playground** para introduzir
             a computação física a metalidade de criador. Você também pode lecionar
             este conteúdo usando dispositivos **micro:bit** atribuindo a [(Opção B)
-            unidade Criando Aplicativos com Dispositivos](/s/microbit-2023). As duas
-            unidades ensinam o mesmo conteúdo e portanto são equivalentes - você não
-            precisa comprar os dois conjuntos de dispositivos para lecionar ambas
-            as unidades.\n\n::: details [**Capítulo 1 - Visão Geral*]\n**Descrição:**
-            A unidade enfatiza as interações entre as entradas e as saídas do circuito
-            playground e uma tela de aplicativo. No circuito playground, os alunos
-            aprendem a controlar entradas como botões ou interruptores e saídas como
-            uma campainha ou LED. Os alunos também interagem com entradas e saídas
-            no App lab, como botões e entradas de texto e menus suspensos. No fim
-            do capítulo, os alunos serão capazes de criar um aplicativo que controla
-            um dispositivo, similar a muitos hardwares \"inteligentes\" com quais
-            possuem contato no dia a dia.\n\n**Objetivos:**\n\n-   Projetar e construir
-            um dispositivo de computação físico que integre as entradas e saídas físicas
-            com aplicativos digitais.\n-   Criar um protótipo de aplicativo que use
-            um dispositivo físico para controlar um aplicativo digital.\n\n**Questões
-            Norteadoras:**\n\n-   Quais entradas e saídas estão disponíveis em um
-            dispositivo físico?\n-   Quais entradas e saídas estão disponíveis em
-            um aplicativo?\n-   Como podemos criar aplicativos que usem um dispositivo
-            físico para controlar um aplicativo digital?\n\n:::\n\n::: details [**Capítulo
-            2 - Visão Geral**]\n**Descrição:** Neste capítulo, os alunos focam em
-            como seus dispositivos físicos podem interagir com o mundo exterior. Eles
-            aprendem a como usarem sensores e o acelerômetro para reagir ao ambiente
-            físico. Eles aprendem a conectar LEDs e botões os quais ampliam os tipos
-            de dispositivos que eles podem criar. Ao longo da unidade, os alunos usam
-            materiais físicos como papel ou papelão para ampliar as funcionalidades
-            de seus dispositivos. No final da unidade, os alunos terão criado um projeto
-            de arte interativo e desenvolvido um protótipo de um dispositivo físico
-            que solucione um problema.\n\n**Objetivos:**\n\n-   Projetar e criar um
-            dispositivo de computação físico que integre sensores com aplicativos
-            digitais.\n-   Usar a computação física para solucionar um problema de
-            maneira divertida e inovadora.\n\n**Questões Norteadoras:**\n\n-   Como
-            um dispositivo físico pode utilizar sensores para reagir a um ambiente
-            físico?\n-   Como um hardware simples  pode ser usado para desenvolver
+            unidade Criando Aplicativos com Dispositivos](/s/microbit). As duas unidades
+            ensinam o mesmo conteúdo e portanto são equivalentes - você não precisa
+            comprar os dois conjuntos de dispositivos para lecionar ambas as unidades.\n\n:::
+            details [**Capítulo 1 - Visão Geral*]\n**Descrição:** A unidade enfatiza
+            as interações entre as entradas e as saídas do circuito playground e uma
+            tela de aplicativo. No circuito playground, os alunos aprendem a controlar
+            entradas como botões ou interruptores e saídas como uma campainha ou LED.
+            Os alunos também interagem com entradas e saídas no App lab, como botões
+            e entradas de texto e menus suspensos. No fim do capítulo, os alunos serão
+            capazes de criar um aplicativo que controla um dispositivo, similar a
+            muitos hardwares \"inteligentes\" com quais possuem contato no dia a dia.\n\n**Objetivos:**\n\n-
+            \  Projetar e construir um dispositivo de computação físico que integre
+            as entradas e saídas físicas com aplicativos digitais.\n-   Criar um protótipo
+            de aplicativo que use um dispositivo físico para controlar um aplicativo
+            digital.\n\n**Questões Norteadoras:**\n\n-   Quais entradas e saídas estão
+            disponíveis em um dispositivo físico?\n-   Quais entradas e saídas estão
+            disponíveis em um aplicativo?\n-   Como podemos criar aplicativos que
+            usem um dispositivo físico para controlar um aplicativo digital?\n\n:::\n\n:::
+            details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Neste capítulo,
+            os alunos focam em como seus dispositivos físicos podem interagir com
+            o mundo exterior. Eles aprendem a como usarem sensores e o acelerômetro
+            para reagir ao ambiente físico. Eles aprendem a conectar LEDs e botões
+            os quais ampliam os tipos de dispositivos que eles podem criar. Ao longo
+            da unidade, os alunos usam materiais físicos como papel ou papelão para
+            ampliar as funcionalidades de seus dispositivos. No final da unidade,
+            os alunos terão criado um projeto de arte interativo e desenvolvido um
+            protótipo de um dispositivo físico que solucione um problema.\n\n**Objetivos:**\n\n-
+            \  Projetar e criar um dispositivo de computação físico que integre sensores
+            com aplicativos digitais.\n-   Usar a computação física para solucionar
+            um problema de maneira divertida e inovadora.\n\n**Questões Norteadoras:**\n\n-
+            \  Como um dispositivo físico pode utilizar sensores para reagir a um
+            ambiente físico?\n-   Como um hardware simples  pode ser usado para desenvolver
             novos produtos inovadores?\n    :::\n\n::: details [**Orientação de Implementação
             para Criação de Aplicativos com Dispositivos**]\n\n-   Esta unidade requer
             que os alunos tenham acesso ao Circuito Playground - [clique aqui](https://code.org/maker/circuitplayground)
@@ -6237,14 +6236,14 @@ pt:
             **Objetivos:**
 
             -   Criar uma animação interativa que inclua conceitos básicos da programação como estruturas de controles, variáveis, inputs do usuário e randomização.
-            -   Dar e responder construtivamente aos feebacks dos colegas e trabalhar junto deles para concluirem um projeto.
-            -   Ver a si prórpio como um progamador, e ver a programação como uma forma divertida e criativa de expressão.
+            -   Dar e responder construtivamente aos feedbacks dos colegas e trabalhar junto deles para concluírem um projeto.
+            -   Ver a si próprio como um programador, e ver a programação como uma forma divertida e criativa de expressão.
 
             **Questões Norteadoras:**
 
             -   O que é um programa de computador?
             -   Quais são os principais recursos da maioria das linguagens de programação?
-            -   Como a programação estimula a creatividade e a expressão individual?
+            -   Como a programação estimula a criatividade e a expressão individual?
             -   Quais práticas e estratégias irão me auxiliar na criação de programas?
                 :::
 
@@ -6254,7 +6253,7 @@ pt:
             **Objetivos:**
 
             -   Criar um jogo interativo que inclua conceitos básicos da programação como estruturas de controles, variáveis, inputs do usuário e randomização.
-            -   Dar e responder construtivamente aos feebacks dos colegas e trabalhar junto deles para concluirem um projeto.
+            -   Dar e responder construtivamente aos feedbacks dos colegas e trabalhar junto deles para concluírem um projeto.
             -   Trabalhar com outras pessoas para compartilharem projetos de programação usando sprites e funções.
 
             **Questões Norteadoras:**
@@ -6310,7 +6309,7 @@ pt:
             um dispositivo, similar a muitos hardwares \"inteligentes\" com quais
             possuem contato no dia a dia.\n\n**Objetivos:**\n\n-   Projetar e construir
             um dispositivo de computação físico que integre as entradas e saídas físicas
-            com aplicativos digitais.\n-   Criar um protótipo de aplicativo que use
+            com aplicativos digitais.\n-   Criar protótipos de aplicativos que usem
             um dispositivo físico para controlar um aplicativo digital.\n\n**Questões
             Norteadoras:**\n\n-   Quais entradas e saídas estão disponíveis em um
             dispositivo físico?\n-   Quais entradas e saídas estão disponíveis em
@@ -6492,14 +6491,14 @@ pt:
             **Objetivos:**
 
             -   Criar uma animação interativa que inclua conceitos básicos da programação como estruturas de controles, variáveis, inputs do usuário e randomização.
-            -   Dar e responder construtivamente aos feebacks dos colegas e trabalhar junto deles para concluirem um projeto.
-            -   Ver a si prórpio como um progamador, e ver a programação como uma forma divertida e criativa de expressão.
+            -   Dar e responder construtivamente aos feedbacks dos colegas e trabalhar junto deles para concluírem um projeto.
+            -   Ver a si próprio como um programador, e ver a programação como uma forma divertida e criativa de expressão.
 
             **Questões Norteadoras:**
 
             -   O que é um programa de computador?
             -   Quais são os principais recursos da maioria das linguagens de programação?
-            -   Como a programação estimula a creatividade e a expressão individual?
+            -   Como a programação estimula a criatividade e a expressão individual?
             -   Quais práticas e estratégias irão me auxiliar na criação de programas?
                 :::
 
@@ -6509,7 +6508,7 @@ pt:
             **Objetivos:**
 
             -   Criar um jogo interativo que inclua conceitos básicos da programação como estruturas de controles, variáveis, inputs do usuário e randomização.
-            -   Dar e responder construtivamente aos feebacks dos colegas e trabalhar junto deles para concluirem um projeto.
+            -   Dar e responder construtivamente aos feedbacks dos colegas e trabalhar junto deles para concluírem um projeto.
             -   Trabalhar com outras pessoas para compartilharem projetos de programação usando sprites e funções.
 
             **Questões Norteadoras:**
@@ -6565,7 +6564,7 @@ pt:
             um dispositivo, similar a muitos hardwares \"inteligentes\" com quais
             possuem contato no dia a dia.\n\n**Objetivos:**\n\n-   Projetar e construir
             um dispositivo de computação físico que integre as entradas e saídas físicas
-            com aplicativos digitais.\n-   Criar um protótipo de aplicativo que use
+            com aplicativos digitais.\n-   Criar protótipos de aplicativos que usem
             um dispositivo físico para controlar um aplicativo digital.\n\n**Questões
             Norteadoras:**\n\n-   Quais entradas e saídas estão disponíveis em um
             dispositivo físico?\n-   Quais entradas e saídas estão disponíveis em
@@ -6827,26 +6826,26 @@ pt:
             de base de dados do mundo real para treinar modelos de machine learning
             e para criar um aplicativo. \n\n**Objetivos:**\n\n-   Criar um modelos
             de machine learning no AI Lab para solucionar um problema, e usar o App
-            Lab para criar um aplicativo que use esses modelo.\n-   Entender como
-            os modelos de machine learning tomam decisões a partir dos dados.\n\n**Questões
+            Lab para criar um aplicativo que use esse modelo.\n-   Entender como os
+            modelos de machine learning tomam decisões a partir dos dados.\n\n**Questões
             Norteadoras:**\n\n-   Como o machine learning identifica padrões nos dados
-            para tomar decisões?\n-   Como podemos evitar o viés quando treinando
-            com um modelo de machine learning?\n\n:::\n\n::: details [**Capítulo 2
-            - Visão Geral**]\n**Descrição:** Este capítulo prepara os alunos para
-            serem cientistas de machine learning e criarem um aplicativo que solucione
-            um problema em suas comunidades. Os alunos acompanham um grupo fictício
-            de alunos enquanto definem um problema, formulam uma pesquisa para a coleta
-            de dados, analisam seus dados no AI Lab, criam um cartão modelo, e criam
-            um aplicativo para solucionar seu problema. Então, no projeto final, os
-            alunos repetem os mesmo passos com um problema em sua comunidade. \n\n**Objetivo:**\n\n-
-            \  Criar um modelo de machine learning no AI Lab a partir de seus próprios
-            dados e usar o App Lab para criar um aplicativo que utiliza de seu modelo
-            para solucionar problemas em suas comunidades.\n\n**Questão Norteadora:**\n\n-
-            \  Como o machine learning pode ser usado para resolver problemas em nossas
-            comunidades?\n\n:::\n\n::: details [**Orientação de Implementação para
-            a Unidade de IA e Machine Learning**]\n\n-   Orientações sobre como auxiliar
-            os alunos nos níveis de programação e como personalizar as atividades
-            estão disponíveis no [Guia dos Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)
+            para tomar decisões?\n-   Como podemos evitar o viés ao treinar um modelo
+            de machine learning?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:**
+            Este capítulo prepara os alunos para serem cientistas de machine learning
+            e criarem um aplicativo que solucione um problema em suas comunidades.
+            Os alunos acompanham um grupo fictício de alunos enquanto definem um problema,
+            formulam uma pesquisa para a coleta de dados, analisam seus dados no AI
+            Lab, criam um cartão modelo, e criam um aplicativo para solucionar seu
+            problema. Então, no projeto final, os alunos repetem os mesmo passos com
+            um problema em sua comunidade. \n\n**Objetivo:**\n\n-   Criar um modelo
+            de machine learning no AI Lab a partir de seus próprios dados e usar o
+            App Lab para criar um aplicativo que utiliza de seu modelo para solucionar
+            problemas em suas comunidades.\n\n**Questão Norteadora:**\n\n-   Como
+            o machine learning pode ser usado para resolver problemas em nossas comunidades?\n\n:::\n\n:::
+            details [**Orientação de Implementação para a Unidade de IA e Machine
+            Learning**]\n\n-   Orientações sobre como auxiliar os alunos nos níveis
+            de programação e como personalizar as atividades estão disponíveis no
+            [Guia dos Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)
             e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n-
             \  Você pode conferir o [Guia de implementação] completo [2] para mais
             informações sobre esta unidade.\n    :::\n\n::: details [**Desenvolvimento
@@ -6885,7 +6884,7 @@ pt:
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
         focus-on-design-with-purpose2-2023:
           description: |-
-            Na Desenvolvimento Web, os alunos têm o poder de criar e compartilhar conteúdo em suas próprias páginas da web. Eles começam pensando sobre o papel da internt e como ela pode ser usada como meio de expressão criativa. À medida que os alunos desenvolvem suas páginas e começam a se ver como programadores, eles são incentivados a pensar criticamente sobre o impacto do compartilhamento de informações on-line e sobre como ser consumidores mais críticos de conteúdo. Eles também são introduzidos à resolução de problemas no que se refere à programação, enquanto aprendem habilidades valiosas, como depuração, uso de recursos e trabalho em equipe. No final da unidade, os alunos terão criado um site pessoal que poderão publicar e compartilhar.
+            Na Desenvolvimento Web, os alunos têm o poder de criar e compartilhar conteúdo em suas próprias páginas da web. Eles começam pensando sobre o papel da internet e como ela pode ser usada como meio de expressão criativa. À medida que os alunos desenvolvem suas páginas e começam a se ver como programadores, eles são incentivados a pensar criticamente sobre o impacto do compartilhamento de informações on-line e sobre como ser consumidores mais críticos de conteúdo. Eles também são introduzidos à resolução de problemas no que se refere à programação, enquanto aprendem habilidades valiosas, como depuração, uso de recursos e trabalho em equipe. No final da unidade, os alunos terão criado um site pessoal que poderão publicar e compartilhar.
 
             ::: details [**Capítulo 1 - Visão Geral**]
             \*\*Descrição: \*\* Os alunos usam a computação como uma forma de autoexpressão à medida que projetam e desenvolvem páginas da web básicas. Com foco nas tags, palavras-chave e sintaxe usadas para comunicar instruções ao computador, os alunos usam HTML para estruturar o conteúdo de uma página da web. Eles também exploram as implicações de privacidade e de propriedade intelectual da publicação de seus trabalhos on-line.
@@ -6902,7 +6901,7 @@ pt:
             -   Por que as pessoas criam sites?
             -   Como o texto pode comunicar conteúdo, estrutura e estilo em uma página da web?
             -   Como faço para usar de forma segura e adequada o conteúdo publicado na Internet?
-            -   Quais estratégias posso usar ao programar para encontrar e corrigir problemas?
+            -   Quais estratégias posso usar ao codificar para encontrar e corrigir problemas?
                 :::
 
             ::: details [**Capítulo 2 - Visão Geral**]
@@ -6959,7 +6958,7 @@ pt:
             \n\n-   Ver o processo de design como uma forma de resolução de problemas
             que prioriza as necessidades de um usuário. \n-   Identificar as necessidades
             do usuário e avaliar o quão bem os diferentes designs as atendem. \n-
-            \  Desenvolva protótipos em papel, absorver e responder aos feedbacks
+            \  Desenvolver protótipos em papel, absorver e responder aos feedbacks
             sobre um protótipo e considerar como diferentes interfaces de usuário
             afetam ou não a usabilidade de seus aplicativos. \n\n**Questões Norteadoras:**\n\n-
             \  Como os designers identificam as necessidades de seus usuários?\n-
@@ -7028,7 +7027,7 @@ pt:
             um dispositivo, similar a muitos hardwares \"inteligentes\" com quais
             possuem contato no dia a dia.\n\n**Objetivos:**\n\n-   Projetar e construir
             um dispositivo de computação físico que integre as entradas e saídas físicas
-            com aplicativos digitais.\n-   Criar um protótipo de aplicativo que use
+            com aplicativos digitais.\n-   Criar protótipos de aplicativos que usem
             um dispositivo físico para controlar um aplicativo digital.\n\n**Questões
             Norteadoras:**\n\n-   Quais entradas e saídas estão disponíveis em um
             dispositivo físico?\n-   Quais entradas e saídas estão disponíveis em
@@ -7143,9 +7142,9 @@ pt:
           description: "Resolução de Problemas e Computação é uma introdução altamente
             interativa e colaborativa ao campo da ciência da computação, pensada dentro
             de um escopo mais amplo da resolução de problemas. Você praticará o uso
-            do processo de resolução de problemas para abordar uma séries de quebra-cabeças,
+            do processo de resolução de problemas para abordar uma série de quebra-cabeças,
             desafios e cenários do mundo real. A seguir, você aprenderá como os computadores
-            captam, enviam, amazenam e processam informações para ajudar nós humanos
+            captam, enviam, armazenam e processam informações para ajudar nós humanos
             a resolver problemas. A unidade é concluída com um projeto na qual você
             desenvolve uma aplicação, visando solucionar um problema de sua escolha.\n\n:::
             details [**Capítulo 1 - Visão Geral**]\n**Descrição:** Este capítulo orienta
@@ -7156,7 +7155,7 @@ pt:
             desafios de engenharia e planejamento de uma viagem, os alunos apredem
             a indentificar diferentes classes de problemas, descontruir problemas
             maiores, e desenvolver usas próprias habilidades de resolução de problemas.\n\n**Objetivos:**\n\n-
-            \  Aprender a como usar o processo estruturado  de resolução de problemas
+            \  Aprender a como usar o processo estruturado de resolução de problemas
             e aplicá-lo para resolver diversos problemas .\n-   Criar um ambiente
             colaborativo na sala de aula onde os alunos possam ter a ciência da computação
             como relevante, divertida e empoderadora.\n\n**Questão Norteadora:** \n\n-
@@ -7168,14 +7167,14 @@ pt:
             em vez de meramente um conjunto de hardwares. Eles então exploram as maneiras
             com que os computadores abordam os problemas. Para seus projetos finais,
             os alunos propõem um aplicativo que pode ser utilizado para solucionar
-            um problema de sua escolha.\n\n\\*\\*Objetivos:\n\n-   Identificar as
-            características definidas de um computador e como usá-lo para solucionar
-            problemas informacionais\n-   Usar um processo estruturado de resolução
-            de problemas para projetar soluções que se utilizam da tecnologia da computação.\n-
+            um problema de sua escolha.\n\n\\*\\*Objetivos:\n\n-   Identificar determinadas
+            características de um computador e como usá-lo para solucionar problemas
+            informacionais\n-   Usar um processo estruturado de resolução de problemas
+            para projetar soluções que se utilizam da tecnologia da computação.\n-
             \  Criar um ambiente de colaboração na sala de aula onde os alunos têm
             a ciência da computação como relevante, divertida, e empoderadora.\n\n**Questões
             Norteadoras:** \n\n-   Como os computadores auxiliam as pessoas na resolução
-            de problemas?\n-   Como as pessoas e os computares destoam em suas abordagens
+            de problemas?\n-   Como as pessoas e os computadores destoam em suas abordagens
             na resolução de problemas?\n-   O que um computador precisa das pessoas
             para solucionar problemas efetivamente?\n    :::\n\n::: details [**Orientações
             de Implementação para Resolução de Problemas e Computação**]\n\n-   O
@@ -7234,7 +7233,7 @@ pt:
             um dispositivo, similar a muitos hardwares \"inteligentes\" com quais
             possuem contato no dia a dia.\n\n**Objetivos:**\n\n-   Projetar e construir
             um dispositivo de computação físico que integre as entradas e saídas físicas
-            com aplicativos digitais.\n-   Criar um protótipo de aplicativo que use
+            com aplicativos digitais.\n-   Criar protótipos de aplicativos que usem
             um dispositivo físico para controlar um aplicativo digital.\n\n**Questões
             Norteadoras:**\n\n-   Quais entradas e saídas estão disponíveis em um
             dispositivo físico?\n-   Quais entradas e saídas estão disponíveis em
@@ -7373,7 +7372,7 @@ pt:
             \n\n-   Ver o processo de design como uma forma de resolução de problemas
             que prioriza as necessidades de um usuário. \n-   Identificar as necessidades
             do usuário e avaliar o quão bem os diferentes designs as atendem. \n-
-            \  Desenvolva protótipos em papel, absorver e responder aos feedbacks
+            \  Desenvolver protótipos em papel, absorver e responder aos feedbacks
             sobre um protótipo e considerar como diferentes interfaces de usuário
             afetam ou não a usabilidade de seus aplicativos. \n\n**Questões Norteadoras:**\n\n-
             \  Como os designers identificam as necessidades de seus usuários?\n-
@@ -7453,26 +7452,26 @@ pt:
             de base de dados do mundo real para treinar modelos de machine learning
             e para criar um aplicativo. \n\n**Objetivos:**\n\n-   Criar um modelos
             de machine learning no AI Lab para solucionar um problema, e usar o App
-            Lab para criar um aplicativo que use esses modelo.\n-   Entender como
-            os modelos de machine learning tomam decisões a partir dos dados.\n\n**Questões
+            Lab para criar um aplicativo que use esse modelo.\n-   Entender como os
+            modelos de machine learning tomam decisões a partir dos dados.\n\n**Questões
             Norteadoras:**\n\n-   Como o machine learning identifica padrões nos dados
-            para tomar decisões?\n-   Como podemos evitar o viés quando treinando
-            com um modelo de machine learning?\n\n:::\n\n::: details [**Capítulo 2
-            - Visão Geral**]\n**Descrição:** Este capítulo prepara os alunos para
-            serem cientistas de machine learning e criarem um aplicativo que solucione
-            um problema em suas comunidades. Os alunos acompanham um grupo fictício
-            de alunos enquanto definem um problema, formulam uma pesquisa para a coleta
-            de dados, analisam seus dados no AI Lab, criam um cartão modelo, e criam
-            um aplicativo para solucionar seu problema. Então, no projeto final, os
-            alunos repetem os mesmo passos com um problema em sua comunidade. \n\n**Objetivo:**\n\n-
-            \  Criar um modelo de machine learning no AI Lab a partir de seus próprios
-            dados e usar o App Lab para criar um aplicativo que utiliza de seu modelo
-            para solucionar problemas em suas comunidades.\n\n**Questão Norteadora:**\n\n-
-            \  Como o machine learning pode ser usado para resolver problemas em nossas
-            comunidades?\n\n:::\n\n::: details [**Orientação de Implementação para
-            a Unidade de IA e Machine Learning**]\n\n-   Orientações sobre como auxiliar
-            os alunos nos níveis de programação e como personalizar as atividades
-            estão disponíveis no [Guia dos Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)
+            para tomar decisões?\n-   Como podemos evitar o viés ao treinar um modelo
+            de machine learning?\n\n:::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:**
+            Este capítulo prepara os alunos para serem cientistas de machine learning
+            e criarem um aplicativo que solucione um problema em suas comunidades.
+            Os alunos acompanham um grupo fictício de alunos enquanto definem um problema,
+            formulam uma pesquisa para a coleta de dados, analisam seus dados no AI
+            Lab, criam um cartão modelo, e criam um aplicativo para solucionar seu
+            problema. Então, no projeto final, os alunos repetem os mesmo passos com
+            um problema em sua comunidade. \n\n**Objetivo:**\n\n-   Criar um modelo
+            de machine learning no AI Lab a partir de seus próprios dados e usar o
+            App Lab para criar um aplicativo que utiliza de seu modelo para solucionar
+            problemas em suas comunidades.\n\n**Questão Norteadora:**\n\n-   Como
+            o machine learning pode ser usado para resolver problemas em nossas comunidades?\n\n:::\n\n:::
+            details [**Orientação de Implementação para a Unidade de IA e Machine
+            Learning**]\n\n-   Orientações sobre como auxiliar os alunos nos níveis
+            de programação e como personalizar as atividades estão disponíveis no
+            [Guia dos Níveis de Programação](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)
             e no [Guia de Personalização](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n-
             \  Você pode conferir o [Guia de implementação] completo [2] para mais
             informações sobre esta unidade.\n    :::\n\n::: details [**Desenvolvimento
@@ -7648,14 +7647,14 @@ pt:
             **Objetivos:**
 
             -   Criar uma animação interativa que inclua conceitos básicos da programação como estruturas de controles, variáveis, inputs do usuário e randomização.
-            -   Dar e responder construtivamente aos feebacks dos colegas e trabalhar junto deles para concluirem um projeto.
-            -   Ver a si prórpio como um progamador, e ver a programação como uma forma divertida e criativa de expressão.
+            -   Dar e responder construtivamente aos feedbacks dos colegas e trabalhar junto deles para concluírem um projeto.
+            -   Ver a si próprio como um programador, e ver a programação como uma forma divertida e criativa de expressão.
 
             **Questões Norteadoras:**
 
             -   O que é um programa de computador?
             -   Quais são os principais recursos da maioria das linguagens de programação?
-            -   Como a programação estimula a creatividade e a expressão individual?
+            -   Como a programação estimula a criatividade e a expressão individual?
             -   Quais práticas e estratégias irão me auxiliar na criação de programas?
                 :::
 
@@ -7665,7 +7664,7 @@ pt:
             **Objetivos:**
 
             -   Criar um jogo interativo que inclua conceitos básicos da programação como estruturas de controles, variáveis, inputs do usuário e randomização.
-            -   Dar e responder construtivamente aos feebacks dos colegas e trabalhar junto deles para concluirem um projeto.
+            -   Dar e responder construtivamente aos feedbacks dos colegas e trabalhar junto deles para concluírem um projeto.
             -   Trabalhar com outras pessoas para compartilharem projetos de programação usando sprites e funções.
 
             **Questões Norteadoras:**
@@ -8131,9 +8130,9 @@ pt:
           description: "Resolução de Problemas e Computação é uma introdução altamente
             interativa e colaborativa ao campo da ciência da computação, pensada dentro
             de um escopo mais amplo da resolução de problemas. Você praticará o uso
-            do processo de resolução de problemas para abordar uma séries de quebra-cabeças,
+            do processo de resolução de problemas para abordar uma série de quebra-cabeças,
             desafios e cenários do mundo real. A seguir, você aprenderá como os computadores
-            captam, enviam, amazenam e processam informações para ajudar nós humanos
+            captam, enviam, armazenam e processam informações para ajudar nós humanos
             a resolver problemas. A unidade é concluída com um projeto na qual você
             desenvolve uma aplicação, visando solucionar um problema de sua escolha.\n\n:::
             details [**Capítulo 1 - Visão Geral**]\n**Descrição:** Este capítulo orienta
@@ -8144,7 +8143,7 @@ pt:
             desafios de engenharia e planejamento de uma viagem, os alunos apredem
             a indentificar diferentes classes de problemas, descontruir problemas
             maiores, e desenvolver usas próprias habilidades de resolução de problemas.\n\n**Objetivos:**\n\n-
-            \  Aprender a como usar o processo estruturado  de resolução de problemas
+            \  Aprender a como usar o processo estruturado de resolução de problemas
             e aplicá-lo para resolver diversos problemas .\n-   Criar um ambiente
             colaborativo na sala de aula onde os alunos possam ter a ciência da computação
             como relevante, divertida e empoderadora.\n\n**Questão Norteadora:** \n\n-
@@ -8156,14 +8155,14 @@ pt:
             em vez de meramente um conjunto de hardwares. Eles então exploram as maneiras
             com que os computadores abordam os problemas. Para seus projetos finais,
             os alunos propõem um aplicativo que pode ser utilizado para solucionar
-            um problema de sua escolha.\n\n\\*\\*Objetivos:\n\n-   Identificar as
-            características definidas de um computador e como usá-lo para solucionar
-            problemas informacionais\n-   Usar um processo estruturado de resolução
-            de problemas para projetar soluções que se utilizam da tecnologia da computação.\n-
+            um problema de sua escolha.\n\n\\*\\*Objetivos:\n\n-   Identificar determinadas
+            características de um computador e como usá-lo para solucionar problemas
+            informacionais\n-   Usar um processo estruturado de resolução de problemas
+            para projetar soluções que se utilizam da tecnologia da computação.\n-
             \  Criar um ambiente de colaboração na sala de aula onde os alunos têm
             a ciência da computação como relevante, divertida, e empoderadora.\n\n**Questões
             Norteadoras:** \n\n-   Como os computadores auxiliam as pessoas na resolução
-            de problemas?\n-   Como as pessoas e os computares destoam em suas abordagens
+            de problemas?\n-   Como as pessoas e os computadores destoam em suas abordagens
             na resolução de problemas?\n-   O que um computador precisa das pessoas
             para solucionar problemas efetivamente?\n    :::\n\n::: details [**Orientações
             de Implementação para Resolução de Problemas e Computação**]\n\n-   O

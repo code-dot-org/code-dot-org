@@ -103,6 +103,7 @@ Sizga nima kerak bo'ladi:
 * Taqdim etilgan faoliyatni ifodalovchi asosiy kontaktning nomi va elektron pochtasi
 * Faoliyat nomi (nomga “Kod soati” ni kiritish mumkin emas)
 * Faoliyatga URL havolasi
+* Ushbu faoliyat AIni o'z ichiga oladimi: Ha yoki Yo'q
 * Faoliyat tavsifi (maksimal belgilar soni: 400) 
     * Iltimos, tavsifga asosan talabalar tomonidan boshqariladigan yoki o'qituvchi tomonidan yordam beriladimi yoki yo'qligini kiriting. Bundan tashqari, ba'zi maktablar “Kod soati” faoliyati Common Core yoki Next Generation Science Standartlariga mos kelishini bilishdan manfaatdor. Agar faoliyat muayyan standartlarga javob bersa, ushbu ma'lumotlarni qo'shishni o'ylab ko'ring.
 * Maqsadli foydalanuvchilar uchun tavsiya etilgan daraja (lar). Siz [Informatika o'qituvchilari assotsiatsiyasining K-12 standartlari] ga murojaat qilishingiz mumkin (https://k12cs.org/framework-statements-by-grade-band/) sinf mos informatika tushunchalari uchun. Misol darajasi darajalariga quyidagilar kiradi: 
@@ -110,9 +111,9 @@ Sizga nima kerak bo'ladi:
     * 2-5 sinflar (7-10 yosh)
     * 6-8 sinflar (11-13 yosh)
     * 9+ sinflar (14 yoshdan katta)
-* Faoliyatingiz qamrab oladigan mavzular ro'yxati (kompyuter faniga qo'shimcha ravishda). Masalan, agar matematika o'qituvchisi sizning faoliyatingizdan burchak yoki parabolalar haqida dars berish uchun foydalanishi mumkin bo'lsa, matematik sifatida ro'yxatlang. Agar sizda fe'llar/otlar/va hokazolarni o'rgatadigan aqldan ozgan libs faoliyati bo'lsa. til san'atini tanlang.
-* Faoliyatingiz o'rgatadigan dasturlash tillari ro'yxati. Ya'ni C/C ++, Java, JavaScript va boshqalar. yoki tildan mustaqil (bir nechta tillarda o'qitilishi mumkin bo'lgan dars rejalari uchun)
-* Qo'llab-quvvatlanadigan tabiiy tillar ro'yxati. Eslatma: Tilni aniqlash - bu faoliyat provayderining javobgarligi; biz barcha foydalanuvchilarni taqdim etilgan yagona URL manziliga yo'naltiramiz.
+* Faoliyatingiz o'rgatadigan dasturlash tillari ro'yxati. Ya'ni C/C ++, Java, JavaScript va boshqalar. yoki tildan mustaqil (bir nechta tillarda o'qitilishi mumkin bo'lgan dars rejalari uchun) til san'atini tanlang.
+* Qo'llab-quvvatlanadigan tabiiy tillar ro'yxati. Eslatma: Tilni aniqlash - bu faoliyat provayderining javobgarligi; biz barcha foydalanuvchilarni taqdim etilgan yagona URL manziliga yo'naltiramiz. yoki tildan mustaqil (bir nechta tillarda o'qitilishi mumkin bo'lgan dars rejalari uchun)
+* O'qituvchi sizning faoliyatingizdan foydalanish uchun qanday tajribaga ega bo'lishi kerak? (masalan, boshlang'ich yoki qulay.) Va talabalar qanday tajribaga ega bo'lishlari kerak?
 * O'qituvchi sizning faoliyatingizdan foydalanish uchun qanday tajribaga ega bo'lishi kerak? (masalan, boshlang'ich yoki qulay.) Va talabalar qanday tajribaga ega bo'lishlari kerak? Agar siz Code™ faoliyatining yanada ilg'or soatini tayyorlamoqchi bo'lsangiz, iltimos, faoliyatingiz tavsifida zarur bo'lgan oldingi bilimlarni kiriting.
 * Faoliyatingizning davomiyligi 
     * Faqat 1 soat
@@ -166,9 +167,11 @@ Sizga nima kerak bo'ladi:
 
 ## Faoliyat qanday baholanadi
 
-Informatika o'qituvchilarining turli qo'mitasi taqdimotlarni sifat va miqdoriy mezonlar asosida baholaydi. Asosiy mezonlarga mos keladigan barcha tadbirlar ro'yxatga olinadi. O'qituvchilar o'z sinflari uchun eng yaxshi mashg'ulotlarni topish uchun filtrlash va saralash imkoniyatiga ega bo'ladilar.
+Informatika o'qituvchilarining turli qo'mitasi taqdimotlarni sifat va miqdoriy mezonlar asosida baholaydi. Asosiy mezonlarga mos keladigan barcha tadbirlar ro'yxatga olinadi.
 
-Faoliyat va dars rejalarini baholash rubrikasi barcha tadbirlar bo'yicha quyidagi mezonlarni izlaydi va ularni mos ravishda tartiblaydi:
+An'anaviy kodlash faoliyati uchun informatika o'qituvchilarining turli qo'mitasi taqdimotlarni sifat va miqdoriy mezonlar asosida baholaydi. Asosiy mezonlarga mos keladigan barcha tadbirlar ro'yxatga olinadi. O'qituvchilar o'z sinflari uchun eng yaxshi mashg'ulotlarni topish uchun filtrlash va saralash imkoniyatiga ega bo'ladilar.
+
+Agar ko'rib chiqish qo'mitasi faoliyatni ishlab chiqarish sifatidagi nolga teng deb baholasa (yomon xatolar yoki ulardan foydalanishni qiyinlashtiradigan ko'rsatmalar tufayli), kam vakillik guruhlarida o'qishni rag'batlantirishda (irqchilik/jinsiy materiallar tufayli), ta'lim qiymati (CS tushunchalarini o'rgatmaydi) yoki qiziqarli/jalb qilish (talabalar ishlashi qiyin/tushkunligi tufayli), faoliyat ro'yxatga olinmaydi.
 
 - Yuqori ishlab chiqarish sifati
 - Barcha demografik guruhlar tomonidan o'rganishni rag'batlantirish (masalan. yosh ayollar, cheklangan irqiy va etnik guruhlar talabalari va nogiron talabalar kabi CSda kam vakil bo'lgan talabalar)
@@ -176,9 +179,9 @@ Faoliyat va dars rejalarini baholash rubrikasi barcha tadbirlar bo'yicha quyidag
 - Qiziqarli va qiziqarli
 - Talabalarni ular baham ko'rishi mumkin bo'lgan noyob narsalarni yaratishga undaydi (Yosh o'quvchilar uchun: ota-onalar va sinfdoshlar bilan. Eski talabalar uchun: Internetda)
 
-Agar ko'rib chiqish qo'mitasi faoliyatni ishlab chiqarish sifatidagi nolga teng deb baholasa (yomon xatolar yoki ulardan foydalanishni qiyinlashtiradigan ko'rsatmalar tufayli), kam vakillik guruhlarida o'qishni rag'batlantirishda (irqchilik/jinsiy materiallar tufayli), ta'lim qiymati (CS tushunchalarini o'rgatmaydi) yoki qiziqarli/jalb qilish (talabalar ishlashi qiyin/tushkunligi tufayli), faoliyat ro'yxatga olinmaydi.
-
 Bundan tashqari, ro'yxatga olish uchun barcha tadbirlar quyidagilarni bajarishi kerak:
+
+Yangi o'qituvchilar va talabalar uchun o'z-o'zini boshqarish faoliyati uchun ko'rib chiqish qo'mitasi quyidagilarni qidiradi:
 
 - Umumta'lim maktabi sinfiga mos bo'ling (qurol yo'q, aniq/etuk tarkib yo'q, diniy tarkib yo'q va hokazo)
 - Ro'yhatdan o'tishni talab qilmang
@@ -204,11 +207,13 @@ O'qituvchilar va talabalar bizning mashg'ulotlar ro'yxatini sinf, tajriba daraja
 
 ## O'z-o'zidan boshqariladigan bir soatlik darsliklarni loyihalash bo'yicha takliflar
 
-O'quv qo'llanmangizga [soatlik kod logotipini](https://hourofcode.com/us/promote/resources#logo) kiritishingiz mumkin, ammo bu shart emas. Agar siz “Kod soati” logotipidan foydalansangiz, quyidagi savdo belgisi ko'rsatmalariga qarang. <u>Hech qanday holatda Code.org logotipi va nomidan foydalanish mumkin emas.</u> Ikkalasi ham savdo belgisidir va yozma ruxsatisiz uchinchi tomon brendi bilan birlashtirilishi mumkin emas.
-
-**O'rtacha talaba bir soat ichida bemalol bitirishi mumkinligiga ishonch hosil qiling.** Dars davomida tezroq harakatlanadigan talabalar uchun oxirida ochiq mashg'ulotni qo'shishni o'ylab ko'ring. Esingizda bo'lsin, ko'pchilik bolalar kompyuter fanlari va kodlashda mutlaqo yangi boshlanuvchilar bo'lishadi.
+Faoliyat sun'iy intellektni o'z ichiga olishi shart emas, garchi biz AI bilan bog'liq ko'proq tadbirlarni taklif qilmoqchimiz.
 
 **O'qituvchi yozuvlarini qo'shing.** Ko'pgina mashg'ulotlar talabalarga yo'naltirilgan bo'lishi kerak, lekin agar biror faoliyat o'qituvchi tomonidan osonlashtirilsa yoki boshqarilsa, iltimos, o'qituvchi uchun aniq va oddiy ko'rsatmalarni o'qituvchi eslatmalari shaklida o'zingizning faoliyatingiz bilan taqdim etilgan alohida URL manziliga kiriting. Talabalar nafaqat yangi boshlanuvchilar, balki ba'zi o'qituvchilar ham. Kabi ma'lumotlarni qo'shing:
+
+**Faoliyat oxirida fikr-mulohazalarni kiriting.** (masalan, “Siz 10 darajani tugatdingiz va ilmoqlar haqida bilib oldingiz! Ajoyib ish!”)
+
+**Talabalarni tugatgandan so'ng ijtimoiy tarmoqlarga (kerak bo'lganda) xabar yuborishga undang.** Masalan, “Men ________ bilan bir soatlik kodni bajardim. #HourOfCode “yoki” Men #CSEdWeek ning bir qismi sifatida #HourOfCode qildim. Sizda bormi?
 
 - O'quv qo'llanma qaysi platformalar va brauzerlarda eng yaxshi ishlaydi?
 - Smartfonlarda ishlaydimi? Planshetlar?
@@ -247,7 +252,7 @@ Hour of Code® va Hora del Código® Code.org saytining ro'yxatdan o'tgan savdo 
 
 ## Pikselni kuzatish
 
-Ishtirokni aniqroq kuzatib borish uchun biz har bir o'qituvchi sherigidan “Kod soati” darslarining birinchi sahifasiga 1 pikselli kuzatuv rasmini qo'shishni so'raymiz. Piksel-tasvir faqat boshlang'ich sahifada bo'lishi kerak. Qo'llanmaning har qanday muvaqqat sahifalariga kiritmang.
+Agar sizning o'quv qo'llanmangiz tasdiqlangan va yakuniy o'quv sahifasiga kiritilgan bo'lsa, Code.org sizga o'quv qo'llanmasiga qo'shilishingiz uchun noyob kuzatuv pikselini taqdim etadi. Quyidagi misolga qarang. Qo'llanmaning har qanday muvaqqat sahifalariga kiritmang.
 
 Bu sizning “Kod soati” darsligini bajaradigan foydalanuvchilarni hisoblashimizga imkon beradi. Bu sizning o'quv qo'llanmangiz uchun aniqroq ishtirok etishga olib keladi.
 

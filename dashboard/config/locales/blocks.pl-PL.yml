@@ -1049,6 +1049,8 @@ pl:
             '"macklemore90"': Macklemore - Nie może nas zatrzymać
             '"peas"': The Black Eyed Peas - Mam przeczucie
         text: 'ustaw {SONG} '
+      DansBlocks_borderGPT:
+        text: Generuj obramowanie {DESCRIPTION}
       DansBlocks_getMicroscope:
         options:
           INPUT1:

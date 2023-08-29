@@ -481,6 +481,7 @@ nn:
         csp_applab_parameters: Funksjonar med parameter
         CS_Changing_Everything: Informatikk Endrer Alt
         csd_sprite_properties: Eigenskapar ved Sprite
+        what-is-creativity: Kva er kreativitet?
     callout:
       text:
         drag_blocks: Dra ei "flytt"-blokk og fest den under den andre blokka
