@@ -253,6 +253,8 @@ sq:
   call_to_action_learn_about_approach: Mësoni më shumë rreth qasjes sonë
   call_to_action_try_java_lab: Provoni Java Lab
   call_to_action_notify_available: Më njoftoni kur është në dispozicion
+  call_to_action_register_early_access: Regjistrohu për akses të hershëm
+  call_to_action_open_positions: Shikoni pozicionet e hapura
   aria_label_call_to_action_afe: Mësoni më shumë rreth Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Filloni programin e mësimdhënies së Shkencave
     Kompjuterike Bazat e
@@ -13577,6 +13579,125 @@ sq:
     Kompjuterike AP të Code.org duke përdorur Kuorumin, një gjuhë e bazuar në dëshmi
     e krijuar fillimisht për të siguruar qasje për studentët e verbër ose me pamje
     të dëmtuar.
+  engineering_hero_heading: Bashkohuni me ekipin tonë inxhinierik
+  engineering_hero_desc: Ndërsa vazhdojmë të zgjerojmë ekipin tonë inxhinierik, ne
+    donim të ndajmë më shumë rreth organizatës sonë inxhinierike në Code.org dhe disa
+    nga aspektet unike të punës këtu. Nëse jeni të interesuar të aplikoni për një
+    nga rolet tona, ne do të donim të dëgjonim nga ju!
+  engineering_team_title: Njihuni me ekipin inxhinierik në Code.org
+  engineering_team_card_text_1: Kjo është (shumica) ne në personin tonë të mbledhur
+    së bashku gjatë verës së 2023! Kjo turmë është e ndarë në katër nën-ekipe brenda
+    ekipit tonë inxhinierik të cilët punojnë së bashku për të ndërtuar dhe shërbyer
+    platformën për të gjithë studentët dhe mësuesit tanë.
+  engineering_team_card_text_2: Nëse jeni të interesuar të aplikoni për një nga rolet
+    tona, ne do të donim të dëgjonim nga ju! Ju mund të gjeni një listë të pozicioneve
+    të hapura në faqen tonë Karriera.
+  engineering_our_team_title: Ekipi ynë inxhinieri
+  engineering_our_team_desc: 'Ekipi inxhinierik në Code.org është i ndarë në katër
+    nën-ekipe që ndërtojnë dhe mbështesin fusha të ndryshme të platformës sonë:'
+  engineering_our_team_sub_title_1: Ekipi i nxënësve
+  engineering_our_team_text_1: Ekipi ynë i të mësuarit të studentëve zotëron të gjitha
+    aktivitetet tona (ne i quajmë ato laboratorë) që studentët tanë përdorin çdo ditë.
+    Ky ekip punon kryesisht në teknologjinë e përparme (ne përdorim React dhe shumë
+    JS me porosi) dhe ne kemi një marrëdhënie të shkëlqyeshme pune me shumë partnerë
+    dhe projekte me burim të hapur. Për shembull, ne përdorim [Blockly Google] (%{youtube_url})
+    për të gjithë programimin tonë të bazuar në bllok. Ne mbështesim studentët në
+    udhëtimin e tyre të të mësuarit gjatë gjithë rrugës nga Kopshti deri në klasën
+    e 12-të.
+  engineering_our_team_sub_title_2: Ekipi i Eksperiencës
+  engineering_our_team_text_2: Ekipi ynë i Përvojës së Mësuesit ndërton mjetet që
+    tërheqin mësues të rinj në Code.org (ne i quajmë këto produkte blerjeje) dhe zhvillon
+    platformën që fuqizon mësuesit tanë ekzistues për të mësuar kurrikulën tonë (mjetet
+    tona të mësuesve). Ashtu si me mjetet tona studentore, ne mbështetemi në React
+    për të ndërtuar front-end tonë dhe komponentët tanë server-side janë shërbyer
+    duke përdorur Ruby on Rails.
+  engineering_our_team_sub_title_3: Ekipi i Platformës
+  engineering_our_team_text_3: Ekipi ynë i Platformës zotëron komponentë thelbësorë
+    që shërbejnë nevojave të ekipeve tona të studentëve dhe mësuesve (për shembull,
+    vërtetimi dhe profili i përdoruesit) dhe gjithashtu ka misionin për të arritur
+    studentë të cilët ende nuk mund t'i arrijmë. Kjo përfshin ndërtimin e integrimeve
+    që na lidhin me shkollat që përdorin sisteme të ndryshme të menaxhimit të të mësuarit
+    (LMS) dhe paketimin e kurrikulës sonë në mënyrë që të mund të përdoret në shkolla
+    të largëta që nuk kanë qasje në internet të besueshëm.
+  engineering_our_team_sub_title_4: Infrastruktura Ekip
+  engineering_our_team_text_4: Ekipi ynë i infrastrukturës ofron shtyllën kurrizore
+    për platformën që mbështet studentët dhe mësuesit tanë. Kjo përfshin infrastrukturën
+    tonë të pritjes dhe shërbimet përkatëse (ne përdorim AWS), menaxhimin e të dhënave,
+    programet e sigurisë, zhvilluesit dhe shërbimet e vendosjes dhe shumë më tepër.
+    Ky ekip gjithashtu zotëron sistemet tona të shkallëzimit dhe sigurimit, të cilat
+    janë kritike gjatë Orës së Kodimit, ku ftojmë çdo student në botë të përfundojë
+    një orë kodimi me ne.
+  engineering_faq_question_1: Çfarë bën Code.org?
+  engineering_faq_answer_1_a: Code.org është një organizatë jofitimprurëse e inovacionit
+    arsimor dedikuar vizionit që çdo student në çdo shkollë ka mundësinë të mësojë
+    shkencat kompjuterike si pjesë e edukimit të tyre kryesor K-12.
+  engineering_faq_answer_1_b: Ne zgjerojmë aksesin në shkencat kompjuterike në shkolla,
+    me fokus në rritjen e pjesëmarrjes së grave të reja dhe studentëve nga grupe të
+    tjera të nënpërfaqësuara. Ofruesi kryesor i kurrikulës së shkencave kompjuterike
+    K-12 në rrethet më të mëdha shkollore në Shtetet e Bashkuara, Code.org gjithashtu
+    organizon fushatën vjetore të Orës së Kodimit, e cila ka angazhuar më shumë se
+    15% të të gjithë studentëve në botë.
+  engineering_faq_answer_1_c: Code.org mbështetet nga donatorë bujarë duke përfshirë
+    Microsoft, Amazon, Google dhe shumë të tjerë.
+  engineering_faq_question_2: Cila është përvoja dhe mjetet e zhvilluesit të Code.org?
+  engineering_faq_answer_2: Përvoja jonë e zhvilluesit mund të jetë e ndryshme nga
+    ajo që keni parë në rolet tuaja të kaluara. Duke punuar ngushtë me ekipin tonë
+    të produkteve, ne dërgojmë në prodhim çdo ditë të javës dhe kemi një shumëllojshmëri
+    të ritmeve - ndonjëherë ju jeni duke shkruar kodin që shkon drejtpërdrejt atë
+    ditë; herë të tjera jeni në projekte afatgjata - dhe ndërsa ndjekim sprintet 2-javore,
+    ne e bëjmë këtë në një mënyrë të lehtë. Ne indeksojmë drejt marrjes së gjërave
+    të duhura në mënyrën e duhur kundrejt marrjes së një pamje puriste të ndonjë metodologjie
+    të veçantë. [I gjithë kodi ynë] (%{code_url}) është me burim të hapur dhe ne përdorim
+    kërkesat tërheqëse JIRA dhe GitHub për të gjurmuar të gjitha artikujt tanë të
+    punës. Ne gjithashtu kujdesemi shumë për cilësinë dhe testimin dhe jemi me fat
+    që kemi mbështetje të pabesueshme nga [SauceLabs](%{saucelabs_url}), të cilët
+    na ndihmojnë të ekzekutojmë suitën tonë të testeve të UI në pajisje të ndryshme
+    studentore (p.sh., iPad) në fermën e tyre të pajisjeve cloud.
+  engineering_faq_question_3: Cili është rotacioni i inxhinierit në thirrje në Code.org?
+  engineering_faq_answer_3: Ekipi ynë 30+ inxhinieri ndan përgjegjësitë në thirrje
+    Çdo inxhinier mbulon një ndërrim 24-orësh dhe përdor rrugët tona të përshkallëzimit
+    dhe librat për t'iu përgjigjur ndërprerjeve të faqes ose çështjeve të tjera të
+    faqeve të drejtpërdrejta. Ne jemi krenarë për besueshmërinë e faqes sonë - mesatarisht,
+    secili inxhinier zgjohet vetëm një herë në vit për çështje që zakonisht zgjidhen
+    shpejt. Në vend të kësaj, “Zhvilluesi i Ditës” zakonisht kalon një pjesë të ditës
+    së tyre të punës duke menaxhuar vendosjen e prodhimit dhe duke trajtuar çështje
+    më pak urgjente.
+  engineering_faq_question_4: A jeni një organizatë miqësore me distancë/WFH?
+  engineering_faq_answer_4_a: Po! Në vitin 2019, pak para pandemisë, Code.org u bë
+    një organizatë e parë në distancë. Sot, ne kemi inxhinierë në çdo zonë kohore
+    të SHBA dhe akomodojmë orarin e punës në përputhje me Shumica e takimeve tona
+    ndodhin midis orëve 10:00 dhe 3pm PT.
+  engineering_faq_answer_4_b: Ne gjithashtu e njohim vlerën e kohës personale, dhe
+    çdo çerek bashkohemi personalisht, zakonisht në Seattle. Dy nga këto ngjarje (ne
+    i quajmë ato Javën e fillimit dhe “Codechella”) sjellin të gjithë në organizatë
+    së bashku në janar dhe qershor - dhe ekipet e inxhinierisë dhe produkteve takohen
+    veçmas në prill dhe tetor.
+  engineering_faq_answer_4_c: Ne besojmë fuqimisht në kalimin e kohës me studentët
+    dhe mësuesit tanë, kështu që shumë nga këto ngjarje personale përfshijnë udhëtime
+    në shkolla dhe klasa për të mbledhur reagime ose për të provuar produktet tona.
+  engineering_faq_question_5: Çfarë e bën ekipin inxhinierik në Code.org unik?
+  engineering_faq_answer_5_a: 'Përtej zgjidhjes së problemeve teknike sfiduese, ne
+    kemi disa gjëra që e bëjnë organizmin tonë inxhinierik të ndryshëm nga të tjerët
+    në të cilët mund të keni punuar:'
+  engineering_faq_answer_5_b_1: Ne të gjithë ndajmë pasionin tonë për misionin tonë.
+  engineering_faq_answer_5_b_2: Secili prej nesh është këtu për të mbështetur misionin
+    për të zgjeruar qasjen në shkencat kompjuterike për çdo student në të gjithë botën.
+    Ne të gjithë kemi historinë dhe perspektivën tonë unike për atë që na shtyn drejt
+    këtij misioni.
+  engineering_faq_answer_5_c_1: Ne kujdesemi thellësisht për njëri-tjetrin.
+  engineering_faq_answer_5_c_2: Kur inxhinierët po luftojnë me një çështje, ne hyjmë
+    dhe ndihmojmë. Një nga parimet tona është se ne jemi të vështirë për problemet,
+    por të sjellshëm me njëri-tjetrin. Ne promovojmë inxhinierë rregullisht, por nuk
+    përshkruajmë zgjidhje të mbi-inxhinieruara vetëm për të mbështetur rrugën e promovimit
+    të dikujt. Në vend të kësaj, ne investojmë në inxhinierët tanë me një buxhet bujar
+    të zhvillimit profesional dhe qasje në mundësi të tjera të të mësuarit.
+  engineering_faq_answer_5_d_1: Ne punojmë shumë, por vendosim kufij të qartë.
+  engineering_faq_answer_5_d_2: Ndërsa ne mbështesim studentët në të gjithë botën,
+    ne mbajmë veten përgjegjës për kufijtë e qartë midis punës dhe jetës në shtëpi.
+    Ne gëzojmë pa takime të mërkurën, duke marrë PTO tonë (5 javë gjithsej, e cila
+    përfshin një mbyllje zyre 2-javore org-gjerë në fund të vitit aka Pushimi dimëror),
+    gjysmën e ditës së punës të premteve gjatë verës aka Summer Fridays, dhe përfitime
+    të tjera bujare.
   language_code:
     ar: arabisht
     az: Azerbajxhanisht

@@ -105,7 +105,7 @@ sq:
           description_short: Provoni tutorialet tona Jigsaw.
           student_description: Provoni tutorialet tona Jigsaw.
         step:
-          title: Një hap
+          title: Hapi
           description: Pasoje tutorialin
           description_short: Pasoje tutorialin
           student_description: Pasoje tutorialin
@@ -1115,7 +1115,7 @@ sq:
             lessonGroup-3:
               display_name: variabla
             debugging:
-              display_name: Rregullimi
+              display_name: Debugging
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -1165,19 +1165,20 @@ sq:
             lessonGroup-6:
               display_name: Përfundimi i projektit të kursit
         coursec-2021:
+          title: Kursi C (2021)
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
             csf_sequencing:
               display_name: Sekuencimi
             csf_binary:
               display_name: Binare
             csf_loops:
-              display_name: cikle
+              display_name: Loops
             csf_events:
-              display_name: Ngjarje
+              display_name: Events
             csf_data:
-              display_name: të dhëna
+              display_name: Të dhënat
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         coursed-2021:
@@ -1213,6 +1214,7 @@ sq:
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         coursef-2021:
+          title: Kursi F (2021)
           lesson_groups:
             ramp_up:
               display_name: Sprites
@@ -1233,27 +1235,29 @@ sq:
             lessonGroup-7:
               display_name: Shtetësi Dixhitale
         express-2021:
+          title: Kursi Express (2021)
+          description: Mësoni shkenca kompjuterike duke provuar mësimet më poshtë me ritmin tuaj! Mësoni të krijoni programe kompjuterike, të zhvilloni aftësi për zgjidhjen e problemeve dhe të punoni përmes sfidave argëtuese! Bëni lojëra dhe projekte krijuese për t'i ndarë me miqtë, familjen dhe mësimdhënësit.
           lesson_groups:
             csf_warmup:
               display_name: Parapërgatitje
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Loops
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
-              display_name: funksione
+              display_name: Funksionet
             csf_variables:
-              display_name: variabla
+              display_name: Variablat
             csf_for_loops:
-              display_name: Për Ciklet
+              display_name: Për Loops
             csf_sprites:
               display_name: Sprites
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
             lessonGroup-9:
-              display_name: Ngjarje
+              display_name: Eventet
         pre-express-2021:
           lesson_groups:
             csf_sequencing:
@@ -1631,6 +1635,8 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csd1-2022:
+          title: Zgjidhja e problemeve dhe Informatika ('22-'23)
         soccer:
           name: futboll
         csa1-validation-pilot-2022:

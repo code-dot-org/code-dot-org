@@ -14,7 +14,7 @@ Code.org tospita varjetà ta 'attivitajiet ta' Hour of Code™, lezzjonijiet, u 
 
 Trid tissottometti t-tutorja awto-gwidata tiegħek stess, lezzjoni mmexxija mill-għalliem, jew attività robotika/maker li tispjega prinċipju tax-xjenza tal-kompjuter? Ingħaqad ma 'dan il-moviment globali u għin lill-parteċipanti madwar id-dinja jibdew b'siegħa ta' kodiċi jew imorru lil hinn b'attivitajiet multi-lezzjoni, ta 'ġurnata, jew ta' ġimgħa.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Tista 'tissottometti attività fi kwalunkwe ħin, iżda l-iskadenza għall-inklużjoni fi kwalunkwe sena kalendarja partikolari hija l-1 ta' Ottubru. (Pereżempju, kwalunkwe attività riċevuta wara l-1 ta 'Ottubru, 2023, mhix se tkun elenkata għas-Siegħa tal-Kodiċi tal-2023.)** Jekk għandek xi mistoqsijiet dwar is-sottomissjoni tal-attività tiegħek, jekk jogħġbok ikkuntattjana fuq support@code.org.
+**Wara li taqra l-linji gwida, tista 'tissottometti l-attività tiegħek permezz ta' [Hour of Code™ Attività tagħna u Sottomissjoni AI paġna](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Tista 'tissottometti attività fi kwalunkwe ħin, iżda l-iskadenza għall-inklużjoni fi kwalunkwe sena kalendarja partikolari hija l-1 ta' Ottubru. (Pereżempju, kwalunkwe attività riċevuta wara l-1 ta 'Ottubru, 2023, mhix se tkun elenkata għas-Siegħa tal-Kodiċi tal-2023.)** Jekk għandek xi mistoqsijiet dwar is-sottomissjoni tal-attività tiegħek, jekk jogħġbok ikkuntattjana fuq support@code.org.
 
 Xi ftit pariri:
 
@@ -103,6 +103,7 @@ Dak li għandek bzonn:
 * L-isem u l-email tal-kuntatt primarju li jirrappreżenta l-attività sottomessa
 * Isem tal-Attività (ma jistax jinkludi “Siegħa tal-Kodiċi” fl-isem)
 * Rabta tal-URL għall-attività
+* Din l-attività tinkludi AI: Iva jew Le
 * Deskrizzjoni tal-attività (għadd massimu tal-karattru: 400) 
     * Jekk jogħġbok inkludi fid-deskrizzjoni jekk hux prinċipalment iggwidat mill-istudenti jew iffaċilitat mill-għalliema. Barra minn hekk, xi skejjel huma interessati li jkunu jafu jekk l-attivitajiet tas-Siegħa tal-Kodiċi jindirizzawx l-Istandards tax-Xjenza tal-Qofol Komuni jew tal-Ġenerazzjoni li Jmiss. Jekk l-attività tindirizza standards speċifiċi, ikkunsidra li tinkludi din l-informazzjoni.
 * Livell (i) ta' grad rakkomandat (i) għall-utenti maħsuba. Inti tista' tirreferi għall- \[Istandards K-12 tal-Assoċjazzjoni tal-Għalliema tax-Xjenza tal-Kompjuter\] (https://k12cs.org/framework-statements-by-grade-band/) għal kunċetti tax-xjenza tal-kompjuter xierqa għall-grad. Livelli ta 'grad ta' eżempju jinkludu: 
@@ -110,9 +111,9 @@ Dak li għandek bzonn:
     * Gradi 2-5 (etajiet 7-10)
     * Gradi 6-8 (etajiet 11-13)
     * Gradi 9+ (etajiet 14+)
-* Lista ta 'oqsma tas-suġġett li l-attività tiegħek tkopri (minbarra x-Xjenza tal-Kompjuter). Pereżempju, jekk għalliem tal-matematika jista 'juża l-attività tiegħek biex jgħallem dwar angoli jew parabolas, elenka bħala matematika. Jekk għandek attività ta 'libs ġenn li tgħallem verbi/nouns/eċċ. agħżel l-arti tal-lingwa.
-* Lista ta 'lingwi ta' programmazzjoni l-attività tiegħek tgħallem. Jiġifieri C/C ++, Java, JavaScript, eċċ. jew lingwa indipendenti (għal pjanijiet ta 'lezzjoni li jistgħu jiġu mgħallma f'lingwi multipli)
-* Lista ta 'lingwi naturali appoġġjati. Nota: Id-detezzjoni tal-lingwa hija r-responsabbiltà tal-fornitur tal-attività; aħna nidderieġu mill-ġdid lill-utenti kollha lejn il-URL uniku pprovdut.
+* Lista ta 'lingwi ta' programmazzjoni l-attività tiegħek tgħallem. Jiġifieri C/C ++, Java, JavaScript, eċċ. jew lingwa indipendenti (għal pjanijiet ta 'lezzjoni li jistgħu jiġu mgħallma f'lingwi multipli) agħżel l-arti tal-lingwa.
+* Lista ta 'lingwi naturali appoġġjati. Nota: Id-detezzjoni tal-lingwa hija r-responsabbiltà tal-fornitur tal-attività; aħna nidderieġu mill-ġdid lill-utenti kollha lejn il-URL uniku pprovdut. jew lingwa indipendenti (għal pjanijiet ta 'lezzjoni li jistgħu jiġu mgħallma f'lingwi multipli)
+* X'livell ta' esperjenza għandu jkollu edukatur biex juża l-attività tiegħek? (eż. Bidu jew Komdu.) U, liema livell ta 'esperjenza għandu jkollhom l-istudenti?
 * X'livell ta' esperjenza għandu jkollu edukatur biex juża l-attività tiegħek? (eż. Bidu jew Komdu.) U, liema livell ta 'esperjenza għandu jkollhom l-istudenti? Jekk tixtieq tipprepara Hour of Code™ Activities aktar avvanzati, jekk jogħġbok inkludi l-għarfien minn qabel meħtieġ fid-deskrizzjoni tal-attività tiegħek.
 * It-tul tal-attività tiegħek 
     * Siegħa 1 biss
@@ -166,9 +167,11 @@ Dak li għandek bzonn:
 
 ## Kif ser jiġu evalwati l-attivitajiet
 
-Kumitat divers ta 'edukaturi tax-xjenza tal-kompjuter se jikklassifika sottomissjonijiet ibbażati fuq kriterji kwalitattivi u kwantitattivi. L-attivitajiet kollha li jaqblu mal-kriterji bażiċi se jiġu elenkati. L-għalliema se jkunu jistgħu jiffiltraw u jissortjaw biex isibu l-aħjar attivitajiet għall-klassi tagħhom.
+Kumitat divers ta 'edukaturi tax-xjenza tal-kompjuter se jikklassifika sottomissjonijiet ibbażati fuq kriterji kwalitattivi u kwantitattivi. L-attivitajiet kollha li jaqblu mal-kriterji bażiċi se jiġu elenkati.
 
-Ir-rubrika għall-evalwazzjoni tal-attivitajiet u l-pjanijiet tal-lezzjonijiet se tfittex il-kriterji li ġejjin dwar l-attivitajiet kollha u tikklassifikahom kif xieraq:
+Għal attivitajiet ta 'kodifikazzjoni tradizzjonali, kumitat divers ta' edukaturi tax-xjenza tal-kompjuter se jikklassifika sottomissjonijiet ibbażati fuq kriterji kwalitattivi u kwantitattivi. L-attivitajiet kollha li jaqblu mal-kriterji bażiċi se jiġu elenkati. L-għalliema se jkunu jistgħu jiffiltraw u jissortjaw biex isibu l-aħjar attivitajiet għall-klassi tagħhom.
+
+Jekk il-kumitat ta 'reviżjoni jivvaluta l-attività żero fil-kwalità tal-produzzjoni (minħabba bugs ħżiena jew struzzjonijiet li jagħmluha diffiċli ħafna biex tużah), fil-promozzjoni tat-tagħlim fi gruppi sottorappreżentati (minħabba materjal razzist/sessist), f'valur edukattiv (ma jgħallimx kunċetti CS), jew gost/involviment (minħabba li huma diffiċli/skoraġġanti għall-istudenti biex jaħdmu), l-attività ma tiġix elenkata.
 
 - Kwalità għolja ta 'produzzjoni
 - Tippromwovi t-tagħlim mill-gruppi demografiċi kollha (esp. studenti sottorappreżentati fis-CS, bħal nisa żgħażagħ, studenti minn gruppi razzjali u etniċi marġinalizzati, u studenti b'diżabilità)
@@ -176,9 +179,9 @@ Ir-rubrika għall-evalwazzjoni tal-attivitajiet u l-pjanijiet tal-lezzjonijiet s
 - Pjaċir u involviment
 - Jinkoraġġixxi lill-istudenti biex joħolqu xi ħaġa unika li jistgħu jaqsmu (Għal studenti iżgħar: mal-ġenituri u l-klassi. Għal studenti aktar antiki: fuq l-Internet)
 
-Jekk il-kumitat ta 'reviżjoni jivvaluta l-attività żero fil-kwalità tal-produzzjoni (minħabba bugs ħżiena jew struzzjonijiet li jagħmluha diffiċli ħafna biex tużah), fil-promozzjoni tat-tagħlim fi gruppi sottorappreżentati (minħabba materjal razzist/sessist), f'valur edukattiv (ma jgħallimx kunċetti CS), jew gost/involviment (minħabba li huma diffiċli/skoraġġanti għall-istudenti biex jaħdmu), l-attività ma tiġix elenkata.
-
 Barra minn hekk, sabiex jiġu elenkati, l-attivitajiet kollha għandhom:
+
+Għal attivitajiet awtodiretti għal għalliema u studenti ġodda, il-kumitat ta 'reviżjoni se jkun qed ifittex jekk:
 
 - Ikun xieraq għal klassi ta 'skola pubblika (l-ebda pistoli, l-ebda kontenut espliċita/matur, l-ebda kontenut reliġjuż, eċċ.)
 - Jeħtieġu l-ebda sinjal
@@ -204,11 +207,13 @@ L-għalliema u l-istudenti jkunu jistgħu jfittxu permezz ta 'u jiffiltraw il-li
 
 ## Suġġerimenti għat-tfassil ta 'siegħa tutorials iggwidati minnhom infushom
 
-Tista 'tinkludi l- [Siegħa tal-logo tal-Kodiċi](https://hourofcode.com/us/promote/resources#logo) fit-tutorja tiegħek, iżda dan mhux meħtieġ. Jekk tuża l-logo tas-Siegħa tal-Kodiċi, ara l-linji gwida tat-trademark hawn taħt. <u>Taħt l-ebda ċirkostanza ma jista 'jintuża l-logo Code.org u l-isem.</u> It-tnejn huma trademarked, u ma jistgħux jiġu mħallta ma 'isem tad-ditta ta' parti terza mingħajr permess espress bil-miktub.
-
-**Kun żgur li l-istudent medju jista 'jispiċċa bil-kumdità f'siegħa.** Ikkunsidra li żżid attività miftuħa fl-aħħar għal studenti li jiċċaqalqu aktar malajr permezz tal-lezzjoni. Ftakar li ħafna gidjien se jkunu jibdew assoluti għax-xjenza tal-kompjuter u kodifikazzjoni.
+L-attivitajiet m'għandhomx għalfejn jinkludu l-AI, għalkemm qed infittxu li noffru aktar attivitajiet relatati mal-AI.
 
 **Inkludi noti tal-għalliema.** Ħafna mill-attivitajiet għandhom ikunu diretti mill-istudenti, imma jekk attività hija ffaċilitata jew ġestita minn għalliem, jekk jogħġbok inkludi direzzjonijiet ċari u sempliċi għall-għalliem fil-forma ta 'noti għall-għalliema f'URL separat sottomess mal-attività tiegħek. Mhux biss l-istudenti huma novizzi, uħud mill-għalliema huma wkoll. Inkludi informazzjoni bħal:
+
+**Inkorpora feedback fi tmiem l-attività.** (Eż. “Inti lest 10 livelli u tgħallmu dwar loops! Xogħol kbir!”)
+
+**Jinkoraġġixxu lill-istudenti biex post għall-midja soċjali (fejn xieraq) meta ħadthom lest.** Per eżempju “I ghamilt Siegħa ta 'Kodiċi ma ________ Have you? #HourOfCode” jew “Jien għamilt #HourOfCode bħala parti minn #CSEdWeek. Have you?
 
 - Fuq liema pjattaformi u browsers it-tutorja taħdem l-aħjar?
 - Jaħdem fuq smartphones? Pilloli?
@@ -247,7 +252,7 @@ Siegħa ta 'Code® u Hora del Código® huma trademarks irreġistrati ta' Code.o
 
 ## Traċċar tal-Pixel
 
-Sabiex issegwi b'mod aktar preċiż il-parteċipazzjoni nitolbu lil kull sieħeb tutorja biex jinkludi immaġni ta 'traċċar ta' 1-pixel fl-ewwel paġna tat-tutorials tas-Siegħa tal-Kodiċi tagħhom. L-immaġni tal-pixel għandha tkun fuq il-paġna tal-bidu biss. Tinkludix fuq xi paġni interim tat-tutorja tiegħek.
+Jekk it-tutorja tiegħek hija approvata u inkluża fuq il-paġna tat-tutorja finali, Code.org jagħtik pixel ta 'traċċar uniku għalik biex tintegra fit-tutorja tiegħek. Ara l-eżempju hawn taħt. Tinkludix fuq xi paġni interim tat-tutorja tiegħek.
 
 Dan jippermettilna ngħoddu l-utenti li jagħmlu t-tutorja tas-Siegħa tal-Kodiċi tiegħek. Dan iwassal għal għadd ta 'parteċipazzjoni aktar preċiż għat-tutorja tiegħek.
 

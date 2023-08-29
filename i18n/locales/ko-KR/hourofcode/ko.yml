@@ -219,6 +219,8 @@ ko:
   call_to_action_learn_about_approach: Code.org 교육 방식에 대해 자세히 알아보기
   call_to_action_try_java_lab: 자바 랩 사용해보기
   call_to_action_notify_available: 입고되면 알림 받기
+  call_to_action_register_early_access: 등록하고 얼리 액세스
+  call_to_action_open_positions: 채용 공고 보기
   aria_label_call_to_action_afe: 아마존 퓨처 엔지니어에 대해 자세히 알아보기
   aria_label_call_to_action_teaching_csf: 컴퓨터 과학 기초 교육 전문 학습 프로그램 시작
   aria_label_call_to_action_teaching_csd: 컴퓨터 과학 디스커버리 교육 전문 학습 프로그램 시작
@@ -1740,8 +1742,8 @@ ko:
     주신 %{random_donor}에게 감사 드립니다.)'
   twitter_donor_text_2019: '올해의 #HourOfCode는 #CSforGood을 다룹니다. 저는 참가합니다! 여러분은요? (
     @codeorg를 지원해 주신 %{random_donor}에게 감사 드립니다.)'
-  twitter_default_text_donor: 'I''m participating in this year''s #HourOfCode, are
-    you? (Thanks %{random_donor} for supporting @codeorg)'
+  twitter_default_text_donor: '제가 올해 #HourOfCode 대회에 참가할 거예요, 그렇죠?(@codeorg 를 지원해
+    주셔서 감사합니다 %{random_donor} )'
   hoc_faq_title: FAQs
   hoc_faq_what_is_hoc_q: Hour of Code 란?
   hoc_faq_what_is_hoc_a: 아워오브코드는 1시간 분량의 컴퓨터 과학 소개 과정으로, 어려울 것 같은 코드에 대해 쉽게 이해하고,
@@ -10494,6 +10496,75 @@ ko:
   accessibility_card_title_10: 쿼럼
   accessibility_card_text_10: 시각 장애가 있는 학생이 쉽게 접근할 수 있도록 고안된 증거기반 언어인 쿼럼을 사용해 Code.org의
     AP 컴퓨터 과학 원리 커리큘럼을 각색했습니다.
+  engineering_hero_heading: 엔지니어링 팀에 합류하세요!
+  engineering_hero_desc: 엔지니어링 팀을 계속 확장하면서 Code.org의 엔지니어링 조직과 여기서 일하는 몇 가지 독특한 측면에
+    대해 더 많이 공유하고 싶었습니다.우리 직무 중 하나에 지원하는 데 관심이 있다면 여러분의 의견을 듣고 싶습니다!
+  engineering_team_title: Code.org에서 엔지니어링 팀을 만나보세요
+  engineering_team_card_text_1: 이것은 (대부분) 2023년 여름에 직접 모이는 모습입니다!이 인원은 엔지니어링 팀 내 네
+    개의 하위 팀으로 나뉘어 모든 학생과 교사를 위한 플랫폼을 구축하고 서비스를 제공하기 위해 협력하고 있습니다.
+  engineering_team_card_text_2: 저희 직무 중 하나에 지원하는 데 관심이 있다면 여러분의 의견을 듣고 싶습니다!채용 페이지에서
+    채용 공고 목록을 확인할 수 있습니다.
+  engineering_our_team_title: 우리의 엔지니어링 팀
+  engineering_our_team_desc: Code.org의 엔지니어링 팀은 플랫폼의 다양한 영역을 구축하고 지원하는 네 개의 하위 팀으로
+    나뉘어 있습니다.
+  engineering_our_team_sub_title_1: 학생 학습 팀
+  engineering_our_team_text_1: 학생 학습 팀은 학생들이 매일 사용하는 모든 활동 (연구실이라고 함) 을 소유하고 있습니다.이
+    팀은 주로 프론트엔드 기술 (우리는 React와 많은 커스텀 JS를 사용함) 을 다루며 많은 파트너 및 오픈소스 프로젝트와 훌륭한 협력 관계를
+    유지하고 있습니다.예를 들어, 우리는 모든 블록 기반 프로그래밍에 [Google의 Blockly] (%{youtube_url}) 를 사용합니다.우리는
+    유치원부터 12학년까지 학생들의 학습 여정을 지원합니다.
+  engineering_our_team_sub_title_2: 교사 체험 팀
+  engineering_our_team_text_2: Teacher Experience Team은 새로운 교사들을 Code.org로 끌어들이는 도구
+    (우리는 이를 학습 제품이라고 함) 를 개발하고 기존 교사들이 커리큘럼을 가르칠 수 있도록 지원하는 플랫폼 (교사 도구) 을 개발합니다.학생
+    도구와 마찬가지로 저희도 프론트엔드를 구축할 때 React를 사용하며, 서버측 컴포넌트는 Ruby on Rails를 사용하여 제공됩니다.
+  engineering_our_team_sub_title_3: 플랫폼 팀
+  engineering_our_team_text_3: '플랫폼 팀은 학생 및 교사 팀의 요구 사항을 충족하는 핵심 구성 요소 (예: 인증 및 사용자
+    프로필) 를 소유하고 있으며 아직 연락할 수 없는 학생들에게 다가가는 것도 사명입니다.여기에는 다양한 LMS (학습 관리 시스템) 를 사용하는
+    학교와 연결하는 통합 기능을 구축하고 안정적인 인터넷에 액세스할 수 없는 원격 학교에서도 사용할 수 있도록 커리큘럼을 패키징하는 것이 포함됩니다.'
+  engineering_our_team_sub_title_4: 인프라 팀
+  engineering_our_team_text_4: 인프라 팀은 학생과 교사를 지원하는 플랫폼의 근간을 제공합니다.여기에는 호스팅 인프라 및 관련
+    서비스 (AWS를 사용), 데이터 관리, 보안 프로그램, 개발자 및 배포 서비스 등이 포함됩니다.또한 이 팀은 우리의 스케일링 및 프로비저닝
+    시스템을 소유하고 있는데, 이는 전 세계 모든 학생을 초대하여 우리와 함께 코딩을 완료하도록 하는 아워오브코드에서 매우 중요한 역할을 합니다.
+  engineering_faq_question_1: Code.org는 어떤 일을 하나요?
+  engineering_faq_answer_1_a: Code.org는 모든 학교의 모든 학생이 핵심 K-12 교육의 일환으로 컴퓨터 과학을 배울
+    기회를 갖는다는 비전을 추구하는 교육 혁신 비영리 단체입니다.
+  engineering_faq_answer_1_b: 우리는 젊은 여성과 소외 계층의 학생들의 참여를 높이는 데 중점을 두고 학교에서 컴퓨터 과학에
+    대한 접근성을 확대합니다.미국 최대 교육구에서 K-12 컴퓨터 과학 커리큘럼을 제공하는 선두 업체인 Code.org는 또한 매년 Hour of
+    Code 캠페인을 조직하고 있으며, 이 캠페인에는 전 세계 전체 학생의 15% 이상이 참여하고 있습니다.
+  engineering_faq_answer_1_c: Code.org는 마이크로소프트, 아마존, 구글 등 많은 기부자들의 후원을 받고 있습니다.
+  engineering_faq_question_2: Code.org의 개발자 경험과 도구는 무엇인가요?
+  engineering_faq_answer_2: '당사의 개발자 경험은 과거 역할에서 보았던 것과 다를 수 있습니다.우리는 제품 팀과 긴밀히 협력하여
+    매주 프로덕션으로 배송하며 다양한 케이던스를 제공합니다. 어떤 때는 그날 바로 실행될 코드를 작성하고, 다른 때는 장기 프로젝트를 진행하기도
+    하고, 2주 스프린트를 따르지만 간단한 방식으로 진행하기도 합니다.우리는 특정 방법론을 순수하게 바라보는 것보다 올바른 방법으로 올바른 일을
+    해내는 것을 목표로 삼고 있습니다.[모든 코드] (%{code_url}) 는 오픈 소스이며 우리는 JIRA와 GitHub 풀 리퀘스트를 사용하여
+    모든 작업 항목을 추적합니다.저희는 품질 및 테스트에도 많은 관심을 기울이고 있으며 운 좋게도 [SauceLabs](%{saucelabs_url})
+    팀의 놀라운 지원을 받아 클라우드 기기 팜에 있는 다양한 학생 기기 (예: iPad) 에서 UI 테스트 모음을 실행할 수 있게 되었습니다.'
+  engineering_faq_question_3: Code.org의 엔지니어 온콜 로테이션은 어떻게 되나요?
+  engineering_faq_answer_3: 30명 이상의 엔지니어링 팀이 대기 중 책임을 분담합니다.각 엔지니어는 24시간 교대 근무를 담당하며
+    에스컬레이션 경로와 플레이북을 사용하여 사이트 운영 중단이나 기타 실시간 현장 문제에 대응합니다.우리는 사이트의 신뢰성에 자부심을 느낍니다.
+    일반적으로 신속하게 해결할 수 있는 문제로 인해 각 엔지니어가 일년에 한 번만 깨어납니다.대신 “일상의 개발자”는 보통 하루 중 일부를 프로덕션
+    배포를 관리하고 덜 시급한 문제를 분류하는 데 보냅니다.
+  engineering_faq_question_4: 원격 근무/WFH 조직입니까?
+  engineering_faq_answer_4_a: 네!팬데믹 직전인 2019년에 Code.org는 원격 우선 조직이 되었습니다.오늘날 우리는 미국
+    모든 시간대에 엔지니어를 배치하고 있으며 그에 따라 근무 시간을 조정합니다.대부분의 회의는 오전 10시에서 오후 3시 (PT) 사이에 진행됩니다.
+  engineering_faq_answer_4_b: 우리는 또한 대면 시간의 가치를 인식하고 매 분기마다 시애틀에서 직접 모입니다.이 두 가지 이벤트
+    (우리는 이를 킥오프 위크 및 “Codechella”라고 부름) 를 통해 1월과 6월에 조직의 모든 구성원이 한 자리에 모이고, 4월과 10월에는
+    엔지니어링 팀과 제품 팀이 각각 회의를 갖습니다.
+  engineering_faq_answer_4_c: 우리는 학생 및 교사들과 시간을 보내는 것을 강력히 믿기 때문에 이러한 대면 이벤트에는 피드백을
+    수집하거나 제품을 직접 테스트하기 위한 학교 및 교실 견학이 포함됩니다.
+  engineering_faq_question_5: Code.org의 엔지니어링 팀은 어떤 점에서 특별한가요?
+  engineering_faq_answer_5_a: 까다로운 기술 문제를 해결하는 것 외에도, 당사의 엔지니어링 조직을 귀사가 근무했던 다른 조직과
+    차별화하는 몇 가지 요소가 있습니다.
+  engineering_faq_answer_5_b_1: 우리 모두는 사명에 대한 열정을 공유합니다.
+  engineering_faq_answer_5_b_2: 우리 모두는 전 세계 모든 학생들이 컴퓨터 과학에 대한 접근성을 확대하려는 사명을 지원하기
+    위해 여기에 있습니다.우리 모두는 이 사명을 향해 나아가는 원동력에 대한 저마다의 이야기와 관점을 가지고 있습니다.
+  engineering_faq_answer_5_c_1: 우리는 서로에 대해 깊은 관심을 가지고 있습니다.
+  engineering_faq_answer_5_c_2: 엔지니어가 문제로 어려움을 겪을 때 저희가 개입하여 도움을 드립니다.우리의 원칙 중 하나는
+    문제에 대해서는 까다롭지만 서로에게 친절하다는 것입니다.우리는 정기적으로 엔지니어를 승진시키지만 누군가의 승진 경로를 지원하기 위해 과도하게
+    설계된 솔루션을 처방하지는 않습니다.대신 전문성 개발 예산이 넉넉하고 다른 학습 기회를 활용할 수 있는 엔지니어에게 투자합니다.
+  engineering_faq_answer_5_d_1: 우리는 열심히 일하지만 명확한 경계를 설정합니다.
+  engineering_faq_answer_5_d_2: 우리는 전 세계 학생들을 지원하는 동시에 일과 가정 생활 사이의 명확한 경계를 스스로 책임집니다.저희는
+    수요일에는 회의 없이 PTO (총 5주, 연말 2주간 사무실 휴무, 일명 겨울 방학), 여름철 금요일에는 반나절 근무일, 여름 금요일에는 반나절
+    근무를 하는 등 다양한 혜택을 누릴 수 있습니다.
   language_code:
     ar: 아랍어
     az: 아제르바이잔어

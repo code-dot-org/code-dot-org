@@ -149,6 +149,8 @@ pl:
               name: Muzyka
             lesson-50:
               name: Czat AI
+            lesson-51:
+              name: Rubryki AI
         algebraPD2b:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -4731,6 +4733,8 @@ pl:
               name: Badanie pulsu do klonowania
             lesson-12:
               name: Plac zabaw AI
+            lesson-13:
+              name: Plac zabaw Gen AI Blocks
         csc-pilot-2022-ecosystems:
           name: csc-pilot-2022-ecosystems
         csc-pilot-2022-timecapsule:
@@ -5151,6 +5155,8 @@ pl:
               name: To słowo kluczowe
             lesson-15:
               name: Jednostka 2 Ankieta
+            lesson-16:
+              name: 'Piaskownica: Konsola'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5192,6 +5198,10 @@ pl:
               name: Dane dla projektu dobra społecznego [wersja 1-dniowa]
             lesson-14:
               name: Jednstka 3 Ankieta
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5233,6 +5243,10 @@ pl:
               name: Instrukcje wielokrotnego wyboru
             lesson-15:
               name: Jednostka 4 Ankieta
+            lesson-16:
+              name: 'Piaskownica: Konsola'
+            lesson-18:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5274,6 +5288,10 @@ pl:
               name: Osobisty projekt narracyjny [Wersja 1-dniowa]
             lesson-14:
               name: Jednostka 5 Ankieta
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5315,6 +5333,10 @@ pl:
               name: Projekt przetwarzania języka naturalnego [wersja 1-dniowa]
             lesson-14:
               name: Jednostka 6 Ankieta
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5356,6 +5378,10 @@ pl:
               name: Jednostka 7 Ankieta
             lesson-14:
               name: Kreatywne kodowanie z projektem teatralnym [wersja 1-dniowa]
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5395,6 +5421,10 @@ pl:
               name: Jednostka 8 Sprawdzian
             lesson-13:
               name: Kreatywne kodowanie w programie Console Project [wersja 1-dniowa]
+            lesson-14:
+              name: 'Piaskownica: Konsola'
+            lesson-16:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5819,6 +5849,8 @@ pl:
               name: Pomysły FM
             lesson-4:
               name: Maszyny funkcyjne w Artyście
+            lesson-5:
+              name: AI 3-5
           name: katies-playground
           title: Miejsce Katie do robienia rzeczy
         microbit-2022:
@@ -6367,6 +6399,11 @@ pl:
           description_short: Naucz się programować przy pomocy urządzeń fizycznych
           name: csd6a-2023
         csa9-2023:
+          lessons:
+            lesson-1:
+              name: 'Piaskownica: Konsola'
+            lesson-3:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Przegląd i praktyka
@@ -6388,7 +6425,7 @@ pl:
               display_name: Ankieta
           name: mikrobit-2023
           title: Tworzenie aplikacji z urządzeniami (micro:bit) ('23-'24)
-          description: "W jednostce Tworzenie aplikacji na urządzenia uczniowie badają rolę urządzeń fizycznych w informatyce. Korzystając z App Lab i BBC micro:bit, uczniowie opracowują programy wykorzystujące te same wejścia i wyjścia sprzętowe, które widzisz w urządzeniach inteligentnych, patrząc na to, jak prosty prototyp może doprowadzić do gotowego produktu. Następnie badają, w jaki sposób można wykorzystać urządzenia fizyczne do reagowania na otaczający ich świat, używając sposobu myślenia „twórcy” do tworzenia prototypów z codziennych materiałów.\n\n⚠️ Ta jednostka wykorzystuje **micro:bit** do wprowadzenia informatyki z urzdzeniami fizycznymi i sposobu myślenia „twórcy”. Możesz także uczyć tych treści za pomocą urządzeń **circuit plac zabaw**, przypisując jednostkę [Tworzenie aplikacji z urządzeniami (Circuit Playground) unit](/s/devices-2022). Obie jednostki uczą tych samych treści i są równoważne - nie trzeba kupować obu zestawów urządzeń ani uczyć obu jednostek.\n\n::: szczegóły [**Przeglą Wejść i Wyjść**]\n**Opis:** Jednostka ta uwypukla interakcje między wejściami i wyjściami na ekranie micro:bita i aplikacji. Na swoich mikro:bitach uczniowie uczą się kontrolować wejścia, takie jak przyciski i wyjścia, takie jak ekran LED. Wchodzą również w interakcję z wejściami i wyjściami w App Lab, takimi jak przyciski i wejścia tekstowe i rozwijane. Do końca rozdziału, uczniowie będą mogli stworzyć aplikację sterującą urządzeniem, podobną do wielu „inteligentnego” sprzętu, z którego korzystają w codziennym życiu.\n\n**Cele:**\n\n-   Zaprojektuj i zbuduj fizyczne urządzenie obliczeniowe, które integruje fizyczne wejścia i wyjścia z aplikacjami cyfrowymi. \n-   Utwórzcie prototypy aplikacji, które używają fizycznego urządzenia do sterowania aplikacją cyfrową.\n\n**Wielkie pytania:**\n\n-   Jakie wejścia i wyjścia są dostępne na urządzeniu fizycznym?\n-   Jakie wejścia i wyjścia są dostępne w aplikacji?\n-   Jak możemy tworzyć aplikacje, które używają fizycznego urządzenia do sterowania aplikacją cyfrową?\n\n:::\n\n:: Szczegóły [**Przegląd budowania prototypów fizycznych**]\n**Opis:** W tym rozdziale uczniowie skupiają się na tym, jak ich fizyczne urządzenie może wchodzić w interakcje ze światem zewnętrznym. Uczą się, jak używać czujników i akcelerometru do reagowania na środowisko fizyczne. Uczą się dołączać zewnętrzne diody LED i przyciski, które rozszerzają typy urządzeń, które sami mogą wykonać. W całej jednostce uczniowie używają materiałów fizycznych, takich jak papier lub karton, aby rozszerzyć funkcjonalność swoich urządzeń. Pod koniec jednostki stworzą interaktywny projekt artystyczny i opracują prototyp urządzenia fizycznego, które rozwiązuje problem. \n\n**Cele:**\n\n-   Zaprojektuj i zbuduj fizyczne urządzenie obliczeniowe, które integruje czujniki z aplikacjami cyfrowymi. \n-   Utwórzcie prototypy aplikacji, które używają fizycznego urządzenia do rozwiązywania rzeczywistych problemów.\n-   Użyjcie fizycznych urządzeń, aby rozwiązywać problemy w zabawny i innowacyjny sposób.\n\n**Wielkie pytania:**\n\n-   W jaki sposób urządzenie fizyczne wykorzystuje czujniki do reagowania na środowisko fizyczne?\n-   W jaki sposób prosty sprzęt można wykorzystać do opracowywania innowacyjnych nowych produktów?\n\n:::\n\n:: szczegóły [**Wskazówki dotyczące tworzenia aplikacji z urządzeniami**]\n\n-   Ta jednostka wymaga, aby uczniowie mieli dostęp do płytek micro:bit - [kliknij tutaj, aby uzyskać więcej informacji na temat wykorzystania micro:bitów w klasie](https://code.org/maker/microbit)\n-   Wskazówki dotyczące wspierania uczniów na poziomach programowania i różnicowania zadań są dostępne w [Przewodniku po poziomach programowania](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) i [Przewodnik po różnicowaniu](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n    :::"
+          description: "W jednostce Tworzenie aplikacji na urządzenia uczniowie badają rolę urządzeń fizycznych w informatyce. Korzystając z App Lab i BBC micro:bit, uczniowie opracowują programy wykorzystujące te same wejścia i wyjścia sprzętowe, które widzisz w urządzeniach inteligentnych, patrząc na to, jak prosty prototyp może doprowadzić do gotowego produktu. Następnie badają, w jaki sposób można wykorzystać urządzenia fizyczne do reagowania na otaczający ich świat, używając sposobu myślenia „twórcy” do tworzenia prototypów z codziennych materiałów.\n\n⚠️ Ta jednostka wykorzystuje **micro:bit** do wprowadzenia informatyki z urzdzeniami fizycznymi i sposobu myślenia „twórcy”. Możesz także uczyć tych treści za pomocą urządzeń **circuit plac zabaw**, przypisując jednostkę [Tworzenie aplikacji z urządzeniami (Circuit Playground) unit](/s/devices). Obie jednostki uczą tych samych treści i są równoważne - nie trzeba kupować obu zestawów urządzeń ani uczyć obu jednostek.\n\n::: szczegóły [**Przeglą Wejść i Wyjść**]\n**Opis:** Jednostka ta uwypukla interakcje między wejściami i wyjściami na ekranie micro:bita i aplikacji. Na swoich mikro:bitach uczniowie uczą się kontrolować wejścia, takie jak przyciski i wyjścia, takie jak ekran LED. Wchodzą również w interakcję z wejściami i wyjściami w App Lab, takimi jak przyciski i wejścia tekstowe i rozwijane. Do końca rozdziału, uczniowie będą mogli stworzyć aplikację sterującą urządzeniem, podobną do wielu „inteligentnego” sprzętu, z którego korzystają w codziennym życiu.\n\n**Cele:**\n\n-   Zaprojektuj i zbuduj fizyczne urządzenie obliczeniowe, które integruje fizyczne wejścia i wyjścia z aplikacjami cyfrowymi. \n-   Utwórzcie prototypy aplikacji, które używają fizycznego urządzenia do sterowania aplikacją cyfrową.\n\n**Wielkie pytania:**\n\n-   Jakie wejścia i wyjścia są dostępne na urządzeniu fizycznym?\n-   Jakie wejścia i wyjścia są dostępne w aplikacji?\n-   Jak możemy tworzyć aplikacje, które używają fizycznego urządzenia do sterowania aplikacją cyfrową?\n\n:::\n\n:: Szczegóły [**Przegląd budowania prototypów fizycznych**]\n**Opis:** W tym rozdziale uczniowie skupiają się na tym, jak ich fizyczne urządzenie może wchodzić w interakcje ze światem zewnętrznym. Uczą się, jak używać czujników i akcelerometru do reagowania na środowisko fizyczne. Uczą się dołączać zewnętrzne diody LED i przyciski, które rozszerzają typy urządzeń, które sami mogą wykonać. W całej jednostce uczniowie używają materiałów fizycznych, takich jak papier lub karton, aby rozszerzyć funkcjonalność swoich urządzeń. Pod koniec jednostki stworzą interaktywny projekt artystyczny i opracują prototyp urządzenia fizycznego, które rozwiązuje problem. \n\n**Cele:**\n\n-   Zaprojektuj i zbuduj fizyczne urządzenie obliczeniowe, które integruje czujniki z aplikacjami cyfrowymi. \n-   Utwórzcie prototypy aplikacji, które używają fizycznego urządzenia do rozwiązywania rzeczywistych problemów.\n-   Użyjcie fizycznych urządzeń, aby rozwiązywać problemy w zabawny i innowacyjny sposób.\n\n**Wielkie pytania:**\n\n-   W jaki sposób urządzenie fizyczne wykorzystuje czujniki do reagowania na środowisko fizyczne?\n-   W jaki sposób prosty sprzęt można wykorzystać do opracowywania innowacyjnych nowych produktów?\n\n:::\n\n:: szczegóły [**Wskazówki dotyczące tworzenia aplikacji z urządzeniami**]\n\n-   Ta jednostka wymaga, aby uczniowie mieli dostęp do płytek micro:bit - [kliknij tutaj, aby uzyskać więcej informacji na temat wykorzystania micro:bitów w klasie](https://code.org/maker/microbit)\n-   Wskazówki dotyczące wspierania uczniów na poziomach programowania i różnicowania zadań są dostępne w [Przewodniku po poziomach programowania](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) i [Przewodnik po różnicowaniu](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n    :::"
           student_description: Ta jednostka bada rolę platform sprzętowych w obliczeniach i jak różne czujniki mogą zapewnić bardziej efektywne wejście i wyjście danych niż tradycyjna klawiatura, mysz i monitor. Korzystając z App Lab i BBC micro:bita, opracujesz programy, które wykorzystują te same wejścia i wyjścia sprzętowe, które widzisz w inteligentnych urządzeniach, patrząc na to, jak prosty prototyp może doprowadzić do gotowego produktu. Jednostka kończy się wyzwaniem projektowym, aby użyć micro:bita jako bazy dla innowacji we własnym projekcie.
         vpl-csd-ci-1:
           lesson_groups:
