@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "9664ad65-66f4-46d1-b0dd-14f7d74dcf80",
+          "notice": "Unit Under Construction",
+          "details": "In response to the changes to the Create Performance Task the College Board announced on Aug 28, we will be updating this unit during the Fall 2023. Until these updates are complete, some lessons, activities, and resources will be out of date with the new format of the Create Performance Task.",
+          "link": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-18 14:22:39 UTC",
+    "serialized_at": "2023-08-29 04:35:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1773,6 +1785,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
