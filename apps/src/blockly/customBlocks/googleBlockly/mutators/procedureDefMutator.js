@@ -8,6 +8,7 @@
  */
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
+
 /**
  * A type guard which checks if the given block is a procedure block.
  * @param block The block to check for procedure-y-ness.

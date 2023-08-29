@@ -1,8 +1,9 @@
 import * as GoogleBlockly from 'blockly/core';
-import BlockSvgFrame from '../../addons/blockSvgFrame';
 import msg from '@cdo/locale';
-import {procedureDefMutator} from './mutators/procedureDefMutator';
 import experiments from '@cdo/apps/util/experiments';
+import {nameComparator} from '@cdo/apps/util/sort';
+import BlockSvgFrame from '../../addons/blockSvgFrame';
+import {procedureDefMutator} from './mutators/procedureDefMutator';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
@@ -182,15 +183,20 @@ GoogleBlockly.Extensions.registerMutator(
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
  * @returns an array of block objects representing the flyout blocks
  */
-export function flyoutCategory(workspace) {
+export function flyoutCategory(workspace, functionEditorOpen = false) {
+  const useNewFunctionEditor = experiments.isEnabled(
+    experiments.MODAL_FUNCTION_EDITOR
+  );
   const blockList = [];
 
   const newFunctionButton = {
     kind: 'button',
     text: msg.createBlocklyFunction(),
-    callbackKey: 'createNewFunction',
+    // TODO: Remove the alternate callback key once we're using the new function editor
+    callbackKey: useNewFunctionEditor
+      ? 'newProcedureCallback'
+      : 'createNewFunction',
   };
-
   const functionDefinitionBlock = {
     kind: 'block',
     type: 'procedures_defnoreturn',
@@ -204,34 +210,48 @@ export function flyoutCategory(workspace) {
     // call to open the behavior editor with a new defintion block.
     // Until then, we just create a block under all existing blocks on the
     // main workspace.
-    createAndCenterNewDefBlock(functionDefinitionBlock);
+    createNewDefinitionBlock(functionDefinitionBlock);
   };
 
-  if (useModalFunctionEditor) {
+  if (functionEditorOpen) {
+    // No-op - cannot create new functions while the modal editor is open
+  } else if (useModalFunctionEditor) {
     workspace.registerButtonCallback('createNewFunction', createNewFunction);
+    workspace.registerButtonCallback(
+      'newProcedureCallback',
+      Blockly.functionEditor.newProcedureCallback
+    );
     blockList.push(newFunctionButton);
   } else {
     blockList.push(functionDefinitionBlock);
   }
 
-  const allWorkspaces = Blockly.Workspace.getAll().filter(
-    workspace => !workspace.isFlyout
-  );
-  const allFunctionNames = [];
-  allWorkspaces.forEach(workspace => {
-    const behaviorBlocks = workspace
+  // Workspaces to populate functions flyout category from
+  const workspaces = [
+    Blockly.getMainWorkspace(),
+    Blockly.getHiddenDefinitionWorkspace(),
+  ];
+
+  const allFunctions = [];
+  workspaces.forEach(workspace => {
+    const procedureBlocks = workspace
       .getTopBlocks()
       .filter(topBlock => topBlock.type === 'procedures_defnoreturn');
-    behaviorBlocks.forEach(block =>
-      allFunctionNames.push(block.getFieldValue('NAME'))
-    );
+    procedureBlocks.forEach(block => {
+      allFunctions.push({
+        name: block.getFieldValue('NAME'),
+        id: block.id,
+      });
+    });
   });
-  allFunctionNames.sort().forEach(name => {
+
+  allFunctions.sort(nameComparator).forEach(({name, id}) => {
     blockList.push({
       kind: 'block',
       type: 'procedures_callnoreturn',
       extraState: {
         name: name,
+        id: id,
       },
       fields: {
         NAME: name,
@@ -256,32 +276,18 @@ const getLowestBlockBottomY = () => {
   return lowestBlockBottom + 16;
 };
 
-export const createAndCenterNewDefBlock = function (blockState) {
-  // Everything here is place-holder code that should be replaced with a
-  // call to open the behavior editor with a new defintion block.
-  // Until then, we just create a block under all existing blocks on the
-  // main workspace.
-
-  const newDefBlock = Blockly.serialization.blocks.append(
+// Creates a new definition block under all existing blocks on the main workspace,
+// scrolls to the block, and selects it
+export const createNewDefinitionBlock = blockState => {
+  const newDefinitionBlock = Blockly.serialization.blocks.append(
     {...blockState, x: 16, y: getLowestBlockBottomY()},
     Blockly.getMainWorkspace()
   );
-  // Hide the open toolbox flyout
+
+  // Close the open toolbox flyout
   Blockly.getMainWorkspace().hideChaff();
+
   // Scroll to the new block and select it.
-  Blockly.getMainWorkspace().centerOnBlock(newDefBlock.id);
-  newDefBlock.select();
+  Blockly.getMainWorkspace().centerOnBlock(newDefinitionBlock.id);
+  newDefinitionBlock.select();
 };
-
-export function sortProceduresByName(a, b) {
-  const nameA = a.name.toUpperCase(); // Convert to uppercase for case-insensitive sorting
-  const nameB = b.name.toUpperCase();
-
-  if (nameA < nameB) {
-    return -1; // Name A comes before Name B
-  }
-  if (nameA > nameB) {
-    return 1; // Name A comes after Name B
-  }
-  return 0; // Names are equal
-}

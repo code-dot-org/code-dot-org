@@ -1,7 +1,8 @@
 import * as GoogleBlockly from 'blockly/core';
-import BlockSvgFrame from '../../addons/blockSvgFrame';
 import msg from '@cdo/locale';
-import {createAndCenterNewDefBlock} from './proceduresBlocks';
+import {nameComparator} from '@cdo/apps/util/sort';
+import BlockSvgFrame from '../../addons/blockSvgFrame';
+import {createNewDefinitionBlock} from './proceduresBlocks';
 import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
@@ -118,7 +119,7 @@ GoogleBlockly.Extensions.registerMutator(
 );
 
 // This extension adds an SVG frame around behavior definition blocks.
-// Not used when the modal function is enabled.
+// Not used when the modal function editor is enabled.
 GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
   if (!useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
     this.functionalSvg_ = new BlockSvgFrame(
@@ -148,7 +149,7 @@ GoogleBlockly.Extensions.registerMutator(
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
  * @returns an array of XML block elements
  */
-export function flyoutCategory(workspace) {
+export function flyoutCategory(workspace, functionEditorOpen = false) {
   const blockList = [];
 
   const newBehaviorButton = {
@@ -156,7 +157,6 @@ export function flyoutCategory(workspace) {
     text: msg.createBlocklyBehavior(),
     callbackKey: 'createNewBehavior',
   };
-
   const behaviorDefinitionBlock = {
     kind: 'block',
     type: 'behavior_definition',
@@ -165,40 +165,49 @@ export function flyoutCategory(workspace) {
     },
   };
 
-  const createNewBehavior = function () {
-    // Everything here is place-holder code that should be replaced with a
-    // call to open the behavior editor with a new defintion block.
-    // Until then, we just create a block under all existing blocks on the
-    // main workspace.
+  // TODO: Replace this with a call to open the behavior editor with a new block
+  const createNewBehavior = () =>
+    createNewDefinitionBlock(behaviorDefinitionBlock);
 
-    createAndCenterNewDefBlock(behaviorDefinitionBlock);
-  };
-  if (useModalFunctionEditor) {
+  // If the modal function editor is enabled, we render a button to open the editor
+  // Otherwise, we render a "blank" behavior definition block
+  if (functionEditorOpen) {
+    // No-op -- cannot create new behaviors while the modal editor is open
+  } else if (useModalFunctionEditor) {
     workspace.registerButtonCallback('createNewBehavior', createNewBehavior);
     blockList.push(newBehaviorButton);
   } else {
     blockList.push(behaviorDefinitionBlock);
   }
+
   blockList.push(...getCustomCategoryBlocksForFlyout('Behavior'));
 
-  const allWorkspaces = Blockly.Workspace.getAll().filter(
-    workspace => !workspace.isFlyout
-  );
-  const allBehaviorNames = [];
-  allWorkspaces.forEach(workspace => {
+  // Workspaces to populate behaviors flyout category from
+  const workspaces = [
+    Blockly.getMainWorkspace(),
+    Blockly.getHiddenDefinitionWorkspace(),
+  ];
+
+  const allBehaviors = [];
+  workspaces.forEach(workspace => {
     const behaviorBlocks = workspace
       .getTopBlocks()
       .filter(topBlock => topBlock.type === 'behavior_definition');
     behaviorBlocks.forEach(block =>
-      allBehaviorNames.push(block.getFieldValue('NAME'))
+      allBehaviors.push({
+        name: block.getFieldValue('NAME'),
+        id: block.id,
+      })
     );
   });
-  allBehaviorNames.sort().forEach(name => {
+
+  allBehaviors.sort(nameComparator).forEach(({name, id}) => {
     blockList.push({
       kind: 'block',
       type: 'gamelab_behavior_get',
       extraState: {
-        name: name,
+        name,
+        id,
       },
       fields: {
         NAME: name,
@@ -211,6 +220,7 @@ export function flyoutCategory(workspace) {
 
 function getCustomCategoryBlocksForFlyout(category) {
   const parser = new DOMParser();
+  // TODO: Update this to use JSON once https://codedotorg.atlassian.net/browse/CT-8 is merged
   const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
 
   const categoryNodes = xmlDoc.getElementsByTagName('category');
@@ -228,18 +238,19 @@ function getCustomCategoryBlocksForFlyout(category) {
       }
 
       const jsonBlocks = convertXmlToJson(xmlRootElement);
-
-      const flyoutBlocks = jsonBlocks.blocks.blocks.map(block =>
-        simplifyBlockStateForFlyout(block)
+      const flyoutBlocks = jsonBlocks.blocks.blocks.map(
+        simplifyBlockStateForFlyout
       );
-      return flyoutBlocks; // Return the new <xml> root element with block children
+
+      // Returns an array of simplified JSON blocks for flyout, or an empty array
+      // if the desired category is not found
+      return flyoutBlocks;
     }
   }
-
-  return null; // Return null if the desired category is not found
+  return [];
 }
 
-// Used to simplify block state for inclusion in the Behaviors category flyout.
+// Used to simplify block state for inclusion in the Behaviors category flyout
 function simplifyBlockStateForFlyout(block) {
   // Clone the original block object to avoid modifying it directly
   const modifiedBlock = {...block};
