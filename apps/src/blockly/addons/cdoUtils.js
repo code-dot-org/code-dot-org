@@ -15,6 +15,7 @@ import {parseElement as parseXmlElement} from '../../xml';
 import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
 import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
 import experiments from '@cdo/apps/util/experiments';
+import _ from 'lodash';
 
 /**
  * Loads blocks to a workspace.
@@ -148,9 +149,11 @@ function moveHiddenProcedures(source, hiddenDefinitions, procedureTypesToHide) {
     }
   });
   source.blocks.blocks = otherBlocks;
-  hiddenDefinitions.blocks ||= {};
-  hiddenDefinitions.blocks.blocks ||= [];
-  hiddenDefinitions.blocks.blocks.push(...blocksToHide);
+  const existingHiddenBlocks = _.get(hiddenDefinitions, 'blocks.blocks', []);
+  _.set(hiddenDefinitions, 'blocks.blocks', [
+    ...existingHiddenBlocks,
+    ...blocksToHide,
+  ]);
 }
 
 export function setHSV(block, h, s, v) {
