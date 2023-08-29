@@ -23,9 +23,9 @@ import experiments from '@cdo/apps/util/experiments';
  * @param {string} source - workspace serialization, either XML or JSON
  * @param {[string]} hiddenDefinitions - hidden definitions serialization, in JSON. Only used in Google Blockly labs.
  */
-export function loadBlocksToWorkspace(workspace, source, hiddenDefintions) {
+export function loadBlocksToWorkspace(workspace, source, hiddenDefinitions) {
   const {parsedSource, parsedHiddenDefinitions, blockOrderMap} =
-    prepareSourcesForWorkspaces(source, hiddenDefintions);
+    prepareSourcesForWorkspaces(source, hiddenDefinitions);
   Blockly.serialization.workspaces.load(parsedSource, workspace);
   positionBlocksOnWorkspace(workspace, blockOrderMap);
   loadHiddenDefinitionBlocksToWorkspace(parsedHiddenDefinitions);

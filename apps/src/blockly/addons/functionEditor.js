@@ -245,7 +245,9 @@ export default class FunctionEditor {
       this.block.getProcedureModel().getName(),
       Blockly.mainBlockSpace
     ).forEach(block => {
-      block.dispose();
+      // calling dispose with true = healStack. This is needed to prevent any child blocks of
+      // this block from being deleted.
+      block.dispose(true);
     });
 
     // delete the block from the editor workspace's procedure map
@@ -255,7 +257,7 @@ export default class FunctionEditor {
       .getProcedureMap()
       .delete(this.block.getProcedureModel().getId());
 
-    // delete the block from the editor workspace and hide the modal
+    // delete the block from the editor workspace and hide the modal.
     this.block.dispose();
     this.hide();
   }
@@ -362,24 +364,24 @@ export default class FunctionEditor {
   // procedure, so that the editor workspace knows about those procedures.
   setUpEditorWorkspaceProcedures() {
     Blockly.Events.disable();
-    const procedureDefinitions = this.editorWorkspace
+    const editorProcedureDefinitions = this.editorWorkspace
       .getProcedureMap()
       .getProcedures();
     Blockly.getHiddenDefinitionWorkspace()
       .getProcedureMap()
       .getProcedures()
-      .forEach(procedure => {
-        const procedureId = procedure.getId();
+      .forEach(hiddenProcedure => {
+        const hiddenProcedureId = hiddenProcedure.getId();
         if (
-          procedureDefinitions.filter(
-            procedureModel => procedureModel.getId() === procedureId
+          editorProcedureDefinitions.filter(
+            procedureModel => procedureModel.getId() === hiddenProcedureId
           ).length === 0
         ) {
-          const procedureModel = this.createProcedureModelForWorkspace(
+          const editorProcedureModel = this.createProcedureModelForWorkspace(
             this.editorWorkspace,
-            procedure
+            hiddenProcedure
           );
-          this.editorWorkspace.getProcedureMap().add(procedureModel);
+          this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
         }
       });
     Blockly.Events.enable();

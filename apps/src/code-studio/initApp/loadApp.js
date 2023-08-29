@@ -516,7 +516,7 @@ const sourceHandler = {
     }
     return Promise.resolve(); // Return an insta-resolved promise.
   },
-  // Get the source from the hidden defintion workspace, if any. Otherwise return undefined.
+  // Get the source from the hidden definition workspace, if any. Otherwise return undefined.
   // Hidden definitions will only exist for Google Blockly levels.
   getHiddenDefinitions() {
     if (window.Blockly && Blockly.getHiddenDefinitionWorkspace()) {
