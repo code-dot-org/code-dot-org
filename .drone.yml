@@ -35,11 +35,22 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
+  - name: restore-cache
+    image: plugins/s3-cache
+    settings:
+      endpoint: s3://code-dot-org
+      debug: true
+      pull: true
+      restore: true
+      filename: unit-tests-cache-ubuntu-20.tar
+
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
     image: codedotorg/code-dot-org:ubuntu-20
     pull: always
     volumes:
+      - name: rbenv
+        path: /home/circleci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     environment:
@@ -50,6 +61,9 @@ steps:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
       - sudo chown -R circleci:circleci .
+      # cache is restored to source directory, so we need to copy it into the right place
+      - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
+      - rm -rf "$(pwd)/home/circleci/.rbenv"
       # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
       - export CIRCLE_SHA1=$DRONE_COMMIT
       - EXIT_CODE=0
@@ -57,7 +71,23 @@ steps:
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
 
+  - name: update-cache
+    image: plugins/s3-cache
+    volumes:
+      - name: rbenv
+        path: /home/circleci/.rbenv
+    settings:
+      endpoint: s3://code-dot-org
+      debug: true
+      pull: true
+      rebuild: true
+      filename: unit-tests-cache-ubuntu-20.tar
+      mount:
+        - /home/circleci/.rbenv
+
 volumes:
+  - name: rbenv
+    temp: {}
   - name: mysql
     temp: {}
 
@@ -111,12 +141,15 @@ steps:
       debug: true
       pull: true
       restore: true
+      filename: ui-tests-cache-ubuntu-20.tar
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
     image: codedotorg/code-dot-org:ubuntu-20
     pull: always
     volumes:
+      - name: rbenv
+        path: /home/circleci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     environment:
@@ -139,6 +172,8 @@ steps:
         from_secret: SAUCE_ACCESS_KEY
     commands:
       - sudo chown -R circleci:circleci .
+      # cache is restored to source directory, so we need to copy it into the right place
+      - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
       # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
       - export CIRCLE_SHA1=$DRONE_COMMIT
       - EXIT_CODE=0
@@ -148,17 +183,24 @@ steps:
 
   - name: update-cache
     image: plugins/s3-cache
+    volumes:
+      - name: rbenv
+        path: /home/circleci/.rbenv
     settings:
       endpoint: s3://code-dot-org
       debug: true
       pull: true
       rebuild: true
+      filename: ui-tests-cache-ubuntu-20.tar
       mount:
+        - /home/circleci/.rbenv
         # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
         - dashboard/db/ui_test_data.hash
         - dashboard/db/ui_test_data.sql
 
 volumes:
+  - name: rbenv
+    temp: {}
   - name: mysql
     temp: {}
 
@@ -170,6 +212,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 1fd8b008e4c7c00c7010c491d7412b6bf1b453e2fc5e0055053ad1893563be79
+hmac: 1a3bdb88a9487275dc953580e747efb413d285392265a8d9fc3ad1147841d838
 
 ...
