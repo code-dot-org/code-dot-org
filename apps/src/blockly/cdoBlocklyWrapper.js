@@ -333,9 +333,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     partitionBlocksByType() {
       // Google Blockly only. Used to load/render certain block types before others.
     },
-    clearWorkspaces() {
-      Blockly.mainBlockSpace.clear();
-    },
   };
   blocklyWrapper.customBlocks = customBlocks;
 

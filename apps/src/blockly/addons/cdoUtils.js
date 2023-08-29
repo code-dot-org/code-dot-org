@@ -356,12 +356,3 @@ export function partitionBlocksByType(
 
   return [...prioritizedBlocks, ...remainingBlocks];
 }
-
-// Clear workspaces to start the level over with fresh sources.
-export function clearWorkspaces() {
-  Blockly.mainBlockSpace.clear();
-  if (Blockly.getHiddenDefinitionWorkspace()) {
-    Blockly.getHiddenDefinitionWorkspace().clear();
-    Blockly.getHiddenDefinitionWorkspace().getProcedureMap().clear();
-  }
-}
