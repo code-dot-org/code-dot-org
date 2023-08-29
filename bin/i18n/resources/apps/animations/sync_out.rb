@@ -2,7 +2,6 @@
 
 require 'fileutils'
 require 'json'
-require 'ruby-progressbar'
 
 require_relative '../../../../animation_assets/manifest_builder'
 require_relative '../../../i18n_script_utils'
@@ -53,10 +52,9 @@ module I18n
           end
 
           def progress_bar
-            @progress_bar ||= ProgressBar.create(
+            @progress_bar ||= I18nScriptUtils.create_progress_bar(
               total: pegasus_languages.size,
               title: progress_bar_title,
-              format: I18nScriptUtils::PROGRESS_BAR_FORMAT,
             )
           end
 
