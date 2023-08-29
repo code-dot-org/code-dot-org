@@ -1941,8 +1941,7 @@ hr-HR:
       K-1 Artist 1 Multi 1:
         answers:
         - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
-        - correct: true
-          text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
         - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
         - text: "/script_assets/k_1_images/artist_images/E-S.png"
         content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
@@ -2067,8 +2066,7 @@ hr-HR:
         title: Višestruki izbor
       K-1 Maze Loops Multi 1:
         answers:
-        - correct: true
-          text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
         - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
         - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
         content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
@@ -2079,8 +2077,7 @@ hr-HR:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
         - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
-        - correct: true
-          text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
         content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
         - text: Izaberite ispravan blok ponavljanja.
@@ -2122,8 +2119,7 @@ hr-HR:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
         - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
-        - correct: true
-          text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
         content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
         - text: Koji korak bi trebao biti na početku programa?
@@ -2131,8 +2127,7 @@ hr-HR:
       K-1 Plant a Seed Multi 2:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
-        - correct: true
-          text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
         - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
         content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
