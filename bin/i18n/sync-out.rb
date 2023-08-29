@@ -30,7 +30,6 @@ module I18n
       restore_redacted_files
       distribute_translations
       copy_untranslated_apps
-      rebuild_blockly_js_files
       restore_markdown_headers
       Services::I18n::CurriculumSyncUtils.sync_out
       HocSyncUtils.sync_out
@@ -453,9 +452,16 @@ module I18n
           translations_with_fallback = blockly_english.merge(translations) do |_key, english, translation|
             translation.empty? ? english : translation
           end
-          relname = File.basename(loc_file)
-          destination = "apps/node_modules/@code-dot-org/blockly/#{locale_dir}/#{relname}"
-          sanitize_data_and_write(translations_with_fallback, destination)
+          translations_with_fallback = sort_and_sanitize(translations_with_fallback)
+
+          # Replaced the original script `apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh`
+          # to generate js translation files right away only for the "changed files"
+          js_translations = translations_with_fallback.each_with_object('') do |(i18n_key, i18n_val), js_string|
+            js_string << %Q[Blockly.Msg.#{i18n_key} = "#{i18n_val}";\n]
+          end
+          destination = CDO.dir(File.join('apps/lib/blockly', "#{js_locale}.js"))
+          FileUtils.mkdir_p(File.dirname(destination))
+          File.write(destination, js_translations)
         end
 
         ### Pegasus markdown
@@ -564,17 +570,6 @@ module I18n
         untranslated_apps.each do |app|
           app_locale = prop[:locale_s].tr('-', '_').downcase!
           FileUtils.cp_r "apps/i18n/#{app}/en_us.json", "apps/i18n/#{app}/#{app_locale}.json"
-        end
-      end
-    end
-
-    def self.rebuild_blockly_js_files
-      I18nScriptUtils.run_bash_script "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
-      Dir.chdir('apps') do
-        _stdout, stderr, status = Open3.capture3('yarn build')
-        unless status == 0
-          puts "Error building apps:"
-          puts stderr
         end
       end
     end

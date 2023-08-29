@@ -1797,4 +1797,8 @@ FactoryBot.define do
     understanding {0}
     teacher_description {"Description for teacher"}
   end
+
+  factory :learning_goal_evaluation do
+    association :learning_goal
+  end
 end
