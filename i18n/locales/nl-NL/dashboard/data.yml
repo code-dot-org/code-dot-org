@@ -493,6 +493,8 @@ nl:
         poetry_module_conditionals: Conditionals - Coderen met poëzie
         poemart_intro: Inleiding tot de dichtkunst
         csp_applab_parameters: Functies met Parameters
+        what-is-creativity: Wat is creativiteit?
+        code-break: Neem een codepauze
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok
