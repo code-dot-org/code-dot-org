@@ -838,7 +838,7 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     if (Blockly.functionEditor) {
       Blockly.functionEditor.hideIfOpen();
     }
-    Blockly.mainBlockSpace.clear();
+    Blockly.cdoUtils.clearWorkspaces();
     this.setStartBlocks_(config, false);
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
@@ -2738,8 +2738,12 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     loadLastAttempt = false;
   }
   var startBlocks = config.level.startBlocks || '';
+  // TODO: When we start using json in levelbuilder, we will need to pull this from the level config.
+  // For now, if we aren't loading last attempt hidden definitions will always be undefined.
+  let startHiddenDefinitions = undefined;
   if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;
+    startHiddenDefinitions = config.level.hiddenDefinitions;
   }
 
   let isXml = stringIsXml(startBlocks);
@@ -2768,7 +2772,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     );
   }
   try {
-    this.loadBlocks(startBlocks, config.level.hiddenDefinitions);
+    this.loadBlocks(startBlocks, startHiddenDefinitions);
   } catch (e) {
     if (loadLastAttempt) {
       try {

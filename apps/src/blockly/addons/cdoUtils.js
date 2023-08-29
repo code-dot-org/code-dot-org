@@ -15,7 +15,6 @@ import {parseElement as parseXmlElement} from '../../xml';
 import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
 import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
 import experiments from '@cdo/apps/util/experiments';
-import _ from 'lodash';
 
 /**
  * Loads blocks to a workspace.
@@ -135,7 +134,6 @@ function moveHiddenProcedures(source, hiddenDefinitions, procedureTypesToHide) {
   hiddenDefinitions.procedures ||= [];
   source.blocks.blocks.forEach(block => {
     if (procedureTypesToHide.includes(block.type)) {
-      console.log('moving block ', block);
       blocksToHide.push(block);
       // If we found a block to hide, also copy the procedure model
       // for that block to the hidden definitions workspace.
@@ -143,7 +141,6 @@ function moveHiddenProcedures(source, hiddenDefinitions, procedureTypesToHide) {
         p => p.id === block.extraState.procedureId
       );
       if (sourceProcedureModel.length > 0) {
-        console.log(`moving source procedure `, sourceProcedureModel[0]);
         hiddenDefinitions.procedures.push(sourceProcedureModel[0]);
       }
     } else {
@@ -151,7 +148,9 @@ function moveHiddenProcedures(source, hiddenDefinitions, procedureTypesToHide) {
     }
   });
   source.blocks.blocks = otherBlocks;
-  _.set(hiddenDefinitions, 'blocks.blocks', blocksToHide);
+  hiddenDefinitions.blocks ||= {};
+  hiddenDefinitions.blocks.blocks ||= [];
+  hiddenDefinitions.blocks.blocks.push(...blocksToHide);
 }
 
 export function setHSV(block, h, s, v) {
@@ -353,4 +352,13 @@ export function partitionBlocksByType(
   });
 
   return [...prioritizedBlocks, ...remainingBlocks];
+}
+
+// Clear workspaces to start the level over with fresh sources.
+export function clearWorkspaces() {
+  Blockly.mainBlockSpace.clear();
+  if (Blockly.getHiddenDefinitionWorkspace()) {
+    Blockly.getHiddenDefinitionWorkspace().clear();
+    Blockly.getHiddenDefinitionWorkspace().getProcedureMap().clear();
+  }
 }
