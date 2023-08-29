@@ -179,6 +179,8 @@ mr:
         csd_sprite_properties: स्प्राईट प्रॉपर्टीज
         csc-starquilts-intro: जिओमेट्रिक स्टार क्विल्ट कोडिंग
         csc-ecosystems-intro: मरीन इकोसिस्टम सिम्युलेशन
+        what-is-creativity: सर्जनशीलता म्हणजे काय?
+        code-break: कोड ब्रेक घ्या
     callout:
       text:
         run: तुमचा प्रोग्रॅम करून पाहण्यासाठी "रन" दाबा
