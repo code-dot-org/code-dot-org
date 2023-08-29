@@ -4,13 +4,13 @@ set -e # Exit on error
 echo "Going to build and deploy storybook to cdo-styleguide gh-pages repo"
 
 DIR_TO_DEPLOY=storybook-deploy
-#if [ -z "$CDO_STYLEGUIDE_REPO_TOKEN" ]
-#then
-#    REPO="git@github.com:code-dot-org/cdo-styleguide.git"
-#else
-#    REPO="https://${CDO_STYLEGUIDE_REPO_TOKEN}@github.com/code-dot-org/cdo-styleguide.git"
-#fi
-#SHA=`git rev-parse --verify HEAD`
+if [ -z "$CDO_STYLEGUIDE_REPO_TOKEN" ]
+then
+    REPO="git@github.com:code-dot-org/cdo-styleguide.git"
+else
+    REPO="https://${CDO_STYLEGUIDE_REPO_TOKEN}@github.com/code-dot-org/cdo-styleguide.git"
+fi
+SHA=`git rev-parse --verify HEAD`
 
 # get rid of old build if it is still around for some reason
 rm -rf $DIR_TO_DEPLOY
