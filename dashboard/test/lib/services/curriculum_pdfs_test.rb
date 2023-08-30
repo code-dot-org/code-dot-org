@@ -26,8 +26,8 @@ module Services
 
     test 'get_pdfless_lessons excludes lessons without lesson plans' do
       AWS::S3.stubs(:exists_in_bucket).returns(false)
-      unit_with_lesson_plans = create :script, :with_lessons, seeded_from: Time.now
-      unit_without_lesson_plans = create :script, :with_lessons, seeded_from: Time.now
+      unit_with_lesson_plans = create :script, :with_lessons
+      unit_without_lesson_plans = create :script, :with_lessons
       unit_without_lesson_plans.lessons.each do |lesson|
         lesson.update!(has_lesson_plan: false)
       end
