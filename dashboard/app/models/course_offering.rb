@@ -66,7 +66,7 @@ class CourseOffering < ApplicationRecord
 
   ACCEPTABLE_RESOURCE_TYPES = [
     'Answer Key',
-    'Activity Guides',
+    'Activity Guide',
     'Slides',
     'Exemplar',
     'Slide Deck',
