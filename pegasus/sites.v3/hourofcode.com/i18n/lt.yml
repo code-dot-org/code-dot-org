@@ -256,6 +256,8 @@ lt:
   call_to_action_learn_about_approach: Sužinokite daugiau apie mūsų požiūrį
   call_to_action_try_java_lab: Išbandykite “Java Lab”
   call_to_action_notify_available: Praneškite man, kai bus
+  call_to_action_register_early_access: Registruotis ankstyvai prieigai
+  call_to_action_open_positions: Peržiūrėti atviras pozicijas
   aria_label_call_to_action_afe: Sužinokite daugiau apie “Amazon Future Engineer”
   aria_label_call_to_action_teaching_csf: Pradėkite “Teaching Computer Science Fundamentals”
     profesinio mokymosi programą
@@ -13222,6 +13224,121 @@ lt:
   accessibility_card_text_10: "“Code.org” AP kompiuterių mokslo principų mokymo programos
     pritaikymas naudojant “Quorum” - įrodymais pagrįstą kalbą, iš pradžių sukurtą
     siekiant suteikti prieinamumą akliesiems ar vizualiai negalią turintiems studentams."
+  engineering_hero_heading: Prisijunkite prie mūsų inžinierių komandos!
+  engineering_hero_desc: Toliau plėsdami savo inžinierių komandą, norėjome pasidalinti
+    daugiau apie mūsų inžinerijos organizaciją Code.org ir kai kuriais unikaliais
+    darbo čia aspektais. Jei jus domina kreiptis dėl vieno iš mūsų vaidmenų, mes norėtume
+    išgirsti iš jūsų!
+  engineering_team_title: Susipažinkite su inžinierių komanda Code.org
+  engineering_team_card_text_1: Tai (dauguma) mes, asmeniškai, susibūrėme 2023 m.
+    Vasarą! Ši minia yra padalinta į keturias mūsų inžinierių komandos subkomandas,
+    kurios dirba kartu kurdamos ir aptarnaudamos platformą visiems mūsų studentams
+    ir mokytojams.
+  engineering_team_card_text_2: Jei jus domina kreiptis dėl vieno iš mūsų vaidmenų,
+    mes norėtume išgirsti iš jūsų! Atvirų pozicijų sąrašą galite rasti mūsų Karjeros
+    puslapyje.
+  engineering_our_team_title: Mūsų inžinierių komanda
+  engineering_our_team_desc: "“Code.org” inžinierių komanda yra padalinta į keturias
+    subkomandas, kurios kuria ir palaiko skirtingas mūsų platformos sritis:"
+  engineering_our_team_sub_title_1: Studentų mokymosi komanda
+  engineering_our_team_text_1: Mūsų studentų mokymosi komandai priklauso visa mūsų
+    veikla (mes jas vadiname laboratorijomis), kurią mūsų studentai naudoja kiekvieną
+    dieną. Ši komanda daugiausia dirba “front-end tech” (mes naudojame “React” ir
+    daugybę pasirinktinių JS), ir mes turime puikius darbo santykius su daugeliu partnerių
+    ir atviro kodo projektų. Pavyzdžiui, mes naudojame [Google Blockly] (%{youtube_url})
+    visiems mūsų blokinio programavimo. Mes remiame studentus jų mokymosi kelionę
+    visą kelią nuo darželio iki 12 klasės.
+  engineering_our_team_sub_title_2: Mokytojų patirties komanda
+  engineering_our_team_text_2: Mūsų mokytojų patirties komanda kuria įrankius, kurie
+    pritraukia naujus mokytojus į Code.org (mes vadiname šiuos įsigijimo produktus),
+    ir kuria platformą, kuri įgalina mūsų esamus mokytojus mokyti mūsų mokymo programą
+    (mūsų mokytojų įrankius). Kaip ir mūsų studentų įrankiais, mes pasikliaujame “React”,
+    kad sukurtume savo priekinį galą, o mūsų serverio pusės komponentai būtų patiekiami
+    naudojant “Ruby on Rails”.
+  engineering_our_team_sub_title_3: Platformos komanda
+  engineering_our_team_text_3: Mūsų platformos komandai priklauso pagrindiniai komponentai,
+    kurie tarnauja mūsų studentų ir mokytojų komandų poreikiams (pavyzdžiui, autentifikavimas
+    ir vartotojo profilis), taip pat turi misiją pasiekti studentus, kurių dar negalime
+    pasiekti. Tai apima integracijų kūrimą, jungiantį mus su mokyklomis, naudojančiomis
+    skirtingas mokymosi valdymo sistemas (LMS), ir mūsų mokymo programos pakavimą,
+    kad ją būtų galima naudoti atokiose mokyklose, neturinčiose prieigos prie patikimo
+    interneto.
+  engineering_our_team_sub_title_4: Infrastruktūros komanda
+  engineering_our_team_text_4: Mūsų infrastruktūros komanda suteikia pagrindą platformai,
+    kuri palaiko mūsų studentus ir mokytojus. Tai apima mūsų prieglobos infrastruktūrą
+    ir susijusias paslaugas (mes naudojame AWS), duomenų valdymą, saugumo programas,
+    kūrėjo ir diegimo paslaugas ir daug daugiau. Šiai komandai taip pat priklauso
+    mūsų mastelio keitimo ir atidėjinių sistemos, kurios yra labai svarbios “Hour
+    of Code” metu, kur kviečiame kiekvieną pasaulio studentą užbaigti kodavimo valandą
+    su mumis.
+  engineering_faq_question_1: Ką veikia Code.org?
+  engineering_faq_answer_1_a: Code.org yra ne pelno siekianti švietimo naujovė, skirta
+    vizijai, kad kiekvienas kiekvienos mokyklos studentas turi galimybę mokytis informatikos
+    kaip pagrindinio K-12 ugdymo dalį.
+  engineering_faq_answer_1_b: Mes plečiame prieigą prie kompiuterių mokslo mokyklose,
+    daugiausia dėmesio skirdami jaunų moterų ir studentų iš kitų nepakankamai atstovaujamų
+    grupių dalyvavimui. Pirmaujanti kompiuterių mokslo programos K-12 tiekėja didžiausiuose
+    JAV mokyklų rajonuose Code.org taip pat organizuoja kasmetinę “Hour of Code” kampaniją,
+    kurioje dalyvavo daugiau nei 15% visų pasaulio studentų.
+  engineering_faq_answer_1_c: Code.org palaiko dosnūs donorai, įskaitant “Microsoft”,
+    “Amazon”, “Google” ir daugelis kitų.
+  engineering_faq_question_2: Kas yra Code.org kūrėjo patirtis ir įrankiai?
+  engineering_faq_answer_2: Mūsų kūrėjų patirtis gali skirtis nuo to, ką matėte atlikdami
+    savo ankstesnius vaidmenis. Glaudžiai bendradarbiaudami su mūsų produktų komanda,
+    mes siunčiame į gamybą kiekvieną darbo dieną ir turime įvairių kadencijų - kartais
+    rašote kodą, kuris tą dieną vyksta gyvai; kitais atvejais jūs vykdote ilgesnio
+    laikotarpio projektus - ir nors mes sekame 2 savaitinius sprintus, mes tai darome
+    lengvu būdu. Mes indeksuoti link gauti teisingus dalykus padaryti teisingą kelią
+    vs atsižvelgiant purist požiūrį į bet kokią konkrečią metodiką. [Visi mūsų kodas]
+    (%{code_url}) yra atviro kodo ir mes naudojame JIRA ir GitHub traukti prašymus
+    sekti visus mūsų darbo elementus. Mums taip pat labai rūpi kokybė ir testavimas
+    ir pasisekė, kad turime neįtikėtiną [SauceLabs](%{saucelabs_url}) palaikymą, kurie
+    padeda mums paleisti mūsų UI testų rinkinį įvairiuose studentų įrenginiuose (pvz.,
+    “iPad”) jų debesų įrenginių ūkyje.
+  engineering_faq_question_3: Kas yra inžinieriaus budėjimo rotacija Code.org?
+  engineering_faq_answer_3: Mūsų 30+ inžinierių komanda dalijasi budėjimo pareigomis.
+    Kiekvienas inžinierius apima 24 valandų pamainą ir naudoja mūsų eskalavimo kelius
+    ir “playbooks”, kad atsakytų į svetainės pertrūkius ar kitas tiesiogines svetainės
+    problemas. Mes didžiuojamės savo svetainės patikimumu - vidutiniškai kiekvienas
+    inžinierius tik kartą per metus atsibudo dėl problemų, kurios paprastai greitai
+    išsprendžiamos. Vietoj to, “Developer of the Day” paprastai praleidžia dalį savo
+    darbo dienos, valdydamas gamybos diegimą ir bandydamas mažiau skubius klausimus.
+  engineering_faq_question_4: Ar esate nuotoliniu būdu draugiška/WFH organizacija?
+  engineering_faq_answer_4_a: Taip! 2019 m., Netrukus prieš pandemiją, “Code.org”
+    tapo pirmąja nuotoliniu būdu organizacija. Šiandien mes turime inžinierių kiekvienoje
+    JAV laiko juostoje ir atitinkamai pritaikome darbo valandas. Dauguma mūsų susitikimų
+    vyksta tarp 10am ir 3pm PT valandų.
+  engineering_faq_answer_4_b: Mes taip pat pripažįstame asmens laiko vertę ir kiekvieną
+    ketvirtį mes susibūrėme asmeniškai, paprastai Sietle. Du iš šių renginių (mes
+    juos vadiname “Kick-off week” ir “Codechella”) sujungia visus organizacijos sausio
+    ir birželio mėnesius - inžinerijos ir produktų komandos susitinka atskirai balandžio
+    ir spalio mėnesiais.
+  engineering_faq_answer_4_c: Mes tvirtai tikime, kad praleidžiame laiką su savo mokiniais
+    ir mokytojais, todėl daugelis šių renginių apima keliones į mokyklas ir klases,
+    kad surinktume atsiliepimus ar išbandytume mūsų produktus.
+  engineering_faq_question_5: Kuo inžinierių komanda Code.org yra unikali?
+  engineering_faq_answer_5_a: 'Be sudėtingų techninių problemų sprendimo, mes turime
+    keletą dalykų, dėl kurių mūsų inžinerijos org skiriasi nuo kitų, kuriuose galbūt
+    dirbote:'
+  engineering_faq_answer_5_b_1: Mes visi dalijamės savo aistra savo misijai.
+  engineering_faq_answer_5_b_2: Kiekvienas iš mūsų yra čia, kad paremtų misiją išplėsti
+    prieigą prie kompiuterių mokslo kiekvienam studentui visame pasaulyje. Mes visi
+    turime savo unikalią istoriją ir perspektyvą apie tai, kas mus skatina šios misijos
+    link.
+  engineering_faq_answer_5_c_1: Mes giliai rūpinamės vieni kitais.
+  engineering_faq_answer_5_c_2: Kai inžinieriai kovoja su problema, mes žengiame ir
+    padedame. Vienas iš mūsų principų yra tai, kad mes sunkiai susiduriame su problemomis,
+    bet vieni kitiems malonūs. Mes reguliariai skatiname inžinierius, tačiau mes nenustatome
+    pernelyg suprojektuotų sprendimų tik tam, kad palaikytume kieno nors reklamos
+    kelią. Vietoj to, mes investuojame į savo inžinierius turėdami gausų profesinio
+    tobulėjimo biudžetą ir galimybę naudotis kitomis mokymosi galimybėmis.
+  engineering_faq_answer_5_d_1: Mes sunkiai dirbame, bet nustatome aiškias ribas.
+  engineering_faq_answer_5_d_2: Nors mes remiame studentus visame pasaulyje, mes laikomės
+    atsakingo už aiškias ribas tarp darbo ir namų gyvenimo. Mes mėgaujamės be susitikimų
+    trečiadieniais, paimdami mūsų GTV (iš viso 5 savaites, įskaitant org-wide 2 savaičių
+    biuro uždarymą metų pabaigoje dar žinomas kaip žiemos pertrauka), pusę darbo dienos
+    penktadieniais vasaros metu, dar žinomas kaip vasaros penktadieniais, ir kitų
+    dosnių privalumų.
   language_code:
     ar: arabiškas
     az: Azerbaidžaniečių

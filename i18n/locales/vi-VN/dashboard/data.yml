@@ -707,6 +707,8 @@ vi:
         csa_sorting_algorithms: 'CSA: Các thuật toán sắp xếp'
         star_quilts_intro_to_artist: 'Star Quilt: Giới thiệu cho nghệ sĩ'
         upload_sprites_backgrounds: Tải lên tùy chỉnh Sprites và hình nền
+        what-is-creativity: Sáng tạo là gì?
+        code-break: Giờ giải lao lập trình
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

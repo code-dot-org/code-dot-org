@@ -104,6 +104,7 @@ Czego będziesz potrzebować:
 * Imię i nazwisko oraz e-mail osoby kontaktowej reprezentującej zgłaszane zajęcia
 * Nazwa zajęć (nie można zawierać "Godzina kodowania" w nazwie)
 * Link URL do zajęć
+* Czy ta aktywność obejmuje sztuczną inteligencję: Tak lub Nie
 * Opis zajęć (maksymalna liczba znaków: 400) 
     * Prosimy uwzględnić w opisie, czy zajęcia mają zasadniczo charakter prowadzenia przez ucznia czy wspomagania przez nauczyciela. Dodatkowo, niektóre szkoły są zainteresowane tym, czy zajęcia Godziny Kodowania zajmują się Common Core czy Next Generation Science Standards. Jeśli zajęcia odnoszą się do konkretnych standardów, uwzględnij tę informację.
 * Zalecane poziomy klas dla spodziewanych użytkowników. Możesz nawiązać do \[Standardów dla K-12 Stowarzyszenia Nauczycieli Informatyki (CSTA)\] (https://k12cs.org/framework-statements-by-grade-band/) na potrzeby przypisania pojęć informatyki do odpowiednich klas. Przykładowe poziomy klas obejmują: 
@@ -111,9 +112,9 @@ Czego będziesz potrzebować:
     * Klasy 2-5 (wiek 7 - 10 lat)
     * Klasy 6 - 8 (wiek 11 - 13 lat)
     * Klasy 9+ (wiek 14 +)
-* Lista przedmiotów pokrywanych przez Twoje zajęcia (w uzupełnieniu do informatyki). Na przykład, jeśli nauczyciel matematyki może użyć Twoich zajęć do nauki o kątach lub parabolach, wymień w liście matematykę. Jeśli masz zajęcia na bazie gry Mad Libs, które ucz są czasowników/rzeczowników/ itp., to wybierz zajęcia językowe.
-* Lista języków programowania, które są poznawane w ramach Twoich zajęć, tj. C/C++, Java, JavaScript, itp. lub język niezależny (na potrzeby planów lekcji, których można uczyć w wielu językach).
-* Lista wspieranych języków naturalnych. Uwaga: Wykrycie języka jest obowiązkiem dostawcy zajęć; przekierujemy wszystkich użytkowników do jednego dostarczonego URL.
+* Lista języków programowania, które są poznawane w ramach Twoich zajęć, tj. C/C++, Java, JavaScript, itp. lub język niezależny (na potrzeby planów lekcji, których można uczyć w wielu językach). to wybierz zajęcia językowe.
+* Lista wspieranych języków naturalnych. Uwaga: Wykrycie języka jest obowiązkiem dostawcy zajęć; przekierujemy wszystkich użytkowników do jednego dostarczonego URL. lub język niezależny (na potrzeby planów lekcji, których można uczyć w wielu językach).
+* Jaki poziom doświadczenia powinien posiadać edukator, aby mógł korzystać z Twoich zajęć? (np.: Początkujący lub Zaawansowany.) A jakim poziomem doświadczenia powinni się wykazywać uczniowie?
 * Jaki poziom doświadczenia powinien posiadać edukator, aby mógł korzystać z Twoich zajęć? (np.: Początkujący lub Zaawansowany.) A jakim poziomem doświadczenia powinni się wykazywać uczniowie? Jeśli chciałbyś przygotować bardzo zaawansowane zajęcia Godziny Kodowania™, prosimy wymienić wcześniejsze przygotowanie (wiedzę) wymaganą dla Twoich zajęć.
 * Długość Twoich zajęć 
     * Tylko 1 godzina
@@ -167,9 +168,11 @@ Czego będziesz potrzebować:
 
 ## Jak będzie przebiegać ocena zajęć
 
-Zróżnicowana komisja złożona z dydaktyków informatyki oceni nadesłane prace w oparciu o kryteria jakościowe i ilościowe. Wszystkie zajęcia zgodne z podstawowymi kryteriami znajdą się na liście. Nauczyciele będą w stanie filtrować i wybierać, aby znaleźć najlepsze zajęcia dla swojej klasy.
+Zróżnicowana komisja złożona z dydaktyków informatyki oceni nadesłane prace w oparciu o kryteria jakościowe i ilościowe. Wszystkie zajęcia zgodne z podstawowymi kryteriami znajdą się na liście.
 
-W ramach oceny zajęć i planów lekcji będziemy szukać następujących kryteriów wszystkich zajęć i plasować je na odpowiednich miejscach: 
+W przypadku tradycyjnych działań związanych z kodowaniem zróżnicowana komisja nauczycieli informatyki uszereguje zgłoszenia na podstawie kryteriów jakościowych i ilościowych. Wszystkie zajęcia zgodne z podstawowymi kryteriami znajdą się na liście. Nauczyciele będą w stanie filtrować i wybierać, aby znaleźć najlepsze zajęcia dla swojej klasy.
+
+Jeśli komitet weryfikujący przyzna zajęciom ocenę zero za jakość wykonania (z powodu poważnych błędów komputerowych lub błędów w instrukcji, poważnie utrudniających użytkowanie), za promowanie nauki w grupach zbyt mało reprezentowanych (ze względów rasowych/seksistowskich), za wartość edukacyjną (nie przybliża pojęć informatycznych) lub za walor rozrywkowo/aktywizujący (z uwagi na trudności/zniechęcenie uczniów do przejścia), nie zostaną one uwzględnione w wykazie.
 
 - Wysoka jakość produkcji
 - Promowanie nauki przez wszystkie grupy demograficzne (w szczególności uczniowiów nisko reprezentowanych na zajęciach z informatyki takich, jak młode kobiety, uczniowie z marginalizowanych grup rasowych i etnicznych oraz uczniowie z niepełnosprawnościami)
@@ -177,9 +180,9 @@ W ramach oceny zajęć i planów lekcji będziemy szukać następujących kryter
 - Elementy rozrywki i angażowania
 - Zachęcanie uczniów to stworzenia czegoś niepowtarzalnego, czym mogą się podzielić (W przypadku młodszych uczniów - przed rodzicami i kolegami z klasy. W przypadku starszych uczniów - w Internecie)
 
-Jeśli komitet weryfikujący przyzna zajęciom ocenę zero za jakość wykonania (z powodu poważnych błędów komputerowych lub błędów w instrukcji, poważnie utrudniających użytkowanie), za promowanie nauki w grupach zbyt mało reprezentowanych (ze względów rasowych/seksistowskich), za wartość edukacyjną (nie przybliża pojęć informatycznych) lub za walor rozrywkowo/aktywizujący (z uwagi na trudności/zniechęcenie uczniów do przejścia), nie zostaną one uwzględnione w wykazie.
-
 Ponadto, aby znaleźć się w wykazie, wszystkie zajęcia:
+
+W przypadku zajęć samodzielnych dla nowych nauczycieli i uczniów komisja oceniająca będzie sprawdzać, czy:
 
 - Muszą nadawać się dla uczniów szkół publicznych (nie można w nich przedstawiać broni palnej, nie mogą zawierać treści przeznaczonych dla osób dorosłych, nie mogą zawierać treści religijnych, itp.)
 - Nie mogą wymagać rejestracji
@@ -205,11 +208,13 @@ Nauczyciele i uczniowie będą w stanie przeszukać i przefiltrować nasza list�
 
 ## Wskazówki dotyczące projektowania jednogodzinnych samouczków do samodzielnego wykonania
 
-Możesz uwzględnić [logo Godziny Kodowania](https://hourofcode.com/us/promote/resources#logo) w swoim samouczku, ale nie jest to wymagane. Jeśli korzystasz z logo Godziny Kodowania, zapoznaj się z poniższymi wytycznymi dotyczącymi znaków towarowych. <u>W żadnych okolicznościach nie można korzystać z logo Code.org ani z nazwy.</u> Obie rzeczy są oznaczone znakiem towarowym i nie można ich mieszać z nazwami innych marek bez wyraźnego zezwolenia w formie pisemnej.
-
-**Upewnij się, czy przeciętny uczeń jest w stanie komfortowo ukończyć zajęcia w ciągu godziny.** Rozważ możliwość dodania na koniec zadania otwartego dla uczniów, którzy zaliczą lekcję nieco szybciej. Pamiętaj, że większość dzieci stanowić będą osoby początkujące w dziedzinie informatyki i kodowania.
+Działania nie muszą obejmować sztucznej inteligencji, chociaż chcemy zaoferować więcej działań związanych z AI.
 
 **Uwzględnij uwagi nauczyciela.** Większość zajęć powinna być ukierunkowana na ucznia, ale jeśli zajęcia są wspomagane lub kierowane przez nauczyciela, prosimy uwzględnić czytelne i proste instrukcje dla nauczyciela w postaci uwag nauczyciela na odrębnym URL przesłanym wraz z Twoimi zajęciami. Nie tylko uczniowie są nowicjuszami, niektórzy nauczyciele również. Uwzględnij takie informacje, jak:
+
+**Włącz informacje zwrotne pod koniec zajęć.** (Na przykład: “Ukończyłeś 10 poziomów i dowiedziałeś się o pętlach! Świetnie Ci poszło!")
+
+**Zachęcaj uczniów do zamieszczania informacji na mediach społecznościowych (w zależności od okoliczności), gdy ukończą.** Na przykład: "Zaliczyłem Godzinę Kodowania u ________ A Ty? #HourOfCode” albo “Zaliczyłem #HourOfCode w ramach #CSEdWeek. A Ty?
 
 - Na jakich platformach i przeglądarkach samouczek działa najlepiej?
 - Czy działa na smartfonach? Tabletach?
@@ -248,13 +253,13 @@ Hour of Code® i Hora del Código® są zarejestrowanymi znakami towarowymi Code
 
 ## Piksel śledzący
 
-W celu śledzenia uczestnictwa w sposób bardziej dokładny, zwracamy się do każdego partnera samouczków, aby uwzględnić 1-pikselowy obraz śledzenia na pierwszej stronie ich samouczków Godziny Kodowania. Obraz pikselowy musi być tylko na stronie startowej. Nie umieszczaj na żadnych pośrednich stronach swojego samouczka.
+Jeśli Twój samouczek zostanie zatwierdzony i uwzględniony końcowej stronie samouczków, Code.org przekaże Ci niepowtarzalny piksel śledzenia, abyś mógł go włączyć do swojego samouczka. Zobacz poniższy przykład. Nie umieszczaj na żadnych pośrednich stronach swojego samouczka.
 
 To pozwoli nam liczyć użytkowników, którzy realizują Twój samouczek Godzina Kodowania. Doprowadzi do bardziej dokładnych zliczeń udziału dla Twojego samouczka.
 
 Jeśli Twój samouczek zostanie zatwierdzony i uwzględniony końcowej stronie samouczków, Code.org przekaże Ci niepowtarzalny piksel śledzenia, abyś mógł go włączyć do swojego samouczka. Zobacz poniższy przykład.
 
-UWAGA: nie jest to ważne w przypadku możliwych do zainstalowania aplikacji (aplikacji na iOSa/Androida lub aplikacje do zainstalowania na komputerze stacjonarnym)
+IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 Przykład śledzenia pikseli dla Potańcówki:
 

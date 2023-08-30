@@ -253,6 +253,8 @@ sl:
   call_to_action_learn_about_approach: Preberite več o našem pristopu
   call_to_action_try_java_lab: Preizkusite Java Lab
   call_to_action_notify_available: Obvesti me, ko je na voljo
+  call_to_action_register_early_access: Registrirajte se za zgodnji dostop
+  call_to_action_open_positions: Ogled odprtih pozicij
   aria_label_call_to_action_afe: Preberite več o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Začnite program poučevanja računalniških
     znanj Osnove strokovnega učenja
@@ -13092,6 +13094,113 @@ sl:
   accessibility_card_text_10: Prilagoditev učnega načrta AP Computer Science Načela
     Code.org z uporabo Quorum, na dokazih temelječega jezika, ki je bil prvotno zasnovan
     tako, da zagotavlja dostopnost slepim ali slabovidnim študentom.
+  engineering_hero_heading: Pridružite se naši inženirski ekipi!
+  engineering_hero_desc: Ko še naprej širimo našo inženirsko ekipo, smo želeli deliti
+    več o naši inženirski organizaciji na Code.org in nekaterih edinstvenih vidikih
+    dela tukaj. Če ste zainteresirani za prijavo za eno od naših vlog, bi radi slišali
+    od vas!
+  engineering_team_title: Spoznajte inženirsko ekipo na Code.org
+  engineering_team_card_text_1: To je (večina) nas na našem osebnem srečanju poleti
+    2023! Ta množica je razdeljena na štiri podskupine znotraj naše inženirske ekipe,
+    ki skupaj gradijo in služijo platformi za vse naše učence in učitelje.
+  engineering_team_card_text_2: Če ste zainteresirani za prijavo za eno od naših vlog,
+    bi radi slišali od vas! Seznam odprtih pozicij najdete na naši strani Kariera.
+  engineering_our_team_title: Naša inženirska ekipa
+  engineering_our_team_desc: 'Inženirska ekipa na Code.org je razdeljena na štiri
+    podskupine, ki gradijo in podpirajo različna področja naše platforme:'
+  engineering_our_team_sub_title_1: Študentska učna ekipa
+  engineering_our_team_text_1: Naša študentska učna skupina ima v lasti vse naše dejavnosti
+    (imenujemo jih laboratoriji), ki jih naši učenci uporabljajo vsak dan. Ta ekipa
+    deluje predvsem na front-end tech (uporabljamo React in veliko meri JS) in imamo
+    velik delovni odnos s številnimi partnerji in odprtokodnimi projekti. Na primer,
+    uporabljamo [Googlov Blockly] (%{youtube_url}) za vse naše programiranje, ki temelji
+    na blokih. Podpiramo študente na njihovem učnem potovanju vse od vrtca do 12.
+    razreda.
+  engineering_our_team_sub_title_2: Ekipa za izkušnje učiteljev
+  engineering_our_team_text_2: Naša ekipa za izkušnje učiteljev gradi orodja, ki privabljajo
+    nove učitelje na Code.org (ti izdelki za pridobivanje imenujemo), in razvija platformo,
+    ki omogoča našim obstoječim učiteljem, da poučujejo naš učni načrt (naša orodja
+    za učitelje). Kot pri naših študentskih orodjih se zanašamo na React, da bi zgradili
+    naš front-end, naše komponente na strani strežnika pa postrežejo z Ruby on Rails.
+  engineering_our_team_sub_title_3: Ekipa platforme
+  engineering_our_team_text_3: Naša ekipa platforme ima v lasti osnovne komponente,
+    ki služijo potrebam naših študentskih in učiteljskih skupin (na primer avtentikacija
+    in uporabniški profil), prav tako pa ima nalogo doseči študente, ki jih še ne
+    moremo doseči. To vključuje gradnjo integracij, ki nas povezujejo s šolami, ki
+    uporabljajo različne sisteme upravljanja učenja (LMS) in pakiramo naš učni načrt,
+    tako da ga lahko uporabljamo v oddaljenih šolah, ki nimajo dostopa do zanesljivega
+    interneta.
+  engineering_our_team_sub_title_4: Infrastrukturna ekipa
+  engineering_our_team_text_4: Naša infrastrukturna ekipa zagotavlja hrbtenico platforme,
+    ki podpira naše učence in učitelje. To vključuje našo gostiteljsko infrastrukturo
+    in povezane storitve (uporabljamo AWS), upravljanje podatkov, varnostne programe,
+    storitve razvijalcev in uvajanja ter še veliko več. Ta ekipa ima tudi naše sisteme
+    za skaliranje in rezervacijo, ki so kritični med Uro kodiranja, kjer vabimo vsakega
+    študenta na svetu, da z nami opravi eno uro kodiranja.
+  engineering_faq_question_1: Kaj počne Code.org?
+  engineering_faq_answer_1_a: Code.org je izobraževalna inovacija neprofitna organizacija,
+    namenjena viziji, da ima vsak učenec v vsaki šoli priložnost, da se nauči računalništva
+    kot del svojega osnovnega K-12 izobraževanja.
+  engineering_faq_answer_1_b: Razširimo dostop do računalništva v šolah, s poudarkom
+    na večji udeležbi mladih žensk in študentov iz drugih premalo zastopanih skupin.
+    Vodilni ponudnik učnega načrta računalništva K-12 v največjih šolskih okrožjih
+    v ZDA, Code.org organizira tudi letno kampanjo Hour of Code, ki je angažirala
+    več kot 15% vseh študentov na svetu.
+  engineering_faq_answer_1_c: Code.org podpirajo velikodušni donatorji, vključno z
+    Microsoftom, Amazonom, Googlom in mnogimi drugimi.
+  engineering_faq_question_2: Kakšna je izkušnja in orodje za razvijalce Code.org?
+  engineering_faq_answer_2: Naša izkušnja razvijalcev se lahko razlikuje od tistega,
+    kar ste videli v svojih preteklih vlogah. V tesnem sodelovanju z našo ekipo izdelkov
+    pošiljamo v proizvodnjo vsak dan v tednu in imamo različne kadence - včasih pišete
+    kodo, ki gre ta dan v živo; drugič ste na dolgoročnih projektih - in medtem ko
+    sledimo 2-tedenskim šprintom, to počnemo na lahek način. Mi indeks za pridobivanje
+    prave stvari narediti na pravi način vs. ob puristično pogled na katero koli posebno
+    metodologijo. [Vsa naša koda] (%{code_url}) je odprtokodna in uporabljamo zahteve
+    za vlečenje JIRA in GitHub, da bi spremljali vse naše delovne elemente. Zelo nam
+    je mar tudi za kakovost in testiranje in imamo srečo, da imamo neverjetno podporo
+    [SauceLabs](%{saucelabs_url}), ki nam pomagajo pri izvajanju naše zbirke testov
+    uporabniškega vmesnika na različnih študentskih napravah (npr. iPadi) na njihovi
+    kmetiji v oblaku.
+  engineering_faq_question_3: Kaj je rotacija inženirja na Code.org?
+  engineering_faq_answer_3: Naša 30+ inženirska ekipa deli dežurne odgovornosti. Vsak
+    inženir pokriva 24-urni premik in uporablja naše poti stopnjevanja in predvajalnike,
+    da se odzove na izpad spletnega mesta ali druge težave v živo. Ponosni smo na
+    zanesljivost našega spletnega mesta - v povprečju se vsak inženir prebudi le enkrat
+    na leto zaradi težav, ki jih običajno hitro rešimo. Namesto tega »razvijalec dneva«
+    običajno preživi del svojega delovnega dne za upravljanje uvajanja proizvodnje
+    in preusmerjanje manj nujnih vprašanj.
+  engineering_faq_question_4: Ali ste na daljavo prijazna/WFH organizacija?
+  engineering_faq_answer_4_a: Ja! Leta 2019, tik pred pandemijo, je Code.org postal
+    prva organizacija na daljavo. Danes imamo inženirje v vsakem časovnem pasu ZDA
+    in ustrezno prilagodimo delovni čas. Večina naših srečanj se zgodi med 10. in
+    15. uro PT.
+  engineering_faq_answer_4_b: Prepoznamo tudi vrednost osebnega časa in vsako četrtletje
+    se osebno zberemo, običajno v Seattlu. Dva od teh dogodkov (imenujemo jih Kick-off
+    week in »Codechella«) združita vse v organizaciji januarja in junija - inženirske
+    in produkcijske ekipe pa se sestajo ločeno aprila in oktobra.
+  engineering_faq_answer_4_c: Trdno verjamemo v preživljanje časa z našimi učenci
+    in učitelji, zato mnogi od teh osebnih dogodkov vključujejo izlete v šole in učilnice
+    za zbiranje povratnih informacij ali testiranje naših izdelkov
+  engineering_faq_question_5: Zakaj je inženirska ekipa na Code.org edinstvena?
+  engineering_faq_answer_5_a: 'Poleg reševanja zahtevnih tehničnih težav imamo nekaj
+    stvari, zaradi katerih se naš inženirski org razlikuje od drugih, v katerih ste
+    morda delali:'
+  engineering_faq_answer_5_b_1: Vsi delimo svojo strast do našega poslanstva.
+  engineering_faq_answer_5_b_2: Vsak od nas je tukaj, da podpira misijo razširiti
+    dostop do računalništva za vsakega študenta po vsem svetu. Vsi imamo svojo edinstveno
+    zgodbo in perspektivo o tem, kaj nas poganja k tej misiji.
+  engineering_faq_answer_5_c_1: Skrbimo globoko drug za drugega.
+  engineering_faq_answer_5_c_2: Ko se inženirji borijo z vprašanjem, stopimo in pomagamo.
+    Eno od naših načel je, da smo težki do težav, a prijazni drug do drugega. Inženirje
+    redno promoviramo, vendar ne predpisujemo preveč zasnovanih rešitev samo za podporo
+    promocijske poti nekoga. Namesto tega vlagamo v naše inženirje z velikodušnim
+    proračunom za strokovni razvoj in dostopom do drugih učnih priložnosti.
+  engineering_faq_answer_5_d_1: Trdo delamo, vendar smo postavili jasne meje.
+  engineering_faq_answer_5_d_2: Medtem ko podpiramo študente po vsem svetu, smo odgovorni
+    za jasne meje med delom in domačim življenjem. Uživamo v sredah brez srečanj,
+    ob naši PTO (5 tednov skupaj, ki vključuje org-wide 2-tedensko zaprtje pisarne
+    ob koncu leta aka Winter Break), pol delovnega dne ob petkih poleti ali poletnih
+    petkov, in druge velikodušne ugodnosti.
   language_code:
     ar: arabsko
     az: Azerbajdžanci

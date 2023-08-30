@@ -707,6 +707,8 @@ cs:
         csa_sorting_algorithms: 'CSA: Třídění algoritmů'
         star_quilts_intro_to_artist: 'Hvězdné deky: Úvod do umělce'
         upload_sprites_backgrounds: Nahrávání vlastních skřítků a pozadí
+        what-is-creativity: Co je to tvořivost?
+        code-break: Udělejte si přestávku kódu
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

@@ -249,6 +249,8 @@ is:
   call_to_action_learn_about_approach: Lærðu meira um nálgun okkar
   call_to_action_try_java_lab: Prófaðu Java Lab
   call_to_action_notify_available: Láttu mig vita þegar það er í boði
+  call_to_action_register_early_access: Skráðu þig fyrir snemma aðgang
+  call_to_action_open_positions: Skoða opnar stöður
   aria_label_call_to_action_afe: Lærðu meira um Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Byrjaðu Kennsla Tölvunarfræði Undirstöðuatriði
     faglega nám program
@@ -12915,6 +12917,116 @@ is:
   accessibility_card_text_10: Aðlögun á AP Computer Science Principles námskrá Code.org
     með Quorum, gagnreynda tungumál sem upphaflega var hannað til að veita aðgengi
     fyrir blinda eða sjónskerta nemendur.
+  engineering_hero_heading: Vertu með í verkfræðiteyminu okkar!
+  engineering_hero_desc: Þegar við höldum áfram að stækka verkfræðiteymið okkar vildum
+    við deila meira um verkfræðistofnunina okkar á Code.org og nokkrum einstökum þáttum
+    þess að vinna hér. Ef þú hefur áhuga á að sækja um eitt af hlutverkum okkar, viljum
+    við gjarnan heyra frá þér!
+  engineering_team_title: Hittu verkfræðiteymið á Code.org
+  engineering_team_card_text_1: Þetta er (flest) við í eigin persónu komum saman sumarið
+    2023! Þessum mannfjölda er skipt í fjögur undirteymi innan verkfræðideildar okkar
+    sem vinna saman að því að byggja upp og þjóna vettvangi fyrir alla nemendur okkar
+    og kennara.
+  engineering_team_card_text_2: Ef þú hefur áhuga á að sækja um eitt af hlutverkum
+    okkar, viljum við gjarnan heyra frá þér! Þú getur fundið lista yfir opnar stöður
+    á starfsferilssíðu okkar.
+  engineering_our_team_title: Verkfræðingateymi okkar
+  engineering_our_team_desc: 'Verkfræðingateymið á Code.org er skipt í fjögur undirteymi
+    sem byggja upp og styðja mismunandi svið vettvangs okkar:'
+  engineering_our_team_sub_title_1: Námsmaður Learning Team
+  engineering_our_team_text_1: Námsmaður okkar Learning Team á alla starfsemi okkar
+    (við köllum þá Labs) sem nemendur okkar nota á hverjum degi. Þetta teymi vinnur
+    aðallega að framhliðartækni (við notum React og mikið af sérsniðnum JS) og við
+    höfum frábært vinnusamband við marga samstarfsaðila og opinn uppspretta verkefni.
+    Til dæmis notum við [Google Blockly] (%{youtube_url}) fyrir alla forritun sem
+    byggir á blokkum. Við styðjum nemendur í námsferð þeirra alla leið frá leikskóla
+    til 12. bekkjar.
+  engineering_our_team_sub_title_2: Kennari Reynsla Team
+  engineering_our_team_text_2: Reynsla Team kennara okkar byggir verkfæri sem laða
+    nýja kennara til Code.org (við köllum þessar kaup vörur) og þróar vettvang sem
+    styrkir núverandi kennara okkar til að kenna námskrá okkar (verkfæri kennara okkar).
+    Eins og með nemendaverkfæri okkar treystum við á React til að byggja upp framhlið
+    okkar og miðlarahliðarhlutar okkar eru bornir fram með Ruby on Rails.
+  engineering_our_team_sub_title_3: Platform lið
+  engineering_our_team_text_3: Platform Team okkar á kjarnaþætti sem þjóna þörfum
+    nemenda- og kennarateymis okkar (til dæmis auðkenningar og notendaprófíl) og hefur
+    einnig það hlutverk að ná til nemenda sem við getum ekki enn náð til. Þetta felur
+    í sér að byggja samþættingar sem tengja okkur við skóla sem nota mismunandi Learning
+    Management Systems (LMS) og pökkun námskrá okkar þannig að það er hægt að nota
+    í fjarlægum skólum sem hafa ekki aðgang að áreiðanlegum internetinu.
+  engineering_our_team_sub_title_4: Innviðateymi
+  engineering_our_team_text_4: Infrastructure Team okkar veitir burðarás fyrir vettvang
+    sem styður nemendur okkar og kennara. Þetta felur í sér hýsingarinnviði okkar
+    og tengda þjónustu (við notum AWS), gagnastjórnun, öryggisforrit, þróunaraðila
+    og dreifingarþjónustu og margt fleira. Þetta teymi á einnig stigstærðar- og úthlutunarkerfi
+    okkar, sem eru mikilvæg á klukkustund kóðans, þar sem við bjóðum hverjum nemanda
+    í heiminum að ljúka klukkutíma kóðun með okkur.
+  engineering_faq_question_1: Hvað gerir Code.org?
+  engineering_faq_answer_1_a: Code.org er menntun nýsköpun rekinn í hagnaðarskyni
+    tileinkað framtíðarsýn sem sérhver nemandi í hverjum skóla hefur tækifæri til
+    að læra tölvunarfræði sem hluta af kjarna K-12 menntun þeirra.
+  engineering_faq_answer_1_b: Við auka aðgang að tölvunarfræði í skólum, með áherslu
+    á að auka þátttöku ungra kvenna og nemenda frá öðrum underrepresented hópa. Leiðandi
+    veitandi K-12 tölvunarfræði námskrá í stærstu skólahverfum í Bandaríkjunum, Code.org
+    skipuleggur einnig árlega Hour of Code herferð, sem hefur stundað meira en 15%
+    allra nemenda í heiminum.
+  engineering_faq_answer_1_c: Code.org er studd af örlátum gjöfum þar á meðal Microsoft,
+    Amazon, Google og mörgum öðrum.
+  engineering_faq_question_2: Hver er reynsla þróunaraðila Code.org og verkfæri?
+  engineering_faq_answer_2: Reynsla okkar af þróunaraðilum getur verið ólík því sem
+    þú hefur séð í fyrri hlutverkum þínum. Vinna náið með vöruhópnum okkar, sendum
+    við til framleiðslu á hverjum virkum degi og við höfum margs konar cadences -
+    stundum ertu að skrifa kóða sem fer í beinni þann dag; öðrum tímum ertu í lengri
+    tíma verkefnum - og á meðan við fylgjum 2 vikulega sprettum, gerum við það á léttan
+    hátt. Við vísitölu í átt að fá rétta hluti gert á réttan hátt vs. taka purist
+    sýn á hvaða tiltekna aðferðafræði. [Allur kóðinn okkar] (%{code_url}) er opinn
+    uppspretta og við notum JIRA og GitHub draga beiðnir til að fylgjast með öllum
+    vinnu atriði okkar. Okkur þykir líka vænt um gæði og prófanir og erum heppin að
+    hafa ótrúlegan stuðning frá [SauceLabs](%{saucelabs_url}), sem hjálpa okkur að
+    keyra föruneyti okkar af prófunum á HÍ á ýmsum tækjum nemenda (td iPads) í skýjatækjabúnaði
+    sínum.
+  engineering_faq_question_3: Hvað er verkfræðingur á símtali snúningur á Code.org?
+  engineering_faq_answer_3: 30+ verkfræðingateymið okkar deilir ábyrgð á símtali.
+    Hver verkfræðingur nær yfir sólarhringsvakt og notar stigmögnunarleiðir okkar
+    og leikbækur til að bregðast við straumleysi eða öðrum vandamálum á lifandi staðnum.
+    Við erum stolt af áreiðanleika síðunnar okkar - að meðaltali er hver verkfræðingur
+    aðeins vaknaður einu sinni á ári vegna vandamála sem venjulega eru fljótir að
+    leysa. Þess í stað eyðir “verktaki dagsins” venjulega hluta vinnudags síns í að
+    stjórna framleiðsludreifingunni og triaging minna brýn mál.
+  engineering_faq_question_4: Ert þú fjarstýrð/WFH stofnun?
+  engineering_faq_answer_4_a: Já! Árið 2019, skömmu fyrir heimsfaraldurinn, varð Code.org
+    fjarstýrð samtök. Í dag höfum við verkfræðinga á hverju bandarísku tímabelti og
+    rúma vinnutíma í samræmi við það. Flestir fundir okkar gerast á milli klukkan
+    10 og 3pm PT.
+  engineering_faq_answer_4_b: Við viðurkennum einnig gildi tíma í eigin persónu og
+    á hverjum ársfjórðungi komum við saman persónulega, venjulega í Seattle. Tveir
+    af þessum atburðum (við köllum þá Kick-off viku og “Codechella”) koma öllum í
+    samtökunum saman í janúar og júní - og verkfræði- og vöruteymin hittast sérstaklega
+    í apríl og október.
+  engineering_faq_answer_4_c: Við trúum eindregið á að eyða tíma með nemendum okkar
+    og kennurum, svo margir af þessum viðburðum í eigin persónu fela í sér ferðir
+    inn í skóla og kennslustofur til að safna endurgjöf eða spila prófa vörur okkar
+  engineering_faq_question_5: Hvað gerir verkfræðingateymið á Code.org einstakt?
+  engineering_faq_answer_5_a: 'Fyrir utan að leysa krefjandi tæknileg vandamál höfum
+    við nokkur atriði sem gera verkfræðiorgið okkar frábrugðið öðrum sem þú gætir
+    hafa unnið í:'
+  engineering_faq_answer_5_b_1: Við deilum öll ástríðu okkar fyrir verkefni okkar.
+  engineering_faq_answer_5_b_2: Hvert okkar er hér til að styðja verkefnið til að
+    auka aðgang að tölvunarfræði fyrir hvern nemanda um allan heim. Við höfum öll
+    okkar einstaka sögu og sjónarhorn um það sem rekur okkur í átt að þessu verkefni.
+  engineering_faq_answer_5_c_1: Okkur þykir mjög vænt um hvert annað.
+  engineering_faq_answer_5_c_2: Þegar verkfræðingar eru að glíma við vandamál stígum
+    við inn og við hjálpum. Eitt af meginreglum okkar er að við erum erfitt í vandamálum,
+    en góður við hvert annað. Við kynnum verkfræðinga reglulega, en við ávísum ekki
+    yfirverkfræðilegum lausnum bara til að styðja við kynningarleið einhvers. Þess
+    í stað fjárfestum við í verkfræðingum okkar með rausnarlegu fjárhagsáætlun fyrir
+    atvinnuþróun og aðgang að öðrum námstækifærum.
+  engineering_faq_answer_5_d_1: Við leggjum hart að okkur en setjum skýr mörk.
+  engineering_faq_answer_5_d_2: Þó að við styðjum nemendur um allan heim, höldum við
+    okkur ábyrg fyrir skýrum mörkum milli vinnu og heimilislífs. Við njótum engra
+    funda miðvikudaga, tökum PTO okkar (5 vikur samtals, sem felur í sér org-breiður
+    2-vikna skrifstofu lokun í lok ársins aka Winter Break), hálfan vinnudag á föstudögum
+    á sumrin aka Summer Fridays, og önnur örlátur ávinningur.
   language_code:
     ar: Arabíska
     az: Aserska

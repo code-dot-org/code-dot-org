@@ -708,6 +708,8 @@ ka:
         csa_sorting_algorithms: 'CSA: ალგორითმების დახარისხება'
         star_quilts_intro_to_artist: 'ვარსკვლავური საბნები: შესავალი მხატვრისთვის'
         upload_sprites_backgrounds: ატვირთვა საბაჟო Sprites და ფონზე
+        what-is-creativity: რა არის კრეატიულობა?
+        code-break: მიიღეთ კოდი Break
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ
