@@ -366,26 +366,20 @@ export default class FunctionEditor {
   // procedure, so that the editor workspace knows about those procedures.
   setUpEditorWorkspaceProcedures() {
     Blockly.Events.disable();
-    const procedureDefinitions = this.editorWorkspace
+    const editorProcedureMap = this.editorWorkspace.getProcedureMap();
+    const hiddenProcedureDefinitions = Blockly.getHiddenDefinitionWorkspace()
       .getProcedureMap()
       .getProcedures();
-    Blockly.getHiddenDefinitionWorkspace()
-      .getProcedureMap()
-      .getProcedures()
-      .forEach(procedure => {
-        const procedureId = procedure.getId();
-        if (
-          procedureDefinitions.filter(
-            procedureModel => procedureModel.getId() === procedureId
-          ).length === 0
-        ) {
-          const procedureModel = this.createProcedureModelForWorkspace(
-            this.editorWorkspace,
-            procedure
-          );
-          this.editorWorkspace.getProcedureMap().add(procedureModel);
-        }
-      });
+    hiddenProcedureDefinitions.forEach(procedure => {
+      const procedureId = procedure.getId();
+      if (!editorProcedureMap.has(procedureId)) {
+        const procedureModel = this.createProcedureModelForWorkspace(
+          this.editorWorkspace,
+          procedure
+        );
+        this.editorWorkspace.getProcedureMap().add(procedureModel);
+      }
+    });
     Blockly.Events.enable();
   }
 
