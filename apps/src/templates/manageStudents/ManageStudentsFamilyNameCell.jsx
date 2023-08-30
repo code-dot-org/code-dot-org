@@ -47,7 +47,7 @@ class ManageStudentFamilyNameCell extends Component {
                 disabled={inputDisabled}
               />
               <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
-                <div>{i18n.familyNameTooltip()}</div>
+                <div>{i18n.disabledForTeacherAccountsTooltip()}</div>
               </ReactTooltip>
             </span>
           </div>
