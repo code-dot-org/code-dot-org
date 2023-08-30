@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
+import {tableLayoutStyles} from '../tables/tableConstants';
 
 class ManageStudentFamilyNameCell extends Component {
   static propTypes = {
@@ -27,7 +28,7 @@ class ManageStudentFamilyNameCell extends Component {
     const {familyName, editedValue} = this.props;
 
     return (
-      <div>
+      <div style={tableLayoutStyles.tableText}>
         {!this.props.isEditing && <div>{familyName}</div>}
         {this.props.isEditing && (
           <div>
@@ -49,7 +50,7 @@ class ManageStudentFamilyNameCell extends Component {
 
 const styles = {
   inputBox: {
-    width: 225,
+    width: 210,
   },
 };
 
