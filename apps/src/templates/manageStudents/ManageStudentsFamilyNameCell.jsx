@@ -27,8 +27,7 @@ class ManageStudentFamilyNameCell extends Component {
   };
 
   render() {
-    const {familyName, editedValue} = this.props;
-    const {inputDisabled} = this.props;
+    const {familyName, editedValue, inputDisabled} = this.props;
     const tooltipId = inputDisabled ? _.uniqueId() : '';
 
     return (
