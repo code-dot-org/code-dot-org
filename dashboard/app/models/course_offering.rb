@@ -477,15 +477,13 @@ class CourseOffering < ApplicationRecord
 
     lessons.each do |lesson|
       break if expanded_card_resources.size >= 5
-      resources = lesson.resources
-
-      resources.each do |resource|
+      lesson.resources.each do |resource|
         properties = resource.properties
         next unless properties.key?('type')
         type = properties['type']
         type = "Slide Deck" if type == "Slides"
         type = "Answer Key" if type == "Exemplar"
-        if ACCEPTABLE_RESOURCE_TYPES.include?(type) && expanded_card_resources.exclude?(type)
+        if ACCEPTABLE_RESOURCE_TYPES.include?(type) && !expanded_card_resources.key?(type)
           expanded_card_resources[type] ||= resource["url"]
         end
       end
