@@ -7,6 +7,7 @@ import {
   MODAL_EDITOR_CLOSE_ID,
   MODAL_EDITOR_DELETE_ID,
   MODAL_EDITOR_NAME_INPUT_ID,
+  MODAL_EDITOR_DESCRIPTION_INPUT_ID,
 } from './functionEditorConstants';
 
 // This class is a work in progress. It is used for the modal function editor,
@@ -58,10 +59,11 @@ export default class FunctionEditor {
 
     // Description handler
     this.functionDescriptionInput = document.getElementById(
-      'functionDescriptionText'
+      MODAL_EDITOR_DESCRIPTION_INPUT_ID
     );
-    this.functionDescriptionInput.addEventListener('input', () => {
-      this.block.description = this.functionDescriptionInput.value;
+    this.functionDescriptionInput.addEventListener('input', e => {
+      this.block.description = e.target.value;
+      this.updateHiddenDefinitionDescription();
     });
 
     // Delete handler
@@ -168,7 +170,7 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
     }
-    this.functionDescriptionInput.value = this.block.description;
+    this.functionDescriptionInput.value = this.block.description || '';
   }
 
   /**
@@ -389,5 +391,17 @@ export default class FunctionEditor {
       procedure.getName(),
       procedure.getId()
     );
+  }
+
+  updateHiddenDefinitionDescription() {
+    const topBlocks = Blockly.getHiddenDefinitionWorkspace().getTopBlocks();
+    const blockToUpdate = topBlocks.find(
+      topBlock =>
+        topBlock.getProcedureModel().getId() ===
+        this.block.getProcedureModel().getId()
+    );
+    if (blockToUpdate) {
+      blockToUpdate.description = this.block.description;
+    }
   }
 }
