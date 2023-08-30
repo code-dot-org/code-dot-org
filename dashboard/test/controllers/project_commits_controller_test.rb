@@ -33,7 +33,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
 
     returned_commits = JSON.parse(@response.body)
     assert_equal 3, returned_commits.length
-    assert_equal ['First comment', 'Second comment', 'Third comment'], returned_commits.map {|c| c['comment']}
+    assert_equal(['First comment', 'Second comment', 'Third comment'], returned_commits.map {|c| c['comment']})
   end
 
   test "can fetch project commits and blank comments are filtered out" do
@@ -55,7 +55,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
 
     returned_commits = JSON.parse(@response.body)
     assert_equal 2, returned_commits.length
-    assert_equal ['First comment', 'Third comment'], returned_commits.map {|c| c['comment']}
+    assert_equal(['First comment', 'Third comment'], returned_commits.map {|c| c['comment']})
   end
 
   test "can fetch project commits of students project if their teacher" do

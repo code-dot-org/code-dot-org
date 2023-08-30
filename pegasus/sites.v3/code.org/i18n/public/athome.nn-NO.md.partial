@@ -1,5 +1,5 @@
 ---
-title: Computer Science at Home
+title: Datavitenskap hjemme
 video_player: true
 theme: responsive
 ---
@@ -7,40 +7,40 @@ theme: responsive
 <link href="/css/tools.css" rel="stylesheet" />
 
 <a id="top"></a>
-<h1>Computer Science at Home</h1>
+<h1>Datavitenskap hjemme</h1>
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
-  <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="Mother helps her daughter use a laptop">
+  <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="Mor hjelper datteren sin med å bruke en bærbar datamaskin">
 </div>
 
-<p>Whether you’re a parent/guardian or a student learning independently, the options below are engaging, easy-to-try ways to begin your exploration of computer science.</p>
+<p>Enten du er foreldre/verge eller en student som lærer uavhengig, er alternativene nedenfor engasjerende, enkle å prøve måter å begynne utforskningen av informatikk på.</p>
 <ul>
-    <li><a class="linktag" id="hoc-nav" href="#hoc">Try an Hour of Code</a></li>
-    <li><a class="linktag" id="videos-nav" href="#videos">Watch a short video series about the basics of CS</a></li>
-    <li><a class="linktag" id="self-paced-nav" href="#express">Take an introductory, self-paced course</a></li>
-    <li><a class="linktag" id="labs-nav" href="#labs">Create a game or an app</a></li>
-    <li><a class="linktag" id="unplugged-nav" href="#unplugged">Try CS without a computer ('unplugged' & mobile options)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Learn CS from the Code.org team and special guests</a></li>
+    <li><a class="linktag" id="hoc-nav" href="#hoc">Prøv en time med kode</a></li>
+    <li><a class="linktag" id="videos-nav" href="#videos">Se en kort videoserie om det grunnleggende om CS</a></li>
+    <li><a class="linktag" id="self-paced-nav" href="#express">Ta et introduksjonskurs i eget tempo</a></li>
+    <li><a class="linktag" id="labs-nav" href="#labs">Lag et spill eller en app</a></li>
+    <li><a class="linktag" id="unplugged-nav" href="#unplugged">Prøv CS uten datamaskin («frakoblet» og mobilalternativer)</a></li>
+    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Lær CS fra Code.org-teamet og spesielle gjester</a></li>
 </ul>
 
 <br>
 
 <a id="hoc"></a>
-<h2>Try an Hour of Code with these fun introductory tutorial</h2>
-<p>Try a <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">one-hour tutorial</a> featuring popular games and movies like Minecraft, Frozen, and Star Wars. Many tutorials are structured like games, designed to teach basic computer science concepts in fun, engaging ways.</p>
+<h2>Prøv en Kodetime med disse morsomme introduksjonsveiledningene</h2>
+<p>Prøv en <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">times opplæring</a> med populære spill og filmer som Minecraft, Frozen, og Star Wars. Mange opplæringsprogrammer er strukturert som spill, designet for å lære grunnleggende datavitenskapskonsepter på morsomme, engasjerende måter.</p>
 
 <br>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="danceparty" href="/dance" target="_blank">
-        <img class="tutorial-tile-img" src="/images/dance_party_2019.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Dance Party">
+        <img class="tutorial-tile-img" src="/images/dance_party_2019.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Dansefest 2019">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Code a Dance Party to share with friends and family. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney's "Encanto," and more!</div>
-        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Try activity</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dansefest</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Kode et dansefest for å dele med venner og familie. Med Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, musikk fra Disneys «Encanto», og mer!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Prøv aktivitet</button></a>
     </span>
   </div>
 </div>
@@ -49,14 +49,14 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="minecraft" href="/minecraft" target="_blank">
-        <img class="tutorial-tile-img" src="//code.org/shared/images/fill-484x234/courses/logo_tall_aquatic.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Minecraft Aquatic">
+        <img class="tutorial-tile-img" src="//code.org/shared/images/fill-484x234/courses/logo_tall_aquatic.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Minecraft akvatisk">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft er tilbake for Kodetimen med en helt ny aktivitet! Reis gjennom Minecraft med kode.</div>
         <br>
-        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Try activity</button></a>
+        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Prøv aktivitet</button></a>
     </span>
   </div>
 </div>
@@ -65,13 +65,13 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-484x234/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="AI for Oceans">
+        <img class="tutorial-tile-img" src="/images/fill-484x234/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="AI for hav">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Help A.I. clean the oceans by training it to detect trash! Learn about training data and bias, and how AI can address world problems. View <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
-        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Try activity</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Hjelp A.I. rense havene ved å trene det til å oppdage søppel! Lær om treningsdata og skjevhet, og hvordan AI kan løse verdensproblemer. Se <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">leksjonsplan</a>.</div>
+        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Prøv aktivitet</button></a>
     </span>
   </div>
 </div>
@@ -79,26 +79,26 @@ theme: responsive
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Tilbake til toppen]</a></p>
 
 <br>
 <br>
 
 <a id="videos"></a>
 <div class="col-100" style="padding:25px; border-radius: 15px; background-color: #ebe8f1">
-<h2 style="margin-top:0">Watch an engaging series of short videos to learn how computers, the internet, and AI work</h2>
-<p>Learn the basics of computer science with videos featuring famous technologists like Bill Gates and Satya Nadella, as well as a diverse cast of presenters from a number of industries and organizations.</p>
+<h2 style="margin-top:0">Se en engasjerende serie med korte videoer for å lære hvordan datamaskiner, internett og AI fungerer</h2>
+<p>Lær det grunnleggende innen informatikk med videoer med kjente teknologer som Bill Gates og Satya Nadella, samt en mangfoldig rollebesetning av presentatører fra en rekke bransjer og organisasjoner.</p>
 <br>
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/computers-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="How Computers Work with Bill Gates">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/computers-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Hvordan datamaskiner fungerer med Bill Gates">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>How Computers Work</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">With an introduction by Bill Gates, this series of six short videos explains what makes a computer a computer and how computer circuits work.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Watch the video series</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Hvordan datamaskiner fungerer</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Med en introduksjon av Bill Gates forklarer denne serien på seks korte videoer hva som gjør en datamaskin til en datamaskin og hvordan datakretser fungerer.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Se videoserien</button></a>
     </span>
   </div>
 </div>
@@ -107,13 +107,13 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/internet-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="How the Internet Works">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/internet-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Hvordan Internett fungerer">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How the Internet Works</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">In this series of eight short videos, you’ll learn how the internet was invented, what HTML is, and how search engines like Google work.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Watch the video series</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Slik fungerer Internett</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">I denne serien med åtte korte videoer lærer du hvordan internett ble oppfunnet, hva HTML er, og hvordan søkemotorer som Google fungerer.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Se videoserien</button></a>
     </span>
   </div>
 </div>
@@ -126,9 +126,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How AI Works</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn about how AI works and why it matters with this series of short videos. Featuring Microsoft CEO Satya Nadella and a diverse cast of experts.</div>
-        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Watch the video series</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Slik fungerer AI</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Lær om hvordan AI fungerer og hvorfor det betyr noe med denne serien med korte videoer. Med Microsofts administrerende direktør Satya Nadella og en mangfoldig rollebesetning av eksperter.</div>
+        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Se videoserien</button></a>
     </span>
   </div>
 </div>
@@ -138,22 +138,22 @@ theme: responsive
 
 <p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
 <br>
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Tilbake til toppen]</a></p>
 
 </div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
 <a id="express"></a>
-<h2>Learn the fundamentals with our self-paced courses</h2>
-<h3>Self-paced introductory courses</h3>
-<p>A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. Note: Express courses are currently available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. To see what's available in your language, visit our <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">course catalog</a>.</p>
+<h2>Lær det grunnleggende med våre kurs i eget tempo</h2>
+<h3>Introduksjonskurs i eget tempo</h3>
+<p>Et flott alternativ for studenter som kommer i gang på egenhånd. Du lærer det grunnleggende innen informatikk med dra og slipp-blokker. Lag dine egne tegninger og spill. Merk: Ekspresskurs er for tiden tilgjengelig på engelsk, hindi, italiensk og spansk. For andre språk anbefaler vi vårt 20-timers <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">akselerert kurs</a>. For å se hva som er tilgjengelig på språket ditt, besøk vår <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">kurskatalog</a>.</p>
 
 <br>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank"><img src="/images/curriculum/course-tile-express.png" style="width: 100%" alt="Express Course"></a><br/><a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank">Express Course</a>
+<a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank"><img src="/images/curriculum/course-tile-express.png" style="width: 100%" alt="Express Kurs"></a><br/><a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank">Express Kurs</a>
 
 </div>
 
@@ -164,21 +164,21 @@ theme: responsive
 </div>
 <div style="clear: both"></div>
 
-<h3>Self-paced introductions to Game Lab and App Lab</h3>
-<p>Adapted from our CS Discoveries and CS Principles courses, these short, self-paced modules are a great way to learn concepts that span all programming languages and tools. <i>Requires Code.org account to access</i>.</p>
+<h3>Introduksjoner i eget tempo til Game Lab og App Lab</h3>
+<p>Tilpasset fra våre CS Discoveries og CS Principles kurs, disse korte, selvstendige modulene er en fin måte å lære konsepter som spenner over alle programmeringsspråk og verktøy. <i>Requires Code.org account to access</i>.</p>
 
 <br>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/alien2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Introduction to Game Lab">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/alien2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Introduksjon til Game Lab">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduction to Game Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Program animations, interactive art, and games in Game Lab. Start off with simple shapes and build up to more sophisticated sprite-based animations and games.</div>
-        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Try the module</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduksjon til Game Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Programanimasjoner, interaktiv kunst, og spill i Game Lab. Start med enkle former og bygg opp til mer sofistikerte sprite-baserte animasjoner og spill.</div>
+        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Prøv modulen</button></a>
     </span>
   </div>
 </div>
@@ -187,13 +187,13 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/turtle2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Turtle Programming in App Lab">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/turtle2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Skilpaddeprogrammering i App Lab">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programming in App Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Use simple JavaScript commands to draw shapes and images using a virtual “turtle.” Design and program your own digital scene!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Try the module</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programming i App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Bruk enkle JavaScript-kommandoer for å tegne former og bilder ved hjelp av en virtuell «skilpadde». Design og programmer din egen digitale scene!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Prøv modulen</button></a>
     </span>
   </div>
 </div>
@@ -202,13 +202,13 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/events3.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Event-Driven Programming in App Lab">
+        <img class="tutorial-tile-img" src="/images/athome/events3.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Hendelsesdrevet programmering i App Lab">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Event-Driven Programming in App Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn to design apps that respond to clicks and key presses. Create a series of simple applications (apps) that live on the web!</div>
-        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Try the module</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hendelsesdrevet programmering i App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Lær å designe apper som svarer på klikk og tastetrykk. Lag en serie enkle applikasjoner (apper) som lever på nettet!</div>
+        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Prøv modulen</button></a>
     </span>
   </div>
 </div>
@@ -218,31 +218,31 @@ theme: responsive
 
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Tilbake til toppen]</a></p>
 
 <hr />
 
 <a id="labs"></a>
-<h2>Create something!</h2>
-<p>First, get inspired! View our <a href="https://studio.code.org/projects" target="_blank">project gallery</a> — play some of the games or try out some of the apps that students have created. You can “remix” the project to make it your own, or build something new in App Lab, Game Lab, or Web Lab.</p>
+<h2>Lag noe!</h2>
+<p>Først, bli inspirert! Se vår <a href="https://studio.code.org/projects" target="_blank">prosjektgalleri</a> - spill noen av spillene eller prøv noen av appene som studentene har laget. Du kan «remikse» prosjektet for å gjøre det til ditt eget, eller bygge noe nytt i App Lab, Game Lab eller Web Lab.</p>
 
 <br>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
-    <p style="color:#ffffff">App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.</p>
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Build an app</button></a>
+    <p style="color:#ffffff">App Lab er et programmeringsmiljø der du kan lage enkle apper. Design en app, kode med blokker eller JavaScript for å få det til å fungere, og del deretter appen din på få sekunder.</p>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Bygg en app</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Game Lab</strong></h3></a>
-    <p style="color:#ffffff">Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other.</p>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Spill Lab</strong></h3></a>
+    <p style="color:#ffffff">Game Lab er et programmeringsmiljø der du kan lage enkle animasjoner og spill med objekter og karakterer som samhandler med hverandre.</p>
     <br>
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Create a game</button></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Lag et spill</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
@@ -250,60 +250,60 @@ theme: responsive
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
-    <p style="color:#ffffff">Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds.</p>
+    <p style="color:#ffffff">Web Lab er et programmeringsmiljø der du kan lage enkle websider ved hjelp av HTML og CSS. Design websidene dine og del nettstedet ditt på få sekunder.</p>
     <br>
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Make a web page</button></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Lag en webside</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Tilbake til toppen]</a></p>
 
 <a id="unplugged"></a>
-<h2>‘Unplugged’ activities: Computer Science without the computer</h2>
+<h2>'Unplugged' aktiviteter: Datavitenskap uten datamaskinen</h2>
 
 <div class="col-25" style="padding-bottom:15px; text-align:center">
   <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank">
-    <img src="/images/athome/hoc-unplugged.png" style="width:90%; border: 2px solid black" alt="Unplugged activities for Hour of Code">
+    <img src="/images/athome/hoc-unplugged.png" style="width:90%; border: 2px solid black" alt="Utkoblede aktiviteter for Kodetimen">
   </a>
-  <p><i>Click image to view as PDF</i></p>
+  <p><i>Klikk på bildet for å se som PDF</i></p>
 </div>
 <div class="col-75" style="padding-left:15px">
-  <p>No screen, no problem! We’ve put together a ‘sampler’ of quick, fun CS activities you can do without a device. Have a family Dance Party party while learning about events, or ‘program’ each other to draw pictures!</p>
+  <p>Ingen skjerm, ikke noe problem! Vi har satt sammen en 'sampler' av raske, morsomme CS-aktiviteter du kan gjøre uten en enhet. Ha en familiedansefest mens du lærer om arrangementer, eller 'programmere' hverandre for å tegne bilder!</p>
   <br>
-  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>View unplugged activities</button></a>
+  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>Vis frakoblede aktiviteter</button></a>
 </div>
 
 <div style="clear: both; margin-bottom: 10px"></div>
 
-<p>Or view these unplugged options from other organizations:</p>
+<p>Eller se disse frakoblede alternativene fra andre organisasjoner:</p>
 <ul>
-  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. (for ages 4-10)</li>
-  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - A collection of free teaching material that teaches computer science through engaging games and puzzles that use cards, string, crayons and lots of running around. (for ages 5-14)</li>
+  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - Verdens mest finurlige måte å lære om datamaskiner, teknologi og programmering. Aktiviteter på en rekke CS-emner, som evnen til å dekomponere et problem, oppdage mønstre, tenke algoritmisk, feilsøke problemer og jobbe sammen. (for alderen 4-10)</li>
+  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - En samling gratis undervisningsmateriell som lærer informatikk gjennom engasjerende spill og gåter som bruker kort, snor, fargestifter og mye løping rundt. (for alderen 5-14)</li>
 </ul>
 
-<h2>No computer at home? Try CS on your phone with these apps from our partners</h2>
+<h2>Ingen datamaskin hjemme? Prøv CS på telefonen din med disse appene fra partnerne våre</h2>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(for all ages)</i>
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Et sjarmerende mobilkodingsspill som tar elevene med på et spennende eventyr, mens de lærer det grunnleggende om koding, som algoritmer, mønstergjenkjenning, sekvenser, løkker og betingelser. <i>(for alle aldre)</i>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Solve puzzles and create games with The Foos while learning to code. <strong>Note: codeSpark is offering a free 3-month trial. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>CodeSpark</strong></h3></a>Prisbelønt lær-å-kode-plattform for barn i alderen 5-9 år. Løs gåter og lag spill med The Foos mens du lærer å kode. <strong>Merk: CodeSpark tilbyr en gratis 3-måneders prøveperiode. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Grasshopper"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
+  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Gresshoppe"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Lær koding med moro, raske leksjoner på telefonen din som lærer deg å skrive ekte JavaScript. En kode med Google-programmet. <i>(for ungdomsskolen og oppover)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Tilbake til toppen]</a></p>
 
 <a id="livecoding"></a>
-<h2>Learn from the Code.org team and special guests!</h2>
+<h2>Lær av Code.org-teamet og spesielle gjester!</h2>
 
 <div class="col-50">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
@@ -312,11 +312,11 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes are easy-to-digest, 20 minute interactive lessons blending computer science with real-world topics. Train an AI to read sign language, design an app for good, explore the world of Minecraft, and more!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes er lett å fordøye, 20 minutters interaktive leksjoner som blander informatikk med virkelige emner. Tren en AI for å lese tegnspråk, designe en app for godt, utforske Minecrafts verden, og mer!</div>
         <br>
         <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
+        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Se episoder</button></a>
     </span>
   </div>
 </div>
@@ -325,14 +325,14 @@ theme: responsive
 <div class="col-50">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
       <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Code Break">
+        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Kode Break">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">Keep computer science fun by taking a Code Break! You can create a cypher with Ashton Kutcher, learn about variables with Yara Shahidi, and even explore how the Internet works with the actual inventor of the Internet, Vint Cerf!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Kodebrudd</strong></h3>
+        <div class="smalltext" style="">Hold datavitenskap morsomt ved å ta en kodepause! Du kan lage en cypher med Ashton Kutcher, lære om variabler med Yara Shahidi, og til og med utforske hvordan Internett fungerer med den faktiske oppfinneren av Internett, Vint Cerf!</div>
         <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Get connected</button></a>
+        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Bli tilkoblet</button></a>
     </span>
   </div>
 </div>
@@ -340,5 +340,5 @@ theme: responsive
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
-<a href="#top">[Back to top]</a>
+<a href="#top">[Tilbake til toppen]</a>
 <br>

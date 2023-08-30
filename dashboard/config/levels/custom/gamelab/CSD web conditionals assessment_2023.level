@@ -85,7 +85,7 @@
       "console.log": null,
       "ifBlock": null
     },
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -122,7 +122,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:38.077+00:00\",\"changed\":[\"cloned from \\\"CSD web conditionals assessment_2022\\\"\"],\"cloned_from\":\"CSD web conditionals assessment_2022\"},{\"changed_at\":\"2023-01-14 18:34:24 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 18:37:36 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:33:59 +0000\",\"changed\":[\"all_animations_single_frame\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:38.077+00:00\",\"changed\":[\"cloned from \\\"CSD web conditionals assessment_2022\\\"\"],\"cloned_from\":\"CSD web conditionals assessment_2022\"},{\"changed_at\":\"2023-01-14 18:34:24 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 18:37:36 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:33:59 +0000\",\"changed\":[\"all_animations_single_frame\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-29 17:17:09 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
