@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Soirée dansante</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Codez une soirée dansante à partager avec vos amis et votre famille. En vedette : Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, la musique du film "Encanto" de Disney, et bien d'autres !</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code a Dance Party to share with friends and family. En vedette : Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, la musique du film "Encanto" de Disney, et bien d'autres !</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Essayez cette activité</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Heure de Code Minecraft </strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft est de retour avec l’Heure de Code et une toute nouvelle activité ! Parcourez Minecraft avec le code.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft est de retour pour l'Heure de Code avec une toute nouvelle activité ! Parcourez Minecraft avec le code.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Essayez cette activité</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>L’AI pour les océans</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Aidez l’AI à nettoyer les océans en la formant à détecter les déchets ! Découvrez les données de formation et les préférences et comment l’AI peut résoudre des problèmes d’ampleur mondiale. Voir le <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">plan de cours</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>L'IA pour les océans</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Aidez l'IA à nettoyer les océans en l'entraînant à détecter les déchets ! Découvrez les données de formation et les préférences et comment l’AI peut résoudre des problèmes d’ampleur mondiale. Voir le <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">plan de cours</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Essayez cette activité</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color : dimgray ; text-align : left ; margin-top :10px ; margin-bottom:10px"><strong>Comment fonctionnent les ordinateurs</strong></h3>
-         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Avec une introduction de Bill Gates, cette série de six petites vidéos explique ce qui fait d'un ordinateur un ordinateur et comment les circuits d’ordinateurs fonctionnent.</div>
-         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Regarder la série vidéo< /bouton></a> 
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Comment fonctionnent les ordinateurs</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Avec une introduction de Bill Gates, cette série de six courtes vidéos explique ce qui fait d'un ordinateur un ordinateur et comment fonctionnent les circuits informatiques.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Regardez la série de vidéos</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color : dimgray; text-align : left; margin-top : 10px; margin-bottom: 10px"><strong>Comment fonctionne Internet</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Dans cette série de huit petites vidéos, vous apprendrez comment Internet a été inventé, ce qu'est le HTML et comment fonctionnent les moteurs de recherche comme Google.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Regarder la série vidéo</button ></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Comment fonctionne Internet</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Dans cette série de huit courtes vidéos, vous découvrirez comment Internet a été inventé, ce qu'est le HTML et comment fonctionnent les moteurs de recherche tels que Google.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Regardez la série de vidéos</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Comment fonctionne l'AI</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Découvrez comment fonctionne l'AI et pourquoi c'est important, grâce à cette série de petites vidéos. Mettant en vedette le PDG de Microsoft, Satya Nadella et un groupe de différents experts.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Comment fonctionne l'IA</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Découvrez comment fonctionne l'IA et pourquoi elle est importante grâce à cette série de courtes vidéos. Mettant en vedette le PDG de Microsoft, Satya Nadella et un groupe de différents experts.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Regardez la série de vidéos</button></a>
     </span>
   </div>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduction à Game Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Programmez des animations, de l’art interactif et des jeux dans Game Lab. Commencez avec des formes simples et développez des animations et des jeux basés sur des sprites plus sophistiqués.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduction to Game Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Program animations, interactive art, and games in Game Lab. Commencez avec des formes simples et développez des animations et des jeux basés sur des sprites plus sophistiqués.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Essayez ce module</button></a>
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programmation d’une tortue dans App Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Utilisez des commandes simples de JavaScript pour dessiner des formes et des images à l'aide d'une « tortue » virtuelle. Concevez et programmez votre propre scène numérique !</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Essayez ce module</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programmation de tortues dans App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Utilisez de simples commandes JavaScript pour dessiner des formes et des images à l'aide d'une « tortue » virtuelle. Concevez et programmez votre propre scène numérique !</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Essayez le module</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programmation événementielle dans App Lab></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Apprenez à concevoir des applications qui répondent aux clics et aux pressions sur les touches. Créez une série d'applications simples (applis) en live sur le Web !</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programmation axée sur les événements dans App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Apprenez à concevoir des applications qui répondent aux clics et aux pressions de touches. Créez une série d'applications simples (applis) en live sur le Web !</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Essayez ce module</button></a>
     </span>
   </div>
@@ -312,8 +312,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">Les CodeBytes sont des leçons interactives faciles à digérer de 20 minutes alliant l'informatique à des sujets du monde réel. Formez une AI à lire la langue des signes, concevez une application pour de bon, explorez le monde de Minecraft, et plus encore !</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes sont des leçons interactives de 20 minutes faciles à assimiler mêlant l'informatique à des sujets du monde réel. Formez une AI à lire la langue des signes, concevez une application pour de bon, explorez le monde de Minecraft, et plus encore !</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Voir des épisodes</button></a>
@@ -329,8 +329,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">Continuez à vous amuser avec l’informatique en faisant une Pause Code ! Vous pouvez créer un code avec Ashton Kutcher, découvrir les variables avec Yara Shahidi et même explorer le fonctionnement d'Internet avec le véritable inventeur d'Internet, Vint Cerf </div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
+        <div class="smalltext" style="">Profitez de l'informatique en faisant un code break ! Vous pouvez créer un code avec Ashton Kutcher, découvrir les variables avec Yara Shahidi et même explorer le fonctionnement d'Internet avec le véritable inventeur d'Internet, Vint Cerf </div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Restez connectés</button></a>
     </span>
