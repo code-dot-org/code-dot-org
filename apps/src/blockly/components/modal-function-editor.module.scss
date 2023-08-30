@@ -1,4 +1,4 @@
-.modalEditor {
+.container {
   display: none;
   position: absolute;
   // TODO: Calculate these values based on the size of the workspace
@@ -9,4 +9,29 @@
   height: 100%,
   // border: '10px solid green',
   // borderRadius: '15px',
+}
+
+.toolbar {
+  z-index: 1;
+  position: absolute;
+  left: 142px;
+  top: 10px;
+  width: 800px;
+}
+
+.buttons {
+  float: right;
+}
+
+.inputs {
+  //z-index: 0;
+}
+
+.inputTitleContainer {
+  padding: 10px;
+  width: 100%;
+}
+
+.wideInput {
+  width: 100%;
 }
