@@ -120,8 +120,13 @@ function parseSourceAndHiddenDefinitions(source, hiddenDefinitions) {
  * @param {Object} hiddenDefinitions Hidden Definition object, parsed from JSON (or an empty object)
  * @param {Array<string>} procedureTypesToHide procedure types to move to procedures object.
  * @returns void
+ * exported for unit testing
  */
-function moveHiddenProcedures(source, hiddenDefinitions, procedureTypesToHide) {
+export function moveHiddenProcedures(
+  source,
+  hiddenDefinitions,
+  procedureTypesToHide
+) {
   if (
     procedureTypesToHide.length === 0 ||
     !source.blocks ||
