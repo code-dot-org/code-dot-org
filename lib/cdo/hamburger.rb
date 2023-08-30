@@ -192,18 +192,18 @@ class Hamburger
 
     case options[:user_type]
     when 'teacher'
-      entries = entries.concat teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]}
+      entries = entries.concat(teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]})
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_teacher_options], visibility[:show_help_options]), id: "after-teacher"}
     when 'student'
-      entries = entries.concat student_entries.each {|e| e[:class] = visibility[:show_student_options]}
+      entries = entries.concat(student_entries.each {|e| e[:class] = visibility[:show_student_options]})
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_help_options]), id: "after-student"}
     else
-      entries = entries.concat signed_out_entries.each {|e| e[:class] = visibility[:show_signed_out_options]}
+      entries = entries.concat(signed_out_entries.each {|e| e[:class] = visibility[:show_signed_out_options]})
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_signed_out_options], visibility[:show_help_options]), id: "after-signed-out"}
     end
 
     help_contents = HelpHeader.get_help_contents(options)
-    entries.concat help_contents.each {|e| e[:class] = visibility[:show_help_options]}
+    entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
     entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
 
     # Pegasus options.

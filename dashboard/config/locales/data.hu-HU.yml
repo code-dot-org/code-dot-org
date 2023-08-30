@@ -767,6 +767,7 @@ hu:
         artist_intro: Művész Intro
         c_and_c_digital_sharing: Digitális megosztás
         c_and_c_great_to_create: Remek dolog tisztességesen alkotni és játszani
+        code-break: Vegyen egy kódszünetet
         csc-poem-art-intro: Bevezető videó
         csc-poem-art-outro: Videó befejező része
         csd_applab_parameters: Paraméteres függvények
@@ -864,3 +865,4 @@ hu:
         starwars_intro: 'Star Wars: A galaxis építése kóddal - Bevezetés'
         starwars_typing: 'Star Wars: A galaxis építése kóddal - JavaScript'
         tutorial_puzzle_challenge: Bemutató a feladvány megoldásához
+        what-is-creativity: Mi a Kreativitás?

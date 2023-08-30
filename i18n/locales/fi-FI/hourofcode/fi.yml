@@ -252,6 +252,8 @@ fi:
   call_to_action_learn_about_approach: Lue lisää lähestymistavastamme
   call_to_action_try_java_lab: Kokeile Java Labia
   call_to_action_notify_available: Ilmoita minulle, kun saatavilla
+  call_to_action_register_early_access: Rekisteröidy Early Access -palveluun
+  call_to_action_open_positions: Tarkastele avoimia positioita
   aria_label_call_to_action_afe: Lue lisää Amazon Future Engineeristä
   aria_label_call_to_action_teaching_csf: Aloita Teaching Computer Science Fundamentals
     ammatillinen oppimisohjelma
@@ -13138,6 +13140,120 @@ fi:
   accessibility_card_text_10: Code.orgin AP Computer Science Principles -opetussuunnitelman
     mukauttaminen käyttämällä Quorumia, näyttöön perustuvaa kieltä, joka on alun perin
     suunniteltu tarjoamaan saavutettavuutta sokeille tai näkövammaisille opiskelijoille.
+  engineering_hero_heading: Liity suunnittelutiimiimme!
+  engineering_hero_desc: Jatkaessamme suunnittelutiimimme laajentamista halusimme
+    kertoa lisää suunnitteluorganisaatiostamme osoitteessa Code.org ja joistakin täällä
+    työskentelyn ainutlaatuisista näkökohdista. Jos olet kiinnostunut hakemaan jotain
+    rooleistamme, haluaisimme kuulla sinusta!
+  engineering_team_title: Tapaa suunnittelutiimi osoitteessa Code.org
+  engineering_team_card_text_1: Tämä on (suurin osa) meistä henkilökohtaisesta tapaamisesta
+    kesällä 2023! Tämä joukko on jaettu neljään alaryhmään suunnittelutiimissämme,
+    jotka työskentelevät yhdessä rakentaakseen ja palvellakseen alustaa kaikille opiskelijoillemme
+    ja opettajillemme.
+  engineering_team_card_text_2: Jos olet kiinnostunut hakemaan jotain rooleistamme,
+    haluaisimme kuulla sinusta! Löydät listan avoimista työpaikoista Urat-sivultamme.
+  engineering_our_team_title: Suunnittelutiimimme
+  engineering_our_team_desc: 'Code.orgin suunnittelutiimi on jaettu neljään alaryhmään,
+    jotka rakentavat ja tukevat alustamme eri alueita:'
+  engineering_our_team_sub_title_1: Opiskelijoiden oppimistiimi
+  engineering_our_team_text_1: 'Opiskelijoiden oppimistiimimme omistaa kaikki toimintamme
+    (kutsumme niitä laboratorioiksi), joita opiskelijamme käyttävät päivittäin. Tämä
+    tiimi työskentelee enimmäkseen käyttöliittymätekniikalla (käytämme Reactia ja
+    paljon mukautettua JS: ää) ja meillä on hyvät työsuhteet monien kumppaneiden ja
+    avoimen lähdekoodin projektien kanssa. Käytämme esimerkiksi [Googlen Blockly]
+    (%{youtube_url}) kaikissa lohkopohjaisissa ohjelmoinneissamme. Tuemme opiskelijoita
+    heidän oppimismatkallaan aina päiväkodista 12. luokkaan asti.'
+  engineering_our_team_sub_title_2: Opettajan kokemustiimi
+  engineering_our_team_text_2: Teacher Experience -tiimimme rakentaa työkalut, jotka
+    houkuttelevat uusia opettajia Code.orgiin (kutsumme näitä hankintatuotteiksi)
+    ja kehittää alustan, joka antaa nykyisille opettajillemme mahdollisuuden opettaa
+    opetussuunnitelmaamme (opettajamme työkalut). Kuten opiskelijatyökalujemme kanssa,
+    luotamme Reactiin käyttöliittymämme rakentamisessa ja palvelinpuolen komponenttimme
+    tarjoillaan Ruby on Rails -sovelluksella.
+  engineering_our_team_sub_title_3: Platform Team
+  engineering_our_team_text_3: Platform-tiimimme omistaa keskeiset komponentit, jotka
+    palvelevat opiskelija- ja opettajaryhmiemme tarpeita (esimerkiksi todennus ja
+    käyttäjäprofiili), ja sen tehtävänä on myös tavoittaa opiskelijoita, joita emme
+    vielä tavoita. Tähän sisältyy integraatioiden rakentaminen, jotka yhdistävät meidät
+    kouluihin, jotka käyttävät erilaisia oppimisen hallintajärjestelmiä (LMS), ja
+    pakkaavat opetussuunnitelmamme siten, että sitä voidaan käyttää etäkouluissa,
+    joilla ei ole pääsyä luotettavaan internetiin.
+  engineering_our_team_sub_title_4: Infrastruktuuri
+  engineering_our_team_text_4: 'Infrastruktuuritiimimme tarjoaa selkärangan alustalle,
+    joka tukee opiskelijoitamme ja opettajiamme. Tämä sisältää hosting-infrastruktuurimme
+    ja siihen liittyvät palvelut (käytämme AWS: ää), tiedonhallinta, tietoturvaohjelmat,
+    kehittäjä- ja käyttöönottopalvelut ja paljon muuta. Tämä tiimi omistaa myös skaalaus-
+    ja provisiointijärjestelmämme, jotka ovat kriittisiä Hour of Code -tapahtuman
+    aikana, jossa kutsumme jokaisen opiskelijan maailmassa suorittamaan tunnin koodauksen
+    kanssamme.'
+  engineering_faq_question_1: Mitä Code.org tekee?
+  engineering_faq_answer_1_a: Code.org on koulutusinnovaatiota tavoittelematon järjestö,
+    joka on omistettu visiolle, että jokaisella oppilaalla jokaisessa koulussa on
+    mahdollisuus oppia tietojenkäsittelytieteitä osana K-12-ydinkoulutustaan.
+  engineering_faq_answer_1_b: Laajennamme tietojenkäsittelytieteen saatavuutta kouluissa,
+    keskittyen nuorten naisten ja muiden aliedustettujen ryhmien opiskelijoiden osallistumisen
+    lisäämiseen. Code.org, joka on johtava K-12-tietojenkäsittelytieteen opetussuunnitelman
+    tarjoaja Yhdysvaltojen suurimmissa koulupiireissä, järjestää myös vuosittaisen
+    Hour of Code -kampanjan, johon on osallistunut yli 15% kaikista maailman opiskelijoista.
+  engineering_faq_answer_1_c: Code.org tukee anteliaita lahjoittajia, kuten Microsoft,
+    Amazon, Google ja monet muut.
+  engineering_faq_question_2: Mikä on Code.orgin kehittäjäkokemus ja työkalut?
+  engineering_faq_answer_2: Kehittäjäkokemuksemme voi olla erilainen kuin mitä olet
+    nähnyt aiemmissa rooleissasi. Läheisessä yhteistyössä tuotetiimimme kanssa toimitamme
+    tuotantoon joka arkipäivä ja meillä on erilaisia kadensseja - joskus kirjoitat
+    koodia, joka julkaistaan sinä päivänä; muina aikoina olet pidemmän aikavälin projekteissa
+    - ja vaikka seuraamme 2 viikon sprinttejä, teemme sen kevyellä tavalla. Indeksoimme
+    kohti oikeiden asioiden tekemistä oikealla tavalla verrattuna siihen, että otamme
+    puristisen näkemyksen mistä tahansa tietystä menetelmästä. [Kaikki koodimme] (%{code_url})
+    on avoimen lähdekoodin ja käytämme JIRA- ja GitHub-vetopyyntöjä kaikkien työkohteidemme
+    seuraamiseen. Välitämme myös paljon laadusta ja testauksesta, ja olemme onnekkaita,
+    että meillä on uskomaton tuki [SauceLabs](%{saucelabs_url}), jotka auttavat meitä
+    suorittamaan käyttöliittymätestejämme erilaisilla opiskelijalaitteilla (esim.
+    iPadit) pilvilaitetilallaan.
+  engineering_faq_question_3: Mikä on insinöörin päivystysvuoro Code.orgissa?
+  engineering_faq_answer_3: Yli 30 suunnittelutiimimme jakaa päivystysvastuut. Jokainen
+    insinööri kattaa 24 tunnin vuoron ja käyttää eskalaatiopolkujamme ja pelikirjojamme
+    vastaamaan sivuston katkoksiin tai muihin live-sivuston ongelmiin. Olemme ylpeitä
+    sivustomme luotettavuudesta - keskimäärin jokainen insinööri herätetään vain kerran
+    vuodessa ongelmiin, jotka ovat tyypillisesti nopeita ratkaista. Sen sijaan ”Päivän
+    kehittäjä” viettää yleensä osan työpäivästään tuotannon käyttöönoton hallintaan
+    ja vähemmän kiireellisten asioiden kokeiluun.
+  engineering_faq_question_4: Oletko etäystävällinen/WFH-organisaatio?
+  engineering_faq_answer_4_a: Kyllä! Vuonna 2019, vähän ennen pandemiaa, Code.orgista
+    tuli etä-ensimmäinen organisaatio. Nykyään meillä on insinöörejä jokaisella Yhdysvaltain
+    aikavyöhykkeellä ja sovitamme työajat vastaavasti. Suurin osa kokouksistamme tapahtuu
+    klo 10—15 PT.
+  engineering_faq_answer_4_b: Tunnustamme myös henkilökohtaisen ajan arvon, ja joka
+    neljännes tapaamme henkilökohtaisesti, tyypillisesti Seattlessa. Kaksi näistä
+    tapahtumista (kutsumme niitä aloitusviikoksi ja ”Codechella”) kokoavat kaikki
+    organisaation jäsenet yhteen tammi- ja kesäkuussa - ja suunnittelu- ja tuotetiimit
+    tapaavat erikseen huhti- ja lokakuussa.
+  engineering_faq_answer_4_c: Uskomme vahvasti viettämään aikaa opiskelijoiden ja
+    opettajien kanssa, niin monet näistä henkilökohtaisista tapahtumista sisältävät
+    retkiä kouluihin ja luokkahuoneisiin palautteen keräämiseksi tai tuotteidemme
+    testaamiseksi
+  engineering_faq_question_5: Mikä tekee Code.orgin suunnittelutiimistä ainutlaatuisen?
+  engineering_faq_answer_5_a: 'Haastavien teknisten ongelmien ratkaisemisen lisäksi
+    meillä on muutamia asioita, jotka tekevät suunnitteluorganisaatiostamme erilaisen
+    kuin muut, joissa olet ehkä työskennellyt:'
+  engineering_faq_answer_5_b_1: Me kaikki jaamme intohimomme tehtäväämme kohtaan.
+  engineering_faq_answer_5_b_2: Jokainen meistä on täällä tukemassa tehtävää laajentaa
+    tietojenkäsittelytieteen saatavuutta jokaiselle opiskelijalle ympäri maailmaa.
+    Meillä kaikilla on ainutlaatuinen tarina ja näkökulma siitä, mikä ajaa meitä kohti
+    tätä tehtävää.
+  engineering_faq_answer_5_c_1: Välitämme toisistamme syvästi.
+  engineering_faq_answer_5_c_2: Kun insinöörit kamppailevat ongelman kanssa, astumme
+    sisään ja autamme. Yksi periaatteistamme on, että olemme vaikeita ongelmissa,
+    mutta ystävällisiä toisiamme kohtaan. Edistämme insinöörejä säännöllisesti, mutta
+    emme määrää liian suunniteltuja ratkaisuja vain tukemaan jonkun ylennyspolkua.
+    Sen sijaan investoimme insinööreihimme, joilla on runsas ammatillisen kehityksen
+    budjetti ja pääsy muihin oppimismahdollisuuksiin.
+  engineering_faq_answer_5_d_1: Teemme kovasti töitä, mutta asetamme selkeät rajat.
+  engineering_faq_answer_5_d_2: Vaikka tuemme opiskelijoita ympäri maailmaa, pidämme
+    itseämme vastuussa selkeistä rajoista työ- ja kotielämän välillä. Nautimme keskiviikkoisin
+    kokouksista, ottamalla voimanottomme (yhteensä 5 viikkoa, joka sisältää koko organisaationlaajuisen
+    2 viikon toimiston sulkemisen vuoden lopussa eli talviloma), puoli työpäivää perjantaisin
+    kesällä eli kesäperjantaisin, ja muita anteliaita etuja.
   language_code:
     ar: arabialainen
     az: Azerbaidžanin

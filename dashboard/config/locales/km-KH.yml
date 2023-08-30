@@ -248,7 +248,7 @@ km:
       instructions: សូមបញ្ចូលលេខកូដជាអក្សរចំនួន៦តួអក្សរ ដែលគ្រូរបស់អ្នកបានចែករំលែកជាមួយអ្នក
         (ឧទាហរណ៍៖ "ABCDEF") ដើម្បីចូលរួមផ្នែករបស់ពួកគេ។
       instructions_short: សូមធ្វើការវាយបញ្ចូលនូវផ្នែកកូដ៦ខ្ទង់។
-      placeholder: ផ្នែកនៃការសរសេរកូដ (ABCDEF)
+      placeholder: លេខកូដថ្នាក់រៀន (ABCDEF)
       submit: ចូលរួម
       title: ចូលរួមផ្នែកមួយនៅលើ Code.org
   k8intro: ការណែនាំពី K-8 នៃមុខវិទ្យាវិទ្យាសាស្រ្តកុំព្យូទ័រ(15-25ម៉ោង)
@@ -294,7 +294,7 @@ km:
       about_us: អំពីយើង
       app_lab_documentation: ឯកសារ App Lab
       app_lab_tutorials: មេរៀនណែនាំ App Lab
-      course_catalog: កាតាឡុកវគ្គសិក្សា
+      course_catalog: គម្រងវគ្គសិក្សា
       educate_elementary: កម្រិតបឋមសិក្សា
       educate_high: វិទ្យាល័យ
       educate_hoc: កម្មវិធី Hour of Code
@@ -337,7 +337,7 @@ km:
       algebra_game: ពិជគណិត
       already_registered: បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?
       applab: មន្ទីរពិសោធន៍កម្មវិធី​
-      artist: សិល្បករ
+      artist: វិចិត្រករ
       artist_k1: សិល្បករ (អ្នកដែលទើបតែរៀនអាន)
       basketball: កីឡាបាល់បោះ
       bounce: បាល់​លោត
@@ -679,6 +679,7 @@ km:
     show_notes: បង្ហាញកំណត់ចំណាំ
     show_video: បង្ហាញកំណត់ចំណាំ
     tab: វីដេអូ។
+  view_lesson_plan: មើលកិច្ចតែងការមេរៀន
   view_teacher_guide: បង្ហាញការណែនាំសម្រាប់គ្រូ
   welcome_back: ស្វាគមន៍​ការ​មក​វិញ, %{name}
   welcome_email:

@@ -1257,7 +1257,7 @@ pt:
     not_now: "Agora não"
   behaviors:
     this_sprite: "este personagem"
-  unit_prefix: "Unidade 4"
+  unit_prefix: "Unidade 1"
   code_org_logo_alt: "Code.org Home"
   teacher_feedback: "Feedback do Professor"
   lesson_lock:

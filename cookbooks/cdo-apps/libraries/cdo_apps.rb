@@ -93,7 +93,7 @@ module CdoApps
     # as its contents and invoke the restart whenever those contents change.
     file "#{app_name}_listeners" do
       path "#{Chef::Config[:file_cache_path]}/#{app_name}_listeners"
-      content lazy {"#{node['cdo-secrets']["#{app_name}_sock"]}:#{node['cdo-secrets']["#{app_name}_port"]}"}
+      content(lazy {"#{node['cdo-secrets']["#{app_name}_sock"]}:#{node['cdo-secrets']["#{app_name}_port"]}"})
       notifies :run, "execute[restart #{app_name} service]", :immediately
     end
 
