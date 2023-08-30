@@ -58,17 +58,21 @@ export const procedureDefMutator = {
   domToMutation: function (xmlElement) {
     for (let i = 0; i < xmlElement.childNodes.length; i++) {
       const node = xmlElement.childNodes[i];
-      if (node.nodeName.toLowerCase() !== 'arg') continue;
-      const varId = node.getAttribute('varid');
-      this.getProcedureModel().insertParameter(
-        new ObservableParameterModel(
-          this.workspace,
-          node.getAttribute('name'),
-          undefined,
-          varId
-        ),
-        i
-      );
+      const nodeName = node.nodeName.toLowerCase();
+      if (nodeName === 'arg') {
+        const varId = node.getAttribute('varid');
+        this.getProcedureModel().insertParameter(
+          new ObservableParameterModel(
+            this.workspace,
+            node.getAttribute('name'),
+            undefined,
+            varId
+          ),
+          i
+        );
+      } else if (nodeName === 'description') {
+        this.description = node.textContent;
+      }
     }
     this.setStatements_(xmlElement.getAttribute('statements') !== 'false');
   },
@@ -79,6 +83,9 @@ export const procedureDefMutator = {
    */
   saveExtraState: function () {
     const state = Object.create(null);
+    if (this.description) {
+      state['description'] = this.description;
+    }
     state['procedureId'] = this.getProcedureModel().getId();
 
     const params = this.getProcedureModel().getParameters();
@@ -131,6 +138,9 @@ export const procedureDefMutator = {
       }
     }
 
+    if (state['description']) {
+      this.description = state['description'];
+    }
     this.doProcedureUpdate();
     this.setStatements_(state['hasStatements'] === false ? false : true);
   },
