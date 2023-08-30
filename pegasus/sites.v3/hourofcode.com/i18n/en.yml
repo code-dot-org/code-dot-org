@@ -1335,6 +1335,10 @@
   signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
   signup_email_preference_privacy: '(See our privacy policy)'
   signup_email_preference_yes: 'Yes'
+  signup_email_preference_yes_elementary: 'Yes - Send me updates on Elementary School Resources'
+  signup_email_preference_yes_middle: 'Yes - Send me updates on Middle School Resources'
+  signup_email_preference_yes_high: 'Yes - Send me updates on High School Resources'
+  signup_email_preference_yes_general: 'Yes - Send me general updates'
   signup_email_preference_no: 'No'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "We will put your school name and city on the map when you register. If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
