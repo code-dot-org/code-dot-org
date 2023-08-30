@@ -892,6 +892,8 @@ applabCommands.textArea = function (opts) {
   apiValidateDomIdExistence(opts, 'textArea', 'id', opts.elementId, false);
   const newTextArea = document.createElement('div');
   newTextArea.id = opts.elementId;
+  const textNode = document.createTextNode(opts.text);
+  newTextArea.appendChild(textNode);
   newTextArea.setAttribute('contenteditable', true);
   newTextArea.style.width = '200px';
   newTextArea.style.height = '100px';
