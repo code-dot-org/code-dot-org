@@ -21,6 +21,8 @@ require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 require_relative '../animation_assets/manifest_builder'
 
+Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| require file}
+
 module I18n
   module SyncOut
     def self.perform
