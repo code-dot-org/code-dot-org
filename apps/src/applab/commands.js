@@ -889,33 +889,26 @@ applabCommands.textInput = function (opts) {
 };
 
 applabCommands.textArea = function (opts) {
-  console.log('textArea');
-  // PARAMNAME: textArea: id vs. areaId
   apiValidateDomIdExistence(opts, 'textArea', 'id', opts.elementId, false);
   apiValidateType(opts, 'textArea', 'text', opts.text, 'uistring');
   if (typeof opts.forId !== 'undefined') {
     apiValidateDomIdExistence(opts, 'textArea', 'forId', opts.forId, true);
   }
-  var newTextArea = document.createElement('textarea');
-  var textNode = document.createTextNode(opts.text);
+
+  const newTextArea = document.createElement('div');
   newTextArea.id = opts.elementId;
-  newTextArea.style.position = 'relative';
+  newTextArea.setAttribute('contenteditable', true);
+  newTextArea.style.width = '200px';
+  newTextArea.style.height = '100px';
   newTextArea.style.borderStyle = 'solid';
-  // Set optimizeSpeed to ensure better text size consistency between Safari and Chrome
-  newTextArea.style.textRendering = 'optimizeSpeed';
   elementLibrary.setAllPropertiesToCurrentTheme(
     newTextArea,
     Applab.activeScreen()
   );
-  var forElement = document.getElementById(opts.forId);
-  if (forElement && Applab.activeScreen().contains(forElement)) {
-    newTextArea.setAttribute('for', opts.forId);
-  }
 
-  return Boolean(
-    newTextArea.appendChild(textNode) &&
-      Applab.activeScreen().appendChild(newTextArea)
-  );
+  $(newTextArea).addClass('textArea');
+
+  return Boolean(Applab.activeScreen().appendChild(newTextArea));
 };
 
 applabCommands.textLabel = function (opts) {
@@ -978,22 +971,21 @@ applabCommands.radioButton = function (opts) {
 };
 
 applabCommands.slider = function (opts) {
-  console.log('opts', opts);
   // PARAMNAME: slider: id vs. sliderId
   apiValidateDomIdExistence(opts, 'slider', 'id', opts.elementId, false);
 
   var newSlider = document.createElement('input');
   newSlider.setAttribute('type', 'range');
-
-  newSlider.id = opts.elementId;
   newSlider.min = opts.min;
   newSlider.max = opts.max;
-  newSlider.value = opts.value;
+  newSlider.defaultValue = opts.value;
   newSlider.step = opts.step;
   newSlider.style.position = 'relative';
   newSlider.style.borderStyle = 'solid';
   newSlider.style.width = 50;
   newSlider.style.height = 24;
+  newSlider.style.margin = '0px';
+  newSlider.style.padding = '0px';
   elementLibrary.setAllPropertiesToCurrentTheme(
     newSlider,
     Applab.activeScreen()
