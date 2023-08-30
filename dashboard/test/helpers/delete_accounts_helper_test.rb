@@ -1557,11 +1557,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       form_ids = PEGASUS_DB[:forms].where(email: email).map {|f| f[:id]}
 
       refute_empty PEGASUS_DB[:forms].where(id: form_ids)
-      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      assert(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
 
       purge_all_accounts_with_email email
 
-      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      refute(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
     end
   end
 
@@ -1571,11 +1571,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       form_ids = PEGASUS_DB[:forms].where(user_id: user.id).map {|f| f[:id]}
 
       refute_empty PEGASUS_DB[:forms].where(id: form_ids)
-      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      assert(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
 
       purge_user user
 
-      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      refute(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
     end
   end
 
