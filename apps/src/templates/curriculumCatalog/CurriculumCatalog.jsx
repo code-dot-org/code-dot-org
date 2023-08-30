@@ -89,6 +89,7 @@ const CurriculumCatalog = ({
                 video,
                 published_date,
                 self_paced_pl_course_offering_path,
+                available_resources,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
@@ -123,6 +124,7 @@ const CurriculumCatalog = ({
                   isExpanded={expandedCardKey === key}
                   onQuickViewClick={() => handleExpandedCardChange(key)}
                   isInUS={isInUS}
+                  availableResources={available_resources}
                   {...props}
                 />
               )

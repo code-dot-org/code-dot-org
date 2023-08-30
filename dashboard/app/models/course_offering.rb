@@ -63,6 +63,15 @@ class CourseOffering < ApplicationRecord
     semester: 5000,
     school_year: 525600,
   }
+
+  ACCEPTABLE_RESOURCE_TYPES = [
+    'Answer Key',
+    'Activity Guide',
+    'Slides',
+    'Exemplar',
+    'Slide Deck',
+    'Rubric'
+  ]
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
   #
@@ -324,6 +333,7 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
+      available_resources: get_available_resources(locale_code)
     }
   end
 
@@ -456,5 +466,28 @@ class CourseOffering < ApplicationRecord
     end
 
     true
+  end
+
+  def get_available_resources(locale_code='en-us')
+    lessons = latest_published_version(locale_code).units.first.lessons
+
+    return nil if lessons.empty?
+    lesson_plan = lessons.first.lesson_plan_html_url
+    expanded_card_resources = {"Lesson Plan" => lesson_plan}
+
+    lessons.each do |lesson|
+      break if expanded_card_resources.size >= 5
+      lesson.resources.each do |resource|
+        properties = resource.properties
+        next unless properties.key?('type')
+        type = properties['type']
+        type = "Slide Deck" if type == "Slides"
+        type = "Answer Key" if type == "Exemplar"
+        if ACCEPTABLE_RESOURCE_TYPES.include?(type) && !expanded_card_resources.key?(type)
+          expanded_card_resources[type] ||= resource["url"]
+        end
+      end
+    end
+    expanded_card_resources
   end
 end
