@@ -446,6 +446,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   const originalSetOutput = blocklyWrapper.Block.prototype.setOutput;
+  // Replaces the original setOutput method with a custom version that will handle the case when "None" is passed appropriately
+  // See: https://github.com/code-dot-org/code-dot-org/blob/9d63cbcbfd84b8179ae2519adbb5869cbc319643/apps/src/blocklyAddons/cdoConstants.js#L9
   blocklyWrapper.Block.prototype.setOutput = function (isOutput, check) {
     if (check === 'None') {
       return originalSetOutput.call(this, isOutput, null);
