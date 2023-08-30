@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {
   ToolboxType,
   CLAMPED_NUMBER_REGEX,
@@ -15,7 +16,6 @@ import {parseElement as parseXmlElement} from '../../xml';
 import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
 import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
 import experiments from '@cdo/apps/util/experiments';
-import _ from 'lodash';
 
 /**
  * Loads blocks to a workspace.
@@ -138,11 +138,11 @@ function moveHiddenProcedures(source, hiddenDefinitions, procedureTypesToHide) {
       blocksToHide.push(block);
       // If we found a block to hide, also copy the procedure model
       // for that block to the hidden definitions workspace.
-      const sourceProcedureModel = sourceProcedures.filter(
+      const sourceProcedureModel = sourceProcedures.find(
         p => p.id === block.extraState.procedureId
       );
-      if (sourceProcedureModel.length > 0) {
-        hiddenDefinitions.procedures.push(sourceProcedureModel[0]);
+      if (sourceProcedureModel) {
+        hiddenDefinitions.procedures.push(sourceProcedureModel);
       }
     } else {
       otherBlocks.push(block);
