@@ -23,7 +23,6 @@ import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import * as Sticky from 'reactabular-sticky';
 import locales from '@cdo/apps/redux/localesRedux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {
   fakeLessonWithLevels,
   fakeStudents,
@@ -52,7 +51,6 @@ const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
       sectionProgress,
       unitSelection,
       locales,
-      isRtl,
     }),
     _.merge({}, initialState, overrideState)
   );

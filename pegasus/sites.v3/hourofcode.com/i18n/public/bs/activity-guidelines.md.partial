@@ -104,6 +104,7 @@ Ono što će vam trebati:
 * Ime i e-mail primarnog kontakta koji predstavlja podnesenu aktivnost
 * Naziv aktivnosti (ne može uključiti “Sat kodiranja” u ime)
 * URL link na aktivnost
+* Da li ova aktivnost uključuje AI: Da ili Ne
 * Opis aktivnosti (maksimalni broj znakova: 400) 
     * U opis navedite da li je to uglavnom vođeno studentima ili olakšano nastavnicima. Pored toga, neke škole su zainteresovane da znaju da li se aktivnosti Sata kodiranja bave zajedničkim osnovnim ili naučnim standardima sledeće generacije. Ako se aktivnost bavi određenim standardima, razmislite o uključivanju ovih informacija.
 * Preporučena razina (e) ocjena (e) za namijenjene korisnike. Možete se pozvati na \[K-12 standardi Udruženja nastavnika računarskih nauka\] (https://k12cs.org/framework-statements-by-grade-band/) za koncepte računarskih nauka koji odgovaraju ocjeni. Razine primjera razreda uključuju: 
@@ -111,9 +112,9 @@ Ono što će vam trebati:
     * 2. i 5. razreda (7-10 godina)
     * 6. i 8. razreda (11-13 godina)
     * Ocjene 9+ (14+ godina)
-* Popis predmetnih područja koje vaša aktivnost pokriva (pored računarskih nauka). Na primjer, ako nastavnik matematike može koristiti vašu aktivnost za podučavanje o uglovima ili parabolama, navedite kao matematiku. Ako imate ludu libs aktivnost koja uči glagole/imenice/itd. odaberite jezične umjetnosti.
-* Popis programskih jezika koje vaše aktivnosti podučava. Tj. C/C ++, Java, JavaScript itd. ili jezik neovisan (za planove lekcija koji se mogu podučavati na više jezika)
-* Spisak podržanih prirodnih jezika. Napomena: Otkrivanje jezika odgovornost je pružatelja aktivnosti; preusmjerit ćemo sve korisnike na navedeni jedinstveni URL.
+* Popis programskih jezika koje vaše aktivnosti podučava. Tj. C/C ++, Java, JavaScript itd. ili jezik neovisan (za planove lekcija koji se mogu podučavati na više jezika) odaberite jezične umjetnosti.
+* Spisak podržanih prirodnih jezika. Napomena: Otkrivanje jezika odgovornost je pružatelja aktivnosti; preusmjerit ćemo sve korisnike na navedeni jedinstveni URL. ili jezik neovisan (za planove lekcija koji se mogu podučavati na više jezika)
+* Koju razinu iskustva treba edukator imati da koristi vašu aktivnost? (Npr. Početnik ili udoban.) I, koji nivo iskustva bi studenti trebali imati?
 * Koju razinu iskustva treba edukator imati da koristi vašu aktivnost? (Npr. Početnik ili udoban.) I, koji nivo iskustva bi studenti trebali imati? Ako želite pripremiti naprednije aktivnosti Sata koda™, molimo Vas da u opis svoje aktivnosti uključite prethodno znanje potrebno.
 * Dužina vaše aktivnosti 
     * Samo 1 sat
@@ -167,9 +168,11 @@ Ono što će vam trebati:
 
 ## Kako će se vrednovati aktivnosti
 
-Raznolika komisija edukatora informatike rangirat će prijave na osnovu kvalitativnih i kvantitativnih kriterijuma. Sve aktivnosti koje odgovaraju osnovnim kriterijima bit će navedene. Nastavnici će moći filtrirati i sortirati kako bi pronašli najbolje aktivnosti za svoju učionicu.
+Raznolika komisija edukatora informatike rangirat će prijave na osnovu kvalitativnih i kvantitativnih kriterijuma. Sve aktivnosti koje odgovaraju osnovnim kriterijima bit će navedene.
 
-Rubrika za vrednovanje aktivnosti i planova lekcija će tražiti sljedeće kriterije za sve aktivnosti i rangirati ih u skladu s tim:
+Za tradicionalne aktivnosti kodiranja, raznovrstan odbor edukatora informatike rangirat će prijave na osnovu kvalitativnih i kvantitativnih kriterija. Sve aktivnosti koje odgovaraju osnovnim kriterijima bit će navedene. Nastavnici će moći filtrirati i sortirati kako bi pronašli najbolje aktivnosti za svoju učionicu.
+
+Ako odbor za pregled ocjenjuje aktivnost nulu u kvaliteti proizvodnje (zbog loših grešaka ili uputa zbog kojih je vrlo teško koristiti), u promociji učenja u nedovoljno zastupljenim grupama (zbog rasistički/seksističkog materijala), u obrazovnoj vrijednosti (ne podučava CS koncepte), ili zabavno/angažovanje (zbog toga što je učenicima otežan/obeshrabrujuće za rad), aktivnost neće biti navedena.
 
 - Visoka kvaliteta proizvodnje
 - Promovirati učenje od strane svih demografskih grupa (esp. studentice nedovoljno zastupljene u CS-u, kao mlade žene, studentice iz marginalizovanih rasnih i etničkih grupa, te studentice sa invaliditetom)
@@ -177,9 +180,9 @@ Rubrika za vrednovanje aktivnosti i planova lekcija će tražiti sljedeće krite
 - Zabava i privlačan
 - Ohrabruje učenike da stvore nešto jedinstveno što mogu podijeliti (Za mlađe učenike: s roditeljima i kolegama iz razreda. Za starce studente: na Internetu)
 
-Ako odbor za pregled ocjenjuje aktivnost nulu u kvaliteti proizvodnje (zbog loših grešaka ili uputa zbog kojih je vrlo teško koristiti), u promociji učenja u nedovoljno zastupljenim grupama (zbog rasistički/seksističkog materijala), u obrazovnoj vrijednosti (ne podučava CS koncepte), ili zabavno/angažovanje (zbog toga što je učenicima otežan/obeshrabrujuće za rad), aktivnost neće biti navedena.
-
 Pored toga, da bi bile navedene, sve aktivnosti moraju:
+
+Za samousmjerene aktivnosti za nove nastavnike i studente komisija za reviziju će tražiti da li:
 
 - Budite prikladni za učionicu javne škole (bez oružja, bez eksplicitnih/zrelih sadržaja, bez vjerskog sadržaja itd.)
 - Zahtijevaju bez prijave
@@ -205,11 +208,13 @@ Nastavnici i učenici moći će pretraživati i filtrirati našu listu aktivnost
 
 ## Prijedlozi za dizajniranje jednosatnih vodiča
 
-Možete uključiti logotip [sata koda](https://hourofcode.com/us/promote/resources#logo) u svoj vodič, ali to nije potrebno. Ako koristite logotip Sat koda, pogledajte smjernice za zaštitni znak u nastavku. <u>Ni pod kojim okolnostima ne mogu se koristiti logotip i ime Code.org.</u> Oba su zaštićeni i ne mogu se povezati s imenom robne marke treće strane bez izričitog pismenog odobrenja.
-
-**Pobrinite se da prosječni student može udobno završiti za sat vremena.** Razmotrite dodavanje otvorene aktivnosti na kraju za učenike koji se brže kreću kroz lekciju. Zapamtite da će većina djece biti apsolutni početnici računarstva i kodiranja.
+Aktivnosti ne moraju uključivati AI, iako želimo ponuditi više aktivnosti povezanih sa AI.
 
 **Uključite bilješke nastavnika.** Većina aktivnosti treba biti usmjerena na studente, ali ako je neka aktivnost olakšana ili kojom upravlja nastavnik, molimo vas da uključite jasne i jednostavne upute za nastavnika u obliku bilješki nastavnika na zasebnom URL-u poslanom s vašom aktivnošću. Ne samo da su studenti novaci, neki od nastavnika su kao dobro. Uključite informacije kao što su:
+
+**Uključite povratne informacije na kraju aktivnosti.** (Npr. “Završili ste 10 razina i naučili o petljama! Odličan posao!”)
+
+**Potaknite studente da objavljuju na društvenim medijima (gdje je to prikladno) kada završe.** Na primjer “Uradio sam sat kodiranja sa ________ Jeste li? #HourOfCode” ili “Učinio sam #HourOfCode kao dio #CSEdWeek. Jeste li?
 
 - Na kojim platformama i preglednicima najbolje funkcionira udžbenik?
 - Radi li na pametnim telefonima? Tablete?
@@ -248,7 +253,7 @@ Hour of Code® i Hora del Código® registrirani su zaštitni znaci tvrtke Code.
 
 ## Praćenje piksela
 
-Da bismo preciznije pratili učešće, tražimo od svakog partnera u vodiču da na prvu stranicu svojih tutorijala Hour of Code uključi sliku za praćenje od 1 piksela. Slika piksela mora biti samo na početnoj stranici. Ne uključujte ni na jednoj privremenoj stranici vašeg udžbenik.
+Ako je vaš udžbenik odobren i uključen na završnu stranicu vodiča, Code.org će vam pružiti jedinstveni piksel za praćenje koji ćete se integrirati u svoj vodič. Pogledajte primjer u nastavku. Ne uključujte ni na jednoj privremenoj stranici vašeg udžbenik.
 
 To će nam omogućiti da brojimo korisnike koji rade vaš vodič za sat koda. To će dovesti do preciznijih broji učešća za vaš tutorial.
 

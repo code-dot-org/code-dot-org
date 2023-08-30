@@ -3107,6 +3107,9 @@
         "1840d382-40db-43dd-b6cd-4f002ec7eb04": {
           "name": "Teste pós-projeto"
         },
+        "6e1384cd-1561-474c-bd34-f0b50f33d24a": {
+          "name": "Pesquisa de Fim de Curso"
+        },
         "9ca8c23c-8a83-49ad-8730-a9dbf170d403": {
           "name": "Aquecimento"
         },
@@ -3539,8 +3542,14 @@
         "9964a143-7893-42ba-b74f-c36b7707cde0": {
           "name": "Aquecimento"
         },
+        "023a1a6b-0219-4fa2-bac4-3e8894455cc6": {
+          "name": "Dias 1 e 2"
+        },
         "f2cb20fc-4b5e-419f-9e06-45952d3e883a": {
           "name": "Fechamento"
+        },
+        "e0cc8a92-52b9-421d-a2fd-d5d63296212e": {
+          "name": "Atividades de Extensão"
         },
         "95526ba9-ab16-49b6-a013-d52be08b2753": {
           "name": "Aquecimento"
@@ -3946,6 +3955,9 @@
         },
         "53a369c4-4de1-4607-99cf-3d538af13c51": {
           "name": "Fechamento"
+        },
+        "6ceb9b87-a9a1-42e3-a679-c709ddd0ca6e": {
+          "name": "Atividades de Extensão"
         },
         "edbbfe95-ddf0-43c8-ad9c-7be71e637c59": {
           "name": "Aquecimento"
@@ -6017,6 +6029,9 @@
         "cb6bf053-345c-47af-a7b9-39a67a9c70fa": {
           "name": "Showcase"
         },
+        "305d1465-9166-4ac4-a4e2-bc3bb6d1478e": {
+          "name": "Depois da Aula"
+        },
         "0754806a-e34d-4891-a471-399122e56ac9": {
           "name": "Antes da aula"
         },
@@ -6263,6 +6278,9 @@
         "4eecc1fe-e2fa-4c11-90f8-2a10eee72aa5": {
           "name": "Fechamento"
         },
+        "367760dc-695e-4391-acd6-d0f12787bc0e": {
+          "name": "Depois da Aula"
+        },
         "efd63a8a-28a5-4796-bb80-b3203ee15b9a": {
           "name": "Antes da Aula"
         },
@@ -6452,8 +6470,20 @@
         "51e81087-45de-4e07-9398-390f4e2789d8": {
           "name": "Aquecimento"
         },
+        "e159ba86-2af6-4256-a02d-d2fc89dbec6a": {
+          "name": "Dias 1 e 2"
+        },
+        "93507151-319d-42d9-ae7d-73e8f42047cd": {
+          "name": "Dias 3 e 4"
+        },
         "36b07898-2f7d-4b48-a979-d2f46cef659b": {
           "name": "Fechamento"
+        },
+        "f7b8aed1-c4c7-40f4-a640-d4bc5f3e4795": {
+          "name": "Depois da Aula"
+        },
+        "15e4e2e5-9559-42e0-87af-f96ac932f5aa": {
+          "name": "Atividades de Extensão"
         },
         "9299d981-71c8-4dfb-a0b7-3f994bd62bbf": {
           "name": "Antes da Aula"
@@ -6601,6 +6631,9 @@
         },
         "f8be9839-437c-4dc5-8668-54b3f62acfc3": {
           "name": "Fechamento"
+        },
+        "fd12f2a9-cedd-4a08-8af2-5d04b110c8ee": {
+          "name": "Depois da Aula"
         },
         "b863b736-7488-420c-84c2-e9ff135ac7fb": {
           "name": "Aquecimento"
@@ -6761,6 +6794,9 @@
         "ef0f2f8a-5694-4406-9357-17f0d20037e3": {
           "name": "Fechamento"
         },
+        "d383eef2-e74d-4993-b0f3-cbd6fc216128": {
+          "name": "Depois da Aula"
+        },
         "92ecc06f-cf07-4550-9f9f-1fc435c8a453": {
           "name": "Antes da Aula"
         },
@@ -6890,6 +6926,9 @@
         "dd0a4787-a721-4e47-b42a-9d0ed545b988": {
           "name": "Fechamento"
         },
+        "49145ed8-ab17-41b0-9502-807c1f24845a": {
+          "name": "Atividades de Extensão"
+        },
         "34aa1a1a-3574-414f-82bf-991ada5c0625": {
           "name": "Aquecimento"
         },
@@ -6955,6 +6994,9 @@
         },
         "dd1aa855-e178-45eb-b96b-3df170abed34": {
           "name": "Dia 4"
+        },
+        "63251396-7213-40ae-84c7-2ea28f359d4c": {
+          "name": "Depois da Aula"
         },
         "4676cb43-a1fe-4d36-9f41-82d8516ac46a": {
           "name": "Assista: Minha Vizinhança Online"

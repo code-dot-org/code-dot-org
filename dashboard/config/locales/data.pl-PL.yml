@@ -805,6 +805,7 @@ pl:
         Unplug7: Pisanie piosenek
         Unplug8: Abstrakcja
         Unplug9: Programowanie przekaźnika
+        ai-ethis: Etyka i sztuczna inteligencja
         alg_10_conditionals: Informatyka w algebrze - instrukcje warunkowe
         alg_11_coordinate_plane: Informatyka w algebrze - płaszczyzna współrzędnych
         alg_12_biggame_variables: Informatyka w Algebrze - zmienne Wielkiej Gry (Big
@@ -839,8 +840,11 @@ pl:
         applab_intro_sounds: App Lab - Obrazy i Dźwięki
         applab_intro_welcome: App Lab - Wprowadzenie
         artist_intro: Artysta - wprowadzenie
+        blockchain-introd: 'Jak działa Blockchain: Wprowadzenie'
         c_and_c_digital_sharing: Udostępnianie cyfrowe
         c_and_c_great_to_create: Wspaniale jest tworzyć i grać uczciwie
+        classic-maze-intro: Klasyczny labirynt - Wprowadzenie
+        code-break: Przejdź do Code Brake
         codebreak_e01: 'Code Break 1.0: Algorytmy z Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototypy z Markiem Cubanem i Lyndsey Scott'
         codebreak_e03: 'Code Break 3.0: Szyfrowanie z Ashtonem Kutcherem i Mią Gil
@@ -865,6 +869,7 @@ pl:
         csa-equals-video: Metoda equals()
         csa-example-solution-1: 'Programowanie na żywo Przykładowe rozwiązanie '
         csa-multi-select-pl: Instrukcje wielokrotnego wyboru w Javie
+        csa-overview: Nowe podejście do Informatyki AP, A
         csa-pl-calling-methods: Wywołanie metod w Javie
         csa-pl-compareTo: Metoda compareto ()
         csa-pl-creating-objects: Tworzenie obiektów
@@ -1062,6 +1067,7 @@ pl:
         hoc_wrapup: Zakończenie Godziny Kodowania
         how-ai-works-creativity-full: Czy sztuczna inteligencja jest kreatywna i z
           wyobraźnią?
+        how-ai-works-lessons: 'Jak działa sztuczna inteligencja: Przegląd lekcji'
         how-ai-works-llms-full: Jak działają chatboty i duże modele językowe
         how-ai-works-llms-part1: Chatboty i duże modele językowe Część 1
         how-ai-works-llms-part2: Chatboty i duże modele językowe Część 2
@@ -1130,6 +1136,7 @@ pl:
         poembot-playtest-events: Zdarzenia PoemBot Playtest
         poembot-playtest-intro: Wprowadzenie do PoemBot Playtest
         poembot-playtest-sprites: Duszki PoemBot Playtest
+        poetry-programming: Poezja i programowanie
         poetry_module_conditionals: Warunki - Kodowanie z Poezją
         poetry_module_multichoiceprompts: Monity wielokrotnego wyboru — kodowanie
           z poezją
@@ -1137,6 +1144,7 @@ pl:
           z poezją
         poetry_module_textandvariables: Tekst i Zmienne - Kodowanie z Poezją
         poetry_module_variables: Zmienne - Kodowanie z Poezją
+        push-yourself: Zmuś się. Każdy może się nauczyć.
         repeat_block: Korzystanie z bloku powtarzania
         rough_poemart_congrats: " v1 Sztuka poezji Gratulacje"
         rough_poemart_events: v1 Sztuka poezji Zdarzenia
@@ -1167,6 +1175,7 @@ pl:
         u7-libraries-explanation: 'App Lab: Utwórz swoje własne bloki - Jak korzystać
           z bibliotek'
         upload_sprites_backgrounds: Przesyłanie niestandardowych duszków i teł
+        what-is-creativity: Czym jest kreatywność?
         what_is_an_event: Czym jest zdarzenie?
         what_is_cs: Czym jest informatyka?
         why-should-teach-unplugged-activities: 'Często zadawane pytania (FAQ): Dlaczego

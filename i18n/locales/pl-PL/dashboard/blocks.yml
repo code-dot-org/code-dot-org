@@ -1048,6 +1048,8 @@ pl:
             '"macklemore90"': Macklemore - Nie może nas zatrzymać
             '"hammer"': MC Hammer - Nie możesz tego dotknąć
             '"peas"': The Black Eyed Peas - Mam przeczucie
+      DansBlocks_borderGPT:
+        text: Generuj obramowanie {DESCRIPTION}
       DansBlocks_getMicroscope:
         text: Mikroskop ma {INPUT1}
         options:

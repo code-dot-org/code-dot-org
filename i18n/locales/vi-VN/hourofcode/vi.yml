@@ -267,6 +267,8 @@ vi:
   call_to_action_learn_about_approach: Tìm hiểu thêm về cách tiếp cận của chúng tôi
   call_to_action_try_java_lab: Dùng thử Java Lab
   call_to_action_notify_available: Thông báo cho tôi khi có sẵn
+  call_to_action_register_early_access: Đăng ký để truy cập sớm
+  call_to_action_open_positions: Xem các vị trí đang mở
   aria_label_call_to_action_afe: Tìm hiểu thêm về Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Bắt đầu chương trình Teaching Computer Science
     Fundamentals Professional learning
@@ -13637,6 +13639,134 @@ vi:
   accessibility_card_text_10: Bản điều chỉnh của giáo trình Nguyên tắc cơ bản của
     khoa học máy tính AP của Code.org sử dụng Quorum, ngôn ngữ dựa trên bằng chứng
     ban đầu được thiết kế để cung cấp tính trợ năng cho học viên mù hoặc khiếm thị.
+  engineering_hero_heading: Tham gia nhóm kỹ thuật của chúng tôi!
+  engineering_hero_desc: Khi chúng tôi tiếp tục mở rộng đội ngũ kỹ thuật của mình,
+    chúng tôi muốn chia sẻ thêm về tổ chức kỹ thuật của chúng tôi tại Code.org và
+    một số khía cạnh độc đáo khi làm việc ở đây. Nếu bạn quan tâm đến việc ứng tuyển
+    vào một trong những vai trò của chúng tôi, chúng tôi rất muốn nghe ý kiến của
+    bạn!
+  engineering_team_title: Gặp gỡ nhóm kỹ thuật tại Code.org
+  engineering_team_card_text_1: Đây là (hầu hết) chúng tôi gặp nhau trực tiếp vào
+    mùa hè năm 2023! Đám đông này được chia thành bốn nhóm phụ trong nhóm kỹ thuật
+    của chúng tôi, những người làm việc cùng nhau để xây dựng và phục vụ nền tảng
+    cho tất cả học sinh và giáo viên của chúng tôi.
+  engineering_team_card_text_2: Nếu bạn quan tâm đến việc ứng tuyển vào một trong
+    những vai trò của chúng tôi, chúng tôi rất muốn nghe ý kiến của bạn! Bạn có thể
+    tìm thấy danh sách các vị trí đang mở trên trang Tuyển dụng của chúng tôi.
+  engineering_our_team_title: Đội ngũ kỹ thuật của chúng tôi
+  engineering_our_team_desc: 'Nhóm kỹ thuật tại Code.org được chia thành bốn nhóm
+    phụ xây dựng và hỗ trợ các lĩnh vực khác nhau của nền tảng của chúng tôi:'
+  engineering_our_team_sub_title_1: Nhóm học sinh
+  engineering_our_team_text_1: 'Nhóm Học sinh của chúng tôi sở hữu tất cả các hoạt
+    động của chúng tôi (chúng tôi gọi chúng là phòng thí nghiệm) mà sinh viên của
+    chúng tôi sử dụng mỗi ngày. Nhóm này làm việc chủ yếu trên công nghệ front-end
+    (chúng tôi sử dụng React và rất nhiều JS tùy chỉnh) và chúng tôi có mối quan hệ
+    làm việc tuyệt vời với nhiều đối tác và các dự án mã nguồn mở. Ví dụ: chúng tôi
+    sử dụng [Google Blockly] (%{youtube_url}) cho tất cả các chương trình dựa trên
+    khối của chúng tôi. Chúng tôi hỗ trợ học sinh trong hành trình học tập của họ
+    từ Mẫu giáo đến lớp 12.'
+  engineering_our_team_sub_title_2: Nhóm trải nghiệm giáo viên
+  engineering_our_team_text_2: Nhóm Trải nghiệm Giáo viên của chúng tôi xây dựng các
+    công cụ thu hút giáo viên mới đến Code.org (chúng tôi gọi là các sản phẩm mua
+    lại này) và phát triển nền tảng trao quyền cho các giáo viên hiện tại của chúng
+    tôi để dạy chương trình giảng dạy của chúng tôi (công cụ giáo viên của chúng tôi).
+    Như với các công cụ dành cho sinh viên của chúng tôi, chúng tôi dựa vào React
+    để xây dựng front-end của chúng tôi và các thành phần phía máy chủ của chúng tôi
+    được phục vụ bằng Ruby on Rails.
+  engineering_our_team_sub_title_3: Nhóm nền tảng
+  engineering_our_team_text_3: 'Nhóm nền tảng của chúng tôi sở hữu các thành phần
+    cốt lõi phục vụ nhu cầu của nhóm học sinh và giáo viên của chúng tôi (ví dụ: xác
+    thực và hồ sơ người dùng) và cũng có nhiệm vụ tiếp cận những sinh viên mà chúng
+    tôi chưa thể tiếp cận. Điều này bao gồm các tích hợp xây dựng kết nối chúng tôi
+    với các trường sử dụng Hệ thống Quản lý Học tập (LMS) khác nhau và đóng gói chương
+    trình giảng dạy của chúng tôi để nó có thể được sử dụng trong các trường học ở
+    xa, những người không có quyền truy cập internet đáng tin cậy.'
+  engineering_our_team_sub_title_4: Nhóm cơ sở hạ tầng
+  engineering_our_team_text_4: Nhóm Cơ sở hạ tầng của chúng tôi cung cấp xương sống
+    cho nền tảng hỗ trợ học sinh và giáo viên của chúng tôi. Điều này bao gồm cơ sở
+    hạ tầng lưu trữ và các dịch vụ liên quan của chúng tôi (chúng tôi sử dụng AWS),
+    quản lý dữ liệu, chương trình bảo mật, dịch vụ phát triển và triển khai và nhiều
+    hơn nữa. Nhóm này cũng sở hữu các hệ thống mở rộng và cung cấp của chúng tôi,
+    rất quan trọng trong Hour of Code, nơi chúng tôi mời mọi sinh viên trên thế giới
+    hoàn thành một giờ viết mã với chúng tôi.
+  engineering_faq_question_1: Code.org làm gì?
+  engineering_faq_answer_1_a: Code.org là một tổ chức phi lợi nhuận đổi mới giáo dục
+    dành riêng cho tầm nhìn rằng mọi học sinh trong mọi trường học đều có cơ hội học
+    khoa học máy tính như một phần của nền giáo dục K-12 cốt lõi của họ.
+  engineering_faq_answer_1_b: Chúng tôi mở rộng khả năng tiếp cận khoa học máy tính
+    trong các trường học, tập trung vào việc tăng cường sự tham gia của phụ nữ trẻ
+    và sinh viên từ các nhóm không được đại diện khác. Nhà cung cấp chương trình giảng
+    dạy khoa học máy tính K-12 hàng đầu tại các khu học chánh lớn nhất ở Hoa Kỳ, Code.org
+    cũng tổ chức chiến dịch Hour of Code hàng năm, đã thu hút hơn 15% tổng số học
+    sinh trên thế giới.
+  engineering_faq_answer_1_c: Code.org được hỗ trợ bởi các nhà tài trợ hào phóng bao
+    gồm Microsoft, Amazon, Google và nhiều người khác.
+  engineering_faq_question_2: Trải nghiệm và công cụ dành cho nhà phát triển của Code.org
+    là gì?
+  engineering_faq_answer_2: 'Trải nghiệm nhà phát triển của chúng tôi có thể khác
+    với những gì bạn đã thấy trong các vai trò trước đây của mình. Làm việc chặt chẽ
+    với nhóm sản phẩm của chúng tôi, chúng tôi vận chuyển đến sản xuất mỗi ngày trong
+    tuần và chúng tôi có nhiều nhịp khác nhau - đôi khi bạn đang viết mã hoạt động
+    vào ngày hôm đó; những lần khác bạn đang thực hiện các dự án dài hạn - và trong
+    khi chúng tôi thực hiện theo các lần chạy nước rút 2 tuần một lần, chúng tôi làm
+    như vậy một cách nhẹ nhàng. Chúng tôi lập chỉ mục hướng tới việc thực hiện đúng
+    những điều đúng đắn theo cách đúng đắn so với việc có cái nhìn thuần túy về bất
+    kỳ phương pháp luận cụ thể nào. [Tất cả mã của chúng tôi] (%{code_url}) là mã
+    nguồn mở và chúng tôi sử dụng các yêu cầu kéo JIRA và GitHub để theo dõi tất cả
+    các mục công việc của chúng tôi. Chúng tôi cũng quan tâm rất nhiều đến chất lượng
+    và thử nghiệm và may mắn có được sự hỗ trợ đáng kinh ngạc từ [SauceLabs](%{saucelabs_url}),
+    những người giúp chúng tôi chạy bộ kiểm tra giao diện người dùng trên các thiết
+    bị sinh viên khác nhau (ví dụ: iPad) trong trang trại thiết bị đám mây của họ.'
+  engineering_faq_question_3: Vòng quay kỹ sư theo cuộc gọi tại Code.org là gì?
+  engineering_faq_answer_3: Hơn 30 nhóm kỹ sư của chúng tôi chia sẻ trách nhiệm theo
+    cuộc gọi. Mỗi kỹ sư bao gồm một ca làm việc 24 giờ và sử dụng các đường dẫn và
+    sách hướng dẫn leo thang của chúng tôi để ứng phó với sự cố ngừng hoạt động của
+    trang web hoặc các vấn đề khác trên trang web trực tiếp. Chúng tôi tự hào về độ
+    tin cậy của trang web của chúng tôi - trung bình, mỗi kỹ sư chỉ được đánh thức
+    một lần mỗi năm vì các vấn đề thường được giải quyết nhanh chóng. Thay vào đó,
+    “Nhà phát triển của ngày” thường dành một phần ngày làm việc của họ để quản lý
+    việc triển khai sản xuất và phân loại các vấn đề ít khẩn cấp hơn.
+  engineering_faq_question_4: Bạn có phải là một tổ chức thân thiện từ xa/WFH không?
+  engineering_faq_answer_4_a: Vâng! Vào năm 2019, ngay trước đại dịch, Code.org đã
+    trở thành một tổ chức ưu tiên từ xa. Ngày nay, chúng tôi có các kỹ sư ở mọi múi
+    giờ Hoa Kỳ và phù hợp với giờ làm việc. Hầu hết các cuộc họp của chúng tôi diễn
+    ra trong khoảng thời gian từ 10 giờ sáng đến 3 giờ chiều theo giờ PT.
+  engineering_faq_answer_4_b: Chúng tôi cũng nhận ra giá trị của thời gian trực tiếp
+    và mỗi quý chúng tôi gặp nhau trực tiếp, điển hình là ở Seattle. Hai trong số
+    các sự kiện này (chúng tôi gọi chúng là Tuần khởi động và “Codechella”) mang mọi
+    người trong tổ chức lại với nhau vào tháng 1 và tháng 6 - và các nhóm kỹ thuật
+    và sản phẩm gặp nhau riêng vào tháng Tư và tháng Mười.
+  engineering_faq_answer_4_c: Chúng tôi thực sự tin tưởng vào việc dành thời gian
+    với học sinh và giáo viên của mình, vì vậy nhiều sự kiện trực tiếp này bao gồm
+    các chuyến đi đến trường học và lớp học để thu thập phản hồi hoặc chơi thử sản
+    phẩm của chúng tôi
+  engineering_faq_question_5: Điều gì làm cho đội ngũ kỹ thuật tại Code.org trở nên
+    độc đáo?
+  engineering_faq_answer_5_a: 'Ngoài việc giải quyết các vấn đề kỹ thuật đầy thách
+    thức, chúng tôi có một số điều làm cho tổ chức kỹ thuật của chúng tôi khác với
+    những tổ chức khác mà bạn có thể đã làm việc:'
+  engineering_faq_answer_5_b_1: Tất cả chúng ta đều chia sẻ niềm đam mê của chúng
+    tôi cho sứ mệnh của chúng tôi.
+  engineering_faq_answer_5_b_2: Mỗi người trong chúng ta ở đây để hỗ trợ sứ mệnh mở
+    rộng khả năng tiếp cận khoa học máy tính cho mọi sinh viên trên toàn thế giới.
+    Tất cả chúng ta đều có câu chuyện và quan điểm độc đáo về những gì thúc đẩy chúng
+    ta hướng tới sứ mệnh này.
+  engineering_faq_answer_5_c_1: Chúng tôi quan tâm sâu sắc đến nhau.
+  engineering_faq_answer_5_c_2: Khi các kỹ sư đang vật lộn với một vấn đề, chúng tôi
+    bước vào và chúng tôi giúp đỡ. Một trong những nguyên tắc của chúng tôi là chúng
+    tôi khó khăn với các vấn đề, nhưng tử tế với nhau. Chúng tôi quảng bá kỹ sư thường
+    xuyên, nhưng chúng tôi không quy định các giải pháp được thiết kế quá mức chỉ
+    để hỗ trợ con đường thăng tiến của ai đó. Thay vào đó, chúng tôi đầu tư vào các
+    kỹ sư của mình với ngân sách phát triển chuyên nghiệp hào phóng và tiếp cận với
+    các cơ hội học tập khác.
+  engineering_faq_answer_5_d_1: Chúng tôi làm việc chăm chỉ, nhưng chúng tôi đặt ra
+    ranh giới rõ ràng.
+  engineering_faq_answer_5_d_2: Trong khi chúng tôi hỗ trợ sinh viên trên toàn thế
+    giới, chúng tôi tự chịu trách nhiệm về ranh giới rõ ràng giữa công việc và cuộc
+    sống gia đình. Chúng tôi không có cuộc họp vào thứ Tư, tham gia PTO của chúng
+    tôi (tổng cộng 5 tuần, bao gồm đóng cửa văn phòng 2 tuần toàn tổ chức vào cuối
+    năm hay còn gọi là Kỳ nghỉ đông), nửa ngày làm việc vào các ngày thứ Sáu trong
+    mùa hè hay còn gọi là Thứ Sáu Mùa hè và các lợi ích hào phóng khác.
   language_code:
     ar: tiếng Ả Rập
     az: Azerbaijani

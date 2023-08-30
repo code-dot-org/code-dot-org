@@ -196,3 +196,9 @@ $container-width: 309px;
     background: $neutral_light;
   }
 }
+
+.expandedCard {
+  .curriculumInfoContainer {
+    border-color: $neutral-dark !important;
+  }
+}

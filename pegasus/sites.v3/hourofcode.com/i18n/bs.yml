@@ -251,6 +251,8 @@ bs:
   call_to_action_learn_about_approach: Saznajte više o našem pristupu
   call_to_action_try_java_lab: Isprobajte Java Lab
   call_to_action_notify_available: Obavijesti me kada je dostupan
+  call_to_action_register_early_access: Registrujte se za rani pristup
+  call_to_action_open_positions: Pogledaj otvorene pozicije
   aria_label_call_to_action_afe: Saznajte više o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Pokrenite program profesionalnog učenja
     Osnove računarskih nauka
@@ -13053,6 +13055,117 @@ bs:
   accessibility_card_text_10: Adaptacija nastavnog plana i programa Code.org AP Computer
     Science Principi koristeći Quorum, jezik utemeljen na dokazima koji je izvorno
     dizajniran da pruži pristupačnost slijepim ili slabovidnim studentima.
+  engineering_hero_heading: Pridružite se našem inženjerskom timu!
+  engineering_hero_desc: Dok nastavljamo širiti naš inženjerski tim, željeli smo podijeliti
+    više o našoj inženjerskoj organizaciji na Code.org i nekim jedinstvenim aspektima
+    rada ovdje. Ukoliko ste zainteresovani da se prijavite za neku od naših uloga,
+    voleli bismo da vas čujemo!
+  engineering_team_title: Upoznajte inženjerski tim na Code.org
+  engineering_team_card_text_1: Ovo je (većina) nas kod našeg osobnog druženja tokom
+    ljeta 2023. godine! Ova publika je podijeljena u četiri pod-tima unutar našeg
+    inženjerskog tima koji zajedno rade na izgradnji i opsluženju platforme za sve
+    naše učenike i nastavnike.
+  engineering_team_card_text_2: Ukoliko ste zainteresovani da se prijavite za neku
+    od naših uloga, voleli bismo da vas čujemo! Popis otvorenih pozicija možete pronaći
+    na našoj stranici Karijera.
+  engineering_our_team_title: Naš inženjerski tim
+  engineering_our_team_desc: 'Inženjerski tim na Code.org podijeljen je u četiri pod-tima
+    koji grade i podržavaju različita područja naše platforme:'
+  engineering_our_team_sub_title_1: Tim za učenje učenika
+  engineering_our_team_text_1: Naš tim za učenje učenika posjeduje sve naše aktivnosti
+    (mi ih nazivamo laboratorijama) koje naši učenici svakodnevno koriste. Ovaj tim
+    uglavnom radi na front-end tehnici (koristimo Reagirati i puno prilagođenih JS)
+    i imamo odličan radni odnos sa mnogim partnerima i projektima otvorenog koda.
+    Na primjer, koristimo [Google's Blockly] (%{youtube_url}) za sve naše programiranje
+    zasnovano na bloku. Podržavamo učenike u njihovom putovanju učenja sve od vrtića
+    do 12. razreda.
+  engineering_our_team_sub_title_2: Tim za iskustvo nastavnika
+  engineering_our_team_text_2: Naš tim za iskustvo nastavnika gradi alate koji privlače
+    nove nastavnike na Code.org (mi to nazivamo proizvodima za akviziciju) i razvija
+    platformu koja osnažuje naše postojeće nastavnike da podučavaju naš kurikulum
+    (naši alati za nastavnike). Kao i kod naših studentskih alata, oslanjamo se na
+    Reagirati za izgradnju našeg front-enda, a naše komponente na strani poslužitelja
+    poslužuju se pomoću Ruby on Rails.
+  engineering_our_team_sub_title_3: Platforma tim
+  engineering_our_team_text_3: Naš tim platforme posjeduje osnovne komponente koje
+    služe potrebama naših studentskih i nastavničkih timova (na primjer, provjera
+    autentičnosti i korisničkog profila), a također ima misiju dostizanja učenika
+    do kojih još ne možemo doći. To uključuje izgradnju integracija koje nas povezuju
+    sa školama koje koriste različite sisteme upravljanja učenjem (LMS) i pakuju naš
+    kurikulum kako bi se mogao koristiti u udaljenim školama koje nemaju pristup pouzdanom
+    internetu.
+  engineering_our_team_sub_title_4: Infrastrukturni tim
+  engineering_our_team_text_4: Naš infrastrukturni tim pruža okosnicu platformi koja
+    podržava naše učenike i nastavnike. To uključuje našu hosting infrastrukturu i
+    srodne usluge (koristimo AWS), upravljanje podacima, sigurnosne programe, usluge
+    programera i implementacije i još mnogo toga. Ovaj tim posjeduje i naše sisteme
+    za skaliranje i pružanje usluga, koji su kritični tokom Sata kodiranja, gdje pozivamo
+    svakog učenika na svijetu da završi sat vremena kodiranja s nama.
+  engineering_faq_question_1: Što radi Code.org?
+  engineering_faq_answer_1_a: Code.org je neprofitna organizacija za inovacije u obrazovanju
+    posvećena viziji da svaki učenik u svakoj školi ima priliku učiti informatiku
+    kao dio svog osnovnog K-12 obrazovanja.
+  engineering_faq_answer_1_b: Proširujemo pristup informatikama u školama, sa fokusom
+    na povećanje učešća mladih žena i učenika iz drugih nedovoljno zastupljenih grupa.
+    Vodeći pružatelj K-12 nastavnog plana i programa informatike u najvećim školskim
+    okruzima u Sjedinjenim Američkim Državama, Code.org također organizira godišnju
+    kampanju Hour of Code, koja je angažovala više od 15% svih učenika u svijetu.
+  engineering_faq_answer_1_c: Code.org podržavaju velikodušni donatori uključujući
+    Microsoft, Amazon, Google i mnoge druge.
+  engineering_faq_question_2: Što je Code.org iskustvo i alat za programere?
+  engineering_faq_answer_2: Naše iskustvo programera može se razlikovati od onoga
+    što ste vidjeli u svojim prošlim ulogama. Blisko surađujući sa našim proizvodnim
+    timom, isporučujemo se u proizvodnju svakog radnog dana i imamo razne kadence
+    - ponekad pišete kod koji ide uživo tog dana; drugi put ste na dugoročnim projektima
+    - i dok pratimo dvosedmične sprintove, to činimo na lagan način. Mi indeksiramo
+    prema tome da se prave stvari urade na pravi način nasuprot tome da uzmemo puristički
+    pogled na bilo koju određenu metodologiju. [Sav naš kod] (%{code_url}) je open
+    source i koristimo JIRA i GitHub zahtjeve za povlačenje kako bismo pratili sve
+    naše radne predmete. Također nam je stalo do kvaliteta i testiranja i imamo sreću
+    da imamo nevjerojatnu podršku od [SauceLabs](%{saucelabs_url}), koji nam pomažu
+    da pokrenemo naš paket korisničkog sučelja testova na raznim studentskim uređajima
+    (npr. iPads) u njihovoj farmi oblak uređaja.
+  engineering_faq_question_3: Što je rotacija inženjera na poziv na Code.org?
+  engineering_faq_answer_3: Naš 30+ inženjerski tim dijeli dežurne odgovornosti. Svaki
+    inženjer pokriva 24-satnu smjene i koristi naše staze eskalacije i knjige za reprodukciju
+    kako bi odgovorio na prekide web mjesta ili druge probleme uživo. Ponosni smo
+    na pouzdanost naše stranice - u prosjeku se svaki inženjer probudio samo jednom
+    godišnje zbog problema koji se obično brzo rješavaju. Umjesto toga, “programer
+    dana” obično provodi dio svog radnog dana upravljajući implementacijom proizvodnje
+    i pokušavajući manje hitna pitanja.
+  engineering_faq_question_4: Da li ste organizacija koja je prilagođena na daljinu/WFH?
+  engineering_faq_answer_4_a: Da! 2019. godine, neposredno prije pandemije, Code.org
+    je postao prva organizacija na daljinu. Danas imamo inženjere u svakoj američkoj
+    vremenskoj zoni i u skladu s tim prilagodimo radno vrijeme. Većina naših sastanaka
+    događa se između 10 i 15 sati PT.
+  engineering_faq_answer_4_b: Također prepoznajemo vrijednost osobnog vremena i svake
+    četvrtine se okupljamo osobno, obično u Seattleu. Dva od ovih događaja (mi ih
+    zovemo Kick-off week i “Codechella”) okupljaju sve u organizaciji u januaru i
+    junu - a inženjerski i proizvodni timovi se sastaju odvojeno u aprilu i oktobru.
+  engineering_faq_answer_4_c: Čvrsto vjerujemo u provođenje vremena s našim učenicima
+    i nastavnicima, tako da mnogi od ovih osobnih događaja uključuju izlete u škole
+    i učionice kako bi prikupili povratne informacije ili testirali naše proizvode
+  engineering_faq_question_5: Šta čini inženjerski tim na Code.org jedinstvenim?
+  engineering_faq_answer_5_a: 'Osim rješavanja izazovnih tehničkih problema, imamo
+    nekoliko stvari zbog kojih se naš inženjerski org razlikuje od drugih u kojima
+    ste možda radili:'
+  engineering_faq_answer_5_b_1: Svi dijelimo svoju strast prema našoj misiji.
+  engineering_faq_answer_5_b_2: Svako od nas je tu da podrži misiju proširenja pristupa
+    računarstvu za svakog studenta širom svijeta. Svi mi imamo svoju jedinstvenu priču
+    i perspektivu o tome šta nas vodi ka ovoj misiji.
+  engineering_faq_answer_5_c_1: Duboko brinemo jedni o drugima.
+  engineering_faq_answer_5_c_2: Kada se inženjeri bore s problemom, uđemo i pomažemo.
+    Jedan od naših principa je da smo teški prema problemima, ali ljubazni jedni prema
+    drugima. Redovno promoviramo inženjere, ali ne propisujemo previše projektirana
+    rješenja samo da bismo podržali nečiji put promocije. Umjesto toga, ulažemo u
+    naše inženjere s izdašnim budžetom za profesionalni razvoj i pristupom drugim
+    mogućnostima učenja.
+  engineering_faq_answer_5_d_1: Naporno radimo, ali postavljamo jasne granice.
+  engineering_faq_answer_5_d_2: Dok podržavamo studente širom svijeta, smatramo se
+    odgovornim za jasne granice između posla i kućnog života. Uživamo u srijedom bez
+    sastanaka, uzimajući naš PTO (ukupno 5 tjedana, što uključuje zatvaranje ureda
+    za 2 tjedna na kraju godine aka Winter Break), poluradni dan petkom tokom ljeta
+    ili ljetnih petaka i druge velikodušne pogodnosti.
   language_code:
     ar: Arapski
     az: Azerbejdžanski
