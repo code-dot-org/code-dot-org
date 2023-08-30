@@ -82,25 +82,61 @@ const Bot: React.FunctionComponent<BotProps> = ({botState}) => {
         viewBox="0 0 350 400"
         xmlns="http://www.w3.org/2000/svg"
       >
+                <line
+          x1={botState.body[0] + 60}
+          y1={botState.body[1] + 50}
+          x2={botState.head[0] + 65}
+          y2={botState.head[1] + 85}
+          stroke="black"
+          strokeLinecap="round"
+          strokeWidth="30px"
+        ></line>
+        <line
+          x1={botState.body[0] + 60}
+          y1={botState.body[1] + 50}
+          x2={botState.head[0] + 65}
+          y2={botState.head[1] + 85}
+          stroke="grey"
+          strokeWidth="30px"
+          strokeDasharray="6 1"
+        ></line>
+
         <line
           x1={botState.hand0[0] + 35}
           y1={botState.hand0[1] + 50 + 30}
           x2={botState.body[0] + 10}
-          y2={botState.body[1] + 30}
+          y2={botState.body[1] + 50}
           stroke="black"
           strokeLinecap="round"
-          strokeWidth="10px"
-          strokeDasharray="4 1"
+          strokeWidth="20px"
         ></line>
         <line
+          x1={botState.hand0[0] + 35}
+          y1={botState.hand0[1] + 50 + 30}
+          x2={botState.body[0] + 10}
+          y2={botState.body[1] + 50}
+          stroke="grey"
+          strokeWidth="20px"
+          strokeDasharray="6 1"
+        ></line>
+
+        <line
           x1={botState.body[0] + 80}
-          y1={botState.body[1] + 30}
+          y1={botState.body[1] + 50}
           x2={botState.hand1[0] + 35}
           y2={botState.hand1[1] + 50 + 30}
           stroke="black"
           strokeLinecap="round"
-          strokeWidth="10px"
-          strokeDasharray="4 1"
+          strokeWidth="20px"
+        ></line>
+        <line
+          x1={botState.body[0] + 80}
+          y1={botState.body[1] + 50}
+          x2={botState.hand1[0] + 35}
+          y2={botState.hand1[1] + 50 + 30}
+          stroke="grey"
+          strokeWidth="20px"
+          strokeDasharray="6 1"
         ></line>
 
         <line
@@ -110,9 +146,18 @@ const Bot: React.FunctionComponent<BotProps> = ({botState}) => {
           y2={botState.body[1] + 130}
           stroke="black"
           strokeLinecap="round"
-          strokeWidth="10px"
-          strokeDasharray="4 1"
+          strokeWidth="20px"
         ></line>
+        <line
+          x1={botState.foot0[0] + 35}
+          y1={botState.foot0[1] + 50}
+          x2={botState.body[0] + 10}
+          y2={botState.body[1] + 130}
+          stroke="grey"
+          strokeWidth="20px"
+          strokeDasharray="6 1"
+        ></line>
+
         <line
           x1={botState.body[0] + 80}
           y1={botState.body[1] + 130}
@@ -120,10 +165,17 @@ const Bot: React.FunctionComponent<BotProps> = ({botState}) => {
           y2={botState.foot1[1] + 50}
           stroke="black"
           strokeLinecap="round"
-          strokeWidth="10px"
-          strokeDasharray="4 1"
+          strokeWidth="20px"
         ></line>
-
+        <line
+          x1={botState.body[0] + 80}
+          y1={botState.body[1] + 130}
+          x2={botState.foot1[0] + 35}
+          y2={botState.foot1[1] + 50}
+          stroke="grey"
+          strokeWidth="20px"
+          strokeDasharray="6 1"
+        ></line>
         {/*
         <rect
           x={botState.body[0]}
