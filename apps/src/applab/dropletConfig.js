@@ -119,7 +119,7 @@ export var blocks = [
   {
     func: 'textArea',
     parent: api,
-    category: 'Advanced',
+    category: 'UI controls',
     params: ['"id"', '"text"'],
   },
   {
@@ -184,7 +184,7 @@ export var blocks = [
   {
     func: 'slider',
     parent: api,
-    category: 'Advanced',
+    category: 'UI controls',
 
     params: ['"id"', '0', '100', '50', '1'],
   },
