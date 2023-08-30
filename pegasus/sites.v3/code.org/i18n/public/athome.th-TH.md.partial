@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ปาร์ตี้เต้นรำ</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">เขียนโค้ดให้กับกิจกรรมปาร์ตี้เต้นรำ ก่อนแชร์กับเพื่อนและครอบครัว มาพร้อมกับ Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, เพลงจาก “Encanto” ของดิสนีย์ และอีกมากมาย!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>งานเลี้ยงเต้นรำ</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">รหัสปาร์ตี้เต้นรำเพื่อแบ่งปันกับเพื่อนและครอบครัว มาพร้อมกับ Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, เพลงจาก “Encanto” ของดิสนีย์ และอีกมากมาย!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>ลองทำกิจกรรม</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ชั่วโมงเขียนโค้ดตอนไมน์คราฟท์</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ไมน์คราฟท์กลับมาเข้าร่วมกิจกรรมชั่วโมงเขียนโค้ดอีกครั้ง แต่ครั้งนี้มาพร้อมกิจกรรมใหม่ทั้งหมด! ผจญภัยโลกไมน์คราฟท์ด้วยโค้ด</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft กลับมาเป็นเวลา Hour of Code ด้วยกิจกรรมใหม่! ผจญภัยโลกไมน์คราฟท์ด้วยโค้ด</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>ลองกิจกรรมนี้</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong> AI กับภารกิจพิทักษ์ท้องทะเล</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ช่วย A.I. ทำความสะอาดท้องทะเลด้วยการฝึก A.I. ตรวจจับขยะ! ศึกษาข้อมูลการฝึกและอคติ และมาดูกันว่า AI ชี้ถึงปัญหาต่าง ๆ บนโลกใบนี้ได้อย่างไร ดู<a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">แผนการเรียนการสอน</a></div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI สำหรับมหาสมุทร</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ช่วย A.I. ทำความสะอาดมหาสมุทรโดยการฝึกอบรมเพื่อตรวจจับถังขยะ! ศึกษาข้อมูลการฝึกและอคติ และมาดูกันว่า AI ชี้ถึงปัญหาต่าง ๆ บนโลกใบนี้ได้อย่างไร ดู<a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">แผนการเรียนการสอน</a></div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>ลองกิจกรรมนี้</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>คอมพิวเตอร์ทำงานอย่างไร</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ซีรีส์นี้ประกอบด้วยวิดีโอสั้น 6 เรื่อง เปิดตัวด้วยบิลเกตส์ที่ออกมาแนะนำตัว เนื้อหาจะอธิบายว่าอะไรที่ทำให้คอมพิวเตอร์เป็นคอมพิวเตอร์ และวงจรคอมพิวเตอร์ทำงานอย่างไร</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>ดูวิดีโอชุดนี้</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>วิธีคอมพิวเตอร์ทำงาน</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ด้วยการแนะนำโดยบิลเกตส์, ชุดของหกวิดีโอสั้น ๆ นี้จะอธิบายถึงสิ่งที่ทำให้คอมพิวเตอร์คอมพิวเตอร์และวิธีการทำงานของวงจรคอมพิวเตอร์.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>ดูชุดวิดีโอ</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>อินเทอร์เน็ตทำงานอย่างไร</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">วิดีโอสั้นชุดนี้มีวิดีโอรวมอยู่ 8 ตอนที่จะให้คำตอบว่าอินเทอร์เน็ตเกิดขึ้นมาได้อย่างไร, HTML คืออะไร และเสิร์ชเอ็นจินหรือเครื่องมือค้นหาอย่างเช่น Google ทำงานอย่างไร</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>ดูวิดีโอชุดนี้</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>วิธีการทำงานของอินเทอร์เน็ต</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ในชุดของแปดวิดีโอสั้น ๆ นี้คุณจะได้เรียนรู้วิธีการคิดค้นอินเทอร์เน็ตสิ่งที่ HTML คือและวิธีการทำงานของเครื่องมือค้นหาเช่น Google</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>ดูชุดวิดีโอ</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI ทำงานอย่างไร</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ศึกษาวิธีการทำงานของ AI และความสำคัญของเรื่องนี้ได้จากวิดีโอสั้นชุดนี้ พูดคุยกับ Satya Nadella ซีอีโอของ Microsoft และผู้เชี่ยวชาญจากหลายวงการ</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>วิธีทำงานของ AI</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">เรียนรู้เกี่ยวกับวิธีทำงานของ AI และเหตุผลสำคัญกับวิดีโอสั้นชุดนี้ พูดคุยกับ Satya Nadella ซีอีโอของ Microsoft และผู้เชี่ยวชาญจากหลายวงการ</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>ดูวิดีโอชุดนี้</button></a>
     </span>
   </div>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>เกมแลปพื้นฐาน</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">เขียนโปรแกรมภาพเคลื่อนไหว งานศิลป์แบบอินเทอร์แอ็คทีฟ และเกมจากภายในเกมแลป เริ่มด้วยรูปทรงง่าย ๆ ก่อนต่อยอดขึ้นไปอีกระดับเป็นภาพเคลื่อนไหวและเกมที่มีความสลับซับซ้อนขึ้น</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>บทนำเกี่ยวกับห้องปฏิบัติการเกม</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ภาพเคลื่อนไหวของโปรแกรม ศิลปะเชิงโต้ตอบ และเกมในห้องปฏิบัติการเกม เริ่มด้วยรูปทรงง่าย ๆ ก่อนต่อยอดขึ้นไปอีกระดับเป็นภาพเคลื่อนไหวและเกมที่มีความสลับซับซ้อนขึ้น</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>ลองโมดูลนี้</button></a>
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>การเขียนโปรแกรมให้กับเต่าในแอปแลป<button></strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ใช้คำสั่งจาวาสคริปต์ง่าย ๆ ผ่าน "เต่า" เสมือนจริงเพื่อวาดรูปทรงและภาพ ออกแบบและเขียนโปรแกรมฉากดิจิทัลของคุณเอง!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>ลองโมดูลนี้</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>การเขียนโปรแกรมเต่าใน App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ใช้คำสั่ง JavaScript ง่ายๆในการวาดรูปทรงและภาพโดยใช้ “เต่า” เสมือนออกแบบและโปรแกรมฉากดิจิตอลของคุณเอง!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>ลองใช้โมดูล</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>การเขียนโปรแกรมตามเหตุการณ์ในแอปแลป</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ศึกษาวิธีออกแบบแอปที่ตอบสนองต่อการคลิกและการกดปุ่ม จัดทำแอปพลิเคชั่น (แอป) ง่าย ๆ ไว้เป็นชุด ๆ เพื่อไลฟ์บนเว็บ!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>การเขียนโปรแกรมที่ขับเคลื่อนด้วยเหตุการณ์ใน App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">เรียนรู้การออกแบบแอพที่ตอบสนองต่อการคลิกและการกดคีย์ จัดทำแอปพลิเคชั่น (แอป) ง่าย ๆ ไว้เป็นชุด ๆ เพื่อไลฟ์บนเว็บ!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>ลองโมดูลนี้</button></a>
     </span>
   </div>
@@ -312,8 +312,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes คือบทเรียนอินเทอร์แอ็คทีฟที่ใช้เวลาเรียน 20 นาทีและวิเคราะห์ได้ง่าย ซึ่งเป็นการผสมผสานระหว่างวิทยาการคอมพิวเตอร์และเหตุการณ์ที่เกิดขึ้นจริงบนโลก ฝึก AI ให้อ่านสัญญาณมือ ออกแบบ App for Good, สำรวจโลกของไมน์คราฟท์ และอีกมากมาย!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes ย่อยง่าย, 20 นาทีบทเรียนแบบโต้ตอบผสมผสานวิทยาการคอมพิวเตอร์กับหัวข้อจริงของโลก ฝึก AI ให้อ่านสัญญาณมือ ออกแบบ App for Good, สำรวจโลกของไมน์คราฟท์ และอีกมากมาย!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>ดูตอนที่ต้องการ</button></a>
@@ -329,8 +329,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>พักเบรกสักนิด</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">วิทยาการคอมพิวเตอร์จะสนุกได้อีกด้วยกิจกรรมพักเบรกสักนิด! คุณสร้างรหัสไซเฟอร์ไปพร้อมกับนักแสดง Ashton Kutcher ได้นะ หรือจะเรียนเรื่องตัวแปรกับ Yara Shahidi และทำความเข้าใจวิธีทำงานของอินเทอร์เน็ตผ่านนักประดิษฐ์ตัวจริงบนอินเทอร์เน็ตอย่าง Vint Cerf!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>แบ่งรหัส</strong></h3>
+        <div class="smalltext" style="">ให้สนุกวิทยาศาสตร์คอมพิวเตอร์โดยการแบ่งรหัส! คุณสร้างรหัสไซเฟอร์ไปพร้อมกับนักแสดง Ashton Kutcher ได้นะ หรือจะเรียนเรื่องตัวแปรกับ Yara Shahidi และทำความเข้าใจวิธีทำงานของอินเทอร์เน็ตผ่านนักประดิษฐ์ตัวจริงบนอินเทอร์เน็ตอย่าง Vint Cerf!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>เชื่อมต่อเลย</button></a>
     </span>

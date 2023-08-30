@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Bữa tiệc khiêu vũ</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Lập trình Bữa tiệc khiêu vũ để chia sẻ với bạn bè và gia đình. Với sự tham gia của Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, âm nhạc từ Disney “Encanto” và nhiều nghệ sĩ khác!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code a Dance Party để chia sẻ với bạn bè và gia đình. Với sự tham gia của Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, âm nhạc từ Disney “Encanto” và nhiều nghệ sĩ khác!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Thử hoạt động</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Giờ lập trình</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft trở lại với Giờ lập trình trong một hoạt động hoàn toàn mới! Hành trình Minecraft với Mã lệnh.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft đã trở lại cho Giờ lập trình với một hoạt động hoàn toàn mới! Hành trình Minecraft với Mã lệnh.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Thử hoạt động</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Trí tuệ nhân tạo cho đại dương</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Giúp làm sạch đại dương bằng cách đào tạo AI phát hiện ra rác thải! Tìm hiểu về dữ liệu đào tạo và định kiến ​cũng như cách AI có thể giải quyết các vấn đề của thế giới. View <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI cho đại dương</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Giúp AI làm sạch đại dương bằng cách huấn luyện nó để phát hiện rác! Tìm hiểu về dữ liệu đào tạo và định kiến ​cũng như cách AI có thể giải quyết các vấn đề của thế giới. View <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Try activity</button></a>
     </span>
   </div>
@@ -96,8 +96,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Cách máy tính hoạt động</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Với bài giới thiệu của Bill Gates, loạt 6 video ngắn này giải thích bản chất của máy tính và cách hoạt động của các mạch điện trong máy tính.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Cách máy tính hoạt động</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Với phần giới thiệu của Bill Gates, loạt sáu video ngắn này giải thích điều gì làm cho máy tính trở thành máy tính và cách các mạch máy tính hoạt động.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Xem loạt video</button></a>
     </span>
   </div>
@@ -111,8 +111,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Cách hoạt động của Internet</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Trong loạt 8 video ngắn này, bạn sẽ tìm hiểu cách Internet ra đời, khái niệm HTML và cách hoạt động của các công cụ tìm kiếm như Google.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Cách thức hoạt động của Internet</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Trong loạt tám video ngắn này, bạn sẽ tìm hiểu cách internet được phát minh, HTML là gì và cách các công cụ tìm kiếm như Google hoạt động.</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Xem loạt video</button></a>
     </span>
   </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Cách hoạt động của AI</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tìm hiểu cách hoạt động và tầm quan trọng của AI trong loạt video ngắn này. Với sự tham gia của Giám đốc điều hành Microsoft Satya Nadella và đội ngũ chuyên gia trong nhiều lĩnh vực.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Cách thức hoạt động của AI</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tìm hiểu về cách AI hoạt động và lý do tại sao nó lại quan trọng với loạt video ngắn này. Với sự tham gia của Giám đốc điều hành Microsoft Satya Nadella và đội ngũ chuyên gia trong nhiều lĩnh vực.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Xem loạt video</button></a>
     </span>
   </div>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Giới thiệu về Game Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Lập trình hoạt họa, tác phẩm tương tác và game trong Game Lab. Bắt đầu từ các hình dạng đơn giản và xây dựng thành các chuyển động nhân vật và game phức tạp hơn.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Giới thiệu về Game Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Hoạt ảnh chương trình, nghệ thuật tương tác và trò chơi trong Game Lab. Bắt đầu từ các hình dạng đơn giản và xây dựng thành các chuyển động nhân vật và game phức tạp hơn.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Thử học phần</button> </a>
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Lập trình Chú rùa trong App Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Sử dụng các lệnh JavaScript để vẽ các hình khối và hình ảnh bằng một “chú rùa” ảo. Thiết kế và lập trình cảnh vật kỹ thuật số của chính bạn!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Thử học phần</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Lập trình rùa trong App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Sử dụng các lệnh JavaScript đơn giản để vẽ hình dạng và hình ảnh bằng cách sử dụng một “con rùa” ảo. Thiết kế và lập trình cảnh kỹ thuật số của riêng bạn!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Hãy thử mô-đun</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Lập trình hướng sự kiện trong App Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tìm hiểu cách thiết kế ứng dụng phản hồi với lượt nhấp chuột và nhấn phím. Hãy tạo loạt ứng dụng (app) đơn giản hoạt động trên web!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Lập trình theo hướng sự kiện trong App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tìm hiểu cách thiết kế các ứng dụng phản ứng với các lần nhấp và nhấn phím. Hãy tạo loạt ứng dụng (app) đơn giản hoạt động trên web!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Thử học phần</button></a>
     </span>
   </div>
@@ -312,8 +312,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes là những bài học tương tác 20 phút dễ hiểu, kết hợp giữa khoa học máy tính với các chủ đề trong thế giới thực. Đào tạo AI để đọc ngôn ngữ ký hiệu, thiết kế ứng dụng có ích, khám phá thế giới Minecraft và nhiều điều thú vị khác!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes là những bài học tương tác dễ hiểu, 20 phút pha trộn khoa học máy tính với các chủ đề trong thế giới thực. Đào tạo AI để đọc ngôn ngữ ký hiệu, thiết kế ứng dụng có ích, khám phá thế giới Minecraft và nhiều điều thú vị khác!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Xem các tập</button></a>
@@ -329,8 +329,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Giờ giải lao lập trình</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">Khiến cho khoa học máy tính trở nên thú vị bằng cách tham gia Giờ giải lao lập trình! Bạn có thể tạo thuật toán cùng Ashton Kutcher, tìm hiểu về biến với Yara Shahidi và thậm chí là khám phá cách hoạt động của Internet với nhà phát minh thực tế của Internet, là Vint Cerf.</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
+        <div class="smalltext" style="">Giữ cho khoa học máy tính vui vẻ bằng cách thực hiện Code Break! Bạn có thể tạo thuật toán cùng Ashton Kutcher, tìm hiểu về biến với Yara Shahidi và thậm chí là khám phá cách hoạt động của Internet với nhà phát minh thực tế của Internet, là Vint Cerf.</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Kết nối</button></a>
     </span>
