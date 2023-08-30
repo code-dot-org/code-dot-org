@@ -17,9 +17,14 @@ module I18n
           end
 
           def execute
-            pegasus_languages.each.with_index(1) do |pegasus_lang, next_lang_idx|
-              progress_bar.title = progress_bar_title(next_lang_idx)
+            progress_bar.start
 
+            # Memoizes animation metadata before processing in threads
+            # to prevent them from being downloaded multiple times (in each thread separately)
+            spritelab_manifest_builder.initial_animation_metadata
+            progress_bar.progress = 30
+
+            I18nScriptUtils.process_in_threads(pegasus_languages) do |pegasus_lang|
               crowdin_spritelab_file_path = CDO.dir(File.join(I18N_LOCALES_DIR, pegasus_lang[:crowdin_name_s], DIR_NAME, SPRITELAB_FILE_NAME))
               next unless File.exist?(crowdin_spritelab_file_path)
 
@@ -35,27 +40,29 @@ module I18n
               translations = JSON.load_file(i18n_spritelab_file_path)
               spritelab_manifest_builder.upload_localized_manifest(js_locale, translations)
             ensure
-              progress_bar.increment
+              mutex.synchronize do
+                @lang_progress_incr ||= (progress_bar.total - progress_bar.progress).to_f / pegasus_languages.size
+                progress_bar.progress += @lang_progress_incr
+              rescue ProgressBar::InvalidProgressError
+                progress_bar.finish
+              end
             end
+
+            progress_bar.finish
           end
 
           private
+
+          def mutex
+            @mutex ||= Thread::Mutex.new
+          end
 
           def pegasus_languages
             @pegasus_languages ||= PegasusLanguages.get_crowdin_name_and_locale
           end
 
-          def progress_bar_title(pegasus_lang_idx = 0)
-            title = 'Apps/animations sync-out'
-            pegasus_lang = pegasus_languages[pegasus_lang_idx]
-            pegasus_lang ? "#{title} [#{pegasus_lang[:locale_s]}]" : title
-          end
-
           def progress_bar
-            @progress_bar ||= I18nScriptUtils.create_progress_bar(
-              total: pegasus_languages.size,
-              title: progress_bar_title,
-            )
+            @progress_bar ||= I18nScriptUtils.create_progress_bar(title: 'Apps/animations sync-out')
           end
 
           def spritelab_manifest_builder

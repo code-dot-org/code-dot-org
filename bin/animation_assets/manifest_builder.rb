@@ -40,13 +40,19 @@ class ManifestBuilder
     @warnings = []
   end
 
+  def default_s3_bucket
+    @default_s3_bucket ||= Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
+  end
+
+  def animation_objects
+    @animation_objects ||= get_animation_objects
+  end
+
   #
   # Main Entry Point
   #
   def rebuild_animation_library_manifest
     # Connect to S3 and get a listing of all objects in the animation library bucket
-    bucket = Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
-    animation_objects = get_animation_objects(bucket)
     info "Found #{animation_objects.size} animations."
 
     info "Building animation metadata..."
@@ -108,8 +114,6 @@ class ManifestBuilder
   #
   def download_entire_animation_library
     # Connect to S3 and get a listing of all objects in the animation library bucket
-    bucket = Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
-    animation_objects = get_animation_objects(bucket)
     info "Found #{animation_objects.size} animations."
 
     info "Downloading library..."
@@ -180,9 +184,6 @@ class ManifestBuilder
   # Returns a map of names and aliases used in animation metadata
   # for translation
   def get_animation_strings
-    bucket = Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
-    animation_objects = get_animation_objects(bucket)
-
     animation_metadata = build_animation_metadata(animation_objects, read_old_metadata)
     strings = Hash.new
     animation_metadata.each do |_, metadata|
@@ -194,16 +195,17 @@ class ManifestBuilder
     return strings.sort.to_h
   end
 
+  def initial_animation_metadata
+    @initial_animation_metadata ||= build_animation_metadata(animation_objects, {})
+  end
+
   # Takes in a locale (for the file suffix) and a map of string translations
   # and replaces the aliases of the aliases of the animations with their translation.
   # Then, the localized manifest is uploaded to S3 with the suffix .{locale}.json
   def upload_localized_manifest(locale, strings)
     return unless upload_spritelab_to_s3?
 
-    @bucket ||= Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
-    @animation_objects ||= get_animation_objects(@bucket)
-
-    animation_metadata = build_animation_metadata(@animation_objects, {})
+    animation_metadata = initial_animation_metadata
     animation_metadata.each do |_, metadata|
       metadata['aliases'] = metadata['aliases'].map {|aliaz| strings[aliaz]}
       metadata['aliases'].delete_if(&:blank?)
@@ -229,7 +231,7 @@ class ManifestBuilder
 
   # Given an S3 bucket, return map of animation file objects:
   # ret_val['animation_name'] = {'json': JSON file, 'png': PNG file}
-  def get_animation_objects(bucket)
+  def get_animation_objects(bucket = default_s3_bucket)
     animations_by_name = {}
     prefix = @options[:spritelab] ? 'spritelab' : 'gamelab'
     bucket.objects({prefix: prefix}).each do |object_summary|

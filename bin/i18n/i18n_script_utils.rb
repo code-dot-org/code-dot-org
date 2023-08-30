@@ -6,6 +6,7 @@ require 'cgi'
 require 'fileutils'
 require 'psych'
 require 'ruby-progressbar'
+require 'parallel'
 
 I18N_LOCALES_DIR = 'i18n/locales'.freeze
 I18N_SOURCE_DIR = File.join(I18N_LOCALES_DIR, 'source').freeze
@@ -55,6 +56,7 @@ CROWDIN_TEST_PROJECTS = {
 
 class I18nScriptUtils
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
+  PARALLEL_PROCESSES = Parallel.processor_count / 2
 
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
@@ -369,5 +371,9 @@ class I18nScriptUtils
 
   def self.create_progress_bar(**args)
     ProgressBar.create(**args, format: PROGRESS_BAR_FORMAT)
+  end
+
+  def self.process_in_threads(data_array, **args)
+    Parallel.each(data_array, **args, in_threads: PARALLEL_PROCESSES) {|data| yield(data)}
   end
 end
