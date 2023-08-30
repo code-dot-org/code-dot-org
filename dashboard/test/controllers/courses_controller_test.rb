@@ -770,7 +770,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response :success
     response_body = JSON.parse(@response.body)
     assert_equal 4, response_body.length
-    assert_equal ['All Code', 'All Resources', 'All Standards', 'All Vocabulary'], response_body.map {|r| r['name']}
+    assert_equal(['All Code', 'All Resources', 'All Standards', 'All Vocabulary'], response_body.map {|r| r['name']})
   end
 
   test "get_rollup_resources doesn't return rollups if no lesson in a unit has the associated object" do
@@ -789,6 +789,6 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response :success
     response_body = JSON.parse(@response.body)
     assert_equal 2, response_body.length
-    assert_equal ['All Resources', 'All Standards'], response_body.map {|r| r['name']}
+    assert_equal(['All Resources', 'All Standards'], response_body.map {|r| r['name']})
   end
 end
