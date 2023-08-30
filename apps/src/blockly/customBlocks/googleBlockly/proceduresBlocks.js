@@ -5,6 +5,8 @@ import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
 
+const BLOCK_OFFSET = 16;
+
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
@@ -263,24 +265,24 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
 }
 
 const getLowestBlockBottomY = () => {
-  let lowestBlockBottom = 0;
+  let lowestBlockBottomY = 0;
   Blockly.getMainWorkspace()
     .getTopBlocks()
     .forEach(block => {
       const blockY = block.getRelativeToSurfaceXY().y;
-      const blockBottom = blockY + block.getHeightWidth().height;
-      if (blockBottom > lowestBlockBottom) {
-        lowestBlockBottom = blockBottom;
+      const blockBottomY = blockY + block.getHeightWidth().height;
+      if (blockBottomY > lowestBlockBottomY) {
+        lowestBlockBottomY = blockBottomY;
       }
     });
-  return lowestBlockBottom + 16;
+  return lowestBlockBottomY;
 };
 
 // Creates a new definition block under all existing blocks on the main workspace,
 // scrolls to the block, and selects it
 export const createNewDefinitionBlock = blockState => {
   const newDefinitionBlock = Blockly.serialization.blocks.append(
-    {...blockState, x: 16, y: getLowestBlockBottomY()},
+    {...blockState, x: BLOCK_OFFSET, y: getLowestBlockBottomY() + BLOCK_OFFSET},
     Blockly.getMainWorkspace()
   );
 
