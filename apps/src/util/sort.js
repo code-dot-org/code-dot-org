@@ -1,4 +1,5 @@
-// Sorts an array of objects by name, case insensitive
+// Allows objects to be sorted in ascending alphabetical order based on their `name` properties
+// Note: Sorting is case-insensitive
 export const nameComparator = (a, b) => {
   const nameA = a.name.toUpperCase(); // ignore upper and lowercase
   const nameB = b.name.toUpperCase(); // ignore upper and lowercase
