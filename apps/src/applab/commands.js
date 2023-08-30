@@ -890,11 +890,6 @@ applabCommands.textInput = function (opts) {
 
 applabCommands.textArea = function (opts) {
   apiValidateDomIdExistence(opts, 'textArea', 'id', opts.elementId, false);
-  apiValidateType(opts, 'textArea', 'text', opts.text, 'uistring');
-  if (typeof opts.forId !== 'undefined') {
-    apiValidateDomIdExistence(opts, 'textArea', 'forId', opts.forId, true);
-  }
-
   const newTextArea = document.createElement('div');
   newTextArea.id = opts.elementId;
   newTextArea.setAttribute('contenteditable', true);
@@ -983,7 +978,7 @@ applabCommands.slider = function (opts) {
   newSlider.step = opts.step;
   newSlider.style.position = 'relative';
   newSlider.style.borderStyle = 'solid';
-  newSlider.style.width = 50;
+  newSlider.style.width = 150;
   newSlider.style.height = 24;
   newSlider.style.margin = '0px';
   newSlider.style.padding = '0px';
