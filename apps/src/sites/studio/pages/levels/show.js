@@ -57,7 +57,7 @@ function initPage() {
   const rubricFabMountPoint = document.getElementById('rubric-fab-mount-point');
   if (rubricFabMountPoint && experiments.isEnabled('ai-rubrics')) {
     const rubricData = getScriptData('rubricdata');
-    const {rubric, studentLevelInfo, onLevelForEvaluation} = rubricData;
+    const {rubric, studentLevelInfo} = rubricData;
     const reportingData = {
       unitName: config.script_name,
       courseName: config.course_name,
@@ -68,7 +68,7 @@ function initPage() {
         rubric={rubric}
         studentLevelInfo={studentLevelInfo}
         reportingData={reportingData}
-        onLevelForEvaluation={onLevelForEvaluation}
+        currentLevelName={config.level_name}
       />,
       rubricFabMountPoint
     );

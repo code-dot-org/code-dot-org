@@ -18,11 +18,16 @@ class Rubric < ApplicationRecord
   belongs_to :lesson
 
   def summarize
+    level_position = lesson.script_levels.filter {|sl| sl.levels.include?(level)}.first&.position
     {
       learningGoals: learning_goals.map(&:summarize),
       lesson: {
         name: lesson.name,
         position: lesson.relative_position,
+      },
+      level: {
+        name: level.name,
+        position: level_position,
       }
     }
   end

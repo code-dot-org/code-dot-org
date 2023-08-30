@@ -14,7 +14,7 @@ import {
 export default function RubricFloatingActionButton({
   rubric,
   studentLevelInfo,
-  onLevelForEvaluation,
+  currentLevelName,
   reportingData,
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +42,7 @@ export default function RubricFloatingActionButton({
           rubric={rubric}
           studentLevelInfo={studentLevelInfo}
           reportingData={reportingData}
-          onLevelForEvaluation={onLevelForEvaluation}
+          currentLevelName={currentLevelName}
           teacherHasEnabledAi
         />
       )}
@@ -53,6 +53,6 @@ export default function RubricFloatingActionButton({
 RubricFloatingActionButton.propTypes = {
   rubric: rubricShape,
   studentLevelInfo: studentLevelInfoShape,
-  onLevelForEvaluation: PropTypes.bool,
+  currentLevelName: PropTypes.string,
   reportingData: reportingDataShape,
 };
