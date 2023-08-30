@@ -25,7 +25,8 @@ module I18n
             progress_bar.progress = 30
 
             I18nScriptUtils.process_in_threads(pegasus_languages) do |pegasus_lang|
-              crowdin_spritelab_file_path = CDO.dir(File.join(I18N_LOCALES_DIR, pegasus_lang[:crowdin_name_s], DIR_NAME, SPRITELAB_FILE_NAME))
+              crowdin_locale = pegasus_lang[:crowdin_name_s]
+              crowdin_spritelab_file_path = CDO.dir(File.join(I18N_LOCALES_DIR, crowdin_locale, DIR_NAME, SPRITELAB_FILE_NAME))
               next unless File.exist?(crowdin_spritelab_file_path)
 
               locale = pegasus_lang[:locale_s]
@@ -33,6 +34,7 @@ module I18n
               i18n_spritelab_file_path = CDO.dir(File.join(I18N_LOCALES_DIR, locale, DIR_NAME, SPRITELAB_FILE_NAME))
               FileUtils.mv crowdin_spritelab_file_path, i18n_spritelab_file_path, force: true
               FileUtils.rm_r File.dirname(crowdin_spritelab_file_path)
+              I18nScriptUtils.delete_empty_crowdin_locale_dir(crowdin_locale)
 
               next if locale == 'en-US'
 
