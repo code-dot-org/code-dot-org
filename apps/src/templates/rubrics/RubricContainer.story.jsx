@@ -7,10 +7,16 @@ export default {
   component: RubricContainer,
 };
 
+const rubricLevelName = 'free_play_level';
+
 const defaultRubric = {
   lesson: {
     position: 3,
     name: 'Testing',
+  },
+  level: {
+    name: rubricLevelName,
+    position: 5,
   },
   learningGoals: [
     {
@@ -84,6 +90,7 @@ const Template = args => (
     rubric={defaultRubric}
     teacherHasEnabledAi={false}
     studentLevelInfo={defaultStudentLevelInfo}
+    currentLevelName={rubricLevelName}
     {...args}
   />
 );
@@ -106,6 +113,7 @@ export const ViewingStudentWorkOnNonAssessmentLevelAiEnabled = Template.bind(
 ViewingStudentWorkOnNonAssessmentLevelAiEnabled.args = {
   studentLevelInfo: {...defaultStudentLevelInfo, submitted: true},
   teacherHasEnabledAi: true,
+  currentLevelName: 'not_free_play_level',
 };
 
 export const ViewingStudentWorkOnNonAssessmentLevelAiDisabled = Template.bind(
@@ -114,18 +122,17 @@ export const ViewingStudentWorkOnNonAssessmentLevelAiDisabled = Template.bind(
 ViewingStudentWorkOnNonAssessmentLevelAiDisabled.args = {
   studentLevelInfo: {...defaultStudentLevelInfo, submitted: true},
   teacherHasEnabledAi: false,
+  currentLevelName: 'not_free_play_level',
 };
 
 export const ViewingStudentWorkOnAssessmentLevelAiEnabled = Template.bind({});
 ViewingStudentWorkOnAssessmentLevelAiEnabled.args = {
   studentLevelInfo: {...defaultStudentLevelInfo, submitted: true},
   teacherHasEnabledAi: true,
-  onLevelForEvaluation: true,
 };
 
 export const ViewingStudentWorkOnAssessmentLevelAiDisabled = Template.bind({});
 ViewingStudentWorkOnAssessmentLevelAiDisabled.args = {
   studentLevelInfo: {...defaultStudentLevelInfo, submitted: true},
   teacherHasEnabledAi: false,
-  onLevelForEvaluation: true,
 };
