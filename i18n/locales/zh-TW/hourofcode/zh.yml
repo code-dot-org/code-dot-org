@@ -196,6 +196,8 @@ zh:
   call_to_action_learn_about_approach: 進一步了解我們的方法
   call_to_action_try_java_lab: 嘗試Java實驗室
   call_to_action_notify_available: 有貨時通知我
+  call_to_action_register_early_access: 註冊以取得早期存取
+  call_to_action_open_positions: 查看未平倉職位
   aria_label_call_to_action_afe: 進一步了解亞馬遜未來工程師
   aria_label_call_to_action_teaching_csf: 開始教學計算機科學基礎知識專業學習計劃
   aria_label_call_to_action_teaching_csd: 啟動計算機科學發現教學專業學習計劃
@@ -8992,6 +8994,53 @@ zh:
   accessibility_card_text_9: 專為智力障礙學生設計的互動式編程機器人球和STEM教育套件。需要與相應的應用程式配對。
   accessibility_card_title_10: 'Quorum '
   accessibility_card_text_10: 使用Quorum對Code.org的AP計算機科學原理課程進行的改編。Quorum是一種基於證據的語言，最初旨在為盲人或視障學生提供無障礙環境。
+  engineering_hero_heading: 加入我們的工程團隊！
+  engineering_hero_desc: 隨著我們不斷擴展工程團隊，我們希望在 Code.org 分享更多有關我們工程組織的信息，以及在這裡工作的一些獨特方面。如果您有興趣申請我們的職位，我們很樂意聽到您的來信！
+  engineering_team_title: 在 Code.org 認識工程團隊
+  engineering_team_card_text_1: 這是（大多數）我們在 2023 年夏天的親自聚在一起！我們的工程團隊分為四個子團隊，他們共同努力為我們所有的學生和老師建立和服務平台。
+  engineering_team_card_text_2: 如果您有興趣申請我們的職位，我們很樂意聽到您的來信！您可以在我們的工作機會頁面上找到未平倉職位的清單。
+  engineering_our_team_title: 我們的工程團隊
+  engineering_our_team_desc: Code.org 的工程團隊分為四個子團隊，負責建立並支援我們平台的不同領域：
+  engineering_our_team_sub_title_1: 學生學習組
+  engineering_our_team_text_1: 我們的學生學習團隊擁有我們學生每天使用的所有活動（我們稱之為實驗室）。這個團隊主要在前端技術上工作（我們使用
+    React 和許多自定義 JS），我們與許多合作夥伴和開源項目建立了良好的工作關係。例如，我們在所有基於塊的編程中使用 [谷歌的 Blockly]（%{youtube_url}）。我們支持學生從幼兒園到
+    12 年級的學習之旅。
+  engineering_our_team_sub_title_2: 教師體驗團隊
+  engineering_our_team_text_2: 我們的教師體驗團隊建立了吸引新教師加入 Code.org 的工具（我們稱之為這些招聘產品），並開發了一個平台，使我們現有的教師能夠教授我們的課程（我們的教師工具）。與我們的學生工具一樣，我們依靠
+    React 來構建我們的前端，我們的服務器端組件使用 Ruby on Rails 提供服務。
+  engineering_our_team_sub_title_3: 平台團隊
+  engineering_our_team_text_3: 我們的平台團隊擁有可滿足我們學生和教師團隊需求的核心組件（例如身份驗證和用戶個人資料），同時還擁有接觸到我們尚未觸及的學生的使命。這包括構建集成，將我們與使用不同學習管理系統（LMS）的學校聯繫起來，並打包我們的課程，以便在無法訪問可靠互聯網的遠程學校中使用。
+  engineering_our_team_sub_title_4: 基建團隊
+  engineering_our_team_text_4: 我們的基礎設施團隊為學生和教師提供支持的平台的骨幹。這包括我們的託管基礎設施和相關服務 (我們使用 AWS)、資料管理、安全計劃、開發人員和部署服務等等。這個團隊還擁有我們的擴展和佈建系統，這些系統在「一小時玩程式」期間非常重要，我們邀請世界上的每個學生與我們一起完成一小時的編程。
+  engineering_faq_question_1: Code.org 有什麼作用？
+  engineering_faq_answer_1_a: Code.org 是一家教育創新非營利組織，致力於希望每所學校的每個學生都有機會學習計算機科學，作為他們
+    K-12 教育核心的一部分。
+  engineering_faq_answer_1_b: 我們擴大在學校使用計算機科學的機會，重點是增加年輕婦女和來自其他代表不足的團體的學生的參與度。Code.org
+    是美國最大學區 K-12 電腦科學課程的領先供應商，還組織了一年一度的「一小時玩程式」活動，該活動吸引了全球 15% 以上的學生參與。
+  engineering_faq_answer_1_c: Code.org 得到包括微軟，亞馬遜，谷歌和許多其他捐助者的慷慨捐助者的支持。
+  engineering_faq_question_2: 什麼是 Code.org 的開發人員體驗和工具？
+  engineering_faq_answer_2: 我們的開發人員經驗可能與您在過去的角色中看到的不同。與我們的產品團隊密切合作，我們每個工作日都會運送到生產中，我們有各種節奏-有時您正在編寫當天即可生效的代碼;
+    其他時候您正在進行長期項目-儘管我們確實遵循 2 週的衝刺，但我們會以輕量級的方式進行操作。我們指數以正確的方式完成正確的事情，而不是採取任何特定方法的純粹主義觀點。[我們所有的程式碼]
+    (%{code_url}) 都是開放原始碼，我們使用 JIRA 和 GitHub 提取要求來追蹤我們所有的工作項目。我們也非常關心質量和測試，並且很幸運地獲得了
+    [SauceLabs]（%{saucelabs_url}）的令人難以置信的支持，他們幫助我們在他們的雲設備農場中的各種學生設備（例如 iPad）上運行我們的
+    UI 測試套件。
+  engineering_faq_question_3: Code.org 的工程師隨叫輪換是什麼？
+  engineering_faq_answer_3: 我們 30 多個工程團隊分享隨時待命的責任。每位工程師都需要 24 小時班次，並使用我們的升級路徑和教戰手冊來應對網站中斷或其他現場問題。我們為網站的可靠性感到自豪-平均而言，每位工程師每年只會因通常快速解決的問題而醒來一次。相反，「每日開發人員」通常會花費一部分工作日來管理生產部署和分類較不緊急的問題。
+  engineering_faq_question_4: 您是遠程友好/WFH 組織嗎？
+  engineering_faq_answer_4_a: 是的！在 2019 年，在大流行發生前不久，Code.org 成為遠程優先的組織。今天，我們在美國的每個時區都有工程師，並相應地適應工作時間。我們的大多數會議發生在太平洋時間上午
+    10 點至下午 3 點之間。
+  engineering_faq_answer_4_b: 我們還認識到面對面時間的價值，以及我們親自聚會的每個季度，通常在西雅圖。其中兩項活動（我們稱之為「啟動週」和「Codechella」）在一月和六月將組織中的每個人聚集在一起-工程和產品團隊在
+    4 月和 10 月分別召開會議。
+  engineering_faq_answer_4_c: 我們堅信與我們的學生和老師共度時光，因此許多面對面的活動包括參加學校和教室，以收集反饋或進行測試我們的產品
+  engineering_faq_question_5: Code.org 的工程團隊與眾不同的原因是什麼？
+  engineering_faq_answer_5_a: 除了解決具有挑戰性的技術問題之外，我們還有一些事情使我們的工程組織與您可能曾經從事過的其他組織不同：
+  engineering_faq_answer_5_b_1: 我們所有人都對我們的使命充滿熱情。
+  engineering_faq_answer_5_b_2: 我們每個人都在這裡為世界各地的每個學生擴大計算機科學的使命。我們都有自己獨特的故事和觀點，是什麼驅使我們實現這一使命。
+  engineering_faq_answer_5_c_1: 我們彼此深切關心。
+  engineering_faq_answer_5_c_2: 當工程師正在努力解決問題時，我們會加入並提供幫助。我們的原則之一是我們很難解決問題，但彼此友善。我們定期推廣工程師，但我們不會為了支持某人的晉升途徑而開出過度設計的解決方案。相反，我們以慷慨的專業發展預算投資於我們的工程師，並獲得其他學習機會。
+  engineering_faq_answer_5_d_1: 我們努力工作，但我們設定了明確的界限。
+  engineering_faq_answer_5_d_2: 雖然我們支持世界各地的學生，但我們對工作和家庭生活之間的明確界限負責。我們享受沒有會議星期三, 採取我們的
+    PTO (5 總週, 其中包括一個組織範圍內的 2 週辦公室關閉在今年年底又名寒假), 在夏季的星期五半工作日又名夏季星期五, 和其他慷慨的好處.
   language_code:
     ar: 阿拉伯人
     az: 阿塞拜疆

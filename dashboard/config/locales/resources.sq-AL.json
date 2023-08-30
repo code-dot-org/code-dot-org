@@ -326,6 +326,9 @@
         "problem-solving-process-1/csd/2021": {
           "type": "Video"
         },
+        "solving-problems-exemplar-2020/csd/2021": {
+          "type": "Çelësi i përgjigjes"
+        },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Video"
         },
@@ -607,11 +610,17 @@
         "ascii-text/csd/2021": {
           "type": "Burim"
         },
+        "ascii_challenges/csd/2021": {
+          "type": "Çelësi i përgjigjes"
+        },
         "how-computers-work-data-and-binary/csd/2021": {
           "type": "Video"
         },
         "unit_5_data_society/csd/2021": {
           "type": "Sllajdet"
+        },
+        "medical_records/csd/2021": {
+          "type": "Çelësi i përgjigjes"
         },
         "unit_5_data_society_1/csd/2021": {
           "type": "Sllajdet"
@@ -761,6 +770,9 @@
         "types_of_machine_learning/csd/2021": {
           "type": "Sllajdet"
         },
+        "types_of_machine_learning_2/csd/2021": {
+          "type": "Çelësi i përgjigjes"
+        },
         "innovations_in_ai/csd/2021": {
           "type": "Sllajdet"
         },
@@ -776,6 +788,12 @@
         "shoe_survey/csd/2021": {
           "type": "Burim"
         },
+        "patterns_in_data_3/csd/2021": {
+          "type": "Çelësi i përgjigjes"
+        },
+        "_key_classification_models/csd/2021": {
+          "type": "Çelësi i përgjigjes"
+        },
         "classification_models_1/csd/2021": {
           "type": "Sllajdet"
         },
@@ -790,6 +808,9 @@
         },
         "training_and_testing_in_ai_lab/csd/2021": {
           "type": "Video"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2021": {
+          "type": "Çelësi i përgjigjes"
         },
         "accuracy_in_ai_lab/csd/2021": {
           "type": "Burim"
@@ -819,6 +840,9 @@
         "saving_models_in_ai_lab/csd/2021": {
           "type": "Sllajdet"
         },
+        "_key_zoo_models/csd/2021": {
+          "type": "Çelësi i përgjigjes"
+        },
         "selecting_a_label/csd/2021": {
           "type": "Burim"
         },
@@ -831,11 +855,20 @@
         "numerical_models/csd/2021": {
           "type": "Sllajdet"
         },
+        "zombie_prediction_-_answer_key/csd/2021": {
+          "type": "Çelësi i përgjigjes"
+        },
+        "_key_numerical_accuracy/csd/2021": {
+          "type": "Çelësi i përgjigjes"
+        },
         "numerical_data_in_ai_lab/csd/2021": {
           "type": "Sllajdet"
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "Video"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2021": {
+          "type": "Çelësi i përgjigjes"
         },
         "using_data_with_numerical_features/csd/2021": {
           "type": "Burim"
@@ -847,7 +880,7 @@
           "type": "Sllajdet"
         },
         "ai_ethics_research_reflection/csd/2021": {
-          "type": "Doracaku i Studentëve"
+          "type": "Fletushkë për nxënës"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Video"
@@ -907,7 +940,7 @@
           "type": "Burim"
         },
         "cross-curricular_extension_activities/coursea/2021": {
-          "name": "Aktivitetet e zgjerimit ndër-kurrikulare",
+          "name": "Aktivitetet e zgjeruara ndër-kurrikulare",
           "type": "Burim"
         },
         "csta_standards_mapping/coursea/2021": {
@@ -919,7 +952,7 @@
           "type": "Burim"
         },
         "debugging_guide/coursea/2021": {
-          "name": "Udhëzues për korrigjimin e gabimeve",
+          "name": "Udhëzues për debugging",
           "type": "Burim"
         },
         "implementation_guide/coursea/2021": {
@@ -935,36 +968,55 @@
           "type": "Burim"
         },
         "virtual_lesson_modifications/coursea/2021": {
+          "name": "Modifikimet Virtuale të Mësimit",
           "type": "Burim"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "Siguria në lagjen time në Internet: Sllajdet e mësimit",
           "type": "Slide Deck"
         },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "Siguria në lagjen time në internet: Lagja ime në internet",
+          "type": "Video mësimore"
+        },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "type": "Doracaku i Studentëve"
+          "name": "Siguria në lagjen time në internet: Ndalo dhe Mendo një moment",
+          "type": "Fletushkë për nxënës"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "Siguria në lagjen time në internet: Siguria: Rregullat!",
+          "type": "Posteri i poezisë"
         },
         "20_20_20_rule/coursea/2021": {
+          "name": "Rregulli 20/20/20 ",
           "type": "Burim"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "Fillimi - Krijimi i një sesioni të klasës",
           "type": "Video"
         },
         "pair-programming-vid/coursea/2021": {
-          "name": "Programim në çift"
+          "name": "Programim në çift",
+          "type": "Video për Nxënës"
         },
         "wiggles-go_noodle/coursea/2021": {
+          "name": "Wiggles-Go Noodle",
           "type": "Video"
         },
         "activity-answer-happy-maps/coursea/2021": {
+          "name": "Kartat e Happy Maps",
           "type": "Çelësi i përgjigjeve të fletës së punës"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
+          "name": "Mimikat - Imazhi i emocioneve",
           "type": "Burim"
         },
         "happy-map-cards/coursea/2021": {
+          "name": "Kartat e Happy Maps",
           "type": "Fletë punuese"
         },
         "happy-map-game-pieces/coursea/2021": {
+          "name": "Pjesë Lojërash Happy Maps",
           "type": "Manipulativë"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -972,84 +1024,125 @@
           "type": "Video e shkëputur"
         },
         "20_20_20_rule_1/coursea/2021": {
+          "name": "Rregulli 20/20/20 ",
           "type": "Burim"
         },
         "course-ab-blockly-blocks/coursea/2021": {
+          "name": "Blloqet Blockly të shkëputura (Klasa K-1)",
           "type": "Manipulativë"
         },
         "wiggles_-_gonoodle/coursea/2021": {
+          "name": "Wiggles - GoNoodle",
           "type": "Video"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "Debugging me butonin e hapit",
           "type": "Video"
         },
         "feeling_faces_emotion_image/coursea/2021": {
+          "name": "Imazh me Mimikat e Fytyrës",
           "type": "Burim"
         },
         "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "name": "Mimikat - Imazhi i emocioneve",
           "type": "Burim"
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "Imazh me Mimikat e Fytyrës",
           "type": "Burim"
         },
         "happy-map-cards-xl/coursea/2021": {
+          "name": "Kartat e Happy Map XL",
           "type": "Fletë punuese"
         },
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
+          "name": "Happy Map me Pjesë Lojërash me bonus të paketave",
           "type": "Manipulativë"
         },
+        "feeling-faces-image/coursea/2021": {
+          "name": "Mimikat"
+        },
         "pair-programming/coursea/2021": {
+          "name": "Programimi në ekip",
           "type": "Video"
         },
         "csf_lesson_recommendations/coursea/2021": {
+          "name": "Rekomandimet për mësimin e Bazat e Shkencave Kompjuterike",
           "type": "Burim"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "Imazh me Mimikat e Fytyrës",
           "type": "Burim"
         },
         "common-sense-media-pause-think/coursea/2021": {
+          "name": "Ndalo dhe Mendo Online",
           "type": "Video"
         },
         "csf_lesson_recommendations_1/coursea/2021": {
+          "name": "Rekomandimet për mësimin e Bazat e Shkencave Kompjuterike",
           "type": "Burim"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "Imazh me Mimikat e Fytyrës",
           "type": "Burim"
         },
         "assessment-answer-big-event/coursea/2021": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Çelësi i përgjigjeve të vlerësimit"
         },
         "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Vlerësim"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "name": "Mimikat - Imazhi i emocioneve",
           "type": "Burim"
         },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "Eventi i madh (Kursi A, B)",
+          "type": "Imazh kontrollues"
+        },
         "unplugged-video-big-event/coursea/2021": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Video e shkëputur"
         },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "Këshilla për aktivitetin kryesor për Bazat e Shkencave Kompjuterike"
+        },
         "csf_lesson_recommendations_2/coursea/2021": {
+          "name": "Rekomandimet për mësimin e Bazat e Shkencave Kompjuterike",
           "type": "Burim"
         },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "name": "Mimikat - Imazhi i emocioneve",
           "type": "Burim"
         },
+        "artist_project_planning_guide/coursea/2021": {
+          "name": "Udhëzues për planifikimin e projektit Artisti",
+          "type": "Fletushkë"
+        },
+        "artist_project_planning_guide_1/coursea/2021": {
+          "name": "Udhëzues për planifikimin e projektit Artisti",
+          "type": "Çelësi i përgjigjes"
+        },
         "2021_change_log/courseb/2021": {
+          "name": "Dokumenti i ndryshimeve 2021 ",
           "type": "Burim"
         },
         "common_core_and_ngss_guidance/courseb/2021": {
+          "name": "Common Core dhe Udhëzimi NGSS",
           "type": "Burim"
         },
         "course_vocabulary/courseb/2021": {
+          "name": "Fjalori i kursit",
           "type": "Burim"
         },
         "cross-curricular_extension_activities/courseb/2021": {
+          "name": "Aktivitetet e zgjeruara ndër-kurrikulare",
           "type": "Burim"
         },
         "csta_standards_mapping/courseb/2021": {
+          "name": "Hartëzimi i standardeve CSTA",
           "type": "Burim"
         },
         "curriculum_guide_1/courseb/2021": {
@@ -1057,7 +1150,7 @@
           "type": "Burim"
         },
         "debugging_guide/courseb/2021": {
-          "name": "Udhëzues për korrigjimin e gabimeve",
+          "name": "Udhëzues për Debugging",
           "type": "Burim"
         },
         "implementation_guide/courseb/2021": {
@@ -1065,99 +1158,141 @@
           "type": "Burim"
         },
         "lesson_type_guide/courseb/2021": {
+          "name": "Udhëzues për llojin e mësimit",
           "type": "Burim"
         },
         "teacher_forum_1/courseb/2021": {
+          "name": "Forumi i mësimdhënësit",
           "type": "Burim"
         },
         "virtual_lesson_modifications/courseb/2021": {
+          "name": "Modifikimet Virtuale të Mësimit",
           "type": "Burim"
         },
         "digital-trails-animal-tracks/courseb/2021": {
-          "type": "Doracaku i Studentëve"
+          "name": "Gjurmët digjitale: Gjurmët e kafshëve",
+          "type": "Fletushkë për nxënës"
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
-          "type": "Doracaku i Studentëve"
+          "name": "Gjurmët digjitale: Katrorët e gjurmëve digjitale",
+          "type": "Fletushkë për nxënës"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": "Gjurmët digjitale: Ndiq gjurmët digjitale",
+          "type": "Video mësimore"
         },
         "digital-trails-lesson-slides/courseb/2021": {
+          "name": "Gjurmët digjitale: Sllajdet e mësimit",
           "type": "Slide Deck"
         },
         "feeling_faces_emotion_image/courseb/2021": {
+          "name": "Imazh me Mimika të Fytyrës",
           "type": "Burim"
         },
         "mimi-activity/courseb/2021": {
-          "name": "Lëvize atë, lëvize atë"
+          "name": "Move it, move it",
+          "type": "Harta e aktivitetit"
         },
         "mimi-debugging/courseb/2021": {
-          "name": "Lëvize atë, lëvize atë",
+          "name": "Move it, move it",
           "type": "Fletë punuese"
         },
         "mimi-teacher-puzzle/courseb/2021": {
-          "name": "Lëvize atë, lëvize atë",
+          "name": "Move It, Move It",
           "type": "Çelësi i përgjigjeve të fletës së punës"
         },
         "teacher-video-move-it/courseb/2021": {
-          "name": "Lëvize, Lëvize"
+          "name": "Move it, Move it",
+          "type": "Video Mësuesi"
         },
         "20_20_20_rule/courseb/2021": {
+          "name": "Rregulli 20/20/20 ",
           "type": "Burim"
         },
+        "class-section-video/courseb/2021": {
+          "name": "Si të krijoni një sesion në klasë në Code.org"
+        },
         "course-ab-blockly-blocks/courseb/2021": {
+          "name": "Blloqet Blockly të shkëputura (Klasa K-1)",
           "type": "Manipulativë"
         },
+        "feeling-faces-image/courseb/2021": {
+          "name": "Mimikat",
+          "type": "Imazhet e emocioneve"
+        },
+        "jigsaw/courseb/2021": {
+          "name": "Praktika Tërhiq dhe Lësho"
+        },
         "pair-programming-vid/courseb/2021": {
-          "name": "Programim në çift"
+          "name": "Programim në çift",
+          "type": "Video për nxënës"
         },
         "wiggles_-_gonoodle/courseb/2021": {
+          "name": "Wiggles - GoNoodle",
           "type": "Video"
         },
+        "compass-rose/courseb/2021": {
+          "name": "Busulla",
+          "type": "Fletushkë"
+        },
         "feeling_faces_-_emotion_image/courseb/2021": {
+          "name": "Mimikat - Imazhi i emocioneve",
           "type": "Burim"
         },
         "happy-map-game-pieces/courseb/2021": {
+          "name": "Pjesë Lojërash Happy Maps",
           "type": "Manipulativë"
         },
         "stevie_and_the_big_project/courseb/2021": {
+          "name": "Stevie dhe projekti i madh",
           "type": "Burim"
         },
         "unspotted_bugs/courseb/2021": {
+          "name": "Bugs të paidentifikuara",
           "type": "Video"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
-          "name": "Duke u Çmëndur",
+          "name": "Getting Loopy",
           "type": "Çelësi i përgjigjeve të vlerësimit"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
-          "name": "Duke u Çmëndur",
+          "name": "Getting Loopy",
           "type": "Fletë punuese"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
-          "name": "Duke u Çmëndur",
+          "name": "Getting Loopy",
           "type": "Vlerësim"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
-          "name": "Duke u Çmëndur",
+          "name": "Getting Loopy",
           "type": "Video e shkëputur"
         },
         "csf-lesson-recommend/courseb/2021": {
+          "name": "Këshilla për aktivitetin kryesor për Bazat e Shkencave Kompjuterike",
           "type": "Rekomandime për mësim"
         },
         "common-sense-media-pause-think/courseb/2021": {
+          "name": "Ndalo dhe Mendo Online",
           "type": "Video"
         },
         "the-right-app-scenarios/courseb/2021": {
+          "name": "Skenarët e aplikacionit të duhur",
           "type": "Slide Deck"
         },
         "assessment-answer-big-event/courseb/2021": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Çelësi i përgjigjeve të vlerësimit"
         },
         "csf-the-big-event-assessment/courseb/2021": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Vlerësim"
         },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "Eventi i madh (Kursi A, B)",
+          "type": "Imazh kontrollues"
+        },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Video"
         },
         "play_lab_project_planning_guide/courseb/2021": {
@@ -1165,21 +1300,27 @@
           "type": "Fletushkë"
         },
         "play_lab_project_planning_guide_1/courseb/2021": {
-          "name": "Udhëzues për planifikimin e projektit Play Lab"
+          "name": "Udhëzues për planifikimin e projektit Play Lab",
+          "type": "Çelësi i përgjigjes"
         },
         "2021_change_log/coursec/2021": {
+          "name": "Dokumenti i ndryshimeve 2021 ",
           "type": "Burim"
         },
         "common_core_and_ngss_guidance/coursec/2021": {
+          "name": "Common Core dhe Udhëzuesi NGSS",
           "type": "Burim"
         },
         "course_vocabulary/coursec/2021": {
+          "name": "Fjalori i kursit",
           "type": "Burim"
         },
         "cross-curricular_extension_activities/coursec/2021": {
+          "name": "Aktivitetet e zgjeruara ndër-kurrikulare",
           "type": "Burim"
         },
         "csta_standards_mapping/coursec/2021": {
+          "name": "Hartëzimi i standardeve CSTA",
           "type": "Burim"
         },
         "curriculum_guide_1/coursec/2021": {
@@ -1195,85 +1336,114 @@
           "type": "Burim"
         },
         "lesson_type_guide/coursec/2021": {
+          "name": "Udhëzues për llojin e mësimit",
           "type": "Burim"
         },
         "teacher_forum_1/coursec/2021": {
+          "name": "Forumi i mësimdhënësit",
           "type": "Burim"
         },
         "virtual_lesson_modifications/coursec/2021": {
+          "name": "Modifikimet Virtuale të Mësimit",
           "type": "Burim"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
+          "name": "Vendosja e një STOP për padrejtësitë në internet: Sllajdet e mësimit",
           "type": "Slide Deck"
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
-          "type": "Doracaku i Studentëve"
+          "name": "Vendosja e një STOP për padrejtësitë në internet: STOP padrejtësitë në internet",
+          "type": "Fletushkë për nxënës"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Shokët e mi robotik"
+          "name": "Shokët e mi robotik",
+          "type": "Hapësira e gotës"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "Shokët e mi robotik"
+          "name": "Shokët e mi robotik",
+          "type": "Ide për grumbullimin e gotave"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "Shokët e mi robotik"
+          "name": "Shokët e mi robotik",
+          "type": "Modeli i trapezoidit të letrës"
         },
         "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Shokët e mi robotik"
+          "name": "Shokët e mi robotik",
+          "type": "Simboli kryesor"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Shokët e mi robotik",
           "type": "Video e shkëputur"
         },
+        "c2-maze-bridge/coursec/2021": {
+          "name": "Faqja e lidhjes së labirintit"
+        },
         "unplugged-maze-blocks/coursec/2021": {
+          "name": "Blloqet e shkëputura të labirintit",
           "type": "Manipulativë"
         },
         "csf-lesson-recommend/coursec/2021": {
+          "name": "Këshilla për aktivitetin kryesor për Bazat e Shkencave Kompjuterike",
           "type": "Rekomandime për mësim"
         },
         "debugging_guide/coursec/2021": {
-          "name": "Udhëzues për korrigjimin e gabimeve",
+          "name": "Udhëzues për debugging",
           "type": "Burim"
         },
         "pair-programming-vid/coursec/2021": {
-          "name": "Programim në çift",
+          "name": "Programim në ekip",
           "type": "Video"
         },
         "course-cf-blockly-blocks/coursec/2021": {
+          "name": " Blloqe të shkëputura (Kurset C-F)",
           "type": "Manipulativë"
         },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "Hyrje Artisti"
+          "name": "Artisti: Hyrje",
+          "type": "Video për nxënës"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "Kthesat dhe këndet",
-          "type": "Doracaku i Studentëve"
+          "name": "Kthesat & Këndet",
+          "type": "Fletushkë për nxënës"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "Kthesat dhe këndet"
+          "name": "Kthesat & Këndet",
+          "type": "Video për nxënës"
         },
         "feeling_faces_emotion_image/coursec/2021": {
+          "name": "Mimikat - Imazhi i emocioneve",
           "type": "Burim"
         },
         "assessment-answer-big-event/coursec/2021": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Çelësi i përgjigjeve të vlerësimit"
         },
         "csf-the-big-event-assessment/coursec/2021": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Vlerësim"
         },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "Eventi i madh (Kursi C)",
+          "type": "Kontrolluesi i eventeve"
+        },
         "unplugged-video-big-event/coursec/2021": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Video e shkëputur"
         },
         "open-ended_programming_levels/coursec/2021": {
-          "name": "Shembull i zgjidhjeve të nivelit"
+          "name": "Shembull i zgjidhjeve të nivelit",
+          "type": "Çelësi i përgjigjes"
         },
         "pause_and_think_online/coursec/2021": {
+          "name": "Ndalo dhe Mendo Online",
           "type": "Video"
         },
+        "open-ended_programming_levels_1/coursec/2021": {
+          "name": "Nivelet e programimit të hapur",
+          "type": "Çelësi i përgjigjes"
+        },
         "right-app-scenarios/coursec/2021": {
+          "name": "Të dhënat grafike nga Play Lab",
           "type": "Fletë punuese"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
@@ -1288,6 +1458,9 @@
           "name": "Zinxhirët binarë",
           "type": "Vlerësim"
         },
+        "csf-bit-byte-video/coursec/2021": {
+          "name": "Bits kundrejt Bytes"
+        },
         "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "Zinxhirët binarë"
         },
@@ -1300,21 +1473,27 @@
           "type": "Fletë punuese"
         },
         "play-lab-project-planning-guide-exemplar/coursec/2021": {
-          "name": "Udhëzues për planifikimin e projektit Play Lab (Shembull)"
+          "name": "Udhëzues për planifikimin e projektit Play Lab (Shembull)",
+          "type": "Burimi i mësimit"
         },
         "2021_change_log/coursed/2021": {
+          "name": "Dokumenti i ndryshimeve 2021 ",
           "type": "Burim"
         },
         "common_core_and_ngss_guidance/coursed/2021": {
+          "name": "Common Core dhe Udhëzuesi NGSS",
           "type": "Burim"
         },
         "course_vocabulary/coursed/2021": {
+          "name": "Fjalori i kursit",
           "type": "Burim"
         },
         "cross-curricular_extension_activities/coursed/2021": {
+          "name": "Aktivitetet e zgjeruara ndër-kurrikulare",
           "type": "Burim"
         },
         "csta_standards_mapping/coursed/2021": {
+          "name": "Hartëzimi i standardeve CSTA",
           "type": "Burim"
         },
         "curriculum_guide_1/coursed/2021": {
@@ -1322,7 +1501,7 @@
           "type": "Burim"
         },
         "debugging_guide/coursed/2021": {
-          "name": "Udhëzues për korrigjimin e gabimeve",
+          "name": "Udhëzues Debugging",
           "type": "Burim"
         },
         "implementation_guide/coursed/2021": {
@@ -1330,19 +1509,44 @@
           "type": "Burim"
         },
         "lesson_type_guide/coursed/2021": {
+          "name": "Udhëzues për llojin e mësimit",
           "type": "Burim"
         },
         "teacher_forum_1/coursed/2021": {
+          "name": "Forumi i mësimdhënësit",
           "type": "Burim"
         },
         "virtual_lesson_modifications/coursed/2021": {
+          "name": "Modifikimet Virtuale të Mësimit",
           "type": "Burim"
+        },
+        "password_power-up_if_then_scenarios/coursed/2021": {
+          "name": "Fuqia e fjalëkalimit: Nëse...Pastaj...Skenarët",
+          "type": "Fletushkë"
+        },
+        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
+          "name": "Fuqia e fjalëkalimit: Nëse...Pastaj...Skenarët",
+          "type": "Çelësi i përgjigjes"
         },
         "password_power-up_lesson_quiz/coursed/2021": {
+          "name": "Fuqia e fjalëkalimit: Kuiz mësimi",
           "type": "Burim"
         },
+        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": "Fuqia e fjalëkalimit: Kuiz mësimi",
+          "type": "Çelësi i përgjigjes"
+        },
         "password_power-up_lesson_slides/coursed/2021": {
+          "name": "Fuqia e fjalëkalimit: Sllajdet e mësimit",
           "type": "Sllajdet"
+        },
+        "password_power-up_power-up_your_password/coursed/2021": {
+          "name": "Fuqia e fjalëkalimit: Fuqizoni fjalëkalimin tuaj",
+          "type": "Fletushkë"
+        },
+        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
+          "name": "Fuqia e fjalëkalimit: Fuqizoni fjalëkalimin tuaj",
+          "type": "Çelësi i përgjigjes"
         },
         "activity-answer-graph-paper/coursed/2021": {
           "name": "Programimi Grafik me Letër",
@@ -1370,7 +1574,8 @@
           "name": "Programim në çift"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "Programimi i Besuar"
+          "name": "Programimi i Besuar",
+          "type": "Paketa e Aktivitetit"
         },
         "relay-assessment/coursed/2021": {
           "name": "Programimi i Besuar",
@@ -1381,34 +1586,52 @@
           "type": "Çelësi i përgjigjeve të fletës së punës"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "Programimi i Besuar"
+          "name": "Programimi i Besuar",
+          "type": "Pamja e \"Debugging\" të mësuesit"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "Programimi i Besuar"
+          "name": "Programimi i Besuar",
+          "type": "Video Mësuesi"
         },
         "unplugged-video-relay-programming/coursed/2021": {
           "name": "Programimi i Besuar",
           "type": "Video e shkëputur"
         },
         "course-cf-blockly-blocks/coursed/2021": {
+          "name": " Blloqe të shkëputura (Kurset C-F)",
           "type": "Manipulativë"
         },
+        "open-ended_programming_levels/coursed/2021": {
+          "name": "Nivelet e programimit të hapur",
+          "type": "Çelësi i përgjigjes"
+        },
         "pause_and_think_online/coursed/2021": {
+          "name": "Ndalo dhe Mendo Online",
           "type": "Video"
         },
         "open-ended_programming_levels_1/coursed/2021": {
-          "name": "Shembull i zgjidhjeve të nivelit"
+          "name": "Shembull i zgjidhjeve të nivelit",
+          "type": "Çelësi i përgjigjes"
         },
         "dance-party-playlist/coursed/2021": {
           "name": "Playlist ne Spotify (te gjitha moshat)"
         },
         "dance-party-project-guide/coursed/2021": {
+          "name": "Udhëzues për projektin e festës së vallëzimit",
           "type": "Fletë punuese"
         },
         "dance_party_unplugged/coursed/2021": {
           "type": "Burim"
         },
+        "open-ended_programming_levels_2/coursed/2021": {
+          "name": "Nivelet e programimit të hapur",
+          "type": "Çelësi i përgjigjes"
+        },
+        "feeling-faces-image/coursed/2021": {
+          "name": "Mimikat"
+        },
         "pause_and_think_online_1/coursed/2021": {
+          "name": "Ndalo dhe Mendo Online",
           "type": "Video"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
@@ -1422,6 +1645,9 @@
           "name": "Kushtoret me Karta",
           "type": "Vlerësim"
         },
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "type": "Udhëzues për përgatitjen e mësuesit"
+        },
         "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "Kushtoret me Karta"
         },
@@ -1429,19 +1655,27 @@
           "name": "Kushtoret me Karta",
           "type": "Video e shkëputur"
         },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "name": "Kursi CSF D Udhëzuesi i Planifikimit të Projektit të Përfundimit të Kursit"
+        },
         "2021_change_log/coursee/2021": {
+          "name": "Dokumenti i ndryshimeve 2021 ",
           "type": "Burim"
         },
         "common_core_and_ngss_guidance/coursee/2021": {
+          "name": "Common Core dhe Udhëzimi NGSS",
           "type": "Burim"
         },
         "course_vocabulary/coursee/2021": {
+          "name": "Fjalori i kursit",
           "type": "Burim"
         },
         "cross-curricular_extension_activities/coursee/2021": {
+          "name": "Aktivitetet e zgjeruara ndër-kurrikulare",
           "type": "Burim"
         },
         "csta_standards_mapping/coursee/2021": {
+          "name": "Hartëzimi i standardeve CSTA",
           "type": "Burim"
         },
         "curriculum_guide_1/coursee/2021": {
@@ -1449,7 +1683,7 @@
           "type": "Burim"
         },
         "debugging_guide/coursee/2021": {
-          "name": "Udhëzues për korrigjimin e gabimeve",
+          "name": "Udhëzues për debugging",
           "type": "Burim"
         },
         "implementation_guide/coursee/2021": {
@@ -1457,82 +1691,143 @@
           "type": "Burim"
         },
         "lesson_type_guide/coursee/2021": {
+          "name": "Udhëzues për llojin e mësimit",
           "type": "Burim"
         },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Dokumentacioni Sprite Lab"
+        },
         "teacher_forum_1/coursee/2021": {
+          "name": "Forumi i mësimdhënësit",
           "type": "Burim"
         },
         "virtual_lesson_modifications/coursee/2021": {
+          "name": "Modifikimet Virtuale të Mësimit",
           "type": "Burim"
         },
         "follow_the_algorithm/coursee/2021": {
+          "name": "Ndiq Algoritmin",
           "type": "Sllajdet"
         },
         "sprite_lab_documentation/coursee/2021": {
+          "name": "Dokumentacioni i Sprite Lab",
           "type": "Burim"
         },
+        "swimming-fish-teacher-sandbox/coursee/2021": {
+          "name": "Peshku Notues: Kutia e rërës së mësimdhënësit",
+          "type": "Niveli i Programimit"
+        },
+        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": "Bëhuni një Super Qytetar Digjital: Sllajdet e Mësimit"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": "Bëhu një Super Qytetar Digjital: Super Qytetari Digjital"
+        },
         "private-and-personal-information-exit-ticket/coursee/2021": {
-          "type": "Doracaku i Studentëve"
+          "name": "Informatë private dhe personale: Bileta e daljes",
+          "type": "Fletushkë për nxënës"
+        },
+        "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": "Informatë private dhe personale: Kuizi i mësimeve",
+          "type": "Formulari"
+        },
+        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": "Informatë private dhe personale: Kuizi i mësimeve",
+          "type": "Çelësi i përgjigjes"
         },
         "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": "Informatë private dhe personale: Sllajdet e mësimit",
           "type": "Slide Deck"
         },
+        "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": "Informatë private dhe personale: Informatë private dhe personale"
+        },
+        "about_me_planning_guide/coursee/2021": {
+          "name": "Udhëzuesi i Planifikimit: Rreth Meje",
+          "type": "Fletushkë"
+        },
         "common-sense-media-pause-think/coursee/2021": {
+          "name": "Ndalo dhe Mendo Online",
           "type": "Video"
         },
         "digital-sharing-lesson/coursee/2021": {
+          "name": "Plani Mësimor i Shpërndarjes Digjitale",
           "type": "Burim"
         },
         "digital-sharing-video/coursee/2021": {
+          "name": "Etika e shpërndarjes digjitale (Video)",
           "type": "Video"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Kthesat dhe këndet",
-          "type": "Doracaku i Studentëve"
+          "type": "Fletushkë për nxënës"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "Kthesat dhe këndet"
         },
         "assessment-answer-songwriting/coursee/2021": {
+          "name": "Funksionet e shkëputura: Shkrimi i këngëve",
           "type": "Çelësi i përgjigjeve të vlerësimit"
         },
         "csf-songwriting-assessment/coursee/2021": {
+          "name": "Funksionet e shkëputura: Shkrimi i këngëve",
           "type": "Vlerësim"
         },
         "csf-songwriting-worksheets/coursee/2021": {
+          "name": "Funksionet e shkëputura: Shkrimi i këngëve",
           "type": "Fletë punuese"
         },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": "Funksionet e shkëputura: Shkrimi i këngëve"
+        },
         "unplugged-video-songwriting-functions/coursee/2021": {
+          "name": "Shkrimi i këngëve me funksione",
           "type": "Video e shkëputur"
         },
         "course-cf-blockly-blocks/coursee/2021": {
+          "name": " Blloqe të shkëputura (Kurset C-F)",
           "type": "Manipulativë"
         },
         "designing_for_accessibility_1/coursee/2021": {
           "type": "Sllajdet"
         },
         "types_of_disabilities/coursee/2021": {
+          "name": "Llojet e aftësive të kufizuara",
           "type": "Burim"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
+          "name": "72 Mënyra kreative për nxënësit tuaj për të treguar atë që dinë",
           "type": "Burim"
         },
+        "design-process/coursee/2021": {
+          "name": "Procesi i Dizajnit",
+          "type": "Udhëzues për përgatitjen e mësuesit"
+        },
         "end-of-course-project-guide/coursee/2021": {
+          "name": "Udhëzuesi i projektit në fund të kursit",
           "type": "Fletë punuese"
         },
+        "rubric-csf-final-projects/coursee/2021": {
+          "name": "Projekti përfundimtar i bazave të CS"
+        },
         "2021_change_log/coursef/2021": {
+          "name": "Dokumenti i ndryshimeve 2021 ",
           "type": "Burim"
         },
         "common_core_and_ngss_guidance/coursef/2021": {
+          "name": "Common Core dhe Udhëzuesi NGSS",
           "type": "Burim"
         },
         "course_vocabulary/coursef/2021": {
+          "name": "Fjalori i kursit",
           "type": "Burim"
         },
         "cross-curricular_extension_activities_1/coursef/2021": {
+          "name": "Aktivitetet e zgjeruara ndër-kurrikulare",
           "type": "Burim"
         },
         "csta_standards_mapping/coursef/2021": {
+          "name": "Hartëzimi i standardeve CSTA",
           "type": "Burim"
         },
         "curriculum_guide_1/coursef/2021": {
@@ -1548,19 +1843,28 @@
           "type": "Burim"
         },
         "lesson_type_guide/coursef/2021": {
+          "name": "Udhëzues për llojin e mësimit",
           "type": "Burim"
         },
         "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Dokumentacioni i Sprite Lab",
           "type": "Burim"
         },
         "teacher_forum_1/coursef/2021": {
+          "name": "Forumi i mësimdhënësve",
           "type": "Burim"
         },
         "virtual_lesson_modifications/coursef/2021": {
+          "name": "Modifikimet Virtuale të Mësimit",
           "type": "Burim"
         },
         "exploring_apps/coursef/2021": {
+          "name": "Eksplorimi i aplikacioneve",
           "type": "Burim"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "Eksplorimi i aplikacioneve",
+          "type": "Çelësi i përgjigjes"
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Prezantimi i Sprite Lab",
@@ -1575,56 +1879,95 @@
           "type": "Sllajdet"
         },
         "sprite_lab_documentation/coursef/2021": {
-          "type": "Burim"
+          "type": "Burim",
+          "name": "Dokumentacioni i Sprite Lab"
         },
         "sprites_in_action/coursef/2021": {
           "name": "Sprites në veprim",
           "type": "Sllajdet"
         },
         "the_power_of_words_lesson_quiz/coursef/2021": {
+          "name": "Fuqia e Fjalëve: Kuizi i Mësimit",
           "type": "Burim"
         },
+        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
+          "name": "Fuqia e Fjalëve: Kuizi i Mësimit",
+          "type": "Çelësi i përgjigjes"
+        },
         "the_power_of_words_lesson_slides/coursef/2021": {
+          "name": "Fuqia e fjalëve: Sllajdet e mësimit",
           "type": "Sllajdet"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
+          "name": "Fuqia e fjalëve: Fuqia e fjalëve\t",
           "type": "Video"
         },
+        "the_power_of_words_words_can_hurt/coursef/2021": {
+          "name": "Fuqia e fjalëve: Fjalët mund të lëndojnë",
+          "type": "Fletushkë"
+        },
+        "blank_space_stories/coursef/2021": {
+          "name": "Blank Space Stories",
+          "type": "Çelësi i përgjigjes"
+        },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "Blank Space Stories",
+          "type": "Udhëzuesi aktiviteteve"
+        },
         "variables_blank_space_stories/coursef/2021": {
+          "name": "Variablat: Blank Space Stories",
           "type": "Sllajdet"
         },
         "text_and_prompts/coursef/2021": {
+          "name": "Teksti dhe Kërkesat (Prompts)",
           "type": "Sllajdet"
         },
         "mini_project_user_input_programs/coursef/2021": {
+          "name": "Mini-Projekti: Programet e hyrjes së përdoruesit",
           "type": "Sllajdet"
         },
+        "mini_project_user_input_programs_1/coursef/2021": {
+          "name": "Mini-Projekti: Programet e hyrjes së përdoruesit",
+          "type": "Çelësi i përgjigjes"
+        },
         "teacher_sandbox_level/coursef/2021": {
+          "name": "Niveli: Kutia e rërës së mësimdhënësit",
           "type": "Burim"
         },
+        "user_input_programs/coursef/2021": {
+          "name": "Programet e hyrjes së përdoruesit",
+          "type": "Udhëzuesi aktiviteteve"
+        },
         "pause_and_think_online/coursef/2021": {
+          "name": "Ndalo dhe Mendo Online",
           "type": "Video"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Qef me Ciklet For",
+          "name": "For Loop Fun",
           "type": "Çelësi i përgjigjeve të fletës së punës"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Qef me Ciklet For",
+          "name": "For Loop Fun",
           "type": "Vlerësim"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Qef me Ciklet For",
+          "name": "For Loop Fun",
           "type": "Fletë punuese"
         },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "For Loop Fun - Çelësi i Vlerësimit",
+          "type": "Çelësi i mësuesit"
+        },
         "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Qef me Ciklet For"
+          "name": "For Loop Fun",
+          "type": "Mësimi në video të veprimit"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Qef me Ciklet For",
+          "name": "For Loop Fun",
           "type": "Video e shkëputur"
         },
         "course-cf-blockly-blocks/coursef/2021": {
+          "name": " Blloqe të shkëputura (Kurset C-F)",
           "type": "Manipulativë"
         },
         "running-simulations/coursef/2021": {
@@ -1636,7 +1979,7 @@
           "type": "Video"
         },
         "ai-societal/coursef/2021": {
-          "name": "AI: Ndikimi në Shoqëri",
+          "name": "IA: Ndikimi në Shoqëri",
           "type": "Video"
         },
         "ai-training/coursef/2021": {
@@ -1652,22 +1995,34 @@
           "type": "Vlerësim"
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "Kartat e IP adresës dhe Kartat e Llojit të Dorëzimit",
           "type": "Manipulativë"
         },
         "get-site-ip-com/coursef/2021": {
+          "name": "get-site-ip-com",
           "type": "Burim"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Interneti",
           "type": "Video e shkëputur"
         },
+        "design-process/coursef/2021": {
+          "name": "Procesi i Dizajnit",
+          "type": "Udhëzues për përgatitjen e mësuesit"
+        },
         "final-project-design-worksheet/coursef/2021": {
+          "name": "Projektimi përfundimtar i projektit",
           "type": "Fletë punuese"
         },
+        "rubric-csf-final-projects/coursef/2021": {
+          "name": "Projekti përfundimtar i bazave të CS"
+        },
         "course_vocabulary_1/express/2021": {
+          "name": "Fjalori i kursit",
           "type": "Burim"
         },
         "csta_standards_mapping/express/2021": {
+          "name": "Hartëzimi i standardeve CSTA",
           "type": "Burim"
         },
         "debugging_guide/express/2021": {
@@ -1677,25 +2032,31 @@
           "type": "Burim"
         },
         "unplugged_maze_blocks/express/2021": {
+          "name": "Blloqet e shkëputura të labirintit",
           "type": "Burim"
         },
         "pair_programming/express/2021": {
-          "name": "Programim në çift",
+          "name": "Programimi në ekip",
           "type": "Video"
         },
         "artist_introduction/express/2021": {
-          "name": "Hyrje Artisti",
+          "name": "Artisti: Hyrje",
           "type": "Video"
         },
         "turns_angles/express/2021": {
-          "name": "Kthesat dhe këndet",
+          "name": "Kthesat & Këndet",
           "type": "Video"
         },
         "turns_angles_1/express/2021": {
-          "name": "Kthesat dhe këndet"
+          "name": "Kthesat & Këndet",
+          "type": "Fletushkë"
         },
         "sprite_lab_documentation/express/2021": {
-          "type": "Burim"
+          "type": "Burim",
+          "name": "Dokumentacioni i Sprite Lab"
+        },
+        "swimming_fish_teacher_sandbox/express/2021": {
+          "name": "Peshku Notues: Kutia e rërës së mësimdhënësit"
         },
         "making_sprites/express/2021": {
           "name": "Krijimi i Sprites",
@@ -1709,45 +2070,74 @@
           "type": "Sllajdet"
         },
         "pause_and_think_online/express/2021": {
+          "name": "Ndalo dhe Mendo Online",
           "type": "Video"
         },
         "dance-party-playlist/express/2021": {
           "name": "Playlist ne Spotify (te gjitha moshat)"
         },
         "dance-party-project-guide/express/2021": {
+          "name": "Udhëzues për projektin e festës së vallëzimit",
           "type": "Fletë punuese"
+        },
+        "open-ended_programming_levels/express/2021": {
+          "name": "Nivelet e programimit të hapur",
+          "type": "Çelësi i përgjigjes"
         },
         "pair_programming_video/express/2021": {
           "type": "Video"
         },
+        "unplugged_blocks_courses_c-f__4/express/2021": {
+          "name": " Blloqe të shkëputura (Kurset C-F)"
+        },
+        "unplugged_blocks_courses_c-f__5/express/2021": {
+          "name": " Blloqe të shkëputura (Kurset C-F)"
+        },
         "text_and_prompts/express/2021": {
+          "name": "Teksti dhe Kërkesat (Prompts)",
           "type": "Sllajdet"
         },
         "variables_video/express/2021": {
           "name": "variabla"
         },
+        "rubric-csf-final-projects/express/2021": {
+          "name": "Projekti përfundimtar i bazave të CS"
+        },
         "course_vocabulary/pre-express/2021": {
+          "name": "Fjalori i kursit",
           "type": "Burim"
         },
         "csta_standards_mapping/pre-express/2021": {
+          "name": "Hartëzimi i standardeve CSTA",
           "type": "Burim"
         },
         "debugging_guide/pre-express/2021": {
           "name": "Udhëzues për korrigjimin e gabimeve"
         },
         "teacher_forum_1/pre-express/2021": {
+          "name": "Forumi i mësimdhënësit",
           "type": "Burim"
         },
         "20_20_20_rule/pre-express/2021": {
+          "name": "Rregulli 20/20/20 ",
           "type": "Video"
+        },
+        "class-section-video/pre-express/2021": {
+          "name": "Si të krijoni një sesion në klasë në Code.org",
+          "type": "Video Mësuesi"
+        },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "Mimikat"
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "Programim në çift"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
+          "name": "Wiggles - GoNoodle",
           "type": "Video"
         },
         "common-sense-media-pause-think/pre-express/2021": {
+          "name": "Ndalo dhe Mendo Online",
           "type": "Video"
         },
         "csd_implementation_guide/csd/2022": {
@@ -1761,6 +2151,9 @@
         },
         "the_problem_solving_process_1/csd/2022": {
           "type": "Sllajdet"
+        },
+        "solving_problems/csd/2022": {
+          "type": "Çelësi i përgjigjes"
         },
         "exploring_problem_solving/csd/2022": {
           "type": "Sllajdet"
@@ -2266,6 +2659,9 @@
         "patterns_and_representation/csd/2022": {
           "type": "Sllajdet"
         },
+        "ascii_challenges_1/csd/2022": {
+          "type": "Çelësi i përgjigjes"
+        },
         "ascii_text/csd/2022": {
           "type": "Burim"
         },
@@ -2283,6 +2679,9 @@
         },
         "combining_representations/csd/2022": {
           "type": "Sllajdet"
+        },
+        "medical_records_1/csd/2022": {
+          "type": "Çelësi i përgjigjes"
         },
         "keeping_data_secret_1/csd/2022": {
           "type": "Sllajdet"
@@ -2522,11 +2921,17 @@
         "types_of_machine_learning/csd/2022": {
           "type": "Sllajdet"
         },
+        "types_of_machine_learning_2/csd/2022": {
+          "type": "Çelësi i përgjigjes"
+        },
         "innovations_in_ai/csd/2022": {
           "type": "Sllajdet"
         },
         "seeing_ai/csd/2022": {
           "type": "Video"
+        },
+        "_key_patterns_in_data/csd/2022": {
+          "type": "Çelësi i përgjigjes"
         },
         "finding_patterns_in_data/csd/2022": {
           "type": "Video"
@@ -2537,11 +2942,17 @@
         "shoe_survey/csd/2022": {
           "type": "Burim"
         },
+        "_key_classification_models/csd/2022": {
+          "type": "Çelësi i përgjigjes"
+        },
         "classification_models_1/csd/2022": {
           "type": "Sllajdet"
         },
         "fruit_veggie_cards/csd/2022": {
           "type": "Burim"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2022": {
+          "type": "Çelësi i përgjigjes"
         },
         "accuracy_in_ai_lab/csd/2022": {
           "type": "Burim"
@@ -2574,6 +2985,9 @@
         "model_cards/csd/2022": {
           "type": "Sllajdet"
         },
+        "_key_zoo_models/csd/2022": {
+          "type": "Çelësi i përgjigjes"
+        },
         "model_cards_in_ai_lab/csd/2022": {
           "type": "Video"
         },
@@ -2592,8 +3006,17 @@
         "printable_model_cards/csd/2022": {
           "type": "Burim"
         },
+        "_key_numerical_accuracy/csd/2022": {
+          "type": "Çelësi i përgjigjes"
+        },
+        "_key_zombie_prediction/csd/2022": {
+          "type": "Çelësi i përgjigjes"
+        },
         "numerical_models/csd/2022": {
           "type": "Sllajdet"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2022": {
+          "type": "Çelësi i përgjigjes"
         },
         "numerical_data_in_ai_lab/csd/2022": {
           "type": "Sllajdet"
@@ -2611,7 +3034,7 @@
           "type": "Sllajdet"
         },
         "ai_ethics_research_reflection/csd/2022": {
-          "type": "Doracaku i Studentëve"
+          "type": "Fletushkë për nxënës"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
           "type": "Video"
@@ -2673,7 +3096,7 @@
           "url": "/s/coursea-2022/standardet"
         },
         "all_vocabulary/coursea/2022": {
-          "name": "Gjithë Fjalori",
+          "name": "I gjithë Fjalori",
           "url": "/s/coursea-2022/fjalor"
         },
         "common_core_and_ngss_guidance/coursea/2022": {
@@ -2681,14 +3104,14 @@
           "type": "Burim"
         },
         "cross-curricular_extension_activities/coursea/2022": {
-          "name": "Aktivitetet e zgjerimit ndër-kurrikulare",
+          "name": "Aktivitetet e zgjeruara ndër-kurrikulare",
           "type": "Burim"
         },
         "curriculum_guide/coursea/2022": {
           "name": "Udhëzues për kurrikulën"
         },
         "debugging_guide/coursea/2022": {
-          "name": "Udhëzues për korrigjimin e gabimeve",
+          "name": "Udhëzues për debugging",
           "type": "Burim"
         },
         "implementation_guide/coursea/2022": {
@@ -2712,7 +3135,7 @@
           "type": "Slide Deck"
         },
         "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2022": {
-          "name": "Siguria në lagjen time online: Lagja ime Online",
+          "name": "Siguria në lagjen time në internet: Lagja ime nl internet",
           "type": "Video mësimore"
         },
         "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
@@ -2723,6 +3146,11 @@
           "name": "Siguria në lagjen time në internet: Siguria dhe rregullat!",
           "type": "Posteri i poezisë"
         },
+        "csf_course_a_lesson_slides/coursea/2022": {
+          "name": "Kursi A: Sllajdet e mësimit",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Sllajdet"
+        },
         "20_20_20_rule/coursea/2022": {
           "name": "20/20/20 Rregulli",
           "type": "Burim"
@@ -2732,32 +3160,42 @@
           "type": "Video"
         },
         "pair_programming/coursea/2022": {
-          "name": "Programim në çift",
+          "name": "Programim në ekip",
           "type": "Video për Nxënës"
         },
         "wiggles-go_noodle/coursea/2022": {
           "name": "Wiggles-Go Noodle",
           "type": "Video"
         },
+        "csf_course_a_lesson_slides_1/coursea/2022": {
+          "name": "Kursi A: Sllajdet e mësimit",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Sllajdet"
+        },
         "feeling_faces_-_emotion_image/coursea/2022": {
           "name": "Mimikat - Imazhi i emocioneve",
           "type": "Burim"
         },
         "happy_map_cards/coursea/2022": {
-          "name": "Kartat e Hartave të Lumtura",
+          "name": "Kartat e Happy Maps",
           "type": "Fletë punuese"
         },
         "happy_map_cards_1/coursea/2022": {
-          "name": "Kartat e Hartave të Lumtura",
-          "type": "Çelësi i përgjigjeve të fletës së punës"
+          "name": "Kartat e Happy Map",
+          "type": "Çelësi i përgjigjeve të fletës punuese"
         },
         "happy_map_game_pieces/coursea/2022": {
-          "name": "Hartat e Lumutra me Pjesë Lojërash",
+          "name": "Pjesë Lojërash Happy Maps",
           "type": "Manipulues"
         },
         "happy_maps/coursea/2022": {
-          "name": "Hartat e Gëzuara",
+          "name": "Happy Maps",
           "type": "Video e shkëputur"
+        },
+        "csf_course_a_lesson_slides_2/coursea/2022": {
+          "name": "Kursi A: Sllajdet e mësimit",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Sllajdet"
         },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
           "name": "Blloqe Blocky të shkëputura (Klasa K-1) ",
@@ -2767,17 +3205,32 @@
           "name": "Wiggles-Go Noodle",
           "type": "Video"
         },
+        "csf_course_a_lesson_slides_3/coursea/2022": {
+          "name": "Kursi A: Sllajdet e mësimit",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Sllajdet"
+        },
         "debugging_with_the_step_button/coursea/2022": {
-          "name": "Korrigjimi me butonin e hapit",
+          "name": "Debugging me butonin e hapit",
           "type": "Video"
         },
         "feeling_faces_emotion_image/coursea/2022": {
-          "name": "Imazh me Mimikë të Fytyrës",
+          "name": "Imazh me Mimika të Fytyrës",
           "type": "Burim"
+        },
+        "csf_course_a_lesson_slides_4/coursea/2022": {
+          "name": "Kursi A: Sllajdet e mësimit",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Sllajdet"
         },
         "feeling_faces_-_emotion_image_1/coursea/2022": {
           "name": "Mimikat - Imazhi i emocioneve",
           "type": "Burim"
+        },
+        "csf_course_a_lesson_slides_5/coursea/2022": {
+          "name": "Kursi A: Sllajdet e mësimit",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Sllajdet"
         },
         "happy_map_cards_xl/coursea/2022": {
           "name": "Kartat e Hartave të Lumtura XL",
@@ -2787,6 +3240,11 @@
           "name": "Hartat e Lumtura me Pjesë Lojërash me bonus të paketave",
           "type": "Manipulues"
         },
+        "csf_course_a_lesson_slides_6/coursea/2022": {
+          "name": "Kursi A: Sllajdet e mësimit",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Sllajdet"
+        },
         "feeling_faces/coursea/2022": {
           "name": "Mimikat",
           "type": "Imazhet e emocioneve"
@@ -2795,32 +3253,57 @@
           "name": "Programim në çift",
           "type": "Video"
         },
+        "csf_course_a_lesson_slides_7/coursea/2022": {
+          "name": "Kursi A: Sllajdet e mësimit",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Sllajdet"
+        },
         "csf_lesson_recommendations/coursea/2022": {
           "name": "Rekomandimet për mësimin e Bazat e Shkencave Kompjuterike",
           "type": "Burim"
+        },
+        "csf_course_a_lesson_slides_8/coursea/2022": {
+          "name": "Kursi A: Sllajdet e mësimit",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Sllajdet"
         },
         "pause_and_think_online/coursea/2022": {
           "name": "Ndalo dhe Mendo Online",
           "type": "Video"
         },
+        "csf_course_a_lesson_slides_9/coursea/2022": {
+          "name": "Kursi A: Sllajdet e mësimit",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Sllajdet"
+        },
         "the_big_event/coursea/2022": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Video e shkëputur"
         },
         "the_big_event_1/coursea/2022": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Vlerësim"
         },
         "the_big_event_2/coursea/2022": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Çelësi i përgjigjeve të vlerësimit"
         },
         "the_big_event_courses_a_b_/coursea/2022": {
           "name": "Eventi i Madhë (Kurset A, B)",
           "type": "Imazhi i kontrolluesit"
         },
+        "csf_course_a_lesson_slides_10/coursea/2022": {
+          "name": "Kursi A: Sllajdet e mësimit",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Sllajdet"
+        },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
           "name": "Këshilla për aktivitetin kryesor Bazat e Shkencave Kompjuterike"
+        },
+        "csf_course_a_lesson_slides_11/coursea/2022": {
+          "name": "Kursi A: Sllajdet e mësimit",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Sllajdet"
         },
         "artist_project_planning_guide/coursea/2022": {
           "name": "Udhëzues për planifikimin e projektit Artisti",
@@ -2829,6 +3312,11 @@
         "artist_project_planning_guide_1/coursea/2022": {
           "name": "Udhëzues për planifikimin e projektit Artisti",
           "type": "Çelësi i përgjigjes"
+        },
+        "csf_course_a_lesson_slides_12/coursea/2022": {
+          "name": "Kursi A: Sllajdet e mësimit",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Sllajdet"
         },
         "2022_change_log/courseb/2022": {
           "name": "Regjistri i Ndryshimeve 2022"
@@ -2891,25 +3379,28 @@
           "name": "Gjurmët digjitale: Sllajdet e mësimit",
           "type": "Slide Deck"
         },
+        "csf_course_b_lesson_slides/courseb/2022": {
+          "type": "Sllajdet"
+        },
         "feeling_faces_emotion_image/courseb/2022": {
-          "name": "Imazhi emocional i fytyrave me ndjenja",
+          "name": "Mimikat - Imazhi i emocioneve",
           "type": "Burim"
         },
         "move_it_move_it/courseb/2022": {
-          "name": "Lëviz, lëviz",
-          "type": "Aktiviteti me Hartë"
+          "name": "Move It, Move It",
+          "type": "Harta e aktivitetit"
         },
         "move_it_move_it_1/courseb/2022": {
-          "name": "Lëviz, lëviz",
+          "name": "Move It, Move It",
           "type": "Fletë punuese"
         },
         "move_it_move_it_2/courseb/2022": {
-          "name": "Lëviz, lëviz",
+          "name": "Move it, move it",
           "type": "Çelësi i përgjigjes së fletës punuese"
         },
         "move_it_move_it_3/courseb/2022": {
-          "name": "Lëvize, Lëvize",
-          "type": "Video Mësimdhënësit"
+          "name": "Move it, Move it",
+          "type": "Video për mësimdhënës"
         },
         "20_20_20_rule/courseb/2022": {
           "name": "Rregulli 20/20/20 ",
@@ -2919,22 +3410,23 @@
           "name": "Praktika Tërhiq dhe Lësho"
         },
         "feeling_faces/courseb/2022": {
-          "name": "Ndjenja e Fytyrave",
+          "name": "Mimikat",
           "type": "Imazhet e emocioneve"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Si të krijoni një sesion në klasë në Code.org"
+          "name": "Si të krijoni një sesion në klasë në Code.org",
+          "url": "[https://youtu.be/4Wugxc80fNU][0]"
         },
         "pair_programming/courseb/2022": {
-          "name": "Programim në çift",
+          "name": "Programimi në ekip",
           "type": "Video për nxënës"
         },
         "unplugged_blockly_blocks_grades_k-1_/courseb/2022": {
-          "name": "Blloqe të bllokuara të shkëputura (Klasa K-1)",
-          "type": "Manipulues"
+          "name": "Blloget Blockly të shkëputura (Klasa K-1)",
+          "type": "Manipuluesit"
         },
         "wiggles_-_gonoodle/courseb/2022": {
-          "name": "Luajnë - GoNoodle",
+          "name": "Wiggles - GoNoodle",
           "type": "Video"
         },
         "compass_rose/courseb/2022": {
@@ -2942,9 +3434,11 @@
           "type": "Fletushkë"
         },
         "feeling_faces_-_emotion_image/courseb/2022": {
+          "name": "Mimikat - Imazhi i emocioneve",
           "type": "Burim"
         },
         "happy_map_game_pieces/courseb/2022": {
+          "name": "Pjesë Lojërash Happy Maps",
           "type": "Manipulues"
         },
         "stevie_and_the_big_project/courseb/2022": {
@@ -2976,21 +3470,22 @@
           "type": "Rekomandime për mësim"
         },
         "pause_and_think_online/courseb/2022": {
-          "type": "Video",
-          "name": "Ndalo dhe Mendo Online"
+          "name": "Ndalo dhe Mendo Online",
+          "type": "Video"
         },
         "the_right_app_scenarios/courseb/2022": {
+          "name": "Skenarët e aplikacionit të duhur",
           "type": "Slide Deck"
         },
         "the_big_event/courseb/2022": {
-          "name": "Eventi i Madh"
+          "name": "Eventi i madh"
         },
         "the_big_event_1/courseb/2022": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Vlerësim"
         },
         "the_big_event_2/courseb/2022": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Çelësi i Përgjigjeve të Vlerësimit"
         },
         "the_big_event_courses_a_b_/courseb/2022": {
@@ -3020,9 +3515,11 @@
           "name": "I gjithë fjalori"
         },
         "common_core_and_ngss_guidance/coursec/2022": {
+          "name": "Common Core dhe Udhëzuesi NGSS",
           "type": "Burim"
         },
         "cross-curricular_extension_activities/coursec/2022": {
+          "name": "Aktivitetet e zgjeruara ndër-kurrikulare",
           "type": "Burim"
         },
         "curriculum_guide/coursec/2022": {
@@ -3100,12 +3597,12 @@
           "type": "Burim"
         },
         "pair_programming/coursec/2022": {
-          "name": "Programim në çift",
+          "name": "Programim në ekip",
           "type": "Video"
         },
         "unplugged_blocks_courses_c-f_/coursec/2022": {
-          "type": "Manipulativë",
-          "name": " Blloqe të shkëputura (Kurset C-F)"
+          "name": " Blloqe të shkëputura (Kurset C-F)",
+          "type": "Manipulativë"
         },
         "artist_introduction/coursec/2022": {
           "name": "Hyrje Artisti",
@@ -3120,15 +3617,15 @@
           "type": "Fletushkë për nxënës"
         },
         "the_big_event/coursec/2022": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Video e shkëputur"
         },
         "the_big_event_1/coursec/2022": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Vlerësim"
         },
         "the_big_event_2/coursec/2022": {
-          "name": "Eventi i Madh",
+          "name": "Eventi i madh",
           "type": "Çelësi i përgjigjeve të vlerësimit"
         },
         "the_big_event_course_c_/coursec/2022": {
@@ -3140,6 +3637,7 @@
           "type": "Çelësi i përgjigjes"
         },
         "open-ended_programming_levels/coursec/2022": {
+          "name": "Nivelet e programimit të hapur",
           "type": "Çelësi i përgjigjes"
         },
         "pause_and_think_online/coursec/2022": {
@@ -3147,9 +3645,11 @@
           "type": "Video"
         },
         "open-ended_programming_levels_1/coursec/2022": {
+          "name": "Nivelet e programimit të hapur",
           "type": "Çelësi i përgjigjes"
         },
         "graphing_data_from_play_lab/coursec/2022": {
+          "name": "Të dhënat grafike nga Play Lab",
           "type": "Fletë punuese"
         },
         "binary_bracelets/coursec/2022": {
@@ -3194,9 +3694,11 @@
           "url": "/s/kurseb-2022/standardet"
         },
         "common_core_and_ngss_guidance/coursed/2022": {
+          "name": "Common Core dhe Udhëzuesi NGSS",
           "type": "Burim"
         },
         "cross-curricular_extension_activities/coursed/2022": {
+          "name": "Aktivitetet e zgjeruara ndër-kurrikulare",
           "type": "Burim"
         },
         "curriculum_guide/coursed/2022": {
@@ -3211,10 +3713,14 @@
           "type": "Burim"
         },
         "lesson_type_guide/coursed/2022": {
+          "name": "Udhëzues për llojin e mësimit",
           "type": "Burim"
         },
         "teacher_forum/coursed/2022": {
           "type": "Burim"
+        },
+        "virtual_lesson_modifications/coursed/2022": {
+          "name": "Modifikimet Virtuale të Mësimit"
         },
         "extension_lessons_micro_bit/coursed/2022": {
           "name": "Mësimet shtesë me micro:bit",
@@ -3286,35 +3792,57 @@
           "type": "Fletë punuese"
         },
         "relay_programming_2/coursed/2022": {
-          "name": "Programimi i Besuar"
+          "name": "Programimi i Besuar",
+          "type": "Pamja e \"Debugging\" të mësuesit"
         },
         "relay_programming_3/coursed/2022": {
           "name": "Programimi i Besuar",
           "type": "Video e shkëputur"
         },
         "relay_programming_4/coursed/2022": {
-          "name": "Programimi i Besuar"
+          "name": "Programimi i Besuar",
+          "type": "Video Mësuesi"
         },
         "relay_programming_5/coursed/2022": {
-          "name": "Programimi i Besuar"
+          "name": "Programimi i Besuar",
+          "type": "Paketa e Aktivitetit"
         },
         "unplugged_blocks_courses_c-f_/coursed/2022": {
+          "name": " Blloqe të shkëputura (Kurset C-F)",
           "type": "Manipulativë"
         },
+        "open-ended_programming_levels/coursed/2022": {
+          "name": "Nivelet e programimit të hapur",
+          "type": "Çelësi i përgjigjes"
+        },
         "pause_and_think_online/coursed/2022": {
+          "name": "Ndalo dhe Mendo Online",
           "type": "Video"
         },
+        "open-ended_programming_levels_1/coursed/2022": {
+          "name": "Nivelet e programimit të hapur",
+          "type": "Çelësi i përgjigjes"
+        },
         "sample_level_solutions/coursed/2022": {
-          "name": "Shembull i zgjidhjeve të nivelit"
+          "name": "Shembull i zgjidhjeve të nivelit",
+          "type": "Çelësi i përgjigjes"
         },
         "dance_party_project_guide/coursed/2022": {
+          "name": "Udhëzues për projektin e festës së vallëzimit",
           "type": "Fletë punuese"
         },
         "dance_party_unplugged/coursed/2022": {
           "type": "Burim"
         },
+        "open-ended_programming_levels_2/coursed/2022": {
+          "name": "Nivelet e programimit të hapur",
+          "type": "Çelësi i përgjigjes"
+        },
         "spotify_playlist_all_ages_/coursed/2022": {
           "name": "Playlist ne Spotify (te gjitha moshat)"
+        },
+        "feeling_faces/coursed/2022": {
+          "name": "Mimikat"
         },
         "conditionals_with_cards/coursed/2022": {
           "name": "Kushtoret me Karta",
@@ -3334,6 +3862,12 @@
           "name": "Kushtoret me Karta",
           "type": "Çelësi i përgjigjeve të vlerësimit"
         },
+        "conditionals_with_cards_sample_program/coursed/2022": {
+          "type": "Udhëzues për përgatitjen e mësuesit"
+        },
+        "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
+          "name": "Kursi CSF D Udhëzuesi i Planifikimit të Projektit të Përfundimit të Kursit"
+        },
         "2022_change_log/coursee/2022": {
           "name": "Regjistri i Ndryshimeve 2022"
         },
@@ -3347,9 +3881,11 @@
           "url": "/s/kursef-2022/fjalor"
         },
         "common_core_and_ngss_guidance/coursee/2022": {
+          "name": "Common Core dhe Udhëzuesi NGSS",
           "type": "Burim"
         },
         "cross-curricular_extension_activities/coursee/2022": {
+          "name": "Aktivitetet e zgjeruara ndër-kurrikulare",
           "type": "Burim"
         },
         "curriculum_guide/coursee/2022": {
@@ -3364,6 +3900,7 @@
           "type": "Burim"
         },
         "lesson_type_guide/coursee/2022": {
+          "name": "Udhëzues për llojin e mësimit",
           "type": "Burim"
         },
         "sprite_lab_documentation/coursee/2022": {
@@ -3374,6 +3911,7 @@
           "type": "Burim"
         },
         "virtual_lesson_modifications/coursee/2022": {
+          "name": "Modifikimet Virtuale të Mësimit",
           "url": "[https://docs.google.com/document/d/1WDr-KRGUThXMzL1ppDIkbueQrJfF0lwrwFhEsO6ET5s/view][0]"
         },
         "extension_lessons_micro_bit/coursee/2022": {
@@ -3421,11 +3959,12 @@
           "type": "Sllajdet"
         },
         "about_me_planning_guide/coursee/2022": {
-          "name": "Udhëzuesi i Planifikimit Rreth Meje"
+          "name": "Udhëzuesi i Planifikimit Rreth Meje",
+          "type": "Fletushkë"
         },
         "pause_and_think_online/coursee/2022": {
-          "type": "Video",
-          "name": "Ndalo dhe Mendo Online"
+          "name": "Ndalo dhe Mendo Online",
+          "type": "Video"
         },
         "turns_angles/coursee/2022": {
           "name": "Kthesat dhe këndet",
@@ -3456,8 +3995,8 @@
           "type": "Video e shkëputur"
         },
         "unplugged_blocks_courses_c-f_/coursee/2022": {
-          "type": "Manipulativë",
-          "name": " Blloqe të shkëputura (Kurset C-F)"
+          "name": " Blloqe të shkëputura (Kurset C-F)",
+          "type": "Manipulativë"
         },
         "types_of_disabilities/coursee/2022": {
           "name": "Llojet e aftësive të kufizuara",
@@ -3616,6 +4155,7 @@
           "type": "Video"
         },
         "get-site-ip-com/coursef/2022": {
+          "name": "get-site-ip-com",
           "type": "Burim"
         },
         "internet/coursef/2022": {
@@ -3692,10 +4232,16 @@
           "type": "Sllajdet"
         },
         "pause_and_think_online/express/2022": {
+          "name": "Ndalo dhe Mendo Online",
           "type": "Video"
         },
         "dance_party_project_guide/express/2022": {
+          "name": "Udhëzues për projektin e festës së vallëzimit",
           "type": "Fletë punuese"
+        },
+        "open-ended_programming_levels/express/2022": {
+          "name": "Nivelet e programimit të hapur",
+          "type": "Çelësi i përgjigjes"
         },
         "spotify_playlist_all_ages_/express/2022": {
           "name": "Playlist ne Spotify (te gjitha moshat)"
@@ -3703,7 +4249,11 @@
         "pair_programming_video/express/2022": {
           "type": "Video"
         },
+        "unplugged_blocks_courses_c-f__1/express/2022": {
+          "name": " Blloqe të shkëputura (Kurset C-F)"
+        },
         "text_and_prompts/express/2022": {
+          "name": "Teksti dhe Kërkesat (Prompts)",
           "type": "Sllajdet"
         },
         "variables/express/2022": {
@@ -3711,6 +4261,9 @@
         },
         "unplugged_blocks_courses_c-f_/express/2022": {
           "name": "Blloqe të shkëputura (Kurset C-F)"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "name": "Projekti përfundimtar i bazave të CS"
         },
         "all_resources/pre-express/2022": {
           "url": "/s/pre-express-2022/burimet"
@@ -3728,15 +4281,25 @@
           "type": "Burim"
         },
         "20_20_20_rule/pre-express/2022": {
+          "name": "Rregulli 20/20/20 ",
           "type": "Video"
+        },
+        "feeling_faces/pre-express/2022": {
+          "name": "Mimikat"
+        },
+        "how_to_make_a_class_section_on_code_org/pre-express/2022": {
+          "name": "Si të krijoni një sesion në klasë në Code.org",
+          "type": "Video Mësuesi"
         },
         "pair_programming/pre-express/2022": {
           "name": "Programim në çift"
         },
         "wiggles_-_go_noodle/pre-express/2022": {
+          "name": "Wiggles - GoNoodle",
           "type": "Video"
         },
         "pause_and_think_online/pre-express/2022": {
+          "name": "Ndalo dhe Mendo Online",
           "type": "Video"
         },
         "csf-artist-intro-video/artist/unversioned": {
@@ -3744,7 +4307,7 @@
         },
         "csf-turns-angles-doc/artist/unversioned": {
           "name": "Kthesat dhe këndet",
-          "type": "Doracaku i Studentëve"
+          "type": "Fletushkë për nxënës"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "Kthesat dhe këndet"

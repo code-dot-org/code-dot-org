@@ -104,6 +104,7 @@ Cad beidh ort:
 * Ainm agus ríomhphost an phríomhtheagmhála a léiríonn an ghníomhaíocht a cuireadh isteach
 * Ainm Gníomhaíochta (ní féidir “Uair an Chóid” a áireamh san ainm)
 * Nasc URL leis an ngníomhaíocht
+* An bhfuil AI: Tá nó Níl san áireamh sa ghníomhaíocht seo
 * Cur síos ar ghníomhaíocht (líon na gcarachtar uasta: 400) 
     * Cuir san áireamh sa chur síos cibé an bhfuil sé treoraithe mac léinn-nó múinteoir-éascaithe den chuid is mó. Ina theannta sin, tá suim ag roinnt scoileanna a fháil amach an dtugann gníomhaíochtaí Uair an Chóid aghaidh ar Chaighdeáin Eolaíochta Coiteanna Croí nó na Chéad Ghlúine Eile. Má thugann an ghníomhaíocht aghaidh ar chaighdeáin shonracha, smaoinigh ar an bhfaisnéis seo a áireamh.
 * Leibhéal/leibhéil ghráid mholta d'úsáideoirí atá beartaithe. Is féidir leat a tharchur chuig an \[Múinteoirí Eolaíochta Ríomhaireachta 'Caighdeáin K-12 Association\] (https://k12cs.org/framework-statements-by-grade-band/) do coincheapa eolaíocht ríomhaireachta grád-oiriúnach. I measc na leibhéil ghrád Sampla: 
@@ -111,9 +112,9 @@ Cad beidh ort:
     * Gráid 2-5 (aois 7-10)
     * Gráid 6-8 (aois 11-13)
     * Gráid 9+ (aois 14+)
-* Tá liosta de na réimsí ábhair a chlúdaíonn do ghníomhaíocht (chomh maith leis an Ríomheolaíocht). Mar shampla, más féidir le múinteoir matamaitice do ghníomhaíocht a úsáid chun múineadh faoi uillinneacha nó parabolas, liostaigh mar mhatamaitic. Má tá gníomhaíocht leabharlanna dÚsachtach agat a mhúineann briathair/ainmfhoill/srl. roghnaigh na healaíona teanga.
-* Tá liosta de theangacha cláir Múineann do ghníomhaíocht. Ie C/C ++, Java, JavaScript, srl. nó teanga neamhspleách (do phleananna ceachta is féidir a mhúineadh i dteangacha éagsúla)
-* Liosta de theangacha nádúrtha tacaithe. Nóta: Is é an soláthraí gníomhaíochta atá freagrach as braiteadh teanga; déanfaimid gach úsáideoir a atreorú chuig an URL aonair a chuirtear ar fáil.
+* Tá liosta de theangacha cláir Múineann do ghníomhaíocht. Ie C/C ++, Java, JavaScript, srl. nó teanga neamhspleách (do phleananna ceachta is féidir a mhúineadh i dteangacha éagsúla) roghnaigh na healaíona teanga.
+* Liosta de theangacha nádúrtha tacaithe. Nóta: Is é an soláthraí gníomhaíochta atá freagrach as braiteadh teanga; déanfaimid gach úsáideoir a atreorú chuig an URL aonair a chuirtear ar fáil. nó teanga neamhspleách (do phleananna ceachta is féidir a mhúineadh i dteangacha éagsúla)
+* Cén leibhéal taithí ba chóir a bheith ag oideachasóir chun do ghníomhaíocht a úsáid? (m.sh. bunleibhéal nó Compordach.) Agus, cén leibhéal taithí ba chóir a bheith ag na mic léinn?
 * Cén leibhéal taithí ba chóir a bheith ag oideachasóir chun do ghníomhaíocht a úsáid? (m.sh. bunleibhéal nó Compordach.) Agus, cén leibhéal taithí ba chóir a bheith ag na mic léinn? Más mian leat a ullmhú Uair níos airde de Chód™ Gníomhaíochtaí, le do thoil san áireamh an t-eolas roimh ré ag teastáil sa chur síos ar do ghníomhaíocht.
 * Fad do ghníomhaíochta 
     * 1 uair an chloig amháin
@@ -167,9 +168,11 @@ Cad beidh ort:
 
 ## Conas a dhéanfar measúnú ar ghníomhaíochtaí
 
-Déanfaidh coiste éagsúil oideachasóirí ríomheolaíochta aighneachtaí a rangú bunaithe ar chritéir cháilíochtúla agus chainníochtúla. Liostófar na gníomhaíochtaí go léir a d'oirfeadh do na critéir bhunúsacha. Beidh múinteoirí in ann scagadh agus sórtáil a dhéanamh chun na gníomhaíochtaí is fearr dá seomra ranga a aimsiú.
+Déanfaidh coiste éagsúil oideachasóirí ríomheolaíochta aighneachtaí a rangú bunaithe ar chritéir cháilíochtúla agus chainníochtúla. Liostófar na gníomhaíochtaí go léir a d'oirfeadh do na critéir bhunúsacha.
 
-Féachfaidh an rúibric chun gníomhaíochtaí agus pleananna ceachta a mheas na critéir seo a leanas maidir le gach gníomhaíocht agus déanfar iad a rangú dá réir:
+Maidir le gníomhaíochtaí traidisiúnta códaithe, déanfaidh coiste éagsúil oideachasóirí eolaíochta ríomhaireachta aighneachtaí a rangú bunaithe ar chritéir cháilíochtúla agus chainníochtúla. Liostófar na gníomhaíochtaí go léir a d'oirfeadh do na critéir bhunúsacha. Beidh múinteoirí in ann scagadh agus sórtáil a dhéanamh chun na gníomhaíochtaí is fearr dá seomra ranga a aimsiú.
+
+Má dhéanann an coiste athbhreithnithe an ghníomhaíocht a nialas i gcáilíocht táirgeachta (mar gheall ar dhrochfhabhtanna nó treoracha a fhágann go bhfuil sé an-deacair é a úsáid), chun foghlaim a chur chun cinn i ngrúpaí tearcionadaithe (mar gheall ar ábhar ciníochta/sexist), i luach oideachais (ní mhúineann coincheapa CS), nó spraoi/gabháil (mar gheall ar a bheith deacair/díspreagadh do mhic léinn oibriú tríd), ní liostófar an ghníomhaíocht.
 
 - Ardchaighdeán táirgeachta
 - Foghlaim a chur chun cinn ag gach grúpa déimeagrafach (esp. mic léinn faoi ghannionadaíocht i CS, cosúil le mná óga, mic léinn ó ghrúpaí ciníocha agus eitneacha imeallaithe, agus mic léinn faoi mhíchumas)
@@ -177,9 +180,9 @@ Féachfaidh an rúibric chun gníomhaíochtaí agus pleananna ceachta a mheas na
 - Spraoi agus tarraingteach
 - Spreagann sé mic léinn rud uathúil is féidir leo a roinnt a chruthú (Do mhic léinn níos óige: le tuismitheoirí agus le comhghleacaithe ranga. Do mhic léinn seanóirí: ar an Idirlíon)
 
-Má dhéanann an coiste athbhreithnithe an ghníomhaíocht a nialas i gcáilíocht táirgeachta (mar gheall ar dhrochfhabhtanna nó treoracha a fhágann go bhfuil sé an-deacair é a úsáid), chun foghlaim a chur chun cinn i ngrúpaí tearcionadaithe (mar gheall ar ábhar ciníochta/sexist), i luach oideachais (ní mhúineann coincheapa CS), nó spraoi/gabháil (mar gheall ar a bheith deacair/díspreagadh do mhic léinn oibriú tríd), ní liostófar an ghníomhaíocht.
-
 Ina theannta sin, d'fhonn a bheith liostaithe, ní mór do na gníomhaíochtaí go léir:
+
+Maidir le gníomhaíochtaí féintreoraithe do mhúinteoirí agus do mhic léinn nua, beidh an coiste athbhreithnithe ag lorg an bhfuil:
 
 - Bí oiriúnach do sheomra ranga scoile poiblí (gan gunnaí, gan aon ábhar follasach/aibí, gan aon ábhar reiligiúnach, srl.)
 - A cheangal ar aon síniú suas
@@ -205,11 +208,13 @@ Beidh múinteoirí agus mic léinn in ann ár liosta gníomhaíochtaí a chuarda
 
 ## Moltaí maidir le ranganna teagaisc féin-threoraithe uair an chloig a dhearadh
 
-Is féidir leat lógó [Uair an Chóid](https://hourofcode.com/us/promote/resources#logo) a áireamh i do rang teagaisc, ach níl sé seo ag teastáil. Má úsáideann tú lógó Uair an Chóid, féach na treoirlínte trádmhairc thíos. <u>Ní féidir lógó agus ainm Code.org a úsáid in imthosca ar bith.</u> Tá an dá trádmharc, agus ní féidir iad a chomh-mheascadh le hainm branda 3ú páirtí gan cead sainráite i scríbhinn.
-
-**Bí cinnte gur féidir leis an mac léinn meán a chríochnú go compordach i uair an chloig.** Smaoinigh ar ghníomhaíocht oscailte a chur leis ag an deireadh do mhic léinn a bhogann níos gasta tríd an gceacht. Cuimhnigh go mbeidh an chuid is mó páistí a thosaitheoirí iomlán chun eolaíocht ríomhaireachta agus códaithe.
+Ní gá do ghníomhaíochtaí AI a áireamh, cé go bhfuilimid ag iarraidh níos mó gníomhaíochtaí a bhaineann le AI a thairiscint.
 
 **Cuir nótaí múinteoirí san áireamh.** Ba chóir go mbeadh an chuid is mó de na gníomhaíochtaí dírithe ar an scoláire, ach má dhéanann múinteoir gníomhaíocht a éascú nó a bhainistiú, cuir treoracha soiléire agus simplí don mhúinteoir san áireamh i bhfoirm nótaí múinteora ag URL ar leith a chuirtear isteach le do ghníomhaíocht. Ní amháin go bhfuil na mic léinn novices, tá cuid de na múinteoirí chomh maith. Cuir eolas san áireamh mar:
+
+**Aiseolas a ionchorprú ag deireadh na gníomhaíochta.** (Eg “Chríochnaigh tú 10 leibhéal agus d'fhoghlaim tú faoi lúba! Post iontach!”)
+
+**Mic léinn a spreagadh chun postáil chuig na meáin shóisialta (nuair is cuí) nuair atá siad críochnaithe.** Mar shampla “Tá Uair an Chóid déanta agam le ________ An bhfuil tú? #HourOfCode” nó “Tá #HourOfCode déanta agam mar chuid de #CSEdWeek. An bhfuil tú?
 
 - Cad iad na hardáin agus na brabhsálaithe is fearr a oibríonn an rang teagaisc?
 - An oibríonn sé ar fhóin chliste? Táibléad?
@@ -248,7 +253,7 @@ Uair an Chóid® agus Hora del Código® trádmharcanna cláraithe de Code.org. 
 
 ## Rianú picteilíní
 
-D'fhonn an rannpháirtíocht a rianú níos cruinne iarraimid ar gach comhpháirtí teagaisc íomhá rianaithe 1-picteilín a áireamh ar an gcéad leathanach dá ranganna teagaisc Uair an Chóid. Ní mór an picteilín-íomhá a bheith ar an leathanach tosaigh amháin. Ná cuir san áireamh ar aon leathanaigh eatramhacha de do rang teagaisc.
+Má tá do teagaisc ceadaithe agus san áireamh ar an leathanach teagaisc deiridh, Code.org Beidh ar fáil duit le picteilín rianú uathúil chun tú a chomhtháthú isteach i do teagaisc. Féach an sampla thíos. Ná cuir san áireamh ar aon leathanaigh eatramhacha de do rang teagaisc.
 
 Tabharfaidh sé seo deis dúinn d'úsáideoirí a dhéanann do rang teagaisc Uair an Chóid a chomhaireamh. Beidh sé mar thoradh ar chomhaireamh rannpháirtíochta níos cruinne do do teagaisc.
 

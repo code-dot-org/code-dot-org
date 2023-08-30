@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Codeer een Dance Party en deel het met familie en vrienden. Met Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muziek van "Encanto" van Disney en meer!</div>                <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Probeer de activiteit</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dansfeest</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Codeer een dansfeest om te delen met vrienden en familie. Met Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muziek van "Encanto" van Disney en meer!</div>                <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Probeer de activiteit</button></a>
     </span>
   </div>
 </div>
@@ -52,8 +52,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft is terug voor Hour of Code met een gloednieuwe activiteit! Reis door Minecraft met code.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft is terug voor The Hour of Code met een gloednieuwe activiteit! Reis door Minecraft met code.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Probeer het uit</button></a>
     </span>
@@ -68,8 +68,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI voor Oceanen</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Help de AI om de oceanen schoon te houden door het vuil te detecteren! Leer meer over de trainingsdata en bias, en ook hoe AI wereldproblemen kan aanpakken. Bekijk  <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">de lesplan</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Help AI de oceanen schoon te maken door ze te trainen om afval te detecteren! Leer meer over de trainingsdata en bias, en ook hoe AI wereldproblemen kan aanpakken. Bekijk  <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">de lesplan</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Probeer het uit</button></a>
     </span>
   </div>
@@ -95,9 +95,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Hoe werken computers</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">In deze serie van zes korte video's wordt uitgelegd wat maakt een computer tot  computer en hoe de computercircuits werken </div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Bekijk de video's</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Hoe computers werken</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Met een introductie van Bill Gates wordt in deze serie van zes korte video's uitgelegd wat een computer tot een computer maakt en hoe computercircuits werken.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Bekijk de videoserie</button></a>
     </span>
   </div>
 </div>
@@ -110,9 +110,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hoe werkt het internet</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">In deze serie van acht korte video's leer je hoe het internet is ontstaan, wat HTML betekent en hoe zoekmachines zoals Google werken.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Bekijk de video's</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hoe het internet werkt</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">In deze serie van acht korte video's leer je hoe het internet is uitgevonden, wat HTML is en hoe zoekmachines zoals Google werken.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Bekijk de videoserie</button></a>
     </span>
   </div>
 </div>
@@ -125,8 +125,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hoe werkt AI</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Leer met deze reeks korte video's hoe AI werkt en waarom het ertoe doet. Met de Microsoft CEO Satya Nadella als gastheer en diverse expertencast.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hoe AI werkt</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Ontdek hoe AI werkt en waarom het belangrijk is met deze serie korte video's. Met de Microsoft CEO Satya Nadella als gastheer en diverse expertencast.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Bekijk de video's</button></a>
     </span>
   </div>
@@ -175,8 +175,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introductie Game Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Program animaties, interactieve kunst, en games in Game Lab. <div>Begin met het bouw van eenvoudige vormen tot meer geavanceerde, op sprite gebaseerde animaties en games</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Inleiding tot Game Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Programma-animaties, interactieve kunst en games in Game Lab. <div>Begin met het bouw van eenvoudige vormen tot meer geavanceerde, op sprite gebaseerde animaties en games</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Probeer de module</button></a>
     </span>
   </div>
@@ -190,8 +190,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programming in App Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Gebruik eenvoudige JavaScript-opdrachten om vormen en afbeeldingen te tekenen met behulp van een virtuele 'schildpad'. Ontwerp en programmeer je eigen digitale scène! </div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programming in App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Gebruik eenvoudige JavaScript-opdrachten om vormen en afbeeldingen te tekenen met behulp van een virtuele „schildpad”. Ontwerp en programmeer je eigen digitale scene!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Probeer de module</button></a>
     </span>
   </div>
@@ -205,8 +205,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Event-Driven Programming in App Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Leer om apps te ontwikkelen dat op muisklik en toetsaanslag reageren. Maak series van simpele applicaties (apps) dat komen tot leven op het web!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Gebeurtenisgestuurd programmeren in App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Leer apps te ontwerpen die reageren op klikken en toetsaanslagen. Maak series van simpele applicaties (apps) dat komen tot leven op het web!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Probeer de module</button></a>
     </span>
   </div>
@@ -311,8 +311,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes zijn makkelijk te begrijpen, interactieve lessen van 20 minuten waarin computerwetenschap wordt gecombineerd met onderwerpen uit de echte wereld. Train een AI om de symbolentaal te lezen, design een app voor altijd, ontdek het wereld van Minecraft en meer!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes zijn eenvoudig te verwerken interactieve lessen van 20 minuten waarin informatica wordt gecombineerd met onderwerpen uit de praktijk. Train een AI om de symbolentaal te lezen, design een app voor altijd, ontdek het wereld van Minecraft en meer!</div>
        <br>
        <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Bekijk de episodes</button></a>
@@ -328,8 +328,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">Geniet van Computerwetenschap met Code Break! Je kunt een code maken met Ashton Kutcher, meer te weten komen over variabelen met Yara Shahidi en zelfs ontdekken hoe internet werkt met de eigenlijke uitvinder
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Codebreak</strong></h3>
+        <div class="smalltext" style="">Houd informatica leuk door een codebreak te nemen! Je kunt een code maken met Ashton Kutcher, meer te weten komen over variabelen met Yara Shahidi en zelfs ontdekken hoe internet werkt met de eigenlijke uitvinder
 van het internet, Vint Cerf!</div>
  
 

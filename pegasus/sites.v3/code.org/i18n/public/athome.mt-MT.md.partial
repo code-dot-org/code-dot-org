@@ -1,5 +1,5 @@
 ---
-title: Computer Science at Home
+title: Xjenza tal-Kompjuter fid-Dar
 video_player: true
 theme: responsive
 ---
@@ -7,40 +7,40 @@ theme: responsive
 <link href="/css/tools.css" rel="stylesheet" />
 
 <a id="top"></a>
-<h1>Computer Science at Home</h1>
+<h1>Xjenza tal-Kompjuter fid-Dar</h1>
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
-  <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="Mother helps her daughter use a laptop">
+  <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="Omm tgħin lil bintha tuża laptop">
 </div>
 
-<p>Whether you’re a parent/guardian or a student learning independently, the options below are engaging, easy-to-try ways to begin your exploration of computer science.</p>
+<p>Kemm jekk int ġenitur/kustodju jew student li qed jitgħallem b'mod indipendenti, l-għażliet hawn taħt huma modi ta 'involviment u faċli biex tipprova biex tibda l-esplorazzjoni tiegħek tax-xjenza tal-kompjuter.</p>
 <ul>
-    <li><a class="linktag" id="hoc-nav" href="#hoc">Try an Hour of Code</a></li>
-    <li><a class="linktag" id="videos-nav" href="#videos">Watch a short video series about the basics of CS</a></li>
-    <li><a class="linktag" id="self-paced-nav" href="#express">Take an introductory, self-paced course</a></li>
-    <li><a class="linktag" id="labs-nav" href="#labs">Create a game or an app</a></li>
-    <li><a class="linktag" id="unplugged-nav" href="#unplugged">Try CS without a computer ('unplugged' & mobile options)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Learn CS from the Code.org team and special guests</a></li>
+    <li><a class="linktag" id="hoc-nav" href="#hoc">Ipprova Siegħa tal-Kodiċi</a></li>
+    <li><a class="linktag" id="videos-nav" href="#videos">Ara serje qasira ta 'vidjow dwar il-punti bażiċi ta' CS</a></li>
+    <li><a class="linktag" id="self-paced-nav" href="#express">Ħu kors introduttorju, b'ritmu awtonomu</a></li>
+    <li><a class="linktag" id="labs-nav" href="#labs">Oħloq logħba jew app</a></li>
+    <li><a class="linktag" id="unplugged-nav" href="#unplugged">Ipprova CS mingħajr kompjuter ('unplugged' & għażliet mobbli)</a></li>
+    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Tgħallem CS mit-tim Code.org u mistednin speċjali</a></li>
 </ul>
 
 <br>
 
 <a id="hoc"></a>
-<h2>Try an Hour of Code with these fun introductory tutorial</h2>
-<p>Try a <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">one-hour tutorial</a> featuring popular games and movies like Minecraft, Frozen, and Star Wars. Many tutorials are structured like games, designed to teach basic computer science concepts in fun, engaging ways.</p>
+<h2>Ipprova Siegħa ta 'Kodiċi b'dawn it-tutorja introduttorja divertenti</h2>
+<p>Ipprova <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">tutorja ta 'siegħa</a> li fih logħob popolari u films bħal Minecraft, Frozen, u Star Wars. Ħafna tutorials huma strutturati bħal logħob, iddisinjati biex jgħallmu kunċetti bażiċi tax-xjenza tal-kompjuter b'modi divertenti u ta 'involviment.</p>
 
 <br>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="danceparty" href="/dance" target="_blank">
-        <img class="tutorial-tile-img" src="/images/dance_party_2019.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Dance Party">
+        <img class="tutorial-tile-img" src="/images/dance_party_2019.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Partit Taż-żfin">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Code a Dance Party to share with friends and family. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney's "Encanto," and more!</div>
-        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Try activity</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Parti taż-Żfin</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Kodiċi ta 'Parti taż-Żfin biex taqsam mal-ħbieb u l-familja. Jidhru Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, mużika minn “Encanto” ta 'Disney, u aktar!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Ipprova l-attività</button></a>
     </span>
   </div>
 </div>
@@ -49,14 +49,14 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="minecraft" href="/minecraft" target="_blank">
-        <img class="tutorial-tile-img" src="//code.org/shared/images/fill-484x234/courses/logo_tall_aquatic.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Minecraft Aquatic">
+        <img class="tutorial-tile-img" src="//code.org/shared/images/fill-484x234/courses/logo_tall_aquatic.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Minecraft akkwatiku">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Siegħa tal-Kodiċi</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft huwa lura għall-Siegħa tal-Kodiċi b'marka attività ġdida! Vjaġġ permezz Minecraft bil-kodiċi.</div>
         <br>
-        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Try activity</button></a>
+        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Ipprova l-attività</button></a>
     </span>
   </div>
 </div>
@@ -65,13 +65,13 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-484x234/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="AI for Oceans">
+        <img class="tutorial-tile-img" src="/images/fill-484x234/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="AI għall-Oċeani">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Help A.I. clean the oceans by training it to detect trash! Learn about training data and bias, and how AI can address world problems. View <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
-        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Try activity</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI għall-Oċeani</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Għajnuna A.I. tnaddaf l-oċeani billi tħarreġ biex tiskopri Trash! Tgħallem dwar id-dejta tat-taħriġ u l-preġudizzju, u kif l-AI tista 'tindirizza problemi dinjija. Ara <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">pjan ta 'lezzjoni</a>.</div>
+        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Ipprova l-attività</button></a>
     </span>
   </div>
 </div>
@@ -79,26 +79,26 @@ theme: responsive
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Lura għall-quċċata]</a></p>
 
 <br>
 <br>
 
 <a id="videos"></a>
 <div class="col-100" style="padding:25px; border-radius: 15px; background-color: #ebe8f1">
-<h2 style="margin-top:0">Watch an engaging series of short videos to learn how computers, the internet, and AI work</h2>
-<p>Learn the basics of computer science with videos featuring famous technologists like Bill Gates and Satya Nadella, as well as a diverse cast of presenters from a number of industries and organizations.</p>
+<h2 style="margin-top:0">Ara serje impenjattiva ta 'vidjows qosra biex titgħallem kif jaħdmu l-kompjuters, l-internet u l-AI</h2>
+<p>Tgħallem il-punti bażiċi tax-xjenza tal-kompjuter b'vidjows li jinkludu teknoloġisti famużi bħal Bill Gates u Satya Nadella, kif ukoll kast divers ta 'preżentaturi minn numru ta' industriji u organizzazzjonijiet.</p>
 <br>
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/computers-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="How Computers Work with Bill Gates">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/computers-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Kif Jaħdmu l-Kompjuters ma 'Bill Gates">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>How Computers Work</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">With an introduction by Bill Gates, this series of six short videos explains what makes a computer a computer and how computer circuits work.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Watch the video series</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Kif Jaħdmu l-Kompjuters</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">B'introduzzjoni minn Bill Gates, din is-serje ta' sitt filmati qosra tispjega x'jagħmel kompjuter kompjuter u kif jaħdmu ċ-ċirkwiti tal-kompjuter.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Ara s-serje tal-vidjow</button></a>
     </span>
   </div>
 </div>
@@ -107,13 +107,13 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/internet-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="How the Internet Works">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/internet-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Kif jaħdem l-Internet">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How the Internet Works</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">In this series of eight short videos, you’ll learn how the internet was invented, what HTML is, and how search engines like Google work.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Watch the video series</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Kif jaħdem l-Internet</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">F'din is-serje ta 'tmien vidjows qosra, int ser titgħallem kif l-internet ġie inventat, x'inhu HTML, u kif jaħdmu magni tat-tiftix bħal Google.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Ara s-serje tal-vidjow</button></a>
     </span>
   </div>
 </div>
@@ -126,9 +126,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How AI Works</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn about how AI works and why it matters with this series of short videos. Featuring Microsoft CEO Satya Nadella and a diverse cast of experts.</div>
-        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Watch the video series</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Kif Taħdem AI</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tgħallem dwar kif taħdem l-AI u għaliex hija importanti b'din is-serje ta 'vidjows qosra. Jidhru Microsoft CEO Satya Nadella u mitfugħa diversa ta 'esperti.</div>
+        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Ara s-serje tal-vidjow</button></a>
     </span>
   </div>
 </div>
@@ -138,47 +138,47 @@ theme: responsive
 
 <p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
 <br>
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Lura għall-quċċata]</a></p>
 
 </div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
 <a id="express"></a>
-<h2>Learn the fundamentals with our self-paced courses</h2>
-<h3>Self-paced introductory courses</h3>
-<p>A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. Note: Express courses are currently available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. To see what's available in your language, visit our <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">course catalog</a>.</p>
+<h2>Tgħallem il-prinċipji fundamentali bil-korsijiet tagħna b'ritmu proprju</h2>
+<h3>Korsijiet introduttorji b'ritmu personali</h3>
+<p>Għażla kbira għall-istudenti jkollna beda fuq tagħhom stess. Int ser titgħallem il-prinċipji fundamentali tax-xjenza tal-kompjuter bi blokki drag & drop. Oħloq tpinġijiet tiegħek stess u logħob. Nota: Korsijiet Express bħalissa huma disponibbli bl-Ingliż, Ħindi, Taljan, u Spanjol. For other languages, we recommend our 20-hour <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. Biex tara x'hemm disponibbli fil-lingwa tiegħek, żur tagħna <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">katalgu tal-kors</a>.</p>
 
 <br>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank"><img src="/images/curriculum/course-tile-express.png" style="width: 100%" alt="Express Course"></a><br/><a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank">Express Course</a>
+<a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank"><img src="/images/curriculum/course-tile-express.png" style="width: 100%" alt="Kors Express"></a><br/><a class="linktag" id="express-course" href="https://code.org/educate/curriculum/express-course" target="_blank">Express Kors</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Pre-reader Express Course"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Kors Express Pre-qarrej"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
 
 </div>
 <div style="clear: both"></div>
 
-<h3>Self-paced introductions to Game Lab and App Lab</h3>
-<p>Adapted from our CS Discoveries and CS Principles courses, these short, self-paced modules are a great way to learn concepts that span all programming languages and tools. <i>Requires Code.org account to access</i>.</p>
+<h3>Introduzzjonijiet b'ritmu awtonomu għal Game Lab u App Lab</h3>
+<p>Adattat mill-iskoperti CS tagħna u l-korsijiet tal-Prinċipji CS, dawn il-moduli qosra u b'ritmu indipendenti huma mod tajjeb ħafna biex jitgħallmu kunċetti li jkopru l-lingwi u l-għodda kollha ta 'programmazzjoni. <i>Jirrikjedi kont Code.org għall-aċċess</i>.</p>
 
 <br>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/alien2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Introduction to Game Lab">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/alien2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Introduzzjoni għal Game Lab">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduction to Game Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Program animations, interactive art, and games in Game Lab. Start off with simple shapes and build up to more sophisticated sprite-based animations and games.</div>
-        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Try the module</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduzzjoni għal Game Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Animazzjonijiet tal-programm, arti interattiva, u logħob fil-Game Lab. Start off ma 'forom sempliċi u jibnu sa animazzjonijiet aktar sofistikati bbażati fuq sprite u logħob.</div>
+        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Ipprova l-modulu</button></a>
     </span>
   </div>
 </div>
@@ -187,13 +187,13 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/turtle2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Turtle Programming in App Lab">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/turtle2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Programmazzjoni tal-Fekruna fl-App Lab">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programming in App Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Use simple JavaScript commands to draw shapes and images using a virtual “turtle.” Design and program your own digital scene!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Try the module</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programmazzjoni Fekruna fil App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Uża jikkmanda JavaScript sempliċi biex tiġbed forom u stampi bl-użu virtwali “fekruna.” Iddisinja u pprogramma x-xena diġitali tiegħek stess!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Ipprova l-modulu</button></a>
     </span>
   </div>
 </div>
@@ -202,13 +202,13 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/events3.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Event-Driven Programming in App Lab">
+        <img class="tutorial-tile-img" src="/images/athome/events3.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Programmazzjoni Immexxija mill-Avveniment fl-App Lab">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Event-Driven Programming in App Lab</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn to design apps that respond to clicks and key presses. Create a series of simple applications (apps) that live on the web!</div>
-        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Try the module</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programmazzjoni Mmexxija minn Avvenimenti fl-App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tgħallem tiddisinja apps li jirrispondu għal klikks u preses ewlenin. Oħloq serje ta 'applikazzjonijiet sempliċi (apps) li jgħixu fuq il-web!</div>
+        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Ipprova l-modulu</button></a>
     </span>
   </div>
 </div>
@@ -218,31 +218,31 @@ theme: responsive
 
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Lura għall-quċċata]</a></p>
 
 <hr />
 
 <a id="labs"></a>
-<h2>Create something!</h2>
-<p>First, get inspired! View our <a href="https://studio.code.org/projects" target="_blank">project gallery</a> — play some of the games or try out some of the apps that students have created. You can “remix” the project to make it your own, or build something new in App Lab, Game Lab, or Web Lab.</p>
+<h2>Oħloq xi ħaġa!</h2>
+<p>L-ewwel, ispirat! Ara l-gallerija tal-proġett <a href="https://studio.code.org/projects" target="_blank">tagħna</a> - tilgħab ftit mill-logħob jew ipprova wħud mill-apps li l-istudenti ħolqu. Tista '"remix” il-proġett biex tagħmilha tiegħek, jew tibni xi ħaġa ġdida fl-App Lab, Game Lab, jew Web Lab.</p>
 
 <br>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
-    <p style="color:#ffffff">App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.</p>
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Build an app</button></a>
+    <p style="color:#ffffff">App Lab huwa ambjent ta 'programmazzjoni fejn tista' tagħmel apps sempliċi. Iddisinja app, kodiċi bi blokki jew JavaScript biex tagħmilha taħdem, imbagħad taqsam l-app tiegħek f'sekondi.</p>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Ibni app</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Game Lab</strong></h3></a>
-    <p style="color:#ffffff">Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other.</p>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Logħba tal-Lab</strong></h3></a>
+    <p style="color:#ffffff">Game Lab huwa ambjent ta 'programmazzjoni fejn tista' tagħmel animazzjonijiet sempliċi u logħob b'oġġetti u karattri li jinteraġixxu ma 'xulxin.</p>
     <br>
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Create a game</button></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Oħloq logħba</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
@@ -250,60 +250,60 @@ theme: responsive
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
-    <p style="color:#ffffff">Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds.</p>
+    <p style="color:#ffffff">Web Lab huwa ambjent ta 'programmazzjoni fejn tista' tagħmel paġni tal-web sempliċi billi tuża HTML u CSS. Iddisinja l-paġni tal-web tiegħek u taqsam is-sit tiegħek f'sekondi.</p>
     <br>
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Make a web page</button></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Agħmel paġna tal-web</button></a>
   </div>
   <div style="clear: both"></div>
 </div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Lura għall-quċċata]</a></p>
 
 <a id="unplugged"></a>
-<h2>‘Unplugged’ activities: Computer Science without the computer</h2>
+<h2>Attivitajiet 'Unplugged': Xjenza tal-Kompjuter mingħajr il-kompjuter</h2>
 
 <div class="col-25" style="padding-bottom:15px; text-align:center">
   <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank">
-    <img src="/images/athome/hoc-unplugged.png" style="width:90%; border: 2px solid black" alt="Unplugged activities for Hour of Code">
+    <img src="/images/athome/hoc-unplugged.png" style="width:90%; border: 2px solid black" alt="Attivitajiet mhux ipplaggjati għas-Siegħa tal-Kodiċi">
   </a>
-  <p><i>Click image to view as PDF</i></p>
+  <p><i>Ikklikkja immaġni biex tara bħala PDF</i></p>
 </div>
 <div class="col-75" style="padding-left:15px">
-  <p>No screen, no problem! We’ve put together a ‘sampler’ of quick, fun CS activities you can do without a device. Have a family Dance Party party while learning about events, or ‘program’ each other to draw pictures!</p>
+  <p>L-ebda skrin, l-ebda problema! Imxejna jitqiegħdu flimkien “sampler” ta 'malajr, attivitajiet CS gost inti tista' tagħmel mingħajr apparat. Ikollok parti tal-familja Dance Party waqt li titgħallem dwar avvenimenti, jew 'tipprogramma' lil xulxin biex tiġbed ritratti!</p>
   <br>
-  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>View unplugged activities</button></a>
+  <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>Ara l-attivitajiet mhux ipplaggjati</button></a>
 </div>
 
 <div style="clear: both; margin-bottom: 10px"></div>
 
-<p>Or view these unplugged options from other organizations:</p>
+<p>Jew tara dawn l-għażliet splaggjati minn organizzazzjonijiet oħra:</p>
 <ul>
-  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. (for ages 4-10)</li>
-  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - A collection of free teaching material that teaches computer science through engaging games and puzzles that use cards, string, crayons and lots of running around. (for ages 5-14)</li>
+  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - L-iktar mod whimsical fid-dinja biex titgħallem dwar il-kompjuters, it-teknoloġija u l-ipprogrammar. Attivitajiet fuq firxa ta 'suġġetti CS, bħall-abbiltà li jiddekomponu problema, mudelli spot, jaħsbu algorithmically, problemi debug u jaħdmu flimkien. (għall-etajiet 4-10)</li>
+  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Ġabra ta 'materjal ta' tagħlim b'xejn li tgħallem ix-xjenza tal-kompjuter permezz ta 'logħob u puzzles li jużaw karti, spag, krejons u ħafna ġiri madwar. (għall-etajiet 5-14)</li>
 </ul>
 
-<h2>No computer at home? Try CS on your phone with these apps from our partners</h2>
+<h2>L-ebda kompjuter id-dar? Ipprova CS fuq it-telefon tiegħek b'dawn l-apps mill-imsieħba tagħna</h2>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(for all ages)</i>
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Gżira Kaxxa"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Logħba ta 'kodifikazzjoni mobbli charming li tieħu lill-istudenti fuq avventura eċċitanti, waqt li tgħallem il-prinċipji fundamentali tal-kodifikazzjoni, bħal algoritmi, rikonoxximent tal-mudelli, sekwenzi, loops u conditionals. <i>(għall-etajiet kollha)</i>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Solve puzzles and create games with The Foos while learning to code. <strong>Note: codeSpark is offering a free 3-month trial. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="KodiċijietPark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>CodesPark</strong></h3></a>Pjattaforma ta 'tagħlim għall-kodiċi rebbieħa għat-tfal ta' etajiet 5-9. Issolvi puzzles u toħloq logħob ma 'The Foos waqt li titgħallem tikkodifika. <strong>Nota: CodeSpark qed joffri prova ta '3 xhur b'xejn. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Grasshopper"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
+  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="ġurat"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Tgħallem kodifikazzjoni bil-gost, lezzjonijiet ta 'malajr fuq il-mobile tiegħek li jgħallmu tikteb JavaScript reali. Kodiċi bil-Programm Google. <i>(għall-iskola tan-nofs u sa)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Lura għall-quċċata]</a></p>
 
 <a id="livecoding"></a>
-<h2>Learn from the Code.org team and special guests!</h2>
+<h2>Tgħallem mit-tim Code.org u mistednin speċjali!</h2>
 
 <div class="col-50">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
@@ -312,8 +312,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes are easy-to-digest, 20 minute interactive lessons blending computer science with real-world topics. Train an AI to read sign language, design an app for good, explore the world of Minecraft, and more!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes huma faċli biex tiddiġerixxi, 20 minuta lezzjonijiet interattivi li jħalltu x-xjenza tal-kompjuter ma 'suġġetti tad-dinja reali. Train an AI to read sign language, design an app for good, explore the world of Minecraft, and more!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
@@ -325,14 +325,14 @@ theme: responsive
 <div class="col-50">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
       <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Code Break">
+        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Kodiċi Break">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">Keep computer science fun by taking a Code Break! You can create a cypher with Ashton Kutcher, learn about variables with Yara Shahidi, and even explore how the Internet works with the actual inventor of the Internet, Vint Cerf!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Kodiċi Break</strong></h3>
+        <div class="smalltext" style="">Żomm gost xjenza tal-kompjuter billi tieħu Break Kodiċi! Tista 'toħloq cypher ma' Ashton Kutcher, titgħallem dwar varjabbli ma 'Yara Shahidi, u saħansitra tesplora kif jaħdem l-Internet ma' l-inventur attwali ta 'l-Internet, Vint Cerf!</div>
         <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Get connected</button></a>
+        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Qabbad</button></a>
     </span>
   </div>
 </div>
@@ -340,5 +340,5 @@ theme: responsive
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
-<a href="#top">[Back to top]</a>
+<a href="#top">[Lura għall-quċċata]</a>
 <br>

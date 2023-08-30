@@ -5942,6 +5942,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-5:
               display_name: Alternatif Dersler
+            lessonGroup-7:
+              display_name: Sandbox'lar
         csa2-2023:
           lessons:
             lesson-4:
@@ -5953,6 +5955,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
         csa3-2023:
           lessons:
             lesson-1:
@@ -5966,6 +5970,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
         csa4-2023:
           lessons:
             lesson-9:
@@ -5977,6 +5983,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
         csa5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5985,6 +5993,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
         csa6-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5993,6 +6003,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           description: "Bu ünite, öğrencilere 'ArrayList' sınıfını kullanarak liste oluşturmayı öğretmek için veri yapılarını genişletmeye devam ediyor. Bu süreçte öğrenciler \"Tamsayı\" ve \"Double\" sınıflarını öğrenirler ve yöntemlerini metin dosyalarından verileri ayrıştırmak ve tamsayı değerlerinin sınırlarını keşfetmek için kullanırlar. Öğrenciler, bir \"ArrayList\"in yapısını ve işlevselliğini öğrenirken, her bir veri yapısının ne zaman kullanılacağını ayırt eder. Öğrenciler, sayısal ve nesne verilerinden oluşan bir \"ArrayList\" içindeki verileri bulmak ve işlemek için standart algoritmaları uygular. Ünite boyunca öğrenciler, temel doğal dil işleme tekniklerini ve uygulamalarını öğrenirken, bir kullanıcıdan ve dosya girişinden elde edilen metni analiz etmek ve işlemek için 'String' sınıfını kullanmayı öğrenirler. Ayrıca öğrenciler, programları için API belgeleri oluşturmak üzere Javadoc yorumları yazarak yazılım mühendisliği becerilerini daha da geliştirirler.\n\n### AP Classroom Kişisel İlerleme Kontrolleri\n\nAP Classroom Soru Bankasından bu üniteyle uyumlu sorular atamak için, ünitenin [\\*\\*Standartlar\\*\\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=6) sayfasındaki Temel Bilgi ifadeleri için Soru Bankasında arama yaparak AP Classroom'da özel bir sınav oluşturun. [**AP Central**][1]'da bunu yapmak için talimatlar ve video gösterileri bulabilirsiniz.\n\nAP Classroom'da aşağıdaki Kişisel İlerleme Kontrolleri, Bildiğinizi Gösterin haftasında atanabilir:\n\n-   Kişisel İlerleme Kontrolü 2\n-   Kişisel İlerleme Kontrolü 7\n\n**_Not:_** _Önerilen Kişisel İlerleme Kontrollerindeki Bazı Öğrenme Hedefleri ve Temel Bilgi ifadeleri sonraki ünitelerde ele alınmaktadır._\n\n## Bu Üniteyi Öğretmeyi Bitirdiniz mi?\n\nCode.org müfredat ekibinin ünitenin nasıl gittiğini öğrenmesi için bu [**kısa anketi**][2] yanıtlayın."
           student_description: Bu ünite, sizi 'ArrayList' sınıfını kullanarak listeler oluşturmaya alıştırmak için veri yapılarını genişletmeye devam ediyor. Bu süreçte, "Tamsayı" ve "Duble" sınıflarını öğrenir ve metin dosyalarından verileri ayrıştırmak için yöntemlerini kullanır ve tamsayı değerlerinin sınırlarını keşfedersiniz. Bir "ArrayList"in yapısı ve işlevselliği hakkında bilgi edinirken, her tür veri yapısının ne zaman kullanılacağını ayırt edersiniz. Sayısal ve nesne verilerinden oluşan bir "ArrayList" içindeki verileri bulmak ve işlemek için standart algoritmalar uygularsınız. Ünite boyunca, temel doğal dil işleme tekniklerini ve uygulamalarını öğrenirken, bir kullanıcıdan ve dosya girişinden elde edilen metni analiz etmek ve işlemek için 'String' sınıfını kullanmayı öğrenirsiniz. Ayrıca, programlarınız için API belgeleri oluşturmak üzere Javadoc yorumları yazarak yazılım mühendisliği becerilerinizi daha da geliştirirsiniz.
         csa7-2023:
@@ -6006,6 +6018,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-5:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           description: "Bu ünite, öğrencilerin The Theatre'ı kullanarak kişisel bir ilgi alanını veya hikayeyi iletmek için yaratıcı bir kodlama projesi planlayıp geliştirirken, müfredat boyunca öğrendikleri becerileri kullanarak yazılım tasarımı ve geliştirme pratiği yapmalarına olanak tanır. Öğrenciler, projelerinin belirtilen gereksinimleri karşılamasını sağlarken fikirlerini planlamak ve uygulamak için ayrıştırma stratejilerini ve nesne yönelimli ilkeleri kullanır. Bu süreçte öğrenciler \"özel\", aşırı yüklenmiş ve geçersiz kılınan yöntemleri yazmayı ve yöntemlerin ve parametrelerinin işlevselliğini keşfederken bir üst sınıf yöntemini çağırmak için bir alt sınıf yönteminde \"super\" anahtar sözcüğünü kullanmayı öğrenirler. Ünite boyunca öğrenciler, yinelemeli yöntemleri izleme ve yazma ve bu yöntemleri yinelemeli çözümlerle karşılaştırma alıştırmaları yapar. Yıl boyunca edinilen bilgi ve becerilerle öğrenciler, mevcut programlardaki hataları ve sorunları keşfederken sistem güvenilirliğini en üst düzeye çıkarma ihtiyacını göz önünde bulundururlar.\n\n### AP Classroom Kişisel İlerleme Kontrolleri\n\nAP Classroom Soru Bankasından bu üniteyle uyumlu sorular atamak için, ünitenin [\\*\\*Standartlar\\*\\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7) sayfasındaki Temel Bilgi ifadeleri için Soru Bankasında arama yaparak AP Classroom'da özel bir sınav oluşturun. [**AP Central**][1]'da bunu yapmak için talimatlar ve video gösterileri bulabilirsiniz.\n\n## Bu Üniteyi Öğretmeyi Bitirdiniz mi?\n\nCode.org müfredat ekibinin ünitenin nasıl gittiğini öğrenmesi için bu [**kısa anketi**][2] yanıtlayın."
           student_description: Bu ünite, The Theatre'ı kullanarak kişisel bir ilgi alanınızı veya hikayenizi iletmek için yaratıcı bir kodlama projesi planlayıp geliştirirken, müfredat boyunca öğrendiğiniz becerileri kullanarak yazılım tasarımı ve geliştirme pratiği yapmanızı sağlar. Projenizin belirtilen gereksinimleri karşılamasını sağlarken fikirlerinizi planlamak ve uygulamak için ayrıştırma stratejilerini ve nesne yönelimli ilkeleri kullanırsınız. Bu süreçte, "özel", aşırı yüklenmiş ve geçersiz kılınan yöntemleri yazmayı ve yöntemlerin ve parametrelerinin işlevselliğini keşfederken bir üst sınıf yöntemini çağırmak için bir alt sınıf yönteminde "super" anahtar sözcüğünü kullanmayı öğrenirsiniz. Ünite boyunca, özyinelemeli yöntemleri izleme ve yazma ve bu yöntemleri yinelemeli çözümlerle karşılaştırma alıştırması yapacaksınız. Yıl boyunca edinilen bilgi ve becerilerle, mevcut programlardaki hataları ve sorunları keşfederken sistem güvenilirliğini en üst düzeye çıkarma ihtiyacını düşünürsünüz.
         csa8-2023:
@@ -6018,6 +6032,8 @@ tr:
               display_name: Anket
             lessonGroup-5:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           description: "Bu ünite, öğrencilerin 1D ve 2D dizileri ve `ArrayList`leri arama ve sıralamaya yönelik ortak yaklaşımları tanıtmayı öğrendikleri algoritmaları genişletir. Bu süreçte öğrenciler, ifade yürütme sayılarını kullanarak bu algoritmaların verimliliklerini analiz eder ve karşılaştırır ve karmaşık sorunları ayrıştırmak için problem çözme becerilerini daha da geliştirir. Ünite boyunca öğrenciler, nesne yönelimli tasarım, veri yapıları ve algoritmik düşünme içeren konsolu kullanarak yaratıcı bir kodlama projesi planlamak ve geliştirmek için programlama ve yazılım mühendisliği becerilerini kullanırlar. Yıl boyunca edinilen bilgi ve becerilerle öğrenciler, programların ve kullanıcıların gizliliğini ve güvenliğini göz önünde bulundurur.\n\n### AP Classroom Kişisel İlerleme Kontrolleri\n\nAP Classroom Soru Bankasından bu üniteyle uyumlu sorular atamak için, ünitenin [\\*\\*Standartlar\\*\\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=8) sayfasındaki Temel Bilgi ifadeleri için Soru Bankasında arama yaparak AP Classroom'da özel bir sınav oluşturun. [**AP Central**][1]'da bunu yapmak için talimatlar ve video gösterileri bulabilirsiniz.\n\nAP Classroom'da aşağıdaki Kişisel İlerleme Kontrolleri, Bildiğinizi Gösterin haftasında atanabilir:\n\n-   Kişisel İlerleme Kontrolü 10\n\n**_Not:_** _Önerilen Kişisel İlerleme Kontrollerindeki Bazı Öğrenme Hedefleri ve Temel Bilgi ifadeleri sonraki ünitelerde ele alınmaktadır._\n\n## Bu Üniteyi Öğretmeyi Bitirdiniz mi?\n\nCode.org müfredat ekibinin ünitenin nasıl gittiğini öğrenmesi için bu [**kısa anketi**][2] yanıtlayın."
           student_description: Bu ünitede, 1D ve 2D dizileri ve `ArrayList`leri aramaya ve sıralamaya yönelik yaygın yaklaşımları keşfetmek için öğrendiğiniz algoritmaları genişleteceksiniz. Bu süreçte, ifade yürütme sayılarını kullanarak bu algoritmaların verimliliklerini analiz edip karşılaştırır ve karmaşık sorunları ayrıştırmak için problem çözme becerilerini daha da geliştirirsiniz. Ünite boyunca, nesne yönelimli tasarım, veri yapıları ve algoritmik düşünme içeren konsolu kullanarak yaratıcı bir kodlama projesi planlamak ve geliştirmek için programlama ve yazılım mühendisliği becerilerinizi uygularsınız. Yıl boyunca edindiğiniz bilgi ve becerilerle, programların ve kullanıcıların gizliliğini ve güvenliğini düşünürsünüz.
         hello-world-space-2022:
@@ -6665,6 +6681,8 @@ tr:
               display_name: İnceleme ve Uygulama
             lessonGroup-3:
               display_name: Deneme Sınavları
+            lessonGroup-4:
+              display_name: Sandbox'lar
         microbit-2023:
           lesson_groups:
             lessonGroup-3:

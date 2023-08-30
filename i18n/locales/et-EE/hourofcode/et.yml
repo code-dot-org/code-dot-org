@@ -251,6 +251,8 @@ et:
   call_to_action_learn_about_approach: Lisateave meie lähenemisviisi kohta
   call_to_action_try_java_lab: Proovige Java Lab
   call_to_action_notify_available: Teavita mind, kui see on saadaval
+  call_to_action_register_early_access: Registreeri varajase juurdepääsu saamiseks
+  call_to_action_open_positions: Vaata avatud positsioone
   aria_label_call_to_action_afe: Lisateave Amazon Future Engineeri kohta
   aria_label_call_to_action_teaching_csf: Alusta õpetamine arvutiteaduse alused professionaalne
     õppe programm
@@ -12821,6 +12823,111 @@ et:
   accessibility_card_text_10: Code.org AP Computer Science põhimõtete õppekava kohandamine
     kvoorumi abil, mis on algselt loodud selleks, et tagada pimedatele või nägemispuudega
     õpilastele juurdepääsetavus.
+  engineering_hero_heading: Liitu meie inseneri meeskonnaga!
+  engineering_hero_desc: Kuna me jätkame oma insenerimeeskonna laiendamist, tahtsime
+    jagada rohkem meie insenerorganisatsiooni Code.org ja mõningaid siin töötamise
+    ainulaadseid aspekte. Kui olete huvitatud meie rollist taotlemisest, siis me tahame
+    sind kuulda!
+  engineering_team_title: Tutvuge Code.org inseneri meeskonnaga
+  engineering_team_card_text_1: See on (enamik) meist meie in-person kokku suvel 2023!
+    See rahvahulk on jagatud meie insenerimeeskonna neljaks alammeeskonnaks, kes teevad
+    koostööd, et luua ja teenida platvormi kõigile meie õpilastele ja õpetajatele.
+  engineering_team_card_text_2: Kui olete huvitatud meie rollist taotlemisest, siis
+    me tahame sind kuulda! Avatud ametikohtade nimekirja leiate meie Karjääride lehelt.
+  engineering_our_team_title: Meie insenerimeeskond
+  engineering_our_team_desc: 'Code.org insenerimeeskond on jagatud neljaks alammeeskonnaks,
+    mis ehitavad ja toetavad meie platvormi erinevaid valdkondi:'
+  engineering_our_team_sub_title_1: Õpilaste õppemeeskond
+  engineering_our_team_text_1: Meie õpilaste õppemeeskond omab kõiki meie tegevusi
+    (nimetame neid laboriks), mida meie õpilased iga päev kasutavad. See meeskond
+    töötab peamiselt esiotsa tehnoloogias (me kasutame Reageeri ja palju kohandatud
+    JS-i) ja meil on suurepärased töösuhted paljude partnerite ja avatud lähtekoodiga
+    projektidega. Näiteks kasutame [Google'i Blockly] (%{youtube_url}) kogu meie plokipõhise
+    programmeerimise jaoks. Toetame õpilasi nende õppimisreisil kogu tee alates Lasteaiast
+    kuni 12. klassini.
+  engineering_our_team_sub_title_2: Õpetaja kogemuse meeskond
+  engineering_our_team_text_2: Meie õpetajakogemuse meeskond loob tööriistad, mis
+    meelitavad uusi õpetajaid Code.org (nimetame neid omandamistooteid), ja arendab
+    platvormi, mis annab meie olemasolevatele õpetajatele õiguse õpetada meie õppekava
+    (meie õpetajate tööriistad). Nagu meie õpilane tööriistad, me toetume React ehitada
+    meie esiotsa ja meie serveripoolne komponendid server-side serveeritakse kasutades
+    Ruby on Rails.
+  engineering_our_team_sub_title_3: Platvormi meeskond
+  engineering_our_team_text_3: Meie platvormi meeskond omab põhikomponente, mis teenivad
+    meie õpilaste ja õpetajate meeskondade vajadusi (näiteks autentimine ja kasutajaprofiil)
+    ning mille ülesanne on jõuda õpilasteni, kellega me veel ei jõua. See hõlmab integratsioonide
+    loomist, mis ühendavad meid koolidega, mis kasutavad erinevaid õppehaldussüsteeme
+    (LMS), ja pakkides meie õppekava nii, et neid saaks kasutada kaugkoolides, kellel
+    puudub juurdepääs usaldusväärsele internetile.
+  engineering_our_team_sub_title_4: Infrastruktuuri meeskond
+  engineering_our_team_text_4: Meie infrastruktuuri meeskond pakub selgroog platvorm,
+    mis toetab meie õpilasi ja õpetajaid. See hõlmab meie hostimise infrastruktuuri
+    ja sellega seotud teenuseid (me kasutame AWS), andmehaldust, turbeprogramme, arendaja-
+    ja juurutusteenuseid ning palju muud. See meeskond omab ka meie skaleerimis- ja
+    varustussüsteeme, mis on kriitilised kooditunnil, kus me kutsume kõiki maailma
+    üliõpilasi täitma meiega kodeerimise tunni.
+  engineering_faq_question_1: Mida Code.org teeb?
+  engineering_faq_answer_1_a: Code.org on mittetulunduslik haridusuuendus, mis on
+    pühendatud nägemusele, et iga kooli igal õpilasel on võimalus õppida arvutiteadust
+    osana oma K-12 põhiharidusest.
+  engineering_faq_answer_1_b: Laiendame koolides juurdepääsu arvutiteadusele, keskendudes
+    noorte naiste ja teiste alaesindatud rühmade õpilaste osalemise suurendamisele.
+    K-12 arvutiteaduse õppekava juhtiv pakkuja Ameerika Ühendriikide suurimates kooliringkondades
+    Code.org korraldab ka iga-aastast kampaaniat „Hour of Code”, mis on tegelenud
+    üle 15% kõigist maailma õpilastest.
+  engineering_faq_answer_1_c: Code.org toetavad suuremeelsed doonorid, sealhulgas
+    Microsoft, Amazon, Google ja paljud teised.
+  engineering_faq_question_2: Mis on Code.org arendaja kogemus ja tööriistad?
+  engineering_faq_answer_2: Meie arendaja kogemus võib erineda sellest, mida olete
+    näinud oma varasemates rollides. Tihedat koostööd meie tootemeeskonnaga saadame
+    tootmisse igal argipäeval ja meil on mitmesuguseid kadentsid - mõnikord kirjutad
+    koodi, mis läheb otse sel päeval; muul korral olete pikemas perspektiivis projektides
+    - ja kui me järgime 2-nädalast sprinti, teeme seda kergekaalulisel viisil. Me
+    indeks suunas saada õigeid asju teha õigesti vs võttes puristlik silmas mingit
+    konkreetset metoodikat. [Kõik meie kood] (%{code_url}) on avatud lähtekoodiga
+    ja me kasutame JIRA ja GitHub pull taotlusi jälgida kõiki meie töö objekte. Samuti
+    hoolime palju kvaliteedist ja testimisest ning meil on õnn, et meil on uskumatu
+    toetus [SauceLabs](%{saucelabs_url}), kes aitavad meil käivitada meie kasutajaliidese
+    testide komplekti erinevatel õpilasseadmetel (nt iPadidel) oma pilvseadme farmis.
+  engineering_faq_question_3: Mis on insener kõne rotatsiooni Code.org?
+  engineering_faq_answer_3: Meie 30+ insenerimeeskond jagab ülesandeid. Iga insener
+    hõlmab 24-tunnist vahetust ja kasutab meie eskaleerumisteid ja esitusraamatuid,
+    et vastata saidi katkestustele või muudele live-saidi probleemidele. Oleme uhked
+    meie saidi usaldusväärsuse üle - keskmiselt on iga insener ärganud ainult üks
+    kord aastas probleemide lahendamiseks, mida tavaliselt kiiresti lahendada. Selle
+    asemel kulutab „Päeva arendaja” tavaliselt osa oma tööpäevast tootmise juurutamise
+    haldamisel ja vähem kiireloomuliste probleemide proovid.
+  engineering_faq_question_4: Oled kaugjuhtimispuldi sõbralik/WFH organisatsioon?
+  engineering_faq_answer_4_a: Jah! 2019. aastal, vahetult enne pandeemiat, sai Code.org
+    kaugjuhtimisorganisatsiooniks. Täna on meil insenerid igas USA ajavööndis ja mahutab
+    tööaega vastavalt. Enamik meie kohtumisi toimub kella 10:00 ja 15.00 PT vahel.
+  engineering_faq_answer_4_b: Me mõistame ka väärtust in-isik aega, ja iga kvartali
+    saame kokku isiklikult, tavaliselt Seattle. Kaks neist sündmustest (nimetame neid
+    kick-off nädal ja „Codechella”) toovad kõik organisatsioonis kokku jaanuaris ja
+    juunis - inseneri- ja tootemeeskonnad kohtuvad aprillis ja oktoobris eraldi.
+  engineering_faq_answer_4_c: Usume tungivalt, et veeta aega oma õpilaste ja õpetajatega,
+    nii et paljud neist isiklikud üritused hõlmavad reise koolidesse ja klassiruumidesse,
+    et koguda tagasisidet või testida meie tooteid
+  engineering_faq_question_5: Mis teeb Code.org insenerimeeskonna ainulaadseks?
+  engineering_faq_answer_5_a: 'Lisaks keeruliste tehniliste probleemide lahendamisele
+    on meil mõned asjad, mis muudavad meie inseneriorganisatsiooni erinevaks teistest,
+    kellal olete töötanud:'
+  engineering_faq_answer_5_b_1: Me kõik jagame oma kirge oma missiooni vastu.
+  engineering_faq_answer_5_b_2: Igaüks meist on siin, et toetada missiooni laiendada
+    juurdepääsu infotehnoloogia igale õpilasele üle maailma. Meil kõigil on ainulaadne
+    lugu ja perspektiiv selle kohta, mis meid selle missiooni poole ajendab.
+  engineering_faq_answer_5_c_1: Me hoolime sügavalt üksteisest.
+  engineering_faq_answer_5_c_2: Kui insenerid võitlevad probleemiga, astume sisse
+    ja aitame. Üks meie põhimõtteid on, et meil on raske probleeme, kuid lahke üksteisele.
+    Me edendame insenere regulaarselt, kuid me ei näe ette üleprojekteeritud lahendusi,
+    et toetada kellegi edendamise teed. Selle asemel investeerime oma inseneridesse
+    suuremeelse kutsealase arengu eelarve ja juurdepääsu teistele õppimisvõimalustele.
+  engineering_faq_answer_5_d_1: Me töötame kõvasti, kuid seame selged piirid.
+  engineering_faq_answer_5_d_2: Kuigi me toetame üliõpilasi üle maailma, hoiame end
+    vastutavaks selgete piiride eest töö- ja koduelu vahel. Meil ei ole koosolekuid
+    kolmapäeviti, võttes meie PTO (kokku 5 nädalat, mis sisaldab kogu org-kogu 2-nädalast
+    kontori sulgemist aasta lõpus aka Winter Break), pool tööpäeva reedeti suvel aka
+    Summer Reedeti, ja muud helde kasu.
   language_code:
     ar: araabia
     az: Aserbaidžaani

@@ -6,16 +6,19 @@ sq:
       Assessment: Vlerësim
       Back and Forth: Prapa dhe perpara
       Bass, Mid, and Treble: Bass, Mes, dhe Treble
-      Challenge: Sfida
+      Challenge: Sfidë
       Customize: Personalizo
       Dance Crews: Ekipet e Vallezimit
-      Debugging: Rregullimi
+      Debugging: Debugging
       Design Mode: dan is a masive dick-
       Events: Ngjarje
       Example: Shëmbull
+      Exploration: Eksplorimi
       'Exploration: Sample Project': 'Hulumtim: Shembull i projektit'
       For Loops: Për Ciklet
-      Free Play: Lojë Falas
+      Free Play: Lojë e lirë
+      'Free Play: Make a Scene': 'Lojë e lirë: Krijo një skenë'
+      'Free Play: Make an Interactive Scene': 'Lojë e lirë: Krijo një skenë interaktive'
       Functions: funksione
       Functions with Parameters: Funksionet me parametra
       Get In Formation: Hyni ne rradhe
@@ -24,6 +27,8 @@ sq:
       Levels: Nivelet
       Lists: Listat
       'Mini-Project: Collector Game': 'Mini-projekt: Collector Game'
+      'Mini-Project: Create a Virtual Pet': 'Mini-projekt: Krijoni një kafshë shtëpiake
+        virtuale'
       'Mini-Project: Outbreak Simulator': 'Mini-projekt: Simulimi i shpërthimit'
       'Mini-Project: Sticker Art': 'Mini-Projekt: Arti i Stikerave'
       'Mini-Project: User Input Programs': 'Mini-projekt: Programet e hyrjes (input)
@@ -33,6 +38,7 @@ sq:
       More Buttons: Më shumë butona
       Move It Move it Video  - Unplugged Activity: Video Move it Move it- Aktivitet
         i shkëputur
+      My Robotic Friends - Unplugged Activity: Shokët e mi robotik - Aktivitet i shkëputur
       Overview: Përmbledhja
       Pair Programming: Programim në çift
       Picturing Data: Vizualizimi i të dhënave
@@ -43,6 +49,7 @@ sq:
       Reflection: Reflektim
       Run a simulation: Ekzekutoni një simulim
       Skill Building: Zhvillimi i shkathtësive
+      Skill-Building: Zhvillimi i shkathtësive
       Speed it Up, Slow it Down: Shpejtoje, Ngadalesoje
       The Internet - Unplugged Activity: Interneti - Aktivitet i shkëputur
       Train AI to Clean the Ocean: Trajnoni IA-në për të pastruar oqeanin
@@ -51,22 +58,34 @@ sq:
       'Video - Maze Intro: Programming with Blocks': 'Video - Maze Intro: Programimi
         me blloqe'
       'Video:  Debugging with the Step Button': 'Video: Korigjimi me butonin Hapi'
+      'Video: Artist Intro with JR Hildebrand': 'Video: Hyrja e Artistit me JR Hildebrand'
       'Video: Code Your Own Flappy Game': 'Video: Kodoni lojën tuaj Flappy'
+      'Video: Conditionals: If and If/Else Statements': 'Video: Kushtet: If dhe If/Else
+        deklaratat'
+      'Video: Dance Party Warm Up': 'Video: Parapërgatitje për festë vallëzimi '
+      'Video: Debugging with Scrat ': 'Video: Debugging me Scrat '
       'Video: Debugging with the Step Button': 'Video: Korigjimi me butonin e hapit'
       'Video: Follow The Digital Trail': 'Video: Ndiqni rrugën digjitale'
+      'Video: How to Make a Sprite': 'Video: Si të krijoni një Sprite'
+      'Video: Introducing Sprite Lab': 'Video: Prezantimi i Sprite Lab'
       'Video: Introduction to Play Lab': 'Video: Hyrje në Play Lab'
+      'Video: Maze Intro - Programming with Blocks': 'Video: Hyrje në Labirint - Programimi
+        me blloqe'
       'Video: Maze Intro - Programming with Blocks ': 'Video: Hyrje në Labirint -
         Programimi me blloqe '
       'Video: Outbreak Simulator: Free Play': 'Video: Simulimi i shpërthimit: Lojë
         e lirë'
+      'Video: Outbreak Simulator: Introduction': 'Video: Simulimi i shpërthimit: Hyrje'
       'Video: Pair Programming': Video- Programimi në çift
       'Video: Programming with Rey and BB-8': 'Video: Programimi me Rey dhe BB-8'
       'Video: Repeat Blocks': 'Video: Përsëritni blloqet'
       'Video: Repeat Blocks with BB-8': 'Video: Përsëritni blloqet me BB-8'
+      'Video: Sprites in Action': 'Video: Sprites në veprim'
       'Video: The Collector': 'Video: Mbledhësi'
       'Video: The Harvester': 'Video: Korrësi'
       'Video: Training Data & Bias': 'Video: Të dhënat e trajnimit dhe paragjykimet'
       'Video: Using the Repeat Block': 'Video: Përdorimi i bllokut të përsëritur'
+      'Video: While Loops with the Farmer': 'Video: While Loops me fermeren'
       Warm Up: Parapërgatitje
       Welcome to Monster Town: Mirë se vini në Qytetin e Përbindëshave
       Where'd They Go?: Ku shkuan ata?

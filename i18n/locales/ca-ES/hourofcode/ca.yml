@@ -257,6 +257,8 @@ ca:
   call_to_action_learn_about_approach: Obteniu més informació sobre el nostre enfocament
   call_to_action_try_java_lab: Prova Java Lab
   call_to_action_notify_available: Aviseu-me quan estigui disponible
+  call_to_action_register_early_access: Registrar-se per a l'accés anticipat
+  call_to_action_open_positions: Veure posicions obertes
   aria_label_call_to_action_afe: Sabeu més sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: 'Comença el programa d''aprenentatge professional
     d''''Ensenyament de Fonaments de Ciències Informàtiques '
@@ -13623,6 +13625,127 @@ ca:
     Principles de Code.org utilitzant Quorum, un llenguatge basat en l'evidència dissenyat
     originalment per proporcionar accessibilitat a estudiants cecs o amb discapacitat
     visual.
+  engineering_hero_heading: Uneix-te al nostre equip d'enginyeria!
+  engineering_hero_desc: A mesura que continuem ampliant el nostre equip d'enginyeria,
+    volíem compartir més sobre la nostra organització d'enginyeria a Code.org i alguns
+    dels aspectes únics de treballar aquí. Si esteu interessats en sol·licitar un
+    dels nostres rols, ens encantaria saber de vosaltres!
+  engineering_team_title: Coneix l'equip d'enginyeria a Code.org
+  engineering_team_card_text_1: Això és (la majoria) de nosaltres en la nostra trobada
+    presencial durant l'estiu de 2023! Aquesta multitud es divideix en quatre subequips
+    dins del nostre equip d'enginyeria que treballen junts per construir i servir
+    la plataforma per a tots els nostres estudiants i professors.
+  engineering_team_card_text_2: Si esteu interessats en sol·licitar un dels nostres
+    rols, ens encantaria saber de vosaltres! Podeu trobar una llista de posicions
+    obertes a la nostra pàgina de Carreres Professionals.
+  engineering_our_team_title: El nostre equip d'enginyeria
+  engineering_our_team_desc: 'L''equip d''enginyeria de Code.org es divideix en quatre
+    sub-equips que construeixen i donen suport a diferents àrees de la nostra plataforma:'
+  engineering_our_team_sub_title_1: Equip d'Aprenentatge d'Estudiants
+  engineering_our_team_text_1: El nostre Equip d'Aprenentatge d'Estudiants posseeix
+    totes les nostres activitats (els anomenem laboratoris) que els nostres estudiants
+    utilitzen cada dia. Aquest equip treballa principalment en tecnologia frontal
+    (utilitzem React i molts JS personalitzats) i tenim una gran relació de treball
+    amb molts socis i projectes de codi obert. Per exemple, utilitzem [Google's Blockly]
+    (%{youtube_url}) per a tota la nostra programació basada en blocs. Donem suport
+    als estudiants en el seu viatge d'aprenentatge tot el camí des de Kindergarten
+    fins a 12è grau.
+  engineering_our_team_sub_title_2: Equip d'Experiència Docent
+  engineering_our_team_text_2: El nostre Team Team Experience construeix les eines
+    que atrauen nous professors a Code.org (anomenem aquests productes d'adquisició)
+    i desenvolupa la plataforma que capacita als nostres professors existents per
+    ensenyar el nostre currículum (les nostres eines per a professors). Igual que
+    amb les nostres eines per a estudiants, confiem en React per construir el nostre
+    front-end i els nostres components del costat del servidor es serveixen utilitzant
+    Ruby on Rails.
+  engineering_our_team_sub_title_3: Equip de plataforma
+  engineering_our_team_text_3: El nostre equip de plataformes posseeix components
+    bàsics que serveixen a les necessitats dels nostres equips d'estudiants i professors
+    (per exemple, autenticació i perfil d'usuari) i també té la missió d'arribar a
+    estudiants als quals encara no podem arribar. Això inclou la construcció d'integracions
+    que ens connecten amb escoles que utilitzen diferents sistemes de gestió de l'aprenentatge
+    (LMS) i empaquetar el nostre currículum perquè pugui ser utilitzat en escoles
+    remotes que no tenen accés a internet fiable.
+  engineering_our_team_sub_title_4: Equip d'Infraestructura
+  engineering_our_team_text_4: El nostre Equip d'Infraestructures proporciona la columna
+    vertebral de la plataforma que dóna suport als nostres estudiants i professors.
+    Això inclou la nostra infraestructura d'allotjament i serveis relacionats (utilitzem
+    AWS), gestió de dades, programes de seguretat, desenvolupadors i serveis de desplegament
+    i molt més. Aquest equip també posseeix els nostres sistemes d'escalat i aprovisionament,
+    que són crítics durant l'Hour of Code, on convidem a tots els estudiants del món
+    a completar una hora de codificació amb nosaltres.
+  engineering_faq_question_1: Què fa Code.org?
+  engineering_faq_answer_1_a: Code.org és una innovació educativa sense ànim de lucre
+    dedicada a la visió que tots els estudiants de cada escola tenen l'oportunitat
+    d'aprendre ciències de la computació com a part de la seva educació bàsica K-12.
+  engineering_faq_answer_1_b: Ampliem l'accés a la informàtica a les escoles, amb
+    un enfocament en l'augment de la participació de dones joves i estudiants d'altres
+    grups poc representats. El principal proveïdor de currículum de ciències de la
+    computació K-12 als districtes escolars més grans dels Estats Units, Code.org
+    també organitza la campanya anual de l'Hora del Codi, que ha involucrat més del
+    15% de tots els estudiants del món.
+  engineering_faq_answer_1_c: Code.org és recolzat per generosos donants, inclosos
+    Microsoft, Amazon, Google i molts altres.
+  engineering_faq_question_2: Què és l'experiència i l'utillatge per a desenvolupadors
+    de Code.org?
+  engineering_faq_answer_2: Our developer experience may be different to what you’ve
+    seen in your past roles. Working closely with our product team, we ship to production
+    every weekday and we have a variety of cadences - sometimes you are writing code
+    that goes live that day; other times you are on longer term projects - and while
+    we do follow 2-weekly sprints, we do so in a lightweight way. We index towards
+    getting the right things done the right way vs. taking a purist view of any particular
+    methodology. [All our code](%{code_url}) is open source and we use JIRA and GitHub
+    pull requests to track all of our work items. We also care a lot about quality
+    and testing and are fortunate to have incredible support from [SauceLabs](%{saucelabs_url}),
+    who help us run our suite of UI tests on various student devices (e.g., iPads)
+    in their cloud device farm.
+  engineering_faq_question_3: Què és l'enginyer de rotació de trucades a Code.org?
+  engineering_faq_answer_3: 'El nostre equip d''enginyeria més de 30 anys comparteix
+    responsabilitats a la trucada. Cada enginyer cobreix un torn de 24 hores i utilitza
+    els nostres camins d''escalada i llibres de joc per respondre a les interrupcions
+    del lloc o altres problemes del lloc en directe. Estem orgullosos de la fiabilitat
+    del nostre lloc: de mitjana, cada enginyer només es desperta una vegada a l''any
+    per problemes que solen ser ràpids de resoldre. En canvi, el “Desenvolupador del
+    Dia” sol passar una part de la seva jornada laboral gestionant el desplegament
+    de producció i triant problemes menys urgents.'
+  engineering_faq_question_4: Ets una organització remota o WFH?
+  engineering_faq_answer_4_a: Sí! El 2019, poc abans de la pandèmia, Code.org es va
+    convertir en una organització de primera distància. Avui en dia, tenim enginyers
+    a totes les zones horàries dels Estats Units i s'adapten a les hores de treball
+    en conseqüència. La majoria de les nostres reunions succeeixen entre les hores
+    de 10am i 3pm PT.
+  engineering_faq_answer_4_b: També reconeixem el valor del temps presencial, i cada
+    trimestre ens reunim en persona, normalment a Seattle. Dos d'aquests esdeveniments
+    (els anomenem Kick-off week i “Codechella”) reuneixen a tots els de l'organització
+    al gener i al juny, i els equips d'enginyeria i producte es reuneixen per separat
+    a l'abril i l'octubre.
+  engineering_faq_answer_4_c: Creiem fermament en passar temps amb els nostres estudiants
+    i professors, de manera que molts d'aquests esdeveniments presencials inclouen
+    viatges a escoles i aules per recollir comentaris o jugar a provar els nostres
+    productes
+  engineering_faq_question_5: Què fa que l'equip d'enginyeria de Code.org sigui únic?
+  engineering_faq_answer_5_a: 'Més enllà de resoldre problemes tècnics difícils, tenim
+    algunes coses que fan que el nostre org d''enginyeria sigui diferent d''altres
+    en què podeu haver treballat:'
+  engineering_faq_answer_5_b_1: Tots compartim la nostra passió per la nostra missió.
+  engineering_faq_answer_5_b_2: Cadascun de nosaltres és aquí per donar suport a la
+    missió d'ampliar l'accés a la informàtica per a tots els estudiants de tot el
+    món. Tots tenim la nostra història i perspectiva úniques sobre el que ens impulsa
+    cap a aquesta missió.
+  engineering_faq_answer_5_c_1: Ens preocupem profundament els uns dels altres.
+  engineering_faq_answer_5_c_2: Quan els enginyers lluiten amb un problema, fem un
+    pas i ajudem. Un dels nostres principis és que som durs en problemes, però amables
+    entre nosaltres. Promovem enginyers regularment, però no prescrivim solucions
+    sobre-enginyades només per donar suport al camí de promoció d'algú. En canvi,
+    invertim en els nostres enginyers amb un pressupost generós de desenvolupament
+    professional i accés a altres oportunitats d'aprenentatge.
+  engineering_faq_answer_5_d_1: Treballem dur, però establim límits clars.
+  engineering_faq_answer_5_d_2: Mentre donem suport als estudiants de tot el món,
+    ens responsabilitzem dels límits clars entre el treball i la vida a la llar. Gaudim
+    dels dimecres sense reunions, prenent la nostra presa de força (5 setmanes totals,
+    que inclou un tancament d'oficina de 2 setmanes org-wide al final de l'any aka
+    Winter Break), mig dia laborable els divendres durant l'estiu aka Summer Fridays,
+    i altres beneficis generosos.
   language_code:
     ar: Àrab
     az: Àzeri
