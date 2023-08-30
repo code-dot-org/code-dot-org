@@ -2,7 +2,6 @@
 
 require 'fileutils'
 require 'json'
-require 'ruby-progressbar'
 
 require_relative '../../../../animation_assets/manifest_builder'
 require_relative '../../../i18n_script_utils'
@@ -21,20 +20,20 @@ module I18n
             pegasus_languages.each.with_index(1) do |pegasus_lang, next_lang_idx|
               progress_bar.title = progress_bar_title(next_lang_idx)
 
-              crowdin_sprintlab_file_path = CDO.dir(File.join(I18N_LOCALES_DIR, pegasus_lang[:crowdin_name_s], DIR_NAME, SPRITELAB_FILE_NAME))
-              next unless File.exist?(crowdin_sprintlab_file_path)
+              crowdin_spritelab_file_path = CDO.dir(File.join(I18N_LOCALES_DIR, pegasus_lang[:crowdin_name_s], DIR_NAME, SPRITELAB_FILE_NAME))
+              next unless File.exist?(crowdin_spritelab_file_path)
 
               locale = pegasus_lang[:locale_s]
 
-              i18n_sprintlab_file_path = CDO.dir(File.join(I18N_LOCALES_DIR, locale, DIR_NAME, SPRITELAB_FILE_NAME))
-              FileUtils.mv crowdin_sprintlab_file_path, i18n_sprintlab_file_path, force: true
-              FileUtils.rm_r File.dirname(crowdin_sprintlab_file_path)
+              i18n_spritelab_file_path = CDO.dir(File.join(I18N_LOCALES_DIR, locale, DIR_NAME, SPRITELAB_FILE_NAME))
+              FileUtils.mv crowdin_spritelab_file_path, i18n_spritelab_file_path, force: true
+              FileUtils.rm_r File.dirname(crowdin_spritelab_file_path)
 
               next if locale == 'en-US'
 
               js_locale = I18nScriptUtils.to_js_locale(locale)
-              translations = JSON.load_file(i18n_sprintlab_file_path)
-              sprintlab_manifest_builder.upload_localized_manifest(js_locale, translations)
+              translations = JSON.load_file(i18n_spritelab_file_path)
+              spritelab_manifest_builder.upload_localized_manifest(js_locale, translations)
             ensure
               progress_bar.increment
             end
@@ -53,15 +52,14 @@ module I18n
           end
 
           def progress_bar
-            @progress_bar ||= ProgressBar.create(
+            @progress_bar ||= I18nScriptUtils.create_progress_bar(
               total: pegasus_languages.size,
               title: progress_bar_title,
-              format: I18nScriptUtils::PROGRESS_BAR_FORMAT,
             )
           end
 
-          def sprintlab_manifest_builder
-            @sprintlab_manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true, quiet: true})
+          def spritelab_manifest_builder
+            @spritelab_manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true, quiet: true})
           end
         end
       end
