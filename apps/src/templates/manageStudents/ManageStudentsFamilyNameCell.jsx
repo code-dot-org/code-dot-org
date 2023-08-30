@@ -11,6 +11,7 @@ class ManageStudentFamilyNameCell extends Component {
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
     sectionId: PropTypes.number,
+    inputDisabled: PropTypes.bool,
 
     //Provided by redux
     editStudent: PropTypes.func.isRequired,
@@ -25,6 +26,7 @@ class ManageStudentFamilyNameCell extends Component {
 
   render() {
     const {familyName, editedValue} = this.props;
+    const {inputDisabled} = this.props;
 
     return (
       <div>
@@ -39,6 +41,7 @@ class ManageStudentFamilyNameCell extends Component {
               onChange={this.onChangeName}
               placeholder={i18n.familyName()}
               aria-label={i18n.familyName()}
+              disabled={inputDisabled}
             />
           </div>
         )}
