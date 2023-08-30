@@ -342,6 +342,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return '';
   };
 
+  // No-op for CDO Blockly.
+  blocklyWrapper.setHiddenDefinitionWorkspace = _ => {};
+
+  // CDO Blockly does not have a concept of a hidden definition workspace,
+  // so we return undefined here.
+  blocklyWrapper.getHiddenDefinitionWorkspace = () => {
+    return undefined;
+  };
+
   return blocklyWrapper;
 }
 
