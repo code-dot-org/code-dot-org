@@ -119,7 +119,7 @@ export var blocks = [
   {
     func: 'textArea',
     parent: api,
-    category: 'UI controls',
+    category: 'Advanced',
     paletteParams: ['id', 'text'],
     params: ['"id"', '"text"'],
   },
@@ -185,7 +185,7 @@ export var blocks = [
   {
     func: 'slider',
     parent: api,
-    category: 'UI controls',
+    category: 'Advanced',
     paletteParams: ['id', 'min', 'max', 'value', 'step'],
     params: ['"id"', '0', '100', '50', '1'],
   },
