@@ -975,6 +975,7 @@ applabCommands.slider = function (opts) {
   apiValidateDomIdExistence(opts, 'slider', 'id', opts.elementId, false);
 
   var newSlider = document.createElement('input');
+  newSlider.id = opts.elementId;
   newSlider.setAttribute('type', 'range');
   newSlider.min = opts.min;
   newSlider.max = opts.max;
