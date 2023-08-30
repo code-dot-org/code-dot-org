@@ -27,6 +27,7 @@ class I18n::Resources::Apps::Animations::SyncOutTest < Minitest::Test
 
       FileUtils.expects(:mv).with(expected_crowdin_spritelab_file_path, expected_i18n_spritelab_file_path, force: true).in_sequence(exec_seq).returns(true)
       FileUtils.expects(:rm_r).with(CDO.dir('i18n/locales/Not English/animations')).in_sequence(exec_seq).returns(true)
+      I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with('Not English').in_sequence(exec_seq)
 
       I18nScriptUtils.expects(:to_js_locale).with('not-EN').in_sequence(exec_seq).returns('expected_js_locale')
       JSON.expects(:load_file).with(expected_i18n_spritelab_file_path).in_sequence(exec_seq).returns('expected_translations')
@@ -51,6 +52,7 @@ class I18n::Resources::Apps::Animations::SyncOutTest < Minitest::Test
 
       FileUtils.expects(:mv).with(expected_crowdin_spritelab_file_path, expected_i18n_spritelab_file_path, force: true).in_sequence(exec_seq).returns(true)
       FileUtils.expects(:rm_r).with(CDO.dir('i18n/locales/English/animations')).in_sequence(exec_seq).returns(true)
+      I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with('English').in_sequence(exec_seq)
 
       I18nScriptUtils.expects(:to_js_locale).with('en-US').never.returns('expected_js_locale')
       JSON.expects(:load_file).with(expected_i18n_spritelab_file_path).never.returns('expected_translations')
@@ -75,6 +77,7 @@ class I18n::Resources::Apps::Animations::SyncOutTest < Minitest::Test
 
       FileUtils.expects(:mv).with(expected_crowdin_spritelab_file_path, expected_i18n_spritelab_file_path, force: true).never.returns(true)
       FileUtils.expects(:rm_r).with(CDO.dir('i18n/locales/Not English/animations')).never.returns(true)
+      I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with('Not English').never
 
       I18nScriptUtils.expects(:to_js_locale).with('not-EN').never.returns('expected_js_locale')
       JSON.expects(:load_file).with(expected_i18n_spritelab_file_path).never.returns('expected_translations')

@@ -100,7 +100,7 @@ class I18nScriptUtilsTest < Minitest::Test
     assert_equal 'en_us', I18nScriptUtils.to_js_locale('en-US')
   end
 
-  class FileChangedTest < Minitest::Test
+  class FileChanged < Minitest::Test
     def setup
       I18nScriptUtils.remove_instance_variable(:@change_data) if I18nScriptUtils.instance_variable_get(:@change_data)
     end
@@ -171,6 +171,28 @@ class I18nScriptUtilsTest < Minitest::Test
         actual_error = assert_raises(RuntimeError) {I18nScriptUtils.file_changed?(expected_locale, expected_file_path)}
         assert_match /File not found #{expected_files_to_sync_out_json}/, actual_error.message
       end
+    end
+  end
+
+  class DeleteEmptyCrowdinLocaleDir < Minitest::Test
+    def test_when_crowdin_locale_dir_is_empty_deletes_the_dir
+      expected_crowdin_locale = 'expected_crowdin_locale'
+      expected_empty_crowdin_locale_dir = CDO.dir('i18n/locales/expected_crowdin_locale')
+
+      Dir.expects(:empty?).with(expected_empty_crowdin_locale_dir).once.returns(true)
+      FileUtils.expects(:rm_r).with(expected_empty_crowdin_locale_dir).once
+
+      I18nScriptUtils.delete_empty_crowdin_locale_dir(expected_crowdin_locale)
+    end
+
+    def test_when_crowdin_locale_dir_is_not_empty_does_not_delete_the_dir
+      expected_crowdin_locale = 'expected_crowdin_locale'
+      expected_empty_crowdin_locale_dir = CDO.dir('i18n/locales/expected_crowdin_locale')
+
+      Dir.expects(:empty?).with(expected_empty_crowdin_locale_dir).once.returns(false)
+      FileUtils.expects(:rm_r).with(expected_empty_crowdin_locale_dir).never
+
+      I18nScriptUtils.delete_empty_crowdin_locale_dir(expected_crowdin_locale)
     end
   end
 end

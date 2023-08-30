@@ -376,4 +376,9 @@ class I18nScriptUtils
   def self.process_in_threads(data_array, **args)
     Parallel.each(data_array, **args, in_threads: PARALLEL_PROCESSES) {|data| yield(data)}
   end
+
+  def self.delete_empty_crowdin_locale_dir(crowdin_locale)
+    crowdin_locale_dir = CDO.dir(File.join(I18N_LOCALES_DIR, crowdin_locale))
+    FileUtils.rm_r(crowdin_locale_dir) if Dir.empty?(crowdin_locale_dir)
+  end
 end
