@@ -78,7 +78,7 @@ class ProgrammingClassTest < ActiveSupport::TestCase
     method_summary = programming_class.summarize_programming_methods
 
     assert_equal 3, method_summary.length
-    assert_equal [programming_method1.key, programming_method2.key, programming_method3.key], method_summary.map {|m| m[:key]}
+    assert_equal([programming_method1.key, programming_method2.key, programming_method3.key], method_summary.map {|m| m[:key]})
     assert_equal 2, method_summary[0][:overloads].length
     assert_equal 1, method_summary[1][:overloads].length
     assert_equal 0, method_summary[2][:overloads].length
