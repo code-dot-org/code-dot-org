@@ -10,11 +10,13 @@ const referenceGuideShape = PropTypes.shape({
 });
 
 export default function ReferenceGuide({referenceGuide}) {
+  const inIframe = !!window.frameElement;
   return (
     <div>
       <EnhancedSafeMarkdown
         markdown={referenceGuide.content}
         className="docs-pages"
+        openExternalLinksInNewTab={inIframe}
       />
       <EnhancedSafeMarkdown
         markdown={i18n.documentationBug()}
