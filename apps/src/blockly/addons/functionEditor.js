@@ -61,7 +61,7 @@ export default class FunctionEditor {
       'functionDescriptionText'
     );
     this.functionDescriptionInput.addEventListener('input', () => {
-      // TODO: Save the description to the procedure model
+      this.block.description = this.functionDescriptionInput.value;
     });
 
     // Delete handler
@@ -127,7 +127,6 @@ export default class FunctionEditor {
     Blockly.Events.enable();
 
     this.nameInput.value = procedure.getName();
-    // TODO: populate description
 
     this.dom.style.display = 'block';
     Blockly.common.svgResize(this.editorWorkspace);
@@ -169,6 +168,7 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
     }
+    this.functionDescriptionInput.value = this.block.description;
   }
 
   /**
