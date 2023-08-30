@@ -18,7 +18,7 @@ class CleverSectionTest < ActiveSupport::TestCase
     assert_nil section.students.first.family_name
 
     assert_no_difference 'User.count' do
-      # Should find the existing Google Classroom section.
+      # Should find the existing Clever section.
       section_2 = CleverSection.from_service('101', owner.id, student_list, 'Clever Section B')
       assert_equal section.id, section_2.id
 
@@ -46,7 +46,7 @@ class CleverSectionTest < ActiveSupport::TestCase
     assert_equal 'Smith', section.students.first.family_name
 
     assert_no_difference 'User.count' do
-      # Should find the existing Google Classroom section.
+      # Should find the existing Clever section.
       section_2 = CleverSection.from_service('101', owner.id, student_list, 'Clever Section B')
       assert_equal section.id, section_2.id
 
