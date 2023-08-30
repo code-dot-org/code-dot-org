@@ -341,7 +341,7 @@ class ManageStudentsTable extends Component {
 
   familyNameFormatter(familyName, {rowData}) {
     const editedValue = rowData.isEditing ? rowData.editingData.familyName : '';
-    const inputDisabled = this.isTeacher(rowData.userType);
+    const isTeacher = this.isTeacher(rowData.userType);
     return (
       <ManageStudentsFamilyNameCell
         id={rowData.id}
@@ -349,7 +349,7 @@ class ManageStudentsTable extends Component {
         isEditing={rowData.isEditing}
         editedValue={editedValue}
         sectionId={rowData.sectionId}
-        inputDisabled={inputDisabled}
+        inputDisabled={isTeacher}
       />
     );
   }
