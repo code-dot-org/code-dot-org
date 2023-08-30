@@ -27,6 +27,7 @@
 class Dancelab < GamelabJr
   serialized_attrs %w(
     default_song
+    uses_lab2
   )
 
   def self.skins
@@ -58,7 +59,22 @@ class Dancelab < GamelabJr
     true
   end
 
+  def uses_lab2?
+    uses_lab2
+  end
+
   def common_blocks(type)
+  end
+
+  def use_restricted_songs
+    dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
+    CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
+  end
+
+  def summarize_for_lab2_properties
+    properties = super
+    properties['useRestrictedSongs'] = use_restricted_songs
+    properties
   end
 
   # Used by levelbuilders to set a default song on a Dance Party level.

@@ -1,0 +1,58 @@
+@import 'color.scss';
+
+.danceLab {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+
+.visualizationArea {
+  flex: 0;
+  height: 100%;
+  background-color: $neutral_dark10;
+}
+
+.visualizationColumn {
+  margin: 2px 5px;
+}
+
+.visualization {
+  // create constants
+  width: 400px;
+  height: 400px;
+  background-color: $neutral_white;
+}
+
+.workArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.instructionsArea {
+  flex: 0;
+}
+
+.workspaceArea {
+  flex: 1;
+}
+
+.loadingContainer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease-in;
+
+  &Show {
+    opacity: 1;
+  }
+}
+
+.loadingGif {
+  width: 100px;
+  height: 100px;
+}
