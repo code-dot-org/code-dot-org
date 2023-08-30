@@ -189,6 +189,9 @@ export const blocks = {
         block.getFieldValue('NAME'),
         Blockly.Names.NameType.PROCEDURE
       );
+
+      // Holds the additional code that is prefixed (injected before every statement) and/or
+      // suffixed (injected after every statement) to the main block of code
       let xfix1 = '';
       if (generator.STATEMENT_PREFIX) {
         xfix1 += generator.injectId(generator.STATEMENT_PREFIX, block);
@@ -206,12 +209,15 @@ export const blocks = {
           generator.INDENT
         );
       }
+
+      // Translate all the inner blocks within the current block into code
       const branch = generator.statementToCode(block, 'STACK');
       let returnValue =
         generator.valueToCode(block, 'RETURN', generator.ORDER_NONE) || '';
+
+      // Contains the same code as xfix1 if both are present, but applied before the return statement
       let xfix2 = '';
       if (branch && returnValue) {
-        // After executing the function body, revisit this block for the return.
         xfix2 = xfix1;
       }
       if (returnValue) {
