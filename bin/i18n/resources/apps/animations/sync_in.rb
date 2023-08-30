@@ -22,7 +22,7 @@ module I18n
             FileUtils.mkdir_p(I18N_SOURCE_DIR_PATH)
             progress_bar.progress = 1
 
-            animation_strings = sprintlab_manifest_builder.get_animation_strings
+            animation_strings = spritelab_manifest_builder.get_animation_strings
             progress_bar.progress = 95
 
             File.write(File.join(I18N_SOURCE_DIR_PATH, SPRITELAB_FILE_NAME), JSON.pretty_generate(animation_strings))
@@ -32,15 +32,12 @@ module I18n
 
           private
 
-          def sprintlab_manifest_builder
-            @sprintlab_manifest_builder ||= ManifestBuilder.new({spritelab: true, quiet: true})
+          def spritelab_manifest_builder
+            @spritelab_manifest_builder ||= ManifestBuilder.new({spritelab: true, quiet: true})
           end
 
           def progress_bar
-            @progress_bar ||= ProgressBar.create(
-              title: 'Apps/animations sync-in',
-              format: I18nScriptUtils::PROGRESS_BAR_FORMAT,
-            )
+            @progress_bar ||= I18nScriptUtils.create_progress_bar(title: 'Apps/animations sync-in')
           end
         end
       end

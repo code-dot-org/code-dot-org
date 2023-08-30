@@ -5,6 +5,7 @@ require 'cdo/honeybadger'
 require 'cgi'
 require 'fileutils'
 require 'psych'
+require 'ruby-progressbar'
 
 I18N_LOCALES_DIR = 'i18n/locales'.freeze
 I18N_SOURCE_DIR = File.join(I18N_LOCALES_DIR, 'source').freeze
@@ -364,5 +365,9 @@ class I18nScriptUtils
   # @return [String] the BCP 47 (IETF language tag) JS format (e.g., 'en_us')
   def self.to_js_locale(locale)
     locale.tr('-', '_').downcase
+  end
+
+  def self.create_progress_bar(**args)
+    ProgressBar.create(**args, format: PROGRESS_BAR_FORMAT)
   end
 end
