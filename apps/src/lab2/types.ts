@@ -171,6 +171,7 @@ export type ProjectType =
 
 export type AppName =
   | 'aichat'
+  | 'aidance'
   | 'applab'
   | 'calc'
   | 'dance'
