@@ -165,6 +165,18 @@ class ScriptLevelsController < ApplicationController
     @body_classes = @level.properties['background']
 
     @rubric = @script_level.lesson.rubric
+    if @rubric
+      @rubric_data = {rubric: @rubric.summarize}
+      if @script_level.lesson.rubric && view_as_other
+        viewing_user_level = @view_as_user.user_levels.find_by(script: @script_level.script, level: @level)
+        @rubric_data[:studentLevelInfo] = {
+          name: @view_as_user.name,
+          attempts: viewing_user_level&.attempts,
+          timeSpent: viewing_user_level&.time_spent,
+          lastAttempt: viewing_user_level&.updated_at,
+        }
+      end
+    end
 
     present_level
   end
