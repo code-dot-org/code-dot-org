@@ -1,10 +1,13 @@
 /**
- * This is a direct copy of `procedureDefMutator` from @blockly/block-shareable-procedures
- * with the compose() and decompose() methods removed. These methods automatically
+ * This is a modified version of `procedureDefMutator` from @blockly/block-shareable-procedures.
+ * We removed compose() and decompose() methods. These methods automatically
  * add a gear icon UI that we do not want. A future version of the plugin will
  * export this mutator (and other extensions), but this will require bumping to
- * Blockly v10.
- * TODO: Once we are on Blockly v10, remove this file.
+ * Blockly v10. We also updated the mutation and extra state methods to save the function's
+ * description.
+ * TODO: Once we are on Blockly v10, we can simplify this by importing `procedureDefMutator`
+ * from @blockly/block-shareable-procedures and calling the duplicated methods inside our versions of them.
+ * This will allow us to get rid of duplicated code.
  */
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
