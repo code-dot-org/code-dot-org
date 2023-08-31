@@ -22,7 +22,6 @@ describe('TeacherApplication', () => {
     apiEndpoint: '/path/to/endpoint',
     options: fakeOptions,
     accountEmail: 'user@email.com',
-    userId: 1,
     errors: [],
     data: {},
     onChange: () => {},
