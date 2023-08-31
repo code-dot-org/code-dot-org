@@ -36,11 +36,11 @@ class ManageStudentGenderCellLegacy extends Component {
         {!this.props.isEditing && <div>{GENDERS[this.props.gender]}</div>}
         {this.props.isEditing && (
           <select
+            style={{width: 120, marginBottom: 0}}
             ref={element => (this.root = element)}
             name="gender"
             value={this.props.editedValue}
             onChange={this.onChangeGender}
-            style={{width: 120}}
           >
             {Object.keys(GENDERS).map(gender => (
               <option key={gender} value={gender}>
