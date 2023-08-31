@@ -16,7 +16,6 @@ import {
   LevelProperties,
   ProjectManagerStorageType,
   ProjectSources,
-  ProjectLevelData,
 } from './types';
 import Lab2Registry from './Lab2Registry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
@@ -27,12 +26,19 @@ import {
   setProjectUpdatedSaved,
 } from '../code-studio/projectRedux';
 import ProjectManager from './projects/ProjectManager';
-import HttpClient from '../util/HttpClient';
+import HttpClient, {NetworkError} from '../util/HttpClient';
 import {
   getInitialValidationState,
   ValidationState,
 } from './progress/ProgressManager';
 import {LevelPropertiesValidator} from './responseValidators';
+import Lab2MetricsReporter from './Lab2MetricsReporter';
+
+interface PageError {
+  errorMessage: string;
+  error?: Error;
+  details?: object;
+}
 
 export interface LabState {
   // If we are currently loading common data for a project or level. Should only be used internally
@@ -41,13 +47,7 @@ export interface LabState {
   // If the lab is loading. Can be updated by lab-specific components.
   isLoading: boolean;
   // Error currently on the page, if present.
-  pageError:
-    | {
-        errorMessage: string;
-        error?: Error;
-        details?: object;
-      }
-    | undefined;
+  pageError: PageError | undefined;
   // channel for the current project, or undefined if there is no current project.
   channel: Channel | undefined;
   // Initial sources for the current level, as loaded from the server. Subsequent changes to sources
@@ -88,55 +88,74 @@ export const setUpWithLevel = createAsyncThunk(
     },
     thunkAPI
   ) => {
-    await cleanUpProjectManager();
+    try {
+      // Update properties for reporting as early as possible in case of errors.
+      Lab2MetricsReporter.updateProperties({
+        currentLevelId: payload.levelId,
+        scriptId: payload.scriptId,
+        channelId: payload.channelId,
+      });
 
-    // Load level properties if we have a levelPropertiesPath.
-    const levelProperties = await loadLevelProperties(
-      payload.levelPropertiesPath
-    );
+      await cleanUpProjectManager();
 
-    const {isProjectLevel, disableProjects} = levelProperties;
+      // Load level properties if we have a levelPropertiesPath.
+      const levelProperties = await loadLevelProperties(
+        payload.levelPropertiesPath
+      );
 
-    if (disableProjects) {
-      // If projects are disabled on this level, we can skip loading projects data.
+      Lab2MetricsReporter.updateProperties({appName: levelProperties.appName});
+
+      const {isProjectLevel, disableProjects} = levelProperties;
+
+      if (disableProjects) {
+        // If projects are disabled on this level, we can skip loading projects data.
+        setProjectAndLevelData(
+          {levelProperties},
+          thunkAPI.signal.aborted,
+          thunkAPI.dispatch
+        );
+        return;
+      }
+
+      // Create a new project manager. If we have a channel id,
+      // default to loading the project for that channel. Otherwise
+      // create a project manager for the given level and script id.
+      const projectManager =
+        payload.channelId && isProjectLevel
+          ? ProjectManagerFactory.getProjectManager(
+              ProjectManagerStorageType.REMOTE,
+              payload.channelId
+            )
+          : await ProjectManagerFactory.getProjectManagerForLevel(
+              ProjectManagerStorageType.REMOTE,
+              payload.levelId,
+              payload.scriptId
+            );
+      // Only set the project manager and initiate load
+      // if this request hasn't been cancelled.
+      if (thunkAPI.signal.aborted) {
+        return;
+      }
+
+      // Set channel ID for reporting in case we hit an error and can't update the store.
+      Lab2MetricsReporter.updateProperties({
+        channelId: projectManager.getChannelId(),
+      });
+
+      Lab2Registry.getInstance().setProjectManager(projectManager);
+      // Load channel and source.
+      const {sources, channel} = await setUpAndLoadProject(
+        projectManager,
+        thunkAPI.dispatch
+      );
       setProjectAndLevelData(
-        {levelProperties},
+        {initialSources: sources, channel, levelProperties},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch
       );
-      return;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
     }
-
-    // Create a new project manager. If we have a channel id,
-    // default to loading the project for that channel. Otherwise
-    // create a project manager for the given level and script id.
-    const projectManager =
-      payload.channelId && isProjectLevel
-        ? ProjectManagerFactory.getProjectManager(
-            ProjectManagerStorageType.REMOTE,
-            payload.channelId
-          )
-        : await ProjectManagerFactory.getProjectManagerForLevel(
-            ProjectManagerStorageType.REMOTE,
-            payload.levelId,
-            payload.scriptId
-          );
-    // Only set the project manager and initiate load
-    // if this request hasn't been cancelled.
-    if (thunkAPI.signal.aborted) {
-      return;
-    }
-    Lab2Registry.getInstance().setProjectManager(projectManager);
-    // Load channel and source.
-    const {sources, channel} = await setUpAndLoadProject(
-      projectManager,
-      thunkAPI.dispatch
-    );
-    setProjectAndLevelData(
-      {initialSources: sources, channel, levelProperties},
-      thunkAPI.signal.aborted,
-      thunkAPI.dispatch
-    );
   }
 );
 
@@ -149,29 +168,39 @@ export const setUpWithLevel = createAsyncThunk(
 export const setUpWithoutLevel = createAsyncThunk(
   'lab/setUpWithoutLevel',
   async (payload: {channelId: string; appName: AppName}, thunkAPI) => {
-    await cleanUpProjectManager();
+    try {
+      // Update properties for reporting as early as possible in case of errors.
+      Lab2MetricsReporter.updateProperties({
+        channelId: payload.channelId,
+        appName: payload.appName,
+      });
 
-    // Create the new project manager.
-    const projectManager = ProjectManagerFactory.getProjectManager(
-      ProjectManagerStorageType.REMOTE,
-      payload.channelId
-    );
-    Lab2Registry.getInstance().setProjectManager(projectManager);
+      await cleanUpProjectManager();
 
-    // Load channel and source.
-    const {sources, channel} = await setUpAndLoadProject(
-      projectManager,
-      thunkAPI.dispatch
-    );
-    setProjectAndLevelData(
-      {
-        initialSources: sources,
-        channel,
-        levelProperties: {appName: payload.appName},
-      },
-      thunkAPI.signal.aborted,
-      thunkAPI.dispatch
-    );
+      // Create the new project manager.
+      const projectManager = ProjectManagerFactory.getProjectManager(
+        ProjectManagerStorageType.REMOTE,
+        payload.channelId
+      );
+      Lab2Registry.getInstance().setProjectManager(projectManager);
+
+      // Load channel and source.
+      const {sources, channel} = await setUpAndLoadProject(
+        projectManager,
+        thunkAPI.dispatch
+      );
+      setProjectAndLevelData(
+        {
+          initialSources: sources,
+          channel,
+          levelProperties: {appName: payload.appName},
+        },
+        thunkAPI.signal.aborted,
+        thunkAPI.dispatch
+      );
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
   }
 );
 
@@ -249,10 +278,10 @@ const labSlice = createSlice({
       // action was not aborted.
       if (!action.meta.aborted) {
         state.isLoadingProjectOrLevel = false;
-        state.pageError = {
-          errorMessage: 'setUpWithLevel failed',
-          error: action.error as Error,
-        };
+        state.pageError = getErrorFromThunkAction(
+          action,
+          'setUpWithLevel failed'
+        );
       }
     });
     builder.addCase(setUpWithLevel.pending, state => {
@@ -263,14 +292,14 @@ const labSlice = createSlice({
     });
     builder.addCase(setUpWithoutLevel.rejected, (state, action) => {
       // If the set up was aborted, that means another load got started
-      // before we finished. Therefore we only set loading to false if the
-      // action was not aborted.
+      // before we finished. Therefore we only set loading to false
+      // and set the page error if the action was not aborted.
       if (!action.meta.aborted) {
         state.isLoadingProjectOrLevel = false;
-        state.pageError = {
-          errorMessage: 'setUpWithoutLevel failed',
-          error: action.error as Error,
-        };
+        state.pageError = getErrorFromThunkAction(
+          action,
+          'setUpWithoutLevel failed'
+        );
       }
     });
     builder.addCase(setUpWithoutLevel.pending, state => {
@@ -278,6 +307,43 @@ const labSlice = createSlice({
     });
   },
 });
+
+// Retrieve error details from a thunk action payload.
+function getErrorFromThunkAction(
+  action: AnyAction,
+  defaultErrorMessage: string
+): PageError {
+  let errorMessage, error, details;
+
+  if (action.meta.rejectedWithValue) {
+    const payloadError = action.payload as Error;
+    errorMessage = payloadError.message;
+    error = payloadError;
+
+    // Get additional details if the error or its cause is a network error.
+    let networkError = undefined;
+    if (payloadError instanceof NetworkError) {
+      networkError = payloadError;
+    } else if (
+      payloadError.cause &&
+      payloadError.cause instanceof NetworkError
+    ) {
+      networkError = payloadError.cause;
+    }
+    if (networkError) {
+      details = networkError.getDetails();
+    }
+  } else {
+    errorMessage = defaultErrorMessage;
+    error = action.error as Error;
+  }
+
+  return {
+    errorMessage,
+    error,
+    details,
+  };
+}
 
 // Helper function to add event listeners to the project manager
 // and load the project. Returns the project load response.

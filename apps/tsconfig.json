@@ -17,12 +17,12 @@
     "./src/code-studio/pd/components/*.js*",
     "./src/code-studio/*.js",
     "./test/**/*.ts",
-    "./test/**/*.tsx",
+    "./test/**/*.tsx"
   ],
   "compilerOptions": {
     "jsx": "react",
     "target": "es5",
-    "lib": ["ES2019", "DOM"],
+    "lib": ["ES2022", "DOM"],
     "module": "es6",
     "rootDir": "./",
     "moduleResolution": "node",
