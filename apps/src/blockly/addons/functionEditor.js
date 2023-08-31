@@ -7,6 +7,7 @@ import {
   MODAL_EDITOR_CLOSE_ID,
   MODAL_EDITOR_DELETE_ID,
   MODAL_EDITOR_NAME_INPUT_ID,
+  MODAL_EDITOR_DESCRIPTION_INPUT_ID,
 } from './functionEditorConstants';
 
 // This class is a work in progress. It is used for the modal function editor,
@@ -58,10 +59,11 @@ export default class FunctionEditor {
 
     // Description handler
     this.functionDescriptionInput = document.getElementById(
-      'functionDescriptionText'
+      MODAL_EDITOR_DESCRIPTION_INPUT_ID
     );
-    this.functionDescriptionInput.addEventListener('input', () => {
-      // TODO: Save the description to the procedure model
+    this.functionDescriptionInput.addEventListener('input', e => {
+      this.block.description = e.target.value;
+      this.updateHiddenDefinitionDescription();
     });
 
     // Delete handler
@@ -127,7 +129,6 @@ export default class FunctionEditor {
     Blockly.Events.enable();
 
     this.nameInput.value = procedure.getName();
-    // TODO: populate description
 
     this.dom.style.display = 'block';
     Blockly.common.svgResize(this.editorWorkspace);
@@ -142,10 +143,14 @@ export default class FunctionEditor {
       const existingData = Blockly.serialization.blocks.save(
         existingProcedureBlock
       );
+      // Disable events here so we don't copy an existing block into the hidden definition
+      // workspace.
+      Blockly.Events.disable();
       this.block = Blockly.serialization.blocks.append(
         this.addEditorWorkspaceBlockConfig(existingData),
         this.editorWorkspace
       );
+      Blockly.Events.enable();
     } else {
       // Otherwise, we need to create a new block from scratch.
       const newDefinitionBlock = {
@@ -165,6 +170,7 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
     }
+    this.functionDescriptionInput.value = this.block.description || '';
   }
 
   /**
@@ -198,10 +204,9 @@ export default class FunctionEditor {
       Blockly.getHiddenDefinitionWorkspace(),
       name
     );
-    const mainProcedure = new ObservableProcedureModel(
+    const mainProcedure = this.createProcedureModelForWorkspace(
       Blockly.mainBlockSpace,
-      hiddenProcedure.getName(),
-      hiddenProcedure.getId()
+      hiddenProcedure
     );
 
     // Add the model to the procedure and main workspaces so we know
@@ -221,11 +226,11 @@ export default class FunctionEditor {
     // we don't need to mirror this event as we set up the procedure
     // in the other workspaces above.
     Blockly.Events.disable();
-    const editorProcedureModel = new ObservableProcedureModel(
+    const editorProcedureModel = this.createProcedureModelForWorkspace(
       this.editorWorkspace,
-      hiddenProcedure.getName(),
-      hiddenProcedure.getId()
+      hiddenProcedure
     );
+
     this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
     Blockly.Events.enable();
 
@@ -355,5 +360,48 @@ export default class FunctionEditor {
         id: procedure.getId(),
       },
     };
+  }
+
+  // Copy all procedure models from the hidden definition workspace to the editor workspace,
+  // if they are not already present in the editor workspace.
+  // This is needed when the hidden definition workspace is initialized with at least one
+  // procedure, so that the editor workspace knows about those procedures.
+  setUpEditorWorkspaceProcedures() {
+    Blockly.Events.disable();
+    const editorProcedureMap = this.editorWorkspace.getProcedureMap();
+    const hiddenProcedureDefinitions = Blockly.getHiddenDefinitionWorkspace()
+      .getProcedureMap()
+      .getProcedures();
+    hiddenProcedureDefinitions.forEach(procedure => {
+      const procedureId = procedure.getId();
+      if (!editorProcedureMap.has(procedureId)) {
+        const procedureModel = this.createProcedureModelForWorkspace(
+          this.editorWorkspace,
+          procedure
+        );
+        this.editorWorkspace.getProcedureMap().add(procedureModel);
+      }
+    });
+    Blockly.Events.enable();
+  }
+
+  createProcedureModelForWorkspace(workspace, procedure) {
+    return new ObservableProcedureModel(
+      workspace,
+      procedure.getName(),
+      procedure.getId()
+    );
+  }
+
+  updateHiddenDefinitionDescription() {
+    const topBlocks = Blockly.getHiddenDefinitionWorkspace().getTopBlocks();
+    const blockToUpdate = topBlocks.find(
+      topBlock =>
+        topBlock.getProcedureModel().getId() ===
+        this.block.getProcedureModel().getId()
+    );
+    if (blockToUpdate) {
+      blockToUpdate.description = this.block.description;
+    }
   }
 }

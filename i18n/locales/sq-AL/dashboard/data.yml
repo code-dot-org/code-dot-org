@@ -166,7 +166,7 @@ sq:
         jigsaw_4: Rregullo blloqet për të formuar imazhin
         jigsaw_5: Rregullo blloqet për të formuar imazhin
         jigsaw_6: Rregullo blloqet për të formuar imazhin
-        jigsaw_7: Rregulloni blloqet për të formuar imazhin
+        jigsaw_7: Rregullo blloqet për të formuar imazhin
         jigsaw_8: Rregullo blloqet për të formuar imazhin
         jigsaw_9: Rregullo blloqet për të formuar imazhin
         jigsaw_10: Rregullo blloqet për të formuar imazhin
@@ -352,8 +352,10 @@ sq:
         C4_unplugged_forloops: Për Ciklet
         C4_unplugged_parameters: Të shkruarit këngë me Parametra
         C4_unplugged_binary: Binare
-        CSF_debugging_k1_blocks: Rregullimi
-        CSF_debugging_text_blocks: Rregullimi
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
+        CSF_maze_intro_k1_blocks: Hyrje Code Studio
+        CSF_maze_intro_text_blocks: Hyrje Code Studio
         CSF_my_robotic_friends: Shokët e mi robotik
         frozen_intro: Hyrja e Orës së Kodimit
         frozen_loops: Hyrja tek Ciklet
@@ -400,7 +402,7 @@ sq:
         csd_applab_parameters: Funksionet me parametra
         CSF_SpriteLab_Intro_v2: Prezantimi i Sprite Lab
         CSF_SpriteLab_SpritesInAction_v2: Sprites në veprim
-        csd_debugging: Rregullimi
+        csd_debugging: Debugging
         oceans_machine_learning: Mësimi i Makinave
         playlab_2021: Hyrje në Play Lab
         playlab_2021_reader: Hyrje në Play Lab

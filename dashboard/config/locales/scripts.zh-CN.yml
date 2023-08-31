@@ -1875,6 +1875,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-6:
               display_name: 单位结束调查
+            lessonGroup-7:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 欢迎来到 CSA
@@ -1990,6 +1992,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 属性
@@ -2005,6 +2009,8 @@ zh-CN:
               name: 这个关键字
             lesson-15:
               name: 第 2 单元调查
+            lesson-17:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 无参数构造函数
             lesson-3:
@@ -2088,6 +2094,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 一维（1D）数组
@@ -2101,6 +2109,8 @@ zh-CN:
               name: 社会公益项目数据 [1 天版]
             lesson-14:
               name: 第 3 单元调查
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 修改元素
             lesson-3:
@@ -2180,6 +2190,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 抽象数据艺术项目 [1 天版]
@@ -2195,6 +2207,8 @@ zh-CN:
               name: 多选声明
             lesson-15:
               name: 第 4 单元调查
+            lesson-17:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 抽象数据艺术项目
             lesson-3:
@@ -2285,6 +2299,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 二维 (2D) 数组
@@ -2298,6 +2314,8 @@ zh-CN:
               name: 个人叙事项目 [1 天版]
             lesson-14:
               name: 第 5 单元调查
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 2D 数组元素
             lesson-3:
@@ -2379,6 +2397,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 项目规划
@@ -2392,6 +2412,8 @@ zh-CN:
               name: 自然语言处理项目 [1 天版]
             lesson-14:
               name: 第 6 单元调查
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 子字符串
             lesson-3:
@@ -2476,6 +2498,8 @@ zh-CN:
               display_name: 单位结束调查
             lessonGroup-5:
               display_name: 替补课程
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 项目规划
@@ -2489,6 +2513,8 @@ zh-CN:
               name: 第 7 单元调查
             lesson-14:
               name: 剧院项目中的创意编程 [1 天版]
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 作为参数的对象引用
             lesson-3:
@@ -2591,6 +2617,8 @@ zh-CN:
               display_name: 调查
             lessonGroup-5:
               display_name: 替补课程
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 项目规划
@@ -2602,6 +2630,8 @@ zh-CN:
               name: 第 8 单元评估
             lesson-13:
               name: 使用控制台项目进行创意编程 [1 天版]
+            lesson-15:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 正在搜索
             lesson-3:
@@ -2692,6 +2722,11 @@ zh-CN:
               display_name: 复习与练习
             lessonGroup-3:
               display_name: 模拟考试
+            lessonGroup-4:
+              display_name: 沙箱
+          lessons:
+            lesson-2:
+              name: 沥青艺术项目 — 第 2 天
           student_description: 本单元通过复习关键概念、练习多选题和自由答题以及强化应试策略，为你准备 AP CSA 考试做好准备。您可以确定优势和需要改进的领域，从而制定个性化的学习计划，集中精力练习并自我评估自己的进度。
         csa9-pilot:
           lesson_groups:

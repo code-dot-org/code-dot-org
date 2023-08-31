@@ -625,9 +625,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal [0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count.map {|w| w.enrollments.count}
-    assert_equal [0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
-    assert_equal [2, 1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
+    assert_equal([0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count.map {|w| w.enrollments.count})
+    assert_equal([0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count})
+    assert_equal([2, 1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count})
   end
 
   test 'order_by_enrollment_count with duplicates' do
@@ -640,8 +640,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal [0, 0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
-    assert_equal [1, 0, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
+    assert_equal([0, 0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count})
+    assert_equal([1, 0, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count})
   end
 
   test 'order_by_state' do

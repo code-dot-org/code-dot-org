@@ -265,6 +265,8 @@ de:
   call_to_action_learn_about_approach: Erfahren Sie mehr über unser Herangehen
   call_to_action_try_java_lab: Testen Sie Java Lab
   call_to_action_notify_available: Benachrichtige mich, wenn verfügbar
+  call_to_action_register_early_access: Registrieren Sie sich für den Early-Access
+  call_to_action_open_positions: Offene Stellen ansehen
   aria_label_call_to_action_afe: Erfahren Sie mehr über Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Starten Sie das professionelle Lernprogramm
     Teaching Computer Science Fundamentals
@@ -13706,6 +13708,127 @@ de:
   accessibility_card_text_10: Angepasster Lehrplan für Grundsätze der Informatik (AP
     CSP) von Code.org unter Verwendung von Quorum, einer evidenzbasierten Sprache,
     die ursprünglich für blinde oder sehbehinderte Schüler entwickelt worden ist.
+  engineering_hero_heading: Treten Sie unserem Engineering-Team bei!
+  engineering_hero_desc: Während wir unser Engineering-Team weiter ausbauen, wollten
+    wir mehr über unsere technische Organisation auf Code.org und einige der einzigartigen
+    Aspekte der Arbeit hier erzählen. Wenn Sie daran interessiert sind, sich für eine
+    unserer Stellen zu bewerben, würden wir uns freuen, von Ihnen zu hören!
+  engineering_team_title: Lernen Sie das Engineering-Team von Code.org kennen
+  engineering_team_card_text_1: Das sind (die meisten) von uns bei unserem persönlichen
+    Treffen im Sommer 2023! Diese Gruppe ist in vier Unterteams innerhalb unseres
+    Engineering-Teams aufgeteilt, die zusammenarbeiten, um die Plattform für all unsere
+    Schüler und Lehrer aufzubauen und bereitzustellen.
+  engineering_team_card_text_2: Wenn Sie daran interessiert sind, sich für eine unserer
+    Stellen zu bewerben, würden wir uns freuen, von Ihnen zu hören! Eine Liste der
+    offenen Stellen finden Sie auf unserer Karriereseite.
+  engineering_our_team_title: Unser Engineering-Team
+  engineering_our_team_desc: 'Das Engineering-Team von Code.org ist in vier Unterteams
+    aufgeteilt, die verschiedene Bereiche unserer Plattform entwickeln und unterstützen:'
+  engineering_our_team_sub_title_1: Lernteam für Studierende
+  engineering_our_team_text_1: Unser Student Learning Team ist verantwortlich für
+    all unsere Aktivitäten (wir nennen sie Labs), die unsere Schüler täglich nutzen.
+    Dieses Team arbeitet hauptsächlich an Frontend-Technologie (wir verwenden React
+    und viel benutzerdefiniertes JS) und wir haben eine hervorragende Zusammenarbeit
+    mit vielen Partnern und Open-Source-Projekten. Zum Beispiel verwenden wir [Blockly
+    von Google] (%{youtube_url}) für unsere gesamte blockbasierte Programmierung.
+    Wir unterstützen Schüler auf ihrer Lernreise vom Kindergarten bis zur 12. Klasse.
+  engineering_our_team_sub_title_2: Team für Lehrererfahrung
+  engineering_our_team_text_2: Unser Teacher Experience Team entwickelt die Tools,
+    die neue Lehrer für Code.org gewinnen (wir nennen diese Akquisitionsprodukte)
+    und entwickelt die Plattform, die es unseren bestehenden Lehrern ermöglicht, unseren
+    Lehrplan zu unterrichten (unsere Lehrer-Tools). Wie bei unseren Tools für Schüler
+    verlassen wir uns auf React, um unser Frontend zu erstellen, und unsere serverseitigen
+    Komponenten werden mit Ruby on Rails bereitgestellt.
+  engineering_our_team_sub_title_3: Plattform-Team
+  engineering_our_team_text_3: Unser Plattformteam besitzt Kernkomponenten, die den
+    Bedürfnissen unserer Schüler- und Lehrerteams gerecht werden (z. B. Authentifizierung
+    und Benutzerprofil), und hat auch die Mission, Schüler zu erreichen, die wir noch
+    nicht erreichen können. Dazu gehört der Aufbau von Integrationen, die uns mit
+    Schulen verbinden, die unterschiedliche Lernmanagementsysteme (LMS) verwenden,
+    und die Zusammenstellung unseres Lehrplans, sodass er an abgelegenen Schulen verwendet
+    werden kann, die keinen Zugang zu einem zuverlässigen Internet haben.
+  engineering_our_team_sub_title_4: Infrastruktur-Team
+  engineering_our_team_text_4: Unser Infrastrukturteam bildet das Rückgrat für die
+    Plattform, die unsere Schüler und Lehrer unterstützt. Dazu gehören unsere Hosting-Infrastruktur
+    und zugehörige Dienste (wir verwenden AWS), Datenmanagement, Sicherheitsprogramme,
+    Entwickler- und Bereitstellungsservices und vieles mehr. Diesem Team gehören auch
+    unsere Skalierungs- und Bereitstellungssysteme, die während der Hour of Code von
+    entscheidender Bedeutung sind. Wir laden alle Studenten auf der Welt ein, gemeinsam
+    mit uns eine Stunde Programmieren zu absolvieren.
+  engineering_faq_question_1: Was macht Code.org?
+  engineering_faq_answer_1_a: Code.org ist eine gemeinnützige Organisation für Innovation
+    im Bildungswesen, die sich der Vision verschrieben hat, dass jeder Schüler an
+    jeder Schule die Möglichkeit hat, Informatik als Teil seiner K-12-Kernausbildung
+    zu lernen.
+  engineering_faq_answer_1_b: Wir erweitern den Zugang zu Informatik an Schulen, wobei
+    der Schwerpunkt auf der Erhöhung der Beteiligung junger Frauen und Schüler aus
+    anderen unterrepräsentierten Gruppen liegt. Code.org ist der führende Anbieter
+    von Informatik-Lehrplänen für Grundschulen bis 12 in den größten Schulbezirken
+    der Vereinigten Staaten und organisiert auch die jährliche Hour of Code-Kampagne,
+    an der mehr als 15% aller Schüler der Welt teilnahmen.
+  engineering_faq_answer_1_c: Code.org wird von großzügigen Spendern wie Microsoft,
+    Amazon, Google und vielen anderen unterstützt.
+  engineering_faq_question_2: Was sind die Entwicklererfahrung und die Tools von Code.org?
+  engineering_faq_answer_2: Unsere Erfahrung als Entwickler unterscheidet sich möglicherweise
+    von der Erfahrung, die Sie in Ihren früheren Rollen gesehen haben. In enger Zusammenarbeit
+    mit unserem Produktteam liefern wir an jedem Wochentag in die Produktion und wir
+    haben unterschiedliche Taktzeiten — manchmal schreiben Sie Code, der an diesem
+    Tag live geht, manchmal arbeiten Sie an längerfristigen Projekten — und obwohl
+    wir zweiwöchige Sprints verfolgen, tun wir das auf einfache Weise. Wir tendieren
+    dazu, die richtigen Dinge auf die richtige Art und Weise zu erledigen, anstatt
+    eine bestimmte Methodik puristisch zu betrachten. [Unser gesamter Code] (%{code_url})
+    ist Open Source und wir verwenden JIRA- und GitHub-Pull-Requests, um alle unsere
+    Arbeitselemente zu verfolgen. Wir legen auch großen Wert auf Qualität und Tests
+    und haben das Glück, unglaubliche Unterstützung von [SauceLabs](%{saucelabs_url})
+    zu haben, die uns helfen, unsere Suite von UI-Tests auf verschiedenen Geräten
+    der Schüler (z. B. iPads) in ihrer Cloud-Gerätefarm durchzuführen.
+  engineering_faq_question_3: Was ist die Bereitschaftsrotation von Technikern bei
+    Code.org?
+  engineering_faq_answer_3: Unser über 30 Engineering-Team teilt sich die Aufgaben
+    auf Abruf. Jeder Techniker deckt eine 24-Stunden-Schicht ab und nutzt unsere Eskalationswege
+    und Playbooks, um auf Standortausfälle oder andere Probleme vor Ort zu reagieren.
+    Wir sind stolz auf die Zuverlässigkeit unserer Website — im Durchschnitt wird
+    jeder Techniker nur einmal pro Jahr bei Problemen aktiviert, die normalerweise
+    schnell gelöst werden können. Stattdessen verbringt der „Entwickler des Tages“
+    in der Regel einen Teil seines Arbeitstages damit, die Produktionsbereitstellung
+    zu verwalten und weniger dringende Probleme zu lösen.
+  engineering_faq_question_4: Sind Sie eine ferngesteuerte /WFH-Organisation?
+  engineering_faq_answer_4_a: Ja! Im Jahr 2019, kurz vor der Pandemie, wurde Code.org
+    zu einer Organisation, die zuerst auf Remote-Zugriff setzt. Heute haben wir Ingenieure
+    in jeder Zeitzone der USA und passen die Arbeitszeiten entsprechend an. Die meisten
+    unserer Treffen finden zwischen 10 Uhr und 15 Uhr PT statt.
+  engineering_faq_answer_4_b: Wir sind uns auch bewusst, wie wertvoll persönliche
+    Zeit ist, und jedes Quartal treffen wir uns persönlich, normalerweise in Seattle.
+    Zwei dieser Veranstaltungen (wir nennen sie Kick-off Week und „Codechella“) bringen
+    alle Mitglieder der Organisation im Januar und Juni zusammen — und die Entwicklungs-
+    und Produktteams treffen sich im April und Oktober getrennt.
+  engineering_faq_answer_4_c: Wir glauben fest daran, Zeit mit unseren Schülern und
+    Lehrern zu verbringen. Daher beinhalten viele dieser Präsenzveranstaltungen Ausflüge
+    in Schulen und Klassenzimmer, um Feedback zu sammeln oder unsere Produkte auszuprobieren
+  engineering_faq_question_5: Was macht das Engineering-Team von Code.org einzigartig?
+  engineering_faq_answer_5_a: 'Neben der Lösung anspruchsvoller technischer Probleme
+    haben wir einige Dinge, die unsere Engineering-Organisation von anderen unterscheiden,
+    in denen Sie vielleicht gearbeitet haben:'
+  engineering_faq_answer_5_b_1: Wir alle teilen unsere Leidenschaft für unsere Mission.
+  engineering_faq_answer_5_b_2: Jeder von uns ist hier, um die Mission zu unterstützen,
+    den Zugang zur Informatik für alle Studierenden auf der ganzen Welt zu erweitern.
+    Wir alle haben unsere einzigartige Geschichte und Perspektive darüber, was uns
+    zu dieser Mission antreibt.
+  engineering_faq_answer_5_c_1: Wir kümmern uns sehr umeinander.
+  engineering_faq_answer_5_c_2: Wenn Ingenieure mit einem Problem zu kämpfen haben,
+    springen wir ein und helfen. Eines unserer Prinzipien ist, dass wir Probleme hart
+    angehen, aber freundlich zueinander sind. Wir fördern regelmäßig Techniker, aber
+    wir schreiben keine technisch ausgereiften Lösungen vor, nur um jemanden bei der
+    Beförderung zu unterstützen. Stattdessen investieren wir in unsere Ingenieure
+    mit einem großzügigen Budget für die berufliche Weiterentwicklung und Zugang zu
+    anderen Lernmöglichkeiten.
+  engineering_faq_answer_5_d_1: Wir arbeiten hart, setzen aber klare Grenzen.
+  engineering_faq_answer_5_d_2: Wir unterstützen Studierende auf der ganzen Welt,
+    sind aber für klare Grenzen zwischen Beruf und Privatleben verantwortlich. Wir
+    genießen mittwochs keine Treffen, nehmen unseren PTO (insgesamt 5 Wochen, was
+    eine zweiwöchige Schließung des Büros am Jahresende, auch bekannt als Winterpause),
+    freitags im Sommer einen halben Arbeitstag, auch Sommerfreitage genannt, und andere
+    großzügige Vorteile.
   language_code:
     ar: Arabisch
     az: Aserbaidschaner

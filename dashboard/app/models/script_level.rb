@@ -110,13 +110,12 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def find_experiment_level(user, section)
+  def find_experiment_level(user)
     levels.sort_by(&:created_at).find do |level|
       experiments(level).any? do |experiment_name|
         Experiment.enabled?(
           experiment_name: experiment_name,
           user: user,
-          section: section,
           script: script
         )
       end
