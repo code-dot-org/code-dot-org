@@ -5,40 +5,40 @@
   front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: 'Coming Soon'
 
-  campaign_date_start_short: "Dec. 5"
-  campaign_date_start_long: "December 5"
-  campaign_date_short: "Dec. 5-11"
-  campaign_date_full: "December 5-11"
-  campaign_date_year: "2022"
-  campaign_date_full_year: "December 5-11, 2022"
+  campaign_date_start_short: "Dec. 4"
+  campaign_date_start_long: "December 4"
+  campaign_date_short: "Dec. 4-10"
+  campaign_date_full: "December 4-10"
+  campaign_date_year: "2023"
+  campaign_date_full_year: "December 4-10, 2023"
 
-  nonus_campaign_date_start_short: "Oct. 1"
-  nonus_campaign_date_start_long: "October 1"
-  nonus_campaign_date_short: "Oct. 1 - Dec. 18"
-  nonus_campaign_date_full: "October 1 - December 18"
-  nonus_campaign_date_year: "2022"
-  nonus_campaign_date_full_year: "October 1, 2022 - December 18, 2022"
+  nonus_campaign_date_start_short: "Sept. 5"
+  nonus_campaign_date_start_long: "September 5"
+  nonus_campaign_date_short: "Sept. 5 - Dec. 17"
+  nonus_campaign_date_full: "September 5 - December 17"
+  nonus_campaign_date_year: "2023"
+  nonus_campaign_date_full_year: "September 5, 2023 - December 17, 2023"
 
-  latam_campaign_date_start_short: "Oct. 1"
-  latam_campaign_date_start_long: "October 1"
-  latam_campaign_date_short: "Oct. 1 - Dec. 18"
-  latam_campaign_date_full: "October 1 - December 18"
-  latam_campaign_date_year: "2022"
-  latam_campaign_date_full_year: "October 1, 2022 - December 18, 2022"
+  latam_campaign_date_start_short: "Sept. 5"
+  latam_campaign_date_start_long: "September 5"
+  latam_campaign_date_short: "Sept. 5 - Dec. 17"
+  latam_campaign_date_full: "September 5 - December 17"
+  latam_campaign_date_year: "2023"
+  latam_campaign_date_full_year: "September 5, 2023 - December 17, 2023"
 
-  europe_campaign_date_start_short: "Oct. 1"
-  europe_campaign_date_start_long: "October 1"
-  europe_campaign_date_short: "Oct. 1 - Dec. 18"
-  europe_campaign_date_full: "October 1 - December 18"
-  europe_campaign_date_year: "2022"
-  europe_campaign_date_full_year: "October 1, 2022 - December 18, 2022"
+  europe_campaign_date_start_short: "Sept. 5"
+  europe_campaign_date_start_long: "September 5"
+  europe_campaign_date_short: "Sept. 5 - Dec. 17"
+  europe_campaign_date_full: "September 5 - December 17"
+  europe_campaign_date_year: "2023"
+  europe_campaign_date_full_year: "September 5, 2023 - December 17, 2023"
 
-  africa_campaign_date_start_short: "Oct. 1"
-  africa_campaign_date_start_long: "October 1"
-  africa_campaign_date_short: "Oct. 1 - Dec. 18"
-  africa_campaign_date_full: "October 1 - December 18"
-  africa_campaign_date_year: "2022"
-  africa_campaign_date_full_year: "October 1, 2022 - December 18, 2022"
+  africa_campaign_date_start_short: "Sept. 5"
+  africa_campaign_date_start_long: "September 5"
+  africa_campaign_date_short: "Sept. 5 - Dec. 17"
+  africa_campaign_date_full: "September 5 - December 17"
+  africa_campaign_date_year: "2023"
+  africa_campaign_date_full_year: "September 5, 2023 - December 17, 2023"
 
   hoc2022_header: 'Explore, Play, Create!'
   social_hoc2022_explore_play_create: 'Use computer science to explore, play, and create!'
@@ -1335,6 +1335,10 @@
   signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
   signup_email_preference_privacy: '(See our privacy policy)'
   signup_email_preference_yes: 'Yes'
+  signup_email_preference_yes_elementary: 'Yes - Send me updates on Elementary School Resources'
+  signup_email_preference_yes_middle: 'Yes - Send me updates on Middle School Resources'
+  signup_email_preference_yes_high: 'Yes - Send me updates on High School Resources'
+  signup_email_preference_yes_general: 'Yes - Send me general updates'
   signup_email_preference_no: 'No'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "We will put your school name and city on the map when you register. If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."

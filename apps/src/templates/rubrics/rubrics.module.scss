@@ -40,6 +40,46 @@
   gap: 24px;
 }
 
+.studentInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.studentMetadata {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  align-self: stretch;
+}
+
+.levelAndStudentDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  align-self: stretch;
+
+  h5 {
+    margin-bottom: 0;
+  }
+}
+
+.singleMetadatum {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+p.singleMetadatum {
+  margin-bottom: 0;
+}
+
 .learningGoalContainer {
   display: flex;
   // padding: 0px 1px;
@@ -134,7 +174,6 @@ p.aiTokenText {
   margin-bottom: 0;
 }
 
-
 .aiTokenText {
   color: $product_affirmative_default;
 }
@@ -142,7 +181,6 @@ p.aiTokenText {
 .learningGoalExpanded {
   border-top: 1px solid $neutral_dark40;
   padding: 1.25rem 1rem;
-
 
   display: flex;
   flex-direction: column;
@@ -192,7 +230,6 @@ p.aiTokenText {
   }
 }
 
-
 .evidenceLevelLabel {
   font-family: $gotham-bold;
   font-size: 0.875rem;
@@ -203,4 +240,3 @@ p.aiTokenText {
 .evidenceLevelDescriptionIndented {
   padding-left: 2rem;
 }
-
