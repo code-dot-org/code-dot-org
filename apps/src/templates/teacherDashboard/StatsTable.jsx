@@ -37,7 +37,7 @@ class StatsTable extends Component {
     if (studentUrl) {
       return (
         <a
-          className="uitest-name-cell"
+          className="uitest-display-name-cell"
           style={tableLayoutStyles.link}
           href={studentUrl}
           target="_blank"
@@ -47,12 +47,12 @@ class StatsTable extends Component {
         </a>
       );
     } else {
-      return <span className="uitest-name-cell">{name}</span>;
+      return <span className="uitest-display-name-cell">{name}</span>;
     }
   };
 
   familyNameFormatter = familyName => {
-    return <span>{familyName}</span>;
+    return <span className="uitest-family-name-cell">{familyName}</span>;
   };
 
   getSortingColumns = () => {
@@ -66,7 +66,7 @@ class StatsTable extends Component {
         header: {
           label: i18n.name(),
           props: {
-            className: 'uitest-name-header',
+            className: 'uitest-display-name-header',
             style: {
               ...tableLayoutStyles.headerCell,
             },
@@ -87,6 +87,7 @@ class StatsTable extends Component {
         header: {
           label: i18n.familyName(),
           props: {
+            className: 'uitest-family-name-header',
             style: {
               ...tableLayoutStyles.headerCell,
             },
