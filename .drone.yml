@@ -46,7 +46,7 @@ steps:
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:mysql-5-7-ubuntu-20
+    image: codedotorg/code-dot-org:1.8.2
     pull: always
     volumes:
       - name: rbenv
@@ -144,7 +144,7 @@ steps:
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:mysql-5-7-ubuntu-20
+    image: codedotorg/code-dot-org:1.8.2
     pull: always
     volumes:
       - name: rbenv
@@ -210,6 +210,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 83134bebe48b9c0fb9ff12b8ef0fa324462208ae9802d027fc6e169c36ceac89
+hmac: 2271780a3a761db23e78570831c6f9ca8f2e335fd65b13c7104151e5173d535a
 
 ...
