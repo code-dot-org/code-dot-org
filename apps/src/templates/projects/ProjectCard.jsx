@@ -300,9 +300,19 @@ export default class ProjectCard extends React.Component {
                         onChange={() =>
                           this.handleCheckboxChange(checkbox.name)
                         }
-                        style={{marginRight: 10}}
+                        style={{
+                          marginRight: 10,
+                          marginTop: 0,
+                          accentColor: '#0093A4',
+                        }}
                       />
-                      <span style={{flex: '1', ...styles.popUpBody}}>
+                      <span
+                        style={{
+                          flex: '1',
+                          ...styles.popUpBody,
+                          verticalAlign: 'middle',
+                        }}
+                      >
                         {checkbox.name.replace(/-/g, ' ')}
                       </span>
                     </label>
@@ -323,11 +333,16 @@ export default class ProjectCard extends React.Component {
                     onClick={this.cancel}
                     text={'Cancel'}
                     color={Button.ButtonColor.white}
+                    style={{
+                      borderColor: color.neutral_dark,
+                      color: color.neutral_dark,
+                    }}
                   />
                   <Button
                     onClick={this.handleSubmit}
                     disabled={!submitButtonEnabled}
                     text={'Submit'}
+                    style={{outline: 'none'}}
                     color={Button.ButtonColor.brandSecondaryDefault}
                   />
                 </div>
@@ -337,21 +352,24 @@ export default class ProjectCard extends React.Component {
         ) : null}
 
         <div style={styles.card}>
-          <div
-            style={{
-              ...thumbnailStyle,
-              height: 40,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            {!showSubmittedHeader ? (
+          {!showSubmittedHeader ? (
+            <div
+              style={{
+                ...thumbnailStyle,
+                height: 40,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-end',
+              }}
+            >
               <button
                 type="button"
                 onClick={this.showReportAbusePopUp}
                 style={{
                   ...styles.transparentButton,
+                  padding: 6,
+                  marginRight: 16,
+                  boxShadow: 'none',
                   background: reportButtonPressed
                     ? '#fbe0dd'
                     : reportButtonHovered
@@ -374,7 +392,17 @@ export default class ProjectCard extends React.Component {
                   }}
                 />
               </button>
-            ) : (
+            </div>
+          ) : (
+            <div
+              style={{
+                ...thumbnailStyle,
+                height: 40,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
               <p
                 style={{
                   margin: 'auto',
@@ -385,8 +413,8 @@ export default class ProjectCard extends React.Component {
               >
                 Reported
               </p>
-            )}
-          </div>
+            </div>
+          )}
 
           <div style={thumbnailStyle}>
             <a
@@ -464,6 +492,8 @@ const styles = {
     backgroundColor: color.neutral_light,
   },
   transparentButton: {
+    boxShadow: 'none',
+    outline: 'none',
     background: 'none',
     border: 'none',
     cursor: 'pointer',
