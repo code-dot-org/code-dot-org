@@ -78,7 +78,7 @@ describe I18n::Resources::Apps::Animations::SyncOut do
     context 'when Crowdin locale file does not exist' do
       it 'skips the locale sync-out' do
         PegasusLanguages.stub(:get_crowdin_name_and_locale, [{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}]) do
-          spritelab_manifest_builder.expects(:initial_animation_metadata).once
+          spritelab_manifest_builder.expects(:initial_animation_metadata).never
           I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).never
           I18nScriptUtils.expects(:to_js_locale).with(i18n_locale).never.returns('expected_js_locale')
           spritelab_manifest_builder.expects(:upload_localized_manifest).with('expected_js_locale', spritelab_file_content).never
