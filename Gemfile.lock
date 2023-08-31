@@ -370,6 +370,7 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
+    fakefs (2.5.0)
     fakeredis (0.6.0)
       redis (~> 3.2)
     faraday (1.10.3)
@@ -966,6 +967,7 @@ DEPENDENCIES
   execjs
   eyes_selenium (= 3.18.4)
   factory_bot_rails (~> 6.2)
+  fakefs (~> 2.5.0)
   fakeredis
   firebase
   firebase_token_generator
