@@ -266,6 +266,8 @@ it:
   call_to_action_learn_about_approach: Scopri di più sul nostro approccio
   call_to_action_try_java_lab: Prova Java Lab
   call_to_action_notify_available: Avvisami quando disponibile
+  call_to_action_register_early_access: Registrati per l'accesso anticipato
+  call_to_action_open_positions: Visualizza le posizioni aperte
   aria_label_call_to_action_afe: Ulteriori informazioni su Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Avvia il programma di formazione professionale
     Teaching Computer Science Fundamentals
@@ -13642,6 +13644,128 @@ it:
   accessibility_card_text_10: Un adattamento del curriculum AP Computer Science Principles
     di Code.org che utilizza Quorum, un linguaggio basato sull'evidenza originariamente
     progettato per fornire accessibilità agli studenti non vedenti o ipovedenti.
+  engineering_hero_heading: Unisciti al nostro team di ingegneri!
+  engineering_hero_desc: Mentre continuiamo ad espandere il nostro team di ingegneri,
+    volevamo condividere di più sulla nostra organizzazione ingegneristica su Code.org
+    e su alcuni degli aspetti unici del lavoro qui. Se sei interessato a candidarti
+    per uno dei nostri ruoli, ci piacerebbe sentire la tua opinione!
+  engineering_team_title: Incontra il team di progettazione su Code.org
+  engineering_team_card_text_1: Siamo (la maggior parte) noi al nostro incontro di
+    persona durante l'estate del 2023! Questo gruppo è diviso in quattro sotto-team
+    all'interno del nostro team di ingegneri che lavorano insieme per costruire e
+    servire la piattaforma per tutti i nostri studenti e insegnanti.
+  engineering_team_card_text_2: Se sei interessato a candidarti per uno dei nostri
+    ruoli, ci piacerebbe sentire la tua opinione! Puoi trovare un elenco di posizioni
+    aperte nella nostra pagina Opportunità di lavoro.
+  engineering_our_team_title: Il nostro team di ingegneri
+  engineering_our_team_desc: 'Il team di progettazione di Code.org è diviso in quattro
+    sotto-team che sviluppano e supportano diverse aree della nostra piattaforma:'
+  engineering_our_team_sub_title_1: Team di apprendimento degli studenti
+  engineering_our_team_text_1: Il nostro Student Learning Team possiede tutte le nostre
+    attività (le chiamiamo laboratori) che i nostri studenti utilizzano ogni giorno.
+    Questo team lavora principalmente sulla tecnologia front-end (utilizziamo React
+    e molti JS personalizzati) e abbiamo un ottimo rapporto di lavoro con molti partner
+    e progetti open source. Ad esempio, utilizziamo [Blockly di Google] (%{youtube_url})
+    per tutta la nostra programmazione basata su blocchi. Supportiamo gli studenti
+    nel loro percorso di apprendimento dall'asilo fino alla dodicesima elementare.
+  engineering_our_team_sub_title_2: Team di esperienza degli insegnanti
+  engineering_our_team_text_2: Il nostro Teacher Experience Team sviluppa gli strumenti
+    che attraggono nuovi insegnanti su Code.org (li chiamiamo prodotti di acquisizione)
+    e sviluppa la piattaforma che consente ai nostri insegnanti esistenti di insegnare
+    il nostro curriculum (i nostri strumenti per insegnanti). Come per i nostri strumenti
+    per studenti, ci affidiamo a React per creare il nostro front-end e i nostri componenti
+    lato server vengono forniti utilizzando Ruby on Rails.
+  engineering_our_team_sub_title_3: Team della piattaforma
+  engineering_our_team_text_3: Il nostro team di piattaforma possiede componenti fondamentali
+    che soddisfano le esigenze dei nostri team di studenti e insegnanti (ad esempio,
+    autenticazione e profilo utente) e ha anche la missione di raggiungere studenti
+    che non possiamo ancora raggiungere. Ciò include la creazione di integrazioni
+    che ci collegano con le scuole che utilizzano diversi sistemi di gestione dell'apprendimento
+    (LMS) e l'imballaggio del nostro curriculum in modo che possa essere utilizzato
+    in scuole remote che non hanno accesso a Internet affidabile.
+  engineering_our_team_sub_title_4: Team dell'infrastruttura
+  engineering_our_team_text_4: Il nostro team di infrastruttura fornisce la spina
+    dorsale per la piattaforma che supporta i nostri studenti e insegnanti. Ciò include
+    la nostra infrastruttura di hosting e i servizi correlati (utilizziamo AWS), la
+    gestione dei dati, i programmi di sicurezza, i servizi di sviluppo e distribuzione
+    e molto altro. Questo team possiede anche i nostri sistemi di scalabilità e provisioning,
+    fondamentali durante l'Ora del Codice, in cui invitiamo tutti gli studenti del
+    mondo a completare un'ora di programmazione con noi.
+  engineering_faq_question_1: Cosa fa Code.org?
+  engineering_faq_answer_1_a: Code.org è un'organizzazione no profit dedicata all'innovazione
+    nel campo dell'istruzione che si dedica alla visione che ogni studente di ogni
+    scuola abbia l'opportunità di imparare l'informatica come parte della propria
+    istruzione primaria e secondaria.
+  engineering_faq_answer_1_b: Ampliamo l'accesso all'informatica nelle scuole, con
+    particolare attenzione all'aumento della partecipazione di giovani donne e studenti
+    di altri gruppi sottorappresentati. Code.org, principale fornitore di programmi
+    di informatica K-12 nei più grandi distretti scolastici degli Stati Uniti, organizza
+    anche la campagna annuale Hour of Code, che ha coinvolto più del 15% di tutti
+    gli studenti del mondo.
+  engineering_faq_answer_1_c: Code.org è supportato da generosi donatori tra cui Microsoft,
+    Amazon, Google e molti altri.
+  engineering_faq_question_2: Quali sono l'esperienza e gli strumenti per sviluppatori
+    di Code.org?
+  engineering_faq_answer_2: 'La nostra esperienza di sviluppatore potrebbe essere
+    diversa da quella che hai visto nei tuoi ruoli precedenti. Lavorando a stretto
+    contatto con il nostro team di prodotto, spediamo in produzione ogni giorno della
+    settimana e seguiamo diverse cadenze: a volte scrivi codice che verrà pubblicato
+    quel giorno, altre volte ti occupi di progetti a lungo termine. Anche se seguiamo
+    sprint bisettimanali, lo facciamo in modo leggero. Ci orientiamo a fare le cose
+    giuste nel modo giusto invece di adottare una visione purista di una particolare
+    metodologia. [Tutto il nostro codice] (%{code_url}) è open source e utilizziamo
+    le pull request JIRA e GitHub per tenere traccia di tutti i nostri elementi di
+    lavoro. Inoltre, teniamo molto alla qualità e ai test e siamo fortunati ad avere
+    un supporto incredibile da parte di [SauceLabs](%{saucelabs_url}), che ci aiuta
+    a eseguire la nostra suite di test dell''interfaccia utente su vari dispositivi
+    degli studenti (ad esempio iPad) nella loro cloud device farm.'
+  engineering_faq_question_3: Cos'è la rotazione dei tecnici su chiamata su Code.org?
+  engineering_faq_answer_3: 'Il nostro team di oltre 30 ingegneri condivide le responsabilità
+    in caso di chiamata. Ogni tecnico svolge un turno di 24 ore e utilizza i nostri
+    percorsi di risoluzione e i nostri playbook per rispondere alle interruzioni del
+    sito o ad altri problemi relativi al sito dal vivo. Siamo orgogliosi dell''affidabilità
+    del nostro sito: in media, ogni tecnico viene svegliato solo una volta all''anno
+    per problemi che in genere sono rapidi da risolvere. Al contrario, lo «Sviluppatore
+    del giorno» di solito dedica una parte della giornata lavorativa alla gestione
+    dell''implementazione di produzione e alla risoluzione dei problemi meno urgenti.'
+  engineering_faq_question_4: Sei un'organizzazione remota/WFH?
+  engineering_faq_answer_4_a: Sì! Nel 2019, poco prima della pandemia, Code.org è
+    diventata un'organizzazione basata principalmente su dispositivi remoti. Oggi
+    abbiamo ingegneri in tutti i fusi orari degli Stati Uniti e adattiamo gli orari
+    di lavoro di conseguenza. La maggior parte delle nostre riunioni si svolge tra
+    le 10:00 e le 15:00 PT.
+  engineering_faq_answer_4_b: Riconosciamo anche il valore del tempo di persona e
+    ogni trimestre ci riuniamo di persona, tipicamente a Seattle. Due di questi eventi
+    (li chiamiamo Kick-off week e «Codechella») riuniscono tutti i membri dell'organizzazione
+    a gennaio e giugno e i team di progettazione e prodotto si incontrano separatamente
+    ad aprile e ottobre.
+  engineering_faq_answer_4_c: Crediamo fermamente nel trascorrere del tempo con i
+    nostri studenti e insegnanti, quindi molti di questi eventi di persona includono
+    gite nelle scuole e nelle aule per raccogliere feedback o testare i nostri prodotti.
+  engineering_faq_question_5: Cosa rende unico il team di progettazione di Code.org?
+  engineering_faq_answer_5_a: 'Oltre a risolvere problemi tecnici complessi, abbiamo
+    alcune cose che rendono la nostra organizzazione ingegneristica diversa dalle
+    altre in cui potresti aver lavorato:'
+  engineering_faq_answer_5_b_1: Condividiamo tutti la passione per la nostra missione.
+  engineering_faq_answer_5_b_2: Ognuno di noi è qui per sostenere la missione di ampliare
+    l'accesso all'informatica per ogni studente in tutto il mondo. Tutti abbiamo la
+    nostra storia e il nostro punto di vista unici su ciò che ci spinge verso questa
+    missione.
+  engineering_faq_answer_5_c_1: Ci teniamo profondamente l'uno all'altro.
+  engineering_faq_answer_5_c_2: Quando gli ingegneri sono alle prese con un problema,
+    interveniamo e aiutiamo. Uno dei nostri principi è che siamo severi con i problemi,
+    ma gentili gli uni con gli altri. Promuoviamo regolarmente ingegneri, ma non prescriviamo
+    soluzioni troppo ingegnerizzate solo per supportare il percorso di promozione
+    di qualcuno. Investiamo invece nei nostri ingegneri con un generoso budget per
+    lo sviluppo professionale e l'accesso ad altre opportunità di apprendimento.
+  engineering_faq_answer_5_d_1: Lavoriamo sodo, ma stabiliamo confini chiari.
+  engineering_faq_answer_5_d_2: Pur sostenendo gli studenti di tutto il mondo, ci
+    assumiamo la responsabilità di stabilire confini chiari tra lavoro e vita domestica.
+    Apprezziamo il mercoledì senza riunioni, usufruiamo del nostro PTO (5 settimane
+    in totale, che include la chiusura degli uffici in tutta l'organizzazione per
+    due settimane alla fine dell'anno, nota anche come pausa invernale), mezza giornata
+    lavorativa il venerdì d'estate (noto anche come venerdì estivo) e altri generosi
+    vantaggi.
   language_code:
     ar: Arabo
     az: Azerbaigian

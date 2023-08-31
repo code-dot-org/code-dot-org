@@ -65,7 +65,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:07.156+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB0_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB0_2222\"},{\"changed_at\":\"2023-07-17 23:00:50 +0000\",\"changed\":[\"show_debug_watch\",\"makerlab_enabled\",\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:07.156+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB0_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB0_2222\"},{\"changed_at\":\"2023-07-17 23:00:50 +0000\",\"changed\":[\"show_debug_watch\",\"makerlab_enabled\",\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-29 17:06:23 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

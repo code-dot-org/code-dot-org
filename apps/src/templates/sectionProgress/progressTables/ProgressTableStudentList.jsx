@@ -12,6 +12,7 @@ import styleConstants from './progress-table-constants.module.scss';
 import './progressTableStyles.scss';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
+import DCDO from '@cdo/apps/dcdo';
 
 export default class ProgressTableStudentList extends React.Component {
   static propTypes = {
@@ -57,9 +58,17 @@ export default class ProgressTableStudentList extends React.Component {
       scriptData.name,
       rowData.student.id
     );
+    let fullName;
+    if (!!DCDO.get('family-name-features', false)) {
+      fullName = rowData.student.familyName
+        ? `${rowData.student.name} ${rowData.student.familyName}`
+        : rowData.student.name;
+    } else {
+      fullName = rowData.student.name;
+    }
     return (
       <ProgressTableStudentName
-        name={rowData.student.name}
+        name={fullName}
         studentId={rowData.student.id}
         sectionId={sectionId}
         scriptId={scriptData.id}

@@ -21,15 +21,17 @@ require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 require_relative '../animation_assets/manifest_builder'
 
+Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| require file}
+
 module I18n
   module SyncOut
-    def self.perform(upload_manifests: false)
+    def self.perform
       puts "Sync out starting"
+      I18n::Resources::Apps.sync_out
       rename_from_crowdin_name_to_locale
       restore_redacted_files
-      distribute_translations(upload_manifests)
+      distribute_translations
       copy_untranslated_apps
-      rebuild_blockly_js_files
       restore_markdown_headers
       Services::I18n::CurriculumSyncUtils.sync_out
       HocSyncUtils.sync_out
@@ -66,38 +68,6 @@ module I18n
           # This will happen if a sync-down hasn't happened since the last successful sync-out.
           puts "No temp file #{files_to_sync_out_path} found to backup."
         end
-      end
-    end
-
-    # Return true iff the specified file in the specified locale had changes
-    # since the last successful sync-out.
-    #
-    # @param locale [String] the locale code to check. This can be either the
-    #  four-letter code used internally (ie, "es-ES", "es-MX", "it-IT", etc), OR
-    #  the two-letter code used by crowdin, for those languages for which we have
-    #  only a single variation ("it", "de", etc).
-    #
-    # @param file [String] the path to the file to check. Note that this should be
-    #  the relative path of the file as it exists within the locale directory; ie
-    #  "/dashboard/base.yml", "/blockly-mooc/maze.json",
-    #  "/course_content/2018/coursea-2018.json", etc.
-    def self.file_changed?(locale, file)
-      @change_datas ||= CROWDIN_PROJECTS.map do |_project_identifier, project_options|
-        unless File.exist?(project_options[:files_to_sync_out_json])
-          raise <<~ERR
-            File not found #{project_options[:files_to_sync_out_json]}.
-
-            We expect to find a file containing a list of files changed by the most
-            recent sync down; if this file does not exist, it likely means that no
-            sync down has been run on this machine, so there is nothing to sync out
-          ERR
-        end
-        JSON.parse File.read(project_options[:files_to_sync_out_json])
-      end
-
-      crowdin_code = PegasusLanguages.get_code_by_locale(locale)
-      return @change_datas.any? do |change_data|
-        change_data.dig(locale, file) || change_data.dig(crowdin_code, file)
       end
     end
 
@@ -339,7 +309,7 @@ module I18n
 
       Dir.glob(File.join(locale_dir, "course_content/**/*.json")) do |course_strings_file|
         relative_path = course_strings_file.delete_prefix(locale_dir)
-        next unless file_changed?(locale, relative_path)
+        next unless I18nScriptUtils.file_changed?(locale, relative_path)
 
         course_strings = JSON.parse(File.read(course_strings_file))
         next unless course_strings
@@ -393,7 +363,7 @@ module I18n
 
     # Distribute downloaded translations from i18n/locales
     # back to blockly, apps, pegasus, and dashboard.
-    def self.distribute_translations(upload_manifests)
+    def self.distribute_translations
       locales = PegasusLanguages.get_locale
       puts "Distributing translations in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
@@ -407,7 +377,7 @@ module I18n
         Dir.glob("i18n/locales/#{locale}/dashboard/*.{json,yml}") do |loc_file|
           ext = File.extname(loc_file)
           relative_path = loc_file.delete_prefix(locale_dir)
-          next unless file_changed?(locale, relative_path)
+          next unless I18nScriptUtils.file_changed?(locale, relative_path)
 
           basename = File.basename(loc_file, ext)
           postprocess_course_resources(locale, loc_file) if File.basename(loc_file) == 'courses.yml'
@@ -430,10 +400,10 @@ module I18n
         distribute_course_content(locale)
 
         ### Apps
-        js_locale = locale.tr('-', '_').downcase
+        js_locale = I18nScriptUtils.to_js_locale(locale)
         Dir.glob("#{locale_dir}/blockly-mooc/*.json") do |loc_file|
           relative_path = loc_file.delete_prefix(locale_dir)
-          next unless file_changed?(locale, relative_path)
+          next unless I18nScriptUtils.file_changed?(locale, relative_path)
 
           basename = File.basename(loc_file, '.json')
           destination = "apps/i18n/#{basename}/#{js_locale}.json"
@@ -443,7 +413,7 @@ module I18n
         ### ml-playground strings to Apps directory
         Dir.glob("#{locale_dir}/external-sources/ml-playground/mlPlayground.json") do |loc_file|
           relative_path = loc_file.delete_prefix(locale_dir)
-          next unless file_changed?(locale, relative_path)
+          next unless I18nScriptUtils.file_changed?(locale, relative_path)
 
           basename = File.basename(loc_file, '.json')
           destination = "apps/i18n/#{basename}/#{js_locale}.json"
@@ -455,7 +425,7 @@ module I18n
           ml_playground_path = "apps/i18n/mlPlayground/#{js_locale}.json"
           dataset_id = File.basename(loc_file, '.json')
           relative_path = loc_file.delete_prefix(locale_dir)
-          next unless file_changed?(locale, relative_path)
+          next unless I18nScriptUtils.file_changed?(locale, relative_path)
 
           external_translations = parse_file(loc_file)
           next if external_translations.empty?
@@ -467,23 +437,13 @@ module I18n
           sanitize_data_and_write(existing_translations, ml_playground_path)
         end
 
-        ### Animation library
-        spritelab_animation_translation_path = "/animations/spritelab_animation_library.json"
-        if file_changed?(locale, spritelab_animation_translation_path)
-          @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true, quiet: true})
-          spritelab_animation_translation_file = File.join(locale_dir, spritelab_animation_translation_path)
-          translations = JSON.parse(File.read(spritelab_animation_translation_file))
-          # Use js_locale here as the animation library is used by apps
-          @manifest_builder.upload_localized_manifest(js_locale, translations) if upload_manifests
-        end
-
         ### Blockly Core
         # Blockly doesn't know how to fall back to English, so here we manually and
         # explicitly default all untranslated strings to English.
         blockly_english = JSON.parse(File.read("i18n/locales/source/blockly-core/core.json"))
         Dir.glob("#{locale_dir}/blockly-core/*.json") do |loc_file|
           relative_path = loc_file.delete_prefix(locale_dir)
-          next unless file_changed?(locale, relative_path)
+          next unless I18nScriptUtils.file_changed?(locale, relative_path)
 
           translations = JSON.parse(File.read(loc_file))
           # Create a hash containing all translations, with English strings in
@@ -494,15 +454,22 @@ module I18n
           translations_with_fallback = blockly_english.merge(translations) do |_key, english, translation|
             translation.empty? ? english : translation
           end
-          relname = File.basename(loc_file)
-          destination = "apps/node_modules/@code-dot-org/blockly/#{locale_dir}/#{relname}"
-          sanitize_data_and_write(translations_with_fallback, destination)
+          translations_with_fallback = sort_and_sanitize(translations_with_fallback)
+
+          # Replaced the original script `apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh`
+          # to generate js translation files right away only for the "changed files"
+          js_translations = translations_with_fallback.each_with_object('') do |(i18n_key, i18n_val), js_string|
+            js_string << "Blockly.Msg.#{i18n_key} = #{JSON.dump(i18n_val)};\n"
+          end
+          destination = CDO.dir(File.join('apps/lib/blockly', "#{js_locale}.js"))
+          FileUtils.mkdir_p(File.dirname(destination))
+          File.write(destination, js_translations)
         end
 
         ### Pegasus markdown
         Dir.glob("#{locale_dir}/codeorg-markdown/**/*.*") do |loc_file|
           relative_path = loc_file.delete_prefix("#{locale_dir}/codeorg-markdown")
-          next unless file_changed?(locale, relative_path)
+          next unless I18nScriptUtils.file_changed?(locale, relative_path)
 
           destination_dir = "pegasus/sites.v3/code.org/i18n/public"
           # The `views` path is actually outside of the `public` path, so when we
@@ -521,7 +488,7 @@ module I18n
         Dir.glob("i18n/locales/#{locale}/docs/*.json") do |loc_file|
           # Each programming environment file gets merged into programming_environments.{locale}.json
           relative_path = loc_file.delete_prefix(locale_dir)
-          next unless file_changed?(locale, relative_path)
+          next unless I18nScriptUtils.file_changed?(locale, relative_path)
 
           loc_data = JSON.parse(File.read(loc_file))
           next if loc_data.empty?
@@ -542,7 +509,7 @@ module I18n
           # For every framework, we place the frameworks and categories in their
           # respective places.
           relative_path = loc_file.delete_prefix(locale_dir)
-          next unless file_changed?(locale, relative_path)
+          next unless I18nScriptUtils.file_changed?(locale, relative_path)
 
           # These JSON files contain the framework name, a set of categories, and a
           # set of standards.
@@ -605,17 +572,6 @@ module I18n
         untranslated_apps.each do |app|
           app_locale = prop[:locale_s].tr('-', '_').downcase!
           FileUtils.cp_r "apps/i18n/#{app}/en_us.json", "apps/i18n/#{app}/#{app_locale}.json"
-        end
-      end
-    end
-
-    def self.rebuild_blockly_js_files
-      I18nScriptUtils.run_bash_script "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
-      Dir.chdir('apps') do
-        _stdout, stderr, status = Open3.capture3('yarn build')
-        unless status == 0
-          puts "Error building apps:"
-          puts stderr
         end
       end
     end

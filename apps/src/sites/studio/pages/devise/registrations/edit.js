@@ -1,9 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
-import MigrateToMultiAuth from '@cdo/apps/lib/ui/accounts/MigrateToMultiAuth';
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 import RemoveParentEmailController from '@cdo/apps/lib/ui/accounts/RemoveParentEmailController';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
@@ -30,18 +27,6 @@ const {
 } = scriptData;
 
 $(document).ready(() => {
-  const migrateMultiAuthMountPoint =
-    document.getElementById('migrate-multi-auth');
-  if (migrateMultiAuthMountPoint) {
-    const store = getStore();
-    ReactDOM.render(
-      <Provider store={store}>
-        <MigrateToMultiAuth />
-      </Provider>,
-      migrateMultiAuthMountPoint
-    );
-  }
-
   const updateDisplayedParentEmail = parentEmail => {
     const displayedParentEmail = $('#displayed-parent-email');
     displayedParentEmail.text(parentEmail);

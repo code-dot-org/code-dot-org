@@ -2250,6 +2250,8 @@ ar:
               display_name: دروس بديلة
             lessonGroup-6:
               display_name: مسح نهاية الوحدة
+            lessonGroup-7:
+              display_name: صناديق الرمل
           lessons:
             lesson-1:
               name: مرحبًا بكم في CSA
@@ -2374,6 +2376,8 @@ ar:
               display_name: دروس بديلة
             lessonGroup-5:
               display_name: مسح نهاية الوحدة
+            lessonGroup-6:
+              display_name: صناديق الرمل
           lessons:
             lesson-1:
               name: السمات
@@ -2389,6 +2393,8 @@ ar:
               name: هذه الكلمة الرئيسية
             lesson-15:
               name: مسح الوحدة 2
+            lesson-17:
+              name: مشروع فن الأسفلت - اليوم الثاني
             lesson-2:
               name: منشئو بدون حجة
             lesson-3:
@@ -2493,6 +2499,8 @@ ar:
               display_name: دروس بديلة
             lessonGroup-5:
               display_name: مسح نهاية الوحدة
+            lessonGroup-6:
+              display_name: صناديق الرمل
           lessons:
             lesson-1:
               name: مصفوفات أحادية البعد (1D)
@@ -2506,6 +2514,8 @@ ar:
               name: مشروع البيانات من أجل الصالح الاجتماعي [إصدار لمدة يوم واحد]
             lesson-14:
               name: مسح الوحدة 3
+            lesson-16:
+              name: مشروع فن الأسفلت - اليوم الثاني
             lesson-2:
               name: تعديل العناصر
             lesson-3:
@@ -2597,6 +2607,8 @@ ar:
               display_name: دروس بديلة
             lessonGroup-5:
               display_name: مسح نهاية الوحدة
+            lessonGroup-6:
+              display_name: صناديق الرمل
           lessons:
             lesson-1:
               name: مشروع فن البيانات التجريدية [إصدار ليوم واحد]
@@ -2612,6 +2624,8 @@ ar:
               name: بيانات الاختيار المتعدد
             lesson-15:
               name: مسح الوحدة 4
+            lesson-17:
+              name: مشروع فن الأسفلت - اليوم الثاني
             lesson-2:
               name: مشروع فن البيانات التجريدية
             lesson-3:
@@ -2721,6 +2735,8 @@ ar:
               display_name: دروس بديلة
             lessonGroup-5:
               display_name: مسح نهاية الوحدة
+            lessonGroup-6:
+              display_name: صناديق الرمل
           lessons:
             lesson-1:
               name: مصفوفات ثنائية الأبعاد (2D)
@@ -2734,6 +2750,8 @@ ar:
               name: مشروع السرد الشخصي [إصدار لمدة يوم واحد]
             lesson-14:
               name: مسح الوحدة 5
+            lesson-16:
+              name: مشروع فن الأسفلت - اليوم الثاني
             lesson-2:
               name: عناصر المصفوفة ثنائية الأبعاد
             lesson-3:
@@ -2822,6 +2840,8 @@ ar:
               display_name: دروس بديلة
             lessonGroup-5:
               display_name: مسح نهاية الوحدة
+            lessonGroup-6:
+              display_name: صناديق الرمل
           lessons:
             lesson-1:
               name: تخطيط المشروع
@@ -2835,6 +2855,8 @@ ar:
               name: مشروع معالجة اللغة الطبيعية [إصدار لمدة يوم واحد]
             lesson-14:
               name: مسح الوحدة 6
+            lesson-16:
+              name: مشروع فن الأسفلت - اليوم الثاني
             lesson-2:
               name: سلاسل فرعية
             lesson-3:
@@ -2965,6 +2987,8 @@ ar:
               display_name: مسح نهاية الوحدة
             lessonGroup-5:
               display_name: دروس بديلة
+            lessonGroup-6:
+              display_name: صناديق الرمل
           lessons:
             lesson-1:
               name: تخطيط المشروع
@@ -2978,6 +3002,8 @@ ar:
               name: مسح الوحدة 7
             lesson-14:
               name: البرمجة الإبداعية مع مشروع المسرح [إصدار لمدة يوم واحد]
+            lesson-16:
+              name: مشروع فن الأسفلت - اليوم الثاني
             lesson-2:
               name: مراجع الكائنات كمعلمات
             lesson-3:
@@ -3107,6 +3133,8 @@ ar:
               display_name: استبيان
             lessonGroup-5:
               display_name: دروس بديلة
+            lessonGroup-6:
+              display_name: صناديق الرمل
           lessons:
             lesson-1:
               name: تخطيط المشروع
@@ -3118,6 +3146,8 @@ ar:
               name: تقييم الوحدة 8
             lesson-13:
               name: الترميز الإبداعي باستخدام مشروع وحدة التحكم [إصدار لمدة يوم واحد]
+            lesson-15:
+              name: مشروع فن الأسفلت - اليوم الثاني
             lesson-2:
               name: البحث
             lesson-3:
@@ -3226,6 +3256,11 @@ ar:
               display_name: المراجعة والممارسة
             lessonGroup-3:
               display_name: اختبارات وهمية
+            lessonGroup-4:
+              display_name: صناديق الرمل
+          lessons:
+            lesson-2:
+              name: مشروع فن الأسفلت - اليوم الثاني
           student_description: تعدك هذه الوحدة لامتحان AP CSA من خلال مراجعة المفاهيم
             الأساسية وممارسة الأسئلة متعددة الخيارات والإجابة المجانية وتعزيز استراتيجيات
             إجراء الاختبار. يمكنك تحديد نقاط القوة ومجالات التحسين لإنشاء خطط دراسية
