@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-29 04:35:47 UTC",
+    "serialized_at": "2023-08-30 22:06:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1115,24 +1115,24 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csp9-2022/resources",
-      "key": "all_resources_8",
+      "url": "/s/csp9-2023/resources",
+      "key": "all_resources_20",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_8"
+        "resource.key": "all_resources_20"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp9-2022/standards",
-      "key": "all_standards_8",
+      "url": "/s/csp9-2023/standards",
+      "key": "all_standards_20",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_8"
+        "resource.key": "all_standards_20"
       }
     },
     {
@@ -1161,11 +1161,9 @@
     },
     {
       "name": "Code.org CSP Topic Coverage",
-      "url": "https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/view",
+      "url": "https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing",
       "key": "code_org_csp_topic_coverage",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "code_org_csp_topic_coverage"
@@ -1591,13 +1589,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_8",
+        "resource.key": "all_resources_20",
         "script.name": "csp9-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_8",
+        "resource.key": "all_standards_20",
         "script.name": "csp9-2023"
       }
     },

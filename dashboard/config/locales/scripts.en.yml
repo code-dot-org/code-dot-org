@@ -8400,6 +8400,13 @@ en:
           lesson_groups: {}
         csc-ecosystems:
           lesson_groups: {}
+          lessons: {}
+          name: csc-ecosystems
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         dlp-csd-overview-2022:
           title: 2022 CS Discoveries Deeper Learning Overview
           description: Welcome to the 2022 Deeper Learning program for onboarding CS Discoveries facilitators.
