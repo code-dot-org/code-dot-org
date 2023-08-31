@@ -10,7 +10,13 @@ import classNames from 'classnames';
 
 export default function ModalFunctionEditor() {
   return (
-    <div id={MODAL_EDITOR_ID} className={moduleStyles.container}>
+    <div
+      id={MODAL_EDITOR_ID}
+      className={classNames(
+        'modalFunctionEditorContainer',
+        moduleStyles.container
+      )}
+    >
       <div className={classNames('toolbar', moduleStyles.toolbar)}>
         <div className={moduleStyles.buttons}>
           <button type="button" id={MODAL_EDITOR_DELETE_ID}>

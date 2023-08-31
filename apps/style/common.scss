@@ -1844,3 +1844,19 @@ div.WireframeButtons_active {
   width: 800px;
   margin-left: -400px;
 }
+
+.modalFunctionEditorContainer svg {
+  position: absolute;
+  top: 50;
+  left: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+.modalFunctionEditorContainer .blocklySvg {
+  background: transparent;
+}
+
+.modalFunctionEditorContainer svg .blocklyBlockCanvas {
+  pointer-events: visiblePainted;
+}

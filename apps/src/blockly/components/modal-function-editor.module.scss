@@ -5,21 +5,23 @@
   position: absolute;
   // TODO: Calculate these values based on the size of the workspace
   top: 30px;
-  left: 0;
+  //left: 0;
   z-index: 1000;
   width: 100%;
   height: 100%;
+  bottom: 0;
   background: $white;
   // border: '10px solid green',
   // borderRadius: '15px',
 }
 
 .toolbar {
-  z-index: 1;
+  //z-index: 1;
   position: absolute;
   left: 142px;
   top: 10px;
   width: 800px;
+  pointer-events: auto;
 }
 
 .buttons {
