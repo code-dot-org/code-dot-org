@@ -176,23 +176,27 @@ class I18nScriptUtilsTest < Minitest::Test
 
   class DeleteEmptyCrowdinLocaleDir < Minitest::Test
     def test_when_crowdin_locale_dir_is_empty_deletes_the_dir
-      expected_crowdin_locale = 'expected_crowdin_locale'
-      expected_empty_crowdin_locale_dir = CDO.dir('i18n/locales/expected_crowdin_locale')
+      FakeFS.with_fresh do
+        expected_empty_crowdin_locale_dir = CDO.dir('i18n/locales/expected_crowdin_locale')
 
-      Dir.expects(:empty?).with(expected_empty_crowdin_locale_dir).once.returns(true)
-      FileUtils.expects(:rm_r).with(expected_empty_crowdin_locale_dir).once
+        FileUtils.mkdir_p(expected_empty_crowdin_locale_dir)
 
-      I18nScriptUtils.delete_empty_crowdin_locale_dir(expected_crowdin_locale)
+        assert File.directory?(expected_empty_crowdin_locale_dir)
+        I18nScriptUtils.delete_empty_crowdin_locale_dir('expected_crowdin_locale')
+        refute File.directory?(expected_empty_crowdin_locale_dir)
+      end
     end
 
     def test_when_crowdin_locale_dir_is_not_empty_does_not_delete_the_dir
-      expected_crowdin_locale = 'expected_crowdin_locale'
-      expected_empty_crowdin_locale_dir = CDO.dir('i18n/locales/expected_crowdin_locale')
+      FakeFS.with_fresh do
+        expected_empty_crowdin_locale_dir = CDO.dir('i18n/locales/expected_crowdin_locale')
 
-      Dir.expects(:empty?).with(expected_empty_crowdin_locale_dir).once.returns(false)
-      FileUtils.expects(:rm_r).with(expected_empty_crowdin_locale_dir).never
+        FileUtils.mkdir_p(expected_empty_crowdin_locale_dir)
+        FileUtils.touch(File.join(expected_empty_crowdin_locale_dir, 'test.txt'))
 
-      I18nScriptUtils.delete_empty_crowdin_locale_dir(expected_crowdin_locale)
+        I18nScriptUtils.delete_empty_crowdin_locale_dir('expected_crowdin_locale')
+        assert File.directory?(expected_empty_crowdin_locale_dir)
+      end
     end
   end
 end
