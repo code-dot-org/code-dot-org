@@ -1117,7 +1117,7 @@ section.quote {
 
 
 // At a glance sections
-// See code.org/educate/csp and code.org/teach for an example
+// See code.org/educate/csp and code.org/teach for examples
 .at-a-glance {
   background: $neutral-white;
   border: 1px solid $neutral_dark10;
@@ -1125,6 +1125,7 @@ section.quote {
   padding: 1.5rem;
   display: grid;
 
+  // Used with two ul elements
   &.two-col {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
