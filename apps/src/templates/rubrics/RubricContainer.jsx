@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import i18n from '@cdo/locale';
@@ -15,6 +15,8 @@ import {
   studentLevelInfoShape,
 } from './rubricShapes';
 import LearningGoal from './LearningGoal';
+import Button from '../Button';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
@@ -39,6 +41,29 @@ export default function RubricContainer({
   // TODO: [AITT-113] Also check if viewing the right level to give feedback
   const canProvideFeedback = !!studentLevelInfo;
   const {lesson} = rubric;
+
+  const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
+  const submitFeedbackToStudent = () => {
+    setIsSubmittingToStudent(true);
+    setSubmitError(null);
+    const body = JSON.stringify({
+      student_id: studentLevelInfo.id,
+    });
+    const endPoint = `/rubrics/${rubric.id}/submit_evaluations`;
+    HttpClient.post(endPoint, body, true, {'Content-Type': 'application/json'})
+      .then(response => {
+        setIsSubmittingToStudent(false);
+        if (!response.ok) {
+          console.log(response);
+          setSubmitError('Error submitting to student');
+        }
+      })
+      .catch(() => {
+        // catch error?
+      });
+  };
+
   return (
     <div className={style.rubricContainer}>
       <div className={style.rubricHeader}>
@@ -91,6 +116,24 @@ export default function RubricContainer({
             />
           ))}
         </div>
+        {!!studentLevelInfo && (
+          <div className={style.rubricContainerFooter}>
+            <div className={style.submitToStudentButtonAndError}>
+              <Button
+                text="Submit to student"
+                color={Button.ButtonColor.brandSecondaryDefault}
+                onClick={submitFeedbackToStudent}
+                className={style.submitToStudentButton}
+                disabled={isSubmittingToStudent}
+              />
+              {submitError && (
+                <BodyThreeText className={style.errorMessage}>
+                  Error submitting to student
+                </BodyThreeText>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

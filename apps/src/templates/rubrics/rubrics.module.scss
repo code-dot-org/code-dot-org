@@ -40,6 +40,25 @@
   gap: 24px;
 }
 
+.rubricContainerFooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+}
+
+.submitToStudentButtonAndError {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  align-self: stretch;
+}
+
+.submitToStudentButton {
+  margin: 0;
+}
+
 .studentInfo {
   display: flex;
   flex-direction: column;
@@ -239,4 +258,9 @@ p.aiTokenText {
 
 .evidenceLevelDescriptionIndented {
   padding-left: 2rem;
+}
+
+p.errorMessage {
+  color: $product_negative_default;
+  margin-bottom: 0;
 }
