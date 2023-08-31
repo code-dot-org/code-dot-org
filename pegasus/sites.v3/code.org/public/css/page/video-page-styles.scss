@@ -1,5 +1,3 @@
-// Custom styles for code.org/educate/csd
-// — supplemental to shared/css/design-system-pegasus.scss
 
 @import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
 
@@ -224,6 +222,13 @@ section#flexible-units {
 @media (max-width: 640px) {
   .slides {
     height: 265px;
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .without__caption .slides {
+    height: 240px;
     display: flex;
   }
 }

@@ -23,34 +23,41 @@ video_player: true
     .clear
 
 - video_page_index.times do |index|
-  %section#collection 
-    .wrapper
-      %h2{style: "text-align: center"}
-        =hoc_s("video_library_page_title_#{index + 1}")
-      %p{style: "text-align: center"}
-        =hoc_s("video_library_page_description_#{index + 1}")
-      -if index === 0
-        = view :carousel_video_flexible
-      -if index === 1
-        = view :carousel_ai_teacher_flexible
-      -if index === 2
-        = view :carousel_computer_works_video
-      -if index === 3 
-        = view :carousel_internet_video
-      -if index === 4
-        = view :carousel_blockchain_video
-      -if index === 5 
+  -if index === 5 
+    %section.without__caption
+      .wrapper
+        %h2{style: "text-align: center"}
+          =hoc_s("video_library_page_title_#{index + 1}")
+        %p{style: "text-align: center"}
+          =hoc_s("video_library_page_description_#{index + 1}")
         = view :carousel_not_hacked_video
-      -if index === 6
-        = view :carousel_cs_video
-      -if index === 7 
-        = view :carousel_inspirational_video
+  -if index < 5 || index > 5
+    %section
+      .wrapper
+        %h2{style: "text-align: center"}
+          =hoc_s("video_library_page_title_#{index + 1}")
+        %p{style: "text-align: center"}
+          =hoc_s("video_library_page_description_#{index + 1}")
+        -if index === 0
+          = view :carousel_video_flexible
+        -if index === 1
+          = view :carousel_ai_teacher_flexible
+        -if index === 2
+          = view :carousel_computer_works_video
+        -if index === 3 
+          = view :carousel_internet_video
+        -if index === 4
+          = view :carousel_blockchain_video
+        -if index === 6
+          = view :carousel_cs_video
+        -if index === 7 
+          = view :carousel_inspirational_video
 
 %hr.footer__line
 %section.footer
   %p{style: "text-align: center"}
     =hoc_s(:video_library_page_footer_description)
-  %a.link-button{href: "#pick-a-course"}
+  %a.link-button{href: "https://www.youtube.com/channel/UCJyEBMU1xVP2be1-AoGS1BA"}
     =hoc_s(:video_library_page_footer_cta)
 
 
