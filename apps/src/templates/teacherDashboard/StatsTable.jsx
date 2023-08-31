@@ -51,6 +51,10 @@ class StatsTable extends Component {
     }
   };
 
+  familyNameFormatter = familyName => {
+    return <span>{familyName}</span>;
+  };
+
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
   };
@@ -71,6 +75,26 @@ class StatsTable extends Component {
         },
         cell: {
           formatters: [this.nameFormatter],
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+            },
+          },
+        },
+      },
+      {
+        property: 'familyName',
+        header: {
+          label: i18n.familyName(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+            },
+          },
+          transforms: [sortable],
+        },
+        cell: {
+          formatters: [this.familyNameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
