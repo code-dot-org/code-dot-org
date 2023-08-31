@@ -19,6 +19,8 @@ module I18n
           def execute
             progress_bar.start
 
+            progress_bar.finish && return unless crowdin_spritelab_files_exist?
+
             # Memoizes animation metadata before processing in threads
             # to prevent them from being downloaded multiple times (in each thread separately)
             spritelab_manifest_builder.initial_animation_metadata
@@ -26,7 +28,7 @@ module I18n
 
             I18nScriptUtils.process_in_threads(pegasus_languages) do |pegasus_lang|
               crowdin_locale = pegasus_lang[:crowdin_name_s]
-              crowdin_spritelab_file_path = CDO.dir(File.join(I18N_LOCALES_DIR, crowdin_locale, DIR_NAME, SPRITELAB_FILE_NAME))
+              crowdin_spritelab_file_path = crowdin_locale_spritelab_file_path(crowdin_locale)
               next unless File.exist?(crowdin_spritelab_file_path)
 
               locale = pegasus_lang[:locale_s]
@@ -70,6 +72,16 @@ module I18n
 
           def spritelab_manifest_builder
             @spritelab_manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true, quiet: true})
+          end
+
+          def crowdin_locale_spritelab_file_path(crowdin_locale)
+            CDO.dir(File.join(I18N_LOCALES_DIR, crowdin_locale, DIR_NAME, SPRITELAB_FILE_NAME))
+          end
+
+          def crowdin_spritelab_files_exist?
+            pegasus_languages.any? do |pegasus_lang|
+              File.exist?(crowdin_locale_spritelab_file_path(pegasus_lang[:crowdin_name_s]))
+            end
           end
         end
       end
