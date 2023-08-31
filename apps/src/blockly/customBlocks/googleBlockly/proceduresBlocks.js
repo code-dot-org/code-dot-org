@@ -10,6 +10,17 @@ const BLOCK_OFFSET = 16;
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
+const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
+  experiments.MODAL_FUNCTION_EDITOR
+);
+const functionDefinitionBlock = {
+  kind: 'block',
+  type: 'procedures_defnoreturn',
+  fields: {
+    NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
+  },
+};
+
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
  * Replaces blocks that are part of core Blockly.
@@ -28,7 +39,10 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: ' ',
       },
       {
-        type: useModalFunctionEditor ? 'field_label' : 'field_input',
+        type:
+          useModalFunctionEditor && modalFunctionEditorExperimentEnabled
+            ? 'field_label'
+            : 'field_input',
         name: 'NAME',
         text: '',
         spellcheck: false,
@@ -98,7 +112,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
 
 // Respond to the click of a call block's edit button
 export const editButtonHandler = function () {
-  if (experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)) {
+  if (modalFunctionEditorExperimentEnabled) {
     const procedure = this.getSourceBlock().getProcedureModel();
     if (procedure) {
       Blockly.functionEditor.showForFunction(procedure);
@@ -186,43 +200,12 @@ GoogleBlockly.Extensions.registerMutator(
  * @returns an array of block objects representing the flyout blocks
  */
 export function flyoutCategory(workspace, functionEditorOpen = false) {
-  const useNewFunctionEditor = experiments.isEnabled(
-    experiments.MODAL_FUNCTION_EDITOR
-  );
   const blockList = [];
-
-  const newFunctionButton = {
-    kind: 'button',
-    text: msg.createBlocklyFunction(),
-    // TODO: Remove the alternate callback key once we're using the new function editor
-    callbackKey: useNewFunctionEditor
-      ? 'newProcedureCallback'
-      : 'createNewFunction',
-  };
-  const functionDefinitionBlock = {
-    kind: 'block',
-    type: 'procedures_defnoreturn',
-    fields: {
-      NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
-    },
-  };
-
-  const createNewFunction = function () {
-    // Everything here is place-holder code that should be replaced with a
-    // call to open the behavior editor with a new defintion block.
-    // Until then, we just create a block under all existing blocks on the
-    // main workspace.
-    createNewDefinitionBlock(functionDefinitionBlock);
-  };
 
   if (functionEditorOpen) {
     // No-op - cannot create new functions while the modal editor is open
   } else if (useModalFunctionEditor) {
-    workspace.registerButtonCallback('createNewFunction', createNewFunction);
-    workspace.registerButtonCallback(
-      'newProcedureCallback',
-      Blockly.functionEditor.newProcedureCallback
-    );
+    const newFunctionButton = getNewFunctionButtonWithCallback(workspace);
     blockList.push(newFunctionButton);
   } else {
     blockList.push(functionDefinitionBlock);
@@ -264,6 +247,29 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
+const getNewFunctionButtonWithCallback = workspace => {
+  let callbackKey, callback;
+  if (modalFunctionEditorExperimentEnabled) {
+    callbackKey = 'newProcedureCallback';
+    callback = Blockly.functionEditor.newProcedureCallback;
+  } else {
+    callbackKey = 'createAndCenterFunctionDefinitionBlock';
+    // Everything here is place-holder code that should be replaced with a
+    // call to open the behavior editor with a new defintion block.
+    // Until then, we just create a block under all existing blocks on the
+    // main workspace.
+    callback = () => createAndCenterDefinitionBlock(functionDefinitionBlock);
+  }
+  workspace.registerButtonCallback(callbackKey, callback);
+
+  return {
+    kind: 'button',
+    text: msg.createBlocklyFunction(),
+    // TODO: Remove the alternate callback key once we're using the new function editor
+    callbackKey,
+  };
+};
+
 const getLowestBlockBottomY = () => {
   let lowestBlockBottomY = 0;
   Blockly.getMainWorkspace()
@@ -280,7 +286,7 @@ const getLowestBlockBottomY = () => {
 
 // Creates a new definition block under all existing blocks on the main workspace,
 // scrolls to the block, and selects it
-export const createNewDefinitionBlock = blockState => {
+export const createAndCenterDefinitionBlock = blockState => {
   const newDefinitionBlock = Blockly.serialization.blocks.append(
     {...blockState, x: BLOCK_OFFSET, y: getLowestBlockBottomY() + BLOCK_OFFSET},
     Blockly.getMainWorkspace()
