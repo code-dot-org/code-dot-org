@@ -315,8 +315,18 @@ roles = {
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/PowerUserAccess',
       'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
+      '!Ref LimitedSecretsPolicy'
     ]
   },
+  EngineeringInfraRole: {
+    RoleName: 'Engineering_Infra',
+    GoogleIdsSSMParameter: 'InfraGoogleIds',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/PowerUserAccess',
+      'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
+      '!Ref PassRolePolicy'
+    ]
+  }
   EngineeringContributorRole: {
     RoleName: 'Engineering_Contributor',
     GoogleIdsSSMParameter: 'ContributorGoogleIDs',
@@ -389,6 +399,19 @@ roles.each do |name, config| %>
         - Key: sqlworkbench-team
           Value: codedotorg
 <%- end -%>
+
+  PassRolePolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: PassRolePolicy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: iam:PassRole
+            Resource: '*'
+
+  
 
   DataAnalystPolicy:
     Type: AWS::IAM::ManagedPolicy
@@ -582,6 +605,48 @@ roles.each do |name, config| %>
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/*
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:adhoc/cdo/*
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/adhoc-*
+
+
+  # Policy defining "Engineer" level access to secrets manager, which allows
+  # listing all secrets, but only viewing the secret value or editing of
+  # secrets within the "development/*" prefix. Note that the AWS Managed
+  # Policy "PowerUserAccess" also grants `Allow secretsmanager:* to *`
+  LimitedSecretsPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: SecretsManagerEngineerPolicy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: AllowSecretsManagerActions
+            Effect: Allow
+            Action:
+              - secretsmanager:*
+            Resource: '*'
+          - Sid: RestrictSecretsManagerWritesToDevelopmentNamespace
+            Effect: Deny
+            NotResource:
+              - !Sub 'arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/*'
+              - !Sub 'arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:adhoc/*'
+              - !Sub 'arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*'
+            Action:
+              # Deny viewing secret values
+              - secretsmanager:GetSecretValue
+              # Deny editing secrets
+              - secretsmanager:CancelRotateSecret
+              - secretsmanager:CreateSecret
+              - secretsmanager:DeleteResourcePolicy
+              - secretsmanager:DeleteSecret
+              - secretsmanager:PutResourcePolicy
+              - secretsmanager:PutSecretValue
+              - secretsmanager:RemoveRegionsFromReplication
+              - secretsmanager:ReplicateSecretToRegions
+              - secretsmanager:RestoreSecret
+              - secretsmanager:RotateSecret
+              - secretsmanager:StopReplicationToReplica
+              - secretsmanager:UpdateSecret
+              - secretsmanager:UpdateSecretVersionStage
+              - secretsmanager:ValidateResourcePolicy
 
   ContributorSecretsPolicy:
     Type: AWS::IAM::ManagedPolicy
