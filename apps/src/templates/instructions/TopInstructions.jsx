@@ -38,7 +38,7 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import ContainedLevelResetButton from './ContainedLevelResetButton';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {rubricShape} from '../rubrics/rubricShapes';
+import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
