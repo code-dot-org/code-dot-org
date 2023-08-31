@@ -1849,7 +1849,9 @@ div.WireframeButtons_active {
   position: absolute;
   top: 50;
   left: 0;
-  background: transparent;
+  // We us important here to override the background set by the theme.
+  // The modal function editor background must be transparent.
+  background: transparent !important;
   pointer-events: none;
 }
 
@@ -1858,5 +1860,13 @@ div.WireframeButtons_active {
 }
 
 .modalFunctionEditorContainer svg .blocklyBlockCanvas {
+  pointer-events: visiblePainted;
+}
+
+.modalFunctionEditorContainer .injectionDiv {
+  pointer-events: none;
+}
+
+.blocklyToolboxDiv {
   pointer-events: visiblePainted;
 }
