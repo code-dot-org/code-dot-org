@@ -173,29 +173,40 @@ class I18nScriptUtilsTest < Minitest::Test
       end
     end
   end
+end
 
-  class DeleteEmptyCrowdinLocaleDir < Minitest::Test
-    def test_when_crowdin_locale_dir_is_empty_deletes_the_dir
-      FakeFS.with_fresh do
-        expected_empty_crowdin_locale_dir = CDO.dir('i18n/locales/expected_crowdin_locale')
+describe 'I18nScriptUtils' do
+  def around
+    FakeFS.with_fresh {yield}
+  end
 
-        FileUtils.mkdir_p(expected_empty_crowdin_locale_dir)
+  describe '.delete_empty_crowdin_locale_dir' do
+    let(:crowdin_locale) {'expected_crowdin_locale'}
+    let(:crowdin_locale_dir_path) {CDO.dir(File.join('i18n/locales', crowdin_locale))}
 
-        assert File.directory?(expected_empty_crowdin_locale_dir)
-        I18nScriptUtils.delete_empty_crowdin_locale_dir('expected_crowdin_locale')
-        refute File.directory?(expected_empty_crowdin_locale_dir)
+    before do
+      FileUtils.mkdir_p(crowdin_locale_dir_path)
+    end
+
+    context 'when Crowdin locale dir is empty' do
+      it 'deletes the Crowdin locale dir' do
+        assert File.directory?(crowdin_locale_dir_path)
+
+        I18nScriptUtils.delete_empty_crowdin_locale_dir(crowdin_locale)
+
+        refute File.directory?(crowdin_locale_dir_path)
       end
     end
 
-    def test_when_crowdin_locale_dir_is_not_empty_does_not_delete_the_dir
-      FakeFS.with_fresh do
-        expected_empty_crowdin_locale_dir = CDO.dir('i18n/locales/expected_crowdin_locale')
+    context 'when Crowdin locale dir is not empty' do
+      before do
+        FileUtils.touch(File.join(crowdin_locale_dir_path, 'test.txt'))
+      end
 
-        FileUtils.mkdir_p(expected_empty_crowdin_locale_dir)
-        FileUtils.touch(File.join(expected_empty_crowdin_locale_dir, 'test.txt'))
+      it 'does not delete the Crowdin locale dir' do
+        I18nScriptUtils.delete_empty_crowdin_locale_dir(crowdin_locale)
 
-        I18nScriptUtils.delete_empty_crowdin_locale_dir('expected_crowdin_locale')
-        assert File.directory?(expected_empty_crowdin_locale_dir)
+        assert File.directory?(crowdin_locale_dir_path)
       end
     end
   end
