@@ -11,7 +11,10 @@ import {
 import {TextLink} from '@dsco_/link';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
-import {translatedCourseOfferingDeviceTypes} from '../teacherDashboard/CourseOfferingHelpers';
+import {
+  translatedCourseOfferingDeviceTypes,
+  translatedAvailableResources,
+} from '../teacherDashboard/CourseOfferingHelpers';
 
 const ExpandedCurriculumCatalogCard = ({
   courseDisplayName,
@@ -31,6 +34,7 @@ const ExpandedCurriculumCatalogCard = ({
   isInUS,
   imageSrc,
   imageAltText,
+  availableResources,
 }) => {
   const iconData = {
     ideal: {
@@ -48,6 +52,20 @@ const ExpandedCurriculumCatalogCard = ({
   };
 
   const devices = JSON.parse(deviceCompatibility);
+
+  const resoucesOrder = [
+    'Lesson Plan',
+    'Slide Deck',
+    'Activity Guide',
+    'Answer Key',
+    'Rubric',
+  ];
+
+  let availableResourceCounter = 0;
+
+  const displayDivider = () => {
+    return ++availableResourceCounter < Object.keys(availableResources).length;
+  };
 
   return (
     <div>
@@ -111,19 +129,27 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    <Heading4 visualAppearance="heading-xs">
-                      {i18n.availableResources()}
-                    </Heading4>
-                    <hr className={style.thickDivider} />
-                    <BodyTwoText>{i18n.lessonPlans()} </BodyTwoText>
-                    <hr className={style.horizontalDivider} />
-                    <BodyTwoText>{i18n.slideDecks()} </BodyTwoText>
-                    <hr className={style.horizontalDivider} />
-                    <BodyTwoText>{i18n.activityGuides()} </BodyTwoText>
-                    <hr className={style.horizontalDivider} />
-                    <BodyTwoText>{i18n.answerKeysExemplars()} </BodyTwoText>
-                    <hr className={style.horizontalDivider} />
-                    <BodyTwoText>{i18n.projectRubrics()} </BodyTwoText>
+                    {Object.keys(availableResources).length > 0 && (
+                      <div>
+                        <Heading4 visualAppearance="heading-xs">
+                          {i18n.availableResources()}
+                        </Heading4>
+                        <hr className={style.thickDivider} />
+                        {resoucesOrder.map(
+                          resource =>
+                            availableResources[resource] && (
+                              <div>
+                                <BodyTwoText>
+                                  {translatedAvailableResources[resource]}{' '}
+                                </BodyTwoText>
+                                {displayDivider() && (
+                                  <hr className={style.horizontalDivider} />
+                                )}
+                              </div>
+                            )
+                        )}
+                      </div>
+                    )}
                   </div>
                   {isInUS &&
                     (professionalLearningProgram ||
@@ -246,5 +272,6 @@ ExpandedCurriculumCatalogCard.propTypes = {
   isInUS: PropTypes.bool,
   imageSrc: PropTypes.string,
   imageAltText: PropTypes.string,
+  availableResources: PropTypes.object,
 };
 export default ExpandedCurriculumCatalogCard;

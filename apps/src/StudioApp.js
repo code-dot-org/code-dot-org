@@ -1242,9 +1242,14 @@ StudioApp.prototype.initReadonly = function (options) {
 /**
  * Load the editor with blocks.
  * @param {string} source Text representation of blocks (XML or JSON).
+ * @param {string | undefined} hiddenDefinitions Text representation of hidden procedure definitions (JSON)
  */
-StudioApp.prototype.loadBlocks = function (source) {
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
+StudioApp.prototype.loadBlocks = function (source, hiddenDefinitions) {
+  Blockly.cdoUtils.loadBlocksToWorkspace(
+    Blockly.mainBlockSpace,
+    source,
+    hiddenDefinitions
+  );
 };
 
 /**
@@ -2733,8 +2738,12 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     loadLastAttempt = false;
   }
   var startBlocks = config.level.startBlocks || '';
+  // TODO: When we start using json in levelbuilder, we will need to pull this from the level config.
+  // For now, if we aren't loading last attempt hidden definitions will always be undefined.
+  let startHiddenDefinitions = undefined;
   if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;
+    startHiddenDefinitions = config.level.hiddenDefinitions;
   }
 
   let isXml = stringIsXml(startBlocks);
@@ -2763,7 +2772,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     );
   }
   try {
-    this.loadBlocks(startBlocks);
+    this.loadBlocks(startBlocks, startHiddenDefinitions);
   } catch (e) {
     if (loadLastAttempt) {
       try {
