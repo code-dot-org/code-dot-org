@@ -19,6 +19,7 @@ class StatsTable extends Component {
 
     // Provided by redux.
     scriptName: PropTypes.string,
+    participantType: PropTypes.string,
   };
 
   state = {};
@@ -64,7 +65,10 @@ class StatsTable extends Component {
     const columns = [this.nameColumn(sortable)];
 
     if (!!DCDO.get('family-name-features', false)) {
-      columns.push(this.familyNameColumn(sortable));
+      if (this.props.participantType === 'student') {
+        // Only in non-PL sections.
+        columns.push(this.familyNameColumn(sortable));
+      }
     }
 
     columns.push(this.completedLevelsCountColumn(sortable));
@@ -201,4 +205,7 @@ const styles = {
 export const UnconnectedStatsTable = StatsTable;
 export default connect(state => ({
   scriptName: getSelectedScriptName(state),
+  participantType:
+    state.teacherSections.sections[state.teacherSections.selectedSectionId]
+      .participantType,
 }))(StatsTable);
