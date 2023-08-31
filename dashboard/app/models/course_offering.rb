@@ -308,6 +308,7 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
+      self_paced_pl_course_offering_key: self_paced_pl_course_offering_key,
     }
   end
 
@@ -358,6 +359,7 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
+      self_paced_pl_course_offering_key: self_paced_pl_course_offering_key,
     }
   end
 
