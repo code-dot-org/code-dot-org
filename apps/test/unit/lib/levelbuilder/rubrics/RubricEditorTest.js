@@ -9,9 +9,6 @@ import sinon from 'sinon';
 describe('RubricEditorTest ', () => {
   let wrapper;
   const addNewConceptSpy = sinon.spy();
-  const deleteItemSpy = sinon.spy();
-  const hndleAiEnabledChangeSpy = sinon.spy();
-  const handleLearningGoalNameChangeSpy = sinon.spy();
   const sampleLearningGoalList = [
     {id: 1, learningGoal: 'Goal 1', aiEnabled: true},
     {id: 2, learningGoal: 'Goal 2', aiEnabled: false},
@@ -23,9 +20,8 @@ describe('RubricEditorTest ', () => {
       <RubricEditor
         learningGoalList={sampleLearningGoalList}
         addNewConcept={addNewConceptSpy}
-        deleteItem={deleteItemSpy}
-        handleAiEnabledChange={hndleAiEnabledChangeSpy}
-        handleLearningGoalNameChange={handleLearningGoalNameChangeSpy}
+        deleteItem={() => {}}
+        updateLearningGoal={() => {}}
       />
     );
   });

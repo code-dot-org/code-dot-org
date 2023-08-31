@@ -2,6 +2,7 @@ class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
   before_action :require_levelbuilder_mode_or_test_env
+  load_and_authorize_resource
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -19,10 +20,9 @@ class RubricsController < ApplicationController
   def create
     @rubric = Rubric.new(rubric_params)
     @lesson = @rubric.lesson
-    puts rubric_params
     if @rubric.save
       @rubric.lesson.script.write_script_json
-      render json: {redirectUrl: edit_rubric_path(@rubric.id)}
+      render json: {redirectUrl: edit_rubric_path(@rubric.id), rubricId: @rubric.id}
     else
       render :new
     end

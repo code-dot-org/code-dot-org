@@ -98,7 +98,7 @@ export default function RubricsContainer({
 
   const saveRubric = event => {
     event.preventDefault();
-    const dataUrl = !!rubric ? `/rubrics/${rubric.id}/edit` : RUBRIC_PATH;
+    const dataUrl = !!rubric ? `/rubrics/${rubric.id}` : RUBRIC_PATH;
     const method = !!rubric ? 'PATCH' : 'POST';
 
     // Checking that the csrf-token exists since it is disabled on test
@@ -132,11 +132,14 @@ export default function RubricsContainer({
       });
   };
 
+  // transforms keys from camelCase to snake_case for rails
+  // specifically created to do this for an array of objects
+  // with keys in camelCase
   function transformKeys(startingList) {
     const newList = [];
 
     startingList.forEach(item => {
-      let newItem = {};
+      const newItem = {};
       for (const [key, value] of Object.entries(item)) {
         newItem[snakeCase(key)] = value;
       }

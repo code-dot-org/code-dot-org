@@ -13,7 +13,6 @@ export default function RubricEditor({
     return (
       <LearningGoalItem
         deleteItem={() => deleteItem(goal.id)}
-        id={goal.id}
         key={goal.id}
         exisitingLearningGoalData={goal}
         updateLearningGoal={updateLearningGoal}

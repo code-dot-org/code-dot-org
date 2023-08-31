@@ -24,6 +24,7 @@ class Ability
       ProgrammingEnvironment, # see override below
       ProgrammingExpression, # see override below
       ReferenceGuide, # see override below
+      Rubric,
       :reports,
       User,
       UserPermission,
@@ -388,6 +389,7 @@ class Ability
         ProgrammingExpression,
         ProgrammingMethod,
         ReferenceGuide,
+        Rubric,
         DataDoc,
         CourseOffering,
         UnitGroup,
