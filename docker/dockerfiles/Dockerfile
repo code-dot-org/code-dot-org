@@ -146,7 +146,7 @@ RUN locale-gen en_US.UTF-8
 RUN curl -sSLOJ https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb && \
     echo "mysql-apt-config mysql-apt-config/select-server select mysql-5.7" | /usr/bin/debconf-set-selections && \
     echo "mysql-apt-config mysql-apt-config/repo-codename select bionic" | /usr/bin/debconf-set-selections && \
-    dpkg -i mysql-apt-config_0.8.22-1_all.deb || apt-get -fy install && \
+    dpkg -i mysql-apt-config_0.8.22-1_all.deb || apt-get --fix-broken --yes install && \
     rm -rf mysql-apt-config_0.8.22-1_all.deb && \
     apt-get update && \
     apt-get install --yes libmysqlclient-dev mysql-client=5.7.42-1ubuntu18.04 mysql-server=5.7.42-1ubuntu18.04

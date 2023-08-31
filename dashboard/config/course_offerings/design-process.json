@@ -13,7 +13,7 @@
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
   "description": "Through design challenges, a team project, and building an app prototype, this unit prompts students to consider the broader social impacts of computer science.",
-  "professional_learning_program": "code.org/apply",
+  "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": "2023-07-10 04:00:00 UTC",
   "self_paced_pl_course_offering_id": 443

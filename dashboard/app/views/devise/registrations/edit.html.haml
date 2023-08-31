@@ -8,10 +8,6 @@
 
 %h2= @page_title
 
-- unless current_user.migrated?
-  -# Mount point for React MigrateToMultiAuth component.
-  %div#migrate-multi-auth
-
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   - email_mismatch = current_user.errors.delete(:email_mismatch)
   - current_user.reload if email_mismatch.present?

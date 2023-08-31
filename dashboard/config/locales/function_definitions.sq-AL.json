@@ -503,37 +503,37 @@
           "draw a house": {
             "name": "vizato një shtëpi",
             "parameters": {
-              "length": "gjatesi"
+              "length": "gjatësia"
             }
           },
           "draw a pinwheel": {
             "parameters": {
-              "length": "gjatesi",
+              "length": "gjatësia",
               "repeat": "përsërit"
             }
           },
           "draw a shape": {
             "parameters": {
-              "length": "gjatesi"
+              "length": "gjatësia"
             }
           },
           "draw a square": {
             "name": "vizato një katror",
             "parameters": {
-              "length": "gjatesi"
+              "length": "gjatësia"
             }
           },
           "draw a star": {
             "name": "vizato një yll",
             "parameters": {
-              "length": "gjatesi",
+              "length": "gjatësia",
               "points": "pikët"
             }
           },
           "draw a triangle": {
-            "name": "vizato nje trekendesh",
+            "name": "vizato një trekëndësh",
             "parameters": {
-              "length": "gjatesi"
+              "length": "gjatësia"
             }
           }
         },

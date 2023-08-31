@@ -718,9 +718,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     [csp_2017, csp_2018, csp_2019, csp_2020].each do |c|
       summary = c.summarize_course_versions(create(:teacher))
-      assert_equal ["Computer Science Principles ('17-'18)", "Computer Science Principles ('18-'19)", "Computer Science Principles ('19-'20)"], summary.values.map {|h| h[:name]}
-      assert_equal [true, true, false], summary.values.map {|h| h[:is_stable]}
-      assert_equal [false, true, false], summary.values.map {|h| h[:is_recommended]}
+      assert_equal(["Computer Science Principles ('17-'18)", "Computer Science Principles ('18-'19)", "Computer Science Principles ('19-'20)"], summary.values.map {|h| h[:name]})
+      assert_equal([true, true, false], summary.values.map {|h| h[:is_stable]})
+      assert_equal([false, true, false], summary.values.map {|h| h[:is_recommended]})
     end
   end
 
@@ -736,9 +736,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     [csp_2017, csp_2018, csp_2019, csp_2020].each do |c|
       summary = c.summarize_course_versions(create(:student))
-      assert_equal ["Computer Science Principles ('18-'19)"], summary.values.map {|h| h[:name]}
-      assert_equal [true], summary.values.map {|h| h[:is_stable]}
-      assert_equal [true], summary.values.map {|h| h[:is_recommended]}
+      assert_equal(["Computer Science Principles ('18-'19)"], summary.values.map {|h| h[:name]})
+      assert_equal([true], summary.values.map {|h| h[:is_stable]})
+      assert_equal([true], summary.values.map {|h| h[:is_recommended]})
     end
   end
 

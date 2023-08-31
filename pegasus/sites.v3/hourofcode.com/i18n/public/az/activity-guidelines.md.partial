@@ -104,6 +104,7 @@ Nə lazımdır:
 * Təqdim olunan fəaliyyəti təmsil edən əsas əlaqənin adı və e-poçtu
 * Fəaliyyət Adı (adına “Kod Saatı” daxil edilə bilməz)
 * Fəaliyyətə URL bağlantısı
+* Bu fəaliyyətə AI daxildir: Bəli və ya Xeyr
 * Fəaliyyət təsviri (maksimum xarakter sayı: 400) 
     * Zəhmət olmasa təsvirə əsasən tələbə rəhbərliyi və ya müəllimi asanlaşdırdığını daxil edin. Əlavə olaraq, bəzi məktəblər Kod Saatı fəaliyyətlərinin Ümumi Core və ya Növbəti Nəsil Elm Standartlarına uyğun olub olmadığını bilməkdə maraqlıdırlar. Fəaliyyət xüsusi standartlara cavab verərsə, bu məlumatları daxil etməyi düşünün.
 * Nəzərdə tutulan istifadəçilər üçün tövsiyə olunan sinif səviyyələri. Sinifə uyğun kompüter elmləri anlayışları üçün \[Kompüter Elmləri Müəllimləri Dərnəyinin K-12 Standartlarına\] (https://k12cs.org/framework-statements-by-grade-band/) müraciət edə bilərsiniz. Nümunə sinif səviyyələrinə aşağıdakılar daxildir: 
@@ -111,9 +112,9 @@ Nə lazımdır:
     * 2-5-ci siniflər (7-10 yaş)
     * 6-8-ci siniflər (11-13 yaş)
     * 9+ siniflər (14+ yaş)
-* Fəaliyyətinizin əhatə etdiyi mövzu sahələrinin siyahısı (Kompüter Elminə əlavə olaraq). Məsələn, bir riyaziyyat müəllimi fəaliyyətinizdən bucaqlar və ya parabolalar haqqında öyrətmək üçün istifadə edə bilərsə, riyaziyyat kimi siyahıya salın. Fellər/isimlər/və s. Öyrədən dəli libs fəaliyyətiniz varsa. dil sənətini seçin.
-* Fəaliyyətinizin öyrətdiyi proqramlaşdırma dillərinin siyahısı. Yəni C/C ++, Java, JavaScript və s. və ya dildən asılı olmayaraq (birdən çox dildə tədris oluna bilən dərs planları üçün)
-* Dəstəklənən təbii dillərin siyahısı. Qeyd: Dil aşkarlama fəaliyyət təminatçısının məsuliyyətidir; bütün istifadəçiləri təqdim olunan tək URL-ə yönləndirəcəyik.
+* Fəaliyyətinizin öyrətdiyi proqramlaşdırma dillərinin siyahısı. Yəni C/C ++, Java, JavaScript və s. və ya dildən asılı olmayaraq (birdən çox dildə tədris oluna bilən dərs planları üçün) dil sənətini seçin.
+* Dəstəklənən təbii dillərin siyahısı. Qeyd: Dil aşkarlama fəaliyyət təminatçısının məsuliyyətidir; bütün istifadəçiləri təqdim olunan tək URL-ə yönləndirəcəyik. və ya dildən asılı olmayaraq (birdən çox dildə tədris oluna bilən dərs planları üçün)
+* Bir pedaqoq fəaliyyətinizdən istifadə etmək üçün hansı səviyyədə təcrübəyə sahib olmalıdır? (məsələn, Başlanğıc və ya Rahat.) Və tələbələr hansı səviyyədə təcrübəyə sahib olmalıdırlar?
 * Bir pedaqoq fəaliyyətinizdən istifadə etmək üçün hansı səviyyədə təcrübəyə sahib olmalıdır? (məsələn, Başlanğıc və ya Rahat.) Və tələbələr hansı səviyyədə təcrübəyə sahib olmalıdırlar? Daha qabaqcıl Kod Saatı™ Fəaliyyətləri hazırlamaq istəyirsinizsə, zəhmət olmasa fəaliyyətinizin təsvirinə lazım olan əvvəlki bilikləri daxil edin.
 * Fəaliyyətinizin uzunluğu 
     * Yalnız 1 saat
@@ -167,9 +168,11 @@ Nə lazımdır:
 
 ## Fəaliyyətlər necə qiymətləndiriləcək
 
-Kompüter elmləri müəllimlərindən ibarət müxtəlif komitə təqdimatları keyfiyyət və kəmiyyət meyarlarına əsasən sıralaya bilər. Əsas meyarlara uyğun olan bütün fəaliyyətlər sadalanacaqdır. Müəllimlər sinifləri üçün ən yaxşı fəaliyyətləri tapmaq üçün süzgəcdən keçirə və çeşidləyə biləcəklər.
+Kompüter elmləri müəllimlərindən ibarət müxtəlif komitə təqdimatları keyfiyyət və kəmiyyət meyarlarına əsasən sıralaya bilər. Əsas meyarlara uyğun olan bütün fəaliyyətlər sadalanacaqdır.
 
-Fəaliyyətlərin və dərs planlarının qiymətləndirilməsi üçün rubrik bütün fəaliyyətlər üzrə aşağıdakı meyarları axtaracaq və onları müvafiq olaraq sıralaya bilər:
+Ənənəvi kodlaşdırma fəaliyyətləri üçün müxtəlif kompüter elmləri müəllimləri komitəsi təqdimatları keyfiyyət və kəmiyyət meyarlarına əsasən sıralaya bilər. Əsas meyarlara uyğun olan bütün fəaliyyətlər sadalanacaqdır. Müəllimlər sinifləri üçün ən yaxşı fəaliyyətləri tapmaq üçün süzgəcdən keçirə və çeşidləyə biləcəklər.
+
+Baxış komitəsi fəaliyyəti istehsal keyfiyyətində sıfır qiymətləndirirsə (pis səhvlər və ya istifadəni çox çətinləşdirən təlimatlar səbəbindən), az təmsil olunan qruplarda öyrənməni təşviq etməkdə (irqçi/cinsiyyətçi material səbəbiylə), təhsil dəyərində (CS anlayışlarını öyrətmir) və ya əyləncəli/cəlbedici (şagirdlərin işləməsi çətin/ruhdan düşməsi səbəbindən), fəaliyyət siyahıya alınmayacaq.
 
 - Yüksək istehsal keyfiyyəti
 - Bütün demoqrafik qruplar tərəfindən öyrənməni təşviq edin (esp. gənc qadınlar, marjinal irqi və etnik qruplardan olan tələbələr və əlilliyi olan tələbələr kimi CS -də az təmsil olunan tələbələr)
@@ -177,9 +180,9 @@ Fəaliyyətlərin və dərs planlarının qiymətləndirilməsi üçün rubrik b
 - Əyləncəli və cəlbedici
 - Şagirdləri paylaşa biləcəkləri bənzərsiz bir şey yaratmağa təşviq edir (Gənc tələbələr üçün: valideynlər və sinif yoldaşları ilə. Köhnə tələbələr üçün: İnternetdə)
 
-Baxış komitəsi fəaliyyəti istehsal keyfiyyətində sıfır qiymətləndirirsə (pis səhvlər və ya istifadəni çox çətinləşdirən təlimatlar səbəbindən), az təmsil olunan qruplarda öyrənməni təşviq etməkdə (irqçi/cinsiyyətçi material səbəbiylə), təhsil dəyərində (CS anlayışlarını öyrətmir) və ya əyləncəli/cəlbedici (şagirdlərin işləməsi çətin/ruhdan düşməsi səbəbindən), fəaliyyət siyahıya alınmayacaq.
-
 Bundan əlavə, siyahıya alınmaq üçün bütün fəaliyyətlər:
+
+Yeni müəllimlər və tələbələr üçün özünü idarə edən fəaliyyətlər üçün araşdırma komitəsi aşağıdakıları axtaracaq:
 
 - Dövlət məktəbi sinifinə uyğun olun (silah, açıq/yetkin məzmun, dini məzmun və s.)
 - Qeydiyyatdan keçməyin
@@ -205,11 +208,13 @@ Müəllimlər və tələbələr sinif, təcrübə səviyyəsi, fənn, aparat və
 
 ## Bir saatlıq özünü idarə edən dərsliklər hazırlamaq üçün təkliflər
 
-Dərsliyinizə [Saat Kod loqosu](https://hourofcode.com/us/promote/resources#logo) daxil edə bilərsiniz, lakin bu tələb olunmur. Kod Saatı loqotipindən istifadə edirsinizsə, aşağıdakı ticarət nişanı təlimatlarına baxın. <u>Heç bir halda Code.org loqosu və adı istifadə edilə bilməz.</u> Hər ikisi ticarət nişanıdır və açıq yazılı icazə olmadan 3-cü tərəf markası ilə qarışdırıla bilməz.
-
-**Orta tələbənin bir saat ərzində rahat bitirə biləcəyinə əmin olun.** Dərsdə daha sürətli hərəkət edən tələbələr üçün sonunda açıq bir fəaliyyət əlavə etməyi düşünün. Unutmayın ki, əksər uşaqlar kompüter elmləri və kodlaşdırmağa mütləq yeni başlayanlar olacaqlar.
+Fəaliyyətlərə AI daxil etmək məcburiyyətində deyil, baxmayaraq ki, biz daha çox AI ilə əlaqəli fəaliyyətlər təklif etmək istəyirik.
 
 **Müəllim qeydlərini daxil edin.** Əksər fəaliyyətlər tələbə yönümlü olmalıdır, lakin bir fəaliyyət müəllim tərəfindən asanlaşdırılırsa və ya idarə olunarsa, xahiş edirəm fəaliyyətinizlə birlikdə təqdim olunan ayrı bir URL-də müəllim qeydləri şəklində müəllim üçün aydın və sadə istiqamətləri daxil edin. Tələbələr nəinki təcrübəsizdirlər, bəzi müəllimlər də var. Kimi məlumatları daxil edin:
+
+**Fəaliyyətin sonunda rəy daxil edin.** (Məsələn, “10 səviyyəni bitirdiniz və döngələr haqqında öyrəndiniz! Əla iş!”)
+
+**Tələbələri bitirdikdən sonra sosial mediaya göndərməyə təşviq edin (lazım olduqda).** Məsələn, “ ________ ilə bir saat Kod etdim varmı? #HourOfCode” və ya “#CSEdWeek hissəsinin bir hissəsi olaraq #HourOfCode etdim. Sən var?
 
 - Dərslik hansı platformalarda və brauzerlərdə daha yaxşı işləyir?
 - Smartfonlarda işləyirmi? Planşetlər?
@@ -248,7 +253,7 @@ Hour of Code® və Hora del Código® Code.org şirkətinin qeydiyyatdan keçmi�
 
 ## İzləmə Pixel
 
-İştirakçılığı daha dəqiq izləmək üçün hər bir dərslik ortağından Kod Saatı dərsliklərinin ilk səhifəsinə 1 piksellik izləmə şəkli daxil etmələrini xahiş edirik. Piksel şəkli yalnız başlanğıc səhifəsində olmalıdır. Dərsliyinizin heç bir aralıq səhifəsinə daxil etməyin.
+Dərsliyiniz təsdiqlənərsə və son dərs səhifəsinə daxil edilərsə, Code.org sizə təlimatınıza inteqrasiya etməyiniz üçün unikal izləmə pikseli təqdim edəcəkdir. Aşağıdakı nümunəyə baxın. Dərsliyinizin heç bir aralıq səhifəsinə daxil etməyin.
 
 Bu, Kod Saatı təlimatınızı edən istifadəçiləri saymağa imkan verəcək. Bu, təlimatınız üçün daha dəqiq iştirak sayına səbəb olacaqdır.
 
