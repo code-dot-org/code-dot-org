@@ -1863,6 +1863,10 @@ div.WireframeButtons_active {
   pointer-events: visiblePainted;
 }
 
+.modalFunctionEditorContainer .blocklyScrollbarVertical {
+  pointer-events: visiblePainted;
+}
+
 .modalFunctionEditorContainer .injectionDiv {
   pointer-events: none;
 }

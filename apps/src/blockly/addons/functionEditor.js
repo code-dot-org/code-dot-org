@@ -43,7 +43,15 @@ export default class FunctionEditor {
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
       toolbox: options.toolbox,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
-      move: {drag: false},
+      move: {
+        drag: false,
+        scrollbars: {
+          vertical: true,
+          horizontal: false,
+        },
+        wheel: true,
+      },
+      trashcan: false, // Don't use default trashcan.
     });
 
     // Close handler
