@@ -32,6 +32,7 @@ module I18n
               locale = pegasus_lang[:locale_s]
 
               i18n_spritelab_file_path = CDO.dir(File.join(I18N_LOCALES_DIR, locale, DIR_NAME, SPRITELAB_FILE_NAME))
+              FileUtils.mkdir_p(File.dirname(i18n_spritelab_file_path))
               FileUtils.mv crowdin_spritelab_file_path, i18n_spritelab_file_path, force: true
               FileUtils.rm_r File.dirname(crowdin_spritelab_file_path)
               I18nScriptUtils.delete_empty_crowdin_locale_dir(crowdin_locale)
