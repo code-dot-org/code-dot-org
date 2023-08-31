@@ -14,6 +14,7 @@ import {
   translatedInterdisciplinary,
   translatedCourseOfferingDeviceTypes,
   translatedCourseOfferingDurations,
+  translatedCourseOfferingMarketingInitiatives,
   translatedGradeLevels,
   gradeLevelsMap,
 } from '../teacherDashboard/CourseOfferingHelpers';
@@ -43,6 +44,11 @@ const filterTypes = {
     name: 'device',
     label: i18n.device(),
     options: translatedCourseOfferingDeviceTypes,
+  },
+  marketingInitiative: {
+    name: 'marketingInitiative',
+    label: i18n.curriculum(),
+    options: translatedCourseOfferingMarketingInitiatives,
   },
 };
 
@@ -149,6 +155,26 @@ const filterByDevice = (curriculum, deviceFilters) => {
   return true;
 };
 
+const filterByMarketingInitiative = (
+  curriculum,
+  marketingInitiativeFilters
+) => {
+  if (marketingInitiativeFilters.length > 0) {
+    if (!curriculum.marketing_initiative) {
+      return false;
+    } else if (
+      marketingInitiativeFilters.includes(
+        curriculum.marketing_initiative.toLowerCase()
+      )
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  return true;
+};
+
 const CurriculumCatalogFilters = ({
   curriculaData,
   filteredCurricula,
@@ -172,6 +198,10 @@ const CurriculumCatalogFilters = ({
         filterByDuration(curriculum, appliedFilters['duration']) &&
         filterByTopic(curriculum, appliedFilters['topic']) &&
         filterByDevice(curriculum, appliedFilters['device']) &&
+        filterByMarketingInitiative(
+          curriculum,
+          appliedFilters['marketingInitiative']
+        ) &&
         (!appliedFilters['translated'] || curriculum.is_translated)
     );
     const newNumFilteredTranslatedCurricula = newFilteredCurricula.filter(
