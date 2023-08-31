@@ -147,7 +147,7 @@ RUN curl -sSLOJ https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb && \
     dpkg -i mysql-apt-config_0.8.22-1_all.deb || apt-get --fix-broken --yes install && \
     rm -rf mysql-apt-config_0.8.22-1_all.deb && \
     apt-get update && \
-    apt-get install --yes libmysqlclient-dev mysql-client=5.7.42-1ubuntu18.04 mysql-server=5.7.42-1ubuntu18.04;
+    apt-get install --yes libmysqlclient-dev mysql-client=5.7.42-1ubuntu18.04 mysql-server=5.7.42-1ubuntu18.04
 
 # disable auth for local dashboard mysql db
 RUN service mysql start && \
