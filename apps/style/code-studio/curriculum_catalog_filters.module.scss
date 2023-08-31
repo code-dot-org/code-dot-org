@@ -60,3 +60,9 @@ button.catalogClearFiltersButton {
   font-size: 16px;
   margin-left: auto;
 }
+
+[dir="rtl"] button.catalogClearFiltersButton {
+  font-size: 16px;
+  margin-right: auto;
+  margin-left: 0;
+}
