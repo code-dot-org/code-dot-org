@@ -5,7 +5,6 @@ class RubricsControllerTest < ActionController::TestCase
 
   setup do
     @levelbuilder = create :levelbuilder
-    sign_in @levelbuilder
     @lesson = create(:lesson)
     @level = create(:level)
     create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
@@ -31,15 +30,13 @@ class RubricsControllerTest < ActionController::TestCase
       }
     end
 
-    puts @rubric.inspect
-
     response_json = JSON.parse(response.body)
     rubric_id = response_json['rubricId']
-    @rubric = Rubric.find_by(id: rubric_id)
-    @learning_goals = LearningGoal.where(rubric_id: @rubric.id)
+    rubric = Rubric.find_by(id: rubric_id)
+    learning_goals = LearningGoal.where(rubric_id: rubric.id)
 
-    assert_equal @level.id, @rubric.level_id
-    assert_equal @lesson.id, @rubric.lesson_id
-    assert_equal 2, @learning_goals.length
+    assert_equal @level.id, rubric.level_id
+    assert_equal @lesson.id, rubric.lesson_id
+    assert_equal 2, learning_goals.length
   end
 end
