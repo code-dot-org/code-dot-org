@@ -3,6 +3,7 @@ import {
   ProcedureBase,
 } from '@blockly/block-shareable-procedures';
 import {flyoutCategory as functionsFlyoutCategory} from '../customBlocks/googleBlockly/proceduresBlocks';
+import {flyoutCategory as behaviorsFlyoutCategory} from '../customBlocks/googleBlockly/behaviorBlocks';
 import {
   MODAL_EDITOR_ID,
   MODAL_EDITOR_CLOSE_ID,
@@ -75,6 +76,9 @@ export default class FunctionEditor {
     // false to not show the new function button inside the modal editor
     this.editorWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
       functionsFlyoutCategory(Blockly.mainBlockSpace, true)
+    );
+    this.editorWorkspace.registerToolboxCategoryCallback('Behavior', () =>
+      behaviorsFlyoutCategory(Blockly.mainBlockSpace, true)
     );
 
     // Set up the "new procedure" button in the toolbox
