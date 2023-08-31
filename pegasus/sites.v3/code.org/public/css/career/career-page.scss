@@ -1,12 +1,13 @@
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
 h1 {
-    font-family: Barlow Semi Condensed;
+    margin-top: 50px;
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
 }
 
 h2 {
-    font-family: Barlow Semi Condensed;
     font-size: 34px;
     font-style: normal;
     font-weight: 600;
@@ -15,11 +16,10 @@ h2 {
 }
 
 h4 {
-    font-family: Barlow Semi Condensed;
     font-size: 24px;
     font-style: normal;
     font-weight: bold;
-    line-height: 132%; /* 31.68px */
+    line-height: 132%; 
 }
 
 .link-button:hover {
