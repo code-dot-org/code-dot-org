@@ -2,27 +2,28 @@
 #
 # Table name: course_offerings
 #
-#  id                               :integer          not null, primary key
-#  key                              :string(255)      not null
-#  display_name                     :string(255)      not null
-#  created_at                       :datetime         not null
-#  updated_at                       :datetime         not null
-#  category                         :string(255)      default("other"), not null
-#  is_featured                      :boolean          default(FALSE), not null
-#  assignable                       :boolean          default(TRUE), not null
-#  curriculum_type                  :string(255)
-#  marketing_initiative             :string(255)
-#  grade_levels                     :string(255)
-#  header                           :string(255)
-#  image                            :string(255)
-#  cs_topic                         :string(255)
-#  school_subject                   :string(255)
-#  device_compatibility             :string(255)
-#  description                      :string(255)
-#  professional_learning_program    :string(255)
-#  video                            :string(255)
-#  published_date                   :datetime
-#  self_paced_pl_course_offering_id :integer
+#  id                                :integer          not null, primary key
+#  key                               :string(255)      not null
+#  display_name                      :string(255)      not null
+#  created_at                        :datetime         not null
+#  updated_at                        :datetime         not null
+#  category                          :string(255)      default("other"), not null
+#  is_featured                       :boolean          default(FALSE), not null
+#  assignable                        :boolean          default(TRUE), not null
+#  curriculum_type                   :string(255)
+#  marketing_initiative              :string(255)
+#  grade_levels                      :string(255)
+#  header                            :string(255)
+#  image                             :string(255)
+#  cs_topic                          :string(255)
+#  school_subject                    :string(255)
+#  device_compatibility              :string(255)
+#  description                       :string(255)
+#  professional_learning_program     :string(255)
+#  video                             :string(255)
+#  published_date                    :datetime
+#  self_paced_pl_course_offering_id  :integer
+#  self_paced_pl_course_offering_key :string(255)
 #
 # Indexes
 #
@@ -33,7 +34,7 @@ class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
 
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
-  belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
+  belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', foreign_key: 'self_paced_pl_course_offering_key', optional: true
 
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
   validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true

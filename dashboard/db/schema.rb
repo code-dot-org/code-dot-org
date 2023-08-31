@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_20_231439) do
+ActiveRecord::Schema.define(version: 2023_08_31_214557) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -414,6 +414,7 @@ ActiveRecord::Schema.define(version: 2023_07_20_231439) do
     t.string "video"
     t.datetime "published_date"
     t.integer "self_paced_pl_course_offering_id"
+    t.string "self_paced_pl_course_offering_key"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
