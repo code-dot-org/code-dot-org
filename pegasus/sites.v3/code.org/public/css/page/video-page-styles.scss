@@ -1,0 +1,229 @@
+// Custom styles for code.org/educate/csd
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
+.hero-banner-basic {
+  &.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(85, 167, 151, 1), rgba(33, 204, 163, 1));
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/images/banners/banner-bg-arrow-dots-light.png');
+      background-repeat: repeat;
+      background-size: contain;
+      z-index: 2;
+    }
+  }
+
+  @media screen and (max-width: $width-sm) {
+    background-size: 50%;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 10;
+  }
+
+  .text-wrapper {
+    width: 68%;
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+    }
+  }
+
+  figure {
+    width: 25%;
+
+    @media screen and (max-width: $width-sm) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  a.link-button {
+    background-color: $neutral-white;
+    border-color: $neutral-white;
+    color: $neutral-dark;
+    &:hover {
+        background: #EAEBEB;
+    }
+  }
+}
+
+
+
+.carousel-wrapper {
+  padding-bottom: 0;
+
+  p {
+    font-family: $gotham-regular !important;
+  }
+
+  @media (max-width: 1279px) {
+    overflow: hidden;
+  }
+}
+
+.carousel {
+  &__next {
+    position: absolute;
+    right: -100vh;
+  }
+
+  &__prev {
+    position: absolute;
+    left: -100vw;
+  }
+
+  .action-block {
+    min-width: 300px;
+    max-width: 420px;
+    margin: 0 auto;
+    display: contents;
+  }
+
+  @media (min-width: 640px) {
+    position: relative;
+
+    .slides {
+      width: 300%;
+      height: 265px;
+      display: flex;
+    }
+    .slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+    .action-block {
+      min-width: 230px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    &__prev {
+      position: absolute;
+      top: calc(50% - 20px);
+      left: -90px;
+      background: none;
+      border: none;
+      transform: translateY(-50%);
+      transition: .3s;
+      padding: 0;
+      width: 55px;
+
+      &:hover {
+        background: none;
+        opacity: .8;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+    &__next {
+      position: absolute;
+      top: calc(50% - 20px);
+      right: -90px;
+      background: none;
+      border: none;
+      transform: translateY(-50%);
+      transition: .3s;
+      padding: 0;
+      width: 55px;
+
+      &:hover {
+        background: none;
+        opacity: .8;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.action-block {
+  &__space {
+    height: 32px;
+    display: block;
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+}
+
+section#collections,
+section#flexible-units {
+  padding-bottom: calc(64px - 10px);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+
+    a.link-button {
+        background-color: $neutral-white;
+        border-color: $neutral-dark;
+        color: $neutral-dark;
+        &:hover {
+            background: #EAEBEB;
+        }
+    }
+
+    &__line {
+        margin: 24px 0;
+    }
+}
+
+.video-series {
+    margin: 0 auto;
+}
+
+.thumbnail-wrapper .thumbnail-image {
+  height: 245px;
+}
+
+.action-block .video_caption_link {
+  margin: 0;
+  display: flex;
+}
+
+.action-block--one-col img {
+  margin: 0;
+}
+
+
+@media (max-width: 640px) {
+  .slides {
+    height: 265px;
+    display: flex;
+  }
+}

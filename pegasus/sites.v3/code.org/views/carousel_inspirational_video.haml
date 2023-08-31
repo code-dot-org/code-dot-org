@@ -1,0 +1,31 @@
+- video_inspirational_index = 6
+- video_inspirational_id_first = ["change_face", "anybody_learn", "inspire_a_girl", "school_teach", "hc_anybody_learn", "aracely"]
+- video_inspirational_id_second = ["steph_curry", "science_everything", "science_intro", "president_computer_science", "chris_anybody_learn", "lo_que_falta"]
+- inspirational_caption_first = [hoc_s(:video_library_page_inspirational_video_title_1), hoc_s(:video_library_page_inspirational_video_title_2), hoc_s(:video_library_page_inspirational_video_title_3), hoc_s(:video_library_page_inspirational_video_title_4), hoc_s(:video_library_page_inspirational_video_title_5), hoc_s(:video_library_page_inspirational_video_title_6)]
+- inspirational_caption_second = [hoc_s(:video_library_page_inspirational_video_title_7), hoc_s(:video_library_page_inspirational_video_title_8), hoc_s(:video_library_page_inspirational_video_title_9), hoc_s(:video_library_page_inspirational_video_title_10), hoc_s(:video_library_page_inspirational_video_title_11), hoc_s(:video_library_page_inspirational_video_title_12)]
+- video_inspirational_first = ["uhcA6K8rWp0", "ip051U7Rvds", "mFPg96gdPkc", "nKIu9yen5nc", "FC5FbmsH4fw", "rqU8eNJ-SS0"]
+- video_inspirational_second = ["NYzN0a1U8mI", "QvyTEx1wyOY", "_IiPLtP-jm8", "6XvmhE1J9PY", "qYZF6oIZtfc", "EGgdCryC8Uo"]
+
+.carousel-wrapper#inspirational_works_collection
+  .carousel.inspirational_works_collection
+    .slides
+      - video_inspirational_index.times do |index|
+        .slide
+          .action-block.action-block--one-col.flex-space-between
+            .dinspirational
+              = view :display_video_thumbnail, id: video_inspirational_id_first[index], video_code: video_inspirational_first[index], play_button: 'center', letterbox: 'false', caption: inspirational_caption_first[index]
+            .div
+              = view :display_video_thumbnail, id: video_inspirational_id_second[index], video_code: video_inspirational_second[index], play_button: 'center', letterbox: 'false', caption: inspirational_caption_second[index]
+        
+            
+  .pagination
+    #inspirational_works_collection_pagination
+  .dd__buttons
+    %button.carousel__prev#prev_8
+      %img{src: "/images/carousel/prev.svg", alt: "previous"}
+
+    %button.carousel__next#next_8
+      %img{src: "/images/carousel/next.svg", alt: "next"}
+
+
+

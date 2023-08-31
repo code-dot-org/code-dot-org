@@ -1,0 +1,36 @@
+- video_not_hacked_index = 5
+- video_not_hacked_id_first = ["not_hacked_intro", "not_hacked_auth", "not_hacked_wifi", "not_hacked_updates"]
+- video_not_hacked_id_second = ["not_hacked_passwords", "not_hacked_phising", "not_hacked_messaging"]
+- video_not_hacked_first = ["4J6FNRft9pQ", "l9mEd8LOMl8", "E3imvkP3IC0", "goMnkhKBOHY"]
+- video_not_hacked_second = ["qLMIK5YVgfA", "YfiM8rXg3ug", "IxjWR_uexOc"]
+
+
+.carousel-wrapper#not_hacked_works_collection
+  .carousel.not_hacked_works_collection
+    .slides
+      - video_not_hacked_index.times do |index|
+        - if index <3
+          .slide
+            .action-block.action-block--one-col.flex-space-between
+              .div
+                = view :display_video_thumbnail, id: video_not_hacked_id_first[index], video_code: video_not_hacked_first[index], play_button: 'center', letterbox: 'false'
+              .div
+                = view :display_video_thumbnail, id: video_not_hacked_id_second[index], video_code: video_not_hacked_second[index], play_button: 'center', letterbox: 'false'
+        
+        -if index === 3
+          .slide{style:"justify-content: flex-start"}
+            .action-block.action-block--one-col.flex-space-between
+              .image
+                = view :display_video_thumbnail, id: video_not_hacked_id_first[index], video_code: video_not_hacked_first[index], play_button: 'center', letterbox: 'false'         
+            
+  .pagination
+    #not_hacked_works_collection_pagination
+  .dd__buttons
+    %button.carousel__prev#prev_6
+      %img{src: "/images/carousel/prev.svg", alt: "previous"}
+
+    %button.carousel__next#next_6
+      %img{src: "/images/carousel/next.svg", alt: "next"}
+
+
+

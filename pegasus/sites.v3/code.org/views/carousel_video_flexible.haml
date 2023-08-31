@@ -1,0 +1,37 @@
+- video_101_index = 5
+- video_id_first = ["ai_101_01"]
+- ai_caption_first = [hoc_s(:ai_vid_chatbots_caption), hoc_s(:ai_vid_chatbots_caption), hoc_s(:ai_vid_trainingdata_caption), hoc_s(:ai_vid_computervision_caption), hoc_s(:ai_vid_ethics2_caption)]
+- ai_caption_second = [hoc_s(:ai_vid_creativity_caption), hoc_s(:ai_vid_mlintro_caption), hoc_s(:ai_vid_neuralnetworks_caption), hoc_s(:ai_vid_ethics1_caption)]
+- video_id_second = ["ai_chatbots", "machine_learning", "neural_networks", "ethics_ai_equak"]
+- video_ai_first = ["X-AWdfSFCHQ", "Ok-xpKjKp2g", "x2mRoFNm22g", "2hXG8v8p0KM", "zNxw5gJtHLc"]
+- video_ai_second = ["X994dDnmRmY", "OeU5m6vRyCk", "JrXazCEACVo", "tJQSyzBUAew"]
+
+.carousel-wrapper#flexible_units_carousel
+  .carousel.carousel--flexible_units
+    .slides
+      - video_101_index.times do |index|
+        - if index < 4
+          .slide
+            .action-block.action-block--one-col.flex-space-between
+              .div
+                = view :display_video_thumbnail, id: video_id_first[index], video_code: video_ai_first[index], play_button: 'center', letterbox: 'false', caption: ai_caption_first[index]
+              .div
+                = view :display_video_thumbnail, id: video_id_second[index], video_code: video_ai_second[index], play_button: 'center', letterbox: 'false', caption: ai_caption_second[index]
+        
+        -if index === 4
+          .slide{style:"justify-content: flex-start"}
+            .action-block.action-block--one-col.flex-space-between
+              .image
+                = view :display_video_thumbnail, id: video_id_first[index], video_code: video_ai_first[index], play_button: 'center', letterbox: 'false', caption: ai_caption_first[index]      
+            
+  .pagination
+    #flexible_units_carousel-pagination
+  .dd__buttons
+    %button.carousel__prev#prev_1
+      %img{src: "/images/carousel/prev.svg", alt: "previous"}
+
+    %button.carousel__next#next_1
+      %img{src: "/images/carousel/next.svg", alt: "next"}
+
+
+

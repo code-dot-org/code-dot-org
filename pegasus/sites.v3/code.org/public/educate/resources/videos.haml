@@ -1,0 +1,62 @@
+---
+title: Tools and videos
+theme: responsive_full_width
+video_player: true
+---
+
+-video_page_index = 8
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/video-page-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.overlay
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1{style: "color: white"}
+        =hoc_s(:teach_page_additional_materials_list_heading_02)
+      %p{style: "color: white"}
+        =hoc_s(:video_library_page_hero_description)
+      %a.link-button{href: "#pick-a-course"}
+        =hoc_s(:call_to_action_explore_courses)
+    %figure
+      %img{src: "/images/banners/video-logo.png", alt: "", style: "width: 150%"}
+    .clear
+
+- video_page_index.times do |index|
+  %section#collection 
+    .wrapper
+      %h2{style: "text-align: center"}
+        =hoc_s("video_library_page_title_#{index + 1}")
+      %p{style: "text-align: center"}
+        =hoc_s("video_library_page_description_#{index + 1}")
+      -if index === 0
+        = view :carousel_video_flexible
+      -if index === 1
+        = view :carousel_ai_teacher_flexible
+      -if index === 2
+        = view :carousel_computer_works_video
+      -if index === 3 
+        = view :carousel_internet_video
+      -if index === 4
+        = view :carousel_blockchain_video
+      -if index === 5 
+        = view :carousel_not_hacked_video
+      -if index === 6
+        = view :carousel_cs_video
+      -if index === 7 
+        = view :carousel_inspirational_video
+
+%hr.footer__line
+%section.footer
+  %p{style: "text-align: center"}
+    =hoc_s(:video_library_page_footer_description)
+  %a.link-button{href: "#pick-a-course"}
+    =hoc_s(:video_library_page_footer_cta)
+
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+%script{:src=>'/js/page/video_page.js'}
+
+
+
