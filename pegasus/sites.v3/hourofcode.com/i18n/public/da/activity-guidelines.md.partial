@@ -104,6 +104,7 @@ Hvad du skal bruge:
 * Navn og e-mail på den primære kontaktperson, der repræsenterer den indsendte aktivitet
 * Aktivitetsnavn (kan ikke medtage „Hour of Code“ i navnet)
 * URL-link til aktiviteten
+* Omfatter denne aktivitet AI: Ja eller Nej
 * En aktivitetsbeskrivelse (maks. Antal tegn: 400) 
     * Vedlæg i beskrivelsen om det hovedsagligt er elev-styret eller lærer-styret. Derudover er nogle skoler interesseret i at vide om Hour of Code aktiviteten vedrører Common Core eller Next Generation Science Standards. Hvis aktiviteten omhandler specifikke standarder, overvej at medtage dette i informationen.
 * Anbefalet karakterniveau (r) for tilsigtede brugere. Du kan henvise til \[Computer Science Teachers' Association's K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for karakterrelevante datalogiske begreber. Eksempel på karakterniveauer inkluderer: 
@@ -111,9 +112,9 @@ Hvad du skal bruge:
     * Karakterer 2-5 (7-10 år)
     * Karakterer 6-8 (i alderen 11-13)
     * Grader 9+ (aldre 14+)
-* En liste over fagområder, din aktivitet dækker (ud over datalogi). For eksempel, hvis en matematiklærer kan bruge din aktivitet til at undervise i vinkler eller paraboler, skal du angive som matematik. Hvis du har en gal libs-aktivitet, der lærer verb/navneord/osv. Vælg sprogkunst.
-* En liste over programmeringssprog, som din aktivitet lærer. Dvs. C/C ++, Java, JavaScript osv. eller sproguafhængig (for lektionsplaner, der kan undervises på flere sprog)
-* En liste over understøttede naturlige sprog. Bemærk: Sprogregistrering er aktivitetsudbyderens ansvar; vi omdirigerer alle brugere til den angivne enkeltadresse.
+* En liste over programmeringssprog, som din aktivitet lærer. Dvs. C/C ++, Java, JavaScript osv. eller sproguafhængig (for lektionsplaner, der kan undervises på flere sprog) Vælg sprogkunst.
+* En liste over understøttede naturlige sprog. Bemærk: Sprogregistrering er aktivitetsudbyderens ansvar; vi omdirigerer alle brugere til den angivne enkeltadresse. eller sproguafhængig (for lektionsplaner, der kan undervises på flere sprog)
+* Hvilket erfaringsniveau skal en underviser have for at bruge din aktivitet? (f.eks. Begynder eller Komfortabel.) Og, hvilket niveau af erfaring skal eleverne have?
 * Hvilket erfaringsniveau skal en underviser have for at bruge din aktivitet? (f.eks. Begynder eller Komfortabel.) Og, hvilket niveau af erfaring skal eleverne have? Hvis du gerne vil forberede mere avancerede Hour of Code™ -aktiviteter, bedes du medtage den nødvendige forudgående viden i beskrivelsen af din aktivitet.
 * Længden af din aktivitet 
     * Kun 1 time
@@ -167,9 +168,11 @@ Hvad du skal bruge:
 
 ## Hvordan aktiviteter vil blive evalueret
 
-Et mangfoldigt udvalg af datalogiske undervisere vil rangordne indsendelser baseret på kvalitative og kvantitative kriterier. Alle aktiviteter, der passer til de grundlæggende kriterier, vil blive opført. Lærere vil være i stand til at filtrere og sortere for at finde de bedste aktiviteter til deres klasseværelse.
+Et mangfoldigt udvalg af datalogiske undervisere vil rangordne indsendelser baseret på kvalitative og kvantitative kriterier. Alle aktiviteter, der passer til de grundlæggende kriterier, vil blive opført.
 
-Rubrikken til evaluering af aktiviteter og lektionsplaner vil se efter følgende kriterier for alle aktiviteter og rangere dem i overensstemmelse hermed:
+For traditionelle kodningsaktiviteter vil et mangfoldigt udvalg af datalogiske undervisere rangere indsendelser baseret på kvalitative og kvantitative kriterier. Alle aktiviteter, der passer til de grundlæggende kriterier, vil blive opført. Lærere vil være i stand til at filtrere og sortere for at finde de bedste aktiviteter til deres klasseværelse.
+
+Hvis bedømmelsesudvalget vurderer aktiviteten til nul i produktionskvalitet (på grund af dårlige fejl eller instruktioner, der gør det meget svært at bruge), ved at fremme læring i underrepræsenterede grupper (på grund af racistisk/sexistisk materiale), i uddannelsesmæssig værdi (underviser ikke CS-koncepter) eller sjov/engagerende (på grund af at være vanskelig/nedslående for studerende at arbejde igennem), vil aktiviteten ikke blive opført.
 
 - Høj produktionskvalitet
 - Fremme læring af alle demografiske grupper (esp. studerende underrepræsenteret i CS, ligesom unge kvinder, studerende fra marginaliserede race- og etniske grupper og studerende med handicap)
@@ -177,9 +180,9 @@ Rubrikken til evaluering af aktiviteter og lektionsplaner vil se efter følgende
 - Sjov og engagerende
 - Opfordrer eleverne til at skabe noget unikt, de kan dele (For yngre studerende: med forældre og klassekammerater. For ældre studerende: på Internettet)
 
-Hvis bedømmelsesudvalget vurderer aktiviteten til nul i produktionskvalitet (på grund af dårlige fejl eller instruktioner, der gør det meget svært at bruge), ved at fremme læring i underrepræsenterede grupper (på grund af racistisk/sexistisk materiale), i uddannelsesmæssig værdi (underviser ikke CS-koncepter) eller sjov/engagerende (på grund af at være vanskelig/nedslående for studerende at arbejde igennem), vil aktiviteten ikke blive opført.
-
 For at blive opført skal alle aktiviteter desuden:
+
+For selvstyrede aktiviteter for nye lærere og studerende vil bedømmelsesudvalget lede efter, om:
 
 - Vær passende til et offentligt skoleklasseværelse (ingen våben, intet eksplicitt/modent indhold, intet religiøst indhold osv.)
 - Kræver ingen tilmelding
@@ -205,11 +208,13 @@ Lærere og studerende vil være i stand til at søge igennem og filtrere vores l
 
 ## Forslag til design af en times selvguidede tutorials
 
-Du kan medtage [Hour of Code-logoet](https://hourofcode.com/us/promote/resources#logo) i din tutorial, men dette er ikke påkrævet. Hvis du bruger Hour of Code-logoet, se retningslinjerne for varemærker nedenfor. <u>Under ingen omstændigheder kan Code.org-logoet og navnet bruges.</u> Begge er varemærkebeskyttede og kan ikke blandes med et tredjepartsmærke uden udtrykkelig skriftlig tilladelse.
-
-**Sørg for at den gennemsnitlige elev kan afslutte inden for en time.** Overvej at tilføje en tidsubestemt aktivitet i slutningen for elever, der er hurtigere gennem lektion. Husk at de fleste børn vil være absolutte begyndere til kodning.
+Aktiviteter behøver ikke at omfatte AI, selvom vi ønsker at tilbyde flere AI-relaterede aktiviteter.
 
 **Vedhæft lærernoter.** De fleste aktiviteter bør være elev-rettet, men hvis en aktivitet skal ledes af en lærer, så inkluder tydelige og enkle anvisninger til læreren i form af lærer-noter på en separat URL indsendt med din aktivitet. Det er ikke kun eleverne der er nybegyndere, det er mange af lærerne også. Medtage også information om:
+
+**Indarbejd feedback i slutningen af aktiviteten.** (f.eks. „Du afsluttede 10 niveauer og lærte om sløjfer! Godt arbejde!“)
+
+**Opmuntr eleverne til at skrive på sociale medier (hvor det er relevant), når de er færdige.** For eksempel „Jeg har lavet en Hour of Code med ________ Har du? #HourOfCode“ eller „Jeg har gjort en #HourOfCode som en del af #CSEdWeek. Har du?
 
 - Hvilke platforme og browsere fungerer selvstudiet bedst på?
 - Virker det på smartphones? Tabletter?
@@ -248,7 +253,7 @@ Hour of Code® og Hora del Código® er registrerede varemærker tilhørende Cod
 
 ## Sporings Pixel
 
-For mere nøjagtigt at spore deltagelse beder vi hver tutorial-partner om at inkludere et sporingsbillede på 1 pixel på den første side af deres Hour of Code-tutorials. Pixelbilledet må kun være på startsiden. Medtag ikke på nogen midlertidige sider i din tutorial.
+Hvis din tutorial er godkendt og inkluderet på den sidste vejledningsside, vil Code.org give dig en unik sporingspixel, som du kan integrere i din tutorial. Se eksemplet nedenfor. Medtag ikke på nogen midlertidige sider i din tutorial.
 
 Dette giver os mulighed for at tælle brugere, der laver din Hour of Code-tutorial. Det vil føre til mere nøjagtige deltagelsestællinger for din tutorial.
 

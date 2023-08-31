@@ -233,7 +233,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('svgResize');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
-  blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('utils');
   blocklyWrapper.wrapReadOnlyProperty('Toolbox');
   blocklyWrapper.wrapReadOnlyProperty('Touch');
@@ -673,6 +672,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     // Hidden workspace where we can put function definitions.
     const hiddenDefinitionWorkspace = new Blockly.Workspace();
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
+    blocklyWrapper.useModalFunctionEditor = options.useModalFunctionEditor;
 
     if (
       options.useModalFunctionEditor &&

@@ -106,3 +106,11 @@ export const subjectsAndTopicsOrder = [
   'data',
   'programming',
 ];
+
+export const translatedAvailableResources = {
+  'Lesson Plan': i18n.lessonPlans(),
+  'Slide Deck': i18n.slideDecks(),
+  'Activity Guide': i18n.activityGuides(),
+  'Answer Key': i18n.answerKeysExemplars(),
+  Rubric: i18n.projectRubrics(),
+};

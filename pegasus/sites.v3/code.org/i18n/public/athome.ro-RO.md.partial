@@ -38,7 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Petrecere dansantă</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Programați o petrecere dansantă pe care să le-o trimiteți prietenilor. Cu participarea Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzică din „Encanto” de la Disney și mulți alții!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Cod o petrecere de dans pentru a împărtăși cu prietenii și familia. Cu participarea Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzică din „Encanto” de la Disney și mulți alții!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Încearcă această activitate</button></a>
     </span>
   </div>
@@ -52,7 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hour of Code în Minecraft </strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft revine la Hour of Code cu o activitate complet nouă! Călătorie prin Minecraft cu ajutorul codului.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Încercați activitatea</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft se întoarce pentru Hour of Code cu o activitate nouă! Călătorie prin Minecraft cu ajutorul codului.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Încercați activitatea</button></a>
     </span>
   </div>
 </div>
@@ -65,7 +67,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>IA pentru Oceane</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Ajutați IA să curețe oceanele, antrenând-o să detecteze gunoaiele! Învățați despre date de instruire și erori sistematice și modul în care poate fi utilizată IA pentru a rezolva probleme care ne afectează la nivel mondial. Vizualizați <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">planul lecției</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Încercați activitatea</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Ajută-l pe A.I. să curețe oceanele antrenându-l să detecteze gunoiul! Învățați despre date de instruire și erori sistematice și modul în care poate fi utilizată IA pentru a rezolva probleme care ne afectează la nivel mondial. Vizualizați <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">planul lecției</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Încercați activitatea</button></a>
     </span>
   </div>
 </div>
@@ -90,7 +93,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Cum funcționează computerele</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Cu o introducere prezentată de Bill Gates, această serie de șase videoclipuri scurte explică ce este un computer și cum funcționează circuitele unui computer.</div>        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Urmăriți seria video</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Cum funcționează computerele</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Cu o introducere a lui Bill Gates, această serie de șase videoclipuri scurte explică ce face un computer un computer și cum funcționează circuitele computerului.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Urmăriți seria video</button></a>
     </span>
   </div>
 </div>
@@ -103,7 +108,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Cum funcționează Internetul</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">În această serie de opt videoclipuri scurte veți afla cum a fost inventat internetul, ce este HTML și cum funcționează motoarele de căutare precum Google..</div>        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Urmăriți seria video</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Cum funcționează Internetul</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">În această serie de opt videoclipuri scurte, veți afla cum a fost inventat internetul, ce este HTML și cum funcționează motoarele de căutare precum Google.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Urmăriți seria video</button></a>
     </span>
   </div>
 </div>
@@ -116,7 +123,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>IA pentru Oceane</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Aflați cum funcționează IA și de ce este importantă, urmărind această serie de videoclipuri scurte. Cu Satya Nadella, CEO Microsoft, și diverși experți.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Urmăriți seria video</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Cum funcționează AI</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Aflați cum funcționează AI și de ce contează cu această serie de videoclipuri scurte. Cu Satya Nadella, CEO Microsoft, și diverși experți.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Urmăriți seria video</button></a>
     </span>
   </div>
 </div>
@@ -164,7 +172,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introducere în Laboratorul pentru jocuri</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Programați animații, artă interactivă și jocuri în Laboratorul pentru jocuri. Începeți cu forme simple și ajungeți la animații și jocuri mai sofisticate bazate pe sprites.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Încercați modulul</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introducere în Game Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Animații de program, artă interactivă și jocuri în Game Lab. Începeți cu forme simple și ajungeți la animații și jocuri mai sofisticate bazate pe sprites.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Încercați modulul</button></a>
     </span>
   </div>
 </div>
@@ -177,7 +186,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programarea țestoaselor în Laboratorul pentru aplicații</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Folosiți comenzi JavaScript simple pentru a desena forme și imagini folosind o „țestoasă” virtuală. Concepeți și programați-vă propria scenă digitală!</div>        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Încercați modulul</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programare Turtle în App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Utilizați comenzi JavaScript simple pentru a desena forme și imagini folosind o „broască țestoasă” virtuală. Proiectați și programați propria scenă digitală!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Încercați modulul</button></a>
     </span>
   </div>
 </div>
@@ -190,7 +201,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programare influențată de evenimente în Laboratorul pentru aplicații</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Învățați să concepeți aplicații care răspund la clicuri și la apăsări ale tastelor. Creați o serie de aplicații simple (aplicații) aflate pe web!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Încercați modulul</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programare bazată pe evenimente în App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Învățați să proiectați aplicații care răspund la clicuri și apăsări de taste. Creați o serie de aplicații simple (aplicații) aflate pe web!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Încercați modulul</button></a>
     </span>
   </div>
 </div>
@@ -294,7 +306,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>        <div class="smalltext" style="color: dimgray;">CodeBytes sunt lecții interactive de 20 de minute, ușor de asimilat, care îmbină știința calculatoarelor cu subiecte din lumea reală. Instruiți o IA să citească limbajul semnelor, creați o aplicație pentru a face bine, explorați universul Minecraft și multe altele!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Urmăriți episoadele</button></a>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes sunt lecții interactive ușor de digerat, de 20 de minute, care îmbină informatica cu subiecte din lumea reală. Instruiți o IA să citească limbajul semnelor, creați o aplicație pentru a face bine, explorați universul Minecraft și multe altele!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Urmăriți episoadele</button></a>
     </span>
   </div>
 </div>
@@ -307,7 +320,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Pauza de cod</strong></h3>        <div class="smalltext" style="color: dimgray; ">Știința calculatoarelor poate fi distractivă - luați o Pauză de cod! Puteți crea un cifru cu Ashton Kutcher, puteți învăța despre variabile cu Yara Shahidi și puteți chiar să explorați cum funcționează internetul cu Vint Cerf, inventatorul internetului!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Conectați-vă</button></a>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
+        <div class="smalltext" style="">Păstrați distracția informatică făcând o pauză de cod! Puteți crea un cifru cu Ashton Kutcher, puteți învăța despre variabile cu Yara Shahidi și puteți chiar să explorați cum funcționează internetul cu Vint Cerf, inventatorul internetului!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Conectați-vă</button></a>
     </span>
   </div>
 </div>
