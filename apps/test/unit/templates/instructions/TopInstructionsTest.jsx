@@ -172,14 +172,14 @@ describe('TopInstructions', () => {
   });
 
   describe('viewing the Feedback Tab', () => {
-    describe('as a instructor', () => {
-      it('passes displayFeedback = false to TopInstructionsHeader on a level with no rubric where the instructor is not viewing student work', () => {
+    describe('as an instructor', () => {
+      it('passes displayFeedback = false to TopInstructionsHeader on a level with no miniRubric where the instructor is not viewing student work', () => {
         const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
 
         wrapper.setState({
           tabSelected: 'instructions',
           feedbacks: [],
-          rubric: null,
+          miniRubric: null,
           teacherViewingStudentWork: false,
           studentId: null,
           fetchingData: false,
@@ -190,13 +190,13 @@ describe('TopInstructions', () => {
           .be.false;
       });
 
-      it('passes displayFeedback = true to TopInstructionsHeader on a level with a rubric where the instructor is not viewing student work', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader on a level with a miniRubric where the instructor is not viewing student work', () => {
         const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
 
         wrapper.setState({
           tabSelected: 'instructions',
           feedbacks: [],
-          rubric: {
+          miniRubric: {
             keyConcept: 'This is the key concept',
             performanceLevel1: 'Includes more than needed',
             performanceLevel2: 'Includes exactly all needed elements',
@@ -244,7 +244,7 @@ describe('TopInstructions', () => {
               student_id: 1,
             },
           ],
-          rubric: {
+          miniRubric: {
             keyConcept: 'This is the key concept',
             performanceLevel1: 'Includes more than needed',
             performanceLevel2: 'Includes exactly all needed elements',
@@ -261,7 +261,7 @@ describe('TopInstructions', () => {
           .be.true;
       });
 
-      it('passes displayFeedback = false to TopInstructionsHeader on a level where the instructor has not given feedback and there is no rubric', () => {
+      it('passes displayFeedback = false to TopInstructionsHeader on a level where the instructor has not given feedback and there is no miniRubric', () => {
         const wrapper = shallow(
           <TopInstructions {...DEFAULT_PROPS} viewAs={ViewType.Participant} />
         );
@@ -269,7 +269,7 @@ describe('TopInstructions', () => {
         wrapper.setState({
           tabSelected: 'instructions',
           feedbacks: [],
-          rubric: null,
+          miniRubric: null,
           teacherViewingStudentWork: false,
           studentId: 1,
           fetchingData: false,

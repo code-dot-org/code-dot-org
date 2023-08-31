@@ -154,7 +154,7 @@ class TopInstructions extends Component {
           ? TabType.COMMENTS
           : TabType.INSTRUCTIONS),
       latestFeedback: null,
-      rubric: null,
+      miniRubric: null,
       studentId: studentId,
       teacherViewingStudentWork: teacherViewingStudentWork,
       fetchingData: true,
@@ -222,7 +222,7 @@ class TopInstructions extends Component {
     if (serverLevelId && !taRubric) {
       promises.push(
         topInstructionsDataApi.getRubric(serverLevelId).done(data => {
-          this.setState({rubric: data});
+          this.setState({miniRubric: data});
         })
       );
     }
@@ -605,7 +605,7 @@ class TopInstructions extends Component {
     const {
       latestFeedback,
       teacherViewingStudentWork,
-      rubric,
+      miniRubric,
       tabSelected,
       fetchingData,
       token,
@@ -647,7 +647,7 @@ class TopInstructions extends Component {
 
     const displayFeedbackTab =
       !taRubric &&
-      (!!rubric ||
+      (!!miniRubric ||
         teacherViewingStudentWork ||
         (this.isViewingAsStudent && !!latestFeedback));
 
@@ -695,7 +695,7 @@ class TopInstructions extends Component {
           isCSDorCSP={isCSDorCSP}
           displayHelpTab={displayHelpTab}
           displayFeedback={displayFeedbackTab}
-          levelHasRubric={!!rubric}
+          levelHasMiniRubric={!!miniRubric}
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
@@ -734,7 +734,7 @@ class TopInstructions extends Component {
               <TeacherFeedbackTab
                 teacherViewingStudentWork={teacherViewingStudentWork}
                 visible={tabSelected === TabType.COMMENTS}
-                rubric={rubric}
+                rubric={miniRubric}
                 innerRef={ref => (this.commentTab = ref)}
                 latestFeedback={latestFeedback}
                 token={token}
