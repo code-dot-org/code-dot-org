@@ -1,0 +1,23 @@
+version: "3"
+services:
+  site:
+    image: 5a6433ed58376377cbfffcd34db4a7b44bd20edaedd06193d33c9126d806578f
+    user: ${FIXUID:-1000}:${FIXGID:-1000}
+    volumes:
+      - ../:/home/circleci/code-dot-org:delegated
+      - rbenv:/home/circleci/.rbenv
+      - mysqldata:/var/lib/mysql
+      - yarncache:/home/circleci/.cache
+      - gcloud_config:/home/circleci/.config/gcloud
+      - $HOME/.aws:/home/circleci/.aws
+    environment:
+      - AWS_PROFILE
+    env_file:
+      - env.list
+    command: bash -c "bundle install && bundle exec rake install && bundle exec rake build && cd dashboard && bundle exec rake curriculum_pdfs:identify_missing_pdfs"
+
+volumes:
+  mysqldata:
+  rbenv:
+  yarncache:
+  gcloud_config:
