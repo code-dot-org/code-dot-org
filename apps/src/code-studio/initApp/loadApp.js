@@ -460,6 +460,9 @@ const sourceHandler = {
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
   },
+  setInitialHiddenDefinitions(hiddenDefinitions) {
+    getAppOptions().level.hiddenDefinitions = hiddenDefinitions;
+  },
   setInRestrictedShareMode(inRestrictedShareMode) {
     getAppOptions().level.inRestrictedShareMode = inRestrictedShareMode;
   },
@@ -512,6 +515,17 @@ const sourceHandler = {
       return prepareForRemix();
     }
     return Promise.resolve(); // Return an insta-resolved promise.
+  },
+  // Get the source from the hidden definition workspace, if any. Otherwise return undefined.
+  // Hidden definitions will only exist for Google Blockly levels.
+  getHiddenDefinitions() {
+    if (window.Blockly && Blockly.getHiddenDefinitionWorkspace()) {
+      return Blockly.cdoUtils.getCode(
+        Blockly.getHiddenDefinitionWorkspace(),
+        true
+      );
+    }
+    return undefined;
   },
 };
 
