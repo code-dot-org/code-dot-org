@@ -48,6 +48,7 @@ describe('StatsTable', () => {
     const wrapper = mount(
       <StatsTable
         sectionId={1}
+        participantType="student"
         students={students}
         studentsCompletedLevelCount={studentsCompletedLevelCount}
       />
@@ -80,6 +81,25 @@ describe('StatsTable', () => {
     expect(nameCells.at(0).text()).to.equal('Lastname C');
     expect(nameCells.at(1).text()).to.equal('Lastname B');
     expect(nameCells.at(2).text()).to.equal('Lastname A');
+
+    DCDO.reset();
+  });
+
+  it('does not render a family name field in PL sections', async () => {
+    DCDO.reset();
+    DCDO.set('family-name-features', true);
+
+    const wrapper = mount(
+      <StatsTable
+        sectionId={1}
+        participantType="teacher"
+        students={students}
+        studentsCompletedLevelCount={studentsCompletedLevelCount}
+      />
+    );
+
+    expect(wrapper.find('uitest-family-name-header').exists()).to.be.false;
+    expect(wrapper.find('uitest-family-name-cell').exists()).to.be.false;
 
     DCDO.reset();
   });
