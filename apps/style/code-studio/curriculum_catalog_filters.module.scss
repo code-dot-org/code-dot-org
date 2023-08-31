@@ -4,13 +4,26 @@
   background-color: white;
 }
 
+.catalogDropdownFiltersTopRow {
+  display: flex;
+  align-items: baseline;
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 1em 0 0 0;
+
+  button {
+    margin: 0;
+  }
+}
+
 .catalogDropdownFilters {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: 16px;
   max-width: 60em;
   margin: 0 auto;
-  padding: 1em 0;
+  padding: 0 0 1em 0;
 
   button {
     margin: 0;

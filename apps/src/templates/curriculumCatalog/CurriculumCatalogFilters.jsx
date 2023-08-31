@@ -296,10 +296,21 @@ const CurriculumCatalogFilters = ({
 
   return (
     <div className={style.catalogFiltersContainer}>
-      <div className={style.catalogDropdownFilters}>
+      <div className={style.catalogDropdownFiltersTopRow}>
         <Heading6 className={style.catalogFiltersRowLabel}>
           {i18n.filterBy()}
         </Heading6>
+        <Button
+          id="clear-filters"
+          className={style.catalogClearFiltersButton}
+          type="button"
+          onClick={handleClear}
+          text={i18n.clearFilters()}
+          styleAsText
+          color={Button.ButtonColor.brandSecondaryDefault}
+        />
+      </div>
+      <div className={style.catalogDropdownFilters}>
         {Object.keys(filterTypes).map(filterKey => (
           <CheckboxDropdown
             key={filterKey}
@@ -312,15 +323,6 @@ const CurriculumCatalogFilters = ({
             handleClearAll={() => handleClearAllOfFilter(filterKey)}
           />
         ))}
-        <Button
-          id="clear-filters"
-          className={style.catalogClearFiltersButton}
-          type="button"
-          onClick={handleClear}
-          text={i18n.clearFilters()}
-          styleAsText
-          color={Button.ButtonColor.brandSecondaryDefault}
-        />
       </div>
       {!isEnglish && (
         <div className={style.catalogLanguageFilterRow}>
