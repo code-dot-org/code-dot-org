@@ -74,11 +74,6 @@ class SectionProgress extends Component {
     this.props.setScriptId(scriptId);
     loadScriptProgress(scriptId, this.props.sectionId);
 
-    this.recordEvent('change_script', {
-      old_script_id: this.props.scriptId,
-      new_script_id: scriptId,
-    });
-
     analyticsReporter.sendEvent(EVENTS.PROGRESS_CHANGE_UNIT, {
       sectionId: this.props.sectionId,
       oldUnitId: this.props.scriptId,
@@ -88,11 +83,6 @@ class SectionProgress extends Component {
 
   onChangeLevel = lessonOfInterest => {
     this.props.setLessonOfInterest(lessonOfInterest);
-
-    this.recordEvent('jump_to_lesson', {
-      script_id: this.props.scriptId,
-      stage_id: this.props.scriptData.lessons[lessonOfInterest].id,
-    });
 
     analyticsReporter.sendEvent(EVENTS.PROGRESS_JUMP_TO_LESSON, {
       sectionId: this.props.sectionId,
