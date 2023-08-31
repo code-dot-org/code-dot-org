@@ -141,6 +141,20 @@ module I18n
                 i18n_strings['dynamic_instructions'] = dynamic_instructions unless dynamic_instructions.empty?
               end
 
+              # Validations
+              if level.level_data
+                puts "processing level_data"
+                level_data = level.level_data
+                p level_data
+                validations = level_data['validations']
+                if validations
+                  i18n_strings['validations'] = Hash.new unless validations.empty?
+                  validations.each do |validation|
+                    i18n_strings['validations'][validation['key']] = validation['message']
+                  end
+                end
+              end
+
               # parse markdown properties for potential placeholder texts
               documents = []
               %w(
