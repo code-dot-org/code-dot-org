@@ -1,4 +1,5 @@
 import React from 'react';
+import DCDO from '@cdo/apps/dcdo';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedStatsTable as StatsTable} from '@cdo/apps/templates/teacherDashboard/StatsTable';
@@ -41,6 +42,9 @@ describe('StatsTable', () => {
   });
 
   it('sorts students by the correct name upon clicking the name header cells', () => {
+    DCDO.reset();
+    DCDO.set('family-name-features', true);
+
     const wrapper = mount(
       <StatsTable
         sectionId={1}
@@ -49,32 +53,34 @@ describe('StatsTable', () => {
       />
     );
 
-    // first click should sort students A-Z
+    // first click on display name header should sort students A-Z
     wrapper.find('.uitest-display-name-header').simulate('click');
     let nameCells = wrapper.find('.uitest-display-name-cell');
     expect(nameCells.at(0).text()).to.equal('Student A');
     expect(nameCells.at(1).text()).to.equal('Student B');
     expect(nameCells.at(2).text()).to.equal('Student C');
 
-    // second click should sort students Z-A
+    // second click on display name header should sort students Z-A
     wrapper.find('.uitest-display-name-header').simulate('click');
     nameCells = wrapper.find('.uitest-display-name-cell');
     expect(nameCells.at(0).text()).to.equal('Student C');
     expect(nameCells.at(1).text()).to.equal('Student B');
     expect(nameCells.at(2).text()).to.equal('Student A');
 
-    // first click should sort students by family name A-Z
+    // first click on family name header should sort students by family name A-Z
     wrapper.find('.uitest-family-name-header').simulate('click');
     nameCells = wrapper.find('.uitest-family-name-cell');
     expect(nameCells.at(0).text()).to.equal('Lastname A');
     expect(nameCells.at(1).text()).to.equal('Lastname B');
     expect(nameCells.at(2).text()).to.equal('Lastname C');
 
-    // second click should sort students Z-A
+    // second click on family name header should sort students by family name Z-A
     wrapper.find('.uitest-family-name-header').simulate('click');
     nameCells = wrapper.find('.uitest-family-name-cell');
     expect(nameCells.at(0).text()).to.equal('Lastname C');
     expect(nameCells.at(1).text()).to.equal('Lastname B');
     expect(nameCells.at(2).text()).to.equal('Lastname A');
+
+    DCDO.reset();
   });
 });
