@@ -1845,6 +1845,10 @@ div.WireframeButtons_active {
   margin-left: -400px;
 }
 
+// Modal Function Editor Styles. These are needed in order to make it so the blocks
+// show over the name and description inputs, but the name and description inputs
+// are still usable.
+
 .modalFunctionEditorContainer svg {
   position: absolute;
   top: 50;
@@ -1855,22 +1859,12 @@ div.WireframeButtons_active {
   pointer-events: none;
 }
 
-.modalFunctionEditorContainer .blocklySvg {
-  background: transparent;
-}
-
-.modalFunctionEditorContainer svg .blocklyBlockCanvas {
-  pointer-events: visiblePainted;
-}
-
-.modalFunctionEditorContainer .blocklyScrollbarVertical {
+.modalFunctionEditorContainer svg .blocklyBlockCanvas,
+.modalFunctionEditorContainer .blocklyScrollbarVertical,
+.blocklyToolboxDiv {
   pointer-events: visiblePainted;
 }
 
 .modalFunctionEditorContainer .injectionDiv {
   pointer-events: none;
-}
-
-.blocklyToolboxDiv {
-  pointer-events: visiblePainted;
 }
