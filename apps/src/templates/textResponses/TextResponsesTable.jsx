@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as Table from 'reactabular-table';
@@ -27,6 +28,7 @@ class TextResponsesTable extends Component {
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool,
     scriptName: PropTypes.string,
+    participantType: PropTypes.string,
   };
 
   state = {};
@@ -87,132 +89,161 @@ class TextResponsesTable extends Component {
   };
 
   getColumns = sortable => {
-    return [
-      {
-        property: 'studentName',
-        header: {
-          label: i18n.name(),
-          props: {
-            className: 'uitest-name-header',
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.name},
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.studentNameFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-            },
-          },
-        },
-      },
-      {
-        property: 'studentFamilyName',
-        header: {
-          label: i18n.familyName(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.familyName},
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.familyNameFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-            },
-          },
-        },
-      },
-      {
-        property: 'lesson',
-        header: {
-          label: i18n.lesson(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.lesson},
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-            },
-          },
-        },
-      },
-      {
-        property: 'puzzle',
-        header: {
-          label: i18n.puzzle(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.puzzle},
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-            },
-          },
-        },
-      },
-      {
-        property: 'question',
-        header: {
-          label: i18n.question(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.question},
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-            },
-          },
-        },
-      },
-      {
-        property: 'response',
-        header: {
-          label: i18n.response(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.response},
-            },
-          },
-        },
-        cell: {
-          formatters: [this.responseFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-            },
-          },
-        },
-      },
-    ];
+    const columns = [this.nameColumn(sortable)];
+
+    if (this.props.participantType === 'student') {
+      columns.push(this.familyNameColumn(sortable));
+    }
+
+    columns.push(
+      this.lessonColumn(sortable),
+      this.puzzleColumn(sortable),
+      this.questionColumn(sortable),
+      this.responseColumn(sortable)
+    );
+    return columns;
   };
+
+  nameColumn(sortable) {
+    return {
+      property: 'studentName',
+      header: {
+        label: i18n.name(),
+        props: {
+          className: 'uitest-name-header',
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...{width: TABLE_COLUMN_WIDTHS.name},
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        formatters: [this.studentNameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  familyNameColumn(sortable) {
+    return {
+      property: 'studentFamilyName',
+      header: {
+        label: i18n.familyName(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...{width: TABLE_COLUMN_WIDTHS.familyName},
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        formatters: [this.familyNameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  lessonColumn(sortable) {
+    return {
+      property: 'lesson',
+      header: {
+        label: i18n.lesson(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...{width: TABLE_COLUMN_WIDTHS.lesson},
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  puzzleColumn(sortable) {
+    return {
+      property: 'puzzle',
+      header: {
+        label: i18n.puzzle(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...{width: TABLE_COLUMN_WIDTHS.puzzle},
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  questionColumn(sortable) {
+    return {
+      property: 'question',
+      header: {
+        label: i18n.question(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...{width: TABLE_COLUMN_WIDTHS.question},
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  responseColumn(sortable) {
+    return {
+      property: 'response',
+      header: {
+        label: i18n.response(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...{width: TABLE_COLUMN_WIDTHS.response},
+          },
+        },
+      },
+      cell: {
+        formatters: [this.responseFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
 
   // The user requested a new sorting column. Adjust the state accordingly.
   onSort = selectedColumn => {
@@ -280,4 +311,8 @@ class TextResponsesTable extends Component {
   }
 }
 
-export default TextResponsesTable;
+export default connect(state => ({
+  participantType:
+    state.teacherSections.sections[state.teacherSections.selectedSectionId]
+      .participantType,
+}))(TextResponsesTable);
