@@ -69,14 +69,14 @@ describe('TextResponsesTable', () => {
     );
 
     // should default to response order
-    let nameCells = wrapper.find('.uitest-name-cell');
+    let nameCells = wrapper.find('.uitest-display-name-cell');
     expect(nameCells.at(0)).to.have.text('Student A');
     expect(nameCells.at(1)).to.have.text('Student C');
     expect(nameCells.at(2)).to.have.text('Student B');
 
     // click should sort responses by student name A-Z
-    wrapper.find('.uitest-name-header').simulate('click');
-    nameCells = wrapper.find('.uitest-name-cell');
+    wrapper.find('.uitest-display-name-header').simulate('click');
+    nameCells = wrapper.find('.uitest-display-name-cell');
     expect(nameCells.at(0)).to.have.text('Student A');
     expect(nameCells.at(1)).to.have.text('Student B');
     expect(nameCells.at(2)).to.have.text('Student C');
