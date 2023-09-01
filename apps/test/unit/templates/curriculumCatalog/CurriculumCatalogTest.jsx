@@ -276,7 +276,7 @@ describe('CurriculumCatalog', () => {
     }).length;
     expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
 
-    // Select "CSD" and "HOC" in device filter
+    // Select "CSD" and "HOC" in marketing initiative filter
     const csdFilterCheckbox = screen.getByDisplayValue('csd');
     fireEvent.click(csdFilterCheckbox);
     assert(csdFilterCheckbox.checked);
