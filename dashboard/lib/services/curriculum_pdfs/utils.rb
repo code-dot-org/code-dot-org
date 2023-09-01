@@ -25,6 +25,17 @@ module Services
           # the direct S3 link.
           DEBUG ? "https://#{S3_BUCKET}.s3.amazonaws.com" : "https://lesson-plans.code.org"
         end
+
+        def pdf_exists_at?(pathname)
+          return false if pathname.blank?
+
+          cache_key = "CurriculumPdfs/pdf_exists/#{pathname}"
+          return CDO.shared_cache.read(cache_key) if CDO.shared_cache.exist?(cache_key)
+
+          result = AWS::S3.exists_in_bucket(S3_BUCKET, pathname)
+          CDO.shared_cache.write(cache_key, result)
+          return result
+        end
       end
     end
   end
