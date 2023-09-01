@@ -34,6 +34,7 @@ cron:
 - dashboard.contained_levels
 - dashboard.level_sources_multi_types
 - dashboard.paired_user_levels
+- dashboard.parental_permission_requests
 - dashboard.plc_course_units
 - dashboard.plc_courses
 - dashboard.plc_enrollment_module_assignments
