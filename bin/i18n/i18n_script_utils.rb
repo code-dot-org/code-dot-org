@@ -1,4 +1,5 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
+require File.expand_path('../../../pegasus/helpers/pegasus_languages', __FILE__)
 
 require 'cdo/google/drive'
 require 'cdo/honeybadger'

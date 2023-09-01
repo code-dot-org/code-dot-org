@@ -366,5 +366,3 @@ function drawStar(x, y, radius1, radius2, numPoints) {
   }
   endShape(CLOSE);
 }
-
-console.log("Loaded Foreground Library");
