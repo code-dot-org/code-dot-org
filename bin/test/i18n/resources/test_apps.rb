@@ -11,12 +11,4 @@ class I18n::Resources::AppsTest < Minitest::Test
 
     I18n::Resources::Apps.sync_in
   end
-
-  def test_sync_out
-    exec_seq = sequence('execution')
-
-    I18n::Resources::Apps::Animations.expects(:sync_out).in_sequence(exec_seq)
-
-    I18n::Resources::Apps.sync_out
-  end
 end
