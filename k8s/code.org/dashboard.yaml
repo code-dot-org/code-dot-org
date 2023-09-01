@@ -44,6 +44,9 @@ spec:
         # FIXME: THIS IS FOR DEBUGGING PURPOSES
         - mountPath: /mnt/aws-google
           name: aws-google
+        securityContext:
+          allowPrivilegeEscalation: true # TODO: this should depend on whether in local dev vs deployed?
+
           
       # initContainers:
       # # FIXME AWS CONFIG: we use this hack to avoid committing
@@ -68,6 +71,12 @@ spec:
         - name: dashboard
           configMap:
             name: dashboard
+            
+      securityContext:
+        # these should match the UID/GID defined in code.org.dockerfile
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
 ---
 apiVersion: v1
 kind: ConfigMap
