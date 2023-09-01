@@ -2,6 +2,8 @@ require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/apps/animations/sync_out'
 
 describe I18n::Resources::Apps::Animations::SyncOut do
+  PegasusLanguages = Class.new
+
   def around
     FakeFS.with_fresh {yield}
   end
@@ -11,6 +13,16 @@ describe I18n::Resources::Apps::Animations::SyncOut do
   end
 
   describe '.perform' do
+    it 'call #execute' do
+      I18n::Resources::Apps::Animations::SyncOut.any_instance.expects(:execute).once
+
+      I18n::Resources::Apps::Animations::SyncOut.perform
+    end
+  end
+
+  describe '#execute' do
+    let(:described_instance) {I18n::Resources::Apps::Animations::SyncOut.new}
+
     let(:crowdin_locale) {'crowdin_locale'}
     let(:i18n_locale) {'i18n-LOCALE'}
 
@@ -24,6 +36,10 @@ describe I18n::Resources::Apps::Animations::SyncOut do
       manifest_builder_stub
     end
 
+    before do
+      PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns([{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}])
+    end
+
     context 'when Crowdin locale file exists' do
       before do
         FileUtils.mkdir_p(File.dirname(crowdin_spritelab_file_path))
@@ -35,20 +51,18 @@ describe I18n::Resources::Apps::Animations::SyncOut do
         let(:i18n_locale) {'not-EN'}
 
         it 'sync-out the file' do
-          PegasusLanguages.stub(:get_crowdin_name_and_locale, [{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}]) do
-            spritelab_manifest_builder.expects(:initial_animation_metadata).once
-            I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).once
-            I18nScriptUtils.expects(:to_js_locale).with(i18n_locale).once.returns('expected_js_locale')
-            spritelab_manifest_builder.expects(:upload_localized_manifest).with('expected_js_locale', spritelab_file_content).once
+          spritelab_manifest_builder.expects(:initial_animation_metadata).once
+          I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).once
+          I18nScriptUtils.expects(:to_js_locale).with(i18n_locale).once.returns('expected_js_locale')
+          spritelab_manifest_builder.expects(:upload_localized_manifest).with('expected_js_locale', spritelab_file_content).once
 
-            assert File.exist?(crowdin_spritelab_file_path)
-            refute File.exist?(i18n_spritelab_file_path)
+          assert File.exist?(crowdin_spritelab_file_path)
+          refute File.exist?(i18n_spritelab_file_path)
 
-            I18n::Resources::Apps::Animations::SyncOut.perform
+          described_instance.execute
 
-            refute File.exist?(crowdin_spritelab_file_path)
-            assert File.exist?(i18n_spritelab_file_path)
-          end
+          refute File.exist?(crowdin_spritelab_file_path)
+          assert File.exist?(i18n_spritelab_file_path)
         end
       end
 
@@ -57,40 +71,36 @@ describe I18n::Resources::Apps::Animations::SyncOut do
         let(:i18n_locale) {'en-US'}
 
         it 'does not sync-out the file' do
-          PegasusLanguages.stub(:get_crowdin_name_and_locale, [{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}]) do
-            spritelab_manifest_builder.expects(:initial_animation_metadata).once
-            I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).once
-            I18nScriptUtils.expects(:to_js_locale).with(i18n_locale).never.returns('expected_js_locale')
-            spritelab_manifest_builder.expects(:upload_localized_manifest).with('expected_js_locale', spritelab_file_content).never
+          spritelab_manifest_builder.expects(:initial_animation_metadata).once
+          I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).once
+          I18nScriptUtils.expects(:to_js_locale).with(i18n_locale).never.returns('expected_js_locale')
+          spritelab_manifest_builder.expects(:upload_localized_manifest).with('expected_js_locale', spritelab_file_content).never
 
-            assert File.exist?(crowdin_spritelab_file_path)
-            refute File.exist?(i18n_spritelab_file_path)
+          assert File.exist?(crowdin_spritelab_file_path)
+          refute File.exist?(i18n_spritelab_file_path)
 
-            I18n::Resources::Apps::Animations::SyncOut.perform
+          described_instance.execute
 
-            refute File.exist?(crowdin_spritelab_file_path)
-            assert File.exist?(i18n_spritelab_file_path)
-          end
+          refute File.exist?(crowdin_spritelab_file_path)
+          assert File.exist?(i18n_spritelab_file_path)
         end
       end
     end
 
     context 'when Crowdin locale file does not exist' do
       it 'skips the locale sync-out' do
-        PegasusLanguages.stub(:get_crowdin_name_and_locale, [{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}]) do
-          spritelab_manifest_builder.expects(:initial_animation_metadata).never
-          I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).never
-          I18nScriptUtils.expects(:to_js_locale).with(i18n_locale).never.returns('expected_js_locale')
-          spritelab_manifest_builder.expects(:upload_localized_manifest).with('expected_js_locale', spritelab_file_content).never
+        spritelab_manifest_builder.expects(:initial_animation_metadata).never
+        I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).never
+        I18nScriptUtils.expects(:to_js_locale).with(i18n_locale).never.returns('expected_js_locale')
+        spritelab_manifest_builder.expects(:upload_localized_manifest).with('expected_js_locale', spritelab_file_content).never
 
-          refute File.exist?(crowdin_spritelab_file_path)
-          refute File.exist?(i18n_spritelab_file_path)
+        refute File.exist?(crowdin_spritelab_file_path)
+        refute File.exist?(i18n_spritelab_file_path)
 
-          I18n::Resources::Apps::Animations::SyncOut.perform
+        described_instance.execute
 
-          refute File.exist?(crowdin_spritelab_file_path)
-          refute File.exist?(i18n_spritelab_file_path)
-        end
+        refute File.exist?(crowdin_spritelab_file_path)
+        refute File.exist?(i18n_spritelab_file_path)
       end
     end
   end
