@@ -1,3 +1,81 @@
 .reportAbusePopUp {
-    width: 410px;
+  width: 410px;
+}
+
+.cautionButton {
+  background-color: transparent;
+}
+
+.cautionButton:hover {
+  background-color: #fbe0dd;
+}
+
+.cautionIcon {
+  color: #7f8286;
+}
+
+.cautionButton:hover .cautionIcon {
+  color: #e5311a;
+}
+
+$color-neutral-light: #f7f8fa;
+$color-neutral-dark: #292f36;
+
+.card {
+  border: 1px solid #bbb;
+  border-radius: 2px;
+  width: 214px;
+  background-color: $color-neutral-light;
+}
+
+.lastEdit {
+  padding-left: 15px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  font-size: 11px;
+  font-family: Gotham, sans-serif;
+  color: $color-neutral-dark;
+}
+
+.ageRange {
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 11px;
+  font-family: Gotham, sans-serif;
+  color: $color-neutral-dark;
+}
+
+.firstInitial {
+  padding-top: 5px;
+  font-size: 11px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: Gotham, sans-serif;
+  color: $color-neutral-dark;
+}
+
+.image {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bold {
+  font-family: 'Gotham 5r', sans-serif;
+}
+
+.popUpLines {
+  border-color: #d4d5d7;
+  width: 400px;
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.popUpBody {
+  font-family: 'Gotham 4r', sans-serif;
+  color: #292f36;
+  font-size: 14px;
 }
