@@ -11,3 +11,6 @@
     %a.select_none{href: '#'} none
     (shift-click or cmd-click to select multiple).
   = f.select :block_pools, (Block.all_pool_names + (@level.block_pools || [])).uniq.sort, {}, {multiple: true}
+
+  %p Block pools currently used:
+  = @block_pools = @level.block_pools
