@@ -7,6 +7,7 @@ import {
   MODAL_EDITOR_CLOSE_ID,
   MODAL_EDITOR_DELETE_ID,
   MODAL_EDITOR_NAME_INPUT_ID,
+  MODAL_EDITOR_DESCRIPTION_INPUT_ID,
 } from './functionEditorConstants';
 
 // This class is a work in progress. It is used for the modal function editor,
@@ -58,10 +59,11 @@ export default class FunctionEditor {
 
     // Description handler
     this.functionDescriptionInput = document.getElementById(
-      'functionDescriptionText'
+      MODAL_EDITOR_DESCRIPTION_INPUT_ID
     );
-    this.functionDescriptionInput.addEventListener('input', () => {
-      // TODO: Save the description to the procedure model
+    this.functionDescriptionInput.addEventListener('input', e => {
+      this.block.description = e.target.value;
+      this.updateHiddenDefinitionDescription();
     });
 
     // Delete handler
@@ -127,7 +129,6 @@ export default class FunctionEditor {
     Blockly.Events.enable();
 
     this.nameInput.value = procedure.getName();
-    // TODO: populate description
 
     this.dom.style.display = 'block';
     Blockly.common.svgResize(this.editorWorkspace);
@@ -169,6 +170,7 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
     }
+    this.functionDescriptionInput.value = this.block.description || '';
   }
 
   /**
@@ -389,5 +391,17 @@ export default class FunctionEditor {
       procedure.getName(),
       procedure.getId()
     );
+  }
+
+  updateHiddenDefinitionDescription() {
+    const topBlocks = Blockly.getHiddenDefinitionWorkspace().getTopBlocks();
+    const blockToUpdate = topBlocks.find(
+      topBlock =>
+        topBlock.getProcedureModel().getId() ===
+        this.block.getProcedureModel().getId()
+    );
+    if (blockToUpdate) {
+      blockToUpdate.description = this.block.description;
+    }
   }
 }
