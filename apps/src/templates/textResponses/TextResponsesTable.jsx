@@ -13,6 +13,7 @@ import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
   name: TABLE_WIDTH / 5,
+  familyName: TABLE_WIDTH / 5,
   lesson: TABLE_WIDTH / 5,
   puzzle: TABLE_WIDTH / 6,
   question: TABLE_WIDTH / 5,
@@ -53,6 +54,10 @@ class TextResponsesTable extends Component {
     } else {
       return <span className="uitest-name-cell">{name}</span>;
     }
+  };
+
+  familyNameFormatter = familyName => {
+    return <span>{familyName}</span>;
   };
 
   responseFormatter = (_, {rowData}) => {
@@ -98,6 +103,27 @@ class TextResponsesTable extends Component {
         },
         cell: {
           formatters: [this.studentNameFormatter],
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+            },
+          },
+        },
+      },
+      {
+        property: 'studentFamilyName',
+        header: {
+          label: i18n.familyName(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.familyName},
+            },
+          },
+          transforms: [sortable],
+        },
+        cell: {
+          formatters: [this.familyNameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
