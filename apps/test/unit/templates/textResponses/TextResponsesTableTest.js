@@ -1,7 +1,8 @@
 import React from 'react';
+import DCDO from '@cdo/apps/dcdo';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
-import TextResponsesTable from '@cdo/apps/templates/textResponses/TextResponsesTable';
+import {UnconnectedTextResponsesTable as TextResponsesTable} from '@cdo/apps/templates/textResponses/TextResponsesTable';
 
 const responses = [
   {
@@ -11,6 +12,7 @@ const responses = [
     lesson: 'Lesson 1',
     studentId: 1,
     studentName: 'Student A',
+    studentFamilyName: 'Lastname C',
     url: 'http://fake.url',
   },
   {
@@ -20,6 +22,7 @@ const responses = [
     lesson: 'Lesson 1',
     studentId: 3,
     studentName: 'Student C',
+    studentFamilyName: 'Lastname A',
     url: 'http://fake.url',
   },
   {
@@ -29,6 +32,7 @@ const responses = [
     lesson: 'Lesson 1',
     studentId: 2,
     studentName: 'Student B',
+    studentFamilyName: 'Lastname B',
     url: 'http://fake.url',
   },
 ];
@@ -53,8 +57,15 @@ describe('TextResponsesTable', () => {
   });
 
   it('sorts responses by student name upon clicking student name header cell', () => {
+    DCDO.reset();
+    DCDO.set('family-name-features-p3', true);
+
     const wrapper = mount(
-      <TextResponsesTable responses={responses} sectionId={sectionId} />
+      <TextResponsesTable
+        responses={responses}
+        sectionId={sectionId}
+        participantType="student"
+      />
     );
 
     // should default to response order
@@ -69,6 +80,40 @@ describe('TextResponsesTable', () => {
     expect(nameCells.at(0)).to.have.text('Student A');
     expect(nameCells.at(1)).to.have.text('Student B');
     expect(nameCells.at(2)).to.have.text('Student C');
+
+    // first click on family name header should sort students by family name A-Z
+    wrapper.find('.uitest-family-name-header').simulate('click');
+    nameCells = wrapper.find('.uitest-family-name-cell');
+    expect(nameCells.at(0)).to.have.text('Lastname A');
+    expect(nameCells.at(1)).to.have.text('Lastname B');
+    expect(nameCells.at(2)).to.have.text('Lastname C');
+
+    // second click on family name header should sort students by family name A-Z
+    wrapper.find('.uitest-family-name-header').simulate('click');
+    nameCells = wrapper.find('.uitest-family-name-cell');
+    expect(nameCells.at(0)).to.have.text('Lastname C');
+    expect(nameCells.at(1)).to.have.text('Lastname B');
+    expect(nameCells.at(2)).to.have.text('Lastname A');
+
+    DCDO.reset();
+  });
+
+  it('does not render a family name field in PL sections', async () => {
+    DCDO.reset();
+    DCDO.set('family-name-features-p3', true);
+
+    const wrapper = mount(
+      <TextResponsesTable
+        responses={responses}
+        sectionId={sectionId}
+        participantType="teacher"
+      />
+    );
+
+    expect(wrapper.find('uitest-family-name-header').exists()).to.be.false;
+    expect(wrapper.find('uitest-family-name-cell').exists()).to.be.false;
+
+    DCDO.reset();
   });
 
   it('renders a loading element if responses are loading', () => {

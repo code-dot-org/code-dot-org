@@ -60,7 +60,7 @@ class TextResponsesTable extends Component {
   };
 
   familyNameFormatter = familyName => {
-    return <span>{familyName}</span>;
+    return <span className="uitest-family-name-cell">{familyName}</span>;
   };
 
   responseFormatter = (_, {rowData}) => {
@@ -138,6 +138,7 @@ class TextResponsesTable extends Component {
       header: {
         label: i18n.familyName(),
         props: {
+          className: 'uitest-family-name-header',
           style: {
             ...tableLayoutStyles.headerCell,
             ...{width: TABLE_COLUMN_WIDTHS.familyName},
@@ -314,6 +315,7 @@ class TextResponsesTable extends Component {
   }
 }
 
+export const UnconnectedTextResponsesTable = TextResponsesTable;
 export default connect(state => ({
   participantType:
     state.teacherSections.sections[state.teacherSections.selectedSectionId]
