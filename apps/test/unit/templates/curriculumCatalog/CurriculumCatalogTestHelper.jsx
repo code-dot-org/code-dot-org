@@ -253,6 +253,12 @@ const tabletAndNoDeviceShownCurricula = [
   course4Curriculum,
 ];
 
+const csdAndHocShownCurricula = [
+  makerCurriculum,
+  poemArtCurriculum,
+  danceUnpluggedCurriculum,
+];
+
 const translatedCurricula = [
   course1Curriculum,
   course2Curriculum,
@@ -279,6 +285,7 @@ export default {
   physicalCompShownCurricula,
   nonNullSchoolSubjectShownCurricula,
   tabletAndNoDeviceShownCurricula,
+  csdAndHocShownCurricula,
   translatedCurricula,
   multipleFiltersAppliedShownCurricula,
   allFiltersAppliedShownCurricula,
