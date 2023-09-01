@@ -103,15 +103,13 @@ group :development, :test do
   # For UI testing.
   gem 'cucumber'
   gem 'eyes_selenium', '3.18.4'
-  gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
-  gem 'minitest-spec-context', '~> 0.0.3'
   gem 'minitest-stub-const', '~> 0.6'
   gem 'net-http-persistent'
   gem 'rinku'
-  gem 'rspec', require: false
+  gem 'rspec'
   gem 'selenium-webdriver', '~> 4.0'
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
