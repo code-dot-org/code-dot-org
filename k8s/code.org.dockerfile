@@ -86,6 +86,8 @@ WORKDIR ${SRC}
 FROM code.org-base as code.org-rbenv
 ################################################################################
 
+USER ${USERNAME}
+
 COPY --chown=${UID} \
   .ruby-version \
   ./
@@ -174,6 +176,8 @@ WORKDIR ${SRC}
 FROM code.org-user-utils as code.org-node_modules
 ################################################################################
 
+USER ${USERNAME}
+
 COPY --chown=${UID} \
   ./apps/package.json \
   ./apps/yarn.lock \
@@ -192,11 +196,14 @@ RUN \
   # Install apps/node_modules using yarn
   cd apps && \
   yarn install --frozen-lockfile --ignore-scripts && \
+  ls -lA | grep node && \
   true
 
 ################################################################################
 FROM code.org-user-utils
 ################################################################################
+
+USER ${USERNAME}
 
 RUN \
   #
@@ -229,22 +236,22 @@ RUN \
 # in a way that's performant on Docker 24?
 
 # Link in large static assets built in a separate dockerfile
-COPY --link \
+COPY --chown=${UID} --link \
   --from=code.org-static / \
   ./
 
 # Link in levels and other db seed data built in a separate dockerfile
-COPY --link \
+COPY --chown=${UID} --link \
   --from=code.org-db-seed  / \
   ./
 
 # Copy in apps/node_modules (built in parallel)
-COPY --link \
+COPY --chown=${UID} --link \
   --from=code.org-node_modules ${SRC}/apps/node_modules \
   ./apps/node_modules
 
 # Copy in ~/.rbenv (built in parallel)
-COPY --link \
+COPY --chown=${UID} --link \
   --from=code.org-rbenv ${HOME}/.rbenv \
   ${HOME}/.rbenv
 
@@ -254,9 +261,9 @@ COPY --chown=${UID} --link ./ ./
 # SETUP SOME HACK WORKAROUNDS FOR APPLE SILICON
 # These are only required for installing Apple Silicon hack workarounds from code.org-rbenv
 #
-COPY --from=code.org-rbenv ${SRC}/.bundle ${SRC}/.bundle
-COPY --from=code.org-rbenv ${SRC}/.bundle ${SRC}/dashboard/.bundle
-COPY --from=code.org-rbenv ${SRC}/Gemfile ${SRC}/Gemfile
+COPY --chown=${UID} --from=code.org-rbenv ${SRC}/.bundle ${SRC}/.bundle
+COPY --chown=${UID} --from=code.org-rbenv ${SRC}/.bundle ${SRC}/dashboard/.bundle
+COPY --chown=${UID} --from=code.org-rbenv ${SRC}/Gemfile ${SRC}/Gemfile
 #
 # DONE HACK WORKAROUNDS FOR APPLE SILICON
 
