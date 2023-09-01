@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
+import DCDO from '@cdo/apps/dcdo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
@@ -91,8 +92,10 @@ class TextResponsesTable extends Component {
   getColumns = sortable => {
     const columns = [this.nameColumn(sortable)];
 
-    if (this.props.participantType === 'student') {
-      columns.push(this.familyNameColumn(sortable));
+    if (!!DCDO.get('family-name-features-p3', false)) {
+      if (this.props.participantType === 'student') {
+        columns.push(this.familyNameColumn(sortable));
+      }
     }
 
     columns.push(
