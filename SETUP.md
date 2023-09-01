@@ -15,7 +15,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
      ```sh
      ruby --version  # --> ruby 3.0.5
-     node --version  # --> v18.16.0
+     node --version  # --> v20.5.1
      yarn --version  # --> 1.22.5
      ```
 
@@ -215,7 +215,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
         ```
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
-    1. `nvm install v18.16.0 && nvm alias default 18.16.0` Install nodejs v18.16.0
+    1. `nvm install v20.5.1 && nvm alias default 20.5.1` Install nodejs v20.5.1
     1. `node --version` Double check the version of node you are using. If it is wrong, then try restarting your terminal.
 1. Ensure rbenv and ruby-build are properly installed
     1. run `rbenv init` and follow the instructions.
