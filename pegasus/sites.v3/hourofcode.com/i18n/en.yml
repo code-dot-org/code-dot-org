@@ -197,6 +197,7 @@
   call_to_action_notify_available: "Notify me when available"
   call_to_action_register_early_access: "Register for early access"
   call_to_action_open_positions: "View open positions"
+  call_to_action_get_guide: "Get the guide"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -330,6 +331,7 @@
   module_label_student_content_resources: "Content & resources"
   module_label_new: "New"
   module_label_coming_soon: "Coming soon"
+  module_label_available_now: "Available Now"
   module_label_video_series: "Video series"
   module_label_self_paced: "Self-paced module"
 
@@ -576,6 +578,8 @@
   ai_pl_101_video_title_5: "Bringing AI to the Classroom"
   ai_pl_101_video_desc_5: "This session focuses on teaching about AI, evaluating and utilizing AI educational tools, and leveraging AI for student assessment. With a rich blend of theory, practical examples, and resources, it aims to empower educators to navigate the AI landscape and enhance student learning experiences."
   ai_pl_101_video_desc_6: "Learn more about the new technology driving the large changes in AI, featuring two new videos on Large Language Models (like ChatGPT) and Generative AI. Hear how these new technologies work directly from the experts: Mira Murati, CTO of OpenAI, and Cristóbal Valenzuela, CEO of RunwayML."
+  ai_pl_101_llm_slides_title: "Large Language Model Prompts for Educators"
+  ai_pl_101_llm_slides_desc: "Tools for getting the best possible output from LLMs like ChatGPT, from beginner to advanced. Includes starter prompts for those just dipping their toes in, as well as advanced tools for those looking to maximize their potential."
 
   how_ai_works_hero_heading: "How AI Works"
   how_ai_works_hero_desc: "Dive into the world of AI with \"How AI Works,\" our video series and accompanying lessons!"
