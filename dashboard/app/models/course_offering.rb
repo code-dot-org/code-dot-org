@@ -474,7 +474,7 @@ class CourseOffering < ApplicationRecord
     lessons = units&.first&.lessons
 
     return nil unless lessons
-    lesson_plan = lessons.first&.lesson_plan_html_url
+    lesson_plan = lessons&.first&.lesson_plan_html_url
     expanded_card_resources = {"Lesson Plan" => lesson_plan}
 
     lessons.each do |lesson|
