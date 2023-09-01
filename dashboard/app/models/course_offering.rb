@@ -332,7 +332,7 @@ class CourseOffering < ApplicationRecord
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
-      self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
+      self_paced_pl_course_offering_path: get_self_paced_pl_course_offering_path(locale_code),
       available_resources: get_available_resources(locale_code)
     }
   end
@@ -492,5 +492,12 @@ class CourseOffering < ApplicationRecord
       end
     end
     expanded_card_resources
+  end
+
+  def get_self_paced_pl_course_offering_path(locale_code = 'en-us')
+    file_path = Rails.root.join(Rails.root, 'config', 'course_offerings', "#{key}.json")
+    data = JSON.parse(file_path.read)
+    key_value = data['self_paced_pl_course_offering_key']
+    CourseOffering.find_by(key: key_value)&.path_to_latest_published_version(locale_code)
   end
 end
