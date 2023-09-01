@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2023-08-22 18:08:29 UTC",
+    "serialized_at": "2023-08-31 23:18:17 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1552,7 +1552,13 @@
         "description": "It's crucial to recognize that the foundation of any AI model's decision-making capabilities lies in its training data. But what happens when that data isn't all-encompassing or is skewed in a certain direction? Let's take a look at some real datasets and consider their impacts on models so we can uncover the relationship between training data and potential biases in AI outcomes.",
         "duration": "30",
         "name": "Training Data and Bias",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Optional Video: Training Data and Bias** -  if you're students seem to be struggling to understand how bias in the data can lead to models that perform in unfair ways, you can show the Training Data and Bias video that walks through this concept in more detail."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1e29621d-dc08-4bf1-8050-2897f51c6f0d",
@@ -1563,7 +1569,7 @@
       "key": "4141de4a-bbf2-4b06-88fd-757765b703b3",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _Training Data and Bias_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to the COCO dataset via the link on the MediaPipe model and look around on the site, focusing specifically on the **Explore** section under the **Dataset** menu.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** COCO Datatset - Activity Guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to the COCO dataset via the link on the MediaPipe model and explore the dataset following the directions in the activity guide.",
         "progression_name": "COCO - Common Objects in Context Dataset"
       },
       "seeding_key": {
@@ -3345,6 +3351,18 @@
       }
     },
     {
+      "name": "COCO Dataset Exploration",
+      "url": "https://docs.google.com/document/d/1ozYwGdZiQNZD87efW9AmVsjAuUICqdYAEggRMknxIeo/edit?usp=sharing",
+      "key": "coco_dataset_exploration",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "coco_dataset_exploration"
+      }
+    },
+    {
       "name": "Datasheets for Datasets",
       "url": "https://vimeo.com/639588440",
       "key": "datasheets_for_datasets",
@@ -4064,6 +4082,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "coco_-_common_objects_in_context_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "coco_dataset_exploration"
       }
     },
     {
