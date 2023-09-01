@@ -1,10 +1,8 @@
-- video_computer_index = 3
-- video_id_first = ["computer_works", "binary_data", "cpu_memory"]
-- video_id_second = ["what_computer", "circuits_logic", "hardware_software"]
-- computer_caption_first = [hoc_s(:video_library_page_computer_work_video_title_1), hoc_s(:video_library_page_computer_work_video_title_2), hoc_s(:video_library_page_computer_work_video_title_3)]
-- сomputer_caption_second = [hoc_s(:video_library_page_computer_work_video_title_4), hoc_s(:video_library_page_computer_work_video_title_5),hoc_s(:video_library_page_computer_work_video_title_6)]
-- video_computer_first = ["OAx_6-wdslM", "USCBCmwMCDA", "DKGZlaPlVLY"]
-- video_computer_second = ["mCq8-xTH7jA", "ZoqMiFKspAA", "ZoqMiFKspAA"]
+- video_computer_index = 6
+- video_computer_id = ["computer_works", "what_computer", "binary_data", "circuits_logic", "cpu_memory", "hardware_software"]
+- video_computer_caption = [hoc_s(:video_library_page_computer_work_video_title_1), hoc_s(:video_library_page_computer_work_video_title_4), hoc_s(:video_library_page_computer_work_video_title_2),
+ hoc_s(:video_library_page_computer_work_video_title_5), hoc_s(:video_library_page_computer_work_video_title_3), hoc_s(:video_library_page_computer_work_video_title_6)]
+- video_computer = ["OAx_6-wdslM", "mCq8-xTH7jA", "USCBCmwMCDA", "ZoqMiFKspAA", "DKGZlaPlVLY", "xnyFYiK2rSY"]
 
 
 .carousel-wrapper#computer_works_collection
@@ -13,10 +11,8 @@
       - video_computer_index.times do |index|
         .slide
           .action-block.action-block--one-col.flex-space-between
-            .div
-              = view :display_video_thumbnail, id: video_id_first[index], video_code: video_computer_first[index], play_button: 'center', letterbox: 'false', caption: computer_caption_first[index]
-            .div
-              = view :display_video_thumbnail, id: video_id_second[index], video_code: video_computer_second[index], play_button: 'center', letterbox: 'false', caption: сomputer_caption_second[index]
+            .video__container
+              = view :display_video_thumbnail, id: video_computer_id[index], video_code: video_computer[index], play_button: 'center', letterbox: 'false', caption: video_computer_caption[index]
 
             
   .pagination

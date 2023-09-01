@@ -1,28 +1,16 @@
-- video_blockchain_index = 5
-- blockchain_caption_first = [hoc_s(:blockchain_video_title_01), hoc_s(:blockchain_video_title_03), hoc_s(:blockchain_video_title_05), hoc_s(:blockchain_video_title_07)]
-- blockchain_caption_second = [hoc_s(:blockchain_video_title_02), hoc_s(:blockchain_video_title_04), hoc_s(:blockchain_video_title_06)]
-- video_blockchain_id_first = ["introduction_blockchain", "under_hood", "market_price", "societal_impact"]
-- video_blockchain_id_second = ["why_blockchain", "beyond_currencies", "trustworthy_scam"]
-- video_blockchain_first = ["MjibPL4tGqo", "It_Ivgm5wQA", "d9rKkk3oVdY", "C3C_JfG8cNg"]
-- video_blockchain_second = ["10wYLCnDHao", "3EwkfUz_BPs", "WzxbwEQRJPo"]
+- video_blockchain_index = 7
+- video_blockchain_caption = [hoc_s(:blockchain_video_title_01), hoc_s(:blockchain_video_title_02), hoc_s(:blockchain_video_title_03), hoc_s(:blockchain_video_title_04), hoc_s(:blockchain_video_title_05), hoc_s(:blockchain_video_title_06), hoc_s(:blockchain_video_title_07)]
+- video_blockchain_id = ["introduction_blockchain", "why_blockchain", "under_hood", "beyond_currencies", "market_price", "societal_impact", "trustworthy_scam"]
+- video_blockchain = ["MjibPL4tGqo", "10wYLCnDHao", "It_Ivgm5wQA", "3EwkfUz_BPs", "d9rKkk3oVdY", "WzxbwEQRJPo",  "C3C_JfG8cNg"]
 
 .carousel-wrapper#blockchain_works_collection
   .carousel.blockchain__works__collection
     .slides
       - video_blockchain_index.times do |index|
-        - if index <3
-          .slide
-            .action-block.action-block--one-col.flex-space-between
-              .div
-                = view :display_video_thumbnail, id: video_blockchain_id_first[index], video_code: video_blockchain_first[index], play_button: 'center', letterbox: 'false', caption: blockchain_caption_first[index]
-              .div
-                = view :display_video_thumbnail, id: video_blockchain_id_second[index], video_code: video_blockchain_second[index], play_button: 'center', letterbox: 'false', caption: blockchain_caption_second[index]
-        
-        -if index === 3
-          .slide{style:"justify-content: flex-start"}
-            .action-block.action-block--one-col.flex-space-between
-              .image
-                = view :display_video_thumbnail, id: video_blockchain_id_first[index], video_code: video_blockchain_first[index], play_button: 'center', letterbox: 'false', caption: blockchain_caption_first[index]     
+        .slide
+          .action-block.action-block--one-col.flex-space-between
+            .video__container
+              = view :display_video_thumbnail, id: video_blockchain_id[index], video_code: video_blockchain[index], play_button: 'center', letterbox: 'false', caption: video_blockchain_caption[index]
             
   .pagination
     #blockchain_works_collection_pagination

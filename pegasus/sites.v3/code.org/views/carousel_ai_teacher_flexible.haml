@@ -1,17 +1,15 @@
 - video_ai_teacher_index = 1
 - video_id = ["fireside_chat"]
-- video_id_second = ["ai_chatbots", "machine_learning", "neural_networks", "ethics_ai_equak"]
 - video_ai_teacher_first = ["ik70A1ge-aY"]
 
 .carousel-wrapper#collections_carousel
   .carousel.carousel--collection
     .slides
       - video_ai_teacher_index.times do |index|
-        - if index < 4
-          .slide
-            .action-block.action-block--one-col.flex-space-between
-              .div
-                = view :display_video_thumbnail, id: video_id[index], video_code: video_ai_teacher_first[index], play_button: 'center', letterbox: 'false'
+        .slide
+          .action-block.action-block--one-col.flex-space-between
+            .video__container
+              = view :display_video_thumbnail, id: video_id[index], video_code: video_ai_teacher_first[index], play_button: 'center', letterbox: 'false'
             
   .pagination
     #collections_carousel-pagination

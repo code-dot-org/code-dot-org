@@ -97,8 +97,8 @@
   }
 
   .action-block {
-    min-width: 300px;
-    max-width: 420px;
+    min-width: 18.75rem;
+    max-width: 26.25rem;
     margin: 0 auto;
     display: contents;
   }
@@ -108,17 +108,18 @@
 
     .slides {
       width: 300%;
-      height: 265px;
+      height: 26rem;
       display: flex;
     }
     .slide {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 15px;
+      gap: 1rem;
+      height: 16.25rem;
     }
     .action-block {
-      min-width: 230px;
+      min-width: 14.3rem;
     }
   }
 
@@ -132,7 +133,7 @@
       transform: translateY(-50%);
       transition: .3s;
       padding: 0;
-      width: 55px;
+      width: 3.5rem;
 
       &:hover {
         background: none;
@@ -152,7 +153,7 @@
       transform: translateY(-50%);
       transition: .3s;
       padding: 0;
-      width: 55px;
+      width: 3.5rem;
 
       &:hover {
         background: none;
@@ -168,7 +169,7 @@
 
 .action-block {
   &__space {
-    height: 32px;
+    height: 2rem;
     display: block;
     @media screen and (max-width: 800px) {
       display: none;
@@ -185,7 +186,7 @@ section#flexible-units {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 0px;
+    padding: 0.6rem 0px;
 
     a.link-button {
         background-color: $neutral-white;
@@ -197,7 +198,7 @@ section#flexible-units {
     }
 
     &__line {
-        margin: 24px 0;
+        margin: 1.5rem 0;
     }
 }
 
@@ -206,7 +207,7 @@ section#flexible-units {
 }
 
 .thumbnail-wrapper .thumbnail-image {
-  height: 245px;
+  height: 15rem;
 }
 
 .action-block .video_caption_link {
@@ -221,14 +222,17 @@ section#flexible-units {
 
 @media (max-width: 640px) {
   .slides {
-    height: 265px;
+    height: 13.5rem;
+    display: flex;
+  }
+
+  .thumbnail-wrapper .thumbnail-image {
+    height: 100%;
+  }
+
+  .slides .video__container__without__caption {
+    height: 15rem;
     display: flex;
   }
 }
 
-@media (max-width: 640px) {
-  .without__caption .slides {
-    height: 240px;
-    display: flex;
-  }
-}

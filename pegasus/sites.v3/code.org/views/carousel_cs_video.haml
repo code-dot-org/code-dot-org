@@ -1,28 +1,18 @@
-- video_cs_index = 5
-- video_cs_id_first = ["meow_wolf", "nasa", "instagram", "facebook", "electronic_arts"]
-- video_cs_id_second = ["mbari", "tanium", "microsoft", "google"]
-- cs_caption_first = [hoc_s(:video_library_page_cs_video_title_1), hoc_s(:video_library_page_cs_video_title_2), hoc_s(:video_library_page_cs_video_title_3), hoc_s(:video_library_page_cs_video_title_4), hoc_s(:video_library_page_cs_video_title_5)]
-- cs_caption_second = [hoc_s(:video_library_page_cs_video_title_6), hoc_s(:video_library_page_cs_video_title_7), hoc_s(:video_library_page_cs_video_title_8), hoc_s(:video_library_page_cs_video_title_9)]
-- video_cs_first = ["dhvQ7L5UScs", "2uXTNK9W-gQ", "t0-Z_LfGwUM", "suJZ9z426P0", "tTSEFaYjV30"]
-- video_cs_second = ["FBTWICxTG08", "IRMWwc9gfns", "EUF2mad21jo", "RfbbDgx6l1g"]
+- video_cs_index = 9
+- video_cs_id = ["meow_wolf", "mbari", "nasa", "tanium", "instagram", "microsoft", "facebook", "google", "electronic_arts"]
+- video_cs_caption = [hoc_s(:video_library_page_cs_video_title_1), hoc_s(:video_library_page_cs_video_title_6), hoc_s(:video_library_page_cs_video_title_2), hoc_s(:video_library_page_cs_video_title_7), hoc_s(:video_library_page_cs_video_title_3), hoc_s(:video_library_page_cs_video_title_8),
+hoc_s(:video_library_page_cs_video_title_4), hoc_s(:video_library_page_cs_video_title_8), hoc_s(:video_library_page_cs_video_title_5), hoc_s(:video_library_page_cs_video_title_9)]
+- video_cs = ["dhvQ7L5UScs", "FBTWICxTG08", "2uXTNK9W-gQ", "IRMWwc9gfns", "t0-Z_LfGwUM", "EUF2mad21jo", "suJZ9z426P0",  "RfbbDgx6l1g", "tTSEFaYjV30"]
+
 
 .carousel-wrapper#cs_works_collection
   .carousel.cs_works_collection
     .slides
       - video_cs_index.times do |index|
-        - if index < 4
-          .slide
-            .action-block.action-block--one-col.flex-space-between
-              .div
-                = view :display_video_thumbnail, id: video_cs_id_first[index], video_code: video_cs_first[index], play_button: 'center', letterbox: 'false', caption: cs_caption_first[index]
-              .div
-                = view :display_video_thumbnail, id: video_cs_id_second[index], video_code: video_cs_second[index], play_button: 'center', letterbox: 'false', caption: cs_caption_second[index]
-        
-        -if index === 4
-          .slide{style:"justify-content: flex-start"}
-            .action-block.action-block--one-col.flex-space-between
-              .image
-                = view :display_video_thumbnail, id: video_cs_id_first[index], video_code: video_cs_first[index], play_button: 'center', letterbox: 'false', caption: cs_caption_first[index]     
+        .slide
+          .action-block.action-block--one-col.flex-space-between
+            .video__container
+              = view :display_video_thumbnail, id: video_cs_id[index], video_code: video_cs[index], play_button: 'center', letterbox: 'false', caption: video_cs_caption[index]
             
   .pagination
     #cs_works_collection_pagination

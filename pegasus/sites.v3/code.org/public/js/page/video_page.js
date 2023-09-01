@@ -1,50 +1,50 @@
 const windowWidth = window.innerWidth;
 
 function reorganizeAndWrapSlides(carouselId, cardsList) {
-  const carouselContainer = document.getElementById(carouselId);
-  if (!carouselContainer) {
-    console.error(`Carousel container with id "${carouselId}" not found.`);
-    return;
-  }
+    const carouselContainer = document.getElementById(carouselId);
+    if (!carouselContainer) {
+        console.error(`Carousel container with id "${carouselId}" not found.`);
+        return;
+    }
 
-  const slidesContainer = carouselContainer.querySelector(".slides");
-  if (!slidesContainer) {
-    console.error(`Slides container not found inside the carousel.`);
-    return;
-  }
+    const slidesContainer = carouselContainer.querySelector('.slides');
+    if (!slidesContainer) {
+        console.error(`Slides container not found inside the carousel.`);
+        return;
+    }
 
-  const slideItems = Array.from(slidesContainer.querySelectorAll(".slide"));
+    const slideItems = Array.from(slidesContainer.querySelectorAll('.slide'));
 
-  const actionBlocks = Array.from(
-    carouselContainer.querySelectorAll(
-      ".action-block.action-block--one-col.flex-space-between"
-    )
-  );
+    const actionBlocks = Array.from(carouselContainer.querySelectorAll('.action-block.action-block--one-col.flex-space-between'));
+    actionBlocks.forEach(block => block.remove());
 
-  actionBlocks.forEach((block) => block.remove());
+    const slides = [];
+    while (actionBlocks.length > 0) {
+        slides.push(actionBlocks.splice(0, cardsList));
+    }
 
-  const slides = [];
-  while (actionBlocks.length > 0) {
-    slides.push(actionBlocks.splice(0, cardsList));
-  }
+    slides.forEach(slide => {
+        const slideWrapper = document.createElement('div');
+        slideWrapper.className = 'slide';
+        slide.forEach(slideItem => {
+            slideWrapper.appendChild(slideItem);
+        });
 
-  slides.forEach((slide) => {
-    const slideWrapper = document.createElement("div");
-    slideWrapper.className = "slide";
-    slide.forEach((slideItem) => {
-      slideWrapper.appendChild(slideItem);
+        slidesContainer.appendChild(slideWrapper);
     });
-    slidesContainer.appendChild(slideWrapper);
-  });
 
-  slideItems.forEach((slideItem) => slideItem.remove());
+    slideItems.forEach(slideItem => slideItem.remove());
 }
 
 function handleScreenSize(carouselId) {
-  if (windowWidth > 639 && windowWidth < 799) {
-    reorganizeAndWrapSlides(carouselId, 2);
-    console.log("639 - 799");
-  }
+    if (windowWidth > 639 && windowWidth < 799) {
+        reorganizeAndWrapSlides(carouselId, 0);
+        console.log("639 - 799")
+
+    } else if (windowWidth > 799) {
+        reorganizeAndWrapSlides(carouselId, 2);
+        console.log("> 800")
+    }
 }
 
 $(document).ready(function () {
@@ -81,7 +81,7 @@ $(document).ready(function () {
   });
 
   let idComputerWorks = "#computer_works_collection";
-  handleScreenSize("computer__works__collection");
+  handleScreenSize("computer_works_collection");
   $(idComputerWorks + " .slides").carouFredSel({
     auto: false,
     pagination: "#computer_works_collection_pagination",
@@ -97,7 +97,7 @@ $(document).ready(function () {
   });
 
   let idInternetWorks = "#internet_works_collection";
-  handleScreenSize("internet__works__collection");
+  handleScreenSize("internet_works_collection");
   $(idInternetWorks + " .slides").carouFredSel({
     auto: false,
     pagination: "#internet_works_collection_pagination",
@@ -113,7 +113,7 @@ $(document).ready(function () {
   });
 
   let idBlockchainWorks = "#blockchain_works_collection";
-  handleScreenSize("blockchain__works__collection");
+  handleScreenSize("blockchain_works_collection");
   $(idBlockchainWorks + " .slides").carouFredSel({
     auto: false,
     pagination: "#blockchain_works_collection_pagination",
