@@ -11,7 +11,8 @@
           "link": "https://code.org/educate/professional-learning/middle-high",
           "type": "information",
           "visibility": "Teacher-only",
-          "key": "69e413fa-9081-4fac-8d73-9294b6fa1f11"
+          "key": "69e413fa-9081-4fac-8d73-9294b6fa1f11",
+          "buttonText": null
         },
         {
           "notice": "Virtual Modifications",
@@ -19,7 +20,8 @@
           "link": "https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit",
           "type": "information",
           "visibility": "Teacher-only",
-          "key": "4fc301ee-93c8-4d3c-b4f6-8ad16536da1a"
+          "key": "4fc301ee-93c8-4d3c-b4f6-8ad16536da1a",
+          "buttonText": null
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -31,12 +33,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "supported_locales": [
+        "it-IT"
+      ],
       "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:31:36 UTC",
+    "serialized_at": "2023-08-31 17:33:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -19760,6 +19765,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

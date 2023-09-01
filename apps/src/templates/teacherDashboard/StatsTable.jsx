@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
+import DCDO from '@cdo/apps/dcdo';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -18,6 +19,7 @@ class StatsTable extends Component {
 
     // Provided by redux.
     scriptName: PropTypes.string,
+    participantType: PropTypes.string,
   };
 
   state = {};
@@ -37,7 +39,7 @@ class StatsTable extends Component {
     if (studentUrl) {
       return (
         <a
-          className="uitest-name-cell"
+          className="uitest-display-name-cell"
           style={tableLayoutStyles.link}
           href={studentUrl}
           target="_blank"
@@ -47,8 +49,12 @@ class StatsTable extends Component {
         </a>
       );
     } else {
-      return <span className="uitest-name-cell">{name}</span>;
+      return <span className="uitest-display-name-cell">{name}</span>;
     }
+  };
+
+  familyNameFormatter = familyName => {
+    return <span className="uitest-family-name-cell">{familyName}</span>;
   };
 
   getSortingColumns = () => {
@@ -56,51 +62,91 @@ class StatsTable extends Component {
   };
 
   getColumns = sortable => {
-    return [
-      {
-        property: 'name',
-        header: {
-          label: i18n.name(),
-          props: {
-            className: 'uitest-name-header',
-            style: {
-              ...tableLayoutStyles.headerCell,
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.nameFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-            },
-          },
-        },
-      },
-      {
-        property: 'completedLevelsCount',
-        header: {
-          label: i18n.completedLevels(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...styles.rightAlignText,
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.rightAlignText,
-            },
-          },
-        },
-      },
-    ];
+    const columns = [this.nameColumn(sortable)];
+
+    if (!!DCDO.get('family-name-features', false)) {
+      if (this.props.participantType === 'student') {
+        // Only in non-PL sections.
+        columns.push(this.familyNameColumn(sortable));
+      }
+    }
+
+    columns.push(this.completedLevelsCountColumn(sortable));
+
+    return columns;
   };
+
+  nameColumn(sortable) {
+    return {
+      property: 'name',
+      header: {
+        label: i18n.name(),
+        props: {
+          className: 'uitest-display-name-header',
+          style: {
+            ...tableLayoutStyles.headerCell,
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        formatters: [this.nameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  familyNameColumn(sortable) {
+    return {
+      property: 'familyName',
+      header: {
+        label: i18n.familyName(),
+        props: {
+          className: 'uitest-family-name-header',
+          style: {
+            ...tableLayoutStyles.headerCell,
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        formatters: [this.familyNameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  completedLevelsCountColumn(sortable) {
+    return {
+      property: 'completedLevelsCount',
+      header: {
+        label: i18n.completedLevels(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...styles.rightAlignText,
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...styles.rightAlignText,
+          },
+        },
+      },
+    };
+  }
 
   // The user requested a new sorting column. Adjust the state accordingly.
   onSort = selectedColumn => {
@@ -159,4 +205,7 @@ const styles = {
 export const UnconnectedStatsTable = StatsTable;
 export default connect(state => ({
   scriptName: getSelectedScriptName(state),
+  participantType:
+    state.teacherSections.sections[state.teacherSections.selectedSectionId]
+      .participantType,
 }))(StatsTable);
