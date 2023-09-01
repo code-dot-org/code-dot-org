@@ -3,7 +3,7 @@ import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
-import sinon from 'sinon';
+import Button from '@cdo/apps/templates/Button';
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {
@@ -26,10 +26,11 @@ describe('RubricsContainerTest', () => {
   it('adds a new learning goal on "Add new Key Concept" button click', () => {
     const wrapper = mount(<RubricsContainer {...defaultProps} />);
     const initialLearningGoalItems = wrapper.find('LearningGoalItem').length;
-    wrapper.find('RubricEditor').invoke('addNewConcept')({
-      preventDefault: sinon.spy(),
-    });
-    wrapper.update();
+    const addButton = wrapper
+      .find(Button)
+      .findWhere(n => n.props().text === 'Add new Key Concept');
+    expect(addButton).to.have.length(1);
+    addButton.simulate('click');
     const afterAddLearningGoalItems = wrapper.find('LearningGoalItem').length;
     expect(afterAddLearningGoalItems).to.equal(initialLearningGoalItems + 1);
   });
