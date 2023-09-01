@@ -2,7 +2,7 @@ require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/apps/animations/sync_out'
 
 describe I18n::Resources::Apps::Animations::SyncOut do
-  PegasusLanguages = Class.new
+  I18n::Resources::Apps::Animations::SyncOut::PegasusLanguages = Class.new
 
   def around
     FakeFS.with_fresh {yield}
@@ -37,7 +37,9 @@ describe I18n::Resources::Apps::Animations::SyncOut do
     end
 
     before do
-      PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns([{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}])
+      I18n::Resources::Apps::Animations::SyncOut::PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns(
+        [{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}]
+      )
     end
 
     context 'when Crowdin locale file exists' do
