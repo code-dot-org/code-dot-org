@@ -136,6 +136,7 @@ class ManageStudentsTable extends Component {
     this.isMoveStudentsEnabled = this.isMoveStudentsEnabled.bind(this);
     this.passwordHeaderFormatter = this.passwordHeaderFormatter.bind(this);
     this.passwordFormatter = this.passwordFormatter.bind(this);
+    this.familyNameFormatter = this.familyNameFormatter.bind(this);
     this.actionsFormatter = this.actionsFormatter.bind(this);
     this.actionsHeaderFormatter = this.actionsHeaderFormatter.bind(this);
     this.getSortingColumns = this.getSortingColumns.bind(this);
@@ -340,6 +341,7 @@ class ManageStudentsTable extends Component {
 
   familyNameFormatter(familyName, {rowData}) {
     const editedValue = rowData.isEditing ? rowData.editingData.familyName : '';
+    const isTeacher = this.isTeacher(rowData.userType);
     return (
       <ManageStudentsFamilyNameCell
         id={rowData.id}
@@ -347,6 +349,7 @@ class ManageStudentsTable extends Component {
         isEditing={rowData.isEditing}
         editedValue={editedValue}
         sectionId={rowData.sectionId}
+        inputDisabled={isTeacher}
       />
     );
   }
@@ -459,7 +462,12 @@ class ManageStudentsTable extends Component {
         selectedColumn,
       }),
     });
-    if (selectedColumn === COLUMNS.FAMILY_NAME) {
+    if (
+      !!DCDO.get('family-name-features', false) &&
+      this.props.participantType === 'student' &&
+      selectedColumn === COLUMNS.FAMILY_NAME
+    ) {
+      // Only in non-PL sections, only when DCDO flag is on.
       this.props.setSortByFamilyName(
         true,
         this.props.sectionId,

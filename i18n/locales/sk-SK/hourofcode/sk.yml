@@ -252,6 +252,8 @@ sk:
   call_to_action_learn_about_approach: Zistite viac o našom prístupe
   call_to_action_try_java_lab: Vyskúšajte si Java Lab
   call_to_action_notify_available: Upozorniť ma, keď je k dispozícii
+  call_to_action_register_early_access: Zaregistrujte sa na včasný prístup
+  call_to_action_open_positions: Zobraziť otvorené pozície
   aria_label_call_to_action_afe: Získajte viac informácií o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Spustite program odborného vzdelávania Teaching
     Computer Science Fundamentals
@@ -13105,6 +13107,116 @@ sk:
   accessibility_card_text_10: Upravené učebné osnovy AP Princípy informatiky od Code.org
     s použitím jazyka Quorum, ktorý bol pôvodne navrhnutý na zabezpečenie prístupnosti
     pre nevidiacich alebo zrakovo postihnutých žiakov.
+  engineering_hero_heading: Pripojte sa k nášmu inžinierskému tímu!
+  engineering_hero_desc: Ako pokračujeme v rozširovaní nášho inžinierskeho tímu, chceli
+    sme sa podeliť o viac informácií o našej inžinierskej organizácii na Code.org
+    a niektorých jedinečných aspektoch práce tu. Ak máte záujem uchádzať sa o niektorú
+    z našich úloh, radi by sme vás počuli!
+  engineering_team_title: Zoznámte sa s inžinierskym tímom na Code.org
+  engineering_team_card_text_1: Toto je (väčšina) nás na našom osobnom stretávaní
+    v lete 2023! Tento dav je rozdelený do štyroch podtímov v rámci nášho inžinierskeho
+    tímu, ktoré spolupracujú na budovaní a poskytovaní platformy pre všetkých našich
+    študentov a učiteľov.
+  engineering_team_card_text_2: Ak máte záujem uchádzať sa o niektorú z našich úloh,
+    radi by sme vás počuli! Zoznam voľných pozícií nájdete na našej stránke Kariéra.
+  engineering_our_team_title: Náš inžiniersky tím
+  engineering_our_team_desc: 'Inžiniersky tím na Code.org je rozdelený do štyroch
+    podtímov, ktoré budujú a podporujú rôzne oblasti našej platformy:'
+  engineering_our_team_sub_title_1: Študentský vzdelávací tím
+  engineering_our_team_text_1: Náš študentský vzdelávací tím vlastní všetky naše aktivity
+    (nazývame ich laboratóriá), ktoré naši študenti používajú každý deň. Tento tím
+    pracuje prevažne na front-end technológiách (používame React a veľa vlastných
+    JS) a máme skvelý pracovný vzťah s mnohými partnermi a open source projektmi.
+    Napríklad používame [Google Blockly] (%{youtube_url}) pre všetky naše blokové
+    programovanie. Podporujeme študentov na ich vzdelávacej ceste od materskej školy
+    až po 12. ročník.
+  engineering_our_team_sub_title_2: Tím skúseností učiteľov
+  engineering_our_team_text_2: Náš tím pre učiteľov vytvára nástroje, ktoré priťahujú
+    nových učiteľov na Code.org (nazývame tieto akvizičné produkty) a vyvíja platformu,
+    ktorá umožňuje našim existujúcim učiteľom učiť naše učebné osnovy (naše učiteľské
+    nástroje). Rovnako ako u našich študentských nástrojov sa spoliehame na React
+    pri zostavovaní nášho front-endového rozhrania a naše komponenty na strane servera
+    sú obsluhované pomocou Ruby on Rails.
+  engineering_our_team_sub_title_3: Platformový tím
+  engineering_our_team_text_3: Náš tím platformy vlastní kľúčové komponenty, ktoré
+    slúžia potrebám našich študentských a učiteľských tímov (napríklad autentifikácia
+    a užívateľský profil) a má tiež poslanie osloviť študentov, ktorých ešte nemôžeme
+    osloviť. To zahŕňa budovanie integrácií, ktoré nás spájajú so školami, ktoré používajú
+    rôzne systémy riadenia vzdelávania (LMS), a balenie našich učebných osnov tak,
+    aby ich bolo možné použiť na vzdialených školách, ktoré nemajú prístup k spoľahlivému
+    internetu.
+  engineering_our_team_sub_title_4: Tím infraštruktúry
+  engineering_our_team_text_4: Náš tím pre infraštruktúru poskytuje chrbticu pre platformu,
+    ktorá podporuje našich študentov a učiteľov. To zahŕňa našu hostingovú infraštruktúru
+    a súvisiace služby (používame AWS), správu údajov, bezpečnostné programy, vývojárske
+    a nasadené služby a mnoho ďalšieho. Tento tím tiež vlastní naše škálovacie a zabezpečovacie
+    systémy, ktoré sú kritické počas Hodiny kódu, kde pozývame každého študenta na
+    svete, aby s nami dokončil hodinu kódovania.
+  engineering_faq_question_1: Čo robí Code.org?
+  engineering_faq_answer_1_a: Code.org je vzdelávacia inovačná nezisková organizácia
+    zameraná na víziu, že každý študent v každej škole má možnosť učiť sa informatiku
+    ako súčasť svojho základného vzdelania K-12.
+  engineering_faq_answer_1_b: Rozširujeme prístup k informatike na školách so zameraním
+    na zvýšenie účasti mladých žien a študentov z iných nedostatočne zastúpených skupín.
+    Code.org, popredný poskytovateľ učebných osnov počítačových vied K-12 v najväčších
+    školských obvodoch v Spojených štátoch, organizuje aj každoročnú kampaň Hodina
+    kódu, do ktorej sa zapojilo viac ako 15% všetkých študentov na svete.
+  engineering_faq_answer_1_c: Code.org je podporovaný veľkorysými darcami vrátane
+    spoločností Microsoft, Amazon, Google a mnohých ďalších.
+  engineering_faq_question_2: Aké sú skúsenosti a nástroje vývojára Code.org?
+  engineering_faq_answer_2: Naše skúsenosti s vývojármi sa môžu líšiť od toho, čo
+    ste videli vo svojich minulých rolách. V úzkej spolupráci s naším produktovým
+    tímom dodávame do výroby každý pracovný deň a máme rôzne kadencie - niekedy píšete
+    kód, ktorý bude uvedený do prevádzky v ten deň; inokedy ste na dlhodobejších projektoch
+    - a hoci sledujeme 2-týždenné šprinty, robíme to ľahkým spôsobom. Indexujeme smerovanie
+    k tomu, aby sa správne veci robili správnym spôsobom vs. puristický pohľad na
+    akúkoľvek konkrétnu metodológiu. [Celý náš kód] (%{code_url}) je open source a
+    na sledovanie všetkých našich pracovných položiek používame požiadavky na vytiahnutie
+    JIRA a GitHub. Veľmi nám záleží aj na kvalite a testovaní a máme šťastie, že máme
+    neuveriteľnú podporu od [SauceLabs](%{saucelabs_url}), ktorí nám pomáhajú spustiť
+    našu sadu testov používateľského rozhrania na rôznych študentských zariadeniach
+    (napr. iPadoch) v ich farme cloudových zariadení.
+  engineering_faq_question_3: Čo je to rotácia inžiniera v pohotovej hovore na Code.org?
+  engineering_faq_answer_3: Náš 30+ inžiniersky tím zdieľa zodpovednosť za pohotovú
+    pohotovú službu. Každý inžinier pokrýva 24-hodinovú zmenu a používa naše eskalačné
+    cesty a príručky, aby reagoval na výpadky stránok alebo iné problémy so živými
+    stránkami. Sme hrdí na spoľahlivosť našich stránok - v priemere je každý inžinier
+    prebudený iba raz ročne kvôli problémom, ktoré sa zvyčajne rýchlo vyriešia. Namiesto
+    toho „Developer of the Day“ zvyčajne trávi časť svojho pracovného dňa riadením
+    nasadenia výroby a triedením menej naliehavých problémov.
+  engineering_faq_question_4: Ste organizácia WFH priateľská k diaľkovým/WFH?
+  engineering_faq_answer_4_a: Áno! V roku 2019, krátko pred pandémiou, sa Code.org
+    stala organizáciou na diaľku. Dnes máme inžinierov v každom americkom časovom
+    pásme a zodpovedajúcim spôsobom prispôsobujeme pracovný čas. Väčšina našich stretnutí
+    sa koná medzi 10:00 a 15:00 PT.
+  engineering_faq_answer_4_b: Uznávame tiež hodnotu osobného času a každý štvrťrok
+    sa stretávame osobne, zvyčajne v Seattli. Dve z týchto podujatí (nazývame ich
+    Kick-off week a „Codechella“) spájajú všetkých v organizácii v januári a júni
+    - a inžinierske a produktové tímy sa stretávajú osobitne v apríli a októbri.
+  engineering_faq_answer_4_c: Pevne veríme, že trávime čas s našimi študentmi a učiteľmi,
+    takže mnohé z týchto osobných podujatí zahŕňajú výlety do škôl a tried, aby sme
+    získali spätnú väzbu alebo otestovali naše produkty
+  engineering_faq_question_5: Čo robí inžiniersky tím na Code.org jedinečným?
+  engineering_faq_answer_5_a: 'Okrem riešenia náročných technických problémov máme
+    niekoľko vecí, vďaka ktorým sa náš inžiniersky orgán líši od ostatných, v ktorých
+    ste mohli pracovať:'
+  engineering_faq_answer_5_b_1: Všetci zdieľame našu vášeň pre naše poslanie.
+  engineering_faq_answer_5_b_2: Každý z nás je tu, aby podporil misiu rozšíriť prístup
+    k informatike pre každého študenta na celom svete. Všetci máme svoj jedinečný
+    príbeh a perspektívu o tom, čo nás vedie k tejto misii.
+  engineering_faq_answer_5_c_1: Hlboko sa o seba staráme.
+  engineering_faq_answer_5_c_2: Keď inžinieri zápasia s problémom, vstúpime do toho
+    a pomôžeme. Jedným z našich princípov je, že sme ťažkí na problémy, ale láskaví
+    k sebe navzájom. Inžinierov pravidelne propagujeme, ale nepredpisujeme príliš
+    navrhnuté riešenia len na podporu niekoho propagačnej cesty. Namiesto toho investujeme
+    do našich inžinierov s veľkorysým rozpočtom na profesionálny rozvoj a prístupom
+    k ďalším vzdelávacím príležitostiam.
+  engineering_faq_answer_5_d_1: Tvrdo pracujeme, ale stanovujeme jasné hranice.
+  engineering_faq_answer_5_d_2: Aj keď podporujeme študentov na celom svete, nesieme
+    zodpovednosť za jasné hranice medzi pracovným a domácim životom. V stredu si užívame
+    nestretnutia, pričom si vezmeme náš PTO (celkom 5 týždňov, čo zahŕňa celoorganizačnú
+    2-týždňovú zatvorenie kancelárie na konci roka alias Zimná prestávka), pol pracovného
+    dňa v piatok počas leta alias Letné piatky a ďalšie veľkorysé výhody.
   language_code:
     ar: arabčina
     az: azerbajdžančina

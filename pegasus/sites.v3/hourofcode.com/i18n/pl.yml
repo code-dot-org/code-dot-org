@@ -262,6 +262,8 @@ pl:
   call_to_action_learn_about_approach: Dowiedz się więcej o naszym podejściu
   call_to_action_try_java_lab: Wypróbuj Java Lab
   call_to_action_notify_available: Powiadom mnie, gdy będzie dostępny
+  call_to_action_register_early_access: Zarejestruj się, aby uzyskać wczesny dostęp
+  call_to_action_open_positions: Wyświetlanie otwartych pozycji
   aria_label_call_to_action_afe: Dowiedz się więcej o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Rozpocznij profesjonalny program nauczania
     nauczania podstaw informatyki
@@ -13691,6 +13693,121 @@ pl:
   accessibility_card_text_10: Adaptacja programu nauczania zasad informatycznych AP
     Code.org przy użyciu Quorum, języka opartego na dowodach pierwotnie zaprojektowanego
     w celu zapewnienia dostępności uczniom niewidomym lub niedowidzącym.
+  engineering_hero_heading: Dołącz do naszego zespołu inżynierów!
+  engineering_hero_desc: W miarę rozszerzania naszego zespołu inżynierów chcieliśmy
+    podzielić się więcej o naszej organizacji inżynierskiej na Code.org i niektórymi
+    unikalnymi aspektami pracy tutaj. Jeśli jesteś zainteresowany ubieganiem się o
+    jedną z naszych ról, chcielibyśmy usłyszeć od Ciebie!
+  engineering_team_title: Poznaj zespół inżynierów w Code.org
+  engineering_team_card_text_1: To (większość) nas na naszym osobistym spotkaniu latem
+    2023 roku! Ten tłum jest podzielony na cztery podzespoły w naszym zespole inżynierów,
+    które współpracują, aby zbudować i obsługiwać platformę dla wszystkich naszych
+    uczniów i nauczycieli.
+  engineering_team_card_text_2: Jeśli jesteś zainteresowany ubieganiem się o jedną
+    z naszych ról, chcielibyśmy usłyszeć od Ciebie! Listę otwartych stanowisk można
+    znaleźć na naszej stronie Kariera.
+  engineering_our_team_title: Nasz zespół inżynierów
+  engineering_our_team_desc: 'Zespół inżynierów Code.org jest podzielony na cztery
+    podzespoły, które budują i wspierają różne obszary naszej platformy:'
+  engineering_our_team_sub_title_1: Zespół ucznia studentów
+  engineering_our_team_text_1: Nasz Zespół Uczniów jest właścicielem wszystkich naszych
+    działań (nazywamy je laboratoriami), z których nasi uczniowie korzystają każdego
+    dnia. Ten zespół pracuje głównie nad technologią front-end (używamy React i wielu
+    niestandardowych JS) i mamy świetne relacje robocze z wieloma partnerami i projektami
+    open source. Na przykład używamy [Google Blockly] (%{youtube_url}) dla wszystkich
+    naszych programów opartych na blokach. Wspieramy uczniów w ich podróży edukacyjnej
+    od przedszkola do 12 klasy.
+  engineering_our_team_sub_title_2: Zespół Doświadczenia nauczycieli
+  engineering_our_team_text_2: Nasz Teacher Experience Team tworzy narzędzia, które
+    przyciągają nowych nauczycieli do Code.org (nazywamy te produkty akwizycji) i
+    rozwija platformę, która umożliwia naszym obecnym nauczycielom nauczanie naszego
+    programu nauczania (nasze narzędzia dla nauczycieli). Podobnie jak w przypadku
+    naszych narzędzi studenckich, polegamy na Reaccie, aby zbudować nasz front-end,
+    a nasze komponenty po stronie serwera są obsługiwane za pomocą Ruby on Rails.
+  engineering_our_team_sub_title_3: Zespół Platformy
+  engineering_our_team_text_3: Nasz zespół ds. Platformy posiada podstawowe komponenty,
+    które służą potrzebom naszych zespołów uczniów i nauczycieli (na przykład uwierzytelnianie
+    i profil użytkownika), a także ma misję dotarcia do uczniów, do których jeszcze
+    nie możemy dotrzeć. Obejmuje to budowanie integracji, które łączą nas ze szkołami
+    korzystającymi z różnych systemów zarządzania nauczaniem (LMS) i pakowanie naszego
+    programu nauczania, aby mógł być używany w zdalnych szkołach, które nie mają dostępu
+    do niezawodnego Internetu.
+  engineering_our_team_sub_title_4: Zespół ds. Infrastruktury
+  engineering_our_team_text_4: Nasz zespół ds. Infrastruktury stanowi podstawę platformy,
+    która wspiera naszych uczniów i nauczycieli. Obejmuje to naszą infrastrukturę
+    hostingową i powiązane usługi (korzystamy z AWS), zarządzanie danymi, programy
+    bezpieczeństwa, usługi programistyczne i wdrożeniowe i wiele innych. Ten zespół
+    jest również właścicielem naszych systemów skalowania i udostępniania, które są
+    krytyczne podczas Godziny Kodowania, gdzie zapraszamy każdego ucznia na świecie
+    do ukończenia z nami godziny kodowania.
+  engineering_faq_question_1: Co robi Code.org?
+  engineering_faq_answer_1_a: Code.org to innowacyjna organizacja non-profit zajmująca
+    się edukacją, której celem jest wizja, że każdy uczeń w każdej szkole ma możliwość
+    nauki informatyki w ramach podstawowej edukacji K-12.
+  engineering_faq_answer_1_b: Rozszerzamy dostęp do informatyki w szkołach, z naciskiem
+    na zwiększenie udziału młodych kobiet i uczniów z innych niedostatecznie reprezentowanych
+    grup. Code.org, wiodący dostawca programów nauczania informatyki K-12 w największych
+    okręgach szkolnych w Stanach Zjednoczonych, organizuje również coroczną kampanię
+    Godzina Kodowania, która zaangażowała ponad 15% wszystkich uczniów na świecie.
+  engineering_faq_answer_1_c: Code.org jest wspierany przez hojnych darczyńców, w
+    tym Microsoft, Amazon, Google i wielu innych.
+  engineering_faq_question_2: Jakie jest doświadczenie programistów i oprzyrządowanie
+    Code.org?
+  engineering_faq_answer_2: Nasze doświadczenie programistów może różnić się od tego,
+    co widziałeś w swoich poprzednich rolach. Ściśle współpracując z naszym zespołem
+    produktowym, wysyłamy do produkcji każdego dnia tygodnia i mamy różne kadencje
+    - czasami piszesz kod, który jest dostępny tego dnia; innym razem jesteś na długoterminowych
+    projektach - i chociaż śledzimy 2-tygodniowe sprinty, robimy to w lekki sposób.
+    Indeksujemy dążenie do właściwego wykonania właściwych rzeczy we właściwy sposób
+    w porównaniu do purystycznego spojrzenia na jakąkolwiek konkretną metodologię.
+    [Cały nasz kod] (%{code_url}) jest open source i używamy żądań ściągania JIRA
+    i GitHub do śledzenia wszystkich naszych elementów pracy. Bardzo zależy nam również
+    na jakości i testowaniu i mamy szczęście, że mamy niesamowite wsparcie ze strony
+    [SauceLabs](%{saucelabs_url}), którzy pomagają nam uruchomić nasz pakiet testów
+    interfejsu użytkownika na różnych urządzeniach studenckich (np. iPady) w ich farmie
+    urządzeń w chmurze.
+  engineering_faq_question_3: Czym jest rotacja inżyniera na wezwanie w Code.org?
+  engineering_faq_answer_3: Nasz 30+ zespół inżynierów dzieli się obowiązkami dyżurnymi.
+    Każdy inżynier obejmuje 24-godzinną zmianę i korzysta z naszych ścieżek eskalacji
+    i podręczników, aby reagować na przerwy w pracy witryny lub inne problemy z witryną
+    na żywo. Jesteśmy dumni z niezawodności naszej witryny - średnio każdy inżynier
+    budzi się tylko raz w roku z powodu problemów, które zazwyczaj są szybkie do rozwiązania.
+    Zamiast tego „Deweloper dnia” zwykle spędza część swojego dnia roboczego na zarządzaniu
+    wdrożeniem produkcyjnym i na próbowaniu mniej pilnych problemów.
+  engineering_faq_question_4: Czy jesteś organizacją przyjazną zdalnie/WFH?
+  engineering_faq_answer_4_a: Tak! W 2019 roku, na krótko przed pandemią, Code.org
+    stał się organizacją zdalną. Dzisiaj mamy inżynierów w każdej strefie czasowej
+    USA i odpowiednio dostosowujemy godziny pracy. Większość naszych spotkań odbywa
+    się między godzinami 10:00 a 15:00 PT.
+  engineering_faq_answer_4_b: Zdajemy sobie również sprawę z wartości czasu osobistego,
+    i co kwartał spotykamy się osobiście, zazwyczaj w Seattle. Dwa z tych wydarzeń
+    (nazywamy je Tygodniem Rozrywki i „Codechella”) łączą wszystkich w organizacji
+    w styczniu i czerwcu - a zespoły inżynierów i produktów spotykają się osobno w
+    kwietniu i październiku.
+  engineering_faq_answer_4_c: Mocno wierzymy w spędzanie czasu z naszymi uczniami
+    i nauczycielami, tak wiele z tych osobistych wydarzeń obejmuje wycieczki do szkół
+    i klas w celu zebrania opinii lub przetestowania naszych produktów
+  engineering_faq_question_5: Co sprawia, że zespół inżynierów w Code.org jest wyjątkowy?
+  engineering_faq_answer_5_a: 'Oprócz rozwiązywania trudnych problemów technicznych,
+    mamy kilka rzeczy, które odróżniają naszą organizację inżynierską od innych, w
+    których mogłeś pracować:'
+  engineering_faq_answer_5_b_1: Wszyscy podzielamy naszą pasję do naszej misji.
+  engineering_faq_answer_5_b_2: Każdy z nas jest tutaj, aby wspierać misję rozszerzenia
+    dostępu do informatyki dla każdego ucznia na całym świecie. Wszyscy mamy swoją
+    wyjątkową historię i perspektywę na to, co prowadzi nas do tej misji.
+  engineering_faq_answer_5_c_1: Bardzo troszczymy się o siebie nawzajem.
+  engineering_faq_answer_5_c_2: Kiedy inżynierowie zmagają się z problemem, wkraczamy
+    i pomagamy. Jedną z naszych zasad jest to, że jesteśmy twardni w problemach, ale
+    życzliwi dla siebie nawzajem. Regularnie promujemy inżynierów, ale nie przepisujemy
+    zbyt zaawansowanych rozwiązań tylko po to, by wspierać czyjąś ścieżkę awansu.
+    Zamiast tego inwestujemy w naszych inżynierów z hojnym budżetem na rozwój zawodowy
+    i dostępem do innych możliwości uczenia się.
+  engineering_faq_answer_5_d_1: Ciężko pracujemy, ale wyznaczamy wyraźne granice.
+  engineering_faq_answer_5_d_2: Wspieramy studentów na całym świecie, ponosimy odpowiedzialność
+    za wyraźne granice między pracą a życiem domowym. Cieszymy się brakiem spotkań
+    w środy, biorąc nasz WOM (łącznie 5 tygodni, co obejmuje 2-tygodniowe zamknięcie
+    biura w całym organie pod koniec roku, czyli ferie zimowe), pół dnia roboczego
+    w piątki latem, czyli letnie piątki, i inne hojne korzyści.
   language_code:
     ar: arabski
     az: azerbejdżański

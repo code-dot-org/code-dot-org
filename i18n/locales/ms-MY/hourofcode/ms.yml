@@ -263,6 +263,8 @@ ms:
   call_to_action_learn_about_approach: Ketahui lebih lanjut tentang pendekatan kami
   call_to_action_try_java_lab: Cuba Java Lab
   call_to_action_notify_available: Beritahu saya apabila tersedia
+  call_to_action_register_early_access: Daftar untuk akses awal
+  call_to_action_open_positions: Lihat kedudukan terbuka
   aria_label_call_to_action_afe: Ketahui lebih lanjut mengenai Jurutera Masa Depan
     Amazon
   aria_label_call_to_action_teaching_csf: Mulakan program pembelajaran profesional
@@ -13676,6 +13678,128 @@ ms:
   accessibility_card_text_10: Penyesuaian kurikulum Prinsip Sains Komputer AP Code.org
     menggunakan Quorum, bahasa berasaskan bukti yang pada asalnya direka untuk menyediakan
     akses kepada pelajar buta atau cacat penglihatan.
+  engineering_hero_heading: Sertai pasukan kejuruteraan kami!
+  engineering_hero_desc: Semasa kami terus mengembangkan pasukan kejuruteraan kami,
+    kami ingin berkongsi lebih lanjut mengenai organisasi kejuruteraan kami di Code.org
+    dan beberapa aspek unik bekerja di sini. Jika anda berminat untuk memohon salah
+    satu peranan kami, kami ingin mendengar daripada anda!
+  engineering_team_title: Temui pasukan kejuruteraan di Code.org
+  engineering_team_card_text_1: Ini adalah (kebanyakan) kita berkumpul secara peribadi
+    pada musim panas 2023! Orang ramai ini dibahagikan kepada empat sub-pasukan dalam
+    pasukan kejuruteraan kami yang bekerjasama untuk membina dan melayani platform
+    untuk semua pelajar dan guru kami.
+  engineering_team_card_text_2: Jika anda berminat untuk memohon salah satu peranan
+    kami, kami ingin mendengar daripada anda! Anda boleh mendapatkan senarai jawatan
+    terbuka di halaman Kerjaya kami.
+  engineering_our_team_title: Pasukan kejuruteraan kami
+  engineering_our_team_desc: 'Pasukan kejuruteraan di Code.org dibahagikan kepada
+    empat sub-pasukan yang membina dan menyokong pelbagai bidang platform kami:'
+  engineering_our_team_sub_title_1: Pasukan Pembelajaran Pelajar
+  engineering_our_team_text_1: Pasukan Pembelajaran Pelajar kami memiliki semua aktiviti
+    kami (kami memanggil mereka makmal) yang digunakan oleh pelajar kami setiap hari.
+    Pasukan ini bekerja kebanyakannya pada teknologi front-end (kami menggunakan React
+    dan banyak JS adat) dan kami mempunyai hubungan kerja yang hebat dengan banyak
+    rakan kongsi dan projek sumber terbuka. Sebagai contoh, kami menggunakan [Google
+    Blockly] (%{youtube_url}) untuk semua pengaturcaraan berasaskan blok kami. Kami
+    menyokong pelajar dalam perjalanan pembelajaran mereka dari Tadika hingga gred
+    12.
+  engineering_our_team_sub_title_2: Teacher Experience Team
+  engineering_our_team_text_2: Pasukan Pengalaman Guru kami membina alat yang menarik
+    guru baru ke Code.org (kami memanggil produk pemerolehan ini) dan mengembangkan
+    platform yang memberi kuasa kepada guru kami yang ada untuk mengajar kurikulum
+    kami (alat guru kami). Seperti alat pelajar kami, kami bergantung pada React untuk
+    membina bahagian depan kami dan komponen sisi pelayan kami dihidangkan menggunakan
+    Ruby on Rails.
+  engineering_our_team_sub_title_3: Pasukan Platform
+  engineering_our_team_text_3: Pasukan Platform kami memiliki komponen teras yang
+    memenuhi keperluan pasukan pelajar dan guru kami (contohnya, pengesahan dan profil
+    pengguna) dan juga mempunyai misi untuk menjangkau pelajar yang belum dapat kami
+    jangkau. Ini termasuk membina integrasi yang menghubungkan kami dengan sekolah
+    yang menggunakan Sistem Pengurusan Pembelajaran (LMS) yang berbeza dan mengemas
+    kurikulum kami sehingga dapat digunakan di sekolah terpencil yang tidak mempunyai
+    akses ke internet yang boleh dipercayai.
+  engineering_our_team_sub_title_4: Pasukan Infrastruktur
+  engineering_our_team_text_4: Pasukan Infrastruktur kami menyediakan tulang belakang
+    untuk platform yang menyokong pelajar dan guru kami. Ini termasuk infrastruktur
+    hosting kami dan perkhidmatan yang berkaitan (kami menggunakan AWS), pengurusan
+    data, program keselamatan, perkhidmatan pemaju dan penggunaan dan banyak lagi.
+    Pasukan ini juga memiliki sistem penskalaan dan peruntukan kami, yang sangat penting
+    semasa Hour of Code, di mana kami menjemput setiap pelajar di dunia untuk menyelesaikan
+    satu jam pengekodan dengan kami.
+  engineering_faq_question_1: Apa yang Code.org lakukan?
+  engineering_faq_answer_1_a: Code.org adalah inovasi pendidikan bukan keuntungan
+    khusus untuk visi bahawa setiap pelajar di setiap sekolah mempunyai peluang untuk
+    belajar sains komputer sebagai sebahagian daripada pendidikan K-12 teras mereka.
+  engineering_faq_answer_1_b: Kami memperluas akses kepada sains komputer di sekolah,
+    dengan fokus pada peningkatan penyertaan oleh wanita muda dan pelajar dari kumpulan
+    lain yang kurang diwakili. Pembekal utama kurikulum sains komputer K-12 di daerah
+    sekolah terbesar di Amerika Syarikat, Code.org juga menganjurkan kempen Hour of
+    Code tahunan, yang telah melibatkan lebih daripada 15% daripada semua pelajar
+    di dunia.
+  engineering_faq_answer_1_c: Code.org disokong oleh penderma murah hati termasuk
+    Microsoft, Amazon, Google dan banyak lagi.
+  engineering_faq_question_2: Apakah pengalaman dan perkakas pemaju Code.org?
+  engineering_faq_answer_2: Pengalaman pembangun kami mungkin berbeza dengan apa yang
+    anda lihat dalam peranan masa lalu anda. Bekerja rapat dengan pasukan produk kami,
+    kami menghantar ke pengeluaran setiap hari bekerja dan kami mempunyai pelbagai
+    irama - kadangkala anda menulis kod yang disiarkan pada hari itu; pada masa lain
+    anda berada dalam projek jangka panjang - dan semasa kami mengikuti pecut 2 minggu,
+    kami melakukannya dengan cara yang ringan. Kami mengindeks ke arah mendapatkan
+    perkara yang betul dilakukan dengan cara yang betul berbanding mengambil pandangan
+    murni mengenai sebarang metodologi tertentu. [Semua kod kami] (%{code_url}) adalah
+    sumber terbuka dan kami menggunakan permintaan tarik JIRA dan GitHub untuk mengesan
+    semua item kerja kami. Kami juga mengambil berat tentang kualiti dan ujian dan
+    bernasib baik kerana mendapat sokongan yang luar biasa dari [SauceLabs](%{saucelabs_url}),
+    yang membantu kami menjalankan rangkaian ujian UI kami pada pelbagai peranti pelajar
+    (contohnya, iPad) di ladang peranti awan mereka.
+  engineering_faq_question_3: Apakah putaran panggilan jurutera di Code.org?
+  engineering_faq_answer_3: 30+ pasukan kejuruteraan kami berkongsi tanggungjawab
+    semasa panggilan. Setiap jurutera meliputi peralihan 24 jam dan menggunakan laluan
+    peningkatan dan buku permainan kami untuk bertindak balas terhadap gangguan tapak
+    atau isu tapak langsung yang lain. Kami berbangga dengan kebolehpercayaan laman
+    web kami - rata-rata, setiap jurutera hanya bangun sekali setahun untuk masalah
+    yang biasanya cepat diselesaikan. Sebaliknya, “Pembangun Hari” biasanya membelanjakan
+    sebahagian daripada hari kerja mereka menguruskan penggunaan pengeluaran dan triaging
+    isu-isu yang kurang mendesak.
+  engineering_faq_question_4: Adakah anda organisasi mesra jauh/WFH?
+  engineering_faq_answer_4_a: Ya! Pada tahun 2019, tidak lama sebelum wabak itu, Code.org
+    menjadi organisasi jarak jauh. Hari ini, kami mempunyai jurutera di setiap zon
+    waktu AS dan menampung waktu bekerja dengan sewajarnya. Kebanyakan mesyuarat kami
+    berlaku antara jam 10 pagi dan 3 petang PT.
+  engineering_faq_answer_4_b: Kami juga menyedari nilai masa secara peribadi, dan
+    setiap suku tahun kami berkumpul secara peribadi, biasanya di Seattle. Dua daripada
+    peristiwa ini (kami memanggilnya Minggu Kick-off dan “Codechella”) membawa semua
+    orang dalam organisasi bersama-sama pada bulan Januari dan Jun - dan pasukan kejuruteraan
+    dan produk bertemu secara berasingan pada bulan April dan Oktober.
+  engineering_faq_answer_4_c: Kami sangat percaya untuk meluangkan masa bersama pelajar
+    dan guru kami, begitu banyak acara bersemuka ini termasuk perjalanan ke sekolah
+    dan bilik darjah untuk mengumpulkan maklum balas atau menguji produk kami
+  engineering_faq_question_5: Apa yang menjadikan pasukan kejuruteraan di Code.org
+    unik?
+  engineering_faq_answer_5_a: 'Selain menyelesaikan masalah teknikal yang mencabar,
+    kami mempunyai beberapa perkara yang menjadikan organisasi kejuruteraan kami berbeza
+    daripada yang lain yang mungkin pernah anda kerjakan:'
+  engineering_faq_answer_5_b_1: Kami semua berkongsi semangat kami untuk misi kami.
+  engineering_faq_answer_5_b_2: Setiap daripada kita berada di sini untuk menyokong
+    misi untuk mengembangkan akses kepada sains komputer untuk setiap pelajar di seluruh
+    dunia. Kita semua mempunyai kisah dan perspektif unik tentang apa yang mendorong
+    kita ke arah misi ini.
+  engineering_faq_answer_5_c_1: Kami sangat peduli antara satu sama lain.
+  engineering_faq_answer_5_c_2: Apabila jurutera bergelut dengan masalah, kami melangkah
+    masuk dan kami membantu. Salah satu prinsip kami ialah kami sukar menghadapi masalah,
+    tetapi baik antara satu sama lain. Kami mempromosikan jurutera secara berkala,
+    tetapi kami tidak menetapkan penyelesaian yang terlalu banyak kejuruteraan hanya
+    untuk menyokong jalan promosi seseorang. Sebaliknya, kami melabur dalam jurutera
+    kami dengan bajet pembangunan profesional yang murah hati dan akses kepada peluang
+    pembelajaran yang lain.
+  engineering_faq_answer_5_d_1: Kami bekerja keras, tetapi kami menetapkan sempadan
+    yang jelas.
+  engineering_faq_answer_5_d_2: Walaupun kami menyokong pelajar di seluruh dunia,
+    kami bertanggungjawab untuk sempadan yang jelas antara kerja dan kehidupan rumah.
+    Kami menikmati hari Rabu tanpa mesyuarat, mengambil PTO kami (jumlah minggu 5,
+    yang merangkumi penutupan pejabat 2 minggu di seluruh dunia pada akhir tahun aka
+    Cuti Musim Sejuk), separuh hari bekerja pada hari Jumaat semasa musim panas aka
+    Jumaat Musim Panas, dan faedah lain yang murah hati.
   language_code:
     ar: Bahasa Arab
     az: Azerbaijan

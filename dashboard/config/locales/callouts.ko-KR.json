@@ -550,7 +550,7 @@
           "courseF_artist_variables3_a": "이것을 사용해 변수 `길이` 값을 설정하세요."
         },
         "Overworld Chop Trees": {
-          "craft_callout_preplaced": "여러분이 시작할 수 있도록 여기에 블록을 몇 개 놓아뒀어요"
+          "craft_callout_preplaced": "여러분이 시작할 수 있도록 여기에 블록을 몇 개 놓아두었어요"
         },
         "Overworld Chop Trees2022": {
           "craft_callout_preplaced": "여러분이 시작할 수 있도록 여기에 블록을 몇 개 놓아두었어요"
@@ -581,7 +581,7 @@
         },
         "Overworld Move to Sheep": {
           "craft_drag_block_callout": "'앞으로 이동' 블록을 드래그해 다른 블록 아래에 끼우세요.",
-          "craft_run_button_callout": "'실행'을 눌러 프로그램을 실행해 보세요"
+          "craft_run_button_callout": "\"실행하기\"를 눌러 프로그램을 실행시켜보세요"
         },
         "Overworld Move to Sheep2022": {
           "craft_drag_block_callout": "'앞으로 이동' 블록을 드래그해 다른 블록 아래에 끼우세요.",
@@ -621,7 +621,7 @@
           "4-5_Artist_Patterns_Free_Play_2": "이 라벨 아래 새 '의견' 블록을 사용해 프로그램 안에 노트를 남겨 보세요."
         },
         "Underground Avoiding Lava": {
-          "craft_callout_moveforward": "이 코드는 용암을 확인합니다. '앞으로 이동' 명령어를 추가할 수 있나요?"
+          "craft_callout_moveforward": "이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?"
         },
         "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?"

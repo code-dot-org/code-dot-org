@@ -3071,6 +3071,9 @@
         "5994929e-9d47-4037-9bf0-50728d56d31d": {
           "name": "Parapërgatitje"
         },
+        "bb408703-11ec-4822-a86b-b8625a121f6f": {
+          "name": "Showcase"
+        },
         "9ca8c23c-8a83-49ad-8730-a9dbf170d403": {
           "name": "Parapërgatitje"
         },
@@ -3933,16 +3936,16 @@
           "name": "Përmbledhje "
         },
         "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
-          "name": "Shiko: Lagja ime Online"
+          "name": "Shiko: Lagja ime në Internet"
         },
         "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
-          "name": "Lexo: Siguria, Udhëheq!"
+          "name": "Lexo: Siguria dhe rregullat!"
         },
         "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
-          "name": "Eksploro: Udhëtim në Internet"
+          "name": "Eksploro: Udhëtimi në terren në internet"
         },
         "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
-          "name": "Ndalo dhe Mendo Momentin"
+          "name": "Momenti të ndalosh dhe të mendosh"
         },
         "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
           "name": "Mësim shtesë"
@@ -3959,6 +3962,9 @@
         "9ef71984-8749-46e9-ada3-889815c8f1b9": {
           "name": "Mësim shtesë"
         },
+        "620c06c7-711d-459f-9f67-af3d142eb29c": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "f03fc05c-d123-4c38-bde0-0bbbaf397b94": {
           "name": "Parapërgatitje"
         },
@@ -3973,6 +3979,9 @@
         },
         "3c9570d2-fe30-4242-a735-9a2a4ee66bf0": {
           "name": "Parapërgatitje"
+        },
+        "9bcd264d-fc8b-42f8-a7d5-47be1a4ff975": {
+          "name": "Aktivitet lidhës - Zgjedh një"
         },
         "2a7f3c27-943a-415a-bdb1-1fbef4249074": {
           "name": "Aktiviteti kryesor"
@@ -3995,6 +4004,9 @@
         "13ec08fa-c803-4a93-82b0-0a18629d2e54": {
           "name": "Mësim shtesë"
         },
+        "891cbd33-69a5-4cfc-bec4-fc995706c95a": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "7ca483b4-722a-4ed3-aa26-501375f59ab8": {
           "name": "Parapërgatitje"
         },
@@ -4016,11 +4028,20 @@
         "e0f98e02-d388-4fa9-8f14-0774fe44df3b": {
           "name": "Parapërgatitje"
         },
+        "6008d4fa-44e5-48b8-9a9e-a07541b36f3a": {
+          "name": " Aktiviteti Lidhës - Zgjedhni një"
+        },
         "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b": {
           "name": "Aktiviteti kryesor"
         },
+        "647827d3-b6a3-4697-9cb8-fec35c819d12": {
+          "name": " Përmbledhje"
+        },
         "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
           "name": "Mësim shtesë"
+        },
+        "92c5197c-d135-4891-9504-ba1393dd8ca6": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "6aab5f16-5596-4536-b404-f46152246d24": {
           "name": "Parapërgatitje"
@@ -4040,6 +4061,9 @@
         "450f879a-a14d-4d47-93fd-2916bbf46caa": {
           "name": "Përmbledhje "
         },
+        "d532c41b-fba1-4122-8928-17ec3ef36315": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "e1843002-564c-4803-9eaa-44f48a8e4159": {
           "name": "Parapërgatitje"
         },
@@ -4054,6 +4078,9 @@
         },
         "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
           "name": "Parapërgatitje"
+        },
+        "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
+          "name": "Aktiviteti Lidhës - Eventet - Zgjjidhni një"
         },
         "c92853be-b1ed-4b05-afe9-79928330a3a3": {
           "name": "Aktiviteti kryesor"
@@ -4072,6 +4099,15 @@
         },
         "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
           "name": "Përmbledhje "
+        },
+        "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
+          "name": "Shiko videon: Ndiq gjurmët digjitale"
+        },
+        "a9572124-af86-4d97-b4a8-929d761473af": {
+          "name": "Luaj: Gjurmët e kafshëve"
+        },
+        "de382430-d529-490d-b4fd-a7f020c4802b": {
+          "name": "Rishiko: A është në rregull për t'u shpërndarë?"
         },
         "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
           "name": "Përmbledhje: Ndalo & Mendo një moment"
@@ -4094,6 +4130,9 @@
         "0912bd0e-91c8-4f72-88ee-70d5ccd443f3": {
           "name": "Parapërgatitje"
         },
+        "5fbaf40a-2106-4bfd-937a-3f4594b26b81": {
+          "name": "Aktiviteti lidhës - Zgjedh një"
+        },
         "248075ed-be23-4145-bbe5-f629eb3df448": {
           "name": "Aktiviteti kryesor"
         },
@@ -4103,8 +4142,14 @@
         "4f870e69-6c13-4513-a1d9-e6b1b8e22053": {
           "name": "Mësim shtesë"
         },
+        "e030be21-480d-40a2-8f97-574492b54aa2": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
           "name": "Parapërgatitje"
+        },
+        "bc23554e-190c-44f9-84b1-03b21dd7ef17": {
+          "name": "Aktivitet lidhës - Zgjedh një"
         },
         "0e24dd16-0f94-45cb-85a3-ed4852df7abd": {
           "name": "Pamje paraprake të Enigmave Online si klasë"
@@ -4145,6 +4190,9 @@
         "10140329-cade-4307-8132-d9ac56d8182c": {
           "name": "Parapërgatitje"
         },
+        "06b2458e-a834-46c5-842e-385c1fc97bc8": {
+          "name": "Aktiviteti lidhës - Zgjedh një"
+        },
         "287b6295-2274-4349-a7c3-fab998a09e1c": {
           "name": "Aktiviteti kryesor"
         },
@@ -4154,11 +4202,20 @@
         "c0501fbb-bb65-4144-bc1c-56ea50bc7485": {
           "name": "Mësim shtesë"
         },
+        "3ffb2700-4b4c-4deb-a009-856be4b850da": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
           "name": "Parapërgatitje"
         },
         "3a35e6b5-a46a-47b7-b0b8-99ddadcc8fad": {
           "name": "Aktiviteti kryesor"
+        },
+        "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
+          "name": " Përmbledhje"
+        },
+        "352bcbca-fe70-41d4-8d38-7cfed390e991": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "369c31b8-5f8b-44dc-a978-c5c56f794b7b": {
           "name": "Parapërgatitje"
@@ -4168,6 +4225,9 @@
         },
         "ad9b2654-4506-4741-9f53-5699cb20615d": {
           "name": "Përmbledhje "
+        },
+        "3ed032b9-b27d-4c86-8aff-1e60ba90a038": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "ec70fc95-cedd-46df-9f23-30e8b75faabf": {
           "name": "Parapërgatitje"
@@ -4193,8 +4253,14 @@
         "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
           "name": "Mësim shtesë"
         },
+        "e524c263-6ebc-47c9-9d43-3b738a99574b": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
           "name": "Parapërgatitje"
+        },
+        "8e77b151-07f6-4404-98ec-473f310fc8b1": {
+          "name": "Aktivitet lidhës - Zgjedh një"
         },
         "b170b2ef-82f1-4067-aadc-add8074acb80": {
           "name": "Aktiviteti kryesor"
@@ -4220,6 +4286,9 @@
         "78358409-25ec-4e4f-92d7-b69ff300191a": {
           "name": "Performo: Online kundrejtë Ballë për Ballë (F2F)"
         },
+        "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
+          "name": "Eksploro: STOP padrejtësitë në internet"
+        },
         "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
           "name": "Përmbledhje: Ndalo & Mendo një moment"
         },
@@ -4241,6 +4310,9 @@
         "260a48d0-8cd7-4f15-b303-32e5c685a349": {
           "name": "Parapërgatitje"
         },
+        "d3ccea72-fdca-4a45-a194-3ed4cbcffc38": {
+          "name": "Aktivitet lidhës - Programimi"
+        },
         "28178b0d-4526-4c90-ba4b-a2cab6f12461": {
           "name": "Pamje paraprake të Enigmave Online si klasë"
         },
@@ -4252,6 +4324,9 @@
         },
         "6e3e3ddd-0ac5-4d74-aeb0-bc6d4355aa20": {
           "name": "Mësim shtesë"
+        },
+        "fbd5cbd1-8b1f-41f6-bba3-2df600903adc": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
           "name": "Parapërgatitje"
@@ -4267,6 +4342,9 @@
         },
         "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
           "name": "Parapërgatitje"
+        },
+        "7085e9b6-059c-4118-8970-e38a5d4f5d01": {
+          "name": "Aktivitet lidhës "
         },
         "e0fe20d3-be99-4212-83f8-21599085fcad": {
           "name": "Aktiviteti kryesor"
@@ -4286,11 +4364,14 @@
         "27034f13-f0bf-41c0-a198-385c740be6ab": {
           "name": "Mësim shtesë"
         },
+        "c6ddc263-f624-4d04-a67d-87cf4a90a03e": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "1c265744-1a1f-44f4-8380-7328759249ea": {
           "name": "Parapërgatitje"
         },
         "d0c658b7-0ee9-4498-b93c-5bf082cc068e": {
-          "name": "Aktiviteti"
+          "name": "Aktivitet"
         },
         "899be5b5-0668-4472-909d-46a1e44e98e2": {
           "name": "Përmbledhje "
@@ -4300,6 +4381,9 @@
         },
         "8bdab5a2-cc72-4591-9cea-63350d38c61e": {
           "name": "Parapërgatitje"
+        },
+        "8df58520-6127-4563-b145-8d7d81635bde": {
+          "name": "Aktiviteti lidhës - Zgjedh një"
         },
         "e36b6776-3c22-498e-94ef-44fae2c28065": {
           "name": "Aktiviteti kryesor"
@@ -4322,6 +4406,9 @@
         "00bc0557-ae64-4fe1-a1d1-09b4bb890c42": {
           "name": "Mësim shtesë"
         },
+        "c1cb23a9-85d1-4f19-ae36-9388baa9566c": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "63075b82-d582-409b-afd8-a8967040c94c": {
           "name": "Parapërgatitje"
         },
@@ -4330,6 +4417,9 @@
         },
         "533abcef-ea93-4b33-902c-7b70e22ffe31": {
           "name": "Përmbledhje "
+        },
+        "d96c9108-8707-4345-9f1a-5e69928ca31f": {
+          "name": "Mundësi ndër-kurrikulare"
         },
         "8d10f0a0-909f-482c-a17f-3477280c7375": {
           "name": "Parapërgatitje"
@@ -4346,6 +4436,9 @@
         "38b78816-4a04-4c9b-b112-3704e9511c42": {
           "name": "Parapërgatitje"
         },
+        "bddb3c72-46b5-4cdf-897d-3cf4ffbbcdb9": {
+          "name": "Aktivitet lidhës - Zgjedh një"
+        },
         "7ec11452-1367-44ef-afe4-c8cf354bb183": {
           "name": "Aktiviteti kryesor"
         },
@@ -4354,6 +4447,9 @@
         },
         "7c0129f4-ba20-475d-b304-a85ddd87507e": {
           "name": "Mësim shtesë"
+        },
+        "d7041d0f-5170-4379-9d84-a93a44dbb51e": {
+          "name": "Mundësi ndër-kurrikulare"
         },
         "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
           "name": "Parapërgatitje"
@@ -4379,6 +4475,9 @@
         "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
           "name": "Parapërgatitje"
         },
+        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
+          "name": "Aktiviteti kryesor "
+        },
         "e7277b3e-9177-451e-bef9-1e53d41b6131": {
           "name": "Përmbledhje "
         },
@@ -4396,6 +4495,18 @@
         },
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Përmbledhje "
+        },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": "Parapërgatitje: Pssst... Çfarë është një fjalëkalim?"
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": "Vlerëso: Uh-Oh! Nëse... Pastaj..."
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": "Krijoni: Fuqizoni fjalëkalimin tuaj"
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": "Përmbledhje: Shënime të këshillave për fjalëkalim"
         },
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Mësim shtesë"
@@ -4439,6 +4550,9 @@
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Parapërgatitje"
         },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": "Aktivitetet lidhëse - Zgjedh një"
+        },
         "d05decb3-7f64-4886-8da0-088e7d73216d": {
           "name": "Aktiviteti kryesor"
         },
@@ -4456,6 +4570,9 @@
         },
         "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
           "name": "Mësim shtesë"
+        },
+        "9b7bc38a-d4af-47c0-8c3c-b824d0a8cd5c": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
           "name": "Parapërgatitje"
@@ -4477,6 +4594,9 @@
         },
         "6260dc9f-f1ec-41fb-bb11-c03bbe503e26": {
           "name": "Aktiviteti kryesor"
+        },
+        "61a173ad-ac68-4680-9a5c-2c9bfd68249c": {
+          "name": " Përmbledhje"
         },
         "67ee7a3f-50e6-4ace-a40e-438d543a9c45": {
           "name": "Mësim shtesë"
@@ -4510,6 +4630,9 @@
         },
         "22ad368d-3a00-4720-a21a-72985c642b8d": {
           "name": "Mësim shtesë"
+        },
+        "e0a55231-1434-43ad-8e85-579b44ebc1ef": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
           "name": "Parapërgatitje"
@@ -4592,8 +4715,32 @@
         "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
           "name": "Përmbledhje "
         },
+        "1a64d92c-82ce-45e6-a188-a7d88086efd8": {
+          "name": "Parapërgatitje: Superheroi sekret"
+        },
+        "f642093a-def9-467e-a8cc-8950b21d62c8": {
+          "name": "Mësoni: Të jesh një mbështetës"
+        },
+        "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
+          "name": "Krijoni: Superheroi juaj i qytetarisë digjitale"
+        },
+        "7d491d29-d496-450c-aece-a776f7fbd3d3": {
+          "name": "Përmbledhje: Ruani Ditën! Shiriti komik"
+        },
         "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
           "name": "Mësim shtesë"
+        },
+        "14b61eaf-26c8-46d2-8538-06fe223a04c0": {
+          "name": "Parapërgatitje: Ngrituni, Uluni"
+        },
+        "3d33781b-194e-4311-b493-e6cd3bf140ac": {
+          "name": "Analizoni: Pse njerëzit shpërndajnë?"
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": "Analizo: Private apo Personale?"
+        },
+        "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
+          "name": "Përmbledhje: Bileta e daljes"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Mësim shtesë"
@@ -4609,6 +4756,12 @@
         },
         "911c75e0-ddd2-4431-8bc6-c1ea19c4e104": {
           "name": "Përmbledhje "
+        },
+        "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
+        "077242ad-8c8a-4b24-a139-a5e198abd405": {
+          "name": "Parapërgatitje (Opsionale)"
         },
         "7ccdedb5-15bf-4d75-9efb-e65349644266": {
           "name": "Aktiviteti kryesor"
@@ -4627,6 +4780,9 @@
         },
         "875f6137-2035-4bb3-aec9-0c2f30fcbb1d": {
           "name": "Përmbledhje "
+        },
+        "dbad5d87-5c18-4c2a-a15a-6567124b4864": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "d2e747dc-0bde-4836-8d4c-c69868ad9b11": {
           "name": "Parapërgatitje"
@@ -4649,6 +4805,9 @@
         "3c16545b-4916-4493-b8ad-6e73aa6ac515": {
           "name": "Përmbledhje "
         },
+        "388b4557-7534-453f-a760-847055923bc0": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "dd01dd63-cce2-4280-836a-eb80e859c3a4": {
           "name": "Parapërgatitje"
         },
@@ -4664,8 +4823,14 @@
         "a3701255-a00e-431c-a6bc-ee1f6d192ebf": {
           "name": "Mësim shtesë"
         },
+        "6c35971f-0c71-44c4-b6d7-9380216625a5": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
           "name": "Parapërgatitje"
+        },
+        "a80b5d47-5fb8-4557-9fb2-233074caad47": {
+          "name": "Aktivitet lidhës - Zgjedh një"
         },
         "0da29d00-d95a-4538-ac89-116513fba104": {
           "name": "Aktiviteti kryesor"
@@ -4730,6 +4895,15 @@
         "49051b73-a04d-4a2b-b99e-9b5fe43d235b": {
           "name": "Përfundimi i projektit të kursit"
         },
+        "430c7fd8-dd67-4fff-924a-e6080df26e8a": {
+          "name": "Dita 2 - Procesi i dizajnimit"
+        },
+        "0cf95f16-6aaa-4ea6-b62b-043b7c299f90": {
+          "name": "Dita 3 - Ndërtoni projektin tuaj"
+        },
+        "e8be4727-c687-43bb-a1be-e1b3da780020": {
+          "name": "Dita 4 & 5 - Prezantoni projektin tuaj"
+        },
         "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
           "name": "Mësim shtesë"
         },
@@ -4769,6 +4943,21 @@
         "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121": {
           "name": "Përmbledhje "
         },
+        "4cd953ae-9546-4cdf-b6ea-860212b4875f": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
+        "424b80fc-8e8d-4dbd-bed3-4890da24b145": {
+          "name": "Parapërgatitje: E njëjta fjalë. Kuptim të ndryshëm"
+        },
+        "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
+          "name": "Shiko: Fuqia e fjalëve"
+        },
+        "fbda7646-9395-471f-8749-694fd9cd30da": {
+          "name": "Hetoni: Cili është problemi?"
+        },
+        "f747c55f-efbf-41df-809a-2f2620917e1f": {
+          "name": "Përmbledhje: Kalimi i kufijve"
+        },
         "86dafe20-4778-4665-94eb-cf837951259b": {
           "name": "Mësim shtesë"
         },
@@ -4780,6 +4969,9 @@
         },
         "c6c49adb-f68f-411c-a9ec-bd89e0134bbd": {
           "name": "Përmbledhje "
+        },
+        "385b01c4-de16-401f-bc49-71e637e93ccc": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "5750d053-1daa-409c-9b83-bc4306ba4aef": {
           "name": "Parapërgatitje"
@@ -4850,8 +5042,14 @@
         "f6c99d2f-9ec7-4706-8a77-71513d31db13": {
           "name": "Mësim shtesë"
         },
+        "22f02104-4519-48dd-aa08-c532f9e080c9": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "8362c620-cea5-4a56-b0b4-74a606bf62da": {
           "name": "Parapërgatitje"
+        },
+        "5b774bd6-b243-4d1d-9145-20747f320129": {
+          "name": "Aktivitet lidhës - Zgjedh një"
         },
         "17982c9a-0fc7-457e-95a7-e0852d5f861e": {
           "name": "Aktiviteti kryesor"
@@ -4913,6 +5111,21 @@
         "19c350ea-4420-4a94-a91e-f7d798799cc4": {
           "name": "Vlerësim"
         },
+        "80cbea1a-7c3f-4121-bab6-abd831772020": {
+          "name": "Dita 1 - Eksploro idetë e projektit"
+        },
+        "d3e8770f-3f2d-450a-b605-bd792b3ed687": {
+          "name": "Dita 2 - Procesi i dizajnimit"
+        },
+        "12f4ca9e-9b05-4a99-a6f4-6133b8c0e407": {
+          "name": "Dita 3 - Ndërtoni projektin tuaj"
+        },
+        "459d00f2-e296-4205-bca6-eab8d4599354": {
+          "name": "Dita 4 - Rishikoni projektin tuaj"
+        },
+        "25d5e16a-9db1-441d-a4c4-916612df574b": {
+          "name": "Dita 5 & 6 - Prezantoni projektin tuaj"
+        },
         "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
           "name": "Mësim shtesë"
         },
@@ -4927,6 +5140,9 @@
         },
         "fdc83a09-7d91-45c6-a7a7-ec0cce218f97": {
           "name": "Mësim shtesë"
+        },
+        "6b5b713d-b79d-4ac5-8041-f3d5bd2bf883": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
           "name": "Parapërgatitje"
@@ -4964,6 +5180,9 @@
         "1d75c580-140f-4796-9e75-5863162c676b": {
           "name": "Mësim shtesë"
         },
+        "4366b898-b885-48ea-90a8-0316aa3c153f": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
           "name": "Parapërgatitje"
         },
@@ -5000,6 +5219,9 @@
         "a3122d16-5927-4ac5-98a5-c86494ad85fc": {
           "name": "Përmbledhje "
         },
+        "a75ec06d-15b5-41d1-895c-3b1c3c52276d": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "4e59783c-7761-4afe-9775-d8c51ca075d0": {
           "name": "Parapërgatitje"
         },
@@ -5029,6 +5251,9 @@
         },
         "6e4e84d7-d20f-49ca-9be1-b73be610fc02": {
           "name": "Përmbledhje "
+        },
+        "74cd46ac-1c89-437d-a630-a19c43b6ff41": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "9c75f37e-a774-4e3e-9415-a820b02d8ce6": {
           "name": "Parapërgatitje"
@@ -5222,6 +5447,9 @@
         "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
           "name": "Mësim shtesë"
         },
+        "a5713eec-33e7-45ba-acc9-fba5383c6355": {
+          "name": "Parapërgatitje: Parashikimi i Programimit në Labirint"
+        },
         "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
           "name": "Aktiviteti kryesor"
         },
@@ -5255,14 +5483,23 @@
         "0a77a438-3684-4874-b963-e5a75723888a": {
           "name": "Aktiviteti kryesor"
         },
+        "9bb59fc2-2443-4c4d-b4fc-647d4c706241": {
+          "name": " Përmbledhje"
+        },
         "5457f30a-9f1f-45f7-a772-81f44f1189ae": {
           "name": "Mësim shtesë"
         },
         "59675efe-890a-48b9-bd56-947f991df50b": {
           "name": "Parapërgatitje"
         },
+        "9299b9d4-262a-452e-93f2-b04f9c64c34e": {
+          "name": "Fondacioni Online: Parashikoni Loops në aktivitetin mbledhës"
+        },
         "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
           "name": "Aktiviteti kryesor"
+        },
+        "e6a1f5df-d8d4-41a1-8649-d518965997af": {
+          "name": " Përmbledhje"
         },
         "f2ded4ce-7dc9-49ec-b96c-1f4e00db122e": {
           "name": "Parapërgatitje"
@@ -5650,6 +5887,12 @@
         },
         "e11819a0-81a5-414c-b3fe-71e31ccfaaf7": {
           "name": "Parapërgatitje"
+        },
+        "cb6bf053-345c-47af-a7b9-39a67a9c70fa": {
+          "name": "Showcase"
+        },
+        "0754806a-e34d-4891-a471-399122e56ac9": {
+          "name": "Parapërgatitje për mësim"
         },
         "29c29273-e188-41d0-8559-b9048c892737": {
           "name": "Parapërgatitje"
@@ -6723,7 +6966,7 @@
           "name": "Parapërgatitje"
         },
         "3c623aad-d037-437e-b74d-9c8a5824950a": {
-          "name": "Aktiviteti Lidhës- Zgjjidhni një"
+          "name": "Aktiviteti Lidhës - Zgjedhni një"
         },
         "89f19370-c3ba-4212-b017-433e7c2e946f": {
           "name": "Aktiviteti kryesor"
@@ -7142,6 +7385,9 @@
         "e982d792-ed3f-403f-8782-58d0e74eb342": {
           "name": "Parapërgatitje"
         },
+        "4960fdd0-1478-40e5-af70-efab13ddd070": {
+          "name": "Aktivitetet lidhëse - Zgjedh një"
+        },
         "f2cc2200-d1d2-4bb2-8b5c-84628e8c42c0": {
           "name": "Aktiviteti kryesor"
         },
@@ -7160,6 +7406,9 @@
         "c96ae163-bdf7-40b1-9b39-aa7047d30c2f": {
           "name": "Mësim shtesë"
         },
+        "fd881ec7-eac1-4f8f-b708-7bbefd1d4a66": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "8799b3de-39a1-4578-87f7-2dc2b97e9e00": {
           "name": "Parapërgatitje"
         },
@@ -7175,11 +7424,17 @@
         "83904b3e-7ab5-4cb0-9166-38c40c6d06c9": {
           "name": "Përmbledhje "
         },
+        "26389f28-c8e4-44e9-855f-b95094d2dae0": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "88ef108d-c468-473b-baf1-9c6e2ec76ef7": {
           "name": "Parapërgatitje"
         },
         "bd41d9a1-3212-4e4a-928e-ad0e05bbdfee": {
           "name": "Aktiviteti kryesor"
+        },
+        "f05c91b7-0a1b-498a-aa93-387934a55eb4": {
+          "name": " Përmbledhje"
         },
         "db740abd-f7bc-4a40-a31f-d8694109f2f9": {
           "name": "Mësim shtesë"
@@ -7210,6 +7465,9 @@
         },
         "a340f15a-7b7f-4105-803c-f7e1759cced5": {
           "name": "Mësim shtesë"
+        },
+        "fa9d8e25-c013-4772-814a-5c7f8f80278d": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "9b4861a6-9fd1-4d39-ab25-1b7e219a4b20": {
           "name": "Parapërgatitje"
@@ -7748,6 +8006,9 @@
         "06405457-a7a2-4d06-a86e-49fcd9b68ca0": {
           "name": "Përmbledhje "
         },
+        "7d776b69-c8bc-4061-bc09-6f7d4fabadd1": {
+          "name": "Mundësitë ndër-kurrikulare"
+        },
         "f82ae62d-6e76-46b1-b3bd-ca643497839a": {
           "name": "Parapërgatitje"
         },
@@ -7777,6 +8038,9 @@
         },
         "d023bf11-e78a-4720-93f3-10031013096e": {
           "name": "Përmbledhje "
+        },
+        "d945cc19-522e-494a-9b12-cfc84bf0ba6f": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "26877025-2ce3-4c89-8827-b7519c974edc": {
           "name": "Parapërgatitje"
@@ -7979,6 +8243,9 @@
         "a5b16543-dea5-453c-992f-b1f906a2db44": {
           "name": "Mësim shtesë"
         },
+        "06cda082-0f41-4a52-a1eb-a8c33ef23d83": {
+          "name": "Parapërgatitje: Parashikimi i Programimit në Labirint"
+        },
         "0fa4c5d1-4c0e-42c4-8f6d-bf50eae78b70": {
           "name": "Aktiviteti kryesor"
         },
@@ -8012,14 +8279,23 @@
         "152a89ca-a7ad-4ba8-bc78-f221581bd209": {
           "name": "Aktiviteti kryesor"
         },
+        "364491ce-5584-4e01-a791-073515164b97": {
+          "name": " Përmbledhje"
+        },
         "708bdcc2-b0bc-406e-b6f6-e0b13d9db0ab": {
           "name": "Mësim shtesë"
         },
         "31cead7b-04b5-4f08-ad69-d024f371debc": {
           "name": "Parapërgatitje"
         },
+        "87f5e396-bc40-4bd5-8c1d-0045ec2f96fa": {
+          "name": "Fondacioni Online: Parashikoni Loops në aktivitetin mbledhës"
+        },
         "303f1fad-15bb-4639-a2a1-2303a78192fd": {
           "name": "Aktiviteti kryesor"
+        },
+        "63657d6a-c623-496b-9757-30396176fe9e": {
+          "name": " Përmbledhje"
         },
         "ee6ea4fb-151a-48af-aa6e-a83b9d779302": {
           "name": "Parapërgatitje"

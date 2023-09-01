@@ -349,6 +349,8 @@ pl:
               name: Muzyka
             lesson-50:
               name: Czat AI
+            lesson-51:
+              name: Rubryki AI
           name: wszystkie rzeczy
           student_description: Wszystkie typy poziomów dla testowania UI
           title: Wszystkie te Rzeczy!
@@ -2126,6 +2128,8 @@ pl:
               name: To słowo kluczowe
             lesson-15:
               name: Jednostka 2 Ankieta
+            lesson-16:
+              name: 'Piaskownica: Konsola'
             lesson-2:
               name: Konstruktory bez argumentów
             lesson-3:
@@ -2207,6 +2211,10 @@ pl:
               name: Dane dla projektu dobra społecznego [wersja 1-dniowa]
             lesson-14:
               name: Jednstka 3 Ankieta
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
             lesson-2:
               name: Modyfikowanie elementów
             lesson-3:
@@ -2291,6 +2299,10 @@ pl:
               name: Instrukcje wielokrotnego wyboru
             lesson-15:
               name: Jednostka 4 Ankieta
+            lesson-16:
+              name: 'Piaskownica: Konsola'
+            lesson-18:
+              name: 'Piaskownica: Teatr'
             lesson-2:
               name: Projekt abstrakcyjnych danych sztuki
             lesson-3:
@@ -2379,6 +2391,10 @@ pl:
               name: Osobisty projekt narracyjny [Wersja 1-dniowa]
             lesson-14:
               name: Jednostka 5 Ankieta
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
             lesson-2:
               name: Elementy tablicy 2D
             lesson-3:
@@ -2462,6 +2478,10 @@ pl:
               name: Projekt przetwarzania języka naturalnego [wersja 1-dniowa]
             lesson-14:
               name: Jednostka 6 Ankieta
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
             lesson-2:
               name: Łańcuchy częściowe
             lesson-3:
@@ -2544,6 +2564,10 @@ pl:
               name: Jednostka 7 Ankieta
             lesson-14:
               name: Kreatywne kodowanie z projektem teatralnym [wersja 1-dniowa]
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
             lesson-2:
               name: Odniesienia do obiektów jako parametry
             lesson-3:
@@ -2633,6 +2657,10 @@ pl:
               name: Jednostka 8 Sprawdzian
             lesson-13:
               name: Kreatywne kodowanie w programie Console Project [wersja 1-dniowa]
+            lesson-14:
+              name: 'Piaskownica: Konsola'
+            lesson-16:
+              name: 'Piaskownica: Teatr'
             lesson-2:
               name: Wyszukiwanie
             lesson-3:
@@ -2730,6 +2758,11 @@ pl:
               display_name: Przegląd i praktyka
             lessonGroup-3:
               display_name: Egzaminy próbne
+          lessons:
+            lesson-1:
+              name: 'Piaskownica: Konsola'
+            lesson-3:
+              name: 'Piaskownica: Teatr'
           name: csa9-2023
           student_description: Ta jednostka przygotowuje Ciebie do egzaminu AP CSA
             poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru
@@ -2923,6 +2956,8 @@ pl:
               name: Badanie pulsu do klonowania
             lesson-12:
               name: Plac zabaw AI
+            lesson-13:
+              name: Plac zabaw Gen AI Blocks
             lesson-7:
               name: Wprowadzenie do Duszków
             lesson-9:
@@ -7879,6 +7914,8 @@ pl:
               name: Pomysły FM
             lesson-4:
               name: Maszyny funkcyjne w Artyście
+            lesson-5:
+              name: AI 3-5
           name: katies-playground
           title: Miejsce Katie do robienia rzeczy
         kodea-pd-2021:
@@ -7919,9 +7956,9 @@ pl:
             do wprowadzenia informatyki z urzdzeniami fizycznymi i sposobu myślenia
             „twórcy”. Możesz także uczyć tych treści za pomocą urządzeń **circuit
             plac zabaw**, przypisując jednostkę [Tworzenie aplikacji z urządzeniami
-            (Circuit Playground) unit](/s/devices-2022). Obie jednostki uczą tych
-            samych treści i są równoważne - nie trzeba kupować obu zestawów urządzeń
-            ani uczyć obu jednostek.\n\n::: szczegóły [**Przeglą Wejść i Wyjść**]\n**Opis:**
+            (Circuit Playground) unit](/s/devices). Obie jednostki uczą tych samych
+            treści i są równoważne - nie trzeba kupować obu zestawów urządzeń ani
+            uczyć obu jednostek.\n\n::: szczegóły [**Przeglą Wejść i Wyjść**]\n**Opis:**
             Jednostka ta uwypukla interakcje między wejściami i wyjściami na ekranie
             micro:bita i aplikacji. Na swoich mikro:bitach uczniowie uczą się kontrolować
             wejścia, takie jak przyciski i wyjścia, takie jak ekran LED. Wchodzą również

@@ -3931,6 +3931,9 @@
           "name": "Onlayn qonşuluqda təhlükəsizlik: təhlükəsizlik: Bu qaydalar!",
           "type": "Şeir Afişası"
         },
+        "csf_course_a_lesson_slides/coursea/2022": {
+          "type": "Slaydlar"
+        },
         "20_20_20_rule/coursea/2022": {
           "name": "20/20/20 Qaydası",
           "type": "Mənbə"
@@ -3949,6 +3952,9 @@
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
+        "csf_course_a_lesson_slides_1/coursea/2022": {
+          "type": "Slaydlar"
+        },
         "feeling_faces_-_emotion_image/coursea/2022": {
           "type": "Mənbə"
         },
@@ -3965,6 +3971,9 @@
         "happy_maps/coursea/2022": {
           "name": "Şən xəritələr"
         },
+        "csf_course_a_lesson_slides_2/coursea/2022": {
+          "type": "Slaydlar"
+        },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
           "name": "Sökülməmiş Bloklu Bloklar (Siniflər K-1)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
@@ -3974,6 +3983,9 @@
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
+        "csf_course_a_lesson_slides_3/coursea/2022": {
+          "type": "Slaydlar"
+        },
         "debugging_with_the_step_button/coursea/2022": {
           "type": "Video"
         },
@@ -3982,12 +3994,21 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Mənbə"
         },
+        "csf_course_a_lesson_slides_4/coursea/2022": {
+          "type": "Slaydlar"
+        },
         "feeling_faces_-_emotion_image_1/coursea/2022": {
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Mənbə"
         },
+        "csf_course_a_lesson_slides_5/coursea/2022": {
+          "type": "Slaydlar"
+        },
         "happy_map_cards_xl/coursea/2022": {
           "name": "Xoşbəxt Xəritə Kartları XL"
+        },
+        "csf_course_a_lesson_slides_6/coursea/2022": {
+          "type": "Slaydlar"
         },
         "feeling_faces/coursea/2022": {
           "name": "Üzləri hiss etmək",
@@ -3997,13 +4018,22 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Video"
         },
+        "csf_course_a_lesson_slides_7/coursea/2022": {
+          "type": "Slaydlar"
+        },
         "csf_lesson_recommendations/coursea/2022": {
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
           "type": "Mənbə"
         },
+        "csf_course_a_lesson_slides_8/coursea/2022": {
+          "type": "Slaydlar"
+        },
         "pause_and_think_online/coursea/2022": {
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Video"
+        },
+        "csf_course_a_lesson_slides_9/coursea/2022": {
+          "type": "Slaydlar"
         },
         "the_big_event/coursea/2022": {
           "name": "Böyük hadisə"
@@ -4015,12 +4045,21 @@
         "the_big_event_2/coursea/2022": {
           "name": "Böyük hadisə"
         },
+        "csf_course_a_lesson_slides_10/coursea/2022": {
+          "type": "Slaydlar"
+        },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
           "name": "CS Fundamentals Əsas Fəaliyyət Məsləhətləri",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
+        "csf_course_a_lesson_slides_11/coursea/2022": {
+          "type": "Slaydlar"
+        },
         "artist_project_planning_guide_1/coursea/2022": {
           "type": "Cavab kitabcası"
+        },
+        "csf_course_a_lesson_slides_12/coursea/2022": {
+          "type": "Slaydlar"
         },
         "2022_change_log/courseb/2022": {
           "name": "2022 Dəyişiklik Qeydiyyatı"
@@ -4084,6 +4123,9 @@
         "digital_trails_lesson_slides/courseb/2022": {
           "name": "Rəqəmsal yollar: Dərs Slaydları",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "csf_course_b_lesson_slides/courseb/2022": {
+          "type": "Slaydlar"
         },
         "feeling_faces_emotion_image/courseb/2022": {
           "name": "Üz emosiyaları hiss etmə səhifəsi",

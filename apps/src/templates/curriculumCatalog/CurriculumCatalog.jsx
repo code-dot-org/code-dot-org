@@ -18,6 +18,7 @@ const CurriculumCatalog = ({
   curriculaData,
   isEnglish,
   languageNativeName,
+  isInUS,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -88,9 +89,11 @@ const CurriculumCatalog = ({
                 video,
                 published_date,
                 self_paced_pl_course_offering_path,
+                available_resources,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
+                  courseKey={key}
                   courseDisplayName={display_name}
                   courseDisplayNameWithLatestYear={
                     display_name_with_latest_year
@@ -120,6 +123,8 @@ const CurriculumCatalog = ({
                   }
                   isExpanded={expandedCardKey === key}
                   onQuickViewClick={() => handleExpandedCardChange(key)}
+                  isInUS={isInUS}
+                  availableResources={available_resources}
                   {...props}
                 />
               )
@@ -185,6 +190,7 @@ CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
   isEnglish: PropTypes.bool.isRequired,
   languageNativeName: PropTypes.string.isRequired,
+  isInUS: PropTypes.bool.isRequired,
 };
 
 export default CurriculumCatalog;
