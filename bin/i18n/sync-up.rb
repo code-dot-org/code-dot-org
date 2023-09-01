@@ -6,6 +6,7 @@
 # 3. from i18n/locales/source/hourofcode to Hourofcode project
 # 4. from i18n/locales/source/**/restricted.yml to Code.org - Restricted project
 
+require_relative 'metrics'
 require_relative 'i18n_script_utils'
 
 def sync_up
@@ -26,9 +27,10 @@ def sync_up
         raise "Sync up failed" unless status_thread.value.success?
       end
     end
-
+    I18n::Metrics.report_success(true, 'up', 'sync-up')
     puts "Sync up completed successfully"
   rescue => exception
+    I18n::Metrics.report_success(false, 'up', 'sync-up', "Sync up failed from the error: #{exception}")
     puts "Sync up failed from the error: #{exception}"
     raise exception
   end

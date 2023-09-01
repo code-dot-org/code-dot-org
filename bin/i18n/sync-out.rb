@@ -19,6 +19,7 @@ require 'active_support/core_ext/object/blank'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
+require_relative 'metrics'
 require_relative '../animation_assets/manifest_builder'
 
 module I18n
@@ -41,8 +42,10 @@ module I18n
         I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n_static_messages.rb"
       end
       clean_up_sync_out(CROWDIN_PROJECTS)
+      I18n::Metrics.report_success(true, 'out', 'sync-out')
       puts "Sync out completed successfully"
     rescue => exception
+      I18n::Metrics.report_success(false, 'out', 'sync-out', "Sync out failed from the error: #{exception}")
       puts "Sync out failed from the error: #{exception}"
       raise exception
     end

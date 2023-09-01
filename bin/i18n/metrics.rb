@@ -38,6 +38,20 @@ module I18n
       )
     end
 
+    # logging to CloudWatch the Completion Status of a sync step, either success or fail.
+    # @param status [Boolean] Whether a step has been successful or not.
+    # @param sync_step [String] Step of the sync where the method is used. Options: in, up, down, out.
+    # @option sync_component [String] Specific sync component being logged.
+    # @option message [String] Exception message causing the step to fail.
+    def self.report_success(status, sync_step, sync_component = nil, message = nil)
+      status_value = status ? 1 : 0
+      log_metric(
+        :StatusTest,
+        status_value,
+        [{name: 'SyncStep', value: sync_step}, {name: 'SyncComponent', value: sync_component}, {name: 'Message', value: message}]
+      )
+    end
+
     # returns the EC2 instance ID if we are running the sync from an EC2,
     # and 'local_machine' otherwise
     def self.machine_id
