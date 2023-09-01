@@ -1,223 +1,183 @@
-@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
-
-h1 {
-    margin-top: 4.5rem;
-    font-size: 4rem;
-    font-style: normal;
-    font-weight: 600;
+hr {
+  border-top: 1px solid var(--neutral_dark60);
+  margin: 4rem 0;
 }
 
 h2 {
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 124%;
-    margin: 0 0 16px 0;
-}
-
-h4 {
-    font-size: 2.5rem;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 132%; 
-}
-
-.link-button:hover {
-    color: white;
-    background-color: #6F488E;
-    border-color: #6F488E;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-p  {
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 325;
-    line-height: 148%;
-    margin-block: 0;
-}
-
-hr {
-    border-top: 1px solid rgba(127, 130, 134, 1);
+  margin-top: 0;
 }
 
 .career {
-    &__description { 
-        &--under {
-            margin-top: 1.25rem;
-        }
+
+  &__hero {
+    display: flex;
+    gap: 0.93rem;
+    align-items: end;
+  }
+
+  &__vision {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+  }
+
+  &__vision img {
+    width: 100%;
+  }
+
+  &__approach {
+    display: flex;
+    margin: 1rem 0 4rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    &__description {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__values {
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 4rem;
     }
 
-    &__hero {
-        display: flex;
-        gap: 0.93rem;
-        align-items: center;
-        
-        &__button {
-            margin: 2.62rem 0 4rem 0
-        }
+    &__item {
+      display: flex;
+      flex: 1;
+      gap: 1rem;
+      margin: 0 0 2rem;
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  &__principal {
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 2.5rem;
     }
 
-    
-    
-    &__vision {
-        display: flex; 
-        gap: 4rem; 
-        margin: 4rem 0 4rem 0
-    }
-    
-    &__vision img {
-        max-width: 30rem;
+    &__item {
+      display: flex;
+      gap: 1rem;
     }
 
-    &__approach {
-        display: flex; 
-        margin: 4rem 0; 
-        align-items: center; 
-        gap: 3.12rem;
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 
-        &__description {
-            margin-bottom: 2rem;
-            width: 47rem;
-        }
+  &__balance {
+
+    &__description {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__roles {
+
+    &__description {
+      margin-bottom: 2rem;
     }
 
-    &__values {
-
-        &__list {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 100%;
-            gap: 4rem;
-        }
-
-        &__item {
-            display: flex;
-            flex: 1;
-            gap: 1rem;
-            margin-bottom: 2.5rem;
-        }
+    &__job__description {
+      margin-bottom: 1rem;
     }
 
-    &__principal {
-
-        &__list {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 100%;
-            gap: 2.5rem;
-        }
-        
-        &__item {
-            display: flex;
-            gap: 1rem;
-        }
-    
-        &__text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+    &__link__list p:last-child{
+      margin-bottom: 3rem;
     }
+  }
 
-    &__balance {
-
-        &__description {
-            margin-bottom: 2rem;
-        }
+  &__diversity {
+    &__images {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
     }
+  }
 
-    &__roles {
+  &__diversity img:first-child {
+    width: 60%;
+  }
 
-        &__description {
-            margin-bottom: 3.75rem;
-        }
-
-        &__job__description {
-            margin-bottom: 1rem;
-        }
-
-        &__link__list p:last-child{
-            margin-bottom: 3rem;
-        }
-    }
-
-    &__diversity {
-        &__images {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 100%;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-    }
-
-    &__diversity img:first-child {
-        width: 45rem; 
-        height: 25rem;
-    }
-
-    &__diversity img:nth-child(2) {
-        width: 30rem; 
-        height: 25rem;
-    }
+  &__diversity img:nth-child(2) {
+    width: 37%;
+  }
 }
 
 
 @media only screen and (max-width: 912px) {
-    .career {
-        &__hero {
-            flex-direction: column;
-        }
-
-        &__hero figure {
-                display: block;
-        }
-
-        &__vision {
-            flex-direction: column;
-        }
-
-        &__vision img {
-            max-width: 100%;
-        }
-
-        &__approach {
-            flex-direction: column;
-            &__description {
-                max-width: 100%;
-            }
-        }
-
-        &__diversity img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-        &__values {
-            &__list {
-                gap: 0;
-            }
-        }
-
-        &__balance {
-            &__list {
-                gap: 0;
-            }
-        }
-
-        &__diversity img:first-child {
-            width: 100%;
-            height: 100%;
-        }
-    
-        &__diversity img:nth-child(2) {
-            width: 100%;
-            height: 100%;
-        }
+  .career {
+    &__hero {
+      flex-direction: column;
     }
+
+    &__hero figure {
+      display: block;
+    }
+
+    &__vision img {
+      max-width: 100%;
+    }
+
+    &__approach {
+      flex-direction: column;
+
+      &__description {
+        max-width: 100%;
+      }
+    }
+
+    &__diversity img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    &__values {
+      &__list {
+        gap: 1rem;
+      }
+
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    &__balance {
+      &__list {
+        gap: 0;
+      }
+    }
+
+    &__diversity img:first-child {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__diversity img:nth-child(2) {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
