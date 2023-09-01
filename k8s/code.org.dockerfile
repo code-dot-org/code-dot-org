@@ -86,8 +86,6 @@ WORKDIR ${SRC}
 FROM code.org-base as code.org-rbenv
 ################################################################################
 
-USER ${USERNAME}
-
 COPY --chown=${UID} \
   .ruby-version \
   ./
@@ -176,8 +174,6 @@ WORKDIR ${SRC}
 FROM code.org-user-utils as code.org-node_modules
 ################################################################################
 
-USER ${USERNAME}
-
 COPY --chown=${UID} \
   ./apps/package.json \
   ./apps/yarn.lock \
@@ -202,8 +198,6 @@ RUN \
 ################################################################################
 FROM code.org-user-utils
 ################################################################################
-
-USER ${USERNAME}
 
 RUN \
   #
