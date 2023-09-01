@@ -1,17 +1,18 @@
-- video_middle_curricula_index = 6
+- video_curricula_index = 6
 
-- video_middle_curricula_tags = [hoc_s(:module_grade_6_10), hoc_s(:module_grade_9_12), hoc_s(:module_grade_9_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_k_12)]
+- video_curricula_tags = [hoc_s(:module_grade_6_10), hoc_s(:module_grade_9_12), hoc_s(:module_grade_9_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_k_12)]
 
-- video_middle_curricula_title = [hoc_s(:curriculum_name_csd), hoc_s(:curriculum_name_csp), hoc_s(:curriculum_name_csa), hoc_s(:curriculum_name_artificial_intelligence), hoc_s(:curriculum_name_maker), hoc_s(:hour_of_code)]
+- video_curricula_title = [hoc_s(:curriculum_name_csd), hoc_s(:curriculum_name_csp), hoc_s(:curriculum_name_csa), hoc_s(:curriculum_name_artificial_intelligence), hoc_s(:curriculum_name_maker), hoc_s(:hour_of_code)]
 
-- video_middle_curricula_desc = [hoc_s(:csf_page_top_desc), hoc_s(:csp_page_top_desc), hoc_s(:curriculum_desc_csa),  hoc_s(:ai_hero_desc), hoc_s(:curriculum_desc_maker), hoc_s(:hoc_homepage_what_is_hoc_subhead)]
+- video_curricula_desc = [hoc_s(:csf_page_top_desc), hoc_s(:csp_page_top_desc), hoc_s(:curriculum_desc_csa),  hoc_s(:ai_hero_desc), hoc_s(:curriculum_desc_maker), hoc_s(:hoc_homepage_what_is_hoc_subhead)]
 
 - video_id = ["cs_discoveries", "cs_principles", "ai_intelligence", "courses_maker", "hour_of_code"]
-
+- video_link = ["/csd", "/csp", "/csa", "/ai", "/maker", "/hourofcode"]
+- video_link_title = [:call_to_action_explore_csd, :call_to_action_explore_csp, :call_to_action_explore_csa, :ai_why_link_01, :call_to_action_explore_maker, :call_to_action_explore_hoc]
 - video_code = ["uQim0hBHco0", "DMr1iFYacGQ", "lFkFi2jGs70", "dWRnCXbUDgA", "ZoqMiFKspAA"]
 
 
-- video_middle_curricula_index.times do |index|
+- video_curricula_index.times do |index|
   .action-block.action-block--two-col.video-101__text
     - if index === 0 || index === 1 || index === 2 || index === 3 || index === 4
       %figure.video-101__video.col-50
@@ -21,28 +22,12 @@
         %img{src: "/images/hoc2022-banner.png", style: "width: 100%" }
     .text-wrapper.col-50
       %p.overline
-        %span Grades:
-        = video_middle_curricula_tags[index]
+        Grades:
+        = video_curricula_tags[index]
       %h3
-        = video_middle_curricula_title[index]
+        = video_curricula_title[index]
       %p.heading-sm
-        = video_middle_curricula_desc[index]
+        = video_curricula_desc[index]
 
-      - if index === 0
-        %a.link-button{href: "/csd"}
-          = hoc_s(:call_to_action_explore_csd)
-      - if index === 1
-        %a.link-button{href:"/csp"}
-          = hoc_s(:call_to_action_explore_csp)
-      - if index === 2
-        %a.link-button{href:"/csa"}
-          = hoc_s(:call_to_action_explore_csa)
-      - if index === 3
-        %a.link-button{href: "/ai"}
-          = hoc_s(:ai_why_link_01)
-      - if index === 4
-        %a.link-button{href: "/maker"}
-          = hoc_s(:call_to_action_explore_maker)
-      - if index === 5
-        %a.link-button{href: "/hourofcode"}
-          = hoc_s(:call_to_action_explore_hoc)
+      %a.link-button{href: video_link[index]}
+        = hoc_s(video_link_title[index])
