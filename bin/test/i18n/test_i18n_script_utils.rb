@@ -102,8 +102,6 @@ class I18nScriptUtilsTest < Minitest::Test
 end
 
 describe I18nScriptUtils do
-  I18nScriptUtils::PegasusLanguages = Class.new
-
   def around
     FakeFS.with_fresh {yield}
   end
@@ -125,7 +123,7 @@ describe I18nScriptUtils do
 
           File.expects(:exist?).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns(true)
           JSON.expects(:load_file).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns({expected_locale => {expected_file_path => 'true'}})
-          I18nScriptUtils::PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns('unexpected_crowdin_locale')
+          PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns('unexpected_crowdin_locale')
 
           assert I18nScriptUtils.file_changed?(expected_locale, expected_file_path)
         end
@@ -145,7 +143,7 @@ describe I18nScriptUtils do
 
           File.expects(:exist?).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns(true)
           JSON.expects(:load_file).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns({expected_crowdin_locale => {expected_file_path => 'true'}})
-          I18nScriptUtils::PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns(expected_crowdin_locale)
+          PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns(expected_crowdin_locale)
 
           assert I18nScriptUtils.file_changed?(expected_locale, expected_file_path)
         end
@@ -164,7 +162,7 @@ describe I18nScriptUtils do
 
           File.expects(:exist?).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns(true)
           JSON.expects(:load_file).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns({expected_locale => {'unexpected_file_path' => 'true'}})
-          I18nScriptUtils::PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns('unexpected_crowdin_locale')
+          PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns('unexpected_crowdin_locale')
 
           refute I18nScriptUtils.file_changed?(expected_locale, expected_file_path)
         end
@@ -181,7 +179,7 @@ describe I18nScriptUtils do
 
           File.expects(:exist?).with(expected_files_to_sync_out_json).once.returns(false)
           JSON.expects(:load_file).with(expected_files_to_sync_out_json).never
-          I18nScriptUtils::PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).never
+          PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).never
 
           actual_error = assert_raises(RuntimeError) {I18nScriptUtils.file_changed?(expected_locale, expected_file_path)}
           assert_match /File not found #{expected_files_to_sync_out_json}/, actual_error.message
