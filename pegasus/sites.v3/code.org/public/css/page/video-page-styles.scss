@@ -234,5 +234,29 @@ section#flexible-units {
     height: 15rem;
     display: flex;
   }
+
+  .carousel-wrapper .pagination {
+    margin-top: 1rem;
+  }
+
+  .video_caption_link {
+    font-size: 0.775rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .slides {
+    height: 11.25rem;
+    display: flex;
+  }
+
+  .slides .video__container__without__caption  {
+    height: 7.5rem;
+    display: flex;
+  }
+
+  .footer {
+    padding: 4rem 2rem;
+  }
 }
 
