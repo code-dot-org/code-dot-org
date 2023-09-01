@@ -2,12 +2,10 @@
 ENV['RACK_ENV'] = 'test'
 ENV['UNIT_TEST'] = '1'
 
-require 'fakefs/safe'
 require 'minitest/autorun'
 require 'rack/test'
 require 'minitest/reporters'
 require 'minitest/around/unit'
-require 'minitest-spec-context'
 require 'minitest/stub_const'
 require 'mocha/mini_test'
 require 'vcr'
