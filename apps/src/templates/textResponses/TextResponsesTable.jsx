@@ -45,7 +45,7 @@ class TextResponsesTable extends Component {
     if (studentUrl) {
       return (
         <a
-          className="uitest-name-cell"
+          className="uitest-display-name-cell"
           style={tableLayoutStyles.link}
           href={studentUrl}
           target="_blank"
@@ -55,7 +55,7 @@ class TextResponsesTable extends Component {
         </a>
       );
     } else {
-      return <span className="uitest-name-cell">{name}</span>;
+      return <span className="uitest-display-name-cell">{name}</span>;
     }
   };
 
@@ -111,9 +111,9 @@ class TextResponsesTable extends Component {
     return {
       property: 'studentName',
       header: {
-        label: i18n.name(),
+        label: i18n.displayName(),
         props: {
-          className: 'uitest-name-header',
+          className: 'uitest-display-name-header',
           style: {
             ...tableLayoutStyles.headerCell,
             ...{width: TABLE_COLUMN_WIDTHS.name},
